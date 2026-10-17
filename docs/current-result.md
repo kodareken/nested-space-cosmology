@@ -21,15 +21,16 @@ argument, with independent Grok review. No grid scan or new physical
 trajectory was run for this proof.
 
 This result covers the declared onset cell. It does not yet certify the
-saved approximate trajectory, a perturbative remainder, first central
-arrival, formation, stability or observational agreement.
+saved approximate trajectory, first central arrival, formation, stability
+or observational agreement. The separate onset Taylor estimate below
+now controls the analytic amplitude remainder.
 
 The next [parameter-variation identities](nsc-atlas-finite-amplitude.md#parameter-variation-identities-on-the-onset-cell)
 retain both moving-limit terms, inverse wall-entry derivatives and the
 moving wall trace through second order. They specify the equations needed
-for a wall/clock Taylor estimate. Convergence of parameter difference
-quotients remains to be established; the clipped extension used for
-existence cannot simply be differentiated twice.
+for a wall/clock Taylor estimate. The quotient limits below now establish
+the required derivatives on physical comparison charts; the clipped
+extension used for existence is not differentiated twice.
 
 A [common complete-cap rectangle](nsc-atlas-finite-amplitude.md#a-common-comparison-domain-for-complete-cap-slices)
 now uses the original source label and the radial interval from a fixed
@@ -74,12 +75,27 @@ wall and central clock, using the normalized scalar fields at alpha zero.
 Independent Grok reviews confirm the source/gauge derivative count and the
 quotient argument after its endpoint and interpolation corrections.
 
-The derivative has a square-root continuity bound in alpha. This gives an
-analytic first-order remainder bounded by `C * alpha^(3/2)` on the onset
-cell, with C finite but not evaluated. It does not certify a saved numerical
-coefficient or history. The next step is convergence of the first quotients
-with one spatial derivative, followed by a second parameter estimate and a
-quadratic remainder. No new physical trajectory or grid scan was run.
+The [first quotients now converge with one coordinate derivative](nsc-atlas-finite-amplitude.md#convergence-of-the-first-quotients-with-one-coordinate-derivative).
+C0 stability and the uniform highest spatial moduli first give C2
+continuity of the exact family. The differentiated quotient estimates then
+close in the same triangular order. An explicit cap commutation uses the
+radial constraints to avoid additional unknown field derivatives.
+
+The [second quotient limit](nsc-atlas-finite-amplitude.md#second-amplitude-derivative-and-quadratic-onset-remainder)
+therefore gives a continuous second amplitude derivative into C0. For the
+normalized state, wall radius or anchored central clock O, it yields
+`||O(alpha)-O(0)-alpha O_1(0)|| <= M_2,O * alpha^2 / 2` on the original
+onset cell. Each output's constant is finite and unevaluated. This improves
+the earlier order-three-halves estimate. It does not claim a second
+amplitude derivative of the physical field `sqrt(alpha)*f` at zero.
+
+Separate Grok reviews check the derivative count and both quotient limits.
+No new physical trajectory, grid scan or symbolic run was used. The next
+connection is an evaluated error bound and identification of the exact
+first coefficient with the chosen numerical implementation. Central arrival
+requires an extended-domain argument; the onset clock is not that arrival
+waveform. Saved numerical coefficients and histories retain their own
+accuracy question.
 
 ## Fixed cap and moving-wall connection, 16 October 2026
 

@@ -3047,6 +3047,30 @@ C1 jets. These steps remain analytic derivation and review only: no new
 grid, physical evaluation, symbolic run or numerical Taylor constant is
 admitted until the corresponding estimate has been established.
 
+**Parameter-estimate outcome:** the [first quotient converges in C1](nsc-atlas-finite-amplitude.md#convergence-of-the-first-quotients-with-one-coordinate-derivative)
+and the [second quotient converges in C0](nsc-atlas-finite-amplitude.md#second-amplitude-derivative-and-quadratic-onset-remainder)
+on the original onset cell, uniformly in the admitted amplitude interval.
+An explicit C2 edge extension and second-difference estimate supply the
+needed parameter continuity of the highest spatial derivatives. The radial
+constraints close the cap gradient coefficients without derivatives of
+its first jets. The second quotient has two copies of the speed/field-gradient
+variation; the unknown second derivative remains in the principal operator.
+
+Two independent Grok workers reviewed the respective arguments and their
+final written formulas. They confirm the derivative budget, actual initial
+and wall-corner data, finite-slab induction and output-specific constant.
+The resulting Taylor remainder is at most `M_2,O * alpha^2 / 2`, where
+M_2,O is finite and has not been numerically evaluated. No new physical
+values, symbolic controls, trajectory or scan were run. This result uses
+normalized fields and does not assert C1 regularity of all second varied
+jets or twice-alpha differentiability of `sqrt(alpha)*f` at zero.
+
+The next numerical question must name an observable and match the exact
+source, gauge and coefficient to its implementation before selecting a
+finite evaluation budget. A saved numerical coefficient is not identified
+by the analytic Taylor theorem alone. Later central arrival also needs
+an extended-domain estimate.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

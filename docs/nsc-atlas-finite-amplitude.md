@@ -5,8 +5,10 @@ model, while the existing metric, wall and scalar results are perturbative
 coefficients of that model. This note identifies its finite-amplitude source
 data, smooth equations and interface laws. The
 [finite-cell construction](#finite-cell-continuation-assembly) now establishes
-the sourced onset solution and its departure bounds. Continuation through
-central arrival and a controlled remainder for the full transmitted response
+the sourced onset solution and its departure bounds. The
+[parameter estimate](#second-amplitude-derivative-and-quadratic-onset-remainder)
+also gives a quadratic onset Taylor remainder with a finite, unevaluated
+constant. Continuation through central arrival and a controlled remainder for the full transmitted response
 remain the next connections.
 
 The physical inputs are unchanged: a canonical Jordan scalar with coupling
@@ -9168,16 +9170,17 @@ The onset theorem supplies a solution for each admitted alpha. A uniform
 Taylor remainder for its wall geometry and clocks needs a separate
 parameter-dependence estimate. The identities here describe that estimate's
 equations, initially conditional on the indicated derivatives. The actual
-first derivative into continuous comparison jets is established later
-in this section; the second derivative remains open. At alpha=0
+first derivative into C1 comparison jets and the second derivative into
+C0 comparison jets are established later in this section. At alpha=0
 the geometry is the vacuum reference and the normalized scalar is the
 prepared linear probe, not the zero scalar. In the certified quiet core
 the scalar readout is identically zero for every admitted alpha.
 
 Independent Grok review confirms the moving-limit and inverse-entry
 identities below. A common physical-cap domain is supplied further below;
-the final first-quotient argument gives a remainder of order three halves.
-A quadratic remainder still requires the stronger parameter estimate.
+the first C0 quotient argument gives a remainder of order three halves.
+The subsequent C1 quotient and second-derivative arguments strengthen it
+to a quadratic remainder on the same onset domain.
 
 Write `Z=(y,p,q)` and use subscripts 1 and 2 for first and second alpha
 derivatives at fixed native coordinates. For the smooth normalized mixed
@@ -9357,7 +9360,8 @@ identified wall or clock observable O in a stated comparison norm, then
  \|O(\alpha)-O(0)-\alpha O_1(0)\|\le\tfrac12M_2\alpha^2.
 \]
 
-No numerical M2 or certified Taylor remainder is recorded here. Identifying
+The later second-derivative argument establishes a finite M2 and this
+analytic Taylor inequality; no numerical value of M2 is recorded. Identifying
 O_1 with an older saved perturbative coefficient additionally requires
 matching its exact source, gauge and data. Beyond x_R the present receipt
 ceases to apply; its positive travel margin does not imply that the core
@@ -9488,8 +9492,8 @@ bounded inverse for all the transformed cap and exterior equations.
 Those clock and wall variations must be solved with the field variations;
 they cannot be supplied as independent data. Even in the quiet core the
 metric expressed in the source clock x contains nu, although its metric
-in central proper time is the unchanged de Sitter metric. A Taylor
-remainder still requires the coupled parameter estimate.
+in central proper time is the unchanged de Sitter metric. The coupled
+parameter estimates established below supply that additional connection.
 
 #### A first-variation inverse on a full positive-width prefix
 
@@ -10646,17 +10650,366 @@ derivative and use that output's finite C_q. Integrating from zero yields
 \]
 
 This is an analytic remainder of order three halves. Its constant has
-not been evaluated, and the exponent is not two. It neither certifies
+not been evaluated. The following stronger estimate improves the exponent
+to two on the same domain. This first estimate neither certifies
 the saved approximate trajectory nor identifies an older saved
 coefficient without matching its source, gauge and data. Independent
 Grok review confirms the endpoint difference argument, the first
 quotient limit and this consequence under the established source and
 comparison-regularity hypotheses.
 
+#### Convergence of the first quotients with one coordinate derivative
+
+Here Ck refers to derivatives in the fixed comparison coordinates,
+`(x,theta)` outside, with `theta=Ubar/W(x)`, and `(x,eta)` inside.
+It does not include amplitude derivatives. The already established
+family has uniform C2 bounds and a uniform modulus omega_2 for its
+second coordinate derivatives. Its C0 amplitude difference is
+bounded by `C_Lip abs(epsilon)`.
+
+A second finite coordinate difference, with step t, therefore gives
+
+\[
+ \|D^2(\mathcal U_\beta-\mathcal U_\alpha)\|_\infty
+ \le C\left(\frac{\|\mathcal U_\beta-\mathcal U_\alpha\|_\infty}{t^2}
+                              +\omega_2(Ct)\right),\qquad 0<t<t_0.
+\]
+
+The estimate first applies in coordinate directions and their sums,
+which determine mixed derivatives. A fixed C2 extension supplies the
+same estimate near the rectangle edges. For example, across one
+edge the combination `6f(t)-8f(2t)+3f(3t)` matches the value and first
+two derivatives at zero; repeated in the two coordinates, it preserves
+uniform derivative bounds and moduli on a fixed collar. Taking t
+proportional to `abs(epsilon)^(1/4)` proves C2 continuity of the
+nonlinear family. This uses both stability and the uniform modulus;
+spatial equicontinuity alone would not imply parameter continuity.
+
+The quotient `V_epsilon=Delta U/epsilon` is C1 for every nonzero
+epsilon, since each nonlinear member is C2. The issue is its uniform
+bound and convergence in that stronger norm. Use the same triangular
+order as for the linear spatial estimate.
+
+**Outgoing exterior derivative.** Put `Q_epsilon=partial_x(q_beta-q_alpha)/epsilon`
+at fixed Ubar. Each nonlinear background obeys
+
+\[
+ (q_x)_{\bar U}=F_yq+F_pF+F_qq_x.
+\]
+
+Subtract these equations and divide by epsilon. The unknown Q_epsilon
+occurs linearly with coefficient `F_q(alpha)`. Every other term uses
+the bounded C0 quotient, bounded coefficient divided differences,
+and the known background first derivatives. The source datum is the
+actual quotient of `partial_x q_0`; it is bounded and converges by
+the source parameter regularity. The full-prefix Volterra estimate
+therefore bounds Q_epsilon uniformly. Comparison with the previously
+derived equation for `Q=partial_x q_1` gives convergence to Q, using
+C0 quotient convergence and C1 background continuity. The wall trace
+derivative retains `Q_epsilon,W+W_x G_epsilon,W`, where
+`G_epsilon=(F_beta-F_alpha)/epsilon`.
+
+**Cap gradients.** The exact primitive gives
+
+\[
+ (f_\epsilon)_\eta
+       =L_{c,\alpha}\Phi_\epsilon+R_\epsilon\Phi_\beta.
+\]
+
+Thus this quotient derivative is already bounded and convergent in C0.
+The two w gradients admit an especially useful closed commutation.
+Write `K=(1-A)/r-rP`; the radial constraints imply
+
+\[
+ A_r=K-\frac{\alpha rA Q_c}{2},\qquad
+ \delta_r=\frac{\alpha rQ_c}{2},
+\]
+\[
+ B_{rr}=e^\delta\left[\delta_rK-\frac{A_r}{r}
+                -\frac{1-A}{r^2}-P-rP_f\Phi\right].
+\]
+
+All terms are algebraic in the continuous cap fields and constrained
+metric. No derivative of Pi or Phi occurs. Also
+
+\[
+ \partial_\eta\sigma_\pm=\frac{R_x}{L_c}\pm\nu B_r,
+ \qquad\sigma_\pm=\frac{\eta R_x\pm\nu B}{L_c}.
+\]
+
+Let `zeta_+=partial_eta w_+`, `zeta_-=partial_eta w_-`, and put
+`J=B_r/r-B/r^2`. Commuting the nonlinear transports gives
+
+\[
+ (\partial_x-\sigma_+\partial_\eta)\zeta_+
+ =\left[\frac{R_x}{L_c}+\nu\left(2B_r+\frac Br\right)\right]\zeta_+
+                         -\nu\frac Br\zeta_-+b_+,
+\]
+\[
+ (\partial_x-\sigma_-\partial_\eta)\zeta_-
+ =\nu\frac Br\zeta_+
+  +\left[\frac{R_x}{L_c}-\nu\left(2B_r+\frac Br\right)\right]\zeta_-+b_-,
+\]
+\[
+ b_+=\nu L_c\left[(B_{rr}+J)w_+-Jw_-
+                          -e^\delta(\delta_rU_\alpha+(U_\alpha)_f\Phi)
+              \right],
+\]
+\[
+ b_-=\nu L_c\left[Jw_+-(B_{rr}+J)w_-
+                          -e^\delta(\delta_rU_\alpha+(U_\alpha)_f\Phi)
+              \right].
+\]
+
+The matrix and b coefficients of this system are smooth maps of the
+continuous state, including its radial constraints and wall rates.
+They contain no derivative of zeta.
+
+Now set `H_epsilon=(zeta_beta-zeta_alpha)/epsilon`. Subtracting the
+commuted systems along the alpha characteristics gives a linear
+transport system for H_epsilon. Its additional speed forcing is
+`sigma_epsilon * partial_eta zeta_beta`, and its other forcing consists
+of matrix and b divided differences applied to bounded background
+gradients. The uniform C2 bound controls `partial_eta zeta_beta`.
+The incoming boundary derivative is obtained from the quotient of
+the actual incoming w_+ wall trace and its transport equation; its
+tangent derivative uses Q_epsilon and the known wall-rate quotient.
+The quiet inner w_- trace supplies its incoming gradient. Initial
+gradients are the actual inherited quotients, with the corner
+identities inherited from the two exact solutions.
+
+On a short common slab, the characteristic estimate has the form
+`norm(H_epsilon)<=B_in+h C(norm(H_epsilon)+D_known)`.
+Choosing `hC<=1/2` bounds it uniformly. For convergence to the linear
+gradient H_1, the new forcing contains
+
+\[
+ \sigma_\epsilon(\partial_\eta\zeta_\beta-\partial_\eta\zeta_\alpha)
+   +(\sigma_\epsilon-\sigma_1)\partial_\eta\zeta_\alpha,
+\]
+
+plus coefficient and data differences tending to zero. The first term
+uses the C2 background continuity proved above; the second uses the
+actual C0 quotient limit. The same short-slab estimate therefore
+gives `H_epsilon->H_1` in C0. This is the step that a bound on the
+linear first variation alone would not establish.
+
+**Incoming exterior derivative.** Finally put
+`S_epsilon=partial_Ubar(p_beta-p_alpha)/epsilon`. Subtract the two
+nonlinear equations
+
+\[
+ (p_{\bar U})_x=F_yp+F_pp_{\bar U}+F_qF.
+\]
+
+The resulting incoming equation is linear in S_epsilon with bounded
+forcing. On the wall its datum is
+
+\[
+ S_{\epsilon,W}=\frac{d(p_{\epsilon,W})/dx-G_{\epsilon,W}}{W_x}.
+\]
+
+The needed second wall-rate quotient uses the cap gradients and
+Q_epsilon already obtained. Time derivatives of the radial quotient
+come from differentiating its Volterra equations with those cap
+transports. They do not introduce S_epsilon into either earlier step.
+Old labels retain their actual initial quotient derivatives; at their
+join with wall-born labels the same displayed boundary formula is
+the corner identity. The incoming estimate bounds S_epsilon and makes
+it converge to `partial_Ubar p_1`. The remaining coordinate derivatives
+follow from the mixed equations and cap transports.
+
+The original initial quotients and their gradients vanish on the
+specified quiet slice. Source quotient derivatives converge uniformly.
+On every subsequent common slab the preceding terminal values and
+gradient errors are the inherited data. A finite induction gives
+
+\[
+ \boxed{\lim_{\epsilon\to0}
+          \|V_\epsilon-U_1(\alpha)\|_{C^1}=0,}
+\]
+
+uniformly for admissible base amplitudes. The residual modulus uses
+the C0 quotient error, the established C2 background continuity and
+the smooth input-data moduli; every term tends to zero uniformly.
+The same chord evaluated at its two endpoints then gives continuity
+of U_1 as a C1-valued function of alpha. No fourth derivative of the
+original C3 source is required. This establishes the stronger first
+quotient limit needed for a second derivative in the continuous norm;
+it does not assert a C1-valued second derivative.
+
+#### Second amplitude derivative and quadratic onset remainder
+
+The stronger first-quotient limit supplies the missing regularity for
+a second derivative into continuous comparison jets. Let U_1 denote
+the actual first derivative, now continuous in alpha with values in C1,
+and write `v_1=(U_1,1)` for the combined state and parameter direction.
+A second state direction is `(U_2,0)`: the explicit parameter slot
+has already been differentiated once and contributes no new unknown.
+
+For a cap component with equation
+`w_x=sigma(U,alpha) w_eta+Rcal(U,alpha)`, define its linear operator by
+
+\[
+ (L_\alpha V)_w=(\partial_x-\sigma_\alpha\partial_\eta)V_w
+       -D\sigma_\alpha[(V,0)]\partial_\eta w
+       -D\mathcal R_\alpha[(V,0)].
+\]
+
+Include in L_alpha the same exterior mixed equations, radial linear
+operators, wall ODE and incoming conditions used in the coupled inverse.
+The second-variation cap forcing is
+
+\[
+ \boxed{
+ (L_\alpha U_2)_w
+ =2D\sigma[v_1]\partial_\eta w_1
+   +D^2\sigma[v_1,v_1]\partial_\eta w
+   +D^2\mathcal R[v_1,v_1].}
+\]
+
+The two copies of the first term have different origins: variation of
+the transport coefficient acting on w_1, and variation of the
+background gradient in the first-variation source. Both are required.
+The analogous known forcings are `D2F[v_1,v_1]` for the exterior,
+`D2Theta[v_1,v_1]` for the wall ODE, and `D2g[v_1,v_1]` for its
+incoming cap map. The scalar wall value remains the derived common
+value, with its actual second variation.
+
+If M and N_delta denote the radial mass and lapse functionals, their
+second variations are
+
+\[
+ m_2=DM[(U_2,0)]+D^2M[v_1,v_1],\qquad
+ \delta_2=DN_\delta[(U_2,0)]+D^2N_\delta[v_1,v_1].
+\]
+
+These differentiate the same radius-dependent cap functional. There
+is no replacement by a constant vacuum mass. Similarly the clock obeys
+
+\[
+ (T_2)_x=D\nu[(U_2,0)]+D^2\nu[v_1,v_1].
+\]
+
+All known forcings are continuous: they require first coordinate
+derivatives of U_1 and bounded background derivatives, not a further
+coordinate derivative of U_2. The latter remains inside the principal
+transport operator. The existing continuous inverse therefore constructs
+one bounded U_2 for the actual twice-varied data.
+
+This construction has a uniform finite estimate. Let M_1 bound the
+C1 norm of the first response, B_0 bound the background first coordinate
+derivatives, and K_1,K_2 bound the first and second coefficient-map
+derivatives in the block norms of the inverse. Include the bounded
+trace and gauge factors in these constants. Let D_2 bound the supplied
+second-parameter data, and let C_lin be the global linear bound obtained
+by composing the fixed finite number of common slabs. Then constants
+can be chosen so that
+
+\[
+ \|U_2\|_{C^0}\le C_{\rm lin}\left[
+  D_2+2K_1(M_1+1)M_1+K_2(M_1+1)^2(B_0+1)\right].
+\]
+
+The original quiet initial data have zero second variation; the source
+data have bounded second parameter derivatives. Restarts inherit the
+preceding solution, and are not reset to zero. Every constant is finite
+and uniform in alpha on the established onset interval. None is
+assigned a numerical value in this argument.
+
+**Identification with the actual second derivative.** A solution of
+the formal second equations is insufficient. Define
+
+\[
+ W_\epsilon=\frac{U_1(\beta)-U_1(\alpha)}\epsilon,
+ \qquad\epsilon=\beta-\alpha.
+\]
+
+Subtract the first-variation equations, using the alpha principal
+transport, and move the terms linear in `(W_epsilon,0)` into L_alpha.
+The remaining cap forcing is exactly
+
+\[
+ \begin{aligned}
+ F_{2,\epsilon}={}&
+ \frac{\sigma_\beta-\sigma_\alpha}{\epsilon}
+                                    \partial_\eta w_{1,\beta}\\
+ &+\frac{D\sigma_\beta-D\sigma_\alpha}{\epsilon}
+                  [(U_{1,\beta},1)]\,\partial_\eta w_\alpha\\
+ &+D\sigma_\beta[(U_{1,\beta},1)]
+                                    \partial_\eta V_{\epsilon,w}\\
+ &+\frac{D\mathcal R_\beta-D\mathcal R_\alpha}{\epsilon}
+                                      [(U_{1,\beta},1)].
+ \end{aligned}
+\]
+
+Here derivatives of coefficient maps are evaluated at the full state
+and amplitude indicated by their subscript. Their divided differences
+use the direction `(V_epsilon,1)`. The first and third terms converge
+to the two equal gradient terms above, because `V_epsilon->U_1` in
+C1 and U_1 is continuous into C1. The second and fourth converge to
+the quadratic coefficient terms. No coordinate derivative of
+W_epsilon is put in this known forcing.
+
+The exterior, wall, radial and clock quotients have the same ordinary
+coefficient-difference form. Their data quotients converge by the
+actual source regularity. At the original initial slice they vanish;
+at subsequent slices the previous terminal quotient error is inherited.
+The uniform continuous inverse first bounds W_epsilon and then gives
+
+\[
+ \boxed{\|W_\epsilon-U_2(\alpha)\|_{C^0}\longrightarrow0.}
+\]
+
+A finite common-slab induction preserves this limit and its uniform
+modulus. Thus U_2 is the actual second alpha derivative. The endpoint
+chord argument gives its continuity in the continuous-jet norm, with
+one-sided derivatives at alpha zero and alpha_max. Common values and
+corner identities pass to this limit. For example the cap primitive
+becomes
+
+\[
+ (f_2)_\eta=L_c\Phi_2+2R_1\Phi_1+R_2\Phi,
+\]
+
+which supplies that radial derivative of the second normalized scalar
+without claiming that every second varied first jet is C1.
+
+For the wall radius R, anchored central clock T, or a specified
+normalized state component O on the fixed onset comparison domain,
+let `M_2,O=sup_alpha norm(partial_alpha^2 O)_C0`, bounded by this
+construction and the relevant output map. Taylor's integral identity
+now gives
+
+\[
+ \boxed{\|O(\alpha)-O(0)-\alpha O_1(0)\|_{C^0}
+                                \le\tfrac12M_{2,O}\alpha^2.}
+\]
+
+This strengthens the earlier order-three-halves bound. The constant
+is finite but unevaluated. The result concerns the normalized fields
+and geometric response on the original onset cell; it does not make
+the physical scalar `Psi=sqrt(alpha) f` twice differentiable in alpha
+at zero. The translated C3 front still shows why a C1-valued second
+parameter derivative is not asserted.
+
+The same source, action, gauges and exact initial data are retained.
+Matching O_1(0) to a stored coefficient and certifying numerical
+accuracy require a separate source-and-implementation comparison and
+an evaluated error bound. Later central arrival, formation, stability
+and observational tests are outside this onset theorem. No new
+physical evaluation, grid scan or symbolic run is used here. Independent
+Grok reviews separately check the C1 quotient argument and the second
+quotient limit, including the explicit cap gradient commutation, edge
+extension, four-term forcing, finite-slab induction and output-specific
+Taylor constant. These are mathematical source reviews, not experimental
+comparisons or independent numerical reproductions.
+
 ## Missing full-domain estimate
 
-The finite-cell argument above establishes the sourced onset solution and
-its departure bounds. The remaining full-domain problem concerns later
+The finite-cell argument above establishes the sourced onset solution,
+its departure bounds and an analytic quadratic amplitude remainder with
+a finite unevaluated constant. The remaining full-domain problem concerns later
 central arrival and a controlled approximation or perturbative remainder
 for that observable. The quiet-core restriction is no longer sufficient
 once the signal reaches the centre. In particular, the following remain

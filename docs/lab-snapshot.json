@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "33d97fe009e8b53119106d5eecb3ed9c5737ba75",
+  "current_receipt_commit_parent": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 233288,
-      "change": "Prove first amplitude differentiability of the exact onset family and an analytic alpha^(3/2) remainder; retain the open spatial-quotient and quadratic estimates.",
-      "changed_from_commit": "33d97fe009e8b53119106d5eecb3ed9c5737ba75",
+      "bytes": 233412,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "11a0e092d0b7b78415259949002c0d2ecc3a9506ee9ed7c0dc738b50c5240e5f"
+      "sha256": "122909c2feaec69002f1585f3a381ebc7829560101f0f681f29b0481c4a4439c"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 338329,
-      "change": "Prove first amplitude differentiability of the exact onset family and an analytic alpha^(3/2) remainder; retain the open spatial-quotient and quadratic estimates.",
-      "changed_from_commit": "33d97fe009e8b53119106d5eecb3ed9c5737ba75",
+      "bytes": 339407,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a3c3bc0d568d84a1d89d53dbbfe82bb7f8f9c3ad391c614a736568d53c514ac8"
+      "sha256": "217e9d39fb45d3a4cd14a959b2691237d938137dbfbf4cb9b5c85a3cee3dfc19"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 493376,
-      "change": "Prove first amplitude differentiability of the exact onset family and an analytic alpha^(3/2) remainder; retain the open spatial-quotient and quadratic estimates.",
-      "changed_from_commit": "33d97fe009e8b53119106d5eecb3ed9c5737ba75",
+      "bytes": 508086,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5f62f530eb4c5e20bef6ffe1cc84069a7c9a2dd357ba7e3d5a9b1d2120b9fe9e"
+      "sha256": "43878935313232fff52962522c9467d80bb3710d90759e7ed8064a18ef7b17f1"
     },
     {
       "bytes": 8895,
@@ -11402,28 +11402,28 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 8374,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 8502,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4c14eb09350202d2fa5af3f3b30a18a0ca043549f88d0855893ae8934a5004f0"
+      "sha256": "f6d6f0857a7af175084d0e36e6068d6fc322e4607865a2dcc055ba4ae36fe650"
     },
     {
-      "bytes": 4845,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 5102,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "030a949d41fa5f9fe7a465e1f055761b981b87f0dab2998711ad99fee487479c"
+      "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 402486,
-      "change": "Prove first amplitude differentiability of the exact onset family and an analytic alpha^(3/2) remainder; retain the open spatial-quotient and quadratic estimates.",
-      "changed_from_commit": "33d97fe009e8b53119106d5eecb3ed9c5737ba75",
+      "bytes": 404127,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "843fd0c5a888c746805a5dc97c34605159cb98641ffafed164ea0152409e3cb7"
+      "sha256": "5b530b006f1b47437ab1f5b6e7d407383d0209c5226d13927cf6d306399b843d"
     },
     {
       "bytes": 6705,
@@ -11499,51 +11499,51 @@
     },
     {
       "bytes": 17236,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4d5c9af56366dc4848127346c22c623d4b04971c8d21a43b816f84d5e2fa1693"
+      "sha256": "2cf89d2c341fab1a9c0297717025ba0c63df50f69697cc9b38913fc249d31a0c"
     },
     {
       "bytes": 3206,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "9fb648385599f4239ca223ebc5ace06547cb2a5802b8b56b3783e265f10752b2"
+      "sha256": "50dce747cdbb426592c6f5716a321c4eea6404909decbc082235052dd2857538"
     },
     {
-      "bytes": 24118,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 24270,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2ebded8b5cc521388dc8910e2d71c719c8e67a33a9da91267cb4b09ce3e34f7b"
+      "sha256": "13f351dba9294bd9413e8a395177551c44f9473f129b1b9c85983a9512c321d1"
     },
     {
       "bytes": 396,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f5da7be306b5ba457aa23dcb8d3f6f9365ee4de107ac55e0c6aa574a54c117ba"
+      "sha256": "377e2f5e257805f1bb77cc4766f6b225730fb572021f255e2fa25d843cc19a55"
     },
     {
-      "bytes": 120891,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 125674,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7551c16d61a536f7b3734f8dd49cc6507abb03b7f173394c85a3cc91cdb5a276"
+      "sha256": "bdf445978584447e7db941058a6f060eb6184221bc2e17885f7554412ddb8270"
     },
     {
-      "bytes": 2856680,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 2896847,
+      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
+      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0fca5af2ef0af0373211415c21a6af3d64e62c9740dbd24006eb1fcb0dec11f1"
+      "sha256": "ae9017309752fe796566b3105d9ae66c669c80b57a14e245c3386449f79cb88d"
     },
     {
       "bytes": 3283,

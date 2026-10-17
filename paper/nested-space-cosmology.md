@@ -81,7 +81,10 @@ Separately, a local characteristic construction and continuation argument
 now establish a compatible finite-amplitude cap, wall and exterior on a
 short original source cell, uniformly over a nonzero coupling interval.
 Certified departure bounds apply to that solution. The regular core remains
-quiet there; later central arrival and approximation error remain separate.
+quiet there. A common-domain parameter argument gives a quadratic amplitude
+remainder for the normalized state, wall radius and anchored clock, with a
+finite unevaluated constant. Later central arrival and numerical
+approximation error remain separate.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1917,6 +1920,91 @@ and coordinate identities. No new physical trajectory is used in this proof.
 These bounds do not certify the saved numerical histories, a perturbative
 remainder, central arrival, formation or observational agreement.
 
+### 13.20. Amplitude dependence on the onset cell
+
+<!-- nsc-claim:atlas-onset-parameter-response -->
+
+Evidence: [source and comparison-chart regularity](../docs/nsc-atlas-finite-amplitude.md#source-data-and-regularity-in-the-fixed-comparison-charts),
+[coupled linear inverse](../docs/nsc-atlas-finite-amplitude.md#coupled-linear-inverse-on-the-complete-comparison-domain),
+[first quotient with one coordinate derivative](../docs/nsc-atlas-finite-amplitude.md#convergence-of-the-first-quotients-with-one-coordinate-derivative),
+and [second quotient and Taylor estimate](../docs/nsc-atlas-finite-amplitude.md#second-amplitude-derivative-and-quadratic-onset-remainder).
+The [source-bound record](../results/summaries/nsc-atlas-source-forcing-bound-v1.json)
+and [conditional tube record](../results/summaries/nsc-atlas-coupled-tube-bound-v1.json)
+retain the numerical input bounds; the linked derivation supplies the
+parameter theorem. Neither record evaluates its Taylor constant.
+
+**Amplitude result.** On exactly the source cell and coupling interval of
+Section 13.19, the normalized solution has a continuous first amplitude
+derivative into C1 comparison jets and a continuous second amplitude
+derivative into C0 comparison jets. At the interval endpoints, derivatives
+are one-sided. The wall radius and anchored central clock are included.
+
+The comparison uses the original source label $x$. The exterior has the
+fixed interval $0\leq\bar U\leq W(x)$; the complete cap uses
+$r=r_c+\eta(R(x,\alpha)-r_c)$, $0\leq\eta\leq1$, with a fixed radius $r_c$
+in the quiet core. This keeps all radii enclosed by the wall, including
+those already present at the initial event. Each solution retains its
+own clock $T(x,\alpha)$ and the actual coordinate Jacobians. In particular,
+$T$ labels the wall's polar slice by the anchored central proper clock;
+it is not the arrival time of a later signal at the centre.
+
+Let $\mathcal U(\alpha)$ collect the normalized comparison state and write
+$\mathcal U_1=\partial_\alpha\mathcal U$ and
+$\mathcal U_2=\partial_\alpha^2\mathcal U$. Exact finite differences first
+give Lipschitz dependence into C0. Uniform spatial C2 bounds and continuity
+moduli then give continuity into C2 by second differences. The first
+parameter quotients converge into C1 in the order outgoing exterior
+derivative, cap gradients, incoming exterior derivative. The cap's radial
+constraints express the radial derivatives of its propagation coefficients
+without extra field-gradient unknowns. Actual inherited initial data and
+the wall corner identity are retained at each restart.
+
+For a cap transport equation
+$(\partial_x-\sigma\partial_\eta)w=\mathcal R$, its second variation has
+the same coupled linear operator as the first. Put
+$v_1=(\mathcal U_1,1)$, including variation of the explicit parameter.
+The known second-order forcing is
+
+$$
+2D\sigma[v_1],\partial_\eta w_1
++D^2\sigma[v_1,v_1],\partial_\eta w
++D^2\mathcal R[v_1,v_1].
+$$
+
+The factor two comes from varying the transport speed and the field
+gradient separately. Convergence of the first quotients in C1 controls
+this forcing in C0. The bounded coupled inverse and a finite sequence of
+compatible time slabs give convergence of the actual second quotients,
+not just a formal differentiated equation. The exterior, radial mass,
+lapse, wall and clock equations participate in the same limit. No fourth
+source derivative is used, and no C1-valued second derivative of all jets
+is asserted.
+
+For a specified normalized state component, wall radius or anchored clock
+$O$, define the output-specific finite constant
+
+$$
+M_{2,O}=\sup_{0\leq\alpha\leq\alpha_{\max}}
+\|\partial_\alpha^2 O(\alpha)\|_{C^0}.
+$$
+
+Twice integrating in amplitude gives
+
+$$
+\boxed{\|O(\alpha)-O(0)-\alpha O_1(0)\|_{C^0}
+\leq \frac{1}{2} M_{2,O}\alpha^2.}
+$$
+
+This is an analytic quadratic remainder on the onset domain. The constant
+is finite but has not been numerically evaluated. Identifying $O_1(0)$
+with an older computed coefficient requires matching its source, gauge
+and initial data; numerical approximation error then needs its own bound.
+The normalized fields have the stated amplitude derivatives. The physical
+scalar $\Psi=\sqrt{\alpha}f$ is not asserted to be twice differentiable in
+$\alpha$ at zero. The quiet core, original source and coupling interval are
+unchanged. Continuation through central arrival and an error bound for the
+observer waveform remain separate steps.
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -2260,8 +2348,11 @@ residuals and the final wall kinematic mismatch; its paired scalar change
 is 0.524% of the new peak. The slightly larger incoming-constraint maximum
 and worse, width-sensitive wall-curvature estimates keep local accuracy
 unresolved. Separately, Section 13.19 establishes a finite-amplitude onset
-solution and its certified departure bounds. Continuation through central
-arrival, approximation error and the observer-waveform remainder remain open.
+solution and its certified departure bounds. Section 13.20 establishes
+its first and second amplitude derivatives and an analytic quadratic
+remainder with a finite unevaluated constant. Evaluating that bound,
+matching computed coefficients, continuing through central arrival and
+controlling the observer waveform remain open.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 

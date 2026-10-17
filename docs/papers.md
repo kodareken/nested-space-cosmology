@@ -6,12 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
-Revision `2026-10-17.1` adds Section 13.19: a constructed finite-amplitude
-cap--wall--exterior solution on the declared onset cell and coupling range.
-The [proof owner](nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
-connects local evolution, constraints, clocks and continuation to the frozen
-conditional bounds. This is separate from accuracy of the older numerical
-histories, central arrival and the observer-waveform remainder.
+Revision `2026-10-17.2` adds Section 13.20: first and second amplitude
+derivatives of the constructed onset solution and an analytic quadratic
+Taylor remainder for its normalized state, wall radius and anchored clock.
+The [parameter proof](nsc-atlas-finite-amplitude.md#second-amplitude-derivative-and-quadratic-onset-remainder)
+uses the same source cell and coupling range as Section 13.19. Each output's
+remainder constant is finite and unevaluated. Matching older numerical
+coefficients, evaluating their error, and extending to central arrival
+remain separate connections.
 
 ## The common research thread
 
