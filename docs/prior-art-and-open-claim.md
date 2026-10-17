@@ -2421,6 +2421,23 @@ First run the bounded orchestration tests with fake preparation and
 transfer: verify enrichment forwarding, original-input receipt and single
 charging on success/failure, plus early rejection of an invalid mode.
 
+**Outcome:** frozen `42c7741` completes all 371 steps / 1,855 stages with
+1,244,922,621 charged values / 660.703125 CPU seconds. One preparation,
+no retries, and the original input/geometry/schedule are retained. The
+maximum conformal scalar gap `2.7542985253647956e-13` passes `1e-10`;
+the physical temporal-mass residual is `7.752513817634473e-21`.
+Incoming and weak-velocity channel maxima are `5.692138312796339e-13`
+and `2.0064215331527202e-14`. The selected exterior constraint remains
+`2.0281018462806577e-11`, and the source curvature diagnostics are unchanged.
+Grok review found no material orchestration bug; parent inspection also
+confirmed the four SSPRK/endpoint abscissae and independent midpoint call.
+All 70 producer bindings and the saved final-state hash authenticate.
+The 28,312-byte result SHA256 is
+`f6b5995960483d9285a4226e2c7ae1be4e6bd08ad53fdef2a30855edae7be62f`.
+This supports the transfer diagnosis and ends this scalar-interpolation
+comparison. Continuous source/exterior error bounds and the coupled
+finite-domain estimate remain the next work.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "34c44228096a6a7630183791055c5c155ac0422e",
+  "current_receipt_commit_parent": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 323619,
-      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
-      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
+      "bytes": 324613,
+      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
+      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "86773657c6291c4e4c2e11640d1fb95575d40613f443a5f63b2f479a3fcea26f"
+      "sha256": "94738949c490fc0c50f0b246ef9d0eb5a6d7b1f9e83c6e38dcac1a1adbf26003"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 322496,
-      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
-      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
+      "bytes": 324573,
+      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
+      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "36675e44eb37821a680a87060bfaf1ab2c303efeca14fdcd3c5867f04bdf340d"
+      "sha256": "65efe79029d894ecdcb4c00faabfc1e5f5e756ae5c539e144508fa3a04e2705b"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 361934,
-      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
-      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
+      "bytes": 363008,
+      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
+      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "95d2d32b12579fbce9ea95e419cbf3d48fdac19f6f8545c4dc1e1053a942b968"
+      "sha256": "0591b20902f25b366d3f3cd6419d1351afee8d921bf8897ecc2f7780a3d0a067"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 115670,
-      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
-      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
+      "bytes": 115963,
+      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
+      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c99854fd771b8bb39545cf1804210342effe15457c3711e3306c208d05d36232"
+      "sha256": "e8bd8840e39f3f022bbc7b2b8061d0793c3811d9dbfc44784a09368fb61d66a2"
     },
     {
       "bytes": 18356,
@@ -29581,6 +29581,13 @@
       "path": "results/summaries/nsc-atlas-cap-transport-balance-v1.json",
       "retention_reason": "Compact fixed-state cap transport attribution, hashes and regeneration command.",
       "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
+    },
+    {
+      "bytes": 28312,
+      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
+      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
+      "path": "results/summaries/nsc-atlas-fixed-enriched-history-onset-v1.json",
+      "sha256": "f6b5995960483d9285a4226e2c7ae1be4e6bd08ad53fdef2a30855edae7be62f"
     },
     {
       "bytes": 13182,

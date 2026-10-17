@@ -570,6 +570,10 @@ one preparation and all stages. The command checks the committed enriched
 reference and its input hashes, and saves one small final state plus
 summaries. Its sampled scalar decision is distinct from interval completion
 and from a continuum validity claim. Eight orchestration controls pass.
+The frozen `42c7741` execution completes in 660.703125 CPU seconds with
+1,244,922,621 charged values and passes the sampled scalar decision at
+`2.75430e-13`. The 28,312-byte receipt contains the final state, its hash
+and component maxima; the 371-step history is represented only by its hash.
 
 GitHub Verify run `38979718935` confirms the storage fix on both Linux and
 Windows, including all retained tests and the current-paper checks. Later

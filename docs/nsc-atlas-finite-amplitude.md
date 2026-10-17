@@ -6656,10 +6656,45 @@ The source, geometry, 393 knots, original nodal inputs, quartic onset and
 direct prepared field are unchanged; 304 ordinary pieces acquire the
 additional interior jets. Both old and enriched hashes are recorded.
 This resolves the diagnosed transfer contribution at one reference event.
-The next admitted calculation carries it through the original finite-alpha
-371-step interval, retaining the small final state needed to inspect both
-channels directly. Its scalar decision remains separate from a continuum
-or complete junction certificate.
+The [full enriched interval](../results/summaries/nsc-atlas-fixed-enriched-history-onset-v1.json)
+now completes the same finite-alpha 371 steps / 1,855 stages and passes the
+predeclared `1e-10` scalar decision. All 70 source bindings authenticate at
+`42c7741`; original input, geometry and schedule match the earlier full
+interval exactly. Both prepared-history hashes are unchanged from the
+checked enriched reference.
+
+| Sampled quantity | Maximum absolute value |
+| --- | ---: |
+| Conformal scalar wall-flux residual `E_c` | `2.75429853e-13` |
+| Canonical scalar-tangent residual `E_f` | `5.79146106e-13` |
+| Incoming scalar channel | `5.69213831e-13` |
+| Weak-velocity scalar channel | `2.00642153e-14` |
+| Forward/adjoint wall-velocity discrepancy | `4.53418108e-15` |
+| Actual physical temporal-mass residual | `7.75251382e-21` |
+| Derived wall-scalar time residual | `3.27464746e-15` |
+| Affine explicit-time mass remainder | `1.32922763e-17` |
+| Weak-balance minus explicit-time remainder identity | `2.75795871e-20` |
+| Selected exterior pure-U constraint | `2.02810185e-11` |
+
+These maxima include the four SSPRK/endpoint states and the continuous-path
+midpoint check per step, not a supremum over time. The channel maxima need
+not occur at the same event. The scalar channel identity defect is below
+`2.33e-18`, and the metric certificate stays above `0.7738240496214122`.
+Compared with ordinary quintic history, the conformal gap is about 196,000
+times smaller. The radial mass and wall laws are unchanged. The final cap
+departure L2 norms are `1.30859e-19` for chi and `1.11268e-15` for density;
+their smallness is a result in this short onset domain, not an all-pulse
+or finite-amplitude remainder bound.
+
+One preparation and evolution cost 1,244,922,621 values / 660.703125 CPU
+seconds, with no retries. The 28,312-byte receipt retains the small final
+coefficient/exterior state, its SHA256, and summary diagnostics, not the
+trajectory. Its source and selected exterior constraint residuals persist;
+the already identified source-knot one-sided curvature distinction is
+unchanged. The numerical scalar decision therefore does not supply the
+continuous source/exterior error account or the coupled validity estimate.
+Those are the next required connections; a further history/grid scan is
+not indicated by this result.
 
 ### Central clock in general null labels
 

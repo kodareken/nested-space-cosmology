@@ -154,8 +154,22 @@ The [enriched reference](../results/summaries/nsc-atlas-prepared-endpoint-enrich
 passes those limits: the conformal gap falls from `6.76138e-9` to
 `4.70422e-13` in magnitude, with identical source, clock and knot grid.
 Its preparation/event cost is 1,866,626 values / 2.75 CPU seconds. The
-next admitted test is one original finite-coupling interval using this
-representation, with the same 371 steps and a compact final state.
+full [finite-coupling interval](../results/summaries/nsc-atlas-fixed-enriched-history-onset-v1.json)
+also passes its predeclared scalar decision. All 371 steps / 1,855 stages
+complete with maximum conformal gap `2.75430e-13`, down from `5.40983e-8`
+with ordinary quintic history. The source, coupling, geometry and schedule
+are identical. The actual physical temporal-mass residual is `7.75251e-21`
+and the derived wall-scalar time residual is `3.27465e-15`. One preparation
+and the evolution cost 1,244,922,621 values / 660.703125 CPU seconds, with
+no retries. The 28,312-byte receipt retains one final state and its hash.
+
+The sampled incoming and velocity channel maxima are `5.69214e-13` and
+`2.00642e-14`, respectively. These results support the history-transfer
+diagnosis without changing the mass or junction laws. The selected exterior
+constraint remains `2.02810e-11`; the final source knot retains its known
+right-piece curvature residual. The next work is an error account for the
+continuous source and exterior solution, then the coupled finite-domain
+estimate. No further history/grid scan is indicated by this result.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
