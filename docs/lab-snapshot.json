@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ec21adc186c32aad32e768e15d039c44cbc6b0fb",
+  "current_receipt_commit_parent": "253f675672747c43690335a4c8c54ca25a1e6f04",
   "files": [
     {
       "bytes": 3120,
@@ -11426,12 +11426,12 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 468778,
-      "change": "Integrate the quarter-panel radial step restriction verified at both stopped P001 states.",
-      "changed_from_commit": "ec21adc186c32aad32e768e15d039c44cbc6b0fb",
+      "bytes": 469936,
+      "change": "Check one-sided radial endpoint effects and retain Grok register tolerance fixes.",
+      "changed_from_commit": "253f675672747c43690335a4c8c54ca25a1e6f04",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4ff17ff36072dcefd73baca2de9ee8ce1105ac3758a1e7f1425f34182f2678e1"
+      "sha256": "219b082d79321791e64c13009296cb1509490d4040d4e5b2b0665c535c998a2f"
     },
     {
       "bytes": 6705,
@@ -30580,12 +30580,12 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 24015,
-      "change": "Preserve the later radial stop, prepare its bounded panel diagnostic, and add saved-result P001 registration.",
-      "changed_from_commit": "6b6e69cef3f2baa5fbe9ac4081a1ccf4ccabe751",
+      "bytes": 26219,
+      "change": "Check one-sided radial endpoint effects and retain Grok register tolerance fixes.",
+      "changed_from_commit": "253f675672747c43690335a4c8c54ca25a1e6f04",
       "path": "scripts/check_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "bfa4def2f3c3455f32dd0e5822636bf567be05f4b38803576579f934e2493113"
+      "sha256": "804e1640d1443aaa2cd70b555240f625ad481ccb525f2b6be2f180559e66fcfe"
     },
     {
       "bytes": 13188,
@@ -32609,12 +32609,12 @@
       "sha256": "545314108872f623ffd88db01a71d2d5d548aa00f312c70f3c9abd22c8be79fd"
     },
     {
-      "bytes": 9835,
-      "change": "Preserve the later radial stop, prepare its bounded panel diagnostic, and add saved-result P001 registration.",
-      "changed_from_commit": "6b6e69cef3f2baa5fbe9ac4081a1ccf4ccabe751",
+      "bytes": 11451,
+      "change": "Check one-sided radial endpoint effects and retain Grok register tolerance fixes.",
+      "changed_from_commit": "253f675672747c43690335a4c8c54ca25a1e6f04",
       "path": "scripts/diagnose_nsc_atlas_endpoint_radial.py",
       "retention_reason": "Full P001 evolution, retained failure evidence and bounded radial diagnosis.",
-      "sha256": "37e848c3fae384ea3858b154e9b67748f2492563526382f5afda9efe559d9b14"
+      "sha256": "8a872f73f73c2962851943935eb925c22591304641633b6874f4d59bf3289293"
     },
     {
       "bytes": 4707,
@@ -36910,12 +36910,12 @@
       "sha256": "1743217f76dc467d64d8e8d77de9d49b74ca07fca2cc7b30ad1855561b1243db"
     },
     {
-      "bytes": 2138,
-      "change": "Preserve the later radial stop, prepare its bounded panel diagnostic, and add saved-result P001 registration.",
-      "changed_from_commit": "6b6e69cef3f2baa5fbe9ac4081a1ccf4ccabe751",
+      "bytes": 2545,
+      "change": "Check one-sided radial endpoint effects and retain Grok register tolerance fixes.",
+      "changed_from_commit": "253f675672747c43690335a4c8c54ca25a1e6f04",
       "path": "tests/test_nsc_atlas_endpoint_radial_diagnostic.py",
       "retention_reason": "Full P001 evolution, retained failure evidence and bounded radial diagnosis.",
-      "sha256": "6cb2dd1c842eeb17816cb40432a38468ece009aea15051bd1097c01bebc28631"
+      "sha256": "3f698dbd1d032a4b9f8c11fc191455fc80681be7a64ecc38080f45ae4beb2d96"
     },
     {
       "bytes": 10121,
@@ -40534,12 +40534,12 @@
       "sha256": "1d4d86c5cb2d92758a511419414b490815a77c0eca535ec12d5c9edf20cf261d"
     },
     {
-      "bytes": 4644,
-      "change": "Preserve the later radial stop, prepare its bounded panel diagnostic, and add saved-result P001 registration.",
-      "changed_from_commit": "6b6e69cef3f2baa5fbe9ac4081a1ccf4ccabe751",
+      "bytes": 6912,
+      "change": "Check one-sided radial endpoint effects and retain Grok register tolerance fixes.",
+      "changed_from_commit": "253f675672747c43690335a4c8c54ca25a1e6f04",
       "path": "tests/test_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "232edc0ca169f49a645ebc1769dcc41241dac90aea86c8b2b04e5c1e9673e73a"
+      "sha256": "5c91462580759a415e74f8b86ee8d3b0167815e7c1fdd316d907db4524e84021"
     },
     {
       "bytes": 1420,
@@ -40569,12 +40569,12 @@
       "sha256": "7303f32b784ac232d273a430aad59520f35b0d39ed3ff356d621c81ac7891854"
     },
     {
-      "bytes": 15056,
-      "change": "Preserve the later radial stop, prepare its bounded panel diagnostic, and add saved-result P001 registration.",
-      "changed_from_commit": "6b6e69cef3f2baa5fbe9ac4081a1ccf4ccabe751",
+      "bytes": 21626,
+      "change": "Check one-sided radial endpoint effects and retain Grok register tolerance fixes.",
+      "changed_from_commit": "253f675672747c43690335a4c8c54ca25a1e6f04",
       "path": "tests/test_register_nsc_atlas_fixed_endpoint.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "27371ffc2738b856ee2d742e6bd6537db8799a50ebb627dbd1aca4905fc6c69d"
+      "sha256": "e2c657977e7486202d6b2b1eb70dc9233c90fc72ffd23570e6abb786d8b61007"
     },
     {
       "bytes": 9021,

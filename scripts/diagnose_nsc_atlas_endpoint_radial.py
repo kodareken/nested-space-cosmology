@@ -17,6 +17,25 @@ CASES=((32,2e-13,2e-15),(64,2e-13,2e-15),(128,2e-13,2e-15),
 CONFIRMATION_CASES=((32,2.5e-14,1e-15),(64,2.5e-14,1e-15))
 PANEL_CASES=((32,2.5e-14,1e-15,.5),(32,2.5e-14,1e-15,.25),
              (64,2.5e-14,1e-15,.5))
+ONE_SIDED_CASES=((32,2.5e-14,1e-15,None),(32,2.5e-14,1e-15,.25),
+                 (64,2.5e-14,1e-15,None))
+
+
+def inward_panel_point(point,span):
+    """Numerical one-sided limits for a split radial integration panel.
+
+    This diagnostic changes only points within 64 coordinate ulps of an
+    endpoint. Refuse a panel too small to resolve that displacement.
+    """
+    lo,hi=map(float,span)
+    margin=64*np.spacing(max(1.,abs(lo),abs(hi)))
+    if not lo < hi or margin > 1e-6*(hi-lo):
+        raise ValueError('one-sided radial endpoint is not resolved')
+    if point <= lo+margin:
+        return lo+margin
+    if point >= hi-margin:
+        return hi-margin
+    return point
 
 
 def panel_step_options(span, options, fraction):
@@ -65,8 +84,11 @@ def main(argv=None):
                         help='the admitted 32/64-point check of the selected tighter tolerance')
     mode.add_argument('--panel-step-check',action='store_true',
                       help='half/quarter-panel forward steps at the selected tolerance')
+    mode.add_argument('--one-sided-panel-check',action='store_true',
+                      help='test inward endpoint limits at existing radial formula breaks')
     args=parser.parse_args(argv)
-    cases=(PANEL_CASES if args.panel_step_check else
+    cases=(ONE_SIDED_CASES if args.one_sided_panel_check else
+           PANEL_CASES if args.panel_step_check else
            CONFIRMATION_CASES if args.confirm_forward_accuracy else CASES)
     if args.output.exists() or not args.output.parent.is_dir():
         raise ValueError('choose a new output in an existing directory')
@@ -85,7 +107,8 @@ def main(argv=None):
                            bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest()),
         stage_seed=receipt['failed_stage_seed'],x=x,level=receipt['level'],
         physical_time_steps=0,gradient_tolerance=2e-8,
-        comparison_kind=('forward_panel_step' if args.panel_step_check else
+        comparison_kind=('one_sided_panel_limits' if args.one_sided_panel_check else
+                         'forward_panel_step' if args.panel_step_check else
                          'selected_forward_accuracy' if args.confirm_forward_accuracy else 'error_attribution'),
         limits=dict(cpu_seconds=60.,charged_values=40_000_000,cases=len(cases)),cases=[])
     original=fixed._radial_variations
@@ -116,9 +139,15 @@ def main(argv=None):
             if fraction is not None:
                 case['maximum_radial_step_panel_fraction']=fraction
             captured=[];started=time.process_time();before=budget.evaluations
-            panels=[]
+            panels=[];shifts=[]
             def solve(fun,span,initial,**kw):
-                result=original_solve(fun,span,initial,**panel_step_options(span,kw,fraction))
+                def one_sided(point,values):
+                    interior=inward_panel_point(point,span)
+                    if interior!=point:
+                        shifts.append(abs(interior-point))
+                    return fun(interior,values)
+                result=original_solve(one_sided if args.one_sided_panel_check else fun,
+                    span,initial,**panel_step_options(span,kw,fraction))
                 budget.check(result.y.size)
                 panels.append(dict(nfev=result.nfev,accepted_steps=len(result.t)-1,
                     maximum_internal_gradient=float(np.max(np.abs(result.y[2:])))))
@@ -150,11 +179,15 @@ def main(argv=None):
             case['forward_panels']=dict(count=len(panels),nfev=sum(p['nfev'] for p in panels),
                 accepted_steps=sum(p['accepted_steps'] for p in panels),
                 maximum_internal_gradient=max((p['maximum_internal_gradient'] for p in panels),default=0.))
+            if args.one_sided_panel_check:
+                case['endpoint_limits']=dict(shifted_samples=len(shifts),
+                    maximum_coordinate_displacement=max(shifts,default=0.),
+                    coordinate_ulps=64,largest_allowed_panel_fraction=1e-6)
             radial_results.append(captured[-1] if captured else None)
             case.update(cpu_seconds=time.process_time()-started,charged_values=budget.evaluations-before)
             report['cases'].append(case)
         report['pair_differences']=[]
-        pairs=((0,1),(0,2)) if args.panel_step_check else ((0,1),(1,2),(1,3))
+        pairs=((0,1),(0,2)) if (args.panel_step_check or args.one_sided_panel_check) else ((0,1),(1,2),(1,3))
         for i,j in pairs:
             if j>=len(radial_results):
                 continue

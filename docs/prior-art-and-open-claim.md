@@ -55,6 +55,23 @@ quarter-panel rule, and the existing 10,000/20,000/40,000 CPU-second and
 500-billion-value per-run limits. A further discrepancy still stops the
 execution; no error guard is relaxed and no physical step retry is added.
 
+Before launching the v4 evolutions, inspect one concrete endpoint mechanism.
+The retained spline reports a maximum knot-second-derivative discrepancy
+`3.4191e-5`; radial panels are split at those knots, but the global spline
+can select the neighbouring piece for a Runge--Kutta endpoint sample.
+Interior adjoint nodes do not use that endpoint. The measured internal
+gradient maximum is only about 270, excluding the proposed explanation
+through a much larger intermediate sensitivity. Admit a **three-case
+one-sided endpoint diagnostic** at the saved coarse v3 state: current
+forward steps with 32/64 adjoint points, and quarter-panel steps with 32.
+For this diagnostic only, move samples within 64 coordinate ulps of a
+panel endpoint toward that panel's interior, rejecting any displacement
+above one millionth of panel width. All interior points, physical inputs
+and error guards remain unchanged. One preparation, zero time steps,
+**60 CPU seconds / 40 million charged values**. This tests whether the
+step restriction suppresses an endpoint representation error before another
+full-domain attempt; it does not assert that the hypothesis is established.
+
 Douglas has prioritized the full finite-amplitude evolution and a physically
 scaled P001 observable. Opening-phase robustness work is paused. Reuse the
 existing constrained fixed-cap mass/gradient calculation, simultaneous

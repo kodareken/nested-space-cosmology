@@ -3,7 +3,7 @@ import hashlib
 import numpy as np
 import pytest
 
-from diagnose_nsc_atlas_endpoint_radial import read_seed, panel_step_options
+from diagnose_nsc_atlas_endpoint_radial import read_seed, panel_step_options, inward_panel_point
 
 
 def fixture(root):
@@ -47,3 +47,12 @@ def test_panel_step_check_preserves_tolerance_and_existing_smaller_step():
             panel_step_options((1.,1.5),options,fraction)
     with pytest.raises(ValueError,match='positive radial panel'):
         panel_step_options((1.,1.),options,.5)
+
+
+def test_one_sided_diagnostic_moves_only_resolved_endpoint_samples():
+    span=(1.,1.25)
+    assert span[0]<inward_panel_point(span[0],span)<1.000000000001
+    assert 1.249999999999<inward_panel_point(span[1],span)<span[1]
+    assert inward_panel_point(1.125,span)==1.125
+    with pytest.raises(ValueError,match='not resolved'):
+        inward_panel_point(1.,(1.,np.nextafter(1.,2.)))
