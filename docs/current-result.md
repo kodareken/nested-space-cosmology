@@ -30,7 +30,13 @@ in the quiet cap and `-1.60211060142e-79` at the quiet exterior wall radius.
 These use CODATA 2022 `G`, Planck's constant and `c`; their relative input
 uncertainty from `G` is `2.2474e-5`. Neither that uncertainty nor the chosen
 fiducial scale supplies a cosmological error band. The cap baseline `3`
-remains an input. Eleven focused symbolic, metric and unit checks pass.
+remains an input. A further necessary trace test sets that supplied volume
+term to zero: a constant-curvature cap then has only the flat root or
+`H^2 * l_P^2 = 360*pi`, outside controlled small-curvature semiclassical
+physics. The one-scalar anomaly therefore does not generate the desired
+nonzero small-curvature cap by itself. Twelve focused symbolic, metric and
+unit checks pass. The quantum wall and joint-state contribution are the
+next missing connection; the classical endpoint runs remain unchanged.
 
 ## Full P001 endpoint evolution in progress, 17 October 2026
 

@@ -188,6 +188,44 @@ classical calculation and SI scaling. The commands above reproduce the exact exp
 and their displayed decimal coefficients; there is no quadrature error in
 these symbolic results.
 
+### Does this term generate the cap curvature?
+
+The same quantum extension supplies a necessary test without a new evolution.
+Let $X=(H\ell)^2$, $\lambda_0=\Lambda_0\ell^2$ and
+$a=\zeta/(960\pi^2)$. The constant-curvature trace equation is
+
+$$
+3X=\lambda_0+aX^2.
+$$
+
+Set the supplied renormalized volume coefficient to $\lambda_0=0$ explicitly.
+The roots are
+
+$$
+X=0\quad\hbox{or}\quad X=\frac{2880\pi^2}{\zeta}.
+$$
+
+Since $\zeta=8\pi\ell_P^2/\ell^2$, the nonzero root obeys
+$H^2\ell_P^2=360\pi$. It lies outside the small-curvature regime
+$H^2\ell_P^2\ll1$ in which neglecting quantum-gravitational corrections is
+controlled. Thus this one-scalar anomaly does not generate a nonzero,
+small-curvature de Sitter cap when the supplied volume term is zero.
+This is a consequence of the displayed equation, not an assumption that a
+preferred cosmological model must hold.
+
+For a supplied $\lambda_0\geq0$ and $9-4a\lambda_0\geq0$, the lower branch
+is $X=2\lambda_0/(3+\sqrt{9-4a\lambda_0})$ and tends to $\lambda_0/3$ as
+$\zeta\to0$. It corrects a supplied curvature. Neither branch establishes
+the full tensor equation, a joint state or a compatible quantum wall. The
+calculation concerns a constant-curvature smooth cap with the selected free
+scalar and renormalized gravitational coefficients; a nonconstant geometry
+or another physical mechanism is a separate calculation.
+
+The executable `constant_curvature_trace_condition()` checks the roots and
+classical limit. A twelfth test derives the nonzero root directly from the
+dimensional SI trace equation, independently of the dimensionless conversion.
+No extra grid, fitted scale or observational input enters this test.
+
 ## The transition and vacuum-form coefficient
 
 The frozen positive-$F$ DEV3 transition uses radius $32/25$, expansion

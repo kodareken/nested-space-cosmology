@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "6e3809575b2f2a2447c79ecb39bcea9594527703",
+  "current_receipt_commit_parent": "5c4222f0eb0ac15837f02c313f7cd2409c472f00",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 368117,
+      "bytes": 368553,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "6e3809575b2f2a2447c79ecb39bcea9594527703",
+      "changed_from_commit": "5c4222f0eb0ac15837f02c313f7cd2409c472f00",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5824067396d2f9711ccad7c03c5982bdff4420e3350efce8751e949cecebe4c2"
+      "sha256": "376bfcd3de54164cdfced52bbddbc1456d9cf8e55aa60f81f64c4a5383eada21"
     },
     {
       "bytes": 18915,
@@ -11459,12 +11459,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 15553,
+      "bytes": 17225,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "6e3809575b2f2a2447c79ecb39bcea9594527703",
+      "changed_from_commit": "5c4222f0eb0ac15837f02c313f7cd2409c472f00",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "fba890a99a4f4e84f423088edd29f15444230eb65901c3337529f91b4613bd60"
+      "sha256": "c7fe1f7fef434813c6c35bcebc53a60bd392b43e9f2cc902f33504ba069c6828"
     },
     {
       "bytes": 537091,
@@ -33334,12 +33334,12 @@
       "sha256": "8e3bfacdce7cce29ea2443f90ec106b4d41dfd8662c56aad0a5e38adfe320496"
     },
     {
-      "bytes": 14879,
+      "bytes": 17136,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "6e3809575b2f2a2447c79ecb39bcea9594527703",
+      "changed_from_commit": "5c4222f0eb0ac15837f02c313f7cd2409c472f00",
       "path": "src/recursive_horizons/nsc_atlas_effective_vacuum.py",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "31b4a57958f3b885202198fbff36abd9f0d5e985d866b243ba7cbb7481534f83"
+      "sha256": "898ff84a08a79cff56bdd53fade9af52ced7b2139744996d719b0faf80b5693e"
     },
     {
       "bytes": 5128,
@@ -37078,12 +37078,12 @@
       "sha256": "64ee9f580218686d5a7dd7cd00b81dbb0fb3a891c21d954d50a9cef5e187b856"
     },
     {
-      "bytes": 5350,
+      "bytes": 6214,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "6e3809575b2f2a2447c79ecb39bcea9594527703",
+      "changed_from_commit": "5c4222f0eb0ac15837f02c313f7cd2409c472f00",
       "path": "tests/test_nsc_atlas_effective_vacuum.py",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "baac582273de9d870d249697e38ba342d57b1d6e802d449f6c101f2daaaac6db"
+      "sha256": "30f7207453b6ff1f037ac8817fc1d94e6a4ac5914a477171c2b4a9d66a8660fb"
     },
     {
       "bytes": 2570,

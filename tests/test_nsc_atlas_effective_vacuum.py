@@ -9,6 +9,7 @@ from recursive_horizons.nsc_atlas_effective_vacuum import (
     classical_vacuum_calculation,
     conformal_anomaly_trace_projection,
     conformal_anomaly_scale_si,
+    constant_curvature_trace_condition,
 )
 from recursive_horizons.nsc_atlas_nonlinear_bulk import bulk_operator
 
@@ -114,3 +115,17 @@ def test_si_scale_from_energy_density_and_reference_length():
         for name, factor in [('delta_lambda_ell_squared', 4), ('delta_lambda_per_m2', 16)]:
             assert sp.simplify(factor*rescaled['regions'][region][name]
                                -result['regions'][region][name]) == 0
+
+
+def test_unsourced_cap_curvature_from_independent_si_trace():
+    result = constant_curvature_trace_condition()
+    assert all(value == 0 for value in result['checks'].values())
+    G, hbar, c, H2, ell = sp.symbols('G hbar c H2 ell', positive=True)
+    # Work directly in dimensional SI: R=12H^2, T=-hbar*c*H^4/(240*pi^2).
+    trace_equation = 12*H2-(8*sp.pi*G/c**4)*hbar*c*H2**2/(240*sp.pi**2)
+    si_curved_root = sp.solve(trace_equation, H2)[0]  # positive symbol excludes zero
+    assert sp.simplify(si_curved_root*G*hbar/c**3-360*sp.pi) == 0
+    zeta = sp.symbols('zeta', positive=True)
+    geometric_curved_root = next(root for root in result['unsourced_X_roots'] if root != 0)
+    assert sp.simplify(geometric_curved_root.subs(zeta, 8*sp.pi*G*hbar/(c**3*ell**2))
+                       -si_curved_root*ell**2) == 0

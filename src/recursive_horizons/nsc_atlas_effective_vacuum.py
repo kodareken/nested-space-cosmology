@@ -285,6 +285,44 @@ def conformal_anomaly_scale_si(ell_m=10000):
     }
 
 
+def constant_curvature_trace_condition():
+    """Necessary one-scalar semiclassical trace condition on a quiet cap.
+
+    This tests the local trace equation, not the full tensor equation, wall
+    matching or the quantum state. X=(H*ell)^2 and lambda0=Lambda0*ell^2.
+    The volume term lambda0 is explicitly supplied, including the case zero.
+    At constant curvature, the scheme-dependent Box R term vanishes.
+    """
+    X, lambda0 = sp.symbols('X lambda0', real=True)
+    zeta = sp.symbols('zeta', positive=True)
+    a = zeta/(960*sp.pi**2)
+    # R=4*Lambda0-kappa<T>; R*ell^2=12X, -kappa<T>*ell^2=4aX^2.
+    residual = 3*X-lambda0-a*X**2
+    unsourced_roots = sp.solve(residual.subs(lambda0, 0), X)
+    curved_root = next(value for value in unsourced_roots if value != 0)
+    planck_curvature = sp.factor(zeta*curved_root/(8*sp.pi))
+    discriminant = 9-4*a*lambda0
+    # Rationalization avoids subtracting nearly equal roots on the low branch.
+    low_root = 2*lambda0/(3+sp.sqrt(discriminant))
+    checks = {
+        'flat_unsourced_trace': residual.subs({lambda0: 0, X: 0}),
+        'curved_unsourced_trace': sp.factor(residual.subs({lambda0: 0, X: curved_root})),
+        'low_branch_trace': sp.simplify(residual.subs(X, low_root)),
+        'classical_low_branch_limit': sp.simplify(sp.limit(low_root, zeta, 0)-lambda0/3),
+        'curved_branch_planck_scale': sp.simplify(planck_curvature-360*sp.pi),
+    }
+    if any(value != 0 for value in checks.values()):
+        raise ArithmeticError('constant-curvature trace condition failed')
+    return {
+        'trace_equation_residual': residual,
+        'unsourced_X_roots': unsourced_roots,
+        'unsourced_curved_H2_planck_length2': planck_curvature,
+        'low_branch_X': low_root,
+        'discriminant': discriminant,
+        'checks': checks,
+    }
+
+
 if __name__ == '__main__':
     calculation = classical_vacuum_calculation()
     for name, value in calculation.items():
@@ -309,3 +347,8 @@ if __name__ == '__main__':
         print(region, 'DeltaLambda_trace*ell^2:', row['delta_lambda_ell_squared'].evalf(12),
               '+/-', row['standard_uncertainty_from_G'].evalf(5), '(G input only)')
     print('This scale illustration is conditional on ell=10000 m; it is not a cosmological prediction.')
+    condition = constant_curvature_trace_condition()
+    print('Necessary constant-curvature trace residual:', condition['trace_equation_residual'])
+    print('With supplied Lambda0=0, possible (H*ell)^2:', condition['unsourced_X_roots'])
+    print('Nonzero root H^2*l_P^2:', condition['unsourced_curved_H2_planck_length2'])
+    print('The nonzero root lies outside small-curvature semiclassical control; no full solution is inferred.')
