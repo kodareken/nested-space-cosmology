@@ -63,8 +63,23 @@ identities and estimates. This establishes a bounded linear response
 operator. A [spatial derivative estimate](nsc-atlas-finite-amplitude.md#first-spatial-derivatives-of-the-coupled-linear-solution)
 uses the order outgoing exterior derivative, cap gradients, then incoming
 exterior derivative. It retains actual inherited initial data and avoids
-a derivative cycle. Convergence of nonlinear parameter quotients and a
-numerical Taylor constant remain open. No new physical trajectory was run.
+a derivative cycle.
+
+The [actual source and chart regularity](nsc-atlas-finite-amplitude.md#source-data-and-regularity-in-the-fixed-comparison-charts)
+now supply the missing inputs for a [first amplitude derivative](nsc-atlas-finite-amplitude.md#finite-amplitude-differences-and-the-first-parameter-derivative).
+Exact finite differences are Lipschitz on the complete comparison domains;
+their first parameter quotients converge in the continuous-jet norm to
+the coupled linear response. The proof includes the radial mass, lapse,
+wall and central clock, using the normalized scalar fields at alpha zero.
+Independent Grok reviews confirm the source/gauge derivative count and the
+quotient argument after its endpoint and interpolation corrections.
+
+The derivative has a square-root continuity bound in alpha. This gives an
+analytic first-order remainder bounded by `C * alpha^(3/2)` on the onset
+cell, with C finite but not evaluated. It does not certify a saved numerical
+coefficient or history. The next step is convergence of the first quotients
+with one spatial derivative, followed by a second parameter estimate and a
+quadratic remainder. No new physical trajectory or grid scan was run.
 
 ## Fixed cap and moving-wall connection, 16 October 2026
 

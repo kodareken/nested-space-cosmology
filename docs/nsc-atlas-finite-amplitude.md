@@ -9167,16 +9167,17 @@ different assertions and retain their separate work.
 The onset theorem supplies a solution for each admitted alpha. A uniform
 Taylor remainder for its wall geometry and clocks needs a separate
 parameter-dependence estimate. The identities here describe that estimate's
-equations, conditional on the indicated derivatives; they do not assert
-that the constructed family already has those derivatives. At alpha=0
+equations, initially conditional on the indicated derivatives. The actual
+first derivative into continuous comparison jets is established later
+in this section; the second derivative remains open. At alpha=0
 the geometry is the vacuum reference and the normalized scalar is the
 prepared linear probe, not the zero scalar. In the certified quiet core
 the scalar readout is identically zero for every admitted alpha.
 
 Independent Grok review confirms the moving-limit and inverse-entry
 identities below. A common physical-cap domain is supplied further below;
-the weak-norm remainder still requires parameter quotient estimates for
-its coupled field, wall and clock operators.
+the final first-quotient argument gives a remainder of order three halves.
+A quadratic remainder still requires the stronger parameter estimate.
 
 Write `Z=(y,p,q)` and use subscripts 1 and 2 for first and second alpha
 derivatives at fixed native coordinates. For the smooth normalized mixed
@@ -10279,6 +10280,378 @@ derivative into C1 jets. It does not rule out a second derivative into
 continuous jets. Proving that weaker parameter statement requires
 convergence of the nonlinear quotients, which is not inferred from
 the spatial linear estimate.
+
+#### Source data and regularity in the fixed comparison charts
+
+The parameter estimate needs hypotheses for the actual source family and
+comparison coordinates. The smoothness of the algebraic field equations
+alone is insufficient. These hypotheses can be obtained from the exact
+source ODE, the proved native derivative hierarchy and the coordinate
+constructions, without evaluating a saved waveform.
+
+Write `rho=r_J`, `v=r_J'`, `A_g=g g''-2(g')^2`, `B_g=g g'` on the
+original source leg. Its specified equation is
+
+\[
+ \rho'=v,\qquad
+ v'=F_{\rm src}(x,\rho,v,\alpha)
+   =\alpha\left(\frac{A_g}{6\rho}
+                           +\frac{B_gv}{3\rho^2}\right).
+\]
+
+The compact g is C3, independent of alpha, and has the original quiet
+prefix. The source tube bounds rho away from zero. The right side and
+all its state/alpha derivatives are C1 in x; that x derivative uses g'''
+and does not require g''''. For example the first parameter variation
+of this ODE has coefficients
+
+\[
+ F_\rho=-\frac{\alpha A_g}{6\rho^2}
+                  -\frac{2\alpha B_gv}{3\rho^3},\qquad
+ F_v=\frac{\alpha B_g}{3\rho^2},\qquad
+ F_\alpha=\frac{A_g}{6\rho}+\frac{B_gv}{3\rho^2}.
+\]
+
+Differentiating its integral equations gives linear variation equations
+with bounded coefficients. Their finite-length Gronwall estimates give
+uniform parameter derivatives. Differentiating the displayed equation
+once in x then controls rho''' and its parameter derivatives using only
+g'''. Thus rho depends smoothly on alpha in the spatial C3 norm on this
+fixed finite source interval, including the one-sided limit at zero.
+
+The actual exterior source values are
+
+\[
+ y_s=(r,c,L)=\left(\sqrt{\rho^2-\alpha g^2/6},
+                     g,\ \log\left(1-\frac{\alpha g^2}{6\rho^2}\right)
+              \right),\qquad q_0=\partial_xy_s.
+\]
+
+The certified positive conformal factor keeps these operations smooth.
+Consequently y_s is parameter smooth into C3 and q_0 into C2. In
+particular the source variations and their first two spatial derivatives
+are jointly continuous, with a uniform modulus on the compact
+source/alpha set. The normalized source c=g remains nonzero on the
+active part of the cell at alpha zero. Setting the entire zero-amplitude
+normalized field to zero would change these data.
+
+The original bottom is expressly prescribed as the quiet reference data
+in the exact source family. The certified x_L lies strictly before the
+original support front, and the initial cap is wholly quiet. The fixed-W
+relabeling is the identity on the old quiet labels. Hence the original
+bottom, wall and cap data at x_L are alpha independent; their parameter
+derivatives vanish there. This conclusion uses the specified bottom and
+the verified quiet interval together. It is not inferred from a quiet
+wall value alone, and it does not apply to later restart data.
+
+For spatial regularity, the native hierarchy supplies uniform C3 fields
+`(r,c,L)`, a C4 radius, and uniform moduli for their highest derivatives
+on the full covered domain. The two coordinate changes require different
+derivative counts.
+
+**Exterior relabeling.** The prescribed positive native wall lapse is C3.
+The wall ODE and the C2 outgoing jets give C3 wall states, including the
+rapidity eta. Its null rates have the separate identities
+
+\[
+ a=\frac{du_W}{ds}=e^{-\eta}C_W^{-1/2},\qquad
+ b=\frac{dx_W}{ds}=e^\eta C_W^{-1/2}.
+\]
+
+The sign convention is the one in the owned two-null wall map. Its
+rapidity equation is `eta_s=K_tau-nL/2`. The outgoing wall jets are C2;
+Gamma is C2 because C_W is C3. Thus the rapidity RHS is C2 and eta is
+C3, rather than merely C2. For example, the second proper-time
+derivative of an outgoing trace uses
+
+\[
+ (q_W)_{ss}=q_{uu}a^2+2q_{ux}ab+q_{xx}b^2+q_u a_s+q_x b_s,
+\]
+
+all supplied by the native C2 jets and the already C3 wall state.
+Consequently differentiating the rapidity RHS twice uses no fourth
+source derivative. If `ell_a=-eta-log(C_W)/2`, then
+
+\[
+ a'''=a\left(\ell_a'''+3\ell_a'\ell_a''+(\ell_a')^3\right),
+\]
+
+and the corresponding formula with `ell_b=eta-log(C_W)/2` bounds b'''.
+These rates are C3, so the two null embeddings are C4. Their positive
+lower bounds give C4 inverse embeddings. The fixed reference W is
+smooth, and
+
+\[
+ \phi(u_W(s))=W(x_W(s))
+\]
+
+therefore defines a C4 relabeling, with uniform bounds and moduli.
+Equivalently, `k(u_W(s))=W_x(x_W(s))*exp(2 eta(s))` directly has three
+continuous derivatives, and the positive inverse u_W transfers them to u.
+It matches the identity on the nonempty quiet join. Thus k=phi' is C3,
+and the transformed lapse `L_bar=L_native-log k` is C3. A merely C3
+relabeling would not suffice for that conclusion. The exterior fields
+and their first jets consequently have the required uniform C3 and C2
+norms in the fixed-W chart, respectively. Old labels retain their quiet
+identity map; the wall relation covers the new labels.
+
+**Polar cap and source clock.** The already constructed radius flow
+has vector field `V=grad(r)/A=(1/(2r_u),1/(2r_v))` in native null
+coordinates. The radius is C4, its two first derivatives are bounded
+away from zero on the collar, and V is C3. Its flow starts from the
+same quiet-core clock. For example, if N(T,r) denotes the flow, its
+third T derivative obeys
+
+\[
+ \partial_rN_{TTT}=DV\,N_{TTT}
+       +3D^2V[N_T,N_{TT}]+D^3V[N_T,N_T,N_T].
+\]
+
+The lower variations are solved first. This finite-length linear
+hierarchy supplies uniform C3 flow bounds and propagates the uniform
+modulus of D3V. The previously established nonzero Jacobian supplies
+the inverse bounds. Pulling back the native metric uses the flow's
+Jacobian and gives a C2 polar metric; the normalized scalar f is C3.
+Thus `Phi=f_r` and `Pi=f_T/(Ae^delta)` are C2.
+
+The wall radius is the C4 native radius composed with C4 embeddings.
+The central clock rate `T_s=beta_minus/(Ae^delta)` is C2, so T is C3.
+Converting s to the source label x preserves those bounds. The map
+`(x,eta)->(T(x),r_c+eta(R(x)-r_c))` is therefore C3, with positive
+Jacobian and uniform inverse bounds. It gives uniform C2 comparison
+functions for the cap first jets and uniform moduli of their second
+derivatives. This uses the actual metric and scalar Jacobians, not
+value composition as a replacement for a tensor transformation.
+
+All highest-derivative moduli here follow from the native terminal
+modulus, the fixed gauge modulus, and finite-length differentiated ODEs.
+Their input moduli are uniform in alpha by the source argument above.
+This establishes uniform spatial regularity of the family without
+assuming that it is already continuous or differentiable in alpha.
+For interpolation only, the fixed exterior domain can be straightened
+by `theta=Ubar/W(x)`; W is alpha independent and bounded away from
+zero. The cap comparison rectangle is already fixed.
+
+Independent Grok review confirms the actual source regularity and the
+coordinate derivative count. Its first assessment stopped the native
+rates at C2; the explicit rapidity equation recovers their third
+derivative and the needed fourth derivative of the relabeling. The
+exponent signs above follow the owned wall convention. Uniform spatial
+moduli are not being used as parameter continuity before stability is
+proved.
+
+#### Finite amplitude differences and the first parameter derivative
+
+Compare two exact onset solutions with amplitudes alpha and beta at the
+same `(Ubar,x)` outside and the same `(x,eta)` inside. Each cap value is
+evaluated through its own physical chart. Put `epsilon=beta-alpha` and
+use Delta for this comparison difference. There is no evaluation of
+one solution outside its domain and no differentiation of the clipped
+extension used in the earlier existence argument.
+
+First establish stability without assuming parameter continuity.
+Algebraic inverse factors use endpoint identities such as
+
+\[
+ \Delta(1/H)=-\frac{\Delta H}{H_\beta H_\alpha}.
+\]
+
+The two actual states supply the positive denominator floors. Expand
+the numerator `H=2j q_r+2D^(3/2)R` using bounded smooth coefficients
+on a rectangular value box with positive R, fixed positive W_x and
+nonnegative alpha. This does not require H to remain positive along
+that auxiliary segment. The same endpoint method applies to inverse
+A, R and L_c factors. The strict physical tube is not presumed convex.
+The exterior mixed F is smooth on a positive-radius value box without
+requiring intermediate points to solve the constraints.
+
+For the radial cap operator, connect the inputs `(R,f,Pi,Phi,alpha)`
+by a linear path. Along it `r>=r_c`, `L_c>0`, `alpha>=0`, and
+`Q_c=Pi^2+Phi^2>=0`. The affine mass coefficient gamma is nonnegative;
+the mass is bounded by its fixed anchor plus the integral of its
+nonnegative source. Its finite differences and derivatives are bounded
+without dividing by A or requiring the intermediate radial states to
+be physical solutions. The wall's inverse A factors still use only
+the actual endpoint floors. This supplies bounded exact difference
+coefficients with the same dependencies as the linear radial map.
+
+For a cap component w obeying `w_x=sigma w_eta+Rcal`, subtraction
+along the alpha background characteristics gives exactly
+
+\[
+ (\partial_x-\sigma_\alpha\partial_\eta)\Delta w
+ =\Delta\sigma\,\partial_\eta w_\beta+\Delta\mathcal R.
+\]
+
+The term containing the speed difference is retained. The uniform
+spatial bounds just established control `partial_eta w_beta` before
+any parameter estimate. The wall and clock rates are algebraic in
+the continuous state and radial integrals, so Delta sigma does not
+require an unknown derivative of Delta w. The f equation has the
+same structure. The incoming cap value still depends only on the
+wall state and the outgoing exterior jet.
+
+Use the coupled block estimate with these bounded difference
+coefficients. They may have larger constants than a single background
+linearization; choose the common cap scale, exterior weight and slab
+length from their uniform bounds. Absorb every Delta Y coefficient
+in the wall difference ODE. Its result is
+
+\[
+ N(\Delta\mathcal U)\le\tfrac12N(\Delta\mathcal U)
+                 +C_{\rm data}\left(|\epsilon|
+                                     +\|\Delta\mathcal D\|\right),
+\]
+
+where N is the exterior/cap norm used above and D contains the actual
+source, initial and incoming data for that slab. Wall and clock
+differences are bounded by their ODEs from this norm. The original
+data are parameter smooth, so the first slab gives a Lipschitz bound.
+On later slabs the inherited data difference is the preceding terminal
+difference. Finitely many common slabs therefore give one finite
+constant C_Lip on the whole onset cell:
+
+\[
+ \boxed{\|\mathcal U_\beta-\mathcal U_\alpha\|_{C^0}
+                           \le C_{\rm Lip}|\beta-\alpha|.}
+\]
+
+Here mathcal U includes the exterior first jets and cap normalized
+fields; the wall, clock and radial variables obey the same form of
+bound. The norm is on the fixed comparison domains, not a comparison
+at the same proper-time endpoint. The scalar coordinates in this
+statement are the normalized c and f. The physical canonical scalar
+is `Psi=sqrt(alpha)*f`; a finite alpha derivative of Psi at zero is
+not asserted where the normalized probe is nonzero.
+
+Let M_sp bound the spatial C2 norms of these comparison fields.
+Interpolation on the fixed rectangles gives
+
+\[
+ \|\Delta\mathcal U\|_{C^1}
+ \le C_I\left(C_{\rm Lip}|\epsilon|
+                +\sqrt{M_{\rm sp}C_{\rm Lip}|\epsilon|}\right).
+\]
+
+For the exterior, use the fixed map `theta=Ubar/W(x)` and then its
+bounded chain rule. The estimate can be obtained by a first finite
+spatial difference with step t and remainder bounded by M_sp t,
+choosing t proportional to the square root of the C0 difference.
+One-sided differences or a fixed C2 extension cover the rectangle
+edges. This proves C1 continuity of the nonlinear family; it does
+not yet prove convergence of parameter quotients in C1.
+
+Now let `V_epsilon=Delta U/epsilon`, and let U_1 be the coupled
+linear solution at alpha with the actual differentiated source and
+initial data. The stability bound makes V_epsilon uniformly bounded
+in C0. All algebraic and radial maps have bounded second derivatives
+on a sufficiently small positive neighbourhood of an actual state;
+stability permits that neighbourhood now, without using it circularly
+in the first difference estimate.
+
+For a cap speed, write
+`sigma_epsilon=(sigma_beta-sigma_alpha)/epsilon` and let
+`D sigma_alpha[V_epsilon,1]` include both the state direction and
+the explicit alpha direction. The quotient equation has the
+linearized principal operator plus the remainder
+
+\[
+ \begin{aligned}
+ \mathcal E_{\sigma,\epsilon}={}&
+   \left(\sigma_\epsilon
+           -D\sigma_\alpha[V_\epsilon,1]\right)
+                                      \partial_\eta w_\alpha\\
+   &+\sigma_\epsilon
+           (\partial_\eta w_\beta-\partial_\eta w_\alpha).
+ \end{aligned}
+\]
+
+The first term tends to zero by the bounded coefficient derivatives
+and C0 stability. The second tends to zero by the C1 interpolation
+estimate. Its first factor is bounded; discarding this second term
+would wrongly treat the physical cap propagation speed as fixed.
+Reaction, exterior and wall coefficient quotients have the ordinary
+bounded-derivative remainders. The radial map is differentiable by
+its explicit integral formula, independently of differentiability
+of the coupled evolution.
+
+Let rho_data(epsilon) bound the difference between input quotients
+and their actual derivatives. Applying the continuous linear bound
+to `V_epsilon-U_1` on one slab gives
+
+\[
+ \|V_\epsilon-U_1\|_{C^0}
+ \le C_{\rm inv}\left[
+       \rho_{\rm data}(\epsilon)+C|\epsilon|
+       +C_I\left(C_{\rm Lip}|\epsilon|
+                     +\sqrt{M_{\rm sp}C_{\rm Lip}|\epsilon|}\right)
+                    \right].
+\]
+
+All constants are finite and uniform over the admitted alpha interval.
+The original source has bounded second parameter derivatives, so its
+quotient error tends to zero. The initial quotient error is zero.
+At a later slab its initial error is the preceding terminal error;
+the same finite induction preserves convergence. Therefore
+
+\[
+ \boxed{\lim_{\epsilon\to0}
+       \left\|\frac{\mathcal U_{\alpha+\epsilon}-\mathcal U_\alpha}
+                         {\epsilon}-U_1(\alpha)\right\|_{C^0}=0.}
+\]
+
+Only increments within the allowed amplitude interval are used,
+including one-sided limits at its endpoints. The radial mass/lapse
+quotients converge to their derived Volterra variations. The wall
+equation and `T_1=integral nu_1` identify the actual first wall and
+clock derivatives as well. At alpha zero this is the response about
+the prepared normalized probe, with its nonzero scalar source retained.
+
+The conclusion is first parameter differentiability into continuous
+comparison jets. The linear solution also has the separately proved
+spatial C1 regularity, but that does not by itself upgrade parameter
+quotient convergence to C1. That upgrade and a second parameter
+derivative remain distinct steps before a quadratic Taylor estimate.
+No numerical derivative, Taylor constant or new physical trajectory
+has been evaluated here.
+
+There is already a weaker uniform remainder estimate. The bounded
+second derivatives of the coefficient maps and source data make the
+ordinary quotient remainders `O(abs(epsilon))`. The spatial interpolation
+term is `O(sqrt(abs(epsilon)))`. Finite slab induction therefore gives
+
+\[
+ \left\|\frac{\mathcal U_{\alpha+\epsilon}-\mathcal U_\alpha}
+                        {\epsilon}-U_1(\alpha)\right\|_{C^0}
+                \le C_q\sqrt{|\epsilon|}
+\]
+
+for sufficiently small admissible increments, with one finite C_q.
+The same chord based at beta, using the opposite increment, gives
+
+\[
+ \|U_1(\beta)-U_1(\alpha)\|_{C^0}
+                  \le 2C_q\sqrt{|\beta-\alpha|}.
+\]
+
+The inverse bounds U_1 uniformly. Enlarge C_q if necessary to cover
+non-small increments on the compact amplitude interval. Thus U_1 is
+continuous with a square-root modulus, including its one-sided endpoint
+values. For a wall, clock or state output O, let O_1 be its actual first
+derivative and use that output's finite C_q. Integrating from zero yields
+
+\[
+ \boxed{\|O(\alpha)-O(0)-\alpha O_1(0)\|_{C^0}
+                         \le\frac{4C_q}{3}\alpha^{3/2}.}
+\]
+
+This is an analytic remainder of order three halves. Its constant has
+not been evaluated, and the exponent is not two. It neither certifies
+the saved approximate trajectory nor identifies an older saved
+coefficient without matching its source, gauge and data. Independent
+Grok review confirms the endpoint difference argument, the first
+quotient limit and this consequence under the established source and
+comparison-regularity hypotheses.
 
 ## Missing full-domain estimate
 

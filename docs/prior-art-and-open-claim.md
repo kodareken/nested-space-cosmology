@@ -3014,14 +3014,38 @@ correcting its intermediate confusion between `p_1,Ubar` and the mixed
 derivative `p_1,x=q_1,Ubar`. The owner gives the actual old/wall-born
 corner equation, with no independent normal derivative of the source trace.
 
-Next establish finite-difference stability on these fixed comparison
-domains and convergence of first parameter quotients with one spatial
-derivative. A second parameter equation may use that first spatial
-variation in its continuous-jet norm. Its quotient convergence and
-uniform inherited-data estimate must be proved separately; C3 source
-regularity does not license a second parameter derivative into C1 jets.
-These steps remain analytic derivation and review only; no new grid,
-physical evaluation, symbolic run or numerical Taylor constant is admitted.
+The [actual regularity inputs](nsc-atlas-finite-amplitude.md#source-data-and-regularity-in-the-fixed-comparison-charts)
+now close independently. The source ODE is parameter smooth into spatial
+C3 and has the same exact quiet initial data. The native rapidity equation
+raises eta to C3; the null rates are therefore C3 and the exterior
+relabeling C4, preserving a C3 fixed-gauge lapse. Grok's initial lower
+derivative count was corrected by this explicit bootstrap. The signs of
+the rate exponents were checked against the owned wall map. The polar
+flow supplies C2 comparison first jets and uniform spatial moduli.
+
+The [finite-difference argument](nsc-atlas-finite-amplitude.md#finite-amplitude-differences-and-the-first-parameter-derivative)
+now proves Lipschitz dependence and convergence of first parameter
+quotients in continuous normalized jets. Positive endpoint denominators
+replace an unjustified convex-tube assumption. The cap speed difference
+is retained, and interpolation includes the actual stability constant.
+Common-slab induction carries the inherited quotient errors. Separate
+Grok review confirms this limit and the uniform square-root quotient
+rate, which gives a first-order remainder of order alpha^(3/2). Its
+constant is finite and unevaluated; it does not identify a saved numerical
+coefficient or certify the saved history.
+
+Next establish convergence of first parameter quotients with one spatial
+derivative. First use the proved C0 stability and uniform highest spatial
+moduli to obtain continuity of second spatial derivatives on the fixed
+comparison domains; spatial equicontinuity alone is not that conclusion.
+Then control the differentiated quotient equations in their triangular
+order, with actual inherited data and corner identities. A second
+parameter equation may use that first spatial variation in a continuous
+norm. Its quotient convergence and uniform bound must be proved separately;
+C3 source regularity does not license a second parameter derivative into
+C1 jets. These steps remain analytic derivation and review only: no new
+grid, physical evaluation, symbolic run or numerical Taylor constant is
+admitted until the corresponding estimate has been established.
 
 ## Discrete cap mass balance, 16 October 2026
 
