@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "8788835b14cf65554fb6146ba0ea766b588bc967",
+  "current_receipt_commit_parent": "39617db2a2e72aa23a3d63ae630cb785b1bd6851",
   "files": [
     {
       "bytes": 3120,
@@ -11459,12 +11459,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 44516,
+      "bytes": 48069,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "8788835b14cf65554fb6146ba0ea766b588bc967",
+      "changed_from_commit": "39617db2a2e72aa23a3d63ae630cb785b1bd6851",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "216216b05f0fd4ca004d4c315a55fb3caa32364238890d1db9c74ff21267ae80"
+      "sha256": "7fb1be8178544d31b680f953b834d9c7a28b14bbfce0f5083dd1d4c3b0d50805"
     },
     {
       "bytes": 537091,
@@ -32764,6 +32764,14 @@
       "sha256": "7ba9e010e29770dd04252ee12c9546d39d86b57a21774729733877847b934d5b"
     },
     {
+      "bytes": 7816,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "39617db2a2e72aa23a3d63ae630cb785b1bd6851",
+      "path": "scripts/measure_nsc_atlas_distance_contrast.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
+    },
+    {
       "bytes": 19769,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
       "changed_from_commit": "7b73dc1e24d407327083525829c9e5b6f2886656",
@@ -33380,6 +33388,14 @@
       "original_path": "lab/src/recursive_horizons/nsc_atlas_connection_slice.py",
       "path": "src/recursive_horizons/nsc_atlas_connection_slice.py",
       "sha256": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832"
+    },
+    {
+      "bytes": 6958,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "39617db2a2e72aa23a3d63ae630cb785b1bd6851",
+      "path": "src/recursive_horizons/nsc_atlas_cosmological_distance.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "db75c6d8504f1c5ec16fab3be39cb8f36b71ccd4ae64d3083f63b304bc68e1e0"
     },
     {
       "bytes": 9910,
@@ -37132,6 +37148,14 @@
       "original_path": "lab/tests/test_nsc_atlas_connection_slice.py",
       "path": "tests/test_nsc_atlas_connection_slice.py",
       "sha256": "b5263d05e67cadabf9395eae4fbe9a84b30ae025e92a7d05918a3b603f83a7b8"
+    },
+    {
+      "bytes": 3828,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "39617db2a2e72aa23a3d63ae630cb785b1bd6851",
+      "path": "tests/test_nsc_atlas_cosmological_distance.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "67bd935ea57d7744cc2ac881ecd4206df67f6e47417912cb50ce50efd8c05067"
     },
     {
       "bytes": 4924,

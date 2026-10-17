@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2359344,
+      "bytes": 2360767,
       "path": "docs/lab-snapshot.json",
-      "sha256": "55c4149e02748026ef1960dd99860cc7cbb5338c9740f8e2d9c7fd62a69f5b4f"
+      "sha256": "617f1b920e247fe8861bd54aac8c1c4702a56146e2e69973ce64fdb68f4c13e6"
     },
     {
       "bytes": 4997,
@@ -2241,9 +2241,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 44516,
+      "bytes": 48069,
       "path": "docs/schur-memory.md",
-      "sha256": "216216b05f0fd4ca004d4c315a55fb3caa32364238890d1db9c74ff21267ae80"
+      "sha256": "7fb1be8178544d31b680f953b834d9c7a28b14bbfce0f5083dd1d4c3b0d50805"
     },
     {
       "bytes": 537091,
@@ -16446,6 +16446,11 @@
       "sha256": "7ba9e010e29770dd04252ee12c9546d39d86b57a21774729733877847b934d5b"
     },
     {
+      "bytes": 7816,
+      "path": "scripts/measure_nsc_atlas_distance_contrast.py",
+      "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
+    },
+    {
       "bytes": 11467,
       "path": "scripts/plot_nsc_atlas_background_evolution.py",
       "sha256": "93220659fb4f4fa464096f2b76970a76431daa9353caf3608b4ae4aa7b5488de"
@@ -17119,6 +17124,11 @@
       "bytes": 15394,
       "path": "src/recursive_horizons/nsc_atlas_connection_slice.py",
       "sha256": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832"
+    },
+    {
+      "bytes": 6958,
+      "path": "src/recursive_horizons/nsc_atlas_cosmological_distance.py",
+      "sha256": "db75c6d8504f1c5ec16fab3be39cb8f36b71ccd4ae64d3083f63b304bc68e1e0"
     },
     {
       "bytes": 17456,
@@ -19351,6 +19361,11 @@
       "sha256": "b5263d05e67cadabf9395eae4fbe9a84b30ae025e92a7d05918a3b603f83a7b8"
     },
     {
+      "bytes": 3828,
+      "path": "tests/test_nsc_atlas_cosmological_distance.py",
+      "sha256": "67bd935ea57d7744cc2ac881ecd4206df67f6e47417912cb50ce50efd8c05067"
+    },
+    {
       "bytes": 13879,
       "path": "tests/test_nsc_atlas_coupled_diagnostics.py",
       "sha256": "3e51699a58f5384657de9c94436ac94b0db2b713ba254ed48962f6b1e8601b4f"
@@ -21541,7 +21556,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "55c4149e02748026ef1960dd99860cc7cbb5338c9740f8e2d9c7fd62a69f5b4f",
+  "lab_snapshot_sha256": "617f1b920e247fe8861bd54aac8c1c4702a56146e2e69973ce64fdb68f4c13e6",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

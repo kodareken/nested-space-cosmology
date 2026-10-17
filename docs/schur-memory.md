@@ -760,6 +760,68 @@ metric and a physically selected clock/domain, then calculate its observable
 response without prescribing the desired expansion beforehand. Implementing
 the dust reference would not resolve that missing connection.
 
+### A distance observable for the Lambda target
+
+The quiet reference cap supplies one immediate observer prediction. With
+zero scalar source and comoving test emitters in its flat de Sitter chart,
+$L_{\mathrm{ref}}=c/H$ and $D_L/L_{\mathrm{ref}}=z(1+z)$. This follows
+by integrating the radial null equation and including redshift of energy
+and arrival rate. It tests the existing quiet geometry, not the nonzero
+P001 pulse or a newly generated Lambda.
+
+Use the central event at cap time zero, where the existing reference wall
+has $R_w/\ell=1.5$. For $1\le R_w/\ell\le1.5$, its signed dynamics bound
+$(dR_w/d\tau)^2\le4569/1600<4$, and $dt/d\tau=\gamma\ge1$.
+It therefore needs at least $\ell/(4c)$ to reach $R_w/\ell=1$ backwards
+from that event. The redshifts below have lookback at most
+$\log(1.25)\ell/c<\ell/(4c)$ and emission radius at most $0.2\ell$.
+Their null paths remain inside the quiet cap. The test-source luminosities
+are probes; a matter/radiation cosmology has not been supplied by this limit.
+
+Fix the following comparison before calculating its value. Use the official
+[Pantheon+ release](https://github.com/PantheonPlusSH0ES/DataRelease) at commit
+`c447f0fea703fcd0fff57de5000947b5ca81286b`, the standardized `m_b_corr`
+column and full `STAT+SYS` covariance. Retain non-calibrator light curves
+in `0.025 <= zHD < 0.075` or `0.15 <= zHD <= 0.25`, preserving the
+released row order and correlated repeated light curves. No Cepheid-anchored
+distance modulus or diagonal-only errors enter the calculation.
+
+The [released SN-only likelihood](https://github.com/PantheonPlusSH0ES/DataRelease/blob/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/5_COSMOLOGY/cosmosis_likelihoods/Pantheon%2B_only_cosmosis_likelihood.py)
+uses $D_L=(1+z_{\mathrm{HD}})(1+z_{\mathrm{HEL}})D_A(z_{\mathrm{HD}})$.
+For the quiet cap this is proportional to
+$z_{\mathrm{HD}}(1+z_{\mathrm{HEL}})$. Define
+
+$$
+y_i=m_{b,i}^{\mathrm{corr}}-5\log_{10}
+ [z_{\mathrm{HD},i}(1+z_{\mathrm{HEL},i})],\quad
+B=(X^TC^{-1}X)^{-1}X^TC^{-1},\quad
+w^T=(-1,1)B,\quad \Delta=w^Ty,
+$$
+
+where $X$ contains the two band indicators and $C$ is their joint covariance.
+Then $w^T\mathbf1=0$, eliminating the common magnitude/distance zero point,
+and $\sigma_\Delta^2=w^TCw$. The **quiet-cap prediction is exactly
+$\Delta=0$**, or $\mathcal R=10^{\Delta/5}=1$. A later forward model must
+use these same weights on its individual redshift predictions; the statistic
+is not a distance ratio evaluated at band midpoints.
+
+The finite calculation reads one pinned table and covariance, with a
+120 CPU-second ceiling. Raw data stay in the ignored cache; the saved product
+contains aggregate results, source hashes and reproduction commands.
+Independent checks use a constrained covariance solve, synthetic correlated
+data and exact zero-point cancellation. Hash, dimension, covariance or
+solver failure stops this comparison without changing its bands.
+Only antisymmetric roundoff below `1e-12*max(1,max(abs(C)))` is averaged;
+larger asymmetry or failed positivity stops the covariance solve. No diagonal
+jitter or extra error term is introduced.
+
+This is a retrospective consistency check on published standardized data,
+not a blinded or withheld-observation test. It adopts the release's
+standardization and covariance, including its fiducial peculiar-velocity
+corrections; it fits no LambdaCDM parameters. Its error range is conditional
+on that measurement model. A discrepancy constrains this quiet test state
+and its emitter assumptions; it does not reject every nested geometry.
+
 ## The transition and vacuum-form coefficient
 
 The frozen positive-$F$ DEV3 transition uses radius $32/25$, expansion
