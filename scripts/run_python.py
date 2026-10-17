@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Run root commands with the existing validation packages and base interpreter.
+"""Run root commands in the project-owned Windows scientific environment.
 
-The moved Windows virtual-environment redirector cannot locate pyvenv.cfg on
-this host. This launcher reads that configuration directly, uses its declared
-base executable, and supplies only canonical root sources and local packages.
-It does not install packages, alter permissions, or use a competing checkout.
+Prefer the complete local Conda prefix. The older validation-package fallback
+remains available for checkouts without that prefix. Neither route installs
+packages or changes the user's other Python installations.
 """
 from __future__ import annotations
 
@@ -19,6 +18,19 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def runtime(root: Path = ROOT) -> tuple[Path, Path, dict[str, str]]:
+    isolated = root / ".venv/science-runtime"
+    if isolated.is_dir():
+        executable = isolated / "python.exe"
+        site_packages = isolated / "Lib/site-packages"
+        if not (executable.is_file() and site_packages.is_dir()
+                and (isolated / "conda-meta/history").is_file()):
+            raise RuntimeError("incomplete project scientific environment: " + str(isolated))
+        env = source_environment(root, site_packages)
+        env.pop("PYTHONHOME", None)
+        env["CONDA_PREFIX"] = str(isolated.resolve())
+        env["PATH"] = os.pathsep.join(str((isolated / part).resolve())
+                                    for part in ("", "Library/bin", "Scripts")) + os.pathsep + env.get("PATH", "")
+        return executable, site_packages, env
     validation = root / ".venv/validation"
     cfg = validation / "pyvenv.cfg"
     if not cfg.is_file():
@@ -29,12 +41,16 @@ def runtime(root: Path = ROOT) -> tuple[Path, Path, dict[str, str]]:
     site_packages = validation / "Lib/site-packages"
     if not executable.is_file() or not site_packages.is_dir():
         raise RuntimeError("the configured base interpreter or validation packages are unavailable")
+    return executable, site_packages, source_environment(root, site_packages)
+
+
+def source_environment(root: Path, site_packages: Path) -> dict[str, str]:
     env = os.environ.copy()
     env["PYTHONPATH"] = os.pathsep.join(str(path.resolve()) for path in
                                        (root / "src", root / "scripts", site_packages))
     env["PYTHONNOUSERSITE"] = "1"
     env["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(root / "archive/source-history/objects")
-    return executable, site_packages, env
+    return env
 
 
 def main(argv=None) -> int:

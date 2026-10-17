@@ -2,6 +2,23 @@
 
 ## P001 full-endpoint fixed-grid comparison, 17 October 2026
 
+**Bounded performance diagnosis:** Douglas requested efficient use of the
+Ryzen 9 6900HX and an isolated project Python environment. A three-second
+process-CPU sample finds approximately one busy core per live endpoint run;
+their affinity includes all 16 logical processors. Source review finds no
+Numba call in the current atlas path. The new local Conda prefix uses Python
+3.14.8 and the same pinned scientific dependencies, with Python 3.12 unchanged.
+The live evolutions keep their existing executable and imported code.
+
+External stack attachment was refused by Windows process access controls.
+Instead profile the existing coarse v3 frozen stage through the previously
+checked explicit-panel-polynomial 32/64-point comparison: one shared
+preparation, two evaluations of that same state, zero evolution steps, at most
+60 process-CPU seconds and 40 million charged values. Keep profiler details
+under ignored `.build`; record only compact timing/equivalence conclusions.
+The profile selects the next implementation target; it does not authorize a
+changed stepper, reduction order, tolerance, guard or new grid campaign.
+
 **Interpretation of the completed receipts:** independent Grok review traces
 the actual temporal mass gap to the sum of the strong/weak wall-product
 difference and the retained-background time-projection remainder. The matched

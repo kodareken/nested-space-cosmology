@@ -1441,9 +1441,9 @@
       "sha256": "03175bd66f09a8aef1a29fdbefe53a0aec0a1b1542e24aed00d01b54b4873709"
     },
     {
-      "bytes": 9326,
+      "bytes": 9693,
       "path": "AGENTS.md",
-      "sha256": "2b68f670f277b76b37b9193bdedcf9b2c94fe1dd5c995171b7b238e0b1517202"
+      "sha256": "865ac1d8c084020ad110f947a5c389e3d09f606ffd37ed165f56b84f99e192e9"
     },
     {
       "bytes": 1264,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2349942,
+      "bytes": 2350814,
       "path": "docs/lab-snapshot.json",
-      "sha256": "94bf2a8aa3f8e83d19eb768b550e32cd8be76fa28a30fb0d683abb8fe61ce396"
+      "sha256": "d2b7029316ef6ac08c48314409d920a5b938f2e369368287fcb952ac830c00ec"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2201,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 477311,
+      "bytes": 478436,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "f2bc822b160813487526e9def4720f786debc23b3866ecd9a825028aec4b5c30"
+      "sha256": "df03bcd6206ff1f3a33edc02dae8e08304566b5af911c46b0b01c59eb28ace6d"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 149280,
+      "bytes": 150859,
       "path": "docs/reproducing.md",
-      "sha256": "2c011b541fbeadb377d710f165c8a11c4bb81e00d47f621d0a97071f1d3288b1"
+      "sha256": "339db87fdbafa6eddddae03277f44984e12ceb0824b12b8f963032636acd9a06"
     },
     {
       "bytes": 31710,
@@ -16636,9 +16636,9 @@
       "sha256": "184de71d68b917916edeb0ae15ddde78117f09b1f41586a58588a3f8c5b012fc"
     },
     {
-      "bytes": 2281,
+      "bytes": 3076,
       "path": "scripts/run_python.py",
-      "sha256": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210"
+      "sha256": "d79fcb2608e44b7ecf2cb4ba59741b7c370376de6f694756ae17abc94a10c2d8"
     },
     {
       "bytes": 7937,
@@ -21436,9 +21436,9 @@
       "sha256": "022b72f9f3684f848ba4227bbb241bad43874d8a4b11c3dabcbfa9e68c9ac6d4"
     },
     {
-      "bytes": 1041,
+      "bytes": 2431,
       "path": "tests/test_root_runtime.py",
-      "sha256": "c64cdfcf34e80a78a0cc59423028407fefee1815087d1ff717110a8bf76bbb9f"
+      "sha256": "89de070bd6e18d6f0cc3acace6b507e7376aaf6519f349191d438eba3fab00ba"
     },
     {
       "bytes": 3436,
@@ -21451,7 +21451,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "94bf2a8aa3f8e83d19eb768b550e32cd8be76fa28a30fb0d683abb8fe61ce396",
+  "lab_snapshot_sha256": "d2b7029316ef6ac08c48314409d920a5b938f2e369368287fcb952ac830c00ec",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

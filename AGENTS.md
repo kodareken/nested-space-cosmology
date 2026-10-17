@@ -135,10 +135,16 @@ Commit and push all work to GitHub as it progresses, including unfinished
 work, unless Douglas says otherwise. Record its current state honestly in
 the commit; completion or publication readiness is not a condition for saving.
 
-The Windows scientific runtime is `.venv/validation` (Python 3.14.8); the
-reproduction guide documents its base-interpreter fallback. Detailed research
+The Windows scientific runtime is `.venv/science-runtime` (isolated Conda,
+Python 3.14.8); the reproduction guide documents the older validation fallback. Detailed research
 routes belong in their existing owners, with the accepted plan kept in the
 chat. Paused numerical campaigns remain historical context until useful to
 the active work.
+
+Always use the computer as efficiently as is reasonable for the work.
+This Windows host has a Ryzen 9 6900HX with 8 physical cores and 16 logical
+processors. Use useful parallelism, measure actual throughput, and keep
+numerical correctness intact. Keep the project's Python environment isolated;
+do not alter Douglas's Python 3.12 installation.
 
 Do not ever change this AGENTS.md unless Douglas explicitly tells you to.

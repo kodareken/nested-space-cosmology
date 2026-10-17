@@ -2641,13 +2641,40 @@ current package.
 
 ## Windows runtime
 
-The existing validation environment uses Python 3.14.8 and the project's pinned
-scientific stack. If its moved Windows redirector cannot locate `pyvenv.cfg`, use
-`python scripts/run_python.py <script-or-python-arguments>` with the base interpreter;
-for example, `python scripts/run_python.py -m pytest tests/`. Do not install a
-second project package or restore the old directory. Normal installations use
-their activated interpreter. Root `scripts/lab.py` is only a compatibility launcher:
-it now runs in this root and does not switch scientific packages.
+The active Windows environment is the project-owned Conda prefix
+`.venv/science-runtime`, using Python 3.14.8 and the pinned scientific stack.
+This matches the Python version used by CI. Its interpreter and packages live
+inside this checkout; Douglas's Python 3.12 and global Python configuration are
+unchanged. Create it from the repository root with:
+
+```powershell
+conda create --prefix .venv/science-runtime --override-channels -c conda-forge --no-default-packages --yes python=3.14.8 pip
+& ./.venv/science-runtime/python.exe -m pip install -e '.[paper,dev]'
+python scripts/run_python.py --runtime-info
+```
+
+`python scripts/run_python.py <script-or-python-arguments>` selects this prefix,
+clears inherited `PYTHONHOME`, disables the user site and supplies only this
+checkout's sources and packages. For example,
+`python scripts/run_python.py -m pytest tests/`. Its PATH changes apply only to
+the child process. An incomplete new prefix is reported explicitly.
+
+The older `.venv/validation` packages and declared base-interpreter fallback
+remain available on checkouts without the new prefix. Both the moved and a
+fresh standard venv hit `failed to locate pyvenv.cfg: Access is denied` on this
+host; the complete Conda prefix runs successfully. The three already-running
+P001 evolutions retain their original interpreter and packages. No live process
+is migrated by this launcher change. Normal installations use their activated
+interpreter. Root `scripts/lab.py` remains a launcher for the same root package.
+
+The Ryzen 9 6900HX has 8 physical cores and 16 logical processors. Measure
+useful throughput before increasing concurrency. The current endpoint solver
+has three independent processes, each measured near one busy core; its adaptive
+time/radial chain is serial and does not currently call Numba. Installed Numba
+alone does not parallelize that chain. Compile independent kernels or batches
+only after profiling and same-state numerical comparison, retaining ordered
+reductions, tolerances and guards. Keep the total worker allocation appropriate
+to the host rather than assigning all eight cores to every simultaneous run.
 
 ## Scope
 
