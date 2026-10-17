@@ -6,7 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
-Revision `2026-10-17.3` adds Section 13.21: explicit uniform geometric
+Revision `2026-10-17.4` adds Sections 6.1.1-6.1.3: the current candidate's
+zero added classical vacuum trace, conditional quantum curvature terms at
+the fixed P001 scale, a necessary cap-curvature condition, and the formal
+interface heat coefficient. The linked compact record regenerates these
+exact calculations. The manuscript distinguishes them from the remaining
+full renormalized stress, joint quantum state and cosmological tests.
+
+Revision `2026-10-17.3` added Section 13.21: explicit uniform geometric
 remainders and strict fixed-label endpoint signs across the entire admitted
 positive-amplitude range. It retains the exact canonical-to-Jordan frame
 conversion, material radius and quiet-centre clock convention. The

@@ -332,6 +332,144 @@ the reduction; it does not yet provide a measured cosmological value.
 The [Schur-memory owner](../docs/schur-memory.md) keeps this target and
 its retained spectral and geometric dictionary.
 
+### 6.1.1. The current scalar's classical vacuum projection
+
+<!-- nsc-claim:atlas-classical-vacuum-trace -->
+
+The current cap-wall candidate allows a direct first calculation of this
+target. Its action fixes a real massless conformal scalar and independent
+regional vacuum terms. Contracting the complete improved scalar stress gives
+
+$$
+T^\phi{}^\mu{}_\mu
+=\phi(\Box-\mathcal R_J/6)\phi=0,
+\qquad \mathcal R_J=4\Lambda_0.
+$$
+
+Consequently its additional smooth classical trace projection is
+$\Delta\Lambda_{\mathrm{classical}}L_{\mathrm{ref}}^2=0$, including nonzero
+on-shell pulses. The scalar still carries stress, mass and flux. The cap
+baseline $\Lambda_{0,-}\ell^2=3(H\ell)^2=3$ is a supplied input, while
+$\Lambda_{0,+}=0$ outside. The scalar calculation does not derive that
+baseline. Distributional wall stress and geometric averaging are separate
+operations.
+
+The [exact calculation record](../results/summaries/nsc-atlas-effective-vacuum-v1.json)
+binds the symbolic expressions and their producer. The
+[calculation and frame check](../src/recursive_horizons/nsc_atlas_effective_vacuum.py)
+also recover the same Jordan curvature from the Einstein-frame potential.
+Independent [metric-jet checks](../tests/test_nsc_atlas_effective_vacuum.py)
+evaluate the implemented nonlinear equations at zero and nonzero amplitude.
+The [scientific owner](../docs/schur-memory.md) gives the complete derivation.
+
+### 6.1.2. A conditional quantum contribution and its physical scale
+
+<!-- nsc-claim:atlas-quantum-vacuum-trace -->
+
+As an explicit extension, import one quantized real four-dimensional
+massless conformal scalar with a Hadamard bulk state and locally covariant
+renormalization. This uses quantum field theory; it does not derive quantum
+statistics from the atlas. The local trace coefficient follows from the
+[scalar heat-kernel formula](https://arxiv.org/pdf/hep-th/0306138), equation
+(4.28), and [conformal anomaly](https://arxiv.org/pdf/hep-th/9308075),
+equations (15)-(16). Substituting $E=-\mathcal R/6$ cancels its
+$\mathcal R^2$ term. On either smooth quiet region,
+
+$$
+\langle T^\mu{}_{\mu}\rangle
+=\frac{\hbar}{2880\pi^2}
+(\mathcal R_{\mu\nu\rho\sigma}^2-\mathcal R_{\mu\nu}^2).
+$$
+
+The scheme-dependent $\Box\mathcal R$ term vanishes because the quiet
+scalar curvatures are constant. Finite volume and Newton counterterms
+remain supplied renormalized coefficients. Direct curvature contractions
+give $(\mathrm{Riemann}^2,\mathrm{Ricci}^2)=(24H^4,36H^4)$ in the cap
+and $(48M^2/R^6,0)$ outside.
+
+Set $h=H\ell$, $m=M/\ell$, $r=R/\ell$ and
+$\zeta=\kappa_4\hbar/\ell^2$. With
+$\Delta\Lambda_{\mathrm{tr}}=-\kappa_4\langle T^\mu{}_{\mu}\rangle/4$,
+
+$$
+\Delta\Lambda_{\mathrm{tr},-}\ell^2
+=\frac{\zeta h^4}{960\pi^2},\qquad
+\Delta\Lambda_{\mathrm{tr},+}\ell^2
+=-\frac{\zeta m^2}{240\pi^2r^6}.
+$$
+
+At the supplied $h=1$, $m=2/5$, $r=11/20$, the coefficients of
+$\zeta$ are $0.0001055428996274352$ and $-0.002440241780407079$.
+For the independently declared P001 fiducial $\ell=10000\,\mathrm m$,
+restoring SI units gives $\zeta=8\pi G\hbar/(c^3\ell^2)$ and
+
+| Quiet trace projection | $\Delta\Lambda_{\mathrm{tr}}\ell^2$ | Standard uncertainty from $G$ alone |
+| --- | ---: | ---: |
+| Cap | $6.92929\times10^{-81}$ | $1.5573\times10^{-85}$ |
+| Exterior at the reference wall radius | $-1.60211\times10^{-79}$ | $3.6006\times10^{-84}$ |
+
+These use [CODATA 2022 constants](https://physics.nist.gov/cuu/pdf/wall_2022.pdf).
+The length is a fiducial input; the quoted uncertainty is not a total
+theoretical or observational error band. The exterior term varies with
+radius. A constant cap trace alone does not establish a stress proportional
+to its metric, since the material wall need not preserve state symmetry.
+
+There is a necessary test of whether this term can generate the cap scale
+without supplying a volume term. Put $X=(H\ell)^2$ and
+$\lambda_0=\Lambda_0\ell^2$. The semiclassical constant-curvature trace
+equation requires
+
+$$
+3X=\lambda_0+\frac{\zeta X^2}{960\pi^2}.
+$$
+
+At $\lambda_0=0$ its roots are $X=0$ and $X=2880\pi^2/\zeta$.
+The nonzero root has $H^2\ell_P^2=360\pi$, outside the controlled
+small-curvature semiclassical regime. Thus this one-scalar contribution
+does not generate a nonzero small-curvature de Sitter cap by itself.
+The [same exact record](../results/summaries/nsc-atlas-effective-vacuum-v1.json)
+retains the coefficients, SI inputs and necessary trace condition. No
+cosmological observation selected these values.
+
+### 6.1.3. The quantum interface and the remaining exterior reduction
+
+<!-- nsc-claim:atlas-quantum-interface -->
+
+The wall contributes its own local operator data. The existing scalar
+matching $[\phi]=0$, $[n\phi]=k\phi$ identifies the transmittal coefficient
+$U_\Sigma=k$. In the inward-normal convention of the
+[transmittal heat-kernel theorem](https://arxiv.org/html/hep-th/0101105v1),
+$L^+=-K_+$ and $L^-=K_-$. Their sum is $kI$, so the second surface
+coefficient is proportional to $\operatorname{tr}(kI)/3-k=0$.
+
+Keeping every curvature term in the fourth coefficient gives the local
+surface polynomial
+
+$$
+a_4^\Sigma(1)=\int_\Sigma\sqrt{|\gamma|}\,q_\Sigma\,d^3y,
+\qquad q_\Sigma\ell^3
+=-\frac{b(b^2+3h^2)}{1440\pi^2}
+=-\frac{7}{720\pi^2},\quad b=k\ell=2,
+$$
+
+at $h=1$. This evaluates the imported Riemannian polynomial on the quiet
+wall's Lorentzian contractions. A joint Lorentzian quantum state and its
+interface stress have not been constructed. The
+[Gauss and Euler-boundary checks](../docs/schur-memory.md#quantum-interface-the-actual-transmission-law)
+agree with the [recorded coefficient](../results/summaries/nsc-atlas-effective-vacuum-v1.json).
+It is a surface invariant; obtaining its metric variation requires the
+full off-shell operators and their renormalized coefficients.
+
+The physical Schur connection must use the exterior conformal wave
+operator with this transmission law. For boundary field
+$\varphi=\phi|_\Sigma$, let $\mathcal N_\pm$ map it to the corresponding
+outward normal derivative. The homogeneous matching equation is
+$(\mathcal N_-+\mathcal N_++U_\Sigma)\varphi=0$; incoming initial data
+add a drive. In real time these are causal history operators. Their
+retarded response and the joint state's symmetric two-point function are
+needed for the effective stress. A coefficient multiplying a boundary
+field quadratic form alone does not supply a metric volume term.
+
 ### 6.2. The retained local incoming gate
 
 <!-- nsc-claim:local-source-insertion-majorant -->

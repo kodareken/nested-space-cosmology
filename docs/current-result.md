@@ -47,6 +47,17 @@ exterior response and joint quantum covariance needed for its renormalized
 stress are identified in the [Schur connection](schur-memory.md#connecting-the-actual-exterior-to-the-schur-operation).
 The classical endpoint runs remain unchanged.
 
+The [causal exterior boundary map](schur-memory.md#exterior-response-to-a-prescribed-wall-field)
+is now implemented for prescribed wall values on the same quiet wedge,
+with independent source and bottom data. It returns the outward derivative
+of the physical scalar, including the radius and proper-normal factors,
+for angular degrees 0-3. Six controls pass: they recover the old prepared
+pulse, check constant physical scalar data and preserve each newly entering
+node's prescribed value. This supplies the retarded field response needed
+by the physical Schur reduction; the full quantum covariance, angular tail
+and metric variation remain open. The combined response, vacuum and
+compiled-kernel checks pass all 25 targeted tests.
+
 ## Full P001 endpoint evolution in progress, 17 October 2026
 
 The [coarse v4 evolution](../results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json)

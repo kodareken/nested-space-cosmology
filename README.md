@@ -14,6 +14,13 @@ It does not establish that every particle is a spherical interior or that our
 universe has a parent. The map distinguishes descent, geometric attachment,
 causal influence and correlation. Missing physical connections remain visible.
 
+The first [effective-Lambda calculation](docs/schur-memory.md) gives zero
+added smooth classical vacuum trace for the current conformal-scalar model.
+Its conditional quantum curvature and interface terms are calculated in the
+living manuscript, and the actual exterior causal boundary response is now
+implemented. A full cosmological Lambda still requires the physical reduction
+and its remaining state or averaging assumptions.
+
 A [finite-amplitude onset theorem](docs/nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
 now constructs a compatible sourced cap, material wall and exterior on the
 declared original source cell, uniformly for a nonzero amplitude range. It

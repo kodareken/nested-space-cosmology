@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+The current Step-7 exact calculations and causal exterior operator reproduce with:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_effective_vacuum.py --output results/summaries/nsc-atlas-effective-vacuum-v1.json
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_effective_vacuum.py tests/test_nsc_atlas_exterior_dtn.py -q
+```
+
+The compact record contains the classical and conditional quantum trace
+coefficients, fiducial SI inputs, interface polynomial, zero residuals and
+source hashes. The response tests include the existing prepared pulse and
+an exact constant physical field. They use the quiet reference geometry;
+they do not rerun the finite-amplitude P001 endpoint trajectories.
+
 There is one package, `nested-space-cosmology`, importing `recursive_horizons`
 from root `src`. Use the pinned versions in [pyproject.toml](../pyproject.toml).
 Scientific conclusions retain the domains in their owning notes.
@@ -2679,12 +2692,13 @@ to the host rather than assigning all eight cores to every simultaneous run.
 The optional compiled coefficient callback is now available through
 `coupled_fixed_stage(..., compiled_coefficients=True)`. The default and live
 v4 jobs retain the reference implementation. On the authenticated coarse v3
-saved stage, the reference took 2.125 CPU seconds and the warm compiled call
-0.59375 seconds (about 3.6 times faster). Both used 65 panels, 2647 function
+saved stage after aligning the reference operation grouping, the reference
+took 1.9375 CPU seconds and the warm compiled call 0.515625 seconds (about
+3.8 times faster). Both used 65 panels, 2647 function
 evaluations, 151 accepted radial steps and the unchanged gradient guard.
-Mass agreed exactly, lapse differed by `8.67e-19`, and the flux by `6.12e-12`.
+Mass differed by `2.66e-15`, lapse by `8.67e-19`, and flux by `3.75e-12`.
 The strict coefficient-rate comparison (`atol=1e-10, rtol=1e-11`) failed:
-maximum differences were `1.70e-8` for cap chi and `5.24e-7` for canonical
+maximum differences were `8.04e-9` for cap chi and `8.15e-8` for canonical
 density. The accelerator therefore remains optional; no trajectory equivalence
 or live-run speedup is claimed. The batch API uses Numba `prange` for independent
 nodes, but the physical stage comparison uses the scalar compiled callback.

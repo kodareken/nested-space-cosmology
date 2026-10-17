@@ -1,10 +1,10 @@
 {
-  "bytes": 2961817,
+  "bytes": 3029999,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "e6a466673c3da6c2e51c60e22239ed18b2d00952eb16cb3c29622b12ba7904e3",
+  "metadata_sha256": "bf96d2a0f0dd88f9103cc20fdea0a8621758b1fbc5dd4a05fd902f39a5aa166f",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 41,
-  "pdf_sha256": "1631ee26f2df240ba4c440e733cac373d3440fd236a7f2ffc33a265aed255603",
+  "pages": 43,
+  "pdf_sha256": "7278baa068262427335b7c632cb7463e59fc4a4bc5d043ebdfb3a66c6b772a0e",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -376,6 +376,10 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "path": "results/summaries/nsc-atlas-effective-vacuum-v1.json",
+      "sha256": "31a30e4c9e1f0a20053736904a479a7f6682193b797a8c12ea60b281893ee338"
+    },
+    {
       "path": "results/summaries/nsc-atlas-geometric-departure-bound-v1.json",
       "sha256": "1c6fab9b40ba7fb623dffca80ec8e06b859531ccec3497361649269e580afd62"
     },
@@ -417,6 +421,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "a9fdc637f369c3c97dfc31173028f239894dc4e3bf65506566767edd5b544efd",
-  "version": "working-2026-10-17.3"
+  "source_sha256": "c283bf693bb0d12881e5ce7b3c530ca2734cd53a745c9d2af6bc95325ccec433",
+  "version": "working-2026-10-17.4"
 }

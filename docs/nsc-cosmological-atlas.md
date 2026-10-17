@@ -32,6 +32,15 @@ needs. Keep evidence
 tracking for scientific claims; routine environment and performance work uses
 ordinary tests and Git history without a separate scientific claim process.
 
+Step 7's classical trace and local quantum curvature/interface calculations
+are now complete within their stated domains. The scalar anomaly alone does
+not generate a nonzero small-curvature cap without the supplied volume term.
+The next calculation constructs the actual exterior causal boundary response
+needed by the Schur reduction. Quantum covariance selection and geometric
+averaging introduce additional physical data; they are not silently fixed
+by the completed local coefficients. Continue the existing endpoint runs
+while developing this necessary operator connection.
+
 ## Current map and independent approaches
 
 The [v1 motif](../results/development/nsc-cosmological-atlas-v1/atlas.json)

@@ -1,0 +1,113 @@
+{
+  "Lambda0_zero_X_roots": [
+    "0",
+    "2880*pi**2/zeta"
+  ],
+  "classical_added_lambda_Lref_squared": "0",
+  "constant_curvature_trace_residual": "-X**2*zeta/(960*pi**2) + 3*X - lambda0",
+  "constant_source": "https://physics.nist.gov/cuu/pdf/wall_2022.pdf",
+  "curved_root_H2_planck_length2": "360*pi",
+  "domain": "Smooth quiet cap and Schwarzschild exterior; formal quiet-interface polynomial.",
+  "fiducial_SI_inputs": {
+    "G_SI": "66743/1000000000000000",
+    "G_standard_uncertainty_SI": "3/2000000000000000",
+    "c_SI_exact": "299792458",
+    "ell_m": "10000",
+    "planck_h_SI_exact": "132521403/200000000000000000000000000000000000000000"
+  },
+  "formal_interface_density_times_ell3": "-b*(b**2 + 3*h**2)/(1440*pi**2)",
+  "formal_interface_reference": "-7/(720*pi**2)",
+  "interface_a2_integrand": "0",
+  "quantum_assumption": "One free real four-dimensional massless conformal scalar, Hadamard bulk state, local covariant renormalization.",
+  "quantum_cap_coefficient_of_zeta": "h**4/(960*pi**2)",
+  "quantum_exterior_coefficient_of_zeta": "-m**2/(240*pi**2*r**6)",
+  "reference_quantum_trace": {
+    "cap": {
+      "delta_lambda_ell_squared": "6.9292887186533304942e-81",
+      "delta_lambda_per_m2": "6.9292887186533304942e-89",
+      "standard_uncertainty_from_G": "1.5573068453590632338e-85"
+    },
+    "exterior": {
+      "delta_lambda_ell_squared": "-1.6021106014189769195e-79",
+      "delta_lambda_per_m2": "-1.6021106014189769195e-87",
+      "standard_uncertainty_from_G": "3.6006261362666727285e-84"
+    }
+  },
+  "reference_shape": {
+    "h": "1",
+    "m": "2/5",
+    "r": "11/20"
+  },
+  "reproduce": "python scripts/run_python.py scripts/record_nsc_atlas_effective_vacuum.py --output results/summaries/nsc-atlas-effective-vacuum-v1.json",
+  "schema": "nsc-atlas-effective-vacuum-v1",
+  "source_sha256": {
+    "scripts/record_nsc_atlas_effective_vacuum.py": "f16459dc4dc0226a4efa2c0dbfbe005bada9f35304e42b67b2fdc78d1da80ad2",
+    "src/recursive_horizons/nsc_atlas_effective_vacuum.py": "00f2e16eddca11f3abfb3e697aa97fb789a0b1b1bc0c8c2fc1a47a7364bc7280",
+    "tests/test_nsc_atlas_effective_vacuum.py": "cee1dd046c14722becb837dd1116a44b5e11fc34019e4dfbfdc2ae55e8b56ef0"
+  },
+  "uncertainty_scope": "Standard input uncertainty in G only; no total model or observational error bound.",
+  "unresolved": [
+    "Full renormalized stress and joint state",
+    "Lorentzian quantum interface construction",
+    "Physical exterior reduction and metric variation",
+    "Cosmological scale selection and observational tests"
+  ],
+  "zero_residual_checks": {
+    "anomaly": {
+      "cap_analytic_ricci_scalar": "0",
+      "cap_analytic_ricci_square": "0",
+      "cap_analytic_riemann_square": "0",
+      "cap_coefficient": "0",
+      "cap_constant_R": "0",
+      "cap_ricci_scalar": "0",
+      "cap_ricci_square": "0",
+      "cap_riemann_square": "0",
+      "conformal_R2_coefficient": "0",
+      "conformal_a4_cancels_R2": "0",
+      "duff_denominator_is_2880_pi2": "0",
+      "exterior_analytic_ricci_scalar": "0",
+      "exterior_analytic_ricci_square": "0",
+      "exterior_analytic_riemann_square": "0",
+      "exterior_coefficient": "0",
+      "exterior_constant_R": "0",
+      "exterior_ricci_scalar": "0",
+      "exterior_ricci_square": "0",
+      "exterior_riemann_square": "0",
+      "weyl_euler_matches_riemann_minus_ricci": "0",
+      "zero_curvature_cap": "0",
+      "zero_curvature_exterior": "0"
+    },
+    "classical": {
+      "einstein_frame_gives_same_jordan_curvature": "0",
+      "improved_trace_is_field_times_equation": "0",
+      "jordan_trace_fixes_only_supplied_vacuum": "0"
+    },
+    "curvature": {
+      "classical_low_branch_limit": "0",
+      "curved_branch_planck_scale": "0",
+      "curved_unsourced_trace": "0",
+      "flat_unsourced_trace": "0",
+      "low_branch_trace": "0"
+    },
+    "interface": {
+      "A1_cancels_for_generic_diagonal_D": "0",
+      "a2_cancels": "0",
+      "cap_trace_Q_is_minus_6_H2": "0",
+      "conformal_tau_and_E_monomials_cancel": "0",
+      "density_prefactor": "0",
+      "dictionary_identifies_D_with_mean_K": "0",
+      "full_surface_polynomial": "0",
+      "gauss_Qdiff_matches_dictionary": "0",
+      "imported_A2_shape_is_56_k3": "0",
+      "imported_A3_is_minus_60_k3": "0",
+      "normal_contractions_cancel_for_generic_N": "0",
+      "normalized_density": "0",
+      "reference_density": "0",
+      "spherical_Qdiff_angle": "0",
+      "spherical_Qdiff_tau": "0",
+      "spherical_S_angle": "0",
+      "spherical_S_tau": "0"
+    }
+  },
+  "zeta_at_fiducial_scale": "6.5653764896678162984e-77"
+}

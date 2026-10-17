@@ -340,6 +340,105 @@ and its covariance, with compatible boundary exchange and renormalization.
 The old finite Schur matrices remain useful identities, but are not yet
 evaluations of these physical operators.
 
+### Exterior response to a prescribed wall field
+
+The [prepared pulse](nsc-atlas-prepared-response.md) used the particular
+condition $\chi_U|_W=0$ selected by its quiet cap and no-return interval.
+The exterior operator needed above instead prescribes the wall value
+$y(V)=\chi(U_W(V),V)$. Keep the same quiet geometry and finite wedge,
+with source value $g(V)$ at $U=U_0$ and bottom value $b(U)$ at $V=V_a$.
+Here $\chi=r\phi$ and all coordinates use the existing reference unit.
+
+For a spherical harmonic of degree $l$, direct reduction of the wave
+operator gives
+
+$$
+\chi_{UV}+K_l\chi=0,\quad
+K_l=-\frac{r_{UV}}r+\frac{C\,l(l+1)}{4r^2},\quad
+C=\frac{32m^3}r e^{-r/(2m)},
+$$
+$$
+K_l=\frac{16m^4}{r^4}e^{-r/(2m)}
+ +\frac{8m^3l(l+1)}{r^3}e^{-r/(2m)}.
+$$
+
+The exterior is Ricci flat, so its conformal-curvature coupling contributes
+no additional bulk potential. Define the entry time
+$v_0(U)=V_a$ for $U\le U_a$ and $v_0(U)=U_W^{-1}(U)$ otherwise, and
+$a(U)=b(U)$ or $y(v_0(U))$ on those respective intervals. The Dirichlet
+integral equation is
+
+$$
+\chi(U,V)=a(U)+g(V)-g(v_0(U))
+-\int_{v_0(U)}^Vdq\int_{U_0}^Udp\,K_l(p,q)\chi(p,q).
+$$
+
+Every integration point is retained because $U_W(q)\ge U$ when
+$q\ge v_0(U)$. Differentiating in $V$ and then $U$ recovers the bulk
+equation. The empty integrals recover all three prescribed faces when
+$b(U_0)=g(V_a)$ and $y(V_a)=b(U_a)$.
+
+Writing $I_l(V)=\int_{U_0}^{U_W(V)}K_l\chi\,dU$, the first wall jets are
+
+$$
+\chi_V|_W=g'-I_l,\qquad
+\chi_U|_W=\frac{y'-g'+I_l}{U_W'}.
+$$
+
+At the wall-bottom corner a common first jet additionally requires
+$y'(V_a)=U_W'(V_a)b'(U_a)+g'(V_a)-I_l(V_a)$.
+Further smoothness requires the corresponding higher-jet transport
+conditions. Boundary derivatives are supplied or evaluated through these
+equations, rather than estimated from stored waveform samples.
+
+For the proper-time tangent $u=(\dot U,\dot V)$, with
+$C\dot U\dot V=1$, the exterior outward normal is
+$\nu_+=(\dot U,-\dot V)$. Consequently
+
+$$
+\mathcal N_+^R\varphi+\text{initial-data drive}
+=\dot U\left(\frac{\chi_U}{r}-\frac{yr_U}{r^2}\right)
+-\dot V\left(\frac{\chi_V}{r}-\frac{yr_V}{r^2}\right),
+\qquad \varphi=y/r.
+$$
+
+The radius terms follow from differentiating the physical scalar and are
+essential. This determines the actual causal field-response map associated
+with the exterior and its induced boundary measure. Its quantum covariance
+and metric variation are additional ingredients for effective stress.
+For fixed geometry and identical supplied traces, a uniform field error
+$e_\chi$ gives a conditional wall-normal error bound
+$|\delta(\nu_+\phi)|\le 2\dot V K_{l,\max}(U_W-U_0)e_\chi/r$.
+This follows from $|\delta I_l|\le K_{l,\max}(U_W-U_0)e_\chi$;
+it supplies no bound on the numerical field error itself.
+
+Both terms in $K_l$ decrease over $0.4\le r\le0.55$. The inherited analytic
+area bound therefore gives
+$q_l\le q_0[1+l(l+1)/2]$, with $q_0=0.13882099234357653$.
+The bounds for $l=0,1,2,3$ are respectively
+$0.138821,0.277642,0.555284,0.971747$, all below one. This proves uniqueness
+for each of these mode problems in the finite continuous wedge and bounds
+the inverse by $1/(1-q_l)$. It does not supply an angular-tail estimate or
+a four-dimensional quantum determinant.
+
+The admitted implementation checks this operator with at most 120 CPU
+seconds and 30 million kernel values, using existing geometry and product
+integration. It checks the zero-kernel limit, the normal and radius factors,
+corner compatibility and recovery of the already solved prepared pulse as
+Dirichlet input. Numerical product-integration and geometry errors remain
+distinct from the analytic contraction. No source selection, new physical
+trajectory, parameter scan or state calibration enters those checks.
+The [implementation](../src/recursive_horizons/nsc_atlas_exterior_dtn.py)
+uses a fixed-U grid with analytic entry values at the moving wall. Each
+time segment owns its active nodes, including the endpoint Runge-Kutta
+stages, so a new node retains its prescribed value until entry.
+Six [controls](../tests/test_nsc_atlas_exterior_dtn.py) pass, including a
+constant physical scalar on the curved exterior and preservation of entry
+data. That one 129-node control gives maximum outward derivative
+$5.993\times10^{-6}$ instead of its exact zero; it is a numerical diagnostic,
+not an error enclosure. The existing 129-node prepared pulse is recovered
+within the stated numerical tolerances, with no new physical input.
+
 ## The transition and vacuum-form coefficient
 
 The frozen positive-$F$ DEV3 transition uses radius $32/25$, expansion
