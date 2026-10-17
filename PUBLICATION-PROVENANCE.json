@@ -1491,14 +1491,14 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 244565,
+      "bytes": 244965,
       "path": "docs/active-code-map.md",
-      "sha256": "eb12df9f04ffa5648bf40da17ba049359aeb8f8a7fc91bf28c64596cc43aab0e"
+      "sha256": "3540dd595c8b9d29e687c5e8af6cad12f26fa717064b4fd18e46c2ad0637ff13"
     },
     {
-      "bytes": 101808,
+      "bytes": 101940,
       "path": "docs/arxiv-studies.md",
-      "sha256": "964feec029428f6f54ea7f12d8cdeb8c5f7aa6620f3ee23120e61f033660f80f"
+      "sha256": "dfd0cdbe5c9fa87a961dbbb0be5ebef516b0c40e7fe92a1c2f2f4b5abbf80cbc"
     },
     {
       "bytes": 1458,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 381499,
+      "bytes": 382737,
       "path": "docs/current-result.md",
-      "sha256": "21c9d5f880c675a3aff0c50e379d5f6956e1c8788226ad75ffebbf1feb7bdd03"
+      "sha256": "ce994d446fa457ba7ebc9ad130f8ed03f5c9bfc40210410a1028fb5fc32c59ed"
     },
     {
       "bytes": 2481,
@@ -1561,9 +1561,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2367895,
+      "bytes": 2368382,
       "path": "docs/lab-snapshot.json",
-      "sha256": "b1b3b225b53dd9ef2a5cab6b59b3739fc5a1afb96ff5fb0879e67943f7ed630b"
+      "sha256": "93e9dc9a923fa0b82850eb544008ed506a666f9d3c4171f9bb8c072c55b71c24"
     },
     {
       "bytes": 4997,
@@ -1606,14 +1606,14 @@
       "sha256": "676447c9b538f1cc0f47c7f556037839b9bdb5f8ddd63a44fcfc2e418af0a1ff"
     },
     {
-      "bytes": 14771,
+      "bytes": 19163,
       "path": "docs/nsc-atlas-connection-gluing.md",
-      "sha256": "d873ad537b6af082cadf68b1f5cbe38514adc63cbbab364e61bfab2a40b4ebe8"
+      "sha256": "1ee52e6079a6c64dae35b9c032d277aff90b3ef295afe056d2e7390b6611f56a"
     },
     {
-      "bytes": 9503,
+      "bytes": 12006,
       "path": "docs/nsc-atlas-connection-slice.md",
-      "sha256": "c951fd6b6d47dc106e78a8e6629f8a0311f6585d5f32bf32a39b8a1d14984cf0"
+      "sha256": "33cf7a2ee8a9f1a09c817d3aae2e3e222332e5c70e6a921d8c0f26c3cb51edfd"
     },
     {
       "bytes": 17343,
@@ -1721,9 +1721,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 58973,
+      "bytes": 59538,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "705052f6021a2d4c671351aa7d3807b196f19777e368bb697e9a64f659b7d5e7"
+      "sha256": "daca9fe35a753812354d07a1ad78dc5248ac1f6df8319d776a7ff53389666b2e"
     },
     {
       "bytes": 30876,
@@ -2206,9 +2206,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 490130,
+      "bytes": 490995,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "ef9c042b60efd833bc2260e72b26b5d1fc9573cdae8f3e062fcee0ee7eeacd1e"
+      "sha256": "da7ca98704cc7b3026e5c4aa1189500a8b95467fc342c8c74c027a205940be63"
     },
     {
       "bytes": 6705,
@@ -2221,9 +2221,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 161669,
+      "bytes": 162986,
       "path": "docs/reproducing.md",
-      "sha256": "93c153161f5005876e2ff5915503666235b309b58908dad0479d5681145a47bb"
+      "sha256": "a80629455fe87e3dd047c39fcc1ccf62116a415a9901f319c092afc0ba8c9567"
     },
     {
       "bytes": 31710,
@@ -2246,9 +2246,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 71034,
+      "bytes": 73014,
       "path": "docs/schur-memory.md",
-      "sha256": "44eb0f1e285f48399b077c809209204aae1b6414b423533a3b8d2b414e333d9d"
+      "sha256": "10af1b7d03755c38b2d76eeced3ed70b863a529eb955501f8b2a73c298f8bdb2"
     },
     {
       "bytes": 537091,
@@ -14891,6 +14891,11 @@
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
+      "bytes": 12230,
+      "path": "results/summaries/nsc-atlas-unequal-children-v1.json",
+      "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
+    },
+    {
       "bytes": 32917,
       "path": "results/summaries/nsc-conformal-geometric-average-v1.json",
       "sha256": "cb57f10042c6ad58d23c55160d1a279271c5663e0fb13f00a7d389e7cc930b72"
@@ -21631,7 +21636,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "b1b3b225b53dd9ef2a5cab6b59b3739fc5a1afb96ff5fb0879e67943f7ed630b",
+  "lab_snapshot_sha256": "93e9dc9a923fa0b82850eb544008ed506a666f9d3c4171f9bb8c072c55b71c24",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

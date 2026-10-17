@@ -194,3 +194,48 @@ and the open overlap. The slice supplies the body-to-vacuum-end interface;
 formation, the many-body future, stability and inherited parameters remain
 open. Its preserved bundle is historical evidence, with replay selected
 explicitly through the reproduction guide.
+
+## Unequal sourced input, 18 October 2026
+
+The [compact two-body record](../results/summaries/nsc-atlas-unequal-children-v1.json)
+now supplies a second cap-wall-bridge body. Both bodies use the same
+Einstein/conformal-scalar action, classical field `phi=0`, `H*ell=1`,
+`k*ell=2`, `xi=1/6`, and wall radius `1.5*ell`. A has `M/ell=.4` and
+stops its vacuum slicing taper at `R0/ell=1`; B has `M/ell=.6` and stops
+at `R0/ell=1.3`. These stops lie strictly outside the respective throat
+radii `.8*ell` and `1.2*ell`. Mass is object initial data; the taper selects
+a slice of the same vacuum geometry. The supplied cap vacuum is unchanged.
+
+For B the signed wall quantities have independent closed forms. Set
+`s=sqrt(40801)`. In ell units,
+
+$$
+\beta_-={151\over120},\quad\beta_+=-{209\over120},\quad
+\dot R={s\over120},\quad
+\gamma={3s-302\over300},\quad\gamma v={453-2s\over300}.
+$$
+
+The measured numerical values are `Rdot=1.683271451008` and local normal-frame
+three-speed `v=0.161244881293`. The first is an areal-radius derivative with
+wall proper time, not a local three-speed. The checks reconstruct both signed
+normals, retain the restricted wall-delta factor, and test the bulk and shell
+constraints, mass, spacelike embedding and smooth throat. B's sampled analytic
+Hamiltonian residual is below `1.49e-14/ell^2`. Its independent radial-difference
+indicator decreases from `8.23e-9/ell^2` to `5.30e-10/ell^2` at the two fixed
+steps. These comparisons are not rigorous error bounds.
+
+Both bodies begin with a regular centre and retain the analytic vacuum bridge
+only on `u in [u0,+infinity)`, with finite `u0`. The left asymptotic end of the
+complete vacuum bridge is excluded by that domain. Each body therefore has
+one AE end. End-only gluing of these two sourced bodies leaves one designated
+parent end and no additional AE end. The historical v4 vacuum-bridge assembly
+above retains its two ends; it is a different input set.
+
+The [parent moments](schur-memory.md#unequal-sourced-inputs-for-the-parent-reduction)
+reuse A's closed average and evaluate only B's new moments. Method `f904e0c`
+was frozen before the target tests and application. All 42 focused checks
+pass; the application used 0.078125 CPU seconds and 13,932 pointwise geometric
+samples, without field evolution. The compact record preserves scalars and
+source hashes rather than the spatial arrays. A particular shared connector,
+formation history, physical inheritance and observational comparison remain
+separate calculations.

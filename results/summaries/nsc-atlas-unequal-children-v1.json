@@ -1,0 +1,275 @@
+{
+  "admission_owner": "docs/prior-art-and-open-claim.md#unequal-sourced-inputs-for-the-common-parent-18-october-2026",
+  "bodies": {
+    "A": {
+      "clock": "Instantaneous geodesic hypersurface normal; not an observer light-cone map.",
+      "id": "A",
+      "mass_over_ell": 0.4,
+      "moments": {
+        "I_theta_over_ell2": 89.07681454994518,
+        "J_over_ell": 185.87765144307434,
+        "V_over_ell3": 355.4931547895006,
+        "cap_energy_over_ell": 1.6875,
+        "cap_stress_trace_over_ell": -5.0625,
+        "curvature_bulk_over_ell": -101.05464979615002,
+        "curvature_wall_delta_over_ell": 228.28969287299964,
+        "intrinsic_curvature_over_ell": 127.23504307684962,
+        "wall_energy_over_ell": 4.541679134708565,
+        "wall_stress_trace_over_ell": -8.834430933423379
+      },
+      "quadrature": "adaptive",
+      "recomputed": false,
+      "taper_source": "historical default of the closed average; its saved domain dict does not repeat the taper",
+      "taper_stop_over_ell": 1.0
+    },
+    "B": {
+      "average_checks": {
+        "bridge_volume_ell3_difference": -1.0800249583553523e-12,
+        "hamiltonian_ell2": 1.6653345369377348e-16,
+        "lambda_mechanism_scan": false,
+        "scalar_fit_is_a_four_tensor": false,
+        "wall_trace_ell": -5.551115123125783e-17
+      },
+      "clock": "Instantaneous geodesic hypersurface normal; not an observer light-cone map.",
+      "id": "B",
+      "mass_over_ell": 0.6,
+      "moment_32_64_absolute_differences": {
+        "I_theta_over_ell2": 1.1887335915616859e-07,
+        "J_over_ell": 1.3425108136289055e-07,
+        "V_over_ell3": 8.27662915980909e-09,
+        "cap_energy_over_ell": 0.0,
+        "cap_stress_trace_over_ell": 0.0,
+        "curvature_bulk_over_ell": 1.3425128031485656e-07,
+        "curvature_wall_delta_over_ell": 0.0,
+        "intrinsic_curvature_over_ell": 1.3425128031485656e-07,
+        "wall_energy_over_ell": 0.0,
+        "wall_stress_trace_over_ell": 0.0
+      },
+      "moments": {
+        "I_theta_over_ell2": 106.53568238954331,
+        "J_over_ell": 207.13638603254594,
+        "V_over_ell3": 397.3946318638949,
+        "cap_energy_over_ell": 1.6875,
+        "cap_stress_trace_over_ell": -5.0625,
+        "curvature_bulk_over_ell": -122.31338438562136,
+        "curvature_wall_delta_over_ell": 229.1938030631791,
+        "intrinsic_curvature_over_ell": 106.88041867755774,
+        "wall_energy_over_ell": 4.559665835441918,
+        "wall_stress_trace_over_ell": -8.763678942983534
+      },
+      "quadrature": "gauss64",
+      "rate_convention": "Rdot=dR/d(wall proper time), in geometric units; not a local three-speed.",
+      "recomputed": true,
+      "taper_stop_over_ell": 1.3,
+      "topology": {
+        "adm_mass_over_ell": 0.6,
+        "ae_ends": 1,
+        "centre_is_ae_end": false,
+        "centre_to_wall_proper_distance_over_ell": 1.5,
+        "left_vacuum_end_included": false,
+        "other_ae_ends_after_selecting_right": 0,
+        "regular_centre": true,
+        "retained_bridge_parameter": {
+          "lower": -0.2848090500183469,
+          "upper": "+infinity"
+        },
+        "selected_end_is_time_symmetric_vacuum": true,
+        "selected_right_end": true,
+        "vacuum_chart_has_two_asymptotic_directions": true
+      },
+      "wall": {
+        "Rdot": 1.6832714510077624,
+        "Rprime_minus": 1.0,
+        "Rprime_plus": -2.039777223627945,
+        "V_minus": 1.5,
+        "V_plus": 1.9901485175813705,
+        "beta_minus": 1.2583333333333333,
+        "beta_plus": -1.7416666666666667,
+        "energy_surface_ell": 0.16126519034618175,
+        "gamma": 1.0132590745426484,
+        "gamma_v": 0.16338283919379,
+        "momentum_surface_ell": 0.02600318647407994,
+        "v": 0.16124488129310424
+      }
+    }
+  },
+  "bounds": {
+    "charge": "One pointwise geometric jet or quadrature sample, counting repeated evaluations.",
+    "cpu_seconds_max": 30,
+    "field_solves": 0,
+    "finite_difference_abs_gate": 1e-07,
+    "finite_difference_and_quadrature_are_rigorous_bounds": false,
+    "identity_abs_gate": 1e-08,
+    "mass_or_cutoff_scan": false,
+    "moment_comparison_relative_gate": 1e-07,
+    "physical_time_steps": 0,
+    "sampled_geometric_points": 13932,
+    "sampled_geometric_points_max": 100000
+  },
+  "checks": {
+    "A": {
+      "boost_unit_max_error": 2.220446049250313e-16,
+      "bridge_sample_mass_max_error_over_ell": 2.220446049250313e-16,
+      "cap_reconstruction_max_error": 3.3306690738754696e-16,
+      "embedding_future_normal_norm_max_error": 3.552713678800501e-15,
+      "embedding_spatial_norm_max_error": 3.552713678800501e-15,
+      "exterior_reconstruction_max_error": 4.440892098500626e-16,
+      "finite_difference_constraints": [
+        {
+          "Rsecond_max_ell_error": 3.0804248041249593e-11,
+          "hamiltonian_max_ell2": 8.568479259452033e-11,
+          "momentum_max_ell2": 4.602052072755214e-11,
+          "step_over_ell": 0.0001
+        },
+        {
+          "Rsecond_max_ell_error": 3.134914550173562e-11,
+          "hamiltonian_max_ell2": 9.552936219847652e-11,
+          "momentum_max_ell2": 3.61826124617437e-11,
+          "step_over_ell": 5e-05
+        }
+      ],
+      "quadrature_comparison_is_rigorous_bound": false,
+      "right_end_R_over_ell": 5.999999999999998,
+      "right_end_Rprime": 0.9309493362512627,
+      "right_end_finite": true,
+      "right_end_mass_error_over_ell": 2.220446049250313e-16,
+      "right_end_scalar_ell2": -4.336808689942018e-18,
+      "shell_hamiltonian_delta_ell_error": 1.7763568394002505e-15,
+      "shell_momentum_delta_ell_error": 3.3306690738754696e-16,
+      "surface_energy_projection_ell_error": 2.7755575615628914e-17,
+      "surface_momentum_projection_ell_error": 0.0,
+      "taper_bridge_overlap_max_error": 2.220446049250313e-16,
+      "throat_Rprime_abs": 0.0,
+      "throat_Rsecond_error_ell": 1.1102230246251565e-16,
+      "throat_radius_error_over_ell": 0.0,
+      "throat_scalar_ell2": 4.440892098500626e-16,
+      "time_symmetric_join": true,
+      "transition_32_64_distance_max_error_over_ell": 0.0,
+      "transition_mass_max_error_over_ell": 9.992007221626409e-16,
+      "vacuum_hamiltonian_max_ell2": 8.43769498715119e-15,
+      "vacuum_momentum_max_ell2": 3.552713678800501e-15
+    },
+    "B": {
+      "boost_unit_max_error": 4.440892098500626e-16,
+      "bridge_sample_mass_max_error_over_ell": 3.3306690738754696e-16,
+      "cap_reconstruction_max_error": 4.440892098500626e-16,
+      "embedding_future_normal_norm_max_error": 1.0658141036401503e-14,
+      "embedding_spatial_norm_max_error": 7.105427357601002e-15,
+      "exterior_reconstruction_max_error": 8.881784197001252e-16,
+      "finite_difference_constraints": [
+        {
+          "Rsecond_max_ell_error": 3.0331852585163688e-09,
+          "hamiltonian_max_ell2": 8.22447221437983e-09,
+          "momentum_max_ell2": 4.171007761399892e-09,
+          "step_over_ell": 0.0001
+        },
+        {
+          "Rsecond_max_ell_error": 1.9535417727922777e-10,
+          "hamiltonian_max_ell2": 5.297029481710069e-10,
+          "momentum_max_ell2": 2.527078546421535e-10,
+          "step_over_ell": 5e-05
+        }
+      ],
+      "quadrature_comparison_is_rigorous_bound": false,
+      "right_end_R_over_ell": 6.000000000000001,
+      "right_end_Rprime": 0.8944271909999159,
+      "right_end_finite": true,
+      "right_end_mass_error_over_ell": 3.3306690738754696e-16,
+      "right_end_scalar_ell2": 5.204170427930421e-18,
+      "shell_hamiltonian_delta_ell_error": 0.0,
+      "shell_momentum_delta_ell_error": 5.551115123125783e-16,
+      "surface_energy_projection_ell_error": 2.7755575615628914e-17,
+      "surface_momentum_projection_ell_error": 0.0,
+      "taper_bridge_overlap_max_error": 4.440892098500626e-16,
+      "throat_Rprime_abs": 0.0,
+      "throat_Rsecond_error_ell": 0.0,
+      "throat_radius_error_over_ell": 0.0,
+      "throat_scalar_ell2": -2.220446049250313e-16,
+      "time_symmetric_join": true,
+      "transition_32_64_distance_max_error_over_ell": 0.0,
+      "transition_mass_max_error_over_ell": 1.2212453270876722e-15,
+      "vacuum_hamiltonian_max_ell2": 1.4876988529977098e-14,
+      "vacuum_momentum_max_ell2": 7.105427357601002e-15
+    }
+  },
+  "command": "python scripts/run_python.py scripts/record_nsc_atlas_unequal_children.py --output <path>",
+  "conditional_end_gluing": {
+    "complete_vacuum_bridge_other_ae_end_after_selecting_one": 1,
+    "connector_metric_evaluated": false,
+    "designated_common_outer_ae_ends": 1,
+    "each_body_ae_ends": 1,
+    "each_body_regular_centre": true,
+    "exact_sum_adm_charge": false,
+    "numeric_separation": null,
+    "reason": "Each sourced body has a finite-distance regular centre and a bridge parameter that is finite and negative at the taper, so the vacuum chart's left asymptotic direction is not part of the body. Theorem 1 combines the two selected right ends into one exterior and would retain any unselected end. None remain. A complete vacuum bridge has both chart directions, so selecting one would have retained the other.",
+    "retained_other_ae_ends": 0,
+    "shared_future": false,
+    "sibling_signal": false,
+    "sourced_body_includes_only_the_right_direction": true,
+    "theorem": "1004.1355v1 Theorem 1 applied only to the selected smooth vacuum AE ends",
+    "total_parent_ae_ends": 1,
+    "vacuum_chart_ae_directions": 2
+  },
+  "connector": {
+    "I_C_over_ell2": null,
+    "J_C_over_ell": null,
+    "V_C_over_ell3": null,
+    "reason": "No common connector metric is evaluated, so its volume and extrinsic-curvature moments stay absent.",
+    "status": "absent"
+  },
+  "inputs": {
+    "Rcut_right_over_ell": 4.0,
+    "Rwall_over_ell": 1.5,
+    "bodies": [
+      {
+        "id": "A",
+        "mass_over_ell": 0.4,
+        "taper_stop_over_ell": 1.0
+      },
+      {
+        "id": "B",
+        "mass_over_ell": 0.6,
+        "taper_stop_over_ell": 1.3
+      }
+    ],
+    "clock": "Instantaneous geodesic hypersurface normal; not an observer light-cone map.",
+    "shared_action": {
+      "H_ell": 1.0,
+      "k_ell": 2.0,
+      "note": "Same action and couplings. Distinct masses and taper stops are states and slicing, not new couplings.",
+      "quiet_scalar_amplitude": 0.0,
+      "wall_law": "pressure=-sigma, fixed positive sigma",
+      "xi": "1/6"
+    }
+  },
+  "method_commit": "f904e0c5184a4a15a05d9d9e1184e8b4dfa46b02",
+  "runtime": {
+    "cpu_seconds": 0.078125
+  },
+  "schema": "nsc-atlas-unequal-children-v1",
+  "scope": "Fixed two-body source moments in the declared normal clock, with connector moments absent. Not a connector metric, formation or evolution, a generated Lambda, or an observational fit. The isolated scalar fit is not a four-tensor.",
+  "source_sha256": {
+    "results/summaries/nsc-atlas-geometric-average-v1.json": "981e1f0c31ddcf657d8f90d548c78a660ed2a048a08a72e59b9b379830bab4ff",
+    "scripts/record_nsc_atlas_unequal_children.py": "da913553e449d70e5580b949d95f0cb946dc6899a87023f53b2397722bec3ac9",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7",
+    "src/recursive_horizons/nsc_atlas_geometric_average.py": "4b2d6064a9bcd2245651befda3ac6d5b7b1e844e69d9b436adb64bd81b1a3407",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "tests/test_nsc_atlas_connection_slice.py": "66607ff4b641cfbddf5ee63aaa66946a64e7dbe378fe52b3d71662159ee4de1a",
+    "tests/test_nsc_atlas_geometric_average.py": "a61a9215838af00c23197f7bae0646c5118ce70f69071a9b1d31d88330606552"
+  },
+  "sum_without_connector": {
+    "moments": {
+      "I_theta_over_ell2": 195.6124969394885,
+      "J_over_ell": 393.0140374756203,
+      "V_over_ell3": 752.8877866533956,
+      "cap_energy_over_ell": 3.375,
+      "cap_stress_trace_over_ell": -10.125,
+      "curvature_bulk_over_ell": -223.36803418177138,
+      "curvature_wall_delta_over_ell": 457.48349593617877,
+      "intrinsic_curvature_over_ell": 234.11546175440736,
+      "wall_energy_over_ell": 9.101344970150484,
+      "wall_stress_trace_over_ell": -17.598109876406912
+    },
+    "quadratures": "preserved adaptive A plus gauss64 B, compared with gauss32 B"
+  }
+}

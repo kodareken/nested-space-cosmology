@@ -435,6 +435,27 @@ A successful older run is evidence for that commit, not for a newer queued one.
 
 ## Current work
 
+The two unequal sourced parent inputs have a compact scalar record:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_connection_slice.py tests/test_nsc_atlas_geometric_average.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_unequal_children.py --output .build/nsc-atlas-unequal-children-reproduction.json
+```
+
+Use a fresh output path. The [saved result](../results/summaries/nsc-atlas-unequal-children-v1.json)
+binds frozen method `f904e0c5184a4a15a05d9d9e1184e8b4dfa46b02` and exact
+source hashes. It reuses the first body's saved adaptive moments and
+evaluates only the new second body's moments, comparing Gauss 64 with
+Gauss 32. There are 42 focused checks. The application takes 0.078125 CPU
+seconds / 13,932 pointwise geometric samples under its 30-second / 100,000
+sample limit; runtime can differ on another computer. No field solve,
+evolution, parameter scan or connector solve is part of this command.
+Compare construction identities in ell units with absolute `1e-8`, and the
+quadrature moments with `1e-7*max(1,abs(moment_64))`; preserve the reported
+32/64 differences as indicators. Runtime and current-commit metadata are
+not numerical predictions. The exact source bytes, assumptions and finite
+domain must agree. A future changed method requires its own source version.
+
 The [shadow-radial comparison](nsc-atlas-finite-amplitude.md#separating-radial-quadrature-from-reconstructed-field-transport)
 has exact controls for its local identity, wall conversion, differentiated
 panel-error sum and moving-interface signs:

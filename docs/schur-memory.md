@@ -157,6 +157,45 @@ retained observer and its compatible earlier data or quantum state. Global
 causal exclusions from the isolated reference are not assigned to the
 unevaluated many-body development.
 
+### Unequal sourced inputs for the parent reduction
+
+The [checked input pair](../results/summaries/nsc-atlas-unequal-children-v1.json)
+now replaces the second vacuum bridge with its own regular cap and material
+wall, in the same theory. The
+[slice owner](nsc-atlas-connection-slice.md#unequal-sourced-input-18-october-2026)
+specifies its geometry, boost and source checks. The following moments use
+the already declared instantaneous proper normal frame and the right-end
+retention sphere `R/ell=4`. Write
+`I=int theta dV`, `J=int(2 theta^2/3-2 sigma^2)dV` and
+`mathcal_R=int R3 dV`, retaining the wall curvature distribution.
+
+| Retained input | $V/\ell^3$ | $I/\ell^2$ | $J/\ell$ | $\mathcal R/\ell$ |
+| --- | ---: | ---: | ---: | ---: |
+| A, mass `.4*ell` | 355.493155 | 89.076815 | 185.877651 | 127.235043 |
+| B, mass `.6*ell` | 397.394632 | 106.535682 | 207.136386 | 106.880419 |
+| Sum before connector | 752.887787 | 195.612497 | 393.014037 | 234.115462 |
+
+A's moments are preserved from its closed adaptive calculation. B uses
+Gauss 64, compared once with Gauss 32; the largest absolute moment difference
+is `1.35e-7` in the respective ell units. Values in the table are rounded.
+The comparison indicates quadrature sensitivity rather than a total error
+bound or an observational uncertainty.
+
+These are the inputs to a parent, not its complete volume or average. If
+`V_B,I_B,J_B,mathcal_R_B` denote the summed body moments, a selected vacuum
+connector would give `mathcal_R_C=-J_C`, and the instantaneous normal-clock
+vacuum-form condition would be
+
+$$
+(V_B+V_C)(3J_B+\mathcal R_B+2J_C)-2(I_B+I_C)^2=0.
+$$
+
+`V_C,I_C,J_C` remain absent in the record. They must follow from a chosen
+compatible connector, with the clock terms added for a different observer
+prescription. Solving this equation for a desired connector moment would
+select the answer. The two input bodies establish neither a local
+cosmological vacuum source nor the cap centre's access to the parent volume.
+
 ### Observer clocks in the geometric average
 
 The selected larger-geometry route must compare resolutions in a declared

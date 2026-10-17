@@ -1,7 +1,9 @@
 # Attaching verified shell bodies through their vacuum ends
 
-**Status, 10 October 2026:** a conditional initial-data assembly using an
-imported existence theorem. The [connection slice](nsc-atlas-connection-slice.md)
+**Status, 18 October 2026:** two unequal sourced inputs are checked. The
+common-parent initial data remain an existence family; the conditional quiet
+local-spacetime argument below supplies no evaluated connector or observer map.
+The [connection slice](nsc-atlas-connection-slice.md)
 supplies the body to check: regular de Sitter cap, moving thin wall,
 Schwarzschild bridge and an exact right asymptotically Euclidean (AE) end.
 The construction below can retain that body while replacing its distant
@@ -164,8 +166,72 @@ children. The relative placements remain an existence family.
 | That body plus a complete unequal Schwarzschild bridge B | Conditional shared initial-data existence family; B's other end remains | A's passing body record, two exact vacuum end overlaps; no second child claimed |
 | Two such bodies in a common parent | Conditional existence family at sufficiently large separation | Two passing body records; smooth vacuum end and exact overlap certificates |
 | Particular common-parent transition metric | Unresolved | An imported construction evaluated only if a later observable needs it |
-| Future wall motion after exterior replacement | Unresolved beyond an established source evolution domain | Appropriate Einstein-matter-shell evolution and a domain containing that worldtube |
+| Quiet local spacetime containing both source neighbourhoods | Conditional patching argument below | Existing exact quiet source developments, identical vacuum buffers and a smooth auxiliary vacuum development |
+| Finite sourced evolution and its observer map | Unresolved beyond the established quiet local neighbourhood | Evaluated domain, physical clocks and appropriate evolution for the selected nonzero source |
 | Right exterior observer for a finite interval | Vacuum domain-of-dependence certificate below | Exact retained right exterior slice, fixed observer and outer boundary |
+
+## Two sourced inputs and a quiet local spacetime
+
+The [18 October input record](nsc-atlas-connection-slice.md#unequal-sourced-input-18-october-2026)
+now checks both shell-bearing bodies, with masses `.4*ell` and `.6*ell`,
+the same `H*ell=1`, `k*ell=2`, `xi=1/6` and quiet scalar. Each has a regular
+cap and exactly one AE end. Replacing their selected ends by the common
+exterior leaves one AE end in total. This differs from the historical v4
+input above, whose second body retains a vacuum end instead of a cap.
+The [retained volume and curvature moments](schur-memory.md#unequal-sourced-inputs-for-the-parent-reduction)
+are available; the particular connector and its moments are not.
+
+A local spacetime connection follows conditionally for these **quiet exact
+source solutions**, without assuming a general weak-shell Cauchy theorem.
+Here is the scope and argument.
+
+1. The signed spherical wall law gives a smooth local worldtube near each
+   checked event: its expanding squared radial speed is strictly positive.
+   The derivative of its angular junction gives the temporal junction.
+   The cap, wall and Schwarzschild pieces therefore already supply each
+   source's exact local quiet solution. This is a neighbourhood of the
+   checked initial slice, not a regular formation history.
+2. Choose wider open annuli `U_i` in the right vacuum ends and smaller
+   closed annular buffers inside them. The end theorem retains the wider
+   annuli with identical `h,K`. Complete this **same** connector inward
+   with auxiliary complete Schwarzschild vacuum bridges. Its smooth vacuum
+   data have a development. The auxiliary interiors are a proof device;
+   they are not additional physical children.
+3. Restrict that development and each original Schwarzschild patch to
+   vacuum developments of the same annulus data. Smooth vacuum local
+   existence and common-development uniqueness give an isometry on a
+   neighbourhood of the smaller buffers. It preserves the initial points
+   and future unit normals. This uses
+   [Sbierski, Theorem 2.6, Lemma 3.1 and Corollary 3.2](https://arxiv.org/html/1309.7591v2)
+   only in smooth vacuum regions. It does not compare different complete
+   source data by a global uniqueness assertion.
+4. In each isometric buffer transport its initial radial label `r0` by
+   short normal geodesics. Choose staggered cuts `a_i<b_i` inside that
+   buffer. Keep the source side `r0<b_i`, the auxiliary exterior side
+   `r0>a_i`, and identify their **entire** intersection
+   `a_i<r0<b_i` over a common short time interval. At either spatial edge
+   only one retained piece contains its boundary point. These trimmed
+   product neighbourhoods therefore form a Hausdorff atlas; identifying
+   just a small overlap while keeping duplicate boundary points would not.
+5. The metric and all derivatives agree on the open vacuum intersections.
+   Thus no new source layer is introduced. Replace the auxiliary interiors
+   with the original sourced pieces. Their walls and field `phi=0` remain
+   unchanged, so the local equations and distributional junctions hold.
+
+The conclusion is a time-oriented, piecewise-smooth solution neighbourhood
+containing the two quiet sourced pieces and a compact portion of their
+connector, conditional on the end theorem's sufficiently separated data.
+The compact sourced pieces and compact **vacuum** connector are different
+parts of this argument. Compact vacuum buffers provide a nonzero local time
+thickness; neither a numerical lower bound on that time nor a uniform time
+interval over the complete AE end has been calculated.
+
+This does not establish a global development or uniqueness across matter
+walls, finite-amplitude P001 evolution, formation, stability, or a physical
+clock shared by the two cap observers. The quiet references can still have
+singular past or future regions. An actual connector metric and observer
+reduction are needed for the cosmological calculation. The local argument
+is sufficient at this scope and is not a new numerical robustness campaign.
 
 ## A vacuum observer window that does not assume shell evolution
 

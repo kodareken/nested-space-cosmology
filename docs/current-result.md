@@ -1,6 +1,26 @@
 # What the calculations show
 
-Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md) remains the 17 October edition. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## Two unequal sourced inputs, 18 October 2026
+
+The [second cap-wall-bridge body](nsc-atlas-connection-slice.md#unequal-sourced-input-18-october-2026)
+now passes the same source and geometric checks as the first, with a
+different mass and slicing taper. Both retain the same action, couplings,
+quiet scalar, cap scale and wall radius. Each has a regular centre and one
+exact vacuum end. The [compact result](../results/summaries/nsc-atlas-unequal-children-v1.json)
+contains their retained moments and source hashes. All 42 focused tests pass;
+the new calculation used 0.078125 CPU seconds and 13,932 sampled geometric
+points, with no field solve or evolution.
+
+The end-gluing existence family can now use two sourced bodies rather than
+one source and a vacuum bridge. A
+[conditional quiet local-spacetime connection](nsc-atlas-connection-gluing.md#two-sourced-inputs-and-a-quiet-local-spacetime)
+retains both exact source neighbourhoods through unchanged vacuum buffers.
+The particular connector, its volume/curvature moments and a physical
+observer reduction remain absent. This supplies necessary parent inputs;
+it derives no cosmological Lambda and does not close the original P001
+endpoint comparison.
 
 ## First Step 7 vacuum projection, 17 October 2026
 

@@ -42,6 +42,18 @@ The end-gluing theorem may then use both checked smooth vacuum overlaps;
 it still supplies no numerical separation threshold, evaluated connector,
 shared future, physical inheritance map or cosmological Lambda.
 
+**Outcome:** [frozen method `f904e0c`](../results/summaries/nsc-atlas-unequal-children-v1.json)
+passes 42 focused tests and the one application in 0.078125 CPU seconds /
+13,932 pointwise geometric samples. The 12 KB record supplies B's regular
+cap, wall and bridge checks and both bodies' retained moments. B's largest
+32/64 absolute moment difference is `1.35e-7` in the respective ell units,
+within the declared relative comparison. The conditional parent now has
+two sourced inputs and one outer AE end; no evaluated connector or new
+Lambda follows. This input calculation is complete. The
+[quiet local-spacetime patching argument](nsc-atlas-connection-gluing.md#two-sourced-inputs-and-a-quiet-local-spacetime)
+uses existing exact source solutions and smooth vacuum uniqueness, without
+asserting a general shell evolution theorem or a quantitative time window.
+
 ## Causal distance and clock comparison, 17 October 2026
 
 The missing observer reduction cannot be supplied by a scalar volume average

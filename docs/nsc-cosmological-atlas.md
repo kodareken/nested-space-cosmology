@@ -65,6 +65,14 @@ The Einstein and Weyl-squared constructions remain separate candidates;
 their full unification is not a prerequisite for either one's conditional
 forward observations. P001's original fine evolution remains active.
 
+The [unequal sourced input pair](nsc-atlas-connection-slice.md#unequal-sourced-input-18-october-2026)
+now supplies two checked cap-wall-bridge bodies and their retained moments
+under the same action and couplings. The
+[end-only assembly and quiet local connection](nsc-atlas-connection-gluing.md#two-sourced-inputs-and-a-quiet-local-spacetime)
+remain conditional on sufficiently separated vacuum ends. Computing the
+particular connector and its observer reduction is still necessary; an
+existence family is not its numerical geometry or its cosmological response.
+
 ## Working geometric hypothesis: inheritance through resolution
 
 Douglas's current proposal is that a region's approximately spherical geometry
