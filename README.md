@@ -21,6 +21,12 @@ living manuscript, and the actual exterior causal boundary response is now
 implemented. A full cosmological Lambda still requires the physical reduction
 and its remaining state or averaging assumptions.
 
+The first [supernova distance comparison](docs/schur-memory.md#a-distance-observable-for-the-lambda-target)
+now calculates an observer statistic from 596 light curves and their full
+published covariance. The exact quiet-cap prediction does not match that
+statistic. This quantifies the cosmological evolution needed beyond the
+quiet limit; the full NSC cosmological forward model remains to be derived.
+
 A [finite-amplitude onset theorem](docs/nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
 now constructs a compatible sourced cap, material wall and exterior on the
 declared original source cell, uniformly for a nonzero amplitude range. It

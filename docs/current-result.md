@@ -4,6 +4,19 @@ Current presentation, 17 October 2026: [the living atlas manuscript](../paper/ne
 
 ## First Step 7 vacuum projection, 17 October 2026
 
+The first [supernova distance-shape comparison](schur-memory.md#a-distance-observable-for-the-lambda-target)
+now gives a direct observer constraint. The exact quiet cap predicts
+`Delta=0` after eliminating the common magnitude/distance scale. A fixed
+comparison using 596 Pantheon+ light curves and their full published
+statistical/systematic covariance gives **`Delta=-0.104618 +/- 0.014374 mag`**,
+a standardized contrast of `-7.27829`. Its exponential contrast is
+`0.952964`, with 68-percent interval `[0.946676, 0.959293]`; the quiet
+prediction is `1`. The method was committed before calculating this value.
+This is a retrospective quiet-state consistency test under the release's
+standardization and covariance, not a withheld test of the full NSC model.
+It quantifies the cosmological distance evolution that the completed forward
+model must reproduce. It supplies no new fitted or derived Lambda.
+
 The [geometric scalar average](schur-memory.md#step-7-averaging-the-explicit-sourced-initial-slice)
 now uses the explicit quiet sourced slice through `Rcut/ell=4`, with both
 bridge branches and the wall curvature delta. Its geometric trace coefficient

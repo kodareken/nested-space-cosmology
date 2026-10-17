@@ -21,6 +21,25 @@ the retained cap at fixed interface/exterior data. The nonzero boundary
 pairing is recorded separately. The combined 120 CPU-second / 30-million-value
 budget covers both prepared and prescribed-wall solves and their queries.
 No quantum determinant or covariance is inferred from a retarded pairing.
+
+The quiet-cap distance comparison reproduces with:
+
+```sh
+python scripts/run_python.py scripts/measure_nsc_atlas_distance_contrast.py --fetch --output .build/nsc-distance-contrast-reproduced.json
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cosmological_distance.py -q
+```
+
+Use a new output filename. The script retrieves two pinned publisher files
+into `.build/data/pantheonplus-c447f0fea703` (about 34 MB), checks their Git
+object hashes and dimensions, and uses the full joint covariance. Raw input
+files are ignored; the [saved summary](../results/summaries/nsc-atlas-distance-contrast-v1.json)
+contains the result, uncertainty, selection, hashes and exact zero quiet-cap
+prediction. Compare contrast and standard uncertainty within `1e-10 mag`,
+with input hashes and row counts exact; runtime/commit metadata and tiny solve
+residuals can differ. Five synthetic controls need no downloads. The observed
+contrast is a quiet-limit consistency check, not an induced-Lambda fit or a
+withheld observation for a later model calibrated from these data.
+
 The geometric record uses one existing initial slice through the right-end
 cutoff `R/ell=4`, retaining the wall curvature distribution and boosted stress.
 It records three quadrature methods at that same domain, their differences,

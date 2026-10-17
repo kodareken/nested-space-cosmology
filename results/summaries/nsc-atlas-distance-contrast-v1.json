@@ -1,0 +1,107 @@
+{
+  "interpretation": {
+    "Lambda_scope": "No induced Lambda is computed by fitting these observations; the supplied cap volume term remains an input.",
+    "candidate": "Existing quiet de Sitter cap with comoving standard-candle probes; source amplitude zero.",
+    "common_magnitude_and_distance_scale": "eliminated by zero-sum contrast weights; no Cepheid distance modulus used",
+    "error_model": "Published statistical plus systematic covariance, including publisher standardization and fiducial peculiar-velocity corrections.",
+    "exponential_contrast": "Exp[ln(10)*Delta/5]; transformed central value and one-standard-deviation interval, not an unbiased mean ratio.",
+    "observable": "Two-band linear contrast of m_b_corr - 5 log10(zHD*(1+zHEL)), using the joint published covariance.",
+    "validation_scope": "Retrospective quiet-limit consistency check, not withheld validation of the full NSC cosmology or nonzero-source P001."
+  },
+  "method_commit": "723ee8e3c24f6b729e10a31c1e99b4af3dbe8833",
+  "method_owner": "docs/schur-memory.md#a-distance-observable-for-the-lambda-target",
+  "numerical_budget": {
+    "BLAS_thread_limit": 4,
+    "CPU_seconds_limit": 120,
+    "new_field_evolutions": 0,
+    "parameter_grids": 0
+  },
+  "quiet_cap_domain": {
+    "emission_lookback_upper": 0.22314355131420976,
+    "emission_radius_upper_over_ell": 0.2,
+    "observer_cap_time_over_ell": 0.0,
+    "physical_frame": "Jordan and Einstein metrics coincide at zero scalar",
+    "reference_parameters": {
+      "H_ell": 1.0,
+      "M_over_ell": 0.4,
+      "k_ell": 2.0
+    },
+    "reference_wall_radius_over_ell": 1.5,
+    "source": "zero scalar mean; comoving test emitters; no probe backreaction",
+    "wall_horizon_crossing_lookback_lower": 0.25,
+    "wall_speed_squared_upper": 2.855625
+  },
+  "reproduce": "python scripts/run_python.py scripts/measure_nsc_atlas_distance_contrast.py --fetch --output .build/nsc-distance-contrast-reproduced.json",
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "schema": "nsc-atlas-distance-contrast-v1",
+  "selection": {
+    "distinct_selected_CID_values": 545,
+    "high_upper_inclusive": true,
+    "high_zHD": [
+      0.15,
+      0.25
+    ],
+    "low_upper_inclusive": false,
+    "low_zHD": [
+      0.025,
+      0.075
+    ],
+    "non_calibrators_only": true,
+    "released_row_order_preserved": true,
+    "repeated_light_curves_retained": true,
+    "selected_index_sha256": "774b2545b906405ac32b3f9b081deef86b308f5ef91e5a7b3e70da6f6325bc83"
+  },
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_distance_contrast.py": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e",
+    "src/recursive_horizons/nsc_atlas_cosmological_distance.py": "db75c6d8504f1c5ec16fab3be39cb8f36b71ccd4ae64d3083f63b304bc68e1e0",
+    "tests/test_nsc_atlas_cosmological_distance.py": "67bd935ea57d7744cc2ac881ecd4206df67f6e47417912cb50ce50efd8c05067"
+  },
+  "sources": {
+    "distances.dat": {
+      "bytes": 579283,
+      "git_blob": "cce857db0c15e9ce7a0e0ce77452b6ff62af969a",
+      "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+      "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat"
+    },
+    "stat-plus-systematic.cov": {
+      "bytes": 33284960,
+      "git_blob": "d1a1498154e7ba826df14bdbef35ebcb7f5efba1",
+      "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+      "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES_STAT%2BSYS.cov"
+    }
+  },
+  "statistics": {
+    "band_light_curve_counts": [
+      335,
+      261
+    ],
+    "checks": {
+      "KKT_weight_maximum_difference": 8.066464163292153e-16,
+      "band_normalization_maximum_residual": 5.551115123125783e-16,
+      "common_zero_point_weight_sum": -8.881784197001252e-16,
+      "covariance_asymmetry": 0.0,
+      "variance_identity_difference": 0.0
+    },
+    "contrast_magnitudes": -0.1046180474751224,
+    "exponential_contrast": 0.9529637714530853,
+    "exponential_contrast_68_percent_interval": [
+      0.9466764929149757,
+      0.9592928064641945
+    ],
+    "quiet_cap_predicted_contrast_magnitudes": 0.0,
+    "quiet_cap_predicted_exponential_contrast": 1.0,
+    "quiet_cap_standardized_contrast": -7.278290382311997,
+    "quiet_cap_two_sided_Gaussian_p": 3.380770223477123e-13,
+    "selected_light_curves": 596,
+    "standard_uncertainty_magnitudes": 0.014373986469318333
+  },
+  "status": "completed_observational_benchmark"
+}

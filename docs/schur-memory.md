@@ -822,6 +822,38 @@ corrections; it fits no LambdaCDM parameters. Its error range is conditional
 on that measurement model. A discrepancy constrains this quiet test state
 and its emitter assumptions; it does not reject every nested geometry.
 
+The [first evaluation](../results/summaries/nsc-atlas-distance-contrast-v1.json)
+uses 596 light curves: 335 in the lower band and 261 in the higher band.
+The method and zero prediction were committed as
+[`723ee8e`](https://github.com/kodareken/nested-space-cosmology/commit/723ee8e3c24f6b729e10a31c1e99b4af3dbe8833)
+before numerical evaluation. The result is
+
+$$
+\Delta=-0.1046180474751224\ \mathrm{mag},\qquad
+\sigma_\Delta=0.014373986469318333\ \mathrm{mag}.
+$$
+
+Its standardized contrast is $-7.27829$ under the published covariance.
+The transformed contrast is $\mathcal R=0.9529637714530853$, with
+one-standard-deviation interval $[0.9466764929149757,0.9592928064641945]$.
+The quiet prediction $\mathcal R=1$ does not match this statistic. Changing
+the common Hubble or luminosity scale cannot alter that prediction, because
+the weights sum to zero. The full matter, expansion and observer dynamics
+must therefore be supplied before this quiet building block is used as a
+cosmological forward model. This does not determine the missing induced
+Lambda or validate/falsify the nonzero-source P001 configuration.
+
+The source table and full covariance match the pinned publisher Git objects.
+The independent constrained solve differs in weights by at most
+$8.07\times10^{-16}$; the common-zero-point residual is below
+$9\times10^{-16}$. Five synthetic geometry/covariance controls pass.
+A separate table parse and Cholesky--QR calculation agrees well within the
+$10^{-10}\,\mathrm{mag}$ reproduction tolerance for both the contrast and
+its standard uncertainty, with the same selected rows and counts.
+Evaluation costs 1.125 CPU seconds. Only the 4,975-byte summary is retained
+in Git; the two raw inputs remain in the ignored cache. The released
+measurement assumptions remain part of the comparison's uncertainty scope.
+
 ## The transition and vacuum-form coefficient
 
 The frozen positive-$F$ DEV3 transition uses radius $32/25$, expansion
