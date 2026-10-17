@@ -580,7 +580,30 @@ Windows, including all retained tests and the current-paper checks. Later
 research commits have their own queued checks; this completed run applies
 to commit `6239ee1`.
 
-The next source representation certificate uses the same source cell and
+The connected scalar inverse has a separate exact/manufactured control command:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_transmission_bound.py -q -s
+```
+
+Its seven controls pass within 99,024 cumulative development values / 0.796875
+active CPU seconds, including one corrected clock-conversion control. It
+performs no physical source solve or evolution. The comparison helper requires
+proved coefficient/error bounds and does not certify them from samples.
+The source-conversion helper maps invariant value/first-jet bounds into the
+canonical scalar bounds using an explicitly supplied common source tube.
+The admitted application authenticates the existing v2 certificate and its
+proved tube, then uses exact rational arithmetic only:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_canonical_source_bound.py --output results/summaries/nsc-atlas-canonical-source-bound-v1.json
+```
+
+It requires committed sources and a new output path, with a 4,096-value /
+5-second budget. Display floats are summaries; the rational strings carry
+the error bounds. This command performs no source readout or evolution.
+
+The source representation certificate uses the same source cell and
 its actual binary cubic coefficients:
 
 ```sh

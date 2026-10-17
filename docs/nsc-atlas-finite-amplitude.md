@@ -6853,6 +6853,282 @@ $\sqrt{C+2\alpha c_{Q_+}^2/3}$; the earlier anchored-gauge readout
 imposing a second clock normalization. This conversion assumes a regular
 axis and does not by itself construct one.
 
+## Connected scalar characteristic inverse
+
+The source certificate can enter a first-order continuum comparison without
+differentiating its six error bounds. The following estimate connects the
+exterior, cap and wall on a **prescribed compatible geometry**. It does not
+yet close the changes in that geometry caused by scalar errors. It uses
+characteristic integration, rather than a finite cap mode matrix.
+
+### One canonical reduced field on both sides
+
+Write `X=r*f=r*asinh(a*c/r)/a`, `a=sqrt(alpha/6)`, with its continuous
+zero-alpha limit. X equals the cap's existing chi. On the exterior the
+canonical scalar is massless, so its exact reduced equation is
+
+\[
+ X_{\bar U x}=-K_E X,\qquad
+ K_E=\frac{r_{\bar U}r_x+C/4}{r^2}.
+\]
+
+This follows by differentiating `X=r*f` and using both the radius and
+canonical scalar equations. Unlike the invariant-c equation, this scalar
+equation has no scalar first-jet product in its potential. It is an exact
+change of variables, not a new source, action or discretization.
+
+The certified invariant source inputs need this same change of variables.
+Put `u=c/r`, `h=(1+a^2 u^2)^(-1/2)` and `j=asinh(a*u)/a-u*h`. At a source
+point the complete differential, including the variation of h, is
+
+\[
+ dX=h\,dc+j\,dr,\qquad Q=h c_x+j r_x,\qquad
+ dQ=h\,dc_x+j\,dr_x+
+ \frac{h_u(c_x-u r_x)}r(dc-u\,dr),\quad
+ h_u=-a^2u h^3.
+\]
+
+On the segment joining two source inputs, assume `r>=r_*`, `abs(u)<=u_*`,
+`abs(c_x)<=c_*`, `abs(r_x)<=v_*`. Since `h<=1` and
+`j_u=a^2*u^2*h^3`, one has `abs(j)<=alpha*u_*^3/18`. Therefore
+
+\[
+ e_X\le e_c+\frac{\alpha u_*^3}{18}e_r,\qquad
+ e_Q\le e_{c_x}+\frac{\alpha u_*^3}{18}e_{r_x}
+ +\frac{\alpha u_*(c_*+u_*v_*)}{6r_*}(e_c+u_*e_r).
+\]
+
+`canonical_source_error_bound()` implements these rational upper bounds.
+They supply canonical d_X and d_q contributions from four of the six source
+errors once the common tube is bounded; the lapse inputs belong to the metric
+comparison. Neither `c_x` nor its error can simply be relabelled Q at finite
+alpha. No second source derivative is introduced, and runtime floating
+evaluation error remains additional to the existing representation bound.
+
+At the wall put `U_+=d Ubar/ds`, `V_+=dx/ds`, `W_x=U_+/V_+>0`,
+`A0=1-R^2`, `H=2 V_+ r_x+S_w R`, `S_w=2 cosh(a f)^3`. Define
+
+\[
+ j(f)=f-\frac{\tanh(af)}a,\qquad J=S_wRj(f),\qquad
+ P=X_{\bar U},\quad Q=X_x.
+\]
+
+The existing hybrid law and the chain rule give both transmission directions:
+
+\[
+ \boxed{E^+=\frac{A_0}{H}(2V_+Q+J),\qquad
+ P_W=\frac1{2U_+}\left(\frac{A}{HA_0}E^-+J\right).}
+\]
+
+The common value is `X_W=R*f`, with
+`(X_W)_x=Q_W+W_x P_W`. Canonical normal derivatives have jump `-J`,
+where the jump is exterior minus cap using the same outward normal. Setting
+that jump to zero would alter the finite-alpha wall law. The invariant c
+still has its homogeneous normal transmission.
+
+At fixed R the full J derivative is
+
+\[
+ J_X=2\cosh y\sinh y\,(3y\cosh y-2\sinh y),\qquad y=af.
+\]
+
+Thus J and its derivative vanish at alpha zero. For a prescribed coefficient
+comparison, an enclosure L_J of `abs(J_X)` gives value gains
+`j_e>=sup(A0/H)*L_J`, `j_p>=sup(1/(2U_+))*L_J`.
+Changes in H, null rates, radius and the remaining metric coefficients add
+their actual algebraic differences to the boundary forcing. H itself depends
+on the wall and scalar through the hybrid law; holding H fixed here is a
+comparison decomposition, not a claim that it is independent physical data.
+
+The principal cross gains are `a_e=2 V_+ A0/H` and
+`b_e=A/(2 U_+ H A0)`. Their product is `A/(H^2 W_x)`. In proper-time
+normalization it is `A/H^2=(beta_minus-v)/(beta_minus+v)`. An expanding
+timelike wall makes the latter less than one, but this product alone is
+not an inverse estimate: it omits exterior propagation and the cap source.
+
+### Continuum inequalities and the instantaneous inverse
+
+Use `x0<=x<=x1`, `0<=Ubar<=W(x)`, and `z_*<=z<=Z(x)` in the cap,
+where `z=atanh r`, `Z=atanh R`, and the wall expands. The inner edge is
+strictly positive and lies inside the quiet region. Only the incoming cap
+family E-minus is supplied at that edge. The outgoing E-plus is zero there
+as a consequence of no arrival, not a second boundary condition. A sufficient
+quiet-core condition is that the wall's earliest disturbed radius in z,
+minus `integral T_x beta_max dx`, remains greater than z_*. This needs a
+uniform coefficient bound, not a sampled travel time.
+
+All suprema below are running suprema through the indicated x, on the common
+physical domains. For a scalar difference or linearized error, order them as
+
+\[
+ u=(M,w,p,X,q,E,Y)
+  =(\|e_{E^-}\|,\|e_{X_W}\|,\|e_P\|,\|e_{X,+}\|,
+       \|e_Q\|,\|e_{E^+}\|,\|e_{X,-}\|).
+\]
+
+Let `L>=sup W`, `k>=sup abs(K_E)`, `v_c>=sup T_x beta`,
+`gamma>=sup abs(T_x beta_z)`, `v_w>=sup W_x`. On a common scalar tube let
+`s_c>=sup T_x A0 abs(dS/dX)` for the cap reaction
+`S=B_r f+r exp(delta) U_alpha(f)`, so
+`dS/dX=B_r/r+exp(delta)*U_alpha'(f)` at fixed metric.
+Choose uniform nonnegative upper bounds `a,b,j_e,j_p` for the wall gains.
+All coefficient variations, moving-domain pullback terms and implementation
+residuals must be included in the forcing. They are not assigned zero.
+Piecewise absolutely continuous fields suffice when the characteristic
+integrals exist; jumps in an approximate field contribute their accumulated
+absolute jump sizes to the corresponding residual terms.
+
+With nonnegative d_i bounding initial/source/boundary errors and the time or
+space integrals of these residuals over the declared domain, characteristic
+integration and the two primitives give
+
+\[
+\begin{aligned}
+ M&\le d_M+\int(\gamma M+s_cY)\,dx,\\
+ w&\le d_w+\int(q+v_wp)\,dx,\\
+ p&\le d_p+bM+j_pw+\int kX\,dx,\\
+ X&\le d_X+Lp,\qquad q\le d_q+LkX,\\
+ E&\le d_E+aq+j_ew+\int(\gamma E+s_cY)\,dx,\\
+ Y&\le d_Y+w+\int\tfrac12v_c(E+M)\,dx.
+\end{aligned}
+\]
+
+For example, P is integrated along fixed-Ubar characteristics from the
+initial cut or the advancing wall. Q is integrated from the source at fixed
+x. The exterior value follows `X=X_src+integral P dUbar`. For the cap value,
+a fixed-z line starts at the initial slice or enters through the expanding
+wall; integrating `X_x=T_x beta(E^++E^-)/2` gives the last inequality.
+Initial and boundary terms have been added rather than maximized, which is
+a conservative bound. The d terms need finite uniform or integrated bounds;
+stored point maxima do not supply them.
+
+Write these inequalities as `u<=d+B*u+integral A*u`. B has only
+
+\[
+ B_{pM}=b,\ B_{pw}=j_p,\ B_{Xp}=L,\ B_{qX}=Lk,
+ \ B_{Eq}=a,\ B_{Ew}=j_e,\ B_{Yw}=1.
+\]
+
+Its longest dependency chain is `M -> p -> X -> q -> E`, with four edges;
+the chain starting at w is no longer. Therefore
+
+\[
+ B^5=0,\qquad G=(I-B)^{-1}=I+B+B^2+B^3+B^4\ge0,
+ \qquad u\le Gd+\int GAu\,dx.
+\]
+
+This closes the instantaneous exterior/wall/cap scalar feedback without a
+smallness assumption on `a*b` or `L*k`. The remaining feedback passes through
+time integration. With positive component scales h_i, define
+
+\[
+ \lambda=\max_i\frac{\sum_j(GA)_{ij}h_j}{h_i},\quad
+ \theta=(x_1-x_0)\lambda<1,\quad
+ D_* =\max_i\frac{(Gd)_i}{h_i}.
+\]
+
+Taking running suprema gives the explicit conditional inverse
+
+\[
+ \boxed{u_i\le h_i\,D_*/(1-\theta).}
+\]
+
+The [exact rational comparison helper](../src/recursive_horizons/nsc_atlas_transmission_bound.py)
+forms B, A and G and evaluates this sufficient short-time bound. Its inputs
+are **already established upper bounds**; it does not turn sampled physical
+values into certificates. Failure of theta<1 is inconclusive about stability.
+Only first-jet source errors enter this uncommuted estimate. A comparison on
+different geometries also needs bounded first spatial derivatives of the
+reference characteristics for the transport-coefficient forcing, and a
+compatible fixed-domain identification. This is distinct from demanding a
+time derivative of every source error bound.
+
+For the subsequent geometry comparison, one explicit fixed-domain map is
+`Ubar=eta*W(x)` outside and `z=z_*+xi*(Z(x)-z_*)` inside. The exterior P
+equation has transport coefficient `-eta*W_x/W`. The cap equations have
+coefficients `-(T_x*beta+xi*Z_x)/(Z-z_*)` for E-plus and
+`(T_x*beta-xi*Z_x)/(Z-z_*)` for E-minus, when the transport term is placed
+on the left. Their difference multiplies the reference spatial first jet.
+The map needs positive lower bounds for W and `Z-z_*`; wall timelikeness
+fixes the incoming/outgoing signs at xi=1. These are the additional map
+coefficients to bound, not an assumed fixed physical wall.
+
+### The remaining metric connection has a radial bound
+
+On the quiet-core collar, let r_* be its fixed inner areal radius. At a common
+physical radius the two exact cap constraints are
+
+\[
+ N_r+a_cN=b_c,\quad \delta_r=a_c,\qquad
+ a_c=\frac{\alpha(p_c^2+h_c^2)}{2r},\quad
+ b_c=\frac{r^2P_1(f)}2+\frac{A_0(p_c^2+h_c^2)}4.
+\]
+
+Here a_c and b_c are radial coefficients; p_c and h_c are the
+cap variables, not the error norms above. The quiet core anchors `N=delta=0`.
+For two states, subtraction and `a_c>=0` give the exact variation equation
+and its integrating-factor estimate
+
+\[
+ (\Delta N)_r+a_{c,1}\Delta N=\Delta b_c-N_2\Delta a_c,
+ \qquad |\Delta N(r)|\le\int_{r_*}^r
+       (|\Delta b_c|+|N_2|\,|\Delta a_c|)\,d\rho,
+ \qquad |\Delta\delta|\le\int_{r_*}^r|\Delta a_c|\,d\rho.
+\]
+
+Uniform state bounds `abs(p_c)<=P_*`, `abs(h_c)<=H_*`,
+`abs(P1')<=L_P` on the segment joining the two states imply
+
+\[
+ |\Delta a_c|\le\frac\alpha r(P_*|\Delta p_c|+H_*|\Delta h_c|),
+ \qquad
+ |\Delta b_c|\le\frac{r^2L_P}2|\Delta f|
+       +\frac{A_0}2(P_*|\Delta p_c|+H_*|\Delta h_c|).
+\]
+
+At the same r, the characteristic variables supply
+`Delta f=Delta X/r`, `Delta p_c=(Delta Eplus+Delta Eminus)/(2 A0)` and
+`Delta h_c=(Delta Eplus-Delta Eminus)/(2 A0)-Delta f`.
+Thus the radial metric difference uses these same scalar norms without
+another scalar derivative. Also `Delta A=-2 alpha Delta N/r`, and
+
+\[
+ |\Delta\beta|\le\frac{\mu_*}{A_{0,*}}
+ \left(\frac{2\alpha}{r_*}|\Delta N|+A_*|\Delta\delta|\right),
+ \qquad \mu_*=\sup e^\delta.
+\]
+
+Here `A_*` is an upper bound and `A0,*` a positive lower bound. At zero alpha,
+the finite normalized N may vary but its physical metric contribution and
+the lapse difference vanish. Nonzero inner data or radial constraint
+residuals add their anchor and integrated forcing terms. Different radii
+or clocks add endpoint/pullback terms; the displayed same-radius estimate
+does not silently drop them.
+
+Seven [independent controls](../tests/test_nsc_atlas_transmission_bound.py)
+pass in eight executions, using **99,024 charged values / 0.796875 active
+CPU seconds**. They check the canonical exterior equation, exact J derivative,
+both production-hybrid transmission directions and signed nonlinear jump,
+the rational inverse against direct elimination with large cross gains, an
+exact incoming quartic on an expanding cap, and the damped radial variation.
+The source conversion additionally checks its full symbolic Jacobian,
+an independent 75-digit finite difference against the bound, and zero-alpha
+recovery. Grok's review confirms the transmission and inverse proof, and
+identified the need to convert the certified invariant source data explicitly.
+The first run exposed a proper-time/source-time conversion omitted in the
+test's wall tangent comparison; dividing by V-plus corrects it. The production
+hybrid and derived transmission equations did not change. There is no
+physical source readout, evolution, sampled coefficient enclosure or new raw
+data in these controls.
+
+This makes the next full-system obstruction specific: cap metric errors
+depend instantaneously on E-plus, while the incoming wall law also depends
+on cap A and the exterior metric prefix. Those extra edges can create a
+cycle in the comparison matrix. Their uniform gains, exterior metric
+transport, clock/wall variations and continuous residuals must be bounded
+before inverting that larger system. The scalar nilpotence result does not
+assert nilpotence, or an inverse, for the complete Einstein-wall system.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

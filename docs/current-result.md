@@ -184,6 +184,20 @@ All 59 producer bindings authenticate, and seven independent controls pass.
 Floating implementation error and coupled exterior propagation remain open;
 these representation bounds do not replace those estimates.
 
+The [connected scalar characteristic inverse](nsc-atlas-finite-amplitude.md#connected-scalar-characteristic-inverse)
+now closes the exterior, cap and two-way wall scalar comparison on a prescribed
+compatible geometry. Its instantaneous dependency matrix satisfies `B^5=0`,
+giving an explicit inverse before the time-integrated error bound. The
+canonical field's finite-alpha wall jump is retained and checked against the
+existing hybrid. A same-radius radial constraint bound connects the metric
+variation to the same scalar norms without adding a scalar derivative.
+The canonical source conversion retains all value and first-jet variations.
+Seven controls pass in eight executions (99,024 values / 0.796875 active CPU
+seconds); the corrected test distinguished proper time from the source clock.
+Uniform coefficient/residual bounds and the remaining metric/wall/clock
+feedback still need closure before this becomes a full spacetime estimate.
+No new physical evolution or grid scan was run.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

@@ -2520,6 +2520,66 @@ Grok's follow-up finds the endpoint correction sound for all six inputs.
 Floating evaluation and coupled propagation are still separate tasks; this
 whole-cell representation certificate does not admit another evolution run.
 
+### Connected scalar characteristic inverse, 17 October 2026
+
+The source-cell certificate now supplies first-jet input errors. The missing
+connection is their propagation through the exterior, two-way material wall
+and cap. Derive a continuum comparison in those connected regions before
+another evolution. Use the canonical reduced scalar on both sides, the
+existing mixed equations, characteristic integration, the mean-value theorem
+and a finite nonnegative comparison matrix. Keep the scalar-dependent wall
+term: canonical scalar normal derivatives are not continuous at finite alpha.
+
+Fix a positive-radius exterior and a cap collar with a quiet inner edge,
+positive A, lapse and null rates, and a timelike expanding wall. Bound the
+scalar inverse conditional on compatible geometry and coefficient bounds;
+metric, clock and moving-domain differences must appear explicitly as forcing,
+not disappear into a claim about the full coupled problem. The instantaneous
+source/prefix/transmission dependencies must be closed before applying a
+time-integrated estimate. A frozen finite-dimensional field matrix is not a
+substitute for this continuum argument.
+
+Admit one analytic derivation and independent Grok review, with exact symbolic,
+rational comparison and manufactured transport controls within **100,000
+charged values / 30 active CPU seconds**. No physical source readout, new
+trajectory, grid, mode or amplitude scan is admitted. Save the equations and
+small code/tests in their existing owners; no new numerical history or JSON
+receipt is needed. Stop with the specific feedback or regularity obstruction
+if the comparison cannot close. A successful scalar inverse leaves the metric
+feedback bound and the uniform continuous residuals as subsequent work.
+
+**Development outcome:** the connected continuum scalar inequalities have
+an acyclic instantaneous graph, `B^5=0`; the exact positive inverse precedes
+the short-time bound. Six controls pass in seven executions using 88,000
+values / 0.59375 active CPU seconds. The first run passed five controls and
+caught an omitted proper-time/source-time conversion in the manufactured
+hybrid comparison; that test was corrected and passed. The equations and
+production hybrid were unchanged. The canonical nonlinear normal jump is
+nonzero in the finite-alpha control. A same-radius cap constraint estimate
+exhibits the remaining metric coupling without new scalar derivatives.
+No physical coefficient bound or full Einstein-wall inverse is asserted.
+
+Independent Grok review confirms the wall algebra, scalar inverse and radial
+variation, and identifies the required source-frame conversion. Add its full
+Jacobian and conservative rational enclosure; this uses four of the existing
+six error bounds and requires no second source derivative. One further
+symbolic/75-digit comparison control passes with 11,024 values / 0.203125
+active CPU seconds. The total is seven controls in eight executions,
+**99,024 values / 0.796875 CPU seconds**, within the original allowance.
+
+After freezing these sources, admit one canonical-source application within
+**4,096 charged values / 5 process-CPU seconds**. Authenticate the existing
+v2 whole-cell receipt and use its exact outward dyadics, original alpha and
+proved radius/conformal/first-jet tube. Bound the common canonical source
+segment algebraically: `r_min=F_min*rJ_min` since `sqrt(F_min)>=F_min`,
+`u_max=g_max/r_min`, `cx_max=gx_max` and
+`rx_max=vJ_max/F_min+alpha*g_max*gx_max/(6*r_min)`. The source mask only
+removes the corresponding scalar values/jets, so these amplitude bounds
+cover both representations. Convert its four source errors with the checked
+Jacobian bound and save one compact hash-bound summary. No original field
+readout, solver, trajectory, subdivision or scan is needed. Stop if the
+authenticated tube does not justify these inequalities.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
