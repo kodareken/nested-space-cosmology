@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
+  "current_receipt_commit_parent": "34c44228096a6a7630183791055c5c155ac0422e",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 323179,
-      "change": "Carry optional interior-jet history enrichment through runtime and original-input certificates.",
-      "changed_from_commit": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
+      "bytes": 323619,
+      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
+      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a7b896deab17120fda59b3002dddf37b2a20ce727491a4863f40e6af64be919b"
+      "sha256": "86773657c6291c4e4c2e11640d1fb95575d40613f443a5f63b2f479a3fcea26f"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 321431,
-      "change": "Carry optional interior-jet history enrichment through runtime and original-input certificates.",
-      "changed_from_commit": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
+      "bytes": 322496,
+      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
+      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "828eb1f4c63daaa1256c0164820d876ee7d7824d301f2ec0e675a305625ea64b"
+      "sha256": "36675e44eb37821a680a87060bfaf1ab2c303efeca14fdcd3c5867f04bdf340d"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 359436,
-      "change": "Carry optional interior-jet history enrichment through runtime and original-input certificates.",
-      "changed_from_commit": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
+      "bytes": 361934,
+      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
+      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c5f3855219bb04ec9045987a23b4d5d0776ea820abe2dbea0abce9e9bb44314e"
+      "sha256": "95d2d32b12579fbce9ea95e419cbf3d48fdac19f6f8545c4dc1e1053a942b968"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 114697,
-      "change": "Carry optional interior-jet history enrichment through runtime and original-input certificates.",
-      "changed_from_commit": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
+      "bytes": 115670,
+      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
+      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "030af39be24491195e339fb93cd0b9788a3995dab6b614d6b8c18e04148e5a96"
+      "sha256": "c99854fd771b8bb39545cf1804210342effe15457c3711e3306c208d05d36232"
     },
     {
       "bytes": 18356,
@@ -29623,6 +29623,14 @@
       "sha256": "3b21323be110a24184b72351ab28399a308cbf7170e30f1f50380da40127c565"
     },
     {
+      "bytes": 17660,
+      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
+      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
+      "path": "results/summaries/nsc-atlas-prepared-endpoint-enriched-v1.json",
+      "retention_reason": "Enriched endpoint evidence and original-interval evolution interface.",
+      "sha256": "8a0f40d4f8338624038da9b5d2e016445e947fd099cae94c44afc9ce8b30f4a4"
+    },
+    {
       "bytes": 2672,
       "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
       "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
@@ -32241,12 +32249,12 @@
       "sha256": "dea660fcf1f062a969da84a609cc67dc874a743cfae6bd07fc1bcaf3c0a27f11"
     },
     {
-      "bytes": 18241,
-      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
-      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
+      "bytes": 20689,
+      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
+      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
       "path": "scripts/run_nsc_atlas_fixed_onset.py",
       "retention_reason": "Retained-source onset attempt, exact time scale and boundary-order diagnosis.",
-      "sha256": "74a6e22d65ee4d17e1c369e72053c17d655c1908b42761aca9a1efd18fe1c8b7"
+      "sha256": "f05e76a2b20471e78f59fe2e9f0ef763daacf29b66cc7f3300bd49c7f5475849"
     },
     {
       "bytes": 15544,
@@ -39717,12 +39725,12 @@
       "sha256": "022b72f9f3684f848ba4227bbb241bad43874d8a4b11c3dabcbfa9e68c9ac6d4"
     },
     {
-      "bytes": 2523,
-      "change": "Carry history-clock derivatives into physical residuals and prepare one full retained-history onset interval.",
-      "changed_from_commit": "e78f0316972b016848db9e0cf64c81ec7fafab08",
+      "bytes": 3436,
+      "change": "Record the passing enriched endpoint and prepare its original finite-coupling interval.",
+      "changed_from_commit": "34c44228096a6a7630183791055c5c155ac0422e",
       "path": "tests/test_run_nsc_atlas_fixed_onset.py",
       "retention_reason": "Bounded retained-history onset calculation and its independent controls.",
-      "sha256": "af85badafbb165e311f58e6b3a87f38ff7ab57fb8cd250f97adc065b3ebb6257"
+      "sha256": "f366f5baab84f49ce93907e780093db4ca07f30bf06227a18ec73061136cd1b9"
     },
     {
       "bytes": 13786,

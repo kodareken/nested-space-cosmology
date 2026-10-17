@@ -557,6 +557,25 @@ input identity. Declared local decision limits are enforced in the receipt.
 This command also has a 10-million-value / 60-second budget and takes no
 time step. Existing creation-only output files are preserved.
 
+After that comparison passes, the separately admitted full enriched
+finite-coupling onset interval is:
+
+```sh
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --retained-history --enrich-history --output results/summaries/nsc-atlas-fixed-enriched-history-onset-v1.json
+```
+
+The source, geometry and 371-step schedule stay those of the original
+retained-history attempt. The 900-second / two-billion-value budget counts
+one preparation and all stages. The command checks the committed enriched
+reference and its input hashes, and saves one small final state plus
+summaries. Its sampled scalar decision is distinct from interval completion
+and from a continuum validity claim. Eight orchestration controls pass.
+
+GitHub Verify run `38979718935` confirms the storage fix on both Linux and
+Windows, including all retained tests and the current-paper checks. Later
+research commits have their own queued checks; this completed run applies
+to commit `6239ee1`.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

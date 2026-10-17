@@ -29,6 +29,7 @@ from recursive_horizons.nsc_source_binding_graph import original_source_graph
 from check_nsc_atlas_prepared_history import array_hash
 
 ROOT=Path(__file__).resolve().parents[1]
+ENRICHED_REFERENCE='results/summaries/nsc-atlas-prepared-endpoint-enriched-v1.json'
 
 
 def digest_state(value):
@@ -55,7 +56,7 @@ def frozen_sources():
     return commit,bindings
 
 
-def prepare_history(budget,report):
+def prepare_history(budget,report,*,enrich_ordinary_pieces=False):
     """One preparation phase, charged into the original caller budget once."""
     budget.check()
     remaining=budget.maximum_evaluations-budget.evaluations
@@ -70,13 +71,17 @@ def prepare_history(budget,report):
         field=solve_prepared_field(nodes=257,geometry_knots=257,budget=preparation)
         report['source_integrations_completed']=1
         cap=CapLeadingField(field,derivative_order=4)
-        result=build_prepared_background(cap)
+        result=(build_prepared_background(cap,enrich_ordinary_pieces=True) if enrich_ordinary_pieces
+                else build_prepared_background(cap))
         background=result['background']
         report.update(inputs=dict(field_nodes=257,geometry_knots=257,derivative_order=4,
                                   quiet_tolerances=[0.,0.,0.]),
                       input_sha256=array_hash(background.inputs),onset=result['onset'],
                       diagnostics=result['diagnostics'],clock_offset=cap.domain['Ta'],
                       numerical_error_enclosure=False)
+        if enrich_ordinary_pieces:
+            report.update(original_input_sha256=array_hash(result['original_history_inputs']),
+                          enrichment=result['enrichment'])
         return background,float(cap.domain['Ta'])
     finally:
         report['charged_values']=preparation.evaluations
@@ -88,13 +93,18 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--retained-history',action='store_true',
                         help='same full interval and schedule, with the prepared background and departures')
+    parser.add_argument('--enrich-history',action='store_true',help='use the checked degree-seven ordinary history pieces')
     args=parser.parse_args()
+    if args.enrich_history and not args.retained_history:
+        parser.error('--enrich-history requires --retained-history')
     if args.output.exists(): raise ValueError('preserve the existing result; choose a new admitted output')
     if not args.output.parent.is_dir(): raise ValueError('output parent must already exist')
     commit,bindings=frozen_sources()
     values,cpu=(2000000000,900.) if args.retained_history else (600000000,180.)
     budget=Budget(maximum_evaluations=values,cpu_seconds=cpu)
-    report=dict(schema='nsc-atlas-fixed-history-onset-v1' if args.retained_history else 'nsc-atlas-fixed-onset-v1',
+    schema=('nsc-atlas-fixed-enriched-history-onset-v1' if args.enrich_history else
+            'nsc-atlas-fixed-history-onset-v1' if args.retained_history else 'nsc-atlas-fixed-onset-v1')
+    report=dict(schema=schema,
         status='incomplete',runtime=producer.runtime_versions(),source_commit=commit,
         scope='retained-source numerical common evolution; sampled defects, no continuum error enclosure or observational prediction',
         limits=dict(charged_values=values,cpu_seconds=cpu,accepted_steps=1024),source_bindings=bindings)
@@ -116,7 +126,22 @@ def main():
         gauge=ReferenceWallGauge(geometry,order=64,budget=budget)
         if args.retained_history:
             phase='one prepared history and transfer';report['preparation']={}
-            background,clock_offset=prepare_history(budget,report['preparation'])
+            background,clock_offset=prepare_history(budget,report['preparation'],enrich_ordinary_pieces=args.enrich_history)
+            if args.enrich_history:
+                phase='checked enriched input identity'
+                reference_raw=(ROOT/ENRICHED_REFERENCE).read_bytes()
+                pinned=subprocess.check_output(['git','show',commit+':'+ENRICHED_REFERENCE],cwd=ROOT)
+                if reference_raw!=pinned: raise ValueError('enriched reference differs from committed receipt')
+                checked=json.loads(reference_raw)
+                if (checked['schema']!='nsc-atlas-prepared-endpoint-enriched-v1'
+                        or checked['status']!='completed_reference_comparison'
+                        or set(checked['acceptance'])!={'history_material_rate','conformal_wall_gap',
+                                                       'prepared_prefix_gap','velocity_channel','density_force_L2'}
+                        or not all(item['passed'] for item in checked['acceptance'].values())
+                        or any(report['preparation'][key]!=checked['preparation'][key]
+                               for key in ('input_sha256','original_input_sha256'))):
+                    raise ValueError('enriched history differs from its checked preparation')
+                report['enriched_reference']=dict(path=ENRICHED_REFERENCE,sha256=hashlib.sha256(reference_raw).hexdigest())
         reference=gauge.sample(np.array([left,right]));Z0,Z1=np.arctanh(reference['r'])
         dZ=Q(float(Z1))-Q(float(Z0));dT=Q(float(reference['T'][1]))-Q(float(reference['T'][0]))
         a=max(4*dZ,2*dT);knots=[Q(0),Q(float(Z0))-a,Q(float(Z0))+a]
@@ -258,6 +283,11 @@ def main():
                 explicit_time_remainder=cap['explicit_time_remainder'],
                 explicit_mass_clock_derivative=cap['gradient']['T'])
         if calls!=5*accepted: raise ValueError('common stage accounting mismatch')
+        if args.enrich_history:
+            measured=maxima['connection.conformal_wall_flux']
+            report['scalar_boundary_decision']=dict(maximum_conformal_wall_flux=measured,
+                limit=1e-10,passed=measured<=1e-10,
+                scope='sampled scalar boundary decision only; no continuum or complete junction error enclosure')
         budget.check();report['status']='completed_numerical_interval'
     except (ValueError,RuntimeError,FloatingPointError,OverflowError,KeyError,TypeError) as error:
         report['status']='stopped';report['failure']=dict(phase=phase,reason=str(error))

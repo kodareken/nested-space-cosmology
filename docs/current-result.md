@@ -150,6 +150,13 @@ and 105 existing controls pass (112 development executions). The first
 enriched physical-source comparison is restricted to the same single
 zero-coupling reference event, with its limits fixed before execution.
 
+The [enriched reference](../results/summaries/nsc-atlas-prepared-endpoint-enriched-v1.json)
+passes those limits: the conformal gap falls from `6.76138e-9` to
+`4.70422e-13` in magnitude, with identical source, clock and knot grid.
+Its preparation/event cost is 1,866,626 values / 2.75 CPU seconds. The
+next admitted test is one original finite-coupling interval using this
+representation, with the same 371 steps and a compact final state.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

@@ -9,7 +9,8 @@ from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
 
 
 @pytest.mark.parametrize('failure',[None,'source','transfer'])
-def test_preparation_charges_attempts_once_without_resetting_the_clock(monkeypatch,failure):
+@pytest.mark.parametrize('enriched',[False,True])
+def test_preparation_charges_attempts_once_without_resetting_the_clock(monkeypatch,failure,enriched):
     budget=Budget(maximum_evaluations=1000,cpu_seconds=60.)
     budget.check(3);started=budget.started;report={};seen=[]
     background=SimpleNamespace(inputs={'labels':np.array([-2.,0.])})
@@ -23,18 +24,23 @@ def test_preparation_charges_attempts_once_without_resetting_the_clock(monkeypat
     def cap(field,*,derivative_order):
         assert derivative_order==4
         return SimpleNamespace(budget=field.budget,domain={'Ta':-1.})
-    def transfer(cap):
+    def transfer(cap,*,enrich_ordinary_pieces=False):
+        assert enrich_ordinary_pieces==enriched
         cap.budget.check(17)
         if failure=='transfer': raise ValueError('transfer failure')
-        return dict(background=background,onset={'index':1},diagnostics={})
+        result=dict(background=background,onset={'index':1},diagnostics={})
+        if enriched: result.update(original_history_inputs=background.inputs,enrichment={'ordinary_pieces':1})
+        return result
     monkeypatch.setattr(runner,'solve_prepared_field',source)
     monkeypatch.setattr(runner,'CapLeadingField',cap)
     monkeypatch.setattr(runner,'build_prepared_background',transfer)
     if failure:
         with pytest.raises(ValueError,match=failure+' failure'):
-            runner.prepare_history(budget,report)
+            runner.prepare_history(budget,report,enrich_ordinary_pieces=enriched)
     else:
-        assert runner.prepare_history(budget,report)==(background,-1.)
+        assert runner.prepare_history(budget,report,enrich_ordinary_pieces=enriched)==(background,-1.)
+        assert ('enrichment' in report)==enriched
+        if enriched: assert report['original_input_sha256']==runner.array_hash(background.inputs)
     charged=11 if failure=='source' else 28
     assert report['charged_values']==charged
     assert budget.evaluations==3+charged and budget.started==started
@@ -50,3 +56,11 @@ def test_existing_output_is_preserved_before_any_calculation(tmp_path,monkeypatc
     with pytest.raises(ValueError,match='preserve the existing result'):
         runner.main()
     assert path.read_bytes()==b'preserve this receipt'
+
+
+def test_enrichment_requires_a_retained_history_before_source_discovery(monkeypatch,tmp_path):
+    monkeypatch.setattr(runner.sys,'argv',['runner','--enrich-history','--output',str(tmp_path/'new.json')])
+    def forbidden(): raise AssertionError('source discovery must not run')
+    monkeypatch.setattr(runner,'frozen_sources',forbidden)
+    with pytest.raises(SystemExit) as error: runner.main()
+    assert error.value.code==2

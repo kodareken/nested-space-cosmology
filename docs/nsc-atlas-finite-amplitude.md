@@ -6644,6 +6644,23 @@ retains the corrected numerical test assumption and compute costs. The next
 one-event comparison has fixed numerical decision limits; no enriched
 trajectory or continuum error estimate is implied by these controls.
 
+The [first enriched reference](../results/summaries/nsc-atlas-prepared-endpoint-enriched-v1.json)
+passes all predeclared local limits: its conformal gap is `-4.70422e-13`,
+down from `6.76138e-9` in the unchanged leading reference with quintic
+ordinary pieces. History material-rate difference is `3.25911e-13` and
+the prepared/prefix rate difference is `-8.02150e-13`. The density-rate
+difference from the incoming boundary force is `5.81967e-13` in L2.
+One preparation and event use 1,866,626 values / 2.75 CPU seconds.
+
+The source, geometry, 393 knots, original nodal inputs, quartic onset and
+direct prepared field are unchanged; 304 ordinary pieces acquire the
+additional interior jets. Both old and enriched hashes are recorded.
+This resolves the diagnosed transfer contribution at one reference event.
+The next admitted calculation carries it through the original finite-alpha
+371-step interval, retaining the small final state needed to inspect both
+channels directly. Its scalar decision remains separate from a continuum
+or complete junction certificate.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

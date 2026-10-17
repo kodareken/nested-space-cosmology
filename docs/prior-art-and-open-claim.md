@@ -2381,6 +2381,46 @@ limits, not continuum error bounds. A miss stops with its measured values;
 do not retune to pass. No grid scan, extra time trajectory or change to the
 physical model is admitted by this comparison.
 
+**Outcome:** the frozen `34c4422` enriched reference passes every predeclared
+limit, with 1,866,626 values / 2.75 CPU seconds. The same prepared source
+and 393 knots now include 304 ordinary-piece interior pairs. The original
+nodal hash remains `a8dcfb845ab24cf1c97392d5156081517d4685587a4448f7a6a47ec8e8076066`;
+the enriched hash is `11867d7614f2289025985d6f35000756002ef9c2f17c09a88466cc11a2517e04`.
+History material-rate difference is `3.25911e-13`, conformal gap
+`-4.70422e-13`, prepared/prefix gap `-8.02150e-13` and density-force L2
+difference `5.81967e-13`. Direct prepared values, clocks and exterior sample
+hash are unchanged. Grok's static review found no functional inconsistency
+in the enrichment or original-input certificates. This is still one leading
+reference event, not the finite-alpha trajectory.
+
+### Enriched finite-coupling onset interval, 17 October 2026
+
+The local transfer correction now has exact controls and a successful
+physical-source endpoint comparison. Run the original finite-coupling
+onset interval once with that checked enriched history: unchanged original
+129 source knots, alpha, initial quiet state, clock offset, two-cell basis,
+64 exterior cells, x start/front/end and the original 236+135 time steps.
+Do not skip the quiet prefix. Authenticate the committed enriched comparison
+and require both its old nodal and new enriched input hashes before evolution.
+
+The existing **two-billion-value / 900 process-CPU-second** shared budget
+includes one preparation, certificates, 1,855 stages and final diagnostics.
+The preparation child retains its **10-million-value / 60-second** limit
+from the original run start. No retry, source retuning, time/grid scan or
+new amplitude is admitted. Retain both scalar channels, forward/adjoint
+wall velocity discrepancy, source constraints and explicit-time mass
+remainder. Save one small final coefficient/exterior state and its hash,
+never a raw trajectory.
+
+The decision is whether the original interval completes and its largest
+sampled conformal scalar gap is at most `1e-10`. Completion and this
+scalar decision are distinct fields; neither proves the remaining
+constraints or a continuum error estimate. A failed decision or budget
+stop requires its channel/cost diagnosis before another calculation.
+First run the bounded orchestration tests with fake preparation and
+transfer: verify enrichment forwarding, original-input receipt and single
+charging on success/failure, plus early rejection of an invalid mode.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
