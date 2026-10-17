@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2350814,
+      "bytes": 2350783,
       "path": "docs/lab-snapshot.json",
-      "sha256": "d2b7029316ef6ac08c48314409d920a5b938f2e369368287fcb952ac830c00ec"
+      "sha256": "2d2cfec72c835481aa07161eff09c6cd63df979f6165292e5617f64072a2bc7e"
     },
     {
       "bytes": 4997,
@@ -1716,9 +1716,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 53315,
+      "bytes": 54328,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8212f9b511ed85cc242ad86c6f07714229c988ea7d46ec6b4b3d4e05c04dbf38"
+      "sha256": "525c254acb4057f48b11547abe6fc0eb618b80c7d189e6156b8a81361f4dc830"
     },
     {
       "bytes": 30876,
@@ -2201,9 +2201,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 478436,
+      "bytes": 477311,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "df03bcd6206ff1f3a33edc02dae8e08304566b5af911c46b0b01c59eb28ace6d"
+      "sha256": "f2bc822b160813487526e9def4720f786debc23b3866ecd9a825028aec4b5c30"
     },
     {
       "bytes": 6705,
@@ -2266,9 +2266,9 @@
       "sha256": "1faad06ecb90998397db1629aaa4a8b6be940e7501452e901f32a1fcbd7b1d6d"
     },
     {
-      "bytes": 30789,
+      "bytes": 31351,
       "path": "docs/storage/validation-source-successors.json",
-      "sha256": "a1b7e1e9a5af5bd4648f38bce8315d76c71b2e34c0188f3be439e98b7ca42833"
+      "sha256": "46e54edec8e74815f0fed01726a2fd53399d180eca3d29d8753665313fd291b7"
     },
     {
       "bytes": 5774,
@@ -21451,7 +21451,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "d2b7029316ef6ac08c48314409d920a5b938f2e369368287fcb952ac830c00ec",
+  "lab_snapshot_sha256": "2d2cfec72c835481aa07161eff09c6cd63df979f6165292e5617f64072a2bc7e",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

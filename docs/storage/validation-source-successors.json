@@ -191,6 +191,13 @@
       "reason": "Authenticate saved source inventories against exact reviewed successor/origin bytes; creation still hashes current files, retained result bytes and numerical validation are unchanged.",
       "successor_sha256": "2d4bbb9b69f3fe9fd5b56d446c66062809e79f0d618e721b7639a0f60f3526ec"
     },
+    "scripts/run_python.py": {
+      "classification": "validation-only",
+      "original_commit": "84ae19ac4dad8e58965f008ffcc0eb579f3a0d37",
+      "original_sha256": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+      "reason": "Select the isolated project Conda runtime with the same pinned scientific versions; preserve the prior launcher bytes for historical authentication. No scientific equation, input or saved result is changed.",
+      "successor_sha256": "d79fcb2608e44b7ecf2cb4ba59741b7c370376de6f694756ae17abc94a10c2d8"
+    },
     "scripts/summarize_result.py": {
       "classification": "validation-only",
       "original_commit": "2551c9f52703fb418bec5a5ebf3d0bde136cfcc5",

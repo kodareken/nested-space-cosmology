@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "84ae19ac4dad8e58965f008ffcc0eb579f3a0d37",
+  "current_receipt_commit_parent": "0f0acab8e229469f4971bcb84a1d6d4a077dd5b7",
   "files": [
     {
       "bytes": 3120,
@@ -10458,15 +10458,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 53315,
-      "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "aca0eb796e8f4f2dcd380f3ad8914f73f3d32d8b",
+      "bytes": 54328,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "0f0acab8e229469f4971bcb84a1d6d4a077dd5b7",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8212f9b511ed85cc242ad86c6f07714229c988ea7d46ec6b4b3d4e05c04dbf38"
+      "sha256": "525c254acb4057f48b11547abe6fc0eb618b80c7d189e6156b8a81361f4dc830"
     },
     {
       "bytes": 30876,
@@ -11426,12 +11426,12 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 478436,
+      "bytes": 477311,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "84ae19ac4dad8e58965f008ffcc0eb579f3a0d37",
+      "changed_from_commit": "0f0acab8e229469f4971bcb84a1d6d4a077dd5b7",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "df03bcd6206ff1f3a33edc02dae8e08304566b5af911c46b0b01c59eb28ace6d"
+      "sha256": "f2bc822b160813487526e9def4720f786debc23b3866ecd9a825028aec4b5c30"
     },
     {
       "bytes": 6705,
@@ -11492,12 +11492,12 @@
       "sha256": "6ecc2724e58650682f26f0aa00d4ce5833569ec0559543f5bd87942cc0af6ce8"
     },
     {
-      "bytes": 30789,
-      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
-      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
+      "bytes": 31351,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "0f0acab8e229469f4971bcb84a1d6d4a077dd5b7",
       "path": "docs/storage/validation-source-successors.json",
       "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
-      "sha256": "a1b7e1e9a5af5bd4648f38bce8315d76c71b2e34c0188f3be439e98b7ca42833"
+      "sha256": "46e54edec8e74815f0fed01726a2fd53399d180eca3d29d8753665313fd291b7"
     },
     {
       "bytes": 5774,

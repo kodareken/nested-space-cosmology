@@ -16,6 +16,22 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
+## Current execution priority — 17 October 2026
+
+Finish the three-grid finite-amplitude P001 evolution and report its wall-radius
+observable, physical scale and numerical range. After that, each new step must
+either advance toward cosmological scales or produce a number to compare with
+observations. Reuse an established regional result; deepen the same region
+only when a test fails or an outward calculation exposes a specific missing
+connection. Close Step 2 at the scope actually established by the finite-domain
+comparison, retaining any failed test explicitly. The next priority is Step 7:
+derive a dimensionless effective Lambda, `Lambda_eff * L_ref^2`, with a reference
+scale fixed independently of the target observation. Pull only the source,
+state, formation or inheritance ingredients from Steps 3--5 that this derivation
+needs. Keep evidence
+tracking for scientific claims; routine environment and performance work uses
+ordinary tests and Git history without a separate scientific claim process.
+
 ## Current map and independent approaches
 
 The [v1 motif](../results/development/nsc-cosmological-atlas-v1/atlas.json)
