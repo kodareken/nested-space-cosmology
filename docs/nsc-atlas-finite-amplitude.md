@@ -7608,6 +7608,95 @@ initial-only scope. The saved source curvature residual `6.846851463133793e-11`
 is still present in the receipt; no subsequent sourced solution or uniform
 floating-gauge error is certified by this initial-event result.
 
+### Actual source forcing relative to the vacuum reference
+
+The zero-field reference has no cap scalar jets. A comparison with a sourced
+solution can therefore treat the actual source trace as boundary forcing;
+coefficient differences multiplying reference scalar derivatives vanish.
+The actual solution's principal characteristic transport remains present.
+This comparison does not require derivatives of the saved numerical scalar
+profile, but it still requires a positive sourced tube and a construction
+or continuation theorem. The tiny source **representation errors** above
+are not the driving data in this comparison.
+
+The [source-forcing bound](../src/recursive_horizons/nsc_atlas_source_forcing_bound.py)
+uses the already certified `G0,G1,G2` and original cell length l. Write
+`s_J=x+alpha*h`, `v_J=1+alpha*h_x`. On the original continuation tube
+`s_J>=s_*=1/5`, `abs(v_J)<=v_*=3/2`, the exact source equation gives
+
+\[
+ |h_{xx}|\le B_h=
+ \frac{G_0G_2+2G_1^2}{6s_*}
+ +\frac{G_0G_1v_*}{3s_*^2},\qquad
+ |h|\le\frac{l^2B_h}{2},\quad |h_x|\le lB_h.
+\]
+
+These follow from the exact zero initial value and first jet. For
+`0<=alpha<=alpha_max`, let d0 and d1 bound `alpha*h` and `alpha*h_x`.
+Then `s_lo=x_left-d0`, `s_hi=x_right+d0`, `v_hi=1+d1`. Strictly retaining
+`s_lo>s_*`, `v_hi<v_*` closes this source ODE continuation argument for
+the whole coupling interval. With
+
+\[
+ d_F=\frac{\alpha_{\max}G_0^2}{6s_{\rm lo}^2},\quad
+ F_{\rm lo}=1-d_F>\tfrac12,\quad
+ r_{\rm lo}=F_{\rm lo}s_{\rm lo},\quad
+ d_r^{\rm frame}=\frac{\alpha_{\max}G_0^2}{6(s_{\rm lo}+r_{\rm lo})},
+\]
+
+the frame relations are
+`r=sqrt(s_J^2-alpha*g^2/6)`, `L=log F`, `c=g` and
+`r*r_x=s_J*v_J-alpha*g*g_x/6`. Consequently the source minus vacuum
+`(r,r_x,L,L_x,c,c_x)=(x,1,0,0,0,0)` is bounded by
+
+\[
+\begin{aligned}
+ e_r&\le d_0+d_r^{\rm frame},\\
+ e_{r_x}&\le\frac{d_r^{\rm frame}+s_{\rm hi}d_1+
+                         \alpha_{\max}G_0G_1/6}{r_{\rm lo}},\\
+ e_L&\le d_F/F_{\rm lo},\\
+ e_{L_x}&\le\frac{\alpha_{\max}}{3F_{\rm lo}}
+       \left(\frac{G_0G_1}{s_{\rm lo}^2}
+             +\frac{G_0^2v_{\rm hi}}{s_{\rm lo}^3}\right),\\
+ e_c&\le G_0,\qquad e_{c_x}\le G_1,\\
+ |r r_x-x|&\le d_0+s_{\rm hi}d_1+\alpha_{\max}G_0G_1/6.
+\end{aligned}
+\]
+
+For the canonical trace, `abs(X)<=G0`. Set `u_*=G0/r_lo`.
+The canonical gap has derivative
+`j'(u)=a^2*u^2/(1+a^2*u^2)^(3/2)`, so
+`abs(j)<=alpha_max*u_*^3/18`; hence
+`abs(Q)<=G1+alpha_max*u_*^3*(1+e_rx)/18`.
+All intermediate bounds are rounded outward to exact multiples of `2^-128`.
+This keeps the saved rational certificate compact without relying on
+floating elementary functions. At alpha zero the gravitational forcing
+vanishes while the normalized test-field source remains.
+
+The sourced core condition also differs from the initial whole-cap history
+check. Let `z_star=2308242254218069/4503599627370496`, the original first
+positive cap knot. Starting from the certified zero initial cap, an inward
+characteristic travels at speed `beta*T_x`. It cannot reach z_star if
+
+\[
+ l\sup(\beta T_x)<\inf_x[Z_{\rm wall}(x)-z_*].
+\]
+
+Both bounds must concern the sourced tube, not just the vacuum coefficients.
+Only the outward family `E_minus=0` is supplied from the core. The inward
+family remains zero there by non-arrival, not by a second imposed boundary
+condition. The wall is allowed to become active during the cell. In this
+cap system beta, beta_z and its reaction depend on the field and constrained
+mass/lapse; beta_z introduces no additional scalar derivative or beta_T.
+A priori size bounds do not by themselves construct the solution: a local
+characteristic construction and appropriate derivative/continuation control
+remain required.
+
+Four [independent source controls](../tests/test_nsc_atlas_source_forcing_bound.py)
+pass with **21,192 charged values / 0.28125 active CPU seconds**. They verify
+the frame identities and canonical gap, both limits, manufactured 80-digit
+values, outward rational rounding and rejection of an unclosed source tube.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

@@ -2724,6 +2724,39 @@ retains the numerical source-curvature defect. A separate 512-value rational
 audit verifies the displays, strict inequalities, 43 producer bindings and
 four input hashes. Future sourced residuals and continuation remain open.
 
+### Actual source forcing for the coupled tube, 17 October 2026
+
+Compare the prescribed source with the exact zero-field vacuum reference.
+The needed inhomogeneous data are the actual source values and first jets,
+not the previously certified interpolation differences. Reuse the existing
+uniform analytic pulse bounds G0, G1 and G2 and the zero-left-value/first-jet
+source constraint. Bound its radial correction by integrating a uniform
+acceleration envelope, verify the original Jordan/frame continuation margins,
+then convert to the six invariant source components, canonical X and Q, and
+the radius-product input to the exterior primitive.
+
+Admit exact rational evaluation only, with outward rounding to a fixed
+128-bit dyadic denominator. The bounds cover `0<=alpha<=alpha_max`, where
+alpha_max is the unchanged recorded coupling. One physical application has
+a **4,096-value / 5-process-CPU-second** allowance and reads the authenticated
+source-cell receipt. Independent symbolic frame identities, zero-source and
+zero-coupling limits, manufactured 80-digit frame values and rejection of an
+unclosed source tube have **30,000 values / 15 active CPU seconds**.
+No source integration, new waveform, trajectory, root search or scan is
+admitted. Stop if the source continuation margins fail. Save only rational
+bounds, input/producer hashes and their outward display values.
+
+The three likely failures are substituting representation error for physical
+forcing, losing a metric/field cross term in the frame change, or assuming
+the vacuum speed bounds also enclose the sourced solution. Actual boundary
+differences, independent frame identities and a later sourced-tube check
+address them. The inner quiet-core condition is the wall-to-core travel bound
+`sup(beta*T_x)*duration < inf(Z_wall-z_star)`; the initial whole-cap history
+margin cannot be used to require the wall itself to remain quiet. Only
+`E_minus=0` enters from that core; a zero outgoing-to-core trace follows from
+non-arrival. A closed a priori bound still needs a local construction and
+continuation argument before it establishes a sourced spacetime.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

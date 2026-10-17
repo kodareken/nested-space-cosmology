@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "33445f7dc3e8e9306664c96178c6e67e96453cce",
+  "current_receipt_commit_parent": "ce29ed36f65340a5b9de3391c017e970c04e6257",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 229089,
-      "change": "Certify the exact initial reference against the retained onset event.",
-      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
+      "bytes": 229588,
+      "change": "Enclose actual source forcing relative to the exact vacuum reference.",
+      "changed_from_commit": "ce29ed36f65340a5b9de3391c017e970c04e6257",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "6a30b53bdb181d82390c19947741e7688b389583bd55d4111cd3a517bdfa53ba"
+      "sha256": "92c14507c110647e3be04902a8e1aec10b05ac57120f1ffdd9bdc404b8fc469d"
     },
     {
       "bytes": 9543,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 365567,
-      "change": "Record exact initial radius, clocks and strict quiet support margins.",
-      "changed_from_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
+      "bytes": 369547,
+      "change": "Enclose actual source forcing relative to the exact vacuum reference.",
+      "changed_from_commit": "ce29ed36f65340a5b9de3391c017e970c04e6257",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0ceae06655eaca37dd3933c899cd16529fd064fedba04c40c04962791104c7e4"
+      "sha256": "ed25bcaaea8eeb6803414d9bf74be00f98d59f7db262d453e368dedc0a124d5f"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 381437,
-      "change": "Record exact initial radius, clocks and strict quiet support margins.",
-      "changed_from_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
+      "bytes": 383560,
+      "change": "Enclose actual source forcing relative to the exact vacuum reference.",
+      "changed_from_commit": "ce29ed36f65340a5b9de3391c017e970c04e6257",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4f3ffa501779d61e184d55b8d12f94985da137c3d3ff90cf7b3b2d6e8f85ebfa"
+      "sha256": "b026858d41a5693b20997c88ed66102db176f79cb60a14b92f7d4088eb90d27b"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 121898,
-      "change": "Record exact initial radius, clocks and strict quiet support margins.",
-      "changed_from_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
+      "bytes": 122606,
+      "change": "Enclose actual source forcing relative to the exact vacuum reference.",
+      "changed_from_commit": "ce29ed36f65340a5b9de3391c017e970c04e6257",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2fe99fcc13050579ec9cd26b6c14801cce8c247179bad490e65458c41e44ae3d"
+      "sha256": "9df4095f85fd846d8bfbd8debabb482e9687172197db6a34641062d8e6e778ad"
     },
     {
       "bytes": 18356,
@@ -29832,6 +29832,14 @@
       "sha256": "467813fcac96e3616d6858ca0203005d774d4b8a35dcdc6bc779947650ba9988"
     },
     {
+      "bytes": 3826,
+      "change": "Enclose actual source forcing relative to the exact vacuum reference.",
+      "changed_from_commit": "ce29ed36f65340a5b9de3391c017e970c04e6257",
+      "path": "scripts/check_nsc_atlas_source_forcing_bound.py",
+      "retention_reason": "Actual source forcing and coupling-range bounds for the connected spacetime estimate.",
+      "sha256": "faff12add32c3bce96c726950c5c78f1ab964b4245e9be89ebaf630de65310da"
+    },
+    {
       "bytes": 2304,
       "import_bytes": 2304,
       "import_sha256": "43812275230b2104ed20dedfa283c3ff90667e8b01a655f3f25ff10712a8768e",
@@ -32859,6 +32867,14 @@
       "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
       "path": "src/recursive_horizons/nsc_atlas_source_cell_bound.py",
       "sha256": "bea82d004e9a3a3355319af07365730d542111fafc2f6d745cc9872d6cf5a9e7"
+    },
+    {
+      "bytes": 2896,
+      "change": "Enclose actual source forcing relative to the exact vacuum reference.",
+      "changed_from_commit": "ce29ed36f65340a5b9de3391c017e970c04e6257",
+      "path": "src/recursive_horizons/nsc_atlas_source_forcing_bound.py",
+      "retention_reason": "Actual source forcing and coupling-range bounds for the connected spacetime estimate.",
+      "sha256": "883db1edcd3b713d6c93c1e2646d826e36e7f91d500a4b9eaef6193f0993437c"
     },
     {
       "bytes": 6054,
@@ -36525,6 +36541,14 @@
       "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
       "path": "tests/test_nsc_atlas_source_cell_bound.py",
       "sha256": "c0500fe1d030ad58e2c1dabba6ea5794d4a3412fc367c5c124a333c1e6ff8b70"
+    },
+    {
+      "bytes": 3318,
+      "change": "Enclose actual source forcing relative to the exact vacuum reference.",
+      "changed_from_commit": "ce29ed36f65340a5b9de3391c017e970c04e6257",
+      "path": "tests/test_nsc_atlas_source_forcing_bound.py",
+      "retention_reason": "Actual source forcing and coupling-range bounds for the connected spacetime estimate.",
+      "sha256": "286ce7459672481d4c0d55338091a333fba7f6be4f275acced5f1f16efe64b8d"
     },
     {
       "bytes": 8789,

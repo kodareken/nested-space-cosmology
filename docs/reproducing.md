@@ -628,7 +628,21 @@ hashes, the strict quiet margins and the original fixed-basis cut. The saved
 physical initial radius/clock differences are below `1.125e-16`/`1.244e-16`;
 the whole cap remains quiet with margin above `0.0014530219858557`.
 
-The coupled comparison has four exact/manufactured controls:
+The actual source forcing relative to the vacuum reference uses the same
+original cell and pulse certificate:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_source_forcing_bound.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_source_forcing_bound.py --output results/summaries/nsc-atlas-source-forcing-bound-v1.json
+```
+
+Its four controls pass with 21,192 values / 0.28125 active CPU seconds.
+The physical application requires committed producers and a new output path;
+its allowance is 4,096 values / 5 seconds. Exact rational calculation with
+128-bit outward dyadic rounding replaces no source data and runs no source
+integration or evolution. It bounds actual forcing, not interpolation error.
+
+The coupled comparison controls are:
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_integrated_feedback.py -q -s
