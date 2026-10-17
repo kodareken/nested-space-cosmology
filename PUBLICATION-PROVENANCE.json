@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 241670,
+      "bytes": 241739,
       "path": "docs/active-code-map.md",
-      "sha256": "42b06fba91c45639c33c328cd1330da5dc96493348e899be5c1bf02669a8a70f"
+      "sha256": "41805b986e20c818f83911e163a4ae9b74a89d63109da2a2ec2f38f5d4d24969"
     },
     {
       "bytes": 97216,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2346232,
+      "bytes": 2346683,
       "path": "docs/lab-snapshot.json",
-      "sha256": "853d081bda0c9d47dbd9d8d1a982a88d02f48bce406825fc24266a856cb09993"
+      "sha256": "722aaf9820b41c7f49603e124af19f7ba1af4b46e81c95e1f86d2d1825f598c7"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 147258,
+      "bytes": 147883,
       "path": "docs/reproducing.md",
-      "sha256": "aa242782bd54c68d44009cef80ded08f97df5d9d6e2001880351f8b416220859"
+      "sha256": "d3c50301635cd6a81d311195fb498452584a01b5c2e20a4bdee3adc4d1785421"
     },
     {
       "bytes": 31710,
@@ -16401,6 +16401,11 @@
       "sha256": "93220659fb4f4fa464096f2b76970a76431daa9353caf3608b4ae4aa7b5488de"
     },
     {
+      "bytes": 19769,
+      "path": "scripts/plot_nsc_atlas_fixed_endpoint.py",
+      "sha256": "e46c9d8d3e18003910c0bc7c541263e9a76be759e03649ed1637147ca2efe634"
+    },
+    {
       "bytes": 10146,
       "path": "scripts/plot_nsc_atlas_ssprk3_refinement.py",
       "sha256": "115e32263ae0d124f55cfc81d5b24fb889647f8750605fd2becb242259554701"
@@ -21411,7 +21416,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "853d081bda0c9d47dbd9d8d1a982a88d02f48bce406825fc24266a856cb09993",
+  "lab_snapshot_sha256": "722aaf9820b41c7f49603e124af19f7ba1af4b46e81c95e1f86d2d1825f598c7",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

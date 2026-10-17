@@ -868,6 +868,18 @@ frame conversions. It records both pointwise residual maxima and accumulated
 transport gaps. A nonshrinking result remains a nonshrinking result; it does
 not become a converged prediction through the physical-unit conversion.
 
+Render the authenticated saved comparison with:
+
+```sh
+python scripts/run_python.py scripts/plot_nsc_atlas_fixed_endpoint.py --comparison results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json --output docs/figures/nsc-atlas-fixed-endpoint-comparison.png
+```
+
+The plotter checks receipt hashes and recomputes the saved comparison before
+showing the three residual maxima and the wall-radius resolution envelope
+in metres. Increasing and unchanged gaps remain visible. It performs no
+physical evolution and refuses to overwrite an existing figure. Fixture
+renders used to check its layout stay under ignored `.build`.
+
 The first coarse receipt stopped at the radial forward/adjoint check after
 419 accepted steps. The bounded replay and subsequent one-stage comparison
 have separate, predeclared budgets in the same admission:
