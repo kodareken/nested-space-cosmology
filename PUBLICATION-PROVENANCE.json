@@ -1558,7 +1558,7 @@
     {
       "bytes": 2359343,
       "path": "docs/lab-snapshot.json",
-      "sha256": "8e4eac10df43eea2e56b8430b34317096fa564bd6ddc0f16b95ef57db70960bf"
+      "sha256": "c5da0e854bb0c7a1ef0b28fcb6bbbabf165d149d392f2fb00eafba4c43ce1371"
     },
     {
       "bytes": 4997,
@@ -2241,9 +2241,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 39760,
+      "bytes": 42855,
       "path": "docs/schur-memory.md",
-      "sha256": "51ca486c336f6f5251f30010cf4451833948d598a67943ddb647777470351043"
+      "sha256": "e68987c750dd39837360c8d7ffaa82f66cd456eb7f314e50ecff89752cc4c742"
     },
     {
       "bytes": 537091,
@@ -21541,7 +21541,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "8e4eac10df43eea2e56b8430b34317096fa564bd6ddc0f16b95ef57db70960bf",
+  "lab_snapshot_sha256": "c5da0e854bb0c7a1ef0b28fcb6bbbabf165d149d392f2fb00eafba4c43ce1371",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

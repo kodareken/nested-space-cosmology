@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "374baa244b3f0a8e25522f20c39396c8edde5f25",
+  "current_receipt_commit_parent": "eff68a3b6a38f5dd9b822d99d6c94807fb9e052a",
   "files": [
     {
       "bytes": 3120,
@@ -11459,12 +11459,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 39760,
+      "bytes": 42855,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "0907614edac5d5a1510e266a7393fd304ba9f444",
+      "changed_from_commit": "eff68a3b6a38f5dd9b822d99d6c94807fb9e052a",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "51ca486c336f6f5251f30010cf4451833948d598a67943ddb647777470351043"
+      "sha256": "e68987c750dd39837360c8d7ffaa82f66cd456eb7f314e50ecff89752cc4c742"
     },
     {
       "bytes": 537091,

@@ -669,6 +669,69 @@ atlas would instead need that physical metric/observer reduction specified.
 This calculation settles the direct classical local contribution and
 identifies the remaining Step-7 inputs rather than fitting a target Lambda.
 
+### Joint quantum preparation: the actual Cauchy data needed
+
+On a spacelike slice crossing the wall let $T$ be the continuous future
+unit normal, $s$ the outward spatial unit normal, and
+$u=\gamma(T+vs)$, $n=\gamma(vT+s)$. Put $\Pi=T\phi$, $D=s\phi$.
+Continuity along the moving wall and the owned transmission law give
+
+$$
+[\Pi]+v[D]=0,\qquad
+\gamma(v[\Pi]+[D])=k\phi,
+\qquad
+\boxed{[D]=\gamma k\phi,\quad[\Pi]=-\gamma v k\phi.}
+$$
+
+The inverse boost $T=\gamma(u-vn)$, $s=\gamma(n-vu)$ independently gives
+the same equations. At the existing initial slice's $R_w/\ell=1.5$ event,
+`wall_slice_data()` gives $\gamma=1.0092620299352366$ and
+$\gamma v=0.13641790596910147$. Hence
+$\ell[D]/\phi=2.0185240598704732$ and
+$\ell[\Pi]/\phi=-0.27283581193820294$. A static interface condition would
+miss the momentum jump. These values come from the same quiet reference
+trajectory as the earlier prepared wedge; the different slice events do
+not themselves create a geometric incompatibility.
+
+For any two transmitted solutions the symplectic flux jump is exactly
+$[f\,n(g)-g\,n(f)]=kfg-kgf=0$. Thus there is no independent scalar wall
+symplectic degree of freedom in this action. With proper slice volume,
+the canonical commutator is
+$[\phi(x),\Pi(y)]=i\hbar\delta_\Sigma(x,y)$. A proposed connected Gaussian
+Cauchy covariance $\Gamma$ must satisfy
+
+$$
+\Gamma=\Gamma^{\mathsf T},\qquad
+\Gamma+\frac{i\hbar}{2}J\ge0,\qquad
+SJS^{\mathsf T}=J,\qquad
+\Gamma_t=S\Gamma_0S^{\mathsf T},
+$$
+
+where $J$ is the canonical commutator matrix, with proper-volume smearing,
+and $S$ is the joined Cauchy evolution. The two-point kernel must obey the
+moving-wall conditions in both arguments. For a local renormalized stress,
+the subtracted bulk remainder must have the coincidence derivatives used
+by the stress operator. Finite-order stress regularity and a strict smooth
+Hadamard condition are distinct requirements; neither follows from an
+instantaneous principal-symbol prescription. The exact $C^3$ pulse remains
+the classical mean, and no stronger quantum regularity is assigned to it.
+
+These equations specify the missing preparation object; they do not select
+or construct $\Gamma_0$. The full joined causal propagator fixes its
+commutator once that problem is well posed. The existing finite-angular
+exterior map supplies only part of that propagator. An initial covariance
+on disjoint subregions must be checked for transmission and short-distance
+regularity after evolution; it is not the same as imposing vanishing cross
+correlations at all times. Symbolic inversion, the numerical boost and an
+independent Grok derivation agree on the equations above.
+
+Constructing this covariance would determine the state-dependent quantum
+tensor and flux. It cannot change the earlier one-scalar anomaly trace or
+derive the supplied $\Lambda_{0,-}$. A nonzero cosmological value still
+requires a physical reduction of the gravitational geometry tied to observers,
+or a specified source of nonzero trace. Further state work addresses that
+tensor and its observer interpretation; it does not supply a new scalar trace.
+
 ## The transition and vacuum-form coefficient
 
 The frozen positive-$F$ DEV3 transition uses radius $32/25$, expansion
