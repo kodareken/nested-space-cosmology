@@ -21,6 +21,30 @@ rounding residuals and scale information without inventing a closure tolerance.
 If the maxima occur between saved cuts, their cause remains unresolved by this
 record. No additional grid family or replay is admitted by this interpretation.
 
+**Independent mass/lapse check after the nonshrinking mass gap:** use the
+already authenticated coarse-v3 stage at `x=0.4370111883201181`, where the
+current panel-owned reference retains a nonzero temporal mass gap. Rebuild
+its source/history once and evaluate one reference coupled stage. Independently
+integrate the full radial equation, including the vacuum mass,
+`m_r + a*m = s`, with `a=alpha*(p^2+h^2)/(2r)` and
+`s=3*r^2*cosh(sqrt(alpha/6)*f)^4/2 + alpha*(p^2+h^2)/4`.
+Integrate `delta_r=a` from the same supplied centre clock. The oracle reuses
+field-value and analytic-jet owners, but does not reuse the metric ODE,
+subtracted mass source or sensitivity callback.
+
+Also integrate the independent fixed-radius mass direction
+`v_r+a*v=ds-da*m` along the actual coefficient rates and background clock.
+This checks the temporal mass residual itself; agreement of mass values is
+not called a bound on mass rates. Fixed Gauss orders 32 and 64 on the existing
+smooth history panels provide one quadrature comparison, with no evolution,
+new field mesh or automatic refinement. The combined allowance is **60 CPU
+seconds / 40 million charged values**, including preparation, reference stage
+and both orders. Predeclared absolute comparison tolerances are `1e-10` for
+full mass and lapse, and `1e-8` for physical mass rates. Retain all differences
+and failures. An agreement concerns this one stage; it does not locate the
+unsaved maximum, certify the full trajectory or close Step 2. Stop after the
+check or a named numerical obstruction; no wider campaign follows from it.
+
 **CPU allowance amendment, before exhaustion (17 October, after 16:00 local):**
 the v4 runs keep advancing past the diagnosed radial failures. Their measured
 stage costs rise as more retained history panels enter the cap. For example,

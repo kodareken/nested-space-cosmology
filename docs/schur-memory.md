@@ -157,6 +157,70 @@ retained observer and its compatible earlier data or quantum state. Global
 causal exclusions from the isolated reference are not assigned to the
 unevaluated many-body development.
 
+### Observer clocks in the geometric average
+
+The selected larger-geometry route must compare resolutions in a declared
+clock. For zero shift, let $d\tau_o=N_o(t)dt$ name that observer's time and
+$\nu=N(t,x)/N_o(t)>0$. Transport a compact domain with the slice normals,
+using its proper spatial measure. Then $\partial_{\tau_o}dV=\nu\theta dV$.
+Differentiating the volume and using the normal Raychaudhuri equation gives
+
+$$
+3H_o=\langle\nu\theta\rangle,
+\qquad Q_\nu=\tfrac23\bigl(\langle\nu^2\theta^2\rangle
+-\langle\nu\theta\rangle^2\bigr)-2\langle\nu^2\sigma^2\rangle,
+$$
+$$
+\mathcal R_\nu=\langle\nu^2{}^{(3)}R\rangle,
+\qquad P_\nu=\langle(\partial_{\tau_o}\nu)\theta\rangle
++\langle\nu D^2\nu\rangle.
+$$
+
+With the same Einstein representation and sources as above, including all
+surface terms where present, the scalar identities are
+
+$$
+3H_o^2=\kappa\langle\nu^2E\rangle
+-\tfrac12(\mathcal R_\nu+Q_\nu),\qquad
+3a_D''/a_D=-\tfrac\kappa2\langle\nu^2(E+S)\rangle+Q_\nu+P_\nu.
+$$
+
+The corresponding spatially flat scalar fitting coefficients become
+
+$$
+\kappa\rho_g=-\tfrac12(Q_\nu+\mathcal R_\nu),\qquad
+\kappa p_g=-\tfrac12Q_\nu+\tfrac16\mathcal R_\nu-\tfrac23P_\nu,
+$$
+$$
+\Lambda_{g,\mathrm{tr}}=\tfrac14(Q_\nu-\mathcal R_\nu+2P_\nu),
+\qquad 3Q_\nu+\mathcal R_\nu+2P_\nu=0
+\quad\hbox{is the vacuum-form condition.}
+$$
+
+The coefficient of $\nu D^2\nu$ is **one**. For the acceleration
+$a_i=D_i\log N$, its four-divergence is
+$\nabla_\mu a^\mu=D^2N/N$, so $\nu^2\nabla_\mu a^\mu=\nu D^2\nu$.
+Integration by parts retains boundary flux:
+$\int\nu D^2\nu\,dV=\int_{\partial D}\nu D_n\nu\,dA
+-\int|D\nu|^2dV$. A mean lapse alone cannot recover this term.
+
+An independent exact control is the static periodic metric
+$ds^2=-[1+\epsilon\cos x]^2dt^2+dx^2+dy^2+dz^2$, $|\epsilon|<1$,
+with the clock anchored where $N=1$. Direct connection contraction gives
+$R_{nn}=N''/N$ and $\kappa S=2N''/N$, while $E=\theta=\sigma=R_3=0$.
+Thus $P_\nu=-\epsilon^2/2$ cancels the averaged Ricci source exactly:
+the volume is static. Doubling the lapse term would falsely predict
+$3a_D''/a_D=-\epsilon^2/2$. A homogeneous changing-clock control independently
+recovers $3a_D''/a_D=3[\nu' H+(\nu H)^2]$ for $a=e^{Ht_{\rm proper}}$.
+
+The [existing average calculator](../src/recursive_horizons/nsc_atlas_geometric_average.py)
+now evaluates these weighted moments as well as its original geodesic case.
+The finite check uses at most 30 CPU seconds for the two analytic controls
+and existing tests, with no new physical field solve or grid. This completes
+the missing clock identity for the chosen averaging route. It does not select
+the parent metric, observer/domain or state, and its scalar fitting terms are
+not by themselves a local four-tensor or a cosmological Lambda prediction.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

@@ -4,6 +4,16 @@ Current presentation, 17 October 2026: [the living atlas manuscript](../paper/ne
 
 ## First Step 7 vacuum projection, 17 October 2026
 
+The selected larger-geometry route now has an
+[observer-clock averaging identity](schur-memory.md#observer-clocks-in-the-geometric-average).
+It retains the spatial lapse and its time derivative when comparing
+resolutions. Direct static-metric and changing-clock volume calculations
+check the lapse contribution; all nine averaging tests pass. A physical
+common-parent metric and observer/domain remain the next inputs. The
+[working inheritance-through-resolution hypothesis](nsc-cosmological-atlas.md#working-geometric-hypothesis-inheritance-through-resolution)
+records the current research direction without assigning a fractal dimension
+or a cosmological Lambda value.
+
 The [whole-body parent metric response](schur-memory.md#whole-body-gravitational-reduction-at-the-parent-end)
 now distinguishes the quiet body's gravitational source from the earlier
 cap-centre scalar elimination. At the existing right-end cut `R/ell=4`, its

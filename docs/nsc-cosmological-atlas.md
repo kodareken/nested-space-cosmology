@@ -52,6 +52,37 @@ time-symmetric vacuum connector cannot supply the desired vacuum relation.
 This finite calculation
 does not require reopening the cap solver or running a cutoff scan.
 
+## Working geometric hypothesis: inheritance through resolution
+
+Douglas's current proposal is that a region's approximately spherical geometry
+can be a resolved envelope of finer nested structure. The inherited relation
+$\mathcal T^*\mathbb D=\mathbb D$ describes a common law across those levels;
+different resolution, clocks, states and surrounding connections can produce
+different measured responses. The working hypothesis is that successive
+unresolved levels compound into the complex geometry an observer measures.
+
+The existing [finite inheritance construction](nsc-nested-qualities.md)
+already distinguishes normalized scale covariance from changing the depth of
+the environment. Its exact nested Schur recurrence retains the response of
+each region's own surroundings. Reuse that composition rule rather than
+adding independent corrections for overlapping eliminated regions. A physical
+realization must now supply its geometry, scale ratios, clocks and state.
+
+Here “fractal” means a proposed measurable scaling structure. A dimension
+must be obtained from a specified quantity, such as volume versus proper
+radius or mode count versus frequency. It is not assigned from spherical
+appearance or the number of generations. Local spacetime dimension, a scaling
+dimension and an observer's resolution are separate mathematical quantities.
+
+The next connection to the Lambda calculation is the metric dependence of
+the reduced energy: does the combined response grow in proportion to observed
+proper volume, and does its pressure follow from that same action? The
+[parent response](schur-memory.md#whole-body-gravitational-reduction-at-the-parent-end)
+already supplies this test. The [observer-clock average](schur-memory.md#observer-clocks-in-the-geometric-average)
+specifies the clock terms needed when comparing resolutions. These are the
+working calculation targets; the hierarchy has not yet produced a cosmological
+Lambda value or a measured fractal dimension.
+
 ## Current map and independent approaches
 
 The [v1 motif](../results/development/nsc-cosmological-atlas-v1/atlas.json)

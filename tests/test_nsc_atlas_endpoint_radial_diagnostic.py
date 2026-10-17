@@ -1,5 +1,6 @@
 """A one-stage radial diagnosis authenticates its exact local state."""
 import hashlib
+import math
 from fractions import Fraction as Q
 from types import SimpleNamespace
 import numpy as np
@@ -7,6 +8,9 @@ import pytest
 
 from diagnose_nsc_atlas_endpoint_radial import (
     read_seed, panel_step_options, inward_panel_point, physical_field_comparison,
+    geometric_mass_sources, centre_lapse_datum, integrate_independent_mass,
+    compare_independent_mass, FULL_MASS_ABSOLUTE_TOLERANCE, LAPSE_ABSOLUTE_TOLERANCE,
+    MASS_RATE_ABSOLUTE_TOLERANCE,
 )
 from recursive_horizons.nsc_atlas_cap_fixed_basis import FixedCapBasis
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
@@ -136,3 +140,125 @@ def test_zero_reference_field_has_no_fabricated_relative_norm():
     for field in record['cap_rate_fields'].values():
         assert field['difference_galerkin_L2'] == 0.
         assert field['difference_over_reference'] is None
+
+
+def _polynomial_sources(c, a0, c1, a1, radius_of, derivative_of):
+    def coefficients(panel, coordinate):
+        radius = float(radius_of(coordinate))
+        return dict(a=a0*radius, s=3*c*radius**2+a0*c*radius**4, da=a1*radius,
+                    ds=3*c1*radius**2+(a0*c1+a1*c)*radius**4,
+                    jacobian=float(derivative_of(coordinate)))
+    return coefficients
+
+
+def _boundary():
+    return dict(panels=2, centre_lapse=0., centre_field=0., wall_p=.1, wall_h=-.2,
+                reference_p_trace=.1, reference_h_trace=-.2)
+
+
+def test_independent_integrator_recovers_split_panel_mass_rate_and_lapse():
+    c, a0, c1, a1 = .2, .5, -.15, .3
+    left, right, shift = .25, .8, .17
+    spans = ((left, .41), (.41, .63), (.63, right))
+    sources = _polynomial_sources(c, a0, c1, a1, lambda coordinate: coordinate, lambda coordinate: 1.)
+    entering = dict(entering_mass=c*left**3, entering_rate=c1*left**3,
+                    entering_lapse=a0*left**2/2+shift)
+    previous = None
+    for order in (32, 64):
+        result = integrate_independent_mass(spans, sources, order, **entering)
+        assert result['samples'] == order*len(spans)
+        assert result['mass'] == pytest.approx(c*right**3, abs=1e-12)
+        assert result['rate'] == pytest.approx(c1*right**3, abs=1e-12)
+        assert result['lapse'] == pytest.approx(a0*right**2/2+shift, abs=1e-12)
+        if previous is not None:
+            assert result['mass']-previous['mass'] == pytest.approx(0., abs=1e-12)
+            assert result['rate']-previous['rate'] == pytest.approx(0., abs=1e-12)
+        previous = result
+
+
+def test_independent_integrator_zero_source_limit_carries_entering_data():
+    c, c1, shift = .4, -.25, .15
+    left, right = .2, .9
+    spans = ((left, .47), (.47, right))
+    sources = _polynomial_sources(c, 0., c1, 0., lambda coordinate: coordinate, lambda coordinate: 1.)
+    result = integrate_independent_mass(
+        spans, sources, 32, entering_mass=c*left**3, entering_rate=c1*left**3, entering_lapse=shift)
+    assert result['mass'] == pytest.approx(c*right**3, abs=1e-12)
+    assert result['rate'] == pytest.approx(c1*right**3, abs=1e-12)
+    assert result['lapse'] == pytest.approx(shift, abs=1e-14)
+
+
+def test_independent_integrator_includes_coordinate_jacobian():
+    c, a0, c1, a1 = .15, .35, .08, -.2
+    # r=u^2, so the panel coordinate is not the areal radius.
+    left_u, right_u = .3, .85
+    left_r, right_r = left_u**2, right_u**2
+    spans = ((left_u, .52), (.52, right_u))
+    sources = _polynomial_sources(c, a0, c1, a1, lambda coordinate: coordinate**2,
+                                 lambda coordinate: 2.*coordinate)
+    result = integrate_independent_mass(
+        spans, sources, 64, entering_mass=c*left_r**3, entering_rate=c1*left_r**3,
+        entering_lapse=a0*left_r**2/2)
+    assert result['mass'] == pytest.approx(c*right_r**3, abs=1e-12)
+    assert result['rate'] == pytest.approx(c1*right_r**3, abs=1e-12)
+    assert result['lapse'] == pytest.approx(a0*right_r**2/2, abs=1e-12)
+    budget = Budget(maximum_evaluations=1000, cpu_seconds=15.)
+    integrate_independent_mass(spans, sources, 32, budget=budget,
+                              entering_mass=c*left_r**3, entering_rate=c1*left_r**3,
+                              entering_lapse=a0*left_r**2/2)
+    assert budget.evaluations == 32*len(spans)
+
+
+def test_geometric_sources_cover_zero_and_finite_alpha():
+    radius, field, momentum, normal = .37, .4, -.2, .15
+    df, dp, dh = .3, -.1, .05
+    zero = geometric_mass_sources(radius, field, momentum, normal, df, dp, dh, 0.)
+    assert (zero['a'], zero['da'], zero['ds']) == (0., 0., 0.)
+    assert zero['s'] == pytest.approx(1.5*radius**2)
+    alpha = .25
+    base = geometric_mass_sources(radius, field, momentum, normal, df, dp, dh, alpha)
+    square = momentum**2+normal**2
+    argument = math.sqrt(alpha/6)*field
+    assert base['a'] == pytest.approx(alpha*square/(2*radius))
+    assert base['s'] == pytest.approx(1.5*radius**2*math.cosh(argument)**4+alpha*square/4)
+    # A smaller step loses the source difference to cancellation near s=0.2.
+    step = 1e-5
+    plus = geometric_mass_sources(radius, field+step*df, momentum+step*dp, normal+step*dh, 0., 0., 0., alpha)
+    minus = geometric_mass_sources(radius, field-step*df, momentum-step*dp, normal-step*dh, 0., 0., 0., alpha)
+    assert base['da'] == pytest.approx((plus['a']-minus['a'])/(2*step), rel=1e-8, abs=1e-10)
+    assert base['ds'] == pytest.approx((plus['s']-minus['s'])/(2*step), rel=1e-8, abs=1e-10)
+    assert centre_lapse_datum(field, alpha) == pytest.approx(-math.log(math.cosh(argument)))
+    assert centre_lapse_datum(field, 0.) == 0.
+
+
+def _measurement(order, **values):
+    base = dict(full_mass=1., lapse=.2, fixed_radius_mass_rate=.3,
+                moving_wall_mass_rate=.4, temporal_mass_residual=.5, samples=order)
+    base.update(values)
+    base['order'] = order
+    return base
+
+
+def test_mass_lapse_comparison_keeps_failures_and_does_not_reuse_value_tolerance_on_rates():
+    reference = _measurement(0)
+    close_rate = _measurement(32, fixed_radius_mass_rate=reference['fixed_radius_mass_rate']+5e-9)
+    other = _measurement(64, fixed_radius_mass_rate=reference['fixed_radius_mass_rate']+5e-9)
+    passed = compare_independent_mass(reference, (close_rate, other), _boundary())
+    assert passed['outcome'] == 'passed'
+    assert passed['failed_channels'] == []
+    assert passed['order_differences']['fixed_radius_mass_rate'] == pytest.approx(0., abs=1e-15)
+    assert passed['tolerances']['full_mass_absolute'] == FULL_MASS_ABSOLUTE_TOLERANCE == 1e-10
+    assert passed['tolerances']['lapse_absolute'] == LAPSE_ABSOLUTE_TOLERANCE == 1e-10
+    assert passed['tolerances']['physical_directional_and_temporal_mass_rate_absolute'] == (
+        MASS_RATE_ABSOLUTE_TOLERANCE) == 1e-8
+
+    failed_rate = _measurement(32, temporal_mass_residual=reference['temporal_mass_residual']+2e-8)
+    failed_mass = _measurement(64, full_mass=reference['full_mass']+2e-10)
+    failed = compare_independent_mass(reference, (failed_rate, failed_mass), _boundary())
+    assert failed['outcome'] == 'failed'
+    assert failed['failed_channels'] == ['order_32.temporal_mass_residual', 'order_64.full_mass']
+    assert failed['orders'][0]['differences']['temporal_mass_residual'] == pytest.approx(2e-8)
+    assert failed['orders'][1]['differences']['full_mass'] == pytest.approx(2e-10)
+    assert failed['order_differences']['full_mass'] == pytest.approx(2e-10)
+    assert failed['tolerances']['full_mass_absolute'] == 1e-10
+    assert failed['tolerances']['physical_directional_and_temporal_mass_rate_absolute'] == 1e-8

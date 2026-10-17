@@ -6,7 +6,8 @@ import pytest
 
 from recursive_horizons.nsc_atlas_connection_slice import wall_slice_data
 from recursive_horizons.nsc_atlas_geometric_average import (
-    KAPPA, geometric_slice_average, scalar_average_sources, wall_slice_stress,
+    KAPPA, clocked_scalar_average_sources, geometric_slice_average,
+    scalar_average_sources, wall_slice_stress,
 )
 
 
@@ -91,3 +92,50 @@ def test_reject_inconsistent_or_nonfinite_moments():
                    (1., 2., 1., 0., 0., 0., 0.)):
         with pytest.raises(ValueError):
             scalar_average_sources(*values)
+
+
+def test_homogeneous_clock_change_matches_direct_volume_derivatives():
+    # a = exp(H*t_proper), dt_proper/dtau_ref = nu. Differentiate a directly.
+    H, nu, nu_rate, volume = .7, 1.4, -.3, 2.3
+    energy = 3*H**2/KAPPA
+    row = clocked_scalar_average_sources(
+        volume, lapse_theta_integral=volume*nu*3*H,
+        lapse_squared_theta_squared_integral=volume*(nu*3*H)**2,
+        lapse_squared_shear_squared_integral=0.,
+        lapse_squared_curvature_integral=0.,
+        lapse_squared_energy_integral=volume*nu**2*energy,
+        lapse_squared_stress_trace_integral=-3*volume*nu**2*energy,
+        lapse_rate_theta_integral=volume*nu_rate*3*H,
+        lapse_laplacian_integral=0.)
+    assert row['H_observer'] == pytest.approx(nu*H)
+    assert row['three_volume_acceleration'] == pytest.approx(
+        3*(nu_rate*H+(nu*H)**2))
+    assert abs(row['hamiltonian_residual']) < 3e-15
+    assert abs(row['scalar_fitting_acceleration_residual']) < 3e-15
+
+
+def test_static_periodic_metric_lapse_cancels_its_actual_ricci_source():
+    # ds^2 = -N(x)^2 dt^2 + dx^2 + dy^2 + dz^2, N = 1+eps*cos(x).
+    # Direct connection contraction: R_nn=N_xx/N, E=0, kappa*S=2*N_xx/N.
+    # Its spatial volume is static despite nonzero spatial lapse variation.
+    eps, volume = .4, 2*math.pi
+    nodes, weights = np.polynomial.legendre.leggauss(64)
+    x, weights = math.pi*(nodes+1), math.pi*weights
+    lapse, second = 1+eps*np.cos(x), -eps*np.cos(x)
+    laplacian = float(weights@(lapse*second))
+    stress_trace = float(weights@(2*lapse*second/KAPPA))
+    row = clocked_scalar_average_sources(
+        volume, lapse_theta_integral=0.,
+        lapse_squared_theta_squared_integral=0.,
+        lapse_squared_shear_squared_integral=0.,
+        lapse_squared_curvature_integral=0.,
+        lapse_squared_energy_integral=0.,
+        lapse_squared_stress_trace_integral=stress_trace,
+        lapse_rate_theta_integral=0., lapse_laplacian_integral=laplacian)
+    assert laplacian/volume == pytest.approx(-eps**2/2, abs=2e-15)
+    assert row['three_volume_acceleration'] == pytest.approx(0., abs=2e-15)
+    # Doubling the lapse-Laplacian would incorrectly accelerate static volume.
+    assert abs(row['three_volume_acceleration']+laplacian/volume) > .07
+    total_pressure = row['kappa_mean_pressure']+row['kappa_geometric_pressure']
+    assert total_pressure == pytest.approx(0., abs=2e-15)
+    assert row['total_trace_projection'] == pytest.approx(0., abs=2e-15)

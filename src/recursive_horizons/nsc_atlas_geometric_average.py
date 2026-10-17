@@ -59,6 +59,41 @@ def scalar_average_sources(volume, theta_integral, theta_squared_integral,
     }
 
 
+def clocked_scalar_average_sources(
+        volume, *, lapse_theta_integral, lapse_squared_theta_squared_integral,
+        lapse_squared_shear_squared_integral, lapse_squared_curvature_integral,
+        lapse_squared_energy_integral, lapse_squared_stress_trace_integral,
+        lapse_rate_theta_integral, lapse_laplacian_integral):
+    """Scalar fitting in a specified observer clock, with zero shift.
+
+    The domain is transported by the hypersurface normals. ``lapse`` means
+    nu = N/N_ref, where d tau_ref = N_ref(t) dt; its rate is at fixed spatial
+    coordinate with respect to tau_ref. All integrals use proper spatial
+    volume. The last integral is int nu * D^2(nu) dV, including any boundary
+    flux. It is not twice that integral, nor a derivative of the mean lapse.
+
+    Einstein equations and the stated foliation give these scalar identities.
+    This function does not select that geometry/clock or average a tensor.
+    """
+    clock_integrals = np.asarray((lapse_rate_theta_integral,
+                                  lapse_laplacian_integral), dtype=float)
+    if not np.isfinite(clock_integrals).all():
+        raise ValueError('finite clock integrals are required')
+    row = scalar_average_sources(
+        volume, lapse_theta_integral, lapse_squared_theta_squared_integral,
+        lapse_squared_shear_squared_integral, lapse_squared_curvature_integral,
+        lapse_squared_energy_integral, lapse_squared_stress_trace_integral)
+    P = float(clock_integrals.sum()/volume)
+    row['H_observer'] = row.pop('H_normal')
+    row['lapse_acceleration'] = P
+    row['kappa_geometric_pressure'] -= 2*P/3
+    row['geometric_trace_projection'] += P/2
+    row['geometric_vacuum_condition'] += 2*P
+    row['three_volume_acceleration'] += P
+    row['total_trace_projection'] += P/2
+    return row
+
+
 def wall_slice_stress(wall):
     """Coefficients of delta(l-lw), including delta(eta)=delta(l-lw)/gamma."""
     sigma, gamma = wall['parameters'].sigma, wall['gamma']

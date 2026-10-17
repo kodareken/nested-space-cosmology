@@ -2768,6 +2768,20 @@ nodes, but the physical stage comparison uses the scalar compiled callback.
 
 Reproduce that performance check with
 `python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --compare-compiled-coefficients --output .build/p001-compiled-stage-comparison.json`.
+
+The independent full-mass/lapse diagnostic uses the same authenticated seed,
+one reference stage and Gauss orders 32/64 on its existing smooth panels:
+`python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --independent-mass-lapse --output .build/p001-independent-mass-lapse.json`.
+Choose a new output path. It keeps failed comparisons, including a nonzero
+temporal mass residual, rather than evolving or refining automatically.
+The shared allowance is 60 CPU seconds / 40 million charged values.
+Twelve focused diagnostic controls include manufactured mass/rate solutions
+with nonzero entering data and a nonlinear radial-coordinate Jacobian.
+
+The observer-clock scalar-average identities are checked with
+`python scripts/run_python.py -m pytest tests/test_nsc_atlas_geometric_average.py -q`.
+The nine controls include a static periodic lapse and a homogeneous changing
+clock. These exact controls do not supply a new parent metric or raw geometry.
 It evaluates one frozen state, takes no time steps, and retains the existing
 60 CPU-second / 40-million-value limit. Do not infer a new grid calculation
 or a change in the physical model from this benchmark.
