@@ -12,6 +12,7 @@ def records():
     for i,(radius,gap) in enumerate(zip([.54,.545,.546],[1.,.5,.25])):
         out.append(dict(schema='nsc-atlas-fixed-endpoint-v1',level=i,
             status='completed_numerical_endpoint',source_commit=str(i)*40,
+            radial_accuracy=dict(rtol=2.5e-14,atol=1e-15,adjoint_order=32,gradient_absolute_tolerance=2e-8),
             execution=dict(last_accepted_x=ENDPOINT_SOURCE_X,raw_history_saved=False,final_state_saved=False),
             geometry=dict(x_left=.4,x_right=ENDPOINT_SOURCE_X,reference_radius_endpoint=.55,
                           cap_cells=[2,4,8][i],exterior_cells=[32,64,128][i]),
@@ -44,6 +45,7 @@ def test_three_completed_runs_produce_a_scaled_resolution_envelope():
     lambda r:r['endpoint'].update(jordan_radius=.6),
     lambda r:r['endpoint'].update(frame_formula_needs_check=True),
     lambda r:r['samples'].pop(),
+    lambda r:r['radial_accuracy'].update(rtol=2e-13),
 ])
 def test_wrong_or_incomplete_evidence_is_rejected(mutation):
     data=records();mutation(data[2])

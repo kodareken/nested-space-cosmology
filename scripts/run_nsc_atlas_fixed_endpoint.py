@@ -42,13 +42,15 @@ SOURCE_ROWS = 257
 CUT_STRIDE = 32
 CHARGED_EVALUATIONS = 500_000_000_000
 CPU_SECONDS = 10000.
+RADIAL_RTOL = 2.5e-14
+RADIAL_ATOL = 1e-15
 FRAME_CHECK_SCALE = 1e-12
 LAST_WIDTHS = (Q('0.8'), Q('0.73'), Q('0.66'))
 INITIAL_WALL_CUT = Q('0.54')
 LEVELS = (
-    dict(cap_cells=2, exterior_cells=32, last_width=LAST_WIDTHS[0], max_dx=1e-4, step_budget=2000),
-    dict(cap_cells=4, exterior_cells=64, last_width=LAST_WIDTHS[1], max_dx=1e-4/2, step_budget=4000),
-    dict(cap_cells=8, exterior_cells=128, last_width=LAST_WIDTHS[2], max_dx=1e-4/4, step_budget=8000),
+    dict(cap_cells=2, exterior_cells=32, last_width=LAST_WIDTHS[0], max_dx=1e-4, step_budget=2000,cpu_seconds=CPU_SECONDS),
+    dict(cap_cells=4, exterior_cells=64, last_width=LAST_WIDTHS[1], max_dx=1e-4/2, step_budget=4000,cpu_seconds=2*CPU_SECONDS),
+    dict(cap_cells=8, exterior_cells=128, last_width=LAST_WIDTHS[2], max_dx=1e-4/4, step_budget=8000,cpu_seconds=4*CPU_SECONDS),
 )
 # Stations that exist on every admitted exterior grid. Indices scale with the cell count.
 COMMON_ETA_OVER_32 = (12, 14, 16, 18, 26, 28, 30)
@@ -465,14 +467,16 @@ def main():
         raise ValueError('output parent must already exist')
     spec = level_spec(args.level)
     commit, bindings = frozen_sources()
-    budget = Budget(maximum_evaluations=CHARGED_EVALUATIONS, cpu_seconds=CPU_SECONDS)
+    budget = Budget(maximum_evaluations=CHARGED_EVALUATIONS, cpu_seconds=spec['cpu_seconds'])
     report = dict(schema='nsc-atlas-fixed-endpoint-v1', status='incomplete', level=args.level,
                   runtime=producer.runtime_versions(), source_commit=commit, source_bindings=bindings,
                   scope=('one enriched-history fixed-cap march on the original source interval; '
                          'sampled defects and diagnostic quadratures; no continuum enclosure, '
                          'stability proof, remesh, or observational identification'),
-                  limits=dict(charged_values=CHARGED_EVALUATIONS, cpu_seconds=CPU_SECONDS,
-                              accepted_steps=spec['step_budget'], per_level=True, budget_reset=False))
+                  limits=dict(charged_values=CHARGED_EVALUATIONS, cpu_seconds=spec['cpu_seconds'],
+                              accepted_steps=spec['step_budget'], per_level=True, budget_reset=False),
+                  radial_accuracy=dict(rtol=RADIAL_RTOL,atol=RADIAL_ATOL,adjoint_order=32,
+                                       gradient_absolute_tolerance=2e-8))
     phase = 'input authentication'
     if args.diagnostic_step_limit is not None:
         report['diagnostic_step_limit']=args.diagnostic_step_limit
@@ -593,7 +597,7 @@ def main():
             try:
                 row = coupled_fixed_stage(value, basis=basis, x=x, eta=eta, source=source, gauge=ref,
                                           alpha=ORIGINAL_ALPHA, tube=TUBE, budget=budget, background=background,
-                                          background_clock_offset=clock_offset)
+                                          background_clock_offset=clock_offset,rtol=RADIAL_RTOL,atol=RADIAL_ATOL)
             except (ValueError,RuntimeError,FloatingPointError,OverflowError,KeyError,TypeError):
                 try:
                     report['failed_stage_seed']=save_failed_stage(

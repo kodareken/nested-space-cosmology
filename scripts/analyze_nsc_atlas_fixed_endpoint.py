@@ -38,6 +38,9 @@ def compare(records):
             raise ValueError('endpoint comparison expects compact receipts')
         if r['endpoint']['frame_formula_needs_check']:
             raise ValueError('unresolved endpoint frame conversion')
+        if r['radial_accuracy']!=dict(rtol=2.5e-14,atol=1e-15,adjoint_order=32,
+                                    gradient_absolute_tolerance=2e-8):
+            raise ValueError('endpoint did not use the confirmed radial accuracy')
     if ([r['geometry']['cap_cells'] for r in records]!=[2,4,8] or
         [r['geometry']['exterior_cells'] for r in records]!=[32,64,128]):
         raise ValueError('unexpected mesh family')
@@ -78,8 +81,9 @@ def compare(records):
         sample_cuts=cuts,
         source_commits=[r['source_commit'] for r in records],
         shared_alpha=records[0]['input']['alpha'],
+        radial_accuracy=records[0]['radial_accuracy'],
         numerical_method_note='Nonuniform fixed cap and exterior meshes, with simultaneous time-step refinement; no asymptotic order or rigorous error bound inferred.',
-        operator_revision_note='The successor cap partition omits only a certified-zero background formula boundary. Integrands, constrained equations, source and requested radial tolerances are unchanged; source commits remain explicit.',
+        operator_revision_note='All three successors use the confirmed tighter forward radial solve, the unchanged 32-point adjoint and gradient guard, and the same physical input. Earlier stopped or interrupted executions remain separate evidence.',
         independent_observational_test=False)
 
 

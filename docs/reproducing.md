@@ -833,9 +833,9 @@ robustness draft is paused. The resource limits and interpretation are in the
 From a committed source tree, create new compact receipts with:
 
 ```sh
-python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 0 --output results/summaries/nsc-atlas-fixed-endpoint-level0-v1.json
-python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 1 --output results/summaries/nsc-atlas-fixed-endpoint-level1-v2.json
-python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 2 --output results/summaries/nsc-atlas-fixed-endpoint-level2-v2.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 0 --output results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 1 --output results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 2 --output results/summaries/nsc-atlas-fixed-endpoint-level2-v3.json
 ```
 
 The commands are creation-only and never overwrite a saved result. Each
@@ -846,12 +846,14 @@ observable conversion is in `nsc_atlas_endpoint_comparison`, with a fiducial
 reported separately from common-input and physical-model uncertainty.
 
 The first middle/fine receipts stopped before accepting a step because of a
-redundant zero-history panel boundary. Their v2 successors omit that split;
-both stopped receipts remain saved. Once all three evolutions finish, compare
-their saved scalars without another physical evolution:
+redundant zero-history panel boundary. Later coarse and middle runs stopped
+on the radial gradient check; the old fine run was deliberately interrupted.
+The v3 successors use the separately confirmed forward accuracy, preserving
+every earlier receipt. Once all three finish, compare their saved scalars
+without another physical evolution:
 
 ```sh
-python scripts/run_python.py scripts/analyze_nsc_atlas_fixed_endpoint.py --inputs results/summaries/nsc-atlas-fixed-endpoint-level0-v1.json results/summaries/nsc-atlas-fixed-endpoint-level1-v2.json results/summaries/nsc-atlas-fixed-endpoint-level2-v2.json --output results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json
+python scripts/run_python.py scripts/analyze_nsc_atlas_fixed_endpoint.py --inputs results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json results/summaries/nsc-atlas-fixed-endpoint-level2-v3.json --output results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json
 ```
 
 The analyzer rejects incomplete endpoints, changed sources and inconsistent
@@ -862,6 +864,12 @@ not become a converged prediction through the physical-unit conversion.
 The first coarse receipt stopped at the radial forward/adjoint check after
 419 accepted steps. The bounded replay and subsequent one-stage comparison
 have separate, predeclared budgets in the same admission:
+
+To regenerate the original failed-stage seed, use the recorded replay
+source commit `eb38441` in a clean checkout. The current runner has a
+tighter radial tolerance and is not the original failing implementation.
+Keep the generated receipt with its own seed hash; cross-platform
+regeneration need not have identical state bytes.
 
 ```sh
 python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 0 --diagnostic-step-limit 430 --output results/summaries/nsc-atlas-fixed-endpoint-level0-diagnostic-v2.json

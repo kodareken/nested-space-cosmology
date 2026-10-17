@@ -23,8 +23,10 @@ tightening the forward integration reduces the discrepancy from `6.2485e-8`
 to `3.4044e-10`. The original `2e-8` guard is unchanged. The fine run was
 [interrupted before source onset](../results/summaries/nsc-atlas-fixed-endpoint-level2-v2-interruption.json)
 to adopt the independently checked accuracy correction. The
-[admitted confirmation](prior-art-and-open-claim.md#p001-full-endpoint-fixed-grid-comparison-17-october-2026)
-checks the selected tolerance above SciPy's floating-point floor. The
+[confirmation](../results/summaries/nsc-atlas-fixed-endpoint-radial-confirmation-v1.json)
+passes with both 32 and 64 adjoint points at `rtol=2.5e-14, atol=1e-15`,
+above SciPy's floating-point floor. The three v3 full evolutions use this
+same corrected accuracy and retain the physical mass/flux gaps as outputs. The
 [comparison tool](../scripts/analyze_nsc_atlas_fixed_endpoint.py) requires
 three complete endpoints before reporting contraction and a scaled radius.
 The declared observable is the Jordan wall areal radius at the fixed incoming

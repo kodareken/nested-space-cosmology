@@ -43,6 +43,8 @@ def test_levels_refine_space_and_time_together():
     assert runner.LAST_WIDTHS == (Q('0.8'), Q('0.73'), Q('0.66'))
     assert runner.CHARGED_EVALUATIONS == 500_000_000_000
     assert runner.CPU_SECONDS == 10000.
+    assert [runner.level_spec(level)['cpu_seconds'] for level in range(3)]==[10000.,20000.,40000.]
+    assert (runner.RADIAL_RTOL,runner.RADIAL_ATOL)==(2.5e-14,1e-15)
     assert runner.ORIGINAL_ALPHA == .00012983127142551443
     with pytest.raises(ValueError):
         runner.level_spec(3)

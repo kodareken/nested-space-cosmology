@@ -162,6 +162,24 @@ physical stage or fitted input. Completed full-domain results still decide
 whether the current family contracts; the review does not substitute for
 that comparison.
 
+**Confirmed successor full evolutions:** the selected 32/64-point checks
+both pass, with discrepancies `3.2375e-10` and `3.2358e-10`, using
+7.890625 process-CPU seconds and 6,607,030 charged values. Keep the
+32-point adjoint check and use `rtol=2.5e-14, atol=1e-15` for the forward
+radial solve at every stage of all three new full runs. Keep the source,
+amplitude, meshes, source/time cuts, RK scheme and every acceptance guard
+fixed. Their receipt names are `nsc-atlas-fixed-endpoint-level{0,1,2}-v3.json`.
+
+Allocate **10,000 / 20,000 / 40,000 process-CPU seconds** to the three
+successor resolutions, retaining 500 billion charged values and
+2,000 / 4,000 / 8,000 accepted-step limits. The CPU allocation scales with
+the 1,024 / 1,793 / 3,330 planned steps and allows for the growing number
+of active history panels and tighter integration. These allocations are
+finite resource limits, not predictions of completion time.
+These are new declared executions after the diagnosed failure, not resets
+of the retained attempts. Stop and capture any new stage failure for a
+specific diagnosis. Completion and contraction remain outputs to measure.
+
 ## Independent preparation perturbations on the onset cell, 17 October 2026
 
 **Paused before the control run:** Douglas's next priority is three fixed
