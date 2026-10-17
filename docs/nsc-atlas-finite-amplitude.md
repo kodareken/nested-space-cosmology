@@ -7472,6 +7472,28 @@ slice likewise needs an explicit comparison to compatible exact initial
 data. An exact reference enclosure alone supplies neither those errors nor
 a tube for the sourced evolution.
 
+The [frozen application](../results/summaries/nsc-atlas-reference-gauge-bound-v1.json)
+at producer `81b01709e813debba7c3dbb4c458a5dd97e8f1ff` proves both strict
+bracket margins: the lower margin exceeds `0.001651371513940832` and the
+upper exceeds `0.002775455641274002`. Thus the entire original cell has
+`0.474<R(x)<0.477`. Conservative displayed consequences include
+`0.23762<W<0.28318`, `1.96009<W_x<2.17607`,
+`2.04009<T_x<2.16689` and `T_x-Z_x>0.60122`.
+These are the exact reference's coefficient ranges, not approximation errors.
+The dyadic ball hull for R is slightly wider than the strict rational
+bracket because Arb also rounds interval radii outward.
+
+The run charges **5,248 values**, with process CPU below the timer's
+resolution, and performs no source query, root search or time step.
+Its **13,822-byte** summary has SHA256
+`e8a8400cec0f6ae0bd831723696ebf1d41c38bdf0b052301ffab837465f1d216`
+and 17 producer bindings. A separate **256-value rational audit** verifies
+both integral/target inequalities, every outward display, the exact cell
+inputs and all producer hashes. Independent Grok review confirms the
+bracket directions, wall formulas and vacuum-wedge bounds. The next coupled
+inputs remain the numerical gauge/initial-data comparison, sourced metric
+and field tube, uniform reference derivatives, wall Jacobians and residuals.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

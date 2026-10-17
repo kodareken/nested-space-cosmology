@@ -598,6 +598,13 @@ summary retains signed dyadic enclosures. Exact corner normalization is
 explicit; numerical gauge and sourced-tube errors are separate. The controls
 pass with 16,000 charged values / 0.09375 active CPU seconds.
 
+Frozen producer `81b0170` completes the application with 5,248 charged
+values and CPU below timer resolution. Its 13,822-byte summary proves the
+strict reference-radius bracket `(0.474,0.477)` on the original cell.
+All 17 producer bindings, signed displays and inverse inequalities pass a
+separate 256-value rational audit. Grok independently confirms the formulas
+and the distinction between this reference bound and a sourced tube.
+
 The coupled comparison controls are:
 
 ```sh

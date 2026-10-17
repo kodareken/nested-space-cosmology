@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
+  "current_receipt_commit_parent": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 327829,
-      "change": "Derive the coupled metric and scalar comparison using integrated exterior jets.",
-      "changed_from_commit": "d2c46fad6bd9e34764c55a8b462530a3f8763994",
+      "bytes": 328508,
+      "change": "Record certified whole-cell reference wall and clock coefficients.",
+      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "8345f4985f1f2cb9a484ebf989b476ef73e5678673c7381064b9222bcd6da454"
+      "sha256": "3e1942595abfc3ade7ad3c41657f719c0969e7849ec14d31d40e4be5c2f6b6d3"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 357554,
-      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
-      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
+      "bytes": 358906,
+      "change": "Record certified whole-cell reference wall and clock coefficients.",
+      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c5cd735a077db282c450ac12fd8cdf3df18d2cfb478a5ce12d8e75f1f1eead7e"
+      "sha256": "cbaa2a4529e92f4740c9c4dda8803c7692c4613dfef21117cda184b1d6902727"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 377670,
-      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
-      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
+      "bytes": 378408,
+      "change": "Record certified whole-cell reference wall and clock coefficients.",
+      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a850401806dbc42ed2ab46f897b421d787e42329ee1017262ab34152eaebb3e4"
+      "sha256": "ce0ce4e8bda3749d7823bedbca895099488b4b097e487c7c909312aa93b59a23"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 120106,
-      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
-      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
+      "bytes": 120541,
+      "change": "Record certified whole-cell reference wall and clock coefficients.",
+      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7744d1e7938b37bf8e9b6ad0c9ef74cce7a75d5a9daf99cce95c89e0710ad074"
+      "sha256": "1eb612931d7777c7be8c20a0918cc9d29f98e8594a5d841d53bc5df3a8a8cdc0"
     },
     {
       "bytes": 18356,
@@ -29668,6 +29668,14 @@
       "path": "results/summaries/nsc-atlas-quiet-source-front-v1.json",
       "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
       "sha256": "656b489f65623303cf4b18891b7bb496a5dc00678fe60bfc77c00861abb32316"
+    },
+    {
+      "bytes": 13822,
+      "change": "Record certified whole-cell reference wall and clock coefficients.",
+      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
+      "path": "results/summaries/nsc-atlas-reference-gauge-bound-v1.json",
+      "retention_reason": "Certified original-cell reference gauge enclosures and source hashes.",
+      "sha256": "e8a8400cec0f6ae0bd831723696ebf1d41c38bdf0b052301ffab837465f1d216"
     },
     {
       "bytes": 13697,

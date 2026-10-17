@@ -2667,6 +2667,17 @@ branch in complex integration, or conflating this exact reference with the
 floating gauge and sourced tube. Fixed bracket inequalities, the analytic
 branch flag, and a separate initial/gauge error ledger address these cases.
 
+**Outcome:** frozen producer `81b0170` certifies both fixed bracket
+inequalities with 5,248 charged values and process CPU below timer resolution.
+The exact reference wall stays strictly inside `(0.474,0.477)` throughout
+the original cell, with positive wall/clock coefficients. The 13,822-byte
+[summary](../results/summaries/nsc-atlas-reference-gauge-bound-v1.json)
+contains 17 authenticated producer bindings. Independent Grok review and a
+separate 256-value rational audit confirm the formulas, inequalities and
+outward displays. No source query, numerical root search, time step or retry
+was performed. Numerical gauge errors and the sourced common tube remain
+separate work; this result does not assert the coupled error threshold.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

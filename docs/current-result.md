@@ -217,6 +217,16 @@ residuals still need uniform physical bounds before evaluating the inverse.
 No new trajectory or claimed physical validity interval follows from this
 conditional comparison alone.
 
+The [exact reference gauge enclosure](nsc-atlas-finite-amplitude.md#exact-reference-gauge-enclosure)
+now proves `0.474<R<0.477` throughout the original source cell, including
+uniform positive wall and clock coefficients and bounds on the reference
+vacuum wedge. Two fixed certified integrals use 5,248 charged values and CPU
+below timer resolution; the summary is 13,822 bytes. Three independent
+controls, Grok review and a 256-value rational audit confirm the result.
+This uses the exact compatible corner. Comparing the floating gauge and
+initial slice with that reference, and enclosing the sourced coefficients
+and residuals, remain the next inputs to the coupled estimate.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.
