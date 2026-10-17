@@ -91,8 +91,8 @@ amplitude derivative of the physical field `sqrt(alpha)*f` at zero.
 
 Separate Grok reviews check the derivative count and both quotient limits.
 No new physical trajectory, grid scan or symbolic run was used. The next
-connection is an evaluated error bound and identification of the exact
-first coefficient with the chosen numerical implementation. Central arrival
+connection is an evaluated error bound for the chosen numerical
+implementation. The continuum coefficient identification is given below. Central arrival
 requires an extended-domain argument; the onset clock is not that arrival
 waveform. Saved numerical coefficients and histories retain their own
 accuracy question.
@@ -107,8 +107,25 @@ fixed exterior label, equivalently fixed original source label, without
 tracing a central-arrival ray. Its 13 manufactured controls pass with
 13,380 charged values / 0.328125 active CPU seconds. This is a verified
 interface and analytic coordinate/source connection; physical coefficient
-evaluation, full linearized-equation identification and numerical error
-bounds remain the next work.
+evaluation and numerical error bounds remain the next work.
+
+The [invariant coefficient identification](nsc-atlas-finite-amplitude.md#identifying-the-continuum-wall-and-clock-coefficients)
+now connects those continuum functionals to the actual onset solution's
+first geometric derivatives. The exact source transverse-radius equation
+gives the earlier source mass and lapse. The first improved-stress transport,
+angular junction and clock equations then form a triangular system with
+the same quiet constants. In the cap, subtracting the vacuum mass at the
+actual radius gives the same radial mass and lapse integrals. The full
+conformal normal and proper-time conversion gives the earlier central
+clock equation. Uniqueness identifies the continuum coefficients before
+the fixed-source event shift is applied.
+
+This calculation requires only the leading scalar; its next normalized
+coefficient does not enter the first gravitational sources. It supplies
+the mathematical target for the wall-only query, while retaining the
+separate task of bounding field, geometry, integration and quadrature
+errors and evaluating the Taylor constant. No numerical trajectory or
+parameter scan was run for this connection.
 
 ## Fixed cap and moving-wall connection, 16 October 2026
 

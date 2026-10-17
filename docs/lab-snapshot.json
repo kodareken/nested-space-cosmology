@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "330bfe70c44a1520f97ded0988edb4af92b03812",
+  "current_receipt_commit_parent": "56201f924a278efebc1e8b88545ef254004a1e79",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 233980,
-      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
-      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
+      "bytes": 234123,
+      "change": "Identify the continuum wall-radius and clock functionals with the actual onset first geometric derivatives.",
+      "changed_from_commit": "56201f924a278efebc1e8b88545ef254004a1e79",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "1762592127199f3d6b885c2c2182c701d21c852740c1a4e50888fe01d00e2cc0"
+      "sha256": "5c6cb133bc5bad4bc6764e55fee0e93a865b6b414789f88b07f09389e5818a2d"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 340204,
-      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
-      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
+      "bytes": 341317,
+      "change": "Identify the continuum wall-radius and clock functionals with the actual onset first geometric derivatives.",
+      "changed_from_commit": "56201f924a278efebc1e8b88545ef254004a1e79",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b5d1b46675e3d50a30d522b37af7cffe99ce8a635899a2d39eae05d0ee77e8a4"
+      "sha256": "497383b4b28a0826e1d65ec01930f0ba94c5ed6c761ca03b1b7734e65ab233b0"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 513142,
-      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
-      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
+      "bytes": 522381,
+      "change": "Identify the continuum wall-radius and clock functionals with the actual onset first geometric derivatives.",
+      "changed_from_commit": "56201f924a278efebc1e8b88545ef254004a1e79",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "519b48553018541a6877f3bbdc97712ca96645e5ef0a606c19424fafd2abfe12"
+      "sha256": "beb13db00abdd66cd82c6958a95ae218cf1dc2719bcd94c242ba39c56622f2cd"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 407461,
-      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
-      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
+      "bytes": 409580,
+      "change": "Identify the continuum wall-radius and clock functionals with the actual onset first geometric derivatives.",
+      "changed_from_commit": "56201f924a278efebc1e8b88545ef254004a1e79",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4b0575ea1bfe985433b2d40f2147c5cb1468624913feced3a10c1de645a97dea"
+      "sha256": "321751f580736ab67eae867535b887425ff3bd286ef8b8f8e22133b9457b2ea6"
     },
     {
       "bytes": 6705,

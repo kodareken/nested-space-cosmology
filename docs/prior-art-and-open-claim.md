@@ -3128,6 +3128,39 @@ wall/exterior Grok investigations are assigned those explicit equations.
 This admits reading and derivation only; no numerical coefficient,
 trajectory or error-constant evaluation is introduced.
 
+**Invariant identification outcome:** the [continuum wall and clock
+functionals](nsc-atlas-finite-amplitude.md#identifying-the-continuum-wall-and-clock-coefficients)
+are the actual first geometric derivatives of the constructed onset
+family, after the fixed-source event shift. The exact source identity
+`(r_E r_E,Ubar)'=-F/4` gives the earlier source mass and fractional lapse
+coefficients with their quiet constants. The first gravitational sources
+use only the common leading scalar. Improved-stress mass transport,
+the angular junction, the exterior lapse and embedding equation, and
+the cap radial constraints and central clock form an anchored triangular
+system. Ordinary ODE uniqueness identifies its outputs without computing
+the next normalized scalar or reconstructing all perturbed null coordinates.
+
+The cap vacuum subtraction retains `3 r^2 r_1/2`. Its exact normal
+conversion and proper-time conversion reproduce both conformal terms
+in the old clock rate. The old absolute cap time is translated by its
+inherited, alpha-independent quiet-anchor offset before comparing leading
+fields; this translation leaves the first clock coefficient unchanged.
+Independent Grok source review confirms the source/radial formulas and
+the complete invariant-output argument. This resolves the earlier full
+fixed-W reconstruction caveat for these two outputs, rather than assuming
+the missing coordinate fields. No new numerical values, symbolic runs,
+physical trajectories or scans were used.
+
+The next concrete numerical target is the Einstein wall-radius and
+anchored polar-slice clock first coefficient at the original right source
+endpoint. First bound the required continuum leading-field values and
+derivatives, reference geometry and functional integration errors. A
+Volterra residual estimate must include the actual source and moving
+limit; agreement between two sampled grids is not a replacement. A
+read-only method investigation compares reuse of the existing dense
+field with a direct short-onset integral enclosure. No physical evaluation
+or Taylor-constant computation is admitted by that investigation.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

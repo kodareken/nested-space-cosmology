@@ -11087,8 +11087,8 @@ on the onset domain: its central field is exactly zero there.
 These are analytic source and coordinate identifications. The older
 quadratures, geometry splines and dense field approximation still have
 numerical errors; their stored samples are not exact first derivatives.
-A complete error comparison must also match the linearized equations
-and bound those numerical errors in the stated onset domain. The
+A complete error comparison must also match the linearized equations,
+as done below, and bound those numerical errors in the stated onset domain. The
 quadratic Taylor constant has not been evaluated by this conversion.
 No central-arrival or later-time estimate is obtained from it.
 
@@ -11114,6 +11114,217 @@ Separate Grok source reviews confirm the coordinate/source identities and
 the implementation's sign, frame, shared clock arithmetic and separation
 of wall and arrival queries. Numerical certification is not inferred from
 those reviews or manufactured controls.
+
+#### Identifying the continuum wall and clock coefficients
+
+The preceding conversion becomes an identification with the actual onset
+solution by comparing invariant first variations. Retain xi for the
+original source label, z for the background wall radius, and s for Jordan
+proper wall time. The exact family has its proved C1 first parameter
+variation. Its positive proper-time rate permits differentiation at fixed
+s on compact interior time intervals; continuity then supplies the
+one-sided endpoint limits. A common terminal proper-time event is not
+assumed. The exact quiet prefix extends the initial data to the original
+anchor xi=2/5, z=9/20, s=0 with zero response constants.
+
+At alpha zero the normalized scalar is the same continuum prepared field
+as in the earlier wall and cap functionals. It satisfies their original
+source, quiet characteristic data and scalar junction on the same vacuum
+geometry. Uniqueness of the fixed-background characteristic transmission
+problem identifies these fields on the onset subdomain. The no-return
+condition gives `chi_U=0` at the wall, while the physical derivative
+`p_U=-p r_0,U/z` is generally nonzero.
+
+The leading cap field is compared with its inherited time origin retained:
+`T_old=T+T_a`, where T is the anchored onset clock and T_a is the
+alpha-independent quiet-anchor value in the original cap chart. The
+[history-clock connection](#retained-history-at-the-evolving-cap-clock)
+records the floating value `T_a=-1.0664592301893958`; the identification
+uses its defining continuum reference event. This constant translation
+leaves T_1 and clock rates unchanged. `wall_sample(t)` still reports the
+old absolute `T0_wall`; subtract T_a when forming an anchored total clock.
+No scalar history is evaluated at an unshifted, different physical time.
+
+The first gravitational equations depend only on this leading field.
+Every scalar kinetic source carries alpha, and the cap potential obeys
+`P=3+alpha f_0^2+O(alpha^2)` and `P_f=0` at alpha zero. Consequently the
+next normalized scalar coefficient does not enter the first mass, lapse
+or wall geometry equations. This is a statement about their differentiated
+equations, not an omission of scalar stress.
+
+**Exact source mass and lapse.** Write the source transverse derivative
+as `a_T=r_E,Ubar`, with the scaled source lapse C=F, and put
+
+\[
+ a=\frac45,\quad d=\frac{a/\xi-1}{4},\quad
+ H=h-\frac{\xi p^2}{12},\quad c=F_1=-\frac{p^2}{6},
+\]
+\[
+ I_0=\int_{2/5}^{\xi}p(t)^2dt,\quad
+ I_1=\int_{2/5}^{\xi}t p'(t)^2dt,\quad
+ I_2=\int_{2/5}^{\xi}(\xi-t)t p'(t)^2dt.
+\]
+
+The differentiated source constraint and its quiet constants give
+`H=-I_2/2-I_0/6` and `H'=-I_1/2-p^2/6`. The exact transverse radius
+equation above is particularly simple in product form:
+
+\[
+ (r_E a_T)'=-\frac F4,
+ \qquad (r_E a_T)_1=\frac{I_0}{24},\qquad
+ (a_T)_1=\frac{I_0/24-dH}{\xi}.
+\]
+
+For `Z_E=C/(2 r_E,Ubar)` its fractional first variation is therefore
+
+\[
+ \zeta_{E,0}=c-\frac{(a_T)_1}{d}
+ =\frac h\xi-\frac{p^2}{4}-\frac{I_0}{6(a-\xi)}.
+\]
+
+Differentiating the geometric source mass
+`m_E=r_E(1+4 a_T r_E,xi/C)/2` independently gives
+
+\[
+ \mu_{E,0}=\frac H2+\frac{I_0}{12}
+             +2\xi d(H'-c)
+ =-\frac14\int_{2/5}^{\xi}t(a-t)p'(t)^2dt.
+\]
+
+These are precisely the continuum source inputs to `source_traces`.
+No transverse expansion or mass constant is selected separately. A
+U-only relabeling divides C and r_U by the same Jacobian, so Z is
+unchanged, including under an alpha-dependent U relabeling. The fixed
+xi-to-V change multiplies both Z and Z_0 by the same alpha-independent
+Jacobian. Thus the coefficient zeta is the one used in the original
+null coordinates. In particular `Z_0=-2a/V` has no U dependence; an
+alpha-dependent wall-straightening relabeling introduces no additional
+background evaluation term into zeta.
+
+**Invariant mass and displacement.** Define the actual fixed-s first
+coefficients by
+
+\[
+ m_{J,+}=m+\alpha\mu_++O(\alpha^2),\qquad
+ m_{J,-}=\frac{r_{J,W}^3}{2}+\alpha\nu_-+O(\alpha^2),\qquad
+ r_{J,W}=z+\alpha\rho+O(\alpha^2).
+\]
+
+The cap vacuum mass here uses the actual radius. Its total first
+variation contains `3 z^2 rho/2` in addition to nu_minus. Differentiating
+the exact geometric mass transport with the leading improved stress
+gives, on each side,
+
+\[
+ \mu_{+,s}=\frac{z^2}{2}(\beta_+q_+-vP_+),\qquad
+ \nu_{-,s}=\frac{z^2}{2}(\beta_-q_--vP_-).
+\]
+
+The [exterior identity](nsc-atlas-wall-mass-closure.md#independent-original-frame-stress-check)
+and [cap identity](nsc-atlas-cap-wall-response.md#cap-transport-from-the-leading-field)
+give `L_plus+Q_plus,s` and `L_minus+Q_minus,s` for these right sides.
+The latter retains both the transformed cap potential and the vacuum
+radius correction. The same quiet constants consequently identify the
+actual masses with the existing integrals `integral L_plus ds+Q_plus`
+and `integral L_minus ds+Q_minus`.
+
+Put `D=mu_plus-nu_minus`. The exact Jordan angular junction and the two
+mass definitions then give
+
+\[
+ \delta\beta_\pm=\beta_{\pm,z}\rho+\frac{D}{b z^2},\qquad
+ \rho_s=v_z\rho+
+     \frac{\mu_+/z+\beta_+D/(b z^2)}{v},\qquad \rho(0)=0.
+\]
+
+Here b=2 and v is strictly positive. The cap expression for the numerator
+is identical. Ordinary linear ODE uniqueness identifies rho with the
+earlier displacement functional. The temporal junction and normal force
+are consistent with this equation: the leading scalar junction gives
+`q_plus=q_minus` and `P_plus=P_minus`, hence `D_s=-b z^3 q/2` and
+`delta a_plus=delta a_minus=6m rho/(b z^4)-2D/(b z^3)`. The resulting
+mean-curvature variation is zero. No extra homogeneous wall mode or
+division by beta_plus is introduced.
+
+**Exterior label clock.** Differentiating the exact exterior null
+constraint gives
+
+\[
+ \partial_U\zeta_E=\frac{r_0p_U^2}{2r_{0,U}}.
+\]
+
+Its source value was determined above, so radial integration uniquely
+gives the earlier zeta_E. The wall frame change, with `chi_U=0`, gives
+`zeta_J,W=zeta_E,W+p_W^2/4`. The exact wall normalization
+`V_W,s=1/[Z_J(r_J,W,s-beta_plus)]` therefore yields
+
+\[
+ \eta_s=\frac{1}{2ad_W}
+   \left(\zeta_{J,W}+\frac{\rho_s-\delta\beta_+}{d_W}\right),\qquad
+ \eta=\frac{V_1}{V_0},\quad d_W=v-\beta_+>0,\quad \eta(0)=0.
+\]
+
+This includes the variation of `Z_0(V_W)`. It is exactly the existing
+embedding equation and has the same unique solution. Computing the full
+first perturbed null chart is unnecessary for this invariant coefficient.
+
+**Cap radial metric and central clock.** In the common complete-cap
+chart `r=r_c+eta_c L_c`, the radius variation at fixed chart point is
+`r_1=eta_c R_1`. Remove the vacuum evaluation term from the pulled mass
+variation by defining `nu_E=m_1-3 r^2 r_1/2`. At alpha zero the exact
+radial variations reduce to
+
+\[
+ \partial_r\nu_E=\frac{r^2p^2}{2}
+     +\frac{r^2A_0}{4}(\Pi_0^2+\Phi_0^2),\qquad
+ \partial_r\delta_E=\frac r2(\Pi_0^2+\Phi_0^2),
+\]
+\[
+ A_0=1-r^2,\qquad \Phi_0=p_r,\quad \Pi_0=p_T/A_0,\qquad
+ \nu_E(T,0)=0,\quad \delta_E(T,0)=-p(T,0)^2/12.
+\]
+
+These are the earlier radial mass and lapse integrals with the same
+regular centre and Jordan central-proper-time normalization. The centre
+field is zero on the present onset domain. The zero-background excess
+mass and lapse have no first-order T-evaluation term; the radius-dependent
+vacuum mass does. The wall conformal conversion gives
+`e=rho-z p_W^2/12`,
+`A_1=-2z e-2nu_E,W/z`. For the signed normal
+`beta_E=beta_J+r_J N_J log(Omega)` and `ds_E=Omega ds_J`, where
+`Omega=1-alpha p_W^2/12+O(alpha^2)`. Thus the exact polar clock relation
+`T_W,s=Omega exp(-delta) beta_E/A` gives
+
+\[
+ T_{1,s}=\frac{\delta\beta_--z p_W B_-/6-\beta_-p_W^2/12}{A_0(z)}
+ -\frac{\beta_-\delta_{E,W}}{A_0(z)}
+ -\frac{\beta_- A_1}{A_0(z)^2},\qquad T_1(0)=0.
+\]
+
+This is the existing cap clock equation, including the conformal proper
+time and normal corrections. Its anchored integral is unique.
+
+The sequence leading scalar, masses and radial lapse, displacement,
+exterior embedding, then central clock is triangular for these first
+geometric coefficients. The exact family's coefficients and the earlier
+continuum functionals solve the same equations and have the same data.
+They are therefore equal on the onset cell. Applying the event shift in
+the preceding subsection identifies the actual `R_1|xi` and `T_1|xi`
+used in the quadratic onset remainder with these continuum functionals.
+No identification of the next normalized scalar coefficient is required
+for that conclusion.
+
+This identifies the mathematical targets of `wall_sample(t)`. Its field
+representation, geometry approximation, ODE integration and quadratures
+still require numerical error bounds. The analytic Taylor constant remains
+finite and unevaluated. No saved numerical coefficient, central-arrival
+observable or later-time solution is certified by this identification.
+Independent Grok source review confirms the source integrals, cap vacuum
+subtraction, normal and clock conversion, exterior lapse invariance and
+the fixed-s uniqueness followed by event inversion. The review's earlier
+request for a full fixed-W chart applies to reconstructing all coordinate
+fields; the invariant output argument does not require that reconstruction.
+This is an analytic identification with no new scientific computation.
 
 ## Missing full-domain estimate
 
