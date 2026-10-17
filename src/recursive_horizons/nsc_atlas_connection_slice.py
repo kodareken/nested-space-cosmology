@@ -31,12 +31,22 @@ def smooth_step(x):
     return value, derivative
 
 
-def wall_slice_data(length_scale=1.0):
-    """The v3 source tuple at Rw/ell=1.5, boosted to a flat de Sitter slice."""
+def wall_slice_data(length_scale=1.0, *, mass_over_ell=.4, taper_stop_over_ell=1.0):
+    """The v3 source tuple at fixed Rw/ell=1.5, boosted to a flat de Sitter slice.
+
+    Mass is object initial data. The taper stop changes the vacuum slicing
+    only. H, k and the wall radius stay fixed.
+    """
     ell = float(length_scale)
+    mass_ratio = float(mass_over_ell)
+    taper_ratio = float(taper_stop_over_ell)
     if not math.isfinite(ell) or ell <= 0:
         raise ValueError("length_scale must be finite and positive")
-    parameters = VacuumWallParameters(H=1/ell, k=2/ell, mass=.4*ell)
+    if (not math.isfinite(mass_ratio) or mass_ratio <= 0
+            or not math.isfinite(taper_ratio) or taper_ratio <= 0
+            or not 2*mass_ratio < taper_ratio < 1.5):
+        raise ValueError("require finite positive mass and 2*mass_over_ell < taper_stop_over_ell < 1.5")
+    parameters = VacuumWallParameters(H=1/ell, k=2/ell, mass=mass_ratio*ell)
     R = 1.5*ell
     state = vacuum_wall_state(R, parameters)
     speed, bm, bp = (float(state[key]) for key in ("Rdot", "beta_minus", "beta_plus"))
@@ -57,7 +67,7 @@ def wall_slice_data(length_scale=1.0):
         "V_minus": Vminus, "V_plus": Vplus,
         "energy_surface": parameters.sigma*gamma,
         "momentum_surface": parameters.sigma*gamma_v,
-        "taper_stop": ell,
+        "taper_stop": taper_ratio*ell,
     }
 
 
@@ -134,9 +144,14 @@ def _maxabs(array):
     return float(np.max(np.abs(array)))
 
 
-def _finite_difference_checks(wall):
+def _finite_difference_checks(wall, *, probe_radii=None):
     ell = wall["ell"]
-    R = ell*np.linspace(1.015, 1.485, 31)
+    if probe_radii is None:
+        R = ell*np.linspace(1.015, 1.485, 31)
+    else:
+        R = np.asarray(probe_radii, dtype=float)
+        if R.ndim != 1 or R.size < 2 or not np.all(np.isfinite(R)):
+            raise ValueError("probe radii must be a finite one-dimensional sample")
     fields = vacuum_transition(R, wall)
 
     def derivative(key, h):
@@ -157,6 +172,138 @@ def _finite_difference_checks(wall):
             "Rsecond_max_ell_error": ell*_maxabs(Rsecond-fields["Rsecond"]),
         })
     return results
+
+
+def compact_body_summary(length_scale=1.0, *, mass_over_ell=.4, taper_stop_over_ell=1.0):
+    """Scalar checks for one sourced cap, wall and vacuum bridge.
+
+    The historical connection_slice_record bundle is left unchanged. This
+    summary reuses that geometry and keeps no sample arrays.
+    """
+    wall = wall_slice_data(length_scale, mass_over_ell=mass_over_ell,
+                           taper_stop_over_ell=taper_stop_over_ell)
+    ell, parameters = wall["ell"], wall["parameters"]
+    Rw, R0, M = wall["R"], wall["taper_stop"], parameters.mass
+    energy, momentum = wall["energy_surface"], wall["momentum_surface"]
+    samples = 1
+    radii = np.linspace(Rw, R0, 65)
+    fields = vacuum_transition(radii, wall)
+    samples += radii.size
+    distance32 = transition_proper_distance(radii, wall, 32)
+    distance64 = transition_proper_distance(radii, wall, 64)
+    samples += 2*radii.size+(radii.size-1)*(32+64)
+    u0 = -math.acosh(math.sqrt(R0/(2*M)))
+    u_end = math.acosh(math.sqrt(6*ell/(2*M)))
+    if not math.isfinite(u0) or not math.isfinite(u_end) or abs(u_end) > 10:
+        raise ValueError("right-end display sample exceeds the finite bridge adapter")
+    throat_distance = distance32[-1]-2*M*(u0+math.sinh(u0)*math.cosh(u0))
+    bridge = schwarzschild_bridge(np.array([u0, 0.0, u_end]), M, throat_distance)
+    samples += 3
+    if math.isclose(R0, ell, rel_tol=0.0, abs_tol=0.0):
+        finite_difference = _finite_difference_checks(wall)
+        probe_count = 31
+    else:
+        span = Rw-R0
+        h_max = 1e-4*ell
+        inset = 0.03*span
+        if not span > 2*inset or inset <= 2*h_max:
+            raise ValueError("finite-difference probes do not fit inside the transition")
+        probes = np.linspace(R0+inset, Rw-inset, 31)
+        finite_difference = _finite_difference_checks(wall, probe_radii=probes)
+        probe_count = int(probes.size)
+    samples += probe_count*17
+    gamma, gamma_v = wall["gamma"], wall["gamma_v"]
+    Ucontr = np.array([gamma, gamma_v])
+    Ulower = np.diag([-1., 1.])@Ucontr
+    slice_tensor = parameters.sigma*np.outer(Ulower, Ulower)/gamma
+    jump_Rprime = wall["Rprime_plus"]-1
+    jump_B = -(wall["V_plus"]-wall["V_minus"])/Rw
+    overlap = max(
+        abs(fields["R"][-1]-bridge["R"][0])/ell,
+        abs(fields["Rprime"][-1]-bridge["Rprime"][0]),
+        abs(fields["Rsecond"][-1]-bridge["Rsecond"][0])*ell,
+        abs(fields["V"][-1]),
+        abs(fields["Kll"][-1])*ell,
+        abs(fields["Ktheta"][-1])*ell,
+    )
+    right_values = np.array([bridge["R"][2], bridge["Rprime"][2], bridge["Rsecond"][2],
+                             bridge["l"][2], bridge["scalar_curvature"][2], bridge["mass"][2]], dtype=float)
+    # The complete analytic bridge has u in R and two AE ends. This body
+    # retains only u in [u0,+infinity), attaching the cap at finite u0.
+    # End count follows from that domain, not the finite display samples.
+    two_directions = True
+    left_included = False
+    right_end = bool(u_end > 0 and bridge["Rprime"][2] > 0 and bridge["R"][2] > Rw)
+    regular_centre = wall["Rprime_minus"] == 1.0 and math.isfinite(Rw) and Rw > 0
+    joined = fields["V"][-1] == 0 and fields["Kll"][-1] == 0 and fields["Ktheta"][-1] == 0
+    ae_ends = int(two_directions and left_included)+int(right_end)
+    return {
+        "schema": "nsc-atlas-compact-sourced-body-v1",
+        "inputs": {
+            "H_ell": parameters.H*ell, "k_ell": parameters.k*ell, "xi": "1/6",
+            "quiet_scalar_amplitude": 0.0, "scalar_field_solves": 0,
+            "mass_over_ell": M/ell, "taper_stop_over_ell": R0/ell,
+            "Rwall_over_ell": Rw/ell, "Rcut_right_over_ell": 4.0,
+            "right_display_R_over_ell": 6.0,
+        },
+        "wall": {
+            "Rdot": wall["Rdot"], "beta_minus": wall["beta_minus"],
+            "beta_plus": wall["beta_plus"],
+            "gamma": gamma, "v": wall["v"], "gamma_v": gamma_v,
+            "Rprime_minus": wall["Rprime_minus"], "Rprime_plus": wall["Rprime_plus"],
+            "V_minus": wall["V_minus"], "V_plus": wall["V_plus"],
+            "energy_surface_ell": energy*ell, "momentum_surface_ell": momentum*ell,
+        },
+        "checks": {
+            "boost_unit_max_error": abs(gamma**2-gamma_v**2-1),
+            "cap_reconstruction_max_error": max(
+                abs(gamma*wall["Rdot"]-gamma_v*wall["beta_minus"]-wall["V_minus"]),
+                abs(gamma*wall["beta_minus"]-gamma_v*wall["Rdot"]-1)),
+            "exterior_reconstruction_max_error": max(
+                abs(gamma*wall["V_plus"]+gamma_v*wall["Rprime_plus"]-wall["Rdot"]),
+                abs(gamma_v*wall["V_plus"]+gamma*wall["Rprime_plus"]-wall["beta_plus"])),
+            "surface_energy_projection_ell_error": float(abs(slice_tensor[0, 0]-energy)*ell),
+            "surface_momentum_projection_ell_error": float(abs(-slice_tensor[0, 1]-momentum)*ell),
+            "shell_hamiltonian_delta_ell_error": abs(-4*jump_Rprime/Rw-16*math.pi*energy)*ell,
+            "shell_momentum_delta_ell_error": abs(-2*jump_B-8*math.pi*momentum)*ell,
+            "vacuum_hamiltonian_max_ell2": ell**2*_maxabs(fields["hamiltonian_residual"]),
+            "vacuum_momentum_max_ell2": ell**2*_maxabs(fields["momentum_residual"]),
+            "transition_mass_max_error_over_ell": _maxabs(fields["mass"]-M)/ell,
+            "bridge_sample_mass_max_error_over_ell": _maxabs(bridge["mass"]-M)/ell,
+            "embedding_spatial_norm_max_error": _maxabs(fields["embedding_spatial_norm"]-1),
+            "embedding_future_normal_norm_max_error": _maxabs(fields["embedding_future_normal_norm"]+1),
+            "taper_bridge_overlap_max_error": float(overlap),
+            "throat_radius_error_over_ell": float(abs(bridge["R"][1]-2*M)/ell),
+            "throat_Rprime_abs": float(abs(bridge["Rprime"][1])),
+            "throat_Rsecond_error_ell": float(abs(bridge["Rsecond"][1]-1/(4*M))*ell),
+            "throat_scalar_ell2": float(bridge["scalar_curvature"][1]*ell**2),
+            "right_end_R_over_ell": float(bridge["R"][2]/ell),
+            "right_end_Rprime": float(bridge["Rprime"][2]),
+            "right_end_scalar_ell2": float(bridge["scalar_curvature"][2]*ell**2),
+            "right_end_mass_error_over_ell": float(abs(bridge["mass"][2]-M)/ell),
+            "right_end_finite": bool(np.isfinite(right_values).all()),
+            "time_symmetric_join": bool(joined),
+            "transition_32_64_distance_max_error_over_ell": _maxabs(distance32-distance64)/ell,
+            "quadrature_comparison_is_rigorous_bound": False,
+            "finite_difference_constraints": finite_difference,
+        },
+        "topology": {
+            "regular_centre": bool(regular_centre),
+            "centre_to_wall_proper_distance_over_ell": Rw/ell,
+            "centre_is_ae_end": not bool(regular_centre),
+            "vacuum_chart_has_two_asymptotic_directions": two_directions,
+            "left_vacuum_end_included": bool(left_included),
+            "retained_bridge_parameter": {"lower": u0, "upper": "+infinity"},
+            "selected_right_end": right_end,
+            "ae_ends": ae_ends,
+            "other_ae_ends_after_selecting_right": ae_ends-int(right_end),
+            "selected_end_is_time_symmetric_vacuum": bool(joined and right_end and M > 0),
+            "adm_mass_over_ell": M/ell,
+        },
+        "geometric_samples": samples,
+        "scope": ("Scalar summary of one sourced cap, wall and vacuum bridge. "
+                  "Not a connector metric, formation history, common-parent solve, or endpoint evolution."),
+    }
 
 
 def connection_slice_record(length_scale=1.0):

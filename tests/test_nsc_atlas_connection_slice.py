@@ -6,8 +6,8 @@ import numpy as np
 import pytest
 
 from recursive_horizons.nsc_atlas_connection_slice import (
-    connection_slice_record, schwarzschild_bridge, smooth_step,
-    transition_proper_distance, vacuum_transition, wall_slice_data,
+    compact_body_summary, connection_slice_record, schwarzschild_bridge,
+    smooth_step, transition_proper_distance, vacuum_transition, wall_slice_data,
 )
 
 
@@ -178,3 +178,104 @@ def test_domain_exit_and_invalid_distance_order_are_rejected():
         transition_proper_distance([1, 1.5], wall)
     with pytest.raises(ValueError):
         transition_proper_distance([1.5, 1], wall, order=1000)
+
+
+@pytest.mark.parametrize(("mass", "taper"), [
+    (.4, 1.5), (.4, .8), (.6, 1.2), (0., 1.), (-.1, 1.),
+    (.4, float("nan")), (float("inf"), 1.2),
+])
+def test_mass_and_taper_must_lie_strictly_between_throat_and_wall(mass, taper):
+    with pytest.raises(ValueError):
+        wall_slice_data(mass_over_ell=mass, taper_stop_over_ell=taper)
+
+
+def test_default_compact_body_matches_historical_checks():
+    record = connection_slice_record()["independent_checks"]
+    row = compact_body_summary()
+    checks = row["checks"]
+    for key in (
+        "boost_unit_max_error", "cap_reconstruction_max_error",
+        "surface_energy_projection_ell_error", "surface_momentum_projection_ell_error",
+        "shell_hamiltonian_delta_ell_error", "shell_momentum_delta_ell_error",
+        "vacuum_hamiltonian_max_ell2", "vacuum_momentum_max_ell2",
+        "embedding_spatial_norm_max_error", "embedding_future_normal_norm_max_error",
+        "transition_32_64_distance_max_error_over_ell", "finite_difference_constraints",
+    ):
+        assert checks[key] == record[key]
+    wall = wall_slice_data()
+    same = wall_slice_data(mass_over_ell=.4, taper_stop_over_ell=1.)
+    assert same["parameters"] == wall["parameters"]
+    for key in ("gamma", "v", "Rprime_plus", "V_plus", "taper_stop", "energy_surface"):
+        assert same[key] == wall[key]
+    assert row["topology"]["regular_centre"] is True
+    assert row["topology"]["ae_ends"] == 1
+    assert row["topology"]["other_ae_ends_after_selecting_right"] == 0
+    assert len(checks["finite_difference_constraints"]) == 2
+    assert "l_over_ell" not in row and "samples" not in row
+
+
+def test_sourced_unequal_body_has_one_end_and_scales():
+    row = compact_body_summary(mass_over_ell=.6, taper_stop_over_ell=1.3)
+    checks = row["checks"]
+    for key in (
+        "boost_unit_max_error", "cap_reconstruction_max_error",
+        "exterior_reconstruction_max_error", "surface_energy_projection_ell_error",
+        "surface_momentum_projection_ell_error", "shell_hamiltonian_delta_ell_error",
+        "shell_momentum_delta_ell_error", "transition_mass_max_error_over_ell",
+        "bridge_sample_mass_max_error_over_ell", "embedding_spatial_norm_max_error",
+        "embedding_future_normal_norm_max_error", "taper_bridge_overlap_max_error",
+        "throat_radius_error_over_ell", "throat_Rprime_abs", "throat_Rsecond_error_ell",
+        "right_end_mass_error_over_ell",
+    ):
+        assert abs(checks[key]) < 1e-12
+    assert abs(checks["throat_scalar_ell2"]) < 1e-12
+    assert abs(checks["right_end_scalar_ell2"]) < 1e-12
+    assert checks["vacuum_hamiltonian_max_ell2"] < 1e-9
+    assert checks["vacuum_momentum_max_ell2"] < 1e-9
+    assert checks["transition_32_64_distance_max_error_over_ell"] < 1e-8
+    for item in checks["finite_difference_constraints"]:
+        assert item["hamiltonian_max_ell2"] < 1e-7
+        assert item["momentum_max_ell2"] < 1e-7
+        assert item["Rsecond_max_ell_error"] < 1e-7
+    assert checks["right_end_finite"] is True
+    assert checks["right_end_Rprime"] > 0
+    assert checks["right_end_R_over_ell"] == pytest.approx(6.)
+    assert checks["time_symmetric_join"] is True
+    assert row["wall"]["Rprime_plus"] < 0
+    assert row["inputs"]["mass_over_ell"] == pytest.approx(.6)
+    assert row["inputs"]["taper_stop_over_ell"] == pytest.approx(1.3)
+    assert row["inputs"]["H_ell"] == pytest.approx(1.)
+    assert row["inputs"]["k_ell"] == pytest.approx(2.)
+    assert row["inputs"]["xi"] == "1/6"
+    assert row["inputs"]["quiet_scalar_amplitude"] == 0.
+    assert row["inputs"]["scalar_field_solves"] == 0
+    topology = row["topology"]
+    assert topology["regular_centre"] is True
+    assert topology["centre_is_ae_end"] is False
+    assert topology["vacuum_chart_has_two_asymptotic_directions"] is True
+    assert topology["left_vacuum_end_included"] is False
+    assert topology["ae_ends"] == 1
+    assert topology["other_ae_ends_after_selecting_right"] == 0
+    assert topology["selected_end_is_time_symmetric_vacuum"] is True
+    assert row["geometric_samples"] <= 100000
+    scaled = compact_body_summary(2.5, mass_over_ell=.6, taper_stop_over_ell=1.3)
+    assert scaled["wall"]["gamma"] == pytest.approx(row["wall"]["gamma"], abs=3e-14)
+    assert scaled["wall"]["v"] == pytest.approx(row["wall"]["v"], abs=3e-14)
+    assert scaled["wall"]["energy_surface_ell"] == pytest.approx(row["wall"]["energy_surface_ell"], abs=3e-12)
+    assert scaled["checks"]["vacuum_hamiltonian_max_ell2"] == pytest.approx(
+        checks["vacuum_hamiltonian_max_ell2"], abs=1e-12)
+    assert scaled["topology"]["ae_ends"] == 1
+
+
+def test_second_wall_agrees_with_independent_closed_form_boost():
+    # Solve the two wall-frame linear equations at H=1,k=2,M=3/5,R=3/2.
+    # These closed forms do not differentiate or reuse the slice evaluator.
+    wall = wall_slice_data(mass_over_ell=.6, taper_stop_over_ell=1.3)
+    root = math.sqrt(40801.)
+    expected = {
+        "Rdot": root/120, "beta_minus": 151/120, "beta_plus": -209/120,
+        "gamma": (3*root-302)/300, "gamma_v": (453-2*root)/300,
+        "Rprime_plus": (402-3*root)/100, "V_plus": (603-2*root)/100,
+    }
+    for key,value in expected.items():
+        assert wall[key] == pytest.approx(value,abs=3e-14)

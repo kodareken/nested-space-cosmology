@@ -1,5 +1,47 @@
 # Prior art and admission of new research
 
+## Unequal sourced inputs for the common parent, 18 October 2026
+
+The geometric reduction needs actual source bodies and their integral moments.
+The retained assembly has one cap-wall body and an unequal vacuum bridge;
+the latter lacks the second cap specified by the programme. Reuse the same
+signed wall and initial-slice construction to supply that input. This advances
+the two-child common-parent construction; it is not another test of whether
+the already evaluated isolated average generates a vacuum term.
+
+Keep the Einstein/conformal-scalar action, quiet scalar, `H*ell=1`,
+`k*ell=2`, `xi=1/6`, wall radius `1.5*ell` and right-end retention sphere
+`4*ell`. Fix object masses `M_A=.4*ell`, `M_B=.6*ell`. Stop the slicing taper
+at `R0_A=ell`, `R0_B=1.3*ell`, both strictly above their own `2M` throat.
+Masses are object data; the taper is a slicing choice. No coupling is
+selected by a target Lambda or an observation. The supplied cap vacuum
+scale remains an input.
+
+Extend the existing connection-slice and geometric-average helpers with
+explicit mass/taper arguments, preserving their default results. Evaluate
+the second body's shell projections, bulk and distributional constraints,
+geometric mass, spacelike transition, regular bridge and exact vacuum end.
+Use the existing independent radial-difference and 32/64 quadrature checks;
+check units and recover the retained default. Retain compact scalar results
+only. For the future parent, report each body's proper volume, expansion
+moment, `J=integral(2 theta^2/3-2 sigma^2)dV`, and wall-inclusive intrinsic
+curvature moment. Sums over disjoint retained bodies are inputs; connector
+moments and a common observer clock are still to be supplied.
+
+Freeze the producer before its physical application. The complete application
+is limited to **30 CPU seconds and 100,000 sampled geometric points** (one
+pointwise jet or quadrature evaluation, counting repeats), with
+zero field solves or evolution steps. Stop on a failed domain, source
+identity, shell, bulk or embedding check, or a declared numerical-comparison
+failure. Construction-identity checks use absolute `1e-8`; the independent
+radial indicators use `1e-7`. The B-only 32/64 moment comparison must stay
+within `1e-7*max(1,abs(moment_64))` in the declared ell units. Budget
+exhaustion produces a diagnosis before any further solve.
+Comparison differences are numerical indicators, not rigorous bounds.
+The end-gluing theorem may then use both checked smooth vacuum overlaps;
+it still supplies no numerical separation threshold, evaluated connector,
+shared future, physical inheritance map or cosmological Lambda.
+
 ## Causal distance and clock comparison, 17 October 2026
 
 The missing observer reduction cannot be supplied by a scalar volume average

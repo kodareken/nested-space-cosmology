@@ -221,3 +221,50 @@ def test_homogeneous_anisotropic_volume_and_length_scaling():
                 'three_volume_acceleration', 'geometric_trace_projection',
                 'geometric_vacuum_condition'):
         assert scaled[key] == pytest.approx(row[key]/2.5**2, rel=1e-11)
+
+
+def test_explicit_defaults_preserve_slice_average():
+    default = geometric_slice_average()
+    explicit = geometric_slice_average(mass_over_ell=.4, taper_stop_over_ell=1.)
+    assert explicit['volume_over_ell3'] == default['volume_over_ell3']
+    assert explicit['integrals_in_ell_units'] == default['integrals_in_ell_units']
+    assert explicit['normalized_sources'] == default['normalized_sources']
+    assert explicit['checks'] == default['checks']
+    assert explicit['domain']['M_over_ell'] == .4
+    assert 'taper_stop_over_ell' not in explicit['domain']
+    assert explicit['domain']['H_ell'] == 1. and explicit['domain']['k_ell'] == 2.
+    assert explicit['domain']['Rwall_over_ell'] == 1.5
+    assert explicit['domain']['Rcut_right_over_ell'] == 4.
+
+
+def test_unequal_body_moments_stay_finite_and_scale():
+    row = geometric_slice_average(mass_over_ell=.6, taper_stop_over_ell=1.3)
+    moments = row['integrals_in_ell_units']
+    J = 2*moments['theta_squared']/3-2*moments['shear_squared']
+    cap_volume = 4*math.pi*1.5**3/3
+    assert row['volume_over_ell3'] > cap_volume
+    assert math.isfinite(J)
+    assert moments['energy_cap'] == pytest.approx(1.6875, abs=1e-12)
+    assert moments['stress_trace_cap'] == pytest.approx(-3*1.6875, abs=1e-12)
+    assert moments['curvature_wall_delta'] > 0
+    assert moments['curvature_bulk']+moments['curvature_wall_delta'] == pytest.approx(
+        moments['curvature_total'], abs=1e-12)
+    assert abs(row['normalized_sources']['hamiltonian_residual']) < 1e-9
+    assert abs(row['checks']['bridge_volume_ell3_difference']) < 1e-8
+    assert row['domain']['M_over_ell'] == pytest.approx(.6)
+    assert row['domain']['taper_stop_over_ell'] == pytest.approx(1.3)
+    assert row['domain']['H_ell'] == 1. and row['domain']['k_ell'] == 2.
+    assert row['domain']['Rwall_over_ell'] == 1.5
+    assert row['domain']['Rcut_right_over_ell'] == 4.
+    assert row['spatial_evaluations'] <= 20000
+    assert 'four-tensor' in row['scope']
+    scaled = geometric_slice_average(length_scale=3.7, mass_over_ell=.6, taper_stop_over_ell=1.3)
+    assert scaled['volume_over_ell3'] == pytest.approx(row['volume_over_ell3'], rel=2e-10, abs=5e-11)
+    for key, value in scaled['normalized_sources'].items():
+        assert value == pytest.approx(row['normalized_sources'][key], abs=5e-11, rel=2e-10)
+    for key in ('theta', 'theta_squared', 'shear_squared', 'curvature_total',
+                'energy_cap', 'energy_wall', 'stress_trace_wall'):
+        assert scaled['integrals_in_ell_units'][key] == pytest.approx(
+            moments[key], rel=2e-10, abs=1e-8)
+    with pytest.raises(ValueError):
+        geometric_slice_average(mass_over_ell=.6, taper_stop_over_ell=1.2)

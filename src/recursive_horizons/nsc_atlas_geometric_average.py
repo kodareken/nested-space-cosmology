@@ -202,14 +202,18 @@ def _bridge_primitive(u):
             +math.sinh(6*u)/192)
 
 
-def geometric_slice_average(*, length_scale=1., quadrature='gauss64'):
+def geometric_slice_average(*, length_scale=1., quadrature='gauss64',
+                            mass_over_ell=.4, taper_stop_over_ell=1.0):
     """One finite domain: centre to the right-end sphere Rcut/ell=4.
 
-    Alternatives are quadrature controls at this same domain, not a family
-    of geometries. Budget: 30 CPU seconds and 20,000 sampled spatial points.
-    The stress and curvature delta are integrated exactly before averaging.
+    Mass and the vacuum taper stop select the sourced body and its slicing.
+    H, k, the wall radius and the right cut stay fixed. Quadrature choices
+    are controls at that one domain, not a family of geometries. Budget:
+    30 CPU seconds and 20,000 sampled spatial points. The stress and
+    curvature delta are integrated exactly before averaging.
     """
-    wall = wall_slice_data(length_scale)
+    wall = wall_slice_data(length_scale, mass_over_ell=mass_over_ell,
+                           taper_stop_over_ell=taper_stop_over_ell)
     ell, params = wall['ell'], wall['parameters']
     Rw, R0, M = wall['R'], wall['taper_stop'], params.mass
     started, evaluations = time.process_time(), 0
@@ -265,7 +269,7 @@ def geometric_slice_average(*, length_scale=1., quadrature='gauss64'):
                                      Ecap+Ewall, -3*Ecap+Swall)
     if time.process_time()-started > 30:
         raise RuntimeError('slice-average CPU budget exhausted')
-    return {
+    record = {
         'schema': 'nsc-atlas-geometric-slice-average-v1',
         'domain': {'Rwall_over_ell': 1.5, 'Rcut_right_over_ell': 4.,
                    'H_ell': H, 'k_ell': params.k*ell, 'M_over_ell': M/ell},
@@ -290,3 +294,6 @@ def geometric_slice_average(*, length_scale=1., quadrature='gauss64'):
         'quadrature': quadrature, 'spatial_evaluations': evaluations,
         'scope': 'Scalar fitting coefficients of one fixed sourced initial slice; no four-tensor vacuum or cosmological prediction.',
     }
+    if mass_over_ell != .4 or taper_stop_over_ell != 1.:
+        record['domain']['taper_stop_over_ell'] = R0/ell
+    return record
