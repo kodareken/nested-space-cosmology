@@ -35,8 +35,9 @@ ordinary tests and Git history without a separate scientific claim process.
 Step 7's classical trace and local quantum curvature/interface calculations
 are now complete within their stated domains. The scalar anomaly alone does
 not generate a nonzero small-curvature cap without the supplied volume term.
-The next calculation constructs the actual exterior causal boundary response
-needed by the Schur reduction. Quantum covariance selection and geometric
+The actual exterior causal field response is now implemented on the quiet
+wedge for angular degrees 0-3. The remaining gravitational reduction needs
+its state or averaging prescription. Quantum covariance selection and geometric
 averaging introduce additional physical data; they are not silently fixed
 by the completed local coefficients. Continue the existing endpoint runs
 while developing this necessary operator connection.

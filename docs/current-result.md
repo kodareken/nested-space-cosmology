@@ -10,8 +10,8 @@ reuses the current candidate's exact improved-stress trace. It gives
 including nonzero pulses. The supplied cap term `Lambda0 * ell^2 = 3`
 is separate. Independent Jordan/Einstein-frame algebra and seven checks
 against the implemented mixed metric equations pass. This resolves that
-classical contribution; quantum stress, geometric averaging and a physical
-Schur-to-exterior identification remain to be specified. The three P001
+classical contribution; full quantum stress, geometric averaging and the
+gravitational Schur-to-exterior identification remain open. The three P001
 endpoint evolutions continue unchanged.
 
 A [conditional quantum extension](schur-memory.md#step-7-conditional-quantum-curvature-contribution)

@@ -7,7 +7,7 @@
   "constant_curvature_trace_residual": "-X**2*zeta/(960*pi**2) + 3*X - lambda0",
   "constant_source": "https://physics.nist.gov/cuu/pdf/wall_2022.pdf",
   "curved_root_H2_planck_length2": "360*pi",
-  "domain": "Smooth quiet cap and Schwarzschild exterior; formal quiet-interface polynomial.",
+  "domain": "Classical smooth on-shell bulk; quantum terms on the smooth quiet cap and Schwarzschild exterior; formal quiet-interface polynomial.",
   "fiducial_SI_inputs": {
     "G_SI": "66743/1000000000000000",
     "G_standard_uncertainty_SI": "3/2000000000000000",
@@ -41,7 +41,7 @@
   "reproduce": "python scripts/run_python.py scripts/record_nsc_atlas_effective_vacuum.py --output results/summaries/nsc-atlas-effective-vacuum-v1.json",
   "schema": "nsc-atlas-effective-vacuum-v1",
   "source_sha256": {
-    "scripts/record_nsc_atlas_effective_vacuum.py": "f16459dc4dc0226a4efa2c0dbfbe005bada9f35304e42b67b2fdc78d1da80ad2",
+    "scripts/record_nsc_atlas_effective_vacuum.py": "786fa01a77e015dffbd31fb895af343a59b738fb7ae9b9b894a0ca311af7e9da",
     "src/recursive_horizons/nsc_atlas_effective_vacuum.py": "00f2e16eddca11f3abfb3e697aa97fb789a0b1b1bc0c8c2fc1a47a7364bc7280",
     "tests/test_nsc_atlas_effective_vacuum.py": "cee1dd046c14722becb837dd1116a44b5e11fc34019e4dfbfdc2ae55e8b56ef0"
   },

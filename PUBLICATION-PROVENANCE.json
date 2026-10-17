@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 369858,
+      "bytes": 369859,
       "path": "docs/current-result.md",
-      "sha256": "f9da4df0d5b0cc52602d193eb4a54e68670590fe30e4b5b6e14b9046f1c580af"
+      "sha256": "6401d28e7cd075947d879e0a7b80d3de4ae10a80633f34357b512ddd1a4c6c75"
     },
     {
       "bytes": 2481,
@@ -1558,7 +1558,7 @@
     {
       "bytes": 2356024,
       "path": "docs/lab-snapshot.json",
-      "sha256": "c614f03c5f6431d92ac6e0bee1eeff39ae7f9e624d102decc029dea1adab24af"
+      "sha256": "f5dc0f8046307ead736717ebcd987d8b03b1867c7fbd3178e98749aab9679998"
     },
     {
       "bytes": 4997,
@@ -1716,9 +1716,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 54909,
+      "bytes": 54987,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "2db535530a823636b29174d4661e3f20f4f2900c95ae000467f0dd44e429dbae"
+      "sha256": "86c6cc6be58b2e79e6fa06dc0a9ecfacf3d79e10636cd19aed82ce7fd708496a"
     },
     {
       "bytes": 30876,
@@ -2318,7 +2318,7 @@
     {
       "bytes": 18604,
       "path": "paper/build-manifest.json",
-      "sha256": "5854715b07bfefd254bd9bfb07b339b5ad50b3d953919b1d117832ebb4d3f50d"
+      "sha256": "6fcf8e84f69a91880589e7d25fe6b075a7f4afe0ac0dc2f90faa66da36541bf6"
     },
     {
       "bytes": 3206,
@@ -2556,9 +2556,9 @@
       "sha256": "07985c52e04d91c78ccd02a199566f2accb2d7042f8cddbadd5274c128484bbe"
     },
     {
-      "bytes": 3029999,
+      "bytes": 3029996,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "7278baa068262427335b7c632cb7463e59fc4a4bc5d043ebdfb3a66c6b772a0e"
+      "sha256": "281b95dff69b4569fdc1a963aa739fea8f2a534da0cbfa3cad944c967cadbbd0"
     },
     {
       "bytes": 1521,
@@ -14616,9 +14616,9 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
-      "bytes": 4581,
+      "bytes": 4634,
       "path": "results/summaries/nsc-atlas-effective-vacuum-v1.json",
-      "sha256": "31a30e4c9e1f0a20053736904a479a7f6682193b797a8c12ea60b281893ee338"
+      "sha256": "b0e28da4ecce9cc187f00a9d008ff8de24182afa2230017e57251519a5b6736f"
     },
     {
       "bytes": 30591,
@@ -16506,9 +16506,9 @@
       "sha256": "8d8303f01585997c1a9f42f33259dfc299951d3bf5e7cc70a94d67987f081919"
     },
     {
-      "bytes": 4272,
+      "bytes": 4325,
       "path": "scripts/record_nsc_atlas_effective_vacuum.py",
-      "sha256": "f16459dc4dc0226a4efa2c0dbfbe005bada9f35304e42b67b2fdc78d1da80ad2"
+      "sha256": "786fa01a77e015dffbd31fb895af343a59b738fb7ae9b9b894a0ca311af7e9da"
     },
     {
       "bytes": 19241,
@@ -21506,7 +21506,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "c614f03c5f6431d92ac6e0bee1eeff39ae7f9e624d102decc029dea1adab24af",
+  "lab_snapshot_sha256": "f5dc0f8046307ead736717ebcd987d8b03b1867c7fbd3178e98749aab9679998",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

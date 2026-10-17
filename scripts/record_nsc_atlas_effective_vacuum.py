@@ -37,7 +37,7 @@ def main():
     root = Path(__file__).resolve().parents[1]
     record = {
         'schema': 'nsc-atlas-effective-vacuum-v1',
-        'domain': 'Smooth quiet cap and Schwarzschild exterior; formal quiet-interface polynomial.',
+        'domain': 'Classical smooth on-shell bulk; quantum terms on the smooth quiet cap and Schwarzschild exterior; formal quiet-interface polynomial.',
         'classical_added_lambda_Lref_squared': str(classical['induced_lambda_Lref_squared']),
         'quantum_assumption': 'One free real four-dimensional massless conformal scalar, Hadamard bulk state, local covariant renormalization.',
         'quantum_cap_coefficient_of_zeta': str(anomaly['cap_coefficient']),

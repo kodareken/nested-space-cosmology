@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0747487bba89ef69531696b70edcfa3c6a04a1ff",
+  "current_receipt_commit_parent": "e652d151e6d9d65751d21af09265e4f60b5947a0",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 369858,
+      "bytes": 369859,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "0747487bba89ef69531696b70edcfa3c6a04a1ff",
+      "changed_from_commit": "e652d151e6d9d65751d21af09265e4f60b5947a0",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "f9da4df0d5b0cc52602d193eb4a54e68670590fe30e4b5b6e14b9046f1c580af"
+      "sha256": "6401d28e7cd075947d879e0a7b80d3de4ae10a80633f34357b512ddd1a4c6c75"
     },
     {
       "bytes": 18915,
@@ -10458,15 +10458,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 54909,
+      "bytes": 54987,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "0747487bba89ef69531696b70edcfa3c6a04a1ff",
+      "changed_from_commit": "e652d151e6d9d65751d21af09265e4f60b5947a0",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "2db535530a823636b29174d4661e3f20f4f2900c95ae000467f0dd44e429dbae"
+      "sha256": "86c6cc6be58b2e79e6fa06dc0a9ecfacf3d79e10636cd19aed82ce7fd708496a"
     },
     {
       "bytes": 30876,
@@ -11516,10 +11516,10 @@
     {
       "bytes": 18604,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "0747487bba89ef69531696b70edcfa3c6a04a1ff",
+      "changed_from_commit": "e652d151e6d9d65751d21af09265e4f60b5947a0",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5854715b07bfefd254bd9bfb07b339b5ad50b3d953919b1d117832ebb4d3f50d"
+      "sha256": "6fcf8e84f69a91880589e7d25fe6b075a7f4afe0ac0dc2f90faa66da36541bf6"
     },
     {
       "bytes": 3206,
@@ -11554,12 +11554,12 @@
       "sha256": "07985c52e04d91c78ccd02a199566f2accb2d7042f8cddbadd5274c128484bbe"
     },
     {
-      "bytes": 3029999,
+      "bytes": 3029996,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "0747487bba89ef69531696b70edcfa3c6a04a1ff",
+      "changed_from_commit": "e652d151e6d9d65751d21af09265e4f60b5947a0",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7278baa068262427335b7c632cb7463e59fc4a4bc5d043ebdfb3a66c6b772a0e"
+      "sha256": "281b95dff69b4569fdc1a963aa739fea8f2a534da0cbfa3cad944c967cadbbd0"
     },
     {
       "bytes": 3283,
@@ -29687,12 +29687,12 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
-      "bytes": 4581,
+      "bytes": 4634,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "0747487bba89ef69531696b70edcfa3c6a04a1ff",
+      "changed_from_commit": "e652d151e6d9d65751d21af09265e4f60b5947a0",
       "path": "results/summaries/nsc-atlas-effective-vacuum-v1.json",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "31a30e4c9e1f0a20053736904a479a7f6682193b797a8c12ea60b281893ee338"
+      "sha256": "b0e28da4ecce9cc187f00a9d008ff8de24182afa2230017e57251519a5b6736f"
     },
     {
       "bytes": 30591,
@@ -32784,12 +32784,12 @@
       "sha256": "f68ba93c371d54b6e7b95b1a85a5ec0b6c164af8f0113bcb64d28ed964808c3e"
     },
     {
-      "bytes": 4272,
+      "bytes": 4325,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "0747487bba89ef69531696b70edcfa3c6a04a1ff",
+      "changed_from_commit": "e652d151e6d9d65751d21af09265e4f60b5947a0",
       "path": "scripts/record_nsc_atlas_effective_vacuum.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "f16459dc4dc0226a4efa2c0dbfbe005bada9f35304e42b67b2fdc78d1da80ad2"
+      "sha256": "786fa01a77e015dffbd31fb895af343a59b738fb7ae9b9b894a0ca311af7e9da"
     },
     {
       "bytes": 21063,
