@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
+  "current_receipt_commit_parent": "72e4d7b68ca2eadd8870a64eeccbb88b73d46443",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 226507,
-      "change": "Carry optional interior-jet history enrichment through runtime and original-input certificates.",
-      "changed_from_commit": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
+      "bytes": 227039,
+      "change": "Derive and independently check whole-cell source representation bounds for the six exterior inputs.",
+      "changed_from_commit": "72e4d7b68ca2eadd8870a64eeccbb88b73d46443",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "ebdc5367a123a77c6905b84ce1f90834689d1edb1606a2581a322f7a73a5dc36"
+      "sha256": "40310692b01d4429c8562ebd938f445729273d1d1b8d49ba343fb90ec1069af0"
     },
     {
       "bytes": 9543,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 324573,
-      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
-      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
+      "bytes": 327906,
+      "change": "Derive and independently check whole-cell source representation bounds for the six exterior inputs.",
+      "changed_from_commit": "72e4d7b68ca2eadd8870a64eeccbb88b73d46443",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "65efe79029d894ecdcb4c00faabfc1e5f5e756ae5c539e144508fa3a04e2705b"
+      "sha256": "7380567fc9a868a253b90c1992fe15c11048e03f5294d87352675add7bb9980d"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 363008,
-      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
-      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
+      "bytes": 365862,
+      "change": "Derive and independently check whole-cell source representation bounds for the six exterior inputs.",
+      "changed_from_commit": "72e4d7b68ca2eadd8870a64eeccbb88b73d46443",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0591b20902f25b366d3f3cd6419d1351afee8d921bf8897ecc2f7780a3d0a067"
+      "sha256": "264c62b566bfb01c9ecbc40e88dc66f86bb7586e542a03ed9a6082ef1e7a6f2f"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 115963,
-      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
-      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
+      "bytes": 116734,
+      "change": "Derive and independently check whole-cell source representation bounds for the six exterior inputs.",
+      "changed_from_commit": "72e4d7b68ca2eadd8870a64eeccbb88b73d46443",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e8bd8840e39f3f022bbc7b2b8061d0793c3811d9dbfc44784a09368fb61d66a2"
+      "sha256": "3fbc416e98b98d5c858f2c3838e438e38ebb97c0a92297536c2e80fda76ad691"
     },
     {
       "bytes": 18356,
@@ -29763,6 +29763,13 @@
       "sha256": "ecf8bdedae17d7816708debcb8c400af94e3a8bf4f6ca27ff32a514fa677d1e5"
     },
     {
+      "bytes": 5174,
+      "change": "Derive and independently check whole-cell source representation bounds for the six exterior inputs.",
+      "changed_from_commit": "72e4d7b68ca2eadd8870a64eeccbb88b73d46443",
+      "path": "scripts/check_nsc_atlas_source_cell_bound.py",
+      "sha256": "1234daad6583c40bcd4a985d11dbdc7cac493023ea77a6f2f73e7961e7acc6f4"
+    },
+    {
       "bytes": 2304,
       "import_bytes": 2304,
       "import_sha256": "43812275230b2104ed20dedfa283c3ff90667e8b01a655f3f25ff10712a8768e",
@@ -32767,6 +32774,13 @@
       "path": "src/recursive_horizons/nsc_atlas_source_bindings.py",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
       "sha256": "e6d311c2311c19143bc678141cd6ca15200f139aec42a127ad54ce109d077863"
+    },
+    {
+      "bytes": 9064,
+      "change": "Derive and independently check whole-cell source representation bounds for the six exterior inputs.",
+      "changed_from_commit": "72e4d7b68ca2eadd8870a64eeccbb88b73d46443",
+      "path": "src/recursive_horizons/nsc_atlas_source_cell_bound.py",
+      "sha256": "d29925224a286ef8af810d7aadf5f02081c08c37bf385ad65685f5944b69bdcd"
     },
     {
       "bytes": 24515,
@@ -36394,6 +36408,13 @@
       "path": "tests/test_nsc_atlas_retained_onset.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "6a0e36bd6cd942834d0a222041d8d3c8db4d45c4a5e49264980cf1f048d4be3b"
+    },
+    {
+      "bytes": 5437,
+      "change": "Derive and independently check whole-cell source representation bounds for the six exterior inputs.",
+      "changed_from_commit": "72e4d7b68ca2eadd8870a64eeccbb88b73d46443",
+      "path": "tests/test_nsc_atlas_source_cell_bound.py",
+      "sha256": "51fed6cfbcd6b2128e36678f1287cee8ee14b693505d9894946a2e63fac8ee79"
     },
     {
       "bytes": 14569,

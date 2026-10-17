@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 226507,
+      "bytes": 227039,
       "path": "docs/active-code-map.md",
-      "sha256": "ebdc5367a123a77c6905b84ce1f90834689d1edb1606a2581a322f7a73a5dc36"
+      "sha256": "40310692b01d4429c8562ebd938f445729273d1d1b8d49ba343fb90ec1069af0"
     },
     {
       "bytes": 95327,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2291486,
+      "bytes": 2292606,
       "path": "docs/lab-snapshot.json",
-      "sha256": "0e338c457901eaf2d3d66fe463e6bdf1417afab35c01138831702d148623167c"
+      "sha256": "b1615aac9f4eaa3b85d238461d6fbb9bd4a4b7170693b962ba0eb001952db487"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 324573,
+      "bytes": 327906,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "65efe79029d894ecdcb4c00faabfc1e5f5e756ae5c539e144508fa3a04e2705b"
+      "sha256": "7380567fc9a868a253b90c1992fe15c11048e03f5294d87352675add7bb9980d"
     },
     {
       "bytes": 8895,
@@ -2201,9 +2201,9 @@
       "sha256": "7e7c50e31cf42ae37ee780d56873aa013596d70d1e1c3ab8f138112d3dd4b4ed"
     },
     {
-      "bytes": 363008,
+      "bytes": 365862,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "0591b20902f25b366d3f3cd6419d1351afee8d921bf8897ecc2f7780a3d0a067"
+      "sha256": "264c62b566bfb01c9ecbc40e88dc66f86bb7586e542a03ed9a6082ef1e7a6f2f"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 115963,
+      "bytes": 116734,
       "path": "docs/reproducing.md",
-      "sha256": "e8bd8840e39f3f022bbc7b2b8061d0793c3811d9dbfc44784a09368fb61d66a2"
+      "sha256": "3fbc416e98b98d5c858f2c3838e438e38ebb97c0a92297536c2e80fda76ad691"
     },
     {
       "bytes": 31710,
@@ -14806,6 +14806,11 @@
       "sha256": "ecf8bdedae17d7816708debcb8c400af94e3a8bf4f6ca27ff32a514fa677d1e5"
     },
     {
+      "bytes": 5174,
+      "path": "scripts/check_nsc_atlas_source_cell_bound.py",
+      "sha256": "1234daad6583c40bcd4a985d11dbdc7cac493023ea77a6f2f73e7961e7acc6f4"
+    },
+    {
       "bytes": 2304,
       "path": "scripts/check_nsc_boundary_response.py",
       "sha256": "43812275230b2104ed20dedfa283c3ff90667e8b01a655f3f25ff10712a8768e"
@@ -16899,6 +16904,11 @@
       "bytes": 4099,
       "path": "src/recursive_horizons/nsc_atlas_source_bindings.py",
       "sha256": "e6d311c2311c19143bc678141cd6ca15200f139aec42a127ad54ce109d077863"
+    },
+    {
+      "bytes": 9064,
+      "path": "src/recursive_horizons/nsc_atlas_source_cell_bound.py",
+      "sha256": "d29925224a286ef8af810d7aadf5f02081c08c37bf385ad65685f5944b69bdcd"
     },
     {
       "bytes": 11471,
@@ -19091,6 +19101,11 @@
       "sha256": "291ce46db838898550a7a428502967fd79d242bb6e1173a7220955ccf4f92f4d"
     },
     {
+      "bytes": 5437,
+      "path": "tests/test_nsc_atlas_source_cell_bound.py",
+      "sha256": "51fed6cfbcd6b2128e36678f1287cee8ee14b693505d9894946a2e63fac8ee79"
+    },
+    {
       "bytes": 12850,
       "path": "tests/test_nsc_atlas_source_mass.py",
       "sha256": "8de7d4f1dd62fcc3ea84fae5926135e15ff3da8a6b3c02da79525c160a9a3646"
@@ -20896,7 +20911,7 @@
       "sha256": "ccc0b88083622a77535cda2d80a715d387589c9f6f98b1ddc2cdc73b4e8f1a34"
     }
   ],
-  "lab_snapshot_sha256": "0e338c457901eaf2d3d66fe463e6bdf1417afab35c01138831702d148623167c",
+  "lab_snapshot_sha256": "b1615aac9f4eaa3b85d238461d6fbb9bd4a4b7170693b962ba0eb001952db487",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

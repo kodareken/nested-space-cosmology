@@ -2438,6 +2438,51 @@ This supports the transfer diagnosis and ends this scalar-interpolation
 comparison. Continuous source/exterior error bounds and the coupled
 finite-domain estimate remain the next work.
 
+### Whole-cell source representation bound, 17 October 2026
+
+After the enriched scalar comparison, the source interpolation error remains
+an input to the coupled validity estimate. `exterior_departure_stage` and
+`departure_slice` consume `r, log_C, c, r_x, log_C_x, c_x`; the saved
+transverse splines are not inputs to that evolution. Bound these six source
+quantities on the original first active cell before changing any source or
+running another trajectory.
+
+Use the actual binary coefficients of `SourceSnapshot`'s cubic, its original
+cell endpoints and compact pulse. Its left h and h' are exactly zero. The
+borrowed mathematical tools are the integral remainder for a second-order
+ODE, interval arithmetic and the mean-value theorem. Enclose the cubic's
+own residual against `h''=Q(x,h,h')`; do not replace its second derivative
+with Q. Split only at the already declared source front, enclosing the
+analytic compact support and any tiny front-mask difference explicitly.
+With cell length l and derivative bounds Lh,Lw, prove the common positive
+radius tube and require `theta=Lh*l^2/2+Lw*l<1`. Then the radial errors are
+bounded by `l^2*D/[2*(1-theta)]` and `l*D/(1-theta)`, where D encloses the
+whole-cell residual. Convert these errors to the six used frame quantities.
+
+The certificate concerns the exact polynomials with binary inputs and
+analytic source formulas. Floating evaluation and the coupled exterior
+evolution still need their own error account. Use the current operators and
+original source; no new source integration, stage, grid, amplitude or time
+evolution is admitted. Develop the helper and independent algebra, exact
+manufactured ODE and original-input enclosure controls within **150,000
+charged values / 15 active process-CPU seconds**. After those pass and the
+source is frozen, allow one **100,000-value / 30 process-CPU-second** physical
+cell certificate. Save finite outward bounds, input/source hashes and the
+two panel summaries. If the tube or theta cannot be certified, retain that
+diagnosis before designing another calculation.
+
+**Development:** six controls pass in eleven executions, plus one manufactured
+arithmetic diagnostic: 120,144 recorded values / 0.40625 active CPU seconds.
+The first four controls passed; two interval-box controls exposed positive
+denominators widened through zero by repeated ball powers. Monotone endpoint
+powers preserve the known positive floors. The two repaired controls and
+independent high-precision frame derivative control then passed. Charging
+was moved before the interval calculations so failures are counted too;
+two affected controls passed again. A conservative further 8,192-value
+allowance covers the initially uncharged failing frame work, giving a
+128,336-value total ceiling. No physical source, original-cell certificate
+or time evolution was run in this stage.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

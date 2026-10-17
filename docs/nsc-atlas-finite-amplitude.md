@@ -5635,6 +5635,79 @@ The corrected comparison uses the absolute coefficient scale under
 cancellation. Source coefficients and queries are unchanged. Neither
 attempt integrated a source or evolved a physical state.
 
+#### Whole-cell source representation bound
+
+The [source-cell component](../src/recursive_horizons/nsc_atlas_source_cell_bound.py)
+converts the interpolation residual into errors in the six quantities used
+by the actual exterior stage: `r, log_C, c, r_x, log_C_x, c_x`.
+`departure_slice` reconstructs its transverse jets from the evolved exterior
+state; the separate source transverse splines are not inputs to this map.
+
+Let `a,b` be the original cell endpoints, `l=b-a`, and let h-tilde be the
+actual cubic defined by the stored binary `SourceSnapshot` coefficients.
+The exact source obeys
+
+\[
+ h''=Q(x,h,h'),\qquad Q=\frac{gg''-2g'^2}{6s}+\frac{gg'v}{3s^2},
+ \qquad s=x+\alpha h,\quad v=1+\alpha h'.
+\]
+
+Its left h and h' vanish because the analytic pulse is quiet there. The
+saved polynomial has exactly that left jet. On a common tube with
+`s>=s_min`, `|v|<=v_max`, take uniform pulse bounds G0,G1,G2. Then
+
+\[
+ L_h=\frac{\alpha(G_0G_2+2G_1^2)}{6s_{\min}^2}
+       +\frac{2\alpha G_0G_1v_{\max}}{3s_{\min}^3},\qquad
+ L_w=\frac{\alpha G_0G_1}{3s_{\min}^2}
+\]
+
+bound the two partial derivatives of Q. Enclose the actual polynomial
+residual `D=ess sup |h_tilde''-Q(x,h_tilde,h_tilde')|`. For the error e,
+integration of `|e''|<=D+Lh|e|+Lw|e'|` twice gives
+
+\[
+ \theta=L_hl^2/2+L_wl<1\quad\Longrightarrow\quad
+ \boxed{\|e\|_\infty\le\frac{l^2D}{2(1-\theta)},\qquad
+ \|e'\|_\infty\le\frac{lD}{1-\theta}.}
+\]
+
+These are source representation bounds, not a coupled stability estimate.
+A source continuation argument
+uses the corresponding bound Qmax on |Q|: the inequalities
+`a-alpha*l^2*Qmax/2>s_min` and `1+alpha*l*Qmax<v_max`, together with
+`1-alpha*G0^2/(6*s_min^2)>F_min`, keep the exact solution in the tube.
+The polynomial is separately enclosed in that same tube.
+
+The frame map is
+
+\[
+ F=1-\frac{\alpha g^2}{6s^2},\quad r=\sqrt{s^2-\alpha g^2/6},\quad
+ L=\log F,\quad r_x=\frac{sv-\alpha gg'/6}{r},\quad
+ L_x=-\frac{\alpha}{3F}\left(\frac{gg'}{s^2}-\frac{g^2v}{s^3}\right).
+\]
+
+Its interval Jacobian in `(s,v,g,g')` converts the radial error bounds to
+the used frame quantities. The declared front can differ slightly from
+the exact analytic support root. The calculation encloses the compact
+pulse on the intersection of its coordinate interval with `[-1,1]`, adds
+zero for the quiet branch, and separately bounds the sliver omitted by
+the snapshot's additional declared-front mask. It does not set the exact
+analytic field to zero at a rounded front.
+
+Arb at 160 bits uses just the two original panels separated by that front.
+Endpoint powers preserve positive denominator bounds; repeated wide-ball
+multiplication must not erase a known positive floor. Six independent
+controls now pass in eleven development executions, including one diagnosed
+interval-dependency failure, plus a small arithmetic diagnostic. Recorded
+charges are 120,144 values; allowing a further 8,192 for the two initially
+uncharged failing frame evaluations gives 128,336 within the admitted
+150,000-value ceiling. Active CPU totals 0.40625 seconds. Charges now precede
+the interval work, including failures. The controls include
+symbolic Q derivatives, a closed-form forced ODE, 85-digit independent frame
+derivatives and compact-source jets, zero-coupling recovery and rejected
+domains. No physical source or trajectory has been replayed for them.
+
 ### First retained-source fixed-cap interval
 
 The [exact small-matrix helper](../src/recursive_horizons/nsc_atlas_cap_linear_bound.py)
