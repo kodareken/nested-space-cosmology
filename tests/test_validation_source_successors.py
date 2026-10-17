@@ -176,6 +176,8 @@ def test_only_explicit_package_path_is_eligible():
     assert tool._source_path("src/recursive_horizons/nsc_atlas_refined_cache.py")
     assert not tool._source_path("src/recursive_horizons/nsc_atlas_nonlinear_source.py")
     assert tool._source_path("src/recursive_horizons/nsc_atlas_cap_response.py")
+    assert tool._source_path("src/recursive_horizons/nsc_atlas_connection_slice.py")
+    assert not tool._source_path("src/recursive_horizons/nsc_atlas_connection_observer.py")
     assert not tool._source_path("scripts/data.json")
     for name in ("nsc_atlas_cap_field", "nsc_atlas_background_profile", "nsc_atlas_prepared_response",
                  "nsc_atlas_characteristic_background"):
@@ -269,3 +271,15 @@ def test_compact_summary_preserves_reviewed_original_with_or_without_raw(history
     changed=json.loads(saved);changed['producer_bindings'][name]['bytes']+=1
     output.write_bytes(summary.encoded(changed))
     with pytest.raises(ValueError,match='byte count'): summary.check_summary(output,root=root)
+
+
+def test_connection_slice_accepts_only_the_reviewed_hash_pair():
+    root = Path(__file__).resolve().parents[1]
+    name = "src/recursive_horizons/nsc_atlas_connection_slice.py"
+    original = "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832"
+    current = (root / name).read_bytes()
+    authenticated = tool.verify_saved_source(name, original, root)
+    assert sha(authenticated) == original and authenticated != current
+    assert tool.verify_saved_source(name, sha(current), root) == current
+    with pytest.raises(ValueError, match="unregistered"):
+        tool.verify_saved_source(name, sha(b"unreviewed connection slice"), root)

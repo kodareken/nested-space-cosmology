@@ -435,6 +435,26 @@ A successful older run is evidence for that commit, not for a newer queued one.
 
 ## Current work
 
+The next two-level composition uses the same quiet membrane law at both
+boundaries. Its tests do not run the full physical record:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_nested_slice.py tests/test_nsc_atlas_nested_spacetime.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_nested_slice.py --output .build/nsc-atlas-nested-slice-reproduction.json
+python scripts/run_python.py scripts/plot_nsc_atlas_nested_slice.py --input .build/nsc-atlas-nested-slice-reproduction.json --output .build/nsc-atlas-nested-slice-reproduction.png
+```
+
+Freeze the producer and its listed sources before the application; both
+output paths must be new. The twenty controls cover the junctions, bulk
+curvature, horizons, units and cap-side detector clock. The complete scalar
+record is limited to 30 KB and retains its one 32/64 comparison, source
+hashes, inputs and finite domain. The figure regenerates the radial curve
+with fixed quadrature and checks its endpoint against the compact record;
+it is a radius profile rather than a Euclidean embedding or a causal diagram.
+The [owner](nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
+defines the model and central flash. Neither a new cosmological vacuum
+value nor a complete two-wall clock atlas is supplied by these commands.
+
 The two unequal sourced parent inputs have a compact scalar record:
 
 ```sh

@@ -9,6 +9,8 @@ import json
 import math
 from pathlib import Path
 
+from validation_source_successors import verify_saved_bindings, verify_saved_source
+
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "nsc-atlas-source-mass-v1"
 MANIFEST_SCHEMA = SCHEMA+"-manifest"
@@ -16,6 +18,7 @@ OWNER = "docs/nsc-atlas-source-mass.md"
 PRODUCER = "scripts/record_nsc_atlas_source_mass.py"
 MODULE = "src/recursive_horizons/nsc_atlas_source_mass.py"
 TESTS = "tests/test_nsc_atlas_source_mass.py"
+SOURCE_PATHS = (OWNER, PRODUCER, MODULE, TESTS)
 RELATIVE_OUTPUT = "results/development/nsc-atlas-source-mass-v1"
 DEFAULT = ROOT / RELATIVE_OUTPUT
 ADAPTERS = tuple("src/recursive_horizons/"+name+".py" for name in (
@@ -66,7 +69,14 @@ def read_relative(relative):
 
 
 def source_bindings():
-    return {path: sha(read_relative(path)) for path in sorted((OWNER, PRODUCER, MODULE, TESTS))}
+    return {path: sha(read_relative(path)) for path in sorted(SOURCE_PATHS)}
+
+
+def _require_saved_source(source, expected, label):
+    try:
+        verify_saved_source(source, expected, ROOT)
+    except ValueError as error:
+        raise ValueError(label) from error
 
 
 def authenticate_prerequisites():
@@ -93,8 +103,8 @@ def authenticate_prerequisites():
             raise ValueError("prerequisite atlas binding mismatch")
         borrowed = ADAPTERS if key == "v8" else tuple(manifest["source_bindings"]) if key == "initialization" else ()
         for source in borrowed:
-            if sha(read_relative(source)) != manifest["source_bindings"][source]:
-                raise ValueError("current source differs from explicitly borrowed context: "+source)
+            _require_saved_source(source, manifest["source_bindings"][source],
+                "current source differs from explicitly borrowed context: "+source)
         records[key] = payloads
         bindings[key] = {"manifest": relative, "manifest_sha256": sha(raw),
                          "authenticated_outputs": deepcopy(manifest["outputs"]),
@@ -244,8 +254,10 @@ def check(directory):
     manifest = json.loads((directory / "manifest.json").read_bytes())
     if manifest.get("schema") != MANIFEST_SCHEMA:
         raise ValueError("source mass manifest schema mismatch")
-    if manifest.get("source_bindings") != source_bindings():
-        raise ValueError("source mass source binding mismatch")
+    try:
+        verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCE_PATHS)
+    except ValueError as error:
+        raise ValueError("source mass source binding mismatch") from error
     header, prerequisites = declaration()
     if manifest.get("prerequisite_bindings") != prerequisites:
         raise ValueError("source mass prerequisite binding mismatch")

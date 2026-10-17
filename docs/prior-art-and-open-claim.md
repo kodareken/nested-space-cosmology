@@ -1,5 +1,41 @@
 # Prior art and admission of new research
 
+## Two successive sourced boundaries, 18 October 2026
+
+The next missing connection is an actual second nesting level under the
+quiet Einstein/conformal-scalar and membrane law. Reuse the signed wall,
+spherical constraint identities and smooth slicing step. A Kottler host
+adds a cosmological horizon and a second boundary; it is not another
+precision pass on the completed one-body calculation. The
+[connection owner](nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
+fixes all three regions, two wall events and slicing transitions before
+evaluation. Keep `k*ell=2`, `xi=1/6`, `phi=0` and the supplied regional
+vacuum values `Lambda*ell^2=3,3,0`. Object masses are `0,.01,.4` in ell
+units. No observed Lambda, fractal dimension or cosmological fit selects
+these inputs.
+
+Implement one finite initial-slice record through the existing right-end
+cut `R/ell=4`, with analytic AE continuation. Check both signed junctions,
+normal force, shell-delta projections, bulk constraints, mass, smooth
+throats and the regular cosmological-horizon crossing. Use the existing
+Schwarzschild slice, flat cap, independent rational wall factors and unit
+rescaling as controls. Integrate radial milestones and volume/expansion/
+curvature moments, retaining both wall curvature deltas. Compare Gauss
+32/64 once. A separately checked inward test-flash protocol may supply a
+central proper-time/redshift observable; it does not establish signalling
+through the host's black-hole bridge.
+
+Freeze the producer before its physical application. The shared limit is
+**30 CPU seconds / 100,000 sampled geometric points**, zero field solves,
+evolution steps or parameter scans. Construction identities use absolute
+`1e-8` in ell units; quadrature comparisons use
+`1e-7*max(1,abs(value_64))`. Stop and diagnose a failed sign, spacelike
+domain, source identity or comparison; there is no automatic refinement.
+Differences are numerical indicators, not total error bounds. The finite
+average is an initial normal-clock diagnostic. A shared spacetime atlas,
+physical source state and observer reduction remain separate requirements;
+the supplied cap scale is not a generated Lambda.
+
 ## Unequal sourced inputs for the common parent, 18 October 2026
 
 The geometric reduction needs actual source bodies and their integral moments.

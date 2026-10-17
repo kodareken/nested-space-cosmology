@@ -239,3 +239,160 @@ samples, without field evolution. The compact record preserves scalars and
 source hashes rather than the spatial arrays. A particular shared connector,
 formation history, physical inheritance and observational comparison remain
 separate calculations.
+
+## Two successive sourced boundaries
+
+The next composition implements two nesting levels in one explicit radial
+initial slice. It uses the quiet Einstein/conformal-scalar and positive
+membrane action, with `xi=1/6`, `phi=0` and `k*ell=2` at both walls.
+The vacuum values are the existing regional choices `3/ell^2` and `0`.
+The inner membrane separates two regions of equal vacuum energy; it is
+still a material tension source. Its formation is not supplied by that
+choice. This is a new hierarchical state of the declared piecewise model,
+distinct from P001's nonzero scalar pulse and from the two-sibling parent.
+
+| Outward region | $M/\ell$ | $H\ell$ | Retained portion |
+| --- | ---: | ---: | --- |
+| Inner cap | 0 | 1 | Regular centre to inner wall at `R/ell=.8` |
+| Host Kottler region | .01 | 1 | Inner wall on left static branch, black-hole throat, right static branch, expanding cosmological patch to outer wall at `R/ell=1.5` |
+| Outer Schwarzschild region | .4 | 0 | Outer wall on left branch, throat at `R/ell=.8`, right AE end |
+
+For either wall, put $f_\pm=1-2M_\pm/R-H_\pm^2R^2$. The same signed law is
+
+$$
+\beta_-={f_--f_++(kR)^2\over2kR},\qquad
+\beta_+=\beta_--kR,\qquad \dot R^2=\beta_-^2-f_-.
+$$
+
+Choose the positive radial root, with `beta_minus>0,beta_plus<0` at both
+initial cuts. The mass relation at each level is
+
+$$
+M_+=M_-+\tfrac12(H_-^2-H_+^2-k^2)R^3+kR^2\beta_-.
+$$
+
+It relates regional data; it does not determine them all from no inputs.
+The inner/outer independent signed factors are respectively
+`(517/640,-507/640)` and `(727/600,-1073/600)`. Differentiating the same
+law supplies the temporal Israel jump and mean normal-force condition.
+
+Each inner wall frame starts from a flat radial slice, `Rprime_minus=1`
+and $V_-=\sqrt{2M_-/R+H_-^2R^2}$. The boost is fixed by
+$a=(\beta_-+\dot R)/(1+V_-)$,
+$\gamma=(a+a^{-1})/2$, $\gamma v=(a-a^{-1})/2$.
+Use the same distributional jumps as above. In a smooth bulk segment an
+assigned slicing function $V(R)$ gives
+
+$$
+R'=\varepsilon\sqrt{f+V^2},\quad
+R''=M/R^2-H^2R+VV_R,\quad
+K^l{}_l=-V_R,\quad K^\theta{}_\theta=-V/R.
+$$
+
+The host's left slicing taper stops at `R/ell=.1`, strictly above its
+black-hole root. A static bridge then reaches the right radius `.5*ell`;
+a smooth transition on `[.5,.9]*ell` reaches the expanding flat radial
+profile $V=\sqrt{2M/R+H^2R^2}$. This profile passes through the host's
+cosmological horizon with `Rprime=1` before reaching the outer wall.
+The outer left taper stops at `R/ell=1`, reusing its exact vacuum bridge
+and analytic AE continuation. At a simple black-hole root `rb`, use
+`R=rb+y^2` with signed `y`; the proper-distance derivative tends to
+`2/sqrt(f_prime(rb))`. This avoids treating a coordinate square-root edge
+as a singular sphere.
+
+The [bounded application](prior-art-and-open-claim.md#two-successive-sourced-boundaries-18-october-2026)
+is implemented and awaiting its first application. It retains scalar milestones and integrated
+moments, rather than sample arrays. A regular initial slice does not yet
+provide the matched Kottler horizon charts or a common future clock.
+The spatial chain alone implies neither a causal passage across the bridge
+nor self-similarity of a physical operator. Establishing
+$\mathcal T^*\mathbb D=\mathbb D$ for its field/metric response requires
+the actual transition maps and domains. No fractal dimension or cosmological
+Lambda is assigned by these inputs.
+
+### Regular host charts and the clock convention
+
+An explicit bulk chart is available before any field solve. Choose a simple
+positive horizon root `C` of `1-2M/R-H^2 R^2`, and put
+
+$$
+\kappa_C={1-3H^2C^2\over2C},\quad
+R=C+\kappa_Cuw,\quad
+F={w^2\over R}\left({1\over C}+H^2(R-C)\right),
+$$
+$$
+ds^2=Fdu^2+2du\,dw+R^2d\Omega^2.
+$$
+
+This rewrites [Lake, gr-qc/0507031v2, equations (5)--(10)](https://arxiv.org/html/gr-qc/0507031v2)
+using `H^2=(C-2M)/C^3`. The two-dimensional determinant is `-1` and
+the coefficients are regular for finite coordinates with `R>0`, including
+`R=C`. Direct symbolic curvature gives
+$R_{\mu\nu}=3H^2g_{\mu\nu}$, and
+$|\nabla R|^2=1-2M/R-H^2R^2$; all four independent residual expressions
+reduce to zero in a 0.5 CPU-second algebra check. No target field or
+trajectory is evaluated by that check.
+
+Use a black-hole-centred chart for the bridge and a cosmological-horizon
+chart where the first chart reaches an infinite coordinate. On a static
+overlap they match through the same areal radius and
+
+$$
+T=r_*(R)-\kappa_C^{-1}\log(|u|/L_0),\qquad r_*'=1/f.
+$$
+
+Branch signs and the arbitrary coordinate scale `L0` must be fixed by the
+actual slice. They are not physical ages. In this single Killing coordinate
+the initial oriented frame is
+
+$$
+s=(V/f,R'),\qquad N=(R'/f,V),\qquad R'^2-V^2=f.
+$$
+
+Thus `T_l=V/f` on both static branches. The left future has `N(T)<0`;
+replacing its coordinate by a locally future time `T_L=-T` reverses both
+time formulas. It does not change the geometry. On the right expanding
+profile the outgoing coordinate obeys
+`u_EF,l=-1/(V+Rprime)`, which stays finite at the cosmological horizon.
+Matching the wall worldtubes and chart overlaps remains part of the shared
+spacetime construction. The regular bulk formula alone supplies neither
+global identifications nor a nonsingular replacement for `R=0`.
+
+### A central test-flash protocol
+
+For the specified inner wall, prescribe an ideal local frequency standard
+and a radial inward test flash at its initial event. Use geometric optics
+with negligible backreaction. Its receiver is the cap's central geodesic;
+set cap flat-slicing time `t=0` at emission. In that cap, `t` is central
+proper time and `Rwall=.8*ell`. The exact null path and wall boost give
+
+$$
+t_{\rm rec}=-H^{-1}\log(1-HR_w),\qquad
+1+z={\gamma(1+v)\over1-HR_w}
+={\beta_-+\dot R\over(1+HR_w)(1-HR_w)}.
+$$
+
+The Doppler factor belongs to the material wall, rather than to a comoving
+cap emitter. Prescribing a frequency standard is a test protocol; the
+tension action supplies no emission line. The host enters through the
+signed junction factors, while `H` and masses remain supplied model data.
+
+The photon stays inside the wall. In flat cap coordinates it obeys
+`dr/dt=-exp(-H*t)`; a future timelike wall has strictly greater radial
+coordinate speed. For this inner root in ell units,
+`Rdot^2=2R^2-1+.01/R+.000025/R^4` is positive and increasing for `R>=.8`,
+and `Rdot<=sqrt(2)*R`. The expanding wall persists to every finite cap
+time and cannot recross that inward ray. This checks the reception domain
+without a numerical wall evolution. It implies no outer-wall signal
+through the host bridge. The finite application will record the conditional
+arrival time and redshift with their inputs and numerical precision.
+
+The implementation is [the nested slice](../src/recursive_horizons/nsc_atlas_nested_slice.py),
+with [regular charts and the flash](../src/recursive_horizons/nsc_atlas_nested_spacetime.py).
+Twenty focused controls pass. They include the independent symbolic Einstein
+calculation, rational junctions, cap and Schwarzschild limits, horizon and
+length controls. The [producer](../scripts/record_nsc_atlas_nested_slice.py)
+requires frozen source bytes and a fresh output path. The
+[figure producer](../scripts/plot_nsc_atlas_nested_slice.py) regenerates the
+radius curve rather than retaining spatial arrays. These bulk charts and
+cap-side observations do not yet assemble the joint two-wall clock atlas.

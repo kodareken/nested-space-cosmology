@@ -13,6 +13,8 @@ import json
 import math
 from pathlib import Path
 
+from validation_source_successors import verify_saved_bindings, verify_saved_source
+
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "nsc-atlas-characteristic-initialization-v1"
 MANIFEST_SCHEMA = SCHEMA+"-manifest"
@@ -20,6 +22,7 @@ OWNER = "docs/nsc-atlas-characteristic-initialization.md"
 PRODUCER = "scripts/record_nsc_atlas_characteristic_initialization.py"
 MODULE = "src/recursive_horizons/nsc_atlas_characteristic_initialization.py"
 TESTS = "tests/test_nsc_atlas_characteristic_initialization.py"
+SOURCE_PATHS = (OWNER, PRODUCER, MODULE, TESTS)
 RELATIVE_OUTPUT = "results/development/nsc-atlas-characteristic-initialization-v1"
 DEFAULT = ROOT / RELATIVE_OUTPUT
 ADAPTERS = tuple("src/recursive_horizons/"+name+".py" for name in (
@@ -63,7 +66,14 @@ def read_relative(relative):
 
 
 def source_bindings():
-    return {path: sha(read_relative(path)) for path in sorted((OWNER, PRODUCER, MODULE, TESTS))}
+    return {path: sha(read_relative(path)) for path in sorted(SOURCE_PATHS)}
+
+
+def _require_saved_source(source, expected, label):
+    try:
+        verify_saved_source(source, expected, ROOT)
+    except ValueError as error:
+        raise ValueError(label) from error
 
 
 def authenticate_prerequisites():
@@ -90,8 +100,8 @@ def authenticate_prerequisites():
             raise ValueError("prerequisite atlas binding mismatch")
         if key == "v8":
             for adapter in ADAPTERS:
-                if sha(read_relative(adapter)) != manifest["source_bindings"][adapter]:
-                    raise ValueError("current adapter differs from explicitly borrowed v8 source: "+adapter)
+                _require_saved_source(adapter, manifest["source_bindings"][adapter],
+                    "current adapter differs from explicitly borrowed v8 source: "+adapter)
         records[key] = payloads
         bindings[key] = {"manifest": relative, "manifest_sha256": sha(raw),
                          "authenticated_outputs": deepcopy(manifest["outputs"]),
@@ -250,8 +260,10 @@ def check(directory):
     manifest = json.loads((directory / "manifest.json").read_bytes())
     if manifest.get("schema") != MANIFEST_SCHEMA:
         raise ValueError("characteristic manifest schema mismatch")
-    if manifest.get("source_bindings") != source_bindings():
-        raise ValueError("characteristic source binding mismatch")
+    try:
+        verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCE_PATHS)
+    except ValueError as error:
+        raise ValueError("characteristic source binding mismatch") from error
     header, prerequisites = declaration()
     if manifest.get("prerequisite_bindings") != prerequisites:
         raise ValueError("characteristic prerequisite binding mismatch")

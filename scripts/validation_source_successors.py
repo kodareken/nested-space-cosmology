@@ -35,6 +35,7 @@ REVIEWED_PACKAGE_PATHS = frozenset({
     "src/recursive_horizons/nsc_atlas_characteristic_background.py",
     "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py",
     "src/recursive_horizons/nsc_atlas_cap_response.py",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py",
 })
 CLASSIFICATIONS = frozenset({"validation-only", "test-only", "implementation-successor"})
 _SHA256 = re.compile(r"[0-9a-f]{64}\Z")

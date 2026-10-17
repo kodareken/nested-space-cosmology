@@ -1,12 +1,12 @@
 {
   "origin_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
   "resolver_bindings": {
-    "scripts/validation_source_successors.py": "e4f1ee113fa0fd54f9b2dae951832750d9d70c42d4ad1d8450f018f3c47269fa",
+    "scripts/validation_source_successors.py": "f3db71bfededfd344ae824f116438d4183432d9b84bea3f08259d2c83305d333",
     "src/recursive_horizons/nsc_atlas_validation.py": "7142f8753c9cf4d6c2c6d5a389016d8c6a08e4505ddcfc5d9b8ab5f2f7d69e31",
     "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
     "tests/test_control_budget.py": "3cb6d2749fa98fe21eaea6e4d0cb201dcec84e1dff272ef043f1f3753c4a379d",
     "tests/test_nsc_atlas_validation.py": "9503c6082794cd564ae5ae9b2fcfb87bd115532b2c64017f463deac7e2c056d1",
-    "tests/test_validation_source_successors.py": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
+    "tests/test_validation_source_successors.py": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
   },
   "schema": "nsc-validation-source-successors-v1",
   "scope": "Reviewed current source successors. Original Git bytes are authenticated but never executed; implementation successors preserve historical provenance without asserting numerical equivalence. Result data, scientific documents and unregistered changes have no compatibility fallback.",
@@ -95,6 +95,12 @@
       "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
       "successor_sha256": "9a5432e7cb1f68b1362f787533a9ef0be0c6b27412ba99f614a1217f3e17725d"
     },
+    "scripts/record_nsc_atlas_characteristic_initialization.py": {
+      "classification": "validation-only",
+      "original_sha256": "ea1d634599557984f0ecc08c6a4597973a3ca1fe26c64d523b0e4bddf4c48031",
+      "reason": "Borrowed v8 adapter checks accept only the reviewed source successor. Creation hashes, prerequisite inventories, stored outputs and numerical comparisons stay unchanged.",
+      "successor_sha256": "d167130de951131b827692ea6426e05ebc738f193c30197605117824f58d9593"
+    },
     "scripts/record_nsc_atlas_compatible_evolution.py": {
       "classification": "validation-only",
       "original_sha256": "9cf6802c5eca6b840fc3158438ca34178e719095ba839a4dd71cea549f265c2c",
@@ -160,6 +166,12 @@
       "original_sha256": "031557cf0b41e72123da2418128f0df4c0df255ed863894d40a1d711afbc5a80",
       "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
       "successor_sha256": "24cbd0ebb3756684f335db52436e8b2d64671990f8bd71cf61ce224baab5c1d8"
+    },
+    "scripts/record_nsc_atlas_source_mass.py": {
+      "classification": "validation-only",
+      "original_sha256": "f953443914148147ec836cdbeabaf27e6e97555b450ab62263698f18716c88bc",
+      "reason": "Borrowed v8 and initialization source checks accept only reviewed successors. Creation hashes, prerequisite inventories, stored outputs and numerical comparisons stay unchanged.",
+      "successor_sha256": "8789ffe2cd6ec342184432cf83227101138b5cd262f83554a23d5cb6637848c6"
     },
     "scripts/record_nsc_atlas_spatial_refinement.py": {
       "classification": "validation-only",
@@ -242,6 +254,12 @@
       "reason": "SourceSnapshot constructor replay comparison uses an analytic floating-roundoff allowance; source evaluation, interpolation and physical integration are unchanged.",
       "successor_sha256": "d171b49036555ef8fedad072b0bf9c5550508ba7183fb3e03cc64de600819a47"
     },
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": {
+      "classification": "implementation-successor",
+      "original_sha256": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+      "reason": "Optional mass and taper arguments plus a compact summary for a second quiet body in the same theory. Default inputs and original quiet-body calculations are retained. Historical outputs remain bound to the authenticated original source; registration alone asserts no numerical equivalence.",
+      "successor_sha256": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7"
+    },
     "src/recursive_horizons/nsc_atlas_forcing_cache.py": {
       "classification": "validation-only",
       "original_sha256": "5ea8752860c3f7a657da2dddd458af13df6a3f53f6d9b6058ad6468e3d524cf5",
@@ -308,6 +326,12 @@
       "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
       "successor_sha256": "e5bc0382466ba8f10145fbb9d7a3caf10bce9d31ad4459aa3076017a65dad96f"
     },
+    "tests/test_nsc_atlas_characteristic_initialization.py": {
+      "classification": "test-only",
+      "original_sha256": "6b2fec4d1ec741886c5401b0723c493e940f6587a8e6f41be20722bb738c21e9",
+      "reason": "Isolated checks authenticate borrowed sources through the pinned Git objects and the reviewed registry. Tamper prefixes and retained scientific assertions are unchanged.",
+      "successor_sha256": "0d5ed81c21b3c21e47517e4e1d76ec5d0801c86a2a2e12420cb401307e13464a"
+    },
     "tests/test_nsc_atlas_forcing_cache.py": {
       "classification": "test-only",
       "original_sha256": "21b2290bb2cd6db1c554f553193c64cafadab862d08d5d72ac2c314c365d4ed5",
@@ -325,6 +349,12 @@
       "original_sha256": "819f2b0b342933c25f28dcc4fada7f95254ef6b9969dd67c5d6c9fdaca15d6f8",
       "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
       "successor_sha256": "74d8351d0d4e7ab6c83d56fbcffb3523867d91a35b32831eb80910004716eed1"
+    },
+    "tests/test_nsc_atlas_source_mass.py": {
+      "classification": "test-only",
+      "original_sha256": "8de7d4f1dd62fcc3ea84fae5926135e15ff3da8a6b3c02da79525c160a9a3646",
+      "reason": "Isolated checks authenticate borrowed sources through the pinned Git objects and the reviewed registry. Tamper prefixes and retained scientific assertions are unchanged.",
+      "successor_sha256": "76d8d90d02ea5160eda78fb18f50006c1fe56a747e07ac389ac39e234297336f"
     },
     "tests/test_record_nsc_atlas_background_evolution.py": {
       "classification": "test-only",
