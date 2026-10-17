@@ -125,6 +125,17 @@ independent relative uncertainty in $\ell$ transfers directly to the radius.
 The endpoint value and resolution range are pending the three completed
 evolutions; the existing perturbative record is preserved meanwhile.
 
+When the comparison exists, the saved-data registration command is:
+
+```sh
+python scripts/run_python.py scripts/register_nsc_atlas_fixed_endpoint.py --comparison results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json
+```
+
+It authenticates the three completed summaries and the comparison before
+adding an optional `finite_amplitude` block to NSC-P001. It preserves the
+historical coefficients and their evidence. An unconverged comparison keeps
+that status; a failed check leaves the machine register unchanged.
+
 Check the register with:
 
 ```sh

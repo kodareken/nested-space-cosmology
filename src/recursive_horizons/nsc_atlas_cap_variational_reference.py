@@ -82,7 +82,7 @@ def _validated_adjoint_order(order):
 
 def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
                        nonzero_field, budget, rtol, atol, first_step_fraction=None,
-                       adjoint_order=32):
+                       adjoint_order=32, max_step_fraction=None):
     """Shared radial mass/sensitivity engine on a caller's fixed coordinate.
 
     coefficients returns (r, dr/dcoordinate, A, a, rho, source_partials).
@@ -92,8 +92,19 @@ def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
     panel as DOP853's first step. None keeps the solver heuristic. rtol
     and atol still accept or reject the step. adjoint_order is the adjoint
     Gauss rule, an integer from 8 through 256; 32 is the existing rule.
+    max_step_fraction optionally bounds every forward step by that fraction
+    of its existing smooth panel, without changing the panel boundaries.
     """
     order = _validated_adjoint_order(adjoint_order)
+    maximum_fraction = None
+    if max_step_fraction is not None:
+        try:
+            maximum_fraction = float(max_step_fraction)
+        except (TypeError, ValueError) as error:
+            raise ValueError('radial maximum-step fraction must be in (0, 1]') from error
+        if (isinstance(max_step_fraction, (bool, np.bool_)) or
+                not np.isfinite(maximum_fraction) or not 0 < maximum_fraction <= 1):
+            raise ValueError('radial maximum-step fraction must be in (0, 1]')
     fraction = None
     if first_step_fraction is not None:
         try:
@@ -124,9 +135,11 @@ def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
             budget.check(len(values))
             return jacobian*np.r_[rho,a,partials-a*values[2:]]
         step = {}
+        panel = float(breaks[cell+1]-breaks[cell])
+        if maximum_fraction is not None:
+            step['max_step'] = maximum_fraction*panel
         if fraction is not None:
-            panel = float(breaks[cell+1]-breaks[cell])
-            step['first_step'] = min(panel, fraction*panel)
+            step['first_step'] = min(panel, fraction*panel, step.get('max_step', np.inf))
         solution = solve_ivp(rhs,(breaks[cell],breaks[cell+1]),state,method='DOP853',
                              rtol=rtol,atol=atol,dense_output=True,**step)
         if not solution.success or not np.all(np.isfinite(solution.y)):
@@ -162,7 +175,8 @@ def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
             f"rtol={float(rtol)!r}, atol={float(atol)!r}")
     return dict(mass=mass,lapse=lapse,gradient=gradient.copy(),adjoint_gradient=adjoint,
                 gradient_discrepancy=discrepancy,field_sites=samples,
-                sampled_minimum_A=sampled_minimum_A,adjoint_order=order)
+                sampled_minimum_A=sampled_minimum_A,adjoint_order=order,
+                max_step_fraction=maximum_fraction)
 
 
 def variational_cap_reference(z_nodes, chi, canonical_density, *, alpha, T_x,

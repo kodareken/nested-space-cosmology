@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import json
+import math
 from pathlib import Path
 import shutil
 import subprocess
@@ -53,11 +54,29 @@ def receipts(radii=(.54, .545, .546), gaps=(1., .5, .25)):
     return rows
 
 
-def historical_root(tmp_path):
+def historical_root(tmp_path, source=ROOT):
+    """Copy one repository and restore the explicit pre-extension P001 view.
+
+    Only the optional finite-amplitude object is removed, and its SI flag is
+    reset. A source that already carries a completed extension still yields
+    the historical register.
+    """
+    source = Path(source)
     for name in (checker.REGISTER, checker.DOCUMENT, *checker.EVIDENCE.values()):
         destination = tmp_path / name
         destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(ROOT / name, destination)
+        shutil.copyfile(source / name, destination)
+    path = tmp_path / checker.REGISTER
+    document = json.loads(path.read_text(encoding="utf-8"))
+    saved = document["entries"][0]
+    changed = "finite_amplitude" in saved
+    saved.pop("finite_amplitude", None)
+    if saved["observational_test"].get("SI_scale_selected") is not False:
+        saved["observational_test"]["SI_scale_selected"] = False
+        changed = True
+    if changed:
+        path.write_text(json.dumps(document, indent=2, allow_nan=False) + "\n",
+                        encoding="utf-8", newline="\n")
     return tmp_path
 
 
@@ -84,13 +103,52 @@ def entry(root):
     return json.loads((root / checker.REGISTER).read_text(encoding="utf-8"))["entries"][0]
 
 
-def test_current_register_has_no_finite_amplitude_extension():
+def test_current_register_checker_accepts_either_valid_state():
     saved = json.loads((ROOT / checker.REGISTER).read_text(encoding="utf-8"))["entries"][0]
+    result = checker.check(ROOT)
+    assert result["predictions"] == 1
+    assert result["evidence_files"] == 7
+    assert result["coefficient_projections"] == 4
+    assert result["exact_identity_projections"] == 2
+    assert result["scientific_replays"] == 0
+    assert saved["observational_test"]["status"] == "pending"
+    assert saved["observational_test"]["calibration"] == "none"
+    assert saved["observational_test"]["physical_source_selected"] is False
+    assert saved["observational_test"]["SI_scale_selected"] is ("finite_amplitude" in saved)
+    if "finite_amplitude" in saved:
+        limits = saved["finite_amplitude"]["limits"]
+        assert limits["calibration"] == "none"
+        assert limits["physical_source_selected"] is False
+        assert limits["physical_emitter_selected"] is False
+        assert limits["empirical_confirmation"] is False
+        assert result["finite_amplitude_endpoints"] == 3
+    else:
+        assert "finite_amplitude_endpoints" not in result
+
+
+def test_historical_view_drops_an_installed_extension(tmp_path):
+    source = historical_root(tmp_path / "source")
+    write_comparison(source, receipts())
+    registrar.register(source, COMPARISON)
+    installed = entry(source)
+    assert installed["finite_amplitude"]["limits"]["calibration"] == "none"
+    assert installed["finite_amplitude"]["limits"]["physical_source_selected"] is False
+    assert installed["finite_amplitude"]["limits"]["physical_emitter_selected"] is False
+    assert installed["observational_test"]["SI_scale_selected"] is True
+    view = historical_root(tmp_path / "view", source)
+    saved = entry(view)
     assert "finite_amplitude" not in saved
     assert saved["observational_test"]["SI_scale_selected"] is False
-    assert checker.check(ROOT) == dict(
+    assert saved["observational_test"]["calibration"] == "none"
+    assert saved["observational_test"]["physical_source_selected"] is False
+    assert saved["observational_test"]["status"] == "pending"
+    for key in ("coefficients", "identities", "uncertainty", "open_limits", "evidence", "status",
+                "rejection", "parameters"):
+        assert saved[key] == installed[key]
+    assert checker.check(view) == dict(
         predictions=1, evidence_files=7, coefficient_projections=4,
         exact_identity_projections=2, scientific_replays=0)
+    assert checker.check(source)["finite_amplitude_endpoints"] == 3
 
 
 def test_synthetic_extension_preserves_historical_coefficients(tmp_path, monkeypatch):
@@ -264,6 +322,76 @@ def test_recompute_tolerance_accepts_only_a_tight_float_band(tmp_path):
     dump(root / checker.REGISTER, document)
     with pytest.raises(ValueError, match="physical observable copy"):
         checker.check(root)
+
+
+def test_one_ulp_radius_subtraction_is_allowed_and_material_error_is_not(tmp_path):
+    root = historical_root(tmp_path)
+    rows = receipts(radii=(.55, .55, .55))
+    write_comparison(root, rows)
+    document = json.loads((root / COMPARISON).read_text(encoding="utf-8"))
+    observable = document["physical_observable"]
+    radii = [value / observable["scale"]["ell_metres"] for value in observable["grid_values_metres"]]
+    pair_tol = checker.subtraction_abs_tol((radii[0], radii[1]))
+    half_tol = checker.subtraction_abs_tol(observable["grid_values_metres"])
+    quiet_tol = checker.subtraction_abs_tol(
+        (observable["value_metres"], observable["quiet_reference_metres"]))
+    assert document["endpoint_radius_pair_differences"] == [0.0, 0.0]
+    assert observable["resolution_half_width_metres"] == 0.0
+    assert observable["difference_from_quiet_reference_metres"] == 0.0
+    assert math.ulp(radii[0]) < pair_tol
+    assert math.ulp(observable["value_metres"]) < quiet_tol
+    document["endpoint_radius_pair_differences"][0] = math.ulp(radii[0])
+    observable["resolution_half_width_metres"] = math.ulp(observable["grid_values_metres"][-1])
+    observable["difference_from_quiet_reference_metres"] = math.ulp(observable["value_metres"])
+    dump(root / COMPARISON, document)
+    registrar.register(root, COMPARISON)
+    block = entry(root)["finite_amplitude"]
+    assert block["endpoint_radius_pair_difference_contracts"] is False
+    assert block["prediction_status"] == checker.UNCONVERGED_STATUS
+    assert block["requested_mass_and_flux_contraction"] is True
+    assert block["limits"]["calibration"] == "none"
+    assert block["limits"]["physical_source_selected"] is False
+    assert block["limits"]["physical_emitter_selected"] is False
+    assert block["physical_observable"]["resolution_half_width_metres"] == (
+        math.ulp(observable["grid_values_metres"][-1]))
+
+    def reject_saved_change(mutate, message):
+        historical_root(root)
+        write_comparison(root, rows)
+        before = register_bytes(root)
+        changed = json.loads((root / COMPARISON).read_text(encoding="utf-8"))
+        mutate(changed)
+        dump(root / COMPARISON, changed)
+        with pytest.raises(ValueError, match=message):
+            registrar.register(root, COMPARISON)
+        assert register_bytes(root) == before
+
+    reject_saved_change(
+        lambda saved: saved["endpoint_radius_pair_differences"].__setitem__(0, pair_tol * 100),
+        "recompute tolerance")
+    reject_saved_change(
+        lambda saved: saved["physical_observable"].__setitem__(
+            "resolution_half_width_metres", half_tol * 100),
+        "recompute tolerance")
+    reject_saved_change(
+        lambda saved: saved["physical_observable"].__setitem__(
+            "difference_from_quiet_reference_metres", quiet_tol * 100),
+        "recompute tolerance")
+    reject_saved_change(
+        lambda saved: saved.update(endpoint_radius_pair_difference_contracts=True),
+        "endpoint_radius_pair_difference_contracts")
+    reject_saved_change(
+        lambda saved: saved["residual_maxima"]["wall_flux"]["values"].__setitem__(
+            0, saved["residual_maxima"]["wall_flux"]["values"][0] + math.ulp(1.0)),
+        "residual_maxima")
+    reject_saved_change(
+        lambda saved: saved.__setitem__(
+            "shared_alpha", saved["shared_alpha"] + math.ulp(saved["shared_alpha"])),
+        "shared_alpha")
+    reject_saved_change(
+        lambda saved: saved["radial_accuracy"].__setitem__(
+            "rtol", saved["radial_accuracy"]["rtol"] + math.ulp(saved["radial_accuracy"]["rtol"])),
+        "radial_accuracy")
 
 
 def test_scale_event_and_uncertainty_cannot_be_promoted(tmp_path):

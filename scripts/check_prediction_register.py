@@ -2,8 +2,12 @@
 """Authenticate prediction declarations and saved-value projections; no replay.
 
 An optional NSC-P001 finite-amplitude extension is checked from the saved
-comparison and its three endpoint receipts. Derived floats may differ by the
-explicit recompute tolerance; identities, booleans, paths and hashes may not.
+comparison and its three endpoint receipts. Products use a relative tolerance.
+Subtractions of radii also allow a few ulps of those operands, because a
+one-ulp hypot change can dominate a tiny difference and a zero difference has
+no relative scale. Identifiers, booleans, paths, hashes, saved residuals,
+alpha, accuracy constants, and copied fields stay exact. Convergence booleans
+are not relaxed.
 """
 from __future__ import annotations
 
@@ -24,11 +28,12 @@ REGISTER = "results/prediction-register.json"
 DOCUMENT = "docs/prediction-register.md"
 SCHEMA = "nsc-prediction-register-v1"
 FINITE_SCHEMA = "nsc-p001-finite-amplitude-v1"
-# Independent libm evaluations of the same receipt arithmetic need not be
-# bit-identical. This relative band is the only numerical slack; absolute
-# slack is zero so the small radial-accuracy constants stay discriminative.
+# Products and quotients may differ by this relative band across libm builds.
+# A difference of two radii instead takes an absolute floor of a few ulps of
+# its own operands: one ulp of hypot near radius 0.55 is enormous next to a
+# tiny or zero paired gap, while remaining negligible beside a real gap.
 RECOMPUTE_REL_TOL = 1e-12
-RECOMPUTE_ABS_TOL = 0.0
+RADIUS_DIFFERENCE_ULPS = 4
 ENVELOPE_STATUS = "finite_amplitude_numerical_estimate_with_resolution_envelope"
 UNCONVERGED_STATUS = "unconverged_numerical_estimate"
 COMPARISON_META = ("analysis_source_commit", "analysis_source_sha256", "inputs")
@@ -162,29 +167,54 @@ def set_as_list(value):
     return sorted(value)
 
 
-def agree_numbers(actual, expected, label):
-    """Match structure exactly, with slack only for derived finite floats."""
+def subtraction_abs_tol(operands):
+    """Absolute slack for one subtraction, measured from that subtraction's operands."""
+    require(len(operands) >= 2, "difference tolerance needs the operands")
+    total = 0.0
+    for value in operands:
+        number(value, "difference operand")
+        total += math.ulp(float(value))
+    return RADIUS_DIFFERENCE_ULPS * total
+
+
+def agree_float(actual, expected, label, abs_tol):
+    require(type(actual) in (int, float) and type(expected) in (int, float)
+            and not isinstance(actual, bool) and not isinstance(expected, bool)
+            and math.isfinite(float(actual)) and math.isfinite(float(expected)),
+            label + " must be a finite float")
+    require(abs_tol >= 0 and math.isfinite(abs_tol), label + " tolerance")
+    require(math.isclose(float(actual), float(expected), rel_tol=RECOMPUTE_REL_TOL, abs_tol=abs_tol),
+            label + " exceeds recompute tolerance")
+
+
+def agree_numbers(actual, expected, label, abs_tol=0.0):
+    """Match structure exactly. Floats use relative slack plus an optional absolute floor."""
     if isinstance(expected, bool) or isinstance(actual, bool):
         exact(actual, expected, label)
     elif isinstance(expected, str) or isinstance(expected, int) or expected is None:
         exact(actual, expected, label)
     elif isinstance(expected, float):
-        require(type(actual) in (int, float) and math.isfinite(float(actual))
-                and math.isfinite(expected), label + " must be a finite float")
-        require(math.isclose(float(actual), expected, rel_tol=RECOMPUTE_REL_TOL,
-                             abs_tol=RECOMPUTE_ABS_TOL),
-                label + " exceeds recompute tolerance " + format(RECOMPUTE_REL_TOL, ".0e"))
+        agree_float(actual, expected, label, abs_tol)
     elif isinstance(expected, list):
         require(isinstance(actual, list) and len(actual) == len(expected), label + " length")
         for index, item in enumerate(expected):
-            agree_numbers(actual[index], item, label + "[" + str(index) + "]")
+            agree_numbers(actual[index], item, label + "[" + str(index) + "]", abs_tol)
     elif isinstance(expected, dict):
         require(isinstance(actual, dict), label + " type")
         exact(sorted(actual), sorted(expected), label + " keys")
         for key, item in expected.items():
-            agree_numbers(actual[key], item, label + "." + key)
+            agree_numbers(actual[key], item, label + "." + key, abs_tol)
     else:
         raise ValueError("unsupported recomputed value: " + label)
+
+
+def agree_pair_differences(actual, expected, radii, label):
+    require(isinstance(actual, list) and isinstance(expected, list) and len(radii) >= 2,
+            label + " type")
+    require(len(actual) == len(expected) == len(radii) - 1, label + " length")
+    for index, want in enumerate(expected):
+        agree_float(actual[index], want, label + "[" + str(index) + "]",
+                    subtraction_abs_tol((radii[index], radii[index + 1])))
 
 
 def agree_refinement_map(actual, expected, label):
@@ -204,8 +234,17 @@ def agree_refinement_map(actual, expected, label):
 def agree_observable(actual, expected):
     require(isinstance(actual, dict), "physical observable type")
     exact(sorted(actual), sorted(expected), "physical observable fields")
+    grid = expected["grid_values_metres"]
+    envelope_abs = {
+        "resolution_half_width_metres": subtraction_abs_tol(grid),
+        "resolution_range_metres": subtraction_abs_tol(grid),
+        "difference_from_quiet_reference_metres": subtraction_abs_tol(
+            (expected["value_metres"], expected["quiet_reference_metres"])),
+    }
     for key, value in expected.items():
-        if key in OBSERVABLE_DERIVED:
+        if key in envelope_abs:
+            agree_numbers(actual[key], value, "physical_observable." + key, envelope_abs[key])
+        elif key in OBSERVABLE_DERIVED:
             agree_numbers(actual[key], value, "physical_observable." + key)
         else:
             exact(actual[key], value, "physical_observable." + key)
@@ -221,9 +260,15 @@ def assert_comparison_matches(saved, recomputed):
     agree_refinement_map(body["residual_maxima"], recomputed["residual_maxima"], "residual_maxima")
     agree_refinement_map(body["accumulated_transport_gaps"], recomputed["accumulated_transport_gaps"],
                          "accumulated_transport_gaps")
-    agree_numbers(body["endpoint_radius_pair_differences"],
-                  recomputed["endpoint_radius_pair_differences"], "endpoint_radius_pair_differences")
-    agree_observable(body["physical_observable"], recomputed["physical_observable"])
+    observable = recomputed["physical_observable"]
+    ell = observable["scale"]["ell_metres"]
+    number(ell, "fiducial length")
+    require(float(ell) > 0, "fiducial length must be positive")
+    radii = [value / float(ell) for value in observable["grid_values_metres"]]
+    agree_pair_differences(body["endpoint_radius_pair_differences"],
+                           recomputed["endpoint_radius_pair_differences"], radii,
+                           "endpoint_radius_pair_differences")
+    agree_observable(body["physical_observable"], observable)
     require(re.fullmatch(r"[0-9a-f]{40,64}", saved["analysis_source_commit"]) is not None,
             "analysis commit must be hexadecimal")
     require(re.fullmatch(r"[0-9a-f]{64}", saved["analysis_source_sha256"]) is not None,

@@ -124,7 +124,7 @@ def _background_time_projection(basis,fields,gram,breaks,owners,background,T,bud
 
 def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_rate=None,
                         incoming_w_plus=None,budget,rtol=2e-13,atol=2e-15,wall_coupler=None,
-                        background=None,background_time=None):
+                        background=None,background_time=None,radial_step_fraction=None):
     """One instantaneous radial solve and weak coefficient RHS.
 
     The metric certificate covers exact rational shapes and binary inputs.
@@ -239,7 +239,8 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
                 derivative_count=2*count+(background is not None),
                 nonzero_field=bool(np.any(c) or np.any(d)) if background is None else False,
                 budget=budget,rtol=rtol,atol=atol,
-                first_step_fraction=1.0 if exactly_quiet else None)
+                first_step_fraction=1.0 if exactly_quiet else None,
+                max_step_fraction=None if exactly_quiet else radial_step_fraction)
             mass,lapse=reference['mass'],reference['lapse']
             if mass==0 and nonzero_total_seen: raise ValueError('positive total background mass is unresolved')
             gc,gd=reference['gradient'][:count],reference['gradient'][count:2*count]

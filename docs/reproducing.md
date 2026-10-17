@@ -833,9 +833,9 @@ robustness draft is paused. The resource limits and interpretation are in the
 From a committed source tree, create new compact receipts with:
 
 ```sh
-python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 0 --output results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json
-python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 1 --output results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json
-python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 2 --output results/summaries/nsc-atlas-fixed-endpoint-level2-v3.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 0 --output results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 1 --output results/summaries/nsc-atlas-fixed-endpoint-level1-v4.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 2 --output results/summaries/nsc-atlas-fixed-endpoint-level2-v4.json
 ```
 
 The commands are creation-only and never overwrite a saved result. Each
@@ -850,12 +850,15 @@ redundant zero-history panel boundary. Later coarse and middle runs stopped
 on the radial gradient check; the old fine run was deliberately interrupted.
 The v3 successors use the separately confirmed forward accuracy, preserving
 every earlier receipt. The coarse v3 run nevertheless stops later, after
-464 accepted steps. The comparison below therefore rejects the current
-coarse receipt. When three completed endpoint receipts exist, use their
-paths to compare saved scalars without another physical evolution:
+464 accepted steps. The middle v3 also stops. Both saved failure states pass the unchanged
+gradient guard with quarter-panel forward radial steps. The v4 commands above
+select that common correction at every resolution; certified exactly quiet
+data retain their previous zero-field startup. The other solver settings,
+physical grids and time schedules stay fixed. Once the three v4 endpoints
+complete, compare their saved scalars without another physical evolution:
 
 ```sh
-python scripts/run_python.py scripts/analyze_nsc_atlas_fixed_endpoint.py --inputs results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json results/summaries/nsc-atlas-fixed-endpoint-level2-v3.json --output results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json
+python scripts/run_python.py scripts/analyze_nsc_atlas_fixed_endpoint.py --inputs results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json results/summaries/nsc-atlas-fixed-endpoint-level1-v4.json results/summaries/nsc-atlas-fixed-endpoint-level2-v4.json --output results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json
 ```
 
 The analyzer rejects incomplete endpoints, changed sources and inconsistent

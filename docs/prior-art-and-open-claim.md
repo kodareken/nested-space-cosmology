@@ -25,6 +25,36 @@ zero time steps, **60 process-CPU seconds / 40 million charged values**.
 Record internal gradient magnitudes and radial work as well as discrepancies.
 This changes radial integration resolution only, not the physical cap mesh.
 
+The [coarse panel diagnostic](../results/summaries/nsc-atlas-fixed-endpoint-radial-panel-diagnostic-v1.json)
+reduces the gradient discrepancy to `1.0273e-8` with half-panel steps and
+`1.0757e-9` with quarter-panel steps; the half-panel 32/64 adjoints agree.
+It uses 11.890625 CPU seconds and 12,083,494 charged values. The middle v3
+run then stops after 735 accepted steps at `x=0.4334294604181712`, with
+discrepancy `7.4914e-8` in its time-gradient component. Admit the same
+three-case panel comparison on that independently saved middle state,
+again one preparation, zero time steps, **60 CPU seconds / 40 million
+charged values**. This tests the proposed radial correction across the
+two actual failures before a successor evolution is selected.
+
+The middle-state quarter-panel discrepancy is `4.1956e-10`; all three
+middle-state checks pass in 11.28125 CPU seconds / 12,134,706 charged values.
+Select the **quarter-panel maximum forward step** for nonzero radial solves,
+keeping `rtol=2.5e-14`, `atol=1e-15`, 32 adjoint points and the `2e-8`
+guard. Certified exactly quiet data retain their existing exact-zero startup.
+Pass the optional restriction through the existing coupled/hybrid/cap
+interfaces; their historical default remains unchanged. Manufactured linear
+and polynomial controls check the step restriction, its coupled routing and
+the resulting fields within their existing tolerances (no physical source
+preparation; existing 15/60-second module control budgets).
+
+The old fine v3 process is interrupted with its last console progress and
+CPU usage recorded; no final accepted state or trajectory is reconstructed.
+After the controls pass, admit one full v4 successor at each resolution,
+with the original source, amplitude, mesh and time schedules, the selected
+quarter-panel rule, and the existing 10,000/20,000/40,000 CPU-second and
+500-billion-value per-run limits. A further discrepancy still stops the
+execution; no error guard is relaxed and no physical step retry is added.
+
 Douglas has prioritized the full finite-amplitude evolution and a physically
 scaled P001 observable. Opening-phase robustness work is paused. Reuse the
 existing constrained fixed-cap mass/gradient calculation, simultaneous

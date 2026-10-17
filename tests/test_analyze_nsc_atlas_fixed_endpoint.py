@@ -58,3 +58,16 @@ def test_nonshrinking_gaps_are_reported_without_a_success_claim():
     result=compare(data)
     assert result['requested_mass_and_flux_contraction'] is False
     assert result['prediction_status']=='unconverged_numerical_estimate'
+
+
+def test_three_receipts_must_share_the_confirmed_panel_step_rule():
+    data=records()
+    data[0]['radial_accuracy']['maximum_nonzero_panel_step_fraction']=.25
+    with pytest.raises(ValueError,match='settings differ'):
+        compare(data)
+    for row in data:
+        row['radial_accuracy']['maximum_nonzero_panel_step_fraction']=.25
+    assert compare(data)['radial_accuracy']['maximum_nonzero_panel_step_fraction']==.25
+    data[2]['radial_accuracy']['maximum_nonzero_panel_step_fraction']=.5
+    with pytest.raises(ValueError,match='confirmed radial accuracy'):
+        compare(data)

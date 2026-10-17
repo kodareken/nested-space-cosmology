@@ -1,0 +1,29 @@
+{
+  "accepted_history_sha256": null,
+  "charged_values": null,
+  "completed_endpoint": false,
+  "final_accepted_steps": null,
+  "full_state_saved": false,
+  "intended_command": "python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 2 --output results/summaries/nsc-atlas-fixed-endpoint-level2-v3.json",
+  "intended_output": "results/summaries/nsc-atlas-fixed-endpoint-level2-v3.json",
+  "last_reported_progress": {
+    "accepted": 1104,
+    "cpu_seconds": 1492.453125,
+    "max_flux_gap": 0.00022439749837666056,
+    "max_mass_gap": 1.956889534724528e-8,
+    "wall_radius": 0.480308229553921,
+    "x": 0.42701296325365773
+  },
+  "level": 2,
+  "parent_record_source_commit": "ec21adc186c32aad32e768e15d039c44cbc6b0fb",
+  "planned_endpoint": 0.4815042082576364,
+  "process_cpu_seconds_before_termination_approx": 1515.484375,
+  "progress_scope": "Last console progress before termination; not the final accepted state. Any unreported work is not reconstructed.",
+  "raw_history_saved": false,
+  "reason": "Both v3 coarse and middle runs stopped at the forward-adjoint radial guard. Quarter-panel forward steps pass that unchanged guard at both independently saved failing states. Stop the old fine execution to use the same corrected radial method at all three resolutions.",
+  "schema": "nsc-atlas-parent-interruption-v1",
+  "solver_receipt_written": false,
+  "source_commit": "6b6e69cef3f2baa5fbe9ac4081a1ccf4ccabe751",
+  "status": "interrupted_for_resolved_operator_accuracy_issue",
+  "stopped_at_utc": "2026-10-17T12:18:30.4620924Z"
+}

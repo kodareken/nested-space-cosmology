@@ -35,8 +35,20 @@ passes the earlier stopping state but stops after 464 accepted steps at
 `2.1769e-8`, just above the unchanged `2e-8` guard. A
 [check of that exact later state](../results/summaries/nsc-atlas-fixed-endpoint-radial-later-diagnostic-v1.json)
 again finds agreement between 32 and 64 adjoint points, to about `1.2e-12`.
-Smaller forward radial steps are the next isolated numerical check; this
-does not change the physical cap grid or establish endpoint convergence.
+The [coarse half/quarter-panel check](../results/summaries/nsc-atlas-fixed-endpoint-radial-panel-diagnostic-v1.json)
+reduces that discrepancy to `1.0273e-8` and `1.0757e-9`, respectively.
+The [middle v3 receipt](../results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json)
+also stops, after 735 accepted steps, with discrepancy `7.4914e-8`.
+Its [same-state panel check](../results/summaries/nsc-atlas-fixed-endpoint-radial-middle-panel-diagnostic-v1.json)
+reduces that discrepancy to `4.1956e-10` with quarter-panel steps.
+All measured mass/flux gaps remain outputs of the unchanged physical model.
+
+The v4 successors use a quarter-panel maximum step for nonzero forward
+radial solves at all three resolutions, with the same tolerances and guard.
+The old fine v3 execution was [interrupted](../results/summaries/nsc-atlas-fixed-endpoint-level2-v3-interruption.json)
+to use that common method. Fifty-one focused controls pass, including the
+manufactured coupled-history fields and mass/lapse checks. This numerical
+correction does not itself establish endpoint convergence.
 The declared observable is the Jordan wall areal radius at the fixed incoming
 label, with fiducial `ell=10000 m`; its endpoint value and numerical range
 remain pending. Independent Grok review confirms the exact invariant and

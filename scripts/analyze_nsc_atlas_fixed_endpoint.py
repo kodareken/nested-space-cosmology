@@ -38,9 +38,14 @@ def compare(records):
             raise ValueError('endpoint comparison expects compact receipts')
         if r['endpoint']['frame_formula_needs_check']:
             raise ValueError('unresolved endpoint frame conversion')
-        if r['radial_accuracy']!=dict(rtol=2.5e-14,atol=1e-15,adjoint_order=32,
-                                    gradient_absolute_tolerance=2e-8):
+        expected_accuracy=dict(rtol=2.5e-14,atol=1e-15,adjoint_order=32,
+                               gradient_absolute_tolerance=2e-8)
+        if 'maximum_nonzero_panel_step_fraction' in r['radial_accuracy']:
+            expected_accuracy['maximum_nonzero_panel_step_fraction']=.25
+        if r['radial_accuracy']!=expected_accuracy:
             raise ValueError('endpoint did not use the confirmed radial accuracy')
+    if any(r['radial_accuracy']!=records[0]['radial_accuracy'] for r in records[1:]):
+        raise ValueError('radial integration settings differ between resolutions')
     if ([r['geometry']['cap_cells'] for r in records]!=[2,4,8] or
         [r['geometry']['exterior_cells'] for r in records]!=[32,64,128]):
         raise ValueError('unexpected mesh family')

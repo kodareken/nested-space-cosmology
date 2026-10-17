@@ -15,12 +15,28 @@ checker = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(checker)
 
 
+def old_register_view(root):
+    """Drop only an optional finite-amplitude extension and clear its SI flag."""
+    path = root/checker.REGISTER
+    data = json.loads(path.read_text(encoding="utf-8"))
+    entry = data["entries"][0]
+    changed = "finite_amplitude" in entry
+    entry.pop("finite_amplitude", None)
+    if entry["observational_test"].get("SI_scale_selected") is not False:
+        entry["observational_test"]["SI_scale_selected"] = False
+        changed = True
+    if changed:
+        path.write_text(json.dumps(data, indent=2, allow_nan=False) + "\n",
+                        encoding="utf-8", newline="\n")
+
+
 @pytest.fixture
 def register_root(tmp_path):
     for name in (checker.REGISTER, checker.DOCUMENT, *checker.EVIDENCE.values()):
         path = tmp_path/name
         path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT/name, path)
+    old_register_view(tmp_path)
     return tmp_path
 
 
@@ -97,6 +113,34 @@ def test_missing_evidence_and_duplicate_prediction_are_not_accepted(register_roo
     data["entries"].pop(); path.write_text(json.dumps(data), encoding="utf-8")
     (register_root/checker.EVIDENCE["model"]).unlink()
     assert checker.main(["--root", str(register_root)]) == 1
+
+
+def test_historical_check_strips_an_extension_already_present_in_the_source(register_root, tmp_path):
+    source = tmp_path/"source-with-extension"
+    for name in (checker.REGISTER, checker.DOCUMENT, *checker.EVIDENCE.values()):
+        destination = source/name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(register_root/name, destination)
+    path = source/checker.REGISTER
+    data = json.loads(path.read_text(encoding="utf-8"))
+    original_coefficients = copy.deepcopy(data["entries"][0]["coefficients"])
+    data["entries"][0]["finite_amplitude"] = {"schema": "already-installed"}
+    data["entries"][0]["observational_test"]["SI_scale_selected"] = True
+    path.write_text(json.dumps(data), encoding="utf-8")
+    view = tmp_path/"historical-view"
+    for name in (checker.REGISTER, checker.DOCUMENT, *checker.EVIDENCE.values()):
+        destination = view/name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source/name, destination)
+    old_register_view(view)
+    saved = json.loads((view/checker.REGISTER).read_text(encoding="utf-8"))["entries"][0]
+    assert "finite_amplitude" not in saved
+    assert saved["observational_test"]["SI_scale_selected"] is False
+    assert saved["observational_test"]["calibration"] == "none"
+    assert saved["observational_test"]["physical_source_selected"] is False
+    assert saved["coefficients"] == original_coefficients
+    assert checker.check(view) == dict(predictions=1, evidence_files=7,
+        coefficient_projections=4, exact_identity_projections=2, scientific_replays=0)
 
 
 def test_duplicate_json_keys_and_nonfinite_coefficients_are_rejected():

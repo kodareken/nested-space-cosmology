@@ -41,6 +41,33 @@ def manufactured_case(budget):
     return state,kw,bg
 
 
+def test_panel_step_option_reaches_radial_engine_and_preserves_fields(budget,monkeypatch):
+    from recursive_horizons import nsc_atlas_cap_fixed_reference as owner
+    original=owner._radial_variations
+    seen=[]
+    def watch(*args,**kwargs):
+        seen.append(kwargs.get('max_step_fraction'))
+        return original(*args,**kwargs)
+    monkeypatch.setattr(owner,'_radial_variations',watch)
+    state,kw,bg=manufactured_case(budget)
+    ordinary=coupled_fixed_stage(state,background=bg,**kw)
+    bounded=coupled_fixed_stage(state,background=bg,radial_step_fraction=.25,**kw)
+    assert seen==[None,.25]
+    for name in ('mass','lapse'):
+        assert bounded['connection']['cap'][name]==pytest.approx(
+            ordinary['connection']['cap'][name],rel=0,abs=2e-11)
+    for group in ('departure','wall'):
+        for name in bounded['rates'][group]:
+            np.testing.assert_allclose(bounded['rates'][group][name],
+                ordinary['rates'][group][name],rtol=0,atol=2e-10)
+    Z=Q(float(np.arctanh(bounded['physical_wall']['r'])))
+    gram=kw['basis'].gram(Z,budget=budget)
+    for name in ('chi','canonical_density'):
+        gap=bounded['rates']['cap'][name]-ordinary['rates']['cap'][name]
+        assert np.sqrt(gram.squared_norm(gap,budget=budget))<2e-9
+        assert abs(gram.wall['value']@gap[gram.wall['indices']])<2e-9
+
+
 def test_total_polynomial_and_independent_common_mass_direction(budget):
     state,kw,bg=manufactured_case(budget)
     affine=coupled_fixed_stage(state,background=bg,**kw)

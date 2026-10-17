@@ -170,6 +170,35 @@ def test_invalid_adjoint_order_rejected_before_sampling(budget):
                 adjoint_order=order)
 
 
+def test_quarter_panel_maximum_step_preserves_exact_linear_solution(budget, monkeypatch):
+    seen=[]
+    original=radial.solve_ivp
+    def wrapped(fun, span, initial, **kwargs):
+        seen.append((span,kwargs['max_step'],kwargs['first_step']))
+        solved=original(fun,span,initial,**kwargs)
+        assert np.max(np.diff(solved.t)) <= kwargs['max_step']+2e-16
+        return solved
+    monkeypatch.setattr(radial,'solve_ivp',wrapped)
+    result=_solve(budget,1.,_coefficients,True,max_step_fraction=.25)
+    mass,lapse,gradient=_exact(BREAKS[-1])
+    assert result['max_step_fraction']==.25
+    assert result['mass']==pytest.approx(mass,abs=5e-12)
+    assert result['lapse']==pytest.approx(lapse,abs=5e-12)
+    np.testing.assert_allclose(result['gradient'],gradient,rtol=0,atol=5e-12)
+    np.testing.assert_allclose(result['adjoint_gradient'],gradient,rtol=0,atol=5e-12)
+    assert len(seen)==len(PANELS)
+    for (span,maximum,first),width in zip(seen,PANELS):
+        assert maximum==first==.25*width
+
+
+def test_invalid_maximum_fraction_rejected_before_sampling(budget):
+    def forbidden(*args):
+        raise AssertionError('invalid maximum fraction sampled fields')
+    for fraction in (0.,-1.,1.1,True,False,np.nan,np.inf,'panel'):
+        with pytest.raises(ValueError,match='maximum-step fraction'):
+            _solve(budget,None,forbidden,False,max_step_fraction=fraction)
+
+
 def test_underresolved_adjoint_failure_names_the_worst_component(budget):
     rtol, atol = 1.25e-11, 3.5e-14
 
