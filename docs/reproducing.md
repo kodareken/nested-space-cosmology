@@ -834,8 +834,8 @@ From a committed source tree, create new compact receipts with:
 
 ```sh
 python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 0 --output results/summaries/nsc-atlas-fixed-endpoint-level0-v1.json
-python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 1 --output results/summaries/nsc-atlas-fixed-endpoint-level1-v1.json
-python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 2 --output results/summaries/nsc-atlas-fixed-endpoint-level2-v1.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 1 --output results/summaries/nsc-atlas-fixed-endpoint-level1-v2.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 2 --output results/summaries/nsc-atlas-fixed-endpoint-level2-v2.json
 ```
 
 The commands are creation-only and never overwrite a saved result. Each
@@ -844,6 +844,20 @@ residual summaries and hashes; it does not save full histories. The physical
 observable conversion is in `nsc_atlas_endpoint_comparison`, with a fiducial
 `ell=10000 metres` fixed before the runs. A three-grid resolution range is
 reported separately from common-input and physical-model uncertainty.
+
+The first middle/fine receipts stopped before accepting a step because of a
+redundant zero-history panel boundary. Their v2 successors omit that split;
+both stopped receipts remain saved. Once all three evolutions finish, compare
+their saved scalars without another physical evolution:
+
+```sh
+python scripts/run_python.py scripts/analyze_nsc_atlas_fixed_endpoint.py --inputs results/summaries/nsc-atlas-fixed-endpoint-level0-v1.json results/summaries/nsc-atlas-fixed-endpoint-level1-v2.json results/summaries/nsc-atlas-fixed-endpoint-level2-v2.json --output results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json
+```
+
+The analyzer rejects incomplete endpoints, changed sources and inconsistent
+frame conversions. It records both pointwise residual maxima and accumulated
+transport gaps. A nonshrinking result remains a nonshrinking result; it does
+not become a converged prediction through the physical-unit conversion.
 
 After that comparison passes, the separately admitted full enriched
 finite-coupling onset interval is:

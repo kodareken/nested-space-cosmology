@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "17912421fcd3e89101b23fc248c2f91de6253489",
+  "current_receipt_commit_parent": "c19b24925b708c2d6b0652daee779a8be67785d3",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 241232,
-      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet.",
-      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
+      "bytes": 241504,
+      "change": "Add authenticated three-endpoint comparison with an explicitly scaled radius and resolution envelope; numerical results remain pending.",
+      "changed_from_commit": "c19b24925b708c2d6b0652daee779a8be67785d3",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,15 +10271,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "63c8a0a6e62064b66c2e98de19e44da6ba759ba1a582adbabd96a1f52a78929b"
+      "sha256": "fa3a5507e9d645e506edda389f6b084dac9c23d6dfa2ccf223dcc6f0734feec5"
     },
     {
+      "bytes": 97216,
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "bytes": 97216,
-      "sha256": "2f39d8b8c76aa2469edebb03b3e50c1e34dd7f7a49cf04c824832157a44ccf2e",
-      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
-      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing."
+      "sha256": "2f39d8b8c76aa2469edebb03b3e50c1e34dd7f7a49cf04c824832157a44ccf2e"
     },
     {
       "bytes": 9543,
@@ -11440,12 +11440,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 141415,
-      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet.",
-      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
+      "bytes": 142343,
+      "change": "Add authenticated three-endpoint comparison with an explicitly scaled radius and resolution envelope; numerical results remain pending.",
+      "changed_from_commit": "c19b24925b708c2d6b0652daee779a8be67785d3",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c397444b46714a15c66d432e1c39be2c8b7a065281a0134de6287585961aa86b"
+      "sha256": "19cb031b14e104756c1d55738180b191ea2461e973c9edf709ec8dd8066851ac"
     },
     {
       "bytes": 18356,
@@ -29679,20 +29679,20 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "bytes": 14679,
+      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split.",
+      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v1.json",
       "retention_reason": "P001 endpoint execution or independent quiet-partition control.",
-      "bytes": 14679,
-      "sha256": "e8935932d306716261d1af25871db757cb52df30d71c7adf98dfb99f568ff1bb",
-      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
-      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split."
+      "sha256": "e8935932d306716261d1af25871db757cb52df30d71c7adf98dfb99f568ff1bb"
     },
     {
+      "bytes": 14872,
+      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split.",
+      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v1.json",
       "retention_reason": "P001 endpoint execution or independent quiet-partition control.",
-      "bytes": 14872,
-      "sha256": "baf09f4a3cef350f60515de2fcc8efcaf269e706aa124a9990ce9f4e4c21aef0",
-      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
-      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split."
+      "sha256": "baf09f4a3cef350f60515de2fcc8efcaf269e706aa124a9990ce9f4e4c21aef0"
     },
     {
       "bytes": 28312,
@@ -29874,6 +29874,14 @@
       "path": "results/summaries/nsc-atlas-source-remainder-bound-v1.json",
       "retention_reason": "Compact quadratic source remainder certificate with authenticated regeneration inputs.",
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
+    },
+    {
+      "bytes": 6176,
+      "change": "Add authenticated three-endpoint comparison with an explicitly scaled radius and resolution envelope; numerical results remain pending.",
+      "changed_from_commit": "c19b24925b708c2d6b0652daee779a8be67785d3",
+      "path": "scripts/analyze_nsc_atlas_fixed_endpoint.py",
+      "retention_reason": "P001 endpoint comparison and its reproducible controls.",
+      "sha256": "eead682dd9edc8e0e1128a11b7c684827f06a328dae77872d9cb51f0f6642a91"
     },
     {
       "bytes": 899,
@@ -32581,12 +32589,12 @@
       "sha256": "dea660fcf1f062a969da84a609cc67dc874a743cfae6bd07fc1bcaf3c0a27f11"
     },
     {
+      "bytes": 41250,
+      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet.",
+      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
       "path": "scripts/run_nsc_atlas_fixed_endpoint.py",
       "retention_reason": "Full P001 fixed-grid endpoint evolution and physically scaled observable.",
-      "bytes": 41250,
-      "sha256": "8b31d23767c8098fceeb85209ebef4c64e16393cd0ceca315baf5331842ee39a",
-      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
-      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet."
+      "sha256": "8b31d23767c8098fceeb85209ebef4c64e16393cd0ceca315baf5331842ee39a"
     },
     {
       "bytes": 20689,
@@ -33052,12 +33060,12 @@
       "sha256": "8e3bfacdce7cce29ea2443f90ec106b4d41dfd8662c56aad0a5e38adfe320496"
     },
     {
+      "bytes": 5128,
+      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet.",
+      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
       "path": "src/recursive_horizons/nsc_atlas_endpoint_comparison.py",
       "retention_reason": "Full P001 fixed-grid endpoint evolution and physically scaled observable.",
-      "bytes": 5128,
-      "sha256": "25380dd94a60c0c0970c4ab1922e9293b9a3e031ee3b1c81109eb86b807ec3f6",
-      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
-      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet."
+      "sha256": "25380dd94a60c0c0970c4ab1922e9293b9a3e031ee3b1c81109eb86b807ec3f6"
     },
     {
       "bytes": 15993,
@@ -36372,6 +36380,14 @@
       "sha256": "4beed60a5f74531137cf7acc32ec4ce39adf0b9060c23d679c0d5baacc2b28c6"
     },
     {
+      "bytes": 2727,
+      "change": "Add authenticated three-endpoint comparison with an explicitly scaled radius and resolution envelope; numerical results remain pending.",
+      "changed_from_commit": "c19b24925b708c2d6b0652daee779a8be67785d3",
+      "path": "tests/test_analyze_nsc_atlas_fixed_endpoint.py",
+      "retention_reason": "P001 endpoint comparison and its reproducible controls.",
+      "sha256": "00fd5381356f503b057a776c29f3aa963f9fa0dff67f5c8b9b398491d87c7805"
+    },
+    {
       "bytes": 12253,
       "change": "Bounded terminal transport recorder with compact output and explicit numerical gates.",
       "changed_from_commit": "ee09c74f442ebe6663f414154f92764733513bcd",
@@ -36756,12 +36772,12 @@
       "sha256": "64ee9f580218686d5a7dd7cd00b81dbb0fb3a891c21d954d50a9cef5e187b856"
     },
     {
+      "bytes": 2570,
+      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet.",
+      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
       "path": "tests/test_nsc_atlas_endpoint_comparison.py",
       "retention_reason": "Full P001 fixed-grid endpoint evolution and physically scaled observable.",
-      "bytes": 2570,
-      "sha256": "1743217f76dc467d64d8e8d77de9d49b74ca07fca2cc7b30ad1855561b1243db",
-      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
-      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet."
+      "sha256": "1743217f76dc467d64d8e8d77de9d49b74ca07fca2cc7b30ad1855561b1243db"
     },
     {
       "bytes": 10121,
@@ -36807,28 +36823,28 @@
       "sha256": "0f4cb74ce36ea6909b75cbbc3b602a5fc03545a3521ce00271b67f2fab6ffab5"
     },
     {
+      "bytes": 10977,
+      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet.",
+      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
       "path": "tests/test_nsc_atlas_fixed_endpoint.py",
       "retention_reason": "Full P001 fixed-grid endpoint evolution and physically scaled observable.",
-      "bytes": 10977,
-      "sha256": "53c9c9f141766d60096b567f4637f14249f6b5a756d632bee7b4b8a1a46e9dd5",
-      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
-      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet."
+      "sha256": "53c9c9f141766d60096b567f4637f14249f6b5a756d632bee7b4b8a1a46e9dd5"
     },
     {
+      "bytes": 1427,
+      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split.",
+      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
       "path": "tests/test_nsc_atlas_fixed_quiet_partition.py",
       "retention_reason": "P001 endpoint execution or independent quiet-partition control.",
-      "bytes": 1427,
-      "sha256": "b1b725a55cbae4653e1a5693f0128d4734f307498074df709d2f1d4ada1cd43f",
-      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
-      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split."
+      "sha256": "b1b725a55cbae4653e1a5693f0128d4734f307498074df709d2f1d4ada1cd43f"
     },
     {
+      "bytes": 4821,
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
       "path": "tests/test_nsc_atlas_formation_diagnostic.py",
       "retention_reason": "Exact same-action null-expansion, focusing, wall-impulse and frame controls.",
-      "bytes": 4821,
-      "sha256": "6eab8882d17144bc332e17cb67286298797872f28702eaae304908d0e773ed61",
-      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
-      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing."
+      "sha256": "6eab8882d17144bc332e17cb67286298797872f28702eaae304908d0e773ed61"
     },
     {
       "bytes": 3364,
@@ -36925,12 +36941,12 @@
       "sha256": "aa1cf17179a1881b370bf773cc56e5e17f1e45720eb9561a146662d788c0403a"
     },
     {
+      "bytes": 4233,
+      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
+      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
       "path": "tests/test_nsc_atlas_null_normalization.py",
       "retention_reason": "Exact same-action null-source normalization controls.",
-      "bytes": 4233,
-      "sha256": "74f04164054cf35302c75a8ed98568e313dca68e81fad578e989a13e351c794f",
-      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
-      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source."
+      "sha256": "74f04164054cf35302c75a8ed98568e313dca68e81fad578e989a13e351c794f"
     },
     {
       "bytes": 5018,
@@ -36960,12 +36976,12 @@
       "sha256": "fefc8946529c61b7ca53bd55aa15ef8a1d0640e9c3ebbc4ed2cbb7f32a5b893c"
     },
     {
+      "bytes": 5358,
+      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
+      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
       "path": "tests/test_nsc_atlas_past_preparation.py",
       "retention_reason": "Exact same-action past-collar and Jordan Cauchy-data controls.",
-      "bytes": 5358,
-      "sha256": "aa9d7a544ae6ea05717d41d5e56c5e5706fd9543f90abf087ce078b1e5ae3646",
-      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
-      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source."
+      "sha256": "aa9d7a544ae6ea05717d41d5e56c5e5706fd9543f90abf087ce078b1e5ae3646"
     },
     {
       "bytes": 6632,
@@ -36976,12 +36992,12 @@
       "sha256": "7aa21b40f51b1c73bcd609c6561baa9f3faad6cb863eefb5ce5eedb510615842"
     },
     {
+      "bytes": 3746,
+      "change": "Save unverified onset-profile robustness draft before switching to full-endpoint evolution at Douglas instruction.",
+      "changed_from_commit": "46700fd0e4185c8e9098cf7c1dad694ed50ea35c",
       "path": "tests/test_nsc_atlas_profile_stability.py",
       "retention_reason": "Paused draft controls for independent preparation perturbations; no completed robustness claim.",
-      "bytes": 3746,
-      "sha256": "08e098ddaf770d07468d33181c969321a60943e7ef44ee52d68b74a36e9c48b0",
-      "changed_from_commit": "46700fd0e4185c8e9098cf7c1dad694ed50ea35c",
-      "change": "Save unverified onset-profile robustness draft before switching to full-endpoint evolution at Douglas instruction."
+      "sha256": "08e098ddaf770d07468d33181c969321a60943e7ef44ee52d68b74a36e9c48b0"
     },
     {
       "bytes": 4845,
