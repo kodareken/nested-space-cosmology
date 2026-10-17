@@ -2,6 +2,32 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md) remains the 17 October edition. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## A checked nesting level and its observer, 18 October 2026
+
+The [two-level geometry](nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
+places an inner cap and membrane inside a Kottler host, itself joined
+through the outer membrane to the vacuum end. Both walls obey the same
+tension law. The [compact result](../results/summaries/nsc-atlas-nested-slice-v1.json)
+passes the bulk and both junction checks with two regular spatial throats.
+Twenty focused controls pass. The one-shot calculation takes 0.078125 CPU
+seconds / 1,016 charged points; its summary is 11,474 bytes. The
+[radius figure](figures/nsc-atlas-nested-slice.png) regenerates the geometry.
+
+An inward test flash from the inner material wall reaches the cap centre
+after `log(5)*ell/c`, with **`1+z=3.7463933761061194`**. For the supplied
+`ell=10 km`, receipt takes **53.6850701 microseconds**. The host affects
+the emitter boost. High-precision evaluation agrees to `1.45e-15` in the
+frequency ratio, a numerical precision indicator rather than an experimental
+or model error bar. Source clock, vacuum and mass scales remain inputs.
+
+The [initial geometric average](schur-memory.md#two-successive-sourced-levels)
+has trace `Lambda_g,trace*ell^2=-0.0153506330754` and vacuum residual
+`2.11796240047`; its density and pressure are not vacuum form. Its exact
+end supplies a [conditional parent initial-data family](nsc-atlas-connection-gluing.md#retaining-a-grandchild-in-the-parent-initial-data)
+with two unequal children and a grandchild. The connector, physical observer
+reduction and joint clock atlas remain open. The original P001 fine
+endpoint evolution continues independently.
+
 ## Two unequal sourced inputs, 18 October 2026
 
 The [second cap-wall-bridge body](nsc-atlas-connection-slice.md#unequal-sourced-input-18-october-2026)

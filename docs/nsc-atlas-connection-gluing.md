@@ -233,6 +233,28 @@ singular past or future regions. An actual connector metric and observer
 reduction are needed for the cosmological calculation. The local argument
 is sufficient at this scope and is not a new numerical robustness campaign.
 
+## Retaining a grandchild in the parent initial data
+
+The [checked two-level body A2](nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
+can replace the one-cap A input. Its outer mass is still `.4*ell`; beyond
+the outer throat its right end has exactly Schwarzschild `h` and `K=0`.
+Inside the cut it retains the `.01*ell` Kottler host, inner membrane and
+regular cap. B remains the checked `.6*ell` cap-wall body. All three
+membranes use the same tension and quiet field law, with recorded states.
+
+The same end theorem therefore admits a sufficiently separated parent
+initial-data family with two unequal sourced children and a retained
+grandchild. It preserves A2's complete checked compact geometry and B's,
+with one outer AE end. This applies the existing theorem to a new verified
+input; no numerical connector has been evaluated. The original A+B moment
+table remains the original input set. A2+B is a different candidate.
+
+This is finite initial-data composition. It does not provide A2's matched
+clock atlas, the many-body global evolution, signal inheritance, or an
+unlimited-generation limit. The quiet local patching argument above can
+be reused when the selected multi-wall source neighbourhood has itself
+been established; the initial-data record alone is not that development.
+
 ## A vacuum observer window that does not assume shell evolution
 
 The source evolution question can be avoided for a deliberately narrower

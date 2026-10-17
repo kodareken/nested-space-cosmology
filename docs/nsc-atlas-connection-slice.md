@@ -301,7 +301,8 @@ and analytic AE continuation. At a simple black-hole root `rb`, use
 as a singular sphere.
 
 The [bounded application](prior-art-and-open-claim.md#two-successive-sourced-boundaries-18-october-2026)
-is implemented and awaiting its first application. It retains scalar milestones and integrated
+now has a [compact checked record](../results/summaries/nsc-atlas-nested-slice-v1.json).
+It retains scalar milestones and integrated
 moments, rather than sample arrays. A regular initial slice does not yet
 provide the matched Kottler horizon charts or a common future clock.
 The spatial chain alone implies neither a causal passage across the bridge
@@ -396,3 +397,35 @@ requires frozen source bytes and a fresh output path. The
 [figure producer](../scripts/plot_nsc_atlas_nested_slice.py) regenerates the
 radius curve rather than retaining spatial arrays. These bulk charts and
 cap-side observations do not yet assemble the joint two-wall clock atlas.
+
+### First application and finite result
+
+Frozen method `acc5a176ac074999ed23af770045003c4123cd57` passes the first
+application in 0.078125 CPU seconds / 1,016 charged geometric points.
+The result is 11,474 bytes. The figure regenerates 10,087 points in
+0.515625 CPU seconds; neither command solves a field or evolves a grid.
+The host black-hole and cosmological radii are
+`0.020008009615388216*ell` and `0.989845863754293*ell`. The two walls
+occur at proper distances `.8*ell` and `3.372632651397006*ell`.
+The right retention sphere is at `l/ell=9.503059823421234`.
+
+![Two successive sourced boundaries and the resolved inner throat](figures/nsc-atlas-nested-slice.png)
+
+This is a proper-radius versus areal-radius profile of the initial geometry.
+Its two minima are regular spatial spheres. It does not establish causal
+travel across either bridge.
+
+The central flash gives `t_rec/ell=1.6094379124341005` and
+`1+z=3.7463933761061194`. At the supplied ruler `ell=10 km`, the central
+proper interval is **53.6850701 microseconds**. Independent 80-digit
+evaluation of the rational wall factors differs by `1.30e-16` in time/ell
+and `1.45e-15` in `1+z`. These are roundoff indicators, not model or
+experimental error bars; input uncertainties were not supplied.
+The host changes the wall boost while the membrane law remains fixed.
+This is a conditional observer prediction for a specified test source.
+
+The [initial normal-clock average](schur-memory.md#two-successive-sourced-levels)
+passes its global constraint check. Its geometric trace is negative and
+its stress fails the vacuum-form test, so it does not generate a cosmological
+Lambda. This finite calculation is closed. Further work concerns the parent
+geometry, states and observer reduction, rather than a precision scan here.

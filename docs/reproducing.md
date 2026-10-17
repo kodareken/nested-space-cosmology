@@ -455,6 +455,13 @@ The [owner](nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
 defines the model and central flash. Neither a new cosmological vacuum
 value nor a complete two-wall clock atlas is supplied by these commands.
 
+The [saved application](../results/summaries/nsc-atlas-nested-slice-v1.json)
+binds method `acc5a176ac074999ed23af770045003c4123cd57`. It stores all
+assumptions, milestones, moments and quadrature differences in 11,474 bytes.
+Compare its numerical values using the declared tolerances, retaining
+runtime and current-commit metadata as reproduction metadata. The flash's
+80-digit comparison tests roundoff; it supplies no input/model uncertainty.
+
 The two unequal sourced parent inputs have a compact scalar record:
 
 ```sh

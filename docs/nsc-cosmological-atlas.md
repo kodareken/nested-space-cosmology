@@ -73,6 +73,14 @@ remain conditional on sufficiently separated vacuum ends. Computing the
 particular connector and its observer reduction is still necessary; an
 existence family is not its numerical geometry or its cosmological response.
 
+The [checked two-level state](nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
+adds an actual grandchild input under the same membrane law. Its exact vacuum
+end can replace A in that family. A central inward test flash now has a
+specified arrival time and redshift, while the enlarged normal-volume
+projection fails vacuum form. Reuse these finite results; the next connection
+is the physical parent and observer reduction rather than more precision
+on this quiet initial state.
+
 ## Working geometric hypothesis: inheritance through resolution
 
 Douglas's current proposal is that a region's approximately spherical geometry

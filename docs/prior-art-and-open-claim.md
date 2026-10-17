@@ -36,6 +36,19 @@ average is an initial normal-clock diagnostic. A shared spacetime atlas,
 physical source state and observer reduction remain separate requirements;
 the supplied cap scale is not a generated Lambda.
 
+**Outcome:** [method `acc5a17`](../results/summaries/nsc-atlas-nested-slice-v1.json)
+passes twenty focused controls and the one application in 0.078125 CPU
+seconds / 1,016 charged points. The 11,474-byte summary includes two walls,
+two smooth throats, the cosmological horizon, moments and central flash.
+Its `t_rec/ell=log(5)` and `1+z=3.7463933761061194` agree with independent
+high-precision rational evaluation. The geometric trace is
+`-.0153506330754`, with vacuum residual `2.11796240047`, so the projection
+is not a cosmological vacuum contribution. The largest regional scaled
+32/64 difference is `5.62e-9`, within the fixed `1e-7` comparison.
+The figure regenerates 10,087 points / 0.515625 CPU seconds. Both commands
+together remain below the shared budget. Close this initial-slice
+calculation; the next connection is the physical parent/clock reduction.
+
 ## Unequal sourced inputs for the common parent, 18 October 2026
 
 The geometric reduction needs actual source bodies and their integral moments.

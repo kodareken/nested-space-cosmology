@@ -196,6 +196,47 @@ prescription. Solving this equation for a desired connector moment would
 select the answer. The two input bodies establish neither a local
 cosmological vacuum source nor the cap centre's access to the parent volume.
 
+### Two successive sourced levels
+
+The [two-level record](../results/summaries/nsc-atlas-nested-slice-v1.json)
+supplies a different hierarchical body, `A2`, at the same outer mass
+`.4*ell`. It contains an inner membrane and Kottler host of mass `.01*ell`;
+both membranes use `k*ell=2`. The cap and host vacuum scales remain supplied.
+This extends the geometry under the same declared law; it is not a pure
+change of resolution of the previous one-body state.
+
+Through the same right-end cut `R/ell=4`, including both wall distributions,
+
+$$
+V/\ell^3=360.7573878173,\quad I/\ell^2=100.2281955340,\quad
+J/\ell=204.0438671729,\quad \mathcal R/\ell=207.6312086409.
+$$
+
+The initial normal-clock projection gives
+
+$$
+\Lambda_{g,\mathrm{tr}}\ell^2=-0.0153506330754,\qquad
+(3Q+\langle R^{(3)}\rangle)\ell^2=2.11796240047.
+$$
+
+The latter would have to vanish for vacuum form. The geometric density and
+pressure are `kappa*rho_g*ell^2=-.544841233192` and
+`kappa*p_g*ell^2=-.161146233630`; they do not obey `p=-rho`.
+Gauss 64-minus-32 differences are `-1.28e-10` in the trace and
+`-3.91e-10` in the vacuum residual, as numerical indicators. The integrated
+Hamiltonian residual is `-3.33e-16` in ell units. These indicators are not
+rigorous, model or observational uncertainty bounds.
+
+Adding a checked level changes the finite response with the same regional
+law and couplings. It does not make the scalar projection a tensor vacuum
+source or select the observed cosmological scale. `A2` also has its
+[central test-flash observable](nsc-atlas-connection-slice.md#a-central-test-flash-protocol).
+Its exact end can replace A in the
+[conditional two-child assembly](nsc-atlas-connection-gluing.md#retaining-a-grandchild-in-the-parent-initial-data).
+The evaluated connector, common observer prescription and effective local
+gravitational reduction remain the outward calculation. This finite probe
+requires no further quadrature refinement.
+
 ### Observer clocks in the geometric average
 
 The selected larger-geometry route must compare resolutions in a declared
