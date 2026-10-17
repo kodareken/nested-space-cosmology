@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "cd037ab58884d36db4b45f1539866c259be61ae3",
+  "current_receipt_commit_parent": "46700fd0e4185c8e9098cf7c1dad694ed50ea35c",
   "files": [
     {
       "bytes": 3120,
@@ -10404,12 +10404,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 602004,
-      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
-      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
+      "bytes": 611302,
+      "change": "Save unverified onset-profile robustness draft before switching to full-endpoint evolution at Douglas instruction.",
+      "changed_from_commit": "46700fd0e4185c8e9098cf7c1dad694ed50ea35c",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "185b56de634be1e7e7812af49423ec28bfb73fa6dd8105db95eb9d3ddd0d0017"
+      "sha256": "dd7ed05ae4689bd88f3c38c7ce657b505e230a6e6214ffa49f2cb52016bb0539"
     },
     {
       "bytes": 8895,
@@ -11426,12 +11426,12 @@
       "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 451301,
-      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
-      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
+      "bytes": 453889,
+      "change": "Save unverified onset-profile robustness draft before switching to full-endpoint evolution at Douglas instruction.",
+      "changed_from_commit": "46700fd0e4185c8e9098cf7c1dad694ed50ea35c",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fa05e86763238e3ac0baab5baf678188c074a20c05a44f011252e751d842996e"
+      "sha256": "4507e7414cf3ea741291caf28fdbe3091d2773ed4d399af3f007e795424581bc"
     },
     {
       "bytes": 6705,
@@ -36918,6 +36918,14 @@
       "path": "tests/test_nsc_atlas_prepared_background.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "7aa21b40f51b1c73bcd609c6561baa9f3faad6cb863eefb5ce5eedb510615842"
+    },
+    {
+      "path": "tests/test_nsc_atlas_profile_stability.py",
+      "retention_reason": "Paused draft controls for independent preparation perturbations; no completed robustness claim.",
+      "bytes": 3746,
+      "sha256": "08e098ddaf770d07468d33181c969321a60943e7ef44ee52d68b74a36e9c48b0",
+      "changed_from_commit": "46700fd0e4185c8e9098cf7c1dad694ed50ea35c",
+      "change": "Save unverified onset-profile robustness draft before switching to full-endpoint evolution at Douglas instruction."
     },
     {
       "bytes": 4845,

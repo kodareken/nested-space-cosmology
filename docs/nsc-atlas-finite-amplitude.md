@@ -9651,6 +9651,211 @@ formation history, passage through the first central arrival, or an error
 certificate for the saved approximate numerical trajectory. Those are
 different assertions and retain their separate work.
 
+### Independent preparation perturbations on the onset cell
+
+**Paused draft, 17 October 2026.** Douglas redirected work to the full
+fixed-grid evolution and NSC-P001's physical observable. The proposed
+extension below has not completed independent review or its recorded
+control run and is not an established result. The earlier onset theorem
+is unchanged. Resume this robustness work only when it serves that priority.
+
+The amplitude theorem fixes the preparation profile. Here the profile may
+change independently, while the action, couplings, supplied quiet mass,
+initial cap and anchored event stay fixed. This is a finite radial
+robustness statement within a specified source class.
+
+Let $I=[x_L,x_R]$ be the original certified onset cell above and let
+$g_0$ be its exact prescribed source. Choose $x_q>x_L$ inside its
+nonempty quiet prefix and a fixed compact interval
+$J\subset(x_q,x_R)$ with nonempty interior. Use profiles
+
+$$
+g=g_0+h,\qquad h\in C^4(I),\qquad
+\operatorname{supp}h\subset J,\qquad \|h\|_{C^4(I)}\le\rho.
+$$
+
+Extend $h$ by zero along the rest of the original source leg. Its compact
+support preserves the source corners and their jets. In particular all
+these profiles have the same quiet initial interval, initial radius and
+slope, transverse quiet data, wall event and central clock normalization.
+The original C3 front remains piecewise C4 with a uniform fourth-derivative
+bound. This stronger neighbourhood supplies the spatial moduli needed for
+continuation; a small C2 norm alone would not supply them.
+
+There are $\rho_*>0$ and finite constants $C_{\rm src},C_{\rm stab}$,
+uniform for the original $0\le\alpha\le\alpha_{\max}$, such that every
+profile with $\rho\le\rho_*$ has a constrained solution on this same
+onset cell. For two such profiles at the same $\alpha$, put
+$\delta_g=\|g_1-g_2\|_{C^2(I)}$. On the owned fixed comparison domains,
+
+$$
+\|\mathcal U[g_1]-\mathcal U[g_2]\|_{C^0}
+\le C_{\rm stab}\delta_g.
+$$
+
+The state includes normalized exterior first jets, cap fields, constrained
+metric variables, wall state and the centre-anchored clock. The constants
+and neighbourhood radius below are finite analytic quantities; their
+numerical values have not been enclosed. The old rounded certificates
+remain certificates for $g_0$ alone.
+
+#### Constrained source data from the profile
+
+Write $s=r_J$ on the affine source and $v=s_x$. Eliminating the full
+conformal null stress gives the exact source system
+
+$$
+s_x=v,\qquad v_x=\alpha A(s,v,g,g_x,g_{xx}),\qquad
+A=\frac{g g_{xx}-2g_x^2}{6s}+\frac{g g_xv}{3s^2}.
+$$
+
+Its initial data at $x_L$ are $(s,v)=(x_L,1)$. They are unchanged
+because every profile vanishes on the common quiet prefix. In particular
+a source-radius or source-mass constant is not varied independently.
+For $s\ge s_*>0$, $|v|\le v_*$ and $|g^{(i)}|\le G_i$ for $i=0,1,2$,
+the exact profile derivatives are
+
+$$
+A_g=\frac{g_{xx}}{6s}+\frac{g_xv}{3s^2},\qquad
+A_{g_x}=-\frac{2g_x}{3s}+\frac{gv}{3s^2},\qquad
+A_{g_{xx}}=\frac g{6s}.
+$$
+
+Valid uniform comparison coefficients are
+
+$$
+L_s=\frac{G_0G_2+2G_1^2}{6s_*^2}
+       +\frac{2G_0G_1v_*}{3s_*^3},\qquad
+L_v=\frac{G_0G_1}{3s_*^2},
+$$
+$$
+B_g=\frac{G_2+4G_1+G_0}{6s_*}
+       +\frac{(G_1+G_0)v_*}{3s_*^2},\qquad
+L=\max\{1,\alpha_{\max}(L_s+L_v)\}.
+$$
+
+The positive-radius, bounded-slope source box is convex, so these
+derivative bounds give an actual finite-difference bound. With
+$D=x_R-x_L$ and identical initial values, Gronwall yields
+
+$$
+\|\Delta(s,v)\|_\infty
+\le\alpha B_gD e^{LD}\delta_g.
+$$
+
+The exact frame conversion and its first jets use the endpoint identities
+for square roots and reciprocals, with the actual positive frame/radius
+floors. For example $\Delta\sqrt Q=\Delta Q/(\sqrt{Q_1}+\sqrt{Q_2})$.
+An interpolated state is not presumed to satisfy the field equations.
+The existing transverse source equations for $(a,b_c,\lambda)$ form an
+affine ODE with coefficients determined by $(s,v,g,g_x)$ and their frame
+conversion. Its initial values are the same quiet Schwarzschild jets.
+Subtracting the two affine systems and applying Gronwall gives a finite
+bound for all three transverse differences. Together these estimates give
+
+$$
+\|\Delta\mathcal D_{\rm src}\|\le C_{\rm src}\delta_g,
+$$
+
+where $\mathcal D_{\rm src}$ contains the actual source values and first
+jets used by the regional mixed system. These data satisfy both source
+constraints by their construction. The supplied quiet mass is fixed;
+the stress-generated mass along the source is allowed to respond.
+
+#### Existence for a nonzero profile neighbourhood
+
+Existence of a second solution is needed before applying the two-state
+estimate. Retain the original ten-component box, reference gauge,
+amplitude ceiling and geometric cutoffs. The mathematical expressions
+underlying `source_forcing_bound` and `coupled_vacuum_tube_bound` involve
+finitely many sums, products, positive-denominator quotients and smooth
+elementary functions of the source ceilings $G_0,G_1,G_2$. Evaluate these
+analytic expressions before outward rounding. At the original source,
+the authenticated outward bounds imply strictly positive source/frame,
+rate, characteristic, travel and box-image margins for those expressions.
+
+Enlarge each original $G_i$ by $\rho$. Continuity of the finite list of
+unrounded inequalities gives a positive $\rho_*$ for which every strict
+margin survives. This is an openness argument for the mathematical
+inequalities, not continuity of a quantized rounding operation and not
+a new numerical evaluation of the old receipt. Bounds evaluated with
+$\alpha_{\max}$ still cover the entire original amplitude interval.
+Decrease $\rho_*$ if needed to keep the source-only continuation margins.
+
+Every member of this profile class therefore starts with the same
+explicit quiet solution and has the uniform conditional source and
+coupled bounds. Its C4 perturbation ceiling supplies the uniform source
+derivatives and moduli in the native regularity argument. The existing
+primitive-preserving local construction applies with those compatible
+data. The same strict image, quiet-core travel and coordinate-coverage
+arguments then exclude a first exit before $x_R$. The common positive
+local width is chosen from the uniform bounds, so the continuation
+requires only finitely many slabs. This constructs the perturbed family
+on the whole original onset cell, including its endpoint, under the same
+constraints and material laws.
+
+#### Coupled differences and the observer quantities
+
+Use each solution's own anchored exterior relabeling and physical cap
+chart. The exterior has the same reference wall graph $W(x)$; the cap
+uses the owned common normalized radial coordinate. All differences are
+taken on these fixed comparison domains at the same source label $x$.
+They never evaluate one solution beyond its own material wall.
+
+The exact difference argument in the next parameter section depends on
+the data through $\Delta\mathcal D$ as well as an explicit amplitude
+difference. Here the latter is zero. It retains, in particular,
+
+$$
+(\partial_x-\sigma_1\partial_\eta)\Delta w
+=\Delta\sigma\,\partial_\eta w_2+\Delta\mathcal R.
+$$
+
+Uniform spatial bounds control $\partial_\eta w_2$ before any data
+continuity is assumed. The wall ODE retains all moving-trace and entry
+terms. Endpoint inverse identities use the two actual solution floors;
+the radial cap map retains its potential, source and changing limits.
+Consequently the same coupled block construction, with common weights
+and sufficiently short slabs, gives
+
+$$
+N_j\le qN_j+bN_{j-1}+d\delta_g,\qquad
+0\le q\le\tfrac12,\qquad N_0=0,
+$$
+
+with finite common $b,d\ge0$ including source-data conversion and
+inherited terminal data. This is the bound for the coupled regional
+fields; the wall, clock and radial constraints have the accompanying
+ODE/integral bounds. With $A=b/(1-q)$, $B=d/(1-q)$, finite iteration gives
+
+$$
+N_j\le B\delta_g\sum_{i=0}^{j-1}A^i.
+$$
+
+This proves the asserted finite $C_{\rm stab}$. No free homogeneous wall
+phase is introduced: the quiet event is common. With uniform spatial C2
+bound $M_{\rm sp}$, the existing fixed-domain interpolation argument also
+gives C1 continuity bounded by a constant times
+$C_{\rm stab}\delta_g+\sqrt{M_{\rm sp}C_{\rm stab}\delta_g}$.
+A C1 Lipschitz estimate is not asserted by this argument.
+
+For the Jordan material radius,
+$r_{J,W}=\sqrt{r_W^2+\alpha c_W^2/6}$. Positive radius and bounded
+$c_W$ give a finite Lipschitz coefficient for this conversion. Thus both
+the material radius and centre-anchored clock at fixed source label have
+finite Lipschitz response to the profile change. Physical scalar
+differences retain their $\sqrt\alpha$ factor; at zero amplitude the
+normalized probe can change while the physical scalar and geometry remain
+the vacuum solution.
+
+This result concerns radial preparation perturbations in the stated
+neighbourhood on the short onset cell. It neither supplies a preferred
+emitter nor establishes the later central-arrival evolution, long-time
+stability, nonspherical stability or a regular formation history. The
+[admission](prior-art-and-open-claim.md#independent-preparation-perturbations-on-the-onset-cell-17-october-2026)
+and [exact controls](../tests/test_nsc_atlas_profile_stability.py) cover this
+connection without another field solve or grid scan.
+
 ### Parameter-variation identities on the onset cell
 
 The onset theorem supplies a solution for each admitted alpha. A uniform

@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2327447,
+      "bytes": 2327947,
       "path": "docs/lab-snapshot.json",
-      "sha256": "875eb3d2c555334926353c94cc17892faa46dca67269f79a7f87dd8ecdba406d"
+      "sha256": "9294e92b387e4b6179dcf411b340d3bea8f7754e71d029d091691cba77fdd89b"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 602004,
+      "bytes": 611302,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "185b56de634be1e7e7812af49423ec28bfb73fa6dd8105db95eb9d3ddd0d0017"
+      "sha256": "dd7ed05ae4689bd88f3c38c7ce657b505e230a6e6214ffa49f2cb52016bb0539"
     },
     {
       "bytes": 8895,
@@ -2201,9 +2201,9 @@
       "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 451301,
+      "bytes": 453889,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "fa05e86763238e3ac0baab5baf678188c074a20c05a44f011252e751d842996e"
+      "sha256": "4507e7414cf3ea741291caf28fdbe3091d2773ed4d399af3f007e795424581bc"
     },
     {
       "bytes": 6705,
@@ -19311,6 +19311,11 @@
       "sha256": "310e976725f88bf61294a382b5f888e1b373b029403146a190b97c90cd9bad23"
     },
     {
+      "bytes": 3746,
+      "path": "tests/test_nsc_atlas_profile_stability.py",
+      "sha256": "08e098ddaf770d07468d33181c969321a60943e7ef44ee52d68b74a36e9c48b0"
+    },
+    {
       "bytes": 6958,
       "path": "tests/test_nsc_atlas_programme.py",
       "sha256": "95ea70b9d6240c7796e3fb92098679c32a7e9d976ca849f7b1ae6c1b1e0fc044"
@@ -21226,7 +21231,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "875eb3d2c555334926353c94cc17892faa46dca67269f79a7f87dd8ecdba406d",
+  "lab_snapshot_sha256": "9294e92b387e4b6179dcf411b340d3bea8f7754e71d029d091691cba77fdd89b",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

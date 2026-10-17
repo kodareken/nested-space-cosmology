@@ -1,5 +1,48 @@
 # Prior art and admission of new research
 
+## Independent preparation perturbations on the onset cell, 17 October 2026
+
+**Paused before the control run:** Douglas's next priority is three fixed
+grid evolutions to NSC-P001's endpoint and a physically scaled observable.
+The proposed proof and controls are saved as an unverified draft; this
+admission does not record a completed robustness result.
+
+The existing amplitude comparison fixes one profile. The next connection
+is a neighbourhood of independently perturbed profiles under the same
+action, couplings, quiet source mass, initial cap and clock anchor.
+Reuse the exact source ODE, primitive-preserving construction, strict
+ten-component tube and coupled data-difference estimate in the
+[finite-amplitude owner](nsc-atlas-finite-amplitude.md). The zero-source
+homogeneous wall displacement is already identified as a time-origin
+shift; deriving that result again would not supply this connection.
+
+Keep the original certified onset endpoints and amplitude interval.
+Let profile changes be C4 functions supported in a fixed compact
+subinterval after a common quiet prefix and before the right endpoint.
+A small C4 ball supplies uniform source regularity and preserves the
+initial data. First obtain the constrained source-data difference from
+the profile and its first two derivatives. Then establish perturbed
+existence using the strict tube margins and close the coupled difference
+bound on common physical comparison domains. A conditional comparison
+between already existing solutions alone is insufficient.
+
+Admit **four exact symbolic/manufactured controls**, sharing **20 active
+process-CPU seconds**, with zero physical samples, field solves, numerical
+quadratures or scans. Check the source equation against the original
+conformal stress, its profile Jacobian and comparison constants, finite
+slab data propagation, and the changing-characteristic transport term.
+An independent Grok review must examine the uniform existence argument
+and the claimed norm, not only these identities. No numerical profile
+radius or stability constant is to be inferred from saved samples.
+
+Stop on an unclosed source or coupled tube, loss of shared quiet data,
+an uncontrolled moving-domain term, a failed identity or the budget.
+Likely failures are assuming perturbed existence from an amplitude-only
+theorem, losing uniform spatial regularity by using only a C2 profile
+ball, and treating a finite onset estimate as later-time or nonspherical
+stability. This step addresses radial robustness within its stated
+preparation class; it does not select that class as a physical emitter.
+
 ## Formation diagnostic for the same sourced family, 17 October 2026
 
 The finite past collar realizes the preparation but does not establish its
