@@ -122,6 +122,12 @@ inputs, then performs algebra only under a 24,576-value / 10-CPU-second
 allowance. It saves normalized scalar difference bounds, comparison
 constants, hashes and the command, with no source or field history. The
 mathematical scope is in the [scalar comparison](nsc-atlas-finite-amplitude.md#amplitude-proportional-canonical-scalar-departure).
+The [first scalar receipt](../results/summaries/nsc-atlas-scalar-departure-bound-v1.json)
+uses producer `a0fce1a9a77b0a5c70463dd656ba2288a29161d2` and completes
+18,944 charged values / 0.03125 CPU seconds. Its separate exact audit uses
+2,048 values / 0.109375 CPU seconds. Both loops and all provenance, rounding
+and alpha-scaling checks pass. It is a normalized scalar difference bound;
+no numerical quadratic geometric remainder is supplied.
 
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic

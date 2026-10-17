@@ -2,6 +2,30 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Uniform canonical scalar amplitude bounds, 17 October 2026
+
+The [mixed-equation and moving-collar comparison](nsc-atlas-finite-amplitude.md#amplitude-proportional-canonical-scalar-departure)
+now bounds the normalized scalar departure from its leading reference
+throughout the original onset cell and coupling interval. The exterior
+comparison loop is below 0.000482. At the admitted alpha_max, the uniform
+absolute differences are at most 1.672e-20 for exterior X, 1.991e-19 for
+its label derivative Q, 1.212e-12 for cap Eplus and 9.284e-16 for cap chi.
+The general bounds are alpha times the exact rational coefficients in the
+[compact certificate](../results/summaries/nsc-atlas-scalar-departure-bound-v1.json).
+All quantities are dimensionless; cap comparisons use the same eta collar.
+
+Producer `a0fce1a9a77b0a5c70463dd656ba2288a29161d2` uses 18,944 charged
+values / 0.03125 CPU seconds in one algebraic application. Ten independent
+controls pass, and the separate 2,048-value exact audit passes. Grok reviews
+accept the corrected mixed equation, reference derivatives and implementation.
+The 11,630-byte receipt contains 27 source bindings and six input hashes;
+no field solve, grid scan or raw history was generated.
+
+This closes the scalar first-difference input to the geometric remainder
+programme. It does not yet evaluate that quadratic remainder or certify a
+numerical finite-amplitude sign threshold. Next are the normalized radial
+cap mass and lapse differences with the changing collar Jacobian retained.
+
 ## Uniform geometric amplitude bounds, 17 October 2026
 
 The [positive matrix comparison](nsc-atlas-finite-amplitude.md#amplitude-proportional-geometric-departure)

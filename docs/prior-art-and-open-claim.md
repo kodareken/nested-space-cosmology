@@ -3342,9 +3342,21 @@ remainder. Independent Grok review and exact manufactured identities check
 these connections before the original application.
 
 **Implementation controls:** ten controls pass in one execution with
-6,656 charged values / 0.421875 active CPU seconds. No original data
-application has run. The mixed exterior and reference-jet reviews accept
-the corrected identities; implementation review remains in progress.
+6,656 charged values / 0.421875 active CPU seconds. The mixed exterior,
+reference-jet and implementation reviews accept the corrected identities
+and code with no blocking issue.
+
+**Original application:** frozen producer
+`a0fce1a9a77b0a5c70463dd656ba2288a29161d2` succeeds in one application,
+18,944 charged values / 0.03125 CPU seconds. Both comparison loops are
+below one. The [11,630-byte receipt](../results/summaries/nsc-atlas-scalar-departure-bound-v1.json)
+gives uniform alpha-proportional canonical scalar bounds on the original
+onset, with 27 producer bindings and six input hashes. The independent
+2,048-value / 0.109375-CPU-second exact audit checks provenance, two-variable
+elimination, rounding, alpha scaling and displays. No physical source/field
+query, integration, evolution, scan, retry or raw history occurred. The
+normalized cap mass/lapse comparison and final quadratic geometric
+remainder remain separate calculations.
 
 ## Normalized geometric departure bound, 17 October 2026
 

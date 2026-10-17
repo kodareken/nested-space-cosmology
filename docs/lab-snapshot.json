@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "1bebbc04dbb76d0260a198a4348ccd81599d0ded",
+  "current_receipt_commit_parent": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 236630,
-      "change": "Bound canonical scalar differences using the certified geometric departure on the original onset.",
-      "changed_from_commit": "1bebbc04dbb76d0260a198a4348ccd81599d0ded",
+      "bytes": 236716,
+      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
+      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "2924dd1c760ead35c37bd690912f93ebd5559e12ddf9f4269861e961a2b88029"
+      "sha256": "2ece8ea04a41752710042c94c1d42bfe8823bbe63dfb9391726e1c0d51bfed07"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 346321,
-      "change": "Record the uniform geometric amplitude certificate and independent audit.",
-      "changed_from_commit": "459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd",
+      "bytes": 347845,
+      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
+      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "930ce88b94801c9672e079080fecb99750fd6e5d201c9370d783cdfc0cb508cc"
+      "sha256": "9b7c28e2256e3c27af67ceece7125e37438f92b9ebb7c0b9c8451ed02665c229"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 550754,
-      "change": "Bound canonical scalar differences using the certified geometric departure on the original onset.",
-      "changed_from_commit": "1bebbc04dbb76d0260a198a4348ccd81599d0ded",
+      "bytes": 552368,
+      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
+      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0b223568b1ed88768c654e9a852628aa474c81f349929fc61aefab187228dd83"
+      "sha256": "c338a77a59a2590f9fd57a2cf90bada60aca839a73f482d07b240e14dd97f02c"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 425331,
-      "change": "Bound canonical scalar differences using the certified geometric departure on the original onset.",
-      "changed_from_commit": "1bebbc04dbb76d0260a198a4348ccd81599d0ded",
+      "bytes": 426061,
+      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
+      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "57c97bac694c663c396e206cab77870ef2d5137c92c03cbe24c27b58229ee1b2"
+      "sha256": "de176b1279011a4a82436712df34a7b9fa2af726ac5144fa38f1d8b95d10cfb3"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 132040,
-      "change": "Bound canonical scalar differences using the certified geometric departure on the original onset.",
-      "changed_from_commit": "1bebbc04dbb76d0260a198a4348ccd81599d0ded",
+      "bytes": 132484,
+      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
+      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5eef767ed4cb11db9e056140aacd6fd5155f5cf29c7af610a04419c79e0c8064"
+      "sha256": "11bc2574651857dee9d69385c7a252b77374732f0c764d23845d550bbd04e481"
     },
     {
       "bytes": 18356,
@@ -29780,6 +29780,14 @@
       "path": "results/summaries/nsc-atlas-reference-initial-bound-v1.json",
       "retention_reason": "Certified compatible exact initial event and authenticated original inputs.",
       "sha256": "b1d29d8a2c78518889706adbb8ab3293edda596725949347d2830c187f9ffde9"
+    },
+    {
+      "bytes": 11630,
+      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
+      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
+      "path": "results/summaries/nsc-atlas-scalar-departure-bound-v1.json",
+      "retention_reason": "Compact uniform canonical scalar amplitude bound with authenticated inputs and regeneration command.",
+      "sha256": "fb52782856689b88ce2d6bee893085352eda9c380372ec178d2aa670196ef7f5"
     },
     {
       "bytes": 13697,

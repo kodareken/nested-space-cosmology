@@ -11983,9 +11983,39 @@ Ten manufactured controls pass in one execution (6,656 charged values,
 0.421875 active CPU seconds). The independent Grok review corrected its
 initial first-order reading of the exterior equation and accepted the mixed
 comparison. A separate reference review confirms the lapse, wall identity
-and arrival-chain derivatives. The original-data application remains to be
-run after source freeze. This result concerns first finite differences of
-normalized fields, not a numerical quadratic geometric remainder.
+and arrival-chain derivatives. The final implementation review found no
+blocking error in the mixed equation, alpha factors, wall transmission,
+clock rate or common-collar comparison.
+
+The original application, frozen at
+`a0fce1a9a77b0a5c70463dd656ba2288a29161d2`, succeeds once with
+18,944 charged values / 0.03125 CPU seconds. The exterior loop is at most
+`0.000481163461`; the outgoing cap loop also stays below one. Outward
+rounded uniform coefficients in `|field_alpha-field_0|<=alpha*C` are:
+
+| Normalized variable | Coefficient upper bound | Difference at alpha_max |
+| --- | ---: | ---: |
+| Exterior X | 1.288e-16 | 1.672e-20 |
+| Exterior P=X_U | 4.547e-16 | 5.903e-20 |
+| Exterior Q=X_x | 1.533e-15 | 1.991e-19 |
+| Cap Eminus | 2.800e-15 | 3.635e-19 |
+| Cap Eplus | 9.331e-9 | 1.212e-12 |
+| Cap chi | 7.151e-12 | 9.284e-16 |
+
+All quantities are dimensionless on the original onset. The cap comparison
+holds at fixed common eta, and exterior comparisons at fixed source chart.
+The [11,630-byte certificate](../results/summaries/nsc-atlas-scalar-departure-bound-v1.json)
+retains exact rational upper bounds, 27 producer bindings, six input hashes
+and the reproduction command. SHA256 is
+`fb52782856689b88ce2d6bee893085352eda9c380372ec178d2aa670196ef7f5`.
+A separate 2,048-value / 0.109375-CPU-second audit authenticates those
+bindings against Git and disk, checks the exact two-variable comparison,
+rounding, positive denominators, alpha scaling and outward displays.
+There are no source queries, integrations, field evolutions, time steps,
+root searches, retries or raw histories. This result concerns first finite
+differences of normalized fields, not a numerical quadratic geometric
+remainder. The next connection is the corresponding normalized cap mass
+and lapse difference, including their changing radial Jacobian.
 
 ## Missing full-domain estimate
 
