@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0a2799c0be79bdabcb9cfd1e8fcaaa37702474c0",
+  "current_receipt_commit_parent": "9f0ec9cd4081cbf08f2bc8455836afaf029de9f2",
   "files": [
     {
       "bytes": 3120,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 372075,
-      "change": "Derive and check the connected continuum scalar inverse, canonical source bridge and radial metric connection.",
-      "changed_from_commit": "0a2799c0be79bdabcb9cfd1e8fcaaa37702474c0",
+      "bytes": 372517,
+      "change": "Keep input receipt authentication separate from the implementation-only source graph.",
+      "changed_from_commit": "9f0ec9cd4081cbf08f2bc8455836afaf029de9f2",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "53ce3386dbaf1af43aeb19c42c8a08aebff3b89ea0322b6d5833a370346818cd"
+      "sha256": "985a1bdaf0f60fd1bb30afd1e3a023addd3611791d72d934ffd33232bb3947e9"
     },
     {
       "bytes": 6705,
@@ -29689,12 +29689,12 @@
       "sha256": "07b1aad24f1e42fad4957a6923ad93097013e9c66542ca5a042f7d8addd3ff8e"
     },
     {
-      "bytes": 4758,
-      "change": "Derive and check the connected continuum scalar inverse, canonical source bridge and radial metric connection.",
-      "changed_from_commit": "0a2799c0be79bdabcb9cfd1e8fcaaa37702474c0",
+      "bytes": 4751,
+      "change": "Keep input receipt authentication separate from the implementation-only source graph.",
+      "changed_from_commit": "9f0ec9cd4081cbf08f2bc8455836afaf029de9f2",
       "path": "scripts/check_nsc_atlas_canonical_source_bound.py",
       "retention_reason": "Current continuum transmission proof, implementation or independent controls.",
-      "sha256": "8ffd93a2daa9f82f821a650c4dab643bed12cc315d166f6ccf1f97eb1aad934a"
+      "sha256": "496a6d71372a81a0f4f28f9dbd9f018d3f8850022918ccb988434b00129e19c8"
     },
     {
       "bytes": 3047,

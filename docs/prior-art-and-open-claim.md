@@ -2580,6 +2580,13 @@ Jacobian bound and save one compact hash-bound summary. No original field
 readout, solver, trajectory, subdivision or scan is needed. Stop if the
 authenticated tube does not justify these inequalities.
 
+The first command at `9f0ec9c` stops during source authentication, before
+constructing the scientific budget or evaluating the conversion: the input
+JSON was incorrectly listed in the implementation-only source graph. Keep
+the receipt's separate exact SHA256 authentication and remove it from that
+code-only list. No physical result file or scientific evaluation was produced;
+freeze the corrected runner before the one admitted conversion.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

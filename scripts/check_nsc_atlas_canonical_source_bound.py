@@ -20,7 +20,7 @@ OWNERS = ('scripts/check_nsc_atlas_canonical_source_bound.py',
           'src/recursive_horizons/nsc_atlas_transmission_bound.py',
           'src/recursive_horizons/nsc_source_binding_graph.py',
           'src/recursive_horizons/nsc_atlas_characteristic_initialization.py',
-          'scripts/run_python.py', 'pyproject.toml', INPUT)
+          'scripts/run_python.py', 'pyproject.toml')
 
 
 def dyadic(row):
