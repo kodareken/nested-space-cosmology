@@ -2987,13 +2987,41 @@ and entry compatibility. Its constants are selected in the order spatial
 weight, wall norm scale, then time. A spatially truncated argument and a
 parameter theorem inferred from smooth coefficients alone were not adopted.
 
-The remaining analytic bridge is the actual coupled operator on the complete
-comparison domain. Derive its fixed-W wall/clock equations and the cap's
-radial mass/lapse variation with the radius-dependent vacuum term retained.
-Separate Grok reviews check the boundary and characteristic dependencies
-and the radial Volterra estimate. These are exact continuum rewritings and
-conditional linear equations; no new grid, physical evaluation or numerical
-Taylor constant is admitted at this stage.
+The [complete comparison operator](nsc-atlas-finite-amplitude.md#the-cap-and-wall-equations-in-the-common-source-clock)
+now retains the fixed-W wall/clock equations and the cap's radial mass/lapse
+variation with its radius-dependent vacuum mass. Separate Grok derivations
+confirm characteristic signs, the single-gauge lapse law, the radial
+attenuation bound and the vacuum limit. At alpha zero the normalized probe
+recovers the quadratic mass and lapse sources; it is not silently removed.
+
+The [coupled inverse](nsc-atlas-finite-amplitude.md#coupled-linear-inverse-on-the-complete-comparison-domain)
+uses that radial map, solves all wall-state terms in the wall ODE, and
+retains instantaneous cap feedback into the exterior incoming trace.
+Choose cap norm scale, exterior weight, then time. The corrected block
+estimate is `N_new<=N/2`, including `kappa K/2`, and the polar primitive
+propagates through its own transport and wall tangent identity. The native
+chart's compatibility bracket is not used in its place. Grok's follow-up
+review confirms these corrections. This is a local continuous linear
+inverse, not yet a nonlinear parameter-derivative theorem.
+
+The [spatial derivative estimate](nsc-atlas-finite-amplitude.md#first-spatial-derivatives-of-the-coupled-linear-solution)
+uses the order outgoing exterior derivative, cap gradients, incoming
+exterior derivative. The scalar primitive supplies f_1,eta directly.
+Actual C1 initial data and corner compatibility are retained at every
+restart; a quiet cap anchor does not make the whole exterior prefix or
+its variations zero. Grok's final review confirms the estimate after
+correcting its intermediate confusion between `p_1,Ubar` and the mixed
+derivative `p_1,x=q_1,Ubar`. The owner gives the actual old/wall-born
+corner equation, with no independent normal derivative of the source trace.
+
+Next establish finite-difference stability on these fixed comparison
+domains and convergence of first parameter quotients with one spatial
+derivative. A second parameter equation may use that first spatial
+variation in its continuous-jet norm. Its quotient convergence and
+uniform inherited-data estimate must be proved separately; C3 source
+regularity does not license a second parameter derivative into C1 jets.
+These steps remain analytic derivation and review only; no new grid,
+physical evaluation, symbolic run or numerical Taylor constant is admitted.
 
 ## Discrete cap mass balance, 16 October 2026
 

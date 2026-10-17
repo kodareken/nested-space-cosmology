@@ -43,11 +43,28 @@ also closes on a valid positive-width native patch. Choosing the spatial
 weight, then the wall norm scale, then a short time gives contraction at
 most one half and a finite data-to-solution bound. Independent Grok review
 confirms the trace conversion and primitive/entry compatibility. This
-retains the entire source-to-wall prefix. It does not yet give a coupled
-inverse on the complete-cap rectangle or the spatial derivative needed
-by the second variation. The next connection is the cap radial response
-and the wall/clock operator in those comparison coordinates. No numerical
-Taylor constant or new physical trajectory has been claimed.
+retains the entire source-to-wall prefix.
+
+The [fixed-clock wall and cap equations](nsc-atlas-finite-amplitude.md#the-cap-and-wall-equations-in-the-common-source-clock)
+and [radial variation](nsc-atlas-finite-amplitude.md#radial-first-variations-on-the-complete-cap)
+now supply the complete comparison operator. The cap mass retains its
+radius-dependent vacuum term. Its variation and the lapse variation are
+bounded radial integrals, without amplification by their integrating
+factor; the quiet-vacuum and zero-alpha probe limits agree independently.
+The wall equations determine the clock variation from the same fields.
+
+A [coupled linear inverse](nsc-atlas-finite-amplitude.md#coupled-linear-inverse-on-the-complete-comparison-domain)
+then closes on a short source-label slab with both full spatial domains.
+Scaling the cap norm, choosing the exterior weight, then shortening time
+gives contraction at most one half. The proof retains the instantaneous
+cap contribution to the exterior incoming jet and propagates the scalar
+primitive at the moving wall. Independent Grok reviews check these
+identities and estimates. This establishes a bounded linear response
+operator. A [spatial derivative estimate](nsc-atlas-finite-amplitude.md#first-spatial-derivatives-of-the-coupled-linear-solution)
+uses the order outgoing exterior derivative, cap gradients, then incoming
+exterior derivative. It retains actual inherited initial data and avoids
+a derivative cycle. Convergence of nonlinear parameter quotients and a
+numerical Taylor constant remain open. No new physical trajectory was run.
 
 ## Fixed cap and moving-wall connection, 16 October 2026
 

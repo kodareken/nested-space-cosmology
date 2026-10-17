@@ -9661,8 +9661,624 @@ the spatial derivative of the first variation or prove parameter
 difference-quotient convergence. The second wall variation still needs
 `grad(q_1)`. The complete physical-cap rectangle above has additional
 clock and radial Jacobian coefficients; this native-patch inverse does
-not automatically bound its coupled operator. That operator connection
-and the first-spatial-variation estimate remain separate requirements.
+not automatically bound its coupled operator. The following radial
+and fixed-clock construction supplies that separate operator connection.
+
+#### The cap and wall equations in the common source clock
+
+The complete-cap rectangle supports an exact rewriting of the existing
+polar equations. This supplies its coupled operator before asking for an
+inverse. All cap quantities in this subsection are pulled back by
+`P_alpha`; hats are suppressed. Put
+
+\[
+ Q_c=\Pi^2+\Phi^2,\qquad B=Ae^\delta,\qquad
+ w_+=\Pi+\Phi,\quad w_-=\Pi-\Phi,
+\]
+\[
+ P=3\cosh^4 q_f,\qquad
+ U_\alpha(f)=2f\operatorname{sinhc}(q_f)\cosh^3q_f,
+ \qquad q_f=\sqrt{\alpha/6}\,f.
+\]
+
+Here `sinhc(0)=1`, so `U_0=2f`. P is the full potential including
+the background value 3. It is not the normalized potential departure
+used in some earlier numerical components. The radial constraints give
+
+\[
+ m_r=\frac{r^2P}{2}+\frac{\alpha r^2A Q_c}{4},\qquad
+ \delta_r=\frac{\alpha r Q_c}{2},\qquad
+ B_r=e^\delta\left(\frac{1-A}{r}-rP\right).
+\]
+
+The last identity follows by differentiating `A=1-2m/r`: the two
+kinetic contributions cancel. Thus it needs no differentiated field
+unknown. With `nu=T_x`, `L_c=R-r_c`, `a_c=eta R_x/L_c`, the scalar system is
+
+\[
+ f_x=a_c f_\eta+\frac{\nu B}{2}(w_++w_-),
+\]
+\[
+ (w_+)_x=\left(a_c+\frac{\nu B}{L_c}\right)(w_+)_\eta
+       +\nu\left[\left(B_r+\frac Br\right)w_+
+                         -\frac Brw_--e^\delta U_\alpha\right],
+\]
+\[
+ (w_-)_x=\left(a_c-\frac{\nu B}{L_c}\right)(w_-)_\eta
+       +\nu\left[\frac Brw_+
+                         -\left(B_r+\frac Br\right)w_-
+                         -e^\delta U_\alpha\right].
+\]
+
+The characteristic velocities are the negatives of the displayed
+spatial coefficients. The inner trace is the existing quiet solution,
+with `f=w_-=0`, `m(r_c)=r_c^3/2`, `delta(r_c)=0`; it introduces no
+new preparation. The preserved scalar constraint is `Phi=f_r`.
+
+For the exterior use the existing fixed gauge `Ubar=W(x)` at the wall.
+Let `q=(r_x,c_x,L_x)` denote the exterior jet at fixed Ubar, and let
+`Y=(R,c_W,L_W)`, with `C_W=exp(L_W)`. The proper-time source rate and
+the signed wall combinations are
+
+\[
+ j=\frac{dx}{ds}=(C_W W_x)^{-1/2},\qquad
+ u=\frac{c_W}{R},\quad D=1+\frac{\alpha u^2}{6},\quad S=2D^{3/2},
+\]
+\[
+ R_+=2j q_r,\quad C_+=2j q_c,\quad H=R_++SR,
+\]
+\[
+ v=\frac{H^2-A_W}{2H},\qquad
+ \beta_-=\frac{H^2+A_W}{2H},\qquad \beta_+=R_+-v.
+\]
+
+The cap output w_- supplies
+
+\[
+ C_-=\frac{A_W}{H}\left(R\sqrt D\,w_-|_W-u\right),\qquad
+ w_+|_W=\frac{C_+/H-u}{R\sqrt D}.
+\]
+
+In particular the incoming cap value depends on Y and the outgoing
+exterior jet, without a direct cap metric or outgoing-cap argument.
+The wall and central-clock rates are
+
+\[
+ R_x=\frac vj,\qquad (c_W)_x=\frac{C_++C_-}{2j},\qquad
+ \nu=T_x=\frac{\beta_-}{A_W e^{\delta_W}j}.
+\]
+
+At the wall the two cap spatial coefficients consequently reduce to
+`(v+beta_minus)/(j L_c)` and `(v-beta_minus)/(j L_c)`.
+Since `A_W>0` gives `beta_minus>|v|`, w_+ enters from the wall and
+w_- leaves toward it. The scalar wall value is the derived common value
+
+\[
+ f_W=\frac{\operatorname{asinh}(a c_W/R)}a,\qquad
+ a^2=\alpha/6,
+\]
+
+with limit `c_W/R` at alpha zero. Its value is not a second freely
+specified scalar waveform.
+
+The same normal-force law supplies the remaining wall equation. Write
+
+\[
+ nc=\frac{C_+-C_-}{2},\quad
+ \overline\beta=\frac{\beta_++\beta_-}{2},
+\]
+\[
+ \overline K_\tau=
+ \frac{3(h_+^2-h_-^2)\sqrt D}{2b}
+ -\frac{\alpha u(nc-u\overline\beta)}{2RD}
+ -\frac{2\overline\beta}{R},\qquad
+ K_{\tau,+}=\overline K_\tau-\frac S2,
+\]
+
+where the candidate has `b=2`, `h_+=0`, `h_-=1`. Its boost is
+`eta_+=-log(W_x)/2`, distinct from the model coefficient S. Substitution
+of `eta_+,s=-j W_xx/(2W_x)` into the owned lapse law gives
+
+\[
+ (L_W)_x=2q_L-\frac{2K_{\tau,+}}j-\frac{W_{xx}}{W_x},\qquad
+ p_W=\frac{Y_x-q_W}{W_x}.
+\]
+
+W remains the single exterior gauge; this equation evolves L_W.
+It does not prescribe another wall lapse. The incoming exterior jet
+p_W follows the actual tangent identity. There is no division by v or
+beta_+ in this wall map. Its coefficients are smooth on the established
+positive set `R,C_W,W_x,A_W,H,j>0`.
+
+Thus both R_x and nu are determined by the coupled fields and wall
+state. For example, since W is fixed in alpha,
+
+\[
+ \frac{j_1}{j}=-\frac{(L_W)_1}{2},\qquad
+ (\beta_-)_1=\frac12\left(1-\frac{A_W}{H^2}\right)H_1
+                              +\frac{(A_W)_1}{2H},
+\]
+\[
+ \nu_1=\nu\left[\frac{(\beta_-)_1}{\beta_-}
+                  -\frac{(A_W)_1}{A_W}-(\delta_W)_1
+                  +\frac{(L_W)_1}{2}\right].
+\]
+
+Here H_1 follows directly from `H=2j q_r+2D^(3/2)R`, retaining the
+explicit alpha term in D_1. There is no derivative of a field variation
+in this clock rate. Conditional on a first variation, the clock satisfies
+`T_1(x)=integral_(x_L)^x nu_1(t) dt` with the fixed quiet anchor.
+The clock variation cannot be chosen independently. Independent Grok
+review confirms these cap characteristics, wall signs, normalization
+and fixed-gauge lapse conversion as exact rewritings of the owned
+equations. The bounded inverse is established below; parameter quotient
+convergence remains a separate estimate.
+
+#### Radial first variations on the complete cap
+
+At each fixed source label x, the radial constraints are Volterra
+equations on the full interval `0<=eta<=1`. With
+`r=r_c+eta L_c`, set
+
+\[
+ \gamma=\frac{L_c\alpha rQ_c}{2},\qquad
+ \mathcal S=L_cr^2\left(\frac P2+\frac{\alpha Q_c}{4}\right).
+\]
+
+Then `m_eta+gamma m=S`, `delta_eta=gamma`, with the fixed quiet anchors
+above. For nonnegative alpha, gamma is nonnegative. The mass remains
+radius dependent, including in vacuum.
+
+All first variations below hold the comparison coordinates `(x,eta)`
+fixed. They are conditional linearized identities, not an assertion
+that the nonlinear family is already differentiable. The unit alpha
+direction gives
+
+\[
+ r_1=\eta R_1,\quad (L_c)_1=R_1,\qquad
+ (Q_c)_1=2\Pi\Pi_1+2\Phi\Phi_1,
+\]
+\[
+ P_f=\alpha U_\alpha(f),\qquad
+ P_\alpha\big|_f=\tfrac12 fU_\alpha(f),\qquad
+ P_1=P_f f_1+P_\alpha\big|_f.
+\]
+
+Both potential coefficients extend smoothly to alpha zero, where
+`P_f=0`, `P_alpha|f=f^2`. No division by sqrt(alpha) is needed.
+Put `F_0=r^2 P/2+alpha r^2 A Q_c/4` and define
+
+\[
+ F_R=F_0+L_c\eta\left(rP+\frac{\alpha Q_c(r-m)}2\right),
+\]
+\[
+ E_m=L_c\left(\frac{r^2P_\alpha|_f}{2}
+                         +\frac{r^2AQ_c}{4}\right).
+\]
+
+Differentiating the affine mass equation gives
+
+\[
+ (m_1)_\eta+\gamma m_1
+ =F_R R_1+\frac{L_cr^2P_f}{2}f_1
+       +\frac{L_c\alpha r^2A}{4}(Q_c)_1+E_m,
+ \qquad m_1(0)=0.
+\]
+
+The lapse and metric variations are
+
+\[
+ (\delta_1)_\eta
+ =\frac{\alpha Q_c(r+L_c\eta)}2 R_1
+       +\frac{L_c\alpha r}{2}(Q_c)_1+\frac{L_crQ_c}{2},
+ \qquad\delta_1(0)=0,
+\]
+\[
+ A_1=-\frac{2m_1}{r}+\frac{2m\eta R_1}{r^2}.
+\]
+
+If H_m denotes the displayed mass forcing, its unique solution is
+
+\[
+ m_1(\eta)=\int_0^\eta
+  \exp\left(-\int_t^\eta\gamma(\zeta)\,d\zeta\right)H_m(t)\,dt.
+\]
+
+The kernel lies in `(0,1]`. Consequently
+`norm(m_1)_infinity<=norm(H_m)_infinity`; the lapse has the analogous
+unit-length integral bound. In particular,
+
+\[
+ \|m_1\|_\infty\le
+ \|F_R\|_\infty|R_1|
+ +\left\|\frac{L_cr^2P_f}{2}\right\|_\infty\|f_1\|_\infty
+ +\left\|\frac{L_c\alpha r^2A}{4}\right\|_\infty\|(Q_c)_1\|_\infty
+ +\|E_m\|_\infty.
+\]
+
+Use
+`norm((Q_c)_1)<=2 norm(Pi) norm(Pi_1)+2 norm(Phi) norm(Phi_1)`
+and the lapse formula to obtain finite constants, uniform on the
+positive tube,
+
+\[
+ \|m_1\|_\infty+\|\delta_1\|_\infty+\|A_1\|_\infty
+ \le C_R|R_1|+C_F(\|f_1\|_\infty+\|\Pi_1\|_\infty
+                                     +\|\Phi_1\|_\infty)+C_\alpha.
+\]
+
+There is no derivative of a field variation on the right. For
+homogeneous trial differences the explicit C_alpha term vanishes.
+The same integrating-factor argument for finite differences supplies
+a local Lipschitz estimate for these radial operators: coefficient
+differences multiply the bounded background mass and enter the
+forcing. They do not reverse the sign of attenuation.
+
+The needed speed and reaction derivatives are also algebraic. Define
+`K=(1-A)/r-rP`. Then
+
+\[
+ B_1=e^\delta(A_1+A\delta_1),
+\]
+\[
+ (B_r)_1=e^\delta\left[
+ \delta_1K-\frac{A_1}{r}
+ -\frac{(1-A)\eta R_1}{r^2}-\eta R_1P
+ -r(P_ff_1+P_\alpha|_f)\right].
+\]
+
+This retains the variation of the evaluation radius; `(B_r)_1` is
+the variation of the physical radial derivative viewed on the rectangle.
+It is not simply `partial_eta B_1/L_c`.
+
+Two exact limits check the background contribution. In the quiet
+vacuum, `m=r^3/2`, `delta=0`, `A=B=1-r^2`, so
+
+\[
+ m_1=\tfrac32 r^2\eta R_1,\quad \delta_1=0,\quad
+ A_1=B_1=-2r\eta R_1,\quad (B_r)_1=-2\eta R_1.
+\]
+
+Replacing the cap mass by a constant would fail this limit. At alpha
+zero with the nonzero normalized probe retained, define
+`mu_1=m_1-(3/2)r^2 eta R_1`. The same equations reduce to
+
+\[
+ (\mu_1)_\eta=L_cr^2\left(\frac{f_0^2}{2}
+                              +\frac{A_0 Q_{c,0}}4\right),\qquad
+ (\delta_1)_\eta=\frac{L_crQ_{c,0}}2.
+\]
+
+These recover the quadratic cap mass and lapse sources independently
+of f_1. Identification with a saved coefficient still requires its
+exact source, clock and initial data. Independent Grok derivation
+confirms the radial variation, attenuation estimate and vacuum limit.
+No numerical Taylor constant or new retained-field evaluation is used.
+
+#### Coupled linear inverse on the complete comparison domain
+
+The fixed-W exterior and the positive-width polar cap now give a
+bounded first-variation inverse for the complete reduced system on a
+short source-label slab. This is a linear result about an established
+background. Parameter differentiability of the nonlinear family is
+not assumed or concluded.
+
+Use a slab `x_0<=x<=x_0+h`, retaining the entire exterior interval
+`0<=Ubar<=W(x)` and cap interval `0<=eta<=1`. Initial and incoming
+variation data satisfy their original constraints, common values and
+corner tangent identities. Later slabs use their actual inherited
+variation data, which need not be zero. The background first jets are
+C2 and the positive tube supplies finite coefficient, rate and inverse
+rate bounds. All physical scalar data at the inner cap edge come from
+the same quiet core.
+
+For the exterior choose
+
+\[
+ \omega(x,\bar U)=\exp\{\lambda[W(x_0)-\bar U]\},\qquad
+ \lambda h\sup W_x\le\log 2.
+\]
+
+It is constant on the incoming fixed-Ubar lines and its wall values
+lie in `[1/2,2]`. An outgoing integral over the entire prefix has norm
+at most `1/lambda`. No unknown shape factor appears in this exterior
+gauge. The cap uses the unweighted continuous norm.
+
+The radial inverse has the form of a bounded linear operator on the
+cap variation plus a coefficient times R_1 and an explicit parameter
+term. Substitute this into the wall ODE and solve all its Y_1 terms,
+including this radial R_1 contribution, inside that ODE. Thus the
+ordered affine map is:
+
+1. Integrate the exterior outgoing variation with trial exterior fields.
+2. Solve the wall variation ODE with that outgoing result and trial cap
+   fields. It also supplies R_1,x and nu_1.
+3. Integrate the cap variations along the background characteristics,
+   using trial cap fields, the new wall state and its rates, and the new
+   outgoing exterior trace. The incoming w_+ and derived f_W traces
+   depend only on that wall state and exterior trace. The inner w_-
+   inflow remains the quiet trace.
+4. Integrate the incoming exterior variation with its new wall tangent
+   datum, and reconstruct the exterior field from its source primitive.
+
+The wall is solved, not left as a separate trial variable. The clock
+variation is recovered by integrating nu_1 with its known initial value.
+The map includes the varied cap transport speed multiplying the
+background spatial derivative; treating that speed as fixed would omit
+part of the coupling.
+
+For differences between trials with the same data, let E be the sum
+of the weighted exterior field and two jet norms, and let K be the sum
+of the unweighted `f_1,w_+,1,w_-,1` norms. Denote new outgoing and
+incoming exterior norms by Q' and P', and new wall-state norm by V'.
+A prime here means a map output. Bounded coefficient and trace maps give
+
+\[
+ Q'\le\frac{L_F}{\lambda}E,\qquad
+ V'\le hH(Q'+K),
+\]
+\[
+ K'\le gQ'+eV'+hC(Q'+K+V'),
+\]
+\[
+ P'\le g_eQ'+e_eV'+k_eK+hA E,\qquad
+ E'\le Q'+(1+1/\lambda)P'.
+\]
+
+The instantaneous `k_e K` term is necessary: the exterior incoming
+trace contains Y_1,x, which contains cap metric and field variations.
+The cap reaction, speed variation and radial map enter C. Initial and
+source variations belong to the affine data and cancel in these
+homogeneous inequalities. All constants here are independent of lambda;
+the wall weight uses only the factor two and no weighted background
+shape forcing occurs. Fix H using a preliminary upper bound on h.
+
+For `N=E+kappa K` and lambda at least one, define
+
+\[
+ D(h)=2e_e+\kappa e+\kappa hC,\qquad
+ J_0=1+2g_e+\kappa g,
+\]
+\[
+ J(h)=J_0+\kappa hC+hH D(h).
+\]
+
+The displayed block inequalities imply
+
+\[
+ N'\le\left[2hA+\frac{L_F}{\lambda}J(h)\right]E
+        +[2k_e+\kappa hC+hH D(h)]K.
+\]
+
+Choose the constants in this order:
+
+\[
+ \kappa\ge\max(1,8k_e),\qquad
+ \lambda\ge\max(1,8L_FJ_0),
+\]
+
+then choose positive h with
+
+\[
+ J(h)\le2J_0,\qquad 2hA\le\tfrac14,\qquad
+ \kappa hC+hH D(h)\le\tfrac\kappa4,
+\]
+
+as well as the wall-weight and entry restrictions. All quantities in
+this last choice are already fixed and finite, and its left sides have
+the required limits as h tends to zero. Consequently
+
+\[
+ \boxed{N'\le\tfrac12 E+\tfrac\kappa2 K=\tfrac12N.}
+\]
+
+This order is cap norm scale, spatial weight, then time. It differs
+from the earlier moving-native-patch construction because the exterior
+shape term has disappeared. On the closed affine class of compatible
+continuous traces, choose any compatible extension B and put
+`S=norm(T(B))_N+norm(B)_N/2`. The contraction supplies a unique fixed
+point with `N<=2S`; the wall ODE and clock integral give their finite
+bounds from it. This is an analytic data-to-solution estimate, with
+no numerical constant evaluated.
+
+The polar scalar primitive has its own compatibility identity. Define
+
+\[
+ \mathcal K=f_\eta-L_c\Phi=L_c(f_r-\Phi).
+\]
+
+The exact scalar equations imply
+`D_x Kcal=(R_x/L_c) Kcal`. Since the background defect is zero, the
+varied defect obeys
+
+\[
+ \mathcal K_1=(f_1)_\eta-L_c\Phi_1-R_1\Phi,\qquad
+ D_x\mathcal K_1=\frac{R_x}{L_c}\mathcal K_1.
+\]
+
+In particular the varied scalar transport includes
+`(a_c)_1 f_eta` as well as `a_c (f_1)_eta`. Compare its wall trace
+with the variation of the common scalar tangent
+`(f_W)_x=nu B Pi+R_x Phi`. Their difference is
+`(R_x/L_c) Kcal_1|W`. The positive expansion rate therefore sets
+the wall defect to zero. The compatible initial defect is zero, and
+the inner edge is tangent to D_x. Transport preserves the zero defect
+throughout the collar. This argument uses the polar constraint, not
+the unrelated bracket of the earlier native chart. It may first be
+read weakly; it supplies the continuous radial derivative of f_1.
+
+For the exterior, at the fixed point `q_1,Ubar=p_1,x=Fmath_1` and
+`y_1,Ubar=p_1`. The source tangent fixes `y_1,x=q_1`; the wall tangent
+then propagates `y_1|W=Y_1` from the compatible corner. No second
+incoming source or independent scalar wall waveform is added.
+The radial constraints are solved by their actual Volterra equations.
+Their temporal consequences and the differentiated gravitational
+conditions use the same original constraint propagation and compatible
+data, rather than an independently imposed mass flux.
+
+Independent Grok review confirms the corrected contraction coefficients,
+polar primitive and wall trace. The result is a local inverse for the
+linearized reduced equations on both complete spatial domains. Uniform
+background bounds and inherited compatibility allow successive slabs
+within the onset interval. A global parameter estimate still needs
+control of inherited variation data, spatial derivatives and nonlinear
+difference quotients; this inverse alone does not supply a Taylor remainder.
+
+#### First spatial derivatives of the coupled linear solution
+
+The continuous linear inverse admits a spatial regularity estimate in
+a triangular order. Its input variations must have compatible C1
+initial and incoming data, including the differentiated corner identities.
+The background first jets are C2. This statement concerns spatial
+derivatives of the linear solution; it does not identify that solution
+with a nonlinear alpha difference quotient.
+
+Write `Z_1=(y_1,p_1,q_1)` in the fixed exterior coordinates and
+`G=F_Z Z_1+F_alpha`. First let `Q=partial_x q_1` at fixed Ubar.
+Differentiation of `q_1,Ubar=G`, using `y_1,x=q_1` and `p_1,x=G`, gives
+
+\[
+ Q_{\bar U}-F_qQ
+ =F_yq_1+F_pG+(\partial_xF_Z)Z_1+\partial_xF_\alpha.
+\]
+
+The derivatives of F_Z and F_alpha here are total background spatial
+derivatives. Their coefficients use the established background jets.
+The equation contains neither `p_1,Ubar` nor a cap gradient. Its source
+datum is `Q(0,x)=partial_x(q_0)_1`, from the actual varied source law.
+The full-prefix Volterra estimate is
+
+\[
+ \|Q\|_\infty\le e^{L_qW_{\max}}
+       \left(\|\partial_x(q_0)_1\|_\infty
+                        +W_{\max}\|F_yq_1+F_pG
+                          +(\partial_xF_Z)Z_1+\partial_xF_\alpha\|_\infty
+       \right),
+\]
+
+where `L_q>=norm(F_q)`. The tangential wall derivative is instead
+
+\[
+ \frac d{dx}(q_1|_W)=Q_W+W_xG_W.
+\]
+
+Next use the primitive already established on the cap:
+
+\[
+ (f_1)_\eta=L_c\Phi_1+R_1\Phi.
+\]
+
+It supplies this derivative directly from continuous variations. There
+is no need to introduce an inflow condition for the inner, tangent
+f-characteristic. Define `sigma_+=a_c+nu B/L_c` and
+`sigma_-=a_c-nu B/L_c`. Differentiate the two linearized w transports
+in eta to obtain equations for
+`H_+=partial_eta(w_+)_1`, `H_-=partial_eta(w_-)_1` along the background
+characteristics. Their right sides are linear in H_+,H_-, with known
+continuous forcing and bounded coefficients.
+
+In particular
+
+\[
+ (B_1)_\eta=R_1B_r+L_c(B_r)_1.
+\]
+
+The formulas for `(m_1)_eta`, `(delta_1)_eta` and `(f_1)_eta` above
+therefore supply every radial derivative of the varied speed and
+metric reaction. Differentiating the speed forcing also uses the
+bounded background second derivatives of w. It does not introduce a
+second derivative of the variation.
+
+Let `g_1(x)` be the varied incoming w_+ wall value. Its derivative
+uses Y_1,x and `Q_W+W_xG_W`, already known. Denote the undifferentiated
+reaction in the w_+ transport by mathcal R_+. The boundary gradient is
+
+\[
+ H_+|_W=\frac{(g_1)_x-(\sigma_+)_1(w_+)_\eta|_W
+                                  -(\mathcal R_+)_1|_W}{\sigma_+|_W}.
+\]
+
+The inner H_- datum follows the same formula from the actual inner
+incoming w_- value and
+`sigma_-(0)=-nu B(r_c)/L_c`. Both denominators are bounded away from
+zero. The quiet-core trace makes that inner datum zero here. No
+boundary gradient is assigned to the outgoing family.
+
+Initial gradients come from the supplied C1 variation data. They must
+agree with these incoming formulas at their corners. On a short slab
+the characteristic integral estimates give finite C and D_known with
+
+\[
+ \|H\|_\infty\le B_{\rm in}
+                 +hC(\|H\|_\infty+D_{\rm known}).
+\]
+
+Choose `hC<=1/2` to obtain
+`norm(H)<=2(B_in+hC D_known)`. H denotes both cap gradients;
+B_in contains the actual initial and inflow bounds. Repeating with
+their inherited traces bounds successive slabs. Interior turning of
+a characteristic is harmless for this time estimate; noncharacteristic
+inflow margins are required at the two boundary entries.
+
+Finally set `S=partial_Ubar p_1`. Its equation is
+
+\[
+ S_x-F_pS=F_yp_1+F_qG+(\partial_{\bar U}F_Z)Z_1
+                                     +\partial_{\bar U}F_\alpha.
+\]
+
+This volume forcing contains only known variations and background
+derivatives. Old incoming labels use
+`S(Ubar,x_0)=partial_Ubar p_1,initial`. Neither the original exterior
+prefix nor later restart data may be assumed to have zero variation
+merely because the cap anchor is quiet. Wall-born labels use
+
+\[
+ S_W=\frac{d(p_1|_W)/dx-G_W}{W_x},\qquad
+ p_1|_W=\frac{(Y_1)_x-q_1|_W}{W_x}.
+\]
+
+At the old/wall-born corner this requires
+
+\[
+ S_{\rm initial}(W(x_0))
+   =\frac{d(p_1|_W)/dx(x_0)-G_W(x_0)}{W_x(x_0)}.
+\]
+
+The mixed identity is `p_1,x=q_1,Ubar=G`; it does not set
+`S=p_1,Ubar` equal to G. The source trace `(q_0)_1(x)` has no
+independent Ubar derivative to prescribe at its corner.
+
+The derivative of this incoming datum requires Y_1,xx. Differentiate
+the actual wall ODE only after the cap gradients are known: its cap
+field time derivatives then follow from their transports, and the
+metric time derivatives follow by differentiating the radial Volterra
+equations. These use first spatial derivatives of cap variations and
+known wall rates, not S. Thus Q, cap gradients, then S is an acyclic
+order. A finite incoming transport bound controls S, with matching
+old and wall-born first derivatives at their compatible corner.
+
+These differentiated equations can be justified by spatial difference
+quotients of the fixed-domain integral equations, using the compatible
+C1 traces and continuity of their coefficient derivatives. The unique
+bounded limits give continuous first spatial derivatives of the linear
+jets. All estimates are finite on a short slab with constants uniform
+on the established positive tube and its background derivative bounds.
+The original C3 source supplies the required source jets; no fourth
+source derivative has been used.
+
+Independent Grok review confirms this triangular estimate with the
+actual inherited bottom data and the old/wall-born corner condition.
+The review's intermediate identification of S with the mixed derivative
+G was rejected and corrected; those derivatives remain distinct above.
+
+This regularity estimate provides the spatial first-variation terms
+needed in a prospective second-parameter equation. The translated C3
+front discussed above still rules out a general second parameter
+derivative into C1 jets. It does not rule out a second derivative into
+continuous jets. Proving that weaker parameter statement requires
+convergence of the nonlinear quotients, which is not inferred from
+the spatial linear estimate.
 
 ## Missing full-domain estimate
 
