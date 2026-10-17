@@ -45,6 +45,16 @@ and failures. An agreement concerns this one stage; it does not locate the
 unsaved maximum, certify the full trajectory or close Step 2. Stop after the
 check or a named numerical obstruction; no wider campaign follows from it.
 
+**Outcome:** [the single admitted check](../results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json)
+passes its numerical comparison tolerances in 9.078125 CPU seconds and
+7,759,566 charged values. Independent full mass/lapse differences are below
+`2.1e-17`; fixed-radius and moving-wall mass-rate differences are below
+`1.7e-15`. The physical temporal residual remains `1.2084066608207e-4`,
+within `7.5e-16` of the reference. This locates this stage's failure in the
+represented evolution/coupling rather than the radial mass/lapse quadrature.
+It does not locate the v4 all-stage maximum. Stop this radial check and use
+the result when diagnosing the completed three-grid comparison.
+
 **CPU allowance amendment, before exhaustion (17 October, after 16:00 local):**
 the v4 runs keep advancing past the diagnosed radial failures. Their measured
 stage costs rise as more retained history panels enter the cap. For example,

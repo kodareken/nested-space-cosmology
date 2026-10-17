@@ -193,6 +193,29 @@ and [coupling source](../src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py)
 provide the comparison once the fine receipt is available. Independent Grok
 review agrees on the split and these limits; no new trajectory was run.
 
+An [independent full-mass/lapse calculation](../results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json)
+now checks the separate authenticated coarse-v3 seed at
+`x=0.4370111883201181`, reconstructed with current panel ownership. It
+integrates `m_r+a*m=s`, `delta_r=a` and the fixed-radius directional mass
+equation directly, including the radius-dependent vacuum mass. It shares
+field values and analytic background jets with the reference, but uses
+Gauss-Legendre prefix integration instead of its metric/sensitivity ODE.
+At orders 32 and 64 the full mass is `0.06032959470758067` and the lapse
+is `0.00405815359767859`. Differences from the reference are at most
+`2.09e-17` for mass, `2.00e-17` for lapse and `1.70e-15` for mass rates.
+
+The independent temporal Einstein residual remains
+**`0.00012084066608207`**, agreeing with the reference residual to
+`7.50e-16`. The radial integration and rate extraction therefore reproduce
+the gap at this stage; tightening those quadratures cannot remove it.
+The unresolved discrepancy is in the represented field evolution and
+strong-trace/weak-projection coupling to the wall. This stage belongs to an
+older saved seed, not the unsaved v4 maximum; no all-stage or continuum
+conclusion follows. The one calculation used 9.078125 CPU seconds and
+7,759,566 charged values. Twelve manufactured/diagnostic controls pass.
+No grid or trajectory was rerun, and Step 2 remains open pending the fine
+endpoint comparison and the stated physical residuals.
+
 Opening-phase robustness work is paused. The current calculation targets
 the original P001 endpoint on three fixed cap/exterior meshes, with the
 same amplitude and preparation. The first
