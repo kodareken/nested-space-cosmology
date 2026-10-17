@@ -102,6 +102,27 @@ uses 1,024 values / 0.09375 CPU seconds. The matrix norm is below 0.146;
 the exact solution and dependent rows have zero rational residual.
 Use a fresh output path when reproducing this retained certificate.
 
+The canonical scalar comparison uses the same original onset and geometric
+certificate. Its ten manufactured controls use 6,656 charged values and
+0.421875 active CPU seconds in the first execution:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_scalar_departure_bound.py -q -s
+```
+
+The bounded original application requires the producer committed first and
+a new output path in an existing directory:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_scalar_departure_bound.py --output <new-output-path>
+```
+
+It authenticates the source, reference, strict tube and geometric departure
+inputs, then performs algebra only under a 24,576-value / 10-CPU-second
+allowance. It saves normalized scalar difference bounds, comparison
+constants, hashes and the command, with no source or field history. The
+mathematical scope is in the [scalar comparison](nsc-atlas-finite-amplitude.md#amplitude-proportional-canonical-scalar-departure).
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker

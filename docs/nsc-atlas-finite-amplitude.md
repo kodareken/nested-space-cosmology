@@ -11834,6 +11834,159 @@ outward decimal displays differ, but those displays are not consumed by
 the calculation. The additional final 2,048-value charge is retained
 explicitly; the complete application count is 28,672.
 
+### Amplitude-proportional canonical scalar departure
+
+The geometric certificate supplies uniform coefficients `C_G` with
+`|G_alpha-G_0|<=alpha*C_G`. The next comparison uses the same original
+source-label wedge and a common cap chart
+
+\[
+ z=\operatorname{atanh}r=z_\star+\eta L_\alpha(x),\qquad
+ L_\alpha=\operatorname{atanh}R_\alpha-z_\star,\quad0\le\eta\le1.
+\]
+
+Here X, chi and E are the canonical **normalized** scalar variables; the
+physical scalar still carries its square-root amplitude factor. The existing
+quiet initial/core data and no-return margin apply on this collar. No new
+initial state or preparation is selected.
+
+**Outgoing family and exterior.** Write `nu=T_x`, `beta=A exp(delta)/A0`,
+`A0=1-r^2`. The owned cap equations are
+
+\[
+ E^+_T-\partial_z(\beta E^+)=-A_0S,\qquad
+ E^-_T+\partial_z(\beta E^-)=-A_0S,\qquad
+ \chi_T=\tfrac12\beta(E^++E^-).
+\]
+
+At alpha zero, `beta=1`, `beta_z=S=0` and `Eminus=0`. The positive tube
+formulas have explicit factors `|beta_z|<=alpha*gamma_c` and
+`|S|<=alpha*S_c`; their coefficients are bounded using alpha_max. With
+`dt=right-left`, the outgoing actual characteristic gives
+
+\[
+ C_-={dt\,\nu^*A_0^*S_c\over1-dt\,\nu^*\gamma^*},\qquad
+ |E^-_\alpha|\le\alpha C_-.
+\]
+
+The denominator must be positive. The finite-alpha wall law remains
+`P_W=(A Eminus/(H A0)+J)/(2Uplus)`, and
+`|J|<=alpha J_c`, `J_c=S_w^*R^*f_w^{*3}/18`. It supplies a coefficient
+`C_PW` using the original positive wall floors. The canonical source change
+obeys
+
+\[
+ C_{Xs}={G_0^3\over36r_{\min}^2},\qquad
+ C_{Qs}={(G_0/r_{\min})^2G_1\over12}
+        +{(G_0/r_{\min})^3r_x^*\over18}.
+\]
+
+These follow directly from the asinh frame map with invariant source `c=g`.
+The exterior equation is **mixed**, `X_Ux=-K X`. Integrate P in x from its
+quiet edge or moving-wall entry, X transversely from its source, and Q
+transversely from its source derivative. With the same W(x) for all alpha,
+
+\[
+ D_X\le C_{Xs}+W^*D_P,\quad
+ D_P\le C_{PW}+dt(k^*D_X+K_{S,c}G_0),\quad
+ D_Q\le C_{Qs}+W^*k^*D_X+K_{I,c}G_0.
+\]
+
+Here D denotes a difference divided by alpha, not an amplitude derivative.
+`K_S,c` and `K_I,c` come from the existing pointwise/integrated kernel
+comparison with the now-certified geometric coefficients. The first two
+inequalities close algebraically if `dt*Wmax*kmax<1`. No K_x difference is
+required; replacing the mixed equation by `X_U=-K X` would change this problem.
+
+**Reference jets.** The leading positive Volterra comparison gives
+`0<=X0<=g` and `|Q0|<=G1+Bstar*G0`. Since `P0wall=0`, the wall trace w has
+`w_x=Q0wall`. Differentiating its exact transverse integral gives
+
+\[
+ w_{xx}=g_{xx}-W_xK_Ww-\int_0^W(K_xX_0+KQ_0)\,d\bar U.
+\]
+
+The original gauge has `C0=(x/r) exp((x-r)/a)`, `a=4/5`, so
+
+\[
+ K_0={C_0a\over4r^3},\qquad
+ {K_{0,x}\over K_0}={1\over x}+{1\over a}
+                 -r_x\left({1\over a}+{4\over r}\right).
+\]
+
+The existing hull therefore bounds W1=|w_x| and W2=|w_xx| without field
+samples. Let `q=T0+atanh(R0)` be the reference arrival clock. Its positive
+rate is `(beta_minus+v)*s_x/(1-R0^2)`; differentiate the owned kinematic
+identities to bound q_xx. The quiet reference cap has `chi0=F(T+z)`,
+`Eplus0=2F'`, and `F(q(y))=w(y)`, hence
+
+\[
+ |F'|\le W_1/q_{x,\min},\qquad
+ |F''|\le W_2/q_{x,\min}^2+W_1|q_{xx}|^*/q_{x,\min}^3.
+\]
+
+Thus `|chi0_eta|<=L0max*|F'|` and
+`|Eplus0_eta|<=2L0max*|F''|`. Quiet labels contribute zero; the source's C3
+front supports these derivatives across first arrival.
+
+**Incoming family and value.** For a component obeying
+`w_x=sigma_alpha*w_eta+reaction_alpha`, subtract along actual characteristics:
+
+\[
+ (\partial_x-\sigma_\alpha\partial_\eta)\Delta w
+ =\Delta\sigma\,\partial_\eta w_0+\Delta\mathrm{reaction}.
+\]
+
+The two required speeds are
+`a_chi=eta*Z_x/L` and `sigma_plus=(eta*Z_x+nu*beta)/L`, with
+`Z=atanh(R)`. Let `C_Rx=C_rx+W_xmax*C_rU`,
+`C_nu=C_deltaT/dt`, and use the original tube's positive A0 and collar
+floors. The geometric producer bounds the clock **rate** before multiplying
+by dt, which justifies this division; a bound on an arbitrary integrated
+clock alone would not. Then
+
+\[
+ C_Z=C_R/A_{0,\min},\qquad
+ C_{Z_x}=C_{R_x}/A_{0,\min}
+       +R_{0,x}^*2R^*C_R/A_{0,\min}^2.
+\]
+
+The radial cap formulas give
+`C_beta=mu_max*(delta_max/alpha_max+2Nmax/(rstar*A0min))`.
+Set `C_v=C_nu+nu_max*C_beta`. Product/reciprocal differences give
+
+\[
+ C_a=C_{Z_x}/L_{\min}+Z_{0,x}^*C_Z/L_{\min}^2,\qquad
+ C_\sigma=C_a+C_v/L_{\min}+\nu_0^*C_Z/L_{\min}^2.
+\]
+
+The actual wall relation `Eplus=A0/H*(2Vplus Q+J)` supplies C_EW by
+bounding the difference of its multiplier, retaining the changed radius,
+H and Vplus. If Epstar denotes the actual absolute tube bound,
+
+\[
+ C_+=C_{EW}+dt\{C_\sigma|E^+_{0,\eta}|^*
+                 +\nu^*(\gamma_c E_p^*+A_0^*S_c)\},
+\]
+\[
+ C_\chi=C_X+dt\{C_a|\chi_{0,\eta}|^*
+             +C_v|E^+_0|^*/2+\nu^*\beta^*(C_++C_-)/2\}.
+\]
+
+The wall and initial values supply the inflow bounds. These estimates are
+triangular after the exterior scalar loop; they introduce no unknown
+scalar derivative or arbitrary zero finite-alpha wall input.
+
+Implementation is `nsc_atlas_scalar_departure_bound.py`; the checker
+consumes the authenticated source, reference, tube and geometric receipts.
+Ten manufactured controls pass in one execution (6,656 charged values,
+0.421875 active CPU seconds). The independent Grok review corrected its
+initial first-order reading of the exterior equation and accepted the mixed
+comparison. A separate reference review confirms the lapse, wall identity
+and arrival-chain derivatives. The original-data application remains to be
+run after source freeze. This result concerns first finite differences of
+normalized fields, not a numerical quadratic geometric remainder.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

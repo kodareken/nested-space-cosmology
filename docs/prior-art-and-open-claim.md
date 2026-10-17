@@ -3301,7 +3301,52 @@ of the existing second-amplitude theorem will identify the smallest
 unevaluated bound needed for a numerical remainder constant. It admits
 no new physical, symbolic or numerical execution.
 
-### Normalized geometric departure bound, 17 October 2026
+### Canonical scalar amplitude comparison, 17 October 2026
+
+The geometric departure certificate leaves the normalized scalar difference
+as the next input to a quadratic geometric remainder. Keep the original
+onset cell, source, action, alpha interval and strict tube. Use characteristic
+comparison, the existing mixed exterior equation, positive radial bounds and
+the chain rule on a common cap collar. Literature and historical waveforms
+are not new numerical inputs to this calculation.
+
+First bound the outgoing cap family, whose reference is identically zero.
+Its reaction and coefficient derivative have explicit alpha factors in the
+owned tube. Its wall transmission gives an alpha-proportional exterior P
+trace. Couple the x primitive of P with the transverse primitive of X;
+close the scalar loop only when `duration*width*Kmax<1`. The transverse
+primitive of Q uses K, not a derivative of K. Bound the reference cap's
+spatial first jets from the twice differentiated wall trace and its strictly
+increasing arrival clock. Subtract incoming transport along actual
+characteristics in `eta=(atanh(r)-z_star)/(atanh(R)-z_star)`, retaining both
+clock and collar motion. This gives a finite comparison without a new field
+solve or the full coupled C1 inverse.
+
+Admit one algebraic application at 160 bits, at most 24,576 charged values
+and 10 process-CPU seconds, after freezing the producer. Manufactured
+controls share 12,000 charged values / 20 active CPU seconds. They check
+independent two-variable elimination, zero forcing, failed loop conditions,
+reference kernel differentiation, inverse arrival derivatives, the moving
+collar chain rule and mixed-equation primitives. A separate 2,048-value /
+5-CPU-second exact audit authenticates inputs and source, comparison
+residuals, alpha scaling and outward displays. No source query, quadrature,
+field evolution, time step, grid scan, adaptive choice or retry is included.
+Keep only the small certificate, hashes and reproduction command.
+
+Stop if a certificate changes, a quiet-boundary assumption fails, a required
+floor is nonpositive, either feedback loop reaches one, or the budget is
+exhausted. The likely failures are replacing the mixed exterior equation
+with a first-order equation, dropping the moving collar or clock, and
+confusing a normalized scalar difference with the final quadratic geometric
+remainder. Independent Grok review and exact manufactured identities check
+these connections before the original application.
+
+**Implementation controls:** ten controls pass in one execution with
+6,656 charged values / 0.421875 active CPU seconds. No original data
+application has run. The mixed exterior and reference-jet reviews accept
+the corrected identities; implementation review remains in progress.
+
+## Normalized geometric departure bound, 17 October 2026
 
 Before evaluating a quadratic remainder, obtain an explicit first finite
 amplitude difference bound for the geometry. Reuse the established onset
