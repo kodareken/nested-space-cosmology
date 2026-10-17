@@ -1,5 +1,81 @@
 # Prior art and admission of new research
 
+## P001 full-endpoint fixed-grid comparison, 17 October 2026
+
+Douglas has prioritized the full finite-amplitude evolution and a physically
+scaled P001 observable. Opening-phase robustness work is paused. Reuse the
+existing constrained fixed-cap mass/gradient calculation, simultaneous
+material-wall/exterior stage, enriched prepared history and SSPRK3 driver.
+The missing connection is their evolution to the original P001 endpoint,
+not another proof restricted to the opening cell.
+
+Hold the action, original compact preparation, quiet anchor and
+`alpha=0.00012983127142551443` fixed. Start at affine source coordinate
+`x=0.4`, reference wall radius `0.45`, and end at the original
+`geometry.x_last=0.4815042082576364`, reference radius `0.55` and normalized
+exterior label `1`. Use all 257 retained source rows and one enriched
+257-node prepared history at each resolution. The same constrained
+source and history inputs are used in all three runs.
+
+The three predeclared meshes have 2/4/8 cap cells and 32/64/128 exterior
+cells. Each fixed physical cap mesh places the initial wall at fraction
+`0.54` of its last cell, with last-cell widths **0.8/0.73/0.66**.
+The remaining interval is equally divided among its inner cells. The
+initial centred 0.6/0.4/0.3 proposal failed the existing Gram conditioning
+check before any physical evolution. A first shifted proposal also failed.
+The final six endpoint matrix checks pass in 0.015625 process-CPU seconds
+and 110,720 charged values, with maximum scaled condition number
+`21,967,128.17`. The solver's accuracy threshold is unchanged. Report
+the actual cell widths and wall-cut margins. All three refine the wall
+cell and the interior; this finite nonuniform comparison is not a claim
+of an indefinitely refinable fixed last-cell family. No remeshing or
+activation is hidden in the calculation.
+
+Use maximum affine-source steps `1e-4`, `5e-5`, `2.5e-5`, split at the
+supplied source knots, support edges and nine common comparison cuts.
+These are numerical step choices, not a nonlinear stability theorem.
+Admit at most **2,000/4,000/8,000 accepted steps**, **10,000 active
+process-CPU seconds** and **500 billion charged values per resolution**,
+including one preparation and all diagnostics. No retry or budget reset
+is included. Source authentication, arithmetic tests and comparison of
+saved summaries perform no additional physical evolution. Independent
+review checks the endpoint, frame conversion, numerical accounting and
+the interpretation of the measured residuals.
+
+Measure the actual temporal mass-balance residual against the cap trace
+and matched wall flux separately, and the actual conformal wall-flux gap.
+Retain maxima, common-cut values, continuous-time residual samples,
+metric margins, source constraints and hashes of accepted states. Weak
+balance identities alone cannot substitute for either physical gap.
+Compare all three on the same complete domain, including the endpoint.
+The convergence decision is made from those results, not imposed on them.
+
+The accumulated mass check compares the independently reconstructed
+Einstein-frame geometric mass `M_E=R_E^3/2+alpha*mass` with the integral of
+`1.5*R_E^2*R_E,x + alpha*(moving_density + T_x*A^2*exp(delta)*R_E^2*Pi*Phi/2)`.
+The scalar check compares the actual invariant wall trace `c` with the
+integral of the hybrid transmission law's `c_x`. Use the three SSPRK3
+weights `1/6,1/6,2/3` on each accepted step. These extra integrals diagnose
+the trajectory; they never correct its fields or replace a measured gap.
+The stored wall clock `s` is Einstein proper time. It is not identified
+with Jordan wall proper time.
+
+Select an explicit fiducial SI length independently of the output and
+convert a geometric, operationally defined observable in the Jordan
+frame. Preserve P001's retrospective coefficient results. Distinguish
+the measured numerical resolution spread from source/interpolation,
+input-scale and physical-model uncertainty; neither a residual nor a
+three-grid spread automatically supplies a rigorous total error bound.
+Save compact summaries and reproduction commands, with no raw histories.
+
+Stop and diagnose a violated domain, incompatible junction, unresolved
+metric/Gram solve, instability or exhausted budget before designing a
+successor. The three likely failures are wall motion leaving the fixed
+last-cell/history domain, cap approximation error preventing decreasing
+mass/flux gaps, and source or time error masking spatial convergence.
+Each has a directly recorded diagnostic. A failed full-endpoint run is
+retained as such and does not extend the shorter onset theorem.
+
 ## Independent preparation perturbations on the onset cell, 17 October 2026
 
 **Paused before the control run:** Douglas's next priority is three fixed

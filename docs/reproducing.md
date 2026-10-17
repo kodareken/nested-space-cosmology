@@ -823,6 +823,28 @@ input identity. Declared local decision limits are enforced in the receipt.
 This command also has a 10-million-value / 60-second budget and takes no
 time step. Existing creation-only output files are preserved.
 
+The separately admitted **P001 endpoint comparison** uses three fixed
+nonuniform cap meshes and three exterior resolutions. It starts at the quiet
+`x=0.4` anchor and targets `x=0.4815042082576364` (reference radius `0.55`),
+with the same finite amplitude and source on every mesh. The opening-phase
+robustness draft is paused. The resource limits and interpretation are in the
+[calculation admission](prior-art-and-open-claim.md#p001-full-endpoint-fixed-grid-comparison-17-october-2026).
+
+From a committed source tree, create new compact receipts with:
+
+```sh
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 0 --output results/summaries/nsc-atlas-fixed-endpoint-level0-v1.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 1 --output results/summaries/nsc-atlas-fixed-endpoint-level1-v1.json
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 2 --output results/summaries/nsc-atlas-fixed-endpoint-level2-v1.json
+```
+
+The commands are creation-only and never overwrite a saved result. Each
+receipt records completion or the reason for stopping, common-cut scalars,
+residual summaries and hashes; it does not save full histories. The physical
+observable conversion is in `nsc_atlas_endpoint_comparison`, with a fiducial
+`ell=10000 metres` fixed before the runs. A three-grid resolution range is
+reported separately from common-input and physical-model uncertainty.
+
 After that comparison passes, the separately admitted full enriched
 finite-coupling onset interval is:
 
