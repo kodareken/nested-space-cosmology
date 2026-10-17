@@ -3161,6 +3161,57 @@ read-only method investigation compares reuse of the existing dense
 field with a direct short-onset integral enclosure. No physical evaluation
 or Taylor-constant computation is admitted by that investigation.
 
+### Leading wall field at one onset endpoint, 17 October 2026
+
+The next missing numerical input is the leading wall field and its first
+affine-source derivative at the original right endpoint. Reuse the positive
+Volterra equation, the original compact source certificate and the exact
+reference radius image. Integrating the vacuum kernel in radius gives
+`B(x,z)=a*x*(x^-2-z^-2)/(2*(a-x))`, a=4/5. Its monotonicity bounds
+every source-to-wall prefix without another reference solve. On this
+increasing part of the pulse, a positive-operator comparison bounds the
+field between `(1-q)g` and `g`, with `q=(right-left)*B_max<1`; the exact
+wall derivative integral supplies its separate interval.
+
+Use one new rational comparison component in the existing package,
+`nsc_atlas_onset_endpoint_bound.py`, with one check script and independent
+controls. The component receives proved source and geometry bounds; its
+scalar inputs alone do not prove global monotonicity. The producer must
+authenticate the immutable source-cell and reference-gauge receipts,
+retain the original source geometry as exact binary input, and check the
+analytic compact coordinate is increasing from below -1 to strictly
+between -1 and 0. It uses the source certificate's own coordinate map;
+the rational reference geometry is not substituted into that source map.
+No stored Hermite source or numerical dense field is evaluated.
+
+Manufactured controls have one cumulative allowance of 20,000 charged
+algebra/scalar values and 20 active CPU seconds. They compare the kernel
+integral with an independent antiderivative, prove both monotonicities,
+check a positive constant-kernel Volterra solution by its exact series,
+and exercise quiet, scaling, invalid-input and budget limits. There is
+one original-endpoint application with at most 4,096 charged values and
+5 active CPU seconds at 160-bit ball precision, followed by a separate
+512-value rational audit of its displayed intervals. There are no field
+evolutions, source integrations, root searches, time steps or grid scans.
+
+Stop if an input hash, common interval, source monotonicity, reference
+image, q<1, finite ball or budget condition fails. Preserve a compact
+diagnosis before designing a changed calculation. The result supplies
+leading scalar bounds for the wall/clock functionals; it does not yet
+evaluate those gravitational coefficients or the Taylor constant.
+Keep only a summary, input hashes, producer bindings and regeneration
+command. Grok reviews the comparison argument and implements the small
+component while the parent owns its producer, controls and integration.
+
+**Implementation controls:** 12 controls pass in two executions with
+12,656 charged values / 0.234375 active CPU seconds. The added moving-prefix
+test independently integrates a space/time polynomial before differentiating
+at the wall. The symbolic sign identity proves B decreases in x throughout
+`0<x<z<a`, not just at a sampled onset corner. Grok supplied the component
+draft; its native write tool returned cancellation, so the parent applied
+and checked the code. The one physical endpoint application follows the
+source freeze and does not reuse the tests' allowance.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

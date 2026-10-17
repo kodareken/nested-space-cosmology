@@ -11326,6 +11326,106 @@ request for a full fixed-W chart applies to reconstructing all coordinate
 fields; the invariant output argument does not require that reconstruction.
 This is an analytic identification with no new scientific computation.
 
+#### A direct leading-field bound on the onset cell
+
+The first numerical input to the wall/clock functionals can be enclosed
+without evolving a sampled field. Work at alpha zero in the same scaled
+affine source chart, writing x for its source label in this subsection.
+The exact reference radius satisfies `x<=r<=z(x)<a`, a=4/5. Its vacuum
+identities give
+
+\[
+ r_{\bar U}=\frac{C(a-x)}{4x},\qquad
+ K=\frac{Ca}{4r^3},\qquad
+ B(x,z)=\int_0^{W(x)}K\,d\bar U
+       =\frac{ax}{2(a-x)}\left(\frac1{x^2}-\frac1{z^2}\right).
+\]
+
+The last equality uses r as the integration variable; C cancels exactly.
+B increases with z. At fixed z its x derivative is negative, since
+
+\[
+ \partial_x B=\frac{a}{2(a-x)^2}
+ \left[-\frac{(a-x)^2}{a x^2}-\frac{a^2-z^2}{a z^2}\right]<0.
+\]
+
+For the already certified source cell `[L,R]` and wall image `[z_l,z_h]`,
+put `B_star=B(L,z_h)` and `q=(R-L)B_star`. Every transverse prefix has
+kernel integral at most B_star, and the endpoint wall integral lies in
+`[B(R,z_l),B(R,z_h)]`. This reuses the image certificate; it performs no
+new wall inversion or reference quadrature.
+
+Extend the reduced field constantly beyond the moving wall only to write
+the integral equation on a common containing rectangle. The kernel is
+integrated only on its actual exterior prefix. With
+
+\[
+ (A f)(u,x)=\int_L^x\int_0^{\min(u,W(t))}K(v,t)f(v,t)\,dv\,dt,
+ \qquad \chi=g-A\chi,
+\]
+
+the positive operator obeys `||A||<=q`. During this first half of the
+prescribed pulse, `g>=0`, g is nondecreasing and g(L)=0. Hence pointwise
+`Ag<=qg`. Positivity implies `A^(n+1)g<=q A^n g`, so for q<1 the
+alternating Neumann series yields
+
+\[
+ (1-q)g(x)\le g(x)-(Ag)(u,x)\le\chi(u,x)\le g(x).
+\]
+
+At the wall `chi_Ubar=0`, and its exact derivative is
+
+\[
+ w_x(R)=g_x(R)-\int_0^{W(R)}K(u,R)\chi(u,R)\,du.
+\]
+
+Therefore, with `B_R=B(R,z(R))`,
+
+\[
+ (1-q)g(R)\le w(R)\le g(R),\qquad
+ g_x(R)-B_Rg(R)\le w_x(R)
+       \le g_x(R)-(1-q)B_Rg(R).
+\]
+
+There is no omitted wall-speed term: it multiplies chi_Ubar, which
+vanishes at the wall. Explicitly, a wall-born column's transverse
+derivative integrates only from `W_inverse(u)` to x; that interval shrinks
+to zero at `u=W(x)`. Using L as the lower limit for every column would
+drop the clipping in A. The derivative estimate comes from its continuum
+integral, not from differentiating a value-error bound. Positivity and
+monotonicity are essential hypotheses; these particular inequalities are
+not applied to the declining or post-input pulse.
+
+The [rational component](../src/recursive_horizons/nsc_atlas_onset_endpoint_bound.py)
+propagates supplied source intervals through these formulas. The
+[one-endpoint producer](../scripts/check_nsc_atlas_onset_endpoint_bound.py)
+authenticates the existing source-cell and reference-gauge receipts and
+checks the compact source coordinate at L and R using the existing
+160-bit source interface. A negative U0 and positive `Vb-Va` make that
+coordinate strictly increasing for positive x; its left value below -1
+and right value between -1 and 0 prove the required quiet and monotone
+source portion. The input geometry and source-map scale retain the exact
+binary interpretation used in the source certificate. The reference
+geometry separately retains a=4/5. Comparing an old floating V-profile
+query with this affine-source target must include its coordinate and
+constant-representation error; those two inputs are not silently equated.
+
+The [admission](prior-art-and-open-claim.md#leading-wall-field-at-one-onset-endpoint-17-october-2026)
+fixes the original endpoint, controls and finite compute allowances.
+The calculation supplies only the leading wall scalar and its affine
+label derivative. Integrating the mass, lapse, displacement and clock
+functionals with numerical enclosures, and evaluating the quadratic
+amplitude remainder constant, remain separate required connections.
+
+Twelve [independent controls](../tests/test_nsc_atlas_onset_endpoint_bound.py)
+pass in two executions, using 12,656 charged values and 0.234375 active
+CPU seconds. Exact symbolic integration checks the kernel and both
+monotonicities. A separate moving-prefix integral checks the vanishing
+transverse wall derivative. An exact alternating series for a constant
+positive kernel checks the interval formulas independently, with quiet,
+scaling, input and budget controls. No original physical endpoint has
+been evaluated by these tests.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

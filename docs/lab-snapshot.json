@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "56201f924a278efebc1e8b88545ef254004a1e79",
+  "current_receipt_commit_parent": "58515e8c11dffeba0db24f59d5d21d18e55ec612",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 234123,
-      "change": "Identify the continuum wall-radius and clock functionals with the actual onset first geometric derivatives.",
-      "changed_from_commit": "56201f924a278efebc1e8b88545ef254004a1e79",
+      "bytes": 234685,
+      "change": "Add a positive Volterra enclosure for the leading wall field at the original onset endpoint.",
+      "changed_from_commit": "58515e8c11dffeba0db24f59d5d21d18e55ec612",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "5c6cb133bc5bad4bc6764e55fee0e93a865b6b414789f88b07f09389e5818a2d"
+      "sha256": "448703164af7e84abd2557244ac07dc62a62330ae56e49bc2674dde0f0b576f0"
     },
     {
       "bytes": 9543,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 522381,
-      "change": "Identify the continuum wall-radius and clock functionals with the actual onset first geometric derivatives.",
-      "changed_from_commit": "56201f924a278efebc1e8b88545ef254004a1e79",
+      "bytes": 526775,
+      "change": "Add a positive Volterra enclosure for the leading wall field at the original onset endpoint.",
+      "changed_from_commit": "58515e8c11dffeba0db24f59d5d21d18e55ec612",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "beb13db00abdd66cd82c6958a95ae218cf1dc2719bcd94c242ba39c56622f2cd"
+      "sha256": "e2f1b41b1baeeca07c50261a91656ea93f035aaeba0d66bfc7292946ad75539d"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 409580,
-      "change": "Identify the continuum wall-radius and clock functionals with the actual onset first geometric derivatives.",
-      "changed_from_commit": "56201f924a278efebc1e8b88545ef254004a1e79",
+      "bytes": 412763,
+      "change": "Add a positive Volterra enclosure for the leading wall field at the original onset endpoint.",
+      "changed_from_commit": "58515e8c11dffeba0db24f59d5d21d18e55ec612",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "321751f580736ab67eae867535b887425ff3bd286ef8b8f8e22133b9457b2ea6"
+      "sha256": "6c78c8c2fd681f1d17293c411e631b2129960856c399ddcd4c44b9497438a41d"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 127063,
-      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
-      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
+      "bytes": 127897,
+      "change": "Add a positive Volterra enclosure for the leading wall field at the original onset endpoint.",
+      "changed_from_commit": "58515e8c11dffeba0db24f59d5d21d18e55ec612",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "50b171b725c095fad7ab0f62317563b688a9a719daaab1837584b0ff23e6122c"
+      "sha256": "57b76d94e41c9c3960384c9abef3bd2c39a0ea12eaf10fd90b0f3b1ab1610b97"
     },
     {
       "bytes": 18356,
@@ -29873,6 +29873,14 @@
       "sha256": "4057c89fa075d9dcf847f3c4987bcf0cddec8d6b97d5cc5bee2e68115649a10a"
     },
     {
+      "bytes": 7337,
+      "change": "Add a positive Volterra enclosure for the leading wall field at the original onset endpoint.",
+      "changed_from_commit": "58515e8c11dffeba0db24f59d5d21d18e55ec612",
+      "path": "scripts/check_nsc_atlas_onset_endpoint_bound.py",
+      "retention_reason": "Direct leading-scalar onset enclosure and reproducible independent controls.",
+      "sha256": "08d3ec7136650222fb4c4928a5792033481ed0cf9d084051c59b7be044892641"
+    },
+    {
       "bytes": 14645,
       "change": "Carry optional interior-jet history enrichment through runtime and original-input certificates.",
       "changed_from_commit": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
@@ -32923,6 +32931,14 @@
       "original_path": "lab/src/recursive_horizons/nsc_atlas_moving_boundaries.py",
       "path": "src/recursive_horizons/nsc_atlas_moving_boundaries.py",
       "sha256": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20"
+    },
+    {
+      "bytes": 3168,
+      "change": "Add a positive Volterra enclosure for the leading wall field at the original onset endpoint.",
+      "changed_from_commit": "58515e8c11dffeba0db24f59d5d21d18e55ec612",
+      "path": "src/recursive_horizons/nsc_atlas_onset_endpoint_bound.py",
+      "retention_reason": "Direct leading-scalar onset enclosure and reproducible independent controls.",
+      "sha256": "9e3308ff90ed9d43e29901280123499f814392f5421e7b3e48ba4c4db1b31c13"
     },
     {
       "bytes": 11824,
@@ -36619,6 +36635,14 @@
       "path": "tests/test_nsc_atlas_null_continuation.py",
       "retention_reason": "Exact nonlinear derivative and chart controls for the local cap-wall construction.",
       "sha256": "aa1cf17179a1881b370bf773cc56e5e17f1e45720eb9561a146662d788c0403a"
+    },
+    {
+      "bytes": 5018,
+      "change": "Add a positive Volterra enclosure for the leading wall field at the original onset endpoint.",
+      "changed_from_commit": "58515e8c11dffeba0db24f59d5d21d18e55ec612",
+      "path": "tests/test_nsc_atlas_onset_endpoint_bound.py",
+      "retention_reason": "Direct leading-scalar onset enclosure and reproducible independent controls.",
+      "sha256": "84489cebaf6edbb108651a6c5eb667ee522de8eae9ea30916c7f00ab1ba50d5d"
     },
     {
       "bytes": 7216,

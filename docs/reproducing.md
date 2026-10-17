@@ -22,6 +22,25 @@ The cap module's registered implementation successor authenticates its
 original result-producing bytes; historical source-context commands below
 retain their declared snapshots.
 
+The direct onset comparison has independent positive-kernel controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_onset_endpoint_bound.py -q -s
+```
+
+After freezing its producer sources, the one-event application is:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_onset_endpoint_bound.py --output results/summaries/nsc-atlas-onset-endpoint-bound-v1.json
+```
+
+Use a new output path when reproducing an existing receipt; it will not be
+overwritten. The command authenticates the original source-cell and reference
+image, then encloses the leading wall field and its first affine-source
+derivative at the original right endpoint. It evaluates no trajectory or
+sampled field and performs no grid scan. Radius and clock coefficient
+integration and their finite-amplitude remainder remain separate work.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker
