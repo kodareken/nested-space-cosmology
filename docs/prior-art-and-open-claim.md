@@ -2483,6 +2483,32 @@ allowance covers the initially uncharged failing frame work, giving a
 128,336-value total ceiling. No physical source, original-cell certificate
 or time evolution was run in this stage.
 
+**First physical certificate:** frozen `ac98a98` certifies the exact binary
+cubic on its closed source cell, using 10,372 values / 2.4375 CPU seconds.
+All 59 producer bindings authenticate. The v1 receipt is 13,697 bytes,
+SHA256 `1f84dbf883857cc02465e1910692d21d3fb9581c7a69d1120acee6d59588e5d4`.
+It bounds radius error by `7.86156e-16` and its first jet by `2.48453e-12`.
+A subsequent exact-rational audit verifies its stored inverse inequalities
+and identifies a right-endpoint distinction: the next PPoly owner's value
+differs from this cubic's exact left limit by `-2.08603e-30`, and its first
+jet by `-2.85265e-28`. That audit uses 1,024 rational-control values /
+0.15625 CPU seconds. The v1 certificate remains valid for its declared cubic.
+
+Extend the six-input bound to include the actual next-piece value/first jet
+selected at the final knot. Add the exact rational jump magnitudes to the
+two radial error bounds, and certify this endpoint in the common tube.
+One manufactured endpoint-ownership control fits the remaining original
+development allowance. After it passes and code is frozen, admit one v2
+certificate under the same **100,000-value / 30-second** limit. No source,
+grid, time interval or trajectory changes; preserve v1. The scalar front
+mask remains a separate explicitly bounded input difference.
+
+The endpoint-ownership control passes with 11,240 further values and active
+CPU below timer resolution. The combined development ceiling is 139,576
+values, including the earlier failed-work allowance. Grok's review of the
+first certificate found no material soundness bug; the final-knot correction
+is a separate follow-up to that review.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

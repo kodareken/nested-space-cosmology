@@ -117,18 +117,24 @@ def frame_jacobian(s, v, g, gx, alpha):
         c_x=(arb(0), arb(0), arb(0), arb(1)))
 
 
-def source_cell_error_bound(geometry, *, alpha, left, right, power, budget):
+def source_cell_error_bound(geometry, *, alpha, left, right, power, budget, right_jet=None):
     """Enclose the first active source cell using its actual cubic powers.
 
     power is in increasing powers of t=(x-left)/(right-left). The caller
     extracts it exactly from the stored binary PPoly coefficients. The
-    exact target uses the analytic compact source; the snapshot's additional
+    right_jet optionally gives the exact value/first jet selected by the
+    next PPoly piece at right; its tiny coefficient-rounding jump is added.
+    The exact target uses the analytic compact source; the snapshot's additional
     mask at the declared front is bounded separately. No derivatives are
     replaced by their ODE targets and no adaptive subdivision is performed.
     """
     budget = _budget(budget); before = budget.evaluations
     left, right, alpha = map(_exact, (left, right, alpha))
     power = tuple(map(_exact, power))
+    if right_jet is not None:
+        right_jet = tuple(map(_exact, right_jet))
+        if len(right_jet) != 2:
+            raise ValueError('right owner requires one value and first jet')
     front = _exact(geometry['support_x'][0])
     if (len(power) != 4 or power[0] or power[1] or alpha < 0
             or not 0 < left < front < right < _exact(.8)
@@ -166,6 +172,20 @@ def source_cell_error_bound(geometry, *, alpha, left, right, power, budget):
         defects = [_upper(p['hxx']-_Q(p['x'], p['h'], p['w'], p['g'], p['gx'], p['gxx'], al)) for p in panels]
         D = max(defects)
         theta, H, W = radial_error_bounds(width, D, Lh, Lw)
+        jumps = (arb(0), arb(0))
+        if right_jet is not None:
+            endpoint_h, endpoint_w = map(_ball, right_jet)
+            endpoint_s, endpoint_v = b+al*endpoint_h, 1+al*endpoint_w
+            if not endpoint_s > smin or not abs(endpoint_v) < vmax:
+                raise ValueError('right owner exits the common comparison tube')
+            # Exact rational differences avoid inventing an interval jump
+            # when the two polynomial owners agree mathematically.
+            exact_width = right-left
+            jumps = tuple(_ball(abs(v)) for v in (
+                right_jet[0]-sum(power),
+                right_jet[1]-sum(i*power[i] for i in range(1, 4))/exact_width))
+            approximate_s.append(endpoint_s)
+        H_owned, W_owned = (H+jumps[0]).upper(), (W+jumps[1]).upper()
         # The declared front can lie slightly after the exact analytic root.
         # Hull that omitted sliver; never declare its analytic field zero.
         zfront = _coordinate(cut, geometry)[0]
@@ -178,12 +198,15 @@ def source_cell_error_bound(geometry, *, alpha, left, right, power, budget):
         smax = max(exact_shi.upper(), *(s.upper() for s in approximate_s))
         derivatives = frame_jacobian(smin.union(smax), (-vmax).union(vmax),
                                      (-G0).union(G0), (-G1).union(G1), al)
-        differences = (al*H, al*W, mask0, mask1)
+        differences = (al*H_owned, al*W_owned, mask0, mask1)
         frames = {name: _record(sum(_upper(v)*e for v, e in zip(row, differences)))
                   for name, row in derivatives.items()}
         result = dict(precision_bits=ctx.prec, panel_count=2,
             radial=dict(residual=_record(D), Lh=_record(Lh), Lw=_record(Lw), theta=_record(theta),
                         h_error=_record(H), h_x_error=_record(W)),
+            right_owner=dict(supplied=right_jet is not None,
+                h_jump=_record(jumps[0]), h_x_jump=_record(jumps[1]),
+                h_error_including_endpoint=_record(H_owned), h_x_error_including_endpoint=_record(W_owned)),
             analytic_source_bounds={k: _record(v) for k, v in zip(('g', 'g_x', 'g_xx'), (G0, G1, G2))},
             front_mask_difference=dict(c=_record(mask0), c_x=_record(mask1)),
             frame_error=frames,

@@ -1,0 +1,271 @@
+{
+  "cell": {
+    "alpha": 0.00012983127142551443,
+    "front": 0.42269179059454887,
+    "index": 35,
+    "left": 0.42228630694544744,
+    "normalized_exact_binary_powers": [
+      "0",
+      "0",
+      "40959947116187986456265838286027343462925/383123885216472214589586756787577295904684780545900544",
+      "-1514712795617485941103829653268899159061848642768551375/13479973333575319897333507543509815336818572211270286240551805124608"
+    ],
+    "right": 0.42292305857246026,
+    "source_knots": 129
+  },
+  "certificate": {
+    "analytic_source_bounds": {
+      "g": {
+        "upper_dyadic": {
+          "exponent": -182,
+          "mantissa": "1236775918360434052213116281695543188864017442033"
+        },
+        "upper_float": 2.01758485649758e-07
+      },
+      "g_x": {
+        "upper_dyadic": {
+          "exponent": -166,
+          "mantissa": "327410230492943087580779338443022543882193575729"
+        },
+        "upper_float": 0.0035003620391387603
+      },
+      "g_xx": {
+        "upper_dyadic": {
+          "exponent": -154,
+          "mantissa": "1040388011071322424850757118995487122637209570529"
+        },
+        "upper_float": 45.5591913192561
+      }
+    },
+    "charged_values": 10240,
+    "frame_error": {
+      "c": {
+        "upper_dyadic": {
+          "exponent": -352,
+          "mantissa": "864155946765032040254533762906444640783592562775"
+        },
+        "upper_float": 9.419625771084104e-59
+      },
+      "c_x": {
+        "upper_dyadic": {
+          "exponent": -295,
+          "mantissa": "707722603937331308724244196925230962703386496607"
+        },
+        "upper_float": 1.1117684512743183e-41
+      },
+      "log_C": {
+        "upper_dyadic": {
+          "exponent": -263,
+          "mantissa": "1213383151192946765058161669019874803859767061367"
+        },
+        "upper_float": 8.186704230948388e-32
+      },
+      "log_C_x": {
+        "upper_dyadic": {
+          "exponent": -248,
+          "mantissa": "1402010675563827023384993635390707888273380489375"
+        },
+        "upper_float": 3.0996481306140273e-27
+      },
+      "r": {
+        "upper_dyadic": {
+          "exponent": -210,
+          "mantissa": "1293623374293069706899143223971596447596229880001"
+        },
+        "upper_float": 7.861560568382867e-16
+      },
+      "r_x": {
+        "upper_dyadic": {
+          "exponent": -197,
+          "mantissa": "499060138420253147070136060890397980099487557203"
+        },
+        "upper_float": 2.4845270927685856e-12
+      }
+    },
+    "front_mask_difference": {
+      "c": {
+        "upper_dyadic": {
+          "exponent": -352,
+          "mantissa": "864155946765032040254533762906444640783592562775"
+        },
+        "upper_float": 9.419625771084104e-59
+      },
+      "c_x": {
+        "upper_dyadic": {
+          "exponent": -295,
+          "mantissa": "707722603937331308724244196925230962703386496607"
+        },
+        "upper_float": 1.1117684512743183e-41
+      }
+    },
+    "panel_count": 2,
+    "panels": [
+      {
+        "left": "475452113650795/1125899906842624",
+        "residual": {
+          "upper_dyadic": {
+            "exponent": -115,
+            "mantissa": "22079237595802644849105575155"
+          },
+          "upper_float": 5.315383104374596e-07
+        },
+        "right": "951817295307089/2251799813685248"
+      },
+      {
+        "left": "951817295307089/2251799813685248",
+        "residual": {
+          "upper_dyadic": {
+            "exponent": -117,
+            "mantissa": "2346915427809968883721508890897"
+          },
+          "upper_float": 1.412498343551125e-05
+        },
+        "right": "3809352257986645/9007199254740992"
+      }
+    ],
+    "precision_bits": 160,
+    "radial": {
+      "Lh": {
+        "upper_dyadic": {
+          "exponent": -184,
+          "mantissa": "447251463168655367167726292275471709749867407831"
+        },
+        "upper_float": 1.8240324818333155e-08
+      },
+      "Lw": {
+        "upper_dyadic": {
+          "exponent": -195,
+          "mantissa": "38370017159818912538626862567544161484646973091"
+        },
+        "upper_float": 7.640870495915114e-13
+      },
+      "h_error": {
+        "upper_dyadic": {
+          "exponent": -197,
+          "mantissa": "575184565935051705750929884201233392745109300161"
+        },
+        "upper_float": 2.863505873123005e-12
+      },
+      "h_x_error": {
+        "upper_dyadic": {
+          "exponent": -184,
+          "mantissa": "220534841939099817224579870607010819538184456813"
+        },
+        "upper_float": 8.99410618409098e-09
+      },
+      "residual": {
+        "upper_dyadic": {
+          "exponent": -117,
+          "mantissa": "2346915427809968883721508890897"
+        },
+        "upper_float": 1.412498343551125e-05
+      },
+      "theta": {
+        "upper_dyadic": {
+          "exponent": -207,
+          "mantissa": "860666256174876015034770388573418482961644801709"
+        },
+        "upper_float": 4.184327547902973e-15
+      }
+    },
+    "scope": "exact binary source cubic and analytic pulse; floating evaluation and coupled exterior errors excluded",
+    "tube": {
+      "F_lower": "1/2",
+      "absolute_rJ_x_upper": "3/2",
+      "exact_continuation_proved": true,
+      "polynomial_inside": true,
+      "rJ_lower": "1/5"
+    }
+  },
+  "execution": {
+    "charged_values": 10372,
+    "cpu_seconds": 2.4375,
+    "raw_history_saved": false,
+    "retries": 0,
+    "source_integrations": 0,
+    "source_queries": 0,
+    "time_steps": 0
+  },
+  "input": {
+    "manifest_sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd",
+    "operator_sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09",
+    "path": "results/development/nsc-atlas-coupled-evolution-v1/coupled.json",
+    "sha256": "3ab2662b932e503f471206fd77f9e4895d1967b1dcacbdf2d92aa048c37fee86"
+  },
+  "limits": {
+    "charged_values": 100000,
+    "cpu_seconds": 30.0,
+    "panels": 2,
+    "source_cells": 1
+  },
+  "polynomial": "actual SourceSnapshot PPoly binary coefficients; original scalar source formula",
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "schema": "nsc-atlas-source-cell-bound-v1",
+  "source_bindings": {
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/analyze_nsc_atlas_operator_comparison.py": "17c3e27bbc891c41bfc2f12519053b11c59f916e65e138a264433cc0aec19e1c",
+    "scripts/analyze_nsc_atlas_spatial_refinement.py": "1a90dcf150521d85d58be87ee202dbdcc71ae498ae6da04312caefcf432e344a",
+    "scripts/check_nsc_atlas_source_cell_bound.py": "1234daad6583c40bcd4a985d11dbdc7cac493023ea77a6f2f73e7961e7acc6f4",
+    "scripts/diagnose_nsc_atlas_background_step.py": "3a20311c2c346720417b1a028f85c121f6b32002944ebba8b51da74ef08fa86b",
+    "scripts/diagnose_nsc_atlas_background_time.py": "2af55adc8444c37824e87bfd20bd0a548f5878899c3f0e4354e63bff70e14e9c",
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45",
+    "scripts/diagnose_nsc_atlas_compatible_transport.py": "063f73745addb59eaa518c5ae6ef9e1e5a3e19873dfb015d9818fff9bbb1f29a",
+    "scripts/diagnose_nsc_atlas_ssprk3_step.py": "f5d7edf55cfd9979a2c60eed359770f1186ae9b2fb4dfb963efbf547286e2c7e",
+    "scripts/record_nsc_atlas_background_evolution.py": "1667bf1aa8a8a8fdbb8d4860369ccdb1080d39afe366cf96287c3e1f9c7d03e1",
+    "scripts/record_nsc_atlas_compatible_evolution.py": "35443dfe0fec7acb396107f0cefdc13b32f53f4e0948b212e76537874b54f4c9",
+    "scripts/record_nsc_atlas_coupled_evolution.py": "8d8303f01585997c1a9f42f33259dfc299951d3bf5e7cc70a94d67987f081919",
+    "scripts/record_nsc_atlas_nonlinear_rectangle.py": "1ca50b5f0da6f401cd244f1749fa5175fb38da2ea2497799500cbfd9cbb9d647",
+    "scripts/record_nsc_atlas_operator_comparison.py": "4231a0db2ca44c7402b11e06dcb8c4e354292f798fa1b7350c19aea1ad6106e9",
+    "scripts/record_nsc_atlas_spatial_refinement.py": "d519bfbdc2a607f2eb7c5199bd52e8c7b4400d320cb8f0883e50ba3289a79ea8",
+    "scripts/record_nsc_atlas_ssprk3_evolution.py": "118e02bdf46e5ae2763bc6fdfb7885533325ab133932110bfeaa31193bb397f8",
+    "scripts/record_nsc_atlas_ssprk3_refinement.py": "83947ed2cb7ce74a22f9aabd4f9191b43f3cc1086a877c345394581ddab1393d",
+    "scripts/run_python.py": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+    "scripts/validation_source_successors.py": "6ed04648bb81bf1e62427415f3a7f4033d2eb26d6749d5f3f3d5bbd14d35cbad",
+    "src/recursive_horizons/nsc_atlas_background_cap.py": "df34fdee624eb58d466b778e8f05ee74241922e43f5b60d619c0a8c557f6ceed",
+    "src/recursive_horizons/nsc_atlas_background_evolution.py": "7b7d5db8e790354c0bf7069f983eb4851390b1cbfaa3a56a10de97033e1059b9",
+    "src/recursive_horizons/nsc_atlas_background_profile.py": "4103e32423cde5eb95131fe4cd67ebb9e32c568d13e7bd74a76edced5199c427",
+    "src/recursive_horizons/nsc_atlas_background_ssprk3.py": "dcc3ecc2023679be3a837e807de58548cb1b6b51bc3e7419e1cba1b8caee8362",
+    "src/recursive_horizons/nsc_atlas_cap_background_jets.py": "2f5b7df81335da5b3b55fb59e4a95e30928e673d30afd807e0ae3f640af4c914",
+    "src/recursive_horizons/nsc_atlas_cap_field.py": "3e5c10e5e1096a2c1079d00ca8d31ff4678044d324404117d225ccd1f3815d31",
+    "src/recursive_horizons/nsc_atlas_cap_geometric_reference.py": "905f292558173d6cd015c484ec30fdc9e59b38d748077047df850d1e5d404b81",
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": "e0c26ea5417fb46b1e971e9b4ac5c0122aae400104551516488d321e9272a579",
+    "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_characteristic_background.py": "b7883490e6bad9c7096bfa6c6616e0674ff319e08e0e0be7ababf6055d1d5c9c",
+    "src/recursive_horizons/nsc_atlas_characteristic_cell.py": "71745e4fc58ab722a91d47c1fba90344fce786b2dc3ded6063d7dceb8784f135",
+    "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+    "src/recursive_horizons/nsc_atlas_characteristic_trace.py": "d171b49036555ef8fedad072b0bf9c5550508ba7183fb3e03cc64de600819a47",
+    "src/recursive_horizons/nsc_atlas_compatible_evolution.py": "82f8f127f2b401b1234dfe7ceecddee011cf907c34fd87c06cbb64c20ddd9385",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+    "src/recursive_horizons/nsc_atlas_coupled_diagnostics.py": "9bb5d343683d2d8028d0796a18a5fd12ec677f5ec373e678675e6f56fdbddee6",
+    "src/recursive_horizons/nsc_atlas_coupled_evolution.py": "08746ab7c4aa71b543be5e1aca469e1fa43795277cfdce8102161b738d64423b",
+    "src/recursive_horizons/nsc_atlas_departure_diagnostics.py": "98a99baeb613738612b8dd26d68edbbeb6be1f514c835bcca3929e868cc687b3",
+    "src/recursive_horizons/nsc_atlas_departure_gradient.py": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452",
+    "src/recursive_horizons/nsc_atlas_exterior_characteristic_slice.py": "905f820fc7240b272dab9a3766708e3ff471d4210d408d5300f5eea0d983d766",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+    "src/recursive_horizons/nsc_atlas_gradient_evolution.py": "f007f4842d3b6f2490559e6035d6b5859d8848e477d39b8e77731a0e136d445d",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "src/recursive_horizons/nsc_atlas_nonlinear_boundary.py": "4f636558926405a0bbd51f2080bd9be7e832ea82dfe007ccdf9104e9dfd2d541",
+    "src/recursive_horizons/nsc_atlas_nonlinear_bulk.py": "5ed3d18a642b562528c397526f85e92272784915bdb3a289cf9e8fa5d32c1b42",
+    "src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py": "0cf41411da3be90a1f0f030581adc4ce1da672e2d638d9d6f91f6bf4c4013824",
+    "src/recursive_horizons/nsc_atlas_nonlinear_source.py": "9a5922f9fbc856a4fb6e0c1c1f6a28a40e3034656de81db88d6cc8b917def72c",
+    "src/recursive_horizons/nsc_atlas_polar_cap.py": "17a9bece68716d2c80711bbdef3fc340d36f11edb6fa2f233806b39332603617",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": "70b28d793f572556e3ada8bfaf74a98926f93402d7c15cf987f61b50396ab8e0",
+    "src/recursive_horizons/nsc_atlas_reduced_cap.py": "ed474652def7f60db02a14e5147a08b14b43963ef756ad4c3de3ad4800d698e9",
+    "src/recursive_horizons/nsc_atlas_reference_wall_gauge.py": "e905f2b6e888d53ee2d539920d09d037eb6bb074a60717932cfead12c87b3113",
+    "src/recursive_horizons/nsc_atlas_refined_cache.py": "6a5e01fbccbd5f333d5a327c4ef8952cb5a21adf8675a02c088d10e3429a7c4c",
+    "src/recursive_horizons/nsc_atlas_source_cell_bound.py": "d29925224a286ef8af810d7aadf5f02081c08c37bf385ad65685f5944b69bdcd",
+    "src/recursive_horizons/nsc_atlas_stage_ssprk3.py": "aab87a8bc67a9b69391a425a5893c9c07e73eedde668d1a2cdff4eb971cdcbc0",
+    "src/recursive_horizons/nsc_atlas_vacuum_departure.py": "45ed0edcc19b5d9a73904bd8b862d42223a6ddc0703b948b47cd8a44d399f157",
+    "src/recursive_horizons/nsc_atlas_validation.py": "7142f8753c9cf4d6c2c6d5a389016d8c6a08e4505ddcfc5d9b8ab5f2f7d69e31",
+    "src/recursive_horizons/nsc_frozen_sources.py": "473120bfe00230d1d25cf8a4942edfed0891dc8cc58ca7276dc26419bf721ac9",
+    "src/recursive_horizons/nsc_source_binding_graph.py": "0c378dd30c500e93cf2050f44793333380875094008ae2b95c2f180a31907374"
+  },
+  "source_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
+  "status": "certified_source_representation_cell"
+}

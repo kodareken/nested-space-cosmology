@@ -5679,6 +5679,13 @@ uses the corresponding bound Qmax on |Q|: the inequalities
 `1-alpha*G0^2/(6*s_min^2)>F_min`, keep the exact solution in the tube.
 The polynomial is separately enclosed in that same tube.
 
+The next PPoly piece owns the final knot in the actual source interface.
+Its binary value and first jet can differ from this cubic's exact left limit
+by coefficient-rounding jumps J0,J1. The endpoint-inclusive errors are
+therefore `H+|J0|` and `W+|J1|`. The endpoint is checked in the common tube
+and included in the frame box; the source coefficients themselves stay
+unchanged. This does not use the next piece's second derivative.
+
 The frame map is
 
 \[
@@ -5698,7 +5705,7 @@ analytic field to zero at a rounded front.
 Arb at 160 bits uses just the two original panels separated by that front.
 Endpoint powers preserve positive denominator bounds; repeated wide-ball
 multiplication must not erase a known positive floor. Six independent
-controls now pass in eleven development executions, including one diagnosed
+controls initially passed in eleven development executions, including one diagnosed
 interval-dependency failure, plus a small arithmetic diagnostic. Recorded
 charges are 120,144 values; allowing a further 8,192 for the two initially
 uncharged failing frame evaluations gives 128,336 within the admitted
@@ -5707,6 +5714,18 @@ the interval work, including failures. The controls include
 symbolic Q derivatives, a closed-form forced ODE, 85-digit independent frame
 derivatives and compact-source jets, zero-coupling recovery and rejected
 domains. No physical source or trajectory has been replayed for them.
+
+The [first cell certificate](../results/summaries/nsc-atlas-source-cell-bound-v1.json)
+uses 10,372 values / 2.4375 CPU seconds and binds 59 producer files at
+`ac98a98`. On the declared closed cubic, it bounds radius error by
+`7.86156057e-16` and radius first-jet error by `2.48452710e-12`.
+Its exact-record audit verifies theta and both integral inequalities, and
+finds right-owner minus left-limit differences `-2.08603e-30` and
+`-2.85265e-28`. That rational audit costs 1,024 values / 0.15625 CPU seconds.
+The optional endpoint-owner correction now passes its manufactured control
+with another 11,240 values and CPU below the timer resolution. Seven distinct
+controls pass; the development value ceiling including failed-work allowance
+is 139,576. The original v1 receipt is preserved for its declared cubic.
 
 ### First retained-source fixed-cap interval
 

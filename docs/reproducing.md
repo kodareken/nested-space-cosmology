@@ -585,15 +585,18 @@ its actual binary cubic coefficients:
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_source_cell_bound.py -q -s
-python scripts/run_python.py scripts/check_nsc_atlas_source_cell_bound.py --output results/summaries/nsc-atlas-source-cell-bound-v1.json
+python scripts/run_python.py scripts/check_nsc_atlas_source_cell_bound.py --output results/summaries/nsc-atlas-source-cell-bound-v2.json
 ```
 
-The six controls pass. The separately admitted physical certificate has a
+The seven controls pass. The separately admitted physical certificate has a
 100,000-value / 30-second budget and requires committed calculation sources.
 It encloses two original panels without sampling, source integration or
 time evolution, and refuses to overwrite an existing receipt. Its frame
 bounds concern the mathematical representation, with runtime floating
 evaluation and coupled propagation errors still separate.
+The frozen `ac98a98` v1 receipt bounds the closed left cubic. The v2 command
+also includes the actual next-piece value and first jet selected at its
+right endpoint; their coefficient-rounding jumps are added explicitly.
 
 The internal wavefront identities and bounded position/amplitude stage:
 

@@ -48,7 +48,7 @@ def main():
         if hashlib.sha256((ROOT/name).read_bytes()).hexdigest() != expected:
             raise ValueError('commit calculation source before execution: '+name)
     budget = Budget(maximum_evaluations=100000, cpu_seconds=30.)
-    report = dict(schema='nsc-atlas-source-cell-bound-v1', source_commit=commit, source_bindings=bindings,
+    report = dict(schema='nsc-atlas-source-cell-bound-v2', source_commit=commit, source_bindings=bindings,
                   runtime=producer.runtime_versions(), status='incomplete',
                   limits=dict(charged_values=100000, cpu_seconds=30., source_cells=1, panels=2))
     try:
@@ -67,13 +67,17 @@ def main():
         # Inspect the actual PPoly coefficients; there is no second fit.
         coefficients = snapshot._h.c[:, j]
         power = tuple(Q(float(coefficients[3-i]))*width**i for i in range(4))
+        right_jet = tuple(Q(float(snapshot._h.c[k, j+1])) for k in (3, 2))
+        if right_jet != (Q(float(rows['h'][j+1])), Q(float(rows['h_x'][j+1]))):
+            raise ValueError('right PPoly owner differs from the original source jet')
         report.update(input=dict(path=producer.BASE_INPUT, sha256=hashlib.sha256(raw).hexdigest(),
                 operator_sha256=identity['sha256'], manifest_sha256=identity['manifest_sha256']),
             cell=dict(index=j, left=float(left), right=float(right), front=front,
-                alpha=data['alpha'], source_knots=129, normalized_exact_binary_powers=[str(v) for v in power]),
+                alpha=data['alpha'], source_knots=129, normalized_exact_binary_powers=[str(v) for v in power],
+                right_owner_value_and_first=[str(v) for v in right_jet]),
             polynomial='actual SourceSnapshot PPoly binary coefficients; original scalar source formula')
         report['certificate'] = source_cell_error_bound(geometry, alpha=data['alpha'], left=left, right=right,
-                                                        power=power, budget=budget)
+                                                        power=power, right_jet=right_jet, budget=budget)
         budget.check(); report['status'] = 'certified_source_representation_cell'
     except (ValueError, RuntimeError, OverflowError, FloatingPointError, KeyError, TypeError) as error:
         report['status'] = 'stopped'; report['failure'] = str(error)

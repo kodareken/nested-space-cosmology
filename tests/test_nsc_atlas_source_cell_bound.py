@@ -115,3 +115,18 @@ def test_zero_coupling_has_exact_vacuum_metric_and_domain_failures(budget):
                                 power=(0, 0, 0, 0), budget=budget)
     with pytest.raises(ValueError, match='theta'):
         radial_error_bounds(arb(1), arb(1), arb(2), arb(0))
+
+
+def test_right_piece_jet_is_included_in_the_final_input_bound(budget):
+    result = source_cell_error_bound(GEOMETRY, alpha=.00001, left=.4, right=.44,
+        power=(0, 0, 0, 0), right_jet=(Q(1, 1000), Q(-1, 500)), budget=budget)
+    owner = result['right_owner']
+    def exact(row):
+        v = row['upper_dyadic']
+        return Q(v['mantissa'])*Q(2)**v['exponent']
+    assert owner['supplied']
+    assert exact(owner['h_jump']) >= Q(1, 1000)
+    assert exact(owner['h_x_jump']) >= Q(1, 500)
+    assert exact(owner['h_error_including_endpoint']) >= exact(result['radial']['h_error'])+Q(1, 1000)
+    assert exact(owner['h_x_error_including_endpoint']) >= exact(result['radial']['h_x_error'])+Q(1, 500)
+    budget.check(1000)
