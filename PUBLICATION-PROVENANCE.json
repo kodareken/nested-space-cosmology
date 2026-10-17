@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 360757,
+      "bytes": 361259,
       "path": "docs/current-result.md",
-      "sha256": "fecdd0976ef2a0b014a6eb42cbd5d65a0b6a0f62bc426a59a9e5d971650c470e"
+      "sha256": "efa1c2518f4396dec5b64871e7d088739f83829417c25c8bf7b5a00f040a2be7"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2336168,
+      "bytes": 2337741,
       "path": "docs/lab-snapshot.json",
-      "sha256": "2a00bbbe3887dc10b1fb05d9f117713cb540434b00ed1caa84a345e7732b275e"
+      "sha256": "a650efae69d75b2610581d70875e1d83d34b0b6983dabe9268b77cdd1e6946ca"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2201,9 @@
       "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 462271,
+      "bytes": 464147,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "3443d215326831f9cf06a6542f234b38dc8a9f7c849608c63d50b1f5e1014099"
+      "sha256": "dafd3b5508fe25a310cac37d7cfc8ec14d8af1ecb5f17dc515e9d84f53b26899"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 143377,
+      "bytes": 143778,
       "path": "docs/reproducing.md",
-      "sha256": "a84dddedad1e34bcc00c1d3aaf72da0d4c3c3c387fae90c55582ff8b074cb4b9"
+      "sha256": "25d4d46e2f32c21d213800098b093ad05d8fed8f1fd8db022b5adbad01ea7295"
     },
     {
       "bytes": 31710,
@@ -14616,6 +14616,11 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "bytes": 30591,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-diagnostic-v2.json",
+      "sha256": "3b3706b3069844ae9938860154eb3517005333b68db6ed2ad90b5d90f161753e"
+    },
+    {
       "bytes": 30016,
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-v1.json",
       "sha256": "8b1ec8105873e30d92aa51485cc775325ae152639b15d1ccf1921eb5361ab0a9"
@@ -14634,6 +14639,16 @@
       "bytes": 14872,
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v1.json",
       "sha256": "baf09f4a3cef350f60515de2fcc8efcaf269e706aa124a9990ce9f4e4c21aef0"
+    },
+    {
+      "bytes": 1473,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v2-interruption.json",
+      "sha256": "987c4b7c00ccfcb504bcc7a7da1b5e4bf9cc88e248dbcb21911cc6d54b5ece29"
+    },
+    {
+      "bytes": 14313,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-radial-diagnostic-v1.json",
+      "sha256": "fc41555df204d9a02dc58d3d19a5fd08659c20bca1e1a0a2a35799714c66556a"
     },
     {
       "bytes": 28312,
@@ -16276,9 +16291,9 @@
       "sha256": "b3d6b148aea3d78df37c75776ef7f81befddc5ea77eb3f665bce26df7b5e30b4"
     },
     {
-      "bytes": 6780,
+      "bytes": 7330,
       "path": "scripts/diagnose_nsc_atlas_endpoint_radial.py",
-      "sha256": "ef5b8eac4c8f22c58b7e8c07766d9b3e47d2a767cf0754ee2bae957894cb955e"
+      "sha256": "a136ece25600658a24eb7b6f250bf6bbe9d9afa3f677db7ff86fac59ec99ea27"
     },
     {
       "bytes": 17605,
@@ -16496,9 +16511,9 @@
       "sha256": "dea660fcf1f062a969da84a609cc67dc874a743cfae6bd07fc1bcaf3c0a27f11"
     },
     {
-      "bytes": 44062,
+      "bytes": 45145,
       "path": "scripts/run_nsc_atlas_fixed_endpoint.py",
-      "sha256": "ec3b8c36a51d4cc9016ab54723884d8129d25b900fa0328c554b811234347800"
+      "sha256": "167156131c47b266b7087c91af34ef4297504b85b11ff28f9695f72344db267f"
     },
     {
       "bytes": 20689,
@@ -21311,7 +21326,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "2a00bbbe3887dc10b1fb05d9f117713cb540434b00ed1caa84a345e7732b275e",
+  "lab_snapshot_sha256": "a650efae69d75b2610581d70875e1d83d34b0b6983dabe9268b77cdd1e6946ca",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

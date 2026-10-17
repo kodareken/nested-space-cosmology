@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
+  "current_receipt_commit_parent": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 360757,
-      "change": "Preserve the middle-grid stop; isolate scalar arithmetic to keep the original radial reference byte-authenticated.",
-      "changed_from_commit": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
+      "bytes": 361259,
+      "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
+      "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fecdd0976ef2a0b014a6eb42cbd5d65a0b6a0f62bc426a59a9e5d971650c470e"
+      "sha256": "efa1c2518f4396dec5b64871e7d088739f83829417c25c8bf7b5a00f040a2be7"
     },
     {
       "bytes": 18915,
@@ -11426,12 +11426,12 @@
       "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 462271,
-      "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
-      "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+      "bytes": 464147,
+      "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
+      "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3443d215326831f9cf06a6542f234b38dc8a9f7c849608c63d50b1f5e1014099"
+      "sha256": "dafd3b5508fe25a310cac37d7cfc8ec14d8af1ecb5f17dc515e9d84f53b26899"
     },
     {
       "bytes": 6705,
@@ -11440,12 +11440,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 143377,
-      "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
-      "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+      "bytes": 143778,
+      "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
+      "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a84dddedad1e34bcc00c1d3aaf72da0d4c3c3c387fae90c55582ff8b074cb4b9"
+      "sha256": "25d4d46e2f32c21d213800098b093ad05d8fed8f1fd8db022b5adbad01ea7295"
     },
     {
       "bytes": 18356,
@@ -29679,6 +29679,14 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "bytes": 30591,
+      "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
+      "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-diagnostic-v2.json",
+      "retention_reason": "P001 failed-stage diagnosis and controlled forward-accuracy correction.",
+      "sha256": "3b3706b3069844ae9938860154eb3517005333b68db6ed2ad90b5d90f161753e"
+    },
+    {
       "bytes": 30016,
       "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
       "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
@@ -29709,6 +29717,22 @@
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v1.json",
       "retention_reason": "P001 endpoint execution or independent quiet-partition control.",
       "sha256": "baf09f4a3cef350f60515de2fcc8efcaf269e706aa124a9990ce9f4e4c21aef0"
+    },
+    {
+      "bytes": 1473,
+      "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
+      "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v2-interruption.json",
+      "retention_reason": "P001 failed-stage diagnosis and controlled forward-accuracy correction.",
+      "sha256": "987c4b7c00ccfcb504bcc7a7da1b5e4bf9cc88e248dbcb21911cc6d54b5ece29"
+    },
+    {
+      "bytes": 14313,
+      "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
+      "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-radial-diagnostic-v1.json",
+      "retention_reason": "P001 failed-stage diagnosis and controlled forward-accuracy correction.",
+      "sha256": "fc41555df204d9a02dc58d3d19a5fd08659c20bca1e1a0a2a35799714c66556a"
     },
     {
       "bytes": 28312,
@@ -32521,12 +32545,12 @@
       "sha256": "545314108872f623ffd88db01a71d2d5d548aa00f312c70f3c9abd22c8be79fd"
     },
     {
-      "bytes": 6780,
-      "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
-      "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+      "bytes": 7330,
+      "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
+      "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
       "path": "scripts/diagnose_nsc_atlas_endpoint_radial.py",
       "retention_reason": "Full P001 evolution, retained failure evidence and bounded radial diagnosis.",
-      "sha256": "ef5b8eac4c8f22c58b7e8c07766d9b3e47d2a767cf0754ee2bae957894cb955e"
+      "sha256": "a136ece25600658a24eb7b6f250bf6bbe9d9afa3f677db7ff86fac59ec99ea27"
     },
     {
       "bytes": 4707,
@@ -32613,12 +32637,12 @@
       "sha256": "dea660fcf1f062a969da84a609cc67dc874a743cfae6bd07fc1bcaf3c0a27f11"
     },
     {
-      "bytes": 44062,
-      "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
-      "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+      "bytes": 45145,
+      "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
+      "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
       "path": "scripts/run_nsc_atlas_fixed_endpoint.py",
       "retention_reason": "Full P001 fixed-grid endpoint evolution and physically scaled observable.",
-      "sha256": "ec3b8c36a51d4cc9016ab54723884d8129d25b900fa0328c554b811234347800"
+      "sha256": "167156131c47b266b7087c91af34ef4297504b85b11ff28f9695f72344db267f"
     },
     {
       "bytes": 20689,

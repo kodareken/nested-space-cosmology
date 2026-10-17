@@ -16,9 +16,15 @@ The [middle receipt](../results/summaries/nsc-atlas-fixed-endpoint-level1-v2.jso
 also stops on that gradient check, after 731 accepted steps at
 `x=0.4332475313818818`. Neither reaches the endpoint.
 
-The [admitted replay and one-state diagnosis](prior-art-and-open-claim.md#p001-full-endpoint-fixed-grid-comparison-17-october-2026)
-will distinguish radial ODE error from adjoint quadrature error while
-retaining the same equations and guard. The
+The [one-state diagnosis](../results/summaries/nsc-atlas-fixed-endpoint-radial-diagnostic-v1.json)
+attributes the discrepancy to the forward radial solve: increasing adjoint
+quadrature from 32 to 128 points changes its value by about `7e-13`, while
+tightening the forward integration reduces the discrepancy from `6.2485e-8`
+to `3.4044e-10`. The original `2e-8` guard is unchanged. The fine run was
+[interrupted before source onset](../results/summaries/nsc-atlas-fixed-endpoint-level2-v2-interruption.json)
+to adopt the independently checked accuracy correction. The
+[admitted confirmation](prior-art-and-open-claim.md#p001-full-endpoint-fixed-grid-comparison-17-october-2026)
+checks the selected tolerance above SciPy's floating-point floor. The
 [comparison tool](../scripts/analyze_nsc_atlas_fixed_endpoint.py) requires
 three complete endpoints before reporting contraction and a scaled radius.
 The declared observable is the Jordan wall areal radius at the fixed incoming

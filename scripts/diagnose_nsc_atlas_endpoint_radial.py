@@ -13,6 +13,7 @@ from recursive_horizons import nsc_atlas_cap_fixed_reference as fixed
 
 CASES=((32,2e-13,2e-15),(64,2e-13,2e-15),(128,2e-13,2e-15),
        (64,2e-14,1e-15))
+CONFIRMATION_CASES=((32,2.5e-14,1e-15),(64,2.5e-14,1e-15))
 
 
 def read_seed(receipt,root=endpoint.ROOT):
@@ -41,7 +42,10 @@ def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--receipt',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--confirm-forward-accuracy',action='store_true',
+                        help='the admitted 32/64-point check of the selected tighter tolerance')
     args=parser.parse_args(argv)
+    cases=CONFIRMATION_CASES if args.confirm_forward_accuracy else CASES
     if args.output.exists() or not args.output.parent.is_dir():
         raise ValueError('choose a new output in an existing directory')
     raw=args.receipt.read_bytes();receipt=json.loads(raw)
@@ -56,7 +60,8 @@ def main(argv=None):
                            bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest()),
         stage_seed=receipt['failed_stage_seed'],x=x,level=receipt['level'],
         physical_time_steps=0,gradient_tolerance=2e-8,
-        limits=dict(cpu_seconds=60.,charged_values=40_000_000,cases=len(CASES)),cases=[])
+        comparison_kind='selected_forward_accuracy' if args.confirm_forward_accuracy else 'error_attribution',
+        limits=dict(cpu_seconds=60.,charged_values=40_000_000,cases=len(cases)),cases=[])
     original=fixed._radial_variations
     radial_results=[]
     try:
@@ -76,11 +81,12 @@ def main(argv=None):
         snapshot=endpoint.SourceSnapshot(geometry,alpha=data['alpha'],x_nodes=rows['x'],
                                          source_rows=rows,budget=budget)
         gauge=endpoint.ReferenceWallGauge(geometry,order=64,budget=budget)
-        for order,rtol,atol in CASES:
-            case=dict(adjoint_order=order,rtol=rtol,atol=atol)
+        for order,rtol,atol in cases:
+            case=dict(adjoint_order=order,rtol=rtol,atol=atol,
+                      effective_rtol=max(rtol,100*np.finfo(float).eps))
             captured=[];started=time.process_time();before=budget.evaluations
             def routed(*a,**kw):
-                kw.update(adjoint_order=order,rtol=rtol,atol=atol)
+                kw.update(adjoint_order=order)
                 result=original(*a,**kw)
                 captured.append(result)
                 return result
@@ -89,7 +95,7 @@ def main(argv=None):
                 stage=endpoint.coupled_fixed_stage(state,basis=basis,x=x,
                     eta=np.linspace(0.,1.,spec['exterior_cells']+1),source=snapshot.sample(x),
                     gauge=gauge.sample(x),alpha=data['alpha'],tube=endpoint.TUBE,budget=budget,
-                    background=background,background_clock_offset=offset)
+                    background=background,background_clock_offset=offset,rtol=rtol,atol=atol)
                 cap=stage['connection']['cap']
                 case.update(status='passed_existing_gradient_guard',mass=cap['mass'],lapse=cap['lapse'],
                     gradient_discrepancy=cap['gradient_discrepancy'],
@@ -106,6 +112,8 @@ def main(argv=None):
             report['cases'].append(case)
         report['pair_differences']=[]
         for i,j in ((0,1),(1,2),(1,3)):
+            if j>=len(radial_results):
+                continue
             a,b=radial_results[i],radial_results[j]
             if a is not None and b is not None:
                 report['pair_differences'].append(dict(cases=[i,j],

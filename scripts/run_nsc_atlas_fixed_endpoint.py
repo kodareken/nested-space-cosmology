@@ -308,6 +308,23 @@ def stage_observables(row, alpha):
                               incoming_jet={k: float(v) for k, v in row['wall_incoming_jet_defect'].items()}),
         weak_balance_defect=float(cap['weak_balance_defect']),
         metric_certificate_floor=float(cap['metric_certificate']['A_lower_float_down']))
+    field=cap['wall'];clock_rate=float(cap['T_x'])
+    trace_term=float(field['A']**2*math.exp(cap['lapse'])*(
+        field['p_weak']*field['h_weak']-field['p_trace']*field['h_trace'])/2)
+    balance_term=float(cap['weak_balance_defect']/clock_rate)
+    observables['mass_gap_decomposition']=dict(
+        clock_rate=clock_rate,
+        p_trace_minus_weak=float(field['p_trace']-field['p_weak']),
+        h_trace_minus_weak=float(field['h_trace']-field['h_weak']),
+        normalized_trace_term=trace_term,normalized_balance_term=balance_term,
+        reconstructed_physical_actual=alpha*(trace_term+balance_term),
+        identity_defect=float(observables['temporal_residual']['mass_actual']-
+                              alpha*(trace_term+balance_term)))
+    if 'background' in cap:
+        observables['background_projection']=dict(
+            explicit_time_remainder=float(cap['explicit_time_remainder']),
+            remainder_identity_defect=float(cap['remainder_identity_defect']),
+            wall_time_projection_gap=float(cap['background']['wall_time_projection_gap']))
     return observables
 
 

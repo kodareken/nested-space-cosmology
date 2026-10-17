@@ -132,6 +132,36 @@ the same state separates quadrature resolution from forward ODE error.
 Retain failures and projected-rate differences. This diagnosis must choose
 the next numerical correction before any further full coarse evolution.
 
+**Attribution result:** the bounded replay stops at the same coarse stage.
+At that frozen state the 32/64/128 adjoint integrals agree to approximately
+`7e-13`, whereas the forward time-gradient differs by `6.2485e-8`.
+Tightening the forward solve reduces the discrepancy to `3.4044e-10`.
+The requested `rtol=2e-14` was raised by SciPy to its effective floor
+`2.220446049250313e-14`; preserve that distinction in interpreting the
+first diagnostic receipt. The middle 4/64 evolution also stops on the
+original gradient guard at `x=0.4332475313818818`. The old fine evolution
+is deliberately interrupted before entering the pulse, preserving its last
+reported progress separately from a completed solver receipt.
+
+Admit **one two-case confirmation at the same frozen state**, using
+`rtol=2.5e-14, atol=1e-15`, above the implementation floor, with 32 and 64
+adjoint points. It has 60 process-CPU seconds / 40 million charged values,
+one preparation and zero time steps. Both must pass the unchanged `2e-8`
+gradient guard before selecting this forward accuracy for the successor
+full evolutions. The physical mass and wall-flux gaps remain measured
+outputs, regardless of whether the radial arithmetic check passes.
+
+The independent Grok code review identifies a separate spatial issue:
+extra inner cells do not enrich the degree-five polynomial in the moving
+wall's last cell. The last-cell widths decrease only from 0.8 to 0.66 in
+the current family. Actual mass balance also contains the explicit-time
+background projection remainder, so a smaller scalar flux gap need not
+make its mass gap smaller. Record the clock rate, weak/strong trace
+differences and this remainder at the existing nine cuts. This adds no
+physical stage or fitted input. Completed full-domain results still decide
+whether the current family contracts; the review does not substitute for
+that comparison.
+
 ## Independent preparation perturbations on the onset cell, 17 October 2026
 
 **Paused before the control run:** Douglas's next priority is three fixed

@@ -875,6 +875,13 @@ summary. A clean checkout regenerates it with the bounded replay. The
 radial comparison performs no time step and preserves the original
 forward/adjoint discrepancy guard.
 
+After the first diagnostic attributed the discrepancy to the forward solve,
+the separately admitted two-case confirmation uses:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-diagnostic-v2.json --confirm-forward-accuracy --output results/summaries/nsc-atlas-fixed-endpoint-radial-confirmation-v1.json
+```
+
 After that comparison passes, the separately admitted full enriched
 finite-coupling onset interval is:
 
