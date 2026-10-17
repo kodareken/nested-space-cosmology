@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "86bb90630b706f3b15ab7dd96459547a0f03225d",
+  "current_receipt_commit_parent": "7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 238430,
-      "change": "Bound the complete onset geometric remainder with interval jets and the existing positive matrix.",
-      "changed_from_commit": "4df0738070b7c7f53b95d4bc3b0fe2ac540f7cbd",
+      "bytes": 238559,
+      "change": "Record the certified finite-amplitude Einstein-radius and anchored-clock endpoint signs.",
+      "changed_from_commit": "7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "e5f4b5d89e7bd4856a54070df597493515b0fff44bb3b88c182e567e46d3c755"
+      "sha256": "a5524cb2c208b0792f74b01142a58f192e78f483cc33adef14a8e24a80fdcccc"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 351407,
-      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
-      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
+      "bytes": 353071,
+      "change": "Record the certified finite-amplitude Einstein-radius and anchored-clock endpoint signs.",
+      "changed_from_commit": "7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3f95e7d760b56580e0b28c648e667f5489974715b8fc086453839e602a1c8f22"
+      "sha256": "11b200602947ae662577c8b71a6c2d8582fb7ac000629002702a902a22624fa5"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 572792,
-      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
-      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
+      "bytes": 575502,
+      "change": "Record the certified finite-amplitude Einstein-radius and anchored-clock endpoint signs.",
+      "changed_from_commit": "7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3c9441fb03df5f7e9de4be75f0f275223cc08aa1df41a642ef2cb15bce0cc88c"
+      "sha256": "ec27b64db33e363f52f225c5545126ec501ba8002d40ca5b38a5a137ef5b8990"
     },
     {
       "bytes": 8895,
@@ -11410,20 +11410,20 @@
       "sha256": "f6d6f0857a7af175084d0e36e6068d6fc322e4607865a2dcc055ba4ae36fe650"
     },
     {
-      "bytes": 5102,
-      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
-      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
+      "bytes": 5312,
+      "change": "Record the certified finite-amplitude Einstein-radius and anchored-clock endpoint signs.",
+      "changed_from_commit": "7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
+      "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 438196,
-      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
-      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
+      "bytes": 439121,
+      "change": "Record the certified finite-amplitude Einstein-radius and anchored-clock endpoint signs.",
+      "changed_from_commit": "7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "adda9c6dd2cc95d189b921e20dc9b82ec5642b5150e277f37be3e16adf92c5ac"
+      "sha256": "5dc7a1266033a98b291768540c93bfcfe8c9fd2401c43bdb300fa5ee64c7609e"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 136222,
-      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
-      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
+      "bytes": 136593,
+      "change": "Record the certified finite-amplitude Einstein-radius and anchored-clock endpoint signs.",
+      "changed_from_commit": "7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "da19d97e45224a911ebcfa5b9d7e08a065daa2c5bb7242ad55a3b052f0d014b7"
+      "sha256": "72ccae2a06621f8ef1108d23fe8e3fcc6d6fd985c957df4bdee60dd950c471eb"
     },
     {
       "bytes": 18356,
@@ -29716,6 +29716,14 @@
       "path": "results/summaries/nsc-atlas-geometric-remainder-bound-v1.json",
       "retention_reason": "Compact stopped geometric remainder receipt preserving the original calculation diagnosis.",
       "sha256": "370099d84e7f7f16e005b0c6d23ab72f83eea54075db64b7fb52700c93dcc64f"
+    },
+    {
+      "bytes": 22626,
+      "change": "Record the certified finite-amplitude Einstein-radius and anchored-clock endpoint signs.",
+      "changed_from_commit": "7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5",
+      "path": "results/summaries/nsc-atlas-geometric-remainder-bound-v2.json",
+      "retention_reason": "Compact certified geometric quadratic remainder and finite-amplitude endpoint sign evidence.",
+      "sha256": "b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2"
     },
     {
       "bytes": 8120,

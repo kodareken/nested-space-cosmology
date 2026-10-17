@@ -85,9 +85,12 @@ The later [finite-amplitude onset theorem](nsc-atlas-finite-amplitude.md#finite-
 constructs the same candidate on a shorter initial source cell. It does not
 reach this entry's terminal reference-radius prediction point. Its later
 [quadratic amplitude estimate](nsc-atlas-finite-amplitude.md#second-amplitude-derivative-and-quadratic-onset-remainder)
-also stays on that shorter cell, with a finite unevaluated constant and no
-identification of P001's saved coefficients. P001's finite-amplitude
-remainder and observational limits therefore remain as recorded.
+also stays on that shorter cell. Its [completed uniform remainder and
+strict fixed-label signs](nsc-atlas-finite-amplitude.md#certified-finite-amplitude-endpoint-signs)
+now identify the shorter cell's first coefficients and bound its exact
+Einstein-radius and anchored-clock response. They do not extend to P001's
+terminal point. P001's finite-amplitude remainder and observational limits
+therefore remain as recorded.
 
 Check the register with:
 

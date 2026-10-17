@@ -2,6 +2,35 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Finite-amplitude radius and clock signs, 17 October 2026
+
+The [complete onset remainder](nsc-atlas-finite-amplitude.md#certified-finite-amplitude-endpoint-signs)
+now proves both fixed-source-label corrections are negative for every
+`0 < alpha <= 4789928473501569/36893488147419103232`, approximately
+`1.29831e-4`. This concerns the exact coupled family on the original
+finite onset cell, its Einstein-frame wall radius and centre-anchored
+wall polar clock. At the maximum amplitude:
+
+| Dimensionless quantity | Enclosure of the sourced shift from vacuum |
+| --- | --- |
+| Einstein wall radius | `[-2.1389537241162062e-18, -1.008091205113468e-18]` |
+| Anchored wall polar clock | `[-2.6356402236659915e-18, -1.4108942251738885e-18]` |
+
+The quadratic remainder is below `1.015e-6` of the radius's certified
+first-response magnitude and `1.369e-5` of the clock's. The same source,
+action, amplitude range and positive comparison matrix are retained.
+These are relative sourced corrections on an expanding reference wall.
+Jordan material radius, later central arrival and observational inference
+require their respective conversions and extensions.
+
+The [22,626-byte certificate](../results/summaries/nsc-atlas-geometric-remainder-bound-v2.json)
+binds producer `7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5`, 26 source
+files and twelve input hashes. One corrected application uses 37,376 values /
+0.03125 CPU seconds. The independent exact audit uses 4,096 values /
+0.09375 CPU seconds and passes. Eleven controls and Grok's separate
+jet/wall and assembly reviews pass. The failed v1 attempt is retained;
+no grid scan, field evolution or new raw history was produced.
+
 ## Geometric remainder implementation correction, 17 October 2026
 
 The first complete nonlinear-box application stopped before obtaining a

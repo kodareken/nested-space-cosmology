@@ -3394,6 +3394,19 @@ stopped v1 and its original producer binding. It must pass the existing
 independent 4,096-value audit. Any further nonfinite operation, failed
 floor or exhausted budget stops this application without a retry.
 
+**Corrected outcome:** producer `7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5`
+completes one v2 application with 37,376 values / 0.03125 CPU seconds.
+Both endpoint signs hold strictly on the entire admitted positive-alpha
+interval. The [22,626-byte receipt](../results/summaries/nsc-atlas-geometric-remainder-bound-v2.json)
+binds 26 source files and twelve input hashes. The independent audit
+(4,096 values / 0.09375 CPU seconds) authenticates those bindings and
+checks Cramer's-rule reconstruction, matrix norm, all dependent rows,
+alpha powers, strict inequalities and outward displays. All pass. Grok's
+follow-up review accepts the interval-product correction in all three
+second-jet rules. The [result owner](nsc-atlas-finite-amplitude.md#certified-finite-amplitude-endpoint-signs)
+records numerical bounds, domain and endpoint interpretation. The stopped
+v1 remains historical evidence; there is no model/input adjustment.
+
 ## Quadratic source-geometry remainder, 17 October 2026
 
 The cap comparison closes the normalized radial input; the full geometric

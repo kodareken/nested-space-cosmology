@@ -12575,11 +12575,69 @@ multiplication now encloses each such square in exponential, reciprocal
 and even-function second jets. All eleven corrected controls pass; the
 stopped receipt remains separate from the admitted corrected application.
 
+### Certified finite-amplitude endpoint signs
+
+The corrected [v2 certificate](../results/summaries/nsc-atlas-geometric-remainder-bound-v2.json)
+completes the preceding comparison. On the original onset cell
+
+\[
+ \xi\in[475452113650795/1125899906842624,
+         3809352257986645/9007199254740992],
+\]
+\[
+ 0\le\alpha\le\alpha_{\max}
+ =4789928473501569/36893488147419103232,
+\]
+
+it establishes uniform quadratic remainders for all nine retained
+geometric quantities. Selected outward-rounded dimensionless bounds are:
+
+| Quantity | Coefficient in `|G_alpha-G0-alpha*G1| <= alpha^2*C2` | Remainder at alpha_max |
+| --- | ---: | ---: |
+| Einstein radius, including wall | 6.067429006784047e-17 | 1.022735483020524e-24 |
+| Exterior log lapse | 5.436689558682e-16 | 9.164170385206419e-24 |
+| Centre-anchored wall polar clock | 1.1455968691078199e-15 | 1.9310363021368066e-23 |
+
+The old positive matrix has the same weighted norm below 0.146. At the
+right source endpoint, the ratio `alpha_max*C2/(-first_upper)` is below
+`1.015e-6` for radius and `1.369e-5` for clock. Both are strictly below
+one, so
+
+\[
+ R_E(\alpha,\xi_b)-R_E(0,\xi_b)<0,\qquad
+ T_W(\alpha,\xi_b)-T_W(0,\xi_b)<0
+ \quad(0<\alpha\le\alpha_{\max}).
+\]
+
+At alpha_max the respective shift enclosures are
+`[-2.1389537241162062e-18, -1.008091205113468e-18]` and
+`[-2.6356402236659915e-18, -1.4108942251738885e-18]`. The exact rational
+receipt supplies the unrounded endpoints and common amplitude ceiling.
+These are differences of the exact sourced family from its vacuum
+reference at a fixed source label. The radius is in the Einstein frame;
+the polar clock is anchored to the quiet regular centre. A material-radius
+comparison in the Jordan frame needs its explicit frame conversion. The
+reference wall remains expanding, and neither inequality is an evaporation
+law or a central-arrival observation.
+
+Frozen producer `7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5` completes one
+corrected application with 37,376 charged values / 0.03125 process-CPU
+seconds. The 22,626-byte receipt has SHA-256
+`b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2`,
+26 producer bindings and twelve input hashes. The independent 4,096-value
+rational audit uses 0.09375 CPU seconds: Cramer's-rule reconstruction,
+positive matrix norm, dependent rows, alpha powers, strict endpoint signs,
+outward displays and all producer/input hashes pass. The eleven corrected
+controls and both Grok implementation reviews pass. The stopped v1 receipt
+and its diagnosis remain available. No source query, integration, field
+evolution, time step, grid scan or raw history is generated.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,
-its departure bounds and an analytic quadratic amplitude remainder with
-a finite unevaluated constant. The remaining full-domain problem concerns later
+its departure bounds and an explicit uniform quadratic amplitude remainder.
+The fixed-label radius and anchored-clock endpoint signs above hold on the
+entire admitted positive-amplitude range. The remaining full-domain problem concerns later
 central arrival and a controlled approximation or perturbative remainder
 for that observable. The quiet-core restriction is no longer sufficient
 once the signal reaches the centre. In particular, the following remain

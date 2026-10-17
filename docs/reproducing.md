@@ -201,7 +201,12 @@ part of this calculation. The first application stopped on an indeterminate
 Arb power of a zero-crossing derivative ball. The corrected implementation
 uses interval multiplication for those squares; eleven controls pass in
 14,336 values / 5.609375 active CPU seconds. The stopped v1 receipt is
-preserved, and the separately admitted corrected application will use v2.
+preserved. The [corrected v2 receipt](../results/summaries/nsc-atlas-geometric-remainder-bound-v2.json)
+uses producer `7e4734bc75ce04f9ba3afef3addcdfe700f5e8d5`, 37,376 values /
+0.03125 CPU seconds. The independent 4,096-value / 0.09375-CPU-second audit
+passes. Both fixed-label endpoint signs hold throughout the admitted
+positive-amplitude range; all nine uniform remainder coefficients are
+retained with the exact inputs and source bindings.
 
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
