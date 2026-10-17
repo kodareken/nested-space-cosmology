@@ -12017,6 +12017,143 @@ differences of normalized fields, not a numerical quadratic geometric
 remainder. The next connection is the corresponding normalized cap mass
 and lapse difference, including their changing radial Jacobian.
 
+### Normalized radial cap departure and vacuum-subtracted residuals
+
+Use the same common z collar and the completed canonical scalar comparison.
+Put `N=(m-r^3/2)/alpha`, `D=delta/alpha`, `A0=1-r^2` and
+
+\[
+ f=\chi/r,\quad p=(E^++E^-)/(2A_0),\quad
+ h=(E^+-E^-)/(2A_0)-f,\quad Q_c=(p^2+h^2)/r^2.
+\]
+
+The exact normalized constraints are
+
+\[
+ N_r+\alpha rQ_cN/2=r^2V/2+r^2A_0Q_c/4,\qquad D_r=rQ_c/2,
+\]
+
+with zero anchors at the quiet core. Here
+`V=(3 cosh(sqrt(alpha/6)*f)^4-3)/alpha`, extended by `V(0,f)=f^2`.
+The alpha-zero N0 and D0 are the leading **sourced** integrals. They are
+not zero vacuum profiles. The old tube's positive formulas bound both
+limits: its N bound uses a potential majorant monotone in alpha, and its
+lapse bound has the explicit factor
+`delta<=alpha*width*energy/(2*rstar)`. Consequently
+`Dmax=recorded_delta_max/alpha_max` is valid including the limit, with
+all upward rounding retained. Dividing a raw alpha-independent lapse
+ceiling would not justify this normalized bound.
+
+Write `r=tanh(zstar+eta L)`, `L=atanh(R)-zstar`; its radial Jacobian is
+`J=r_eta=L*A0`. Let subscripts min/max denote the original common tube
+floors/ceilings, and C the already certified difference divided by alpha.
+Product and reciprocal estimates give
+
+\[
+ C_r=A_{0,\max}C_Z,\quad C_A=2r_{\max}C_r,\quad
+ C_f=C_\chi/r_{\min}+\chi_{\max}C_r/r_{\min}^2,
+\]
+\[
+ p_{\max}=(E^+_{\max}+E^-_{\max})/(2A_{0,\min}),\qquad
+ h_{\max}=p_{\max}+f_{\max},
+\]
+\[
+ C_p=(C_++C_-)/(2A_{0,\min})+p_{\max}C_A/A_{0,\min},\quad
+ C_h=C_p+C_f,
+\]
+\[
+ Q_{c,\max}=(p_{\max}^2+h_{\max}^2)/r_{\min}^2,
+\]
+\[
+ C_Q={2p_{\max}C_p+2h_{\max}C_h\over r_{\min}^2}
+       +{2(p_{\max}^2+h_{\max}^2)C_r\over r_{\min}^3}.
+\]
+
+The last term differentiates the radial denominator; its numerator is
+`pmax^2+hmax^2`, not another copy of Qcmax.
+
+**Finite potential remainder.** The exact identity
+`cosh(q)^4=(cosh(4q)+4cosh(2q)+3)/8` and the Taylor bound
+`0<=cosh(t)-1-t^2/2<=t^4*cosh(t)/24` yield
+
+\[
+ 0\le V(\alpha,f)-f^2\le
+ \alpha f^4{4\cosh(4q)+\cosh(2q)\over36},\qquad
+ q=\sqrt{\alpha/6}|f|.
+\]
+
+The quotient tends to `5*f^4/36`, but the full hyperbolic factor is kept
+for finite amplitude. With `qmax=sqrt(alpha_max/6)*fmax`, set
+
+\[
+ C_V=f_{\max}^4{4\cosh(4q_{\max})+\cosh(2q_{\max})\over36}
+         +2f_{\max}C_f.
+\]
+
+Then `|V_alpha-V0|<=alpha*C_V`. The old positive potential maximum
+covers V_alpha and f0 squared.
+
+**Radial integration measure and attenuation.** Define
+
+\[
+ J_{\max}=L_{\max}A_{0,\max},\quad
+ C_J=A_{0,\max}C_Z+L_{\max}C_A,
+\]
+\[
+ b_{\max}=r_{\max}^2V_{\max}/2
+                  +r_{\max}^2A_{0,\max}Q_{c,\max}/4,
+\]
+\[
+ C_b={2r_{\max}C_rV_{\max}+r_{\max}^2C_V\over2}
+ +{(2r_{\max}C_rA_{0,\max}+r_{\max}^2C_A)Q_{c,\max}
+        +r_{\max}^2A_{0,\max}C_Q\over4}.
+\]
+
+Subtract the exact eta equations, keeping the actual N in the attenuation
+term and zero attenuation in the reference. Since both anchors are zero
+and `0<=eta<=1`, direct integration of the absolute differences gives
+
+\[
+ |N_\alpha-N_0|\le\alpha C_N,\quad
+ C_N=C_Jb_{\max}+J_{\max}C_b
+       +J_{\max}r_{\max}Q_{c,\max}N_{\max}/2,
+\]
+\[
+ |D_\alpha-D_0|\le\alpha C_D,\quad
+ C_D={C_Jr_{\max}Q_{c,\max}
+              +J_{\max}(C_rQ_{c,\max}+r_{\max}C_Q)\over2}.
+\]
+
+No radial profile is numerically solved. The finite-alpha attenuation
+contributes even if the scalar and radius differences are set to zero.
+
+**Direct second-order residuals.** Algebra now implies
+
+\[
+ |m_\alpha-r_\alpha^3/2-\alpha N_0|\le\alpha^2 C_N,\qquad
+ |\delta_\alpha-\alpha D_0|\le\alpha^2 C_D,
+\]
+\[
+ |e^{\delta_\alpha}-1-\alpha D_0|
+ \le\alpha^2(C_D+\mu_{\max}D_{\max}^2/2),
+\]
+\[
+ \left|A_\alpha-(1-r_\alpha^2)+2\alpha N_0/r_0\right|
+ \le2\alpha^2(C_N/r_{\min}+N_{\max}C_r/r_{\min}^2).
+\]
+
+These statements hold at common eta. The mass and A residuals remove the
+vacuum term at the **actual** radius. They do not control the second-order
+motion of that radius, total mass, exterior mass, or fixed-label wall
+clock. Those remain in the full geometric remainder calculation.
+
+`nsc_atlas_cap_departure_bound.py` evaluates these positive formulas from
+the original tube and scalar receipts. Ten independent controls pass in
+one execution, 6,144 charged values / 0.625 active CPU seconds. Grok's
+algebra and interpretation reviews accept the formulas with the explicit
+normalized-ceiling justification above. The implementation review and
+original-data application remain to be completed after source freeze.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

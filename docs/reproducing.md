@@ -129,6 +129,26 @@ uses producer `a0fce1a9a77b0a5c70463dd656ba2288a29161d2` and completes
 and alpha-scaling checks pass. It is a normalized scalar difference bound;
 no numerical quadratic geometric remainder is supplied.
 
+The radial cap consumer takes the same tube and completed scalar certificate.
+Its ten independent controls initially use 6,144 values / 0.625 active CPU
+seconds. Run them with:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_departure_bound.py -q -s
+```
+
+The original-data application requires a committed producer and new output
+path, and uses at most 12,288 charged values / 10 CPU seconds:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_cap_departure_bound.py --output <new-output-path>
+```
+
+It evaluates positive algebraic cap bounds without radial integration,
+source queries or field evolution. Its [mathematical scope](nsc-atlas-finite-amplitude.md#normalized-radial-cap-departure-and-vacuum-subtracted-residuals)
+distinguishes normalized N/D differences and actual-radius vacuum-subtracted
+residuals from the complete geometric Taylor remainder.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker

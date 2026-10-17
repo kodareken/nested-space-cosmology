@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
+  "current_receipt_commit_parent": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 236716,
-      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
-      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
+      "bytes": 237253,
+      "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
+      "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "2ece8ea04a41752710042c94c1d42bfe8823bbe63dfb9391726e1c0d51bfed07"
+      "sha256": "2b9b45ea73144a47034814cf93beb13820553f5de2b13a1ce50ceee07202cd54"
     },
     {
       "bytes": 9543,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 552368,
-      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
-      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
+      "bytes": 556804,
+      "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
+      "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c338a77a59a2590f9fd57a2cf90bada60aca839a73f482d07b240e14dd97f02c"
+      "sha256": "3fe7415fb81ca8ec928fae7efa7b7cd534197fcc5305e4ee187d4acc14fa6877"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 426061,
-      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
-      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
+      "bytes": 428541,
+      "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
+      "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "de176b1279011a4a82436712df34a7b9fa2af726ac5144fa38f1d8b95d10cfb3"
+      "sha256": "012e76849eb5a057d07e19d87c9072b4ada4d679e226ba723371fcf2f7c0201e"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 132484,
-      "change": "Record the certified scalar amplitude comparison and independent exact audit.",
-      "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
+      "bytes": 133391,
+      "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
+      "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "11bc2574651857dee9d69385c7a252b77374732f0c764d23845d550bbd04e481"
+      "sha256": "a8c860203474a52975d1d6ad0edb020900c615ccfe748e5abb32975b9f10acd8"
     },
     {
       "bytes": 18356,
@@ -29849,6 +29849,14 @@
       "sha256": "b4500e686114c905dd9360224807d02c9e1881bdb4534b042dd7f5116699e7d8"
     },
     {
+      "bytes": 4279,
+      "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
+      "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
+      "path": "scripts/check_nsc_atlas_cap_departure_bound.py",
+      "retention_reason": "Normalized cap mass/lapse comparison with controlled algebra and reproducible compact evidence.",
+      "sha256": "dedff9f8ef65c2fb5ae5f6eec007f1a4888359c966b49ee65d76a94794568add"
+    },
+    {
       "bytes": 2738,
       "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
       "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
@@ -32718,6 +32726,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_characteristics.py",
       "retention_reason": "Finite-coupling smooth characteristic PDE and shared-value wall port with independent controls.",
       "sha256": "b8c216d73c39e7493916a5cc84837c1df9f83429e7fb1dbe7826a77bcc994081"
+    },
+    {
+      "bytes": 5752,
+      "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
+      "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
+      "path": "src/recursive_horizons/nsc_atlas_cap_departure_bound.py",
+      "retention_reason": "Normalized cap mass/lapse comparison with controlled algebra and reproducible compact evidence.",
+      "sha256": "76a1e64342d6852a3b6d1ff173bb812e403f59ce8c9fef7d8dd989eae107cacc"
     },
     {
       "bytes": 16791,
@@ -36318,6 +36334,14 @@
       "path": "tests/test_nsc_atlas_cap_characteristics.py",
       "retention_reason": "Finite-coupling smooth characteristic PDE and shared-value wall port with independent controls.",
       "sha256": "a4d9eac48c364468231aebd9a40ace10157fe3366974c62083060527d570e235"
+    },
+    {
+      "bytes": 3314,
+      "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
+      "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
+      "path": "tests/test_nsc_atlas_cap_departure_bound.py",
+      "retention_reason": "Normalized cap mass/lapse comparison with controlled algebra and reproducible compact evidence.",
+      "sha256": "27def8f66683634875fb9779515577f05606d0a9f0485491e6c1bfc244f3a726"
     },
     {
       "bytes": 4920,

@@ -3301,7 +3301,48 @@ of the existing second-amplitude theorem will identify the smallest
 unevaluated bound needed for a numerical remainder constant. It admits
 no new physical, symbolic or numerical execution.
 
-### Canonical scalar amplitude comparison, 17 October 2026
+### Normalized radial cap comparison, 17 October 2026
+
+The scalar and geometric first-difference certificates now supply all
+field inputs for a radial cap comparison. Keep their original onset,
+coupling interval, common z collar, source, action and quiet-core anchors.
+Apply positive product differences to the owned radial constraints for
+`N=(m-r^3/2)/alpha` and `D=delta/alpha`. The alpha-zero N and D are the
+leading sourced profiles. Keep the Jacobian `r_eta=L*(1-r^2)` and the
+explicit alpha attenuation term in the N equation.
+
+The only new transcendental estimate is an even-potential remainder.
+The exact multiple-angle identity for cosh^4 and the fourth-order cosh
+remainder give a positive uniform coefficient; the limiting 5/36 value
+alone is not used as a finite-amplitude bound. No radial profile needs
+to be solved. The results are uniform `|Nalpha-N0|<=alpha*CN` and
+`|Dalpha-D0|<=alpha*CD`, plus direct second-order bounds for delta, exp(delta)
+and mass/A with the vacuum part subtracted at the actual radius.
+They do not supply the full radius, clock or total-mass Taylor remainder.
+
+Admit one 160-bit algebraic application after freezing the producer,
+at most 12,288 charged values / 10 CPU seconds. Manufactured controls
+share 12,000 values / 20 active CPU seconds: exact normalized mass identity,
+quiet source, retained attenuation, potential identity and quartic limit,
+changing collar measure, domain guards and budget exhaustion. A separate
+2,048-value / 5-CPU-second exact audit authenticates sources/inputs and
+checks the rational product bounds, alpha powers, rounding and displays.
+Save only the small bound certificate, hashes and regeneration command.
+No source/field query, radial integration, evolution, grid scan or retry
+is included. Stop on changed inputs, nonpositive floors, a missing
+alpha-zero potential limit, an unprovided anchor or exhausted budget.
+
+The likely failures are dropping the radial Jacobian, confusing normalized
+N/D with zero vacuum fields, and promoting an actual-radius subtraction
+to a complete geometric Taylor expansion. Independent Grok algebra review,
+the exact constraint control and explicit output scope address these.
+
+**Implementation controls:** ten tests pass in one execution, 6,144 charged
+values / 0.625 active CPU seconds. The algebra and interpretation reviews
+accept the formulas, including the explicit normalized N/D ceilings. No
+original-data application has run; implementation review is in progress.
+
+## Canonical scalar amplitude comparison, 17 October 2026
 
 The geometric departure certificate leaves the normalized scalar difference
 as the next input to a quadratic geometric remainder. Keep the original
