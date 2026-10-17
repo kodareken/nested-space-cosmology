@@ -1,5 +1,49 @@
 # Prior art and admission of new research
 
+## Exact null-preparation normalization, 17 October 2026
+
+Reuse the full conformal stress and original Jordan-affine source gauge in
+the [initialization owner](nsc-atlas-characteristic-initialization.md) and
+the [exact source family](nsc-atlas-finite-amplitude.md#exact-source-family-in-the-original-affine-gauge).
+The missing connection is a normalization of the prescribed characteristic
+input that retains its gravitational stress term and affine scale. This
+supports a later physically restricted preparation comparison; it does not
+select an emitter, amplitude or total packet energy.
+
+Hold the action, coupling and source family fixed. Derive the integrated
+full null stress on a finite radial source leg with positive conformal
+factor and compact C3 data. The complete-support identity is conditional
+on those hypotheses throughout that leg; the short certified onset cell
+alone does not cover the complete support. Retain the endpoint term on a
+truncated leg. Check positive weight bounds, dimensional normalization and
+rescaling against one fixed timelike anchor. The source-leg mass response
+is a different integral.
+
+Admit four exact symbolic/manufactured controls sharing **10 active
+process-CPU seconds**, with zero field samples, numerical quadratures,
+source solves or grid scans. Compare Einstein-equation elimination with
+the integrated-by-parts expression; check a compact polynomial and its
+weak-field integral; verify affine and dimensional scaling; and test the
+logical limit of comparing different normalized profiles. Stop on a failed
+identity or budget before extending the calculation. Grok's independent
+algebra review accepts these formulas. This is an application of the
+already imported stress law, with no novelty claim or new literature import.
+
+Likely failures are confusing the improved numerator with the full stress,
+discarding a nonzero endpoint term, and treating affine normalization or
+a weight inequality as physical source selection. The controls explicitly
+retain those distinctions.
+
+**Outcome:** all four [exact controls](../tests/test_nsc_atlas_null_normalization.py)
+pass in **0.515625 active process-CPU seconds**, with zero field samples,
+source integrations or quadratures. The [source-family owner](nsc-atlas-finite-amplitude.md#exact-null-stress-normalization-of-the-prescribed-preparation)
+retains the truncated-segment boundary term, conditional complete-support
+positivity, affine-anchor dependence and dimensional normalization. The
+original packet's integral has not been evaluated or physically selected.
+Grok's final read-only review accepts the written derivation and all four
+controls, including the complete-support/onset distinction and the absence
+of a selected observer or physical source scale.
+
 ## Cap transport and radial-quadrature separation, 16 October 2026
 
 The completed mass ledger below leaves a definite remainder. Before another

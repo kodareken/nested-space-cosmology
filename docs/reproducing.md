@@ -6,6 +6,19 @@ Scientific conclusions retain the domains in their owning notes.
 The current paper and test dependencies use Matplotlib 3.11.2; the scientific
 stack includes python-flint 0.9.0 and Numba 0.68.0.
 
+The [exact null-preparation normalization](nsc-atlas-finite-amplitude.md#exact-null-stress-normalization-of-the-prescribed-preparation)
+has four symbolic controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_null_normalization.py -q -s
+```
+
+They check the full-stress boundary identity, compact-support weak-field
+limit, affine/dimensional scaling and the limit of the weight comparison.
+The admitted shared budget is ten active CPU seconds and zero field samples;
+the recorded run uses 0.515625 seconds. No original pulse integral, physical
+source solve or numerical quadrature is part of this command.
+
 The cap response solution also has `wall_sample(t)`, which returns its
 wall-radius and polar-slice clock coefficients at fixed exterior label
 without evaluating an arrival ray. The [coordinate/source bridge](nsc-atlas-finite-amplitude.md#connecting-first-coefficients-at-a-fixed-source-label)

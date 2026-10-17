@@ -2,6 +2,25 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Exact normalization of the null preparation, 17 October 2026
+
+The [source-family derivation](nsc-atlas-finite-amplitude.md#exact-null-stress-normalization-of-the-prescribed-preparation)
+now expresses the full conformal null stress as a positive weighted
+derivative square minus an exact endpoint derivative. On a complete
+nonzero compact trace with positive conformal factor, the integrated
+stress is strictly positive. A truncated interval retains its endpoint
+term; in particular the short certified onset does not cover the pulse.
+
+The same calculation gives `kappa_4 ell I = alpha J(alpha)` and shows
+that `I/omega_anchor` is invariant under positive affine rescaling for a
+fixed physical anchor observer. It does not select that observer, the
+packet amplitude or an emitter, and it is distinct from a total energy
+or the geometric mass response. Four independent symbolic controls pass
+in 0.515625 active CPU seconds, with zero field samples or quadratures.
+No value of the original pulse integral has been computed. The next
+preparation connection is a compatible earlier Cauchy packet or an
+explicit sourced emitter, with its normalization and causal placement.
+
 ## Manuscript with certified endpoint signs, 17 October 2026
 
 Living revision `2026-10-17.3` integrates the uniform geometric remainder

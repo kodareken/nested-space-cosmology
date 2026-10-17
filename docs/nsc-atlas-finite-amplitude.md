@@ -714,6 +714,101 @@ $(r_U)_V=-r_Ur_V/r-C/(4r)$; the mass then follows from its geometric
 definition. The specified source continuation, quiet data, corner and
 wall branch identify the exact family whose construction is still needed.
 
+### Exact null-stress normalization of the prescribed preparation
+
+Keep this same Jordan source family and its affine parameter. On a finite
+radial null segment write $k=d/d\lambda$, with primes in this subsection
+meaning $d/d\lambda$. The scalar-independent vacuum term has zero null
+contraction. Separate the improved numerator from the full stress:
+
+$$
+\mathcal A_{kk}=\phi'^2-\frac16(\phi^2)'',\qquad
+T^{\rm full}_{kk}=\mathcal A_{kk}+\frac16\phi^2G_{kk},\qquad
+G_{kk}=\kappa_4T^{\rm full}_{kk}.
+$$
+
+Consequently $\mathcal F T^{\rm full}_{kk}=\mathcal A_{kk}$, where
+$\mathcal F=1-\kappa_4\phi^2/6>0$. The numerator alone is not the
+finite-amplitude full stress. Ordinary differentiation gives the exact
+identity
+
+$$
+T^{\rm full}_{kk}
+=\frac{1-\kappa_4\phi^2/18}{\mathcal F^2}\phi'^2
+-\frac{d}{d\lambda}\left(\frac{\phi\phi'}{3\mathcal F}\right).
+$$
+
+Thus on $[\lambda_a,\lambda_b]$ the integral is
+
+$$
+I=\int_{\lambda_a}^{\lambda_b}T^{\rm full}_{kk}\,d\lambda
+=\int_{\lambda_a}^{\lambda_b}W(\mathcal F)\phi'^2\,d\lambda
+-\left[\frac{\phi\phi'}{3\mathcal F}\right]_{\lambda_a}^{\lambda_b},
+\qquad W(F)=\frac{2+F}{3F^2}.
+$$
+
+For the complete compact C3 trace with quiet endpoints, the boundary term
+vanishes. A nonzero compact trace then has $I>0$. Pointwise full stress
+can still have either sign. For $\kappa_4>0$ and
+$0<F_{\min}\le\mathcal F\le1$,
+
+$$
+1\le W(\mathcal F)\le\frac{2+F_{\min}}{3F_{\min}^2},\qquad
+W(F)-1=\frac{(1-F)(3F+2)}{3F^2},\qquad
+W'(F)=-\frac{F+4}{3F^3}.
+$$
+
+These bounds compare the weighted and unweighted derivative integrals
+of the **same** scalar trace. They are conditional on the positive-frame
+source solution over the specified segment. The certified short onset
+cell does not contain the complete compact support; its right endpoint
+has a nonzero trace, so its boundary term must be retained. No positive
+complete-pulse value is inferred by truncating at that endpoint.
+The [source-only bootstrap](#continuous-bounds-for-the-prescribed-source)
+below supplies sufficient conditions for a positive frame throughout the
+full initial leg; its numerical reference coordinates retain their stated
+accuracy. It does not extend the coupled wall solution to that whole leg.
+
+In the declared gauge choose $\lambda=\ell x$ and set
+$q_\alpha(x)=g_{\rm src}(x)/r_J(x,\alpha)$, so
+$\phi=(\varepsilon/\ell)q_\alpha$ and
+$\alpha=\kappa_4\varepsilon^2/\ell^2$. For quiet endpoints,
+
+$$
+I=\frac{\varepsilon^2}{\ell^3}J(\alpha),\qquad
+J(\alpha)=\int q_{\alpha,x}^{\,2}
+\frac{1-\alpha q_\alpha^2/18}
+     {(1-\alpha q_\alpha^2/6)^2}\,dx,\qquad
+\kappa_4\ell I=\alpha J(\alpha).
+$$
+
+At zero coupling, $q_0=b/x$ and
+$J(0)=\int[(b/x)']^2\,dx$. The bound $W\ge1$ does not establish
+$J(\alpha)\ge J(0)$, since the sourced radius changes $q_\alpha$.
+The quadratic initialization stress recovers this $J(0)$ only after its
+endpoint cancellation; $T_{xx}=\ell^2T_{kk}$ in this normalization.
+
+Under the positive affine rescaling $\lambda\mapsto c\lambda$,
+$k\mapsto k/c$ and $I\mapsto I/c$. For one specified unit future
+timelike observer at an anchor event on the ray, let
+$\omega_a=-u_a\cdot k_a>0$. Then $I/\omega_a$ is affine invariant,
+while it still depends on the physical choice of anchor observer. No such
+observer is selected by this algebra. This is one ray's integrated null
+stress. A total packet energy requires a specified energy current and
+integration surface with transverse measure. The
+[source-leg geometric mass](nsc-atlas-source-mass.md) is a different
+functional, so its negative quadratic coefficient does not contradict
+this conditional positive integral.
+
+The [calculation admission](prior-art-and-open-claim.md#exact-null-preparation-normalization-17-october-2026)
+and [exact controls](../tests/test_nsc_atlas_null_normalization.py) check
+Einstein-equation elimination, the endpoint term, a compact polynomial,
+weak-field recovery, affine/unit scaling and the limit of the weight
+comparison. They perform no integration of the original source. The
+normalization keeps the prescribed packet and its amplitude explicit;
+an earlier compatible Cauchy preparation or a sourced emitter remains
+to be supplied before calling that packet physically selected.
+
 ### Completing the source first jets
 
 The exact source ODE also supplies all first jets required to start the

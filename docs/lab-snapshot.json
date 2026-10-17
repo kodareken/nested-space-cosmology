@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "512c9b506c73119209732537571d18f9105f37e6",
+  "current_receipt_commit_parent": "668d870cc0b28987c4145747434d08c3d05f2054",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 239153,
-      "change": "Certify the material-radius endpoint sign with the exact frame conversion and retained central clock.",
-      "changed_from_commit": "d897d7969b7238d71c03948bdc83da5fa3f24779",
+      "bytes": 239710,
+      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
+      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "c7ae4aa886401386fda5c6965012082e7e99402c17790bca16de86c0923bac95"
+      "sha256": "2f4aab02fbecbdba58bd57df563b4c022ba1baf82bd3b1fa0bc4df3449bf71bd"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 355570,
-      "change": "Integrate certified finite-amplitude endpoint signs into the living manuscript and visually verified PDF.",
-      "changed_from_commit": "512c9b506c73119209732537571d18f9105f37e6",
+      "bytes": 356743,
+      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
+      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3594b6f7eefedc1d68add967d026d54cccb4ca2f3f647cb3899fe60cb250c1b0"
+      "sha256": "1cec07aa0b05decbc1cb492501069314a12e3a9c29169080cd21afdedb6abbfa"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 581705,
-      "change": "Certify the material-radius endpoint sign with the exact frame conversion and retained central clock.",
-      "changed_from_commit": "d897d7969b7238d71c03948bdc83da5fa3f24779",
+      "bytes": 585891,
+      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
+      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "318ace0bfe9521f696c7d483c8b9eb69c8c52b2dbb98c03c23c2c49e785044da"
+      "sha256": "add25c5d7f10ca822f34027d98384989f15b8e43928d91f36b33bd3f0aa42c80"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 443144,
-      "change": "Certify the material-radius endpoint sign with the exact frame conversion and retained central clock.",
-      "changed_from_commit": "d897d7969b7238d71c03948bdc83da5fa3f24779",
+      "bytes": 445905,
+      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
+      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "f83ebc59fe5645358f1cbf64445dda7c857ac387709e1c6370fe394f35fe5847"
+      "sha256": "2db5e412a76ce412c9286f630ab6bd7981f3476318cd627d2a6296a0121bac0e"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 138039,
-      "change": "Certify the material-radius endpoint sign with the exact frame conversion and retained central clock.",
-      "changed_from_commit": "d897d7969b7238d71c03948bdc83da5fa3f24779",
+      "bytes": 138667,
+      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
+      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7589de86e049950da48abe4a2ea9f4661ce4b0caa931b29ce6587bc7df34448c"
+      "sha256": "b763c3802cb21d783325164b5988b1e6b6bb454dc8ddc9218b9074aeadddb864"
     },
     {
       "bytes": 18356,
@@ -36851,6 +36851,14 @@
       "path": "tests/test_nsc_atlas_null_continuation.py",
       "retention_reason": "Exact nonlinear derivative and chart controls for the local cap-wall construction.",
       "sha256": "aa1cf17179a1881b370bf773cc56e5e17f1e45720eb9561a146662d788c0403a"
+    },
+    {
+      "path": "tests/test_nsc_atlas_null_normalization.py",
+      "retention_reason": "Exact same-action null-source normalization controls.",
+      "bytes": 4233,
+      "sha256": "74f04164054cf35302c75a8ed98568e313dca68e81fad578e989a13e351c794f",
+      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
+      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source."
     },
     {
       "bytes": 5018,
