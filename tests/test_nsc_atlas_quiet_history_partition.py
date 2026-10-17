@@ -30,11 +30,15 @@ def test_quiet_cut_removal_keeps_exact_projection_and_original_certificate(monke
         full=sorted({Q(0),Q(SMALL_Z),Z,*[abs(Q(float(k))-time) for k in knots if 0<abs(Q(float(k))-time)<Z]})
         original=np.array(list(map(float,full)))
         reduced,owners=reference._background_partition(basis,Z,T,bg)
-        removed=float(abs(Q(-.75)-time))
-        assert removed in original and removed not in reduced
-        assert float(front) in reduced and float(abs(Q(-1)-time)) in reduced
-        assert len(reduced)==len(original)-1
-        assert np.all(owners==0)
+        # Onset jets through x=-1/2 vanish and the lower extension is quiet, so
+        # both prefix pieces are the zero polynomial. Their knots, including
+        # the old domain endpoint, are not formula breaks.
+        quiet=np.array([float(abs(Q(float(k))-time)) for k in knots[:bg.onset['index']]])
+        assert bg.profile.quiet_extension and np.all(bg.profile._spline.c[:,:bg.onset['index']]==0.)
+        assert np.array_equal(original[~np.isin(original,reduced)],np.sort(quiet))
+        expected=np.array([0.,float(Q(SMALL_Z)),float(front),float(Z)])
+        np.testing.assert_array_equal(reduced,expected)
+        assert len(reduced)==len(original)-len(quiet) and np.all(owners==0)
         zero=np.zeros(basis.dimension)
         opts=dict(alpha=.002,T_x=.8,radius_rate=.001,incoming_w_plus=.01,
                   background=bg,background_time=T,budget=budget)
@@ -42,7 +46,7 @@ def test_quiet_cut_removal_keeps_exact_projection_and_original_certificate(monke
         monkeypatch.setattr(reference,'_background_partition',
                             lambda *args:(original.copy(),np.zeros(len(original)-1,dtype=int)))
         full_row=reference.fixed_cap_reference(basis,zero,zero,Z,**opts)
-        assert small['background']['radial_intervals']==full_row['background']['radial_intervals']-1
+        assert small['background']['radial_intervals']==full_row['background']['radial_intervals']-len(quiet)
         for key in ('mass','lapse','mass_rate','explicit_time_remainder'):
             assert small[key]==pytest.approx(full_row[key],rel=0.,abs=2e-12)
         assert small['gradient']['T']==pytest.approx(full_row['gradient']['T'],rel=0.,abs=2e-12)

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b681ec22a535610c40b7d6c43882c9cc2743ef75",
+  "current_receipt_commit_parent": "ae2675980de38f547efa6b4fb1afbd2d12eee62e",
   "files": [
     {
       "bytes": 3120,
@@ -37202,12 +37202,12 @@
       "sha256": "08e098ddaf770d07468d33181c969321a60943e7ef44ee52d68b74a36e9c48b0"
     },
     {
-      "bytes": 4845,
-      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
-      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
+      "bytes": 5290,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "ae2675980de38f547efa6b4fb1afbd2d12eee62e",
       "path": "tests/test_nsc_atlas_quiet_history_partition.py",
       "retention_reason": "Exact quiet-prefix partition and independent rational projection control.",
-      "sha256": "e8c6739b087edabe1e39c42cd915facf10d24e7d9d7e248776d2f882a8ae9358"
+      "sha256": "124c1c5d1e71550c282c970480271320b761b55937753b132b90b005d1b4ad1c"
     },
     {
       "bytes": 9691,
