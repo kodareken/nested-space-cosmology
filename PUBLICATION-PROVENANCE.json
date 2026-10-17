@@ -1491,14 +1491,14 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 242840,
+      "bytes": 242871,
       "path": "docs/active-code-map.md",
-      "sha256": "4081087772cc1f8b58d12d054e1abde81db5a3ba7cfcb53298b3a5de9dac3b15"
+      "sha256": "21694ca293966285fe4135fac34137b72c08f81eeb26f0a6129d18d95cd352a2"
     },
     {
-      "bytes": 98226,
+      "bytes": 99308,
       "path": "docs/arxiv-studies.md",
-      "sha256": "84d23c6d3cdd7b74f2113b7b11f1960891702e4ebcbb8ab5d50cd2d4b44dc0f5"
+      "sha256": "1ebc4b19ece7bcc519bee64314b57257ff4b6d239206514792fb32418ab597a2"
     },
     {
       "bytes": 1458,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 368553,
+      "bytes": 369124,
       "path": "docs/current-result.md",
-      "sha256": "376bfcd3de54164cdfced52bbddbc1456d9cf8e55aa60f81f64c4a5383eada21"
+      "sha256": "cfe47494fd0414795d9a6b2616b7da7ba909c637192a20064fc61d1e7c726a22"
     },
     {
       "bytes": 2481,
@@ -1558,7 +1558,7 @@
     {
       "bytes": 2354377,
       "path": "docs/lab-snapshot.json",
-      "sha256": "1b3c165c5cb04ca7eb5ffbb966a0234db5162e307759ce7ab2569bb535997180"
+      "sha256": "b53c315079491bf3fe644161a974979263212af1b1b6298adb4ad568c2066e79"
     },
     {
       "bytes": 4997,
@@ -2241,9 +2241,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 17225,
+      "bytes": 22694,
       "path": "docs/schur-memory.md",
-      "sha256": "c7fe1f7fef434813c6c35bcebc53a60bd392b43e9f2cc902f33504ba069c6828"
+      "sha256": "be5aabed787ca25ed67dd9548c906aef7b4d5ee4a80f67a29e5e9689eeea9d81"
     },
     {
       "bytes": 537091,
@@ -17111,9 +17111,9 @@
       "sha256": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452"
     },
     {
-      "bytes": 17136,
+      "bytes": 24043,
       "path": "src/recursive_horizons/nsc_atlas_effective_vacuum.py",
-      "sha256": "898ff84a08a79cff56bdd53fade9af52ced7b2139744996d719b0faf80b5693e"
+      "sha256": "00f2e16eddca11f3abfb3e697aa97fb789a0b1b1bc0c8c2fc1a47a7364bc7280"
     },
     {
       "bytes": 5128,
@@ -19336,9 +19336,9 @@
       "sha256": "64ee9f580218686d5a7dd7cd00b81dbb0fb3a891c21d954d50a9cef5e187b856"
     },
     {
-      "bytes": 6214,
+      "bytes": 8977,
       "path": "tests/test_nsc_atlas_effective_vacuum.py",
-      "sha256": "30f7207453b6ff1f037ac8817fc1d94e6a4ac5914a477171c2b4a9d66a8660fb"
+      "sha256": "cee1dd046c14722becb837dd1116a44b5e11fc34019e4dfbfdc2ae55e8b56ef0"
     },
     {
       "bytes": 2570,
@@ -21486,7 +21486,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "1b3c165c5cb04ca7eb5ffbb966a0234db5162e307759ce7ab2569bb535997180",
+  "lab_snapshot_sha256": "b53c315079491bf3fe644161a974979263212af1b1b6298adb4ad568c2066e79",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

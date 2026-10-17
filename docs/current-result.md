@@ -34,9 +34,18 @@ remains an input. A further necessary trace test sets that supplied volume
 term to zero: a constant-curvature cap then has only the flat root or
 `H^2 * l_P^2 = 360*pi`, outside controlled small-curvature semiclassical
 physics. The one-scalar anomaly therefore does not generate the desired
-nonzero small-curvature cap by itself. Twelve focused symbolic, metric and
-unit checks pass. The quantum wall and joint-state contribution are the
-next missing connection; the classical endpoint runs remain unchanged.
+nonzero small-curvature cap by itself.
+
+The [interface calculation](schur-memory.md#quantum-interface-the-actual-transmission-law)
+now identifies the actual transmission operator `U=k`. Its lower heat
+coefficient cancels; the full fourth surface polynomial gives
+`q_Sigma * ell^3 = -7/(720*pi^2)` at the reference parameters. Independent
+Gauss and Euler-boundary contractions agree. This is a formal local
+interface coefficient, not a bulk Lambda or a constructed quantum state.
+Fourteen focused symbolic, metric and unit checks pass. The physical
+exterior response and joint quantum covariance needed for its renormalized
+stress are identified in the [Schur connection](schur-memory.md#connecting-the-actual-exterior-to-the-schur-operation).
+The classical endpoint runs remain unchanged.
 
 ## Full P001 endpoint evolution in progress, 17 October 2026
 

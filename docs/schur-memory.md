@@ -182,7 +182,7 @@ contribution does not explain that input.
 The same [calculation module](../src/recursive_horizons/nsc_atlas_effective_vacuum.py)
 derives the conformal cancellation and contracts Christoffel curvature for
 both metrics. An independent sectional-curvature contraction checks the
-result. The [eleven combined tests](../tests/test_nsc_atlas_effective_vacuum.py)
+result. The [focused tests](../tests/test_nsc_atlas_effective_vacuum.py)
 cover these identities, normalization and flat limits as well as the
 classical calculation and SI scaling. The commands above reproduce the exact expressions
 and their displayed decimal coefficients; there is no quadrature error in
@@ -225,6 +225,120 @@ The executable `constant_curvature_trace_condition()` checks the roots and
 classical limit. A twelfth test derives the nonzero root directly from the
 dimensional SI trace equation, independently of the dimensionless conversion.
 No extra grid, fitted scale or observational input enters this test.
+
+### Quantum interface: the actual transmission law
+
+The material interface supplies a separate operator contribution. For the
+quiet candidate, $[\phi]=0$ and $[n\phi]=k\phi$. These are the transmission
+conditions of $D=-(\nabla^2+E)+U\delta_\Sigma$, with $E=-\mathcal R/6$ and
+$U=k$. Use the [Gilkey–Kirsten–Vassilevich transmittal coefficients](https://arxiv.org/html/hep-th/0101105v1)
+as imported local polynomials; do not square distributional curvature.
+Their theorem concerns an elliptic operator on Riemannian manifolds. The
+substitution below checks its invariant algebra on the Lorentzian quiet-wall
+geometry. It does not construct a global Euclidean continuation, a Lorentzian
+quantum state or a renormalized interface stress.
+
+With the project's common normal from cap to exterior, the source's inward
+forms are $L^+=-K_+$ and $L^-=K_-$. Thus
+$S=L^++L^-=kI$, $D=L^+-L^-=-2\bar K$. The second heat coefficient's
+surface density is proportional to $\operatorname{tr}S/3-U=0$.
+For unit smearing, the fourth coefficient also contains curvature
+contractions; keeping only its extrinsic-curvature terms would give an
+incomplete answer.
+
+In the source index convention $\rho_{ij}=R_{ikkj}$, put
+$Q_{ac}=R_{abcb}$, with the tangential metric used for contractions. The
+Gauss equation on the shared induced geometry gives
+
+$$
+Q_+-Q_-=\frac{k}{2}\big[(\operatorname{tr}D)I+D\big],\qquad
+\operatorname{tr}(Q_++Q_-)
+=-\mathcal R_+-\mathcal R_-+2\rho_+(n,n)+2\rho_-(n,n)
+=-6H^2.
+$$
+
+The first identity cancels the difference-curvature and difference-shape
+terms in Theorem 7.1's $\mathcal A_1$. The normal-curvature terms in
+$\mathcal A_2$ cancel because $S=kI$. This uses no static Schwarzschild
+observer and remains a contraction identity inside its horizon. The
+remaining three groups are
+
+$$
+\mathcal A_1=0,\qquad
+\mathcal A_2=56k^3-12kH^2,\qquad
+\mathcal A_3=-60k^3.
+$$
+
+After the factor $1/[360(4\pi)^2]$, the local surface polynomial is
+
+$$
+a_4^\Sigma(1)=\int_\Sigma\sqrt{|\gamma|}\,q_\Sigma\,d^3y,
+\qquad q_\Sigma\ell^3
+=-\frac{b(b^2+3h^2)}{1440\pi^2}
+=-\frac7{720\pi^2}\quad(h=1,\ b=2).
+$$
+
+The Schwarzschild mass and radius cancel in the full expression. This is
+an interface coefficient, not a four-dimensional volume term. Its value
+on this background does not establish that its off-shell metric variation
+is merely a shift of the material tension. The full counterterm operators,
+their renormalized coefficients and the joint-state stress remain needed
+before obtaining a physical effective Lambda from the attachment.
+
+There is an independent boundary-curvature check. For outward curvature
+$K$, define
+$J=\operatorname{tr}K\operatorname{tr}(K^2)
+-\frac23\operatorname{tr}(K^3)-\frac13(\operatorname{tr}K)^3$.
+The [Euler boundary polynomial](https://arxiv.org/html/hep-th/0208205v3),
+equations (6)–(7) after conversion from inward normals, is
+$4(J-2\widehat G_{ab}K^{ab})$.
+Adding the cap and exterior sides gives
+$B_\Sigma=4[J(K_-)-J(K_+)+k\widehat{\mathcal R}]
+=4k(k^2+3H^2)$, using the intrinsic Gauss scalar.
+The scalar's Euler coefficient $-1/[360(4\pi)^2]$ reproduces $q_\Sigma$.
+This checks the local polynomial and its orientation; it introduces no
+new gravitational coupling or global topological assertion.
+The calculation is implemented by `conformal_interface_heat_coefficients()`
+in the same module. Its checks and the independent Euler-boundary test bring
+the focused module to fourteen passing tests.
+
+### Connecting the actual exterior to the Schur operation
+
+The operator to eliminate in this candidate is the exterior conformal wave
+operator with the transmission domain above. Its boundary variable is
+$\varphi=\phi|_\Sigma$. Define $\mathcal N_\pm$ to map that boundary value
+to the corresponding **outward** normal derivative, with the initial or outer
+data stated separately. The exterior outward normal is $-n$ and the cap's
+is $n$. Therefore the homogeneous boundary equation is
+
+$$
+(\mathcal N_-+\mathcal N_++U)\varphi=0.
+$$
+
+It is exactly $[n\phi]=U\varphi$ in the common-normal convention. Supplied
+incoming data add a driving term to this equation. In real time the maps
+are causal history operators; the finite preparation does not justify a
+stationary zero-frequency limit.
+
+For an auxiliary elliptic problem with specified outer boundary data, write
+the exterior field as its Dirichlet solution plus a fluctuation vanishing
+on the interface. Integration by parts removes their bulk cross term.
+Gaussian elimination then separates the boundary quadratic form
+$\frac12\langle\varphi,\mathcal N_+\varphi\rangle_\Sigma$ from
+$\frac\hbar2\operatorname{Tr}\log D_{+,D}$, where $D_{+,D}$ has homogeneous
+Dirichlet interface data. The boundary measure is the induced geometric
+measure, not a freely normalized matrix inner product.
+
+The first term changes field transmission; the second and the metric
+dependence of the first contribute to the effective stress. A numerical
+coefficient of the first term alone is not a vacuum volume density. Real-time
+expectation values additionally require the joint state's symmetric
+two-point function, along with the retarded response. The existing prepared
+classical pulse specifies a mean field, not that covariance. This identifies
+the missing Step 3 input needed by Step 7: a physical quantum preparation
+and its covariance, with compatible boundary exchange and renormalization.
+The old finite Schur matrices remain useful identities, but are not yet
+evaluations of these physical operators.
 
 ## The transition and vacuum-form coefficient
 

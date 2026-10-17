@@ -9,6 +9,7 @@ from recursive_horizons.nsc_atlas_effective_vacuum import (
     classical_vacuum_calculation,
     conformal_anomaly_trace_projection,
     conformal_anomaly_scale_si,
+    conformal_interface_heat_coefficients,
     constant_curvature_trace_condition,
 )
 from recursive_horizons.nsc_atlas_nonlinear_bulk import bulk_operator
@@ -129,3 +130,56 @@ def test_unsourced_cap_curvature_from_independent_si_trace():
     geometric_curved_root = next(root for root in result['unsourced_X_roots'] if root != 0)
     assert sp.simplify(geometric_curved_root.subs(zeta, 8*sp.pi*G*hbar/(c**3*ell**2))
                        -si_curved_root*ell**2) == 0
+
+
+def test_conformal_interface_matches_gauss_and_reference_value():
+    started = time.process_time()
+    result = conformal_interface_heat_coefficients()
+    assert time.process_time()-started < 60
+    assert all(value == 0 for value in result['checks'].values())
+    k, H = sp.symbols('k H', positive=True)
+    b, h, m, x = sp.symbols('b h m x', positive=True)
+    d1, d2, d3 = sp.symbols('d1 d2 d3', real=True)
+    assert result['normal_dictionary'] == {
+        'U': k, 'L_sum': 3*k, 'S': k, 'D_over_mean_K': -2}
+    assert result['a2_integrand'] == 0
+    assert result['surface_polynomial'] == -4*k*(k**2+3*H**2)
+    assert result['surface_density'] == -k*(k**2+3*H**2)/(1440*sp.pi**2)
+    assert result['normalized_density_ell3'] == -b*(b**2+3*h**2)/(1440*sp.pi**2)
+    assert result['reference_normalized_density'] == -sp.Rational(7, 720)/sp.pi**2
+    # Generic diagonal cancellation, independent of the spherical eigenvalues.
+    trace_D, trace_D2 = d1+d2+d3, d1**2+d2**2+d3**2
+    generic_A1 = (-trace_D2*(3*k)-(k*trace_D)*trace_D+2*k*trace_D2
+                  +k*(trace_D**2+trace_D2))
+    assert sp.factor(generic_A1) == 0
+    # Actual quiet shell versus Q_plus-Q_minus, with 2M/R^3 on the time axis.
+    beta_plus = m/(b*x**2)-(b**2+h**2)*x/(2*b)
+    beta_minus = m/(b*x**2)+(b**2-h**2)*x/(2*b)
+    D_tau = -sp.diff(beta_plus+beta_minus, x)
+    D_angle = -(beta_plus+beta_minus)/x
+    trace_wall = D_tau+2*D_angle
+    assert sp.factor((b/2)*(trace_wall+D_tau)-(2*m/x**3+2*h**2)) == 0
+    assert sp.factor((b/2)*(trace_wall+D_angle)-(-m/x**3+2*h**2)) == 0
+
+
+def test_interface_coefficient_from_euler_boundary_term():
+    # Independent Euler boundary polynomial, Davis hep-th/0208205v3 (6)-(7),
+    # converted from inward to outward K. No transmittal heat coefficients enter it.
+    result = conformal_interface_heat_coefficients()
+    b, h, m, r = sp.symbols('b h m r', positive=True)
+    beta_minus = m/(b*r**2)+(b**2-h**2)*r/(2*b)
+    beta_plus = m/(b*r**2)-(b**2+h**2)*r/(2*b)
+    Kminus = sp.diag(sp.diff(beta_minus, r), beta_minus/r, beta_minus/r)
+    Kplus = sp.diag(sp.diff(beta_plus, r), beta_plus/r, beta_plus/r)
+
+    def J(K):
+        return (sp.trace(K)*sp.trace(K*K)-sp.Rational(2, 3)*sp.trace(K*K*K)
+                -sp.trace(K)**3/3)
+
+    # Unit flat four-ball: outward K=I, induced Einstein tensor=-I.
+    ball_density = 4*(J(sp.eye(3))+2*sp.trace(sp.eye(3)))
+    assert ball_density*(2*sp.pi**2) == 32*sp.pi**2
+    intrinsic_R = 6*h**2+sp.trace(Kminus)**2-sp.trace(Kminus*Kminus)
+    euler_surface = sp.factor(4*(J(Kminus)-J(Kplus)+b*intrinsic_R))
+    scalar_euler_anomaly = -euler_surface/(360*(4*sp.pi)**2)
+    assert sp.factor(scalar_euler_anomaly-result['normalized_density_ell3']) == 0

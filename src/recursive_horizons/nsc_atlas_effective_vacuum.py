@@ -323,6 +323,138 @@ def constant_curvature_trace_condition():
     }
 
 
+def _scalar_residue(expression):
+    if isinstance(expression, sp.MatrixBase):
+        return sp.factor(sum(entry**2 for entry in expression))
+    return sp.factor(expression)
+
+
+def conformal_interface_heat_coefficients():
+    """Formal f=1 transmittal density on the quiet pure-tension wall.
+
+    Gilkey-Kirsten-Vassilevich, hep-th/0101105v1 Theorems 2.3 and 7.1, are
+    imported. Their Riemannian coefficient polynomial is evaluated on this
+    candidate's Lorentzian contractions. That is not a global Lorentzian heat
+    kernel, a quantum state, or a Euclidean collar. The density is an
+    on-background interface invariant, not a volume Lambda and not evidence
+    that its off-shell metric variation reduces to a tension shift.
+    """
+    k, H = sp.symbols('k H', positive=True)
+    b, h, m, x = sp.symbols('b h m x', positive=True)
+    d1, d2, d3 = sp.symbols('d1 d2 d3', real=True)
+    n1, n2, n3 = sp.symbols('n1 n2 n3', real=True)
+    beta1, beta2, beta3 = sp.symbols('beta1 beta2 beta3', real=True)
+    tau_plus, tau_minus = sp.symbols('tau_plus tau_minus', real=True)
+    E_plus, E_minus = sp.symbols('E_plus E_minus', real=True)
+
+    def tr(matrix):
+        return sp.trace(matrix)
+
+    # Project normal n points cap -> exterior. Source inward forms are
+    # L_plus=-K_plus and L_minus=K_minus, so S=L_plus+L_minus=k I and
+    # D=L_plus-L_minus=-2B for the pure-tension jump [K]=-k I.
+    mean_K = sp.diag(beta1, beta2, beta3)
+    jump_scale = k/2
+    K_plus = mean_K-jump_scale*sp.eye(3)
+    K_minus = mean_K+jump_scale*sp.eye(3)
+    Q_difference = (tr(K_plus)*K_plus-K_plus*K_plus
+                    -tr(K_minus)*K_minus+K_minus*K_minus)
+    D_from_mean = -(K_plus+K_minus)
+    Q_from_dictionary = (k/2)*(tr(D_from_mean)*sp.eye(3)+D_from_mean)
+
+    difference = sp.diag(d1, d2, d3)
+    trace_D, trace_D2 = tr(difference), tr(difference*difference)
+    # Theorem 7.1 at f=1: b5=b6=-1, b7=2, b16=2, and b4=0.
+    A1 = (-trace_D2*(3*k)-(k*trace_D)*trace_D+2*(k*trace_D2)
+          +2*(k/2)*(trace_D**2+trace_D2))
+    normal_curvature = sp.diag(n1, n2, n3)
+    normal_cancellation = 2*tr(normal_curvature)*(3*k)-6*tr(normal_curvature*(k*sp.eye(3)))
+
+    trace_S, frobenius_S, cubic_S = 3*k, 3*k**2, 3*k**3
+    # Imported numerical coefficients in A2 and A3 of Theorem 7.1.
+    A2_shape = (sp.Rational(40, 21)*trace_S**3
+                -sp.Rational(4, 7)*frobenius_S*trace_S
+                +sp.Rational(68, 21)*cubic_S)
+    A3 = -60*k**3-18*k*trace_S**2-6*k*frobenius_S+60*k**2*trace_S
+    tau_sum, E_sum = tau_plus+tau_minus, E_plus+E_minus
+    conformal_endomorphism = {E_plus: -tau_plus/6, E_minus: -tau_minus/6}
+    curvature_coupling = (60*E_sum*trace_S+10*tau_sum*trace_S
+                          -30*k*tau_sum-180*k*E_sum).subs(conformal_endomorphism)
+
+    # Source convention: tr Q=-R+2 Ric(n,n). Cap Ric(n,n)=3H^2; exterior is Ricci flat.
+    trace_Q_sum = (-12*H**2+2*(3*H**2))+0
+    surface_polynomial = sp.factor(A2_shape+2*k*trace_Q_sum+A3)
+    surface_density = sp.factor(surface_polynomial/(360*(4*sp.pi)**2))
+    normalized_density = sp.factor(-b*(b**2+3*h**2)/(1440*sp.pi**2))
+    reference_density = sp.factor(normalized_density.subs({h: 1, b: 2}))
+
+    beta_plus = m/(b*x**2)-(b**2+h**2)*x/(2*b)
+    beta_minus = m/(b*x**2)+(b**2-h**2)*x/(2*b)
+    K_plus_tau, K_plus_angle = sp.diff(beta_plus, x), beta_plus/x
+    K_minus_tau, K_minus_angle = sp.diff(beta_minus, x), beta_minus/x
+    D_tau = -K_plus_tau-K_minus_tau
+    D_angle = -K_plus_angle-K_minus_angle
+    trace_D_wall = D_tau+2*D_angle
+    Q_tau = (b/2)*(trace_D_wall+D_tau)
+    Q_angle = (b/2)*(trace_D_wall+D_angle)
+    # Spherical contractions: Q_plus=diag(2M/R^3,-M/R^3,-M/R^3), Q_minus=-2H^2 I.
+    observed_tau = 2*m/x**3+2*h**2
+    observed_angle = -m/x**3+2*h**2
+
+    checks = {
+        'a2_cancels': sp.factor((3*k)/3-k),
+        'dictionary_identifies_D_with_mean_K': _scalar_residue(D_from_mean+2*mean_K),
+        'gauss_Qdiff_matches_dictionary': _scalar_residue(Q_difference-Q_from_dictionary),
+        'A1_cancels_for_generic_diagonal_D': sp.factor(A1),
+        'normal_contractions_cancel_for_generic_N': sp.factor(normal_cancellation),
+        'conformal_tau_and_E_monomials_cancel': sp.factor(curvature_coupling),
+        'imported_A2_shape_is_56_k3': sp.factor(A2_shape-56*k**3),
+        'imported_A3_is_minus_60_k3': sp.factor(A3+60*k**3),
+        'cap_trace_Q_is_minus_6_H2': sp.factor(trace_Q_sum+6*H**2),
+        'full_surface_polynomial': sp.factor(surface_polynomial+4*k*(k**2+3*H**2)),
+        'density_prefactor': sp.factor(surface_density+k*(k**2+3*H**2)/(1440*sp.pi**2)),
+        'normalized_density': sp.factor(normalized_density-surface_density.subs({k: b, H: h})),
+        'reference_density': sp.factor(reference_density+sp.Rational(7, 720)/sp.pi**2),
+        'spherical_S_tau': sp.factor(-K_plus_tau+K_minus_tau-b),
+        'spherical_S_angle': sp.factor(-K_plus_angle+K_minus_angle-b),
+        'spherical_Qdiff_tau': sp.factor(Q_tau-observed_tau),
+        'spherical_Qdiff_angle': sp.factor(Q_angle-observed_angle),
+    }
+    if any(value != 0 for value in checks.values()):
+        failed = [name for name, value in checks.items() if value != 0]
+        raise ArithmeticError('conformal interface heat coefficient failed: '+', '.join(failed))
+    return {
+        'surface_polynomial': surface_polynomial,
+        'surface_density': surface_density,
+        'normalized_density_ell3': normalized_density,
+        'reference_normalized_density': reference_density,
+        'a2_integrand': sp.Integer(0),
+        'normal_dictionary': {
+            'U': k, 'L_sum': 3*k, 'S': k, 'D_over_mean_K': -2,
+        },
+        'quiet_dimensionless_eigenvalues': {
+            'K_plus_tau': sp.factor(K_plus_tau),
+            'K_plus_angle': sp.factor(K_plus_angle),
+            'K_minus_tau': sp.factor(K_minus_tau),
+            'K_minus_angle': sp.factor(K_minus_angle),
+            'D_tau': sp.factor(D_tau),
+            'D_angle': sp.factor(D_angle),
+        },
+        'imported_assumptions': {
+            'theorem': 'hep-th/0101105v1 Theorems 2.3 and 7.1',
+            'a4_prefactor': '(4*pi)^(-2)/360',
+            'A1_coefficients': {'b4': 0, 'b5': -1, 'b6': -1, 'b7': 2, 'b16': 2},
+            'evaluation': 'formal Lorentzian contractions of the Riemannian polynomial',
+        },
+        'scope': (
+            'On-background interface heat coefficient. Not a volume Lambda, '
+            'global Lorentzian heat kernel, quantum state, Euclidean continuation, '
+            'or off-shell tension shift.'
+        ),
+        'checks': checks,
+    }
+
+
 if __name__ == '__main__':
     calculation = classical_vacuum_calculation()
     for name, value in calculation.items():
@@ -352,3 +484,8 @@ if __name__ == '__main__':
     print('With supplied Lambda0=0, possible (H*ell)^2:', condition['unsourced_X_roots'])
     print('Nonzero root H^2*l_P^2:', condition['unsourced_curved_H2_planck_length2'])
     print('The nonzero root lies outside small-curvature semiclassical control; no full solution is inferred.')
+    interface = conformal_interface_heat_coefficients()
+    print('Interface surface polynomial:', interface['surface_polynomial'])
+    print('Normalized interface density * ell**3:', interface['normalized_density_ell3'])
+    print('Reference h=1, b=2:', interface['reference_normalized_density'])
+    print(interface['scope'])
