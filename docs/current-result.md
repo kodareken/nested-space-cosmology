@@ -12,6 +12,9 @@ stopped after 419 accepted steps at `x=0.4333498664647946`, before the
 `0.4815042082576364` endpoint. Its forward/adjoint mass-gradient discrepancy
 exceeded the existing tolerance. The positive metric certificate remained
 above `0.7606`. This is an incomplete numerical calculation.
+The [middle receipt](../results/summaries/nsc-atlas-fixed-endpoint-level1-v2.json)
+also stops on that gradient check, after 731 accepted steps at
+`x=0.4332475313818818`. Neither reaches the endpoint.
 
 The [admitted replay and one-state diagnosis](prior-art-and-open-claim.md#p001-full-endpoint-fixed-grid-comparison-17-october-2026)
 will distinguish radial ODE error from adjoint quadrature error while

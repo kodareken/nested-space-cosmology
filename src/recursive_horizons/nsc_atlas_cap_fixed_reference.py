@@ -17,7 +17,7 @@ from .nsc_atlas_cap_fixed_basis import FixedCapBasis,exact_number
 from .nsc_atlas_cap_fixed_bound import fixed_metric_bound,fixed_background_metric_bound
 from .nsc_atlas_cap_background_jets import RetainedCapBackground,SMALL_Z
 from .nsc_atlas_cap_geometric_reference import _positive_gap
-from .nsc_atlas_cap_radial_reference import reference_potential_pair
+from .nsc_atlas_cap_potential_pair import reference_potential_pair
 from .nsc_atlas_cap_variational_reference import _radial_variations,GRADIENT_ABSOLUTE_TOLERANCE
 from .nsc_atlas_polar_cap import _scalar,_vector
 

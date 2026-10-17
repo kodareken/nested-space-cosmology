@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+  "current_receipt_commit_parent": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 360557,
-      "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
-      "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+      "bytes": 360757,
+      "change": "Preserve the middle-grid stop; isolate scalar arithmetic to keep the original radial reference byte-authenticated.",
+      "changed_from_commit": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b2d42284fd3c7c86f525af3be3db5fe296cbd93c4c75f72b89883d07274950c9"
+      "sha256": "fecdd0976ef2a0b014a6eb42cbd5d65a0b6a0f62bc426a59a9e5d971650c470e"
     },
     {
       "bytes": 18915,
@@ -29695,6 +29695,14 @@
       "sha256": "e8935932d306716261d1af25871db757cb52df30d71c7adf98dfb99f568ff1bb"
     },
     {
+      "bytes": 30148,
+      "change": "Preserve the middle-grid stop; isolate scalar arithmetic to keep the original radial reference byte-authenticated.",
+      "changed_from_commit": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v2.json",
+      "retention_reason": "P001 radial arithmetic and preserved endpoint diagnostics.",
+      "sha256": "1ed6874ba6972b5db543233a470eeeb3c4684959b922613a5c8961086c62f317"
+    },
+    {
       "bytes": 14872,
       "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split.",
       "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
@@ -32888,12 +32896,12 @@
       "sha256": "b46a1549b69dcc64b5018e43c005441ade48c4c0552e3ad5235b68e4f6ed8300"
     },
     {
-      "bytes": 20074,
-      "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
-      "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+      "bytes": 20072,
+      "change": "Preserve the middle-grid stop; isolate scalar arithmetic to keep the original radial reference byte-authenticated.",
+      "changed_from_commit": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py",
       "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
-      "sha256": "f94b6df2140052e98a76a920ed34e30b041d3d5c67a96e68763b97a39dd0a781"
+      "sha256": "f551dbd69f804f002a56401fe253d3112e45cd3574ed9324625f8451acd0b387"
     },
     {
       "bytes": 7466,
@@ -32944,6 +32952,14 @@
       "sha256": "35d7273d3ffda6ecb441b0280c07dbd794992950ba609674bd2be1e280b3fb0e"
     },
     {
+      "bytes": 1340,
+      "change": "Preserve the middle-grid stop; isolate scalar arithmetic to keep the original radial reference byte-authenticated.",
+      "changed_from_commit": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
+      "path": "src/recursive_horizons/nsc_atlas_cap_potential_pair.py",
+      "retention_reason": "P001 radial arithmetic and preserved endpoint diagnostics.",
+      "sha256": "23fafe8fef65ce88808455a7f6fe75418b5dae8ce68a6dc9dfec2bd20db45d56"
+    },
+    {
       "bytes": 5967,
       "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
       "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
@@ -32966,12 +32982,12 @@
       "sha256": "d1b5aafdc9de16bc1e3e1c39d46b620c7eb6c4b183c9a8117bacee81efef9d38"
     },
     {
-      "bytes": 8166,
-      "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
-      "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+      "bytes": 7002,
+      "change": "Preserve the middle-grid stop; isolate scalar arithmetic to keep the original radial reference byte-authenticated.",
+      "changed_from_commit": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
       "path": "src/recursive_horizons/nsc_atlas_cap_radial_reference.py",
       "retention_reason": "Smooth-potential diagnostic reference, moving affine radial maps and independent manufactured controls.",
-      "sha256": "9f60df1795c95e6e6e26d36922ed31ff364a9ac93a9b1a931629752c7a213d80"
+      "sha256": "fdf3a9dc430709e2a29f944e5bba6c417f96fd75104d67ff3de1263d4ec9f5ab"
     },
     {
       "bytes": 20242,
@@ -37074,12 +37090,12 @@
       "sha256": "64411fbde8c931ce4a6012e4d26062052d5ec9e6aa6044823fda4604c7a1cf99"
     },
     {
-      "bytes": 1617,
-      "change": "Preserve the incomplete coarse endpoint run and prepare a bounded same-state radial diagnosis without weakening the gradient check.",
-      "changed_from_commit": "35cae18df952441c897bcfd93f41cbd69bb7c517",
+      "bytes": 1667,
+      "change": "Preserve the middle-grid stop; isolate scalar arithmetic to keep the original radial reference byte-authenticated.",
+      "changed_from_commit": "eb38441f5cfdceefd2d0c8d270e00c11d54ee6b2",
       "path": "tests/test_nsc_atlas_scalar_potential_pair.py",
       "retention_reason": "Full P001 evolution, retained failure evidence and bounded radial diagnosis.",
-      "sha256": "58a0a4f150e339a8f9c900d4072a974ce7a6498017837ca21e23b0012137b61b"
+      "sha256": "9c914e2c93a215931a42ff4ec8196c2a4e625541a755e07711d131b30245df52"
     },
     {
       "bytes": 6166,

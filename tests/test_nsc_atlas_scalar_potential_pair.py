@@ -3,9 +3,8 @@ import numpy as np
 import pytest
 
 from control_budget import ControlBudget
-from recursive_horizons.nsc_atlas_cap_radial_reference import (
-    reference_potential, reference_potential_pair,
-)
+from recursive_horizons.nsc_atlas_cap_radial_reference import reference_potential
+from recursive_horizons.nsc_atlas_cap_potential_pair import reference_potential_pair
 
 CONTROLS = ControlBudget(maximum_evaluations=1_000_000, cpu_seconds=15.)
 
