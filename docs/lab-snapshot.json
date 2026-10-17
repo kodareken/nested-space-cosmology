@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "d210ab6302ac1314838c5a05c80e96a6589b3eb6",
+  "current_receipt_commit_parent": "b681ec22a535610c40b7d6c43882c9cc2743ef75",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 363830,
+      "bytes": 364177,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "3906688267ef33aeca7297ad905e6f7357b6f4db",
+      "changed_from_commit": "b681ec22a535610c40b7d6c43882c9cc2743ef75",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a36c05d3b04a09dfb88e9eb6ccf189ce3f4fb94b3f4042f418b35a216a3d1ea2"
+      "sha256": "2d20fc786e0559ab2436fd1324c1c150b930c2795fb6f4318700f22e5d71a1ad"
     },
     {
       "bytes": 18915,
@@ -11426,12 +11426,12 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 472640,
+      "bytes": 473217,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "d210ab6302ac1314838c5a05c80e96a6589b3eb6",
+      "changed_from_commit": "b681ec22a535610c40b7d6c43882c9cc2743ef75",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "6bd10e2070a170a4fbb41af9a086dc528838bf7d34f554cd786b1aa6ee29a009"
+      "sha256": "026b3925b08fc0e0ede39951dff4b0dca6669f32a03c7cbbcc8b55710da1f1a4"
     },
     {
       "bytes": 6705,
@@ -11442,10 +11442,10 @@
     {
       "bytes": 147258,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "3906688267ef33aeca7297ad905e6f7357b6f4db",
+      "changed_from_commit": "b681ec22a535610c40b7d6c43882c9cc2743ef75",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "972494f8a14fe213ceeb75d30996efb373bac90b297489fdafbe12c1d2cb2d09"
+      "sha256": "aa242782bd54c68d44009cef80ded08f97df5d9d6e2001880351f8b416220859"
     },
     {
       "bytes": 18356,
@@ -29807,12 +29807,28 @@
       "sha256": "10e60df0587fdbe7c4000b9467214b2f1987ba12a6a5af04c3792ca6f20705cc"
     },
     {
+      "bytes": 14708,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "b681ec22a535610c40b7d6c43882c9cc2743ef75",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-coarse-v2.json",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "e0038b4aeb6765fe9edd5a61b9b2076fdd4cf8eb849a76de458f32f24ee92617"
+    },
+    {
       "bytes": 13163,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
       "changed_from_commit": "d210ab6302ac1314838c5a05c80e96a6589b3eb6",
       "path": "results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v1.json",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
       "sha256": "94dd408e832ea6d9107acbe30f7b3119649c59e4d1f6a04c8c85990b0d783996"
+    },
+    {
+      "bytes": 14716,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "b681ec22a535610c40b7d6c43882c9cc2743ef75",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v2.json",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "77984be5408714475e199623e3ae715151aa27e17cfd3209d1db6b5fb5fff4eb"
     },
     {
       "bytes": 16558,

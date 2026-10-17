@@ -53,8 +53,13 @@ use the neighbouring piece at a panel's Runge--Kutta endpoint.
 
 The v4 method selects the panel's own polynomial at that same coordinate,
 with the same tolerances and guard. It supersedes the provisional
-quarter-panel restriction. Confirmation through the coupled interface at
-both saved failure states precedes the full executions.
+quarter-panel restriction. The corrected public-interface confirmations
+pass at both saved failure states:
+[coarse](../results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-coarse-v2.json)
+discrepancies are `5.3717e-12` / `6.7075e-12` with 32/64 adjoint points;
+[middle](../results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v2.json)
+discrepancies are `1.8758e-12` / `1.5632e-12`. The three full v4
+executions now use this common method.
 The old fine v3 execution was [interrupted](../results/summaries/nsc-atlas-fixed-endpoint-level2-v3-interruption.json)
 to use a common corrected method. Thirty-eight focused controls now pass,
 including the explicit knot-side evaluation and coupled-history fields.

@@ -113,6 +113,15 @@ no post-arrival central knot claim is added. After the quiet-prefix and
 coupled-clock controls pass, admit one corrected 32/64-point confirmation
 per saved state under the same 60-second / 40-million-value limits.
 
+**Confirmed implementation:** the corrected public-interface checks pass
+at both saved states with no coordinate shift or radial step cap. Coarse
+32/64-point discrepancies are `5.3717e-12` / `6.7075e-12` in 9.359375 CPU
+seconds and 7,491,798 charged values; middle discrepancies are `1.8758e-12`
+/ `1.5632e-12` in 9.25 CPU seconds and 7,560,278 charged values. The
+physical mass/flux gaps are retained. Start the three predeclared v4
+evolutions with this common polynomial-side method, unchanged physical
+grids, time schedules, tolerances, gradient guard and resource limits.
+
 Douglas has prioritized the full finite-amplitude evolution and a physically
 scaled P001 observable. Opening-phase robustness work is paused. Reuse the
 existing constrained fixed-cap mass/gradient calculation, simultaneous

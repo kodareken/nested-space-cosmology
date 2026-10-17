@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 363830,
+      "bytes": 364177,
       "path": "docs/current-result.md",
-      "sha256": "a36c05d3b04a09dfb88e9eb6ccf189ce3f4fb94b3f4042f418b35a216a3d1ea2"
+      "sha256": "2d20fc786e0559ab2436fd1324c1c150b930c2795fb6f4318700f22e5d71a1ad"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2345267,
+      "bytes": 2346253,
       "path": "docs/lab-snapshot.json",
-      "sha256": "28b4d18e314cdf3ce1b4037d8c5a1d11010c8e80507adc54f9da544e1ba7ec3a"
+      "sha256": "30b85ead1d4cc1d230af46f82026cce1a2d04ddf21d6c223ab53d08bf686cbd6"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2201,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 472640,
+      "bytes": 473217,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "6bd10e2070a170a4fbb41af9a086dc528838bf7d34f554cd786b1aa6ee29a009"
+      "sha256": "026b3925b08fc0e0ede39951dff4b0dca6669f32a03c7cbbcc8b55710da1f1a4"
     },
     {
       "bytes": 6705,
@@ -2218,7 +2218,7 @@
     {
       "bytes": 147258,
       "path": "docs/reproducing.md",
-      "sha256": "972494f8a14fe213ceeb75d30996efb373bac90b297489fdafbe12c1d2cb2d09"
+      "sha256": "aa242782bd54c68d44009cef80ded08f97df5d9d6e2001880351f8b416220859"
     },
     {
       "bytes": 31710,
@@ -14696,9 +14696,19 @@
       "sha256": "10e60df0587fdbe7c4000b9467214b2f1987ba12a6a5af04c3792ca6f20705cc"
     },
     {
+      "bytes": 14708,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-coarse-v2.json",
+      "sha256": "e0038b4aeb6765fe9edd5a61b9b2076fdd4cf8eb849a76de458f32f24ee92617"
+    },
+    {
       "bytes": 13163,
       "path": "results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v1.json",
       "sha256": "94dd408e832ea6d9107acbe30f7b3119649c59e4d1f6a04c8c85990b0d783996"
+    },
+    {
+      "bytes": 14716,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v2.json",
+      "sha256": "77984be5408714475e199623e3ae715151aa27e17cfd3209d1db6b5fb5fff4eb"
     },
     {
       "bytes": 16558,
@@ -21401,7 +21411,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "28b4d18e314cdf3ce1b4037d8c5a1d11010c8e80507adc54f9da544e1ba7ec3a",
+  "lab_snapshot_sha256": "30b85ead1d4cc1d230af46f82026cce1a2d04ddf21d6c223ab53d08bf686cbd6",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

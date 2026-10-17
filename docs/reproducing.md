@@ -916,8 +916,8 @@ the same authenticated local failure seeds, with no trajectory replay:
 ```sh
 python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --one-sided-panel-check --output results/summaries/nsc-atlas-fixed-endpoint-radial-sided-diagnostic-v1.json
 python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json --one-sided-panel-check --output results/summaries/nsc-atlas-fixed-endpoint-radial-middle-sided-diagnostic-v1.json
-python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --confirm-panel-polynomials --output results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-coarse-v1.json
-python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json --confirm-panel-polynomials --output results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --confirm-panel-polynomials --output results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-coarse-v2.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json --confirm-panel-polynomials --output results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v2.json
 ```
 
 The diagnosis moves only numerical endpoint samples inward by a bounded
