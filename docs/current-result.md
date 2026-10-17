@@ -15,9 +15,12 @@ calculation, not a cosmological Lambda. The Hamiltonian residual is below
 outward extension shows that this localized correction vanishes in the AE
 limit, and repeating unchanged bodies with a time-symmetric vacuum connector
 cannot meet the vacuum condition while retaining their declared domains.
-The next needed parent inputs are a physical normal clock, proper volume
-and two extrinsic-curvature moments; no new formation/stability work is needed
-to state that missing connection.
+Completing that parent average needs a physical normal clock, proper volume
+and two extrinsic-curvature moments. Connecting it to a local interior Lambda
+additionally needs an observer reduction: the existing isolated causal map
+does not let the parent volume on this slice act as the centre's causal
+averaging domain. No new formation/stability work is needed to state these
+missing connections.
 
 The [effective Lambda calculation](schur-memory.md#step-7-the-current-candidates-first-vacuum-projection)
 reuses the current candidate's exact improved-stress trace. It gives

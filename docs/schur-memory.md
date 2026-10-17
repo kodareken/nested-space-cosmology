@@ -144,6 +144,17 @@ necessary Step-5 input to Step 7 without requiring a new formation or
 stability campaign. A common-parent development and tensor/observer
 interpretation remain necessary before a cosmological Lambda is predicted.
 
+For the local interior target there is a further, already established
+[observer boundary](nsc-atlas-causal-classification.md#observer-access-preserve-direction-and-the-emission-event).
+In the isolated reference an inward wall signal has finite central reception
+only for $HR_w<1$; this averaging slice uses $HR_w=1.5$. Its parent volume
+is not a causal coarse-graining domain for that central observer. Parent
+moments would complete the parent scalar average, not identify a new central
+vacuum term. That identification requires a physical reduction tied to the
+retained observer and its compatible earlier data or quantum state. Global
+causal exclusions from the isolated reference are not assigned to the
+unevaluated many-body development.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e1c2027356fee463632f7f7dba23256cd782b7ce",
+  "current_receipt_commit_parent": "9b7c120f5a1a7ad5e6037264504d4a78f8f3a7f8",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 370890,
+      "bytes": 371101,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "e1c2027356fee463632f7f7dba23256cd782b7ce",
+      "changed_from_commit": "9b7c120f5a1a7ad5e6037264504d4a78f8f3a7f8",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "af38ad994d65810e22fe4acdb93f0ab4efa62249cf141fc08959d906913be7c5"
+      "sha256": "5ff55c94a90556724b5e5df78e6601355fa073b886d7d7b9824cd260566c2999"
     },
     {
       "bytes": 18915,
@@ -11459,12 +11459,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 33393,
+      "bytes": 34136,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "e1c2027356fee463632f7f7dba23256cd782b7ce",
+      "changed_from_commit": "9b7c120f5a1a7ad5e6037264504d4a78f8f3a7f8",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "715d14a9b429d5d8ed27f4527eb2a218a6af438674f18be188c3e91e0219b3e9"
+      "sha256": "8cfa491c35d48b23dd38977864be66e61775305668cf687d895e1a6ae17488df"
     },
     {
       "bytes": 537091,
