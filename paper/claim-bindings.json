@@ -183,6 +183,11 @@
       "section": "13.20",
       "status": "derived",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
+    },
+    "atlas-onset-geometric-signs": {
+      "section": "13.21",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-finite-amplitude.md"
     }
   },
   "findings": [

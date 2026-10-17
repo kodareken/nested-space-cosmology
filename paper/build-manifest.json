@@ -1,10 +1,10 @@
 {
-  "bytes": 2896847,
+  "bytes": 2961817,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "377e2f5e257805f1bb77cc4766f6b225730fb572021f255e2fa25d843cc19a55",
+  "metadata_sha256": "e6a466673c3da6c2e51c60e22239ed18b2d00952eb16cb3c29622b12ba7904e3",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 40,
-  "pdf_sha256": "ae9017309752fe796566b3105d9ae66c669c80b57a14e245c3386449f79cb88d",
+  "pages": 41,
+  "pdf_sha256": "1631ee26f2df240ba4c440e733cac373d3440fd236a7f2ffc33a265aed255603",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -368,8 +368,28 @@
       "sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d"
     },
     {
+      "path": "results/summaries/nsc-atlas-cap-departure-bound-v1.json",
+      "sha256": "61190f1d3029ccda920c0a6783d9e9d682408e43a3078a816672a182502e44d2"
+    },
+    {
       "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-geometric-departure-bound-v1.json",
+      "sha256": "1c6fab9b40ba7fb623dffca80ec8e06b859531ccec3497361649269e580afd62"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-geometric-remainder-bound-v2.json",
+      "sha256": "b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-jordan-radius-bound-v1.json",
+      "sha256": "2a4aa2c18664e175ea9bf94f21bf0a0c881e9c41bce14780f4fef06930d5be0b"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-onset-geometry-bound-v1.json",
+      "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
     {
       "path": "results/summaries/nsc-atlas-reference-gauge-bound-v1.json",
@@ -380,8 +400,16 @@
       "sha256": "b1d29d8a2c78518889706adbb8ab3293edda596725949347d2830c187f9ffde9"
     },
     {
+      "path": "results/summaries/nsc-atlas-scalar-departure-bound-v1.json",
+      "sha256": "fb52782856689b88ce2d6bee893085352eda9c380372ec178d2aa670196ef7f5"
+    },
+    {
       "path": "results/summaries/nsc-atlas-source-forcing-bound-v1.json",
       "sha256": "2ccf4ad7326291b79500f4d78a0f858907a80901c74b771f8b22fd8cb735c611"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-source-remainder-bound-v1.json",
+      "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
       "path": "scripts/build_paper.py",
@@ -389,6 +417,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "bdf445978584447e7db941058a6f060eb6184221bc2e17885f7554412ddb8270",
-  "version": "working-2026-10-17.2"
+  "source_sha256": "a9fdc637f369c3c97dfc31173028f239894dc4e3bf65506566767edd5b544efd",
+  "version": "working-2026-10-17.3"
 }

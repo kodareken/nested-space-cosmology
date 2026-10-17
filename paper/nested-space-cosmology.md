@@ -82,9 +82,11 @@ now establish a compatible finite-amplitude cap, wall and exterior on a
 short original source cell, uniformly over a nonzero coupling interval.
 Certified departure bounds apply to that solution. The regular core remains
 quiet there. A common-domain parameter argument gives a quadratic amplitude
-remainder for the normalized state, wall radius and anchored clock, with a
-finite unevaluated constant. Later central arrival and numerical
-approximation error remain separate.
+remainder. Explicit uniform geometric bounds now prove negative sourced
+corrections to both the material wall radius and the centre-anchored clock
+at the original onset endpoint, throughout the admitted positive-amplitude
+range. The exact frame conversion and source-label event shift are retained.
+Later central arrival and numerical approximation error remain separate.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1966,8 +1968,8 @@ $v_1=(\mathcal U_1,1)$, including variation of the explicit parameter.
 The known second-order forcing is
 
 $$
-2D\sigma[v_1],\partial_\eta w_1
-+D^2\sigma[v_1,v_1],\partial_\eta w
+2D\sigma[v_1]\,\partial_\eta w_1
++D^2\sigma[v_1,v_1]\,\partial_\eta w
 +D^2\mathcal R[v_1,v_1].
 $$
 
@@ -1995,15 +1997,133 @@ $$
 \leq \frac{1}{2} M_{2,O}\alpha^2.}
 $$
 
-This is an analytic quadratic remainder on the onset domain. The constant
-is finite but has not been numerically evaluated. Identifying $O_1(0)$
-with an older computed coefficient requires matching its source, gauge
-and initial data; numerical approximation error then needs its own bound.
+This is an analytic quadratic remainder on the onset domain. The general
+state constant is finite; Section 13.21 supplies explicit remainder bounds
+for selected geometric outputs by a positive comparison. It also identifies
+their first coefficients by matching the source, gauge and quiet initial
+data. Errors in the older numerical histories require their own bounds.
 The normalized fields have the stated amplitude derivatives. The physical
 scalar $\Psi=\sqrt{\alpha}f$ is not asserted to be twice differentiable in
 $\alpha$ at zero. The quiet core, original source and coupling interval are
 unchanged. Continuation through central arrival and an error bound for the
 observer waveform remain separate steps.
+
+### 13.21. Uniform geometric remainders and signed endpoint response
+
+<!-- nsc-claim:atlas-onset-geometric-signs -->
+
+Evidence: [first geometric coefficients](../results/summaries/nsc-atlas-onset-geometry-bound-v1.json),
+[geometric](../results/summaries/nsc-atlas-geometric-departure-bound-v1.json),
+[canonical scalar](../results/summaries/nsc-atlas-scalar-departure-bound-v1.json)
+and [normalized cap](../results/summaries/nsc-atlas-cap-departure-bound-v1.json)
+first-difference bounds, [quadratic source remainders](../results/summaries/nsc-atlas-source-remainder-bound-v1.json),
+[complete geometric remainder](../results/summaries/nsc-atlas-geometric-remainder-bound-v2.json),
+and [Jordan material-radius conversion](../results/summaries/nsc-atlas-jordan-radius-bound-v1.json).
+The [comparison and frame derivation](../docs/nsc-atlas-finite-amplitude.md#uniform-quadratic-geometric-comparison-on-the-original-onset)
+connects these compact certificates.
+
+Keep exactly the source cell, action, quiet data and coupling interval of
+Section 13.19. All quantities here are dimensionless. The outputs are the
+Einstein areal radius $R_E$, the material Jordan areal radius $R_J$, and
+the wall's centre-anchored polar-slice label $T_W$. Their first coefficients
+are the actual derivatives of the constructed solution at $\alpha=0$.
+They coincide with the continuum source, mass, lapse, wall and clock
+functionals after the source-label event shift is included. This
+identification does not assign an error bound to a saved numerical history.
+
+**Uniform comparison.** For each retained geometric component $G$, the
+calculation supplies an explicit constant $C_G$ such that
+
+$$
+\|G(\alpha)-G(0)-\alpha G_1(0)\|_{C^0}
+\leq\alpha^2 C_G.
+$$
+
+The radius estimate covers the retained exterior, including the wall;
+the clock and material-radius estimates cover their wall histories on this
+cell. The source supplies four quadratic remainders. Uniform first
+differences of the canonical scalar and normalized cap mass and lapse
+bound the remaining nonlinear terms. Half second derivatives of the exact
+bulk and signed wall maps are enclosed over the full certified state box,
+with the radius-kernel cross term and scalar kinetic product retained.
+
+After division by $\alpha^2$, the three coupled geometric bounds obey
+$y\leq My+f_2$, with the same positive matrix as the first-difference
+comparison. Its weighted norm is below $0.146$, so
+$y\leq(I-M)^{-1}f_2$. The remaining outputs follow from its dependent rows.
+This uses one rational three-by-three solve and interval algebra, with no
+new field evolution or grid scan.
+
+**Material frame and event identification.** With the normalized canonical
+field $f=X/R_E$ of Section 13.19, the exact conversion is
+
+$$
+R_J=R_E\cosh\!\left(\sqrt{\alpha/6}\,f\right),\qquad
+\mathcal F=\operatorname{sech}^2\!\left(\sqrt{\alpha/6}\,f\right)>0.
+$$
+
+The invariant Jordan trace $c=R_E f\operatorname{sinhc}(\sqrt{\alpha/6}\,f)$
+is a different variable at finite amplitude. For a fixed target $\alpha$,
+join $(0,R_0,X_0)$ to $(\alpha,R_\alpha,X_\alpha)$ by an affine segment.
+Its directions are the actual difference quotients, bounded by the
+certified first-difference constants. At the expansion base the frame map
+has state partials one and zero, and explicit alpha derivative
+$X_0^2/(12R_0)$. Therefore the Einstein radius remainder enters with
+coefficient one; the frame half-Hessian adds at most
+$1.604501\times10^{-23}$ to $C_{R_E}$. The conformal factor has certified
+lower bound $0.9999999999999999$ on the whole comparison.
+
+The first Jordan coefficient at fixed source label is
+
+$$
+R_{J,1}|_x=\rho+2a_{\mathrm{ref}}v(v-\beta_+)\eta_{\mathrm{emb}},
+\qquad a_{\mathrm{ref}}=4/5.
+$$
+
+Here $\rho$ is the Jordan radius coefficient at fixed wall proper time,
+$v$ is the reference proper-time radial velocity, and
+$\eta_{\mathrm{emb}}$ is the exterior embedding coefficient defined by
+$V_W=V_0(1+\alpha\eta_{\mathrm{emb}})+O(\alpha^2)$.
+Its interval includes both signs and is retained in the conversion;
+$\eta_{\mathrm{emb}}$ is distinct from the cap chart coordinate of Section 13.20.
+
+**Endpoint result.** The following are outward-rounded bounds. The last
+column gives the shift from the vacuum reference at $x_R$ and
+$\alpha=\alpha_{\max}$, divided by $10^{-18}$.
+
+| Output | Upper bound for $C_G$ | Endpoint shift / $10^{-18}$ |
+| --- | ---: | --- |
+| Einstein wall radius $R_E$ | $6.067430\times10^{-17}$ | $[-2.138954,-1.008091]$ |
+| Material wall radius $R_J$ | $6.067431\times10^{-17}$ | $[-1.235768,-0.09856682]$ |
+| Anchored wall clock $T_W$ | $1.145597\times10^{-15}$ | $[-2.635641,-1.410894]$ |
+
+For a first-coefficient upper endpoint $U_G<0$, the criterion
+$\alpha_{\max}C_G<-U_G$ makes the sign strict at every positive admitted
+amplitude. The exact ratio is below $1.038\times10^{-5}$ for the material
+radius and $1.369\times10^{-5}$ for the clock. Hence
+
+$$
+R_J(\alpha,x_R)-R_J(0,x_R)<0,\qquad
+T_W(\alpha,x_R)-T_W(0,x_R)<0
+\quad(0<\alpha\leq\alpha_{\max}).
+$$
+
+The clock retains the same Einstein-polar slicing and equals physical
+Jordan central proper time on the quiet core. Its value assigned to the
+wall event is neither wall proper time nor the arrival time of a received
+central signal. The reference wall is expanding: these inequalities are
+sourced differences at the same input label, not absolute contraction or
+an evaporation law. The preparation is still prescribed characteristic
+data; no physical emitter, SI scale or observational calibration is selected.
+
+The geometric and material-frame certificates retain exact rational
+endpoints, producer commits and input hashes. Seventeen targeted controls,
+separate rational audits and independent Grok derivation/code reviews
+check the identities, finite boxes, matrix closure, frame conversion and
+strict inequalities. The audits authenticate the saved results without
+rerunning a field solution. Continuation to central arrival, numerical
+trajectory error, preparation selection and observational comparison
+retain their separate requirements.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -2349,10 +2469,12 @@ is 0.524% of the new peak. The slightly larger incoming-constraint maximum
 and worse, width-sensitive wall-curvature estimates keep local accuracy
 unresolved. Separately, Section 13.19 establishes a finite-amplitude onset
 solution and its certified departure bounds. Section 13.20 establishes
-its first and second amplitude derivatives and an analytic quadratic
-remainder with a finite unevaluated constant. Evaluating that bound,
-matching computed coefficients, continuing through central arrival and
-controlling the observer waveform remain open.
+its first and second amplitude derivatives. Section 13.21 identifies the
+first geometric coefficients, supplies uniform quadratic remainders and
+proves negative material-radius and anchored-clock corrections at the onset
+endpoint throughout the admitted positive-amplitude range. Errors in the
+older numerical histories, continuation through central arrival and the
+observer waveform remain separate open questions.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -2389,6 +2511,8 @@ and renders their relationships without launching a new physics calculation.
 | Nonlinear coupled pre-arrival window | [Exact model and characteristic background](../docs/nsc-atlas-finite-amplitude.md); [six-case result](../results/development/nsc-atlas-background-evolution-v1/background.json) and [manifest](../results/development/nsc-atlas-background-evolution-v1/manifest.json); scalar time sensitivity and pointwise constraints remain unresolved |
 | Fixed-input SSPRK3 temporal refinement | [Profile-knot and chain identities](../docs/nsc-atlas-finite-amplitude.md); [128/256 histories](../results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json), [512 comparison](../results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json) and [manifest](../results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json); finite temporal differences, without an error enclosure |
 | Same-grid exterior derivative comparison | [Common derivative and independent diagnostics](../docs/nsc-atlas-finite-amplitude.md#a-common-second-order-departure-derivative); [64-cell baseline](../results/development/nsc-atlas-spatial-refinement-v1/spatial.json), [operator comparison](../results/development/nsc-atlas-operator-comparison-v1/operator.json) and [manifest](../results/development/nsc-atlas-operator-comparison-v1/manifest.json); smaller average residuals and wall kinematic mismatch, with unresolved constraint maxima and wall curvature |
+| Finite-amplitude onset solution and parameter dependence | [Construction and continuation](../docs/nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly), [parameter theorem](../docs/nsc-atlas-finite-amplitude.md#second-amplitude-derivative-and-quadratic-onset-remainder); [original source bound](../results/summaries/nsc-atlas-source-forcing-bound-v1.json) and [strict tube](../results/summaries/nsc-atlas-coupled-tube-bound-v1.json) |
+| Uniform geometric remainder and material-radius sign | [Full comparison](../docs/nsc-atlas-finite-amplitude.md#certified-finite-amplitude-endpoint-signs), [frame and clock interpretation](../docs/nsc-atlas-finite-amplitude.md#certified-jordan-radius-endpoint-comparison); [geometric certificate](../results/summaries/nsc-atlas-geometric-remainder-bound-v2.json) and [material-radius certificate](../results/summaries/nsc-atlas-jordan-radius-bound-v1.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

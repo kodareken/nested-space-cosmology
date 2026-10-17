@@ -6,14 +6,17 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
-Revision `2026-10-17.2` adds Section 13.20: first and second amplitude
-derivatives of the constructed onset solution and an analytic quadratic
-Taylor remainder for its normalized state, wall radius and anchored clock.
-The [parameter proof](nsc-atlas-finite-amplitude.md#second-amplitude-derivative-and-quadratic-onset-remainder)
-uses the same source cell and coupling range as Section 13.19. Each output's
-remainder constant is finite and unevaluated. Matching older numerical
-coefficients, evaluating their error, and extending to central arrival
-remain separate connections.
+Revision `2026-10-17.3` adds Section 13.21: explicit uniform geometric
+remainders and strict fixed-label endpoint signs across the entire admitted
+positive-amplitude range. It retains the exact canonical-to-Jordan frame
+conversion, material radius and quiet-centre clock convention. The
+[complete comparison](nsc-atlas-finite-amplitude.md#certified-finite-amplitude-endpoint-signs)
+and [material-radius result](nsc-atlas-finite-amplitude.md#certified-jordan-radius-endpoint-comparison)
+use the same original cell as the existence and parameter theorems in
+Sections 13.19-13.20. Seven directly linked compact certificates carry
+the inputs and quantitative conclusions. The older numerical histories,
+later central arrival, physical preparation selection and observational
+tests retain their own domains and unresolved requirements.
 
 ## The common research thread
 

@@ -2,6 +2,24 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Manuscript with certified endpoint signs, 17 October 2026
+
+Living revision `2026-10-17.3` integrates the uniform geometric remainder
+and exact Jordan material-radius conversion in Section 13.21. Its seven
+linked compact certificates retain the original onset cell, coupling range,
+fixed source-label events and quiet-centre clock convention. The abstract,
+conclusion and evidence appendix now carry the same quantitative scope.
+
+The 41-page PDF is 2,961,817 bytes, with SHA-256
+`1631ee26f2df240ba4c440e733cac373d3440fd236a7f2ffc33a265aed255603`.
+All pages were rendered and visually reviewed; the new equations and
+endpoint table were inspected at page scale. The page-boundary check finds
+no out-of-page text or images and no empty-text pages. All displayed bounds
+enclose their exact rational certificates, and the independent Grok
+manuscript review accepts the derivation and scope. The claim bindings now
+cover 35 claims and 129 evidence links. This remains a working manuscript;
+the full programme and external publication are unfinished.
+
 ## Finite-amplitude material-radius sign, 17 October 2026
 
 The [exact Jordan conversion](nsc-atlas-finite-amplitude.md#certified-jordan-radius-endpoint-comparison)
