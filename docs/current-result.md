@@ -29,9 +29,21 @@ above SciPy's floating-point floor. The three v3 full evolutions use this
 same corrected accuracy and retain the physical mass/flux gaps as outputs. The
 [comparison tool](../scripts/analyze_nsc_atlas_fixed_endpoint.py) requires
 three complete endpoints before reporting contraction and a scaled radius.
+The [coarse v3 receipt](../results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json)
+passes the earlier stopping state but stops after 464 accepted steps at
+`x=0.4369315943667415`. Its later forward/adjoint discrepancy is
+`2.1769e-8`, just above the unchanged `2e-8` guard. A
+[check of that exact later state](../results/summaries/nsc-atlas-fixed-endpoint-radial-later-diagnostic-v1.json)
+again finds agreement between 32 and 64 adjoint points, to about `1.2e-12`.
+Smaller forward radial steps are the next isolated numerical check; this
+does not change the physical cap grid or establish endpoint convergence.
 The declared observable is the Jordan wall areal radius at the fixed incoming
 label, with fiducial `ell=10000 m`; its endpoint value and numerical range
-remain pending. No observational comparison has been performed.
+remain pending. Independent Grok review confirms the exact invariant and
+canonical-field frame conversions, the fixed-label endpoint and the local
+area/circumference interpretation. Its physical ray marker and source
+identification remain to be supplied. No observational comparison has been
+performed.
 
 ## Formation diagnostic from the same source and wall, 17 October 2026
 

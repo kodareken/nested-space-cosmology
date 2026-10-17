@@ -2,6 +2,29 @@
 
 ## P001 full-endpoint fixed-grid comparison, 17 October 2026
 
+**Later v3 radial stop:** the coarse successor passes the earlier stopping
+state, then stops after 464 accepted steps at `x=0.4369315943667415`.
+Its next accepted-end stage has forward/adjoint discrepancy
+`2.1768784108644468e-8` in the time-gradient component, against the unchanged
+`2e-8` guard. Preserve its summary and authenticated single-stage seed.
+Admit one comparison of **32 and 64 adjoint points at that new frozen state**,
+using the current `rtol=2.5e-14, atol=1e-15`, one preparation, zero time
+steps, **60 process-CPU seconds / 40 million charged values**. This checks
+whether the later discrepancy has the same origin before a numerical
+correction is designed. The other two running resolutions retain their
+original imported code and budgets.
+
+The two adjoint orders agree to about `1.2e-12` at the later state, while
+both differ from the forward gradient by about `2.18e-8`. The current
+relative tolerance is already near the floating-point floor. Admit a
+targeted **three-case forward step comparison on that same state**:
+maximum radial steps of half and quarter of each existing smooth panel
+with 32 adjoint points, plus the half-panel case with 64 adjoint points.
+Keep both tolerances and the gradient guard fixed. Share one preparation,
+zero time steps, **60 process-CPU seconds / 40 million charged values**.
+Record internal gradient magnitudes and radial work as well as discrepancies.
+This changes radial integration resolution only, not the physical cap mesh.
+
 Douglas has prioritized the full finite-amplitude evolution and a physically
 scaled P001 observable. Opening-phase robustness work is paused. Reuse the
 existing constrained fixed-cap mass/gradient calculation, simultaneous

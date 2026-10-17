@@ -10,10 +10,28 @@ import numpy as np
 
 import run_nsc_atlas_fixed_endpoint as endpoint
 from recursive_horizons import nsc_atlas_cap_fixed_reference as fixed
+from recursive_horizons import nsc_atlas_cap_variational_reference as radial
 
 CASES=((32,2e-13,2e-15),(64,2e-13,2e-15),(128,2e-13,2e-15),
        (64,2e-14,1e-15))
 CONFIRMATION_CASES=((32,2.5e-14,1e-15),(64,2.5e-14,1e-15))
+PANEL_CASES=((32,2.5e-14,1e-15,.5),(32,2.5e-14,1e-15,.25),
+             (64,2.5e-14,1e-15,.5))
+
+
+def panel_step_options(span, options, fraction):
+    """Bound the forward step inside each existing smooth radial panel."""
+    options=dict(options)
+    if fraction is not None:
+        if not np.isfinite(fraction) or not 0 < fraction <= 1:
+            raise ValueError('radial panel fraction must be in (0, 1]')
+        maximum=(float(span[1])-float(span[0]))*fraction
+        if not np.isfinite(maximum) or maximum <= 0:
+            raise ValueError('positive radial panel required')
+        options['max_step']=min(options.get('max_step',np.inf),maximum)
+        if 'first_step' in options:
+            options['first_step']=min(options['first_step'],options['max_step'])
+    return options
 
 
 def read_seed(receipt,root=endpoint.ROOT):
@@ -42,10 +60,14 @@ def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--receipt',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
-    parser.add_argument('--confirm-forward-accuracy',action='store_true',
+    mode=parser.add_mutually_exclusive_group()
+    mode.add_argument('--confirm-forward-accuracy',action='store_true',
                         help='the admitted 32/64-point check of the selected tighter tolerance')
+    mode.add_argument('--panel-step-check',action='store_true',
+                      help='half/quarter-panel forward steps at the selected tolerance')
     args=parser.parse_args(argv)
-    cases=CONFIRMATION_CASES if args.confirm_forward_accuracy else CASES
+    cases=(PANEL_CASES if args.panel_step_check else
+           CONFIRMATION_CASES if args.confirm_forward_accuracy else CASES)
     if args.output.exists() or not args.output.parent.is_dir():
         raise ValueError('choose a new output in an existing directory')
     raw=args.receipt.read_bytes();receipt=json.loads(raw)
@@ -53,6 +75,9 @@ def main(argv=None):
         raise ValueError('require a stopped evolution receipt')
     state,x=read_seed(receipt)
     commit,bindings=endpoint.frozen_sources()
+    diagnostic_path=Path(__file__).resolve()
+    bindings[diagnostic_path.relative_to(endpoint.ROOT).as_posix()]=hashlib.sha256(
+        diagnostic_path.read_bytes()).hexdigest()
     budget=endpoint.Budget(maximum_evaluations=40_000_000,cpu_seconds=60.)
     report=dict(schema='nsc-atlas-endpoint-radial-diagnostic-v1',status='incomplete',
         source_commit=commit,source_bindings=bindings,
@@ -60,9 +85,11 @@ def main(argv=None):
                            bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest()),
         stage_seed=receipt['failed_stage_seed'],x=x,level=receipt['level'],
         physical_time_steps=0,gradient_tolerance=2e-8,
-        comparison_kind='selected_forward_accuracy' if args.confirm_forward_accuracy else 'error_attribution',
+        comparison_kind=('forward_panel_step' if args.panel_step_check else
+                         'selected_forward_accuracy' if args.confirm_forward_accuracy else 'error_attribution'),
         limits=dict(cpu_seconds=60.,charged_values=40_000_000,cases=len(cases)),cases=[])
     original=fixed._radial_variations
+    original_solve=radial.solve_ivp
     radial_results=[]
     try:
         endpoint.authenticate(endpoint.ROOT,budget)
@@ -81,16 +108,28 @@ def main(argv=None):
         snapshot=endpoint.SourceSnapshot(geometry,alpha=data['alpha'],x_nodes=rows['x'],
                                          source_rows=rows,budget=budget)
         gauge=endpoint.ReferenceWallGauge(geometry,order=64,budget=budget)
-        for order,rtol,atol in cases:
+        for specification in cases:
+            order,rtol,atol=specification[:3]
+            fraction=specification[3] if len(specification)==4 else None
             case=dict(adjoint_order=order,rtol=rtol,atol=atol,
                       effective_rtol=max(rtol,100*np.finfo(float).eps))
+            if fraction is not None:
+                case['maximum_radial_step_panel_fraction']=fraction
             captured=[];started=time.process_time();before=budget.evaluations
+            panels=[]
+            def solve(fun,span,initial,**kw):
+                result=original_solve(fun,span,initial,**panel_step_options(span,kw,fraction))
+                budget.check(result.y.size)
+                panels.append(dict(nfev=result.nfev,accepted_steps=len(result.t)-1,
+                    maximum_internal_gradient=float(np.max(np.abs(result.y[2:])))))
+                return result
             def routed(*a,**kw):
                 kw.update(adjoint_order=order)
                 result=original(*a,**kw)
                 captured.append(result)
                 return result
             fixed._radial_variations=routed
+            radial.solve_ivp=solve
             try:
                 stage=endpoint.coupled_fixed_stage(state,basis=basis,x=x,
                     eta=np.linspace(0.,1.,spec['exterior_cells']+1),source=snapshot.sample(x),
@@ -107,11 +146,16 @@ def main(argv=None):
                 budget.check()
             finally:
                 fixed._radial_variations=original
+                radial.solve_ivp=original_solve
+            case['forward_panels']=dict(count=len(panels),nfev=sum(p['nfev'] for p in panels),
+                accepted_steps=sum(p['accepted_steps'] for p in panels),
+                maximum_internal_gradient=max((p['maximum_internal_gradient'] for p in panels),default=0.))
             radial_results.append(captured[-1] if captured else None)
             case.update(cpu_seconds=time.process_time()-started,charged_values=budget.evaluations-before)
             report['cases'].append(case)
         report['pair_differences']=[]
-        for i,j in ((0,1),(1,2),(1,3)):
+        pairs=((0,1),(0,2)) if args.panel_step_check else ((0,1),(1,2),(1,3))
+        for i,j in pairs:
             if j>=len(radial_results):
                 continue
             a,b=radial_results[i],radial_results[j]
@@ -124,6 +168,7 @@ def main(argv=None):
         report.update(status='stopped',reason=str(error))
     finally:
         fixed._radial_variations=original
+        radial.solve_ivp=original_solve
     report['execution']=dict(cpu_seconds=time.process_time()-budget.started,
                               charged_values=budget.evaluations)
     report=endpoint.plain(report)

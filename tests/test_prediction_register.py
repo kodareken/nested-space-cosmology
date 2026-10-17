@@ -51,6 +51,7 @@ def test_saved_projection_requires_no_subprocess_or_scientific_replay(register_r
     lambda e:e["registration"].update(preregistered=True),
     lambda e:e["uncertainty"].update(rigorous_error_enclosure=True),
     lambda e:e["observational_test"].update(status="confirmed"),
+    lambda e:e["observational_test"].update(SI_scale_selected=True),
     lambda e:e.update(open_limits=[]),
 ])
 def test_values_provenance_and_scope_cannot_be_promoted(register_root, mutation):

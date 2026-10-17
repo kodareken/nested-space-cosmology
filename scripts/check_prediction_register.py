@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Authenticate prediction declarations and saved-value projections; no replay."""
+"""Authenticate prediction declarations and saved-value projections; no replay.
+
+An optional NSC-P001 finite-amplitude extension is checked from the saved
+comparison and its three endpoint receipts. Derived floats may differ by the
+explicit recompute tolerance; identities, booleans, paths and hashes may not.
+"""
 from __future__ import annotations
 
 import argparse
@@ -9,10 +14,48 @@ import math
 from pathlib import Path, PurePosixPath
 import re
 
+from analyze_nsc_atlas_fixed_endpoint import compare
+from recursive_horizons.nsc_atlas_endpoint_comparison import (
+    ENDPOINT_REFERENCE_RADIUS, ENDPOINT_SOURCE_X, FIDUCIAL_LENGTH_METRES,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
 REGISTER = "results/prediction-register.json"
 DOCUMENT = "docs/prediction-register.md"
 SCHEMA = "nsc-prediction-register-v1"
+FINITE_SCHEMA = "nsc-p001-finite-amplitude-v1"
+# Independent libm evaluations of the same receipt arithmetic need not be
+# bit-identical. This relative band is the only numerical slack; absolute
+# slack is zero so the small radial-accuracy constants stay discriminative.
+RECOMPUTE_REL_TOL = 1e-12
+RECOMPUTE_ABS_TOL = 0.0
+ENVELOPE_STATUS = "finite_amplitude_numerical_estimate_with_resolution_envelope"
+UNCONVERGED_STATUS = "unconverged_numerical_estimate"
+COMPARISON_META = ("analysis_source_commit", "analysis_source_sha256", "inputs")
+EXACT_COMPARISON_KEYS = (
+    "all_endpoints_completed", "endpoint_radius_pair_difference_contracts",
+    "independent_observational_test", "numerical_method_note", "operator_revision_note",
+    "physical_evolutions", "prediction_status", "radial_accuracy",
+    "requested_mass_and_flux_contraction", "sample_cuts", "schema", "shared_alpha",
+    "source_commits", "status",
+)
+OBSERVABLE_DERIVED = (
+    "circumference_metres", "difference_from_quiet_reference_metres", "grid_values_metres",
+    "quiet_reference_metres", "resolution_half_width_metres", "resolution_range_metres",
+    "value_metres",
+)
+REFINEMENT_DERIVED = ("fine_over_coarse",)
+FINITE_FIELDS = (
+    "comparison_status", "endpoint_radius_pair_difference_contracts", "event", "evidence",
+    "limits", "physical_observable", "prediction_status", "radial_accuracy",
+    "requested_mass_and_flux_contraction", "schema", "shared_alpha",
+)
+LIMITS = dict(
+    empirical_confirmation=False, calibration="none", physical_source_selected=False,
+    physical_emitter_selected=False, observational_validation=False,
+    rigorous_error_enclosure=False, historical_coefficients_predict_this_event=False,
+    SI_scale_role="declared_fiducial_input", measured_astrophysical_scale=False,
+)
 EVIDENCE = {
     "cap_wall_owner": "docs/nsc-atlas-cap-wall-response.md",
     "wall_owner": "docs/nsc-atlas-wall-evolution.md",
@@ -79,6 +122,18 @@ def pointer(value, path):
     return value
 
 
+def bound_bytes(root, row, label):
+    exact(sorted(row), ["bytes", "path", "sha256"], label + " binding fields")
+    require(type(row["bytes"]) is int and row["bytes"] > 0
+            and isinstance(row["sha256"], str)
+            and re.fullmatch(r"[0-9a-f]{64}", row["sha256"]) is not None,
+            "invalid byte identity: " + label)
+    raw = local_file(root, row["path"]).read_bytes()
+    require(len(raw) == row["bytes"] and hashlib.sha256(raw).hexdigest() == row["sha256"],
+            "evidence bytes changed: " + label)
+    return raw
+
+
 def authenticate(root, bindings):
     exact(set_as_list(bindings), sorted(EVIDENCE), "evidence inventory")
     records = {}
@@ -86,13 +141,7 @@ def authenticate(root, bindings):
         row = bindings[name]
         exact(sorted(row), ["bytes", "path", "sha256"], name + " binding fields")
         exact(row["path"], expected_path, name + " path")
-        require(type(row["bytes"]) is int and row["bytes"] > 0
-                and isinstance(row["sha256"], str)
-                and re.fullmatch(r"[0-9a-f]{64}", row["sha256"]) is not None,
-                "invalid byte identity: " + name)
-        raw = local_file(root, row["path"]).read_bytes()
-        require(len(raw) == row["bytes"] and hashlib.sha256(raw).hexdigest() == row["sha256"],
-                "evidence bytes changed: " + name)
+        raw = bound_bytes(root, row, name)
         if row["path"].endswith(".json"):
             records[name] = read_json(raw)
     for manifest, output in (("cap_wall_manifest", "cap_wall"),
@@ -113,7 +162,169 @@ def set_as_list(value):
     return sorted(value)
 
 
-def check_p001(entry, records):
+def agree_numbers(actual, expected, label):
+    """Match structure exactly, with slack only for derived finite floats."""
+    if isinstance(expected, bool) or isinstance(actual, bool):
+        exact(actual, expected, label)
+    elif isinstance(expected, str) or isinstance(expected, int) or expected is None:
+        exact(actual, expected, label)
+    elif isinstance(expected, float):
+        require(type(actual) in (int, float) and math.isfinite(float(actual))
+                and math.isfinite(expected), label + " must be a finite float")
+        require(math.isclose(float(actual), expected, rel_tol=RECOMPUTE_REL_TOL,
+                             abs_tol=RECOMPUTE_ABS_TOL),
+                label + " exceeds recompute tolerance " + format(RECOMPUTE_REL_TOL, ".0e"))
+    elif isinstance(expected, list):
+        require(isinstance(actual, list) and len(actual) == len(expected), label + " length")
+        for index, item in enumerate(expected):
+            agree_numbers(actual[index], item, label + "[" + str(index) + "]")
+    elif isinstance(expected, dict):
+        require(isinstance(actual, dict), label + " type")
+        exact(sorted(actual), sorted(expected), label + " keys")
+        for key, item in expected.items():
+            agree_numbers(actual[key], item, label + "." + key)
+    else:
+        raise ValueError("unsupported recomputed value: " + label)
+
+
+def agree_refinement_map(actual, expected, label):
+    require(isinstance(actual, dict), label + " type")
+    exact(sorted(actual), sorted(expected), label + " names")
+    for name, row in expected.items():
+        require(isinstance(actual[name], dict), label + " row")
+        exact(sorted(actual[name]), sorted(row), label + " " + name + " fields")
+        for key, value in row.items():
+            target = label + "." + name + "." + key
+            if key in REFINEMENT_DERIVED:
+                agree_numbers(actual[name][key], value, target)
+            else:
+                exact(actual[name][key], value, target)
+
+
+def agree_observable(actual, expected):
+    require(isinstance(actual, dict), "physical observable type")
+    exact(sorted(actual), sorted(expected), "physical observable fields")
+    for key, value in expected.items():
+        if key in OBSERVABLE_DERIVED:
+            agree_numbers(actual[key], value, "physical_observable." + key)
+        else:
+            exact(actual[key], value, "physical_observable." + key)
+
+
+def assert_comparison_matches(saved, recomputed):
+    require(isinstance(saved, dict), "comparison type")
+    require(set(COMPARISON_META) <= set(saved), "comparison provenance missing")
+    body = {key: value for key, value in saved.items() if key not in COMPARISON_META}
+    exact(sorted(body), sorted(recomputed), "comparison fields")
+    for key in EXACT_COMPARISON_KEYS:
+        exact(body[key], recomputed[key], "comparison " + key)
+    agree_refinement_map(body["residual_maxima"], recomputed["residual_maxima"], "residual_maxima")
+    agree_refinement_map(body["accumulated_transport_gaps"], recomputed["accumulated_transport_gaps"],
+                         "accumulated_transport_gaps")
+    agree_numbers(body["endpoint_radius_pair_differences"],
+                  recomputed["endpoint_radius_pair_differences"], "endpoint_radius_pair_differences")
+    agree_observable(body["physical_observable"], recomputed["physical_observable"])
+    require(re.fullmatch(r"[0-9a-f]{40,64}", saved["analysis_source_commit"]) is not None,
+            "analysis commit must be hexadecimal")
+    require(re.fullmatch(r"[0-9a-f]{64}", saved["analysis_source_sha256"]) is not None,
+            "analysis source hash must be SHA256")
+    require(saved["prediction_status"] in (ENVELOPE_STATUS, UNCONVERGED_STATUS),
+            "unknown finite-amplitude status")
+    passes = (saved["requested_mass_and_flux_contraction"]
+              and saved["endpoint_radius_pair_difference_contracts"])
+    expected_status = ENVELOPE_STATUS if passes else UNCONVERGED_STATUS
+    exact(saved["prediction_status"], expected_status, "finite-amplitude status")
+
+
+def load_comparison(root, binding):
+    comparison = read_json(bound_bytes(root, binding, "finite-amplitude comparison"))
+    require(isinstance(comparison.get("inputs"), list) and len(comparison["inputs"]) == 3,
+            "three analysis inputs required")
+    found = {}
+    for row in comparison["inputs"]:
+        require(isinstance(row, dict) and row.get("path") not in found, "duplicate analysis input")
+        raw = bound_bytes(root, row, "analysis input")
+        found[row["path"]] = (row, read_json(raw))
+    return comparison, found
+
+
+def endpoint_receipts(found, endpoints):
+    require(isinstance(endpoints, list) and len(endpoints) == 3, "three endpoint bindings required")
+    receipts = []
+    for index, row in enumerate(endpoints):
+        exact(sorted(row), ["bytes", "level", "path", "sha256"], "endpoint binding fields")
+        require(type(row["level"]) is int and row["level"] == index, "endpoint levels must be 0, 1, 2")
+        require(row["path"] in found, "endpoint path is not an analysis input: " + str(row["path"]))
+        saved, record = found[row["path"]]
+        exact({key: row[key] for key in ("bytes", "path", "sha256")}, saved, "endpoint analysis binding")
+        exact(record["level"], row["level"], "endpoint level")
+        receipts.append(record)
+    exact(sorted(row["path"] for row in endpoints), sorted(found), "analysis input paths")
+    return receipts
+
+
+def finite_event():
+    return dict(kind="fixed_incoming_label", affine_source_x=ENDPOINT_SOURCE_X, normalized_V=1.0,
+                reference_radius_over_ell=ENDPOINT_REFERENCE_RADIUS,
+                distinct_from_perturbative_rho=True)
+
+
+def finite_amplitude_block(comparison, comparison_binding, endpoint_rows):
+    observable = comparison["physical_observable"]
+    exact(observable["event"]["affine_source_x"], ENDPOINT_SOURCE_X, "incoming-label event")
+    exact(observable["event"]["normalized_V"], 1.0, "incoming-label normalized V")
+    exact(observable["event"]["reference_radius_over_ell"], ENDPOINT_REFERENCE_RADIUS,
+          "incoming-label reference radius")
+    exact(observable["scale"]["ell_metres"], FIDUCIAL_LENGTH_METRES, "fiducial length")
+    exact(observable["scale"]["role"], "declared_fiducial_input", "fiducial scale role")
+    exact(observable["scale"]["measured_astrophysical_scale"], False, "measured scale claim")
+    exact(observable["scale"]["fitted_to_output"], False, "fitted scale claim")
+    exact(observable["observational_validation"], False, "observational validation claim")
+    exact(observable["uncertainty"]["kind"], "observed_three_grid_resolution_envelope",
+          "resolution-envelope kind")
+    exact(observable["uncertainty"]["confidence_level"], None, "statistical confidence claim")
+    exact(observable["uncertainty"]["rigorous_error_enclosure"], False, "total-error promotion")
+    return dict(
+        schema=FINITE_SCHEMA, event=finite_event(), comparison_status=comparison["status"],
+        prediction_status=comparison["prediction_status"],
+        requested_mass_and_flux_contraction=comparison["requested_mass_and_flux_contraction"],
+        endpoint_radius_pair_difference_contracts=comparison["endpoint_radius_pair_difference_contracts"],
+        shared_alpha=comparison["shared_alpha"], radial_accuracy=comparison["radial_accuracy"],
+        physical_observable=observable, limits=dict(LIMITS),
+        evidence=dict(comparison=comparison_binding, endpoints=endpoint_rows),
+    )
+
+
+def check_finite_amplitude(root, entry):
+    block = entry["finite_amplitude"]
+    require(isinstance(block, dict), "finite-amplitude extension type")
+    exact(sorted(block), sorted(FINITE_FIELDS), "finite-amplitude fields")
+    exact(block["schema"], FINITE_SCHEMA, "finite-amplitude schema")
+    exact(block["event"], finite_event(), "finite-amplitude event")
+    exact(block["limits"], LIMITS, "finite-amplitude limits")
+    evidence = block["evidence"]
+    exact(sorted(evidence), ["comparison", "endpoints"], "finite-amplitude evidence fields")
+    comparison, found = load_comparison(root, evidence["comparison"])
+    receipts = endpoint_receipts(found, evidence["endpoints"])
+    recomputed = compare(receipts)
+    assert_comparison_matches(comparison, recomputed)
+    expected = finite_amplitude_block(comparison, evidence["comparison"], evidence["endpoints"])
+    exact(block["comparison_status"], expected["comparison_status"], "comparison status copy")
+    exact(block["prediction_status"], expected["prediction_status"], "finite-amplitude status copy")
+    exact(block["requested_mass_and_flux_contraction"], expected["requested_mass_and_flux_contraction"],
+          "contraction status copy")
+    exact(block["endpoint_radius_pair_difference_contracts"],
+          expected["endpoint_radius_pair_difference_contracts"], "radius-contraction status copy")
+    exact(block["shared_alpha"], expected["shared_alpha"], "alpha copy")
+    exact(block["radial_accuracy"], expected["radial_accuracy"], "radial accuracy copy")
+    exact(block["physical_observable"], expected["physical_observable"], "physical observable copy")
+    require(block["prediction_status"] != ENVELOPE_STATUS
+            or (block["requested_mass_and_flux_contraction"]
+                and block["endpoint_radius_pair_difference_contracts"]),
+            "unconverged comparison labeled as a resolution-envelope estimate")
+
+
+def check_p001(entry, records, root):
     exact(entry["registered_on"], "2026-10-16", "retrospective registration date")
     exact(entry["registration"], dict(kind="retrospective", evidence_previously_calculated=True,
           preregistered=False, withheld_observations=False), "registration status")
@@ -170,9 +381,12 @@ def check_p001(entry, records):
     exact([{k:v for k,v in settings.items() if k != "field_nodes"} for settings in wall["settings"]][0],
           {k:v for k,v in wall["settings"][1].items() if k != "field_nodes"}, "fixed settings")
     require(all(len(solution["wall_samples"]) == 9 for solution in wall["solutions"]), "nine cuts required")
+    # The selected ell is a declared fiducial input. It is not a measured scale,
+    # and it is recorded only together with the finite-amplitude extension.
     exact(entry["observational_test"], dict(status="pending", calibration="none",
         parameters_chosen_as_model_inputs=True, data_refs=[], physical_source_selected=False,
-        SI_scale_selected=False, future_comparison_uncertainty=None), "observational status")
+        SI_scale_selected="finite_amplitude" in entry, future_comparison_uncertainty=None),
+          "observational status")
     exact(model["calibration"], dict(observation_refs=[], parameter_ids=[], status="not_performed"),
           "model calibration status")
     exact(entry["open_limits"], ["nonlinear_finite_amplitude_closure", "uniform_remainder_and_total_numerical_error",
@@ -181,11 +395,12 @@ def check_p001(entry, records):
     require(set(entry["rejection"]) == {"fixed_assumption_identity_failure", "independent_prediction_test"}
             and all(isinstance(value, str) and value.strip() for value in entry["rejection"].values()),
             "explicit rejection conditions required")
+    if "finite_amplitude" in entry:
+        check_finite_amplitude(root, entry)
 
 
-def check(root=ROOT):
+def check_register(root, register):
     root = Path(root).resolve()
-    register = read_json(local_file(root, REGISTER).read_bytes())
     exact(register["schema"], SCHEMA, "register schema")
     exact(register["document"], DOCUMENT, "register document")
     document = local_file(root, DOCUMENT).read_text(encoding="utf-8")
@@ -195,9 +410,19 @@ def check(root=ROOT):
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")
     records = authenticate(root, entry["evidence"])
-    check_p001(entry, records)
-    return dict(predictions=1, evidence_files=len(EVIDENCE), coefficient_projections=4,
-                exact_identity_projections=2, scientific_replays=0)
+    check_p001(entry, records, root)
+    result = dict(predictions=1, evidence_files=len(EVIDENCE), coefficient_projections=4,
+                  exact_identity_projections=2, scientific_replays=0)
+    if "finite_amplitude" in entry:
+        result["finite_amplitude_files"] = 4
+        result["finite_amplitude_endpoints"] = 3
+    return result
+
+
+def check(root=ROOT):
+    root = Path(root).resolve()
+    register = read_json(local_file(root, REGISTER).read_bytes())
+    return check_register(root, register)
 
 
 def main(argv=None):

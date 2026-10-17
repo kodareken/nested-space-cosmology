@@ -92,6 +92,39 @@ Einstein-radius and anchored-clock response. They do not extend to P001's
 terminal point. P001's finite-amplitude remainder and observational limits
 therefore remain as recorded.
 
+### Full-endpoint observable selected before the three-grid results
+
+The current continuation fixes `alpha=0.00012983127142551443` and the same
+source, then evolves to affine incoming label `x=0.4815042082576364`
+(`V=1`, reference radius `0.55`). Its observable is the **Jordan material-wall
+areal radius** on that cross-section. In the runner's dimensionless variables,
+
+$$
+R_{J,\mathrm{metres}}
+=\ell\sqrt{r_E^2+\frac{\alpha c^2}{6}},\qquad
+\ell=10000\ \mathrm{m}.
+$$
+
+The scale is a declared fiducial model input, selected before the endpoint
+values; it is not an inferred astrophysical length. A spherical array comoving
+with the wall could determine the radius from intrinsic area,
+$R_J=\sqrt{\mathcal A_J/(4\pi)}$, or equatorial proper circumference,
+$R_J=\mathcal C_J/(2\pi)$. The normalized incoming null label selects the
+measurement cross-section. Reception by a remote or central detector is a
+separate calculation. This fixed-label event must not be identified with the
+fixed Jordan wall proper time used by the historical coefficient $\rho$.
+
+The [three-grid comparison](../scripts/analyze_nsc_atlas_fixed_endpoint.py)
+will report the fine-grid radius and the symmetric interval whose half-width
+is the largest difference from either other grid. This is an observed
+resolution envelope, with the measured mass/flux contraction reported
+alongside it. It is not a confidence interval or a rigorous continuum bound.
+Common source interpolation, radial numerical error, errors outside this
+grid family and physical preparation remain separate uncertainties. An
+independent relative uncertainty in $\ell$ transfers directly to the radius.
+The endpoint value and resolution range are pending the three completed
+evolutions; the existing perturbative record is preserved meanwhile.
+
 Check the register with:
 
 ```sh

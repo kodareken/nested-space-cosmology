@@ -3,7 +3,7 @@ import hashlib
 import numpy as np
 import pytest
 
-from diagnose_nsc_atlas_endpoint_radial import read_seed
+from diagnose_nsc_atlas_endpoint_radial import read_seed, panel_step_options
 
 
 def fixture(root):
@@ -33,3 +33,17 @@ def test_changed_seed_or_metadata_is_rejected(tmp_path):
     with pytest.raises(ValueError,match='bytes changed'):read_seed(receipt,tmp_path)
     receipt['failed_stage_seed']['path']='outside.npz'
     with pytest.raises(ValueError,match='ignored result directory'):read_seed(receipt,tmp_path)
+
+
+def test_panel_step_check_preserves_tolerance_and_existing_smaller_step():
+    options=dict(rtol=2.5e-14,atol=1e-15,first_step=.4)
+    assert panel_step_options((1.,1.5),options,None)==options
+    assert panel_step_options((1.,1.5),options,.5)==dict(
+        rtol=2.5e-14,atol=1e-15,first_step=.25,max_step=.25)
+    assert options['first_step']==.4
+    assert panel_step_options((1.,1.5),dict(max_step=.1),.5)['max_step']==.1
+    for fraction in (0,-1,1.1,np.inf,np.nan):
+        with pytest.raises(ValueError,match='fraction'):
+            panel_step_options((1.,1.5),options,fraction)
+    with pytest.raises(ValueError,match='positive radial panel'):
+        panel_step_options((1.,1.),options,.5)

@@ -849,8 +849,10 @@ The first middle/fine receipts stopped before accepting a step because of a
 redundant zero-history panel boundary. Later coarse and middle runs stopped
 on the radial gradient check; the old fine run was deliberately interrupted.
 The v3 successors use the separately confirmed forward accuracy, preserving
-every earlier receipt. Once all three finish, compare their saved scalars
-without another physical evolution:
+every earlier receipt. The coarse v3 run nevertheless stops later, after
+464 accepted steps. The comparison below therefore rejects the current
+coarse receipt. When three completed endpoint receipts exist, use their
+paths to compare saved scalars without another physical evolution:
 
 ```sh
 python scripts/run_python.py scripts/analyze_nsc_atlas_fixed_endpoint.py --inputs results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json results/summaries/nsc-atlas-fixed-endpoint-level2-v3.json --output results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json
@@ -889,6 +891,19 @@ the separately admitted two-case confirmation uses:
 ```sh
 python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-diagnostic-v2.json --confirm-forward-accuracy --output results/summaries/nsc-atlas-fixed-endpoint-radial-confirmation-v1.json
 ```
+
+For the later coarse v3 failure, its seed comes from the full level-0 command
+at source commit `6b6e69c`. The later diagnostic commands are:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --confirm-forward-accuracy --output results/summaries/nsc-atlas-fixed-endpoint-radial-later-diagnostic-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --panel-step-check --output results/summaries/nsc-atlas-fixed-endpoint-radial-panel-diagnostic-v1.json
+```
+
+The panel comparison holds the floating-point tolerances fixed and restricts
+the forward radial step to half/quarter of each existing smooth panel. It
+changes neither the physical cap mesh nor the forward/adjoint acceptance
+guard, and it performs no time evolution.
 
 After that comparison passes, the separately admitted full enriched
 finite-coupling onset interval is:
