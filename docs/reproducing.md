@@ -890,6 +890,19 @@ in metres. Increasing and unchanged gaps remain visible. It performs no
 physical evolution and refuses to overwrite an existing figure. Fixture
 renders used to check its layout stay under ignored `.build`.
 
+Inspect the mass-gap decomposition at the same saved cuts with:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_gaps.py --comparison results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json --output results/summaries/nsc-atlas-fixed-endpoint-gap-diagnostic-v1.json
+```
+
+This authenticates the completed comparison and its three inputs, then reports
+the signed trace and time-projection contributions, arithmetic identity
+residuals, and the coverage of the all-stage maxima by the nine saved cuts.
+It performs no physical solve or replay. A maximum between those cuts has no
+saved state, so this diagnostic cannot establish its cause. Small algebraic
+identity residuals alone do not establish physical mass or wall closure.
+
 The first coarse receipt stopped at the radial forward/adjoint check after
 419 accepted steps. The bounded replay and subsequent one-stage comparison
 have separate, predeclared budgets in the same admission:

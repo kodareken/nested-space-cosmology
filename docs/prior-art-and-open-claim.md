@@ -2,6 +2,25 @@
 
 ## P001 full-endpoint fixed-grid comparison, 17 October 2026
 
+**Interpretation of the completed receipts:** independent Grok review traces
+the actual temporal mass gap to the sum of the strong/weak wall-product
+difference and the retained-background time-projection remainder. The matched
+mass channel and wall-flux channel use different combinations of those traces.
+The existing runner records this decomposition at nine common cuts; its
+all-stage maxima retain values but no maximizing states. A large wall-point
+projection gap alone is therefore not the mass residual, and the saved cuts
+need not explain the largest substage discrepancy.
+
+Admit one saved-data diagnostic of the three completed endpoint receipts:
+authenticate their common comparison, report both mass channels and flux,
+reconstruct the signed trace/balance split, and compare sampled maxima with
+the all-stage maxima. Its domain is the 27 saved cuts, its compute budget is
+zero physical solves, zero evolution steps and zero new field samples.
+The [diagnostic](../scripts/diagnose_nsc_atlas_endpoint_gaps.py) preserves
+rounding residuals and scale information without inventing a closure tolerance.
+If the maxima occur between saved cuts, their cause remains unresolved by this
+record. No additional grid family or replay is admitted by this interpretation.
+
 **CPU allowance amendment, before exhaustion (17 October, after 16:00 local):**
 the v4 runs keep advancing past the diagnosed radial failures. Their measured
 stage costs rise as more retained history panels enter the cap. For example,
