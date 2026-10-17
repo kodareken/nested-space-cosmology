@@ -263,6 +263,15 @@ exterior wall data and does not assume an incoming null constraint.
 A compatible local solution construction and its continuation/constraint
 proof remain open; these a priori bounds do not claim that construction.
 
+The next [local construction map](nsc-atlas-finite-amplitude.md#a-primitive-preserving-local-construction-map)
+uses the existing double-null wall operator. One shared frozen forcing
+determines outgoing prefixes and incoming transport; reconstruction then
+preserves the field primitives and common wall values exactly. Four symbolic
+controls pass with 34,000 values / 0.25 active CPU seconds, and Grok review
+supports the route and its constraint/gauge implications. A complete
+moving-domain contraction estimate is still required. The physical tube
+calculation has not been repeated.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

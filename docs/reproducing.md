@@ -686,6 +686,20 @@ All three pass with 24,000 values / 0.328125 active CPU seconds. They verify
 the quotient/kernel differentiation, cap commutators and radial time
 variation; they do not evaluate physical coefficients or construct a solution.
 
+For the primitive-preserving null construction map:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_null_construction.py -q -s
+```
+
+Four exact controls pass with 34,000 cumulative values / 0.25 active CPU
+seconds (the first three together, then only the added fourth control).
+They include a fixed source, a spacelike initial curve, old and wall-born
+points, the six incoming wall jets' common tangent identities, and a
+counterexample to inferring derivative convergence from weak error bounds.
+They verify the map's primitives and wall-value transport, not a contraction
+theorem; no physical trajectory is calculated.
+
 The coupled comparison controls are:
 
 ```sh

@@ -8028,6 +8028,196 @@ identities and the absence of an incoming-constraint assumption. The local
 construction must work in a class supported by the actual C3 source; no
 fourth source derivative is needed for this first-derivative estimate.
 
+### A primitive-preserving local construction map
+
+The existing two-double-null wall operator gives a concrete local
+construction map before conversion to the polar cap chart. This uses the
+same physical candidate and source. It changes the intermediate coordinate
+choice, not the action, wall laws or initial physical data. A convergence
+proof for the map remains to be completed.
+
+On each side let `y=(r,c,L)`, `p=partial_u y`, `q=partial_v y`, where u
+labels the derivative incoming from the wall and v the outgoing derivative.
+Thus `(u,v)=(Ubar,x)` outside and `(u,v)=(Q_plus,Q_minus)` in the cap.
+The existing bulk equations have the form
+
+\[
+ \partial_vp=\partial_uq=F_i(y,p,q;\alpha),\qquad i\in\{+,-\}.
+\]
+
+The normalized right-hand sides are smooth on compact positive-radius,
+positive-lapse sets, including alpha zero. The regional potentials retain
+`h_plus=0,h_minus=1`. This c is the invariant normalized field already used
+by the wall operator; it is not the canonical exterior jet P above.
+
+Write the lower data curve as `u=ell_i(v)` with supplied compatible values
+`y_i,0(v),p_i,0(v),q_i,0(v)`, satisfying
+
+\[
+ y_{i,0}'=\ell_i'p_{i,0}+q_{i,0}.
+\]
+
+For the exterior source `ell_plus=0`, only the value and outgoing trace
+are prescribed along that characteristic; its incoming trace evolves from
+the initial bottom. A cap initial spacelike curve has both first jets
+from the same initial data. Quiet initial data supply their compatibility
+where the wall starts. The wall embeddings `u_i(s),v_i(s)` have strictly
+positive null rates, with s the common Einstein proper wall time.
+
+Choose compatible positive wall lapses `C_W,i(s)` as coordinate gauges and
+set `Gamma_i=d_s log(C_W,i)`. These choices determine how wall-born incoming
+null labels are continued. The cap's two null labels are not simultaneously
+identified with central Jordan proper time. That observer clock is recovered
+after construction. Choosing the reference gauges on the initial quiet
+interval preserves the existing corner and bottom labels.
+
+For a given bounded Lipschitz frozen forcing `F_i^n(u,v)`, extended to the
+small ambient strip where the next wall can lie, first calculate
+
+\[
+ q_i^{n+1}(u,v)=q_{i,0}(v)+
+             \int_{\ell_i(v)}^u F_i^n(a,v)\,da.
+\]
+
+This outgoing field is known before solving the wall ODE. Evaluate it at
+the unknown wall embeddings in the existing wall map. That map supplies
+an ordinary differential equation for
+`Y=(R,c_W,eta_plus,eta_minus,u_plus,v_plus,u_minus,v_minus)` and the six
+incoming first jets `p_i,W=G_i(Y,q_plus,W,q_minus,W)`. Its denominators
+are positive radii, lapses and null rates. For fixed frozen forcing these
+outgoing traces are Lipschitz functions of the embeddings; local ODE
+solvability is the ordinary finite-dimensional step.
+
+For each fixed u, let `v_e` be its entry from the initial curve/bottom or
+the moving wall. Use the prescribed initial incoming trace or the just
+computed wall trace as `p_i,e`, and set
+
+\[
+ p_i^{n+1}(u,v)=p_{i,e}(u)+\int_{v_e}^v F_i^n(u,b)\,db,
+\qquad
+ y_i^{n+1}(u,v)=y_{i,0}(v)+
+                 \int_{\ell_i(v)}^u p_i^{n+1}(a,v)\,da.
+\]
+
+The lower moving-boundary term in the last derivative is essential. The
+initial compatibility identity gives, exactly,
+
+\[
+ (y_i^{n+1})_u=p_i^{n+1},\qquad
+ (y_i^{n+1})_v=q_i^{n+1},\qquad
+ (p_i^{n+1})_v=(q_i^{n+1})_u=F_i^n.
+\]
+
+Thus every such map application preserves one field primitive on each side.
+For an exterior source strip it keeps the entire history of wall-born
+points. For a spacelike lower curve it also includes newly encountered
+initial points. Corner compatibility controls the join between these two
+entry types; an incompatible corner cannot be hidden in an integral.
+
+The common wall values are preserved within this construction as well.
+In each chart, with `a_i=du_i/ds` and `b_i=dv_i/ds`, the boundary algebra
+gives
+
+\[
+ a_ip_{r,i}+b_iq_{r,i}=R_s,\qquad
+ a_ip_{c,i}+b_iq_{c,i}=(c_W)_s,\qquad
+ a_ip_{L,i}+b_iq_{L,i}=\Gamma_i.
+\]
+
+Consequently the reconstructed traces agree with R, c_W and log(C_W,i)
+from their common initial values. No second scalar boundary waveform is
+introduced. These are identities of the frozen-forcing map, before
+`F_i^n=F_i(y_i^{n+1},p_i^{n+1},q_i^{n+1})` has been established.
+At a nonlinear fixed point the mixed equations would hold as well; the
+owned constraint identities would then apply to the full independently
+imposed wall laws and compatible outgoing data.
+
+The remaining analytic step is a complete invariant function space and
+contraction estimate on a fixed comparison domain. Changing wall embeddings
+changes entry times and the domain where frozen forcing is needed. A
+uniformly controlled extension and Lipschitz trace bounds must be included.
+The outgoing prefix has finite spatial length, so it cannot be declared
+small just because the wall time step is small. Spatial exponential weights
+can supply a prefix factor proportional to `1/lambda`; wall ODE changes and
+incoming transport supply time factors. These observations identify what
+to bound, not already verified contraction constants. The initial and wall
+corner conditions and the regularity of the actual C3 source must be kept.
+
+After a local solution is obtained in these null charts, an untrapped cap
+can be converted to polar-areal coordinates and its quiet-core clock fixed.
+The exterior incoming labels can be changed to the exact W(x) while keeping
+the source x labels and initial quiet bottom. The existence and regularity
+of these conversions, and applicability of the preceding continuation
+estimates, belong in the construction proof; no extra physical datum is
+supplied by a coordinate choice.
+
+Transient compatibility is material to a different, lagged hybrid iteration.
+An L1 or uniform error bound plus a common Lipschitz bound does not control
+the difference of time derivatives. For example
+
+\[
+ f_n(t)=\frac{1-\cos(nt)}n,\qquad
+ \|f_n\|_\infty\le\frac2n,\quad
+ \|f_n'\|_\infty\le1,\quad
+ f_n(0)=f_n'(0)=0.
+\]
+
+Nevertheless `f_(4k+1)'(pi/2)=1`. A proposed estimate for a wall tangent
+defect in terms of a weak iterate difference needs an additional evolution
+argument; it does not follow from these norms alone. The null map above
+preserves its field primitives and common wall tangents by using the same
+frozen forcing in both regional integrations.
+
+At a sufficiently regular nonlinear fixed point the existing constraint
+argument has a short, noncircular conclusion. The exact exterior source and
+cap initial data supply the outgoing constraints. The wall map independently
+imposes `A_Sigma=T_Sigma=F_Sigma=0`. Substitution in the owned residual
+identities gives
+
+\[
+ J_++J_-=0,\qquad J_--J_+=0,
+ \qquad\text{hence}\qquad J_+=J_-=0.
+\]
+
+The incoming constraints then propagate from the wall. They are not extra
+boundary equations added to the iteration. No division by wall velocity or
+the signed exterior beta is used. Across source fronts these identities
+require their integrated form at the actual available regularity.
+
+The exterior gauge conversion can also be stated explicitly. If the solved
+wall has incoming label `u_W(s)` and source label `x_W(s)`, define the new
+incoming label through
+
+\[
+ \phi(u_W(s))=W(x_W(s)),\qquad
+ \phi'(u_W(s))=W_x\frac{\dot x_W}{\dot u_W}>0.
+\]
+
+Choose phi as the identity on the anchored quiet incoming labels; the
+nonempty quiet initial interval allows matching at the join. The new metric
+coefficient is `C_new=C_old/phi'`, while x and the physical source stay
+fixed. At the wall `Udot_new/Vdot=W_x`, exactly the boost gauge of the tube
+estimate. The originally chosen wall lapse is not prescribed a second time
+in this new chart.
+
+For an untrapped cap, `A=-4*r_u*r_v/C>0` makes the radius gradient spacelike.
+A local polar time solves `r_u*T_v+r_v*T_u=0`, anchored to the quiet-core
+clock. This removes the mixed T,r metric term. The full Einstein equations
+would give the owned radial lapse constraint and its quiet central anchor.
+Extending this chart over the claimed domain and connecting it to the
+existing continuation estimate still belong in the proof. The interior core
+is quiet; the whole cap collar is not assumed to remain quiet after arrival.
+
+Four [exact controls](../tests/test_nsc_atlas_null_construction.py) pass
+with **34,000 cumulative charged values / 0.25 active CPU seconds**. They
+use one manufactured source strip, one spacelike lower curve, the two-sided
+wall tangent identities, and the derivative-convergence counterexample.
+Both polynomial controls include old and wall-born points and verify the
+join's first derivatives. They check the primitive identities and value
+preservation, not convergence or physical evolution. Independent Grok
+review supports the null route and the constraint/gauge implications, while
+leaving its local fixed-point estimate to be established.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

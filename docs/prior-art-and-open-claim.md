@@ -2845,6 +2845,44 @@ The largest image ratio is approximately `0.515020212`; the exact upper
 endpoint is below `0.516`. The next mathematical requirement is a compatible
 local construction, using the conditional derivative estimates above.
 
+### Local construction through the existing null wall map, 17 October 2026
+
+The next investigation keeps the same action, source and quiet physical
+initial data. Use the existing two-double-null boundary operator to define
+one frozen-forcing characteristic map, with wall lapse choices treated as
+coordinate gauges and the central observer clock recovered afterward.
+The immediate question is whether the map preserves field primitives and
+common wall values before taking a nonlinear fixed point. A separate Grok
+worker reviews this route while the original worker investigates compatible
+iteration in the hybrid polar chart.
+
+Three exact symbolic controls share **36,000 charged values / 30 active
+CPU seconds**, charging 10,000 each. They check a fixed source strip with
+wall-born points, a spacelike initial curve with wall-born points, and the
+six incoming wall jets against their common tangent rates. They evaluate
+manufactured polynomials and identities only. No physical source, new
+trajectory, coefficient scan or approximate solution is admitted. A complete
+local-existence claim still requires an invariant complete function space,
+controlled moving-domain extension, contraction and corner compatibility;
+the map identities alone do not establish those requirements.
+All three exact controls pass with 30,000 values / 0.203125 active CPU seconds.
+The [owner](nsc-atlas-finite-amplitude.md#a-primitive-preserving-local-construction-map)
+now gives the outgoing prefix, wall ODE, incoming transport and primitive
+reconstruction explicitly. A nonlinear fixed point and the compatible chart
+conversions remain unproved.
+
+A fourth symbolic control uses 4,000 of the remaining 6,000 admitted values.
+It records the obstruction to treating a small uniform/L1 iterate error as
+a small time-derivative error, even under a common Lipschitz bound. Only this
+new control is run; the three completed controls are not repeated. The
+separate Grok review supports the double-null route and its constraint/gauge
+logic, while leaving a moving-domain contraction proof to be supplied.
+The new control passes with 4,000 values / 0.046875 CPU seconds, for a
+cumulative 34,000 values / 0.25 seconds. The owner's fixed-point constraint
+implication and exterior relabeling are explicit. Claims of contraction
+based only on unspecified small-time constants or on strong convergence of
+uncontrolled derivative defects are not adopted.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

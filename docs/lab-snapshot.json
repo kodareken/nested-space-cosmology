@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
+  "current_receipt_commit_parent": "158662e1ee28e54e5a142344400259613dd30326",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 230556,
-      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
-      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
+      "bytes": 231006,
+      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
+      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "a79bd2e679922c2c658ab41fd0103e2271b848915d124e76f1af0a7134233d76"
+      "sha256": "24eee0a561c9f58becdff5b85021f0564f8a3f76dd3592704ebe7005f77d3514"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 331053,
-      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
-      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
+      "bytes": 331638,
+      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
+      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "17617be063014eeac38cf957dae7c3fc489722ec18c19aaafed30da5e3a6744a"
+      "sha256": "5a2c1b3bdcd921de10f7c147077cdb09d82c8f67f6d45890b21d4d18583938dd"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 383596,
-      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
-      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
+      "bytes": 392404,
+      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
+      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "90cd61a152feeac73d534da91da9b62d6e96d1556d8a68325b985b9e59f51d99"
+      "sha256": "0c91eef6c22c69c3186b6f51168ba0fa3800631ac7424d042313bec47cfede84"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 389228,
-      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
-      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
+      "bytes": 391650,
+      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
+      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7acd4f5b5cf6e007885c095bdd953196d7a9e8246770820d1f46dc953b573254"
+      "sha256": "d8a1d06e25080f03066c13b4e5433701d1d672ddc81b7504874f098692243e46"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 124990,
-      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
-      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
+      "bytes": 125629,
+      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
+      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a3042274464e68affe6bbe743c41ea8f262d4177ea8c65daee2d286eb675761f"
+      "sha256": "00f942fad227ac26978901ea65bd33abb9caea2e888b4cdea90069d191485c76"
     },
     {
       "bytes": 18356,
@@ -36531,6 +36531,14 @@
       "original_path": "lab/tests/test_nsc_atlas_moving_boundaries.py",
       "path": "tests/test_nsc_atlas_moving_boundaries.py",
       "sha256": "001f3dda89f8e343992415d0ddf83c85496de897f950d2efc5b7b873506b94ad"
+    },
+    {
+      "bytes": 3969,
+      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
+      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
+      "path": "tests/test_nsc_atlas_null_construction.py",
+      "retention_reason": "Exact controls for the compatible local characteristic construction, with no physical replay.",
+      "sha256": "4ac5a7737759c6e4897b0019a6389f42dbc3238f89d4b4ada9b8c24576c0ec13"
     },
     {
       "bytes": 7216,
