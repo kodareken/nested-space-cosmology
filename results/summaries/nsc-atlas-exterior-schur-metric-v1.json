@@ -1,0 +1,118 @@
+{
+  "absolute_quadrature_difference": {
+    "bare_normal_pairing_per_epsilon_squared": 4.2452152904104423e-14,
+    "robin_pairing_per_epsilon_squared": 4.996003610813204e-16
+  },
+  "boundary_quadrature": {
+    "32": {
+      "bare_normal_pairing_per_epsilon_squared": 0.08046117038112345,
+      "robin_pairing_per_epsilon_squared": 0.3703318455512897
+    },
+    "64": {
+      "bare_normal_pairing_per_epsilon_squared": 0.0804611703811659,
+      "robin_pairing_per_epsilon_squared": 0.3703318455512892
+    }
+  },
+  "bulk_variation": "Compact support strictly inside the retained cap; fixed interface, exterior geometry and characteristic data. The classical exterior boundary influence has no support there.",
+  "classical_added_local_bulk_Lambda_times_Lref_squared": 0,
+  "domain": "Quiet exterior IV wedge, wall r/ell in [0.45,0.55], monopole.",
+  "metric_checks": {
+    "maximum_sampled_outward_radial_orientation_residual": 2.919515795785088e-09,
+    "maximum_sampled_weyl_pairing_absolute_residual": 1.1368683772161603e-13,
+    "maximum_sampled_weyl_pairing_scaled_residual": 9.151242526554498e-16
+  },
+  "nine_wall_samples": [
+    {
+      "V": -2.565695357068247,
+      "chi_U": 0.0,
+      "conformal_robin": 0.0,
+      "outward_dphi": 0.0,
+      "phi": 0.0
+    },
+    {
+      "V": -2.5277348890662292,
+      "chi_U": 0.0,
+      "conformal_robin": 0.0,
+      "outward_dphi": 0.0,
+      "phi": 0.0
+    },
+    {
+      "V": -2.489774421064211,
+      "chi_U": 0.0,
+      "conformal_robin": -2.9331347160188772e-39,
+      "outward_dphi": -2.9331347160188772e-39,
+      "phi": 0.0
+    },
+    {
+      "V": -2.4518139530621936,
+      "chi_U": -4.517102858294366e-15,
+      "conformal_robin": -114.67076313202932,
+      "outward_dphi": -115.480472713404,
+      "phi": 0.6477676650997398
+    },
+    {
+      "V": -2.4138534850601756,
+      "chi_U": 0.0,
+      "conformal_robin": 3.879246305477073,
+      "outward_dphi": 1.3911935929148103,
+      "phi": 1.9904421700498103
+    },
+    {
+      "V": -2.375893017058158,
+      "chi_U": -1.90031398674739e-14,
+      "conformal_robin": 102.05119592565559,
+      "outward_dphi": 101.30003807649614,
+      "phi": 0.6009262793275586
+    },
+    {
+      "V": -2.3379325490561405,
+      "chi_U": 0.0,
+      "conformal_robin": -0.02625963740896791,
+      "outward_dphi": -0.005258963289297858,
+      "phi": -0.016800539295736043
+    },
+    {
+      "V": -2.2999720810541224,
+      "chi_U": 2.8417286860702676e-18,
+      "conformal_robin": -0.024068052875951738,
+      "outward_dphi": -0.0036198107788772485,
+      "phi": -0.016358593677659593
+    },
+    {
+      "V": -2.262011613052105,
+      "chi_U": 8.255488088975672e-19,
+      "conformal_robin": -0.022089825119133502,
+      "outward_dphi": -0.0021776982871452195,
+      "phi": -0.015929701465590626
+    }
+  ],
+  "normalization": "chi=r*phi; tabulated phi=ell*phi_physical/epsilon, Robin=ell^2*B(phi_physical)/epsilon; angular field constant on S2.",
+  "not_inferred": [
+    "A vanishing boundary stress or full metric response",
+    "A self-adjoint action from the driven retarded pairing",
+    "A quantum covariance, determinant or full renormalized stress",
+    "A new nonzero cosmological Lambda or observational match"
+  ],
+  "numerical_budget": {
+    "CPU_seconds_limit": 120,
+    "kernel_values_charged": 2312034,
+    "kernel_values_limit": 30000000
+  },
+  "outward_curvature_times_ell": {
+    "cap": 2.25,
+    "exterior": 3.75
+  },
+  "reference_scale": "Lref=ell; the exact zero is independent of ell. P001 ell=10000 m is a fiducial input, not a derived cosmological ruler.",
+  "reproduce": "python scripts/run_python.py scripts/record_nsc_atlas_exterior_schur.py --output results/summaries/nsc-atlas-exterior-schur-metric-v1.json",
+  "schema": "nsc-atlas-exterior-schur-metric-v1",
+  "source": "Original unit-amplitude C3 source_profile, zero bottom, original prepared wall value and analytic first derivative.",
+  "source_sha256": {
+    "scripts/record_nsc_atlas_exterior_schur.py": "d8ab18371a1f7e29e683154639b21b71082a12d9e88394428b65c6219bdc58b5",
+    "src/recursive_horizons/nsc_atlas_exterior_dtn.py": "08815d54874a6b39a3bab04eab9f4957d8c5611e30db80d8a4509a2cc30866ca",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": "70b28d793f572556e3ada8bfaf74a98926f93402d7c15cf987f61b50396ab8e0",
+    "tests/test_nsc_atlas_exterior_dtn.py": "07969a10c5facaf51eaac90458f85f1e5670cab828aa635710d0efebc7d3f475"
+  },
+  "supplied_cap_Lambda0_times_ell_squared": 3,
+  "uncertainty_scope": "The bulk zero is a support identity for the declared variation. Quadrature differences and Ward residuals are numerical diagnostics, not continuum field or model error bounds."
+}

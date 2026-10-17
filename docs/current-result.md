@@ -76,6 +76,19 @@ by the physical Schur reduction; the full quantum covariance, angular tail
 and metric variation remain open. The combined response, vacuum and
 compiled-kernel checks pass all 25 targeted tests.
 
+Its [classical metric response](schur-memory.md#metric-response-of-the-classical-exterior-reduction)
+now includes the conformal boundary term from the actual split action.
+The original prepared pulse gives the nonzero boundary response pairing
+`0.3703318455512892` per unit amplitude squared. The conformal metric check
+passes at a scaled residual below `9.2e-16`; eight focused tests pass.
+The additional local bulk term of this exterior classical influence is
+`Delta Lambda_Schur,cl,local * L_ref^2 = 0` for variations supported strictly
+inside the retained cap with the interface/exterior data fixed. This does
+not supply the target nonzero cosmological Lambda: a quantum determinant,
+joint covariance and subtraction, or a physically specified whole-atlas
+metric reduction, remain necessary. Boundary response and supplied cap
+`Lambda0 * ell^2 = 3` are kept distinct in the compact reproducible result.
+
 ## Full P001 endpoint evolution in progress, 17 October 2026
 
 The [coarse v4 evolution](../results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json)

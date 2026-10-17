@@ -5,6 +5,7 @@ The current Step-7 exact calculations and causal exterior operator reproduce wit
 ```sh
 python scripts/run_python.py scripts/record_nsc_atlas_effective_vacuum.py --output results/summaries/nsc-atlas-effective-vacuum-v1.json
 python scripts/run_python.py scripts/record_nsc_atlas_geometric_average.py --output results/summaries/nsc-atlas-geometric-average-v1.json
+python scripts/run_python.py scripts/record_nsc_atlas_exterior_schur.py --output results/summaries/nsc-atlas-exterior-schur-metric-v1.json
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_effective_vacuum.py tests/test_nsc_atlas_exterior_dtn.py tests/test_nsc_atlas_geometric_average.py -q
 ```
 
@@ -13,6 +14,13 @@ coefficients, fiducial SI inputs, interface polynomial, zero residuals and
 source hashes. The response tests include the existing prepared pulse and
 an exact constant physical field. They use the quiet reference geometry;
 they do not rerun the finite-amplitude P001 endpoint trajectories.
+The exterior Schur record evaluates that actual prepared pulse's conformal
+Robin response and Weyl metric check on one 129-node grid. Its additional
+local classical bulk Lambda is zero for variations supported strictly inside
+the retained cap at fixed interface/exterior data. The nonzero boundary
+pairing is recorded separately. The combined 120 CPU-second / 30-million-value
+budget covers both prepared and prescribed-wall solves and their queries.
+No quantum determinant or covariance is inferred from a retarded pairing.
 The geometric record uses one existing initial slice through the right-end
 cutoff `R/ell=4`, retaining the wall curvature distribution and boosted stress.
 It records three quadrature methods at that same domain, their differences,

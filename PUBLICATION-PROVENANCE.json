@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 371101,
+      "bytes": 372009,
       "path": "docs/current-result.md",
-      "sha256": "5ff55c94a90556724b5e5df78e6601355fa073b886d7d7b9824cd260566c2999"
+      "sha256": "35a8cb94504897d7232ac61f32c79c95121586723b76c8c791b1a7e067a892e5"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2357910,
+      "bytes": 2358860,
       "path": "docs/lab-snapshot.json",
-      "sha256": "45267f8edf7f0351d0f03b07f572ca79c1dd8aa0bd950ae47c25e734dd2579f8"
+      "sha256": "aad0c1373492a30221160b7c848caeb69c8cd4cdd6ca97f44c49e726a2d2e0fb"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 154481,
+      "bytes": 155145,
       "path": "docs/reproducing.md",
-      "sha256": "4756256e12cb7550b566e2cb191ef856369ec416a34edb21fe35b9cde2a118b7"
+      "sha256": "d1f053e0f93ba0e451a730a644656d0cb4cf11752dbfeeeba18a7595fc42dad9"
     },
     {
       "bytes": 31710,
@@ -2241,9 +2241,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 35187,
+      "bytes": 39760,
       "path": "docs/schur-memory.md",
-      "sha256": "fcd1d6a4d9154041e6bedf2232f37b983465fc8b07c61b43aaba8a4dbedb28c1"
+      "sha256": "51ca486c336f6f5251f30010cf4451833948d598a67943ddb647777470351043"
     },
     {
       "bytes": 537091,
@@ -14621,6 +14621,11 @@
       "sha256": "b0e28da4ecce9cc187f00a9d008ff8de24182afa2230017e57251519a5b6736f"
     },
     {
+      "bytes": 4791,
+      "path": "results/summaries/nsc-atlas-exterior-schur-metric-v1.json",
+      "sha256": "ee5de983da1bf3803a16750e43b509f48707b4c5f50d0ea56526d76ee61b2e15"
+    },
+    {
       "bytes": 30591,
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-diagnostic-v2.json",
       "sha256": "3b3706b3069844ae9938860154eb3517005333b68db6ed2ad90b5d90f161753e"
@@ -16516,6 +16521,11 @@
       "sha256": "786fa01a77e015dffbd31fb895af343a59b738fb7ae9b9b894a0ca311af7e9da"
     },
     {
+      "bytes": 7426,
+      "path": "scripts/record_nsc_atlas_exterior_schur.py",
+      "sha256": "d8ab18371a1f7e29e683154639b21b71082a12d9e88394428b65c6219bdc58b5"
+    },
+    {
       "bytes": 19241,
       "path": "scripts/record_nsc_atlas_forcing_cache.py",
       "sha256": "a39c265adad70c6c47ba4d526cfcfd62181ccfafc7b0df7634474aa38b819e5d"
@@ -17146,9 +17156,9 @@
       "sha256": "905f820fc7240b272dab9a3766708e3ff471d4210d408d5300f5eea0d983d766"
     },
     {
-      "bytes": 15190,
+      "bytes": 17314,
       "path": "src/recursive_horizons/nsc_atlas_exterior_dtn.py",
-      "sha256": "14a6942341e3046f041ad9d2be7efc8419ff8d5f34df282a4c4e0e6016d97f96"
+      "sha256": "08815d54874a6b39a3bab04eab9f4957d8c5611e30db80d8a4509a2cc30866ca"
     },
     {
       "bytes": 15940,
@@ -19396,9 +19406,9 @@
       "sha256": "7ab6b9f9f0cabeb0293be13fb11c1b26da62362587070c9419ea716425a23e7a"
     },
     {
-      "bytes": 8888,
+      "bytes": 12354,
       "path": "tests/test_nsc_atlas_exterior_dtn.py",
-      "sha256": "3012c0827b44b9f73f03a18adfeb9cfbcf09140c9c247ebb9d1e2abd98af4aec"
+      "sha256": "07969a10c5facaf51eaac90458f85f1e5670cab828aa635710d0efebc7d3f475"
     },
     {
       "bytes": 7347,
@@ -21526,7 +21536,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "45267f8edf7f0351d0f03b07f572ca79c1dd8aa0bd950ae47c25e734dd2579f8",
+  "lab_snapshot_sha256": "aad0c1373492a30221160b7c848caeb69c8cd4cdd6ca97f44c49e726a2d2e0fb",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

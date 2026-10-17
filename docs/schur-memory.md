@@ -585,6 +585,90 @@ $5.993\times10^{-6}$ instead of its exact zero; it is a numerical diagnostic,
 not an error enclosure. The existing 129-node prepared pulse is recovered
 within the stated numerical tolerances, with no new physical input.
 
+### Metric response of the classical exterior reduction
+
+This calculation uses that actual exterior map and the original
+unit-amplitude prepared source, zero bottom data and prepared wall value.
+It completes the boundary metric identification for the same conformal
+action; it does not select a new quantum state. The split action's scalar
+boundary term is $-K\phi^2/6$. Its variational boundary operator is therefore
+$\mathcal B_+=\mathcal N_++K_+/3$, where here $K_+$ uses the exterior's
+outward normal. Retain initial-data driving separately when calling its
+retarded response a Schur operator.
+
+The predeclared limits were one fixed 129-node prepared solve and one
+129-node Dirichlet solve, with their existing combined ceiling of 120 CPU
+seconds and 30 million kernel values. Boundary integrals use 32/64-point
+Gauss quadrature on each existing time panel. Independent checks use the
+signed wall curvature, directly transformed scalar/metric jets and exact
+conformal weights. Stop on disagreement or budget exhaustion; no grid scan
+or new evolving trajectory is required. The output is a compact response
+summary and hashes, rather than field history.
+
+The signed reference motion gives the two outward mean curvatures
+$K_-\ell=9/4$ and $K_+\ell=15/4$. The mass-dependent terms cancel in
+$\beta'(r)+2\beta/r$, including at the regular $\beta_+=0$ crossing.
+Thus $(K_-+K_+)/3=k$, recovering the actual scalar transmission law.
+Under a smooth Weyl change $g'=e^{2\omega}g$, with all supplied scalar
+data transformed with weight $-1$,
+
+$$
+\mathcal N'_+\phi'=e^{-2\omega}
+ [\mathcal N_+\phi-(\nu_+\omega)\phi],\qquad
+K'_+=e^{-\omega}(K_++3\nu_+\omega),\qquad
+\mathcal B'_+\phi'=e^{-2\omega}\mathcal B_+\phi.
+$$
+
+The $K/3$ term cancels the normal derivative of the Weyl factor. The
+boundary measure has weight $+3$, so its pairing with two weight-$-1$
+fields and this response is invariant. This is a boundary Ward identity;
+the trace of a boundary stress at fixed $\phi$ need not vanish. A driven
+retarded map is also not in general self-adjoint. Its pairing alone is not
+an ordinary single-history action or a quantum determinant.
+
+The specific metric question is the additional **local smooth bulk** vacuum
+term induced by this classical elimination. Variations supported inside
+the retained cap, keeping the interface/exterior data fixed, have no support
+in the exterior boundary functional. Boundary-supported response, the
+supplied cap vacuum term, and a quantum determinant remain separate objects.
+A numerical boundary coefficient is not identified with a four-dimensional
+volume term. The calculation also tests the conformal boundary Ward identity
+with nonzero normal derivatives, so a zero bulk contribution cannot be
+attributed to accidentally evaluating a zero source.
+
+The [compact result](../results/summaries/nsc-atlas-exterior-schur-metric-v1.json)
+gives
+
+$$
+\boxed{\Delta\Lambda_{\mathrm{Schur,cl,local}}L_{\mathrm{ref}}^2=0,}
+\qquad L_{\mathrm{ref}}=\ell.
+$$
+
+This exact zero concerns the specified local retained-bulk variation of the
+classical exterior influence. It does not remove the supplied cap term
+$\Lambda_{0,-}\ell^2=3$ or identify a new cosmological value. The actual
+nonzero response control is
+$\int_\Sigma\phi\mathcal B_+\phi\,d\Sigma/\varepsilon^2
+=0.3703318455512892$ over the original finite strip. The bare-normal pairing
+is $0.0804611703811659$. These dimensionless boundary diagnostics use the
+constant-on-sphere monopole; neither is a vacuum density.
+The 32/64-point quadrature differences are respectively
+$5.0\times10^{-16}$ and $4.25\times10^{-14}$. The sampled Weyl-pairing
+scaled residual is $9.16\times10^{-16}$, and the independent outward radial
+orientation residual is $2.92\times10^{-9}$ from the interpolated wall.
+These diagnostics are not continuum field-error bounds. Eight focused
+checks pass, including an independent transformed-connection contraction
+and the signed transmission sum. Evaluation used 6.5625 CPU seconds and
+2,312,034 charged kernel values. The original evolving jobs are unchanged.
+
+A nonzero quantum value needs the eliminated operator's determinant and
+the joint state's symmetric covariance, with a declared finite vacuum
+subtraction and metric variation. The causal mean-field response supplies
+neither by itself. A bulk-volume term from a constrained change of the whole
+atlas would instead need that physical metric/observer reduction specified.
+This calculation settles the direct classical local contribution and
+identifies the remaining Step-7 inputs rather than fitting a target Lambda.
+
 ## The transition and vacuum-form coefficient
 
 The frozen positive-$F$ DEV3 transition uses radius $32/25$, expansion

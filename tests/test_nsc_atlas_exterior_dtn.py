@@ -5,6 +5,7 @@ import pytest
 from recursive_horizons.nsc_atlas_exterior_dtn import (
     Q0, contraction_bound, kruskal_factor, mode_kernel, outward_normal_derivative,
     proper_null_speeds, radius_null_derivatives, solve_exterior_dirichlet,
+    conformal_robin_response, quiet_outward_curvatures, weyl_boundary_data,
 )
 from recursive_horizons.nsc_atlas_field_preparation import (
     M_OVER_ELL, RADIAL_FLOOR, WALL_UPPER, coefficient_from_radius_derivatives,
@@ -154,6 +155,14 @@ def test_prescribed_prepared_wall_recovers_vanishing_chi_U():
     reference = extract((sample["V"]-Va)/(Vb-Va))
     assert sample["chi_U"] == pytest.approx(0., abs=1e-6)
     assert sample["chi_V"] == pytest.approx(reference["wall_dchi_dV_over_epsilon"], rel=1e-5, abs=1e-6)
+    # Independent prepared solution: chi_U=0 is its actual wall condition.
+    U = geometry['wall'](sample['V'])
+    prime = geometry['wall'](sample['V'], 1)
+    normal = outward_normal_derivative(
+        np.zeros_like(U), reference['wall_dchi_dV_over_epsilon'],
+        reference['wall_chi_over_epsilon'], U, sample['V'], prime)
+    expected = normal['outward_dphi']+1.25*normal['phi']
+    assert sample['conformal_robin'] == pytest.approx(expected, rel=1e-5, abs=1e-6)
     assert budget.kernel_values <= 30_000_000
 
 
@@ -192,3 +201,58 @@ def test_constant_physical_field_and_prescribed_node_entry_values():
         state = solution._state(np.array([(entry-Va)/(Vb-Va)]))[index, 0]
         prescribed = wall(entry)[0]-source(entry)[0]
         assert state == pytest.approx(prescribed, rel=0, abs=1e-13)
+
+
+def test_robin_curvature_from_signed_motion_and_interface_jump():
+    import sympy as sp
+    r, m, k, h = sp.symbols('r m k h', positive=True)
+    beta_inside = m/(k*r**2)+(k**2-h**2)*r/(2*k)
+    beta_outside = m/(k*r**2)-(k**2+h**2)*r/(2*k)
+    common = [sp.simplify(sp.diff(beta, r)+2*beta/r)
+              for beta in (beta_inside, beta_outside)]
+    curvatures = quiet_outward_curvatures()
+    assert float(common[0].subs({h: 1, k: 2})) == curvatures['cap']
+    assert -float(common[1].subs({h: 1, k: 2})) == curvatures['exterior']
+    assert sp.simplify((common[0]-common[1])/3-k) == 0
+    assert (curvatures['cap']+curvatures['exterior'])/3 == 2
+    for invalid in ((-1, 2), (1, 0), (np.nan, 2)):
+        with pytest.raises(ValueError):
+            quiet_outward_curvatures(*invalid)
+
+
+def test_weyl_robin_from_independent_connection_and_field_jets():
+    # At one boundary point use an orthonormal ambient frame, with normal
+    # along x. Contract the transformed connection, not a copied K formula.
+    metric = np.diag([-1., 1., 1., 1.])
+    projector = np.diag([-1., 0., 1., 1.])
+    normal = np.array([0., 1., 0., 0.])
+    covariant_normal = metric @ normal
+    normal_gradient = np.diag([-.4, 0., 1.2, .9])
+    omega_gradient = np.array([.17, -.23, .31, .08])
+    omega, phi = .27, 1.3
+    phi_gradient = np.array([-.7, .21, -.8, .1])
+    K = float(np.sum(projector*normal_gradient))
+    connection_difference = np.empty((4, 4, 4))
+    for lam in range(4):
+        for mu in range(4):
+            for nu in range(4):
+                connection_difference[lam, mu, nu] = (
+                    (lam == mu)*omega_gradient[nu]
+                    +(lam == nu)*omega_gradient[mu]
+                    -metric[mu, nu]*(metric @ omega_gradient)[lam])
+    transformed_normal_gradient = np.exp(omega)*(
+        normal_gradient+np.outer(omega_gradient, covariant_normal)
+        -np.einsum('lmn,l->mn', connection_difference, covariant_normal))
+    direct_K = float(np.exp(-2*omega)*np.sum(projector*transformed_normal_gradient))
+    direct_normal_phi = float(np.exp(-2*omega)*normal @ (phi_gradient-phi*omega_gradient))
+    result = weyl_boundary_data(phi, normal @ phi_gradient, K, omega, normal @ omega_gradient)
+    assert float(result['outward_K']) == pytest.approx(direct_K, abs=1e-14)
+    assert float(result['outward_dphi']) == pytest.approx(direct_normal_phi, abs=1e-14)
+    original_B = conformal_robin_response(phi, normal @ phi_gradient, K)
+    assert float(result['conformal_robin']) == pytest.approx(np.exp(-2*omega)*original_B)
+    paired = phi*original_B
+    transformed_pair = np.exp(3*omega)*result['phi']*result['conformal_robin']
+    assert float(transformed_pair) == pytest.approx(paired, abs=1e-14)
+    # Omitting the conformal boundary term loses covariance for this jet.
+    bare_residual = direct_normal_phi-np.exp(-2*omega)*float(normal @ phi_gradient)
+    assert abs(bare_residual) > .1

@@ -95,6 +95,48 @@ def proper_null_speeds(wall_U_prime, radius):
     return udot, vdot
 
 
+def quiet_outward_curvatures(h=1., k=2.):
+    """Outward K*ell on the owned quiet constant-tension wall.
+
+    From K_common=beta'(r)+2*beta(r)/r. The M/r**2 terms
+    cancel before evaluation, including at the beta_plus=0 crossing.
+    The exterior outward normal is the negative of the common normal.
+    These inverse-length quantities are boundary coefficients, not Lambda.
+    """
+    h, k = float(h), float(k)
+    if not np.isfinite(h) or h < 0 or not np.isfinite(k) or k <= 0:
+        raise ValueError("quiet curvatures need finite h>=0 and k>0")
+    return {"cap": 3*(k*k-h*h)/(2*k),
+            "exterior": 3*(k*k+h*h)/(2*k)}
+
+
+def conformal_robin_response(phi, outward_dphi, outward_K):
+    """B phi=nu(phi)+K*phi/3 from the split conformal scalar action.
+
+    Its scalar boundary term is -K*phi**2/6; on shell the boundary
+    quadratic is -phi*B(phi)/2 in the conservative variational problem.
+    A driven retarded map is not itself a single-history quadratic action.
+    """
+    return np.asarray(outward_dphi)+np.asarray(outward_K)*np.asarray(phi)/3
+
+
+def weyl_boundary_data(phi, outward_dphi, outward_K, omega, normal_omega):
+    """Transform physical boundary jets under g'=exp(2 omega)g.
+
+    phi'=exp(-omega)phi and nu'=exp(-omega)nu. K is the trace
+    on a three-dimensional timelike boundary with spacelike outward normal.
+    This uses the conformal operator, including R'/6; it does not reuse a
+    Ricci-flat-only wave kernel on an arbitrary rescaled metric.
+    """
+    factor = np.exp(-np.asarray(omega))
+    value = factor*np.asarray(phi)
+    derivative = factor**2*(np.asarray(outward_dphi)
+                            -np.asarray(normal_omega)*np.asarray(phi))
+    curvature = factor*(np.asarray(outward_K)+3*np.asarray(normal_omega))
+    return {"phi": value, "outward_dphi": derivative, "outward_K": curvature,
+            "conformal_robin": conformal_robin_response(value, derivative, curvature)}
+
+
 def outward_normal_derivative(chi_U, chi_V, wall_value, wall_U, V, wall_U_prime):
     """Outward nu+(phi) for phi=chi/r, including the scalar radius terms.
 
@@ -203,6 +245,9 @@ class ExteriorDirichletSolution:
             integral[column] = row["integral"]
         return {
             "V": coordinate.copy(), "phi": phi, "outward_dphi": outward,
+            "outward_K": quiet_outward_curvatures()["exterior"],
+            "conformal_robin": conformal_robin_response(
+                phi, outward, quiet_outward_curvatures()["exterior"]),
             "chi_U": chi_U, "chi_V": chi_V, "wall_integral": integral,
             "angular_degree": self.angular_degree,
             "analytic_contraction_bound": self.contraction["q_l"],
