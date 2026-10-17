@@ -7401,6 +7401,77 @@ Independent Grok review confirms the explicit prefix constants, norm choices,
 combined radial identity, boundary directions and `B^2=0`. It also confirms
 the corrected lapse convention after comparison with the production operator.
 
+### Exact reference gauge enclosure
+
+The coupled coefficient estimate needs a uniform reference gauge, not only
+the roots returned at numerical stages. The [interval implementation](../src/recursive_horizons/nsc_atlas_reference_gauge_bound.py)
+encloses the analytic inverse using two fixed endpoint integrals. Its exact
+reference constants are `a=4/5`, `x0=2/5`, `R0=9/20`, with
+
+\[
+ F(r)=(1-r/a)e^{r/a},\qquad
+ I(R)=\int_{R_0}^R-\frac{d\rho}{v(v-\beta_+)},\qquad
+ I(R(x))=2a\log\frac{F(x)}{F(x_0)}.
+\]
+
+The signed junction identities give
+`v^2-beta_plus^2=(a-R)/R>0` and `beta_minus^2-v^2=1-R^2`.
+Consequently I is strictly decreasing. Its regular integrand is
+`-R/(a-R)*(1+beta_plus/v)`. The target also decreases, with derivative
+`-2x/(a-x)`. For the original binary source-cell endpoints, now interpreted
+as explicit exact rationals, the fixed bracket is `[474/1000,477/1000]`.
+The sufficient inequalities are
+
+\[
+ I(474/1000)>\operatorname{target}(x_{\rm left}),\qquad
+ I(477/1000)<\operatorname{target}(x_{\rm right}).
+\]
+
+The complex-ball integration callback forwards the analyticity flag to
+the square root. Real-path positivity of v squared is checked separately.
+A failed enclosure stops the calculation; it does not trigger a new radius
+search. Outward dyadic endpoints, rather than rounded display values,
+carry the resulting bounds.
+
+On the enclosed rectangle in `(x,R)`, use
+
+\[
+ R_x=\frac{2xv(v-\beta_+)}{a-x},\quad
+ s_x=\frac{2x(v-\beta_+)}{a-x},\quad
+ C=\frac{x}{R}e^{(x-R)/a},\quad
+ W=4a\left(1-\frac{F(R)}{F(x)}\right),\quad W_x=\frac{s_x^2}{C}.
+\]
+
+Then `Udot=s_x/C`, `Vdot=1/s_x`, `T_x=beta_minus*s_x/(1-R^2)` and
+`Z_x=R_x/(1-R^2)`. The stable cap characteristic margins are
+`T_x-Z_x=s_x/(beta_minus+v)` and
+`T_x+Z_x=s_x*(beta_minus+v)/(1-R^2)`. Also
+
+\[
+ \eta_x=-\left[\frac1x+\frac1{a-x}
+       +\frac{v_R-\beta_{+,R}}{v-\beta_+}R_x\right]
+       +\frac12\left[\frac1x+\frac1a-(\frac1R+\frac1a)R_x\right].
+\]
+
+The whole reference vacuum wedge has `x<=r<=R(x)`,
+`C=(x/r)exp((x-r)/a)`, `r_x=x(a-r)/(r(a-x))`,
+`r_U=C(a-x)/(4x)` and `K=C/(5r^3)`. These monotone formulas supply
+uniform coefficient bounds without sampling an exterior grid.
+Three [independent controls](../tests/test_nsc_atlas_reference_gauge_bound.py)
+pass with **16,000 charged values / 0.09375 active CPU seconds**: exact
+junction and normalization identities, a 70-digit check against the original
+second-jet rapidity formula, and signed interval serialization/integrand checks.
+
+This specifies an exact corner-compatible reference. The existing numerical
+`ReferenceWallGauge` remains unchanged: it uses binary constants, imported
+endpoint products and Gauss quadrature followed by a floating root. Its
+analytic jets are not derivatives of that quadrature approximation. The
+quadrature, arithmetic, normalization and inverse errors must be included
+when comparing its output with this reference. The numerical quiet initial
+slice likewise needs an explicit comparison to compatible exact initial
+data. An exact reference enclosure alone supplies neither those errors nor
+a tube for the sourced evolution.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

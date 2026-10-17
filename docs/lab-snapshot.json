@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "d2c46fad6bd9e34764c55a8b462530a3f8763994",
+  "current_receipt_commit_parent": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 228043,
-      "change": "Derive the coupled metric and scalar comparison using integrated exterior jets.",
-      "changed_from_commit": "d2c46fad6bd9e34764c55a8b462530a3f8763994",
+      "bytes": 228528,
+      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
+      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "308063f73542e8e7215359a6dd5db785b9f6d5968f3878317fdc1d28f0c2a442"
+      "sha256": "a1e1f564ce19be6ffa6eb7065aaa568762175b9ee262ff471109f66f89f729b9"
     },
     {
       "bytes": 9543,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 354458,
-      "change": "Derive the coupled metric and scalar comparison using integrated exterior jets.",
-      "changed_from_commit": "d2c46fad6bd9e34764c55a8b462530a3f8763994",
+      "bytes": 357554,
+      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
+      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d3accbc14809aae05fb5c277829a6226f267c0e6eb12e5473f342a910fdad94b"
+      "sha256": "c5cd735a077db282c450ac12fd8cdf3df18d2cfb478a5ce12d8e75f1f1eead7e"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 375850,
-      "change": "Derive the coupled metric and scalar comparison using integrated exterior jets.",
-      "changed_from_commit": "d2c46fad6bd9e34764c55a8b462530a3f8763994",
+      "bytes": 377670,
+      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
+      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "02916b27e444eb24ec551e4e3935eb7d1b77671106bbc1bc84a9b3d533820f7f"
+      "sha256": "a850401806dbc42ed2ab46f897b421d787e42329ee1017262ab34152eaebb3e4"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 119316,
-      "change": "Derive the coupled metric and scalar comparison using integrated exterior jets.",
-      "changed_from_commit": "d2c46fad6bd9e34764c55a8b462530a3f8763994",
+      "bytes": 120106,
+      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
+      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b1c3f5a4293ef73c70809f39354159e76a0118d6d219f44a133e58cc2c217a8c"
+      "sha256": "7744d1e7938b37bf8e9b6ad0c9ef74cce7a75d5a9daf99cce95c89e0710ad074"
     },
     {
       "bytes": 18356,
@@ -29793,6 +29793,14 @@
       "sha256": "ecf8bdedae17d7816708debcb8c400af94e3a8bf4f6ca27ff32a514fa677d1e5"
     },
     {
+      "bytes": 3175,
+      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
+      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
+      "path": "scripts/check_nsc_atlas_reference_gauge_bound.py",
+      "retention_reason": "Current exact reference-gauge implementation and evidence.",
+      "sha256": "c5b48b6d9a8c8578d60ac5989ab2b6a884e9db0d4f8802042e197466303a9a5a"
+    },
+    {
       "bytes": 5510,
       "change": "Preserve the source-cell certificate and include the actual final-knot value and first-jet owner.",
       "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
@@ -32798,6 +32806,14 @@
       "path": "src/recursive_horizons/nsc_atlas_prepared_response.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "70b28d793f572556e3ada8bfaf74a98926f93402d7c15cf987f61b50396ab8e0"
+    },
+    {
+      "bytes": 5935,
+      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
+      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
+      "path": "src/recursive_horizons/nsc_atlas_reference_gauge_bound.py",
+      "retention_reason": "Current exact reference-gauge implementation and evidence.",
+      "sha256": "cbf2e65663f355565e0d845606813b473faaf49e6e8f1181b1e777fc36f730d1"
     },
     {
       "bytes": 4099,
@@ -36446,6 +36462,14 @@
       "path": "tests/test_nsc_atlas_quiet_history_partition.py",
       "retention_reason": "Exact quiet-prefix partition and independent rational projection control.",
       "sha256": "e8c6739b087edabe1e39c42cd915facf10d24e7d9d7e248776d2f882a8ae9358"
+    },
+    {
+      "bytes": 2944,
+      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
+      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
+      "path": "tests/test_nsc_atlas_reference_gauge_bound.py",
+      "retention_reason": "Current exact reference-gauge implementation and evidence.",
+      "sha256": "159b842421068a09e2884925b01e0c8467daf56db8f060d59dfe23dd875311d3"
     },
     {
       "bytes": 7870,

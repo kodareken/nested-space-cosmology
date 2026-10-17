@@ -2638,6 +2638,35 @@ the reviewer confirms the canonical convention. The common tube, compatible
 initialization, uniform reference jets and all residual enclosures remain
 the inputs required to evaluate this conditional bound on the original cell.
 
+### Uniform exact reference gauge, 17 October 2026
+
+The coupled mixed-norm estimate now needs uniform physical coefficients.
+First enclose its existing analytic reference gauge on the original first
+source cell, using the exact corner `a=4/5,x0=2/5,R0=9/20`. The numerical
+gauge and original source remain unchanged. Their binary normalization,
+quadrature, inversion and floating evaluation errors remain separate inputs.
+
+Admit exactly two certified endpoint integrals, from `9/20` to the fixed
+radii `474/1000` and `477/1000`, and interval evaluation of the algebraic
+wall/clock and vacuum-wedge coefficients. Use 160-bit balls, requested
+absolute/relative quadrature tolerance `2^-80`, degree limit 64, evaluation
+limit 512 and depth limit 20 per integral, with one shared hard allowance
+of **100,000 charged values / 20 process-CPU seconds**. Each integrand
+callback charges 64 values; other interval work charges 2,048. No source
+query, waveform reconstruction, trajectory, root search or scan is admitted.
+Stop if the two endpoint inequalities, real-path regularity or positive
+wall coefficients are not proved. Save the compact dyadic enclosures and
+authenticated original cell/producer hashes, not quadrature histories.
+
+Independent exact junction, normalization and high-precision rapidity
+controls have a **20,000-value / 15-active-CPU-second** allowance. Three
+controls pass with 16,000 values / 0.09375 active CPU seconds. Grok reviews
+the coefficient formulas and monotonic bracket independently. The likely
+failures are an overly wide radius enclosure, an uncertified square-root
+branch in complex integration, or conflating this exact reference with the
+floating gauge and sourced tube. Fixed bracket inequalities, the analytic
+branch flag, and a separate initial/gauge error ledger address these cases.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

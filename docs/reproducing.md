@@ -583,7 +583,22 @@ The later Verify run `38983430995` at `b422d9b` also passes both complete
 Linux/Windows suites and current-paper checks. The PDF workflow at `0a2799c`
 passes separately; newer commits retain their own queued verification.
 
-The full metric-feedback comparison has four exact/manufactured controls:
+The uniform reference gauge has three independent controls and one bounded
+two-integral application on the already certified original source cell:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_reference_gauge_bound.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_reference_gauge_bound.py --output results/summaries/nsc-atlas-reference-gauge-bound-v1.json
+```
+
+The application requires committed producers and a new output path. Its
+100,000-value / 20-second budget covers two predeclared radius endpoints and
+interval coefficient evaluation, with no root search or evolution. The
+summary retains signed dyadic enclosures. Exact corner normalization is
+explicit; numerical gauge and sourced-tube errors are separate. The controls
+pass with 16,000 charged values / 0.09375 active CPU seconds.
+
+The coupled comparison controls are:
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_integrated_feedback.py -q -s
