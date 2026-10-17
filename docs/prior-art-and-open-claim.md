@@ -3230,6 +3230,58 @@ the shared source and separate the affine source map's binary constants
 from the exact rational reference geometry. No physical gravitational
 coefficient or Taylor constant was evaluated by this endpoint application.
 
+### First geometric coefficients on the original onset cell, 17 October 2026
+
+Use the preceding scalar enclosure to bound the first wall-radius and
+anchored polar-clock coefficients at the same right source endpoint.
+The missing connection is controlled integration of the already identified
+continuum mass, lapse and wall functionals. Inputs remain the original
+binary source map, rational reference geometry, quiet anchor, action and
+couplings. No source, amplitude or geometry is fitted.
+
+The borrowed tools are interval Riemann integration, variation of constants
+and the existing spherical constraints. Preserve three exact cancellations:
+the endpoint `w*j` terms in `2*z*mu-d*(mu-nu)`, the frame term in the
+Einstein radius `e=rho-w^2/(12*z)`, and the cap combination
+`Jcap=2*nu_E/z-(1-z^2)*delta_E`. The mathematical owner gives their
+derivations and the resulting triangular integration. Whole-panel ranges,
+not sampled derivatives or an assumed trapezoid error, enclose each integral.
+
+Implement one component and producer in the existing package. Admit one
+fixed 128-panel pass at 160-bit ball precision, with at most 200,000 charged
+values and 30 process-CPU seconds. It reuses the authenticated source,
+reference-gauge and scalar-endpoint certificates. Each panel bounds the
+analytic compact source and its first derivative; no sampled field,
+geometric ODE, root search, adaptive subdivision, grid scan or retry is
+included. Save endpoint intervals, constants, final moment summaries,
+input hashes and regeneration instructions; do not save panel histories.
+
+Independent manufactured controls share 30,000 charged values and 20
+active CPU seconds. Check the flux/frame identities, the two clock
+cancellations, weighted source moments, interval-prefix containment,
+quiet input and domain/budget failures. Grok independently reviews the
+analytic bounds. A separate 1,024-value / 5-CPU-second receipt audit checks
+input/source authentication and outward displays without replaying the
+physical integration. Freeze the producer before the single application.
+
+Stop on changed inputs, a failed positive denominator, absent quiet collar,
+failed source monotonicity, nonfinite interval or exhausted budget. If the
+result is too wide to decide a sign or comparison, record that diagnosis
+before designing any new calculation. The main risks are loss of exact
+mass/lapse cancellation, confusion between source and proper-time
+derivatives, and unsupported quadrature error claims. The explicit
+cancellations, `j=w_x/s_x`, and whole-panel intervals address these.
+These are first coefficients on the onset cell; their calculation does
+not evaluate the finite-amplitude Taylor constant or later central arrival.
+
+**Implementation controls:** twelve controls pass across the initial run
+and one corrected reference-identity assertion, using 19,048 charged
+values / 0.65625 active CPU seconds. The initial mass assertion omitted
+the beta-plus reference relation; its residual polynomial is identically
+zero when that supplied relation is included. The component also removes
+the local `w*j` term from the cap clock before interval evaluation. No
+physical coefficient application has run at this implementation stage.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

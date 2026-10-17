@@ -11456,6 +11456,202 @@ monotonicity, the two scale conventions, exact endpoint conversion and
 outward displays. These bounds do not yet integrate the gravitational coefficients or
 evaluate their quadratic amplitude remainder constant.
 
+#### Enclosing the first geometric coefficients without a field grid
+
+Use the same source interval `[L,R]` and reference image `[zl,zh]` as the
+preceding scalar bound. Here `x` is the affine source label, `z` is the
+reference wall radius, `sx=ds/dx`, `w=chi_W/epsilon`, `j=w_x/sx`,
+`p=w/z`, `d=v-beta_plus`, `a=4/5`, and `Az=1-z^2`. The reference
+relations and the already identified continuum functionals fix the problem;
+there is no new source or wall datum.
+
+On this first part of the compact pulse, its coordinate satisfies
+`-1<compact_coordinate<=-1/2` wherever the field is nonzero, and its
+coordinate derivative exceeds one. Thus
+`g_x/g=-8*compact_coordinate*coordinate_x/(1-compact_coordinate^2)`
+is at least `16/3`. The derivative increases with x for the original
+negative U0 and ordered negative V endpoints. Together with `Bstar<1`,
+the positive Volterra comparison gives the useful history bounds
+
+$$
+0\le(1-q)g\le w\le g,\qquad
+0\le g_x-B_\star g\le w_x\le g_x.
+$$
+
+They extend over the quiet prefix by zero. The producer checks these
+source-coordinate inequalities using the original binary source constants;
+it does not replace them with the rational reference scale.
+
+**Mass prefixes and radius.** Write `Iplus=int Lplus ds` and
+`ID=int (Lplus-Lminus) ds`, both zero in the quiet past. The direct
+tangent/normal projections give
+
+$$
+L_+=-\frac d2j^2-\frac{f_+}2jp+\frac{vf_+}4p^2,
+\quad f_+=1-\frac az,
+$$
+$$
+L_D=-zj^2+2z(\beta_++z)jp
+-vz(\beta_++z)p^2-\frac{z^2v}2p^2.
+$$
+
+The last term retains the cap potential. With
+`cplus=1/(6z)-1/(10z^2)` and `cdiff=z/4-1/(10z^2)`,
+
+$$
+\mu=I_++\frac{dwj}{6}+c_+w^2,\qquad
+D=\mu-\nu=I_D+\frac{zwj}{3}+c_Dw^2.
+$$
+
+The Jordan displacement obeys
+`rho_s=v_z*rho+(mu/z+beta_plus*D/(2z^2))/v`. In the Einstein
+radius coefficient `e=rho-w^2/(12z)`, the local `wj` term cancels its
+frame derivative. Consequently `E=e/v` has a triangular integral equation:
+
+$$
+E_x=s_x\left[\frac{I_+/z+\beta_+I_D/(2z^2)}{v^2}+C_e w^2\right],
+$$
+$$
+C_e=\frac{v_z}{12zv}
++\frac{c_+/z+\beta_+c_D/(2z^2)}{v^2}+\frac1{12z^2}.
+$$
+
+There is no E on the right. Recover `e=vE` and
+`rho=e+w^2/(12z)`. Derivatives are with respect to radius:
+`beta_plus,z=-2/(5z^3)-5/4`,
+`v_z=beta_plus*beta_plus,z/v-a/(2vz^2)`.
+
+**Exterior clock.** Its mass combination is
+`Jeta=2z*mu-d*D`. All endpoint `wj` terms cancel, leaving
+`2z*Iplus-d*ID+(2z*cplus-d*cdiff)*w^2`.
+For an earlier source label t, the coefficient of `j(t)^2` in its
+history integrand is
+
+$$
+h_1(x,t)=d(x)z(t)-z(x)d(t)
+=z(x)z(t)\left[\frac{d(x)}{z(x)}-\frac{d(t)}{z(t)}\right].
+$$
+
+It is bounded by `Hlip*(x-t)`, where
+`Hlip=zh^2*sup|d_z/z-d/z^2|*sup(z_x)` and `z_x=v*sx`.
+The other two coefficients are
+
+$$
+h_{jp}=-z(x)f_+(t)-2d(x)z(t)(\beta_+(t)+z(t)),
+$$
+$$
+h_{p^2}=\frac{z(x)v(t)f_+(t)}2
++d(x)\left[v(t)z(t)(\beta_+(t)+z(t))+\frac{z(t)^2v(t)}2\right].
+$$
+
+Define `M00=int g^2`, `M20=int g_x^2`,
+`M01=int (x-t)g(t)^2 dt`, and `M21=int (x-t)g_x(t)^2 dt`,
+all from L to the current x. Since `int w*w_x=w(x)^2/2`,
+
+$$
+|J_\eta|\le\frac{H_{\rm lip}}{s_{x,\min}}M_{21}
++\frac{\sup|h_{jp}|}{2z_l}g(x)^2
++\frac{s_{x,\max}\sup|h_{p^2}|}{z_l^2}M_{00}
++\sup|2zc_+-dc_D|g(x)^2.
+$$
+
+Current and earlier factors use the certified hull independently. The
+bound does not set them equal. For the source lapse let
+`ps=g/x`, `I0=int ps^2`, `I1=int x*ps_x^2`, and `I2=int I1`.
+The exact source identity above gives
+`zetaE0=(-I2/2-I0/6)/x-ps^2/6-I0/(6(a-x))`.
+In the exterior, `chi_U` integrates over source time, so
+`|chi_U|<=Kmax*(R-L)*g`; it is not bounded by a transverse kernel
+integral without an additional argument. Hence
+
+$$
+|p_U|\le g\left[\frac{K_{\max}(R-L)}{r_{\min}}
++\frac{r_{U,\max}}{r_{\min}^2}\right]=g C_U,
+\quad
+0\le\zeta_{E,W}-\zeta_{E,0}
+\le\frac{W_{\max}r_{\max}}{2r_{U,\min}}C_U^2g^2.
+$$
+
+Use `zetaJW=zetaEW+w^2/(4z^2)`. The exterior clock rate is
+
+$$
+\eta_x=\frac{s_x}{2ad}
+\left[\zeta_{J,W}+\frac{d_z}{d}\rho
++\frac{J_\eta}{2z^2vd}\right].
+$$
+
+**Cap clock.** Set `Q(x)=T0wall(x)+atanh(z(x))`, whose derivative
+has certified positive bounds `Qmin,Qmax`. On a wall slice, an incoming
+label y corresponds to
+`r=tanh(atanh(z(x))-int_y^x Q_x)` and `dr/dy=(1-r^2)Q_y`.
+The Lipschitz bound for tanh gives `0<=z-r<=Qmax*(x-y)`.
+Thus `rstar=zl-Qmax*(R-L)>0` bounds the nonquiet collar away from
+the centre; earlier labels are quiet. No reflected field is present.
+
+In that collar `p=w(y)/r`, `Pi=p_T/(1-r^2)=w_y/(Q_y*r*(1-r^2))`
+and `p_r=Pi-w/r^2`. In particular `p_T=w_y/(Q_y*r)`;
+it does not contain the extra lapse factor. Let `Qc=Pi^2+p_r^2`.
+For `Amin=1-zh^2`, `Amax=1-rstar^2`, `Hmax=1-3rstar^2`,
+
+$$
+Q_c\le\frac{2g_y^2}{Q_{\min}^2r_\star^2A_{\min}^2}
++\frac{g^2}{r_\star^4}.
+$$
+
+The cap constraints give the exact density
+
+$$
+\partial_r\left(\frac{2\nu_E}{z}-A_z\delta_E\right)
+=\frac{rQ_c}{2z}(r-z)(1-r^2-rz-z^2)+\frac{r^2p^2}{z}.
+$$
+
+Since `zh<1/sqrt(3)`, its kinetic part is nonpositive. With
+`Ckin=Qmax^2*zh*Hmax*Amax/(2zl)`, the combination `Jcap` therefore obeys
+
+$$
+-C_{\rm kin}\left[\frac{2M_{21}}{Q_{\min}^2r_\star^2A_{\min}^2}
++\frac{M_{01}}{r_\star^4}\right]
+\le J_{\rm cap}\le\frac{A_{\max}Q_{\max}}{z_l}M_{00}.
+$$
+
+The cap clock's separate mass/lapse contributions combine into
+`beta_minus*Jcap/Az^2`. Its local `wj` terms also cancel. The resulting rate is
+
+$$
+T_{1,x}=s_x\left[
+\frac{\beta_{-,z}\rho+(I_D+c_Dw^2)/(2z^2)}{A_z}
++\frac{\beta_-w^2}{12z^2A_z}
++\frac{2\beta_-ze}{A_z^2}+\frac{\beta_-J_{\rm cap}}{A_z^2}\right].
+$$
+
+Both clocks start at zero in the original quiet past. The endpoint
+coefficients at a fixed affine source label are
+`R1=e+2avd*eta` and `T1fixed=T1+2a*beta_minus*d*eta/Az`, as established
+by the fixed-label identification above.
+
+**Integration and scope.** The
+[component](../src/recursive_horizons/nsc_atlas_onset_geometry_bound.py)
+uses one fixed 128-panel interval Riemann sum. If a density is enclosed
+by B throughout a panel of width h, its primitive advances by `h*B`,
+and every interior primitive lies in `old+[0,h]*B`. For a second
+primitive, the increment is `h*first_old+(h^2/2)*B`. These integral
+identities control all source moments without assuming higher field
+derivatives or treating refinement agreement as an error bound. The
+order is moments and mass prefixes, E, then the two clocks; no unknown
+feeds back into its own rate. Final output uses the authenticated scalar
+endpoint interval and retains only compact enclosures and provenance.
+
+The [independent controls](../tests/test_nsc_atlas_onset_geometry_bound.py)
+check tangent/normal projections, the reference mass normalization, all
+three frame/clock cancellations, exact weighted primitives, the quiet
+solution and guards. Twelve controls pass across the initial run and one
+corrected assertion, using 19,048 charged values / 0.65625 active CPU
+seconds. The initial assertion omitted the reference beta-plus relation;
+its remaining polynomial vanishes identically under that relation.
+The physical endpoint application follows a frozen producer commit.
+This calculation does not evaluate the quadratic Taylor constant,
+extend the onset domain or predict a later central-arrival measurement.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

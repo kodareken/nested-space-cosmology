@@ -41,7 +41,30 @@ source bytes. The command authenticates the original source-cell and reference
 image, then encloses the leading wall field and its first affine-source
 derivative at the original right endpoint. It evaluates no trajectory or
 sampled field and performs no grid scan. Radius and clock coefficient
-integration and their finite-amplitude remainder remain separate work.
+integration is handled by the following separate component; their
+finite-amplitude remainder constant remains unevaluated.
+
+The first geometric coefficient enclosure has independent exact controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_onset_geometry_bound.py -q -s
+```
+
+After its sources are committed, one fixed 128-panel interval pass runs with:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_onset_geometry_bound.py --output <new-output-path>
+```
+
+The output parent must exist. This command authenticates the original source,
+reference and scalar endpoint receipts. It bounds the continuum mass,
+Einstein radius and anchored polar-clock first coefficients at the original
+right source label. The panel ranges are enclosures of the analytic source;
+there is no evolved field grid, geometric ODE, adaptive refinement or retry.
+Its independent controls use 19,048 charged values / 0.65625 active CPU
+seconds across the initial execution and one corrected reference-identity
+assertion. The one physical application has a separate 200,000-value /
+30-CPU-second limit and retains only endpoint summaries and hashes.
 
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic

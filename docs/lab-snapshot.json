@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "2052a1d44da698f20b1c4180317d005e2596d4d1",
+  "current_receipt_commit_parent": "5e3a56b523db7603d29abb03957610b00bd3c13c",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 234768,
-      "change": "Record the certified leading wall scalar and derivative at the original onset endpoint.",
-      "changed_from_commit": "2052a1d44da698f20b1c4180317d005e2596d4d1",
+      "bytes": 235328,
+      "change": "Enclose first onset geometric coefficients using exact mass, radius and clock cancellations.",
+      "changed_from_commit": "5e3a56b523db7603d29abb03957610b00bd3c13c",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "68d8b82946d3be0344fe7ce2b72785e8ee178b3b6edaff54ebe7b38f64021084"
+      "sha256": "dc8af92728dca14c2505e57d8cd6080cf383b74a1860bbd8956d1c4094e2b207"
     },
     {
       "bytes": 9543,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 528481,
-      "change": "Record the certified leading wall scalar and derivative at the original onset endpoint.",
-      "changed_from_commit": "2052a1d44da698f20b1c4180317d005e2596d4d1",
+      "bytes": 535569,
+      "change": "Enclose first onset geometric coefficients using exact mass, radius and clock cancellations.",
+      "changed_from_commit": "5e3a56b523db7603d29abb03957610b00bd3c13c",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c68a3b563f27f05dbe134812a4d9639ba956f914ec21755ee5ba4214d7a0c54a"
+      "sha256": "bbdfb24d0cbbb1e05a72c06c73d6417b00fcccf29c7187b41191b97646bdb04d"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 413952,
-      "change": "Record the certified leading wall scalar and derivative at the original onset endpoint.",
-      "changed_from_commit": "2052a1d44da698f20b1c4180317d005e2596d4d1",
+      "bytes": 417168,
+      "change": "Enclose first onset geometric coefficients using exact mass, radius and clock cancellations.",
+      "changed_from_commit": "5e3a56b523db7603d29abb03957610b00bd3c13c",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "201851dfeae6eb5617b07ef8325ced3e4b96f9d57077b69b4f3048362569e66f"
+      "sha256": "d30006c77787fc6367a59afa7a57642b91c498acd66f59e7370fcbb8a290606c"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 128071,
-      "change": "Record the certified leading wall scalar and derivative at the original onset endpoint.",
-      "changed_from_commit": "2052a1d44da698f20b1c4180317d005e2596d4d1",
+      "bytes": 129156,
+      "change": "Enclose first onset geometric coefficients using exact mass, radius and clock cancellations.",
+      "changed_from_commit": "5e3a56b523db7603d29abb03957610b00bd3c13c",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e823fae5ed6be8e7a9001bd1b7982f21247519c2d0e6ae07c3f922e43568c867"
+      "sha256": "54a5ce6aa7811c50f19376419e7a60091a8729f1fa4f1d1aba776a52af9e3a46"
     },
     {
       "bytes": 18356,
@@ -29889,6 +29889,14 @@
       "sha256": "08d3ec7136650222fb4c4928a5792033481ed0cf9d084051c59b7be044892641"
     },
     {
+      "bytes": 4745,
+      "change": "Enclose first onset geometric coefficients using exact mass, radius and clock cancellations.",
+      "changed_from_commit": "5e3a56b523db7603d29abb03957610b00bd3c13c",
+      "path": "scripts/check_nsc_atlas_onset_geometry_bound.py",
+      "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
+      "sha256": "e6fb6f1804418b1271ac6834c9055a0a8e6f10f42ca9d60e976eaee6dd8df78f"
+    },
+    {
       "bytes": 14645,
       "change": "Carry optional interior-jet history enrichment through runtime and original-input certificates.",
       "changed_from_commit": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
@@ -32947,6 +32955,14 @@
       "path": "src/recursive_horizons/nsc_atlas_onset_endpoint_bound.py",
       "retention_reason": "Direct leading-scalar onset enclosure and reproducible independent controls.",
       "sha256": "9e3308ff90ed9d43e29901280123499f814392f5421e7b3e48ba4c4db1b31c13"
+    },
+    {
+      "bytes": 10293,
+      "change": "Enclose first onset geometric coefficients using exact mass, radius and clock cancellations.",
+      "changed_from_commit": "5e3a56b523db7603d29abb03957610b00bd3c13c",
+      "path": "src/recursive_horizons/nsc_atlas_onset_geometry_bound.py",
+      "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
+      "sha256": "502191913f4e851a665949bffa8ba97a80ceba796ac4bd6df1e5801394c9efc4"
     },
     {
       "bytes": 11824,
@@ -36651,6 +36667,14 @@
       "path": "tests/test_nsc_atlas_onset_endpoint_bound.py",
       "retention_reason": "Direct leading-scalar onset enclosure and reproducible independent controls.",
       "sha256": "84489cebaf6edbb108651a6c5eb667ee522de8eae9ea30916c7f00ab1ba50d5d"
+    },
+    {
+      "bytes": 6717,
+      "change": "Enclose first onset geometric coefficients using exact mass, radius and clock cancellations.",
+      "changed_from_commit": "5e3a56b523db7603d29abb03957610b00bd3c13c",
+      "path": "tests/test_nsc_atlas_onset_geometry_bound.py",
+      "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
+      "sha256": "dda2a08e7908086d32cfa1aa72fd761c722acc042747f3d3c4a2d01e4c047a07"
     },
     {
       "bytes": 7216,
