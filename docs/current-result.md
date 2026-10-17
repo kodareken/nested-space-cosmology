@@ -245,9 +245,23 @@ range from zero to the recorded alpha. It gives `abs(X)<2.018e-7`,
 below `4.940e-18`, with both metric first derivatives and the radius-product
 input also enclosed. Four controls and Grok review pass; a 512-value rational
 audit checks the 6,365-byte receipt. The application uses 2,048 values and
-no source solve or evolution. These actual forcings supply the next coupled
-tube calculation; they are distinct from interpolation error and do not yet
-establish the sourced spacetime.
+no source solve or evolution. These actual forcings supply the coupled-tube
+calculation below; they are distinct from interpolation error and alone do
+not establish the sourced spacetime.
+
+That [fixed coupled-tube calculation](nsc-atlas-finite-amplitude.md#a-fixed-conditional-coupled-tube)
+now passes on the same interval and uniformly over the admitted coupling
+range: all ten image bounds improve strictly, the largest ratio is below
+`0.516`, and all seven positivity/travel margins remain positive. It uses
+8,192 charged values, no evolution and no retry. Four direct controls,
+Grok implementation review and an exact-rational audit support the compact
+[receipt](../results/summaries/nsc-atlas-coupled-tube-bound-v1.json).
+The [first-derivative argument](nsc-atlas-finite-amplitude.md#conditional-first-derivative-continuation)
+also closes conditionally, with three symbolic controls and independent
+Grok review. It bounds the cap derivatives before differentiating the
+exterior wall data and does not assume an incoming null constraint.
+A compatible local solution construction and its continuation/constraint
+proof remain open; these a priori bounds do not claim that construction.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

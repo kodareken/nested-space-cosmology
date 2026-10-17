@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "40156cf8644d5b1ae5029a70db00ce362799e003",
+  "current_receipt_commit_parent": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 230116,
-      "change": "Add fixed coupled tube and conditional derivative closure with independent algebraic controls.",
-      "changed_from_commit": "40156cf8644d5b1ae5029a70db00ce362799e003",
+      "bytes": 230556,
+      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
+      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "a8708cc6a26c2fa924caf7bd93c1efd38c49305b6e820094af7bddcbabe86281"
+      "sha256": "a79bd2e679922c2c658ab41fd0103e2271b848915d124e76f1af0a7134233d76"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 330050,
-      "change": "Record actual source-forcing bounds and independent audits.",
-      "changed_from_commit": "7025f41068086dc3d9d5425bb825a4d51e40c022",
+      "bytes": 331053,
+      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
+      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e8ee56cc14cb94beb9a94b3f53013476c49ba2796c67cd6cbf64026a27a2383d"
+      "sha256": "17617be063014eeac38cf957dae7c3fc489722ec18c19aaafed30da5e3a6744a"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 381501,
-      "change": "Add fixed coupled tube and conditional derivative closure with independent algebraic controls.",
-      "changed_from_commit": "40156cf8644d5b1ae5029a70db00ce362799e003",
+      "bytes": 383596,
+      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
+      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e942331d80eb26e337929b7a16a14ee59ccf594656ee90e0e7265362584bcbfe"
+      "sha256": "90cd61a152feeac73d534da91da9b62d6e96d1556d8a68325b985b9e59f51d99"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 387591,
-      "change": "Add fixed coupled tube and conditional derivative closure with independent algebraic controls.",
-      "changed_from_commit": "40156cf8644d5b1ae5029a70db00ce362799e003",
+      "bytes": 389228,
+      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
+      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d40b99af833eb34f737970f480c3df6ba5b81e607e9081c655d4698c7fcbf326"
+      "sha256": "7acd4f5b5cf6e007885c095bdd953196d7a9e8246770820d1f46dc953b573254"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 124478,
-      "change": "Add fixed coupled tube and conditional derivative closure with independent algebraic controls.",
-      "changed_from_commit": "40156cf8644d5b1ae5029a70db00ce362799e003",
+      "bytes": 124990,
+      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
+      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d6bc9a34d847a310d8289c89a0df3ddd462f6c6431be471cde1307caa6098cbe"
+      "sha256": "a3042274464e68affe6bbe743c41ea8f262d4177ea8c65daee2d286eb675761f"
     },
     {
       "bytes": 18356,
@@ -29589,6 +29589,14 @@
       "path": "results/summaries/nsc-atlas-cap-transport-balance-v1.json",
       "retention_reason": "Compact fixed-state cap transport attribution, hashes and regeneration command.",
       "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
+    },
+    {
+      "bytes": 29878,
+      "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
+      "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
+      "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
+      "retention_reason": "Compact authenticated conditional coupled-tube certificate; no raw trajectory.",
+      "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
       "bytes": 28312,

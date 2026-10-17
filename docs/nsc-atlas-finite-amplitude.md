@@ -7845,6 +7845,42 @@ cross terms and a synthetic envelope. Strict improvement, if obtained,
 still needs a smooth local construction and derivative continuation to
 establish a sourced spacetime throughout the cell.
 
+The [frozen application](../results/summaries/nsc-atlas-coupled-tube-bound-v1.json)
+at producer `706fe56157ca2c9102e53b8468a3d38e9e49da39` passes all ten
+strict comparisons on the original cell, uniformly for
+`0<=alpha<=4789928473501569/36893488147419103232`:
+
+| Quantity | Returned bound is below |
+| --- | --- |
+| `J_r` | `5.662e-9` |
+| `J_L` | `7.183e-8` |
+| `J_X` | `1.474e-10` |
+| `abs(delta T)` | `7.061e-9` |
+| `abs(E_plus)` | `0.002061` |
+| `abs(E_minus)` | `3.639e-19` |
+| `abs(chi)` | `3.129e-6` |
+| `abs(delta r_U)` | `1.451e-6` |
+| `abs(delta L_U)` | `4.224e-5` |
+| `abs(P)` | `2.098e-9` |
+
+Every image-to-box ratio is below `0.516`; the largest is the incoming
+cap E-plus ratio, approximately `0.515020212`. The quiet-core travel margin
+exceeds `0.0012697`, cap A exceeds `0.77247`, and both characteristic gaps,
+wall H, expansion and the longitudinal-derivative margin are positive.
+The exact dyadic endpoints in the receipt carry the bounds; decimal entries
+here are outward display ceilings.
+
+The single interval evaluation uses 8,192 charged values and CPU below timer
+resolution, with no source queries, integrations, time steps or retries.
+Grok's code review confirms the inequalities. A separate 512-value /
+0.09375-CPU-second rational audit authenticates all 24 producer bindings,
+four input identities and 64 enclosure records, including every ratio and
+display. The 29,878-byte receipt has SHA-256
+`192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab`.
+This is a strict conditional bootstrap improvement, with
+`existence_proved=false`; it is not a new numerical trajectory or a proof
+that the common spacetime has been constructed.
+
 ### Conditional first-derivative continuation
 
 There is a derivative estimate beyond the ten-component tube. Assume the
@@ -7894,16 +7930,18 @@ In the cap let `D_plus=partial_z E_plus`, `D_minus=partial_z E_minus`,
  f_z=\frac{(E^+-E^-)/2-A_0f}{r}.
 \]
 
-Set `D=2*N/r^2-r*Ppotential-4*N/A0`. Then
+Here write `P1=(V-3)/alpha` for the vacuum-subtracted cap potential,
+continued at zero coupling; this is distinct from the exterior jet P.
+Set `D=2*N/r^2-r*P1-4*N/A0`. Then
 `beta_zz=alpha*mu*(A0*a_c*D+D_z)`, with
 
 \[
  D_z=\frac{2A_0N_r}{r^2}-\frac{4A_0N}{r^3}
-       -A_0P-rP_f f_z-4N_r-\frac{8rN}{A_0}.
+       -A_0P_1-r(P_1)_f f_z-4N_r-\frac{8rN}{A_0}.
 \]
 
 Likewise differentiating
-`S=alpha*mu*(r*Uquot+(2*N/r^2-r*Ppotential)*f)` uses only
+`S=alpha*mu*(r*Uquot+(2*N/r^2-r*P1)*f)` uses only
 `N_r`, `delta_r=a_c`, `f_z` and smooth potential derivatives on a compact
 field interval. Thus `beta_zz` and `(A0*S)_z` are bounded without D-plus or
 D-minus. The commuted transport equations are exactly
@@ -7944,7 +7982,7 @@ wall derivatives of the radial metric, differentiate its constrained ODE:
 
 \[
  (N_T)_r+a_cN_T
- =\frac{r^2P_f f_T}{2}+\frac A4\partial_T(p^2+h^2),\qquad
+ =\frac{r^2(P_1)_f f_T}{2}+\frac A4\partial_T(p^2+h^2),\qquad
  (\delta_T)_r=\frac{\alpha}{2r}\partial_T(p^2+h^2).
 \]
 
@@ -7985,6 +8023,10 @@ physical data, trajectory, grid or numerical scan. Three independent
 the canonical quotients and kernel, commute the cap transport equations,
 and differentiate the radial metric constraint. They pass with 24,000
 charged values / 0.328125 active CPU seconds.
+Independent Grok review confirms this dependency order, the differentiated
+identities and the absence of an incoming-constraint assumption. The local
+construction must work in a class supported by the actual C3 source; no
+fourth source derivative is needed for this first-derivative estimate.
 
 ## Missing full-domain estimate
 

@@ -668,6 +668,14 @@ sources and a new output path. There is no source solve, trajectory or box
 search. The receipt explicitly distinguishes a conditional a priori bound
 from construction of a smooth solution.
 
+Frozen producer `706fe56` returns `strict_conditional_bootstrap_image`:
+all ten ratios are below `0.516` and all seven margins are positive.
+The application uses 8,192 values and CPU below timer resolution. Its
+29,878-byte receipt binds 24 producer files and retains 64 interval records.
+The separately admitted 512-value / 0.09375-second rational audit passes
+all hashes, exact ratios, outward displays and scope checks. Grok's completed
+implementation review confirms the bounds; no physical rerun is needed.
+
 The conditional first-derivative closure has separate symbolic controls:
 
 ```sh

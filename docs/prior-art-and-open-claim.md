@@ -2820,6 +2820,30 @@ stops the proposed continuation argument before an existence claim.
 All three symbolic controls pass with 24,000 values / 0.328125 active CPU
 seconds. The transverse-jet system closes as a triangular linear ODE without
 substituting an incoming null constraint.
+Independent Grok review confirms the conditional closure and identifies the
+remaining local construction and constraint-propagation proof. Its boundary
+constraint terminology is read against the owner: wall-born exterior rays
+need the incoming U constraint, while the outgoing x constraint comes from
+the exact source. The review's stronger regularity exclusion is not used;
+the proof needs the stated finite source derivatives, not a claim about the
+maximum possible regularity of the resulting fields.
+
+Grok's completed implementation review confirms the conservative wall,
+prefix, cap and travel inequalities. Frozen producer `706fe56` evaluates
+the original box once: all ten components improve strictly and all seven
+margins are positive, with 8,192 charged values and CPU below timer
+resolution. No source query, integration, time step or retry occurs.
+One separate exact-rational receipt audit is admitted with **512 charged
+values / 5 CPU seconds**, checking every enclosure and display, box ratios,
+input identities, producer hashes and the stated scope. It performs no
+physical calculation or replay.
+The audit passes with 512 values / 0.09375 CPU seconds: 24 producer bindings,
+four input identities and all 64 interval records authenticate. The
+[29,878-byte receipt](../results/summaries/nsc-atlas-coupled-tube-bound-v1.json)
+has SHA-256 `192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab`.
+The largest image ratio is approximately `0.515020212`; the exact upper
+endpoint is below `0.516`. The next mathematical requirement is a compatible
+local construction, using the conditional derivative estimates above.
 
 ## Discrete cap mass balance, 16 October 2026
 
