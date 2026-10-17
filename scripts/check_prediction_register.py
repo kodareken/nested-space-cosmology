@@ -42,7 +42,7 @@ EXACT_COMPARISON_KEYS = (
     "independent_observational_test", "numerical_method_note", "operator_revision_note",
     "physical_evolutions", "prediction_status", "radial_accuracy",
     "requested_mass_and_flux_contraction", "sample_cuts", "schema", "shared_alpha",
-    "source_commits", "status",
+    "source_commits", "status", "summary_coverage",
 )
 OBSERVABLE_DERIVED = (
     "circumference_metres", "difference_from_quiet_reference_metres", "grid_values_metres",

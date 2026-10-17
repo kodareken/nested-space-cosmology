@@ -86,6 +86,82 @@ coefficient of a scalar self-energy multiplies a field quadratic term;
 it is not by itself a metric volume term or a cosmological constant.
 The older two-sheet and Gauss–Bonnet results below retain their own actions.
 
+## Step 7: conditional quantum curvature contribution
+
+The next calculation imports one **quantized real massless conformal scalar**
+on the quiet geometry, conditional on a Hadamard state with the usual
+short-distance singularity and locally covariant renormalization. It uses the
+four-dimensional field, including all angular sectors; the classical `l=0`
+pulse alone cannot supply its vacuum fluctuations. The calculation applies
+inside each smooth region, away from the material wall. It does not quantize
+the metric or select a joint quantum state across the attachment.
+
+For the scalar Laplace operator with $E=-\mathcal R/6$, the imported
+[heat-kernel coefficient, equation (4.28)](https://arxiv.org/pdf/hep-th/0306138)
+contains $(5\mathcal R^2+60\mathcal R E+180E^2)/360=0$ and
+$(12\Box\mathcal R+60\Box E)/360=\Box\mathcal R/180$.
+Including the $(4\pi)^{-2}$ factor gives the
+[conformal trace coefficient, equations (15)–(16)](https://arxiv.org/pdf/hep-th/9308075):
+
+$$
+\langle T^\mu{}_{\mu}\rangle
+=\frac{\hbar}{2880\pi^2}
+  (\mathcal R_{\mu\nu\rho\sigma}^2-\mathcal R_{\mu\nu}^2)
++\hbar b\Box\mathcal R.
+$$
+
+The finite curvature-counterterm choice can change $b$. Both quiet metrics
+have constant $\mathcal R$, so this ambiguity vanishes here. The renormalized
+volume and Newton terms remain supplied action coefficients. The imported
+heat-kernel and quantum-stress rules are assumptions of this extension;
+the algebraic cancellation and geometric contractions are calculated locally.
+
+Use the existing reference unit $L_{\rm ref}=\ell$, and set
+$\zeta=\kappa_4\hbar/\ell^2$, $h=H\ell$, $m=M/\ell$, $r=R/\ell$.
+Direct contraction for
+$ds^2/\ell^2=-f\,dt^2+dr^2/f+r^2d\Omega^2$ gives
+
+| Quiet region | $f$ | $\ell^4\mathcal R_{\mu\nu\rho\sigma}^2$ | $\ell^4\mathcal R_{\mu\nu}^2$ |
+| --- | --- | --- | --- |
+| Cap | $1-h^2r^2$ | $24h^4$ | $36h^4$ |
+| Exterior | $1-2m/r$ | $48m^2/r^6$ | $0$ |
+
+The local contractions also apply in the Schwarzschild interior; no global
+Euclidean continuation or stationary state is inferred from this chart.
+Consequently the trace projection $\Delta\Lambda_{\rm tr}=-\kappa_4\langle T^\mu{}_{\mu}\rangle/4$ is
+
+$$
+\frac{\Delta\Lambda_{{\rm tr},-}\ell^2}{\zeta}
+=\frac{h^4}{960\pi^2},\qquad
+\frac{\Delta\Lambda_{{\rm tr},+}\ell^2}{\zeta}
+=-\frac{m^2}{240\pi^2r^6}.
+$$
+
+At the already supplied $h=1$, $m=2/5$ and quiet wall radius $r=11/20$,
+these coefficients are **0.0001055428996274352** and
+**−0.002440241780407079**, respectively. They multiply $\zeta$; neither
+is an absolute cosmological Lambda. No cosmological data selected the
+reference length or the coefficients.
+
+The cap trace is constant, but that alone does not establish a stress
+proportional to the metric: the wall can break the symmetries of the state.
+The exterior trace projection varies as $r^{-6}$ and requires the rest of
+the stress for conservation. A joint state, its traceless stress and boundary
+exchange, the gravitational renormalization conditions, and a controlled
+backreaction calculation are still needed for a full effective Lambda.
+In particular, this calculation does not derive the supplied cap scale $H$.
+It isolates a calculable quantum contribution while the classical result
+above remains zero. No additional cap-grid evolution enters either result.
+
+The same [calculation module](../src/recursive_horizons/nsc_atlas_effective_vacuum.py)
+derives the conformal cancellation and contracts Christoffel curvature for
+both metrics. An independent sectional-curvature contraction checks the
+result. The [ten combined tests](../tests/test_nsc_atlas_effective_vacuum.py)
+cover these identities, normalization and flat limits as well as the
+classical calculation. The commands above reproduce the exact expressions
+and their displayed decimal coefficients; there is no quadrature error in
+these symbolic results.
+
 ## The transition and vacuum-form coefficient
 
 The frozen positive-$F$ DEV3 transition uses radius $32/25$, expansion

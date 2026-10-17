@@ -883,6 +883,13 @@ numerical mass values and coupled cap/wall geometry remain uncomputed.
 - [quant-ph/9609002](https://arxiv.org/abs/quant-ph/9609002) — Archived: Rovelli, relational quantum mechanics.
 
 
+## Step 7 scalar trace input, 17 October 2026
+
+- [Duff, hep-th/9308075](https://arxiv.org/pdf/hep-th/9308075): read the conformal Laplacian and local coefficient in equations (15)–(16), the scalar counts in (30)–(31), and the symmetry assumption preceding (34). Reuse the one-real-scalar curvature anomaly; do not transfer the de Sitter-invariant stress conclusion to a finite material-wall state.
+- [Vassilevich, hep-th/0306138v3](https://arxiv.org/pdf/hep-th/0306138): read the general Laplace-type coefficient (4.28) and local anomaly relation (7.8). Reuse the scalar substitution `E=-R/6`; the project's calculation checks its algebra and the quiet metric contractions. Boundary heat coefficients and the full determinant/state construction have not been evaluated for the NSC attachment.
+
+These are inputs to the [conditional calculation](schur-memory.md#step-7-conditional-quantum-curvature-contribution), not a derivation of quantum mechanics from NSC geometry or of the supplied cap vacuum scale.
+
 ## Spherical starting geometry: reassembly source card, 12 October 2026
 
 - **Source/version:** Robin Neumayer, [1503.06705v2](https://arxiv.org/html/1503.06705v2), *A strong form of the quantitative Wulff inequality*.

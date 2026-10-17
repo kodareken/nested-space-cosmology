@@ -1,8 +1,14 @@
 """Check the Step-7 trace independently against the implemented bulk equations."""
+import time
+
 import numpy as np
 import pytest
+import sympy as sp
 
-from recursive_horizons.nsc_atlas_effective_vacuum import classical_vacuum_calculation
+from recursive_horizons.nsc_atlas_effective_vacuum import (
+    classical_vacuum_calculation,
+    conformal_anomaly_trace_projection,
+)
 from recursive_horizons.nsc_atlas_nonlinear_bulk import bulk_operator
 
 
@@ -36,3 +42,56 @@ def test_geometric_ricci_from_actual_mixed_operator(region, expected, alpha):
     R_J = (R_E+3*box_l-1.5*grad_l_squared)/D
     assert np.isfinite(R_J)
     assert R_J == pytest.approx(expected, rel=0, abs=2e-14)
+
+
+def test_conformal_anomaly_trace_coefficients():
+    started = time.process_time()
+    result = conformal_anomaly_trace_projection()
+    assert time.process_time()-started < 60
+    assert all(value == 0 for value in result['checks'].values())
+    assert result['minimal_scalar_R2_coefficient'] != 0
+    assert result['exterior_radial_variation'] != 0
+    h, m, radius, zeta = sp.symbols('h m r zeta', positive=True)
+    assert result['cap_delta_lambda_ell_squared'] == zeta*h**4/(960*sp.pi**2)
+    assert result['exterior_delta_lambda_ell_squared'] == -zeta*m**2/(240*sp.pi**2*radius**6)
+    assert result['cap_reference_coefficient'] == 1/(960*sp.pi**2)
+    assert result['exterior_reference_coefficient'] == -sp.Integer(128000)/(5314683*sp.pi**2)
+    assert result['weyl_c'] == sp.Rational(1, 120)
+    assert result['euler_a'] == sp.Rational(1, 360)
+
+
+def test_zero_curvature_limit_of_trace_projection():
+    result = conformal_anomaly_trace_projection()
+    h, m = sp.symbols('h m', positive=True)
+    assert result['cap_coefficient'].subs(h, 0) == 0
+    assert sp.factor(result['exterior_coefficient'].subs(m, 0)) == 0
+
+
+def _radial_invariants(f_expr):
+    """Independent sectional reduction, separate from the Christoffel sum."""
+    radius = sp.symbols('r', positive=True)
+    f = sp.sympify(f_expr)
+    df, ddf = sp.diff(f, radius), sp.diff(f, radius, 2)
+    radial, mixed, sphere = ddf/2, df/(2*radius), (1-f)/radius**2
+    return {
+        'ricci_scalar': sp.factor(-ddf-4*df/radius+2*(1-f)/radius**2),
+        'ricci_square': sp.factor(2*(radial+2*mixed)**2+2*(sphere-2*mixed)**2),
+        'riemann_square': sp.factor(4*radial**2+16*mixed**2+4*sphere**2),
+    }
+
+
+def test_curvature_contraction_matches_radial_reduction():
+    result = conformal_anomaly_trace_projection()
+    h, m, radius = sp.symbols('h m r', positive=True)
+    for f_expr, invariants in (
+            (1-h**2*radius**2, result['cap_invariants']),
+            (1-2*m/radius, result['exterior_invariants'])):
+        reduced = _radial_invariants(f_expr)
+        for name in ('ricci_scalar', 'ricci_square', 'riemann_square'):
+            assert sp.factor(invariants[name]-reduced[name]) == 0
+    assert result['cap_invariants']['riemann_square'] == 24*h**4
+    assert result['cap_invariants']['ricci_square'] == 36*h**4
+    assert result['cap_invariants']['ricci_scalar'] == 12*h**2
+    assert result['exterior_invariants']['riemann_square'] == 48*m**2/radius**6
+    assert result['exterior_invariants']['ricci_square'] == 0
+    assert result['exterior_invariants']['ricci_scalar'] == 0

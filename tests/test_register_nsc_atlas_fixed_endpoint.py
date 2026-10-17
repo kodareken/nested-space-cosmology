@@ -126,6 +126,15 @@ def test_current_register_checker_accepts_either_valid_state():
         assert "finite_amplitude_endpoints" not in result
 
 
+def test_summary_coverage_cannot_be_promoted(tmp_path):
+    saved=write_comparison(tmp_path, receipts())
+    recomputed=compare(receipts())
+    checker.assert_comparison_matches(saved,recomputed)
+    saved['summary_coverage'][0]['original_receipt_status']='stopped'
+    with pytest.raises(ValueError,match='summary_coverage'):
+        checker.assert_comparison_matches(saved,recomputed)
+
+
 def test_historical_view_drops_an_installed_extension(tmp_path):
     source = historical_root(tmp_path / "source")
     write_comparison(source, receipts())

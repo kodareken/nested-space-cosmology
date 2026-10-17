@@ -14,6 +14,16 @@ classical contribution; quantum stress, geometric averaging and a physical
 Schur-to-exterior identification remain to be specified. The three P001
 endpoint evolutions continue unchanged.
 
+A [conditional quantum extension](schur-memory.md#step-7-conditional-quantum-curvature-contribution)
+computes the same real scalar's smooth four-dimensional curvature anomaly
+on the quiet backgrounds. With `zeta=kappa_4*hbar/ell^2`, the added trace
+projection is `Delta Lambda_trace*ell^2=zeta/(960*pi^2)` in the `h=1` cap,
+and `-zeta*m^2/(240*pi^2*r^6)` outside. The coefficients at the supplied
+quiet wall are `0.0001055428996274352` and `-0.002440241780407079`.
+This imports quantum field theory and leaves the joint state, full stress,
+boundary contribution and backreaction open. A trace projection is not yet
+a constant cosmological vacuum source or an observational prediction.
+
 ## Full P001 endpoint evolution in progress, 17 October 2026
 
 The [coarse v4 evolution](../results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json)
