@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a14a7694396b5ef03305b86736cc58f4f8f7a173",
+  "current_receipt_commit_parent": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 231070,
-      "change": "Derive weighted local contraction and extend the cap initial-data domain; retain continuation as open.",
-      "changed_from_commit": "a14a7694396b5ef03305b86736cc58f4f8f7a173",
+      "bytes": 231481,
+      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
+      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "0e072a3d626802ef5a7cd3ca6603e22b689d96d2257b72153b23f591af738501"
+      "sha256": "ecbc4bceab6883be137673be2f145e0c5d9907bd753802cf73c008140f26ada4"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 331953,
-      "change": "Derive weighted local contraction and extend the cap initial-data domain; retain continuation as open.",
-      "changed_from_commit": "a14a7694396b5ef03305b86736cc58f4f8f7a173",
+      "bytes": 332598,
+      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
+      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7c62431b8c92c9a9b289cfbdf3c074b174918d85dce36445a77a1136c6a97cb6"
+      "sha256": "298a3b2c13d8f34967a3f8ac225b461a80bdcb9b7ce2815f142c08185719332d"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 407909,
-      "change": "Derive weighted local contraction and extend the cap initial-data domain; retain continuation as open.",
-      "changed_from_commit": "a14a7694396b5ef03305b86736cc58f4f8f7a173",
+      "bytes": 414708,
+      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
+      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b64cd2d1f28bf4298d55e0df1752cd3d5c65e230db40aa89da4aab9cf887bdaf"
+      "sha256": "28888060fd296bf8580839b253c4db5185d7b937e4d0b05cf4ee65bbc7a0b70a"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 392790,
-      "change": "Derive weighted local contraction and extend the cap initial-data domain; retain continuation as open.",
-      "changed_from_commit": "a14a7694396b5ef03305b86736cc58f4f8f7a173",
+      "bytes": 394395,
+      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
+      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "da122b55f7ab46f5cf763e1e0c15b19da1e6e9de25a866b85608465af88ebd3f"
+      "sha256": "a25a9238806431373fb568e3e5f6d5aca28b74331f15c90d2aed335be1af4aa4"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 125629,
-      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
-      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
+      "bytes": 126205,
+      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
+      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "00f942fad227ac26978901ea65bd33abb9caea2e888b4cdea90069d191485c76"
+      "sha256": "87509abe8a9c7836de84b37135a66f8e80538c4cb7d2d4ce2907d48959504fe6"
     },
     {
       "bytes": 18356,
@@ -36539,6 +36539,14 @@
       "path": "tests/test_nsc_atlas_null_construction.py",
       "retention_reason": "Exact controls for the compatible local characteristic construction, with no physical replay.",
       "sha256": "4ac5a7737759c6e4897b0019a6389f42dbc3238f89d4b4ada9b8c24576c0ec13"
+    },
+    {
+      "bytes": 4096,
+      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
+      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
+      "path": "tests/test_nsc_atlas_null_continuation.py",
+      "retention_reason": "Exact nonlinear derivative and chart controls for the local cap-wall construction.",
+      "sha256": "aa1cf17179a1881b370bf773cc56e5e17f1e45720eb9561a146662d788c0403a"
     },
     {
       "bytes": 7216,

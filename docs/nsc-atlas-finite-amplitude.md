@@ -8033,8 +8033,9 @@ fourth source derivative is needed for this first-derivative estimate.
 The existing two-double-null wall operator gives a concrete local
 construction map before conversion to the polar cap chart. This uses the
 same physical candidate and source. It changes the intermediate coordinate
-choice, not the action, wall laws or initial physical data. A convergence
-proof for the map remains to be completed.
+choice, not the action, wall laws or initial physical data. The local
+convergence argument below keeps the actual source and compatible data;
+continuation over the certified physical cell remains a separate step.
 
 On each side let `y=(r,c,L)`, `p=partial_u y`, `q=partial_v y`, where u
 labels the derivative incoming from the wall and v the outgoing derivative.
@@ -8132,15 +8133,15 @@ At a nonlinear fixed point the mixed equations would hold as well; the
 owned constraint identities would then apply to the full independently
 imposed wall laws and compatible outgoing data.
 
-The remaining analytic step is a complete invariant function space and
+The analytic step below supplies a complete invariant function space and
 contraction estimate on a fixed comparison domain. Changing wall embeddings
 changes entry times and the domain where frozen forcing is needed. A
 uniformly controlled extension and Lipschitz trace bounds must be included.
 The outgoing prefix has finite spatial length, so it cannot be declared
 small just because the wall time step is small. Spatial exponential weights
 can supply a prefix factor proportional to `1/lambda`; wall ODE changes and
-incoming transport supply time factors. These observations identify what
-to bound, not already verified contraction constants. The initial and wall
+incoming transport supply time factors. The estimates below give their
+constant dependencies. The initial and wall
 corner conditions and the regularity of the actual C3 source must be kept.
 
 After a local solution is obtained in these null charts, an untrapped cap
@@ -8218,7 +8219,7 @@ preservation, not convergence or physical evolution. Independent Grok
 review supports the null route and the constraint/gauge implications, while
 leaving its local fixed-point estimate to be established.
 
-#### Moving-domain extension and the norm still to close
+#### Moving-domain extension and the weighted norm
 
 An ambient extension must cover the zero-width cap corner. Reflection through
 the wall alone would need interior space that is absent at that corner.
@@ -8313,8 +8314,9 @@ The estimates to close are
 
 The following derivation specifies their dependencies. It is a local
 construction argument, separate from continuation over the certified physical
-cell. Its moving-domain and regularity details are undergoing independent
-review; the conditional tube receipt is unchanged.
+cell. Independent Grok review confirms the weighted estimates, their order
+of constants and the larger cap initial strip below. The conditional tube
+receipt is unchanged.
 
 #### Derivative invariance and the order of constants
 
@@ -8565,11 +8567,173 @@ The exterior estimates are unchanged. In the coupled wall and incoming
 estimates replace a common prefix factor `1/lambda` by the upper bound
 `1/lambda+rho*h`. The additional terms contribute to `B_1*h*M` and
 `B_2*h*(1+M)`; they do not alter the order lambda, then M, then h. The
-complete-class and primitive arguments use the new clamp in the cap.
+complete-class and primitive arguments use the new clamp in the cap, with
+the harmless additional restriction `h<=1` when absorbing quadratic time
+terms. Independent Grok review confirms these length, extension and
+contraction bounds, including the zero-width corner.
 This supplies the domain extension required before attempting a whole-cap
 continuation. Its overlap with the quiet centre and the coverage and
 regularity of the physical polar slices must still be bounded explicitly;
 the fixed tube receipt alone does not certify those chart properties.
+
+#### Native null jets and the next regularity level
+
+The polar tube supplies a useful conditional bridge back to native null
+coordinates. Set `A_0=1-r^2`, `beta=A*exp(delta)/A_0`, and define
+
+\[
+ (Q_-)_T+\beta(Q_-)_z=0,\qquad
+ (Q_+)_T-\beta(Q_+)_z=0,
+ \qquad Q_\pm(T_0,z)=T_0\pm z.
+\]
+
+Writing `j_+=(Q_+)_z` and `j_-=(Q_-)_z`, their transport equations are
+`d_T j_+=beta_z*j_+` on incoming rays and
+`d_T j_-=-beta_z*j_-` on outgoing rays. The initial signs are positive
+and negative respectively. The tube bounds beta_z and the finite polar
+time range. On the wall, put `v_r=R_s`, `H=beta_minus+v_r`, with
+`beta_minus-v_r=A/H`. The outgoing rate and the incoming gauge choice are
+
+\[
+ (Q_-)_s=-j_-\frac{A}{H A_0}>0,\qquad
+ (Q_+)_s=\frac{1}{C_W(Q_-)_s},\qquad
+ j_+|_W=\frac{A_0}{H}(Q_+)_s.
+\]
+
+A fixed positive smooth native `C_W(s)` therefore bounds the incoming
+gradient at entry. The transport factors bound both j's away from zero
+and infinity throughout the covered collar. The native coordinates
+`(u,v)=(Q_+,Q_-)` then have
+
+\[
+ C=-\frac{A_0^2}{A j_+j_-}>0,\qquad
+ r_u=\frac{A_0}{2j_+},\qquad r_v=\frac{A_0}{2j_-}.
+\]
+
+For `a=sqrt(alpha/6)`, put `root=cosh(a*f)` and
+`gap=sinh(a*f)/a-f*root`, using its continuous value at alpha zero.
+The invariant scalar `c=r*sinh(a*f)/a` satisfies
+
+\[
+ c_u=\frac{\mathrm{root}\,E^++A_0\,\mathrm{gap}}{2j_+},\qquad
+ c_v=\frac{-\mathrm{root}\,E^-+A_0\,\mathrm{gap}}{2j_-}.
+\]
+
+These formulas bound the native radius and scalar first jets from the
+undifferentiated tube. They do not use `E_z`. The lapse value is bounded
+by `L=2*log(A_0)-log(A)-log(j_+)-log(-j_-)`. Its mixed equation has source
+
+\[
+ L_{uv}=\frac{2r_ur_v}{r^2}+\frac{C}{2r^2}
+                        -\alpha f_uf_v.
+\]
+
+This source contains no L first jet. The original quiet initial lapse
+jets are fixed. Integrating the source along the outgoing prefix bounds
+`L_v`; the wall formula `L_u=(Gamma-b*L_v)/a` and incoming integration
+then bound `L_u`. Thus the native first jets are bounded without first
+assuming a high-regularity polar coordinate transformation. Independent
+Grok review confirms these identities and this order of bounds.
+
+Higher regularity requires the differentiated evolution, not merely a
+smooth gauge. It can be organized without prescribing a new incoming
+physical waveform. In the following formulas let
+`Z=(y,p,q)`, `P=p_u`, `Q=q_v`, `R=q_vv`, `S=p_uu`; these local symbols
+are unrelated to the cap mass N or the earlier exterior P. Once the
+first-derivative Volterra/transport pair above is solved, define
+
+\[
+ Z_v=(q,F,Q),\quad Z_u=(p,P,F),\qquad
+ F_v=F_yq+F_pF+F_qQ,\quad F_u=F_yp+F_pP+F_qF.
+\]
+
+One more derivative of the outgoing prefix gives
+
+\[
+\begin{split}
+ R={}&q_0''-\ell''F|_\ell-(\ell')^2F_u|_\ell
+                         -2\ell'F_v|_\ell\\
+    &+\int_\ell^u
+       \left(F_{ZZ}[Z_v,Z_v]+F_yQ+F_pF_v+F_qR\right)da.
+\end{split}
+\]
+
+It is linear Volterra in R, with P,Q already known. In particular the
+lower-curve terms include both mixed contributions; neither may be dropped.
+The incoming next derivative obeys
+
+\[
+ S_v=F_{ZZ}[Z_u,Z_u]+F_yP+F_pS+F_qF_u.
+\]
+
+Writing the incoming wall trace as `g(s)=G(Y,q_W;s)`, its entry value is
+
+\[
+ S_e=\frac1a\frac{d}{ds}\left(\frac{g_s-bF|_W}{a}\right)
+                                  -\frac ba F_u|_W.
+\]
+
+The derivative of this boundary data uses g_ss, for which the outgoing
+wall trace has
+
+\[
+ (q_W)_{ss}=a_sF+b_sQ+a^2F_u+2abF_v+b^2R.
+\]
+
+The wall ODE supplies Y_ss from the already known first outgoing
+derivatives. Consequently g_ss depends on the computed R, known first
+derivatives and the fixed gauge through Gamma_ss. It does not introduce
+an independently specified third derivative of an incoming physical trace.
+A C3 wall lapse has the required Gamma_ss. The actual C3 source supplies
+q_0'', and the gauges agree with the exact reference on the nonempty quiet
+initial interval so that corner derivatives match. This second triangular
+hierarchy has independent Grok review: R is obtained before the incoming
+second derivative S, and no third derivative of an independent incoming
+waveform occurs.
+
+The continuous linear Volterra and transport solutions give C2 first jets
+and C3 fields. The null constraints
+`r_uu=L_u*r_u-alpha*r*f_u^2/2`, and its vv counterpart, together with the
+mixed radius equation then have C2 right-hand sides and give r in C4.
+The C3 metric and C4 radius make the radius-gradient vector field C3.
+Its transverse flow, anchored in the quiet core, is the appropriate route
+to a C3 polar coordinate change and a C2 transformed metric. A merely C2
+coordinate change would not justify a C2 metric. Coverage of the full
+physical cap slice and bounds on this flow remain separate continuation
+requirements.
+
+The exterior has an analogous native value bound without a derivative of
+the coordinate relabeling. Write the fixed boost-gauge coordinate as
+`U=phi(u)`, `k=phi'>0`, retaining x. Then
+`C_native=C_fixed*k`; on each wall-born label,
+`k=C_W/C_fixed,W`. The original quiet labels have k equal to one. Positive
+upper and lower tube bounds on the fixed lapse and a fixed positive C_W
+bound k and its inverse on the finite prefix. With `X=r*f`, `P=X_U` and
+`Q=X_x` in the earlier exterior notation,
+
+\[
+ (r_u,r_x)=(k r_U,r_x),\quad
+ c_u=k(\mathrm{root}\,P+\mathrm{gap}\,r_U),\quad
+ c_x=\mathrm{root}\,Q+\mathrm{gap}\,r_x.
+\]
+
+The tube controls these values and the native lapse value. Its lapse
+first jets follow from the mixed equation, the exact source trace and the
+same wall formula as in the cap. In particular a bound on phi'' is not
+assumed to obtain the incoming native lapse jet. Native wall rates are
+`a=Udot_fixed/k` and `b=xdot_fixed`, so they stay positive and finite.
+This is the candidate value bound for applying the derivative hierarchy
+uniformly during continuation; the complete continuation argument must
+also bound the covered coordinate lengths and the physical chart domain.
+
+Three [exact symbolic controls](../tests/test_nsc_atlas_null_continuation.py)
+pass with **24,000 charged values / 1.90625 active CPU seconds**. The
+nonlinear manufactured solution uses `y=exp(u+v+u*v)` and
+`F(y,p,q)=y+p*q/y`, with a curved initial line and a moving wall. It checks
+the two differentiated systems, all lower-curve terms and both incoming
+entry derivatives. The chart control independently transforms the metric,
+radius and scalar differential and checks proper wall normalization. These
+are identity checks, not a physical trajectory or a continuation theorem.
 
 ## Missing full-domain estimate
 

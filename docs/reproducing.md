@@ -700,6 +700,19 @@ counterexample to inferring derivative convergence from weak error bounds.
 They verify the map's primitives and wall-value transport, not a contraction
 theorem; no physical trajectory is calculated.
 
+For the next null-jet and chart identities:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_null_continuation.py -q -s
+```
+
+Three exact controls pass with 24,000 charged values / 1.90625 active CPU
+seconds. They use one nonlinear manufactured solution, a curved initial
+line and moving wall, and independent symbolic chart variables. The checks
+cover the second triangular derivative hierarchy, wall entry derivatives,
+metric/scalar conversion and proper wall normalization. They do not evolve
+the physical preparation or certify full-domain continuation.
+
 The coupled comparison controls are:
 
 ```sh

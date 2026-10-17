@@ -2900,6 +2900,30 @@ No source evaluation, new trajectory, scan or numerical control is run.
 The remaining connection is chart coverage and continuation on the original
 physical cell, rather than a replacement of it by a smaller quiet interval.
 
+Independent review confirms the weighted norm estimates on the small wall
+wedge and the conditional native cap coordinate, scalar and lapse first-jet
+bridge. A second differentiated Volterra/transport hierarchy now identifies
+how the physical wall derivatives would be generated from the same outgoing
+data; its review is pending. Three exact controls are admitted with
+**24,000 charged values / 30 active CPU seconds** (8,000 each): nonlinear
+chain rules and lower-curve derivatives, differentiated wall-entry data,
+and the polar/null metric and scalar identities. They use a manufactured
+smooth solution and symbolic chart variables only. No physical source,
+coefficient bound, trajectory or new tube evaluation is admitted. Their
+outcome checks those identities, not full-domain existence or chart coverage.
+All three controls pass with 24,000 values / 1.90625 active CPU seconds.
+No prior control or retained physical calculation is repeated.
+The local-map review also confirms the expanded cap strip: both integration
+lengths are at most rho*h, unit cap weight avoids a long-diagonal penalty,
+and its clamp and entry estimates close without an inverse-width factor.
+This resolves local domain construction; physical-slice coverage is reviewed
+separately from it.
+The second derivative review confirms the triangular hierarchy and its
+corner compatibility. It produces C3 fields and, through the constraints,
+C4 radius without asking for an independently prescribed higher incoming
+trace. The next review concerns actual physical-slice coverage, including
+radii newly enclosed by the expanding wall.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

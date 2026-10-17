@@ -260,8 +260,8 @@ The [first-derivative argument](nsc-atlas-finite-amplitude.md#conditional-first-
 also closes conditionally, with three symbolic controls and independent
 Grok review. It bounds the cap derivatives before differentiating the
 exterior wall data and does not assume an incoming null constraint.
-A compatible local solution construction and its continuation/constraint
-proof remain open; these a priori bounds do not claim that construction.
+The local construction below is separate from these a priori bounds;
+its continuation over the original physical cell remains open.
 
 The next [local construction map](nsc-atlas-finite-amplitude.md#a-primitive-preserving-local-construction-map)
 uses the existing double-null wall operator. One shared frozen forcing
@@ -270,11 +270,22 @@ preserves the field primitives and common wall values exactly. Four symbolic
 controls pass with 34,000 values / 0.25 active CPU seconds, and Grok review
 supports the route and its constraint/gauge implications. The owner now
 derives weighted derivative invariance and a moving-domain contraction
-estimate, with fixed source data and the order of constants stated. This
-analytic argument is under independent review. A cap initial-data strip
+estimate, with fixed source data and the order of constants stated.
+Independent Grok review confirms those bounds and the cap initial-data strip,
+which
 addresses the portion of an interior time slice beyond the small wall
 wedge; conversion and continuation over the original physical cell remain
 open. The physical tube calculation has not been repeated.
+
+The [native null-jet bridge](nsc-atlas-finite-amplitude.md#native-null-jets-and-the-next-regularity-level)
+bounds radius, scalar and lapse first jets from the existing polar tube;
+Grok review confirms its formulas and dependency order. A further
+triangular derivative system calculates the needed higher wall traces
+from the same outgoing fields. Three symbolic controls pass with 24,000
+values / 1.90625 active CPU seconds, including a nonlinear manufactured
+solution and exact metric conversion. Grok review confirms the triangular
+higher-regularity argument and its use of C3 source data. Physical-cell
+chart coverage and continuation remain open.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
