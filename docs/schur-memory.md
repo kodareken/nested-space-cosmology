@@ -153,12 +153,38 @@ In particular, this calculation does not derive the supplied cap scale $H$.
 It isolates a calculable quantum contribution while the classical result
 above remains zero. No additional cap-grid evolution enters either result.
 
+For the already declared P001 fiducial scale $\ell=10000\,\mathrm m$,
+restore SI units with $\kappa_{\rm SI}=8\pi G/c^4$ and the quantum trace
+normalization $\hbar c$. Thus
+
+$$
+\zeta=\frac{8\pi G\hbar}{c^3\ell^2}
+=6.56537648967\times10^{-77}.
+$$
+
+Using [CODATA 2022 inputs](https://physics.nist.gov/cuu/pdf/wall_2022.pdf),
+$G=6.67430(15)\times10^{-11}\,\mathrm{m^3\,kg^{-1}\,s^{-2}}$,
+exact $h_{\rm Planck}=6.62607015\times10^{-34}\,\mathrm{J\,s}$ and
+exact $c=299792458\,\mathrm{m\,s^{-1}}$, gives
+
+| Quiet-region trace projection | $\Delta\Lambda_{\rm tr}\ell^2$ | Standard uncertainty from $G$ alone |
+| --- | ---: | ---: |
+| Cap at $h=1$ | $6.92928871865\times10^{-81}$ | $1.5573\times10^{-85}$ |
+| Exterior at $m=2/5$, $r=11/20$ | $-1.60211060142\times10^{-79}$ | $3.6006\times10^{-84}$ |
+
+These are scale illustrations conditional on the fixed geometry and the
+fiducial length, not cosmological predictions or total error intervals.
+Keeping $h,m,r$ fixed while doubling $\ell$ divides the dimensionless
+contribution by four and the dimensional $\Delta\Lambda$ by sixteen.
+The supplied cap baseline remains $\Lambda_0\ell^2=3$; this quantum
+contribution does not explain that input.
+
 The same [calculation module](../src/recursive_horizons/nsc_atlas_effective_vacuum.py)
 derives the conformal cancellation and contracts Christoffel curvature for
 both metrics. An independent sectional-curvature contraction checks the
-result. The [ten combined tests](../tests/test_nsc_atlas_effective_vacuum.py)
+result. The [eleven combined tests](../tests/test_nsc_atlas_effective_vacuum.py)
 cover these identities, normalization and flat limits as well as the
-classical calculation. The commands above reproduce the exact expressions
+classical calculation and SI scaling. The commands above reproduce the exact expressions
 and their displayed decimal coefficients; there is no quadrature error in
 these symbolic results.
 

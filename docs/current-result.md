@@ -24,6 +24,14 @@ This imports quantum field theory and leaves the joint state, full stress,
 boundary contribution and backreaction open. A trace projection is not yet
 a constant cosmological vacuum source or an observational prediction.
 
+At P001's already declared fiducial `ell=10000 m`, the same conditional
+quantum calculation gives `Delta Lambda_trace * ell^2 = 6.92928871865e-81`
+in the quiet cap and `-1.60211060142e-79` at the quiet exterior wall radius.
+These use CODATA 2022 `G`, Planck's constant and `c`; their relative input
+uncertainty from `G` is `2.2474e-5`. Neither that uncertainty nor the chosen
+fiducial scale supplies a cosmological error band. The cap baseline `3`
+remains an input. Eleven focused symbolic, metric and unit checks pass.
+
 ## Full P001 endpoint evolution in progress, 17 October 2026
 
 The [coarse v4 evolution](../results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json)

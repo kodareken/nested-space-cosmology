@@ -247,6 +247,44 @@ def conformal_anomaly_trace_projection():
     }
 
 
+def conformal_anomaly_scale_si(ell_m=10000):
+    """Evaluate the quiet trace at P001's supplied shape and a fiducial SI scale.
+
+    CODATA 2022 inputs: G=6.67430(15)e-11, h=6.62607015e-34 exactly,
+    c=299792458 exactly. Source: https://physics.nist.gov/cuu/pdf/wall_2022.pdf
+    h is Planck's constant here, distinct from the shape parameter H*ell=1.
+    The returned uncertainty is solely the standard input uncertainty in G;
+    it is not a quantum-model, wall, backreaction or observational error bar.
+    """
+    length = sp.Rational(str(ell_m))
+    if length <= 0:
+        raise ValueError('ell_m must be a positive finite length in metres')
+    G, u_G = sp.Rational('6.67430e-11'), sp.Rational('0.00015e-11')
+    planck_h, c = sp.Rational('6.62607015e-34'), sp.Integer(299792458)
+    hbar = planck_h/(2*sp.pi)
+    # kappa_SI=8*pi*G/c^4 multiplies trace energy density hbar*c*curvature^2.
+    zeta = sp.factor(8*sp.pi*G*hbar/(c**3*length**2))
+    symbolic = conformal_anomaly_trace_projection()
+    regions = {}
+    for region in ('cap', 'exterior'):
+        value = sp.factor(zeta*symbolic[region+'_reference_coefficient'])
+        regions[region] = {
+            'delta_lambda_ell_squared': value,
+            'delta_lambda_per_m2': value/length**2,
+            'standard_uncertainty_from_G': sp.Abs(value)*u_G/G,
+        }
+    return {
+        'ell_m': length,
+        'G_SI': G,
+        'G_standard_uncertainty_SI': u_G,
+        'planck_h_SI_exact': planck_h,
+        'c_SI_exact': c,
+        'zeta': zeta,
+        'relative_standard_uncertainty_from_G': u_G/G,
+        'regions': regions,
+    }
+
+
 if __name__ == '__main__':
     calculation = classical_vacuum_calculation()
     for name, value in calculation.items():
@@ -264,3 +302,10 @@ if __name__ == '__main__':
     print('Scope: one real conformal scalar; trace projection on each smooth quiet chart.')
     print('Box R is the scheme-dependent piece and vanishes because R is constant.')
     print('The exterior projection depends on r. The cap trace does not fix the full stress.')
+    scaled = conformal_anomaly_scale_si()
+    print('Fiducial ell in metres:', scaled['ell_m'])
+    print('zeta from CODATA 2022 inputs:', scaled['zeta'].evalf(12))
+    for region, row in scaled['regions'].items():
+        print(region, 'DeltaLambda_trace*ell^2:', row['delta_lambda_ell_squared'].evalf(12),
+              '+/-', row['standard_uncertainty_from_G'].evalf(5), '(G input only)')
+    print('This scale illustration is conditional on ell=10000 m; it is not a cosmological prediction.')

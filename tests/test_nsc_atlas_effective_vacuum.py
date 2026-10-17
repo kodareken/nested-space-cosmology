@@ -8,6 +8,7 @@ import sympy as sp
 from recursive_horizons.nsc_atlas_effective_vacuum import (
     classical_vacuum_calculation,
     conformal_anomaly_trace_projection,
+    conformal_anomaly_scale_si,
 )
 from recursive_horizons.nsc_atlas_nonlinear_bulk import bulk_operator
 
@@ -95,3 +96,21 @@ def test_curvature_contraction_matches_radial_reduction():
     assert result['exterior_invariants']['riemann_square'] == 48*m**2/radius**6
     assert result['exterior_invariants']['ricci_square'] == 0
     assert result['exterior_invariants']['ricci_scalar'] == 0
+
+
+def test_si_scale_from_energy_density_and_reference_length():
+    result = conformal_anomaly_scale_si()
+    ell, G, h, c = (result[key] for key in
+                    ('ell_m', 'G_SI', 'planck_h_SI_exact', 'c_SI_exact'))
+    # Independent SI trace: -hbar*c*H^4/(240*pi^2); project with -kappa_SI/4.
+    trace = -h*c/(480*sp.pi**3*ell**4)
+    projected = -(8*sp.pi*G/c**4)*trace/4
+    cap = result['regions']['cap']
+    assert sp.simplify(cap['delta_lambda_per_m2']-projected) == 0
+    assert sp.simplify(cap['standard_uncertainty_from_G']
+                       -cap['delta_lambda_ell_squared']*result['G_standard_uncertainty_SI']/G) == 0
+    rescaled = conformal_anomaly_scale_si(20000)
+    for region in ('cap', 'exterior'):
+        for name, factor in [('delta_lambda_ell_squared', 4), ('delta_lambda_per_m2', 16)]:
+            assert sp.simplify(factor*rescaled['regions'][region][name]
+                               -result['regions'][region][name]) == 0

@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 367596,
+      "bytes": 368117,
       "path": "docs/current-result.md",
-      "sha256": "992337d064815e3b6b42f95cb06e16537513b355a4dc687c4faef088fc87cb50"
+      "sha256": "5824067396d2f9711ccad7c03c5982bdff4420e3350efce8751e949cecebe4c2"
     },
     {
       "bytes": 2481,
@@ -1558,7 +1558,7 @@
     {
       "bytes": 2354377,
       "path": "docs/lab-snapshot.json",
-      "sha256": "b91bdb4dd0ac8c6a5afa639ba5c692e37023c242f21c3f29570eb36675eff47f"
+      "sha256": "f80696c9d3ab742113a5194612bb9baf2e150267093c003fb214d740110cf519"
     },
     {
       "bytes": 4997,
@@ -2241,9 +2241,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 14346,
+      "bytes": 15553,
       "path": "docs/schur-memory.md",
-      "sha256": "9e4471b1d1cb92a48dd7101a7b7afefefe61ad485587e7ec529e941ddae73739"
+      "sha256": "fba890a99a4f4e84f423088edd29f15444230eb65901c3337529f91b4613bd60"
     },
     {
       "bytes": 537091,
@@ -17111,9 +17111,9 @@
       "sha256": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452"
     },
     {
-      "bytes": 12773,
+      "bytes": 14879,
       "path": "src/recursive_horizons/nsc_atlas_effective_vacuum.py",
-      "sha256": "9b026d565d0a67e5700bd7cdc2393bf8f0e2baa5ac6a0db0ae8a355af68bfa08"
+      "sha256": "31b4a57958f3b885202198fbff36abd9f0d5e985d866b243ba7cbb7481534f83"
     },
     {
       "bytes": 5128,
@@ -19336,9 +19336,9 @@
       "sha256": "64ee9f580218686d5a7dd7cd00b81dbb0fb3a891c21d954d50a9cef5e187b856"
     },
     {
-      "bytes": 4355,
+      "bytes": 5350,
       "path": "tests/test_nsc_atlas_effective_vacuum.py",
-      "sha256": "7c03928986721fdc3725fd2ed3367da65e86c3b71bbdf9b52df433eb6539a337"
+      "sha256": "baac582273de9d870d249697e38ba342d57b1d6e802d449f6c101f2daaaac6db"
     },
     {
       "bytes": 2570,
@@ -21486,7 +21486,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "b91bdb4dd0ac8c6a5afa639ba5c692e37023c242f21c3f29570eb36675eff47f",
+  "lab_snapshot_sha256": "f80696c9d3ab742113a5194612bb9baf2e150267093c003fb214d740110cf519",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
