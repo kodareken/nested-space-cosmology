@@ -11652,6 +11652,44 @@ The physical endpoint application follows a frozen producer commit.
 This calculation does not evaluate the quadratic Taylor constant,
 extend the onset domain or predict a later central-arrival measurement.
 
+**Original endpoint result.** Frozen producer
+`7a38bc965c822bf63fd66913a2ed38fb7356dc79` completes the single pass and
+returns [certified first geometric coefficients](../results/summaries/nsc-atlas-onset-geometry-bound-v1.json).
+The outward intervals at the original right source label are:
+
+| Dimensionless first coefficient | Lower bound | Upper bound |
+| --- | ---: | ---: |
+| Exterior mass `mu` | -5.519382944588694e-11 | -1.8198319708608768e-11 |
+| Einstein radius `R1` at fixed source label | -1.647486524544946e-14 | -7.764633410582473e-15 |
+| Anchored polar clock `T1fixed` at fixed source label | -2.0300355102160837e-14 | -1.0867285824481553e-14 |
+
+The upper bounds are strictly negative. These signs follow from the
+continuum integral enclosures, including the source, scalar and reference
+uncertainties; they are not inferred from a finite difference of two
+nearby finite-amplitude runs. The eta interval crosses zero, so no sign
+is assigned to that separate clock-coordinate coefficient.
+
+The application uses 140,288 charged values / 0.03125 process-CPU seconds,
+128 interval panels, no source or geometric ODE solves, no field evolution,
+root search or retry. The 16,743-byte receipt preserves 22 producer
+bindings, four input hashes, final moments, constants and endpoint
+intervals. SHA256 is
+`a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c`.
+Its independent 1,024-value audit passes in 0.046875 CPU seconds, checking
+Git/disk bindings, inputs, all interval orderings and outward displays,
+an alternative rational kernel formula, the charged work and the signs.
+Independent Grok review accepts the cap and exterior bounds, the frame
+radius reduction, and the implemented source checks, triangular panel
+integration, authenticated inputs and outward output conversion.
+
+Combined with the earlier quadratic amplitude theorem, either negative
+coefficient gives a negative change for sufficiently small positive alpha:
+if `O1<=-c<0` and the remainder is bounded by `M2*alpha^2/2`, then
+`O(alpha)-O(0)<0` for `0<alpha<2c/M2`, within the admitted interval
+(omit this restriction if M2 is zero). M2 is finite but unevaluated.
+Thus the derivative signs are certified; a numerical finite-alpha sign
+threshold and an error comparison with the stored trajectory remain open.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

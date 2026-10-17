@@ -2,6 +2,37 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## First geometric response with certified signs, 17 October 2026
+
+The [continuum integral enclosure](nsc-atlas-finite-amplitude.md#enclosing-the-first-geometric-coefficients-without-a-field-grid)
+now certifies the first amplitude coefficients at the original right
+source endpoint `x=0.42292305857246026`:
+
+| Dimensionless quantity at fixed source label | Certified interval |
+| --- | --- |
+| Einstein wall-radius coefficient | [-1.647486524544946e-14, -7.764633410582473e-15] |
+| Centre-anchored polar-clock coefficient | [-2.0300355102160837e-14, -1.0867285824481553e-14] |
+
+Both are strictly negative. The same calculation bounds the exterior
+mass coefficient between -5.519382944588694e-11 and -1.8198319708608768e-11.
+These signs come from exact mass/frame/clock cancellations and whole-panel
+integral bounds, using the original source and certified reference geometry.
+The separate eta interval crosses zero.
+
+The [compact receipt](../results/summaries/nsc-atlas-onset-geometry-bound-v1.json)
+binds producer `7a38bc965c822bf63fd66913a2ed38fb7356dc79`, 22 source
+files and four input hashes. The single 128-panel pass uses 140,288 charged
+values / 0.03125 CPU seconds. Twelve independent controls pass, and a
+separate 1,024-value audit confirms provenance, interval displays and signs.
+There is no evolved field grid, source or geometric ODE, root search,
+retry or saved panel history.
+
+The earlier amplitude theorem makes these negative changes for sufficiently
+small positive amplitude parameter alpha. Its finite quadratic remainder
+constant is still unevaluated, so this does not supply a numerical
+finite-alpha sign threshold, a verified saved trajectory or a later
+central-arrival result. No observational comparison is claimed.
+
 ## A sourced finite-amplitude onset solution, 17 October 2026
 
 The [construction and continuation proof](nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
@@ -152,10 +183,9 @@ passes in 0.0625 CPU seconds. It authenticates all 20 producer bindings
 and three input hashes, and verifies every outward display. The new
 receipt is 8,120 bytes; no full history is saved.
 
-The next connection is to propagate certified scalar histories through
-the mass, lapse, displacement and clock integrals. These endpoint scalar
-bounds do not yet provide the gravitational coefficients or an evaluated
-finite-amplitude Taylor constant. No trajectory or grid scan was run.
+The geometric result above now propagates these certified scalar histories
+through the mass, lapse, displacement and clock integrals. The finite-amplitude
+Taylor constant remains unevaluated. No trajectory or grid scan was run.
 
 ## Fixed cap and moving-wall connection, 16 October 2026
 

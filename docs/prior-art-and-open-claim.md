@@ -3282,6 +3282,25 @@ zero when that supplied relation is included. The component also removes
 the local `w*j` term from the cap clock before interval evaluation. No
 physical coefficient application has run at this implementation stage.
 
+**Original application:** frozen producer
+`7a38bc965c822bf63fd66913a2ed38fb7356dc79` completes the one admitted
+128-panel pass with 140,288 charged values / 0.03125 CPU seconds.
+The [16,743-byte endpoint receipt](../results/summaries/nsc-atlas-onset-geometry-bound-v1.json)
+certifies strictly negative first coefficients for the exterior mass,
+Einstein wall radius and anchored polar clock; the radius and clock use
+the original fixed source label. No field evolution, source or geometric
+ODE, root search, retry or raw panel history is used. The eta coefficient
+interval includes zero. The 1,024-value / 0.046875-CPU-second independent
+audit passes, including 22 frozen producer bindings, four input hashes,
+outward displays and the sign conclusions. The next connection is an
+evaluated finite-amplitude remainder bound or a separately controlled
+comparison with the saved trajectory, not a finer scan of this endpoint.
+Independent Grok mathematical and source reviews accept the implemented
+enclosure, with no unresolved concrete defect. A read-only investigation
+of the existing second-amplitude theorem will identify the smallest
+unevaluated bound needed for a numerical remainder constant. It admits
+no new physical, symbolic or numerical execution.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

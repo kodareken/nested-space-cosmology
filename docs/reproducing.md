@@ -66,6 +66,14 @@ seconds across the initial execution and one corrected reference-identity
 assertion. The one physical application has a separate 200,000-value /
 30-CPU-second limit and retains only endpoint summaries and hashes.
 
+The [first geometric receipt](../results/summaries/nsc-atlas-onset-geometry-bound-v1.json)
+uses producer `7a38bc965c822bf63fd66913a2ed38fb7356dc79`. Its original
+128-panel application uses 140,288 charged values / 0.03125 CPU seconds;
+the separate authentication/display audit uses 1,024 / 0.046875.
+Both fixed-source radius and clock first coefficients are strictly
+negative. Reproduction requires a new output path and the frozen source
+version; later finite-amplitude errors are outside this certificate.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker
