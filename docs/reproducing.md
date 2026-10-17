@@ -579,6 +579,9 @@ GitHub Verify run `38979718935` confirms the storage fix on both Linux and
 Windows, including all retained tests and the current-paper checks. Later
 research commits have their own queued checks; this completed run applies
 to commit `6239ee1`.
+The later Verify run `38983430995` at `b422d9b` also passes both complete
+Linux/Windows suites and current-paper checks. The PDF workflow at `0a2799c`
+passes separately; newer commits retain their own queued verification.
 
 The connected scalar inverse has a separate exact/manufactured control command:
 
@@ -602,6 +605,11 @@ python scripts/run_python.py scripts/check_nsc_atlas_canonical_source_bound.py -
 It requires committed sources and a new output path, with a 4,096-value /
 5-second budget. Display floats are summaries; the rational strings carry
 the error bounds. This command performs no source readout or evolution.
+The frozen `d365a13` application completes with 1,024 charged values and CPU
+below timer resolution, after a pre-calculation source-graph correction. Its
+6,437-byte summary retains exact rational bounds; a 128-value rational audit
+checks the outward displays `4.658e-38` and `2.576e-33`. All 13 producer
+bindings authenticate.
 
 The source representation certificate uses the same source cell and
 its actual binary cubic coefficients:

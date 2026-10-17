@@ -6905,6 +6905,33 @@ comparison. Neither `c_x` nor its error can simply be relabelled Q at finite
 alpha. No second source derivative is introduced, and runtime floating
 evaluation error remains additional to the existing representation bound.
 
+The [original-cell application](../results/summaries/nsc-atlas-canonical-source-bound-v1.json)
+now supplies that conversion. The authenticated source certificate has
+`F_min=1/2`, `rJ_min=1/5`, `abs(rJ_x)<=3/2`; hence a conservative Einstein
+radius floor is `r_min=F_min*rJ_min=1/10`. Its exact g and g_x envelopes give
+`u_max=g_max/r_min`, `cx_max=gx_max`, and
+`rx_max=(3/2)/F_min+alpha*g_max*gx_max/(6*r_min)` from the source frame
+derivative. These bounds cover the exact source, the binary cubic and its
+right-owner jet. The mask can only remove scalar values or first jets.
+Positive radius makes c/r monotone along the straight input segment, so the
+endpoint tube covers the required Jacobian path too.
+
+Frozen `d365a13` yields the outward decimal bounds
+
+\[
+ e_X\le4.658\,10^{-38},\qquad e_Q\le2.576\,10^{-33}.
+\]
+
+The exact rational results are retained in the 6,437-byte summary, SHA256
+`6817ecccf46d2eb0620ea081d1ffd1cc67a4d319431a9b1e9cdd80b41dfe3b9a`.
+All 13 producer bindings authenticate. The calculation uses 1,024 charged
+values, with active CPU below timer resolution; a separate 128-value rational
+audit verifies the displayed outward bounds. The first command had stopped
+before calculation because it passed the JSON input to a code-only source
+graph; the corrected runner authenticates that input separately. No field
+readout, integration or time step occurs. These small source representation
+errors are inputs to the inverse, not yet bounds on the final wall signal.
+
 At the wall put `U_+=d Ubar/ds`, `V_+=dx/ds`, `W_x=U_+/V_+>0`,
 `A0=1-R^2`, `H=2 V_+ r_x+S_w R`, `S_w=2 cosh(a f)^3`. Define
 
@@ -7115,6 +7142,7 @@ The source conversion additionally checks its full symbolic Jacobian,
 an independent 75-digit finite difference against the bound, and zero-alpha
 recovery. Grok's review confirms the transmission and inverse proof, and
 identified the need to convert the certified invariant source data explicitly.
+Its follow-up confirms the complete source Jacobian and rational bound.
 The first run exposed a proper-time/source-time conversion omitted in the
 test's wall tangent comparison; dividing by V-plus corrects it. The production
 hybrid and derived transmission equations did not change. There is no

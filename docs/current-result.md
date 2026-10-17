@@ -198,6 +198,14 @@ Uniform coefficient/residual bounds and the remaining metric/wall/clock
 feedback still need closure before this becomes a full spacetime estimate.
 No new physical evolution or grid scan was run.
 
+The [canonical-source application](../results/summaries/nsc-atlas-canonical-source-bound-v1.json)
+authenticates that existing whole-cell certificate and bounds its canonical
+value error by `4.658e-38` and first-jet error by `2.576e-33`. It uses 1,024
+values with CPU below timer resolution, plus a 128-value outward-display
+audit. The summary is 6,437 bytes. The initial command stopped at a code/input
+authentication mismatch before calculation; the corrected runner completed.
+Runtime evaluation and the coupled metric propagation remain separate.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

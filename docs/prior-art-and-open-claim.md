@@ -2587,6 +2587,17 @@ the receipt's separate exact SHA256 authentication and remove it from that
 code-only list. No physical result file or scientific evaluation was produced;
 freeze the corrected runner before the one admitted conversion.
 
+**Application outcome:** frozen `d365a13` authenticates the original v2 input
+and all 13 producer bindings, then certifies canonical source value error
+`<=4.658e-38` and first-jet error `<=2.576e-33`. Its 1,024 charged values
+finish below process-CPU timer resolution; no source readout, integration or
+time step occurs. A separate 128-value rational audit verifies those outward
+decimal displays. The 6,437-byte summary SHA256 is
+`6817ecccf46d2eb0620ea081d1ffd1cc67a4d319431a9b1e9cdd80b41dfe3b9a`.
+Grok's final review confirms the complete source differential, common-segment
+tube and rational conversion. This supplies canonical forcing inputs; the
+full coupled inverse and floating implementation error are still open.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

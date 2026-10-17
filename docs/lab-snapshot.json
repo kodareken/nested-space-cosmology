@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "9f0ec9cd4081cbf08f2bc8455836afaf029de9f2",
+  "current_receipt_commit_parent": "d365a13ef7039fa767ddbb4945abb675d86c838e",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 326537,
-      "change": "Derive and check the connected continuum scalar inverse, canonical source bridge and radial metric connection.",
-      "changed_from_commit": "0a2799c0be79bdabcb9cfd1e8fcaaa37702474c0",
+      "bytes": 327088,
+      "change": "Record the certified canonical source-cell conversion and independent review.",
+      "changed_from_commit": "d365a13ef7039fa767ddbb4945abb675d86c838e",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a6332210b14fce76c4c5f44dd1aca68d3c52dac42f2c799296c39226529b517e"
+      "sha256": "add757be2ab621dfc08d21b8ece00040684b88674696e546b4c6fe2b9f8df4ed"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 342979,
-      "change": "Derive and check the connected continuum scalar inverse, canonical source bridge and radial metric connection.",
-      "changed_from_commit": "0a2799c0be79bdabcb9cfd1e8fcaaa37702474c0",
+      "bytes": 344540,
+      "change": "Record the certified canonical source-cell conversion and independent review.",
+      "changed_from_commit": "d365a13ef7039fa767ddbb4945abb675d86c838e",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "bc25a1c0932beaaa93c9680b4b7da236a28fa4cfc2a6b52cc8ca61adc28c2ddc"
+      "sha256": "23945768bfbe5ea698b182c35f0609b2ef50cd8884e219cac0d43d3e92daa90c"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 372517,
-      "change": "Keep input receipt authentication separate from the implementation-only source graph.",
-      "changed_from_commit": "9f0ec9cd4081cbf08f2bc8455836afaf029de9f2",
+      "bytes": 373240,
+      "change": "Record the certified canonical source-cell conversion and independent review.",
+      "changed_from_commit": "d365a13ef7039fa767ddbb4945abb675d86c838e",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "985a1bdaf0f60fd1bb30afd1e3a023addd3611791d72d934ffd33232bb3947e9"
+      "sha256": "8b2fc980bd4c7c8707333ebdef4edc45c56151cf13a3a0a1a6b672b13a521eff"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 118387,
-      "change": "Derive and check the connected continuum scalar inverse, canonical source bridge and radial metric connection.",
-      "changed_from_commit": "0a2799c0be79bdabcb9cfd1e8fcaaa37702474c0",
+      "bytes": 118936,
+      "change": "Record the certified canonical source-cell conversion and independent review.",
+      "changed_from_commit": "d365a13ef7039fa767ddbb4945abb675d86c838e",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "6f02da369981ec5067f63dc76f631a1c5d3ac326834e42dab844f9c4d402788c"
+      "sha256": "afa2639f54b7b83699466f296fd8f66eef72d496093c48c25de3eb662183e635"
     },
     {
       "bytes": 18356,
@@ -29527,6 +29527,14 @@
       "original_path": "lab/results/research-reset/unowned-families.json",
       "path": "results/research-reset/unowned-families.json",
       "sha256": "3333db75d63d6305dd5605838354c7df0832740814109b5ab4c2b0b46328d75c"
+    },
+    {
+      "bytes": 6437,
+      "change": "Record the certified canonical source-cell conversion and independent review.",
+      "changed_from_commit": "d365a13ef7039fa767ddbb4945abb675d86c838e",
+      "path": "results/summaries/nsc-atlas-canonical-source-bound-v1.json",
+      "retention_reason": "Compact certified source conversion and reproducible calculation evidence.",
+      "sha256": "6817ecccf46d2eb0620ea081d1ffd1cc67a4d319431a9b1e9cdd80b41dfe3b9a"
     },
     {
       "bytes": 2605,
