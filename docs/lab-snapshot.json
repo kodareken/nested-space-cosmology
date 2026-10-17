@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4db75256c701904631cdfebc8f9f3dabdce1f207",
+  "current_receipt_commit_parent": "459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 235986,
-      "change": "Add a positive matrix enclosure for amplitude-proportional geometric departures.",
-      "changed_from_commit": "4db75256c701904631cdfebc8f9f3dabdce1f207",
+      "bytes": 236081,
+      "change": "Record the uniform geometric amplitude certificate and independent audit.",
+      "changed_from_commit": "459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "5b951c81ae0bdd5af9769d078e3d73686b713ae0e861334bb89b3b9b72a97444"
+      "sha256": "28b0570cf49e9275299aec62a2ccad1ef83b1fe1192594d33b8bc0a21fd79ed6"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 344732,
-      "change": "Record certified negative onset radius and clock first coefficients and independent audit.",
-      "changed_from_commit": "7a38bc965c822bf63fd66913a2ed38fb7356dc79",
+      "bytes": 346321,
+      "change": "Record the uniform geometric amplitude certificate and independent audit.",
+      "changed_from_commit": "459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "030b38c2920ccc3332b955c09bc778d6cf7f3890371b3869bc2f78614c78f45c"
+      "sha256": "930ce88b94801c9672e079080fecb99750fd6e5d201c9370d783cdfc0cb508cc"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 542626,
-      "change": "Add a positive matrix enclosure for amplitude-proportional geometric departures.",
-      "changed_from_commit": "4db75256c701904631cdfebc8f9f3dabdce1f207",
+      "bytes": 545041,
+      "change": "Record the uniform geometric amplitude certificate and independent audit.",
+      "changed_from_commit": "459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7d8c97c6a36bd614de9bfd2f90fec644b137b67fb080b042cbc4e4f4b6ffcb70"
+      "sha256": "568cf8b85a260838a54a4bec7ff4461b10995535111b4357c3373cef510c87dc"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 421340,
-      "change": "Add a positive matrix enclosure for amplitude-proportional geometric departures.",
-      "changed_from_commit": "4db75256c701904631cdfebc8f9f3dabdce1f207",
+      "bytes": 422561,
+      "change": "Record the uniform geometric amplitude certificate and independent audit.",
+      "changed_from_commit": "459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "333f020a2328ed284c756898bab19d3aea31aebba6cb7f99dbaba6bfab1980ed"
+      "sha256": "f58fdbb90045c356183c89ff3182a751e9c98c7495b4dfa56e57ae1f3ea02686"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 130618,
-      "change": "Add a positive matrix enclosure for amplitude-proportional geometric departures.",
-      "changed_from_commit": "4db75256c701904631cdfebc8f9f3dabdce1f207",
+      "bytes": 131064,
+      "change": "Record the uniform geometric amplitude certificate and independent audit.",
+      "changed_from_commit": "459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0682800e6c5741b24a0fc2993fa04fdf8a703c12cc215a9f46389c1cf4715299"
+      "sha256": "db62f4f7189e3b04eb2e9ab86d7654e59da8bff4b7f699b68967e3a5f35d211f"
     },
     {
       "bytes": 18356,
@@ -29692,6 +29692,14 @@
       "path": "results/summaries/nsc-atlas-fixed-onset-v1.json",
       "retention_reason": "Retained-source onset attempt, exact time scale and boundary-order diagnosis.",
       "sha256": "c9f24a5073d28ceac899f5d31d03c418d3ecfdd450ec8390dd1cc5dedbe5416c"
+    },
+    {
+      "bytes": 13877,
+      "change": "Record the uniform geometric amplitude certificate and independent audit.",
+      "changed_from_commit": "459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd",
+      "path": "results/summaries/nsc-atlas-geometric-departure-bound-v1.json",
+      "retention_reason": "Compact certificate of uniform geometric amplitude departures and exact matrix residuals.",
+      "sha256": "1c6fab9b40ba7fb623dffca80ec8e06b859531ccec3497361649269e580afd62"
     },
     {
       "bytes": 8120,

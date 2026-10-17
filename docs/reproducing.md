@@ -95,6 +95,13 @@ is separate from the seven manufactured controls, which use 11,264 values
 and active CPU time below timer resolution. This supplies a geometric
 first difference, not a scalar difference or quadratic remainder constant.
 
+The [first departure receipt](../results/summaries/nsc-atlas-geometric-departure-bound-v1.json)
+uses frozen producer `459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd` and
+28,672 charged values / 0.03125 CPU seconds. The separate rational audit
+uses 1,024 values / 0.09375 CPU seconds. The matrix norm is below 0.146;
+the exact solution and dependent rows have zero rational residual.
+Use a fresh output path when reproducing this retained certificate.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker

@@ -3349,6 +3349,25 @@ solutions. The manufactured affine control verifies simultaneous source
 and alpha forcing, with the coefficient tube held fixed, and zero
 forcing stays zero. No original physical input has been evaluated.
 
+**Original application:** producer
+`459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd` completes the single
+algebraic application with 28,672 charged values / 0.03125 CPU seconds.
+The matrix norm is below 0.146. Its exact rational inverse supplies
+uniform bounds proportional to alpha for the geometric errors, including
+the full radius, log lapse and anchored clock. The
+[13,877-byte receipt](../results/summaries/nsc-atlas-geometric-departure-bound-v1.json)
+retains 26 producer bindings, five input hashes and no history. The
+separate 1,024-value / 0.09375-CPU-second audit confirms provenance,
+positivity, exact residuals, alpha scaling and all outward displays.
+No source query or integration, field evolution, time step, search or
+retry occurred. This leaves the scalar first difference as a concrete
+remaining input to the proposed quadratic geometric error comparison.
+Grok's independent mathematical review accepts the frozen affine premise,
+source alpha scaling and matrix inverse. Two questions from the source
+review are resolved by inspecting the actual inputs and file tail: the
+radius floors are point-valued exact dyadics, and the final 2,048-value
+charge is present. No physical rerun or input change was needed.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

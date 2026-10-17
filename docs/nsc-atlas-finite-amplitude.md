@@ -11794,6 +11794,46 @@ This supplies only a geometric first finite-difference bound. A normalized
 scalar first-difference bound and the quadratic radius/clock remainder
 are not established by this matrix calculation.
 
+**Original algebraic application.** Producer
+`459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd` completes the one admitted
+application with 28,672 charged values / 0.03125 CPU seconds. The
+[13,877-byte receipt](../results/summaries/nsc-atlas-geometric-departure-bound-v1.json)
+has matrix norm at most `0.14502002722995416`, strictly below one.
+Its exact rational inverse gives the following outward upper bounds:
+
+| Dimensionless error throughout the original cell | Coefficient C in `error<=alpha*C` | Bound at alpha_max |
+| --- | ---: | ---: |
+| Einstein radius, including the wall | 2.2587078091171982e-11 | 2.93250906636424e-15 |
+| Exterior log lapse | 2.7354407206950007e-10 | 3.551457466769574e-14 |
+| Anchored wall polar clock | 2.3680670715847977e-10 | 3.0744915872474894e-14 |
+| Exterior transverse radius derivative | 1.0716047646212073e-8 | 1.3912780905641046e-12 |
+| Exterior transverse log-lapse derivative | 1.9060076485246896e-7 | 2.4745939635471547e-11 |
+
+The complete prefix and longitudinal bounds are retained in the receipt.
+These estimates compare the exact sourced geometry with its vacuum
+reference at a common source label. Their validity on the full interval
+uses the earlier onset existence/tube theorem. The original tube receipt
+keeps its historical conditional status unchanged.
+
+The result has SHA256
+`1c6fab9b40ba7fb623dffca80ec8e06b859531ccec3497361649269e580afd62`,
+26 frozen source bindings and five input hashes. An independent
+1,024-value audit passes in 0.09375 CPU seconds: Git/disk authentication,
+all nonnegative coefficients, the weighted norm, exact matrix and dependent
+row residuals, alpha scaling, outward displays and work count. There are
+no source queries, integrations, field evolutions, time steps, searches,
+retries or saved histories. This is a controlled first finite difference;
+it does not yet enclose the second-order correction after subtracting
+the previously certified first coefficient.
+
+Independent Grok review confirms the three-variable affine dependency,
+the uniform source quotients, fixed scalar coefficients and nonnegative
+resolvent argument. The pinned tube's radius floors are exact dyadic
+point records: their stored lower and upper endpoints agree. Their
+outward decimal displays differ, but those displays are not consumed by
+the calculation. The additional final 2,048-value charge is retained
+explicitly; the complete application count is 28,672.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

@@ -2,6 +2,36 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Uniform geometric amplitude bounds, 17 October 2026
+
+The [positive matrix comparison](nsc-atlas-finite-amplitude.md#amplitude-proportional-geometric-departure)
+now bounds the exact geometry's departure from its vacuum reference
+throughout the original onset cell and entire admitted amplitude interval.
+All quantities below are dimensionless:
+
+| Error | Uniform bound |
+| --- | --- |
+| Einstein radius, including the wall | `alpha * 2.2587078091171982e-11` |
+| Exterior log lapse | `alpha * 2.7354407206950007e-10` |
+| Centre-anchored wall polar clock | `alpha * 2.3680670715847977e-10` |
+
+At alpha_max these are at most `2.93250906636424e-15`,
+`3.551457466769574e-14` and `3.0744915872474894e-14`, respectively.
+The calculation freezes the already certified coefficient tube and solves
+one rational three-by-three comparison. Its weighted matrix norm is
+below 0.146. It does not evolve a field or change the source or coupling.
+
+The [compact certificate](../results/summaries/nsc-atlas-geometric-departure-bound-v1.json)
+binds producer `459b9fdf6ad8fde233ce5f7137179eeda5a3c8bd`, 26 source
+files and five inputs. Seven manufactured controls and a separate exact
+receipt audit pass. The original application uses 28,672 charged values /
+0.03125 CPU seconds, with no source query, integration, time step or retry.
+
+This is an explicit finite-amplitude first difference. The quadratic
+remainder after subtracting the first coefficient, and the error of the
+stored numerical trajectory, remain separate calculations. The normalized
+scalar first-difference bound is the next needed input.
+
 ## First geometric response with certified signs, 17 October 2026
 
 The [continuum integral enclosure](nsc-atlas-finite-amplitude.md#enclosing-the-first-geometric-coefficients-without-a-field-grid)
