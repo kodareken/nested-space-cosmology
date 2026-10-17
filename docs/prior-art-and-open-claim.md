@@ -44,6 +44,17 @@ A non-vacuum result rules out identifying this candidate's computed correction
 with Lambda on this domain; no continuation, extra resolution or parameter
 scan follows from this admission.
 
+**Outcome:** [the admitted saved-geometry application](../results/summaries/nsc-conformal-geometric-average-v1.json)
+completes in 0.46875 CPU seconds / 737,280 charged values, with no solve or
+time step. At `T=0.3` the primary dimensionless geometric trace is
+`-0.5725162917234052` and the vacuum-form defect is `2.177444644645245`.
+Their maximum deviations across the four stored cases are `4.65e-9` and
+`1.92e-8`. Metric identities and first-rate reconstruction pass their
+predeclared tolerance. The positive-curvature correction has non-vacuum
+stress and the domain contracts. Stop this probe: it does not supply the
+desired Lambda mechanism. The physical parent/transition geometry remains
+necessary; no new grid or evolution campaign follows from this result.
+
 ## P001 full-endpoint fixed-grid comparison, 17 October 2026
 
 **Interpretation of the completed receipts:** independent Grok review traces

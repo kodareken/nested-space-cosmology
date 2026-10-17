@@ -4,6 +4,20 @@ Current presentation, 17 October 2026: [the living atlas manuscript](../paper/ne
 
 ## First Step 7 vacuum projection, 17 October 2026
 
+The [existing evolving conformal geometry](schur-memory.md#averaging-an-existing-evolving-connected-metric)
+now supplies a second, explicitly separate geometric-average calculation.
+Using its original observer clock and a reference ruler fixed from the
+initial observer sphere, the final geometric trace is
+`Lambda_g,trace * L_ref^2 = -0.5725162917234052`, with four-case deviation
+`4.65e-9`. The vacuum-condition residual is `2.177444644645245`, with
+deviation `1.92e-8`. Its domain contracts and its geometric density/pressure
+do not have vacuum form. This finite Einstein/Weyl/Dirac realization is not
+P001's missing common parent, and its correction is not a cosmological
+Lambda prediction. Fourteen metric/jet controls pass; evaluation reused
+saved geometry and rates in 0.46875 CPU seconds, without a field solve or
+evolution step. The probe is closed; further work must supply the missing
+physical parent/transition and observer reduction.
+
 The selected larger-geometry route now has an
 [observer-clock averaging identity](schur-memory.md#observer-clocks-in-the-geometric-average).
 It retains the spatial lapse and its time derivative when comparing

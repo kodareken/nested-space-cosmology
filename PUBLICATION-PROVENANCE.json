@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 378940,
+      "bytes": 379888,
       "path": "docs/current-result.md",
-      "sha256": "b8244c31f25d32d8993aa9ce9fe02087769970238662b5b491c0edd6874c84c4"
+      "sha256": "1e87f340aa401a0c5dbc798e8a19feedf8da8683f2d41e497c2df55686f4fe5c"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2364597,
+      "bytes": 2365080,
       "path": "docs/lab-snapshot.json",
-      "sha256": "d24e3bb267282223032cdc396e8c1cda7e84f8cd35e7d4511f7f6bf30a8fb151"
+      "sha256": "ee6646473160b1ade02c77f7ff33bc71105b269f6e9eaaa243e58936958fc26e"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2201,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 482280,
+      "bytes": 483046,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "cdb2cd228c4bbe2ccad358a5763bae5d3d6bdd9e830a04379e6a053008be0383"
+      "sha256": "c374d6a8cfa79d76cf04dd26bc1269a1028301848e64bb362ccef68adb563949"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 159409,
+      "bytes": 159765,
       "path": "docs/reproducing.md",
-      "sha256": "d4c20f6623be07dae6cbb78028dd66165123b430b72dfc157c08544fef3c669e"
+      "sha256": "53323bcb22fe5616f1b774bb9415a05bcff1e08eb263d30aeacaec9d3cd29e2b"
     },
     {
       "bytes": 31710,
@@ -2241,9 +2241,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 60173,
+      "bytes": 62219,
       "path": "docs/schur-memory.md",
-      "sha256": "a675f5b9e11bf9f42ba8e585f221bdde47689f2b8b366f707f826903e38ff31b"
+      "sha256": "c8d7535619c8e9c9105b69f744ad2db4fec13f2035a87776b9eac97c828658ce"
     },
     {
       "bytes": 537091,
@@ -14886,6 +14886,11 @@
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
+      "bytes": 32917,
+      "path": "results/summaries/nsc-conformal-geometric-average-v1.json",
+      "sha256": "cb57f10042c6ad58d23c55160d1a279271c5663e0fb13f00a7d389e7cc930b72"
+    },
+    {
       "bytes": 7920,
       "path": "scripts/amend_nsc_atlas_endpoint_cpu.py",
       "sha256": "79e13062a0ec9f6f1af3c00de3af384e061aaad649d21cb17306c01203834e21"
@@ -21596,7 +21601,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "d24e3bb267282223032cdc396e8c1cda7e84f8cd35e7d4511f7f6bf30a8fb151",
+  "lab_snapshot_sha256": "ee6646473160b1ade02c77f7ff33bc71105b269f6e9eaaa243e58936958fc26e",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

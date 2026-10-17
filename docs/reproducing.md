@@ -2801,6 +2801,11 @@ Refinement differences remain indicators, and the trace is reported alongside
 the vacuum-form defect. This realization is distinct from P001's parent.
 The metric and second-rate controls run with
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_geometric_average.py tests/test_nsc_conformal_geometric_average.py -q`.
+The [recorded scalar result](../results/summaries/nsc-conformal-geometric-average-v1.json)
+binds producing commit `8ecbeff`, the original geometry hash, metric identities
+and four-case indicators. Its correction fails vacuum form on the declared
+interval. This completes that one application; it does not authorize a new
+trajectory or refinement campaign.
 It evaluates one frozen state, takes no time steps, and retains the existing
 60 CPU-second / 40-million-value limit. Do not infer a new grid calculation
 or a change in the physical model from this benchmark.

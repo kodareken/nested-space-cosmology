@@ -270,6 +270,42 @@ The output keeps the geometric trace, vacuum-form defect, direct volume
 acceleration and refinement indicators together. A trace alone supplies no
 cosmological vacuum identification or observational agreement.
 
+The [saved-geometry result](../results/summaries/nsc-conformal-geometric-average-v1.json)
+now evaluates that question. Its reference ruler is
+$L_{\rm ref}=4.80028044552352$ in the original action units. The primary
+case gives the following dimensionless coefficients:
+
+| Stored time | $H_oL_{\rm ref}$ | $\Lambda_{g,\rm tr}L_{\rm ref}^2$ | $(3Q_\nu+\mathcal R_\nu+2P_\nu)L_{\rm ref}^2$ |
+| --- | ---: | ---: | ---: |
+| 0.05 | -0.00488136 | -0.58208154 | 2.22336490 |
+| 0.2 | -0.01941849 | -0.57363917 | 2.23211408 |
+| 0.3 | -0.02901471 | -0.57251629 | 2.17744464 |
+
+At the last time, $\mathcal R_\nu L_{\rm ref}^2=2.24615801$,
+$Q_\nu L_{\rm ref}^2=-0.01240311$ and
+$P_\nu L_{\rm ref}^2=-0.01575203$. The geometric density and pressure are
+$\kappa\rho_g L_{\rm ref}^2=-1.11687745$ and
+$\kappa p_g L_{\rm ref}^2=0.39106257$. Positive spatial curvature dominates
+this correction, and the domain is contracting. It does not supply a
+vacuum-form or accelerating cosmological response on the tested interval.
+
+The largest four-case deviations of the final trace and vacuum defect are
+respectively $4.65\times10^{-9}$ and $1.92\times10^{-8}$. These are stored
+refinement indicators, not continuum or physical uncertainty bounds.
+Metric identities agree within $1.19\times10^{-14}$ dimensionlessly, and
+the saved first-rate reconstruction within $3.61\times10^{-15}$.
+The primary original-action Hamiltonian defect remains between
+$8.35\times10^{-6}$ and $9.01\times10^{-6}$ at these times; it was not
+replaced by the metric-defined Hamiltonian identity. The entire application
+used 0.46875 CPU seconds and 737,280 charged values, with zero field solves
+or evolution steps. Fourteen metric/jet controls pass.
+
+This closes the finite averaging probe for this candidate. It does not
+provide the desired Lambda mechanism. The next physical construction needs
+the actual common-parent/transition geometry and its observer reduction;
+the present periodic spherical realization supplies neither by repetition.
+No additional precision campaign is opened here.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

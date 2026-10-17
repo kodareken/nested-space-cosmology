@@ -1,0 +1,736 @@
+{
+  "domain": {
+    "coordinate_period": 8.0,
+    "observer_x": 1.0,
+    "times": [
+      0.05,
+      0.2,
+      0.3
+    ],
+    "topology": "S1 x S2",
+    "zero_shift": true
+  },
+  "execution": {
+    "charged_values": 737280,
+    "cpu_seconds": 0.46875
+  },
+  "field_solves": 0,
+  "input": {
+    "archive_member": "kodareken-nested-space-cosmology-eea83b2/lab/results/development/nsc-spherical-conformal-episode-v2.npz",
+    "archive_url": "https://zenodo.org/api/records/23090015/files/kodareken/nested-space-cosmology-v0.27.0.zip/content",
+    "episode_sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "payload_bytes": 53100722,
+    "payload_sha256": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877"
+  },
+  "kinetic_couplings": {
+    "A": 0.04501936182826115,
+    "C_W": -0.0008441130342798952,
+    "F_chi": 0.007071624819448288,
+    "Z": -3.3943799133351833
+  },
+  "limits": {
+    "charged_values": 20000000,
+    "cpu_seconds": 30.0,
+    "dimensionless_identity_tolerance": 1e-10
+  },
+  "physical_time_steps": 0,
+  "primary": "nf512_dt_0.0005",
+  "primary_rows": [
+    {
+      "case": "nf512_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.004881358758313417,
+        "Q": 0.0007417618476983521,
+        "direct_volume_acceleration": -1.1642345534653917,
+        "geometric_trace_projection": -0.582081535237711,
+        "geometric_vacuum_condition": 2.2233649042423798,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1379227612983058,
+        "kappa_geometric_pressure": 0.3968011265508458,
+        "kappa_mean_energy": 1.137994244288288,
+        "kappa_mean_pressure": 0.3793314147627547,
+        "lapse_acceleration": -0.02698207102481418,
+        "mean_intrinsic_curvature": 2.2751037607489137,
+        "observer_lapse_over_reference_length": 0.25130463951274196,
+        "scalar_fitting_acceleration_residual": 0.0,
+        "three_volume_acceleration": -1.164234553465392,
+        "total_trace_projection": -0.582081535237705,
+        "volume_over_reference_length_cubed": 20.997862866031618
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": -1.1841687065141597e-14,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": 9.251318019641873e-16,
+        "original_observer_clock": 1.8502636039283746e-16,
+        "volume_acceleration": -1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 1.8648277366750676e-17,
+        "radius_rate": 7.516695890959022e-17,
+        "stored_lapse": 3.552713678800501e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 8.356134042048998e-06,
+        "full_momentum_max": 9.973419008435513e-07
+      },
+      "time": 0.05
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.019418493365246762,
+        "Q": 0.004364264739398435,
+        "direct_volume_acceleration": -1.148409576129668,
+        "geometric_trace_projection": -0.5736391712379763,
+        "geometric_vacuum_condition": 2.2321140759247156,
+        "hamiltonian_residual": 0.0,
+        "kappa_geometric_density": -1.1316676902191551,
+        "kappa_geometric_pressure": 0.3876296649109166,
+        "kappa_mean_energy": 1.1327989238728835,
+        "kappa_mean_pressure": 0.3775996412909527,
+        "lapse_acceleration": -0.019974916996195788,
+        "mean_intrinsic_curvature": 2.258971115698912,
+        "observer_lapse_over_reference_length": 0.2510714353099645,
+        "scalar_fitting_acceleration_residual": 0.0,
+        "three_volume_acceleration": -1.1484095761296682,
+        "total_trace_projection": -0.5736391712379699,
+        "volume_over_reference_length_cubed": 20.96900286170631
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": 0.0,
+        "lapse_integration_by_parts": -4.625659009820937e-16,
+        "original_observer_clock": -2.7753954058925617e-16,
+        "volume_acceleration": -1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 1.4311468676808659e-16,
+        "radius_rate": 2.341739873721849e-16,
+        "stored_lapse": 3.608224830031759e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 8.366712551222122e-06,
+        "full_momentum_max": 7.780118655986712e-07
+      },
+      "time": 0.2
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.02901470753482063,
+        "Q": -0.012403105540282271,
+        "direct_volume_acceleration": -1.1475581432067874,
+        "geometric_trace_projection": -0.5725162917234052,
+        "geometric_vacuum_condition": 2.177444644645245,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1168774528847165,
+        "kappa_geometric_pressure": 0.39106257133630146,
+        "kappa_mean_energy": 1.11940301264471,
+        "kappa_mean_pressure": 0.37313433754822556,
+        "lapse_acceleration": -0.015752025021811805,
+        "mean_intrinsic_curvature": 2.2461580113097153,
+        "observer_lapse_over_reference_length": 0.2504665719488199,
+        "scalar_fitting_acceleration_residual": 1.598907975164063e-16,
+        "three_volume_acceleration": -1.1475581432067874,
+        "total_trace_projection": -0.5725162917233969,
+        "volume_over_reference_length_cubed": 20.930827399776028
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": 4.625659009820937e-16,
+        "original_observer_clock": -4.6256590098209364e-17,
+        "volume_acceleration": 1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 3.2612801348363973e-16,
+        "radius_rate": 4.567838272198175e-16,
+        "stored_lapse": 3.608224830031759e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 9.00287133731581e-06,
+        "full_momentum_max": 7.982436498465972e-07
+      },
+      "time": 0.3
+    }
+  ],
+  "reference_length": {
+    "definition": "Areal radius of the original observer sphere x=1 at T=0.05 in the primary case",
+    "selected_by_target_observation": false,
+    "value_in_original_action_units": 4.80028044552352
+  },
+  "refinement_indicators": [
+    {
+      "coarser_space_minus_primary": {
+        "H_observer": -1.0629422689256707e-12,
+        "geometric_trace_projection": -3.887800081869841e-10,
+        "geometric_vacuum_condition": 3.284572613893033e-11,
+        "kappa_geometric_density": -3.9699155074401915e-10,
+        "kappa_geometric_pressure": 3.860431418978294e-10
+      },
+      "coarser_time_minus_primary": {
+        "H_observer": -3.5301622736128024e-16,
+        "geometric_trace_projection": -1.234568003383174e-13,
+        "geometric_vacuum_condition": -3.33510996597397e-13,
+        "kappa_geometric_density": -4.04121180963557e-14,
+        "kappa_geometric_pressure": 1.514899317101026e-13
+      },
+      "four_case_maximum_deviation_from_primary": {
+        "H_observer": 1.0632996219617219e-12,
+        "geometric_trace_projection": 3.88897358760687e-10,
+        "geometric_vacuum_condition": 3.284572613893033e-11,
+        "kappa_geometric_density": 3.970337392189549e-10,
+        "kappa_geometric_pressure": 3.861854169784351e-10
+      },
+      "time": 0.05
+    },
+    {
+      "coarser_space_minus_primary": {
+        "H_observer": -5.9189007861615295e-12,
+        "geometric_trace_projection": 1.3445877744544532e-09,
+        "geometric_vacuum_condition": 7.844775939958026e-09,
+        "kappa_geometric_density": -6.166063215573558e-10,
+        "kappa_geometric_pressure": -1.9983190657768546e-09
+      },
+      "coarser_time_minus_primary": {
+        "H_observer": 1.2385925618474403e-15,
+        "geometric_trace_projection": -8.273381979506667e-13,
+        "geometric_vacuum_condition": -4.568789790937444e-12,
+        "kappa_geometric_density": 3.148592497836944e-13,
+        "kappa_geometric_pressure": 1.2082557176995579e-12
+      },
+      "four_case_maximum_deviation_from_primary": {
+        "H_observer": 5.9189007861615295e-12,
+        "geometric_trace_projection": 1.3445877744544532e-09,
+        "geometric_vacuum_condition": 7.844775939958026e-09,
+        "kappa_geometric_density": 6.166063215573558e-10,
+        "kappa_geometric_pressure": 1.9983190657768546e-09
+      },
+      "time": 0.2
+    },
+    {
+      "coarser_space_minus_primary": {
+        "H_observer": 1.0616681145325657e-12,
+        "geometric_trace_projection": -4.648723628264406e-09,
+        "geometric_vacuum_condition": -1.9111995541720717e-08,
+        "kappa_geometric_density": 1.2927525716577293e-10,
+        "kappa_geometric_pressure": 6.241390126948687e-09
+      },
+      "coarser_time_minus_primary": {
+        "H_observer": -2.8359259385268842e-14,
+        "geometric_trace_projection": 6.541434061091422e-13,
+        "geometric_vacuum_condition": 1.2291945239439883e-11,
+        "kappa_geometric_density": -2.418731881448366e-12,
+        "kappa_geometric_pressure": -1.6785461909307742e-12
+      },
+      "four_case_maximum_deviation_from_primary": {
+        "H_observer": 1.0616681145325657e-12,
+        "geometric_trace_projection": 4.648723628264406e-09,
+        "geometric_vacuum_condition": 1.9111995541720717e-08,
+        "kappa_geometric_density": 1.2927525716577293e-10,
+        "kappa_geometric_pressure": 6.241390126948687e-09
+      },
+      "time": 0.3
+    }
+  ],
+  "reproduce": "python scripts/run_python.py scripts/measure_nsc_conformal_geometric_average.py --geometry .build/data/nsc-spherical-conformal-episode-v2.npz --output results/summaries/nsc-conformal-geometric-average-v1.json",
+  "rows": [
+    {
+      "case": "nf256_dt_0.0010",
+      "dimensionless": {
+        "H_observer": -0.004881358759376717,
+        "Q": 0.0007417618498510197,
+        "direct_volume_acceleration": -1.164234554243224,
+        "geometric_trace_projection": -0.5820815356266084,
+        "geometric_vacuum_condition": 2.223364904274925,
+        "hamiltonian_residual": 1.598907975164063e-16,
+        "kappa_geometric_density": -1.1379227616953396,
+        "kappa_geometric_pressure": 0.39680112693703123,
+        "kappa_mean_energy": 1.1379942446853526,
+        "kappa_mean_pressure": 0.3793314148951139,
+        "lapse_acceleration": -0.026982071407728042,
+        "mean_intrinsic_curvature": 2.275103761540828,
+        "observer_lapse_over_reference_length": 0.25130463947710785,
+        "scalar_fitting_acceleration_residual": 0.0,
+        "three_volume_acceleration": -1.1642345542432244,
+        "total_trace_projection": -0.5820815356266056,
+        "volume_over_reference_length_cubed": 20.997862855433347
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": -5.920843532570799e-15,
+        "hamiltonian_metric_definition": 1.598907975164063e-16,
+        "lapse_integration_by_parts": -5.550790811785123e-16,
+        "original_observer_clock": 9.251318019641873e-17,
+        "volume_acceleration": -3.197815950328126e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 4.119968255444917e-18,
+        "radius_rate": 3.0355887251949896e-17,
+        "stored_lapse": 4.996003610813204e-16,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 0.0010682984246770388,
+        "full_momentum_max": 0.00034208679225988803
+      },
+      "time": 0.05
+    },
+    {
+      "case": "nf256_dt_0.0010",
+      "dimensionless": {
+        "H_observer": -0.019418493371164493,
+        "Q": 0.004364264762650465,
+        "direct_volume_acceleration": -1.1484095734429225,
+        "geometric_trace_projection": -0.5736391698942538,
+        "geometric_vacuum_condition": 2.2321140837647984,
+        "hamiltonian_residual": -3.197815950328126e-16,
+        "kappa_geometric_density": -1.1316676908354533,
+        "kappa_geometric_pressure": 0.38762966291385387,
+        "kappa_mean_energy": 1.1327989244898715,
+        "kappa_mean_pressure": 0.3775996414966221,
+        "lapse_acceleration": -0.019974913715704628,
+        "mean_intrinsic_curvature": 2.2589711169082562,
+        "observer_lapse_over_reference_length": 0.2510714352493598,
+        "scalar_fitting_acceleration_residual": 1.598907975164063e-16,
+        "three_volume_acceleration": -1.148409573442923,
+        "total_trace_projection": -0.5736391698942525,
+        "volume_over_reference_length_cubed": 20.969002851120614
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 5.920843532570799e-15,
+        "hamiltonian_metric_definition": -3.197815950328126e-16,
+        "lapse_integration_by_parts": 2.7753954058925617e-16,
+        "original_observer_clock": 5.08822491080303e-16,
+        "volume_acceleration": -4.796723925492189e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 2.6020852139652106e-17,
+        "radius_rate": 8.384006955300448e-17,
+        "stored_lapse": 4.996003610813204e-16,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 0.0011956649231663619,
+        "full_momentum_max": 0.0002633162740184325
+      },
+      "time": 0.2
+    },
+    {
+      "case": "nf256_dt_0.0010",
+      "dimensionless": {
+        "H_observer": -0.02901470753378707,
+        "Q": -0.012403105500116526,
+        "direct_volume_acceleration": -1.1475581525024898,
+        "geometric_trace_projection": -0.572516296371346,
+        "geometric_vacuum_condition": 2.1774446255459727,
+        "hamiltonian_residual": 3.197815950328126e-16,
+        "kappa_geometric_density": -1.1168774527578391,
+        "kappa_geometric_pressure": 0.39106257757584845,
+        "kappa_mean_energy": 1.1194030125176526,
+        "kappa_mean_pressure": 0.37313433750587377,
+        "lapse_acceleration": -0.015752034484736496,
+        "mean_intrinsic_curvature": 2.246158011015795,
+        "observer_lapse_over_reference_length": 0.2504665719717793,
+        "scalar_fitting_acceleration_residual": 0.0,
+        "three_volume_acceleration": -1.14755815250249,
+        "total_trace_projection": -0.5725162963713384,
+        "volume_over_reference_length_cubed": 20.930827389207384
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": 3.197815950328126e-16,
+        "lapse_integration_by_parts": 9.251318019641873e-17,
+        "original_observer_clock": -9.251318019641873e-17,
+        "volume_acceleration": -1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 6.245004513516506e-17,
+        "radius_rate": 8.384006955300448e-17,
+        "stored_lapse": 4.996003610813204e-16,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 0.0011679859629225575,
+        "full_momentum_max": 0.00024795918691378205
+      },
+      "time": 0.3
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.004881358759376359,
+        "Q": 0.0007417618499644901,
+        "direct_volume_acceleration": -1.1642345542429902,
+        "geometric_trace_projection": -0.582081535626491,
+        "geometric_vacuum_condition": 2.2233649042752255,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1379227616952974,
+        "kappa_geometric_pressure": 0.39680112693688896,
+        "kappa_mean_energy": 1.1379942446853109,
+        "kappa_mean_pressure": 0.37933141489510014,
+        "lapse_acceleration": -0.02698207140764916,
+        "mean_intrinsic_curvature": 2.27510376154063,
+        "observer_lapse_over_reference_length": 0.2513046394771073,
+        "scalar_fitting_acceleration_residual": 0.0,
+        "three_volume_acceleration": -1.1642345542429904,
+        "total_trace_projection": -0.5820815356264885,
+        "volume_over_reference_length_cubed": 20.997862855433354
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": 7.401054415713498e-16,
+        "original_observer_clock": 1.3876977029462809e-16,
+        "volume_acceleration": -1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 3.577867169202165e-18,
+        "radius_rate": 2.4573813489673727e-17,
+        "stored_lapse": 5.551115123125783e-16,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 0.0010683127096626777,
+        "full_momentum_max": 0.0003420837536465271
+      },
+      "time": 0.05
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.019418493371165663,
+        "Q": 0.004364264762606048,
+        "direct_volume_acceleration": -1.1484095734411885,
+        "geometric_trace_projection": -0.5736391698933885,
+        "geometric_vacuum_condition": 2.2321140837694915,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1316676908357615,
+        "kappa_geometric_pressure": 0.38762966291259754,
+        "kappa_mean_energy": 1.1327989244901795,
+        "kappa_mean_pressure": 0.3775996414967221,
+        "lapse_acceleration": -0.019974913713621586,
+        "mean_intrinsic_curvature": 2.258971116908917,
+        "observer_lapse_over_reference_length": 0.2510714352492848,
+        "scalar_fitting_acceleration_residual": -1.598907975164063e-16,
+        "three_volume_acceleration": -1.1484095734411885,
+        "total_trace_projection": -0.5736391698933851,
+        "volume_over_reference_length_cubed": 20.969002851120624
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": -1.1841687065141597e-14,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": 7.401054415713498e-16,
+        "original_observer_clock": -1.3876977029462809e-16,
+        "volume_acceleration": -1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 3.122502256758253e-17,
+        "radius_rate": 9.251318019641873e-17,
+        "stored_lapse": 5.551115123125783e-16,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 0.0011955501452050044,
+        "full_momentum_max": 0.0002633208523010744
+      },
+      "time": 0.2
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.02901470753375896,
+        "Q": -0.012403105501969143,
+        "direct_volume_acceleration": -1.1475581525040555,
+        "geometric_trace_projection": -0.5725162963721289,
+        "geometric_vacuum_condition": 2.1774446255332496,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1168774527554413,
+        "kappa_geometric_pressure": 0.3910625775776916,
+        "kappa_mean_energy": 1.1194030125152503,
+        "kappa_mean_pressure": 0.3731343375050757,
+        "lapse_acceleration": -0.015752034486847533,
+        "mean_intrinsic_curvature": 2.246158011012852,
+        "observer_lapse_over_reference_length": 0.25046657197191075,
+        "scalar_fitting_acceleration_residual": -1.598907975164063e-16,
+        "three_volume_acceleration": -1.1475581525040555,
+        "total_trace_projection": -0.5725162963721232,
+        "volume_over_reference_length_cubed": 20.930827389207376
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": -5.920843532570799e-15,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": 0.0,
+        "original_observer_clock": -2.3128295049104683e-16,
+        "volume_acceleration": 0.0
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 6.071532165918825e-17,
+        "radius_rate": 1.0118629083983299e-16,
+        "stored_lapse": 5.551115123125783e-16,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 0.001168036860413224,
+        "full_momentum_max": 0.0002479585245822591
+      },
+      "time": 0.3
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "dimensionless": {
+        "H_observer": -0.00488135875831377,
+        "Q": 0.0007417618475849021,
+        "direct_volume_acceleration": -1.1642345534656389,
+        "geometric_trace_projection": -0.5820815352378345,
+        "geometric_vacuum_condition": 2.2233649042420462,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1379227612983462,
+        "kappa_geometric_pressure": 0.3968011265509973,
+        "kappa_mean_energy": 1.1379942442883284,
+        "kappa_mean_pressure": 0.3793314147627678,
+        "lapse_acceleration": -0.026982071024907815,
+        "mean_intrinsic_curvature": 2.2751037607491074,
+        "observer_lapse_over_reference_length": 0.2513046395127428,
+        "scalar_fitting_acceleration_residual": -1.598907975164063e-16,
+        "three_volume_acceleration": -1.1642345534656389,
+        "total_trace_projection": -0.5820815352378284,
+        "volume_over_reference_length_cubed": 20.99786286603162
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": 5.550790811785123e-16,
+        "original_observer_clock": 4.6256590098209364e-17,
+        "volume_acceleration": 0.0
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 2.3093506273941244e-17,
+        "radius_rate": 5.348418230105458e-17,
+        "stored_lapse": 3.552713678800501e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 8.34565755755245e-06,
+        "full_momentum_max": 9.993614553671648e-07
+      },
+      "time": 0.05
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "dimensionless": {
+        "H_observer": -0.019418493365245523,
+        "Q": 0.004364264739442686,
+        "direct_volume_acceleration": -1.148409576131323,
+        "geometric_trace_projection": -0.5736391712388036,
+        "geometric_vacuum_condition": 2.2321140759201468,
+        "hamiltonian_residual": 3.197815950328126e-16,
+        "kappa_geometric_density": -1.1316676902188403,
+        "kappa_geometric_pressure": 0.38762966491212486,
+        "kappa_mean_energy": 1.1327989238725682,
+        "kappa_mean_pressure": 0.3775996412908478,
+        "lapse_acceleration": -0.019974916998209778,
+        "mean_intrinsic_curvature": 2.258971115698238,
+        "observer_lapse_over_reference_length": 0.2510714353100402,
+        "scalar_fitting_acceleration_residual": 1.598907975164063e-16,
+        "three_volume_acceleration": -1.1484095761313229,
+        "total_trace_projection": -0.5736391712387975,
+        "volume_over_reference_length_cubed": 20.969002861706308
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": 3.197815950328126e-16,
+        "lapse_integration_by_parts": -9.251318019641873e-17,
+        "original_observer_clock": 2.7753954058925617e-16,
+        "volume_acceleration": 3.197815950328126e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 1.4224732503009818e-16,
+        "radius_rate": 2.2260983984763256e-16,
+        "stored_lapse": 3.608224830031759e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 8.362519362759002e-06,
+        "full_momentum_max": 7.864937163759578e-07
+      },
+      "time": 0.2
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "dimensionless": {
+        "H_observer": -0.02901470753484899,
+        "Q": -0.012403105538430359,
+        "direct_volume_acceleration": -1.1475581432054833,
+        "geometric_trace_projection": -0.5725162917227511,
+        "geometric_vacuum_condition": 2.177444644657537,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1168774528871352,
+        "kappa_geometric_pressure": 0.3910625713346229,
+        "kappa_mean_energy": 1.119403012647134,
+        "kappa_mean_pressure": 0.373134337549033,
+        "lapse_acceleration": -0.01575202501993635,
+        "mean_intrinsic_curvature": 2.246158011312701,
+        "observer_lapse_over_reference_length": 0.2504665719486859,
+        "scalar_fitting_acceleration_residual": 0.0,
+        "three_volume_acceleration": -1.1475581432054833,
+        "total_trace_projection": -0.5725162917227423,
+        "volume_over_reference_length_cubed": 20.930827399776046
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": -9.251318019641873e-17,
+        "original_observer_clock": 2.7753954058925617e-16,
+        "volume_acceleration": 1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 3.3480163086352377e-16,
+        "radius_rate": 4.712390116255079e-16,
+        "stored_lapse": 3.608224830031759e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 9.025679389651486e-06,
+        "full_momentum_max": 8.052285842552465e-07
+      },
+      "time": 0.3
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.004881358758313417,
+        "Q": 0.0007417618476983521,
+        "direct_volume_acceleration": -1.1642345534653917,
+        "geometric_trace_projection": -0.582081535237711,
+        "geometric_vacuum_condition": 2.2233649042423798,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1379227612983058,
+        "kappa_geometric_pressure": 0.3968011265508458,
+        "kappa_mean_energy": 1.137994244288288,
+        "kappa_mean_pressure": 0.3793314147627547,
+        "lapse_acceleration": -0.02698207102481418,
+        "mean_intrinsic_curvature": 2.2751037607489137,
+        "observer_lapse_over_reference_length": 0.25130463951274196,
+        "scalar_fitting_acceleration_residual": 0.0,
+        "three_volume_acceleration": -1.164234553465392,
+        "total_trace_projection": -0.582081535237705,
+        "volume_over_reference_length_cubed": 20.997862866031618
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": -1.1841687065141597e-14,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": 9.251318019641873e-16,
+        "original_observer_clock": 1.8502636039283746e-16,
+        "volume_acceleration": -1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 1.8648277366750676e-17,
+        "radius_rate": 7.516695890959022e-17,
+        "stored_lapse": 3.552713678800501e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 8.356134042048998e-06,
+        "full_momentum_max": 9.973419008435513e-07
+      },
+      "time": 0.05
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.019418493365246762,
+        "Q": 0.004364264739398435,
+        "direct_volume_acceleration": -1.148409576129668,
+        "geometric_trace_projection": -0.5736391712379763,
+        "geometric_vacuum_condition": 2.2321140759247156,
+        "hamiltonian_residual": 0.0,
+        "kappa_geometric_density": -1.1316676902191551,
+        "kappa_geometric_pressure": 0.3876296649109166,
+        "kappa_mean_energy": 1.1327989238728835,
+        "kappa_mean_pressure": 0.3775996412909527,
+        "lapse_acceleration": -0.019974916996195788,
+        "mean_intrinsic_curvature": 2.258971115698912,
+        "observer_lapse_over_reference_length": 0.2510714353099645,
+        "scalar_fitting_acceleration_residual": 0.0,
+        "three_volume_acceleration": -1.1484095761296682,
+        "total_trace_projection": -0.5736391712379699,
+        "volume_over_reference_length_cubed": 20.96900286170631
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": 0.0,
+        "lapse_integration_by_parts": -4.625659009820937e-16,
+        "original_observer_clock": -2.7753954058925617e-16,
+        "volume_acceleration": -1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 1.4311468676808659e-16,
+        "radius_rate": 2.341739873721849e-16,
+        "stored_lapse": 3.608224830031759e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 8.366712551222122e-06,
+        "full_momentum_max": 7.780118655986712e-07
+      },
+      "time": 0.2
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "dimensionless": {
+        "H_observer": -0.02901470753482063,
+        "Q": -0.012403105540282271,
+        "direct_volume_acceleration": -1.1475581432067874,
+        "geometric_trace_projection": -0.5725162917234052,
+        "geometric_vacuum_condition": 2.177444644645245,
+        "hamiltonian_residual": -1.598907975164063e-16,
+        "kappa_geometric_density": -1.1168774528847165,
+        "kappa_geometric_pressure": 0.39106257133630146,
+        "kappa_mean_energy": 1.11940301264471,
+        "kappa_mean_pressure": 0.37313433754822556,
+        "lapse_acceleration": -0.015752025021811805,
+        "mean_intrinsic_curvature": 2.2461580113097153,
+        "observer_lapse_over_reference_length": 0.2504665719488199,
+        "scalar_fitting_acceleration_residual": 1.598907975164063e-16,
+        "three_volume_acceleration": -1.1475581432067874,
+        "total_trace_projection": -0.5725162917233969,
+        "volume_over_reference_length_cubed": 20.930827399776028
+      },
+      "dimensionless_metric_identity_residuals": {
+        "curvature_integration_by_parts": 0.0,
+        "hamiltonian_metric_definition": -1.598907975164063e-16,
+        "lapse_integration_by_parts": 4.625659009820937e-16,
+        "original_observer_clock": -4.6256590098209364e-17,
+        "volume_acceleration": 1.598907975164063e-16
+      },
+      "first_rate_dimensionless_absolute_differences": {
+        "Q_rate": 3.2612801348363973e-16,
+        "radius_rate": 4.567838272198175e-16,
+        "stored_lapse": 3.608224830031759e-15,
+        "stored_lapse_rate": 0.0
+      },
+      "original_finite_constraint_defects": {
+        "full_hamilton_max": 9.00287133731581e-06,
+        "full_momentum_max": 7.982436498465972e-07
+      },
+      "time": 0.3
+    }
+  ],
+  "schema": "nsc-conformal-geometric-average-summary-v1",
+  "scope": "Lapse-weighted scalar fitting of the separate already evolved Einstein/Weyl/Dirac metric. The Einstein source is metric-defined; its physical interpretation inherits the saved finite constraint defects. No independent matter-constraint certification, P001 parent, measured fractal dimension or cosmological Lambda.",
+  "source_commit": "8ecbeff9a438557ea1d842b6718dcfff4d5a0559",
+  "source_sha256": {
+    "scripts/measure_nsc_conformal_geometric_average.py": "d706eb290ead4722dbb920053347dc442a8d7bf05beba862f698d35f05ac45c1",
+    "src/recursive_horizons/nsc_atlas_geometric_average.py": "aa924325702b5b07d002e5b098e2711ee67fae517c00b016024e913807d54892",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "tests/test_nsc_atlas_geometric_average.py": "9efe2e9f42e871eea9b712dc8bbb4f245bfe086c90be5662fdc5f17eecb03344",
+    "tests/test_nsc_conformal_geometric_average.py": "46ed6efe623367e8ee7305efb1841da3bdeb39a55502440fe9a961d053475966"
+  },
+  "status": "completed_saved_geometry_average",
+  "uncertainty_scope": "Existing time/space refinement differences only; not a certified propagated or cosmological uncertainty."
+}

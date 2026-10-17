@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f9e1f07b64cd2a358de3b51e12abd73ee2285aba",
+  "current_receipt_commit_parent": "8ecbeff9a438557ea1d842b6718dcfff4d5a0559",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 378940,
+      "bytes": 379888,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "ab8b89531aebabae54e7b97a2344b0e16e0b43f6",
+      "changed_from_commit": "8ecbeff9a438557ea1d842b6718dcfff4d5a0559",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b8244c31f25d32d8993aa9ce9fe02087769970238662b5b491c0edd6874c84c4"
+      "sha256": "1e87f340aa401a0c5dbc798e8a19feedf8da8683f2d41e497c2df55686f4fe5c"
     },
     {
       "bytes": 18915,
@@ -11426,12 +11426,12 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 482280,
+      "bytes": 483046,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "f9e1f07b64cd2a358de3b51e12abd73ee2285aba",
+      "changed_from_commit": "8ecbeff9a438557ea1d842b6718dcfff4d5a0559",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "cdb2cd228c4bbe2ccad358a5763bae5d3d6bdd9e830a04379e6a053008be0383"
+      "sha256": "c374d6a8cfa79d76cf04dd26bc1269a1028301848e64bb362ccef68adb563949"
     },
     {
       "bytes": 6705,
@@ -11440,12 +11440,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 159409,
+      "bytes": 159765,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "f9e1f07b64cd2a358de3b51e12abd73ee2285aba",
+      "changed_from_commit": "8ecbeff9a438557ea1d842b6718dcfff4d5a0559",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d4c20f6623be07dae6cbb78028dd66165123b430b72dfc157c08544fef3c669e"
+      "sha256": "53323bcb22fe5616f1b774bb9415a05bcff1e08eb263d30aeacaec9d3cd29e2b"
     },
     {
       "bytes": 18356,
@@ -11459,12 +11459,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 60173,
+      "bytes": 62219,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "f9e1f07b64cd2a358de3b51e12abd73ee2285aba",
+      "changed_from_commit": "8ecbeff9a438557ea1d842b6718dcfff4d5a0559",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "a675f5b9e11bf9f42ba8e585f221bdde47689f2b8b366f707f826903e38ff31b"
+      "sha256": "c8d7535619c8e9c9105b69f744ad2db4fec13f2035a87776b9eac97c828658ce"
     },
     {
       "bytes": 537091,
@@ -30114,6 +30114,14 @@
       "path": "results/summaries/nsc-atlas-source-remainder-bound-v1.json",
       "retention_reason": "Compact quadratic source remainder certificate with authenticated regeneration inputs.",
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
+    },
+    {
+      "bytes": 32917,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "8ecbeff9a438557ea1d842b6718dcfff4d5a0559",
+      "path": "results/summaries/nsc-conformal-geometric-average-v1.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "cb57f10042c6ad58d23c55160d1a279271c5663e0fb13f00a7d389e7cc930b72"
     },
     {
       "bytes": 7920,
