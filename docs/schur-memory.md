@@ -6,12 +6,14 @@ resolvent $(z-D_p-\Sigma)^{-1}$. The corresponding causal memory carries an
 exterior initial-state drive and cross correlations. The intended physical
 target is a local effective $\Lambda$ response from this unresolved exterior
 structure. The finite identities, spectral controls and geometric candidates
-below supply its retained dictionary; the physical identification of
-$\Sigma$ with the actual exterior remains open.
+below supply its retained dictionary. The current candidate's causal scalar
+boundary map and its local classical metric response are now calculated below.
+The finite matrix identity alone does not provide a physical reduction of the
+gravitational geometry, a quantum state or a cosmological vacuum term.
 
 ## Step 7: averaging the explicit sourced initial slice
 
-The next geometric calculation uses the existing
+The geometric calculation uses the existing
 [cap--wall--bridge slice](nsc-atlas-connection-slice.md), from its regular
 centre to the retained right-end sphere $R_{\mathrm{cut}}/\ell=4$. This is
 the isolated sourced body, not an unevaluated common-parent connector.
@@ -225,9 +227,10 @@ For Step 7 this resolves the classical scalar route to an additional smooth
 vacuum term in the current candidate. A nonzero contribution needs an
 explicit additional mechanism, such as a specified quantum effective action
 or a defined geometric averaging operation. The existing finite Schur
-matrices have not been derived from this candidate's exterior. Its physical
-response operator, state and metric variation must be supplied before those
-matrices can yield an effective stress. In particular, the zero-frequency
+matrices have not been derived from this candidate's exterior. The causal
+field map and its conformal boundary metric check are now supplied below;
+the full quantum state and general metric response remain additional inputs.
+In particular, the zero-frequency
 coefficient of a scalar self-energy multiplies a field quadratic term;
 it is not by itself a metric volume term or a cosmological constant.
 The older two-sheet and Gauss–Bonnet results below retain their own actions.
@@ -731,6 +734,31 @@ derive the supplied $\Lambda_{0,-}$. A nonzero cosmological value still
 requires a physical reduction of the gravitational geometry tied to observers,
 or a specified source of nonzero trace. Further state work addresses that
 tensor and its observer interpretation; it does not supply a new scalar trace.
+
+### Common-parent route check
+
+An exact cosmological reference is available from
+[Mars--Mena--Vera, 1307.4371v1](https://arxiv.org/abs/1307.4371), Section 2:
+comoving Schwarzschild cavities match a dust FLRW parent when
+$M=4\pi\rho R_b^3/3$. The parent's Lambda is supplied on both sides of
+that outer matching. Choosing flat dust with zero Lambda therefore fixes
+the exterior observers' $q=1/2$; it does not derive a new vacuum response.
+This is a reference control, rather than the next effective-Lambda model.
+
+For a right-hand vacuum collar, the owned spherical constraints permit
+$R_l=\sqrt{1-2M/R+V^2}$, $K_{ll}=-V_R$, $K^\theta{}_\theta=-V/R$ and
+$R_3=-4VV_R/R-2V^2/R^2$. A flat-ended interpolation from $V=0$ to
+$V=H_pR$ can join the existing quiet body to the cosmological slice when
+$2M=H_p^2R_b^3$. Those initial identities still leave the physical parent
+state and observer reduction to be selected. The dust source would be an
+explicit addition to the current scalar model. No such addition, second
+child evolution or averaged cosmological Lambda is claimed here.
+
+The existing vacuum-end gluing remains reusable for initial-data existence.
+A parent calculation for the Lambda target must instead supply a compatible
+metric and a physically selected clock/domain, then calculate its observable
+response without prescribing the desired expansion beforehand. Implementing
+the dust reference would not resolve that missing connection.
 
 ## The transition and vacuum-form coefficient
 

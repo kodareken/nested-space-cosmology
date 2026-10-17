@@ -893,6 +893,10 @@ numerical mass values and coupled cap/wall geometry remain uncomputed.
 
 These are inputs to the [conditional calculation](schur-memory.md#step-7-conditional-quantum-curvature-contribution), not a derivation of quantum mechanics from NSC geometry or of the supplied cap vacuum scale.
 
+## Cosmological parent control, 17 October 2026
+
+- [Mars--Mena--Vera, 1307.4371v1](https://arxiv.org/pdf/1307.4371): read Section 2, equations (1)--(3), the mass relation and following Lambda extension. Reuse comoving dust/Schwarzschild matching as a reference, not a derived Lambda. Later uniqueness and perturbation results remain outside this reading.
+
 ## Spherical starting geometry: reassembly source card, 12 October 2026
 
 - **Source/version:** Robin Neumayer, [1503.06705v2](https://arxiv.org/html/1503.06705v2), *A strong form of the quantitative Wulff inequality*.

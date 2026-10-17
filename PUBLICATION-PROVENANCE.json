@@ -1496,9 +1496,9 @@
       "sha256": "14f0435081631d2f0d05c1d81d25d082123f8bde0c6e799debe8a1aad1638d3f"
     },
     {
-      "bytes": 99980,
+      "bytes": 100336,
       "path": "docs/arxiv-studies.md",
-      "sha256": "6d6ddbbbaa760da7734b583645abe233832a293c63f499e9d4b286610cb7e6e3"
+      "sha256": "e7830e094d31221cc2aae5aca32b99898cfd2098fc5e51af00be1040c7092349"
     },
     {
       "bytes": 1458,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 373155,
+      "bytes": 374970,
       "path": "docs/current-result.md",
-      "sha256": "a1d5148c5dcd8e2b71740d615fcfc7c7fa1393ba669a52ae9742be8ed7a69190"
+      "sha256": "b7fc1c9ddea0a5231d4d5a6a5e292980f3af0b9a24cd959979604949e4e4853a"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2359343,
+      "bytes": 2359344,
       "path": "docs/lab-snapshot.json",
-      "sha256": "c5da0e854bb0c7a1ef0b28fcb6bbbabf165d149d392f2fb00eafba4c43ce1371"
+      "sha256": "55c4149e02748026ef1960dd99860cc7cbb5338c9740f8e2d9c7fd62a69f5b4f"
     },
     {
       "bytes": 4997,
@@ -2241,9 +2241,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 42855,
+      "bytes": 44516,
       "path": "docs/schur-memory.md",
-      "sha256": "e68987c750dd39837360c8d7ffaa82f66cd456eb7f314e50ecff89752cc4c742"
+      "sha256": "216216b05f0fd4ca004d4c315a55fb3caa32364238890d1db9c74ff21267ae80"
     },
     {
       "bytes": 537091,
@@ -21541,7 +21541,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "c5da0e854bb0c7a1ef0b28fcb6bbbabf165d149d392f2fb00eafba4c43ce1371",
+  "lab_snapshot_sha256": "55c4149e02748026ef1960dd99860cc7cbb5338c9740f8e2d9c7fd62a69f5b4f",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

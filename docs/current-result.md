@@ -129,6 +129,34 @@ integrals. These failures remain visible despite the close radius values.
 The completed three-grid comparison and saved gap decomposition will be
 used before assigning the numerical prediction range or closing Step 2.
 
+The saved mass split is
+`mass_actual = alpha*(trace_term + weak_balance/T_x)`. The latter term
+equals the explicit background time-projection remainder up to its recorded
+identity defect. Reading the completed receipts gives the following physical
+terms, without another field solve:
+
+| Grid and saved event | Trace term times alpha | Balance term times alpha | Actual mass residual |
+| --- | ---: | ---: | ---: |
+| Coarse, `x=0.45094013016102275` | -0.000397847431235 | -0.000050895272793 | -0.000448742704028 |
+| Middle, same event | -0.000470853832217 | -0.000125703465744 | -0.000596557297961 |
+| Coarse endpoint | -0.000000016368618 | -0.000010110820148 | -0.000010127188766 |
+| Middle endpoint | -0.000001829452209 | +0.000032431796629 | +0.000030602344421 |
+
+The split closes to floating-point rounding at these events. The background
+projection is larger at the endpoints; the trace term is larger at the
+largest saved mass sample. Neither statement locates the all-stage maximum:
+the nine samples cover only 19.3 and 25.1 percent of that envelope. The
+matched mass maximum also fails to shrink, so replacing the strong wall
+product alone does not remove the failure. The endpoint flux itself grows
+in magnitude from `0.00965372` to `0.25904642`, despite the smaller global
+maximum. Close radius integrals therefore cannot stand in for the mass or
+scalar constraints. These receipts do not store independent radial mass/lapse
+residuals; the diagnostic algebra is not a new certification of those solves.
+The [saved-cut diagnostic](../scripts/diagnose_nsc_atlas_endpoint_gaps.py)
+and [coupling source](../src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py)
+provide the comparison once the fine receipt is available. Independent Grok
+review agrees on the split and these limits; no new trajectory was run.
+
 Opening-phase robustness work is paused. The current calculation targets
 the original P001 endpoint on three fixed cap/exterior meshes, with the
 same amplitude and preparation. The first
