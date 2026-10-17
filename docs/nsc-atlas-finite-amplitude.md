@@ -5727,6 +5727,38 @@ with another 11,240 values and CPU below the timer resolution. Seven distinct
 controls pass; the development value ceiling including failed-work allowance
 is 139,576. The original v1 receipt is preserved for its declared cubic.
 
+The [endpoint-inclusive certificate](../results/summaries/nsc-atlas-source-cell-bound-v2.json)
+at frozen `191a05b` completes with 10,372 values / 2.5625 CPU seconds.
+It retains the same residual, pulse envelopes, two panels and theta as v1;
+the exact endpoint jumps are included in the radial and frame bounds.
+Grok's separate review confirms the continuation, interval map and final
+owner correction. All 59 source bindings authenticate. In the existing
+dimensionless source coordinates, the whole-cell upper bounds are:
+
+| Source input | Representation error bound |
+| --- | ---: |
+| Einstein-frame radius r | `7.861560568382867e-16` |
+| First radius jet r_x | `2.4845270927685856e-12` |
+| Logarithmic lapse log C | `8.186704230948388e-32` |
+| First lapse jet (log C)_x | `3.0996481306140273e-27` |
+| Reduced scalar c | `9.419625771084104e-59` |
+| First scalar jet c_x | `1.1117684512743183e-41` |
+
+The radial inverse has `theta<=4.184327547902973e-15`, with
+`|h_tilde-h|<=2.863505873123005e-12` and
+`|h_tilde'-h'|<=8.99410618409098e-9`, including the endpoint owner.
+The scalar entries bound only the declared-front mask difference from the
+analytic pulse. They are bounds on the prescribed value/jet representation,
+not a claim of smoothness across that rounded mask or a floating-evaluation
+error estimate. The possible mask jump is covered by the same entries.
+
+The certificate performs no source readout calls or integrations. Its 10,372
+charged values include 132 existing-knot/geometry validation values and
+10,240 interval-work charges. It writes 14,751 bytes with exact dyadic upper
+bounds and directed floating displays; no raw sampled arrays or time history are added.
+This supplies one input to the coupled estimate. Uniform implementation,
+exterior residual and inverse-evolution bounds remain required.
+
 ### First retained-source fixed-cap interval
 
 The [exact small-matrix helper](../src/recursive_horizons/nsc_atlas_cap_linear_bound.py)

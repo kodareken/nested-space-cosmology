@@ -597,6 +597,10 @@ evaluation and coupled propagation errors still separate.
 The frozen `ac98a98` v1 receipt bounds the closed left cubic. The v2 command
 also includes the actual next-piece value and first jet selected at its
 right endpoint; their coefficient-rounding jumps are added explicitly.
+The `191a05b` v2 execution completes in 10,372 values / 2.5625 CPU seconds;
+its 14,751-byte receipt retains all six frame bounds as outward dyadics.
+The reported zero source readout calls exclude the constructor's 132
+existing-knot/geometry validation values, which are included in the budget.
 
 The internal wavefront identities and bounded position/amplitude stage:
 

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ac98a98c426bc16daa03a3c49930b95f7414f842",
+  "current_receipt_commit_parent": "191a05b15c751cce8f4bf754d24a24873bffe73d",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 324613,
-      "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
-      "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
+      "bytes": 325543,
+      "change": "Record the endpoint-inclusive whole-cell certificate for the six source inputs and its finite scope.",
+      "changed_from_commit": "191a05b15c751cce8f4bf754d24a24873bffe73d",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "94738949c490fc0c50f0b246ef9d0eb5a6d7b1f9e83c6e38dcac1a1adbf26003"
+      "sha256": "617ea407b0411883f62d2dc1de9d2f15c049923f44d604aea59e8e773d631074"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 329160,
-      "change": "Preserve the source-cell certificate and include the actual final-knot value and first-jet owner.",
-      "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
+      "bytes": 330980,
+      "change": "Record the endpoint-inclusive whole-cell certificate for the six source inputs and its finite scope.",
+      "changed_from_commit": "191a05b15c751cce8f4bf754d24a24873bffe73d",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "6eea76dc7830c0acaf43c68ccdd1b1d52384483c4a370f5b41f6c60c30899e9f"
+      "sha256": "1520c9293e13b6426a4afc4d6fa98fc7c99f79301d3e6a23a337a56fffe5b68b"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 367525,
-      "change": "Preserve the source-cell certificate and include the actual final-knot value and first-jet owner.",
-      "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
+      "bytes": 368212,
+      "change": "Record the endpoint-inclusive whole-cell certificate for the six source inputs and its finite scope.",
+      "changed_from_commit": "191a05b15c751cce8f4bf754d24a24873bffe73d",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "08225ec4dfe17d045a01091369ce44aea74c47dae56735b4d40f2d3c669f42fd"
+      "sha256": "dcc8136f3bbc54605a9e70a3cfa091e72bca53d7d2c517ea5b9ab8e5dcf7cf74"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 116956,
-      "change": "Preserve the source-cell certificate and include the actual final-knot value and first-jet owner.",
-      "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
+      "bytes": 117250,
+      "change": "Record the endpoint-inclusive whole-cell certificate for the six source inputs and its finite scope.",
+      "changed_from_commit": "191a05b15c751cce8f4bf754d24a24873bffe73d",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2e59047ed19e977db293d3b9e06c759f87b16bc53da2b70bff3bd2ee302cb09e"
+      "sha256": "448b49105e802a5f2a746a30da4760d303f8a45c78c5c8d512be5e2be90c1528"
     },
     {
       "bytes": 18356,
@@ -29667,6 +29667,13 @@
       "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
       "path": "results/summaries/nsc-atlas-source-cell-bound-v1.json",
       "sha256": "1f84dbf883857cc02465e1910692d21d3fb9581c7a69d1120acee6d59588e5d4"
+    },
+    {
+      "bytes": 14751,
+      "change": "Record the endpoint-inclusive whole-cell certificate for the six source inputs and its finite scope.",
+      "changed_from_commit": "191a05b15c751cce8f4bf754d24a24873bffe73d",
+      "path": "results/summaries/nsc-atlas-source-cell-bound-v2.json",
+      "sha256": "707bb8d76359edaf2a26228657a219933ebd164edcf89eb87742f9e66bec2bdd"
     },
     {
       "bytes": 899,

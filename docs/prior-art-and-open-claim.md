@@ -2509,6 +2509,17 @@ values, including the earlier failed-work allowance. Grok's review of the
 first certificate found no material soundness bug; the final-knot correction
 is a separate follow-up to that review.
 
+**Endpoint-inclusive outcome:** frozen `191a05b` v2 completes in 10,372
+values / 2.5625 CPU seconds, with no integration or time step. All 59 source
+bindings authenticate. The previous residual, source envelopes and theta
+are identical; exact right-owner jumps are now included. The displayed
+frame bounds remain `7.86156e-16` for r and `2.48453e-12` for r_x. The
+14,751-byte receipt SHA256 is
+`707bb8d76359edaf2a26228657a219933ebd164edcf89eb87742f9e66bec2bdd`.
+Grok's follow-up finds the endpoint correction sound for all six inputs.
+Floating evaluation and coupled propagation are still separate tasks; this
+whole-cell representation certificate does not admit another evolution run.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

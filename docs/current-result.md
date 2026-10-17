@@ -171,6 +171,19 @@ right-piece curvature residual. The next work is an error account for the
 continuous source and exterior solution, then the coupled finite-domain
 estimate. No further history/grid scan is indicated by this result.
 
+The [whole-cell source certificate](nsc-atlas-finite-amplitude.md#whole-cell-source-representation-bound)
+now bounds the six mathematical source inputs used by the exterior stage,
+including the actual right-endpoint value and first-jet owner. On the same
+cell `x in [0.42228630694544744, 0.42292305857246026]`, its dimensionless
+radius error is at most `7.86156e-16`, and its radius first-jet error at most
+`2.48453e-12`. The proof uses the cubic's actual residual and a certified
+source ODE inverse margin `theta<=4.18433e-15`, with no new integration or
+time step. The [v2 receipt](../results/summaries/nsc-atlas-source-cell-bound-v2.json)
+uses 10,372 values / 2.5625 CPU seconds and retains outward dyadic bounds.
+All 59 producer bindings authenticate, and seven independent controls pass.
+Floating implementation error and coupled exterior propagation remain open;
+these representation bounds do not replace those estimates.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.
