@@ -852,8 +852,10 @@ The v3 successors use the separately confirmed forward accuracy, preserving
 every earlier receipt. The coarse v3 run nevertheless stops later, after
 464 accepted steps. The middle v3 also stops. Both saved failure states pass the unchanged
 gradient guard with quarter-panel forward radial steps. The v4 commands above
-select that common correction at every resolution; certified exactly quiet
-data retain their previous zero-field startup. The other solver settings,
+now select the panel's own history polynomial at its endpoints, at unchanged
+physical coordinates. The one-sided diagnostics identify this as the source
+of the forward/adjoint mismatch. The provisional radial step cap is not used.
+Certified exactly quiet data retain their previous zero-field startup. The other solver settings,
 physical grids and time schedules stay fixed. Once the three v4 endpoints
 complete, compare their saved scalars without another physical evolution:
 
@@ -907,6 +909,21 @@ The panel comparison holds the floating-point tolerances fixed and restricts
 the forward radial step to half/quarter of each existing smooth panel. It
 changes neither the physical cap mesh nor the forward/adjoint acceptance
 guard, and it performs no time evolution.
+
+The subsequent endpoint-side diagnosis and public-interface confirmations use
+the same authenticated local failure seeds, with no trajectory replay:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --one-sided-panel-check --output results/summaries/nsc-atlas-fixed-endpoint-radial-sided-diagnostic-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json --one-sided-panel-check --output results/summaries/nsc-atlas-fixed-endpoint-radial-middle-sided-diagnostic-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --confirm-panel-polynomials --output results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-coarse-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level1-v3.json --confirm-panel-polynomials --output results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v1.json
+```
+
+The diagnosis moves only numerical endpoint samples inward by a bounded
+roundoff distance. The final method instead uses the panel's own polynomial
+at the unchanged query coordinate. Its 32/64-point confirmations enter via
+the actual coupled-stage interface, without injecting a solver wrapper.
 
 After that comparison passes, the separately admitted full enriched
 finite-coupling onset interval is:

@@ -72,6 +72,34 @@ and error guards remain unchanged. One preparation, zero time steps,
 step restriction suppresses an endpoint representation error before another
 full-domain attempt; it does not assert that the hypothesis is established.
 
+The coarse one-sided check reduces the discrepancy to `5.0022e-12` without
+a step cap (`6.3949e-12` with 64 adjoint points), and `4.5475e-13` with
+quarter-panel steps. The largest endpoint displacement is `1.4211e-14` in
+the fixed numerical coordinate. This supports the knot-endpoint mechanism;
+smaller steps had suppressed its effect. Admit the identical three-case
+one-sided check at the saved middle v3 failure state, with one preparation,
+zero time steps and **60 CPU seconds / 40 million charged values**.
+If confirmed, use the uncapped one-sided treatment instead of the provisional
+quarter-panel restriction for v4; no v4 physical evolution has begun.
+
+The middle one-sided check confirms discrepancies `6.2244e-12` and
+`5.9401e-12` at 32/64 adjoint points without a radial step cap. Its quarter
+panel case gives `1.1084e-12`. The final implementation selects each radial
+panel's history polynomial from its interior and evaluates that same
+polynomial at a mismatched endpoint, **without moving the physical query
+coordinate**. It only permits a neighbouring-piece mismatch within 64
+label ulps; resolved crossings and the original finite-domain failures are
+still rejected. Small-radius moment evaluation remains unchanged.
+
+Thirty-eight focused controls pass, including an explicit manufactured knot
+mismatch, unchanged interior evaluation and the coupled manufactured-history
+mass/field comparisons. Admit **one public-interface confirmation at each
+of the two saved failure states**, with 32/64 adjoint points, no radial step
+cap, one preparation and **60 CPU seconds / 40 million charged values per
+state**. These checks use `background_panel_sides=True` through the actual
+coupled interface; the earlier coordinate-shift diagnostic remains separate.
+Both must pass before the predeclared full v4 successors start.
+
 Douglas has prioritized the full finite-amplitude evolution and a physically
 scaled P001 observable. Opening-phase robustness work is paused. Reuse the
 existing constrained fixed-cap mass/gradient calculation, simultaneous

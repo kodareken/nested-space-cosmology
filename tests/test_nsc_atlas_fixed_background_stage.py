@@ -68,6 +68,32 @@ def test_panel_step_option_reaches_radial_engine_and_preserves_fields(budget,mon
         assert abs(gram.wall['value']@gap[gram.wall['indices']])<2e-9
 
 
+def test_coupled_panel_polynomials_preserve_manufactured_history(budget,monkeypatch):
+    from recursive_horizons import nsc_atlas_cap_fixed_reference as owner
+    original=owner.history_piece_indices;seen=[]
+    def watch(*args,**kwargs):
+        indices=original(*args,**kwargs);seen.append(indices.copy());return indices
+    monkeypatch.setattr(owner,'history_piece_indices',watch)
+    state,kw,bg=manufactured_case(budget)
+    ordinary=coupled_fixed_stage(state,background=bg,**kw)
+    assert seen==[]
+    sided=coupled_fixed_stage(state,background=bg,background_panel_sides=True,**kw)
+    assert len(seen)>0
+    for name in ('mass','lapse'):
+        assert sided['connection']['cap'][name]==pytest.approx(
+            ordinary['connection']['cap'][name],rel=0,abs=2e-11)
+    for group in ('departure','wall'):
+        for name in sided['rates'][group]:
+            np.testing.assert_allclose(sided['rates'][group][name],
+                ordinary['rates'][group][name],rtol=0,atol=2e-10)
+    Z=Q(float(np.arctanh(sided['physical_wall']['r'])))
+    gram=kw['basis'].gram(Z,budget=budget)
+    for name in ('chi','canonical_density'):
+        gap=sided['rates']['cap'][name]-ordinary['rates']['cap'][name]
+        assert np.sqrt(gram.squared_norm(gap,budget=budget))<2e-9
+        assert abs(gram.wall['value']@gap[gram.wall['indices']])<2e-9
+
+
 def test_total_polynomial_and_independent_common_mass_direction(budget):
     state,kw,bg=manufactured_case(budget)
     affine=coupled_fixed_stage(state,background=bg,**kw)

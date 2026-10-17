@@ -71,3 +71,13 @@ def test_three_receipts_must_share_the_confirmed_panel_step_rule():
     data[2]['radial_accuracy']['maximum_nonzero_panel_step_fraction']=.5
     with pytest.raises(ValueError,match='confirmed radial accuracy'):
         compare(data)
+
+
+def test_panel_polynomial_rule_must_be_shared():
+    data=records()
+    data[0]['radial_accuracy']['background_panel_sides']=True
+    with pytest.raises(ValueError,match='settings differ'):compare(data)
+    for row in data:row['radial_accuracy']['background_panel_sides']=True
+    assert compare(data)['radial_accuracy']['background_panel_sides'] is True
+    data[1]['radial_accuracy']['background_panel_sides']=False
+    with pytest.raises(ValueError,match='confirmed radial accuracy'):compare(data)

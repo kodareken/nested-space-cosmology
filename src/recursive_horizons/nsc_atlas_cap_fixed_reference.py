@@ -16,6 +16,7 @@ from .nsc_atlas_background_cap import _budget
 from .nsc_atlas_cap_fixed_basis import FixedCapBasis,exact_number
 from .nsc_atlas_cap_fixed_bound import fixed_metric_bound,fixed_background_metric_bound
 from .nsc_atlas_cap_background_jets import RetainedCapBackground,SMALL_Z
+from .nsc_atlas_cap_panel_jets import history_piece_indices
 from .nsc_atlas_cap_geometric_reference import _positive_gap
 from .nsc_atlas_cap_potential_pair import reference_potential_pair
 from .nsc_atlas_cap_variational_reference import _radial_variations,GRADIENT_ABSOLUTE_TOLERANCE
@@ -124,7 +125,8 @@ def _background_time_projection(basis,fields,gram,breaks,owners,background,T,bud
 
 def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_rate=None,
                         incoming_w_plus=None,budget,rtol=2e-13,atol=2e-15,wall_coupler=None,
-                        background=None,background_time=None,radial_step_fraction=None):
+                        background=None,background_time=None,radial_step_fraction=None,
+                        background_panel_sides=False):
     """One instantaneous radial solve and weak coefficient RHS.
 
     The metric certificate covers exact rational shapes and binary inputs.
@@ -137,6 +139,8 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
     time gradient and the actual affine mass remainder remain in the result.
     """
     budget=_budget(budget);before=budget.evaluations
+    if type(background_panel_sides) is not bool or (background_panel_sides and background is None):
+        raise ValueError('background panel sides require a retained background and a boolean option')
     if not isinstance(basis,FixedCapBasis): raise ValueError('require a fixed local basis')
     c=_vector(chi,'chi').copy();d=_vector(canonical_density,'canonical density').copy()
     if c.shape!=(basis.dimension,) or d.shape!=c.shape:
@@ -174,6 +178,13 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
     if background is not None:
         breaks,owners=_background_partition(basis,Z,time,background)
         a_h,b_h=_background_time_projection(basis,fields,gram,breaks,owners,background,time,budget)
+    panel_indices=None
+    if background_panel_sides:
+        panel_indices=[]
+        for panel,cell in enumerate(owners):
+            midpoint=breaks[panel]+(breaks[panel+1]-breaks[panel])/2
+            z=fields.left[cell]+fields.width[cell]*(midpoint-cell)
+            panel_indices.append(history_piece_indices(background.profile,[time-z,time+z],budget=budget))
     nonzero_total_seen=False
     # A full-panel startup is exact for certified zero fields. For nonzero
     # data retain the existing solver heuristic: changing its initial step
@@ -186,11 +197,12 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
             background.profile.quiet_extension and
             Q(time)+Z+rounding_margin<Q(float(background.inputs['labels'][onset['index']])))
 
-    def total_fields(cell,xi):
+    def total_fields(cell,xi,polynomial_indices=None):
         nonlocal nonzero_total_seen
         row=fields.evaluate(cell,xi,budget)
         if background is not None:
-            bg=background.reduced_jets(time,row['z'],budget=budget)
+            bg=background.reduced_jets(time,row['z'],budget=budget,
+                                       polynomial_indices=polynomial_indices)
             for key in ('f','p','h','chi','k','chi_z'): row[key]+=bg[key]
             row['background']=bg
         nonzero_total_seen |= any(row[key]!=0 for key in ('f','p','h'))
@@ -208,7 +220,7 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
         cell=int(owners[panel])
         xi=point-cell
         if point==breaks[-1]: xi=cut
-        row=total_fields(cell,xi)
+        row=total_fields(cell,xi,None if panel_indices is None else panel_indices[panel])
         r,A0=row['r'],row['A0'];jacobian=fields.width[cell]*A0
         partials=np.zeros(2*count+(background is not None));budget.check(len(partials)+48)
         if r==0: return r,jacobian,1.,0.,0.,partials

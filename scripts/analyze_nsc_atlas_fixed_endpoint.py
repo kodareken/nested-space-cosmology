@@ -42,6 +42,8 @@ def compare(records):
                                gradient_absolute_tolerance=2e-8)
         if 'maximum_nonzero_panel_step_fraction' in r['radial_accuracy']:
             expected_accuracy['maximum_nonzero_panel_step_fraction']=.25
+        if 'background_panel_sides' in r['radial_accuracy']:
+            expected_accuracy['background_panel_sides']=True
         if r['radial_accuracy']!=expected_accuracy:
             raise ValueError('endpoint did not use the confirmed radial accuracy')
     if any(r['radial_accuracy']!=records[0]['radial_accuracy'] for r in records[1:]):

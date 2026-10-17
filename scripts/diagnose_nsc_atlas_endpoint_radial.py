@@ -86,10 +86,12 @@ def main(argv=None):
                       help='half/quarter-panel forward steps at the selected tolerance')
     mode.add_argument('--one-sided-panel-check',action='store_true',
                       help='test inward endpoint limits at existing radial formula breaks')
+    mode.add_argument('--confirm-panel-polynomials',action='store_true',
+                      help='32/64-point check of explicit panel polynomial ownership at unchanged coordinates')
     args=parser.parse_args(argv)
     cases=(ONE_SIDED_CASES if args.one_sided_panel_check else
            PANEL_CASES if args.panel_step_check else
-           CONFIRMATION_CASES if args.confirm_forward_accuracy else CASES)
+           CONFIRMATION_CASES if (args.confirm_forward_accuracy or args.confirm_panel_polynomials) else CASES)
     if args.output.exists() or not args.output.parent.is_dir():
         raise ValueError('choose a new output in an existing directory')
     raw=args.receipt.read_bytes();receipt=json.loads(raw)
@@ -107,7 +109,8 @@ def main(argv=None):
                            bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest()),
         stage_seed=receipt['failed_stage_seed'],x=x,level=receipt['level'],
         physical_time_steps=0,gradient_tolerance=2e-8,
-        comparison_kind=('one_sided_panel_limits' if args.one_sided_panel_check else
+        comparison_kind=('explicit_panel_polynomials' if args.confirm_panel_polynomials else
+                         'one_sided_panel_limits' if args.one_sided_panel_check else
                          'forward_panel_step' if args.panel_step_check else
                          'selected_forward_accuracy' if args.confirm_forward_accuracy else 'error_attribution'),
         limits=dict(cpu_seconds=60.,charged_values=40_000_000,cases=len(cases)),cases=[])
@@ -138,6 +141,8 @@ def main(argv=None):
                       effective_rtol=max(rtol,100*np.finfo(float).eps))
             if fraction is not None:
                 case['maximum_radial_step_panel_fraction']=fraction
+            if args.confirm_panel_polynomials:
+                case['background_panel_sides']=True
             captured=[];started=time.process_time();before=budget.evaluations
             panels=[];shifts=[]
             def solve(fun,span,initial,**kw):
@@ -163,7 +168,8 @@ def main(argv=None):
                 stage=endpoint.coupled_fixed_stage(state,basis=basis,x=x,
                     eta=np.linspace(0.,1.,spec['exterior_cells']+1),source=snapshot.sample(x),
                     gauge=gauge.sample(x),alpha=data['alpha'],tube=endpoint.TUBE,budget=budget,
-                    background=background,background_clock_offset=offset,rtol=rtol,atol=atol)
+                    background=background,background_clock_offset=offset,rtol=rtol,atol=atol,
+                    background_panel_sides=args.confirm_panel_polynomials)
                 cap=stage['connection']['cap']
                 case.update(status='passed_existing_gradient_guard',mass=cap['mass'],lapse=cap['lapse'],
                     gradient_discrepancy=cap['gradient_discrepancy'],

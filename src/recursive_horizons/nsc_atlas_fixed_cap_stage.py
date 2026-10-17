@@ -96,7 +96,8 @@ def exterior_departure_stage(departure,wall,*,x,eta,source,W,W_x,alpha,tube,budg
 def coupled_fixed_stage(state,*,basis,x,eta,source,gauge,alpha,tube,budget,
                          departure_gradient=quadratic_departure_gradient,
                          exterior_quadrature_order=2,rtol=2e-13,atol=2e-15,
-                         background=None,background_clock_offset=0.,radial_step_fraction=None):
+                         background=None,background_clock_offset=0.,radial_step_fraction=None,
+                         background_panel_sides=False):
     """One actual exterior/cap/hybrid state with separately measured defects.
 
     With a retained history, cap coefficients describe departures. Evaluate
@@ -144,7 +145,7 @@ def coupled_fixed_stage(state,*,basis,x,eta,source,gauge,alpha,tube,budget,
         alpha=alpha,exterior_wall=outgoing,C_wall=math.exp(wall['L']),eta_plus=boost,eta_plus_x=boost_x,
         budget=budget,rtol=rtol,atol=atol,background=background,
         background_time=wall['T']+offset if background is not None else None,
-        radial_step_fraction=radial_step_fraction)
+        radial_step_fraction=radial_step_fraction,background_panel_sides=background_panel_sides)
     hybrid_rates=connection['wall_rates'];actual_rates=dict(hybrid_rates,c=connection['cap_c_x'])
     q,p=exterior['longitudinal'],exterior['first_jets']
     hybrid_defect={k:hybrid_rates[k]-q[k][-1]-Wx*p[k][-1] for k in FIELDS}

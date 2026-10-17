@@ -11,6 +11,7 @@ from .nsc_atlas_characteristic_background import CharacteristicProfile
 from .nsc_atlas_cap_mass_derivatives import third_moments
 from .nsc_atlas_cap_geometric_reference import _positive_gap
 from .nsc_atlas_polar_cap import _scalar
+from .nsc_atlas_cap_panel_jets import panel_profile_jet
 
 SMALL_Z = .01
 
@@ -42,7 +43,7 @@ class RetainedCapBackground:
     def interior_jets(self):
         return self.profile.interior_jets
 
-    def reduced_jets(self, T, z, *, budget):
+    def reduced_jets(self, T, z, *, budget, polynomial_indices=None):
         """One bounded point: f,p,h, their T/z partials, chi,k and k_T.
 
         p=r*Pi, h=r*Phi and z=atanh(r). Near the centre, knot-split
@@ -72,7 +73,9 @@ class RetainedCapBackground:
                 fT,pT,hT = z*I2/r,z*J0/A0,z*(gamma*I2+J1)/A0
                 az = I2+z*J1
             else:
-                jet = self.profile.jet(np.array([T-z,T+z]),budget=budget)
+                labels=np.array([T-z,T+z])
+                jet = (self.profile.jet(labels,budget=budget) if polynomial_indices is None else
+                       panel_profile_jet(self.profile,labels,polynomial_indices,budget=budget))
                 fm,fp = jet['F']; pm,pp = jet['F_prime']; sm,sp = jet['F_second']
                 chi,k,b,az = float(fp-fm),float(pp-pm),float(sp-sm),float(sp+sm)
                 f,p = chi/r,k/A0

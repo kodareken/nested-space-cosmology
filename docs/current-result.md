@@ -43,12 +43,22 @@ Its [same-state panel check](../results/summaries/nsc-atlas-fixed-endpoint-radia
 reduces that discrepancy to `4.1956e-10` with quarter-panel steps.
 All measured mass/flux gaps remain outputs of the unchanged physical model.
 
-The v4 successors use a quarter-panel maximum step for nonzero forward
-radial solves at all three resolutions, with the same tolerances and guard.
+The subsequent one-sided endpoint diagnostics isolate the mechanism:
+the [coarse discrepancy](../results/summaries/nsc-atlas-fixed-endpoint-radial-sided-diagnostic-v1.json)
+falls to `5.0022e-12` and the
+[middle discrepancy](../results/summaries/nsc-atlas-fixed-endpoint-radial-middle-sided-diagnostic-v1.json)
+to `6.2244e-12` without a step cap. The radial polynomial pieces meet with
+small floating-point derivative mismatches; global spline selection can
+use the neighbouring piece at a panel's Runge--Kutta endpoint.
+
+The v4 method selects the panel's own polynomial at that same coordinate,
+with the same tolerances and guard. It supersedes the provisional
+quarter-panel restriction. Confirmation through the coupled interface at
+both saved failure states precedes the full executions.
 The old fine v3 execution was [interrupted](../results/summaries/nsc-atlas-fixed-endpoint-level2-v3-interruption.json)
-to use that common method. Fifty-one focused controls pass, including the
-manufactured coupled-history fields and mass/lapse checks. This numerical
-correction does not itself establish endpoint convergence.
+to use a common corrected method. Thirty-eight focused controls now pass,
+including the explicit knot-side evaluation and coupled-history fields.
+This numerical correction does not itself establish endpoint convergence.
 The declared observable is the Jordan wall areal radius at the fixed incoming
 label, with fiducial `ell=10000 m`; its endpoint value and numerical range
 remain pending. Independent Grok review confirms the exact invariant and
