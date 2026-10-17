@@ -7586,6 +7586,28 @@ not prove monotonicity of the moving-node rule, and a binary elementary
 function is not automatically its exact counterpart. No such assertion
 enters the initial certificate.
 
+The [initial-event application](../results/summaries/nsc-atlas-reference-initial-bound-v1.json)
+at producer `33445f7dc3e8e9306664c96178c6e67e96453cce` succeeds. The seed
+radius error is below `5.690e-17`; differences from the saved *physical*
+initial wall are bounded by `1.125e-16` in r, `2.154e-16` in L,
+`1.244e-16` in T and `7.709e-17` in s. The scalar is exactly zero.
+The cap-history quiet margin exceeds `0.0014530219858557`, and the original
+source is before its support edge by more than `0.01860762598612608` in its
+dimensionless bump coordinate. The corrected wall cut remains within
+`0.49999999999999` and `0.50000000000002` of the original outer basis cell.
+
+The three integrals use **7,872 charged values**, with CPU below timer
+resolution, no preparation, root search or time evolution. The
+**12,790-byte** summary has SHA256
+`b1d29d8a2c78518889706adbb8ab3293edda596725949347d2830c187f9ffde9`.
+All 43 producer bindings and four input hashes authenticate. A separate
+**512-value rational audit** verifies every outward display, the reported
+wall-error ceilings, both strict quiet margins and the fixed-basis cut.
+Grok's code review confirms the inverse and clock enclosures and their
+initial-only scope. The saved source curvature residual `6.846851463133793e-11`
+is still present in the receipt; no subsequent sourced solution or uniform
+floating-gauge error is certified by this initial-event result.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

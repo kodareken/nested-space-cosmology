@@ -227,6 +227,17 @@ This uses the exact compatible corner. Comparing the floating gauge and
 initial slice with that reference, and enclosing the sourced coefficients
 and residuals, remain the next inputs to the coupled estimate.
 
+The [exact initial anchor](nsc-atlas-finite-amplitude.md#exact-initial-anchor-and-residual-reconstruction)
+now supplies compatible zero-departure data on that reference. The original
+source is before its exact support front, and the corrected cap clock leaves
+the entire cap in the retained zero-field region with margin above
+`0.0014530219858557`. Saved physical initial radius and clock differences
+are below `1.125e-16` and `1.244e-16`. Four controls, Grok code review and a
+512-value rational audit pass. Three integrals use 7,872 values and produce
+a 12,790-byte receipt. The numerical source-curvature error remains recorded.
+Later physical residuals must be enclosed on the explicit common reference
+reconstruction; the floating midpoint diagnostics alone do not supply them.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

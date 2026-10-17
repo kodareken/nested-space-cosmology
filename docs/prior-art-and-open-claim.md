@@ -2711,6 +2711,19 @@ quiet-margin calculation and common-coordinate chain rule address these.
 Future whole-cell residual bounds remain required. No assertion of uniform
 libm accuracy or monotonicity of the floating quadrature is made.
 
+**Outcome:** four controls pass with 15,004 values / 0.40625 active CPU
+seconds. Independent Grok code review confirms the initial enclosure and
+scope. Frozen producer `33445f7` then completes the three-integral application
+with 7,872 values and CPU below timer resolution. The saved physical wall
+radius and relative clock differ from the exact initial reference by at most
+`1.125e-16` and `1.244e-16`, respectively. The entire cap remains quiet with
+margin above `0.0014530219858557`; the source is strictly before its exact
+front and the original fixed-basis cut remains valid. The 12,790-byte
+[receipt](../results/summaries/nsc-atlas-reference-initial-bound-v1.json)
+retains the numerical source-curvature defect. A separate 512-value rational
+audit verifies the displays, strict inequalities, 43 producer bindings and
+four input hashes. Future sourced residuals and continuation remain open.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

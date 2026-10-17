@@ -1,0 +1,286 @@
+{
+  "certificate": {
+    "charged_values": 7872,
+    "fixed_cap_cut": {
+      "lower": {
+        "exponent": -160,
+        "mantissa": "730750818665443992131104602661960540912300026995"
+      },
+      "lower_float": 0.49999999999999484,
+      "upper": {
+        "exponent": -160,
+        "mantissa": "730750818665472403465039842123368274403374886003"
+      },
+      "upper_float": 0.5000000000000144
+    },
+    "history_offset": "-4802905391686789/4503599627370496",
+    "history_onset": "-568493194079819/1125899906842624",
+    "integral_residual": {
+      "lower": {
+        "exponent": -164,
+        "mantissa": "-2553032552240128063522536157459015"
+      },
+      "lower_float": -1.091784849495044e-16,
+      "upper": {
+        "exponent": -164,
+        "mantissa": "-2553032547478998026803401770512967"
+      },
+      "upper_float": -1.091784847458983e-16
+    },
+    "inverse_derivative_floor": {
+      "lower": {
+        "exponent": -60,
+        "mantissa": "2212408516681461537"
+      },
+      "lower_float": 1.9189584961691781,
+      "upper": {
+        "exponent": -60,
+        "mantissa": "2212408516681461537"
+      },
+      "upper_float": 1.9189584961691786
+    },
+    "left": "475452113650795/1125899906842624",
+    "physical": {
+      "L": {
+        "lower": {
+          "exponent": -83,
+          "mantissa": "-1770003961972642562215301"
+        },
+        "lower_float": -0.18301412018572707,
+        "upper": {
+          "exponent": -83,
+          "mantissa": "-1770003961972638868942185"
+        },
+        "upper_float": -0.18301412018572663
+      },
+      "T": {
+        "lower": {
+          "exponent": -164,
+          "mantissa": "1023548861979384803680515490975308732658834958995"
+        },
+        "lower_float": 0.043771284437656426,
+        "upper": {
+          "exponent": -164,
+          "mantissa": "1023548861979389758799590815339921696292960955027"
+        },
+        "upper_float": 0.043771284437656655
+      },
+      "c": {
+        "lower": {
+          "exponent": 0,
+          "mantissa": "0"
+        },
+        "lower_float": -5e-324,
+        "upper": {
+          "exponent": 0,
+          "mantissa": "0"
+        },
+        "upper_float": 5e-324
+      },
+      "r": {
+        "lower": {
+          "exponent": -82,
+          "mantissa": "2296225165127545526020689"
+        },
+        "lower_float": 0.47484823466247,
+        "upper": {
+          "exponent": -82,
+          "mantissa": "2296225165127546076272047"
+        },
+        "upper_float": 0.4748482346624702
+      },
+      "s": {
+        "lower": {
+          "exponent": -165,
+          "mantissa": "1254992416350027914126690539205338292046321770309"
+        },
+        "lower_float": 0.026834395534829487,
+        "upper": {
+          "exponent": -165,
+          "mantissa": "1254992416350034048329232278198890950167697907525"
+        },
+        "upper_float": 0.026834395534829626
+      }
+    },
+    "precision_bits": 160,
+    "quiet_history_margin": {
+      "lower": {
+        "exponent": -159,
+        "mantissa": "1061797005702981558159194461216684077217989803"
+      },
+      "lower_float": 0.0014530219858557391,
+      "upper": {
+        "exponent": -159,
+        "mantissa": "1061797005703243766311451046789588211202245803"
+      },
+      "upper_float": 0.0014530219858560984
+    },
+    "retained_wall_error": {
+      "L": {
+        "lower": {
+          "exponent": -83,
+          "mantissa": "-1610386821"
+        },
+        "lower_float": -1.665100946302629e-16,
+        "upper": {
+          "exponent": -83,
+          "mantissa": "2082886295"
+        },
+        "upper_float": 2.1536539517205081e-16
+      },
+      "T": {
+        "lower": {
+          "exponent": -164,
+          "mantissa": "-2046637305158253584292051234100589"
+        },
+        "lower_float": -8.752287941736277e-17,
+        "upper": {
+          "exponent": -164,
+          "mantissa": "2908481770166111028671582891895443"
+        },
+        "upper_float": 1.243789989639434e-16
+      },
+      "c": {
+        "lower": {
+          "exponent": 0,
+          "mantissa": "0"
+        },
+        "lower_float": -5e-324,
+        "upper": {
+          "exponent": 0,
+          "mantissa": "0"
+        },
+        "upper_float": 5e-324
+      },
+      "r": {
+        "lower": {
+          "exponent": -82,
+          "mantissa": "-6690223"
+        },
+        "lower_float": -1.3835056898140888e-18,
+        "upper": {
+          "exponent": -82,
+          "mantissa": "543561135"
+        },
+        "upper_float": 1.1240580815232977e-16
+      },
+      "s": {
+        "lower": {
+          "exponent": -165,
+          "mantissa": "-2529179980911188400295353253011643"
+        },
+        "lower_float": -5.407922398760863e-17,
+        "upper": {
+          "exponent": -165,
+          "mantissa": "3605022560827805152362768123125573"
+        },
+        "upper_float": 7.708301663733404e-17
+      }
+    },
+    "scope": "exact initial reference and retained-wall differences; zero-departure compatibility requires the authenticated quiet profile; later residuals remain external",
+    "seed": "8554105330733753/18014398509481984",
+    "seed_radius_error": {
+      "lower": {
+        "exponent": -213,
+        "mantissa": "748963335703100579458388340171121708996641936845"
+      },
+      "lower_float": 5.689465674607223e-17,
+      "upper": {
+        "exponent": -213,
+        "mantissa": "748963335703100579458388340171121708996641936845"
+      },
+      "upper_float": 5.689465674607226e-17
+    },
+    "source_front_margin": {
+      "lower": {
+        "exponent": -163,
+        "mantissa": "217560606764514618640140630323944073227180836969"
+      },
+      "lower_float": 0.01860762598612608,
+      "upper": {
+        "exponent": -163,
+        "mantissa": "217560606764514618640140630323944073227180840759"
+      },
+      "upper_float": 0.018607625986126086
+    }
+  },
+  "execution": {
+    "charged_values": 7872,
+    "cpu_seconds": 0.0,
+    "raw_history_saved": false,
+    "retries": 0,
+    "root_searches": 0,
+    "source_integrations": 0,
+    "source_queries": 0,
+    "time_steps": 0
+  },
+  "inputs": {
+    "gauge": {
+      "path": "results/summaries/nsc-atlas-reference-gauge-bound-v1.json",
+      "sha256": "e8a8400cec0f6ae0bd831723696ebf1d41c38bdf0b052301ffab837465f1d216"
+    },
+    "onset": {
+      "path": "results/summaries/nsc-atlas-fixed-enriched-history-onset-v1.json",
+      "sha256": "f6b5995960483d9285a4226e2c7ae1be4e6bd08ad53fdef2a30855edae7be62f"
+    },
+    "source": {
+      "path": "results/summaries/nsc-atlas-source-cell-bound-v2.json",
+      "sha256": "707bb8d76359edaf2a26228657a219933ebd164edcf89eb87742f9e66bec2bdd"
+    }
+  },
+  "original_geometry_input": {
+    "path": "results/development/nsc-atlas-coupled-evolution-v1/coupled.json",
+    "sha256": "3ab2662b932e503f471206fd77f9e4895d1967b1dcacbdf2d92aa048c37fee86"
+  },
+  "reconstruction": "exact reference plus original zero departure coefficients; future continuous residual not yet certified",
+  "retained_initial_source_constraint": 6.846851463133793e-11,
+  "retained_profile_sha256": "11867d7614f2289025985d6f35000756002ef9c2f17c09a88466cc11a2517e04",
+  "schema": "nsc-atlas-reference-initial-bound-v1",
+  "source_bindings": {
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/check_nsc_atlas_reference_initial_bound.py": "c1917774f80e383813644540683e5b6273d0c0d6987ae576fb82f81b30aef241",
+    "scripts/run_python.py": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+    "src/recursive_horizons/nsc_atlas_background_cap.py": "df34fdee624eb58d466b778e8f05ee74241922e43f5b60d619c0a8c557f6ceed",
+    "src/recursive_horizons/nsc_atlas_background_evolution.py": "7b7d5db8e790354c0bf7069f983eb4851390b1cbfaa3a56a10de97033e1059b9",
+    "src/recursive_horizons/nsc_atlas_background_profile.py": "4103e32423cde5eb95131fe4cd67ebb9e32c568d13e7bd74a76edced5199c427",
+    "src/recursive_horizons/nsc_atlas_background_ssprk3.py": "dcc3ecc2023679be3a837e807de58548cb1b6b51bc3e7419e1cba1b8caee8362",
+    "src/recursive_horizons/nsc_atlas_cap_background_bound.py": "5503dc98f49d24dc8644ed012b67e663016747e5fd1c44bd4a90304bef35e262",
+    "src/recursive_horizons/nsc_atlas_cap_background_jets.py": "2f5b7df81335da5b3b55fb59e4a95e30928e673d30afd807e0ae3f640af4c914",
+    "src/recursive_horizons/nsc_atlas_cap_field.py": "3e5c10e5e1096a2c1079d00ca8d31ff4678044d324404117d225ccd1f3815d31",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_basis.py": "048cdbee78b7be34b6ffac4b04019078f7f044a13a918d25472c7ad4d850d5ae",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_bound.py": "224cd008e2e710880999d15a1f4ebbd169d7897586e5e499a24f77efc3d3e053",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py": "b46a1549b69dcc64b5018e43c005441ade48c4c0552e3ad5235b68e4f6ed8300",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py": "5596db3d0bd312fee6b7d52827793b08c1384fb665d35773a55c9024c9d2b252",
+    "src/recursive_horizons/nsc_atlas_cap_geometric_reference.py": "905f292558173d6cd015c484ec30fdc9e59b38d748077047df850d1e5d404b81",
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": "e0c26ea5417fb46b1e971e9b4ac5c0122aae400104551516488d321e9272a579",
+    "src/recursive_horizons/nsc_atlas_cap_polynomial_basis.py": "16857a7cca0e2112f0f3fd98e9c42568b442429f8ed044e1dcb78e07538503b4",
+    "src/recursive_horizons/nsc_atlas_cap_radial_reference.py": "fdf3a9dc430709e2a29f944e5bba6c417f96fd75104d67ff3de1263d4ec9f5ab",
+    "src/recursive_horizons/nsc_atlas_cap_variational_reference.py": "0779ff9783932b2335b9dc09bb64a218daad6b694393d82cfc97f62ce8888f93",
+    "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_characteristic_background.py": "b7883490e6bad9c7096bfa6c6616e0674ff319e08e0e0be7ababf6055d1d5c9c",
+    "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+    "src/recursive_horizons/nsc_atlas_compatible_evolution.py": "82f8f127f2b401b1234dfe7ceecddee011cf907c34fd87c06cbb64c20ddd9385",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+    "src/recursive_horizons/nsc_atlas_coupled_evolution.py": "08746ab7c4aa71b543be5e1aca469e1fa43795277cfdce8102161b738d64423b",
+    "src/recursive_horizons/nsc_atlas_departure_gradient.py": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452",
+    "src/recursive_horizons/nsc_atlas_exterior_characteristic_slice.py": "905f820fc7240b272dab9a3766708e3ff471d4210d408d5300f5eea0d983d766",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+    "src/recursive_horizons/nsc_atlas_fixed_cap_stage.py": "4d6c95571b042b36668f355dcb3a859b533919e03ac27845b52220fdffab8105",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "src/recursive_horizons/nsc_atlas_nonlinear_boundary.py": "4f636558926405a0bbd51f2080bd9be7e832ea82dfe007ccdf9104e9dfd2d541",
+    "src/recursive_horizons/nsc_atlas_polar_cap.py": "17a9bece68716d2c80711bbdef3fc340d36f11edb6fa2f233806b39332603617",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": "70b28d793f572556e3ada8bfaf74a98926f93402d7c15cf987f61b50396ab8e0",
+    "src/recursive_horizons/nsc_atlas_reduced_cap.py": "ed474652def7f60db02a14e5147a08b14b43963ef756ad4c3de3ad4800d698e9",
+    "src/recursive_horizons/nsc_atlas_reference_gauge_bound.py": "cbf2e65663f355565e0d845606813b473faaf49e6e8f1181b1e777fc36f730d1",
+    "src/recursive_horizons/nsc_atlas_reference_initial_bound.py": "3389cd95870bba13adfb9310bc4ec298a52c73ff3ae655b43ba065437d609fa1",
+    "src/recursive_horizons/nsc_atlas_source_cell_bound.py": "bea82d004e9a3a3355319af07365730d542111fafc2f6d745cc9872d6cf5a9e7",
+    "src/recursive_horizons/nsc_atlas_stage_ssprk3.py": "aab87a8bc67a9b69391a425a5893c9c07e73eedde668d1a2cdff4eb971cdcbc0",
+    "src/recursive_horizons/nsc_atlas_vacuum_departure.py": "45ed0edcc19b5d9a73904bd8b862d42223a6ddc0703b948b47cd8a44d399f157",
+    "src/recursive_horizons/nsc_frozen_sources.py": "473120bfe00230d1d25cf8a4942edfed0891dc8cc58ca7276dc26419bf721ac9",
+    "src/recursive_horizons/nsc_source_binding_graph.py": "0c378dd30c500e93cf2050f44793333380875094008ae2b95c2f180a31907374"
+  },
+  "source_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
+  "status": "certified_quiet_exact_reference_initial_event"
+}

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
+  "current_receipt_commit_parent": "33445f7dc3e8e9306664c96178c6e67e96453cce",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 328508,
-      "change": "Record certified whole-cell reference wall and clock coefficients.",
-      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
+      "bytes": 329292,
+      "change": "Record exact initial radius, clocks and strict quiet support margins.",
+      "changed_from_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3e1942595abfc3ade7ad3c41657f719c0969e7849ec14d31d40e4be5c2f6b6d3"
+      "sha256": "da272126f68905215d33585394dac2280731a05156a95d9b6970cacca27280cc"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 364149,
-      "change": "Certify the exact initial reference against the retained onset event.",
-      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
+      "bytes": 365567,
+      "change": "Record exact initial radius, clocks and strict quiet support margins.",
+      "changed_from_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "59edfc04bcb1dcb3e6b55239ee3a3fd614a7f688876474d5a4527370a2d3db1e"
+      "sha256": "0ceae06655eaca37dd3933c899cd16529fd064fedba04c40c04962791104c7e4"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 380539,
-      "change": "Certify the exact initial reference against the retained onset event.",
-      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
+      "bytes": 381437,
+      "change": "Record exact initial radius, clocks and strict quiet support margins.",
+      "changed_from_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1b5f3039d88955280d9eae2608c22f436d85a2bae6af9c4ca2e3de5ae0994cb1"
+      "sha256": "4f3ffa501779d61e184d55b8d12f94985da137c3d3ff90cf7b3b2d6e8f85ebfa"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 121456,
-      "change": "Certify the exact initial reference against the retained onset event.",
-      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
+      "bytes": 121898,
+      "change": "Record exact initial radius, clocks and strict quiet support margins.",
+      "changed_from_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "dc60af9a5d2ac778bbf8442a7031946f2abb37ac8e94ac705a751a564f522f09"
+      "sha256": "2fe99fcc13050579ec9cd26b6c14801cce8c247179bad490e65458c41e44ae3d"
     },
     {
       "bytes": 18356,
@@ -29676,6 +29676,14 @@
       "path": "results/summaries/nsc-atlas-reference-gauge-bound-v1.json",
       "retention_reason": "Certified original-cell reference gauge enclosures and source hashes.",
       "sha256": "e8a8400cec0f6ae0bd831723696ebf1d41c38bdf0b052301ffab837465f1d216"
+    },
+    {
+      "bytes": 12790,
+      "change": "Record exact initial radius, clocks and strict quiet support margins.",
+      "changed_from_commit": "33445f7dc3e8e9306664c96178c6e67e96453cce",
+      "path": "results/summaries/nsc-atlas-reference-initial-bound-v1.json",
+      "retention_reason": "Certified compatible exact initial event and authenticated original inputs.",
+      "sha256": "b1d29d8a2c78518889706adbb8ab3293edda596725949347d2830c187f9ffde9"
     },
     {
       "bytes": 13697,

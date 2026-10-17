@@ -621,6 +621,13 @@ Its four controls pass with 15,004 values / 0.40625 active CPU seconds.
 The numerical source curvature defect remains recorded. Future residual
 certification must evaluate the specified exact-reference reconstruction.
 
+The frozen `33445f7` application passes with 7,872 charged values and CPU
+below timer resolution. It saves a 12,790-byte summary with 43 producer
+bindings. A separate 512-value rational audit checks all displays, input
+hashes, the strict quiet margins and the original fixed-basis cut. The saved
+physical initial radius/clock differences are below `1.125e-16`/`1.244e-16`;
+the whole cap remains quiet with margin above `0.0014530219858557`.
+
 The coupled comparison has four exact/manufactured controls:
 
 ```sh
