@@ -197,7 +197,11 @@ It authenticates compact certificates and historical input hashes without
 sampling historical arrays. The [comparison owner](nsc-atlas-finite-amplitude.md#uniform-quadratic-geometric-comparison-on-the-original-onset)
 specifies the original finite domain, half-Hessian factors, reused matrix
 and strict endpoint threshold. No source/field evolution or grid scan is
-part of this calculation.
+part of this calculation. The first application stopped on an indeterminate
+Arb power of a zero-crossing derivative ball. The corrected implementation
+uses interval multiplication for those squares; eleven controls pass in
+14,336 values / 5.609375 active CPU seconds. The stopped v1 receipt is
+preserved, and the separately admitted corrected application will use v2.
 
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic

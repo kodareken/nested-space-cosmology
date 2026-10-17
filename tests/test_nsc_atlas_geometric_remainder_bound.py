@@ -44,6 +44,21 @@ def test_jet_composition_against_polynomial_derivatives(budget):
             else:contains(jet,target)
 
 
+def test_zero_crossing_directions_keep_second_jets_finite(budget):
+    budget.check(1024)
+    signed=arb(-1).union(arb(1))
+    reciprocal=m.Jet(2,signed).inverse()
+    exponential=m.Jet(0,signed).exp()
+    for value in (reciprocal.second,exponential.second):
+        assert value.is_finite()
+    contains(reciprocal.second,Q(1,4));contains(reciprocal.second,0)
+    contains(exponential.second,1);contains(exponential.second,0)
+    _,ch,sh,_=m.even_product(Q(1,10),m.Jet(signed,signed))
+    assert ch.second.is_finite() and sh.second.is_finite()
+    # The family f=0 is included in the box and has zero second jet.
+    contains(ch.second,0);contains(sh.second,0)
+
+
 def test_even_product_keeps_one_sixth_and_second_field_jet(budget):
     budget.check(1024)
     alpha,ch,sh,q=m.even_product(Q(0),m.Jet(2,3,5))

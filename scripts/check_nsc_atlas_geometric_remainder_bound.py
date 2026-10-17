@@ -74,7 +74,7 @@ def main():
         values=(source['parameters'][key],gauge['certificate']['inputs'][key],first['parameters'][key])
         if len(set(map(Q,values)))!=1:raise ValueError('first response/source cell mismatch')
     budget=Budget(maximum_evaluations=49152,cpu_seconds=15.)
-    report=dict(schema='nsc-atlas-geometric-remainder-bound-v1',status='incomplete',
+    report=dict(schema='nsc-atlas-geometric-remainder-bound-v2',status='incomplete',
         source_commit=commit,source_bindings=bindings,
         inputs=[dict(path=n,sha256=h) for n,h in authenticated.items()],
         runtime=dict(python=sys.version.split()[0],python_flint=version('python-flint'),platform=sys.platform),

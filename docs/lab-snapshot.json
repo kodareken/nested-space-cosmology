@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4df0738070b7c7f53b95d4bc3b0fe2ac540f7cbd",
+  "current_receipt_commit_parent": "86bb90630b706f3b15ab7dd96459547a0f03225d",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 350597,
-      "change": "Record certified quadratic source remainders and the exact canonical wall-force reduction.",
-      "changed_from_commit": "7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b",
+      "bytes": 351407,
+      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
+      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fe54d13db799e9428c8c1c4896b99a343689d3bf3d85c5927cf671f893ffb119"
+      "sha256": "3f95e7d760b56580e0b28c648e667f5489974715b8fc086453839e602a1c8f22"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 572438,
-      "change": "Bound the complete onset geometric remainder with interval jets and the existing positive matrix.",
-      "changed_from_commit": "4df0738070b7c7f53b95d4bc3b0fe2ac540f7cbd",
+      "bytes": 572792,
+      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
+      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1a8f153fa6ea6affd40d2ff7fc5ebba9e4edd6fecfcbe046ba667580da62c7fc"
+      "sha256": "3c9441fb03df5f7e9de4be75f0f275223cc08aa1df41a642ef2cb15bce0cc88c"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 436107,
-      "change": "Bound the complete onset geometric remainder with interval jets and the existing positive matrix.",
-      "changed_from_commit": "4df0738070b7c7f53b95d4bc3b0fe2ac540f7cbd",
+      "bytes": 438196,
+      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
+      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "78ab3cafe99f6bcada84bb04b4b93150182319e7e629e2fbe35488fe08837539"
+      "sha256": "adda9c6dd2cc95d189b921e20dc9b82ec5642b5150e277f37be3e16adf92c5ac"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 135880,
-      "change": "Bound the complete onset geometric remainder with interval jets and the existing positive matrix.",
-      "changed_from_commit": "4df0738070b7c7f53b95d4bc3b0fe2ac540f7cbd",
+      "bytes": 136222,
+      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
+      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5286a7241c334df95543fdf1010b888499544fd2261271d33929701172277770"
+      "sha256": "da19d97e45224a911ebcfa5b9d7e08a065daa2c5bb7242ad55a3b052f0d014b7"
     },
     {
       "bytes": 18356,
@@ -29710,6 +29710,14 @@
       "sha256": "1c6fab9b40ba7fb623dffca80ec8e06b859531ccec3497361649269e580afd62"
     },
     {
+      "bytes": 6424,
+      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
+      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
+      "path": "results/summaries/nsc-atlas-geometric-remainder-bound-v1.json",
+      "retention_reason": "Compact stopped geometric remainder receipt preserving the original calculation diagnosis.",
+      "sha256": "370099d84e7f7f16e005b0c6d23ab72f83eea54075db64b7fb52700c93dcc64f"
+    },
+    {
       "bytes": 8120,
       "change": "Record the certified leading wall scalar and derivative at the original onset endpoint.",
       "changed_from_commit": "2052a1d44da698f20b1c4180317d005e2596d4d1",
@@ -29938,11 +29946,11 @@
     },
     {
       "bytes": 7291,
-      "change": "Bound the complete onset geometric remainder with interval jets and the existing positive matrix.",
-      "changed_from_commit": "4df0738070b7c7f53b95d4bc3b0fe2ac540f7cbd",
+      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
+      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
       "path": "scripts/check_nsc_atlas_geometric_remainder_bound.py",
       "retention_reason": "Finite-onset quadratic geometric remainder and independent derivative controls.",
-      "sha256": "542b5e47fc45837dc69094928bb97a8c68ba0c24b1a7b568719cbcb9bd3fcfd9"
+      "sha256": "9e6c41b952191ea381df4d3efa2cd71282e378d2e19133c1e6bd4f5649c3b2b7"
     },
     {
       "bytes": 7337,
@@ -33023,12 +33031,12 @@
       "sha256": "51989c2c1be89df725202dfa72443ff11acdd87a23a29f99cc6c3315ccdf4b33"
     },
     {
-      "bytes": 12926,
-      "change": "Bound the complete onset geometric remainder with interval jets and the existing positive matrix.",
-      "changed_from_commit": "4df0738070b7c7f53b95d4bc3b0fe2ac540f7cbd",
+      "bytes": 13090,
+      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
+      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
       "path": "src/recursive_horizons/nsc_atlas_geometric_remainder_bound.py",
       "retention_reason": "Finite-onset quadratic geometric remainder and independent derivative controls.",
-      "sha256": "bb0bb0cd1bdf71763557f8d09ce87a46a9f81bf8f455323582d5855a4fc682e3"
+      "sha256": "99053a52f7cc96070bb08171e59e876133395e2731f8290c38a3eca977585c7c"
     },
     {
       "bytes": 13914,
@@ -36727,12 +36735,12 @@
       "sha256": "b45f4fda05d2ce5185575f2139774302c141d83a3ad45ddf8ec805579484ea39"
     },
     {
-      "bytes": 7277,
-      "change": "Bound the complete onset geometric remainder with interval jets and the existing positive matrix.",
-      "changed_from_commit": "4df0738070b7c7f53b95d4bc3b0fe2ac540f7cbd",
+      "bytes": 7941,
+      "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
+      "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
       "path": "tests/test_nsc_atlas_geometric_remainder_bound.py",
       "retention_reason": "Finite-onset quadratic geometric remainder and independent derivative controls.",
-      "sha256": "e047feb424527dbdb47359f1aec79e7b295977ff799f162fab0140373f8f7532"
+      "sha256": "f1e9b4dd20d1d4f676206a433bf4a7834ea7f5c88dce4a307fbe169b78b3545f"
     },
     {
       "bytes": 4080,

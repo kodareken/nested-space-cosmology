@@ -12568,7 +12568,12 @@ CPU seconds), including independent symbolic wall/bulk derivatives and
 an equality-threshold rejection. Grok's independent derivations accept the
 comparison, derivative hulls and fixed-label interpretation. The final
 implementation reviews accept the corrected two-sided bulk enclosure and
-the unchanged matrix assembly. The original application awaits producer freeze.
+the unchanged matrix assembly. The first original application stopped on
+an indeterminate generic Arb square of a zero-crossing derivative ball.
+A bounded traceback and manufactured check localize the issue. Interval
+multiplication now encloses each such square in exponential, reciprocal
+and even-function second jets. All eleven corrected controls pass; the
+stopped receipt remains separate from the admitted corrected application.
 
 ## Missing full-domain estimate
 

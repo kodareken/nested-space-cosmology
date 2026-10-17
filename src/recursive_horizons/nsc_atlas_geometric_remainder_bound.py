@@ -55,7 +55,7 @@ class Jet:
     def inverse(self):
         if not self.value>0:raise ValueError('positive reciprocal jet required')
         return Jet(1/self.value,-self.first/self.value**2,
-                   2*self.first**2/self.value**3-self.second/self.value**2)
+                   2*(self.first*self.first)/self.value**3-self.second/self.value**2)
 
     def __truediv__(self,other):return self*Jet.constant(other).inverse()
     def __rtruediv__(self,other):return Jet.constant(other)*self.inverse()
@@ -68,7 +68,9 @@ class Jet:
 
     def exp(self):
         e=self.value.exp()
-        return Jet(e,e*self.first,e*(self.second+self.first**2))
+        # Arb's generic power can be indeterminate on a zero-crossing
+        # base. Interval multiplication encloses its integer square.
+        return Jet(e,e*self.first,e*(self.second+self.first*self.first))
 
 
 def jet_box(lo,hi,direction):
@@ -95,7 +97,7 @@ def even_product(alpha_max,f):
         value=arb(1).union(chmax)
         first=_ball(Q(1,den1)).union(_u(chmax/den1))
         second=_ball(Q(1,den2)).union(_u(chmax/den2))
-        return Jet(value,first*q.first,second*q.first**2+first*q.second)
+        return Jet(value,first*q.first,second*(q.first*q.first)+first*q.second)
     return alpha,composition(2,12),composition(6,60),q
 
 

@@ -3361,6 +3361,39 @@ The assembly review accepts the unchanged
 homogeneous matrix and the single wall-clock Hessian. Original-data
 evaluation awaits producer freeze.
 
+**Stopped original application:** producer `86bb906` used 24,576 charged
+values / 0.03125 process-CPU seconds, then rejected a nonfinite second jet
+inside the nonlinear box evaluation. The stopped v1 receipt is retained;
+no geometric remainder or endpoint sign follows from that attempt.
+
+**Failure-localization diagnostic:** admit one traceback-only reconstruction
+of the same immutable algebraic boxes, capped at 24,576 charged values /
+5 process-CPU seconds. It may identify the failing operation but may not
+continue to the positive solve, adjust boxes, or issue a certificate. No
+source/field integration or scan is involved. Stop at the original exception
+or the charge ceiling. A correction requires a manufactured control and
+review before any separately admitted corrected original application.
+
+**Diagnostic and correction:** the single traceback identifies `Jet.exp`,
+where generic Arb exponentiation of a zero-crossing first-derivative ball
+returns an indeterminate square. A 512-value manufactured check confirms
+`[-1,1]**2` is nonfinite while interval multiplication is finite. The same
+square pattern occurs in reciprocal and even-function second jets. All
+three now use interval multiplication, which encloses the exact square
+without changing the mathematical box or model. The diagnostic consumes
+24,576 values with CPU below timer resolution and produces no certificate.
+The added signed-interval regression and all ten earlier controls pass:
+14,336 values / 5.609375 active CPU seconds in the corrected test execution.
+Cumulative development controls are 28,160 values / 11.21875 active CPU
+seconds, below the original 30,000 / 30 allowance.
+
+Admit one corrected original application after a new producer freeze,
+with the same 49,152-value / 15-CPU-second ceiling and unchanged eight
+primary inputs, boxes, matrix and scientific domain. Save it as v2; retain
+stopped v1 and its original producer binding. It must pass the existing
+independent 4,096-value audit. Any further nonfinite operation, failed
+floor or exhausted budget stops this application without a retry.
+
 ## Quadratic source-geometry remainder, 17 October 2026
 
 The cap comparison closes the normalized radial input; the full geometric

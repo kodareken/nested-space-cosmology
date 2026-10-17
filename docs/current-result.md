@@ -2,6 +2,19 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Geometric remainder implementation correction, 17 October 2026
+
+The first complete nonlinear-box application stopped before obtaining a
+bound. Its [6,424-byte receipt](../results/summaries/nsc-atlas-geometric-remainder-bound-v1.json)
+binds producer `86bb90630b706f3b15ab7dd96459547a0f03225d` and records the
+nonfinite second jet at 24,576 charged values / 0.03125 CPU seconds.
+A bounded traceback isolates an indeterminate generic Arb square of a
+zero-crossing derivative interval. Interval multiplication supplies the
+required square enclosure in three derivative rules. All eleven corrected
+controls pass; the source, geometry, coupling interval and comparison
+matrix are unchanged. A separately admitted v2 application follows the
+new producer freeze. This stopped attempt establishes no endpoint sign.
+
 ## Quadratic source remainder bounds, 17 October 2026
 
 The four [source-geometry remainders](nsc-atlas-finite-amplitude.md#quadratic-remainders-of-the-original-source-geometry)
