@@ -70,14 +70,39 @@ def _metric_domain(z, chi, k, alpha, budget):
             Z,lc,lk,al,scope="exact radial solution for the declared P1 fields; numerical ODE error excluded")
 
 
+def _validated_adjoint_order(order):
+    """Gauss rule used by the adjoint mass gradient. Checked before sampling."""
+    if isinstance(order, bool) or not isinstance(order, (int, np.integer)):
+        raise ValueError("adjoint quadrature order must be a finite integer from 8 through 256")
+    order = int(order)
+    if not 8 <= order <= 256:
+        raise ValueError("adjoint quadrature order must be a finite integer from 8 through 256")
+    return order
+
+
 def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
-                       nonzero_field, budget, rtol, atol):
+                       nonzero_field, budget, rtol, atol, first_step_fraction=None,
+                       adjoint_order=32):
     """Shared radial mass/sensitivity engine on a caller's fixed coordinate.
 
     coefficients returns (r, dr/dcoordinate, A, a, rho, source_partials).
     A shape partial includes its Jacobian derivative in source_partials.
     Forward and adjoint routes share the metric, not sensitivity values.
+    A finite first_step_fraction in (0, 1] proposes that fraction of each
+    panel as DOP853's first step. None keeps the solver heuristic. rtol
+    and atol still accept or reject the step. adjoint_order is the adjoint
+    Gauss rule, an integer from 8 through 256; 32 is the existing rule.
     """
+    order = _validated_adjoint_order(adjoint_order)
+    fraction = None
+    if first_step_fraction is not None:
+        try:
+            fraction = float(first_step_fraction)
+        except (TypeError, ValueError) as error:
+            raise ValueError(
+                "radial first-step fraction must be finite and inside (0, 1]") from error
+        if not np.isfinite(fraction) or not 0. < fraction <= 1.:
+            raise ValueError("radial first-step fraction must be finite and inside (0, 1]")
     state = np.zeros(2+derivative_count)
     state[1] = centre_lapse
     pieces = []
@@ -98,8 +123,12 @@ def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
             _,jacobian,_,a,rho,partials = evaluate(cell,point,values[0])
             budget.check(len(values))
             return jacobian*np.r_[rho,a,partials-a*values[2:]]
+        step = {}
+        if fraction is not None:
+            panel = float(breaks[cell+1]-breaks[cell])
+            step['first_step'] = min(panel, fraction*panel)
         solution = solve_ivp(rhs,(breaks[cell],breaks[cell+1]),state,method='DOP853',
-                             rtol=rtol,atol=atol,dense_output=True)
+                             rtol=rtol,atol=atol,dense_output=True,**step)
         if not solution.success or not np.all(np.isfinite(solution.y)):
             raise ValueError("radial mass-gradient integration failed")
         state = solution.y[:,-1].copy()
@@ -107,7 +136,7 @@ def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
     mass, lapse = float(state[0]), float(state[1])
     if mass < 0 or (mass == 0 and nonzero_field):
         raise ValueError("positive reference mass is unresolved")
-    nodes, weights = leggauss(32)
+    nodes, weights = leggauss(order)
     adjoint = np.zeros(derivative_count)
     for cell, solution in enumerate(pieces):
         lo, hi = breaks[cell], breaks[cell+1]
@@ -118,12 +147,22 @@ def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
             budget.check(derivative_count)
             adjoint += (hi-lo)*weights[j]*jacobian*np.exp(values[1,j]-lapse)*partials/2
     gradient = state[2:]
-    discrepancy = float(np.max(abs(gradient-adjoint)))
+    gap = gradient-adjoint
+    discrepancy = float(np.max(np.abs(gap)))
     if discrepancy > GRADIENT_ABSOLUTE_TOLERANCE:
-        raise ValueError("forward and adjoint mass gradients exceed the declared tolerance")
+        worst = int(np.argmax(np.abs(gap)))
+        forward = float(gradient[worst])
+        adjoint_value = float(adjoint[worst])
+        largest = float(np.max(np.abs(gradient)))
+        raise ValueError(
+            "forward and adjoint mass gradients exceed the declared tolerance: "
+            f"discrepancy={discrepancy!r}, worst_component={worst}, "
+            f"forward={forward!r}, adjoint={adjoint_value!r}, "
+            f"largest_absolute_gradient={largest!r}, order={order}, "
+            f"rtol={float(rtol)!r}, atol={float(atol)!r}")
     return dict(mass=mass,lapse=lapse,gradient=gradient.copy(),adjoint_gradient=adjoint,
                 gradient_discrepancy=discrepancy,field_sites=samples,
-                sampled_minimum_A=sampled_minimum_A,adjoint_order=32)
+                sampled_minimum_A=sampled_minimum_A,adjoint_order=order)
 
 
 def variational_cap_reference(z_nodes, chi, canonical_density, *, alpha, T_x,

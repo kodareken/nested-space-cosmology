@@ -8,6 +8,7 @@ stability proof. An instability stops the run; nothing is retried or remeshed.
 import argparse
 from fractions import Fraction as Q
 import hashlib
+import io
 import json
 import math
 import sys
@@ -401,11 +402,46 @@ def initial_state(basis, exterior_cells):
     return quiet_fixed_state(basis, exterior_cells=exterior_cells)
 
 
+def save_failed_stage(state, *, x, level, source_commit, output):
+    """Keep one small reproduction seed locally; commit only its identity.
+
+    No trajectory is stored. A single failed stage lets an independent
+    radial check inspect the actual discrepancy without rerunning its past.
+    """
+    payload=dict(x=np.array(float(x)),level=np.array(int(level)),
+                 source_commit=np.array(source_commit))
+    count=0
+    for group,values in state.items():
+        for key,value in values.items():
+            array=np.asarray(value,dtype=float)
+            if not np.all(np.isfinite(array)):
+                raise ValueError('failed-stage seed contains nonfinite state')
+            payload[group+'.'+key]=array
+            count+=array.size
+    if count>4096:
+        raise ValueError('failed-stage seed exceeds its compact-state budget')
+    stream=io.BytesIO()
+    np.savez_compressed(stream,**payload)
+    raw=stream.getvalue()
+    if len(raw)>65536:
+        raise ValueError('failed-stage seed exceeds its byte budget')
+    output.parent.mkdir(parents=True,exist_ok=True)
+    with output.open('xb') as destination:
+        destination.write(raw)
+    return dict(path=output.relative_to(ROOT).as_posix(),bytes=len(raw),
+                sha256=hashlib.sha256(raw).hexdigest(),numeric_state_values=count,
+                raw_trajectory_saved=False,git_tracked=False,source_x=float(x))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--level', type=int, required=True, choices=(0, 1, 2))
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--diagnostic-step-limit',type=int,
+                        help='admitted replay limit; cannot produce a completed endpoint')
     args = parser.parse_args()
+    if args.diagnostic_step_limit is not None and args.diagnostic_step_limit<=0:
+        raise ValueError('diagnostic step limit must be positive')
     if args.output.exists():
         raise ValueError('preserve the existing result; choose a new admitted output')
     if not args.output.parent.is_dir():
@@ -421,6 +457,8 @@ def main():
                   limits=dict(charged_values=CHARGED_EVALUATIONS, cpu_seconds=CPU_SECONDS,
                               accepted_steps=spec['step_budget'], per_level=True, budget_reset=False))
     phase = 'input authentication'
+    if args.diagnostic_step_limit is not None:
+        report['diagnostic_step_limit']=args.diagnostic_step_limit
     calls = accepted = 0
     maxima = {}
     minimum_A = None
@@ -455,6 +493,8 @@ def main():
         front, back = (float(v) for v in geometry['support_x'])
         pieces, total_steps = time_partition(source_x, front, back, x_left=X_ANCHOR, x_right=x_right,
                                              max_dx=spec['max_dx'], step_budget=spec['step_budget'])
+        if args.diagnostic_step_limit is not None and args.diagnostic_step_limit>=total_steps:
+            raise ValueError('diagnostic replay must stop before the full endpoint')
         widths = [right-left for left, right, _ in pieces]
         report['schedule'] = dict(piece_count=len(pieces), accepted_step_budget=total_steps,
                                   max_dx=spec['max_dx'], min_piece_width=min(widths), max_piece_width=max(widths),
@@ -533,9 +573,18 @@ def main():
             calls += 1
             source = snapshot.sample(x)
             ref = gauge.sample(x)
-            row = coupled_fixed_stage(value, basis=basis, x=x, eta=eta, source=source, gauge=ref,
-                                      alpha=ORIGINAL_ALPHA, tube=TUBE, budget=budget, background=background,
-                                      background_clock_offset=clock_offset)
+            try:
+                row = coupled_fixed_stage(value, basis=basis, x=x, eta=eta, source=source, gauge=ref,
+                                          alpha=ORIGINAL_ALPHA, tube=TUBE, budget=budget, background=background,
+                                          background_clock_offset=clock_offset)
+            except (ValueError,RuntimeError,FloatingPointError,OverflowError,KeyError,TypeError):
+                try:
+                    report['failed_stage_seed']=save_failed_stage(
+                        value,x=x,level=args.level,source_commit=commit,
+                        output=ROOT/'.build/results'/(args.output.stem+'-failed-stage.npz'))
+                except (OSError,ValueError) as capture_error:
+                    report['failed_stage_seed_capture_error']=str(capture_error)
+                raise
             connection = row['connection']
             cap = connection['cap']
             floor = cap['metric_certificate']['A_lower_float_down']
@@ -608,6 +657,9 @@ def main():
         for left, right, count in pieces:
             nodes = step_nodes(left, right, count, spec['max_dx'])
             for index in range(count):
+                if args.diagnostic_step_limit is not None and accepted>=args.diagnostic_step_limit:
+                    phase='declared diagnostic step limit'
+                    raise RuntimeError('diagnostic replay reached its admitted accepted-step limit')
                 xa, xb = float(nodes[index]), float(nodes[index+1])
                 xm = xa+(xb-xa)/2
                 phase = 'common step'

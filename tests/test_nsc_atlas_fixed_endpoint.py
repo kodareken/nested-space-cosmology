@@ -1,5 +1,6 @@
 """Synthetic endpoint options, grid legality and time partition; no physical solve."""
 import math
+import hashlib
 from fractions import Fraction as Q
 
 import numpy as np
@@ -14,6 +15,24 @@ from recursive_horizons.nsc_atlas_endpoint_comparison import jordan_radius
 X = np.linspace(runner.X_ANCHOR, runner.X_LAST, runner.SOURCE_ROWS)
 FRONT = .42269179059454887
 BACK = .4631925883576189
+
+
+def test_failed_stage_capture_keeps_one_bounded_pickle_free_seed(tmp_path,monkeypatch):
+    monkeypatch.setattr(runner,'ROOT',tmp_path)
+    state=dict(cap=dict(chi=np.array([.1,.2]),canonical_density=np.array([.3,.4])),
+               wall=dict(r=.5,T=.1),departure=dict(c=np.array([0.,.1])))
+    output=tmp_path/'.build/results/failed-stage.npz'
+    row=runner.save_failed_stage(state,x=.43,level=0,source_commit='a'*40,output=output)
+    assert row['bytes']==output.stat().st_size<65536
+    assert row['sha256']==hashlib.sha256(output.read_bytes()).hexdigest()
+    assert row['numeric_state_values']==8
+    assert row['raw_trajectory_saved'] is row['git_tracked'] is False
+    with np.load(output,allow_pickle=False) as saved:
+        np.testing.assert_array_equal(saved['cap.chi'],state['cap']['chi'])
+        assert saved['source_commit'].item()=='a'*40
+        assert saved['x'].item()==.43
+    with pytest.raises(FileExistsError):
+        runner.save_failed_stage(state,x=.43,level=0,source_commit='a'*40,output=output)
 
 
 def test_levels_refine_space_and_time_together():

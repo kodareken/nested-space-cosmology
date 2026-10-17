@@ -859,6 +859,22 @@ frame conversions. It records both pointwise residual maxima and accumulated
 transport gaps. A nonshrinking result remains a nonshrinking result; it does
 not become a converged prediction through the physical-unit conversion.
 
+The first coarse receipt stopped at the radial forward/adjoint check after
+419 accepted steps. The bounded replay and subsequent one-stage comparison
+have separate, predeclared budgets in the same admission:
+
+```sh
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_endpoint.py --level 0 --diagnostic-step-limit 430 --output results/summaries/nsc-atlas-fixed-endpoint-level0-diagnostic-v2.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-diagnostic-v2.json --output results/summaries/nsc-atlas-fixed-endpoint-radial-diagnostic-v1.json
+```
+
+The second command requires the authenticated single-stage NPZ captured by
+the first command on a stage failure. This small local seed stays in ignored
+`.build/results`; its hash and byte count are recorded in the committed
+summary. A clean checkout regenerates it with the bounded replay. The
+radial comparison performs no time step and preserves the original
+forward/adjoint discrepancy guard.
+
 After that comparison passes, the separately admitted full enriched
 finite-coupling onset interval is:
 

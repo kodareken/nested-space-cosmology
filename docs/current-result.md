@@ -2,6 +2,26 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Full P001 endpoint evolution in progress, 17 October 2026
+
+Opening-phase robustness work is paused. The current calculation targets
+the original P001 endpoint on three fixed cap/exterior meshes, with the
+same amplitude and preparation. The first
+[coarse receipt](../results/summaries/nsc-atlas-fixed-endpoint-level0-v1.json)
+stopped after 419 accepted steps at `x=0.4333498664647946`, before the
+`0.4815042082576364` endpoint. Its forward/adjoint mass-gradient discrepancy
+exceeded the existing tolerance. The positive metric certificate remained
+above `0.7606`. This is an incomplete numerical calculation.
+
+The [admitted replay and one-state diagnosis](prior-art-and-open-claim.md#p001-full-endpoint-fixed-grid-comparison-17-october-2026)
+will distinguish radial ODE error from adjoint quadrature error while
+retaining the same equations and guard. The
+[comparison tool](../scripts/analyze_nsc_atlas_fixed_endpoint.py) requires
+three complete endpoints before reporting contraction and a scaled radius.
+The declared observable is the Jordan wall areal radius at the fixed incoming
+label, with fiducial `ell=10000 m`; its endpoint value and numerical range
+remain pending. No observational comparison has been performed.
+
 ## Formation diagnostic from the same source and wall, 17 October 2026
 
 The [direct calculation](nsc-atlas-finite-amplitude.md#formation-diagnostic-from-the-quiet-sphere-and-material-wall)

@@ -17,7 +17,7 @@ from .nsc_atlas_cap_fixed_basis import FixedCapBasis,exact_number
 from .nsc_atlas_cap_fixed_bound import fixed_metric_bound,fixed_background_metric_bound
 from .nsc_atlas_cap_background_jets import RetainedCapBackground,SMALL_Z
 from .nsc_atlas_cap_geometric_reference import _positive_gap
-from .nsc_atlas_cap_radial_reference import reference_potential
+from .nsc_atlas_cap_radial_reference import reference_potential_pair
 from .nsc_atlas_cap_variational_reference import _radial_variations,GRADIENT_ABSOLUTE_TOLERANCE
 from .nsc_atlas_polar_cap import _scalar,_vector
 
@@ -175,6 +175,16 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
         breaks,owners=_background_partition(basis,Z,time,background)
         a_h,b_h=_background_time_projection(basis,fields,gram,breaks,owners,background,time,budget)
     nonzero_total_seen=False
+    # A full-panel startup is exact for certified zero fields. For nonzero
+    # data retain the existing solver heuristic: changing its initial step
+    # amplified roundoff through the Gram solve in the affine control.
+    exactly_quiet=not np.any(c) and not np.any(d)
+    if exactly_quiet and background is not None:
+        onset=background.onset
+        rounding_margin=Q(16*np.finfo(float).eps*max(1.,abs(time),abs(float(Z))))
+        exactly_quiet=bool(onset is not None and onset['index']>=1 and
+            background.profile.quiet_extension and
+            Q(time)+Z+rounding_margin<Q(float(background.inputs['labels'][onset['index']])))
 
     def total_fields(cell,xi):
         nonlocal nonzero_total_seen
@@ -203,8 +213,7 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
         partials=np.zeros(2*count+(background is not None));budget.check(len(partials)+48)
         if r==0: return r,jacobian,1.,0.,0.,partials
         f,p,h=row['f'],row['p'],row['h']
-        potential=reference_potential(np.array([f]),alpha,budget=budget)
-        P,U=float(potential['Pdiff'][0]),float(potential['Pdiff_f'][0])
+        P,U=reference_potential_pair(f,alpha,budget=budget)
         A=A0-2*alpha*mass/r
         if not np.isfinite(A) or A<=0:
             raise ValueError('numerical fixed cap left the positive metric domain')
@@ -229,7 +238,8 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
             reference=_radial_variations(breaks,coefficients,centre_lapse=centre_lapse,
                 derivative_count=2*count+(background is not None),
                 nonzero_field=bool(np.any(c) or np.any(d)) if background is None else False,
-                budget=budget,rtol=rtol,atol=atol)
+                budget=budget,rtol=rtol,atol=atol,
+                first_step_fraction=1.0 if exactly_quiet else None)
             mass,lapse=reference['mass'],reference['lapse']
             if mass==0 and nonzero_total_seen: raise ValueError('positive total background mass is unresolved')
             gc,gd=reference['gradient'][:count],reference['gradient'][count:2*count]

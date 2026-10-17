@@ -6,8 +6,31 @@ import numpy as np
 from recursive_horizons.nsc_atlas_cap_background_jets import RetainedCapBackground
 from recursive_horizons.nsc_atlas_cap_fixed_basis import FixedCapBasis, exact_number
 from recursive_horizons.nsc_atlas_cap_fixed_reference import _background_partition
+from recursive_horizons import nsc_atlas_cap_fixed_reference as fixed
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
 from run_nsc_atlas_fixed_endpoint import cap_knots
+
+
+def test_full_panel_startup_is_confined_to_provably_zero_fields(monkeypatch):
+    budget=Budget(maximum_evaluations=3000000,cpu_seconds=15.)
+    basis=FixedCapBasis([0,1],budget=budget)
+    background=RetainedCapBackground([.5,.6,.8],[0.,0.,.001],
+        [0.,0.,.02],[0.,0.,.3],onset=dict(index=1,quartic_coefficient=1.))
+    seen=[];original=fixed._radial_variations
+    def record(*args,**kwargs):
+        seen.append(kwargs['first_step_fraction'])
+        return original(*args,**kwargs)
+    monkeypatch.setattr(fixed,'_radial_variations',record)
+    zero=np.zeros(basis.dimension)
+    opts=dict(alpha=.002,T_x=1.,radius_rate=0.,incoming_w_plus=0.,budget=budget)
+    fixed.fixed_cap_reference(basis,zero,zero,exact_number(.5,'Z'),**opts)
+    fixed.fixed_cap_reference(basis,zero,zero,exact_number(.5,'Z'),
+        background=background,background_time=0.,**opts)
+    fixed.fixed_cap_reference(basis,zero+1e-5,zero,exact_number(.5,'Z'),
+        background=background,background_time=0.,**opts)
+    fixed.fixed_cap_reference(basis,zero,zero,exact_number(.5,'Z'),
+        background=background,background_time=.11,**opts)
+    assert seen==[1.,1.,None,None]
 
 
 def test_sub_ulp_quiet_endpoint_is_not_a_physical_formula_break():

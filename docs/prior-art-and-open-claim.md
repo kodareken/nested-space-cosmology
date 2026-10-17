@@ -89,6 +89,49 @@ with the same budgets and inputs, preserving both first receipts. The
 coarse run can continue: it uses the same equations and tolerances with
 an extra smooth quadrature split, whose source version remains recorded.
 
+**Execution-cost diagnosis:** a manufactured quiet eight-cell radial call
+used 963 ODE right-hand-side evaluations over nine smooth panels; its exact
+mass was zero. DOP853's repeated startup and the array potential helper's
+unused remainder diagnostics account for substantial cost. Admit synthetic
+controls for an explicit panel startup proposal and a scalar potential/value
+derivative helper, retaining the same adaptive tolerances, forward/adjoint
+comparison and metric checks. The startup controls have 15 process-CPU
+seconds / ten million charged values; the scalar arithmetic controls have
+15 process-CPU seconds / one million charged values. Neither performs a
+physical evolution. An existing control failure must be resolved before
+adopting either change. The three running evolutions retain their original
+imported code and source identities.
+
+**Coarse stop and targeted replay:** the original 2/32 run accepted 419
+steps through `x=0.4333498664647946`, then stopped at the next accepted-end
+stage because the forward/adjoint mass gradients exceeded `2e-8`. It used
+991.6875 process-CPU seconds and 1,374,302,287 charged values. Its minimum
+metric certificate was `0.76061212895067`; that guard did not cause the
+stop. Preserve this receipt as incomplete. Admit one diagnostic replay of
+this same mesh, source and time partition, capped at **430 accepted steps**
+and the original resource limits. Enrich the exception with the discrepant
+component and retain a single failed-stage seed under ignored `.build/results`
+(at most 4,096 state numbers / 64 KiB). Commit its hash, never its raw state
+or a trajectory. This seed permits a separate radial quadrature check
+without repeatedly integrating the past. The full-panel startup proposal
+failed an existing affine-rate control, so use it only for fields proven
+identically zero; nonzero fields retain the original adaptive heuristic.
+The scalar potential pair passes seven arithmetic controls and the four
+existing affine-background controls; its 1,000-call synthetic measurement
+used 0.015625 CPU seconds versus 0.125 for the full array diagnostic helper.
+Neither change relaxes the gradient guard. No completed endpoint or
+three-grid contraction is established by this replay.
+
+If it supplies the failure seed, admit **one fixed-state comparison**:
+32/64/128-point adjoint quadrature at the existing radial tolerances,
+then 64 points at tighter `rtol=2e-14, atol=1e-15`. These four prescribed
+checks share one preparation, **60 process-CPU seconds / 40 million charged
+values**, and zero time steps. Keep the existing `2e-8` discrepancy guard.
+Comparing forward gradients and independent adjoint integrals at exactly
+the same state separates quadrature resolution from forward ODE error.
+Retain failures and projected-rate differences. This diagnosis must choose
+the next numerical correction before any further full coarse evolution.
+
 ## Independent preparation perturbations on the onset cell, 17 October 2026
 
 **Paused before the control run:** Douglas's next priority is three fixed
