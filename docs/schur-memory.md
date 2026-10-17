@@ -365,6 +365,39 @@ pair. Their differences do not bound geometry interpolation or model error.
 This supplies a causal observer map for this separate candidate; it does
 not supply the missing common parent, a full sky or a cosmological Lambda.
 
+The [frozen-method evaluation](../results/summaries/nsc-conformal-lightcone-v1.json)
+now gives the following primary-case observations. The same radar distance
+applies to both radial directions at each fixed ray length:
+
+| $\chi$ | $D_{\rm radar}/L_{\rm ref}$ | $z$, smaller $x$ | $z$, larger $x$ | $D_L/D_{\rm radar}$, smaller $x$ | $D_L/D_{\rm radar}$, larger $x$ |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 0.025 | 0.00626688 | 0.00000486563 | -0.00170720526 | 0.99921752 | 0.99750604 |
+| 0.075 | 0.01881968 | 0.00064380534 | -0.00468723591 | 0.99913797 | 0.99381120 |
+| 0.125 | 0.03138286 | 0.00166774473 | -0.00730610408 | 1.00007398 | 0.99110851 |
+
+Thus the recorded contracting geometry can give a redshift in one direction
+and a blueshift in the other for these probes. Clock gradients and optical
+focusing enter actual observations; the volume-average expansion alone does
+not specify them. This is a prediction of the fixed finite numerical metric
+and probe protocol, rather than an observation of nature or a Hubble fit.
+
+The largest 32/64-point observable difference is $3.34\times10^{-16}$.
+The largest four-case deviations are $2.94\times10^{-10}$ in redshift and
+$4.84\times10^{-10}$ in the luminosity/radar ratio. They do not include an
+interpolation or total propagated-field error bound. The primary original
+Hamiltonian defect at reception remains $9.01\times10^{-6}$ in its own
+source normalization. The method was frozen in `f0f639d` before evaluation.
+It used 11.6875 CPU seconds and 64,252,080 charged coefficient values, with
+no field solve or evolution step. Eleven optical/interpolation controls pass.
+
+![Radial redshifts and luminosity/radar distance ratios for the recorded normal probes](figures/nsc-conformal-lightcone.png)
+
+Markers show the three declared ray lengths; lines connect those samples.
+The [plotter](../scripts/plot_nsc_conformal_lightcone.py) reads the compact
+result without replaying the metric. This completes the finite forward
+observation calculation. A cosmological observer/state, larger connected
+geometry and its derived effective dynamics remain the further requirements.
+
 ### The wall connection between the two action choices
 
 The inherited-law programme needs a physical relation between the Einstein

@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 380645,
+      "bytes": 381499,
       "path": "docs/current-result.md",
-      "sha256": "d01ee6c0c4ea6abf8573e9718e333e6ffb9e86b354c83d8c7c46a6dd3790cac9"
+      "sha256": "21c9d5f880c675a3aff0c50e379d5f6956e1c8788226ad75ffebbf1feb7bdd03"
     },
     {
       "bytes": 2481,
@@ -1546,6 +1546,11 @@
       "sha256": "f0b1809bdc800e28cdb7d8a6871687b16ec43300b82eb102aceffdc3e2d5d64a"
     },
     {
+      "bytes": 93778,
+      "path": "docs/figures/nsc-conformal-lightcone.png",
+      "sha256": "8120549f077f75072b759ce99385513deae697ad5417b26e629a7303383b90e0"
+    },
+    {
       "bytes": 2029,
       "path": "docs/inheritance.md",
       "sha256": "227b3c1ed3bff2736c9ca4a3d2272aa5f3fcc69a65ab9f931f8c0daa539f8217"
@@ -1556,9 +1561,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2366011,
+      "bytes": 2367416,
       "path": "docs/lab-snapshot.json",
-      "sha256": "13b52ca3d09d26049124fcb679ee9b986a307f975f453f1c7adbf852f589c879"
+      "sha256": "840a5c48de41c9340d9116c0364109e31db3f0fa09d0cf70995d3e16ac2b5052"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2206,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 486873,
+      "bytes": 487498,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "51403a2e07f0d4a2f66ba5142b3e0e3313f04208b5fdef560ff9ade88c7b5be4"
+      "sha256": "9b45b84994cc782069f9b18a21b986c274359ab11bb2d070aed9f9c8cee51ffc"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2221,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 161171,
+      "bytes": 161669,
       "path": "docs/reproducing.md",
-      "sha256": "a6f30ffd9b5d7b95509cd8c365e0058ce92ee991a0105e014ee1da0f42a9ee2c"
+      "sha256": "93c153161f5005876e2ff5915503666235b309b58908dad0479d5681145a47bb"
     },
     {
       "bytes": 31710,
@@ -2241,9 +2246,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 68904,
+      "bytes": 71034,
       "path": "docs/schur-memory.md",
-      "sha256": "336c9cd389e7981361bc8903242288fbb6a8cef60fa5db6efc4ebb112c6b9dcf"
+      "sha256": "44eb0f1e285f48399b077c809209204aae1b6414b423533a3b8d2b414e333d9d"
     },
     {
       "bytes": 537091,
@@ -14891,6 +14896,11 @@
       "sha256": "cb57f10042c6ad58d23c55160d1a279271c5663e0fb13f00a7d389e7cc930b72"
     },
     {
+      "bytes": 35849,
+      "path": "results/summaries/nsc-conformal-lightcone-v1.json",
+      "sha256": "aa11c763eadcbb222e2413304832f9e978a692558fc2021458ed60e81f3696fa"
+    },
+    {
       "bytes": 7920,
       "path": "scripts/amend_nsc_atlas_endpoint_cpu.py",
       "sha256": "79e13062a0ec9f6f1af3c00de3af384e061aaad649d21cb17306c01203834e21"
@@ -16494,6 +16504,11 @@
       "bytes": 10146,
       "path": "scripts/plot_nsc_atlas_ssprk3_refinement.py",
       "sha256": "115e32263ae0d124f55cfc81d5b24fb889647f8750605fd2becb242259554701"
+    },
+    {
+      "bytes": 2219,
+      "path": "scripts/plot_nsc_conformal_lightcone.py",
+      "sha256": "62d8b75523c29ab73e506459eb0a25fcef36eb9300613cdd11b449a04957a37f"
     },
     {
       "bytes": 13954,
@@ -21611,7 +21626,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "13b52ca3d09d26049124fcb679ee9b986a307f975f453f1c7adbf852f589c879",
+  "lab_snapshot_sha256": "840a5c48de41c9340d9116c0364109e31db3f0fa09d0cf70995d3e16ac2b5052",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

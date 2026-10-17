@@ -4,6 +4,18 @@ Current presentation, 17 October 2026: [the living atlas manuscript](../paper/ne
 
 ## First Step 7 vacuum projection, 17 October 2026
 
+The [causal light-cone calculation](schur-memory.md#causal-radial-distances-and-the-observers-clock)
+now produces actual redshift, luminosity and radar distances in the recorded
+conformal candidate. At the longest declared ray length, the two directions
+give `z=0.0016677447` and `z=-0.0073061041`, with luminosity/radar ratios
+`1.00007398` and `0.99110851`. The method and probe protocol were frozen
+before this evaluation. These are conditional normal-probe observations of
+a finite numerical geometry; its contracting volume does not determine the
+received-light map by itself. Eleven optical/interpolation controls pass,
+and the full evaluation uses 11.6875 CPU seconds with no new field solve or
+evolution. A physical cosmological observer/state and full parent geometry
+remain open; this result supplies no fitted Hubble rate or generated Lambda.
+
 The [common-action wall connection](schur-memory.md#the-wall-connection-between-the-two-action-choices)
 now has a direct tensor check. The pure-tension jump cancels singular Weyl
 curvature, while the regular cap/exterior normal-Weyl jump is

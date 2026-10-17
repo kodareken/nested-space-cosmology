@@ -39,6 +39,15 @@ Differences between stored cases and quadrature orders are indicators,
 not bounds on interpolation, model or observational uncertainty. This is
 a finite causal probe and does not complete the cosmological forward model.
 
+**Outcome:** [one application of frozen method `f0f639d`](../results/summaries/nsc-conformal-lightcone-v1.json)
+completes in 11.6875 CPU seconds / 64,252,080 charged values. At the longest
+ray, smaller/larger-x sources give redshifts `0.0016677447/-0.0073061041`
+and luminosity/radar ratios `1.00007398/0.99110851`. Quadrature consistency
+passes; the maximum four-case ratio deviation is `4.84e-10`, without a
+propagated/interpolation error bound. The separate Jacobi, flat/de-Sitter
+and radar-clock checks pass. Stop this finite optical calculation; no longer
+episode, parameter search or cosmological fit follows from it.
+
 ## Common-action wall transfer, 17 October 2026
 
 One bounded symbolic check addresses the missing physical connection between

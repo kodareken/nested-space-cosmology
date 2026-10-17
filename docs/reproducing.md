@@ -2829,6 +2829,15 @@ Fixed-coordinate normal probes can be accelerated; their redshift is not
 a cosmological Hubble inference. The eleven controls include a separate
 Jacobi ODE and exact flat/de-Sitter optical and radar limits. New output
 paths are required, and full data remain in the ignored input cache.
+The [recorded result](../results/summaries/nsc-conformal-lightcone-v1.json)
+and [figure](figures/nsc-conformal-lightcone.png) retain the actual predictions:
+
+```text
+python scripts/run_python.py scripts/plot_nsc_conformal_lightcone.py --input results/summaries/nsc-conformal-lightcone-v1.json --output docs/figures/nsc-conformal-lightcone.png
+```
+
+The plot is a saved-data rendering of the primary case. Its lines connect
+three predeclared samples; no field, quadrature or cosmological fit is run.
 It evaluates one frozen state, takes no time steps, and retains the existing
 60 CPU-second / 40-million-value limit. Do not infer a new grid calculation
 or a change in the physical model from this benchmark.

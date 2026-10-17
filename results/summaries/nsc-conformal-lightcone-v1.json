@@ -1,0 +1,918 @@
+{
+  "execution": {
+    "charged_values": 64252080,
+    "cpu_seconds": 11.6875
+  },
+  "field_solves": 0,
+  "input": {
+    "episode_sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "payload_bytes": 53100722,
+    "payload_sha256": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877"
+  },
+  "limits": {
+    "charged_values": 90000000,
+    "cpu_seconds": 60.0,
+    "dimensionless_quadrature_consistency_tolerance": 1e-10
+  },
+  "original_finite_constraint_defects": {
+    "nf256_dt_0.0005": {
+      "full_hamilton_max": 0.001168036860413224,
+      "full_momentum_max": 0.0002479585245822591
+    },
+    "nf256_dt_0.0010": {
+      "full_hamilton_max": 0.0011679859629225575,
+      "full_momentum_max": 0.00024795918691378205
+    },
+    "nf512_dt_0.0005": {
+      "full_hamilton_max": 9.00287133731581e-06,
+      "full_momentum_max": 7.982436498465972e-07
+    },
+    "nf512_dt_0.0010": {
+      "full_hamilton_max": 9.025679389651486e-06,
+      "full_momentum_max": 8.052285842552465e-07
+    }
+  },
+  "physical_time_steps": 0,
+  "primary": "nf512_dt_0.0005",
+  "primary_rows": [
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.006261917106063059,
+        "coordinate_lookback": 0.025,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25046535327677777,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 0.975,
+        "luminosity_distance_over_Lref": 0.0062619780425703,
+        "luminosity_over_radar": 0.9992175237084338,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.00626688172894525,
+        "redshift": 4.86563124058037e-06
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -1.734723475976807e-18,
+        "luminosity_distance_over_Lref": -8.673617379884035e-19,
+        "luminosity_over_radar": -1.1102230246251565e-16,
+        "radar_distance_over_Lref": -8.673617379884035e-19,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.018779265033175743,
+        "coordinate_lookback": 0.075,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.2503054239792776,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 0.925,
+        "luminosity_distance_over_Lref": 0.018803453199268596,
+        "luminosity_over_radar": 0.9991379709426816,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.01881967630709464,
+        "redshift": 0.0006438053438311275
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -3.469446951953614e-18,
+        "luminosity_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_over_radar": -3.3306690738754696e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.03128076130470904,
+        "coordinate_lookback": 0.125,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25004955312490584,
+        "emission_time": 0.175,
+        "emission_x": 0.875,
+        "luminosity_distance_over_Lref": 0.03138518495765427,
+        "luminosity_over_radar": 1.0000739824887968,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.031382863175331,
+        "redshift": 0.0016677447278268254
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": -2.220446049250313e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.0062726515267281565,
+        "coordinate_lookback": 0.025,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.25089490104417805,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 1.025,
+        "luminosity_distance_over_Lref": 0.006251252401293158,
+        "luminosity_over_radar": 0.9975060439420927,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.00626688172894525,
+        "redshift": -0.0017072052623231526
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 1.1102230246251565e-16,
+        "radar_distance_over_Lref": -8.673617379884035e-19,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.018879778319876327,
+        "coordinate_lookback": 0.075,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2516460965690426,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 1.075,
+        "luminosity_distance_over_Lref": 0.018703205162220567,
+        "luminosity_over_radar": 0.9938112036055495,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.01881967630709464,
+        "redshift": -0.0046872359090758264
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.031563348025443645,
+        "coordinate_lookback": 0.125,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2523099748857953,
+        "emission_time": 0.175,
+        "emission_x": 1.125,
+        "luminosity_distance_over_Lref": 0.031103822638765617,
+        "luminosity_over_radar": 0.991108506097534,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.031382863175331,
+        "redshift": -0.007306104080127329
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -1.3877787807814457e-17,
+        "luminosity_distance_over_Lref": -1.3877787807814457e-17,
+        "luminosity_over_radar": -3.3306690738754696e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    }
+  ],
+  "protocol": {
+    "coordinate_lookbacks": [
+      0.025,
+      0.075,
+      0.125
+    ],
+    "directions": [
+      -1,
+      1
+    ],
+    "distance_ratio": "luminosity distance / observer radar distance",
+    "light": "transparent photon-conserving geometric optics",
+    "probe_worldlines": "fixed-coordinate normals, possibly accelerated",
+    "reception_time": 0.3,
+    "reception_x": 1.0
+  },
+  "reference_length": {
+    "definition": "initial areal radius of the original observer sphere at T=0.05,x=1",
+    "value_in_original_action_units": 4.80028044552352
+  },
+  "refinement_indicators": [
+    {
+      "coarser_space_minus_primary": {
+        "angular_distance_over_Lref": -1.2619063780028306e-12,
+        "luminosity_distance_over_Lref": 2.410504088001808e-12,
+        "luminosity_over_radar": 4.839345590923472e-10,
+        "radar_distance_over_Lref": -6.22744043832224e-13,
+        "redshift": 2.9323321548702097e-10
+      },
+      "coarser_time_minus_primary": {
+        "angular_distance_over_Lref": -2.5075427845244747e-15,
+        "luminosity_distance_over_Lref": -4.195428726649908e-15,
+        "luminosity_over_radar": -1.8918200339612667e-13,
+        "radar_distance_over_Lref": -3.0123473160337255e-15,
+        "redshift": -1.34781075189494e-13
+      },
+      "coordinate_lookback": 0.025,
+      "direction": -1,
+      "four_case_maximum_deviation_from_primary": {
+        "angular_distance_over_Lref": 1.264409583978665e-12,
+        "luminosity_distance_over_Lref": 2.410504088001808e-12,
+        "luminosity_over_radar": 4.839345590923472e-10,
+        "radar_distance_over_Lref": 6.257676668508516e-13,
+        "redshift": 2.9323321548702097e-10
+      }
+    },
+    {
+      "coarser_space_minus_primary": {
+        "angular_distance_over_Lref": 3.810809307003282e-12,
+        "luminosity_distance_over_Lref": -3.710157181480156e-13,
+        "luminosity_over_radar": 9.108591658701926e-11,
+        "radar_distance_over_Lref": -2.087021527819033e-12,
+        "redshift": -1.1140044442470298e-10
+      },
+      "coarser_time_minus_primary": {
+        "angular_distance_over_Lref": 4.735795089416683e-15,
+        "luminosity_distance_over_Lref": -2.5396351688300456e-14,
+        "luminosity_over_radar": -1.3050671654468715e-12,
+        "radar_distance_over_Lref": -8.396061623727746e-16,
+        "redshift": -8.018030683842881e-13
+      },
+      "coordinate_lookback": 0.075,
+      "direction": -1,
+      "four_case_maximum_deviation_from_primary": {
+        "angular_distance_over_Lref": 3.815520815964035e-12,
+        "luminosity_distance_over_Lref": 3.9615186131491953e-13,
+        "luminosity_over_radar": 9.108591658701926e-11,
+        "radar_distance_over_Lref": 2.0878819506631174e-12,
+        "redshift": 1.1219469797651982e-10
+      }
+    },
+    {
+      "coarser_space_minus_primary": {
+        "angular_distance_over_Lref": 1.0670006544977184e-12,
+        "luminosity_distance_over_Lref": 4.678681053693623e-12,
+        "luminosity_over_radar": 2.762161610547764e-10,
+        "radar_distance_over_Lref": -3.9894754166880375e-12,
+        "redshift": 5.757705423548032e-11
+      },
+      "coarser_time_minus_primary": {
+        "angular_distance_over_Lref": -9.575673587391975e-16,
+        "luminosity_distance_over_Lref": -3.497896416959634e-14,
+        "luminosity_over_radar": -1.106448266341431e-12,
+        "radar_distance_over_Lref": -2.5673907444456745e-16,
+        "redshift": -5.428990590417015e-13
+      },
+      "coordinate_lookback": 0.125,
+      "direction": -1,
+      "four_case_maximum_deviation_from_primary": {
+        "angular_distance_over_Lref": 1.0670006544977184e-12,
+        "luminosity_distance_over_Lref": 4.678681053693623e-12,
+        "luminosity_over_radar": 2.762161610547764e-10,
+        "radar_distance_over_Lref": 3.989759911338098e-12,
+        "redshift": 5.757705423548032e-11
+      }
+    },
+    {
+      "coarser_space_minus_primary": {
+        "angular_distance_over_Lref": -5.177594464278457e-13,
+        "luminosity_distance_over_Lref": 1.6720609272158349e-12,
+        "luminosity_over_radar": 3.659318403848033e-10,
+        "radar_distance_over_Lref": -6.22744043832224e-13,
+        "redshift": 1.7471046831474268e-10
+      },
+      "coarser_time_minus_primary": {
+        "angular_distance_over_Lref": -2.51014486973844e-15,
+        "luminosity_distance_over_Lref": -4.176346768414163e-15,
+        "luminosity_over_radar": -1.8696155734687636e-13,
+        "radar_distance_over_Lref": -3.0123473160337255e-15,
+        "redshift": -1.3378187446733136e-13
+      },
+      "coordinate_lookback": 0.025,
+      "direction": 1,
+      "four_case_maximum_deviation_from_primary": {
+        "angular_distance_over_Lref": 5.202296926576366e-13,
+        "luminosity_distance_over_Lref": 1.6720609272158349e-12,
+        "luminosity_over_radar": 3.659318403848033e-10,
+        "radar_distance_over_Lref": 6.257676668508516e-13,
+        "redshift": 1.7471046831474268e-10
+      }
+    },
+    {
+      "coarser_space_minus_primary": {
+        "angular_distance_over_Lref": -3.2228143764800876e-12,
+        "luminosity_distance_over_Lref": 6.632656229799139e-12,
+        "luminosity_over_radar": 4.626415917030613e-10,
+        "radar_distance_over_Lref": -2.087021527819033e-12,
+        "redshift": 2.614332084149851e-10
+      },
+      "coarser_time_minus_primary": {
+        "angular_distance_over_Lref": -7.428085924132688e-15,
+        "luminosity_distance_over_Lref": -1.3020834410681914e-14,
+        "luminosity_over_radar": -6.473710456589288e-13,
+        "radar_distance_over_Lref": -8.396061623727746e-16,
+        "redshift": -1.5065726444163374e-13
+      },
+      "coordinate_lookback": 0.075,
+      "direction": 1,
+      "four_case_maximum_deviation_from_primary": {
+        "angular_distance_over_Lref": 3.2302424624042203e-12,
+        "luminosity_distance_over_Lref": 6.632656229799139e-12,
+        "luminosity_over_radar": 4.626415917030613e-10,
+        "radar_distance_over_Lref": 2.0878819506631174e-12,
+        "redshift": 2.614332084149851e-10
+      }
+    },
+    {
+      "coarser_space_minus_primary": {
+        "angular_distance_over_Lref": -2.6653609874749407e-12,
+        "luminosity_distance_over_Lref": 8.344321761333262e-12,
+        "luminosity_over_radar": 3.9188030598324985e-10,
+        "radar_distance_over_Lref": -3.9894754166880375e-12,
+        "redshift": 1.7507040261932616e-10
+      },
+      "coarser_time_minus_primary": {
+        "angular_distance_over_Lref": -1.1837753000065732e-14,
+        "luminosity_distance_over_Lref": -2.3592239273284576e-14,
+        "luminosity_over_radar": -7.436273818939299e-13,
+        "radar_distance_over_Lref": -2.5673907444456745e-16,
+        "redshift": -1.9040324872321435e-13
+      },
+      "coordinate_lookback": 0.125,
+      "direction": 1,
+      "four_case_maximum_deviation_from_primary": {
+        "angular_distance_over_Lref": 2.6770946570664478e-12,
+        "luminosity_distance_over_Lref": 8.344321761333262e-12,
+        "luminosity_over_radar": 3.9188030598324985e-10,
+        "radar_distance_over_Lref": 3.989759911338098e-12,
+        "redshift": 1.7507040261932616e-10
+      }
+    }
+  ],
+  "reproduce": "python scripts/run_python.py scripts/measure_nsc_conformal_lightcone.py --restore-geometry --geometry .build/data/nsc-spherical-conformal-episode-v2.npz --output results/summaries/nsc-conformal-lightcone-v1.json",
+  "rows": [
+    {
+      "case": "nf256_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.0062619171047986494,
+        "coordinate_lookback": 0.025,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.2504653532263088,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 0.975,
+        "luminosity_distance_over_Lref": 0.006261978044976724,
+        "luminosity_over_radar": 0.9992175241921993,
+        "observer_lapse_over_Lref": 0.25046657197176936,
+        "radar_distance_over_Lref": 0.006266881728319482,
+        "redshift": 4.865924347896566e-06
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.018779265036991264,
+        "coordinate_lookback": 0.075,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25030542403027173,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 0.925,
+        "luminosity_distance_over_Lref": 0.018803453198872444,
+        "luminosity_over_radar": 0.9991379710324776,
+        "observer_lapse_over_Lref": 0.25046657197176936,
+        "radar_distance_over_Lref": 0.018819676305006756,
+        "redshift": 0.0006438052316364296
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.03128076130577508,
+        "coordinate_lookback": 0.125,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25004955313357274,
+        "emission_time": 0.175,
+        "emission_x": 0.875,
+        "luminosity_distance_over_Lref": 0.03138518496229829,
+        "luminosity_over_radar": 1.0000739827639173,
+        "observer_lapse_over_Lref": 0.25046657197176936,
+        "radar_distance_over_Lref": 0.03138286317134124,
+        "redshift": 0.0016677447848660876
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_over_radar": -2.220446049250313e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.006272651526207927,
+        "coordinate_lookback": 0.025,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2508949010232862,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 1.025,
+        "luminosity_distance_over_Lref": 0.0062512524029610704,
+        "luminosity_over_radar": 0.9975060443078438,
+        "observer_lapse_over_Lref": 0.25046657197176936,
+        "radar_distance_over_Lref": 0.006266881728319482,
+        "redshift": -0.0017072050877473544
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 8.673617379884035e-19,
+        "luminosity_distance_over_Lref": 8.673617379884035e-19,
+        "luminosity_over_radar": 1.1102230246251565e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.018879778316646084,
+        "coordinate_lookback": 0.075,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2516460965260338,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 1.075,
+        "luminosity_distance_over_Lref": 0.018703205168840265,
+        "luminosity_over_radar": 0.9938112040675479,
+        "observer_lapse_over_Lref": 0.25046657197176936,
+        "radar_distance_over_Lref": 0.018819676305006756,
+        "redshift": -0.00468723564779161
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.03156334802276655,
+        "coordinate_lookback": 0.125,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.25230997486445933,
+        "emission_time": 0.175,
+        "emission_x": 1.125,
+        "luminosity_distance_over_Lref": 0.03110382264708646,
+        "luminosity_over_radar": 0.9911085064886751,
+        "observer_lapse_over_Lref": 0.25046657197176936,
+        "radar_distance_over_Lref": 0.03138286317134124,
+        "redshift": -0.007306103905246997
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 6.938893903907228e-18,
+        "luminosity_distance_over_Lref": 3.469446951953614e-18,
+        "luminosity_over_radar": 1.1102230246251565e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.006261917104801153,
+        "coordinate_lookback": 0.025,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.250465353226409,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 0.975,
+        "luminosity_distance_over_Lref": 0.006261978044980804,
+        "luminosity_over_radar": 0.9992175241923683,
+        "observer_lapse_over_Lref": 0.2504665719719011,
+        "radar_distance_over_Lref": 0.006266881728322506,
+        "redshift": 4.865924473795857e-06
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": -8.673617379884035e-19,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": -8.673617379884035e-19,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.018779265036986553,
+        "coordinate_lookback": 0.075,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.2503054240302047,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 0.925,
+        "luminosity_distance_over_Lref": 0.01880345319889758,
+        "luminosity_over_radar": 0.9991379710337676,
+        "observer_lapse_over_Lref": 0.2504665719719011,
+        "radar_distance_over_Lref": 0.018819676305007617,
+        "redshift": 0.0006438052324306831
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -3.469446951953614e-18,
+        "luminosity_distance_over_Lref": -3.469446951953614e-18,
+        "luminosity_over_radar": -2.220446049250313e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.03128076130577604,
+        "coordinate_lookback": 0.125,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25004955313357,
+        "emission_time": 0.175,
+        "emission_x": 0.875,
+        "luminosity_distance_over_Lref": 0.03138518496233295,
+        "luminosity_over_radar": 1.000073982765013,
+        "observer_lapse_over_Lref": 0.2504665719719011,
+        "radar_distance_over_Lref": 0.03138286317134152,
+        "redshift": 0.0016677447854038796
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.006272651526210397,
+        "coordinate_lookback": 0.025,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2508949010233843,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 1.025,
+        "luminosity_distance_over_Lref": 0.006251252402965219,
+        "luminosity_over_radar": 0.9975060443080246,
+        "observer_lapse_over_Lref": 0.2504665719719011,
+        "radar_distance_over_Lref": 0.006266881728322506,
+        "redshift": -0.0017072050876126843
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -8.673617379884035e-19,
+        "luminosity_distance_over_Lref": -8.673617379884035e-19,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": -8.673617379884035e-19,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.018879778316653512,
+        "coordinate_lookback": 0.075,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2516460965261285,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 1.075,
+        "luminosity_distance_over_Lref": 0.018703205168853224,
+        "luminosity_over_radar": 0.9938112040681911,
+        "observer_lapse_over_Lref": 0.2504665719719011,
+        "radar_distance_over_Lref": 0.018819676305007617,
+        "redshift": -0.004687235647642618
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf256_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.031563348022778284,
+        "coordinate_lookback": 0.125,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.25230997486454376,
+        "emission_time": 0.175,
+        "emission_x": 1.125,
+        "luminosity_distance_over_Lref": 0.03110382264710994,
+        "luminosity_over_radar": 0.9911085064894143,
+        "observer_lapse_over_Lref": 0.2504665719719011,
+        "radar_distance_over_Lref": 0.03138286317134152,
+        "redshift": -0.0073061039050569265
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.0062619171060605515,
+        "coordinate_lookback": 0.025,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.2504653532766782,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 0.975,
+        "luminosity_distance_over_Lref": 0.006261978042566105,
+        "luminosity_over_radar": 0.9992175237082446,
+        "observer_lapse_over_Lref": 0.250466571948692,
+        "radar_distance_over_Lref": 0.0062668817289422375,
+        "redshift": 4.865631105799295e-06
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.01877926503318048,
+        "coordinate_lookback": 0.075,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25030542397934485,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 0.925,
+        "luminosity_distance_over_Lref": 0.0188034531992432,
+        "luminosity_over_radar": 0.9991379709413766,
+        "observer_lapse_over_Lref": 0.250466571948692,
+        "radar_distance_over_Lref": 0.0188196763070938,
+        "redshift": 0.0006438053430293245
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_over_radar": -3.3306690738754696e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.03128076130470808,
+        "coordinate_lookback": 0.125,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25004955312490823,
+        "emission_time": 0.175,
+        "emission_x": 0.875,
+        "luminosity_distance_over_Lref": 0.03138518495761929,
+        "luminosity_over_radar": 1.0000739824876903,
+        "observer_lapse_over_Lref": 0.250466571948692,
+        "radar_distance_over_Lref": 0.03138286317533074,
+        "redshift": 0.0016677447272839263
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": -6.938893903907228e-18,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.006272651526725646,
+        "coordinate_lookback": 0.025,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.250894901044078,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 1.025,
+        "luminosity_distance_over_Lref": 0.006251252401288982,
+        "luminosity_over_radar": 0.9975060439419058,
+        "observer_lapse_over_Lref": 0.250466571948692,
+        "radar_distance_over_Lref": 0.0062668817289422375,
+        "redshift": -0.0017072052624569345
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -1.734723475976807e-18,
+        "luminosity_distance_over_Lref": -1.734723475976807e-18,
+        "luminosity_over_radar": -2.220446049250313e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.0188797783198689,
+        "coordinate_lookback": 0.075,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2516460965689466,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 1.075,
+        "luminosity_distance_over_Lref": 0.018703205162207547,
+        "luminosity_over_radar": 0.9938112036049022,
+        "observer_lapse_over_Lref": 0.250466571948692,
+        "radar_distance_over_Lref": 0.0188196763070938,
+        "redshift": -0.004687235909226484
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -3.469446951953614e-18,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": -2.220446049250313e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0010",
+      "observables": {
+        "angular_distance_over_Lref": 0.03156334802543181,
+        "coordinate_lookback": 0.125,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.25230997488570933,
+        "emission_time": 0.175,
+        "emission_x": 1.125,
+        "luminosity_distance_over_Lref": 0.031103822638742024,
+        "luminosity_over_radar": 0.9911085060967904,
+        "observer_lapse_over_Lref": 0.250466571948692,
+        "radar_distance_over_Lref": 0.03138286317533074,
+        "redshift": -0.007306104080317732
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_over_radar": 1.1102230246251565e-16,
+        "radar_distance_over_Lref": -6.938893903907228e-18,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.006261917106063059,
+        "coordinate_lookback": 0.025,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25046535327677777,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 0.975,
+        "luminosity_distance_over_Lref": 0.0062619780425703,
+        "luminosity_over_radar": 0.9992175237084338,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.00626688172894525,
+        "redshift": 4.86563124058037e-06
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -1.734723475976807e-18,
+        "luminosity_distance_over_Lref": -8.673617379884035e-19,
+        "luminosity_over_radar": -1.1102230246251565e-16,
+        "radar_distance_over_Lref": -8.673617379884035e-19,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.018779265033175743,
+        "coordinate_lookback": 0.075,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.2503054239792776,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 0.925,
+        "luminosity_distance_over_Lref": 0.018803453199268596,
+        "luminosity_over_radar": 0.9991379709426816,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.01881967630709464,
+        "redshift": 0.0006438053438311275
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -3.469446951953614e-18,
+        "luminosity_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_over_radar": -3.3306690738754696e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.03128076130470904,
+        "coordinate_lookback": 0.125,
+        "direction": -1,
+        "emission_lapse_over_Lref": 0.25004955312490584,
+        "emission_time": 0.175,
+        "emission_x": 0.875,
+        "luminosity_distance_over_Lref": 0.03138518495765427,
+        "luminosity_over_radar": 1.0000739824887968,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.031382863175331,
+        "redshift": 0.0016677447278268254
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -6.938893903907228e-18,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": -2.220446049250313e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.0062726515267281565,
+        "coordinate_lookback": 0.025,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.25089490104417805,
+        "emission_time": 0.27499999999999997,
+        "emission_x": 1.025,
+        "luminosity_distance_over_Lref": 0.006251252401293158,
+        "luminosity_over_radar": 0.9975060439420927,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.00626688172894525,
+        "redshift": -0.0017072052623231526
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 1.1102230246251565e-16,
+        "radar_distance_over_Lref": -8.673617379884035e-19,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.018879778319876327,
+        "coordinate_lookback": 0.075,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2516460965690426,
+        "emission_time": 0.22499999999999998,
+        "emission_x": 1.075,
+        "luminosity_distance_over_Lref": 0.018703205162220567,
+        "luminosity_over_radar": 0.9938112036055495,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.01881967630709464,
+        "redshift": -0.0046872359090758264
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": 0.0,
+        "luminosity_distance_over_Lref": 0.0,
+        "luminosity_over_radar": 0.0,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    },
+    {
+      "case": "nf512_dt_0.0005",
+      "observables": {
+        "angular_distance_over_Lref": 0.031563348025443645,
+        "coordinate_lookback": 0.125,
+        "direction": 1,
+        "emission_lapse_over_Lref": 0.2523099748857953,
+        "emission_time": 0.175,
+        "emission_x": 1.125,
+        "luminosity_distance_over_Lref": 0.031103822638765617,
+        "luminosity_over_radar": 0.991108506097534,
+        "observer_lapse_over_Lref": 0.2504665719488254,
+        "radar_distance_over_Lref": 0.031382863175331,
+        "redshift": -0.007306104080127329
+      },
+      "order32_minus64": {
+        "angular_distance_over_Lref": -1.3877787807814457e-17,
+        "luminosity_distance_over_Lref": -1.3877787807814457e-17,
+        "luminosity_over_radar": -3.3306690738754696e-16,
+        "radar_distance_over_Lref": 0.0,
+        "redshift": 0.0
+      }
+    }
+  ],
+  "schema": "nsc-conformal-lightcone-summary-v1",
+  "scope": "Finite causal observations in the separately specified conformal common-action metric. No geodesic matter congruence, full sky, cosmological Hubble inference, P001 parent or generated Lambda is claimed.",
+  "source_commit": "f0f639d2f5647aecb1afadaeb68ae74df9cf3229",
+  "source_sha256": {
+    "scripts/measure_nsc_conformal_geometric_average.py": "d706eb290ead4722dbb920053347dc442a8d7bf05beba862f698d35f05ac45c1",
+    "scripts/measure_nsc_conformal_lightcone.py": "57ddfc7a12fad196bb8c33a5563ead38ca9aada2452fcc4252c6edfd1931434c",
+    "src/recursive_horizons/nsc_atlas_cosmological_distance.py": "7c10176c12b24df7f9a28364f8a963282beb44dc5bcd9979ad767d6a7bd11ae4",
+    "src/recursive_horizons/nsc_coupled_local_response.py": "a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "tests/test_nsc_atlas_cosmological_distance.py": "d48814a67c8d2d380bc1bce802d2d617e9e51a0ee692718efd656d8a8038f56a",
+    "tests/test_nsc_conformal_lightcone.py": "1765ee3d1345562ef2c60f401e5538e425c243e2aa18ea3aba7a26be32f381f9"
+  },
+  "status": "completed_finite_lightcone",
+  "uncertainty_scope": "Quadrature and original time/space refinement indicators only; no bound on Hermite interpolation, continuum state, physical model or observed data. No observational dataset was fitted."
+}
