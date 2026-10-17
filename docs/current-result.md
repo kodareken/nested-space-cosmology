@@ -2,6 +2,18 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## First Step 7 vacuum projection, 17 October 2026
+
+The [effective Lambda calculation](schur-memory.md#step-7-the-current-candidates-first-vacuum-projection)
+reuses the current candidate's exact improved-stress trace. It gives
+`Delta Lambda_classical * L_ref^2 = 0` throughout the smooth on-shell bulk,
+including nonzero pulses. The supplied cap term `Lambda0 * ell^2 = 3`
+is separate. Independent Jordan/Einstein-frame algebra and seven checks
+against the implemented mixed metric equations pass. This resolves that
+classical contribution; quantum stress, geometric averaging and a physical
+Schur-to-exterior identification remain to be specified. The three P001
+endpoint evolutions continue unchanged.
+
 ## Full P001 endpoint evolution in progress, 17 October 2026
 
 Opening-phase robustness work is paused. The current calculation targets

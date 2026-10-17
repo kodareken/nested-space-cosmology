@@ -88,8 +88,11 @@ def main(argv=None):
                       help='test inward endpoint limits at existing radial formula breaks')
     mode.add_argument('--confirm-panel-polynomials',action='store_true',
                       help='32/64-point check of explicit panel polynomial ownership at unchanged coordinates')
+    mode.add_argument('--compare-compiled-coefficients',action='store_true',
+                      help='one frozen stage: reference, first compiled call, warm compiled call; no time steps')
     args=parser.parse_args(argv)
-    cases=(ONE_SIDED_CASES if args.one_sided_panel_check else
+    cases=((CONFIRMATION_CASES[0],)*3 if args.compare_compiled_coefficients else
+           ONE_SIDED_CASES if args.one_sided_panel_check else
            PANEL_CASES if args.panel_step_check else
            CONFIRMATION_CASES if (args.confirm_forward_accuracy or args.confirm_panel_polynomials) else CASES)
     if args.output.exists() or not args.output.parent.is_dir():
@@ -109,14 +112,15 @@ def main(argv=None):
                            bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest()),
         stage_seed=receipt['failed_stage_seed'],x=x,level=receipt['level'],
         physical_time_steps=0,gradient_tolerance=2e-8,
-        comparison_kind=('explicit_panel_polynomials' if args.confirm_panel_polynomials else
+        comparison_kind=('compiled_coefficients' if args.compare_compiled_coefficients else
+                         'explicit_panel_polynomials' if args.confirm_panel_polynomials else
                          'one_sided_panel_limits' if args.one_sided_panel_check else
                          'forward_panel_step' if args.panel_step_check else
                          'selected_forward_accuracy' if args.confirm_forward_accuracy else 'error_attribution'),
         limits=dict(cpu_seconds=60.,charged_values=40_000_000,cases=len(cases)),cases=[])
     original=fixed._radial_variations
     original_solve=radial.solve_ivp
-    radial_results=[]
+    radial_results=[];stage_results=[]
     try:
         endpoint.authenticate(endpoint.ROOT,budget)
         source_raw=(endpoint.ROOT/endpoint.producer.BASE_INPUT).read_bytes()
@@ -134,16 +138,21 @@ def main(argv=None):
         snapshot=endpoint.SourceSnapshot(geometry,alpha=data['alpha'],x_nodes=rows['x'],
                                          source_rows=rows,budget=budget)
         gauge=endpoint.ReferenceWallGauge(geometry,order=64,budget=budget)
-        for specification in cases:
+        for case_index,specification in enumerate(cases):
             order,rtol,atol=specification[:3]
             fraction=specification[3] if len(specification)==4 else None
             case=dict(adjoint_order=order,rtol=rtol,atol=atol,
                       effective_rtol=max(rtol,100*np.finfo(float).eps))
             if fraction is not None:
                 case['maximum_radial_step_panel_fraction']=fraction
-            if args.confirm_panel_polynomials:
+            panel_sides=args.confirm_panel_polynomials or args.compare_compiled_coefficients
+            compiled=args.compare_compiled_coefficients and case_index>0
+            if panel_sides:
                 case['background_panel_sides']=True
-            captured=[];started=time.process_time();before=budget.evaluations
+            if args.compare_compiled_coefficients:
+                case['coefficient_backend']=('reference','compiled_first','compiled_warm')[case_index]
+            captured=[];started=time.process_time();started_wall=time.perf_counter();before=budget.evaluations
+            stage=None
             panels=[];shifts=[]
             def solve(fun,span,initial,**kw):
                 def one_sided(point,values):
@@ -169,7 +178,7 @@ def main(argv=None):
                     eta=np.linspace(0.,1.,spec['exterior_cells']+1),source=snapshot.sample(x),
                     gauge=gauge.sample(x),alpha=data['alpha'],tube=endpoint.TUBE,budget=budget,
                     background=background,background_clock_offset=offset,rtol=rtol,atol=atol,
-                    background_panel_sides=args.confirm_panel_polynomials)
+                    background_panel_sides=panel_sides,compiled_coefficients=compiled)
                 cap=stage['connection']['cap']
                 case.update(status='passed_existing_gradient_guard',mass=cap['mass'],lapse=cap['lapse'],
                     gradient_discrepancy=cap['gradient_discrepancy'],
@@ -190,10 +199,12 @@ def main(argv=None):
                     maximum_coordinate_displacement=max(shifts,default=0.),
                     coordinate_ulps=64,largest_allowed_panel_fraction=1e-6)
             radial_results.append(captured[-1] if captured else None)
-            case.update(cpu_seconds=time.process_time()-started,charged_values=budget.evaluations-before)
+            stage_results.append(stage)
+            case.update(cpu_seconds=time.process_time()-started,wall_seconds=time.perf_counter()-started_wall,
+                        charged_values=budget.evaluations-before)
             report['cases'].append(case)
         report['pair_differences']=[]
-        pairs=((0,1),(0,2)) if (args.panel_step_check or args.one_sided_panel_check) else ((0,1),(1,2),(1,3))
+        pairs=((0,1),(0,2)) if (args.panel_step_check or args.one_sided_panel_check or args.compare_compiled_coefficients) else ((0,1),(1,2),(1,3))
         for i,j in pairs:
             if j>=len(radial_results):
                 continue
@@ -202,6 +213,26 @@ def main(argv=None):
                 report['pair_differences'].append(dict(cases=[i,j],
                     **{key:float(np.max(np.abs(a[key]-b[key]))) for key in
                        ('mass','lapse','gradient','adjoint_gradient')}))
+        if args.compare_compiled_coefficients:
+            comparison=[]
+            for j in (1,2):
+                a,b=stage_results[0],stage_results[j]
+                if a is None or b is None:
+                    comparison.append(dict(cases=[0,j],passed=False,reason='a stage stopped'))
+                    continue
+                rates={group+'.'+key:float(np.max(np.abs(value-b['rates'][group][key])))
+                       for group,values in a['rates'].items() for key,value in values.items()}
+                passed=all(np.allclose(value,b['rates'][group][key],rtol=1e-11,atol=1e-10)
+                           for group,values in a['rates'].items() for key,value in values.items())
+                scalars={key:abs(a['connection']['cap'][key]-b['connection']['cap'][key])
+                         for key in ('mass','lapse')}
+                passed=passed and all(value<=1e-11 for value in scalars.values())
+                comparison.append(dict(cases=[0,j],passed=bool(passed),maximum_rate_differences=rates,
+                                       scalar_differences=scalars))
+            report['compiled_equivalence']=dict(rate_atol=1e-10,rate_rtol=1e-11,
+                mass_lapse_atol=1e-11,comparisons=comparison,
+                passed=all(item['passed'] for item in comparison),
+                scope='one frozen stage; no trajectory equivalence or speedup inferred')
         report['status']='completed_one_stage_comparison'
     except (ValueError,RuntimeError,FloatingPointError,OverflowError) as error:
         report.update(status='stopped',reason=str(error))

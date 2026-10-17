@@ -126,7 +126,7 @@ def _background_time_projection(basis,fields,gram,breaks,owners,background,T,bud
 def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_rate=None,
                         incoming_w_plus=None,budget,rtol=2e-13,atol=2e-15,wall_coupler=None,
                         background=None,background_time=None,radial_step_fraction=None,
-                        background_panel_sides=False):
+                        background_panel_sides=False,compiled_coefficients=False):
     """One instantaneous radial solve and weak coefficient RHS.
 
     The metric certificate covers exact rational shapes and binary inputs.
@@ -137,8 +137,13 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
     the same junction, instead of independently supplied diagnostic rates.
     With a retained background, coefficients are departures. Its explicit
     time gradient and the actual affine mass remainder remain in the result.
+    ``compiled_coefficients`` replaces supported point rows with the same
+    equations. The default leaves this callback on the existing Python path.
+    Near-centre background points stay on that path either way.
     """
     budget=_budget(budget);before=budget.evaluations
+    if type(compiled_coefficients) is not bool:
+        raise ValueError('compiled coefficients option must be boolean')
     if type(background_panel_sides) is not bool or (background_panel_sides and background is None):
         raise ValueError('background panel sides require a retained background and a boolean option')
     if not isinstance(basis,FixedCapBasis): raise ValueError('require a fixed local basis')
@@ -185,6 +190,11 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
             midpoint=breaks[panel]+(breaks[panel+1]-breaks[panel])/2
             z=fields.left[cell]+fields.width[cell]*(midpoint-cell)
             panel_indices.append(history_piece_indices(background.profile,[time-z,time+z],budget=budget))
+    compiled=None
+    if compiled_coefficients:
+        from .nsc_atlas_cap_compiled_coefficients import CompiledCapCoefficients
+        compiled=CompiledCapCoefficients(fields,breaks,owners,cut,alpha,count,background=background,
+            time=time if background is not None else None,panel_indices=panel_indices,budget=budget)
     nonzero_total_seen=False
     # A full-panel startup is exact for certified zero fields. For nonzero
     # data retain the existing solver heuristic: changing its initial step
@@ -209,6 +219,12 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
         return row
 
     def coefficients(panel,point,mass):
+        nonlocal nonzero_total_seen
+        if compiled is not None:
+            compiled_row=compiled.evaluate(panel,point,mass,budget)
+            if compiled_row is not None:
+                if compiled.saw_total_field: nonzero_total_seen=True
+                return compiled_row
         if not 0<=panel<len(owners):
             raise ValueError('fixed radial evaluation escaped its physical cell')
         left,right=breaks[panel:panel+2]

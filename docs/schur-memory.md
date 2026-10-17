@@ -9,6 +9,83 @@ structure. The finite identities, spectral controls and geometric candidates
 below supply its retained dictionary; the physical identification of
 $\Sigma$ with the actual exterior remains open.
 
+## Step 7: the current candidate's first vacuum projection
+
+The current conformal-scalar cap–wall candidate gives the exact smooth-bulk
+result
+
+$$
+\boxed{\Delta\Lambda_{\rm classical}\,L_{\rm ref}^2=0.}
+$$
+
+This is the additional trace projection of its classical scalar stress. The
+cap already contains the supplied term $\Lambda_{0,-}\ell^2=3(H\ell)^2=3$;
+the exterior contains $\Lambda_{0,+}=0$. Those baseline values were inputs
+to the geometry. The zero above holds for any positive reference length,
+so it requires no choice of physical ruler or observed cosmological value.
+For displaying the baseline, $L_{\rm ref}=\ell$ uses the existing reference
+units; the P001 value $\ell=10000\,\mathrm m$ remains a fiducial scale.
+
+Reuse the [owned action and trace identity](nsc-atlas-cap-wall-response.md),
+with $\Lambda_0=\kappa_4 V_0$, rather than extending the cap computation:
+
+$$
+T^\phi_{\mu\nu}=\nabla_\mu\phi\nabla_\nu\phi
+-\tfrac12g_{\mu\nu}(\nabla\phi)^2
++\tfrac16\left[G_{\mu\nu}\phi^2+
+(g_{\mu\nu}\Box-\nabla_\mu\nabla_\nu)\phi^2\right],
+$$
+$$
+T^\phi{}^\mu{}_\mu=\phi(\Box-\mathcal R_J/6)\phi=0,
+\qquad \mathcal R_J=4\Lambda_0,
+\qquad
+\Delta\Lambda_{\rm classical}L_{\rm ref}^2
+=\tfrac14(\mathcal R_J-4\Lambda_0)L_{\rm ref}^2=0.
+$$
+
+This is exact on shell, including nonzero classical pulses. The pulse still
+has nonzero stress, mass transport and wall response: a zero trace does not
+make its stress tensor zero. In the decomposition
+$T^\phi_{\mu\nu}=-(\Delta\Lambda/\kappa_4)g_{\mu\nu}
++T^{\rm TF}_{\mu\nu}$ with $g^{\mu\nu}T^{\rm TF}_{\mu\nu}=0$, the
+vacuum projection is zero. This calculation concerns the unaveraged smooth
+bulk. It does not assign a four-dimensional vacuum density to the material
+wall, perform nonlinear metric averaging, or include quantum stress.
+
+The [executable calculation](../src/recursive_horizons/nsc_atlas_effective_vacuum.py)
+contracts the full improved stress and checks the result independently in
+the Einstein frame. With $q=\Psi/\sqrt6$, $F=\operatorname{sech}^2q$ and
+$\widehat V=\Lambda_0\cosh^4q$, use
+$\mathcal R_E=6(\nabla_Eq)^2+4\widehat V$ and
+$\Box_Eq=\widehat V_{,q}/6$. Then
+
+$$
+\mathcal R_J=F\left[\mathcal R_E+3\Box_E\log F
+-\tfrac32(\nabla_E\log F)^2\right]=4\Lambda_0.
+$$
+
+The apparent field-dependent Einstein-frame potential therefore supplies
+no extra Jordan-frame vacuum curvature. Seven
+[checks](../tests/test_nsc_atlas_effective_vacuum.py) also reconstruct this
+curvature from the actual nonlinear bulk operator's metric and field jets,
+in both regions at zero and nonzero amplitude. The exact result has no
+quadrature error; these checks do not estimate errors in an evolved solution.
+Reproduce with
+`python scripts/run_python.py -m recursive_horizons.nsc_atlas_effective_vacuum`
+and `python scripts/run_python.py -m pytest tests/test_nsc_atlas_effective_vacuum.py -q`.
+No endpoint replay, new spatial grid or observational fit enters this calculation.
+
+For Step 7 this resolves the classical scalar route to an additional smooth
+vacuum term in the current candidate. A nonzero contribution needs an
+explicit additional mechanism, such as a specified quantum effective action
+or a defined geometric averaging operation. The existing finite Schur
+matrices have not been derived from this candidate's exterior. Its physical
+response operator, state and metric variation must be supplied before those
+matrices can yield an effective stress. In particular, the zero-frequency
+coefficient of a scalar self-energy multiplies a field quadratic term;
+it is not by itself a metric volume term or a cosmological constant.
+The older two-sheet and Gauss–Bonnet results below retain their own actions.
+
 ## The transition and vacuum-form coefficient
 
 The frozen positive-$F$ DEV3 transition uses radius $32/25$, expansion

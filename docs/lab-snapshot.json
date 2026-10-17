@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0f0acab8e229469f4971bcb84a1d6d4a077dd5b7",
+  "current_receipt_commit_parent": "0e4e32f236261681abace2a28e0ec610643c1099",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 241893,
+      "bytes": 242662,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "1903d6c0aff90a3501d337986a3db86b8cfb4d47",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "69981a11835d3c50be21478574a115e442517159f99b7fed0015cf32d6303331"
+      "sha256": "d8c754f5e459502de4b2d8c1d9324659f466173bad6effc29d91458fd3746b76"
     },
     {
       "bytes": 97216,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 364913,
+      "bytes": 365618,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "b424b28b7f4ef1432aceb33b3ee07d859e691384",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b985aae5187c40549fc2ac9f4030807511cbdd1ff5f0ef4848f2fe3fcee1212f"
+      "sha256": "27bb22004fdd70812b7db2692709e58367b80828afdd28b7a9bad3206c6f0d4b"
     },
     {
       "bytes": 18915,
@@ -11457,6 +11457,14 @@
       "original_path": "lab/docs/research-inventory.md",
       "path": "docs/research-inventory.md",
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
+    },
+    {
+      "bytes": 10506,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
+      "path": "docs/schur-memory.md",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "5410266e1257034dcfb5b0a7b5fef8e92f1bee77236456dae65166095b2cfcd5"
     },
     {
       "bytes": 537091,
@@ -32697,12 +32705,12 @@
       "sha256": "3199e75b13cbb5e37afa1e55c88b7fda9ec06ad6e3c4ee20f406950d46a25648"
     },
     {
-      "bytes": 11939,
+      "bytes": 14252,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "3906688267ef33aeca7297ad905e6f7357b6f4db",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
       "path": "scripts/diagnose_nsc_atlas_endpoint_radial.py",
       "retention_reason": "Full P001 evolution, retained failure evidence and bounded radial diagnosis.",
-      "sha256": "8c575c4a48c55ab5fdeca08f2a8b5bf5a5ed8056c390a022afc1aa02509d5847"
+      "sha256": "f2233eb4ad25df8b80a4889312cae3c12447b887e3aa4986166218f3d1af5704"
     },
     {
       "bytes": 4707,
@@ -33056,6 +33064,14 @@
       "sha256": "b8c216d73c39e7493916a5cc84837c1df9f83429e7fb1dbe7826a77bcc994081"
     },
     {
+      "bytes": 19512,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
+      "path": "src/recursive_horizons/nsc_atlas_cap_compiled_coefficients.py",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "637603c2d5f74fb06526dd4eb4736b7ce48ed5ea1550f83e0aff5b66fbe8690a"
+    },
+    {
       "bytes": 5752,
       "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
       "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
@@ -33088,20 +33104,20 @@
       "sha256": "224cd008e2e710880999d15a1f4ebbd169d7897586e5e499a24f77efc3d3e053"
     },
     {
-      "bytes": 5845,
+      "bytes": 5946,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "3906688267ef33aeca7297ad905e6f7357b6f4db",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py",
       "retention_reason": "Fixed cap instantaneous material-wall coupling and independent controls",
-      "sha256": "0090969c660656d9afeb9ceb2929239cfd596478f2419f3a86c45d5604322c42"
+      "sha256": "0cbebb418a5744ed70f175b8600c092b7e535c637a08109962eb0bfd8e60f0b6"
     },
     {
-      "bytes": 21302,
+      "bytes": 22280,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "d210ab6302ac1314838c5a05c80e96a6589b3eb6",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py",
       "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
-      "sha256": "93de3edd90dc7f606ae30c5e6c6be6fcbd493eac98e33571d90702f7c6b9aad4"
+      "sha256": "2bb286115e8c96e48ce1836eb720f46e5a971909b089c4ec9abb03acf297bcb0"
     },
     {
       "bytes": 7466,
@@ -33302,6 +33318,14 @@
       "sha256": "8e3bfacdce7cce29ea2443f90ec106b4d41dfd8662c56aad0a5e38adfe320496"
     },
     {
+      "bytes": 2842,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
+      "path": "src/recursive_horizons/nsc_atlas_effective_vacuum.py",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "3f7b35ece516a8a63767c7d6a03e38970d8f221747804b968cdd5582a4aa0d9a"
+    },
+    {
       "bytes": 5128,
       "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet.",
       "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
@@ -33321,12 +33345,12 @@
       "sha256": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d"
     },
     {
-      "bytes": 10593,
+      "bytes": 10674,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "3906688267ef33aeca7297ad905e6f7357b6f4db",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
       "path": "src/recursive_horizons/nsc_atlas_fixed_cap_stage.py",
       "retention_reason": "Common fixed-cap/exterior stage and independently verified energy/time estimates",
-      "sha256": "063f700664121307d43c87aeba0bd72dda6b2358a362c702952807249433fa45"
+      "sha256": "447c1baa60d7fb48cb769342ae13c7e08d9d5c648647335aaecc67c172426f2b"
     },
     {
       "bytes": 8273,
@@ -36730,6 +36754,14 @@
       "sha256": "a4d9eac48c364468231aebd9a40ace10157fe3366974c62083060527d570e235"
     },
     {
+      "bytes": 8134,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
+      "path": "tests/test_nsc_atlas_cap_compiled_coefficients.py",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "2a54fef21516eb52d039f96e6175348b0db3a5a9722c8cb7930f36331c7bb4b1"
+    },
+    {
       "bytes": 3314,
       "change": "Bound normalized radial cap departures and actual-radius vacuum-subtracted residuals.",
       "changed_from_commit": "7b9ced28a3e46e6cc83a6cb32620baf8ce8369e1",
@@ -37028,6 +37060,14 @@
       "path": "tests/test_nsc_atlas_derivative_closure.py",
       "retention_reason": "Conditional coupled continuum bound and derivative closure with independent controls.",
       "sha256": "64ee9f580218686d5a7dd7cd00b81dbb0fb3a891c21d954d50a9cef5e187b856"
+    },
+    {
+      "bytes": 1707,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
+      "path": "tests/test_nsc_atlas_effective_vacuum.py",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "14e24fee868dd2bf77b20d817aa3f2d6561c768f43dde9e6c455dc7f02780213"
     },
     {
       "bytes": 2570,
