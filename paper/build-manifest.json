@@ -1,10 +1,10 @@
 {
-  "bytes": 3029996,
+  "bytes": 3346185,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "bf96d2a0f0dd88f9103cc20fdea0a8621758b1fbc5dd4a05fd902f39a5aa166f",
+  "metadata_sha256": "4cb77a0c0d82fbf6f4cd373a3451edad368d2c8492a79652a9daba77e1050d2d",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 43,
-  "pdf_sha256": "281b95dff69b4569fdc1a963aa739fea8f2a534da0cbfa3cad944c967cadbbd0",
+  "pages": 47,
+  "pdf_sha256": "7d18deb3cc66bda119702abe5511f7d5cbc229de380cbc9d603a739f87f7fd26",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -22,6 +22,10 @@
     {
       "path": "docs/figures/nsc-atlas-ssprk3-refinement.png",
       "sha256": "f0b1809bdc800e28cdb7d8a6871687b16ec43300b82eb102aceffdc3e2d5d64a"
+    },
+    {
+      "path": "docs/figures/nsc-conformal-lightcone.png",
+      "sha256": "8120549f077f75072b759ce99385513deae697ad5417b26e629a7303383b90e0"
     },
     {
       "path": "paper/figures/geometry-overview.json",
@@ -376,8 +380,20 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "path": "results/summaries/nsc-atlas-distance-contrast-v1.json",
+      "sha256": "976c382167174d9e115bbed9414efff6409964eb4f981c8ecfdf0a549189eb1e"
+    },
+    {
       "path": "results/summaries/nsc-atlas-effective-vacuum-v1.json",
       "sha256": "b0e28da4ecce9cc187f00a9d008ff8de24182afa2230017e57251519a5b6736f"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-exterior-schur-metric-v1.json",
+      "sha256": "ee5de983da1bf3803a16750e43b509f48707b4c5f50d0ea56526d76ee61b2e15"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-geometric-average-v1.json",
+      "sha256": "981e1f0c31ddcf657d8f90d548c78a660ed2a048a08a72e59b9b379830bab4ff"
     },
     {
       "path": "results/summaries/nsc-atlas-geometric-departure-bound-v1.json",
@@ -386,6 +402,14 @@
     {
       "path": "results/summaries/nsc-atlas-geometric-remainder-bound-v2.json",
       "sha256": "b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-gravitational-reduction-v1.json",
+      "sha256": "4b875644a0876ef8c4283671bd114079a7b18bde280e86d34acbcd61e1945f0d"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json",
+      "sha256": "e324ff4570c045af7225dcb04aaee0dc7828fb9fade73ff92f3cc751c0a52df6"
     },
     {
       "path": "results/summaries/nsc-atlas-jordan-radius-bound-v1.json",
@@ -416,11 +440,19 @@
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
+      "path": "results/summaries/nsc-conformal-geometric-average-v1.json",
+      "sha256": "cb57f10042c6ad58d23c55160d1a279271c5663e0fb13f00a7d389e7cc930b72"
+    },
+    {
+      "path": "results/summaries/nsc-conformal-lightcone-v1.json",
+      "sha256": "aa11c763eadcbb222e2413304832f9e978a692558fc2021458ed60e81f3696fa"
+    },
+    {
       "path": "scripts/build_paper.py",
       "sha256": "dfd71460ba2e3d91c414556fb45f70f0aed6ae676f8d6cd6a7665dcdaa9f4545"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "07985c52e04d91c78ccd02a199566f2accb2d7042f8cddbadd5274c128484bbe",
-  "version": "working-2026-10-17.4"
+  "source_sha256": "4f7d8fc875f4d3d7666a880f72eff93664423202582f59cda7eef522afc72197",
+  "version": "working-2026-10-17.5"
 }

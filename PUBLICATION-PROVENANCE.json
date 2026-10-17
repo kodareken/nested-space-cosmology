@@ -1471,9 +1471,9 @@
       "sha256": "776e2db9f4597e9e0644290327dd37d39c77aeafb5bcaee48aaae7ad0e38164c"
     },
     {
-      "bytes": 13615,
+      "bytes": 13983,
       "path": "README.md",
-      "sha256": "4dd5ce559390132fa00b5a0770c2392e39062f40065fcd97102c607c34649812"
+      "sha256": "0afc37622645027dd7ed9e0fef3652f2d465f18823138c9c11b01961b0656fee"
     },
     {
       "bytes": 629,
@@ -1563,7 +1563,7 @@
     {
       "bytes": 2367416,
       "path": "docs/lab-snapshot.json",
-      "sha256": "840a5c48de41c9340d9116c0364109e31db3f0fa09d0cf70995d3e16ac2b5052"
+      "sha256": "309c5d772e40b8629e59fc53e308956287382a97d8be820780dd416f08ca2915"
     },
     {
       "bytes": 4997,
@@ -1721,9 +1721,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 58660,
+      "bytes": 58973,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "600bc776087e8f2881bd0831bc635047a91977735ff6bc165b7b3e80d44e70d5"
+      "sha256": "705052f6021a2d4c671351aa7d3807b196f19777e368bb697e9a64f659b7d5e7"
     },
     {
       "bytes": 30876,
@@ -2196,9 +2196,9 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 9196,
+      "bytes": 9750,
       "path": "docs/papers.md",
-      "sha256": "2003924fd5191ebb7c15d9b38b6b8d29ee05d4c163d3c4137bd96c1f5654c212"
+      "sha256": "9e51c4296f37f1cb651c545bb4c8a94bfcc0293931c9136944dad65402cbf5b9"
     },
     {
       "bytes": 7621,
@@ -2321,19 +2321,19 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 18604,
+      "bytes": 19946,
       "path": "paper/build-manifest.json",
-      "sha256": "6fcf8e84f69a91880589e7d25fe6b075a7f4afe0ac0dc2f90faa66da36541bf6"
+      "sha256": "c5af159e396bd55df353c4eb3e7229cb33b2c6faf46f7798c5c61698fad67d80"
     },
     {
       "bytes": 3206,
       "path": "paper/catalog.json",
-      "sha256": "04babb2f429a3360c433d484985989d20dfe1ea18e6eec4a9f26428917c89e18"
+      "sha256": "86b62b2f2b3da6506302bf5cd74342d29cc224ddaeb4109594d389bad31ad5fe"
     },
     {
-      "bytes": 24820,
+      "bytes": 25767,
       "path": "paper/claim-bindings.json",
-      "sha256": "6530aa64e20f9b4b3fed5dfed75dfcbf90ec05333d34bac1889061a3d1d23ab8"
+      "sha256": "ef79fbdf9de307dd4738c029b2d29d0f8e365339ca4e0d22a3a4133edde5d1ff"
     },
     {
       "bytes": 1094,
@@ -2513,7 +2513,7 @@
     {
       "bytes": 396,
       "path": "paper/metadata.json",
-      "sha256": "bf96d2a0f0dd88f9103cc20fdea0a8621758b1fbc5dd4a05fd902f39a5aa166f"
+      "sha256": "4cb77a0c0d82fbf6f4cd373a3451edad368d2c8492a79652a9daba77e1050d2d"
     },
     {
       "bytes": 7619,
@@ -2556,14 +2556,14 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 139429,
+      "bytes": 149177,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "07985c52e04d91c78ccd02a199566f2accb2d7042f8cddbadd5274c128484bbe"
+      "sha256": "4f7d8fc875f4d3d7666a880f72eff93664423202582f59cda7eef522afc72197"
     },
     {
-      "bytes": 3029996,
+      "bytes": 3346185,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "281b95dff69b4569fdc1a963aa739fea8f2a534da0cbfa3cad944c967cadbbd0"
+      "sha256": "7d18deb3cc66bda119702abe5511f7d5cbc229de380cbc9d603a739f87f7fd26"
     },
     {
       "bytes": 1521,
@@ -21626,9 +21626,9 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "840a5c48de41c9340d9116c0364109e31db3f0fa09d0cf70995d3e16ac2b5052",
+  "lab_snapshot_sha256": "309c5d772e40b8629e59fc53e308956287382a97d8be820780dd416f08ca2915",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
-  "manuscript_revision": "2026-10-17.4",
+  "manuscript_revision": "2026-10-17.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

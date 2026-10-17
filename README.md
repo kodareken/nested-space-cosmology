@@ -27,6 +27,12 @@ published covariance. The exact quiet-cap prediction does not match that
 statistic. This quantifies the cosmological evolution needed beyond the
 quiet limit; the full NSC cosmological forward model remains to be derived.
 
+The separate saved conformal geometry now also has an
+[explicit light-cone and radar-clock calculation](docs/schur-memory.md#causal-radial-distances-and-the-observers-clock).
+Normal probes give direction-dependent redshift and luminosity-to-radar
+distance ratios. These finite observer predictions and the quiet-cap
+comparison are connected in the living manuscript.
+
 A [finite-amplitude onset theorem](docs/nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
 now constructs a compatible sourced cap, material wall and exterior on the
 declared original source cell, uniformly for a nonzero amplitude range. It

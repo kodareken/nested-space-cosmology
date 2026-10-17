@@ -53,10 +53,14 @@ This finite calculation
 does not require reopening the cap solver or running a cutoff scan.
 
 The isolated-slice and saved evolving-geometry scalar-average probes are now
-closed at their recorded scopes. The next finite observer calculation follows
+closed at their recorded scopes. The completed finite observer calculation follows
 actual radial light paths in the saved conformal candidate and compares
 luminosity distance with the original observer's radar clock distance.
-This tests a causal distance map that a scalar average alone does not fix.
+It computes direction-dependent redshift and the luminosity-to-radar distance
+ratio, testing a causal distance map that a scalar average alone does not fix.
+The [result and its finite comparison indicators](schur-memory.md#causal-radial-distances-and-the-observers-clock)
+now enter the living manuscript. No further refinement of this saved window
+is required by the present result.
 The Einstein and Weyl-squared constructions remain separate candidates;
 their full unification is not a prerequisite for either one's conditional
 forward observations. P001's original fine evolution remains active.

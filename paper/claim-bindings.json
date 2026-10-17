@@ -203,6 +203,41 @@
       "section": "6.1.3",
       "status": "derived",
       "owner": "docs/schur-memory.md"
+    },
+    "atlas-exterior-schur-metric": {
+      "section": "6.1.4",
+      "status": "derived",
+      "owner": "docs/schur-memory.md"
+    },
+    "atlas-parent-metric-response": {
+      "section": "6.1.5",
+      "status": "derived",
+      "owner": "docs/schur-memory.md"
+    },
+    "atlas-geometric-slice-average": {
+      "section": "6.1.5",
+      "status": "measured",
+      "owner": "docs/schur-memory.md"
+    },
+    "conformal-geometric-average": {
+      "section": "6.1.5",
+      "status": "measured",
+      "owner": "docs/schur-memory.md"
+    },
+    "atlas-supernova-distance": {
+      "section": "6.1.6",
+      "status": "measured",
+      "owner": "docs/schur-memory.md"
+    },
+    "conformal-causal-distances": {
+      "section": "6.1.6",
+      "status": "measured",
+      "owner": "docs/schur-memory.md"
+    },
+    "atlas-common-action-interface": {
+      "section": "6.1.7",
+      "status": "open",
+      "owner": "docs/schur-memory.md"
     }
   },
   "findings": [

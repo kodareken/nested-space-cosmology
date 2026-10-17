@@ -6,7 +6,16 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
-Revision `2026-10-17.4` adds Sections 6.1.1-6.1.3: the current candidate's
+Revision `2026-10-17.5` connects the exterior Schur response to whole-body
+gravity, geometric averaging and causal distance measurements in Sections
+6.1.4-6.1.7. It includes the quiet-cap supernova comparison and the separate
+evolving conformal candidate's light and radar distances. The two actions,
+their interface requirements and each calculation's finite domain remain
+explicit. The original three-grid endpoint comparison remains unfinished;
+this working revision does not declare a converged cap-wall spacetime or a
+derived cosmological Lambda.
+
+Revision `2026-10-17.4` added Sections 6.1.1-6.1.3: the current candidate's
 zero added classical vacuum trace, conditional quantum curvature terms at
 the fixed P001 scale, a necessary cap-curvature condition, and the formal
 interface heat coefficient. The linked compact record regenerates these
