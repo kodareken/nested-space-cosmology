@@ -605,7 +605,23 @@ All 17 producer bindings, signed displays and inverse inequalities pass a
 separate 256-value rational audit. Grok independently confirms the formulas
 and the distinction between this reference bound and a sourced tube.
 
-The coupled comparison controls are:
+The exact initial anchor uses the saved onset event and the preceding gauge
+certificate, with no new source solve or trajectory:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_reference_initial_bound.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_reference_initial_bound.py --output results/summaries/nsc-atlas-reference-initial-bound-v1.json
+```
+
+The runner authenticates the original source-geometry file as well as the
+compact receipts. Three integrals at one saved seed have a shared
+100,000-value / 20-second budget. It checks the exact inverse correction,
+both clock corrections, quiet source/history margins and original cap cut.
+Its four controls pass with 15,004 values / 0.40625 active CPU seconds.
+The numerical source curvature defect remains recorded. Future residual
+certification must evaluate the specified exact-reference reconstruction.
+
+The coupled comparison has four exact/manufactured controls:
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_integrated_feedback.py -q -s

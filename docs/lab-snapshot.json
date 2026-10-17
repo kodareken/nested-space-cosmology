@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
+  "current_receipt_commit_parent": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 228528,
-      "change": "Enclose the analytic reference gauge with two fixed endpoint integrals.",
-      "changed_from_commit": "7b53f22ec12d87171e512fd911abd6ebc3cd3551",
+      "bytes": 229089,
+      "change": "Certify the exact initial reference against the retained onset event.",
+      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "a1e1f564ce19be6ffa6eb7065aaa568762175b9ee262ff471109f66f89f729b9"
+      "sha256": "6a30b53bdb181d82390c19947741e7688b389583bd55d4111cd3a517bdfa53ba"
     },
     {
       "bytes": 9543,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 358906,
-      "change": "Record certified whole-cell reference wall and clock coefficients.",
-      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
+      "bytes": 364149,
+      "change": "Certify the exact initial reference against the retained onset event.",
+      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "cbaa2a4529e92f4740c9c4dda8803c7692c4613dfef21117cda184b1d6902727"
+      "sha256": "59edfc04bcb1dcb3e6b55239ee3a3fd614a7f688876474d5a4527370a2d3db1e"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 378408,
-      "change": "Record certified whole-cell reference wall and clock coefficients.",
-      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
+      "bytes": 380539,
+      "change": "Certify the exact initial reference against the retained onset event.",
+      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ce0ce4e8bda3749d7823bedbca895099488b4b097e487c7c909312aa93b59a23"
+      "sha256": "1b5f3039d88955280d9eae2608c22f436d85a2bae6af9c4ca2e3de5ae0994cb1"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 120541,
-      "change": "Record certified whole-cell reference wall and clock coefficients.",
-      "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
+      "bytes": 121456,
+      "change": "Certify the exact initial reference against the retained onset event.",
+      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1eb612931d7777c7be8c20a0918cc9d29f98e8594a5d841d53bc5df3a8a8cdc0"
+      "sha256": "dc60af9a5d2ac778bbf8442a7031946f2abb37ac8e94ac705a751a564f522f09"
     },
     {
       "bytes": 18356,
@@ -29809,6 +29809,14 @@
       "sha256": "c5b48b6d9a8c8578d60ac5989ab2b6a884e9db0d4f8802042e197466303a9a5a"
     },
     {
+      "bytes": 5284,
+      "change": "Certify the exact initial reference against the retained onset event.",
+      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
+      "path": "scripts/check_nsc_atlas_reference_initial_bound.py",
+      "retention_reason": "Exact initial reference, original-source compatibility and residual reconstruction.",
+      "sha256": "c1917774f80e383813644540683e5b6273d0c0d6987ae576fb82f81b30aef241"
+    },
+    {
       "bytes": 5510,
       "change": "Preserve the source-cell certificate and include the actual final-knot value and first-jet owner.",
       "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
@@ -32822,6 +32830,14 @@
       "path": "src/recursive_horizons/nsc_atlas_reference_gauge_bound.py",
       "retention_reason": "Current exact reference-gauge implementation and evidence.",
       "sha256": "cbf2e65663f355565e0d845606813b473faaf49e6e8f1181b1e777fc36f730d1"
+    },
+    {
+      "bytes": 5826,
+      "change": "Certify the exact initial reference against the retained onset event.",
+      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
+      "path": "src/recursive_horizons/nsc_atlas_reference_initial_bound.py",
+      "retention_reason": "Exact initial reference, original-source compatibility and residual reconstruction.",
+      "sha256": "3389cd95870bba13adfb9310bc4ec298a52c73ff3ae655b43ba065437d609fa1"
     },
     {
       "bytes": 4099,
@@ -36478,6 +36494,14 @@
       "path": "tests/test_nsc_atlas_reference_gauge_bound.py",
       "retention_reason": "Current exact reference-gauge implementation and evidence.",
       "sha256": "159b842421068a09e2884925b01e0c8467daf56db8f060d59dfe23dd875311d3"
+    },
+    {
+      "bytes": 3328,
+      "change": "Certify the exact initial reference against the retained onset event.",
+      "changed_from_commit": "e5f87d1a2e84d1758f37871c698c97f6b258348d",
+      "path": "tests/test_nsc_atlas_reference_initial_bound.py",
+      "retention_reason": "Exact initial reference, original-source compatibility and residual reconstruction.",
+      "sha256": "d1410174d74d0b4305c14dc27be6980a94e377f67ab0d08950f779d73ce0ab2d"
     },
     {
       "bytes": 7870,

@@ -2678,6 +2678,39 @@ outward displays. No source query, numerical root search, time step or retry
 was performed. Numerical gauge errors and the sourced common tube remain
 separate work; this result does not assert the coupled error threshold.
 
+### Compatible exact initial anchor, 17 October 2026
+
+The reference enclosure leaves the numerical gauge/initial comparison open.
+The existing state stores departures, so specify its continuous reconstruction
+using the exact reference and the unchanged binary departure coefficients.
+At the original initial event all departure coefficients vanish. Check the
+analytic source is before its exact support front and the entire cap lies in
+the retained history's exact quiet prefix. Then the reference vacuum exterior,
+de Sitter cap and signed wall supply compatible initial data. The recorded
+floating wall is compared with that construction, not declared identical.
+
+Admit one fixed-seed inverse-residual integral and two clock integrals, at
+the radius already saved in the enriched-onset receipt. Reuse the proved
+whole-cell bracket for the mean-value inverse and clock derivative bounds.
+Use 160-bit balls, `2^-80` requested integration tolerances, degree limit 64,
+evaluation limit 512 and depth limit 20 per integral; one shared allowance is
+**100,000 charged values / 20 process-CPU seconds**. Each callback charges
+64 values and algebra/metadata work charges 3,072. Authenticate the previous
+cell, reference, onset and source-geometry inputs. No new numerical gauge
+root, preparation, trajectory or scan is admitted. Stop if the initial
+correction leaves the bracket, either quiet margin fails, or the corrected
+wall leaves the original fixed-basis collar.
+
+Independent manufactured inverse, exact junction/rate, quiet-profile and
+moving-coordinate controls have **20,000 values / 15 active CPU seconds**.
+Grok reviews the initial compatibility and later residual interpretation.
+The three likely failures are circular localization of the seed, a corrected
+clock crossing the retained support edge, or reusing a floating stage defect
+as the exact reconstruction's residual. The prior full-cell bracket, explicit
+quiet-margin calculation and common-coordinate chain rule address these.
+Future whole-cell residual bounds remain required. No assertion of uniform
+libm accuracy or monotonicity of the floating quadrature is made.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

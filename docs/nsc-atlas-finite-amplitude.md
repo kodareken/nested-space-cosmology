@@ -7494,6 +7494,98 @@ bracket directions, wall formulas and vacuum-wedge bounds. The next coupled
 inputs remain the numerical gauge/initial-data comparison, sourced metric
 and field tube, uniform reference derivatives, wall Jacobians and residuals.
 
+### Exact initial anchor and residual reconstruction
+
+`quiet_fixed_state` stores zero exterior, wall and cap **departures**, not
+an independently prescribed physical radius. This permits an explicit
+continuous reconstruction on the exact reference gauge above: keep the
+retained binary departure coefficients, source preparation, fixed cap knots
+and history data; add them to the exact reference functions. This defines
+which mathematical approximate fields a later residual certificate tests.
+The original numerical run and its reported physical values are unchanged.
+Their difference from the reconstruction is a separate comparison.
+
+The [initial-event evaluator](../src/recursive_horizons/nsc_atlas_reference_initial_bound.py)
+uses the saved reference seed `rhat=0.4748482346624701`. Both that seed and
+the exact initial radius lie in the already proved bracket `(0.474,0.477)`.
+With `m_I` a positive lower bound for `abs(I')` there,
+
+\[
+ |R(x_{\rm left})-\widehat r|
+ \le \frac{|I(\widehat r)-t(x_{\rm left})|}{m_I}.
+\]
+
+One certified integral at the seed encloses its numerator. Two more enclose
+the relative clocks s and T there. Their integrands are `1/v` and
+`beta_minus/((1-R^2)*v)`; multiplying their bracket-wide suprema by the
+radius error bounds the displacement to the exact initial event. The
+stored *physical* initial radius differs from the reference seed by one
+binary rounding step and is compared separately, as are L, T, s and c.
+
+Four conditions identify compatible initial data in this reconstruction:
+
+- The original source-coordinate function at `x_left` is strictly before
+  its exact support front. Its field and all available initial derivatives
+  vanish. The retained source polynomial has zero constant and linear
+  corrections at that event, so the exact initial affine radius and first
+  jet are `r=x_left` and `r_x=1`, with `L=L_x=c=c_x=0`.
+- The exact W and R come from the same inverse. Hence the exact vacuum
+  exterior at its wall agrees with the reference wall radius and lapse.
+  The numerical Lambert-W evaluation is not used as a proof of this identity.
+- The complete initial cap satisfies
+  `T_exact + history_offset + atanh(R_exact) < history_onset`.
+  The offset and onset are unchanged binary label data. The history
+  constructor requires all value/first/second jets up to that onset to be
+  exactly zero, permits a zero extension below its first label, and rejects
+  enrichment of the quiet prefix. Thus the whole cap, including its centre,
+  has zero scalar field. Its radial constraints give `N=delta=0`, `A=1-r^2`;
+  the physical cap mass still includes the vacuum term `r^3/2`.
+- The zero-scalar wall retains the same signed junctions and rates. In
+  particular `beta_minus-beta_plus=2R`, both temporal extrinsic curvatures
+  equal the corresponding radius derivatives of beta, and their jump is 2.
+  The hybrid has `H=v+beta_minus`, `A/H=beta_minus-v`, and the same reference
+  radius and clock rates. These identities hold at finite alpha because
+  the scalar-dependent corrections vanish on this initial slice.
+
+The numerical source curvature residual at the left endpoint is retained;
+it does not become zero by this argument. The exact source's curvature and
+the polynomial approximation's curvature are distinct, already accounted
+for by the source representation work. The initial statement also does not
+discard leakage generated later in the approximate quiet prefix.
+
+For later nonzero departure coefficients, the common pullback must be
+explicit. If `Y(x,eta)` is a reconstructed exterior field with
+`eta=Ubar/W_exact(x)`, write `b=W_x/W`. Its physical derivatives are
+
+\[
+ y_{\bar U}=\frac{Y_\eta}{W},\qquad
+ y_x=Y_x-\eta bY_\eta,\qquad
+ y_{\bar U x}=\frac{Y_{x\eta}-b(Y_\eta+\eta Y_{\eta\eta})}{W}.
+\]
+
+The cap field uses the same retained fixed z basis at the reconstructed
+clock and radius. Moving that wall cut changes the trace and the history
+arguments; those changes belong in the physical residual. Binary time-step
+endpoints and slopes can define exact Hermite polynomials, but their
+coefficient arithmetic, spatial reconstruction and derivative bounds must
+be specified. Piece boundaries require their actual continuity/jump terms.
+The existing floating midpoint stage residual is not that whole-cell
+continuum residual. One can bound the latter directly on this exact
+reconstruction, without asserting an unproved accuracy bound for every
+intermediate libm call. Reported floating physical observables still need
+their own comparison with reconstructed observables.
+
+Four [independent controls](../tests/test_nsc_atlas_reference_initial_bound.py)
+pass with **15,004 charged values / 0.40625 active CPU seconds**. They check
+a manufactured nonlinear inverse, both signed curvature/rate identities,
+the exact quiet-prefix contract and the moving-coordinate mixed derivative.
+Independent Grok analysis confirms the conditional initial construction
+and the need for a separate later residual. A proposed uniform floating
+quadrature argument was withdrawn: negativity of its integrand alone does
+not prove monotonicity of the moving-node rule, and a binary elementary
+function is not automatically its exact counterpart. No such assertion
+enters the initial certificate.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively
