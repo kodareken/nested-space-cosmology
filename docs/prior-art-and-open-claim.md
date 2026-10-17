@@ -2889,6 +2889,17 @@ are explicitly retained as proof obligations with their required order of
 constant selection. No additional numerical control or physical evaluation
 is run for this analytic follow-up.
 
+The next analytic follow-up defines M as a weighted derivative seminorm,
+retains the actual nonzero source in a finite `D(lambda)`, and derives the
+derivative and difference bounds with lambda chosen before M and h. Moving
+entry times and output projections retain their displacement terms. A
+larger cap strip supplies the initial data beyond the terminal outgoing
+wall label; its unit weight and short characteristic lengths avoid a
+corner extension factor. These derivations are submitted to Grok review.
+No source evaluation, new trajectory, scan or numerical control is run.
+The remaining connection is chart coverage and continuation on the original
+physical cell, rather than a replacement of it by a smaller quiet interval.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

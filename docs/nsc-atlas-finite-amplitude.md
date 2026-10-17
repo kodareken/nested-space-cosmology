@@ -8261,10 +8261,21 @@ norm inequality, for `u>=ell_i(v)`,
  \le\frac{\|\Delta F_i\|_w}{\lambda}.
 \]
 
-Restrict `lambda*a_max*h<=log(2)` so wall weights and cross-wall comparison
-factors stay bounded. Let M be a uniform Lipschitz bound on the extended
-first-jet tuples, and scale the wall difference in the comparison metric by
-`kappa=max(1,M)`:
+Put `V_ext=max(a_max,L_ell*b_max)`, where `L_ell` bounds the slope of the
+lower curve. Restrict `lambda*V_ext*h<=log(2)` so wall weights, lower-curve
+clamping and cross-domain weight ratios stay bounded. The ambient rectangle
+for this h has `u<=u_i(0)+a_max*h`, hence `w>=1/2`. The derivative bound is
+the **weighted** seminorm
+
+\[
+ M\ge\max_i\mathop{\rm ess\,sup}_{\rm ambient}
+ w_i(u)\bigl(|\partial_u Z_i|+|\partial_v Z_i|\bigr),
+ \qquad Z_i=(y_i,p_i,q_i).
+\]
+
+It implies an ordinary Lipschitz bound `2M`. An unweighted derivative bound
+would not supply a `1/lambda` factor for a differentiated long prefix.
+Scale the wall difference by `kappa=max(1,M)`:
 
 \[
  d=\max_i\|(\Delta y_i,\Delta p_i,\Delta q_i)\|_w
@@ -8276,8 +8287,22 @@ times. In particular, a Lipschitz trace evaluated at two entry times differs
 by a term proportional to M times their difference. That term cannot be
 dropped from the contraction estimate.
 
-The pending estimate must establish, with explicit dependence of its
-constants on the positive tube and data,
+Because the inputs are already canonical extensions on this fixed ambient
+rectangle, the extended force is simply `F_i(Z_i)` at each point. On a
+convex compact value box with bulk Lipschitz constant `L_F`,
+
+\[
+ \|\Delta F\|_w\le L_F\|\Delta Z\|_w,
+ \qquad \|\partial_v F\|_w\le L_F M.
+\]
+
+There is no additional old-wall displacement in this inequality: differences
+between the two extended fields already include that displacement. A change
+of the terminal v clamp can affect the entire exterior prefix. The weighted
+prefix estimate remains valid for that difference; an argument that only a
+short spatial collar changes would not cover it.
+
+The estimates to close are
 
 \[
  M_{\rm new}\le D(\lambda)+\frac{A_1}{\lambda}M+B_1hM,
@@ -8286,28 +8311,265 @@ constants on the positive tube and data,
        \left(\frac{A_2}{\lambda}+B_2h(1+M)\right)d.
 \]
 
-The order matters: choose lambda from coefficients independent of M, then
-M from the finite weighted data bound D(lambda), then h. Otherwise an
-apparently small `1/lambda` could conceal a growing derivative constant.
-A complete proof must also show value-tube invariance, closure of the
-Lipschitz class under this metric, entry-branch corner compatibility, and
-convergence of the integral equations on the moving domains. These
-inequalities are stated here as proof obligations, not established estimates.
+The following derivation specifies their dependencies. It is a local
+construction argument, separate from continuation over the certified physical
+cell. Its moving-domain and regularity details are undergoing independent
+review; the conditional tube receipt is unchanged.
 
-There is a direct regularity route for a Lipschitz fixed point. On its actual
-domain, differentiating the outgoing prefix weakly would give
+#### Derivative invariance and the order of constants
+
+Fix a compact value box and a small ambient neighbourhood of the initial
+data, with positive radius, lapse and null rates. Let `K_F` bound F, `K_H`
+bound the wall vector field H, and `L_F,L_G,L_H` bound their first derivatives
+in block norms, with G including both outgoing wall traces. These constants
+depend on the value box and fixed gauges, not on lambda or M. Let `K_Gs`
+bound the explicit proper-time derivative of G due to those gauges. Choose
+norms so the following displayed sums bound the corresponding directional
+derivatives. Larger constants are allowed without changing the order below.
+
+Let `W_lambda` be a finite upper bound for w on the initially chosen ambient
+neighbourhood. It may grow exponentially with lambda. Define the fixed-data
+bound
+
+\[
+ D_q(\lambda)=\max_i\sup_v w_i(\ell_i(v))
+       (|q_{i,0}'(v)|+|\ell_i'(v)|K_F).
+\]
+
+Differentiating the frozen outgoing prefix almost everywhere gives
+
+\[
+ \|\widehat q_v\|_w\le D_q(\lambda)+\frac{L_FM}{\lambda},
+ \qquad \widehat q_u=F^n.
+\]
+
+The actual nonzero source is retained in `q_0` and `D_q`. No incoming source
+jet is prescribed independently. On a wall-born incoming line, differentiation
+of `p_e(u(s))=G(Y(s),widehat q_W(s);s)` and its entry time gives
+
+\[
+ p_u|_e=\frac{(G_W)_s-bF^n|_W}{a},\qquad
+ |(G_W)_s|\le L_G(K_H+a_{\max}K_F+b_{\max}|\widehat q_v|_W)
+                    +K_{Gs}.
+\]
+
+With
+
+\[
+ B=\frac{L_Gb_{\max}}{a_{\min}},\qquad
+ P_0=\frac{L_G(K_H+a_{\max}K_F)+K_{Gs}+b_{\max}K_F}{a_{\min}},
+\]
+
+the incoming entry derivative has weighted bound
+`P_0+2*B*D_q+2*B*L_F*M/lambda`. The factor two converts the outgoing
+weighted bound to a wall value; wall weights lie between one half and one.
+For initial entries, let `D_p(lambda)` bound the derivative of the supplied
+incoming trace minus `F^n*v_e'`. At the exterior bottom `v_e'=0`; on the cap
+initial line `v_e'=1/ell'=-1`. Initial compatibility fixes F there, so this
+is a data bound, not an unknown derivative of an iterate.
+
+The incoming integration length is at most `b_max*h`, giving
+
+\[
+ \|p_u^{\rm new}\|_w\le D_p+P_0+2BD_q+
+          \left(\frac{2BL_F}{\lambda}+b_{\max}hL_F\right)M.
+\]
+
+The other mixed derivatives are `p_v=q_u=F^n`, and `y_u=p,y_v=q`.
+Let `M_0` bound `|p|+|q|` on the value box. The clamp has spatial Lipschitz
+constant at most `C_Pi=1+max(L_ell,a_max/b_min)` in the chosen coordinate
+sum norm. Its composition changes weights by at most two. For example the
+following deliberately enlarged constants bound the complete extended tuple:
+
+\[
+\begin{split}
+ D(\lambda)&=4C_\Pi\left[D_p+P_0+(1+2B)D_q
+                         +(2K_F+M_0)W_\lambda\right],\\
+ A_1&=4C_\Pi(1+2B)L_F,\qquad
+ B_1=4C_\Pi b_{\max}L_F.
+\end{split}
+\]
+
+Thus the derivative-invariance estimate above has coefficients independent
+of M and lambda. Only the fixed-data term D may grow with lambda.
+
+#### Differences of two map outputs
+
+Write `S=norm(Delta Z)_w` and `deltaY=norm(Delta Y_new)_infty`. At a common
+evaluation point the two outgoing prefixes differ by at most `L_F*S/lambda`.
+Their wall values differ by at most twice this plus the spatial evaluation
+shift. The derivative bound just obtained, with `M>=2D(lambda)` and
+`lambda>=1`, bounds their ordinary spatial Lipschitz constant by `C_q*M`,
+where C_q depends only on the value box and the constants above. Therefore
+the two wall ODEs, starting from the same initial Y, satisfy
+
+\[
+ |\Delta Y_{\rm new}(s)|\le L_H\int_0^s
+       \left[(1+C_qM)|\Delta Y_{\rm new}(t)|
+                         +\frac{2L_F}{\lambda}S\right]dt.
+\]
+
+If `h*L_H*(1+C_q*M)<=log(2)`, then
+
+\[
+ \delta Y\le\frac{4L_HL_Fh}{\lambda}S.
+\]
+
+This is the **new** wall difference. The prefix is constructed before the
+wall solve, so the map has no direct old-wall displacement term that lacks
+this time factor.
+
+For a common wall-born u, the entry parameters differ by at most
+`deltaY/a_min`, and their v entries by at most
+`(1+b_max/a_min)*deltaY`. The boundary trace G has a same-parameter
+difference bounded by `2*L_G*L_F*S/lambda+C*(1+M)*deltaY`; its parameter
+shift has the same latter bound. The shifted integral endpoint contributes
+at most `K_F*(1+b_max/a_min)*deltaY`. Old initial entries coincide.
+Consequently, on the intersection of the physical domains,
+
+\[
+ \|\Delta p_{\rm new}\|_w\le
+     \left(\frac{2L_GL_F}{\lambda}+b_{\max}hL_F\right)S
+                       +C_e(1+M)\delta Y.
+\]
+
+Here and below the finite constants C depend on the value box, rate bounds,
+lower-curve slope and fixed gauges only. They do not absorb W_lambda or M.
+The initial-entry derivative belongs to D; the moving entry trace is on
+the wall where the weights are uniformly bounded. Reconstructing y gives
+one more prefix factor `1/lambda`; q has its original prefix bound.
+
+To compare the extended outputs, first clamp v to their common terminal
+range, then u to their common physical interval. The distances from either
+individual projection to this common projection are at most `C*deltaY`.
+Integrating the **weighted** output derivative bound along each shift gives
+`C*M*deltaY`, because the ratio of the evaluation weight to each intermediate
+weight is bounded. Using only the ordinary bound `2M` here would introduce
+the potentially large weight on the old exterior prefix. Including the wall metric term
+`kappa*deltaY`, and using `lambda>=1`, gives finite A_2,B_2 independent of
+lambda and M such that
+
+\[
+ d_{\rm new}\le
+       \left(\frac{A_2}{\lambda}+B_2h(1+M)\right)S
+ \le\left(\frac{A_2}{\lambda}+B_2h(1+M)\right)d.
+\]
+
+#### Complete class, compatibility and passage to the limit
+
+For fixed lambda,M,h, use tuples on the fixed ambient rectangles with
+weighted derivative bound M, values in the compact box, the actual initial
+and source traces on their physical domains, and `Z=Z composed with Pi_Y`.
+Wall paths have their fixed initial value and two-sided increment bounds
+from `a_min,a_max,b_min,b_max`. Uniform limits preserve these bounds. The
+positive lower rates make inverse entry times converge uniformly; together
+with the common Lipschitz bound this also preserves the canonical extension
+identity and the data traces. This is a closed, hence complete, class in d.
+Compatible initial extensions make it nonempty. An incoming source trace,
+Einstein constraints at intermediate iterates, and independently prescribed
+wall field values are not additional requirements on the class.
+
+The value box has a positive margin about the actual initial profiles.
+On the old initial strip, compatibility gives exactly the initial outgoing
+prefix at time zero. Its subsequent change is bounded by
+`C*h*(1+M)`, using the finite prefix length and the ordinary Lipschitz bound.
+Incoming transport and wall-born entries have the same small-time bound;
+the reconstruction gives it for y. In the cap, the new lower initial
+segment and the wall-born segment both start at the compatible corner.
+They agree there; the differentiated corner condition is determined by the
+fixed corner value F and the prescribed data derivatives. This controls
+the entry join without assuming derivative convergence of the iterates.
+Choosing h against the value margin keeps the fields and wall ODE in the
+chosen boxes. Source values during this step are the specified source,
+whether or not they vanish.
+
+The parameter order is now explicit. Choose `lambda>=1` with
+`A_1/lambda,A_2/lambda<=1/4`; next choose `M>=max(1,2D(lambda))`, enlarged
+if needed for the initial extensions. Finally choose positive h with
+`B_1*h<=1/4`, `B_2*h*(1+M)<=1/4`, the weight and wall-Gronwall restrictions,
+and the value-margin condition. No independence of D from lambda is needed.
+The map preserves the derivative bound and has contraction factor at most
+one half. Uniform convergence, the entry-time bounds and the common
+extensions pass its integral and wall ODE identities to the limit. This
+argument supplies a local fixed point once the stated smooth value box and
+compatible corner data are supplied; it does not choose a numerical time
+step or show continuation over the original finite physical cell.
+
+There is a direct regularity route for the Lipschitz fixed point. On its actual
+domain, differentiating the outgoing prefix weakly gives
 
 \[
  q_v=q_0'-\ell'F|_\ell+
         \int_\ell^u(F_yq+F_pF+F_qq_v)\,da.
 \]
 
-This is a linear Volterra equation for q_v. After establishing its continuous
-solution with the actual data, the incoming pure derivative obeys
+This is a linear Volterra equation for q_v. Its bounded weak solution equals
+the unique continuous solution with these continuous coefficients and data.
+Then the incoming pure derivative obeys
 `(p_u)_v=F_y*p+F_p*p_u+F_q*F`, with differentiated initial or wall data.
-This route could upgrade the limit to C1 first jets without assuming
-convergence of the iterates' derivatives. Passing through the source fronts
-and matching the entry branches remain part of that argument.
+The wall trace is differentiable because q has the just-established first
+derivatives and the wall rates are positive. Compatible initial and wall
+derivatives agree at the entry join. This upgrades the limit to C1 first
+jets and C2 fields, without assuming convergence of the iterates'
+derivatives. The actual C3 source supplies the required data derivatives
+continuously across its fronts; no fourth source derivative is used here.
+
+#### The cap initial strip needed for continuation
+
+The small cap wedge with `v<=v_W(h)` is not a complete polar time slice
+through the terminal wall point. Even in the reference coordinates
+`(u,v)=(T+z,T-z)`, moving inward at fixed T increases v beyond its wall
+value. Thus that wedge alone cannot be identified with the cap domain of
+the conditional tube estimate.
+
+The same primitive map has a concrete larger initial-data domain. Choose a
+fixed `v_*` on the quiet initial line, slightly inside the proposed inner
+collar cut, but at positive radius. Supply the already specified initial
+data on the whole line `ell(v)=2*T_0-v`, `v_0<=v<=v_*`. Define
+
+\[
+ U_Y(v)=u_W\bigl(v_W^{-1}(\operatorname{clip}
+                         (v;v_0,v_W(h)))\bigr),
+\]
+\[
+ \mathcal D_{-,h}=\{v_0\le v\le v_*:\quad
+       \ell(v)\le u\le\min(U_Y(v),\ell(v)+\rho h)\}.
+\]
+
+Here `rho>a_max+b_max` is fixed before h. Every wall point lies below the
+artificial upper time line, since `u_W(s)+v_W(s)-2*T_0<=
+(a_max+b_max)*h`. Above the terminal wall v label, the boundary
+`u=u_W(h)` is an incoming characteristic; it supplies no extra data.
+The lower line is spacelike initial data throughout, rather than an
+independently adjustable inner boundary.
+
+Both integrations are short in this cap domain. The outgoing prefix has
+length at most `rho*h`. For an initial incoming entry,
+`v_e=2*T_0-u` and `v-v_e<=rho*h`; for a wall-born entry,
+`u+v_e>=2*T_0` gives the same bound. Use **unit weight in the cap**, retaining
+the exponential weight outside. Clamping a fixed rectangle to this cap
+domain has uniformly bounded Lipschitz constants: the upper endpoint is a
+minimum of two Lipschitz functions and the lower endpoint has slope minus
+one. The dependence on the wall path remains Lipschitz. Unit weight avoids
+an exponential factor when a point far along the initial line is clamped
+to a narrow initial strip.
+
+Accordingly the cap prefix bounds become
+
+\[
+ \|\Delta\widehat q_-\|_\infty\le\rho h L_F S,
+ \|\widehat q_{-,v}\|_\infty\le D_{q,-}+\rho h L_FM.
+\]
+
+The exterior estimates are unchanged. In the coupled wall and incoming
+estimates replace a common prefix factor `1/lambda` by the upper bound
+`1/lambda+rho*h`. The additional terms contribute to `B_1*h*M` and
+`B_2*h*(1+M)`; they do not alter the order lambda, then M, then h. The
+complete-class and primitive arguments use the new clamp in the cap.
+This supplies the domain extension required before attempting a whole-cap
+continuation. Its overlap with the quiet centre and the coverage and
+regularity of the physical polar slices must still be bounded explicitly;
+the fixed tube receipt alone does not certify those chart properties.
 
 ## Missing full-domain estimate
 
