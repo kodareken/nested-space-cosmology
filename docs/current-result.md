@@ -284,8 +284,12 @@ triangular derivative system calculates the needed higher wall traces
 from the same outgoing fields. Three symbolic controls pass with 24,000
 values / 1.90625 active CPU seconds, including a nonlinear manufactured
 solution and exact metric conversion. Grok review confirms the triangular
-higher-regularity argument and its use of C3 source data. Physical-cell
-chart coverage and continuation remain open.
+higher-regularity argument and its use of C3 source data. A further
+[conditional slice-inclusion estimate](nsc-atlas-finite-amplitude.md#conditional-coverage-of-physical-cap-slices)
+now accounts separately for old radii and those enclosed by the expanding
+wall, with independent review. It prevents escape from the constructed
+null strip while the chart and tube hold. The combined continuation proof
+to the original physical right endpoint remains open.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

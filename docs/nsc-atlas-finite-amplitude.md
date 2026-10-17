@@ -8735,6 +8735,72 @@ entry derivatives. The chart control independently transforms the metric,
 radius and scalar differential and checks proper wall normalization. These
 are identity checks, not a physical trajectory or a continuation theorem.
 
+#### Conditional coverage of physical cap slices
+
+Suppose the polar chart has already been constructed from its quiet initial
+overlap and remains in the positive tube. Write `Z_0=atanh(R_0)` for the
+initial wall z coordinate, retaining the distinction between radius and z.
+On the covered collar choose finite constants
+
+\[
+ K\ge\sup\beta(j_+-j_-),\qquad
+ K_v\ge\sup(-\beta j_-),\qquad
+ T_{s,\max}\ge\sup (T_W)_s.
+\]
+
+They can be chosen from the tube, fixed gauge and bounds over the entire
+allowed time range before choosing a local h. For an old radius
+`z_star<=z<=Z_0`, integration at that fixed z from the initial line gives
+
+\[
+ 0\le u+v-2T_0\le K(T-T_0)\le KT_{s,\max}h.
+\]
+
+A radius `z>Z_0` was outside the initial cap. Let `s_e` be its enclosure
+time at the expanding wall. Its fixed-z integral starts at `T_W(s_e)`,
+not at T_0. The wall contribution and the later integral give
+
+\[
+\begin{split}
+ 0\le u+v-2T_0
+ &\le(a_{\max}+b_{\max})s_e+KT_{s,\max}(h-s_e)\\
+ &\le\max(a_{\max}+b_{\max},KT_{s,\max})h.
+\end{split}
+\]
+
+There is no pre-wall extension of the physical cap in this calculation.
+The strict expansion margin in the tube makes the enclosure time unique.
+At any fixed covered T, `j_+>0,j_-<0` imply
+`u(T,z)<=u_W(T)` and `v(T,z)>=v_W(T)`. If `v<=v_W(h)`, inverse wall
+monotonicity gives `u<=U_Y(v)`; if `v>v_W(h)`, it gives
+`u<=u_W(h)=U_Y(v)`. Thus choosing
+
+\[
+ \rho>\max(a_{\max}+b_{\max},KT_{s,\max})
+\]
+
+puts both old and born radii below the cap strip ceiling and above its
+initial line. The fixed inner end can also be protected explicitly. Put
+`v_*=T_0-z_inner`, with `z_inner<z_star<=Z_0`. Old radii satisfy
+`v<=T_0-z_star+K_v*T_s,max*h`. Born radii have the conservative wall-entry
+bound `v<=T_0-Z_0+max(b_max,K_v*T_s,max)*h`. The two sufficient conditions
+are
+
+\[
+ hK_vT_{s,\max}<z_\star-z_{\rm inner},\qquad
+ h\max(b_{\max},K_vT_{s,\max})<Z_0-z_{\rm inner}.
+\]
+
+They keep the physical collar away from the artificial inner end. The
+inequalities are strict at the artificial ceiling as well; the actual
+initial and material boundaries remain part of the solution domain.
+Independent Grok review confirms the old/born split and these sufficient
+inclusions. This rules out loss of the constructed null strip as a first
+failure while the physical chart and tube hold. It does not itself create
+the chart or prove continuation to the original right endpoint. That final
+argument must combine local polar overlap, the native bounds and regularity,
+quiet-core matching and strict tube improvement.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

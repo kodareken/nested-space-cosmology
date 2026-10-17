@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
+  "current_receipt_commit_parent": "9d7f7121e7d983868869083c696cdddb0ab690ba",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 332598,
-      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
-      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
+      "bytes": 332936,
+      "change": "Bound conditional slice inclusion for old and wall-enclosed cap radii.",
+      "changed_from_commit": "9d7f7121e7d983868869083c696cdddb0ab690ba",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "298a3b2c13d8f34967a3f8ac225b461a80bdcb9b7ce2815f142c08185719332d"
+      "sha256": "2c2096d758e786f3f473c76932feb8103fa9fc2f0019686a51a009e04b355c7c"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 414708,
-      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
-      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
+      "bytes": 417228,
+      "change": "Bound conditional slice inclusion for old and wall-enclosed cap radii.",
+      "changed_from_commit": "9d7f7121e7d983868869083c696cdddb0ab690ba",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "28888060fd296bf8580839b253c4db5185d7b937e4d0b05cf4ee65bbc7a0b70a"
+      "sha256": "4d7861fa2c407b036bdaae2364d04cb5dafb11a0e2586ea3ad2caf26ac5300ad"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 394395,
-      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
-      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
+      "bytes": 394664,
+      "change": "Bound conditional slice inclusion for old and wall-enclosed cap radii.",
+      "changed_from_commit": "9d7f7121e7d983868869083c696cdddb0ab690ba",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a25a9238806431373fb568e3e5f6d5aca28b74331f15c90d2aed335be1af4aa4"
+      "sha256": "74d010744c0bf48530afdc562e059c1184dd0008ef5d2d26f5326486109fc62c"
     },
     {
       "bytes": 6705,

@@ -2923,6 +2923,10 @@ corner compatibility. It produces C3 fields and, through the constraints,
 C4 radius without asking for an independently prescribed higher incoming
 trace. The next review concerns actual physical-slice coverage, including
 radii newly enclosed by the expanding wall.
+That coverage review confirms the conditional inclusion after a wall-entry
+split for new radii. It adds an explicit sufficient inner-end margin for
+those points. This is an analytic domain estimate only; all numerical
+allowances and retained receipts remain unchanged.
 
 ## Discrete cap mass balance, 16 October 2026
 
