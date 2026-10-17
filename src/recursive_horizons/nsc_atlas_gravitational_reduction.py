@@ -101,6 +101,26 @@ def boundary_stress_from_extrinsic(mass_length, radius):
     }
 
 
+def schwarzschild_normal_weyl(mass_length, radius):
+    """C_{a n b n} in an orthonormal radially moving wall frame, outside 2M.
+
+    Signature -+++ and R^a_bcd = partial_c Gamma^a_db - partial_d Gamma^a_cb
+    + Gamma^a_ce Gamma^e_db - Gamma^a_de Gamma^e_cb. The normal is spacelike;
+    tangential indices are (u, theta, phi). A radial boost leaves these
+    components unchanged. Values have inverse-length-squared units.
+    This regular curvature tensor is not a completed higher-derivative junction.
+    """
+    mu = _real(mass_length, 'mass length')
+    radius = _real(radius, 'radius')
+    if mu < 0 or radius <= 2*mu:
+        raise ValueError('need radius > 2*mass_length >= 0')
+    amplitude = mu/radius**3
+    return {'C_u_n_u_n': -2*amplitude,
+            'C_theta_n_theta_n': -amplitude,
+            'C_phi_n_phi_n': -amplitude,
+            'induced_trace': 0.0}
+
+
 def homogeneous_energy_stress(energy_length, denergy_dvolume, physical_volume):
     """Bulk stress from an on-shell energy functional of physical volume.
 

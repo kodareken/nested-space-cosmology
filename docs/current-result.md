@@ -4,6 +4,17 @@ Current presentation, 17 October 2026: [the living atlas manuscript](../paper/ne
 
 ## First Step 7 vacuum projection, 17 October 2026
 
+The [common-action wall connection](schur-memory.md#the-wall-connection-between-the-two-action-choices)
+now has a direct tensor check. The pure-tension jump cancels singular Weyl
+curvature, while the regular cap/exterior normal-Weyl jump is
+`ell^2 [C_anbn] = diag(-32/135,-16/135,-16/135)` at the owned quiet slice.
+In a controlled bounded-Weyl thin-layer limit, its higher-derivative equation
+needs a double-layer response beyond the supplied tension. This is a
+necessary leading-order test, not a completed junction or a rejection of
+the separate Einstein candidate. Seven gravitational controls pass.
+Connecting the candidates therefore needs a resolved transition or a derived
+effective interface between resolutions, with its action and scale stated.
+
 The [existing evolving conformal geometry](schur-memory.md#averaging-an-existing-evolving-connected-metric)
 now supplies a second, explicitly separate geometric-average calculation.
 Using its original observer clock and a reference ruler fixed from the

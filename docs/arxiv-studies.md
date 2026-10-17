@@ -32,6 +32,18 @@ Carolina Figueiredo, then a Princeton doctoral student, was named the inaugural 
 
 Then check the list below. Do not repeat a derivation this file already sources. The studies were opened while investigating the nested question. They are not proofs of one claim. Some supply a formula. Some are a clue. Some are a constraint. Some show that a local or infinite route does not answer the question. Record a new study in that same way.
 
+## Common-action wall transfer, 17 October 2026
+
+[Reina--Senovilla--Vera, 1510.05515v1](https://arxiv.org/html/1510.05515):
+read the abstract and Sections 3.1--3.2 on quadratic distribution products
+and the generic regularity class. The special pure-trace tension jump was
+checked directly, including cancellation of singular Weyl curvature and
+the nonzero regular normal-Weyl step. The generic theorem is not imported
+as a junction theorem for this special case. The
+[leading interface calculation](schur-memory.md#the-wall-connection-between-the-two-action-choices)
+is conditional on bounded-Weyl thin-layer control; the complete matching
+and the remaining paper are not independently audited.
+
 ## Parent-side metric response, 17 October 2026
 
 [Brown--York, gr-qc/9209012v1](https://arxiv.org/abs/gr-qc/9209012): read

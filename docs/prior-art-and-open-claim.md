@@ -1,5 +1,28 @@
 # Prior art and admission of new research
 
+## Common-action wall transfer, 17 October 2026
+
+One bounded symbolic check addresses the missing physical connection between
+the two action choices. Reuse the quiet Einstein tension jump and de Sitter/
+Schwarzschild geometry at `M/ell=.4`, `Rw/ell=1.5`; hold the Weyl coefficient
+nonzero. The question is literal interface compatibility, not another local
+vacuum trace or evolution calculation. The pre-calculation Grok brief fixes
+30 CPU seconds for direct tensor algebra and an independent review, with
+zero physical field solves and zero new trajectories. Check all singular
+Weyl components before making any quadratic-distribution argument, and check
+the regular normal-Weyl jump from coordinate curvature, boosts and units.
+Stop at a necessary condition if lower distribution products are not defined.
+
+**Outcome:** the pure-trace singular Weyl cancels. The regular normal-Weyl
+jump is nonzero and has dimensionless diagonal `(-32/135,-16/135,-16/135)`.
+It supplies a formal double-layer coefficient in the Weyl principal part
+under bounded-Weyl thin-layer control. This is not a complete junction
+theorem. A resolved transition or a derived effective interface remains
+necessary to relate the action choices. The direct symbolic calculation
+took 0.65625 CPU seconds; seven gravitational checks pass. This connection
+is documented in the existing Schur owner, without a new scan or raw result
+payload.
+
 ## Evolving geometric average, 17 October 2026
 
 The selected larger-geometry mechanism needs a response on an evolving

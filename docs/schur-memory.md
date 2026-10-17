@@ -306,6 +306,79 @@ the actual common-parent/transition geometry and its observer reduction;
 the present periodic spherical realization supplies neither by repetition.
 No additional precision campaign is opened here.
 
+### The wall connection between the two action choices
+
+The inherited-law programme needs a physical relation between the Einstein
+cap/wall candidate and the separately specified Weyl-squared realization.
+Here the finite question is whether the quiet material wall can be imported
+literally, with its existing sources. This is not the same question as deriving
+a coarser effective interface from a smooth geometry.
+
+Use signature $(-+++)$, $R^a{}_{bcd}=\partial_c\Gamma^a{}_{db}
+-\partial_d\Gamma^a{}_{cb}+\Gamma^a{}_{ce}\Gamma^e{}_{db}
+-\Gamma^a{}_{de}\Gamma^e{}_{cb}$, a spacelike common normal, and
+$[K_{ab}]=-k h_{ab}$. The singular curvature coefficients are
+$R_{anbn}^{\rm sing}=k h_{ab}$, $R_{ab}^{\rm sing}=k h_{ab}$,
+$R_{nn}^{\rm sing}=3k$ and $R^{\rm sing}=6k$, each multiplying the
+surface delta. Substitution in the **linear** four-dimensional Weyl
+decomposition cancels every singular Weyl component. This computation does
+not manipulate undefined products of deltas or establish a full quadratic
+thin-shell calculus.
+
+The regular Weyl tensor still steps from the conformally flat cap to the
+Schwarzschild exterior. Direct Christoffel/Riemann calculation, with zero
+exterior Ricci checked independently, gives in an orthonormal wall frame
+
+$$
+[C_{anbn}]=\frac{M}{R_w^3}\operatorname{diag}(-2,-1,-1),
+\qquad h^{ab}[C_{anbn}]=0.
+$$
+
+A radial Lorentz boost leaves these components unchanged. At the already
+owned $M/\ell=0.4$, $R_w/\ell=1.5$ event, the dimensionless jump is
+$\ell^2[C_{anbn}]=\operatorname{diag}(-32/135,-16/135,-16/135)$.
+It scales as inverse length squared, not inverse length cubed.
+
+The principal normal-derivative part of the Bach operator
+$(\nabla^\rho\nabla^\sigma+R^{\rho\sigma}/2)C_{\mu\rho\nu\sigma}$
+therefore has formal double-layer strength $[C_{\mu n\nu n}]$.
+In a controlled thin-layer limit with bounded metric/connection and bounded
+Weyl curvature approaching the two one-sided values, its leading weak action
+on a test tensor is
+
+$$
+-\int_\Sigma[C_{\mu n\nu n}]\,n^\rho\nabla_\rho Y^{\mu\nu}\,d\Sigma.
+$$
+
+This is the derivative-of-delta part, before the action's nonzero Weyl
+coefficient is applied. Ordinary Einstein and tension terms have only delta
+order. The quiet scalar is zero; a continuous scalar with bounded one-sided
+first derivatives also supplies no such double layer through its improved
+bulk stress. The existing Euler/Box ledger completes global divergences on
+smooth periodic metrics and finite time caps; it supplies no additional
+timelike-wall source. Their completed global terms are not adjustable Weyl
+dipole sources.
+
+This is a **necessary leading-order compatibility check**, conditional on
+the stated thin-layer control. Lower-order products and a complete junction
+require a regularization or resolved transition. It does not prove that a
+smooth connected solution is impossible. It shows why the current literal
+tension wall cannot simply be identified with an interface of the
+Weyl-squared candidate using the supplied data. If the wall is instead an
+effective boundary between resolutions, the reduction must supply this
+curvature response and its physical scale.
+
+[Reina--Senovilla--Vera, 1510.05515v1](https://arxiv.org/html/1510.05515),
+Sections 3.1--3.2, discusses the hazards of formal quadratic cancellations
+and restricts the generic distributional class. That generic theorem is not
+applied to this special trace jump; the tensor calculation above is direct.
+The [existing gravitational calculator](../src/recursive_horizons/nsc_atlas_gravitational_reduction.py)
+now exposes the regular normal Weyl components. Seven
+[checks](../tests/test_nsc_atlas_gravitational_reduction.py) include an
+independent coordinate-curvature derivation, the boost, all 256 singular
+Weyl components, units and the zero-mass limit. No new field solve, wall
+trajectory or full junction theorem is claimed.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

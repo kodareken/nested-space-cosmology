@@ -1,5 +1,6 @@
 """Independent checks for the parent-end monopole response."""
 import math
+from functools import lru_cache
 
 import pytest
 import sympy as sp
@@ -8,6 +9,7 @@ from recursive_horizons.nsc_atlas_gravitational_reduction import (
     KAPPA, boundary_stress_from_extrinsic, exact_tube_identities,
     homogeneous_action_variations, homogeneous_energy_stress,
     schwarzschild_boundary_response,
+    schwarzschild_normal_weyl,
 )
 
 
@@ -123,3 +125,73 @@ def test_fixed_energy_is_dust_and_extensive_energy_is_vacuum_form():
     tube = schwarzschild_boundary_response(0.4, 4.0)
     misread = homogeneous_energy_stress(tube['quasilocal_energy'], 0.0, 10.0)
     assert misread['vacuum_form_defect'] > 0.1
+
+
+def test_normal_weyl_from_coordinate_riemann_and_radial_boost():
+    t, r, theta, phi = sp.symbols('t r theta phi', real=True)
+    mass, velocity = sp.symbols('M v', real=True)
+    coordinates = (t, r, theta, phi)
+    f = 1-2*mass/r
+    metric = sp.diag(-f, 1/f, r**2, r**2*sp.sin(theta)**2)
+    inverse = metric.inv()
+
+    @lru_cache(None)
+    def gamma(a, b, c):
+        return sp.simplify(sum(inverse[a, d]*(
+            sp.diff(metric[d, c], coordinates[b])+sp.diff(metric[d, b], coordinates[c])
+            -sp.diff(metric[b, c], coordinates[d])) for d in range(4))/2)
+
+    @lru_cache(None)
+    def riemann(a, b, c, d):
+        return sp.simplify(sp.diff(gamma(a, d, b), coordinates[c])
+                           -sp.diff(gamma(a, c, b), coordinates[d])
+                           +sum(gamma(a, c, e)*gamma(e, d, b)
+                                -gamma(a, d, e)*gamma(e, c, b) for e in range(4)))
+
+    ricci = sp.Matrix(4, 4, lambda a, b: sp.simplify(sum(riemann(c, a, c, b) for c in range(4))))
+    assert ricci == sp.zeros(4)  # Therefore these Riemann components are Weyl.
+    radial = sp.simplify(metric[0, 0]*riemann(0, 1, 0, 1))
+    angular_time = sp.simplify(metric[0, 0]*riemann(0, 2, 0, 2)/(f*r**2))
+    angular_radial = sp.simplify(metric[1, 1]*riemann(1, 2, 1, 2)*f/r**2)
+    assert radial == -2*mass/r**3
+    assert angular_time == mass/r**3
+    boosted = sp.simplify((angular_radial+velocity**2*angular_time)/(1-velocity**2))
+    assert boosted == -mass/r**3
+    assert sp.simplify(-radial+2*boosted) == 0
+    row = schwarzschild_normal_weyl(.4, 1.5)
+    substitution = {mass: sp.Rational(2, 5), r: sp.Rational(3, 2)}
+    assert row['C_u_n_u_n'] == pytest.approx(float(radial.subs(substitution)))
+    assert row['C_theta_n_theta_n'] == pytest.approx(float(boosted.subs(substitution)))
+    assert row['C_phi_n_phi_n'] == row['C_theta_n_theta_n']
+    scaled = schwarzschild_normal_weyl(1.2, 4.5)
+    for key, value in row.items():
+        assert scaled[key] == pytest.approx(value/9)
+    assert all(value == 0. for value in schwarzschild_normal_weyl(0., 1.5).values())
+
+
+def test_pure_trace_shell_has_no_singular_weyl_tensor():
+    # R_{n a n b}^{sing}=k*h_ab from [K_ab]=-k*h_ab. Normal index3.
+    k = sp.symbols('k', real=True)
+    metric = sp.diag(-1, 1, 1, 1)
+    tangential = sp.diag(-k, k, k, 0)
+    normal = (0, 0, 0, 1)
+
+    def curvature(a, b, c, d):
+        return (normal[a]*normal[c]*tangential[b, d]
+                -normal[a]*normal[d]*tangential[b, c]
+                -normal[b]*normal[c]*tangential[a, d]
+                +normal[b]*normal[d]*tangential[a, c])
+
+    ricci = sp.Matrix(4, 4, lambda a, b: sum(metric[i, i]*curvature(i, a, i, b) for i in range(4)))
+    scalar = sum(metric[i, i]*ricci[i, i] for i in range(4))
+    assert ricci == sp.diag(-k, k, k, 3*k)
+    assert scalar == 6*k
+    for a in range(4):
+        for b in range(4):
+            for c in range(4):
+                for d in range(4):
+                    weyl = (curvature(a, b, c, d)
+                            -(metric[a, c]*ricci[d, b]-metric[a, d]*ricci[c, b]
+                              -metric[b, c]*ricci[d, a]+metric[b, d]*ricci[c, a])/2
+                            +scalar*(metric[a, c]*metric[d, b]-metric[a, d]*metric[c, b])/6)
+                    assert sp.simplify(weyl) == 0

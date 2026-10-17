@@ -83,6 +83,13 @@ specifies the clock terms needed when comparing resolutions. These are the
 working calculation targets; the hierarchy has not yet produced a cosmological
 Lambda value or a measured fractal dimension.
 
+The first [common-action wall check](schur-memory.md#the-wall-connection-between-the-two-action-choices)
+now specifies a nonzero normal-curvature moment that a literal thin wall
+would require in the Weyl-squared action. If the spherical regions describe
+different resolutions of one geometry, their interface action must instead
+come from that reduction. A literal material attachment and a change of
+effective description require their respective mathematical maps.
+
 ## Current map and independent approaches
 
 The [v1 motif](../results/development/nsc-cosmological-atlas-v1/atlas.json)

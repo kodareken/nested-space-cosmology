@@ -2806,6 +2806,14 @@ binds producing commit `8ecbeff`, the original geometry hash, metric identities
 and four-case indicators. Its correction fails vacuum form on the declared
 interval. This completes that one application; it does not authorize a new
 trajectory or refinement campaign.
+
+The shared-action wall check is a direct symbolic calculation:
+`python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.
+The seven controls include coordinate Riemann/Ricci, normal Weyl under a
+radial boost, pure-trace singular curvature, units and the zero-mass limit.
+`schwarzschild_normal_weyl(.4, 1.5)` returns the regular exterior tensor in
+inverse-length-squared units. The conditional leading double-layer argument
+is in the Schur owner; these tests do not implement a full quadratic junction.
 It evaluates one frozen state, takes no time steps, and retains the existing
 60 CPU-second / 40-million-value limit. Do not infer a new grid calculation
 or a change in the physical model from this benchmark.
