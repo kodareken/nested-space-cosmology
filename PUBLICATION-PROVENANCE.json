@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2303993,
+      "bytes": 2303997,
       "path": "docs/lab-snapshot.json",
-      "sha256": "df8238437029cac2d9c25f293f0fa5b3e8d4c4aee7bf8cab89cea4fe72c0bb9c"
+      "sha256": "1b1203875d62ba28d635d975b80230b9d3671f9a663e280961a6620f91cd798a"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 392404,
+      "bytes": 396138,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "0c91eef6c22c69c3186b6f51168ba0fa3800631ac7424d042313bec47cfede84"
+      "sha256": "c0bd5e7b9cb310ef2a558d15a10a8c21c5daed87f8270a09e3f9f0c78ecd7eb0"
     },
     {
       "bytes": 8895,
@@ -2201,9 +2201,9 @@
       "sha256": "7e7c50e31cf42ae37ee780d56873aa013596d70d1e1c3ab8f138112d3dd4b4ed"
     },
     {
-      "bytes": 391650,
+      "bytes": 392058,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "d8a1d06e25080f03066c13b4e5433701d1d672ddc81b7504874f098692243e46"
+      "sha256": "c7d87e57f3a0c61ec31465a9036889bd5da2dc32bfa6813cd268457e443dfbc3"
     },
     {
       "bytes": 6705,
@@ -21036,7 +21036,7 @@
       "sha256": "ccc0b88083622a77535cda2d80a715d387589c9f6f98b1ddc2cdc73b4e8f1a34"
     }
   ],
-  "lab_snapshot_sha256": "df8238437029cac2d9c25f293f0fa5b3e8d4c4aee7bf8cab89cea4fe72c0bb9c",
+  "lab_snapshot_sha256": "1b1203875d62ba28d635d975b80230b9d3671f9a663e280961a6620f91cd798a",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

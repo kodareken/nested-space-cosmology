@@ -8218,6 +8218,97 @@ preservation, not convergence or physical evolution. Independent Grok
 review supports the null route and the constraint/gauge implications, while
 leaving its local fixed-point estimate to be established.
 
+#### Moving-domain extension and the norm still to close
+
+An ambient extension must cover the zero-width cap corner. Reflection through
+the wall alone would need interior space that is absent at that corner.
+For a Lipschitz construction, use coordinate clamping instead. Given a wall
+path on `0<=s<=h`, define
+
+\[
+ \widehat v_i=\operatorname{clip}(v;v_i(0),v_i(h)),\qquad
+ s_i(v)=v_i^{-1}(\widehat v_i),
+\]
+\[
+ \widehat u_i=\operatorname{clip}
+       (u;\ell_i(\widehat v_i),u_i(s_i(v))),\qquad
+ \Pi_i(u,v)=(\widehat u_i,\widehat v_i).
+\]
+
+For the cap the interval collapses to one point at the initial corner, which
+is allowed by clip. The strictly positive lower bound on `dv_i/ds` controls
+the inverse map. In particular, for two wall paths with the same initial
+labels,
+`abs(s_1(v)-s_2(v))<=norm(v_1-v_2)_infty/b_min`. The projection's spatial
+Lipschitz bound uses only `a_max/b_min` and `abs(ell_i')`; its dependence on
+the wall path is also Lipschitz. No inverse cap width occurs.
+
+Represent each regional tuple `(y,p,q)` on a fixed ambient strip by
+composition with Pi. Its extension remains bounded and Lipschitz. Applying
+the nonlinear bulk function to that tuple extends the forcing with the same
+projection. This avoids requiring an independently extended derivative
+outside the actual regional domain. Such extensions are devices for the
+iteration and supply no physical data outside the solution domain.
+
+For `lambda>0` use the fixed weight
+`w_i(u)=exp(lambda*(u_i(0)-u))`. The outgoing prefix satisfies the exact
+norm inequality, for `u>=ell_i(v)`,
+
+\[
+ w_i(u)\left|\int_{\ell_i(v)}^u\Delta F_i(a,v)\,da\right|
+ \le\|\Delta F_i\|_w
+       \frac{1-e^{-\lambda(u-\ell_i(v))}}\lambda
+ \le\frac{\|\Delta F_i\|_w}{\lambda}.
+\]
+
+Restrict `lambda*a_max*h<=log(2)` so wall weights and cross-wall comparison
+factors stay bounded. Let M be a uniform Lipschitz bound on the extended
+first-jet tuples, and scale the wall difference in the comparison metric by
+`kappa=max(1,M)`:
+
+\[
+ d=\max_i\|(\Delta y_i,\Delta p_i,\Delta q_i)\|_w
+           +\kappa\|\Delta Y\|_\infty.
+\]
+
+The scaling retains changes in evaluation points and inverse wall-entry
+times. In particular, a Lipschitz trace evaluated at two entry times differs
+by a term proportional to M times their difference. That term cannot be
+dropped from the contraction estimate.
+
+The pending estimate must establish, with explicit dependence of its
+constants on the positive tube and data,
+
+\[
+ M_{\rm new}\le D(\lambda)+\frac{A_1}{\lambda}M+B_1hM,
+ \qquad
+ d_{\rm new}\le
+       \left(\frac{A_2}{\lambda}+B_2h(1+M)\right)d.
+\]
+
+The order matters: choose lambda from coefficients independent of M, then
+M from the finite weighted data bound D(lambda), then h. Otherwise an
+apparently small `1/lambda` could conceal a growing derivative constant.
+A complete proof must also show value-tube invariance, closure of the
+Lipschitz class under this metric, entry-branch corner compatibility, and
+convergence of the integral equations on the moving domains. These
+inequalities are stated here as proof obligations, not established estimates.
+
+There is a direct regularity route for a Lipschitz fixed point. On its actual
+domain, differentiating the outgoing prefix weakly would give
+
+\[
+ q_v=q_0'-\ell'F|_\ell+
+        \int_\ell^u(F_yq+F_pF+F_qq_v)\,da.
+\]
+
+This is a linear Volterra equation for q_v. After establishing its continuous
+solution with the actual data, the incoming pure derivative obeys
+`(p_u)_v=F_y*p+F_p*p_u+F_q*F`, with differentiated initial or wall data.
+This route could upgrade the limit to C1 first jets without assuming
+convergence of the iterates' derivatives. Passing through the source fronts
+and matching the entry branches remain part of that argument.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

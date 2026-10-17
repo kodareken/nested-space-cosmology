@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "158662e1ee28e54e5a142344400259613dd30326",
+  "current_receipt_commit_parent": "8de940dc092a77ffd230054e10cdd31f4e7457ae",
   "files": [
     {
       "bytes": 3120,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 392404,
-      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
-      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
+      "bytes": 396138,
+      "change": "Specify the moving-domain extension and pending weighted local-construction estimates.",
+      "changed_from_commit": "8de940dc092a77ffd230054e10cdd31f4e7457ae",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0c91eef6c22c69c3186b6f51168ba0fa3800631ac7424d042313bec47cfede84"
+      "sha256": "c0bd5e7b9cb310ef2a558d15a10a8c21c5daed87f8270a09e3f9f0c78ecd7eb0"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 391650,
-      "change": "Derive a primitive-preserving local null construction map and verify exact controls.",
-      "changed_from_commit": "158662e1ee28e54e5a142344400259613dd30326",
+      "bytes": 392058,
+      "change": "Specify the moving-domain extension and pending weighted local-construction estimates.",
+      "changed_from_commit": "8de940dc092a77ffd230054e10cdd31f4e7457ae",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d8a1d06e25080f03066c13b4e5433701d1d672ddc81b7504874f098692243e46"
+      "sha256": "c7d87e57f3a0c61ec31465a9036889bd5da2dc32bfa6813cd268457e443dfbc3"
     },
     {
       "bytes": 6705,

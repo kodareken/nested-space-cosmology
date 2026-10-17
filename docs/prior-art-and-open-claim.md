@@ -2882,6 +2882,12 @@ cumulative 34,000 values / 0.25 seconds. The owner's fixed-point constraint
 implication and exterior relabeling are explicit. Claims of contraction
 based only on unspecified small-time constants or on strong convergence of
 uncontrolled derivative defects are not adopted.
+The owner now specifies a coordinate-clamping extension that covers the
+zero-width cap corner, the exact exponentially weighted prefix inequality,
+and the scaled moving-wall norm. Invariant Lipschitz and contraction bounds
+are explicitly retained as proof obligations with their required order of
+constant selection. No additional numerical control or physical evaluation
+is run for this analytic follow-up.
 
 ## Discrete cap mass balance, 16 October 2026
 
