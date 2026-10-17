@@ -177,6 +177,28 @@ uses producer `7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b`, completing
 product audit uses 1,024 values / 0.109375 CPU seconds; constants,
 rounding, alpha powers, displays and provenance all pass.
 
+The full onset geometric remainder combines the source/scalar/cap receipts
+with interval second jets and the existing geometric matrix. Its ten
+manufactured controls initially use 13,312 values / 5.609375 active CPU
+seconds:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_geometric_remainder_bound.py -q -s
+```
+
+After committing the producer, the single original application requires a
+new output path and uses at most 49,152 values / 15 CPU seconds:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_geometric_remainder_bound.py --output <new-output-path>
+```
+
+It authenticates compact certificates and historical input hashes without
+sampling historical arrays. The [comparison owner](nsc-atlas-finite-amplitude.md#uniform-quadratic-geometric-comparison-on-the-original-onset)
+specifies the original finite domain, half-Hessian factors, reused matrix
+and strict endpoint threshold. No source/field evolution or grid scan is
+part of this calculation.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker

@@ -12405,6 +12405,171 @@ the completed first-difference certificates. The interval Hessian bounds
 and their assembly with the geometric comparison are still to be proved
 and evaluated; the reduction alone is not a quadratic wall certificate.
 
+### Uniform quadratic geometric comparison on the original onset
+
+Let `R_G=G_alpha-G0-alpha*G1`, with G1 the already identified first
+continuum response, and let C denote the completed uniform first-difference
+coefficients. Source remainders have the form `alpha^2*S`. Initial
+remainders vanish: the exact quiet initial data are common to the family.
+The separate stored-initial-data errors are not inserted into this
+comparison of exact solutions.
+
+**Algebraic second derivatives.** Connect the actual and alpha-zero state
+at each common point by a straight segment, using alpha as its parameter.
+Its state directions are bounded by the certified C values; the alpha
+direction is one and all input second derivatives are zero. The segment
+lies in the original finite box, where the algebraic maps have positive
+denominators. It need not itself solve the field equations.
+
+For `C(q)=cosh(sqrt(q))`, `S(q)=sinhc(sqrt(q))` and `q>=0`, comparison of
+their positive series coefficients gives
+
+\[
+ C'\le C/2,\quad C''\le C/12,\quad
+ S\le C,\quad S'\le C/6,\quad S''\le C/60.
+\]
+
+The values at zero are `C=S=1`, `C'=1/2`, `C''=1/12`, `S'=1/6` and
+`S''=1/60`. These provide derivative hulls over the whole q interval.
+In the wall map the argument is exactly `q=alpha*f^2/6`, so
+
+\[
+ q_1=(f^2+2\alpha ff_1)/6,\qquad
+ q_2=(4ff_1+2\alpha(f_1^2+ff_2))/6.
+\]
+
+The implementation constructs alpha on the declared exact nonnegative
+interval. An outward ball can extend a little below zero; structural
+nonnegativity of this product supplies its domain. No arbitrary negative
+q is clamped. Values and first/second jets are composed with interval
+product, reciprocal and exponential rules. All denominator floors are
+checked. The omitted q_L and W_xx terms are affine in the wall lapse map;
+the complete map retains them for the independent derivative controls.
+
+Let H_K and H_rW,H_LW,H_TW bound **half** the absolute second directional
+derivatives of K and the three wall maps over their boxes. Bulk p_r is an
+independent retained field slot, not a substituted wall trace. Both bulk
+and wall log-lapse boxes include the saved reference lower and upper
+endpoints plus the old absolute lapse error; this includes the small
+outward excess of the bulk reference upper endpoint above one. The
+geometric and scalar first-difference coefficients supply every direction,
+including the normalized N and D coefficients. At alpha zero the scalar,
+N and D state partials of the wall maps vanish. Taylor subtraction thus
+leaves the vacuum geometric derivative and the explicit leading alpha
+forcing, with no unknown scalar second derivative.
+
+**Longitudinal and mixed remainders.** Write
+`er=alpha^2*Sr+Jr`, `eL=alpha^2*SL+JL`, with Jr and JL the transverse
+integrals of the corresponding derivative remainders. The exact identity
+`r*q_r=source(r*q_r)-integral(C/4)` gives
+
+\[
+ V_R=\frac{\alpha^2 S_\Pi+W C_{\max}e_L/4+v_{\max}e_r}{r_{\min}}
+           +\alpha^2 F_q,
+\]
+\[
+ F_q=\frac{W C_{\max}C_L^2/8+C_rC_{q_r}}{r_{\min}}.
+\]
+
+Here Cmax is the **original frozen tube** lapse ceiling. It is not
+recomputed from the remainder. The exponential second-order term and
+the radius-product cross term are both present. The pointwise kernel
+remainder is bounded by
+
+\[
+ K_{S,R}=\frac{v_{\max}R_{p_r}}{r_{\min}^2}
+ +\frac{p_{\max}V_R}{r_{\min}^2}
+ +\frac{C_{\max}e_L}{4r_{\min}^2}
+ +\frac{2k e_r}{r_{\min}}+\alpha^2H_K.
+\]
+
+For the integrated kernel K_I,R, replace R_pr by Jr and multiply each
+pointwise term by W. The scalar first differences also bound the kinetic
+product. With `f=X/r`, use
+
+\[
+ C_f=C_X/r_{\min}+X_{\max}C_r/r_{\min}^2,
+\]
+\[
+ C_{f_U}=(C_P+f_{\max}C_{p_r}+p_{\max}C_f)/r_{\min}
+                      +f_{U,\max}C_r/r_{\min},
+\]
+\[
+ C_{f_x}=(C_Q+f_{\max}C_{q_r}+v_{\max}C_f)/r_{\min}
+                      +f_{x,\max}C_r/r_{\min},
+\]
+\[
+ F_{\rm kin}=f_{U,\max}C_{f_x}+f_{x,\max}C_{f_U},\qquad
+ L_{x,R}=\alpha^2S_{L_x}+2K_{I,R}+W\alpha^2F_{\rm kin}.
+\]
+
+The factor 2 comes from the exact bulk lapse equation. For the radius
+mixed equation `-r*K`, retain the additional `alpha^2*C_r*C_K` cross term.
+C_K is the already certified pointwise kernel first difference.
+
+**The same positive matrix.** Apply the homogeneous geometric wall bound
+with explicit alpha, frame-root change, tension change and cap lapse error
+all set to zero. Its inputs are er,eL,V_R,L_x,R. Add the three respective
+`alpha^2*H_wall` terms once to obtain wall remainders w_r,w_L,w_T. The
+comparison image is
+
+\[
+ J_r^{\rm image}=dt\{W_xw_r+r_{\max}K_{I,R}+kWe_r
+                              +W\alpha^2C_rC_K\},
+\]
+\[
+ J_L^{\rm image}=dt\{W_xw_L+2K_{I,R}+W\alpha^2F_{\rm kin}\},
+\]
+\[
+ R_{p_r}^{\rm image}=w_r+dt\{r_{\max}K_{S,R}+ke_r
+                                      +\alpha^2C_rC_K\}.
+\]
+
+The dependent outputs are `R_pL<=w_L+dt*(2K_S,R+alpha^2*Fkin)`,
+`R_T<=dt*w_T`, and the value/longitudinal bounds above. In particular the
+clock Hessian is not added a second time after it has entered w_T.
+
+Every new term is inhomogeneous. The same original entrywise matrix M
+bounds the vacuum geometric derivative, including the derived q_r and q_L
+slots. The existing homogeneous tension ceiling is at least its vacuum
+value 2. Therefore, with `y=(Jr,JL,R_pr)`,
+
+\[
+ y\le My+\alpha^2 f_2,\qquad
+ y\le\alpha^2(I-M)^{-1}f_2.
+\]
+
+The weighted norm already certified below 0.146 supplies the positive
+inverse. The implementation reuses the original exact matrix rows; it
+does not recalculate them on a new grid or adjust their coefficients.
+
+**Endpoint interpretation and strict signs.** The previous receipt's
+`radius_fixed_source` and `clock_fixed_source` intervals are precisely
+G1 for the Einstein wall radius and centre-anchored polar clock at the
+right source label. The proper-time rows and later-arrival coefficients
+are different quantities. The inherited clock offset is independent of
+alpha and cancels. For a negative first upper bound U and remainder C2,
+
+\[
+ \Delta G(\alpha)\le\alpha(U+\alpha C_2).
+\]
+
+A full-interval strict sign requires `alpha_max*C2 < -U` and concerns
+`0<alpha<=alpha_max`; the shift is zero at alpha zero. If this strict test
+fails, the reported sufficient range ends at `min(alpha_max,-U/(2*C2))`.
+Equality at the original threshold proves only nonpositivity and is not
+reported as a strict sign. These are sourced corrections relative to the
+vacuum at a fixed source label, not absolute contraction or evaporation.
+
+`nsc_atlas_geometric_remainder_bound.py` implements the interval jets,
+positive forcing, reused resolvent and strict endpoint comparison. Ten
+controls pass in one execution (13,312 charged values / 5.609375 active
+CPU seconds), including independent symbolic wall/bulk derivatives and
+an equality-threshold rejection. Grok's independent derivations accept the
+comparison, derivative hulls and fixed-label interpretation. The final
+implementation reviews accept the corrected two-sided bulk enclosure and
+the unchanged matrix assembly. The original application awaits producer freeze.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

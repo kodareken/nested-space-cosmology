@@ -3301,7 +3301,67 @@ of the existing second-amplitude theorem will identify the smallest
 unevaluated bound needed for a numerical remainder constant. It admits
 no new physical, symbolic or numerical execution.
 
-### Quadratic source-geometry remainder, 17 October 2026
+### Full onset geometric remainder comparison, 17 October 2026
+
+The source, scalar and normalized cap certificates now provide all finite
+first-difference inputs. The remaining calculation is the nonlinear
+geometric remainder on the same original source wedge, cap collar and
+coupling interval. Use the exact canonical wall map, the mixed bulk
+identities and the already certified positive geometric matrix. Keep all
+source/action/clock assumptions fixed.
+
+Bound half second directional derivatives of the bulk kernel and three
+wall maps over the complete certified boxes. Directions are the existing
+first-difference coefficients and alpha direction one; input second
+derivatives vanish along the comparison segment. The even hyperbolic
+functions use their positive series bounds at alpha zero. Their argument
+is exactly alpha*f^2/6 on a declared nonnegative alpha interval; no generic
+negative argument is clamped. The bulk transverse radius is an independent
+field input, not a substituted wall trace. Retain both source-product and
+radius-kernel cross terms and the scalar kinetic difference.
+
+The new forcing is quadratic in alpha; its homogeneous feedback is bounded
+by the same immutable three-component matrix. Solve its positive resolvent
+once. Compare the resulting radius and anchored-clock remainder with the
+previous fixed-source-label negative first intervals. A strict sign needs
+`alpha*C2 < -first_upper`; equality is not sufficient. If the original
+maximum does not satisfy it, report a smaller analytically derived half
+threshold while preserving the original uniform remainder interval.
+
+Admit one 160-bit original application after producer freeze: at most
+49,152 charged values / 15 process-CPU seconds, one fixed pass over the
+bulk/wall boxes and one three-by-three rational solve. Manufactured controls share 30,000 values /
+30 active CPU seconds. They check second-jet product/inverse/exponential
+rules, zero and nonzero product jets, the even-function zero limits,
+independent symbolic bulk/wall derivatives, branch/force cancellation,
+affine wall terms, unchanged homogeneous matrix, strict sign thresholds,
+positive floors and budget stops. A separate 4,096-value / 10-CPU-second
+audit checks source/input authentication, nonnegative forcing, exact
+resolvent residuals, half-Hessian factors, alpha powers, endpoint signs
+and outward displays. Keep only compact intervals, coefficients and hashes.
+
+Stop on a changed input, a lost positive denominator, incompatible first
+coefficient normalization, failed control or exhausted budget. No source
+or field solve, time/grid scan, source integration or retry is included.
+The principal failure risks are a missing nonlinear cross term, a scalar
+normalization or wall-branch sign error, and mixing fixed-label with proper-
+time or arrival coefficients. Independent Grok derivations, exact controls
+and the separate endpoint interpretation review address those distinctions.
+This is a finite-onset solution estimate, not formation, stability,
+evaporation, a later central arrival or an observational cosmology result.
+
+**Implementation controls:** ten tests pass in one execution, 13,312 charged
+values / 5.609375 active CPU seconds. Independent symbolic derivatives
+agree with the bulk/wall second jets, and the homogeneous image agrees
+with the existing matrix producer. The sign control rejects equality.
+The independent implementation review identified a bulk log-lapse enclosure
+that omitted the saved reference upper endpoint. Both endpoints are now
+included, as on the wall; the follow-up review accepts that correction.
+The assembly review accepts the unchanged
+homogeneous matrix and the single wall-clock Hessian. Original-data
+evaluation awaits producer freeze.
+
+## Quadratic source-geometry remainder, 17 October 2026
 
 The cap comparison closes the normalized radial input; the full geometric
 remainder still needs quadratic source data. Keep the original invariant
