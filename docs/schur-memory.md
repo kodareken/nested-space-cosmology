@@ -9,6 +9,141 @@ structure. The finite identities, spectral controls and geometric candidates
 below supply its retained dictionary; the physical identification of
 $\Sigma$ with the actual exterior remains open.
 
+## Step 7: averaging the explicit sourced initial slice
+
+The next geometric calculation uses the existing
+[cap--wall--bridge slice](nsc-atlas-connection-slice.md), from its regular
+centre to the retained right-end sphere $R_{\mathrm{cut}}/\ell=4$. This is
+the isolated sourced body, not an unevaluated common-parent connector.
+The reference length remains the already supplied $\ell$.
+
+Before evaluation, the finite question is whether proper-volume scalar
+averaging of that slice supplies a vacuum-form correction beyond its fixed
+cap volume term. The inputs remain $H\ell=1$, $k\ell=2$,
+$M/\ell=0.4$, $R_w/\ell=1.5$ and the existing smooth vacuum slicing taper.
+No observation selects them. The calculation imports the already checked
+spatial geometry and wall jump; it derives its scalar averages directly.
+[Buchert, gr-qc/0102049v2](https://arxiv.org/html/gr-qc/0102049v2), Sections
+2.1--3.2, equations (5), (7), (10b), (12)--(16), supply a comparison for
+the averaging identities. His fluid-comoving perfect-fluid assumptions
+are not imposed on the moving material wall.
+
+The budget is 30 CPU seconds and 20,000 evaluations of the existing spatial
+fields, with no evolution or parameter scan. Fixed Gauss orders 32 and 64
+are compared with adaptive quadrature at this one domain. The independent
+controls are the integrated Hamiltonian including the shell delta,
+direct wall-stress projection, the homogeneous cap limit and unit scaling.
+A nonzero density is called a vacuum contribution only if its pressure
+also has the required sign and magnitude. A non-vacuum result redirects
+the next calculation toward a physical common-parent averaging domain
+and its clocks rather than refining this isolated slice.
+
+With the owned convention $K=-\mathcal L_T h/2$, set
+$\theta=-\operatorname{tr}K$ and
+$\sigma^2=\tfrac12(K^i{}_jK^j{}_i-(\operatorname{tr}K)^2/3)$.
+Use $dV=4\pi R^2dl$, retaining both branches of the bridge. Then
+
+$$
+Q_D=\tfrac23(\langle\theta^2\rangle_D-\langle\theta\rangle_D^2)
+      -2\langle\sigma^2\rangle_D,\qquad
+3H_D=\langle\theta\rangle_D.
+$$
+
+The intrinsic scalar curvature includes
+$-4[R']/R_w\,\delta(l-l_w)$. The wall's integrated slice energy is
+$E_S=\sigma\gamma$ and its spatial stress trace is
+$S_S=\sigma(\gamma^2-3)/\gamma$. Dropping that curvature delta would
+remove a real term from the averaged constraint.
+
+For a Gaussian-normal continuation at the initial instant, with the
+domain transported along $T$, the scalar identities are
+
+$$
+3H_D^2=\kappa\langle E\rangle_D-
+       \tfrac12(\langle{}^{(3)}R\rangle_D+Q_D),\qquad
+3\ddot a_D/a_D=-\tfrac\kappa2\langle E+S\rangle_D+Q_D.
+$$
+
+This continuation specifies the clock for the instantaneous second
+identity; it does not construct the later Einstein--shell solution.
+Putting the curvature and variance into a spatially flat scalar fitting
+model gives
+
+$$
+\kappa\rho_g=-\tfrac12(Q_D+\langle{}^{(3)}R\rangle_D),\qquad
+\kappa p_g=-\tfrac12 Q_D+\tfrac16\langle{}^{(3)}R\rangle_D.
+$$
+
+Their trace projection is
+$\Lambda_{g,\mathrm{tr}}=(Q_D-\langle{}^{(3)}R\rangle_D)/4$;
+the vacuum condition is $3Q_D+\langle{}^{(3)}R\rangle_D=0$.
+Scalar fitting is not a tensor averaging prescription or an observer
+redshift--distance calculation. The supplied cap vacuum and the material
+wall remain explicit in $E$ and $S$.
+
+### Finite result and the next parent input
+
+The [compact calculation](../results/summaries/nsc-atlas-geometric-average-v1.json)
+gives $V_D/\ell^3=355.4931547895$ and
+
+$$
+H_D\ell=0.08352417231,\quad Q_D\ell^2=0.48101493580,\quad
+\langle{}^{(3)}R\rangle_D\ell^2=0.35791137287.
+$$
+
+Consequently $\kappa\rho_g\ell^2=-0.41946315433$ and
+$\kappa p_g\ell^2=-0.18085557242$. The trace projection is
+$\Lambda_{g,\mathrm{tr}}\ell^2=0.030775890732$, but the necessary vacuum
+condition has residual $(3Q_D+\langle{}^{(3)}R\rangle_D)\ell^2
+=1.80095618027$. This correction is therefore not a vacuum source.
+The largest 32/64/adaptive difference in the trace projection is
+$1.0\times10^{-10}$; this is a quadrature comparison, not a certified or
+physical-model uncertainty. The wall-inclusive Hamiltonian residual is
+$1.2\times10^{-16}$ in these units. Seven focused controls and the
+eighteen existing slice controls pass. No physical trajectory is run.
+
+An outward extension can be assessed without scanning cutoffs. Define the
+compact-body moments
+$I_B=\int_B\theta\,dV$, $J_B=\int_B(2\theta^2/3-2\sigma^2)\,dV$,
+and $\mathcal R_B=\int_B{}^{(3)}R\,dV$, including the wall.
+On the owned time-symmetric right end, $K=0$ and ${}^{(3)}R=0$; enlarging
+the isolated domain changes its volume but none of these moments. Hence
+
+$$
+\Lambda_{g,\mathrm{tr}}=
+ \frac{J_B-\mathcal R_B}{4V_D}-\frac{I_B^2}{6V_D^2}.
+$$
+
+The isolated correction vanishes as the exact AE domain grows. This
+analytic limit follows from the supplied vacuum end, rather than a
+numerical extrapolation to cosmological scales.
+
+For $N$ unchanged disjoint bodies and a hypothetical time-symmetric vacuum
+connector, the vacuum condition would require volume per body
+$v_* = 2I_B^2/(3J_B+\mathcal R_B)=23.1714109008\,\ell^3$.
+The retained domain of just one body already occupies
+$355.4931547895\,\ell^3$. Adding positive connector volume cannot meet
+that condition. Joining copies through a $K=0$ vacuum connector is therefore
+insufficient under this scalar averaging prescription. The existing
+general gluing theorem does not assert a time-symmetric connector;
+this is a conditional calculation, not a property assigned to its output.
+
+For a vacuum connector with nonzero $K$, its constraint instead gives
+$\mathcal R_C=-J_C$. The smallest additional scalar data are its proper
+volume and the two moments $I_C,J_C$, evaluated with a physically selected
+normal clock. For one retained body the vacuum test becomes
+
+$$
+V_D(3J_B+\mathcal R_B+2J_C)-2(I_B+I_C)^2=0.
+$$
+
+Choosing these moments to satisfy the equation would fit a desired form;
+they must come from a compatible parent geometry and observer prescription.
+The existing existence family does not supply them. This identifies the
+necessary Step-5 input to Step 7 without requiring a new formation or
+stability campaign. A common-parent development and tensor/observer
+interpretation remain necessary before a cosmological Lambda is predicted.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

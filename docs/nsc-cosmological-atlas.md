@@ -42,6 +42,16 @@ averaging introduce additional physical data; they are not silently fixed
 by the completed local coefficients. Continue the existing endpoint runs
 while developing this necessary operator connection.
 
+The first [geometric scalar average](schur-memory.md#step-7-averaging-the-explicit-sourced-initial-slice)
+now evaluates the explicit quiet sourced slice with the wall distribution
+retained. Its geometric density and pressure do not have vacuum form, and
+its localized trace coefficient vanishes as the AE domain grows. The next
+necessary Step-5 input is the common-parent volume and extrinsic-curvature
+moments on a physical observer slicing. Joining copies through a
+time-symmetric vacuum connector cannot supply the desired vacuum relation.
+This finite calculation
+does not require reopening the cap solver or running a cutoff scan.
+
 ## Current map and independent approaches
 
 The [v1 motif](../results/development/nsc-cosmological-atlas-v1/atlas.json)

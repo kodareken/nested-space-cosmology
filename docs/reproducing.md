@@ -4,7 +4,8 @@ The current Step-7 exact calculations and causal exterior operator reproduce wit
 
 ```sh
 python scripts/run_python.py scripts/record_nsc_atlas_effective_vacuum.py --output results/summaries/nsc-atlas-effective-vacuum-v1.json
-python scripts/run_python.py -m pytest tests/test_nsc_atlas_effective_vacuum.py tests/test_nsc_atlas_exterior_dtn.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_geometric_average.py --output results/summaries/nsc-atlas-geometric-average-v1.json
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_effective_vacuum.py tests/test_nsc_atlas_exterior_dtn.py tests/test_nsc_atlas_geometric_average.py -q
 ```
 
 The compact record contains the classical and conditional quantum trace
@@ -12,6 +13,11 @@ coefficients, fiducial SI inputs, interface polynomial, zero residuals and
 source hashes. The response tests include the existing prepared pulse and
 an exact constant physical field. They use the quiet reference geometry;
 they do not rerun the finite-amplitude P001 endpoint trajectories.
+The geometric record uses one existing initial slice through the right-end
+cutoff `R/ell=4`, retaining the wall curvature distribution and boosted stress.
+It records three quadrature methods at that same domain, their differences,
+and the conditional parent-volume test. Its geometric density and pressure
+fail the vacuum relation; the trace coefficient is not an observed Lambda.
 
 There is one package, `nested-space-cosmology`, importing `recursive_horizons`
 from root `src`. Use the pinned versions in [pyproject.toml](../pyproject.toml).

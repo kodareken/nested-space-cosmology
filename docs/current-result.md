@@ -4,6 +4,21 @@ Current presentation, 17 October 2026: [the living atlas manuscript](../paper/ne
 
 ## First Step 7 vacuum projection, 17 October 2026
 
+The [geometric scalar average](schur-memory.md#step-7-averaging-the-explicit-sourced-initial-slice)
+now uses the explicit quiet sourced slice through `Rcut/ell=4`, with both
+bridge branches and the wall curvature delta. Its geometric trace coefficient
+is `Lambda_g,trace * ell^2 = 0.030775890732`, with a largest quadrature
+difference of `1.0e-10`. Its density and pressure fail the vacuum condition:
+`(3 Q_D + <R3>_D) * ell^2 = 1.80095618027`. This is a scalar fitting
+calculation, not a cosmological Lambda. The Hamiltonian residual is below
+`1.2e-16`; seven new and eighteen existing slice controls pass. An analytic
+outward extension shows that this localized correction vanishes in the AE
+limit, and repeating unchanged bodies with a time-symmetric vacuum connector
+cannot meet the vacuum condition while retaining their declared domains.
+The next needed parent inputs are a physical normal clock, proper volume
+and two extrinsic-curvature moments; no new formation/stability work is needed
+to state that missing connection.
+
 The [effective Lambda calculation](schur-memory.md#step-7-the-current-candidates-first-vacuum-projection)
 reuses the current candidate's exact improved-stress trace. It gives
 `Delta Lambda_classical * L_ref^2 = 0` throughout the smooth on-shell bulk,

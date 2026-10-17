@@ -1,0 +1,91 @@
+{
+  "identification": "The scalar geometric correction fails p=-rho on this slice. Its trace is not a measured Lambda.",
+  "maximum_absolute_quadrature_difference": {
+    "H_normal": 4.599803871130348e-11,
+    "Q": 1.7585377598550167e-10,
+    "geometric_trace_projection": 9.950279489245872e-11,
+    "geometric_vacuum_condition": 3.0540370232756686e-10,
+    "hamiltonian_residual": 1.6653345369377348e-16,
+    "kappa_geometric_density": 2.3151813799415777e-11,
+    "kappa_geometric_pressure": 1.2495313117533158e-10,
+    "kappa_mean_energy": 1.0019762797242038e-13,
+    "kappa_mean_pressure": 7.4495964952348e-14,
+    "mean_intrinsic_curvature": 2.2215740358433322e-10,
+    "scalar_fitting_acceleration_residual": 1.1102230246251565e-16,
+    "three_volume_acceleration": 1.757920475853325e-10,
+    "total_trace_projection": 9.942191514511478e-11
+  },
+  "maximum_volume_quadrature_difference_over_ell3": 8.08881850389298e-11,
+  "reference": {
+    "cap_volume_fraction": 0.039767761349793526,
+    "checks": {
+      "bridge_volume_ell3_difference": 1.7053025658242404e-13,
+      "hamiltonian_ell2": -1.1102230246251565e-16,
+      "scalar_fitting_acceleration_ell2": 0.0,
+      "wall_trace_ell": -5.551115123125783e-17
+    },
+    "clock": "Instantaneous geodesic hypersurface normal; not an observer light-cone map.",
+    "domain": {
+      "H_ell": 1.0,
+      "M_over_ell": 0.4,
+      "Rcut_right_over_ell": 4.0,
+      "Rwall_over_ell": 1.5,
+      "k_ell": 2.0
+    },
+    "integrals_in_ell_units": {
+      "curvature_bulk": -101.05464979615002,
+      "curvature_total": 127.23504307684962,
+      "curvature_wall_delta": 228.28969287299964,
+      "energy_cap": 1.6875,
+      "energy_wall": 4.541679134708565,
+      "shear_squared": 61.16238570441507,
+      "stress_trace_cap": -5.0625,
+      "stress_trace_wall": -8.834430933423379,
+      "theta": 89.07681454994518,
+      "theta_squared": 462.30363427785676
+    },
+    "normalized_sources": {
+      "H_normal": 0.0835241723127698,
+      "Q": 0.48101493579881505,
+      "geometric_trace_projection": 0.03077589073202651,
+      "geometric_vacuum_condition": 1.8009561802671543,
+      "hamiltonian_residual": -1.1102230246251565e-16,
+      "kappa_geometric_density": -0.419463154334762,
+      "kappa_geometric_pressure": -0.180855572420956,
+      "kappa_mean_energy": 0.4403920164163619,
+      "kappa_mean_pressure": -0.3274961972473744,
+      "mean_intrinsic_curvature": 0.357911372870709,
+      "scalar_fitting_acceleration_residual": 0.0,
+      "three_volume_acceleration": 0.7520632234616957,
+      "total_trace_projection": 0.38649604277164773
+    },
+    "quadrature": "adaptive",
+    "schema": "nsc-atlas-geometric-slice-average-v1",
+    "scope": "Scalar fitting coefficients of one fixed sourced initial slice; no four-tensor vacuum or cosmological prediction.",
+    "spatial_evaluations": 378,
+    "volume_over_ell3": 355.4931547895006
+  },
+  "reproduce": "python scripts/run_python.py scripts/record_nsc_atlas_geometric_average.py --output results/summaries/nsc-atlas-geometric-average-v1.json",
+  "schema": "nsc-atlas-geometric-average-summary-v1",
+  "source_sha256": {
+    "scripts/record_nsc_atlas_geometric_average.py": "9a23b864484fee6b23faf56714ea4949b03badd84978d3050a0bda7b196f7861",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+    "src/recursive_horizons/nsc_atlas_geometric_average.py": "bec5bc4e1877fa3d19c0409a23fd634ad29cdc56ec6124b9b79f50e667228285",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "tests/test_nsc_atlas_geometric_average.py": "96634eec345ab1f71050642163f50667ffc121601c18dceaa4a2b40f94246341"
+  },
+  "time_symmetric_vacuum_extension_condition": {
+    "IR_over_ell": 127.23504307684962,
+    "Itheta_over_ell2": 89.07681454994518,
+    "J_over_ell": 185.87765144307434,
+    "minimum_retained_volume_per_body_over_ell3": 355.4931547895006,
+    "required_volume_per_body_over_ell3": 23.171410900838715,
+    "scope": "Conditional algebra for disjoint copies and a K=0 vacuum connector; no such connector metric is evaluated here."
+  },
+  "uncertainty_scope": "Quadrature differences only, not a certified bound or a cosmological/model uncertainty.",
+  "unresolved": [
+    "Physical common-parent averaging domain and clock",
+    "Common-parent metric, evolution and population data",
+    "Tensor vacuum form, conservation and observational comparison"
+  ]
+}
