@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "10b3d5c2256a95251888b7cbad06efbfdb9c3348",
+  "current_receipt_commit_parent": "9b47ce26754042ed5035e5779af13d80df50d88f",
   "files": [
     {
       "bytes": 3120,
@@ -33080,12 +33080,12 @@
       "sha256": "b8c216d73c39e7493916a5cc84837c1df9f83429e7fb1dbe7826a77bcc994081"
     },
     {
-      "bytes": 19512,
+      "bytes": 19495,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
+      "changed_from_commit": "9b47ce26754042ed5035e5779af13d80df50d88f",
       "path": "src/recursive_horizons/nsc_atlas_cap_compiled_coefficients.py",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "637603c2d5f74fb06526dd4eb4736b7ce48ed5ea1550f83e0aff5b66fbe8690a"
+      "sha256": "62796344d3ea464c92a6899c11e407e48c2e8f7dff49e9f03f5e00dd18746d2d"
     },
     {
       "bytes": 5752,

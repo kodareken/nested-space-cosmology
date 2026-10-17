@@ -144,7 +144,7 @@ def _potential(f, alpha):
     sh = math.sinh(q)
     sinc = sh/q if q != 0.0 else 1.0
     P = f*f*sinc*sinc*((ch*ch+1.0)/2.0)
-    U = 2.0*f*sinc*ch*ch*ch
+    U = 2.0*f*sinc*ch**3
     if not math.isfinite(P) or not math.isfinite(U):
         return _POTENTIAL, 0.0, 0.0
     return _OK, P, U
@@ -173,7 +173,7 @@ def _point(panel, point, mass, alpha, count, cut, has_background, time, onset_in
     chi = _horner_low(powers[cell, 0], xi)
     k = _horner_low(powers[cell, 1], xi)
     r = math.tanh(z)
-    A0 = 1.0/(math.cosh(z)*math.cosh(z))
+    A0 = 1.0/np.cosh(z)**2
     if cell == 0:
         qfield = powers[cell, 0, 1]+xi*xi*(powers[cell, 0, 3]+xi*xi*powers[cell, 0, 5])
         ratio = z/r if z != 0.0 else 1.0
@@ -255,7 +255,7 @@ def _point(panel, point, mass, alpha, count, cut, has_background, time, onset_in
     for j in range(local):
         slot = int(indices[cell, j])
         partials[slot] = r*r*U*fb[j]/2.0+A*h*hb[j]/2.0
-        partials[count+slot] = A*p*value[j]/(A0*2.0)
+        partials[count+slot] = A*p*(value[j]/A0)/2.0
     if has_background == 1:
         partials[partials.shape[0]-1] = r*r*U*f_T/2.0+A*(p*p_T+h*h_T)/2.0
     out[2] = A

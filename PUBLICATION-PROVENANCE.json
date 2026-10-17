@@ -1558,7 +1558,7 @@
     {
       "bytes": 2354377,
       "path": "docs/lab-snapshot.json",
-      "sha256": "b53c315079491bf3fe644161a974979263212af1b1b6298adb4ad568c2066e79"
+      "sha256": "5f57b29b2aa328756f8042c20e0224b8a55653c923395d5560d8635b6c286a19"
     },
     {
       "bytes": 4997,
@@ -16901,9 +16901,9 @@
       "sha256": "b8c216d73c39e7493916a5cc84837c1df9f83429e7fb1dbe7826a77bcc994081"
     },
     {
-      "bytes": 19512,
+      "bytes": 19495,
       "path": "src/recursive_horizons/nsc_atlas_cap_compiled_coefficients.py",
-      "sha256": "637603c2d5f74fb06526dd4eb4736b7ce48ed5ea1550f83e0aff5b66fbe8690a"
+      "sha256": "62796344d3ea464c92a6899c11e407e48c2e8f7dff49e9f03f5e00dd18746d2d"
     },
     {
       "bytes": 5752,
@@ -21486,7 +21486,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "b53c315079491bf3fe644161a974979263212af1b1b6298adb4ad568c2066e79",
+  "lab_snapshot_sha256": "5f57b29b2aa328756f8042c20e0224b8a55653c923395d5560d8635b6c286a19",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
