@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
+  "current_receipt_commit_parent": "330bfe70c44a1520f97ded0988edb4af92b03812",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 233412,
-      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
-      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
+      "bytes": 233980,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "122909c2feaec69002f1585f3a381ebc7829560101f0f681f29b0481c4a4439c"
+      "sha256": "1762592127199f3d6b885c2c2182c701d21c852740c1a4e50888fe01d00e2cc0"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 339407,
-      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
-      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
+      "bytes": 340204,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "217e9d39fb45d3a4cd14a959b2691237d938137dbfbf4cb9b5c85a3cee3dfc19"
+      "sha256": "b5d1b46675e3d50a30d522b37af7cffe99ce8a635899a2d39eae05d0ee77e8a4"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 508086,
-      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
-      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
+      "bytes": 513142,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "43878935313232fff52962522c9467d80bb3710d90759e7ed8064a18ef7b17f1"
+      "sha256": "519b48553018541a6877f3bbdc97712ca96645e5ef0a606c19424fafd2abfe12"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 404127,
-      "change": "Establish the second amplitude derivative and quadratic onset remainder; integrate the proof into the living manuscript.",
-      "changed_from_commit": "7f816bf711cb088f9034b0ac90e95bfcd10ad762",
+      "bytes": 407461,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5b530b006f1b47437ab1f5b6e7d407383d0209c5226d13927cf6d306399b843d"
+      "sha256": "4b0575ea1bfe985433b2d40f2147c5cb1468624913feced3a10c1de645a97dea"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 126205,
-      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
-      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
+      "bytes": 127063,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "87509abe8a9c7836de84b37135a66f8e80538c4cb7d2d4ce2907d48959504fe6"
+      "sha256": "50b171b725c095fad7ab0f62317563b688a9a719daaab1837584b0ff23e6122c"
     },
     {
       "bytes": 18356,
@@ -11484,12 +11484,12 @@
       "sha256": "6ecc2724e58650682f26f0aa00d4ce5833569ec0559543f5bd87942cc0af6ce8"
     },
     {
-      "bytes": 30193,
-      "change": "Carry optional interior-jet history enrichment through runtime and original-input certificates.",
-      "changed_from_commit": "b422d9b800d636755b23ee3332ffe1b2ac24c386",
+      "bytes": 30789,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
       "path": "docs/storage/validation-source-successors.json",
       "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
-      "sha256": "38e56cca747fa80be3d858b1f7e57d4b32a2a73fd5f021cb7524aa0f57350b7d"
+      "sha256": "a1b7e1e9a5af5bd4648f38bce8315d76c71b2e34c0188f3be439e98b7ca42833"
     },
     {
       "bytes": 5774,
@@ -32506,12 +32506,12 @@
       "sha256": "7c0d3e984a60a829ed0deb59976fb7c1afcb8e2ff308c7d0be62a2f86f26705f"
     },
     {
-      "bytes": 7242,
-      "change": "Authenticate compact summaries against their explicitly pinned original producers without scientific replay.",
-      "changed_from_commit": "2551c9f52703fb418bec5a5ebf3d0bde136cfcc5",
+      "bytes": 7298,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
       "path": "scripts/validation_source_successors.py",
       "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
-      "sha256": "6ed04648bb81bf1e62427415f3a7f4033d2eb26d6749d5f3f3d5bbd14d35cbad"
+      "sha256": "e4f1ee113fa0fd54f9b2dae951832750d9d70c42d4ad1d8450f018f3c47269fa"
     },
     {
       "bytes": 2185,
@@ -32770,6 +32770,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_radial_reference.py",
       "retention_reason": "Smooth-potential diagnostic reference, moving affine radial maps and independent manufactured controls.",
       "sha256": "fdf3a9dc430709e2a29f944e5bba6c417f96fd75104d67ff3de1263d4ec9f5ab"
+    },
+    {
+      "bytes": 20242,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
+      "path": "src/recursive_horizons/nsc_atlas_cap_response.py",
+      "retention_reason": "Existing cap metric and clock implementation, extended with a fixed-label wall-only query; original bytes retained by source-successor authentication.",
+      "sha256": "4ab09648fd9b5a7e41d6f5237ceed9ff86c8dc53d823a5216477369999356dbe"
     },
     {
       "bytes": 9523,
@@ -36687,6 +36695,14 @@
       "sha256": "0821db1adc57f050ef042316c193a78835ab1bd9571dd139446eb45109eeb22e"
     },
     {
+      "bytes": 6758,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
+      "path": "tests/test_nsc_atlas_wall_coefficient_pullback.py",
+      "retention_reason": "Manufactured source-identity, event/frame pullback and wall-only interface controls; no physical evolution.",
+      "sha256": "b9d6816cd6de42a615115f13705472123d1e10d72dfe4b0a27da902cbec387fc"
+    },
+    {
       "bytes": 14569,
       "path": "tests/test_nsc_atlas_wall_mass_closure.py",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
@@ -40031,12 +40047,12 @@
       "sha256": "f366f5baab84f49ce93907e780093db4ca07f30bf06227a18ec73061136cd1b9"
     },
     {
-      "bytes": 13786,
-      "change": "Authenticate compact summaries against their explicitly pinned original producers without scientific replay.",
-      "changed_from_commit": "2551c9f52703fb418bec5a5ebf3d0bde136cfcc5",
+      "bytes": 13867,
+      "change": "Connect existing wall/slice-clock coefficients to fixed source labels and verify the bounded interface.",
+      "changed_from_commit": "330bfe70c44a1520f97ded0988edb4af92b03812",
       "path": "tests/test_validation_source_successors.py",
       "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
-      "sha256": "ccc0b88083622a77535cda2d80a715d387589c9f6f98b1ddc2cdc73b4e8f1a34"
+      "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
   "navigation_changes": [

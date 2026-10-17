@@ -6,6 +6,22 @@ Scientific conclusions retain the domains in their owning notes.
 The current paper and test dependencies use Matplotlib 3.11.2; the scientific
 stack includes python-flint 0.9.0 and Numba 0.68.0.
 
+The cap response solution also has `wall_sample(t)`, which returns its
+wall-radius and polar-slice clock coefficients at fixed exterior label
+without evaluating an arrival ray. The [coordinate/source bridge](nsc-atlas-finite-amplitude.md#connecting-first-coefficients-at-a-fixed-source-label)
+converts original affine source label xi to the existing normalized query
+t. Numerical source, geometry, field and clock-quadrature errors still
+require their own bounds. Its manufactured controls run with:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_wall_coefficient_pullback.py -q -s
+```
+
+This command performs no physical source solve, evolution or grid scan.
+The cap module's registered implementation successor authenticates its
+original result-producing bytes; historical source-context commands below
+retain their declared snapshots.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker

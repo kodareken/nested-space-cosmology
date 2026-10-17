@@ -97,6 +97,19 @@ requires an extended-domain argument; the onset clock is not that arrival
 waveform. Saved numerical coefficients and histories retain their own
 accuracy question.
 
+
+The [source and coordinate bridge](nsc-atlas-finite-amplitude.md#connecting-first-coefficients-at-a-fixed-source-label)
+now identifies the required event shift for the existing wall and cap
+coefficient functionals. Differentiating the exact source ODE recovers
+the earlier affine constraint. The new `CapSolution.wall_sample(t)` query
+returns the Einstein wall-radius and polar-slice clock coefficients at
+fixed exterior label, equivalently fixed original source label, without
+tracing a central-arrival ray. Its 13 manufactured controls pass with
+13,380 charged values / 0.328125 active CPU seconds. This is a verified
+interface and analytic coordinate/source connection; physical coefficient
+evaluation, full linearized-equation identification and numerical error
+bounds remain the next work.
+
 ## Fixed cap and moving-wall connection, 16 October 2026
 
 The first [retained-source fixed-space onset attempt](nsc-atlas-finite-amplitude.md#first-retained-source-fixed-cap-interval)

@@ -165,6 +165,30 @@ def wall_clock_coefficients(wall, nu_E, delta_E):
             "wall_normalization_defect": float(normalization)}
 
 
+def fixed_label_wall_coefficients(*, x, v, beta_minus, e, T1, V1, V0_s):
+    """Pull Einstein radius and polar-slice clock coefficients to fixed V.
+
+    Inputs are first alpha coefficients at fixed Jordan proper wall time.
+    Here x is the reference wall radius; fixing V also fixes the original
+    affine source label. e already includes the Jordan-to-Einstein frame
+    correction. This algebra does not bound errors in its numerical inputs.
+    """
+    values = {name: _number(value, name) for name, value in (
+        ("x", x), ("v", v), ("beta_minus", beta_minus), ("e", e),
+        ("T1", T1), ("V1", V1), ("V0_s", V0_s))}
+    x, v, beta_minus, e, T1, V1, V0_s = (values[name] for name in
+        ("x", "v", "beta_minus", "e", "T1", "V1", "V0_s"))
+    if not .45 <= x <= .55:
+        raise ValueError("fixed-label wall exits the admitted radius interval")
+    if V0_s == 0.:
+        raise ValueError("fixed-label pullback requires a nonzero label rate")
+    shift = -V1/V0_s
+    result = {"proper_time_shift": shift,
+              "e_fixed_V": e+v*shift,
+              "T1_fixed_V": T1+beta_minus/(1-x*x)*shift}
+    return {key: _number(value, key) for key, value in result.items()}
+
+
 def null_integrand(r, nu_E, delta_E):
     r, mass, lapse = np.broadcast_arrays(np.asarray(r, dtype=float),
         np.asarray(nu_E, dtype=float), np.asarray(delta_E, dtype=float))
@@ -262,15 +286,35 @@ class CapSolution:
         self.wall_cache[t] = row
         return row
 
-    def sample(self, t):
-        t = _time(t)
-        self.budget.check()
-        row = dict(self._wall(t))
+    def _clock_coefficient(self, t):
         panels = self.settings["time_panels"]
         panel = min(int(t*panels), panels-1)
         local = 2*(t-self.time_cuts[panel])*panels-1
         weights = np.array([polynomial(local) for polynomial in self.time_basis])/(2*panels)
-        T1 = self.time_prefix[panel]+float(weights @ self.time_values[panel])
+        return self.time_prefix[panel]+float(weights @ self.time_values[panel])
+
+    def wall_sample(self, t):
+        """Return wall/slice-clock coefficients without a central-arrival ray.
+
+        Reuses the same prepared fields, radial metric, clock quadrature and
+        shared budget. The fixed-V outputs are first-order coefficients,
+        with the same unresolved numerical errors as those inputs.
+        """
+        t = _time(t)
+        self.budget.check()
+        row = dict(self._wall(t))
+        T1 = self._clock_coefficient(t)
+        exterior = self.wall_solution.sample(t)
+        pullback = fixed_label_wall_coefficients(
+            x=row["x"], v=exterior["v"], beta_minus=exterior["beta_minus"],
+            e=row["e"], T1=T1, V1=exterior["V1"], V0_s=row["V0_s"])
+        return {**row, "T1": float(T1), "V1": float(exterior["V1"]), **pullback}
+
+    def sample(self, t):
+        t = _time(t)
+        self.budget.check()
+        row = dict(self._wall(t))
+        T1 = self._clock_coefficient(t)
         if t not in self.ray_cache:
             self.ray_cache[t] = ray_integral(self.cap_field, row["q0"], row["x"],
                 radial_order=self.settings["radial_order"], ray_order=self.settings["ray_order"], budget=self.budget)

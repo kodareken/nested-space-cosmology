@@ -175,6 +175,7 @@ def test_only_explicit_package_path_is_eligible():
     assert not tool._source_path("src/recursive_horizons/nsc_atlas_characteristic_initialization.py")
     assert tool._source_path("src/recursive_horizons/nsc_atlas_refined_cache.py")
     assert not tool._source_path("src/recursive_horizons/nsc_atlas_nonlinear_source.py")
+    assert tool._source_path("src/recursive_horizons/nsc_atlas_cap_response.py")
     assert not tool._source_path("scripts/data.json")
     for name in ("nsc_atlas_cap_field", "nsc_atlas_background_profile", "nsc_atlas_prepared_response",
                  "nsc_atlas_characteristic_background"):

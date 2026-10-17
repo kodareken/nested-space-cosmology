@@ -3071,6 +3071,63 @@ finite evaluation budget. A saved numerical coefficient is not identified
 by the analytic Taylor theorem alone. Later central arrival also needs
 an extended-domain estimate.
 
+
+### Connecting the existing wall coefficients, 17 October 2026
+
+The first concrete output is the Einstein wall-radius coefficient and its
+polar-slice central-clock coefficient at a fixed original source label.
+The existing wall and cap solvers already supply the corresponding
+coefficients at fixed Jordan proper wall time. Their exterior embedding
+coefficient supplies the required change of event. The source affine
+label and reference wall radius must remain distinct.
+
+Reuse the existing cap response module and solution object. Add a scalar
+pullback and a wall-only query that does not evaluate a central-arrival
+ray. The mathematical inputs are inverse-function differentiation,
+first-order conformal conversion and differentiation of the owned source
+ODE. Check the source constraint against the earlier analytic source
+functional; a Hermite approximation is not a new physical input.
+
+Manufactured controls are admitted under one cumulative allowance of
+20,000 charged scalar/algebra values and 20 active process-CPU seconds.
+They use an exactly invertible nonzero label perturbation, an independently
+differentiated conformal radius, a known clock integral, quiet and label
+rescaling limits, input guards and a ray evaluator that fails if called.
+An exact source-ODE control checks the cancellation of the reduced-field
+terms. No retained physical field, source integration, trajectory, grid
+scan or numerical Taylor constant is admitted. Authentication checks may
+read existing records and original Git bytes without running producers.
+
+Independent Grok investigation corrected its initial incomplete search:
+the nonzero first clock coefficient already exists in `CapSolution`;
+`ReferenceWallGauge` alone only supplies its zero-amplitude chart factor.
+The implementation will retain the complete event shift and distinguish
+it from the existing central-arrival shift. A failed sign, frame, source
+or query-count check stops this component for diagnosis before any
+physical evaluation is designed.
+
+
+**Interface outcome:** 13 manufactured controls pass with 13,380 charged
+values / 0.328125 active CPU seconds. The scalar pullback and wall-only
+query are implemented in the existing cap module; the original arrival
+sample retains its arithmetic and schema. Forty-two source-authentication
+controls pass. The retained field comparison authenticates under its
+explicit `19983a7b4730d1fdc8e59ae4ba2f3efd560913a6` context with zero cap
+solves. An initial current-context check correctly rejected the historical
+owner-document mismatch; its published context was then used, without
+weakening that check. Original cap-module bytes also authenticate against
+the registered successor. Separate Grok source reviews confirm the written
+identities and the implemented query, including the original arrival path.
+No physical coefficient has been evaluated.
+
+The next analytic check is whether the alpha-zero geometric subsystem
+closes over the common leading scalar, without its next normalized
+coefficient, and whether the old mass, wall and clock functionals satisfy
+that subsystem with the same quiet constants. Separate cap/radial and
+wall/exterior Grok investigations are assigned those explicit equations.
+This admits reading and derivation only; no numerical coefficient,
+trajectory or error-constant evaluation is introduced.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

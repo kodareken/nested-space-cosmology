@@ -11005,6 +11005,116 @@ extension, four-term forcing, finite-slab induction and output-specific
 Taylor constant. These are mathematical source reviews, not experimental
 comparisons or independent numerical reproductions.
 
+
+#### Connecting first coefficients at a fixed source label
+
+The existing [moving-wall](nsc-atlas-wall-evolution.md#displacement-and-the-exterior-clock)
+and [cap-clock](nsc-atlas-cap-response.md#wall-time-and-central-arrival)
+functionals use Jordan proper wall time s. Their code calls the reference
+wall radius `x`. In this comparison use xi for the original affine source
+label and z for that reference wall radius, to keep the two coordinates
+separate. With a=4/5 and the unchanged exterior null gauge,
+
+\[
+ F(\xi)=(1-\xi/a)e^{\xi/a},\qquad
+ V(\xi)=F(\xi)/U_0,\qquad
+ t(\xi)=\frac{V(\xi)-V_a}{V_b-V_a}.
+\]
+
+Fixing xi fixes V independently of alpha. It does not fix proper wall
+time. The old coefficients have the definitions
+
+\[
+ r_{J,W}(s,\alpha)=z(s)+\alpha\rho(s)+O(\alpha^2),\quad
+ r_{E,W}(s,\alpha)=z(s)+\alpha e(s)+O(\alpha^2),
+ \qquad e=\rho-\frac{z p_W^2}{12},
+\]
+\[
+ T_W(s,\alpha)=T_0(s)+\alpha T_1(s)+O(\alpha^2),\qquad
+ V_W(s,\alpha)=V_0(s)+\alpha V_1(s)+O(\alpha^2).
+\]
+
+Here p_W is the leading normalized scalar, v=z_s and
+`T_0,s=beta_minus/(1-z^2)`. Inverting the last equation at fixed V gives
+`s_1=-V_1/V_0,s`. Consequently the candidate coefficients for the onset
+comparison are
+
+\[
+ \boxed{R_1\big|_\xi=e-v\frac{V_1}{V_{0,s}},\qquad
+ T_1\big|_\xi=T_1-\frac{\beta_-}{1-z^2}\frac{V_1}{V_{0,s}}.}
+\]
+
+The first is an Einstein-frame radius coefficient. The corresponding
+Jordan coefficient replaces e with rho. The original wall clock supplies
+`V_1=V_0 eta`, `V_0,s=-V_0/(2a(v-beta_plus))`. Thus the event-shift terms
+may also be written with `2a(v-beta_plus) eta`; no division by beta_plus
+is needed. Differentiating the fixed-label clock coefficient uses the
+entire product,
+
+\[
+ \nu_1=\frac{ds_0}{d\xi}\,\partial_s
+ \left(T_1-T_{0,s}\frac{V_1}{V_{0,s}}\right),\qquad
+ \frac{ds_0}{d\xi}=\frac{V_\xi}{V_{0,s}}.
+\]
+
+Multiplying T_1,s by only the vacuum `ds_0/dxi` would omit the event
+shift. The earlier arrival correction uses `q_0,s=(beta_minus+v)/(1-z^2)`
+instead of T_0,s and also contains a ray integral. It is not this clock
+observable.
+
+**Source compatibility.** On the original affine source put g=xi p and
+rho_src=xi+alpha h+O(alpha^2). Differentiating the exact source equation
+at alpha zero gives
+
+\[
+ h''=\frac{gg''-2(g')^2}{6\xi}+\frac{gg'}{3\xi^2}
+     =\frac{\xi p p''}{6}-\frac{\xi(p')^2}{3},\qquad
+ h(2/5)=h'(2/5)=0.
+\]
+
+This is precisely the source constraint integrated by
+`constraint_samples` and `source_traces`, with the original compact
+profile. Its Einstein radius coefficient at fixed original label is
+`h-xi p^2/12`; its log conformal coefficient is `-p^2/6`. In particular,
+the initialization field named `h_einstein` uses a different affine
+parameter and is not this fixed-label radius coefficient. The
+[existing bulk owner](nsc-atlas-bulk-response.md#source-data-and-the-unchanged-affine-normalization)
+retains the extra source integral required by that distinction.
+The quiet prefix fixes the same homogeneous source solution and the zero
+wall-response constants. The cap's central lapse correction also agrees
+on the onset domain: its central field is exactly zero there.
+
+These are analytic source and coordinate identifications. The older
+quadratures, geometry splines and dense field approximation still have
+numerical errors; their stored samples are not exact first derivatives.
+A complete error comparison must also match the linearized equations
+and bound those numerical errors in the stated onset domain. The
+quadratic Taylor constant has not been evaluated by this conversion.
+No central-arrival or later-time estimate is obtained from it.
+
+The [existing cap response module](../src/recursive_horizons/nsc_atlas_cap_response.py)
+now exposes `fixed_label_wall_coefficients` and `CapSolution.wall_sample(t)`.
+The latter reuses the prepared fields, radial metric and integrated wall
+clock, and obtains the exterior embedding from the same wall solution.
+It does not call the ray evaluator or change the historical arrival
+sample/summary schema. The shared clock-prefix expression retains its
+original arithmetic order. Inputs and resulting coefficients must be
+finite, the reference wall radius stays in `[.45,.55]`, and the label
+rate must be nonzero.
+
+Thirteen [manufactured controls](../tests/test_nsc_atlas_wall_coefficient_pullback.py)
+pass with 13,380 charged scalar/algebra values and 0.328125 active CPU
+seconds. They independently invert a perturbed event map and differentiate
+a conformally transformed radius, test the source identity, and recover
+a known partial-panel clock integral. Quiet and label-rescaling limits,
+invalid input rejection and a deliberately forbidden ray call are also
+checked. The original arrival query retains its different event shift.
+No physical field solution or new saved coefficient is evaluated.
+Separate Grok source reviews confirm the coordinate/source identities and
+the implementation's sign, frame, shared clock arithmetic and separation
+of wall and arrival queries. Numerical certification is not inferred from
+those reviews or manufactured controls.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,
