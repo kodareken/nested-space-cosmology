@@ -206,6 +206,17 @@ audit. The summary is 6,437 bytes. The initial command stopped at a code/input
 authentication mismatch before calculation; the corrected runner completed.
 Runtime evaluation and the coupled metric propagation remain separate.
 
+The [integrated-jet comparison](nsc-atlas-finite-amplitude.md#coupled-comparison-with-integrated-exterior-jets)
+now retains metric and clock feedback in a connected error system. Spatial
+L1 errors of exterior transverse jets preserve the time integral of wall
+inputs; explicit radius, scalar and lapse prefix bounds connect them to the
+cap. The instantaneous graph has `B^2=0`, with metric feedback in its time
+block. Four exact/manufactured controls pass (29,000 values / 0.0625 active
+CPU seconds). The coefficient tube, reference derivatives and continuous
+residuals still need uniform physical bounds before evaluating the inverse.
+No new trajectory or claimed physical validity interval follows from this
+conditional comparison alone.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

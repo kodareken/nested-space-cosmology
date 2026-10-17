@@ -583,7 +583,18 @@ The later Verify run `38983430995` at `b422d9b` also passes both complete
 Linux/Windows suites and current-paper checks. The PDF workflow at `0a2799c`
 passes separately; newer commits retain their own queued verification.
 
-The connected scalar inverse has a separate exact/manufactured control command:
+The full metric-feedback comparison has four exact/manufactured controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_integrated_feedback.py -q -s
+```
+
+They pass with 29,000 charged values / 0.0625 active CPU seconds, including
+the moving interval's complete boundary history and the production lapse
+source in canonical variables. They do not evaluate a physical inverse
+constant or run a trajectory.
+
+For the connected scalar inverse:
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_transmission_bound.py -q -s

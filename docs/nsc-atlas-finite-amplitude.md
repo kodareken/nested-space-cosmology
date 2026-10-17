@@ -7149,23 +7149,270 @@ hybrid and derived transmission equations did not change. There is no
 physical source readout, evolution, sampled coefficient enclosure or new raw
 data in these controls.
 
-This makes the next full-system obstruction specific: cap metric errors
-depend instantaneously on E-plus, while the incoming wall law also depends
-on cap A and the exterior metric prefix. Those extra edges can create a
-cycle in the comparison matrix. Their uniform gains, exterior metric
-transport, clock/wall variations and continuous residuals must be bounded
-before inverting that larger system. The scalar nilpotence result does not
-assert nilpotence, or an inverse, for the complete Einstein-wall system.
+This makes the full-system feedback specific: cap metric errors depend
+instantaneously on E-plus, while the exterior wall jets depend on cap A.
+Those paths can create a cycle in a comparison using only global suprema.
+The integrated exterior norms below retain their characteristic history and
+put that feedback in the time-integrated part. Their uniform gains and
+continuous residuals still need bounds; the scalar inverse alone is not the
+Einstein-wall estimate.
+
+## Coupled comparison with integrated exterior jets
+
+The previous supremum comparison is valid, but applying it to the metric
+boundary can create an unnecessarily large instantaneous feedback bound.
+The exterior prefix integrates over space; a change at the current wall
+endpoint alone has zero measure. Past wall inputs do matter. Their influence
+is retained by the following moving-interval identity, rather than discarded
+by calling the endpoint contribution zero.
+
+Use the same prescribed `W(x)>0`, `W_x>0` and boost gauge for both solutions.
+For each exterior field `y in {r,L,X}`, put
+
+\[
+ p_y=y_{\bar U},\qquad
+ J_y(x)=\int_0^{W(x)}|\Delta p_y|\,d\bar U.
+\]
+
+The initial transverse jets, including X_Ubar, are separate characteristic
+data; the six source-leg value/first-x-jet bounds do not supply them.
+The exact initial data and gauge must satisfy their corner and constraint
+conditions; a numerical initial residual belongs in the comparison data,
+with an identified compatible exact initialization.
+
+For piecewise absolutely continuous errors, the upper right derivative obeys
+
+\[
+ D^+J_y\le W_x|\Delta p_y|_W+
+                 \int_0^{W(x)}|\Delta(p_y)_x|\,d\bar U.
+\]
+
+Integrating in x supplies the time factor for the whole boundary history.
+For example, a freely transported boundary input `b(x)=x^m`, initially zero
+in the old domain and entering through `W=W0+v*x`, has integral
+`v*x^(m+1)/(m+1)`, not `W*x^m`. Spatial primitive residuals and temporal jumps
+of an approximate field add their actual integrated absolute sizes.
+
+### Explicit exterior prefix bounds
+
+All constants below are uniform bounds on a common tube, not sample maxima.
+Let `r>=r_*`, `r<=r^*`, `C<=C^*`,
+`abs(p_r)<=p^*`, `abs(r_x)<=v^*`, `abs(X)<=X^*`,
+`abs(p_X)<=P^*`, `abs(X_x)<=Q^*`, and `W<=L_*`.
+The symbol L_* here is a domain width; L remains log C.
+Source and spatial primitive errors give
+
+\[
+ \epsilon_r=s_r+J_r,\qquad \epsilon_L=s_L+J_L,
+ \qquad \epsilon_X=s_X+J_X.
+\]
+
+Thus they also bound the common wall values R, L_W and X_W. The exact
+exterior radius equation has the primitive
+
+\[
+ r r_x=r_0 r_{x,0}-\int_0^{\bar U}C/4\,du.
+\]
+
+If `s_A` bounds the source-product error, then a bound for the longitudinal
+radius-jet error is
+
+\[
+ \mathcal V=
+ \frac{s_A+L_*C^*\epsilon_L/4+v^*\epsilon_r}{r_*}.
+\]
+
+One may use `s_A=r_src^* s_rx+v_src^* s_r`; a residual in this radius
+primitive adds to its numerator. No transverse radius-jet error occurs in
+this prefix except through the already bounded radius value.
+
+For `K_E=(p_r r_x+C/4)/r^2`, set
+
+\[
+ k_*=(p^*v^*+C^*/4)/r_*^2,\qquad
+ \mathcal K=\frac{v^*}{r_*^2}J_r
+ +\frac{p^*L_*}{r_*^2}\mathcal V
+ +\frac{C^*L_*}{4r_*^2}\epsilon_L
+ +\frac{2k_*L_*}{r_*}\epsilon_r.
+\]
+
+The mean-value theorem gives `integral abs(Delta K_E)<=mathcal K`.
+Consequently the canonical scalar prefix obeys
+
+\[
+ \|\Delta Q\|_\infty\le
+ \mathcal Q=s_Q+k_*L_*\epsilon_X+X^*\mathcal K.
+\]
+
+Add any integrated scalar-prefix residual to s_Q. This is an affine
+nonnegative function of the three J errors and supplied source errors.
+
+For the lapse prefix, use the actual canonical derivatives
+
+\[
+ f=X/r,\qquad f_{\bar U}=(p_X-fp_r)/r,\qquad
+ f_x=(Q-fr_x)/r,\qquad L_{\bar U x}=2K_E-\alpha f_{\bar U}f_x.
+\]
+
+Set `F^*=X^*/r_*`, `F_U^*=(P^*+F^*p^*)/r_*`,
+`F_x^*=(Q^*+F^*v^*)/r_*`. The product and quotient differences give
+
+\[
+ \epsilon_f=(\epsilon_X+F^*\epsilon_r)/r_*,
+ \quad \mathcal U_f=
+ \frac{J_X+F^*J_r+p^*L_*\epsilon_f+F_U^*L_*\epsilon_r}{r_*},
+\]
+\[
+ \mathcal V_f=
+ \frac{\mathcal Q+F^*\mathcal V+v^*\epsilon_f+F_x^*\epsilon_r}{r_*},
+ \qquad
+ \|\Delta L_x\|_\infty\le
+ \mathcal L=s_{Lx}+2\mathcal K+
+ \alpha(F_x^*\mathcal U_f+F_U^*L_*\mathcal V_f).
+\]
+
+Here mathcal U_f bounds the spatial integral of the f_Ubar error, while
+mathcal V_f bounds the supremum of the f_x error. Their norms are different.
+Lapse-prefix residuals add to s_Lx. These formulas retain the scalar
+kinetic term; its removal would change the Einstein equations.
+
+The volume terms in the three integrated-jet evolutions are therefore
+bounded respectively by
+
+\[
+ \mathcal F_r=r^*\mathcal K+k_*L_*\epsilon_r,\qquad
+ \mathcal F_X=k_*L_*\epsilon_X+X^*\mathcal K,\qquad
+ \mathcal F_L=2\mathcal K+
+       \alpha(F_x^*\mathcal U_f+F_U^*L_*\mathcal V_f),
+\]
+
+using `r_Ubar,x=-r*K_E`, `X_Ubar,x=-K_E*X` and the lapse equation.
+Numerical mixed-equation residuals add their L1 norms to these terms.
+
+### Cap, boundary and clock feedback
+
+The exact three wall jets that enter the moving-integral boundary terms are
+
+\[
+ (p_r)_W=\frac{S_wR-A/H}{2U_+},\qquad
+ (p_X)_W=\frac{A E^-/(HA_0)+J}{2U_+},\qquad
+ (p_L)_W=\frac{2\eta_x-2k_+/V_++L_x|_W}{W_x}.
+\]
+
+The last identity uses the existing boost-gauge lapse law. The derivative
+`partial (p_r)_W/partial N=alpha/(U_+ H R)` at fixed remaining wall values
+is nonzero. It enters `J_r` through the time integral of the boundary term,
+not as an instantaneous change of the whole exterior. The same is true of
+the N-dependence in p_X and k-plus. A bound on p_L is also needed, even
+though its own mixed source contains no p_L.
+
+The radial constraint difference can be sharpened before taking absolute
+values. With the earlier cap notation,
+
+\[
+ (\Delta N)_r+a_{c,1}\Delta N
+ =\frac{r^2}2\Delta P_1+
+       \frac{A_2}{4}\Delta(p_c^2+h_c^2).
+\]
+
+This is the previous `Delta b_c-N2*Delta a_c` with
+`A2=A0-2 alpha N2/r` kept together. For example, at a fixed common radius
+the E-plus and E-minus error coefficients in the mass bound are each at most
+`integral A2*(P_*+H_*)/(4 A0) dr`, with positive A2.
+The cap value contributes `integral (r L_P/2+A2 H_*/(2r)) dr` times its
+supremum error. Anchor/residual and differing-radius terms remain additional.
+The lapse, beta, beta_z and reaction bounds then use these same cap errors;
+no derivative of an unknown scalar error is introduced.
+The quiet-core condition concerns the exact solution. If the numerical
+approximation leaks into that core, its inner mass, lapse, incoming trace
+and primitive errors must be bounded and retained as anchor/forcing data.
+They cannot be set to zero merely because the exact core is quiet.
+
+Keep the fixed-domain cap map `z=z_*+xi*(Z-z_*)`. Its transport coefficients
+and their variations are given in the preceding section. Their differences
+multiply **reference** first spatial jets. Uniform enclosures of the
+Jacobians of the existing wall maps, radial constraints, beta, beta_z, S,
+T_x and Z_x, together with those reference jets, give the volume-forcing
+coefficients. The positive common tube must include r, A0, A, H, null rates
+and the collar width. Nonlinear maps are bounded on the whole segment or by
+an enclosure covering it, not just differentiated at a sampled solution.
+
+The important boundary distinction is explicit:
+
+\[
+ E^+_W=\Phi(R,L_W,X_W,r_x|_W,Q_W)
+       =\frac{A_0}{H}(2V_+Q_W+J).
+\]
+
+With the null-label gauge held fixed, Phi has no cap N, A, delta or E-minus
+argument. Its errors depend on the three exterior J norms and source data
+through the displayed value and prefix bounds. The actual cap incoming-trace
+residual must be added. Cap metric errors affect transport, the clock and
+the exterior wall jets through their **time-integrated** equations.
+
+Take running errors in the order
+
+\[
+ u=(J_r,J_L,J_X,|\Delta T|,E,M,Y),
+ \qquad E=\|\Delta E^+\|_\infty,
+ \quad M=\|\Delta E^-\|_\infty,
+ \quad Y=\|\Delta X_-\|_\infty.
+\]
+
+The moving-integral identities, cap characteristics and clock ODE give
+`u<=d+B u+integral A u`, with nonnegative coefficient enclosures. The only
+instantaneous entries are the E-row gains from `(J_r,J_L,J_X)` through Phi,
+and `B_(Y,J_X)=1` from the common wall value. In particular `B^2=0` and
+`(I-B)^-1=I+B`. A is assembled from the explicit exterior volume bounds,
+the wall-jet Jacobian bounds multiplied by W_x, and the cap/clock Jacobian
+bounds just specified. Initial, source, primitive, interface and integrated
+evolution residuals belong to d. None may be dropped because another
+equation is being imposed.
+
+For positive error scales h_i, the same weighted row-sum argument gives a
+conditional **coupled** comparison:
+
+\[
+ \lambda=\max_i\frac{\sum_j[(I+B)A]_{ij}h_j}{h_i},\qquad
+ \theta=(x_1-x_0)\lambda<1,\qquad
+ u_i\le\frac{h_i}{1-\theta}
+             \max_j\frac{[(I+B)d]_j}{h_j}.
+\]
+
+The spatial L1 norm does not by itself control pointwise exterior jets.
+Their separate characteristic supremum bounds follow from their initial
+and wall jets plus the time integral of the mixed equations. Those output
+bounds must also stay inside the assumed coefficient tube; small L1 error
+cannot be used to rule out a narrow large pointwise error. The common tube,
+reference-jet enclosures, full residual bounds and continuation/constraint
+checks are not yet instantiated for the physical trajectory. This derives
+the connected comparison structure; it does not assert an already certified
+nonzero-amplitude spacetime or supply the still missing numerical constants.
+
+Four [exact and manufactured controls](../tests/test_nsc_atlas_integrated_feedback.py)
+pass with **29,000 charged values / 0.0625 active CPU seconds**. They verify
+the combined radial metric coefficient and wall mass derivative, a moving
+interval carrying its complete boundary history, the nilpotent graph with
+nonzero time feedback, and an independent 70-digit canonical conversion
+against the production bulk lapse equation. That last check rejects an
+extra C factor in the kinetic term: the model has `-alpha*f_U*f_x`.
+No physical source, radial solve or time evolution is run by these controls.
+Independent Grok review confirms the explicit prefix constants, norm choices,
+combined radial identity, boundary directions and `B^2=0`. It also confirms
+the corrected lapse convention after comparison with the production operator.
 
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively
 well-posed coupled problem for the smooth equations, the timelike interface
-and the regular centre. The equations above identify its data; they are not
-such a theorem. In particular, the following remain to be established.
+and the regular centre. The connected comparison above specifies an error
+system; its physical coefficient, residual and continuation bounds are not
+yet such a theorem. The quiet-core restriction handles the onset collar;
+later central arrival additionally needs the centre-patch matching below.
+In particular, the following remain to be established.
 
-- Choose an independent characteristic/interface system with anchored gauge
-  and a fixed-domain identification. The smooth constraint transport and
+- Certify the independent characteristic/interface system with anchored gauge
+  and the fixed-domain identification above. The smooth constraint transport and
   exact source compatibility are established above; supply the new wall
   characteristics through an independently closed interface system and
   preserve the bounded regular-centre residuals. Distributional stress

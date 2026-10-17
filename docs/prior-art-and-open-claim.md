@@ -2598,6 +2598,46 @@ Grok's final review confirms the complete source differential, common-segment
 tube and rational conversion. This supplies canonical forcing inputs; the
 full coupled inverse and floating implementation error are still open.
 
+### Metric feedback through integrated exterior jets, 17 October 2026
+
+The scalar comparison leaves cap-mass feedback through the exterior metric.
+Keep the same fixed null-label gauge W(x) for the exact and approximate
+solutions. Use spatial L1 errors of the exterior transverse jets, whose
+moving-domain derivative contains the wall input multiplied by W_x and
+integrated in time. A boundary change at a single endpoint is not a change
+throughout the exterior. Bound the radius, canonical-scalar and lapse prefixes
+explicitly from those integrated errors and the existing source inputs.
+
+Combine these prefix bounds with the same-radius cap constraints and the
+fixed-domain cap characteristics. Determine the instantaneous dependency
+graph before imposing a time-smallness condition. Preserve the nonlinear
+canonical wall jump, cap lapse anchor, metric/clock variations, and all
+boundary and primitive residuals. The estimate is conditional on a positive
+common coefficient tube and bounded reference jets; uniform physical bounds
+and a continuous numerical residual still need their own certificate.
+
+Admit analytic derivation and independent Grok review, plus exact algebra and
+manufactured moving-interval controls within **30,000 charged values / 15
+active CPU seconds**. No source readout, evolution, mesh change or scan is
+admitted. Retain the conditional comparison, its required norms and any
+specific unclosed feedback; do not claim a physical validity interval before
+the coefficient tube, residual and continuation margins have been checked.
+
+**Development:** the explicit exterior prefix and moving-integral bounds
+give a mixed-norm graph with `B^2=0`; cap metric and clock feedback enter the
+time block. Four exact/manufactured controls pass with 29,000 values / 0.0625
+active CPU seconds. The scalar lapse term is independently checked through
+70-digit canonical conversion against the production bulk equation and is
+`-alpha*f_U*f_x`, without an extra C factor. Initial transverse jets,
+source-frame conversion, primitive/constraint residuals, reference derivative
+bounds and separate pointwise tube checks remain explicit requirements.
+Independent Grok review confirms the actual prefix inequalities, cap metric
+identity and nilpotent coupled graph. A suggested extra C in the lapse term
+was rejected by the source equations and the independent conversion control;
+the reviewer confirms the canonical convention. The common tube, compatible
+initialization, uniform reference jets and all residual enclosures remain
+the inputs required to evaluate this conditional bound on the original cell.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
