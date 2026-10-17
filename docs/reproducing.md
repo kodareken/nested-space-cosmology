@@ -868,6 +868,16 @@ frame conversions. It records both pointwise residual maxima and accumulated
 transport gaps. A nonshrinking result remains a nonshrinking result; it does
 not become a converged prediction through the physical-unit conversion.
 
+The later CPU-only resource amendment admits ceilings of 20,000 / 40,000 /
+80,000 process-CPU seconds for these same three levels. Add
+`--extended-cpu-allowance` to a fresh runner command to select those limits.
+This changes no physical input, grid, numerical tolerance, charged-value
+limit or accepted-step cap. The running v4 jobs retain their original
+scientific source and, when amended, record the separate controller source,
+old/new CPU limits and cumulative accounting in compact amendment receipts.
+Do not replay the live-process amendment against a different process: a clean
+reproduction selects its finite CPU allowance at startup.
+
 Render the authenticated saved comparison with:
 
 ```sh

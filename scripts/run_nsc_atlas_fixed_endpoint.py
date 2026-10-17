@@ -457,6 +457,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--level', type=int, required=True, choices=(0, 1, 2))
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--extended-cpu-allowance', action='store_true',
+                        help='use the separately admitted doubled CPU ceiling; no counter or numerical-setting changes')
     parser.add_argument('--diagnostic-step-limit',type=int,
                         help='admitted replay limit; cannot produce a completed endpoint')
     args = parser.parse_args()
@@ -466,7 +468,9 @@ def main():
         raise ValueError('preserve the existing result; choose a new admitted output')
     if not args.output.parent.is_dir():
         raise ValueError('output parent must already exist')
-    spec = level_spec(args.level)
+    spec = dict(level_spec(args.level))
+    if args.extended_cpu_allowance:
+        spec['cpu_seconds'] *= 2
     commit, bindings = frozen_sources()
     budget = Budget(maximum_evaluations=CHARGED_EVALUATIONS, cpu_seconds=spec['cpu_seconds'])
     report = dict(schema='nsc-atlas-fixed-endpoint-v1', status='incomplete', level=args.level,
@@ -480,6 +484,8 @@ def main():
                                        background_panel_sides=RADIAL_BACKGROUND_PANEL_SIDES,
                                        gradient_absolute_tolerance=2e-8))
     phase = 'input authentication'
+    if args.extended_cpu_allowance:
+        report['cpu_allowance_selection'] = 'extended_at_start'
     if args.diagnostic_step_limit is not None:
         report['diagnostic_step_limit']=args.diagnostic_step_limit
     calls = accepted = 0

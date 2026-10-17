@@ -2,6 +2,36 @@
 
 ## P001 full-endpoint fixed-grid comparison, 17 October 2026
 
+**CPU allowance amendment, before exhaustion (17 October, after 16:00 local):**
+the v4 runs keep advancing past the diagnosed radial failures. Their measured
+stage costs rise as more retained history panels enter the cap. For example,
+coarse steps 656--672 cost 235.296875 process-CPU seconds, while steps
+736--752 cost 278 seconds. Middle steps 1008--1024 cost 217.84375 seconds;
+fine steps 1456--1472 cost 172.484375 seconds. Extrapolating the rising cost
+makes the original ceilings tight near the full endpoint; these estimates
+are resource planning, not physical predictions or promised completion times.
+
+Admit one CPU-only extension to **20,000 / 40,000 / 80,000 process-CPU
+seconds** for coarse/middle/fine. Preserve elapsed CPU and charged-value
+counters, the 500-billion-value limits, accepted-step limits, physical data,
+all meshes and time cuts, radial tolerances and every numerical acceptance
+guard. No execution is restarted, and no failed mathematical check is waived.
+The [bounded controller](../scripts/amend_nsc_atlas_endpoint_cpu.py) validates
+the task-owned v4 source, resolution and unfinished output before amending
+only its CPU ceiling through CPython's documented `sys.remote_exec` interface.
+It records the previous and new limits, elapsed CPU, accepted progress,
+source and controller commits, and controller/admission hashes in the live
+report and a separate compact receipt. A second extension is rejected;
+a receipt-write failure restores the original allowance.
+
+Nineteen bookkeeping and runner controls pass without a physical solve.
+They cover counter preservation, unchanged numerical settings, wrong or
+expired targets, repeat rejection and failed-write rollback. The remote
+callback/frame mechanism was checked separately on an isolated sleeping
+Python process. Independent Grok review is pending before applying the
+amendments to the physical jobs. Fresh reproductions use the runner's
+`--extended-cpu-allowance` option; the unextended default remains available.
+
 **Later v3 radial stop:** the coarse successor passes the earlier stopping
 state, then stops after 464 accepted steps at `x=0.4369315943667415`.
 Its next accepted-end stage has forward/adjoint discrepancy

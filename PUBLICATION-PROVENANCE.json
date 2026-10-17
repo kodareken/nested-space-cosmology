@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 241739,
+      "bytes": 241813,
       "path": "docs/active-code-map.md",
-      "sha256": "41805b986e20c818f83911e163a4ae9b74a89d63109da2a2ec2f38f5d4d24969"
+      "sha256": "2ab791d5360573711a303987d2869ca63ba8b4fd21879dccd267f84fde8a17e1"
     },
     {
       "bytes": 97216,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2346683,
+      "bytes": 2347588,
       "path": "docs/lab-snapshot.json",
-      "sha256": "722aaf9820b41c7f49603e124af19f7ba1af4b46e81c95e1f86d2d1825f598c7"
+      "sha256": "4a02c53608d97dfdb2d75c32e9363d82b839c534060a6376c53a04a9525ffa93"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2201,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 473217,
+      "bytes": 475218,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "026b3925b08fc0e0ede39951dff4b0dca6669f32a03c7cbbcc8b55710da1f1a4"
+      "sha256": "27b756af6c8f743e313caf7db1ce0e97685928956435e2b41ef6f0f18273765a"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 147883,
+      "bytes": 148527,
       "path": "docs/reproducing.md",
-      "sha256": "d3c50301635cd6a81d311195fb498452584a01b5c2e20a4bdee3adc4d1785421"
+      "sha256": "67e738f7623f5bda2ffdef37c56fa753089168e5c7b395c6c67a7387fdfadcd7"
     },
     {
       "bytes": 31710,
@@ -14831,6 +14831,11 @@
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
+      "bytes": 7920,
+      "path": "scripts/amend_nsc_atlas_endpoint_cpu.py",
+      "sha256": "79e13062a0ec9f6f1af3c00de3af384e061aaad649d21cb17306c01203834e21"
+    },
+    {
       "bytes": 22770,
       "path": "scripts/analyze_nsc_atlas_cap_consistency.py",
       "sha256": "b8cdaeac870a832d859825c108a12e65db80100f159f229baec4c528e396014a"
@@ -16586,9 +16591,9 @@
       "sha256": "dea660fcf1f062a969da84a609cc67dc874a743cfae6bd07fc1bcaf3c0a27f11"
     },
     {
-      "bytes": 45704,
+      "bytes": 46073,
       "path": "scripts/run_nsc_atlas_fixed_endpoint.py",
-      "sha256": "15a6ff628549a00466a3b0db9bbec795245141037ad9cdfc9673e3d5ccb138d3"
+      "sha256": "78faa190f07fc4a80cd182d95a4faa2bf9df09a084ab65f31dd017a41935fc9a"
     },
     {
       "bytes": 20689,
@@ -19286,6 +19291,11 @@
       "sha256": "1743217f76dc467d64d8e8d77de9d49b74ca07fca2cc7b30ad1855561b1243db"
     },
     {
+      "bytes": 4748,
+      "path": "tests/test_nsc_atlas_endpoint_cpu_allowance.py",
+      "sha256": "7bb566a35b8e8aad4f5f0e18151d433d8b1e5b75c04f954accc7af119a91882d"
+    },
+    {
       "bytes": 2545,
       "path": "tests/test_nsc_atlas_endpoint_radial_diagnostic.py",
       "sha256": "3f698dbd1d032a4b9f8c11fc191455fc80681be7a64ecc38080f45ae4beb2d96"
@@ -21416,7 +21426,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "722aaf9820b41c7f49603e124af19f7ba1af4b46e81c95e1f86d2d1825f598c7",
+  "lab_snapshot_sha256": "4a02c53608d97dfdb2d75c32e9363d82b839c534060a6376c53a04a9525ffa93",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
