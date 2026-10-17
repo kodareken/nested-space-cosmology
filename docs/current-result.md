@@ -110,6 +110,25 @@ post-evolution failure without changing the saved receipt or relaxing any
 physical test. The runner's serialization is corrected, with a metadata-only
 repair available for the two continuing jobs. No evolution replay is needed.
 
+The [middle v4 evolution](../results/summaries/nsc-atlas-fixed-endpoint-level1-v4.json)
+has also completed the exact endpoint: 1793 accepted steps, 22286.3125
+process-CPU seconds, no retries, and a complete auxiliary transport summary.
+Its Jordan radius is `0.5492322058752734 ell`, or
+`5492.322058752734 m` at the same fiducial ruler. The difference from the
+coarse result is `0.000022188891835028812 m` (22.19 micrometres).
+That is a two-grid difference; the fine grid is still running, so P001's
+three-grid range is not yet available.
+
+The maximum wall-flux gap decreases from `2.240453033467581` to
+`2.1944789946878913`, a 2.052 percent reduction. The actual mass-gap maximum
+increases to `0.0023779807471067432`; the matched one is
+`0.0014919887720496899`. The middle accumulated mass gap is
+`3.281557191635309e-5`, and the accumulated scalar gap is
+`0.006663588598542751`. The state was not corrected to those diagnostic
+integrals. These failures remain visible despite the close radius values.
+The completed three-grid comparison and saved gap decomposition will be
+used before assigning the numerical prediction range or closing Step 2.
+
 Opening-phase robustness work is paused. The current calculation targets
 the original P001 endpoint on three fixed cap/exterior meshes, with the
 same amplitude and preparation. The first

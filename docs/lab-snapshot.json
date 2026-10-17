@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0907614edac5d5a1510e266a7393fd304ba9f444",
+  "current_receipt_commit_parent": "374baa244b3f0a8e25522f20c39396c8edde5f25",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 372009,
+      "bytes": 373155,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "0907614edac5d5a1510e266a7393fd304ba9f444",
+      "changed_from_commit": "374baa244b3f0a8e25522f20c39396c8edde5f25",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "35a8cb94504897d7232ac61f32c79c95121586723b76c8c791b1a7e067a892e5"
+      "sha256": "a1d5148c5dcd8e2b71740d615fcfc7c7fa1393ba669a52ae9742be8ed7a69190"
     },
     {
       "bytes": 18915,
@@ -29773,6 +29773,14 @@
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v4-cpu-amendment.json",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
       "sha256": "b675aee7296901ad873619773f4132d2e93f9ef9a7fc50eef81efef3315eb5bd"
+    },
+    {
+      "bytes": 56696,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "374baa244b3f0a8e25522f20c39396c8edde5f25",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v4.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "9f38e1b73f227675db8e501453171fc60fd92f62a4c2a1e61f5c0521e2041761"
     },
     {
       "bytes": 14872,

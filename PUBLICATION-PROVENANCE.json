@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 372009,
+      "bytes": 373155,
       "path": "docs/current-result.md",
-      "sha256": "35a8cb94504897d7232ac61f32c79c95121586723b76c8c791b1a7e067a892e5"
+      "sha256": "a1d5148c5dcd8e2b71740d615fcfc7c7fa1393ba669a52ae9742be8ed7a69190"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2358860,
+      "bytes": 2359343,
       "path": "docs/lab-snapshot.json",
-      "sha256": "aad0c1373492a30221160b7c848caeb69c8cd4cdd6ca97f44c49e726a2d2e0fb"
+      "sha256": "8e4eac10df43eea2e56b8430b34317096fa564bd6ddc0f16b95ef57db70960bf"
     },
     {
       "bytes": 4997,
@@ -14671,6 +14671,11 @@
       "sha256": "b675aee7296901ad873619773f4132d2e93f9ef9a7fc50eef81efef3315eb5bd"
     },
     {
+      "bytes": 56696,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v4.json",
+      "sha256": "9f38e1b73f227675db8e501453171fc60fd92f62a4c2a1e61f5c0521e2041761"
+    },
+    {
       "bytes": 14872,
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v1.json",
       "sha256": "baf09f4a3cef350f60515de2fcc8efcaf269e706aa124a9990ce9f4e4c21aef0"
@@ -21536,7 +21541,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "aad0c1373492a30221160b7c848caeb69c8cd4cdd6ca97f44c49e726a2d2e0fb",
+  "lab_snapshot_sha256": "8e4eac10df43eea2e56b8430b34317096fa564bd6ddc0f16b95ef57db70960bf",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
