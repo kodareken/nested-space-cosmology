@@ -154,6 +154,24 @@ uses producer `d5b7794f40884d5506c639622a3e71a5a4c13660`, completing
 audit uses 2,048 values / 0.09375 CPU seconds. Exact inequalities,
 rounding, alpha powers and provenance all pass.
 
+The quadratic source consumer reuses the original source-forcing receipt.
+Its ten controls initially use 6,656 values / 0.40625 active CPU seconds:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_source_remainder_bound.py -q -s
+```
+
+After committing its producer, run one exact-rational application to a new
+output path under the 8,192-value / 5-CPU-second allowance:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_source_remainder_bound.py --output <new-output-path>
+```
+
+It bounds four [source-geometry remainders](nsc-atlas-finite-amplitude.md#quadratic-remainders-of-the-original-source-geometry)
+without source integration, field evaluation or pointwise h0 reconstruction.
+The coupled radius and clock remainder remains separate.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker

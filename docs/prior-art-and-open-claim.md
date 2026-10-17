@@ -3301,7 +3301,45 @@ of the existing second-amplitude theorem will identify the smallest
 unevaluated bound needed for a numerical remainder constant. It admits
 no new physical, symbolic or numerical execution.
 
-### Normalized radial cap comparison, 17 October 2026
+### Quadratic source-geometry remainder, 17 October 2026
+
+The cap comparison closes the normalized radial input; the full geometric
+remainder still needs quadratic source data. Keep the original invariant
+trace g, affine label, quiet anchors, source tube, coupling interval and
+finite onset. The exact Jordan constraint has `rJ=x+alpha*h`, and the
+existing certificate already bounds h and h_x. Subtract its alpha-zero
+equation, use positive reciprocal differences, and integrate the resulting
+uniform bound twice analytically. No new source integration is needed.
+
+Apply the exact Einstein frame map to obtain alpha-squared remainders for
+`r-x`, `log C`, its x derivative, and `r*r_x-x`. The frame floor also bounds
+sqrt(F), so all sufficient constants can be rational. The first coefficients
+contain the already defined quiet profile h0; this step bounds their
+remainders without evaluating that profile at sample points.
+
+Admit one exact-rational original application after freezing the producer,
+at most 8,192 charged values / 5 CPU seconds. Manufactured controls share
+12,000 values / 20 active CPU seconds, checking the frame Taylor identities,
+product and lapse-slope identities, quotient derivative, quartic source
+homogeneity, quiet source and domain/budget guards. A separate 1,024-value /
+5-CPU-second rational audit authenticates all bindings/inputs and checks
+independent product expressions, dyadic rounding, alpha powers and displays.
+No source query, integration, field evolution, parameter/grid scan or retry
+is included. Save only compact constants, hashes and the regeneration command.
+
+Stop on a changed input, incompatible quiet anchor, lost common radius/frame
+floor, domain mismatch, failed identity or exhausted budget. The likely
+failures are treating g as amplitude-dependent, omitting the Jordan response
+inside the frame map, or using the source result as the full coupled wall
+remainder. Exact identities, two independent Grok formula reviews and
+explicit source-only output scope address these connections.
+
+**Implementation controls:** ten tests pass in one execution, 6,656 charged
+values / 0.40625 active CPU seconds. Both formula reviews accept the
+original quiet-source identities and positive constants. Implementation
+review is in progress; no original application has run.
+
+## Normalized radial cap comparison, 17 October 2026
 
 The scalar and geometric first-difference certificates now supply all
 field inputs for a radial cap comparison. Keep their original onset,

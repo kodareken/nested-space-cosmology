@@ -12181,6 +12181,128 @@ CPU seconds. No source/field query, radial integration, evolution, scan,
 retry or raw history occurs. The next inputs are explicit quadratic source
 remainders and the nonlinear geometric wall/bulk remainder comparison.
 
+### Quadratic remainders of the original source geometry
+
+The same invariant source `c=g(x)` is independent of alpha. Its Jordan
+radius and quiet anchors satisfy
+
+\[
+ r_J=x+\alpha h,\qquad h=h_x=0\text{ at the left quiet anchor},
+\]
+\[
+ h_{xx}=A/r_J+B(r_J)_x/r_J^2,\qquad
+ A=(g g_{xx}-2g_x^2)/6,\quad B=g g_x/3.
+\]
+
+At alpha zero, `h0_xx=A/x+B/x^2` with the same anchors. The original
+source-forcing certificate already supplies uniform H>=|h|, Hx>=|h_x|,
+a common Jordan/reference radius floor `rmin<=rJ,x`, and `Fmin>1/2`.
+There is no new source solve in the following comparison. Put
+
+\[
+ A_*=(G_0G_2+2G_1^2)/6,\quad B_*=G_0G_1/3,
+\]
+\[
+ H_2=A_*H/r_{\min}^2
+      +B_*(H_x/r_{\min}^2+2H/r_{\min}^3).
+\]
+
+The reciprocal differences and `(rJ)_x-1=alpha*h_x` give
+`|h_xx-h0_xx|<=alpha*H2`. With ell the original cell length,
+
+\[
+ |h-h_0|\le\alpha C_h,\quad C_h=\ell^2H_2/2,\qquad
+ |h_x-h_{0,x}|\le\alpha C_{h_x},\quad C_{h_x}=\ell H_2.
+\]
+
+The exact Einstein source map is
+
+\[
+ r=\sqrt{r_J^2-\alpha g^2/6},\quad
+ F=1-\alpha g^2/(6r_J^2),\quad L=\log F,
+\]
+\[
+ rr_x-x=r_J(r_J)_x-\alpha gg_x/6-x,\qquad
+ L_x=-{\alpha g\over3F}\left({g_x\over r_J^2}
+                              -{g(r_J)_x\over r_J^3}\right).
+\]
+
+The alpha-independent source-chart factors cancel in L relative to vacuum.
+The four first coefficients are
+
+\[
+ r_1=h_0-g^2/(12x),\quad L_1=-g^2/(6x^2),\quad
+ \Pi_1=h_0+xh_{0,x}-gg_x/6,
+\]
+\[
+ (L_x)_1=-\frac g3\left(\frac{g_x}{x^2}-\frac g{x^3}\right).
+\]
+
+These identify the subtracted profiles; this application does not evaluate
+h0 at sample points. The previous continuum identification connects them
+to the first geometric response.
+
+To keep the remainder calculation rational, use `sqrt(F)>=Fmin` and
+
+\[
+ f_*={1\over1+F_{\min}},\qquad
+ f'_*={1\over2F_{\min}(1+F_{\min})^2}.
+\]
+
+They bound `f(u)=1/(1+sqrt(1-u))` and its derivative for
+`u=alpha*g^2/(6rJ^2)`. The exact identity
+`r=rJ-alpha*g^2*f(u)/(6rJ)` then gives
+
+\[
+ |r-x-\alpha r_1|\le\alpha^2 C_r,\qquad
+ C_r=C_h+{G_0^2\over6r_{\min}^2}
+        \left(Hf_*+{G_0^2f'_*\over6r_{\min}}\right).
+\]
+
+Expanding the exact product, without differentiating h in alpha, gives
+
+\[
+ |rr_x-x-\alpha\Pi_1|\le\alpha^2 C_\Pi,\quad
+ C_\Pi=C_h+x_{\max}C_{h_x}+HH_x.
+\]
+
+Taylor's log bound on the positive frame interval yields
+
+\[
+ |L-\alpha L_1|\le\alpha^2 C_L,\quad
+ C_L={G_0^2H\over3r_{\min}^3}
+             +{G_0^4\over72r_{\min}^4F_{\min}^2}.
+\]
+
+Finally set
+
+\[
+ K_Q={2G_1H\over r_{\min}^3}
+          +{G_0H_x\over r_{\min}^3}+{3G_0H\over r_{\min}^4}.
+\]
+
+Subtracting the exact L_x formula gives
+
+\[
+ |L_x-\alpha(L_x)_1|\le\alpha^2 C_{L_x},\qquad
+ C_{L_x}={G_0\over3F_{\min}}
+ \left[K_Q+\left({G_1\over r_{\min}^2}+{G_0\over r_{\min}^3}\right)
+                         {G_0^2\over6r_{\min}^2}\right].
+\]
+
+All estimates cover the original source cell and coupling interval. On its
+quiet prefix the actual remainders vanish exactly. The uniform ceilings
+need not be reset to zero there.
+
+`nsc_atlas_source_remainder_bound.py` consumes only the original source
+receipt and rounds the positive rational outputs upward to 2^-128. Ten
+controls pass in one execution (6,656 charged values / 0.40625 active CPU
+seconds). Two independent Grok formula reviews accept the constants and
+source-only interpretation. The implementation review and original
+application remain to be completed after source freeze. These source
+remainders are inputs to the coupled geometric comparison, not that
+comparison's conclusion.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,
