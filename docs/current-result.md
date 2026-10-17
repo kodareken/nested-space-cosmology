@@ -2,6 +2,24 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Formation diagnostic from the same source and wall, 17 October 2026
+
+The [direct calculation](nsc-atlas-finite-amplitude.md#formation-diagnostic-from-the-quiet-sphere-and-material-wall)
+gives quiet-corner null expansions `10/ell` and `5/(2 ell)`, with invariant
+product `25/ell^2`, for every admitted pulse amplitude. Both future areas
+grow. Bulk scalar stress focuses radial light rays; the positive-tension
+wall produces the same focusing impulse when computed from surface stress
+or from its angular junction law. Changing the later pulse alone does not
+change the starting sphere's expansion signs.
+
+Four exact controls pass in 0.296875 active CPU seconds with zero physical
+samples or field solves. They also check a regular-centre caustic and a
+conformal affine-length example, preventing either local focusing or local
+frame positivity from being mistaken for a global singularity conclusion.
+The formation problem still needs complete initial data and evolution,
+a causal argument valid across the material wall, and the global frame
+bounds used by that argument. The finite sourced solution is unchanged.
+
 ## Earlier spacelike data for the prescribed source, 17 October 2026
 
 The [past-collar construction](nsc-atlas-finite-amplitude.md#earlier-spacelike-realization-of-the-prescribed-source)

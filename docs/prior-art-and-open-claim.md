@@ -1,5 +1,46 @@
 # Prior art and admission of new research
 
+## Formation diagnostic for the same sourced family, 17 October 2026
+
+The finite past collar realizes the preparation but does not establish its
+global origin. Hold its action, positive-coupling branch, quiet corner and
+positive material tension fixed. Derive the two null expansions directly
+from the corner metric and radius jets. Derive bulk focusing from the null
+constraint and the wall impulse independently from surface stress and the
+angular Israel jump. Track affine normalization under the Jordan/Einstein
+frame change before drawing any statement about a complete past.
+
+The finite mathematical domain is the quiet corner sphere, regular radial
+null segments, and individual transverse material-wall crossings. Reuse
+the existing source and exact junction owners; the focused primary-source
+reading in the [arXiv library](arxiv-studies.md#formation-and-metric-regularity-17-october-2026)
+identifies which global theorem hypotheses have actually been supplied.
+It does not replace the direct calculation or assert a theorem for a
+different metric regularity.
+
+Admit **four exact symbolic controls**, sharing **20 active process-CPU
+seconds** and zero physical samples, field solves, numerical quadratures
+or scans. Check expansion/boost/mass consistency, smooth focusing including
+a regular-centre caustic, the two wall-impulse derivations, and conformal
+affine transport including loss of a global lower frame bound. Grok reviews
+the derivation independently. Stop on a failed identity, incompatible
+orientation, or the budget and diagnose before further computation.
+
+The likely failures are interpreting a caustic as a curvature singularity,
+applying a C1 theorem across a metric with a nonzero first-derivative jump,
+and transferring completeness using only local positivity of the conformal
+factor. The result must state exactly what a global formation construction
+still has to provide. No new action or candidate is selected by this check.
+
+**Outcome:** all four [exact controls](../tests/test_nsc_atlas_formation_diagnostic.py)
+pass in **0.296875 active process-CPU seconds**, with zero physical samples,
+field solves or numerical quadratures. The
+[owner](nsc-atlas-finite-amplitude.md#formation-diagnostic-from-the-quiet-sphere-and-material-wall)
+records both initial expansion signs, the independent wall-impulse
+derivations and the outstanding global/regularity/frame hypotheses.
+Grok's read-only review accepts the written normalization, focusing bounds,
+frame relation and stated theorem scope; it does not replace these controls.
+
 ## Earlier spacelike preparation of the same source, 17 October 2026
 
 The next connection is whether the prescribed null input can be realized

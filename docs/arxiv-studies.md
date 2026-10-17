@@ -32,6 +32,23 @@ Carolina Figueiredo, then a Princeton doctoral student, was named the inaugural 
 
 Then check the list below. Do not repeat a derivation this file already sources. The studies were opened while investigating the nested question. They are not proofs of one claim. Some supply a formula. Some are a clue. Some are a constraint. Some show that a local or infinite route does not answer the question. Record a new study in that same way.
 
+## Formation and metric regularity, 17 October 2026
+
+The [same-family diagnostic](nsc-atlas-finite-amplitude.md#formation-diagnostic-from-the-quiet-sphere-and-material-wall)
+derives the quiet sphere's expansions, smooth focusing and surface impulse
+from the owned equations. This focused reading identifies the remaining
+global hypotheses; it imports no new action or global completion.
+
+| Source/version and reading depth | Reusable mathematics | Application boundary |
+| --- | --- | --- |
+| [Graf, 1910.13915v3](https://arxiv.org/pdf/1910.13915v3), Theorem 5.7 and its proof, printed pages 34–35; introduction | C1 Penrose theorem under global hyperbolicity, noncompact Cauchy surfaces, distributional null convergence and a closed achronal trapped surface | Time reversal relates its setup to an anti-trapped sphere. The present wall has a nonzero extrinsic-curvature jump, so its metric does not meet this C1 hypothesis. Earlier regularization lemmas and the full paper were not independently rederived. |
+| [Calisti--Graf--Hafemann--Kunzinger--Steinbauer, 2501.18450v3](https://arxiv.org/html/2501.18450v3), introduction, Remark 2.1 and Theorem 5.12; v2 was first inspected, then the current version checked | Lipschitz Hawking theorem and distinctions concerning low-regularity geodesics | This is a timelike result with its own curvature and hypersurface assumptions. The v3 introduction discusses a null extension as further work. It does not supply the required null theorem for this material-wall system. The full proof is unread and no exhaustive successor search is claimed. |
+
+The affine relation between Jordan and Einstein frames is derived directly
+in the owner and checked from the conformal metric connection. Local frame
+positivity is distinguished from a global comparison of affine lengths.
+The existing isolated-history classification retains its original domain.
+
 ## Atlas reuse library, 10 October 2026
 
 The [admission rule](prior-art-and-open-claim.md#compute-admission-rule) owns

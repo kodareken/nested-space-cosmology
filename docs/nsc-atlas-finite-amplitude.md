@@ -12,7 +12,9 @@ constant for the general state; the geometric and material-radius comparisons
 below now bound selected outputs explicitly. Continuation through central
 arrival and a controlled remainder for the full transmitted response remain
 separate connections. A local past collar below realizes the same source as
-earlier spacelike data without selecting its waveform.
+earlier spacelike data without selecting its waveform. The formation
+diagnostic below computes the initial null expansions and wall focusing
+while retaining the distinction between local preparation and a global past.
 
 The physical inputs are unchanged: a canonical Jordan scalar with coupling
 `xi=1/6`, fixed vacuum densities `V0,-=3H^2/kappa_4` and `V0,+=0`, constant
@@ -1240,6 +1242,156 @@ supplies a regular global formation history. The freely specified source
 family therefore retains the inverse-problem degeneracy. A source mechanism,
 physical scale and an independently restricted preparation class are still
 needed for a distinguishing observation.
+
+## Formation diagnostic from the quiet sphere and material wall
+
+Keep the same action and exact source family. At the quiet corner the
+scalar and its first jets vanish, so the Jordan and Einstein metrics and
+their first jets agree there for every admitted amplitude. The dimensionless
+source data are
+
+$$
+r=\frac25,\qquad C_E=C_J=1,\qquad r_x=1,\qquad
+r_{\bar U}=\frac14,\qquad \mathcal F=1,\qquad d\mathcal F=0.
+$$
+
+Use physical areal radius $R=\ell r$ and the future null normals
+$l_+=(2/\ell)\partial_x$, $l_-=(2/\ell)\partial_{\bar U}$ at
+this sphere, normalized by $g(l_+,l_-)=-2$. Direct differentiation of
+its area gives
+
+$$
+\theta_\pm=\frac{2l_\pm(R)}R,\qquad
+\theta_+=\frac{10}\ell,\qquad
+\theta_-=\frac5{2\ell},\qquad
+\theta_+\theta_-=\frac{25}{\ell^2}.
+$$
+
+Thus this closed sphere is anti-trapped: both future radial areas grow.
+The result is independent of the later pulse amplitude. A positive null
+boost changes the individual expansions by reciprocal factors, preserving
+their signs and product. At this sphere on the preceding Cauchy cut, the pair $n\pm s$
+with unit tangent $s=(-d\partial_{\bar U}+\partial_x)/(\ell\sqrt d)$
+has expansions $10/(\ell\sqrt d)$ and $5\sqrt d/(2\ell)$.
+The independent mass identity is
+
+$$
+\theta_+\theta_-=-\frac4{R^2}\left(1-\frac{2\mathfrak m}R\right)
+=\frac{25}{\ell^2},\qquad R=\mathfrak m=\frac{2\ell}5.
+$$
+
+Here $\mathfrak m$ is the geometric Misner--Sharp mass. This calculation
+uses the actual initial data, not the sign of a sourced mass coefficient.
+
+### Smooth focusing and the surface impulse
+
+In either smooth Einstein region, contraction of the canonical field
+equation with a null tangent $k$ gives
+$\operatorname{Ric}_E(k,k)=(k\Psi)^2\ge0$; the potential term drops out.
+For an affinely parametrized radial ray, the owned null constraint becomes
+
+$$
+\frac{d^2R}{d\lambda_E^2}=-\frac R2
+\left(\frac{d\Psi}{d\lambda_E}\right)^2,\qquad
+\frac{d\theta}{d\lambda_E}=-\frac{\theta^2}2
+-\left(\frac{d\Psi}{d\lambda_E}\right)^2,\qquad
+\theta=\frac{2R'}R.
+$$
+
+The radial spherical congruence is twist-free and shear-free. The same
+identities hold for a past-directed affine tangent. Before a caustic,
+negative initial expansion therefore gives a finite focusing bound, if
+the ray continues under these equations. For the initial past tangents
+$-l_+$ and $-l_-$ the upper affine distances are respectively
+$\ell/5$ and $4\ell/5$. Equivalently $R''\le0$ bounds the radius
+above by its initially decreasing tangent line. These are conditional
+focusing distances in the stated normalization; they do not assert that
+the constructed finite collar covers those distances. A regular centre
+can also be a caustic: $R=R_0-\lambda$ on an ingoing Minkowski ray
+satisfies this equation with zero curvature. Focusing alone does not
+prove a curvature singularity or an inextendible spacetime.
+
+For the material wall, write $N$ for its unit spacelike normal and
+$\eta$ for signed proper normal distance. Its exact Einstein tension is
+$\sigma_E=\sigma\mathcal F^{-3/2}>0$. The surface stress is
+$T^{\Sigma}_{\mu\nu}=-\sigma_E(g_{\mu\nu}-N_\mu N_\nu)\delta(\eta)$,
+so for null $k$
+
+$$
+T^{\Sigma}(k,k)=\sigma_E(N\mathbin\cdot k)^2\delta(\eta)\ge0.
+$$
+
+Consider one transverse crossing with $q=N\mathbin\cdot k\ne0$,
+continuous metric and null tangent, finite radius and bounded regular
+terms on each side. Integrating through the crossing uses
+$\int\delta(\eta(\lambda_E))\,d\lambda_E=1/|q|$. With
+$\Delta_\gamma$ meaning after minus before along the ray, it gives
+
+$$
+\Delta_\gamma\theta=-\kappa_4\sigma_E|q|,\qquad
+\Delta_\gamma(kR)=-\frac{\kappa_4\sigma_E R}2|q|.
+$$
+
+An independent derivation uses the angular Israel law:
+$[K^\theta{}_\theta]=[N(R)/R]=-\kappa_4\sigma_E/2$.
+Tangential derivatives of the common wall radius agree. Crossing in
+either direction therefore changes $kR$ by $|q|[N(R)]$, yielding the
+same impulse. It focuses the ray in its direction of travel, including
+past-directed travel; it does not supply a defocusing bounce. This is a
+local junction statement for a regular transverse crossing. Tangencies,
+accumulating crossings and global continuation require separate analysis.
+
+### Global and conformal hypotheses still to be supplied
+
+These identities identify what a regular formation construction must
+address. They do not turn the finite collar into a theorem about its
+entire past. The [isolated reference classification](nsc-atlas-causal-classification.md)
+already has its own singular past; it is not automatically the global
+completion of the sourced, glued parent.
+
+For comparison, [Graf's C1 Penrose theorem, Theorem 5.7](https://arxiv.org/pdf/1910.13915v3)
+requires a globally hyperbolic C1 metric, a noncompact Cauchy surface,
+the specified distributional null convergence condition, and a closed
+achronal trapped surface; time reversal supplies its past version.
+The material wall here has a nonzero extrinsic-curvature jump and is
+generically only locally Lipschitz in continuous matching coordinates.
+That theorem's C1 hypothesis is therefore not met across the wall.
+The [Lipschitz Hawking result](https://arxiv.org/html/2501.18450v3)
+is a timelike theorem with different curvature and hypersurface
+hypotheses. Its introduction explicitly separates the null extension.
+Neither citation supplies the missing global null argument for this
+Einstein--scalar--wall system. The focused reading boundary is recorded
+in the [source library](arxiv-studies.md#formation-and-metric-regularity-17-october-2026).
+
+There is a second issue before transferring a global conclusion to
+physical Jordan clocks. Along a common null curve, matched affine
+normalizations for $g_E=\mathcal F g_J$ obey
+
+$$
+k_E=\mathcal F^{-1}k_J,\qquad
+d\lambda_E=\mathcal F\,d\lambda_J.
+$$
+
+Uniform global bounds $0<f_{\min}\le\mathcal F\le f_{\max}<\infty$
+would make the affine lengths comparable. Local positivity on the
+constructed collar supplies no such bound on the whole past. For
+example, the affine-integral control $\mathcal F(s)=(1+s)^{-2}$,
+$s=\lambda_J/L_0\ge0$, gives
+$\lambda_E/L_0=s/(1+s)$: an infinite Jordan length can have finite
+Einstein length. This is a mathematical frame control, not a solution
+of the owned action or a constructed regular completion. A limit
+$\mathcal F\to0$ would itself require analysis of the Jordan equations
+and their vanishing effective gravitational coefficient.
+
+The next formation connection must specify the complete initial data
+and their development, the wall-compatible causal argument, and any
+global frame bounds it uses. Varying the prescribed later pulse alone
+does not change the quiet sphere's two expansion signs. The local
+cap--wall solution remains available for response and preparation work;
+regular global formation remains a separate construction under explicit
+assumptions. The [admission](prior-art-and-open-claim.md#formation-diagnostic-for-the-same-sourced-family-17-october-2026)
+and [four exact controls](../tests/test_nsc_atlas_formation_diagnostic.py)
+bind this diagnostic without a new field solve or scan.
 
 ## Exact constraint transport and boundary input
 

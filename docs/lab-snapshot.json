@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "5319da00abaa1759037efb4e56079ce87abeade1",
+  "current_receipt_commit_parent": "cd037ab58884d36db4b45f1539866c259be61ae3",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 240185,
-      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
-      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
+      "bytes": 240652,
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "ae7792e5e4ed5324e983bf764080b1735872ceb5e9da8fdb041d580a7873cb7c"
+      "sha256": "3b85055d7929426235b19f321f9ac36a1c0e22faa7ea3915c80567a1db0fc99a"
+    },
+    {
+      "path": "docs/arxiv-studies.md",
+      "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
+      "bytes": 97216,
+      "sha256": "2f39d8b8c76aa2469edebb03b3e50c1e34dd7f7a49cf04c824832157a44ccf2e",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing."
     },
     {
       "bytes": 9543,
@@ -10309,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 358213,
-      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
-      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
+      "bytes": 359331,
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "cf1c4e2d85b25b1bee575943f4185ff16a429280d56081feac590078c440f3ca"
+      "sha256": "cbd06951a1d1c14cb23f6b4ee7a191ce2aa374afdb816aa3240b91cbb717f425"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10404,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 594815,
-      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
-      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
+      "bytes": 602004,
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "11459e3ec6ae59de9b30a5684788ab7446a49649a747f6ef06edb57695064b62"
+      "sha256": "185b56de634be1e7e7812af49423ec28bfb73fa6dd8105db95eb9d3ddd0d0017"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11426,12 @@
       "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 448746,
-      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
-      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
+      "bytes": 451301,
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1e7bcd16e3e37bdc5654fb41f680d5257fc12a09d49987b49f2f64ff256dcf9c"
+      "sha256": "fa05e86763238e3ac0baab5baf678188c074a20c05a44f011252e751d842996e"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11440,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 139342,
-      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
-      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
+      "bytes": 139965,
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3e8c01ba84326ff50acc021cf9aca1cd4e3165f6abad252900df9a37f3a22050"
+      "sha256": "f07293f7c622a5bd85b1809eaed7d201c59230175fef25c6ef38f6cbd5182de9"
     },
     {
       "bytes": 18356,
@@ -36757,6 +36765,14 @@
       "path": "tests/test_nsc_atlas_fixed_cap_time.py",
       "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
       "sha256": "0f4cb74ce36ea6909b75cbbc3b602a5fc03545a3521ce00271b67f2fab6ffab5"
+    },
+    {
+      "path": "tests/test_nsc_atlas_formation_diagnostic.py",
+      "retention_reason": "Exact same-action null-expansion, focusing, wall-impulse and frame controls.",
+      "bytes": 4821,
+      "sha256": "6eab8882d17144bc332e17cb67286298797872f28702eaae304908d0e773ed61",
+      "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
+      "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing."
     },
     {
       "bytes": 3364,

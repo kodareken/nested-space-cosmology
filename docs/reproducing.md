@@ -6,6 +6,19 @@ Scientific conclusions retain the domains in their owning notes.
 The current paper and test dependencies use Matplotlib 3.11.2; the scientific
 stack includes python-flint 0.9.0 and Numba 0.68.0.
 
+The [same-family formation diagnostic](nsc-atlas-finite-amplitude.md#formation-diagnostic-from-the-quiet-sphere-and-material-wall)
+has four exact controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_formation_diagnostic.py -q -s
+```
+
+They check area/boost/mass consistency, affine focusing with a regular
+caustic control, agreement of surface-stress and Israel impulses, and the
+conformal affine relation directly from the metric connection. The shared
+allowance is twenty active CPU seconds and zero physical samples; the
+recorded run uses 0.296875 seconds. No global formation simulation is run.
+
 The [earlier spacelike realization](nsc-atlas-finite-amplitude.md#earlier-spacelike-realization-of-the-prescribed-source)
 has four exact controls:
 
