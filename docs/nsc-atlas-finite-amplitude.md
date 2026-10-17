@@ -7697,6 +7697,31 @@ pass with **21,192 charged values / 0.28125 active CPU seconds**. They verify
 the frame identities and canonical gap, both limits, manufactured 80-digit
 values, outward rational rounding and rejection of an unclosed source tube.
 
+The [physical source-forcing application](../results/summaries/nsc-atlas-source-forcing-bound-v1.json)
+at producer `7025f41068086dc3d9d5425bb825a4d51e40c022` proves the following
+conservative ceilings on the original cell, uniformly for
+`0<=alpha<=0.00012983127142551443` with the recorded binary upper endpoint:
+
+| Source difference from the vacuum reference | Upper bound |
+| --- | ---: |
+| Radius `abs(r-x)` | `7.404e-16` |
+| Radius derivative `abs(r_x-1)` | `2.362e-12` |
+| Log lapse `abs(L)` | `4.940e-18` |
+| Log-lapse derivative `abs(L_x)` | `1.715e-13` |
+| Canonical value `abs(X)` | `2.018e-7` |
+| Canonical derivative `abs(Q)` | `0.003501` |
+| Radius primitive input `abs(r*r_x-x)` | `9.982e-13` |
+
+The run uses **2,048 charged values**, with CPU below timer resolution, no
+source solve and no time steps. Its **6,365-byte** certificate has SHA256
+`2ccf4ad7326291b79500f4d78a0f858907a80901c74b771f8b22fd8cb735c611`.
+All 19 producer bindings authenticate. Grok's independent code review
+confirms the whole-coupling source bootstrap, frame cross terms and outward
+rounding. A separate **512-value rational audit** confirms the displays,
+reported ceilings, input identity and strict source/frame margins. These
+are now concrete forcing inputs; a sourced cap-wall-exterior tube and its
+local construction/continuation are still required.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

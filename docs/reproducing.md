@@ -642,6 +642,13 @@ its allowance is 4,096 values / 5 seconds. Exact rational calculation with
 128-bit outward dyadic rounding replaces no source data and runs no source
 integration or evolution. It bounds actual forcing, not interpolation error.
 
+Frozen producer `7025f41` passes with 2,048 charged values and CPU below timer
+resolution. The 6,365-byte summary retains exact rational bounds for the
+whole admitted coupling interval. Its 19 producer hashes and input identity
+authenticate; a 512-value rational audit verifies the displays, reported
+ceilings and source/frame continuation margins. Grok independently confirms
+the equations and outward rounding.
+
 The coupled comparison controls are:
 
 ```sh

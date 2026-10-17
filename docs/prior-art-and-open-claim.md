@@ -2757,6 +2757,17 @@ margin cannot be used to require the wall itself to remain quiet. Only
 non-arrival. A closed a priori bound still needs a local construction and
 continuation argument before it establishes a sourced spacetime.
 
+**Outcome:** four controls pass with 21,192 values / 0.28125 active CPU
+seconds, and Grok confirms the complete source/frame inequalities and
+outward dyadic rounding. Frozen producer `7025f41` completes the physical
+application with 2,048 values and CPU below timer resolution. The full
+coupling-interval bounds include `abs(X)<2.018e-7`, `abs(Q)<0.003501`,
+`abs(r-x)<7.404e-16` and `abs(L)<4.940e-18`. The 6,365-byte
+[certificate](../results/summaries/nsc-atlas-source-forcing-bound-v1.json)
+retains 19 producer hashes. A separate 512-value rational audit verifies
+the displays, ceilings, input hash and continuation margins. No source
+query, integration, root search, time step or retry was performed.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

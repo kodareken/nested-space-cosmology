@@ -238,6 +238,17 @@ a 12,790-byte receipt. The numerical source-curvature error remains recorded.
 Later physical residuals must be enclosed on the explicit common reference
 reconstruction; the floating midpoint diagnostics alone do not supply them.
 
+The [actual source-forcing certificate](nsc-atlas-finite-amplitude.md#actual-source-forcing-relative-to-the-vacuum-reference)
+now bounds the driving data across the original cell and the full coupling
+range from zero to the recorded alpha. It gives `abs(X)<2.018e-7`,
+`abs(Q)<0.003501`, radius forcing below `7.404e-16` and log-lapse forcing
+below `4.940e-18`, with both metric first derivatives and the radius-product
+input also enclosed. Four controls and Grok review pass; a 512-value rational
+audit checks the 6,365-byte receipt. The application uses 2,048 values and
+no source solve or evolution. These actual forcings supply the next coupled
+tube calculation; they are distinct from interpolation error and do not yet
+establish the sourced spacetime.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.
