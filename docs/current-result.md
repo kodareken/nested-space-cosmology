@@ -1,6 +1,36 @@
 # What the calculations show
 
-Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## A sourced finite-amplitude onset solution, 17 October 2026
+
+The [construction and continuation proof](nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
+now establishes a compatible cap, material wall and exterior on the original
+source cell `0.42228630694544744<=x<=0.42292305857246026`, uniformly over
+`0<=alpha<=4789928473501569/36893488147419103232` (approximately `1.2983e-4`).
+It uses the same exact quiet anchor and C3 source. Regional native fields
+are C3, native radius is C4, and the polar cap metric is C2. The core stays
+the regular quiet de Sitter solution throughout this onset interval.
+
+The ten departure bounds in the [interval receipt](../results/summaries/nsc-atlas-coupled-tube-bound-v1.json)
+now apply to that solution; for example `abs(delta T)<7.061e-9` and
+`abs(E_plus)<0.002061`. The receipt itself remains an immutable conditional
+calculation. The new conclusion comes from local contraction, constraint
+propagation, uniform derivative bounds, clock construction and a first-exit
+argument, with independent Grok review. No grid scan or new physical
+trajectory was run for this proof.
+
+This result covers the declared onset cell. It does not yet certify the
+saved approximate trajectory, a perturbative remainder, first central
+arrival, formation, stability or observational agreement.
+
+The next [parameter-variation identities](nsc-atlas-finite-amplitude.md#parameter-variation-identities-on-the-onset-cell)
+retain both moving-limit terms, inverse wall-entry derivatives and the
+moving wall trace through second order. They specify the equations needed
+for a wall/clock Taylor estimate. Convergence of parameter difference
+quotients on valid common patches remains to be established; the clipped
+extension used for existence cannot simply be differentiated twice. No
+remainder constant or new physical trajectory is claimed by those identities.
 
 ## Fixed cap and moving-wall connection, 16 October 2026
 
@@ -260,8 +290,8 @@ The [first-derivative argument](nsc-atlas-finite-amplitude.md#conditional-first-
 also closes conditionally, with three symbolic controls and independent
 Grok review. It bounds the cap derivatives before differentiating the
 exterior wall data and does not assume an incoming null constraint.
-The local construction below is separate from these a priori bounds;
-its continuation over the original physical cell remains open.
+The local construction and finite-cell continuation above are separate
+from these a priori bounds and supply their existence argument.
 
 The next [local construction map](nsc-atlas-finite-amplitude.md#a-primitive-preserving-local-construction-map)
 uses the existing double-null wall operator. One shared frozen forcing
@@ -272,10 +302,9 @@ supports the route and its constraint/gauge implications. The owner now
 derives weighted derivative invariance and a moving-domain contraction
 estimate, with fixed source data and the order of constants stated.
 Independent Grok review confirms those bounds and the cap initial-data strip,
-which
-addresses the portion of an interior time slice beyond the small wall
-wedge; conversion and continuation over the original physical cell remain
-open. The physical tube calculation has not been repeated.
+which addresses the portion of an interior time slice beyond the small wall
+wedge. Conversion and continuation on this cell are completed in the
+assembled proof above. The physical tube calculation has not been repeated.
 
 The [native null-jet bridge](nsc-atlas-finite-amplitude.md#native-null-jets-and-the-next-regularity-level)
 bounds radius, scalar and lapse first jets from the existing polar tube;
@@ -288,8 +317,9 @@ higher-regularity argument and its use of C3 source data. A further
 [conditional slice-inclusion estimate](nsc-atlas-finite-amplitude.md#conditional-coverage-of-physical-cap-slices)
 now accounts separately for old radii and those enclosed by the expanding
 wall, with independent review. It prevents escape from the constructed
-null strip while the chart and tube hold. The combined continuation proof
-to the original physical right endpoint remains open.
+null strip while the chart and tube hold. Together with the radius flow,
+curved restart estimates and terminal moduli, it completes continuation to
+the original physical right endpoint.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

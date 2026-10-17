@@ -3,9 +3,11 @@
 The [owned action](nsc-atlas-cap-wall-response.md) fixes an exact nonlinear
 model, while the existing metric, wall and scalar results are perturbative
 coefficients of that model. This note identifies its finite-amplitude source
-data, smooth equations and interface laws. It distinguishes an elementary
-source-leg continuation bound from the still unestablished existence and
-remainder estimate for the full transmitted spacetime.
+data, smooth equations and interface laws. The
+[finite-cell construction](#finite-cell-continuation-assembly) now establishes
+the sourced onset solution and its departure bounds. Continuation through
+central arrival and a controlled remainder for the full transmitted response
+remain the next connections.
 
 The physical inputs are unchanged: a canonical Jordan scalar with coupling
 `xi=1/6`, fixed vacuum densities `V0,-=3H^2/kappa_4` and `V0,+=0`, constant
@@ -8801,28 +8803,581 @@ the chart or prove continuation to the original right endpoint. That final
 argument must combine local polar overlap, the native bounds and regularity,
 quiet-core matching and strict tube improvement.
 
+#### Restart curves and the polar flow
+
+A later cap slice cannot silently be assigned the original straight equation
+`u+v=2*T_0` while keeping its null coordinates fixed. On a polar slice write
+`u=ell(v)`. Its tangent is parallel to the radius gradient, so
+
+\[
+ \ell'(v)=\frac{r_v}{r_u}=\frac{j_+}{j_-}<0.
+\]
+
+The native gradient bounds therefore supply constants
+`0<ell_min<=-ell'<=L_ell`. The actual Cauchy data on that curve obey
+`y_0'=ell'*p_0+q_0`; their derivatives are obtained from the already
+constructed solution. In particular
+
+\[
+ q_0'=\ell' F+Q,\qquad
+ q_0''=\ell''F+(\ell')^2F_u+2\ell'F_v+R,
+\]
+
+where Q and R denote q_v and q_vv in the native hierarchy. These are data
+for a restart, not new physical inputs. The original exterior x labels,
+source and native wall gauge functions are retained.
+
+The cap strip for this curved lower line is still
+`ell(v)<=u<=min(U_Y(v),ell(v)+rho*h)`. Choose
+`rho>a_max+L_ell*b_max`. Its outgoing prefix has length at most rho*h.
+For an initial incoming entry, `u=ell(v_e)` implies
+`ell_min*(v-v_e)<=u-ell(v)<=rho*h`. For a wall entry,
+`u>=ell(v_e)` gives the same estimate. Thus both characteristic lengths
+are bounded by `rho*h/min(1,ell_min)`. The unit-weight cap extension and
+the weighted exterior proof retain their order of constants. The lower
+curve is fixed during each local map; a shift between two iterates does
+not change that Cauchy curve. Corner compatibility is inherited from the
+preceding solution and the unchanged C3 gauge.
+
+There is also an explicit flow for constructing the physical cap clock.
+In native null coordinates the normalized radius gradient is
+
+\[
+ V=\frac{\nabla r}{A}
+   =\frac{1}{2r_u}\partial_u+\frac{1}{2r_v}\partial_v,
+ \qquad V(r)=1.
+\]
+
+Integrate V with areal radius as the parameter, starting on a quiet inner
+worldline. Before any wall characteristic reaches that worldline, its
+coordinates are `u=T+z_c,v=T-z_c`, with T the central proper clock and
+`r_c=tanh(z_c)>0`. The positive quiet-core margin provides an overlap
+where this initial clock is already defined by the vacuum solution.
+The field r is C4 and the one-sided metric is C3, so V is C3. Bounds on
+r_u and r_v away from zero and on the native derivatives bound V and its
+first three derivatives on a compact positive-radius collar.
+
+Let Phi(T,r) be this flow and let
+`J=det(partial_T Phi,partial_r Phi)`. The two-dimensional variational
+equation gives
+
+\[
+ J_r=(\operatorname{div}V)(\Phi)J,\qquad
+ J(T,r_c)=\frac1{2r_v}-\frac1{2r_u}\ne0.
+\]
+
+Hence a bound on div V and finite radial length keep J away from zero.
+Distinct starting clock values cannot intersect: at an intersection the
+areal-radius parameters agree, and uniqueness of the same ODE would give
+the same starting point. This proves injectivity within a covered flow
+region, not just a pointwise nonzero determinant. Its T-level curves are
+parallel to the spacelike radius gradient, making T a time coordinate
+with the original future orientation. The transformed metric is C2; the
+radial Einstein equations identify its lapse with the owned radial lapse
+constraint and the quiet central anchor.
+
+In fact the transformed coefficients follow directly from the flow:
+`g_rr=1/A`, `g_Tr=0`, and
+
+\[
+ g_{TT}=-\frac{A C^2J^2}{4},\qquad e^\delta=\frac{C|J|}{2}.
+\]
+
+Thus the clock lapse is positive and bounded from the native C and the
+flow Jacobian before identifying it with the radial constraint. The
+variational coefficient is also explicit,
+`div V=-r_uu/(2*r_u^2)-r_vv/(2*r_v^2)`. The null constraints bound it from
+native first jets and nonzero r_u,r_v. No independent bound on a new clock
+function is inserted here.
+
+For continuation the remaining possible failure of this flow is departure
+from its native domain. The slice-inclusion estimate is applied only to
+the already covered wall segment `0<=s<=S<h`, with the constructed native
+strip kept to h. Its strict artificial-boundary margins can then be used
+before assuming a clock at the final wall point. The material wall is
+transverse to the spacelike flow, since it is timelike, so its next
+intersection is governed by the same local implicit-function argument.
+This connects local polar overlap and slice coverage without assuming a
+clock at an unreached wall point. The composite continuation argument below
+includes uniform restart bounds and terminal regularity, with independent
+Grok review.
+
+#### Uniform restart bounds and terminal traces
+
+On any already constructed initial subinterval of the original cell, keep
+the same physical tube and fixed positive C3 native gauge functions. The
+fixed-gauge outgoing rate has the positive lower bound
+
+\[
+ b_0=(C_{W,\max}W_{x,\max})^{-1/2}>0,\qquad
+ s-s_L\le S_{\max}:=(x_R-x_L)/b_0.
+\]
+
+Here C_W in this formula is the evolved **fixed-boost-gauge** lapse. It is
+not the independently chosen native lapse. Choose the native gauges once
+on a neighbourhood of `[s_L,s_L+S_max]`, matching their reference values
+on a nonempty initial quiet interval. A positive C3 extension suffices;
+it changes coordinates, not the physical source or wall law.
+
+The cap clock rate also has a positive lower bound. Proper normalization
+and the outgoing orientation give
+
+\[
+ (T_W)_s=\frac{\beta_-}{A e^\delta},\qquad
+ \beta_-=\sqrt{A+(R_s)^2},\qquad
+ (T_W)_s\ge\frac{\sqrt{A_{\min}}}{A_{\max}\mu_{\max}}>0.
+\]
+
+Thus later constant-T slices remain valid restart surfaces. The clock
+upper bound is supplied by the same compact wall quantities. On a new
+native extension the flow formula `e^delta=C*abs(J)/2` provides the
+corresponding local bounds before the radial constraints identify the
+tighter physical-tube lapse.
+
+The bounds on k and the cap j's imply bounded native wall rates, inverse
+rates and coordinate lengths on this finite proper-time range. The old
+exterior prefix has length at most `W_max/k_min`; its later increase is
+bounded by the incoming wall rate times S_max. The cap collar has bounded
+radial extent and native gradients, hence bounded initial-coordinate
+lengths as well as bounded increments along the wall. Include the
+slightly deeper quiet strip in this compact positive-radius domain.
+The native value and first-jet argument above therefore gives one compact
+range M_0 for Z, uniformly over initial subintervals and the admitted
+alpha interval.
+
+Let L bound the first two derivatives of the smooth normalized F on a
+slightly enlarged value box, and let U,V bound the two characteristic
+lengths. The differentiated systems have the following dependency order:
+
+| Bound | Inputs already fixed before solving it |
+| --- | --- |
+| `C_Q` for `Q=q_v` | M_0, original `q_0'`, lower-curve slope, `exp(L*U)` |
+| `C_P` for `P=p_u` | M_0, C_Q, original incoming first derivatives, the differentiated wall map, `exp(L*V)` |
+| `C_R` for `R=q_vv` | M_0, C_Q,C_P, original `q_0''`, lower-curve derivatives, `exp(L*U)` |
+| `C_S` for `S=p_uu` | M_0, C_Q,C_P,C_R, original incoming second derivatives, Gamma and its first two derivatives, `exp(L*V)` |
+
+The original cap lower line is straight and quiet. The exterior lower
+line has ell equal to zero; the original source field is C3, so its
+outgoing first jet q_0 is C2. No C3 norm of q_0, which would request a
+fourth field derivative, is required. Each entry in this table is a
+finite linear Gronwall estimate with its source already bounded. Taking
+these estimates on the original characteristic segments avoids multiplying
+new independent bounds at every restart. In particular the C2 first-jet
+norm is uniformly finite as a putative stopping time is approached.
+
+Continuity of the terminal highest jets follows from the equations, not
+from their suprema alone. After C_R,C_S are bounded, both P and Q are
+uniformly Lipschitz: `P_u=S`, `P_v=F_u`, `Q_u=F_v`, `Q_v=R`. The
+coefficients and known sources of the R equation therefore have a uniform
+modulus. Its remaining input is the fixed modulus of q_0''. Subtracting
+the Volterra formulas at two parameter points and applying the same
+finite-length Gronwall bound propagates that modulus to R. The wall
+formula for g_ss then propagates it, together with the fixed modulus of
+Gamma_ss, to the initial data of the S transport equation. Its integral
+formula gives a modulus for S. Schematically, with finite constants
+independent of the stopping time,
+
+\[
+ \omega_{R,S}(d)\le C\left[
+     \omega_{q_0''}(Cd)+\omega_{p_{\rm initial}''}(Cd)
+     +\omega_{\Gamma''}(Cd)+d\right]\longrightarrow0.
+\]
+
+On the compact source/alpha set the actual normalized source derivatives
+are jointly continuous; the positive source tube keeps every denominator
+away from zero. The moduli and bounds can therefore be chosen uniformly
+in alpha. The fixed gauges have the same property. The terminal fields,
+jets and wall state are legitimate compatible Cauchy traces. The chain
+rules on the curved restart line give bounded restart data, rather than
+new assumptions about their size. Independent Grok review confirms this
+uniform hierarchy, the modulus argument and the exterior conversion's
+absence of an assumed k derivative.
+
+#### Coverage after a curved restart
+
+At a restart wall time s_b, put `sigma=s-s_b` and let the covered cap
+clock be T_b. The later lower line is the fixed function ell(v) from that
+slice. Set `D=u-ell(v)`. Along a fixed radius already inside the restarted
+cap,
+
+\[
+ D_T=\beta\bigl(j_++\ell'(v)j_-\bigr)>0,\qquad
+ D_T\le K_\ell:=\sup\beta\bigl(j_++L_\ell|j_-|\bigr).
+\]
+
+At its initial slice D is zero. At a wall-born radius, start instead at
+its actual enclosure time sigma_e. The wall value has derivative
+`D_s=a-ell'*b<=a_max+L_ell*b_max`. The same remaining-time split gives
+
+\[
+ 0\le D\le (a_{\max}+L_\ell b_{\max})\sigma_e
+       +K_\ell T_{s,\max}(h-\sigma_e)
+ \le\max(a_{\max}+L_\ell b_{\max},K_\ell T_{s,\max})h.
+\]
+
+For old radii the wall term is absent. Choosing rho above this maximum
+keeps all those points below `ell(v)+rho*h`. The monotone comparison with
+the material wall gives `u<=U_Y(v)` exactly as before; it does not depend
+on a straight initial curve.
+
+Re-anchor the artificial inner end at a fixed physical quiet radius on
+each restart. This changes the cutoff in the retained coordinate chart,
+not the coordinate functions themselves. Choose
+`z_inner<z_star`, and set `v_*=T_b-z_inner`. At the existing quiet edge,
+`v(T_b,z_star)=T_b-z_star`. Monotonicity in z gives
+`v_W(s_b)<=T_b-z_star`. Therefore both old and born points stay below
+v_* whenever
+
+\[
+ h\max(b_{\max},K_vT_{s,\max})<z_\star-z_{\rm inner}.
+\]
+
+This one conservative condition covers the wall-entry contribution as
+well as the interior time increment. The cutoff is not frozen at its
+original numerical label for later restarts. The persistent quiet gap
+allows the same positive physical separation at each step. These are the
+explicit curved-curve coverage estimates needed by the restart argument.
+
+#### Applying the one receipt on initial subintervals
+
+The fixed tube receipt can be used as a first-exit barrier without another
+box evaluation. On `[x_L,x]`, `x<=x_R`, take the same box and the same
+global source, gauge and kernel majorants. Every time-dependent component
+image displayed above is a nonnegative boundary bound plus the elapsed
+source length times nonnegative box constants. Replacing `x-x_L` by the
+full `x_R-x_L` only enlarges it. Radial constraint estimates use the same
+upper collar width, and the source suprema are already valid on the whole
+cell. The same pointwise positivity and characteristic-gap calculations
+therefore hold on the shorter interval. The quiet travel distance also
+only increases when replaced by the full-cell bound.
+
+Thus on any such prefix where the box hypotheses hold, all ten actual
+norms are bounded by the original strict images, with ratios below 0.516;
+the separate longitudinal-jet bound improves as well. Suprema and prefix
+integrals are continuous under the controlled moving domains and first
+jets. A first contact with a box face is consequently impossible. This
+uses the same authenticated interval inequalities, not a new sampled
+comparison or a revised threshold.
+
+### Finite-cell continuation assembly
+
+For this candidate there is a classical regional
+cap--wall--exterior solution on the **original** source cell
+
+\[
+ x_L=\frac{475452113650795}{1125899906842624},\qquad
+ x_R=\frac{3809352257986645}{9007199254740992},\qquad
+ 0\le\alpha\le
+ \frac{4789928473501569}{36893488147419103232}.
+\]
+
+Its data are the exact reference anchor, the original C3 compact source,
+the same cap potential and material-wall action, and the existing signed
+wall laws. Independent Grok review of the assembled argument found no
+remaining missing hypothesis or circular dependency in this stated class.
+The frozen interval receipt continues to report only its own conditional
+calculation; existence follows from the construction and continuation
+argument here. No new numerical evolution is used.
+
+**Initial solution and clock.** The certified source-front margin leaves a
+nonempty interval after x_L on which the exact source vanishes. On this
+interval the explicit vacuum reference solves the full finite-alpha
+equations: all scalar-dependent corrections vanish. Its exterior, wall
+and complete regular de Sitter cap match by the exact initial identities.
+The reference T is the cap's central proper time. Native gauges agree with
+the reference on a nonempty part of this interval, giving an explicit
+initial polar/null overlap with compatible corner derivatives. The local
+construction then extends the same data; the source is not kept zero past
+its actual front.
+
+**Maximal common prefix.** Continue the native solution, anchored exterior
+relabeling and polar cap chart together as long as they cover a source
+prefix beginning at x_L, remain in the open tube, and have the stated quiet
+core. At the start all departures vanish, and the reference inequalities
+are strict. Constraints propagate from the exact source and initial data;
+the independently imposed angular, temporal and normal wall laws imply
+both incoming constraint residuals vanish. These conclusions use the
+constructed solution's C3 regional regularity, not additional boundary data.
+
+**Quiet core and regular centre.** Until a first failure, any incoming
+wall characteristic satisfies
+
+\[
+ z(T)\ge \operatorname{atanh}(R_{\min})
+                      -\beta_{\max}(T-T_{\rm entry})>z_\star
+\]
+
+by the certified full-cell travel inequality. Initial scalar data vanish,
+and the homogeneous scalar equation cannot generate a field in a region
+whose characteristic past has only those quiet data. In that region the
+vacuum mass and lapse equations give zero mass correction and the fixed
+central lapse normalization. Uniqueness on the quiet overlap identifies
+the geometry with the original regular de Sitter core. The argument
+starts the radius flow at a positive-radius worldline in this overlap;
+it never divides by the axis radius or imposes a second trace at z_star.
+The strict travel gap prevents loss of that overlap on a shorter prefix.
+
+**Uniform native continuation.** The tube gives bounded physical values
+and the rate lower bound b_0, so the available proper interval is bounded
+by S_max. The native conversion gives the compact M_0 range and finite
+coordinate lengths. The ordered Q,P,R,S estimates and their moduli then
+give uniformly bounded, continuous C2 first-jet traces at any putative
+terminal prefix. No bound on an unknown higher incoming waveform or on
+phi'' is substituted. A later cap slice has a uniformly spacelike curved
+lower line and the restart data calculated above. The same enlarged
+value boxes and rate margins allow lambda, then M, then a positive local
+h to be chosen independently of that stopping point. This constructs a
+native extension with the same source and gauges.
+
+**Extend the physical chart.** On the covered portion, the normalized
+radius flow has bounded C3 coefficients and a Jacobian separated from
+zero. Its metric formula fixes a positive lapse and the anchored clock.
+Start from the existing quiet overlap and extend only the already
+covered wall segment S inside the newly constructed native strip h,
+where `S<h`. The curved-slice inclusion inequalities exclude its artificial
+ceiling and inner end. They account for newly enclosed radii at their wall
+entry and use a fresh physical quiet cutoff at each restart. The spacelike
+flow is transverse to the timelike material wall. Hence it cannot stop
+before the next wall point through loss of invertibility, intersection,
+or an artificial-domain exit. This extends the polar chart together with
+the native solution. The exact radial constraints identify its lapse and
+mass with the variables of the conditional tube.
+
+**Exclude a first exit.** On every common initial prefix the original
+receipt's strict images apply by the subinterval lemma. All ten norms
+therefore stay strictly inside their assumed faces; the longitudinal,
+characteristic and expansion margins stay positive. The quiet core,
+native regularity and coordinate coverage cannot fail first by the
+previous steps. If a maximal endpoint had `x<x_R`, the uniformly positive
+local extension and continuity would contradict maximality. Since
+`dx/ds>=b_0`, x reaches x_R within S_max. The terminal continuity and the
+same local construction include the endpoint itself.
+
+The resulting statement is regional C3 native fields, C4 native radius,
+a C2 polar cap metric, a compatible material wall and a regular quiet
+centre on this finite interval, with the ten departure bounds listed in
+the original tube table. Local uniqueness applies in the specified regular
+class and gauges. This is not smoothness across a material wall, a regular
+formation history, passage through the first central arrival, or an error
+certificate for the saved approximate numerical trajectory. Those are
+different assertions and retain their separate work.
+
+### Parameter-variation identities on the onset cell
+
+The onset theorem supplies a solution for each admitted alpha. A uniform
+Taylor remainder for its wall geometry and clocks needs a separate
+parameter-dependence estimate. The identities here describe that estimate's
+equations, conditional on the indicated derivatives; they do not assert
+that the constructed family already has those derivatives. At alpha=0
+the geometry is the vacuum reference and the normalized scalar is the
+prepared linear probe, not the zero scalar. In the certified quiet core
+the scalar readout is identically zero for every admitted alpha.
+
+Independent Grok review confirms the moving-limit and inverse-entry
+identities below. Its proposed weak-norm remainder still requires the
+explicit common-domain comparison identified at the end of this subsection.
+
+Write `Z=(y,p,q)` and use subscripts 1 and 2 for first and second alpha
+derivatives at fixed native coordinates. For the smooth normalized mixed
+system `y_uv=F(Z,alpha)`, total variations of its forcing are
+
+\[
+ \mathfrak F_1=F_ZZ_1+F_\alpha,
+ \qquad
+ \mathfrak F_2=F_ZZ_2+F_{ZZ}[Z_1,Z_1]
+                  +2F_{Z\alpha}Z_1+F_{\alpha\alpha}.
+\]
+
+Here `F_Z Z_1` and `F_Z Z_2` are linear applications, whereas the explicitly
+subscripted `F_{ZZ}` is the second derivative. Thus `y_1` and `y_2` have
+the same linearized principal mixed operator; the second equation has
+the displayed quadratic and explicit-parameter source.
+
+For the incoming primitive at fixed u and v, let e be its actual entry
+label and B its entry value:
+
+\[
+ p=B(\alpha,u)+\int_{e(\alpha,u)}^v F(\alpha,u,t)\,dt.
+\]
+
+Twice applying the moving-limit rule gives
+
+\[
+ p_1=B_1+\int_e^v\mathfrak F_1\,dt-F|_e e_1,
+\]
+\[
+ p_2=B_2+\int_e^v\mathfrak F_2\,dt
+              -2\mathfrak F_1|_e e_1-F_v|_e e_1^2-F|_e e_2.
+\]
+
+The derivative F_v here is the total spatial derivative along the solution.
+It is not a partial derivative with respect to the q argument. For the
+outgoing primitive with its actual lower line,
+
+\[
+ q=q_0(\alpha,v)+\int_{\ell(\alpha,v)}^u F(\alpha,t,v)\,dt,
+\]
+
+the corresponding formulas are
+
+\[
+ q_1=(q_0)_1+\int_\ell^u\mathfrak F_1\,dt-F|_\ell\ell_1,
+\]
+\[
+ q_2=(q_0)_2+\int_\ell^u\mathfrak F_2\,dt
+       -2\mathfrak F_1|_\ell\ell_1-F_u|_\ell\ell_1^2-F|_\ell\ell_2.
+\]
+
+Original fixed lower curves have zero parameter variations. A restarted
+physical slice must retain its actual variations; those terms cannot be
+discarded by straightening the slice without transforming the equations.
+
+At a wall-born entry, `u_W(alpha,s_e)=u` and `a=partial_s u_W>0` give
+
+\[
+ (s_e)_1=-\frac{(u_W)_1}{a},\qquad
+ (s_e)_2=-\frac{(u_W)_2+2\partial_s(u_W)_1(s_e)_1
+                         +\partial_s^2u_W(s_e)_1^2}{a}.
+\]
+
+All right sides are evaluated at the entry and the wall's parameter
+derivatives hold s fixed. With `b=partial_s v_W` and `e=v_W(alpha,s_e)`,
+
+\[
+ e_1=(v_W)_1+b(s_e)_1,
+\]
+\[
+ e_2=(v_W)_2+2\partial_s(v_W)_1(s_e)_1
+           +\partial_s^2v_W(s_e)_1^2+b(s_e)_2.
+\]
+
+If `B=P_W(alpha,s_e)` is supplied by the actual wall map, the identical
+composition rule gives
+
+\[
+ B_1=(P_W)_1+\partial_sP_W(s_e)_1,
+\]
+\[
+ B_2=(P_W)_2+2\partial_s(P_W)_1(s_e)_1
+              +\partial_s^2P_W(s_e)_1^2+\partial_sP_W(s_e)_2.
+\]
+
+The wall-map variations themselves include the moving trace. For its
+coordinate path `gamma=(u_W,v_W)`, at fixed s,
+
+\[
+ (q_W)_1=q_1+\nabla q\cdot\gamma_1,
+\]
+\[
+ (q_W)_2=q_2+2\nabla q_1\cdot\gamma_1
+            +D^2q[\gamma_1,\gamma_1]+\nabla q\cdot\gamma_2.
+\]
+
+These terms enter the first and second variations of the same wall ODE
+and algebraic incoming map. No independent incident waveform is introduced.
+The bounded C2 first jets of the onset solution supply D2q, but do not
+by themselves supply the spatial derivative of q_1 or the existence of q_2.
+
+The derivative loss can already be seen without a field solve. For the
+translated C3 profile `y(alpha,t)=(t-alpha)_+^4`, where the subscript +
+denotes positive part, its first jet is `q=4(t-alpha)_+^3` and
+`partial_alpha^2 q=24(t-alpha)_+`. This second parameter derivative is
+continuous but is not C1 at the moving front. Thus C3 source regularity
+alone cannot justify two parameter derivatives into a C1 first-jet space,
+let alone a C2 first-jet space. This example fixes the derivative budget;
+it is not a replacement for the physical source.
+
+**Remaining estimate.** Prove convergence of first parameter difference
+quotients in a norm controlling first spatial derivatives of the first
+jets, and second quotients in a continuous first-jet norm, after comparing
+actual domains through valid patches. The constants must remain uniform
+through the quiet corner, moving entries and restarts, including the
+one-sided limit at alpha=0. The clipped ambient extension used in the
+existence contraction is only Lipschitz and cannot be differentiated twice
+as a parameter chart. A normalized cap-width map is also insufficient at
+the zero-width corner without a separate estimate. Uniform spatial C3
+regularity and smooth finite-dimensional F alone do not settle these points.
+
+A positive-width chart also changes the incoming transport operator. On a
+patch with `w(alpha,v)>0`, put
+
+\[
+ U(\alpha,v,\eta)=\ell(\alpha,v)+\eta w(\alpha,v),\qquad
+ \widehat Z(\alpha,v,\eta)=Z(\alpha,U(\alpha,v,\eta),v),
+ \qquad d=U_v/w.
+\]
+
+The spatial chain rule gives the exact pulled-back equations
+
+\[
+ \partial_\eta\widehat q=w\widehat F,\qquad
+ (\partial_v-d\partial_\eta)\widehat p=\widehat F,
+\]
+\[
+ \partial_\eta\widehat y=w\widehat p,\qquad
+ \partial_v\widehat y=\widehat q+U_v\widehat p.
+\]
+
+In particular, the incoming equation is not an ODE at fixed eta.
+Writing `D=partial_v-d partial_eta`, its conditional parameter variations
+at fixed comparison coordinates are
+
+\[
+ D\widehat p_1=\widehat F_1+d_1\partial_\eta\widehat p,
+ \qquad
+ D\widehat p_2=\widehat F_2+2d_1\partial_\eta\widehat p_1
+                                      +d_2\partial_\eta\widehat p,
+\]
+\[
+ \partial_\eta\widehat q_1=w\widehat F_1+w_1\widehat F,
+ \qquad
+ \partial_\eta\widehat q_2=w\widehat F_2
+                         +2w_1\widehat F_1+w_2\widehat F.
+\]
+
+The hatted parameter derivatives include the chart variation; they are not
+the fixed-native-point derivatives used in the earlier integral formulas.
+These transport-coefficient terms belong in the bounded linear inverse
+needed for the quotient estimate. Nor may a comparison split evaluate
+`Z(alpha+h)` at a point of the alpha-domain lying outside its own domain.
+A quiet patch and positive-width charts are a candidate way to avoid that
+problem, but their complete coverage and the coupled inverse estimate
+have not yet been supplied. The initial quiet patch must have genuinely
+zero source throughout its characteristic past; a nonzero normalized
+probe cannot be called alpha-independent there without a separate argument.
+
+If those estimates yield a uniform second-variation bound M2 for an
+identified wall or clock observable O in a stated comparison norm, then
+
+\[
+ \|O(\alpha)-O(0)-\alpha O_1(0)\|\le\tfrac12M_2\alpha^2.
+\]
+
+No numerical M2 or certified Taylor remainder is recorded here. Identifying
+O_1 with an older saved perturbative coefficient additionally requires
+matching its exact source, gauge and data. Beyond x_R the present receipt
+ceases to apply; its positive travel margin does not imply that the core
+immediately stops being quiet there.
+
 ## Missing full-domain estimate
 
-A justified finite-amplitude spacetime interval needs a quantitatively
-well-posed coupled problem for the smooth equations, the timelike interface
-and the regular centre. The connected comparison above specifies an error
-system; its physical coefficient, residual and continuation bounds are not
-yet such a theorem. The quiet-core restriction handles the onset collar;
-later central arrival additionally needs the centre-patch matching below.
-In particular, the following remain to be established.
+The finite-cell argument above establishes the sourced onset solution and
+its departure bounds. The remaining full-domain problem concerns later
+central arrival and a controlled approximation or perturbative remainder
+for that observable. The quiet-core restriction is no longer sufficient
+once the signal reaches the centre. In particular, the following remain
+to be established on that extended domain.
 
-- Certify the independent characteristic/interface system with anchored gauge
-  and the fixed-domain identification above. The smooth constraint transport and
-  exact source compatibility are established above; supply the new wall
-  characteristics through an independently closed interface system and
-  preserve the bounded regular-centre residuals. Distributional stress
+- Extend the constructed characteristic/interface system through central
+  arrival with its anchored gauge, compatible centre patch and bounded
+  regular-centre derivatives. Distributional stress
   conservation must use the transformed scalar-dependent tension if the
   Einstein frame is used.
 - Extend the bounded reference scalar collar and centre estimates below
   to compatible coupled coefficients and domain maps, without derivative
   loss or division by `beta_plus`. The reference scalar bounds alone do
   not establish the nonlinear moving-interface estimate.
-- Control a tube with positive conformal factor and lapse, positive exterior
+- Control an extended tube with positive conformal factor and lapse, positive exterior
   radius, timelike wall, monotone label maps and the no-return margin. The
   central comparison must remain on a compact interior arrival interval,
   or the terminal domain must be continued consistently.

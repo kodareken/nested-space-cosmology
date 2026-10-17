@@ -14,6 +14,13 @@ It does not establish that every particle is a spherical interior or that our
 universe has a parent. The map distinguishes descent, geometric attachment,
 causal influence and correlation. Missing physical connections remain visible.
 
+A [finite-amplitude onset theorem](docs/nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
+now constructs a compatible sourced cap, material wall and exterior on the
+declared original source cell, uniformly for a nonzero amplitude range. It
+combines local evolution, clock construction and the certified departure
+bounds. The regular core stays quiet on this interval; central arrival and
+observational predictions remain subsequent work.
+
 The current geometric route reaches a sourced interior connection, a causal map,
 a calibration waveform and a [computed response to independent exterior data](docs/nsc-atlas-prepared-response.md).
 The eighth atlas resolves a central scalar waveform and a positive tail within

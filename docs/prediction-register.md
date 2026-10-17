@@ -81,6 +81,11 @@ are supplied, a prediction outside that uncertainty rejects agreement. The
 field-grid differences above must not be substituted for that future
 acceptance band. No observational calibration has been performed.
 
+The later [finite-amplitude onset theorem](nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
+constructs the same candidate on a shorter initial source cell. It does not
+reach this entry's terminal reference-radius prediction point, so P001's
+finite-amplitude remainder and observational limits remain as recorded.
+
 Check the register with:
 
 ```sh

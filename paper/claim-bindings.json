@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v2",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-16",
+  "recorded_on": "2026-10-17",
   "purpose": "Bind the living main manuscript's claims to directly linked evidence. Preserved historical findings remain indexed without promoting them to current cosmological results.",
   "historical_claim_bindings": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
   "how_records_are_found": "The checker reads links following each unique nsc-claim marker from the manuscript itself.",
@@ -172,6 +172,11 @@
     "atlas-operator-comparison": {
       "section": "13.18",
       "status": "measured",
+      "owner": "docs/nsc-atlas-finite-amplitude.md"
+    },
+    "atlas-finite-onset-existence": {
+      "section": "13.19",
+      "status": "derived",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
     }
   },
@@ -447,6 +452,14 @@
       "note": "docs/nsc-atlas-finite-amplitude.md",
       "record": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
       "paper_section": "13.18"
+    },
+    {
+      "id": "atlas-finite-onset-existence",
+      "status": "derived",
+      "summary": "The unchanged C3 source and exact quiet anchor define a compatible nonlinear cap, material wall and exterior on the original source onset cell, uniformly over the admitted nonzero coupling interval. Primitive-preserving local construction, constraint propagation, uniform derivative and chart bounds, and strict first-exit estimates establish regional existence with the ten certified departures. The core remains quiet. This does not certify older numerical trajectories, central arrival, a perturbative remainder or observational agreement.",
+      "note": "docs/nsc-atlas-finite-amplitude.md",
+      "record": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
+      "paper_section": "13.19"
     }
   ]
 }

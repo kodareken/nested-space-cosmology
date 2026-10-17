@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "9d7f7121e7d983868869083c696cdddb0ab690ba",
+  "current_receipt_commit_parent": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
   "files": [
     {
       "bytes": 3120,
@@ -51,9 +51,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 12027,
-      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
-      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "bytes": 12481,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -61,7 +61,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "fd398924784f815badaef56a653ab0dc3ca78a4589ab26587c4a2a81c0c12227"
+      "sha256": "86c3ed8f8e45c929a74b5cecaf3b2d0026439247630b2ec7b11b70dde473051d"
     },
     {
       "bytes": 781931,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 231481,
-      "change": "Record reviewed local construction, native chart bounds and higher derivative hierarchy with exact controls.",
-      "changed_from_commit": "e51e2b541734c988a1d6aac733267d42faf3d1f0",
+      "bytes": 231822,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "ecbc4bceab6883be137673be2f145e0c5d9907bd753802cf73c008140f26ada4"
+      "sha256": "7aa4d0a5661a48b2da5f770933c6b64024cde7b02d7c529e4933864b6b5d4c86"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 332936,
-      "change": "Bound conditional slice inclusion for old and wall-enclosed cap radii.",
-      "changed_from_commit": "9d7f7121e7d983868869083c696cdddb0ab690ba",
+      "bytes": 334898,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2c2096d758e786f3f473c76932feb8103fa9fc2f0019686a51a009e04b355c7c"
+      "sha256": "7f02dda8e921292dcbee2a435278dc8fe64cff9933fefba0cf5bb72cc7f1a528"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 417228,
-      "change": "Bound conditional slice inclusion for old and wall-enclosed cap radii.",
-      "changed_from_commit": "9d7f7121e7d983868869083c696cdddb0ab690ba",
+      "bytes": 442270,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4d7861fa2c407b036bdaae2364d04cb5dafb11a0e2586ea3ad2caf26ac5300ad"
+      "sha256": "e606c59fe9b88bb9e823fd58debcf2a5ada6bcb058ec5dba7e97aeb3a22cadb1"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,28 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 394664,
-      "change": "Bound conditional slice inclusion for old and wall-enclosed cap radii.",
-      "changed_from_commit": "9d7f7121e7d983868869083c696cdddb0ab690ba",
+      "bytes": 8374,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "path": "docs/papers.md",
+      "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
+      "sha256": "4c14eb09350202d2fa5af3f3b30a18a0ca043549f88d0855893ae8934a5004f0"
+    },
+    {
+      "bytes": 4845,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "path": "docs/prediction-register.md",
+      "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
+      "sha256": "030a949d41fa5f9fe7a465e1f055761b981b87f0dab2998711ad99fee487479c"
+    },
+    {
+      "bytes": 397604,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "74d010744c0bf48530afdc562e059c1184dd0008ef5d2d26f5326486109fc62c"
+      "sha256": "5cb899a4780540086b037616d75b2c04894dfa685bb192459297deebe7b193ca"
     },
     {
       "bytes": 6705,
@@ -11480,6 +11496,54 @@
       "path": "docs/win11-verification-20261014.md",
       "retention_reason": "Current verification or documentation for the authorized Windows follow-up",
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
+    },
+    {
+      "bytes": 17236,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "path": "paper/build-manifest.json",
+      "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
+      "sha256": "4d5c9af56366dc4848127346c22c623d4b04971c8d21a43b816f84d5e2fa1693"
+    },
+    {
+      "bytes": 3206,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "path": "paper/catalog.json",
+      "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
+      "sha256": "9fb648385599f4239ca223ebc5ace06547cb2a5802b8b56b3783e265f10752b2"
+    },
+    {
+      "bytes": 24118,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "path": "paper/claim-bindings.json",
+      "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
+      "sha256": "2ebded8b5cc521388dc8910e2d71c719c8e67a33a9da91267cb4b09ce3e34f7b"
+    },
+    {
+      "bytes": 396,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "path": "paper/metadata.json",
+      "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
+      "sha256": "f5da7be306b5ba457aa23dcb8d3f6f9365ee4de107ac55e0c6aa574a54c117ba"
+    },
+    {
+      "bytes": 120891,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "path": "paper/nested-space-cosmology.md",
+      "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
+      "sha256": "7551c16d61a536f7b3734f8dd49cc6507abb03b7f173394c85a3cc91cdb5a276"
+    },
+    {
+      "bytes": 2856680,
+      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
+      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "path": "paper/nested-space-cosmology.pdf",
+      "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
+      "sha256": "0fca5af2ef0af0373211415c21a6af3d64e62c9740dbd24006eb1fcb0dec11f1"
     },
     {
       "bytes": 3283,

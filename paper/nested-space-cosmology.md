@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 16 October 2026
+Working research manuscript, 17 October 2026
 
 ## Abstract
 
@@ -77,6 +77,11 @@ constraint and worsening independent native wall-curvature estimates.
 The paired wall scalar changes by 0.524% of its new peak.
 This is a finite numerical comparison, not a converged
 spacetime or a finite-amplitude remainder bound.
+Separately, a local characteristic construction and continuation argument
+now establish a compatible finite-amplitude cap, wall and exterior on a
+short original source cell, uniformly over a nonzero coupling interval.
+Certified departure bounds apply to that solution. The regular core remains
+quiet there; later central arrival and approximation error remain separate.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1823,6 +1828,95 @@ The manifest binds 104 files. Separate authentication uses 4,040,624 points
 and reconstructs saved fields, diagnostics and two final stages without
 source integration or trajectory replay.
 
+### 13.19. A finite-amplitude onset solution
+
+<!-- nsc-claim:atlas-finite-onset-existence -->
+
+Evidence: [exact reference gauge](../results/summaries/nsc-atlas-reference-gauge-bound-v1.json),
+[quiet initial anchor](../results/summaries/nsc-atlas-reference-initial-bound-v1.json),
+[actual source bounds](../results/summaries/nsc-atlas-source-forcing-bound-v1.json),
+and [conditional tube receipt](../results/summaries/nsc-atlas-coupled-tube-bound-v1.json).
+The [complete construction and continuation argument](../docs/nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
+supplies the mathematical connection between those inputs and existence.
+
+**Finite-cell result.** With the same action, signed material-wall laws,
+original compact C3 source and exact quiet initial data, the cap, wall and
+exterior admit a compatible regional solution on
+
+$$
+x_L=\frac{475452113650795}{1125899906842624},\qquad
+x_R=\frac{3809352257986645}{9007199254740992},
+$$
+
+$$
+0\leq\alpha\leq
+\frac{4789928473501569}{36893488147419103232}
+\simeq 1.2983\times10^{-4}.
+$$
+
+Here $x$ is the fixed affine source label. The cell is approximately
+$[0.4222863,0.4229231]$; it is not the complete earlier
+wall-radius window. Native fields are C3, native radius is C4, and the
+polar cap metric is C2. The centre remains a regular quiet de Sitter core.
+Local uniqueness holds in the stated regular class and fixed gauges.
+
+The construction first integrates the outgoing mixed equations, then solves
+the existing wall ODE, transports incoming jets from their actual entry,
+and reconstructs each field from the same frozen forcing. This preserves
+field primitives and common wall values at every iteration. Exponential
+weights control the long exterior prefix; a cap strip based on its
+spacelike initial data has short characteristic lengths. Weighted
+derivative bounds and moving-entry estimates give a local contraction.
+The resulting wall laws and exact initial/source data propagate both
+incoming Einstein constraints.
+
+Two ordered Volterra/transport derivative pairs give C2 first jets from
+the actual C3 source. Their finite bounds and continuity moduli remain
+uniform on the declared interval. The physical cap clock is constructed
+from the normalized radius-gradient flow. Its Jacobian stays nonzero;
+the transformed lapse is fixed by that flow and the quiet central clock.
+Restart slices keep their actual curved shape in the original null
+coordinates. Separate estimates for old radii and radii newly enclosed
+by the wall keep these slices inside the constructed domains.
+
+On every initial subinterval, the same interval majorants improve all
+ten assumed departure bounds strictly; their largest ratio is below 0.516.
+The positive travel gap keeps the core quiet. A first exit through the
+field bounds, regularity, coordinates or quiet overlap is therefore
+excluded, and the positive source-label rate carries the solution to $x_R$.
+
+For the bounds below, $f=\Psi/\sqrt{\alpha}$ denotes the normalized canonical
+scalar, with its continuous normalized limit at $\alpha=0$. The reduced
+canonical fields are $X=rf$ outside and $\chi=rf$ in the polar cap; these
+differ from the invariant reduced field $c=r\sinh(af)/a$ used in the native
+construction, where $a$ is the nonnegative root of $6a^2=\alpha$.
+In the cap, $z=\operatorname{atanh}r$,
+$\beta=Ae^\delta/(1-r^2)$ and $E^\pm=\chi_T/\beta\pm\chi_z$.
+The quantities $J_r,J_L,J_X$ are integrated transverse-jet departures.
+All departures use the exact vacuum reference and the same fixed exterior
+wall and source labels. The resulting dimensionless bounds include:
+
+| Quantity | Strict upper bound |
+| --- | ---: |
+| Integrated radius-jet departure $J_r$ | $5.662\times10^{-9}$ |
+| Integrated log-lapse-jet departure $J_L$ | $7.183\times10^{-8}$ |
+| Integrated canonical-field-jet departure $J_X$ | $1.474\times10^{-10}$ |
+| Absolute wall-to-central-clock departure $\Delta T$ | $7.061\times10^{-9}$ |
+| Absolute incoming cap field $E^+$ | $0.002061$ |
+| Absolute outgoing cap field $E^-$ | $3.639\times10^{-19}$ |
+| Absolute cap reduced field $\chi$ | $3.129\times10^{-6}$ |
+| Absolute exterior radius-jet departure $\Delta r_U$ | $1.451\times10^{-6}$ |
+| Absolute exterior log-lapse-jet departure $\Delta L_U$ | $4.224\times10^{-5}$ |
+| Absolute exterior canonical-field jet $X_U$ | $2.098\times10^{-9}$ |
+
+The exact interval endpoints are retained in the receipt. That immutable
+record reports a conditional bound, not existence by itself; the separate
+construction and continuation argument supplies existence. Symbolic
+controls check the field primitives, wall tangents, differentiated equations
+and coordinate identities. No new physical trajectory is used in this proof.
+These bounds do not certify the saved numerical histories, a perturbative
+remainder, central arrival, formation or observational agreement.
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -2102,7 +2196,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Formal sourced response to finite-amplitude control | With quadratic geometry and the cubic central coefficient supplied, do the exact bulk/interface equations admit a nonzero amplitude interval and a controlled remainder? | A finite-amplitude prediction for the interior observer |
+| Onset existence to a controlled observer response | Can the finite-amplitude solution be extended through central arrival with a controlled perturbative remainder? | A finite-amplitude prediction for the interior observer |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -2165,7 +2259,9 @@ to a common quadratic exterior derivative reduces average constraint
 residuals and the final wall kinematic mismatch; its paired scalar change
 is 0.524% of the new peak. The slightly larger incoming-constraint maximum
 and worse, width-sensitive wall-curvature estimates keep local accuracy
-unresolved. The finite-amplitude existence and remainder problem remains open.
+unresolved. Separately, Section 13.19 establishes a finite-amplitude onset
+solution and its certified departure bounds. Continuation through central
+arrival, approximation error and the observer-waveform remainder remain open.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 

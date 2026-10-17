@@ -6,6 +6,13 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-17.1` adds Section 13.19: a constructed finite-amplitude
+cap--wall--exterior solution on the declared onset cell and coupling range.
+The [proof owner](nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
+connects local evolution, constraints, clocks and continuation to the frozen
+conditional bounds. This is separate from accuracy of the older numerical
+histories, central arrival and the observer-waveform remainder.
+
 ## The common research thread
 
 The current working manuscript carries the prepared field through the

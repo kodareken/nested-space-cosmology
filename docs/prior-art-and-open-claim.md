@@ -2928,6 +2928,54 @@ split for new radii. It adds an explicit sufficient inner-end margin for
 those points. This is an analytic domain estimate only; all numerical
 allowances and retained receipts remain unchanged.
 
+### Continuation on the original coupled cell, 17 October 2026
+
+Assemble the reviewed local null construction, the strict conditional tube,
+native derivative hierarchy, quiet-core overlap and physical-slice inclusion
+on the original cell and coupling interval. The active question is whether
+these exclude every finite-time obstruction, not whether a smaller quiet
+window exists. One Grok review audits the joint chart/tube first-exit
+argument; a second checks uniform higher derivatives, terminal continuity,
+native exterior gauges and restarted Cauchy data.
+
+The owner now retains the actual curved restart line, its negative slope
+bound and both short characteristic lengths. It also writes the normalized
+radius-gradient flow and its Jacobian equation, distinguishing local
+invertibility from coverage of the native domain. This is analytic work:
+no physical evaluation, scan, new trajectory or further symbolic test is
+admitted by this step. A surviving obstruction is to be recorded at its
+specific equation or domain connection before another calculation is designed.
+The two reviews confirm uniform terminal traces and the completed
+continuation assembly after adding the subinterval and curved-restart
+estimates. The original onset cell and full admitted coupling interval
+are retained. The result is regional existence with the ten certified
+departure bounds, not a new numerical history or an observational test.
+
+### Parameter variation of the onset solution, 17 October 2026
+
+The next analytic question is whether the constructed onset solution has
+two controlled amplitude derivatives in a topology sufficient for its wall
+geometry and clocks. Keep the same source cell, action, original C3 source,
+exact quiet anchor and fixed native gauges. At alpha=0 the geometry is the
+vacuum reference but the normalized scalar is the nonzero prepared probe;
+the whole normalized state is not zero.
+
+Derive first and second variations of the primitive-preserving transport,
+including the moving lower endpoint, inverse wall-entry time and evaluation
+of traces on the moving wall. The clipped extension used for the existence
+contraction is Lipschitz and is not a differentiable parameter chart.
+The available spatial derivative budget must determine the variation norm;
+smooth finite-dimensional bulk coefficients alone do not establish smooth
+dependence of this moving-domain solution. Independent Grok review targets
+those exact shape terms and the needed difference-quotient estimate.
+
+This admits analytic derivation and review only: no physical evaluation,
+trajectory, scan or new symbolic run. Record a proved variation statement
+or its precise remaining estimate before designing a numerical remainder
+calculation. The onset core remains exactly quiet throughout the certified
+cell; its strict travel margin does not assert immediate central arrival
+just beyond the endpoint. A central waveform requires a later-domain argument.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
