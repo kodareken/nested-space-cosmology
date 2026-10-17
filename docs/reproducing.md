@@ -6,6 +6,20 @@ Scientific conclusions retain the domains in their owning notes.
 The current paper and test dependencies use Matplotlib 3.11.2; the scientific
 stack includes python-flint 0.9.0 and Numba 0.68.0.
 
+The [earlier spacelike realization](nsc-atlas-finite-amplitude.md#earlier-spacelike-realization-of-the-prescribed-source)
+has four exact controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_past_preparation.py -q -s
+```
+
+They check the past-directed primitives, source transverse ODE comparison,
+Jordan Cauchy frame and scalar derivatives, and extrinsic curvature from
+the metric connection. The shared allowance is twenty active CPU seconds
+and zero physical samples; the recorded run uses 0.765625 seconds. The
+analytic collar width follows from the owner's range and contraction
+inequalities, not a numerical scan or a physical field integration.
+
 The [exact null-preparation normalization](nsc-atlas-finite-amplitude.md#exact-null-stress-normalization-of-the-prescribed-preparation)
 has four symbolic controls:
 

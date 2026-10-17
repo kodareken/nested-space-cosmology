@@ -1,5 +1,51 @@
 # Prior art and admission of new research
 
+## Earlier spacelike preparation of the same source, 17 October 2026
+
+The next connection is whether the prescribed null input can be realized
+by earlier spacelike data under the same equations, including its smooth
+exterior gravitational response. Reuse the exact source family, its
+transverse-jet ODEs, the positive-radius mixed operator and constraint
+transport in the [finite-amplitude owner](nsc-atlas-finite-amplitude.md).
+The mathematical tools are characteristic integration, finite-interval
+ODE continuation, Gronwall comparison and contraction. No new action,
+emitter, calibration or literature theorem is imported.
+
+First establish the fixed-background backward rectangle analytically,
+using a smaller positive radius floor than the original source floor.
+For the coupled extension, hold a compact amplitude interval on which
+the existing source-only bounds hold uniformly. Solve the transverse
+derivative ODE along the finite source direction and use a sufficiently
+thin past collar for the remaining two integral equations. Extract the
+actual Jordan scalar, metric, normal derivative and extrinsic curvature
+on a spacelike cut. Preserve the distinction between its domain of
+dependence, the later wall domain, and a global formation history.
+
+Admit **four exact symbolic/manufactured controls** with **20 active
+process-CPU seconds** and zero physical samples, source integrations,
+quadratures or grid scans: oriented primitive/constraint transport,
+the reduced ODE-map comparison, Cauchy frame/field reconstruction, and
+extrinsic curvature from the metric connection. They test consequential
+identities; the existence proof must separately close its range and
+contraction estimates. No numerical collar width is sought.
+
+Stop on an incompatible source/bottom corner, an unclosed uniform tube,
+a failed identity or the budget. Likely failures are using the old radius
+floor in the backward rectangle, omitting the existing transverse source
+jet, or extending a finite Cauchy segment's causal scope to the whole wall
+or a regular global past. A successful realization keeps the waveform
+free and therefore does not by itself distinguish geometries.
+
+**Outcome:** four [exact controls](../tests/test_nsc_atlas_past_preparation.py)
+pass with zero physical samples and **0.765625 active process-CPU seconds**.
+The [owner](nsc-atlas-finite-amplitude.md#earlier-spacelike-realization-of-the-prescribed-source)
+closes a coupled collar by solving the transverse ODE first. Its explicit
+positive width inequalities preserve the tube and give contraction factor
+at most one half, uniformly on the stated compact source-only amplitude
+interval. Grok independently accepts those estimates, C2/constraint recovery
+and the induced Jordan Cauchy data. The quiet bottom remains a supplied
+finite extension and the waveform remains unselected.
+
 ## Exact null-preparation normalization, 17 October 2026
 
 Reuse the full conformal stress and original Jordan-affine source gauge in

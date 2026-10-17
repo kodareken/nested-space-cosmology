@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "668d870cc0b28987c4145747434d08c3d05f2054",
+  "current_receipt_commit_parent": "5319da00abaa1759037efb4e56079ce87abeade1",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 239710,
-      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
-      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
+      "bytes": 240185,
+      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
+      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "2f4aab02fbecbdba58bd57df563b4c022ba1baf82bd3b1fa0bc4df3449bf71bd"
+      "sha256": "ae7792e5e4ed5324e983bf764080b1735872ceb5e9da8fdb041d580a7873cb7c"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 356743,
-      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
-      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
+      "bytes": 358213,
+      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
+      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1cec07aa0b05decbc1cb492501069314a12e3a9c29169080cd21afdedb6abbfa"
+      "sha256": "cf1c4e2d85b25b1bee575943f4185ff16a429280d56081feac590078c440f3ca"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 585891,
-      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
-      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
+      "bytes": 594815,
+      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
+      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "add25c5d7f10ca822f34027d98384989f15b8e43928d91f36b33bd3f0aa42c80"
+      "sha256": "11459e3ec6ae59de9b30a5684788ab7446a49649a747f6ef06edb57695064b62"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 445905,
-      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
-      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
+      "bytes": 448746,
+      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
+      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2db5e412a76ce412c9286f630ab6bd7981f3476318cd627d2a6296a0121bac0e"
+      "sha256": "1e7bcd16e3e37bdc5654fb41f680d5257fc12a09d49987b49f2f64ff256dcf9c"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 138667,
-      "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
-      "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
+      "bytes": 139342,
+      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source.",
+      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b763c3802cb21d783325164b5988b1e6b6bb454dc8ddc9218b9074aeadddb864"
+      "sha256": "3e8c01ba84326ff50acc021cf9aca1cd4e3165f6abad252900df9a37f3a22050"
     },
     {
       "bytes": 18356,
@@ -36886,6 +36886,14 @@
       "original_path": "lab/tests/test_nsc_atlas_parent_initial_data.py",
       "path": "tests/test_nsc_atlas_parent_initial_data.py",
       "sha256": "fefc8946529c61b7ca53bd55aa15ef8a1d0640e9c3ebbc4ed2cbb7f32a5b893c"
+    },
+    {
+      "path": "tests/test_nsc_atlas_past_preparation.py",
+      "retention_reason": "Exact same-action past-collar and Jordan Cauchy-data controls.",
+      "bytes": 5358,
+      "sha256": "aa9d7a544ae6ea05717d41d5e56c5e5706fd9543f90abf087ce078b1e5ae3646",
+      "changed_from_commit": "5319da00abaa1759037efb4e56079ce87abeade1",
+      "change": "Construct a coupled past collar and constraint-compatible spacelike realization of the prescribed null source."
     },
     {
       "bytes": 6632,

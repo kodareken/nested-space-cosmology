@@ -2,6 +2,30 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Earlier spacelike data for the prescribed source, 17 October 2026
+
+The [past-collar construction](nsc-atlas-finite-amplitude.md#earlier-spacelike-realization-of-the-prescribed-source)
+now supplies a finite earlier realization of the null preparation under
+the same smooth exterior scalar/gravity equations. It extends the quiet
+bottom explicitly, keeps the existing source transverse jets, and proves
+a uniform positive collar width on any compact amplitude interval inside
+the source-only bounds. A finite source-direction ODE and a contraction
+in the short past direction close both first derivatives of one state.
+The null constraints propagate from the two compatible data legs.
+
+Restricting that solution to a spacelike segment gives its actual Jordan
+metric, extrinsic curvature, scalar and normal derivative. Its future
+domain of dependence contains the original source leg as a boundary;
+it does not contain the later wall strip. The upper Cauchy endpoint can
+carry backscatter and is not set to zero. The construction gives neither
+a preferred waveform nor a regular global formation history.
+
+Four exact controls pass in 0.765625 active CPU seconds with zero physical
+samples, numerical quadratures or field solves. Grok's independent review
+accepts the coupled range/contraction estimates and the Cauchy formulas.
+The earlier fixed-background rectangle is a separate analytic control.
+No numerical collar width, pulse energy or new amplitude is selected.
+
 ## Exact normalization of the null preparation, 17 October 2026
 
 The [source-family derivation](nsc-atlas-finite-amplitude.md#exact-null-stress-normalization-of-the-prescribed-preparation)

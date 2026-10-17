@@ -1,15 +1,18 @@
 # The finite-amplitude conformal cap and material wall
 
 The [owned action](nsc-atlas-cap-wall-response.md) fixes an exact nonlinear
-model, while the existing metric, wall and scalar results are perturbative
+model; the recorded perturbative metric, wall and scalar calculations are
 coefficients of that model. This note identifies its finite-amplitude source
 data, smooth equations and interface laws. The
 [finite-cell construction](#finite-cell-continuation-assembly) now establishes
 the sourced onset solution and its departure bounds. The
 [parameter estimate](#second-amplitude-derivative-and-quadratic-onset-remainder)
 also gives a quadratic onset Taylor remainder with a finite, unevaluated
-constant. Continuation through central arrival and a controlled remainder for the full transmitted response
-remain the next connections.
+constant for the general state; the geometric and material-radius comparisons
+below now bound selected outputs explicitly. Continuation through central
+arrival and a controlled remainder for the full transmitted response remain
+separate connections. A local past collar below realizes the same source as
+earlier spacelike data without selecting its waveform.
 
 The physical inputs are unchanged: a canonical Jordan scalar with coupling
 `xi=1/6`, fixed vacuum densities `V0,-=3H^2/kappa_4` and `V0,+=0`, constant
@@ -1000,6 +1003,243 @@ queries bring the shared count to 3,063. Their analytical constraint
 consistency residual is below $1.06\times10^{-15}$. These are source-only
 numerical controls with inherited geometric accuracy, not a rigorous ODE
 error enclosure or a propagated spacetime result.
+
+## Earlier spacelike realization of the prescribed source
+
+This construction answers a preparation question: can the specified null
+trace arise from earlier Cauchy data under the same equations? It extends
+the existing quiet bottom a finite distance into the past and constructs
+those data. The bottom extension is supplied explicitly; it does not follow
+merely from the scalar's zero value at the corner. The waveform, amplitude
+and their physical origin remain separate choices. The
+[admission](prior-art-and-open-claim.md#earlier-spacelike-preparation-of-the-same-source-17-october-2026)
+and [exact controls](../tests/test_nsc_atlas_past_preparation.py) cover this
+connection without evaluating a physical field or a numerical collar width.
+
+### Fixed-background geometric control
+
+First use the original Schwarzschild probe only. To its past add the
+rectangle $U_0-\delta_p\le U\le U_0$, $V_a\le V\le V_b$.
+It remains on the retained side $U\le U_W(V)$. Write
+$F_0(r)=(1-r/(4/5))e^{r/(4/5)}$, $r=R/\ell$, and choose $r_*=1/5$.
+The largest null product is
+
+$$
+(U_0-\delta_p)V_a=F_0(0.4)+\delta_p|V_a|.
+$$
+
+Thus the old radius floor $0.4$ cannot be reused. With
+$K(r)=16(0.4)^4r^{-4}e^{-r/(4/5)}$, which decreases for $r>0$, choose
+
+$$
+\delta_p=\min\left\{
+\frac{F_0(r_*)-F_0(0.4)}{2|V_a|},
+\frac1{2K(r_*)(V_b-V_a)}\right\}>0.
+$$
+
+This keeps $r>r_*$ and gives operator norm at most $1/2$. The same
+source trace and the explicit quiet bottom determine
+
+$$
+\chi(U,V)=g(V)+\int_U^{U_0}dp\int_{V_a}^{V}dq\,
+K(p,q)\chi(p,q),\qquad \chi(U,V_a)=0.
+$$
+
+The sign is positive because the first integration runs into the past.
+Contraction gives a unique solution, with
+$\chi_U=-\int_{V_a}^{V}K\chi\,dq$ and
+$\chi_V=g'+\int_U^{U_0}K\chi\,dp$. This is a fixed-background control;
+its vacuum product relation, kernel and width are not used for the
+coupled construction that follows.
+
+### A coupled past collar with the same action and constraints
+
+Use the original affine source coordinates $(\bar U,x)$, and set
+$u=-\bar U\ge0$, $v=x-x_a\in[0,L_s]$, $L_s=x_b-x_a>0$.
+For $Y=(r,\log C,c)$ define
+
+$$
+H_\alpha(Y,P,Q)=-\mathcal B_\alpha(Y,-P,Q),\qquad
+Y_{uv}=H_\alpha(Y,Y_u,Y_v),
+$$
+
+where $\mathcal B_\alpha$ is the owned **exterior** mixed operator.
+It is smooth at $\alpha=0$ for positive $r$ and finite $\log C,c$;
+for fixed $Y,Q$ it is affine in $P$. The normalized invariant field $c$
+is retained, so this statement does not divide by $\sqrt\alpha$.
+
+Let $S_\alpha(v)$ be the exact source state, and let $B_0(u)$ be the
+quiet Schwarzschild bottom continued to $\bar U=-u$. Choose an initial
+width $\delta_0>0$ on which that bottom remains regular, with
+$B_0(0)=S_\alpha(0)$. Fix a compact interval
+$0\le\alpha\le\bar\alpha$ satisfying the preceding source-only
+bootstrap uniformly, strictly inside its sufficient threshold. Its
+positive radius/frame margins and the finite C3 profile give uniform
+bounds for $S_\alpha,S_\alpha',S_\alpha''$. This is an analytic
+source-only hypothesis, not an identification of a rounded numerical
+threshold with a certified coupled interval.
+
+The already supplied transverse source jets determine $P_{0,\alpha}$:
+
+$$
+P_{0,\alpha}'=H_\alpha(S_\alpha,P_{0,\alpha},S_\alpha'),\qquad
+P_{0,\alpha}(0)=B_0'(0).
+$$
+
+They are exactly $-Y_{\bar U}$ on the source. This linear ODE has finite
+coefficients on the source interval, hence bounded solutions uniformly
+on the compact amplitude interval. No transverse derivative or mass
+function is added as a free datum.
+
+Choose a uniform closed tube of radius $\rho>0$ about
+$(S_\alpha,P_{0,\alpha},S_\alpha')$, preserving positive radius.
+Use the maximum norm for each three-vector, and choose $K\ge1$ so that
+on each such tube
+
+$$
+|\Delta H|\le K(|\Delta Y|+|\Delta P|+|\Delta Q|).
+$$
+
+All constants below are uniform in $v,\alpha$. Put
+
+$$
+E=e^{K L_s},\qquad B=\max\{1,\|B_0''\|_\infty\},\qquad
+\eta=\min\left\{\frac\rho8,
+\frac\rho{8\max(1,E-1)}\right\}.
+$$
+
+For continuous candidates $(Y,Q)$ within $\eta$ of $(S_\alpha,S_\alpha')$
+and equal to them at $u=0$, first solve, separately for each $u$,
+
+$$
+P_v=H_\alpha(Y,P,Q),\qquad P(u,0)=B_0'(u).
+$$
+
+Up to a possible first exit from the tube, Gronwall gives
+
+$$
+\|P-P_{0,\alpha}\|_\infty
+\le EB\delta+2(E-1)\eta\le\rho/2
+\quad\hbox{if}\quad \delta\le\rho/(4EB).
+$$
+
+This prevents that exit and supplies the full finite source-direction ODE
+solution. With $P$ so determined, define the remaining map by
+
+$$
+\widetilde Y(u,v)=S_\alpha(v)+\int_0^u P(s,v)\,ds,
+\qquad
+\widetilde Q(u,v)=S_\alpha'(v)
++\int_0^u H_\alpha(Y,P,Q)(s,v)\,ds.
+$$
+
+Let $M=\max\{1,\|P_{0,\alpha}\|_\infty+\rho/2,
+\sup_{\rm tube}|H_\alpha|\}$, taking the supremum over amplitudes too.
+For $\delta\le\eta/M$ the map preserves the $\eta$ ball. For two
+candidates with the same bottom, write
+$D=\max(\|\Delta Y\|_\infty,\|\Delta Q\|_\infty)$. The same ODE
+comparison gives
+
+$$
+\|\Delta P\|_\infty\le2(E-1)D,\qquad
+\|\Delta\widetilde Y\|_\infty\le2\delta(E-1)D,\qquad
+\|\Delta\widetilde Q\|_\infty\le2\delta KE D.
+$$
+
+Consequently any positive width satisfying
+
+$$
+\delta\le\min\left\{\delta_0,\frac\rho{4EB},\frac\eta M,
+\frac1{2\max(1,2(E-1),2KE)}\right\}
+$$
+
+gives contraction factor at most $1/2$. These are finite positive constants,
+so the collar exists without a width scan. At its fixed point,
+$Y_u=P$ and $Y_v=Q$, because $P_v=H$ makes
+$\partial_v\widetilde Y=\widetilde Q$. Its source is $S_\alpha$;
+its bottom is $B_0$ by the ODE's initial value. Both primitives and both
+first derivatives therefore describe one state.
+
+The pure second derivatives follow from linear differentiated equations:
+
+$$
+(Q_v)_u=H_YQ+H_PH+H_QQ_v,\qquad Q_v(0,v)=S_\alpha''(v),
+$$
+$$
+(P_u)_v=H_YP+H_PP_u+H_QH,\qquad P_u(u,0)=B_0''(u).
+$$
+
+Their bounded coefficients justify the corresponding difference-quotient
+limits and give the required C2 solution. The source has its exact
+$E_V=0$ constraint and the quiet bottom has $E_U=0$. The transport laws
+$(rE_U)_V=0$ and $(rE_V)_U=0$ below preserve zero in either integration
+direction. Thus the collar satisfies the smooth Einstein constraints as
+well as the mixed equations. Its source transverse jets match the existing
+ones. On any common admitted amplitude range it joins the known forward
+onset solution with the same data; this does not continue that solution
+through the full later wall window.
+
+### The induced Jordan Cauchy data and their causal scope
+
+Return to $(\bar U,x)$ and use the collar's actual Jordan fields,
+
+$$
+\mathcal F=(1+\alpha c^2/(6r^2))^{-1},\qquad
+r_J=r/\sqrt{\mathcal F},\qquad C_J=C/\mathcal F,
+\qquad ds_J^2/\ell^2=-C_J\,d\bar U\,dx+r_J^2d\Omega^2.
+$$
+
+The segment $\Sigma:\bar U=-d(x-x_a)$, with $d=\delta/L_s>0$,
+is spacelike. Its induced metric and future unit normal are
+
+$$
+h=\ell^2\left(C_Jd\,dx^2+r_J^2d\Omega^2\right),\qquad
+n=\frac{d\,\partial_{\bar U}+\partial_x}{\ell\sqrt{C_Jd}}.
+$$
+
+With the ADM convention $K_{ij}=-\tfrac12(\mathcal L_n h)_{ij}$,
+the independent extrinsic-curvature components are
+
+$$
+K^x{}_x=-\tfrac12n(\log C_J),\qquad
+K^\theta{}_\theta=K^\varphi{}_\varphi=-\frac{n(r_J)}{r_J}.
+$$
+
+The scalar Cauchy data are
+
+$$
+\phi_\Sigma=\frac\varepsilon\ell\frac c{r_J},\qquad
+\Pi_\Sigma=n\phi
+=\frac\varepsilon\ell\left(\frac{n(c)}{r_J}
+-\frac{c\,n(r_J)}{r_J^2}\right).
+$$
+
+Here $\Pi_\Sigma$ means the normal derivative, not an assumed minimally
+coupled canonical momentum. These data inherit the constraint equations
+from the constructed spacetime. For any scalar $f$, its tangential derivative
+$D_\Sigma f=f_x-df_{\bar U}$ and its normal derivative recover both jets:
+
+$$
+f_{\bar U}=\frac{\ell\sqrt{C_Jd}\,nf-D_\Sigma f}{2d},\qquad
+f_x=\frac{\ell\sqrt{C_Jd}\,nf+D_\Sigma f}{2}.
+$$
+
+The closed segment's future domain of dependence is the triangular part
+of the collar bounded by $\bar U=0$ and $x=x_b$. It includes the source
+leg as a boundary. It does not include the forward wall strip with
+$\bar U>0$. Data at the upper end of $\Sigma$ are the actual solution
+values; backscatter can make them nonzero even when the source trace has
+ended. They must not be replaced by zero. For a boundaryless initial-slice
+interpretation, compatible extensions outside this closed segment must be
+specified; only the segment and its domain are asserted here.
+
+This establishes a finite, constraint-compatible earlier realization of
+the chosen null preparation, including its smooth gravitational response.
+It neither selects that preparation among other admissible profiles nor
+supplies a regular global formation history. The freely specified source
+family therefore retains the inverse-problem degeneracy. A source mechanism,
+physical scale and an independently restricted preparation class are still
+needed for a distinguishing observation.
 
 ## Exact constraint transport and boundary input
 
