@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2363649,
+      "bytes": 2364597,
       "path": "docs/lab-snapshot.json",
-      "sha256": "f4f1f99ecaa34c6ab4e3a904384c726c4d40f5997d1570b9d9cb4bc6859f76f2"
+      "sha256": "d24e3bb267282223032cdc396e8c1cda7e84f8cd35e7d4511f7f6bf30a8fb151"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2201,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 479578,
+      "bytes": 482280,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "b49a353821fd917b1df9cb3d5530084f36ea012d9bfa974cc9713c71fd1d1449"
+      "sha256": "cdb2cd228c4bbe2ccad358a5763bae5d3d6bdd9e830a04379e6a053008be0383"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 158204,
+      "bytes": 159409,
       "path": "docs/reproducing.md",
-      "sha256": "19f8a6d8f7480edf88375de2c73dbd7896a93b25b1cd4bd39b11e4a6da460826"
+      "sha256": "d4c20f6623be07dae6cbb78028dd66165123b430b72dfc157c08544fef3c669e"
     },
     {
       "bytes": 31710,
@@ -2241,9 +2241,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 57732,
+      "bytes": 60173,
       "path": "docs/schur-memory.md",
-      "sha256": "5fb266d383503bf6ae54da21e661f471fc0ccea2784da0bcd4eff8c2e367e572"
+      "sha256": "a675f5b9e11bf9f42ba8e585f221bdde47689f2b8b366f707f826903e38ff31b"
     },
     {
       "bytes": 537091,
@@ -16466,6 +16466,11 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
+      "bytes": 16572,
+      "path": "scripts/measure_nsc_conformal_geometric_average.py",
+      "sha256": "d706eb290ead4722dbb920053347dc442a8d7bf05beba862f698d35f05ac45c1"
+    },
+    {
       "bytes": 11467,
       "path": "scripts/plot_nsc_atlas_background_evolution.py",
       "sha256": "93220659fb4f4fa464096f2b76970a76431daa9353caf3608b4ae4aa7b5488de"
@@ -17221,9 +17226,9 @@
       "sha256": "7e881a637d9a7fdcb3600b96fb465887a9315acf8449ace9170d2da7c22e2a8a"
     },
     {
-      "bytes": 9485,
+      "bytes": 15159,
       "path": "src/recursive_horizons/nsc_atlas_geometric_average.py",
-      "sha256": "d25dc42e8256d09e4895c4c796016221b63c0558035e92c7311f9f9648b1ec45"
+      "sha256": "aa924325702b5b07d002e5b098e2711ee67fae517c00b016024e913807d54892"
     },
     {
       "bytes": 9205,
@@ -19506,9 +19511,9 @@
       "sha256": "6eab8882d17144bc332e17cb67286298797872f28702eaae304908d0e773ed61"
     },
     {
-      "bytes": 6945,
+      "bytes": 11690,
       "path": "tests/test_nsc_atlas_geometric_average.py",
-      "sha256": "f14f69b36f6a99f6708807d66e03f8c689d78f9fe4eb82e85e7db43067d330cb"
+      "sha256": "9efe2e9f42e871eea9b712dc8bbb4f245bfe086c90be5662fdc5f17eecb03344"
     },
     {
       "bytes": 3364,
@@ -19889,6 +19894,11 @@
       "bytes": 15438,
       "path": "tests/test_nsc_conformal_adm_source.py",
       "sha256": "f06a990e7053be6b0fe00986de7ccd29aa2618537baf6f7a6afbbe1e52c06f25"
+    },
+    {
+      "bytes": 2627,
+      "path": "tests/test_nsc_conformal_geometric_average.py",
+      "sha256": "46ed6efe623367e8ee7305efb1841da3bdeb39a55502440fe9a961d053475966"
     },
     {
       "bytes": 3826,
@@ -21586,7 +21596,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "f4f1f99ecaa34c6ab4e3a904384c726c4d40f5997d1570b9d9cb4bc6859f76f2",
+  "lab_snapshot_sha256": "d24e3bb267282223032cdc396e8c1cda7e84f8cd35e7d4511f7f6bf30a8fb151",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

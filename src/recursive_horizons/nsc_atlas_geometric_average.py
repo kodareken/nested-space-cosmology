@@ -94,6 +94,99 @@ def clocked_scalar_average_sources(
     return row
 
 
+def _periodic_derivative(values, coordinate_length, order=1):
+    count = values.size
+    spectrum = np.fft.fft(values)
+    wavenumber = 2*math.pi*np.fft.fftfreq(count, d=coordinate_length/count)
+    multiplier = (1j*wavenumber)**order
+    return np.fft.ifft(multiplier*spectrum).real
+
+
+def periodic_spherical_average(
+        areal_radius, radial_scale, lapse, radius_rate, scale_rate, lapse_rate,
+        radius_acceleration, scale_acceleration, coordinate_length, observer_index):
+    """Kinematic average of one periodic spherical metric snapshot.
+
+    The line element is ds^2 = -N^2 dt^2 + a^2 dx^2 + r^2 dOmega^2, with zero
+    shift and periodic x. Coordinates t,x are dimensionless, so r, a, N and
+    every coordinate rate have length dimension. The clock is
+    d tau_o = N[observer_index] dt. This reconstructs the Einstein source from
+    the metric, including whatever higher-curvature content that representation
+    contains. It is not the Dirac stress, not an on-shell matter check, and
+    not the P001 cap-wall parent. A nonzero trace is not a vacuum identification.
+    """
+    arrays = [np.asarray(values, dtype=float) for values in (
+        areal_radius, radial_scale, lapse, radius_rate, scale_rate, lapse_rate,
+        radius_acceleration, scale_acceleration)]
+    if any(values.ndim != 1 or values.shape != arrays[0].shape for values in arrays):
+        raise ValueError('spherical snapshot arrays must be equal-length one-dimensional')
+    if isinstance(coordinate_length, bool) or not isinstance(observer_index, (int, np.integer)):
+        raise ValueError('coordinate length and observer index must be real and integral')
+    length = float(coordinate_length)
+    if (not math.isfinite(length) or length <= 0 or any(not np.isfinite(values).all() for values in arrays)
+            or np.any(arrays[0] <= 0) or np.any(arrays[1] <= 0) or np.any(arrays[2] <= 0)):
+        raise ValueError('positive geometry, finite rates and positive coordinate length are required')
+    count = arrays[0].size
+    if count < 2 or not 0 <= int(observer_index) < count:
+        raise ValueError('observer index must lie on a periodic grid of at least two nodes')
+    radius, scale, lapse, radius_rate, scale_rate, lapse_rate, radius_acceleration, scale_acceleration = arrays
+    dx = length/count
+    measure = 4*math.pi*scale*radius**2
+    radius_x = _periodic_derivative(radius, length)
+    scale_x = _periodic_derivative(scale, length)
+    radius_xx = _periodic_derivative(radius, length, 2)
+    observer_lapse = float(lapse[int(observer_index)])
+    observer_lapse_rate = float(lapse_rate[int(observer_index)])
+    reduced_lapse = lapse/observer_lapse
+    reduced_rate = (lapse_rate-reduced_lapse*observer_lapse_rate)/observer_lapse**2
+    reduced_x = _periodic_derivative(reduced_lapse, length)
+    reduced_xx = _periodic_derivative(reduced_lapse, length, 2)
+    theta = (scale_rate/scale+2*radius_rate/radius)/lapse
+    shear_squared = (scale_rate/scale-radius_rate/radius)**2/(3*lapse**2)
+    curvature = (2/radius**2-4*radius_xx/(scale**2*radius)
+                 +4*scale_x*radius_x/(scale**3*radius)-2*radius_x**2/(scale**2*radius**2))
+    laplacian = (reduced_xx+(2*radius_x/radius-scale_x/scale)*reduced_x)/scale**2
+    lapse_laplacian = laplacian*observer_lapse
+    normal_curvature = ((-scale_acceleration/scale-2*radius_acceleration/radius
+                         +(lapse_rate/lapse)*(scale_rate/scale+2*radius_rate/radius))/lapse**2
+                        +lapse_laplacian/lapse)
+    kappa_energy = (curvature+2*theta**2/3-2*shear_squared)/2
+    kappa_stress = 2*normal_curvature-kappa_energy
+    volume = float(np.sum(measure)*dx)
+    def moment(weight):
+        return float(np.sum(weight*measure)*dx)
+    row = clocked_scalar_average_sources(
+        volume, lapse_theta_integral=moment(reduced_lapse*theta),
+        lapse_squared_theta_squared_integral=moment(reduced_lapse**2*theta**2),
+        lapse_squared_shear_squared_integral=moment(reduced_lapse**2*shear_squared),
+        lapse_squared_curvature_integral=moment(reduced_lapse**2*curvature),
+        lapse_squared_energy_integral=moment(reduced_lapse**2*kappa_energy/KAPPA),
+        lapse_squared_stress_trace_integral=moment(reduced_lapse**2*kappa_stress/KAPPA),
+        lapse_rate_theta_integral=moment(reduced_rate*theta),
+        lapse_laplacian_integral=moment(reduced_lapse*laplacian))
+    volume_rate = float(np.sum(4*math.pi*(scale_rate*radius**2+2*scale*radius*radius_rate))*dx)
+    volume_acceleration = float(np.sum(4*math.pi*(
+        scale_acceleration*radius**2+4*scale_rate*radius*radius_rate
+        +2*scale*(radius_rate**2+radius*radius_acceleration)))*dx)
+    direct_acceleration = (volume_acceleration/(volume*observer_lapse**2)
+                           -volume_rate*observer_lapse_rate/(volume*observer_lapse**3)
+                           -(2/3)*(volume_rate/(volume*observer_lapse))**2)
+    curvature_integral = float(np.sum(curvature*measure)*dx)
+    curvature_reference = float(8*math.pi*np.sum(scale+radius_x**2/scale)*dx)
+    lapse_reference = float(-4*math.pi*np.sum(radius**2/scale*reduced_x**2)*dx)
+    row.update({
+        'volume': volume,
+        'observer_lapse': observer_lapse,
+        'direct_volume_acceleration': direct_acceleration,
+        'curvature_proper_integral': curvature_integral,
+        'curvature_ibp_residual': curvature_integral-curvature_reference,
+        'lapse_ibp_residual': moment(reduced_lapse*laplacian)-lapse_reference,
+        'scope': ('periodic S1 x S2 Einstein representation of one inherited '
+                  'common-action snapshot; not the P001 parent and not a vacuum identification'),
+    })
+    return row
+
+
 def wall_slice_stress(wall):
     """Coefficients of delta(l-lw), including delta(eta)=delta(l-lw)/gamma."""
     sigma, gamma = wall['parameters'].sigma, wall['gamma']

@@ -221,6 +221,55 @@ the missing clock identity for the chosen averaging route. It does not select
 the parent metric, observer/domain or state, and its scalar fitting terms are
 not by themselves a local four-tensor or a cosmological Lambda prediction.
 
+### Averaging an existing evolving connected metric
+
+The next application reuses the separately specified conformal common-action
+realization already evolved on periodic $S^1\times S^2$. Its full metric is
+
+$$
+ds^2=r^2\{Q^2[-dT^2+dx^2]+d\Omega^2\},\qquad x\sim x+8.
+$$
+
+Thus the physical lapse and radial scale are both $rQ$, rather than $Q$.
+The original observer is the fixed normal worldline $x=1$ with
+$d\tau_o=r(T,1)Q(T,1)dT$. Its Einstein/Weyl-auxiliary/Dirac action differs
+from the P001 Einstein/conformal-scalar action; this is an evaluation of the
+existing connected candidate, not a construction of P001's absent parent.
+It does not establish a fractal metric or unlimited composition.
+
+The archived NPZ has now been recovered under ignored `.build/data`, with
+its original SHA256 verified. Use the four stored time/space cases at the
+predeclared times $T=0.05,0.2,0.3$. The primary case is
+`nf512_dt_0.0005`; $L_{\rm ref}$ is its observer sphere's areal radius at
+$T=0.05$. The [admission](prior-art-and-open-claim.md#evolving-geometric-average-17-october-2026)
+fixes the domain, clock, ruler, 30-CPU-second allowance and stopping conditions
+before the averages are evaluated. No evolution or new field solve is needed.
+
+The actual second rates follow from the same saved projected dynamics.
+Write $\Pi_g=A_g(n_g/n_q)A_g^{\mathsf T}$, $F_r=-8\pi A r$,
+$F_\chi=\mathrm{constant}$ and $Z=-24\pi A$. Differentiating the owned
+velocities gives
+
+$$
+Q_{TT}=\Pi_g\frac{Q_Tp_\chi+Qp_{\chi,T}}{2F_\chi},\qquad
+r_{TT}=\Pi_g\frac{p_{r,T}-(F_{r,T}p_\chi+F_rp_{\chi,T})/F_\chi}{2Z},
+\qquad F_{r,T}=-8\pi A r_T.
+$$
+
+All directions on the right are the saved lifted projected rates. This
+retains the projection after multiplication as well as the projected state
+direction. Uniform exponential and truncated Fourier controls check these
+jets independently; time samples are not differentiated.
+
+The scalar average reconstructs a metric-defined effective Einstein source.
+Relating it to the actual matter and moved higher-curvature terms inherits
+the original finite field-equation defects. Its Hamiltonian identity is
+therefore not an independent check of those sources. The saved finite
+constraint defects stay separately reported.
+The output keeps the geometric trace, vacuum-form defect, direct volume
+acceleration and refinement indicators together. A trace alone supplies no
+cosmological vacuum identification or observational agreement.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

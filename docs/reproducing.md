@@ -2782,6 +2782,25 @@ The observer-clock scalar-average identities are checked with
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_geometric_average.py -q`.
 The nine controls include a static periodic lapse and a homogeneous changing
 clock. These exact controls do not supply a new parent metric or raw geometry.
+
+For the separate existing conformal common-action realization, reuse its
+archived metric snapshots and actual projected rates:
+
+```text
+python scripts/run_python.py scripts/measure_nsc_conformal_geometric_average.py --restore-geometry --geometry .build/data/nsc-spherical-conformal-episode-v2.npz --output .build/conformal-geometric-average.json
+```
+
+The optional restoration reads only the required member of Zenodo record
+23090015's ZIP archive, with a 60 MB transfer cap, and verifies the original
+NPZ SHA256 before writing. An existing different cache is rejected. The
+53,100,722-byte NPZ stays ignored. The historic `payload_bytes` value counts
+JSON plus NPZ. Choose a new output path; no geometry, field or time step is
+reintegrated. The 30-CPU-second calculation uses the four existing cases,
+three declared times, original observer clock and one initial areal ruler.
+Refinement differences remain indicators, and the trace is reported alongside
+the vacuum-form defect. This realization is distinct from P001's parent.
+The metric and second-rate controls run with
+`python scripts/run_python.py -m pytest tests/test_nsc_atlas_geometric_average.py tests/test_nsc_conformal_geometric_average.py -q`.
 It evaluates one frozen state, takes no time steps, and retains the existing
 60 CPU-second / 40-million-value limit. Do not infer a new grid calculation
 or a change in the physical model from this benchmark.

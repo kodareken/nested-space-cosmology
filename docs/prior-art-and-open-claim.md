@@ -1,5 +1,49 @@
 # Prior art and admission of new research
 
+## Evolving geometric average, 17 October 2026
+
+The selected larger-geometry mechanism needs a response on an evolving
+connected metric, beyond the completed isolated-slice average. Reuse the
+separate conformal common-action realization already evolved through `T=0.3`.
+Its action includes the Weyl auxiliary, Dirac columns and gauge source;
+its periodic `S1 x S2` metric is not the missing P001 common parent. No result
+is transferred between these candidates. This calculation tests the actual
+curvature, expansion and clock terms of that existing realization.
+
+The original metric/rate payload was recovered as one bounded ZIP member
+from the recorded Zenodo archive and matches SHA256
+`40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877`.
+Keep its 53,100,722 bytes under ignored `.build/data`, with only the source
+reference, hashes and scalar results retained in Git. Its historical
+`payload_bytes` field counts JSON plus NPZ, rather than NPZ alone.
+
+Before calculating the averages, fix the four existing `nf=256/512`,
+`dt=0.001/0.0005` cases and stored times `T=0.05,0.2,0.3`. The primary case
+is `nf512_dt_0.0005`. Use the original fixed observer `x=1`, proper time
+`d_tau=r(x=1)*Q(x=1)*dT`, full periodic domain of coordinate length 8,
+and reference length equal to that observer sphere's initial areal radius
+in the primary case. These choices use no cosmological observation.
+
+Evaluate the previously derived lapse-weighted scalar average. Construct
+second metric rates by differentiating the owned bilinear Hamiltonian
+velocities along the saved projected Cauchy rates, retaining both Galerkin
+projections; do not differentiate stored time samples. Check direct volume
+acceleration, curvature integration by parts, lapse integration by parts,
+static product/warped metrics and unit changes. The Einstein-representation
+source reconstructed from this metric includes all sectors; it is not the
+Dirac stress alone or independent verification of the original constraints.
+Retain the original finite constraint defects separately.
+
+Admit one saved-geometry calculation, **30 CPU seconds / 20 million charged
+values**, zero field solves and zero evolution steps. Absolute consistency
+tolerance is `1e-10` for dimensionless metric identities and the reconstructed
+first-rate comparison. Keep the trace projection and vacuum-form defect
+together. Differences across the four stored cases are refinement indicators,
+not a certified error range. Stop on an identity failure or budget exhaustion.
+A non-vacuum result rules out identifying this candidate's computed correction
+with Lambda on this domain; no continuation, extra resolution or parameter
+scan follows from this admission.
+
 ## P001 full-endpoint fixed-grid comparison, 17 October 2026
 
 **Interpretation of the completed receipts:** independent Grok review traces
