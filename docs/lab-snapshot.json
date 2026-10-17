@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b7c909c98c5cb269d51dd6638a619e89723dab1e",
+  "current_receipt_commit_parent": "b424b28b7f4ef1432aceb33b3ee07d859e691384",
   "files": [
     {
       "bytes": 3120,
@@ -10317,12 +10317,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 364177,
+      "bytes": 364913,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "b681ec22a535610c40b7d6c43882c9cc2743ef75",
+      "changed_from_commit": "b424b28b7f4ef1432aceb33b3ee07d859e691384",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2d20fc786e0559ab2436fd1324c1c150b930c2795fb6f4318700f22e5d71a1ad"
+      "sha256": "b985aae5187c40549fc2ac9f4030807511cbdd1ff5f0ef4848f2fe3fcee1212f"
     },
     {
       "bytes": 18915,
@@ -11426,12 +11426,12 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 475399,
+      "bytes": 476042,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "b7c909c98c5cb269d51dd6638a619e89723dab1e",
+      "changed_from_commit": "b424b28b7f4ef1432aceb33b3ee07d859e691384",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "441f90dc5fe5fe1503e2a84a3ef4dc05f4339b6eda3d7cf838284baa1791b556"
+      "sha256": "72e78e0a673403d8dbf0a4f022c473743f9f393e4a8f9891add4438b42b53996"
     },
     {
       "bytes": 6705,
@@ -29703,6 +29703,14 @@
       "sha256": "84620869ab30f7e4d18929ce668d063bd7e860a35d96685164950a07cb6523bf"
     },
     {
+      "bytes": 1449,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "b424b28b7f4ef1432aceb33b3ee07d859e691384",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-v4-cpu-amendment.json",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "6e5dd788f59c1c3cb25278bc3cdaf75eb8294b983cb9b5196cc525f9bfaa1b6b"
+    },
+    {
       "bytes": 14679,
       "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split.",
       "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
@@ -29727,6 +29735,14 @@
       "sha256": "99047be7cd4450a56d79401f9257ea579c330ee5c9f49e2f3551414026f77a8b"
     },
     {
+      "bytes": 1446,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "b424b28b7f4ef1432aceb33b3ee07d859e691384",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v4-cpu-amendment.json",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "b675aee7296901ad873619773f4132d2e93f9ef9a7fc50eef81efef3315eb5bd"
+    },
+    {
       "bytes": 14872,
       "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split.",
       "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
@@ -29749,6 +29765,14 @@
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v3-interruption.json",
       "retention_reason": "P001 bounded radial correction, independent failure diagnosis or compact evolution evidence.",
       "sha256": "4fe0195d16ae6dd225ea962b9adf93fb49abc531510bd64787ba7c75bc60a49e"
+    },
+    {
+      "bytes": 1448,
+      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
+      "changed_from_commit": "b424b28b7f4ef1432aceb33b3ee07d859e691384",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v4-cpu-amendment.json",
+      "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
+      "sha256": "d6a8eea3312aa66f866c34be2a5c02b372ba6f6d0d01788ef39e208eed4f1a29"
     },
     {
       "bytes": 14211,

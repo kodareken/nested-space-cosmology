@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 364177,
+      "bytes": 364913,
       "path": "docs/current-result.md",
-      "sha256": "2d20fc786e0559ab2436fd1324c1c150b930c2795fb6f4318700f22e5d71a1ad"
+      "sha256": "b985aae5187c40549fc2ac9f4030807511cbdd1ff5f0ef4848f2fe3fcee1212f"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2347588,
+      "bytes": 2349031,
       "path": "docs/lab-snapshot.json",
-      "sha256": "b72f80e9793b40e00cfd87b612d36906ca386aa248f4b02d99cee09d25583e7c"
+      "sha256": "775ba62088eed68e6a744eb2691b493a3d3763aa5b39ba900737546d3e24d79b"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2201,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 475399,
+      "bytes": 476042,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "441f90dc5fe5fe1503e2a84a3ef4dc05f4339b6eda3d7cf838284baa1791b556"
+      "sha256": "72e78e0a673403d8dbf0a4f022c473743f9f393e4a8f9891add4438b42b53996"
     },
     {
       "bytes": 6705,
@@ -14631,6 +14631,11 @@
       "sha256": "84620869ab30f7e4d18929ce668d063bd7e860a35d96685164950a07cb6523bf"
     },
     {
+      "bytes": 1449,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-v4-cpu-amendment.json",
+      "sha256": "6e5dd788f59c1c3cb25278bc3cdaf75eb8294b983cb9b5196cc525f9bfaa1b6b"
+    },
+    {
       "bytes": 14679,
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v1.json",
       "sha256": "e8935932d306716261d1af25871db757cb52df30d71c7adf98dfb99f568ff1bb"
@@ -14646,6 +14651,11 @@
       "sha256": "99047be7cd4450a56d79401f9257ea579c330ee5c9f49e2f3551414026f77a8b"
     },
     {
+      "bytes": 1446,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v4-cpu-amendment.json",
+      "sha256": "b675aee7296901ad873619773f4132d2e93f9ef9a7fc50eef81efef3315eb5bd"
+    },
+    {
       "bytes": 14872,
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v1.json",
       "sha256": "baf09f4a3cef350f60515de2fcc8efcaf269e706aa124a9990ce9f4e4c21aef0"
@@ -14659,6 +14669,11 @@
       "bytes": 1560,
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v3-interruption.json",
       "sha256": "4fe0195d16ae6dd225ea962b9adf93fb49abc531510bd64787ba7c75bc60a49e"
+    },
+    {
+      "bytes": 1448,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v4-cpu-amendment.json",
+      "sha256": "d6a8eea3312aa66f866c34be2a5c02b372ba6f6d0d01788ef39e208eed4f1a29"
     },
     {
       "bytes": 14211,
@@ -21426,7 +21441,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "b72f80e9793b40e00cfd87b612d36906ca386aa248f4b02d99cee09d25583e7c",
+  "lab_snapshot_sha256": "775ba62088eed68e6a744eb2691b493a3d3763aa5b39ba900737546d3e24d79b",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

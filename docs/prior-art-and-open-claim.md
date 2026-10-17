@@ -34,6 +34,16 @@ replay. Each application still requires its durable receipt and the target's
 `cpu_allowance_amended` event before it counts as applied. Fresh reproductions use the runner's
 `--extended-cpu-allowance` option; the unextended default remains available.
 
+**Applied and verified at 14:14 UTC:** compact
+[coarse](../results/summaries/nsc-atlas-fixed-endpoint-level0-v4-cpu-amendment.json),
+[middle](../results/summaries/nsc-atlas-fixed-endpoint-level1-v4-cpu-amendment.json)
+and [fine](../results/summaries/nsc-atlas-fixed-endpoint-level2-v4-cpu-amendment.json)
+receipts bind controller/admission commit `b424b28`. The cumulative CPU
+readings were 5719.765625, 5742.875 and 5748.6875 seconds respectively.
+Their actual execution source remains `ae26759`. All three target processes
+confirmed the amendment; the receipts are resource-control evidence, not
+completed endpoints or restart checkpoints.
+
 **Later v3 radial stop:** the coarse successor passes the earlier stopping
 state, then stops after 464 accepted steps at `x=0.4369315943667415`.
 Its next accepted-end stage has forward/adjoint discrepancy

@@ -60,6 +60,16 @@ discrepancies are `5.3717e-12` / `6.7075e-12` with 32/64 adjoint points;
 [middle](../results/summaries/nsc-atlas-fixed-endpoint-radial-panel-polynomials-middle-v2.json)
 discrepancies are `1.8758e-12` / `1.5632e-12`. The three full v4
 executions now use this common method.
+The same running jobs later received one recorded CPU-only extension to
+20,000 / 40,000 / 80,000 process-CPU seconds:
+[coarse](../results/summaries/nsc-atlas-fixed-endpoint-level0-v4-cpu-amendment.json),
+[middle](../results/summaries/nsc-atlas-fixed-endpoint-level1-v4-cpu-amendment.json),
+[fine](../results/summaries/nsc-atlas-fixed-endpoint-level2-v4-cpu-amendment.json).
+The observed per-step cost rose with the active radial history panels.
+The controller retained accumulated CPU/work counters and all physical and
+numerical settings; no trajectory was restarted. Nineteen focused controls
+and independent Grok review check this accounting change. Each application
+has a durable receipt and a confirmation from its target process.
 The old fine v3 execution was [interrupted](../results/summaries/nsc-atlas-fixed-endpoint-level2-v3-interruption.json)
 to use a common corrected method. Thirty-eight focused controls now pass,
 including the explicit knot-side evaluation and coupled-history fields.

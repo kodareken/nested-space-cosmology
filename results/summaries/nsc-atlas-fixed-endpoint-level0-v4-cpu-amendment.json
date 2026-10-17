@@ -1,0 +1,39 @@
+{
+  "accepted_steps": 804,
+  "charged_values": 8113806547,
+  "counters_reset": false,
+  "elapsed_cpu_seconds": 5719.765625,
+  "last_accepted_x": 0.46399353851478486,
+  "level": 0,
+  "new_cpu_seconds": 20000.0,
+  "numerical_settings_changed": false,
+  "old_cpu_seconds": 10000.0,
+  "physical_state_changed": false,
+  "process_id": 11248,
+  "progress_is_restart_checkpoint": false,
+  "provenance": {
+    "admission_path": "docs/prior-art-and-open-claim.md",
+    "admission_sha256": "441f90dc5fe5fe1503e2a84a3ef4dc05f4339b6eda3d7cf838284baa1791b556",
+    "controller_commit": "b424b28b7f4ef1432aceb33b3ee07d859e691384",
+    "controller_path": "scripts/amend_nsc_atlas_endpoint_cpu.py",
+    "controller_sha256": "79e13062a0ec9f6f1af3c00de3af384e061aaad649d21cb17306c01203834e21"
+  },
+  "radial_accuracy": {
+    "adjoint_order": 32,
+    "atol": 1e-15,
+    "background_panel_sides": true,
+    "gradient_absolute_tolerance": 2e-08,
+    "rtol": 2.5e-14
+  },
+  "reason": "Measured per-step CPU cost grows as additional retained history panels enter the cap; preserve the full-endpoint execution under a finite extended allowance.",
+  "schema": "nsc-atlas-cpu-allowance-amendment-v1",
+  "source_commit": "ae2675980de38f547efa6b4fb1afbd2d12eee62e",
+  "status": "applied",
+  "unchanged_limits": {
+    "accepted_steps": 2000,
+    "budget_reset": false,
+    "charged_values": 500000000000,
+    "per_level": true
+  },
+  "utc": "2026-10-17T14:14:07.997324+00:00"
+}
