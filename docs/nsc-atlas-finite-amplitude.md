@@ -11690,6 +11690,110 @@ if `O1<=-c<0` and the remainder is bounded by `M2*alpha^2/2`, then
 Thus the derivative signs are certified; a numerical finite-alpha sign
 threshold and an error comparison with the stored trajectory remain open.
 
+#### Amplitude-proportional geometric departure
+
+An explicit first finite-difference bound is a useful prerequisite to the
+quadratic remainder. The established onset solution stays in the original
+strict coupled tube for every admitted alpha. Its scalar bounds may
+therefore be held fixed while improving the geometric comparison. This
+does not replace the sourced scalar with the quiet solution.
+
+Let `G0` denote the vacuum geometry in the same fixed exterior gauge.
+In the earlier vacuum-comparison inequalities, only the three errors
+
+$$
+y=(J_r,J_L,P_r),\qquad P_r=\|r_{\bar U,\alpha}-r_{\bar U,0}\|_\infty,
+$$
+
+feed back into the geometric image. `J_r,J_L` are the time suprema of
+the transverse absolute-error integrals over the full source-to-wall
+prefix. The transverse lapse and clock errors are dependent outputs;
+they do not enter the three image rates. The scalar absolute values,
+cap excess mass N, lapse multiplier, positive denominator floors and
+remaining coefficient maxima are frozen at the already proved tube.
+
+**Normalizing the source.** The source constraint gives uniform bounds
+`|h|<=hmax`, `|h_x|<=hxmax` for `rJ=x+alpha*h`, with zero quiet
+data. Thus its radius and derivative departures are bounded by
+`alpha*hmax` and `alpha*hxmax`. The source frame formulas have the same
+factor: for example
+
+$$
+0\le1-F\le\alpha\frac{g_*^2}{6s_{\min}^2},\qquad
+0\le r_J-r\le\alpha\frac{g_*^2}{6(s_{\min}+r_{\min})},
+$$
+
+and `-log(F)<=(1-F)/Fmin`. The derivative and `r*r_x-x`
+bounds are positive sums of these departures and the explicit
+`alpha*g*g_x/6` term. Every denominator is frozen at its proved
+uniform floor. Consequently each recorded geometric source bound S
+at alpha_max obeys `S>=alpha_max*C` for a valid uniform coefficient C.
+Its dyadic upward roundings only enlarge S; dividing S by alpha_max
+gives an upper coefficient for every alpha, including the zero limit.
+This argument applies to the geometric source bounds, not to the
+nonzero normalized scalar source itself.
+
+The same reasoning gives uniform coefficients for the explicit wall
+forcing. If `root=cosh(sqrt(alpha_max/6)*fw_bound)`, then
+`root_change<=alpha*fw_bound^2*root/12`,
+`Sw_change<=alpha*6*root^2*(fw_bound^2*root/12)`, and
+`mu_error<=alpha*(delta_bound/alpha_max)*mu_bound`.
+The cap mass N and scalar normal source remain the fixed absolute bounds
+in the proved tube. They are multiplied by alpha in the wall inequalities.
+
+**The affine comparison.** With these constants fixed, the source,
+kernel and wall-difference expressions are positive affine functions:
+
+$$
+\boxed{y\le My+\alpha f.}
+$$
+
+No maximum, coefficient or physical state is recomputed when extracting
+M and f. To enclose a matrix column, evaluate the positive homogeneous
+form on its unit vector with all explicit source/alpha forcing slots
+zero. To enclose f, use zero error inputs and unit forcing scale with
+the normalized source coefficients. These are four algebraic evaluations
+of one frozen comparison, not four physical parameter choices. Directed
+upward rounding of every coefficient preserves the inequality.
+
+Use the original positive weights
+`b=(1e-6,1e-6,1e-5)` and verify
+
+$$
+q=\max_i\frac{(Mb)_i}{b_i}<1.
+$$
+
+For `norm(z)_b=max_i |z_i|/b_i`, this proves `norm(M)_b<=q`.
+The convergent Neumann series makes `(I-M)^-1` nonnegative.
+Multiplying the inequality by that inverse gives
+
+$$
+\boxed{y\le\alpha u,\qquad (I-M)u=f.}
+$$
+
+The [component](../src/recursive_horizons/nsc_atlas_geometric_departure_bound.py)
+solves this three-by-three system over exact rationals, checks the
+nonnegative solution and exact residual, then applies the dependent
+clock and lapse rows. Source coefficients are added to the integrated
+jet errors to bound the full radius and log-lapse values. Longitudinal
+radius and lapse derivatives use the same fixed prefix identities.
+The result is uniform on the complete original onset domain and
+coupling interval; it is not an amplitude derivative inferred by division
+of a sampled solution.
+
+Seven [manufactured controls](../tests/test_nsc_atlas_geometric_departure_bound.py)
+pass in one execution with 11,264 charged values; active CPU time is
+below timer resolution. They compare the inverse with independent
+back-substitution and an exact cyclic geometric series, check quiet
+forcing, reject noncontractive/negative matrices, and verify the affine
+source decomposition and budget guard. The bounded producer consumes
+the immutable source, gauge and coupled-tube receipts after its sources
+are committed. No physical field, trajectory or source ODE is evaluated.
+
+This supplies only a geometric first finite-difference bound. A normalized
+scalar first-difference bound and the quadratic radius/clock remainder
+are not established by this matrix calculation.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

@@ -3301,6 +3301,54 @@ of the existing second-amplitude theorem will identify the smallest
 unevaluated bound needed for a numerical remainder constant. It admits
 no new physical, symbolic or numerical execution.
 
+### Normalized geometric departure bound, 17 October 2026
+
+Before evaluating a quadratic remainder, obtain an explicit first finite
+amplitude difference bound for the geometry. Reuse the established onset
+solution, original source/reference certificates and strict coupled tube.
+Freeze its positive coefficient bounds and absolute scalar bounds. The
+existing vacuum-comparison image is then positive affine in the three
+feedback errors `J_r,J_L,delta_r_U`, plus forcing proportional to alpha.
+Clock and transverse lapse errors are dependent outputs. This is an
+application of a nonnegative matrix resolvent to the owned inequalities,
+not a new spacetime solve or an inferred derivative of sampled data.
+
+Prove the source forcing is bounded by alpha times its recorded
+alpha-max coefficient, retaining all dyadic upward rounding. Extract
+upper affine coefficients from three zero-forcing unit inputs and one
+zero-input forcing case, with every tube coefficient frozen. Check
+`max_i (M*b)_i/b_i<1` for the existing positive geometric box b. Solve
+the three-by-three rational system `(I-M)u=f`; its positive inverse
+then proves `error<=alpha*u` throughout the original coupling interval.
+Dependent outputs and source contributions use the same matrix solution.
+
+Implement this as a separate consumer of the immutable tube receipt,
+reusing its wall-difference function. Admit one algebraic application
+with at most 32,768 charged values / 10 CPU seconds at 160-bit precision,
+followed by a 1,024-value / 5-CPU-second rational audit. Manufactured
+controls share 12,000 values / 20 active CPU seconds and check independent
+resolvent solutions, positivity, coefficient extraction, quiet forcing
+and domain/budget guards. No field evaluation, source integration,
+physical evolution, grid scan, adaptive parameter choice or retry is
+included. Freeze the producer before the single application and save
+only the small matrix, bounds, hashes and reproduction command.
+
+Stop if an authenticated input differs, the alpha factor is unsupported,
+a coefficient loses positivity, the weighted matrix norm reaches one,
+the exact residual fails or the budget is exhausted. The likely failures
+are freezing an unknown as a coefficient, dropping a source alpha factor,
+and treating the resulting geometric bound as a scalar or quadratic
+error bound. The independent dependency review and exact residual controls
+address these. The scalar first-difference comparison and final quadratic
+remainder remain separate connections.
+
+**Implementation controls:** seven tests pass in one execution with
+11,264 charged values and active CPU time below timer resolution.
+The exact inverse agrees with independent triangular and cyclic-series
+solutions. The manufactured affine control verifies simultaneous source
+and alpha forcing, with the coefficient tube held fixed, and zero
+forcing stays zero. No original physical input has been evaluated.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

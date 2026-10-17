@@ -74,6 +74,27 @@ Both fixed-source radius and clock first coefficients are strictly
 negative. Reproduction requires a new output path and the frozen source
 version; later finite-amplitude errors are outside this certificate.
 
+The amplitude-proportional geometric comparison has independent controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_geometric_departure_bound.py -q -s
+```
+
+After freezing the producer, its one algebraic application is:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_geometric_departure_bound.py --output <new-output-path>
+```
+
+The parent directory must exist. It authenticates the original source,
+reference and strict coupled-tube receipts, extracts four affine directions
+with those coefficients held fixed, and solves one rational three-by-three
+comparison. It performs no source query, field evolution, physical time
+step, parameter scan or retry. Its 32,768-value / 10-CPU-second allowance
+is separate from the seven manufactured controls, which use 11,264 values
+and active CPU time below timer resolution. This supplies a geometric
+first difference, not a scalar difference or quadratic remainder constant.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker
