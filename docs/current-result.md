@@ -127,6 +127,36 @@ separate task of bounding field, geometry, integration and quadrature
 errors and evaluating the Taylor constant. No numerical trajectory or
 parameter scan was run for this connection.
 
+## Leading wall field with a certified interval, 17 October 2026
+
+The [direct positive-kernel bound](nsc-atlas-finite-amplitude.md#a-direct-leading-field-bound-on-the-onset-cell)
+now encloses the normalized leading wall field and its first affine-source
+derivative at `x=3809352257986645/9007199254740992`. The
+[compact receipt](../results/summaries/nsc-atlas-onset-endpoint-bound-v1.json)
+gives `w` between `1.9954870778778064e-7` and `1.9961763909160092e-7`,
+and `partial_x w` between `0.003435465891122188` and
+`0.0034354709244035116`. Both are strictly positive.
+
+An exact radial antiderivative bounds the positive Volterra operator by
+`q<0.000345317`. The original pulse is increasing on the declared cell,
+so its alternating integral series and the separate wall-derivative
+identity supply these intervals. The existing certified radius image
+and original binary source map are retained explicitly. No numerical
+waveform interpolation or geometry fit supplies these bounds.
+
+Twelve independent controls pass using 12,656 charged values and
+0.234375 active CPU seconds. Grok reviewed the mathematical comparison
+and supplied the component draft. The original application uses
+1,536 values / 0.03125 CPU seconds; a separate 512-value rational audit
+passes in 0.0625 CPU seconds. It authenticates all 20 producer bindings
+and three input hashes, and verifies every outward display. The new
+receipt is 8,120 bytes; no full history is saved.
+
+The next connection is to propagate certified scalar histories through
+the mass, lapse, displacement and clock integrals. These endpoint scalar
+bounds do not yet provide the gravitational coefficients or an evaluated
+finite-amplitude Taylor constant. No trajectory or grid scan was run.
+
 ## Fixed cap and moving-wall connection, 16 October 2026
 
 The first [retained-source fixed-space onset attempt](nsc-atlas-finite-amplitude.md#first-retained-source-fixed-cap-interval)

@@ -11426,6 +11426,36 @@ positive kernel checks the interval formulas independently, with quiet,
 scaling, input and budget controls. No original physical endpoint has
 been evaluated by these tests.
 
+The [original-endpoint application](../results/summaries/nsc-atlas-onset-endpoint-bound-v1.json)
+now succeeds from frozen producer `2052a1d44da698f20b1c4180317d005e2596d4d1`.
+It proves `q<0.000345317` and, at the original right affine source label,
+returns the outward intervals
+
+| Dimensionless leading quantity | Lower bound | Upper bound |
+| --- | ---: | ---: |
+| `w=chi_W/epsilon` | 1.9954870778778064e-7 | 1.9961763909160092e-7 |
+| `partial_x w` | 0.003435465891122188 | 0.0034354709244035116 |
+
+Both lower bounds are strictly positive. The source-minus-wall value is
+between zero and `6.893130382024256e-11`; the source derivative minus
+the wall derivative lies between `1.0205656808744753e-7` and
+`1.0708984940980894e-7`. These are continuum comparison intervals,
+not differences between sampled field grids. The application uses
+1,536 charged values / 0.03125 process-CPU seconds, with no source
+integration, evolved field, time step, root search or retry.
+
+The 8,120-byte receipt has SHA256
+`c03772142d1852b80c292225e39d5a6f5bf7bf1b4ab6725870a48fb4127ada41`.
+A separate 512-value rational audit authenticates its 20 source bindings
+against Git and disk, its three input hashes, the algebraic interval
+formulas and all outward floating displays. It uses 0.0625 CPU seconds
+and no scientific replay. Independent Grok review confirms the kernel
+integral, its sign identities and the clipped moving-wall comparison.
+A separate Grok producer review confirms receipt authentication, source
+monotonicity, the two scale conventions, exact endpoint conversion and
+outward displays. These bounds do not yet integrate the gravitational coefficients or
+evaluate their quadratic amplitude remainder constant.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,

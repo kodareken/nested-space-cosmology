@@ -3212,6 +3212,24 @@ draft; its native write tool returned cancellation, so the parent applied
 and checked the code. The one physical endpoint application follows the
 source freeze and does not reuse the tests' allowance.
 
+**Original application:** frozen producer `2052a1d44da698f20b1c4180317d005e2596d4d1`
+returns a [certified leading endpoint](../results/summaries/nsc-atlas-onset-endpoint-bound-v1.json)
+with q below 0.000345317 and strictly positive wall value and affine-label
+derivative. It uses 1,536 charged values / 0.03125 CPU seconds, with no
+source integration, field evolution, time step, root search or retry.
+The 8,120-byte summary preserves the formulas, exact rational endpoints,
+20 producer bindings and three input hashes. Its separate 512-value audit
+passes in 0.0625 CPU seconds, including Git authentication and all outward
+display inequalities. No full numerical field is retained.
+
+Grok's final mathematical review confirms the bound after checking the
+negative-factor form of `B_x` and the correct wall-born lower integration
+limit. The next calculation needs history integrals for the geometric
+coefficients, not another endpoint scan. That calculation must preserve
+the shared source and separate the affine source map's binary constants
+from the exact rational reference geometry. No physical gravitational
+coefficient or Taylor constant was evaluated by this endpoint application.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

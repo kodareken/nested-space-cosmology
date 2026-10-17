@@ -35,7 +35,9 @@ python scripts/run_python.py scripts/check_nsc_atlas_onset_endpoint_bound.py --o
 ```
 
 Use a new output path when reproducing an existing receipt; it will not be
-overwritten. The command authenticates the original source-cell and reference
+overwritten. The [first receipt](../results/summaries/nsc-atlas-onset-endpoint-bound-v1.json)
+binds frozen producer `2052a1d44da698f20b1c4180317d005e2596d4d1` and its exact
+source bytes. The command authenticates the original source-cell and reference
 image, then encloses the leading wall field and its first affine-source
 derivative at the original right endpoint. It evaluates no trajectory or
 sampled field and performs no grid scan. Radius and clock coefficient
