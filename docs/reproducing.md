@@ -1,7 +1,8 @@
 # Reproducing the root project
 
 The [finite clock-energy preparation](nsc-atlas-dirac-probe.md#actual-geometry-clock-energy-candidate-admission)
-has twelve preparation and existing-field controls. The actual-geometry
+has thirteen preparation and existing-field controls, including the exact
+continuum-versus-finite Hardy projector comparison. The actual-geometry
 reference uses sixteen independent cases on eight process workers, with
 one BLAS thread each. It stores spectra, summaries and matrix hashes only:
 

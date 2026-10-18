@@ -2050,3 +2050,86 @@ dominant unresolved issue. The two/four-mode state truncation is; no
 additional grid is scheduled. An exact free-energy spectral-projector
 comparison is the next useful analytical control before changing that
 cutoff. The renormalized vacuum and full Psi/Phi remain uncomputed.
+
+The remaining part of the existing 60-CPU-second control allowance admits
+one exact free-projector comparison, with matrices of size at most 64 and
+one-dimensional quadratures of order at most 48. No physical field/grid,
+angular extension or new reference is admitted. In a manufactured free
+clock flow w=s*(S-s)/S the logit coordinate is exact, so Hermite/Fourier
+identities give the continuum projector independently of the finite
+energy minimizer. This directly tests the truncation exposed above.
+
+### Exact free projector diagnoses the finite-state cutoff
+
+That control passes in 1.53125 process-CPU seconds (7.0625 total for this
+preparation's controls). For w=s*(S-s)/S, z=log(s/(S-s)) and
+phi(z)=sqrt(w)*f(s), the free generator is i*d/dz. With normalized Hermite
+functions h_n, its matrix and exact negative-projector compression are
+
+```text
+A_mn = i*[sqrt(n/2)*delta_(m,n-1)-sqrt((n+1)/2)*delta_(m,n+1)]
+C_mn = i^m*(-i)^n * integral_0^infinity h_m(p)*h_n(p) dp.
+```
+
+The Fourier convention is exp(-i*p*z): i*d/dz has eigenvalue -p, so p>0
+is occupied. In particular, C_01=-i/sqrt(2*pi), while the two-mode energy
+minimizer has C_01=-i/2. Their entry difference is .1010577196. Independent
+half-line quadratures at orders 16/48 agree; even matrix sizes 2 through
+64 approach the exact entry. The compressed continuum covariance has
+eigenvalues strictly between zero and one and is not itself a projector.
+This is compatible with a pure state on the complete algebra: restricting
+it to a proper trial subspace generally produces a mixed covariance.
+
+Thus spectral projection and subspace compression do not commute:
+`P_M*1_(-infinity,0)(A)*P_M != 1_(-infinity,0)(P_M*A*P_M)`.
+The finite minimizer is valid on its own truncated CAR algebra, but purity
+there is not a test that it equals the restriction of the continuum state.
+This exact free result diagnoses an intrinsic low-mode truncation effect.
+It neither proves that the physical bump/curved state diverges nor repairs
+the actual joint angular/frequency limit. More field cells cannot fix it.
+
+### Leading joint angular-frequency sign and the remaining UV equation
+
+The first useful ultraviolet check keeps radial momentum p and angular
+integer k large together. In the canonical radar frame, the local
+principal symbol is
+
+```text
+H1 = alpha*p + sigma1*k*N/r
+omega = sqrt(p^2+(k*N/r)^2)
+P_sigma = (I+sigma*H1/omega)/2, sigma=+1,-1.
+```
+
+Since N,r are positive in this finite domain, omega is positive away
+from the zero covector. In T,x coordinates the energy-window weight is
+chi=2*b(T-x)*b(T+x)/S. The corresponding symmetric local energy insertion
+is (chi*H+H*chi)/2; its derivative-of-weight term is essential. Transport
+it to a common interior Cauchy slice using the actual field evolution.
+On a geometrical-optics branch its leading expectation is
+`a_sigma=sigma*d*integral chi(T,X_sigma(T))*omega_sigma(T) dT`.
+For rays meeting a compact detector inside the positive window, that
+integral is strictly positive. The two branch magnitudes need not be
+equal: the rays generally cross different weights. Nevertheless the
+negative spectral projector of this leading symbol has the usual
+negative-frequency polarization P_minus. No particle label is needed
+for this sign calculation.
+
+This establishes a leading-symbol compatibility condition, not a
+four-dimensional state theorem. Every lower symbol and the propagation
+across the moving material interface remain relevant. A completed local
+state requires the transported covariance to satisfy its projector and
+Dirac evolution equations to all ultraviolet orders, modulo smooth
+kernels. Matching P_minus only at leading order is insufficient.
+The transparent conformal potential is C1 at the wall; a theorem that
+assumes globally smooth coefficients cannot silently replace its
+piecewise-smooth transmission analysis.
+
+The next physical connection is a local two-point construction whose
+common cap singular part is removed before the joint frequency/angular
+limit. For the energy-state route this entails a self-adjoint continuum
+energy operator, control of its spectral projector near zero and at the
+null endpoints, and all-order transmitted asymptotics on the detector.
+Only then can a resolvent representation of sign(A), or a transported
+Hadamard two-point function, replace the present low-mode minimizers.
+The finite reference does not determine which construction meets those
+conditions. No new grid or vacuum number follows from this leading sign.

@@ -17,6 +17,10 @@ tidal coefficient changes from -.00173501 with two modes per leg to
 No additional grid is scheduled; the next check is an exact continuum
 projector control. Eight workers take 2.81714 calculation wall seconds and
 retain a 47918-byte summary with no arrays.
+An independent exact free-projector control now demonstrates why taking
+the spectral projector and truncating its modes are different operations.
+The leading joint radial/angular symbol has the required frequency sign;
+all-order state transport across the material wall is still unresolved.
 An exact massless two-frequency calculation also shows why the cited
 positive-mass signature-projector theorem cannot select this field's state.
 The full vacuum Psi/Phi and P001's refinement failure remain open.

@@ -163,3 +163,44 @@ def test_physical_energy_selection_has_signed_sector_parity_and_full_flux():
     assert minus[0]['generator']==pytest.approx(parity@plus[0]['generator']@parity,abs=3e-13)
     assert minus[0]['covariance']==pytest.approx(parity@plus[0]['covariance']@parity,abs=3e-13)
     assert minus[1]==pytest.approx(plus[1],abs=3e-13)
+
+
+def test_exact_continuum_Hardy_compression_differs_from_finite_energy_projector():
+    # Manufactured free clock flow w=s(S-s)/S maps exactly to i*d/dy.
+    # Fourier(h_n)=(-i)^n*h_n, so the true compressed negative projector
+    # is a half-line Hermite integral, independently of diagonalizing A_N.
+    def exact_compression(order):
+        t,weights=np.polynomial.laguerre.laggauss(order)
+        p=np.sqrt(t)
+        polynomial=np.empty((len(t),8))
+        polynomial[:,0]=math.pi**(-.25)
+        polynomial[:,1]=math.sqrt(2)*p*polynomial[:,0]
+        for n in range(1,7):
+            polynomial[:,n+1]=math.sqrt(2/(n+1))*p*polynomial[:,n]-math.sqrt(n/(n+1))*polynomial[:,n-1]
+        half=np.eye(8)/2
+        for m in range(8):
+            for n in range(8):
+                if (m+n)%2:
+                    half[m,n]=np.dot(weights,polynomial[:,m]*polynomial[:,n]/(2*p))
+        phase=(-1j)**np.arange(8)
+        return phase.conj()[:,None]*half*phase[None,:]
+    exact=exact_compression(16)
+    assert exact==pytest.approx(exact_compression(48),abs=1e-13)
+    expected=-1j/math.sqrt(2*math.pi)
+    assert exact[0,1]==pytest.approx(expected,abs=3e-15)
+    e=np.linalg.eigvalsh(exact)
+    assert e[0]>0 and e[-1]<1
+    assert np.linalg.norm(exact@exact-exact)>.05
+    discrepancies=[]
+    for n in (2,4,8,16,32,64):
+        A=np.zeros((n,n),dtype=complex)
+        for k in range(n-1):
+            A[k,k+1]=1j*math.sqrt((k+1)/2)
+            A[k+1,k]=-1j*math.sqrt((k+1)/2)
+        finite=minimum_clock_covariance(A)['covariance']
+        discrepancies.append(abs(finite[0,1]-expected))
+        if n==2:
+            assert finite[0,1]==pytest.approx(-.5j,abs=3e-16)
+    assert discrepancies[0]==pytest.approx(.5-1/math.sqrt(2*math.pi),abs=3e-16)
+    assert discrepancies[-1]<.005
+    assert all(b<a for a,b in zip(discrepancies,discrepancies[1:]))
