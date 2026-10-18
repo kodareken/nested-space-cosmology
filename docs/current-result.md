@@ -4,6 +4,15 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [causal-support measurement](nsc-atlas-dirac-probe.md#causal-support-before-another-finite-part-inference)
+confirms that16 source columns lying wholly in the shared cap agree
+exactly. Global projection nevertheless gives forbidden field/spatial
+sampled sup norms1.46757e-5/8.21258e-4 at order48. This is a numerical
+representation defect, not an NSC quantum signal. The diagnostic chain
+is stopped here; no controlled local vacuum amplitude or Psi/Phi has
+been obtained, and P001 remains unconverged. Further work must be tied
+to the physical source/coupling and an actual prediction.
+
 The [finite-map derivative diagnosis](nsc-atlas-dirac-probe.md#differentiating-the-existing-finite-cell-map)
 now runs on the actual N128 maps. At order48, nonconstant probes2/8 shrink
 by4.091/3.993 under the existing split change, but probes0/1 shrink by

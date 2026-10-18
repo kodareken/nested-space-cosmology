@@ -3385,3 +3385,27 @@ parameter rows, while the global polynomial has nonzero leakage there.
 `retain_source_cells` keeps only these small rows in memory when requested;
 the producer's `--diagnose-causal-support` option reports their norms and
 polynomial leakage without writing arrays or evaluating a covariance.
+
+The actual central-map check at method `a883d5a` uses3.75 CPU/1.694597
+wall seconds (5.046875 CPU including the control). All16 forbidden plus
+source columns agree EXACTLY for field, PDE-spatial and finite-parameter
+rows, as do their plus endpoint jets. The represented forbidden support is:
+
+| Order | Field sampled sup | Field L2 | Spatial sampled sup | Spatial L2 |
+| --- | --- | --- | --- | --- |
+| 24 | 1.12675e-4 | 6.36867e-6 | 3.34030e-3 | 1.62824e-4 |
+| 48 | 1.46757e-5 | 5.86684e-7 | 8.21258e-4 | 1.47509e-5 |
+
+This identifies forbidden leakage introduced by global projection. It
+does not measure a physical nesting signal, account for the entire
+amplitude error or supply a local stress/Psi/Phi. The native independent
+audit confirms the causal rectangle and the zero extension: a shortened
+relative plus support can be used only with its zero direct columns,
+keeping the absolute maps, original root kernel and cross-leg covariance.
+The spatial off-diagonal source derivative need not vanish at that cutoff.
+No shortened reconstruction or further covariance has been evaluated.
+
+Work decision: stop extending this diagnostic chain as a research goal.
+The finite vacuum amplitude and full slip remain open. These results are
+available when a calculation of an actual physical prediction needs them;
+another diagnostic round is not itself progress toward that prediction.
