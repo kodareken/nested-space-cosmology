@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+The prepared Dirac mean stress and spherical metric/clock reconstruction
+use the same quiet geometry and existing wall-mass coefficients:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_mean.py tests/test_nsc_atlas_dirac_backreaction.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_mean_clock.py --output .build/nsc-atlas-dirac-mean-clock.json
+```
+
+The recorder requires frozen source and an unused output path. It runs
+only 64/128 field cells with fixed quadrature orders 8/12, using up to
+eight independent process workers and one BLAS/Numba thread per worker.
+The [owner](nsc-atlas-dirac-probe.md#mean-stress-and-a-direct-spherical-metric-reconstruction)
+specifies the state difference, shared observer motion, corner data,
+proper clock, uncertainty and scope. No P001 evolution is invoked.
+
 The actual Dirac gravitational/observer bridge is an equation interface,
 with independent four-dimensional curvature, constraint propagation,
 moving-wall and proper-clock controls:

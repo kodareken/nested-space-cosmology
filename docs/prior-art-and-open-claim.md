@@ -1,5 +1,45 @@
 # Prior art and admission of new research
 
+## Conserved mean Dirac source and spherical metric reconstruction
+
+Use the existing finite exterior occupation difference on the actual quiet
+wall-clock diamond. Propagate that same chiral mode with the shared Cayley
+gate, together with analytically differentiated characteristic equations.
+Expose bounded field/first-derivative evaluation through a tensor Hermite
+representation; obtain stress from the existing Dirac stress owner.
+The incoming smooth compact mode has a continuum flux normalization.
+
+The missing physical connection is its mean gravitational backreaction,
+required before the mixed retarded metric-response/tadpole solve. Reconstruct
+the first-order spherical metric from the conserved Misner-Sharp mass
+one-form, the outgoing-EF lapse constraint, the existing signed wall-mass
+response and analytic null-ray sensitivity. Both regional vacuum terms
+remain fixed. This determines a proper-wall radar clock correction for a
+declared finite state difference; it does not select the baseline vacuum
+or compute the full Psi/Phi.
+
+Independent field/derivative, mass-integrability, full Einstein and exact
+charged-wall controls share **120 process-CPU seconds**, with at most 32
+field cells per direction in manufactured controls. A physical reference
+requires source freeze and passing controls first. It uses only k=1,
+N=64/128, nested and smooth-cap controls, at the existing radar event.
+The smooth control has no membrane and is explicitly driven along the
+nested wall's areal-radius history, so observer motion is common.
+Fixed quadrature orders 8/12 give eight independent integration cases:
+**240 charged process-CPU seconds**, eight process workers with BLAS=1,
+20 CPU seconds per setup or clock case, and 24000 summary bytes.
+Worker totals include startup; eight further CPU seconds cover unobserved
+serialization/exit overhead. No P001 grid or trajectory is run, no full arrays
+are retained, and no extra resolution is added after a failed comparison.
+
+Stop on a sign/constraint/transmission failure, unresolved source interpolation
+or quadrature error, or budget exhaustion. Wrong vacuum subtraction, an
+incorrect ingoing/outgoing EF sign and incompatible wall-clock normalization
+are the anticipated failures. A direct nonlinear charged-wall/ray solution,
+or a different mass integration path outside the declared discretization
+error, rejects the reconstruction. Two-resolution spread is a numerical
+diagnostic rather than a continuum or observational confidence interval.
+
 ## Gravitational equations and the moving quantum-probe wall
 
 Connect the actual Dirac stress and retarded metric insertions to spherical

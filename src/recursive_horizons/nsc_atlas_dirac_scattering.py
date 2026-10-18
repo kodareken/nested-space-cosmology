@@ -29,6 +29,12 @@ from .nsc_influence import _covariance
 
 
 @njit(cache=True)
+def _cayley_coefficients(gamma):
+    denominator = 1+gamma*gamma
+    return (1-gamma*gamma)/denominator,-2j*gamma/denominator
+
+
+@njit(cache=True)
 def _transfer(w, du, dv, profiles):
     nu, nv = w.shape
     size = nu+nv
@@ -40,8 +46,7 @@ def _transfer(w, du, dv, profiles):
             p, m = i, nu+j
             gamma = w[i,j]*weight
             denominator = 1+gamma*gamma
-            cosine = (1-gamma*gamma)/denominator
-            sine = -2j*gamma/denominator
+            cosine,sine = _cayley_coefficients(gamma)
             # Every insertion is a SINGLE angular copy. Magnetic
             # degeneracy multiplies a final expectation exactly once.
             for q in range(len(profiles)):

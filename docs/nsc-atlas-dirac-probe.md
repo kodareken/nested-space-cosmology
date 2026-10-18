@@ -1263,7 +1263,9 @@ $$
 
 Continuity of Z,Q and zero jumps of both variations are the fixed-tension
 junction laws. The signed Gauss identity is
-`kappa*[T_nn]=-2*k_wall*average(K^T_T+2*K^theta_theta)`.
+`kappa*[t_nn]-[Lambda]=-2*k_wall*average(K^T_T+2*K^theta_theta)`,
+where t excludes the regional vacuum terms. Including those terms in a
+total T gives the equivalent `kappa*[T_nn]=-2*k_wall*average(K)`.
 Its perturbation is a compatibility condition from the bulk and Israel
 equations, not another independent wall datum. The finite Dirac stress
 transmits normally; its zero normal-pressure jump leaves zero variation
@@ -1305,3 +1307,102 @@ moving-normal acceleration, the signed wall Gauss law and residual gauge
 removal in the physical clock. They use 4.390625 CPU seconds across the
 initial suite and two focused follow-ups, including one scalar-versus-array
 fixture correction. No gravitational or P001 evolution is run.
+
+## Mean stress and a direct spherical metric reconstruction
+
+The [finite mean-source interface](../src/recursive_horizons/nsc_atlas_dirac_mean.py)
+propagates the same declared exterior mode with the shared Cayley gate.
+Its compact envelope and phase are unchanged, with continuum rather than
+mesh-dependent normalization. For P=eta_plus, M=eta_minus, analytic
+characteristic differentiation gives
+
+$$
+\partial_V(P_U)=-iW_UM/2-W^2P/4,\qquad
+\partial_U(M_V)=-iW_VP/2-W^2M/4.
+$$
+
+The bounded tensor-Hermite representation supplies the field and first
+derivatives to the existing stress owner. No stored waveform is differentiated
+and no extrapolation beyond the represented cell-center box is permitted.
+The analytic quiet region V<=.3S is zero. Five field controls pass, including
+wall-crossing derivatives, flux weights, continuum normalization, causal zero
+and one-sided stress transmission. A uniform subcell derivative-error envelope
+decreases `.00292686 -> .000741822 -> .000186756` at 8/16/32 cells.
+The earlier ratio at one changing fractional cell position was not a uniform
+order estimator; the envelope supplies the relevant check.
+
+For the supplied conserved mean stress, the
+[metric reconstruction](../src/recursive_horizons/nsc_atlas_dirac_backreaction.py)
+uses spherical Einstein constraints directly. Write
+`m_total=M_i+Lambda_i*r^3/6+m_i`, subtracting the cap vacuum mass at the
+actual areal radius. To first order in the supplied stress,
+
+$$
+(m_U,m_V)=\frac{\kappa r^2}{C}
+(t_{UV}r_U-t_{UU}r_V,\ t_{UV}r_V-t_{VV}r_U).
+$$
+
+This one-form is closed for a conserved source on the vacuum background.
+Agreement of two integration paths is a necessary numerical check; it
+does not by itself establish all stress-conservation equations.
+At the wall,
+`mu_i_dot=-kappa*R^2*(beta_i*j+v*p_r)/2`.
+The existing **geometric** `wall_response_coefficients` supplies
+rho_dot and delta beta from those transported exterior/cap masses.
+No scalar mass functional is reused for the Dirac source. The scalar
+certificates retain their original source and finite-domain claims;
+this Dirac application has the independent stress, mass and metric checks here.
+
+Use outgoing EF coordinates with
+`ds2=-a^2*F*dU^2-2*a*dU*dr+r^2*dOmega2`. The background
+`a0=C/(2*r_V)=1/(beta_i+v)` stays finite through beta_plus=0.
+For psi=delta ln a at fixed U,r,
+
+$$
+\psi_V=\frac{\kappa r t_{VV}}{2r_V},\qquad
+\psi_{\rm wall}=-\frac{\delta\beta_i+\dot\rho}{\beta_i+v}.
+$$
+
+Mass and psi follow by quadrature from the wall along constant U, on the
+appropriate side. A nonzero homogeneous corner mass must be retained.
+Both corner masses vanish for the prepared Dirac difference, whose input
+vanishes there; the charged-family control correctly has nonzero corner mass.
+
+The physical radar radius s=delta r obeys the linearized ingoing null ray
+equation, with its wall radius rho as boundary data:
+
+$$
+s_U=bs+g,\quad b=-a_0f'/2,\quad
+g=a_0m/r-a_0f\psi/2.
+$$
+
+Differentiating this equation analytically supplies z=s_V and hence
+`q=delta ln C=psi+z/r_V`. The wall value q=0 follows from proper-time
+normalization. The specified radial light protocol gives
+`delta ln(omega_rec/omega_wall)=-q/2`. Thus no independent bulk metric
+PDE grid is introduced for this first-order supplied source.
+
+Five [metric controls](../tests/test_nsc_atlas_dirac_backreaction.py) pass.
+They recover the nonvacuum mass one-form, the full nonlinear equal-charge
+Einstein-Maxwell wall/ray derivative on both sides, regularity at beta_plus=0,
+the zero-source limit, and a smooth-cap worldtube comparison. A separate
+exact static-fluid family has nonzero T_rr and verifies the radial lapse
+and resulting clock derivative, which the Maxwell family alone cannot test.
+These manufactured sources are controls and are never inserted into the
+physical Dirac calculation. The combined development controls use
+23.03125 process-CPU seconds, including the bounded interpolation diagnosis.
+
+The smooth cap contains no membrane. For the coming clock comparison its
+observer worldtube is explicitly driven along the computed nested wall's
+areal-radius history. It isolates geometry at a common observer motion;
+it is not another independently evolving wall model or an observational fit.
+The root vacuum, baseline polarization and full mixed retarded
+source/tadpole response remain outside this mean calculation.
+
+Physical conversion restores `8*pi*hbar*G/(c^3*ell^2)`, using the
+independently supplied nominal ell=10 km and the pinned runtime's
+[CODATA 2022 constants](https://physics.nist.gov/cuu/Constants/Table/allascii.txt).
+G's measured uncertainty is separate from numerical resolution spread.
+The incoming clock-generator energy is `2*hbar*c*12/(S*ell)` for this
+complete k=1 multiplet; the smooth compact mode is not frequency limited.
+No sky observation sets this preparation, length, or numerical result.
