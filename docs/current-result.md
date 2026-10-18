@@ -76,6 +76,20 @@ error; the format recovery and unavailable first CPU total are recorded.
 The independent radial check applies to its own retained stage, not every
 unstored trajectory maximum.
 
+The [incoming-offset control](../results/summaries/nsc-atlas-endpoint-incoming-control-v1.json)
+now identifies the two channels at that saved cut. The velocity discrepancy
+improves `-.0017107 -> -.0008346`, but the normal discrepancy grows
+`-.3556361 -> -.4932409`. Copying the measured incoming sum mismatch into
+the same frozen control gives `-.0004154071 -> -.0007235781`, compared
+with the actual `-.0004487427 -> -.0007620291`. Those control-to-saved
+ratios are 92.6--95.0%; they are not independent predictions or error fractions.
+The derived sensitivity shows how the mismatch drives both the trace product
+and the affine wall-projection term. Three controls, including two independent
+cap evaluations, pass. This supports incoming characteristic coupling as
+the main mechanism at this cut; the unseen maxima remain unassigned.
+The [equations and table](nsc-atlas-finite-amplitude.md#p001-active-region-and-incoming-coupling-diagnosis)
+specify the next same-state coupling check. No new grid or evolution ran.
+
 ## Flat-reference curvature channels and a motion--lensing relation, 18 October 2026
 
 The [covariant profile calculation](schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)

@@ -21,6 +21,24 @@ The [operator record](../results/summaries/nsc-atlas-dirac-probe-reference-v1.js
 and [resolution record](../results/summaries/nsc-atlas-endpoint-active-resolution-v1.json)
 remain compact; no raw array or previous evolution is regenerated.
 
+For the later same-background incoming diagnostic:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_projection.py --output .build/nsc-endpoint-frozen-projection.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_projection.py --analyze-existing results/summaries/nsc-atlas-endpoint-frozen-projection-v1.json --output .build/nsc-endpoint-incoming-control.json
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_endpoint_incoming_control.py -q
+```
+
+The first command regenerates the original prepared history once and takes
+three instantaneous cap solves on the existing spaces, with zero departures
+and diagnostic rates. It is not a P001 trajectory replay. Compare mass,
+lapse and gap values within `1e-9` absolute/relative tolerance; the original
+prepared-input hash must match exactly. The second command uses the already
+committed control and performs only algebra; compare its derived gaps within
+`1e-12`. It copies measured incoming mismatches and is not a prediction of
+an independent source. The first attempt's NumPy/JSON format failure is
+retained in the frozen control; runtime metadata are not equality targets.
+
 The current Step-7 exact calculations and causal exterior operator reproduce with:
 
 ```sh

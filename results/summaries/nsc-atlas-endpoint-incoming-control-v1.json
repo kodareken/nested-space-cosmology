@@ -1,0 +1,82 @@
+{
+  "cases": [
+    {
+      "actual_incoming_sum_gap": -0.3573467778035315,
+      "actual_normal_trace_gap": -0.35563605317157965,
+      "actual_velocity_trace_gap": -0.0017107246319518765,
+      "baseline_control_mass_gap": -4.943747673096013e-06,
+      "control_to_saved_residual_ratio": 0.9257133034916659,
+      "incoming_sum_offset": 0.3573467778035315,
+      "level": 0,
+      "normalized_affine_change": -0.1673838479364366,
+      "normalized_trace_change": -2.9941298519902233,
+      "physical_mass_gap_change": -0.00041046334329066056,
+      "saved_trajectory_mass_gap": -0.0004487427040282309,
+      "shifted_control_mass_gap": -0.00041540709096375656
+    },
+    {
+      "actual_incoming_sum_gap": -0.4227023405475876,
+      "actual_normal_trace_gap": -0.42142974680039913,
+      "actual_velocity_trace_gap": -0.0012725937471884663,
+      "baseline_control_mass_gap": -4.4753379682018656e-06,
+      "control_to_saved_residual_ratio": 0.9332351752121212,
+      "incoming_sum_offset": 0.4227023405475876,
+      "level": 1,
+      "normalized_affine_change": -0.711840346322192,
+      "normalized_trace_change": -3.541779836667354,
+      "physical_mass_gap_change": -0.0005522529165187621,
+      "saved_trajectory_mass_gap": -0.0005965572979612792,
+      "shifted_control_mass_gap": -0.000556728254486964
+    },
+    {
+      "actual_incoming_sum_gap": -0.4940755340115395,
+      "actual_normal_trace_gap": -0.4932409498526624,
+      "actual_velocity_trace_gap": -0.0008345841588770497,
+      "baseline_control_mass_gap": -4.157805108892561e-06,
+      "control_to_saved_residual_ratio": 0.9495412570566407,
+      "incoming_sum_offset": 0.4940755340115395,
+      "level": 2,
+      "normalized_affine_change": -1.4013271956330364,
+      "normalized_trace_change": -4.139867093597738,
+      "physical_mass_gap_change": -0.0007194202997866312,
+      "saved_trajectory_mass_gap": -0.0007620291372472317,
+      "shifted_control_mass_gap": -0.0007235781048955238
+    }
+  ],
+  "comparison": {
+    "bytes": 7077,
+    "path": "results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json",
+    "sha256": "fed19ae5b870c16ad2b290f5b077d5d8a888e633773b97f7ff6335ed0f102b1b"
+  },
+  "counts": {
+    "cap_solves": 0,
+    "history_preparations": 0,
+    "new_meshes": 0,
+    "time_steps": 0
+  },
+  "fixed_point": {
+    "R_x": 0.0,
+    "T_x": 1.0,
+    "alpha": 0.00012983127142551443,
+    "departure_coefficients": "identically zero",
+    "history_time": -0.9567610482821006,
+    "incoming_w_plus": -123.16547146510533,
+    "radius": 0.5090285080695001,
+    "source_x": 0.45094013016102275
+  },
+  "frozen_control": {
+    "path": "results/summaries/nsc-atlas-endpoint-frozen-projection-v1.json",
+    "sha256": "f398219fa035179a28590a7024514cc671292a94248e4d130692490526c21a25"
+  },
+  "interpretation": "At this common cut, the growing normal/incoming mismatch drives both the trace product and the affine wall-projection term, while the velocity discrepancy improves.",
+  "limits": {
+    "CPU_seconds": 10,
+    "summary_bytes": 8000
+  },
+  "limits_of_inference": "The incoming mismatch is copied from the saved failed solution. This is a diagnostic, not a prediction, additive error fraction, reconstruction of its state or proof about unstored maxima.",
+  "producer_sha256": "6a01dbab711c124906ee119564e14df9bc4f666fa7f319fabf8deded50d26772",
+  "runtime_cpu_seconds": 0.03125,
+  "schema": "nsc-atlas-endpoint-incoming-control-v1",
+  "scope": "Algebraic incoming-offset sensitivity of the saved zero-departure control; no cap solve or time step.",
+  "source_context_commit": "399191829c61be9c5778e4503a9a59689ffc5cbe"
+}

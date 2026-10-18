@@ -29,6 +29,17 @@ and 15,895,078 charged values; the first attempt's CPU total was not saved.
 Its small residual improves across the spaces, so it does not establish
 the actual growing trajectory error as background projection alone.
 
+**Algebraic incoming control:** hold that saved frozen state/metric fixed
+and change only `R*w_plus` by the negative measured incoming sum mismatch
+at the same common cut on each original level. Derive the affine changes
+of the trace product and wall time-projection term, checking them against
+two independent manufactured cap evaluations. The three sensitivity
+controls share 30 CPU seconds; the read-only application has 10 CPU seconds
+and 8000 bytes, no source reconstruction or cap solve. The copied mismatch
+is a diagnostic input, not a predicted source. Its close reproduction of a
+saved mass residual cannot be called an independent prediction, additive
+error fraction, or proof about the unstored trajectory maximum.
+
 Douglas's current priority is the increasing P001 mass gap and a slip
 calculation on the actual nested geometry. Read the three completed v4
 receipts and their authenticated comparison; take no evolution steps and

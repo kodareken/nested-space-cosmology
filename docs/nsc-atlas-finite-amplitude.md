@@ -23,7 +23,7 @@ field on the anchored exterior source. The reference has `h=H ell=1`,
 `b=k ell=2`, `k=kappa_4 sigma/2`, and `M/ell=0.4`. The source profile below
 is called `g_src`; `b` always denotes the wall parameter.
 
-## Exact frame and potential
+## P001 active-region and incoming-coupling diagnosis
 
 The completed P001 endpoint trial remains unconverged. Its
 [active-region diagnosis](../results/summaries/nsc-atlas-endpoint-active-resolution-v1.json)
@@ -54,6 +54,52 @@ alone does not explain the actual trajectory's growing residual. The
 trajectory has an additional growing normal/incoming trace mismatch even
 as its momentum/velocity trace discrepancy improves. This counterfactual
 is not a recovered evolved state or a material-wall solution.
+
+At fixed cap state and radius, let `delta_s_in=delta(R*w_plus)` and
+`g_T=chi0_T(Z)-(Pi_h chi0_T)(Z)`. The weak momentum is independent of
+the supplied incoming characteristic, while `h_weak` changes by
+`delta_s_in`. The exact sensitivity of the two normalized mass-gap terms is
+
+$$
+\delta E_{\rm trace}=\frac{A^2e^\delta}{2}p_{\rm weak}\,\delta s_{\rm in},
+\qquad
+\delta E_{\rm affine}=-\frac A2g_T\,\delta s_{\rm in},
+\qquad
+\delta E_M=\alpha(\delta E_{\rm trace}+\delta E_{\rm affine}).
+$$
+
+The second identity follows from the existing explicit remainder's boundary
+term: `drive=B*R*w_plus`, `B=A*exp(delta)`. This is an affine boundary-input
+response of one instantaneous operator, not a change of the evolved solution.
+The [analysis mode](../scripts/diagnose_nsc_atlas_endpoint_projection.py)
+and [three controls](../tests/test_nsc_atlas_endpoint_incoming_control.py)
+check it against two independent constrained-cap evaluations on a nonzero
+piecewise background, including its wall time-projection term.
+
+The saved cut `x=.45094013016102275` separates the channels:
+
+| Level | p_trace-p_weak | h_trace-h_weak | Incoming sum mismatch |
+|---|---:|---:|---:|
+| 0 | -.001710725 | -.3556361 | -.3573468 |
+| 1 | -.001272594 | -.4214297 | -.4227023 |
+| 2 | -.000834584 | -.4932409 | -.4940755 |
+
+The velocity/momentum trace improves; the normal/incoming mismatch grows.
+Transferring that measured sum mismatch to the already frozen background
+control gives mass gaps `-.0004154071`, `-.0005567283`, `-.0007235781`,
+versus the saved `-.0004487427`, `-.0005965573`, `-.0007620291`.
+The [compact algebraic record](../results/summaries/nsc-atlas-endpoint-incoming-control-v1.json)
+contains no new cap solve, history preparation or time step. Both the trace
+product and the affine wall term amplify the growing incoming mismatch.
+This supports the incoming characteristic coupling as the main mechanism
+at this cut. The control uses the measured failure as its input; the
+92.6--95.0% ratios are not independent predictions or additive error fractions.
+The unarchived departures and peak states still prevent unique attribution
+of the all-stage maxima. A consistent incoming trace and affine transport
+must be checked before another refinement; replacing the radial mass law
+or adding a continuum transport term is not supported by these results.
+
+## Exact frame and potential
 
 Start from the same split Jordan action, including its `2fK` boundary terms,
 

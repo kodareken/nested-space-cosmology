@@ -29,10 +29,81 @@ VALUE_LIMIT=100_000_000
 BYTE_LIMIT=12000
 
 
+def incoming_offset_response(*,A,lapse,p_weak,time_wall_gap,delta_incoming_sum,alpha):
+    """Change R*w_plus at fixed cap state, metric, radius and clock rate.
+
+    The weak velocity/p_weak is independent of incoming data. The normal
+    trace changes by delta_incoming_sum. Only the boundary-force term in
+    the explicit affine remainder changes. These are exact affine changes
+    of this semidiscrete operator, not derivatives of an evolved solution.
+    """
+    values=tuple(map(float,(A,lapse,p_weak,time_wall_gap,delta_incoming_sum,alpha)))
+    if not all(math.isfinite(v) for v in values) or A<=0 or alpha<0:
+        raise ValueError('finite inputs, positive metric and nonnegative alpha required')
+    trace=A*A*math.exp(lapse)*p_weak*delta_incoming_sum/2
+    affine=-time_wall_gap*A*delta_incoming_sum/2
+    return dict(normalized_trace_change=trace,normalized_affine_change=affine,
+        physical_mass_gap_change=alpha*(trace+affine))
+
+
+def analyze_existing(path,output):
+    """Transfer the saved incoming mismatch to the already frozen control."""
+    started=time.process_time()
+    if output.exists(): raise FileExistsError(output)
+    if not output.parent.is_dir(): raise ValueError('output parent must exist')
+    path=path.resolve();relative=path.relative_to(ROOT).as_posix()
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    raw=path.read_bytes()
+    if subprocess.check_output(['git','show',f'{commit}:{relative}'],cwd=ROOT)!=raw:
+        raise ValueError('the saved frozen control must already be committed')
+    frozen=json.loads(raw)
+    binding,_,records,_=authenticate(ROOT,'results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json')
+    if frozen['schema']!='nsc-atlas-endpoint-frozen-projection-v1' or frozen['comparison']!=binding:
+        raise ValueError('the original frozen point/comparison is required')
+    if [c['level'] for c in frozen['cases']]!=[0,1,2]: raise ValueError('original three levels required')
+    point=frozen['fixed_point'];rows=[]
+    for control,record in zip(frozen['cases'],records):
+        actual=record['samples'][5]
+        if actual['x']!=point['source_x'] or record['input']['alpha']!=point['alpha']:
+            raise ValueError('fixed physical input changed')
+        d=actual['mass_gap_decomposition']
+        incoming_gap=d['p_trace_minus_weak']+d['h_trace_minus_weak']
+        response=incoming_offset_response(A=control['A_wall'],lapse=control['lapse'],
+            p_weak=control['p_weak'],time_wall_gap=control['background_time_wall_projection_gap'],
+            delta_incoming_sum=-incoming_gap,alpha=point['alpha'])
+        shifted=control['physical_mass_gap']+response['physical_mass_gap_change']
+        saved=actual['temporal_residual']['mass_actual']
+        rows.append(dict(level=record['level'],actual_velocity_trace_gap=d['p_trace_minus_weak'],
+            actual_normal_trace_gap=d['h_trace_minus_weak'],actual_incoming_sum_gap=incoming_gap,
+            baseline_control_mass_gap=control['physical_mass_gap'],
+            incoming_sum_offset=-incoming_gap,**response,
+            shifted_control_mass_gap=shifted,saved_trajectory_mass_gap=saved,
+            control_to_saved_residual_ratio=None if saved==0 else shifted/saved))
+    result=dict(schema='nsc-atlas-endpoint-incoming-control-v1',source_context_commit=commit,
+        producer_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        frozen_control=dict(path=relative,sha256=hashlib.sha256(raw).hexdigest()),comparison=binding,
+        fixed_point=point,cases=rows,
+        scope='Algebraic incoming-offset sensitivity of the saved zero-departure control; no cap solve or time step.',
+        interpretation='At this common cut, the growing normal/incoming mismatch drives both the trace product and the affine wall-projection term, while the velocity discrepancy improves.',
+        limits_of_inference='The incoming mismatch is copied from the saved failed solution. This is a diagnostic, not a prediction, additive error fraction, reconstruction of its state or proof about unstored maxima.',
+        runtime_cpu_seconds=time.process_time()-started,
+        counts=dict(new_meshes=0,time_steps=0,cap_solves=0,history_preparations=0),
+        limits=dict(CPU_seconds=10,summary_bytes=8000))
+    if result['runtime_cpu_seconds']>10: raise RuntimeError('algebraic analysis CPU budget exhausted')
+    encoded=json.dumps(result,indent=2,sort_keys=True,allow_nan=False)+'\n'
+    if len(encoded.encode())>8000: raise RuntimeError('algebraic analysis summary exceeds byte budget')
+    output.write_text(encoded,encoding='utf-8',newline='\n')
+    print(json.dumps(rows))
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--analyze-existing',type=Path,
+        help='derive incoming-offset sensitivity from a committed frozen control, without another solve')
     args=parser.parse_args()
+    if args.analyze_existing is not None:
+        return analyze_existing(args.analyze_existing,args.output)
     if args.output.exists(): raise FileExistsError(args.output)
     if not args.output.parent.is_dir(): raise ValueError('output parent must exist')
     producer=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
