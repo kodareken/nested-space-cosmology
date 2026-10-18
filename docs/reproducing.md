@@ -2917,9 +2917,24 @@ python scripts/run_python.py -m pytest tests/test_nsc_conformal_tangent_evolutio
 
 It checks the analytic Jacobian-vector action against independent full-rate
 differences and Hamiltonian identities. This command reads no archive and
-takes no physical time step. A paired nonlinear/tangent trajectory needs a
-later producer and finite evolution budget; the derivative controls alone
-do not provide that trajectory or an observed signal.
+takes no physical time step. The propagated photon response has its own
+bounded producer and controls:
+
+```text
+python scripts/run_python.py -m pytest tests/test_measure_nsc_conformal_causal_response.py -q
+python scripts/run_python.py scripts/measure_nsc_conformal_causal_response.py --geometry .build/data/nsc-spherical-conformal-episode-v2.npz --output .build/conformal-causal-response.json --raw .build/conformal-causal-response.npz
+```
+
+Use fresh output paths. The method is frozen before application. One initial
+factorization and a directional check precede the original 300/600-step
+cases, run in two processes with four BLAS threads each. The setup and case
+limits are 140, 1000 and 2000 process-CPU seconds within a 3600-second total
+envelope. Both saved baseline checkpoints and both photon events are
+required. The JSON limit is 24,000 bytes; the ignored final-state cache limit
+is 2,000,000 bytes. A stopped case preserves its last accepted state and
+reports missing output. Time-step differences are empirical temporal
+indicators, not continuum or physical error bounds. The nine controls pass;
+the archived application has not yet run.
 
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.

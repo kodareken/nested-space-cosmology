@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 from concurrent.futures import ProcessPoolExecutor
+from io import BytesIO
 import hashlib
 import json
 import multiprocessing
@@ -69,6 +70,9 @@ CASES = (
 SOURCE_PATHS = (
     "scripts/measure_nsc_conformal_causal_response.py",
     "tests/test_measure_nsc_conformal_causal_response.py",
+    "tests/test_nsc_conformal_tangent_evolution.py",
+    "tests/test_nsc_conformal_preparation_tangent.py",
+    "tests/test_nsc_conformal_preparation_fourier_control.py",
     "scripts/measure_nsc_conformal_preparation_tangent.py",
     "scripts/measure_nsc_conformal_geometric_average.py",
     "src/recursive_horizons/nsc_conformal_tangent_evolution.py",
@@ -210,6 +214,7 @@ def ray_row(direction, receiver, emitter):
         "receiver_dlogN": receiver["dlogN"],
         "emitter_dlogN": emitter["dlogN"],
         "log_redshift_derivative": derivative,
+        "redshift_derivative": one_plus * derivative,
         "events_fixed": True,
         "tangent_interpolation": False,
     }
@@ -372,6 +377,7 @@ def evolve_case(grid, state, tangent, *, dt, target, cpu_seconds, name,
             grid, state, tangent, mark, steps, energy_reference,
         )
         diagnostics.append(row)
+        print(f"{name}: accepted T={mark:g}, steps={steps}, CPU={clock.used:.3f}s", flush=True)
 
     def remember(mark):
         if mark in checkpoints:
@@ -422,6 +428,8 @@ def evolve_case(grid, state, tangent, *, dt, target, cpu_seconds, name,
                     "accepted": bool(accepted),
                     "endpoint_shortened": False,
                 }
+                print(f"{name}: first-step CPU forecast {projected:.3f}s / "
+                      f"{clock.seconds:g}s; accepted={accepted}", flush=True)
                 if not accepted:
                     reason = "forecast_cannot_reach_full_endpoint"
                     break
@@ -429,6 +437,10 @@ def evolve_case(grid, state, tangent, *, dt, target, cpu_seconds, name,
         reason = "cpu_allocation_exhausted"
     except PositiveChartExit as error:
         reason = "positive_chart:" + str(error.reason)
+    except Exception as error:
+        # Assignment from RK4 occurs only after all its stages return. Preserve
+        # the last accepted state and its time if a later stage/diagnostic fails.
+        reason = f"{type(error).__name__}: {error}"
     reached = reason is None and steps == required and abs(time_value - target) <= 1e-9
     rays = rays_from_events(events["receiver"], events["emitters"]) if sample_events else []
     report = {
@@ -539,7 +551,7 @@ def temporal_envelope(reports):
     by_name = {report["name"]: report for report in reports}
     coarse = by_name.get("nf512_dt_0.0010")
     fine = by_name.get("nf512_dt_0.0005")
-    if coarse is None or fine is None or not coarse.get("photon_result") or not fine.get("photon_result"):
+    if coarse is None or fine is None or not case_succeeded(coarse) or not case_succeeded(fine):
         return None
     rows = []
     for direction in (-1, 1):
@@ -547,14 +559,26 @@ def temporal_envelope(reports):
         fine_ray = next(ray for ray in fine["rays"] if ray["direction"] == direction)
         fine_value = float(fine_ray["log_redshift_derivative"])
         coarse_value = float(coarse_ray["log_redshift_derivative"])
+        fine_dz = float(fine_ray["redshift_derivative"])
+        coarse_dz = float(coarse_ray["redshift_derivative"])
+        log_gap = abs(fine_value - coarse_value)
+        dz_gap = abs(fine_dz - coarse_dz)
         rows.append({
             "direction": direction,
             "fine_coefficient": fine_value,
             "coarse_coefficient": coarse_value,
-            "absolute_difference": abs(fine_value - coarse_value),
+            "absolute_difference": log_gap,
+            "fine_centered_interval": [fine_value - log_gap, fine_value + log_gap],
+            "redshift_derivative": {
+                "fine_coefficient": fine_dz,
+                "coarse_coefficient": coarse_dz,
+                "absolute_difference": dz_gap,
+                "fine_centered_interval": [fine_dz - dz_gap, fine_dz + dz_gap],
+            },
         })
     return {
         "quantity": "derivative of log(1+z) per epsilon",
+        "additional_quantity": "derivative of redshift z per epsilon",
         "fine_dt": 0.0005,
         "coarse_dt": 0.001,
         "rows": rows,
@@ -567,7 +591,9 @@ def temporal_envelope(reports):
 
 
 def case_succeeded(report):
-    return bool(report.get("target_reached") and report.get("photon_result") and len(report.get("rays", [])) == 2)
+    return bool(report.get("target_reached") and report.get("photon_result")
+                and len(report.get("rays", [])) == 2
+                and report.get("baseline", {}).get("within_tolerance"))
 
 
 def summary_status(reports):
@@ -594,7 +620,7 @@ def plain(value):
 
 
 def dump_summary(payload):
-    raw = json.dumps(plain(payload), indent=2, sort_keys=True, allow_nan=False) + "\n"
+    raw = json.dumps(plain(payload), separators=(",", ":"), sort_keys=True, allow_nan=False) + "\n"
     size = len(raw.encode("utf-8"))
     if size > BYTE_LIMIT:
         raise ValueError(f"summary exceeds {BYTE_LIMIT} bytes ({size})")
@@ -743,12 +769,12 @@ def write_raw(path, caches):
             payload[prefix + "_u_" + name] = cache["tangent"][name]
     if not payload:
         return None
-    with path.open("wb") as handle:
-        np.savez_compressed(handle, **payload)
-    size = path.stat().st_size
+    buffer = BytesIO()
+    np.savez_compressed(buffer, **payload)
+    size = buffer.tell()
     if size > RAW_BYTE_LIMIT:
-        path.unlink()
         raise ValueError(f"raw cache exceeds {RAW_BYTE_LIMIT} bytes ({size})")
+    path.write_bytes(buffer.getvalue())
     return {"path": str(path), "sha256": sha256(path), "bytes": int(size),
             "contents": "final reached baseline and tangent for each case that returned a state"}
 
@@ -759,6 +785,7 @@ def baseline_reports(geometry, results):
         for result in results:
             cache = result.get("cache") or {}
             comparison = {"times": {}, "within_tolerance": True}
+            required = {"0.050", "0.300"}
             for label, state in cache.get("checkpoints", {}).items():
                 try:
                     reference = archived_frame(data, result["report"]["name"], float(label))
@@ -769,9 +796,10 @@ def baseline_reports(geometry, results):
                 comparison["within_tolerance"] = comparison["within_tolerance"] and bool(
                     gap.get("within_tolerance")
                 )
-            if not cache.get("checkpoints"):
+            missing = required - set(cache.get("checkpoints", {}))
+            if missing:
                 comparison["within_tolerance"] = False
-                comparison["error"] = "no baseline checkpoint was reached"
+                comparison["missing_checkpoints"] = sorted(missing)
             reports.append(comparison)
     return reports
 
@@ -972,6 +1000,7 @@ def main():
         result["status"] = PARTIAL
         result["reason"] = "raw_cache_rejected"
     result["raw"] = raw_record
+    result["photon_result"] = result["status"] == COMPLETED
     output.write_text(dump_summary(result), encoding="utf-8", newline="\n")
     print(
         f"Wrote {output}; status {result['status']}; "

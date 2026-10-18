@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 247431,
+      "bytes": 247593,
       "path": "docs/active-code-map.md",
-      "sha256": "f1a07ff7e127c9187e186de58f03b1f35398028492d5cd79db6c2d85df8154f9"
+      "sha256": "386b1a095c79fe7edc19cde7175de9449b1cd1a94f8a1f082a0180488838c919"
     },
     {
       "bytes": 102489,
@@ -1573,7 +1573,7 @@
     {
       "bytes": 2385395,
       "path": "docs/lab-snapshot.json",
-      "sha256": "803d847412b7fd56d9724e4806b5ecd711ab1dbe289dd394492799996782a369"
+      "sha256": "26dfb5d3ca89a6b2c4fa4815ecdd94631dcc4fc2ba4d02292453d5d56b30f862"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 513054,
+      "bytes": 513674,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "3a60207c4e17262657a9c28a419e945fb1aad1673a947dde2a935bbea3760cde"
+      "sha256": "07a25317f39515d9a6a3a6d0be88c7fa551aff595a5229040efd2e972fbf25ef"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 168941,
+      "bytes": 169888,
       "path": "docs/reproducing.md",
-      "sha256": "bcc7585955c445e66a0530934fa59783b8e834efbd1a01d440cf37dded7e8944"
+      "sha256": "0925d1c5c82d1aaf512a7c3aae4a1947a79a3d95d3e17149b76eeb83a8e51cf1"
     },
     {
       "bytes": 31710,
@@ -16531,9 +16531,9 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
-      "bytes": 39502,
+      "bytes": 41086,
       "path": "scripts/measure_nsc_conformal_causal_response.py",
-      "sha256": "4154ef210ebf438a04afaab0c36e929017d4dc7834a696ab8dbc283c3d2d1902"
+      "sha256": "cb432d64ce28f1f024228fe9105aeee1f22e29edf05c197cef365473e032eeab"
     },
     {
       "bytes": 16572,
@@ -19211,9 +19211,9 @@
       "sha256": "c3dfa753416995abc59e664c9c3549d3aa2e14f3d7adb45afb98a5a1f2b10198"
     },
     {
-      "bytes": 12798,
+      "bytes": 15628,
       "path": "tests/test_measure_nsc_conformal_causal_response.py",
-      "sha256": "2ef9ce247030217c929fdc0d280aec247d96464b1ab295c43c7ba3f967a25d88"
+      "sha256": "cd83c09b0e754de99a184dce17f66838b7edfa8c10d917ab18d4f7240b6061e9"
     },
     {
       "bytes": 2905,
@@ -21781,7 +21781,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "803d847412b7fd56d9724e4806b5ecd711ab1dbe289dd394492799996782a369",
+  "lab_snapshot_sha256": "26dfb5d3ca89a6b2c4fa4815ecdd94631dcc4fc2ba4d02292453d5d56b30f862",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

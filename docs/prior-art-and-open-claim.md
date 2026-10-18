@@ -46,7 +46,8 @@ At `T=0,.05,.175,.3`, record the original constraint/forcing and their first
 variation, Gram diagnostics, relevant tangent norms and the shift-source
 variation. These are samples, not uniform time bounds. Compare baseline
 states at `.05` and `.3` with their corresponding saved v2 cases using
-`1e-8*(1+reference maximum)` per field; a historical bitwise handoff is not
+`1e-8*max(1,actual maximum,reference maximum)` per field; both checkpoints
+must pass. A historical bitwise handoff is not
 a new replay tolerance. Keep the original full constraint defect explicit.
 All fields continue to evolve after the initial chiral slice.
 
@@ -70,6 +71,15 @@ sampling mismatch, unresolved tangent dynamics, and an insufficient runtime
 allocation. They appear respectively in the baseline/directional checks,
 time-step/forcing diagnostics, and cost forecast or hard budget. Diagnose
 the failing requirement before designing a successor.
+
+The runner and its nine manufactured controls are implemented. The latest
+focused execution passes all 26 runner, coupled-derivative and preparation
+controls in 2.93 wall seconds. The controls include two spawned Windows
+numerical workers, an injected failure after an accepted step, both required
+baseline checkpoints, and independent redshift and log-redshift differences.
+The runner retains accepted progress on failure, writes bounded compact
+JSON, and checks the compressed cache size before writing it. The archived
+application remains pending at this method freeze.
 
 ## Coupled causal tangent engine: manufactured controls
 

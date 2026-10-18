@@ -12,10 +12,10 @@ from recursive_horizons.nsc_spherical_galerkin_coupling import (
     blank_state, build_grid, manufactured_columns,
 )
 from measure_nsc_conformal_causal_response import (
-    COMPLETED, PARTIAL, archived_frame, collect_cases, compare_checkpoint,
+    COMPLETED, PARTIAL, archived_frame, baseline_reports, collect_cases, compare_checkpoint,
     dump_summary, evolve_case, field_scale_gap, forecast_accepts,
     log_redshift_derivative, preflight_jvp, production_nodes, prolonged_value,
-    quadrature_index, rays_from_events, require_fresh, summary_status,
+    quadrature_index, ray_row, rays_from_events, require_fresh, summary_status,
     temporal_envelope, write_raw,
 )
 
@@ -72,6 +72,12 @@ def test_redshift_derivative_matches_the_saved_lightcone_convention():
                        - (emitter["ur"] / emitter["r"] + emitter["uQ"] / emitter["Q"]))
         assert log_redshift_derivative(receiver, emitter) == pytest.approx(independent, abs=0.0)
         assert log_redshift_derivative(receiver, emitter) == pytest.approx(finite_difference, abs=1.0e-8)
+        receiver.update(time=0.3, x=1.0, N=receiver["r"] * receiver["Q"], dlogN=0.0)
+        emitter.update(time=0.175, x=emission_x, N=emitter["r"] * emitter["Q"], dlogN=0.0)
+        measured = ray_row(direction, receiver, emitter)
+        assert measured["redshift_derivative"] == pytest.approx(
+            (plus["redshift"] - minus["redshift"]) / (2.0 * step), abs=1.0e-8,
+        )
         assert plus["emission_time"] == pytest.approx(0.175)
         assert plus["emission_x"] == pytest.approx(emission_x)
 
@@ -128,6 +134,31 @@ def test_two_tiny_steps_match_the_variational_map_and_a_stopped_run_has_no_photo
     # Windows process_time can stay flat across a sub-quantum manufactured step.
     # Advance the producer's clock explicitly so the allocation branch is deterministic.
     import measure_nsc_conformal_causal_response as producer
+    original_step = producer.variational_rk4_step
+    calls = {"count": 0}
+
+    def fail_second_step(*args, **kwargs):
+        calls["count"] += 1
+        if calls["count"] == 2:
+            raise ValueError("injected second-stage failure")
+        return original_step(*args, **kwargs)
+
+    with monkeypatch.context() as patch:
+        patch.setattr(producer, "variational_rk4_step", fail_second_step)
+        failed, failed_cache = evolve_case(
+            grid, state.copy(), tangent.copy(), dt=0.001, target=0.002,
+            cpu_seconds=20.0, name="fault", diagnostic_times=(0.0, 0.001, 0.002),
+            sample_events=False, checkpoint_times=(0.001,),
+        )
+    assert failed["time"] == pytest.approx(0.001)
+    assert failed["steps"] == 1
+    assert failed["reason"] == "ValueError: injected second-stage failure"
+    assert failed["target_reached"] is False
+    assert failed["photon_result"] is False
+    assert failed_cache["time"] == failed["time"]
+    assert set(failed_cache["checkpoints"]) == {"0.001"}
+    expected_state, _ = original_step(grid, state, tangent, 0.001)
+    assert_allclose(failed_cache["state"]["r"], expected_state.r, rtol=0.0, atol=0.0)
     ticks = {"value": 0.0}
 
     def advance():
@@ -151,24 +182,37 @@ def test_forecast_gate_and_temporal_envelope_are_not_a_convergence_claim():
     accepted, projected = forecast_accepts(10.0, 2.0, 1, 600, 1000.0)
     assert accepted is False
     assert projected == pytest.approx(10.0 + 2.0 * 599.0)
-    fine = {"name": "nf512_dt_0.0005", "photon_result": True, "rays": [
-        {"direction": -1, "log_redshift_derivative": 0.2, "redshift": 0.001},
-        {"direction": 1, "log_redshift_derivative": -0.5, "redshift": -0.007},
+    fine = {"name": "nf512_dt_0.0005", "photon_result": True, "target_reached": True,
+            "baseline": {"within_tolerance": True}, "rays": [
+        {"direction": -1, "log_redshift_derivative": 0.2, "redshift": 0.001,
+         "redshift_derivative": 1.001 * 0.2},
+        {"direction": 1, "log_redshift_derivative": -0.5, "redshift": -0.007,
+         "redshift_derivative": 0.993 * -0.5},
     ]}
-    coarse = {"name": "nf512_dt_0.0010", "photon_result": True, "rays": [
-        {"direction": -1, "log_redshift_derivative": 0.23, "redshift": 0.001},
-        {"direction": 1, "log_redshift_derivative": -0.47, "redshift": -0.007},
+    coarse = {"name": "nf512_dt_0.0010", "photon_result": True, "target_reached": True,
+              "baseline": {"within_tolerance": True}, "rays": [
+        {"direction": -1, "log_redshift_derivative": 0.23, "redshift": 0.001,
+         "redshift_derivative": 1.001 * 0.23},
+        {"direction": 1, "log_redshift_derivative": -0.47, "redshift": -0.007,
+         "redshift_derivative": 0.993 * -0.47},
     ]}
     envelope = temporal_envelope([coarse, fine])
     assert envelope["convergence_claimed"] is False
     assert envelope["continuum_bound"] is False
     assert [row["absolute_difference"] for row in envelope["rows"]] == pytest.approx([0.03, 0.03])
+    assert [row["redshift_derivative"]["absolute_difference"] for row in envelope["rows"]] == pytest.approx(
+        [1.001 * 0.03, 0.993 * 0.03],
+    )
+    assert envelope["rows"][0]["fine_centered_interval"] == pytest.approx([0.17, 0.23])
     assert summary_status([
         {**fine, "target_reached": True}, {**coarse, "target_reached": True},
     ]) == COMPLETED
     missing = {**fine, "target_reached": False, "photon_result": False, "rays": []}
     assert summary_status([missing, {**coarse, "target_reached": True}]) == PARTIAL
     assert temporal_envelope([missing, coarse]) is None
+    bad_baseline = {**fine, "baseline": {"within_tolerance": False}}
+    assert summary_status([bad_baseline, coarse]) == PARTIAL
+    assert temporal_envelope([bad_baseline, coarse]) is None
     assert rays_from_events({"r": 2.0, "Q": 0.5, "ur": 0.0, "uQ": 0.0, "N": 1.0,
                              "dlogN": 0.0, "time": 0.3, "x": 1.0}, {}) == []
 
@@ -209,6 +253,17 @@ def test_baseline_gap_and_saved_frame_lookup_use_scale_not_bitwise_equality(tmp_
     comparison = compare_checkpoint(loaded, frame)
     assert comparison["within_tolerance"] is True
     assert comparison["bitwise_gate"] is False
+    reports = baseline_reports(path, [{
+        "report": {"name": "nf512_dt_0.0005"},
+        "cache": {"checkpoints": {"0.050": frame}},
+    }])
+    assert reports[0]["within_tolerance"] is False
+    assert reports[0]["missing_checkpoints"] == ["0.300"]
+    reports = baseline_reports(path, [{
+        "report": {"name": "nf512_dt_0.0005"},
+        "cache": {"checkpoints": {"0.050": frame, "0.300": frame}},
+    }])
+    assert reports[0]["within_tolerance"] is True
     cache_path = tmp_path / "reached.npz"
     record = write_raw(cache_path, [{
         "name": "nf512_dt_0.0005", "time": 0.3, "target_reached": True,
