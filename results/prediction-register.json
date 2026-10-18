@@ -15,13 +15,32 @@
       "status": "closed_conditional_perturbative_result",
       "model_id": "conformal-scalar-cap-wall-schwarzschild-iv",
       "parameters": {
-        "h": {"value": 1.0, "model_parameter": "H_ell", "role": "theory"},
-        "b": {"value": 2.0, "model_parameter": "k_ell", "role": "theory"},
-        "m": {"value": 0.4, "model_parameter": "M_over_ell", "role": "geometric_data"},
-        "xi": {"value": 0.16666666666666666, "model_parameter": "xi", "role": "theory"}
+        "h": {
+          "value": 1.0,
+          "model_parameter": "H_ell",
+          "role": "theory"
+        },
+        "b": {
+          "value": 2.0,
+          "model_parameter": "k_ell",
+          "role": "theory"
+        },
+        "m": {
+          "value": 0.4,
+          "model_parameter": "M_over_ell",
+          "role": "geometric_data"
+        },
+        "xi": {
+          "value": 0.16666666666666666,
+          "model_parameter": "xi",
+          "role": "theory"
+        }
       },
       "domain": {
-        "reference_radius_over_ell": [0.45, 0.55],
+        "reference_radius_over_ell": [
+          0.45,
+          0.55
+        ],
         "branch": "expanding_timelike",
         "source": "original_C3_compact_characteristic_preparation",
         "quiet_cap_and_bottom": true,
@@ -45,10 +64,22 @@
         "pointer": "/solutions/1/wall_samples/8"
       },
       "coefficients": {
-        "mu_plus": {"value": -28.88342232555452, "field_refinement_maximum_absolute_difference": 3.3761187623326805e-7},
-        "nu_minus": {"value": 17.759078420520662, "field_refinement_maximum_absolute_difference": 2.088306541025986e-7},
-        "rho": {"value": -5.2868390416906355, "field_refinement_maximum_absolute_difference": 3.6360701116677774e-8},
-        "eta": {"value": -0.8178125677354874, "field_refinement_maximum_absolute_difference": 3.5651870344821646e-9}
+        "mu_plus": {
+          "value": -28.88342232555452,
+          "field_refinement_maximum_absolute_difference": 3.3761187623326805e-07
+        },
+        "nu_minus": {
+          "value": 17.759078420520662,
+          "field_refinement_maximum_absolute_difference": 2.088306541025986e-07
+        },
+        "rho": {
+          "value": -5.2868390416906355,
+          "field_refinement_maximum_absolute_difference": 3.6360701116677774e-08
+        },
+        "eta": {
+          "value": -0.8178125677354874,
+          "field_refinement_maximum_absolute_difference": 3.5651870344821646e-09
+        }
       },
       "identities": {
         "delta_mean_K": {
@@ -67,7 +98,10 @@
       },
       "uncertainty": {
         "kind": "sampled_field_grid_sensitivity",
-        "field_nodes": [129, 257],
+        "field_nodes": [
+          129,
+          257
+        ],
         "sample_count": 9,
         "source_pointer": "/wall_differences/{coefficient}/maximum_absolute_difference",
         "scope": "maximum over nine common cuts; not an endpoint-specific or total error bound",
@@ -82,7 +116,7 @@
         "parameters_chosen_as_model_inputs": true,
         "data_refs": [],
         "physical_source_selected": false,
-        "SI_scale_selected": false,
+        "SI_scale_selected": true,
         "future_comparison_uncertainty": null
       },
       "rejection": {
@@ -95,14 +129,146 @@
         "physical_preparation_and_observational_identification",
         "formation_stability_and_multi_region_composition"
       ],
+      "finite_amplitude": {
+        "schema": "nsc-p001-finite-amplitude-v1",
+        "event": {
+          "kind": "fixed_incoming_label",
+          "affine_source_x": 0.4815042082576364,
+          "normalized_V": 1.0,
+          "reference_radius_over_ell": 0.55,
+          "distinct_from_perturbative_rho": true
+        },
+        "comparison_status": "completed_saved_receipt_comparison",
+        "prediction_status": "unconverged_numerical_estimate",
+        "requested_mass_and_flux_contraction": false,
+        "endpoint_radius_pair_difference_contracts": false,
+        "shared_alpha": 0.00012983127142551443,
+        "radial_accuracy": {
+          "adjoint_order": 32,
+          "atol": 1e-15,
+          "background_panel_sides": true,
+          "gradient_absolute_tolerance": 2e-08,
+          "rtol": 2.5e-14
+        },
+        "physical_observable": {
+          "circumference_metres": 34509.277118251885,
+          "definition": "R_J = sqrt(Area_J/(4*pi)) = circumference_J/(2*pi)",
+          "difference_from_quiet_reference_metres": -7.677964102174883,
+          "event": {
+            "affine_source_x": 0.4815042082576364,
+            "normalized_V": 1.0,
+            "reference_radius_over_ell": 0.55
+          },
+          "grid_values_metres": [
+            5492.322036563843,
+            5492.322058752734,
+            5492.322035897825
+          ],
+          "measurement_protocol": "A spherical array comoving with the material wall measures its intrinsic area or equatorial proper circumference on the cross-section selected by the normalized incoming null label. This is a local wall observable; the calculation does not supply its reception by a distant or central detector.",
+          "observable": "Jordan material-wall areal radius at the fixed incoming-label endpoint",
+          "observational_validation": false,
+          "quiet_reference_metres": 5500.0,
+          "resolution_half_width_metres": 2.2854908820590936e-05,
+          "resolution_range_metres": [
+            5492.322013042916,
+            5492.322058752734
+          ],
+          "scale": {
+            "ell_metres": 10000.0,
+            "fitted_to_output": false,
+            "measured_astrophysical_scale": false,
+            "role": "declared_fiducial_input"
+          },
+          "uncertainty": {
+            "confidence_level": null,
+            "coverage": "all three numerical endpoint values with the same input data",
+            "kind": "observed_three_grid_resolution_envelope",
+            "physical_scale_rule": "an independently measured relative ell error rescales R_J by the same relative amount",
+            "rigorous_error_enclosure": false,
+            "unresolved": [
+              "common source interpolation error",
+              "common radial quadrature and floating-point error",
+              "error beyond the tested grid family",
+              "physical preparation and model identification"
+            ]
+          },
+          "value_metres": 5492.322035897825
+        },
+        "limits": {
+          "empirical_confirmation": false,
+          "calibration": "none",
+          "physical_source_selected": false,
+          "physical_emitter_selected": false,
+          "observational_validation": false,
+          "rigorous_error_enclosure": false,
+          "historical_coefficients_predict_this_event": false,
+          "SI_scale_role": "declared_fiducial_input",
+          "measured_astrophysical_scale": false
+        },
+        "evidence": {
+          "comparison": {
+            "path": "results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json",
+            "bytes": 7077,
+            "sha256": "fed19ae5b870c16ad2b290f5b077d5d8a888e633773b97f7ff6335ed0f102b1b"
+          },
+          "endpoints": [
+            {
+              "level": 0,
+              "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json",
+              "bytes": 55579,
+              "sha256": "d001ca99e4800f716010682ad85e7963afe075d9f14a57f59ac115b7fbd1b4e3"
+            },
+            {
+              "level": 1,
+              "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v4.json",
+              "bytes": 56696,
+              "sha256": "9f38e1b73f227675db8e501453171fc60fd92f62a4c2a1e61f5c0521e2041761"
+            },
+            {
+              "level": 2,
+              "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v4.json",
+              "bytes": 56946,
+              "sha256": "1219cb676f6f9388c71111f63c56f36fa41f38ad3d0c837114f3fcdf22b7be48"
+            }
+          ]
+        }
+      },
       "evidence": {
-        "cap_wall_owner": {"path": "docs/nsc-atlas-cap-wall-response.md", "bytes": 11063, "sha256": "7f8f6fdbbee7f0fb53596b1352b0cda521eb027a381d398c79eda9bf60629856"},
-        "wall_owner": {"path": "docs/nsc-atlas-wall-evolution.md", "bytes": 6888, "sha256": "c4f8cdf4188becda0a81235c94e65116bfc4094589525f555ecf414fc6beaee4"},
-        "model": {"path": "results/development/nsc-atlas-cap-wall-response-v1/model-specification.json", "bytes": 8463, "sha256": "eae0428f83ab112f360593ce954a4bf963775fd98935deeaea4a8d70db09da69"},
-        "cap_wall": {"path": "results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json", "bytes": 3492, "sha256": "6e27679a3cedcbd6895273d66c43f28e223af1448c005384e99f8418c7072aad"},
-        "cap_wall_manifest": {"path": "results/development/nsc-atlas-cap-wall-response-v1/manifest.json", "bytes": 1622, "sha256": "abb1d36373e223b2f97ef86622ad83d53ff2828d5e5b073a16034cfe20269cfc"},
-        "wall_field": {"path": "results/development/nsc-atlas-wall-evolution-v1/field/response.json", "bytes": 21058, "sha256": "07ec4b40a491b537a85768ff82218d0e6e7726357aafd0555e45a9940dd7009c"},
-        "wall_field_manifest": {"path": "results/development/nsc-atlas-wall-evolution-v1/field/manifest.json", "bytes": 2919, "sha256": "ee033123d163061402c48b098bed9be73ef54df391fae18b7f444d1a481eb35d"}
+        "cap_wall_owner": {
+          "path": "docs/nsc-atlas-cap-wall-response.md",
+          "bytes": 11063,
+          "sha256": "7f8f6fdbbee7f0fb53596b1352b0cda521eb027a381d398c79eda9bf60629856"
+        },
+        "wall_owner": {
+          "path": "docs/nsc-atlas-wall-evolution.md",
+          "bytes": 6888,
+          "sha256": "c4f8cdf4188becda0a81235c94e65116bfc4094589525f555ecf414fc6beaee4"
+        },
+        "model": {
+          "path": "results/development/nsc-atlas-cap-wall-response-v1/model-specification.json",
+          "bytes": 8463,
+          "sha256": "eae0428f83ab112f360593ce954a4bf963775fd98935deeaea4a8d70db09da69"
+        },
+        "cap_wall": {
+          "path": "results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json",
+          "bytes": 3492,
+          "sha256": "6e27679a3cedcbd6895273d66c43f28e223af1448c005384e99f8418c7072aad"
+        },
+        "cap_wall_manifest": {
+          "path": "results/development/nsc-atlas-cap-wall-response-v1/manifest.json",
+          "bytes": 1622,
+          "sha256": "abb1d36373e223b2f97ef86622ad83d53ff2828d5e5b073a16034cfe20269cfc"
+        },
+        "wall_field": {
+          "path": "results/development/nsc-atlas-wall-evolution-v1/field/response.json",
+          "bytes": 21058,
+          "sha256": "07ec4b40a491b537a85768ff82218d0e6e7726357aafd0555e45a9940dd7009c"
+        },
+        "wall_field_manifest": {
+          "path": "results/development/nsc-atlas-wall-evolution-v1/field/manifest.json",
+          "bytes": 2919,
+          "sha256": "ee033123d163061402c48b098bed9be73ef54df391fae18b7f444d1a481eb35d"
+        }
       }
     }
   ]

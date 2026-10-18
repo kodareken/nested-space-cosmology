@@ -1,0 +1,215 @@
+{
+  "accumulated_transport_gaps": {
+    "mass_endpoint": {
+      "continuum_error_bound": false,
+      "reason": "coarse evolution completed but its auxiliary summary failed; no reconstruction from sparse samples",
+      "strictly_decreasing": null,
+      "unavailable_levels": [
+        0
+      ],
+      "values": [
+        null,
+        3.281557191635309e-05,
+        3.429088381501355e-05
+      ]
+    },
+    "mass_running_maximum": {
+      "continuum_error_bound": false,
+      "reason": "coarse evolution completed but its auxiliary summary failed; no reconstruction from sparse samples",
+      "strictly_decreasing": null,
+      "unavailable_levels": [
+        0
+      ],
+      "values": [
+        null,
+        3.290291032223558e-05,
+        3.47548968074457e-05
+      ]
+    },
+    "wall_scalar_endpoint": {
+      "continuum_error_bound": false,
+      "reason": "coarse evolution completed but its auxiliary summary failed; no reconstruction from sparse samples",
+      "strictly_decreasing": null,
+      "unavailable_levels": [
+        0
+      ],
+      "values": [
+        null,
+        0.006663588598542751,
+        0.006311782536447707
+      ]
+    },
+    "wall_scalar_running_maximum": {
+      "continuum_error_bound": false,
+      "reason": "coarse evolution completed but its auxiliary summary failed; no reconstruction from sparse samples",
+      "strictly_decreasing": null,
+      "unavailable_levels": [
+        0
+      ],
+      "values": [
+        null,
+        0.01050108254679976,
+        0.010551083413342039
+      ]
+    }
+  },
+  "all_endpoints_completed": true,
+  "analysis_source_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
+  "analysis_source_sha256": "a2079027fee2f894cc087fb016c333b8b0a821fc386a0ee6661b21d207c559c3",
+  "endpoint_radius_pair_difference_contracts": false,
+  "endpoint_radius_pair_differences": [
+    2.2188891835028812e-09,
+    2.285490907638632e-09
+  ],
+  "independent_observational_test": false,
+  "inputs": [
+    {
+      "bytes": 55579,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json",
+      "sha256": "d001ca99e4800f716010682ad85e7963afe075d9f14a57f59ac115b7fbd1b4e3"
+    },
+    {
+      "bytes": 56696,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v4.json",
+      "sha256": "9f38e1b73f227675db8e501453171fc60fd92f62a4c2a1e61f5c0521e2041761"
+    },
+    {
+      "bytes": 56946,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v4.json",
+      "sha256": "1219cb676f6f9388c71111f63c56f36fa41f38ad3d0c837114f3fcdf22b7be48"
+    }
+  ],
+  "numerical_method_note": "Nonuniform fixed cap and exterior meshes, with simultaneous time-step refinement; no asymptotic order or rigorous error bound inferred.",
+  "operator_revision_note": "All three successors use the confirmed tighter forward radial solve, the unchanged 32-point adjoint and gradient guard, and the same physical input. Earlier stopped or interrupted executions remain separate evidence.",
+  "physical_evolutions": 0,
+  "physical_observable": {
+    "circumference_metres": 34509.277118251885,
+    "definition": "R_J = sqrt(Area_J/(4*pi)) = circumference_J/(2*pi)",
+    "difference_from_quiet_reference_metres": -7.677964102174883,
+    "event": {
+      "affine_source_x": 0.4815042082576364,
+      "normalized_V": 1.0,
+      "reference_radius_over_ell": 0.55
+    },
+    "grid_values_metres": [
+      5492.322036563843,
+      5492.322058752734,
+      5492.322035897825
+    ],
+    "measurement_protocol": "A spherical array comoving with the material wall measures its intrinsic area or equatorial proper circumference on the cross-section selected by the normalized incoming null label. This is a local wall observable; the calculation does not supply its reception by a distant or central detector.",
+    "observable": "Jordan material-wall areal radius at the fixed incoming-label endpoint",
+    "observational_validation": false,
+    "quiet_reference_metres": 5500.0,
+    "resolution_half_width_metres": 2.2854908820590936e-05,
+    "resolution_range_metres": [
+      5492.322013042916,
+      5492.322058752734
+    ],
+    "scale": {
+      "ell_metres": 10000.0,
+      "fitted_to_output": false,
+      "measured_astrophysical_scale": false,
+      "role": "declared_fiducial_input"
+    },
+    "uncertainty": {
+      "confidence_level": null,
+      "coverage": "all three numerical endpoint values with the same input data",
+      "kind": "observed_three_grid_resolution_envelope",
+      "physical_scale_rule": "an independently measured relative ell error rescales R_J by the same relative amount",
+      "rigorous_error_enclosure": false,
+      "unresolved": [
+        "common source interpolation error",
+        "common radial quadrature and floating-point error",
+        "error beyond the tested grid family",
+        "physical preparation and model identification"
+      ]
+    },
+    "value_metres": 5492.322035897825
+  },
+  "prediction_status": "unconverged_numerical_estimate",
+  "radial_accuracy": {
+    "adjoint_order": 32,
+    "atol": 1e-15,
+    "background_panel_sides": true,
+    "gradient_absolute_tolerance": 2e-08,
+    "rtol": 2.5e-14
+  },
+  "requested_mass_and_flux_contraction": false,
+  "residual_maxima": {
+    "mass_matched": {
+      "continuum_error_bound": false,
+      "fine_over_coarse": [
+        1.0004519427039473,
+        0.9842209984807679
+      ],
+      "strictly_decreasing": false,
+      "values": [
+        0.0014913147832141275,
+        0.0014919887720496899,
+        0.0014684466789488407
+      ]
+    },
+    "mass_trace": {
+      "continuum_error_bound": false,
+      "fine_over_coarse": [
+        1.0213266612536651,
+        1.0119165584491503
+      ],
+      "strictly_decreasing": false,
+      "values": [
+        0.0023283253412652548,
+        0.0023779807471067432,
+        0.002406318093670595
+      ]
+    },
+    "wall_flux": {
+      "continuum_error_bound": false,
+      "fine_over_coarse": [
+        0.9794800256497521,
+        0.9761436245155423
+      ],
+      "strictly_decreasing": true,
+      "values": [
+        2.240453033467581,
+        2.1944789946878913,
+        2.1421266797978618
+      ]
+    }
+  },
+  "sample_cuts": [
+    0.4,
+    0.41018802603220456,
+    0.4203760520644091,
+    0.4305640780966137,
+    0.4407521041288182,
+    0.45094013016102275,
+    0.46112815619322733,
+    0.47131618222543187,
+    0.4815042082576364
+  ],
+  "schema": "nsc-atlas-fixed-endpoint-comparison-v1",
+  "shared_alpha": 0.00012983127142551443,
+  "source_commits": [
+    "ae2675980de38f547efa6b4fb1afbd2d12eee62e",
+    "ae2675980de38f547efa6b4fb1afbd2d12eee62e",
+    "ae2675980de38f547efa6b4fb1afbd2d12eee62e"
+  ],
+  "status": "completed_saved_receipt_comparison",
+  "summary_coverage": [
+    {
+      "level": 0,
+      "original_receipt_status": "stopped",
+      "status": "evolution_complete_auxiliary_summary_incomplete"
+    },
+    {
+      "level": 1,
+      "original_receipt_status": "completed_numerical_endpoint",
+      "status": "complete"
+    },
+    {
+      "level": 2,
+      "original_receipt_status": "completed_numerical_endpoint",
+      "status": "complete"
+    }
+  ]
+}

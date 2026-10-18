@@ -1,0 +1,1859 @@
+{
+  "closure_classification": null,
+  "comparison": {
+    "bytes": 7077,
+    "path": "results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json",
+    "sha256": "fed19ae5b870c16ad2b290f5b077d5d8a888e633773b97f7ff6335ed0f102b1b"
+  },
+  "comparison_provenance": {
+    "analysis_source_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
+    "analysis_source_sha256": "a2079027fee2f894cc087fb016c333b8b0a821fc386a0ee6661b21d207c559c3"
+  },
+  "diagnostic_sha256": "3199e75b13cbb5e37afa1e55c88b7fda9ec06ad6e3c4ee20f406950d46a25648",
+  "dominance_classification": null,
+  "endpoint_comparison": {
+    "difference_from_quiet_reference_metres": -7.677964102174883,
+    "endpoint_radius_pair_difference_contracts": false,
+    "endpoint_radius_pair_differences": [
+      2.2188891835028812e-09,
+      2.285490907638632e-09
+    ],
+    "jordan_radius_metres": 5492.322035897825,
+    "prediction_status": "unconverged_numerical_estimate",
+    "requested_mass_and_flux_contraction": false,
+    "resolution_half_width_metres": 2.2854908820590936e-05,
+    "resolution_range_metres": [
+      5492.322013042916,
+      5492.322058752734
+    ],
+    "sample_cuts": [
+      0.4,
+      0.41018802603220456,
+      0.4203760520644091,
+      0.4305640780966137,
+      0.4407521041288182,
+      0.45094013016102275,
+      0.46112815619322733,
+      0.47131618222543187,
+      0.4815042082576364
+    ],
+    "shared_alpha": 0.00012983127142551443,
+    "status": "completed_saved_receipt_comparison"
+  },
+  "inputs": [
+    {
+      "bytes": 55579,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json",
+      "sha256": "d001ca99e4800f716010682ad85e7963afe075d9f14a57f59ac115b7fbd1b4e3"
+    },
+    {
+      "bytes": 56696,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v4.json",
+      "sha256": "9f38e1b73f227675db8e501453171fc60fd92f62a4c2a1e61f5c0521e2041761"
+    },
+    {
+      "bytes": 56946,
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v4.json",
+      "sha256": "1219cb676f6f9388c71111f63c56f36fa41f38ad3d0c837114f3fcdf22b7be48"
+    }
+  ],
+  "levels": [
+    {
+      "alpha": 0.00012983127142551443,
+      "cap_cells": 2,
+      "cuts": [
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 1.840737096727098,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 1.840737096727098,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.4
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 1.9504956608106285,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 1.9504956608106285,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.41018802603220456
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 2.0732339353386213,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.0732339353386213,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.4203760520644091
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 1.8414436642189003e-13,
+              "balance_minus_remainder_and_scaled_identity": 1.101371776636744e-18,
+              "reconstruction_identity_defect": 4.8382521947165635e-18,
+              "stored_minus_recomputed_identity": 8.470329472543003e-22,
+              "stored_minus_recomputed_physical_actual": 8.470329472543003e-22
+            },
+            "balance_minus_remainder": -1.8414436642189003e-13,
+            "balance_minus_remainder_and_scaled_identity": 1.101371776636744e-18,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 5.466348504320933e-06,
+                "exact_zero_denominator": false,
+                "numerator": -4.581659533104484e-06,
+                "ratio": -0.83815723228822
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 5.466348504320933e-06,
+                "exact_zero_denominator": false,
+                "numerator": 1.0048008037420579e-05,
+                "ratio": 1.838157232287335
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -0.03528933732835722,
+                "exact_zero_denominator": false,
+                "numerator": -0.035289337328173076,
+                "ratio": 0.9999999999947818
+              }
+            },
+            "stored_identity_defect": 4.837405161769309e-18,
+            "stored_minus_recomputed_identity": -8.470329472543003e-22,
+            "stored_minus_recomputed_physical_actual": 8.470329472543003e-22,
+            "stored_reconstructed_physical_actual": 5.466348504316095e-06
+          },
+          "clock_rate": 2.2105527594897114,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.2105527594897114,
+            "exact_zero_denominator": false,
+            "numerator": -4.0706327197881365e-13,
+            "ratio": -1.8414546779366666e-13
+          },
+          "explicit_time_remainder": -0.035289337328173076,
+          "flux": -0.021178077378991134,
+          "h_trace_minus_weak": -0.014775594117370616,
+          "mass_actual": 5.466348504320933e-06,
+          "mass_matched": -4.508503627622299e-06,
+          "normalized_balance_term": -0.03528933732835722,
+          "normalized_trace_term": 0.07739281859521208,
+          "p_trace_minus_weak": 1.5419855476039857e-05,
+          "physical_balance_term": -4.581659533104484e-06,
+          "physical_trace_term": 1.0048008037420579e-05,
+          "reconstruction_identity_defect": 4.8382521947165635e-18,
+          "role": "common_cut",
+          "wall_time_projection_gap": 6.235858863731982,
+          "x": 0.4305640780966137
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 6.8971495181813225e-12,
+              "balance_minus_remainder_and_scaled_identity": 1.571565839887586e-16,
+              "reconstruction_identity_defect": 7.589415207398531e-19,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": -6.8971495181813225e-12,
+            "balance_minus_remainder_and_scaled_identity": 1.571565839887586e-16,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.00037057775806181577,
+                "exact_zero_denominator": false,
+                "numerator": -0.0001910594324155962,
+                "ratio": 0.515571774773719
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.00037057775806181577,
+                "exact_zero_denominator": false,
+                "numerator": -0.00017951832564621882,
+                "ratio": 0.48442822522627904
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -1.4715979464562898,
+                "exact_zero_denominator": false,
+                "numerator": -1.4715979464493927,
+                "ratio": 0.9999999999953132
+              }
+            },
+            "stored_identity_defect": -7.589415207398531e-19,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": -0.000370577758061815
+          },
+          "clock_rate": 2.355364527167087,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.355364527167087,
+            "exact_zero_denominator": false,
+            "numerator": -1.624567147473499e-11,
+            "ratio": -6.897306674765311e-12
+          },
+          "explicit_time_remainder": -1.4715979464493927,
+          "flux": 0.4124605804006052,
+          "h_trace_minus_weak": 0.276963945266548,
+          "mass_actual": -0.00037057775806181577,
+          "mass_matched": -0.00020130325399310664,
+          "normalized_balance_term": -1.4715979464562898,
+          "normalized_trace_term": -1.3827048266196051,
+          "p_trace_minus_weak": -2.6235405140795365e-05,
+          "physical_balance_term": -0.0001910594324155962,
+          "physical_trace_term": -0.00017951832564621882,
+          "reconstruction_identity_defect": -7.589415207398531e-19,
+          "role": "common_cut",
+          "wall_time_projection_gap": -14.127257803106536,
+          "x": 0.4407521041288182
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 4.72349936941896e-12,
+              "balance_minus_remainder_and_scaled_identity": 1.596060764898255e-17,
+              "reconstruction_identity_defect": 2.6020852139652106e-18,
+              "stored_minus_recomputed_identity": 5.421010862427522e-20,
+              "stored_minus_recomputed_physical_actual": 5.421010862427522e-20
+            },
+            "balance_minus_remainder": -4.72349936941896e-12,
+            "balance_minus_remainder_and_scaled_identity": 1.596060764898255e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.0004487427040282309,
+                "exact_zero_denominator": false,
+                "numerator": -5.089527279299546e-05,
+                "ratio": 0.11341749366869613
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.0004487427040282309,
+                "exact_zero_denominator": false,
+                "numerator": -0.00039784743123523806,
+                "ratio": 0.8865825063313096
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -0.3920108940949147,
+                "exact_zero_denominator": false,
+                "numerator": -0.3920108940901912,
+                "ratio": 0.9999999999879506
+              }
+            },
+            "stored_identity_defect": 2.5478751053409354e-18,
+            "stored_minus_recomputed_identity": -5.421010862427522e-20,
+            "stored_minus_recomputed_physical_actual": 5.421010862427522e-20,
+            "stored_reconstructed_physical_actual": -0.00044874270402823346
+          },
+          "clock_rate": 2.524864839395191,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.524864839395191,
+            "exact_zero_denominator": false,
+            "numerator": -1.1926237775128357e-11,
+            "ratio": -4.723515330026609e-12
+          },
+          "explicit_time_remainder": -0.3920108940901912,
+          "flux": -0.5528882607377739,
+          "h_trace_minus_weak": -0.35563605317157965,
+          "mass_actual": -0.0004487427040282309,
+          "mass_matched": -4.7958610602247594e-05,
+          "normalized_balance_term": -0.3920108940949147,
+          "normalized_trace_term": -3.0643421023839186,
+          "p_trace_minus_weak": -0.0017107246319518765,
+          "physical_balance_term": -5.089527279299546e-05,
+          "physical_trace_term": -0.00039784743123523806,
+          "reconstruction_identity_defect": 2.6020852139652106e-18,
+          "role": "common_cut",
+          "wall_time_projection_gap": 1.2755492287232286,
+          "x": 0.45094013016102275
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 4.078071214053125e-12,
+              "balance_minus_remainder_and_scaled_identity": 2.0606659460441982e-17,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 4.078071214053125e-12,
+            "balance_minus_remainder_and_scaled_identity": 2.0606659460441982e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 6.36734569566098e-05,
+                "exact_zero_denominator": false,
+                "numerator": 6.196679160894907e-05,
+                "ratio": 0.973196596678837
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 6.36734569566098e-05,
+                "exact_zero_denominator": false,
+                "numerator": 1.7066653476607269e-06,
+                "ratio": 0.02680340332116304
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.4772871044746725,
+                "exact_zero_denominator": false,
+                "numerator": 0.4772871044705944,
+                "ratio": 0.9999999999914557
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 6.36734569566098e-05
+          },
+          "clock_rate": 2.717589687661132,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.717589687661132,
+            "exact_zero_denominator": false,
+            "numerator": 1.1082468276413238e-11,
+            "ratio": 4.0780506073936646e-12
+          },
+          "explicit_time_remainder": 0.4772871044705944,
+          "flux": 0.16886525717040568,
+          "h_trace_minus_weak": 0.10492808817919186,
+          "mass_actual": 6.36734569566098e-05,
+          "mass_matched": 6.003945007410044e-05,
+          "normalized_balance_term": 0.4772871044746725,
+          "normalized_trace_term": 0.013145256369455327,
+          "p_trace_minus_weak": 0.006668470360913503,
+          "physical_balance_term": 6.196679160894907e-05,
+          "physical_trace_term": 1.7066653476607269e-06,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 19.229168575441186,
+          "x": 0.46112815619322733
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 1.9317880628477724e-13,
+              "balance_minus_remainder_and_scaled_identity": 8.064707743870272e-17,
+              "reconstruction_identity_defect": 2.710505431213761e-20,
+              "stored_minus_recomputed_identity": 2.710505431213761e-20,
+              "stored_minus_recomputed_physical_actual": 2.710505431213761e-20
+            },
+            "balance_minus_remainder": 1.9317880628477724e-13,
+            "balance_minus_remainder_and_scaled_identity": 8.064707743870272e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.0001772596707997276,
+                "exact_zero_denominator": false,
+                "numerator": -0.00017516151230832566,
+                "ratio": 0.9881633623602264
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.0001772596707997276,
+                "exact_zero_denominator": false,
+                "numerator": -2.0981584914019578e-06,
+                "ratio": 0.01183663763977374
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -1.3491473231764326,
+                "exact_zero_denominator": false,
+                "numerator": -1.3491473231766258,
+                "ratio": 1.0000000000001432
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": -2.710505431213761e-20,
+            "stored_minus_recomputed_physical_actual": 2.710505431213761e-20,
+            "stored_reconstructed_physical_actual": -0.0001772596707997276
+          },
+          "clock_rate": 2.948357298509885,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.948357298509885,
+            "exact_zero_denominator": false,
+            "numerator": 5.693223670277803e-13,
+            "ratio": 1.9309815920733854e-13
+          },
+          "explicit_time_remainder": -1.3491473231766258,
+          "flux": 0.9979766932091783,
+          "h_trace_minus_weak": 0.578243389621728,
+          "mass_actual": -0.0001772596707997276,
+          "mass_matched": -0.000174450699671463,
+          "normalized_balance_term": -1.3491473231764326,
+          "normalized_trace_term": -0.016160655814001588,
+          "p_trace_minus_weak": -0.003949490230559946,
+          "physical_balance_term": -0.00017516151230832566,
+          "physical_trace_term": -2.0981584914019578e-06,
+          "reconstruction_identity_defect": 2.710505431213761e-20,
+          "role": "common_cut",
+          "wall_time_projection_gap": -5.512508336388982,
+          "x": 0.47131618222543187
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 2.65898414397725e-14,
+              "balance_minus_remainder_and_scaled_identity": 2.8092099413914652e-18,
+              "reconstruction_identity_defect": 3.3881317890172014e-21,
+              "stored_minus_recomputed_identity": 1.6940658945086007e-21,
+              "stored_minus_recomputed_physical_actual": 1.6940658945086007e-21
+            },
+            "balance_minus_remainder": 2.65898414397725e-14,
+            "balance_minus_remainder_and_scaled_identity": 2.8092099413914652e-18,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -1.0127188765524775e-05,
+                "exact_zero_denominator": false,
+                "numerator": -1.0110820147579768e-05,
+                "ratio": 0.9983836957793529
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -1.0127188765524775e-05,
+                "exact_zero_denominator": false,
+                "numerator": -1.636861794500306e-08,
+                "ratio": 0.001616304220646653
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -0.07787661660065043,
+                "exact_zero_denominator": false,
+                "numerator": -0.07787661660067702,
+                "ratio": 1.0000000000003415
+              }
+            },
+            "stored_identity_defect": -5.082197683525802e-21,
+            "stored_minus_recomputed_identity": -1.6940658945086007e-21,
+            "stored_minus_recomputed_physical_actual": 1.6940658945086007e-21,
+            "stored_reconstructed_physical_actual": -1.012718876552477e-05
+          },
+          "clock_rate": 3.2174589216237512,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 3.2174589216237512,
+            "exact_zero_denominator": false,
+            "numerator": 8.554268404736831e-14,
+            "ratio": 2.6587032229831108e-14
+          },
+          "explicit_time_remainder": -0.07787661660067702,
+          "flux": -0.00965372324790048,
+          "h_trace_minus_weak": -0.0063964959818111344,
+          "mass_actual": -1.0127188765524775e-05,
+          "mass_matched": -1.0127423815723928e-05,
+          "normalized_balance_term": -0.07787661660065043,
+          "normalized_trace_term": -0.0001260760814038081,
+          "p_trace_minus_weak": -0.004857206149870341,
+          "physical_balance_term": -1.0110820147579768e-05,
+          "physical_trace_term": -1.636861794500306e-08,
+          "reconstruction_identity_defect": -3.3881317890172014e-21,
+          "role": "common_cut",
+          "wall_time_projection_gap": -8.79331351358895,
+          "x": 0.4815042082576364
+        }
+      ],
+      "endpoint_already_a_common_cut": true,
+      "endpoint_minus_saved_cut": {
+        "clock_rate": 0.0,
+        "explicit_time_remainder": 0.0,
+        "flux": 0.0,
+        "h_trace_minus_weak": 0.0,
+        "mass_actual": 0.0,
+        "mass_matched": 0.0,
+        "normalized_balance_term": 0.0,
+        "normalized_trace_term": 0.0,
+        "p_trace_minus_weak": 0.0,
+        "physical_balance_term": 0.0,
+        "physical_trace_term": 0.0,
+        "reconstruction_identity_defect": 0.0,
+        "wall_time_projection_gap": 0.0
+      },
+      "endpoint_station": 0.4815042082576364,
+      "envelope_coverage": {
+        "conformal_wall_flux": {
+          "all_stage_envelope": 2.240453033467581,
+          "connection_envelope": 2.240453033467581,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 2.240453033467581,
+            "exact_zero_denominator": false,
+            "numerator": 0.9979766932091783,
+            "ratio": 0.44543522149384024
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 0.9979766932091783
+        },
+        "physical_mass_actual": {
+          "all_stage_envelope": 0.0023283253412652548,
+          "connection_envelope": 0.0023283253412652548,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 0.0023283253412652548,
+            "exact_zero_denominator": false,
+            "numerator": 0.0004487427040282309,
+            "ratio": 0.1927319589213318
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 0.0004487427040282309
+        },
+        "physical_mass_matched": {
+          "all_stage_envelope": 0.0014913147832141275,
+          "connection_envelope": 0.0014913147832141275,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 0.0014913147832141275,
+            "exact_zero_denominator": false,
+            "numerator": 0.00020130325399310664,
+            "ratio": 0.13498374471904023
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 0.00020130325399310664
+        }
+      },
+      "exterior_cells": 32,
+      "level": 0,
+      "source_commit": "ae2675980de38f547efa6b4fb1afbd2d12eee62e"
+    },
+    {
+      "alpha": 0.00012983127142551443,
+      "cap_cells": 4,
+      "cuts": [
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 1.8407370967270973,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 1.8407370967270973,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.4
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 1.9504956608106285,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 1.9504956608106285,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.41018802603220456
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 2.0732339353386213,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.0732339353386213,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.4203760520644091
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 3.2056302057270614e-13,
+              "balance_minus_remainder_and_scaled_identity": 2.7742405587713497e-18,
+              "reconstruction_identity_defect": 5.147419220464383e-18,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 3.2056302057270614e-13,
+            "balance_minus_remainder_and_scaled_identity": -2.7742405587713497e-18,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 5.757141837788577e-06,
+                "exact_zero_denominator": false,
+                "numerator": -4.117658522045354e-06,
+                "ratio": -0.7152261726501117
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 5.757141837788577e-06,
+                "exact_zero_denominator": false,
+                "numerator": 9.874800359839078e-06,
+                "ratio": 1.7152261726510059
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -0.03171546020334322,
+                "exact_zero_denominator": false,
+                "numerator": -0.03171546020366378,
+                "ratio": 1.0000000000101075
+              }
+            },
+            "stored_identity_defect": -5.147419220464383e-18,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 5.7571418377937244e-06
+          },
+          "clock_rate": 2.210552755497228,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.210552755497228,
+            "exact_zero_denominator": false,
+            "numerator": 7.086276010426218e-13,
+            "ratio": 3.205657948132649e-13
+          },
+          "explicit_time_remainder": -0.03171546020366378,
+          "flux": -0.02081258363409688,
+          "h_trace_minus_weak": -0.014520613343567135,
+          "mass_actual": 5.757141837788577e-06,
+          "mass_matched": -4.0456782782294835e-06,
+          "normalized_balance_term": -0.03171546020334322,
+          "normalized_trace_term": 0.07605872030225289,
+          "p_trace_minus_weak": 1.5053235575379631e-05,
+          "physical_balance_term": -4.117658522045354e-06,
+          "physical_trace_term": 9.874800359839078e-06,
+          "reconstruction_identity_defect": -5.147419220464383e-18,
+          "role": "common_cut",
+          "wall_time_projection_gap": 5.695195574882964,
+          "x": 0.4305640780966137
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 1.0961009877519245e-11,
+              "balance_minus_remainder_and_scaled_identity": 1.9014547169496328e-17,
+              "reconstruction_identity_defect": 5.9631119486702744e-18,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": -1.0961009877519245e-11,
+            "balance_minus_remainder_and_scaled_identity": -1.9014547169496328e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.0003795850626677112,
+                "exact_zero_denominator": false,
+                "numerator": -0.00019569128784965395,
+                "ratio": 0.5155400122289905
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.0003795850626677112,
+                "exact_zero_denominator": false,
+                "numerator": -0.0001838937748180513,
+                "ratio": 0.48445998777099386
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -1.507273907903799,
+                "exact_zero_denominator": false,
+                "numerator": -1.5072739078928379,
+                "ratio": 0.9999999999927279
+              }
+            },
+            "stored_identity_defect": -5.9631119486702744e-18,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": -0.0003795850626677052
+          },
+          "clock_rate": 2.3553642674630484,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.3553642674630484,
+            "exact_zero_denominator": false,
+            "numerator": -2.581712621463339e-11,
+            "ratio": -1.0960990862972076e-11
+          },
+          "explicit_time_remainder": -1.5072739078928379,
+          "flux": 0.42265225106767446,
+          "h_trace_minus_weak": 0.2837949633718342,
+          "mass_actual": -0.0003795850626677112,
+          "mass_matched": -0.000206159473719153,
+          "normalized_balance_term": -1.507273907903799,
+          "normalized_trace_term": -1.4164058689323789,
+          "p_trace_minus_weak": -9.265594695051504e-05,
+          "physical_balance_term": -0.00019569128784965395,
+          "physical_trace_term": -0.0001838937748180513,
+          "reconstruction_identity_defect": -5.9631119486702744e-18,
+          "role": "common_cut",
+          "wall_time_projection_gap": -14.145768817085356,
+          "x": 0.4407521041288182
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 1.141309269314661e-13,
+              "balance_minus_remainder_and_scaled_identity": 1.9457531297793903e-17,
+              "reconstruction_identity_defect": 2.168404344971009e-19,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 1.141309269314661e-13,
+            "balance_minus_remainder_and_scaled_identity": -1.9457531297793903e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.0005965572979612792,
+                "exact_zero_denominator": false,
+                "numerator": -0.00012570346574398202,
+                "ratio": 0.21071482349402265
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.0005965572979612792,
+                "exact_zero_denominator": false,
+                "numerator": -0.00047085383221729695,
+                "ratio": 0.789285176505977
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -0.9682063832833943,
+                "exact_zero_denominator": false,
+                "numerator": -0.9682063832835084,
+                "ratio": 1.000000000000118
+              }
+            },
+            "stored_identity_defect": -2.168404344971009e-19,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": -0.000596557297961279
+          },
+          "clock_rate": 2.5248613795664148,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.5248613795664148,
+            "exact_zero_denominator": false,
+            "numerator": 2.8821389719269064e-13,
+            "ratio": 1.1415038446276389e-13
+          },
+          "explicit_time_remainder": -0.9682063832835084,
+          "flux": -0.655411821700099,
+          "h_trace_minus_weak": -0.42142974680039913,
+          "mass_actual": -0.0005965572979612792,
+          "mass_matched": -0.0001222414591744071,
+          "normalized_balance_term": -0.9682063832833943,
+          "normalized_trace_term": -3.6266596409897347,
+          "p_trace_minus_weak": -0.0012725937471884663,
+          "physical_balance_term": -0.00012570346574398202,
+          "physical_trace_term": -0.00047085383221729695,
+          "reconstruction_identity_defect": -2.168404344971009e-19,
+          "role": "common_cut",
+          "wall_time_projection_gap": 4.585842544268402,
+          "x": 0.45094013016102275
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 7.612799279854698e-13,
+              "balance_minus_remainder_and_scaled_identity": 1.0191527711023522e-16,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 2.710505431213761e-20,
+              "stored_minus_recomputed_physical_actual": 2.710505431213761e-20
+            },
+            "balance_minus_remainder": 7.612799279854698e-13,
+            "balance_minus_remainder_and_scaled_identity": 1.0191527711023522e-16,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.00013179313318586154,
+                "exact_zero_denominator": false,
+                "numerator": 0.00012916967648331627,
+                "ratio": 0.9800941320755647
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.00013179313318586154,
+                "exact_zero_denominator": false,
+                "numerator": 2.623456702545256e-06,
+                "ratio": 0.01990586792443519
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.9949041942289095,
+                "exact_zero_denominator": false,
+                "numerator": 0.9949041942281482,
+                "ratio": 0.9999999999992348
+              }
+            },
+            "stored_identity_defect": 2.710505431213761e-20,
+            "stored_minus_recomputed_identity": 2.710505431213761e-20,
+            "stored_minus_recomputed_physical_actual": -2.710505431213761e-20,
+            "stored_reconstructed_physical_actual": 0.0001317931331858615
+          },
+          "clock_rate": 2.7175870886251543,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.7175870886251543,
+            "exact_zero_denominator": false,
+            "numerator": 2.0685675394815917e-12,
+            "ratio": 7.611780127083596e-13
+          },
+          "explicit_time_remainder": 0.9949041942281482,
+          "flux": 0.384392428365373,
+          "h_trace_minus_weak": 0.23692098302886588,
+          "mass_actual": 0.00013179313318586154,
+          "mass_matched": 0.00012414846879635688,
+          "normalized_balance_term": 0.9949041942289095,
+          "normalized_trace_term": 0.020206662645604306,
+          "p_trace_minus_weak": 0.006109896908461254,
+          "physical_balance_term": 0.00012916967648331627,
+          "physical_trace_term": 2.623456702545256e-06,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 17.27017158659359,
+          "x": 0.46112815619322733
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 1.5987211554602254e-14,
+              "balance_minus_remainder_and_scaled_identity": 2.124264309354313e-17,
+              "reconstruction_identity_defect": 2.710505431213761e-20,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": -1.5987211554602254e-14,
+            "balance_minus_remainder_and_scaled_identity": -2.124264309354313e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.00023692810162807864,
+                "exact_zero_denominator": false,
+                "numerator": -0.00023651411696816774,
+                "ratio": 0.9982526992067798
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.00023692810162807864,
+                "exact_zero_denominator": false,
+                "numerator": -4.1398465991087225e-07,
+                "ratio": 0.0017473007932200914
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -1.8217037726835972,
+                "exact_zero_denominator": false,
+                "numerator": -1.8217037726835812,
+                "ratio": 0.9999999999999912
+              }
+            },
+            "stored_identity_defect": -2.710505431213761e-20,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": -0.0002369281016280786
+          },
+          "clock_rate": 2.948362013292835,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.948362013292835,
+            "exact_zero_denominator": false,
+            "numerator": -4.707345624410664e-14,
+            "ratio": -1.596596891150871e-14
+          },
+          "explicit_time_remainder": -1.8217037726835812,
+          "flux": 1.0253371436929521,
+          "h_trace_minus_weak": 0.5939246121103664,
+          "mass_actual": -0.00023692810162807864,
+          "mass_matched": -0.00023400063404925987,
+          "normalized_balance_term": -1.8217037726835972,
+          "normalized_trace_term": -0.003188635953152316,
+          "p_trace_minus_weak": -0.004832530533688491,
+          "physical_balance_term": -0.00023651411696816774,
+          "physical_trace_term": -4.1398465991087225e-07,
+          "reconstruction_identity_defect": -2.710505431213761e-20,
+          "role": "common_cut",
+          "wall_time_projection_gap": -8.571999670165809,
+          "x": 0.47131618222543187
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 1.8965384818159237e-13,
+              "balance_minus_remainder_and_scaled_identity": 8.131613700721734e-18,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 1.8965384818159237e-13,
+            "balance_minus_remainder_and_scaled_identity": 8.131613700721734e-18,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 3.060234442063366e-05,
+                "exact_zero_denominator": false,
+                "numerator": 3.243179662942002e-05,
+                "ratio": 1.059781439736782
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 3.060234442063366e-05,
+                "exact_zero_denominator": false,
+                "numerator": -1.829452208786362e-06,
+                "ratio": -0.059781439736782134
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.2497995765837238,
+                "exact_zero_denominator": false,
+                "numerator": 0.24979957658353413,
+                "ratio": 0.9999999999992408
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 3.060234442063366e-05
+          },
+          "clock_rate": 3.2174656268365913,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 3.2174656268365913,
+            "exact_zero_denominator": false,
+            "numerator": 6.10178574333986e-13,
+            "ratio": 1.8964571656789164e-13
+          },
+          "explicit_time_remainder": 0.24979957658353413,
+          "flux": -0.2590464198499465,
+          "h_trace_minus_weak": -0.14259089112970974,
+          "mass_actual": 3.060234442063366e-05,
+          "mass_matched": 3.0752770798852906e-05,
+          "normalized_balance_term": 0.2497995765837238,
+          "normalized_trace_term": -0.014090998175550781,
+          "p_trace_minus_weak": -0.004146979400473816,
+          "physical_balance_term": 3.243179662942002e-05,
+          "physical_trace_term": -1.829452208786362e-06,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": -8.890455351011806,
+          "x": 0.4815042082576364
+        }
+      ],
+      "endpoint_already_a_common_cut": true,
+      "endpoint_minus_saved_cut": {
+        "clock_rate": 0.0,
+        "explicit_time_remainder": 0.0,
+        "flux": 0.0,
+        "h_trace_minus_weak": 0.0,
+        "mass_actual": 0.0,
+        "mass_matched": 0.0,
+        "normalized_balance_term": 0.0,
+        "normalized_trace_term": 0.0,
+        "p_trace_minus_weak": 0.0,
+        "physical_balance_term": 0.0,
+        "physical_trace_term": 0.0,
+        "reconstruction_identity_defect": 0.0,
+        "wall_time_projection_gap": 0.0
+      },
+      "endpoint_station": 0.4815042082576364,
+      "envelope_coverage": {
+        "conformal_wall_flux": {
+          "all_stage_envelope": 2.1944789946878913,
+          "connection_envelope": 2.1944789946878913,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 2.1944789946878913,
+            "exact_zero_denominator": false,
+            "numerator": 1.0253371436929521,
+            "ratio": 0.46723488635569294
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 1.0253371436929521
+        },
+        "physical_mass_actual": {
+          "all_stage_envelope": 0.0023779807471067432,
+          "connection_envelope": 0.0023779807471067432,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 0.0023779807471067432,
+            "exact_zero_denominator": false,
+            "numerator": 0.0005965572979612792,
+            "ratio": 0.25086716899920336
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 0.0005965572979612792
+        },
+        "physical_mass_matched": {
+          "all_stage_envelope": 0.0014919887720496899,
+          "connection_envelope": 0.0014919887720496899,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 0.0014919887720496899,
+            "exact_zero_denominator": false,
+            "numerator": 0.00023400063404925987,
+            "ratio": 0.1568380663668068
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 0.00023400063404925987
+        }
+      },
+      "exterior_cells": 64,
+      "level": 1,
+      "source_commit": "ae2675980de38f547efa6b4fb1afbd2d12eee62e"
+    },
+    {
+      "alpha": 0.00012983127142551443,
+      "cap_cells": 8,
+      "cuts": [
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 1.840737096727098,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 1.840737096727098,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.4
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 1.9504956608106285,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 1.9504956608106285,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.41018802603220456
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 0.0,
+              "balance_minus_remainder_and_scaled_identity": 0.0,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 0.0,
+            "balance_minus_remainder_and_scaled_identity": 0.0,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.0,
+                "exact_zero_denominator": true,
+                "numerator": 0.0,
+                "ratio": null
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 0.0
+          },
+          "clock_rate": 2.0732339353386213,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.0732339353386213,
+            "exact_zero_denominator": false,
+            "numerator": 0.0,
+            "ratio": 0.0
+          },
+          "explicit_time_remainder": 0.0,
+          "flux": 0.0,
+          "h_trace_minus_weak": 0.0,
+          "mass_actual": 0.0,
+          "mass_matched": 0.0,
+          "normalized_balance_term": 0.0,
+          "normalized_trace_term": 0.0,
+          "p_trace_minus_weak": 0.0,
+          "physical_balance_term": 0.0,
+          "physical_trace_term": 0.0,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 0.0,
+          "x": 0.4203760520644091
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 6.770903282493634e-13,
+              "balance_minus_remainder_and_scaled_identity": 1.6545010387234418e-18,
+              "reconstruction_identity_defect": 3.189926079359695e-18,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": -6.770903282493634e-13,
+            "balance_minus_remainder_and_scaled_identity": -1.6545010387234418e-18,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 6.034682808337434e-06,
+                "exact_zero_denominator": false,
+                "numerator": -3.654282359738835e-06,
+                "ratio": -0.6055467165051541
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 6.034682808337434e-06,
+                "exact_zero_denominator": false,
+                "numerator": 9.688965168079459e-06,
+                "ratio": 1.6055467165056827
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -0.028146395853754967,
+                "exact_zero_denominator": false,
+                "numerator": -0.028146395853077877,
+                "ratio": 0.999999999975944
+              }
+            },
+            "stored_identity_defect": -3.189926079359695e-18,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 6.034682808340624e-06
+          },
+          "clock_rate": 2.210552752963111,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.210552752963111,
+            "exact_zero_denominator": false,
+            "numerator": -1.4967402317545009e-12,
+            "ratio": -6.770886737483247e-13
+          },
+          "explicit_time_remainder": -0.028146395853077877,
+          "flux": -0.020420465608140148,
+          "h_trace_minus_weak": -0.014247057653708595,
+          "mass_actual": 6.034682808337434e-06,
+          "mass_matched": -3.583568483264555e-06,
+          "normalized_balance_term": -0.028146395853754967,
+          "normalized_trace_term": 0.07462736104866785,
+          "p_trace_minus_weak": 1.466491027102279e-05,
+          "physical_balance_term": -3.654282359738835e-06,
+          "physical_trace_term": 9.688965168079459e-06,
+          "reconstruction_identity_defect": -3.189926079359695e-18,
+          "role": "common_cut",
+          "wall_time_projection_gap": 5.143717366528255,
+          "x": 0.4305640780966137
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 2.5346391652192324e-12,
+              "balance_minus_remainder_and_scaled_identity": 4.532140908326026e-17,
+              "reconstruction_identity_defect": 3.415236843329339e-18,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": -2.5346391652192324e-12,
+            "balance_minus_remainder_and_scaled_identity": -4.532140908326026e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.0003853161136143564,
+                "exact_zero_denominator": false,
+                "numerator": -0.00019687937678971934,
+                "ratio": 0.5109554722301752
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.0003853161136143564,
+                "exact_zero_denominator": false,
+                "numerator": -0.0001884367368246405,
+                "ratio": 0.48904452776983365
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -1.5164249308200846,
+                "exact_zero_denominator": false,
+                "numerator": -1.51642493081755,
+                "ratio": 0.9999999999983286
+              }
+            },
+            "stored_identity_defect": 3.415236843329339e-18,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": -0.0003853161136143598
+          },
+          "clock_rate": 2.3553640606339132,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.3553640606339132,
+            "exact_zero_denominator": false,
+            "numerator": -5.969891248014392e-12,
+            "ratio": -2.534593843810149e-12
+          },
+          "explicit_time_remainder": -1.51642493081755,
+          "flux": 0.4332451166389717,
+          "h_trace_minus_weak": 0.2908959837250311,
+          "mass_actual": -0.0003853161136143564,
+          "mass_matched": -0.00020757109319132804,
+          "normalized_balance_term": -1.5164249308200846,
+          "normalized_trace_term": -1.4513971461239878,
+          "p_trace_minus_weak": -0.00015589689433426202,
+          "physical_balance_term": -0.00019687937678971934,
+          "physical_trace_term": -0.0001884367368246405,
+          "reconstruction_identity_defect": 3.415236843329339e-18,
+          "role": "common_cut",
+          "wall_time_projection_gap": -13.902579691105975,
+          "x": 0.4407521041288182
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 3.312905505481467e-13,
+              "balance_minus_remainder_and_scaled_identity": 8.024081692389897e-17,
+              "reconstruction_identity_defect": 1.6154612370034016e-17,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 3.312905505481467e-13,
+            "balance_minus_remainder_and_scaled_identity": -8.024081692389897e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.0007620291372472317,
+                "exact_zero_denominator": false,
+                "numerator": -0.00021143059005183985,
+                "ratio": 0.2774573565725002
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.0007620291372472317,
+                "exact_zero_denominator": false,
+                "numerator": -0.0005505985471953757,
+                "ratio": 0.7225426434274786
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -1.6285028077626107,
+                "exact_zero_denominator": false,
+                "numerator": -1.628502807762942,
+                "ratio": 1.0000000000002034
+              }
+            },
+            "stored_identity_defect": -1.6154612370034016e-17,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": -0.0007620291372472156
+          },
+          "clock_rate": 2.5248576312683113,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.5248576312683113,
+            "exact_zero_denominator": false,
+            "numerator": 8.36664071357518e-13,
+            "ratio": 3.313707913650706e-13
+          },
+          "explicit_time_remainder": -1.628502807762942,
+          "flux": -0.7672995028845975,
+          "h_trace_minus_weak": -0.4932409498526624,
+          "mass_actual": -0.0007620291372472317,
+          "mass_matched": -0.00020732922795315,
+          "normalized_balance_term": -1.6285028077626107,
+          "normalized_trace_term": -4.240877726528773,
+          "p_trace_minus_weak": -0.0008345841588770497,
+          "physical_balance_term": -0.00021143059005183985,
+          "physical_trace_term": -0.0005505985471953757,
+          "reconstruction_identity_defect": -1.6154612370034016e-17,
+          "role": "common_cut",
+          "wall_time_projection_gap": 7.723551433244804,
+          "x": 0.45094013016102275
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 3.312905505481467e-13,
+              "balance_minus_remainder_and_scaled_identity": 1.1175558683413717e-16,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 2.710505431213761e-20,
+              "stored_minus_recomputed_physical_actual": 2.710505431213761e-20
+            },
+            "balance_minus_remainder": 3.312905505481467e-13,
+            "balance_minus_remainder_and_scaled_identity": -1.1175558683413717e-16,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 0.00018873576537193273,
+                "exact_zero_denominator": false,
+                "numerator": 0.00018599294893820818,
+                "ratio": 0.9854674262277772
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 0.00018873576537193273,
+                "exact_zero_denominator": false,
+                "numerator": 2.7428164337245444e-06,
+                "ratio": 0.014532573772222793
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 1.4325743474284183,
+                "exact_zero_denominator": false,
+                "numerator": 1.432574347428087,
+                "ratio": 0.9999999999997687
+              }
+            },
+            "stored_identity_defect": 2.710505431213761e-20,
+            "stored_minus_recomputed_identity": 2.710505431213761e-20,
+            "stored_minus_recomputed_physical_actual": -2.710505431213761e-20,
+            "stored_reconstructed_physical_actual": 0.0001887357653719327
+          },
+          "clock_rate": 2.7175819265696526,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.7175819265696526,
+            "exact_zero_denominator": false,
+            "numerator": 9.00612917575927e-13,
+            "ratio": 3.3140230613498085e-13
+          },
+          "explicit_time_remainder": 1.432574347428087,
+          "flux": 0.6497553490868975,
+          "h_trace_minus_weak": 0.3994345510445594,
+          "mass_actual": 0.00018873576537193273,
+          "mass_matched": 0.00017655014829198094,
+          "normalized_balance_term": 1.4325743474284183,
+          "normalized_trace_term": 0.021126007652926108,
+          "p_trace_minus_weak": 0.005423427908212042,
+          "physical_balance_term": 0.00018599294893820818,
+          "physical_trace_term": 2.7428164337245444e-06,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": 14.510282024733309,
+          "x": 0.46112815619322733
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 1.6564527527407336e-13,
+              "balance_minus_remainder_and_scaled_identity": 3.8898112547254194e-17,
+              "reconstruction_identity_defect": 0.0,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": 1.6564527527407336e-13,
+            "balance_minus_remainder_and_scaled_identity": -3.8898112547254194e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": -0.0002904204036020682,
+                "exact_zero_denominator": false,
+                "numerator": -0.00029253317811091424,
+                "ratio": 1.0072748831784593
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": -0.0002904204036020682,
+                "exact_zero_denominator": false,
+                "numerator": 2.112774508846006e-06,
+                "ratio": -0.00727488317845916
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": -2.253179645388774,
+                "exact_zero_denominator": false,
+                "numerator": -2.2531796453889394,
+                "ratio": 1.0000000000000735
+              }
+            },
+            "stored_identity_defect": 0.0,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": -0.0002904204036020682
+          },
+          "clock_rate": 2.9483693031751956,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 2.9483693031751956,
+            "exact_zero_denominator": false,
+            "numerator": 4.884981308350689e-13,
+            "ratio": 1.656841733866206e-13
+          },
+          "explicit_time_remainder": -2.2531796453889394,
+          "flux": 0.991604029983172,
+          "h_trace_minus_weak": 0.5741902747316856,
+          "mass_actual": -0.0002904204036020682,
+          "mass_matched": -0.00028771415553037596,
+          "normalized_balance_term": -2.253179645388774,
+          "normalized_trace_term": 0.01627323283249311,
+          "p_trace_minus_weak": -0.005550546766520795,
+          "physical_balance_term": -0.00029253317811091424,
+          "physical_trace_term": 2.112774508846006e-06,
+          "reconstruction_identity_defect": 0.0,
+          "role": "common_cut",
+          "wall_time_projection_gap": -11.420932009124778,
+          "x": 0.47131618222543187
+        },
+        {
+          "algebra_residuals": {
+            "absolute_scales": {
+              "balance_minus_remainder": 5.057065877167588e-13,
+              "balance_minus_remainder_and_scaled_identity": 1.3982129868133117e-17,
+              "reconstruction_identity_defect": 1.3552527156068805e-20,
+              "stored_minus_recomputed_identity": 0.0,
+              "stored_minus_recomputed_physical_actual": 0.0
+            },
+            "balance_minus_remainder": -5.057065877167588e-13,
+            "balance_minus_remainder_and_scaled_identity": 1.3982129868133117e-17,
+            "ratios": {
+              "physical_balance_over_mass_actual": {
+                "denominator": 6.321469399785844e-05,
+                "exact_zero_denominator": false,
+                "numerator": 6.751570307032132e-05,
+                "ratio": 1.0680381221588857
+              },
+              "physical_trace_over_mass_actual": {
+                "denominator": 6.321469399785844e-05,
+                "exact_zero_denominator": false,
+                "numerator": -4.301009072462859e-06,
+                "ratio": -0.06803812215888551
+              },
+              "remainder_over_normalized_balance": {
+                "denominator": 0.5200265107860073,
+                "exact_zero_denominator": false,
+                "numerator": 0.520026510786513,
+                "ratio": 1.0000000000009726
+              }
+            },
+            "stored_identity_defect": -1.3552527156068805e-20,
+            "stored_minus_recomputed_identity": 0.0,
+            "stored_minus_recomputed_physical_actual": 0.0,
+            "stored_reconstructed_physical_actual": 6.321469399785846e-05
+          },
+          "clock_rate": 3.2174741584747153,
+          "clock_scaled_remainder_identity_defect": {
+            "denominator": 3.2174741584747153,
+            "exact_zero_denominator": false,
+            "numerator": -1.6271428648906294e-12,
+            "ratio": -5.057205698466269e-13
+          },
+          "explicit_time_remainder": 0.520026510786513,
+          "flux": -0.546650001108445,
+          "h_trace_minus_weak": -0.29958999733287606,
+          "mass_actual": 6.321469399785844e-05,
+          "mass_matched": 6.388532472907761e-05,
+          "normalized_balance_term": 0.5200265107860073,
+          "normalized_trace_term": -0.03312768199247278,
+          "p_trace_minus_weak": -0.0030566509657665164,
+          "physical_balance_term": 6.751570307032132e-05,
+          "physical_trace_term": -4.301009072462859e-06,
+          "reconstruction_identity_defect": -1.3552527156068805e-20,
+          "role": "common_cut",
+          "wall_time_projection_gap": -8.025003507536912,
+          "x": 0.4815042082576364
+        }
+      ],
+      "endpoint_already_a_common_cut": true,
+      "endpoint_minus_saved_cut": {
+        "clock_rate": 0.0,
+        "explicit_time_remainder": 0.0,
+        "flux": 0.0,
+        "h_trace_minus_weak": 0.0,
+        "mass_actual": 0.0,
+        "mass_matched": 0.0,
+        "normalized_balance_term": 0.0,
+        "normalized_trace_term": 0.0,
+        "p_trace_minus_weak": 0.0,
+        "physical_balance_term": 0.0,
+        "physical_trace_term": 0.0,
+        "reconstruction_identity_defect": 0.0,
+        "wall_time_projection_gap": 0.0
+      },
+      "endpoint_station": 0.4815042082576364,
+      "envelope_coverage": {
+        "conformal_wall_flux": {
+          "all_stage_envelope": 2.1421266797978618,
+          "connection_envelope": 2.1421266797978618,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 2.1421266797978618,
+            "exact_zero_denominator": false,
+            "numerator": 0.991604029983172,
+            "ratio": 0.4629063441181467
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 0.991604029983172
+        },
+        "physical_mass_actual": {
+          "all_stage_envelope": 0.002406318093670595,
+          "connection_envelope": 0.002406318093670595,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 0.002406318093670595,
+            "exact_zero_denominator": false,
+            "numerator": 0.0007620291372472317,
+            "ratio": 0.3166784720821483
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 0.0007620291372472317
+        },
+        "physical_mass_matched": {
+          "all_stage_envelope": 0.0014684466789488407,
+          "connection_envelope": 0.0014684466789488407,
+          "connection_minus_temporal_envelope": 0.0,
+          "sample_over_envelope": {
+            "denominator": 0.0014684466789488407,
+            "exact_zero_denominator": false,
+            "numerator": 0.00028771415553037596,
+            "ratio": 0.1959309518383947
+          },
+          "saved_sample_absolute_equals_envelope": false,
+          "saved_sample_absolute_maximum": 0.00028771415553037596
+        }
+      },
+      "exterior_cells": 128,
+      "level": 2,
+      "source_commit": "ae2675980de38f547efa6b4fb1afbd2d12eee62e"
+    }
+  ],
+  "not_inferred": [
+    "No maximum state is stored. The all-stage envelope is an absolute maximum over stage calls.",
+    "The nine common cuts are saved samples. They are not every substage.",
+    "A sample whose absolute value equals the envelope is still not a stored maximum state.",
+    "The sample-to-envelope ratio describes coverage; exact equality is not a tolerance verdict or identification of the maximizing substage.",
+    "Identity residuals are scales and ratios. An exact-zero denominator is reported and is not divided.",
+    "No numeric tolerance classifies closure, term dominance, or pass/fail.",
+    "Agreement of the mass-rate identities does not establish the physical mass or lapse closure."
+  ],
+  "physical_evolutions": 0,
+  "replays": 0,
+  "schema": "nsc-atlas-endpoint-gap-decomposition-v1",
+  "status": "completed_saved_receipt_gap_decomposition",
+  "units": {
+    "clock_scaled_remainder_identity_defect": "normalized remainder_identity_defect/clock_rate",
+    "convention": "Dimensionless evolution variables; physical mass normalization includes alpha. Only the radius comparison is converted to SI.",
+    "envelopes": "absolute maxima",
+    "explicit_time_remainder": "normalized background time-projection remainder",
+    "flux": "conformal wall flux, not multiplied by alpha",
+    "h_trace_minus_weak": "strong minus weak normal trace",
+    "mass_actual": "physical: alpha*(temporal - A^2*exp(lapse)*p*h/2)",
+    "mass_matched": "physical: alpha*(temporal - A^2*exp(lapse)*R^2*Pi*Phi/2)",
+    "normalized_balance_term": "normalized weak_balance/clock_rate",
+    "normalized_trace_term": "normalized strong/weak product gap",
+    "p_trace_minus_weak": "strong minus weak momentum trace",
+    "physical_balance_term": "physical: alpha*normalized_balance_term",
+    "physical_trace_term": "physical: alpha*normalized_trace_term",
+    "reconstruction_identity_defect": "physical mass_actual - alpha*(trace + balance)",
+    "wall_time_projection_gap": "k_0(Z)-e\u00b7a_h, not multiplied by alpha"
+  }
+}

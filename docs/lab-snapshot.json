@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "62faff8017398248658bcf4d4d6c561163f3ad65",
+  "current_receipt_commit_parent": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
   "files": [
     {
       "bytes": 3120,
@@ -10331,6 +10331,14 @@
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
       "sha256": "f568c75e589904163a8ec42a330cb7d9c15fcd993a5bc655aa850ee0eab21497"
+    },
+    {
+      "bytes": 336399,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
+      "path": "docs/figures/nsc-atlas-fixed-endpoint-comparison.png",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "a5076d876f0a1019b99e790992fd14f4eee59e678821b29029cf6821262bbd33"
     },
     {
       "bytes": 126083,
@@ -29572,10 +29580,12 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 5916,
+      "bytes": 11087,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
       "path": "results/prediction-register.json",
       "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
-      "sha256": "a4cbddf67fcc30ea29e2f52c38f0bf4e1da53979acfe7e94f0454cbf3d34db13"
+      "sha256": "5eacda744076048d0e73e65b6f87dcc7e02f64170fb9922b4072a7e7cf4c66f5"
     },
     {
       "bytes": 11412,
@@ -29735,6 +29745,22 @@
       "sha256": "ee5de983da1bf3803a16750e43b509f48707b4c5f50d0ea56526d76ee61b2e15"
     },
     {
+      "bytes": 7077,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "fed19ae5b870c16ad2b290f5b077d5d8a888e633773b97f7ff6335ed0f102b1b"
+    },
+    {
+      "bytes": 80267,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-gap-diagnostic-v1.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "e1c65bb9b3dc289899206abd39fdf09dc2277b3cec9132a83a3ee303e86133cc"
+    },
+    {
       "bytes": 30591,
       "change": "Record the frozen-state radial error attribution and separate the physical mass gap into trace and background projection terms.",
       "changed_from_commit": "ffef0abbbd35204b2437b88a5d0c10bf9f8d2f61",
@@ -29845,6 +29871,14 @@
       "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v4-cpu-amendment.json",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
       "sha256": "d6a8eea3312aa66f866c34be2a5c02b372ba6f6d0d01788ef39e208eed4f1a29"
+    },
+    {
+      "bytes": 56946,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v4.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "1219cb676f6f9388c71111f63c56f36fa41f38ad3d0c837114f3fcdf22b7be48"
     },
     {
       "bytes": 14211,
@@ -32884,12 +32918,12 @@
       "sha256": "406737b966caf39cdde4dbde9818255f9dcc7976992c1e31de65fd2bc5199568"
     },
     {
-      "bytes": 19769,
-      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "7b73dc1e24d407327083525829c9e5b6f2886656",
+      "bytes": 19848,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
       "path": "scripts/plot_nsc_atlas_fixed_endpoint.py",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "e46c9d8d3e18003910c0bc7c541263e9a76be759e03649ed1637147ca2efe634"
+      "sha256": "3603f69db3af16d26d0578a80746d97dac5f74aef0f902e2a977f64329274da1"
     },
     {
       "bytes": 5347,

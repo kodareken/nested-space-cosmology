@@ -223,7 +223,7 @@ def draw_values(ax, values, labels, scale, color):
 
 def add_increase_inset(ax, index, values, short_meshes, labels):
     left, right = values[index], values[index + 1]
-    anchor = (0.52, 0.34, 0.45, 0.5) if index else (0.04, 0.34, 0.45, 0.5)
+    anchor = (0.54, 0.13, 0.38, 0.4) if index else (0.08, 0.13, 0.38, 0.4)
     inset = ax.inset_axes(anchor)
     inset.plot((0, 1), (left, right), "--", color=INCREASE, lw=1.8)
     inset.plot((0, 1), (left, right), "o", color=INCREASE, ms=5)
@@ -234,13 +234,14 @@ def add_increase_inset(ax, index, values, short_meshes, labels):
     inset.set_xlim(-0.4, 1.4)
     inset.set_xticks((0, 1), (short_meshes[index], short_meshes[index + 1]))
     inset.tick_params(labelsize=6.5, colors=INCREASE)
-    inset.set_title("increases", fontsize=8, color=INCREASE, fontweight="bold", pad=2)
+    inset.set_title(f"increases by {right-left:.3g}", fontsize=7.5,
+                    color=INCREASE, fontweight="bold", pad=3)
     for x, value, label in ((0, left, labels[index]), (1, right, labels[index + 1])):
         inset.annotate(label, (x, value), textcoords="offset points", xytext=(0, 4),
                        ha="center", fontsize=6.5, color=INCREASE)
-    formatter = ScalarFormatter(useMathText=True)
-    formatter.set_powerlimits((-2, 3))
-    inset.yaxis.set_major_formatter(formatter)
+    # Absolute endpoint labels carry the scale; a second scientific offset
+    # collided with the parent axis and obscured the small increase.
+    inset.set_yticks([])
     inset.grid(alpha=.15, linewidth=.5)
     for spine in inset.spines.values():
         spine.set_color(INCREASE)
@@ -349,7 +350,7 @@ def draw_radius(ax, observable, ticks, contracts, paired):
         lines.append("dotted line: quiet reference " + compact_real(quiet) + " m")
     else:
         lines.append("quiet reference " + compact_real(quiet) + " m is outside this window")
-    ax.text(0.03, 0.97, "\n".join(lines), transform=ax.transAxes, ha="left", va="top",
+    ax.text(0.03, 0.03, "\n".join(lines), transform=ax.transAxes, ha="left", va="bottom",
             fontsize=7.4, color=INK if contracts else INCREASE, zorder=5,
             bbox=dict(boxstyle="round,pad=0.28", fc="white", ec="#e1e6ec", lw=0.6, alpha=0.94))
 
