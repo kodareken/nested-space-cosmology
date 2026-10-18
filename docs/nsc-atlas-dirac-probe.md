@@ -1650,3 +1650,45 @@ than 12 KiB. No new field resolution, source choice or P001 grid is
 admitted. A clock shift comparable to the small mass-difference signal
 identifies an integration precision floor; if it does not, the source
 derivative remains unexplained and this branch stops for a new diagnosis.
+
+The frozen `eaaceb9`
+[diagnosis](../results/summaries/nsc-atlas-dirac-source-precision-v1.json)
+settles this precision question in 41.4375 charged CPU seconds. At b=0,
+direct wall-mass gaps fall from (-1.176e-6,+9.460e-7) to
+(-1.622e-8,+1.246e-8); at b=5e-5 they fall from
+(+1.604e-6,-7.204e-7) to (-1.029e-8,+1.013e-8).
+Tightening the ray alone adds no change after tightening the wall.
+The same-field one-sided clock derivative moves from .07300170 to
+-.002188022. The original subtraction was dominated by its wall ODE
+precision floor, rather than by the ray or a different mass source.
+
+One v2 reference is therefore admitted with the *same* b values,
+64/128 fields, 8/12 quadrature, physical data, receiver and acceptance
+criteria, changing only wall tolerances to relative 2e-11 and absolute
+2e-13. The same 480-process-CPU-second and 32-KiB limits apply; the
+per-setup and clock limits remain 30 CPU seconds. The original ray
+tolerance is retained because the diagnosis found no ray shift.
+Another failed check stops v2 for diagnosis; no additional field grid,
+mass choice, P001 evolution or tolerance ladder is admitted.
+
+For clarity, a cap scalar-potential map can be stated without identifying
+it with the local tidal ratio. On the b=0 de Sitter background, use
+`eta=-(exp(-u)+exp(-v))/2`, `chi=(exp(-u)-exp(-v))/2` and `a=-1/eta`.
+Pulling the radar perturbation into this fixed background chart gives
+
+```text
+phi=q/2, shift=0
+E_chichi-E_chi/chi=q/2-s/r
+psi=E_chi/chi-s/r
+Phi=phi-Hcal*E_eta-E_etaeta
+Psi=psi+Hcal*E_eta.
+```
+
+The scalar decomposition permits `E -> E+F(eta)*chi^2/2+G(eta)`.
+If E and E_chi are anchored to zero on a moving wall, then E_eta=0
+there but `E_etaeta=chi_wall_prime^2*E_chichi`. Proper wall clocks give
+q=0, hence `Phi_wall=chi_wall_prime^2*s/r` and `Psi_wall=-s/r`.
+They generally differ even for a vacuum mass perturbation with A=B.
+This explicit boundary convention is distinct from discarding the
+radial zero modes; a full potential ratio must state which one it uses.
+No numerical full-Psi/Phi result is inferred from this unevaluated map.

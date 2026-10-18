@@ -1,0 +1,146 @@
+{
+  "limits": {
+    "charged_CPU_seconds": 120,
+    "summary_bytes": 12288
+  },
+  "one_sided_mass_derivatives": {
+    "original": 0.07300169814428159,
+    "tight_wall_and_ray": -0.0021880221368064667,
+    "tight_wall_only": -0.0021880221368064667
+  },
+  "rows": [
+    {
+      "cells": 128,
+      "central_mass": 0.0,
+      "pid": 8892,
+      "process_CPU_total": 18.1875,
+      "variants": [
+        {
+          "clock": 0.2792514530846111,
+          "direct_wall_mass_gaps": [
+            -1.1757858713323799e-06,
+            9.4600849243065e-07
+          ],
+          "normalized_bulk_mass_path_gap": 4.1940135938610913e-07,
+          "ray_rhs": 62,
+          "variant": "original",
+          "wall_cap_mass": 2.9011765409580033,
+          "wall_displacement": -0.3433262440649122,
+          "wall_exterior_mass": -4.789585852162079,
+          "wall_rhs": 1730
+        },
+        {
+          "clock": 0.2792536925082434,
+          "direct_wall_mass_gaps": [
+            -1.6223998144937468e-08,
+            1.245589231757549e-08
+          ],
+          "normalized_bulk_mass_path_gap": 2.3722557608104585e-08,
+          "ray_rhs": 62,
+          "variant": "tight_wall_only",
+          "wall_cap_mass": 2.901175607405403,
+          "wall_displacement": -0.3433262382141632,
+          "wall_exterior_mass": -4.789584692600206,
+          "wall_rhs": 8153
+        },
+        {
+          "clock": 0.2792536925082434,
+          "direct_wall_mass_gaps": [
+            -1.6223998144937468e-08,
+            1.245589231757549e-08
+          ],
+          "normalized_bulk_mass_path_gap": 2.3722557608104585e-08,
+          "ray_rhs": 62,
+          "variant": "tight_wall_and_ray",
+          "wall_cap_mass": 2.901175607405403,
+          "wall_displacement": -0.3433262382141632,
+          "wall_exterior_mass": -4.789584692600206,
+          "wall_rhs": 8153
+        }
+      ]
+    },
+    {
+      "cells": 128,
+      "central_mass": 5e-05,
+      "pid": 17588,
+      "process_CPU_total": 18.359375,
+      "variants": [
+        {
+          "clock": 0.2792551031695183,
+          "direct_wall_mass_gaps": [
+            1.604026585333429e-06,
+            -7.203857768089961e-07
+          ],
+          "normalized_bulk_mass_path_gap": 2.2448746611751961e-07,
+          "ray_rhs": 62,
+          "variant": "original",
+          "wall_cap_mass": 2.900461792103928,
+          "wall_displacement": -0.34332735299465317,
+          "wall_exterior_mass": -4.7903143388026885,
+          "wall_rhs": 1649
+        },
+        {
+          "clock": 0.27925358310713655,
+          "direct_wall_mass_gaps": [
+            -1.0293212504564053e-08,
+            1.012890038509795e-08
+          ],
+          "normalized_bulk_mass_path_gap": 2.265051403831703e-08,
+          "ray_rhs": 62,
+          "variant": "tight_wall_only",
+          "wall_cap_mass": 2.9004625226186054,
+          "wall_displacement": -0.3433273893751008,
+          "wall_exterior_mass": -4.790315953122486,
+          "wall_rhs": 8345
+        },
+        {
+          "clock": 0.27925358310713655,
+          "direct_wall_mass_gaps": [
+            -1.0293212504564053e-08,
+            1.012890038509795e-08
+          ],
+          "normalized_bulk_mass_path_gap": 2.265051403831703e-08,
+          "ray_rhs": 62,
+          "variant": "tight_wall_and_ray",
+          "wall_cap_mass": 2.9004625226186054,
+          "wall_displacement": -0.3433273893751008,
+          "wall_exterior_mass": -4.790315953122486,
+          "wall_rhs": 8345
+        }
+      ]
+    }
+  ],
+  "runtime": {
+    "charged_CPU_seconds": 41.4375,
+    "new_P001_grids": 0,
+    "new_field_resolutions": 0,
+    "per_worker_threads": 1,
+    "process_workers": 2,
+    "wall_seconds": 18.730838100018445
+  },
+  "schema": "nsc-atlas-dirac-source-precision-v1",
+  "scope": "Two existing N=128 fields reused across original/tight wall and ray tolerances; direct wall-mass quadrature diagnoses the failed source derivative. No new source or grids.",
+  "source_commit": "eaaceb98a4122db01c4b409bf6f00626ff571949",
+  "source_sha256": {
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/diagnose_nsc_atlas_dirac_source_precision.py": "2d33b49826da03a33e1f440b575241b9a39ab043dc89aac87def4e04535d0145",
+    "scripts/measure_nsc_atlas_dirac_mass_response.py": "2424963428ac89c83d3208eca099ef7e9857b4c1c334b4f60137ee248dbf50ed",
+    "scripts/measure_nsc_atlas_dirac_mean_clock.py": "d6445cec1bf4fda3e2a00d7652ad619802f047c035cca6fb61c655c9aa620988",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_backreaction.py": "a2530b38026b08b6007a32eed3d708397fd3b791f89233ae932f39d701e1fa36",
+    "src/recursive_horizons/nsc_atlas_dirac_compact_source.py": "a2ffccaf8f476eff828ccefffa59b939f74bacc182f68679f43069f2f2ca86b7",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "e54190b116d396b30d6125e700ad3225b16514ffc22c9381d5475a9651ff3786",
+    "src/recursive_horizons/nsc_atlas_dirac_gravity.py": "c217c1e499bc1841caa947e0809acf5490339369cf1edba0e3d8c7f04b06fadb",
+    "src/recursive_horizons/nsc_atlas_dirac_mean.py": "edc710307e6932fd672d4a4e5794e8883e8c1ff823ec7eccba842125c304c2a8",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "src/recursive_horizons/nsc_atlas_dirac_scattering.py": "0472fc3005c33668020e724a949db0579b4ea7ed9fcb4cb5802e7c0f05a83520",
+    "src/recursive_horizons/nsc_atlas_dirac_stress.py": "cd0030b647187b201e7a72a8cb0dab22db74b5c172a609cd9e857047c3db4f07",
+    "src/recursive_horizons/nsc_atlas_dirac_tidal.py": "77d9e74976bb58ee1e091e27c67712d54c62bde9bde3d960a8a115bd254544d5",
+    "tests/test_nsc_atlas_dirac_backreaction.py": "cebb6b6ae0b82b8b4837aa4c39552a89b7a6c29e945e081e0921fa82bc2b635d",
+    "tests/test_nsc_atlas_dirac_compact_source.py": "4cf593939298b810bda3172c6d592ff529e85471d2a5fb8adc02e1107e5be68d",
+    "tests/test_nsc_atlas_dirac_mean.py": "aa27e72efcbe2757227afb9fde5bb583a559091d68159ddc94cc97c53ca28880",
+    "tests/test_nsc_atlas_dirac_tidal.py": "845e9b399a6d66ed61499c5163fd1b00ae14c58dc7473b3264f6e01c732d89e8"
+  },
+  "status": "same_field_precision_diagnosis_evaluated"
+}

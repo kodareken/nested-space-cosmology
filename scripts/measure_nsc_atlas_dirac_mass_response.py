@@ -34,6 +34,7 @@ SOURCES=tuple(dict.fromkeys((*MEAN_SOURCES,
     'scripts/measure_nsc_atlas_dirac_mass_response.py')))
 MASSES=(0.,5e-5,1e-4)
 CPU_LIMIT=480
+DIAGNOSIS='results/summaries/nsc-atlas-dirac-source-precision-v1.json'
 
 
 def prepare(cells,mass):
@@ -47,9 +48,11 @@ def prepare(cells,mass):
                 raise RuntimeError('compact-source setup exhausted 30 CPU seconds')
             return value
         nested_source=PreparedDiracSource(chart,cells)
-        nested=MeanBackreaction(nested_source,U,wall_cpu_limit=remaining())
+        nested=MeanBackreaction(nested_source,U,wall_rtol=2e-11,wall_atol=2e-13,
+            wall_cpu_limit=remaining())
         cap_source=PreparedDiracSource(chart,cells,region='cap')
-        cap=MeanBackreaction(cap_source,U,shared_worldtube=nested,wall_cpu_limit=remaining())
+        cap=MeanBackreaction(cap_source,U,shared_worldtube=nested,
+            wall_rtol=2e-11,wall_atol=2e-13,wall_cpu_limit=remaining())
         metadata=dict(cells=cells,central_mass=mass,parent_mass=chart.parent_mass,
             duration=chart.duration,wall_end_radius=chart.wall_end_radius,
             receiver_U=U,receiver_V=V,
@@ -143,6 +146,10 @@ def main():
         if subprocess.check_output(['git','show',f'{commit}:{name}'],cwd=ROOT)!=raw:
             raise ValueError('freeze the mass-response method before execution: '+name)
         hashes[name]=hashlib.sha256(raw).hexdigest()
+    diagnosis_raw=(ROOT/DIAGNOSIS).read_bytes()
+    if subprocess.check_output(['git','show',f'{commit}:{DIAGNOSIS}'],cwd=ROOT)!=diagnosis_raw:
+        raise ValueError('freeze the prior precision diagnosis before execution')
+    diagnosis_hash=hashlib.sha256(diagnosis_raw).hexdigest()
     started=time.perf_counter()
     workers=min(8,os.cpu_count() or 1)
     totals,metadata,rows={},[],[]
@@ -170,7 +177,7 @@ def main():
     except Exception as error:
         if hasattr(pool,'terminate_workers'):
             pool.terminate_workers()
-        failure=dict(schema='nsc-atlas-dirac-mass-response-v1',status='execution_exit_recorded',
+        failure=dict(schema='nsc-atlas-dirac-mass-response-v2',status='execution_exit_recorded',
             source_commit=commit,source_sha256=hashes,error=str(error),results=rows,metadata=metadata,
             completed_worker_CPU_seconds=sum(totals.values()),new_P001_grids=0)
         args.output.write_text(json.dumps(failure,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')
@@ -186,7 +193,7 @@ def main():
         tidal_ratio_grid_spread=quantum*s['tidal_ratio_grid_spread'],
         clock_derivative_per_m=quantum*s['levels'][128]['extrapolated_clock_mass_derivative']/ell)
         for g,s in summary.items()}
-    record=dict(schema='nsc-atlas-dirac-mass-response-v1',
+    record=dict(schema='nsc-atlas-dirac-mass-response-v2',
         status='unresolved_prepared_mass_response' if issues else 'prepared_parametric_mass_response_evaluated',
         source_commit=commit,source_sha256=hashes,validation_issues=issues,
         model=dict(H_ell=1.,k_wall_ell=2.,initial_wall_radius=.45,
@@ -198,6 +205,9 @@ def main():
         observer=dict(U_over_duration=.8,V_over_duration=.7,phase='-V, emitted toward cap at the earlier wall time V',
             frame='fixed proper-wall radar position',
             cap_control='smooth SdS continuation with same classical and mean nested areal-worldtube motion; no membrane'),
+        precision=dict(wall_rtol=2e-11,wall_atol=2e-13,ray_rtol=2e-8,ray_atol=2e-10,
+            diagnosis=DIAGNOSIS,diagnosis_sha256=diagnosis_hash,
+            reason='same-field wall mass/clock error floor; source, field grids, ray method and acceptance unchanged'),
         metadata=metadata,results=rows,comparison=summary,nesting_difference=delta,
         physical_scale=dict(ell_m=ell,central_mass_length_m=1.,
             scale_origin='supplied nominal scale, not calibrated to data',
