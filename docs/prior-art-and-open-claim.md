@@ -1,5 +1,41 @@
 # Prior art and admission of new research
 
+## Timelike boundary response of the owned auxiliary action
+
+The closed photon calculation now needs the common action's exterior metric
+response. Reuse `F R_h + Z (grad r)^2 + V` and the curvature identity in
+`nsc_spherical_feedback_action.py`. The missing connection is a timelike
+Dirichlet variation, not an Einstein-only energy or another interior trace.
+
+Use a finite rectangle, positive `L,Q,r`, nonzero `A,C_W`, `beta=0`, and
+fixed-coordinate timelike faces. Vary `L` independently of `Q`. Variations
+vanish near time caps, preserving orthogonality; moving faces and corner
+variations remain outside scope. Matter boundary variations are fixed.
+Other Euler/box representatives require their own divergence cancellations.
+
+Derive the face completion from covariant curvature, independently compare
+its variation with the first-order density, and change to physical variables
+`N=rL,r,chi`. Keep the auxiliary normal derivative and both orientations.
+The implementation imports the owned action without altering frozen files.
+
+Manufactured controls share **60 process-CPU seconds**, with no archive,
+grid scan, trajectory, root or physical cut evaluation. Check independent
+Ricci curvature, cancellation of normal variations, the full one-form,
+clock/units, smooth-cut additivity and the Schwarzschild Einstein sector.
+Stop on a sign mismatch, an uncancelled auxiliary term or an unspecified
+reference being treated as physical energy. These are the three anticipated
+failure modes. A later same-action covariant variation disagreeing with the
+one-form would falsify this connection.
+
+**Outcome:** six exact controls pass in about 1.3 wall seconds. Independent
+Grok derivation reproduces the completion and all physical coefficients.
+The face term is `-2*s*F*L_x/Q`; the lapse response includes
+`4*s*alpha*chi_x/(rQ)` and a separate auxiliary momentum remains. Free normal
+jets give a generally nonintegrable one-form. The [owner](schur-memory.md#timelike-metric-response-of-the-auxiliary-action)
+closes this smooth-face connection; a common-action exterior state and
+compatible boundary data are needed next. No parent energy, volume or
+Lambda is inferred and no archived cut evaluation is admitted.
+
 ## Propagated photon response in the original conformal window
 
 The checked initial direction and coupled derivative now need an actual

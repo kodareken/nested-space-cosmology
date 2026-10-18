@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 247865,
+      "bytes": 248431,
       "path": "docs/active-code-map.md",
-      "sha256": "5c94474e903288013487add68954e9d8ad6c8b9633022c94b93877ddbe4bec5f"
+      "sha256": "8455c3434ad0ea283bc349d358422afe40a78e7fefdc10f0344655b469cd20ad"
     },
     {
       "bytes": 102489,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 392107,
+      "bytes": 392909,
       "path": "docs/current-result.md",
-      "sha256": "96b3d0e9b2904edaeaa218143c8b527d423479cdd73b789f4fe8b30624a2f7ab"
+      "sha256": "32aef7ad1e55b9218353650d1fd854b606ff60a14c75f8d1fce26e35a73669a5"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2386356,
+      "bytes": 2387308,
       "path": "docs/lab-snapshot.json",
-      "sha256": "f2c29aaef0a04bac38c0dddf734c5be2504cf7f1e8e0584f6c27242612c34b0b"
+      "sha256": "0ce6df5bad2897f90982f5a4c3a0612722e4de704a3b1459a8800a3f565c7c9f"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 515526,
+      "bytes": 517732,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "c2bb83a0be1dd6c23a901dfdd3ba884406e424be04563ed3b8217425495fa7f8"
+      "sha256": "b5776290e17292154f50e75bcddbff8ae1cbde3f5ad3084d5717c74bc66a427c"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 170983,
+      "bytes": 171817,
       "path": "docs/reproducing.md",
-      "sha256": "04b4befb69b680dfceb9cc1ba89264b20c308a50886923c4618728ac0e172afa"
+      "sha256": "10c28a1951f901fc03504530a827e097c96151db427470a3946f3b50dc7e4dce"
     },
     {
       "bytes": 31710,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 93502,
+      "bytes": 97693,
       "path": "docs/schur-memory.md",
-      "sha256": "f45a4d39623db8e7b9eea4db5cf6e5c3e73c1c9e233a0ae272080375589bd4f8"
+      "sha256": "6b54b881c2797ec039d73790c680a30a21be36a8baca1ae455958855996910fb"
     },
     {
       "bytes": 537091,
@@ -18916,6 +18916,11 @@
       "sha256": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9"
     },
     {
+      "bytes": 3923,
+      "path": "src/recursive_horizons/nsc_spherical_timelike_boundary.py",
+      "sha256": "c3bff58d4c111f7b73e71eef6a9dba155c0baf96cd7548015f4dd8a3181ac632"
+    },
+    {
       "bytes": 7793,
       "path": "src/recursive_horizons/nsc_spinor_bridge.py",
       "sha256": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
@@ -21446,6 +21451,11 @@
       "sha256": "dec8ad845fb387576d5d92136abbb1532ad6f368bff106ee9f8c696f70d013d7"
     },
     {
+      "bytes": 7406,
+      "path": "tests/test_nsc_spherical_timelike_boundary.py",
+      "sha256": "104aad1dda99a8f619813aeb88a38fa67ea2797ebde37320a1174551db260778"
+    },
+    {
       "bytes": 2318,
       "path": "tests/test_nsc_subgap_covariance_matrix.py",
       "sha256": "fc758123d4c6cf63b1483a9ed83c6496758b47f11ad532053d18c16683efadf8"
@@ -21791,7 +21801,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "f2c29aaef0a04bac38c0dddf734c5be2504cf7f1e8e0584f6c27242612c34b0b",
+  "lab_snapshot_sha256": "0ce6df5bad2897f90982f5a4c3a0612722e4de704a3b1459a8800a3f565c7c9f",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

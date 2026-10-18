@@ -2950,6 +2950,23 @@ ignored and hash-bound in that summary. Creation used 1736.1875 CPU seconds
 including the stopped first attempt. This response is closed; no unchanged
 trajectory replay is needed for the next calculation.
 
+The smooth timelike boundary response of the owned auxiliary action has
+independent exact controls:
+
+```text
+python scripts/run_python.py -m pytest tests/test_nsc_spherical_timelike_boundary.py -q
+```
+
+Six controls derive the Ricci density from Christoffel symbols and compare
+the complete covariant boundary variation with the first-order action.
+They also check the physical lapse, both orientations, the auxiliary
+surface identity and the Einstein-sector Schwarzschild reference limit.
+They read no archive and evaluate no physical boundary energy. The formula
+is for a fixed-coordinate, orthogonal timelike face with variations away
+from the time caps; a matter state, moving-face corner law and parent
+normalization remain additional inputs. The shared symbolic allowance is
+60 process-CPU seconds, with no numerical evolution.
+
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.
 The seven controls include coordinate Riemann/Ricci, normal Weyl under a

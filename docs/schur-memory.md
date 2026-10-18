@@ -885,6 +885,96 @@ independent coordinate-curvature derivation, the boost, all 256 singular
 Weyl components, units and the zero-mass limit. No new field solve, wall
 trajectory or full junction theorem is claimed.
 
+### Timelike metric response of the auxiliary action
+
+The [boundary component](../src/recursive_horizons/nsc_spherical_timelike_boundary.py)
+now completes the owned auxiliary bulk representative on orthogonal,
+fixed-coordinate timelike faces. This is a smooth-cut gravitational
+variation, before specifying a material interface or exterior state.
+Use the owned two-dimensional signature `h=(+L^2,-Q^2)`, `beta=0`, with
+physical lapse `N=rL`. Keep `L` independent of `Q` while varying. The
+fields are positive `L,Q,r`, and the chart retains nonzero `A,C_W`.
+Variations have compact support away from the time caps, so corner-angle
+variations are absent. This does not complete a moving-coordinate face or
+an uncancelled Euler/box representative.
+
+For `F=-4*pi*A*r^2+2*alpha*chi`, `Z=-24*pi*A` and
+`alpha=-4*pi*C_W/3`, an independent Christoffel/Ricci calculation gives
+
+$$
+LQ R_h=-2\partial_T(Q_T/L)+2\partial_x(L_x/Q).
+$$
+
+The bulk auxiliary equation is `chi=R_h-2`, obtained by varying `chi` at
+nonzero `C_W`. Its boundary value and normal derivative therefore carry
+curvature data in this representative.
+
+The outward normal of the two-dimensional timelike face is
+`n_h=s*partial_x/Q`, `s=+1` on the right and `-1` on the left. Its
+curvature is `K_h=s*L_x/(LQ)`. The minimal Dirichlet face density is
+
+$$
+B_s=-2s F L_x/Q.
+$$
+
+It cancels the normal-lapse derivative variation of the covariant bulk
+action. Varying that second-order bulk plus `B_s` independently reproduces
+the spatial boundary variation of the owned first-order density:
+
+$$
+\Pi_L=-2s F_x/Q,\qquad
+\Pi_r=-2s(F_r L_x+ZLr_x)/Q,\qquad
+\Pi_\chi=-2s F_\chi L_x/Q,\qquad \Pi_Q=0.
+$$
+
+Here `F_x=F_r*r_x+F_chi*chi_x`. In particular, the Legendre spatial
+flux containing `F_x` is not itself the covariant face completion; using it
+alone would introduce unsupported radius/auxiliary derivative variations.
+The completed one-form contains no normal derivatives of the variations.
+
+Physical Dirichlet variables are `N,r,chi`, so
+`Pi_N=Pi_L/r` and `Pi_r|N=Pi_r-L*Pi_L/r`. Define total sphere energy `E`,
+area pressure `P`, and total auxiliary response `J` by
+
+$$
+\delta S_s=\int dT\left[-E_s\delta N
++N P_s\delta(4\pi r^2)+N J_s\delta\chi\right],
+\quad
+E_s=\frac{2sF_x}{rQ},\quad
+P_s=\frac{\Pi_r-L\Pi_L/r}{8\pi r N},\quad
+J_s=\frac{\Pi_\chi}{N}.
+$$
+
+These are **unreferenced** responses of this boundary representative.
+`E` and `P` denote the displayed coefficients; they do not assert that the
+one-form integrates to a local boundary energy function. In fact, at fixed
+independent coordinate normal jets,
+`partial_L Pi_r-partial_r Pi_L=32*s*pi*A*r_x/Q`, which is generally nonzero.
+An on-shell exterior map must relate those normal jets to its boundary
+history and physical state before an effective action can be identified.
+The Weyl contribution to the energy is `4*s*alpha*chi_x/(rQ)`; it would be
+missing from an Einstein-only cut formula. Its area response satisfies the
+exact surface relation `E_W-8*pi*r^2*P_W=0`. This surface identity is not a
+four-dimensional equation of state. The auxiliary momentum is an additional
+boundary datum even when a chosen energy contribution vanishes.
+
+Opposite oriented one-forms cancel on an artificial smooth cut when the
+fields and their jets agree, as required by additivity. A physical wall or
+resolved transition must instead supply its own state and matching law.
+Adding an intrinsic face density changes these charges; none is selected
+to produce a vacuum term. The Einstein coefficient alone, with an explicitly
+declared flat-round subtraction, recovers the existing Schwarzschild
+Brown-York energy and pressure. This is a sector control, not a call to the
+singular `C_W=0` canonical chart or a normalization of the Weyl exterior.
+
+Six [manufactured controls](../tests/test_nsc_spherical_timelike_boundary.py)
+pass, covering the independent covariant variation, both orientations,
+physical-clock change, unit change, auxiliary surface identity and the
+Schwarzschild/flat limit. They use no archived state or trajectory. The
+remaining connection is the common-action exterior response with specified
+boundary data and physical state, before any parent-volume or Lambda
+identification.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

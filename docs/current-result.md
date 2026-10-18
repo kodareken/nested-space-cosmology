@@ -2,6 +2,18 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.4`, includes the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Timelike gravitational face response, 18 October 2026
+
+The [owned auxiliary action now has an explicit timelike Dirichlet response](schur-memory.md#timelike-metric-response-of-the-auxiliary-action).
+The derivation starts from the covariant curvature density and independently
+recovers the complete face one-form. In physical clock variables `N=rL`,
+the unreferenced energy contains the Weyl term `4*s*alpha*chi_x/(rQ)`, and
+the auxiliary field has its own boundary momentum. Six manufactured controls
+pass in about 1.3 wall seconds; no archived fields or evolutions are run.
+The frozen action and evolution files remain unchanged. This supplies the
+gravitational response needed for a common-action cut; its exterior state,
+physical interface and parent-volume response still need to be specified.
+
 ## Completed P001 endpoint trial, 18 October 2026
 
 All three original v4 evolutions now reach `x=0.4815042082576364`, `V=1`.
