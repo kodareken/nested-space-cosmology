@@ -256,7 +256,7 @@ time generator at the wall. On the slice above take zero shift, radial
 metric length `a=1` and `K_lambda_lambda=0` on each side. With
 `ds2=-N^2*dt^2+a^2*dlambda^2+r^2*dOmega2`, write
 `a_Sigma=partial_lambda log(N)` and `s=gamma_v/gamma`. The wall-frame
-acceleration is
+mixed curvature is `Ktau^tau=n_w dot nabla_(u_w) u_w`. Its acceleration is
 
 $$
 K^\tau{}_{\tau,w}=\partial_\tau\theta+
@@ -296,7 +296,9 @@ H=-i\alpha\left(c\partial_\lambda+
 \tfrac12\partial_\lambda c\right)+\sigma_1\frac{Nk}r.
 $$
 
-At the initial instant `c=N`; its derivative companion contains the step in
+The convention is `alpha=-gamma_hat_t*gamma_hat_lambda` with spacetime
+Clifford signature `(-,+,+,+)`. At the initial instant `c=N`; its derivative
+companion contains the step in
 the lapse gradient. The [component](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
 retains it. The [controls](../tests/test_nsc_atlas_dirac_evolution.py) compute
 the connection from the full four-dimensional diagonal tetrad, verify the
@@ -338,3 +340,13 @@ instead give `k_wall*psi`, missing the temporal part of the connection.
 These are compatible initial one-sided equations and wall jets. They do not
 yet supply a full foliation, propagated covariance, renormalized polarization
 or gravitational slip.
+
+The [one-point evaluation](../results/summaries/nsc-atlas-dirac-wall-time-v1.json)
+uses `.015625` process-CPU seconds. At the source anchor `s=.7388177118` and
+the required logarithmic lapse-gradient jump is `-1.3478106524/ell`.
+The two eigenvalues of the density-derivative jump matrix are
+`.3875652529/ell` and `2.5802106678/ell`; these are derivative coefficients,
+not quantum probabilities or reflection amplitudes. The temporal Israel,
+moving continuity and normal-frame checks differ by at most `2.67e-15` in
+the reference units. In the parallel wall-normal frame the recovered
+coefficient is `3/ell`, exactly the earlier four-dimensional result.

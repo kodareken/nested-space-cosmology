@@ -13,6 +13,8 @@ same quiet source anchor algebraically and takes no field evolution steps.
 The [owner](nsc-atlas-dirac-probe.md#physical-time-generator-at-the-moving-interface)
 states the common initial lapse, its necessary jump, and the frame change;
 a full foliation and quantum state remain unselected.
+The [saved reference](../results/summaries/nsc-atlas-dirac-wall-time-v1.json)
+contains the initial lapse and moving-domain coefficients only.
 
 The source-anchor joined initial geometry and its intrinsic spatial Dirac
 operator reproduce with:

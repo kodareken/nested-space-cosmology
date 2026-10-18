@@ -118,6 +118,18 @@ def test_actual_temporal_israel_and_nonzero_moving_density_jets():
     assert row['parallel_frame_normal_derivative_jump'] == 3.
 
 
+def test_general_wall_acceleration_by_explicit_lorentz_frame():
+    b, a, K, theta_tau = s.symbols('b a K theta_tau', real=True)
+    gamma = s.sqrt(1+b*b)
+    velocity, normal = s.Matrix([gamma, b]), s.Matrix([b, gamma])
+    # nabla_u e0=a*e1, nabla_e1 e0=-K*e1; metric compatibility fixes
+    # the corresponding derivatives of e1. Contract the resulting vector.
+    omega_on_wall = gamma*a-b*K
+    acceleration = theta_tau*normal+s.Matrix([[0, omega_on_wall], [omega_on_wall, 0]])*velocity
+    signed_acceleration = (normal.T*s.diag(-1, 1)*acceleration)[0]
+    assert s.simplify(signed_acceleration-theta_tau-gamma*a+b*K) == 0
+
+
 @pytest.mark.parametrize('field,value', [('lapse', 0.), ('radius', 0.),
                                       ('radial_length', -1.), ('lapse_l', np.inf)])
 def test_generator_rejects_invalid_geometry(field, value):

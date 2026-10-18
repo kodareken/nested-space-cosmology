@@ -1,0 +1,69 @@
+{
+  "limits": {
+    "CPU_seconds": 30,
+    "summary_bytes": 8000
+  },
+  "reference": {
+    "checks": {
+      "moving_trace_error": 4.965068306494546e-16,
+      "parallel_normal_jump_error": 1.2560739669470201e-15,
+      "tangential_component_jump": 1.9860273225978185e-15,
+      "temporal_Israel_error": 2.6645352591003757e-15
+    },
+    "counts": {
+      "Dirac_time_steps": 0,
+      "P001_time_steps": 0,
+      "algebraic_wall_points": 1,
+      "loop_polarizations": 0,
+      "new_evolution_grids": 0
+    },
+    "inputs": {
+      "H_ell": 1.0,
+      "Kll_initial_both_sides": 0.0,
+      "M_over_ell": 0.4,
+      "N_wall": 1.0,
+      "Rwall_over_ell": 0.45,
+      "a_initial": 1.0,
+      "k_wall_ell": 2.0,
+      "scalar_amplitude": 0.0,
+      "shift": 0.0
+    },
+    "nested_Psi_over_Phi": null,
+    "scope": "One-sided initial Dirac time generator and moving-wall jet compatibility; no complete foliation, quantum state, loop or evolved spinor.",
+    "wall": {
+      "Ktau_minus": -3.63957475994513,
+      "Ktau_plus": -5.639574759945128,
+      "common_boost_rapidity_tau": -2.891838779450529,
+      "d_log_lapse_jump": -1.3478106524363171,
+      "d_log_lapse_minus": -0.5039032598602688,
+      "d_log_lapse_plus": -1.851713912296586,
+      "density_derivative_jump_alpha": 1.0963227074688882,
+      "density_derivative_jump_alpha_eigenvalues": [
+        0.3875652528946676,
+        2.5802106678324437
+      ],
+      "density_derivative_jump_identity": 1.4838879603635557,
+      "full_time_development_is_supplied": false,
+      "global_initial_lapse_is_supplied": false,
+      "normal_component_derivative_jump_alpha": 0.7388177118171959,
+      "normal_component_derivative_jump_identity": 3.0,
+      "normal_spin_connection_jump": -1.4776354236343918,
+      "parallel_frame_normal_derivative_jump": 3.0,
+      "reconstructed_Ktau_minus": -3.63957475994513,
+      "reconstructed_Ktau_plus": -5.6395747599451305,
+      "wall_coordinate_speed_over_N": 0.7388177118171959
+    }
+  },
+  "runtime_cpu_seconds": 0.015625,
+  "schema": "nsc-atlas-dirac-wall-time-v1",
+  "source_commit": "527c26a940f51dce101588dcd79a11fd29ad53a0",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_wall_time.py": "bcdac015263cffb96d66343cd5dd1eef8ac485a30c824c4c9fded75098a2b04a",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "e54190b116d396b30d6125e700ad3225b16514ffc22c9381d5475a9651ff3786",
+    "src/recursive_horizons/nsc_atlas_dirac_slice.py": "8e46dc5a92924ed15c1a1ddc84bd8d046fadf15ec650c98aadb343ae9f077a71",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "tests/test_nsc_atlas_dirac_evolution.py": "154b6ca10b4ae6fe46391c2efef57b3b86bd9c535564f584324ee1b6c8018c6e"
+  },
+  "status": "initial_time_generator_and_moving_domain_compatible"
+}

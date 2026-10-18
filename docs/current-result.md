@@ -16,7 +16,15 @@ versus zero for a smooth continuation of the same cap.
 
 The [owner](nsc-atlas-dirac-probe.md#joined-initial-surface-at-the-source-anchor)
 keeps this intrinsic spatial operator separate from the physical time
-Hamiltonian and four-dimensional squared domain. A quantum state and its
+Hamiltonian and four-dimensional squared domain. The
+[physical initial time generator](nsc-atlas-dirac-probe.md#physical-time-generator-at-the-moving-interface)
+now includes the required lapse-gradient jump `-1.3478106524/ell` and
+differentiates transparency along the moving wall. Its frame transformation
+recovers the same four-dimensional normal coefficient `3/ell`, with no
+additional surface interaction. Eleven controls check the full tetrad,
+half-density, acceleration and moving domain; the
+[reference](../results/summaries/nsc-atlas-dirac-wall-time-v1.json) has maximum
+identity discrepancy `2.67e-15`. A full time development, quantum state and
 renormalized causal metric response still have to be supplied; there is no
 nested slip value yet. No new P001 grid or evolution step was used.
 
