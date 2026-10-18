@@ -4,7 +4,9 @@ import math
 import numpy as np
 import pytest
 
-from recursive_horizons.nsc_infinite_inheritance import InheritedTree,geometric_inherited_tree
+from recursive_horizons.nsc_infinite_inheritance import (
+    InheritedTree,geometric_inherited_tree,homogeneous_dilation_source,
+)
 
 
 def test_matrix_recursion_matches_noncommuting_full_tree_and_subtree_scale():
@@ -88,3 +90,83 @@ def test_geometric_action_derives_the_operator_and_root_compliance():
     assert 1/(tree.gamma*mass0)==pytest.approx(L/b)
     response=tree.response(0.,6)
     assert abs(L/b-response['response'][0,0]/mass0)<=response['analytic_depth_bound']/mass0
+
+
+def test_spatial_volume_action_and_both_infinite_response_branches():
+    # Both sides of b*q=1, with finite total three-dimensional edge volume.
+    for b,q in ((2,.6),(3,.25)):
+        L,A=2.5,1.7
+        tree=geometric_inherited_tree(b,q,L,spatial_dimension=3,cross_section=A)
+        D,_=tree.finite_matrix(2);count=len(D)
+        K=np.zeros_like(D);mass=np.zeros(count);levels=[0]*count
+        for child in range(1,count):
+            parent=(child-1)//b;levels[child]=levels[parent]+1
+            length=L*q**levels[parent];section=A*q**(2*levels[parent])
+            conductance=section/length;half_volume=section*length/2
+            mass[parent]+=half_volume;mass[child]+=half_volume
+            K[parent,parent]+=conductance;K[child,child]+=conductance
+            K[parent,child]-=conductance;K[child,parent]-=conductance
+        K[0,0]+=(A/q**2)/(L/q);mass[0]+=(A/q**2)*(L/q)/2
+        for vertex,depth in enumerate(levels):
+            if depth==2:
+                length=L*q**depth;section=A*q**(2*depth)
+                K[vertex,vertex]+=b*section/length
+                mass[vertex]+=b*section*length/2
+        np.testing.assert_allclose(D,K/np.sqrt(mass[:,None]*mass[None,:]),atol=2e-14)
+        expected=L/(A*max(b,1/q));m0=mass[0]
+        assert 1/(tree.gamma*m0)==pytest.approx(expected)
+        response=tree.response(0.,24)
+        assert abs(response['response'][0,0]/m0-expected)<=response['analytic_depth_bound']/m0+2e-15
+        dilated=geometric_inherited_tree(b,q,2*L,spatial_dimension=3,cross_section=4*A)
+        D2,_=dilated.finite_matrix(2)
+        np.testing.assert_allclose(D2,D/4,atol=2e-14)
+        assert 1/(dilated.gamma*8*m0)==pytest.approx(expected/2)
+    with pytest.raises(ValueError,match='critical'):
+        geometric_inherited_tree(2,.5,spatial_dimension=3)
+
+
+def test_pressure_from_independent_lapse_variation_and_fixed_canonical_work():
+    import sympy as sp
+
+    N,a,Vc,Tdot,G=sp.symbols('N a Vc Tdot G',positive=True)
+    action=a**3*Tdot/N-N*a*G;volume=a**3*Vc
+    rho=-sp.diff(action,N)/volume
+    pressure=sp.diff(action,a)/(N*sp.diff(volume,a))
+    substitutions={N:sp.Rational(4,3),a:sp.Rational(3,2),Vc:sp.Rational(7,5),
+                   Tdot:sp.Rational(2,7),G:sp.Rational(3,8)}
+    proper_kinetic=a**3*Tdot/N**2
+    T0=float((proper_kinetic*a**3).subs(substitutions))
+    G0=float(G.subs(substitutions));scale=float(substitutions[a]);vc=float(substitutions[Vc])
+    result=homogeneous_dilation_source(T0,G0,scale,vc)
+    assert result['rho_geom']==pytest.approx(float(rho.subs(substitutions)))
+    assert result['p_geom']==pytest.approx(float(pressure.subs(substitutions)))
+    step=1e-5
+    plus=homogeneous_dilation_source(T0,G0,scale+step,vc)
+    minus=homogeneous_dilation_source(T0,G0,scale-step,vc)
+    derivative=(plus['energy_length']-minus['energy_length'])/(plus['physical_volume']-minus['physical_volume'])
+    assert derivative==pytest.approx(-result['p_geom'],rel=2e-9)
+    for kinetic,gradient,expected_w,expected_q in ((0.,2.,-1/3,0.),(2.,0.,1.,2.),(2.,2.,1/3,1.)):
+        source=homogeneous_dilation_source(kinetic,gradient)
+        assert source['p_geom']/source['rho_geom']==pytest.approx(expected_w)
+        assert source['flat_deceleration']==pytest.approx(expected_q)
+        assert source['vacuum_form_defect']>0
+        assert source['rho_plus_3p']==pytest.approx(source['rho_geom']+3*source['p_geom'])
+    zero=homogeneous_dilation_source(0.,0.)
+    assert zero['flat_deceleration'] is None
+    assert zero['vacuum_form_defect']==0.
+
+
+def test_static_root_work_distinguishes_fixed_field_and_fixed_force():
+    import sympy as sp
+
+    a,xi,chi,f=sp.symbols('a xi chi f',positive=True)
+    energy=a*xi**2/(2*chi);force=sp.diff(energy,xi)
+    assert sp.simplify(sp.diff(energy,a)-energy/a)==0
+    force_controlled=xi.subs(xi,chi*f/a)
+    stored=energy.subs(xi,force_controlled)
+    work=(energy/a).subs(xi,force_controlled)+f*sp.diff(force_controlled,a)
+    assert sp.simplify(sp.diff(stored,a)-work)==0
+    assert sp.simplify(sp.diff(stored,a)+stored/a)==0
+    assert sp.simplify(force.subs(xi,force_controlled)-f)==0
+    legendre=(energy-force*xi).subs(xi,force_controlled)
+    assert sp.simplify(legendre+stored)==0

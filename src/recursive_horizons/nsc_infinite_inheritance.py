@@ -10,20 +10,55 @@ import math
 import numpy as np
 
 
-def geometric_inherited_tree(branching,ratio,length=1.):
-    """Inherited wave law derived from edge lengths and half-edge masses.
+def geometric_inherited_tree(branching,ratio,length=1.,*,spatial_dimension=1,cross_section=1.):
+    """Inherited wave law from edge lengths, sections and half-edge masses.
 
-    Edge length at depth n is L*q^n. Each vertex receives half of each
-    incident edge's length as its kinetic weight; the root has a fixed
-    parent edge. The form closure supplies the boundary choice at infinity.
+    At depth n, length is L*q^n and section is A*q^((dimension-1)*n).
+    Each vertex receives half of each incident edge's volume as its
+    kinetic weight; the root has a fixed parent edge. Dimension1 with
+    section1 recovers the original length-weighted action. The form
+    closure supplies the boundary choice at infinity.
     """
-    q,L=float(ratio),float(length)
+    q,L,A=float(ratio),float(length),float(cross_section)
     if (isinstance(branching,bool) or not isinstance(branching,int) or branching<2
-            or not np.isfinite([q,L]).all() or not 0<q<1 or L<=0):
-        raise ValueError('integer branching>=2, length>0 and length ratio0<q<1 required')
-    mass=.5*L*(1/q+branching)
-    H=(branching+q)/(L*mass);B=-1/(L*mass*math.sqrt(q))
+            or isinstance(spatial_dimension,bool) or not isinstance(spatial_dimension,int)
+            or spatial_dimension<1 or not np.isfinite([q,L,A]).all()
+            or not 0<q<1 or L<=0 or A<=0):
+        raise ValueError('integer branching>=2, dimension>=1, positive length/section and0<q<1 required')
+    if spatial_dimension==3 and q==1/branching:
+        raise ValueError('the critical b*q=1 case is outside the strict positive-form theorem')
+    mass=.5*A*L*(q**(-spatial_dimension)+branching)
+    H=A*(branching+q**(2-spatial_dimension))/(L*mass)
+    B=-A/(L*mass*q**(.5*spatial_dimension))
     return InheritedTree(np.array([[H]]),np.array([[B]]),q**-2,branching)
+
+
+def homogeneous_dilation_source(kinetic_reference,gradient_reference,scale=1.,coordinate_volume=1.):
+    """Homogeneous metric variation of a positive three-dimensional field action.
+
+    M(a)=a^3 M0, K(a)=a K0 at fixed fractional coordinates. Inputs are
+    T0=pi^T M0^-1 pi/2 and G0=phi^T K0 phi/2 at the specified state.
+    Variation holds canonical field data fixed. These are geometric energy
+    units (G=c=1), with a dimensionless scale and volume V=a^3*Vc.
+    No source, common-parent geometry or vacuum identification is supplied.
+    """
+    from .nsc_atlas_gravitational_reduction import homogeneous_energy_stress
+
+    values=(kinetic_reference,gradient_reference,scale,coordinate_volume)
+    if any(isinstance(x,(bool,np.bool_)) for x in values):
+        raise ValueError('finite nonnegative energies and positive scale/volume required')
+    T0,G0,a,Vc=map(float,values)
+    if not np.isfinite([T0,G0,a,Vc]).all() or min(T0,G0)<0 or min(a,Vc)<=0:
+        raise ValueError('finite nonnegative energies and positive scale/volume required')
+    kinetic=T0/a**3;gradient=a*G0;volume=a**3*Vc
+    pressure=(kinetic-gradient/3)/volume
+    result=homogeneous_energy_stress(kinetic+gradient,-pressure,volume)
+    result.update(reference_kinetic=T0,reference_gradient=G0,scale=a,
+        coordinate_volume=Vc,kinetic_energy=kinetic,gradient_energy=gradient,
+        rho_plus_3p=4*kinetic/volume,
+        flat_deceleration=(2*kinetic/(kinetic+gradient) if kinetic+gradient else None),
+        scope='Homogeneous three-dimensional kinetic-plus-gradient lift of the inherited field action; no full parent cosmology or quantum vacuum.')
+    return result
 
 
 @dataclass(frozen=True)

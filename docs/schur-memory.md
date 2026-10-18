@@ -11,6 +11,16 @@ boundary map and its local classical metric response are now calculated below.
 The finite matrix identity alone does not provide a physical reduction of the
 gravitational geometry, a quantum state or a cosmological vacuum term.
 
+The [infinite inherited-law construction](nsc-infinite-inheritance.md#metric-variation-a-spatial-volume-and-its-pressure)
+now has a metric-source test. Its three-dimensional positive field lift gives
+M(a)=a^3*M0 and K(a)=a*K0. Lapse/scale variation then yields
+`rho=(E_kin+E_grad)/V`, `p=(E_kin-E_grad/3)/V`, hence `rho+p>0` and
+`rho+3*p>=0` for a nonzero state. Infinite inheritance does not change these
+signs. Its static root response is therefore not a vacuum coefficient; the
+gravitational metric correlations or a separately specified quantum effective
+action must supply the missing source. This closes the positive-field
+identification test without a new physical grid or observational fit.
+
 ## Step 7: averaging the explicit sourced initial slice
 
 The geometric calculation uses the existing

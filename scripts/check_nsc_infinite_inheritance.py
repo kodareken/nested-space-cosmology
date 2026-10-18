@@ -4,7 +4,9 @@ import math
 
 import numpy as np
 
-from recursive_horizons.nsc_infinite_inheritance import InheritedTree
+from recursive_horizons.nsc_infinite_inheritance import (
+    InheritedTree,geometric_inherited_tree,homogeneous_dilation_source,
+)
 
 
 def main():
@@ -14,12 +16,18 @@ def main():
         result=tree.response(0.,depth);value=float(result['response'][0,0].real)
         rows.append(dict(depth=depth,response=value,exact_depth_error=exact-value,
             analytic_depth_bound=result['analytic_depth_bound']))
+    volume_tree=geometric_inherited_tree(3,.5,spatial_dimension=3)
+    volume_mass=.5*(.5**-3+3)
     print(json.dumps(dict(inputs=dict(H=3,B=1,Omega=4,branching=3),
         infinite_static_response=exact,infinite_effective_coefficient=1/exact,
         inherited_local_coefficient_shift=1/exact-3,
         spectral_counting_exponent=tree.counting_exponent,
         second_order_spectral_dimension=2*tree.counting_exponent,
         contraction=tree.contraction,finite_responses=rows,
+        spatial_volume_example=dict(branching=3,length_ratio=.5,L=1,A=1,
+            static_compliance=1/(volume_tree.gamma*volume_mass),
+            compliance_after_doubling_all_spatial_lengths=1/(2*volume_tree.gamma*volume_mass),
+            equal_energy_source=homogeneous_dilation_source(1.,1.)),
         scope='Mathematical inherited-operator example; no metric embedding or cosmological Lambda identification.'),
         indent=2,allow_nan=False))
 

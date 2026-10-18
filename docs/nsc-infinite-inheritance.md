@@ -268,6 +268,149 @@ at infinity is the specified form closure. Other boundary choices are
 not silently identified with it. This is a geometric network realization,
 not an Einstein cap--wall solution or a generated cosmological Lambda.
 
+## Metric variation: a spatial volume and its pressure
+
+The preceding length-weighted network has one-dimensional edge measure.
+To obtain a three-dimensional volume response, its edges must carry a
+section as well as a length. Give an edge at depth n length `L*q^n` and
+section `A*q^(2*n)`, with A>0. Its conductance is `(A/L)*q^n` and its
+volume is `A*L*q^(3*n)`. The same half-edge rule gives
+
+\[
+m_n=m_0q^{3n},\quad m_0=\frac{AL}{2}(q^{-3}+b),\qquad
+H=\frac{A(b+q^{-1})}{Lm_0},\quad B=-\frac{A}{Lm_0q^{3/2}}.
+\]
+
+The operator still inherits `Omega=q^(-2)`. Its positive form margin is
+`A*(sqrt(b)-1/sqrt(q))^2/(L*m0)`, so the theorem applies when b*q!=1.
+This calculation does not decide the critical case. The bounded branch gives
+
+\[
+\gamma=\frac{A}{Lm_0}\max(b,q^{-1}),\qquad
+\chi_0=\frac{R(0)}{m_0}=\frac{L}{A\max(b,q^{-1})}.
+\tag{5}
+\]
+
+These identities follow by expanding the geometric action and solving its
+scalar Schur quadratic. They apply on both sides of b*q=1. If all edge
+volumes are regarded as disjoint physical pieces, their sum is finite only
+when b*q^3<1; that requirement is separate from the operator's positive
+margin. This construction has not embedded those pieces in the actual
+Lorentzian atlas or supplied the parent gravitational action.
+
+**Dilation proposition.** Fix a positive kinetic matrix M0 and a closed
+positive spatial form K0, using the inherited operator for their canonical
+combination. Under a common physical spatial dilation by a>0,
+
+\[
+M(a)=a^3M_0,\qquad K(a)=aK_0,\qquad
+D(a)=M(a)^{-1/2}K(a)M(a)^{-1/2}=a^{-2}D_0.
+\]
+
+The physical static root compliance therefore scales as
+`chi(a)=chi0/a`. It scales oppositely to the original length-only action's
+`a*chi0`. The same normalized operator scaling alone cannot distinguish
+these different physical measures. For the already-owned spatial metric
+`h=r^2(Q^2 dx^2+dOmega^2)`, direct variation r -> a*r at fixed Q similarly
+gives `M_ij=integral r^3 Q phi_i phi_j dx` proportional to a^3 and
+`K_ij=integral (r/Q) phi_i' phi_j' dx` proportional to a. Thus this spatial
+measure is the one needed for a kinetic-plus-gradient lift of that radial
+operator. It does not replace the atlas's improved conformal-scalar action.
+
+Include a homogeneous lapse N and use real fields. The declared lifted action is
+
+\[
+S_\phi=\frac12\int dt\left[
+\frac{a^3}{N}\dot\phi^TM_0\dot\phi-Na\phi^TK_0\phi\right].
+\tag{6}
+\]
+
+Let `T0=pi^T M0^(-1) pi/2` and `G0=phi^T K0 phi/2`, with canonical
+momentum pi. At fixed canonical data its proper-time energy is
+`E=a^(-3)*T0+a*G0`. In a declared homogeneous isotropic volume
+`V=a^3*Vc`, lapse and spatial-scale variations yield
+
+\[
+E_{\rm kin}=a^{-3}T_0,\quad E_{\rm grad}=aG_0,\qquad
+\rho=\frac{E_{\rm kin}+E_{\rm grad}}{V},\quad
+p=\frac{E_{\rm kin}-E_{\rm grad}/3}{V}.
+\tag{7}
+\]
+
+**Proof.** Legendre transformation of (6) gives N*E. Its lapse derivative
+therefore gives E, and its scale derivative at fixed phi,pi gives
+`p=-partial_a E/(3*a^2*Vc)`, which is (7). Equivalently differentiate
+(6) before substituting `pi=a^3*M0*phi_dot/N`; both routes agree. The
+finite-energy infinite hierarchy has finite T0 and G0. Multiplication
+by fixed positive powers of a preserves its form domain, so the same
+identity passes to that hierarchy without an additional depth term.
+
+For source-free evolution, Hamilton's equations give
+`dE/dtau=-3*(a_dot/a)*p*V`, where tau is homogeneous proper time.
+Consequently `rho_dot+3*H*(rho+p)=0`: the pressure and energy belong to
+the same action and obey the corresponding energy balance.
+
+For every nonzero state in this positive-action class,
+
+\[
+\rho+p=\frac{2E_{\rm kin}+2E_{\rm grad}/3}{V}>0,\qquad
+\rho+3p=\frac{4E_{\rm kin}}{V}\ge0.
+\tag{8}
+\]
+
+Thus even infinitely many inherited levels cannot turn this classical
+kinetic-plus-gradient sector into a nonzero vacuum-form source. Its trace
+projection `Lambda_tr=kappa*(rho-3*p)/4` can be nonzero while (8) fails
+the vacuum test. A flat Einstein cosmology containing only this lifted
+source and no supplied volume term would have the dimensionless prediction
+
+\[
+q_{\rm dec}=\frac{\rho+3p}{2\rho}
+=\frac{2E_{\rm kin}}{E_{\rm kin}+E_{\rm grad}}\in[0,2].
+\tag{9}
+\]
+
+It cannot accelerate. This is a conditional homogeneous consequence of
+the declared lift, not an identification of the atlas with that cosmology.
+The hierarchy's branch count changes allowed modes and state energies;
+it cannot change the signs in (8). No observed expansion rate selects them.
+
+**Root work and state restrictions.** With a fixed root value xi, static
+elimination gives `E_stat=a*xi^2/(2*chi0)` and root force `f=a*xi/chi0`.
+Its pressure is the gradient result `p=-rho/3`. Holding f fixed instead
+selects a different family, `xi=chi0*f/a`, with stored energy
+`E_stat=chi0*f^2/(2*a)`. Differentiating that latter energy without its
+root work would produce the wrong pressure. Direct differentiation gives
+
+\[
+dE_{\rm stat}=\frac{E_{\rm stat}}a\,da+f\,d\xi.
+\tag{10}
+\]
+
+For fixed f, the second term is `-2*E_stat*da/a`, explaining the changed
+total derivative. The force-controlled Legendre potential is
+`E_stat-f*xi`; it is not the stored positive energy. Equations (7)--(10)
+refer to metric variation or quasistatic virtual work, respectively, not
+an assumed finite-rate forced trajectory.
+
+This settles the metric source of this positive field lift. A cosmological
+Lambda now needs the actual gravitational correlation action, or another
+specified sector with its own metric dependence and state. Relabeling the
+positive root response as a vacuum coefficient would omit the calculated
+pressure. The nonminimal and distributional terms of the cap--wall action,
+and a renormalized quantum determinant if used, retain their own equations.
+
+**Bounded check.** The inputs are the proved inherited operator, the
+explicit edge action and the existing homogeneous energy-variation API.
+The missing connection is the physical measure and pressure. At most30
+CPU seconds are allowed for independent three-dimensional edge assembly,
+lapse/scale differentiation and the root-work identity, followed by one
+illustration. No physical grids, observational fits or field evolution are
+run. A failed identity stops the calculation. The positive-action result
+redirects the Lambda calculation toward the metric correlation sector;
+it does not reopen this regional proof or select a vacuum amplitude.
+No novelty claim is made for the underlying variational identities.
+
 ## Corollary: global evolution, energy and a local measurement
 
 For u0 in Q and v0 in the Hilbert space, the inherited wave equation
@@ -347,13 +490,15 @@ slip or any P001 grid result.
 The [calculator](../src/recursive_horizons/nsc_infinite_inheritance.py)
 implements the same recurrence without building the exponentially large
 tree. A dense tree is limited to256 coordinates for independent checks.
-The [five controls](../tests/test_nsc_infinite_inheritance.py) compare a
+The [eight controls](../tests/test_nsc_infinite_inheritance.py) compare a
 noncommuting matrix link with the complete finite tree, the actual subtree
 scaling, the scalar closed form and depth bound, the spectral bounds and
 the zero-link limit. They also reject missing branch/scale factors and a
 reversed noncommuting link. A separately assembled edge action checks the
 geometric matrices, their automatic positive margin and the root compliance
-L/b. The proof above establishes the infinite result;
+L/b. The volume-weighted extension checks both branches of its static
+response, independent lapse/scale variations and the root-work identity.
+The proof above establishes the infinite result;
 finite tests check the calculator against independent identities.
 
 Independent native Grok review accepted the operator, response, spectral,
@@ -364,7 +509,12 @@ The manuscript's Section5.1 contains the main theorem and proof; revision
 
 The allowance is30 process-CPU seconds for these small controls and one
 illustration, with no physical grid, evolution or large data output. The
-first four tests use .375 CPU seconds; all five pass in .34 wall seconds.
+first four tests use .375 CPU seconds. The extended eight controls and
+illustration pass together in .9375 process-CPU seconds; pytest takes .74
+wall seconds. The volume example b=3,q=.5,L=A=1 gives compliance1/3,
+falling to1/6 when all spatial lengths double. Equal kinetic and gradient
+energies give p/rho=1/3 and the conditional flat q_dec=1. These examples
+use declared inputs and no observational calibration.
 Neither floating-point arithmetic
 nor measured/model uncertainty is included in the analytic depth bound.
 

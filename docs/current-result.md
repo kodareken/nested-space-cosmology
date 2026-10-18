@@ -4,9 +4,16 @@ The [infinite inherited-law theorem](nsc-infinite-inheritance.md) proves a
 positive finite-energy realization of unlimited branching, exact normalized
 subtree inheritance and a finite local response with an explicit depth
 error. Its spectral counting exponent is `log(b)/log(Omega)`. The proof
-states the full domain and coupling bound; five independent calculator
-controls pass. An explicit edge action derives the local matrices from
-geometry and gives the exact static root compliance L/b. A spacetime/source identification and observational tests
+states the full domain and coupling bound; eight independent calculator
+controls pass. An explicit length-weighted edge action derives the local
+matrices and gives static root compliance L/b. Its volume-weighted extension
+now supplies the metric variation: M scales as a^3, K as a, and root
+compliance as1/a. Its positive kinetic-plus-gradient source satisfies
+rho+p>0 and rho+3p>=0, even with infinitely many inherited levels. Thus
+that field lift alone cannot supply a nonzero vacuum source or accelerated
+flat expansion. The actual gravitational correlation action remains the
+connection needed for Lambda; the operator's normalized scaling alone does
+not fix its physical spatial measure. A spacetime/source identification and observational tests
 remain required for the cosmological claims.
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.13`, includes the infinite inherited-law theorem and proof in Section5.1, alongside the actual Dirac trace, radar chart, prepared mean metric/clock response, correlated continuum parent and local regularity proposition, and the archived PDE/boundary-lift diagnosis of P001. The matching66-page PDF builds and its new proof pages pass visual inspection. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.

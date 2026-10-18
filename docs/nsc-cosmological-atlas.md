@@ -113,6 +113,16 @@ dimension. Its positive-matrix and coupling hypotheses are specified. This
 extends operator composition beyond finite windows; a compatible spacetime
 and metric-dependent source identification remain separate physical work.
 
+The theorem's [metric-variation extension](nsc-infinite-inheritance.md#metric-variation-a-spatial-volume-and-its-pressure)
+now supplies an explicit three-dimensional kinetic-plus-gradient lift.
+Including area factors changes the physical root compliance to1/a under
+spatial dilation, despite the same normalized operator scaling. Its action
+gives rho+p>0 and rho+3p>=0 for every nonzero positive-energy state, including
+the infinite hierarchy. Thus that field response alone cannot generate a
+nonzero vacuum source. The next Lambda connection is the actual constrained
+gravitational correlation action and its state, rather than another regional
+operator refinement or a relabeling of its static coefficient.
+
 Here “fractal” means a proposed measurable scaling structure. A dimension
 must be obtained from a specified quantity, such as volume versus proper
 radius or mode count versus frequency. It is not assigned from spherical

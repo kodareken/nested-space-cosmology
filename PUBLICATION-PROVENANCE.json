@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 268792,
+      "bytes": 269099,
       "path": "docs/active-code-map.md",
-      "sha256": "c1fc0ea423ef0e18c3642c657302005aee6a3d0ca31d060d4b78cafbbac9bcde"
+      "sha256": "caefdfae7f4dd7cee08b69b4a0ff5a7999cd04ecd3bf18e2bc51a4619062f663"
     },
     {
       "bytes": 106460,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 429745,
+      "bytes": 430239,
       "path": "docs/current-result.md",
-      "sha256": "955d1e26d346e3ffb2cbca1ba649bd3749e24bce9a4444ee4c5485dcfa13d33a"
+      "sha256": "6628907177b189a41333ae8fd9a0df8c4d47bc0f4c0673554ed0438cb59a95f8"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2441868,
+      "bytes": 2441716,
       "path": "docs/lab-snapshot.json",
-      "sha256": "c15818568e4664e62ae7259e39f1cda57c54c83550b5216c13d0648836554095"
+      "sha256": "7fc7ebeb3bc778417fe0e253338e64c76292ac08592be19561090d2953b599fc"
     },
     {
       "bytes": 4997,
@@ -1741,9 +1741,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 61190,
+      "bytes": 61900,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "5bd58f822d4b780ca113d194e9956ee87c33bdb5c5325a627bf2503b2600607b"
+      "sha256": "afb7ffcc8f4edbf2e9415dda6fbf8e38ba8c2576d82588ec0e41387a783eee8b"
     },
     {
       "bytes": 30876,
@@ -1821,9 +1821,9 @@
       "sha256": "cdf748b9c957d2e91d038c5ed4c2f57df6df0e571460166e4d13300b2405a748"
     },
     {
-      "bytes": 15788,
+      "bytes": 22700,
       "path": "docs/nsc-infinite-inheritance.md",
-      "sha256": "87233c890008fecc975dc22949d16acf6440efb6c8918c38256cdc032f8cc50e"
+      "sha256": "37709237d73dbf4c5bb38811826f787dc8babb2afdb078ba9931afc51a732250"
     },
     {
       "bytes": 3296,
@@ -2246,9 +2246,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 206500,
+      "bytes": 206660,
       "path": "docs/reproducing.md",
-      "sha256": "9499d8a656c324a6c9354fc0f2e35e2bf3d6d829d87d95e422e64d695de18a4d"
+      "sha256": "ac8cba7d84f822cfb96ece596187b37b2859bfe7856735ee75f2a4e0f2f7089f"
     },
     {
       "bytes": 31710,
@@ -2271,9 +2271,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 115379,
+      "bytes": 116079,
       "path": "docs/schur-memory.md",
-      "sha256": "03269b0190f2a31e502b1faf4e1d7c0c9af011dacdbd4b2860c17178186aac45"
+      "sha256": "f0d9c3b9a5387758fab8a65a7456de1c3eacc08a0c1a42b84359e9e7e9dde211"
     },
     {
       "bytes": 537091,
@@ -15406,9 +15406,9 @@
       "sha256": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b"
     },
     {
-      "bytes": 1136,
+      "bytes": 1597,
       "path": "scripts/check_nsc_infinite_inheritance.py",
-      "sha256": "07e570cef54b852f2b8934441ae9bf869b257b1e0768986c65c84eb84f7b87b7"
+      "sha256": "4df64985d3299ee633091a3e71cc7f526aec1b34470a71208cfac515799d67ac"
     },
     {
       "bytes": 13271,
@@ -18456,9 +18456,9 @@
       "sha256": "5b8d9febed933425f232bd47c1e8a5441d3a5de6df778775b5b312cf21d556c6"
     },
     {
-      "bytes": 5416,
+      "bytes": 7609,
       "path": "src/recursive_horizons/nsc_infinite_inheritance.py",
-      "sha256": "b08a7cd8f724d3f0cfe9127d943f36241ebb374aa83900a642de6c3adc0cd9ab"
+      "sha256": "bd0714792b73fdd07b0b3d8c7a2f44b737b8da5cd6ffd110ea4d6b6b5262761e"
     },
     {
       "bytes": 10903,
@@ -21146,9 +21146,9 @@
       "sha256": "243bc1fdc111642f8c91f1e593bd6733312aced400a451132ba219a48f01ab9d"
     },
     {
-      "bytes": 4223,
+      "bytes": 8465,
       "path": "tests/test_nsc_infinite_inheritance.py",
-      "sha256": "9745faf4f44d2b08d7d88ea9fe7b87cacf348d188c6a6003c2bd1910a0a491fd"
+      "sha256": "9eaf53ff8711887faa5e7d79864a9f2954b7c578fc285201f38c4e09a9d2c4a5"
     },
     {
       "bytes": 4992,
@@ -22366,7 +22366,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "c15818568e4664e62ae7259e39f1cda57c54c83550b5216c13d0648836554095",
+  "lab_snapshot_sha256": "7fc7ebeb3bc778417fe0e253338e64c76292ac08592be19561090d2953b599fc",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.13",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
