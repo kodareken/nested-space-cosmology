@@ -10,6 +10,22 @@ import math
 import numpy as np
 
 
+def geometric_inherited_tree(branching,ratio,length=1.):
+    """Inherited wave law derived from edge lengths and half-edge masses.
+
+    Edge length at depth n is L*q^n. Each vertex receives half of each
+    incident edge's length as its kinetic weight; the root has a fixed
+    parent edge. The form closure supplies the boundary choice at infinity.
+    """
+    q,L=float(ratio),float(length)
+    if (isinstance(branching,bool) or not isinstance(branching,int) or branching<2
+            or not np.isfinite([q,L]).all() or not 0<q<1 or L<=0):
+        raise ValueError('integer branching>=2, length>0 and length ratio0<q<1 required')
+    mass=.5*L*(1/q+branching)
+    H=(branching+q)/(L*mass);B=-1/(L*mass*math.sqrt(q))
+    return InheritedTree(np.array([[H]]),np.array([[B]]),q**-2,branching)
+
+
 @dataclass(frozen=True)
 class InheritedTree:
     local: np.ndarray

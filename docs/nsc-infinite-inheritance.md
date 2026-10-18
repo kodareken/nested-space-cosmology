@@ -218,6 +218,56 @@ metric, as well as to its inherited operator's spectrum. This ultrametric
 is a mathematical geometry of addresses and resolution; it is not assumed
 to be a Lorentzian metric for the cap--wall spacetime.
 
+## Corollary: deriving the matrices from edge geometry
+
+The inherited H and B can themselves be derived from one specified
+geometric action. Give every parent--child edge at depth n length
+`L*q^n`, q in(0,1). Give a vertex half the length of each incident edge
+as its kinetic weight. The root has a fixed parent port with edge
+length L/q. Thus `m_n=m0*q^n`, where `m0=L*(1/q+b)/2`.
+
+For real vertex fields phi, define the weighted network action
+
+\[
+\mathcal L=\tfrac12\sum_v m_{|v|}\dot\phi_v^2
+-\tfrac12\sum_{v\to w}\frac{(\phi_v-\phi_w)^2}{Lq^{|v|}}
+-\frac{q}{2L}\phi_{\rm root}^2.
+\]
+
+The edge potential is the integral of the squared gradient of the
+linear field along that edge. The kinetic rule is the stated half-edge
+(lumped) rule; it is not claimed to be the exact continuum edge mass
+matrix. Close the action on finite-support fields as in the theorem.
+
+In canonical coordinates `u_v=sqrt(m_n)*phi_v`, direct expansion gives
+
+\[
+\Omega=q^{-2},\qquad H=\frac{b+q}{Lm_0},\qquad
+B=-\frac1{Lm_0\sqrt q}.
+\]
+
+Consequently `c=sqrt(b*q)/(L*m0)`, and the required positive margin is
+
+\[
+h-2c=\frac{(\sqrt b-\sqrt q)^2}{Lm_0}>0.
+\]
+
+It follows from geometry for every admitted b and q. No independent
+H or B is selected to make the theorem apply. The exact static result is
+
+\[
+\gamma=\frac b{Lm_0},\qquad r=\frac qb,\qquad
+\frac{\phi_{\rm root}}{f_{\rm root}}\bigg|_{\rm static}=\frac Lb.
+\]
+
+For the last equality a force is coupled as `f_root*phi_root` in the
+action: its compliance is `R(0)/m0=1/(gamma*m0)`. This is a local
+measurement predicted by this explicit geometry and action, including
+all descendant levels and the declared parent port. The boundary choice
+at infinity is the specified form closure. Other boundary choices are
+not silently identified with it. This is a geometric network realization,
+not an Einstein cap--wall solution or a generated cosmological Lambda.
+
 ## Corollary: global evolution, energy and a local measurement
 
 For u0 in Q and v0 in the Hilbert space, the inherited wave equation
@@ -297,16 +347,25 @@ slip or any P001 grid result.
 The [calculator](../src/recursive_horizons/nsc_infinite_inheritance.py)
 implements the same recurrence without building the exponentially large
 tree. A dense tree is limited to256 coordinates for independent checks.
-The [four controls](../tests/test_nsc_infinite_inheritance.py) compare a
+The [five controls](../tests/test_nsc_infinite_inheritance.py) compare a
 noncommuting matrix link with the complete finite tree, the actual subtree
 scaling, the scalar closed form and depth bound, the spectral bounds and
 the zero-link limit. They also reject missing branch/scale factors and a
-reversed noncommuting link. The proof above establishes the infinite result;
+reversed noncommuting link. A separately assembled edge action checks the
+geometric matrices, their automatic positive margin and the root compliance
+L/b. The proof above establishes the infinite result;
 finite tests check the calculator against independent identities.
+
+Independent native Grok review accepted the operator, response, spectral,
+ultrametric and wave arguments under their stated assumptions. The edge-action
+corollary was added afterward and checked against the separate action assembly.
+The manuscript's Section5.1 contains the main theorem and proof; revision
+2026-10-18.13 builds to66 pages and the new proof pages pass visual inspection.
 
 The allowance is30 process-CPU seconds for these small controls and one
 illustration, with no physical grid, evolution or large data output. The
-first four tests use .375 CPU seconds. Neither floating-point arithmetic
+first four tests use .375 CPU seconds; all five pass in .34 wall seconds.
+Neither floating-point arithmetic
 nor measured/model uncertainty is included in the analytic depth bound.
 
 ```powershell

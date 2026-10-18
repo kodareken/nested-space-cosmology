@@ -9,8 +9,9 @@ python scripts/run_python.py -m pytest tests/test_nsc_infinite_inheritance.py -q
 python scripts/run_python.py scripts/check_nsc_infinite_inheritance.py
 ```
 
-The four controls compare full finite trees and a closed-form infinite
-response; they check the implementation of the proof. The analytic depth
+The five controls compare full finite trees, a closed-form infinite
+response and a separately assembled geometric edge action; they check the
+implementation of the proof, including the root compliance L/b. The analytic depth
 bound excludes arithmetic and physical-model uncertainty. No full arrays
 or result JSON file is created.
 

@@ -4,7 +4,7 @@ import math
 import numpy as np
 import pytest
 
-from recursive_horizons.nsc_infinite_inheritance import InheritedTree
+from recursive_horizons.nsc_infinite_inheritance import InheritedTree,geometric_inherited_tree
 
 
 def test_matrix_recursion_matches_noncommuting_full_tree_and_subtree_scale():
@@ -63,3 +63,28 @@ def test_domain_assumptions_are_enforced_without_changing_the_inputs():
             ([[2]],[[.1]],2.,1),([[1j]],[[.1]],2.,2)):
         with pytest.raises(ValueError):
             InheritedTree(np.array(H),np.array(B),omega,branch)
+
+
+def test_geometric_action_derives_the_operator_and_root_compliance():
+    b,q,L=3,.5,2.5;tree=geometric_inherited_tree(b,q,L)
+    D,scales=tree.finite_matrix(2);count=len(D);K=np.zeros_like(D)
+    levels=[0]*count
+    for child in range(1,count):
+        parent=(child-1)//b;levels[child]=levels[parent]+1
+        conductance=1/(L*q**levels[parent])
+        K[parent,parent]+=conductance;K[child,child]+=conductance
+        K[parent,child]-=conductance;K[child,parent]-=conductance
+    # The fixed parent port and Dirichlet child ports are part of the
+    # same physical edge action; they are not fitted diagonal entries.
+    K[0,0]+=q/L
+    for vertex,depth in enumerate(levels):
+        if depth==2:
+            K[vertex,vertex]+=b/(L*q**depth)
+    mass0=.5*L*(1/q+b);masses=mass0*q**np.asarray(levels)
+    direct=K/np.sqrt(masses[:,None]*masses[None,:])
+    np.testing.assert_allclose(D,direct,rtol=2e-15,atol=2e-15)
+    assert tree.gamma==pytest.approx(b/(L*mass0))
+    assert tree.contraction==pytest.approx(q/b)
+    assert 1/(tree.gamma*mass0)==pytest.approx(L/b)
+    response=tree.response(0.,6)
+    assert abs(L/b-response['response'][0,0]/mass0)<=response['analytic_depth_bound']/mass0

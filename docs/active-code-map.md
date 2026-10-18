@@ -14,7 +14,9 @@ frozen finite family to a branching finite-energy operator. Its
 [independent controls](../tests/test_nsc_infinite_inheritance.py) and
 [small illustration](../scripts/check_nsc_infinite_inheritance.py) cover
 subtree scaling, full-tree elimination, finite-depth error and spectral
-counting. It does not use the paused quantum diagnostic chain or P001 grids.
+counting. `geometric_inherited_tree` derives its matrices from edge lengths
+and the declared kinetic rule; a separate action assembly checks the exact
+root compliance L/b. It does not use the paused quantum diagnostic chain or P001 grids.
 
 The [retarded-map adapter](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
 extracts [streamed endpoint rows](../src/recursive_horizons/nsc_atlas_dirac_retarded.py)

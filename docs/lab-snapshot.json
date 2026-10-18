@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a883d5a2158c3ce46ffab2ffc0b7163a473e00bc",
+  "current_receipt_commit_parent": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 268118,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "66fe8e5b11ea18e94271c87fe7cb1239ba8e4fcd",
+      "bytes": 268792,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "ce15b17492144889c963c17a638eae166c67989518b45687e4e72db5e7a76f2f"
+      "sha256": "c1fc0ea423ef0e18c3642c657302005aee6a3d0ca31d060d4b78cafbbac9bcde"
     },
     {
       "bytes": 106460,
@@ -10325,12 +10325,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 429009,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "a883d5a2158c3ce46ffab2ffc0b7163a473e00bc",
+      "bytes": 429745,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "335f406794d7b31605d2f367626ca52ba09e26b894ccc7e6bcc5158c73c7b1f3"
+      "sha256": "955d1e26d346e3ffb2cbca1ba649bd3749e24bce9a4444ee4c5485dcfa13d33a"
     },
     {
       "bytes": 336399,
@@ -10431,8 +10431,8 @@
     },
     {
       "bytes": 176218,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "a883d5a2158c3ce46ffab2ffc0b7163a473e00bc",
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "docs/nsc-atlas-dirac-probe.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "ac0506acec2dc10636d2d4845f65129e09e86026b4e7edefa3095612b576c9a6"
@@ -10514,15 +10514,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 60664,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "69738dcabc950b309266bb04df62b11f8923028e",
+      "bytes": 61190,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "4d7766639ee2d6f502564b9a63867b6d9f4b0c5a5718c7b478fd787d2d3de400"
+      "sha256": "5bd58f822d4b780ca113d194e9956ee87c33bdb5c5325a627bf2503b2600607b"
     },
     {
       "bytes": 30876,
@@ -10652,6 +10652,14 @@
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept test failed while loading this exact deleted input",
       "sha256": "cdf748b9c957d2e91d038c5ed4c2f57df6df0e571460166e4d13300b2405a748"
+    },
+    {
+      "bytes": 15788,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
+      "path": "docs/nsc-infinite-inheritance.md",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "87233c890008fecc975dc22949d16acf6440efb6c8918c38256cdc032f8cc50e"
     },
     {
       "bytes": 3296,
@@ -11466,12 +11474,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 15384,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "25da262c144771f67367668ccb4cd3edf9a6eec4",
+      "bytes": 16002,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "a065a1e90a47aebc447683415dab4f5c73e1f7fe1a1f2fe3f3aa44341e44b073"
+      "sha256": "62d98d9c619ea54bff99f16362315b7561eeb29b255b7a64aae3972532ffa562"
     },
     {
       "bytes": 9302,
@@ -11496,12 +11504,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 205777,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "66fe8e5b11ea18e94271c87fe7cb1239ba8e4fcd",
+      "bytes": 206500,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c83f5eee2fb18e9a140b76bbae3a0e4c471eb4a027e820b73f1c1174939a539c"
+      "sha256": "9499d8a656c324a6c9354fc0f2e35e2bf3d6d829d87d95e422e64d695de18a4d"
     },
     {
       "bytes": 18356,
@@ -11571,19 +11579,19 @@
     },
     {
       "bytes": 23794,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "e6ed21696175f9d693db578a9c0517db6e754e19",
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "74e6b5a4a663fa86d87001616ca2a48abcf2622072f3e0a2dc2c694307735436"
+      "sha256": "06b3cceeb8e604ff14cf021ff7f5e820615a7fb6e267b83261ae17c55b7fbd08"
     },
     {
       "bytes": 3207,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "e6ed21696175f9d693db578a9c0517db6e754e19",
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d5d72bbeeb3c5b3e6a9c7e00d358c65319433d460a552e204655f5d0666308df"
+      "sha256": "267862294817320d5ab6d1304d001e370c5a16ea18106bae98c7c0413abfb333"
     },
     {
       "bytes": 26616,
@@ -11603,27 +11611,27 @@
     },
     {
       "bytes": 398,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "e6ed21696175f9d693db578a9c0517db6e754e19",
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "bfd0e5a5d7d306189cf3e8ebd74f5ad63296ec48c7d390c8333a6185ca489351"
+      "sha256": "bc421073da8992c106eb1cca3c61e476ca9cd78a5ae00b1774e5f27dc9cf16ed"
     },
     {
-      "bytes": 207156,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "e6ed21696175f9d693db578a9c0517db6e754e19",
+      "bytes": 211882,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f469c9ee07c2a5d6790023c3a7ddbb3cf0559e33a8e86a4c73e724f06e9fd9be"
+      "sha256": "f56f1f7672cd83814512dd9c8774b764b5cf814de6c2ad06eb89ff61e3089386"
     },
     {
-      "bytes": 4285728,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "e6ed21696175f9d693db578a9c0517db6e754e19",
+      "bytes": 4369045,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "47426cf1d625b744a4cc3dbcc0796e9d7e5b133d0f6812ac120488293001d3b2"
+      "sha256": "1058b3bb601417ff3275b0069444e9c6a0fe20a8dd787a2e9d659a97618794c7"
     },
     {
       "bytes": 3283,
@@ -30851,6 +30859,14 @@
       "sha256": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b"
     },
     {
+      "bytes": 1136,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
+      "path": "scripts/check_nsc_infinite_inheritance.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "07e570cef54b852f2b8934441ae9bf869b257b1e0768986c65c84eb84f7b87b7"
+    },
+    {
       "bytes": 13271,
       "import_bytes": 13271,
       "import_sha256": "c4faa0aa1bb73c73274cf51c282cc25bc8ffb7b63f0bb2a95405084a5666c91d",
@@ -35593,6 +35609,14 @@
       "sha256": "5b8d9febed933425f232bd47c1e8a5441d3a5de6df778775b5b312cf21d556c6"
     },
     {
+      "bytes": 5416,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
+      "path": "src/recursive_horizons/nsc_infinite_inheritance.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "b08a7cd8f724d3f0cfe9127d943f36241ebb374aa83900a642de6c3adc0cd9ab"
+    },
+    {
       "bytes": 10903,
       "import_bytes": 10903,
       "import_sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
@@ -40097,6 +40121,14 @@
       "original_sha256": "a2ebf6b94540e2e42d6047a2273bad50f2c337491295e2a7b578e7c8ad98a0c6",
       "path": "tests/test_nsc_incoming_window_refinement.py",
       "sha256": "243bc1fdc111642f8c91f1e593bd6733312aced400a451132ba219a48f01ab9d"
+    },
+    {
+      "bytes": 4223,
+      "change": "Record the inherited-law proof, geometric action and matching manuscript with checked evidence.",
+      "changed_from_commit": "73e8ec54f18d37a8bb69dfaf8eb4f17c3b5943c8",
+      "path": "tests/test_nsc_infinite_inheritance.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "9745faf4f44d2b08d7d88ea9fe7b87cacf348d188c6a6003c2bd1910a0a491fd"
     },
     {
       "bytes": 4992,
