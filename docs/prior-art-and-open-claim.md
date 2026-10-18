@@ -1,5 +1,23 @@
 # Prior art and admission of new research
 
+## Reuse the exact-wave control after the failed endpoint contraction
+
+The completed P001 trial has a growing mass residual. In the quiet
+`alpha=0` cap the owned reduced equation is `chi_TT=chi_zz`, with regular
+solutions `G(T+z)-G(T-z)`. The existing
+[background controls](../tests/test_nsc_atlas_fixed_background_reference.py)
+already check an exact incoming quartic front, its analytic mass and time
+derivative, the normalized temporal mass balance and the hybrid wall trace.
+They also test the background/departure equivalence for a represented
+polynomial and retain a nonzero remainder for a finite-coupling history.
+
+Reuse those checks rather than adding another exact-wave campaign. The
+normalized residual is tested directly; multiplying by zero physical
+amplitude would not check it. These controls establish the stated identities
+on their manufactured inputs. They neither diagnose the unsaved P001 peak
+nor establish its finite-amplitude convergence. No new trajectory, grid
+scan or altered production equation follows from this audit.
+
 ## Physical resolution of one fixed geometry, 18 October 2026
 
 The two-level construction changes the physical state. The next Step 7
@@ -93,6 +111,36 @@ retarded kernel. Before a numerical application, specify and freeze its
 producer, source-premise checks, dense-solve budget and full quadrature
 remainder controls. No new evolution, source fit or cutoff scan is admitted
 by this note.
+
+### One original-slice preparation tangent
+
+Admit one application of that derived family to the authenticated
+`nf512_original_T0_*` data already retained inside the ignored v2 episode
+cache. Reuse its original action, occupations, conformal gauge, 511 geometry
+coefficients and 2048 quadrature points. Check the zero-momentum, constant-Q
+and paired-column premises before matrix work. The sole preparation
+parameter is the declared phase, with fixed generator
+`f=cos(2*pi*x/8)`; no measurement selects its shape or amplitude.
+
+Borrow the existing exact constraint polarization and radius Jacobian.
+Solve their one linearized projected constraint for `delta_r`; preserve
+the full quadrature remainder and original constraint defects. Report the
+initial observer-sphere fractional radius and clock-rate derivatives per
+unit phase. They supply an initial response for later causal propagation,
+not a propagated observation, a formation mechanism or a Lambda value.
+Small manufactured controls independently compare the finite unitary,
+source derivative and full constraint derivative before freezing the
+producer. A residual from the projected solve must be below `1e-8` relative
+to the larger source or geometric response, with the absolute scale shown.
+This is numerical consistency, not a continuum error certificate.
+
+The complete application is capped at **200 process-CPU seconds**, one
+dense 511-dimensional factorization and no root solve, time step or scan.
+Use one useful eight-thread BLAS team. Stop on a failed premise, singular
+solve, source drift, unresolved derivative check, nonfinite result or budget
+exhaustion. Retain only a summary of at most 24,000 bytes and input/method
+hashes. A vanishing response or a large unprojected remainder is an outcome
+to report, not a reason to tune the preparation or repeat the application.
 
 ## Two successive sourced boundaries, 18 October 2026
 

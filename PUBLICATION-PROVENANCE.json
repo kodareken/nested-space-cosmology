@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 388736,
+      "bytes": 389114,
       "path": "docs/current-result.md",
-      "sha256": "fea0ba78540701fe6de61ba265a1b57c65a3635abaafbead6e9ef618801fc409"
+      "sha256": "d508b090e0e4110de507a3cc81ccfb2ef8f9c3808dea5e2e036da5fb905f1edd"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2380609,
+      "bytes": 2381089,
       "path": "docs/lab-snapshot.json",
-      "sha256": "f2d3ba0bf2323394cdd5865248f2c07829e8f1e50031fe7fb41a311af3ecb518"
+      "sha256": "16b8aa19d54b6252286b5caf79df81d3281e425671990280b88767edb9418d07"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 499981,
+      "bytes": 502871,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "074a5b130e36f3ab3fb955a4dc81636deed85849dce6d1b353de0913fd55454b"
+      "sha256": "5120bc2213599b210d71110235a48f4de5eec69488eca9ad8f1969912d13750e"
     },
     {
       "bytes": 6705,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 84690,
+      "bytes": 85401,
       "path": "docs/schur-memory.md",
-      "sha256": "b21b954520f12004367d80b89b3639fe567df830a79ba0c410ed074f36e3f7d3"
+      "sha256": "78b4482343bafd326062dfcd4601283652e4f72bfe1a21cc53d9d403226e0ac9"
     },
     {
       "bytes": 537091,
@@ -20026,6 +20026,11 @@
       "sha256": "ae5ccf8252b6d67a41192d060922f5b70c77ca08c1cc672b56bfc59af2aa46c8"
     },
     {
+      "bytes": 2622,
+      "path": "tests/test_nsc_conformal_preparation_fourier_control.py",
+      "sha256": "f48d05ef31468526fc16d0805d3a218a218a225fc8259a24c0a8f62e0a1be853"
+    },
+    {
       "bytes": 6788,
       "path": "tests/test_nsc_conformal_resolution.py",
       "sha256": "0b36223543bdc4b992ef2b65959f2401aed3332f58759503c4fffed25ff3db28"
@@ -21731,7 +21736,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "f2d3ba0bf2323394cdd5865248f2c07829e8f1e50031fe7fb41a311af3ecb518",
+  "lab_snapshot_sha256": "16b8aa19d54b6252286b5caf79df81d3281e425671990280b88767edb9418d07",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

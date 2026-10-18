@@ -412,6 +412,17 @@ supplied. The next bounded calculation can check the source premises and
 solve this tangent before attempting causal propagation. No such physical
 application or retarded kernel has yet been run.
 
+An independent analytic control fixes the source and radius normalization.
+On a constant `r=1,Q` chart, take three normalized chiral plane-wave pairs
+and the resolved harmonic `f=cos(k*x)`. With all six occupations included,
+the phase gives `delta_rho=M*sum(c_j)*f'/(Q*L)`. The radius derivative is
+`J_r=16*pi*A*(D_x^2/Q-Q)`, so its cancelling response is
+`delta_r=M*sum(c_j)*f'/(16*pi*A*L*(Q^2+k^2))`. The
+[Fourier control](../tests/test_nsc_conformal_preparation_fourier_control.py)
+checks both formulas and the full polarized constraint, without a numerical
+root or finite-difference Jacobian. This constant chart tests the operators;
+the archived sourced radius remains the background for the application.
+
 For that later propagation, write `A(T)=D X_H(z(T))` on the actual
 trajectory. The environment propagator obeys
 `partial_T U_EE=A_EE(T)*U_EE`. Eliminating its linearized variables gives

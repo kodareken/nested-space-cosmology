@@ -41,6 +41,12 @@ The independent mass/lapse check below excludes radial integration as the
 cause at its separate retained stage. The unresolved connection remains the
 represented field and wall/time coupling. No new grid scan is launched.
 
+The existing exact incoming-wave control also passes when reused for this
+diagnosis: its conformal wall-flux residual is `1.35e-13` and its normalized
+temporal mass residual is `-8.82e-18` (0.125 active CPU seconds). This checks
+the zero-coupling operator on its analytic input. The finite-amplitude P001
+failure remains; another exact-wave control would duplicate this check.
+
 ![Three-grid radius envelope and mass/flux trends](figures/nsc-atlas-fixed-endpoint-comparison.png)
 
 ## One geometry at two resolutions, 18 October 2026
