@@ -1491,14 +1491,14 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 252760,
+      "bytes": 253297,
       "path": "docs/active-code-map.md",
-      "sha256": "8a73247f14fbd87cae4c8a53d1a9fade8aee1139e7fc16907387ccb029a65dd9"
+      "sha256": "a4f8fdf669a44971efcdd2800f063e267b1e82ec04965b7ac0b33abb81a19f42"
     },
     {
-      "bytes": 104089,
+      "bytes": 104960,
       "path": "docs/arxiv-studies.md",
-      "sha256": "8c7aa74c69c2facbc3d4aa21bb14299f1c1544992750ef5b3323af7bb12690f1"
+      "sha256": "4560ef7e0ee9c4d79ea13f1b9e7c6b6a6d999be212b71feff4439955d98e48d7"
     },
     {
       "bytes": 1458,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2405289,
+      "bytes": 2406698,
       "path": "docs/lab-snapshot.json",
-      "sha256": "53a7096b17f0f22250a1a5dfcc37b3cdfb0f3757bbabb573aacbd882cda8cb80"
+      "sha256": "a748fb912ad79920456c63af76b229020373d7a1f110003d7c936d079f574013"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 11900,
+      "bytes": 15470,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "0f08d53e09fb66de9039158a36a54ea39084095b08cd3a23c85130adf7db26fa"
+      "sha256": "5481e808560b0e22a410dfa11d71a9c26f674a7298fef1d64930425121f17abf"
     },
     {
       "bytes": 17343,
@@ -2221,9 +2221,9 @@
       "sha256": "2de9c90a1995f51dada247d902553e3f1f3b7778649f8f1450a605aefa7e7b03"
     },
     {
-      "bytes": 542070,
+      "bytes": 543232,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "10d7eb3a5697f32350e9b5ec87064c4912dfaceaaf0ed5d5f84f269821725501"
+      "sha256": "b7904a803f157f47b9a97aae813ad28f26a1236290102baa3b812c96101c552c"
     },
     {
       "bytes": 6705,
@@ -2236,9 +2236,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 181108,
+      "bytes": 181780,
       "path": "docs/reproducing.md",
-      "sha256": "12ae48267050120fc425ed4a38c3a68cd6a1ee44c35d21f20035a786ee178402"
+      "sha256": "a51cc196e2f25eef6051cb3407b00ab5fb4f8290b50e377050bba64f188035d9"
     },
     {
       "bytes": 31710,
@@ -16616,6 +16616,11 @@
       "sha256": "9d46a34a54feb1f90b1de4478e535037138ada44e4628aed6ff458c38cd63c9f"
     },
     {
+      "bytes": 2506,
+      "path": "scripts/measure_nsc_atlas_dirac_wall_time.py",
+      "sha256": "bcdac015263cffb96d66343cd5dd1eef8ac485a30c824c4c9fded75098a2b04a"
+    },
+    {
       "bytes": 7816,
       "path": "scripts/measure_nsc_atlas_distance_contrast.py",
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
@@ -17399,6 +17404,11 @@
       "bytes": 5756,
       "path": "src/recursive_horizons/nsc_atlas_departure_gradient.py",
       "sha256": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452"
+    },
+    {
+      "bytes": 5183,
+      "path": "src/recursive_horizons/nsc_atlas_dirac_evolution.py",
+      "sha256": "e54190b116d396b30d6125e700ad3225b16514ffc22c9381d5475a9651ff3786"
     },
     {
       "bytes": 4781,
@@ -19726,6 +19736,11 @@
       "sha256": "64ee9f580218686d5a7dd7cd00b81dbb0fb3a891c21d954d50a9cef5e187b856"
     },
     {
+      "bytes": 5940,
+      "path": "tests/test_nsc_atlas_dirac_evolution.py",
+      "sha256": "154b6ca10b4ae6fe46391c2efef57b3b86bd9c535564f584324ee1b6c8018c6e"
+    },
+    {
       "bytes": 3208,
       "path": "tests/test_nsc_atlas_dirac_probe.py",
       "sha256": "349d9f5b890881f64d0ca30a9a0249f741b5c6704f8a7c9b3b34bf5d35a902ce"
@@ -21981,7 +21996,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "53a7096b17f0f22250a1a5dfcc37b3cdfb0f3757bbabb573aacbd882cda8cb80",
+  "lab_snapshot_sha256": "a748fb912ad79920456c63af76b229020373d7a1f110003d7c936d079f574013",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.8",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

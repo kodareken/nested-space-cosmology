@@ -248,3 +248,93 @@ The derivative jump is `6.595057601615801/ell^2`, agreeing with
 `k*k_wall*gamma/Rw`. A smooth continuation of the same cap has no such jump.
 This is a quantified spatial interface change on the joined initial data,
 not a loop polarization or a nesting-induced `Psi/Phi` value.
+
+## Physical time generator at the moving interface
+
+The intrinsic spatial operator is insufficient even to supply the initial
+time generator at the wall. On the slice above take zero shift, radial
+metric length `a=1` and `K_lambda_lambda=0` on each side. With
+`ds2=-N^2*dt^2+a^2*dlambda^2+r^2*dOmega2`, write
+`a_Sigma=partial_lambda log(N)` and `s=gamma_v/gamma`. The wall-frame
+acceleration is
+
+$$
+K^\tau{}_{\tau,w}=\partial_\tau\theta+
+\gamma a_\Sigma-\gamma_v K_{\lambda\lambda},\qquad
+\sinh\theta=\gamma_v.
+$$
+
+The boost and its derivative along the wall are common. Therefore its
+temporal Israel condition requires
+
+$$
+[a_\Sigma]=-\frac{k_{\rm wall}}\gamma.
+$$
+
+This is a necessary lapse jet for this initial slice and frame. A globally
+constant lapse would lose this part of the material-wall geometry. Normalize
+the cap's static clock to `Nwall=1` at the initial instant:
+`Nminus=sqrt(1-H^2*r^2)/sqrt(1-H^2*Rw^2)`. Its wall acceleration is
+`a_Sigma_minus=-H^2*Rw/sqrt(1-H^2*Rw^2)`, and the jump fixes the exterior
+first jet. It does not select the exterior lapse farther away or its higher
+time derivatives.
+
+The half-density `chi=sqrt(a)*r*psi_Sigma` has norm
+`integral |chi|^2 dlambda`. A direct diagonal-tetrad contraction gives the
+radial spin connection
+
+$$
+\frac{\gamma^0}{N}\left(\frac{a_t}{2a}+\frac{r_t}r\right)
++\frac{\gamma^1}a\left(\frac{N_\lambda}{2N}+\frac{r_\lambda}r\right).
+$$
+
+The time derivative of the half-density removes the trace-of-slice-curvature
+term. With `c=N/a` and `alpha=sigma_2`, the one-sided massless generator is
+
+$$
+H=-i\alpha\left(c\partial_\lambda+
+\tfrac12\partial_\lambda c\right)+\sigma_1\frac{Nk}r.
+$$
+
+At the initial instant `c=N`; its derivative companion contains the step in
+the lapse gradient. The [component](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
+retains it. The [controls](../tests/test_nsc_atlas_dirac_evolution.py) compute
+the connection from the full four-dimensional diagonal tetrad, verify the
+half-density and Green identity, and recover the earlier cap optical
+Hamiltonian by its unitary coordinate/density change. The independent
+[3+1 derivation](https://arxiv.org/html/2503.03918), Eq. IX.29, also retains
+the lapse-gradient and slice-curvature terms before rescaling.
+
+Transparency is continuity along the **moving** wall. Differentiating it
+and using the one-sided equation gives
+
+$$
+[\chi_t]=-N_ws[\chi_\lambda],\qquad
+[\chi_\lambda]=-
+\frac{[a_\Sigma]}2(I-s\alpha)^{-1}\chi
+=\frac{k_{\rm wall}\gamma}2(I+s\alpha)\chi.
+$$
+
+Here `|s|<1`, so the inverse exists. Requiring both the time generator and
+spatial derivative of `chi` to be continuous would be the wrong moving
+domain. Restoring the derivatives of `r` using the checked geometric jumps
+gives, in the slice spin frame,
+
+$$
+[\partial_\tau\psi_\Sigma]=0,\qquad
+[\partial_n\psi_\Sigma]=
+\left(\frac{3k_{\rm wall}}2 I+
+\frac{k_{\rm wall}s}2\alpha\right)\psi.
+$$
+
+The normal component of this frame's two-dimensional connection has jump
+`[omega(n)]=gamma_v*[a_Sigma]=-k_wall*s`. Its spinor term
+`alpha*[omega(n)]/2` cancels the matrix contribution. In a frame parallel
+along the material normal the result is exactly the earlier condition
+`[partial_n psi]=3*k_wall*psi/2=-[K_wall]*psi/2`. No surface spinor
+interaction has been added. Setting the lapse-gradient step to zero would
+instead give `k_wall*psi`, missing the temporal part of the connection.
+
+These are compatible initial one-sided equations and wall jets. They do not
+yet supply a full foliation, propagated covariance, renormalized polarization
+or gravitational slip.

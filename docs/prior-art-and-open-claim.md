@@ -36,6 +36,23 @@ construction would reject it. The result unlocks a joined initial surface;
 state preparation, interface renormalization and metric response remain
 required for a nested gravitational slip.
 
+**Time-generator connection.** Before choosing a state, check the lapse and
+spin-frame terms at this moving wall. On the same initial slice use zero
+shift, radial metric length `a=1`, piecewise `Kll=0`, and a common lapse at
+the wall. Derive the jump of `d_lambda log N` from the temporal Israel
+condition and the common shell boost; derive the one-sided half-density
+Dirac generator from the tetrad. Differentiate transparency along the moving
+interface, retaining the lapse-gradient step. Recover the four-dimensional
+normal condition in a frame parallel along that normal. Independent Clifford,
+moving-trace and frame-transformation controls have 30 process-CPU seconds;
+one frozen algebraic application has 30 seconds and 8000 summary bytes,
+no field evolution or choice of exterior vacuum. Stop on a failed identity.
+A wrong boost-connection sign, an incorrect half-density, or using the
+intrinsic square as the moving four-dimensional domain are the anticipated
+failures. A direct tetrad calculation giving a different generator or normal
+jump rejects this connection. A full foliation, its higher time jets and a
+physical state remain subsequent inputs.
+
 ## Pointwise cap-equation defect on the archived coupled state
 
 The incoming-offset control identifies a wall channel, but takes its

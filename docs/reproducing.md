@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+The physical initial Dirac time generator and its moving-wall compatibility
+reproduce with:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_evolution.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_wall_time.py --output .build/nsc-atlas-dirac-wall-time.json
+```
+
+The method must be committed and the output path unused. It evaluates the
+same quiet source anchor algebraically and takes no field evolution steps.
+The [owner](nsc-atlas-dirac-probe.md#physical-time-generator-at-the-moving-interface)
+states the common initial lapse, its necessary jump, and the frame change;
+a full foliation and quantum state remain unselected.
+
 The source-anchor joined initial geometry and its intrinsic spatial Dirac
 operator reproduce with:
 

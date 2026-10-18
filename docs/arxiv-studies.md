@@ -32,6 +32,11 @@ Carolina Figueiredo, then a Princeton doctoral student, was named the inaugural 
 
 Then check the list below. Do not repeat a derivation this file already sources. The studies were opened while investigating the nested question. They are not proofs of one claim. Some supply a formula. Some are a clue. Some are a constraint. Some show that a local or infinite route does not answer the question. Record a new study in that same way.
 
+## Actual cap--wall Dirac evolution, 18 October 2026
+
+- [2503.03918](https://arxiv.org/html/2503.03918), Alcubierre: read the spherical tetrad and contraction in IX.1, especially IX.13, IX.27--29. Reuse the lapse-gradient and slice-curvature structure as an independent check of the directly contracted, half-density generator in the [Dirac owner](nsc-atlas-dirac-probe.md#physical-time-generator-at-the-moving-interface); no flat-space polarization or state is imported.
+- [2108.11630](https://arxiv.org/html/2108.11630v3), Gerard and Stoskopf: read 3.2 Cauchy covariances, 6.1--6.2 Cauchy reduction, 6.4 projection conditions and 7.2's smooth deformation hypotheses. Supplies a state-construction route to inspect; its smooth-spacetime theorem is not applied across the actual material wall, and the bare intrinsic spatial spectral projector is not declared Hadamard.
+
 ## The owned gravitational spectral profile, 18 October 2026
 
 [Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2): read
