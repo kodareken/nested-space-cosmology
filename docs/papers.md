@@ -6,6 +6,16 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.9` adds the actual Dirac bulk and Euler-wall trace,
+the exact wall radar chart, and action-derived stress/metric vertices in
+Sections 6.1.14--6.1.16. New Figure 3 shows the finite causal diamond and
+the change in radial Dirac potential. A fixed radar receiver gives a
+background frequency ratio of 1.153626 versus 1.080686 for the smooth cap
+continuation. Quantum preparation and the full curved slip remain open.
+Section 13.22 now includes the archived PDE/boundary-lift diagnosis and
+the distinct manufactured shared-action control; P001 remains unconverged.
+The ten figures are numbered in reading order.
+
 Revision `2026-10-18.8` identifies Section 6.1.12 as an imported flat Dirac
 reference, then derives the actual quiet cap's radial probe operator and
 the material-interface domain in Section 6.1.13. No nested slip is claimed:

@@ -1,0 +1,110 @@
+{
+  "figure": {
+    "bytes": 226492,
+    "path": "paper/figures/dirac-wall-radar.png",
+    "sha256": "19862b80b646424a901018fdaff1d409b036570c0107882596c242a963c8ee19",
+    "visual_metric_points": 16641
+  },
+  "limits": {
+    "CPU_seconds": 30,
+    "summary_bytes": 10000,
+    "wall_ODE_rhs": 200000
+  },
+  "reference": {
+    "analytic_bounds": {
+      "cap_radius_lower": 0.3932392654848099,
+      "cap_radius_upper": 0.6448870089411689,
+      "conformal_factor_lower": 0.14837066561896606,
+      "exterior_radius_lower": 0.45,
+      "exterior_radius_upper": 0.55,
+      "lapse_lower": 0.3851891296739383,
+      "wall_duration_upper": 0.14832396974191328
+    },
+    "checks": {
+      "Dirac_potential_normal_jump": 2.0268231537556858e-12,
+      "angular_Israel": 3.7969627442180354e-14,
+      "four_dimensional_scalar_curvature": 7.105427357601002e-15,
+      "geometric_mass": 9.71445146547012e-17,
+      "independent_quadrature_32_64": 5.551115123125783e-17,
+      "temporal_Israel": 5.03597163969971e-13,
+      "wall_lapse": 9.192646643896296e-14,
+      "wall_maps_vs_independent_quadrature": 2.1094237467877974e-14
+    },
+    "counts": {
+      "Dirac_time_steps": 0,
+      "P001_time_steps": 0,
+      "loop_polarizations": 0,
+      "new_P001_grids": 0,
+      "wall_ODE_rhs": 104
+    },
+    "domain": {
+      "cap_triangle": "V<=U",
+      "diamond": "0<=T-x<=duration and 0<=T+x<=duration",
+      "exterior_triangle": "V>=U",
+      "is_a_complete_global_Cauchy_surface": false,
+      "null_label_range": [
+        0.0,
+        0.1256873632901346
+      ],
+      "radar_position_max": 0.0628436816450673,
+      "radar_time": [
+        0.0,
+        0.1256873632901346
+      ]
+    },
+    "inputs": {
+      "H_ell": 1.0,
+      "M_over_ell": 0.4,
+      "angular_k": 1,
+      "k_wall_ell": 2.0,
+      "wall_radius": [
+        0.45,
+        0.55
+      ]
+    },
+    "nested_Psi_over_Phi": null,
+    "radar_probe": {
+      "cap": {
+        "clock_u": 0.027007307693417082,
+        "clock_v": 0.08994207132638112,
+        "lapse": 0.9253384739728456,
+        "potential": 1.7247878777146088,
+        "potential_x": -7.817378685963176,
+        "radar_position": 0.03146738181648202,
+        "radius": 0.5364940732300046,
+        "received_over_wall_frequency": 1.080685638960415,
+        "time": 0.0584746895098991
+      },
+      "interpretation": "Photon emitted at wall tau(.475), received by a fixed radar-position observer at (U,V)=(tau(.475),tau(.525)); cap control continues the same cap and uses the same observer radar clock protocol. Not a Dirac quantum correction.",
+      "nested": {
+        "clock_u": 0.027007307693417082,
+        "clock_v": 0.08994207132638112,
+        "lapse": 0.8668322504200849,
+        "potential": 1.7100955964510307,
+        "potential_x": -8.637102784158625,
+        "radar_position": 0.03146738181648202,
+        "radius": 0.506891107268521,
+        "received_over_wall_frequency": 1.1536257442144997,
+        "time": 0.0584746895098991
+      }
+    },
+    "sampled": {
+      "max_radius": 0.55,
+      "metric_points": 81,
+      "min_lapse": 0.7481617070604683,
+      "min_radius": 0.42404795929243083
+    },
+    "scope": "Exact quiet finite causal chart and background radar protocol; no state selection, Dirac propagation, renormalized metric response or nested slip."
+  },
+  "runtime_cpu_seconds": 1.21875,
+  "schema": "nsc-atlas-dirac-radar-v1",
+  "source_commit": "9c0c68fe1a04dd604880d9daa849b53eb81be038",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_radar.py": "5179a66d61519dba3427c41c26407c26ec4966bca91c4efe685dc817baea0ea7",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "tests/test_nsc_atlas_dirac_radar.py": "06ae4f89f0aad94eb711a4446f5d19fd36fa323f30a9d658cd8c225ee6689e7b"
+  },
+  "status": "finite_causal_radar_chart_checked"
+}

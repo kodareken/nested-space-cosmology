@@ -28,6 +28,10 @@ and gives an inner-wall test-flash relation, $1+z=3.74639338$. Its exact
 vacuum end supports a conditional parent initial-data family with unequal
 children and a retained grandchild.
 
+A massless Dirac probe on that quiet geometry now has local bulk and
+Euler-interface trace terms, a finite wall radar chart, and action-derived
+stress vertices. Its full quantum gravitational slip remains uncomputed.
+
 A separate periodic Einstein--Weyl--Dirac realization permits averaging in
 a specified observer clock and direct light-cone calculation. Its final
 dimensionless geometric trace is $-0.57251629$, with vacuum-form defect
@@ -1143,6 +1147,170 @@ on its initial covariance through $-i\operatorname{Tr}(C[V(t),V(0)])$;
 geometry alone does not select it. The completed result here is the curved
 operator/domain connection, not a loop polarization or an NSC slip number.
 
+### 6.1.14. Local Dirac trace on the cap and material wall
+
+The free four-component Dirac determinant and general
+[heat-coefficient framework](https://arxiv.org/pdf/hep-th/0306138)
+are imported; the spin/statistics contractions and actual curvature are
+calculated. In the two quiet smooth regions, where $\Box R=0$,
+
+$$
+\frac{\langle T^\mu{}_\mu\rangle}{\hbar c}
+=\frac{7R_{\alpha\beta\gamma\delta}R^{\alpha\beta\gamma\delta}
++8R_{\alpha\beta}R^{\alpha\beta}-5R^2}{360(4\pi)^2}.
+$$
+
+The [one-sided evaluation](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.json)
+therefore gives $-11H^4/(240\pi^2)$ in the cap and
+$7M^2/(120\pi^2r^6)$ outside. A flat reference has zero local curvature
+trace. These are actual-background terms of the declared quantum probe,
+distinct from the flat nonlocal polarization in Section 6.1.12.
+
+At the material wall, integrate a smooth normal curvature jet before
+taking a thin limit. The declared class smooths the kinked conformal factor
+while the conformal product curvature remains bounded. With one normal
+pointing from cap to exterior, put $t=K^\tau{}_\tau$, $b=K^\Omega{}_\Omega$,
+$A=\ddot{R}/R$ and $B=(1+\dot{R}^2)/R^2$. The Chern scalar is
+$\mathcal{B}_3=-8tb^2+8Bt+16Ab$. Direct Lorentz curvature contraction gives
+the Euler surface coefficient
+
+$$
+\mathcal{E}_\Sigma=-[\mathcal{B}_3]
+=4k_{\rm wall}(k_{\rm wall}^2+3H^2)=56/\ell^3.
+$$
+
+The exterior mass and wall radius cancel through the signed junction
+equations. Pure-trace leading singular terms cancel in both Euler and
+Weyl curvature squares; no delta square is evaluated. The
+[Euler-wall reference](../results/summaries/nsc-atlas-dirac-euler-wall-v1.json)
+then gives
+
+$$
+\frac{\langle T^\mu{}_\mu\rangle_{\Sigma,E}}{\hbar c}
+=-\frac{77}{720\pi^2\ell^3}\delta_\Sigma.
+$$
+
+A smooth continuation of the cap has no such interface coefficient.
+The scheme-dependent total derivative, finite interface terms, traceless
+stress and quantum preparation remain separate inputs. This one Euler
+term is not the complete wall stress. Trace-only projections do not
+establish vacuum stress or replace the supplied cap $\Lambda_{0,-}\ell^2=3$.
+
+### 6.1.15. An actual wall radar chart and a finite clock prediction
+
+The [wall-clock construction](../results/summaries/nsc-atlas-dirac-radar-v1.json)
+uses the same $H\ell=1$, $k_{\rm wall}\ell=2$, $M/\ell=.4$ and
+$.45\le R_{\rm wall}/\ell\le.55$. In each static region take optical
+coordinates $u_i=t_i-r_i^*$, $v_i=t_i+r_i^*$. Their wall derivatives are
+
+$$
+\frac{du_i}{d\tau}=\frac{1}{\beta_i+\dot{R}},\qquad
+\frac{dv_i}{d\tau}=\frac{1}{\beta_i-\dot{R}}.
+$$
+
+Inside the exterior horizon the second derivative is negative. Label both
+null rays by their wall proper times $U,V$, preserving that orientation.
+Then
+
+$$
+T=(U+V)/2,\quad x=(V-U)/2,\quad
+ds_2^2=C_i(-dT^2+dx^2),\quad
+C_i=f_i(r)u_i'(U)v_i'(V)>0.
+$$
+
+The cap occupies $V\le U$ and exterior $V\ge U$. The proper-clock range
+$0\le U,V\le S$, $S/\ell=.1256873632901$, gives the finite causal diamond
+in Figure 3. An analytic conservative bound gives $N=\sqrt{C}\ge.3851891$
+throughout that domain. The material wall remains $x=0$, $T=\tau$,
+$C=1$; both Israel jumps are retained. This construction uses no spatial
+cutoff profile and has no reflecting timelike ends. The earlier wide
+coordinate chart's fold remains an unsuccessful construction, without
+changing the underlying quiet geometry.
+
+The actual Dirac half-density now has constant characteristic speed:
+
+$$
+\xi=C^{1/4}r\psi,\qquad
+H_\kappa=-i\sigma_2\partial_x+\sigma_1W_\kappa,\qquad
+W_\kappa=\kappa\sqrt{C}/r.
+$$
+
+Both $W_\kappa$ and its first derivatives are continuous at the wall.
+The density spinor and its spatial derivative are continuous in this
+frame, while the physical parallel-normal jump remains $3k_{\rm wall}\psi/2$.
+
+For a finite clock protocol, emit a radial optical phase at wall
+$U=\tau(.475)$ and receive at
+$(U,V)=(\tau(.475),\tau(.525))$ on a fixed wall-radar-position observer.
+The signed radar position is $x/\ell=.0314673818165$ and
+$T/\ell=.0584746895099$. The null phase $-U$ and receiver proper clock give
+$\omega_{\rm rec}/\omega_{\rm wall}=1/N_{\rm rec}$.
+
+| Quiet geometry with the same radar protocol | $r_{\rm rec}/\ell$ | $N_{\rm rec}$ | $\omega_{\rm rec}/\omega_{\rm wall}$ | $W_1\ell$ |
+| --- | ---: | ---: | ---: | ---: |
+| Nested cap--wall--exterior | .5068911 | .8668323 | 1.153626 | 1.710096 |
+| Smooth cap continuation | .5364941 | .9253385 | 1.080686 | 1.724788 |
+
+For the independently supplied $\ell=10\,{\rm km}$, this radar range is
+$314.674$ m. The smooth continuation is a geometric control with the same
+observer worldline and clock labels; it is not another matched membrane
+solution. These are conditional quiet-background predictions, with no
+observed frequency used to tune the geometry. They are not a quantum slip
+or an astronomical identification. The optical-map comparison with independent
+quadrature differs by $2.11\times10^{-14}$ or less; finite mode propagation and the full
+quantum error account are not supplied by this geometry calculation.
+
+![Wall radar causal diamond, clock lapse and actual change in Dirac potential](figures/dirac-wall-radar.png)
+
+*Figure 3. The finite quiet wall-clock diamond. The material wall is the
+vertical line; null edges are causal limits. Left: proper-clock lapse,
+with the emitted/reflected radar ray and receiver. Right: the radial
+Dirac-potential difference from a smooth continuation of the same cap,
+using the same wall clock and probe angular sector. These colors describe
+the background geometry, not an evolved quantum state or a metric-loop
+response.*
+
+### 6.1.16. Stress vertices and the inherited quantum preparation
+
+The same canonical radial Dirac action now supplies its gravitational
+sources. For a full magnetic multiplet let $d=2|\kappa|$,
+$f=d/(4\pi)$, $\xi=\sqrt{a}\,r\psi$,
+$q_A=-i(\xi^\dagger A\xi_y-\xi_y^\dagger A\xi)/2$ and
+$s_1=\xi^\dagger\sigma_1\xi$. Its real Hamiltonian density is
+$h=d[N(q_\alpha/a+\kappa s_1/r)-\beta q_I]$. Metric variation at fixed
+canonical half-density gives
+
+$$
+\rho=\frac{f}{ar^2}(q_\alpha/a+\kappa s_1/r),\qquad
+p_r=\frac{fq_\alpha}{a^2r^2},\qquad
+p_t=\frac{f\kappa s_1}{2ar^3},\qquad
+T^{\hat{0}\hat{1}}=\frac{fq_I}{a^2r^2}.
+$$
+
+The [stress and contact calculation](../docs/nsc-atlas-dirac-probe.md#dirac-stress-and-the-actual-gravitational-metric-vertices)
+checks the Hilbert energy/flux, complete angular normalization,
+four-dimensional covariant conservation and the first/second metric
+variations. Finite-mode stress has zero classical trace and transmits
+continuously; the anomaly in Section 6.1.14 is retained separately.
+Radial ports and first-order time-end variations remain in an integrated
+response. No scalar source or flat polarization is substituted.
+
+The radar characteristic equations define the transfer of prepared
+incoming data to the middle Cauchy segment. A parent covariance must
+include both incoming branches and their cross-correlations. Existing
+Gaussian boundary elimination can preserve those terms once the actual
+transfer is supplied. Neither the chart nor the common-law relation
+chooses a root state. A null-line frequency prescription would be an
+additional preparation axiom; its four-dimensional short-distance and
+interface behavior has not been established here.
+
+Consequently a numerical Dirac transfer, a compatible inherited
+preparation, finite bulk/interface renormalization conditions, and the
+linearized gravitational/junction response to a declared source still
+separate this construction from a nested $\Psi/\Phi$ prediction. The
+finite background clock measurement above remains distinct from that
+uncomputed quantum response.
+
 ### 6.2. The retained local incoming gate
 
 <!-- nsc-claim:local-source-insertion-majorant -->
@@ -1209,7 +1377,7 @@ construction and checks.
 
 ![Two-hole parent slice and its distinct asymptotic ends](../results/development/nsc-cosmological-atlas-v2/parent-slice.png)
 
-*Figure 3. The explicit two-hole initial-data benchmark. This is a
+*Figure 4. The explicit two-hole initial-data benchmark. This is a
 nonspherical common parent with unequal ends, not a solved evolution that
 creates children. Local spherical models must earn an attachment to it or
 belong to a separate parent family.*
@@ -1364,7 +1532,7 @@ estimate.
 
 ![A regular cap, sourced wall, vacuum transition and bridge](../results/development/nsc-cosmological-atlas-v4/connection-slice.png)
 
-*Figure 4. The verified initial connection. Spatial distances are not ages.
+*Figure 5. The verified initial connection. Spatial distances are not ages.
 Because $|R'|>1$ on part of the chosen slice, the radius profile should
 not be interpreted as a Euclidean surface of revolution. The protected
 right-exterior observer interval is a separate causal-domain statement.*
@@ -1465,7 +1633,7 @@ infinity; $R_{\mathrm{cut}}/\ell=4$ is the finite calculation domain.
 
 ![Two successive sourced boundaries and the resolved inner throat](../docs/figures/nsc-atlas-nested-slice.png)
 
-*Figure 5. One initial radial chain with two sourced boundaries. The inset
+*Figure 6. One initial radial chain with two sourced boundaries. The inset
 resolves the host's positive-radius minimum. Proper radius versus areal
 radius is not a Euclidean embedding or a causal-passage diagram. The same
 membrane law holds at both walls; regional state and slicing data are supplied.*
@@ -1582,7 +1750,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 6. The isolated reference in joined causal charts. Horizons are
+*Figure 7. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -2588,7 +2756,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 7. Saved finite-window comparisons. A: the previous and current
+*Figure 8. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -2684,7 +2852,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 8. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 9. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -3153,6 +3321,27 @@ Seven front/partition controls pass; the read-only calculation uses
 maximum states still prevent unique attribution of those peaks. Check
 the active-region wall trace and affine transport before another grid.
 
+The subsequent [direct PDE check](../results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json)
+uses a separately archived evolved stage of the same numerical method.
+The complete weak bulk loads agree with the direct field equation to
+$2.4\times10^{-9}$, while its pointwise density-force defect is $5.09915$.
+The [boundary-lift decomposition](../results/summaries/nsc-atlas-wall-boundary-lift-v1.json)
+supplies $5.15013$ of that defect, with the remaining projection contribution
+$-.0509851$. At the same frozen geometry the three endpoint evaluation
+gains grow $72.6963\to79.7052\to87.2537$. Only the coarse evolved load was
+archived; the other gains are operator controls, not new evolutions or a
+reconstruction of the missing maxima.
+
+This isolates a finite boundary-projection mechanism at an actual evolved
+state. The production split coupling remains unresolved. A
+[shared-action manufactured control](../results/summaries/nsc-atlas-collar-field-v1.json)
+now recovers a represented scalar and its proper-time velocity over the
+quiet wall strip, including original GHY and canonical conversion. Its
+normalized field/velocity errors are $6.71\times10^{-12}$ and
+$7.11\times10^{-11}$; energy plus metric/input work closes to
+$1.75\times10^{-15}$. Its prescribed quiet geometry and manufactured
+forcing do not repair or certify the finite-amplitude P001 evolution.
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -3448,7 +3637,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 9. Research dependencies, distinct from spacetime causal arrows.
+*Figure 10. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

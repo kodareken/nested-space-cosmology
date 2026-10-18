@@ -1,10 +1,10 @@
 {
-  "bytes": 3750010,
+  "bytes": 4123480,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "6c9ee0c911286fca23872fb0561bd5a5ff0554e9a9807f03214b9e3379661592",
+  "metadata_sha256": "753c1041126dea6ebdd193098c05e19c714f498c48e01cfdab6f351b4b0e50a2",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 56,
-  "pdf_sha256": "fb2f8b37966cb4bc0fc53b7e4907ee528a14ff8b723a2eefba28e4ae63b38f70",
+  "pages": 59,
+  "pdf_sha256": "ace7302e596db03f11ed92163ddcf0c4636cd2e557b544850f8af391fb7fa95b",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -30,6 +30,10 @@
     {
       "path": "docs/figures/nsc-conformal-lightcone.png",
       "sha256": "8120549f077f75072b759ce99385513deae697ad5417b26e629a7303383b90e0"
+    },
+    {
+      "path": "paper/figures/dirac-wall-radar.png",
+      "sha256": "19862b80b646424a901018fdaff1d409b036570c0107882596c242a963c8ee19"
     },
     {
       "path": "paper/figures/geometry-overview.json",
@@ -380,12 +384,28 @@
       "sha256": "61190f1d3029ccda920c0a6783d9e9d682408e43a3078a816672a182502e44d2"
     },
     {
+      "path": "results/summaries/nsc-atlas-collar-field-v1.json",
+      "sha256": "19a4d2c32e30568b925c0cee9163085ba374a7ca2997ab133a538c4076d091f0"
+    },
+    {
       "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "path": "results/summaries/nsc-atlas-dirac-bulk-trace-v1.json",
+      "sha256": "b2448316f443ac6df9cc0a005ca47bfb73685d85a39f60a24db33372df54375f"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-dirac-euler-wall-v1.json",
+      "sha256": "c952852d6a9afa32ef4ba3fbc222c9274b16dc26529291f81d1a631fe14ea59c"
+    },
+    {
       "path": "results/summaries/nsc-atlas-dirac-probe-reference-v1.json",
       "sha256": "dfc65a11c73b260d40ecb5fb73e315aee6d29c2f9f26c3e7488cb705636fe582"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-dirac-radar-v1.json",
+      "sha256": "2656283ef10647f506b98695a73996f87ec6a9a958d8424561ff0d3e6cf118e7"
     },
     {
       "path": "results/summaries/nsc-atlas-distance-contrast-v1.json",
@@ -468,6 +488,14 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "path": "results/summaries/nsc-atlas-wall-boundary-lift-v1.json",
+      "sha256": "06543ed63b06940ae7f14104fecd025a9a1e01789a22c7fdd15562cc1e6d8f0d"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json",
+      "sha256": "318b0372094fe1904dab8a18acc615a1061485a02a4e33030fe5905d07ad81a8"
+    },
+    {
       "path": "results/summaries/nsc-conformal-causal-response-v2.json",
       "sha256": "d6f73bf663e76d951cb078947c6c672c3be0eaed0479523eaa8fe673a7b28f50"
     },
@@ -505,6 +533,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "e8c8dfd342f85b7dd364b4355361503a0d1fad55dfc9c48d656ada70c456cb9e",
-  "version": "working-2026-10-18.8"
+  "source_sha256": "f22f55bc97a51022e11d17aca2f40fce22a0380cd78e28d80f36653cca742253",
+  "version": "working-2026-10-18.9"
 }

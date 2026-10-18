@@ -1,5 +1,29 @@
 # Prior art and admission of new research
 
+## Actual Dirac transfer and ordered metric response across the wall
+
+Use the checked wall-clock null diamond and its actual
+`W_k=k*sqrt(C)/r`. The missing connection is propagation and metric response,
+not a new static flat kernel. Compose characteristic Cayley gates causally
+and differentiate them under compact
+`delta ln N=delta ln a=lambda*f, delta r=0` insertions.
+Retain a supplied parent's full covariance and both cross-leg blocks.
+
+Controls have **60 process-CPU seconds** and at most 32 cells per direction:
+plane waves, an exact C1 wall-crossing solution, flux/CAR conservation,
+causality, direct action derivatives, units/angular sign and inheritance.
+Freeze before one application at `N=64,128`, positive `k=1..8`, nested and
+smooth-cap geometries, with eight Numba workers and one BLAS thread.
+The ceiling is **180 process-CPU seconds**, 256 MiB of working matrices
+and 24000 summary bytes. Keep summaries and hashes; no P001 grid.
+
+Compare the state-independent ordered response operators. A declared smooth
+exterior occupation modulation supplies a finite-rank difference, conditional
+on an admissible parent. It selects no root vacuum or angular vacuum sum.
+The two-grid spread is a diagnostic. Stop on a failed control or budget;
+the inherited baseline state, gravitational/junction response and observer
+readout remain necessary before computing Psi/Phi.
+
 ## Wall-clock radar chart for the actual Dirac propagation
 
 Use the same quiet sources and wall strip `.45<=Rwall<=.55`. Reuse its

@@ -1,5 +1,21 @@
 # Reproducing the root project
 
+Reproduce the actual curved Dirac transfer and ordered metric response:
+
+```powershell
+$env:NUMBA_NUM_THREADS="8"
+$env:OPENBLAS_NUM_THREADS="1"
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_scattering.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_scattering.py --output .build/nsc-atlas-dirac-scattering.json
+```
+
+The recorder requires frozen source and an unused output path. It evaluates
+only the admitted 64/128 characteristic Dirac grids, not P001 grids.
+Positive-k multiplets are separate prepared occupation differences, not
+a vacuum sum. The
+[owner](nsc-atlas-dirac-probe.md#causal-transfer-inherited-correlations-and-nonlocal-metric-response)
+defines the supports, conditional inheritance and remaining slip inputs.
+
 The actual wall-clock radar construction supplies a finite causal diamond
 for the quiet Dirac geometry, using its proper-wall null labels:
 
@@ -13,6 +29,9 @@ Commit the method first and use an unused output path. Optional
 The [owner](nsc-atlas-dirac-probe.md#proper-wall-radar-coordinates-give-a-finite-causal-propagation-chart)
 keeps analytic domain bounds, sampled checks, the physical clock protocol
 and state limitations separate. It does not run a field or a P001 grid.
+The [saved reference](../results/summaries/nsc-atlas-dirac-radar-v1.json)
+and [figure](../paper/figures/dirac-wall-radar.png) retain the declared
+background protocol and producer binding; full metric arrays regenerate.
 
 
 The fixed quiet time-chart calculation preserves a coordinate-domain exit

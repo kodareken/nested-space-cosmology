@@ -1,6 +1,28 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.9`, now includes the actual Dirac bulk/Euler-wall trace, wall radar chart and metric vertices, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## A complete finite wall-radar diamond and a clock comparison
+
+The [radar reference](../results/summaries/nsc-atlas-dirac-radar-v1.json)
+uses the unchanged quiet geometry and covers the full wall strip in an
+exact finite null diamond. Its proper-wall clock range is
+`.1256873632901*ell`; the analytic conservative lapse bound is `.3851891`.
+The signed wall jumps, mass and curvature are retained. Independent optical
+quadrature differs by at most `2.11e-14`; the Dirac potential and its first
+normal derivative transmit with the correct density conversion.
+
+At fixed radar position `x/ell=.0314673818165`, the photon frequency ratio
+is `1.1536257442` on the nested geometry and `1.0806856390` on the same cap
+continuation with the same wall clock protocol. The angular Dirac potential
+is `W_1*ell=1.7100955965` versus `1.7247878777`. These are finite background
+predictions, with no target measurement used to select them. They are not
+quantum corrections or a new `Psi/Phi` value. The
+[causal map](../paper/figures/dirac-wall-radar.png) and
+[owner](nsc-atlas-dirac-probe.md#proper-wall-radar-coordinates-give-a-finite-causal-propagation-chart)
+keep the incoming parent covariance and four-dimensional state admissibility
+as explicit remaining inputs. Evaluation, including the figure, uses
+1.21875 process-CPU seconds; no Dirac or P001 evolution steps ran.
 
 ## Dirac stress now connects the curved action to gravity
 

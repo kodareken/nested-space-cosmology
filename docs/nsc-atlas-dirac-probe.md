@@ -597,6 +597,22 @@ slice. No old state is copied into it, and no state, Dirac field evolution,
 renormalized polarization or nested `Psi/Phi` is supplied by the geometry
 recorder itself.
 
+The [first frozen reference](../results/summaries/nsc-atlas-dirac-radar-v1.json)
+covers `S/ell=.1256873632901346`. Its conservative analytic lapse bound is
+`.3851891297`; the sampled minimum on the declared 81 points is
+`.7481617071`. The sampled cap radius reaches `.4240479593*ell`, with
+the exterior bounded by the original wall radii. The two wall maps differ
+from independent quadrature by `2.11e-14` or less. The largest matching
+check is `2.03e-12` for the Dirac-potential derivative. Evaluation and the
+[causal figure](../paper/figures/dirac-wall-radar.png) use 1.21875 process-CPU
+seconds and 104 wall-ODE calls; no field evolution runs.
+
+At the predeclared receiver the nested geometry gives
+`omega_rec/omega_wall=1.1536257442`, versus `1.0806856390` for the smooth
+cap continuation. `W_1*ell` is `1.7100955965` versus `1.7247878777`.
+These use the same wall-radar clock protocol. Their difference is a
+finite conditional background prediction, not a calculated quantum slip.
+
 This makes inheritance a concrete input/output problem: a prepared
 two-branch covariance `C_in` is transported by the characteristic map
 `Vprop` to `C_mid=Vprop*C_in*Vprop^dagger` on the middle segment. Positivity
@@ -1076,3 +1092,58 @@ check transmission, orientation, physical scaling and matrix/sample domains.
 The matrices are computed directly from the actual curved field; no flat
 polarization or new source is substituted. No modes, state or coupled
 gravitational response has been evolved by this component.
+
+## Causal transfer, inherited correlations and nonlocal metric response
+
+The [characteristic component](../src/recursive_horizons/nsc_atlas_dirac_scattering.py)
+supplies the finite propagator on the actual radar diamond.
+Stagger `p=eta_plus` on `(U_mid,V_node)` and `m=eta_minus` on
+`(U_node,V_mid)`. For `P=sqrt(du)*p`, `M=sqrt(dv)*m` and
+`gamma=W*sqrt(du*dv)/4`, the characteristic midpoint equations give
+
+$$
+\begin{pmatrix}P\\M\end{pmatrix}_{out}
+=\frac{(1-\gamma^2)I-2i\gamma\sigma_1}{1+\gamma^2}
+\begin{pmatrix}P\\M\end{pmatrix}_{in}.
+$$
+
+Real W makes every gate unitary. Their causal product U maps both complete
+incoming legs to the future legs, without reflecting ends or duplicated
+corner weights. For a supplied correlated parent, `C_out=U*C_in*U^dagger`.
+Future `V=S` is exterior and future `U=S` is cap. The existing
+[Gaussian owner](../src/recursive_horizons/nsc_boundary_state.py) independently
+reconstructs the four terms in the inherited cap block. Conditional
+inheritance is determined; a root quantum state is not selected.
+
+For `delta ln N=delta ln a=lambda*f, delta r=0`, kinetic variations cancel
+and `W -> W*exp(lambda*f)`. Per angular copy, the action insertion is
+`-integral W*f*xi^dagger*sigma_1*xi dT dx`. Differentiating the same gates gives
+
+$$
+J_f=\sum_{\rm cells}\frac{2\gamma f}{1+\gamma^2}
+U_{\rm before}^\dagger\sigma_{1,cell}U_{\rm before}
+=iU^\dagger\partial_\lambda U.
+$$
+
+For disjoint B strictly before A in both null labels,
+`R_AB=-i*[J_A,J_B]` is the derivative of the later insertion. The cross
+contact vanishes for these supports. This is an integrated matter
+metric-vertex response, not the gravitational/junction or observer solve.
+
+A conditional occupation difference avoids choosing a baseline vacuum.
+For a normalized smooth incoming mode f, set `P=I-|f><f|`,
+`C_empty=P*C_parent*P` and `C_nu=C_empty+nu*|f><f|`, `0<=nu<=1`.
+The complement's correlations remain, with the mode's cross terms removed
+by this declared preparation. CAR positivity is exact. The response change
+is `2*abs(k)*nu*f^dagger*R_AB*f` in units hbar for a whole magnetic multiplet.
+Degeneracy is applied once after the single-copy commutator; k and -k
+are separate multiplets. Given an admissible parent mapping f smoothly,
+the difference is smooth and finite rank. Local state-independent
+counterterms cancel; the root vacuum, full angular sum and general quantum
+thin-wall completion remain uncomputed.
+
+Seven [controls](../tests/test_nsc_atlas_dirac_scattering.py) pass: exact
+plane waves and a C1 wall-crossing solution, flux, units/angular sign,
+direct action and retarded derivatives, causality and spacelike
+commutation, finite CAR differences and correlated inheritance.
+No P001 evolution is invoked.
