@@ -10,6 +10,7 @@ import math
 from concurrent.futures import ThreadPoolExecutor
 
 import numpy as np
+from scipy.special import expit,k0
 
 from .nsc_influence import ground_covariance
 from .nsc_atlas_dirac_mean import MeanModeGrid,RadarPointEvaluator,SPIN_ROTATION
@@ -222,3 +223,131 @@ class ClockEnergyBasis:
         indices,transform=selection['indices'],selection['transform']
         vertex=transform.conj().T@vertex[np.ix_(indices,indices)]@transform
         return float(np.trace(selection['covariance']@vertex).real)
+
+
+def cylinder_incoming_modes(clock,momenta,*,radius,angular_k=1):
+    """Coherent negative-energy plane modes on both root-cylinder null legs.
+
+    The continuum Fourier measure is dp/(2*pi). No sampled flux
+    normalization or occupation selection is applied to these modes.
+    """
+    s=np.asarray(clock,dtype=float);p=np.asarray(momenta,dtype=float)
+    if (s.ndim!=1 or p.ndim!=1 or not len(p) or not np.isfinite(s).all()
+            or not np.isfinite(p).all() or not np.isfinite(radius) or radius<=0
+            or isinstance(angular_k,bool) or not isinstance(angular_k,int) or not angular_k):
+        raise ValueError('finite label/momentum vectors, positive radius and nonzero integer sector required')
+    mu=angular_k/radius;omega=np.hypot(p,mu)
+    a=(omega-p)/2;b=(omega+p)/2
+    positive=p>=0
+    a[positive]=mu*mu/(2*(omega[positive]+p[positive]))
+    b[~positive]=mu*mu/(2*(omega[~positive]-p[~positive]))
+    angle=np.arctan2(mu,p)
+    plus=-np.sin(angle/2)[None,:]*np.exp(1j*s[:,None]*a)
+    minus=np.cos(angle/2)[None,:]*np.exp(1j*s[:,None]*b)
+    return dict(plus=plus,minus=minus,plus_u=1j*a*plus,minus_v=1j*b*minus,
+        energy=-omega,momentum=p,angular_mass=mu,a=a,b=b)
+
+
+def _hardy_compression(labels,weights,f,df):
+    """PV half-line-frequency projector paired with real smooth test modes."""
+    wf=weights[:,None]*f;wdf=weights[:,None]*df
+    gram=f.T@wf
+    distance=labels[:,None]-labels[None,:]
+    np.fill_diagonal(distance,1.)
+    inverse=1/distance;np.fill_diagonal(inverse,0.)
+    # Antisymmetrization makes the diagonal pole removable. Its limit is
+    # (f_n*f'_m-f_m*f'_n)/2 and contributes the diagonal quadrature nodes.
+    pv=wf.T@inverse@wf+.5*(wdf.T@wf-wf.T@wdf)
+    return gram/2+1j*pv/(2*math.pi),gram
+
+
+def cylinder_covariance_compression(duration,radius,count,*,angular_k=1,order=96):
+    """Compress one continuum root covariance, preserving cross-leg coherence.
+
+    The continuum Hermite flux Gram is exactly I. Numerical Gram error and
+    CAR eigenvalues are returned without clipping or refilling the spectrum.
+    These are finite quadratures of a fixed state, not finite minimizers.
+    """
+    if (isinstance(order,bool) or not isinstance(order,int) or order<8
+            or not np.isfinite(radius) or radius<=0
+            or isinstance(angular_k,bool) or not isinstance(angular_k,int) or not angular_k):
+        raise ValueError('positive radius, nonzero integer sector and quadrature order>=8 required')
+    nodes,weights=np.polynomial.legendre.leggauss(order)
+    labels=(nodes+1)*duration/2;weights=weights*duration/2
+    f,df=hermite_null_modes(labels,duration,count)
+    diagonal,gram=_hardy_compression(labels,weights,f,df)
+    wf=weights[:,None]*f
+    mu=angular_k/radius
+    kernel=-mu*k0(abs(mu)*np.sqrt(labels[:,None]*labels[None,:]))/(2*math.pi)
+    cross=wf.T@kernel@wf
+    C=np.block([[diagonal,cross],[cross.T,diagonal]])
+    eigenvalues=np.linalg.eigvalsh(C)
+    gram_error=float(np.linalg.norm(gram-np.eye(count),ord=2))
+    resolved=gram_error<1e-8 and eigenvalues[0]>=-1e-10 and eigenvalues[-1]<=1+1e-10
+    return dict(covariance=C if resolved else None,eigenvalues=eigenvalues,
+        status='finite_root_quadrature' if resolved else 'quadrature_unresolved',
+        gram_discrepancy=gram_error,
+        cross_leg_norm=float(np.linalg.norm(cross,ord=2)),
+        quadrature_order=order,state_rule='restriction of the complete static-cylinder negative band')
+
+
+def _flat_step(coordinate):
+    z=np.asarray(coordinate,dtype=float)
+    value=np.where(z>=1,1.,0.);derivative=np.zeros_like(z)
+    active=(z>0)&(z<1)
+    a=z[active]
+    with np.errstate(over='ignore',divide='ignore'):
+        v=expit(1/(1-a)-1/a)
+    slope=np.zeros_like(a)
+    moving=(v>0)&(v<1)
+    slope[moving]=v[moving]*(1-v[moving])*(1/a[moving]**2+1/(1-a[moving])**2)
+    value[active]=v;derivative[active]=slope
+    return value,derivative
+
+
+class CylinderPreparation:
+    """Explicit auxiliary state geometry, not a physical formation model.
+
+    The physical preparation duration and root radius are supplied once.
+    Blending N/r directly preserves its transparent C1 interface. Where
+    the switches equal one the canonical massless operator is the actual
+    one. Physical stress/clock evaluation uses the original metric.
+    """
+
+    def __init__(self,chart,*,duration,root_radius,region='nested',angular_k=1):
+        if (not np.isfinite([duration,root_radius]).all() or not 0<duration<=chart.duration
+                or root_radius<=0 or isinstance(angular_k,bool)
+                or not isinstance(angular_k,int) or not angular_k
+                or region not in ('nested','cap','exterior')):
+            raise ValueError('positive physical duration/radius and a declared angular sector/region required')
+        self.duration,self.root_radius,self.angular_k=duration,root_radius,angular_k
+        self.points=RadarPointEvaluator(chart,region=region,angular_k=angular_k)
+
+    def _switch(self,clock):
+        S=self.duration
+        on,d_on=_flat_step((clock-.1*S)/(.1*S))
+        off,d_off=_flat_step((S-clock)/(.1*S))
+        return on*off,(d_on*off-on*d_off)/(.1*S)
+
+    def fields(self,U,V):
+        U,V=np.broadcast_arrays(np.asarray(U,dtype=float),np.asarray(V,dtype=float))
+        if not np.isfinite(U).all() or not np.isfinite(V).all():
+            raise ValueError('finite auxiliary null labels required')
+        su,du=self._switch(U);sv,dv=self._switch(V)
+        weight=su*sv;wt=du*sv+su*dv;wx=-du*sv+su*dv
+        q=np.full(U.shape,1/self.root_radius);qt=np.zeros_like(q);qx=np.zeros_like(q)
+        active=weight>0
+        if np.any(active):
+            physical=self.points(U[active],V[active])
+            N,r=physical['lapse'],physical['radius']
+            target=N/r
+            target_t=physical['lapse_t']/r-N*physical['radius_t']/r**2
+            target_x=physical['lapse_x']/r-N*physical['radius_x']/r**2
+            difference=target-1/self.root_radius
+            q[active]+=weight[active]*difference
+            qt[active]=wt[active]*difference+weight[active]*target_t
+            qx[active]=wx[active]*difference+weight[active]*target_x
+        N=self.root_radius*q;k=self.angular_k
+        return dict(potential=k*q,potential_t=k*qt,potential_x=k*qx,
+            lapse=N,radial_length=N,radius=np.full(U.shape,self.root_radius),
+            conformal_factor=N*N,preparation_weight=weight)

@@ -1,5 +1,16 @@
 # Reproducing the root project
 
+The [correlated parent and auxiliary preparation](nsc-atlas-dirac-probe.md#exact-correlated-root-data-and-its-finite-compressions)
+have six controls, using exact root kernels and manufactured plane modes:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_cylinder.py -q
+```
+
+They use 3.546875 process-CPU seconds across development and retain no new
+reference JSON or arrays. The full continuum state is prescribed; its
+propagated local stress remainder is not inferred from these controls.
+
 The [radar subtraction-symbol adapter](nsc-atlas-dirac-probe.md#reusing-the-fourth-order-symbol-on-the-actual-radar-geometry)
 uses analytic one-sided metric jets through order four and the existing
 Weyl projector/transport core. It runs no physical field reference:

@@ -8,6 +8,14 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [correlated static-product parent](nsc-atlas-dirac-probe.md#exact-correlated-root-data-and-its-finite-compressions)
+and fixed auxiliary preparation use the existing
+[preparation component](../src/recursive_horizons/nsc_atlas_dirac_preparation.py),
+[folded transparent domain](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
+and [root/interface controls](../tests/test_nsc_atlas_dirac_cylinder.py).
+This supplies one explicit continuum state rule and unitary evolution;
+the local stress remainder is still to be controlled.
+
 The [actual radar UV subtraction](nsc-atlas-dirac-probe.md#reusing-the-fourth-order-symbol-on-the-actual-radar-geometry)
 uses [analytic radar jets and a Pauli-frame adapter](../src/recursive_horizons/nsc_atlas_dirac_symbol.py)
 around the existing fourth-order Weyl core, with

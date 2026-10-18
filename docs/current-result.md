@@ -2,6 +2,18 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.11`, now includes the actual Dirac trace, radar chart, transfer and prepared mean metric/clock response, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## An explicit correlated parent state and local Dirac subtraction
+
+The [static-product preparation alternative](nsc-atlas-dirac-probe.md#a-concrete-static-product-parent-and-deformation-route)
+now fixes the complete root covariance analytically, including its Bessel
+cross-leg kernel. It propagates that state with a declared auxiliary
+geometry whose canonical massless operator agrees with the actual future
+cap/wall operator. A bounded-potential construction gives unitary evolution
+and an exact gap estimate. Six independent root/interface controls pass.
+This is a specified state alternative, not the earlier energy-window
+minimizer. The uniform joint radial/angular remainder needed for its
+renormalized stress remains open; no new physical cutoff or P001 grid ran.
+
 ## Parent-state preparation on the actual Dirac geometry
 
 The [fourth-order radar symbol](nsc-atlas-dirac-probe.md#reusing-the-fourth-order-symbol-on-the-actual-radar-geometry)

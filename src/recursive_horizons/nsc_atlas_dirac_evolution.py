@@ -14,6 +14,24 @@ from .nsc_atlas_moving_boundaries import vacuum_wall_state
 ALPHA = np.array([[0., -1j], [1j, 0.]])
 
 
+def folded_transparent_interface():
+    """Fold exterior/cap onto y>=0 with the original transparent domain.
+
+    Side order is exterior x=y, cap x=-y. Gamma=+1 is equality of
+    canonical spinors; it is a maximal zero-flux boundary subspace.
+    These algebraic data alone are not a global propagation theorem.
+    """
+    identity=np.eye(2)
+    swap=np.array([[0.,1.],[1.,0.]])
+    signs=np.diag([1.,-1.])
+    gamma=np.kron(swap,identity)
+    return dict(normal_matrix=np.kron(signs,ALPHA),
+        angular_matrix=np.kron(identity,swap),gamma=gamma,
+        allowed_projector=(np.eye(4)+gamma)/2,
+        allowed_isometry=np.vstack((identity,identity))/np.sqrt(2),
+        side_order=('exterior','cap'),condition='equal canonical spinors at y=0')
+
+
 def radial_time_coefficients(*, lapse, lapse_l, radial_length, radial_length_l,
                              radius, angular_k=1):
     """H=-i alpha*(c*d_l+c_l/2)+sigma1*N*k/r for chi=sqrt(a)*r*psi.

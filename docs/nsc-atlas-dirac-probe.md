@@ -2259,3 +2259,162 @@ not prove transparent transmission for this wall. The
 treats a smooth scalar Dirichlet problem. Its positive-energy splitting
 argument is a useful route to inspect, rather than a theorem already
 applicable to this piecewise-smooth Dirac geometry.
+
+### A concrete static-product parent and deformation route
+
+Develop the separately listed ultrastatic route as an explicit alternative
+to the energy-window state. The root is the massless Dirac ground state on
+R^(1,1) x S^2 with sphere radius R0=.45*ell. Its signed angular sector has
+the exact radial Hamiltonian p*sigma3+mu*sigma1 in the chiral frame,
+mu=k/R0, and omega=sqrt(p^2+mu^2). Filling its negative band specifies the
+entire radial spectrum, with no fit to a sky observation or finite-mode
+energy minimization. This is an additional state prescription, not a
+consequence of the inheritance relation or the previous candidate's result.
+
+For negative-energy plane modes set a=(omega-p)/2,b=(omega+p)/2. The
+incoming components on V=0 and U=0 have phases exp(i*a*U),exp(i*b*V).
+Their exact covariances are equal line Hardy kernels on each leg, plus
+the nonzero cross-leg kernel
+`C_plus_minus(U,V)=-mu*K0(abs(mu)*sqrt(U*V))/(2*pi)` for positive U,V.
+Here K0 is the modified Bessel function. The full covariance is a
+restriction of the global cylinder projector and is generally mixed on
+the finite diamond. Taking a projector after finite compression would
+change this declared state.
+
+This route has 60 process-CPU seconds for bounded root-state controls:
+one-dimensional Fourier/Bessel comparison, finite smooth-mode compressions
+of sizes at most 4 per leg with Gauss orders at most 128, CAR and nested
+subspace consistency, analytic incoming plane-wave derivatives on at most
+16 manufactured cells, and folded-interface flux algebra. No new physical
+field reference, UV cutoff campaign or P001 grid is admitted.
+
+The preparation geometry is auxiliary state data, not a claimed physical
+formation history or a sourced Einstein solution. Use a fixed smooth
+switch chi(s), zero outside (.1*S,S), equal to one on [.2*S,.9*S]. Set
+q_aux=1/R0+chi(U)*chi(V)*(N_physical/r_physical-1/R0). Blending this q,
+instead of N and r separately, preserves the actual C1 Dirac potential
+at the wall. The auxiliary product metric has r_aux=R0 and
+N_aux=a_aux=R0*q_aux. Where both switches are one it is conformal to the
+physical metric, with unchanged massless canonical spinor. The stress
+and clocks must still be evaluated in the physical metric; no quantum
+conformal invariance or anomaly cancellation within one model is assumed.
+The previous cap detector (.8*S,.7*S) has a future Cauchy neighborhood
+wholly inside this unchanged-operator region.
+
+This specifies the missing parent data and a concrete preparation operator.
+The bounded-potential argument below establishes transparent unitary
+evolution on an admitted regular patch. Sufficient transmitted regularity
+remains to be established before its full stress can be claimed finite.
+The fixed support and root radius are state parameters. No result from
+the energy-window state is transferred into this alternative.
+
+### Exact correlated root data and its finite compressions
+
+The [implemented root](../src/recursive_horizons/nsc_atlas_dirac_preparation.py)
+uses the Fourier measure dp/(2*pi). For the normalized negative spinor,
+`|u_plus|^2=a/omega=-da/dp`, `|u_minus|^2=b/omega=db/dp` and
+`u_plus*conj(u_minus)=-mu/(2*omega)`. Changing variables gives the two
+Hardy kernels
+`C_diag(s,t)=delta(s-t)/2+i*PV(1/(s-t))/(2*pi)`.
+The cross-leg integral is
+
+```text
+C_plus_minus(U,V) = -mu/(4*pi) * integral_0^infinity
+                    exp(i*a*U-i*mu^2*V/(4*a)) da/a
+                 = -mu*K0(abs(mu)*sqrt(U*V))/(2*pi).
+```
+
+At U=V=s it independently matches the equal-time cylinder Fourier kernel
+`integral dp*(-mu/(2*omega))*exp(-i*p*s)/(2*pi)`. The two positive-energy
+complements supply the other Hardy half and the opposite cross kernel,
+so the full incoming CAR is the identity. Equivalently, restrict the
+complete cylinder projector to a diamond Cauchy segment and use its
+conserved flux map to the two incoming legs. Positivity 0<=C<=I follows
+from that restriction. Its finite compressions need not be projectors.
+
+The real smooth-mode PV pairing is evaluated after antisymmetrization;
+its diagonal is removable and has limit
+`(f_n*f'_m-f_m*f'_n)/2`. This contribution is retained at the quadrature
+diagonal. Independent exact line-Hermite data check the normalization
+C_01=-i/sqrt(2*pi), not -i/2. The K0 cross block is not discarded.
+
+Six root/interface controls pass in 3.546875 process-CPU seconds across
+development. They compare the Bessel kernel with an independent Fourier
+integral, exact Hardy compression, 96/128 quadrature, CAR and mixedness,
+consistent two/four-mode subspaces, units and signed sectors. Analytic
+negative-frequency plane data propagate as the same known cylinder
+solution on both legs in the manufactured field control. The auxiliary
+switch preserves both first wall jets and agrees with the actual
+canonical operator on the future detector neighborhood. No physical
+Dirac cutoff reference or P001 evolution has run for this alternative.
+An underresolved root quadrature returns no covariance; spectra are never
+clipped or refilled to pass CAR. The exact analytic parent is unchanged.
+
+### Folding the transparent wall and constructing unitary evolution
+
+Fold exterior x=y and cap x=-y onto y>=0, with side order exterior,cap.
+Let tau_i act on that side index, alpha=sigma2,beta=sigma1. The normal
+and angular matrices are A=tau3 tensor alpha and B=I tensor beta.
+Gamma=tau1 tensor I swaps the two sides. Gamma*Psi=Psi is exactly the
+original equality of canonical spinors, rather than a reflecting wall.
+The [time-generator owner](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
+now exposes these algebraic data.
+
+Gamma is a Hermitian involution, anticommutes with A and commutes with B.
+Its allowed rank-two projector P obeys P*A*P=0. The folded interface
+therefore has maximal zero flux. For the frozen imaginary-energy problem,
+lambda=sqrt(W^2+zeta^2)>0, a decaying mode with allowed trace J*v,
+J=(I,I)^T/sqrt(2), obeys
+
+```text
+M = (i*lambda*A+W*B-i*zeta*I)*J
+M^dagger*M = 2*lambda^2*I.
+```
+
+It has no nonzero allowed decaying kernel. This verifies a uniform frozen
+elliptic compatibility condition; it is not a full wavefront propagation
+theorem. In particular, same-energy reflection p->-p is not a
+positive/negative-energy mixing counterexample. The explicit local
+W_xx discontinuity enters c2, not c1, as checked above.
+
+For existence of the actual auxiliary evolution, unfold to the full
+radial line. In each signed angular sector its canonical Hamiltonian is
+`H_k(T)=-i*alpha*d_x+beta*k*q_aux(T,x)` on H^1(R,C^2). On a regular
+admitted patch q_aux is real, bounded, C1 in x and continuous in T, and
+equals 1/R0 outside a compact set. Its difference from the cylinder
+Hamiltonian is a bounded self-adjoint multiplication operator.
+
+In the interaction picture, the time-ordered Volterra series converges
+in operator norm: its n-th term is bounded by A_k^n/n!, where
+`A_k=abs(k)*integral ||q_aux(T)-1/R0||_infinity dT` is finite. Uniqueness
+and differentiating the norm give unitary evolution, with the inverse
+constructed backward. Continuity across the unfolded line implements
+the same transparent domain. Taking the direct sum over signed k and
+their 2*abs(k) magnetic states gives a strongly continuous unitary:
+every sector has norm one, so finite-sector approximation controls the
+tail. The exponential Volterra bound need not be uniform in k for this
+existence argument; it would be insufficient for a stress-tail bound.
+
+Consequently `C(T)=U(T,T0)*C_cylinder*U(T,T0)^dagger` defines an actual
+quasifree CAR state for this declared preparation, including all angular
+and radial modes. Restriction to the future matched region transfers it
+to the physical massless field by the regular classical conformal map.
+This establishes state data and evolution, not its renormalized stress.
+
+There is also a useful exact gap estimate. If q_aux>=q_min>0, then
+`{H_k,beta}=2*k*q_aux`. For any domain vector,
+`abs(k)*q_min*||psi||^2 <= abs(Re <H_k psi,beta psi>)`
+`<= ||H_k psi||*||psi||`. Thus the instantaneous operator has a gap
+of at least abs(k)*q_min. Positivity and compact support of the blend
+give q_min>0 on the admitted regular patch. Time derivatives of the
+potential are bounded multiplication operators. These are concrete
+inputs for a finite-order operator adiabatic estimate, including the
+large-angular sector, without assuming a globally smooth glued metric.
+
+The next unresolved estimate must also control large radial momentum and
+local stress derivatives uniformly, rather than use the exponential
+Volterra bound or the angular gap alone. The fourth-order cap symbol is
+available, and the parent state is now explicit in this alternative.
+What is still missing is an actual order-minus-five bound, or another
+controlled sufficient coincidence estimate, for its propagated interior
+two-point function. The gap estimate does not supply that bound by itself.
