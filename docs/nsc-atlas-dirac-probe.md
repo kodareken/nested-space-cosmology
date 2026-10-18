@@ -2678,3 +2678,95 @@ using the same manufactured 8/16-cell control. The fine error is below
 Hermiticity and positivity also pass. This seventh root/interface control
 used 1.28125 process-CPU seconds in the recovered check. It introduces no
 physical reference result, spectral-tail estimate or new P001 evolution.
+
+### Pairing the complete root covariance in null coordinates
+
+A direct Volterra decomposition offers a radial-complete alternative to
+cutting off incoming p. Set A=-i W/2 and write L_X=E_X+G_X, where
+E_X f=(f_plus(U),f_minus(V)). The kernels obey the original integral field
+equations, not a second propagation law. In particular,
+
+\[
+G_{-+}(u,v;s)=A(s,v)+\int_s^u A(t,v)G_{++}(t,v;s)dt,
+\quad
+G_{++}(u,v;s)=\int_0^v A(u,t)G_{-+}(u,t;s)dt.
+\]
+
+Exchange u,v and the two spin labels for the other column. Their endpoint
+values include
+
+\[
+G_{--}(u,v;v)=-\frac14\int_0^u W(t,v)^2dt,
+\qquad G_{+-}(u,v;v)=-\frac i2 W(u,v).
+\]
+
+Thus extension by zero beyond a leg's causal endpoint need not be H1.
+Strong convergence of a compressed root covariance alone does not prove
+convergence of its point stress. An H1 bound for an unmodified
+logit-Hermite truncation fails at precisely this endpoint.
+
+Instead retain E and the one-sided G explicitly and evaluate L_X C0 L_Y^dagger
+against the analytic Hardy/Bessel root kernel. The direct/direct block
+is common and cancels between the two geometries. Direct/G and G/G blocks
+still require their Hilbert-transform and endpoint contributions before
+the relative coincidence limit; they are not separately discarded.
+
+**Bounded method control.** Reuse the existing root covariance and
+characteristic law. The missing connection is its evaluation on supplied
+one-sided polynomial Volterra maps, including their endpoint evaluation.
+Use the exact constant-cylinder Riemann kernels and compare the full
+off-diagonal covariance with its independent Bessel Fourier transform.
+Only polynomial orders 12/24 on this manufactured limit are admitted,
+with 60 process-CPU seconds, no physical field or P001 grid, no arrays or
+reference JSON retained. Stop on a failed identity, an error outside its
+numerical floor that does not contract, or budget. The same allowance
+covers an analytic spatial response map, retaining both its moving upper
+endpoint and its direct f-prime evaluation. Compare its split derivative
+with the independent differentiated Fourier/Bessel formula. This is a
+full radial root pairing on the supplied maps; their approximation error,
+the relative coincidence limit and the angular sum remain separate
+calculations.
+
+The [pairing component](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py)
+now evaluates those supplied polynomial maps on their own causal leg
+intervals. A spatial-response map retains its direct f-prime term and the
+upper-endpoint term `(-G_plus(U),+G_minus(V))`; only its remaining integral
+kernel is differentiated. All same-leg delta and PV terms are kept. For
+Legendre coefficients g_n on [0,L], the exact real Hilbert transform is
+
+\[
+\operatorname{PV}\int_0^L\frac{G(t)}{s-t}dt
+=2\sum_n g_n Q_n(2s/L-1).
+\]
+
+Its derivative supplies the direct-derivative finite part. The direct
+endpoints are required to be distinct; the component does not silently
+assign a value at coincidence. The cross-leg Bessel kernel is evaluated
+through the convergent identity, with z=abs(mu)*sqrt(L_left*L_right),
+
+\[
+K_0(z\sqrt{xy})=\sum_{j=0}^{\infty}
+\frac{(z^2xy/4)^j}{(j!)^2}
+\left[H_j-\gamma-\log(z/2)-\frac{\log x+\log y}{2}\right].
+\]
+
+Polynomial and log moments are integrated analytically. This includes
+endpoint evaluation and its derivative; it never truncates the root
+Fourier spectrum. The positive omitted-series majorant uses
+`b_(j+1)/b_j <= z^2/(4*(J+1)^2)` beyond J and
+`H_(J+m) <= H_J+m/(J+1)`. It is reported separately from the adaptive PV
+quadrature estimate. The current stable series route is restricted to
+z<=4; larger arguments are refused. Neither quantity bounds the supplied
+maps' interpolation error, floating arithmetic, an angular tail or a
+relative coincidence extrapolation.
+
+Four [independent controls](../tests/test_nsc_atlas_dirac_root_pairing.py)
+pass. The nonzero constant-cylinder Riemann kernels reproduce the full
+off-diagonal vacuum Fourier/Bessel kernel within 2e-9 at both polynomial
+orders; the analytic spatial derivative agrees within 3e-8. Endpoint
+logarithms and the cross-leg series majorant are also checked directly.
+Development and derivative regression together used 13.09375 process-CPU
+seconds. No physical field reference or P001 grid ran. The next physical
+input is the actual nested and continued-cap retarded maps, with their
+analytic derivatives and controlled representation error. The full
+renormalized stress and Psi/Phi remain unevaluated.

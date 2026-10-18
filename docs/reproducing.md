@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+The [complete root-covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
+has four controls against the exact cylinder vacuum kernel and its spatial
+derivative, including its one-sided endpoint and Hilbert terms:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_root_pairing.py -q
+```
+
+Development and derivative regression used 13.09375 process-CPU seconds
+with no physical field/P001 grid or retained arrays. This integrates the
+full radial root covariance on supplied polynomial maps. Their numerical
+representation, the coincidence limit and the angular sum remain external.
+
 The [global Dirac bounds and real boundary symbol](nsc-atlas-dirac-probe.md#real-frequency-boundary-ellipticity-for-the-next-regularity-estimate)
 have six controls, including sharp balanced endpoints, the explicit
 decaying Poisson lift and an exact

@@ -4,6 +4,13 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [null-coordinate covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
+now includes the complete radial root spectrum on supplied retarded maps,
+with endpoint values, analytic spatial responses and PV finite parts.
+Four exact-cylinder/Hilbert/Bessel controls pass without a momentum cutoff.
+The actual geometric maps' approximation error, relative coincidence
+limit and angular sum remain open; this supplies no new vacuum slip value.
+
 The [operator estimates](nsc-atlas-dirac-probe.md#balanced-energy-estimates-and-an-explicit-limitation)
 now include a sharp balanced energy bound, a full first-correction graph
 bound, and exponential locality for the frozen nested-versus-cap projector.

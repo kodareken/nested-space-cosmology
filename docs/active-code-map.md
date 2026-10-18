@@ -8,6 +8,12 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
+uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).
+Four [exact-cylinder and root-kernel controls](../tests/test_nsc_atlas_dirac_root_pairing.py)
+verify the full radial integral without a momentum cutoff. Actual geometric
+map errors, the relative coincidence limit and the angular sum remain open.
+
 The [Dirac operator bounds](nsc-atlas-dirac-probe.md#balanced-energy-estimates-and-an-explicit-limitation)
 use a [bound calculator](../src/recursive_horizons/nsc_atlas_dirac_bounds.py),
 [real-frequency interface symbol](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
