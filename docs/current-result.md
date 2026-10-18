@@ -4,6 +4,16 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [source-compatible v3 reconstruction](nsc-atlas-dirac-probe.md#source-compatible-comparison-cancellation-fixed-amplitude-still-open)
+now fixes the artificial logarithm in the actual nested/cap calculation.
+The old cases reproduce exactly. At order48 the two corrected splits
+give .002196411488/.002187989727, a .385% separation variation, but the
+smaller-split 24/48 variation is still 26.8%. No converged local amplitude
+is claimed. The next required evidence is compatibility of the field
+projection with its observation derivative beyond their endpoint jets.
+Eight processes finish in 17.430 wall/92.297 CPU seconds; the summary is
+20761 bytes, with no new field resolution or P001 run.
+
 The [source-endpoint diagnosis](nsc-atlas-dirac-probe.md#source-endpoint-jets-and-a-relative-logarithmic-diagnostic)
 finds an uncancelled relative stress logarithm: coefficients -.00200289
 and -.00102351 at orders 24/48. Exact Volterra source derivatives cancel

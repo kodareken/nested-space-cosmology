@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "db007d558ccd73e96eccf3aec36986ac7eb6796d",
+  "current_receipt_commit_parent": "a097d4273995475e6340ff13f69b63a90872a28b",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 265951,
+      "bytes": 266349,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "db007d558ccd73e96eccf3aec36986ac7eb6796d",
+      "changed_from_commit": "a097d4273995475e6340ff13f69b63a90872a28b",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "c894aa89ab3867fdb276642d91d8da1467278572337c8b5b0eaf467207256273"
+      "sha256": "8777a8c96cf897b911539e246f186ca39c58fed3c88fbec56c84290306736f22"
     },
     {
       "bytes": 106460,
@@ -10325,12 +10325,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 425980,
+      "bytes": 426675,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "8bad871775e5c9b380af23287825ba7738e6e017",
+      "changed_from_commit": "a097d4273995475e6340ff13f69b63a90872a28b",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "134d42d71c9ec7fefcbc41d14aeb31ec916b6a026710b5b62312df95908be9b9"
+      "sha256": "6cffbf19fce9a0e21745e61f996fcf74f957bd76e01a2d18a2572e20be2b139a"
     },
     {
       "bytes": 336399,
@@ -10430,12 +10430,12 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 159972,
+      "bytes": 163076,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "db007d558ccd73e96eccf3aec36986ac7eb6796d",
+      "changed_from_commit": "a097d4273995475e6340ff13f69b63a90872a28b",
       "path": "docs/nsc-atlas-dirac-probe.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "d2825e02aadb8c6cb634850f2ac62b9d2312ce676713e46df3d7535a608f7580"
+      "sha256": "acbccd1734dec02ce5446e357eb427f1bf279d3a27fb7d6bb06c3a7ba8175905"
     },
     {
       "bytes": 17343,
@@ -11496,12 +11496,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 201378,
+      "bytes": 201821,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "db007d558ccd73e96eccf3aec36986ac7eb6796d",
+      "changed_from_commit": "a097d4273995475e6340ff13f69b63a90872a28b",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4bcb312371a51aacbb2614751c240257f20dcc7b653308fc7934f4efb8bccadc"
+      "sha256": "195a10f739d243ecb71f03bad9808687f8f71ee4988e988f0bb9e09d18010215"
     },
     {
       "bytes": 18356,
@@ -29855,6 +29855,14 @@
       "path": "results/summaries/nsc-atlas-dirac-root-response-v2.json",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "6e60187a4b66b6636af7c097bc956c52c15d6850bfcaae900cef4857fb0194c7"
+    },
+    {
+      "bytes": 20761,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "a097d4273995475e6340ff13f69b63a90872a28b",
+      "path": "results/summaries/nsc-atlas-dirac-root-response-v3.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "35e2f06b07606fc92b375f2e8fe17adcb9efcaeb06c8b876e84ccbb456f9ada9"
     },
     {
       "bytes": 22783,

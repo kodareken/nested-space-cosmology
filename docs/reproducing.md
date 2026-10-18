@@ -14,6 +14,13 @@ physical comparison keeps N128 and the same two splits, uses eight
 covariance processes, and reproduces the four v2 legacy cases within 1e-9.
 No finite coincident stress or full Psi/Phi follows from log cancellation alone.
 
+The [frozen v3 result](../results/summaries/nsc-atlas-dirac-root-response-v3.json)
+uses method `a097d42`. All four old cases reproduce exactly, the imposed
+logarithmic identity passes, and the corrected order48 split variation
+falls to .385%. The 26.8% smaller-split polynomial variation remains
+unresolved. The eight-process run uses 92.296875 CPU/17.42970 wall seconds
+and retains 20761 bytes; no finer field grid or smaller split is used.
+
 The [source-endpoint logarithmic check](nsc-atlas-dirac-probe.md#source-endpoint-jets-and-a-relative-logarithmic-diagnostic)
 uses analytic Volterra source jets and the same central detector:
 

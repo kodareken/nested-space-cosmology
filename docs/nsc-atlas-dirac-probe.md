@@ -3118,3 +3118,66 @@ constraints. On the unchanged N64 cylinder, the corrected field at orders
 errors 5.18031e-7/5.15725e-7, with the universal logarithmic coefficients.
 The producer's explicit `--stage source-jets` compares both reconstructions;
 legacy modes retain their original defaults and serve as numerical baselines.
+
+### Source-compatible comparison: cancellation fixed, amplitude still open
+
+The [v3 summary](../results/summaries/nsc-atlas-dirac-root-response-v3.json),
+method `a097d42`, completes the admitted reconstruction comparison. All four
+legacy values reproduce v2 exactly. The source-compatible maps satisfy the
+universal endpoint logarithms at both polynomial orders and both splits;
+their largest absolute coefficient discrepancy is below 4.5e-16. This
+verifies the imposed algebraic identity, not a continuum error estimate.
+
+| Order | Legacy, eta/S=.02 | Source-compatible, eta/S=.02 | Legacy, eta/S=.01 | Source-compatible, eta/S=.01 |
+|---|---|---|---|---|
+| 24 | .001842679064 | .002277828221 | .001765398991 | .001601037456 |
+| 48 | .002173544722 | .002196411488 | .002245374289 | .002187989727 |
+
+At order 48 the two source-compatible splits differ by 8.42176e-6,
+about .385% of the smaller-split value. The 24/48 difference at the
+smaller split remains 5.86952e-4, about 26.8%; the representation is
+therefore not converged. The larger-split polynomial difference is
+8.14167e-5. No finite local vacuum amplitude, angular sum or Psi/Phi is
+inferred from these values.
+
+The run uses all eight covariance processes: 92.296875 total CPU seconds,
+including 83 child CPU seconds, and 17.42970 wall seconds (5.30 effective
+cores over both phases). It retains 20761 bytes of numbers and hashes,
+with no field arrays. No additional field resolution or smaller split ran.
+
+### Observation derivative compatibility after constrained projection
+
+Native Grok confirms the weighted projection and the source-chain rule.
+For a moving source endpoint L_x=lambda and gamma(x)=G(x,L(x)),
+
+\[
+G_x(L)=\partial_x\gamma-\lambda G_s(L).
+\]
+
+The imposed field value/source jet and the separate spatial endpoint
+therefore agree locally. This does not make their interiors identical:
+differentiating the constrained field projection need not equal projecting
+the physical observation derivative separately. A difference vanishing
+at the endpoint can still enter finite Hilbert and G*C0*G insertions.
+Log cancellation alone does not control that finite contribution.
+
+One necessary check uses the maps at each existing split, without a
+smaller separation. For I=L*c0 of the field kernel, J=L*h0 of its
+spatial kernel, and side0/side1 at x+eta/2,x-eta/2, the mean residual is
+
+\[
+\mu=\frac{I_0-I_1}{\eta}
+-\lambda\frac{\gamma_0+\gamma_1}{2}
+-\frac{J_0+J_1}{2}.
+\]
+
+For an exact differentiated kernel this has the ordinary O(eta^2)
+central-difference error. This mean check is necessary, not sufficient.
+For example, the mean/value/source-slope preserving quadratic projection
+of G(s)=s^3 on [0,L] is
+`h=L^3/4-3*L^2*s/2+9*L*s^2/4`. Although G has no observation dependence,
+`partial_L h=3*L^2/4-3*L*s+9*s^2/4` is nonzero. Its mean and endpoint
+value vanish, while `int (partial_L h)/(s-L) ds=3*L^2/8` is nonzero.
+Thus checking only the mean cannot bound the finite insertion. Nonconstant
+source moments or the actual derivative commutator are the next required
+compatibility evidence before a coincident amplitude is evaluated.
