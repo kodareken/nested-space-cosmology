@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+The conserved compact-source tangent has five independent nonlinear
+wall/ray and metric controls. It supplies a mass-dependent input to a
+later Dirac calculation, with no new physical field or P001 evolution:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_compact_source.py -q
+```
+
+The [source owner](nsc-atlas-dirac-probe.md#conserved-compact-source-mass-tangent)
+states the fixed initial speed, required parent-mass variation, annular
+domain, analytic optical derivatives and parametric rather than retarded
+interpretation. Development controls use 3.84375 process-CPU seconds.
+
 The prepared Dirac mean stress and spherical metric/clock reconstruction
 use the same quiet geometry and existing wall-mass coefficients:
 

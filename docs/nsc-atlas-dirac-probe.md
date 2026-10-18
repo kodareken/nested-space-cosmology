@@ -1451,3 +1451,76 @@ difference, conditional on a compatible parent. It supplies the h_q
 prerequisite for the later mixed retarded source/tadpole response. It does
 not compute the baseline vacuum, full Psi/Phi or an effective cosmological
 Lambda, and it does not close the unconverged finite-amplitude scalar P001.
+
+## Conserved compact-source mass tangent
+
+The next physical source is a constant central excess mass b, present
+before the finite window, whose body or inner horizon stays below the
+diamond's innermost cap radius. Its exterior cap is
+`f_minus=1-2*b/r-r^2`; the parent vacuum is `f_plus=1-2*M_parent/r`.
+The body interior and a regular formation history are not supplied by this
+finite annular construction. H=1, tension k=2, initial R0=.45 and initial
+physical proper-wall speed are fixed. The signed Israel equations require
+
+```text
+beta_minus0(b) = sqrt(beta_minus0(0)^2-2*b/R0)
+beta_plus0(b) = beta_minus0(b)-k*R0
+M_parent(b) = R0*(1+v0^2-beta_plus0(b)^2)/2
+dM_parent/db|0 = beta_plus0(0)/beta_minus0(0) = 2755/8587.
+```
+
+Holding both regional masses fixed would not preserve that initial speed.
+On the annulus the nonvacuum bulk stress vanishes; the two mass parameters
+are constants. The existing mean GR engine therefore supplies this
+linearization with start=0, corner masses `(2755/8587,1)` and zero
+initial displacement. Its initial displacement rate also vanishes.
+There is no source switching event inside the window, so this is a
+parametric susceptibility, not a retarded switched-mass response.
+
+The [compact-source interface](../src/recursive_horizons/nsc_atlas_dirac_compact_source.py)
+adds anchored optical sensitivities to that same wall solution:
+
+```text
+u_B' = -(delta_beta+rho_dot)/(beta+v)^2
+v_B' = -(delta_beta-rho_dot)/(beta-v)^2
+u_B(0)=v_B(0)=0
+s_B = f*((v_B(V)-u_B(U))/2-delta_M*K(r))
+q_B = (f'*s_B-2*delta_M/r)/f
+      -(delta_beta(U)+rho_dot(U))/(beta(U)+v(U))
+      -(delta_beta(V)-rho_dot(V))/(beta(V)-v(V))
+delta_W = W*(q_B/2-s_B/r).
+```
+
+Here `delta_beta=beta_R*rho+(mu-nu)/(k*R^2)` includes displacement.
+`K=partial_M(r_star)` is anchored to K(R0)=0. Its primitives are
+`2*log(r)-log(1-r^2)+1/(1-r^2)` in the cap and
+`2*log(.8-r)+1.6/(.8-r)` outside. Both have derivative `2/(r*f^2)`.
+The interface supplies analytic first derivatives of s_B, q_B and delta_W,
+including the optical rates, for a later differentiated Dirac calculation.
+It never divides by beta_plus, which crosses zero regularly.
+
+| Compute admission | Fixed scope |
+| --- | --- |
+| Borrowed and missing connection | Existing signed Israel, Misner-Sharp/EF and Dirac operators; connect a conserved physical mass source to the actual propagator, rather than an arbitrary compact metric strain. |
+| Fixed assumptions and domain | The same quiet finite proper-wall diamond; infinitesimal b at zero, fixed H/k/R0/v0, compatible inner source below the domain, parent mass fixed by the junction. No baseline quantum state is selected. |
+| Budget | At most 120 process-CPU seconds shared by development controls and diagnosis. Wall/optical ODEs and independent exact-family ray controls only; no P001 evolution, new physical field run, source scan or stored arrays. |
+| Independent check | Full nonlinear SdS--wall--Schwarzschild family differentiated by complex step, independently integrated radial rays; wall clock/radius/velocity, cap and exterior, beta_plus=0, first potential derivatives and mass constraints. |
+| Stop or redirect | A failed identity or exhausted budget stops this bridge for diagnosis. A validated tangent unlocks a separately admitted mixed prepared-state response; it does not itself calculate that response or full Psi/Phi. |
+
+A radar clock/radius pair `(q_B,s_B)` is not the Newtonian pair `(Phi,Psi)`.
+At the wall q_B=0 while s_B generally differs from zero. A full readout
+requires a stated scalar-potential decomposition and its radial zero-mode
+boundary data, or an explicitly named operational curvature observable.
+Differentiating the later mean response must vary the background Einstein
+operator, stress, source preparation, wall and readout together. Changing
+only W on the fixed quiet GR solver would omit the mixed Einstein term.
+
+Five [independent controls](../tests/test_nsc_atlas_dirac_compact_source.py)
+pass in 3.84375 process-CPU seconds. They compare the optical metric,
+radius gradients, lapse gradients and first Dirac-potential derivatives
+with a full nonlinear SdS--wall--Schwarzschild family differentiated by
+complex step. They also recover the existing EF metric reconstruction,
+the initial physical speed, one-sided wall transmission and the regular
+beta_plus=0 crossing. The anchored mass primitives agree with independent
+quadrature. This validates the source tangent; no physical mixed quantum
+response has been evaluated in these controls, and no P001 grids were run.

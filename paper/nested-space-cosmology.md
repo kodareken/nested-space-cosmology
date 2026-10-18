@@ -30,7 +30,11 @@ children and a retained grandchild.
 
 A massless Dirac probe on that quiet geometry now has local bulk and
 Euler-interface trace terms, a finite wall radar chart, and action-derived
-stress vertices. Its full quantum gravitational slip remains uncomputed.
+stress vertices. A specified finite occupation difference now propagates
+through the actual wall and sources a mean metric and radar-clock correction.
+Its logarithmic clock coefficient is $-.41780$, with a 64/128 numerical
+spread $1.12\times10^{-5}$. The full quantum gravitational slip remains
+uncomputed.
 
 A separate periodic Einstein--Weyl--Dirac realization permits averaging in
 a specified observer clock and direct light-cone calculation. Its final
@@ -1304,12 +1308,113 @@ chooses a root state. A null-line frequency prescription would be an
 additional preparation axiom; its four-dimensional short-distance and
 interface behavior has not been established here.
 
-Consequently a numerical Dirac transfer, a compatible inherited
-preparation, finite bulk/interface renormalization conditions, and the
-linearized gravitational/junction response to a declared source still
-separate this construction from a nested $\Psi/\Phi$ prediction. The
-finite background clock measurement above remains distinct from that
-uncomputed quantum response.
+The characteristic transfer and a finite prepared-state mean response
+are evaluated next. A compatible baseline preparation, bulk/interface
+renormalization conditions and the complete mixed response to a physical
+source still separate them from a nested $\Psi/\Phi$ prediction.
+
+### 6.1.17. Prepared Dirac propagation, mean metric and clock
+
+The [actual transfer](../results/summaries/nsc-atlas-dirac-scattering-v1.json)
+propagates the canonical chiral field on the wall-clock diamond. With
+$P=\eta_+$ and $M=\eta_-$, the equations are
+$2P_V=-iW_\kappa M$ and $2M_U=-iW_\kappa P$.
+The characteristic cell map is a two-component Cayley unitary in positive
+null-flux weights. Direct metric variation gives the ordered matter
+response $-i[J_A,J_B]$ for the declared exterior source and later cap
+insertion. For one specified first-channel occupation difference its
+magnitude changes by about .3774% relative to the smooth-cap control.
+This is one matter-response component.
+
+The [mean-clock reference](../results/summaries/nsc-atlas-dirac-mean-clock-v1.json)
+then supplies the mean metric needed before a full mixed source/tadpole
+calculation. The incoming mode has $P(U,0)=0$ and
+$M(0,V)=A b(V)\exp(-12iV/S)$, where $b$ is the stated smooth peak-one
+bump centered at $.6S$ with half-width $.3S$: put
+$z=(V-.6S)/(.3S)$ and $b=\exp[1-1/(1-z^2)]$ for $|z|<1$,
+and zero otherwise. The constant $A$ normalizes its continuum null flux
+to one. For a compatible supplied parent
+covariance $C_H$, define $\Pi=I-|f\rangle\langle f|$,
+$C_{\mathrm{empty}}=\Pi C_H\Pi$ and
+$C_n=C_{\mathrm{empty}}+n_{\mathrm{occ}}|f\rangle\langle f|$,
+$0\leq n_{\mathrm{occ}}\leq1$. This declared preparation changes one mode's
+occupation and removes its cross terms; it selects no root vacuum.
+The parent must make the finite-rank modification smooth on this region;
+its global preparation remains an assumption.
+Both magnetic states of the $\kappa=1$ multiplet have the same radial data.
+Other inherited modes cancel between the two states.
+
+Analytically differentiated characteristic equations supply first
+derivatives of the propagated field. The same stress vertices then
+determine the nonvacuum Misner-Sharp mass one-form. In units $c=\hbar=1$,
+with $\kappa_g=8\pi G$ and the cap vacuum mass evaluated at the actual
+areal radius,
+
+$$
+m_{\rm total}=M_i+\Lambda_i r^3/6+m_i,\qquad
+(m_U,m_V)=\frac{\kappa_g r^2}{C}
+(t_{UV}r_U-t_{UU}r_V,\ t_{UV}r_V-t_{VV}r_U).
+$$
+
+The two wall masses drive the existing signed radius-response equation.
+In outgoing EF coordinates, the radial lapse follows from
+$\psi_V=\kappa_g r t_{VV}/(2r_V)$ and its proper-wall normalization.
+Analytic sensitivity of the ingoing null ray gives $s=\delta r$ and
+$z=s_V$, hence $q=\delta\ln C=\psi+z/r_V$. The specified radial phase
+and a receiver at fixed proper-wall radar position give
+$\delta\ln(\omega_{\mathrm{rec}}/\omega_{\mathrm{wall}})=-q/2$.
+No separate bulk metric grid is needed for this first-order supplied source.
+
+The proper-clock labels remain $U=\tau(.475)$ and $V=\tau(.525)$
+of the quiet reference. Define
+
+$$
+\varepsilon_q=\frac{8\pi\hbar G}{c^3\ell^2},\qquad
+\mathcal C_{\rm clock}
+=\frac{\delta\ln(\omega_{\rm rec}/\omega_{\rm wall})}
+{\varepsilon_q n_{\rm occ}}.
+$$
+
+| Geometry and observer protocol | $\mathcal C_{\mathrm{clock}}$, 128 cells | Absolute 64/128 spread |
+| --- | --- | --- |
+| Nested cap-wall-exterior | -.41780 | 1.12e-5 |
+| Smooth cap, shared observer motion | -.39929 | 9.95e-6 |
+
+The smooth cap has no membrane. Its observer worldtube is explicitly
+driven along the computed nested wall's areal-radius history. The
+coefficient difference is $-.01851197$, about 4.63625% in magnitude,
+with a correlated numerical spread $1.23\times10^{-6}$.
+This compares the two geometries at common observer motion; it is not
+an independently evolving alternative wall model.
+
+The normalized nested mass-path discrepancy decreases from
+$1.15\times10^{-6}$ to $2.92\times10^{-7}$; the smooth control also
+improves. Orders 8/12 of the piecewise quadrature differ by less than
+$5.34\times10^{-15}$ in the clock coefficient. Exact charged-wall and
+nonzero-lapse fluid families independently check the reconstruction.
+These indicators support the finite calculation; they are not a
+rigorous continuum remainder or an observational confidence interval.
+
+For the independently supplied $\ell=10\,\mathrm{km}$, the nominal
+prepared-state fractional frequency correction is
+
+$$
+\delta\ln(\omega_{\rm rec}/\omega_{\rm wall})
+\simeq-2.7430\times10^{-77}n_{\rm occ}
+\left(\frac{10\ {\rm km}}{\ell}\right)^2.
+$$
+
+The nested resolution spread converts to $7.34\times10^{-82}$ at unit
+occupation and that scale. The
+[CODATA 2022](https://physics.nist.gov/cuu/Constants/Table/allascii.txt)
+uncertainty in $G$ is separate. The length and mode preparation are
+inputs, and no astronomical datum selects them.
+
+This finite state-difference result supplies the mean $h_q$ needed in
+the later mixed Einstein and source variations. It does not determine
+the baseline vacuum, full retarded $\Psi/\Phi$ or a cosmological
+$\Lambda$. The finite-amplitude scalar P001 remains unconverged;
+its original solver and grids were not changed by this calculation.
 
 ### 6.2. The retained local incoming gate
 

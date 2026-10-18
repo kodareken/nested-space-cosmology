@@ -1,6 +1,6 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.9`, now includes the actual Dirac bulk/Euler-wall trace, wall radar chart and metric vertices, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.10`, now includes the actual Dirac trace, radar chart, transfer and prepared mean metric/clock response, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
 ## Prepared Dirac mean metric and a physical clock correction
 
@@ -27,6 +27,13 @@ families. The eight-process application uses 40.265625 observed CPU seconds
 needed before the mixed retarded source/tadpole solve. Full baseline-vacuum
 Psi/Phi and cosmological Lambda remain uncomputed. P001's finite scalar
 endpoint is unchanged and remains unconverged; no P001 grids ran.
+
+The [compact-source bridge](nsc-atlas-dirac-probe.md#conserved-compact-source-mass-tangent)
+now supplies a conserved central-mass perturbation of this annulus, with
+the parent mass changing to preserve the initial physical wall speed.
+Five independent nonlinear-family controls pass. This is the classical
+source and analytic Dirac-potential tangent needed for a later mixed
+response, rather than a calculated replacement for the flat slip.
 
 ## Nonlocal Dirac response evaluated across the actual wall
 
@@ -4279,9 +4286,9 @@ and not the live branch identity. Live branch commands are in the
 [instructions](instructions.md).
 The periodic parent below is historical input. Further periodic
 autonomous exchange runs stay off this programme. This retained candidate
-asks for a nonperiodic horizon-regular Painlevé–Gullstrand parent exterior
+asks for a nonperiodic horizon-regular PainlevÃ©â€“Gullstrand parent exterior
 and a distinct near-throat child on its own areal radius. Exact
-magnetic Reissner–Nordström calibration comes before any sourced case.
+magnetic Reissnerâ€“NordstrÃ¶m calibration comes before any sourced case.
 
 The source-free core is independently confirmed. `_measure_case`
 builds $R_4$ and Ricci squared from the reconstructed PG jets and
@@ -4399,7 +4406,7 @@ interpretation of the recorded radial and transverse orthonormal pressures.
 Their equal-magnitude crossings and local logarithmic slopes remain finite
 state diagnostics. They do not establish opposing parent/child forces,
 mechanical equilibrium or a regular centre. The live v6 consumer withdraws
-those interpretations; the v1–v5 records remain unchanged. No new family
+those interpretations; the v1â€“v5 records remain unchanged. No new family
 reduction or evolution was run for this correction.
 
 The historical v5 reduction used six cases and 177 recorded stations.
@@ -4529,7 +4536,7 @@ ledger are the run. Those bytes stay as written.
 Every case loses child content. At $T=3$ the child fractions are $0.0221$
 and $0.0231$ for child-heavy, $0.0593$ and $0.0605$ for balanced, and
 $0.1062$ and $0.1088$ for parent-heavy, plus then minus. Proper child length
-contracts by $97$–$98\%$. Mean radius on the two signs stays within about
+contracts by $97$â€“$98\%$. Mean radius on the two signs stays within about
 $2\%$ of the magnetic radius. Renewal is not observed.
 
 On the parent-heavy branch the child fraction is about $0.174$ at $T=1.25$
@@ -4618,7 +4625,7 @@ The same inheritance
 law covers states whose physical frequencies may differ. A thermal
 compression reading is conditional, and this recorded state is
 non-thermal. The ancestry share $\eta$ is not a new gate. The force
-here remains the full state–geometry force; a fixed-$J$ Schur
+here remains the full stateâ€“geometry force; a fixed-$J$ Schur
 reduction is not substituted for it. Earlier papers and the paused
 incoming gate stay preserved.
 
@@ -4700,7 +4707,7 @@ are not equal-proper-time comparisons.
 ### Withheld exterior-source prediction
 
 The [prediction record](../results/development/nsc-discovery-prediction-v1/prediction-run.json)
-propagates the full state–geometry tangent from the same source-consistent
+propagates the full stateâ€“geometry tangent from the same source-consistent
 initial preparation and compares independent nonlinear cases at equal
 proper time. The middle occupations remain $0.5,0.5$; exterior occupations
 change from $0.75,0.75,0.25,0.25$ to $0.76,0.76,0.24,0.24$.
@@ -4985,7 +4992,7 @@ ratio and connected noise differ. Physical vacuum/influence matching is
 not inferred from the equal mean.
 
 The next finite comparison reuses the leading common action, unchanged
-Dirac preparation, proper clocks and field–geometry feedback. It owns the
+Dirac preparation, proper clocks and fieldâ€“geometry feedback. It owns the
 four leading canonical variables rather than deleting fields from the
 singular auxiliary chart. The first-order Weyl contact for this Gaussian
 Dirac source remains a separate derivation; the scalar specialization is
@@ -5133,7 +5140,7 @@ tidal growth without relying on cancellation-sensitive scalar traces or
 substituting the auxiliary field for curvature. It establishes neither a
 future singularity nor a regenerative return.
 
-## Completed finite parent–child pair, 2 October 2026
+## Completed finite parentâ€“child pair, 2 October 2026
 
 The [v2 confirmation](../results/development/nsc-nested-parent-child-confirmation-v2.json)
 records `MEASURED_CONFIRMED_NESTED_PAIR`. A child collar $I_C=(1,3)$ lies
@@ -5550,13 +5557,13 @@ witness. The average does not by itself give autonomous regeneration.
 ## Spherical feedback action and direct conformal source, 30 September 2026
 
 The [spherical feedback action](nsc-spherical-action.md)
-is a checked first-order chart for the spherical Einstein–Maxwell–Weyl bulk
+is a checked first-order chart for the spherical Einsteinâ€“Maxwellâ€“Weyl bulk
 and boundary. Lapse and shift stay free. Seventeen tests passed. The module
 sha256 is `708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f`.
 The check covers the auxiliary bulk, periodic $x$ with Dirichlet data
 $Q$, $r$, and $\chi$ on the time caps, cancellation of the Euler and box
-cap ledger, and an extra Weyl cap that does not double the Einstein–Hilbert
-Gibbons–Hawking–York term. Six Hamilton right-hand sides match the chart.
+cap ledger, and an extra Weyl cap that does not double the Einsteinâ€“Hilbert
+Gibbonsâ€“Hawkingâ€“York term. Six Hamilton right-hand sides match the chart.
 Conditional nonuniform initial data solve the constraints. This is not a
 coupled Cauchy problem and not a renewal. $C_W=0$ is rejected. The matter
 source is not coupled.
@@ -5641,7 +5648,7 @@ episode frames and does not edit this reducer. Those tests do not
 validate these failed coupling trajectories. The vacuum-matched CTP branch
 remains a separate historical choice.
 
-## Variational Fourier–Galerkin coupling v2, 1 October 2026
+## Variational Fourierâ€“Galerkin coupling v2, 1 October 2026
 
 The [note](https://doi.org/10.5281/zenodo.23090015) and the
 [record](../results/development/nsc-spherical-coupling-control-v2.json)
@@ -6022,8 +6029,8 @@ $$
 
 **Status: OPEN.** The evolved state and its retarded derivative are implemented
 in the laboratory. The earlier B1d implementation gaps described below are
-historical checkpoints. Unfinished bounds for this application — not a live
-campaign — are the rigorous whole-cone field, physical-source, ultraviolet,
+historical checkpoints. Unfinished bounds for this application â€” not a live
+campaign â€” are the rigorous whole-cone field, physical-source, ultraviolet,
 continuous, and arithmetic bounds required before a nonlinear search on
 this application could be certified.
 
@@ -6201,7 +6208,7 @@ the current regeneration programme and not a work queue.
 
 **Actual geometric seam matching: PASS.** The [new boundary calculation](nsc-smooth-geometry.md)
 uses the two sides of the same smooth $\rho=0$ surface. With opposite outward
-normals, the Weyl and Einstein–GHY common boundary covectors cancel, as required
+normals, the Weyl and Einsteinâ€“GHY common boundary covectors cancel, as required
 by that domain. The full declared quantum/field variation and bulk self-sourcing remain open;
 no new interface force or zero quantum source is assigned. PDF v0.26.0 is unchanged.
 
@@ -6295,7 +6302,7 @@ described in the opening section of this page.
 | Largest measured middle-band covariance refinement | $1.18\times10^{-14}$ |
 | Largest covariance-tail representation bound | $9.73\times10^{-10}$ |
 
-[Full record](../results/development/nsc-pg-retained-covariance.json) ·
+[Full record](../results/development/nsc-pg-retained-covariance.json) Â·
 [Join/error audit](https://doi.org/10.5281/zenodo.23090015).
 The whole-field mode map retains $C_H$, incoming occupation and the probe
 complement. No closed eight-mode state replaces the bulk. All-field replay
@@ -6324,7 +6331,7 @@ The completed group-13 result below remains the first full-energy massive
 covariance. PDF v0.25.0 and the metric-evolution gate are unchanged.
 
 
-**Earlier checkpoint — first full-energy massive PG covariance: PASS.**
+**Earlier checkpoint â€” first full-energy massive PG covariance: PASS.**
 The [new calculation](nsc-pg-retained-covariance.md) completes the retained
 $m=\pi/2$, zero-angular-eigenvalue group on the common PG Cauchy surface.
 The [record](../results/development/nsc-pg-group13-covariance.json) contains
@@ -6354,7 +6361,7 @@ timestep is assigned here. **PDF v0.25.0 remains unchanged.**
 Earlier entries below retain their checkpoint scope.
 
 
-**Previous checkpoint — massive PG mode/Green construction: PASS.**
+**Previous checkpoint â€” massive PG mode/Green construction: PASS.**
 The [new derivation](nsc-pg-massive-mode-resolution.md) and
 [record](../results/development/nsc-pg-massive-mode-resolution.json) evaluate
 all **32 massive groups** on the complete existing node tables: **3,584
@@ -6383,7 +6390,7 @@ CAR identity. PDF v0.25.0 and the metric-evolution gate remain unchanged.
 The earlier entries below retain their individual checkpoint scope.
 
 
-**Previous checkpoint — full compact restart: H1 PASS.** The
+**Previous checkpoint â€” full compact restart: H1 PASS.** The
 [versioned restart](https://doi.org/10.5281/zenodo.23090015) now regenerates every
 retained compact frequency from the original horizon/incoming data: 20 groups,
 1,280 X blocks, 1,152 angular-partner Y blocks and their signed-frequency
@@ -6413,7 +6420,7 @@ covariance assembly. No massive spatial C, transmitting endpoint jets, new
 stress or metric evolution is inferred from this checkpoint. **PDF v0.25.0
 is unchanged.**
 
-**Preceding development — paired horizon construction and a compact normalization correction.**
+**Preceding development â€” paired horizon construction and a compact normalization correction.**
 The [new map](https://doi.org/10.5281/zenodo.23090015) normalizes the magnetic angular
 spinors, their gauge transition and their signed pairing. Under the already
 selected affine-horizon preparation, orthogonality and angular-sign conservation
@@ -6447,9 +6454,9 @@ no new physical interaction or fitted coefficient is introduced.
 under the matched collar convention, and the global signed PG spectral/current
 resolution must be completed before spatial covariance assembly. No corrected
 modal counterpart is silently substituted into the locked seed. C1b-M2 and
-C2–C4 remain unexecuted. **PDF v0.25.0 is unchanged.**
+C2â€“C4 remain unexecuted. **PDF v0.25.0 is unchanged.**
 
-**Preceding development — massive signed-spin map and data-sufficiency gate.**
+**Preceding development â€” massive signed-spin map and data-sufficiency gate.**
 The [new operator map](nsc-ks-signed-state.md) connects the imported
 paired angular representation to T's current basis. Its coefficient identities
 are exact; the maximum numerical residual is `6.06e-15` (tolerance `3e-11`).
@@ -6471,9 +6478,9 @@ the required opposite-angular marginal and cross block, to be generated by
 the horizon/infinity-to-paired-PG modes in the current/gauge basis. The
 operator involution does not by itself prove physical state symmetry.
 No massive PG covariance or transmitting branch jet is assigned. Full C1b
-and C2–C4 remain OPEN; **PDF v0.25.0 is unchanged**.
+and C2â€“C4 remain OPEN; **PDF v0.25.0 is unchanged**.
 
-**Preceding development — physical LLL PG Cauchy preparation.** The
+**Preceding development â€” physical LLL PG Cauchy preparation.** The
 [LLL preparation](nsc-pg-lll-preparation.md) uses the original horizon pair and
 inherited incoming occupation to construct a covariance on the same common
 PG-time slice as the retarded memory operator. It retains the exterior outgoing
@@ -6488,7 +6495,7 @@ covariance has eigenvalues between `0.11534` and `0.88466`; the packet-to-sample
 bulk correlation norm is `0.50269`. These are quantum correlation matrices,
 not stress or energy fractions.
 
-**LLL C1b PASS; full C1b and C2–C4 OPEN.** The 32 massive groups still require
+**LLL C1b PASS; full C1b and C2â€“C4 OPEN.** The 32 massive groups still require
 the signed-frequency spin/angular mode map in T's current basis, or the full
 paired four-spinor PG description and its state correlations. Degeneracy and
 copy count do not supply that map. Full transmitting `EndpointBranchJets`,
@@ -6496,7 +6503,7 @@ remaining boundary variation and physical Weyl mismatch stay unevaluated.
 This development record follows the unchanged **PDF v0.25.0**; no new paper
 version or metric evolution is claimed.
 
-**Preceding result — causal memory and temporal metric transfer.** The
+**Preceding result â€” causal memory and temporal metric transfer.** The
 [new CTP connection](nsc-local-observer-correspondence.md) places the computed
 packet response in the convention $G_J^R=-\mathcal R$, $D_J^R=-\mathcal K$.
 It preserves the energy-dependent memory and calculates the four metric
@@ -6510,7 +6517,7 @@ locked static derivatives; reverse retarded response and its metric transfer
 remain zero in the trapped probe cell. The harmonic source is a linear-response
 probe, not a selected metric history or physical frequency prediction.
 
-**Retarded-memory C1 component PASS; full C1 and C2–C4 OPEN.** The
+**Retarded-memory C1 component PASS; full C1 and C2â€“C4 OPEN.** The
 [record](../results/development/nsc-transmitting-ctp-resolvent.json) retains the
 exact missing preparation: the physical covariance on a common PG-time slice,
 including its packet/complement cross correlations. That state, full history
@@ -6518,7 +6525,7 @@ reconstruction and the KS endpoint pullback are required before the memory
 vertices become `EndpointBranchJets`. The existing consumers leave the
 remaining boundary derivative and physical Weyl mismatch unevaluated.
 
-**Preceding result — domain-correct transmitting response: Z2a PASS.** The
+**Preceding result â€” domain-correct transmitting response: Z2a PASS.** The
 [cross-resolvent calculation](nsc-transmitting-dirac-domain.md) evaluates
 all 33 retained channels on the inherited whole-line Dirac domain. Continuous
 seam data cancel the individual sharp-projector delta terms. Independent
@@ -6541,7 +6548,7 @@ data and the endpoint-coordinate pullback before they become
 Weyl mismatch are unevaluated. No stationary history or stress is assigned.
 Moving-neck jets remain out of scope for the fixed coordinate seam.
 
-**Preceding definition — common-time bulk split: Z1 PASS.** The
+**Preceding definition â€” common-time bulk split: Z1 PASS.** The
 [new bulk domain](https://doi.org/10.5281/zenodo.23090015) uses the inherited PG time
 and spatial supports $\rho>0$ and $\rho<0$. Its finite witness has parent and
 child ranks 1,904 each, with zero projector/CAR residual and rank defect zero.
@@ -6551,7 +6558,7 @@ The ordinary sharp-block Z2 route remains OPEN because projecting nonzero
 transmitting trace data leaves the Dirac operator domain. No delta coefficient is promoted
 to a Hamiltonian link or source.
 
-**Preceding definition — transmitting Dirac seed-seam domain: PASS in its finite scope.**
+**Preceding definition â€” transmitting Dirac seed-seam domain: PASS in its finite scope.**
 The [new domain](nsc-transmitting-dirac-domain.md) identifies the 33 retained
 channels with two oriented traces of one field on the stored spacelike
 surface. All 1,904 blocks are mapped using the actual coframe, quadrature
@@ -6561,27 +6568,27 @@ recovery `5.55e-16`, and the oriented boundary-form residual `1.08e-16`
 Hamiltonian link, selected Cauchy history and remaining boundary action are
 still separate definitions. No physical propagator or stress is assigned.
 
-**Preceding calculation — known bulk endpoint jets.** The
+**Preceding calculation â€” known bulk endpoint jets.** The
 [Hamiltonian-to-CTP chain](https://doi.org/10.5281/zenodo.23090015) is now executable for
 the already owned bulk vertices, using a fixed representative block in each
 of the 33 channels on the frozen control. The derivative residual is
 `1.0276e-10`; its contraction against the existing CTP action differs by
 `4.9394e-11` (finite-difference tolerance `3e-8`). These are diagnostic bulk
 jets, not complete physical transmitting jets. The
-[J→M gate](https://doi.org/10.5281/zenodo.23090015) remains **OPEN** for the link,
+[Jâ†’M gate](https://doi.org/10.5281/zenodo.23090015) remains **OPEN** for the link,
 embedding and remaining boundary derivatives.
 
-**Preceding calculation — transmitting CTP first differential.** The
+**Preceding calculation â€” transmitting CTP first differential.** The
 [new action differential](nsc-local-observer-correspondence.md) agrees with the
 existing determinant in all 33 retained channels, with maximum error
 `5.551121183780314e-12` (finite-difference tolerance `3e-8`). Common-branch
 variation is exactly zero; relative variation supplies the conditional
 Gaussian source differential. Its [endpoint chain rule](nsc-pg-ks-metric-pullback.md)
 preserves the old covector and leaves the missing physical branch jets and
-boundary remainder explicit. The [F→H decision](https://doi.org/10.5281/zenodo.23090015)
+boundary remainder explicit. The [Fâ†’H decision](https://doi.org/10.5281/zenodo.23090015)
 is **OPEN**; the old certificates are unchanged.
 
-**Preceding binding result — full extended gate: OPEN.** The
+**Preceding binding result â€” full extended gate: OPEN.** The
 [transmitting-action audit](https://doi.org/10.5281/zenodo.23090015) finds
 norm-preserving directions that change the stored covariance in all 33 channels,
 with maximum tangent norm `0.679080121964124` and isometry residual zero
@@ -6841,7 +6848,7 @@ requirements.
 Parent and child maps are obtained from the smooth Dirac geometry with
 oriented normal data. Direct inversion, Schur elimination and transfer agree
 below $2\times10^{-15}$ relative error in the recorded finite system.
-Independent radial integration differs by 0.00947%–0.03645% at the stated
+Independent radial integration differs by 0.00947%â€“0.03645% at the stated
 resolution. The [full spinor calculation](https://doi.org/10.5281/zenodo.23090015) retains both
 angular sectors and the common spin frame.
 
@@ -6919,7 +6926,7 @@ $dM_B/du=-P_0$, selecting a backreaction calculation.
 
 ## 5. One normalization and one metric variation
 
-The [canonical–spectral bridge](https://doi.org/10.5281/zenodo.23090015) partitions
+The [canonicalâ€“spectral bridge](https://doi.org/10.5281/zenodo.23090015) partitions
 the compact determinant into its physical tower, cutoff conversion and warp
 contribution. The [Gaussian measure](https://doi.org/10.5281/zenodo.23090015) gives an
 exact finite representation of the adopted proper-time action.

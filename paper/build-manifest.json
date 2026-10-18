@@ -1,10 +1,10 @@
 {
-  "bytes": 4123480,
+  "bytes": 4175226,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "753c1041126dea6ebdd193098c05e19c714f498c48e01cfdab6f351b4b0e50a2",
+  "metadata_sha256": "09ab0c71d8653285928a8cde46c85df6cd5b8d7efd1ba7a1641a8440459a4624",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 59,
-  "pdf_sha256": "ace7302e596db03f11ed92163ddcf0c4636cd2e557b544850f8af391fb7fa95b",
+  "pages": 61,
+  "pdf_sha256": "7a955039f6d86c1cb70efb396bffe8b350cdf22c9533962b10e1679f17fc1f05",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -400,12 +400,20 @@
       "sha256": "c952852d6a9afa32ef4ba3fbc222c9274b16dc26529291f81d1a631fe14ea59c"
     },
     {
+      "path": "results/summaries/nsc-atlas-dirac-mean-clock-v1.json",
+      "sha256": "4e1cae2d18abaa30d1a267fb7cdbd18d3c46d52f0a81c66cf100c6e99d21392f"
+    },
+    {
       "path": "results/summaries/nsc-atlas-dirac-probe-reference-v1.json",
       "sha256": "dfc65a11c73b260d40ecb5fb73e315aee6d29c2f9f26c3e7488cb705636fe582"
     },
     {
       "path": "results/summaries/nsc-atlas-dirac-radar-v1.json",
       "sha256": "2656283ef10647f506b98695a73996f87ec6a9a958d8424561ff0d3e6cf118e7"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-dirac-scattering-v1.json",
+      "sha256": "51bcf4ac0cd435eb3179d1123cf0566aadeea67da7fd0c05f455dda666e97d60"
     },
     {
       "path": "results/summaries/nsc-atlas-distance-contrast-v1.json",
@@ -533,6 +541,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "f22f55bc97a51022e11d17aca2f40fce22a0380cd78e28d80f36653cca742253",
-  "version": "working-2026-10-18.9"
+  "source_sha256": "668a933602bb532c56ccafe7fb7c4e86cd7b566ab19d19e75f37103962314792",
+  "version": "working-2026-10-18.10"
 }

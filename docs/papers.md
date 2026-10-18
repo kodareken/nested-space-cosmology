@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.10` adds the actual Dirac transfer and prepared mean
+metric/clock response in Section 6.1.17. The nested logarithmic coefficient
+is -.41780 versus -.39929 for the smooth-cap control with common observer
+motion. It records the physical scale, numerical spread, contracting
+mass-path discrepancies, state assumptions and remaining full-slip inputs.
+The result is conditional first-order mean backreaction, not a selected
+baseline vacuum or a completed Psi/Phi calculation.
+
 Revision `2026-10-18.9` adds the actual Dirac bulk and Euler-wall trace,
 the exact wall radar chart, and action-derived stress/metric vertices in
 Sections 6.1.14--6.1.16. New Figure 3 shows the finite causal diamond and
