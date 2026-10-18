@@ -14,6 +14,8 @@ Eddington--Finkelstein frame, and fixed 32/64 quadrature on the slicing taper.
 No P001 time step, new evolution grid, quantum state or loop polarization is
 introduced. The [owner](nsc-atlas-dirac-probe.md#joined-initial-surface-at-the-source-anchor)
 distinguishes the intrinsic spatial operator from four-dimensional dynamics.
+The [saved scalar record](../results/summaries/nsc-atlas-dirac-source-slice-v1.json)
+binds the frozen method and contains no spinor or metric arrays.
 
 The actual archived cap RHS check reproduces with:
 

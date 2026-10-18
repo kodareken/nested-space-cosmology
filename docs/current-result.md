@@ -2,6 +2,24 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Dirac initial geometry at the actual source anchor
+
+The [joined reference evaluation](../results/summaries/nsc-atlas-dirac-source-slice-v1.json)
+now connects the quiet cap at `Rwall/ell=.45` through a regular minimum
+`rmin/ell=.4053592510` to one Schwarzschild AE end. The horizon remains
+at `.8`; a regular outgoing frame checks the embedding there. The shell
+and bulk constraints agree to floating-point consistency, with maximum
+algebraic discrepancy `8.89e-15`. Eleven new controls and the ten existing
+probe controls pass. On this initial three-metric the lowest angular
+Dirac coefficient's derivative jumps by `6.5950576016/ell^2` at the wall,
+versus zero for a smooth continuation of the same cap.
+
+The [owner](nsc-atlas-dirac-probe.md#joined-initial-surface-at-the-source-anchor)
+keeps this intrinsic spatial operator separate from the physical time
+Hamiltonian and four-dimensional squared domain. A quantum state and its
+renormalized causal metric response still have to be supplied; there is no
+nested slip value yet. No new P001 grid or evolution step was used.
+
 ## P001 pointwise field equation on an actual archived state
 
 The [new check](../results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json)

@@ -228,3 +228,23 @@ ansatz, not a derivation of the physical covariance. The smooth-spacetime
 hypotheses have not been established at this material wall. The joined
 surface removes a geometric obstruction to specifying the state, without
 silently supplying that missing state or a value of `Psi/Phi`.
+
+The [source-anchor evaluation](../results/summaries/nsc-atlas-dirac-source-slice-v1.json)
+uses 231 geometric points and `.046875` process-CPU seconds. The largest
+algebraic constraint/embedding discrepancy is `8.89e-15`; the fixed 32/64
+outgoing-distance comparison differs by `2.03e-13*ell`. These are numerical
+consistency comparisons, not a physical uncertainty enclosure. It gives
+`rmin/ell=.40535925102607046`, while the event horizon is at `.8`, and
+`E=.9866904367219993`. At the same wall and lowest angular sector:
+
+| Intrinsic spatial coefficient | Cap side | Exterior side |
+| --- | ---: | ---: |
+| `W_Sigma*ell` | 2.2222222222222223 | 2.2222222222222223 |
+| `d_lambda W_Sigma*ell^2` | -4.410017555430062 | 2.1850400461857395 |
+| `V_plus*ell^2` | .5282540495082104 | 7.123311651124012 |
+| `V_minus*ell^2` | 9.348289160368335 | 2.7532315587525327 |
+
+The derivative jump is `6.595057601615801/ell^2`, agreeing with
+`k*k_wall*gamma/Rw`. A smooth continuation of the same cap has no such jump.
+This is a quantified spatial interface change on the joined initial data,
+not a loop polarization or a nesting-induced `Psi/Phi` value.

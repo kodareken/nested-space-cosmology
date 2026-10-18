@@ -1,0 +1,105 @@
+{
+  "limits": {
+    "CPU_seconds": 60,
+    "geometric_points": 40000,
+    "summary_bytes": 10000
+  },
+  "reference": {
+    "checks": {
+      "boost_unit_error": 2.220446049250313e-16,
+      "bridge_embedding_normal_norm_max_error": 1.3322676295501878e-15,
+      "bridge_embedding_orthogonality_max_error": 1.3322676295501878e-15,
+      "bridge_embedding_spatial_norm_max_error": 1.3322676295501878e-15,
+      "bridge_hamiltonian_residual_max_error": 8.881784197001252e-15,
+      "bridge_mass_max_error": 2.220446049250313e-16,
+      "bridge_momentum_residual_max_error": 8.881784197001252e-16,
+      "exterior_mass_identity_error": 2.220446049250313e-16,
+      "shell_hamiltonian_error": 3.552713678800501e-15,
+      "shell_momentum_error": 0.0,
+      "surface_energy_projection_error": 2.7755575615628914e-17,
+      "surface_momentum_projection_error": 0.0,
+      "taper_embedding_normal_norm_max_error": 2.220446049250313e-16,
+      "taper_embedding_orthogonality_max_error": 2.220446049250313e-16,
+      "taper_embedding_spatial_norm_max_error": 4.440892098500626e-16,
+      "taper_hamiltonian_residual_max_error": 4.440892098500626e-15,
+      "taper_join_max_error": 2.220446049250313e-16,
+      "taper_mass_max_error": 2.220446049250313e-16,
+      "taper_momentum_residual_max_error": 3.552713678800501e-15,
+      "wall_overlap_error": 5.551115123125783e-17
+    },
+    "counts": {
+      "P001_evolution_steps": 0,
+      "geometric_points": 231,
+      "loop_polarizations": 0,
+      "new_P001_grids": 0
+    },
+    "geometry": {
+      "analytic_AE_ends": 1,
+      "event_horizon_R_over_ell": 0.8,
+      "minimum_R_over_ell": 0.40535925102607046,
+      "minimum_is_event_horizon": false,
+      "minimum_l_over_ell": 0.6617342110551454,
+      "radial_order": "regular centre, cap, wall, minimum sphere, horizon, taper, one AE end",
+      "right_display_l_over_ell": 5.293186022921649,
+      "vacuum_data_beyond_taper": "Schwarzschild, K=0, ADM mass .4*ell"
+    },
+    "inputs": {
+      "H_ell": 1.0,
+      "M_over_ell": 0.4,
+      "Rwall_over_ell": 0.45,
+      "ell": 1.0,
+      "k_wall_ell": 2.0,
+      "right_display_R_over_ell": 4.0,
+      "scalar_amplitude": 0.0,
+      "taper_R_over_ell": [
+        1.0,
+        1.2
+      ]
+    },
+    "intrinsic_spatial_Dirac": {
+      "V_minus_minus": 9.348289160368335,
+      "V_minus_plus": 2.7532315587525327,
+      "V_plus_minus": 0.5282540495082104,
+      "V_plus_plus": 7.123311651124012,
+      "W_l_jump": 6.595057601615801,
+      "W_l_jump_control": 6.595057601615803,
+      "W_l_minus": -4.410017555430062,
+      "W_l_plus": 2.1850400461857395,
+      "W_wall": 2.2222222222222223,
+      "angular_k": 1,
+      "is_four_dimensional_Dirac_squared": false,
+      "is_physical_time_Hamiltonian": false,
+      "square_has_interface_delta": false,
+      "square_has_interface_step": true
+    },
+    "nested_Psi_over_Phi": null,
+    "numerical_comparison": {
+      "is_rigorous_error_enclosure": false,
+      "outgoing_distance_32_64_abs_difference": 2.0250467969162855e-13
+    },
+    "scope": "Quiet sourced initial surface and intrinsic spatial operator only; no physical quantum state, metric response or formation claim.",
+    "wall": {
+      "Rdot": 0.9790474832367687,
+      "Rprime_minus": 0.8930285549745876,
+      "Rprime_plus": -0.4424706093526123,
+      "V_minus": 0.0,
+      "V_plus": 0.9866904367219993,
+      "beta_minus": 1.3251543209876542,
+      "beta_plus": 0.42515432098765427,
+      "gamma": 1.4838879603635557,
+      "gamma_v": 1.0963227074688882,
+      "wall_distance": 0.4667653390472964
+    }
+  },
+  "runtime_cpu_seconds": 0.046875,
+  "schema": "nsc-atlas-dirac-source-slice-v1",
+  "source_commit": "f10a5fc339981f66cdf319f0aa4cc974a1871f88",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_slice.py": "9d46a34a54feb1f90b1de4478e535037138ada44e4628aed6ff458c38cd63c9f",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7",
+    "src/recursive_horizons/nsc_atlas_dirac_slice.py": "8e46dc5a92924ed15c1a1ddc84bd8d046fadf15ec650c98aadb343ae9f077a71",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "tests/test_nsc_atlas_dirac_slice.py": "1ddd40a2e01f4c44b902d0ac0a834c521d7bcb7ed4259c8c1f960eb9ad1e93ab"
+  },
+  "status": "joined_quiet_initial_surface_and_intrinsic_operator_only"
+}

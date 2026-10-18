@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 404371,
+      "bytes": 405449,
       "path": "docs/current-result.md",
-      "sha256": "7d45961ed960733c70714c22718cc721499585c2fd9d23f107f595feeea7e0bb"
+      "sha256": "58b8ed87346fbdf3f97a43db4a29725251ac50f45bdf41719482606e0236420b"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2404810,
+      "bytes": 2405289,
       "path": "docs/lab-snapshot.json",
-      "sha256": "5c63c5e42450b2d5acc3e8190e60a929b6c1f6516a747d6aaf26cc63582f1601"
+      "sha256": "53a7096b17f0f22250a1a5dfcc37b3cdfb0f3757bbabb573aacbd882cda8cb80"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 10763,
+      "bytes": 11900,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "1b94824fc68f8ef2ff404aef18a80ffd5fa9eee97e07f5438cc79e2964dc6e32"
+      "sha256": "0f08d53e09fb66de9039158a36a54ea39084095b08cd3a23c85130adf7db26fa"
     },
     {
       "bytes": 17343,
@@ -2236,9 +2236,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 180958,
+      "bytes": 181108,
       "path": "docs/reproducing.md",
-      "sha256": "cea4b9f58558bdc7fd0d3b52c2ddf5e51f95f5c70117345f3dfa795a112df4e0"
+      "sha256": "12ae48267050120fc425ed4a38c3a68cd6a1ee44c35d21f20035a786ee178402"
     },
     {
       "bytes": 31710,
@@ -14641,6 +14641,11 @@
       "sha256": "dfc65a11c73b260d40ecb5fb73e315aee6d29c2f9f26c3e7488cb705636fe582"
     },
     {
+      "bytes": 4414,
+      "path": "results/summaries/nsc-atlas-dirac-source-slice-v1.json",
+      "sha256": "07680e621e70f5a37213bc0d86f531ac4d683cbe062437cbe8b77cbac28b5ec3"
+    },
+    {
       "bytes": 4975,
       "path": "results/summaries/nsc-atlas-distance-contrast-v1.json",
       "sha256": "976c382167174d9e115bbed9414efff6409964eb4f981c8ecfdf0a549189eb1e"
@@ -21976,7 +21981,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "5c63c5e42450b2d5acc3e8190e60a929b6c1f6516a747d6aaf26cc63582f1601",
+  "lab_snapshot_sha256": "53a7096b17f0f22250a1a5dfcc37b3cdfb0f3757bbabb573aacbd882cda8cb80",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.8",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
