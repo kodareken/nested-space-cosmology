@@ -2,6 +2,30 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.9`, now includes the actual Dirac bulk/Euler-wall trace, wall radar chart and metric vertices, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Nonlocal Dirac response evaluated across the actual wall
+
+The [frozen comparison](../results/summaries/nsc-atlas-dirac-scattering-v1.json)
+now propagates the Dirac field on the actual quiet wall-clock diamond and
+differentiates its metric insertions. It compares one exterior source and
+a later cap insertion with the same protocol on a smooth cap continuation.
+The single-copy response-operator difference has norm `8.38846e-10` in
+the first angular sector. For a separately declared smooth incoming exterior
+occupation difference, the full k=1 multiplet response changes from
+`-2.396832494e-9` to `-2.387787593e-9`: about .3774% in magnitude.
+The nesting difference is `9.044900946e-12`, with an absolute 64/128 spread
+of `3.066849359e-13`. This spread is a diagnostic, not a proven error bound.
+
+Eight Numba workers complete the evaluation in 10.234375 CPU seconds;
+the 22783-byte record keeps summaries and aggregate hashes. Seven independent
+controls include exact wall-crossing propagation, retarded source derivatives
+and correlated parent inheritance. A failed first save exceeded the summary
+size gate after both resolutions; aggregate hashes fix storage without changing
+the calculation. The inherited baseline vacuum, angular UV completion and
+gravitational/junction/observer response still separate this one matter
+component from a full nested `Psi/Phi` prediction. P001 was not evolved.
+The [owner](nsc-atlas-dirac-probe.md#evaluated-nested-versus-cap-response)
+records all assumptions, the eight separate prepared multiplets and scope.
+
 ## A complete finite wall-radar diamond and a clock comparison
 
 The [radar reference](../results/summaries/nsc-atlas-dirac-radar-v1.json)

@@ -15,6 +15,13 @@ Positive-k multiplets are separate prepared occupation differences, not
 a vacuum sum. The
 [owner](nsc-atlas-dirac-probe.md#causal-transfer-inherited-correlations-and-nonlocal-metric-response)
 defines the supports, conditional inheritance and remaining slip inputs.
+The committed [comparison](../results/summaries/nsc-atlas-dirac-scattering-v1.json)
+uses method `7567c2a` and occupies 22783 bytes. Its first save exceeded
+the summary size gate after completing both resolutions. The successful
+completion charges 30 prior CPU seconds with `--prior-cpu-charge 30`,
+then uses 10.234375 CPU seconds. Both stay within the original allowance;
+the current recorder's default zero prior charge is suitable for a fresh
+independent reproduction.
 
 The actual wall-clock radar construction supplies a finite causal diamond
 for the quiet Dirac geometry, using its proper-wall null labels:

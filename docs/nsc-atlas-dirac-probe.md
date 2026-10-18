@@ -1154,3 +1154,47 @@ gate. No result or full matrices were retained. Aggregate matrix hashes
 replace repeated sector hashes for one completion execution of the
 unchanged mathematics. Charging 30 CPU seconds for that first attempt
 keeps both executions within the original 180-second allowance.
+
+### Evaluated nested-versus-cap response
+
+The frozen `7567c2a` [reference](../results/summaries/nsc-atlas-dirac-scattering-v1.json)
+evaluates the unchanged quiet geometry at 64 and 128 characteristic cells
+per direction. The metric source B is exterior at
+`(U,V)/S=(.35,.55)`; the later cap insertion A is at `(.80,.70)`.
+Each profile is a product of peak-one smooth bumps of half-width `.04*S`.
+They are off the wall and null edges, and every B point precedes every A
+point. Both geometries use the same clocks, profiles and canonical input.
+The smooth cap is a geometric control, not another matched material-wall
+solution.
+
+The state-independent operator difference is nonzero:
+`||R_nested-R_cap||=8.388462619e-10` in k=1 and `4.168642516e-7` in
+k=8 at N=128. Their respective 64/128 norm spreads are
+`5.23797e-12` and `1.91885e-9`. These are norms on one radial angular
+copy, without multiplying a commutator by angular degeneracy.
+
+For the separate conditional occupation difference, choose the exterior
+incoming mode `g_minus(V)=bump(V,.6*S,.3*S)*exp(-12i*V/S)`,
+`g_plus=0`, normalized in canonical null flux. It is smooth and compact
+on that leg, without a frequency cutoff. For each positive-k multiplet,
+let chi denote the retarded response change per unit occupation in units
+hbar. Then:
+
+| k | chi nested, N=128 | chi smooth cap, N=128 | Nesting change | Absolute 64/128 spread of change |
+| --- | --- | --- | --- | --- |
+| 1 | -2.387787593e-9 | -2.396832494e-9 | 9.044900946e-12 | 3.066849359e-13 |
+| 4 | -2.373505609e-6 | -2.382039025e-6 | 8.533415365e-9 | 3.023552295e-10 |
+| 8 | -6.911853302e-5 | -6.932408164e-5 | 2.055486263e-7 | 8.551697259e-9 |
+
+The response magnitude decreases by about .3774% for k=1 and .2965% for
+k=8. This is one specified prepared response component. The spread is a
+correlated two-resolution numerical diagnostic, not a continuum bound or
+observational error. The positive-k cases are different preparations;
+they are not an angular truncation of a vacuum calculation.
+
+The maximum flux-unitarity defect over both resolutions, both geometries
+and all eight k values is `7.78e-15`; the assembled metric vertices are
+Hermitian. Execution uses eight Numba workers and one BLAS thread,
+10.234375 process-CPU seconds, and a 22783-byte summary. The first attempt's
+conservative charge is 30 seconds. No matrices, new P001 grid, inherited
+baseline vacuum response or Psi/Phi value is retained or claimed.

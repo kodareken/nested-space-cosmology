@@ -1,0 +1,522 @@
+{
+  "comparison": [
+    {
+      "absolute_64_128_spread": 3.066849358910106e-13,
+      "angular_k": 1,
+      "operator_norm_absolute_64_128_spread": 5.237971578771629e-12,
+      "prepared_excess_nesting_change": 9.044900945912993e-12,
+      "response_difference_operator_norm": 8.38846261852121e-10
+    },
+    {
+      "absolute_64_128_spread": 9.739974821225592e-12,
+      "angular_k": 2,
+      "operator_norm_absolute_64_128_spread": 4.133620270929507e-11,
+      "prepared_excess_nesting_change": 2.847965548631266e-10,
+      "response_difference_operator_norm": 6.701499702439891e-09
+    },
+    {
+      "absolute_64_128_spread": 7.30345399713486e-11,
+      "angular_k": 3,
+      "operator_norm_absolute_64_128_spread": 1.363153792824542e-10,
+      "prepared_excess_nesting_change": 2.104681814588818e-09,
+      "response_difference_operator_norm": 2.256533055344932e-08
+    },
+    {
+      "absolute_64_128_spread": 3.023552294950958e-10,
+      "angular_k": 4,
+      "operator_norm_absolute_64_128_spread": 3.1251143375807193e-10,
+      "prepared_excess_nesting_change": 8.533415364542424e-09,
+      "response_difference_operator_norm": 5.3314424061944955e-08
+    },
+    {
+      "absolute_64_128_spread": 9.018196529948471e-10,
+      "angular_k": 5,
+      "operator_norm_absolute_64_128_spread": 5.837295793326809e-10,
+      "prepared_excess_nesting_change": 2.4757789687403068e-08,
+      "response_difference_operator_norm": 1.0369185586245911e-07
+    },
+    {
+      "absolute_64_128_spread": 2.181737172997041e-09,
+      "angular_k": 6,
+      "operator_norm_absolute_64_128_spread": 9.524208113692958e-10,
+      "prepared_excess_nesting_change": 5.782258630186908e-08,
+      "response_difference_operator_norm": 1.7825056189638037e-07
+    },
+    {
+      "absolute_64_128_spread": 4.56033690919165e-09,
+      "angular_k": 7,
+      "operator_norm_absolute_64_128_spread": 1.4069258092444515e-09,
+      "prepared_excess_nesting_change": 1.1568019180141709e-07,
+      "response_difference_operator_norm": 2.81302283549147e-07
+    },
+    {
+      "absolute_64_128_spread": 8.5516972585329e-09,
+      "angular_k": 8,
+      "operator_norm_absolute_64_128_spread": 1.9188493584289403e-09,
+      "prepared_excess_nesting_change": 2.0554862633674555e-07,
+      "response_difference_operator_norm": 4.1686425159220695e-07
+    }
+  ],
+  "geometry": {
+    "H_ell": 1.0,
+    "M_over_ell": 0.4,
+    "control": "smooth continuation of the same cap",
+    "k_wall_ell": 2.0,
+    "null_domain": "0<=U,V<=duration",
+    "wall_clock_duration_over_ell": 0.1256873632901346,
+    "wall_radius_over_ell": [
+      0.45,
+      0.55
+    ]
+  },
+  "levels": [
+    {
+      "cells_per_null_direction": 64,
+      "characteristic_cell_width": 0.0019638650514083532,
+      "matrix_sha256": {
+        "metric_vertices": "79a37ac887bdc2414597120e8d16981f86635cee94294dbbc958310df8d99a2f",
+        "response_order": "k=1..8, each nested then smooth_cap",
+        "responses": "7499f56e25bcd6c4704df6693ee44e9be2df0e3a53e5313bfd41e8a674c704fb",
+        "transfers": "5a4ef75ceef5c38f01760ca0d058e36321cb2373e403bca1544af9dfddfeb339"
+      },
+      "metric_cells_per_sector": 4096,
+      "norm": "sum abs(sqrt(du)*eta_plus)^2 + sum abs(sqrt(dv)*eta_minus)^2",
+      "sectors": [
+        {
+          "angular_k": 1,
+          "degeneracy": 2,
+          "nested": {
+            "flux_unitarity_error": 3.3306690738754696e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -2.3093729161851283e-09,
+            "prepared_exterior_to_cap_flux": 0.9994883654969732,
+            "response_operator_norm": 1.7013542520137559e-07,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 8.738216010021983e-12,
+          "response_difference_operator_norm": 8.440842334308927e-10,
+          "smooth_cap": {
+            "flux_unitarity_error": 2.6645352591003757e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -2.3181111321951502e-09,
+            "prepared_exterior_to_cap_flux": 0.9994865898500259,
+            "response_operator_norm": 1.7039477124003387e-07,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 2,
+          "degeneracy": 4,
+          "nested": {
+            "flux_unitarity_error": 3.3306690738754696e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -7.345625738813755e-08,
+            "prepared_exterior_to_cap_flux": 0.9979848581617032,
+            "response_operator_norm": 1.3678611262748386e-06,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 2.75056580041901e-10,
+          "response_difference_operator_norm": 6.742835905149186e-09,
+          "smooth_cap": {
+            "flux_unitarity_error": 3.1086244689504383e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -7.373131396817945e-08,
+            "prepared_exterior_to_cap_flux": 0.9979781902208785,
+            "response_operator_norm": 1.3701666228982758e-06,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 3,
+          "degeneracy": 6,
+          "nested": {
+            "flux_unitarity_error": 2.886579864025407e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -5.522435351766928e-07,
+            "prepared_exterior_to_cap_flux": 0.9955804388900285,
+            "response_operator_norm": 4.649868030961073e-06,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 2.0316472746174696e-09,
+          "response_difference_operator_norm": 2.2701645932731773e-08,
+          "smooth_cap": {
+            "flux_unitarity_error": 3.3306690738754696e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -5.542751824513103e-07,
+            "prepared_exterior_to_cap_flux": 0.9955670078396786,
+            "response_operator_norm": 4.65859772505573e-06,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 4,
+          "degeneracy": 8,
+          "nested": {
+            "flux_unitarity_error": 3.774758283725532e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -2.2947599444659062e-06,
+            "prepared_exterior_to_cap_flux": 0.9924163110155533,
+            "response_operator_norm": 1.111551584107853e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 8.231060135047329e-09,
+          "response_difference_operator_norm": 5.362693549570303e-08,
+          "smooth_cap": {
+            "flux_unitarity_error": 3.1086244689504383e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -2.3029910046009536e-06,
+            "prepared_exterior_to_cap_flux": 0.9923961365521002,
+            "response_operator_norm": 1.1138372360310201e-05,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 5,
+          "degeneracy": 10,
+          "nested": {
+            "flux_unitarity_error": 3.9968028886505635e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -6.878237608129086e-06,
+            "prepared_exterior_to_cap_flux": 0.9886695434312753,
+            "response_operator_norm": 2.1905791792442722e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 2.385597003440822e-08,
+          "response_difference_operator_norm": 1.042755854417918e-07,
+          "smooth_cap": {
+            "flux_unitarity_error": 3.6637359812630166e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -6.902093578163494e-06,
+            "prepared_exterior_to_cap_flux": 0.988644927967646,
+            "response_operator_norm": 2.1954112716890014e-05,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 6,
+          "degeneracy": 12,
+          "nested": {
+            "flux_unitarity_error": 3.3306690738754696e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -1.6744142818326715e-05,
+            "prepared_exterior_to_cap_flux": 0.9845352384119391,
+            "response_operator_norm": 3.819531939425893e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 5.5640849128872036e-08,
+          "response_difference_operator_norm": 1.7920298270774966e-07,
+          "smooth_cap": {
+            "flux_unitarity_error": 3.9968028886505635e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -1.6799783667455587e-05,
+            "prepared_exterior_to_cap_flux": 0.9845108548263352,
+            "response_operator_norm": 3.828411796526371e-05,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 7,
+          "degeneracy": 14,
+          "nested": {
+            "flux_unitarity_error": 3.552713678800501e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -3.5268129659160085e-05,
+            "prepared_exterior_to_cap_flux": 0.9802072180038361,
+            "response_operator_norm": 6.118194831191552e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 1.1111985489222544e-07,
+          "response_difference_operator_norm": 2.8270920935839146e-07,
+          "smooth_cap": {
+            "flux_unitarity_error": 3.552713678800501e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -3.537924951405231e-05,
+            "prepared_exterior_to_cap_flux": 0.9801898819321745,
+            "response_operator_norm": 6.132983832173584e-05,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 8,
+          "degeneracy": 16,
+          "nested": {
+            "flux_unitarity_error": 4.551914400963142e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -6.67504608176077e-05,
+            "prepared_exterior_to_cap_flux": 0.9758593500031776,
+            "response_operator_norm": 9.207541411346008e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 1.9699692907821265e-07,
+          "response_difference_operator_norm": 4.187831009506359e-07,
+          "smooth_cap": {
+            "flux_unitarity_error": 2.886579864025407e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -6.694745774668591e-05,
+            "prepared_exterior_to_cap_flux": 0.9758575081019344,
+            "response_operator_norm": 9.230447842481645e-05,
+            "response_trace": 0.0
+          }
+        }
+      ],
+      "source_cells": [
+        25,
+        25
+      ]
+    },
+    {
+      "cells_per_null_direction": 128,
+      "characteristic_cell_width": 0.0009819325257041766,
+      "matrix_sha256": {
+        "metric_vertices": "4e302abc103d711a39785de3946e16757455985c2c8340337bcd3d1bfe7185f4",
+        "response_order": "k=1..8, each nested then smooth_cap",
+        "responses": "4b12b8daeb52b6a5f4754db11f8ff610361fef39ec3c460b897bdfc809b70266",
+        "transfers": "bf6073674b952c1881b098495599c9b3e3df879b1b72cc64b0883d264a9489ab"
+      },
+      "metric_cells_per_sector": 16384,
+      "norm": "sum abs(sqrt(du)*eta_plus)^2 + sum abs(sqrt(dv)*eta_minus)^2",
+      "sectors": [
+        {
+          "angular_k": 1,
+          "degeneracy": 2,
+          "nested": {
+            "flux_unitarity_error": 5.329070518200751e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -2.3877875927198798e-09,
+            "prepared_exterior_to_cap_flux": 0.999488367703153,
+            "response_operator_norm": 1.7191440648563848e-07,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 9.044900945912993e-12,
+          "response_difference_operator_norm": 8.38846261852121e-10,
+          "smooth_cap": {
+            "flux_unitarity_error": 4.6629367034256575e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -2.3968324936657928e-09,
+            "prepared_exterior_to_cap_flux": 0.9994865918004854,
+            "response_operator_norm": 1.7217695909462849e-07,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 2,
+          "degeneracy": 4,
+          "nested": {
+            "flux_unitarity_error": 6.217248937900877e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -7.595574953355684e-08,
+            "prepared_exterior_to_cap_flux": 0.9979848651990352,
+            "response_operator_norm": 1.3817883594667876e-06,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 2.847965548631266e-10,
+          "response_difference_operator_norm": 6.701499702439891e-09,
+          "smooth_cap": {
+            "flux_unitarity_error": 4.9960036108132044e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -7.624054608841996e-08,
+            "prepared_exterior_to_cap_flux": 0.9979781963056326,
+            "response_operator_norm": 1.3840968167914535e-06,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 3,
+          "degeneracy": 6,
+          "nested": {
+            "flux_unitarity_error": 5.773159728050814e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -5.711010179468744e-07,
+            "prepared_exterior_to_cap_flux": 0.9955804485284724,
+            "response_operator_norm": 4.695745130357978e-06,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 2.104681814588818e-09,
+          "response_difference_operator_norm": 2.256533055344932e-08,
+          "smooth_cap": {
+            "flux_unitarity_error": 4.551914400963142e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -5.732056997614632e-07,
+            "prepared_exterior_to_cap_flux": 0.9955670155955505,
+            "response_operator_norm": 4.7044178036864166e-06,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 4,
+          "degeneracy": 8,
+          "nested": {
+            "flux_unitarity_error": 5.551115123125783e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -2.3735056092555817e-06,
+            "prepared_exterior_to_cap_flux": 0.9924163144717691,
+            "response_operator_norm": 1.122217238370654e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 8.533415364542424e-09,
+          "response_difference_operator_norm": 5.3314424061944955e-08,
+          "smooth_cap": {
+            "flux_unitarity_error": 7.771561172376096e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -2.382039024620124e-06,
+            "prepared_exterior_to_cap_flux": 0.9923961372983419,
+            "response_operator_norm": 1.124480154757849e-05,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 5,
+          "degeneracy": 10,
+          "nested": {
+            "flux_unitarity_error": 5.10702591327572e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -7.115759145333137e-06,
+            "prepared_exterior_to_cap_flux": 0.9886695254848826,
+            "response_operator_norm": 2.2111746042410638e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 2.4757789687403068e-08,
+          "response_difference_operator_norm": 1.0369185586245911e-07,
+          "smooth_cap": {
+            "flux_unitarity_error": 6.772360450213455e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -7.14051693502054e-06,
+            "prepared_exterior_to_cap_flux": 0.9886449070297457,
+            "response_operator_norm": 2.2159554734282224e-05,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 6,
+          "degeneracy": 12,
+          "nested": {
+            "flux_unitarity_error": 5.88418203051333e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -1.732680527801974e-05,
+            "prepared_exterior_to_cap_flux": 0.9845351792087157,
+            "response_operator_norm": 3.855011222064653e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 5.782258630186908e-08,
+          "response_difference_operator_norm": 1.7825056189638037e-07,
+          "smooth_cap": {
+            "flux_unitarity_error": 4.884981308350689e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -1.7384627864321608e-05,
+            "prepared_exterior_to_cap_flux": 0.984510793413069,
+            "response_operator_norm": 3.863803179165061e-05,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 7,
+          "degeneracy": 14,
+          "nested": {
+            "flux_unitarity_error": 5.10702591327572e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -3.6506487089236335e-05,
+            "prepared_exterior_to_cap_flux": 0.9802070958433257,
+            "response_operator_norm": 6.174777530926159e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 1.1568019180141709e-07,
+          "response_difference_operator_norm": 2.81302283549147e-07,
+          "smooth_cap": {
+            "flux_unitarity_error": 4.884981308350689e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -3.662216728103775e-05,
+            "prepared_exterior_to_cap_flux": 0.9801897599487409,
+            "response_operator_norm": 6.189439071760036e-05,
+            "response_trace": 0.0
+          }
+        },
+        {
+          "angular_k": 8,
+          "degeneracy": 16,
+          "nested": {
+            "flux_unitarity_error": 4.551914400963142e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -6.911853301850364e-05,
+            "prepared_exterior_to_cap_flux": 0.9758591439940179,
+            "response_operator_norm": 9.292889579161758e-05,
+            "response_trace": 0.0
+          },
+          "prepared_excess_nesting_change": 2.0554862633674555e-07,
+          "response_difference_operator_norm": 4.1686425159220695e-07,
+          "smooth_cap": {
+            "flux_unitarity_error": 5.10702591327572e-15,
+            "metric_vertex_Hermiticity_error": 0.0,
+            "prepared_excess_per_unit_occupation": -6.932408164484039e-05,
+            "prepared_exterior_to_cap_flux": 0.9758573067708892,
+            "response_operator_norm": 9.315632629131564e-05,
+            "response_trace": 0.0
+          }
+        }
+      ],
+      "source_cells": [
+        121,
+        110
+      ]
+    }
+  ],
+  "limits": {
+    "estimated_main_matrix_bytes": 50331648,
+    "process_CPU_seconds": 180,
+    "summary_bytes": 24000,
+    "working_matrix_bytes": 268435456
+  },
+  "metric_insertions": {
+    "bump": "exp(1-1/(1-z^2)), abs(z)<1",
+    "cross_contacts": "zero for these strictly ordered disjoint supports",
+    "deformation": "delta ln N=delta ln a=lambda*f, delta r=0",
+    "earlier_exterior_center_UV_over_duration": [
+      0.35,
+      0.55
+    ],
+    "half_width_over_duration": 0.04,
+    "later_cap_center_UV_over_duration": [
+      0.8,
+      0.7
+    ],
+    "response": "R=-i[J_later,J_earlier], single-copy integrated generators / hbar"
+  },
+  "nested_Psi_over_Phi": null,
+  "preparation_difference": {
+    "angular_vacuum_sum": false,
+    "covariance": "C_empty=P*C_parent*P, C_nu=C_empty+nu*|f><f|, P=I-|f><f|",
+    "envelope_center_over_duration": 0.6,
+    "envelope_half_width_over_duration": 0.3,
+    "incoming_leg": "eta_minus on U=0, exterior",
+    "normalization": "unit canonical characteristic flux",
+    "phase": "exp(-12i*V/duration)",
+    "positive_k_multiplets_are_separate_preparations": true,
+    "reported": "2*abs(k)*f^dagger*R*f per unit occupation, dimensionless",
+    "root_vacuum_selected": false,
+    "selection": "declared excess-mode modulation, conditional on an admissible inherited parent"
+  },
+  "runtime": {
+    "BLAS_threads": 1,
+    "Numba_workers": 8,
+    "P001_new_grids": 0,
+    "P001_time_steps": 0,
+    "baseline_vacuum_polarizations": 0,
+    "prior_execution_CPU_charge": 30.0,
+    "process_CPU_seconds": 10.234375,
+    "wall_ODE_rhs": 104
+  },
+  "schema": "nsc-atlas-dirac-scattering-v1",
+  "scope": "Actual curved finite Dirac propagation and nonlocal metric-vertex response; conditional finite-rank state difference. Not the inherited baseline vacuum polarization, angular UV limit, gravitational/junction solve or observable Psi/Phi.",
+  "source_commit": "7567c2a29e0ac207b835cd8501a0cc1d0ba39466",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_scattering.py": "c2fd1aa73fb564d9fe45bce348df38209b42a6fe55b002c660f604e499bef449",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "src/recursive_horizons/nsc_atlas_dirac_scattering.py": "c283d4a62a20b38ea5388a3c8629fe2d44b728c05d2ce921ff9a0e70e7251df5",
+    "src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "tests/test_nsc_atlas_dirac_scattering.py": "159dc3727c1d1b3b78ac53a971731e59b0bb3db00a56ef313987141c5fe506ef"
+  },
+  "status": "finite_curved_transfer_and_ordered_metric_response_evaluated",
+  "uncertainty": "64/128 spread is a numerical diagnostic, not a proven continuum error bound"
+}
