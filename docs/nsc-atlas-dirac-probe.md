@@ -1406,3 +1406,48 @@ G's measured uncertainty is separate from numerical resolution spread.
 The incoming clock-generator energy is `2*hbar*c*12/(S*ell)` for this
 complete k=1 multiplet; the smooth compact mode is not frequency limited.
 No sky observation sets this preparation, length, or numerical result.
+
+### Evaluated prepared mean-clock correction
+
+The frozen `be1a11e` [reference](../results/summaries/nsc-atlas-dirac-mean-clock-v1.json)
+connects the field, analytic derivatives, mean stress, both transported
+masses, material-wall displacement, bulk lapse and physical radar clock.
+It uses the previous proper-clock labels U=tau(.475), V=tau(.525);
+the radii .475 and .525 label the quiet reference, not a constraint fixing
+the perturbed wall radii. Put `eta_q=8*pi*hbar*G/(c^3*ell^2)` and define
+`C_clock=delta ln(omega_rec/omega_wall)/(eta_q*nu)` for the declared
+empty-to-occupied difference. At quadrature order 12:
+
+| Geometry | C_clock at 128 cells | Absolute 64/128 spread | Normalized mass-path gap, 64 to 128 |
+| --- | --- | --- | --- |
+| Nested cap-wall-exterior | -.4177997648 | 1.117879e-5 | 1.150808e-6 to 2.924683e-7 |
+| Smooth cap, shared observer motion | -.3992877906 | 9.947292e-6 | 3.252355e-6 to 5.845798e-8 |
+
+The coefficient difference is `-.01851197417`, with a correlated 64/128
+spread `1.231497e-6`. Nesting changes the magnitude of this logarithmic
+mean-clock response by about 4.63625% against the specified cap control.
+The nested mass-path discrepancy contracts by about a factor of four.
+Quadrature orders 8/12 differ by at most `5.33e-15` in the clock coefficient.
+The finest incoming flux is `1.00000000000964` with propagation defect
+below `7e-16`. No validation condition fails.
+
+For the independently supplied ell=10 km and nu=1, the fractional
+frequency shift is `-2.743012753e-77`, versus `-2.621474673e-77` in the
+smooth control. The nominal nesting difference is `-1.215380800e-78`.
+The nested resolution spread converts to `7.33930e-82`; G's relative
+standard uncertainty is `2.24743e-5` separately. These remain numerical
+resolution diagnostics and a constant uncertainty, not a rigorous
+continuum bound or observational confidence interval.
+
+The reference uses an eight-process pool with one BLAS/Numba thread per
+worker: 11.3722 wall seconds, 40.265625 observed process-CPU seconds and
+48.265625 charged CPU seconds including overhead. Its summary is 13053
+bytes; no field or metric arrays are retained. SciPy emitted a scalar-divide
+warning in its local error estimator; all accepted solutions and the saved
+results are finite and all prescribed mass/clock checks pass.
+
+This is a calculated mean response for an explicit finite prepared-state
+difference, conditional on a compatible parent. It supplies the h_q
+prerequisite for the later mixed retarded source/tadpole response. It does
+not compute the baseline vacuum, full Psi/Phi or an effective cosmological
+Lambda, and it does not close the unconverged finite-amplitude scalar P001.

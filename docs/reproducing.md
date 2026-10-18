@@ -14,6 +14,13 @@ eight independent process workers and one BLAS/Numba thread per worker.
 The [owner](nsc-atlas-dirac-probe.md#mean-stress-and-a-direct-spherical-metric-reconstruction)
 specifies the state difference, shared observer motion, corner data,
 proper clock, uncertainty and scope. No P001 evolution is invoked.
+The [frozen mean-clock reference](../results/summaries/nsc-atlas-dirac-mean-clock-v1.json)
+uses method `be1a11e` and occupies 13053 bytes. It completes in 11.3722
+wall seconds and 40.265625 observed process-CPU seconds, with a conservative
+48.265625 total charge. Mass-path gaps contract and every admitted
+validation condition passes. The scale and numerical spreads are defined
+in the owner; this is a conditional finite mean response, not a baseline
+vacuum or full Psi/Phi.
 
 The actual Dirac gravitational/observer bridge is an equation interface,
 with independent four-dimensional curvature, constraint propagation,

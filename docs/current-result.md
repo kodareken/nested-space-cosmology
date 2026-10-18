@@ -2,6 +2,32 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.9`, now includes the actual Dirac bulk/Euler-wall trace, wall radar chart and metric vertices, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Prepared Dirac mean metric and a physical clock correction
+
+The [mean-clock reference](../results/summaries/nsc-atlas-dirac-mean-clock-v1.json)
+now connects the actual field to stress, both masses, wall motion, bulk
+metric and the proper-wall radar frequency. For the prescribed first
+angular multiplet, the logarithmic clock coefficient is `-.4177997648`
+on the nested geometry and `-.3992877906` on a smooth cap driven along
+the same observer motion. The difference is `-.01851197417`, about 4.63625%
+in magnitude, with a correlated 64/128 spread of `1.231497e-6`.
+
+The normalized nested mass-path gap shrinks from `1.150808e-6` to
+`2.924683e-7`. The cap control also improves, and the 8/12 quadrature
+spread is below `5.33e-15`. At the independently supplied ell=10 km,
+the nominal fractional frequency shift is `-2.743012753e-77` for unit
+occupation; the nested numerical spread is `7.33930e-82`. The
+[owner](nsc-atlas-dirac-probe.md#evaluated-prepared-mean-clock-correction)
+keeps this finite state difference, source energy, scale, uncertainty and
+shared observer-motion control explicit.
+
+Ten new field/metric controls pass, including exact charged and nonzero-lapse
+families. The eight-process application uses 40.265625 observed CPU seconds
+(48.265625 charged) and retains a 13053-byte summary. This is the mean h_q
+needed before the mixed retarded source/tadpole solve. Full baseline-vacuum
+Psi/Phi and cosmological Lambda remain uncomputed. P001's finite scalar
+endpoint is unchanged and remains unconverged; no P001 grids ran.
+
 ## Nonlocal Dirac response evaluated across the actual wall
 
 The [frozen comparison](../results/summaries/nsc-atlas-dirac-scattering-v1.json)

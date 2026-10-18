@@ -1,0 +1,317 @@
+{
+  "comparison": [
+    {
+      "absolute_64_128_clock_spread": 1.1178789456778304e-05,
+      "geometry": "nested",
+      "levels": {
+        "64": {
+          "clock_coefficient": -0.4177885860018904,
+          "normalized_mass_path_gap": 1.1508082402221502e-06,
+          "quadrature_spread": 3.552713678800501e-15
+        },
+        "128": {
+          "clock_coefficient": -0.4177997647913472,
+          "normalized_mass_path_gap": 2.9246834561810546e-07,
+          "quadrature_spread": 5.329070518200751e-15
+        }
+      }
+    },
+    {
+      "absolute_64_128_clock_spread": 9.947292030965116e-06,
+      "geometry": "cap",
+      "levels": {
+        "64": {
+          "clock_coefficient": -0.3992778433339268,
+          "normalized_mass_path_gap": 3.252355212832011e-06,
+          "quadrature_spread": 2.6645352591003757e-15
+        },
+        "128": {
+          "clock_coefficient": -0.39928779062595776,
+          "normalized_mass_path_gap": 5.845797975606315e-08,
+          "quadrature_spread": 1.7763568394002505e-15
+        }
+      }
+    }
+  ],
+  "limits": {
+    "charged_CPU_seconds": 240,
+    "summary_bytes": 24000
+  },
+  "metadata": [
+    {
+      "cap_flux_defect": 2.220446049250313e-16,
+      "cap_input_flux": 0.9999998759067756,
+      "cap_wall_rhs": 1286,
+      "cells": 64,
+      "nested_flux_defect": 0.0,
+      "nested_input_flux": 0.9999998759067756,
+      "nested_wall_endpoint": {
+        "cap_mass": 2.5059204956779886,
+        "displacement": -0.2135276491892762,
+        "displacement_rate": -11.444705278189073,
+        "exterior_mass": -4.1243847537560745,
+        "radius": 0.525
+      },
+      "nested_wall_rhs": 1379,
+      "packet_norm_quadrature_error": 1.1158004442003365e-14,
+      "receiver_U": 0.027007307693417082,
+      "receiver_V": 0.08994207132638112,
+      "receiver_radar_range": 0.03146738181648202,
+      "wall_clock_duration": 0.1256873632901346
+    },
+    {
+      "cap_flux_defect": 6.661338147750939e-16,
+      "cap_input_flux": 1.0000000000096445,
+      "cap_wall_rhs": 1199,
+      "cells": 128,
+      "nested_flux_defect": 2.220446049250313e-16,
+      "nested_input_flux": 1.0000000000096445,
+      "nested_wall_endpoint": {
+        "cap_mass": 2.5059602912401076,
+        "displacement": -0.2135322156144102,
+        "displacement_rate": -11.444844940218847,
+        "exterior_mass": -4.124436183511509,
+        "radius": 0.525
+      },
+      "nested_wall_rhs": 1508,
+      "packet_norm_quadrature_error": 1.1158004442003365e-14,
+      "receiver_U": 0.027007307693417082,
+      "receiver_V": 0.08994207132638112,
+      "receiver_radar_range": 0.03146738181648202,
+      "wall_clock_duration": 0.1256873632901346
+    }
+  ],
+  "model": {
+    "H_ell": 1.0,
+    "M_over_ell": 0.4,
+    "angular_k": 1,
+    "degeneracy": 2,
+    "field": "minimal massless Dirac probe, continuum-normalized finite occupation difference",
+    "gravity": "original Einstein-Hilbert plus fixed regional vacuum terms and material tension",
+    "k_wall_ell": 2.0,
+    "order": "first order in 8*pi*(l_P/ell)^2 times occupation",
+    "root_vacuum_selected": false,
+    "vacuum_angular_sum": false
+  },
+  "nested_Psi_over_Phi": null,
+  "nesting_difference": {
+    "absolute_64_128_difference_spread": 1.2314974258131883e-06,
+    "fine_clock_coefficient_difference": -0.01851197416538941
+  },
+  "observer": {
+    "cap_control": "smooth cap with the nested wall areal-radius history explicitly supplied; no membrane",
+    "emission_wall_radius_label": 0.475,
+    "phase": "-U",
+    "reception_wall_radius_label": 0.525,
+    "worldline": "fixed proper-wall radar position"
+  },
+  "physical_scale": {
+    "G": 6.6743e-11,
+    "G_standard_uncertainty": 1.5e-15,
+    "G_unit": "m^3 kg^-1 s^-2",
+    "c_m_s": 299792458.0,
+    "constant_set": "CODATA 2022 in SciPy 1.17.1",
+    "constants_source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+    "ell_m": 10000.0,
+    "hbar_J_s": 1.0545718176461565e-34,
+    "multiplet_incoming_clock_generator_energy_J": 6.0369348658200575e-28,
+    "origin": "independently supplied nominal scale, not a fitted sky value",
+    "predictions": {
+      "cap": {
+        "G_standard_uncertainty_fractional": 2.2474266964325848e-05,
+        "absolute_frequency_ratio_change": -2.832990032211712e-77,
+        "frequency_fractional_change": -2.6214746731870684e-77,
+        "observer_areal_radius_change_m": -1.3832364742884915e-73
+      },
+      "nested": {
+        "G_standard_uncertainty_fractional": 2.2474266964325848e-05,
+        "absolute_frequency_ratio_change": -3.1644101287423636e-77,
+        "frequency_fractional_change": -2.743012753149854e-77,
+        "observer_areal_radius_change_m": -1.429053443147146e-73
+      }
+    },
+    "quantum_gravitational_factor": 6.5653764896678154e-77,
+    "radar_range_m": 314.67381816482015,
+    "wall_clock_duration_s": 4.192479161371518e-06
+  },
+  "preparation": {
+    "carrier_phase": "exp(-12i*V/duration)",
+    "continuum_flux": 1.0,
+    "covariance_difference": "nu*|f><f| after emptying that mode in the supplied parent",
+    "energy_generator": "per multiplet <i*dV> = 2*12/duration in hbar=c=ell=1",
+    "envelope_center_over_duration": 0.6,
+    "half_width_over_duration": 0.3,
+    "incoming": "eta_minus on U=0, eta_plus=0"
+  },
+  "results": [
+    {
+      "background_received_over_wall_frequency": 1.080685638960415,
+      "cells": 64,
+      "frequency_fractional_change": -0.39927784333392413,
+      "geometry": "cap",
+      "log_radar_C_change": 0.7985556866678483,
+      "mass": 2.5065880405935235,
+      "mass_other_path": 2.506596192934717,
+      "mass_path_gap": -8.152341193667922e-06,
+      "process_CPU_seconds": 2.171875,
+      "quadrature_order": 8,
+      "radius_change": -0.2106818284184047,
+      "ray_rhs_calls": 254,
+      "received_over_wall_frequency_change": -0.4314938312460583,
+      "source_points": 37398,
+      "wall_clock_log_C_at_corner": -7.105427357601002e-15
+    },
+    {
+      "background_received_over_wall_frequency": 1.080685638960415,
+      "cells": 64,
+      "frequency_fractional_change": -0.3992778433339268,
+      "geometry": "cap",
+      "log_radar_C_change": 0.7985556866678536,
+      "mass": 2.5065880405935226,
+      "mass_other_path": 2.506596192934717,
+      "mass_path_gap": -8.1523411945561e-06,
+      "process_CPU_seconds": 2.421875,
+      "quadrature_order": 12,
+      "radius_change": -0.210681828418405,
+      "ray_rhs_calls": 254,
+      "received_over_wall_frequency_change": -0.43149383124606117,
+      "source_points": 55970,
+      "wall_clock_log_C_at_corner": -7.105427357601002e-15
+    },
+    {
+      "background_received_over_wall_frequency": 1.1536257442144997,
+      "cells": 64,
+      "frequency_fractional_change": -0.41778858600189395,
+      "geometry": "nested",
+      "log_radar_C_change": 0.8355771720037879,
+      "mass": -4.125490715721602,
+      "mass_other_path": -4.1254859680728915,
+      "mass_path_gap": -4.7476487106123955e-06,
+      "process_CPU_seconds": 2.125,
+      "quadrature_order": 8,
+      "radius_change": -0.21766027839565497,
+      "ray_rhs_calls": 254,
+      "received_over_wall_frequency_change": -0.4819716684507584,
+      "source_points": 37350,
+      "wall_clock_log_C_at_corner": 1.2079226507921703e-13
+    },
+    {
+      "background_received_over_wall_frequency": 1.1536257442144997,
+      "cells": 64,
+      "frequency_fractional_change": -0.4177885860018904,
+      "geometry": "nested",
+      "log_radar_C_change": 0.8355771720037808,
+      "mass": -4.125490715721602,
+      "mass_other_path": -4.1254859680728915,
+      "mass_path_gap": -4.7476487106123955e-06,
+      "process_CPU_seconds": 2.546875,
+      "quadrature_order": 12,
+      "radius_change": -0.21766027839565494,
+      "ray_rhs_calls": 254,
+      "received_over_wall_frequency_change": -0.4819716684507543,
+      "source_points": 55898,
+      "wall_clock_log_C_at_corner": 1.2079226507921703e-13
+    },
+    {
+      "background_received_over_wall_frequency": 1.080685638960415,
+      "cells": 128,
+      "frequency_fractional_change": -0.39928779062595954,
+      "geometry": "cap",
+      "log_radar_C_change": 0.7985755812519191,
+      "mass": 2.506625082745141,
+      "mass_other_path": 2.5066249362129023,
+      "mass_path_gap": 1.4653223878724475e-07,
+      "process_CPU_seconds": 2.359375,
+      "quadrature_order": 8,
+      "radius_change": -0.21068654272383966,
+      "ray_rhs_calls": 254,
+      "received_over_wall_frequency_change": -0.4315045811417075,
+      "source_points": 72094,
+      "wall_clock_log_C_at_corner": -8.881784197001252e-15
+    },
+    {
+      "background_received_over_wall_frequency": 1.080685638960415,
+      "cells": 128,
+      "frequency_fractional_change": -0.39928779062595776,
+      "geometry": "cap",
+      "log_radar_C_change": 0.7985755812519155,
+      "mass": 2.5066250827451406,
+      "mass_other_path": 2.5066249362129023,
+      "mass_path_gap": 1.4653223834315554e-07,
+      "process_CPU_seconds": 2.703125,
+      "quadrature_order": 12,
+      "radius_change": -0.2106865427238398,
+      "ray_rhs_calls": 254,
+      "received_over_wall_frequency_change": -0.43150458114170553,
+      "source_points": 108014,
+      "wall_clock_log_C_at_corner": -8.881784197001252e-15
+    },
+    {
+      "background_received_over_wall_frequency": 1.1536257442144997,
+      "cells": 128,
+      "frequency_fractional_change": -0.4177997647913525,
+      "geometry": "nested",
+      "log_radar_C_change": 0.835599529582705,
+      "mass": -4.125545243480223,
+      "mass_other_path": -4.125544036888831,
+      "mass_path_gap": -1.206591392133305e-06,
+      "process_CPU_seconds": 2.328125,
+      "quadrature_order": 8,
+      "radius_change": -0.21766511720936368,
+      "ray_rhs_calls": 254,
+      "received_over_wall_frequency_change": -0.48198456459006694,
+      "source_points": 72014,
+      "wall_clock_log_C_at_corner": 1.1368683772161603e-13
+    },
+    {
+      "background_received_over_wall_frequency": 1.1536257442144997,
+      "cells": 128,
+      "frequency_fractional_change": -0.4177997647913472,
+      "geometry": "nested",
+      "log_radar_C_change": 0.8355995295826943,
+      "mass": -4.125545243480223,
+      "mass_other_path": -4.125544036888831,
+      "mass_path_gap": -1.206591392133305e-06,
+      "process_CPU_seconds": 2.703125,
+      "quadrature_order": 12,
+      "radius_change": -0.21766511720936374,
+      "ray_rhs_calls": 254,
+      "received_over_wall_frequency_change": -0.4819845645900608,
+      "source_points": 107894,
+      "wall_clock_log_C_at_corner": 1.1368683772161603e-13
+    }
+  ],
+  "runtime": {
+    "BLAS_threads_per_worker": 1,
+    "Numba_threads_per_worker": 1,
+    "baseline_vacuum_polarizations": 0,
+    "charged_CPU_seconds": 48.265625,
+    "new_P001_grids": 0,
+    "new_P001_time_steps": 0,
+    "observed_process_CPU_seconds": 40.265625,
+    "process_workers": 8,
+    "unobserved_serialization_overhead_CPU_charge": 8,
+    "wall_seconds": 11.372204999963287
+  },
+  "schema": "nsc-atlas-dirac-mean-clock-v1",
+  "scope": "Mean metric and finite radar-clock response to one specified prepared multiplet; the mixed retarded source/tadpole response and full baseline-vacuum Psi/Phi are not computed.",
+  "source_commit": "be1a11e6ff818f26f063b78f379ff02ca5f405eb",
+  "source_sha256": {
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/measure_nsc_atlas_dirac_mean_clock.py": "d6445cec1bf4fda3e2a00d7652ad619802f047c035cca6fb61c655c9aa620988",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_backreaction.py": "50d8ec6004c256c289545898c789edb0f63aa0f62c2ccb3842829beb9a2cd4c9",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "e54190b116d396b30d6125e700ad3225b16514ffc22c9381d5475a9651ff3786",
+    "src/recursive_horizons/nsc_atlas_dirac_gravity.py": "c217c1e499bc1841caa947e0809acf5490339369cf1edba0e3d8c7f04b06fadb",
+    "src/recursive_horizons/nsc_atlas_dirac_mean.py": "edc710307e6932fd672d4a4e5794e8883e8c1ff823ec7eccba842125c304c2a8",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "src/recursive_horizons/nsc_atlas_dirac_scattering.py": "0472fc3005c33668020e724a949db0579b4ea7ed9fcb4cb5802e7c0f05a83520",
+    "src/recursive_horizons/nsc_atlas_dirac_stress.py": "cd0030b647187b201e7a72a8cb0dab22db74b5c172a609cd9e857047c3db4f07",
+    "tests/test_nsc_atlas_dirac_backreaction.py": "cebb6b6ae0b82b8b4837aa4c39552a89b7a6c29e945e081e0921fa82bc2b635d",
+    "tests/test_nsc_atlas_dirac_mean.py": "aa27e72efcbe2757227afb9fde5bb583a559091d68159ddc94cc97c53ca28880"
+  },
+  "status": "finite_prepared_mean_clock_evaluated",
+  "uncertainty": "64/128 and 8/12 quadrature spreads are numerical diagnostics; G uncertainty is separate. No proven continuum bound or observational confidence interval.",
+  "validation_issues": []
+}
