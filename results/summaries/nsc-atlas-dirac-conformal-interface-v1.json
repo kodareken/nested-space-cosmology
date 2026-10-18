@@ -1,0 +1,70 @@
+{
+  "limits": {
+    "CPU_seconds": 30,
+    "summary_bytes": 8000
+  },
+  "reference": {
+    "cap": {
+      "four_dimensional_scalar_curvature": 0.0,
+      "radial_scalar_curvature": -2.0
+    },
+    "cap_Weyl_squared": 0.0,
+    "conformal_interface": {
+      "Omega": 2.2222222222222223,
+      "conformal_angular_K_jump": 0.0,
+      "conformal_normal_spinor_derivative_jump": 0.0,
+      "conformal_spinor_is_continuous": true,
+      "conformal_temporal_K_jump": 0.0,
+      "conformal_trace_K_jump": 0.0,
+      "global_state_selected": false,
+      "is_quantum_conformal_invariance_claim": false,
+      "normal_log_Omega_jump": 2.0,
+      "original_normal_log_radius_jump": -2.0,
+      "original_trace_K_jump": -6.0,
+      "radius": 0.45,
+      "transformation_regular_at_centre": false,
+      "transformation_regular_at_material_wall": true
+    },
+    "counts": {
+      "Dirac_time_steps": 0,
+      "P001_time_steps": 0,
+      "algebraic_wall_points": 1,
+      "loop_polarizations": 0,
+      "new_evolution_grids": 0
+    },
+    "exterior": {
+      "four_dimensional_scalar_curvature": 10.666666666666666,
+      "radial_scalar_curvature": 8.666666666666666
+    },
+    "exterior_Weyl_squared": 37.92592592592593,
+    "inputs": {
+      "Dirac_mass": 0.0,
+      "H_ell": 1.0,
+      "M_over_ell": 0.4,
+      "Rwall_over_ell": 0.45,
+      "k_wall_ell": 2.0,
+      "scalar_amplitude": 0.0,
+      "sphere_radius_over_ell": 1.0
+    },
+    "nested_Psi_over_Phi": null,
+    "radial_curvature_jump": 10.666666666666666,
+    "radial_curvature_jump_control": 10.666666666666668,
+    "scope": "Massless classical operator and domain in local conformal variables; physical clocks remain in g, and quantum state/anomaly/metric response are not computed.",
+    "smooth_cap_control_interface_derivative_jump": 0.0,
+    "smooth_cap_control_radial_curvature_jump": 0.0
+  },
+  "runtime_cpu_seconds": 0.03125,
+  "schema": "nsc-atlas-dirac-conformal-interface-v1",
+  "source_commit": "1401f3521dd226bf1a25000d8245098c309db161",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_conformal.py": "9d35d39a9f270396322446cd8cf85c0fca5dd2da72ebc5977a67f52397785986",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_conformal.py": "07049c70a4d51e54c995ab0645d347499f44f18b0e860bb9226d7a46381523ba",
+    "src/recursive_horizons/nsc_atlas_dirac_probe.py": "7bc14ce7184e67e914fe7843d6ce88a7e8971c2abd41cd4d92adebebf7aa2277",
+    "src/recursive_horizons/nsc_atlas_dirac_trace.py": "0c40cf39c3a6d8ba9810a7c209b25e6f67896f94b188accaf92f4b107f276afd",
+    "tests/test_nsc_atlas_dirac_conformal.py": "2749302890ae81127150032f26b4481bb10cce22c1d56e5c8d3541ff5a12e4f8",
+    "tests/test_nsc_atlas_dirac_trace.py": "6361430cb277a8a2beab8507f89cf0435440a86a388cfc2c6f0210a9a5893888"
+  },
+  "status": "classical_interface_jets_cancel_bulk_curvature_change_remains"
+}

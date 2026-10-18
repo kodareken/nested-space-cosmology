@@ -24,6 +24,9 @@ This imports free Dirac quantization, calculates its spin/statistics heat
 coefficient and uses the existing one-sided curvature invariants. The
 `10 km` length is supplied independently. It computes no nonlocal loop
 polarization, singular-wall term or slip.
+The two compact reference records are
+[conformal matching](../results/summaries/nsc-atlas-dirac-conformal-interface-v1.json)
+and [original-metric bulk trace](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.json).
 
 The physical initial Dirac time generator and its moving-wall compatibility
 reproduce with:

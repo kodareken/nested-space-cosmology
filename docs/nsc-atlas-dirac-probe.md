@@ -556,6 +556,15 @@ four-dimensional regulator and renormalization prescription. None of these
 classical cancellations establishes a quantum Weyl symmetry or a nested
 value of `Psi/Phi`.
 
+The [one source-anchor evaluation](../results/summaries/nsc-atlas-dirac-conformal-interface-v1.json)
+uses `.03125` process-CPU seconds. All transformed wall first-jet jumps are
+zero in the reference arithmetic. At `Rw/ell=.45` its radial curvature is
+`-2/ell^2` in the cap and `8.6666666667/ell^2` outside, a finite difference
+`10.6666666667/ell^2`. The transformed exterior Weyl square is
+`37.9259259259/ell^4`. The independent curvature identity discrepancy is
+`1.78e-15` in these reference units. These are operator/geometry inputs,
+without an inferred quantum state or a reflection/slip amplitude.
+
 ## Local one-loop Dirac trace on the original physical geometry
 
 The [local trace component](../src/recursive_horizons/nsc_atlas_dirac_trace.py)
@@ -613,3 +622,19 @@ renormalization, causal polarization and backreaction are not supplied by
 this local trace. Material-wall curvature distributions are not squared.
 The scheme-dependent total derivative cannot be ignored in a wall or
 nonconstant-curvature calculation merely because it vanishes here.
+
+The [actual bulk-trace evaluation](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.json)
+at the same source anchor and fiducial `ell=10000 m` gives:
+
+| Smooth one-sided region | `trace*ell^4/(hbar*c)` | `DeltaLambda_trace*ell^2` |
+| --- | ---: | ---: |
+| Cap | -.004643887583607148 | 7.622217590518666e-80 |
+| Exterior at `r/ell=.45` | .1138837996360018 | -1.8692250517106162e-78 |
+
+The shape factors multiplying `lP^2/ell^2` are `.029178406233514146`
+and `-.7155530165987104`. Identity comparisons differ by `1.12e-16` or
+less. The measured process time rounds to zero at this host's timer
+resolution; no field evolution or nonlocal polarization was evaluated.
+The constants, source binding and interpretation limits are retained in
+the compact record. These numbers quantify the curvature trace of the
+declared probe, not a prediction of the full observed cosmological Lambda.

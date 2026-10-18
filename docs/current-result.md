@@ -2,6 +2,31 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Actual curved-background local Dirac quantum term
+
+The [one-loop bulk trace](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.json)
+now uses the actual quiet cap and Schwarzschild curvature, with the declared
+massless four-component Dirac probe. Explicit spin/statistics contractions
+give `trace/(hbar*c)=-11*H^4/(240*pi^2)` in the cap and
+`7*M^2/(120*pi^2*r^6)` outside. This local term is zero on a flat background.
+At `Rw/ell=.45` and the supplied `ell=10 km`, its trace projections are
+`DeltaLambda_trace*ell^2=7.62221759e-80` and `-1.86922505e-78`, respectively.
+They are one-sided bulk contributions, not a full vacuum stress,
+self-consistent Lambda, or a slip calculation. Four new controls check the
+Clifford trace, fermionic sign, flat limit and dimensional scaling.
+
+The [conformal-interface calculation](../results/summaries/nsc-atlas-dirac-conformal-interface-v1.json)
+also shows why the raw spinor derivative jump cannot be called reflection:
+the original pure-tension first jets cancel in the massless conformal
+variables `g_tilde=(ell/r)^2*g`, `psi_tilde=(r/ell)^(3/2)*psi`. The exterior
+still differs in radial curvature by `12*M/(r*ell^2)`; at this anchor the
+difference is `10.66666667/ell^2`. Eight direct controls pass. Physical clocks,
+centre/asymptotic state data and the quantum conformal anomaly remain part
+of the original-metric response. The
+[owner](nsc-atlas-dirac-probe.md#conformal-calculation-variables-remove-the-singular-wall-jet)
+keeps the local cancellations separate from those remaining inputs. No
+nonlocal Dirac polarization or nested `Psi/Phi` has yet been computed.
+
 ## Dirac initial geometry at the actual source anchor
 
 The [joined reference evaluation](../results/summaries/nsc-atlas-dirac-source-slice-v1.json)

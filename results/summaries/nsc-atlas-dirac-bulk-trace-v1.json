@@ -1,0 +1,66 @@
+{
+  "limits": {
+    "CPU_seconds": 30,
+    "summary_bytes": 8000
+  },
+  "reference": {
+    "checks": {
+      "cap_shape_error": 3.469446951953614e-18,
+      "exterior_shape_error": 1.1102230246251565e-16
+    },
+    "counts": {
+      "Dirac_time_steps": 0,
+      "P001_time_steps": 0,
+      "algebraic_wall_points": 1,
+      "local_one_loop_bulk_coefficients": 2,
+      "new_evolution_grids": 0,
+      "nonlocal_loop_polarizations": 0
+    },
+    "inputs": {
+      "Dirac_mass": 0.0,
+      "G_SI": 6.6743e-11,
+      "H_ell": 1.0,
+      "M_over_ell": 0.4,
+      "Planck_length_squared_over_ell_squared": 2.6122803039748726e-78,
+      "Rwall_over_ell": 0.45,
+      "c_SI": 299792458.0,
+      "ell_is_predicted": false,
+      "ell_m": 10000.0,
+      "four_component_Dirac_fields": 1,
+      "h_SI": 6.62607015e-34,
+      "independent_new_quantum_state_is_selected": false,
+      "k_wall_ell": 2.0
+    },
+    "nested_Psi_over_Phi": null,
+    "one_sided": {
+      "cap": {
+        "delta_Lambda_trace_per_m2": 7.622217590518666e-88,
+        "delta_Lambda_trace_shape": 0.029178406233514146,
+        "delta_Lambda_trace_times_ell2": 7.622217590518666e-80,
+        "trace_times_ell4_over_hbar_c": -0.004643887583607148
+      },
+      "exterior": {
+        "delta_Lambda_trace_per_m2": -1.8692250517106164e-86,
+        "delta_Lambda_trace_shape": -0.7155530165987104,
+        "delta_Lambda_trace_times_ell2": -1.8692250517106162e-78,
+        "trace_times_ell4_over_hbar_c": 0.1138837996360018
+      }
+    },
+    "scope": "One smooth-bulk trace term of the declared Dirac probe on the original quiet metric. No interface distribution products, full vacuum stress, state, nonlocal polarization, backreaction or derived cosmological Lambda.",
+    "uncertainty_scope": "Algebraic curvature coefficient conditional on imported free Dirac theory; supplied G and fiducial length, not a total physical uncertainty or a converged full quantum model."
+  },
+  "runtime_cpu_seconds": 0.0,
+  "schema": "nsc-atlas-dirac-bulk-trace-v1",
+  "source_commit": "1401f3521dd226bf1a25000d8245098c309db161",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_conformal.py": "9d35d39a9f270396322446cd8cf85c0fca5dd2da72ebc5977a67f52397785986",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_conformal.py": "07049c70a4d51e54c995ab0645d347499f44f18b0e860bb9226d7a46381523ba",
+    "src/recursive_horizons/nsc_atlas_dirac_probe.py": "7bc14ce7184e67e914fe7843d6ce88a7e8971c2abd41cd4d92adebebf7aa2277",
+    "src/recursive_horizons/nsc_atlas_dirac_trace.py": "0c40cf39c3a6d8ba9810a7c209b25e6f67896f94b188accaf92f4b107f276afd",
+    "tests/test_nsc_atlas_dirac_conformal.py": "2749302890ae81127150032f26b4481bb10cce22c1d56e5c8d3541ff5a12e4f8",
+    "tests/test_nsc_atlas_dirac_trace.py": "6361430cb277a8a2beab8507f89cf0435440a86a388cfc2c6f0210a9a5893888"
+  },
+  "status": "local_one_loop_bulk_trace_only"
+}
