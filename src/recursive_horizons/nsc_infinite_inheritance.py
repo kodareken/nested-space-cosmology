@@ -61,6 +61,33 @@ def homogeneous_dilation_source(kinetic_reference,gradient_reference,scale=1.,co
     return result
 
 
+def volume_root_observables(branching,ratio,length=1.,cross_section=1.):
+    """Static and low-frequency root readout of the volume-weighted geometry.
+
+    With zero initial data and a calibrated root force, inverse compliance
+    Z(s)=chi0^-1+inertia*s^2+O(s^4) in the proper-time Laplace parameter.
+    The inertial scale is not a first-arrival time. The coefficient bound
+    controls this Laplace expansion in exact arithmetic, not measurement or
+    field-discretization error.
+    """
+    tree=geometric_inherited_tree(branching,ratio,length,spatial_dimension=3,
+                                  cross_section=cross_section)
+    q,L,A=float(ratio),float(length),float(cross_section)
+    mass=.5*A*L*(q**-3+branching)
+    compliance=1/(mass*tree.gamma)
+    inertia=mass/(1-tree.contraction/tree.omega)
+    inertial_scale_squared=compliance*inertia
+    dimensionless_inertia=inertial_scale_squared/L**2
+    normalized_remainder=tree.contraction*dimensionless_inertia**2/(tree.omega**2-tree.contraction)
+    return dict(static_compliance=compliance,static_stiffness=1/compliance,
+        effective_root_inertia=inertia,inertial_scale_squared=inertial_scale_squared,
+        dimensionless_inertial_scale_squared=dimensionless_inertia,
+        dimensionless_s4_remainder_coefficient=normalized_remainder,
+        laplace_s4_remainder_coefficient=normalized_remainder*L**4/compliance,
+        root_kinetic_weight=mass,
+        scope='Calibrated root force and zero initial data in the volume-weighted inherited geometry; inertial scale is not an arrival time.')
+
+
 @dataclass(frozen=True)
 class InheritedTree:
     local: np.ndarray

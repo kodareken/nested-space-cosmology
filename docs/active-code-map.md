@@ -22,6 +22,11 @@ uses the existing gravitational energy-variation API for its lapse and
 pressure response. Independent edge assembly, action differentiation and
 root work check the non-vacuum result. It does not use the paused quantum diagnostic chain or P001 grids.
 
+`volume_root_observables` gives the static compliance, effective root
+inertia and finite-band Laplace error. The same controls compare the full
+geometric profile and differentiated recursion; a known force and reference
+length distinguish nesting ratios that share a static response.
+
 The [retarded-map adapter](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
 extracts [streamed endpoint rows](../src/recursive_horizons/nsc_atlas_dirac_retarded.py)
 from the existing field solver, retaining the direct f-prime term and exact

@@ -6,6 +6,13 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.14` adds Section5.2: an explicit volume-weighted
+action, its lapse/scale pressure variation and a calibrated dynamic root
+observable. The positive field sector fails vacuum form at every inherited
+depth, while the dimensionless inertial response distinguishes different
+nesting ratios with identical static compliance. The full gravitational
+correlation source remains separate.
+
 Revision `2026-10-18.13` proves the infinite finite-energy inherited-law
 construction in Section5.1: normalized subtree scaling, an exact branching
 Schur equation, a uniform depth error bound and a spectral counting

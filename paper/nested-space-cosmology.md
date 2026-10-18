@@ -371,6 +371,103 @@ They support the calculator; the infinite result follows from the proof.
 A metric-dependent action and physical source identification remain
 needed to connect this response to cosmological Lambda.
 
+### 5.2. Physical measure, pressure and a measurable nesting ratio
+
+An inherited canonical operator does not alone specify the physical measure.
+For an explicit three-dimensional lift, give each depth-$n$ edge length
+$Lq^n$ and section $Aq^{2n}$, with $0<q<1$. Half of each incident edge's
+volume supplies the vertex kinetic weight; the root has a fixed parent
+port. Direct expansion gives
+
+$$
+m_0=\frac{AL}{2}(q^{-3}+b),\quad
+H=\frac{A(b+q^{-1})}{Lm_0},\quad
+B=-\frac{A}{Lm_0q^{3/2}},\quad\Omega=q^{-2}.
+$$
+
+The positive margin is $A(\sqrt{b}-q^{-1/2})^2/(Lm_0)$, so Section5.1
+applies for $bq\ne1$. Its physical static root compliance is
+
+$$
+\chi_0=\frac{R(0)}{m_0}=\frac{L}{A\max(b,q^{-1})}.
+$$
+
+Under a common spatial dilation, $L\mapsto aL$ and $A\mapsto a^2A$.
+Thus $M(a)=a^3M_0$, $K(a)=aK_0$, $D(a)=a^{-2}D_0$, and
+$\chi(a)=\chi_0/a$. The length-only action instead has $\chi(a)=a\chi_0$;
+the same operator scaling can conceal different physical measures. The
+owned radial spatial metric $h=r^2(Q^2dx^2+d\Omega^2)$ supplies the volume
+scaling directly: $\int r^3Q\phi_i\phi_jdx$ scales as $a^3$ and
+$\int(r/Q)\phi'_i\phi'_jdx$ as $a$ at fixed $Q$.
+
+**Pressure proposition.** Declare the kinetic-plus-gradient action
+
+$$
+S_\phi=\frac12\int dt\left[
+\frac{a^3}{N}\dot\phi^TM_0\dot\phi-Na\phi^TK_0\phi\right].
+$$
+
+Let $T_0=\pi^TM_0^{-1}\pi/2$, $G_0=\phi^TK_0\phi/2$ and
+$V=a^3V_c$. Its energy at fixed canonical data is
+$E=a^{-3}T_0+aG_0$. Lapse and scale variation, or direct Legendre
+transformation followed by $p=-\partial E/\partial V$, gives
+
+$$
+\rho=\frac{E_{\rm kin}+E_{\rm grad}}{V},\qquad
+p=\frac{E_{\rm kin}-E_{\rm grad}/3}{V}.
+$$
+
+Both energies are nonnegative. For every nonzero finite-energy state,
+
+$$
+\rho+p>0,\qquad \rho+3p=4E_{\rm kin}/V\geq0.
+$$
+
+The form domain is preserved by multiplication by these positive scale
+factors, so the proof also holds for the infinite hierarchy. Source-free
+Hamiltonian evolution gives $\dot\rho+3H(\rho+p)=0$ in homogeneous proper
+time. This sector cannot be a nonzero vacuum source. If it alone sources
+a flat Einstein cosmology without a supplied volume term, it predicts
+$q_{\rm dec}=2E_{\rm kin}/(E_{\rm kin}+E_{\rm grad})\in[0,2]$.
+The full atlas's gravitational correlations and nonminimal terms require
+their own metric variation; this proposition does not replace them.
+
+**Dynamic root observable.** With zero initial data and a known compact
+root force, measure the root field in proper time. Its Laplace response is
+$\chi(s)=R(s^2)/m_0$. Differentiating the exact Schur equation at zero gives
+
+$$
+Z(s)=\chi(s)^{-1}=\chi_0^{-1}+\mu_*s^2+O(s^4),\qquad
+\mu_*=\frac{m_0}{1-r/\Omega}.
+$$
+
+Independently, summing the entire static profile's kinetic weight gives
+$\mu_*=m_0/(1-q/b)$ for $bq>1$ and $m_0/(1-bq^3)$ for $bq<1$.
+Consequently the response scale $\tau_*^2=\chi_0\mu_*$ obeys
+
+$$
+\frac{\tau_*^2}{L^2}=\frac{q^{-3}+b}{2(b-q)}\quad(bq>1),
+$$
+
+$$
+\frac{\tau_*^2}{L^2}=\frac{q^{-2}+bq}{2(1-bq^3)}\quad(bq<1).
+$$
+
+For $b=3$, $q=1/2$ and $q=2/5$ give the same static compliance
+$L/(3A)$ but different dimensionless dynamic values: $2.2$ and
+$3.581730769230769$. The expression is strictly decreasing in $q$ on
+the admitted branches, so an independently known $b,L$ and calibrated
+force permit a unique nesting-ratio inference. An unknown source or length
+would restore degeneracy. The scale $\tau_*$ is a response coefficient,
+not a first-arrival time.
+
+The [derivation and independent checks](../docs/nsc-infinite-inheritance.md#a-calibrated-observable-that-distinguishes-the-nested-geometries)
+include the profile sum, differentiated Schur recursion, an explicit
+$O(s^4)$ Laplace remainder bound and root-work accounting. These are
+predictions of the stated geometric action, with no observational
+calibration. A compatible cap--wall/parent metric and its gravitational
+source remain necessary for a cosmological Lambda prediction.
+
 ### 6. What an unresolved surrounding region can leave locally
 
 Split a specified operator into retained and complementary blocks $A,D$

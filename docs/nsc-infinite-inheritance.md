@@ -411,6 +411,161 @@ redirects the Lambda calculation toward the metric correlation sector;
 it does not reopen this regional proof or select a vacuum amplitude.
 No novelty claim is made for the underlying variational identities.
 
+## A calibrated observable that distinguishes the nested geometries
+
+The same volume-weighted action supplies an observer relation that retains
+the length ratio q. Start with zero initial fields and apply a known smooth
+compact root force f(t). Its amplitude and time history are calibrated, so
+they cannot be adjusted separately for each geometry. The root readout is
+the physical field xi(t) in the same proper clock. For real Laplace s>0,
+
+\[
+\widetilde\xi(s)=\chi(s)\widetilde f(s),\qquad
+\chi(s)=\frac{R(s^2)}{m_0},\qquad Z(s)=\chi(s)^{-1}.
+\]
+
+**Proposition.** Write `chi0=1/(m0*gamma)` for (5). Then
+
+\[
+Z(s)=\chi_0^{-1}+\mu_*s^2+O(s^4),\qquad
+\mu_*=\frac{m_0}{1-r/\Omega},\qquad \tau_*^2=\chi_0\mu_*.
+\tag{11}
+\]
+
+Here mu_* is the effective root inertia. The scale tau_* is a response
+coefficient, not a first-arrival time. It can be determined from the static
+and low-frequency force-to-field response. In c=1 units it has length units;
+its physical time scale is tau_*/c.
+
+**Proof.** The positive lower bound on D makes its resolvent differentiable
+at lambda=0. Differentiate the scalar equation(1):
+
+\[
+R'(0)=-\frac{1}{\gamma^2(1-r/\Omega)}.
+\]
+
+Since Z(s)=m0/R(s^2), this gives (11). Independently, the static profile
+with unit root value has `phi_n=(b*q)^(-n)` when b*q>1, and `phi_n=1`
+when b*q<1. Substitution in the conductance equation gives these profiles;
+the stated form closure selects the respective branch. Summing the full
+profile's kinetic weight gives
+
+\[
+\mu_*=\sum_{n\ge0}b^nm_0q^{3n}\phi_n^2
+=\begin{cases}
+m_0/(1-q/b),&bq>1,\\
+m_0/(1-bq^3),&bq<1.
+\end{cases}
+\]
+
+Both sums converge and agree with (11). This directly includes all
+descendants rather than assigning a root mass by hand.
+
+For an exact-arithmetic expansion error, a second differentiation gives
+the scalar moment
+
+\[
+A_2=\langle e_0,D^{-3}e_0\rangle
+=\frac{1}{\gamma^3(1-r/\Omega)^2(1-r/\Omega^2)}.
+\]
+
+The resolvent identity gives
+`0<=R(lambda)-R(0)-lambda*R'(0)<=lambda^2*A2` for lambda>=0.
+This uses `0<(D+lambda)^(-1)<=D^(-1)`; it retains the actual root moment
+instead of replacing it by a worst-case norm. Substituting
+lambda=s^2/Omega in the Schur equation gives
+
+\[
+0\le\chi_0^{-1}+\mu_*s^2-Z(s)
+\le\frac{m_0c^2 A_2}{\Omega^2}s^4.
+\tag{12}
+\]
+
+This controls the Laplace expansion error. It does not include measurement
+error or an approximation to a physical cap--wall field.
+
+The dimensionless relation is explicitly
+
+\[
+F_b(q)=\frac{\tau_*^2}{L^2}=
+\begin{cases}
+\displaystyle\frac{q^{-3}+b}{2(b-q)},&bq>1,\\
+\displaystyle\frac{q^{-2}+bq}{2(1-bq^3)},&bq<1.
+\end{cases}
+\tag{13}
+\]
+
+For b=3, q=1/2 and q=2/5 have the same static compliance `L/(3*A)`.
+Their dimensionless inertial coefficients are respectively **2.2** and
+**3.581730769230769**. Their calibrated dynamic readouts therefore differ
+even though a static readout cannot separate them.
+
+With b and L fixed independently, (13) determines the admitted q uniquely.
+For q>1/b, the derivative has the sign of `b*q^4+4*q-3*b`, which is
+negative for b>=2 and0<q<1. For q<1/b, its sign is that of
+`x^2+3*x-1`, where `x=b*q^3<1/b^2<=1/4`; this is also negative. The two
+expressions meet at q=1/b, although that case is outside the present strict
+operator theorem. Thus F_b is strictly decreasing across the admitted
+branches. Equation (11)'s independent physical scale and calibrated source
+are essential: an unknown L or an adjustable incident force restores a
+degeneracy. This is an inverse relation for the specified geometry and
+preparation, not a determination of nature's q from absent observations.
+
+A finite-band readout avoids estimating a derivative at arbitrarily small
+frequency. Put `x=s*L`, `mathcal_Z=Z(s)/Z(0)` and
+`G_b=r*F_b(q)^2/(Omega^2-r)`. Equations (11)--(12) imply
+
+\[
+1+F_b(q)x^2-G_bx^4\le\mathcal Z\le1+F_b(q)x^2.
+\tag{14}
+\]
+
+At x=.1, b=3, the q=1/2 interval lies inside
+`[1.0219789,1.0220001]`; the q=2/5 interval lies inside
+`[1.0357893,1.0358174]`, with outward rounding. They are disjoint.
+This is an analytic response-expansion uncertainty for the declared action,
+not an observational uncertainty. A finite-depth calculator comparison
+retains its separate proved depth error. The time/frequency conversion uses
+the independently supplied proper length L and c; no cosmological ruler is
+inferred from these example inputs.
+
+**Finite preparation and readout.** One admissible preparation is an
+externally calibrated smooth nonnegative force, supported in [0,Tf], with
+`F1=integral f(t)dt>0`, acting on zero initial data. Its origin is that
+root actuator; it is not a claimed primordial preparation. The same wave
+energy satisfies `E'=f*xi_dot` and
+`|xi_dot|<=sqrt(2*E/m0)`, hence `E(t)<=F1^2/(2*m0)`. This gives a finite
+injected-energy budget from the same action.
+
+If observation ends at T>=Tf and additive root-field error is bounded by
+epsilon, define chi_T from the observed Laplace numerator over [0,T]
+divided by the known complete force transform. Then
+
+\[
+|\chi_T(s)-\chi(s)|\le
+\frac{e^{-s(T-T_f)}}{m_0\sqrt\delta\,s}
++\frac{\epsilon(1-e^{-sT})}{s\widetilde f(s)}.
+\tag{15}
+\]
+
+Indeed the retarded kernel is bounded by `1/(m0*sqrt(delta))`, and
+`f_tilde(s)>=exp(-s*Tf)*F1>0`. Integrating its tail and the bounded
+measurement error proves (15). Positive compliance intervals can then
+be inverted to intervals for Z. This separates finite coverage and
+measurement error from the expansion and depth errors.
+
+A common constant clock-rate error `t_measured=k*t_proper` rescales the
+response argument to k*s: the factor k in the two Laplace integrals
+cancels. Thus a declared rate interval gives the corresponding interval
+of x in (14); Z is increasing for s>=0 by positive-resolvent order.
+This changes the readout calibration, not the proper-time energy or its
+equation of state. No observational noise level or clock precision is
+assumed in the example intervals above.
+
+The existing30 CPU-second allowance also covers one direct static-profile
+sum, an independently differentiated finite Schur recurrence and this paired
+readout. No evolution, parameter scan or observational dataset is needed.
+
 ## Corollary: global evolution, energy and a local measurement
 
 For u0 in Q and v0 in the Hilbert space, the inherited wave equation
@@ -490,7 +645,7 @@ slip or any P001 grid result.
 The [calculator](../src/recursive_horizons/nsc_infinite_inheritance.py)
 implements the same recurrence without building the exponentially large
 tree. A dense tree is limited to256 coordinates for independent checks.
-The [eight controls](../tests/test_nsc_infinite_inheritance.py) compare a
+The [nine controls](../tests/test_nsc_infinite_inheritance.py) compare a
 noncommuting matrix link with the complete finite tree, the actual subtree
 scaling, the scalar closed form and depth bound, the spectral bounds and
 the zero-link limit. They also reject missing branch/scale factors and a
@@ -498,6 +653,9 @@ reversed noncommuting link. A separately assembled edge action checks the
 geometric matrices, their automatic positive margin and the root compliance
 L/b. The volume-weighted extension checks both branches of its static
 response, independent lapse/scale variations and the root-work identity.
+The dynamic readout is checked against the full static-profile mass,
+an independently differentiated Schur recursion and a finite-band response
+with its separate depth bound.
 The proof above establishes the infinite result;
 finite tests check the calculator against independent identities.
 
@@ -507,10 +665,21 @@ corollary was added afterward and checked against the separate action assembly.
 The manuscript's Section5.1 contains the main theorem and proof; revision
 2026-10-18.13 builds to66 pages and the new proof pages pass visual inspection.
 
+A subsequent native Grok review accepted the three-dimensional action,
+its pressure, both static profile branches, root inertia and monotonic
+inference. It also checked the exact second moment, disjoint finite-band
+intervals and finite preparation/readout bounds. Its terminal verdict is
+valid under the stated assumptions; it retains the separation from the
+actual constrained gravitational and nonminimal cap--wall sectors.
+Revision2026-10-18.14 includes the volume action, pressure and dynamic
+observable in Section5.2. Its matching67-page PDF builds; pages9--11 pass
+visual inspection after correcting inline inequality and Roman-label
+rendering. The existing two-build illustration check also passes.
+
 The allowance is30 process-CPU seconds for these small controls and one
 illustration, with no physical grid, evolution or large data output. The
-first four tests use .375 CPU seconds. The extended eight controls and
-illustration pass together in .9375 process-CPU seconds; pytest takes .74
+first four tests use .375 CPU seconds. The extended nine controls and
+illustration pass together in .9375 process-CPU seconds; pytest takes .77
 wall seconds. The volume example b=3,q=.5,L=A=1 gives compliance1/3,
 falling to1/6 when all spatial lengths double. Equal kinetic and gradient
 energies give p/rho=1/3 and the conditional flat q_dec=1. These examples

@@ -627,7 +627,8 @@ def build_pdf(
         value = value.replace(r"\to", "→").replace(r"\mapsto", "↦")
         value = re.sub(r"\\(?:geq|ge)(?![A-Za-z])", "≥", value)
         value = re.sub(r"\\(?:leq|le)(?![A-Za-z])", "≤", value)
-        value = value.replace(r"\neq", "≠").replace(r"\approx", "≈")
+        value = re.sub(r"\\(?:neq|ne)(?![A-Za-z])", "≠", value)
+        value = value.replace(r"\approx", "≈")
         value = re.sub(r"\\in(?![A-Za-z])", "∈", value).replace(r"\times", "×")
         value = re.sub(r"\\int(?![A-Za-z])", "∫", value)
         value = re.sub(r"\\oint(?![A-Za-z])", "∮", value)
@@ -646,6 +647,7 @@ def build_pdf(
         value = re.sub(
             r"\\frac\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
         )
+        value = re.sub(r"\\rm(?![A-Za-z])\s*", "", value)
         for command in ("mathrm", "mathbf", "boldsymbol", "mathbb", "mathcal", "operatorname", "text"):
             value = re.sub(rf"\\{command}\{{([^{{}}]+)\}}", r"\1", value)
             value = re.sub(rf"\\{command}\s+([A-Za-z])", r"\1", value)

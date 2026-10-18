@@ -148,3 +148,6 @@ numerical correctness intact. Keep the project's Python environment isolated;
 do not alter Douglas's Python 3.12 installation.
 
 Do not ever change this AGENTS.md unless Douglas explicitly tells you to.
+
+DOUGLAS ADDED:
+STOP HYPERFOCUSING ON BULLSHIT AND START PRODUCING TANGIBLE PROGRESS!!!!

@@ -6,6 +6,7 @@ import pytest
 
 from recursive_horizons.nsc_infinite_inheritance import (
     InheritedTree,geometric_inherited_tree,homogeneous_dilation_source,
+    volume_root_observables,
 )
 
 
@@ -170,3 +171,38 @@ def test_static_root_work_distinguishes_fixed_field_and_fixed_force():
     assert sp.simplify(force.subs(xi,force_controlled)-f)==0
     legendre=(energy-force*xi).subs(xi,force_controlled)
     assert sp.simplify(legendre+stored)==0
+
+
+def test_root_inertia_matches_the_full_static_profile_and_schur_derivative():
+    for b,q in ((3,.5),(3,.4),(3,.25)):
+        L,A=2.5,1.7
+        tree=geometric_inherited_tree(b,q,L,spatial_dimension=3,cross_section=A)
+        readout=volume_root_observables(b,q,L,A)
+        m0=.5*A*L*(q**-3+b)
+        profile_ratio=1/(b*q) if b*q>1 else 1.
+        # Independent physical profile: sum m_n*phi_n^2 over all vertices.
+        mass_ratio=b*q**3*profile_ratio**2
+        independent_inertia=m0/(1-mass_ratio)
+        assert readout['effective_root_inertia']==pytest.approx(independent_inertia)
+        R=0.;slope=0.;c2=b/tree.omega*float(abs(tree.link[0,0])**2)
+        for _ in range(240):
+            updated=1/(tree.local[0,0].real-c2*R)
+            slope=-updated**2*(1-c2*slope/tree.omega)
+            R=updated
+        schur_inertia=-m0*slope/R**2
+        assert readout['effective_root_inertia']==pytest.approx(schur_inertia,rel=2e-13)
+        # A finite, calibrated Laplace readout lies in the proved interval.
+        x=.1;response=tree.response((x/L)**2,128)
+        actual=1/(tree.gamma*response['response'][0,0].real)
+        upper=1+readout['dimensionless_inertial_scale_squared']*x**2
+        lower=upper-readout['dimensionless_s4_remainder_coefficient']*x**4
+        depth_error=response['analytic_depth_bound']/(tree.gamma*response['response'][0,0].real**2)
+        assert lower-2e-14<=actual<=upper+depth_error+2e-14
+    half=volume_root_observables(3,.5)
+    other=volume_root_observables(3,.4)
+    assert half['static_compliance']==pytest.approx(other['static_compliance'])
+    assert half['dimensionless_inertial_scale_squared']==pytest.approx(2.2)
+    assert other['dimensionless_inertial_scale_squared']==pytest.approx(18.625/5.2)
+    half_upper=1+half['dimensionless_inertial_scale_squared']*.01
+    other_lower=1+other['dimensionless_inertial_scale_squared']*.01-other['dimensionless_s4_remainder_coefficient']*.0001
+    assert other_lower>half_upper

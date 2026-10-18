@@ -123,6 +123,15 @@ nonzero vacuum source. The next Lambda connection is the actual constrained
 gravitational correlation action and its state, rather than another regional
 operator refinement or a relabeling of its static coefficient.
 
+That lift also supplies a
+[calibrated root-observer relation](nsc-infinite-inheritance.md#a-calibrated-observable-that-distinguishes-the-nested-geometries).
+A known compact force and zero initial fields give a dynamic inertia which
+depends strictly on the nesting ratio when b and the proper edge length
+are known. Two ratios with identical static response have disjoint
+finite-band response intervals. This establishes distinguishability for
+that specified geometric action and preparation, while the physical
+cap--wall/parent identification remains open.
+
 Here “fractal” means a proposed measurable scaling structure. A dimension
 must be obtained from a specified quantity, such as volume versus proper
 radius or mode count versus frequency. It is not assigned from spherical

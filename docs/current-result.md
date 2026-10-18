@@ -4,7 +4,7 @@ The [infinite inherited-law theorem](nsc-infinite-inheritance.md) proves a
 positive finite-energy realization of unlimited branching, exact normalized
 subtree inheritance and a finite local response with an explicit depth
 error. Its spectral counting exponent is `log(b)/log(Omega)`. The proof
-states the full domain and coupling bound; eight independent calculator
+states the full domain and coupling bound; nine independent calculator
 controls pass. An explicit length-weighted edge action derives the local
 matrices and gives static root compliance L/b. Its volume-weighted extension
 now supplies the metric variation: M scales as a^3, K as a, and root
@@ -13,10 +13,20 @@ rho+p>0 and rho+3p>=0, even with infinitely many inherited levels. Thus
 that field lift alone cannot supply a nonzero vacuum source or accelerated
 flat expansion. The actual gravitational correlation action remains the
 connection needed for Lambda; the operator's normalized scaling alone does
-not fix its physical spatial measure. A spacetime/source identification and observational tests
+not fix its physical spatial measure.
+
+The same volume-weighted action now gives a
+[calibrated dynamic discriminator](nsc-infinite-inheritance.md#a-calibrated-observable-that-distinguishes-the-nested-geometries).
+At b=3, the nesting ratios q=1/2 and2/5 have identical static compliance,
+but dimensionless inertial scales2.2 and3.581730769230769. At s*L=.1 their
+normalized inverse responses lie in disjoint analytic intervals
+`[1.0219789,1.0220001]` and `[1.0357893,1.0358174]`. The response scale
+is L/c; these are declared geometric examples, not calibrated cosmological
+numbers. With b,L and the forcing independently known, the strictly
+decreasing response formula identifies q. A spacetime/source identification and observational tests
 remain required for the cosmological claims.
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.13`, includes the infinite inherited-law theorem and proof in Section5.1, alongside the actual Dirac trace, radar chart, prepared mean metric/clock response, correlated continuum parent and local regularity proposition, and the archived PDE/boundary-lift diagnosis of P001. The matching66-page PDF builds and its new proof pages pass visual inspection. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.14`, includes the infinite inherited-law theorem in Section5.1 and the volume action, pressure and calibrated dynamic observable in Section5.2, alongside the actual Dirac trace, radar chart, prepared mean metric/clock response, correlated continuum parent and local regularity proposition, and the archived PDE/boundary-lift diagnosis of P001. The matching67-page PDF builds and its new proof pages pass visual inspection. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
 ## An explicit correlated parent state and local Dirac subtraction
 
