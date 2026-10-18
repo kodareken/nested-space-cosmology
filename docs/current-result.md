@@ -4,6 +4,14 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## Parent-state preparation on the actual Dirac geometry
 
+The [fourth-order radar symbol](nsc-atlas-dirac-probe.md#reusing-the-fourth-order-symbol-on-the-actual-radar-geometry)
+now reuses the existing Weyl/transport algebra with the actual metric's
+analytic jets. Seven new/core controls verify geometry, Pauli frame,
+transport and the wall's second-jet curvature contribution. This supplies
+local subtraction data through fourth order. It does not supply the
+joined state or its remainder; those remain necessary for a finite vacuum
+response. No new physical field cutoff or P001 grid was run.
+
 The [clock-energy candidate](nsc-atlas-dirac-probe.md#a-candidate-parent-preparation-from-clock-energy)
 now defines an explicit finite state rule using the full Dirac energy in
 the proper wall clock. It propagates smooth incoming modes on both legs,

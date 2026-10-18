@@ -2133,3 +2133,129 @@ Only then can a resolvent representation of sign(A), or a transported
 Hadamard two-point function, replace the present low-mode minimizers.
 The finite reference does not determine which construction meets those
 conditions. No new grid or vacuum number follows from this leading sign.
+
+### Reusing the fourth-order symbol on the actual radar geometry
+
+The existing `nsc_spatial_reference_symbol.reference_projector` already
+solves the formal Weyl projector and time-transport identities through
+order four. Its Taylor algebra is reusable; its old KS metric and state
+are not inputs to this calculation. Supply instead the actual radar
+lapse, radial length, radius and zero shift, with analytic derivatives
+through order four. A fixed unitary Pauli cycle changes its massless
+symbol p*sigma3+(k*N/r)*sigma2 to the current p*sigma2+(k*N/r)*sigma1.
+
+Construct those jets by Taylor solving the existing proper-wall and
+optical ODEs, then composing the exact one-sided optical inversion.
+No waveform, stored field or finite-difference derivative is used.
+At the wall, take separate cap/exterior jets; a single smooth jet there
+would erase the actual curvature jump. Local subtraction at a detector
+strictly inside the common cap uses that cap's jets.
+
+This new connection has 120 process-CPU seconds for analytic-interface
+controls: the known metric/curvature derivatives, the independent wall
+second-jet identity, static and angular/unitary limits, the independent
+first time-transport correction and joint momentum/angular homogeneity
+through order four. Include the three existing Weyl-core tests. No
+physical state evolution, P001 grid, new cutoff reference or full arrays
+are admitted. Stop on a derivative, Pauli-frame or transport mismatch.
+
+The decision is whether the existing finite algebra supplies the actual
+local subtraction terms. It cannot select the missing global covariance
+or prove its remainder. Likely failures are losing the proper-clock
+derivatives in the optical composition, importing the KS Pauli frame,
+and treating the formal subtraction symbol as a positive state.
+
+The [radar adapter](../src/recursive_horizons/nsc_atlas_dirac_symbol.py)
+now supplies those jets and all five local symbol orders, reusing the
+existing Weyl core. Seven independent new/core controls pass across
+the development runs, using 7.875 process-CPU seconds. The initial
+fourth wall-derivative comparison missed an absolute threshold by
+2.25e-10 at a derivative magnitude 12426.94 (1.81e-14 relative). A
+scale-aware floating-point tolerance corrects that test; no geometry or
+symbol equation changed. Curvature and null-constraint equations checked
+through two derivatives independently control the order-four metric jets.
+
+For H=p*sigma2+W*sigma1, the first transported correction is explicitly
+
+```text
+c0 = (I-H/omega)/2
+c1 = -p*W_T*sigma3/(4*omega^3), omega=sqrt(p^2+W^2).
+```
+
+The first spatial Weyl terms cancel in this massless planar case. Solving
+`i*d_T c0=[H,c1]` fixes the displayed sign. The actual geometry's nonzero
+W_T therefore matters even at the first subleading order; a bare
+instantaneous projector omits it. The controls compare this independently
+derived expression, signed-sector unitary parity and the joint scaling
+`c_n(lambda*p,lambda*k)=lambda^(-n)*c_n(p,k)` through n=4.
+
+### The wall's curvature enters the second symbol order
+
+Let d=M_parent-b and use the actual wall radius R(T), speed v and
+acceleration Rddot. On each side the radar-wall values are
+
+```text
+N=1, N_T=N_TT=0, r=R, r_x=beta, N_x=beta'
+r_xx=Rddot+F', N_xx=(beta')^2+F''/2.
+```
+
+Here primes are derivatives with respect to areal radius; x is the radar
+coordinate, not a proper-normal coordinate away from the wall. Israel
+matching gives common beta'-beta/R. Since W=k*N/r, its first derivatives
+and all purely tangential jets agree. Its second radial radar jet obeys
+
+```text
+J=[W_xx] = k*(Delta F''/(2*R)-Delta F'/R^2+Delta F/R^3)
+          = -6*k*(M_parent-b)/R^4.
+[W_TT]=[W_Tx]=0.
+```
+
+The conformal radial curvature jump is 12*d/R, consistently giving
+J=-k*Delta R2_conformal/(2*R^3). Thus making a single C-infinity wall
+jet would delete a known part of the geometry.
+
+With all lower and tangential second jets fixed, the first local
+subtraction-symbol discontinuity is
+
+```text
+[c2] = -J/(16*omega^7) *
+       (5*W^2*p^2*sigma1 + W*p*(2*p^2-3*W^2)*sigma2).
+```
+
+An independent Pauli/Sylvester calculation checks this against the two
+one-sided fourth-order calculations. In detail, writing P=c0,Q=I-P,
+c_W=d_W c0 and c_pp=d_p^2 c0, the two separate defects are
+`Delta G2=-J*{c_W,c_pp}/8` and `Delta F2=J*[sigma1,c_pp]/8`.
+Then `Delta c2=-P*Delta G2*P+Q*Delta G2*Q+[H,Delta F2]/(4*omega^2)`
+reduces to the displayed expression. This is a jump of the formal local
+subtraction data, not a new boundary condition on the physical state.
+
+### Sufficient remainder for the current mean-stress comparison
+
+The all-order local Hadamard target is stronger than the immediate
+mean-stress calculation needs. If an actual covariance and its local
+orders c0 through c4 differ by a symbol of order -5, uniformly on the
+compact cap detector, its one-derivative stress remainder is integrable.
+The joint radial/angular measure in three spatial dimensions scales as
+lambda^2*d_lambda; stress contributes one power, so the remainder tail
+is bounded by a constant times `integral_Lambda^infinity lambda^(-2)
+d_lambda = 1/Lambda`. Order -4 would instead allow a logarithmic tail.
+This conclusion assumes the stated symbol bounds and local operator
+description; a five-term formal series supplies neither on its own.
+
+At fixed b the nested and smooth models have identical cap jets, so their
+local subtraction terms agree before the coincidence limit. A proved
+order-minus-five bound for the actual state difference would suffice
+for this mean-stress comparison even before an all-Wick-powers theorem.
+The new adapter makes those local terms computable. The missing object
+remains the joined covariance with a controlled remainder after actual
+transmission; no bound is inferred by fitting the two/four-mode data.
+
+Boundary-state existence results need their exact hypotheses. The
+[published MIT-Dirac paper](https://ems.press/journals/dm/articles/13131883)
+explicitly assumes an appropriate singularity-propagation result; it does
+not prove transparent transmission for this wall. The
+[2026 timelike-boundary construction](https://arxiv.org/html/2609.13358v1)
+treats a smooth scalar Dirichlet problem. Its positive-energy splitting
+argument is a useful route to inspect, rather than a theorem already
+applicable to this piecewise-smooth Dirac geometry.

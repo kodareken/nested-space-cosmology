@@ -8,6 +8,13 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [actual radar UV subtraction](nsc-atlas-dirac-probe.md#reusing-the-fourth-order-symbol-on-the-actual-radar-geometry)
+uses [analytic radar jets and a Pauli-frame adapter](../src/recursive_horizons/nsc_atlas_dirac_symbol.py)
+around the existing fourth-order Weyl core, with
+[independent metric, interface and transport checks](../tests/test_nsc_atlas_dirac_symbol.py).
+It supplies local formal subtraction terms and the curvature-dependent c2
+jump. The global state and a bound on its remainder remain separate inputs.
+
 The [clock-energy parent-state candidate](nsc-atlas-dirac-probe.md#a-candidate-parent-preparation-from-clock-energy)
 is implemented by [the finite state component](../src/recursive_horizons/nsc_atlas_dirac_preparation.py),
 with [independent controls](../tests/test_nsc_atlas_dirac_preparation.py) and

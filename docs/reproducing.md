@@ -1,5 +1,16 @@
 # Reproducing the root project
 
+The [radar subtraction-symbol adapter](nsc-atlas-dirac-probe.md#reusing-the-fourth-order-symbol-on-the-actual-radar-geometry)
+uses analytic one-sided metric jets through order four and the existing
+Weyl projector/transport core. It runs no physical field reference:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_symbol.py tests/test_nsc_spatial_reference_symbol.py -q
+```
+
+Seven independent controls pass (7.875 process-CPU seconds across development).
+The local symbol is not a state or a numerical UV-remainder estimate.
+
 The [finite clock-energy preparation](nsc-atlas-dirac-probe.md#actual-geometry-clock-energy-candidate-admission)
 has thirteen preparation and existing-field controls, including the exact
 continuum-versus-finite Hardy projector comparison. The actual-geometry
