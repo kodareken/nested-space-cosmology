@@ -250,7 +250,7 @@ On its reference spatial metric `h=r^2(Q^2 dx^2+dOmega^2)`, radial scalars
 have the positive operator
 
 $$
-\mathcal L=-\Delta_h=-\frac1{r^3Q}\partial_x\left(\frac rQ\partial_x\right).
+\mathcal L=-\Delta_h=-\frac{1}{r^3Q}\partial_x\left(\frac{r}{Q}\partial_x\right).
 $$
 
 Use the owned odd geometry basis and its existing even quadrature to form

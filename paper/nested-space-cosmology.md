@@ -754,7 +754,7 @@ candidate's full state fixed and choose a retained space from its physical
 radial Laplacian. On the reference slice $T=0.05$,
 
 $$
-\mathcal L=-\Delta_h=-\frac{1}{r^3Q}\partial_x\left(\frac rQ\partial_x\right),
+\mathcal L=-\Delta_h=-\frac{1}{r^3Q}\partial_x\left(\frac{r}{Q}\partial_x\right),
 \qquad \mu L_{\mathrm{ref}}^2\leq1.
 $$
 
