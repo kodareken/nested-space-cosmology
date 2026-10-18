@@ -14,6 +14,12 @@ then independent covariance contractions run in eight processes. The old
 order-24 values must agree with the frozen v1 baseline within 1e-9 before
 the new order is interpreted. No additional field grid is admitted here.
 
+The [v2 fixed-grid result](../results/summaries/nsc-atlas-dirac-root-response-v2.json)
+uses method `e6bd1bb`, 54.625 total CPU seconds and 12.77376 wall seconds.
+The old cases reproduce, but the 24/48 spread grows rather than contracts.
+Keep both pilot amplitudes provisional; the owner records the next
+endpoint-identity diagnosis without admitting a finer field grid.
+
 The [retarded-map extraction](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
 uses the existing characteristic solver and analytic derivatives. Its
 32/64 cylinder control checks both polynomial orders and contracts the

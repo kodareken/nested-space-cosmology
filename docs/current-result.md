@@ -4,11 +4,20 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [fixed-grid polynomial refinement](nsc-atlas-dirac-probe.md#polynomial-refinement-exposes-an-unresolved-amplitude)
+does not converge: order 48 gives .002245374289 at the smaller split,
+versus order 24's .001765398991. The new change is 3.325 times the old
+12/24 spread. The parallel baseline agrees within 2.024e-14, so the
+representation is the issue. Neither pilot is a converged continuum
+amplitude. Eight covariance processes complete in 12.774 wall/54.625 CPU
+seconds; no new field grid runs. Endpoint-source compatibility is next.
+
 The [first full-radial finite-split reference](nsc-atlas-dirac-probe.md#evaluated-full-radial-finite-split-reference)
 now evaluates the actual nested-versus-cap vacuum comparison. For kappa=+1
 at a 12.724739 m proper split with supplied ell=10 km, its pressure-shaped
 bilocal changes by .001765398991 hbar*c/ell^4, or 5.58135618e-45 Pa.
-Grid, polynomial and separation variations are 1.17%, 8.18% and 4.38%.
+Its initial grid, polynomial and separation variations are 1.17%, 8.18%
+and 4.38%; v2 shows these are insufficient to quote a continuum uncertainty.
 The complete radial root covariance is included; the angular sum and
 relative coincidence limit are not. This is not full Psi/Phi. The frozen
 run uses 47 CPU/42.479 wall seconds and retains a 22899-byte summary.

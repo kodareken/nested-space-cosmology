@@ -2959,3 +2959,29 @@ The fixed-grid order-48 cylinder control passes: kernel error
 process-CPU seconds. The field grid and propagation equations are unchanged.
 The explicit `--stage polynomial` route runs the new representation test;
 the default initial route retains the v1 case selection.
+
+### Polynomial refinement exposes an unresolved amplitude
+
+The [v2 summary](../results/summaries/nsc-atlas-dirac-root-response-v2.json),
+method `e6bd1bb`, completes the fixed-N128 comparison. The parallel stage
+reproduces v1's order-24 values within 2.024e-14, well inside the 1e-9
+baseline tolerance. Process refactoring does not explain the new spread.
+
+| Polynomial order | eta/S=.02 | eta/S=.01 |
+|---|---|---|
+| 24 | .001842679064 | .001765398991 |
+| 48 | .002173544722 | .002245374289 |
+
+The new order difference at eta/S=.01 is 4.79975298e-4, 3.325 times the
+earlier 12/24 difference, or a 27.19% change from order 24. Polynomial
+refinement does not contract. The sign of the separation difference also
+reverses. No continuum or coincidence amplitude is inferred from either
+pilot. The earlier positive values remain numerical finite-representation
+results; they are not converged predictions of the declared continuum state.
+
+All eight covariance processes are observed. The run uses 54.625 CPU
+seconds including 44.734375 child CPU seconds, and 12.77376 wall seconds
+(4.28 effective cores averaged over both phases). It retains 13567 bytes.
+No new field grid ran. The next diagnostic is the same detector's
+endpoint source jets and their possible relative logarithmic residue;
+more field refinement or finer PV quadrature would not settle that identity.

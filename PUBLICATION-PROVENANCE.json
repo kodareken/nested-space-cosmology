@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 264741,
+      "bytes": 264995,
       "path": "docs/active-code-map.md",
-      "sha256": "7c74761a6a90470fa1c47b737dee00907ee0e91589ae58c4b80a46269e846f9a"
+      "sha256": "3d9b280d499e1746cab51a2873af2a1dce07892074deb663323ac8573387ff38"
     },
     {
       "bytes": 106460,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 424829,
+      "bytes": 425449,
       "path": "docs/current-result.md",
-      "sha256": "813e11fd15ba18303e5fdd360033b82a125d79f7a8d78aa04eb28b413cea99ed"
+      "sha256": "c5d0859fd087b50394c02fe33b8e89a2b28ccac795095292d0555b4809e985f6"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2438756,
+      "bytes": 2439237,
       "path": "docs/lab-snapshot.json",
-      "sha256": "3485be41b99e2483ecfa2bc047c89e38ae217a87e883d0bc3440bf854ffab323"
+      "sha256": "13053edbe516633ce5d360413a0a65fd0c642a44a7e2c91f0c9249fcfb9660f7"
     },
     {
       "bytes": 4997,
@@ -1631,9 +1631,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 151262,
+      "bytes": 152626,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "9b8ac6f4bd0defc5a23b6380fad6071785b8e90f457d5c2bd3638321ddf9be48"
+      "sha256": "5bc6ffce1199567269eb467ab0570d95cd024e6b0e92f6089999ec1b3c068c5e"
     },
     {
       "bytes": 17343,
@@ -2241,9 +2241,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 199005,
+      "bytes": 199376,
       "path": "docs/reproducing.md",
-      "sha256": "02de9be3a4f48a3cd648c420a30a18d67952f11f00e6cf55ad6b44ae96c6b632"
+      "sha256": "5a2c76471f0a91ecf0def0ee4947d7cc7c64698f30420e799e950da01d4cb304"
     },
     {
       "bytes": 31710,
@@ -14706,6 +14706,11 @@
       "sha256": "22fcb055774763bc320d3c0dff5311c2ab89a3ae973ee6f310fa57f95f3765f8"
     },
     {
+      "bytes": 13567,
+      "path": "results/summaries/nsc-atlas-dirac-root-response-v2.json",
+      "sha256": "6e60187a4b66b6636af7c097bc956c52c15d6850bfcaae900cef4857fb0194c7"
+    },
+    {
       "bytes": 22783,
       "path": "results/summaries/nsc-atlas-dirac-scattering-v1.json",
       "sha256": "51bcf4ac0cd435eb3179d1123cf0566aadeea67da7fd0c05f455dda666e97d60"
@@ -22336,7 +22341,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "3485be41b99e2483ecfa2bc047c89e38ae217a87e883d0bc3440bf854ffab323",
+  "lab_snapshot_sha256": "13053edbe516633ce5d360413a0a65fd0c642a44a7e2c91f0c9249fcfb9660f7",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.12",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

@@ -1,0 +1,446 @@
+{
+  "baseline_reference": {
+    "absolute_tolerance": 1e-09,
+    "path": "results/summaries/nsc-atlas-dirac-root-response-v1.json",
+    "sha256": "22fcb055774763bc320d3c0dff5311c2ab89a3ae973ee6f310fa57f95f3765f8"
+  },
+  "cases": [
+    {
+      "bessel_pressure_tail_bound": 4.7027667861303536e-95,
+      "cells": 128,
+      "finite_split_anisotropy_difference": 0.0017653989911648438,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            1.178064600597e-06,
+            -1.1286210985495086e-05
+          ],
+          [
+            -2.9345168643908335e-09,
+            -6.5267516967719105e-06
+          ]
+        ],
+        "real": [
+          [
+            3.00845344519314e-07,
+            0.0005900851593957291
+          ],
+          [
+            0.0005475698594272878,
+            -7.982679102562778e-08
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0009408984872284284,
+            -0.04732403078495302
+          ],
+          [
+            1.6945205084462033e-07,
+            -0.005133124230192583
+          ]
+        ],
+        "real": [
+          [
+            0.0012776174840659793,
+            -0.026497501085933656
+          ],
+          [
+            0.008969497874964281,
+            2.682372314202201e-05
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 5.5813561764717e-45,
+      "polynomial_order": 24,
+      "proper_separation_m": 12.72473894657857,
+      "proper_separation_quadrature_estimate_m": 4.2381894482507974e-13,
+      "pv_pressure_quadrature_estimate": 3.0257430342638667e-13,
+      "separation_over_S": 0.01
+    },
+    {
+      "bessel_pressure_tail_bound": 5.358160430475996e-95,
+      "cells": 128,
+      "finite_split_anisotropy_difference": 0.001842679064390216,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -1.5067480940786789e-06,
+            -3.007366115213018e-05
+          ],
+          [
+            -1.8313734129060242e-09,
+            -1.2977780046440263e-05
+          ]
+        ],
+        "real": [
+          [
+            8.080794276940602e-07,
+            0.0005010406397511624
+          ],
+          [
+            0.0005591725095559214,
+            -4.545111602352798e-08
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0009314929586568927,
+            0.02303639489741211
+          ],
+          [
+            3.958784752453984e-07,
+            -0.005183621806799034
+          ]
+        ],
+        "real": [
+          [
+            -0.0006164191648839711,
+            -0.027870801784462593
+          ],
+          [
+            0.007589854134719862,
+            -1.4706502852950107e-06
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 5.825679197031499e-45,
+      "polynomial_order": 24,
+      "proper_separation_m": 25.449494787493208,
+      "proper_separation_quadrature_estimate_m": 8.47638452344586e-13,
+      "pv_pressure_quadrature_estimate": 2.889335016943809e-13,
+      "separation_over_S": 0.02
+    },
+    {
+      "bessel_pressure_tail_bound": 5.056999836027542e-95,
+      "cells": 128,
+      "finite_split_anisotropy_difference": 0.0022453742889976753,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -3.75292473772022e-07,
+            3.3144285550499922e-06
+          ],
+          [
+            -1.0406151077664357e-09,
+            -6.507770184358344e-06
+          ]
+        ],
+        "real": [
+          [
+            -8.672868865423588e-08,
+            0.0005379484734493152
+          ],
+          [
+            0.0005526878572560647,
+            -2.7545967718427657e-08
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.00018891834573475576,
+            -0.005614738573223036
+          ],
+          [
+            -3.891640660759385e-08,
+            -0.005174769458378362
+          ]
+        ],
+        "real": [
+          [
+            0.00014781849905449356,
+            -0.00039067496751366525
+          ],
+          [
+            0.007131354743374933,
+            1.7173470324691648e-06
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 7.098810931187244e-45,
+      "polynomial_order": 48,
+      "proper_separation_m": 12.72473894657857,
+      "proper_separation_quadrature_estimate_m": 4.2381894482507974e-13,
+      "pv_pressure_quadrature_estimate": 3.0045276518562263e-13,
+      "separation_over_S": 0.01
+    },
+    {
+      "bessel_pressure_tail_bound": 5.7704509564929174e-95,
+      "cells": 128,
+      "finite_split_anisotropy_difference": 0.0021735447218229247,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -9.74979286267152e-07,
+            8.004091628384599e-07
+          ],
+          [
+            -9.905807649236881e-10,
+            -1.3010545433795445e-05
+          ]
+        ],
+        "real": [
+          [
+            -2.1485672373067283e-08,
+            0.0005236588699131876
+          ],
+          [
+            0.0005616628682462118,
+            -2.6936130291329457e-08
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.00032316211783027347,
+            0.004320065996419629
+          ],
+          [
+            -7.452252873605159e-09,
+            -0.0051782465503669856
+          ]
+        ],
+        "real": [
+          [
+            -0.00011368593914924365,
+            -0.00559639125483708
+          ],
+          [
+            0.007092345326276414,
+            -6.584083479961838e-07
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 6.871719831435593e-45,
+      "polynomial_order": 48,
+      "proper_separation_m": 25.449494787493208,
+      "proper_separation_quadrature_estimate_m": 8.47638452344586e-13,
+      "pv_pressure_quadrature_estimate": 3.029675837278271e-13,
+      "separation_over_S": 0.02
+    }
+  ],
+  "compute": {
+    "BLAS_threads": 1,
+    "CPU_limit_seconds": 240.0,
+    "child_process_CPU_seconds": 44.734375,
+    "covariance_processes": 8,
+    "live_field_array_ceiling_bytes": 268435456,
+    "mode_workers": 8,
+    "observed_child_processes": 8,
+    "parallel_phases": "separate field and covariance phases",
+    "process_CPU_seconds": 54.625,
+    "retained_full_arrays": false,
+    "wall_seconds": 12.773755199974403
+  },
+  "domain": {
+    "angular_sectors": [
+      1
+    ],
+    "central_mass": 0.0,
+    "detector_U_over_S": 0.8,
+    "detector_V_over_S": 0.7,
+    "detector_radius_over_ell": 0.5210778461599037,
+    "magnetic_degeneracy": 2,
+    "physical_radar_lapse": 1.012411733193235,
+    "physical_reference_length_m": 10000.0,
+    "root_radial_spectrum": "complete analytic covariance, no momentum cutoff",
+    "root_radius": 0.45,
+    "state": "same correlated product-cylinder parent and fixed auxiliary switch in both geometries",
+    "wall_clock_duration": 0.1256873632901346
+  },
+  "endpoint_evidence": [
+    {
+      "cells": 128,
+      "geometry": "nested",
+      "quadrature_estimate": 4.292840153602117e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.00015674576325959053,
+          5.177419781693933e-05
+        ],
+        [
+          0.0014842153651350523,
+          0.0008409378617763351
+        ]
+      ],
+      "response_sha256": "2f3da38399e3d5105b03e323cbe04eef938f6febeec3882e484fb232242ee12d",
+      "separation_over_S": 0.02,
+      "side": 0
+    },
+    {
+      "cells": 128,
+      "geometry": "nested",
+      "quadrature_estimate": 4.435444528713878e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.00016239494840095624,
+          4.766503812603434e-05
+        ],
+        [
+          0.00160004936838821,
+          0.0007365055898388489
+        ]
+      ],
+      "response_sha256": "3e52b51923bbb380831cbd46336e33b5764605619de52b206ce2dfe28ffba3b1",
+      "separation_over_S": 0.02,
+      "side": 1
+    },
+    {
+      "cells": 128,
+      "geometry": "cap",
+      "quadrature_estimate": 4.049260743678456e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.00015153433018073504,
+          5.177422582757967e-05
+        ],
+        [
+          0.001366842837794287,
+          0.0008409353950405733
+        ]
+      ],
+      "response_sha256": "29352125068f69de94a885efcb4f10ed0fc80cf8dfb60a7e53cc7bad8cc620f3",
+      "separation_over_S": 0.02,
+      "side": 0
+    },
+    {
+      "cells": 128,
+      "geometry": "cap",
+      "quadrature_estimate": 4.192930538562232e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.00015717495210001067,
+          4.766505865227051e-05
+        ],
+        [
+          0.001476536970321168,
+          0.0007365035531612957
+        ]
+      ],
+      "response_sha256": "1403795351ea4a9feb6073da01b8993d33e52f563c19cf86972cfb402fe7706d",
+      "separation_over_S": 0.02,
+      "side": 1
+    },
+    {
+      "cells": 128,
+      "geometry": "nested",
+      "quadrature_estimate": 4.3279733554721293e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0001588859449541099,
+          5.120276581790127e-05
+        ],
+        [
+          0.001519531578590854,
+          0.0008207233059883922
+        ]
+      ],
+      "response_sha256": "ee3987b78202023dd041e4db7a4fd7888e809ecc15c790711a79092d705199e9",
+      "separation_over_S": 0.01,
+      "side": 0
+    },
+    {
+      "cells": 128,
+      "geometry": "nested",
+      "quadrature_estimate": 4.399098161155177e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0001617476346922789,
+          4.908446837203388e-05
+        ],
+        [
+          0.0015752330464048013,
+          0.000767112443535919
+        ]
+      ],
+      "response_sha256": "178ad079655d966b09330a118aeeb5590bee42b3e341ce207a233b6de8064000",
+      "separation_over_S": 0.01,
+      "side": 1
+    },
+    {
+      "cells": 128,
+      "geometry": "cap",
+      "quadrature_estimate": 4.084565261038429e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.00015364892582830583,
+          5.120279115975182e-05
+        ],
+        [
+          0.0013999360086807792,
+          0.0008207209325735584
+        ]
+      ],
+      "response_sha256": "6837c0f4bf4e290c7823115a3e397703a39adf69b0f37568531d2be02cf91c17",
+      "separation_over_S": 0.01,
+      "side": 0
+    },
+    {
+      "cells": 128,
+      "geometry": "cap",
+      "quadrature_estimate": 4.1563473594458253e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.00015650354506621856,
+          4.9084493393877823e-05
+        ],
+        [
+          0.0014552376197046436,
+          0.0007671102831847782
+        ]
+      ],
+      "response_sha256": "1172da7a8e20720400abca90a38704405b2aff4e48d6f7f6e741fc0cb7d1366c",
+      "separation_over_S": 0.01,
+      "side": 1
+    }
+  ],
+  "limits": [
+    "One signed angular sector only; the angular tail is not computed.",
+    "Finite nonzero split in the declared canonical radar frame; no coincident renormalized stress.",
+    "The pressure-shaped bilocal statistic is not full Psi/Phi or its compact-source derivative.",
+    "Grid, polynomial and separation spreads are diagnostics, not certified continuum error bounds.",
+    "Bessel tail and PV estimates exclude field representation and floating arithmetic.",
+    "The physical formation of the supplied preparation remains open; no P001 grid ran."
+  ],
+  "method_commit": "e6bd1bb5b8e7c0d559083bf25478a6f2cdba7fb3",
+  "numerical_spreads": {
+    "baseline_absolute_gaps": {
+      "0.01": 2.0237067230310934e-14,
+      "0.02": 1.562335330551612e-14
+    },
+    "grid_spread": null,
+    "polynomial_spread": {
+      "128:0.01": 0.0004799752978328314,
+      "128:0.02": 0.0003308656574327086
+    },
+    "separation_spread": {
+      "128:24": 7.728007322537226e-05,
+      "128:48": 7.182956717475056e-05
+    }
+  },
+  "schema": "nsc-atlas-dirac-full-root-finite-split-v2",
+  "sources_sha256": {
+    "scripts/measure_nsc_atlas_dirac_root_response.py": "e1b4836437e60951f3b3a84331a77684a16bfa9f78a01b5cf2455f75e6d323a9",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "74c57ac1910824168a065b5ade0a09db1fb23693911bb793f5748c002c868b80",
+    "src/recursive_horizons/nsc_atlas_dirac_mean.py": "d0a801baf4f17298fc8d3f763d5c8b2711521454a9bb4c6ffa968354c0bd326f",
+    "src/recursive_horizons/nsc_atlas_dirac_preparation.py": "abc94e614a6813e76fd2ce9cf8bbc37566eaf215a2aa99f06be97e09728807b2",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "src/recursive_horizons/nsc_atlas_dirac_retarded.py": "0b3c1b2b5b2fedc0b7d721ba16ef73d4a7ef5b1bc8f4c7558fc0a76fdb587f12",
+    "src/recursive_horizons/nsc_atlas_dirac_root_pairing.py": "a0e54856720955475fb8eccf1156caa0dc24c431e3ff8dda9ceba48badb730fb",
+    "src/recursive_horizons/nsc_atlas_dirac_scattering.py": "0472fc3005c33668020e724a949db0579b4ea7ed9fcb4cb5802e7c0f05a83520",
+    "tests/test_nsc_atlas_dirac_retarded.py": "8fe6b99860dc954a943dd77c1cc80398002b8eed096c86d2063674378095ba80",
+    "tests/test_nsc_atlas_dirac_root_pairing.py": "0eb1488c8ea29febaa8945071e1125987e72924a510af6b4d7706fdd5bd4386d"
+  },
+  "stage": "polynomial",
+  "status": "finite_split_reference_only",
+  "stopped_reason": null
+}
