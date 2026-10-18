@@ -2877,6 +2877,13 @@ each retained-force residual and both constraint defects. It is not a
 cosmological Lambda prediction or a retarded effective action. Full arrays
 remain in the ignored cache and can be regenerated. Eigen/replay residuals
 do not supply a propagated physical error bound.
+The [recorded fixed-state result](../results/summaries/nsc-conformal-resolution-v1.json)
+binds method `cd00b35`. It retains one geometric mode and records an energy
+coefficient `Lambda_E*L_ref^2=-.100890404750047`, with substantial force
+residuals. Its fifteen controls include the archived lifted-rate interface;
+the initial shape failure and corrected one-shot application are described
+in the admission. The finite probe is closed; reproducing it is not a new
+evolution or an instruction to scan cutoffs.
 
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.

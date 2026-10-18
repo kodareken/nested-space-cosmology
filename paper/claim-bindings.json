@@ -254,6 +254,11 @@
       "status": "measured",
       "owner": "docs/nsc-atlas-connection-slice.md"
     },
+    "conformal-physical-resolution": {
+      "section": "6.1.8",
+      "status": "measured",
+      "owner": "docs/schur-memory.md"
+    },
     "atlas-nested-flash": {
       "section": "10.3",
       "status": "measured",

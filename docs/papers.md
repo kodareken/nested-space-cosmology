@@ -6,6 +6,13 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.2` adds Section 6.1.8: a fixed physical resolution map
+on one saved conformal state, the action-derived vacuum-volume generator,
+and a whole-force comparison. The calculated energy coefficient fails
+the vacuum-force test. The same action and full fermion columns are held
+fixed, while the filtered constraints and additional response remain
+explicit. This supplies no cosmological Lambda or fractal dimension.
+
 Revision `2026-10-18.1` adds Sections 10.1--10.3: a second unequal sourced
 body, a two-level initial geometry with a retained grandchild, regular bulk
 charts and a central wall-emitted flash. Figure 5 shows the actual radius

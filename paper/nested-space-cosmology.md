@@ -744,6 +744,91 @@ with the normal-Weyl components exposed by the
 and checked in its
 [tests](../tests/test_nsc_atlas_gravitational_reduction.py).
 
+### 6.1.8. One state at two physical resolutions
+
+<!-- nsc-claim:conformal-physical-resolution -->
+
+The inherited law and a state's resolved structure are different mathematical
+objects. To calculate a resolution effect, hold the separate conformal
+candidate's full state fixed and choose a retained space from its physical
+radial Laplacian. On the reference slice $T=0.05$,
+
+$$
+\mathcal L=-\Delta_h=-\frac{1}{r^3Q}\partial_x\left(\frac rQ\partial_x\right),
+\qquad \mu L_{\mathrm{ref}}^2\leq1.
+$$
+
+The reference ruler remains $L_{\mathrm{ref}}=4.80028044552352$.
+The mass and stiffness integrals use the existing 511 geometry variables
+and their 2048-point quadrature. Orthonormalizing the selected eigenspace
+in the canonical coordinate measure gives a fixed symmetric projector $P$.
+Apply it to all six log-canonical variables $a=\log r$, $\pi_a=rp_r$,
+$b=\log Q$, $\pi_b=Qp_Q$, and $\chi,p_\chi$. The fermion columns and
+occupations remain fully retained. This rule keeps one geometric mode.
+The first omitted eigenvalue is $0.4795862384$, above the fixed cutoff
+$0.04339770651$. No observed target selects that cutoff or the ruler.
+
+At $T=0.3$, evaluate the same Hamiltonian and its vector field on the full
+and filtered states. The difference at fixed canonical environment is
+
+$$
+H_{\mathrm{corr}}(z_c;z_e)=H(z_c+z_e)-H(z_c),\qquad
+\delta F_c=P X_H(z)-P X_H(Pz).
+$$
+
+Here $P$ acts as the identity on the fermions. The exact change of canonical
+variables includes the momentum product rule. The four-dimensional vacuum
+volume supplies an independently derived comparison direction,
+
+$$
+H_\Lambda=8\pi A\Lambda\int r^4LQ\,dx,\qquad A=\frac{1}{16\pi G}.
+$$
+
+The owned action uses $R_E=-R_L$ and $-A R_L-2A\Lambda$; its existing
+$r^2$ potential is sphere curvature. The displayed $r^4$ weight follows
+from the physical volume. Varying before choosing $L=Q$ fixes the lapse
+constraint and both momentum forces. This potential changes no coordinate
+or fermion rate. Adjoint pullback precedes the nodal canonical change.
+
+The calculation gives $H_{\mathrm{full}}=-1.363\times10^{-11}$,
+$H_{\mathrm{coarse}}=1.015478298556$, and unit-volume generator
+$231.9284384454$. Their energy projection is
+
+$$
+\Lambda_E L_{\mathrm{ref}}^2=-0.100890404750047.
+$$
+
+Its force does not reproduce the correlation. Each row below uses that
+block's canonical units; the RMS values are not combined across blocks.
+
+| Log-momentum rate | Correlation RMS | Vacuum candidate RMS | Residual RMS |
+| --- | ---: | ---: | ---: |
+| $\pi_a$ | $0.21206304$ | $0.50773915$ | $0.29567611$ |
+| $\pi_b$ | $0.01318283$ | $0.25386957$ | $0.24068675$ |
+
+The residuals are 58.23% and 94.81% of the larger RMS in their respective
+rows. The retained $a_T$ and $\chi_T$ correlations are $0.00098884455$ and
+$0.67276495$ RMS per coordinate time, where a vacuum potential gives zero.
+The unchanged input fermions also acquire a rate difference. The $b_T$
+difference, $5.54\times10^{-18}$ RMS, is treated as roundoff.
+
+The original Hamiltonian-constraint maximum is $9.005\times10^{-6}$; the
+filtered state's is $25.5817$ in that density normalization. No constraint
+reset is performed, and the filtered metric with the retained fine matter
+is not a second physical solution. The missing correlation contains
+constraint, kinetic and matter response beyond a single volume term.
+Fifteen controls include the analytic spectrum under unit rescaling and
+independent energy differentiation. The relative eigen residual is
+$1.65\times10^{-15}$; replay of the archived prolonged rates differs by at
+most $8.72\times10^{-9}$ in a momentum component. These controls do not
+bound the continuum or physical model error. Rates use the same conformal
+coordinate generator; a matched proper clock, causal elimination, repeated
+scale composition and a fractal dimension remain open. The
+[fixed-state record](../results/summaries/nsc-conformal-resolution-v1.json)
+binds the original state and frozen method `cd00b35`. Its energy coefficient
+is a failed vacuum-volume representation of this instantaneous response,
+not a derived cosmological constant.
+
 ### 6.2. The retained local incoming gate
 
 <!-- nsc-claim:local-source-insertion-majorant -->
@@ -3064,6 +3149,7 @@ and renders their relationships without launching a new physics calculation.
 | Signed moving wall and gluing literature | [Atlas v3](../docs/nsc-cosmological-atlas.md); [manifest](../results/development/nsc-cosmological-atlas-v3/manifest.json) |
 | Sourced slice and vacuum observer domain | [Atlas v4](../docs/nsc-atlas-connection-slice.md); [manifest](../results/development/nsc-cosmological-atlas-v4/manifest.json) |
 | Unequal sourced bodies and finite grandchild composition | [End assembly](../docs/nsc-atlas-connection-gluing.md); [unequal bodies](../results/summaries/nsc-atlas-unequal-children-v1.json) and [two-level geometry/observer](../results/summaries/nsc-atlas-nested-slice-v1.json) |
+| Fixed-state physical resolution | [Canonical split and vacuum-volume comparison](../docs/schur-memory.md#physical-resolution-of-one-fixed-geometry); [finite record](../results/summaries/nsc-conformal-resolution-v1.json) |
 | Isolated causal completion and clocks | [Atlas v5](../docs/nsc-atlas-causal-classification.md); [manifest](../results/development/nsc-cosmological-atlas-v5/manifest.json) |
 | Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-atlas-field-transfer.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
 | Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |

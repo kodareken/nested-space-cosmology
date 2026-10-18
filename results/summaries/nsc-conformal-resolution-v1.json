@@ -1,0 +1,220 @@
+{
+  "angular_kappa": 1,
+  "blas_pools_during_application": [
+    {
+      "internal_api": "openblas",
+      "num_threads": 8,
+      "prefix": "libscipy_openblas"
+    },
+    {
+      "internal_api": "openblas",
+      "num_threads": 8,
+      "prefix": "libscipy_openblas"
+    }
+  ],
+  "canonical_rate_comparison": {
+    "a": {
+      "candidate_rms": 0.0,
+      "correlation_max_abs": 0.0009888445527849092,
+      "correlation_rms": 0.0009888445527823373,
+      "relative_residual_within_block": 1.0,
+      "residual_max_abs": 0.0009888445527849092,
+      "residual_rms": 0.0009888445527823373,
+      "residual_squared_canonical_integral": 7.822508396538402e-06
+    },
+    "b": {
+      "candidate_rms": 0.0,
+      "correlation_max_abs": 6.417121608398579e-18,
+      "correlation_rms": 5.534592062080521e-18,
+      "relative_residual_within_block": 1.0,
+      "residual_max_abs": 6.417121608398579e-18,
+      "residual_rms": 5.534592062080521e-18,
+      "residual_squared_canonical_integral": 2.450536743491577e-34
+    },
+    "chi": {
+      "candidate_rms": 0.0,
+      "correlation_max_abs": 0.6727649529311264,
+      "correlation_rms": 0.6727649529293753,
+      "relative_residual_within_block": 1.0,
+      "residual_max_abs": 0.6727649529311264,
+      "residual_rms": 0.6727649529293753,
+      "residual_squared_canonical_integral": 3.620901455120517
+    },
+    "p_chi": {
+      "candidate_rms": 0.0,
+      "correlation_max_abs": 3.309030451569657e-07,
+      "correlation_rms": 3.3090304515605435e-07,
+      "relative_residual_within_block": 1.0,
+      "residual_max_abs": 3.309030451569657e-07,
+      "residual_rms": 3.3090304515605435e-07,
+      "residual_squared_canonical_integral": 8.759746023483979e-13
+    },
+    "phi0": {
+      "candidate_rms": 0.0,
+      "correlation_max_abs": 1.3640805827561915e-05,
+      "correlation_rms": 2.527957093222959e-06,
+      "pairing_note": "Euclidean column norm; not a geometric canonical norm or energy",
+      "relative_residual_within_block": 1.0,
+      "residual_max_abs": 1.3640805827561915e-05,
+      "residual_rms": 2.527957093222959e-06
+    },
+    "phi1": {
+      "candidate_rms": 0.0,
+      "correlation_max_abs": 1.3639141912238685e-05,
+      "correlation_rms": 2.52804851751546e-06,
+      "pairing_note": "Euclidean column norm; not a geometric canonical norm or energy",
+      "relative_residual_within_block": 1.0,
+      "residual_max_abs": 1.3639141912238685e-05,
+      "residual_rms": 2.52804851751546e-06
+    },
+    "pi_a": {
+      "candidate_rms": 0.507739149284876,
+      "correlation_max_abs": 0.212063040733245,
+      "correlation_rms": 0.21206304073269316,
+      "relative_residual_within_block": 0.5823386062875537,
+      "residual_max_abs": 0.295676108552952,
+      "residual_rms": 0.29567610855218285,
+      "residual_squared_canonical_integral": 0.6993948893484976
+    },
+    "pi_b": {
+      "candidate_rms": 0.253869574642438,
+      "correlation_max_abs": 0.013182826817275402,
+      "correlation_rms": 0.013182826817240985,
+      "relative_residual_within_block": 0.948072442962855,
+      "residual_max_abs": 0.24068674782582306,
+      "residual_rms": 0.24068674782519703,
+      "residual_squared_canonical_integral": 0.4634408846293598
+    }
+  },
+  "coarse": {
+    "constraints": {
+      "Q_min_quadrature": 0.2500533667905579,
+      "hamilton_max_abs": 25.5817143954111,
+      "hamilton_rms": 8.122429759296432,
+      "momentum_max_abs": 6.163707358568634,
+      "momentum_rms": 2.212322283958261,
+      "r_min_quadrature": 4.499247173765624
+    },
+    "hamiltonian": 1.015478298556122
+  },
+  "domain": {
+    "comparison_T": 0.3,
+    "cut_mu_times_Lref2_max": 1.0,
+    "gauge": "conformal L=Q, beta=0",
+    "nf": 512,
+    "ng": 511,
+    "nq": 2048,
+    "period": 8.0,
+    "projector_fixed_at_reference": true,
+    "rate_clock": "same coordinate T generator",
+    "reference_T": 0.05,
+    "reference_length": 4.80028044552352,
+    "target_observation_used": false,
+    "topology": "S1 x S2"
+  },
+  "energy_projection": {
+    "A_equals": "1/(16*pi*G)",
+    "Lambda_in_action_length_units": -0.004378412174790738,
+    "Lambda_times_Lref2": -0.10089040475004701,
+    "delta_H": -1.015478298569752,
+    "formula": "H_unitLambda=8*pi*A*integral(r^4*L*Q dx), L=Q",
+    "interpretation": "energy projection only; whole-force residual is required",
+    "rho_equals": "2*A*Lambda",
+    "unit_Lambda_H_at_coarse": 231.92843844544757
+  },
+  "full": {
+    "constraints": {
+      "Q_min_quadrature": 0.2499269436148009,
+      "hamilton_max_abs": 9.004874817364339e-06,
+      "hamilton_rms": 2.8320700144195513e-06,
+      "momentum_max_abs": 7.982452387977901e-07,
+      "momentum_rms": 2.081372284214861e-07,
+      "r_min_quadrature": 4.218912020253954
+    },
+    "hamiltonian": -1.3629986028718122e-11
+  },
+  "full_fermion_columns_retained": true,
+  "input": {
+    "case": "nf512_dt_0.0005",
+    "episode_sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "payload_bytes": 53100722,
+    "payload_sha256": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877"
+  },
+  "limits": {
+    "Hamiltonian_evaluations": 2,
+    "cpu_seconds": 200.0,
+    "eigensolves": 1,
+    "field_evolution_steps": 0,
+    "new_field_solves": 0,
+    "parameter_scans": 0
+  },
+  "multiplicity_once": 4,
+  "occupations": [
+    0.75,
+    0.75,
+    0.5,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "parameters": {
+    "A": 0.04501936182826115,
+    "C_E": 0.0005158468542821582,
+    "C_F": 0.01125484045706527,
+    "C_W": -0.0008441130342798952,
+    "C_box": -0.0005627420228532635,
+    "V_rel": 0.0,
+    "flux": 4.0
+  },
+  "projector": {
+    "constant_eigenvalue_before_roundoff_repair": -1.7847297475624942e-13,
+    "constant_mode_residual": 1.7962316141681982e-12,
+    "cutoff_eigenvalue": 0.043397706507750905,
+    "eigen_residual": 1.6414431744499136e-15,
+    "largest_retained_eigenvalue": -1.7847297475624942e-13,
+    "projector_residual": 1.837630251003671e-16,
+    "prolonged_Q_min": 0.2513046137686703,
+    "prolonged_radius_min": 4.210662875425212,
+    "retained_modes": 1,
+    "roundoff_floor": 2.532107571892796e-07,
+    "smallest_excluded_eigenvalue": 0.4795862384392936,
+    "symmetry_residual": 0.0,
+    "unresolved_modes": 510
+  },
+  "runtime_cpu_seconds": 7.703125,
+  "saved_rate_replay_max_abs": {
+    "Q": 3.226585665316861e-16,
+    "chi": 2.5011104298755527e-12,
+    "p_Q": 8.711182886145252e-09,
+    "p_chi": 1.2883227470950054e-12,
+    "p_r": 3.330391962208523e-09,
+    "r": 2.220446049250313e-15
+  },
+  "schema": "nsc-conformal-resolution-summary-v1",
+  "scope": "Separate Einstein/Weyl/Dirac state; instantaneous frozen environment, not retarded closure. Original finite constraint defects remain. Bare vacuum and quantum B branch absent. No matched full/coarse proper clock, P001 parent, measured fractal dimension or cosmological Lambda identification.",
+  "source_commit": "cd00b351079a8af3d58e65ada13c70fbb2bd1504",
+  "source_sha256": {
+    "scripts/measure_nsc_conformal_geometric_average.py": "d706eb290ead4722dbb920053347dc442a8d7bf05beba862f698d35f05ac45c1",
+    "scripts/measure_nsc_conformal_resolution.py": "406737b966caf39cdde4dbde9818255f9dcc7976992c1e31de65fd2bc5199568",
+    "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "src/recursive_horizons/nsc_conformal_resolution.py": "03f67e28d0da4e3ff3d07b02a44e2dadca97bd81e1c8b1f4f053d578cb797606",
+    "src/recursive_horizons/nsc_conformal_vacuum_generator.py": "0e8c8bd97d7992c5c10638306366ce618633f9e4c63e4dafd0ecc10e01ff67ec",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "tests/test_nsc_conformal_resolution.py": "0b36223543bdc4b992ef2b65959f2401aed3332f58759503c4fffed25ff3db28",
+    "tests/test_nsc_conformal_resolution_correlation.py": "661aa3e5cbdee5fd15d7de33560c14ab0a1a44e08ef69aea5ce8205c017d9e80",
+    "tests/test_nsc_conformal_vacuum_generator.py": "32ec0efb51e5612959290c02ba792b830c837d7b222e6662a1ba487326275458"
+  },
+  "status": "measured_instantaneous_correlation",
+  "uncertainty": "Eigen/projector and same-state replay controls; no propagated continuum, model or observational uncertainty bound for the correlation coefficient.",
+  "unresolved_canonical_rms": {
+    "a": 0.04967697190925113,
+    "b": 0.0002608409228034002,
+    "chi": 1.4385020825494883,
+    "p_chi": 5.3671563258730654e-05,
+    "pi_a": 1.8437191905821781,
+    "pi_b": 0.6617149476030749
+  }
+}

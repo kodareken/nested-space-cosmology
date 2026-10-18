@@ -59,6 +59,19 @@ logical processors); admit one corrected frozen application capped at
 200 CPU seconds, keeping the combined work below the original 300-second
 ceiling. No automatic retry or precision scan is admitted.
 
+**Outcome:** corrected frozen method `cd00b35` passes fifteen controls and
+the one corrected application in 7.703125 process-CPU seconds, using eight
+BLAS threads. Its [8,875-byte result](../results/summaries/nsc-conformal-resolution-v1.json)
+retains one of 511 geometric modes at the original cutoff. The energy
+projection is `Lambda_E*L_ref^2=-.100890404750047`, with `58.23%` and
+`94.81%` residuals in the two log-momentum blocks and nonzero retained
+coordinate/auxiliary/matter rates absent from a volume potential. The
+filtered Hamiltonian constraint grows from `9.005e-6` to `25.5817` in its
+density units. This closes the finite probe: unresolved geometry changes
+the dynamics, and a single Lambda does not represent its calculated
+instantaneous response. The next connection is a causal constraint-aware
+reduction, not a new cutoff or grid scan of this state.
+
 ## Two successive sourced boundaries, 18 October 2026
 
 The next missing connection is an actual second nesting level under the

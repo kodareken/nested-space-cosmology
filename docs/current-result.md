@@ -1,6 +1,28 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.1`, includes the checked second nesting level and its central observer. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.2`, includes the checked second nesting level, its central observer and the fixed-state resolution response. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## One geometry at two resolutions, 18 October 2026
+
+The [fixed-state reduction](schur-memory.md#physical-resolution-of-one-fixed-geometry)
+now calculates the force of unresolved geometry in the existing separate
+Einstein/Weyl/Dirac episode. It uses one physical reference Laplacian span,
+one fixed ruler and the unchanged Hamiltonian and fermion columns. Fifteen
+controls pass. The corrected application takes 7.703125 process-CPU seconds
+with eight BLAS threads; the [summary](../results/summaries/nsc-conformal-resolution-v1.json)
+is 8,875 bytes, with no raw arrays, field solve or evolution.
+
+At this ruler, one geometric mode is retained and 510 are unresolved. The
+energy projection is **`Lambda_E*L_ref^2=-0.100890404750047`**. A vacuum
+potential misses **58.23% and 94.81%** of the two log-momentum responses
+and cannot generate the calculated radial and auxiliary rates. The
+filtered metric also fails the original constraints without the missing
+correlations. This is a concrete resolution-dependent response; its
+coefficient does not supply a cosmological vacuum term. The next connection
+is the causal reduction and its additional constraint/kinetic/matter
+operators. No fractal dimension or repeated-scale composition follows yet.
+Section 6.1.8 of the current manuscript integrates this calculation; the
+checked nesting and flash results are below.
 
 ## A checked nesting level and its observer, 18 October 2026
 

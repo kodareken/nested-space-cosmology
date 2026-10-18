@@ -313,6 +313,45 @@ permits one reference eigensolve and the two final-state evaluations. No
 fractal dimension, repeated-scale flow or observed cosmological constant
 has yet been derived from this map.
 
+**Finite outcome.** The [8,875-byte record](../results/summaries/nsc-conformal-resolution-v1.json)
+uses frozen method `cd00b35`, fifteen manufactured controls and 7.703125
+process-CPU seconds. Both BLAS libraries use eight threads. The cutoff
+retains the constant geometric mode out of 511; the first omitted
+eigenvalue is `.4795862384393`, above the fixed `.04339770650775` cutoff.
+The relative eigen residual is `1.65e-15`, projector defect `1.84e-16`, and
+the retained constant has relative residual `1.80e-12`. Replaying the
+archived prolonged rates agrees to `8.72e-9` in the largest momentum-rate
+absolute difference and `2.23e-15` in the radius rate. These are numerical
+controls, not a propagated physical error range.
+
+At `T=.3`, `H_full=-1.363e-11`, `H_coarse=1.015478298556`, and the unit
+volume generator is `231.9284384454` in the corresponding action units.
+Thus the instantaneous energy coefficient is
+
+$$
+\Lambda_E L_{\rm ref}^2=-0.100890404750047.
+$$
+
+The whole vector fails the vacuum-volume comparison. Its `pi_a` residual
+RMS is `.2956761085522`, or `58.23%` of the larger correlation/candidate
+RMS; `pi_b` gives `.2406867478252`, or `94.81%`. The retained `a_dot`
+correlation RMS is `.0009888445527823` per coordinate time and the
+`chi_dot` correlation is `.6727649529294`; a vacuum potential produces
+neither rate. The fermion-rate difference is also nonzero, despite holding
+the input columns fixed. The `b_dot` difference is only roundoff scale
+(`5.54e-18` RMS) and is not treated as a detected physical correction.
+
+The original full Hamiltonian-constraint maximum is `9.005e-6`, while the
+filtered state's is `25.5817144`; its momentum constraint likewise changes
+from `7.99e-7` to `6.16370736`. These are unreset defects in their own
+constraint-density units. The filtered metric with the retained fine matter
+is not a second constraint-satisfying spacetime. Its missing correlations
+must supply more than a volume term. The calculation establishes a
+nonzero resolution response in this finite model and closes this
+single-snapshot probe. A causal elimination with the corresponding
+constraint and kinetic/matter operators is the next physical connection;
+the energy coefficient is not a generated cosmological vacuum constant.
+
 ### Observer clocks in the geometric average
 
 The selected larger-geometry route must compare resolutions in a declared
