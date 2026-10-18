@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "774b00277557cc8ac82790a2485dd18770ec8808",
+  "current_receipt_commit_parent": "254ca5b8d4405486fe1710e5fbbed0e7b8a27c50",
   "files": [
     {
       "bytes": 3120,
@@ -11540,10 +11540,10 @@
     {
       "bytes": 20427,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "774b00277557cc8ac82790a2485dd18770ec8808",
+      "changed_from_commit": "254ca5b8d4405486fe1710e5fbbed0e7b8a27c50",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "32bc576f32347cfdc3b7c1bc86027b7501a69b7216109a7f14855e0e0aa09ae6"
+      "sha256": "dbfefda4a1668eb2499ef9c82073530fc2b0c97a11831de5962b143f53e5af8b"
     },
     {
       "bytes": 3206,
@@ -11578,12 +11578,12 @@
       "sha256": "1eb102296a8473ecfc8a3bd8d63303cff941be46e40614d06330bc3399ebd1cd"
     },
     {
-      "bytes": 3560904,
+      "bytes": 3560832,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "774b00277557cc8ac82790a2485dd18770ec8808",
+      "changed_from_commit": "254ca5b8d4405486fe1710e5fbbed0e7b8a27c50",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "72a397d2243c8e510c301006be8483711088278df046130f63b13e2de4e36111"
+      "sha256": "e3c98c605d71e33c3a490dbf7b91544350d7058cc269437674d55ff845cd0df9"
     },
     {
       "bytes": 3283,

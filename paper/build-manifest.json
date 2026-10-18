@@ -1,10 +1,10 @@
 {
-  "bytes": 3560904,
+  "bytes": 3560832,
   "metadata": "paper/metadata.json",
   "metadata_sha256": "e437a60baad8cc5b390777bda32fcd41b21f71161b5db788fc1e4976ef9035af",
   "output": "paper/nested-space-cosmology.pdf",
   "pages": 50,
-  "pdf_sha256": "72a397d2243c8e510c301006be8483711088278df046130f63b13e2de4e36111",
+  "pdf_sha256": "e3c98c605d71e33c3a490dbf7b91544350d7058cc269437674d55ff845cd0df9",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -465,6 +465,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "35fce06b0053f4176808a882de28f03f84486e10c330e6931cc645c5d1928c44",
+  "source_sha256": "1eb102296a8473ecfc8a3bd8d63303cff941be46e40614d06330bc3399ebd1cd",
   "version": "working-2026-10-18.1"
 }

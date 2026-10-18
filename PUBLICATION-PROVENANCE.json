@@ -1568,7 +1568,7 @@
     {
       "bytes": 2375207,
       "path": "docs/lab-snapshot.json",
-      "sha256": "f883cd1b38e20b01ed06e8535a4b82e3db1c7b695718e0612b624adc47e29cc9"
+      "sha256": "0953b69d891a90325023952559f5959e7842278629ee2c845fa24b28e139b900"
     },
     {
       "bytes": 4997,
@@ -2328,7 +2328,7 @@
     {
       "bytes": 20427,
       "path": "paper/build-manifest.json",
-      "sha256": "32bc576f32347cfdc3b7c1bc86027b7501a69b7216109a7f14855e0e0aa09ae6"
+      "sha256": "dbfefda4a1668eb2499ef9c82073530fc2b0c97a11831de5962b143f53e5af8b"
     },
     {
       "bytes": 3206,
@@ -2566,9 +2566,9 @@
       "sha256": "1eb102296a8473ecfc8a3bd8d63303cff941be46e40614d06330bc3399ebd1cd"
     },
     {
-      "bytes": 3560904,
+      "bytes": 3560832,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "72a397d2243c8e510c301006be8483711088278df046130f63b13e2de4e36111"
+      "sha256": "e3c98c605d71e33c3a490dbf7b91544350d7058cc269437674d55ff845cd0df9"
     },
     {
       "bytes": 1521,
@@ -21676,7 +21676,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "f883cd1b38e20b01ed06e8535a4b82e3db1c7b695718e0612b624adc47e29cc9",
+  "lab_snapshot_sha256": "0953b69d891a90325023952559f5959e7842278629ee2c845fa24b28e139b900",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
