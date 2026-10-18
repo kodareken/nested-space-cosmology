@@ -1,0 +1,714 @@
+{
+  "comparison": {
+    "cap": {
+      "derivative_grid_spread": 0.04754103677839794,
+      "levels": {
+        "64": {
+          "clock_mass_derivative_h": -0.004395564516812556,
+          "clock_mass_derivative_h_half": 0.005276842216517252,
+          "clock_zero_mass": 0.27926490290202466,
+          "derivative_step_spread": 0.009672406733329808,
+          "extrapolated_clock_mass_derivative": 0.01494924894984706,
+          "max_clock_quadrature_spread": 8.881784197001252e-16,
+          "max_normalized_mass_path_gap": 1.144700403775218e-06,
+          "tidal_ratio_coefficient_at_b_1e_4": -540750.9785320307
+        },
+        "128": {
+          "clock_mass_derivative_h": 0.023136691318370595,
+          "clock_mass_derivative_h_half": 0.0428134885233078,
+          "clock_zero_mass": 0.2792674690902235,
+          "derivative_step_spread": 0.019676797204937202,
+          "extrapolated_clock_mass_derivative": 0.062490285728245,
+          "max_clock_quadrature_spread": 8.881784197001252e-16,
+          "max_normalized_mass_path_gap": 5.501496757724948e-07,
+          "tidal_ratio_coefficient_at_b_1e_4": -540765.5712499329
+        }
+      },
+      "tidal_ratio_grid_spread": 14.592717902152799
+    },
+    "nested": {
+      "derivative_grid_spread": 0.1027597657188295,
+      "levels": {
+        "64": {
+          "clock_mass_derivative_h": -0.006373166252515716,
+          "clock_mass_derivative_h_half": 0.0031350637108573665,
+          "clock_zero_mass": 0.2792498229232896,
+          "derivative_step_spread": 0.009508229963373083,
+          "extrapolated_clock_mass_derivative": 0.01264329367423045,
+          "max_clock_quadrature_spread": 8.881784197001252e-16,
+          "max_normalized_mass_path_gap": 9.509798015879165e-07,
+          "tidal_ratio_coefficient_at_b_1e_4": -540748.2771881153
+        },
+        "128": {
+          "clock_mass_derivative_h": 0.030600336895503233,
+          "clock_mass_derivative_h_half": 0.07300169814428159,
+          "clock_zero_mass": 0.2792514530846111,
+          "derivative_step_spread": 0.04240136124877836,
+          "extrapolated_clock_mass_derivative": 0.11540305939305995,
+          "max_clock_quadrature_spread": 8.881784197001252e-16,
+          "max_normalized_mass_path_gap": 4.1940135938610913e-07,
+          "tidal_ratio_coefficient_at_b_1e_4": -540762.8710914974
+        }
+      },
+      "tidal_ratio_grid_spread": 14.59390338207595
+    }
+  },
+  "full_Psi_over_Phi": null,
+  "limits": {
+    "charged_CPU_seconds": 480,
+    "summary_bytes": 32768
+  },
+  "metadata": [
+    {
+      "actual_wall_rhs": 2725,
+      "cells": 64,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_defect": 3.3306690738754696e-16,
+      "incoming_flux": 0.9999998759067756,
+      "parent_mass": 0.39999999999999997,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.5499999999999973
+    },
+    {
+      "actual_wall_rhs": 3196,
+      "cells": 64,
+      "central_mass": 5e-05,
+      "duration": 0.1256873632901346,
+      "flux_defect": 4.440892098500626e-16,
+      "incoming_flux": 0.9999998759067756,
+      "parent_mass": 0.4000160406165229,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.5500029439693167
+    },
+    {
+      "actual_wall_rhs": 3334,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_defect": 2.220446049250313e-16,
+      "incoming_flux": 0.9999998759067756,
+      "parent_mass": 0.4000320790839633,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.550005887843594
+    },
+    {
+      "actual_wall_rhs": 3067,
+      "cells": 128,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_defect": 6.661338147750939e-16,
+      "incoming_flux": 1.0000000000096445,
+      "parent_mass": 0.39999999999999997,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.5499999999999973
+    },
+    {
+      "actual_wall_rhs": 2872,
+      "cells": 128,
+      "central_mass": 5e-05,
+      "duration": 0.1256873632901346,
+      "flux_defect": 4.440892098500626e-16,
+      "incoming_flux": 1.0000000000096445,
+      "parent_mass": 0.4000160406165229,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.5500029439693167
+    },
+    {
+      "actual_wall_rhs": 3310,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_defect": 4.440892098500626e-16,
+      "incoming_flux": 1.0000000000096445,
+      "parent_mass": 0.4000320790839633,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.550005887843594
+    }
+  ],
+  "model": {
+    "H_ell": 1.0,
+    "angular_k": 1,
+    "central_mass_values": [
+      0.0,
+      5e-05,
+      0.0001
+    ],
+    "initial_wall_radius": 0.45,
+    "k_wall_ell": 2.0,
+    "multiplet_degeneracy": 2,
+    "order": "leading 8*pi*(l_P/ell)^2 times occupation; parametric derivative in b/ell at zero",
+    "preparation": "same continuum unit-flux exterior mode and occupation difference as the mean-clock owner",
+    "root_vacuum_selected": false,
+    "source": "central mass present before the window, initial proper wall speed fixed; parent mass follows Israel",
+    "vacuum_angular_sum": false
+  },
+  "nesting_difference": {
+    "128": {
+      "clock_derivative": 0.05291277366481495,
+      "tidal_ratio_coefficient": 2.7001584355020896
+    },
+    "64": {
+      "clock_derivative": -0.0023059552756166113,
+      "tidal_ratio_coefficient": 2.701343915425241
+    },
+    "derivative_grid_spread": 0.05521872894043156,
+    "tidal_ratio_grid_spread": 0.0011854799231514335
+  },
+  "observer": {
+    "U_over_duration": 0.8,
+    "V_over_duration": 0.7,
+    "cap_control": "smooth SdS continuation with same classical and mean nested areal-worldtube motion; no membrane",
+    "frame": "fixed proper-wall radar position",
+    "phase": "-V, emitted toward cap at the earlier wall time V"
+  },
+  "physical_scale": {
+    "central_mass_length_m": 1.0,
+    "constants_source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+    "ell_m": 10000.0,
+    "predictions": {
+      "cap": {
+        "clock_derivative_per_m": 4.102722527528439e-82,
+        "tidal_ratio_grid_spread": 9.580668703514864e-76,
+        "tidal_ratio_state_difference": -3.550329567906095e-71
+      },
+      "nested": {
+        "clock_derivative_per_m": 7.576645329749344e-82,
+        "tidal_ratio_grid_spread": 9.581447015716507e-76,
+        "tidal_ratio_state_difference": -3.5503118403493844e-71
+      }
+    },
+    "quantum_gravitational_factor": 6.5653764896678154e-77,
+    "scale_origin": "supplied nominal scale, not calibrated to data"
+  },
+  "results": [
+    {
+      "anisotropic_pressure": 1146.5795969823932,
+      "cells": 64,
+      "central_mass": 0.0,
+      "clock": 0.27926490290202555,
+      "geometry": "cap",
+      "mass_change": 2.388546822171388,
+      "normalized_mass_path_gap": 1.1447004037752182e-06,
+      "order": 8,
+      "radius_change": -0.18995379890346306,
+      "receiver_radius": 0.5210778461599036,
+      "tidal": {
+        "background_contrast": -0.0,
+        "ratio_change": null,
+        "spatial_change": 523.368284387875,
+        "temporal_change": -623.2113125945183,
+        "weyl_change": 16.640504701107222
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.5795969823932,
+      "cells": 64,
+      "central_mass": 0.0,
+      "clock": 0.27926490290202466,
+      "geometry": "cap",
+      "mass_change": 2.3885468221713886,
+      "normalized_mass_path_gap": 1.144700403775218e-06,
+      "order": 12,
+      "radius_change": -0.18995379890346306,
+      "receiver_radius": 0.5210778461599036,
+      "tidal": {
+        "background_contrast": -0.0,
+        "ratio_change": null,
+        "spatial_change": 523.368284387875,
+        "temporal_change": -623.2113125945183,
+        "weyl_change": 16.640504701107226
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.5738685243375,
+      "cells": 64,
+      "central_mass": 0.0,
+      "clock": 0.2792498229232887,
+      "geometry": "nested",
+      "mass_change": 2.3885494446728126,
+      "normalized_mass_path_gap": 8.822882019735466e-07,
+      "order": 8,
+      "radius_change": -0.18995379822478078,
+      "receiver_radius": 0.5210778461599036,
+      "tidal": {
+        "background_contrast": -0.0,
+        "ratio_change": null,
+        "spatial_change": 523.3653717313956,
+        "temporal_change": -623.2084967929419,
+        "weyl_change": 16.640520843591034
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.5738685243375,
+      "cells": 64,
+      "central_mass": 0.0,
+      "clock": 0.2792498229232896,
+      "geometry": "nested",
+      "mass_change": 2.388549444672813,
+      "normalized_mass_path_gap": 8.822882021594707e-07,
+      "order": 12,
+      "radius_change": -0.18995379822478078,
+      "receiver_radius": 0.5210778461599036,
+      "tidal": {
+        "background_contrast": -0.0,
+        "ratio_change": null,
+        "spatial_change": 523.3653717313956,
+        "temporal_change": -623.2084967929419,
+        "weyl_change": 16.640520843591037
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.5736610535905,
+      "cells": 64,
+      "central_mass": 5e-05,
+      "clock": 0.2792651667441355,
+      "geometry": "cap",
+      "mass_change": 2.3879612953227793,
+      "normalized_mass_path_gap": 1.0065953748931086e-06,
+      "order": 8,
+      "radius_change": -0.1899546324045272,
+      "receiver_radius": 0.5210800514542184,
+      "tidal": {
+        "background_contrast": -0.0010601758741140394,
+        "ratio_change": -1081493.824797467,
+        "spatial_change": 523.377201142061,
+        "temporal_change": -623.1964599115295,
+        "weyl_change": 16.636543128244725
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.5736610535905,
+      "cells": 64,
+      "central_mass": 5e-05,
+      "clock": 0.2792651667441355,
+      "geometry": "cap",
+      "mass_change": 2.3879612953227793,
+      "normalized_mass_path_gap": 1.0065953748931086e-06,
+      "order": 12,
+      "radius_change": -0.18995463240452723,
+      "receiver_radius": 0.5210800514542184,
+      "tidal": {
+        "background_contrast": -0.0010601758741140394,
+        "ratio_change": -1081493.824797467,
+        "spatial_change": 523.377201142061,
+        "temporal_change": -623.1964599115295,
+        "weyl_change": 16.636543128244725
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.5679329612565,
+      "cells": 64,
+      "central_mass": 5e-05,
+      "clock": 0.27924997967647514,
+      "geometry": "nested",
+      "mass_change": 2.387963611859071,
+      "normalized_mass_path_gap": 8.394670714995806e-07,
+      "order": 8,
+      "radius_change": -0.1899546370686259,
+      "receiver_radius": 0.5210800514542184,
+      "tidal": {
+        "background_contrast": -0.0010601758741140394,
+        "ratio_change": -1081488.421833229,
+        "spatial_change": 523.3742951561139,
+        "temporal_change": -623.1936378051425,
+        "weyl_change": 16.63655710817142
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.5679329612565,
+      "cells": 64,
+      "central_mass": 5e-05,
+      "clock": 0.27924997967647514,
+      "geometry": "nested",
+      "mass_change": 2.387963611859071,
+      "normalized_mass_path_gap": 8.394670714995806e-07,
+      "order": 12,
+      "radius_change": -0.1899546370686259,
+      "receiver_radius": 0.5210800514542184,
+      "tidal": {
+        "background_contrast": -0.0010601758741140394,
+        "ratio_change": -1081488.421833229,
+        "spatial_change": 523.3742951561139,
+        "temporal_change": -623.1936378051425,
+        "weyl_change": 16.63655710817142
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.5677254680663,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "clock": 0.279264463345573,
+      "geometry": "cap",
+      "mass_change": 2.387374919542452,
+      "normalized_mass_path_gap": 1.0365529847880088e-06,
+      "order": 8,
+      "radius_change": -0.1899554614675698,
+      "receiver_radius": 0.5210822567154301,
+      "tidal": {
+        "background_contrast": -0.002120324827854474,
+        "ratio_change": -540750.9785320307,
+        "spatial_change": 523.3861357617624,
+        "temporal_change": -623.181589706304,
+        "weyl_change": 16.632575657423605
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.5677254680663,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "clock": 0.279264463345573,
+      "geometry": "cap",
+      "mass_change": 2.3873749195424523,
+      "normalized_mass_path_gap": 1.0365529849740242e-06,
+      "order": 12,
+      "radius_change": -0.1899554614675698,
+      "receiver_radius": 0.5210822567154301,
+      "tidal": {
+        "background_contrast": -0.002120324827854474,
+        "ratio_change": -540750.9785320307,
+        "spatial_change": 523.3861357617624,
+        "temporal_change": -623.181589706304,
+        "weyl_change": 16.632575657423608
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.561997741494,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "clock": 0.27924918560666434,
+      "geometry": "nested",
+      "mass_change": 2.3873779665817683,
+      "normalized_mass_path_gap": 9.509798015879165e-07,
+      "order": 8,
+      "radius_change": -0.18995546061462373,
+      "receiver_radius": 0.5210822567154301,
+      "tidal": {
+        "background_contrast": -0.002120324827854474,
+        "ratio_change": -540748.2771881153,
+        "spatial_change": 523.3832144697781,
+        "temporal_change": -623.1787832717159,
+        "weyl_change": 16.63259480032299
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.561997741494,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "clock": 0.27924918560666434,
+      "geometry": "nested",
+      "mass_change": 2.3873779665817683,
+      "normalized_mass_path_gap": 9.509798015879165e-07,
+      "order": 12,
+      "radius_change": -0.18995546061462373,
+      "receiver_radius": 0.5210822567154301,
+      "tidal": {
+        "background_contrast": -0.002120324827854474,
+        "ratio_change": -540748.2771881153,
+        "spatial_change": 523.3832144697781,
+        "temporal_change": -623.1787832717159,
+        "weyl_change": 16.63259480032299
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.610538564545,
+      "cells": 128,
+      "central_mass": 0.0,
+      "clock": 0.2792674690902235,
+      "geometry": "cap",
+      "mass_change": 2.3885852891265116,
+      "normalized_mass_path_gap": 1.6646369067832075e-07,
+      "order": 8,
+      "radius_change": -0.18995797505610582,
+      "receiver_radius": 0.5210778461599036,
+      "tidal": {
+        "background_contrast": -0.0,
+        "ratio_change": null,
+        "spatial_change": 523.3837271681434,
+        "temporal_change": -623.2268113964017,
+        "weyl_change": 16.640514038043058
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.610538564545,
+      "cells": 128,
+      "central_mass": 0.0,
+      "clock": 0.2792674690902235,
+      "geometry": "cap",
+      "mass_change": 2.388585289126511,
+      "normalized_mass_path_gap": 1.6646369086424216e-07,
+      "order": 12,
+      "radius_change": -0.18995797505610582,
+      "receiver_radius": 0.5210778461599036,
+      "tidal": {
+        "background_contrast": -0.0,
+        "ratio_change": null,
+        "spatial_change": 523.3837271681434,
+        "temporal_change": -623.2268113964017,
+        "weyl_change": 16.640514038043055
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.6048126206258,
+      "cells": 128,
+      "central_mass": 0.0,
+      "clock": 0.2792514530846111,
+      "geometry": "nested",
+      "mass_change": 2.3885898402728545,
+      "normalized_mass_path_gap": 4.1940135938610913e-07,
+      "order": 8,
+      "radius_change": -0.189957971451637,
+      "receiver_radius": 0.5210778461599036,
+      "tidal": {
+        "background_contrast": -0.0,
+        "ratio_change": null,
+        "spatial_change": 523.3807748752599,
+        "temporal_change": -623.2240377453659,
+        "weyl_change": 16.640543811684342
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.6048126206258,
+      "cells": 128,
+      "central_mass": 0.0,
+      "clock": 0.2792514530846111,
+      "geometry": "nested",
+      "mass_change": 2.3885898402728545,
+      "normalized_mass_path_gap": 4.1940135938610913e-07,
+      "order": 12,
+      "radius_change": -0.189957971451637,
+      "receiver_radius": 0.5210778461599036,
+      "tidal": {
+        "background_contrast": -0.0,
+        "ratio_change": null,
+        "spatial_change": 523.3807748752599,
+        "temporal_change": -623.2240377453659,
+        "weyl_change": 16.640543811684342
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.6046024957081,
+      "cells": 128,
+      "central_mass": 5e-05,
+      "clock": 0.27926960976465054,
+      "geometry": "cap",
+      "mass_change": 2.388000814868004,
+      "normalized_mass_path_gap": 5.501496757724948e-07,
+      "order": 8,
+      "radius_change": -0.18995877763497124,
+      "receiver_radius": 0.5210800514542184,
+      "tidal": {
+        "background_contrast": -0.0010601758741140394,
+        "ratio_change": -1081523.0099948228,
+        "spatial_change": 523.3926215053885,
+        "temporal_change": -623.2119809903196,
+        "weyl_change": 16.636559914155182
+      },
+      "wall_clock_defect": 3.552713678800501e-15
+    },
+    {
+      "anisotropic_pressure": 1146.6046024957081,
+      "cells": 128,
+      "central_mass": 5e-05,
+      "clock": 0.27926960976464965,
+      "geometry": "cap",
+      "mass_change": 2.388000814868004,
+      "normalized_mass_path_gap": 5.501496757724948e-07,
+      "order": 12,
+      "radius_change": -0.18995877763497124,
+      "receiver_radius": 0.5210800514542184,
+      "tidal": {
+        "background_contrast": -0.0010601758741140394,
+        "ratio_change": -1081523.0099948228,
+        "spatial_change": 523.3926215053885,
+        "temporal_change": -623.2119809903196,
+        "weyl_change": 16.636559914155182
+      },
+      "wall_clock_defect": 3.552713678800501e-15
+    },
+    {
+      "anisotropic_pressure": 1146.598876917235,
+      "cells": 128,
+      "central_mass": 5e-05,
+      "clock": 0.2792551031695192,
+      "geometry": "nested",
+      "mass_change": 2.3880021355159355,
+      "normalized_mass_path_gap": 2.2448741590887529e-07,
+      "order": 8,
+      "radius_change": -0.1899587867712613,
+      "receiver_radius": 0.5210800514542184,
+      "tidal": {
+        "background_contrast": -0.0010601758741140394,
+        "ratio_change": -1081517.609401758,
+        "spatial_change": 523.3897378937835,
+        "temporal_change": -623.2091390234515,
+        "weyl_change": 16.636566854944657
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.598876917235,
+      "cells": 128,
+      "central_mass": 5e-05,
+      "clock": 0.2792551031695183,
+      "geometry": "nested",
+      "mass_change": 2.388002135515936,
+      "normalized_mass_path_gap": 2.244874157229085e-07,
+      "order": 12,
+      "radius_change": -0.1899587867712613,
+      "receiver_radius": 0.5210800514542184,
+      "tidal": {
+        "background_contrast": -0.0010601758741140394,
+        "ratio_change": -1081517.609401758,
+        "spatial_change": 523.3897378937835,
+        "temporal_change": -623.2091390234515,
+        "weyl_change": 16.63656685494466
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.5986667701402,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "clock": 0.2792697827593553,
+      "geometry": "cap",
+      "mass_change": 2.3874131172073456,
+      "normalized_mass_path_gap": 4.996159096891103e-08,
+      "order": 8,
+      "radius_change": -0.18995960902602207,
+      "receiver_radius": 0.5210822567154301,
+      "tidal": {
+        "background_contrast": -0.002120324827854474,
+        "ratio_change": -540765.5712499329,
+        "spatial_change": 523.4015840551692,
+        "temporal_change": -623.197082714971,
+        "weyl_change": 16.632583109966944
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.5986667701402,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "clock": 0.2792697827593553,
+      "geometry": "cap",
+      "mass_change": 2.387413117207345,
+      "normalized_mass_path_gap": 4.996159115492374e-08,
+      "order": 12,
+      "radius_change": -0.1899596090260221,
+      "receiver_radius": 0.5210822567154301,
+      "tidal": {
+        "background_contrast": -0.002120324827854474,
+        "ratio_change": -540765.5712499329,
+        "spatial_change": 523.4015840551692,
+        "temporal_change": -623.197082714971,
+        "weyl_change": 16.63258310996694
+      },
+      "wall_clock_defect": 0.0
+    },
+    {
+      "anisotropic_pressure": 1146.5929415571702,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "clock": 0.2792545131183015,
+      "geometry": "nested",
+      "mass_change": 2.3874164974854137,
+      "normalized_mass_path_gap": 1.3254104334171185e-07,
+      "order": 8,
+      "radius_change": -0.18995960317515273,
+      "receiver_radius": 0.5210822567154301,
+      "tidal": {
+        "background_contrast": -0.002120324827854474,
+        "ratio_change": -540762.8710914974,
+        "spatial_change": 523.3986569554061,
+        "temporal_change": -623.1942846017641,
+        "weyl_change": 16.632604607726353
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    },
+    {
+      "anisotropic_pressure": 1146.5929415571702,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "clock": 0.27925451311830063,
+      "geometry": "nested",
+      "mass_change": 2.3874164974854137,
+      "normalized_mass_path_gap": 1.3254104334171185e-07,
+      "order": 12,
+      "radius_change": -0.18995960317515273,
+      "receiver_radius": 0.5210822567154301,
+      "tidal": {
+        "background_contrast": -0.002120324827854474,
+        "ratio_change": -540762.8710914974,
+        "spatial_change": 523.3986569554061,
+        "temporal_change": -623.1942846017641,
+        "weyl_change": 16.632604607726353
+      },
+      "wall_clock_defect": 1.7763568394002505e-15
+    }
+  ],
+  "runtime": {
+    "BLAS_threads_per_worker": 1,
+    "Numba_threads_per_worker": 1,
+    "baseline_vacuum_polarizations": 0,
+    "charged_CPU_seconds": 62.171875,
+    "new_P001_grids": 0,
+    "new_P001_time_steps": 0,
+    "observed_process_CPU_seconds": 54.171875,
+    "overhead_CPU_charge": 8,
+    "process_workers": 8,
+    "wall_seconds": 8.762295600026846
+  },
+  "schema": "nsc-atlas-dirac-mass-response-v1",
+  "scope": "Finite prepared-state parametric mean gravitational response to a physical mass family; local tidal ratio B/A is an operational curvature observable, not full vacuum Psi/Phi or retarded switching.",
+  "source_commit": "76a02c903297004205ca0f01170a1d6a02a26d06",
+  "source_sha256": {
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/measure_nsc_atlas_dirac_mass_response.py": "2424963428ac89c83d3208eca099ef7e9857b4c1c334b4f60137ee248dbf50ed",
+    "scripts/measure_nsc_atlas_dirac_mean_clock.py": "d6445cec1bf4fda3e2a00d7652ad619802f047c035cca6fb61c655c9aa620988",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_backreaction.py": "a2530b38026b08b6007a32eed3d708397fd3b791f89233ae932f39d701e1fa36",
+    "src/recursive_horizons/nsc_atlas_dirac_compact_source.py": "a2ffccaf8f476eff828ccefffa59b939f74bacc182f68679f43069f2f2ca86b7",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "e54190b116d396b30d6125e700ad3225b16514ffc22c9381d5475a9651ff3786",
+    "src/recursive_horizons/nsc_atlas_dirac_gravity.py": "c217c1e499bc1841caa947e0809acf5490339369cf1edba0e3d8c7f04b06fadb",
+    "src/recursive_horizons/nsc_atlas_dirac_mean.py": "edc710307e6932fd672d4a4e5794e8883e8c1ff823ec7eccba842125c304c2a8",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "src/recursive_horizons/nsc_atlas_dirac_scattering.py": "0472fc3005c33668020e724a949db0579b4ea7ed9fcb4cb5802e7c0f05a83520",
+    "src/recursive_horizons/nsc_atlas_dirac_stress.py": "cd0030b647187b201e7a72a8cb0dab22db74b5c172a609cd9e857047c3db4f07",
+    "src/recursive_horizons/nsc_atlas_dirac_tidal.py": "77d9e74976bb58ee1e091e27c67712d54c62bde9bde3d960a8a115bd254544d5",
+    "tests/test_nsc_atlas_dirac_backreaction.py": "cebb6b6ae0b82b8b4837aa4c39552a89b7a6c29e945e081e0921fa82bc2b635d",
+    "tests/test_nsc_atlas_dirac_compact_source.py": "4cf593939298b810bda3172c6d592ff529e85471d2a5fb8adc02e1107e5be68d",
+    "tests/test_nsc_atlas_dirac_mean.py": "aa27e72efcbe2757227afb9fde5bb583a559091d68159ddc94cc97c53ca28880",
+    "tests/test_nsc_atlas_dirac_tidal.py": "845e9b399a6d66ed61499c5163fd1b00ae14c58dc7473b3264f6e01c732d89e8"
+  },
+  "status": "unresolved_prepared_mass_response",
+  "uncertainty": "64/128 field, 8/12 quadrature and one-sided h/h2 derivative spreads are diagnostics, not proven continuum bounds or observational confidence intervals.",
+  "validation_issues": [
+    "nested N=128: unresolved source derivative step",
+    "nested: unresolved source derivative field resolution",
+    "cap: unresolved source derivative field resolution"
+  ]
+}

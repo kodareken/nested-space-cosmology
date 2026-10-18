@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "7f827e99f33da5da38f003b6e6adf598b602147d",
+  "current_receipt_commit_parent": "76a02c903297004205ca0f01170a1d6a02a26d06",
   "files": [
     {
       "bytes": 3120,
@@ -10430,12 +10430,12 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 78206,
+      "bytes": 80301,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "7f827e99f33da5da38f003b6e6adf598b602147d",
+      "changed_from_commit": "76a02c903297004205ca0f01170a1d6a02a26d06",
       "path": "docs/nsc-atlas-dirac-probe.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "1f7372ebaa3d1219817fc385bd857021d3b446987090fb1f39423b5ec2b0509a"
+      "sha256": "7f1e64e719772bc2a4e31798f3fa9256ab4253e30834a5aba30b082a183c7033"
     },
     {
       "bytes": 17343,
@@ -29785,6 +29785,14 @@
       "sha256": "c952852d6a9afa32ef4ba3fbc222c9274b16dc26529291f81d1a631fe14ea59c"
     },
     {
+      "bytes": 26247,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "76a02c903297004205ca0f01170a1d6a02a26d06",
+      "path": "results/summaries/nsc-atlas-dirac-mass-response-v1.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "011e4e2990efe8c17c6ce5edf6af977f4d53833892d93b7d80841b5417cd5f91"
+    },
+    {
       "bytes": 13053,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "be1a11e6ff818f26f063b78f379ff02ca5f405eb",
@@ -33081,6 +33089,14 @@
       "path": "scripts/diagnose_nsc_atlas_cap_transport_balance.py",
       "retention_reason": "Bounded terminal cap transport comparison and manufactured recorder controls.",
       "sha256": "545314108872f623ffd88db01a71d2d5d548aa00f312c70f3c9abd22c8be79fd"
+    },
+    {
+      "bytes": 5604,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "76a02c903297004205ca0f01170a1d6a02a26d06",
+      "path": "scripts/diagnose_nsc_atlas_dirac_source_precision.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "2d33b49826da03a33e1f440b575241b9a39ab043dc89aac87def4e04535d0145"
     },
     {
       "bytes": 17160,

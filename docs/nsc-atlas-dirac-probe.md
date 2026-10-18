@@ -1615,3 +1615,38 @@ and mistaking a tidal ratio or state difference for a full vacuum potential
 ratio. The exact nonzero-mass controls, fixed shared preparation, recorded
 derivative spreads and explicitly defined local Riemann readout address
 those failures. No parameter is selected using an observed target value.
+
+### First mass-response result and precision diagnosis
+
+The frozen `76a02c9`
+[reference](../results/summaries/nsc-atlas-dirac-mass-response-v1.json)
+finishes all 24 readouts in 62.171875 charged CPU seconds and a 26247-byte
+summary. Its status is **unresolved**: the clock mass derivative fails
+three prescribed step/resolution checks. The extrapolated nested
+derivative moves from .01264 to .11540 between field resolutions; it
+is not an accepted physical susceptibility. No tolerance or source
+has been changed to turn this record into a pass.
+
+The local tidal ratio uses the propagated stress directly and does not
+depend on differencing the adaptive mean clock. At b=1e-4 its leading
+occupation coefficients are -540762.8710915 (nested) and -540765.5712499
+(smooth cap), with individual 64/128 spreads about 14.59. The nesting
+difference is +2.700158436 with a correlated spread .001185480, about
+five parts per million of the prepared correction. At the nominal
+ell=10 km these are ratio changes -3.55031184e-71 and -3.55032957e-71.
+These are local radar-frame state-difference diagnostics with numerical
+spreads, not full Psi/Phi or observational uncertainties. The containing
+mass-response record remains unresolved because of the clock derivative.
+
+Before any further physical reference, a bounded
+[same-field diagnosis](../scripts/diagnose_nsc_atlas_dirac_source_precision.py)
+compares only N=128 at b=0 and b=5e-5. It regenerates each existing field
+once, then reuses it for the original solver tolerances, a tighter wall
+solve, and a tighter wall plus ray solve (2e-11 relative, 2e-13 absolute).
+Independent wall-mass Gauss integration checks the ODE masses. The
+diagnosis admits 120 shared process-CPU seconds, with two 50-second
+worker guards, a four-second overhead charge and a summary no larger
+than 12 KiB. No new field resolution, source choice or P001 grid is
+admitted. A clock shift comparable to the small mass-difference signal
+identifies an integration precision floor; if it does not, the source
+derivative remains unexplained and this branch stops for a new diagnosis.
