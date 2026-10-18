@@ -27,7 +27,8 @@ from threadpoolctl import threadpool_limits
 from recursive_horizons.nsc_atlas_dirac_radar import WallRadarChart
 from recursive_horizons.nsc_atlas_dirac_preparation import CylinderPreparation
 from recursive_horizons.nsc_atlas_dirac_retarded import (
-    retarded_null_responses,retarded_response,observation_moment_residual)
+    retarded_null_responses,retarded_response,observation_moment_residual,
+    volterra_source_observation_jets,differentiated_retarded_response,endpoint_hilbert_moment)
 from recursive_horizons.nsc_atlas_dirac_root_pairing import (
     NullResponse,pair_cylinder_responses,logarithmic_coefficients)
 
@@ -38,6 +39,7 @@ SOURCES=tuple('src/recursive_horizons/'+name+'.py' for name in (
     'nsc_atlas_dirac_mean','nsc_atlas_dirac_scattering','nsc_atlas_dirac_radar',
     'nsc_atlas_cap_wall_response','nsc_atlas_causal_reference','nsc_atlas_dirac_evolution'))+(
     'tests/test_nsc_atlas_dirac_retarded.py','tests/test_nsc_atlas_dirac_root_pairing.py',
+    'tests/test_nsc_atlas_dirac_preparation.py',
     'scripts/measure_nsc_atlas_dirac_root_response.py')
 
 
@@ -59,16 +61,21 @@ def relative_pair(a,b,c,d,mu):
         first['bessel_series_tail_bound']+second['bessel_series_tail_bound'])
 
 
-def endpoint(preparation,U,V,n,integral_cache,*,order=24,workers=8):
+def endpoint(preparation,U,V,n,integral_cache,*,order=24,workers=8,observer_jets=False):
     du,dv=U/(n-.5),V/(n-.5)
     u=(np.arange(n)+.5)*du;v=(np.arange(n)+.5)*dv
     fields=preparation.fields(*np.meshgrid(u,v,indexing='ij'))
     if float(preparation.fields(U,V)['preparation_weight'])!=1:
         raise ValueError('physical endpoints must lie in the matched operator region')
-    cache_key=(id(preparation),U,V)
+    cache_key=(id(preparation),U,V,observer_jets)
     integrals=[];errors=[]
     for leg,length in enumerate((V,U)) if cache_key not in integral_cache else ():
         def integrand(s):
+            if observer_jets:
+                f=preparation.potential_null_jets(U,s) if leg==0 else preparation.potential_null_jets(s,V)
+                W=float(f['W']);derivative=float(f['Wu' if leg==0 else 'Wv'])
+                second=float(f['Wuu' if leg==0 else 'Wvv'])
+                return np.array([W*W,W*derivative,derivative**2+W*second])
             f=preparation.fields(U,s) if leg==0 else preparation.fields(s,V)
             W=float(f['potential'])
             derivative=float((f['potential_t']-f['potential_x'])/2 if leg==0 else
@@ -88,6 +95,11 @@ def endpoint(preparation,U,V,n,integral_cache,*,order=24,workers=8):
         boundary_square_integrals=[v[0] for v in integrals],
         boundary_mixed_integrals=[v[1] for v in integrals],order=order,workers=workers)
     result['endpoint_quadrature_estimate']=max(errors)
+    if observer_jets:
+        jets=preparation.potential_null_jets(U,V)
+        result['source_endpoint_observation_derivative']=volterra_source_observation_jets(
+            *(float(jets[key]) for key in ('W','Wu','Wv','Wuu','Wuv','Wvv')),
+            [v[0] for v in integrals],[v[1] for v in integrals],[v[2] for v in integrals])
     return result
 
 
@@ -291,16 +303,80 @@ def diagnose_observer_moments(commit,hashes):
     print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
 
 
+def diagnose_projection_derivative(commit,hashes):
+    """Conditional projection derivative versus independently evolved row."""
+    started=time.process_time();wall=time.perf_counter()
+    chart=WallRadarChart();S=chart.duration;U,V=.8*S,.7*S;degrees=(0,1,2,4,8)
+    preparations={g:CylinderPreparation(chart,duration=S,root_radius=.45,region=g,angular_k=1)
+        for g in ('nested','cap')}
+    cache={};rows=[];residuals={};endpoint_errors=[];quadrature_errors=[]
+    for fraction in (.02,.01):
+        eta=fraction*S;maps={}
+        for g,preparation in preparations.items():
+            for side,point in enumerate(((U-eta/2,V+eta/2),(U+eta/2,V-eta/2))):
+                maps[g,side]=endpoint(preparation,*point,128,cache,order=48,observer_jets=True)
+                quadrature_errors.append(maps[g,side]['endpoint_quadrature_estimate'])
+                if time.process_time()-started>90:
+                    raise RuntimeError('Projection derivative diagnosis exhausted its 90 process-CPU seconds')
+        for order in (24,48):
+            commutators={}
+            for g in preparations:
+                fields=[retarded_response(maps[g,side],'field',order,source_jet=True) for side in (0,1)]
+                old=[retarded_response(maps[g,side],'spatial',order) for side in (0,1)]
+                new=[differentiated_retarded_response(maps[g,side],order) for side in (0,1)]
+                commutators[g]=np.array([[new[side].green[leg]-old[side].green[leg]
+                    for leg in (0,1)] for side in (0,1)])
+                for side in (0,1):
+                    for leg in (0,1):
+                        endpoint_errors.append(float(np.max(abs(commutators[g][side,leg].sum(axis=0)))))
+                for method,spatial in (('independent_spatial',old),('projection_derivative',new)):
+                    residuals[g,order,fraction,method]=observation_moment_residual(
+                        fields[0],spatial[0],fields[1],spatial[1],
+                        separation=eta,reference_duration=S,degrees=degrees)
+            commutators['nested_minus_cap']=commutators['nested']-commutators['cap']
+            for method in ('independent_spatial','projection_derivative'):
+                residuals['nested_minus_cap',order,fraction,method]=(
+                    residuals['nested',order,fraction,method]-residuals['cap',order,fraction,method])
+            for g in ('nested','cap','nested_minus_cap'):
+                moment=np.array([[endpoint_hilbert_moment(commutators[g][side,leg])
+                    for leg in (0,1)] for side in (0,1)])
+                rows.append(dict(geometry=g,polynomial_order=order,separation_over_S=fraction,
+                    residuals_by_probe={method:np.max(abs(residuals[g,order,fraction,method]),axis=(0,2)).tolist()
+                        for method in ('independent_spatial','projection_derivative')},
+                    commutator_endpoint_subtracted_Hilbert_norm=float(np.max(abs(moment))),
+                    commutator_mean_norm=float(np.max(abs(commutators[g][:,:,0])))))
+    ratios=[]
+    for g in ('nested','cap','nested_minus_cap'):
+        for order in (24,48):
+            for method in ('independent_spatial','projection_derivative'):
+                a=np.max(abs(residuals[g,order,.02,method]),axis=(0,2))
+                b=np.max(abs(residuals[g,order,.01,method]),axis=(0,2))
+                ratios.append(dict(geometry=g,polynomial_order=order,method=method,
+                    large_over_small_by_probe=[float(x/y) if max(x,y)>1e-11 and y else None for x,y in zip(a,b)]))
+    if max(endpoint_errors)>1e-9:
+        raise RuntimeError('Differentiated projection failed its exact endpoint trace')
+    result=dict(diagnostic='conditional_constrained_projection_derivative',method_commit=commit,
+        source_fingerprint=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),
+        cells=128,angular_k=1,detector_U_over_S=.8,detector_V_over_S=.7,
+        probe_degrees=degrees,fixed_source_reference_duration=S,rows=rows,split_ratios=ratios,
+        maximum_endpoint_trace_error=max(endpoint_errors),maximum_ray_quadrature_estimate=max(quadrature_errors),
+        compute=dict(process_CPU_seconds=time.process_time()-started,CPU_limit_seconds=90,
+            wall_seconds=time.perf_counter()-wall,mode_workers=8,retained_full_arrays=False),
+        scope='Exact continuum projection identity evaluated on cell maps; not a proof of their derivative. No covariance, finite stress, angular completion or source-induced slip.')
+    print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
     parser.add_argument('--stage',choices=('initial','polynomial','source-jets'),default='initial')
     parser.add_argument('--diagnose-source-logs',action='store_true')
     parser.add_argument('--diagnose-observer-moments',action='store_true')
+    parser.add_argument('--diagnose-projection-derivative',action='store_true')
     args=parser.parse_args()
-    diagnostic=args.diagnose_source_logs or args.diagnose_observer_moments
-    if args.diagnose_source_logs and args.diagnose_observer_moments:
-        parser.error('choose one coefficient or moment diagnosis')
+    diagnostic=any((args.diagnose_source_logs,args.diagnose_observer_moments,args.diagnose_projection_derivative))
+    if sum((args.diagnose_source_logs,args.diagnose_observer_moments,args.diagnose_projection_derivative))>1:
+        parser.error('choose one coefficient, moment or projection diagnosis')
     if diagnostic and (args.output is not None or args.stage!='initial'):
         parser.error('diagnosis prints its small table; do not combine it with output or stage')
     if not diagnostic and args.output is None:
@@ -319,6 +395,9 @@ def main():
         return
     if args.diagnose_observer_moments:
         diagnose_observer_moments(commit,hashes)
+        return
+    if args.diagnose_projection_derivative:
+        diagnose_projection_derivative(commit,hashes)
         return
     cpu_start=time.process_time();wall_start=time.perf_counter();worker_totals={}
     def budget():

@@ -214,3 +214,87 @@ def observation_moment_residual(left_field,left_spatial,right_field,right_spatia
             +profileR[:,None]*right_field.value(leg,R))/2
         residual.append((IL-IR)/eta-sign*boundary-(JL+JR)/2)
     return np.stack(residual)
+
+
+def constrained_projection_derivative(coefficients,spatial,length,endpoint,spatial_endpoint,
+                                     source,source_x,*,orientation):
+    """Differentiate the mean/value/source-slope constrained L2 projection.
+
+    Exact when coefficients=P_L G and spatial=P_L G_x belong to one
+    continuum kernel. Substitution of independently reconstructed cell
+    maps remains an approximation; this is not a discrete identity for
+    their moving knots. source_x is the TOTAL derivative of G_s(L(x),x).
+    """
+    c=np.asarray(coefficients,dtype=complex);b=np.asarray(spatial,dtype=complex)
+    gamma,gx,gs,gsx=(np.asarray(v,dtype=complex) for v in (endpoint,spatial_endpoint,source,source_x))
+    L=float(length);lam=float(orientation)
+    if (c.ndim!=2 or c.shape[1]!=2 or len(c)<3 or b.shape!=c.shape
+            or any(v.shape!=(2,) for v in (gamma,gx,gs,gsx))
+            or not all(np.isfinite(v).all() for v in (c,b,gamma,gx,gs,gsx))
+            or not np.isfinite(L) or L<=0 or lam not in (-1.,1.)):
+        raise ValueError('finite common kernel projections, positive length and signed source leg required')
+    p=len(c);n=np.arange(p);w=2*n+1;scale=p*(p-1)
+    M=np.where(n[:,None]<n[None,:],w[:,None],0.)+np.diag(n)
+    d_raw=b+lam/L*w[:,None]*(gamma-c.sum(axis=0))
+    c_dot=d_raw+lam/L*M@c
+    gamma_x=gx+lam*gs
+    derivative=n*(n+1)/scale
+    B=np.stack((np.ones(p-1),derivative[1:]))
+    inverse_map=w[1:,None]*B.T@np.linalg.inv((B*w[1:])@B.T)
+    residual=np.stack((gamma-c.sum(axis=0),L*gs/scale-derivative@c))
+    residual_x=np.stack((gamma_x-c_dot.sum(axis=0),
+        (lam*gs+L*gsx)/scale-derivative@c_dot))
+    delta=np.zeros_like(c);delta_x=np.zeros_like(c)
+    delta[1:]=inverse_map@residual;delta_x[1:]=inverse_map@residual_x
+    return d_raw+delta_x-lam/L*M@delta
+
+
+def volterra_source_observation_jets(W,Wu,Wv,Wuu,Wuv,Wvv,
+                                    square_integrals,mixed_integrals,second_integrals):
+    """Total observation-x derivative of the two causal source-slope jets.
+
+    second_integrals are K_V=int(W_u^2+W*W_uu) and
+    K_U=int(W_v^2+W*W_vv), on the same two boundary rays as I and J.
+    """
+    I,J,K=(np.asarray(v,dtype=float) for v in (square_integrals,mixed_integrals,second_integrals))
+    if (any(v.shape!=(2,) for v in (I,J,K)) or np.any(I<0)
+            or not all(np.isfinite(v).all() for v in (I,J,K))
+            or not np.isfinite([W,Wu,Wv,Wuu,Wuv,Wvv]).all()):
+        raise ValueError('finite potential jets and two values of each ray integral required')
+    return np.array([
+        [-W*Wu/4+K[0]/4-I[0]*W*W/16+I[0]*J[0]/8,
+         .5j*(Wuu-Wuv)+.125j*I[0]*(Wu-Wv)+.25j*W*J[0]-.125j*W**3],
+        [.5j*(Wuv-Wvv)+.125j*I[1]*(Wu-Wv)-.25j*W*J[1]+.125j*W**3,
+         W*Wv/4-K[1]/4+I[1]*W*W/16-I[1]*J[1]/8]])
+
+
+def differentiated_retarded_response(sample,order):
+    """Continuum projection derivative evaluated with the supplied cell rows.
+
+    This conditional reconstruction is tested against the independent
+    spatial row, rather than asserted to be its exact finite-grid value.
+    """
+    field=sample['cell_field'];spatial=sample['cell_spatial']
+    if isinstance(order,bool) or not isinstance(order,int) or not 3<=order<=min(map(len,field.green)):
+        raise ValueError('field order at least three required')
+    green=[]
+    for leg,lam in enumerate((-1.,1.)):
+        c=field.green[leg][:order];b=spatial.green[leg][:order]
+        green.append(constrained_projection_derivative(c,b,field.lengths[leg],
+            sample['endpoint_values'][0,leg],sample['endpoint_values'][1,leg],
+            sample['source_endpoint_values'][leg],
+            sample['source_endpoint_observation_derivative'][leg],orientation=lam))
+    return NullResponse(field.lengths,tuple(green),spatial.direct,spatial.direct_derivative)
+
+
+def endpoint_hilbert_moment(coefficients):
+    """Integral (g(s)-g(L))/(s-L) ds of a supplied Legendre polynomial.
+
+    It is independent of L and equals 2*sum H_n*c_n. If the endpoint
+    vanishes, this is the finite integral of g/(s-L), without a cutoff.
+    """
+    c=np.asarray(coefficients,dtype=complex)
+    if c.ndim!=2 or c.shape[1]!=2 or not np.isfinite(c).all():
+        raise ValueError('finite two-component polynomial coefficients required')
+    harmonic=np.r_[0.,np.cumsum(1/np.arange(1,len(c)))]
+    return 2*harmonic@c

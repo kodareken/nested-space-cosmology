@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+The [differentiated source projection](nsc-atlas-dirac-probe.md#differentiating-the-constrained-source-projection)
+uses analytic second potential jets and the existing two boundary rays:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_retarded.py::test_projection_derivative_recovers_cubic_finite_hilbert_moment_and_mean tests/test_nsc_atlas_dirac_retarded.py::test_projection_derivative_matches_fixed_source_differentiation_of_smooth_kernel tests/test_nsc_atlas_dirac_retarded.py::test_volterra_source_observation_targets_match_separable_potential tests/test_nsc_atlas_dirac_preparation.py::test_auxiliary_second_null_jets_match_independent_optical_taylor_algebra -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_root_response.py --diagnose-projection-derivative
+```
+
+Freeze the method first. The diagnostic compares the independently
+propagated spatial row with the continuum projection derivative evaluated
+on cell rows. Its nonconstant residuals and finite endpoint Hilbert moment
+are compatibility checks, not a vacuum stress. Controls use8.3125 CPU
+seconds of the90-second shared allowance. No new field resolution or
+smaller split is admitted.
+
 The [nonconstant observer-moment check](nsc-atlas-dirac-probe.md#nonconstant-source-moment-compatibility-check)
 uses the same N128 maps and two existing separations:
 

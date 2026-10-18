@@ -8,6 +8,9 @@ from numpy.polynomial.legendre import leggauss
 from recursive_horizons.nsc_atlas_dirac_retarded import (
     retarded_null_responses,retarded_response,volterra_endpoint_jets,
     observation_moment_residual)
+from recursive_horizons.nsc_atlas_dirac_retarded import (
+    constrained_projection_derivative,endpoint_hilbert_moment,
+    volterra_source_observation_jets)
 from recursive_horizons.nsc_atlas_dirac_root_pairing import (
     NullResponse,pair_cylinder_responses,logarithmic_coefficients)
 
@@ -18,6 +21,59 @@ def constant_maps(U,V,mu,n,order=24):
         potential_u=np.zeros(shape),potential_v=np.zeros(shape),
         boundary_square_integrals=(mu*mu*V,mu*mu*U),boundary_mixed_integrals=(0.,0.),
         order=order,workers=8)
+
+
+def test_projection_derivative_recovers_cubic_finite_hilbert_moment_and_mean():
+    L=.8;c=np.array([L**3/4,9*L**3/20,L**3/4])[:,None]*np.array([[1.,2j]])
+    zero=np.zeros((3,2),complex);v=np.array([1.,2j])
+    for sign in (-1.,1.):
+        d=constrained_projection_derivative(c,zero,L,L**3*v,np.zeros(2),
+            3*L**2*v,sign*6*L*v,orientation=sign)
+        expected=sign*np.array([0.,-3*L**2/8,3*L**2/8])[:,None]*v
+        np.testing.assert_allclose(d,expected,atol=2e-15)
+        np.testing.assert_allclose(d[0],0.,atol=2e-15)
+        np.testing.assert_allclose(d.sum(axis=0),0.,atol=2e-15)
+        np.testing.assert_allclose(endpoint_hilbert_moment(d),sign*3*L*L*v/8,atol=3e-15)
+
+
+def test_projection_derivative_matches_fixed_source_differentiation_of_smooth_kernel():
+    from numpy.polynomial.legendre import legvander
+    p=6;L=.8;x=.15;n=np.arange(p);nodes,weights=leggauss(48);s=np.array([.07,.29,.63])
+    direction=np.array([1.,.3j])
+    def sample(length,position):
+        values=np.exp(position+(nodes+1)*length/2)
+        c=((2*n+1)/2*(legvander(nodes,p-1).T@(weights*values)))[:,None]*direction
+        gamma=np.exp(position+length)*direction
+        return dict(cell_field=NullResponse((length,length),(c,c),np.eye(2)),
+            endpoint_values=np.stack((np.stack((gamma,gamma)),np.stack((gamma,gamma)))),
+            source_endpoint_values=np.stack((gamma,gamma))),c,gamma
+    base,c,gamma=sample(L,x)
+    for sign in (-1.,1.):
+        d=constrained_projection_derivative(c,c,L,gamma,gamma,gamma,(1+sign)*gamma,orientation=sign)
+        values=legvander(2*s/L-1,p-1)@d;h=1e-4
+        def shifted(delta):
+            data,_,_=sample(L+sign*delta,x+delta)
+            return retarded_response(data,'field',p,source_jet=True).value(0,s)
+        independent=(-shifted(2*h)+8*shifted(h)-8*shifted(-h)+shifted(-2*h))/(12*h)
+        np.testing.assert_allclose(values,independent,rtol=2e-8,atol=2e-8)
+
+
+def test_volterra_source_observation_targets_match_separable_potential():
+    U,V=.17,.21;a,b=.7,-.4
+    def jets(u,v):
+        W=np.exp(a*u+b*v)
+        I=np.array([np.exp(2*a*u)*np.expm1(2*b*v)/(2*b),
+                    np.exp(2*b*v)*np.expm1(2*a*u)/(2*a)])
+        J=np.array([a,b])*I
+        return W,I,J
+    W,I,J=jets(U,V);K=2*np.array([a*a,b*b])*I
+    actual=volterra_source_observation_jets(W,a*W,b*W,a*a*W,a*b*W,b*b*W,I,J,K)
+    def source(delta):
+        w,i,j=jets(U-delta,V+delta)
+        return volterra_endpoint_jets(w,a*w,b*w,i,j)['source']
+    h=1e-4
+    independent=(-source(2*h)+8*source(h)-8*source(-h)+source(-2*h))/(12*h)
+    np.testing.assert_allclose(actual,independent,rtol=2e-10,atol=2e-11)
 
 
 def constant_input_exact(U,V,mu):

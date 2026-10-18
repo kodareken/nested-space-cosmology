@@ -3214,3 +3214,67 @@ and polynomial quadrature, and the cubic counterexample's distinct
 constant/nonconstant residuals. The existing producer's
 `--diagnose-observer-moments` flag prints the fixed-domain table without
 running any covariance contraction or creating a result data file.
+
+The diagnosis at method `c9b52d2` gives the following nested-minus-cap
+residual magnitudes, with the source-compatible correction:
+
+| Order | eta/S | Probe 0 | Probe 1 | Probe 8 | Largest correction change |
+| --- | --- | --- | --- | --- | --- |
+| 24 | 0.02 | 2.670835e-7 | 2.031369e-6 | 3.049502e-6 | 5.974234e-6 |
+| 24 | 0.01 | 1.533809e-7 | 1.148191e-6 | 3.407869e-6 | 6.023156e-6 |
+| 48 | 0.02 | 2.670835e-7 | 5.411019e-7 | 1.348483e-6 | 5.324841e-7 |
+| 48 | 0.01 | 1.533809e-7 | 9.792897e-8 | 3.873172e-7 | 5.164150e-7 |
+
+At order48 the correction-induced probe1 residual is 5.32484e-7/5.16415e-7
+at the two splits; their ratio is 1.03112 rather than four. Probe0 sees
+that change only at arithmetic precision. The total relative mean
+residual has ratio1.74131 and the nonconstant ratios vary, so these
+checks do not establish an O(eta^2)-dominated approximation. They show a
+finite derivative-compatibility issue; they do not assign all the v3
+amplitude variation to it or bound the coincident stress.
+
+The retained read uses 9.453125 process-CPU/5.149721 wall seconds. An
+identical first read used 9.078125 CPU seconds but its tool output was
+truncated; the repeated capture and the 1.09375-second controls total
+19.625 CPU seconds within the shared60 allowance. No data file, finer
+field grid, smaller split, covariance contraction or P001 run is added.
+
+### Differentiating the constrained source projection
+
+The next calculation uses the same N128 maps and splits. In the retarded
+adapter, differentiate the minimum-L2 correction in its moving Legendre
+basis and compare its spatial response with the independently propagated
+one. For p coefficients, define M_mn=2m+1 for m<n, M_nn=n, zero otherwise;
+w_n=2n+1. For raw c=P_L G, b=P_L G_x and lambda=L_x, the continuum identities
+are d_raw=b+lambda*w*(gamma-sum c)/L and c_dot=d_raw+lambda*M*c/L.
+Differentiate the existing two constraint residuals and apply the SAME
+constant Gram inverse: d_constrained=d_raw+delta_c_dot-lambda*M*delta_c/L.
+
+The preparation owner supplies analytic second null jets; the existing
+ray quadrature adds K_V=int(W_u^2+W*W_uu) and its U analogue. These provide
+the total observation derivative of the source-slope targets. The
+producer adds a diagnostic option, not a new field solver or state.
+
+The derivative identity is exact for one common continuum kernel and its
+projection. Substituting the cell field and spatial rows is a numerical
+approximation, not an exact derivative theorem for their reconstruction.
+Check the cubic control, an independently integrated smooth kernel and
+analytic metric/switch jets before the physical comparison. Compare
+nonconstant moments and the finite endpoint Hilbert functional, then stop
+if compatibility fails; this alone supplies no stress or angular tail.
+The shared allowance is90 process-CPU seconds for controls and one fixed
+diagnosis, with eight field workers and no covariance contraction.
+Likely failures are moving-basis signs, differentiated source jets and
+finite-cell inconsistency; the exact controls and residuals distinguish
+these. A noncontracting residual rejects use in a finite-part inference.
+
+Implemented in `constrained_projection_derivative` and
+`differentiated_retarded_response`, with `potential_null_jets` and
+`volterra_source_observation_jets` supplying the physical targets. The
+four controls pass in4.1875 CPU seconds; checking both the native quiet
+chart and the nonzero-central-mass chart against independent fourth-order
+optical Taylor algebra adds4.125 CPU seconds. Total8.3125 before the
+physical diagnostic. Both boundary orientations, a smooth nonpolynomial
+kernel, the cubic finite Hilbert moment and the separable-potential source
+targets are checked. The producer's `--diagnose-projection-derivative`
+option compares both spatial representations on the existing maps.

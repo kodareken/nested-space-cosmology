@@ -4,6 +4,15 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [nonconstant source-moment diagnosis](nsc-atlas-dirac-probe.md#nonconstant-source-moment-compatibility-check)
+finds a finite derivative mismatch in the same N128 maps. At order48,
+the correction-induced probe1 changes by5.32484e-7/5.16415e-7 at the two
+existing splits, while a constant probe misses it. Relative residuals do
+not establish the expected central-difference scaling. A differentiated
+projection and analytic physical source targets now pass four independent
+controls; their fixed-grid comparison is next. No new stress value or
+P001 grid follows from these checks.
+
 The [source-compatible v3 reconstruction](nsc-atlas-dirac-probe.md#source-compatible-comparison-cancellation-fixed-amplitude-still-open)
 now fixes the artificial logarithm in the actual nested/cap calculation.
 The old cases reproduce exactly. At order48 the two corrected splits

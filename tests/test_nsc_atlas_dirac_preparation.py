@@ -204,3 +204,36 @@ def test_exact_continuum_Hardy_compression_differs_from_finite_energy_projector(
     assert discrepancies[0]==pytest.approx(.5-1/math.sqrt(2*math.pi),abs=3e-16)
     assert discrepancies[-1]<.005
     assert all(b<a for a,b in zip(discrepancies,discrepancies[1:]))
+def test_auxiliary_second_null_jets_match_independent_optical_taylor_algebra():
+    from recursive_horizons.nsc_atlas_dirac_radar import WallRadarChart
+    from recursive_horizons.nsc_atlas_dirac_compact_source import CompactMassChart
+    from recursive_horizons.nsc_atlas_dirac_symbol import radar_metric_jets
+    from recursive_horizons.nsc_spatial_reference_symbol import SymbolJet
+    from recursive_horizons.nsc_atlas_dirac_preparation import CylinderPreparation
+    reference=WallRadarChart()
+    for mass in (0.,1e-4):
+        chart=CompactMassChart(reference,mass);S=chart.duration
+        for fu,fv,region in ((.8,.7,'cap'),(.15,.55,'nested'),(.6,.95,'exterior'),(.05,.6,'cap')):
+            U,V=fu*S,fv*S;k=-2
+            preparation=CylinderPreparation(reference if mass==0 else chart,duration=S,
+                root_radius=.45,region=region,angular_k=k)
+            actual=preparation.potential_null_jets(U,V)
+            metric=radar_metric_jets(chart,U,V,region=region)
+            dt,dx=SymbolJet.variable(0.,0),SymbolJet.variable(0.,1)
+            u,v=SymbolJet.constant(U)+dt-dx,SymbolJet.constant(V)+dt+dx
+            def step(z):
+                if float(z.value[0,0,0].real)<=0:
+                    return SymbolJet.constant(0.)
+                if float(z.value[0,0,0].real)>=1:
+                    return SymbolJet.constant(1.)
+                return 1/(1+(1/z-1/(1-z)).exp())
+            def switch(t):
+                return step((t-.1*S)/(.1*S))*step((S-t)/(.1*S))
+            target=k*(1/.45+switch(u)*switch(v)*(metric['potential_per_k']-1/.45))
+            value=lambda j:float(j.value[0,0,0].real)
+            t,x=target.derivative(t=1),target.derivative(z=1)
+            tt,tx,xx=target.derivative(t=2),target.derivative(t=1,z=1),target.derivative(z=2)
+            expected=dict(W=value(target),Wu=value((t-x)/2),Wv=value((t+x)/2),
+                Wuu=value((tt-2*tx+xx)/4),Wuv=value((tt-xx)/4),Wvv=value((tt+2*tx+xx)/4))
+            for key in expected:
+                np.testing.assert_allclose(actual[key],expected[key],rtol=2e-10,atol=3e-9)

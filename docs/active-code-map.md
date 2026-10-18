@@ -45,6 +45,12 @@ The [nonconstant source probes](nsc-atlas-dirac-probe.md#nonconstant-source-mome
 use `source_moments` and `observation_moment_residual` in the retarded
 adapter. Their independent polynomial controls pass. The same producer
 prints the fixed-grid diagnostic in `--diagnose-observer-moments`.
+Its [measured relative residuals](nsc-atlas-dirac-probe.md#nonconstant-source-moment-compatibility-check)
+show a mismatch invisible to the mean. The [differentiated correction](nsc-atlas-dirac-probe.md#differentiating-the-constrained-source-projection)
+uses `constrained_projection_derivative` and analytic preparation jets;
+four independent controls pass before the same producer's
+`--diagnose-projection-derivative` comparison. The continuum identity is
+conditional when applied to the finite cell reconstructions.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).

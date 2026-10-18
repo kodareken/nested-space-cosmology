@@ -18,6 +18,7 @@ from .nsc_atlas_dirac_mean import MeanModeGrid,RadarPointEvaluator,SPIN_ROTATION
 from .nsc_atlas_dirac_scattering import smooth_bump
 from .nsc_atlas_dirac_stress import stress_matrices
 from .nsc_common_subtracted_ks_source import KSKernelSample,SpectrumDeclaration
+from .nsc_atlas_cap_wall_response import reference_coefficients
 
 
 def hermite_null_modes(clock,duration,count):
@@ -293,7 +294,7 @@ def cylinder_covariance_compression(duration,radius,count,*,angular_k=1,order=96
         quadrature_order=order,state_rule='restriction of the complete static-cylinder negative band')
 
 
-def _flat_step(coordinate):
+def _flat_step(coordinate,*,second=False):
     z=np.asarray(coordinate,dtype=float)
     value=np.where(z>=1,1.,0.);derivative=np.zeros_like(z)
     active=(z>0)&(z<1)
@@ -304,6 +305,13 @@ def _flat_step(coordinate):
     moving=(v>0)&(v<1)
     slope[moving]=v[moving]*(1-v[moving])*(1/a[moving]**2+1/(1-a[moving])**2)
     value[active]=v;derivative[active]=slope
+    if second:
+        curvature=np.zeros_like(z);local=np.zeros_like(a)
+        b=a[moving];logit_prime=1/b**2+1/(1-b)**2
+        logit_second=2/(1-b)**3-2/b**3
+        local[moving]=v[moving]*(1-v[moving])*((1-2*v[moving])*logit_prime**2+logit_second)
+        curvature[active]=local
+        return value,derivative,curvature
     return value,derivative
 
 
@@ -325,8 +333,13 @@ class CylinderPreparation:
         self.duration,self.root_radius,self.angular_k=duration,root_radius,angular_k
         self.points=RadarPointEvaluator(chart,region=region,angular_k=angular_k)
 
-    def _switch(self,clock):
+    def _switch(self,clock,*,second=False):
         S=self.duration
+        if second:
+            on,d_on,dd_on=_flat_step((clock-.1*S)/(.1*S),second=True)
+            off,d_off,dd_off=_flat_step((S-clock)/(.1*S),second=True)
+            return (on*off,(d_on*off-on*d_off)/(.1*S),
+                (dd_on*off-2*d_on*d_off+on*dd_off)/(.1*S)**2)
         on,d_on=_flat_step((clock-.1*S)/(.1*S))
         off,d_off=_flat_step((S-clock)/(.1*S))
         return on*off,(d_on*off-on*d_off)/(.1*S)
@@ -353,6 +366,61 @@ class CylinderPreparation:
         return dict(potential=k*q,potential_t=k*qt,potential_x=k*qx,
             lapse=N,radial_length=N,radius=np.full(U.shape,self.root_radius),
             conformal_factor=N*N,preparation_weight=weight)
+
+    def potential_null_jets(self,U,V):
+        """Analytic auxiliary W, W_u, W_v, W_uu, W_uv, W_vv.
+
+        Reuses the chart's wall/metric data and vacuum null constraints.
+        The two one-sided second jets at the material wall are selected
+        by the chart; no derivative of stored field samples is taken.
+        """
+        U,V=np.broadcast_arrays(np.asarray(U,dtype=float),np.asarray(V,dtype=float))
+        fields=self.fields(U,V)
+        su,du,ddu=self._switch(U,second=True);sv,dv,ddv=self._switch(V,second=True)
+        second=np.zeros(U.shape+(3,));active=su*sv>0
+        if np.any(active):
+            u,v=U[active],V[active];physical=self.points(u,v)
+            chart=self.points.chart
+            ru,rv=self.points.wall_radii(u),self.points.wall_radii(v)
+            gu,gv=(chart._geometry(r) if hasattr(chart,'_geometry') else reference_coefficients(r)
+                   for r in (ru,rv))
+            r,N,C=(physical[k] for k in ('radius','lapse','conformal_factor'))
+            cap=physical['is_cap'];central=getattr(chart,'central_mass',0.)
+            mass=np.where(cap,central,getattr(chart,'parent_mass',.4))
+            fp=2*mass/r**2-2*r*cap;fpp=-4*mass/r**3-2*cap
+            rU=(physical['radius_t']-physical['radius_x'])/2
+            rV=(physical['radius_t']+physical['radius_x'])/2
+            LU,LV=physical['log_C_u'],physical['log_C_v']
+            p=-2*rU/physical['static_f'];q=2*rV/physical['static_f']
+            plog=LU+fp*p/2;qlog=LV-fp*q/2
+
+            def log_rate_second(g,R,sign):
+                beta=np.where(cap,g['beta_minus'],g['beta_plus'])
+                br=np.where(cap,g['beta_minus_x'],g['beta_plus_x'])
+                speed,acc=g['v'],g['radial_acceleration']
+                aprime=g['beta_minus_x']**2+g['beta_minus']*g['beta_second']+2*central/R**3+1
+                denominator=beta+sign*speed;first=speed*br+sign*acc
+                total=speed**2*g['beta_second']+acc*br+sign*speed*aprime
+                return -total/denominator+(first/denominator)**2
+
+            LUU=-fpp*rU*p/2-fp*p*plog/2+log_rate_second(gu,ru,1)
+            LVV=fpp*rV*q/2+fp*q*qlog/2+log_rate_second(gv,rv,-1)
+            rUU=-fp*rU*p/2-physical['static_f']*p*plog/2
+            rVV=fp*rV*q/2+physical['static_f']*q*qlog/2
+            rUV=physical['radius_uv'];LUV=physical['log_C_uv']
+            target=N/r;dU=LU/2-rU/r;dV=LV/2-rV/r
+            tUU=target*(dU*dU+LUU/2-rUU/r+rU*rU/r**2)
+            tUV=target*(dU*dV+LUV/2-rUV/r+rU*rV/r**2)
+            tVV=target*(dV*dV+LVV/2-rVV/r+rV*rV/r**2)
+            tU=target*dU;tV=target*dV;difference=target-1/self.root_radius
+            a,b=su[active],sv[active];da,db=du[active],dv[active]
+            second[active,0]=ddu[active]*b*difference+2*da*b*tU+a*b*tUU
+            second[active,1]=da*db*difference+da*b*tV+a*db*tU+a*b*tUV
+            second[active,2]=a*ddv[active]*difference+2*a*db*tV+a*b*tVV
+        k=self.angular_k
+        return dict(W=fields['potential'],Wu=(fields['potential_t']-fields['potential_x'])/2,
+            Wv=(fields['potential_t']+fields['potential_x'])/2,
+            Wuu=k*second[...,0],Wuv=k*second[...,1],Wvv=k*second[...,2])
 
 
 class PreparedCylinderModes:
