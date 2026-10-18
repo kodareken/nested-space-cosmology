@@ -1,6 +1,47 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.2`, includes the checked second nesting level, its central observer and the fixed-state resolution response. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.3`, includes the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## Completed P001 endpoint trial, 18 October 2026
+
+All three original v4 evolutions now reach `x=0.4815042082576364`, `V=1`.
+The fine run completes 3330 steps in 45486.453125 process-CPU seconds with
+no retries. The [comparison](../results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json)
+and [gap decomposition](../results/summaries/nsc-atlas-fixed-endpoint-gap-diagnostic-v1.json)
+read those saved results without another evolution. Sixty-seven focused
+comparison, diagnostic and register controls pass.
+
+| Cap/exterior cells | Jordan wall radius at ell=10 km (m) | Actual mass-gap maximum | Wall-flux maximum |
+| --- | ---: | ---: | ---: |
+| 2/32 | 5492.322036563843 | 0.00232832534127 | 2.24045303347 |
+| 4/64 | 5492.322058752734 | 0.00237798074711 | 2.19447899469 |
+| 8/128 | 5492.322035897825 | 0.00240631809367 | 2.14212667980 |
+
+The observed radius spread is **22.85 micrometres**, giving the fine-centred
+resolution envelope **5492.322035897825 +/- 0.000022854908820590936 m**.
+This is now in [NSC-P001](prediction-register.md#full-endpoint-observable-selected-before-the-three-grid-results).
+It is a numerical range for a declared ruler and local wall-area protocol,
+not a total uncertainty or an observation of an astrophysical object.
+
+The wall-flux maximum shrinks **4.39%**. The actual mass maximum grows
+**3.35%**, and the radius pair differences do not contract. The matched mass
+maximum rises slightly then falls on the fine grid. P001 therefore remains
+an **unconverged numerical estimate**; Step 2's full endpoint is not closed.
+
+The saved cuts separate the mass gap into strong/weak wall-trace and explicit
+background time-projection terms. At `x=.45094013016102275`, the fine mass
+residual `-.0007620291372472` splits into trace `-.0005505985471954` and
+balance `-.0002114305900518`, agreeing to `1.62e-17`. Both components grow
+in magnitude across the three grids. At the endpoint, the fine flux is
+`-.546650001108445`; the decreasing all-stage maximum does not mean that
+every individual cut improves. The nine cuts cover only 19.3%, 25.1% and
+31.7% of the actual-mass envelope. The maximizing states were not saved,
+so these identities do not establish their unique algorithmic cause.
+The independent mass/lapse check below excludes radial integration as the
+cause at its separate retained stage. The unresolved connection remains the
+represented field and wall/time coupling. No new grid scan is launched.
+
+![Three-grid radius envelope and mass/flux trends](figures/nsc-atlas-fixed-endpoint-comparison.png)
 
 ## One geometry at two resolutions, 18 October 2026
 
@@ -47,8 +88,8 @@ has trace `Lambda_g,trace*ell^2=-0.0153506330754` and vacuum residual
 `2.11796240047`; its density and pressure are not vacuum form. Its exact
 end supplies a [conditional parent initial-data family](nsc-atlas-connection-gluing.md#retaining-a-grandchild-in-the-parent-initial-data)
 with two unequal children and a grandchild. The connector, physical observer
-reduction and joint clock atlas remain open. The original P001 fine
-endpoint evolution continues independently.
+reduction and joint clock atlas remain open. The original P001 endpoint
+trial is recorded above with its failed convergence tests.
 
 ## Two unequal sourced inputs, 18 October 2026
 
@@ -257,8 +298,8 @@ process-CPU seconds, no retries, and a complete auxiliary transport summary.
 Its Jordan radius is `0.5492322058752734 ell`, or
 `5492.322058752734 m` at the same fiducial ruler. The difference from the
 coarse result is `0.000022188891835028812 m` (22.19 micrometres).
-That is a two-grid difference; the fine grid is still running, so P001's
-three-grid range is not yet available.
+At that checkpoint it was a two-grid difference. The completed three-grid
+result above now supplies P001's range and retains its unconverged status.
 
 The maximum wall-flux gap decreases from `2.240453033467581` to
 `2.1944789946878913`, a 2.052 percent reduction. The actual mass-gap maximum
@@ -267,8 +308,8 @@ increases to `0.0023779807471067432`; the matched one is
 `3.281557191635309e-5`, and the accumulated scalar gap is
 `0.006663588598542751`. The state was not corrected to those diagnostic
 integrals. These failures remain visible despite the close radius values.
-The completed three-grid comparison and saved gap decomposition will be
-used before assigning the numerical prediction range or closing Step 2.
+The completed comparison and decomposition above now assign the numerical
+range while retaining the failed endpoint closure tests.
 
 The saved mass split is
 `mass_actual = alpha*(trace_term + weak_balance/T_x)`. The latter term
@@ -280,23 +321,26 @@ terms, without another field solve:
 | --- | ---: | ---: | ---: |
 | Coarse, `x=0.45094013016102275` | -0.000397847431235 | -0.000050895272793 | -0.000448742704028 |
 | Middle, same event | -0.000470853832217 | -0.000125703465744 | -0.000596557297961 |
+| Fine, same event | -0.000550598547195 | -0.000211430590052 | -0.000762029137247 |
 | Coarse endpoint | -0.000000016368618 | -0.000010110820148 | -0.000010127188766 |
 | Middle endpoint | -0.000001829452209 | +0.000032431796629 | +0.000030602344421 |
+| Fine endpoint | -0.000004301009072 | +0.000067515703070 | +0.000063214693998 |
 
 The split closes to floating-point rounding at these events. The background
 projection is larger at the endpoints; the trace term is larger at the
 largest saved mass sample. Neither statement locates the all-stage maximum:
-the nine samples cover only 19.3 and 25.1 percent of that envelope. The
-matched mass maximum also fails to shrink, so replacing the strong wall
-product alone does not remove the failure. The endpoint flux itself grows
-in magnitude from `0.00965372` to `0.25904642`, despite the smaller global
+the nine samples cover only 19.3, 25.1 and 31.7 percent of that envelope. The
+matched maximum rises slightly before falling on the fine grid; the actual
+mass maximum still grows. Replacing the strong wall product alone therefore
+does not establish closure. The endpoint flux itself grows
+in magnitude from `0.00965372` through `0.25904642` to `0.54665000`, despite the smaller global
 maximum. Close radius integrals therefore cannot stand in for the mass or
 scalar constraints. These receipts do not store independent radial mass/lapse
 residuals; the diagnostic algebra is not a new certification of those solves.
 The [saved-cut diagnostic](../scripts/diagnose_nsc_atlas_endpoint_gaps.py)
 and [coupling source](../src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py)
-provide the comparison once the fine receipt is available. Independent Grok
-review agrees on the split and these limits; no new trajectory was run.
+provide the completed comparison. Independent Grok review agrees on the
+three-grid split and these limits; no new trajectory was run.
 
 An [independent full-mass/lapse calculation](../results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json)
 now checks the separate authenticated coarse-v3 seed at

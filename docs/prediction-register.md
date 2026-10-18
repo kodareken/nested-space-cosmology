@@ -114,18 +114,37 @@ measurement cross-section. Reception by a remote or central detector is a
 separate calculation. This fixed-label event must not be identified with the
 fixed Jordan wall proper time used by the historical coefficient $\rho$.
 
-The [three-grid comparison](../scripts/analyze_nsc_atlas_fixed_endpoint.py)
-will report the fine-grid radius and the symmetric interval whose half-width
-is the largest difference from either other grid. This is an observed
-resolution envelope, with the measured mass/flux contraction reported
-alongside it. It is not a confidence interval or a rigorous continuum bound.
+The [completed three-grid comparison](../results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json)
+now reports the fine-grid radius and the symmetric interval whose half-width
+is the largest difference from either other grid. At the declared ruler:
+
+| Cap/exterior cells | Jordan radius (m) | Maximum actual mass gap | Maximum wall-flux gap |
+| --- | ---: | ---: | ---: |
+| 2/32 | 5492.322036563843 | 0.00232832534127 | 2.24045303347 |
+| 4/64 | 5492.322058752734 | 0.00237798074711 | 2.19447899469 |
+| 8/128 | 5492.322035897825 | 0.00240631809367 | 2.14212667980 |
+
+The fine value is **5492.322035897825 m**, with observed resolution half-width
+**0.000022854908820590936 m** (22.85 micrometres). The full grid spread has
+the same magnitude because the fine value is the smallest. Its symmetric
+range is `[5492.322013042916, 5492.322058752734] m`. The shift from the quiet
+5500 m reference is `-7.677964102174883 m`.
+
+The wall-flux maximum decreases 4.39 percent, while the actual mass-gap
+maximum increases 3.35 percent. Successive radius differences are 22.19 and
+22.85 micrometres, so the radius pair gap does not contract either. The
+registered finite-amplitude status is **unconverged numerical estimate**.
+This is an observed resolution envelope, with the failed mass contraction
+reported alongside it. It is not a confidence interval or a rigorous continuum bound.
 Common source interpolation, radial numerical error, errors outside this
 grid family and physical preparation remain separate uncertainties. An
 independent relative uncertainty in $\ell$ transfers directly to the radius.
-The endpoint value and resolution range are pending the three completed
-evolutions; the existing perturbative record is preserved meanwhile.
+All three original evolutions have completed. The coarse evolution's
+auxiliary accumulated-transport summary remains unavailable after its
+post-evolution assembly failure. The historical perturbative result remains
+unchanged; this extension does not close its full nonlinear endpoint claim.
 
-When the comparison exists, the saved-data registration command is:
+The saved-data registration command is:
 
 ```sh
 python scripts/run_python.py scripts/register_nsc_atlas_fixed_endpoint.py --comparison results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json

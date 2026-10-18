@@ -2770,6 +2770,58 @@ rerunning a field solution. Continuation to central arrival, numerical
 trajectory error, preparation selection and observational comparison
 retain their separate requirements.
 
+### 13.22. The completed full-label numerical trial
+
+<!-- nsc-claim:atlas-fixed-endpoint-trial -->
+
+All three original fixed-grid runs reach the common incoming-label event
+$x=0.4815042082576364$, $V=1$, at
+$\alpha=0.00012983127142551443$. The observable is the Jordan material-wall
+areal radius, measured by intrinsic area or equatorial proper circumference
+on that cross-section. The ruler $\ell=10\,\mathrm{km}$ is a declared input;
+it is not an inferred astrophysical scale. This event differs from the
+fixed wall-proper-time event used by the historical perturbative coefficient.
+
+| Cap/exterior cells | Jordan radius (m) | Actual mass-gap maximum | Wall-flux maximum |
+| --- | ---: | ---: | ---: |
+| 2/32 | 5492.322036563843 | 0.00232832534 | 2.24045303 |
+| 4/64 | 5492.322058752734 | 0.00237798075 | 2.19447899 |
+| 8/128 | 5492.322035897825 | 0.00240631809 | 2.14212668 |
+
+The fine value is $5492.322035897825\,\mathrm m$. The full grid spread is
+$22.8549$ micrometres; the fine-centred resolution interval is
+$[5492.322013042916,5492.322058752734]\,\mathrm m$, with the same spread
+as its half-width. Common input error and errors beyond this grid family
+are not included. This is not a confidence interval or a continuum error
+bound. The successive pair differences, $22.19$ and $22.85$ micrometres,
+do not contract. The grids are nonuniform and their time steps change too,
+so no convergence order is inferred.
+
+The wall-flux maximum decreases 4.39%, while the actual mass maximum grows
+3.35%. Each residual uses its recorded normalization. The matched-mass
+maximum rises slightly then falls on the fine grid. These mixed results
+keep the finite-amplitude extension of NSC-P001 an **unconverged numerical
+estimate**. The earlier onset theorem retains its shorter domain; the full
+endpoint solution is not certified. The coarse evolution completed, but
+its auxiliary accumulated-transport summary failed and remains unavailable.
+
+The [completed comparison](../results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json)
+and [saved-cut decomposition](../results/summaries/nsc-atlas-fixed-endpoint-gap-diagnostic-v1.json)
+bind the original producer, three inputs and all nine common cuts. The fine
+cut at $x=0.45094013016102275$ has physical mass residual
+$-0.0007620291372472$, split into strong/weak trace contribution
+$-0.0005505985471954$ and balance contribution $-0.0002114305900518$.
+Their sum agrees to $1.62\times10^{-17}$. The latter is the explicit
+background time-projection remainder up to its stored identity defect.
+At the endpoint the fine flux is $-0.5466500011$, compared with
+$-0.00965372325$ on the coarse grid: a smaller all-stage maximum does not
+mean every cut improves. The saved cuts cover only 19.3%, 25.1% and 31.7%
+of the actual-mass envelopes. No maximizing state was saved, so this split
+does not locate or uniquely explain that unseen peak. The remaining
+connection is the represented field's strong/weak and time-projection
+coupling to the wall. The radius, local measurement protocol and qualified
+range are recorded in [NSC-P001](../docs/prediction-register.md).
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -3120,14 +3172,13 @@ proves negative material-radius and anchored-clock corrections at the onset
 endpoint throughout the admitted positive-amplitude range. Errors in the
 older numerical histories, continuation through central arrival and the
 observer waveform remain separate open questions.
-The longer three-grid closure of the original fine evolution is still
-unresolved. Mass residuals have not contracted. A separate full-mass, lapse
+The longer three-grid trial in Section 13.22 is complete and remains
+unconverged. Its mass residuals have not contracted. A separate full-mass, lapse
 and rate check on
 [one older saved stage](../results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json)
 reproduces a nonzero temporal mass residual there. That stage is not the
-maximum over every saved comparison, and it is not a final radius or error
-for the evolution that is still running. The nonzero residual is not a
-reason to add further opening proofs. Sections 6.1.4--6.1.7 record the
+maximum over the completed v4 trial. The qualified radius range is now in
+NSC-P001; the full endpoint closure remains open. Sections 6.1.4--6.1.8 record the
 observer calculations that use completed geometries instead. Sections
 10.1--10.3 now add two unequal sourced inputs, finite grandchild composition
 and an inner-wall flash with a specified central receiver.
@@ -3150,6 +3201,7 @@ and renders their relationships without launching a new physics calculation.
 | Sourced slice and vacuum observer domain | [Atlas v4](../docs/nsc-atlas-connection-slice.md); [manifest](../results/development/nsc-cosmological-atlas-v4/manifest.json) |
 | Unequal sourced bodies and finite grandchild composition | [End assembly](../docs/nsc-atlas-connection-gluing.md); [unequal bodies](../results/summaries/nsc-atlas-unequal-children-v1.json) and [two-level geometry/observer](../results/summaries/nsc-atlas-nested-slice-v1.json) |
 | Fixed-state physical resolution | [Canonical split and vacuum-volume comparison](../docs/schur-memory.md#physical-resolution-of-one-fixed-geometry); [finite record](../results/summaries/nsc-conformal-resolution-v1.json) |
+| Full-label three-grid trial | [Observable and status](../docs/prediction-register.md); [comparison](../results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json) and [saved-cut split](../results/summaries/nsc-atlas-fixed-endpoint-gap-diagnostic-v1.json) |
 | Isolated causal completion and clocks | [Atlas v5](../docs/nsc-atlas-causal-classification.md); [manifest](../results/development/nsc-cosmological-atlas-v5/manifest.json) |
 | Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-atlas-field-transfer.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
 | Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |

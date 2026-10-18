@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.3` adds Section 13.22: all three original P001 endpoint
+runs have completed. The local wall-radius protocol now has a supplied
+physical ruler and a 22.85-micrometre observed resolution envelope. The
+mass gap grows while the global wall-flux maximum shrinks. The numerical
+extension stays unconverged, and the nine-cut split does not identify an
+unstored maximum state. The finite onset theorem is not extended by this
+trial. No new evolution was run for its comparison or registration.
+
 Revision `2026-10-18.2` adds Section 6.1.8: a fixed physical resolution map
 on one saved conformal state, the action-derived vacuum-volume generator,
 and a whole-force comparison. The calculated energy coefficient fails

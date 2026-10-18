@@ -254,6 +254,11 @@
       "status": "measured",
       "owner": "docs/nsc-atlas-connection-slice.md"
     },
+    "atlas-fixed-endpoint-trial": {
+      "section": "13.22",
+      "status": "measured",
+      "owner": "docs/prediction-register.md"
+    },
     "conformal-physical-resolution": {
       "section": "6.1.8",
       "status": "measured",
