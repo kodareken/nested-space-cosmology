@@ -4,6 +4,15 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [first full-radial finite-split reference](nsc-atlas-dirac-probe.md#evaluated-full-radial-finite-split-reference)
+now evaluates the actual nested-versus-cap vacuum comparison. For kappa=+1
+at a 12.724739 m proper split with supplied ell=10 km, its pressure-shaped
+bilocal changes by .001765398991 hbar*c/ell^4, or 5.58135618e-45 Pa.
+Grid, polynomial and separation variations are 1.17%, 8.18% and 4.38%.
+The complete radial root covariance is included; the angular sum and
+relative coincidence limit are not. This is not full Psi/Phi. The frozen
+run uses 47 CPU/42.479 wall seconds and retains a 22899-byte summary.
+
 The [retarded-map extraction](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
 now supplies numerical endpoint maps from the same field solver. A direct
 endpoint projection failed; continuous linear kernel reconstruction with

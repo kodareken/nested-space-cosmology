@@ -1,0 +1,805 @@
+{
+  "cases": [
+    {
+      "bessel_pressure_tail_bound": 3.892330676783336e-95,
+      "cells": 64,
+      "finite_split_anisotropy_difference": 0.002008494063085576,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -1.6951520672188345e-06,
+            -5.983633551794986e-05
+          ],
+          [
+            -2.3627783397445817e-08,
+            -1.2987378805175977e-05
+          ]
+        ],
+        "real": [
+          [
+            1.280286539620912e-06,
+            0.000502023732011369
+          ],
+          [
+            0.0005757877926073453,
+            -6.409966266349051e-07
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0006341868721910657,
+            0.007637151458333892
+          ],
+          [
+            6.735410274374657e-07,
+            -0.005193361907503618
+          ]
+        ],
+        "real": [
+          [
+            -0.000147164426540677,
+            -0.022092639888349835
+          ],
+          [
+            0.0050757222087802695,
+            3.9474014242568776e-05
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 6.349907754854199e-45,
+      "polynomial_order": 12,
+      "proper_separation_m": 25.449494787493208,
+      "proper_separation_quadrature_estimate_m": 8.47638452344586e-13,
+      "pv_pressure_quadrature_estimate": 2.7893777447199245e-13,
+      "separation_over_S": 0.02
+    },
+    {
+      "bessel_pressure_tail_bound": 5.302999911899598e-95,
+      "cells": 64,
+      "finite_split_anisotropy_difference": 0.001861644423036467,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -1.473260428476118e-06,
+            -2.8296310448905632e-05
+          ],
+          [
+            -4.676382935119097e-09,
+            -1.2968968297232951e-05
+          ]
+        ],
+        "real": [
+          [
+            7.608511109770853e-07,
+            0.0005025455483899103
+          ],
+          [
+            0.0005593848010870052,
+            -1.2106345022359867e-07
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0008981215329643556,
+            0.02173145205101317
+          ],
+          [
+            3.814143921788065e-07,
+            -0.0051850820807510115
+          ]
+        ],
+        "real": [
+          [
+            -0.0005819744664233841,
+            -0.02664129225522343
+          ],
+          [
+            0.007562023881879568,
+            -1.5695568346345658e-06
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 5.885638686160589e-45,
+      "polynomial_order": 24,
+      "proper_separation_m": 25.449494787493208,
+      "proper_separation_quadrature_estimate_m": 8.47638452344586e-13,
+      "pv_pressure_quadrature_estimate": 2.886737151916106e-13,
+      "separation_over_S": 0.02
+    },
+    {
+      "bessel_pressure_tail_bound": 3.414186096472338e-95,
+      "cells": 64,
+      "finite_split_anisotropy_difference": 0.001911668141331406,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -3.918985212941369e-07,
+            -6.693755396254025e-05
+          ],
+          [
+            -2.515338671358596e-08,
+            -6.447766927765843e-06
+          ]
+        ],
+        "real": [
+          [
+            1.427088291428718e-06,
+            0.0005584868293513959
+          ],
+          [
+            0.0005736265547216309,
+            -7.254120560340189e-07
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0007343871287909852,
+            -0.00908304370515546
+          ],
+          [
+            7.84902675777234e-07,
+            -0.005177000908029087
+          ]
+        ],
+        "real": [
+          [
+            0.00020129805318192602,
+            -0.02953095060687285
+          ],
+          [
+            0.0025563482680107143,
+            3.3251015382319723e-05
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 6.043790010859895e-45,
+      "polynomial_order": 12,
+      "proper_separation_m": 12.72473894657857,
+      "proper_separation_quadrature_estimate_m": 4.2381894482507974e-13,
+      "pv_pressure_quadrature_estimate": 2.796484973226511e-13,
+      "separation_over_S": 0.01
+    },
+    {
+      "bessel_pressure_tail_bound": 4.654905418954924e-95,
+      "cells": 64,
+      "finite_split_anisotropy_difference": 0.0017859885270238652,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            1.084516479474804e-06,
+            -1.0670455312521079e-05
+          ],
+          [
+            -5.707891488771828e-09,
+            -6.519284868995495e-06
+          ]
+        ],
+        "real": [
+          [
+            2.8455527733969385e-07,
+            0.0005869714607995866
+          ],
+          [
+            0.000547947858661095,
+            -1.4946024610094347e-07
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.000908619959905928,
+            -0.044582139117229656
+          ],
+          [
+            1.664305139983925e-07,
+            -0.005134191687124215
+          ]
+        ],
+        "real": [
+          [
+            0.0012043956670950559,
+            -0.025407585372602702
+          ],
+          [
+            0.008855919546134874,
+            2.398704245729224e-05
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 5.646450545343867e-45,
+      "polynomial_order": 24,
+      "proper_separation_m": 12.72473894657857,
+      "proper_separation_quadrature_estimate_m": 4.2381894482507974e-13,
+      "pv_pressure_quadrature_estimate": 2.8669712299636104e-13,
+      "separation_over_S": 0.01
+    },
+    {
+      "bessel_pressure_tail_bound": 3.904986817540556e-95,
+      "cells": 128,
+      "finite_split_anisotropy_difference": 0.0020070877647472203,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -1.7014773689179828e-06,
+            -6.048554016702892e-05
+          ],
+          [
+            -2.1793753996767667e-08,
+            -1.2994961948624656e-05
+          ]
+        ],
+        "real": [
+          [
+            1.2926946755836245e-06,
+            0.0005017518770966171
+          ],
+          [
+            0.0005758977771920101,
+            -5.95570677659998e-07
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0006367007707137515,
+            0.007700521836062393
+          ],
+          [
+            6.760676608313499e-07,
+            -0.005193259451640072
+          ]
+        ],
+        "real": [
+          [
+            -0.00014791961759972754,
+            -0.022248279438924795
+          ],
+          [
+            0.005049830672327138,
+            3.9309718301372876e-05
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 6.345461705005963e-45,
+      "polynomial_order": 12,
+      "proper_separation_m": 25.449494787493208,
+      "proper_separation_quadrature_estimate_m": 8.47638452344586e-13,
+      "pv_pressure_quadrature_estimate": 2.8068142681028127e-13,
+      "separation_over_S": 0.02
+    },
+    {
+      "bessel_pressure_tail_bound": 5.358160430474805e-95,
+      "cells": 128,
+      "finite_split_anisotropy_difference": 0.0018426790643745927,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -1.5067480941279304e-06,
+            -3.007366115576841e-05
+          ],
+          [
+            -1.8313734542952304e-09,
+            -1.2977780045716287e-05
+          ]
+        ],
+        "real": [
+          [
+            8.080794278218792e-07,
+            0.0005010406397547948
+          ],
+          [
+            0.0005591725095571705,
+            -4.545111663707799e-08
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0009314929586818754,
+            0.02303639489767781
+          ],
+          [
+            3.9587847563437373e-07,
+            -0.005183621806801439
+          ]
+        ],
+        "real": [
+          [
+            -0.0006164191649078835,
+            -0.02787080178447983
+          ],
+          [
+            0.007589854134594103,
+            -1.4706502740909332e-06
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 5.825679196982107e-45,
+      "polynomial_order": 24,
+      "proper_separation_m": 25.449494787493208,
+      "proper_separation_quadrature_estimate_m": 8.47638452344586e-13,
+      "pv_pressure_quadrature_estimate": 2.8893342662404955e-13,
+      "separation_over_S": 0.02
+    },
+    {
+      "bessel_pressure_tail_bound": 3.4251237585816405e-95,
+      "cells": 128,
+      "finite_split_anisotropy_difference": 0.0019097385355095779,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            -3.9098596861951997e-07,
+            -6.763917353949357e-05
+          ],
+          [
+            -2.3343948830399997e-08,
+            -6.4483228872902454e-06
+          ]
+        ],
+        "real": [
+          [
+            1.4402937992233868e-06,
+            0.0005586987471825891
+          ],
+          [
+            0.0005738042442268488,
+            -6.789958819739824e-07
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0007374669637282787,
+            -0.009186791647703006
+          ],
+          [
+            7.877634113321608e-07,
+            -0.005177085052303361
+          ]
+        ],
+        "real": [
+          [
+            0.0002035109609916237,
+            -0.02975598200980718
+          ],
+          [
+            0.002506009096294233,
+            3.171268905215589e-05
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 6.03768951039189e-45,
+      "polynomial_order": 12,
+      "proper_separation_m": 12.72473894657857,
+      "proper_separation_quadrature_estimate_m": 4.2381894482507974e-13,
+      "pv_pressure_quadrature_estimate": 2.8135932603076705e-13,
+      "separation_over_S": 0.01
+    },
+    {
+      "bessel_pressure_tail_bound": 4.70276678612981e-95,
+      "cells": 128,
+      "finite_split_anisotropy_difference": 0.001765398991185081,
+      "nested_minus_cap_kernel": {
+        "imag": [
+          [
+            1.1780646007812533e-06,
+            -1.1286210990526027e-05
+          ],
+          [
+            -2.9345168542217794e-09,
+            -6.526751697175125e-06
+          ]
+        ],
+        "real": [
+          [
+            3.008453441896848e-07,
+            0.0005900851593970858
+          ],
+          [
+            0.0005475698594324086,
+            -7.982679137432075e-08
+          ]
+        ]
+      },
+      "nested_minus_cap_split_derivative": {
+        "imag": [
+          [
+            -0.0009408984871880988,
+            -0.047324030783947396
+          ],
+          [
+            1.6945205077848611e-07,
+            -0.005133124230193933
+          ]
+        ],
+        "real": [
+          [
+            0.00127761748409047,
+            -0.02649750108611245
+          ],
+          [
+            0.00896949787444094,
+            2.682372316181263e-05
+          ]
+        ]
+      },
+      "nominal_finite_split_pressure_Pa": 5.581356176535681e-45,
+      "polynomial_order": 24,
+      "proper_separation_m": 12.72473894657857,
+      "proper_separation_quadrature_estimate_m": 4.2381894482507974e-13,
+      "pv_pressure_quadrature_estimate": 3.0257440750859717e-13,
+      "separation_over_S": 0.01
+    }
+  ],
+  "compute": {
+    "BLAS_threads": 1,
+    "CPU_limit_seconds": 240.0,
+    "live_field_array_ceiling_bytes": 268435456,
+    "mode_workers": 8,
+    "process_CPU_seconds": 47.0,
+    "retained_full_arrays": false,
+    "wall_seconds": 42.478981099964585
+  },
+  "domain": {
+    "angular_sectors": [
+      1
+    ],
+    "central_mass": 0.0,
+    "detector_U_over_S": 0.8,
+    "detector_V_over_S": 0.7,
+    "detector_radius_over_ell": 0.5210778461599037,
+    "magnetic_degeneracy": 2,
+    "physical_radar_lapse": 1.012411733193235,
+    "physical_reference_length_m": 10000.0,
+    "root_radial_spectrum": "complete analytic covariance, no momentum cutoff",
+    "root_radius": 0.45,
+    "state": "same correlated product-cylinder parent and fixed auxiliary switch in both geometries",
+    "wall_clock_duration": 0.1256873632901346
+  },
+  "endpoint_evidence": [
+    {
+      "cells": 64,
+      "geometry": "nested",
+      "quadrature_estimate": 4.292840153602117e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0007633495674996032,
+          0.00026149760176132466
+        ],
+        [
+          0.007147121227743478,
+          0.004275095821588118
+        ]
+      ],
+      "response_sha256": "00b669f555ffd507f0a9608c09fb06f5ccaa7bad4a3ab41bb8f935a6f9c92493",
+      "separation_over_S": 0.02,
+      "side": 0
+    },
+    {
+      "cells": 64,
+      "geometry": "nested",
+      "quadrature_estimate": 4.435444528713878e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.000825563391674403,
+          0.00027083973811686335
+        ],
+        [
+          0.008034781689554958,
+          0.004177961533215297
+        ]
+      ],
+      "response_sha256": "d595ae2b499ddc22655bee54ec42938a4448db8defbc1e3c6da12fc2eb046f9b",
+      "separation_over_S": 0.02,
+      "side": 1
+    },
+    {
+      "cells": 64,
+      "geometry": "cap",
+      "quadrature_estimate": 4.049260743678456e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.000737347580847326,
+          0.00026149785753409345
+        ],
+        [
+          0.0065864646359230445,
+          0.004275079203668575
+        ]
+      ],
+      "response_sha256": "a708f419dd42c87417344522a56f476fc2f9b7e538a49c84ee4ce4cdc5b1a6bf",
+      "separation_over_S": 0.02,
+      "side": 0
+    },
+    {
+      "cells": 64,
+      "geometry": "cap",
+      "quadrature_estimate": 4.192930538562232e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0007981349236225671,
+          0.00027083992498853524
+        ],
+        [
+          0.007398236577746987,
+          0.004177946888115629
+        ]
+      ],
+      "response_sha256": "02458c7dbe22869c66ddca84875e3fed6243265d39d31ee5829d0a145771d52b",
+      "separation_over_S": 0.02,
+      "side": 1
+    },
+    {
+      "cells": 64,
+      "geometry": "nested",
+      "quadrature_estimate": 4.3279733554721293e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0007783004923400563,
+          0.000264277170968161
+        ],
+        [
+          0.007345683722433062,
+          0.004264788988654524
+        ]
+      ],
+      "response_sha256": "44698856f6452773efc4cf9879750935b1c20f87118cf565fd24c83506ac5de1",
+      "separation_over_S": 0.01,
+      "side": 0
+    },
+    {
+      "cells": 64,
+      "geometry": "nested",
+      "quadrature_estimate": 4.399098161155177e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0008094563546078451,
+          0.0002691445107720133
+        ],
+        [
+          0.0077957323980558406,
+          0.004218372317119909
+        ]
+      ],
+      "response_sha256": "60d2dbec28b023d9e7dcc83d6fb6f6e204c4477d754b89a4343deaad63d695f2",
+      "separation_over_S": 0.01,
+      "side": 1
+    },
+    {
+      "cells": 64,
+      "geometry": "cap",
+      "quadrature_estimate": 4.084565261038429e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.000751923289449707,
+          0.00026427740727316223
+        ],
+        [
+          0.006776468758833712,
+          0.004264773054658759
+        ]
+      ],
+      "response_sha256": "2a32f2b336f8f2e4e8516d78f16c9c3766640d6ff444301035890d931ec394a9",
+      "separation_over_S": 0.01,
+      "side": 0
+    },
+    {
+      "cells": 64,
+      "geometry": "cap",
+      "quadrature_estimate": 4.1563473594458253e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0007823564552912328,
+          0.0002691447130004116
+        ],
+        [
+          0.007182284960018489,
+          0.004218357366620043
+        ]
+      ],
+      "response_sha256": "381d62c5ea13f38fb4eb369983ac2b5b6c663f6fa5d643b03e42268dd5e751bc",
+      "separation_over_S": 0.01,
+      "side": 1
+    },
+    {
+      "cells": 128,
+      "geometry": "nested",
+      "quadrature_estimate": 4.292840153602117e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0008211054790253385,
+          0.0002795715820797556
+        ],
+        [
+          0.007686651051471178,
+          0.004562791045101434
+        ]
+      ],
+      "response_sha256": "e4811b9804ca86e939fd016d71b5336894a5f8751774d949015c10d484300182",
+      "separation_over_S": 0.02,
+      "side": 0
+    },
+    {
+      "cells": 128,
+      "geometry": "nested",
+      "quadrature_estimate": 4.435444528713878e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0008900023016480697,
+          0.00028900825467741636
+        ],
+        [
+          0.008664669901572952,
+          0.004450929960781564
+        ]
+      ],
+      "response_sha256": "66e78ec9ccbc154818d197446cff8401f3c19e6f1997c911ce38b8c9d141c9e5",
+      "separation_over_S": 0.02,
+      "side": 1
+    },
+    {
+      "cells": 128,
+      "geometry": "cap",
+      "quadrature_estimate": 4.049260743678456e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0007931305628970937,
+          0.00027957185529531704
+        ],
+        [
+          0.007084337472077449,
+          0.004562773093223629
+        ]
+      ],
+      "response_sha256": "f5da23ebdaed7b790f6ff661a486525bc9a5acbed779e5237ca7119eb0248539",
+      "separation_over_S": 0.02,
+      "side": 0
+    },
+    {
+      "cells": 128,
+      "geometry": "cap",
+      "quadrature_estimate": 4.192930538562232e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0008604474375294809,
+          0.0002890084586125742
+        ],
+        [
+          0.00797782616828854,
+          0.004450914123650398
+        ]
+      ],
+      "response_sha256": "340fd61dbc0b077e31800584d9ab7660b05c2eb0130c430793e9635847862a98",
+      "separation_over_S": 0.02,
+      "side": 1
+    },
+    {
+      "cells": 128,
+      "geometry": "nested",
+      "quadrature_estimate": 4.3279733554721293e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0008373329792389366,
+          0.00028239228554242213
+        ],
+        [
+          0.007902996555660832,
+          0.004548121740292172
+        ]
+      ],
+      "response_sha256": "b16252d4ff18a907152357bca5345e5937580f1c9eec310c8cfc699e1d7f9d0f",
+      "separation_over_S": 0.01,
+      "side": 0
+    },
+    {
+      "cells": 128,
+      "geometry": "nested",
+      "quadrature_estimate": 4.399098161155177e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0008720705607630677,
+          0.0002872706945109501
+        ],
+        [
+          0.008399622432733104,
+          0.004493673067999361
+        ]
+      ],
+      "response_sha256": "858a9b83a4cd375cc5ca12a185343f97b91a3e706847697c98eb429559c85523",
+      "separation_over_S": 0.01,
+      "side": 1
+    },
+    {
+      "cells": 128,
+      "geometry": "cap",
+      "quadrature_estimate": 4.084565261038429e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0008089530238122006,
+          0.00028239253961498135
+        ],
+        [
+          0.007290348272703171,
+          0.0045481044939447
+        ]
+      ],
+      "response_sha256": "ee031cc48d94c0832307ef4c76a25f628d15b80cc492ca3df4eb209005e9f09b",
+      "separation_over_S": 0.01,
+      "side": 0
+    },
+    {
+      "cells": 128,
+      "geometry": "cap",
+      "quadrature_estimate": 4.1563473594458253e-14,
+      "reconstruction_projection_residual": [
+        [
+          0.0008428837547668228,
+          0.0002872709132303029
+        ],
+        [
+          0.007739220720830974,
+          0.00449365687078351
+        ]
+      ],
+      "response_sha256": "53fefddff32bd7c60613bbb4ccfc738df9dc69a02f379960d5ee06d74d1c76f1",
+      "separation_over_S": 0.01,
+      "side": 1
+    }
+  ],
+  "limits": [
+    "One signed angular sector only; the angular tail is not computed.",
+    "Finite nonzero split in the declared canonical radar frame; no coincident renormalized stress.",
+    "The pressure-shaped bilocal statistic is not full Psi/Phi or its compact-source derivative.",
+    "Grid, polynomial and separation spreads are diagnostics, not certified continuum error bounds.",
+    "Bessel tail and PV estimates exclude field representation and floating arithmetic.",
+    "The physical formation of the supplied preparation remains open; no P001 grid ran."
+  ],
+  "method_commit": "dbbfba7c0196fc537883f3c1ac799726e8cfe835",
+  "numerical_spreads": {
+    "grid_spread": {
+      "12:0.01": 1.9296058218281568e-06,
+      "12:0.02": 1.4062983383555591e-06,
+      "24:0.01": 2.058953583878426e-05,
+      "24:0.02": 1.89653586618742e-05
+    },
+    "polynomial_spread": {
+      "128:0.01": 0.000144339544324497,
+      "128:0.02": 0.00016440870037262752,
+      "64:0.01": 0.00012567961430754089,
+      "64:0.02": 0.00014684964004910888
+    },
+    "separation_spread": {
+      "128:12": 9.734922923764237e-05,
+      "128:24": 7.728007318951184e-05,
+      "64:12": 9.682592175416977e-05,
+      "64:24": 7.565589601260178e-05
+    }
+  },
+  "schema": "nsc-atlas-dirac-full-root-finite-split-v1",
+  "sources_sha256": {
+    "scripts/measure_nsc_atlas_dirac_root_response.py": "cd3962004738b37fd9453562f05b54004dc1ba1d1fd714e14f87f2128b9d36bb",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "74c57ac1910824168a065b5ade0a09db1fb23693911bb793f5748c002c868b80",
+    "src/recursive_horizons/nsc_atlas_dirac_mean.py": "d0a801baf4f17298fc8d3f763d5c8b2711521454a9bb4c6ffa968354c0bd326f",
+    "src/recursive_horizons/nsc_atlas_dirac_preparation.py": "abc94e614a6813e76fd2ce9cf8bbc37566eaf215a2aa99f06be97e09728807b2",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "src/recursive_horizons/nsc_atlas_dirac_retarded.py": "0b3c1b2b5b2fedc0b7d721ba16ef73d4a7ef5b1bc8f4c7558fc0a76fdb587f12",
+    "src/recursive_horizons/nsc_atlas_dirac_root_pairing.py": "a0e54856720955475fb8eccf1156caa0dc24c431e3ff8dda9ceba48badb730fb",
+    "src/recursive_horizons/nsc_atlas_dirac_scattering.py": "0472fc3005c33668020e724a949db0579b4ea7ed9fcb4cb5802e7c0f05a83520",
+    "tests/test_nsc_atlas_dirac_retarded.py": "51f39c423456d5dd714989c38a005640031884e7f50ad6b939bf7e5c47f610bf",
+    "tests/test_nsc_atlas_dirac_root_pairing.py": "0eb1488c8ea29febaa8945071e1125987e72924a510af6b4d7706fdd5bd4386d"
+  },
+  "status": "finite_split_reference_only",
+  "stopped_reason": null
+}

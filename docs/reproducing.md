@@ -17,6 +17,12 @@ the angular sum or full Psi/Phi is supplied. Control development used
 46.84375 process-CPU seconds; the owner specifies the physical run's
 separate budget and stopping conditions.
 
+The [frozen v1 full-root result](../results/summaries/nsc-atlas-dirac-root-response-v1.json)
+uses method `dbbfba7`: 47 CPU seconds, 42.47898 wall seconds and 22899
+retained bytes. It supplies a finite-split first-sector vacuum difference,
+with polynomial and separation effects larger than the field-grid spread.
+No extra quadrature or finer P001 grid is needed for that diagnosis.
+
 The [complete root-covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 has four controls against the exact cylinder vacuum kernel and its spatial
 derivative, including its one-sided endpoint and Hilbert terms:

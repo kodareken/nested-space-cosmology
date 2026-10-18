@@ -2877,3 +2877,54 @@ representation. Persistent separation dependence keeps the observable
 bilocal. Budget exhaustion saves a diagnosed partial result before any
 new calculation is considered. These checks do not supply the uncomputed
 angular tail or turn numerical spreads into a continuum error certificate.
+
+### Evaluated full-radial finite-split reference
+
+The [v1 summary](../results/summaries/nsc-atlas-dirac-root-response-v1.json),
+frozen at method `dbbfba7`, completes this admitted comparison. It uses the
+same complete correlated root covariance in both geometries, without a
+root-momentum cutoff or finite occupation minimizer. The physical detector
+has r=.5210778462 ell and radar lapse a=1.0124117332. For kappa=+1 only,
+with degeneracy 2, the reported symmetrized canonical bilocal is
+
+\[
+\Delta\mathcal P_1(\eta)=
+\frac{2}{4\pi a^2r^2}\operatorname{Re}[-i\operatorname{tr}(\sigma_3\partial_\eta\Delta K)]
+-\frac{2}{8\pi a r^3}\operatorname{Re}[\operatorname{tr}(\sigma_1\Delta K)].
+\]
+
+Here a and r are the common physical midpoint metric, not the auxiliary
+preparation metric. The real part gives the symmetric eta/-eta insertion
+in the fixed canonical radar frame. Its pressure units are hbar*c/ell^4.
+It becomes the local pressure difference only if its relative coincidence
+limit is controlled; that limit is not taken in this reference.
+
+| Field cells | Polynomial order | eta/S=.02, proper split 25.449495 m | eta/S=.01, proper split 12.724739 m |
+|---|---|---|---|
+| 64 | 12 | .002008494063 | .001911668141 |
+| 64 | 24 | .001861644423 | .001785988527 |
+| 128 | 12 | .002007087765 | .001909738536 |
+| 128 | 24 | .001842679064 | .001765398991 |
+
+Distances use the supplied ell=10 km. The last value corresponds to
+5.58135618e-45 Pa. At this setting the grid spread is 2.05895358e-5
+(1.17%), polynomial spread 1.44339544e-4 (8.18%) and separation spread
+7.72800732e-5 (4.38%). These are separate numerical indicators, not a
+combined error bar or an observational confidence interval. The PV
+quadrature estimate is below 3.1e-13 in pressure units; representation and
+separation effects dominate, so further quadrature refinement is unnecessary.
+
+The run uses 47 process-CPU seconds and 42.47898 wall seconds, retaining
+22899 bytes of observables, diagnostics and hashes. Eight GIL-free field
+columns are used, but serial covariance quadrature dominates overall
+throughput. A later multi-sector calculation should parallelize independent
+cases with one field worker per process, rather than nest two eight-way
+pools. No large field arrays are retained.
+
+All admitted settings give a positive finite-split change for the first
+signed angular sector under the declared preparation. This does not establish the
+angular sum, the local vacuum stress, the compact-source response or full
+Psi/Phi. The next error to resolve is polynomial representation, using the
+same fixed field grid before considering any finer grid; the angular
+series and source derivative remain necessary for the requested slip.
+P001 remains unconverged and no new P001 evolution ran.

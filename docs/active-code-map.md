@@ -15,6 +15,9 @@ causal endpoint values. Its [continuum cylinder control](../tests/test_nsc_atlas
 passes at both polynomial orders. The [finite-split producer](../scripts/measure_nsc_atlas_dirac_root_response.py)
 compares the declared vacuum state on the actual two geometries; angular
 completion and the relative coincidence limit remain separate.
+The [first evaluated reference](nsc-atlas-dirac-probe.md#evaluated-full-radial-finite-split-reference)
+retains the full radial covariance and a nonzero first-sector bilocal;
+polynomial and separation variations remain the leading numerical issues.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).
