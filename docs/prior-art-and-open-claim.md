@@ -1,5 +1,38 @@
 # Prior art and admission of new research
 
+## P001 active-region resolution and the actual cap--wall Dirac operator
+
+Douglas's current priority is the increasing P001 mass gap and a slip
+calculation on the actual nested geometry. Read the three completed v4
+receipts and their authenticated comparison; take no evolution steps and
+introduce no new grids. Locate the retained incoming front from its original
+quiet onset, history-clock offset and saved central times. Compare it with
+the actual cap knots, clipped outer-cell widths and strong/weak/time terms.
+Separate common-cut and integrated changes from the sampling of a maximum.
+Controls and the one read-only application share 60 process-CPU seconds;
+store a compact summary, without coefficient arrays or another trajectory.
+An incorrect clock origin, a mistaken identification of background support
+with departure support, or attributing an unstored maximum to a unique cause
+are the anticipated failures. An independently reconstructed front or cell
+partition disagreeing with this account would falsify that diagnosis.
+
+For the slip, keep the original de Sitter-cap/material-wall/Schwarzschild
+geometry distinct from the periodic Einstein/Weyl/Dirac model. Derive the
+massless probe Dirac operator in the cap and the transparent interface
+domain, declaring this probe as an extension of the classical scalar model.
+Compare the same cap continued smoothly with the actual signed material
+interface. Calculate only geometry-fixed bulk/interface inputs until a
+Dirac state, exterior response and metric-source/observer protocol specify
+the gravitational polarization. A flat-space kernel substituted into curved
+invariants is not this calculation. Independent tetrad/rescaling, normal
+orientation and zero-wall/flat limits share 60 process-CPU seconds; one
+algebraic reference application has the same budget and a compact summary.
+Wrong spin-connection factors, an invalid static exterior frame inside the
+horizon, or mistaking an operator coefficient for a gravitational slip are
+the anticipated failures. A direct covariant Dirac calculation disagreeing
+with the reduced operator would reject this connection. The earlier flat
+ratio remains a reference result; a nested ratio is not assumed.
+
 ## Causal resolution of the already evolving conformal geometry
 
 **Prepared, not executed.** Douglas redirected the work to the actual

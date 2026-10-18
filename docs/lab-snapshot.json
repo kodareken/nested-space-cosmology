@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4d9a4edadbcf796fe14a4e051f058518eb2499b1",
+  "current_receipt_commit_parent": "ac5a553796be65ee9b5233652443bb6a0f9acb2d",
   "files": [
     {
       "bytes": 3120,
@@ -11458,12 +11458,12 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 531735,
+      "bytes": 533945,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "4d9a4edadbcf796fe14a4e051f058518eb2499b1",
+      "changed_from_commit": "ac5a553796be65ee9b5233652443bb6a0f9acb2d",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e1acb95517dbf51b7573a6f694e16cea1ca2a0e73b718b2c3ea5dcc7e95c4121"
+      "sha256": "2a7543e36f9010d290b68686841a0da57a1ae95a46f1617334e4dbaa014815a9"
     },
     {
       "bytes": 6705,
@@ -32939,6 +32939,14 @@
       "sha256": "cc754cea94de88d1e60870518964a5c31d755714ae3c0e60189ca34c64387c2a"
     },
     {
+      "bytes": 7950,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "ac5a553796be65ee9b5233652443bb6a0f9acb2d",
+      "path": "scripts/diagnose_nsc_atlas_endpoint_resolution.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "eed8c152e6c13d2b38a84a27c7f1ebbd692ce541e313b67925b87509dc9bc4e4"
+    },
+    {
       "bytes": 4707,
       "import_bytes": 4847,
       "import_sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c",
@@ -32948,6 +32956,14 @@
       "original_sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c",
       "path": "scripts/map_nsc_adm_neck_source.py",
       "sha256": "7ba9e010e29770dd04252ee12c9546d39d86b57a21774729733877847b934d5b"
+    },
+    {
+      "bytes": 2311,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "ac5a553796be65ee9b5233652443bb6a0f9acb2d",
+      "path": "scripts/measure_nsc_atlas_dirac_probe.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "14da813428712dc181ca14629826d12e06a37ad4df8483f1a65b86c09402e4bf"
     },
     {
       "bytes": 7816,
@@ -33728,6 +33744,14 @@
       "path": "src/recursive_horizons/nsc_atlas_coupled_tube_bound.py",
       "retention_reason": "Conditional coupled continuum bound, its independent controls and bounded reproduction.",
       "sha256": "8e3bfacdce7cce29ea2443f90ec106b4d41dfd8662c56aad0a5e38adfe320496"
+    },
+    {
+      "bytes": 4781,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "ac5a553796be65ee9b5233652443bb6a0f9acb2d",
+      "path": "src/recursive_horizons/nsc_atlas_dirac_probe.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "7bc14ce7184e67e914fe7843d6ce88a7e8971c2abd41cd4d92adebebf7aa2277"
     },
     {
       "bytes": 24043,
@@ -37194,6 +37218,14 @@
       "sha256": "a0ab9c2ccaed5c487f3672707069f8cd00972ac8dea8401dadcb6e1766a1ec1f"
     },
     {
+      "bytes": 2068,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "ac5a553796be65ee9b5233652443bb6a0f9acb2d",
+      "path": "tests/test_diagnose_nsc_atlas_endpoint_resolution.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "1213225194466b3bf84796bc42d6514075c2544bb25d7034a581ccae486f3df5"
+    },
+    {
       "bytes": 49204,
       "import_bytes": 45809,
       "import_sha256": "e628fede5c1415c3077d7447c5f60335f745e67350c1b5717fb4e438247d8623",
@@ -37608,6 +37640,14 @@
       "path": "tests/test_nsc_atlas_derivative_closure.py",
       "retention_reason": "Conditional coupled continuum bound and derivative closure with independent controls.",
       "sha256": "64ee9f580218686d5a7dd7cd00b81dbb0fb3a891c21d954d50a9cef5e187b856"
+    },
+    {
+      "bytes": 3208,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "ac5a553796be65ee9b5233652443bb6a0f9acb2d",
+      "path": "tests/test_nsc_atlas_dirac_probe.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "349d9f5b890881f64d0ca30a9a0249f741b5c6704f8a7c9b3b34bf5d35a902ce"
     },
     {
       "bytes": 8977,
