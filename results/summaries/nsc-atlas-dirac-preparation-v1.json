@@ -1,0 +1,1306 @@
+{
+  "cases": [
+    {
+      "angular_k": -1,
+      "cells": 64,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.0554467029657413e-15,
+      "geometry": "cap",
+      "parent_mass": 0.39999999999999997,
+      "receiver_radius": 0.5210778461599036,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.01031718659554018,
+          "covariance_purity_defect": 5.092802977044772e-16,
+          "eigenvalues": [
+            -27.47557615558933,
+            -25.75621632048972,
+            25.756216320489717,
+            27.47557615558933
+          ],
+          "gram_condition": 1.0000000281823056,
+          "gram_discrepancy": 2.9216061570025428e-08,
+          "matrix_sha256": {
+            "covariance": "6e9239b0cd252d976ee4a71a264880e6a3749981b67ae942affb8ec8cbc44db3",
+            "generator": "672cbfb74fc3dae317673dcf5aa0c5a664671d365e275f8b9e7c3c665092afe5"
+          },
+          "minimum_energy": -53.23179247607906,
+          "pressure_anisotropy": -240.50479291233768,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374222463848185,
+          "spectral_gap": 25.756216320489717
+        },
+        {
+          "covariance_cross_leg_norm": 0.019318213303128787,
+          "covariance_purity_defect": 1.4362423386862656e-15,
+          "eigenvalues": [
+            -58.96925902484252,
+            -58.75436232327157,
+            -18.196071919918896,
+            -16.432800018686596,
+            16.43280001868658,
+            18.196071919918893,
+            58.75436232327157,
+            58.96925902484252
+          ],
+          "gram_condition": 1.000002226856937,
+          "gram_discrepancy": 2.0359485722602753e-06,
+          "matrix_sha256": {
+            "covariance": "0ff5ff4380dee1e9edbd5f783506ace4ff3593ed8f209848173facc109ff6b44",
+            "generator": "6027d5aca3d8244f792af6561d0ce358189e634b8f4cd8ae2f85679880c90be3"
+          },
+          "minimum_energy": -152.35249328671972,
+          "pressure_anisotropy": -1214.2329688882783,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.27866722917043574,
+          "spectral_gap": 16.43280001868658
+        }
+      ]
+    },
+    {
+      "angular_k": 1,
+      "cells": 64,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.0554467029657413e-15,
+      "geometry": "cap",
+      "parent_mass": 0.39999999999999997,
+      "receiver_radius": 0.5210778461599036,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.01031718659554018,
+          "covariance_purity_defect": 5.092802977044772e-16,
+          "eigenvalues": [
+            -27.47557615558933,
+            -25.75621632048972,
+            25.756216320489717,
+            27.47557615558933
+          ],
+          "gram_condition": 1.0000000281823056,
+          "gram_discrepancy": 2.9216061570025428e-08,
+          "matrix_sha256": {
+            "covariance": "a4e4fcf21e53fabddbcc376407740760519af5e53482b64d56fe78e38a193a0a",
+            "generator": "1f1962ef5b2ea1ab64dda922c9dddf3e1254353c3c683568693e5a3aeb4933e1"
+          },
+          "minimum_energy": -53.23179247607906,
+          "pressure_anisotropy": -240.50479291233768,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374222463848185,
+          "spectral_gap": 25.756216320489717
+        },
+        {
+          "covariance_cross_leg_norm": 0.019318213303128787,
+          "covariance_purity_defect": 1.4362423386862656e-15,
+          "eigenvalues": [
+            -58.96925902484252,
+            -58.75436232327157,
+            -18.196071919918896,
+            -16.432800018686596,
+            16.43280001868658,
+            18.196071919918893,
+            58.75436232327157,
+            58.96925902484252
+          ],
+          "gram_condition": 1.000002226856937,
+          "gram_discrepancy": 2.0359485722602753e-06,
+          "matrix_sha256": {
+            "covariance": "8a70b624b9b2e5a51fc02f4a23c8a202740ca6c21f55d706d167e487058700dc",
+            "generator": "b7a2cedb595ed19f748ed51c4022628b3ce2dd81a257d9cfaf399455362f383c"
+          },
+          "minimum_energy": -152.35249328671972,
+          "pressure_anisotropy": -1214.2329688882783,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.27866722917043574,
+          "spectral_gap": 16.43280001868658
+        }
+      ]
+    },
+    {
+      "angular_k": -1,
+      "cells": 64,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.1680771575605932e-15,
+      "geometry": "nested",
+      "parent_mass": 0.39999999999999997,
+      "receiver_radius": 0.5210778461599036,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010289343158115232,
+          "covariance_purity_defect": 1.6599621728747666e-16,
+          "eigenvalues": [
+            -27.47478410391808,
+            -25.756617245209096,
+            25.756617245209085,
+            27.474784103918072
+          ],
+          "gram_condition": 1.0000000281823056,
+          "gram_discrepancy": 2.9216061570025428e-08,
+          "matrix_sha256": {
+            "covariance": "85949d4b60846f73e3f97f1ec3fc13c6fdea08b71ec8603d56f2f393ae41b9f0",
+            "generator": "d4707fe9bd1e5934ca49ef16a07a3993c6f15261e9322dd356b5da68aed4e849"
+          },
+          "minimum_energy": -53.23140134912718,
+          "pressure_anisotropy": -240.50515405021108,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.937463863147737,
+          "spectral_gap": 25.756617245209085
+        },
+        {
+          "covariance_cross_leg_norm": 0.019259276397581213,
+          "covariance_purity_defect": 1.4275442360054452e-15,
+          "eigenvalues": [
+            -58.971048875154516,
+            -58.75247965271515,
+            -18.193805478272246,
+            -16.434820341741734,
+            16.43482034174173,
+            18.19380547827223,
+            58.75247965271516,
+            58.971048875154516
+          ],
+          "gram_condition": 1.000002226856937,
+          "gram_discrepancy": 2.0359485722602753e-06,
+          "matrix_sha256": {
+            "covariance": "4c4249bbeb2ebb9214239924da48a35293861b15016d81514d31df8ecf101ad8",
+            "generator": "07db9e959990c376be4aa83c77020438b80e71a6c1b05f516275a59973a6d434"
+          },
+          "minimum_energy": -152.35215434788358,
+          "pressure_anisotropy": -1214.2395274767503,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786930308215357,
+          "spectral_gap": 16.43482034174173
+        }
+      ]
+    },
+    {
+      "angular_k": 1,
+      "cells": 64,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.1680771575605932e-15,
+      "geometry": "nested",
+      "parent_mass": 0.39999999999999997,
+      "receiver_radius": 0.5210778461599036,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.01028934315811519,
+          "covariance_purity_defect": 6.735649775565565e-16,
+          "eigenvalues": [
+            -27.47478410391808,
+            -25.756617245209096,
+            25.756617245209085,
+            27.474784103918072
+          ],
+          "gram_condition": 1.0000000281823056,
+          "gram_discrepancy": 2.9216061570025428e-08,
+          "matrix_sha256": {
+            "covariance": "db12c30e951186cf1c59d6c8f2aea1c2e75a6dbafe4686eb1f4ea62ce365580f",
+            "generator": "a03abf4aec0036af949d4bed378e26f33a97e4e54d87ffcd805c18c7d8b4f3d1"
+          },
+          "minimum_energy": -53.2314013491272,
+          "pressure_anisotropy": -240.50515405021116,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374638631477368,
+          "spectral_gap": 25.756617245209085
+        },
+        {
+          "covariance_cross_leg_norm": 0.019259276397581213,
+          "covariance_purity_defect": 1.4275442360054452e-15,
+          "eigenvalues": [
+            -58.971048875154516,
+            -58.75247965271515,
+            -18.193805478272246,
+            -16.434820341741734,
+            16.43482034174173,
+            18.19380547827223,
+            58.75247965271516,
+            58.971048875154516
+          ],
+          "gram_condition": 1.000002226856937,
+          "gram_discrepancy": 2.0359485722602753e-06,
+          "matrix_sha256": {
+            "covariance": "875af680f010a8c3eee0bcbcd8cc0ed651e00461a4d3ba88251605643ab98343",
+            "generator": "b2fbd4ceeffe78131a96606ba65ec79c15235df9570529130dbfeed33db6509f"
+          },
+          "minimum_energy": -152.35215434788358,
+          "pressure_anisotropy": -1214.2395274767503,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786930308215357,
+          "spectral_gap": 16.43482034174173
+        }
+      ]
+    },
+    {
+      "angular_k": -1,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.1784304179396677e-15,
+      "geometry": "cap",
+      "parent_mass": 0.4000320790839633,
+      "receiver_radius": 0.5210822567154301,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010317099310135894,
+          "covariance_purity_defect": 1.817999471551902e-16,
+          "eigenvalues": [
+            -27.4755689494609,
+            -25.75622188025424,
+            25.756221880254234,
+            27.475568949460897
+          ],
+          "gram_condition": 1.0000000281823056,
+          "gram_discrepancy": 2.9216061570025428e-08,
+          "matrix_sha256": {
+            "covariance": "415ba66a5f8b5448f01a2f5642cc823602b031197c06d4c60cb143bd29acf80b",
+            "generator": "a79119f8cbb588547ec3ffa8c75cb008266e19c4359f352e3753cf4a1f6299db"
+          },
+          "minimum_energy": -53.23179082971512,
+          "pressure_anisotropy": -240.50231278966234,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374226945993631,
+          "spectral_gap": 25.756221880254234
+        },
+        {
+          "covariance_cross_leg_norm": 0.01931803116604498,
+          "covariance_purity_defect": 1.1318879115386672e-15,
+          "eigenvalues": [
+            -58.96925867731439,
+            -58.75436155624614,
+            -18.196063732220075,
+            -16.432807683298662,
+            16.432807683298673,
+            18.19606373222009,
+            58.75436155624614,
+            58.96925867731439
+          ],
+          "gram_condition": 1.000002226856937,
+          "gram_discrepancy": 2.0359485722602753e-06,
+          "matrix_sha256": {
+            "covariance": "5d3014ec8909a5cf096e2a30ec0de008063de3d2e6ab94201ba3654814be2c58",
+            "generator": "6e0733e7e7cd8d34be8adc4d878229d67848ae960673fe142e2a3ac23e141a83"
+          },
+          "minimum_energy": -152.35249164907918,
+          "pressure_anisotropy": -1214.2204291382482,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786673607891291,
+          "spectral_gap": 16.432807683298662
+        }
+      ]
+    },
+    {
+      "angular_k": 1,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.1784304179396677e-15,
+      "geometry": "cap",
+      "parent_mass": 0.4000320790839633,
+      "receiver_radius": 0.5210822567154301,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010317099310135894,
+          "covariance_purity_defect": 1.817999471551902e-16,
+          "eigenvalues": [
+            -27.4755689494609,
+            -25.75622188025424,
+            25.756221880254234,
+            27.475568949460897
+          ],
+          "gram_condition": 1.0000000281823056,
+          "gram_discrepancy": 2.9216061570025428e-08,
+          "matrix_sha256": {
+            "covariance": "e1ad0eec5bb1435b09b10266e81a01bd8a4c88efd2bd188b154ae90d1aaba595",
+            "generator": "cba799b4bc4559134879e2f0b525f6c34c82b3323b2cb78aa2a92d2beb7eda50"
+          },
+          "minimum_energy": -53.23179082971512,
+          "pressure_anisotropy": -240.50231278966234,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374226945993632,
+          "spectral_gap": 25.756221880254234
+        },
+        {
+          "covariance_cross_leg_norm": 0.01931803116604498,
+          "covariance_purity_defect": 1.1318879115386672e-15,
+          "eigenvalues": [
+            -58.96925867731439,
+            -58.75436155624614,
+            -18.196063732220075,
+            -16.432807683298662,
+            16.432807683298673,
+            18.19606373222009,
+            58.75436155624614,
+            58.96925867731439
+          ],
+          "gram_condition": 1.000002226856937,
+          "gram_discrepancy": 2.0359485722602753e-06,
+          "matrix_sha256": {
+            "covariance": "bb9a2d67793e006f3dc96b495dbd3111496ea6394c752fd971e4bf21cfc18146",
+            "generator": "c146bf902bac210bee9827e39ba24a5182f727a4580976a15fc1c7897fb63155"
+          },
+          "minimum_energy": -152.35249164907918,
+          "pressure_anisotropy": -1214.2204291382482,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786673607891291,
+          "spectral_gap": 16.432807683298662
+        }
+      ]
+    },
+    {
+      "angular_k": -1,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 6.024354857386686e-16,
+      "geometry": "nested",
+      "parent_mass": 0.4000320790839633,
+      "receiver_radius": 0.5210822567154301,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010289259771446412,
+          "covariance_purity_defect": 4.47618288788631e-16,
+          "eigenvalues": [
+            -27.47477698400968,
+            -25.75662276952313,
+            25.756622769523144,
+            27.474776984009694
+          ],
+          "gram_condition": 1.0000000281823056,
+          "gram_discrepancy": 2.9216061570025428e-08,
+          "matrix_sha256": {
+            "covariance": "a14aa43b0dd2b2b0d574b4b292ea5fc62f18e7a914551f540bcb5f8f393a67b3",
+            "generator": "378fe18e7dbd50fdf2d1b8d1d621cc4dc0b4a5dd9069a839fb63b9c1700975e2"
+          },
+          "minimum_energy": -53.23139975353283,
+          "pressure_anisotropy": -240.50267385453475,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374643071539208,
+          "spectral_gap": 25.75662276952313
+        },
+        {
+          "covariance_cross_leg_norm": 0.019259101498820923,
+          "covariance_purity_defect": 6.389107547912027e-16,
+          "eigenvalues": [
+            -58.97104832739229,
+            -58.75247909357281,
+            -18.193797584912442,
+            -16.43482775088057,
+            16.43482775088057,
+            18.19379758491244,
+            58.752479093572816,
+            58.97104832739228
+          ],
+          "gram_condition": 1.000002226856937,
+          "gram_discrepancy": 2.0359485722602753e-06,
+          "matrix_sha256": {
+            "covariance": "9aa38082624d12f1d81f0e746581cab9dd9c373479c17f7480aaf8f94f982b24",
+            "generator": "3d654284300966b0319c1c9721692c734772e284cd99287dd85a5a6b2eb59dfd"
+          },
+          "minimum_energy": -152.35215275675807,
+          "pressure_anisotropy": -1214.2269867652826,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786931590504985,
+          "spectral_gap": 16.43482775088057
+        }
+      ]
+    },
+    {
+      "angular_k": 1,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 6.024354857386686e-16,
+      "geometry": "nested",
+      "parent_mass": 0.4000320790839633,
+      "receiver_radius": 0.5210822567154301,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010289259771446412,
+          "covariance_purity_defect": 4.47618288788631e-16,
+          "eigenvalues": [
+            -27.47477698400968,
+            -25.75662276952313,
+            25.756622769523144,
+            27.474776984009694
+          ],
+          "gram_condition": 1.0000000281823056,
+          "gram_discrepancy": 2.9216061570025428e-08,
+          "matrix_sha256": {
+            "covariance": "7d8e1fb020e853d27fcfa45047de4460618cc52ec47b94b0a1b730b2403d7c97",
+            "generator": "f1ee367bb13e76c84bc625b971b56b59c2f7528e5329c344d583206346c76890"
+          },
+          "minimum_energy": -53.23139975353283,
+          "pressure_anisotropy": -240.50267385453475,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374643071539208,
+          "spectral_gap": 25.75662276952313
+        },
+        {
+          "covariance_cross_leg_norm": 0.019259101498820923,
+          "covariance_purity_defect": 6.389107547912027e-16,
+          "eigenvalues": [
+            -58.97104832739229,
+            -58.75247909357281,
+            -18.193797584912442,
+            -16.43482775088057,
+            16.43482775088057,
+            18.19379758491244,
+            58.752479093572816,
+            58.97104832739228
+          ],
+          "gram_condition": 1.000002226856937,
+          "gram_discrepancy": 2.0359485722602753e-06,
+          "matrix_sha256": {
+            "covariance": "b8c2aff6d5b5259c81ea924244ab06fbc2fe77db488fc0392e37c96b6480ae1b",
+            "generator": "42aa910c1c97ad272075e50aff6b7a4486899edaa10220a2b5ba52321661f310"
+          },
+          "minimum_energy": -152.35215275675807,
+          "pressure_anisotropy": -1214.2269867652826,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786931590504985,
+          "spectral_gap": 16.43482775088057
+        }
+      ]
+    },
+    {
+      "angular_k": -1,
+      "cells": 128,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 7.099801166207842e-16,
+      "geometry": "cap",
+      "parent_mass": 0.39999999999999997,
+      "receiver_radius": 0.5210778461599036,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010316989073664618,
+          "covariance_purity_defect": 4.806224936172966e-16,
+          "eigenvalues": [
+            -27.475654748230124,
+            -25.75615388852174,
+            25.756153888521734,
+            27.475654748230117
+          ],
+          "gram_condition": 1.0000000000493576,
+          "gram_discrepancy": 4.888878191168208e-11,
+          "matrix_sha256": {
+            "covariance": "210965a467bd69bc66b8d55615d4ad6ebde3ab72c5a595786cc4fc2f47159c5e",
+            "generator": "f5e16f68c1a14a4dd3be3044b4309ad09035985210ac179fcf7babbdfea9e554"
+          },
+          "minimum_energy": -53.231808636751865,
+          "pressure_anisotropy": -240.50323369624266,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374172926736477,
+          "spectral_gap": 25.756153888521734
+        },
+        {
+          "covariance_cross_leg_norm": 0.01931844799810383,
+          "covariance_purity_defect": 1.071787925824388e-15,
+          "eigenvalues": [
+            -58.96930907013421,
+            -58.75440740258115,
+            -18.1961939407711,
+            -16.432707720208647,
+            16.432707720208633,
+            18.196193940771085,
+            58.75440740258116,
+            58.969309070134216
+          ],
+          "gram_condition": 1.0000000373999307,
+          "gram_discrepancy": 3.736239647661405e-08,
+          "matrix_sha256": {
+            "covariance": "4694e4a92fc69217101a7dd4762e9be333f866339d4f52609cbd8e09432ddf7b",
+            "generator": "75f98fc9e1ec6e9d912d90620f86c4e2c5ac7ded3f440fa6f8b3ffc04f491ef5"
+          },
+          "minimum_energy": -152.35261813369522,
+          "pressure_anisotropy": -1214.259551520266,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.27866542747965134,
+          "spectral_gap": 16.432707720208633
+        }
+      ]
+    },
+    {
+      "angular_k": 1,
+      "cells": 128,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 7.099801166207842e-16,
+      "geometry": "cap",
+      "parent_mass": 0.39999999999999997,
+      "receiver_radius": 0.5210778461599036,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010316989073664618,
+          "covariance_purity_defect": 4.806224936172966e-16,
+          "eigenvalues": [
+            -27.475654748230124,
+            -25.75615388852174,
+            25.756153888521734,
+            27.475654748230117
+          ],
+          "gram_condition": 1.0000000000493576,
+          "gram_discrepancy": 4.888878191168208e-11,
+          "matrix_sha256": {
+            "covariance": "9b95bac8ccb528311400d125e85a4609e7d8e5acfe062c0ebb6b8ae653f94f92",
+            "generator": "3a823c515d17a0664321ad3b99635320f773baaf3f0decaae0380df50ad3dd25"
+          },
+          "minimum_energy": -53.231808636751865,
+          "pressure_anisotropy": -240.50323369624266,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374172926736477,
+          "spectral_gap": 25.756153888521734
+        },
+        {
+          "covariance_cross_leg_norm": 0.01931844799810383,
+          "covariance_purity_defect": 1.071787925824388e-15,
+          "eigenvalues": [
+            -58.96930907013421,
+            -58.75440740258115,
+            -18.1961939407711,
+            -16.432707720208647,
+            16.432707720208633,
+            18.196193940771085,
+            58.75440740258116,
+            58.969309070134216
+          ],
+          "gram_condition": 1.0000000373999307,
+          "gram_discrepancy": 3.736239647661405e-08,
+          "matrix_sha256": {
+            "covariance": "2843b1cc05fc5a50db6325f5edc4d2c3becd0cb3e8ad77d83d2fa7042b42b683",
+            "generator": "fce4b8918a42c90872afaf92794461c38bec536af0164baba81e262045638573"
+          },
+          "minimum_energy": -152.35261813369522,
+          "pressure_anisotropy": -1214.259551520266,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.27866542747965134,
+          "spectral_gap": 16.432707720208633
+        }
+      ]
+    },
+    {
+      "angular_k": -1,
+      "cells": 128,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.165712114485506e-15,
+      "geometry": "nested",
+      "parent_mass": 0.39999999999999997,
+      "receiver_radius": 0.5210778461599036,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010289148097046017,
+          "covariance_purity_defect": 1.309025577736178e-15,
+          "eigenvalues": [
+            -27.474862524579635,
+            -25.75655485892367,
+            25.756554858923675,
+            27.47486252457964
+          ],
+          "gram_condition": 1.0000000000493576,
+          "gram_discrepancy": 4.888878191168208e-11,
+          "matrix_sha256": {
+            "covariance": "371b2f8e33c08154de3c58b2a1ede359bd503f006a42233590e3b40722d4b17d",
+            "generator": "bbc0dbcf5cb395bbfa568dec84b4ebac8713cdc7e5757437ed7d32f3e604abf5"
+          },
+          "minimum_energy": -53.231417383503256,
+          "pressure_anisotropy": -240.50359543263286,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374589167054526,
+          "spectral_gap": 25.75655485892367
+        },
+        {
+          "covariance_cross_leg_norm": 0.019259511575150327,
+          "covariance_purity_defect": 1.4738880470260572e-15,
+          "eigenvalues": [
+            -58.971099062357936,
+            -58.752524371135976,
+            -18.193927016067512,
+            -16.434728408046634,
+            16.434728408046634,
+            18.193927016067516,
+            58.75252437113598,
+            58.971099062357936
+          ],
+          "gram_condition": 1.0000000373999307,
+          "gram_discrepancy": 3.736239647661405e-08,
+          "matrix_sha256": {
+            "covariance": "a7c82e9c3cfb96bfe9a15eae7994cae7d36db915d04891001eb32815febaa028",
+            "generator": "15cc13e8ac094765771f23a4658c499208cd6be8426c05e52f91cdfb1d04b3cd"
+          },
+          "minimum_energy": -152.35227885760787,
+          "pressure_anisotropy": -1214.2660999236014,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786912346786692,
+          "spectral_gap": 16.434728408046634
+        }
+      ]
+    },
+    {
+      "angular_k": 1,
+      "cells": 128,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.165712114485506e-15,
+      "geometry": "nested",
+      "parent_mass": 0.39999999999999997,
+      "receiver_radius": 0.5210778461599036,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010289148097046017,
+          "covariance_purity_defect": 1.309025577736178e-15,
+          "eigenvalues": [
+            -27.474862524579635,
+            -25.75655485892367,
+            25.756554858923675,
+            27.47486252457964
+          ],
+          "gram_condition": 1.0000000000493576,
+          "gram_discrepancy": 4.888878191168208e-11,
+          "matrix_sha256": {
+            "covariance": "e13fcf9018fe51b21b5d7e00be0b396f1fe8191bb5270317c85098e4d4826157",
+            "generator": "1e93810ca552851b2d21c9e56ed3f8a85bc9fd5adefdaed0428c2fa60b53534a"
+          },
+          "minimum_energy": -53.231417383503256,
+          "pressure_anisotropy": -240.50359543263286,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374589167054526,
+          "spectral_gap": 25.75655485892367
+        },
+        {
+          "covariance_cross_leg_norm": 0.019259511575150327,
+          "covariance_purity_defect": 1.4738880470260572e-15,
+          "eigenvalues": [
+            -58.971099062357936,
+            -58.752524371135976,
+            -18.193927016067512,
+            -16.434728408046634,
+            16.434728408046634,
+            18.193927016067516,
+            58.75252437113598,
+            58.971099062357936
+          ],
+          "gram_condition": 1.0000000373999307,
+          "gram_discrepancy": 3.736239647661405e-08,
+          "matrix_sha256": {
+            "covariance": "2edcf9dde8d43a0b0115e3a5d8024c5635ab30d1da5b86d7c3abe136986b3ce0",
+            "generator": "620e79dfa71c264061dbc2cdd93fd110d285bb15cc7be6a38a36ccc45b3b6083"
+          },
+          "minimum_energy": -152.35227885760787,
+          "pressure_anisotropy": -1214.2660999236014,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786912346786692,
+          "spectral_gap": 16.434728408046634
+        }
+      ]
+    },
+    {
+      "angular_k": -1,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.0487188311484178e-15,
+      "geometry": "cap",
+      "parent_mass": 0.4000320790839633,
+      "receiver_radius": 0.5210822567154301,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010316901796308795,
+          "covariance_purity_defect": 4.247669112349589e-16,
+          "eigenvalues": [
+            -27.475647541161052,
+            -25.756159448517188,
+            25.756159448517185,
+            27.475647541161038
+          ],
+          "gram_condition": 1.0000000000493576,
+          "gram_discrepancy": 4.888878191168208e-11,
+          "matrix_sha256": {
+            "covariance": "2470aa0914addd1f94775b10b1738def2ae9b0cd1daa6e8d466bf7b2f8f06d30",
+            "generator": "d0ff46aaf312402ad85f3a9e48f66d7138f83222630885fbe3bfcd4033487fe9"
+          },
+          "minimum_energy": -53.23180698967822,
+          "pressure_anisotropy": -240.50075360629234,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374177409261085,
+          "spectral_gap": 25.756159448517185
+        },
+        {
+          "covariance_cross_leg_norm": 0.01931826586521231,
+          "covariance_purity_defect": 1.0879979600538113e-15,
+          "eigenvalues": [
+            -58.96930872200054,
+            -58.75440663463947,
+            -18.196185751627,
+            -16.43271538582987,
+            16.43271538582987,
+            18.19618575162699,
+            58.75440663463947,
+            58.96930872200054
+          ],
+          "gram_condition": 1.0000000373999307,
+          "gram_discrepancy": 3.736239647661405e-08,
+          "matrix_sha256": {
+            "covariance": "bcecd14c6d2369e1132f344502293ad0fe19a32c1aa2894b5349d9845d7ebe85",
+            "generator": "9ce6dbef4e7e5fd0b960b5a9de8ce051b7575e29dd7e2d38ae2addfb2fd467f1"
+          },
+          "minimum_energy": -152.35261649409688,
+          "pressure_anisotropy": -1214.2470114508217,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.27866555911819724,
+          "spectral_gap": 16.43271538582987
+        }
+      ]
+    },
+    {
+      "angular_k": 1,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.0487188311484178e-15,
+      "geometry": "cap",
+      "parent_mass": 0.4000320790839633,
+      "receiver_radius": 0.5210822567154301,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010316901796308795,
+          "covariance_purity_defect": 4.247669112349589e-16,
+          "eigenvalues": [
+            -27.475647541161052,
+            -25.756159448517188,
+            25.756159448517185,
+            27.475647541161038
+          ],
+          "gram_condition": 1.0000000000493576,
+          "gram_discrepancy": 4.888878191168208e-11,
+          "matrix_sha256": {
+            "covariance": "5aa7f624f7cc6ed494b8e07a253917239231bba146c901aade7b315ddaa62a7f",
+            "generator": "d3a93a57ee0b91f31a68c3ce43f7d661bf48b60a873b02fde1f6f140e49c7d98"
+          },
+          "minimum_energy": -53.23180698967822,
+          "pressure_anisotropy": -240.50075360629234,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374177409261085,
+          "spectral_gap": 25.756159448517185
+        },
+        {
+          "covariance_cross_leg_norm": 0.01931826586521231,
+          "covariance_purity_defect": 1.0879979600538113e-15,
+          "eigenvalues": [
+            -58.96930872200054,
+            -58.75440663463947,
+            -18.196185751627,
+            -16.43271538582987,
+            16.43271538582987,
+            18.19618575162699,
+            58.75440663463947,
+            58.96930872200054
+          ],
+          "gram_condition": 1.0000000373999307,
+          "gram_discrepancy": 3.736239647661405e-08,
+          "matrix_sha256": {
+            "covariance": "783400df91b06f1f7d06d79b34b2b31c256fd5ddd6b58b1a2a37380c7a39cd94",
+            "generator": "58eda81bda54d918330b6abf215cc2e17d0be38a0d3da591eccffd642859dff5"
+          },
+          "minimum_energy": -152.35261649409688,
+          "pressure_anisotropy": -1214.2470114508217,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.27866555911819724,
+          "spectral_gap": 16.43271538582987
+        }
+      ]
+    },
+    {
+      "angular_k": -1,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.086752065755394e-15,
+      "geometry": "nested",
+      "parent_mass": 0.4000320790839633,
+      "receiver_radius": 0.5210822567154301,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010289064718169661,
+          "covariance_purity_defect": 5.776475289323678e-17,
+          "eigenvalues": [
+            -27.474855403751093,
+            -25.756560383461483,
+            25.756560383461487,
+            27.474855403751096
+          ],
+          "gram_condition": 1.0000000000493576,
+          "gram_discrepancy": 4.888878191168208e-11,
+          "matrix_sha256": {
+            "covariance": "9a3adbafa1a2b38afcca22b0b123e5afcff01e7e369be054a019abaf432545cb",
+            "generator": "29d2b549580464047a4e96bc9245e44429260e1acdadc8e753dbda0a69f5dcd7"
+          },
+          "minimum_energy": -53.23141578721257,
+          "pressure_anisotropy": -240.50111526949536,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374593607486279,
+          "spectral_gap": 25.756560383461483
+        },
+        {
+          "covariance_cross_leg_norm": 0.01925933668044954,
+          "covariance_purity_defect": 2.0867430678611444e-15,
+          "eigenvalues": [
+            -58.971098513985496,
+            -58.75252381110316,
+            -18.19391912132341,
+            -16.43473581814936,
+            16.43473581814936,
+            18.193919121323425,
+            58.75252381110317,
+            58.9710985139855
+          ],
+          "gram_condition": 1.0000000373999307,
+          "gram_discrepancy": 3.736239647661405e-08,
+          "matrix_sha256": {
+            "covariance": "e58b406833a5c6142f65a0e884138772695b8fb09727984fa647af9f7240d9c4",
+            "generator": "22ac0b3c70a2668caeda91175840d1c0eccb8f98ece8bf6bbfb9c2284604f063"
+          },
+          "minimum_energy": -152.3522772645615,
+          "pressure_anisotropy": -1214.2535588938701,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786913629267348,
+          "spectral_gap": 16.43473581814936
+        }
+      ]
+    },
+    {
+      "angular_k": 1,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_gram_defect": 1.086752065755394e-15,
+      "geometry": "nested",
+      "parent_mass": 0.4000320790839633,
+      "receiver_radius": 0.5210822567154301,
+      "states": [
+        {
+          "covariance_cross_leg_norm": 0.010289064718169661,
+          "covariance_purity_defect": 5.776475289323678e-17,
+          "eigenvalues": [
+            -27.474855403751093,
+            -25.756560383461483,
+            25.756560383461487,
+            27.474855403751096
+          ],
+          "gram_condition": 1.0000000000493576,
+          "gram_discrepancy": 4.888878191168208e-11,
+          "matrix_sha256": {
+            "covariance": "892a149585077c9dbd4462c2a560f56fe35daa222da22917bae88d2c0f26314e",
+            "generator": "b9d597d3e6256f810dff66b8dd2a4d19f8ada370365b1394eedbd74798ff450e"
+          },
+          "minimum_energy": -53.23141578721257,
+          "pressure_anisotropy": -240.50111526949536,
+          "radial_modes_per_leg": 2,
+          "relative_spectral_gap": 0.9374593607486279,
+          "spectral_gap": 25.756560383461483
+        },
+        {
+          "covariance_cross_leg_norm": 0.01925933668044954,
+          "covariance_purity_defect": 2.0867430678611444e-15,
+          "eigenvalues": [
+            -58.971098513985496,
+            -58.75252381110316,
+            -18.19391912132341,
+            -16.43473581814936,
+            16.43473581814936,
+            18.193919121323425,
+            58.75252381110317,
+            58.9710985139855
+          ],
+          "gram_condition": 1.0000000373999307,
+          "gram_discrepancy": 3.736239647661405e-08,
+          "matrix_sha256": {
+            "covariance": "b17471ffb8c7c4033907c570bea0f77a26f9c38bfc1eefc159fbcebd87df1e9b",
+            "generator": "3a75ad4959fede052e25eb74d0f167b6222e38ed74370170e9e860798b7a1c9b"
+          },
+          "minimum_energy": -152.3522772645615,
+          "pressure_anisotropy": -1214.2535588938701,
+          "radial_modes_per_leg": 4,
+          "relative_spectral_gap": 0.2786913629267348,
+          "spectral_gap": 16.43473581814936
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "field_state_resolution": "resolved_against_two_grid_operator_spread",
+    "finite_algebra_controls": "pass",
+    "finite_values": {
+      "128:2": {
+        "classical_tidal_denominator": -0.0021203248278544736,
+        "nested_minus_cap_pressure_by_mass": {
+          "0.0": -0.0007234727804075192,
+          "0.0001": -0.0007233264060459987
+        },
+        "nominal_ratio_at_ell_10km": -4.532337588994746e-81,
+        "source_induced_pressure_difference": 1.4637436152042937e-07,
+        "source_induced_tidal_ratio_coefficient": -0.0017350119671684142
+      },
+      "128:4": {
+        "classical_tidal_denominator": -0.0021203248278544736,
+        "nested_minus_cap_pressure_by_mass": {
+          "0.0": -0.013096806670546357,
+          "0.0001": -0.013094886096951086
+        },
+        "nominal_ratio_at_ell_10km": -5.946866519422897e-80,
+        "source_induced_pressure_difference": 1.92057359527098e-06,
+        "source_induced_tidal_ratio_coefficient": -0.02276503984038039
+      },
+      "64:2": {
+        "classical_tidal_denominator": -0.0021203248278544736,
+        "nested_minus_cap_pressure_by_mass": {
+          "0.0": -0.0007222757468809959,
+          "0.0001": -0.0007221297448154473
+        },
+        "nominal_ratio_at_ell_10km": -4.520809811795076e-81,
+        "source_induced_pressure_difference": 1.460020655486005e-07,
+        "source_induced_tidal_ratio_coefficient": -0.0017305990497712542
+      },
+      "64:4": {
+        "classical_tidal_denominator": -0.0021203248278544736,
+        "nested_minus_cap_pressure_by_mass": {
+          "0.0": -0.013117176943978848,
+          "0.0001": -0.013115254068907234
+        },
+        "nominal_ratio_at_ell_10km": -5.953992813693607e-80,
+        "source_induced_pressure_difference": 1.9228750716138165e-06,
+        "source_induced_tidal_ratio_coefficient": -0.02279231981588634
+      }
+    },
+    "matrix_resolution": [
+      {
+        "angular_k": -1,
+        "covariance_grid_spread": 1.2868426152493612e-06,
+        "geometry": "nested",
+        "mass": 0.0,
+        "operator_grid_spread": 0.00013938987857179094,
+        "operator_spread_over_gap": 5.41182154737972e-06,
+        "radial_modes_per_leg": 2
+      },
+      {
+        "angular_k": -1,
+        "covariance_grid_spread": 3.0728987043660345e-06,
+        "geometry": "nested",
+        "mass": 0.0,
+        "operator_grid_spread": 0.000224702178191175,
+        "operator_spread_over_gap": 1.367239984818722e-05,
+        "radial_modes_per_leg": 4
+      },
+      {
+        "angular_k": 1,
+        "covariance_grid_spread": 1.2868426155185381e-06,
+        "geometry": "nested",
+        "mass": 0.0,
+        "operator_grid_spread": 0.00013938987857179094,
+        "operator_spread_over_gap": 5.41182154737972e-06,
+        "radial_modes_per_leg": 2
+      },
+      {
+        "angular_k": 1,
+        "covariance_grid_spread": 3.0728987043660345e-06,
+        "geometry": "nested",
+        "mass": 0.0,
+        "operator_grid_spread": 0.000224702178191175,
+        "operator_spread_over_gap": 1.367239984818722e-05,
+        "radial_modes_per_leg": 4
+      },
+      {
+        "angular_k": -1,
+        "covariance_grid_spread": 1.2838839480525058e-06,
+        "geometry": "cap",
+        "mass": 0.0,
+        "operator_grid_spread": 0.0001393476259703192,
+        "operator_spread_over_gap": 5.410265312649016e-06,
+        "radial_modes_per_leg": 2
+      },
+      {
+        "angular_k": -1,
+        "covariance_grid_spread": 3.0743092744479825e-06,
+        "geometry": "cap",
+        "mass": 0.0,
+        "operator_grid_spread": 0.0002249966951933883,
+        "operator_spread_over_gap": 1.3692003717481789e-05,
+        "radial_modes_per_leg": 4
+      },
+      {
+        "angular_k": 1,
+        "covariance_grid_spread": 1.2838839480525058e-06,
+        "geometry": "cap",
+        "mass": 0.0,
+        "operator_grid_spread": 0.0001393476259703192,
+        "operator_spread_over_gap": 5.410265312649016e-06,
+        "radial_modes_per_leg": 2
+      },
+      {
+        "angular_k": 1,
+        "covariance_grid_spread": 3.0743092744479825e-06,
+        "geometry": "cap",
+        "mass": 0.0,
+        "operator_grid_spread": 0.0002249966951933883,
+        "operator_spread_over_gap": 1.3692003717481789e-05,
+        "radial_modes_per_leg": 4
+      },
+      {
+        "angular_k": -1,
+        "covariance_grid_spread": 1.286845405547123e-06,
+        "geometry": "nested",
+        "mass": 0.0001,
+        "operator_grid_spread": 0.0001393894045611271,
+        "operator_spread_over_gap": 5.411801983102925e-06,
+        "radial_modes_per_leg": 2
+      },
+      {
+        "angular_k": -1,
+        "covariance_grid_spread": 3.072885043438509e-06,
+        "geometry": "nested",
+        "mass": 0.0001,
+        "operator_grid_spread": 0.0002247000055768196,
+        "operator_spread_over_gap": 1.3672261487080114e-05,
+        "radial_modes_per_leg": 4
+      },
+      {
+        "angular_k": 1,
+        "covariance_grid_spread": 1.286845405547123e-06,
+        "geometry": "nested",
+        "mass": 0.0001,
+        "operator_grid_spread": 0.0001393894045611271,
+        "operator_spread_over_gap": 5.411801983102925e-06,
+        "radial_modes_per_leg": 2
+      },
+      {
+        "angular_k": 1,
+        "covariance_grid_spread": 3.072885043438509e-06,
+        "geometry": "nested",
+        "mass": 0.0001,
+        "operator_grid_spread": 0.0002247000055768196,
+        "operator_spread_over_gap": 1.3672261487080114e-05,
+        "radial_modes_per_leg": 4
+      },
+      {
+        "angular_k": -1,
+        "covariance_grid_spread": 1.2838870130784879e-06,
+        "geometry": "cap",
+        "mass": 0.0001,
+        "operator_grid_spread": 0.0001393471521415104,
+        "operator_spread_over_gap": 5.410245748013988e-06,
+        "radial_modes_per_leg": 2
+      },
+      {
+        "angular_k": -1,
+        "covariance_grid_spread": 3.074295367400232e-06,
+        "geometry": "cap",
+        "mass": 0.0001,
+        "operator_grid_spread": 0.0002249944966364148,
+        "operator_spread_over_gap": 1.369186353890303e-05,
+        "radial_modes_per_leg": 4
+      },
+      {
+        "angular_k": 1,
+        "covariance_grid_spread": 1.2838870130784879e-06,
+        "geometry": "cap",
+        "mass": 0.0001,
+        "operator_grid_spread": 0.0001393471521415104,
+        "operator_spread_over_gap": 5.410245748013988e-06,
+        "radial_modes_per_leg": 2
+      },
+      {
+        "angular_k": 1,
+        "covariance_grid_spread": 3.074295367400232e-06,
+        "geometry": "cap",
+        "mass": 0.0001,
+        "operator_grid_spread": 0.0002249944966364148,
+        "operator_spread_over_gap": 1.369186353890303e-05,
+        "radial_modes_per_leg": 4
+      }
+    ],
+    "signed_sector_controls": [
+      {
+        "cells": 64,
+        "geometry": "nested",
+        "mass": 0.0,
+        "radial_modes_per_leg": 2,
+        "signed_sector_pressure_gap": 8.526512829121202e-14
+      },
+      {
+        "cells": 64,
+        "geometry": "cap",
+        "mass": 0.0,
+        "radial_modes_per_leg": 2,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 64,
+        "geometry": "nested",
+        "mass": 0.0001,
+        "radial_modes_per_leg": 2,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 64,
+        "geometry": "cap",
+        "mass": 0.0001,
+        "radial_modes_per_leg": 2,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 64,
+        "geometry": "nested",
+        "mass": 0.0,
+        "radial_modes_per_leg": 4,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 64,
+        "geometry": "cap",
+        "mass": 0.0,
+        "radial_modes_per_leg": 4,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 64,
+        "geometry": "nested",
+        "mass": 0.0001,
+        "radial_modes_per_leg": 4,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 64,
+        "geometry": "cap",
+        "mass": 0.0001,
+        "radial_modes_per_leg": 4,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 128,
+        "geometry": "nested",
+        "mass": 0.0,
+        "radial_modes_per_leg": 2,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 128,
+        "geometry": "cap",
+        "mass": 0.0,
+        "radial_modes_per_leg": 2,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 128,
+        "geometry": "nested",
+        "mass": 0.0001,
+        "radial_modes_per_leg": 2,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 128,
+        "geometry": "cap",
+        "mass": 0.0001,
+        "radial_modes_per_leg": 2,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 128,
+        "geometry": "nested",
+        "mass": 0.0,
+        "radial_modes_per_leg": 4,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 128,
+        "geometry": "cap",
+        "mass": 0.0,
+        "radial_modes_per_leg": 4,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 128,
+        "geometry": "nested",
+        "mass": 0.0001,
+        "radial_modes_per_leg": 4,
+        "signed_sector_pressure_gap": 0.0
+      },
+      {
+        "cells": 128,
+        "geometry": "cap",
+        "mass": 0.0001,
+        "radial_modes_per_leg": 4,
+        "signed_sector_pressure_gap": 0.0
+      }
+    ],
+    "spreads": {
+      "tidal_grid_spread_by_mode_count": {
+        "2": 4.412917397160054e-06,
+        "4": 2.7279975505948434e-05
+      },
+      "tidal_mode_count_spread_at_128": 0.021030027873211978
+    }
+  },
+  "compute": {
+    "BLAS_threads_per_worker": 1,
+    "CPU_limit": 240.0,
+    "array_memory_ceiling_bytes": 2147483648,
+    "process_CPU_charged": 27.828125,
+    "process_CPU_observed": 19.828125,
+    "retained_full_arrays": false,
+    "wall_seconds": 2.817139499995392,
+    "workers": 8
+  },
+  "domain": {
+    "angular_sectors": [
+      -1,
+      1
+    ],
+    "cells": [
+      64,
+      128
+    ],
+    "detector_U_over_S": 0.8,
+    "detector_V_over_S": 0.7,
+    "magnetic_degeneracy_included_once": true,
+    "masses": [
+      0.0,
+      0.0001
+    ],
+    "physical_reference_length_m": 10000.0,
+    "preparation_duration": 0.1256873632901346,
+    "radial_modes_per_leg": [
+      2,
+      4
+    ],
+    "smooth_control": "cap continuation in the same wall clock and compact-mass family",
+    "wall_clock_duration": 0.1256873632901346
+  },
+  "limits": [
+    "No combined angular/frequency cutoff limit or local Hadamard proof.",
+    "Point stress values are finite-candidate diagnostics, not renormalized vacuum stress.",
+    "B/A is the local tidal channel, not the full Bardeen potential ratio Psi/Phi.",
+    "The physical preparation rule is supplied, not derived from operator inheritance.",
+    "P001 remains unconverged; no P001 evolution or new grid was run."
+  ],
+  "method_commit": "0892dbcbf4538d96cd7f1e528f2a9ba6b3f1be85",
+  "schema": "nsc-atlas-dirac-clock-energy-candidate-v1",
+  "sources_sha256": {
+    "scripts/measure_nsc_atlas_dirac_preparation.py": "5e33c3e2ee9fbb76753137c05049a57298e89ae66d4ffb4d6340b7523a4ef3d3",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_compact_source.py": "a2ffccaf8f476eff828ccefffa59b939f74bacc182f68679f43069f2f2ca86b7",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "e54190b116d396b30d6125e700ad3225b16514ffc22c9381d5475a9651ff3786",
+    "src/recursive_horizons/nsc_atlas_dirac_mean.py": "d0a801baf4f17298fc8d3f763d5c8b2711521454a9bb4c6ffa968354c0bd326f",
+    "src/recursive_horizons/nsc_atlas_dirac_preparation.py": "e5cc621c5d3ff628895239148050f650aaebfd399213f81db7586d8c20c2f7ab",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "src/recursive_horizons/nsc_atlas_dirac_scattering.py": "0472fc3005c33668020e724a949db0579b4ea7ed9fcb4cb5802e7c0f05a83520",
+    "src/recursive_horizons/nsc_atlas_dirac_stress.py": "cd0030b647187b201e7a72a8cb0dab22db74b5c172a609cd9e857047c3db4f07",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "tests/test_nsc_atlas_dirac_mean.py": "aa27e72efcbe2757227afb9fde5bb583a559091d68159ddc94cc97c53ca28880",
+    "tests/test_nsc_atlas_dirac_preparation.py": "0cd8730549e9e4df3769f988c54bd248c0f3bbc2b2f4e2eb5dce7870d1683054"
+  },
+  "state_rule": "negative projector of spacetime-windowed full clock energy; common peak-one bump",
+  "status": "finite_candidate_only_UV_and_full_Psi_Phi_open"
+}

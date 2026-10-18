@@ -9,8 +9,14 @@ now defines an explicit finite state rule using the full Dirac energy in
 the proper wall clock. It propagates smooth incoming modes on both legs,
 retains their cross correlations and selects a covariance by minimizing
 one common spacetime-windowed energy form. Twelve preparation and existing
-field controls pass. A bounded actual-geometry reference is admitted next;
-no reference value or continuum-vacuum claim is supplied by the controls.
+field controls pass. The [actual-geometry reference](../results/summaries/nsc-atlas-dirac-preparation-v1.json)
+now evaluates both signed sectors, b=0/1e-4 and N=64/128. Its source-induced
+tidal coefficient changes from -.00173501 with two modes per leg to
+-.02276504 with four; the respective grid spreads are only 4.41e-6 and
+2.73e-5. The finite state cutoff dominates, so neither is a vacuum prediction.
+No additional grid is scheduled; the next check is an exact continuum
+projector control. Eight workers take 2.81714 calculation wall seconds and
+retain a 47918-byte summary with no arrays.
 An exact massless two-frequency calculation also shows why the cited
 positive-mass signature-projector theorem cannot select this field's state.
 The full vacuum Psi/Phi and P001's refinement failure remain open.

@@ -14,6 +14,10 @@ Freeze the source before the second command and use an unused output path.
 This calculates a finite state candidate, not a continuum vacuum or full
 Psi/Phi, and runs no P001 grid. Physical preparation duration is held fixed
 between field resolutions; changing mode count is a separate cutoff check.
+The [frozen candidate result](../results/summaries/nsc-atlas-dirac-preparation-v1.json)
+uses method `0892dbc`. It resolves the finite field eigenspaces but fails
+to give a mode-count-stable tidal value; the owner records that conclusion
+without interpreting the two/four-mode difference as an observational error.
 
 The conserved compact-source tangent has five independent nonlinear
 wall/ray and metric controls. It supplies a mass-dependent input to a

@@ -2015,3 +2015,38 @@ The next analytical test concerns the actual joint angular/frequency
 short-distance symbol, including cross-leg covariance. These low sectors
 alone cannot supply a Hadamard state, renormalized vacuum stress, an
 observational error interval or the full scalar-potential ratio Psi/Phi.
+
+### Evaluated finite clock-energy state
+
+The [frozen reference](../results/summaries/nsc-atlas-dirac-preparation-v1.json)
+uses method commit `0892dbc` and completes all sixteen cases. The physical
+window, masses, detector event and state rule remain unchanged. The raw
+joint flux-Gram defect is at most 1.18e-15; signed-sector pressure parity
+differs by at most 8.53e-14. The largest 64/128 generator difference divided
+by its fine spectral gap is 1.37e-5, and the covariance grid spread is at
+most 3.08e-6. Thus these finite eigenspaces are numerically separated.
+
+After summing the two signed multiplets and subtracting the b=0 nesting
+anisotropy, the point tidal diagnostic is:
+
+| Radial modes per leg | 128-cell coefficient of (l_P/ell)^2 | Absolute 64/128 spread |
+| --- | --- | --- |
+| 2 | -.001735011967 | 4.412917e-6 |
+| 4 | -.022765039840 | 2.727998e-5 |
+
+The mode-count difference .021030027873 is much larger than either grid
+spread. At ell=10 km the finite coefficients convert to -4.53234e-81 and
+-5.94687e-80. Those are cutoff-dependent state diagnostics, not vacuum
+predictions or observational error ranges. The four-mode source pressure
+difference is 1.920573595e-6 in the declared ell units, at r/ell=.5210822567;
+its background denominator is A0*ell^2=-.002120324828. The b=0 contribution
+has been explicitly subtracted, so this is not a pre-existing wall
+anisotropy divided by the compact mass.
+
+The eight-worker run uses 19.828125 observed CPU seconds, 27.828125 charged
+including the reserve, and 2.81714 calculation wall seconds. It retains
+47918 summary bytes and no full arrays. Field discretization is not the
+dominant unresolved issue. The two/four-mode state truncation is; no
+additional grid is scheduled. An exact free-energy spectral-projector
+comparison is the next useful analytical control before changing that
+cutoff. The renormalized vacuum and full Psi/Phi remain uncomputed.
