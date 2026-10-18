@@ -65,7 +65,7 @@ def _project_cells(row,length,width,order,endpoint):
 
 def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
                            boundary_square_integrals,boundary_mixed_integrals,
-                           order=12,workers=8,observation_parameter_jet=False):
+                           order=12,workers=8,observation_parameter_jet=False,retain_source_cells=False):
     """Field and analytic x response at the final cell center.
 
     boundary_square_integrals supplies the independently evaluated pair
@@ -87,6 +87,7 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
             or isinstance(order,bool) or not isinstance(order,int) or not 2<=order<=min(nu,nv)
             or isinstance(workers,bool) or not isinstance(workers,int) or not 1<=workers<=8
             or not isinstance(observation_parameter_jet,bool)
+            or not isinstance(retain_source_cells,bool)
             or integrals.shape!=(2,) or not np.isfinite(integrals).all() or np.any(integrals<0)
             or mixed.shape!=(2,) or not np.isfinite(mixed).all()):
         raise ValueError('resolved field jets, two nonnegative boundary integrals, polynomial order and one to eight workers required')
@@ -147,6 +148,9 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
             target=jets['spatial'][leg]+lam*jets['source'][leg]
             derivatives.append(_project_cells(row_dot,length,width,order,target)[0])
         result['cell_field_coefficient_observation_derivative']=tuple(derivatives)
+    if retain_source_cells:
+        result['source_cell_rows']=(rows[:,:,:nu].copy(),rows[:,:,nu:].copy())
+        result['source_cell_widths']=(du,dv)
     return result
 
 

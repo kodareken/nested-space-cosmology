@@ -4,6 +4,14 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [finite-map derivative diagnosis](nsc-atlas-dirac-probe.md#differentiating-the-existing-finite-cell-map)
+now runs on the actual N128 maps. At order48, nonconstant probes2/8 shrink
+by4.091/3.993 under the existing split change, but probes0/1 shrink by
+only1.124/2.775. The finite Hilbert mismatch remains .149419. The tangent
+is independently checked; these mixed residuals do not settle the local
+vacuum amplitude. The run uses20.984 CPU/13.303 wall seconds, with no
+covariance contraction, new grid resolution or P001 evolution.
+
 The [continuum projection comparison](nsc-atlas-dirac-probe.md#differentiating-the-constrained-source-projection)
 still leaves a .149465 nested-minus-cap finite Hilbert mismatch at
 order48 and the smaller split, despite endpoint/mean agreement. The

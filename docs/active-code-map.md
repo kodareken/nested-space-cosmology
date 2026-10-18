@@ -57,6 +57,12 @@ extends `MeanModeGrid` with optional `parameter_endpoint`, then supplies
 the exact raw coefficient derivative to the same constraint derivative.
 Four gate/flux, reconstruction and complete-adapter controls pass.
 The existing producer compares this in `--diagnose-discrete-derivative`.
+Its same-grid application restores approximately fourfold contraction in
+probes2/8 but leaves probes0/1 unresolved. The finite stress stays open.
+The [common-cap source support](nsc-atlas-dirac-probe.md#causal-support-before-another-finite-part-inference)
+is checked in the same producer's `--diagnose-causal-support`. Optional
+`retain_source_cells` exposes the streamed rows in memory. A C1 control
+confirms exact raw support and shows its loss under global projection.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).

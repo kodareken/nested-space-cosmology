@@ -122,10 +122,31 @@ def test_discrete_retarded_adapter_matches_parameter_difference_at_fixed_source(
     actual=differentiated_retarded_response(sample(0.,True),p,discrete=True)
     h=1e-5;shifted={k:retarded_response(sample(k*h),'field',p,source_jet=True) for k in (-2,-1,1,2)}
     for leg,L in enumerate((U,V)):
-        source=L*np.array([.12,.37,.82])
+        source=L*(leggauss(p)[0]+1)/2
         independent=(-shifted[2].value(leg,source)+8*shifted[1].value(leg,source)
             -8*shifted[-1].value(leg,source)+shifted[-2].value(leg,source))/(12*h)
         np.testing.assert_allclose(actual.value(leg,source),independent,rtol=2e-8,atol=2e-8)
+
+
+def test_common_cap_plus_columns_have_exact_causal_support_before_projection():
+    U,V,mu,alpha,n=.11,.08,2.,30.,16;du,dv=U/(n-.5),V/(n-.5)
+    u,v=np.meshgrid((np.arange(n)+.5)*du,(np.arange(n)+.5)*dv,indexing='ij')
+    delta=np.maximum(v-u,0.);samples=[]
+    for a in (alpha,0.):
+        I=(mu*mu*V,mu*mu*U+2*mu*a*V**3/3+a*a*V**5/5)
+        J=(0.,mu*a*V**2+a*a*V**4/2)
+        samples.append(retarded_null_responses(mu+a*delta**2,du,dv,potential_u=-2*a*delta,
+            potential_v=2*a*delta,boundary_square_integrals=I,boundary_mixed_integrals=J,
+            order=12,workers=8,observation_parameter_jet=True,retain_source_cells=True))
+    rows=samples[0]['source_cell_rows'][0]-samples[1]['source_cell_rows'][0]
+    forbidden=(np.arange(n)+.5)*du>V
+    np.testing.assert_array_equal(rows[:,:,forbidden],0.)
+    assert np.max(abs(rows[:,:,:np.argmax(forbidden)]))>1e-7
+    # Global polynomial projection need not preserve that support. This
+    # demonstrates the information lost, rather than treating it as data.
+    responses=[retarded_response(sample,'field',12,source_jet=True) for sample in samples]
+    source=V+(U-V)*(leggauss(12)[0]+1)/2
+    assert np.max(abs(responses[0].value(0,source)-responses[1].value(0,source)))>1e-8
 
 
 def constant_input_exact(U,V,mu):

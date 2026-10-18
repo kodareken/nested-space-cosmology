@@ -3329,3 +3329,59 @@ the moving-density projection, passes in1.328125 CPU seconds. Total
 6.203125 before the physical diagnosis. The existing producer exposes
 this comparison with `--diagnose-discrete-derivative`; it writes no data
 file and runs no covariance contraction.
+
+At frozen method `66fe8e5`, this diagnosis uses20.984375 CPU and
+13.303397 wall seconds (27.1875 CPU including the controls). Endpoint
+trace error is2.976e-14; the ray-quadrature estimate remains3.536e-13.
+The smaller-split relative residuals are:
+
+| Order | Probe0 | Probe1 | Probe2 | Probe4 | Probe8 | Finite Hilbert norm |
+| --- | --- | --- | --- | --- | --- | --- |
+| 24 | 2.43113e-7 | 1.98324e-7 | 9.89764e-8 | 1.22519e-7 | 3.37270e-7 | .265457 |
+| 48 | 2.43113e-7 | 3.24475e-7 | 9.89527e-8 | 1.35991e-7 | 3.37219e-7 | .149419 |
+
+At order48 the large/small ratios for probes0/1/2/4/8 are
+1.12396/2.77514/4.09131/3.62882/3.99285. Thus some nonconstant moments
+recover approximately fourfold contraction; others, including the mean,
+do not. The new spatial kernel's relative mean differs from the PDE row
+by up to1.09203e-6. The direct finite-map derivative is checked, but this
+does not isolate finite-split truncation from continuum/representation
+error or produce a finite stress. No covariance run is admitted from
+these mixed residuals. The independent native Grok audit confirms the
+gate, flux-weight, density-scaling and moving-basis identities; its
+constant-W full-reconstruction falsifier is included in the controls.
+
+Strengthening that control to p fixed source nodes, which determine the
+whole degree-(p-1) polynomial, also passes in3.390625 CPU seconds. The
+shared finite-tangent expenditure is30.578125 CPU seconds including the
+physical diagnosis, within90. No additional physical map is evaluated.
+
+### Causal support before another finite-part inference
+
+For U>V and incoming plus data at u=s,v=0, the retarded rectangle is
+s<=u<=U,0<=v<=V. If s>V it lies entirely in the common cap. Thus the
+nested-minus-cap plus-column ordinary field and fixed-source spatial
+kernels must vanish on V<s<U. The unchanged incoming state and common
+transparent interface are part of this assertion. It does not shorten
+the minus leg or remove any parent cross-leg covariance.
+
+Retain only the existing streamed source rows in memory to check this
+identity before global polynomial projection. Compare their forbidden
+support with the represented field/spatial kernels there, at orders24/48.
+This is a geometry/representation diagnostic, not a stress or a new state.
+The first control uses a C1 potential difference proportional to
+max(v-u,0)^2, with both the PDE and finite-parameter rows; the admitted
+physical application uses only the existing central N128 maps for the
+two preparations. Its shared allowance is30 process-CPU seconds, eight
+field workers, no covariance and no new resolution/split or P001 grid.
+Stop if the causal source columns disagree or their physical endpoint
+terms do not match. A source column with nonzero response wholly in the
+common cap refutes the proposed support restriction. A reduction of
+forbidden polynomial leakage alone would not establish continuum accuracy.
+
+The C1 control passes in1.296875 CPU seconds: every forbidden source
+column agrees exactly before projection for field, PDE-spatial and finite
+parameter rows, while the global polynomial has nonzero leakage there.
+`retain_source_cells` keeps only these small rows in memory when requested;
+the producer's `--diagnose-causal-support` option reports their norms and
+polynomial leakage without writing arrays or evaluating a covariance.

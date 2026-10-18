@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+The [common-cap causal support check](nsc-atlas-dirac-probe.md#causal-support-before-another-finite-part-inference)
+compares the existing plus-source rows before and after projection:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_retarded.py::test_common_cap_plus_columns_have_exact_causal_support_before_projection -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_root_response.py --diagnose-causal-support
+```
+
+Freeze the method first. The C1 control uses1.296875 CPU seconds of a
+30-second shared allowance. The physical comparison uses the central
+N128 nested/cap maps, with field, PDE-spatial and finite-parameter source
+rows. It retains no arrays on disk and adds no vacuum contraction or grid
+resolution. A forbidden-support identity is not a continuum error bound.
+
 The [finite algorithm derivative](nsc-atlas-dirac-probe.md#differentiating-the-existing-finite-cell-map)
 uses the same Cayley field kernel, normalized source knots and constraints:
 

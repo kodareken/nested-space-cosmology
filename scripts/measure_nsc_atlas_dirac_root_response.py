@@ -63,7 +63,7 @@ def relative_pair(a,b,c,d,mu):
 
 
 def endpoint(preparation,U,V,n,integral_cache,*,order=24,workers=8,observer_jets=False,
-             observation_parameter_jet=False):
+             observation_parameter_jet=False,retain_source_cells=False):
     du,dv=U/(n-.5),V/(n-.5)
     u=(np.arange(n)+.5)*du;v=(np.arange(n)+.5)*dv
     fields=preparation.fields(*np.meshgrid(u,v,indexing='ij'))
@@ -96,7 +96,7 @@ def endpoint(preparation,U,V,n,integral_cache,*,order=24,workers=8,observer_jets
         potential_v=(fields['potential_t']+fields['potential_x'])/2,
         boundary_square_integrals=[v[0] for v in integrals],
         boundary_mixed_integrals=[v[1] for v in integrals],order=order,workers=workers,
-        observation_parameter_jet=observation_parameter_jet)
+        observation_parameter_jet=observation_parameter_jet,retain_source_cells=retain_source_cells)
     result['endpoint_quadrature_estimate']=max(errors)
     if observer_jets:
         jets=preparation.potential_null_jets(U,V)
@@ -373,6 +373,48 @@ def diagnose_projection_derivative(commit,hashes,*,discrete=False):
     print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
 
 
+def diagnose_causal_support(commit,hashes):
+    """Exact common-cap source columns versus global polynomial leakage."""
+    from numpy.polynomial.legendre import leggauss
+    started=time.process_time();wall=time.perf_counter()
+    chart=WallRadarChart();S=chart.duration;U,V=.8*S,.7*S;n=128
+    samples=[];cache={}
+    for geometry in ('nested','cap'):
+        preparation=CylinderPreparation(chart,duration=S,root_radius=.45,region=geometry,angular_k=1)
+        samples.append(endpoint(preparation,U,V,n,cache,order=48,
+            observation_parameter_jet=True,retain_source_cells=True))
+        if time.process_time()-started>30:
+            raise RuntimeError('Causal-support diagnosis exhausted its30 process-CPU seconds')
+    du=U/(n-.5);source=(np.arange(n)+.5)*du;mask=source>V
+    widths=np.full(n,du);widths[-1]=du/2
+    row=samples[0]['source_cell_rows'][0]-samples[1]['source_cell_rows'][0]
+    labels=('field','PDE_spatial','finite_parameter')
+    forbidden={key:float(np.max(abs(row[index,:,mask]/widths[mask,None])))
+        for index,key in enumerate(labels)}
+    # Boolean advanced indexing produces (source_column,spinor) above.
+    endpoint_error=float(max(np.max(abs(samples[0]['endpoint_values'][:,0]-samples[1]['endpoint_values'][:,0])),
+        np.max(abs(samples[0]['source_endpoint_values'][0]-samples[1]['source_endpoint_values'][0]))))
+    if max(forbidden.values())>1e-12 or endpoint_error>1e-12:
+        raise RuntimeError('Common-cap source support or endpoint identity failed')
+    nodes,weights=leggauss(128);points=V+(U-V)*(nodes+1)/2;rows=[]
+    for order in (24,48):
+        for kind in ('field','spatial'):
+            a,b=(retarded_response(sample,kind,order,source_jet=kind=='field') for sample in samples)
+            difference=a.value(0,points)-b.value(0,points)
+            rows.append(dict(polynomial_order=order,kernel=kind,
+                forbidden_support_sampled_sup=float(np.max(abs(difference))),
+                forbidden_support_L2=float(np.sqrt((U-V)/2*np.sum(weights*np.sum(abs(difference)**2,axis=1))))))
+    result=dict(diagnostic='common_cap_relative_plus_source_support',method_commit=commit,
+        source_fingerprint=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),
+        cells=n,angular_k=1,detector_U_over_S=.8,detector_V_over_S=.7,
+        forbidden_interval=[V,U],forbidden_source_columns=int(np.sum(mask)),
+        raw_column_density_max=forbidden,relative_plus_endpoint_jet_error=endpoint_error,projection_rows=rows,
+        compute=dict(process_CPU_seconds=time.process_time()-started,CPU_limit_seconds=30,
+            wall_seconds=time.perf_counter()-wall,mode_workers=8,retained_full_arrays=False),
+        scope='Causal source identity and forbidden polynomial support only. No covariance, vacuum stress, new physical grid or source-induced slip.')
+    print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
@@ -381,11 +423,12 @@ def main():
     parser.add_argument('--diagnose-observer-moments',action='store_true')
     parser.add_argument('--diagnose-projection-derivative',action='store_true')
     parser.add_argument('--diagnose-discrete-derivative',action='store_true')
+    parser.add_argument('--diagnose-causal-support',action='store_true')
     args=parser.parse_args()
     diagnostic=any((args.diagnose_source_logs,args.diagnose_observer_moments,
-        args.diagnose_projection_derivative,args.diagnose_discrete_derivative))
+        args.diagnose_projection_derivative,args.diagnose_discrete_derivative,args.diagnose_causal_support))
     if sum((args.diagnose_source_logs,args.diagnose_observer_moments,
-            args.diagnose_projection_derivative,args.diagnose_discrete_derivative))>1:
+            args.diagnose_projection_derivative,args.diagnose_discrete_derivative,args.diagnose_causal_support))>1:
         parser.error('choose one coefficient, moment or projection diagnosis')
     if diagnostic and (args.output is not None or args.stage!='initial'):
         parser.error('diagnosis prints its small table; do not combine it with output or stage')
@@ -411,6 +454,9 @@ def main():
         return
     if args.diagnose_discrete_derivative:
         diagnose_projection_derivative(commit,hashes,discrete=True)
+        return
+    if args.diagnose_causal_support:
+        diagnose_causal_support(commit,hashes)
         return
     cpu_start=time.process_time();wall_start=time.perf_counter();worker_totals={}
     def budget():
