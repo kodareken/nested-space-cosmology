@@ -26,6 +26,14 @@ component from a full nested `Psi/Phi` prediction. P001 was not evolved.
 The [owner](nsc-atlas-dirac-probe.md#evaluated-nested-versus-cap-response)
 records all assumptions, the eight separate prepared multiplets and scope.
 
+The [gravitational and clock interface](nsc-atlas-dirac-probe.md#einstein-moving-wall-and-proper-clock-response)
+now supplies the linearized double-null Einstein equations, propagating
+constraints, moving-wall junction/normal-force variations and a proper-wall
+radar readout. Six independent curvature, Bianchi, moving-normal and residual
+gauge controls pass. No gravitational evolution or new physical slip number
+is computed. A metric variation of the quantum mean needs its Ward/tadpole
+and source-variation terms; the matter commutator alone is insufficient.
+
 ## A complete finite wall-radar diamond and a clock comparison
 
 The [radar reference](../results/summaries/nsc-atlas-dirac-radar-v1.json)

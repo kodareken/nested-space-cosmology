@@ -1,5 +1,26 @@
 # Prior art and admission of new research
 
+## Gravitational equations and the moving quantum-probe wall
+
+Connect the actual Dirac stress and retarded metric insertions to spherical
+Einstein evolution, rather than calling the matter commutator a slip.
+Use the same quiet cap/wall/exterior, double-null orbit metric and constant
+regional vacuum terms. Derive the radius/conformal-factor equations,
+constraint propagation, linear variations, and displaced-wall Israel,
+normal-force and proper-clock equations from the metric and original tension.
+The normal force is a bulk/Israel compatibility condition, not an additional
+arbitrary wall source. Retain the Ward term from the mean quantum stress
+when varying the metric.
+
+This component has **60 process-CPU seconds** for independent tensor,
+linearization, wall-normal and constraint-transport controls. It supplies
+equations and interfaces only: no physical evolution, grids, state choice,
+new result JSON or renormalization constants. Stop on a tensor, orientation,
+gauge-counting or conservation inconsistency. A direct Einstein contraction
+or moving-wall curvature variation is the independent rejection test.
+The next physical solve must provide compatible constrained initial data
+and the complete conserved source before using these equations.
+
 ## Actual Dirac transfer and ordered metric response across the wall
 
 Use the checked wall-clock null diamond and its actual

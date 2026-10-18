@@ -1198,3 +1198,110 @@ Hermitian. Execution uses eight Numba workers and one BLAS thread,
 10.234375 process-CPU seconds, and a 22783-byte summary. The first attempt's
 conservative charge is 30 seconds. No matrices, new P001 grid, inherited
 baseline vacuum response or Psi/Phi value is retained or claimed.
+
+## Einstein, moving-wall and proper-clock response
+
+The [gravitational interface](../src/recursive_horizons/nsc_atlas_dirac_gravity.py)
+connects the same stress to the actual orbit metric
+`ds2=-C*dU*dV+r^2*dOmega2`. Put `L=log C`, `kappa=8*pi*G` and keep the
+regional constants `Lambda_minus=3/ell^2`, `Lambda_plus=0`.
+The nonvacuum stress t excludes those constants. Direct four-dimensional
+curvature contraction gives
+
+$$
+r_{UU}-L_Ur_U=-\kappa r t_{UU}/2,\qquad
+r_{VV}-L_Vr_V=-\kappa r t_{VV}/2,
+$$
+
+$$
+r_{UV}=-\frac{r_Ur_V}{r}-\frac C{4r}
++\frac{\Lambda Cr}{4}+\frac{\kappa r t_{UV}}2,
+$$
+
+$$
+L_{UV}=\frac{2r_Ur_V}{r^2}+\frac C{2r^2}
+-\kappa t_{UV}-\frac{\kappa C p_t}{2}.
+$$
+
+The existing orthonormal Dirac stress transforms as
+`t_UU=C*(rho+p_r+2*j)/4`, `t_VV=C*(rho+p_r-2*j)/4` and
+`t_UV=C*(rho-p_r)/4`. Angular multiplicity is already included there.
+The component differentiates these equations in `s=delta r,q=delta L`;
+it does not replace their constraints by a separate projected field trace.
+For example, if
+
+$$
+E_U=r_{UU}-L_Ur_U+\kappa rt_{UU}/2,
+$$
+
+$$
+Q_U=\partial_Vt_{UU}+\partial_Ut_{UV}
++2r_Vt_{UU}/r+(2r_U/r-L_U)t_{UV}+Cr_Up_t/r,
+$$
+
+then the mixed equations imply
+`partial_V E_U=-(r_V/r)*E_U+kappa*r*Q_U/2`.
+The V identity exchanges U,V. Conserved matter has Q=0; compatible
+initial null constraints propagate. A source that fails this identity
+cannot be repaired by assigning arbitrary independent metric data.
+
+The wall may move to `x=w(T)` in the conformal-coordinate gauge.
+At the unperturbed wall, `C=1,r=R,r_T=v,r_x=beta_i`,
+`L_T=0,L_x=2*beta_i_R`. The two common surface perturbations are
+`Z=s_i+beta_i*w` and `Q=q_i+Lx_i*w`. Define time and angular extrinsic
+eigenvalues with the normal directed from cap to exterior. Their variations are
+
+$$
+\delta K^T{}_T=\ddot w+\frac{q_x}{2}
++\frac{wL_{xx}}2-\frac{QL_x}{4},
+$$
+
+$$
+\delta K^\theta{}_\theta=
+\frac{s_x+wr_{xx}+\dot wv-Q\beta/2}{R}-\frac{\beta Z}{R^2}.
+$$
+
+Continuity of Z,Q and zero jumps of both variations are the fixed-tension
+junction laws. The signed Gauss identity is
+`kappa*[T_nn]=-2*k_wall*average(K^T_T+2*K^theta_theta)`.
+Its perturbation is a compatibility condition from the bulk and Israel
+equations, not another independent wall datum. The finite Dirac stress
+transmits normally; its zero normal-pressure jump leaves zero variation
+of that mean curvature. The physical proper-clock rate changes by Q/2.
+
+To read the same radar protocol used above, transform to perturbed
+proper-wall labels. If `delta_tau(T)` is the integrated wall-clock shift,
+`Uhat=U+A(U),Vhat=V+B(V)` with `A=delta_tau+w`, `B=delta_tau-w`.
+At fixed physical radar labels,
+
+$$
+\delta L_{\rm radar}=q-AL_U-BL_V-A'-B',\qquad
+\delta r_{\rm radar}=s-Ar_U-Br_V.
+$$
+
+A radial phase emitted by the unit wall clock gives
+`delta ln(omega_rec/omega_wall)=-delta L_radar/2` for the fixed
+radar-position receiver. Both quantities vanish under a pure residual null
+reparametrization. This avoids interpreting an arbitrary coordinate lapse
+as an observable. A numerical clock correction still requires the actual
+constrained gravitational solution.
+
+For the retarded quantum calculation, conservation needs one more connection.
+Varying a nonzero mean stress under a metric source obeys
+`nabla(delta T)+delta(nabla)*T_mean=0`, not `nabla(delta T)=0`.
+Let h_q solve the mean gravitational backreaction and h_B the classical
+metric source. At the mixed order the Einstein source includes the
+second variation `-E_second[h_B,h_q]` and the physical external source's
+variation, together with the complete quantum stress response. Feeding
+only the metric commutator into the vacuum linear equations would omit
+those Ward/tadpole terms. The quantum state, source model and renormalized
+local terms therefore remain explicit. A finite occupation difference
+cancels the unchosen baseline, but still needs its own mean backreaction.
+
+Six [controls](../tests/test_nsc_atlas_dirac_gravity.py) pass: full
+four-dimensional curvature with independent metric jets, exact nonvacuum
+constraint transport, linearization on both actual regions, direct
+moving-normal acceleration, the signed wall Gauss law and residual gauge
+removal in the physical clock. They use 4.390625 CPU seconds across the
+initial suite and two focused follow-ups, including one scalar-versus-array
+fixture correction. No gravitational or P001 evolution is run.

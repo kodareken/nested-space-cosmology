@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+The actual Dirac gravitational/observer bridge is an equation interface,
+with independent four-dimensional curvature, constraint propagation,
+moving-wall and proper-clock controls:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_gravity.py -q
+```
+
+These six controls use 4.390625 process-CPU seconds across development
+executions, including one scalar-array fixture correction. They generate
+no physical evolution or result JSON. The
+[owner](nsc-atlas-dirac-probe.md#einstein-moving-wall-and-proper-clock-response)
+retains the complete conserved source and constrained initial data as
+requirements for the next gravitational solve.
+
 Reproduce the actual curved Dirac transfer and ordered metric response:
 
 ```powershell
