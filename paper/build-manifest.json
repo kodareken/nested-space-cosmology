@@ -1,10 +1,10 @@
 {
-  "bytes": 3610752,
+  "bytes": 3615702,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "c9150fb9e8296030282d3e121f52d2af007885042fac4be64cbdefd04403919f",
+  "metadata_sha256": "dd4b58231207bcfb1f11b746f7c8f9d9b79621764a32a32781ff94f4490753c9",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 51,
-  "pdf_sha256": "9bb0e27921beb92bd40b307222ea9653aba782ee54c1ea04a01e32d65b841684",
+  "pages": 52,
+  "pdf_sha256": "c033fecf634bcb856ce170abc5debad2b451735a03b1181a918f599b5e0c3f64",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -396,6 +396,14 @@
       "sha256": "ee5de983da1bf3803a16750e43b509f48707b4c5f50d0ea56526d76ee61b2e15"
     },
     {
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json",
+      "sha256": "fed19ae5b870c16ad2b290f5b077d5d8a888e633773b97f7ff6335ed0f102b1b"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-gap-diagnostic-v1.json",
+      "sha256": "e1c65bb9b3dc289899206abd39fdf09dc2277b3cec9132a83a3ee303e86133cc"
+    },
+    {
       "path": "results/summaries/nsc-atlas-geometric-average-v1.json",
       "sha256": "981e1f0c31ddcf657d8f90d548c78a660ed2a048a08a72e59b9b379830bab4ff"
     },
@@ -469,6 +477,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "8d596b5466bf6fcb9a0b12ebaa0a73f3405142f66b4672dffdce95ab0a416932",
-  "version": "working-2026-10-18.2"
+  "source_sha256": "44bc0235d55d70262d2b3bba23d504004f55523ba464fc65373be6a5de9e587d",
+  "version": "working-2026-10-18.3"
 }
