@@ -1,5 +1,22 @@
 # Reproducing the root project
 
+The [retarded-map extraction](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
+uses the existing characteristic solver and analytic derivatives. Its
+32/64 cylinder control checks both polynomial orders and contracts the
+complete radial kernel and derivative errors by about four:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_retarded.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_root_response.py --output .build/nsc-atlas-dirac-root-response.json
+```
+
+The second command requires a frozen method and an unused output path.
+It compares the actual nested/cap state on two nonzero splits, retaining
+the first signed angular sector only. Neither the coincidence limit nor
+the angular sum or full Psi/Phi is supplied. Control development used
+46.84375 process-CPU seconds; the owner specifies the physical run's
+separate budget and stopping conditions.
+
 The [complete root-covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 has four controls against the exact cylinder vacuum kernel and its spatial
 derivative, including its one-sided endpoint and Hilbert terms:

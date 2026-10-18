@@ -4,6 +4,14 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [retarded-map extraction](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
+now supplies numerical endpoint maps from the same field solver. A direct
+endpoint projection failed; continuous linear kernel reconstruction with
+the exact causal traces repairs it. Both the complete cylinder vacuum
+kernel and its analytic spatial derivative improve by about four on the
+same 32/64 grids. The bounded actual-geometry comparison is specified in
+the owner; no P001 grid or full vacuum slip is supplied by this control.
+
 The [null-coordinate covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 now includes the complete radial root spectrum on supplied retarded maps,
 with endpoint values, analytic spatial responses and PV finite parts.

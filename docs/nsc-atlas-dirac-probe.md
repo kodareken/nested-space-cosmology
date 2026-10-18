@@ -2770,3 +2770,110 @@ seconds. No physical field reference or P001 grid ran. The next physical
 input is the actual nested and continued-cap retarded maps, with their
 analytic derivatives and controlled representation error. The full
 renormalized stress and Psi/Phi remain unevaluated.
+
+### Extracting retarded maps from the existing field kernel
+
+The next missing connection is numerical response data for the complete
+root pairing. Reuse `MeanModeGrid`, including its existing analytic
+characteristic jets, on a rectangle whose last cell center is the detector.
+Independent incoming sample columns give its field and spatial-response
+rows. The endpoint value and f-prime functionals are retained explicitly;
+only the remaining ordinary kernel is represented on causal source cells
+and projected onto Legendre polynomials. No new propagation equation or
+root state is introduced.
+
+Before any physical application, compare with the exact nonzero cylinder
+Riemann kernels and their spatial derivatives. Admit only N=32/64,
+polynomial orders 12/24 from the same field rows, the existing nonzero split .008 and the same T=.11,
+x=.006 cylinder control; 60 process-CPU seconds with at most eight workers
+and 256 MiB of live field arrays. Independent columns are streamed and
+discarded. Both field and derivative errors must contract; a failure stops
+the physical application and identifies which row or endpoint term is
+responsible. No P001 evolution, arrays or reference JSON are retained.
+
+The first field/derivative row control contracts by about four. With
+unconstrained order-24 cell projection, the full-kernel error contracts
+only 2.1755 (1.26198e-5 to 5.80091e-6), failing the factor-three control;
+the physical run is held. This identifies point evaluation of a projected
+kernel as a separate requirement from its L2 projection. Enforce its exact
+Volterra endpoint trace while preserving its integral. For p Legendre
+coefficients, the smallest L2 correction of zero mean has
+`delta g_n=(2n+1)*delta trace/(p^2-1)`, n=1,...,p-1; g0 is unchanged.
+For the spatial kernel these traces follow by differentiating its integral
+equations at the endpoint. With I_V=int W^2 dV, I_U=int W^2 dU,
+
+\[
+G_{++,x}(U,V;U)=-W^2/4+\tfrac14\int_0^V W W_U dt-I_V^2/32,
+\quad G_{-+,x}=-i W_V/2-i W I_V/8,
+\]
+
+\[
+G_{+-,x}=i W_U/2+i W I_U/8,
+\quad G_{--,x}=W^2/4-\tfrac14\int_0^U W W_V dt+I_U^2/32.
+\]
+
+The same 32/64 control is repeated after imposing these mathematical
+traces; no extra grid or covariance target selects the correction.
+
+Endpoint constraints alone do not cure the step representation: its
+order-24 derivative error grows 6.29197e-4 to 8.51322e-4. The step-kernel
+L2 residual halves with h, rather than falling quadratically. Replace
+the step reconstruction by continuous linear interpolation of its source
+densities, with the exact causal endpoint and a linear extension to zero
+source coordinate. Integrate each segment against Legendre polynomials
+exactly before imposing the same endpoint constraint. This changes the
+ordinary-kernel representation; the field solver, state, domain, two
+grids and acceptance test stay fixed.
+
+The corrected control passes at both polynomial orders. At order 24,
+the complete cylinder kernel error falls 5.64820e-8 to 1.36737e-8 and
+its spatial derivative error falls 2.10088e-6 to 5.17789e-7. The order-12
+errors also contract by more than four. All development, including the
+two failed representations and the variable-coefficient control below,
+used 46.84375 process-CPU seconds of the
+60-second allowance. Native Grok separately checks the direct-value and
+direct-derivative split; the continuum Bessel formulas check the actual
+numerical extraction. This control is closed; no finer cylinder grid is
+needed unless the physical application exposes a failure.
+
+The mixed endpoint terms also have a variable-coefficient control on the
+same 32/64 rectangles: W=f(U)g(V), f=1+.5U, g=1-.3V. The exact change of
+null variables Ubar=int f^2, Vbar=int g^2 and spinor factors (f,g) reduces
+its propagation to unit W. A transported plane solution checks both maps
+and their nonzero W_U/W_V endpoint terms. Its field and derivative errors
+fall from 2.86251e-8/2.59639e-8 to 7.10273e-9/6.44708e-9, using an
+additional 1.390625 process-CPU seconds within the same allowance.
+
+### First actual full-radial finite-split comparison
+
+Use the [bounded producer](../scripts/measure_nsc_atlas_dirac_root_response.py)
+to evaluate the same declared parent state on the actual nested geometry
+and the continued-cap control. This supplies the actual retarded maps to
+the completed root pairing. Fix b=0, kappa=+1 with its magnetic degeneracy
+2 counted once, root radius .45 ell, preparation duration S equal to the
+quiet wall-clock strip, and detector (U,V)=(.8S,.7S). The switches and
+parent state are identical in both geometries.
+
+Admit only field grids 64/128, polynomial orders 12/24 extracted from the
+same response rows, and nonzero spatial splits eta/S=.02/.01. Both split
+endpoints stay in the common matched cap. Evaluate their complete radial
+covariance difference before contracting the canonical symmetric
+pressure-shaped bilocal, using the physical midpoint cap metric. The
+reference ell=10 km converts its pressure units and actual proper split
+distance; it is supplied independently of the result. This is a finite
+bilocal observable for the first signed angular sector, not a coincident
+stress, full angular sum, compact-source response or Psi/Phi.
+
+Use eight streamed GIL-free field columns and single-threaded BLAS;
+allow 240 process-CPU seconds and 256 MiB of live field arrays. Freeze
+the method first. Save one summary below 24000 bytes, retaining numbers,
+spreads and response/source hashes, never field arrays. Endpoint integrals
+come from the potential and its analytic derivatives. Cancel common direct
+terms algebraically before numerical covariance pairing.
+
+Compare field, polynomial and separation variations separately. A spread
+dominating the signal stops extrapolation and identifies the unresolved
+representation. Persistent separation dependence keeps the observable
+bilocal. Budget exhaustion saves a diagnosed partial result before any
+new calculation is considered. These checks do not supply the uncomputed
+angular tail or turn numerical spreads into a continuum error certificate.

@@ -8,6 +8,14 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [retarded-map adapter](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
+extracts [streamed endpoint rows](../src/recursive_horizons/nsc_atlas_dirac_retarded.py)
+from the existing field solver, retaining the direct f-prime term and exact
+causal endpoint values. Its [continuum cylinder control](../tests/test_nsc_atlas_dirac_retarded.py)
+passes at both polynomial orders. The [finite-split producer](../scripts/measure_nsc_atlas_dirac_root_response.py)
+compares the declared vacuum state on the actual two geometries; angular
+completion and the relative coincidence limit remain separate.
+
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).
 Four [exact-cylinder and root-kernel controls](../tests/test_nsc_atlas_dirac_root_pairing.py)
