@@ -308,9 +308,6 @@ def test_invalid_premises_stop_before_factorization(monkeypatch):
     with pytest.raises(ValueError, match="occupations"):
         preparation_tangent(reweighted, state)
 
-    with pytest.raises(ValueError, match="radius root"):
-        preparation_tangent(grid, state)
-
     with pytest.raises(ValueError, match="finite"):
         apply_preparation(state.phi0, state.phi1, np.ones(grid.nf), np.nan)
     with pytest.raises(ValueError, match="every fermion node"):

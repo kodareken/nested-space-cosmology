@@ -354,7 +354,7 @@ the energy coefficient is not a generated cosmological vacuum constant.
 
 ### A paired preparation tangent for a causal response
 
-A causal metric response needs admissible initial variations. The original
+A causal finite-model response needs controlled initial variations. The original
 rank-six preparation supplies a useful restricted family: each plus column
 has `phi1=i*phi0`; its minus partner is a constant phase times its complex
 conjugate, with equal occupation in the pair. Use the original initial
@@ -389,7 +389,7 @@ is `delta_force_L=M*delta_K/Q`, `delta_force_beta=0`. The existing
 differentiating waveform samples.
 
 Let `Pi_g=(ng/nq)*A_g.T` be the Galerkin pullback, distinct from the
-physical resolution projector. At the original radius root the same
+physical resolution projector. At the saved radius the same
 source is independent of `r` in conformal variables. Its radius Jacobian
 therefore supplies the candidate tangent through
 
@@ -398,19 +398,23 @@ J_r\,\delta r=-\Pi_g\frac{\delta F_L}{dx_q},\qquad
 \delta Q=\delta\chi=\delta p_Q=\delta p_r=\delta p_\chi=0.
 $$
 
-Here `J_r` is the existing dense `_projected_radius_jacobian`, not a new
-joint sparse operator. Conditional on a nonsingular radius root, this
-cancels the projected Hamiltonian variation; the full momentum variation
-remains zero. The held-out quadrature Hamiltonian variation must still be
-reported. It is not removed by the projected solve. No claim of a
-constraint-exact continuum family follows.
+Here `J_r` is the existing dense `_projected_radius_jacobian`. The target is
+the saved constraint level: if `C_g(r,epsilon)` is the projected constraint
+and `c_0=C_g(r_0,0)`, an invertible linearization gives a local family
+`C_g(r(epsilon),epsilon)=c_0`. Its derivative is the equation above even
+when `c_0` is nonzero. Thus the solve cancels the change in projected
+constraint, while preserving the original defect. The full momentum
+variation remains zero. Report both the original defect and the held-out
+quadrature Hamiltonian variation. Neither is removed; no constraint-exact
+continuum family follows.
 
 This is a declared one-parameter initial preparation in a fixed Dirac
 frame. It does not rotate the operator and frame along with the state.
-A complete preparation apparatus and formation history remain to be
-supplied. The next bounded calculation can check the source premises and
-solve this tangent before attempting causal propagation. No such physical
-application or retarded kernel has yet been run.
+A complete preparation apparatus, continuum-compatible initial data and
+formation history remain to be supplied. A bounded application can evaluate
+this finite-model tangent before causal propagation. A first attempt stopped
+on an incorrect zero-root premise, as recorded in the admission; the
+constraint-level application and retarded kernel have not yet been evaluated.
 
 An independent analytic control fixes the source and radius normalization.
 On a constant `r=1,Q` chart, take three normalized chiral plane-wave pairs

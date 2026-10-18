@@ -6,6 +6,8 @@ initial radius root. All first variations are single resolved harmonics.
 import numpy as np
 from numpy.testing import assert_allclose
 
+from recursive_horizons.nsc_conformal_preparation_tangent import preparation_tangent
+from recursive_horizons.nsc_spherical_coupling import CALIBRATION
 from recursive_horizons.nsc_spherical_galerkin_coupling import (
     _constraint_directional, _projected_radius_jacobian, blank_state,
     build_grid, prolong_columns, prolong_state, pull_geometry,
@@ -16,12 +18,13 @@ def test_paired_plane_wave_phase_has_the_analytic_radius_response():
     grid = build_grid(16, gauge="conformal")
     columns0 = np.empty((grid.nf, 6), dtype=complex)
     columns1 = np.empty_like(columns0)
+    phase = np.exp(1j*CALIBRATION["phase"])
     for pair in range(3):
         carrier = np.exp(1j * (2*pair+1)*np.pi*grid.xi_f/grid.length)
         columns0[:, 2*pair] = carrier / np.sqrt(2*grid.nf)
         columns1[:, 2*pair] = 1j*columns0[:, 2*pair]
-        columns0[:, 2*pair+1] = columns0[:, 2*pair].conj()
-        columns1[:, 2*pair+1] = columns1[:, 2*pair].conj()
+        columns0[:, 2*pair+1] = phase*columns0[:, 2*pair].conj()
+        columns1[:, 2*pair+1] = phase*columns1[:, 2*pair].conj()
     state = blank_state(grid, columns0, columns1)
     fine = prolong_state(grid, state)
     q = state.Q[0]
@@ -59,3 +62,11 @@ def test_paired_plane_wave_phase_has_the_analytic_radius_response():
     )
     assert_allclose(total_h_dot/q, 0., atol=1e-10)
     assert_allclose(total_d_dot, 0., atol=1e-11)
+    # A level-set tangent is defined even when the original constraint is
+    # nonzero. It preserves that level; it does not solve the initial data.
+    result = preparation_tangent(grid, state)
+    assert_allclose(result.delta_r, radius_dot, rtol=1e-10, atol=1e-10)
+    assert result.report["background"]["projected_hamilton_max_abs"] > 1e-2
+    assert result.report["background"]["original_newton_threshold_met"] is False
+    assert result.report["background"]["initial_defect_removed"] is False
+    assert result.report["directional_check"]["full_max_abs"] < 1e-10

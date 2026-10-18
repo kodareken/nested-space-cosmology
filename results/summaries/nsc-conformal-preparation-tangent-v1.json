@@ -1,0 +1,18 @@
+{
+  "command_wall_seconds": 3.6541746,
+  "dense_factorizations": 0,
+  "diagnosis": "The saved v5 preparation never met the Newton/full initial thresholds. The new zero-root premise was false. A finite response must preserve and report the original nonzero constraint level, without claiming a solved physical initial constraint.",
+  "incorrect_zero_root_gate": 1e-10,
+  "original_records": [
+    "results/development/nsc-spherical-coupling-refinement-v5.json",
+    "results/development/nsc-spherical-conformal-episode-v1.json"
+  ],
+  "payload_sha256": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+  "process_cpu_seconds_upper_bound": 59,
+  "projected_hamilton_defect": 1.0908066176527038e-08,
+  "root_solves": 0,
+  "schema": "nsc-conformal-preparation-tangent-diagnosis-v1",
+  "source_commit": "bcb046967a199b813cbba803423d4dbdbb5509e6",
+  "status": "stopped_before_factorization",
+  "time_steps": 0
+}

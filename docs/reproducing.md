@@ -2895,11 +2895,13 @@ python scripts/run_python.py scripts/measure_nsc_conformal_preparation_tangent.p
 
 This application holds the action and equal pair occupations fixed. A
 specified unitary phase changes the source, and the existing radius Jacobian
-determines its initial tangent. The budget is 200 process-CPU seconds, one
+determines the tangent to the saved, possibly nonzero constraint level.
+The corrected application's budget is 140 process-CPU seconds, one
 dense factorization and eight BLAS threads; checkpoints stop further matrix
 work when the budget is exhausted. The summary includes the initial radius
 and clock-rate derivatives, original constraint defect and unresolved
-quadrature remainder. It supplies no evolution, light-cone signal or Lambda.
+quadrature remainder. The original defect is preserved; initial constraints
+are not solved. It supplies no evolution, light-cone signal or Lambda.
 No arrays are written. Ten manufactured controls precede the application.
 
 The shared-action wall check is a direct symbolic calculation:

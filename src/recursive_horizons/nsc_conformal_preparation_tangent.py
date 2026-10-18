@@ -222,10 +222,11 @@ def _factor_once(matrix, rhs):
 
 
 def preparation_tangent(grid, state, *, checkpoint=None):
-    """Solve J_r delta_r = -pull(delta density) for the declared chiral family.
+    """Differentiate the saved constraint level for the declared chiral family.
 
-    Premises, source cancellation and the existing radius-root residual are
-    checked before the single factorization. The state is not modified.
+    The initial defect is measured and preserved, not solved away. This
+    derivative does not require the saved constraint level to be zero.
+    Premises and source cancellation precede the single factorization.
     An optional budget checkpoint runs between expensive operations.
     """
     if checkpoint is not None and not callable(checkpoint):
@@ -266,8 +267,9 @@ def preparation_tangent(grid, state, *, checkpoint=None):
     check()
     rho = source["force_L"] / grid.dx_q
     projected_root, full_root = projected_radius_operator(grid, state.r, rho)
+    if not np.isfinite(full_root).all() or not np.isfinite(projected_root).all():
+        raise ValueError("original constraint level is not finite")
     root_max = float(np.max(np.abs(projected_root)))
-    held_root = full_root - prolong_geometry(grid, projected_root)
     momentum = shift_constraint(grid.fine, fine_state) + source["force_beta"] / grid.dx_q
     source_problems = []
     s1_max = _abs_max(source["S1"])
@@ -281,18 +283,16 @@ def preparation_tangent(grid, state, *, checkpoint=None):
         source_problems.append(f"momentum/current max {current_max} exceeds {TOL_INITIAL_CONSTRAINT}")
     _fail("background source premise failed", source_problems)
     check()
-    if root_max >= TOL_NEWTON:
-        raise ValueError(
-            "background radius root premise failed: projected Hamilton residual "
-            f"{root_max} is not below {TOL_NEWTON}"
-        )
 
     fine_phi0 = prolong_columns(grid, phi0_tangent)
     fine_phi1 = prolong_columns(grid, phi1_tangent)
     zero_radius = np.zeros(grid.nq)
-    _h, _d, phi_h_dot, phi_d_dot = _polarization(
+    original_h, _d, phi_h_dot, phi_d_dot = _polarization(
         grid.fine, fine_state, source, zero_radius, fine_phi0, fine_phi1,
     )
+    original_density = _constraint_density(original_h, fine_state.Q)
+    original_projected = pull_geometry(grid, original_density)
+    original_held = original_density - prolong_geometry(grid, original_projected)
     phi_momentum = _abs_max(phi_d_dot)
     if phi_momentum > TOL_INITIAL_CONSTRAINT:
         raise ValueError(
@@ -374,17 +374,22 @@ def preparation_tangent(grid, state, *, checkpoint=None):
         "ng": int(grid.ng),
         "nf": int(grid.nf),
         "nq": int(grid.nq),
+        "constraint_target": "preserve_original_projected_constraint_level",
         "gram_defect_max_abs": float(np.max(np.abs(gram - np.eye(6)))),
         "background": {
-            "projected_hamilton_max_abs": root_max,
-            "full_hamilton_max_abs": float(np.max(np.abs(full_root))),
-            "held_out_hamilton_max_abs": float(np.max(np.abs(held_root))),
+            "projected_hamilton_max_abs": float(np.max(np.abs(original_projected))),
+            "full_hamilton_max_abs": float(np.max(np.abs(original_density))),
+            "held_out_hamilton_max_abs": float(np.max(np.abs(original_held))),
+            "constant_Q_radius_operator_projected_max_abs": root_max,
+            "difference_from_constant_Q_operator_max_abs": _abs_max(original_density-full_root),
             "momentum_max_abs": current_max,
             "S1_max_abs": s1_max,
             "Pmom_max_abs": pmom_max,
             "Q": q0,
-            "root_gate": float(TOL_NEWTON),
-            "held_out_background_is_a_failure": False,
+            "original_newton_threshold": float(TOL_NEWTON),
+            "original_newton_threshold_met": bool(root_max < TOL_NEWTON),
+            "newton_threshold_role": "historical constant-Q radius operator diagnostic",
+            "initial_defect_removed": False,
         },
         "source_tangent": {
             "phi_only_density_max_abs": float(np.max(np.abs(delta_density))),
@@ -445,6 +450,7 @@ def preparation_tangent(grid, state, *, checkpoint=None):
             "delta Q, delta chi and all geometric momentum variations are zero",
             "J_r is the existing pre-gauge projected radius Jacobian",
             "full quadrature remainder is reported and is not removed",
+            "the saved nonzero projected constraint level is held fixed",
             "initial Q is held fixed, so the observer clock variation is delta_r/r",
         ],
         "incomplete_continuum_constraints": {

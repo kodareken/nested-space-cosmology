@@ -24,7 +24,7 @@ from measure_nsc_conformal_geometric_average import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CPU_LIMIT = 200.0
+CPU_LIMIT = 140.0
 BYTE_LIMIT = 24_000
 THREAD_LIMIT = 8
 STATE_NAMES = ("Q", "r", "chi", "p_Q", "p_r", "p_chi", "phi0", "phi1")
@@ -98,7 +98,7 @@ def main():
     def budget():
         if time.process_time() - started > CPU_LIMIT:
             raise RuntimeError(
-                "preparation tangent exceeded 200 process-CPU seconds; no automatic retry"
+                "preparation tangent exceeded 140 process-CPU seconds; no automatic retry"
             )
 
     commit, bindings = frozen_sources()
@@ -142,7 +142,7 @@ def main():
 
     result = {
         "schema": "nsc-conformal-preparation-tangent-summary-v1",
-        "status": "initial_preparation_tangent",
+        "status": "initial_constraint_level_response",
         "source_commit": commit,
         "source_sha256": bindings,
         "input": {
@@ -174,11 +174,12 @@ def main():
         },
         "runtime_cpu_seconds": time.process_time() - started,
         "scope": (
-            "One initial chiral preparation tangent on the original T=0 slice. "
+            "One initial chiral constraint-level tangent on the original T=0 slice. "
             "Derivative per epsilon at fixed initial Q. Not an observed length, "
             "Lambda, formation history, light-cone shift, or retarded kernel. "
             "The projected solve residual does not certify invertibility. "
             "The full quadrature remainder stays in the summary and is not removed."
+            " The original nonzero constraint defect is preserved, not solved."
         ),
     }
     raw = json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n"

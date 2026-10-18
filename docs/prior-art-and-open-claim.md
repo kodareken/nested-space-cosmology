@@ -103,8 +103,8 @@ instead gives a concrete source family using the original chiral/conjugate
 rank-six columns and equal pair occupations. The fixed lowest spatial
 harmonic generates one unitary phase parameter, preserves the Gram and
 pointwise zero current, and can change the energy source. Under its stated
-initial-slice premises the existing radius Jacobian supplies a projected
-Hamiltonian-compatible tangent. Independent Grok algebra review confirms
+initial-slice premises the existing radius Jacobian supplies a tangent to
+the original projected constraint level. Independent Grok algebra review confirms
 the finite Fourier conjugation and source identities. This is a derivation,
 not an archived-data application, a formation mechanism or an evaluated
 retarded kernel. Before a numerical application, specify and freeze its
@@ -130,7 +130,7 @@ unit phase. They supply an initial response for later causal propagation,
 not a propagated observation, a formation mechanism or a Lambda value.
 Small manufactured controls independently compare the finite unitary,
 source derivative and full constraint derivative before freezing the
-producer. A residual from the projected solve must be below `1e-8` relative
+producer. A residual from the projected tangent solve must be below `1e-8` relative
 to the larger source or geometric response, with the absolute scale shown.
 This is numerical consistency, not a continuum error certificate.
 
@@ -141,6 +141,29 @@ solve, source drift, unresolved derivative check, nonfinite result or budget
 exhaustion. Retain only a summary of at most 24,000 bytes and input/method
 hashes. A vanishing response or a large unprojected remainder is an outcome
 to report, not a reason to tune the preparation or repeat the application.
+
+**Stopped first application:** frozen method `bcb0469` incorrectly required
+the saved radius to meet the old Newton `1e-10` target. It stopped before
+factorization at a projected defect `1.0908066176527038e-8`. The historical
+v5 record already marks the Newton and full initial thresholds unpassed;
+the nf512 conformal record gives a full initial defect `9.9814687e-6`.
+The inputs were preserved during that evolution. This is a mistaken new
+premise, not evidence of a new instability. The
+[failure diagnosis](../results/summaries/nsc-conformal-preparation-tangent-v1.json)
+retains the stopped attempt.
+
+For the corrected calculation, hold the original constraint level fixed:
+`C_g(r(epsilon),epsilon)=C_g(r_0,0)`. Differentiation still gives
+`J_r*delta_r=-partial_epsilon C_g` without requiring a zero original defect.
+The analytic Fourier control now also tests this on a nonzero constraint
+level. Report the initial defect unchanged, and make no claim of physical
+constraint-exact preparation. This is the finite forced model's response
+input; continuum-compatible preparation remains a separate requirement.
+The stopped 3.654-second command used at most **59 CPU seconds**, even at
+all sixteen logical processors. Admit one corrected frozen application at
+**140 process-CPU seconds** and one factorization, keeping the combined
+work below the original 200-second ceiling. There is no radius re-solve,
+state reset, relaxed zero-root claim or automatic retry.
 
 ## Two successive sourced boundaries, 18 October 2026
 
