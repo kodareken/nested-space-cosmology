@@ -1,0 +1,171 @@
+{
+  "charged_values": 5783039,
+  "continuum": {
+    "A": 0.7548017685662486,
+    "A0": 0.757849070701497,
+    "A_r": -1.1553833993650013,
+    "B": 0.7578710937631427,
+    "B_z": -0.7442597641763323,
+    "chi_T": 23.128019122383897,
+    "chi_T_z": -268.21746328444533,
+    "delta_r": 0.2348856767698366,
+    "h": 29.1417466301894,
+    "h_z": -371.8141048581881,
+    "k_T": -270.43285454478877,
+    "normalized_mass_density": 336.19071773001303,
+    "p": 30.517088344857882,
+    "p_z": -323.9400794276509
+  },
+  "counts": {
+    "coupled_stages": 1,
+    "new_meshes": 0,
+    "original_history_preparations": 1,
+    "time_steps": 0
+  },
+  "coupled_x_cap_defect": 31.26143831067408,
+  "defects": {
+    "chi_equation_defect": -0.00031867778978877936,
+    "chi_equation_defect_z": -0.030223377969889498,
+    "incoming_cap_rate_defect": 13.593528781621785,
+    "incoming_density_channel": 13.673256069424651,
+    "incoming_velocity_slope_channel": -0.08104331739941573,
+    "incoming_velocity_value_channel": 0.0013160295965494338,
+    "k_equation_defect": 5.099149436697246
+  },
+  "independent_mass_check": {
+    "bytes": 16769,
+    "path": "results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json",
+    "sha256": "e324ff4570c045af7225dcb04aaee0dc7828fb9fade73ff92f3cc751c0a52df6"
+  },
+  "input_receipt": {
+    "bytes": 33335,
+    "path": "results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json",
+    "sha256": "84620869ab30f7e4d18929ce668d063bd7e860a35d96685164950a07cb6523bf"
+  },
+  "kinematic_identity_defect": 0.0,
+  "level": 0,
+  "limits": {
+    "CPU_seconds": 60.0,
+    "charged_values": 40000000,
+    "summary_bytes": 12000
+  },
+  "point": {
+    "R_x": 1.192067800138663,
+    "T_x": 2.2997294383882867,
+    "alpha": 0.00012983127142551443,
+    "history_time": -0.9903225501750657,
+    "radius": 0.49208833485310643,
+    "wall_coordinate": 0.5388122198622797
+  },
+  "prepared_input_sha256": "11867d7614f2289025985d6f35000756002ef9c2f17c09a88466cc11a2517e04",
+  "projected_field_equations": {
+    "density_load": [
+      -1.2380824794751434e-16,
+      0.024160405811851797,
+      0.10060023737373805,
+      0.06443001241848936,
+      0.02774096731594281,
+      0.04668407358280763,
+      -0.010263214971083425
+    ],
+    "expected_density_boundary_load": [
+      0.0,
+      0.024160406389558457,
+      0.10060023975165218,
+      0.06443001390317087,
+      0.027740967865704798,
+      0.04668407459881741,
+      -0.010263215198993678
+    ],
+    "integrated_absolute_operation_scales": [
+      1.9370121093376513,
+      76.88902550931422
+    ],
+    "load_scales": [
+      1.0,
+      1.0
+    ],
+    "maximum_absolute_load_differences": [
+      5.30120276409344e-14,
+      2.3779141294921757e-09
+    ],
+    "normalized_load_differences": [
+      5.30120276409344e-14,
+      2.3779141294921757e-09
+    ],
+    "panels": 65,
+    "points": 2080,
+    "quadrature_order": 32,
+    "scope": "Strong-PDE projection on the existing captured metric. Not a new radial solve or a physical error enclosure.",
+    "tolerance": 1e-08,
+    "velocity_load": [
+      9.346551831533738e-18,
+      2.9742076255885765e-14,
+      5.30120276409344e-14,
+      1.3990182975011989e-14,
+      -1.1559409186613418e-14,
+      4.440731505520602e-15,
+      -1.2928263387715282e-15
+    ]
+  },
+  "represented": {
+    "chi_T": 23.127700444594108,
+    "chi_T_z": -268.2476866624152,
+    "k_T": -265.3337051080915
+  },
+  "runtime_cpu_seconds": 7.734375,
+  "saved_stage_recovery": {
+    "full_mass": {
+      "absolute_difference": 0.0,
+      "actual": 0.06032959470758069,
+      "reference": 0.06032959470758069
+    },
+    "h": {
+      "absolute_difference": 0.0,
+      "actual": 29.141746630189395,
+      "reference": 29.141746630189395
+    },
+    "lapse": {
+      "absolute_difference": 0.0,
+      "actual": 0.004058153597678574,
+      "reference": 0.004058153597678574
+    },
+    "p": {
+      "absolute_difference": 0.0,
+      "actual": 30.51708834485788,
+      "reference": 30.51708834485788
+    },
+    "temporal_mass_residual": {
+      "absolute_difference": 0.0,
+      "actual": 0.00012084066608132599,
+      "reference": 0.00012084066608132599
+    }
+  },
+  "schema": "nsc-atlas-wall-pointwise-rhs-v1",
+  "scope": "One archived coupled state. Local fixed-r scalar-equation defects; not the complete transmission derivative, an evolution or a closure theorem.",
+  "source_context_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
+  "source_files": 79,
+  "source_graph_sha256": "14a66a1a8e725acb441ec04b3e41bb2ecc2720b346bf82dc0f05e55215908f3f",
+  "source_sha256": {
+    "scripts/diagnose_nsc_atlas_wall_rhs.py": "012d2a8a1e616e646c8e436e309c46b74a6bd5aa0e3fb292df9d40298c4d1594",
+    "src/recursive_horizons/nsc_atlas_cap_pointwise_rhs.py": "66e0abee29c5a42d314bd8a9c233cbd0c34c9eb85b8920226b7d86ec366290e2",
+    "tests/test_nsc_atlas_cap_pointwise_rhs.py": "afa061e98a6bc940fbf0227e654d54647998421745494bc3e746daeffddd06ae"
+  },
+  "stage_seed": {
+    "bytes": 3333,
+    "git_tracked": false,
+    "numeric_state_values": 111,
+    "path": ".build/results/nsc-atlas-fixed-endpoint-level0-v3-failed-stage.npz",
+    "raw_trajectory_saved": false,
+    "sha256": "e6e4ce7a782ce564790db390774dca061c2f7a98e0219782e8fa0e191c138b33",
+    "source_x": 0.4370111883201181
+  },
+  "status": "completed_archived_pointwise_rhs",
+  "wall_channels": {
+    "conformal_flux": -0.1372960907396248,
+    "incoming_discrepancy": -0.18910788091230302,
+    "momentum_discrepancy": 0.0004204907568201577,
+    "normal_discrepancy": -0.0934782729825514
+  },
+  "x": 0.4370111883201181
+}

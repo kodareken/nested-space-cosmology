@@ -2,6 +2,30 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## P001 pointwise field equation on an actual archived state
+
+The [new check](../results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json)
+recovers the original level-0 state at `x=.4370111883201181` and compares
+its weak rates with the smooth scalar equations, using analytic basis and
+background jets. The local density equation differs by **5.0991494367**;
+the velocity defect is only **-.0003186778**. The density channel supplies
+13.6733 of the 13.5935 cap contribution to the incoming-trace rate defect.
+The exterior derivative is excluded, so this is not the full coupled rate.
+
+Projected onto every current basis function, the velocity and density
+equations agree with their zero/natural-boundary loads to `5.30e-14` and
+`2.38e-9`, respectively, within the fixed `1e-8` criterion. The physical
+mass, lapse and strong jets recover the earlier independent check. This
+supports unresolved pointwise boundary projection, rather than a missing
+bulk factor, at this actual state. It does not assign the unsaved maxima.
+Eight controls pass, including detection of a deliberately wrong bulk
+potential and the exact boundary-evaluation gain in an odd quintic space.
+The one stage and its projection use 7.734375 CPU seconds and 5,783,039
+charged values; the summary is 5531 bytes. No time step or new mesh ran.
+The [derivation](nsc-atlas-finite-amplitude.md#pointwise-equations-on-an-archived-evolved-state)
+shows why replacing the strong wall jets by the weak pair would not yet
+constitute a physical correction.
+
 ## What the cap--wall geometry changes, 18 October 2026
 
 The [actual reference calculation](nsc-atlas-dirac-probe.md)

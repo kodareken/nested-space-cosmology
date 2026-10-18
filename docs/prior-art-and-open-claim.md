@@ -30,6 +30,16 @@ with scale `max(1,max_abs(actual),max_abs(expected))`. This is a conditional
 equation-consistency check on the already checked metric, not a new mass
 integration or a bound on the physical truncation error.
 
+For the same saved output, derive the boundary evaluation's Riesz vector
+`l_h=phi^T*G^(-1)*e`. Its endpoint gain is `K_h=e^T*G^(-1)*e` and
+the density forcing contains `B*(h_weak-h_trace)*l_h`. Evaluate that gain
+on the three existing spaces at the same saved physical wall coordinate;
+only the level-0 force is attributed to an archived evolved state. An odd
+quintic axis-space control has the independent exact gain `21/Z`. The
+post-analysis has 10 CPU seconds and 8000 bytes, no new field or metric
+solve, no time step or new mesh. The boundary lift is not a new physical
+force or a prescription to subtract the residual.
+
 Independent coordinate/field-equation, zero-coupling and trace-derivative
 controls share 30 process-CPU seconds. After method freeze, one original
 history preparation, source construction and coupled stage have **60 CPU

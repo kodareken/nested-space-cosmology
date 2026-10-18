@@ -1,5 +1,23 @@
 # Reproducing the root project
 
+The actual archived cap RHS check reproduces with:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_wall_rhs.py --output .build/nsc-wall-pointwise-rhs.json
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_pointwise_rhs.py -q
+```
+
+It requires the original ignored 3333-byte level-0 v3 seed; the producer
+checks its binding and never starts an evolution to recover a missing seed.
+It rebuilds the original history once, evaluates one unchanged coupled
+stage and projects its pointwise field equations on the existing panels.
+The [saved result](../results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json)
+contains no raw arrays beyond seven-component load summaries. Hashes and
+dimensions are exact; stage recovery uses `1e-10*max(1,value)` and the
+projected load identity uses the recorded `1e-8` scale. Compare local rates
+within `1e-8` absolute/relative tolerance, not byte equality of runtime or
+commit metadata. The diagnostic does not advance or correct P001.
+
 The actual cap--wall Dirac inputs and P001 active-region diagnosis reproduce
 without an evolution or new grid:
 

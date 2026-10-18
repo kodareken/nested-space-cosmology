@@ -101,3 +101,19 @@ def test_projected_equation_recovers_boundary_load_and_rejects_wrong_bulk_potent
         altered.setattr(diagnostic,'scalar_rhs',wrong_potential)
         with pytest.raises(ValueError,match='projected scalar equation'):
             diagnostic.projection_check(basis,state,cap,bg,solutions,budget)
+
+
+def test_boundary_evaluation_gain_matches_the_exact_odd_legendre_sum():
+    from diagnose_nsc_atlas_wall_rhs import boundary_riesz
+    from recursive_horizons.nsc_atlas_cap_fixed_basis import FixedCapBasis
+    from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
+    from fractions import Fraction
+    budget=Budget(maximum_evaluations=100_000,cpu_seconds=10.)
+    # Axis space spans z,z^3,z^5. Odd Legendre orders 1,3,5 have squared
+    # endpoint weights (3+7+11)/Z = 21/Z on [0,Z].
+    for width,Z in ((Fraction(1),Fraction(3,5)),(Fraction(2),Fraction(6,5))):
+        basis=FixedCapBasis([0,width],budget=budget)
+        vector,row=boundary_riesz(basis,Z,budget)
+        assert row['endpoint_gain']==pytest.approx(21/float(Z),rel=2e-12)
+        gram=basis.gram(Z,budget=budget)
+        assert gram.squared_norm(vector,budget=budget)==pytest.approx(row['endpoint_gain'],rel=2e-12)

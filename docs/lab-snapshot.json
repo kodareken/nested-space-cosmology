@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f98984a2f24420b8797679632143fa2ec922bc49",
+  "current_receipt_commit_parent": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
   "files": [
     {
       "bytes": 3120,
@@ -10325,12 +10325,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 401968,
+      "bytes": 403480,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "a449924c488542b276f1c715ceaa509afcecb3d5",
+      "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a14c4c17e775e4ed77f9bb7f1d8f0f6eaea2dc049c20787daaa752af27a926bd"
+      "sha256": "8f41d7b3d0027af74b678be5b41c7e7373dd54fb392633200516fcc5a4e3e114"
     },
     {
       "bytes": 336399,
@@ -10452,12 +10452,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 616368,
+      "bytes": 619721,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "a449924c488542b276f1c715ceaa509afcecb3d5",
+      "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "788900a02c759b4d730b6c5bfc8e40ba5ef453556322676b8debcc31fbcc2a46"
+      "sha256": "daca3e33735676646ebe24014d706b93daad9569378b842785944c066e758e62"
     },
     {
       "bytes": 8895,
@@ -11474,12 +11474,12 @@
       "sha256": "2de9c90a1995f51dada247d902553e3f1f3b7778649f8f1450a605aefa7e7b03"
     },
     {
-      "bytes": 539132,
+      "bytes": 539758,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "f98984a2f24420b8797679632143fa2ec922bc49",
+      "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2f98421188bfb6d5c65ebb8a422193226ebaea4392951f9731e951de97e2b8dd"
+      "sha256": "c994ea160c16694cbad4047ecbe0250ac5cea1810bcde025cda3228c52257145"
     },
     {
       "bytes": 6705,
@@ -11488,12 +11488,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 178482,
+      "bytes": 179474,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "399191829c61be9c5778e4503a9a59689ffc5cbe",
+      "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5054b7d6e7ba9bd9e65c82024f3e464e684a401cfd1f5539bf5e2acca96f97ee"
+      "sha256": "8c43ae22c539e40fb1137d5e8a9e68351f9e1d328ff9a75709f5f6fa2cd4664c"
     },
     {
       "bytes": 18356,
@@ -30238,6 +30238,14 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "bytes": 5531,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
+      "path": "results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "318b0372094fe1904dab8a18acc615a1061485a02a4e33030fe5905d07ad81a8"
+    },
+    {
       "bytes": 4475,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "05b924f15252479d66ebeb21e58f4d860b168197",
@@ -33003,12 +33011,12 @@
       "sha256": "d8559c58fbe83825d7f9f240015849cf36c571163b05066871815b296c6b4364"
     },
     {
-      "bytes": 12929,
+      "bytes": 16828,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "f98984a2f24420b8797679632143fa2ec922bc49",
+      "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
       "path": "scripts/diagnose_nsc_atlas_wall_rhs.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "012d2a8a1e616e646c8e436e309c46b74a6bd5aa0e3fb292df9d40298c4d1594"
+      "sha256": "b4c4289ca2487ee0c7a9612a07e7d7b465115a4004fc94330f962ff7491a5b39"
     },
     {
       "bytes": 4707,
@@ -37540,12 +37548,12 @@
       "sha256": "01b8ecfb6a02a893ad12bc372ebfb5d1917b4e4b0cf9e132b9f3139005874625"
     },
     {
-      "bytes": 5416,
+      "bytes": 6326,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "f98984a2f24420b8797679632143fa2ec922bc49",
+      "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
       "path": "tests/test_nsc_atlas_cap_pointwise_rhs.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "afa061e98a6bc940fbf0227e654d54647998421745494bc3e746daeffddd06ae"
+      "sha256": "5fb0232c1bb9605a7473b03ae27c6fdc53878879fe373ab6dbf6520b020d7031"
     },
     {
       "bytes": 5277,

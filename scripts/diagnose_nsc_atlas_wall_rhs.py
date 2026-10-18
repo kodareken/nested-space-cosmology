@@ -92,10 +92,67 @@ def projection_check(basis,state,cap,background,solutions,budget):
         tolerance=1e-8,scope='Strong-PDE projection on the existing captured metric. Not a new radial solve or a physical error enclosure.')
 
 
+def boundary_riesz(basis,Z,budget):
+    """Represent evaluation at the existing clipped wall in the dz inner product."""
+    gram=basis.gram(Z,budget=budget)
+    e=np.zeros(basis.dimension);e[gram.wall['indices']]=gram.wall['value']
+    vector=gram.solve(e,budget=budget)
+    gain=float(e@vector)
+    if not math.isfinite(gain) or gain<=0:raise ValueError('unresolved positive boundary-evaluation gain')
+    return vector,dict(dimension=basis.dimension,endpoint_gain=gain,L2_norm=math.sqrt(gain),
+        clipped_outer_width=float(Z-basis.exact_knots[-2]),gram_condition=gram.condition)
+
+
+def analyze_boundary(path,output):
+    started=time.process_time();budget=endpoint.Budget(maximum_evaluations=2_000_000,cpu_seconds=10.)
+    if output.exists():raise FileExistsError(output)
+    if not output.parent.is_dir():raise ValueError('output parent must exist')
+    path=path.resolve();input_binding=binding(path)
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    if subprocess.check_output(['git','show',f'{commit}:{input_binding["path"]}'],cwd=ROOT)!=path.read_bytes():
+        raise ValueError('commit the archived pointwise check before its boundary analysis')
+    saved=json.loads(path.read_bytes())
+    if saved['status']!='completed_archived_pointwise_rhs' or saved['level']!=0:
+        raise ValueError('the original archived level-0 pointwise check is required')
+    Z=Fraction(saved['point']['wall_coordinate']);cases=[]
+    coefficient=-saved['continuum']['B']*saved['wall_channels']['normal_discrepancy']
+    for level in range(3):
+        basis=endpoint.FixedCapBasis(endpoint.cap_knots(level),budget=budget)
+        vector,geometry=boundary_riesz(basis,Z,budget)
+        row=dict(level=level,**geometry)
+        if level==0:
+            lift=coefficient*row['endpoint_gain']
+            load=np.asarray(saved['projected_field_equations']['density_load'])
+            expected=np.asarray(saved['projected_field_equations']['expected_density_boundary_load'])
+            row.update(boundary_force_coefficient=coefficient,boundary_density_force_at_wall=lift,
+                actual_density_equation_defect=saved['defects']['k_equation_defect'],
+                remaining_pointwise_projection_defect=saved['defects']['k_equation_defect']-lift,
+                projected_load_lift_at_wall=float(vector@load),
+                load_identity_defect_lift_at_wall=float(vector@(load-expected)))
+        cases.append(row)
+    result=dict(schema='nsc-atlas-wall-boundary-lift-v1',source_context_commit=commit,
+        producer_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        input=input_binding,point=saved['point'],cases=cases,
+        identity='kappa_k=(I-Pi_h)*(k0_T-k_T_continuum)+B*(h_weak-h_trace)*l_h',
+        interpretation='The natural incoming boundary mismatch is lifted into the density RHS. Finer boundary-evaluation resolution can amplify an unresolved mismatch.',
+        scope='One archived level-0 force and geometric gains of the three existing spaces at the same point. No level-1/2 evolved force or unstored maximum is inferred.',
+        runtime_cpu_seconds=time.process_time()-started,charged_values=budget.evaluations,
+        counts=dict(field_solves=0,metric_solves=0,time_steps=0,new_meshes=0),
+        limits=dict(CPU_seconds=10.,charged_values=2_000_000,summary_bytes=8000))
+    raw=json.dumps(result,indent=2,sort_keys=True,allow_nan=False)+'\n'
+    budget.check()
+    if len(raw.encode())>8000:raise RuntimeError('boundary lift summary exceeds byte limit')
+    output.write_text(raw,encoding='utf-8',newline='\n')
+    print(json.dumps(cases))
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--analyze-existing',type=Path,
+        help='analyze the boundary lift in a committed archived-state record without a field solve')
     args=parser.parse_args()
+    if args.analyze_existing is not None:return analyze_boundary(args.analyze_existing,args.output)
     if args.output.exists():raise FileExistsError(args.output)
     if not args.output.parent.is_dir():raise ValueError('output parent must exist')
     commit,sources=endpoint.frozen_sources()

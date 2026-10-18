@@ -42,8 +42,9 @@ internal knots also change. The increasing actual-mass envelope and its
 5.11% increasing absolute integral consequently do not establish cap
 convergence; the latter also excludes maximum-sampling density as the
 sole cause. The existing exact split into strong/weak trace and explicit
-background-time remainder remains the relevant residual. It is not a
-radial mass/lapse integration error. A same-domain trace/affine-transport
+background-time remainder remains the relevant residual. The independent
+radial check excludes mass/lapse integration error at its archived stage.
+A same-domain trace/affine-transport
 check is needed before any new evolution; no additional grids have run.
 
 The [same-background instantaneous control](../results/summaries/nsc-atlas-endpoint-frozen-projection-v1.json)
@@ -109,6 +110,78 @@ The unarchived departures and peak states still prevent unique attribution
 of the all-stage maxima. A consistent incoming trace and affine transport
 must be checked before another refinement; replacing the radial mass law
 or adding a continuum transport term is not supported by these results.
+
+### Pointwise equations on an archived evolved state
+
+The [archived-state check](../results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json)
+now evaluates the actual level-0 state at `x=.4370111883201181`. Its radius,
+full mass, lapse, strong scalar jets and temporal mass gap reproduce the
+previous independent mass/lapse check. There is one unchanged coupled
+stage, no time step and no new mesh.
+
+In radial `z=atanh(r)`, set `A0=1-r^2`, `B=A*exp(delta)`,
+`p=k/A0`, `h=chi_z/A0-chi/r`, and `U=P_f`. The original smooth scalar
+equation gives the local fixed-radius rates
+
+$$
+\chi_T=Bp,\qquad
+k_T=\frac1r\partial_z(rBh)-A_0r e^\delta U.
+$$
+
+There is no moving-wall or lapse-time derivative in these equations.
+Coefficient rates must first be divided by the coupled `T_x` and then
+have the explicit background partials added. Let `kappa_chi` and `kappa_k`
+be those represented rates minus the local equations. At the saved wall:
+
+| Rate per cap clock T | Pointwise equation | Represented rate | Difference |
+|---|---:|---:|---:|
+| chi_T | 23.1280191224 | 23.1277004446 | -.0003186778 |
+| k_T | -270.4328545448 | -265.3337051081 | 5.0991494367 |
+| partial_z chi_T | -268.2174632844 | -268.2476866624 | -.0302233780 |
+
+The cap contribution to the derivative of the incoming strong trace differs
+from its continuum value by
+
+$$
+\frac{\kappa_k+\partial_z\kappa_\chi}{rA_0}
+-\frac{\kappa_\chi}{r^2}=13.5935287816.
+$$
+
+The density channel contributes `13.6732560694`; velocity-slope and value
+channels contribute `-.0810433174` and `+.0013160296`. This identifies a
+local density-force projection effect. It is not the full derivative of
+the coupled transmission law: the exterior incoming derivative and common
+wall-motion terms are outside this comparison.
+
+The mass-gradient identities imply the independent load conditions
+`integral(phi*kappa_chi dz)=0` and
+`integral(phi*kappa_k dz)=e*B*(h_weak-h_trace)`. Projecting the pointwise
+equations on all seven basis functions, using the existing radial metric
+and smooth panels, gives maximum differences `5.30e-14` and `2.38e-9`.
+They pass the fixed `1e-8*max(1,load)` criterion. A manufactured wrong
+potential factor fails this check. Thus the checked weak operator is
+consistent with the continuum bulk equation and its natural boundary
+pairing; its large wall-point defect is not a demonstrated missing bulk
+factor. Eight independent controls cover coordinates, field equations,
+trace derivatives, the projection check and boundary evaluation.
+
+More explicitly, with `Pi_h` the `dz` orthogonal projection and
+`l_h(z)=phi(z)^T G^(-1)e`, the finite density defect has the form
+
+$$
+\kappa_k=(I-\Pi_h)(k_{0,T}-k_T^{\rm continuum})
+ + B(h_{\rm weak}-h_{\rm trace})l_h.
+$$
+
+The boundary term is the existing weak enforcement of incoming data,
+not an additional physical source. Its endpoint gain
+`K_h=e^T G^(-1)e=integral(l_h^2 dz)` can grow when a trial space resolves
+boundary evaluation more sharply. Consequently a stronger pointwise
+force can coexist with correct integrated equations and smaller velocity
+error. Feeding the weak pair into the wall would use derivatives the
+represented field does not have; it is not a verified correction. A
+trace-compatible approximation must follow from the same variational
+boundary problem and pass these strong and weak checks.
 
 ## Exact frame and potential
 
