@@ -350,3 +350,266 @@ not quantum probabilities or reflection amplitudes. The temporal Israel,
 moving continuity and normal-frame checks differ by at most `2.67e-15` in
 the reference units. In the parallel wall-normal frame the recovered
 coefficient is `3/ell`, exactly the earlier four-dimensional result.
+
+## Finite joined time chart
+
+The next connection supplies a time-dependent background for propagation.
+It is a coordinate pullback of the same quiet de Sitter and Schwarzschild
+metrics, with the same moving material wall. It does not use the failed
+finite-amplitude P001 endpoint as a corrected metric.
+
+Let `v(R), beta_minus(R), beta_plus(R)` be the existing signed quiet wall
+data and `A_w=1-H^2*Rw^2`. Define the constant initial clock normalization
+
+$$
+Q_0=\frac{\beta_{-,0}}{v_0\sqrt{A_{w,0}}},\quad
+R_w(t)=R_{w,0}+t/Q_0,\qquad R_{w,0}/\ell=.45.
+$$
+
+The original proper wall velocity and static-cap clock then give
+
+$$
+\frac{d\tau_w}{dt}=\frac1{Q_0v},\qquad
+\frac{dT_{\rm cap}}{dt}=\frac{\beta_-}{Q_0 A_wv},\qquad
+\lambda_w=H^{-1}\arcsin(HR_w),\quad
+\frac{d\lambda_w}{dt}=\frac1{Q_0\sqrt{A_w}}.
+$$
+
+Use the coordinate `y=lambda-lambda_w(t)` pinned to the wall. The cap is
+explicitly
+
+$$
+r=H^{-1}\sin(H(y+\lambda_w)),\quad
+a_-=1,\quad N_-=\sqrt{1-H^2r^2}\,T_{{\rm cap},t},\quad
+b_-=\lambda_{w,t}.
+$$
+
+Here the shift `b` is distinct from the signed normal wall quantities
+`beta_plus, beta_minus`. At the wall its value is `Nw*s`, with
+`Nw=gamma/(Q0*v)` and `s=gamma_v/gamma`. Initially `Nw=1`.
+
+On the exterior use `X=(U,r)` in outgoing Eddington--Finkelstein coordinates
+with `g2=-f*dU^2-2*dU*dr`, `f=1-2M/r`. The initial slice already fixes
+`X0(y)`, `r0_y`, `V0=u_Sigma(r)` and `U0_y=-1/(V0+r0_y)`. Select the
+declared initial coordinate lapse and shift
+
+$$
+S(y)=1-\operatorname{step}(y/\ell),\quad
+N_0(y)=\exp(a_{\Sigma+,0}yS(y)),\quad
+b_0(y)=s_0S(y).
+$$
+
+This uses the same smooth step as the initial-slice taper. It is flat at
+the endpoints, and `S=0` for `y>=ell`. It fixes gauge data, not a quantum
+state. The initial coordinate velocity in the exterior is
+
+$$
+\dot U_0=\frac{N_0-b_0}{V_0+r_{0,y}},\qquad
+\dot r_0=N_0V_0+b_0r_{0,y}.
+$$
+
+The exact material trajectory in the same exterior coordinates has
+
+$$
+\frac{dU_w}{dR_w}=\frac1{v(\beta_++v)},\qquad
+e_w(t)=\left(-\frac1{E+J},J\right),\quad
+E=\frac{k_{\rm wall}R_wv}{\sqrt{A_w}},\quad
+J=\sqrt{A_w}-\frac{k_{\rm wall}R_w\beta_-}{\sqrt{A_w}}.
+$$
+
+No division by `beta_plus` or `f` is made. With `F0=S` and `F1=y*S`, set
+
+$$
+\begin{split}
+X(t,y)={}&X_0(y)+t\dot X_0(y)\\
+&+\bigl(X_w(t)-X_0(0)-t\dot X_0(0)\bigr)F_0(y)\\
+&+\bigl(e_w(t)-X_{0,y}(0)-t\dot X_{0,y}(0)\bigr)F_1(y).
+\end{split}
+$$
+
+The values and first derivatives of `F0,F1` enforce the wall embedding and
+common spatial tangent exactly: `X(t,0)=Xw(t)`, `X_y(t,0)=ew(t)`. The
+initial slice is `X0`. Recovering the prescribed initial coordinate velocity
+also requires `e_w,t(0)=dot(X0)_y(0)`; this is checked using the temporal
+Israel lapse jet above. Future slices need not retain constant `V` or
+vanishing `K_lambda_lambda` at the wall.
+
+Differentiate the embedding to extract the full radial metric:
+
+$$
+h=-fU_y^2-2U_yr_y,\quad
+B=-fU_tU_y-U_tr_y-r_tU_y,\quad
+D=U_tr_y-r_tU_y,\qquad
+a=\sqrt h,\quad N=D/a,\quad b=B/h.
+$$
+
+The chart is admitted only where `h>0,D>0`; taking the absolute value of
+`D` would conceal a reversal of its time orientation. The signed lapse
+makes the time gradient timelike. The coordinate vector `partial_t` need
+not itself be timelike for a valid foliation. Since each exterior point is
+a pullback of Schwarzschild, no extra bulk matter is introduced. The metric
+and its derivatives still have to be computed consistently; the spherical
+constraints and geometric mass provide independent checks.
+
+For this metric the half-density generator acquires shift transport:
+
+$$
+H=-i\left[\alpha\left(c\partial_y+\frac{c_y}2\right)
+-I\left(b\partial_y+\frac{b_y}2\right)\right]
++\sigma_1\frac{Nk}r,\qquad c=N/a.
+$$
+
+The interface is fixed at `y=0`. Put `B_D=c*alpha-b*I`. Its transparency
+condition implies
+
+$$
+[\chi_y]=-\tfrac12 B_D^{-1}[B_{D,y}]\chi.
+$$
+
+At the wall `a=1`, `b=N*s` and `|s|<1`, so this inverse exists. Restoring
+the spatial half-density derivatives and the normal spin connection must
+recover `3*k_wall/2` in the parallel material-normal frame. The shift term
+and its half-derivative are required in that check.
+
+The [admitted reference calculation](prior-art-and-open-claim.md#a-finite-joined-time-chart-for-the-actual-quiet-dirac-background)
+uses fixed wall-radius cuts and geometric nodes. Sampled positivity is a
+numerical check, not a uniform interval enclosure. No propagated quantum
+covariance or loop polarization is implied by the coordinate construction.
+
+## Conformal calculation variables remove the singular wall jet
+
+For this massless probe a useful exact simplification follows from
+four-dimensional conformal covariance. On `r>0`, use
+
+$$
+\Omega=\ell/r,\qquad \widetilde g=\Omega^2g,\qquad
+\widetilde\psi=\Omega^{-3/2}\psi,\qquad
+\widetilde D\widetilde\psi=
+\Omega^{-5/2}D\psi.
+$$
+
+This is a change of calculation variables for the probe. The gravitational
+action, physical metric and observer clocks remain those of `g`. The
+conformal weights are checked directly in the
+[controls](../tests/test_nsc_atlas_dirac_conformal.py); the smooth one-sided
+operator identity also appears in
+[Gerard--Stoskopf, 2.7.2](https://arxiv.org/html/2108.11630v3). Its use here
+is local on each side and in the explicit interface limits; no smooth
+global-state theorem is applied to the material wall.
+
+The original pure-tension jump obeys
+`[K^a_b]=-k_wall*delta^a_b` and `[n(log r)]=-k_wall`. Consequently
+
+$$
+[\widetilde K^a{}_b]=\Omega^{-1}
+\bigl([K^a{}_b]+\delta^a{}_b[n\log\Omega]\bigr)=0.
+$$
+
+Both the temporal and angular components cancel independently. The normal
+spinor jump transforms in the same way:
+
+$$
+[\widetilde n(\widetilde\psi)]
+=\Omega^{-5/2}\bigl([n(\psi)]
+-\tfrac32[n\log\Omega]\psi\bigr)=0.
+$$
+
+Here common spin frames are identified at the wall; tangential derivatives
+of the conformal factor are shared. Thus the coefficient `3/ell` in the
+original variables is not a reflection amplitude or an independent surface
+spinor interaction. In the conformal variables the corresponding first
+normal jets are continuous. This does not remove curvature variation away
+from the wall or establish a vanishing scattering or gravitational response.
+
+The transformed metric is a product of the radial two-metric and a sphere
+of constant radius `ell`. For a smooth one-sided radial factor
+`g2=-f*dt2+dr2/f`, its radial curvature is
+
+$$
+\widetilde R_{(2)}=\ell^{-2}
+\bigl(-r^2f''+2rf'-2f\bigr).
+$$
+
+This expression has no division by `f` and continues through a coordinate
+horizon. In particular,
+
+$$
+\widetilde R_{(2),-}=-2/\ell^2,\qquad
+\widetilde R_{(2),+}=(-2+12M/r)/\ell^2.
+$$
+
+A direct Ricci contraction of the transformed two-dimensional metric checks
+these results independently. The cap operator in these variables lives on
+the constant-curvature radial geometry, with sphere eigenvalues `k/ell`;
+the nested exterior retains a finite radial curvature change `12M/(r*ell^2)`.
+A smooth continuation of the same cap has no such change. The transformed
+Weyl invariant is zero in the cap and `48*M^2/(r^2*ell^4)` outside. No
+curvature distribution is squared in these calculations.
+
+The conformal map is singular at the physical centre and asymptotic end.
+Regularity and incoming-state data at those ends still have to be imposed;
+they cannot be erased by the local operator simplification. At the quantum
+level the measure and renormalization also generate a conformal anomaly;
+[Vassilevich, 7.1](https://arxiv.org/html/hep-th/0306138) gives its effective-action
+relation. A two-dimensional mode calculation must retain a consistent
+four-dimensional regulator and renormalization prescription. None of these
+classical cancellations establishes a quantum Weyl symmetry or a nested
+value of `Psi/Phi`.
+
+## Local one-loop Dirac trace on the original physical geometry
+
+The [local trace component](../src/recursive_horizons/nsc_atlas_dirac_trace.py)
+uses the original `g`, with one free massless four-component Dirac field.
+Free Dirac quantization and the general Laplace-type heat coefficient are
+imported. The spin and statistics contractions are calculated explicitly:
+`E=-R/4`, `tr I=4` and `tr(Omega_mu_nu*Omega^mu_nu)=-Riemann^2/2`.
+The fermionic determinant reverses the sign of the traced heat coefficient.
+For the two quiet smooth regions, `Box R=0`, giving
+
+$$
+\frac{\langle T^\mu{}_\mu\rangle}{\hbar c}
+=\frac{7R_{\alpha\beta\gamma\delta}R^{\alpha\beta\gamma\delta}
++8R_{\alpha\beta}R^{\alpha\beta}-5R^2}{360(4\pi)^2}.
+$$
+
+The [controls](../tests/test_nsc_atlas_dirac_trace.py) contract explicit
+four-component Euclidean Clifford matrices and reproduce the corresponding
+Weyl/Euler coefficients `c=1/20`, `a=11/360`. The imported determinant and
+heat-coefficient framework is described in
+[Vassilevich, 3.3, 4.1 and 7](https://arxiv.org/html/hep-th/0306138).
+The one-sided Lorentzian curvature invariants are already checked directly
+in the [probe controls](../tests/test_nsc_atlas_dirac_probe.py). Substitution
+therefore yields
+
+$$
+\frac{\langle T^\mu{}_\mu\rangle_-}{\hbar c}
+=-\frac{11H^4}{240\pi^2},\qquad
+\frac{\langle T^\mu{}_\mu\rangle_+}{\hbar c}
+=\frac{7M^2}{120\pi^2r^6}.
+$$
+
+A smooth continuation of the same cap retains the cap value. A flat
+background has zero curvature trace. This actual geometric local quantum
+term is distinct from the old flat nonlocal polarization.
+
+For the trace projection only, let `lP^2=hbar*G/c^3`, `h=H*ell`,
+`m=M/ell`, `x=r/ell`. The corresponding contribution has
+
+$$
+\Delta\Lambda_{\rm trace}\ell^2
+=\frac{l_P^2}{\ell^2}
+\begin{cases}
+11h^4/(120\pi),&\text{cap},\\
+-7m^2/(60\pi x^6),&\text{exterior}.
+\end{cases}
+$$
+
+This projects `T` onto `-T*g/4`; it does not prove that the full stress has
+vacuum form. The exterior coefficient varies with radius. The independently
+declared `ell=10 km` fixes an illustrative physical scale, as in P001; it
+is not calculated from a target Lambda. The cap's `3/ell^2` remains an
+input of the quiet geometry. State-dependent traceless stress, interface
+renormalization, causal polarization and backreaction are not supplied by
+this local trace. Material-wall curvature distributions are not squared.
+The scheme-dependent total derivative cannot be ignored in a wall or
+nonconstant-curvature calculation merely because it vanishes here.

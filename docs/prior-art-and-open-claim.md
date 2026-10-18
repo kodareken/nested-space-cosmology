@@ -1,5 +1,98 @@
 # Prior art and admission of new research
 
+## Actual quiet-background Dirac one-loop bulk trace
+
+Compute the state-independent smooth-bulk trace term of the same massless
+four-component Dirac probe on the actual cap and exterior, in the original
+physical metric. Import the free-field determinant and general Laplace-type
+heat coefficient; calculate the spin-connection trace and fermionic sign
+explicitly. Substitute the existing independently checked one-sided curvature
+invariants. `Box R=0` in both quiet smooth regions, so the scheme-dependent
+total derivative does not enter this application. Do not square material-wall
+curvature distributions or identify the trace with the full vacuum stress.
+
+The missing connection is the local quantum part on the actual background,
+which cannot be supplied by the old flat polarization. Report the trace
+projection `DeltaLambda_trace=-2*pi*lP^2*(trace/(hbar*c))`, its dimensionless
+coefficient and the same independently declared fiducial `ell=10 km`. This
+does not derive the cap's supplied Lambda or a cosmological value. Physical
+state, interface terms, traceless stress and the causal polarization remain
+open. Clifford/statistics/known-flat controls have 30 process-CPU seconds;
+after method freeze one algebraic application has 30 seconds and 8000 summary
+bytes, with no field/grid evolution. Wrong spinor/statistics factors,
+distribution products, and calling a trace projection a slip or a complete
+Lambda mechanism are the anticipated failures. Stop on a failed identity.
+An independent Clifford/heat calculation with different coefficients would
+reject this result; the dimensional scale is supplied rather than fitted.
+
+## Conformal variables at the actual Dirac material interface
+
+For the same declared massless minimally coupled Dirac probe, use its
+four-dimensional conformal covariance as a calculation tool. On `r>0`,
+set `g_tilde=(ell/r)^2*g`, giving a product of a two-dimensional radial
+metric and a sphere of constant radius `ell`. Derive the transformed
+extrinsic curvature and spinor normal transmission from the actual
+pure-tension Israel jump. Calculate the one-sided radial curvature using
+the original cap and Schwarzschild functions, with a smooth continuation
+of the same cap as control. This identifies what the wall singularity and
+the surrounding bulk actually do to the massless operator.
+
+Independent tetrad/conformal-weight, distributional curvature and radial
+curvature controls have 30 process-CPU seconds; after method freeze one
+source-anchor evaluation has 30 seconds and 8000 summary bytes. No field,
+loop or P001 evolution is admitted. Keep physical observer clocks and the
+gravity action in the original metric. The conformal map is singular at the
+centre and at the asymptotic end, so their physical boundary/state data
+cannot be discarded. Stop on an inconsistent transformed junction. Wrong
+conformal weights, confusing a density derivative with scattering, and
+dropping the quantum conformal anomaly are the anticipated failures.
+A direct transformed tetrad or one-sided curvature calculation disagreeing
+would reject this connection. Vanishing transformed first-derivative jumps
+do not imply zero quantum metric response; the bulk curvature and physical
+state remain part of that response.
+
+## A finite joined time chart for the actual quiet Dirac background
+
+The checked initial slice and wall generator do not supply the time-dependent
+metric needed for propagation. Keep the original quiet `H*ell=1`,
+`k_wall*ell=2`, `M/ell=.4` sources and the original `.45 <= Rwall/ell <= .55`
+wall branch. Parameterize radius linearly in a clock normalized to wall
+proper time initially; the cap clock and wall proper clock follow from the
+existing trajectory. Use a coordinate pinned to the wall and pull back the
+exact cap and outgoing Eddington--Finkelstein exterior metrics.
+
+Start with the checked initial slice. Extend its initial positive lapse as
+`exp(a_plus0*y*S(y/ell))` and shift as `s0*S(y/ell)`, where `S` is the
+existing smooth cutoff, and match both the exact wall embedding and its
+common spatial tangent with the two functions `S` and `y*S`. This is a
+specified coordinate construction, not a physical source or state fit. It
+has to recover the earlier initial slice and the already required wall
+lapse jet. The clock parameter, matching jets, cutoff and sources remain
+fixed for this calculation.
+
+The new `nsc_atlas_dirac_time_chart` companion supplies the full metric and
+first spatial operator jets by differentiating this pullback. Reuse the
+existing radial Dirac coefficient interface and retain shift transport and
+its half-derivative. Check spacelikeness, the signed future lapse, bulk
+Hamiltonian/momentum constraints and geometric mass, wall metric and
+temporal/angular Israel conditions, and the normal-frame spinor jump.
+Independently differentiate the embedding and metric, and recover the
+initial reference. A fixed 32/64 quadrature comparison covers only coordinate
+and clock integrals, not new field evolution.
+
+Controls have **60 process-CPU seconds**. After method freeze, one reference
+evaluation has **120 process-CPU seconds / 200000 quadrature points** and at
+most 12000 summary bytes. Evaluate nine predeclared wall-radius cuts and the
+same fixed initial geometric nodes, with one BLAS thread; take no P001 or
+Dirac evolution steps. State all sampled minima as sampled checks, without
+claiming a uniform interval enclosure. Stop on a nonpositive spatial norm
+or signed lapse, failed matching/constraint identity, or exhausted budget.
+The likely failures are intersecting slices, a lost shift or frame term,
+and inconsistent quadrature/derivative jets. An independent metric pullback
+or four-dimensional wall check disagreeing would reject this chart. A
+compatible quantum preparation, renormalized polarization and observer
+readout remain subsequent work, not outputs of the coordinate construction.
+
 ## Source-anchored joined spatial geometry for the Dirac calculation
 
 The existing complete cap--bridge slice is at `Rwall/ell=1.5`; the current

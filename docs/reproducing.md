@@ -1,5 +1,30 @@
 # Reproducing the root project
 
+The local conformal Dirac interface and bulk curvature calculation reproduce
+with the committed method and an unused output path:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_conformal.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_conformal.py --output .build/nsc-atlas-dirac-conformal-interface.json
+```
+
+The [owner](nsc-atlas-dirac-probe.md#conformal-calculation-variables-remove-the-singular-wall-jet)
+specifies the conformal weights and their limits. This calculation takes no
+evolution steps and does not select a quantum state or compute a loop.
+
+The same committed producer can separately evaluate the local one-loop
+Dirac bulk trace in the original quiet physical metric:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_trace.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_conformal.py --bulk-trace --output .build/nsc-atlas-dirac-bulk-trace.json
+```
+
+This imports free Dirac quantization, calculates its spin/statistics heat
+coefficient and uses the existing one-sided curvature invariants. The
+`10 km` length is supplied independently. It computes no nonlocal loop
+polarization, singular-wall term or slip.
+
 The physical initial Dirac time generator and its moving-wall compatibility
 reproduce with:
 
