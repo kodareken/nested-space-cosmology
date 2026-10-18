@@ -4,7 +4,7 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## What the cap--wall geometry changes, 18 October 2026
 
-The [actual reference calculation](nsc-atlas-cap-wall-response.md#dirac-probe-on-the-actual-quiet-cap-and-material-wall)
+The [actual reference calculation](nsc-atlas-dirac-probe.md)
 derives the massless probe operator on the original cap and its transparent
 material interface. This is a declared extension of the classical scalar
 candidate. At `R/ell=.5`, the lowest radial Dirac channel has `W*ell=sqrt(3)`;
@@ -67,7 +67,7 @@ three original spaces the physical mass residual is
 `-4.9437477e-6 -> -4.4753380e-6 -> -4.1578051e-6`: it improves and is
 far smaller than the actual saved-cut residual. The unbisected cell alone
 therefore does not establish the trajectory's growing mass error.
-The actual velocity-trace discrepancy improves, while its normal/incoming
+The actual momentum-trace discrepancy improves, while its normal/incoming
 trace mismatch worsens. These are separate channels of the wall coupling.
 The three instantaneous solves use 5.078125 process-CPU seconds including
 one original-history preparation, with no exterior solve or time step.
@@ -77,7 +77,7 @@ The independent radial check applies to its own retained stage, not every
 unstored trajectory maximum.
 
 The [incoming-offset control](../results/summaries/nsc-atlas-endpoint-incoming-control-v1.json)
-now identifies the two channels at that saved cut. The velocity discrepancy
+now identifies the two channels at that saved cut. The momentum-trace discrepancy
 improves `-.0017107 -> -.0008346`, but the normal discrepancy grows
 `-.3556361 -> -.4932409`. Copying the measured incoming sum mismatch into
 the same frozen control gives `-.0004154071 -> -.0007235781`, compared

@@ -1102,7 +1102,7 @@ between the larger geometry and its observer's effective volume response.
 
 ### 6.1.13. The actual cap--wall Dirac operator and the missing nested slip
 
-The [cap--wall calculation](../docs/nsc-atlas-cap-wall-response.md#dirac-probe-on-the-actual-quiet-cap-and-material-wall)
+The [cap--wall calculation](../docs/nsc-atlas-dirac-probe.md)
 adds a declared massless, minimally coupled probe with no direct surface
 spinor interaction to the original classical scalar candidate. It uses the
 known quiet reference; P001's unconverged endpoint supplies no controlled

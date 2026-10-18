@@ -85,6 +85,17 @@ The saved cut `x=.45094013016102275` separates the channels:
 | 2 | -.000834584 | -.4932409 | -.4940755 |
 
 The velocity/momentum trace improves; the normal/incoming mismatch grows.
+The interface in
+[fixed_cap_hybrid_reference](../src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py)
+supplies the reconstructed outgoing characteristic `(p_trace-h_trace)/R`
+to the material coupler. The subsequent
+[weak cap operator](../src/recursive_horizons/nsc_atlas_cap_fixed_reference.py)
+sets `p_weak+h_weak=R*w_plus` and obtains its velocity by a Gram projection.
+It does not separately enforce `p_trace+h_trace=R*w_plus` at finite dimension.
+The measured incoming mismatch is exactly the difference between these
+last two sums. This is the concrete strong/weak interface connection that
+must close; improved exterior resolution does not enforce it in the cap's
+single unresolved active element.
 Transferring that measured sum mismatch to the already frozen background
 control gives mass gaps `-.0004154071`, `-.0005567283`, `-.0007235781`,
 versus the saved `-.0004487427`, `-.0005965573`, `-.0007620291`.

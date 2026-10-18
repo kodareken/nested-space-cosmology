@@ -1311,7 +1311,7 @@ response supplies a relation between motion and lensing using one common
 profile. The source normalization cancels from these ratios. It is not an
 astronomical comparison or a physical length calibration. This is an imported
 Dirac response about flat space, not a prediction due to cap--wall nesting.
-The [actual cap--wall operator and interface calculation](nsc-atlas-cap-wall-response.md#dirac-probe-on-the-actual-quiet-cap-and-material-wall)
+The [actual cap--wall operator and interface calculation](nsc-atlas-dirac-probe.md)
 keeps the state, domain and moving-wall response needed for that extension
 explicit; a nested gravitational slip remains uncomputed.
 
