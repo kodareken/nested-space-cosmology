@@ -6,6 +6,15 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.4` adds Section 6.1.9: one initial paired-phase direction
+propagated with the complete original conformal geometry to two received
+photon frequencies. Both original time steps finish and reproduce the saved
+baseline histories. The table reports the received-redshift derivatives and
+their observed temporal differences. The nonzero inherited constraint,
+physical preparation gap and remaining effective-action connection stay
+explicit. The first stopped derivative check is preserved and the unchanged
+radial force is checked through its independent initial Fourier action.
+
 Revision `2026-10-18.3` adds Section 13.22: all three original P001 endpoint
 runs have completed. The local wall-radius protocol now has a supplied
 physical ruler and a 22.85-micrometre observed resolution envelope. The

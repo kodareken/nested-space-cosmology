@@ -94,6 +94,20 @@ One corrected application uses fresh v2 outputs; its unchanged allocation
 includes the first application's CPU in the total 3600-second accounting.
 No additional grid or phase-step search is admitted.
 
+**Corrected outcome:** frozen method `efc4af7` completes both 300/600-step
+evolutions. All baseline checkpoints pass. The independent initial Fourier
+force gap is `6.34500e-9` relative; the failed central difference remains in
+the record. The fine redshift derivatives are `-.0009145171828668826` and
+`.0027489767089183288`, with observed time-step differences `1.21946e-13`
+and `1.70583e-13`. These do not bound spatial or physical error. The
+[20665-byte summary](../results/summaries/nsc-conformal-causal-response-v2.json)
+binds the original data and ignored 477146-byte final checkpoint. Source
+and cache hashes pass; an independent Fourier reconstruction checks the
+receiver fields to `4.89e-14`. Total numerical CPU including the stopped
+attempt is 1736.1875 seconds. This finite forward-response calculation is
+closed. Reuse it in the next metric-dependent causal reduction rather than
+deepening its time grid or initial-phase verification.
+
 ## Coupled causal tangent engine: manufactured controls
 
 The initial response now needs propagation along the same evolving finite

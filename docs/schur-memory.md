@@ -487,8 +487,8 @@ wave-acceleration limit, input rejection and independent variation of the
 actual constraint forcing, and differentiation of the original RK4 step.
 For the symplectic check the
 geometry carries `dx_g` and each column carries `2*M*c_j*Im(u_j^dagger*v_j)`.
-This establishes the tested derivative implementation, not a propagated
-physical result. No new archived trajectory has been run.
+These controls establish the tested derivative implementation. The archived
+finite-model propagation is reported below.
 
 `variational_rk4_step` evaluates the original nonlinear rate and its
 Jacobian-vector action at the same four RK4 stages. Its baseline update
@@ -533,8 +533,41 @@ preflight uses this check for the initial `p_r` block at the same `1e-6`
 criterion; it keeps the failed central difference and the seven other
 central-difference checks. A manufactured varying-Q sine mode controls the
 independent action. The evolving JVP and original nonlinear ODE are unchanged.
-This establishes an alternative numerical check; the full-grid comparison
-is still required before attributing the original gap to cancellation.
+On the full grid this independent check differs by `2.21188e-8` absolute,
+or `6.34500e-9` relative, well within the unchanged criterion. The original
+force difference is consistent with cancellation in its numerical check;
+the evolving derivative and nonlinear equations are unchanged.
+
+The corrected [causal application](../results/summaries/nsc-conformal-causal-response-v2.json)
+reaches `T=.3` at both original time steps. Both saved baseline checkpoints
+pass the field-scaled `1e-8` criterion; their largest absolute gap is
+`1.22290e-10` in `p_Q`. Independent FFT interpolation of the cached receiver
+fields agrees with the photon rows to `4.89e-14`. At the fine endpoint the
+receiver's fractional lapse response is `-.27101704491895884`. Much of this
+response is shared with the emitters and cancels in their frequency ratios:
+
+| Emitter position | Fine derivative of log(1+z) | Fine derivative of z | Absolute time-step difference in derivative of z |
+| --- | ---: | ---: | ---: |
+| .875 | -.0009129945410344398 | -.0009145171828668826 | 1.21946e-13 |
+| 1.125 | .0027692088369005163 | .0027489767089183288 | 1.70583e-13 |
+
+The fine-centred intervals in the summary use those observed differences
+only. They do not bound spatial, source, physical or continuum error and
+two time steps establish no convergence order. The sampled fine full
+constraint remains nonzero (`8.91177e-6` at the endpoint); its weighted
+variation norm is `1.09079e-6`. The sampled energy-variation drift falls
+from `2.76141e-10` coarse to `8.58602e-12` fine. No constraint or chirality
+projection is performed after preparation, and the shift-source variation
+evolves to a maximum `4.64679` at the endpoint.
+
+The 300/600-step cases use 655.578125 and 1058 CPU seconds, with four BLAS
+threads each in two spawned Windows workers. Setup uses 11.421875 CPU
+seconds; including the first stopped attempt gives 1736.1875 of the shared
+3600-second envelope. The 20665-byte summary and ignored 477146-byte final
+state/tangent cache meet their limits. Source hashes and cache hash were
+checked without replay. This finite response calculation is closed. The
+next connection is its causal metric-dependent reduction; another temporal
+refinement or initial-phase check is not required by these results.
 The normal worldlines can be accelerated; this specifies no Hubble rate.
 An actual paired evolution and its uncertainty comparison are still needed.
 

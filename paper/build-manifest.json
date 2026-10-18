@@ -1,10 +1,10 @@
 {
-  "bytes": 3615702,
+  "bytes": 3634596,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "dd4b58231207bcfb1f11b746f7c8f9d9b79621764a32a32781ff94f4490753c9",
+  "metadata_sha256": "9195dabba5c310ead14278c562e55709c36bb93b1ffcd240349d8fa31df39ea9",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 52,
-  "pdf_sha256": "c033fecf634bcb856ce170abc5debad2b451735a03b1181a918f599b5e0c3f64",
+  "pages": 53,
+  "pdf_sha256": "db11037ea51fb2c88de50c99e34d41806aee2c6501f83cb0d0364c2b90a533ca",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -460,12 +460,20 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "path": "results/summaries/nsc-conformal-causal-response-v2.json",
+      "sha256": "d6f73bf663e76d951cb078947c6c672c3be0eaed0479523eaa8fe673a7b28f50"
+    },
+    {
       "path": "results/summaries/nsc-conformal-geometric-average-v1.json",
       "sha256": "cb57f10042c6ad58d23c55160d1a279271c5663e0fb13f00a7d389e7cc930b72"
     },
     {
       "path": "results/summaries/nsc-conformal-lightcone-v1.json",
       "sha256": "aa11c763eadcbb222e2413304832f9e978a692558fc2021458ed60e81f3696fa"
+    },
+    {
+      "path": "results/summaries/nsc-conformal-preparation-tangent-v2.json",
+      "sha256": "2a502b31bd552517035b144bfb1255538e7047bd292cc3b9ef9dbb9c65fdb61c"
     },
     {
       "path": "results/summaries/nsc-conformal-resolution-v1.json",
@@ -477,6 +485,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "44bc0235d55d70262d2b3bba23d504004f55523ba464fc65373be6a5de9e587d",
-  "version": "working-2026-10-18.3"
+  "source_sha256": "db304950cc598834ea84899d954ba7e6675061b154574f13676af644ea74420d",
+  "version": "working-2026-10-18.4"
 }

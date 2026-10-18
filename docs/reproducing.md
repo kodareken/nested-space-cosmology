@@ -2936,8 +2936,19 @@ reports missing output. Time-step differences are empirical temporal
 indicators, not continuum or physical error bounds. The first application stopped at its radial-force difference check before
 evolution. The independent initial Fourier action now supplies that block's
 check; its failed central difference remains recorded. Ten controls pass.
-The corrected application uses fresh v2 paths and retains the original
-method and stopped result.
+The corrected [application](../results/summaries/nsc-conformal-causal-response-v2.json)
+uses frozen method `efc4af7` and retains the original stopped result. Both
+time steps reach the endpoint and pass their two baseline comparisons.
+The redshift derivatives are `-.0009145171828668826` and
+`.0027489767089183288`, with empirical time-step differences below `1.8e-13`.
+These are not continuum or physical error estimates. Reproduction may
+change timing and tiny rounding residues; compare each coefficient to
+`1e-9` absolute, with the original input, source hashes, domain, baseline
+tolerance and endpoint conditions fixed. No value selected a parameter.
+The canonical summary is 20665 bytes. The final-state cache is 477146 bytes,
+ignored and hash-bound in that summary. Creation used 1736.1875 CPU seconds
+including the stopped first attempt. This response is closed; no unchanged
+trajectory replay is needed for the next calculation.
 
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.

@@ -829,6 +829,64 @@ binds the original state and frozen method `cd00b35`. Its energy coefficient
 is a failed vacuum-volume representation of this instantaneous response,
 not a derived cosmological constant.
 
+### 6.1.9. A prepared-state change propagated to a photon measurement
+
+The same conformal episode now carries an initial matter variation through
+the coupled geometry to two received frequencies. Before prolongation,
+apply $U_\epsilon(x)=\exp[i\epsilon f(x)\sigma_2]$ to every original spinor,
+with $f(x)=\cos(2\pi x/8)$ and unchanged occupations. This preserves the
+initial Gram matrix and paired current cancellation. The radius direction
+is obtained by differentiating the original projected constraint level.
+The original full constraint defect, $9.97845\times10^{-6}$, remains; a zero
+root is not assumed. Initially at $x=1$,
+$d\log N/d\epsilon=-0.27203771374589336$.
+
+Evolve the complete state and its derivative together,
+$z_T=X_H(z)$ and $u_T=DX_H(z)u$, at the same four RK4 stages. All six
+geometry fields and both complex column blocks evolve. The fixed spatial
+grid is $n_f=512,n_g=511,n_q=2048$, period 8. The two original time steps
+$0.001$ and $0.0005$ take 300 and 600 steps to $T=0.3$. Both baseline
+states reproduce their saved histories at $T=0.05$ and $0.3$ within the
+declared field-scaled $10^{-8}$ tolerance.
+
+Reception is fixed at $(T_o,x_o)=(0.3,1)$; emission occurs at
+$(T_e,x_e)=(0.175,0.875)$ or $(0.175,1.125)$. These are exact step and
+quadrature events. The normal observers measure $1+z=N_o/N_e$, $N=rQ$,
+so the propagated response is
+
+$$
+K=\frac{d\log(1+z)}{d\epsilon}
+=\frac{u_{r,o}}{r_o}+\frac{u_{Q,o}}{Q_o}
+-\frac{u_{r,e}}{r_e}-\frac{u_{Q,e}}{Q_e},
+\qquad \frac{dz}{d\epsilon}=(1+z)K.
+$$
+
+| Emitter $x_e$ | Fine $K$ | Fine $dz/d\epsilon$ | Absolute time-step change in $dz/d\epsilon$ |
+| --- | ---: | ---: | ---: |
+| 0.875 | $-0.0009129945410$ | $-0.0009145171829$ | $1.22\times10^{-13}$ |
+| 1.125 | $0.0027692088369$ | $0.0027489767089$ | $1.71\times10^{-13}$ |
+
+These differences are empirical temporal indicators. The inherited spatial
+and constraint errors, physical source mechanism and finite-$\epsilon$
+range are not bounded by them. At the fine endpoint, the full Hamiltonian
+constraint maximum is $8.91\times10^{-6}$ and the weighted constraint
+variation norm is $1.09\times10^{-6}$. The Gram and tangent-Gram errors
+are $1.63\times10^{-13}$ and $1.68\times10^{-14}$. The sampled Hamiltonian
+variation drifts by $8.59\times10^{-12}$, versus $2.76\times10^{-10}$ on the
+coarse time step; no uniform-in-time estimate is inferred.
+
+The [initial response](../results/summaries/nsc-conformal-preparation-tangent-v2.json)
+and [propagated response](../results/summaries/nsc-conformal-causal-response-v2.json)
+bind the original data, frozen method and reproduction command. A stopped
+central-difference preflight is preserved; the independent initial Fourier
+force check agrees to $6.35\times10^{-9}$ relative error without changing
+the force equations. The calculation uses 1736.1875 process-CPU seconds
+including that stopped attempt. One 477146-byte ignored checkpoint stores
+the final states and derivatives; the published summary stores its hash.
+This closes one finite prepared-direction observer calculation. The
+metric-dependent reduction still needs to retain the corresponding causal
+response and physical state before identifying an effective vacuum term.
+
 ### 6.2. The retained local incoming gate
 
 <!-- nsc-claim:local-source-insertion-majorant -->

@@ -1,6 +1,6 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.3`, includes the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.4`, includes the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
 ## Completed P001 endpoint trial, 18 October 2026
 
@@ -49,6 +49,28 @@ failure remains; another exact-wave control would duplicate this check.
 
 ![Three-grid radius envelope and mass/flux trends](figures/nsc-atlas-fixed-endpoint-comparison.png)
 
+## Prepared state to received frequency, 18 October 2026
+
+The [coupled causal calculation](schur-memory.md#coupled-tangent-evolution-and-observer-response)
+now carries the initial paired-phase direction through the full original
+conformal evolution to `T=.3`. Both original time steps finish and reproduce
+their saved baseline histories. A normal observer at `x=1` receives photons
+emitted at `T=.175`, from `.875` and `1.125`. Their fine received-redshift
+derivatives per unit initial phase are **-.0009145171829** and
+**+.0027489767089**. The observed time-step differences are `1.22e-13` and
+`1.71e-13`; these are temporal indicators, not total physical error bars.
+
+The [20665-byte summary](../results/summaries/nsc-conformal-causal-response-v2.json)
+retains nonzero constraints, forcing and the full evolving direction. The
+sampled energy-variation drift improves from `2.76e-10` coarse to `8.59e-12`
+fine. The first force-difference check stopped before evolution; its failed
+result is preserved, and an independent initial Fourier force check passes
+without changing the equations. Total numerical CPU, including that stop,
+is 1736.1875 seconds. Two workers use four BLAS threads each; a 477146-byte
+final checkpoint stays ignored and regenerable. The finite prepared-direction
+observer calculation is closed; physical source selection and the effective
+metric reduction remain the next connection.
+
 ## Initial geometry response to a prepared-state change, 18 October 2026
 
 The [paired-phase calculation](schur-memory.md#a-paired-preparation-tangent-for-a-causal-response)
@@ -71,8 +93,8 @@ propagation and its observer-clock/light-cone consequence come next.
 The analytic coupled derivative, its constraint-forcing variation and the
 paired RK4 step are now implemented. Seven manufactured controls pass,
 including independent differences of all eight field blocks and of the
-complete time step. The original evolution remains unchanged. An archived
-paired trajectory and its photon response have not yet been run.
+complete time step. The original evolution remains unchanged. The archived
+paired trajectory and photon response are now reported above.
 
 ## One geometry at two resolutions, 18 October 2026
 
