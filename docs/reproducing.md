@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+The [global Dirac bounds and real boundary symbol](nsc-atlas-dirac-probe.md#real-frequency-boundary-ellipticity-for-the-next-regularity-estimate)
+have five controls, including sharp balanced endpoints and an exact
+constant-mass line resolvent:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_boundary_ellipticity.py tests/test_nsc_atlas_dirac_bounds.py -q
+```
+
+They use 1.5625 process-CPU seconds across development and create no
+reference data. Calculator inputs must be genuine uniform geometry bounds;
+the outputs are not a bound on the full evolved stress.
+
 The [correlated parent and auxiliary preparation](nsc-atlas-dirac-probe.md#exact-correlated-root-data-and-its-finite-compressions)
 have six controls, using exact root kernels and manufactured plane modes:
 

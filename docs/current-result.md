@@ -4,6 +4,15 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [operator estimates](nsc-atlas-dirac-probe.md#balanced-energy-estimates-and-an-explicit-limitation)
+now include a sharp balanced energy bound, a full first-correction graph
+bound, and exponential locality for the frozen nested-versus-cap projector.
+Five controls pass, including the full real-frequency angular boundary
+symbol and an exact continuum resolvent. Normal regularity of the
+prepared one-particle field follows from the unitary energy estimate.
+The remaining qualitative UV step is a specific coupled boundary-parametrix
+application; no full evolved stress or Psi/Phi value is asserted.
+
 The [static-product preparation alternative](nsc-atlas-dirac-probe.md#a-concrete-static-product-parent-and-deformation-route)
 now fixes the complete root covariance analytically, including its Bessel
 cross-leg kernel. It propagates that state with a declared auxiliary

@@ -32,6 +32,27 @@ def folded_transparent_interface():
         side_order=('exterior','cap'),condition='equal canonical spinors at y=0')
 
 
+def real_frequency_boundary_symbol(energy,angular_potential):
+    """Actual folded boundary symbol on a real spacelike covector.
+
+    The characteristic/glancing set is returned explicitly rather than
+    hidden by a denominator floor. This is a frozen ellipticity check,
+    not a propagation or stress-remainder theorem.
+    """
+    tau,W=float(energy),float(angular_potential)
+    if not np.isfinite([tau,W]).all():
+        raise ValueError('finite real temporal frequency and angular potential required')
+    if abs(tau)>=abs(W):
+        return dict(status='characteristic_or_glancing',matrix=None,
+            squared_lower_bound=0.,normal_decay=None)
+    decay=np.sqrt((abs(W)-abs(tau))*(abs(W)+abs(tau)))
+    data=folded_transparent_interface()
+    matrix=(1j*decay*data['normal_matrix']+W*data['angular_matrix']-
+            tau*np.eye(4))@data['allowed_isometry']
+    return dict(status='spacelike_elliptic',matrix=matrix,normal_decay=decay,
+        squared_lower_bound=2*abs(W)*(abs(W)-abs(tau)))
+
+
 def radial_time_coefficients(*, lapse, lapse_l, radial_length, radial_length_l,
                              radius, angular_k=1):
     """H=-i alpha*(c*d_l+c_l/2)+sigma1*N*k/r for chi=sqrt(a)*r*psi.

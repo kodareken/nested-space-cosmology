@@ -2418,3 +2418,189 @@ available, and the parent state is now explicit in this alternative.
 What is still missing is an actual order-minus-five bound, or another
 controlled sufficient coincidence estimate, for its propagated interior
 two-point function. The gap estimate does not supply that bound by itself.
+
+### Real-frequency boundary ellipticity for the next regularity estimate
+
+The previous imaginary-energy check is not yet the real-frequency
+boundary condition used in a microlocal argument. Check it directly,
+using at most 30 process-CPU seconds for exact/frozen matrix identities.
+No physical field, numerical grid or cutoff reference is admitted.
+
+For real temporal frequency tau and signed angular potential W, a
+decaying normal root exists in the spacelike region abs(tau)<abs(W),
+with lambda=sqrt(W^2-tau^2). Its allowed boundary symbol is
+`M=(i*lambda*A+W*B-tau*I)*J`. The opposite normal signs cancel its
+cross terms, giving
+
+```text
+M^dagger*M = 2*(W^2*I-tau*W*beta)
+min singular_value(M)^2 = 2*abs(W)*(abs(W)-abs(tau)).
+```
+
+For abs(tau)<=(1-epsilon)*abs(W), the lower bound is
+`sqrt(2*epsilon)*abs(W)`. Both signs of k and either angular polarization
+obey the same bound. At glancing the bound tends to zero; the calculation
+does not discard that characteristic set or assert ellipticity there.
+This supplies one actual input to the boundary regularity argument.
+
+Extend the same 30-CPU-second allowance to bounded-band inequalities and
+the exactly solvable constant-mass line resolvent. These controls concern
+the following global estimates, not a new approximation to the state.
+
+### Balanced energy estimates and an explicit limitation
+
+Let A,B be positive spectral-band operators with lower bounds m_A,m_B.
+For bounded Y the off-band Sylvester inverse is
+`L^(-1)(Y)=integral_0^infinity exp(-s*A)*Y*exp(-s*B) ds`.
+For a positive integer n, its n-fold iterate has the same integrand
+weighted by s^(n-1)/Gamma(n). Operator Cauchy--Schwarz, applied before
+taking the time integral, gives the exact balanced endpoint
+
+```text
+|| A^(n/2) * L^(-n)(Y) * B^(n/2) || <= 2^(-n) * ||Y||.
+```
+
+Indeed the two square integrals are Gamma(n)*I/2^n. Equal scalar bands
+saturate the constant. Thus the divergent integral of separate supremum
+norms at this endpoint is a failed estimate, not proof that the endpoint
+bound fails. The same argument for the double inverse gives
+
+```text
+||A*L^(-2)(Y)|| <= ||Y||/(4*m_B)
+||L^(-2)(Y)*B|| <= ||Y||/(4*m_A).
+```
+
+For an actual instantaneous projector P_minus, its first transported
+off-band correction is -i*L^(-2)(H_T)_plus_minus. These inequalities
+therefore control its full one-sided energy graph norm, uniformly in
+the angular sector when ||H_T||/abs(k) is bounded. This goes beyond an
+angular-only norm estimate and uses no spatial commutator across the wall.
+It still does not express the full evolved covariance remainder as an
+n-fold inverse of one bounded source. Products, time derivatives and
+detector localization in that remainder need their own estimate.
+
+For example, a CAR state with excitation fraction a_k=exp(-k^2), constant
+in radial momentum, obeys every angular operator-norm decay bound. Its
+energy excess per magnetic state up to radial cutoff L is
+`a_k*(L*sqrt(L^2+mu^2)+mu^2*asinh(L/abs(mu)))/pi`, which diverges as
+L^2 for every fixed k. This is a counterexample to the angular-only
+inference, not a claim that the prescribed cylinder preparation has
+those occupations.
+
+### Frozen resolvent locality from the actual Dirac gap
+
+For the instantaneous H_k at imaginary energy i*zeta, put
+rho=sqrt(m^2+zeta^2), m=abs(k)*q_min. For a bounded real Lipschitz
+weight F, exponential conjugation gives
+`exp(F)*H_k*exp(-F)=H_k+i*alpha*F'`.
+Choose abs(F')<=theta*rho, 0<theta<1, and F differing by theta*rho*d
+between separated source and detector supports. The bounded perturbation
+inverse then gives
+
+```text
+||chi_D*(H_k-i*zeta)^(-1)*chi_E||
+    <= exp(-theta*rho*d)/((1-theta)*rho).
+```
+
+This uses the actual constant radial principal matrix and the proven
+gap. It remains valid for a bounded potential; no globally smooth
+spatial metric is assumed. Bounded weights and a limiting smooth
+approximation avoid an unbounded-conjugation domain assumption.
+
+If the nested and smooth q agree around D and differ only on E at
+radial distance at least d, the resolvent identity supplies two such
+factors. Let q_min be a common positive lower bound and delta_q a
+supremum bound on their difference. Integrating their resolvent
+difference in the sign-projector formula gives the coarse estimate
+
+```text
+||chi_D*(P_minus,N-P_minus,S)*chi_D||
+ <= delta_q/(2*(1-theta)^2*q_min)
+    * exp(-2*theta*d*q_min*abs(k)).
+```
+
+The intermediate integrand is bounded by abs(k)*delta_q times
+`exp(-2*theta*d*sqrt(m^2+zeta^2))/((1-theta)^2*(m^2+zeta^2))`.
+The remaining integral is at most pi*exp(-2*theta*d*m)/m; the
+projector formula contributes 1/(2*pi). The radial spectral variable
+has therefore been integrated, rather than replaced by an angular norm.
+
+These are frozen operator bounds implemented in the
+[bound calculator](../src/recursive_horizons/nsc_atlas_dirac_bounds.py).
+Its q_min and delta_q inputs must be genuine uniform bounds, not sampled
+minima or fitted values. No numerical bound on the actual full stress
+is reported. The prepared state is time-evolved, so replacing it with
+the instantaneous projector would change the prescribed calculation.
+
+Five new real-boundary/operator controls pass in 1.5625 process-CPU seconds
+across development. They include the full angular principal matrix before
+diagonalizing k, independent Sylvester solves and sharp equal-band limits,
+and the exact constant-mass whole-line resolvent between separated half
+lines. That last norm is exp(-rho*d)/(2*rho), independently below the
+general conjugation bound. Very small positive bounds are evaluated in
+logarithms and do not silently become exact zero by underflow. No field
+or P001 evolution ran.
+
+### Normal regularity of the prepared one-particle field
+
+One remaining microlocal hypothesis can be established directly from
+the constructed unitary field. For an initial L2 vector v, let
+psi_v=U*C_root*v on either folded side. Unitarity bounds its spacetime
+L2 norm on any compact time interval by a constant times ||v||.
+For a smooth compact tangential test phi(T,Omega), define
+`h_v(y)=integral phi^dagger*psi_v dT dOmega`.
+It is L2 in y. The first-order equation, with invertible constant A,
+expresses each normal derivative as tangential T and angular derivatives
+plus smooth one-sided multiplication. Integrating those tangential
+derivatives onto phi and repeating gives
+`||d_y^n h_v||_L2(I) <= C_(phi,n,I)*||v||` for every finite n on a
+compact one-sided interval, including its boundary endpoint.
+
+For rigor this is an operator estimate from the initial Hilbert space
+to H^n(I), not an assumption that a point field has a finite L2 density.
+The adjoint applied to delta_y and its derivatives, continuous in
+H^(-n) for n sufficiently large, gives a Hilbert-valued function smooth
+in y with values in tangential distributions. This proves normal
+regularity. The transparent trace relation extends from a dense smooth
+initial domain using the same bounds. The argument uses one-sided
+smooth coefficients and transfers derivatives; it never differentiates
+the glued coefficient through its W_xx jump.
+
+There is also smooth well-posedness for smooth past-compact folded source
+and boundary data. Lift the forbidden boundary trace to a collar, use
+unitary Duhamel evolution for the homogeneous trace, and differentiate
+in T and the commuting angular operator K. Energy estimates bound all
+such derivatives using finitely many smooth source derivatives. Recover
+normal derivatives from invertible A. Green's identity and the vanishing
+allowed boundary flux give distributional uniqueness in the normally
+regular class by duality against smooth advanced solutions.
+
+### The precise remaining boundary-calculus application
+
+The local elliptic-regularity step is now narrower than an unspecified
+global glancing theorem. The one-particle field is normally regular;
+the actual real spacelike boundary symbol satisfies the complementing
+condition, including both angular polarizations. What must be completed
+is applying the finite-bundle microlocal boundary parametrix to this
+coupled first-order projector, to confine its b-wavefront set to the
+compressed causal cone. The scalar Dirichlet statement is not itself
+that application.
+
+Conditional on that cone confinement, the positive-energy argument has
+no further glancing propagation assumption. A small-b microlocal
+partition separates the two oriented causal cones. Applying D and the
+forbidden boundary trace to the two components gives opposite-cone
+distributions whose sum is smooth; disjointness forces each source and
+boundary datum to be smooth. A time cutoff and the smooth well-posedness
+and uniqueness just proved make the initially absent component smooth
+everywhere. At glancing, tau remains nonzero on either oriented cone;
+it does not make the future and past cones intersect.
+
+The initial cylinder supplies the opposite orientations of the occupied
+and unoccupied fields. With cone confinement established, their local
+CAR in a smooth cap neighborhood would identify the Hadamard splitting,
+and the renormalized state difference would be smooth there. This last
+corollary remains conditional here. A finite frozen-symbol test alone
+does not establish that boundary-calculus step or a numerical stress
+error range. The [source study](arxiv-studies.md#actual-cap--wall-dirac-evolution-18-october-2026)
+records the exact microlocal statements inspected.

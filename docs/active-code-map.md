@@ -8,6 +8,14 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [Dirac operator bounds](nsc-atlas-dirac-probe.md#balanced-energy-estimates-and-an-explicit-limitation)
+use a [bound calculator](../src/recursive_horizons/nsc_atlas_dirac_bounds.py),
+[real-frequency interface symbol](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
+and independent [band/resolvent](../tests/test_nsc_atlas_dirac_bounds.py) and
+[full-angular boundary](../tests/test_nsc_atlas_dirac_boundary_ellipticity.py) controls.
+Frozen locality and graph bounds are established; the time-evolved stress
+remainder and coupled boundary-calculus application remain distinct.
+
 The [correlated static-product parent](nsc-atlas-dirac-probe.md#exact-correlated-root-data-and-its-finite-compressions)
 and fixed auxiliary preparation use the existing
 [preparation component](../src/recursive_horizons/nsc_atlas_dirac_preparation.py),
