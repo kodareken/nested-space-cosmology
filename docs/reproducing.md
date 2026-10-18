@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+The [fixed-grid polynomial comparison](nsc-atlas-dirac-probe.md#fixed-grid-polynomial-comparison-and-useful-process-parallelism)
+keeps N=128 and compares orders 24/48. Its order-48 cylinder check uses the
+existing N=64 grid and 8.125 process-CPU seconds:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_retarded.py::test_order_48_uses_the_same_existing_grid_and_exact_cylinder_kernel -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_root_response.py --stage polynomial --output .build/nsc-atlas-dirac-root-response-polynomial.json
+```
+
+Freeze the method before the second command. Field maps are prepared once,
+then independent covariance contractions run in eight processes. The old
+order-24 values must agree with the frozen v1 baseline within 1e-9 before
+the new order is interpreted. No additional field grid is admitted here.
+
 The [retarded-map extraction](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
 uses the existing characteristic solver and analytic derivatives. Its
 32/64 cylinder control checks both polynomial orders and contracts the

@@ -2928,3 +2928,34 @@ Psi/Phi. The next error to resolve is polynomial representation, using the
 same fixed field grid before considering any finer grid; the angular
 series and source derivative remain necessary for the requested slip.
 P001 remains unconverged and no new P001 evolution ran.
+
+### Fixed-grid polynomial comparison and useful process parallelism
+
+The v1 polynomial variation is the next unresolved numerical contribution.
+Keep the actual field grid fixed at N=128, kappa=+1, the same parent,
+detector and two splits. Compare polynomial orders 24/48 from the same
+retarded rows. First control order 48 against the exact cylinder kernel
+and derivative on the existing N=64 grid, within 30 process-CPU seconds;
+no new control grid is needed.
+
+Extend the existing producer with an explicit polynomial stage. Prepare
+the small response maps once, then evaluate independent covariance
+contractions in eight processes, single-threaded within each process.
+Do not overlap two eight-way pools. The actual stage has 240 process-CPU
+seconds, including reported child CPU, 256 MiB live field arrays and a
+2 GiB process-runtime allowance. Retain only a compact summary and hashes.
+The unchanged order-24 cases must reproduce v1 within 1e-9 in the
+dimensionless bilocal before the new representation is interpreted.
+
+A baseline mismatch stops interpretation and identifies a refactoring
+error. A noncontracting polynomial change stops continuum extrapolation
+and identifies representation error. Persistent split dependence keeps
+the result bilocal; it is not handled by scanning smaller separations.
+Budget exhaustion yields a diagnosed partial result. The angular sum
+and compact-source response remain prerequisites for full Psi/Phi.
+
+The fixed-grid order-48 cylinder control passes: kernel error
+1.37221e-8 and spatial-derivative error 5.15858e-7, using 8.125
+process-CPU seconds. The field grid and propagation equations are unchanged.
+The explicit `--stage polynomial` route runs the new representation test;
+the default initial route retains the v1 case selection.

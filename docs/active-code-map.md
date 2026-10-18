@@ -18,6 +18,9 @@ completion and the relative coincidence limit remain separate.
 The [first evaluated reference](nsc-atlas-dirac-probe.md#evaluated-full-radial-finite-split-reference)
 retains the full radial covariance and a nonzero first-sector bilocal;
 polynomial and separation variations remain the leading numerical issues.
+The same producer's [polynomial stage](nsc-atlas-dirac-probe.md#fixed-grid-polynomial-comparison-and-useful-process-parallelism)
+keeps the field grid fixed, compares orders 24/48 and moves the serial
+covariance work into independent processes with a saved-value tolerance.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).

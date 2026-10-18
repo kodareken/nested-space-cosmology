@@ -9,12 +9,12 @@ from recursive_horizons.nsc_atlas_dirac_retarded import retarded_null_responses,
 from recursive_horizons.nsc_atlas_dirac_root_pairing import pair_cylinder_responses
 
 
-def constant_maps(U,V,mu,n):
+def constant_maps(U,V,mu,n,order=24):
     shape=(n,n);du=U/(n-.5);dv=V/(n-.5)
     return retarded_null_responses(np.full(shape,mu),du,dv,
         potential_u=np.zeros(shape),potential_v=np.zeros(shape),
         boundary_square_integrals=(mu*mu*V,mu*mu*U),boundary_mixed_integrals=(0.,0.),
-        order=24,workers=8)
+        order=order,workers=8)
 
 
 def constant_input_exact(U,V,mu):
@@ -94,3 +94,22 @@ def test_variable_potential_and_mixed_endpoint_integrals_against_exact_separable
         print('VARIABLE_ENDPOINT_CONTROL',n,errors[-1].tolist())
     assert np.max(errors[1])<2e-5
     assert np.all(errors[0]/errors[1]>3.)
+
+
+def test_order_48_uses_the_same_existing_grid_and_exact_cylinder_kernel():
+    # The physical polynomial check changes representation, not field resolution.
+    T,x,eta,mu=.11,.006,.008,1/.45
+    left=constant_maps(T-x-eta/2,T+x+eta/2,mu,64,order=48)
+    right=constant_maps(T-x+eta/2,T+x-eta/2,mu,64,order=48)
+    lf,rf=(retarded_response(s,'field',48) for s in (left,right))
+    ld,rd=(retarded_response(s,'spatial',48) for s in (left,right))
+    kernel=pair_cylinder_responses(lf,rf,mu,epsabs=2e-11)['kernel']
+    derivative=(pair_cylinder_responses(ld,rf,mu,epsabs=2e-11)['kernel']
+        -pair_cylinder_responses(lf,rd,mu,epsabs=2e-11)['kernel'])/2
+    s1=np.array([[0.,1.],[1.,0.]]);s3=np.diag([1.,-1.])
+    exact=-mu*s1*k0(mu*eta)/(2*math.pi)-1j*mu*s3*k1(mu*eta)/(2*math.pi)
+    exact_dx=mu*mu/(2*math.pi)*(s1*k1(mu*eta)+1j*s3*(k0(mu*eta)+k1(mu*eta)/(mu*eta)))
+    errors=np.array([np.max(abs(kernel-exact)),np.max(abs(derivative-exact_dx))])
+    print('FIXED_GRID_ORDER48_CONTROL',errors.tolist())
+    assert errors[0]<1e-6
+    assert errors[1]<3e-6
