@@ -1,5 +1,47 @@
 # Prior art and admission of new research
 
+## Pointwise cap-equation defect on the archived coupled state
+
+The incoming-offset control identifies a wall channel, but takes its
+mismatch as input. The next calculation checks how the existing weak
+right-hand side differs from the local scalar equations on an actual
+archived state. Reuse the authenticated level-0 v3 seed at
+`x=.4370111883201181`, already used by the independent mass/lapse check.
+Regenerate its original history once and evaluate one unchanged coupled
+stage, with the original cap/exterior spaces, amplitude, source and radial
+tolerances. Compare its mass/lapse/strong jets with that saved check.
+
+At the wall evaluate exact quintic value/first/second jets and the existing
+background jets. Derive `chi_T=B*k/A0` and
+`k_T=partial_z(r*B*h)/r-A0*r*exp(delta)*P_f` directly from the same smooth
+scalar action. Compare them with coefficient rates divided by the coupled
+`T_x`, plus explicit background partials, at fixed physical `z`. Separate
+the density, velocity-slope and velocity-value contributions to the cap's
+incoming-trace propagation defect. Domain motion is a separate derivative;
+this is not the complete time derivative of the exterior transmission law.
+
+During that single stage, retain its existing radial dense solutions in
+memory without changing the solver. On the existing smooth panels, one
+32-point Gauss rule projects the independently evaluated pointwise defects
+onto every current basis function. The velocity projection should vanish;
+the density projection should equal the natural boundary load
+`e*B*(h_weak-h_trace)`. Require normalized load differences below `1e-8`
+with scale `max(1,max_abs(actual),max_abs(expected))`. This is a conditional
+equation-consistency check on the already checked metric, not a new mass
+integration or a bound on the physical truncation error.
+
+Independent coordinate/field-equation, zero-coupling and trace-derivative
+controls share 30 process-CPU seconds. After method freeze, one original
+history preparation, source construction and coupled stage have **60 CPU
+seconds / 40 million charged values**, one BLAS thread for the small cap
+systems, and at most 12000 summary bytes. No time step, new mesh, source
+fit, changed junction law or residual-cancelling force is introduced.
+Stop on source/seed drift, failed saved-stage recovery or budget exhaustion.
+Those are the three anticipated failures. A direct evaluation of the
+covariant scalar equation giving a different reduced RHS would reject the
+new diagnostic. A large defect localizes finite pointwise equation error;
+it does not supply a corrected physical solution or locate unstored maxima.
+
 ## P001 active-region resolution and the actual cap--wall Dirac operator
 
 **Frozen-background follow-through.** The support diagnosis and independent
