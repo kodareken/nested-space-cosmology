@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 246039,
+      "bytes": 246654,
       "path": "docs/active-code-map.md",
-      "sha256": "21e38abebc39ab164dcb3b71767ac004c2fbf0e8a66b3320eb1e527872e2776d"
+      "sha256": "944db7b482655ce61e56967dee7360a1f225dd55f9a4f7d5be85cfd22c733112"
     },
     {
       "bytes": 102489,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2381089,
+      "bytes": 2382524,
       "path": "docs/lab-snapshot.json",
-      "sha256": "16b8aa19d54b6252286b5caf79df81d3281e425671990280b88767edb9418d07"
+      "sha256": "a7b4382278501097c4d9111ec7538dd7938a38c002698acf112ae8221e02b312"
     },
     {
       "bytes": 4997,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 166795,
+      "bytes": 167901,
       "path": "docs/reproducing.md",
-      "sha256": "ba71e97a9e5e95dae8e0824b47d094aafb4abf5168cccbd5abc1ceb530e94263"
+      "sha256": "cf66372971235e5c18889dae9e643262d94e6d9691281b83aab29df74cf2dbe9"
     },
     {
       "bytes": 31710,
@@ -16531,6 +16531,11 @@
       "sha256": "57ddfc7a12fad196bb8c33a5563ead38ca9aada2452fcc4252c6edfd1931434c"
     },
     {
+      "bytes": 8118,
+      "path": "scripts/measure_nsc_conformal_preparation_tangent.py",
+      "sha256": "aa89a05eb7b9a73d99431dadae02b7f26ab55da6af98d802cc3873015535e9c9"
+    },
+    {
       "bytes": 12562,
       "path": "scripts/measure_nsc_conformal_resolution.py",
       "sha256": "406737b966caf39cdde4dbde9818255f9dcc7976992c1e31de65fd2bc5199568"
@@ -17599,6 +17604,11 @@
       "bytes": 5454,
       "path": "src/recursive_horizons/nsc_conformal_memory_control.py",
       "sha256": "91913555235026b76ad4dbc9e68995588decff5664c025661a548fa2d0e9cd07"
+    },
+    {
+      "bytes": 19813,
+      "path": "src/recursive_horizons/nsc_conformal_preparation_tangent.py",
+      "sha256": "df5bc0e16330eeda2e9a94babf854a42f60bd851210f072b9e3449207ca1df54"
     },
     {
       "bytes": 9797,
@@ -20031,6 +20041,11 @@
       "sha256": "f48d05ef31468526fc16d0805d3a218a218a225fc8259a24c0a8f62e0a1be853"
     },
     {
+      "bytes": 14696,
+      "path": "tests/test_nsc_conformal_preparation_tangent.py",
+      "sha256": "4423754c375b8cacf8033ec7b0d28a86fa331c63da9a7066be00768bbe23b38d"
+    },
+    {
       "bytes": 6788,
       "path": "tests/test_nsc_conformal_resolution.py",
       "sha256": "0b36223543bdc4b992ef2b65959f2401aed3332f58759503c4fffed25ff3db28"
@@ -21736,7 +21751,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "16b8aa19d54b6252286b5caf79df81d3281e425671990280b88767edb9418d07",
+  "lab_snapshot_sha256": "a7b4382278501097c4d9111ec7538dd7938a38c002698acf112ae8221e02b312",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

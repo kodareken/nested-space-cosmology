@@ -2885,6 +2885,23 @@ the initial shape failure and corrected one-shot application are described
 in the admission. The finite probe is closed; reproducing it is not a new
 evolution or an instruction to scan cutoffs.
 
+The paired preparation uses the original `nf512_original_T0_*` arrays inside
+the same authenticated cache. After freezing its producer, use a fresh output:
+
+```text
+python scripts/run_python.py -m pytest tests/test_nsc_conformal_preparation_tangent.py tests/test_nsc_conformal_preparation_fourier_control.py -q
+python scripts/run_python.py scripts/measure_nsc_conformal_preparation_tangent.py --geometry .build/data/nsc-spherical-conformal-episode-v2.npz --output .build/conformal-preparation-tangent.json
+```
+
+This application holds the action and equal pair occupations fixed. A
+specified unitary phase changes the source, and the existing radius Jacobian
+determines its initial tangent. The budget is 200 process-CPU seconds, one
+dense factorization and eight BLAS threads; checkpoints stop further matrix
+work when the budget is exhausted. The summary includes the initial radius
+and clock-rate derivatives, original constraint defect and unresolved
+quadrature remainder. It supplies no evolution, light-cone signal or Lambda.
+No arrays are written. Ten manufactured controls precede the application.
+
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.
 The seven controls include coordinate Riemann/Ricci, normal Weyl under a
