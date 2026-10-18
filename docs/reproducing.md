@@ -22,12 +22,25 @@ The shared original action, material junction and local Legendre-map
 identities reproduce without a trajectory or generated result file:
 
 ```sh
-python scripts/run_python.py -m pytest tests/test_nsc_atlas_conformal_action.py -q
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_conformal_action.py tests/test_nsc_atlas_collar_field.py -q
 ```
 
 The [owner](nsc-atlas-conformal-action.md) retains the boundary divergence,
 physical radius kink and canonical/velocity distinction. This is not a
 new P001 evolution or a correction to its archived mass values.
+
+After committing the method, one full-strip manufactured scalar control
+uses the exact quiet normal collar, a shared six-coordinate field, both
+outer GHY terms and the restricted ADM momentum:
+
+```sh
+python scripts/run_python.py scripts/measure_nsc_atlas_collar_field.py --output .build/nsc-atlas-collar-field.json
+```
+
+The output path must be unused. The
+[finite-action owner](nsc-atlas-conformal-action.md#a-shared-finite-field-action-on-a-quiet-wall-normal-collar)
+states the continuum test source and energy/work identity. This is a
+method control on prescribed geometry, not a P001 grid or physical signal.
 
 The local conformal Dirac interface and bulk curvature calculation reproduce
 with the committed method and an unused output path:

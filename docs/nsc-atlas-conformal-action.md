@@ -36,9 +36,9 @@ $$
 \int_{\mathcal M_\pm}\sqrt{-\bar g_2}
 \left[X(\bar R_2+2)+\frac3\kappa(\bar\nabla R)^2
 -\frac12(\bar\nabla\chi)^2-V_{0,\pm}R^4\right]
-+\int_{\partial\mathcal M_\pm}\sqrt{-\bar\gamma_1},2X\bar K_{\rm out}
++\int_{\partial\mathcal M_\pm}\sqrt{-\bar\gamma_1}\,2X\bar K_{\rm out}
 \right\}\\
-&-\sigma\int_\Sigma\sqrt{-\bar\gamma_1},R^3.
+&-\sigma\int_\Sigma\sqrt{-\bar\gamma_1}\,R^3.
 \end{split}
 $$
 
@@ -147,3 +147,112 @@ For `H=(p^2+k*q^2)/2`, `C=p+a*q-g(t)`, its rate is
 complete variational/port and constraint derivation, not a force chosen
 to cancel the archived residual. The algebraic reduction alone does not
 establish accuracy or convergence of a new P001 evolution.
+
+## A shared finite field action on a quiet wall-normal collar
+
+The [finite component](../src/recursive_horizons/nsc_atlas_collar_field.py)
+uses the same quiet sources, `H=1,k_wall=2,M=.4`, on
+`.45<=Rwall<=.55`. The physical Gaussian coordinates are wall proper time
+`tau` and normal distance `|n|<=eta=.02`, with
+`ds2=-N^2 dtau^2+dn^2`. This is a prescribed-background scalar control;
+the metric momenta and backreaction are not evolved here.
+
+On the cap,
+
+$$
+r=R\cos n+\beta_-\sin n,\qquad
+N=\cos n+\beta_{-,R}\sin n.
+$$
+
+On the exterior the signed normal geodesic and Jacobi equations are
+
+$$
+r_{nn}=M/r^2,\quad N_{nn}=-2MN/r^3,\quad
+w_{nn}=-2Mw/r^3+6MN^2/r^4,\qquad w=N_R.
+$$
+
+Initial wall data are `(r,r_n,N,N_n,w,w_n)=
+(R,beta_plus,1,beta_plus_R,0,beta_RR)`. They imply `r_R=N`,
+`r_tau=v*N`, `N_tau=v*w`. The checks retain both
+`r_n^2-v^2=f(r)` and `r_n*N_n-r_nn*N=v*v_R`, including the signed
+turning point `beta_plus=0`.
+
+These coordinates have a direct positive bound over the declared collar.
+For `rlo=Rmin+min(beta_plus(Rmax),0)*eta`, the exterior satisfies
+`r>=rlo` and, before any first zero,
+`N>=1+min(beta_plus_R)*eta-M*eta^2/rlo^3>0`. The cap has
+`N>=cos(eta)` and `r>=Rmin*cos(eta)-max(beta_minus)*sin(eta)>0`.
+The bound prevents a first lapse zero. It is a local chart with its own
+slicing, not a repair or continuation of the failed wide coordinate map.
+
+The invariant real scalar has the following action per `4*pi`:
+
+$$
+L_w=\frac12\int\!dn\left(\frac{\chi_\tau^2}N
+-N\chi_n^2-V\chi^2\right)
+-\frac12\sum_s b_s\chi_s^2,
+\quad V_-=0,\quad V_+=\frac{2MN}{r^3},
+$$
+
+$$
+b_s=\frac{\epsilon_s}{3}\left(N_n-\frac{Nr_n}{r}\right),
+\qquad \epsilon_s=(-1,+1).
+$$
+
+The last terms are the scalar part of the original timelike GHY terms
+at `n=+-eta`. At the material wall the two outward contributions cancel,
+since `[N_n]=-k_wall` and `[r_n]=-k_wall*R`. They are retained at the
+outer ends, including their radius derivatives in the work calculation.
+
+Two cubic Hermite elements share value and slope at the wall. The six
+coordinates are `(chi_left,eta*chi_n_left,chi_wall,eta*chi_n_wall,
+chi_right,eta*chi_n_right)`. If `B,D` evaluate value and derivative,
+
+$$
+M_h=\int B^TN^{-1}B,\qquad
+K_h=\int(D^TND+B^TVB)+\sum_s b_s e_se_s^T.
+$$
+
+The field is `C1`; the independently represented radius retains its
+physical kink. The restricted original ADM momentum is not `M_h*qdot`:
+
+$$
+\pi_h=M_h\dot q+S_hq,\qquad
+S_h=-\frac v3\int B^T r^{-1}B.
+$$
+
+The time-end generating function is `G=q^T*S_h*q/2`. The restricted
+ADM action differs from `L_w` by `dG/dtau`; its scalar density momentum
+is `chi_tau/N-v*chi/(3r)`, independently checked against the full
+three-variable kinetic matrix above. This scalar canonical transformation
+applies to the prescribed background, not a removal of the coupled metric
+momenta.
+
+With `u=solve(M_h,pi_h-S_h*q)` and `v=dR/dtau`, the finite equations are
+
+$$
+q_R=u/v,\qquad
+(\pi_h)_R=(S_h)_Rq+S_hq_R+(F_h-K_hq)/v.
+$$
+
+The wave-action energy and its work identity are
+
+$$
+E_w=\tfrac12u^TM_hu+\tfrac12q^TK_hq,\qquad
+(E_w)_R=-\tfrac12u^T(M_h)_Ru+\tfrac12q^T(K_h)_Rq+u^TF_h/v.
+$$
+
+This is not the total Einstein mass. Shared field traces cancel the
+internal field power; a finite bulk mass constraint still needs its own
+check in any coupled evolution.
+
+Five controls check the exact geometry and independently differentiated
+parameter dependence, cubic reconstruction and original transmission,
+the full original ADM momentum, independently projected continuum forcing,
+energy/work and the admitted domains. The single frozen application uses
+`chi=.01*sin(pi*(R-.45)/.1)^2*(1+.3*n+.2*n^2+.1*n^3)`.
+Its volume force comes from differentiating that field in the continuum
+equation; its endpoint forces retain both normal flux and GHY. The field
+lies in the finite space, so recovery tests the action and time integrator,
+not spatial convergence or physical predictions. This manufactured force
+is never supplied to the P001 model.

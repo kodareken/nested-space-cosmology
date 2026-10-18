@@ -1,5 +1,45 @@
 # Prior art and admission of new research
 
+## Shared scalar finite action in an exact wall-normal collar
+
+Use the same quiet `H=1`, `k_wall=2`, `M=.4` reference on
+`.45<=Rwall<=.55`, with wall proper time and physical normal distance
+`-.02<=n<=.02`, in units `ell=1`. Normal geodesics give the exact cap
+profiles and an exterior radial/Jacobi system. Differentiate that system
+with respect to wall radius to obtain clock/metric work analytically.
+Keep the signed radius slope through `beta_plus=0`. A conservative lapse
+bound follows before sampling from the geodesic and Jacobi equations.
+This is a local physical chart, separate from the failed wide chart.
+
+Assemble one two-element cubic Hermite field space, sharing the actual
+invariant field value and normal derivative at the wall. Retain the radius
+kink and the scalar part of both timelike `2fK` terms. On the prescribed
+background, distinguish the wave momentum from the restricted ADM momentum
+by the known time-end generating function; use the assembled Legendre map.
+The frozen geometry is the zero-scalar reference, not a backreacted P001
+solution. The missing connection is a finite variational field/port scheme
+that preserves these existing physical interface laws.
+
+Controls have **60 process-CPU seconds**. After method freeze, one
+manufactured scalar evolution spans the full wall-radius strip on this
+single fixed six-DOF space, with maximum 6000 field RHS evaluations,
+400000 background RHS evaluations and **180 process-CPU seconds**. Compare
+16/32 quadrature at one fixed radius; do not run a spatial-grid campaign.
+Use one predeclared cubic field and smooth radius-dependent amplitude;
+derive its test forcing from the continuum equation rather than from the
+assembled matrices. Retain only a summary/source hashes under 16000 bytes.
+Check field recovery, canonical conversion, original scalar transmission,
+internal port cancellation and energy plus metric/boundary work.
+
+Stop on chart/constraint failure, a normalized field or energy discrepancy
+above `1e-6`, or budget exhaustion. Missing time-end terms, lost outward
+boundary signs and treating canonical coefficients as field velocities are
+the anticipated failures. An independently differentiated continuum field
+or action-energy calculation disagreeing rejects the control. The known
+field lies in this test space: agreement verifies the numerical/action
+connection, not P001 convergence or agreement with nature. The manufactured
+forcing is a numerical control and is never inserted into the P001 model.
+
 ## Common variational variables for the failed P001 interface
 
 Reuse the original Jordan action, its two outward `2fK` terms and the
