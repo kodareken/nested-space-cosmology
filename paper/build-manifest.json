@@ -1,10 +1,10 @@
 {
-  "bytes": 4175226,
+  "bytes": 4238030,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "09ab0c71d8653285928a8cde46c85df6cd5b8d7efd1ba7a1641a8440459a4624",
+  "metadata_sha256": "80a0e9c77dc277cfd60dcae2e7eeb2d921e30d117485845b655acc0369aa2af3",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 61,
-  "pdf_sha256": "7a955039f6d86c1cb70efb396bffe8b350cdf22c9533962b10e1679f17fc1f05",
+  "pages": 62,
+  "pdf_sha256": "de70e9cf66194fc0949dbcaabf543fedd84965cdb4981b349ada2ccb9b0b8ecc",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -400,6 +400,10 @@
       "sha256": "c952852d6a9afa32ef4ba3fbc222c9274b16dc26529291f81d1a631fe14ea59c"
     },
     {
+      "path": "results/summaries/nsc-atlas-dirac-mass-response-v3.json",
+      "sha256": "d20541ebdf8e9a883133cb4654981f85a92ff18be579a582d5a0e0f13bf8d922"
+    },
+    {
       "path": "results/summaries/nsc-atlas-dirac-mean-clock-v1.json",
       "sha256": "4e1cae2d18abaa30d1a267fb7cdbd18d3c46d52f0a81c66cf100c6e99d21392f"
     },
@@ -541,6 +545,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "668a933602bb532c56ccafe7fb7c4e86cd7b566ab19d19e75f37103962314792",
-  "version": "working-2026-10-18.10"
+  "source_sha256": "1f0175c53c0ce57227b781c5bd108332ae198d54a0c445fb1aaa9cdd6a2de0f8",
+  "version": "working-2026-10-18.11"
 }

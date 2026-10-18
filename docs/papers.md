@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.11` adds the conserved compact-source family and
+its calculated prepared clock mass derivative in Section 6.1.18. The
+local tidal ratio changes by about five parts per million between the
+nested geometry and smooth-cap control. It states the physical source,
+observer, numerical diagnostics and scalar-potential zero-mode distinction;
+the full vacuum Psi/Phi remains open. Exact triangular wall quadrature
+resolves the clock precision floor without another field resolution.
+
 Revision `2026-10-18.10` adds the actual Dirac transfer and prepared mean
 metric/clock response in Section 6.1.17. The nested logarithmic coefficient
 is -.41780 versus -.39929 for the smooth-cap control with common observer

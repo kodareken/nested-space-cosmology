@@ -1793,3 +1793,82 @@ the same admitted wall equations. This finite prepared-source branch
 is complete at the stated diagnostic precision. The next full-vacuum
 calculation requires a specified joined state, ultraviolet angular
 completion, renormalization and a chosen potential/readout convention.
+
+### Vacuum tidal reduction and the remaining preparation rule
+
+For the *local tidal channel*, a useful first-order cancellation reduces
+the next vacuum calculation. Compare states on the same cap SdS
+background and the same zeroth-order radar observer, with b>0. From
+the exact sectional identities above,
+
+```text
+B-A = kappa_g*pi,  pi=p_r-p_t
+(B/A)-1 = kappa_g*pi/A0 + O(hbar^2),  A0=-3*b/r^3.
+```
+
+The mean mass/radius contribution w_q enters both contrasts equally.
+It cancels from their difference and enters the denominator only at
+second quantum order. A first-order observer or evaluation-point shift
+acting on the zeroth-order vacuum nonvacuum stress also contributes
+zero to pi. This does not discard those terms from the separate
+contrasts, clock response, or a full scalar-potential reconstruction.
+
+Use a finite detector with a common zeroth-order test density f whose
+support lies strictly inside the cap, separated from the wall. Define
+its readout as the ratio of averaged contrasts,
+`eta_f=(integral f*B dV)/(integral f*A dV)`, with a nonzero classical
+denominator. Its first-order nesting difference is
+
+```text
+Delta eta_f = kappa_g * integral f*(pi_nested-pi_smooth) dV
+             / integral f*A0 dV.
+```
+
+Under a common local renormalization prescription, bulk counterterm
+tensors agree because the two cap metric jets agree on the detector.
+Gravitational interface counterterms have support outside that detector;
+their first-order metric effect cancels from this particular ratio as
+above. This statement assumes perturbative Einstein response and fixed
+renormalized classical source/couplings. It does not cover a detector
+touching the wall, different cap backgrounds, direct spinor/interface
+interactions, or nonperturbative higher-derivative gravity. It does not
+identify two states or remove their vacuum stress.
+
+For two states locally Hadamard on that common smooth cap neighborhood,
+the difference of their two-point kernels is smooth there. With the
+point-split stress operator D_pi from the same Dirac action,
+`Delta pi(X)=lim_{Y->X} D_pi*(G_nested-G_smooth)(X,Y)` then needs no
+additional local subtraction. Proving that the *propagated* state
+families have this property remains an actual requirement; per-mode
+CAR positivity or the conformal wall first-jet cancellation does not
+prove the needed combined angular/frequency limit.
+
+At a finite field/angular cutoff, the existing interfaces would evaluate
+this through `Tr(C_nested*P_nested[f]-C_smooth*P_smooth[f])`, where
+P[f] is the detector-integrated radial-minus-angular stress matrix
+pulled back by the actual characteristic transfer. Full magnetic
+degeneracy is included once in that matrix. A rotationally invariant
+state permits the sum over both signed nonzero angular sectors; no
+parity symmetry or cross-leg independence is supplied automatically.
+The controlled cutoff limit, not one finite matrix, is the vacuum result.
+
+The fixed-b quantity includes environment anisotropy already present
+without the compact source. To call it *source-induced polarization*,
+use a declared b=0 subtraction of `Delta pi_b-Delta pi_0`, or its
+mass-family derivative, with the same preparation rule varied along
+both families. Dividing a pre-existing wall anisotropy by b would not
+be that source response.
+
+The remaining physical datum is therefore an explicit common preparation
+rule assigning admissible parent covariances to both geometries and to
+their mass families, including their cross-leg correlations and local
+short-distance structure. The parent metrics differ outside the cap;
+copying one literal covariance matrix between them need not preserve
+their distinct ultraviolet symbols. An instantaneous intrinsic negative
+projector and a factorized Hardy prescription are unproved choices here,
+not excluded by a blanket statement about every nonzero extrinsic
+curvature. No such root rule is selected by the current calculation.
+The finite occupation calculation itself shows why the inherited
+operator relation alone does not fix it: changing an allowed covariance
+at the same operator changes the computed response. This local tidal
+reduction narrows the next calculation; full vacuum Psi/Phi remains open.

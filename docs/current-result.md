@@ -1,6 +1,6 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.10`, now includes the actual Dirac trace, radar chart, transfer and prepared mean metric/clock response, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.11`, now includes the actual Dirac trace, radar chart, transfer and prepared mean metric/clock response, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
 ## Prepared Dirac mean metric and a physical clock correction
 

@@ -33,8 +33,10 @@ Euler-interface trace terms, a finite wall radar chart, and action-derived
 stress vertices. A specified finite occupation difference now propagates
 through the actual wall and sources a mean metric and radar-clock correction.
 Its logarithmic clock coefficient is $-.41780$, with a 64/128 numerical
-spread $1.12\times10^{-5}$. The full quantum gravitational slip remains
-uncomputed.
+spread $1.12\times10^{-5}$. A conserved compact-source family also gives
+a stable prepared clock mass derivative and a local tidal-response
+difference of about five parts per million. The full vacuum gravitational
+slip remains uncomputed.
 
 A separate periodic Einstein--Weyl--Dirac realization permits averaging in
 a specified observer clock and direct light-cone calculation. Its final
@@ -1415,6 +1417,107 @@ the later mixed Einstein and source variations. It does not determine
 the baseline vacuum, full retarded $\Psi/\Phi$ or a cosmological
 $\Lambda$. The finite-amplitude scalar P001 remains unconverged;
 its original solver and grids were not changed by this calculation.
+
+### 6.1.18. A conserved compact source and local gravitational tides
+
+A central mass source can be supplied on the same finite annulus, with
+its body or inner horizon below the causal domain. The cap and exterior
+vacuum functions and dimensionless source mass are
+
+$$
+f_-=1-2b/r-H^2r^2,\qquad f_+=1-2M_p(b)/r,\qquad \hat b=b/\ell.
+$$
+
+Hold the initial physical wall radius and proper speed fixed, as well
+as H and tension. Both signed junction constraints then require
+$dM_p/db|_0=\beta_{+,0}/\beta_{-,0}=2755/8587$. Holding the parent mass
+fixed would change that speed. No regular body interior or formation
+history is supplied by this annular construction.
+
+The same continuum-normalized Dirac occupation difference is propagated
+on each member of the mass family. The mean Einstein reconstruction,
+stress, wall and observer vary together. Its two mass-flux laws and
+wall displacement have an exact triangular solution: since
+$d\ln v/d\tau=\mathrm{acc}/v$,
+
+$$
+\frac{\rho(\tau)}{v(\tau)}
+=\frac{\rho(\tau_0)}{v(\tau_0)}
++\int_{\tau_0}^{\tau}
+\frac{\beta_+(\mu-\nu)/(k_{\mathrm{wall}}R^2)+\mu/R}{v^2}\,d\tau'.
+$$
+
+Piecewise Gauss integration on the existing field-cell breakpoints
+evaluates these primitives. The prefactor v retains the acceleration
+term; no constraint residual is canceled. The independent exact
+charged and fluid families check this reconstruction.
+
+The [compact-source reference](../results/summaries/nsc-atlas-dirac-mass-response-v3.json)
+uses $b/\ell=0,5\times10^{-5},10^{-4}$, the same 64/128 field cells,
+and joint wall/bulk quadrature orders 8/12. Its receiver is inside
+the cap at $U=.8S,V=.7S$, at fixed proper-wall radar position.
+An inward phase -V is emitted at the earlier wall time V. The smooth
+SdS continuation shares the nested observer's classical and mean
+areal-radius history, without another material wall.
+
+Define
+
+$$
+\mathcal C_B=\left.\frac{\partial}{\partial\hat b}
+\frac{\delta\ln(\omega_{\mathrm{rec}}/\omega_{\mathrm{wall}})}
+{\varepsilon_q n_{\mathrm{occ}}}\right|_{\hat b=0}.
+$$
+
+This derivative uses a source present before the window, not a retarded
+mass-switching experiment. It includes the background Einstein variation
+that a matter-only insertion on fixed geometry would omit.
+
+A second readout uses actual orthonormal curvature. In the specified
+radar observer's frame put $A=R_{0r0r}-R_{0\theta0\theta}$ and
+$B=R_{r\theta r\theta}-R_{\theta\phi\theta\phi}$. Direct Ricci/Weyl
+decomposition gives
+
+$$
+w=\frac{b+m_q}{r^3}-\frac{\kappa_g}{6}(\rho_q-p_{rq}+p_{tq}),\qquad
+A=-3w-\frac{\kappa_g}{2}(p_{rq}-p_{tq}),\qquad
+B=-3w+\frac{\kappa_g}{2}(p_{rq}-p_{tq}).
+$$
+
+The fixed vacuum term cancels. At fixed radar labels its first-order
+Weyl variation also retains $-3b\,\delta r/r^4$. For nonzero b,
+$A_0=B_0=-3b/r^3$. Define the occupied-minus-empty local ratio response
+by $\delta(B/A)=\varepsilon_q n_{\mathrm{occ}}\mathcal C_{\mathrm{tid}}$.
+The 128-cell results are:
+
+| Geometry and observer | Clock derivative $C_B$ | Tidal coefficient at $b/\ell=10^{-4}$ |
+| --- | --- | --- |
+| Nested cap-wall-exterior | -.002329216 | -540762.871 |
+| Smooth SdS cap, shared motion | -.002329519 | -540765.571 |
+
+The clock-derivative difference is $+3.03553\times10^{-7}$, with a
+correlated grid spread $2.58\times10^{-9}$ and a source-step indicator
+$5.95\times10^{-10}$. The tidal-coefficient difference is +2.7001584,
+about 4.9932 parts per million of the prepared correction, with a
+correlated grid spread .0011855. Individual tidal-coefficient grid
+spreads are about 14.59. For the supplied $\ell=10\,\mathrm{km}$,
+the occupied-minus-empty changes in B/A are $-3.55031184\times10^{-71}$
+and $-3.55032957\times10^{-71}$. Their nominal nesting difference is
+$+1.77276\times10^{-76}$. The length, source and state are inputs.
+
+All prescribed reference checks pass. The maximum normalized nested
+mass-path gap falls from $8.08\times10^{-7}$ to $1.93\times10^{-8}$;
+joint quadrature changes the clock coefficient by less than
+$4.45\times10^{-15}$. These spreads are diagnostics, not rigorous
+remainder bounds or observational confidence intervals. Earlier failed
+precision/execution records remain in the scientific owner.
+
+The local ratio is a curvature observable in the stated frame. In a
+flat-FLRW Newtonian metric its comoving counterpart compares the radial
+trace-free Hessians of $\Psi$ and $\Phi$. Reconstructing those potentials
+also requires radial zero-mode and background-split data; below the
+exterior horizon one cap FLRW pair does not cover the joined spacetime.
+This finite prepared-state result therefore supplies no absolute empty
+vacuum ratio, full vacuum $\Psi/\Phi$ or cosmological $\Lambda$.
 
 ### 6.2. The retained local incoming gate
 
