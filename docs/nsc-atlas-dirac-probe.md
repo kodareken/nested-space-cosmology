@@ -641,7 +641,9 @@ the full four-dimensional symbol and interface behavior.
 Hadamard states using Cauchy-surface pseudodifferential calculus and
 smooth bounded-geometry methods. [Fewster and Lang](https://arxiv.org/abs/1408.1645)
 show that an unsoftened fermionic-projector prescription can fail on
-ultrastatic slabs, and establish a softened construction there. Those
+ultrastatic slabs, and establish a softened construction there for positive
+mass and compact spatial sections. That mass assumption is material for
+this massless probe; the preparation check below treats it explicitly. Those
 results supply methods to inspect; neither is asserted here as a proof
 for this finite two-branch, piecewise-smooth wall preparation.
 
@@ -1872,3 +1874,144 @@ The finite occupation calculation itself shows why the inherited
 operator relation alone does not fix it: changing an allowed covariance
 at the same operator changes the computed response. This local tidal
 reduction narrows the next calculation; full vacuum Psi/Phi remains open.
+
+## A candidate parent preparation from clock energy
+
+The next missing object is a state rule, not another prepared-packet
+refinement. Three routes have different costs and assumptions:
+
+| Route | What it supplies | Unresolved connection here |
+| --- | --- | --- |
+| Smooth ultrastatic deformation | A reference ground covariance transported by an explicitly supplied preparation geometry. | A common parent-time extension and control of the material-wall limit are not yet supplied. |
+| Softened fermionic signature projector | A state selected by an averaged spinor bilinear. | The cited positive-mass theorem cannot be substituted for a massless calculation; its massless two-frequency block is tested below. |
+| Minimum averaged clock energy | A covariance selected from the actual field's energy quadratic form in the wall clock. | This is a new state axiom. Its continuum/local short-distance admissibility remains to be established. |
+
+Use the third route as a finite candidate to investigate, keeping the
+deformation construction available for a parent-state completion. It uses
+the physical clock and existing Dirac action, fixes both incoming branches
+together, and assigns a geometry-dependent covariance under one common
+rule. It does not assert that the operator identity determines that rule.
+
+Let b(s) be the existing peak-one smooth bump centered at S/2 with
+half-width S/2. For the actual propagated incoming modes, define
+
+```text
+A_k = (1/S) integral_0^S integral_0^S b(U)*b(V)*h_k(U,V) dU dV
+h_k = 4*pi*a*r^2*(N*rho_k-beta*a*j_k)
+    = d*[N*(q_alpha/a+k*sigma1/r)-beta*q_I], d=2*abs(k).
+```
+
+In the radar chart N=a=sqrt(C) and beta=0. This is the complete canonical
+clock-energy form, including its kinetic term. The existing W-only metric
+insertion is not this energy vertex. The positive weighting and full
+angular normalization are fixed before evaluation. The rule fills the
+negative spectral subspace of A_k. In a finite orthonormal flux basis this
+minimizes Tr(C*A_k) over 0<=C<=I; unresolved zero/gap cases stop the
+numerical selection rather than silently assigning occupations. The
+existing ground-covariance implementation supplies the projector after
+positive scale normalization.
+
+Use smooth incoming trial functions on each null leg:
+`y=log(s/(S-s))`, `J=dy/ds=S/(s*(S-s))`, and
+`f_n(s)=sqrt(J)*h_n(y)`, where h_n are normalized Hermite functions on
+the real line. Their continuum flux Gram is the identity. Every finite
+mode has a smooth zero extension at the two ends, since its Gaussian in
+log(s) dominates every inverse power. Analytic derivatives, not sampled
+waveform differences, feed the current stress interface. This is a
+Galerkin representation and supplies no angular ultraviolet completion.
+
+Before a physical reference, a 60-process-CPU-second admission covers
+only exact/small-matrix and one-dimensional analytic controls: minimization,
+CAR and basis/unit covariance; the independent lapse/shift action vertex;
+flux orthogonality, analytic derivatives and endpoint behavior; the
+two-frequency signature counterexample. No Dirac evolution, P001 grid,
+parameter search, reference JSON or Hadamard claim is admitted by these
+controls. A failed identity stops the candidate for diagnosis. The likely
+failures are confusing signature with energy, selecting a numerically
+unresolved eigenspace, and mistaking finite CAR positivity for a full
+four-dimensional state. All remain explicit in the next decision.
+
+The five controls pass in 1.5 process-CPU seconds. In the softened
+signature construction of [Fewster and Lang](https://arxiv.org/html/1408.1645v2),
+the positive-mass assumption matters. Setting m=0 in its two-frequency
+block gives B=[[0,q],[conj(q),0]]. For nonzero q the negative projector
+has both diagonal entries 1/2, and its difference from diag(0,1) squares
+to I/2, regardless of how small q becomes. A zero block leaves the
+occupation undetermined. This exact calculation blocks importing that
+positive-mass theorem into this massless candidate; it does not reject
+every possible massless state construction.
+
+The product b(U)b(V) defines an explicit spacetime window, including radial
+weighting in T,x. It is not a time-only average over a whole Cauchy slice,
+nor a causal switched preparation. Its physical duration S_prep is a
+declared state parameter, held fixed if the computational domain changes.
+Changing this physical window changes the state; it is not a numerical
+cutoff to tune against observations. A smooth ultrastatic-deformation
+completion remains a separate route with its own geometry assumptions.
+
+For W=0 each chiral energy form reduces, up to positive normalization,
+to i*(w*d/ds+w'/2), with w proportional to the positive bump. The
+half-density change z=integral ds/w maps its complete flow to the real
+line and its generator to i*d/dz. Its negative spectral subspace supplies
+the free Hardy reference. No reflecting or periodic endpoint is imposed.
+This one-dimensional check is not a four-dimensional state theorem.
+
+Extend the same 60-CPU-second control admission to small manufactured
+field grids of at most 16 cells: exact free chiral propagation, the
+joint outgoing flux Gram, superposition, and signed-k energy/pressure
+parity on a static cylinder. Recheck the five existing mean-field tests
+after permitting its unchanged Numba kernel to release the GIL. Only
+independent incoming modes run in parallel, with at most eight workers.
+These are interface controls; no actual nested-state reference or P001
+evolution is admitted until they pass.
+
+All twelve preparation and existing mean-field controls pass in 4.03125
+additional process-CPU seconds (5.53125 total charged to these controls).
+The manufactured cylinder has full cross-leg covariance and exact signed-k
+parity; the zero-potential control checks analytic chiral derivatives,
+superposition and the full flux Gram. They validate the finite interface,
+not the candidate's ultraviolet limit.
+
+### Actual-geometry clock-energy candidate admission
+
+The next bounded calculation supplies the missing finite parent covariance
+on the actual cap-wall geometry, with the smooth cap continuation as its
+control. It borrows the already checked Dirac action, energy-minimizing
+fermionic covariance and characteristic transfer. The new connection is
+applying one stated energy-window rule to both geometries and both members
+of the conserved compact-mass family, rather than copying one flat state.
+
+Freeze the method and controls before the reference. Use only N=64/128,
+b=0 and 1e-4, signed k=-1,+1, and 2/4 smooth radial trial modes per null
+leg. All sixteen cases propagate the four-mode basis once and reuse its
+two-mode subspace. The two signs are calculated separately, including each
+full magnetic multiplet once. The physical preparation duration is the
+existing proper-wall duration .1256873632901346*ell, independent of grid.
+The detector event is the existing cap event U=.8*S,V=.7*S. The state rule
+is window-nonlocal and parametric; no causal source switch is asserted.
+
+Record spectra/gaps, CAR/purity, raw flux-Gram conditioning, transfer flux,
+cross-leg correlations, and grid/mode-count changes. Compute the finite
+source-induced pressure difference
+`[pi_nested(b)-pi_cap(b)]-[pi_nested(0)-pi_cap(0)]`, summing both signed
+sectors. Divide by the common classical A0=-3*b/r^3 only after this
+subtraction. Its tidal-ratio coefficient carries 8*pi*(l_P/ell)^2;
+the independent illustrative length remains ell=10 km. No sky value sets
+the state, length, masses or mode count.
+
+The allowance is 240 charged process-CPU seconds including startup and an
+8-CPU-second exit reserve, at most 30 CPU seconds per case, eight process
+workers with one BLAS thread each, at most 2 GiB working arrays and 48000
+summary bytes. No arrays are retained. Independent modes can use Numba's
+GIL-free interface, but the reference instead parallelizes independent
+cases to avoid nested worker pools. A failed gap, CAR/flux control, domain
+condition or budget stops execution for diagnosis. A nonshrinking field
+spread or a large change under radial trial count prevents a continuum
+claim; it does not authorize more grids automatically.
+
+The immediate decision is whether this common state rule yields a stable
+finite nested-versus-cap response and what controls its cutoff dependence.
+The next analytical test concerns the actual joint angular/frequency
+short-distance symbol, including cross-leg covariance. These low sectors
+alone cannot supply a Hadamard state, renormalized vacuum stress, an
+observational error interval or the full scalar-potential ratio Psi/Phi.

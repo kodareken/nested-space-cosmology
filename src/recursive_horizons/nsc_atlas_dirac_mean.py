@@ -22,7 +22,7 @@ from .nsc_atlas_dirac_gravity import null_stress_from_orthonormal
 SPIN_ROTATION = (np.eye(2)+1j*SIGMA1)/math.sqrt(2)
 
 
-@njit(cache=True)
+@njit(cache=True,nogil=True)
 def _mode_kernel(w,wu,wv,du,dv,plus,minus,plus_u,minus_v):
     nu,nv = w.shape
     pu,mv = math.sqrt(du),math.sqrt(dv)

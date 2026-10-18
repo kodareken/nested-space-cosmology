@@ -8,6 +8,13 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [clock-energy parent-state candidate](nsc-atlas-dirac-probe.md#a-candidate-parent-preparation-from-clock-energy)
+is implemented by [the finite state component](../src/recursive_horizons/nsc_atlas_dirac_preparation.py),
+with [independent controls](../tests/test_nsc_atlas_dirac_preparation.py) and
+[one bounded producer](../scripts/measure_nsc_atlas_dirac_preparation.py).
+It uses the actual field, both incoming legs and a declared physical window;
+the combined angular/frequency and full vacuum Psi/Phi calculations remain open.
+
 | Need | Owner |
 |---|---|
 | Physical compact-source Dirac response | [Fixed prepared mass-family admission](nsc-atlas-dirac-probe.md#prepared-compact-source-response-admission), [evaluated v3](nsc-atlas-dirac-probe.md#evaluated-compact-source-response), [bounded producer](../scripts/measure_nsc_atlas_dirac_mass_response.py), [tidal component](../src/recursive_horizons/nsc_atlas_dirac_tidal.py), [wall primitive](../src/recursive_horizons/nsc_atlas_dirac_wall_integral.py). Exact triangular wall integration closes the numerical source derivative; the operational tidal ratio remains distinct from full vacuum Psi/Phi. |

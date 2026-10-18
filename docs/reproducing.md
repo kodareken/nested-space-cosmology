@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+The [finite clock-energy preparation](nsc-atlas-dirac-probe.md#actual-geometry-clock-energy-candidate-admission)
+has twelve preparation and existing-field controls. The actual-geometry
+reference uses sixteen independent cases on eight process workers, with
+one BLAS thread each. It stores spectra, summaries and matrix hashes only:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_preparation.py tests/test_nsc_atlas_dirac_mean.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_preparation.py --output .build/nsc-atlas-dirac-preparation.json
+```
+
+Freeze the source before the second command and use an unused output path.
+This calculates a finite state candidate, not a continuum vacuum or full
+Psi/Phi, and runs no P001 grid. Physical preparation duration is held fixed
+between field resolutions; changing mode count is a separate cutoff check.
+
 The conserved compact-source tangent has five independent nonlinear
 wall/ray and metric controls. It supplies a mass-dependent input to a
 later Dirac calculation, with no new physical field or P001 evolution:

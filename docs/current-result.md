@@ -2,6 +2,19 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.11`, now includes the actual Dirac trace, radar chart, transfer and prepared mean metric/clock response, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Parent-state preparation on the actual Dirac geometry
+
+The [clock-energy candidate](nsc-atlas-dirac-probe.md#a-candidate-parent-preparation-from-clock-energy)
+now defines an explicit finite state rule using the full Dirac energy in
+the proper wall clock. It propagates smooth incoming modes on both legs,
+retains their cross correlations and selects a covariance by minimizing
+one common spacetime-windowed energy form. Twelve preparation and existing
+field controls pass. A bounded actual-geometry reference is admitted next;
+no reference value or continuum-vacuum claim is supplied by the controls.
+An exact massless two-frequency calculation also shows why the cited
+positive-mass signature-projector theorem cannot select this field's state.
+The full vacuum Psi/Phi and P001's refinement failure remain open.
+
 ## Prepared Dirac mean metric and a physical clock correction
 
 The [compact-source v3 reference](../results/summaries/nsc-atlas-dirac-mass-response-v3.json)
