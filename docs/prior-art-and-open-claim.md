@@ -1,5 +1,52 @@
 # Prior art and admission of new research
 
+## Physical resolution of one fixed geometry, 18 October 2026
+
+The two-level construction changes the physical state. The next Step 7
+connection instead compares two resolutions of the **same** recorded state.
+Reuse the authenticated Einstein/Weyl/Dirac conformal episode and its finite
+Hamiltonian, not P001's different action. At the primary case's reference
+time `T=.05`, use the physical radial scalar Laplacian of
+`h=r^2(Q^2 dx^2+dOmega^2)` and retain eigenvalues of `-Delta_h` satisfying
+`mu*L_ref^2<=1`. The existing observer ruler is fixed independently as
+`L_ref=4.80028044552352`. Form the positive mass/stiffness matrices on the
+owned 511-dimensional geometry space using its existing 2048-point
+quadrature. Orthonormalize the retained span in the canonical `dx` measure,
+then hold that projector fixed. Dealiasing is not a physical environment.
+
+Use the exact nodal canonical coordinates `a=log(r), pi_a=r*p_r`,
+`b=log(Q), pi_b=Q*p_Q`, and the unchanged `chi,p_chi` pair. Project all six
+geometry coordinates with the same projector; retain the full fermion
+columns and occupations. Check positivity on the prolonged quadrature
+state, not only at geometry nodes. At the single final snapshot `T=.3`,
+evaluate the same Hamiltonian and its full vector field on the original
+and filtered states. Record the energy difference and the projected
+canonical-rate difference. This is a frozen-environment instantaneous
+correlation; it supplies no retarded closure or new evolution.
+
+Derive the vacuum comparison from the **four-dimensional volume form**:
+`H_rho=4*pi*rho*integral(r^4*L*Q dx)`. Establish its conversion to Lambda
+under the owned curvature/sign conventions before reporting a Lambda
+coefficient. The existing `r^2` potential is sphere curvature, not a
+vacuum-volume term. An energy projection is insufficient: compare the
+entire retained force, including coordinate and fermion rates which a
+vacuum potential cannot change. Keep the original constraint defect and
+the omitted quantum vacuum branch explicit. No target observation selects
+the ruler, cutoff, state or coefficient.
+
+Controls cover a constant metric's analytic spectrum, length rescaling,
+projector idempotence and the canonical pairing, identity resolution,
+positivity failure, and independent directional differentiation of the
+correlation and volume generators. Freeze the producer before one physical
+application. Its ceiling is **300 process-CPU seconds**, one 511-dimensional
+eigensolve and two Hamiltonian/vector-field evaluations, with no time step,
+parameter scan or new field solve. Useful BLAS parallelism is allowed.
+Stop on nonfinite/positive-chart failure, relative eigen/projector error
+above `1e-8`, failed control, source drift or budget exhaustion; diagnose
+before designing another calculation. Retain a compact summary and hashes,
+with regenerable arrays in the ignored cache. A non-vacuum result closes
+this probe and identifies the additional response operators needed.
+
 ## Two successive sourced boundaries, 18 October 2026
 
 The next missing connection is an actual second nesting level under the

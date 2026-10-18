@@ -2855,6 +2855,29 @@ and four-case indicators. Its correction fails vacuum form on the declared
 interval. This completes that one application; it does not authorize a new
 trajectory or refinement campaign.
 
+The physical-resolution comparison uses that same immutable NPZ. After the
+method's tests pass and the source is committed, run once to a fresh path:
+
+```text
+python scripts/run_python.py -m pytest tests/test_nsc_conformal_resolution.py tests/test_nsc_conformal_vacuum_generator.py tests/test_nsc_conformal_resolution_correlation.py -q
+python scripts/run_python.py scripts/measure_nsc_conformal_resolution.py --geometry .build/data/nsc-spherical-conformal-episode-v2.npz --output .build/conformal-resolution.json
+```
+
+If the cache is absent, the geometric-average command above supplies its
+bounded recovery. The resolution producer verifies its original hash and
+refuses uncommitted method changes. One reference `-Delta_h` eigenspace is
+fixed at `T=.05`, then the original and filtered `T=.3` Cauchy states use
+the same Hamiltonian and full fermion columns. The independent physical
+ruler and cutoff are fixed in the admission. The 300-process-CPU-second
+limit includes one eigensolve and two Hamiltonian/vector evaluations; there
+is no evolution, grid scan, source fit or constraint reset. Eight BLAS
+threads perform useful linear algebra without changing existing processes.
+The compact output records the energy-projected vacuum-volume coefficient,
+each retained-force residual and both constraint defects. It is not a
+cosmological Lambda prediction or a retarded effective action. Full arrays
+remain in the ignored cache and can be regenerated. Eigen/replay residuals
+do not supply a propagated physical error bound.
+
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.
 The seven controls include coordinate Riemann/Ricci, normal Weyl under a

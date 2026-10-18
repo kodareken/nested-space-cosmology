@@ -237,6 +237,82 @@ The evaluated connector, common observer prescription and effective local
 gravitational reduction remain the outward calculation. This finite probe
 requires no further quadrature refinement.
 
+### Physical resolution of one fixed geometry
+
+The inherited relation describes a common law. It does not by itself force
+every admissible state to be self-similar. A concrete resolution map is
+needed to test Douglas's proposal that successive unresolved structure
+produces increasingly complex local behaviour. Adding the grandchild above
+changes a state. The following construction instead reduces one fixed
+state of the separate Einstein/Weyl/Dirac candidate.
+
+On its reference spatial metric `h=r^2(Q^2 dx^2+dOmega^2)`, radial scalars
+have the positive operator
+
+$$
+\mathcal L=-\Delta_h=-\frac1{r^3Q}\partial_x\left(\frac rQ\partial_x\right).
+$$
+
+Use the owned odd geometry basis and its existing even quadrature to form
+`K_ij=integral (r/Q) phi_i' phi_j' dx` and
+`M_ij=integral r^3 Q phi_i phi_j dx`. Select generalized eigenvalues
+`mu*L_ref^2<=1` on the stored `T=.05` slice, with the previously fixed
+observer ruler `L_ref=4.80028044552352`. Orthonormalizing this span in the
+canonical `dx` pairing gives a fixed symmetric projector `P`. The physical
+metric selects the span; the canonical pairing selects its complement.
+The 2048-point quadrature is still a numerical representation of the same
+511 geometry variables, not an extra physical environment.
+
+Apply `P` to all geometry pairs in the exact nodal canonical coordinates
+`a=log(r), pi_a=r*p_r`, `b=log(Q), pi_b=Q*p_Q`, and `chi,p_chi`.
+Keep the full fermion columns and occupations. Nodal reconstruction by
+exponentiation must also pass positivity after prolongation. At fixed
+reference projector and canonical environment `z_e=(1-P)z`, the difference
+
+$$
+H_{\rm corr}(z_c;z_e)=H(z_c+z_e)-H(z_c),\qquad
+\delta F_c=P X_H(z)-P X_H(Pz)
+$$
+
+is an instantaneous Hamiltonian correlation. Here `P` acts as the identity
+on retained fermions, so the environment contains geometry only. The
+canonical log-momentum rates include the product rule,
+`pi_a_dot=r*p_r_dot+p_r*r_dot`, and likewise for `b`. Both evaluations use
+the same owned Hamiltonian, quadrature, gauge, couplings and matter state.
+This first comparison uses only `T=.3`; it is not a retarded elimination.
+Rates refer to the same conformal coordinate-time generator. Filtering also
+changes the metric lapse; a matched full/coarse proper-clock reduction has
+not been constructed by this instantaneous comparison.
+
+The vacuum comparison follows independently from the four-dimensional
+volume. The owned `(+---)` action has `-A R_L-V4`, with `R_E=-R_L`.
+Thus the dictionary `A=1/(16*pi*G)`, `V4=2*A*Lambda` gives
+
+$$
+H_\Lambda=8\pi A\Lambda\int r^4LQ\,dx,
+\qquad \delta V=-8\pi A\Lambda r^4.
+$$
+
+The existing `r^2` term in `V` is sphere curvature and cannot replace this
+volume generator. Varying before choosing `L=Q` gives the unit-Lambda lapse
+constraint `8*pi*A*Q*r^4` and momentum rates
+`p_Q_dot=-8*pi*A*L*r^4`, `p_r_dot=-32*pi*A*L*Q*r^3`.
+After the conformal gauge choice the total `p_Q` rate is
+`-16*pi*A*Q*r^4`. No coordinate, auxiliary-momentum, shift-constraint or
+fermion-rate change comes from this potential. Adjoint pullback to the
+owned geometry variables precedes the log-canonical change and projection.
+
+The coefficient `delta_H/H_unitLambda` is an energy projection to compare
+with the **entire** retained vector, not a derivation of vacuum form. Each
+canonical block has its own residual and units; mixing their unweighted
+norms would obscure the test. The original full-state constraint defect,
+filtered constraint and exact saved-rate replay remain separate. The bare
+vacuum term and missing quantum vacuum branch are not introduced. The
+[bounded admission](prior-art-and-open-claim.md#physical-resolution-of-one-fixed-geometry-18-october-2026)
+permits one reference eigensolve and the two final-state evaluations. No
+fractal dimension, repeated-scale flow or observed cosmological constant
+has yet been derived from this map.
+
 ### Observer clocks in the geometric average
 
 The selected larger-geometry route must compare resolutions in a declared
