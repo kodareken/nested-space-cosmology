@@ -130,23 +130,37 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
         scope='numerical_retarded_maps_from_existing_characteristic_solver')
 
 
-def retarded_response(sample,kind,order):
-    """Restrict a cell map while enforcing its known endpoint and mean.
+def retarded_response(sample,kind,order,*,source_jet=False):
+    """Restrict a cell map with exact endpoint data and preserved mean.
 
     Among polynomial corrections of zero integral, this is the smallest
-    L2 correction giving the exact Volterra endpoint trace. It enforces a
-    field identity, not a target covariance. Reapply at each retained order.
+    L2 correction giving the exact Volterra endpoint trace. source_jet adds
+    the field's exact SOURCE derivative, independently of its observation
+    derivative. Targets come from the field equations. Reapply per order.
     """
     if kind not in ('field','spatial'):
         raise ValueError('field or spatial retarded map required')
     response=sample['cell_'+kind]
     if isinstance(order,bool) or not isinstance(order,int) or not 2<=order<=min(map(len,response.green)):
         raise ValueError('admitted polynomial order required')
+    if source_jet and (kind!='field' or order<3):
+        raise ValueError('field order at least three required for both source constraints')
     endpoint=sample['endpoint_values'][0 if kind=='field' else 1]
     green=[]
     for leg in (0,1):
         coefficients=response.green[leg][:order].copy()
         correction=endpoint[leg]-np.sum(coefficients,axis=0)
-        coefficients[1:]+=(2*np.arange(1,order)+1)[:,None]*correction/(order*order-1)
+        n=np.arange(1,order);weights=2*n+1
+        if source_jet:
+            # Scale the derivative row to keep the 2x2 Gram well conditioned.
+            scale=order*(order-1);derivative=n*(n+1)/scale
+            target=sample['source_endpoint_values'][leg]*response.lengths[leg]
+            residual=(target-np.einsum('n,ni->i',np.arange(order)*(np.arange(order)+1),coefficients))/scale
+            gram=np.array([[sum(weights),weights@derivative],
+                [weights@derivative,weights@(derivative*derivative)]])
+            multipliers=np.linalg.solve(gram,np.stack((correction,residual)))
+            coefficients[1:]+=weights[:,None]*(multipliers[0]+derivative[:,None]*multipliers[1])
+        else:
+            coefficients[1:]+=weights[:,None]*correction/(order*order-1)
         green.append(coefficients)
     return NullResponse(response.lengths,tuple(green),response.direct,response.direct_derivative)

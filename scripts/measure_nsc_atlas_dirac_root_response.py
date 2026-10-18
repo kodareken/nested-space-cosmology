@@ -122,9 +122,9 @@ def pair_worker(job):
         process_CPU_total=time.process_time())
 
 
-def polynomial_calculation(chart,preparations,a,r,rows,evidence,worker_totals,budget):
+def polynomial_calculation(chart,preparations,a,r,rows,evidence,worker_totals,budget,*,source_comparison=False):
     S=chart.duration;U,V=.8*S,.7*S;T,x=(U+V)/2,(V-U)/2
-    jobs=[];separations={};integral_cache={}
+    jobs=[];separations={};integral_cache={};identity_errors={}
     # The field phase finishes before the process phase starts. Only small
     # response polynomials cross the process boundary; field arrays do not.
     for fraction in (.02,.01):
@@ -142,12 +142,23 @@ def polynomial_calculation(chart,preparations,a,r,rows,evidence,worker_totals,bu
         separations[fraction]=quad_vec(lambda y:float(chart.fields(T-y,T+y,region='cap')['lapse']),
             x-eta/2,x+eta/2,epsabs=1e-13,epsrel=1e-12)
         for order in (24,48):
-            lf,rf,ls,rs=[retarded_response(maps[g,side],'field',order)
-                for g,side in (('nested',0),('nested',1),('cap',0),('cap',1))]
-            ld,rd,sd,td=[retarded_response(maps[g,side],'spatial',order)
-                for g,side in (('nested',0),('nested',1),('cap',0),('cap',1))]
-            arguments=((lf,rf,ls,rs,1/.45),(ld,rf,sd,rs,1/.45),(lf,rd,ls,td,1/.45))
-            jobs.extend(((128,order,fraction),channel,arg) for channel,arg in enumerate(arguments))
+            for source_jet in ((False,True) if source_comparison else (False,)):
+                fields=[retarded_response(maps[g,side],'field',order,source_jet=source_jet)
+                    for g,side in (('nested',0),('nested',1),('cap',0),('cap',1))]
+                spatial=[retarded_response(maps[g,side],'spatial',order)
+                    for g,side in (('nested',0),('nested',1),('cap',0),('cap',1))]
+                errors=[]
+                for f,d in zip(fields,spatial):
+                    W=float(preparations['cap'].fields(*f.lengths)['potential'])
+                    coefficient=logarithmic_coefficients(f,d)
+                    errors.extend((abs(coefficient['q_alpha']-W*W/(2*np.pi)),
+                        abs(coefficient['angular']+W/np.pi)))
+                key=(128,order,fraction,source_jet);identity_errors[key]=max(errors)
+                if source_jet and identity_errors[key]>1e-9:
+                    raise RuntimeError('Source-compatible logarithmic identity failed: '+str((key,identity_errors[key])))
+                lf,rf,ls,rs=fields;ld,rd,sd,td=spatial
+                arguments=((lf,rf,ls,rs,1/.45),(ld,rf,sd,rs,1/.45),(lf,rd,ls,td,1/.45))
+                jobs.extend((key,channel,arg) for channel,arg in enumerate(arguments))
     values={};pending={}
     try:
         with ProcessPoolExecutor(max_workers=8,mp_context=multiprocessing.get_context('spawn')) as pool:
@@ -162,11 +173,12 @@ def polynomial_calculation(chart,preparations,a,r,rows,evidence,worker_totals,bu
                     key=tuple(result['key']);channels=values.setdefault(key,{})
                     channels[result['channel']]=result['value']
                     if len(channels)==3:
-                        n,order,fraction=key;distance,error=separations[fraction]
-                        rows.append(statistic_row(n,order,fraction,a,r,distance,error,
-                            channels[0],channels[1],channels[2]))
+                        n,order,fraction,source_jet=key;distance,error=separations[fraction]
+                        row=statistic_row(n,order,fraction,a,r,distance,error,channels[0],channels[1],channels[2])
+                        row.update(source_endpoint_derivative=source_jet,endpoint_log_identity_max_error=identity_errors[key])
+                        rows.append(row)
                         print(json.dumps(dict(phase='covariance',cells=n,polynomial_order=order,
-                            separation_over_S=fraction)),flush=True)
+                            separation_over_S=fraction,source_endpoint_derivative=source_jet)),flush=True)
             except Exception:
                 for future in pending:
                     future.cancel()
@@ -230,7 +242,7 @@ def diagnose_source_logs(commit,hashes):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
-    parser.add_argument('--stage',choices=('initial','polynomial'),default='initial')
+    parser.add_argument('--stage',choices=('initial','polynomial','source-jets'),default='initial')
     parser.add_argument('--diagnose-source-logs',action='store_true')
     args=parser.parse_args()
     if args.diagnose_source_logs and (args.output is not None or args.stage!='initial'):
@@ -260,23 +272,27 @@ def main():
                   for g in ('nested','cap')}
     rows=[];endpoint_evidence=[];stopped=None;integral_cache={}
     baseline=None;baseline_gaps={}
-    if args.stage=='polynomial':
-        path=ROOT/'results/summaries/nsc-atlas-dirac-root-response-v1.json'
+    if args.stage in ('polynomial','source-jets'):
+        path=ROOT/('results/summaries/nsc-atlas-dirac-root-response-v1.json' if args.stage=='polynomial' else
+            'results/summaries/nsc-atlas-dirac-root-response-v2.json')
         raw=path.read_bytes()
         if raw!=subprocess.check_output(['git','show',f'{commit}:{path.relative_to(ROOT).as_posix()}'],cwd=ROOT):
-            raise ValueError('freeze the v1 numerical baseline before comparison')
+            raise ValueError('freeze the numerical baseline before comparison')
         baseline=dict(path=path.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(raw).hexdigest(),
             absolute_tolerance=1e-9)
         baseline_values=json.loads(raw)
     try:
         with threadpool_limits(limits=1):
-            if args.stage=='polynomial':
-                polynomial_calculation(chart,preparations,a,r,rows,endpoint_evidence,worker_totals,budget)
+            if args.stage in ('polynomial','source-jets'):
+                polynomial_calculation(chart,preparations,a,r,rows,endpoint_evidence,worker_totals,budget,
+                    source_comparison=args.stage=='source-jets')
                 expected={(v['polynomial_order'],v['separation_over_S']):v['finite_split_anisotropy_difference']
                     for v in baseline_values['cases'] if v['cells']==128}
-                baseline_gaps={str(v['separation_over_S']):abs(v['finite_split_anisotropy_difference']
-                    -expected[24,v['separation_over_S']]) for v in rows if v['polynomial_order']==24}
-                if len(baseline_gaps)!=2 or max(baseline_gaps.values())>baseline['absolute_tolerance']:
+                baseline_orders=(24,) if args.stage=='polynomial' else (24,48)
+                baseline_gaps={f"{v['polynomial_order']}:{v['separation_over_S']}":abs(v['finite_split_anisotropy_difference']
+                    -expected[v['polynomial_order'],v['separation_over_S']]) for v in rows
+                    if v['polynomial_order'] in baseline_orders and not v.get('source_endpoint_derivative',False)}
+                if len(baseline_gaps)!=2*len(baseline_orders) or max(baseline_gaps.values())>baseline['absolute_tolerance']:
                     raise RuntimeError('Parallel/order-24 baseline mismatch: '+str(baseline_gaps))
                 budget()
             for n in (64,128) if args.stage=='initial' else ():
@@ -314,29 +330,42 @@ def main():
     grids=(64,128) if args.stage=='initial' else (128,)
     orders=(12,24) if args.stage=='initial' else (24,48)
     if stopped is None:
-        lookup={(v['cells'],v['polynomial_order'],v['separation_over_S']):v['finite_split_anisotropy_difference'] for v in rows}
-        comparisons=dict(grid_spread={f'{p}:{f}':abs(lookup[128,p,f]-lookup[64,p,f])
-            for p in orders for f in (.02,.01)} if len(grids)==2 else None,
-            polynomial_spread={f'{n}:{f}':abs(lookup[n,orders[-1],f]-lookup[n,orders[0],f]) for n in grids for f in (.02,.01)},
-            separation_spread={f'{n}:{p}':abs(lookup[n,p,.01]-lookup[n,p,.02]) for n in grids for p in orders},
-            baseline_absolute_gaps=baseline_gaps)
-    result=dict(schema='nsc-atlas-dirac-full-root-finite-split-v1' if args.stage=='initial' else
-            'nsc-atlas-dirac-full-root-finite-split-v2',method_commit=commit,stage=args.stage,
+        lookup={(v['cells'],v['polynomial_order'],v['separation_over_S'],v.get('source_endpoint_derivative',False)):
+            v['finite_split_anisotropy_difference'] for v in rows}
+        if args.stage=='source-jets':
+            comparisons=dict(grid_spread=None,
+                polynomial_spread={str(s):{str(f):abs(lookup[128,48,f,s]-lookup[128,24,f,s])
+                    for f in (.02,.01)} for s in (False,True)},
+                separation_spread={str(s):{str(p):abs(lookup[128,p,.01,s]-lookup[128,p,.02,s])
+                    for p in orders} for s in (False,True)},
+                source_constraint_change={f'{p}:{f}':lookup[128,p,f,True]-lookup[128,p,f,False]
+                    for p in orders for f in (.02,.01)},baseline_absolute_gaps=baseline_gaps)
+        else:
+            comparisons=dict(grid_spread={f'{p}:{f}':abs(lookup[128,p,f,False]-lookup[64,p,f,False])
+                for p in orders for f in (.02,.01)} if len(grids)==2 else None,
+                polynomial_spread={f'{n}:{f}':abs(lookup[n,orders[-1],f,False]-lookup[n,orders[0],f,False])
+                    for n in grids for f in (.02,.01)},
+                separation_spread={f'{n}:{p}':abs(lookup[n,p,.01,False]-lookup[n,p,.02,False]) for n in grids for p in orders},
+                baseline_absolute_gaps=baseline_gaps)
+    version={'initial':'v1','polynomial':'v2','source-jets':'v3'}[args.stage]
+    result=dict(schema='nsc-atlas-dirac-full-root-finite-split-'+version,method_commit=commit,stage=args.stage,
         sources_sha256=hashes,status='finite_split_reference_only' if stopped is None else 'stopped_before_complete_comparison',
         stopped_reason=stopped,domain=dict(wall_clock_duration=S,root_radius=.45,
             detector_U_over_S=.8,detector_V_over_S=.7,physical_reference_length_m=ell,
             detector_radius_over_ell=r,physical_radar_lapse=a,central_mass=0.,angular_sectors=[1],
             magnetic_degeneracy=2,root_radial_spectrum='complete analytic covariance, no momentum cutoff',
             state='same correlated product-cylinder parent and fixed auxiliary switch in both geometries'),
-        cases=sorted(rows,key=lambda v:(v['cells'],v['polynomial_order'],v['separation_over_S'])),
+        cases=sorted(rows,key=lambda v:(v['cells'],v['polynomial_order'],v['separation_over_S'],
+            v.get('source_endpoint_derivative',False))),
         endpoint_evidence=endpoint_evidence,numerical_spreads=comparisons,baseline_reference=baseline,
         limits=['One signed angular sector only; the angular tail is not computed.',
             'Finite nonzero split in the declared canonical radar frame; no coincident renormalized stress.',
             'The pressure-shaped bilocal statistic is not full Psi/Phi or its compact-source derivative.',
             'Grid, polynomial and separation spreads are diagnostics, not certified continuum error bounds.',
             'Bessel tail and PV estimates exclude field representation and floating arithmetic.',
+            'A corrected leading logarithm does not establish the finite observation-derivative compatibility or coincidence part.',
             'The physical formation of the supplied preparation remains open; no P001 grid ran.'],
-        compute=dict(mode_workers=8,covariance_processes=8 if args.stage=='polynomial' else 1,
+        compute=dict(mode_workers=8,covariance_processes=8 if args.stage!='initial' else 1,
             parallel_phases='separate field and covariance phases',BLAS_threads=1,
             process_CPU_seconds=time.process_time()-cpu_start+sum(worker_totals.values()),
             child_process_CPU_seconds=sum(worker_totals.values()),observed_child_processes=len(worker_totals),

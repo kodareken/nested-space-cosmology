@@ -7,7 +7,8 @@ from numpy.polynomial.legendre import leggauss
 
 from recursive_horizons.nsc_atlas_dirac_retarded import (
     retarded_null_responses,retarded_response,volterra_endpoint_jets)
-from recursive_horizons.nsc_atlas_dirac_root_pairing import pair_cylinder_responses
+from recursive_horizons.nsc_atlas_dirac_root_pairing import (
+    NullResponse,pair_cylinder_responses,logarithmic_coefficients)
 
 
 def constant_maps(U,V,mu,n,order=24):
@@ -132,3 +133,48 @@ def test_source_endpoint_jets_against_the_independent_separable_Riemann_kernel()
         h=2e-4;values=[kernel(leg,L-j*h) for j in range(5)]
         derivative=(25*values[0]-48*values[1]+36*values[2]-16*values[3]+3*values[4])/(12*h)
         assert np.max(abs(derivative-jets['source'][leg]))<3e-8
+
+
+def test_source_constraints_preserve_mean_and_are_the_unique_minimum_L2_correction():
+    order=8;rng=np.random.default_rng(20843)
+    coefficients=tuple(rng.normal(size=(order,2))+1j*rng.normal(size=(order,2)) for _ in (0,1))
+    lengths=(.11,.13);jets=volterra_endpoint_jets(1.7,.2,-.3,(.32,.41),(.023,-.019))
+    sample=dict(cell_field=NullResponse(lengths,coefficients,np.eye(2)),
+        endpoint_values=np.stack((jets['value'],jets['spatial'])),source_endpoint_values=jets['source'])
+    corrected=retarded_response(sample,'field',order,source_jet=True)
+    for a,L in enumerate(lengths):
+        assert np.array_equal(corrected.green[a][0],coefficients[a][0])
+        assert np.max(abs(corrected.value(a,L)-jets['value'][a]))<2e-13
+        assert np.max(abs(corrected.value(a,L,derivative=1)-jets['source'][a]))<2e-11
+        n=np.arange(order)
+        constraints=np.stack((np.eye(order)[0],np.ones(order),n*(n+1)/L))
+        constraints/=np.linalg.norm(constraints,axis=1)[:,None]
+        _,_,v=np.linalg.svd(constraints,full_matrices=True)
+        null=v[3:].T
+        delta=corrected.green[a]-coefficients[a]
+        # Independent optimality condition: weighted correction is orthogonal
+        # to EVERY variation preserving the three constraints.
+        orthogonal=null.T@(delta*(L/(2*n+1))[:,None])
+        assert np.max(abs(orthogonal))<2e-13
+
+
+def test_source_compatible_reconstruction_retains_the_exact_cylinder_kernel_and_log():
+    T,x,eta,mu=.11,.006,.008,1/.45
+    left=constant_maps(T-x-eta/2,T+x+eta/2,mu,64,order=48)
+    right=constant_maps(T-x+eta/2,T+x-eta/2,mu,64,order=48)
+    s1=np.array([[0.,1.],[1.,0.]]);s3=np.diag([1.,-1.])
+    exact=-mu*s1*k0(mu*eta)/(2*math.pi)-1j*mu*s3*k1(mu*eta)/(2*math.pi)
+    exact_dx=mu*mu/(2*math.pi)*(s1*k1(mu*eta)+1j*s3*(k0(mu*eta)+k1(mu*eta)/(mu*eta)))
+    for order in (24,48):
+        lf,rf=(retarded_response(s,'field',order,source_jet=True) for s in (left,right))
+        ld,rd=(retarded_response(s,'spatial',order) for s in (left,right))
+        kernel=pair_cylinder_responses(lf,rf,mu,epsabs=2e-11)['kernel']
+        dx=(pair_cylinder_responses(ld,rf,mu,epsabs=2e-11)['kernel']
+            -pair_cylinder_responses(lf,rd,mu,epsabs=2e-11)['kernel'])/2
+        print('SOURCE_COMPATIBLE_CYLINDER',order,float(np.max(abs(kernel-exact))),float(np.max(abs(dx-exact_dx))))
+        assert np.max(abs(kernel-exact))<1e-6
+        assert np.max(abs(dx-exact_dx))<3e-6
+        for f,d in ((lf,ld),(rf,rd)):
+            coefficient=logarithmic_coefficients(f,d)
+            assert abs(coefficient['q_alpha']-mu*mu/(2*math.pi))<1e-10
+            assert abs(coefficient['angular']+mu/math.pi)<3e-13

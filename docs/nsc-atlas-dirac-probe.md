@@ -3081,3 +3081,40 @@ minimum-L2 polynomial correction with these two constraints is fixed by
 the equations before covariance evaluation. Recompute only after this
 source compatibility is restored; finer field grids and further PV
 quadrature do not repair the missing identity.
+
+### Enforcing the Volterra source derivative before recomputation
+
+For n=1,...,p-1 set w_n=2n+1 and d_n=n(n+1)/(p(p-1)). Holding c0 fixed,
+the minimum-L2 correction has `delta c_n=w_n*(lambda0+d_n*lambda1)`.
+The two multipliers solve the weighted 2x2 Gram system for the endpoint
+value residual and the scaled source-derivative residual. This scaling
+avoids conditioning the Gram by powers of p. Apply it to both spinor
+components of the field kernel; the observation-spatial kernel keeps its
+existing value/mean constraint. The old reconstruction remains available
+explicitly for baseline comparisons.
+
+Control mean preservation, both endpoint constraints and weighted
+orthogonality against independent feasible variations. Check the full
+cylinder kernel, analytic spatial insertion and universal logarithms on
+the existing N64 grid at orders24/48. Admit 60 CPU seconds for these
+controls, no new field grid and no retained arrays. A failed constraint
+or cylinder control stops the physical calculation.
+
+Then compare old and source-compatible reconstructions from the SAME
+N128 response rows, state, clock, orders24/48 and splits .02S/.01S.
+The old cases must reproduce v2 within 1e-9. Use the existing separated
+eight-worker field phase and eight-process covariance phase, 240 total
+process-CPU seconds including children, and a summary below 24000 bytes.
+The corrected logarithmic identity must hold before a new amplitude is
+interpreted. Noncontracting polynomial or split effects keep the result
+unresolved. This correction does not by itself establish the finite
+coincidence part, an angular sum, conservation at finite projection or
+full Psi/Phi. No P001 grid or smaller separation is admitted.
+
+Both controls pass in 11.75 process-CPU seconds. Weighted optimality is
+checked against an independently constructed SVD nullspace of the three
+constraints. On the unchanged N64 cylinder, the corrected field at orders
+24/48 gives kernel errors 1.43270e-8/1.37257e-8 and spatial-insertion
+errors 5.18031e-7/5.15725e-7, with the universal logarithmic coefficients.
+The producer's explicit `--stage source-jets` compares both reconstructions;
+legacy modes retain their original defaults and serve as numerical baselines.

@@ -32,6 +32,11 @@ the residue without assigning a coincident finite part.
 The actual central-detector diagnostic confirms a nonzero relative log
 residue at both orders. Enforcing the exact source jet is the next
 necessary reconstruction correction; the finite stress stays open.
+The [source-compatible correction](nsc-atlas-dirac-probe.md#enforcing-the-volterra-source-derivative-before-recomputation)
+is now implemented by the retarded adapter, with independent weighted
+optimality and cylinder controls. The same producer compares corrected
+and legacy maps in `--stage source-jets`; finite derivative compatibility
+and the coincidence limit remain open.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).

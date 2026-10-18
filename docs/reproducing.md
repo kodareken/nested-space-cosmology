@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+The [source-compatible reconstruction](nsc-atlas-dirac-probe.md#enforcing-the-volterra-source-derivative-before-recomputation)
+preserves the kernel mean and exact endpoint value/source derivative:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_retarded.py::test_source_constraints_preserve_mean_and_are_the_unique_minimum_L2_correction tests/test_nsc_atlas_dirac_retarded.py::test_source_compatible_reconstruction_retains_the_exact_cylinder_kernel_and_log -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_root_response.py --stage source-jets --output .build/nsc-atlas-dirac-root-response-source-jets.json
+```
+
+Freeze the method before the second command. The 11.75-CPU-second controls
+check weighted optimality and the exact cylinder kernel/derivative. The
+physical comparison keeps N128 and the same two splits, uses eight
+covariance processes, and reproduces the four v2 legacy cases within 1e-9.
+No finite coincident stress or full Psi/Phi follows from log cancellation alone.
+
 The [source-endpoint logarithmic check](nsc-atlas-dirac-probe.md#source-endpoint-jets-and-a-relative-logarithmic-diagnostic)
 uses analytic Volterra source jets and the same central detector:
 
