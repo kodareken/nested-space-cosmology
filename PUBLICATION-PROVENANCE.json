@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 249721,
+      "bytes": 249891,
       "path": "docs/active-code-map.md",
-      "sha256": "82d9ea2ac5da8a840de60ab0629c7a0c330737b28f064099f424e3341b0a0261"
+      "sha256": "580985366bfd921a134a9c5d339ade1963ae1b4f35f6bfcb77114d2baeb2f133"
     },
     {
       "bytes": 103343,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 394139,
+      "bytes": 395360,
       "path": "docs/current-result.md",
-      "sha256": "2023d5060a45870491907022177526a188c7a23865502efd1f318700dd1738fc"
+      "sha256": "79d72da0b0cedaebc40c7d87b51e7545526920b9e636a8c6a22000ee67398f31"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2390657,
+      "bytes": 2391143,
       "path": "docs/lab-snapshot.json",
-      "sha256": "42a6c5a68e143ab43733b0ea3dd04e2b1811b521168bab541131f5a9a13086dd"
+      "sha256": "4e33a06b2351d1bc3c3ae0b8393895a735a9e7f897dc5038560cb83a4f14b342"
     },
     {
       "bytes": 4997,
@@ -2206,9 +2206,9 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 12309,
+      "bytes": 12796,
       "path": "docs/papers.md",
-      "sha256": "dbe62a16e5a7718f3bd8086a782c3ccbfa16c5d5468ebe52a8f37b7191cfef26"
+      "sha256": "f19ddb049da4116a5deac4d0b9cdfd3980349d337cb66829ba5baf17eb376d2e"
     },
     {
       "bytes": 8749,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 523851,
+      "bytes": 524912,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "194dfea6ae18593faa137f2cdb5eddb39952a9527d1a0724d0b0f5fba7d8c962"
+      "sha256": "71850e327bf064152e34304d63441a090fea01a942a2b3e0981d723272b095fc"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 174185,
+      "bytes": 174567,
       "path": "docs/reproducing.md",
-      "sha256": "f5ad1419a8121fd90e5156185f16128228cbf8479d767c903f655799c4c88ae9"
+      "sha256": "fc16a2f63d3e2393ef05f4e387cd31b77a38b63790886b5f0cb916fe5e856996"
     },
     {
       "bytes": 31710,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 107318,
+      "bytes": 109072,
       "path": "docs/schur-memory.md",
-      "sha256": "2d6d52885dc8aa14cf17c795939efa69ed5c0a6e9aed1d7afc6afa8e5fca491a"
+      "sha256": "7fd11e0547029bb9b3813ae4e3881600f0c7521b1f030ffa76ca79ed5e58229a"
     },
     {
       "bytes": 537091,
@@ -2331,14 +2331,14 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 21460,
+      "bytes": 21635,
       "path": "paper/build-manifest.json",
-      "sha256": "41b2dfd038cdcb6b2f1ad7c1689ccf4d7eb83c92f6b922dc28fa6c75a2f6b414"
+      "sha256": "79d22900f97e91d3a9247293aada8c3ad2f2a8313869983ee92f201873bbe24f"
     },
     {
       "bytes": 3206,
       "path": "paper/catalog.json",
-      "sha256": "34e1bff11986a4d5833daff9f1ae08521605172e5fa958655157190a253fff33"
+      "sha256": "7301843fd5f418b3138df5aa56c7a0a1fbf4f448d04166e5c5c1fb9c83cf0d4f"
     },
     {
       "bytes": 26616,
@@ -2523,7 +2523,7 @@
     {
       "bytes": 396,
       "path": "paper/metadata.json",
-      "sha256": "84a999e5e3558ec630234e430f44c009b6148b43da79385631af917f5ee1d8aa"
+      "sha256": "cf5da9b15311336c1b93e3293111f99845cf94a3f398d12966b542caea95395f"
     },
     {
       "bytes": 7619,
@@ -2566,14 +2566,14 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 172640,
+      "bytes": 175650,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "d3f161d7e1cddbf7f7107e658605f3c711dda3e41a4ec232a33442506ee4f2f8"
+      "sha256": "d5611810c519a6274b010f497372fb1fb6f6035226101bdb2c17175bb3113bc7"
     },
     {
-      "bytes": 3680739,
+      "bytes": 3701755,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "c449708dd9edfdca7efe14e070eff5f92f039195cbc21d7487b702e53af7d2a8"
+      "sha256": "55016492948625d7b322e37b16c67808d6f84b15aefe352c3ae944d17be4ae42"
     },
     {
       "bytes": 1521,
@@ -14961,6 +14961,11 @@
       "sha256": "3a41ef7076cbb2cd3653a748b066fa1074ed2f96bfbdc50d294300ae33b7fe5a"
     },
     {
+      "bytes": 4720,
+      "path": "results/summaries/nsc-spectral-gravitational-response-v1.json",
+      "sha256": "0c1bb779676a37b8af3e9605f0dab262c570af13b2364e29a6757328b5314951"
+    },
+    {
       "bytes": 3676,
       "path": "results/summaries/nsc-vacuum-gravitational-response-v1.json",
       "sha256": "ffb1dcccd9a52ee47100f4f0674745a559a863cf71fe39428aca247f8eca9235"
@@ -21836,9 +21841,9 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "42a6c5a68e143ab43733b0ea3dd04e2b1811b521168bab541131f5a9a13086dd",
+  "lab_snapshot_sha256": "4e33a06b2351d1bc3c3ae0b8393895a735a9e7f897dc5038560cb83a4f14b342",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
-  "manuscript_revision": "2026-10-18.5",
+  "manuscript_revision": "2026-10-18.6",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

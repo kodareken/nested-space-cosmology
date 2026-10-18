@@ -1,0 +1,100 @@
+{
+  "comparison": {
+    "dimensionless_quadrature_gap": 0.0,
+    "full_profile_minus_local_ratio": 1.5937545990718505e-06,
+    "local_quartic_response_over_Einstein": 0.9983725860059594
+  },
+  "counts": {
+    "compact_refinements": 0,
+    "global_moment_reintegrations": 0,
+    "parameter_fits": 0,
+    "physical_momenta": 1,
+    "quadrature_rules": [
+      16,
+      32
+    ],
+    "root_solves": 0,
+    "trajectories": 0
+  },
+  "definition": "Gamma=(1/2) Tr H(D4^2), H=h_Lambda-E1(u/mu_B^2); compact data fixed. The existing zero-volume-term law removes the constant TT term. S_TT^(2)=(A/4) integral h_TT P_H(-partial^2) h_TT.",
+  "limits": {
+    "CPU_seconds": 120.0,
+    "summary_bytes": 12000
+  },
+  "parameters": {
+    "A": 0.04501936182826115,
+    "C_W": -0.0008441130342798952,
+    "L_ref": 4.80028044552352,
+    "compact_interval": 2.0,
+    "compact_modes": 34,
+    "couplings_or_profile_refitted": false,
+    "magnetic_matching_scale": 2.0,
+    "overlap_points": 112,
+    "ultraviolet_cutoff": 3.973074368754331,
+    "warp_amplitude": 0.017733990147783252,
+    "warp_path": 1.0
+  },
+  "quadrature_cases": [
+    {
+      "correction_integral": 0.06934942083787751,
+      "quadrature_order": 16,
+      "response": 0.04332714963816526,
+      "response_over_Einstein": 0.9983741797605584,
+      "sampled_profile_max": 5.331823016637113,
+      "sampled_profile_min": 5.32101830797087,
+      "squared_momentum": 0.043397706507750905
+    },
+    {
+      "correction_integral": 0.0693494208378785,
+      "quadrature_order": 32,
+      "response": 0.04332714963816526,
+      "response_over_Einstein": 0.9983741797605584,
+      "sampled_profile_max": 5.331864699419336,
+      "sampled_profile_min": 5.320947575842691,
+      "squared_momentum": 0.043397706507750905
+    }
+  ],
+  "reproduce": "python scripts/run_python.py scripts/measure_nsc_spectral_gravitational_response.py --output .build/spectral-gravity-profile.json",
+  "runtime_cpu_seconds": 0.1875,
+  "scale_comparison": {
+    "local_extra_momentum_over_cutoff": 1.2997435526388792,
+    "local_extra_root_over_cutoff2": 1.6893333026263349,
+    "local_extra_root_p2": 26.66666666666671,
+    "p2": 0.043397706507750905,
+    "p2_Lref2": 1.0,
+    "p2_over_matching_scale2": 0.010849426626937726,
+    "p_over_UV_cutoff": 0.05243324000377066
+  },
+  "schema": "nsc-spectral-gravitational-response-v1",
+  "scope": "A flat Euclidean transverse-traceless response of the already owned induced spectral profile. The additional local-polynomial root is compared with the separately owned cutoff; it is not a root measurement of the full kernel. This is not the spherical retarded map, a curved stability proof, a matter-state completion, an exterior attachment, a fractal dimension or cosmological Lambda.",
+  "source_commit": "9b68122a84700ad0220b64c7dbf820b299ef4387",
+  "source_sha256": {
+    "results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+    "results/summaries/nsc-conformal-resolution-v1.json": "3a41ef7076cbb2cd3653a748b066fa1074ed2f96bfbdc50d294300ae33b7fe5a",
+    "scripts/check_nsc_compact_matching.py": "112364a0ac2b1ef47d42ed863a7caf8566922d9e2b09396600b1d295ab96de3f",
+    "scripts/measure_nsc_spectral_gravitational_response.py": "83de442ddb90aa42db942ef57a6db7f43bfd8841dfef366cbe8c91ef1cf1189e",
+    "src/recursive_horizons/dirac/compact.py": "618b9f6213e1a8304e44285da40f9ec085bb102024e7a9e7dd68136445d93bb6",
+    "src/recursive_horizons/nsc_scale_binding.py": "c5db801764183641b09b4bf86b169a8e41a10c28d3a342023319c30e25d9b25b",
+    "src/recursive_horizons/nsc_spectral_gravitational_response.py": "fa4650afdc88305273712293c0185708b2545013e3d7af466b2eb0ddd65330b0",
+    "src/recursive_horizons/nsc_warped_source.py": "97730058a09ddfc77a8ad59b97f7a85f8879082b646ca6c2aa2605e5b5e7250b",
+    "tests/test_nsc_spectral_gravitational_response.py": "be590f7ccf83c6e15db9e0e742ad35c11be3e1878057c0178223e9e2003ff32b"
+  },
+  "spectral_moments": {
+    "first_complement_moment_reused_from_A": 42.655035996906285,
+    "profile_at_zero": 5.331879499613274,
+    "recovered_C_W_minus_locked": 5.421010862427522e-19
+  },
+  "status": "completed_flat_Euclidean_profile_response",
+  "threadpools": [
+    {
+      "internal_api": "openblas",
+      "num_threads": 1
+    },
+    {
+      "internal_api": "openblas",
+      "num_threads": 1
+    }
+  ],
+  "uncertainty": "The fixed-rule gap is an empirical integration indicator. The inherited compact Galerkin and first-moment errors are not enclosed here. Sample profile extrema are not global bounds; no total physical error bar is inferred."
+}

@@ -1,10 +1,10 @@
 {
-  "bytes": 3680739,
+  "bytes": 3701755,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "84a999e5e3558ec630234e430f44c009b6148b43da79385631af917f5ee1d8aa",
+  "metadata_sha256": "cf5da9b15311336c1b93e3293111f99845cf94a3f398d12966b542caea95395f",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 54,
-  "pdf_sha256": "c449708dd9edfdca7efe14e070eff5f92f039195cbc21d7487b702e53af7d2a8",
+  "pages": 55,
+  "pdf_sha256": "55016492948625d7b322e37b16c67808d6f84b15aefe352c3ae944d17be4ae42",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -480,6 +480,10 @@
       "sha256": "3a41ef7076cbb2cd3653a748b066fa1074ed2f96bfbdc50d294300ae33b7fe5a"
     },
     {
+      "path": "results/summaries/nsc-spectral-gravitational-response-v1.json",
+      "sha256": "0c1bb779676a37b8af3e9605f0dab262c570af13b2364e29a6757328b5314951"
+    },
+    {
       "path": "results/summaries/nsc-vacuum-gravitational-response-v1.json",
       "sha256": "ffb1dcccd9a52ee47100f4f0674745a559a863cf71fe39428aca247f8eca9235"
     },
@@ -489,6 +493,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "d3f161d7e1cddbf7f7107e658605f3c711dda3e41a4ec232a33442506ee4f2f8",
-  "version": "working-2026-10-18.5"
+  "source_sha256": "d5611810c519a6274b010f497372fb1fb6f6035226101bdb2c17175bb3113bc7",
+  "version": "working-2026-10-18.6"
 }

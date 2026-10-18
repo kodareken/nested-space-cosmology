@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.6` adds Section 6.1.11: the flat quadratic gravitational
+response of the existing warped compact spectral profile. At the fixed
+observer scale it differs from the local approximation by 1.59 parts per
+million of the Einstein response. The local polynomial's extra root is
+above the saved ultraviolet cutoff. The manuscript retains the inherited
+spectral-error boundary and the missing curved causal/state connection;
+no full-kernel stability or Lambda is inferred.
+
 Revision `2026-10-18.5` adds Section 6.1.10: a constraint-compatible vacuum
 gravitational normal map and a fixed-coupling stability diagnostic. The
 local auxiliary action's flat exterior has a negative squared scale and a

@@ -40,6 +40,22 @@ disagreeing with this quadratic kernel would falsify the connection. The
 result selects the validity question for the physical curved reduction;
 it supplies no new vacuum constant or Lorentzian state.
 
+**Outcome:** method `9b68122` completes the one admitted profile application
+in 0.1875 process-CPU seconds, with a 4720-byte
+[summary](../results/summaries/nsc-spectral-gravitational-response-v1.json)
+and no raw cache. At `p^2*L_ref^2=1`, the normalized response is
+`0.9983741797605584`; the local polynomial gives `0.9983725860059594`.
+Their difference is `1.5937545990718505e-6`. Both Jacobi rules round to the
+same normalized float; this is not a zero total error. The local extra
+root is `1.6893333026263349*Lambda_UV^2`, outside the saved cutoff.
+The direct profile zero limit recovers `C_W` to `5.42e-19` absolute.
+Seven controls pass. This finite Euclidean validity comparison is closed;
+an independent Grok derivation also confirms the profile identity and
+transverse-traceless normalization, retaining its functional-calculus premise.
+It does not establish the full kernel's pole spectrum or the stability of
+an actual nested exterior. Curved causal metric dependence and physical
+state remain the next connection, with no further flat scan admitted.
+
 ## A constrained vacuum gravitational exterior under the owned action
 
 The timelike one-form now needs an on-shell exterior map. Begin with the

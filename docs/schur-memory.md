@@ -1100,7 +1100,12 @@ and the [warped compact weight](../src/recursive_horizons/nsc_warped_source.py).
 The matched external spectral function is
 `H(u)=h_Lambda(u)-E1(u/mu_B^2)`. Compact interval, warp and matching scales
 are held fixed in the following external metric variation. Varying those
-internal data would require their additional vertices.
+internal data would require their additional vertices. The object varied
+here is the declared spectral functional `(1/2)*Tr_4 H(D4^2)`. This does
+not assert that the warped singular values are shifted flat KK masses or
+that their original proper time is a positive heat measure in `u`.
+The fixed-profile functional calculus is the premise of this response;
+a general five-dimensional metric variation has additional dependencies.
 
 The [existing matching formulas](../scripts/check_nsc_compact_matching.py)
 fix `Q1=integral_0^infinity H(u)du`, `Q0=H(0)` and
@@ -1174,6 +1179,27 @@ It must retain the inherited spectral representation and identify its
 quadrature indicators separately from unbounded inherited errors. No
 full-theory stability, vacuum constant or fractal dimension follows from
 this flat quadratic connection alone.
+
+The frozen [application](../results/summaries/nsc-spectral-gravitational-response-v1.json)
+uses method `9b68122`, the unchanged `A,C_W`, `Lambda_UV=3.973074368754331`,
+`mu_B=2`, and the independent `L_ref=4.80028044552352`. The chosen probe has
+`p/Lambda_UV=.05243324000377066` and `p^2/mu_B^2=.010849426626937726`.
+Its normalized response is `P_H(p^2)/p^2=.9983741797605584`, whereas the
+local quartic approximation gives `.9983725860059594`. The difference is
+`1.5937545990718505e-6` of the Einstein response. The two fixed Jacobi
+rules round to the same normalized float; their raw correction integrals
+differ by about `1e-15`. Neither observation bounds the inherited compact
+representation or spectral-moment error. The profile's own zero limit
+recovers the locked `C_W` within `5.42e-19` absolute.
+
+The additional local-polynomial root has `x_*/Lambda_UV^2=1.6893333026263349`,
+or momentum `1.2997435526388792*Lambda_UV`. Thus the previous nonperturbative
+local instability is not, by itself, a stability result about the full
+spectral profile. No zero search of that full function was run and no
+absence of other poles is inferred. The single application uses 0.1875
+process-CPU seconds, one BLAS thread and a 4720-byte summary. This closes
+the stated flat comparison; the actual curved causal response and exterior
+state are needed for the effective-volume calculation.
 
 ## Step 7: the current candidate's first vacuum projection
 

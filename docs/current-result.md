@@ -1,6 +1,25 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.5`, includes the vacuum gravitational-response diagnostic, the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.6`, includes the owned spectral profile's gravitational response, the vacuum gravitational-response diagnostic, the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## The owned induced gravitational spectral profile, 18 October 2026
+
+The [profile connection](schur-memory.md#the-induced-spectral-profile-beyond-the-local-gravitational-polynomial)
+now extends the induced gravity calculation beyond its local polynomial,
+using the existing warped compact profile and coefficient account. At
+`p^2*L_ref^2=1`, its flat Euclidean transverse-traceless response is
+**`0.9983741797605584`** of the Einstein response. The local approximation
+differs by **`1.5937545990718505e-6`**. Its extra polynomial root lies at
+`1.6893333026263349*Lambda_UV^2`; the saved ultraviolet cutoff is independent
+of the observer ruler.
+
+Seven controls pass. One admitted application uses 0.1875 CPU seconds and
+a [4720-byte record](../results/summaries/nsc-spectral-gravitational-response-v1.json),
+with no raw cache, scale root or trajectory. The 16/32 quadrature ratios
+round to the same float; inherited spectral errors are not enclosed by that
+comparison. This closes the flat finite-scale comparison. It does not
+determine full-kernel poles, a curved retarded state or a cosmological
+Lambda. The next input is the actual curved causal metric reduction.
 
 ## Vacuum gravitational response diagnostic, 18 October 2026
 

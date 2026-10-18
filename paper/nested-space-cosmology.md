@@ -967,6 +967,64 @@ actual nested exterior geometry and its physical state remain necessary
 for a cosmological Lambda calculation. No coupling was changed to remove
 the reference instability.
 
+### 6.1.11. The inherited spectral profile and its gravitational response
+
+The local coefficients have an existing spectral owner. For the fixed
+warped compact interval, its matched profile is
+$H(u)=h_\Lambda(u)-E_1(u/\mu_B^2)$, where
+$\Lambda_{\mathrm{UV}}=\Omega/r_e$ and
+$\mu_B=\sqrt{|q|}/r_e$. They are distinct from the observer ruler.
+The coefficient account gives $Q_1=\int_0^\infty H(u)\,du$,
+$Q_0=H(0)$, $A=Q_1/[6(4\pi)^2]$ and $C_W=-Q_0/[40(4\pi)^2]$.
+Compact interval, warp and matching scales are fixed during this external
+metric variation.
+
+The flat Euclidean transverse-traceless heat response of
+[Alkofer--Saueressig--Zanusso, 1410.7999v2](https://arxiv.org/html/1410.7999v2),
+Section II, supplies the linear spectral-profile dependence. With the
+existing zero-volume-term normalization, exchanging its integrations gives
+
+$$
+\mathcal P_H(x)=x\left[1-\frac{x}{4Q_1}\int_0^1
+(1+2v)\sqrt{1-v}\,H(xv/4)\,dv\right],\qquad x=p^2\geq0.
+$$
+
+For the owned half-trace action, the quadratic density is
+$(A/4)h_{\mathrm{TT}}\mathcal P_H(-\partial^2)h_{\mathrm{TT}}$.
+Its first two terms are $x+(2C_W/A)x^2$, exactly matching the local
+coefficient account. The [derivation and controls](../docs/schur-memory.md#the-induced-spectral-profile-beyond-the-local-gravitational-polynomial)
+retain the spectral-calculus assumptions, unit scaling and an independently
+integrated finite proper-time check. The earlier exponential example is
+not substituted for this compact profile.
+
+The [single evaluation](../results/summaries/nsc-spectral-gravitational-response-v1.json)
+keeps the saved $A,C_W$, $\Lambda_{\mathrm{UV}}=3.973074368754331$,
+$\mu_B=2$ and $L_{\mathrm{ref}}=4.80028044552352$. Frozen method
+`9b68122` uses $p^2L_{\mathrm{ref}}^2=1$:
+
+| Finite reference quantity | Value |
+|---|---|
+| $p/\Lambda_{\mathrm{UV}}$ | $0.05243324000377066$ |
+| $\mathcal P_H(p^2)/p^2$ | $0.9983741797605584$ |
+| Local polynomial divided by $p^2$ | $0.9983725860059594$ |
+| Full-profile minus local ratio | $1.5937545990718505\times10^{-6}$ |
+| Extra local root divided by $\Lambda_{\mathrm{UV}}^2$ | $1.6893333026263349$ |
+
+Both fixed Jacobi rules, of orders 16 and 32, round to the same normalized
+response; their raw correction integrals differ by about $10^{-15}$.
+This is an integration indicator, not a zero total error or a bound on
+inherited compact spectral errors. Seven controls pass, and the profile's
+zero limit recovers $C_W$ within $5.42\times10^{-19}$ absolute. The scalar
+application takes 0.1875 process-CPU seconds and stores 4720 bytes without
+a raw cache, scale root, trajectory or fit.
+
+The local polynomial's additional root lies above the stored ultraviolet
+cutoff. It therefore cannot by itself diagnose the full spectral theory's
+stability. This calculation does not locate the full kernel's other poles
+or replace the constrained spherical causal map. Curved real-time metric
+dependence and the exterior's physical state remain necessary before
+identifying an effective cosmological volume term.
+
 ### 6.2. The retained local incoming gate
 
 <!-- nsc-claim:local-source-insertion-majorant -->

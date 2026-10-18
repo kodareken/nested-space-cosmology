@@ -3049,6 +3049,12 @@ root, full moment integration or trajectory. It bounds its process CPU at
 response and empirical quadrature change do not establish a curved retarded
 response or a physical Lambda error range.
 
+The [completed record](../results/summaries/nsc-spectral-gravitational-response-v1.json)
+uses frozen method `9b68122`. Compare its normalized response and scale
+ratios within `1e-10` absolute, keeping the declared profile, input hashes
+and reference exact. Runtime, destination and newer commit metadata may
+differ. The rounded zero quadrature gap does not certify total accuracy.
+
 ## Scope
 
 The main [paper](../paper/nested-space-cosmology.md) is a living atlas manuscript.
