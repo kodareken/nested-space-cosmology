@@ -3181,3 +3181,36 @@ value vanish, while `int (partial_L h)/(s-L) ds=3*L^2/8` is nonzero.
 Thus checking only the mean cannot bound the finite insertion. Nonconstant
 source moments or the actual derivative commutator are the next required
 compatibility evidence before a coincident amplitude is evaluated.
+
+### Nonconstant source-moment compatibility check
+
+Use fixed probes f_m(s)=P_m(2s/S-1), m=0,1,2,4,8, with the SAME S at
+both observation events. For I_m=int G f_m, J_m=int G_x f_m and
+Gamma_m=G(L)f_m(L), check
+
+\[
+\mu_m=(I_{m,0}-I_{m,1})/\eta
+-\lambda(\Gamma_{m,0}+\Gamma_{m,1})/2
+-(J_{m,0}+J_{m,1})/2.
+\]
+
+The integrals of the supplied polynomials are evaluated by exact-degree
+Gaussian quadrature. Compare the same two existing splits, both
+geometries, orders24/48 and legacy/source-compatible reconstructions on
+N128. Also form the nested-minus-cap residual before taking magnitudes
+and the change induced by the source correction. This separates shared
+field error from the correction's contribution; it does not by itself
+bound a coincident stress or isolate every error source.
+
+Admit 60 process-CPU seconds for algebraic controls and the one fixed-grid
+diagnosis, no covariance quadrature, finer grid or smaller split. Controls
+include both boundary signs and the cubic-projection counterexample: a
+constant probe has only O(eta^2) error while a nonconstant probe retains
+a finite commutator. Noncontracting residuals stop finite-part inference.
+Print the compact diagnostic table; retain only its useful summary here.
+
+Both controls pass in 1.09375 process-CPU seconds: moving-boundary signs
+and polynomial quadrature, and the cubic counterexample's distinct
+constant/nonconstant residuals. The existing producer's
+`--diagnose-observer-moments` flag prints the fixed-domain table without
+running any covariance contraction or creating a result data file.

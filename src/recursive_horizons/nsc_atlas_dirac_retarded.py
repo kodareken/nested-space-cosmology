@@ -164,3 +164,53 @@ def retarded_response(sample,kind,order,*,source_jet=False):
             coefficients[1:]+=weights[:,None]*correction/(order*order-1)
         green.append(coefficients)
     return NullResponse(response.lengths,tuple(green),response.direct,response.direct_derivative)
+
+
+def source_moments(response,leg,degrees,reference_duration):
+    """Ordinary-kernel moments against observer-independent source probes.
+
+    Probe m is P_m(2*s/S-1) with fixed S, rather than a polynomial whose
+    source normalization moves with the observer. Gaussian integration
+    is exact for the supplied finite polynomials, up to arithmetic.
+    """
+    m=np.asarray(degrees)
+    S=float(reference_duration)
+    if (m.ndim!=1 or not len(m) or m.dtype.kind not in 'iu' or np.any(m<0)
+            or not np.isfinite(S) or S<=0 or leg not in (0,1)):
+        raise ValueError('nonnegative integer probe degrees, positive fixed S and one source leg required')
+    L=response.lengths[leg]
+    nodes,weights=leggauss((len(response.green[leg])+int(max(m))+2)//2)
+    s=(nodes+1)*L/2
+    probes=legvander(2*s/S-1,int(max(m)))[:,m]
+    result=np.einsum('s,sm,si->mi',weights*L/2,probes,response.value(leg,s))
+    for index,degree in enumerate(m):
+        if degree==0:
+            result[index]=L*response.green[leg][0]
+    return result
+
+
+def observation_moment_residual(left_field,left_spatial,right_field,right_spatial,*,
+                                separation,reference_duration,degrees=(0,1,2,4,8)):
+    """Necessary derivative consistency on the existing equal-time pair.
+
+    Returns (source_leg,probe,outgoing_spinor). An exact differentiated
+    continuum kernel leaves the O(eta^2) central-difference term. Finite
+    field and projection errors remain separate; this is not a stress bound.
+    """
+    eta=float(separation);S=float(reference_duration);m=np.asarray(degrees)
+    if (not np.isfinite(eta) or eta<=0 or not np.isfinite(S) or S<=0
+            or left_field.lengths!=left_spatial.lengths or right_field.lengths!=right_spatial.lengths
+            or not np.allclose(np.asarray(left_field.lengths)-right_field.lengths,
+                eta*np.array([-1.,1.]),rtol=1e-12,atol=1e-14)):
+        raise ValueError('matching equal-time field/spatial maps and positive fixed separation required')
+    residual=[]
+    for leg,sign in enumerate((-1.,1.)):
+        IL=source_moments(left_field,leg,m,S);IR=source_moments(right_field,leg,m,S)
+        JL=source_moments(left_spatial,leg,m,S);JR=source_moments(right_spatial,leg,m,S)
+        L,R=left_field.lengths[leg],right_field.lengths[leg]
+        profileL=legvander(2*L/S-1,int(max(m)))[0,m]
+        profileR=legvander(2*R/S-1,int(max(m)))[0,m]
+        boundary=(profileL[:,None]*left_field.value(leg,L)
+            +profileR[:,None]*right_field.value(leg,R))/2
+        residual.append((IL-IR)/eta-sign*boundary-(JL+JR)/2)
+    return np.stack(residual)

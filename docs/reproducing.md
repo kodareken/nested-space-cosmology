@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+The [nonconstant observer-moment check](nsc-atlas-dirac-probe.md#nonconstant-source-moment-compatibility-check)
+uses the same N128 maps and two existing separations:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_retarded.py::test_observation_moments_keep_moving_boundary_signs_and_exact_quadrature tests/test_nsc_atlas_dirac_retarded.py::test_nonconstant_probe_detects_projection_commutator_hidden_from_mean -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_root_response.py --diagnose-observer-moments
+```
+
+Freeze the method before the diagnosis. It prints only residual summaries
+for fixed source probes, including nested-minus-cap and the correction's
+contribution. Two controls use 1.09375 CPU seconds; the shared allowance
+is 60 CPU seconds. No finer grid, smaller split or vacuum contraction runs.
+
 The [source-compatible reconstruction](nsc-atlas-dirac-probe.md#enforcing-the-volterra-source-derivative-before-recomputation)
 preserves the kernel mean and exact endpoint value/source derivative:
 

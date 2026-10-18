@@ -6,7 +6,8 @@ from scipy.special import j0,j1,k0,k1
 from numpy.polynomial.legendre import leggauss
 
 from recursive_horizons.nsc_atlas_dirac_retarded import (
-    retarded_null_responses,retarded_response,volterra_endpoint_jets)
+    retarded_null_responses,retarded_response,volterra_endpoint_jets,
+    observation_moment_residual)
 from recursive_horizons.nsc_atlas_dirac_root_pairing import (
     NullResponse,pair_cylinder_responses,logarithmic_coefficients)
 
@@ -178,3 +179,41 @@ def test_source_compatible_reconstruction_retains_the_exact_cylinder_kernel_and_
             coefficient=logarithmic_coefficients(f,d)
             assert abs(coefficient['q_alpha']-mu*mu/(2*math.pi))<1e-10
             assert abs(coefficient['angular']+mu/math.pi)<3e-13
+
+
+def test_observation_moments_keep_moving_boundary_signs_and_exact_quadrature():
+    S=1.2;eta=.02;lengths=np.array([.8,.6]);sign=np.array([-1.,1.])
+    vectors=(np.array([.3,.7j]),np.array([-.4j,.2]))
+    greens=tuple(v[None,:] for v in vectors);zero=(np.zeros((1,2)),np.zeros((1,2)))
+    left=NullResponse(tuple(lengths+sign*eta/2),greens,np.eye(2))
+    right=NullResponse(tuple(lengths-sign*eta/2),greens,np.eye(2))
+    dl=NullResponse(left.lengths,zero,np.zeros((2,2)))
+    dr=NullResponse(right.lengths,zero,np.zeros((2,2)))
+    residual=observation_moment_residual(left,dl,right,dr,separation=eta,reference_duration=S,degrees=(0,1,2))
+    assert np.max(abs(residual[:,:2]))<3e-14
+    for a in (0,1):
+        assert np.max(abs(residual[a,2]+sign[a]*eta**2/S**2*vectors[a]))<3e-14
+
+
+def test_nonconstant_probe_detects_projection_commutator_hidden_from_mean():
+    def projected(L):
+        coefficients=np.zeros((3,2),complex);coefficients[:,1]=L**3*np.array([.25,.45,.25])
+        sample=dict(cell_field=NullResponse((.5,L),(np.zeros((3,2)),coefficients),np.eye(2)),
+            endpoint_values=np.zeros((2,2,2),complex),source_endpoint_values=np.zeros((2,2),complex))
+        sample['endpoint_values'][0,1,1]=L**3
+        sample['source_endpoint_values'][1,1]=3*L*L
+        return retarded_response(sample,'field',3,source_jet=True)
+    L=.8;S=1.;zero=(np.zeros((1,2)),np.zeros((1,2)))
+    for eta in (.02,.01):
+        # G=s^3 has zero true observer derivative. Its constrained projection
+        # changes with L, even though its mean derivative error cancels.
+        left=projected(L+eta/2);right=projected(L-eta/2)
+        left=NullResponse((.5-eta/2,left.lengths[1]),left.green,left.direct)
+        right=NullResponse((.5+eta/2,right.lengths[1]),right.green,right.direct)
+        dl=NullResponse(left.lengths,zero,np.zeros((2,2)))
+        dr=NullResponse(right.lengths,zero,np.zeros((2,2)))
+        residual=observation_moment_residual(left,dl,right,dr,separation=eta,reference_duration=S,degrees=(0,1))
+        mean=-L*eta*eta/2
+        first_monomial=-L**4/16-33*L*L*eta*eta/32-13*eta**4/256
+        assert abs(residual[1,0,1]-mean)<2e-13
+        assert abs(residual[1,1,1]-(2*first_monomial/S-mean))<2e-13

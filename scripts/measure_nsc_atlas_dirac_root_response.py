@@ -26,7 +26,8 @@ from threadpoolctl import threadpool_limits
 
 from recursive_horizons.nsc_atlas_dirac_radar import WallRadarChart
 from recursive_horizons.nsc_atlas_dirac_preparation import CylinderPreparation
-from recursive_horizons.nsc_atlas_dirac_retarded import retarded_null_responses,retarded_response
+from recursive_horizons.nsc_atlas_dirac_retarded import (
+    retarded_null_responses,retarded_response,observation_moment_residual)
 from recursive_horizons.nsc_atlas_dirac_root_pairing import (
     NullResponse,pair_cylinder_responses,logarithmic_coefficients)
 
@@ -239,15 +240,70 @@ def diagnose_source_logs(commit,hashes):
     print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
 
 
+def diagnose_observer_moments(commit,hashes):
+    """Fixed-probe compatibility on the same maps; no vacuum contraction."""
+    started=time.process_time();wall=time.perf_counter()
+    chart=WallRadarChart();S=chart.duration;U,V=.8*S,.7*S;degrees=(0,1,2,4,8)
+    preparations={g:CylinderPreparation(chart,duration=S,root_radius=.45,region=g,angular_k=1)
+        for g in ('nested','cap')}
+    cache={};residuals={}
+    for fraction in (.02,.01):
+        eta=fraction*S;maps={}
+        for g,preparation in preparations.items():
+            for side,point in enumerate(((U-eta/2,V+eta/2),(U+eta/2,V-eta/2))):
+                maps[g,side]=endpoint(preparation,*point,128,cache,order=48)
+                if time.process_time()-started>60:
+                    raise RuntimeError('Observer-moment diagnosis exhausted its 60 process-CPU seconds')
+        for order in (24,48):
+            for source_jet in (False,True):
+                for g in preparations:
+                    fields=[retarded_response(maps[g,side],'field',order,source_jet=source_jet) for side in (0,1)]
+                    spatial=[retarded_response(maps[g,side],'spatial',order) for side in (0,1)]
+                    residuals[g,order,source_jet,fraction]=observation_moment_residual(
+                        fields[0],spatial[0],fields[1],spatial[1],separation=eta,
+                        reference_duration=S,degrees=degrees)
+                residuals['nested_minus_cap',order,source_jet,fraction]=(
+                    residuals['nested',order,source_jet,fraction]-residuals['cap',order,source_jet,fraction])
+    def norm(value):
+        return np.max(abs(value),axis=(0,2))
+    rows=[];ratios=[];floor=1e-11
+    for g in ('nested','cap','nested_minus_cap'):
+        for order in (24,48):
+            correction={f:residuals[g,order,True,f]-residuals[g,order,False,f] for f in (.02,.01)}
+            for source_jet in (False,True):
+                for fraction in (.02,.01):
+                    rows.append(dict(geometry=g,polynomial_order=order,
+                        source_endpoint_derivative=source_jet,separation_over_S=fraction,
+                        max_abs_residual_by_probe=norm(residuals[g,order,source_jet,fraction]).tolist(),
+                        correction_induced_residual_by_probe=norm(correction[fraction]).tolist() if source_jet else None))
+                large=norm(residuals[g,order,source_jet,.02]);small=norm(residuals[g,order,source_jet,.01])
+                ratios.append(dict(geometry=g,polynomial_order=order,source_endpoint_derivative=source_jet,
+                    large_over_small_by_probe=[float(a/b) if max(a,b)>floor and b>0 else None
+                        for a,b in zip(large,small)]))
+    result=dict(diagnostic='ordinary_kernel_observer_moment_compatibility',method_commit=commit,
+        source_fingerprint=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),
+        cells=128,angular_k=1,detector_U_over_S=.8,detector_V_over_S=.7,
+        probe_degrees=degrees,fixed_source_reference_duration=S,reporting_floor=floor,
+        rows=rows,split_ratios=ratios,
+        compute=dict(process_CPU_seconds=time.process_time()-started,CPU_limit_seconds=60,
+            wall_seconds=time.perf_counter()-wall,mode_workers=8,retained_full_arrays=False),
+        scope='Necessary ordinary-kernel derivative check; central-difference, field and projection errors coexist. No stress bound or new finite vacuum amplitude.')
+    print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
     parser.add_argument('--stage',choices=('initial','polynomial','source-jets'),default='initial')
     parser.add_argument('--diagnose-source-logs',action='store_true')
+    parser.add_argument('--diagnose-observer-moments',action='store_true')
     args=parser.parse_args()
-    if args.diagnose_source_logs and (args.output is not None or args.stage!='initial'):
-        parser.error('source-log diagnosis prints its small table; do not combine it with output or stage')
-    if not args.diagnose_source_logs and args.output is None:
+    diagnostic=args.diagnose_source_logs or args.diagnose_observer_moments
+    if args.diagnose_source_logs and args.diagnose_observer_moments:
+        parser.error('choose one coefficient or moment diagnosis')
+    if diagnostic and (args.output is not None or args.stage!='initial'):
+        parser.error('diagnosis prints its small table; do not combine it with output or stage')
+    if not diagnostic and args.output is None:
         parser.error('output required for a physical comparison')
     if args.output is not None and (args.output.exists() or not args.output.parent.is_dir()):
         raise ValueError('unused output path and existing parent required')
@@ -260,6 +316,9 @@ def main():
         hashes[name]=hashlib.sha256(raw).hexdigest()
     if args.diagnose_source_logs:
         diagnose_source_logs(commit,hashes)
+        return
+    if args.diagnose_observer_moments:
+        diagnose_observer_moments(commit,hashes)
         return
     cpu_start=time.process_time();wall_start=time.perf_counter();worker_totals={}
     def budget():

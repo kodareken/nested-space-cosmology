@@ -41,6 +41,10 @@ The [evaluated v3 comparison](nsc-atlas-dirac-probe.md#source-compatible-compari
 restores the required logarithms but still fails polynomial convergence.
 The [observation-derivative condition](nsc-atlas-dirac-probe.md#observation-derivative-compatibility-after-constrained-projection)
 is the next finite-part check; a mean-only residual is insufficient.
+The [nonconstant source probes](nsc-atlas-dirac-probe.md#nonconstant-source-moment-compatibility-check)
+use `source_moments` and `observation_moment_residual` in the retarded
+adapter. Their independent polynomial controls pass. The same producer
+prints the fixed-grid diagnostic in `--diagnose-observer-moments`.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).
