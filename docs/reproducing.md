@@ -2950,6 +2950,23 @@ ignored and hash-bound in that summary. Creation used 1736.1875 CPU seconds
 including the stopped first attempt. This response is closed; no unchanged
 trajectory replay is needed for the next calculation.
 
+The constrained flat-vacuum exterior has exact controls and one bounded
+scalar application:
+
+```text
+python scripts/run_python.py -m pytest tests/test_nsc_spherical_vacuum_response.py -q
+python scripts/run_python.py scripts/measure_nsc_vacuum_gravitational_response.py --output .build/vacuum-gravity-reference.json
+```
+
+Use a fresh output path. No archived state, trajectory, root or grid is
+needed. The application reads the original couplings and independently
+fixed ruler from the two compact causal/resolution summaries, authenticates
+its committed sources, and evaluates one declared Laplace point within
+5 CPU seconds and 12000 output bytes. The symbolic controls share 60 CPU
+seconds. Zero Maxwell and Dirac fields define this flat reference; it is not
+an attachment to the charged periodic episode. The mass sign, kinetic
+coefficient and valid retarded half-plane remain part of the result.
+
 The smooth timelike boundary response of the owned auxiliary action has
 independent exact controls:
 

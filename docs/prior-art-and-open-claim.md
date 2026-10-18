@@ -1,5 +1,48 @@
 # Prior art and admission of new research
 
+## A constrained vacuum gravitational exterior under the owned action
+
+The timelike one-form now needs an on-shell exterior map. Begin with the
+same auxiliary action's exact flat vacuum, zero Maxwell flux and zero
+Dirac field, rather than assuming that three gravitational Dirichlet
+histories are independent. This is a vacuum reference test, not an
+attachment to the charged periodic episode.
+
+Use areal coordinates `r=R>0`, `L=N/R`, `Q=a/R`, `beta=0`, with
+`N=1+epsilon*n`, `a=1+epsilon*b`, `chi=epsilon*c`. Derive the linear
+equations from the owned bulk density, retaining the lapse and shift
+constraints before gauge restriction. Fix the mass integration constant
+and initial perturbation to zero. Determine the physical curvature master
+equation and its radial operator; do not assume the mass sign or stability.
+
+For `R>=R0`, impose causal boundary curvature data compatible with the zero
+initial state and no incoming perturbation at infinity. Construct its
+Laplace normal-derivative response only in the half-plane where the
+decaying radial solution and retarded transform exist. Reconstruct the
+metric traces required by the constraints and the gravitational face
+responses. The symbolic controls have **60 process-CPU seconds**, including
+independent variation before the areal restriction, the shift constraint,
+the Schwarzschild mass solution, the reduced master action and the exact
+radial solution. No physical trajectory, grid or parameter scan is admitted.
+
+After freezing the producer and passing those controls, one scalar
+application may reuse the original `A,C_W` from the causal summary and the
+independently fixed `L_ref` from the physical-resolution summary. Set
+`R0=L_ref` as a comparison ruler, not a fitted or attached interface. Report
+the dimensionless spectral scale, any growth time, the quadratic kinetic
+coefficient and one Laplace response at
+`s=2*sqrt(abs(m_squared)+R0^(-2))`. This application has **5 CPU seconds**,
+uses no raw cache, and retains at most 12000 bytes of summary and hashes.
+
+The likely failures are a lost gauge/constraint equation, a wrong curvature
+sign, and treating an unstable mode as a stationary local response. Detect
+them with the independent bulk/shift variation, known limit, and spectral
+sign and Laplace-domain check. Stop and diagnose mismatches or exhausted
+allowance. No action coefficient is changed to obtain stability. A later
+direct linearized solution outside the stated radial response would falsify
+this reference result. Its domain and any need for a different exterior or
+effective-theory interpretation must remain explicit before Lambda work.
+
 ## Timelike boundary response of the owned auxiliary action
 
 The closed photon calculation now needs the common action's exterior metric

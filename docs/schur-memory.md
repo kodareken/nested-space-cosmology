@@ -975,6 +975,100 @@ remaining connection is the common-action exterior response with specified
 boundary data and physical state, before any parent-volume or Lambda
 identification.
 
+### Constrained flat vacuum gravitational exterior
+
+The [vacuum response component](../src/recursive_horizons/nsc_spherical_vacuum_response.py)
+now derives an exterior map under the same owned action. Its reference has
+zero Maxwell flux and Dirac field, physical metric
+`ds^2=N^2 dt^2-a^2 dR^2-R^2 dOmega^2`, and flat `N=a=1,chi=0`.
+It is a vacuum diagnostic, not an attachment to the charged periodic state.
+Set `L=N/R,Q=a/R,r=R` only after retaining the full lapse and shift equations.
+Linear perturbations are `N=1+epsilon*n`, `a=1+epsilon*b`, `chi=epsilon*c`.
+
+Write `alpha=-4*pi*C_W/3` and `k=4*pi*A/alpha`. The lapse and momentum
+constraints imply
+
+$$
+kRb+c_R+c/R=kM,\qquad \partial_R M=\partial_t M=0,
+$$
+
+$$
+b=\frac{M}{R}-\frac{c_R+c/R}{kR},\qquad
+n_R=\frac{M}{R^2}-\frac{c_{tt}/R+2c_R/R^2+2c/R^3}{k}.
+$$
+
+The radius equation, varied before imposing areal gauge, then vanishes
+identically. The auxiliary equation supplies the remaining evolution.
+Linear Schwarzschild is `n=-M/R,b=M/R,c=-12*M/R`; its auxiliary curvature
+does not vanish. With `psi=(c+12*M/R)/R`, the physical propagating equation is
+
+$$
+\psi_{tt}-\psi_{RR}+
+\left(\frac6{R^2}+m^2\right)\psi=0,
+\qquad m^2=\frac{A}{2C_W}=-\frac{k}{6}.
+$$
+
+Eliminating the constraints in the quadratic action, retaining its explicit
+radial divergence, gives
+
+$$
+S_{2,\mathrm{bulk}}=K\int\left[
+\psi_t^2-\psi_R^2-(6/R^2+m^2)\psi^2\right]dt\,dR,
+\qquad K=-\frac{6\alpha}{k}=-\frac{8\pi C_W^2}{3A}.
+$$
+
+The coefficient in a unit-normalized wave equation does not determine this
+quadratic action weight. It is negative for `A>0`. This result treats the
+local auxiliary action nonperturbatively; an effective-theory interpretation
+needs an explicit order reduction, cutoff or completion before retaining
+this additional mode as a physical state.
+
+For the exterior `R>=R0`, fix zero initial perturbation, `M=0`, and no
+incoming signal at infinity. The boundary curvature history must be causal
+and compatible with those initial data. In the Laplace half-plane
+`Re(s)>sqrt(max(0,-m^2))`, select `q=sqrt(s^2+m^2)` with `Re(q)>0`. Then
+
+$$
+\widehat c(R)=\widehat c(R_0)\frac{R_0}{R}
+\frac{q^2R^2+3qR+3}{q^2R_0^2+3qR_0+3}
+e^{-q(R-R_0)}.
+$$
+
+At `R0`, define `D=(qR0)^2+3qR0+3` and
+`d=-q-3*(qR0+2)/(R0*D)`. The normal map into the exterior is
+`c_R/c=1/R0+d`. The metric traces are constrained:
+`b/c=-(d+2/R0)/(kR0)` and `n/c=b/c+(qR0+3)/(6D)` with `n(infinity)=0`.
+Thus these are one response column, not three freely specified gravitational
+Dirichlet histories. The outward normal of this exterior at `R0` points
+toward decreasing `R`; the module keeps that sign in the face responses.
+
+The direct normal-derivative term is nonlocal in time. Once the metric
+constraints are imposed, the same minimal face representative instead has
+`delta_E/c=-4*s_normal*alpha/R0`,
+`delta_P/c=-s_normal*alpha*(s^2+R0^(-2))/(2*pi*R0)`, and
+`delta_J/c=4*s_normal*alpha*(s^2+3*d/R0+6/R0^2)/(kR0)`.
+`J` is the auxiliary response per proper time. These coefficients are
+unreferenced face responses, not bulk vacuum density or parent energy.
+
+If `m^2=-gamma^2<0`, a compact sine profile beyond
+`max(R0,4/gamma)` with width `4*pi/gamma` has radial quadratic-form quotient
+at most `-9*gamma^2/16`. Therefore no finite inner radius removes every
+growing mode of this infinite flat exterior. Its retarded response exists
+in the stated half-plane, but a stable stationary reduction around this
+reference is unavailable. This does not establish the stability of the
+distinct finite periodic state or of a different nested exterior geometry.
+
+Nine [manufactured controls](../tests/test_nsc_spherical_vacuum_response.py)
+cover all five original equations before gauge restriction, the mass
+solution, reduced action and boundary flux, exact radial profile, physical
+face responses, Laplace domain and fixed input/ruler checks. The initial
+numeric control compared a SymPy complex number with a Python scalar;
+changing only its representation resolved that fixture failure. The
+equations and criteria were unchanged. The independent Grok derivation
+agrees on the zero-mass master operator and radial normal map. The single
+[scalar producer](../scripts/measure_nsc_vacuum_gravitational_response.py)
+must be frozen before evaluating the saved couplings and ruler.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk
