@@ -9,6 +9,7 @@ from recursive_horizons.nsc_conformal_resolution import (
     from_log_state, log_state, log_rates, project_geometry, project_rates,
 )
 from recursive_horizons.nsc_conformal_vacuum_generator import lambda_generator
+from measure_nsc_conformal_resolution import saved_rate_replay_errors, GEOMETRY_FIELDS
 
 
 @pytest.fixture(scope="module")
@@ -71,3 +72,13 @@ def test_energy_equality_does_not_imply_vacuum_force(example):
     candidate = project_rates(unit["canonical_rates"],P)
     assert np.max(abs(actual["a"]))>1e-8
     assert np.array_equal(candidate["a"],np.zeros(grid.ng))
+
+
+def test_archive_rate_interface_uses_prolonged_projected_values(example):
+    grid,state,P = example
+    rate, _ = compose_fine_hamiltonian(grid,state)
+    saved = {name:grid.A_g@getattr(rate,name) for name in GEOMETRY_FIELDS}
+    assert max(saved_rate_replay_errors(grid,rate,saved).values()) == 0
+    saved["r"] = np.zeros(grid.ng)
+    with pytest.raises(ValueError,match="quadrature grid"):
+        saved_rate_replay_errors(grid,rate,saved)

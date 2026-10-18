@@ -28,7 +28,7 @@ from measure_nsc_conformal_geometric_average import (
 
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCE_LENGTH = 4.80028044552352
-CPU_LIMIT = 300.
+CPU_LIMIT = 200.
 BYTE_LIMIT = 24_000
 GEOMETRY_FIELDS = ("Q", "r", "chi", "p_Q", "p_r", "p_chi")
 SOURCE_PATHS = (
@@ -71,6 +71,17 @@ def norm_report(actual, candidate, dx):
             "residual_squared_canonical_integral": float(dx*np.sum(abs(residual)**2))}
 
 
+def saved_rate_replay_errors(grid, rate, saved_rates):
+    """The archive writer stores prolonged projected rates, not ng coefficients."""
+    errors = {}
+    for name in GEOMETRY_FIELDS:
+        saved = np.asarray(saved_rates[name])
+        if saved.shape != (grid.nq,) or not np.isfinite(saved).all():
+            raise ValueError("saved rate must use the archive's quadrature grid: "+name)
+        errors[name] = float(np.max(abs(grid.A_g@getattr(rate,name)-saved)))
+    return errors
+
+
 def evaluate(grid, state):
     rate, bundle = compose_fine_hamiltonian(grid, state)
     system, fine, source = (bundle[key] for key in ("fine_system", "fine_state", "source"))
@@ -104,7 +115,7 @@ def main():
 
     def budget():
         if time.process_time()-started > CPU_LIMIT:
-            raise RuntimeError("resolution probe exceeded 300 process-CPU seconds; no automatic retry")
+            raise RuntimeError("resolution probe exceeded 200 process-CPU seconds; no automatic retry")
 
     commit, bindings = frozen_sources()
     old = json.loads(CURVATURE.read_text())["source_bindings"]
@@ -136,6 +147,9 @@ def main():
                                   for name in (*GEOMETRY_FIELDS,"phi0","phi1")})
             saved_rates = {name: np.array(data[PRIMARY+"_frames_rate_"+name][i1], copy=True)
                            for name in GEOMETRY_FIELDS}
+            if any(value.shape != (grid.nq,) or not np.isfinite(value).all()
+                   for value in saved_rates.values()):
+                raise ValueError("saved projected-rate representation differs from the archive writer")
         split = reference_projector(grid, r0, Q0, REFERENCE_LENGTH)
         budget()
         coarse = project_geometry(state, split.matrix)
@@ -143,8 +157,7 @@ def main():
         budget()
         H_coarse, coarse_rate, coarse_constraints = evaluate(grid, coarse)
         budget()
-        replay = {name: float(np.max(abs(getattr(full_rate,name)-saved_rates[name])))
-                  for name in GEOMETRY_FIELDS}
+        replay = saved_rate_replay_errors(grid,full_rate,saved_rates)
         for name, error in replay.items():
             if error > 1e-8*max(1.,float(np.max(abs(saved_rates[name])))):
                 raise ValueError("same-action rate differs from its saved counterpart: "+name)

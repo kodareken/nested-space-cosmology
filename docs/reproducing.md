@@ -2868,7 +2868,7 @@ bounded recovery. The resolution producer verifies its original hash and
 refuses uncommitted method changes. One reference `-Delta_h` eigenspace is
 fixed at `T=.05`, then the original and filtered `T=.3` Cauchy states use
 the same Hamiltonian and full fermion columns. The independent physical
-ruler and cutoff are fixed in the admission. The 300-process-CPU-second
+ruler and cutoff are fixed in the admission. The corrected producer's 200-process-CPU-second
 limit includes one eigensolve and two Hamiltonian/vector evaluations; there
 is no evolution, grid scan, source fit or constraint reset. Eight BLAS
 threads perform useful linear algebra without changing existing processes.

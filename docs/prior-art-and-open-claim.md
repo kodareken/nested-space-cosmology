@@ -47,6 +47,18 @@ before designing another calculation. Retain a compact summary and hashes,
 with regenerable arrays in the ignored cache. A non-vacuum result closes
 this probe and identifies the additional response operators needed.
 
+**Interface diagnosis before the corrected application:** method `76317fc`
+completed its eigensolve and both Hamiltonian evaluations, then stopped
+because it compared 511 rate coefficients with 2048 saved values. The
+archive's `keep_frame()` explicitly prolongs each projected rate before
+storage. Compare `A_g*rate` with those values and validate their shape
+before the eigensolve. A manufactured interface regression covers this
+correction. No input, physical mode, equation or tolerance changes. The
+failed call took 4.24 wall seconds (under 68 CPU seconds even at all 16
+logical processors); admit one corrected frozen application capped at
+200 CPU seconds, keeping the combined work below the original 300-second
+ceiling. No automatic retry or precision scan is admitted.
+
 ## Two successive sourced boundaries, 18 October 2026
 
 The next missing connection is an actual second nesting level under the
