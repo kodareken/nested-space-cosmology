@@ -24,6 +24,11 @@ covariance work into independent processes with a saved-value tolerance.
 The [evaluated v2 comparison](nsc-atlas-dirac-probe.md#polynomial-refinement-exposes-an-unresolved-amplitude)
 passes that baseline but fails polynomial contraction, so its amplitude
 remains unresolved. The endpoint-source log identity is the next check.
+The [log-residue diagnostic](nsc-atlas-dirac-probe.md#source-endpoint-jets-and-a-relative-logarithmic-diagnostic)
+uses `logarithmic_coefficients` in the root pairing and
+`volterra_endpoint_jets` in the retarded adapter. Independent Fourier,
+separable-kernel and source-slope counterexample controls pass. It diagnoses
+the residue without assigning a coincident finite part.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).

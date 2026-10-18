@@ -16,6 +16,25 @@ from .nsc_atlas_dirac_scattering import _inputs,_real_array
 from .nsc_atlas_dirac_root_pairing import NullResponse
 
 
+def volterra_endpoint_jets(W,Wu,Wv,square_integrals,mixed_integrals):
+    """One-sided value, observation-x and source-s endpoint jets.
+
+    All come from the same Volterra equation, including its moving lower
+    limit. The source derivative is distinct from the observation derivative.
+    Rows are incoming legs; columns are outgoing spinor components.
+    """
+    I=np.asarray(square_integrals,dtype=float);J=np.asarray(mixed_integrals,dtype=float)
+    if (I.shape!=(2,) or J.shape!=(2,) or not np.isfinite(I).all() or np.any(I<0)
+            or not np.isfinite(J).all() or not np.isfinite([W,Wu,Wv]).all()):
+        raise ValueError('finite potential jets and two declared boundary integrals required')
+    value=np.array([[-I[0]/4,-.5j*W],[-.5j*W,-I[1]/4]])
+    spatial=np.array([[-W*W/4+J[0]/4-I[0]**2/32,-.5j*Wv-.125j*W*I[0]],
+        [.5j*Wu+.125j*W*I[1],W*W/4-J[1]/4+I[1]**2/32]])
+    source=np.array([[-J[0]/4-I[0]**2/32,-.5j*Wu-.125j*W*I[0]],
+        [-.5j*Wv-.125j*W*I[1],-J[1]/4-I[1]**2/32]])
+    return dict(value=value,spatial=spatial,source=source)
+
+
 def _project_cells(row,length,width,order,endpoint):
     """Project a continuous linear reconstruction of the one-sided cell map.
 
@@ -93,10 +112,8 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
     rows[0,:,nu-1]-=direct[:,0];rows[0,:,-1]-=direct[:,1]
     rows[1,:,nu-1]-=direct_x[:,0];rows[1,:,-1]-=direct_x[:,1]
     lengths=((nu-.5)*du,(nv-.5)*dv)
-    endpoint_values=np.array([
-        [[-integrals[0]/4,-.5j*W],[-.5j*W,-integrals[1]/4]],
-        [[-W*W/4+mixed[0]/4-integrals[0]**2/32,-.5j*wv[-1,-1]-.125j*W*integrals[0]],
-         [.5j*wu[-1,-1]+.125j*W*integrals[1],W*W/4-mixed[1]/4+integrals[1]**2/32]]])
+    jets=volterra_endpoint_jets(W,wu[-1,-1],wv[-1,-1],integrals,mixed)
+    endpoint_values=np.stack((jets['value'],jets['spatial']))
     responses=[];residuals=[]
     for which in range(2):
         green=[];projection=[]
@@ -107,6 +124,7 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
             np.zeros((2,2)) if which==0 else np.diag([-1.,1.])))
         residuals.append(projection)
     return dict(cell_field=responses[0],cell_spatial=responses[1],endpoint_values=endpoint_values,
+        source_endpoint_values=jets['source'],
         cell_projection_residual=np.asarray(residuals),
         live_field_bytes_estimate=live_estimate,workers=workers,
         scope='numerical_retarded_maps_from_existing_characteristic_solver')

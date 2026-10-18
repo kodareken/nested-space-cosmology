@@ -27,7 +27,8 @@ from threadpoolctl import threadpool_limits
 from recursive_horizons.nsc_atlas_dirac_radar import WallRadarChart
 from recursive_horizons.nsc_atlas_dirac_preparation import CylinderPreparation
 from recursive_horizons.nsc_atlas_dirac_retarded import retarded_null_responses,retarded_response
-from recursive_horizons.nsc_atlas_dirac_root_pairing import NullResponse,pair_cylinder_responses
+from recursive_horizons.nsc_atlas_dirac_root_pairing import (
+    NullResponse,pair_cylinder_responses,logarithmic_coefficients)
 
 ROOT=Path(__file__).resolve().parents[1]
 CPU_LIMIT=240.
@@ -179,12 +180,64 @@ def polynomial_calculation(chart,preparations,a,r,rows,evidence,worker_totals,bu
                 worker_totals[result['pid']]=max(worker_totals.get(result['pid'],0.),result['process_CPU_total'])
 
 
+def diagnose_source_logs(commit,hashes):
+    """One fixed-grid coefficient diagnosis; no new bilocal/finite stress."""
+    started=time.process_time();wall=time.perf_counter()
+    chart=WallRadarChart();S=chart.duration;U,V=.8*S,.7*S
+    metric=chart.fields(U,V,region='cap');a=float(metric['lapse']);r=float(metric['radius'])
+    preparations={g:CylinderPreparation(chart,duration=S,root_radius=.45,region=g,angular_k=1)
+        for g in ('nested','cap')}
+    samples={};cache={}
+    for g,preparation in preparations.items():
+        samples[g]=endpoint(preparation,U,V,128,cache,order=48)
+        if time.process_time()-started>30:
+            raise RuntimeError('Source-log diagnosis exhausted its 30 process-CPU seconds')
+    path=ROOT/'results/summaries/nsc-atlas-dirac-root-response-v2.json';raw=path.read_bytes()
+    if raw!=subprocess.check_output(['git','show',f'{commit}:{path.relative_to(ROOT).as_posix()}'],cwd=ROOT):
+        raise ValueError('freeze the diagnostic comparison record first')
+    previous=json.loads(raw)
+    observed={(v['polynomial_order'],v['separation_over_S']):v['finite_split_anisotropy_difference']
+        for v in previous['cases']}
+    rows=[];radial=2/(4*np.pi*a*a*r*r);angular=2/(8*np.pi*a*r**3)
+    for order in (24,48):
+        coefficients={};corrected={};errors={}
+        for g,sample in samples.items():
+            f=retarded_response(sample,'field',order);d=retarded_response(sample,'spatial',order)
+            coefficients[g]=logarithmic_coefficients(f,d)
+            corrected[g]=logarithmic_coefficients(f,d,source_slopes=sample['source_endpoint_values'])
+            errors[g]=[float(abs(f.value(leg,L,derivative=1)[leg]-sample['source_endpoint_values'][leg,leg]))
+                for leg,L in enumerate(f.lengths)]
+        def pressure(values):
+            return radial*(values['nested']['q_alpha']-values['cap']['q_alpha'])\
+                -angular*(values['nested']['angular']-values['cap']['angular'])
+        residue=pressure(coefficients)
+        rows.append(dict(polynomial_order=order,represented_log_coefficients=coefficients,
+            exact_source_log_coefficients=corrected,diagonal_source_jet_error=errors,
+            relative_pressure_log_coefficient=residue,
+            coefficient_with_exact_source_slopes=pressure(corrected),
+            predicted_change_for_halved_separation=residue*np.log(2),
+            observed_v2_change=observed[order,.01]-observed[order,.02]))
+    result=dict(diagnostic='source_endpoint_log_residue_only',method_commit=commit,
+        source_fingerprint=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),
+        comparison_sha256=hashlib.sha256(raw).hexdigest(),cells=128,angular_k=1,
+        detector_U_over_S=.8,detector_V_over_S=.7,rows=rows,
+        compute=dict(process_CPU_seconds=time.process_time()-started,CPU_limit_seconds=30,
+            wall_seconds=time.perf_counter()-wall),
+        scope='Coefficient substitution diagnoses a missing identity; no covariance or finite stress is changed.')
+    print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--output',type=Path)
     parser.add_argument('--stage',choices=('initial','polynomial'),default='initial')
+    parser.add_argument('--diagnose-source-logs',action='store_true')
     args=parser.parse_args()
-    if args.output.exists() or not args.output.parent.is_dir():
+    if args.diagnose_source_logs and (args.output is not None or args.stage!='initial'):
+        parser.error('source-log diagnosis prints its small table; do not combine it with output or stage')
+    if not args.diagnose_source_logs and args.output is None:
+        parser.error('output required for a physical comparison')
+    if args.output is not None and (args.output.exists() or not args.output.parent.is_dir()):
         raise ValueError('unused output path and existing parent required')
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     hashes={}
@@ -193,6 +246,9 @@ def main():
         if raw!=subprocess.check_output(['git','show',f'{commit}:{name}'],cwd=ROOT):
             raise ValueError('freeze the response method before execution: '+name)
         hashes[name]=hashlib.sha256(raw).hexdigest()
+    if args.diagnose_source_logs:
+        diagnose_source_logs(commit,hashes)
+        return
     cpu_start=time.process_time();wall_start=time.perf_counter();worker_totals={}
     def budget():
         if time.process_time()-cpu_start+sum(worker_totals.values())>CPU_LIMIT:

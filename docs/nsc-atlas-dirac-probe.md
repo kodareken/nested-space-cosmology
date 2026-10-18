@@ -2985,3 +2985,50 @@ seconds including 44.734375 child CPU seconds, and 12.77376 wall seconds
 No new field grid ran. The next diagnostic is the same detector's
 endpoint source jets and their possible relative logarithmic residue;
 more field refinement or finer PV quadrature would not settle that identity.
+
+### Source-endpoint jets and a relative logarithmic diagnostic
+
+For A=-iW/2 and B_plus=int A^2 dV, differentiation of the Volterra lower
+limit gives `G_-+,s=A_U-A*B_plus` and
+`G_++,s=int A*A_U dV-B_plus^2/2`. Exchange the two legs for the other
+column. Thus the diagonal source jets are
+`G_++,s=-J_V/4-I_V^2/32`, `G_--,s=-J_U/4-I_U^2/32`, distinct from the
+observation-x derivatives already retained. The endpoint-jets component
+now reports both derivatives from the same potential and integrals.
+
+Let g_a, g_as and g_ax be a leg's endpoint value, source derivative and
+observation derivative, with e_a the direct unit column. In the chiral
+frame D0x_a=lambda_a*g_a, D1_a=lambda_a*e_a, lambda=(-1,+1). The candidate
+coefficient of log(1/abs(eta)) in q_alpha is
+
+\[
+L_q=\frac1{2\pi}\operatorname{Re}\operatorname{tr}\left[
+\sigma_3\sum_a(D0x_a g_a^\dagger+D1_a g_{as}^\dagger-g_{ax}e_a^\dagger)\right].
+\]
+
+The direct/G Hilbert transform gives g_a*log(1/abs(eta)); its derivative
+gives g_as*log(1/abs(eta)). Ordinary G_x*C0*G pairings have finite L2
+limits and remain essential to the finite constant. Exact endpoint
+identities reduce each leg's bracketed trace to W^2/2, giving
+`L_q=W^2/(2*pi)`. The analogous angular insertion has `L_S=-W/pi`.
+They are common to the two geometries. Merely fixing g_a and g_ax while
+leaving g_as unconstrained need not cancel the relative stress logarithm.
+This coefficient calculation does not yet supply a coincident finite part.
+
+Control this identity against the independent constant-cylinder Fourier
+asymptotics and the separable Riemann kernel's source derivative. A
+zero-mean, zero-endpoint polynomial perturbation with a changed source
+slope is a counterexample to endpoint-value sufficiency. Admit 30 CPU
+seconds for these algebraic controls and one N128 central-detector
+diagnosis in the two existing geometries, orders24/48. No new grid or
+smaller separation is admitted. Print the small coefficient table and
+retain its interpretation here; a separate large data record is unnecessary.
+
+Three controls pass in 1.109375 process-CPU seconds: the independent
+Fourier logarithms for both signed cylinder sectors, the separable
+Riemann kernel's source derivative, and a zero-mean/zero-value polynomial
+counterexample with a changed stress logarithm. The diagnosis route
+`--diagnose-source-logs` evaluates only the same N128 central detector.
+It reports the represented coefficients and those obtained by substituting
+the exact source jets. The substitution changes no covariance or finite
+stress; it isolates the missing identity before a reconstruction is changed.

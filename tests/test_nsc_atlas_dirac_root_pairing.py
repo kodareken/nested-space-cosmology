@@ -6,7 +6,8 @@ import pytest
 from numpy.polynomial.legendre import leggauss,legvander
 from scipy.special import j0,j1,jv,k0,k1
 
-from recursive_horizons.nsc_atlas_dirac_root_pairing import NullResponse,pair_cylinder_responses
+from recursive_horizons.nsc_atlas_dirac_root_pairing import (
+    NullResponse,pair_cylinder_responses,logarithmic_coefficients)
 
 
 def cylinder_response(U,V,mu,order,*,derivative=False):
@@ -82,3 +83,26 @@ def test_analytic_spatial_response_includes_moving_endpoint_and_delta_derivative
         assert first['kernel']==pytest.approx(exact,abs=3e-8)
         assert second['kernel']==pytest.approx(-exact,abs=3e-8)
         assert first['pv_quadrature_estimate']<3e-10
+
+
+def test_log_coefficients_match_the_independent_cylinder_Fourier_asymptotics():
+    for mu in (-1/.45,1/.45):
+        f=cylinder_response(.104,.116,mu,24)
+        d=cylinder_response(.104,.116,mu,24,derivative=True)
+        coefficient=logarithmic_coefficients(f,d)
+        assert coefficient['q_alpha']==pytest.approx(mu*mu/(2*math.pi),abs=3e-10)
+        assert coefficient['angular']==pytest.approx(-mu/math.pi,abs=3e-13)
+
+
+def test_source_slope_can_change_the_stress_log_without_changing_value_or_mean():
+    mu=1/.45;f=cylinder_response(.104,.116,mu,24)
+    d=cylinder_response(.104,.116,mu,24,derivative=True)
+    baseline=logarithmic_coefficients(f,d)
+    altered=[g.copy() for g in f.green];epsilon=.01
+    altered[0][1,0]-=epsilon;altered[0][2,0]+=epsilon
+    changed=NullResponse(f.lengths,tuple(altered),f.direct)
+    coefficient=logarithmic_coefficients(changed,d)
+    assert changed.value(0,.104)==pytest.approx(f.value(0,.104),abs=1e-14)
+    assert changed.green[0][0]==pytest.approx(f.green[0][0],abs=1e-14)
+    assert coefficient['angular']==pytest.approx(baseline['angular'],abs=1e-14)
+    assert coefficient['q_alpha']-baseline['q_alpha']==pytest.approx(-4*epsilon/(2*math.pi*.104),abs=1e-12)

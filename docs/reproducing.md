@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+The [source-endpoint logarithmic check](nsc-atlas-dirac-probe.md#source-endpoint-jets-and-a-relative-logarithmic-diagnostic)
+uses analytic Volterra source jets and the same central detector:
+
+```powershell
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_root_response.py --diagnose-source-logs
+```
+
+Freeze the method first. This prints a small coefficient table within the
+30-CPU-second shared diagnostic allowance; it creates no data file and
+does not evaluate a coincident finite stress. Three independent algebraic
+controls use 1.109375 process-CPU seconds before the physical diagnosis.
+
 The [fixed-grid polynomial comparison](nsc-atlas-dirac-probe.md#fixed-grid-polynomial-comparison-and-useful-process-parallelism)
 keeps N=128 and compares orders 24/48. Its order-48 cylinder check uses the
 existing N=64 grid and 8.125 process-CPU seconds:

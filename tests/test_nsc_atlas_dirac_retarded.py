@@ -5,7 +5,8 @@ import numpy as np
 from scipy.special import j0,j1,k0,k1
 from numpy.polynomial.legendre import leggauss
 
-from recursive_horizons.nsc_atlas_dirac_retarded import retarded_null_responses,retarded_response
+from recursive_horizons.nsc_atlas_dirac_retarded import (
+    retarded_null_responses,retarded_response,volterra_endpoint_jets)
 from recursive_horizons.nsc_atlas_dirac_root_pairing import pair_cylinder_responses
 
 
@@ -113,3 +114,21 @@ def test_order_48_uses_the_same_existing_grid_and_exact_cylinder_kernel():
     print('FIXED_GRID_ORDER48_CONTROL',errors.tolist())
     assert errors[0]<1e-6
     assert errors[1]<3e-6
+
+
+def test_source_endpoint_jets_against_the_independent_separable_Riemann_kernel():
+    U,V=.104,.116
+    f=lambda s:1+.5*s;g=lambda s:1-.3*s
+    A=lambda s:s+.5*s*s+s**3/12;B=lambda s:s-.3*s*s+.03*s**3
+    jets=volterra_endpoint_jets(f(U)*g(V),.5*g(V),-.3*f(U),
+        (f(U)**2*B(V),g(V)**2*A(U)),(.5*f(U)*B(V),-.3*g(V)*A(U)))
+    def kernel(leg,s):
+        z=math.sqrt(max(0.,(A(U)-A(s))*B(V) if leg==0 else A(U)*(B(V)-B(s))))
+        ratio=.5 if z==0 else j1(z)/z
+        if leg==0:
+            return np.array([-f(U)*f(s)*B(V)*ratio/2,-.5j*g(V)*f(s)*j0(z)])
+        return np.array([-.5j*f(U)*g(s)*j0(z),-g(V)*g(s)*A(U)*ratio/2])
+    for leg,L in enumerate((U,V)):
+        h=2e-4;values=[kernel(leg,L-j*h) for j in range(5)]
+        derivative=(25*values[0]-48*values[1]+36*values[2]-16*values[3]+3*values[4])/(12*h)
+        assert np.max(abs(derivative-jets['source'][leg]))<3e-8

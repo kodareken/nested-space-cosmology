@@ -159,3 +159,31 @@ def pair_cylinder_responses(left,right,angular_mass,*,series_terms=24,epsabs=1e-
         tail+=abs(mu)/(2*math.pi)*coefficient*float(polynomial@powers)
     return dict(kernel=result,bessel_series_tail_bound=tail,pv_quadrature_estimate=pv_error,
         scope='complete_root_covariance_on_supplied_polynomial_responses')
+
+
+def logarithmic_coefficients(field_response,spatial_response,*,source_slopes=None):
+    """Endpoint coefficients of log(1/|eta|), not a coincident finite part.
+
+    q_alpha=-i tr(sigma3*d_eta K) and S1=Re tr(sigma1 K) in the canonical
+    chiral frame. The optional exact source slopes diagnose the missing
+    identity; substituting them here does NOT change an evolved covariance.
+    Ordinary G_x*C*G pairings remain in the uncomputed finite constant.
+    """
+    f,d=field_response,spatial_response
+    if (not isinstance(f,NullResponse) or not isinstance(d,NullResponse) or f.lengths!=d.lengths
+            or not np.allclose(f.direct,np.eye(2),atol=1e-13,rtol=0)
+            or np.any(f.direct_derivative)
+            or not np.allclose(d.direct_derivative,np.diag([-1.,1.]),atol=1e-13,rtol=0)):
+        raise ValueError('matching canonical field and observation-spatial response required')
+    slopes=None if source_slopes is None else np.asarray(source_slopes,dtype=complex)
+    if slopes is not None and (slopes.shape!=(2,2) or not np.isfinite(slopes).all()):
+        raise ValueError('two finite source endpoint spinor slopes required')
+    Q=np.zeros((2,2),complex);K=np.zeros_like(Q)
+    for leg,L in enumerate(f.lengths):
+        g=f.value(leg,L);gx=d.value(leg,L)
+        gs=f.value(leg,L,derivative=1) if slopes is None else slopes[leg]
+        e=f.direct[:,leg]
+        Q+=np.outer(d.direct[:,leg],g.conj())+np.outer(d.direct_derivative[:,leg],gs.conj())-np.outer(gx,e.conj())
+        K+=1j*(np.outer(e,g.conj())-np.outer(g,e.conj()))/(2*math.pi)
+    return dict(q_alpha=float(np.trace(np.diag([1.,-1.])@Q).real/(2*math.pi)),
+        angular=float(np.trace(np.array([[0.,1.],[1.,0.]])@K).real))

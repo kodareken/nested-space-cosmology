@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 264995,
+      "bytes": 265369,
       "path": "docs/active-code-map.md",
-      "sha256": "3d9b280d499e1746cab51a2873af2a1dce07892074deb663323ac8573387ff38"
+      "sha256": "15cbae19d65307b531fa281fc02991ab9d0118fb0cdc81312fc0fb56e6231931"
     },
     {
       "bytes": 106460,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2439237,
+      "bytes": 2439238,
       "path": "docs/lab-snapshot.json",
-      "sha256": "13053edbe516633ce5d360413a0a65fd0c642a44a7e2c91f0c9249fcfb9660f7"
+      "sha256": "e824ebaa4f3101266dcf30aae697015b3f5096a141ebdb891bc6e72c2c2c4f32"
     },
     {
       "bytes": 4997,
@@ -1631,9 +1631,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 152626,
+      "bytes": 155234,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "5bc6ffce1199567269eb467ab0570d95cd024e6b0e92f6089999ec1b3c068c5e"
+      "sha256": "613fdfe4f1423498131751c33f5ccbb2d2c969706650108c4665c3cc51e730e8"
     },
     {
       "bytes": 17343,
@@ -2241,9 +2241,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 199376,
+      "bytes": 199981,
       "path": "docs/reproducing.md",
-      "sha256": "5a2c76471f0a91ecf0def0ee4947d7cc7c64698f30420e799e950da01d4cb304"
+      "sha256": "ca981aab4fde01c3599c6ae024da9027077c2b06c5e79b6abcb6ec9c280276c2"
     },
     {
       "bytes": 31710,
@@ -16736,9 +16736,9 @@
       "sha256": "5179a66d61519dba3427c41c26407c26ec4966bca91c4efe685dc817baea0ea7"
     },
     {
-      "bytes": 17837,
+      "bytes": 21476,
       "path": "scripts/measure_nsc_atlas_dirac_root_response.py",
-      "sha256": "e1b4836437e60951f3b3a84331a77684a16bfa9f78a01b5cf2455f75e6d323a9"
+      "sha256": "923bd3fec44a725708ba9880e558909d45642df16b96164f0c3459c989f19e76"
     },
     {
       "bytes": 9022,
@@ -17606,14 +17606,14 @@
       "sha256": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9"
     },
     {
-      "bytes": 7111,
+      "bytes": 8097,
       "path": "src/recursive_horizons/nsc_atlas_dirac_retarded.py",
-      "sha256": "0b3c1b2b5b2fedc0b7d721ba16ef73d4a7ef5b1bc8f4c7558fc0a76fdb587f12"
+      "sha256": "4f69a19ff30fc8148eb74eafee2ddcc4b4a126138cfcf2c9b720b6441a6e1efa"
     },
     {
-      "bytes": 8305,
+      "bytes": 10018,
       "path": "src/recursive_horizons/nsc_atlas_dirac_root_pairing.py",
-      "sha256": "a0e54856720955475fb8eccf1156caa0dc24c431e3ff8dda9ceba48badb730fb"
+      "sha256": "01349e8eee72de33856233c47f58debe42a178b4f6dd01d43db94602872581a1"
     },
     {
       "bytes": 11438,
@@ -20046,14 +20046,14 @@
       "sha256": "06ae4f89f0aad94eb711a4446f5d19fd36fa323f30a9d658cd8c225ee6689e7b"
     },
     {
-      "bytes": 5813,
+      "bytes": 6729,
       "path": "tests/test_nsc_atlas_dirac_retarded.py",
-      "sha256": "8fe6b99860dc954a943dd77c1cc80398002b8eed096c86d2063674378095ba80"
+      "sha256": "3a9ec54ca6707a4025d357b529ef9f7ae69c366b31d70a8458241f12ed7ae776"
     },
     {
-      "bytes": 4135,
+      "bytes": 5379,
       "path": "tests/test_nsc_atlas_dirac_root_pairing.py",
-      "sha256": "0eb1488c8ea29febaa8945071e1125987e72924a510af6b4d7706fdd5bd4386d"
+      "sha256": "23ba64a2d3769e53a688f583894221d14cb4bb35ee793a4419da0cdd983f766f"
     },
     {
       "bytes": 6259,
@@ -22341,7 +22341,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "13053edbe516633ce5d360413a0a65fd0c642a44a7e2c91f0c9249fcfb9660f7",
+  "lab_snapshot_sha256": "e824ebaa4f3101266dcf30aae697015b3f5096a141ebdb891bc6e72c2c2c4f32",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.12",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
