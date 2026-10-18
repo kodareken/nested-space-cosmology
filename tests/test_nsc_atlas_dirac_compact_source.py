@@ -6,7 +6,11 @@ from scipy.integrate import quad,solve_ivp
 from recursive_horizons.nsc_atlas_cap_wall_response import reference_coefficients
 from recursive_horizons.nsc_atlas_dirac_radar import WallRadarChart
 from recursive_horizons.nsc_atlas_dirac_compact_source import (
-    CompactMassTangent,anchored_tortoise_mass_derivative,parent_mass_derivative)
+    CompactMassChart,CompactMassTangent,anchored_tortoise_mass_derivative,
+    parent_mass_derivative)
+from recursive_horizons.nsc_atlas_dirac_backreaction import MeanBackreaction
+from recursive_horizons.nsc_atlas_dirac_mean import RadarPointEvaluator
+from recursive_horizons.nsc_atlas_dirac_gravity import null_stress_from_orthonormal
 
 
 @pytest.fixture(scope='module')
@@ -14,7 +18,7 @@ def model():
     return CompactMassTangent(WallRadarChart())
 
 
-def full_nonlinear_family(chart,b,U,V,*,region):
+def full_nonlinear_family(chart,b,U,V,*,region,charge_squared=0.):
     """Exact finite-b wall plus radial ray, without the optical tangent/K."""
     R0,k=.45,2.
     v0=float(reference_coefficients(R0)['v'])
@@ -24,10 +28,11 @@ def full_nonlinear_family(chart,b,U,V,*,region):
     bp=lambda r:bm(r)-k*r
     bmr=lambda r:-2*(parent-b)/(k*r**3)+3/4
     bpr=lambda r:bmr(r)-k
-    fm=lambda r:1-2*b/r-r*r
-    fp=lambda r:1-2*parent/r
-    fmr=lambda r:2*b/r**2-2*r
-    fpr=lambda r:2*parent/r**2
+    e=charge_squared
+    fm=lambda r:1-2*b/r-r*r+e/r**2
+    fp=lambda r:1-2*parent/r+e/r**2
+    fmr=lambda r:2*b/r**2-2*r-2*e/r**3
+    fpr=lambda r:2*parent/r**2-2*e/r**3
     velocity=lambda r:np.sqrt(bm(r)**2-fm(r))
     acc=lambda r:bm(r)*bmr(r)-fmr(r)/2
     wall=solve_ivp(lambda t,y:velocity(y),(0.,chart.duration),
@@ -126,3 +131,88 @@ def test_same_metric_from_existing_EF_reconstruction_and_bounded_queries(model):
         model.fields(-.1*S,.5*S)
     with pytest.raises(ValueError,match='angular'):
         model.fields(.4*S,.5*S,angular_k=True)
+
+
+def test_real_mass_family_recovers_quiet_chart_and_analytic_source_tangent(model):
+    quiet=CompactMassChart(model.chart,0.)
+    S=quiet.duration
+    U,V=np.meshgrid(np.array([.1,.5,.9])*S,np.array([.2,.6,.8])*S,indexing='ij')
+    for side in ('nested','cap'):
+        old=model.chart.fields(U,V,region=side)
+        new=quiet.fields(U,V,region=side)
+        for key in ('radius','conformal_factor','potential','potential_t','potential_x'):
+            assert new[key]==pytest.approx(old[key],rel=2e-11,abs=2e-11)
+    # A fixed forward difference is a control of the analytic derivative,
+    # not a physical finite-b response or a field resolution run.
+    h=1e-6
+    family=CompactMassChart(model.chart,h)
+    for u,v in ((.8*S,.7*S),(.2*S,.8*S)):
+        old=quiet.fields(u,v)
+        new=family.fields(u,v)
+        exact=full_nonlinear_family(model.chart,h,u,v,
+            region='cap' if u>=v else 'exterior')
+        assert new['radius']==pytest.approx(exact['radius'].real,abs=2e-11)
+        assert new['conformal_factor']==pytest.approx(exact['C'].real,abs=2e-11)
+        assert new['potential']==pytest.approx(exact['potential'].real,abs=2e-11)
+        tangent=model.fields(u,v)
+        for key,tkey in (('radius','radius_change'),('potential','potential_change')):
+            assert (new[key]-old[key])/h==pytest.approx(tangent[tkey],rel=3e-5,abs=3e-5)
+
+
+def test_nonzero_mass_family_matches_full_rays_and_all_wall_jumps(model):
+    chart=CompactMassChart(model.chart,1e-4)
+    S=chart.duration
+    for u,v,side in ((.8*S,.7*S,'cap'),(.2*S,.8*S,'exterior')):
+        row=chart.fields(u,v,region=side)
+        exact=full_nonlinear_family(model.chart,1e-4,u,v,region=side)
+        for measured,key in (('radius','radius'),('conformal_factor','C'),
+                             ('potential','potential')):
+            assert row[measured]==pytest.approx(exact[key].real,abs=2e-11)
+        for measured,key in (('potential_t','potential_u'),('potential_x','potential_v')):
+            expected=(exact['potential_u']+exact['potential_v'] if measured=='potential_t'
+                      else exact['potential_v']-exact['potential_u'])
+            assert row[measured]==pytest.approx(expected.real,abs=2e-10)
+        r,C=row['radius'],row['conformal_factor']
+        mass=r*(1-(row['radius_x']**2-row['radius_t']**2)/C)/2
+        expected=1e-4+r**3/2 if side=='cap' else chart.parent_mass
+        assert mass==pytest.approx(expected,abs=2e-13)
+    times=np.array([0.,.4*S,.8*S,S])
+    cap=chart.fields(times,times,region='cap')
+    ext=chart.fields(times,times,region='exterior')
+    radius=chart.radius_at_clock(times)
+    assert cap['lapse']==pytest.approx(np.ones(4),abs=3e-13)
+    assert ext['lapse']==pytest.approx(np.ones(4),abs=3e-13)
+    assert ext['radius_x']-cap['radius_x']==pytest.approx(-2*radius,abs=3e-13)
+    assert ext['lapse_x']-cap['lapse_x']==pytest.approx(-2*np.ones(4),abs=3e-12)
+    assert ext['potential_x']==pytest.approx(cap['potential_x'],abs=4e-12)
+
+
+def test_GR_reconstruction_varies_with_the_nonzero_mass_background(model):
+    b=1e-4
+    chart=CompactMassChart(model.chart,b)
+    class MaxwellSource:
+        def __init__(self):
+            self.chart,self.region,self.start=chart,'nested',0.
+            self.breakpoints=np.array([])
+            self.points=RadarPointEvaluator(chart)
+        def evaluate(self,U,V,*,region=None):
+            fields=self.points(U,V,region=region)
+            rho=1/fields['radius']**4
+            pr,pt,j=-rho,rho,np.zeros_like(rho)
+            null=null_stress_from_orthonormal(C=fields['conformal_factor'],
+                rho=rho,radial_pressure=pr,angular_pressure=pt,outward_energy_flux=j)
+            return dict(fields=fields,null=null,orthonormal=dict(
+                energy_density=rho,radial_pressure=pr,angular_pressure=pt,
+                outward_energy_flux=j))
+    source=MaxwellSource()
+    mean=MeanBackreaction(source,chart.duration,
+        initial_masses=(-1/(2*.45),-1/(2*.45)),wall_rtol=2e-11,wall_atol=2e-13)
+    for U,V,side in ((.8*chart.duration,.7*chart.duration,'cap'),
+                     (.2*chart.duration,.8*chart.duration,'exterior')):
+        result=mean.clock_response(U,V,ray_rtol=2e-11,ray_atol=2e-13)
+        exact=full_nonlinear_family(model.chart,b,U,V,region=side,charge_squared=1e-7j)
+        background=chart.fields(U,V,region=side)
+        assert result['radius_change']==pytest.approx(exact['radius'].imag/1e-7,abs=3e-7)
+        assert result['log_radar_C_change']==pytest.approx(
+            exact['C'].imag/(1e-7*background['conformal_factor']),abs=7e-7)
+        assert abs(result['mass_path_gap'])<3e-11

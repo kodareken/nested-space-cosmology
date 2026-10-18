@@ -63,14 +63,14 @@ class MeanBackreaction:
             if deadline is not None and time.process_time()>deadline:
                 raise RuntimeError('mean wall history exhausted its setup CPU allowance')
             self.wall_rhs_calls += 1
-            r = float(self.chart.radius_at_clock(t))
-            g = reference_coefficients(r)
+            g = self._geometry(t)
+            r = float(g['x'])
             mean = self.source.evaluate(t,t)['orthonormal']
             j,pr = float(mean['outward_energy_flux']),float(mean['radial_pressure'])
             mu_dot = -gravity_coupling*r*r*(g['beta_plus']*j+g['v']*pr)/2
             nu_dot = -gravity_coupling*r*r*(g['beta_minus']*j+g['v']*pr)/2
             if self.shared_worldtube is None:
-                rate = wall_response_coefficients(r,y[2],y[0],y[1])['displacement_rate']
+                rate = self._response(g,y[2],y[0],y[1])['displacement_rate']
             else:
                 rate = self.shared_worldtube.wall_state(t)['displacement_rate']
                 mu_dot = nu_dot
@@ -85,22 +85,37 @@ class MeanBackreaction:
         self.source_evaluations = 0
         self._cpu_deadline = None
 
+    def _geometry(self,t):
+        if hasattr(self.chart,'wall_geometry'):
+            return self.chart.wall_geometry(t)
+        return reference_coefficients(float(self.chart.radius_at_clock(t)))
+
+    def _response(self,g,rho,mu,nu):
+        if not hasattr(self.chart,'wall_geometry'):
+            return wall_response_coefficients(float(g['x']),rho,mu,nu)
+        r,v,bp=g['x'],g['v'],g['beta_plus']
+        d=(mu-nu)/(g['k_wall']*r*r)
+        return dict(displacement_rate=(g['radial_acceleration']*rho+bp*d+mu/r)/v,
+            delta_beta_minus=g['beta_minus_x']*rho+d,
+            delta_beta_plus=g['beta_plus_x']*rho+d)
+
     def wall_state(self,t):
         t = float(t)
         if not 0<=t<=self.end:
             raise ValueError('wall query exits the computed history')
         y = self.initial if t<=self.start else self.wall_solution(t)
-        R = float(self.chart.radius_at_clock(t))
-        g = reference_coefficients(R)
+        g = self._geometry(t)
+        R = float(g['x'])
         if self.shared_worldtube is None:
-            response = wall_response_coefficients(R,y[2],y[0],y[1])
+            response = self._response(g,y[2],y[0],y[1])
             rho,rate = float(y[2]),float(response['displacement_rate'])
             beta_changes = (float(response['delta_beta_minus']),
                             float(response['delta_beta_plus']))
         else:
             supplied = self.shared_worldtube.wall_state(t)
             rho,rate = supplied['displacement'],supplied['displacement_rate']
-            db = (g['v']*rate-R*rho-float(y[1])/R)/g['beta_minus']
+            fr = g.get('cap_f_prime',-2*R)
+            db = (g['v']*rate+fr*rho/2-float(y[1])/R)/g['beta_minus']
             beta_changes = (float(db),float(db))
         return dict(radius=R,displacement=rho,displacement_rate=rate,
             exterior_mass=float(y[0]),cap_mass=float(y[1]),delta_beta=beta_changes)
@@ -141,7 +156,7 @@ class MeanBackreaction:
         fields = self.source.points(U,V,region=region)
         actual_cap = bool(fields['is_cap'])
         side = 0 if actual_cap else 1
-        g = reference_coefficients(wall['radius'])
+        g = self._geometry(U)
         beta = float(g['beta_minus'] if actual_cap else g['beta_plus'])
         mass = wall['cap_mass'] if actual_cap else wall['exterior_mass']
         psi = -(wall['delta_beta'][side]+wall['displacement_rate'])/(beta+g['v'])

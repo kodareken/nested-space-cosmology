@@ -12,6 +12,21 @@ The [source owner](nsc-atlas-dirac-probe.md#conserved-compact-source-mass-tangen
 states the fixed initial speed, required parent-mass variation, annular
 domain, analytic optical derivatives and parametric rather than retarded
 interpretation. Development controls use 3.84375 process-CPU seconds.
+The extension now has eight source-family controls, plus the five existing
+GR controls on the changed reconstruction (19.15625 CPU seconds shared
+across development). Three independent local curvature controls use
+another 1.8125 CPU seconds. The bounded physical source-response command is
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_tidal.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_mass_response.py --output .build/nsc-atlas-dirac-mass-response.json
+```
+
+This command requires frozen source and an unused output path. Its
+[admission](nsc-atlas-dirac-probe.md#prepared-compact-source-response-admission)
+fixes the three masses, two field resolutions, two quadrature orders,
+eight-process pool and 480-CPU-second limit. It returns only summaries;
+the local tidal ratio is distinct from the full potential ratio Psi/Phi.
 
 The prepared Dirac mean stress and spherical metric/clock reconstruction
 use the same quiet geometry and existing wall-mass coefficients:

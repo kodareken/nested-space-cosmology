@@ -1524,3 +1524,94 @@ the initial physical speed, one-sided wall transmission and the regular
 beta_plus=0 crossing. The anchored mass primitives agree with independent
 quadrature. This validates the source tangent; no physical mixed quantum
 response has been evaluated in these controls, and no P001 grids were run.
+
+The next extension uses the exact real mass family on `0<=b<=2e-4`,
+holding the original proper-clock duration fixed. Its computational
+annulus is `.3<r<.65`; the inner body must stay below that annulus.
+`CompactMassChart` integrates the actual wall and optical maps and
+inverts its anchored tortoise by fixed 12-point Gaussian quadrature.
+The mean GR engine reads this family's wall geometry, cap mass term
+and signed beta derivatives. It no longer freezes those coefficients
+when b changes. The zero-mass path remains the existing quiet engine.
+The same 120-CPU-second development admission also covers the quiet
+limit, exact finite-b rays/junctions, and an independent charged-family
+check of mean metric reconstruction on a nonzero-b background. No
+physical mixed-response execution is admitted by these controls alone.
+
+The expanded source/family and existing GR controls pass: 13 tests in
+15.3125 CPU seconds, bringing this source bridge's total development
+charge to 19.15625 CPU seconds. This includes the finite-b and nonzero-b
+charged-family checks above. No additional field resolution was run.
+
+### Local curvature readout and its relation to scalar potentials
+
+An independent observer readout uses actual Riemann components in the
+fixed proper-wall radar observer's orthonormal frame. Define
+`A=R_0r0r-R_0theta0theta` and
+`B=R_rtheta_rtheta-R_thetaphi_thetaphi`. In the convention with
+vacuum `R_0r0r=-2*M/r^3-Lambda/3`, direct Ricci/Weyl decomposition gives
+
+```text
+w = m_excess/r^3-kappa_g*(rho-p_r+p_t)/6
+A = -3*w-kappa_g*(p_r-p_t)/2
+B = -3*w+kappa_g*(p_r-p_t)/2.
+```
+
+The fixed vacuum term cancels. w and rho-p_r are invariant under radial
+boosts; A/B and p_r-p_t depend on the specified observer. Flux is retained
+in the stress transformation even though it does not appear explicitly
+in this frame's two sectional contrasts. At fixed physical radar labels,
+the quantum mean correction retains
+`w_q=m_q/r^3-3*b*s_q/r^4-kappa_g*(rho_q-p_rq+p_tq)/6`.
+For b>0 the classical cap has A0=B0=-3*b/r^3, so the leading occupation
+correction to B/A is `kappa_g*(p_rq-p_tq)/A0`.
+At b=0 there is no classical tidal denominator and that ratio is undefined.
+
+For comparison, in a specified flat-FLRW Newtonian metric the first-order
+contrasts in its *comoving* frame are `A=(Phi_chichi-Phi_chi/chi)/a^2`
+and `B=(Psi_chichi-Psi_chi/chi)/a^2`. Their ratio compares these tidal
+potential combinations; it is not the potentials' full ratio Psi/Phi.
+The operator has radial zero modes `F(eta)+G(eta)*chi^2`, which require
+boundary/background data beyond a local anisotropic-stress equation.
+In particular, vanishing anisotropic stress alone does not remove those
+zero modes on a finite annulus. The exterior is below its Schwarzschild
+horizon and is not assigned this cap FLRW decomposition.
+
+The [curvature interface](../src/recursive_horizons/nsc_atlas_dirac_tidal.py)
+uses the same physical mass/stress. Its development admission is 60 shared
+process-CPU seconds: direct four-dimensional Christoffel/Riemann contraction,
+a changed radial observer with nonzero flux, the de Sitter Newtonian-metric
+limit and an exact charged-family mean/ratio check. These are controls,
+not additional physical field evolutions or a baseline vacuum calculation.
+
+Three [readout controls](../tests/test_nsc_atlas_dirac_tidal.py) pass in
+1.8125 CPU seconds. They independently contract the full four-dimensional
+Riemann tensor with arbitrary radial flux and a changed observer, recover
+the de Sitter Newtonian-metric tidal combinations, and differentiate an
+exact charged source including its radius term. No potential zero mode
+is fixed or inferred by these local curvature controls.
+
+### Prepared compact-source response admission
+
+The [bounded producer](../scripts/measure_nsc_atlas_dirac_mass_response.py)
+will now evaluate the finite prepared mean *on* the exact mass family.
+This differentiates the background Einstein reconstruction as well as
+the Dirac propagation, stress, wall and observer. It retains the mixed
+Einstein contribution that changing W on a frozen GR background would omit.
+
+| Admission | Fixed decision |
+| --- | --- |
+| State and source | Same continuum unit-flux exterior mode, carrier and k=1 multiplet as the mean-clock reference. The occupation difference and initial quantum corner masses stay fixed. The compact classical mass is present before the window. A compatible parent is assumed; no baseline vacuum or angular sum is chosen. |
+| Domain and observer | Proper-clock diamond with the original S, fixed H/k/R0/v0, .3<r<.65 and the body's interior below it. The cap receiver is U=.8S,V=.7S, fixed radar position; an inward phase -V is emitted at the earlier wall time V. The smooth SdS continuation shares classical and quantum areal-worldtube motion. |
+| Parameters and numerics | Exactly b=0,5e-5,1e-4, with field cells 64/128 and piecewise quadrature orders 8/12. These give a fixed one-sided source derivative with h/h2 comparison and first-order extrapolation. They are not a source search or a P001 grid campaign. |
+| Outputs | Mean clock/radius/mass, the clock's parametric mass derivative, and local tidal contrasts A/B. The finite-b state difference of B/A is recorded only for b>0. It is not full Psi/Phi. |
+| Compute and storage | One physical reference creation, 480 process-CPU seconds including worker/import costs and eight seconds overhead; setup and each clock have 30-second CPU guards. Up to eight workers, one BLAS/Numba thread each. Summary at most 32 KiB, no saved arrays. |
+| Checks and stop | Input norm within 1e-5, charge-flux defect below 2e-12, normalized mass-path gap below 1e-3 and contracting at 64/128 when above 1e-7, wall-clock defect below 2e-9; 8/12 clock spread below 2e-6 times max(1,clock magnitude). Source-derivative step and field-resolution spreads must each be below .02 times max(1,derivative magnitude). Failure stops for a diagnosis, without another mass choice or field grid. |
+| Physical scale and uncertainty | Independently supplied ell=10 km; b=1e-4 means a geometric mass length of 1 m. Restore epsilon_q=8*pi*hbar*G/(c^3*ell^2); curvature contrasts have units ell^-2 and physical acceleration gradients add c^2. Grid, quadrature and one-sided derivative spreads are separate diagnostics, not rigorous remainders or observational confidence intervals. |
+
+The likely failures are omission of b-dependence in the GR operator,
+preparation or worldtube; unresolved differencing of the source response;
+and mistaking a tidal ratio or state difference for a full vacuum potential
+ratio. The exact nonzero-mass controls, fixed shared preparation, recorded
+derivative spreads and explicitly defined local Riemann readout address
+those failures. No parameter is selected using an observed target value.

@@ -14,9 +14,150 @@ from scipy.integrate import solve_ivp
 from .nsc_atlas_cap_wall_response import reference_coefficients
 from .nsc_atlas_dirac_backreaction import MeanBackreaction
 from .nsc_atlas_dirac_mean import RadarPointEvaluator
+from .nsc_atlas_dirac_radar import WallRadarChart,tortoise
 
 R0 = .45
 K_WALL = 2.
+
+
+class CompactMassChart(WallRadarChart):
+    """Exact real small-b vacuum family in the same proper-clock window.
+
+    The body/inner-horizon interior is excluded. Positive b is the physical
+    compact-source branch; zero recovers the quiet reference. The fixed
+    annulus .3<r<.65 and 0<=b<=2e-4 are computational domains, not a global
+    formation or finite-amplitude semiclassical validity theorem.
+    """
+    def __init__(self,reference,central_mass):
+        b=float(central_mass)
+        if not np.isfinite(b) or not 0<=b<=2e-4:
+            raise ValueError('compact mass must lie in [0,2e-4] in ell=1')
+        self.central_mass,self.duration = b,reference.duration
+        g=reference_coefficients(R0)
+        self.initial_speed=float(g['v'])
+        bm0=np.sqrt(self.initial_speed**2+1-2*b/R0-R0*R0)
+        self.parent_mass=R0*(1+self.initial_speed**2-(bm0-K_WALL*R0)**2)/2
+        self._radius_to_clock={}
+        self._nodes,self._weights=np.polynomial.legendre.leggauss(12)
+        self._anchors=(float(tortoise(R0,'cap')),float(tortoise(R0,'exterior')))
+        initial=[R0,-self._anchors[0],self._anchors[0],
+                 -self._anchors[1],self._anchors[1]]
+        def rhs(t,y):
+            geom=self._geometry(y[0])
+            v,bm,bp=geom['v'],geom['beta_minus'],geom['beta_plus']
+            return [v,1/(bm+v),1/(bm-v),1/(bp+v),1/(bp-v)]
+        solution=solve_ivp(rhs,(0.,self.duration),initial,method='DOP853',
+            rtol=2e-12,atol=2e-14,max_step=self.duration/40,dense_output=True)
+        if not solution.success:
+            raise RuntimeError(solution.message)
+        self.solution=solution.sol
+        self.wall_rhs_calls=solution.nfev
+        self.wall_end_radius=float(solution.y[0,-1])
+
+    def _geometry(self,r):
+        r=np.asarray(r)
+        d=self.parent_mass-self.central_mass
+        bm=d/(K_WALL*r*r)+3*r/4
+        bp=bm-K_WALL*r
+        bmr=-2*d/(K_WALL*r**3)+3/4
+        bpr=bmr-K_WALL
+        f=1-2*self.central_mass/r-r*r
+        fr=2*self.central_mass/r**2-2*r
+        v=np.sqrt(bm*bm-f)
+        return dict(x=r,v=v,beta_minus=bm,beta_plus=bp,
+            beta_minus_x=bmr,beta_plus_x=bpr,beta_second=6*d/(K_WALL*r**4),
+            radial_acceleration=bm*bmr-fr/2,cap_f_prime=fr,k_wall=K_WALL)
+
+    def wall_geometry(self,clock):
+        return self._geometry(self.radius_at_clock(clock))
+
+    def radius_at_clock(self,clock):
+        t=np.asarray(clock,dtype=float)
+        if not np.isfinite(t).all() or np.any((t<0)|(t>self.duration)):
+            raise ValueError('null clock labels must lie in [0,wall duration]')
+        r=self.solution(t.ravel())[0].reshape(t.shape)
+        self._radius_to_clock.update((float(x),float(y)) for x,y in zip(r.ravel(),t.ravel()))
+        return r
+
+    def maps(self,radius):
+        r=np.asarray(radius,dtype=float)
+        if not np.isfinite(r).all() or np.any((r<R0)|(r>self.wall_end_radius)):
+            raise ValueError('wall-radius query exits this family clock window')
+        from scipy.optimize import brentq
+        clocks=[]
+        for x in r.ravel():
+            key=float(x)
+            if key not in self._radius_to_clock:
+                self._radius_to_clock[key]=brentq(
+                    lambda t:float(self.solution(t)[0])-key,0.,self.duration,
+                    xtol=5e-15,rtol=8*np.finfo(float).eps)
+            clocks.append(self._radius_to_clock[key])
+        clocks=np.asarray(clocks)
+        out=self.solution(clocks)
+        out[0]=clocks
+        return out.reshape((5,)+r.shape)
+
+    def _optical_radius(self,z,*,cap):
+        z=np.asarray(z,dtype=float)
+        anchor=self._anchors[0 if cap else 1]
+        mass=self.central_mass if cap else self.parent_mass
+        def F(r):
+            return 1-2*mass/r-r*r if cap else 1-2*mass/r
+        r=np.clip(R0+F(R0)*(z-anchor),.301,.649)
+        for unused in range(12):
+            half=(r-R0)/2
+            query=(r+R0)[...,None]/2+half[...,None]*self._nodes
+            value=anchor+half*np.sum(self._weights/F(query),axis=-1)
+            residual=value-z
+            if np.max(np.abs(residual),initial=0.)<8e-15:
+                return r
+            r=r-residual*F(r)
+            if np.any((r<=.3)|(r>=.65)):
+                raise ValueError('optical inversion exits the admitted compact-source annulus')
+        raise RuntimeError('compact-source optical inversion did not converge')
+
+    def from_wall_radii(self,radius_u,radius_v,*,region='nested',angular_k=1):
+        if isinstance(angular_k,bool) or not isinstance(angular_k,int) or not angular_k:
+            raise ValueError('a nonzero integer angular Dirac eigenvalue is required')
+        if region not in ('nested','cap','exterior'):
+            raise ValueError('region must be nested, cap or exterior')
+        ru,rv=np.broadcast_arrays(np.asarray(radius_u,dtype=float),np.asarray(radius_v,dtype=float))
+        mu,mv=self.maps(ru),self.maps(rv)
+        cap=ru>=rv if region=='nested' else np.full(ru.shape,region=='cap')
+        gu,gv=self._geometry(ru),self._geometry(rv)
+        bu,bv=[np.where(cap,g['beta_minus'],g['beta_plus']) for g in (gu,gv)]
+        bru,brv=[np.where(cap,g['beta_minus_x'],g['beta_plus_x']) for g in (gu,gv)]
+        vu,vv=gu['v'],gv['v']
+        pu,qv=1/(bu+vu),1/(bv-vv)
+        optical_u=np.where(cap,mu[1],mu[3])
+        optical_v=np.where(cap,mv[2],mv[4])
+        z=(optical_v-optical_u)/2
+        r=np.empty_like(z)
+        for mask,is_cap in ((cap,True),(~cap,False)):
+            if np.any(mask):
+                r[mask]=self._optical_radius(z[mask],cap=is_cap)
+        mass=np.where(cap,self.central_mass,self.parent_mass)
+        F=1-2*mass/r-np.where(cap,r*r,0.)
+        fp=2*mass/r**2-np.where(cap,2*r,0.)
+        fpp=-4*mass/r**3-np.where(cap,2.,0.)
+        C=F*pu*qv
+        if not np.isfinite(C).all() or np.any(C<=0):
+            raise ValueError('compact-source chart lost its positive radar lapse')
+        rU,rV=-F*pu/2,F*qv/2
+        LU=-fp*pu/2-(vu*bru+gu['radial_acceleration'])/(bu+vu)
+        LV=fp*qv/2-(vv*brv-gv['radial_acceleration'])/(bv-vv)
+        N=np.sqrt(C)
+        rt,rx=rU+rV,rV-rU
+        Nt,Nx=N*(LU+LV)/2,N*(LV-LU)/2
+        W=angular_k*N/r
+        return dict(clock_u=mu[0],clock_v=mv[0],time=(mu[0]+mv[0])/2,
+            radar_position=(mv[0]-mu[0])/2,is_cap=cap,radius=r,
+            radius_t=rt,radius_x=rx,conformal_factor=C,lapse=N,radial_length=N,
+            lapse_t=Nt,lapse_x=Nx,log_C_u=LU,log_C_v=LV,
+            radius_uv=-C*fp/4,log_C_uv=-C*fpp/4,static_f=F,
+            radial_curvature=-fpp,potential=W,
+            potential_t=angular_k*(Nt/r-N*rt/r**2),
+            potential_x=angular_k*(Nx/r-N*rx/r**2))
 
 
 def parent_mass_derivative():
