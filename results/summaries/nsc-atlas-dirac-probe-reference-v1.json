@@ -1,0 +1,85 @@
+{
+  "counts": {
+    "algebraic_reference_points": 1,
+    "evolutions": 0,
+    "loop_polarizations": 0,
+    "new_grids": 0
+  },
+  "earlier_flat_slip_is_nested_prediction": false,
+  "limits": {
+    "CPU_seconds": 60,
+    "summary_bytes": 8000
+  },
+  "reference": {
+    "calculation_scope": "Original zero-scalar reference and a declared transparent massless probe; not the unconverged finite-amplitude P001 metric.",
+    "cap": {
+      "A": 0.75,
+      "V_minus": 6.4641016151377535,
+      "V_plus": -0.46410161513775483,
+      "W": 1.7320508075688772,
+      "W_over_flat_at_same_radius": 0.8660254037844386,
+      "angular_k": 1,
+      "bulk_operator_same_as_smooth_cap_control": true,
+      "dW_dz": -3.4641016151377544,
+      "flat_V_minus": 8.0,
+      "flat_V_plus": 0.0,
+      "flat_W": 2.0,
+      "hubble": 1.0,
+      "radius": 0.5,
+      "spinor_rescaling": 2.149139863647084,
+      "tortoise_z": 0.5493061443340549
+    },
+    "curvatures": {
+      "cap": {
+        "R": 12.0,
+        "Ricci_squared": 36.0,
+        "Riemann_squared": 24.0,
+        "Weyl_squared": 0.0
+      },
+      "exterior": {
+        "R": 0.0,
+        "Ricci_squared": 0.0,
+        "Riemann_squared": 491.5200000000001,
+        "Weyl_squared": 491.5200000000001
+      }
+    },
+    "interface": {
+      "added_premise": "massless probe with no direct surface spinor interaction",
+      "angular_inverse_radius_normal_jump": 4.0,
+      "beta_minus": 1.175,
+      "beta_plus": 0.17500000000000004,
+      "domain": "spinor and D_spinor continuous in a common nonsingular wall frame",
+      "exterior_f": -0.6000000000000001,
+      "exterior_static_time_is_timelike": false,
+      "radius": 0.5,
+      "smooth_control_normal_derivative_jump": 0.0,
+      "smooth_control_trace_K_jump": 0.0,
+      "squared_Dirac_normal_derivative_jump_coefficient": 3.0,
+      "trace_K_jump": -6.0,
+      "trace_K_minus": 2.25,
+      "trace_K_plus": -3.75
+    },
+    "material_parameter_k_ell": 2.0,
+    "nested_Psi_over_Phi": null,
+    "nesting_changes": "The common-frame interface domain and exterior causal response. The same cap bulk operator is shared with the smooth de Sitter control.",
+    "quantum_inputs_still_needed": [
+      "Initial/boundary Dirac two-point function on the joined finite causal domain, including incoming exterior occupations.",
+      "Renormalization conditions for bulk and interface terms in the probe extension.",
+      "A conserved perturbing source, wall displacement response and gauge-invariant clock/motion/lensing readout on this time-dependent background."
+    ],
+    "radius": 0.5,
+    "reason": "No Dirac two-point state, renormalized interface response or conserved metric-probe/observer protocol is specified for this cap-wall model.",
+    "units": "ell=1"
+  },
+  "runtime_cpu_seconds": 0.0,
+  "schema": "nsc-atlas-dirac-probe-reference-v1",
+  "source_commit": "85bdafcb9542b1de2bca3000278da1b7ef2fa4d2",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_probe.py": "14da813428712dc181ca14629826d12e06a37ad4df8483f1a65b86c09402e4bf",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_probe.py": "7bc14ce7184e67e914fe7843d6ce88a7e8971c2abd41cd4d92adebebf7aa2277",
+    "tests/test_nsc_atlas_dirac_probe.py": "349d9f5b890881f64d0ca30a9a0249f741b5c6704f8a7c9b3b34bf5d35a902ce"
+  },
+  "status": "geometry_inputs_computed_quantum_slip_underdetermined"
+}

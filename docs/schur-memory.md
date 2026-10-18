@@ -1309,7 +1309,11 @@ The potential ratios are `G_Phi=1.0021711842538266`,
 the slip is `Psi/Phi=.9989169187321566`. Thus this conditional source
 response supplies a relation between motion and lensing using one common
 profile. The source normalization cancels from these ratios. It is not an
-astronomical comparison or a physical length calibration.
+astronomical comparison or a physical length calibration. This is an imported
+Dirac response about flat space, not a prediction due to cap--wall nesting.
+The [actual cap--wall operator and interface calculation](nsc-atlas-cap-wall-response.md#dirac-probe-on-the-actual-quiet-cap-and-material-wall)
+keeps the state, domain and moving-wall response needed for that extension
+explicit; a nested gravitational slip remains uncomputed.
 
 The fixed quadrature rules round to the same response ratios. Their raw
 scalar kernels differ by `3.95e-16`, and their Weyl kernels by `3.8e-15`.

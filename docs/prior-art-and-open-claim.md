@@ -2,6 +2,33 @@
 
 ## P001 active-region resolution and the actual cap--wall Dirac operator
 
+**Frozen-background follow-through.** The support diagnosis and independent
+algebra locate a specific finite projection defect, but not its size on an
+identical field. Use the fine saved cut `x=.45094013016102275` to fix one
+radius and history time; set departure coefficients to zero. Regenerate the
+original 257-node enriched history once and require its hash to match the
+receipt. Evaluate the constrained cap operator on the three existing fixed
+spaces, keeping this physical background and `alpha` identical. Set `T_x=1`,
+`R_x=0` and incoming characteristic equal to the background strong trace.
+These are diagnostic rates, not the actual material-wall evolution. Measure
+the nonlinear weighted-velocity projection, affine remainder and normalized
+mass gap. No new mesh, time step, source fit or evolved coefficient recovery
+is admitted. The combined preparation and three instantaneous solves have
+**90 process-CPU seconds / 100 million charged values**, one BLAS thread for
+the small radial systems, and at most 12000 summary bytes. Stop on hash,
+metric-domain or budget failure without automatic retry. If the frozen
+background does not reproduce the scale/trend, the unarchived departures or
+exterior/time coupling remain the missing datum; do not attribute the
+trajectory maximum to this counterfactual state.
+
+The three instantaneous solves completed, but NumPy values in preparation
+metadata initially prevented JSON output. Reusing the existing `plain`
+conversion allowed one unchanged-state format recovery with an 80-second
+remaining run guard. The successful application uses 5.078125 CPU seconds
+and 15,895,078 charged values; the first attempt's CPU total was not saved.
+Its small residual improves across the spaces, so it does not establish
+the actual growing trajectory error as background projection alone.
+
 Douglas's current priority is the increasing P001 mass gap and a slip
 calculation on the actual nested geometry. Read the three completed v4
 receipts and their authenticated comparison; take no evolution steps and

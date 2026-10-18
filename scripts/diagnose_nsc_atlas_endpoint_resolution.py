@@ -76,7 +76,8 @@ def build_report(records,binding,*,cpu_seconds=0.):
             samples_with_supported_field=sum(bool(c['incoming_supported_cell_indices']) for c in cuts),
             samples_with_support_only_in_last_cell=sum(c['incoming_supported_cell_indices']==[len(knots)-2] for c in cuts),
             all_sampled_inner_cells_before_onset=all(c['all_inner_cells_before_onset'] for c in cuts),
-            common_cuts=cuts,
+            common_cuts=[{key:cut[key] for key in ('x','incoming_front_z','wall_z',
+                'incoming_supported_cell_indices')} for cut in cuts],
             endpoint_projection=end['background_projection'],
             endpoint_gap=end['mass_gap_decomposition'],
             endpoint_physical_mass_gap=end['temporal_residual']['mass_actual'],
@@ -91,6 +92,9 @@ def build_report(records,binding,*,cpu_seconds=0.):
             clipped_outer_width_ratio=right['endpoint_support']['last_cell_clipped_width']/left['endpoint_support']['last_cell_clipped_width'],
             actual_mass_envelope_relative_change=relative_change(left['actual_mass_envelope'],right['actual_mass_envelope']),
             absolute_integral_relative_change=relative_change(left['integrated_absolute_mass_gap'],right['integrated_absolute_mass_gap'])))
+    if not all(row['all_sampled_inner_cells_before_onset'] and
+               row['samples_with_supported_field']==row['samples_with_support_only_in_last_cell'] for row in rows):
+        raise ValueError('saved history does not support the proposed single-active-cell diagnosis')
     return dict(schema='nsc-atlas-endpoint-active-resolution-v1',comparison=binding,levels=rows,pairs=pairs,
         scope='Retained-background support and saved residuals in the original spaces; no new grid or evolution.',
         diagnosis=[

@@ -1025,7 +1025,7 @@ or replace the constrained spherical causal map. Curved real-time metric
 dependence and the exterior's physical state remain necessary before
 identifying an effective cosmological volume term.
 
-### 6.1.12. Curvature channels and the relation between motion and lensing
+### 6.1.12. Flat-reference curvature channels and the relation between motion and lensing
 
 The same fixed-profile functional now has a covariant quadratic-curvature
 connection. Reusing [Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2),
@@ -1037,6 +1037,9 @@ works to second order in curvatures with compact weak perturbations of
 Euclidean $\mathbb R^4$, fixed topology and fixed compact data. Euler and
 boundary terms are removed only within that domain; a material wall or
 strong-curvature attachment needs its own terms.
+
+This is an imported Dirac fixed-profile calculation about flat space. The
+numerical slip below is not a consequence of NSC's cap--wall nesting.
 
 The Weyl function recovers Section 6.1.11 through
 $a_2(x)=\mathcal P_H(x)/x=1+6x\mathcal F_C(x)/Q_1$. The scalar function is
@@ -1096,6 +1099,49 @@ its symmetric retarded--advanced average. The static relation therefore
 does not supply the actual curved causal exterior, physical length
 calibration or a cosmological Lambda. Those remain the connection needed
 between the larger geometry and its observer's effective volume response.
+
+### 6.1.13. The actual cap--wall Dirac operator and the missing nested slip
+
+The [cap--wall calculation](../docs/nsc-atlas-cap-wall-response.md#dirac-probe-on-the-actual-quiet-cap-and-material-wall)
+adds a declared massless, minimally coupled probe with no direct surface
+spinor interaction to the original classical scalar candidate. It uses the
+known quiet reference; P001's unconverged endpoint supplies no controlled
+corrected background. In its static cap, let $A=1-H^2r^2$ and
+$z=\operatorname{atanh}(Hr)/H$. Rescaling the physical spinor by
+$\psi=A^{-1/4}r^{-1}u$ gives
+
+$$
+\mathsf{H}_k=-i\sigma_2\partial_z+\sigma_1 W,
+\qquad W=\frac{k\sqrt{A}}{r},
+\qquad V_\pm=W^2\pm\partial_zW,
+\qquad \partial_zW=-\frac{k\sqrt{A}}{r^2}.
+$$
+
+At $r/\ell=.5$, the lowest angular channel has
+$W\ell=\sqrt3$ and squared potentials
+$V_+\ell^2=-.4641016151$, $V_-\ell^2=6.4641016151$.
+Flat space at the same radius gives $0$ and $8$ for those potentials.
+These are curvature effects. The smooth control continues the same cap
+and retains its identical bulk operator.
+
+Nesting changes the material domain. For the common cap-to-exterior normal,
+$[K]=-6/\ell$. Continuity of the spinor and its Dirac image gives
+$[\partial_n\psi]=-[K]\psi/2=3\psi/\ell$ in a common normal frame.
+The smooth-cap control has no jump. The
+[reference record](../results/summaries/nsc-atlas-dirac-probe-reference-v1.json)
+and ten independent controls verify these operator inputs. The exterior's
+usual static coordinate is spacelike at this cut, so it cannot supply a
+static joined spectral problem.
+
+No nested $\Psi/\Phi$ or slip difference has yet been calculated. The
+loop requires a Dirac two-point state on the joined causal domain,
+renormalized bulk/interface response, and a conserved metric source with
+its wall displacement and gauge-invariant observer readout. Those inputs
+are absent from the classical scalar preparation and the flat profile.
+For free fermions the retarded bilinear response already depends explicitly
+on its initial covariance through $-i\operatorname{Tr}(C[V(t),V(0)])$;
+geometry alone does not select it. The completed result here is the curved
+operator/domain connection, not a loop polarization or an NSC slip number.
 
 ### 6.2. The retained local incoming gate
 
@@ -3089,6 +3135,23 @@ does not locate or uniquely explain that unseen peak. The remaining
 connection is the represented field's strong/weak and time-projection
 coupling to the wall. The radius, local measurement protocol and qualified
 range are recorded in [NSC-P001](../docs/prediction-register.md).
+
+The [active-region diagnosis](../results/summaries/nsc-atlas-endpoint-active-resolution-v1.json)
+uses the original onset label $q_a$ and history time
+$T_h=T+T_{\mathrm{offset}}$. Before central arrival the retained field
+is zero for $z<q_a-T_h$. At every active saved cut that front lies in
+the final cell on all three levels. The full outer widths are $.80,.73,.66$;
+the clipped endpoint widths are $.56458,.52678,.48898$. The active layer
+is never bisected. Added inner cells lie below the retained background's
+front; this is not a statement about the unarchived evolved departures.
+The spaces change inner knots and do not form a halved-h cap refinement.
+Their unresolved wall/time projections need not improve monotonically.
+The sampled absolute integral of the actual mass residual also grows
+5.11%, excluding denser maximum sampling as the sole explanation.
+Seven front/partition controls pass; the read-only calculation uses
+.015625 CPU seconds with no field evaluation or evolution. The missing
+maximum states still prevent unique attribution of those peaks. Check
+the active-region wall trace and affine transport before another grid.
 
 ### 14. A separate finite model with geometric feedback
 

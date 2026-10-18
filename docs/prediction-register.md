@@ -144,6 +144,14 @@ auxiliary accumulated-transport summary remains unavailable after its
 post-evolution assembly failure. The historical perturbative result remains
 unchanged; this extension does not close its full nonlinear endpoint claim.
 
+The later [active-region diagnosis](../results/summaries/nsc-atlas-endpoint-active-resolution-v1.json)
+locates the retained incoming layer in one unbisected outer quintic cell on
+all three levels. The clipped endpoint cell narrows only 6.70% then 7.18%,
+and the internal knots move. The integrated absolute mass residual grows
+5.11%, so maximum-sampling density alone does not explain the failed trend.
+This identifies an unresolved cap approximation, not a continuum error bar
+or the unique cause of the unarchived peak. No additional grids were run.
+
 The saved-data registration command is:
 
 ```sh

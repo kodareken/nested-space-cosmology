@@ -1,8 +1,82 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.7`, includes the covariant curvature channels and a static motion--lensing relation, the owned spectral profile's gravitational response, the vacuum gravitational-response diagnostic, the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
-## Curvature channels and a motion--lensing relation, 18 October 2026
+## What the cap--wall geometry changes, 18 October 2026
+
+The [actual reference calculation](nsc-atlas-cap-wall-response.md#dirac-probe-on-the-actual-quiet-cap-and-material-wall)
+derives the massless probe operator on the original cap and its transparent
+material interface. This is a declared extension of the classical scalar
+candidate. At `R/ell=.5`, the lowest radial Dirac channel has `W*ell=sqrt(3)`;
+its squared partner potentials are `-.4641016151/ell^2` and
+`6.4641016151/ell^2`, versus `0` and `8/ell^2` in flat space at the same
+radius. These bulk changes are curvature effects; a smooth continuation of
+the same cap has the identical bulk operator.
+
+Nesting adds the signed material-interface jump `[K]=-6/ell`. With no
+direct surface spinor interaction, the common-frame squared-operator domain
+has `[d_n psi]=3*psi/ell`, while the smooth-cap control has no jump. The
+normal derivative of the angular inverse radius jumps by `4/ell^2` in
+the lowest channel at this cut. The exterior's static coordinate is
+spacelike here; the full calculation must use a regular causal frame.
+Ten independent operator/domain controls pass. The
+[compact record](../results/summaries/nsc-atlas-dirac-probe-reference-v1.json)
+contains geometry inputs, **no nested Psi/Phi number**. A joined Dirac
+two-point state, renormalized interface response and conserved metric
+source/readout are still unspecified. The flat value below cannot fill
+those inputs or determine the nesting-induced change in gravitational slip.
+
+## P001 active-region diagnosis, 18 October 2026
+
+The [read-only resolution diagnosis](../results/summaries/nsc-atlas-endpoint-active-resolution-v1.json)
+locates the original retained incoming front using its quiet onset and
+history-clock origin. At all six active saved cuts on each level, the
+retained field occupies only the final quintic cell. The added interior
+cells lie below that background front. This does not assert that unarchived
+evolved departures vanish there.
+
+| Cap cells | Full outer width in z | Clipped endpoint outer width | Incoming support cells |
+|---|---:|---:|---:|
+| 2 | .80 | .5645809171 | 1 |
+| 4 | .73 | .5267809201 | 1 |
+| 8 | .66 | .4889809166 | 1 |
+
+The clipped width shrinks only 6.70% then 7.18%; the active cell is not
+bisected and the inner knots also move. These are different, non-nested
+spaces, not a halved-h cap refinement. The strong/weak trace and affine
+background time errors therefore have no established monotone convergence
+under this design. The actual mass envelope grows 3.35%, and its sampled
+absolute integral grows **5.11%**. Denser maximum sampling alone cannot
+explain both trends. At the endpoint, the normalized background remainder
+changes `-.0778766 -> .2497996 -> .5200265`; this is a coupling/projection
+quantity, not radial mass-integration error.
+
+Seven front/partition controls pass; the 13333-byte analysis uses .015625
+process-CPU seconds and no field evaluations, radial solve or evolution.
+The first serialization exceeded the fixed 16000-byte cap; removing repeated
+per-cut geometry fields kept the same calculation within that cap.
+This identifies the unresolved active-region approximation. It does not
+recover the unstored maximum state or prove that this is the only coupling
+error. Before another evolution, check wall trace and affine transport in
+the same physical active-region space. Step 2 remains unconverged.
+
+The subsequent [frozen-background check](../results/summaries/nsc-atlas-endpoint-frozen-projection-v1.json)
+holds the fine cut `x=.45094013016102275` radius/history time fixed, sets
+departures to zero and supplies its own strong incoming trace. On the
+three original spaces the physical mass residual is
+`-4.9437477e-6 -> -4.4753380e-6 -> -4.1578051e-6`: it improves and is
+far smaller than the actual saved-cut residual. The unbisected cell alone
+therefore does not establish the trajectory's growing mass error.
+The actual velocity-trace discrepancy improves, while its normal/incoming
+trace mismatch worsens. These are separate channels of the wall coupling.
+The three instantaneous solves use 5.078125 process-CPU seconds including
+one original-history preparation, with no exterior solve or time step.
+A first completed attempt lost its summary to a NumPy/JSON conversion
+error; the format recovery and unavailable first CPU total are recorded.
+The independent radial check applies to its own retained stage, not every
+unstored trajectory maximum.
+
+## Flat-reference curvature channels and a motion--lensing relation, 18 October 2026
 
 The [covariant profile calculation](schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)
 now supplies both Weyl and scalar-curvature response of the same induced
@@ -16,9 +90,10 @@ Einstein boundary flux. The one [5797-byte application](../results/summaries/nsc
 uses 0.140625 CPU seconds. Fixed quadrature rules agree to the stored
 response floats, without enclosing inherited spectral errors. The scalar
 kernel vanishes at zero momentum; no additional volume term is selected.
-These are conditional static transfer relations with no physical length
+These are imported Dirac fixed-profile transfer relations about flat space,
+not a result of the cap--wall nesting. They have no physical length
 calibration or astronomical comparison. The actual causal state and larger
-geometric reduction remain necessary for Lambda.
+geometric reduction remain necessary for Lambda and for a nested slip.
 
 ## The owned induced gravitational spectral profile, 18 October 2026
 

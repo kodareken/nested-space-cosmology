@@ -1,0 +1,385 @@
+{
+  "comparison": {
+    "bytes": 7077,
+    "path": "results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json",
+    "sha256": "fed19ae5b870c16ad2b290f5b077d5d8a888e633773b97f7ff6335ed0f102b1b"
+  },
+  "counts": {
+    "evolutions": 0,
+    "field_evaluations": 0,
+    "mass_integrations": 0,
+    "new_grids": 0
+  },
+  "diagnosis": [
+    "The active retained incoming layer occupies one unbisected quintic outer cell at every sampled active cut on all three levels.",
+    "Doubling the cap-cell count primarily adds cells below that retained front. The outer widths are .80/.73/.66, not a halved-h family.",
+    "The spaces change their internal knots and are not nested refinements. Strong wall traces and background time projections need not improve monotonically.",
+    "The absolute integrated mass defect also grows. A more densely sampled maximum alone cannot explain that trend.",
+    "The known physical residual is alpha times the strong/weak trace difference plus the explicit affine-background remainder. Neither is a radial mass/lapse integration error."
+  ],
+  "levels": [
+    {
+      "actual_mass_envelope": 0.0023283253412652548,
+      "all_sampled_inner_cells_before_onset": true,
+      "cap_cells": 2,
+      "common_cuts": [
+        {
+          "incoming_front_z": 0.5615358434613056,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.48470027859405174,
+          "x": 0.4
+        },
+        {
+          "incoming_front_z": 0.5422334109708304,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.49881647184559513,
+          "x": 0.41018802603220456
+        },
+        {
+          "incoming_front_z": 0.52174841059125,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.5134923381507983,
+          "x": 0.4203760520644091
+        },
+        {
+          "incoming_front_z": 0.49993807544644975,
+          "incoming_supported_cell_indices": [
+            1
+          ],
+          "wall_z": 0.5287934358627339,
+          "x": 0.4305640780966137
+        },
+        {
+          "incoming_front_z": 0.4766939316240256,
+          "incoming_supported_cell_indices": [
+            1
+          ],
+          "wall_z": 0.5447408735750138,
+          "x": 0.4407521041288182
+        },
+        {
+          "incoming_front_z": 0.45183762239171976,
+          "incoming_supported_cell_indices": [
+            1
+          ],
+          "wall_z": 0.5614176085473116,
+          "x": 0.45094013016102275
+        },
+        {
+          "incoming_front_z": 0.42517344902838283,
+          "incoming_supported_cell_indices": [
+            1
+          ],
+          "wall_z": 0.578912348108493,
+          "x": 0.46112815619322733
+        },
+        {
+          "incoming_front_z": 0.39634022265696356,
+          "incoming_supported_cell_indices": [
+            1
+          ],
+          "wall_z": 0.5974600174607171,
+          "x": 0.47131618222543187
+        },
+        {
+          "incoming_front_z": 0.3649676414659817,
+          "incoming_supported_cell_indices": [
+            1
+          ],
+          "wall_z": 0.6172811956458125,
+          "x": 0.4815042082576364
+        }
+      ],
+      "endpoint_gap": {
+        "clock_rate": 3.2174589216237512,
+        "h_trace_minus_weak": -0.0063964959818111344,
+        "identity_defect": -5.082197683525802e-21,
+        "normalized_balance_term": -0.07787661660065043,
+        "normalized_trace_term": -0.0001260760814038081,
+        "p_trace_minus_weak": -0.004857206149870341,
+        "reconstructed_physical_actual": -1.012718876552477e-05
+      },
+      "endpoint_physical_mass_gap": -1.0127188765524775e-05,
+      "endpoint_projection": {
+        "explicit_time_remainder": -0.07787661660067702,
+        "remainder_identity_defect": 8.554268404736831e-14,
+        "wall_time_projection_gap": -8.79331351358895
+      },
+      "endpoint_support": {
+        "all_inner_cells_before_onset": true,
+        "front_to_last_inner_knot": 0.31226736287192997,
+        "history_time": -0.8698910281940719,
+        "incoming_front_z": 0.3649676414659817,
+        "incoming_supported_cell_indices": [
+          1
+        ],
+        "incoming_supported_width": 0.2523135541798308,
+        "last_cell_clipped_width": 0.5645809170517608,
+        "last_cell_full_width": 0.8,
+        "last_cell_left": 0.052700278594051735,
+        "wall_z": 0.6172811956458125
+      },
+      "exterior_cells": 32,
+      "integrated_absolute_mass_gap": 2.1239456670006018e-05,
+      "integrated_signed_mass_gap": -1.7320837514456224e-05,
+      "level": 0,
+      "polynomial_degree": 5,
+      "samples_with_support_only_in_last_cell": 6,
+      "samples_with_supported_field": 6
+    },
+    {
+      "actual_mass_envelope": 0.0023779807471067432,
+      "all_sampled_inner_cells_before_onset": true,
+      "cap_cells": 4,
+      "common_cuts": [
+        {
+          "incoming_front_z": 0.5615358434613056,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.48470027859405174,
+          "x": 0.4
+        },
+        {
+          "incoming_front_z": 0.5422334109708304,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.4988164718455951,
+          "x": 0.41018802603220456
+        },
+        {
+          "incoming_front_z": 0.52174841059125,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.5134923381507983,
+          "x": 0.4203760520644091
+        },
+        {
+          "incoming_front_z": 0.49993807544993696,
+          "incoming_supported_cell_indices": [
+            3
+          ],
+          "wall_z": 0.5287934358605131,
+          "x": 0.4305640780966137
+        },
+        {
+          "incoming_front_z": 0.476693933089398,
+          "incoming_supported_cell_indices": [
+            3
+          ],
+          "wall_z": 0.5447408743705926,
+          "x": 0.4407521041288182
+        },
+        {
+          "incoming_front_z": 0.4518376412731202,
+          "incoming_supported_cell_indices": [
+            3
+          ],
+          "wall_z": 0.5614176246466427,
+          "x": 0.45094013016102275
+        },
+        {
+          "incoming_front_z": 0.4251734822948292,
+          "incoming_supported_cell_indices": [
+            3
+          ],
+          "wall_z": 0.5789123816108708,
+          "x": 0.46112815619322733
+        },
+        {
+          "incoming_front_z": 0.39634025182950516,
+          "incoming_supported_cell_indices": [
+            3
+          ],
+          "wall_z": 0.597460059095315,
+          "x": 0.47131618222543187
+        },
+        {
+          "incoming_front_z": 0.3649676062810585,
+          "incoming_supported_cell_indices": [
+            3
+          ],
+          "wall_z": 0.6172811987398594,
+          "x": 0.4815042082576364
+        }
+      ],
+      "endpoint_gap": {
+        "clock_rate": 3.2174656268365913,
+        "h_trace_minus_weak": -0.14259089112970974,
+        "identity_defect": 0.0,
+        "normalized_balance_term": 0.2497995765837238,
+        "normalized_trace_term": -0.014090998175550781,
+        "p_trace_minus_weak": -0.004146979400473816,
+        "reconstructed_physical_actual": 3.060234442063366e-05
+      },
+      "endpoint_physical_mass_gap": 3.060234442063366e-05,
+      "endpoint_projection": {
+        "explicit_time_remainder": 0.24979957658353413,
+        "remainder_identity_defect": 6.10178574333986e-13,
+        "wall_time_projection_gap": -8.890455351011806
+      },
+      "endpoint_support": {
+        "all_inner_cells_before_onset": true,
+        "front_to_last_inner_knot": 0.27446732768700677,
+        "history_time": -0.8698909930091487,
+        "incoming_front_z": 0.3649676062810585,
+        "incoming_supported_cell_indices": [
+          3
+        ],
+        "incoming_supported_width": 0.2523135924588009,
+        "last_cell_clipped_width": 0.5267809201458077,
+        "last_cell_full_width": 0.73,
+        "last_cell_left": 0.09050027859405174,
+        "wall_z": 0.6172811987398594
+      },
+      "exterior_cells": 64,
+      "integrated_absolute_mass_gap": 2.1749243484361828e-05,
+      "integrated_signed_mass_gap": -1.8332433984716656e-05,
+      "level": 1,
+      "polynomial_degree": 5,
+      "samples_with_support_only_in_last_cell": 6,
+      "samples_with_supported_field": 6
+    },
+    {
+      "actual_mass_envelope": 0.002406318093670595,
+      "all_sampled_inner_cells_before_onset": true,
+      "cap_cells": 8,
+      "common_cuts": [
+        {
+          "incoming_front_z": 0.5615358434613056,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.48470027859405174,
+          "x": 0.4
+        },
+        {
+          "incoming_front_z": 0.5422334109708304,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.49881647184559513,
+          "x": 0.41018802603220456
+        },
+        {
+          "incoming_front_z": 0.52174841059125,
+          "incoming_supported_cell_indices": [],
+          "wall_z": 0.5134923381507983,
+          "x": 0.4203760520644091
+        },
+        {
+          "incoming_front_z": 0.499938075451966,
+          "incoming_supported_cell_indices": [
+            7
+          ],
+          "wall_z": 0.5287934358604961,
+          "x": 0.4305640780966137
+        },
+        {
+          "incoming_front_z": 0.47669393424306306,
+          "incoming_supported_cell_indices": [
+            7
+          ],
+          "wall_z": 0.5447408755699111,
+          "x": 0.4407521041288182
+        },
+        {
+          "incoming_front_z": 0.4518376615540104,
+          "incoming_supported_cell_indices": [
+            7
+          ],
+          "wall_z": 0.5614176428746707,
+          "x": 0.45094013016102275
+        },
+        {
+          "incoming_front_z": 0.425173529723738,
+          "incoming_supported_cell_indices": [
+            7
+          ],
+          "wall_z": 0.5789124220688788,
+          "x": 0.46112815619322733
+        },
+        {
+          "incoming_front_z": 0.39634029762695067,
+          "incoming_supported_cell_indices": [
+            7
+          ],
+          "wall_z": 0.5974601014385723,
+          "x": 0.47131618222543187
+        },
+        {
+          "incoming_front_z": 0.3649675650279256,
+          "incoming_supported_cell_indices": [
+            7
+          ],
+          "wall_z": 0.6172811952326375,
+          "x": 0.4815042082576364
+        }
+      ],
+      "endpoint_gap": {
+        "clock_rate": 3.2174741584747153,
+        "h_trace_minus_weak": -0.29958999733287606,
+        "identity_defect": -1.3552527156068805e-20,
+        "normalized_balance_term": 0.5200265107860073,
+        "normalized_trace_term": -0.03312768199247278,
+        "p_trace_minus_weak": -0.0030566509657665164,
+        "reconstructed_physical_actual": 6.321469399785846e-05
+      },
+      "endpoint_physical_mass_gap": 6.321469399785844e-05,
+      "endpoint_projection": {
+        "explicit_time_remainder": 0.520026510786513,
+        "remainder_identity_defect": -1.6271428648906294e-12,
+        "wall_time_projection_gap": -8.025003507536912
+      },
+      "endpoint_support": {
+        "all_inner_cells_before_onset": true,
+        "front_to_last_inner_knot": 0.23666728643387386,
+        "history_time": -0.8698909517560158,
+        "incoming_front_z": 0.3649675650279256,
+        "incoming_supported_cell_indices": [
+          7
+        ],
+        "incoming_supported_width": 0.25231363020471187,
+        "last_cell_clipped_width": 0.4889809166385857,
+        "last_cell_full_width": 0.66,
+        "last_cell_left": 0.12830027859405174,
+        "wall_z": 0.6172811952326375
+      },
+      "exterior_cells": 128,
+      "integrated_absolute_mass_gap": 2.2324490918562215e-05,
+      "integrated_signed_mass_gap": -1.930516598048667e-05,
+      "level": 2,
+      "polynomial_degree": 5,
+      "samples_with_support_only_in_last_cell": 6,
+      "samples_with_supported_field": 6
+    }
+  ],
+  "limits": {
+    "CPU_seconds": 60.0,
+    "summary_bytes": 16000
+  },
+  "next_calculation": "Check the wall trace and affine-background transport on the same physical active-region space before redesigning any evolution grid.",
+  "not_established": [
+    "The evolved departure coefficients and maximizing stages were not archived. Background support is not proof of departure support.",
+    "This identifies an unresolved approximation and invalidates a cap-convergence inference; it does not uniquely attribute the all-stage maximum or exclude another coupling error.",
+    "No Richardson order, continuum limit, certified uncertainty or completed Step 2 follows from these three runs."
+  ],
+  "pairs": [
+    {
+      "absolute_integral_relative_change": 0.02400187642632695,
+      "actual_mass_envelope_relative_change": 0.02132666125366518,
+      "clipped_outer_width_ratio": 0.9330476894200666,
+      "levels": [
+        0,
+        1
+      ],
+      "old_internal_knots_preserved": false
+    },
+    {
+      "absolute_integral_relative_change": 0.02644907785477701,
+      "actual_mass_envelope_relative_change": 0.011916558449150317,
+      "clipped_outer_width_ratio": 0.9282434081007351,
+      "levels": [
+        1,
+        2
+      ],
+      "old_internal_knots_preserved": false
+    }
+  ],
+  "producer_sha256": "d8559c58fbe83825d7f9f240015849cf36c571163b05066871815b296c6b4364",
+  "runtime_cpu_seconds": 0.015625,
+  "schema": "nsc-atlas-endpoint-active-resolution-v1",
+  "scope": "Retained-background support and saved residuals in the original spaces; no new grid or evolution."
+}

@@ -25,6 +25,36 @@ is called `g_src`; `b` always denotes the wall parameter.
 
 ## Exact frame and potential
 
+The completed P001 endpoint trial remains unconverged. Its
+[active-region diagnosis](../results/summaries/nsc-atlas-endpoint-active-resolution-v1.json)
+finds the retained incoming layer inside a single outer quintic cell at
+every active saved cut on all three levels. The original background has
+`chi=F(T_h+z)-F(T_h-z)`, with `T_h=T+clock_offset`, and is identically
+quiet at labels below `q_a`. Before central arrival its front is therefore
+`z_front=q_a-T_h`. At the fine endpoint this is `.3649675650`; the last
+inner knot is only `.1283002786` and the wall is at `.6172811952`.
+Every added interior cell lies below the retained front at the sampled
+cuts. This does not locate the unarchived departure field.
+
+The clipped outer widths are `.5645809171`, `.5267809201`, `.4889809166`,
+so the active approximation is not halved as the cap count doubles. The
+internal knots also change. The increasing actual-mass envelope and its
+5.11% increasing absolute integral consequently do not establish cap
+convergence; the latter also excludes maximum-sampling density as the
+sole cause. The existing exact split into strong/weak trace and explicit
+background-time remainder remains the relevant residual. It is not a
+radial mass/lapse integration error. A same-domain trace/affine-transport
+check is needed before any new evolution; no additional grids have run.
+
+The [same-background instantaneous control](../results/summaries/nsc-atlas-endpoint-frozen-projection-v1.json)
+keeps one radius/history time and zero departures fixed on the original
+three spaces, prescribing the strong incoming trace and diagnostic rates
+`T_x=1,R_x=0`. Its small mass residual improves, so the broad outer cell
+alone does not explain the actual trajectory's growing residual. The
+trajectory has an additional growing normal/incoming trace mismatch even
+as its momentum/velocity trace discrepancy improves. This counterfactual
+is not a recovered evolved state or a material-wall solution.
+
 Start from the same split Jordan action, including its `2fK` boundary terms,
 
 $$

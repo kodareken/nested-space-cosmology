@@ -1,10 +1,10 @@
 {
-  "bytes": 3729245,
+  "bytes": 3750070,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "171a72e6277bd6175092228b5662d06239822984426789ec3c3d808978b6d0ab",
+  "metadata_sha256": "6c9ee0c911286fca23872fb0561bd5a5ff0554e9a9807f03214b9e3379661592",
   "output": "paper/nested-space-cosmology.pdf",
   "pages": 56,
-  "pdf_sha256": "8312464b8cf9072b685ba1833a90af182adc62becc4d5be727d8066f5f64bb67",
+  "pdf_sha256": "471dc2e0ae97e0e0f5d9fbbdc511ae6c928c58c709614be59b61cbe12b66bdb2",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -384,12 +384,20 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "path": "results/summaries/nsc-atlas-dirac-probe-reference-v1.json",
+      "sha256": "dfc65a11c73b260d40ecb5fb73e315aee6d29c2f9f26c3e7488cb705636fe582"
+    },
+    {
       "path": "results/summaries/nsc-atlas-distance-contrast-v1.json",
       "sha256": "976c382167174d9e115bbed9414efff6409964eb4f981c8ecfdf0a549189eb1e"
     },
     {
       "path": "results/summaries/nsc-atlas-effective-vacuum-v1.json",
       "sha256": "b0e28da4ecce9cc187f00a9d008ff8de24182afa2230017e57251519a5b6736f"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-endpoint-active-resolution-v1.json",
+      "sha256": "d32f1ad9746a4cfac86410cd6c7378cc93c6d63a929de559d8f54f6a66562697"
     },
     {
       "path": "results/summaries/nsc-atlas-exterior-schur-metric-v1.json",
@@ -497,6 +505,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "1a63453d554c856afde705164aea8d100fb99aa8994c7faf63ca65a7b7e06440",
-  "version": "working-2026-10-18.7"
+  "source_sha256": "6f2ff60d3dc61634b5a2eca83370604c53f50f0eb8a14c41a401136c050f50d0",
+  "version": "working-2026-10-18.8"
 }

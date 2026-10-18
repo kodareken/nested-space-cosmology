@@ -1,5 +1,26 @@
 # Reproducing the root project
 
+The actual cap--wall Dirac inputs and P001 active-region diagnosis reproduce
+without an evolution or new grid:
+
+```sh
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_probe.py --output .build/nsc-atlas-dirac-probe-reference.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_resolution.py --output .build/nsc-atlas-endpoint-active-resolution.json
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_probe.py tests/test_diagnose_nsc_atlas_endpoint_resolution.py -q
+```
+
+Use new output paths. The first command requires its producer/component to
+match the current committed source. Compare the algebraic geometry values
+within `1e-12` relative/absolute tolerance and exact domain/status labels;
+runtime and source-commit metadata may differ. It computes no nested slip.
+For the second, receipt hashes and support-cell indices must match exactly;
+fronts and widths can be compared within `1e-12` in the declared units.
+The input comparison authenticates the original v4 endpoint receipts. Its
+incoming support concerns the retained background, not unarchived departures.
+The [operator record](../results/summaries/nsc-atlas-dirac-probe-reference-v1.json)
+and [resolution record](../results/summaries/nsc-atlas-endpoint-active-resolution-v1.json)
+remain compact; no raw array or previous evolution is regenerated.
+
 The current Step-7 exact calculations and causal exterior operator reproduce with:
 
 ```sh

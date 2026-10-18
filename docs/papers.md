@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.8` identifies Section 6.1.12 as an imported flat Dirac
+reference, then derives the actual quiet cap's radial probe operator and
+the material-interface domain in Section 6.1.13. No nested slip is claimed:
+its quantum state and metric-source/readout are still missing. Section 13.22
+now locates P001's active retained field inside one unbisected outer cell
+on all three levels. Its growing integrated mass defect rules out denser
+maximum sampling as the sole explanation. The trial remains unconverged.
+
 Revision `2026-10-18.7` adds Section 6.1.12: both covariant curvature channels
 of the same induced profile and a conditional static motion--lensing relation.
 The source-action variation gives a gravitational slip of 0.9989169187 at
