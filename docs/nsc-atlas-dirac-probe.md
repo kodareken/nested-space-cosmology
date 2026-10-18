@@ -111,3 +111,120 @@ The flat fixed-profile action supplies none of these choices for the joined
 cap--wall spacetime. This calculation identifies and evaluates the actual
 geometry/domain changes; it does not label them as a completed loop or
 replace the scalar candidate with the separate periodic Dirac model.
+
+## Joined initial surface at the source anchor
+
+The earlier [complete sourced slice](nsc-atlas-connection-slice.md) uses a
+flat expanding cap at `Rwall/ell=1.5`. It is not initial geometry at the
+current source anchor `.45`. The
+[companion construction](../src/recursive_horizons/nsc_atlas_dirac_slice.py)
+instead fixes `Tcap=0` in the quiet static cap at that anchor, keeping
+`H*ell=1`, `k_wall*ell=2`, `M/ell=.4` and zero scalar field. The cap data are
+
+$$
+r=H^{-1}\sin(H\lambda),\qquad
+\lambda_w=H^{-1}\arcsin(HR_w),\qquad K^i{}_j=0.
+$$
+
+Write `v=Rdot`, `Aminus=1-H^2*Rw^2`, and use the existing signed wall
+coefficients `beta_minus, beta_plus`. In the common wall frame the cap's
+slice normal and spatial tangent are the boost
+
+$$
+u_\Sigma=\gamma u_w-\gamma_v n_w,\quad
+e_\Sigma=\gamma n_w-\gamma_v u_w,\quad
+\gamma=\frac{\beta_-}{\sqrt{A_-}},\quad
+\gamma_v=\frac{v}{\sqrt{A_-}}.
+$$
+
+The continued slice therefore has exterior wall data
+
+$$
+E=u_\Sigma(r)=\gamma v-\gamma_v\beta_+>0,\qquad
+J=e_\Sigma(r)=\gamma\beta_+-\gamma_v v<0,\qquad
+J^2-E^2=1-\frac{2M}{R_w}.
+$$
+
+Hold `V=u_Sigma(r)=E` initially along the Schwarzschild portion. With
+`a=sqrt(1+E^2)` and `rmin=2M/a^2`, an exact proper-distance parametrization is
+
+$$
+r=r_{\min}\cosh^2q,\quad r'=a\tanh q,\quad
+\lambda=\lambda_{\min}+\frac{r_{\min}}a
+(q+\sinh q\cosh q).
+$$
+
+Start at `qwall=-acosh(sqrt(Rw/rmin))`, aligning the proper distance with
+`lambda_w`. The minimum at `q=0` is regular and is a property of this slice;
+the spacetime event horizon remains `r=2M`. On the increasing-radius branch
+use the existing smooth step to taper `V` from `E` to zero between
+`r/ell=1` and `1.2`. For either a constant or varying `V(r)` the vacuum data
+
+$$
+r'^2=1-\frac{2M}{r}+V^2,\quad
+r''=\frac{M}{r^2}+VV_r,\quad
+K_{\lambda\lambda}=-V_r,\quad K^\theta{}_\theta=-\frac Vr
+$$
+
+satisfy the spherical Hamiltonian and momentum constraints. After the
+taper, `K=0` and the same Schwarzschild data extend to one AE end. The cap
+centre closes the other direction. This supplies sourced initial data,
+without asserting a regular formation history or global past completeness.
+The taper is a slicing choice; using it later to select a quantum state
+would make it an explicit preparation choice.
+
+No division by the Schwarzschild factor is needed at the horizon. In
+outgoing Eddington--Finkelstein coordinates
+`ds2=-f*du2-2*du*dr+r2*dOmega2`, the spatial tangent and unit normal have
+
+$$
+e_\Sigma^u=-\frac1{V+r'},\quad e_\Sigma^r=r',\qquad
+u_\Sigma^u=\frac1{V+r'},\quad u_\Sigma^r=V.
+$$
+
+Their norms are `+1,-1` and their mutual contraction vanishes, including
+at `f=0` on the outgoing segment. At the material interface,
+
+$$
+[r']=-k_{\rm wall}R_w\gamma,\quad
+[K^\theta{}_\theta]=-k_{\rm wall}\gamma_v,\quad
+{}^{(3)}R_{\rm singular}=-4[r']/R_w.
+$$
+
+With `k_wall=4*pi*sigma`, these are precisely the surface Hamiltonian and
+momentum sources for the independently projected energy `sigma*gamma` and
+momentum `sigma*gamma_v`. The
+[controls](../tests/test_nsc_atlas_dirac_slice.py) also differentiate the
+embedding and fields independently, check the horizon and minimum directly,
+and verify length-scale covariance.
+
+## Intrinsic spatial operator versus quantum preparation
+
+On this initial three-metric the intrinsic radial operator in angular
+sector `k` is unitarily represented by
+
+$$
+D_{\Sigma,k}=-i\sigma_2\partial_\lambda+\sigma_1 W_\Sigma,\quad
+W_\Sigma=k/r,\quad \partial_\lambda W_\Sigma=-kr'/r^2.
+$$
+
+Here `u=r*psi` and the norm is `integral |u|^2 d(lambda)`. This is a
+different operator from the static-cap optical Hamiltonian above. At the
+wall `W_Sigma` is continuous while its first derivative has the finite jump
+`k*k_wall*gamma/Rw`. The squared **intrinsic spatial** operator has partner
+potentials `W_Sigma^2 +/- d_lambda W_Sigma`, with a step and no delta.
+Its transparent square has continuous `u` and `d_lambda u`. For the
+first-order spatial operator only continuity of `u` is required; its domain
+allows square-integrable piecewise derivatives.
+
+These spatial domain statements are not matching conditions for the
+four-dimensional squared operator. Its normal is the moving material
+wall's normal, and its spin connection, time derivatives, lapse and frame
+transport must be retained when pulling it back to a slice. Selecting the
+negative spectral projector of `D_Sigma` would be an additional state
+ansatz, not a derivation of the physical covariance. The smooth-spacetime
+[Dirac Hadamard construction](https://arxiv.org/html/2108.11630v3), Sections
+3.2, 6 and 7, supplies methods to inspect; its smoothness and evolution
+hypotheses have not been established at this material wall. The joined
+surface removes a geometric obstruction to specifying the state, without
+silently supplying that missing state or a value of `Psi/Phi`.

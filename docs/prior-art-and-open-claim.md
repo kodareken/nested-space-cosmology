@@ -1,5 +1,41 @@
 # Prior art and admission of new research
 
+## Source-anchored joined spatial geometry for the Dirac calculation
+
+The existing complete cap--bridge slice is at `Rwall/ell=1.5`; the current
+source anchor is `.45`. Reuse the same quiet de Sitter cap, signed vacuum
+wall and Schwarzschild mass, with no scalar pulse. Continue the cap's
+static `Tcap=0` slice across that actual anchor, retaining the shell boost.
+Use a constant exterior normal radius rate through its regular minimum
+sphere, then the existing smooth step to taper that rate to zero on the
+outgoing interval `R/ell in [1,1.2]`. This changes slicing, not the physical
+sources or couplings. Beyond the taper the initial data have one analytic
+asymptotically Euclidean Schwarzschild end. Use a regular outgoing
+Eddington--Finkelstein frame to check its embedding through `R=2M`.
+
+The new companion `nsc_atlas_dirac_slice` leaves the older `1.5` construction
+and frozen P001 inputs unchanged. Check bulk and distributional constraints,
+the shell stress projected onto the slice, the regular minimum, scale
+covariance, and independently differentiated embedding and curvature. On
+this three-metric only, derive the intrinsic radial Dirac operator after
+rescaling by `r`. Its squared spatial potentials have a step at the wall;
+they are not the four-dimensional squared Dirac domain or a Lorentzian
+quantum state. In particular, a negative spectral projector of this spatial
+operator is not assumed to be the physical Hadamard state.
+
+Independent controls have 30 process-CPU seconds. After method freeze, one
+reference evaluation has **60 process-CPU seconds / 40000 geometric points**,
+one BLAS thread, and at most 10000 summary bytes. Proper-distance comparison
+uses fixed 32/64-point quadrature only on the taper and exact Schwarzschild
+tail. No evolution step or new P001 grid is taken. Stop on a constraint,
+orientation, domain or budget failure. The anticipated failures are a wrong
+shell boost, confusing a slicing minimum with the event horizon, and
+equating the intrinsic operator's domain with four-dimensional propagation.
+A direct regular-frame embedding or shell constraint disagreeing with this
+construction would reject it. The result unlocks a joined initial surface;
+state preparation, interface renormalization and metric response remain
+required for a nested gravitational slip.
+
 ## Pointwise cap-equation defect on the archived coupled state
 
 The incoming-offset control identifies a wall channel, but takes its

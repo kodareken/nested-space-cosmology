@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+The source-anchor joined initial geometry and its intrinsic spatial Dirac
+operator reproduce with:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_slice.py tests/test_nsc_atlas_dirac_probe.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_slice.py --output .build/nsc-atlas-dirac-source-slice.json
+```
+
+The producer requires its method to be committed and its output path unused.
+It uses the same quiet sources at `Rwall/ell=.45`, a regular outgoing
+Eddington--Finkelstein frame, and fixed 32/64 quadrature on the slicing taper.
+No P001 time step, new evolution grid, quantum state or loop polarization is
+introduced. The [owner](nsc-atlas-dirac-probe.md#joined-initial-surface-at-the-source-anchor)
+distinguishes the intrinsic spatial operator from four-dimensional dynamics.
+
 The actual archived cap RHS check reproduces with:
 
 ```sh
