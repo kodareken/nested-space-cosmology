@@ -2909,6 +2909,18 @@ fractional observer clock/radius derivative `-.272037713746`. It preserves
 the nonzero original defect. The first method's incorrect zero-root premise
 and stopped application are retained in the admission and v1 diagnosis.
 
+The coupled derivative has a separate small-grid control command:
+
+```text
+python scripts/run_python.py -m pytest tests/test_nsc_conformal_tangent_evolution.py -q
+```
+
+It checks the analytic Jacobian-vector action against independent full-rate
+differences and Hamiltonian identities. This command reads no archive and
+takes no physical time step. A paired nonlinear/tangent trajectory needs a
+later producer and finite evolution budget; the derivative controls alone
+do not provide that trajectory or an observed signal.
+
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.
 The seven controls include coordinate Riemann/Ricci, normal Weyl under a

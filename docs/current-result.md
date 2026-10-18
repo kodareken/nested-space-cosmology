@@ -68,6 +68,12 @@ The first method incorrectly assumed a zero root; its
 is preserved. The finite initial-response probe is closed. Causal
 propagation and its observer-clock/light-cone consequence come next.
 
+The analytic coupled derivative, its constraint-forcing variation and the
+paired RK4 step are now implemented. Seven manufactured controls pass,
+including independent differences of all eight field blocks and of the
+complete time step. The original evolution remains unchanged. An archived
+paired trajectory and its photon response have not yet been run.
+
 ## One geometry at two resolutions, 18 October 2026
 
 The [fixed-state reduction](schur-memory.md#physical-resolution-of-one-fixed-geometry)

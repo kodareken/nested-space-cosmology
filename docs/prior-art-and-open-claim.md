@@ -1,5 +1,58 @@
 # Prior art and admission of new research
 
+## Coupled causal tangent engine: manufactured controls
+
+The initial response now needs propagation along the same evolving finite
+Hamiltonian. Reuse `compose_fine_hamiltonian`, its fixed Galerkin maps and
+the conformal pullback `L=Q,beta=0`. Implement `u_T=D X_H(z)u` for all six
+real geometry fields and both complex column blocks. Later chirality,
+current or constraints are not imposed. The source and original constraint
+forcing remain those of the owned finite model.
+
+Use an analytic Jacobian-vector product. Two perturbed trajectories would
+introduce a finite phase-step error and additional initial preparations;
+automatic differentiation would introduce a new runtime. The analytic
+route follows the existing algebra and uses only matrix applications to
+one direction. In this gauge the two matter forces satisfy
+`force_Q+force_L=M*kappa*S1`; keep that identity and the gravitational
+`-C_g` pullback when differentiating. Preserve `D(F)` as a discrete matrix
+application, without substituting a spatial product rule.
+
+The implementation owner is
+`src/recursive_horizons/nsc_conformal_tangent_evolution.py`, with small
+controls in its matching test file. This phase permits manufactured
+`nf=10,nq=40` controls only, capped together at **30 process-CPU seconds**;
+no archived trajectory, timing probe, grid scan or physical application is
+admitted yet. Check all eight rates against independent real directional
+differences, the weighted Hamiltonian symplectic identity, zero direction,
+the zero-momentum wave-acceleration limit, one manufactured RK4 step and the variation of the actual
+constraint forcing. Use the mixed constraint derivative
+`D2C[u,X]+DC[DX*u]` for its time variation; a zero original constraint
+is not assumed. Keep the old nonlinear
+evolution unchanged. A later driver will integrate `z` and `u` together,
+then reuse the existing normal-observer redshift and area-distance formulas.
+
+Completion of this engine means those derivative checks pass, not that a
+causal observable or Lambda has been computed. An independent derivative
+disagreement beyond its declared numerical tolerance would falsify the
+implementation claim. The three likely failures are an omitted conformal
+pullback term, an incorrect matter multiplicity/density factor, and a
+false spatial product rule; mixed-field differences, the symplectic check
+and nonuniform Fourier profiles distinguish them. Diagnose a failed
+identity before designing any physical evolution.
+
+**Implementation outcome:** `conformal_jvp` differentiates all eight state
+blocks using the original Galerkin maps, with matrix applications to one
+direction and no dense full Jacobian. `conformal_tangent_constraints` also
+evaluates the mixed constraint derivative and original forcing variation.
+Seven manufactured controls pass in the first complete 0.88-second test run,
+within the cumulative 30-CPU-second control allowance. The nonlinear
+evolution is unchanged. `variational_rk4_step` differentiates that same
+discrete step at its actual four stages, checked against independently
+perturbed steps and their energy variation. This closes the derivative
+implementation phase; an archived paired trajectory and its constraint/observer results remain to be
+evaluated under a separate finite evolution admission.
+
 ## Reuse the exact-wave control after the failed endpoint contraction
 
 The completed P001 trial has a growing mass residual. In the quiet

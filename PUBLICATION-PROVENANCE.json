@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 246885,
+      "bytes": 247431,
       "path": "docs/active-code-map.md",
-      "sha256": "48cb40028a9cb34fa69a3948b498e17ed1f84bb3b690ed7d5c7c8229df36d1af"
+      "sha256": "f1a07ff7e127c9187e186de58f03b1f35398028492d5cd79db6c2d85df8154f9"
     },
     {
       "bytes": 102489,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 390314,
+      "bytes": 390670,
       "path": "docs/current-result.md",
-      "sha256": "24b8f05b15fe63d2ced4732a1862bc22129f74c010c58c9117fd86f006299abb"
+      "sha256": "94a58663bd5408a3812839e41d33a1127d729786f1fb20e8f7f77615a03d2348"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2383491,
+      "bytes": 2384444,
       "path": "docs/lab-snapshot.json",
-      "sha256": "d1efd6fbc2862ed4ed1ec13faa566e0965ab9f3c12153381b6f4d205a22f6366"
+      "sha256": "11cefc954ebd5ba1720126bf4447acbb213780d89ce5554d714e3cd0c5f95a5b"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 505279,
+      "bytes": 508559,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "33f609d37ff6c09159c27a7745ce74badded9e40ca542484054d79c9ea7fe9c9"
+      "sha256": "30a54c348fac7e9b1523bee011ada90ce89491d379ee61cacff8cc255b579741"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 168419,
+      "bytes": 168941,
       "path": "docs/reproducing.md",
-      "sha256": "3ad2123f1358f6c80ced9cbf13155ab2ee478310d21d8cb06cd54cce820d2b1a"
+      "sha256": "bcc7585955c445e66a0530934fa59783b8e834efbd1a01d440cf37dded7e8944"
     },
     {
       "bytes": 31710,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 86862,
+      "bytes": 90152,
       "path": "docs/schur-memory.md",
-      "sha256": "cbee73ccd7a00e7d601777745aa0f2b2d55dbcfeaa51da475782b30d4490f803"
+      "sha256": "1092f5adf58554c1d6830d57dfeeef0180faab0699cd564001228db6c6c113a7"
     },
     {
       "bytes": 537091,
@@ -17626,6 +17626,11 @@
       "sha256": "03f67e28d0da4e3ff3d07b02a44e2dadca97bd81e1c8b1f4f053d578cb797606"
     },
     {
+      "bytes": 12680,
+      "path": "src/recursive_horizons/nsc_conformal_tangent_evolution.py",
+      "sha256": "fa258dc3ff658258c88d89be4791f6b7def2f1a800f2646fed008845f5e278c7"
+    },
+    {
       "bytes": 2641,
       "path": "src/recursive_horizons/nsc_conformal_vacuum_generator.py",
       "sha256": "0e8c8bd97d7992c5c10638306366ce618633f9e4c63e4dafd0ecc10e01ff67ec"
@@ -20066,6 +20071,11 @@
       "sha256": "661aa3e5cbdee5fd15d7de33560c14ab0a1a44e08ef69aea5ce8205c017d9e80"
     },
     {
+      "bytes": 8046,
+      "path": "tests/test_nsc_conformal_tangent_evolution.py",
+      "sha256": "18cb895c0ab1de64d9e10fbd1ee383e5cd6a6f5ec73ce71d11181c52b030d3a8"
+    },
+    {
       "bytes": 2919,
       "path": "tests/test_nsc_conformal_vacuum_generator.py",
       "sha256": "32ec0efb51e5612959290c02ba792b830c837d7b222e6662a1ba487326275458"
@@ -21761,7 +21771,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "d1efd6fbc2862ed4ed1ec13faa566e0965ab9f3c12153381b6f4d205a22f6366",
+  "lab_snapshot_sha256": "11cefc954ebd5ba1720126bf4447acbb213780d89ce5554d714e3cd0c5f95a5b",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

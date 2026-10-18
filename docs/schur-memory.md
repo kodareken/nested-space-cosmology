@@ -455,6 +455,67 @@ as well. An instantaneous Hessian cannot replace that propagator. The
 resulting metric and lapse variation, with a specified observer proper
 clock, is what can enter the existing redshift and radar calculation.
 
+### Coupled tangent evolution and observer response
+
+The [analytic vector action](../src/recursive_horizons/nsc_conformal_tangent_evolution.py)
+now differentiates the same Galerkin ODE in all six real geometry fields
+and both complex column blocks. If `z_T=X_H(z)`, propagate
+`u_T=D X_H(z)u` alongside it; the initial direction comes from the fixed-level
+preparation above. Later columns and momenta remain dynamical.
+
+In the owned gauge `L=Q,beta=0`, the Dirac Hamiltonian is
+`sigma2*P+kappa*Q*sigma1`. The matter forces obey
+`force_Q+force_L=M*kappa*S1`, so the matter part of the differentiated
+`p_Q` rate is `-M*kappa*delta_S1/dx_q`. The gravitational `-C_g` pullback
+also remains. The column variations satisfy
+
+$$
+\delta\dot\phi_0=-P\delta\phi_1-i\kappa(Q\delta\phi_1+\delta Q\phi_1),
+\qquad
+\delta\dot\phi_1=P\delta\phi_0-i\kappa(Q\delta\phi_0+\delta Q\phi_0).
+$$
+
+The implementation applies `D(delta_F)` to differentiate the actual
+`D(F)` expression. It does not replace that spatial operation with a
+continuum product rule. All projections use the original Galerkin maps;
+column evolution has no extra isotropic-copy factor.
+
+Seven [manufactured controls](../tests/test_nsc_conformal_tangent_evolution.py)
+pass: the full real directional difference, the geometry/weighted-column
+symplectic identity, zero/reused directions, the zero-momentum radius
+wave-acceleration limit, input rejection and independent variation of the
+actual constraint forcing, and differentiation of the original RK4 step.
+For the symplectic check the
+geometry carries `dx_g` and each column carries `2*M*c_j*Im(u_j^dagger*v_j)`.
+This establishes the tested derivative implementation, not a propagated
+physical result. No new archived trajectory has been run.
+
+`variational_rk4_step` evaluates the original nonlinear rate and its
+Jacobian-vector action at the same four RK4 stages. Its baseline update
+matches the existing step, and its tangent matches independently perturbed
+steps and the resulting Hamiltonian-energy variation. It supplies the
+time-stepping engine; a physical trajectory and its budget are separate.
+
+The same module implements the constraint Hessian action. Write
+`C=(h,d)`, where `h=Q*C_total` and `d` is the momentum constraint, and
+`S(h,d)=(D_x*d,D_x*h)` using the original discrete derivative matrix.
+Then `delta_f=D2C[u,X_H]+DC[DX_H*u]-S*DC[u]`. The implementation
+retains the nonzero background terms, compares against an independent
+directional difference of the original forcing and reports full quadrature
+norms. It does not project away the unresolved variation or turn a sampled
+forcing norm into a time-integrated bound.
+
+The observer calculation reuses the existing
+[radial light-cone kernel](../src/recursive_horizons/nsc_atlas_cosmological_distance.py).
+Here `N=r*Q`, radial null paths have `dx/dT=+/-1`, and normal observers
+measure `1+z=N_o/N_e`. At fixed null-connected events,
+`delta_log(1+z)=delta_log_N_o-delta_log_N_e`, with
+`delta_N=Q*delta_r+r*delta_Q`. The same kernel has
+`D_A=r_o*r_e*integral(Q^2 dchi)/N_o`, so its directional variation follows
+from the endpoint radii/lapse and `2*integral(Q*delta_Q dchi)`.
+The normal worldlines can be accelerated; this specifies no Hubble rate.
+An actual paired evolution and its uncertainty comparison are still needed.
+
 ### Observer clocks in the geometric average
 
 The selected larger-geometry route must compare resolutions in a declared
