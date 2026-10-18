@@ -1573,7 +1573,7 @@
     {
       "bytes": 2416586,
       "path": "docs/lab-snapshot.json",
-      "sha256": "f0550eb02403821a4a30ea9f1692d150cd23925701c8f441760cfb8e8c6f7880"
+      "sha256": "69e4fe4e21e55cd450bec294f9ca10d4ed04705b1534c60d759ba3bfef1124cd"
     },
     {
       "bytes": 4997,
@@ -1631,9 +1631,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 37246,
+      "bytes": 38472,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "88c1ad1844d3247142c7cec333c7fe23fb8a932e9f8d0713117f4d1fc0a9aa3a"
+      "sha256": "f43c5fa5391da7e47cc315ba666edc48630a94b5a076f3a38893f46f2efc635a"
     },
     {
       "bytes": 17343,
@@ -22101,7 +22101,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "f0550eb02403821a4a30ea9f1692d150cd23925701c8f441760cfb8e8c6f7880",
+  "lab_snapshot_sha256": "69e4fe4e21e55cd450bec294f9ca10d4ed04705b1534c60d759ba3bfef1124cd",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.8",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

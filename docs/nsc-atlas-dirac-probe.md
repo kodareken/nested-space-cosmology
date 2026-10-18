@@ -813,6 +813,17 @@ variations, with the gravitational/junction Ward identities checked.
 The formula is an exact finite-regulator identity and a specification of
 the missing response calculation; no continuum polarization has yet been
 evaluated. Its kernel depends on both the curved propagator and `C0`.
+For this free CAR bilinear commutator the dependence on `C0` is affine:
+quadratic covariance terms from separate Wick contractions cancel. The
+exact two-mode CAR contraction and an explicit first-order Fock unitary
+check both the commutator and the `-i[O,V]` insertion sign.
+
+A local Hadamard parametrix is a subtraction kernel, not by itself a
+positive state covariance. Setting its smooth remainder to zero does not
+select a physical vacuum. Renormalization also needs conditions on the
+finite gravitational couplings, including curvature-squared terms and
+their interface completions; fixing the bulk trace alone does not fix
+those transverse metric responses.
 
 This dependence cannot be inferred from the local trace. For example, if
 an admissible preparation has an unoccupied normalized smooth mode `u`,
@@ -841,3 +852,12 @@ geometry without that observer/gauge connection. These requirements are
 missing model connections, not a claim that the already calculated
 curvature response vanishes. No state, counterterm value or slip number
 is silently selected here.
+
+In particular, raw Fermi-coordinate metric coefficients at the observer
+origin do not define that ratio: proper-clock and orthonormal-frame
+normalization can set their perturbations to zero there. A finite clock,
+light-travel or tidal response must be specified before connecting it to
+potentials in a declared gauge. A short source-to-observer separation
+also does not alone prove that the full causal past or quantum initial
+covariance lies inside the `.02*ell` collar. That coverage must be checked
+using the actual null characteristics and initial segment.

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "731c7345fcdd0cc324524c16eecc1908cf3bfe34",
+  "current_receipt_commit_parent": "9ba6c1f715fc5635223938e263cef9b4b6ab425c",
   "files": [
     {
       "bytes": 3120,
@@ -10430,12 +10430,12 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 37246,
+      "bytes": 38472,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "731c7345fcdd0cc324524c16eecc1908cf3bfe34",
+      "changed_from_commit": "9ba6c1f715fc5635223938e263cef9b4b6ab425c",
       "path": "docs/nsc-atlas-dirac-probe.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "88c1ad1844d3247142c7cec333c7fe23fb8a932e9f8d0713117f4d1fc0a9aa3a"
+      "sha256": "f43c5fa5391da7e47cc315ba666edc48630a94b5a076f3a38893f46f2efc635a"
     },
     {
       "bytes": 17343,
