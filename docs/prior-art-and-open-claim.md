@@ -1,5 +1,29 @@
 # Prior art and admission of new research
 
+## Dirac stress and metric vertices from the same curved action
+
+Reuse the checked canonical radial Dirac generator of the declared minimal
+massless probe. Vary its real action with respect to lapse, radial length,
+areal radius and shift at fixed canonical half-density. Keep the complete
+angular multiplet normalization. The missing connection is the stress,
+metric vertex and local second variation needed in the actual curved
+polarization and gravitational equations; no flat response is imported.
+
+Independent action variation, four-dimensional covariant conservation from
+arbitrary on-shell Dirac jets, transparent-wall transmission, orientation
+and physical scaling share **60 process-CPU seconds**. Geometry is the
+existing quiet cap/wall and its admitted collar; arbitrary local jet
+controls test the identity before a physical state is selected. No mode
+propagation, regulator removal, reference JSON or new P001 grid is run.
+The retained result is the reusable matrix-valued interface and derivation.
+
+Stop on a failed conservation/variation identity. Confusing charge current
+with energy flux, omitting angular degeneracy, or varying the metric while
+silently changing the prepared state are the anticipated failures. A direct
+covariant Dirac/Hilbert calculation disagreeing rejects the coupling.
+These bare finite-mode vertices do not fix a vacuum, anomalous stress,
+renormalized contact terms or a nested slip.
+
 ## Dirac Euler-curvature term at the actual material wall
 
 Use the already derived free four-component Dirac type-A coefficient

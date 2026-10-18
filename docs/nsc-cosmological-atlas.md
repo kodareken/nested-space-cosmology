@@ -16,10 +16,18 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 17 October 2026
+## Current execution priority — 18 October 2026
 
-Finish the three-grid finite-amplitude P001 evolution and report its wall-radius
-observable, physical scale and numerical range. After that, each new step must
+The three-grid finite-amplitude P001 run has finished. Its mass gap grows
+under refinement, so Step 2 remains open. Keep new P001 grids paused while
+replacing the inconsistent boundary coupling. The archived-state diagnosis isolates the boundary
+projection defect; the shared scalar finite-action control is closed on its
+prescribed quiet collar, without repairing the coupled production solver.
+The latest priority is the actual cap--wall Dirac metric response, replacing
+the imported flat slip. The local bulk and Euler-wall terms are calculated;
+physical preparation, metric coupling and a finite observer protocol remain.
+See the [Dirac owner](nsc-atlas-dirac-probe.md) and
+[current results](current-result.md). Each new step must
 either advance toward cosmological scales or produce a number to compare with
 observations. Reuse an established regional result; deepen the same region
 only when a test fails or an outward calculation exposes a specific missing
@@ -39,8 +47,8 @@ The actual exterior causal field response is now implemented on the quiet
 wedge for angular degrees 0-3. The remaining gravitational reduction needs
 its state or averaging prescription. Quantum covariance selection and geometric
 averaging introduce additional physical data; they are not silently fixed
-by the completed local coefficients. Continue the existing endpoint runs
-while developing this necessary operator connection.
+by the completed local coefficients. Reuse the finished endpoint runs;
+continue the missing physical response connection rather than another grid.
 
 The first [geometric scalar average](schur-memory.md#step-7-averaging-the-explicit-sourced-initial-slice)
 now evaluates the explicit quiet sourced slice with the wall distribution
@@ -63,7 +71,7 @@ now enter the living manuscript. No further refinement of this saved window
 is required by the present result.
 The Einstein and Weyl-squared constructions remain separate candidates;
 their full unification is not a prerequisite for either one's conditional
-forward observations. P001's original fine evolution remains active.
+forward observations. P001's fine evolution is finished; its failed mass convergence remains explicit.
 
 The [unequal sourced input pair](nsc-atlas-connection-slice.md#unequal-sourced-input-18-october-2026)
 now supplies two checked cap-wall-bridge bodies and their retained moments

@@ -2,6 +2,19 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Dirac stress now connects the curved action to gravity
+
+The [same-action stress interface](nsc-atlas-dirac-probe.md#dirac-stress-and-the-actual-gravitational-metric-vertices)
+supplies energy, radial/angular pressure, energy flux, charge current and
+first/second metric variations as matrices over radial modes. The whole
+angular multiplet is normalized once. Five controls pass, including exact
+four-dimensional covariant conservation and a normal-time Hilbert energy/
+flux comparison on the actual quiet exterior collar. Transparent finite-mode
+stress is continuous at the material wall; its charge and energy currents
+remain distinct. This is the gravitational source/vertex connection for the
+Dirac calculation, not a selected vacuum or an evaluated polarization.
+No field evolution, new P001 grid or result JSON was produced.
+
 ## Actual Dirac Euler term at the material wall
 
 The [wall calculation](../results/summaries/nsc-atlas-dirac-euler-wall-v1.json)

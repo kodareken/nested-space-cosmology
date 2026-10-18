@@ -861,3 +861,97 @@ potentials in a declared gauge. A short source-to-observer separation
 also does not alone prove that the full causal past or quantum initial
 covariance lies inside the `.02*ell` collar. That coverage must be checked
 using the actual null characteristics and initial segment.
+
+## Dirac stress and the actual gravitational metric vertices
+
+The [stress interface](../src/recursive_horizons/nsc_atlas_dirac_stress.py)
+now connects the same radial Dirac action to gravitational sources. Write
+`xi=sqrt(a)*r*psi` on
+`ds2=-N^2dt^2+a^2(dy+beta*dt)^2`, with angular eigenvalue `k`.
+For a whole magnetic multiplet the degeneracy is `d=2*abs(k)`. For any
+two radial modes `u,v`, define the matrix insertions
+
+$$
+q_A(u,v)=-\frac i2(u^\dagger A v_y-u_y^\dagger A v),\qquad
+s_1(u,v)=u^\dagger\sigma_1v,\qquad f=d/(4\pi).
+$$
+
+The real canonical Hamiltonian density, per coordinate `dy` and including
+the whole multiplet, is
+
+$$
+h=d\{N(q_\alpha/a+ks_1/r)-\beta q_I\}.
+$$
+
+Integrating the unsymmetrized first-order generator differs by the endpoint
+`-i*d*[(N/a)*xi^dagger*alpha*xi-beta*xi^dagger*xi]/2`.
+An open physical patch retains that port; it is not a reflecting vacuum
+boundary. Varying the metric at fixed canonical half-density gives the
+following on-shell orthonormal stress matrices:
+
+$$
+\rho=\frac f{ar^2}(q_\alpha/a+ks_1/r),\quad
+p_r=\frac{f q_\alpha}{a^2r^2},\quad
+p_t=\frac{fks_1}{2ar^3},\quad
+j=T^{\hat0\hat1}=\frac{fq_I}{a^2r^2}.
+$$
+
+Here `j` is outward energy flux; the charge current instead uses
+`f*xi^dagger*alpha*xi/(a*r^2)`. Their bilinears are different.
+The finite-mode stress has `-rho+p_r+2*p_t=0`; the anomalous trace calculated
+above is a separate renormalized quantum contribution.
+
+The four metric derivatives are fixed by this same action:
+
+| Variation | Canonical derivative | Physical stress relation |
+| --- | --- | --- |
+| `N` | `d*(q_alpha/a+k*s1/r)` | `4*pi*a*r^2*rho` |
+| `a` | `-d*N*q_alpha/a^2` | `-4*pi*N*r^2*p_r` |
+| `r` | `-d*N*k*s1/r^2` | `-8*pi*N*a*r*p_t` |
+| `beta` | `-d*q_I` | `-4*pi*a^2*r^2*j` |
+
+The nonzero bare second derivatives are
+`h_Na=-d*q_alpha/a^2`, `h_Nr=-d*k*s1/r^2`,
+`h_aa=2*d*N*q_alpha/a^3`, `h_rr=2*d*N*k*s1/r^3`,
+with symmetric mixed entries. They supply local canonical metric contacts;
+physical operator/measure variation and the continuum/interface counterterms
+must still be included in the final polarization.
+The first-order time-end variation is
+`i*d/2*integral dy (xi^dagger*delta_xi-delta_xi^dagger*xi)` at the two
+time faces. It also remains part of an integrated response/variation;
+holding the initial preparation fixed does not erase the final face.
+
+On the actual normal chart `a=1,beta=0`, the time equation and its spatial
+derivative give the local conservation identities
+
+$$
+\partial_\tau(r^2\rho)+N^{-1}\partial_n(N^2r^2j)
++2rr_\tau p_t=0,
+$$
+
+$$
+\partial_\tau(r^2j)+\partial_n(Nr^2p_r)
++r^2\rho N_n-2Nrr_n p_t=0.
+$$
+
+These hold for cross-mode matrices as well as diagonal densities. Contract
+with a fixed radial covariance to obtain an expectation, or with its
+tangent/difference for a response. Complete angular normalization, global
+radial mode normalization and the admissibility of that covariance remain
+explicit inputs.
+
+At the pure-tension wall, `xi` is continuous and the Dirac time equation
+requires `[xi_n]=k_wall*xi/2`. That real scalar shift cancels in every
+antisymmetrized `q_A`. All four finite-mode stress components above are
+therefore continuous in the common wall frame. This supplies compatible
+mixed/normal matter flux to the unchanged material wall law; it is not a
+claim that the anomalous vacuum surface stress vanishes.
+
+Five [controls](../tests/test_nsc_atlas_dirac_stress.py) compare normal-time
+Hilbert energy/flux on the actual exterior collar, build the full
+four-dimensional covariant divergence from exact on-shell local jets,
+differentiate the canonical action and its contacts independently, and
+check transmission, orientation, physical scaling and matrix/sample domains.
+The matrices are computed directly from the actual curved field; no flat
+polarization or new source is substituted. No modes, state or coupled
+gravitational response has been evolved by this component.

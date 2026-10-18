@@ -89,6 +89,17 @@ The [frozen surface result](../results/summaries/nsc-atlas-dirac-euler-wall-v1.j
 retains the arithmetic, stated smoothing class, excluded terms and source
 hashes only.
 
+The same-action Dirac stress and bare metric contacts reproduce without a
+reference trajectory or new state:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_stress.py -q
+```
+
+The [owner](nsc-atlas-dirac-probe.md#dirac-stress-and-the-actual-gravitational-metric-vertices)
+retains the angular normalization, normal-frame energy/flux, full covariant
+conservation and open-port term. This does not evaluate a loop or a slip.
+
 The physical initial Dirac time generator and its moving-wall compatibility
 reproduce with:
 
