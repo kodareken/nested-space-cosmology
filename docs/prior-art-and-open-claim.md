@@ -1,5 +1,33 @@
 # Prior art and admission of new research
 
+## Dirac Euler-curvature term at the actual material wall
+
+Use the already derived free four-component Dirac type-A coefficient
+`-11/(360*(4*pi)^2)` and the original quiet cap/wall/exterior. Calculate
+the Euler surface density from the common-normal Chern jump, including
+the intrinsic moving-worldtube curvature. Keep the same `H=1,k_wall=2,
+M=.4,.45<=Rwall<=.55`. The missing local quantum connection is the
+material interface, absent from the smooth one-sided bulk trace.
+
+The declared limiting class smooths the kinked conformal factor while
+keeping the conformal product curvature bounded; no microscopic
+tracefree-curvature excursions are added. Do not square curvature
+distributions. Instead contract a smooth normal curvature jet, derive
+its exact transgression, and take the integral limit. Check the pure-trace
+leading cancellation, flat-ball orientation, static Schwarzschild Euler
+flux and the actual signed wall identities independently. Controls have
+30 process-CPU seconds. Freeze the method before one arithmetic reference
+at `.45*ell`, with 30 CPU seconds and 8000 summary bytes. No field evolution,
+wall-width scan, grid or new quantum state is introduced.
+
+Stop on a failed contraction/sign/junction identity. Ignoring intrinsic
+wall acceleration, treating a delta square as a number, or calling one
+Euler term the complete wall stress are the anticipated failures. Retain
+the excluded scheme-dependent `Box R`, finite interface terms, state and
+traceless response explicitly. A different smooth-contraction or Chern
+calculation rejects this result; another microscopic wall class is a
+different quantum completion rather than an error bar on this coefficient.
+
 ## Shared scalar finite action in an exact wall-normal collar
 
 Use the same quiet `H=1`, `k_wall=2`, `M=.4` reference on
@@ -87,6 +115,17 @@ distribution products, and calling a trace projection a slip or a complete
 Lambda mechanism are the anticipated failures. Stop on a failed identity.
 An independent Clifford/heat calculation with different coefficients would
 reject this result; the dimensional scale is supplied rather than fitted.
+
+The [same Dirac owner](nsc-atlas-dirac-probe.md#the-curved-metric-response-calculation-and-its-state-dependence)
+also specifies the exact finite-CAR retarded covariance response on the
+actual local time generator. This is a formal connection to the missing
+state-dependent polarization, not its numerical evaluation. One exact
+two-mode CAR calculation checks the commutator identity within 30 CPU
+seconds; no state, evolution or reference JSON is produced. Metric/observer
+contact terms, continuum and interface renormalization remain explicit.
+The missing physical datum is the initial covariance/preparation; a smooth
+occupation change displays its response dependence without changing the
+local anomaly. A failed CAR/sign check stops this derivation.
 
 ## Conformal variables at the actual Dirac material interface
 

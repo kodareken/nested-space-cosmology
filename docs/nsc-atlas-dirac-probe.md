@@ -670,3 +670,162 @@ resolution; no field evolution or nonlocal polarization was evaluated.
 The constants, source binding and interpretation limits are retained in
 the compact record. These numbers quantify the curvature trace of the
 declared probe, not a prediction of the full observed cosmological Lambda.
+
+## Euler-curvature contribution at the material interface
+
+The same imported Dirac type-A coefficient also acts on the actual wall's
+Euler curvature. This calculation specifies a thin limit: smooth the kinked
+conformal factor while the conformal product curvature remains bounded.
+It does not assume equivalence with arbitrary microscopic walls carrying
+tracefree-curvature excursions. Neither a delta square nor the uncomputed
+scheme-dependent `Box R` is assigned a numerical value.
+
+With one normal pointing from cap to exterior, put
+
+$$
+t_\pm=\beta_{\pm,R},\quad b_\pm=\beta_\pm/R,\quad
+A=\ddot R/R,\quad B=(1+\dot R^2)/R^2.
+$$
+
+The induced worldtube has `Ghat^i_j=diag(-B,-A,-A)`. Its Chern scalar and
+integrated Euler coefficient are
+
+$$
+\mathcal B_3=4(J-2\widehat G_{ij}K^{ij})
+=-8tb^2+8Bt+16Ab,\qquad J=-2tb^2,
+$$
+
+$$
+\mathcal E_\Sigma=-[\mathcal B_3]
+=8[tb^2]-8B[t]-16A[b].
+$$
+
+A direct smooth Lorentz curvature contraction checks the normal derivative
+terms before taking any limit:
+
+$$
+(E_4)_{\rm normal}=-8t_n(B-b^2)-16b_n(A-tb)
+=-\partial_n\mathcal B_3\big|_{\rm leading},
+\qquad E_4=Riemann^2-4Ricci^2+R^2.
+$$
+
+Finite tangential/Codazzi terms do not contribute a leading normal
+distribution. Pure-trace singular normal slopes give coefficients
+`12*k^2`, `12*k^2`, `36*k^2` in the three squared curvatures, respectively.
+They cancel in both `E4` and `Weyl^2`; the Euler normal term integrates
+through its transgression instead. The four
+[controls](../tests/test_nsc_atlas_dirac_euler_wall.py) contract the full
+Lorentz-index curvature tensor, check the flat-ball boundary orientation
+and static Schwarzschild Euler flux, and independently reduce the actual
+signed wall equations. Reversing the common normal and side labels leaves
+the surface coefficient unchanged.
+
+For this quiet junction `[t]=[b]=-k_wall`, while
+`A=t_minus*b_minus+H^2`, `B=b_minus^2+H^2` and
+`2*b_minus+t_minus=3*(k_wall^2-H^2)/(2*k_wall)`. Consequently,
+
+$$
+\mathcal E_\Sigma=4k_{\rm wall}(k_{\rm wall}^2+3H^2)
+=56/\ell^3.
+$$
+
+Exterior mass and instantaneous wall radius cancel. A smooth continuation
+of the cap has no such surface coefficient. The corresponding Euler part
+of the local Dirac trace is
+
+$$
+\frac{\langle T^\mu{}_{\mu}\rangle_{\Sigma,E}}{\hbar c}
+=-\frac{11\mathcal E_\Sigma}{360(4\pi)^2}\delta_\Sigma
+=-\frac{77}{720\pi^2\ell^3}\delta_\Sigma,
+$$
+
+where `delta_Sigma` is the invariant delta in proper normal distance.
+This specifies one local interface effect of the attachment. The
+scheme-dependent total derivative, finite interface terms, quantum state,
+traceless stress and nonlocal response still have to be included to obtain
+the full wall stress or `Psi/Phi`. The formal trace-only projection has
+`ell*integral dn DeltaLambda_trace=77/(360*pi)*(lP^2/ell^2)`; it is an
+integrated surface term, not a bulk cosmological constant or an assertion
+of vacuum stress.
+
+## The curved metric-response calculation and its state dependence
+
+The exact [wall-normal collar](nsc-atlas-conformal-action.md#a-shared-finite-field-action-on-a-quiet-wall-normal-collar)
+provides a regular local time generator throughout the source strip. It
+does not provide a global quantum state. In units `hbar=c=1`, the same
+radial Dirac reduction, now with `a=1` and density spinor `xi=r*psi`, gives
+
+$$
+H_k=-i\alpha(N\partial_n+N_n/2)+\sigma_1 Nk/r.
+$$
+
+For a prescribed Gaussian-coordinate variation with the source off on the
+initial surface, the operator insertion is
+
+$$
+V_k=\delta H_k=-i\alpha(\delta N\partial_n+\delta N_n/2)
++\sigma_1 k(\delta N/r-N\delta r/r^2).
+$$
+
+These coefficients use the actual cap/exterior `N,r`, not a flat
+polarization multiplied by a new profile. A full covariant stress
+variation also varies the radial metric and shift before fixing gauge.
+The collar alone cannot impose a reflecting-box vacuum: the state and
+causal propagator must include the regions influencing the measured
+history, with their actual interface transmission and initial data.
+
+At a finite canonical fermion regulator let
+`C_ij=<c_j^dagger*c_i>`, `0<=C<=I`, and let `U` be the one-particle
+propagator of this background. For an observable `c^dagger*O*c`, the CAR
+identity `[c^dagger*A*c,c^dagger*B*c]=c^dagger*[A,B]*c` gives
+
+$$
+i\dot C=[H,C],\qquad
+i\dot{\delta C}=[H,\delta C]+[V,C],\qquad \delta C(t_0)=0,
+$$
+
+$$
+\delta\langle O(t)\rangle
+=\operatorname{Tr}(C_0\,(\delta O)_I(t))
+-i\int_{t_0}^t ds\,
+\operatorname{Tr}\{C_0[O_I(t),V_I(s)]\},
+\qquad O_I(t)=U(t,t_0)^\dagger O(t)U(t,t_0).
+$$
+
+Here `(delta O)_I=U^dagger*(delta O)*U` varies the observable at fixed
+background propagator; the commutator term accounts for its dynamical
+response. The first term is essential when the physical stress/observer operator
+depends on the varied metric. Removing the regulator additionally needs
+the covariant local and interface counterterms and their contact
+variations, with the gravitational/junction Ward identities checked.
+The formula is an exact finite-regulator identity and a specification of
+the missing response calculation; no continuum polarization has yet been
+evaluated. Its kernel depends on both the curved propagator and `C0`.
+
+This dependence cannot be inferred from the local trace. For example, if
+an admissible preparation has an unoccupied normalized smooth mode `u`,
+then `C0+nu*|u><u|`, `0<=nu<=1`, is another allowed fermion occupation.
+Where the original preparation has the required short-distance
+singularity, a smooth transmitting finite-rank addition preserves it.
+The corresponding finite state-dependent change is
+
+$$
+\Delta\delta\langle O(t)\rangle
+=\nu\langle u,(\delta O)_I(t)u\rangle
+-i\nu\int_{t_0}^t ds\,
+\langle u,[O_I(t),V_I(s)]u\rangle.
+$$
+
+It can change the response while leaving the state-independent anomaly
+above unchanged. The fixed local trace is therefore insufficient to
+determine the anisotropic stress or a unique nested `Psi/Phi`.
+
+The next physical calculation must specify the preparation `C0`, hold it
+fixed under a declared later source, propagate its response on sufficient
+actual chart coverage, and solve the same gravitational and wall
+perturbation equations for a declared clock or light measurement. The
+two flat static potentials cannot be assigned to a dynamical nested
+geometry without that observer/gauge connection. These requirements are
+missing model connections, not a claim that the already calculated
+curvature response vanishes. No state, counterterm value or slip number
+is silently selected here.

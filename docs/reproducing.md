@@ -73,6 +73,19 @@ The two compact reference records are
 [conformal matching](../results/summaries/nsc-atlas-dirac-conformal-interface-v1.json)
 and [original-metric bulk trace](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.json).
 
+The same producer has a separate Euler interface calculation in its
+[declared conformal smoothing class](nsc-atlas-dirac-probe.md#euler-curvature-contribution-at-the-material-interface):
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_euler_wall.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_conformal.py --euler-wall --output .build/nsc-atlas-dirac-euler-wall.json
+```
+
+Commit the method first and use an unused output path. The exact normal
+curvature and Chern checks require no smoothing scan. The result is the
+Euler part of the wall trace, excluding `Box R`, finite interface terms
+and the state-dependent nonlocal response. It is not a slip calculation.
+
 The physical initial Dirac time generator and its moving-wall compatibility
 reproduce with:
 
