@@ -1147,3 +1147,10 @@ plane waves and a C1 wall-crossing solution, flux, units/angular sign,
 direct action and retarded derivatives, causality and spacelike
 commutation, finite CAR differences and correlated inheritance.
 No P001 evolution is invoked.
+
+The first application completed both Dirac resolutions (17.515625 CPU
+seconds at its last checkpoint), then stopped at the 24000-byte summary
+gate. No result or full matrices were retained. Aggregate matrix hashes
+replace repeated sector hashes for one completion execution of the
+unchanged mathematics. Charging 30 CPU seconds for that first attempt
+keeps both executions within the original 180-second allowance.

@@ -45,11 +45,13 @@ def level(chart,cells):
     histories,vertices = batch_null_transfer(inputs,s/cells,s/cells,profiles=profiles)
     mode = exterior_prepared_mode(s,cells)
     summaries = []
+    response_hash = hashlib.sha256()
     for k in range(1,9):
         rows,matrices = {},{}
         for name,index in (('nested',k-1),('smooth_cap',k+7)):
             h,j = histories[index],vertices[index]
             response = ordered_metric_response(j,profiles)
+            response_hash.update(np.asarray(response,dtype='<c16').tobytes(order='C'))
             matrices[name] = response
             identity_error = float(np.max(np.abs(h.conj().T@h-np.eye(2*cells))))
             hermitian_error = float(np.max(np.abs(j-j.conj().transpose(0,2,1))))
@@ -62,9 +64,7 @@ def level(chart,cells):
                 response_trace=float(np.trace(response).real),
                 prepared_excess_per_unit_occupation=occupation_response(
                     response,mode,angular_k=k),
-                prepared_exterior_to_cap_flux=float(np.linalg.norm((h@mode)[cells:])**2),
-                transfer_sha256=digest(h),metric_vertices_sha256=digest(j),
-                response_sha256=digest(response))
+                prepared_exterior_to_cap_flux=float(np.linalg.norm((h@mode)[cells:])**2))
         difference = matrices['nested']-matrices['smooth_cap']
         rows.update(angular_k=k,degeneracy=2*k,
             response_difference_operator_norm=float(np.max(np.abs(np.linalg.eigvalsh(difference)))),
@@ -75,13 +75,20 @@ def level(chart,cells):
     return dict(cells_per_null_direction=cells,characteristic_cell_width=s/cells,
         sectors=summaries,metric_cells_per_sector=cells*cells,
         source_cells=[int(np.count_nonzero(f)) for f in profiles],
+        matrix_sha256=dict(transfers=digest(histories),metric_vertices=digest(vertices),
+            responses=response_hash.hexdigest(),
+            response_order='k=1..8, each nested then smooth_cap'),
         norm='sum abs(sqrt(du)*eta_plus)^2 + sum abs(sqrt(dv)*eta_minus)^2')
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--prior-cpu-charge',type=float,default=0.,
+        help='conservative charge for earlier work within the same admitted allowance')
     args = parser.parse_args()
+    if not np.isfinite(args.prior_cpu_charge) or not 0 <= args.prior_cpu_charge < 180:
+        raise ValueError('the prior charge must leave part of the original CPU allowance')
     if args.output.exists() or not args.output.parent.is_dir():
         raise ValueError('use an unused summary path with an existing parent')
     commit = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
@@ -100,7 +107,7 @@ def main():
         for cells in (64,128):
             levels.append(level(chart,cells))
             elapsed = time.process_time()-started
-            if elapsed > 180:
+            if args.prior_cpu_charge+elapsed > 180:
                 raise RuntimeError('Dirac response CPU allowance exhausted; stop and diagnose')
             print(json.dumps(dict(completed_cells=cells,CPU_seconds=elapsed)),flush=True)
     comparison = []
@@ -137,6 +144,7 @@ def main():
         levels=levels,comparison=comparison,
         uncertainty='64/128 spread is a numerical diagnostic, not a proven continuum error bound',
         runtime=dict(process_CPU_seconds=time.process_time()-started,Numba_workers=workers,
+            prior_execution_CPU_charge=args.prior_cpu_charge,
             BLAS_threads=1,wall_ODE_rhs=chart.wall_rhs_calls,
             P001_new_grids=0,P001_time_steps=0,baseline_vacuum_polarizations=0),
         limits=dict(process_CPU_seconds=180,working_matrix_bytes=268435456,

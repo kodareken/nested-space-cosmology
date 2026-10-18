@@ -1573,7 +1573,7 @@
     {
       "bytes": 2421264,
       "path": "docs/lab-snapshot.json",
-      "sha256": "36719f251a8261daa215b5c9ddb2700e86ee975f5ad44e2985d7f6a17240fe32"
+      "sha256": "552f852c3e6531b7cbe8732c3d26fe4539967b63e918c8b36204d2bfef5ba797"
     },
     {
       "bytes": 4997,
@@ -1631,9 +1631,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 52021,
+      "bytes": 52437,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "f87c0d692ff7bc1f732de7d0958354572aade2ed89f87ce58da24bf6c0656ee6"
+      "sha256": "81f24ba2d88e6bbe518c71dac8a8fd04dde6bcf33051c4cb52d4495f60b12a34"
     },
     {
       "bytes": 17343,
@@ -16671,9 +16671,9 @@
       "sha256": "5179a66d61519dba3427c41c26407c26ec4966bca91c4efe685dc817baea0ea7"
     },
     {
-      "bytes": 8401,
+      "bytes": 9022,
       "path": "scripts/measure_nsc_atlas_dirac_scattering.py",
-      "sha256": "7c615de362aa564e3758886008311fa4db263af2b7da1dcbf616f84dc3d2c829"
+      "sha256": "c2fd1aa73fb564d9fe45bce348df38209b42a6fe55b002c660f604e499bef449"
     },
     {
       "bytes": 2652,
@@ -22151,7 +22151,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "36719f251a8261daa215b5c9ddb2700e86ee975f5ad44e2985d7f6a17240fe32",
+  "lab_snapshot_sha256": "552f852c3e6531b7cbe8732c3d26fe4539967b63e918c8b36204d2bfef5ba797",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.9",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
