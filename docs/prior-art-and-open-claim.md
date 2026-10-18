@@ -1,5 +1,35 @@
 # Prior art and admission of new research
 
+## Wall-clock radar chart for the actual Dirac propagation
+
+Use the same quiet sources and wall strip `.45<=Rwall<=.55`. Reuse its
+proper-time and signed optical-null derivatives. Label each region's two
+null coordinates by the wall proper time at intersection. The resulting
+radar chart is an exact physical-coordinate construction, with no cutoff
+profile or gauge-width fit. Its finite square of null labels gives a
+causal diamond; keep the proper cap/exterior triangles and both signed
+optical maps inside the white-hole horizon.
+
+The missing connection is adequate actual chart coverage for Dirac
+propagation, not a new field state. Derive conservative radius/lapse bounds
+before sampling. Check optical maps against independent existing wall
+quadrature, the physical metric pullback, signed shell jumps, curvature,
+geometric mass and the constant-speed half-density Dirac generator.
+Controls have **60 process-CPU seconds**. After freeze, one bounded
+reference samples nine predeclared null labels, with **30 CPU seconds**,
+200000 wall-ODE evaluations and at most 10000 summary bytes. No field
+evolution, P001 grid or state is run by this reference.
+One optional `129*129` sampling of the same analytic geometry draws the
+causal diamond, clock lapse and potential difference from a smooth cap;
+it retains only the figure, with no field arrays or additional campaign.
+
+Stop on a branch, positive-radius/lapse or matching failure. Reversing the
+exterior advanced-time orientation, taking the wrong tortoise inverse,
+or copying a state between different initial slices are the anticipated
+failures. A direct quiet-metric pullback or independent optical quadrature
+disagreeing rejects this chart. The failed wide chart remains historical
+evidence; a valid local diamond does not by itself select a global vacuum.
+
 ## Dirac stress and metric vertices from the same curved action
 
 Reuse the checked canonical radial Dirac generator of the declared minimal

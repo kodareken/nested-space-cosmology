@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+The actual wall-clock radar construction supplies a finite causal diamond
+for the quiet Dirac geometry, using its proper-wall null labels:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_radar.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_radar.py --output .build/nsc-atlas-dirac-radar.json
+```
+
+Commit the method first and use an unused output path. Optional
+`--figure .build/nsc-atlas-dirac-radar.png` draws the same geometry.
+The [owner](nsc-atlas-dirac-probe.md#proper-wall-radar-coordinates-give-a-finite-causal-propagation-chart)
+keeps analytic domain bounds, sampled checks, the physical clock protocol
+and state limitations separate. It does not run a field or a P001 grid.
+
+
 The fixed quiet time-chart calculation preserves a coordinate-domain exit
 as an unsuccessful full-domain result:
 

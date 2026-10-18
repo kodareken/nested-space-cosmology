@@ -508,6 +508,127 @@ needed for its source and observer, using compatible patches where required.
 The failed chart cannot be used as a full-strip Dirac evolution or as an
 explanation of P001's separate projection error.
 
+## Proper-wall radar coordinates give a finite causal propagation chart
+
+The [radar component](../src/recursive_horizons/nsc_atlas_dirac_radar.py)
+uses the same quiet trajectory and `.45<=Rwall/ell<=.55`. On each static
+side let `u_i=t_i-rstar_i`, `v_i=t_i+rstar_i`, with
+`rstar_minus=atanh(r)` and `rstar_plus=r+.8*log(1-r/.8)` on this
+white-hole interior branch. Along the physical wall,
+
+$$
+\frac{du_i}{d\tau}=\frac1{\beta_i+\dot R},\qquad
+\frac{dv_i}{d\tau}=\frac1{\beta_i-\dot R}.
+$$
+
+The cap maps both increase. The exterior `u` increases and `v` decreases;
+keeping that sign is essential inside the horizon. Their inverses label
+each null ray by the proper time of its wall intersection, `U,V`. Put
+
+$$
+T=(U+V)/2,\qquad x=(V-U)/2,\qquad
+ds_2^2=C_i(T,x)(-dT^2+dx^2),
+$$
+
+$$
+r_i^*(r)=\frac{v_i(V)-u_i(U)}2,\qquad
+C_i=f_i(r)u_i'(U)v_i'(V)>0.
+$$
+
+The material wall is `U=V=tau`. Use the cap for `V<=U`, exterior for
+`V>=U`. The null square `0<=U,V<=S`, `S=tau(.55)-tau(.45)`, is exactly
+the causal diamond `0<=T-x,T+x<=S`. These are wall radar coordinates:
+`T` is the mean emission/return wall clock and `|x|` its radar distance.
+The construction has no spatial cutoff profile and no timelike box ends.
+It preserves the failed wide-chart result as a different coordinate
+construction; it does not tune that chart or change the sources.
+
+Exterior optical monotonicity bounds its radius by `.45<=r/ell<=.55` on
+the entire square. Conservative cap and lapse bounds follow before
+sampling: `v>=sqrt(.8/.55-1)`, `v<max(beta_minus)` bound the wall duration
+and each optical increment. Applying those increments to the two tortoise
+inverses gives positive cap radius and positive `C`. The component retains
+these analytic bounds separately from sampled minima.
+
+At the wall `C=1`, `r_T=Rdot`, `r_x=beta_i`, `C_T=0` and
+`C_x=2*beta_i,R`; both Israel jumps are retained. The canonical density
+spinor and its actual time generator simplify to
+
+$$
+\xi=C^{1/4}r\psi,\qquad
+H_\kappa=-i\sigma_2\partial_x+\sigma_1 W_\kappa,
+\qquad W_\kappa=\kappa\sqrt C/r.
+$$
+
+`W` and its first derivatives are continuous at the pure-tension wall.
+In this frame `xi` and `xi_x` are continuous. Undoing its density factor
+still gives the original physical parallel-normal spinor jump
+`[psi_n]=3*k_wall*psi/2`. The radial Dirac characteristics now have constant
+speed. With `B=(I+i*sigma1)/sqrt(2)` and `eta=B^dagger*xi`,
+
+$$
+2\partial_V\eta_+=-iW_\kappa\eta_-,\qquad
+2\partial_U\eta_-=-iW_\kappa\eta_+.
+$$
+
+Thus incoming data `g_plus(U)=eta_plus(U,0)` and
+`g_minus(V)=eta_minus(0,V)` define the characteristic propagation.
+Conservation of the Dirac current gives their norm
+`integral_0^S |g_plus|^2 dU + integral_0^S |g_minus|^2 dV`
+on the middle Cauchy segment `T=S/2,|x|<=S/2`. An inherited incoming
+covariance must include both branches and their cross-correlations.
+The existing [Gaussian boundary owner](../src/recursive_horizons/nsc_boundary_state.py)
+can retain these state terms once supplied with the actual transfer; it
+does not choose that covariance or its angular ultraviolet completion.
+
+Six [controls](../tests/test_nsc_atlas_dirac_radar.py) compare the optical
+maps with existing independent quadrature, pull back both physical metrics,
+check tortoise inverses, derivatives, curvature and mass, and recover the
+wall jumps and constant-speed generator. The finite clock protocol emits
+at wall `U=tau(.475)` and receives at `(U,V)=(tau(.475),tau(.525))` on a
+fixed-radar-position observer. Its radial optical frequency ratio is
+`omega_received/omega_wall=1/sqrt(C_receiver)`, from the null phase `-U`
+and the receiver's proper clock. This is a defined finite background
+measurement; it is not a raw Fermi-origin metric ratio.
+
+The diamond is a local physical chart rather than a whole global Cauchy
+surface. Its middle segment differs from the old complete source-anchor
+slice. No old state is copied into it, and no state, Dirac field evolution,
+renormalized polarization or nested `Psi/Phi` is supplied by the geometry
+recorder itself.
+
+This makes inheritance a concrete input/output problem: a prepared
+two-branch covariance `C_in` is transported by the characteristic map
+`Vprop` to `C_mid=Vprop*C_in*Vprop^dagger` on the middle segment. Positivity
+and the CAR bounds follow from the current-normalized isometry. Neither
+the wall equation nor `T^*D=D` supplies the root preparation or permits
+initial cross-correlations to be discarded.
+
+One possible additional axiom would compress the line Hardy kernels
+`integral_(omega<0) exp(-i*omega*(s-s')) d omega/(2*pi)` onto each incoming
+leg for the occupied block, and use its complement for the empty block.
+That compression is a positive contraction, rather than an endpoint-box
+projector. Setting the cross-leg block to zero is a further preparation
+assumption. No such axiom is selected by the current recorder. Its
+four-dimensional short-distance behavior requires a uniform angular-mode
+and cross-leg analysis after actual propagation; per-mode CAR positivity
+alone does not establish a renormalized stress.
+
+Null-coordinate changes also carry the canonical half-density: under
+`z=phi(s)`, the line kernel transforms with
+`sqrt(phi'(s)*phi'(s'))/(phi(s)-phi(s')-i0)`. Its leading coincident
+`1/(s-s'-i0)` coefficient is unchanged. A coefficient computed without
+these weights cannot decide the state question. The remaining test is
+the full four-dimensional symbol and interface behavior.
+
+[Gerard and Stoskopf](https://arxiv.org/abs/2108.11630) construct Dirac
+Hadamard states using Cauchy-surface pseudodifferential calculus and
+smooth bounded-geometry methods. [Fewster and Lang](https://arxiv.org/abs/1408.1645)
+show that an unsoftened fermionic-projector prescription can fail on
+ultrastatic slabs, and establish a softened construction there. Those
+results supply methods to inspect; neither is asserted here as a proof
+for this finite two-branch, piecewise-smooth wall preparation.
+
 ## Conformal calculation variables remove the singular wall jet
 
 For this massless probe a useful exact simplification follows from
