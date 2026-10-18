@@ -72,14 +72,27 @@ allocation. They appear respectively in the baseline/directional checks,
 time-step/forcing diagnostics, and cost forecast or hard budget. Diagnose
 the failing requirement before designing a successor.
 
-The runner and its nine manufactured controls are implemented. The latest
-focused execution passes all 26 runner, coupled-derivative and preparation
-controls in 2.93 wall seconds. The controls include two spawned Windows
+The first frozen runner and its nine manufactured controls passed all 26
+runner, coupled-derivative and preparation controls in 2.93 wall seconds.
+The controls include two spawned Windows
 numerical workers, an injected failure after an accepted step, both required
 baseline checkpoints, and independent redshift and log-redshift differences.
 The runner retains accepted progress on failure, writes bounded compact
-JSON, and checks the compressed cache size before writing it. The archived
-application remains pending at this method freeze.
+JSON, and checks the compressed cache size before writing it.
+
+**First application and correction:** the [saved preflight](../results/summaries/nsc-conformal-causal-response-v1.json)
+stopped before evolution after 11.1875 CPU seconds. Its `p_r` central
+difference missed the fixed criterion (`1.78123e-6` versus `1e-6`); all seven
+other blocks passed. On the initial zero-momentum, fixed-Q direction the
+radial force is linear in radius. Its independent retained-band Fourier
+action is [derived in the owner](schur-memory.md#coupled-tangent-evolution-and-observer-response).
+Use that direct action for the `p_r` gate, retain the failed central
+difference, and keep all other checks and the same criterion. No difference
+step, source, grid, action or evolving derivative changes. Ten runner
+controls now pass, including the independent varying-Q Fourier example.
+One corrected application uses fresh v2 outputs; its unchanged allocation
+includes the first application's CPU in the total 3600-second accounting.
+No additional grid or phase-step search is admitted.
 
 ## Coupled causal tangent engine: manufactured controls
 

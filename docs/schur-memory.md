@@ -513,6 +513,28 @@ measure `1+z=N_o/N_e`. At fixed null-connected events,
 `delta_N=Q*delta_r+r*delta_Q`. The same kernel has
 `D_A=r_o*r_e*integral(Q^2 dchi)/N_o`, so its directional variation follows
 from the endpoint radii/lapse and `2*integral(Q*delta_Q dchi)`.
+
+The first [full-grid preflight](../results/summaries/nsc-conformal-causal-response-v1.json)
+stopped before evolution in 11.1875 process-CPU seconds. At fixed central
+difference step `1e-4`, the `p_r` relative gap was `1.78123e-6`, above the
+`1e-6` criterion; all other blocks passed. That failed check is retained.
+On this initial slice `p=delta_p=delta_Q=delta_chi=0`, so the exact radial
+force variation instead has the independent linear form
+
+$$
+\delta\dot p_r=2Z\,\partial_x^2\delta r+
+P_g\left[\left(16\pi A Q^2-8\pi A\partial_x(2\partial_xQ/Q)\right)\delta r\right].
+$$
+
+Here $P_g$ is the original quadrature adjoint. In the retained periodic
+band the first term is diagonal in Fourier space, allowing a direct FFT
+check without subtracting two large force evaluations. The corrected
+preflight uses this check for the initial `p_r` block at the same `1e-6`
+criterion; it keeps the failed central difference and the seven other
+central-difference checks. A manufactured varying-Q sine mode controls the
+independent action. The evolving JVP and original nonlinear ODE are unchanged.
+This establishes an alternative numerical check; the full-grid comparison
+is still required before attributing the original gap to cancellation.
 The normal worldlines can be accelerated; this specifies no Hubble rate.
 An actual paired evolution and its uncertainty comparison are still needed.
 

@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 247593,
+      "bytes": 247592,
       "path": "docs/active-code-map.md",
-      "sha256": "386b1a095c79fe7edc19cde7175de9449b1cd1a94f8a1f082a0180488838c919"
+      "sha256": "35d6c7b9c546ae7cb865a6723bbac05ed5e910b193de5e9972d9b8bb2965edf1"
     },
     {
       "bytes": 102489,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2385395,
+      "bytes": 2385875,
       "path": "docs/lab-snapshot.json",
-      "sha256": "26dfb5d3ca89a6b2c4fa4815ecdd94631dcc4fc2ba4d02292453d5d56b30f862"
+      "sha256": "3766b83ef664cf941df7fa91213cb898a7eb6c16721cbbbf2695f86f9f0fd9ef"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 513674,
+      "bytes": 514578,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "07a25317f39515d9a6a3a6d0be88c7fa551aff595a5229040efd2e972fbf25ef"
+      "sha256": "9ae53b0b40ce9f47421102f4f2fee9334d8b308ca2e1f24521af15809aaff6d2"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 169888,
+      "bytes": 170144,
       "path": "docs/reproducing.md",
-      "sha256": "0925d1c5c82d1aaf512a7c3aae4a1947a79a3d95d3e17149b76eeb83a8e51cf1"
+      "sha256": "97139053e114b0f016e11f33d87b6fe896625914d317a3fe868f699282a397ad"
     },
     {
       "bytes": 31710,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 90152,
+      "bytes": 91386,
       "path": "docs/schur-memory.md",
-      "sha256": "1092f5adf58554c1d6830d57dfeeef0180faab0699cd564001228db6c6c113a7"
+      "sha256": "8f057c4620642bf2d46c48fb564de2f334ecd4939d3af96b98cd0f26a9bb8778"
     },
     {
       "bytes": 537091,
@@ -14926,6 +14926,11 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "bytes": 4475,
+      "path": "results/summaries/nsc-conformal-causal-response-v1.json",
+      "sha256": "b7fb3c2bea5cfd90aff9489e29d2387053e679b388b336fa70685e9932e4bfef"
+    },
+    {
       "bytes": 32917,
       "path": "results/summaries/nsc-conformal-geometric-average-v1.json",
       "sha256": "cb57f10042c6ad58d23c55160d1a279271c5663e0fb13f00a7d389e7cc930b72"
@@ -16531,9 +16536,9 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
-      "bytes": 41086,
+      "bytes": 43418,
       "path": "scripts/measure_nsc_conformal_causal_response.py",
-      "sha256": "cb432d64ce28f1f024228fe9105aeee1f22e29edf05c197cef365473e032eeab"
+      "sha256": "c2a838f4ffc55b3be95fe231ce42a1ffaa7da47c0affa73cd5139d46506cc17d"
     },
     {
       "bytes": 16572,
@@ -19211,9 +19216,9 @@
       "sha256": "c3dfa753416995abc59e664c9c3549d3aa2e14f3d7adb45afb98a5a1f2b10198"
     },
     {
-      "bytes": 15628,
+      "bytes": 16627,
       "path": "tests/test_measure_nsc_conformal_causal_response.py",
-      "sha256": "cd83c09b0e754de99a184dce17f66838b7edfa8c10d917ab18d4f7240b6061e9"
+      "sha256": "5c564a2ffe19acd4955ee0a56488d3b5c2cb23eb6655ab99e44902d84d5c41d8"
     },
     {
       "bytes": 2905,
@@ -21781,7 +21786,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "26dfb5d3ca89a6b2c4fa4815ecdd94631dcc4fc2ba4d02292453d5d56b30f862",
+  "lab_snapshot_sha256": "3766b83ef664cf941df7fa91213cb898a7eb6c16721cbbbf2695f86f9f0fd9ef",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

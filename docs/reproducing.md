@@ -2933,8 +2933,11 @@ envelope. Both saved baseline checkpoints and both photon events are
 required. The JSON limit is 24,000 bytes; the ignored final-state cache limit
 is 2,000,000 bytes. A stopped case preserves its last accepted state and
 reports missing output. Time-step differences are empirical temporal
-indicators, not continuum or physical error bounds. The nine controls pass;
-the archived application has not yet run.
+indicators, not continuum or physical error bounds. The first application stopped at its radial-force difference check before
+evolution. The independent initial Fourier action now supplies that block's
+check; its failed central difference remains recorded. Ten controls pass.
+The corrected application uses fresh v2 paths and retains the original
+method and stopped result.
 
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.

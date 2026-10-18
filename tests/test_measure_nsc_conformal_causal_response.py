@@ -14,6 +14,7 @@ from recursive_horizons.nsc_spherical_galerkin_coupling import (
 from measure_nsc_conformal_causal_response import (
     COMPLETED, PARTIAL, archived_frame, baseline_reports, collect_cases, compare_checkpoint,
     dump_summary, evolve_case, field_scale_gap, forecast_accepts,
+    initial_affine_radius_rate,
     log_redshift_derivative, preflight_jvp, production_nodes, prolonged_value,
     quadrature_index, ray_row, rays_from_events, require_fresh, summary_status,
     temporal_envelope, write_raw,
@@ -232,6 +233,23 @@ def test_preflight_reports_eight_blocks_and_a_smooth_directional_difference():
     assert [item["field"] for item in report["blocks"]] == list(FIELDS)
     assert report["accepted"] is True
     assert max(item["relative"] for item in report["blocks"]) <= report["gate"]
+
+
+def test_initial_affine_radius_oracle_uses_an_independent_fourier_second_derivative():
+    from recursive_horizons.nsc_conformal_tangent_evolution import conformal_jvp
+    grid = build_grid(12, quadrature=48, gauge="conformal")
+    state = blank_state(grid, *manufactured_columns(grid.nf))
+    state.Q *= 1 + 0.04 * np.cos(2*np.pi*grid.xi_g/grid.length)
+    tangent = CauchyState(**{name: np.zeros_like(getattr(state, name)) for name in FIELDS})
+    tangent.r = 0.03*np.sin(6*np.pi*grid.xi_g/grid.length)
+    oracle = initial_affine_radius_rate(grid, state, tangent)
+    assert_allclose(conformal_jvp(grid, state, tangent).p_r, oracle, rtol=1e-12, atol=1e-12)
+    report = preflight_jvp(grid, state, tangent, initial_affine=True)
+    assert report["initial_affine_radius"]["accepted"] is True
+    assert report["accepted"] is True
+    tangent.Q[0] = 1e-6
+    with pytest.raises(ValueError, match="delta_Q"):
+        initial_affine_radius_rate(grid, state, tangent)
 
 
 def test_baseline_gap_and_saved_frame_lookup_use_scale_not_bitwise_equality(tmp_path):

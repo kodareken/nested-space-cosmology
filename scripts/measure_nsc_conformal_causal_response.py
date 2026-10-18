@@ -29,8 +29,9 @@ from recursive_horizons.nsc_spherical_coupling import (
 )
 from recursive_horizons.nsc_spherical_galerkin_coupling import (
     build_grid, compose_fine_hamiltonian, conformal_constraint_transport,
-    constraint_diagnostics,
+    constraint_diagnostics, pull_geometry,
 )
+from recursive_horizons.nsc_spherical_feedback_action import feedback_Z
 from measure_nsc_conformal_geometric_average import (
     CURVATURE, EPISODE, EXPECTED_PAYLOAD, sha256,
 )
@@ -63,6 +64,7 @@ EMISSION_TIME = 0.175
 LOOKBACK = 0.125
 NODE_TOLERANCE = 1e-12
 REFERENCE_FRACTION = -0.27203771374589336
+PREVIOUS_APPLICATION_CPU = 11.1875
 CASES = (
     {"name": "nf512_dt_0.0010", "dt": 0.001, "cpu_seconds": COARSE_CPU},
     {"name": "nf512_dt_0.0005", "dt": 0.0005, "cpu_seconds": FINE_CPU},
@@ -86,7 +88,7 @@ SOURCE_PATHS = (
 )
 LIGHTCONE_SUMMARY = ROOT / "results" / "summaries" / "nsc-conformal-lightcone-v1.json"
 DEFAULT_GEOMETRY = ROOT / ".build" / "data" / "nsc-spherical-conformal-episode-v2.npz"
-DEFAULT_RAW = ROOT / ".build" / "results" / "nsc-conformal-causal-response-v1.npz"
+DEFAULT_RAW = ROOT / ".build" / "results" / "nsc-conformal-causal-response-v2.npz"
 THREAD_VARIABLES = (
     "OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS",
 )
@@ -314,7 +316,33 @@ def block_relative(exact, approximate):
     return {"max_abs": gap, "scale": scale, "relative": gap / scale}
 
 
-def preflight_jvp(grid, state, tangent, h=PREFLIGHT_H):
+def initial_affine_radius_rate(grid, state, tangent):
+    """Independent Fourier action of the initial radial-momentum force.
+
+    At p=delta_p=delta_Q=delta_chi=0 the force is linear in r. Its second
+    spatial derivative is diagonal in the retained periodic Fourier band.
+    Keep the original quadrature Q and its weight term; only that linear
+    second derivative uses the independent FFT, rather than two dense D's.
+    """
+    if grid.gauge != "conformal":
+        raise ValueError("initial affine radius check requires L=Q")
+    for name in ("p_Q", "p_r", "p_chi"):
+        if np.any(getattr(state, name)) or np.any(getattr(tangent, name)):
+            raise ValueError("initial affine radius check requires zero momenta and their direction")
+    if np.any(tangent.Q) or np.any(tangent.chi):
+        raise ValueError("initial affine radius check requires delta_Q=delta_chi=0")
+    q = grid.A_g @ state.Q
+    ur = grid.A_g @ tangent.r
+    derivative = grid.fine.derivative
+    weight_x = derivative @ (2 * (derivative @ q) / q)
+    wave_numbers = 2 * np.pi * np.fft.fftfreq(grid.ng, d=grid.dx_g)
+    urxx = np.fft.ifft(-wave_numbers**2 * np.fft.fft(tangent.r)).real
+    A = float(grid.fine.A)
+    return (2 * float(feedback_Z(A)) * urxx
+            + pull_geometry(grid, 16*np.pi*A*q**2*ur - 8*np.pi*A*ur*weight_x))
+
+
+def preflight_jvp(grid, state, tangent, h=PREFLIGHT_H, *, initial_affine=False):
     """One central difference of the full rate. Two compose calls, fixed h."""
     step = float(h)
     if not np.isfinite(step) or step <= 0.0:
@@ -328,11 +356,24 @@ def preflight_jvp(grid, state, tangent, h=PREFLIGHT_H):
         item = block_relative(getattr(exact, name), finite_difference)
         item["field"] = name
         blocks.append(item)
+    accepted = all(item["relative"] <= TOL_FD_RELATIVE for item in blocks)
+    affine = None
+    if initial_affine:
+        affine = block_relative(exact.p_r, initial_affine_radius_rate(grid, state, tangent))
+        affine["equation"] = "2Z*Dxx(delta_r) + pull[(16pi*A*Q^2-8pi*A*Dx(2DxQ/Q))*delta_r]"
+        affine["second_derivative"] = "independent retained-band FFT"
+        affine["gate"] = float(TOL_FD_RELATIVE)
+        affine["accepted"] = affine["relative"] <= TOL_FD_RELATIVE
+        accepted = affine["accepted"] and all(
+            item["relative"] <= TOL_FD_RELATIVE for item in blocks if item["field"] != "p_r"
+        )
     return {
         "h": step,
         "compose_calls": 2,
         "gate": float(TOL_FD_RELATIVE),
-        "accepted": all(item["relative"] <= TOL_FD_RELATIVE for item in blocks),
+        "accepted": bool(accepted),
+        "central_difference_accepted": all(item["relative"] <= TOL_FD_RELATIVE for item in blocks),
+        "initial_affine_radius": affine,
         "blocks": blocks,
         "repeated_step_search": False,
         "dense_jacobian": False,
@@ -820,7 +861,7 @@ def prepare_application(geometry, clock):
     prepared = preparation_tangent(grid, state, checkpoint=lambda: clock.check("preparation tangent"))
     tangent = initial_tangent(prepared)
     clock.check("before preflight")
-    preflight = preflight_jvp(grid, state, tangent)
+    preflight = preflight_jvp(grid, state, tangent, initial_affine=True)
     clock.check("after preflight")
     couplings = {
         "A": float(grid.fine.A),
@@ -920,6 +961,7 @@ def main():
             "blas_threads_per_worker": WORKER_THREADS,
         },
         "setup_cpu_seconds": setup_cpu,
+        "previous_stopped_application_cpu_seconds": PREVIOUS_APPLICATION_CPU,
         "couplings": couplings,
         "counts": {
             "dense_factorizations": 1,
@@ -946,7 +988,7 @@ def main():
         output.write_text(dump_summary(result), encoding="utf-8", newline="\n")
         print(f"Wrote {output}; preflight rejected; no evolution was launched.")
         return 1
-    numerical = setup_cpu
+    numerical = PREVIOUS_APPLICATION_CPU + setup_cpu
     if numerical > TOTAL_CPU:
         raise RuntimeError("setup already exceeds the total CPU envelope")
     payloads = [application_payload(state, tangent, spec) for spec in CASES]
