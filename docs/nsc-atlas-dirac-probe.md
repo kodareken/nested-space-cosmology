@@ -1746,3 +1746,50 @@ state, observer, physical scale and acceptance conditions stay fixed.
 An eight-process pool still carries the independent cases; no new
 P001 or Dirac field resolution is admitted. Another failed requirement
 stops this reference for a recorded diagnosis rather than another grid.
+
+### Evaluated compact-source response
+
+The frozen `358bf25`
+[v3 reference](../results/summaries/nsc-atlas-dirac-mass-response-v3.json)
+passes every prescribed validation. Its 26964-byte summary records
+6.97495 calculation wall seconds, 42.71875 observed process-CPU seconds
+and 50.71875 charged CPU seconds, using eight independent workers.
+No field arrays are retained, and no P001 grid or time step is run.
+
+Let `C_clock(b)=delta ln(omega_rec/omega_wall)/(epsilon_q*n_occ)` and
+differentiate in the dimensionless central mass b/ell. The fixed
+one-sided h/h2 extrapolation at zero gives:
+
+| Geometry and observer | Clock mass derivative, 128 cells | Absolute 64/128 spread |
+| --- | --- | --- |
+| Nested cap-wall-exterior | -.002329215549 | 2.002398e-7 |
+| Smooth SdS cap, shared observer motion | -.002329519102 | 2.028155e-7 |
+
+The nesting difference is +3.035527385e-7, with a correlated grid spread
+2.575717417e-9. The correlated h/h2 step indicator is 5.950795412e-10;
+the individual derivative-step indicators are about 1.655e-6. These are
+numerical diagnostics, not rigorous error bars. The full mass-dependent
+Einstein reconstruction, field stress, wall and observer vary together;
+this is a prepared-state parametric mixed response to the conserved
+source family, rather than a matter-only metric insertion or a switched
+retarded source.
+
+At b=1e-4 the independently propagated local tidal ratio keeps the
+coefficients -540762.8710915 (nested) and -540765.5712499 (smooth cap).
+The nesting difference +2.700158436 has correlated spread .001185480,
+or about 4.9932 parts per million of the prepared correction. At the
+supplied ell=10 km and unit occupation, the occupied-minus-empty ratio
+changes are -3.550311840e-71 and -3.550329568e-71. Their difference is
++1.772755671e-76, with a grid-spread conversion 7.783122016e-80.
+The empty state's baseline vacuum tide remains uncomputed; these are
+not predictions of its absolute B/A or of the full potentials Psi/Phi.
+
+The maximum normalized nested mass-path gap contracts from 8.075638e-7
+to 1.930186e-8; the smooth control contracts from 8.077223e-7 to
+1.934896e-8. Joint wall/bulk quadrature orders 8/12 differ by at most
+4.45e-15 in the clock coefficient. The failed v1 derivative and v2
+execution stay preserved; v3 changes only the numerical solution of
+the same admitted wall equations. This finite prepared-source branch
+is complete at the stated diagnostic precision. The next full-vacuum
+calculation requires a specified joined state, ultraviolet angular
+completion, renormalization and a chosen potential/readout convention.

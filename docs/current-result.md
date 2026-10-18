@@ -4,6 +4,23 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## Prepared Dirac mean metric and a physical clock correction
 
+The [compact-source v3 reference](../results/summaries/nsc-atlas-dirac-mass-response-v3.json)
+also passes every prescribed check on the actual mass-dependent geometry.
+The clock mass derivative is -.002329215549 in the nested model versus
+-.002329519102 in the smooth-cap control. Their difference is
++3.035527385e-7, with correlated grid spread 2.575717417e-9 and source-step
+indicator 5.950795412e-10. The local tidal occupation-response coefficient
+differs by about five parts per million. These are finite state-difference
+and observer predictions; they do not select the full vacuum Psi/Phi.
+
+The [owner](nsc-atlas-dirac-probe.md#evaluated-compact-source-response)
+records the conserved source, numerical spreads and physical scale.
+An exact triangular wall integral replaces the adaptive wall precision
+floor diagnosed in v1; v2's setup exit is preserved. V3 uses the same
+masses/fields and eight workers, completing in 6.97495 calculation wall
+seconds and 50.71875 charged CPU seconds with a 26964-byte summary.
+P001 remains untouched and unconverged.
+
 The [mean-clock reference](../results/summaries/nsc-atlas-dirac-mean-clock-v1.json)
 now connects the actual field to stress, both masses, wall motion, bulk
 metric and the proper-wall radar frequency. For the prescribed first

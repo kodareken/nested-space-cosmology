@@ -27,6 +27,12 @@ This command requires frozen source and an unused output path. Its
 fixes the three masses, two field resolutions, two quadrature orders,
 eight-process pool and 480-CPU-second limit. It returns only summaries;
 the local tidal ratio is distinct from the full potential ratio Psi/Phi.
+The [frozen v3 result](../results/summaries/nsc-atlas-dirac-mass-response-v3.json)
+uses method `358bf25` and the exact triangular wall primitive, jointly
+checking wall/bulk Gauss orders 8/12. It passes in 6.97495 calculation
+wall seconds and 50.71875 charged CPU seconds. The failed v1 derivative,
+its same-field precision diagnosis and v2 setup exit are retained in
+the owner; reproducing v3 does not run them or create another field grid.
 
 The prepared Dirac mean stress and spherical metric/clock reconstruction
 use the same quiet geometry and existing wall-mass coefficients:
