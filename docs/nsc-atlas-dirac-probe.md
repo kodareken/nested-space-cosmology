@@ -375,7 +375,9 @@ $$
 \frac{d\lambda_w}{dt}=\frac1{Q_0\sqrt{A_w}}.
 $$
 
-Use the coordinate `y=lambda-lambda_w(t)` pinned to the wall. The cap is
+Use the coordinate `y=lambda-lambda_w(t)` pinned to the wall, where `lambda`
+is cap proper distance. The exterior extends the initial spatial label;
+it need not remain proper distance there. On `-lambda_w<=y<=0` the cap is
 explicitly
 
 $$
@@ -475,6 +477,11 @@ The [admitted reference calculation](prior-art-and-open-claim.md#a-finite-joined
 uses fixed wall-radius cuts and geometric nodes. Sampled positivity is a
 numerical check, not a uniform interval enclosure. No propagated quantum
 covariance or loop polarization is implied by the coordinate construction.
+The [component](../src/recursive_horizons/nsc_atlas_dirac_time_chart.py),
+[nine controls](../tests/test_nsc_atlas_dirac_time_chart.py) and
+[bounded recorder](../scripts/measure_nsc_atlas_dirac_time_chart.py) preserve
+the signed coordinate-domain test; a failed cut does not trigger a gauge
+scan or a claim of full time coverage.
 
 ## Conformal calculation variables remove the singular wall jet
 

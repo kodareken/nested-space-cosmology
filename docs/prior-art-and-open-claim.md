@@ -1,5 +1,28 @@
 # Prior art and admission of new research
 
+## Common variational variables for the failed P001 interface
+
+Reuse the original Jordan action, its two outward `2fK` terms and the
+already established homogeneous invariant-field transmission. Reduce the
+same action with `g_J=r^2*(gbar2+dOmega^2)` and `chi=r*phi_J`; do not add a
+surface interaction or a phase-space constraint force. Check the total
+divergence and boundary-term cancellation, the three boundary momenta, and
+the local time Legendre matrix. Their domain is `r,a,N,kappa>0` and
+`F=1-kappa*chi^2/(6*r^2)>0`, away from the axis coordinate limit.
+
+The missing connection is a shared variational field/metric representation,
+including the physical kink in `r`, rather than a replacement of strong
+traces by weak loads. Exact algebra and manufactured Legendre/junction
+controls share **30 process-CPU seconds**, with no reference trajectory,
+new grid, stored arrays or additional result JSON. Proofs live in the
+existing finite-amplitude owner and the reproducible controls. Stop on a
+failed identity. Wrong outward-normal signs, confusing canonical momentum
+with field velocity, and erasing the tension by forcing `r` into a `C1`
+space are the anticipated failures. An independent action/boundary
+variation or Clifford-free canonical calculation disagreeing rejects the
+reduction. This supplies a formulation for the next finite method; it does
+not itself close P001's bulk error or justify another evolution.
+
 ## Actual quiet-background Dirac one-loop bulk trace
 
 Compute the state-independent smooth-bulk trace term of the same massless
@@ -92,6 +115,15 @@ and inconsistent quadrature/derivative jets. An independent metric pullback
 or four-dimensional wall check disagreeing would reject this chart. A
 compatible quantum preparation, renormalized polarization and observer
 readout remain subsequent work, not outputs of the coordinate construction.
+
+Implementation history: an unfrozen preview called the report before its
+domain-failure record existed and stopped at the bridge's `.5125` cut.
+Additional unfrozen metric samples were inspected beyond that failure;
+their CPU/counter totals were not retained and they are not reference
+evidence. No source or gauge profile was changed to repair the fold. The
+first frozen application retains the predeclared nine cuts, stops on its
+first domain exit, and records that outcome. Its budget is separate from
+those untimed previews; the bounded control suite does not call the report.
 
 ## Source-anchored joined spatial geometry for the Dirac calculation
 

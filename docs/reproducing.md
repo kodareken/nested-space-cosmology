@@ -1,5 +1,30 @@
 # Reproducing the root project
 
+The fixed quiet time-chart calculation preserves a coordinate-domain exit
+as an unsuccessful full-domain result:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_time_chart.py -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_time_chart.py --output .build/nsc-atlas-dirac-time-chart.json
+```
+
+The method must be committed and the output path unused. It uses the
+[predeclared gauge and cuts](nsc-atlas-dirac-probe.md#finite-joined-time-chart),
+stops on the first failed bulk metric cut and keeps its location. Controls
+do not call the nine-cut report. Earlier unfrozen implementation previews
+are disclosed in the admission; no profile is tuned to hide their fold.
+
+The shared original action, material junction and local Legendre-map
+identities reproduce without a trajectory or generated result file:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_conformal_action.py -q
+```
+
+The [owner](nsc-atlas-conformal-action.md) retains the boundary divergence,
+physical radius kink and canonical/velocity distinction. This is not a
+new P001 evolution or a correction to its archived mass values.
+
 The local conformal Dirac interface and bulk curvature calculation reproduce
 with the committed method and an unused output path:
 

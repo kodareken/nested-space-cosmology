@@ -2,6 +2,19 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## A common action for a coherent P001 boundary method
+
+The [same original action in conformal variables](nsc-atlas-conformal-action.md)
+now has a checked bulk/boundary reduction and local Legendre map. It reuses
+the already established continuous invariant scalar and its normal
+derivative, while retaining the material kink in the physical radius.
+Eleven controls pass, including direct boundary variation and shifted ADM
+curvature. This gives concrete equations for a common finite representation;
+it does not repair the current split solver, remove its bulk projection
+error or close Step 2. Adding a single phase-space multiplier to the old
+incoming constraint would not suffice, since its own Poisson bracket
+vanishes. No new P001 grid or trajectory was run.
+
 ## Actual curved-background local Dirac quantum term
 
 The [one-loop bulk trace](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.json)
