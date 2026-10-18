@@ -256,3 +256,27 @@ equation; its endpoint forces retain both normal flux and GHY. The field
 lies in the finite space, so recovery tests the action and time integrator,
 not spatial convergence or physical predictions. This manufactured force
 is never supplied to the P001 model.
+
+The [first frozen application](../results/summaries/nsc-atlas-collar-field-v1.json),
+from commit `8cf250dd229621c2870b3be40ef81fabff9fa8e0`, completes the full
+strip in 82 accepted steps, 1232 field RHS calls, 59549 spatial-background
+RHS calls and 1.984375 process-CPU seconds. The pre-sampling lapse bound is
+`.8854464933`; the radius bound is `.4234086834*ell`.
+
+| Check | Absolute maximum | Normalized maximum |
+| --- | ---: | ---: |
+| Field coordinates | 6.7521e-14 | 6.7113e-12 |
+| Actual proper-time velocity | 1.9712e-11 | 7.1079e-11 |
+| Energy minus metric and input work | 2.6902e-18 | 1.7452e-15 |
+
+The normalized denominators are the maximum exact field, exact velocity,
+and energy/work scale over the declared 33 diagnostic cuts, respectively.
+The original scalar transmission residual is `1.041e-17`; the shared
+internal field-power difference is zero in reference arithmetic. The
+momentum shift reaches `.0001074389`, so omitting it would fail the
+original ADM momentum comparison. The preserved radius kink reaches `1.1`.
+The single 16/32 assembly comparison at `Rwall=.5*ell` differs by at most
+`2.558e-13` across all six matrices. These are numerical controls on the
+specified manufactured field, not an error range for a physical P001
+observable. The control is closed; it supplies no reason to rerun P001 grids
+before the coupled metric/action replacement exists.

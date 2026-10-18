@@ -41,6 +41,9 @@ The output path must be unused. The
 [finite-action owner](nsc-atlas-conformal-action.md#a-shared-finite-field-action-on-a-quiet-wall-normal-collar)
 states the continuum test source and energy/work identity. This is a
 method control on prescribed geometry, not a P001 grid or physical signal.
+The [saved application](../results/summaries/nsc-atlas-collar-field-v1.json)
+contains only the summary, limits and frozen source hashes; full trajectories
+are regenerated and are not retained.
 
 The local conformal Dirac interface and bulk curvature calculation reproduce
 with the committed method and an unused output path:

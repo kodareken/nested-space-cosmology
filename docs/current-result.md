@@ -2,6 +2,20 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Shared finite field action passes its declared control
+
+The [exact normal-collar application](../results/summaries/nsc-atlas-collar-field-v1.json)
+completes `.45<=Rwall/ell<=.55` on one shared six-coordinate scalar space.
+The continuum manufactured field is recovered to `6.71e-12`, its actual
+proper-time velocity to `7.11e-11`, and energy plus metric/boundary/input
+work closes to `1.75e-15`, using the stated normalization scales. It keeps
+the original GHY, restricted ADM momentum and radius kink. Five component
+controls pass, and the reference uses 1.984375 process-CPU seconds.
+The [owner](nsc-atlas-conformal-action.md#a-shared-finite-field-action-on-a-quiet-wall-normal-collar)
+states the physical scope: a manufactured scalar on the exact quiet local
+chart, not a backreacted P001 evolution or its Einstein mass. The split
+production solver is unchanged; no new P001 grid was run.
+
 ## The fixed wide Dirac time chart exits its coordinate domain
 
 The [frozen quiet reference](../results/summaries/nsc-atlas-dirac-time-chart-v1.json)

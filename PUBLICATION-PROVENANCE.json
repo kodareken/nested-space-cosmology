@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 256135,
+      "bytes": 256217,
       "path": "docs/active-code-map.md",
-      "sha256": "a92b482bb88fad697a200f5a83b313214ecbc1b4d892c226d7fe18b3810bfb56"
+      "sha256": "81a7ea03ed1030745a32642744ec5ad9da92f59d0b72767eee51e610046a4403"
     },
     {
       "bytes": 105125,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 409597,
+      "bytes": 410492,
       "path": "docs/current-result.md",
-      "sha256": "1702b95a5f0781d7e32c3ed0ba4f1bdecbebb1dfea9cd40122bdc3882efe44b4"
+      "sha256": "2fa9d3b6a811866c4b602cbe1c35179985a643b3ae9e879be79c007d21b1cb58"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2415170,
+      "bytes": 2415644,
       "path": "docs/lab-snapshot.json",
-      "sha256": "d2bc45f8e9b66e87c089fae521ce82eb59c3c100a7b2078a3802a0a10d8f50d0"
+      "sha256": "908bf98022663404dd90d45aa1f94b1fbdae02761380eb4ccd3b1ff44980eda9"
     },
     {
       "bytes": 4997,
@@ -1616,9 +1616,9 @@
       "sha256": "676447c9b538f1cc0f47c7f556037839b9bdb5f8ddd63a44fcfc2e418af0a1ff"
     },
     {
-      "bytes": 9743,
+      "bytes": 11128,
       "path": "docs/nsc-atlas-conformal-action.md",
-      "sha256": "8f2f714849bbb81a861cc8f6aa9c7296d0dd4803ff1f4cf768b8ab47f1eca924"
+      "sha256": "f88aa761b64e275321fdecaef9aaf4665f04659df255743ece960ed59fe059e7"
     },
     {
       "bytes": 20470,
@@ -2241,9 +2241,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 185408,
+      "bytes": 185601,
       "path": "docs/reproducing.md",
-      "sha256": "2a52912f547d275121939d6a6f10736884751f035b1dc7d0f4cd61982dc999db"
+      "sha256": "052090d9c53f791b4c45e5c364a62007165db5eb07b91b0013e8903e73b3d3cf"
     },
     {
       "bytes": 31710,
@@ -14636,6 +14636,11 @@
       "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
     },
     {
+      "bytes": 3298,
+      "path": "results/summaries/nsc-atlas-collar-field-v1.json",
+      "sha256": "19a4d2c32e30568b925c0cee9163085ba374a7ca2997ab133a538c4076d091f0"
+    },
+    {
       "bytes": 29878,
       "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
@@ -22086,7 +22091,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "d2bc45f8e9b66e87c089fae521ce82eb59c3c100a7b2078a3802a0a10d8f50d0",
+  "lab_snapshot_sha256": "908bf98022663404dd90d45aa1f94b1fbdae02761380eb4ccd3b1ff44980eda9",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.8",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
