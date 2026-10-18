@@ -43,6 +43,20 @@ direct linearized solution outside the stated radial response would falsify
 this reference result. Its domain and any need for a different exterior or
 effective-theory interpretation must remain explicit before Lambda work.
 
+**Outcome:** frozen method `6c68d00` completes the one scalar application
+in 0.015625 CPU seconds, retaining a 3676-byte [record](../results/summaries/nsc-vacuum-gravitational-response-v1.json).
+The saved couplings give `m^2*L_ref^2=-614.4717961513472` and asymptotic
+growth time `0.04034121954082023*L_ref/c`. The exact retarded radial map and
+constrained face responses exist in the stated Laplace half-plane, while
+the infinite flat reference fails stationary stability. Nine controls pass;
+the numeric fixture's initial SymPy/Python scalar mismatch was corrected
+without changing the equations. The full nonperturbative reference test is
+closed. The [local action's owner](nsc-spherical-action.md) already keeps the
+full spectral/state completion open; this diagnostic does not set that
+uncompleted theory's physical stability or its ultraviolet cutoff. Reuse
+the result to select the actual exterior and validity prescription; no new
+flat scan, coupling retuning or trajectory is admitted.
+
 ## Timelike boundary response of the owned auxiliary action
 
 The closed photon calculation now needs the common action's exterior metric

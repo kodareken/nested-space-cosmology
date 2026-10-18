@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.5` adds Section 6.1.10: a constraint-compatible vacuum
+gravitational normal map and a fixed-coupling stability diagnostic. The
+local auxiliary action's flat exterior has a negative squared scale and a
+negative quadratic action weight. The manuscript states its exact causal
+domain and distinguishes this nonperturbative reference from the incomplete
+spectral/state theory and the finite periodic episode. The independent
+comparison ruler is not identified with an ultraviolet cutoff.
+
 Revision `2026-10-18.4` adds Section 6.1.9: one initial paired-phase direction
 propagated with the complete original conformal geometry to two received
 photon frequencies. Both original time steps finish and reproduce the saved

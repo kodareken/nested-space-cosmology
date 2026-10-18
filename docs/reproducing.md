@@ -2967,6 +2967,14 @@ seconds. Zero Maxwell and Dirac fields define this flat reference; it is not
 an attachment to the charged periodic episode. The mass sign, kinetic
 coefficient and valid retarded half-plane remain part of the result.
 
+The [completed scalar record](../results/summaries/nsc-vacuum-gravitational-response-v1.json)
+uses method `6c68d00`; compare its dimensionless coefficients within `1e-10`
+absolute, with source/input hashes and the reference definition exact.
+Timing and new commit metadata may differ. It records the failed stationary
+stability of the flat reference; a negative result is not a producer error.
+There is no raw archive to regenerate. The physical validity prescription
+and actual nested exterior/state remain required for Lambda.
+
 The smooth timelike boundary response of the owned auxiliary action has
 independent exact controls:
 

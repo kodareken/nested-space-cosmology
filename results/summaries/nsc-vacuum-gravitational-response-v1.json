@@ -1,0 +1,66 @@
+{
+  "counts": {
+    "grid_scans": 0,
+    "parameter_fits": 0,
+    "root_solves": 0,
+    "scalar_cases": 1,
+    "trajectories": 0
+  },
+  "exterior": {
+    "Dirac_field": 0,
+    "Maxwell_flux": 0,
+    "background": "flat physical N=a=1, r=R, chi=0",
+    "domain": "R>=R0, linear perturbations",
+    "outward_orientation_at_R0": -1,
+    "state": "zero initial perturbation; zero mass constant; no incoming infinity"
+  },
+  "limits": {
+    "CPU_seconds": 5.0,
+    "summary_bytes": 12000
+  },
+  "parameters": {
+    "A": 0.04501936182826115,
+    "C_W": -0.0008441130342798952,
+    "changed": false
+  },
+  "prediction": {
+    "area_pressure_response_times_Lref3": 1.3859701163242155,
+    "asymptotic_growth_rate_Lref": 24.788541630183637,
+    "auxiliary_proper_response_times_Lref": -0.008971758295724878,
+    "chi_R_per_chi_times_Lref": -42.049746262586716,
+    "decay_q_Lref": 42.981570334901,
+    "energy_response_times_Lref": 0.014143249638896575,
+    "growth_time_over_Lref": 0.04034121954082023,
+    "independent_decimal_mass_scale_gap": 0.0,
+    "laplace_s_Lref": 49.61740808028357,
+    "lapse_n_per_chi": 0.01500590908820379,
+    "mass_squared_Lref2": -614.4717961513472,
+    "outward_chi_normal_per_chi_times_Lref": 42.049746262586716,
+    "quadratic_kinetic_coefficient_over_Lref2": -5.754230595887687e-06,
+    "radial_metric_b_per_chi": 0.011134155253258626,
+    "stationary_stable_flat_reference": false
+  },
+  "reference": {
+    "R0_equals_Lref": 4.80028044552352,
+    "attached_to_charged_episode": false,
+    "ruler_origin": "physical-resolution reference_T=0.05, x=1",
+    "target_observation_used": false
+  },
+  "reproduce": "python scripts/run_python.py scripts/measure_nsc_vacuum_gravitational_response.py --output .build/vacuum-gravity-reference.json",
+  "runtime_cpu_seconds": 0.015625,
+  "schema": "nsc-vacuum-gravitational-response-v1",
+  "scope": "Linear reference response under the same A,C_W. The auxiliary mode is retained nonperturbatively in this calculation. A negative squared scale admits growing long-wavelength exterior modes and no stable stationary reduction about this flat state. An EFT reading needs its order reduction or causal completion specified. No claim about stability of the distinct finite periodic episode, physical parent attachment, cosmological Lambda, or observational agreement is made.",
+  "source_commit": "6c68d003ccbbcc5d76c178cca45b90ca09880777",
+  "source_sha256": {
+    "results/summaries/nsc-conformal-causal-response-v2.json": "d6f73bf663e76d951cb078947c6c672c3be0eaed0479523eaa8fe673a7b28f50",
+    "results/summaries/nsc-conformal-resolution-v1.json": "3a41ef7076cbb2cd3653a748b066fa1074ed2f96bfbdc50d294300ae33b7fe5a",
+    "scripts/measure_nsc_vacuum_gravitational_response.py": "b295aad0f27c80edd1a5561e61e085021fbba16d4ca4d234b431b4f935d56cd0",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_timelike_boundary.py": "c3bff58d4c111f7b73e71eef6a9dba155c0baf96cd7548015f4dd8a3181ac632",
+    "src/recursive_horizons/nsc_spherical_vacuum_response.py": "ff5b81ec307e263e00ecbce9ea1936f847fbb66ddd9a2a90544b31e50e955be9",
+    "tests/test_nsc_spherical_timelike_boundary.py": "104aad1dda99a8f619813aeb88a38fa67ea2797ebde37320a1174551db260778",
+    "tests/test_nsc_spherical_vacuum_response.py": "59648a2d635090a2e6375028767ef3723b861c70679816e66347596b9719b2a7"
+  },
+  "status": "completed_constrained_vacuum_reference",
+  "uncertainty": "Analytic scalar formulas evaluated in floating point; a 50-digit decimal spectral-scale check is recorded. This is not a physical/model uncertainty bound."
+}

@@ -1,6 +1,25 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.4`, includes the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.5`, includes the vacuum gravitational-response diagnostic, the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## Vacuum gravitational response diagnostic, 18 October 2026
+
+The [same-action exterior calculation](schur-memory.md#constrained-flat-vacuum-gravitational-exterior)
+now gives a constraint-compatible causal curvature response. Its one
+[fixed-coupling evaluation](../results/summaries/nsc-vacuum-gravitational-response-v1.json)
+has **`m^2*L_ref^2=-614.4717961513472`** and asymptotic growth time
+**`0.04034121954082023*L_ref/c`**. The infinite flat reference is not
+stationary stable under this nonperturbative local action. Its curvature
+and metric boundary histories satisfy the same lapse and shift constraints.
+
+Nine controls pass, including all original field equations before gauge
+restriction, the reduced action and the exact radial response. One scalar
+case uses 0.015625 CPU seconds and 3676 bytes, with no raw cache, grid, root,
+trajectory or parameter fit. The local curvature expansion's physical
+validity and full spectral/state completion remain separate. This diagnostic
+does not set the stability of the distinct finite periodic episode or
+supply a cosmological Lambda. The actual nested exterior/state or a
+consistent effective-theory prescription is the next input.
 
 ## Timelike gravitational face response, 18 October 2026
 

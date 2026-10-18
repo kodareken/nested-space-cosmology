@@ -1069,6 +1069,27 @@ agrees on the zero-mass master operator and radial normal map. The single
 [scalar producer](../scripts/measure_nsc_vacuum_gravitational_response.py)
 must be frozen before evaluating the saved couplings and ruler.
 
+The frozen [scalar application](../results/summaries/nsc-vacuum-gravitational-response-v1.json)
+now gives `m^2*L_ref^2=-614.4717961513472`,
+`gamma*L_ref=24.788541630183637`, and growth time
+`0.04034121954082023*L_ref/c`. Its quadratic action weight is
+`K/L_ref^2=-5.754230595887687e-6`. At the declared Laplace point
+`s*L_ref=49.61740808028357`, the decaying radial branch has
+`q*L_ref=42.981570334901` and `L_ref*c_R/c=-42.049746262586716`.
+The input mass scale also agrees with a 50-digit decimal calculation when
+rounded to the recorded float. One case uses 0.015625 CPU seconds and a
+3676-byte summary, with no raw data or evolution. This reference calculation
+is closed: the same fixed couplings exclude a stable stationary infinite
+flat exterior under the nonperturbative auxiliary interpretation.
+
+The [spherical action owner](nsc-spherical-action.md#measure-spectral-completion-and-the-higher-derivative-chart)
+already identifies a conditional local truncation and a missing full
+spectral/state contribution. The new result does not establish a physical
+instability of that uncompleted theory or identify its ultraviolet cutoff
+with `L_ref`. It requires an explicit validity prescription or an actual
+nested exterior/state before this response is used for Lambda. The locked
+coefficients and the completed finite periodic calculations are preserved.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

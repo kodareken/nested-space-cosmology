@@ -887,6 +887,86 @@ This closes one finite prepared-direction observer calculation. The
 metric-dependent reduction still needs to retain the corresponding causal
 response and physical state before identifying an effective vacuum term.
 
+### 6.1.10. A constrained gravitational exterior and its validity test
+
+The same local auxiliary action now supplies a linear vacuum exterior
+response. This reference has zero Maxwell flux and Dirac field, physical
+metric $ds^2=N^2dt^2-a^2dR^2-R^2d\Omega^2$, and flat $N=a=1$, $\chi=0$.
+It is not an attachment to the charged periodic episode. Write
+$N=1+\epsilon n$, $a=1+\epsilon b$, $\chi=\epsilon c$, and
+$k=4\pi A/\alpha$, $\alpha=-4\pi C_W/3$.
+Varying before imposing areal gauge retains both constraints. They fix
+$kRb+c_R+c/R=kM$, with constant mass perturbation $M$; the full radius
+equation then vanishes. Linear Schwarzschild has
+$n=-M/R$, $b=M/R$, $c=-12M/R$.
+
+For zero initial perturbation and $M=0$, set $\psi=c/R$. Independent
+variation of all five original fields and elimination of the constraints
+give
+
+$$
+\psi_{tt}-\psi_{RR}+(6/R^2+m^2)\psi=0,
+\qquad m^2=\frac{A}{2C_W},
+$$
+
+$$
+S_{2,\mathrm{bulk}}=K\int
+[\psi_t^2-\psi_R^2-(6/R^2+m^2)\psi^2]dt\,dR,
+\qquad K=-\frac{8\pi C_W^2}{3A}.
+$$
+
+The action weight $K$ is distinct from the normalization of the wave
+equation. Radial total derivatives are retained in deriving the face
+response; no boundary energy normalization is selected.
+
+On $R\ge R_0$, impose a compatible causal curvature history at $R_0$ and
+no incoming perturbation at infinity. For a Laplace parameter $s$ with real
+part greater than $\gamma=\sqrt{\max(0,-m^2)}$, the decaying branch
+$q=\sqrt{s^2+m^2}$, with positive real part, yields
+
+$$
+\frac{\widehat c_R(R_0)}{\widehat c(R_0)}
+=-\frac{z^3+2z^2+3z+3}{R_0(z^2+3z+3)},\qquad z=qR_0.
+$$
+
+The outward normal of this exterior points toward decreasing $R$. The
+lapse and radial metric histories obey the same constraints, so this is
+one compatible response column. It is not a choice of three independent
+boundary histories or a bulk vacuum density.
+
+The [scalar evaluation](../results/summaries/nsc-vacuum-gravitational-response-v1.json)
+keeps the saved $A,C_W$ and independent ruler
+$R_0=L_{\mathrm{ref}}=4.80028044552352$. Frozen method `6c68d00` uses one
+declared Laplace point, no archive, trajectory, root or fit, and 0.015625
+process-CPU seconds:
+
+| Reference quantity | Value |
+| --- | ---: |
+| $m^2L_{\mathrm{ref}}^2$ | $-614.4717961513472$ |
+| $\gamma L_{\mathrm{ref}}$ | $24.788541630183637$ |
+| Growth time divided by $L_{\mathrm{ref}}/c$ | $0.04034121954082023$ |
+| $K/L_{\mathrm{ref}}^2$ | $-5.754230595887687\times10^{-6}$ |
+
+For $m^2=-\gamma^2$, a compact sine beyond
+$\max(R_0,4/\gamma)$ with width $4\pi/\gamma$ has spatial quadratic-form
+quotient at most $-9\gamma^2/16$. Every finite inner radius therefore leaves
+growing modes in this infinite flat exterior. The retarded map exists in
+the stated half-plane, while a stable stationary reduction about this
+reference is unavailable. Nine controls include the exact radial solution,
+pre-gauge constraints, Schwarzschild mass mode, reduced action and
+physical-clock face response.
+
+This tests the local action used nonperturbatively. The
+[spherical action owner](../docs/nsc-spherical-action.md) retains a
+conditional curvature expansion and an incomplete full spectral/state
+contribution. An effective-theory reading needs its cutoff, order reduction
+or causal completion specified before promoting this additional mode to a
+physical exterior state. The comparison ruler is not a derived ultraviolet
+cutoff. The finite periodic computations retain their stated domain; the
+actual nested exterior geometry and its physical state remain necessary
+for a cosmological Lambda calculation. No coupling was changed to remove
+the reference instability.
+
 ### 6.2. The retained local incoming gate
 
 <!-- nsc-claim:local-source-insertion-majorant -->
