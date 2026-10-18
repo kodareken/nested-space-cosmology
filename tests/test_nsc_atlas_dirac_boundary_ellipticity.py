@@ -2,7 +2,8 @@
 import numpy as np
 import pytest
 
-from recursive_horizons.nsc_atlas_dirac_evolution import real_frequency_boundary_symbol
+from recursive_horizons.nsc_atlas_dirac_evolution import (
+    real_frequency_boundary_symbol,folded_transparent_interface)
 
 
 def test_actual_real_boundary_gram_and_glancing_are_separate():
@@ -36,3 +37,20 @@ def test_full_tangent_symbol_has_the_same_uniform_complementing_bound():
         M=(1j*decay*normal+tangent-tau*np.eye(8))@J
         lower=2*angular_norm*(angular_norm-abs(tau))
         assert np.linalg.svd(M,compute_uv=False)[-1]**2==pytest.approx(lower,abs=2e-14)
+
+
+def test_explicit_decaying_Poisson_lift_solves_the_operator_and_arbitrary_jump():
+    data=folded_transparent_interface()
+    jump=np.c_[np.eye(2),-np.eye(2)]
+    for W in (-2.3,2.3):
+        for fraction in (-.8,0.,.8):
+            tau=fraction*abs(W)
+            row=real_frequency_boundary_symbol(tau,W)
+            P=row['poisson'];S=P[:2]
+            operator=1j*row['normal_decay']*data['normal_matrix']+W*data['angular_matrix']-tau*np.eye(4)
+            assert operator@P==pytest.approx(np.zeros((4,2)),abs=3e-14)
+            assert jump@P==pytest.approx(np.eye(2),abs=3e-14)
+            assert S@S==pytest.approx(S,abs=3e-14)
+            assert np.linalg.matrix_rank(S)==1
+            if fraction:
+                assert np.linalg.norm(S-S.conj().T)>.1  # Stable projection is oblique.

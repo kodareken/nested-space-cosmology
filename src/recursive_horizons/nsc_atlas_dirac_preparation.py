@@ -1,8 +1,9 @@
-"""Finite candidate preparation from the actual wall-clock energy form.
+"""Separate wall-clock and correlated-cylinder state preparations.
 
-This defines an explicit state-selection axiom, not an inherited root
-vacuum or a Hadamard/ultraviolet result. Controls and admission live in
-docs/nsc-atlas-dirac-probe.md. Propagation reuses the existing field kernel.
+The finite clock-energy minimizer and the continuum cylinder parent are
+different candidates. Both reuse the existing field kernel. A finite
+spectral panel does not establish an ultraviolet stress limit; definitions,
+the local continuum proposition and controls live in the Dirac owner.
 """
 from __future__ import annotations
 
@@ -16,6 +17,7 @@ from .nsc_influence import ground_covariance
 from .nsc_atlas_dirac_mean import MeanModeGrid,RadarPointEvaluator,SPIN_ROTATION
 from .nsc_atlas_dirac_scattering import smooth_bump
 from .nsc_atlas_dirac_stress import stress_matrices
+from .nsc_common_subtracted_ks_source import KSKernelSample,SpectrumDeclaration
 
 
 def hermite_null_modes(clock,duration,count):
@@ -351,3 +353,67 @@ class CylinderPreparation:
         return dict(potential=k*q,potential_t=k*qt,potential_x=k*qx,
             lapse=N,radial_length=N,radius=np.full(U.shape,self.root_radius),
             conformal_factor=N*N,preparation_weight=weight)
+
+
+class PreparedCylinderModes:
+    """Continuum-parent mode columns through the declared auxiliary geometry.
+
+    Supplied incoming momenta are a numerical spectral panel, not a finite
+    state-selection rule. Both coherent incoming components are retained.
+    The common kernel data type is reused in the actual canonical radar
+    frame. No KS geometry, source law or metric vertices are imported.
+    """
+
+    def __init__(self,preparation,cells,momenta,*,workers=8):
+        if isinstance(cells,bool) or not isinstance(cells,int) or cells<4:
+            raise ValueError('at least four characteristic cells required')
+        self.preparation=preparation
+        h=preparation.duration/cells
+        labels=(np.arange(cells)+.5)*h
+        data=cylinder_incoming_modes(labels,momenta,radius=preparation.root_radius,
+            angular_k=preparation.angular_k)
+        self.momenta=data['momentum']
+        U,V=np.meshgrid(labels,labels,indexing='ij')
+        fields=preparation.fields(U,V)
+        self.grids=propagate_null_modes(fields['potential'],h,h,
+            potential_u=(fields['potential_t']-fields['potential_x'])/2,
+            potential_v=(fields['potential_t']+fields['potential_x'])/2,
+            incoming_plus=data['plus'],incoming_minus=data['minus'],
+            plus_u=data['plus_u'],minus_v=data['minus_v'],workers=workers)
+
+    def evaluate(self,U,V):
+        """Canonical xi and analytic xi_x; the physical metric is separate."""
+        eta=np.stack([grid.evaluate(U,V) for grid in self.grids],axis=-1)
+        dx=np.stack([grid.evaluate(U,V,derivative_v=1)-grid.evaluate(U,V,derivative_u=1)
+                     for grid in self.grids],axis=-1)
+        return (np.einsum('ij,...jm->...im',SPIN_ROTATION,eta),
+                np.einsum('ij,...jm->...im',SPIN_ROTATION,dx))
+
+    def kernel(self,time,position,weights,*,separation,declaration):
+        """Equal radar-time kernel and its separation derivative.
+
+        Integrates the declared incoming dp/(2*pi) panel before any pairing
+        with the independent local Weyl-momentum reference. A partial panel
+        cannot be called the full vacuum or used as a stress error bound.
+        Physical endpoints must lie in the matched-operator region.
+        """
+        w=np.asarray(weights,dtype=float)
+        if (not isinstance(declaration,SpectrumDeclaration) or w.shape!=self.momenta.shape
+                or not np.isfinite(w).all() or np.any(w<=0)):
+            raise ValueError('positive parent momentum weights and explicit spectrum declaration required')
+        T,x,eta=np.broadcast_arrays(np.asarray(time,dtype=float),
+            np.asarray(position,dtype=float),np.asarray(separation,dtype=float))
+        if not all(np.isfinite(v).all() for v in (T,x,eta)):
+            raise ValueError('finite common radar-time detector and separation required')
+        U,V=T-x,T+x
+        endpoints=((U-eta/2,V+eta/2),(U+eta/2,V-eta/2))
+        for u,v in endpoints:
+            if not np.all(self.preparation.fields(u,v)['preparation_weight']==1):
+                raise ValueError('physical kernel endpoints must lie in the matched-operator region')
+        plus,plus_x=self.evaluate(*endpoints[0])
+        minus,minus_x=self.evaluate(*endpoints[1])
+        def pair(left,right):
+            return np.einsum('...im,...jm,m->...ij',left,right.conj(),w/(2*math.pi))
+        value=pair(plus,minus)
+        derivative=(pair(plus_x,minus)-pair(plus,minus_x))/2
+        return KSKernelSample(value,derivative,eta,declaration,'radar_cylinder_preparation')

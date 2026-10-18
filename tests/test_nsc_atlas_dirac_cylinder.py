@@ -8,10 +8,12 @@ from scipy.special import k0
 
 from recursive_horizons.nsc_atlas_dirac_preparation import (
     cylinder_incoming_modes,cylinder_covariance_compression,CylinderPreparation,propagate_null_modes,
-    _hardy_compression)
+    _hardy_compression,PreparedCylinderModes)
 from recursive_horizons.nsc_atlas_dirac_evolution import folded_transparent_interface
 from recursive_horizons.nsc_atlas_dirac_radar import WallRadarChart
 from recursive_horizons.nsc_atlas_dirac_compact_source import CompactMassChart
+from recursive_horizons.nsc_common_subtracted_ks_source import SpectrumDeclaration,reference_symbol_kernel
+from recursive_horizons.nsc_atlas_dirac_mean import SPIN_ROTATION
 
 
 def test_cylinder_cross_leg_kernel_has_the_independent_Fourier_normalization():
@@ -120,3 +122,47 @@ def test_auxiliary_switch_preserves_wall_first_jets_and_actual_future_operator()
     dv=(preparation.fields(U,V+h)['potential']-preparation.fields(U,V-h)['potential'])/(2*h)
     assert center['potential_t']==pytest.approx(du+dv,rel=2e-7,abs=2e-7)
     assert center['potential_x']==pytest.approx(dv-du,rel=2e-7,abs=2e-7)
+
+
+class ConformalCylinder:
+    """Manufactured physical metric conformal to the exact root cylinder."""
+    duration=.2
+
+    def radius_at_clock(self,clock):
+        return np.asarray(clock)
+
+    def from_wall_radii(self,U,V,*,region,angular_k):
+        U,V=np.broadcast_arrays(U,V);T=(U+V)/2;x=(V-U)/2
+        N=1+.1*T+.2*x;r=.45*N
+        return dict(lapse=N,radius=r,lapse_t=np.full(N.shape,.1),
+            lapse_x=np.full(N.shape,.2),radius_t=np.full(N.shape,.045),
+            radius_x=np.full(N.shape,.09))
+
+
+def test_prepared_parent_kernel_matches_independent_local_Weyl_kernel_in_known_limit():
+    preparation=CylinderPreparation(ConformalCylinder(),duration=.2,root_radius=.45)
+    p=np.array([-3.,0.,4.]);weights=np.array([.2,.3,.4])
+    declaration=SpectrumDeclaration('control_only','manufactured root Fourier panel')
+    mu=1/.45;omega=np.hypot(p,mu)
+    s1=np.array([[0.,1.],[1.,0.]])
+    s3=np.diag([1.,-1.])
+    projector=(np.eye(2)-(p[:,None,None]*s3+mu*s1)/omega[:,None,None])/2
+    orders=np.zeros((5,3,2,2),dtype=complex)
+    orders[0]=SPIN_ROTATION@projector@SPIN_ROTATION.conj().T
+    eta=.008
+    reference=reference_symbol_kernel(orders,p,weights,separation=eta,declaration=declaration)
+    errors=[]
+    for n in (8,16):
+        modes=PreparedCylinderModes(preparation,n,p,workers=3)
+        sample=modes.kernel(.11,.006,weights,separation=eta,declaration=declaration)
+        errors.append(max(np.max(np.abs(sample.kernel-reference.kernel)),
+            np.max(np.abs(sample.separation_derivative-reference.separation_derivative))))
+        zero=modes.kernel(.11,.006,weights,separation=0.,declaration=declaration)
+        assert zero.kernel==pytest.approx(zero.kernel.conj().T,abs=3e-14)
+        assert np.linalg.eigvalsh(zero.kernel)[0]>=0
+    assert errors[-1]<2e-4
+    assert errors[0]/errors[1]>3
+    with pytest.raises(ValueError,match='declaration'):
+        modes.kernel(.11,.006,weights,separation=eta,declaration=None)
+    with pytest.raises(ValueError,match='matched'):
+        modes.kernel(.02,0.,weights,separation=0.,declaration=declaration)

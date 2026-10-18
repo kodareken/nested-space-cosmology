@@ -35,8 +35,10 @@ through the actual wall and sources a mean metric and radar-clock correction.
 Its logarithmic clock coefficient is $-.41780$, with a 64/128 numerical
 spread $1.12\times10^{-5}$. A conserved compact-source family also gives
 a stable prepared clock mass derivative and a local tidal-response
-difference of about five parts per million. The full vacuum gravitational
-slip remains uncomputed.
+difference of about five parts per million. A separately declared static-product
+parent now supplies a correlated continuum preparation. A folded-interface
+argument establishes its local Hadamard class inside the common smooth cap.
+Its numerical vacuum stress and full gravitational slip remain uncomputed.
 
 A separate periodic Einstein--Weyl--Dirac realization permits averaging in
 a specified observer clock and direct light-cone calculation. Its final
@@ -1306,9 +1308,9 @@ incoming data to the middle Cauchy segment. A parent covariance must
 include both incoming branches and their cross-correlations. Existing
 Gaussian boundary elimination can preserve those terms once the actual
 transfer is supplied. Neither the chart nor the common-law relation
-chooses a root state. A null-line frequency prescription would be an
-additional preparation axiom; its four-dimensional short-distance and
-interface behavior has not been established here.
+chooses a root state. Section 6.1.19 supplies one additional preparation
+axiom and establishes its local short-distance class; it is not inferred
+from a null-line frequency label alone.
 
 The characteristic transfer and a finite prepared-state mean response
 are evaluated next. A compatible baseline preparation, bulk/interface
@@ -1518,6 +1520,110 @@ also requires radial zero-mode and background-split data; below the
 exterior horizon one cap FLRW pair does not cover the joined spacetime.
 This finite prepared-state result therefore supplies no absolute empty
 vacuum ratio, full vacuum $\Psi/\Phi$ or cosmological $\Lambda$.
+
+### 6.1.19. A correlated continuum parent and local vacuum regularity
+
+Specify the parent before evaluating a baseline vacuum. One explicit
+alternative is the Dirac ground state on a static product of a radial
+line with a sphere of radius $R_0=.45\ell$. In its chiral canonical frame,
+
+$$
+\mathsf{H}_{\kappa}(p)=p\sigma_3+\mu\sigma_1,\qquad
+\mu=\frac{\kappa}{R_0},\qquad \omega=\sqrt{p^2+\mu^2}.
+$$
+
+Fill its negative band for every signed angular sector, including
+each magnetic multiplet once. The Fourier measure is $dp/(2\pi)$.
+On the two incoming null legs put $a=(\omega-p)/2$ and
+$b=(\omega+p)/2$. Their plane phases are $\exp(iaU)$ and $\exp(ibV)$.
+The same normalized spinor supplies both amplitudes, so the state has
+Hardy diagonal kernels and the cross-leg kernel
+
+$$
+C_{+-}(U,V)=-\frac{\mu}{2\pi}
+K_0\!\left(|\mu|\sqrt{UV}\right),\qquad U,V>0.
+$$
+
+Here $K_0$ is the modified Bessel function. Its normalization follows
+independently from the equal-time cylinder Fourier integral. Restricting
+the global projector to a finite diamond gives a generally mixed CAR
+covariance. Its exact finite compressions retain this cross term; filling
+the negative spectrum after truncating an energy matrix selects a
+different state.
+
+Use an explicit auxiliary preparation, with fixed physical duration $S$
+and a smooth switch $\chi(s)$ supported in $(.1S,S)$, equal to one on
+$[.2S,.9S]$. Define
+
+$$
+q=\frac{N}{r},\qquad
+q_{\mathrm{aux}}=\frac{1}{R_0}
++\chi(U)\chi(V)\left(q-\frac{1}{R_0}\right).
+$$
+
+The auxiliary product metric has $r_{\mathrm{aux}}=R_0$ and
+$N_{\mathrm{aux}}=a_{\mathrm{aux}}=R_0q_{\mathrm{aux}}$.
+Blending q directly preserves its continuous first wall jets. Where the
+switches are one this metric is conformal to the physical metric and
+the canonical massless spinor is unchanged. This neighborhood includes
+the cap detector of Section 6.1.18. The construction assigns a state;
+it is not a physical formation history or an Einstein source model.
+Stress and clocks still use the physical metric, including its anomaly.
+
+For every angular sector the auxiliary Hamiltonian differs from the
+cylinder by a bounded time-dependent potential on a common radial
+domain. Its convergent interaction series gives unitary evolution.
+The angular direct sum is unitary as well. Moreover,
+
+$$
+\{H_{\kappa},\sigma_1\}=2\kappa q_{\mathrm{aux}}
+$$
+
+gives a gap at least $|\kappa|q_{\min}$ when
+$q_{\mathrm{aux}}\ge q_{\min}>0$.
+The prescribed covariance is $C(T)=U(T)C_0U(T)^\dagger$.
+
+**Local regularity proposition.** On an admitted regular patch, this
+state is Hadamard on any relatively compact smooth interior neighborhood
+inside the matched operator region. Both geometries therefore have a
+smooth physical two-point difference on their common cap neighborhood.
+
+The [proof and calculated boundary symbols](../docs/nsc-atlas-dirac-probe.md#local-hadamard-property-for-the-declared-preparation)
+make the calculus input explicit. Fold the two sides onto a half-line.
+The transparent condition is the allowed space of a constant Hermitian
+involution that anticommutes with the normal matrix. It has maximal zero
+flux. At real spacelike frequency the decaying-root map is invertible,
+uniformly away from glancing, including both angular polarizations.
+This verifies the complementing condition for the standard finite-bundle
+first-order boundary parametrix. One-sided smoothness supplies its jets.
+
+Normal regularity follows by pairing the unitary field with smooth
+tangential tests and transferring tangential derivatives through its
+first-order equation. The resulting map from the initial Hilbert space
+to every one-sided normal Sobolev space gives smooth normal traces.
+Boundary elliptic regularity confines singularities to the compressed
+causal cone. Splitting its two orientations then makes the unwanted
+component satisfy a smooth inhomogeneous boundary problem with absent
+past data; energy uniqueness makes it smooth. Glancing remains inside
+the causal cone and does not join its opposite time orientations.
+The local CAR and the regular physical conformal map finish the argument.
+
+The existing Weyl projector and transport algebra now receives the actual
+radar metric jets through fourth order. Here local p is conjugate to
+radar x, with $\omega=\sqrt{p^2+W^2}$; it is not the incoming cylinder
+momentum label. In the canonical Pauli frame the first subleading term
+is $c_1=-pW_T\sigma_3/(4\omega^3)$.
+The first discontinuous wall coefficient enters $c_2$, through
+$[W_{xx}]=-6\kappa(M_p-b)/R^4$. This curvature contribution is retained.
+At a cap detector the two models share all local subtraction terms.
+For a single covariance the fourth-order remainder is qualitatively
+of order minus five; the two-state difference is smooth there.
+
+This establishes existence of the local relative stress for this stated
+preparation. It does not evaluate it or provide a numerical tail constant.
+The full vacuum $\Psi/\Phi$, wall renormalization and physical selection
+of the preparation remain separate work. No astronomical measurement
+sets this root radius, switch, state or resulting numerical coefficients.
 
 ### 6.2. The retained local incoming gate
 

@@ -2532,7 +2532,7 @@ minima or fitted values. No numerical bound on the actual full stress
 is reported. The prepared state is time-evolved, so replacing it with
 the instantaneous projector would change the prescribed calculation.
 
-Five new real-boundary/operator controls pass in 1.5625 process-CPU seconds
+Six new real-boundary/operator controls pass in 1.953125 process-CPU seconds
 across development. They include the full angular principal matrix before
 diagonalizing k, independent Sylvester solves and sharp equal-band limits,
 and the exact constant-mass whole-line resolvent between separated half
@@ -2575,32 +2575,106 @@ normal derivatives from invertible A. Green's identity and the vanishing
 allowed boundary flux give distributional uniqueness in the normally
 regular class by duality against smooth advanced solutions.
 
-### The precise remaining boundary-calculus application
+<a id="the-precise-remaining-boundary-calculus-application"></a>
 
-The local elliptic-regularity step is now narrower than an unspecified
-global glancing theorem. The one-particle field is normally regular;
-the actual real spacelike boundary symbol satisfies the complementing
-condition, including both angular polarizations. What must be completed
-is applying the finite-bundle microlocal boundary parametrix to this
-coupled first-order projector, to confine its b-wavefront set to the
-compressed causal cone. The scalar Dirichlet statement is not itself
-that application.
+### Local Hadamard property for the declared preparation
 
-Conditional on that cone confinement, the positive-energy argument has
-no further glancing propagation assumption. A small-b microlocal
-partition separates the two oriented causal cones. Applying D and the
-forbidden boundary trace to the two components gives opposite-cone
-distributions whose sum is smooth; disjointness forces each source and
-boundary datum to be smooth. A time cutoff and the smooth well-posedness
-and uniqueness just proved make the initially absent component smooth
-everywhere. At glancing, tau remains nonzero on either oriented cone;
-it does not make the future and past cones intersect.
+**Proposition.** On an admitted regular patch with the positive auxiliary
+q defined above, the cylinder-prepared state is locally Hadamard in every
+relatively compact smooth interior neighborhood inside the matched
+operator region. The nested and smooth-cap preparations consequently
+have a smooth physical two-point difference on a common cap neighborhood.
+This statement concerns the declared probe and preparation, with no
+direct spinor surface interaction.
 
-The initial cylinder supplies the opposite orientations of the occupied
-and unoccupied fields. With cone confinement established, their local
-CAR in a smooth cap neighborhood would identify the Hadamard splitting,
-and the renormalized state difference would be smooth there. This last
-corollary remains conditional here. A finite frozen-symbol test alone
-does not establish that boundary-calculus step or a numerical stress
-error range. The [source study](arxiv-studies.md#actual-cap--wall-dirac-evolution-18-october-2026)
-records the exact microlocal statements inspected.
+The standard local calculus input is the finite-bundle first-order
+microlocal elliptic boundary-parametrix theorem with a non-characteristic
+normal matrix and a complementing local boundary projection. Its
+hypotheses can be checked here without assuming propagation across a
+nonsmooth glued metric. The one-particle field is normally regular by
+the energy argument above. On each folded side coefficients are smooth
+up to the boundary. The real spacelike decaying map is bijective, with
+matching rank and the uniform bounds just calculated.
+
+More explicitly, in a signed angular eigenspace let
+`N0=i*alpha*(W*beta-tau*I)/lambda` and `S=(I+N0)/2`.
+Then N0^2=I. S and I-S are complementary stable projections, generally
+oblique. The [implemented Poisson symbol](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
+for the unnormalized boundary jump g is
+`exp(-lambda*y)*(S*g,-(I-S)*g)`.
+It solves the frozen operator and reproduces exactly
+psi_exterior-psi_cap=g. On closed spacelike conic subsets lambda is
+comparable to the tangential covector norm. The displayed inverse has
+the smooth symbol estimates required for the standard boundary-parametrix
+recursion; successive errors use the same inverse and smooth one-sided
+jets. The calculation before angular diagonalization verifies the same
+complementing condition in every tangential direction. Thus local boundary
+elliptic regularity confines the b-wavefront set to the compressed causal
+cone. Glancing belongs to that cone and has not been declared elliptic.
+
+To propagate orientation, use a small-b microlocal partition into the
+two disjoint oriented cones and the elliptic complement. The latter is
+smooth. Applying D to the two remaining components gives opposite-cone
+distributions whose sum is smooth, so each source is smooth. The same
+argument for the forbidden boundary trace gives smooth boundary data;
+the partition need not itself preserve the boundary condition. These
+microlocal and trace properties extend componentwise to the finite bundle
+in the normally regular class. A time cutoff of the initially absent
+orientation has smooth source and boundary data and vanishes sufficiently
+far in the past. The smooth well-posedness and distributional uniqueness
+proved above make this component smooth everywhere. The two oriented
+cones stay disjoint at glancing because their nonzero covectors have
+opposite signs of tau and q_min>0.
+
+The initial occupied and unoccupied cylinder fields supply the two
+orientations. On a small smooth cap neighborhood separated from the
+wall, the local CAR propagator is the ordinary smooth Dirac propagator.
+Its splitting by the two opposite orientations is the local Hadamard
+splitting. The physical conformal map is smooth and nonvanishing there,
+so it preserves this property. Both states have the same cap geometry
+at fixed b; subtracting their common local singular part proves the
+stated smoothness of their difference. This completes the local argument.
+
+The [source study](arxiv-studies.md#actual-cap--wall-dirac-evolution-18-october-2026)
+records the normally-regular microlocal framework inspected. The scalar
+Dirichlet existence theorem is not applied to this spinor system; the
+coupled projection and first-order boundary symbols are calculated here.
+A separate native Grok review checked this adaptation and its
+normal-regularity estimate.
+
+For a single covariance, subtracting c0 through c4 leaves a qualitative
+order-minus-five local symbol remainder, not a remainder of every order.
+For the two prepared states on the same cap, all local singular terms
+cancel, so their difference is smooth. Neither conclusion supplies a
+computable numerical tail constant. No full vacuum stress value or
+Psi/Phi has been evaluated. Surface-coincident stress, full wall
+renormalization, physical formation of the auxiliary preparation and
+global horizon/asymptotic states are outside this local proposition.
+
+### Parent modes and a common equal-time kernel
+
+The existing 60-CPU-second root-control allowance also covers composition
+of its plane data, auxiliary propagation and a common kernel. Only the
+same manufactured 8/16-cell cylinder limit is used; no actual new field
+reference is admitted. `PreparedCylinderModes` now propagates coherent
+negative-energy parent columns and returns canonical xi and analytic xi_x.
+Its equal-time point split is x+eta/2,x-eta/2, with incoming dp/(2*pi)
+integrated before comparison with the independently integrated local Weyl
+momentum reference. The existing kernel data type and spectral declaration
+are reused without importing their old KS geometry or vertex frame.
+
+The interface requires an explicit spectrum declaration and positive
+quadrature weights. A partial panel remains partial. It checks that the
+physical endpoints lie in the matched-operator region; auxiliary metric
+factors are not substituted into physical stress. The kernel derivative
+is `(xi_x,plus*xi_minus^dagger-xi_plus*xi_x,minus^dagger)/2`.
+Incoming root momentum and local Weyl momentum are different integration
+variables. Comparing their cutoffs mode by mode would be incorrect.
+
+The independent conformal-cylinder limit compares this propagated kernel
+and its split derivative with the exact negative-band Fourier projector,
+using the same manufactured 8/16-cell control. The fine error is below
+2e-4 and the ratio of coarse to fine errors exceeds three; coincident
+Hermiticity and positivity also pass. This seventh root/interface control
+used 1.28125 process-CPU seconds in the recovered check. It introduces no
+physical reference result, spectral-tail estimate or new P001 evolution.

@@ -1,24 +1,29 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.11`, now includes the actual Dirac trace, radar chart, transfer and prepared mean metric/clock response, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.12`, now includes the actual Dirac trace, radar chart, prepared mean metric/clock response, a correlated continuum parent and its local regularity proposition, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
 ## An explicit correlated parent state and local Dirac subtraction
 
 The [operator estimates](nsc-atlas-dirac-probe.md#balanced-energy-estimates-and-an-explicit-limitation)
 now include a sharp balanced energy bound, a full first-correction graph
 bound, and exponential locality for the frozen nested-versus-cap projector.
-Five controls pass, including the full real-frequency angular boundary
+Six controls pass, including the full real-frequency angular boundary
 symbol and an exact continuum resolvent. Normal regularity of the
 prepared one-particle field follows from the unitary energy estimate.
-The remaining qualitative UV step is a specific coupled boundary-parametrix
-application; no full evolved stress or Psi/Phi value is asserted.
+The [local Hadamard proposition](nsc-atlas-dirac-probe.md#local-hadamard-property-for-the-declared-preparation)
+now supplies that qualitative UV step for the explicit preparation, using
+the coupled Poisson symbol and standard finite-bundle boundary calculus.
+Its common-cap relative stress exists. A numerical tail estimate and the
+actual evolved stress/Psi/Phi value are still uncomputed.
 
 The [static-product preparation alternative](nsc-atlas-dirac-probe.md#a-concrete-static-product-parent-and-deformation-route)
 now fixes the complete root covariance analytically, including its Bessel
 cross-leg kernel. It propagates that state with a declared auxiliary
 geometry whose canonical massless operator agrees with the actual future
 cap/wall operator. A bounded-potential construction gives unitary evolution
-and an exact gap estimate. Six independent root/interface controls pass.
+and an exact gap estimate. Seven independent root/interface controls pass,
+including the common equal-time kernel and its analytic split derivative
+against the exact conformal-cylinder limit.
 This is a specified state alternative, not the earlier energy-window
 minimizer. The uniform joint radial/angular remainder needed for its
 renormalized stress remains open; no new physical cutoff or P001 grid ran.

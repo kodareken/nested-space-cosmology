@@ -13,16 +13,19 @@ use a [bound calculator](../src/recursive_horizons/nsc_atlas_dirac_bounds.py),
 [real-frequency interface symbol](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
 and independent [band/resolvent](../tests/test_nsc_atlas_dirac_bounds.py) and
 [full-angular boundary](../tests/test_nsc_atlas_dirac_boundary_ellipticity.py) controls.
-Frozen locality and graph bounds are established; the time-evolved stress
-remainder and coupled boundary-calculus application remain distinct.
+Frozen locality and graph bounds are established. The explicit Poisson
+symbol also enters the local Hadamard proof; evaluating the time-evolved
+stress with a numerical tail estimate remains the next calculation.
 
 The [correlated static-product parent](nsc-atlas-dirac-probe.md#exact-correlated-root-data-and-its-finite-compressions)
 and fixed auxiliary preparation use the existing
 [preparation component](../src/recursive_horizons/nsc_atlas_dirac_preparation.py),
 [folded transparent domain](../src/recursive_horizons/nsc_atlas_dirac_evolution.py)
 and [root/interface controls](../tests/test_nsc_atlas_dirac_cylinder.py).
-This supplies one explicit continuum state rule and unitary evolution;
-the local stress remainder is still to be controlled.
+This supplies one explicit continuum state rule, unitary evolution and
+a common equal-time kernel interface. Its exact conformal-cylinder control
+checks the split derivative independently. The numerical stress tail
+remains to be controlled.
 
 The [actual radar UV subtraction](nsc-atlas-dirac-probe.md#reusing-the-fourth-order-symbol-on-the-actual-radar-geometry)
 uses [analytic radar jets and a Pauli-frame adapter](../src/recursive_horizons/nsc_atlas_dirac_symbol.py)
