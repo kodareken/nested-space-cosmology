@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2393500,
+      "bytes": 2394928,
       "path": "docs/lab-snapshot.json",
-      "sha256": "55ceb2cd07404bfbc59082fba096ed9f2575469e932c8200233cf8156b6992ae"
+      "sha256": "58539aa3bb25f149c1cafb020e529d42d713565bedd189c587dc2172c38b733d"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 528484,
+      "bytes": 531735,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "581e4a421571af8f02dc4f52d5122dc56507d3a2fe5bbd41e2560027316f877c"
+      "sha256": "e1acb95517dbf51b7573a6f694e16cea1ca2a0e73b718b2c3ea5dcc7e95c4121"
     },
     {
       "bytes": 6705,
@@ -16556,6 +16556,11 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
+      "bytes": 23631,
+      "path": "scripts/measure_nsc_conformal_causal_resolution.py",
+      "sha256": "70d49473850ee5e19cbb0233a4a92b8fada08ad1ed22c0b7794cd4568df20149"
+    },
+    {
       "bytes": 43418,
       "path": "scripts/measure_nsc_conformal_causal_response.py",
       "sha256": "c2a838f4ffc55b3be95fe231ce42a1ffaa7da47c0affa73cd5139d46506cc17d"
@@ -17644,6 +17649,11 @@
       "bytes": 23728,
       "path": "src/recursive_horizons/nsc_conformal_adm_source.py",
       "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea"
+    },
+    {
+      "bytes": 9862,
+      "path": "src/recursive_horizons/nsc_conformal_causal_resolution.py",
+      "sha256": "b9ef7012586712b3283c6bc23091ad0b0b8b19b3aac6a3ffe70547077acbd469"
     },
     {
       "bytes": 27167,
@@ -20106,6 +20116,11 @@
       "sha256": "f06a990e7053be6b0fe00986de7ccd29aa2618537baf6f7a6afbbe1e52c06f25"
     },
     {
+      "bytes": 8762,
+      "path": "tests/test_nsc_conformal_causal_resolution.py",
+      "sha256": "2cb7dfe625c7726796d24f2b4eec0502f5a57652c69f0567269fcb489ca1e826"
+    },
+    {
       "bytes": 2627,
       "path": "tests/test_nsc_conformal_geometric_average.py",
       "sha256": "46ed6efe623367e8ee7305efb1841da3bdeb39a55502440fe9a961d053475966"
@@ -21861,7 +21876,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "55ceb2cd07404bfbc59082fba096ed9f2575469e932c8200233cf8156b6992ae",
+  "lab_snapshot_sha256": "58539aa3bb25f149c1cafb020e529d42d713565bedd189c587dc2172c38b733d",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.7",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

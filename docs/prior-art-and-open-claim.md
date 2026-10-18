@@ -1,5 +1,57 @@
 # Prior art and admission of new research
 
+## Causal resolution of the already evolving conformal geometry
+
+**Prepared, not executed.** Douglas redirected the work to the actual
+cap--wall slip and the growing P001 mass gap before this application began.
+The canonical/clock/split component has nine passing manufactured controls;
+the application runner and its failure gates still need their own controls.
+The following is the saved proposed calculation, not a completed result or
+an instruction to resume it ahead of the current priorities.
+
+Reuse the original finite conformal Hamiltonian, its paired-phase tangent,
+the fixed physical reference span in the resolution record, and the existing
+finite Schur/Volterra identity. The missing connection is causal elimination
+of geometry variations in an observer's clock. This is the original local
+canonical model, not a completed Lorentzian spectral-complement calculation.
+Hold its state, couplings, spatial grid and preparation fixed.
+
+Push variations and rates to the owned log-canonical pairs, retaining all
+fermions. The selected geometric span is exactly the constant mode; use its
+analytic canonical projector, authenticated by the saved one-mode result,
+without repeating an eigensolve. Project variations along the full evolution,
+not a second nonlinear filtered spacetime. Carry `d tau_o=N_o dT` at the
+prolonged `x=1` observer. Integrate the closed retained/initial-drive/feedback
+split and compare it with the independently transformed original tangent.
+Exact chain-rule, clock, projection and manufactured evolution checks share
+**60 process-CPU seconds**; reuse the checked original physical JVP.
+
+At the existing receiver `(T=.3,x=1)` and emitters
+`(T=.175,x=.875/1.125)`, compute the redshift derivative at fixed receiver
+proper time. Conformal radial null speed remains one, so the emission and
+reception coordinate times shift together. Compare the original-tangent
+clock correction with the assembled retained/drive/feedback response plus
+its clock term. These are the same rays; no new trajectory or source is fit.
+
+After freezing the method, one application uses the original `nf=512`,
+`ng=511`, `nq=2048`, period 8, to `T=.3`, at the existing `.001/.0005`
+time steps. Budgets are setup 140, coarse 1900, fine 3800 and final analysis
+160 process-CPU seconds, with **6000 total** including setup. Use setup
+eight BLAS threads, then two processes with four threads each. Check the
+first full-step CPU forecast before continuing. No automatic rerun, new
+grid, scale root, source fit or constraint reset is admitted.
+
+Require baseline/old coordinate-tangent replay and new blockwise closure
+within `1e-8` of `max(1,abs(reference),abs(actual))`. Stop on loss of the
+log/clock chain rule, projection/state drift, or unresolved cancellation
+larger than `1e8` in the reconstructed variations. These are the three
+anticipated failures. A direct proper-time variation disagreeing with the
+reconstructed response would falsify this connection. Store at most 24000
+summary bytes and an optional ignored final checkpoint of at most 2000000
+bytes with its hash. Temporal differences are empirical indicators, not a
+continuum or physical error bound. A single source-direction response does
+not determine an absolute cosmological Lambda.
+
 ## Covariant curvature response and a static gravitational observable
 
 Extend the fixed-profile functional `(1/2)*Tr_4 H(D4^2)` to its covariant
