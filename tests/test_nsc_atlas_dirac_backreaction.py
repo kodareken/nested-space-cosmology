@@ -1,4 +1,5 @@
 """Independent charged-family and conserved-mass reconstruction controls."""
+import pickle
 import numpy as np
 import pytest
 from scipy.integrate import solve_ivp
@@ -55,12 +56,13 @@ def exact_charged_clock(chart,U,V,charge_squared,*,region='nested'):
     return radius,C
 
 
-@pytest.fixture(scope='module')
-def reference():
+@pytest.fixture(scope='module',params=('ode','quadrature'))
+def reference(request):
     chart = WallRadarChart()
     source = MaxwellControl(chart)
     model = MeanBackreaction(source,chart.duration,
-        initial_masses=(-1/(2*.45),-1/(2*.45)),wall_rtol=2e-10,wall_atol=2e-12)
+        initial_masses=(-1/(2*.45),-1/(2*.45)),wall_rtol=2e-10,wall_atol=2e-12,
+        wall_method=request.param)
     return chart,source,model
 
 
@@ -105,7 +107,7 @@ def test_smooth_cap_control_has_shared_observer_motion_not_a_membrane(reference)
     source = MaxwellControl(chart,region='cap')
     control = MeanBackreaction(source,chart.duration,
         initial_masses=(-1/(2*.45),-1/(2*.45)),shared_worldtube=nested,
-        wall_rtol=2e-10,wall_atol=2e-12)
+        wall_rtol=2e-10,wall_atol=2e-12,wall_method=nested.wall_method)
     u,v = chart.maps(.475)[0],chart.maps(.525)[0]
     measured = control.clock_response(u,v,ray_rtol=2e-10,ray_atol=2e-12)
     exact_r,exact_C = exact_charged_clock(chart,u,v,1e-6j,region='cap')
@@ -117,18 +119,21 @@ def test_smooth_cap_control_has_shared_observer_motion_not_a_membrane(reference)
     assert control.wall_state(v)['displacement'] == nested.wall_state(v)['displacement']
 
 
-def test_zero_source_has_no_mass_clock_or_radius_response():
+@pytest.mark.parametrize('wall_method',('ode','quadrature'))
+def test_zero_source_has_no_mass_clock_or_radius_response(wall_method):
     chart = WallRadarChart()
     source = MaxwellControl(chart,strength=0.)
     u,v = chart.maps(.475)[0],chart.maps(.525)[0]
-    model = MeanBackreaction(source,v)
+    model = MeanBackreaction(source,v,wall_method=wall_method)
+    model=pickle.loads(pickle.dumps(model))
     result = model.clock_response(u,v)
     for key in ('radius_change','log_radar_C_change','frequency_fractional_change',
                 'received_over_wall_frequency_change','mass','mass_path_gap'):
         assert result[key] == 0.
 
 
-def test_nonzero_lapse_source_against_exact_static_fluid_metric():
+@pytest.mark.parametrize('wall_method',('ode','quadrature'))
+def test_nonzero_lapse_source_against_exact_static_fluid_metric(wall_method):
     # A second exact family exercises psi_r, absent in Maxwell's T_rr=0.
     # rho=e/kappa, p_r=0, F=1-(1+e/3)r² and
     # psi=-e*log(F)/(4*(1+e/3)); p_t follows static conservation.
@@ -151,7 +156,8 @@ def test_nonzero_lapse_source_against_exact_static_fluid_metric():
                 energy_density=rho,radial_pressure=pr,angular_pressure=pt,outward_energy_flux=j))
     source = FluidControl(chart,region='cap')
     model = MeanBackreaction(source,chart.duration,initial_masses=(.45**3/6,.45**3/6),
-        shared_worldtube=FixedWorldtube(),wall_rtol=2e-10,wall_atol=2e-12)
+        shared_worldtube=FixedWorldtube(),wall_rtol=2e-10,wall_atol=2e-12,
+        wall_method=wall_method)
     U,V = chart.maps(.475)[0],chart.maps(.525)[0]
     measured = model.clock_response(U,V,ray_rtol=2e-10,ray_atol=2e-12)
     row = source.evaluate(U,V);r = row['fields']['radius']

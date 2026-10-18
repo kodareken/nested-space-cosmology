@@ -1,0 +1,91 @@
+{
+  "completed_worker_CPU_seconds": 133.90625,
+  "error": "mean wall history exhausted its setup CPU allowance",
+  "metadata": [
+    {
+      "actual_wall_rhs": 11917,
+      "cells": 64,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_defect": 3.3306690738754696e-16,
+      "incoming_flux": 0.9999998759067756,
+      "parent_mass": 0.39999999999999997,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.5499999999999973
+    },
+    {
+      "actual_wall_rhs": 12499,
+      "cells": 64,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_defect": 2.220446049250313e-16,
+      "incoming_flux": 0.9999998759067756,
+      "parent_mass": 0.4000320790839633,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.550005887843594
+    },
+    {
+      "actual_wall_rhs": 12688,
+      "cells": 64,
+      "central_mass": 5e-05,
+      "duration": 0.1256873632901346,
+      "flux_defect": 4.440892098500626e-16,
+      "incoming_flux": 0.9999998759067756,
+      "parent_mass": 0.4000160406165229,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.5500029439693167
+    },
+    {
+      "actual_wall_rhs": 15238,
+      "cells": 128,
+      "central_mass": 0.0001,
+      "duration": 0.1256873632901346,
+      "flux_defect": 4.440892098500626e-16,
+      "incoming_flux": 1.0000000000096445,
+      "parent_mass": 0.4000320790839633,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.550005887843594
+    },
+    {
+      "actual_wall_rhs": 15583,
+      "cells": 128,
+      "central_mass": 0.0,
+      "duration": 0.1256873632901346,
+      "flux_defect": 6.661338147750939e-16,
+      "incoming_flux": 1.0000000000096445,
+      "parent_mass": 0.39999999999999997,
+      "receiver_U": 0.10054989063210769,
+      "receiver_V": 0.08798115430309422,
+      "wall_end_radius": 0.5499999999999973
+    }
+  ],
+  "new_P001_grids": 0,
+  "results": [],
+  "schema": "nsc-atlas-dirac-mass-response-v2",
+  "source_commit": "bc4d39fe6e7e0300e363ec90d85889055a7551c6",
+  "source_sha256": {
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/measure_nsc_atlas_dirac_mass_response.py": "de71eb37779a74fb26d7b336b677581428326f0b751452bcafc9ae903fbe2ae3",
+    "scripts/measure_nsc_atlas_dirac_mean_clock.py": "d6445cec1bf4fda3e2a00d7652ad619802f047c035cca6fb61c655c9aa620988",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_backreaction.py": "a2530b38026b08b6007a32eed3d708397fd3b791f89233ae932f39d701e1fa36",
+    "src/recursive_horizons/nsc_atlas_dirac_compact_source.py": "a2ffccaf8f476eff828ccefffa59b939f74bacc182f68679f43069f2f2ca86b7",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "e54190b116d396b30d6125e700ad3225b16514ffc22c9381d5475a9651ff3786",
+    "src/recursive_horizons/nsc_atlas_dirac_gravity.py": "c217c1e499bc1841caa947e0809acf5490339369cf1edba0e3d8c7f04b06fadb",
+    "src/recursive_horizons/nsc_atlas_dirac_mean.py": "edc710307e6932fd672d4a4e5794e8883e8c1ff823ec7eccba842125c304c2a8",
+    "src/recursive_horizons/nsc_atlas_dirac_radar.py": "dfd2ba268ac8ff51876d55de85c0daf1c5cb4754aa1860afdcad23cffc7d87a9",
+    "src/recursive_horizons/nsc_atlas_dirac_scattering.py": "0472fc3005c33668020e724a949db0579b4ea7ed9fcb4cb5802e7c0f05a83520",
+    "src/recursive_horizons/nsc_atlas_dirac_stress.py": "cd0030b647187b201e7a72a8cb0dab22db74b5c172a609cd9e857047c3db4f07",
+    "src/recursive_horizons/nsc_atlas_dirac_tidal.py": "77d9e74976bb58ee1e091e27c67712d54c62bde9bde3d960a8a115bd254544d5",
+    "tests/test_nsc_atlas_dirac_backreaction.py": "cebb6b6ae0b82b8b4837aa4c39552a89b7a6c29e945e081e0921fa82bc2b635d",
+    "tests/test_nsc_atlas_dirac_compact_source.py": "4cf593939298b810bda3172c6d592ff529e85471d2a5fb8adc02e1107e5be68d",
+    "tests/test_nsc_atlas_dirac_mean.py": "aa27e72efcbe2757227afb9fde5bb583a559091d68159ddc94cc97c53ca28880",
+    "tests/test_nsc_atlas_dirac_tidal.py": "845e9b399a6d66ed61499c5163fd1b00ae14c58dc7473b3264f6e01c732d89e8"
+  },
+  "status": "execution_exit_recorded"
+}

@@ -17,6 +17,7 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 from .nsc_atlas_cap_wall_response import reference_coefficients,wall_response_coefficients
+from .nsc_atlas_dirac_wall_integral import WallPrimitive
 
 
 def mass_one_form(fields,stress,*,gravity_coupling=1.):
@@ -45,11 +46,15 @@ class MeanBackreaction:
 
     def __init__(self,source,end,*,gravity_coupling=1.,initial_masses=(0.,0.),
                  initial_displacement=0.,shared_worldtube=None,
-                 wall_rtol=2e-8,wall_atol=2e-10,wall_cpu_limit=None):
+                 wall_rtol=2e-8,wall_atol=2e-10,wall_cpu_limit=None,
+                 wall_method='ode',wall_order=12):
         self.source,self.chart = source,source.chart
         self.gravity_coupling = gravity_coupling
         self.start,self.end = float(source.start),float(end)
         self.shared_worldtube = shared_worldtube
+        if wall_method not in ('ode','quadrature'):
+            raise ValueError('wall method must be ode or quadrature')
+        self.wall_method=wall_method
         if not 0<=self.start<self.end<=self.chart.duration:
             raise ValueError('wall history must lie in the declared proper-clock interval')
         if self.start>0 and (any(initial_masses) or initial_displacement):
@@ -59,6 +64,7 @@ class MeanBackreaction:
         self.initial = np.array([*initial_masses,initial_displacement],dtype=float)
         self.wall_rhs_calls = 0
         deadline = None if wall_cpu_limit is None else time.process_time()+wall_cpu_limit
+        self._wall_setup_deadline=deadline
         def rhs(t,y):
             if deadline is not None and time.process_time()>deadline:
                 raise RuntimeError('mean wall history exhausted its setup CPU allowance')
@@ -75,12 +81,20 @@ class MeanBackreaction:
                 rate = self.shared_worldtube.wall_state(t)['displacement_rate']
                 mu_dot = nu_dot
             return [mu_dot,nu_dot,rate]
-        solution = solve_ivp(rhs,(self.start,self.end),self.initial,method='DOP853',
-            rtol=wall_rtol,atol=wall_atol,max_step=self.chart.duration/50,dense_output=True)
-        if not solution.success:
-            raise RuntimeError(solution.message)
-        self.wall_solution = solution.sol
-        self.wall_nfev = solution.nfev
+        if wall_method=='ode':
+            solution = solve_ivp(rhs,(self.start,self.end),self.initial,method='DOP853',
+                rtol=wall_rtol,atol=wall_atol,max_step=self.chart.duration/50,dense_output=True)
+            if not solution.success:
+                raise RuntimeError(solution.message)
+            self.wall_solution = solution.sol
+            self.wall_nfev = solution.nfev
+        else:
+            self.wall_solution=WallPrimitive(self._geometry,self._wall_mass_rate,start=self.start,end=self.end,
+                breakpoints=source.breakpoints,initial=self.initial,
+                with_displacement=shared_worldtube is None,order=wall_order)
+            self.wall_nfev=self.wall_rhs_calls
+            # Later partial-cell evaluations have their own clock CPU guard.
+            self._wall_setup_deadline=None
         self._quadrature_rules = {}
         self.source_evaluations = 0
         self._cpu_deadline = None
@@ -88,7 +102,23 @@ class MeanBackreaction:
     def _geometry(self,t):
         if hasattr(self.chart,'wall_geometry'):
             return self.chart.wall_geometry(t)
-        return reference_coefficients(float(self.chart.radius_at_clock(t)))
+        radii=(self.source.points.wall_radii(t) if hasattr(self.source.points,'wall_radii')
+               else self.chart.radius_at_clock(t))
+        return reference_coefficients(radii)
+
+    def _wall_mass_rate(self,t):
+        # Bound callbacks keep the prepared metric picklable for process workers.
+        if self._wall_setup_deadline is not None and time.process_time()>self._wall_setup_deadline:
+            raise RuntimeError('mean wall quadrature exhausted its setup CPU allowance')
+        self.wall_rhs_calls+=np.asarray(t).size
+        g=self._geometry(t)
+        R=g['x']
+        mean=self.source.evaluate(t,t)['orthonormal']
+        j,pr=mean['outward_energy_flux'],mean['radial_pressure']
+        nu=-self.gravity_coupling*R*R*(g['beta_minus']*j+g['v']*pr)/2
+        mu=(nu if self.shared_worldtube is not None else
+            -self.gravity_coupling*R*R*(g['beta_plus']*j+g['v']*pr)/2)
+        return np.array([mu,nu])
 
     def _response(self,g,rho,mu,nu):
         if not hasattr(self.chart,'wall_geometry'):

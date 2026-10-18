@@ -29,8 +29,10 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCES=tuple(dict.fromkeys((*MEAN_SOURCES,
     'src/recursive_horizons/nsc_atlas_dirac_compact_source.py',
     'src/recursive_horizons/nsc_atlas_dirac_tidal.py',
+    'src/recursive_horizons/nsc_atlas_dirac_wall_integral.py',
     'tests/test_nsc_atlas_dirac_compact_source.py',
     'tests/test_nsc_atlas_dirac_tidal.py',
+    'tests/test_nsc_atlas_dirac_wall_integral.py',
     'scripts/measure_nsc_atlas_dirac_mass_response.py')))
 MASSES=(0.,5e-5,1e-4)
 CPU_LIMIT=480
@@ -48,18 +50,22 @@ def prepare(cells,mass):
                 raise RuntimeError('compact-source setup exhausted 30 CPU seconds')
             return value
         nested_source=PreparedDiracSource(chart,cells)
-        nested=MeanBackreaction(nested_source,U,wall_rtol=2e-11,wall_atol=2e-13,
-            wall_cpu_limit=remaining())
         cap_source=PreparedDiracSource(chart,cells,region='cap')
-        cap=MeanBackreaction(cap_source,U,shared_worldtube=nested,
-            wall_rtol=2e-11,wall_atol=2e-13,wall_cpu_limit=remaining())
+        models=dict(nested={},cap={})
+        for order in (8,12):
+            nested=MeanBackreaction(nested_source,U,wall_method='quadrature',wall_order=order,
+                wall_cpu_limit=remaining())
+            cap=MeanBackreaction(cap_source,U,shared_worldtube=nested,
+                wall_method='quadrature',wall_order=order,wall_cpu_limit=remaining())
+            models['nested'][order],models['cap'][order]=nested,cap
         metadata=dict(cells=cells,central_mass=mass,parent_mass=chart.parent_mass,
             duration=chart.duration,wall_end_radius=chart.wall_end_radius,
             receiver_U=U,receiver_V=V,
             incoming_flux=nested_source.grid.incoming_flux,
             flux_defect=max(nested_source.grid.flux_error,cap_source.grid.flux_error),
-            actual_wall_rhs=nested.wall_nfev+cap.wall_nfev)
-        return dict(models=dict(nested=nested,cap=cap),metadata=metadata,
+            wall_quadrature_setup_source_nodes=sum(m.wall_nfev
+                for versions in models.values() for m in versions.values()))
+        return dict(models=models,metadata=metadata,
             pid=os.getpid(),process_CPU_total=time.process_time())
 
 
@@ -158,14 +164,14 @@ def main():
         if time.process_time()+sum(totals.values())+8>CPU_LIMIT:
             raise RuntimeError('Shared mass-response CPU allowance exhausted')
     pool=ProcessPoolExecutor(max_workers=workers,mp_context=multiprocessing.get_context('spawn'))
+    pending=[]
     try:
         preparation=[pool.submit(prepare,n,b) for n in (64,128) for b in MASSES]
-        pending=[]
         for future in as_completed(preparation):
             value=future.result();account(value)
             data=value['metadata'];metadata.append(data)
-            for geometry,model in value['models'].items():
-                for order in (8,12):
+            for geometry,versions in value['models'].items():
+                for order,model in versions.items():
                     pending.append(pool.submit(observe,model,data['cells'],data['central_mass'],
                         geometry,order,data['receiver_U'],data['receiver_V']))
             print(json.dumps(dict(prepared_cells=data['cells'],central_mass=data['central_mass'])),flush=True)
@@ -175,11 +181,20 @@ def main():
             print(json.dumps(dict(cells=row['cells'],central_mass=row['central_mass'],geometry=row['geometry'],
                 order=row['order'],clock=row['clock'],mass_gap=row['normalized_mass_path_gap'])),flush=True)
     except Exception as error:
+        recorded={(r['cells'],r['central_mass'],r['geometry'],r['order']) for r in rows}
+        for future in pending:
+            if future.done() and not future.cancelled() and future.exception() is None:
+                value=future.result()
+                totals[value['pid']]=max(totals.get(value['pid'],0.),value['process_CPU_total'])
+                r=value['result'];key=(r['cells'],r['central_mass'],r['geometry'],r['order'])
+                if key not in recorded:
+                    rows.append(r);recorded.add(key)
         if hasattr(pool,'terminate_workers'):
             pool.terminate_workers()
-        failure=dict(schema='nsc-atlas-dirac-mass-response-v2',status='execution_exit_recorded',
+        failure=dict(schema='nsc-atlas-dirac-mass-response-v3',status='execution_exit_recorded',
             source_commit=commit,source_sha256=hashes,error=str(error),results=rows,metadata=metadata,
-            completed_worker_CPU_seconds=sum(totals.values()),new_P001_grids=0)
+            completed_worker_CPU_seconds=sum(totals.values()),interrupted_worker_CPU_unavailable=True,
+            uncollected_worker_work_possible=True,new_P001_grids=0)
         args.output.write_text(json.dumps(failure,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')
         raise SystemExit(str(error))
     finally:
@@ -193,7 +208,7 @@ def main():
         tidal_ratio_grid_spread=quantum*s['tidal_ratio_grid_spread'],
         clock_derivative_per_m=quantum*s['levels'][128]['extrapolated_clock_mass_derivative']/ell)
         for g,s in summary.items()}
-    record=dict(schema='nsc-atlas-dirac-mass-response-v2',
+    record=dict(schema='nsc-atlas-dirac-mass-response-v3',
         status='unresolved_prepared_mass_response' if issues else 'prepared_parametric_mass_response_evaluated',
         source_commit=commit,source_sha256=hashes,validation_issues=issues,
         model=dict(H_ell=1.,k_wall_ell=2.,initial_wall_radius=.45,
@@ -205,9 +220,10 @@ def main():
         observer=dict(U_over_duration=.8,V_over_duration=.7,phase='-V, emitted toward cap at the earlier wall time V',
             frame='fixed proper-wall radar position',
             cap_control='smooth SdS continuation with same classical and mean nested areal-worldtube motion; no membrane'),
-        precision=dict(wall_rtol=2e-11,wall_atol=2e-13,ray_rtol=2e-8,ray_atol=2e-10,
+        precision=dict(wall_method='triangular mass and rho/v piecewise quadrature',
+            wall_and_bulk_quadrature_orders=[8,12],ray_rtol=2e-8,ray_atol=2e-10,
             diagnosis=DIAGNOSIS,diagnosis_sha256=diagnosis_hash,
-            reason='same-field wall mass/clock error floor; source, field grids, ray method and acceptance unchanged'),
+            reason='adaptive wall precision/cost floor; exact integrating factor, same source, fields, ray and acceptance'),
         metadata=metadata,results=rows,comparison=summary,nesting_difference=delta,
         physical_scale=dict(ell_m=ell,central_mass_length_m=1.,
             scale_origin='supplied nominal scale, not calibrated to data',

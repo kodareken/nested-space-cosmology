@@ -187,7 +187,8 @@ def test_nonzero_mass_family_matches_full_rays_and_all_wall_jumps(model):
     assert ext['potential_x']==pytest.approx(cap['potential_x'],abs=4e-12)
 
 
-def test_GR_reconstruction_varies_with_the_nonzero_mass_background(model):
+@pytest.mark.parametrize('wall_method',('ode','quadrature'))
+def test_GR_reconstruction_varies_with_the_nonzero_mass_background(model,wall_method):
     b=1e-4
     chart=CompactMassChart(model.chart,b)
     class MaxwellSource:
@@ -206,7 +207,8 @@ def test_GR_reconstruction_varies_with_the_nonzero_mass_background(model):
                 outward_energy_flux=j))
     source=MaxwellSource()
     mean=MeanBackreaction(source,chart.duration,
-        initial_masses=(-1/(2*.45),-1/(2*.45)),wall_rtol=2e-11,wall_atol=2e-13)
+        initial_masses=(-1/(2*.45),-1/(2*.45)),wall_rtol=2e-11,wall_atol=2e-13,
+        wall_method=wall_method)
     for U,V,side in ((.8*chart.duration,.7*chart.duration,'cap'),
                      (.2*chart.duration,.8*chart.duration,'exterior')):
         result=mean.clock_response(U,V,ray_rtol=2e-11,ray_atol=2e-13)

@@ -142,15 +142,21 @@ class RadarPointEvaluator:
 
     def __call__(self,U,V,*,region=None):
         U,V = np.broadcast_arrays(np.asarray(U,dtype=float),np.asarray(V,dtype=float))
-        unique,inverse = np.unique(np.r_[U.ravel(),V.ravel()],return_inverse=True)
+        radii=self.wall_radii(np.r_[U.ravel(),V.ravel()])
+        ru,rv = radii[:U.size].reshape(U.shape),radii[U.size:].reshape(V.shape)
+        return self.chart.from_wall_radii(ru,rv,region=self.region if region is None else region,
+                                          angular_k=self.angular_k)
+
+    def wall_radii(self,clock):
+        """Share exact wall-clock inversions with the metric quadratures."""
+        clock=np.asarray(clock,dtype=float)
+        unique,inverse = np.unique(clock.ravel(),return_inverse=True)
         missing = np.array([x for x in unique if float(x) not in self._radii])
         if len(missing):
             solved = self.chart.radius_at_clock(missing)
             self._radii.update((float(x),float(r)) for x,r in zip(missing,solved))
         radii = np.array([self._radii[float(x)] for x in unique])[inverse]
-        ru,rv = radii[:U.size].reshape(U.shape),radii[U.size:].reshape(V.shape)
-        return self.chart.from_wall_radii(ru,rv,region=self.region if region is None else region,
-                                          angular_k=self.angular_k)
+        return radii.reshape(clock.shape)
 
 
 class PreparedDiracSource:

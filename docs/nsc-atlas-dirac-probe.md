@@ -1692,3 +1692,57 @@ They generally differ even for a vacuum mass perturbation with A=B.
 This explicit boundary convention is distinct from discarding the
 radial zero modes; a full potential ratio must state which one it uses.
 No numerical full-Psi/Phi result is inferred from this unevaluated map.
+
+### Wall integrals after the v2 setup limit
+
+The `bc4d39f`
+[v2 execution](../results/summaries/nsc-atlas-dirac-mass-response-v2.json)
+hits a setup's 30-CPU-second guard. Five preparation pairs finish, but
+the N=128,b=5e-5 pair does not; no complete observation is collected.
+The 133.90625 completed-worker CPU seconds exclude interrupted/uncollected
+worker work and are not the total charge. This is a numerical execution
+exit, not an additional physical exclusion. Its record is preserved.
+The allowance is not increased, and no additional field grid is run.
+
+The wall equations have a direct triangular solution. Integrate the
+two specified mass-flux laws for mu and nu, then use
+`(log v)_dot=acc/v` to obtain
+
+```text
+rho(t)/v(t) = rho(t0)/v(t0)
+  + integral_t0^t [beta_plus*(mu-nu)/(k*R^2)+mu/R]/v^2 dt.
+```
+
+The [wall primitive](../src/recursive_horizons/nsc_atlas_dirac_wall_integral.py)
+uses piecewise Gauss quadrature on existing field-cell breakpoints.
+Masses at an outer quadrature node use direct partial-cell quadrature;
+all inner nodes are evaluated together. It stores cumulative masses and
+rho/v at edges, then directly integrates only the partial cell for an
+arbitrary query. It differentiates neither a stored waveform nor a
+mass interpolant and adds no physical boundary condition. The smooth
+control only integrates its cap mass; its radius is still supplied by
+the same nested observer worldtube.
+
+This reformulation admits 120 development process-CPU seconds for
+exact nonconstant-speed/corner integrating-factor controls and the
+existing independent charged/fluid GR controls on both wall methods,
+including a nonzero compact mass. The physical field data and initial
+conditions remain fixed. A failed identity stops this formulation for
+diagnosis before a new physical reference is admitted.
+
+The wall-integral and GR controls pass: 21 tests in 70.84375 CPU seconds.
+Seven selected callback/cache and process-pickling controls then pass in
+31.65625 CPU seconds, for a shared development charge of 102.5 CPU seconds.
+The exact clock inversions are shared through the existing field-point
+cache; the calculation is unchanged. Bound method callbacks preserve
+the mean metric across the spawned worker handoff.
+
+One v3 physical reference is admitted under the same 480-CPU-second,
+30-second setup/clock and 32-KiB limits. It replaces the wall ODE with
+the triangular primitive, using wall order 8 together with bulk order 8
+and wall order 12 together with bulk order 12. Both orders reuse the
+same propagated field. The three masses, 64/128 field resolutions,
+state, observer, physical scale and acceptance conditions stay fixed.
+An eight-process pool still carries the independent cases; no new
+P001 or Dirac field resolution is admitted. Another failed requirement
+stops this reference for a recorded diagnosis rather than another grid.
