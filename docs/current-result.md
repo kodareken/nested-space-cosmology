@@ -4,6 +4,15 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [continuum projection comparison](nsc-atlas-dirac-probe.md#differentiating-the-constrained-source-projection)
+still leaves a .149465 nested-minus-cap finite Hilbert mismatch at
+order48 and the smaller split, despite endpoint/mean agreement. The
+[finite algorithm derivative](nsc-atlas-dirac-probe.md#differentiating-the-existing-finite-cell-map)
+now differentiates the existing gate updates, flux weights, source
+densities and constraints directly. Four controls pass, including a
+complete adapter comparison with independent parameter differences.
+Its same-grid physical diagnosis is next; the local stress stays open.
+
 The [nonconstant source-moment diagnosis](nsc-atlas-dirac-probe.md#nonconstant-source-moment-compatibility-check)
 finds a finite derivative mismatch in the same N128 maps. At order48,
 the correction-induced probe1 changes by5.32484e-7/5.16415e-7 at the two

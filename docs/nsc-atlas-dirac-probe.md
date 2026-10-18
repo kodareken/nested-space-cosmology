@@ -3278,3 +3278,54 @@ physical diagnostic. Both boundary orientations, a smooth nonpolynomial
 kernel, the cubic finite Hilbert moment and the separable-potential source
 targets are checked. The producer's `--diagnose-projection-derivative`
 option compares both spatial representations on the existing maps.
+
+At frozen method `d02559a`, the physical diagnosis uses14.09375 CPU and
+10.401065 wall seconds (22.40625 CPU including controls). The maximum
+ray-quadrature estimate is3.536e-13 and the imposed spatial endpoint error
+is2.931e-14. The nested-minus-cap finite endpoint-subtracted Hilbert norm
+of the new-minus-independent spatial kernels is .267449/.265511 at
+order24 and .160527/.149465 at order48, for eta/S=.02/.01. Their mean
+differences are at rounding precision, below2.3e-16.
+
+The new smaller-split nonconstant residuals, probes1/2/4/8, are
+1.41691e-7/1.50981e-7/1.85418e-7/3.84061e-7 at order24 and
+2.91989e-7/1.63139e-7/1.24802e-7/3.87766e-7 at order48. Some improve,
+but the mean ratio remains1.74131 and nonconstant ratios still vary.
+The continuum substitution therefore does not settle the finite-cell
+derivative; a finite stress inference remains stopped. The Hilbert
+functional is a compatibility diagnostic, not the stress itself.
+
+### Differentiating the existing finite cell map
+
+The missing connection is now the derivative of the actual finite
+algorithm. Extend `MeanModeGrid` with an optional forward parameter
+tangent through its existing Cayley updates; keep its physical PDE jets
+separate. At fixed N, use U_x=-1,V_x=1, du_x=-1/(N-.5),dv_x=1/(N-.5),
+and W_dot=-u_i*W_u/U+v_j*W_v/V. Differentiate the gate, its flux weights
+and its midpoint extraction with incoming cardinal values held fixed.
+
+All reconstruction knots divided by L are fixed. Consequently its exact
+raw coefficient derivative is `_project_cells(row_dot-lambda*row/L, ...,
+gamma_dot)`, with the same L,width and analytic total endpoint derivative.
+Use this c_dot in the differentiated source constraints, including the
+moving basis. This supplies a derivative of the declared finite
+reconstruction, not a continuum error estimate or a vacuum stress.
+
+Before the same fixed-grid diagnosis, check a nonuniform rectangular
+gate perturbation against direct finite differences, the zero-potential
+limit, and differentiation of the complete polynomial reconstruction.
+The shared allowance is90 process-CPU seconds for these controls and
+one same-N128/two-split application, with eight workers and no covariance
+or new field resolution. Missing flux-weight terms, the density's 1/L
+factor and the moving source constraints are the anticipated failures.
+Independent parameter differences and the moment residuals reject an
+incorrect tangent; unresolved continuum error still stops stress inference.
+
+The implementation extends the existing `_mode_kernel` optionally; its
+ordinary field values and physical jets stay identical. Two new tangent
+controls and the existing CAR/flux control pass in4.875 CPU seconds. A
+complete N8 cylinder adapter control, including source constraints and
+the moving-density projection, passes in1.328125 CPU seconds. Total
+6.203125 before the physical diagnosis. The existing producer exposes
+this comparison with `--diagnose-discrete-derivative`; it writes no data
+file and runs no covariance contraction.

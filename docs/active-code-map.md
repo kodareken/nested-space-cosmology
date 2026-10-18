@@ -51,6 +51,12 @@ uses `constrained_projection_derivative` and analytic preparation jets;
 four independent controls pass before the same producer's
 `--diagnose-projection-derivative` comparison. The continuum identity is
 conditional when applied to the finite cell reconstructions.
+The conditional identity leaves a finite Hilbert mismatch in the actual
+maps. The [finite algorithm derivative](nsc-atlas-dirac-probe.md#differentiating-the-existing-finite-cell-map)
+extends `MeanModeGrid` with optional `parameter_endpoint`, then supplies
+the exact raw coefficient derivative to the same constraint derivative.
+Four gate/flux, reconstruction and complete-adapter controls pass.
+The existing producer compares this in `--diagnose-discrete-derivative`.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).

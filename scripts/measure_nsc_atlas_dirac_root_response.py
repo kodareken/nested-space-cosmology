@@ -40,6 +40,7 @@ SOURCES=tuple('src/recursive_horizons/'+name+'.py' for name in (
     'nsc_atlas_cap_wall_response','nsc_atlas_causal_reference','nsc_atlas_dirac_evolution'))+(
     'tests/test_nsc_atlas_dirac_retarded.py','tests/test_nsc_atlas_dirac_root_pairing.py',
     'tests/test_nsc_atlas_dirac_preparation.py',
+    'tests/test_nsc_atlas_dirac_mean.py',
     'scripts/measure_nsc_atlas_dirac_root_response.py')
 
 
@@ -61,7 +62,8 @@ def relative_pair(a,b,c,d,mu):
         first['bessel_series_tail_bound']+second['bessel_series_tail_bound'])
 
 
-def endpoint(preparation,U,V,n,integral_cache,*,order=24,workers=8,observer_jets=False):
+def endpoint(preparation,U,V,n,integral_cache,*,order=24,workers=8,observer_jets=False,
+             observation_parameter_jet=False):
     du,dv=U/(n-.5),V/(n-.5)
     u=(np.arange(n)+.5)*du;v=(np.arange(n)+.5)*dv
     fields=preparation.fields(*np.meshgrid(u,v,indexing='ij'))
@@ -93,7 +95,8 @@ def endpoint(preparation,U,V,n,integral_cache,*,order=24,workers=8,observer_jets
         potential_u=(fields['potential_t']-fields['potential_x'])/2,
         potential_v=(fields['potential_t']+fields['potential_x'])/2,
         boundary_square_integrals=[v[0] for v in integrals],
-        boundary_mixed_integrals=[v[1] for v in integrals],order=order,workers=workers)
+        boundary_mixed_integrals=[v[1] for v in integrals],order=order,workers=workers,
+        observation_parameter_jet=observation_parameter_jet)
     result['endpoint_quadrature_estimate']=max(errors)
     if observer_jets:
         jets=preparation.potential_null_jets(U,V)
@@ -303,7 +306,7 @@ def diagnose_observer_moments(commit,hashes):
     print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
 
 
-def diagnose_projection_derivative(commit,hashes):
+def diagnose_projection_derivative(commit,hashes,*,discrete=False):
     """Conditional projection derivative versus independently evolved row."""
     started=time.process_time();wall=time.perf_counter()
     chart=WallRadarChart();S=chart.duration;U,V=.8*S,.7*S;degrees=(0,1,2,4,8)
@@ -314,7 +317,8 @@ def diagnose_projection_derivative(commit,hashes):
         eta=fraction*S;maps={}
         for g,preparation in preparations.items():
             for side,point in enumerate(((U-eta/2,V+eta/2),(U+eta/2,V-eta/2))):
-                maps[g,side]=endpoint(preparation,*point,128,cache,order=48,observer_jets=True)
+                maps[g,side]=endpoint(preparation,*point,128,cache,order=48,observer_jets=True,
+                    observation_parameter_jet=discrete)
                 quadrature_errors.append(maps[g,side]['endpoint_quadrature_estimate'])
                 if time.process_time()-started>90:
                     raise RuntimeError('Projection derivative diagnosis exhausted its 90 process-CPU seconds')
@@ -323,7 +327,7 @@ def diagnose_projection_derivative(commit,hashes):
             for g in preparations:
                 fields=[retarded_response(maps[g,side],'field',order,source_jet=True) for side in (0,1)]
                 old=[retarded_response(maps[g,side],'spatial',order) for side in (0,1)]
-                new=[differentiated_retarded_response(maps[g,side],order) for side in (0,1)]
+                new=[differentiated_retarded_response(maps[g,side],order,discrete=discrete) for side in (0,1)]
                 commutators[g]=np.array([[new[side].green[leg]-old[side].green[leg]
                     for leg in (0,1)] for side in (0,1)])
                 for side in (0,1):
@@ -355,14 +359,17 @@ def diagnose_projection_derivative(commit,hashes):
                     large_over_small_by_probe=[float(x/y) if max(x,y)>1e-11 and y else None for x,y in zip(a,b)]))
     if max(endpoint_errors)>1e-9:
         raise RuntimeError('Differentiated projection failed its exact endpoint trace')
-    result=dict(diagnostic='conditional_constrained_projection_derivative',method_commit=commit,
+    result=dict(diagnostic='finite_map_projection_derivative' if discrete else
+        'conditional_constrained_projection_derivative',method_commit=commit,
         source_fingerprint=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),
         cells=128,angular_k=1,detector_U_over_S=.8,detector_V_over_S=.7,
         probe_degrees=degrees,fixed_source_reference_duration=S,rows=rows,split_ratios=ratios,
         maximum_endpoint_trace_error=max(endpoint_errors),maximum_ray_quadrature_estimate=max(quadrature_errors),
         compute=dict(process_CPU_seconds=time.process_time()-started,CPU_limit_seconds=90,
             wall_seconds=time.perf_counter()-wall,mode_workers=8,retained_full_arrays=False),
-        scope='Exact continuum projection identity evaluated on cell maps; not a proof of their derivative. No covariance, finite stress, angular completion or source-induced slip.')
+        scope=('Analytic derivative of the declared finite reconstruction; continuum error remains uncontrolled. '
+            if discrete else 'Exact continuum projection identity evaluated on cell maps; not a proof of their derivative. ')
+            +'No covariance, finite stress, angular completion or source-induced slip.')
     print(json.dumps(result,sort_keys=True,allow_nan=False),flush=True)
 
 
@@ -373,9 +380,12 @@ def main():
     parser.add_argument('--diagnose-source-logs',action='store_true')
     parser.add_argument('--diagnose-observer-moments',action='store_true')
     parser.add_argument('--diagnose-projection-derivative',action='store_true')
+    parser.add_argument('--diagnose-discrete-derivative',action='store_true')
     args=parser.parse_args()
-    diagnostic=any((args.diagnose_source_logs,args.diagnose_observer_moments,args.diagnose_projection_derivative))
-    if sum((args.diagnose_source_logs,args.diagnose_observer_moments,args.diagnose_projection_derivative))>1:
+    diagnostic=any((args.diagnose_source_logs,args.diagnose_observer_moments,
+        args.diagnose_projection_derivative,args.diagnose_discrete_derivative))
+    if sum((args.diagnose_source_logs,args.diagnose_observer_moments,
+            args.diagnose_projection_derivative,args.diagnose_discrete_derivative))>1:
         parser.error('choose one coefficient, moment or projection diagnosis')
     if diagnostic and (args.output is not None or args.stage!='initial'):
         parser.error('diagnosis prints its small table; do not combine it with output or stage')
@@ -398,6 +408,9 @@ def main():
         return
     if args.diagnose_projection_derivative:
         diagnose_projection_derivative(commit,hashes)
+        return
+    if args.diagnose_discrete_derivative:
+        diagnose_projection_derivative(commit,hashes,discrete=True)
         return
     cpu_start=time.process_time();wall_start=time.perf_counter();worker_totals={}
     def budget():

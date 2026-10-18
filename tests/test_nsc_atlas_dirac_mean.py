@@ -81,6 +81,28 @@ def test_same_CAR_transfer_flux_weights_and_bounded_evaluation():
             grid.evaluate(u,v)
 
 
+def test_parameter_tangent_differentiates_the_same_rectangular_gate_map_and_flux_weights():
+    rng=np.random.default_rng(1731);shape=(6,7)
+    w=rng.normal(size=shape);dw=rng.normal(size=shape)
+    plus=rng.normal(size=shape[0])+1j*rng.normal(size=shape[0])
+    minus=rng.normal(size=shape[1])+1j*rng.normal(size=shape[1])
+    kwargs=dict(potential_u=np.zeros(shape),potential_v=np.zeros(shape),
+        incoming_plus=plus,incoming_minus=minus,plus_u=np.zeros(shape[0]),minus_v=np.zeros(shape[1]))
+    du,dv,ddu,ddv=.11,.13,.03,-.02
+    plain=MeanModeGrid(w,du,dv,**kwargs)
+    tangent=MeanModeGrid(w,du,dv,**kwargs,parameter_potential=dw,parameter_du=ddu,parameter_dv=ddv)
+    for old,new in zip(plain.jets,tangent.jets):
+        np.testing.assert_array_equal(old,new)
+    def value(delta):
+        return MeanModeGrid(w+delta*dw,du+delta*ddu,dv+delta*ddv,**kwargs).jets[0][-1,-1]
+    h=1e-4
+    independent=(-value(2*h)+8*value(h)-8*value(-h)+value(-2*h))/(12*h)
+    np.testing.assert_allclose(tangent.parameter_endpoint,independent,rtol=3e-10,atol=2e-11)
+    zero=MeanModeGrid(np.zeros(shape),du,dv,**kwargs,parameter_potential=np.zeros(shape),
+        parameter_du=ddu,parameter_dv=ddv)
+    np.testing.assert_allclose(zero.parameter_endpoint,0.,atol=1e-15)
+
+
 def test_packet_continuum_normalization_and_derivative():
     S=.1256873632901346
     packet = ExteriorPacket(S)

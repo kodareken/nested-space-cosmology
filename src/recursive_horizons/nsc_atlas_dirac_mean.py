@@ -23,10 +23,13 @@ SPIN_ROTATION = (np.eye(2)+1j*SIGMA1)/math.sqrt(2)
 
 
 @njit(cache=True,nogil=True)
-def _mode_kernel(w,wu,wv,du,dv,plus,minus,plus_u,minus_v):
+def _mode_kernel(w,wu,wv,du,dv,plus,minus,plus_u,minus_v,
+                 parameter_potential=None,parameter_du=0.,parameter_dv=0.):
     nu,nv = w.shape
     pu,mv = math.sqrt(du),math.sqrt(dv)
     P,M = plus.copy()*pu,minus.copy()*mv
+    Pdot,Mdot = P*(parameter_du/(2*du)),M*(parameter_dv/(2*dv))
+    parameter_endpoint=np.zeros(2,dtype=np.complex128)
     z,chi = plus_u.copy(),minus_v.copy()
     values = np.empty((nu,nv,2),dtype=np.complex128)
     derivative_u = np.empty_like(values)
@@ -38,6 +41,17 @@ def _mode_kernel(w,wu,wv,du,dv,plus,minus,plus_u,minus_v):
             c,sine = _cayley_coefficients(W*math.sqrt(du*dv)/4)
             pnew,mnew = c*P[i]+sine*M[j],sine*P[i]+c*M[j]
             p,m = (P[i]+pnew)/(2*pu),(M[j]+mnew)/(2*mv)
+            if parameter_potential is not None:
+                gamma=W*math.sqrt(du*dv)/4
+                gamma_dot=math.sqrt(du*dv)/4*(parameter_potential[i,j]
+                    +W*(parameter_du/du+parameter_dv/dv)/2)
+                cdot=-4*gamma*gamma_dot/(1+gamma*gamma)**2
+                sdot=-2j*(1-gamma*gamma)*gamma_dot/(1+gamma*gamma)**2
+                pdot=c*Pdot[i]+sine*Mdot[j]+cdot*P[i]+sdot*M[j]
+                mdot=sine*Pdot[i]+c*Mdot[j]+sdot*P[i]+cdot*M[j]
+                parameter_endpoint[0]=(Pdot[i]+pdot)/(2*pu)-parameter_du*p/(2*du)
+                parameter_endpoint[1]=(Mdot[j]+mdot)/(2*mv)-parameter_dv*m/(2*dv)
+                Pdot[i],Mdot[j]=pdot,mdot
             zuv = -.5j*wu[i,j]*m-W*W*p/4
             chiu = -.5j*wv[i,j]*p-W*W*m/4
             znew,chinew = z[i]+dv*zuv,chi[j]+du*chiu
@@ -46,7 +60,7 @@ def _mode_kernel(w,wu,wv,du,dv,plus,minus,plus_u,minus_v):
             derivative_v[i,j,0],derivative_v[i,j,1] = -.5j*W*m,(chi[j]+chinew)/2
             derivative_uv[i,j,0],derivative_uv[i,j,1] = zuv,chiu
             P[i],M[j],z[i],chi[j] = pnew,mnew,znew,chinew
-    return values,derivative_u,derivative_v,derivative_uv,np.concatenate((P,M))
+    return values,derivative_u,derivative_v,derivative_uv,np.concatenate((P,M)),parameter_endpoint
 
 
 def _hermite_weights(t,width,order):
@@ -63,15 +77,27 @@ def _hermite_weights(t,width,order):
 
 
 class MeanModeGrid:
-    """One propagated canonical chiral mode, bounded to its cell-center box."""
+    """One propagated canonical chiral mode, bounded to its cell-center box.
+
+    Optional parameter_endpoint differentiates the existing finite gate
+    map and cell widths with incoming sample values fixed. It is distinct
+    from the physical characteristic jets in self.jets.
+    """
 
     def __init__(self,potential,du,dv,*,potential_u,potential_v,
-                 incoming_plus,incoming_minus,plus_u,minus_v):
+                 incoming_plus,incoming_minus,plus_u,minus_v,
+                 parameter_potential=None,parameter_du=0.,parameter_dv=0.):
         w,du,dv,_ = _inputs(potential,du,dv,None,2)
         wu,wv = [_real_array(x,'potential derivative',2)
                  for x in (potential_u,potential_v)]
         if wu.shape != w.shape or wv.shape != w.shape or min(w.shape) < 2:
             raise ValueError('matching potential derivatives and at least two cells required')
+        if parameter_potential is not None:
+            parameter_potential=_real_array(parameter_potential,'potential parameter derivative',2)
+            if parameter_potential.shape!=w.shape or not np.isfinite([parameter_du,parameter_dv]).all():
+                raise ValueError('finite potential and cell-width parameter derivatives required')
+        elif parameter_du or parameter_dv:
+            raise ValueError('potential parameter derivative required with a moving cell width')
         incoming = [np.ascontiguousarray(x,dtype=complex) for x in
                     (incoming_plus,incoming_minus,plus_u,minus_v)]
         for x,size in zip(incoming,(w.shape[0],w.shape[1],w.shape[0],w.shape[1])):
@@ -79,7 +105,8 @@ class MeanModeGrid:
                 raise ValueError('finite characteristic data and analytic derivatives required')
         self.du,self.dv = du,dv
         self.shape = w.shape
-        *self.jets,self.outgoing = _mode_kernel(w,wu,wv,du,dv,*incoming)
+        *self.jets,self.outgoing,self.parameter_endpoint = _mode_kernel(w,wu,wv,du,dv,*incoming,
+            parameter_potential,parameter_du,parameter_dv)
         self.incoming_flux = float(du*np.vdot(incoming[0],incoming[0]).real+
                                    dv*np.vdot(incoming[1],incoming[1]).real)
         self.flux_error = abs(float(np.vdot(self.outgoing,self.outgoing).real)-

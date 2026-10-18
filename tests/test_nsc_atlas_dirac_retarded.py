@@ -10,7 +10,7 @@ from recursive_horizons.nsc_atlas_dirac_retarded import (
     observation_moment_residual)
 from recursive_horizons.nsc_atlas_dirac_retarded import (
     constrained_projection_derivative,endpoint_hilbert_moment,
-    volterra_source_observation_jets)
+    volterra_source_observation_jets,differentiated_retarded_response,_project_cells)
 from recursive_horizons.nsc_atlas_dirac_root_pairing import (
     NullResponse,pair_cylinder_responses,logarithmic_coefficients)
 
@@ -74,6 +74,58 @@ def test_volterra_source_observation_targets_match_separable_potential():
     h=1e-4
     independent=(-source(2*h)+8*source(h)-8*source(-h)+source(-2*h))/(12*h)
     np.testing.assert_allclose(actual,independent,rtol=2e-10,atol=2e-11)
+
+
+def test_finite_cell_projection_tangent_includes_density_scale_and_moving_constraints():
+    n,p,L,x=9,6,.8,.17;vector=np.array([1.,.3j]);s=np.array([.07,.29,.63])
+    for sign in (-1.,1.):
+        def sample(delta):
+            length=L+sign*delta;position=x+delta;width=length/(n-.5)
+            knots=(np.arange(n)+.5)*width;edges=np.r_[np.arange(n)*width,length]
+            widths=np.diff(edges);shape=np.exp(position)*np.sin(knots)
+            row=vector[:,None]*(shape*widths)
+            gamma=np.exp(position)*np.sin(length)*vector
+            source=np.exp(position)*np.cos(length)*vector
+            c=_project_cells(row,length,width,p,gamma)[0]
+            # Differentiate densities and their integrated cell weights,
+            # with the incoming cardinal values fixed at the moving knots.
+            density_dot=np.exp(position)*(np.sin(knots)+sign*knots/length*np.cos(knots))
+            row_dot=vector[:,None]*widths*(density_dot+sign/length*shape)
+            coefficient_dot=_project_cells(row_dot-sign/length*row,length,width,p,gamma+sign*source)[0]
+            field=NullResponse((length,length),(c,c),np.eye(2))
+            return dict(cell_field=field,cell_spatial=field,
+                cell_field_coefficient_observation_derivative=(coefficient_dot,coefficient_dot),
+                endpoint_values=np.stack((np.stack((gamma,gamma)),np.stack((gamma,gamma)))),
+                source_endpoint_values=np.stack((source,source)),
+                source_endpoint_observation_derivative=np.stack((source-sign*gamma,source-sign*gamma)))
+        # The adapter fixes leg0/leg1 orientation, so test its matching leg.
+        leg=0 if sign==-1 else 1
+        actual=differentiated_retarded_response(sample(0.),p,discrete=True).value(leg,s)
+        def shifted(delta):
+            return retarded_response(sample(delta),'field',p,source_jet=True).value(leg,s)
+        h=1e-4
+        independent=(-shifted(2*h)+8*shifted(h)-8*shifted(-h)+shifted(-2*h))/(12*h)
+        np.testing.assert_allclose(actual,independent,rtol=2e-8,atol=2e-8)
+
+
+def test_discrete_retarded_adapter_matches_parameter_difference_at_fixed_source():
+    U,V,mu,n,p=.11,.10,1/.45,8,6
+    shape=(n,n);zeros=np.zeros(shape)
+    def sample(delta,parameter=False):
+        u,v=U-delta,V+delta;I=np.array([mu*mu*v,mu*mu*u])
+        result=retarded_null_responses(np.full(shape,mu),u/(n-.5),v/(n-.5),
+            potential_u=zeros,potential_v=zeros,boundary_square_integrals=I,
+            boundary_mixed_integrals=(0.,0.),order=p,workers=8,observation_parameter_jet=parameter)
+        result['source_endpoint_observation_derivative']=volterra_source_observation_jets(
+            mu,0.,0.,0.,0.,0.,I,(0.,0.),(0.,0.))
+        return result
+    actual=differentiated_retarded_response(sample(0.,True),p,discrete=True)
+    h=1e-5;shifted={k:retarded_response(sample(k*h),'field',p,source_jet=True) for k in (-2,-1,1,2)}
+    for leg,L in enumerate((U,V)):
+        source=L*np.array([.12,.37,.82])
+        independent=(-shifted[2].value(leg,source)+8*shifted[1].value(leg,source)
+            -8*shifted[-1].value(leg,source)+shifted[-2].value(leg,source))/(12*h)
+        np.testing.assert_allclose(actual.value(leg,source),independent,rtol=2e-8,atol=2e-8)
 
 
 def constant_input_exact(U,V,mu):

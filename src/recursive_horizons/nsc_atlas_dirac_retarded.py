@@ -65,7 +65,7 @@ def _project_cells(row,length,width,order,endpoint):
 
 def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
                            boundary_square_integrals,boundary_mixed_integrals,
-                           order=12,workers=8):
+                           order=12,workers=8,observation_parameter_jet=False):
     """Field and analytic x response at the final cell center.
 
     boundary_square_integrals supplies the independently evaluated pair
@@ -75,6 +75,8 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
     integral W*W_v along U), fixing the spatial kernel's endpoint traces.
     The returned projection residual concerns the cell map only; it is
     NOT a continuum field, vacuum stress or angular-tail error bound.
+    observation_parameter_jet also differentiates the finite algorithm
+    as U decreases and V increases at fixed cell counts.
     """
     w,du,dv,_=_inputs(potential,du,dv,None,2)
     wu,wv=(_real_array(v,'potential derivative',2) for v in (potential_u,potential_v))
@@ -84,6 +86,7 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
     if (min(nu,nv)<4 or wu.shape!=w.shape or wv.shape!=w.shape
             or isinstance(order,bool) or not isinstance(order,int) or not 2<=order<=min(nu,nv)
             or isinstance(workers,bool) or not isinstance(workers,int) or not 1<=workers<=8
+            or not isinstance(observation_parameter_jet,bool)
             or integrals.shape!=(2,) or not np.isfinite(integrals).all() or np.any(integrals<0)
             or mixed.shape!=(2,) or not np.isfinite(mixed).all()):
         raise ValueError('resolved field jets, two nonnegative boundary integrals, polynomial order and one to eight workers required')
@@ -92,6 +95,11 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
     if live_estimate>256*1024**2:
         raise ValueError('streamed endpoint extraction exceeds the admitted 256 MiB field allowance')
     zeros_u=np.zeros(nu,complex);zeros_v=np.zeros(nv,complex)
+    parameter={}
+    if observation_parameter_jet:
+        au=(np.arange(nu)+.5)/(nu-.5);av=(np.arange(nv)+.5)/(nv-.5)
+        parameter=dict(parameter_potential=-au[:,None]*wu+av[None,:]*wv,
+            parameter_du=-1/(nu-.5),parameter_dv=1/(nv-.5))
 
     def column(index):
         plus=zeros_u.copy();minus=zeros_v.copy()
@@ -100,8 +108,11 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
         else:
             minus[index-nu]=1.
         grid=MeanModeGrid(w,du,dv,potential_u=wu,potential_v=wv,
-            incoming_plus=plus,incoming_minus=minus,plus_u=zeros_u,minus_v=zeros_v)
-        return np.stack((grid.jets[0][-1,-1],grid.jets[2][-1,-1]-grid.jets[1][-1,-1]))
+            incoming_plus=plus,incoming_minus=minus,plus_u=zeros_u,minus_v=zeros_v,**parameter)
+        result=[grid.jets[0][-1,-1],grid.jets[2][-1,-1]-grid.jets[1][-1,-1]]
+        if observation_parameter_jet:
+            result.append(grid.parameter_endpoint)
+        return np.stack(result)
 
     first=column(0)  # Compile before starting independent GIL-free columns.
     with ThreadPoolExecutor(max_workers=workers) as pool:
@@ -123,11 +134,20 @@ def retarded_null_responses(potential,du,dv,*,potential_u,potential_v,
         responses.append(NullResponse(lengths,tuple(green),direct if which==0 else direct_x,
             np.zeros((2,2)) if which==0 else np.diag([-1.,1.])))
         residuals.append(projection)
-    return dict(cell_field=responses[0],cell_spatial=responses[1],endpoint_values=endpoint_values,
+    result=dict(cell_field=responses[0],cell_spatial=responses[1],endpoint_values=endpoint_values,
         source_endpoint_values=jets['source'],
         cell_projection_residual=np.asarray(residuals),
         live_field_bytes_estimate=live_estimate,workers=workers,
         scope='numerical_retarded_maps_from_existing_characteristic_solver')
+    if observation_parameter_jet:
+        derivatives=[]
+        for leg,(length,width,part,lam) in enumerate(zip(lengths,(du,dv),
+                (slice(0,nu),slice(nu,nu+nv)),(-1.,1.))):
+            row_dot=rows[2,:,part]-lam/length*rows[0,:,part]
+            target=jets['spatial'][leg]+lam*jets['source'][leg]
+            derivatives.append(_project_cells(row_dot,length,width,order,target)[0])
+        result['cell_field_coefficient_observation_derivative']=tuple(derivatives)
+    return result
 
 
 def retarded_response(sample,kind,order,*,source_jet=False):
@@ -217,13 +237,15 @@ def observation_moment_residual(left_field,left_spatial,right_field,right_spatia
 
 
 def constrained_projection_derivative(coefficients,spatial,length,endpoint,spatial_endpoint,
-                                     source,source_x,*,orientation):
+                                     source,source_x,*,orientation,coefficient_derivative=None):
     """Differentiate the mean/value/source-slope constrained L2 projection.
 
     Exact when coefficients=P_L G and spatial=P_L G_x belong to one
     continuum kernel. Substitution of independently reconstructed cell
     maps remains an approximation; this is not a discrete identity for
     their moving knots. source_x is the TOTAL derivative of G_s(L(x),x).
+    Supplying coefficient_derivative instead uses the known derivative
+    of the actual raw coefficients and requires no continuum substitution.
     """
     c=np.asarray(coefficients,dtype=complex);b=np.asarray(spatial,dtype=complex)
     gamma,gx,gs,gsx=(np.asarray(v,dtype=complex) for v in (endpoint,spatial_endpoint,source,source_x))
@@ -235,8 +257,14 @@ def constrained_projection_derivative(coefficients,spatial,length,endpoint,spati
         raise ValueError('finite common kernel projections, positive length and signed source leg required')
     p=len(c);n=np.arange(p);w=2*n+1;scale=p*(p-1)
     M=np.where(n[:,None]<n[None,:],w[:,None],0.)+np.diag(n)
-    d_raw=b+lam/L*w[:,None]*(gamma-c.sum(axis=0))
-    c_dot=d_raw+lam/L*M@c
+    if coefficient_derivative is None:
+        d_raw=b+lam/L*w[:,None]*(gamma-c.sum(axis=0))
+        c_dot=d_raw+lam/L*M@c
+    else:
+        c_dot=np.asarray(coefficient_derivative,dtype=complex)
+        if c_dot.shape!=c.shape or not np.isfinite(c_dot).all():
+            raise ValueError('finite derivative of each supplied raw coefficient required')
+        d_raw=c_dot-lam/L*M@c
     gamma_x=gx+lam*gs
     derivative=n*(n+1)/scale
     B=np.stack((np.ones(p-1),derivative[1:]))
@@ -268,11 +296,12 @@ def volterra_source_observation_jets(W,Wu,Wv,Wuu,Wuv,Wvv,
          W*Wv/4-K[1]/4+I[1]*W*W/16-I[1]*J[1]/8]])
 
 
-def differentiated_retarded_response(sample,order):
-    """Continuum projection derivative evaluated with the supplied cell rows.
+def differentiated_retarded_response(sample,order,*,discrete=False):
+    """Differentiate source constraints and the moving polynomial basis.
 
-    This conditional reconstruction is tested against the independent
-    spatial row, rather than asserted to be its exact finite-grid value.
+    With discrete=True use the forward derivative of the finite gate map
+    and reconstruction. Otherwise the continuum projection identity is
+    conditional on the independently supplied cell rows.
     """
     field=sample['cell_field'];spatial=sample['cell_spatial']
     if isinstance(order,bool) or not isinstance(order,int) or not 3<=order<=min(map(len,field.green)):
@@ -283,7 +312,9 @@ def differentiated_retarded_response(sample,order):
         green.append(constrained_projection_derivative(c,b,field.lengths[leg],
             sample['endpoint_values'][0,leg],sample['endpoint_values'][1,leg],
             sample['source_endpoint_values'][leg],
-            sample['source_endpoint_observation_derivative'][leg],orientation=lam))
+            sample['source_endpoint_observation_derivative'][leg],orientation=lam,
+            coefficient_derivative=sample['cell_field_coefficient_observation_derivative'][leg][:order]
+                if discrete else None))
     return NullResponse(field.lengths,tuple(green),spatial.direct,spatial.direct_derivative)
 
 

@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+The [finite algorithm derivative](nsc-atlas-dirac-probe.md#differentiating-the-existing-finite-cell-map)
+uses the same Cayley field kernel, normalized source knots and constraints:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_mean.py::test_parameter_tangent_differentiates_the_same_rectangular_gate_map_and_flux_weights tests/test_nsc_atlas_dirac_mean.py::test_same_CAR_transfer_flux_weights_and_bounded_evaluation tests/test_nsc_atlas_dirac_retarded.py::test_finite_cell_projection_tangent_includes_density_scale_and_moving_constraints tests/test_nsc_atlas_dirac_retarded.py::test_discrete_retarded_adapter_matches_parameter_difference_at_fixed_source -q
+python scripts/run_python.py scripts/measure_nsc_atlas_dirac_root_response.py --diagnose-discrete-derivative
+```
+
+Freeze the method first. These controls use6.203125 CPU seconds; the
+shared allowance is90 seconds. The same N128/two-split diagnostic tests
+the finite reconstruction derivative. It does not establish continuum
+accuracy, evaluate a vacuum contraction or add a P001 grid.
+
 The [differentiated source projection](nsc-atlas-dirac-probe.md#differentiating-the-constrained-source-projection)
 uses analytic second potential jets and the existing two boundary rays:
 
