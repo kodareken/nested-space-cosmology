@@ -183,6 +183,28 @@ represented field does not have; it is not a verified correction. A
 trace-compatible approximation must follow from the same variational
 boundary problem and pass these strong and weak checks.
 
+The [boundary-lift analysis](../results/summaries/nsc-atlas-wall-boundary-lift-v1.json)
+now evaluates this mechanism without another field or metric solve. On
+the archived level-0 state, `B*(h_weak-h_trace)=.07084448099` and
+`K_h=72.69634037`. Their pointwise contribution is **5.1501345034**;
+the remaining projection term is **-.0509850668**, giving the observed
+density-equation defect **5.0991494367**. Lifting the independently
+integrated load-identity residual changes the wall value by only `7.60e-8`.
+This is a consistency indicator, not a physical error bound.
+
+At that same physical coordinate, the three original spaces give
+`K_h=72.69634,79.70515,87.25369`. Only the first has an archived evolved
+force here; the others are geometric operator gains. The boundary lift
+therefore supplies a concrete amplification mechanism for an unresolved
+incoming mismatch. It is not an added matter force and must not simply
+be subtracted from the update. Together with the late-cut mismatch
+growth, it explains why more degrees of freedom need not reduce the
+present strong wall diagnostics. A new evolution must use a genuinely
+trace-compatible approximation, not just relabel the weak pair as the
+represented field's derivatives. The unstored maxima remain outside this
+attribution. The 2369-byte algebraic record uses .015625 CPU seconds and
+no field, metric or time solve.
+
 ## Exact frame and potential
 
 Start from the same split Jordan action, including its `2fK` boundary terms,

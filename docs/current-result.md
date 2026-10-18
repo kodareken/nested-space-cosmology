@@ -26,6 +26,20 @@ The [derivation](nsc-atlas-finite-amplitude.md#pointwise-equations-on-an-archive
 shows why replacing the strong wall jets by the weak pair would not yet
 constitute a physical correction.
 
+The [boundary-lift analysis](../results/summaries/nsc-atlas-wall-boundary-lift-v1.json)
+then separates the actual wall density defect into **5.1501345034** from
+the natural incoming boundary load and **-.0509850668** from the remaining
+pointwise projection term. Their sum is **5.0991494367**. At the same
+physical coordinate the original spaces have evaluation gains
+**72.69634 -> 79.70515 -> 87.25369**. Only the level-0 evolved force is
+archived there; the remaining gains do not reconstruct the other states.
+This is the concrete finite-operator amplification behind the incoming
+coupling diagnosis. It supports correcting the trace approximation rather
+than the independently checked bulk equation or mass law. It does not
+license subtracting a residual force, closing P001, or claiming a cause
+for every unsaved peak. The .015625-CPU-second analysis adds no field
+solve or time step.
+
 ## What the cap--wall geometry changes, 18 October 2026
 
 The [actual reference calculation](nsc-atlas-dirac-probe.md)

@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "L2_norm": 8.526214891295732,
+      "actual_density_equation_defect": 5.099149436697246,
+      "boundary_density_force_at_wall": 5.150134503447838,
+      "boundary_force_coefficient": 0.07084448098837585,
+      "clipped_outer_width": 0.48611194126822793,
+      "dimension": 7,
+      "endpoint_gain": 72.6963403725531,
+      "gram_condition": 4702424.19898481,
+      "level": 0,
+      "load_identity_defect_lift_at_wall": -7.602458621329457e-08,
+      "projected_load_lift_at_wall": 5.150134427423382,
+      "remaining_pointwise_projection_defect": -0.05098506675059156
+    },
+    {
+      "L2_norm": 8.927773881497421,
+      "clipped_outer_width": 0.44831194126822793,
+      "dimension": 15,
+      "endpoint_gain": 79.70514647914752,
+      "gram_condition": 4477950.251672082,
+      "level": 1
+    },
+    {
+      "L2_norm": 9.340968546472004,
+      "clipped_outer_width": 0.41051194126822793,
+      "dimension": 31,
+      "endpoint_gain": 87.2536933861793,
+      "gram_condition": 3869677.0933618895,
+      "level": 2
+    }
+  ],
+  "charged_values": 59696,
+  "counts": {
+    "field_solves": 0,
+    "metric_solves": 0,
+    "new_meshes": 0,
+    "time_steps": 0
+  },
+  "identity": "kappa_k=(I-Pi_h)*(k0_T-k_T_continuum)+B*(h_weak-h_trace)*l_h",
+  "input": {
+    "bytes": 5531,
+    "path": "results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json",
+    "sha256": "318b0372094fe1904dab8a18acc615a1061485a02a4e33030fe5905d07ad81a8"
+  },
+  "interpretation": "The natural incoming boundary mismatch is lifted into the density RHS. Finer boundary-evaluation resolution can amplify an unresolved mismatch.",
+  "limits": {
+    "CPU_seconds": 10.0,
+    "charged_values": 2000000,
+    "summary_bytes": 8000
+  },
+  "point": {
+    "R_x": 1.192067800138663,
+    "T_x": 2.2997294383882867,
+    "alpha": 0.00012983127142551443,
+    "history_time": -0.9903225501750657,
+    "radius": 0.49208833485310643,
+    "wall_coordinate": 0.5388122198622797
+  },
+  "producer_sha256": "b4c4289ca2487ee0c7a9612a07e7d7b465115a4004fc94330f962ff7491a5b39",
+  "runtime_cpu_seconds": 0.015625,
+  "schema": "nsc-atlas-wall-boundary-lift-v1",
+  "scope": "One archived level-0 force and geometric gains of the three existing spaces at the same point. No level-1/2 evolved force or unstored maximum is inferred.",
+  "source_context_commit": "b2c5699e340bce7684a46303e4ef6b450d1330fb"
+}

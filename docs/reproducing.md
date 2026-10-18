@@ -4,6 +4,7 @@ The actual archived cap RHS check reproduces with:
 
 ```sh
 python scripts/run_python.py scripts/diagnose_nsc_atlas_wall_rhs.py --output .build/nsc-wall-pointwise-rhs.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_wall_rhs.py --analyze-existing results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json --output .build/nsc-wall-boundary-lift.json
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_pointwise_rhs.py -q
 ```
 
@@ -17,6 +18,13 @@ dimensions are exact; stage recovery uses `1e-10*max(1,value)` and the
 projected load identity uses the recorded `1e-8` scale. Compare local rates
 within `1e-8` absolute/relative tolerance, not byte equality of runtime or
 commit metadata. The diagnostic does not advance or correct P001.
+The analysis mode reads the committed saved point and computes only the
+boundary Riesz gains of the existing three spaces. The
+[lift record](../results/summaries/nsc-atlas-wall-boundary-lift-v1.json)
+separates the actual level-0 density force from its boundary projection;
+it supplies no evolved force at levels 1 or 2. Compare gains within `1e-9`
+relative tolerance and the lifted consistency residual within `1e-6`
+absolute tolerance; neither is a physical uncertainty bound.
 
 The actual cap--wall Dirac inputs and P001 active-region diagnosis reproduce
 without an evolution or new grid:
