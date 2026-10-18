@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2384444,
+      "bytes": 2385395,
       "path": "docs/lab-snapshot.json",
-      "sha256": "11cefc954ebd5ba1720126bf4447acbb213780d89ce5554d714e3cd0c5f95a5b"
+      "sha256": "803d847412b7fd56d9724e4806b5ecd711ab1dbe289dd394492799996782a369"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 508559,
+      "bytes": 513054,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "30a54c348fac7e9b1523bee011ada90ce89491d379ee61cacff8cc255b579741"
+      "sha256": "3a60207c4e17262657a9c28a419e945fb1aad1673a947dde2a935bbea3760cde"
     },
     {
       "bytes": 6705,
@@ -16531,6 +16531,11 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
+      "bytes": 39502,
+      "path": "scripts/measure_nsc_conformal_causal_response.py",
+      "sha256": "4154ef210ebf438a04afaab0c36e929017d4dc7834a696ab8dbc283c3d2d1902"
+    },
+    {
       "bytes": 16572,
       "path": "scripts/measure_nsc_conformal_geometric_average.py",
       "sha256": "d706eb290ead4722dbb920053347dc442a8d7bf05beba862f698d35f05ac45c1"
@@ -19206,6 +19211,11 @@
       "sha256": "c3dfa753416995abc59e664c9c3549d3aa2e14f3d7adb45afb98a5a1f2b10198"
     },
     {
+      "bytes": 12798,
+      "path": "tests/test_measure_nsc_conformal_causal_response.py",
+      "sha256": "2ef9ce247030217c929fdc0d280aec247d96464b1ab295c43c7ba3f967a25d88"
+    },
+    {
       "bytes": 2905,
       "path": "tests/test_nsc_assembled_chebyshev_gn_stall.py",
       "sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719"
@@ -21771,7 +21781,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "11cefc954ebd5ba1720126bf4447acbb213780d89ce5554d714e3cd0c5f95a5b",
+  "lab_snapshot_sha256": "803d847412b7fd56d9724e4806b5ecd711ab1dbe289dd394492799996782a369",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

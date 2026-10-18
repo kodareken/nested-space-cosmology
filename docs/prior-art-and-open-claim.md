@@ -1,5 +1,76 @@
 # Prior art and admission of new research
 
+## Propagated photon response in the original conformal window
+
+The checked initial direction and coupled derivative now need an actual
+observer consequence. Use the same separate conformal Einstein/Weyl/Dirac
+episode, action, occupations and original `nf512_original_T0_*` state.
+Regenerate its paired-phase tangent once, preserving the original nonzero
+constraint level. Borrow the original nonlinear Galerkin rate, the analytic
+JVP/constraint variation and the existing radial normal-observer frequency
+law. The physical source apparatus and continuum-compatible preparation
+remain unresolved; this is a finite-model forward calculation.
+
+Integrate `z_T=X_H(z)` and `u_T=DX_H(z)*u` at the same RK4 stages to
+`T=.3`. Fix `nf=512,nq=2048,period=8,L=Q,beta=0`. Use only the two original
+time steps `.001` and `.0005`, requiring 300 and 600 steps. This is one
+temporal comparison, with no new spatial grid, cutoff, phase amplitude or
+source fit. Old background time errors do not bound the new tangent.
+
+Reuse the old longest-ray events: receiver `(T=.3,x=1)`, emitters
+`(T=.175,x=.875)` and `(T=.175,x=1.125)`. These are exact quadrature
+locations, indices 256, 224 and 288, and exact step events for both time
+steps. Evaluate the prolonged fields at those locations. At fixed events,
+`delta_log(1+z)=delta_r_o/r_o+delta_Q_o/Q_o-delta_r_e/r_e-delta_Q_e/Q_e`,
+and `delta_z=(1+z)*delta_log(1+z)`. No tangent interpolation or additional
+ray integration is needed. The normal worldlines can be accelerated; this
+does not identify an astrophysical object, Hubble rate or Lambda.
+
+Freeze the producer and all calculators/tests before application and
+authenticate the immutable v2 NPZ. Its parent setup is capped at **140
+process-CPU seconds**, including one initial factorization and one full-grid
+JVP directional check using two extra nonlinear rate evaluations at fixed
+step `1e-4`. The unchanged relative `1e-6` directional criterion uses the
+larger of one and the two derivative maxima, by field block. There is no
+search for a passing phase step. Two numerical processes may run with four
+BLAS threads each. The coarse/fine case limits are **1000/2000 process-CPU
+seconds**, inside a conservative **3600-CPU-second** computation envelope.
+The first accepted RK4 step may supply a remaining-cost forecast; count it
+and continue the same state. Stop with a diagnosis if the full endpoint
+cannot fit. Do not shorten the domain, clip the tangent, reset a constraint
+or retry automatically. The archived `.593` diagnostic step cost and
+`.648` realized continuation cost inform this allocation, not a runtime
+guarantee on this host.
+
+At `T=0,.05,.175,.3`, record the original constraint/forcing and their first
+variation, Gram diagnostics, relevant tangent norms and the shift-source
+variation. These are samples, not uniform time bounds. Compare baseline
+states at `.05` and `.3` with their corresponding saved v2 cases using
+`1e-8*(1+reference maximum)` per field; a historical bitwise handoff is not
+a new replay tolerance. Keep the original full constraint defect explicit.
+All fields continue to evolve after the initial chiral slice.
+
+The producer owner is `scripts/measure_nsc_conformal_causal_response.py`.
+Its manufactured controls may use `nf<=16,nq<=64` within 30 CPU seconds;
+they do not read the archive. Retain a JSON summary of at most 24,000 bytes
+and hashes, with final-state checkpoints in an ignored NPZ of at most
+2,000,000 bytes for possible later continuation. Both endpoints are needed
+for a completed two-time-step comparison. Any failure records its actual
+time, work and missing output. The fine result plus the absolute difference
+between time steps is an empirical temporal envelope, not a continuum,
+spatial, model or observational error bound. Two values alone do not prove
+convergence. No observed value selects any parameter.
+
+Completion of this calculation means a reproduced baseline and two
+propagated photon-response rows with the stated diagnostics and temporal
+comparison; it does not close Step 7 or the full atlas. A later independent
+linearized calculation disagreeing beyond declared numerical uncertainty
+would falsify this response claim. The three likely failures are a stage or
+sampling mismatch, unresolved tangent dynamics, and an insufficient runtime
+allocation. They appear respectively in the baseline/directional checks,
+time-step/forcing diagnostics, and cost forecast or hard budget. Diagnose
+the failing requirement before designing a successor.
+
 ## Coupled causal tangent engine: manufactured controls
 
 The initial response now needs propagation along the same evolving finite
