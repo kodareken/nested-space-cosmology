@@ -1090,6 +1090,91 @@ with `L_ref`. It requires an explicit validity prescription or an actual
 nested exterior/state before this response is used for Lambda. The locked
 coefficients and the completed finite periodic calculations are preserved.
 
+### The induced spectral profile beyond the local gravitational polynomial
+
+The coefficient source is more specific than a free pair `A,C_W`.
+The [scale-binding component](../src/recursive_horizons/nsc_scale_binding.py)
+and [saved branch](../results/development/scale-binding.json) supply
+`Lambda_UV=Omega/r_e`, the magnetic matching scale `mu_B=sqrt(abs(q))/r_e`,
+and the [warped compact weight](../src/recursive_horizons/nsc_warped_source.py).
+The matched external spectral function is
+`H(u)=h_Lambda(u)-E1(u/mu_B^2)`. Compact interval, warp and matching scales
+are held fixed in the following external metric variation. Varying those
+internal data would require their additional vertices.
+
+The [existing matching formulas](../scripts/check_nsc_compact_matching.py)
+fix `Q1=integral_0^infinity H(u)du`, `Q0=H(0)` and
+
+$$
+A=\frac{Q_1}{6(4\pi)^2},\qquad
+C_W=-\frac{Q_0}{40(4\pi)^2}.
+$$
+
+The inherited coefficient account uses the same finite profile for both.
+It does not identify the observer's `L_ref` with either spectral scale.
+No scale root or full first-moment integration is needed to reuse this account.
+
+For flat Euclidean transverse-traceless metric perturbations, import the
+heat-response function `(1+z/4)*h(z)-2`, with
+`h(z)=integral_0^1 exp(-a*(1-a)*z)da`, from
+[Alkofer--Saueressig--Zanusso, 1410.7999v2](https://arxiv.org/html/1410.7999v2),
+Section II, equations (14)--(15), (22). The existing zero-volume-term law
+cancels its constant term. This is a specified volume subtraction of the
+same profile, not a new freely normalized face energy. For a linear heat
+representation `H(u)=integral a(t)*exp(-t*u)dt`, the remaining response is
+
+$$
+\mathcal K_H(x)=\int\frac{a(t)}{t^2}
+\left[\left(1+\frac{tx}{4}\right)
+\int_0^1e^{-b(1-b)tx}\,db-1\right]dt,
+\qquad x=p^2\geq0.
+$$
+
+The integrations must exist; a positive Laplace measure is unnecessary.
+The extension to a general matched profile uses the same linear spectral
+functional calculus, with a continuous finite `H(0)`, integrable first
+moment and the required regularity of its quadratic variation. This is an
+external flat-space calculation with fixed compact data.
+
+An exact exchange of integrations removes inverse-Laplace reconstruction.
+Writing `v=4*u/x`, the [response component](../src/recursive_horizons/nsc_spectral_gravitational_response.py)
+evaluates
+
+$$
+\mathcal P_H(x)=\frac{12\mathcal K_H(x)}{Q_1}
+=x\left[1-\frac{x}{4Q_1}\int_0^1
+(1+2v)\sqrt{1-v}\,H(xv/4)\,dv\right].
+$$
+
+To check the identity directly, set `w=b*(1-b)*x`. After subtracting the
+linear term, the integrand is
+`-integral_0^w (x/4-w+u)*H(u)du`. Its integral over the allowed `b` has
+weight `(x/12)*(1+8*u/x)*sqrt(1-4*u/x)`. This proves the displayed formula
+without reconstructing a positive heat measure. The actual half-trace
+action has quadratic density `(A/4)*h_TT*P_H(-partial^2)*h_TT`, and
+
+$$
+\mathcal P_H(x)=x+\frac{2C_W}{A}x^2
+-\frac{H'(0)}{28Q_1}x^3+\cdots
+$$
+
+when the derivative at zero exists. Thus the old local polynomial is its
+first two terms. Its extra root `x_*=-A/(2*C_W)` is not automatically a
+root of the full spectral response. This comparison does not continue
+the Euclidean function into a retarded curved propagator or impose the
+spherical boundary constraints of the earlier exterior.
+
+Seven [controls](../tests/test_nsc_spectral_gravitational_response.py)
+check the integration exchange, the original coefficient normalization,
+signed heat superpositions, an independently integrated finite proper-time
+profile, unit scaling, local error order and protected application inputs.
+The [admission](prior-art-and-open-claim.md#the-owned-spectral-profile-and-the-local-gravitational-approximation)
+allows one physical-scale application only after the method is frozen.
+It must retain the inherited spectral representation and identify its
+quadrature indicators separately from unbounded inherited errors. No
+full-theory stability, vacuum constant or fractal dimension follows from
+this flat quadratic connection alone.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

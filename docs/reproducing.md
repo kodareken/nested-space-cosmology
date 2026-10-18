@@ -3027,6 +3027,28 @@ It evaluates one frozen state, takes no time steps, and retains the existing
 60 CPU-second / 40-million-value limit. Do not infer a new grid calculation
 or a change in the physical model from this benchmark.
 
+## Flat induced gravitational spectral response
+
+The [profile connection](schur-memory.md#the-induced-spectral-profile-beyond-the-local-gravitational-polynomial)
+has independent manufactured controls:
+
+```text
+python scripts/run_python.py -m pytest -q tests/test_nsc_spectral_gravitational_response.py
+```
+
+After freezing the method, its single admitted application uses:
+
+```text
+python scripts/run_python.py scripts/measure_nsc_spectral_gravitational_response.py --output .build/spectral-gravity-profile.json
+```
+
+The output must not exist. The producer reuses the saved coefficient moment,
+cutoff and observer ruler, compares fixed 16/32 Jacobi rules, and runs no scale
+root, full moment integration or trajectory. It bounds its process CPU at
+120 seconds and its summary at 12000 bytes. Its Euclidean flat profile
+response and empirical quadrature change do not establish a curved retarded
+response or a physical Lambda error range.
+
 ## Scope
 
 The main [paper](../paper/nested-space-cosmology.md) is a living atlas manuscript.

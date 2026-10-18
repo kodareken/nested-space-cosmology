@@ -1,5 +1,45 @@
 # Prior art and admission of new research
 
+## The owned spectral profile and the local gravitational approximation
+
+The closed vacuum reference exposes the need to distinguish a local curvature
+truncation from its induced spectral source. Reuse the exact coefficient
+formulas in `scripts/check_nsc_compact_matching.py`, the warped compact
+weight, and the saved fixed-flux branch of `scale-binding.json`. Its cutoff
+and magnetic matching scale are independent of the observer's `L_ref`.
+The exponential heat profile in the older flat control is not substituted
+for this owned profile.
+
+Borrow the flat Euclidean transverse-traceless heat response of
+[Alkofer--Saueressig--Zanusso, 1410.7999v2](https://arxiv.org/html/1410.7999v2),
+Section II, equations (14), (15), (19), (22). Derive its linear extension to
+the matched profile with the existing zero-volume-term normalization.
+Check its first two coefficients against the independently owned `A,C_W`.
+Manufactured exponential and finite proper-time profiles, an independently
+integrated heat response, unit changes and the zero-momentum limit share
+**60 process-CPU seconds**. This derives a flat quadratic response, not a
+curved retarded kernel or an exterior state.
+
+After freezing the method, permit one application at `p^2=L_ref^(-2)` from
+the existing physical-resolution record. Keep the saved compact representation
+(`34` modes, `112` overlap points), warp and matching scale. Reuse the saved
+first spectral moment through its coefficient formula; do not rerun the
+scale root or global spectral-moment integration. Compare only fixed 16- and
+32-point Jacobi quadrature, requiring their dimensionless response ratios
+to differ by at most `1e-9`. The application has **120 process-CPU seconds**,
+one BLAS thread for these small matrices, no trajectory or grid scan, and
+at most 12000 retained bytes. Record sampled-profile and quadrature indicators
+without treating them as a total spectral or physical error bound.
+
+Stop on a coefficient/profile mismatch, failed independent heat identity,
+exhausted allocation or failed quadrature comparison. These detect the
+three likely failures: an incorrect volume subtraction, silently replacing
+the spectral profile, and numerical cancellation being interpreted as a
+physical effect. A direct metric variation of the same flat spectral action
+disagreeing with this quadratic kernel would falsify the connection. The
+result selects the validity question for the physical curved reduction;
+it supplies no new vacuum constant or Lorentzian state.
+
 ## A constrained vacuum gravitational exterior under the owned action
 
 The timelike one-form now needs an on-shell exterior map. Begin with the

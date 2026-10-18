@@ -32,6 +32,19 @@ Carolina Figueiredo, then a Princeton doctoral student, was named the inaugural 
 
 Then check the list below. Do not repeat a derivation this file already sources. The studies were opened while investigating the nested question. They are not proofs of one claim. Some supply a formula. Some are a clue. Some are a constraint. Some show that a local or infinite route does not answer the question. Record a new study in that same way.
 
+## The owned gravitational spectral profile, 18 October 2026
+
+[Alkofer--Saueressig--Zanusso, 1410.7999v2](https://arxiv.org/html/1410.7999v2):
+read Section II through its discussion of the quadratic heat response,
+profile superposition and local truncation, equations (14)--(25). Reused
+the flat Euclidean transverse-traceless heat function and its linear
+profile dependence. The [Schur owner](schur-memory.md#the-induced-spectral-profile-beyond-the-local-gravitational-polynomial)
+derives an integral directly in the repository's matched compact profile
+and checks its coefficient normalization. The paper's exponential example
+is not substituted for that profile. Curved real-time response, compact
+parameter variations and an actual exterior state are outside this reading.
+No spectral dimension or cosmological constant is imported from this paper.
+
 ## Common-action wall transfer, 17 October 2026
 
 [Reina--Senovilla--Vera, 1510.05515v1](https://arxiv.org/html/1510.05515):

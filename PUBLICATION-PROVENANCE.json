@@ -1491,14 +1491,14 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 249072,
+      "bytes": 249721,
       "path": "docs/active-code-map.md",
-      "sha256": "bd43d238accc1b815ec774c97a25a09bf6fbe26de73f58bbfe0c1796a78bb2bf"
+      "sha256": "82d9ea2ac5da8a840de60ab0629c7a0c330737b28f064099f424e3341b0a0261"
     },
     {
-      "bytes": 102489,
+      "bytes": 103343,
       "path": "docs/arxiv-studies.md",
-      "sha256": "f3b82b02f2afcbe58f6406c00946b3cb0a1149a1ca088e80a31613a47919fa19"
+      "sha256": "ee12d0f56e14d74c53e50d2413fdf16ca8b93c3c628925b47eb2415c18470491"
     },
     {
       "bytes": 1458,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2389218,
+      "bytes": 2390657,
       "path": "docs/lab-snapshot.json",
-      "sha256": "2f3fccfd5fa2ceb01ac9406fe4fd94b3a2d1923a00829874038efcc5ffb11c54"
+      "sha256": "42a6c5a68e143ab43733b0ea3dd04e2b1811b521168bab541131f5a9a13086dd"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 521352,
+      "bytes": 523851,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "dbc0ffce64e018e3d4cc72b84bfbaab1bb8b2cf3b279d07b034efa0a70bf0eca"
+      "sha256": "194dfea6ae18593faa137f2cdb5eddb39952a9527d1a0724d0b0f5fba7d8c962"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 173247,
+      "bytes": 174185,
       "path": "docs/reproducing.md",
-      "sha256": "79043e57f630d892a8d5b7aa7f242a1e528f9f857611154dcbb10ad346c01b0c"
+      "sha256": "f5ad1419a8121fd90e5156185f16128228cbf8479d767c903f655799c4c88ae9"
     },
     {
       "bytes": 31710,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 103328,
+      "bytes": 107318,
       "path": "docs/schur-memory.md",
-      "sha256": "fead2e169d2e8aa45b4a55a750feb459cd30b99dce28d9c9f2f298de67536ce4"
+      "sha256": "2d6d52885dc8aa14cf17c795939efa69ed5c0a6e9aed1d7afc6afa8e5fca491a"
     },
     {
       "bytes": 537091,
@@ -16571,6 +16571,11 @@
       "sha256": "406737b966caf39cdde4dbde9818255f9dcc7976992c1e31de65fd2bc5199568"
     },
     {
+      "bytes": 9068,
+      "path": "scripts/measure_nsc_spectral_gravitational_response.py",
+      "sha256": "83de442ddb90aa42db942ef57a6db7f43bfd8841dfef366cbe8c91ef1cf1189e"
+    },
+    {
       "bytes": 7820,
       "path": "scripts/measure_nsc_vacuum_gravitational_response.py",
       "sha256": "b295aad0f27c80edd1a5561e61e085021fbba16d4ca4d234b431b4f935d56cd0"
@@ -18894,6 +18899,11 @@
       "bytes": 4401,
       "path": "src/recursive_horizons/nsc_spectral_endpoint.py",
       "sha256": "6a582d0b6a3f2d7a6250b48c35b2bc512b9e033b7592d585d47f3c2f7cd3114d"
+    },
+    {
+      "bytes": 3122,
+      "path": "src/recursive_horizons/nsc_spectral_gravitational_response.py",
+      "sha256": "fa4650afdc88305273712293c0185708b2545013e3d7af466b2eb0ddd65330b0"
     },
     {
       "bytes": 2327,
@@ -21456,6 +21466,11 @@
       "sha256": "c6940d1651ffa8d69174db0bf70a05ec905438b553b1d062ecb7ead38e262ea7"
     },
     {
+      "bytes": 5297,
+      "path": "tests/test_nsc_spectral_gravitational_response.py",
+      "sha256": "be590f7ccf83c6e15db9e0e742ad35c11be3e1878057c0178223e9e2003ff32b"
+    },
+    {
       "bytes": 11386,
       "path": "tests/test_nsc_spherical_feedback_action.py",
       "sha256": "2f53b2109d1012ed3dc220bd6bddbe9060bbd78b1d87518d404fd949ff78bacf"
@@ -21821,7 +21836,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "2f3fccfd5fa2ceb01ac9406fe4fd94b3a2d1923a00829874038efcc5ffb11c54",
+  "lab_snapshot_sha256": "42a6c5a68e143ab43733b0ea3dd04e2b1811b521168bab541131f5a9a13086dd",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
