@@ -1,5 +1,46 @@
 # Prior art and admission of new research
 
+## Covariant curvature response and a static gravitational observable
+
+Extend the fixed-profile functional `(1/2)*Tr_4 H(D4^2)` to its covariant
+curvature-squared terms. Reuse the torsionless Dirac Clifford traces and
+[Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2),
+equations (5.1)--(5.3), (5.11)--(5.12). Work perturbatively about Euclidean
+`R^4`, with compact metric variations and fixed topology; integration by
+parts has no surviving outer boundary. The nonlocal Gauss--Bonnet change
+of basis is valid to quadratic curvature order. It does not complete a
+material wall, global topology or the omitted cubic-curvature terms.
+
+Derive the Weyl and scalar-curvature profile kernels, retaining fixed
+compact data. Match the former to the closed TT response; derive the
+scalar zero-momentum limit rather than adding a scalar potential. Then
+vary the static metric and source action directly to obtain the lapse and
+spatial-curvature potentials of a conserved weak density perturbation.
+Their relative response and lensing combination give a measurable transfer
+relation. The source is an external linear probe, not a new nested-body
+preparation or a completed cosmological state. Time-dependent causal
+continuation and its state must remain explicit missing inputs.
+
+Exact curvature contractions, the Einstein density with its boundary flux,
+profile/heat identities, the conserved-source response, unit changes and
+known limits share **60 process-CPU seconds**. After method freeze, one
+application may reuse the existing profile at `p^2*L_ref^2=1`, with the same
+34 compact modes, 112 overlap points and fixed 16/32 Jacobi rules. Reuse
+the previous TT summary as an independent comparison, without rerunning
+its producer or a scale root. Require response ratios to agree between
+quadrature rules and the saved TT ratio within `1e-9`. Use one BLAS thread,
+**120 process-CPU seconds**, no trajectory, and a summary of at most
+12000 bytes. Inherited spectral errors remain distinct from quadrature
+indicators; physical length calibration and astronomical source inference
+are not supplied by these normalized transfer ratios.
+
+Stop on an incorrect spin trace or scalar cancellation, a static metric
+sign/source-normalization mismatch, or a failed fixed-rule comparison.
+These are the three anticipated failures. An independent variation of
+the same action giving different static potentials would falsify this
+connection. Do not promote a Euclidean functional to a retarded equation
+by varying a single-branch action with a nonsymmetric kernel.
+
 ## The owned spectral profile and the local gravitational approximation
 
 The closed vacuum reference exposes the need to distinguish a local curvature

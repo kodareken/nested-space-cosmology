@@ -1201,6 +1201,105 @@ process-CPU seconds, one BLAS thread and a 4720-byte summary. This closes
 the stated flat comparison; the actual curved causal response and exterior
 state are needed for the effective-volume calculation.
 
+### Covariant curvature channels and a static gravitational observable
+
+The next connection keeps the same declared fixed-profile functional and
+its compact data. Reuse [Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2),
+equations (5.1)--(5.3), for `Delta=-D^2+U`. For a torsionless four-component
+Dirac field, the [owned Clifford calculation](../src/recursive_horizons/nsc_covariant_identities.py)
+gives `tr(I)=4`, `U=R*I/4`, and `tr(Omega^2)=-Riemann^2/2`.
+Work to second order in curvatures, with compact weak metric perturbations
+of Euclidean `R^4`, fixed topology and no outer boundary contribution.
+At this order the integrated nonlocal Gauss--Bonnet identity replaces
+`Riemann*F*Riemann` by `4*Ricci*F*Ricci-R*F*R`, modulo the fixed Euler term
+and cubic curvature. It cannot discard an actual material-wall term.
+
+Combining the five imported heat functions gives
+`f_C=2*f_Ric-f_Omega` and
+`f_scalar=(4/3)*f_Ric+4*f_R+f_RU+f_U/4-f_Omega/6`.
+For `f(z)=integral_0^1 exp(-a*(1-a)*z)da`, these reduce to
+
+$$
+f_C(z)=\frac{3f(z)-1}{6z}+\frac{2[f(z)-1]}{z^2},\qquad
+f_{\mathrm{scalar}}(z)=\frac{3f(z)+2}{36z}
++\frac{5[f(z)-1]}{6z^2}.
+$$
+
+Their local limits are `-1/20` and zero. The scalar function starts with
+`z/2520`; zero local `R^2` does not remove the nonlocal scalar channel.
+An independent exchange of integrations yields the profile functions
+
+$$
+\mathcal F_C(x)=-\frac1{24}\int_0^1
+(1+2v)\sqrt{1-v}\,H(xv/4)\,dv,
+$$
+
+$$
+\mathcal F_R(x)=\frac1{72}\int_0^1
+\left(1-\frac52v\right)\sqrt{1-v}\,[H(xv/4)-H(0)]\,dv.
+$$
+
+The subtraction in the second integral is exact: its weight has zero
+integral. It exposes the cancellation at small `x`; no scalar counterterm
+has been chosen. The curvature action is
+`[C*F_C(-nabla^2)*C+R*F_R(-nabla^2)*R]/[2*(4*pi)^2]` in the stated domain.
+It recovers the closed TT factor through
+`P_H(x)/x=1+6*x*F_C(x)/Q1`. If `H'(0)` exists, the scalar kernel begins
+`-H'(0)*x/2520`. Thus `F_R(0)=0` and its linear trace factor tends to one;
+this correction does not add a zero-momentum volume term. The prior vacuum
+normalization is still a supplied premise, not a newly calculated Lambda.
+
+The [curvature component](../src/recursive_horizons/nsc_covariant_spectral_response.py)
+also supplies a conditional weak-field observable. Write the physical
+static metric as `ds^2=(1+2*Phi)dt^2-(1-2*Psi)dx^2`. To linear order take
+a conserved external density perturbation `T00=rho,Tij=0` at nonzero
+spatial squared momentum `x`. Its static Euclidean source action is
+`+integral rho*Phi`. Direct connection contraction gives
+`R_1=2*x*(Phi-2*Psi)` and `C_1^2=(4/3)*x^2*(Phi+Psi)^2`.
+The Einstein quadratic bulk is `A*x*(4*Phi*Psi-2*Psi^2)`; its independent
+connection calculation retains the explicit total derivative before dropping
+it for compact perturbations. Define
+
+$$
+a_2(x)=1+\frac{6x\mathcal F_C(x)}{Q_1},\qquad
+a_0(x)=1-\frac{18x\mathcal F_R(x)}{Q_1}.
+$$
+
+Varying both potentials in that same action gives, for
+`Phi_GR=Psi_GR=-rho/(4*A*x)`,
+
+$$
+G_\Phi=\frac{\Phi}{\Phi_{\mathrm{GR}}}
+=\frac4{3a_2}-\frac1{3a_0},\qquad
+G_\Psi=\frac{\Psi}{\Psi_{\mathrm{GR}}}
+=\frac2{3a_2}+\frac1{3a_0}.
+$$
+
+Consequently the lensing combination has ratio
+`(G_Phi+G_Psi)/2=1/a2` and the gravitational slip is `Psi/Phi=G_Psi/G_Phi`.
+The leading slow-motion geodesic acceleration is `-grad(Phi)`, while
+`dt/dl=1-Phi-Psi` for a null ray explains the optical combination.
+These transfer ratios are independent of the probe density normalization.
+The zero-momentum limits refer to ratios, not the inverse Poisson response
+to a uniform density. Physical length calibration, source preparation and
+astronomical comparison remain separate inputs.
+
+Eight [controls](../tests/test_nsc_covariant_spectral_response.py) pass:
+the spin projection, scalar cancellation, independent heat/profile integrals,
+direct curvature and pure-gauge contractions, Einstein bulk plus flux,
+source-action variation, TT/unit/known limits, and singular-domain guards.
+The [bounded application](../scripts/measure_nsc_covariant_spectral_response.py)
+is admitted at only the existing reference momentum after method freeze.
+
+A time-dependent retarded equation does not follow by putting a retarded
+kernel inside an ordinary single-branch quadratic action: variation produces
+the average of that kernel and its transpose, hence an advanced part.
+The physical state and closed-time-path variation must supply the causal
+metric response. The [existing finite Gaussian owner](../src/recursive_horizons/nsc_causal_common.py)
+provides that interface for specified operators and covariance; the curved
+spectral complement and actual exterior are not supplied by this static
+calculation. No strong-curvature attachment or cosmological Lambda is inferred.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

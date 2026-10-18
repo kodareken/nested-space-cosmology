@@ -1491,14 +1491,14 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 249891,
+      "bytes": 250538,
       "path": "docs/active-code-map.md",
-      "sha256": "580985366bfd921a134a9c5d339ade1963ae1b4f35f6bfcb77114d2baeb2f133"
+      "sha256": "12cde887787d72f21b79e915a548035a009324f1c2178235d01f0d9ed512083f"
     },
     {
-      "bytes": 103343,
+      "bytes": 104089,
       "path": "docs/arxiv-studies.md",
-      "sha256": "ee12d0f56e14d74c53e50d2413fdf16ca8b93c3c628925b47eb2415c18470491"
+      "sha256": "8c7aa74c69c2facbc3d4aa21bb14299f1c1544992750ef5b3323af7bb12690f1"
     },
     {
       "bytes": 1458,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2391143,
+      "bytes": 2392570,
       "path": "docs/lab-snapshot.json",
-      "sha256": "4e33a06b2351d1bc3c3ae0b8393895a735a9e7f897dc5038560cb83a4f14b342"
+      "sha256": "5e4f30fdaff8f05dc1d04a0576e648dc6258ee7df658c0058ce11da6c49a6ddf"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 524912,
+      "bytes": 527475,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "71850e327bf064152e34304d63441a090fea01a942a2b3e0981d723272b095fc"
+      "sha256": "f74ec78722b6cbd1ce821ae41c64fdd2f10dbaa1bddc728c6582b986346d4957"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 174567,
+      "bytes": 175589,
       "path": "docs/reproducing.md",
-      "sha256": "fc16a2f63d3e2393ef05f4e387cd31b77a38b63790886b5f0cb916fe5e856996"
+      "sha256": "1f95b5f11a145a5f7b576be08db8dffdcde685e0262576309f5126a2f364e305"
     },
     {
       "bytes": 31710,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 109072,
+      "bytes": 113814,
       "path": "docs/schur-memory.md",
-      "sha256": "7fd11e0547029bb9b3813ae4e3881600f0c7521b1f030ffa76ca79ed5e58229a"
+      "sha256": "26c0ea4753b9b5e54c16d871f17c82fe2ef0cbe5f2c801279d8a39d6eae9f364"
     },
     {
       "bytes": 537091,
@@ -16576,6 +16576,11 @@
       "sha256": "406737b966caf39cdde4dbde9818255f9dcc7976992c1e31de65fd2bc5199568"
     },
     {
+      "bytes": 7481,
+      "path": "scripts/measure_nsc_covariant_spectral_response.py",
+      "sha256": "ffadbec31cefe0babffded5fc7e58751c177aeb8b5f528391180a5064c4c5187"
+    },
+    {
       "bytes": 9068,
       "path": "scripts/measure_nsc_spectral_gravitational_response.py",
       "sha256": "83de442ddb90aa42db942ef57a6db7f43bfd8841dfef366cbe8c91ef1cf1189e"
@@ -17694,6 +17699,11 @@
       "bytes": 17589,
       "path": "src/recursive_horizons/nsc_covariant_operator.py",
       "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
+    },
+    {
+      "bytes": 3348,
+      "path": "src/recursive_horizons/nsc_covariant_spectral_response.py",
+      "sha256": "3f90fb9b8d6669d04ad97271c262c641934d5ca6636692707fd058b99fd6dc53"
     },
     {
       "bytes": 4098,
@@ -20186,6 +20196,11 @@
       "sha256": "0b66e4a5a080b4d0bbf45c847bc4acbeecfece6d57f13b17eea9bed738e58e8c"
     },
     {
+      "bytes": 7648,
+      "path": "tests/test_nsc_covariant_spectral_response.py",
+      "sha256": "fa103e309c42c8547c76a668f66788380c1ad02790e4878356b176d9246868e9"
+    },
+    {
       "bytes": 2251,
       "path": "tests/test_nsc_current_history_bounds.py",
       "sha256": "d81a790ee260eeb9bb4416539294bc2c12403e6198b728ea495fe6208e350c2e"
@@ -21841,7 +21856,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "4e33a06b2351d1bc3c3ae0b8393895a735a9e7f897dc5038560cb83a4f14b342",
+  "lab_snapshot_sha256": "5e4f30fdaff8f05dc1d04a0576e648dc6258ee7df658c0058ce11da6c49a6ddf",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.6",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

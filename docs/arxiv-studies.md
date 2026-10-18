@@ -34,6 +34,17 @@ Then check the list below. Do not repeat a derivation this file already sources.
 
 ## The owned gravitational spectral profile, 18 October 2026
 
+[Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2): read
+the Laplace-operator and functional-trace definitions, equations (5.1)--(5.7),
+and the Weyl/BV basis changes in Sections 5.2--5.3. Reused the five covariant
+heat functions to calculate the Dirac Weyl and scalar profile response.
+The owning [curvature connection](schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)
+retains its boundaryless, fixed-topology quadratic-curvature domain; it does
+not transfer this expansion to an unresolved wall or use it as a real-time
+state prescription. The basic heat function's large-argument behaviour is
+taken from equation (5.6), rather than the inconsistent exponential-tail
+wording beside Figure 1.
+
 [Alkofer--Saueressig--Zanusso, 1410.7999v2](https://arxiv.org/html/1410.7999v2):
 read Section II through its discussion of the quadratic heat response,
 profile superposition and local truncation, equations (14)--(25). Reused

@@ -3055,6 +3055,29 @@ ratios within `1e-10` absolute, keeping the declared profile, input hashes
 and reference exact. Runtime, destination and newer commit metadata may
 differ. The rounded zero quadrature gap does not certify total accuracy.
 
+## Covariant curvature channels and the static probe
+
+The [covariant response](schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)
+has independent curvature and source controls:
+
+```text
+python scripts/run_python.py -m pytest -q tests/test_nsc_covariant_spectral_response.py
+```
+
+After freezing the method, its one admitted application uses:
+
+```text
+python scripts/run_python.py scripts/measure_nsc_covariant_spectral_response.py --output .build/covariant-spectral-response.json
+```
+
+The destination must not exist. The producer checks the saved TT profile's
+inputs and coefficients, evaluates the two curvature channels with fixed
+16/32 Jacobi rules at the old reference scale, and compares its spin-two
+factor with that saved result. It reruns no old producer, scale root or
+trajectory. Limits are 120 process-CPU seconds and 12000 retained bytes.
+The static potential and lensing ratios do not supply a physical length
+calibration, a real-time exterior state or a cosmological Lambda.
+
 ## Scope
 
 The main [paper](../paper/nested-space-cosmology.md) is a living atlas manuscript.
