@@ -1,0 +1,128 @@
+{
+  "cases": [
+    {
+      "kernels": {
+        "quadrature_order": 16,
+        "scalar_kernel": 1.7396008259291757e-05,
+        "squared_momentum": 0.043397706507750905,
+        "weyl_kernel": -0.2663328949019137
+      },
+      "response": {
+        "Newton_potential_ratio": 1.0021711842538266,
+        "lensing_potential_ratio": 1.0016284678354077,
+        "scalar_trace_factor": 0.9999996814199501,
+        "slip_Psi_over_Phi": 0.9989169187321566,
+        "spatial_potential_ratio": 1.0010857514169889,
+        "spin2_factor": 0.9983741797605584
+      }
+    },
+    {
+      "kernels": {
+        "quadrature_order": 32,
+        "scalar_kernel": 1.7396008258896877e-05,
+        "squared_momentum": 0.043397706507750905,
+        "weyl_kernel": -0.2663328949019175
+      },
+      "response": {
+        "Newton_potential_ratio": 1.0021711842538266,
+        "lensing_potential_ratio": 1.0016284678354077,
+        "scalar_trace_factor": 0.9999996814199501,
+        "slip_Psi_over_Phi": 0.9989169187321566,
+        "spatial_potential_ratio": 1.0010857514169889,
+        "spin2_factor": 0.9983741797605584
+      }
+    }
+  ],
+  "counts": {
+    "compact_refinements": 0,
+    "global_moment_integrations": 0,
+    "old_TT_producer_reruns": 0,
+    "parameter_fits": 0,
+    "physical_momenta": 1,
+    "quadrature_rules": [
+      16,
+      32
+    ],
+    "root_solves": 0,
+    "trajectories": 0
+  },
+  "limits": {
+    "CPU_seconds": 120.0,
+    "summary_bytes": 12000
+  },
+  "parameters": {
+    "A": 0.04501936182826115,
+    "C_W": -0.0008441130342798952,
+    "L_ref": 4.80028044552352,
+    "compact_interval": 2.0,
+    "compact_modes": 34,
+    "couplings_or_profile_refitted": false,
+    "magnetic_matching_scale": 2.0,
+    "overlap_points": 112,
+    "ultraviolet_cutoff": 3.973074368754331,
+    "warp_amplitude": 0.017733990147783252,
+    "warp_path": 1.0
+  },
+  "quadrature_response_gaps": {
+    "Newton_potential_ratio": 0.0,
+    "lensing_potential_ratio": 0.0,
+    "scalar_trace_factor": 0.0,
+    "slip_Psi_over_Phi": 0.0,
+    "spatial_potential_ratio": 0.0,
+    "spin2_factor": 0.0
+  },
+  "reference": {
+    "Einstein_potential": "Phi_GR=Psi_GR=-rho/(4*A*p2)",
+    "metric": "ds^2=(1+2Phi)dt^2-(1-2Psi)dx^2",
+    "p2": 0.043397706507750905,
+    "p2_Lref2": 1.0,
+    "physical_length_calibrated": false,
+    "source": "conserved static external T00=rho at linear order; Tij=0",
+    "target_observation_used": false
+  },
+  "reproduce": "python scripts/run_python.py scripts/measure_nsc_covariant_spectral_response.py --output .build/covariant-spectral-response.json",
+  "runtime_cpu_seconds": 0.140625,
+  "saved_TT_factor_gap": 0.0,
+  "schema": "nsc-covariant-spectral-response-v1",
+  "scope": "Curvature-squared fixed-profile action in weak metric perturbations about R4, fixed topology and no surviving outer boundary. Internal compact data do not vary. Static conserved-source transfer ratios are conditional measurable relations, not astronomical fits or a physical length calibration. Full curved real-time/state response, material walls, strong curvature and a cosmological Lambda are not derived.",
+  "source_commit": "9796add2f184a57f40eb4545c2f7af7ed208a0a6",
+  "source_sha256": {
+    "results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+    "results/summaries/nsc-conformal-resolution-v1.json": "3a41ef7076cbb2cd3653a748b066fa1074ed2f96bfbdc50d294300ae33b7fe5a",
+    "results/summaries/nsc-spectral-gravitational-response-v1.json": "0c1bb779676a37b8af3e9605f0dab262c570af13b2364e29a6757328b5314951",
+    "scripts/check_nsc_compact_matching.py": "112364a0ac2b1ef47d42ed863a7caf8566922d9e2b09396600b1d295ab96de3f",
+    "scripts/measure_nsc_covariant_spectral_response.py": "ffadbec31cefe0babffded5fc7e58751c177aeb8b5f528391180a5064c4c5187",
+    "scripts/measure_nsc_spectral_gravitational_response.py": "83de442ddb90aa42db942ef57a6db7f43bfd8841dfef366cbe8c91ef1cf1189e",
+    "src/recursive_horizons/dirac/compact.py": "618b9f6213e1a8304e44285da40f9ec085bb102024e7a9e7dd68136445d93bb6",
+    "src/recursive_horizons/nsc_covariant_identities.py": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1",
+    "src/recursive_horizons/nsc_covariant_spectral_response.py": "3f90fb9b8d6669d04ad97271c262c641934d5ca6636692707fd058b99fd6dc53",
+    "src/recursive_horizons/nsc_scale_binding.py": "c5db801764183641b09b4bf86b169a8e41a10c28d3a342023319c30e25d9b25b",
+    "src/recursive_horizons/nsc_spectral_gravitational_response.py": "fa4650afdc88305273712293c0185708b2545013e3d7af466b2eb0ddd65330b0",
+    "src/recursive_horizons/nsc_warped_source.py": "97730058a09ddfc77a8ad59b97f7a85f8879082b646ca6c2aa2605e5b5e7250b",
+    "tests/test_nsc_covariant_spectral_response.py": "fa103e309c42c8547c76a668f66788380c1ad02790e4878356b176d9246868e9",
+    "tests/test_nsc_spectral_gravitational_response.py": "be590f7ccf83c6e15db9e0e742ad35c11be3e1878057c0178223e9e2003ff32b"
+  },
+  "spectral_moments": {
+    "first_moment_reused_from_A": 42.655035996906285,
+    "profile_at_zero_reused": 5.331879499613274
+  },
+  "status": "completed_weak_curvature_static_response",
+  "threadpools": [
+    {
+      "internal_api": "openblas",
+      "num_threads": 1
+    },
+    {
+      "internal_api": "openblas",
+      "num_threads": 1
+    }
+  ],
+  "uncertainty": "The 16/32 gaps are empirical quadrature indicators. Inherited compact and moment errors, nonlinear fields and the other physical action/state contributions are not enclosed; no total observational error range is inferred.",
+  "zero_mode": {
+    "Weyl_kernel": -0.26659397498066373,
+    "added_volume_term": false,
+    "scalar_kernel": 0.0,
+    "scalar_trace_factor": 1.0
+  }
+}

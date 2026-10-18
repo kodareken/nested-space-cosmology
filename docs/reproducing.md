@@ -3078,6 +3078,12 @@ trajectory. Limits are 120 process-CPU seconds and 12000 retained bytes.
 The static potential and lensing ratios do not supply a physical length
 calibration, a real-time exterior state or a cosmological Lambda.
 
+The [completed summary](../results/summaries/nsc-covariant-spectral-response-v1.json)
+uses method `9796add`. Compare dimensionless transfer ratios within `1e-10`
+absolute, with the source/input hashes and declared fixed reference exact.
+Runtime, destination and newer commit metadata may differ. Its rounded
+zero rule-to-rule gaps are not certified zero errors.
+
 ## Scope
 
 The main [paper](../paper/nested-space-cosmology.md) is a living atlas manuscript.

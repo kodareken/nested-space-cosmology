@@ -41,6 +41,22 @@ the same action giving different static potentials would falsify this
 connection. Do not promote a Euclidean functional to a retarded equation
 by varying a single-branch action with a nonsymmetric kernel.
 
+**Outcome:** frozen method `9796add` completes the one admitted application
+in 0.140625 process-CPU seconds, retaining a 5797-byte
+[summary](../results/summaries/nsc-covariant-spectral-response-v1.json).
+At the existing reference momentum, the potential ratios are
+`G_Phi=1.0021711842538266`, `G_Psi=1.0010857514169889`, and
+`G_lensing=1.0016284678354077`. The gravitational slip is
+`Psi/Phi=0.9989169187321566`. The scalar trace factor is
+`0.9999996814199501`; its exact zero-momentum limit remains one.
+Both rules round to the same transfer ratios, and the saved TT factor is
+recovered. These comparisons do not enclose inherited spectral or physical
+errors. Eight controls pass in 3.10 wall seconds. This weak-field static
+connection also agrees with the independent Grok calculation of both
+curvature kernels and the source-normalized potentials. The static
+connection is closed; the actual causal metric/state and larger geometric
+reduction remain the next inputs, with no further static scan admitted.
+
 ## The owned spectral profile and the local gravitational approximation
 
 The closed vacuum reference exposes the need to distinguish a local curvature

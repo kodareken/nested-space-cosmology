@@ -636,6 +636,7 @@ def build_pdf(
         value = value.replace(r"\ldots", "…")
         value = value.replace(r"\otimes", "⊗").replace(r"\cdot", "·")
         value = value.replace(r"\partial", "∂").replace(r"\infty", "∞")
+        value = value.replace(r"\nabla", "∇")
         value = value.replace(r"\hbar", "ℏ").replace(r"\pm", "±").replace(r"\mp", "∓")
         value = value.replace(r"\Box", "□")
         value = value.replace(r"\parallel", "∥").replace(r"\perp", "⊥")
@@ -645,7 +646,7 @@ def build_pdf(
         value = re.sub(
             r"\\frac\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
         )
-        for command in ("mathrm", "mathbf", "mathbb", "mathcal", "operatorname", "text"):
+        for command in ("mathrm", "mathbf", "boldsymbol", "mathbb", "mathcal", "operatorname", "text"):
             value = re.sub(rf"\\{command}\{{([^{{}}]+)\}}", r"\1", value)
             value = re.sub(rf"\\{command}\s+([A-Za-z])", r"\1", value)
         for name, symbol in greek.items():

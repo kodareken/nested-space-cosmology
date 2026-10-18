@@ -1,6 +1,24 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.6`, includes the owned spectral profile's gravitational response, the vacuum gravitational-response diagnostic, the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.7`, includes the covariant curvature channels and a static motion--lensing relation, the owned spectral profile's gravitational response, the vacuum gravitational-response diagnostic, the propagated photon response, the checked second nesting level, its central observer, the fixed-state resolution response and the completed unconverged P001 endpoint trial. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## Curvature channels and a motion--lensing relation, 18 October 2026
+
+The [covariant profile calculation](schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)
+now supplies both Weyl and scalar-curvature response of the same induced
+functional. A conserved weak static density probe has gravitational slip
+**`Psi/Phi=0.9989169187321566`** at `p^2*L_ref^2=1`. Its motion potential
+is `1.0021711842538266` times the Einstein response; the lensing combination
+is `1.0016284678354077` times that response. No source or coupling is fitted.
+
+Eight controls pass, including direct metric/source variation and the
+Einstein boundary flux. The one [5797-byte application](../results/summaries/nsc-covariant-spectral-response-v1.json)
+uses 0.140625 CPU seconds. Fixed quadrature rules agree to the stored
+response floats, without enclosing inherited spectral errors. The scalar
+kernel vanishes at zero momentum; no additional volume term is selected.
+These are conditional static transfer relations with no physical length
+calibration or astronomical comparison. The actual causal state and larger
+geometric reduction remain necessary for Lambda.
 
 ## The owned induced gravitational spectral profile, 18 October 2026
 

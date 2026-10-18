@@ -1300,6 +1300,26 @@ provides that interface for specified operators and covariance; the curved
 spectral complement and actual exterior are not supplied by this static
 calculation. No strong-curvature attachment or cosmological Lambda is inferred.
 
+The [completed application](../results/summaries/nsc-covariant-spectral-response-v1.json)
+uses method `9796add` at the original `p^2*L_ref^2=1`. The kernels are
+`F_C=-.2663328949019175` and `F_R=1.7396008258896877e-5`.
+They give `a2=.9983741797605584` and `a0=.9999996814199501`.
+The potential ratios are `G_Phi=1.0021711842538266`,
+`G_Psi=1.0010857514169889`, and `G_lensing=1.0016284678354077`;
+the slip is `Psi/Phi=.9989169187321566`. Thus this conditional source
+response supplies a relation between motion and lensing using one common
+profile. The source normalization cancels from these ratios. It is not an
+astronomical comparison or a physical length calibration.
+
+The fixed quadrature rules round to the same response ratios. Their raw
+scalar kernels differ by `3.95e-16`, and their Weyl kernels by `3.8e-15`.
+The independently saved TT factor is recovered to the stored float.
+Inherited spectral and nonlinear/state errors remain outside these
+indicators. The application uses 0.140625 CPU seconds, one BLAS thread,
+and 5797 retained bytes, with no raw cache or time evolution. Reuse this
+closed static connection; a state-specified causal reduction of the larger
+geometry is still needed to calculate an effective cosmological volume term.
+
 ## Step 7: the current candidate's first vacuum projection
 
 The current conformal-scalar cap–wall candidate gives the exact smooth-bulk

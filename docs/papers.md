@@ -6,6 +6,13 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.7` adds Section 6.1.12: both covariant curvature channels
+of the same induced profile and a conditional static motion--lensing relation.
+The source-action variation gives a gravitational slip of 0.9989169187 at
+the existing reference scale. The scalar zero mode adds no volume term.
+Physical length calibration, astronomical source inference and the actual
+causal state remain separate; no cosmological Lambda is inferred.
+
 Revision `2026-10-18.6` adds Section 6.1.11: the flat quadratic gravitational
 response of the existing warped compact spectral profile. At the fixed
 observer scale it differs from the local approximation by 1.59 parts per

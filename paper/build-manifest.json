@@ -1,10 +1,10 @@
 {
-  "bytes": 3701755,
+  "bytes": 3729245,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "cf5da9b15311336c1b93e3293111f99845cf94a3f398d12966b542caea95395f",
+  "metadata_sha256": "171a72e6277bd6175092228b5662d06239822984426789ec3c3d808978b6d0ab",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 55,
-  "pdf_sha256": "55016492948625d7b322e37b16c67808d6f84b15aefe352c3ae944d17be4ae42",
+  "pages": 56,
+  "pdf_sha256": "8312464b8cf9072b685ba1833a90af182adc62becc4d5be727d8066f5f64bb67",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -480,6 +480,10 @@
       "sha256": "3a41ef7076cbb2cd3653a748b066fa1074ed2f96bfbdc50d294300ae33b7fe5a"
     },
     {
+      "path": "results/summaries/nsc-covariant-spectral-response-v1.json",
+      "sha256": "4dced4c42934711b458bb3cf3a08368179c45d416a2bf24091decb2cd497cbbc"
+    },
+    {
       "path": "results/summaries/nsc-spectral-gravitational-response-v1.json",
       "sha256": "0c1bb779676a37b8af3e9605f0dab262c570af13b2364e29a6757328b5314951"
     },
@@ -489,10 +493,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "dfd71460ba2e3d91c414556fb45f70f0aed6ae676f8d6cd6a7665dcdaa9f4545"
+      "sha256": "4f491664fabeba8cf73cc5058e556e8147eaef6f34e5714e843164b39c884fa4"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "d5611810c519a6274b010f497372fb1fb6f6035226101bdb2c17175bb3113bc7",
-  "version": "working-2026-10-18.6"
+  "source_sha256": "1a63453d554c856afde705164aea8d100fb99aa8994c7faf63ca65a7b7e06440",
+  "version": "working-2026-10-18.7"
 }

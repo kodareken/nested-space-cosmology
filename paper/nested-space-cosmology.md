@@ -1025,6 +1025,78 @@ or replace the constrained spherical causal map. Curved real-time metric
 dependence and the exterior's physical state remain necessary before
 identifying an effective cosmological volume term.
 
+### 6.1.12. Curvature channels and the relation between motion and lensing
+
+The same fixed-profile functional now has a covariant quadratic-curvature
+connection. Reusing [Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2),
+Section 5, and the owned Dirac Clifford traces gives Weyl and scalar
+functions $\mathcal F_C(-\nabla^2)$ and $\mathcal F_R(-\nabla^2)$ in the
+action $[C\mathcal F_C C+R\mathcal F_R R]/[2(4\pi)^2]$.
+The [complete derivation](../docs/schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)
+works to second order in curvatures with compact weak perturbations of
+Euclidean $\mathbb R^4$, fixed topology and fixed compact data. Euler and
+boundary terms are removed only within that domain; a material wall or
+strong-curvature attachment needs its own terms.
+
+The Weyl function recovers Section 6.1.11 through
+$a_2(x)=\mathcal P_H(x)/x=1+6x\mathcal F_C(x)/Q_1$. The scalar function is
+
+$$
+\mathcal F_R(x)=\frac{1}{72}\int_0^1
+\left(1-\frac{5v}{2}\right)\sqrt{1-v}\,[H(xv/4)-H(0)]\,dv.
+$$
+
+The constant subtraction changes nothing because its weight integrates to
+zero. Thus $\mathcal F_R(0)=0$, while a nonzero-momentum scalar response
+remains. Its trace factor is $a_0(x)=1-18x\mathcal F_R(x)/Q_1$.
+This correction adds no zero-momentum volume term; the previous vacuum
+normalization is still a premise.
+
+For a conserved weak static density perturbation $T_{00}=\rho$, $T_{ij}=0$,
+write the physical metric as
+$ds^2=(1+2\Phi)dt^2-(1-2\Psi)d\boldsymbol x^2$.
+Direct metric and source variation, with source action $+\int\rho\Phi$,
+gives the ratios to $\Phi_{\mathrm{GR}}=\Psi_{\mathrm{GR}}=-\rho/(4Ax)$:
+
+$$
+G_\Phi=\frac{4}{3a_2}-\frac{1}{3a_0},\qquad
+G_\Psi=\frac{2}{3a_2}+\frac{1}{3a_0}.
+$$
+
+Slow-motion acceleration measures $-\nabla\Phi$; the null optical index is
+$1-\Phi-\Psi$. Consequently the lensing ratio is
+$(G_\Phi+G_\Psi)/2=1/a_2$, and gravitational slip is
+$\Psi/\Phi=G_\Psi/G_\Phi$. The density normalization cancels from these
+relations. This is an external static probe, not a supplied astrophysical
+source or the earlier nested-body preparation.
+
+The [one application](../results/summaries/nsc-covariant-spectral-response-v1.json)
+keeps the old profile, couplings and reference scale, using frozen method
+`9796add` at $p^2L_{\mathrm{ref}}^2=1$:
+
+| Conditional weak-field quantity | Value |
+|---|---|
+| Scalar trace factor $a_0$ | $0.9999996814199501$ |
+| Motion-potential ratio $G_\Phi$ | $1.0021711842538266$ |
+| Spatial-potential ratio $G_\Psi$ | $1.0010857514169889$ |
+| Lensing-potential ratio | $1.0016284678354077$ |
+| Gravitational slip $\Psi/\Phi$ | $0.9989169187321566$ |
+
+Eight controls pass, including independent curvature contractions, pure
+gauge, the Einstein density and its flux, heat/profile integration and
+direct source variation. The fixed 16/32 rules round to the same response
+floats and recover the old TT factor. Their scalar kernels differ by
+$3.95\times10^{-16}$; these are integration indicators, not bounds on the
+inherited spectrum or physical model. The application takes 0.140625 CPU
+seconds and retains 5797 bytes without a trajectory or scale fit.
+
+A real-time response requires its state and closed-time-path variation.
+Putting a retarded kernel in an ordinary quadratic action instead produces
+its symmetric retarded--advanced average. The static relation therefore
+does not supply the actual curved causal exterior, physical length
+calibration or a cosmological Lambda. Those remain the connection needed
+between the larger geometry and its observer's effective volume response.
+
 ### 6.2. The retained local incoming gate
 
 <!-- nsc-claim:local-source-insertion-majorant -->

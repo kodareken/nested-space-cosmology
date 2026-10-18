@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 250538,
+      "bytes": 250682,
       "path": "docs/active-code-map.md",
-      "sha256": "12cde887787d72f21b79e915a548035a009324f1c2178235d01f0d9ed512083f"
+      "sha256": "e5300372dfd44ed424559cbe32c52f164caef4d5cf8561807618a4c5b68e53a8"
     },
     {
       "bytes": 104089,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 395360,
+      "bytes": 396600,
       "path": "docs/current-result.md",
-      "sha256": "79d72da0b0cedaebc40c7d87b51e7545526920b9e636a8c6a22000ee67398f31"
+      "sha256": "6fa8625d18fd303a7842936d83da59d47f83d0e22f021cf86663fefb95de9245"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2392570,
+      "bytes": 2393500,
       "path": "docs/lab-snapshot.json",
-      "sha256": "5e4f30fdaff8f05dc1d04a0576e648dc6258ee7df658c0058ce11da6c49a6ddf"
+      "sha256": "55ceb2cd07404bfbc59082fba096ed9f2575469e932c8200233cf8156b6992ae"
     },
     {
       "bytes": 4997,
@@ -2206,9 +2206,9 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 12796,
+      "bytes": 13241,
       "path": "docs/papers.md",
-      "sha256": "f19ddb049da4116a5deac4d0b9cdfd3980349d337cb66829ba5baf17eb376d2e"
+      "sha256": "c5d523e7905538fb23848b3868f384db9487b8bff5e125c19a32e1f4ba157da1"
     },
     {
       "bytes": 8749,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 527475,
+      "bytes": 528484,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "f74ec78722b6cbd1ce821ae41c64fdd2f10dbaa1bddc728c6582b986346d4957"
+      "sha256": "581e4a421571af8f02dc4f52d5122dc56507d3a2fe5bbd41e2560027316f877c"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 175589,
+      "bytes": 175952,
       "path": "docs/reproducing.md",
-      "sha256": "1f95b5f11a145a5f7b576be08db8dffdcde685e0262576309f5126a2f364e305"
+      "sha256": "e830815c9f70a7312a8d803fcf301ce7812dd4f9cfb0e626fe28566ec70e0464"
     },
     {
       "bytes": 31710,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 113814,
+      "bytes": 115066,
       "path": "docs/schur-memory.md",
-      "sha256": "26c0ea4753b9b5e54c16d871f17c82fe2ef0cbe5f2c801279d8a39d6eae9f364"
+      "sha256": "a663fa2472fe819284287249869f0050d9a7c5902ab2305f814c56d9ecd9edcf"
     },
     {
       "bytes": 537091,
@@ -2331,14 +2331,14 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 21635,
+      "bytes": 21806,
       "path": "paper/build-manifest.json",
-      "sha256": "79d22900f97e91d3a9247293aada8c3ad2f2a8313869983ee92f201873bbe24f"
+      "sha256": "78ade4cbdff652acfbd422572380d2e4301af2c72113a66ead212976abeeca88"
     },
     {
       "bytes": 3206,
       "path": "paper/catalog.json",
-      "sha256": "7301843fd5f418b3138df5aa56c7a0a1fbf4f448d04166e5c5c1fb9c83cf0d4f"
+      "sha256": "211894b9bfea7442bc7fb7825216b997c7f50c8e9798da381b65aeccc74e2941"
     },
     {
       "bytes": 26616,
@@ -2523,7 +2523,7 @@
     {
       "bytes": 396,
       "path": "paper/metadata.json",
-      "sha256": "cf5da9b15311336c1b93e3293111f99845cf94a3f398d12966b542caea95395f"
+      "sha256": "171a72e6277bd6175092228b5662d06239822984426789ec3c3d808978b6d0ab"
     },
     {
       "bytes": 7619,
@@ -2566,14 +2566,14 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 175650,
+      "bytes": 179245,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "d5611810c519a6274b010f497372fb1fb6f6035226101bdb2c17175bb3113bc7"
+      "sha256": "1a63453d554c856afde705164aea8d100fb99aa8994c7faf63ca65a7b7e06440"
     },
     {
-      "bytes": 3701755,
+      "bytes": 3729245,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "55016492948625d7b322e37b16c67808d6f84b15aefe352c3ae944d17be4ae42"
+      "sha256": "8312464b8cf9072b685ba1833a90af182adc62becc4d5be727d8066f5f64bb67"
     },
     {
       "bytes": 1521,
@@ -14961,6 +14961,11 @@
       "sha256": "3a41ef7076cbb2cd3653a748b066fa1074ed2f96bfbdc50d294300ae33b7fe5a"
     },
     {
+      "bytes": 5797,
+      "path": "results/summaries/nsc-covariant-spectral-response-v1.json",
+      "sha256": "4dced4c42934711b458bb3cf3a08368179c45d416a2bf24091decb2cd497cbbc"
+    },
+    {
       "bytes": 4720,
       "path": "results/summaries/nsc-spectral-gravitational-response-v1.json",
       "sha256": "0c1bb779676a37b8af3e9605f0dab262c570af13b2364e29a6757328b5314951"
@@ -15051,9 +15056,9 @@
       "sha256": "8eafb9080a5dd6ac005e9575af780280cef4413d91792b06af106cd1f8219e6a"
     },
     {
-      "bytes": 64476,
+      "bytes": 64538,
       "path": "scripts/build_paper.py",
-      "sha256": "dfd71460ba2e3d91c414556fb45f70f0aed6ae676f8d6cd6a7665dcdaa9f4545"
+      "sha256": "4f491664fabeba8cf73cc5058e556e8147eaef6f34e5714e843164b39c884fa4"
     },
     {
       "bytes": 10735,
@@ -21856,9 +21861,9 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "5e4f30fdaff8f05dc1d04a0576e648dc6258ee7df658c0058ce11da6c49a6ddf",
+  "lab_snapshot_sha256": "55ceb2cd07404bfbc59082fba096ed9f2575469e932c8200233cf8156b6992ae",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
-  "manuscript_revision": "2026-10-18.6",
+  "manuscript_revision": "2026-10-18.7",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",
