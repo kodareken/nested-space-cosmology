@@ -483,6 +483,31 @@ The [component](../src/recursive_horizons/nsc_atlas_dirac_time_chart.py),
 the signed coordinate-domain test; a failed cut does not trigger a gauge
 scan or a claim of full time coverage.
 
+The [frozen reference](../results/summaries/nsc-atlas-dirac-time-chart-v1.json)
+records an **unsuccessful full-domain chart**. Five predeclared cuts through
+`Rw/ell=.5` pass the sampled metric checks. The next cut,
+`Rw/ell=.5125`, has signed Jacobian `-.2130723253` at initial spatial label
+`y/ell=.5214966935`, with areal radius `r/ell=.5977107183`. The sampled
+spatial norm remains positive at that cut; the failed determinant is a
+time-orientation/coordinate fold. This is the first failed predeclared cut,
+not a located exact onset radius. The remaining bulk cuts were not run.
+
+On the successful metric calls the smallest lapse is `.01403670785`,
+smallest spatial norm `.06659155747`, and smallest Jacobian `.01219117082`.
+Mass, Hamiltonian and momentum consistency discrepancies are below
+`6.79e-13`; the wall and spinor checks differ by less than `6.22e-15`.
+The largest 32/64 coordinate comparison is `1.08e-12*ell`. These comparisons
+are not a physical-error enclosure. The application uses 9024 quadrature
+points and `.0625` process-CPU seconds, including setup and source binding.
+No gauge profile was changed and no field evolution or polarization was run.
+
+The fixed quiet spacetime and its material trajectory still supply the wall
+data. This particular wide time chart does not cover the entire strip. A
+subsequent response calculation must establish the chart coverage actually
+needed for its source and observer, using compatible patches where required.
+The failed chart cannot be used as a full-strip Dirac evolution or as an
+explanation of P001's separate projection error.
+
 ## Conformal calculation variables remove the singular wall jet
 
 For this massless probe a useful exact simplification follows from

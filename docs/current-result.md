@@ -2,6 +2,26 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## The fixed wide Dirac time chart exits its coordinate domain
+
+The [frozen quiet reference](../results/summaries/nsc-atlas-dirac-time-chart-v1.json)
+checks the declared gauge without changing its profiles. Five sampled
+wall-radius cuts through `.5*ell` pass. At the next predeclared cut,
+`.5125*ell`, its Jacobian is `-.2130723253` at `y=.5214966935*ell`,
+`r=.5977107183*ell`, while the sampled spatial norm is still positive.
+The calculation stops there. This is a coordinate fold of this proposed
+time chart; the remaining bulk cuts were not evaluated.
+
+Within the successful sampled calls, the mass and bulk constraints agree
+to `6.79e-13` or better, and the moving wall/Dirac frame identities agree
+to floating-point consistency. Nine manufactured/local controls pass.
+The reference uses 9024 quadrature points and `.0625` process-CPU seconds;
+it takes no P001 or Dirac evolution steps. The
+[owner](nsc-atlas-dirac-probe.md#finite-joined-time-chart) keeps this failed
+full-domain construction separate from the actual quiet spacetime and
+from P001's boundary-projection diagnosis. A physical source/observer
+response still needs adequate chart coverage and its quantum preparation.
+
 ## A common action for a coherent P001 boundary method
 
 The [same original action in conformal variables](nsc-atlas-conformal-action.md)

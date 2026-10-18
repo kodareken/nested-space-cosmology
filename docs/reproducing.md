@@ -13,6 +13,10 @@ The method must be committed and the output path unused. It uses the
 stops on the first failed bulk metric cut and keeps its location. Controls
 do not call the nine-cut report. Earlier unfrozen implementation previews
 are disclosed in the admission; no profile is tuned to hide their fold.
+The [saved reference](../results/summaries/nsc-atlas-dirac-time-chart-v1.json)
+is an unsuccessful full-domain chart. A successful recorder exit means the
+outcome was saved; `status=coordinate_domain_exit_recorded` does not mean
+that the full time chart passed.
 
 The shared original action, material junction and local Legendre-map
 identities reproduce without a trajectory or generated result file:

@@ -1,0 +1,151 @@
+{
+  "failure": null,
+  "limits": {
+    "CPU_seconds": 120,
+    "quadrature_points": 200000,
+    "summary_bytes": 12000
+  },
+  "reference": {
+    "checks": {
+      "beta_plus_max_error": 5.551115123125783e-16,
+      "bulk_hamiltonian_max_abs": 3.2240876635114546e-13,
+      "bulk_mass_max_error": 2.942091015256665e-15,
+      "bulk_momentum_max_abs": 6.783462680459706e-13,
+      "de_t0_abs": 6.217248937900877e-15,
+      "initial_Kll_max_error": 7.875189447049411e-15,
+      "initial_lapse_max_error": 1.6653345369377348e-15,
+      "initial_radial_length_max_error": 1.1102230246251565e-15,
+      "initial_shift_max_error": 1.3322676295501878e-15,
+      "initial_velocity_max_error": 1.7763568394002505e-15,
+      "israel_Ktau_max_error": 5.329070518200751e-15,
+      "metric_pullback_max_error": 6.661338147750939e-16,
+      "spinor_parallel_max_error": 3.3306690738754696e-15,
+      "wall_match_max_error": 2.1094237467877974e-15
+    },
+    "counts": {
+      "Dirac_evolution_steps": 0,
+      "P001_evolution_steps": 0,
+      "attempted_wall_radius_cuts": 6,
+      "bridge_nodes": 67,
+      "loop_polarizations": 0,
+      "outgoing_nodes": 70,
+      "planned_wall_radius_cuts": 9,
+      "quadrature_points": 9024,
+      "setup_quadrature_points": 96,
+      "state_selections": 0,
+      "successful_wall_evaluations": 5
+    },
+    "domain": {
+      "failure": {
+        "areal_radius_at_min_jacobian": 0.5977107183311096,
+        "gauge_was_changed": false,
+        "min_jacobian": -0.21307232532455056,
+        "min_spatial_norm": 0.5237597802412043,
+        "radius": 0.5125000000000001,
+        "segment": "bridge",
+        "y_at_min_jacobian": 0.5214966935347778,
+        "y_at_min_spatial_norm": 0.658907468141132
+      },
+      "note": "Sampled sign change is a stop, not a cue to change the cutoff, lapse or shift.",
+      "status": "exited",
+      "successful_wall_radii": [
+        0.45,
+        0.4625,
+        0.47500000000000003,
+        0.48750000000000004,
+        0.5
+      ]
+    },
+    "gauge": {
+      "a_plus0": -1.851713912296586,
+      "coordinate": "y is the wall-pinned coordinate equal to initial proper distance minus initial wall distance; it is not future exterior proper distance",
+      "cutoff": "S=1-smooth_step(y/ell) on [0,1]",
+      "initial_lapse": "exp(a_plus0*y*S)",
+      "initial_shift": "s0*S",
+      "matching": "S and y*S fix the wall value and spatial tangent",
+      "q_horizon": 0.8719309204441041,
+      "q_minimum": 0.0,
+      "q_range": [
+        -0.3260454304143485,
+        1.0231082772196955
+      ],
+      "s0": 0.7388177118171959,
+      "time": "t=q0*(Rwall-.45), Nwall(t=0)=1"
+    },
+    "inputs": {
+      "H_ell": 1.0,
+      "M_over_ell": 0.4,
+      "Rwall_over_ell": [
+        0.45,
+        0.4625,
+        0.47500000000000003,
+        0.48750000000000004,
+        0.5,
+        0.5125000000000001,
+        0.525,
+        0.5375000000000001,
+        0.55
+      ],
+      "angular_k": 1,
+      "ell": 1.0,
+      "k_wall_ell": 2.0,
+      "q0": 1.5156445277380877,
+      "right_display_R_over_ell": 4.0,
+      "scalar_amplitude": 0.0,
+      "taper_R_over_ell": [
+        1.0,
+        1.2
+      ]
+    },
+    "nested_Psi_over_Phi": null,
+    "numerical_comparison": {
+      "bridge_U_32_64_abs_difference": 9.992007221626409e-16,
+      "compares_pde_refinement": false,
+      "is_rigorous_error_enclosure": false,
+      "outgoing_U_32_64_abs_difference": 1.0720313525780512e-12,
+      "outgoing_proper_distance_32_64_abs_difference": 2.0250467969162855e-13,
+      "wall_Tcap_32_64_abs_difference": 2.7755575615628914e-17,
+      "wall_U_32_64_abs_difference": 2.7755575615628914e-17,
+      "wall_tau_32_64_abs_difference": 2.7755575615628914e-17
+    },
+    "quadrature_budget": {
+      "blas_threads": 1,
+      "maximum_reference_quadrature_points": 200000,
+      "points_used": 9024,
+      "process_cpu_seconds": 0.03125,
+      "reference_process_cpu_seconds": 120
+    },
+    "sampled_minima": {
+      "is_uniform_interval_enclosure": false,
+      "jacobian": 0.012191170815633534,
+      "lapse": 0.014036707854915035,
+      "on_successful_metric_calls_only": true,
+      "spatial_norm": 0.06659155747208031
+    },
+    "scope": "Quiet joined coordinate chart and its Dirac coefficient jets. No quantum state, Hadamard condition, polarization, P001 step or evolved spinor.",
+    "sources": {
+      "beta_plus_zero_uses_singular_division": false,
+      "cap": "de Sitter H*ell=1",
+      "division_by_f": false,
+      "exterior": "Schwarzschild M/ell=.4",
+      "scalar_amplitude": 0.0,
+      "wall": "tension k_wall*ell=2"
+    },
+    "validity": "The fixed chart exits at the recorded sample; remaining bulk cuts were not evaluated."
+  },
+  "runtime_cpu_seconds": 0.0625,
+  "schema": "nsc-atlas-dirac-time-chart-v1",
+  "source_commit": "e3123668e377566f9c8ffb31abc154b2123be27c",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_time_chart.py": "3f453596927f63748ad572b1123dbf2b1e0c294af60c0231f99e98f410706f15",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7",
+    "src/recursive_horizons/nsc_atlas_dirac_evolution.py": "e54190b116d396b30d6125e700ad3225b16514ffc22c9381d5475a9651ff3786",
+    "src/recursive_horizons/nsc_atlas_dirac_slice.py": "8e46dc5a92924ed15c1a1ddc84bd8d046fadf15ec650c98aadb343ae9f077a71",
+    "src/recursive_horizons/nsc_atlas_dirac_time_chart.py": "79ae8d2e8a198cb77b37abddaa4bddab2e34c163636452f5cf788460c8a88c16",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "tests/test_nsc_atlas_dirac_time_chart.py": "038d9b3952c2010340f0b4d4aef9b95b6da8c3ff1ff0cfaacc9be4c68fba0032"
+  },
+  "status": "coordinate_domain_exit_recorded"
+}
