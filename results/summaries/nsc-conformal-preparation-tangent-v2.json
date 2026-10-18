@@ -1,0 +1,168 @@
+{
+  "counts": {
+    "columns": 6,
+    "dense_factorizations": 1,
+    "nf": 512,
+    "ng": 511,
+    "nq": 2048,
+    "pairs": 3,
+    "parameter_scans": 0,
+    "retarded_kernels": 0,
+    "root_solves": 0,
+    "time_steps": 0
+  },
+  "input": {
+    "authenticated_before_factorization": true,
+    "episode_sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "frames_loaded": false,
+    "keys": "nf512_original_T0_<field>",
+    "payload_bytes": 53100722,
+    "payload_sha256": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877"
+  },
+  "limits": {
+    "cpu_seconds": 140.0,
+    "dense_factorizations": 1,
+    "summary_bytes": 24000
+  },
+  "runtime_cpu_seconds": 9.984375,
+  "schema": "nsc-conformal-preparation-tangent-summary-v1",
+  "scope": "One initial chiral constraint-level tangent on the original T=0 slice. Derivative per epsilon at fixed initial Q. Not an observed length, Lambda, formation history, light-cone shift, or retarded kernel. The projected solve residual does not certify invertibility. The full quadrature remainder stays in the summary and is not removed. The original nonzero constraint defect is preserved, not solved.",
+  "source_commit": "76cf805e152049a541da692301925151ca145dec",
+  "source_sha256": {
+    "scripts/measure_nsc_conformal_geometric_average.py": "d706eb290ead4722dbb920053347dc442a8d7bf05beba862f698d35f05ac45c1",
+    "scripts/measure_nsc_conformal_preparation_tangent.py": "de10ea2cb3e145d05b1f43640de6028d81cfd90fefd9048dba611671bf32dd54",
+    "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "src/recursive_horizons/nsc_conformal_preparation_tangent.py": "ee45b8b64306e14037664a0a642eefb66349bae8206f8751d0c3b8ff087b7eaf",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "tests/test_nsc_conformal_preparation_fourier_control.py": "652881c90b101884d38d710458f1295d8263eb3609007ab37920a1b174fbd6bf",
+    "tests/test_nsc_conformal_preparation_tangent.py": "2bcd922a906362a3986a9c7d545560fb699c489db7404876782b665833a4f0d5"
+  },
+  "status": "initial_constraint_level_response",
+  "tangent": {
+    "applied_on": "nf_before_prolongation",
+    "background": {
+      "Pmom_max_abs": 7.670079849029963e-15,
+      "Q": 0.25132493326913924,
+      "S1_max_abs": 2.3637248630790207e-19,
+      "constant_Q_radius_operator_projected_max_abs": 1.0908066176527038e-08,
+      "difference_from_constant_Q_operator_max_abs": 2.1051960175100248e-10,
+      "full_hamilton_max_abs": 9.978453729075909e-06,
+      "held_out_hamilton_max_abs": 9.982561517746234e-06,
+      "initial_defect_removed": false,
+      "momentum_max_abs": 7.854161765406682e-12,
+      "newton_threshold_role": "historical constant-Q radius operator diagnostic",
+      "original_newton_threshold": 1e-10,
+      "original_newton_threshold_met": false,
+      "projected_hamilton_max_abs": 1.0902255657462764e-08
+    },
+    "columns": 6,
+    "constraint_target": "preserve_original_projected_constraint_level",
+    "directional_check": {
+      "disagreement_with_factored_residual_max_abs": 1.0375709166516073e-08,
+      "full_max_abs": 5.738704388136284e-06,
+      "held_out_max_abs": 5.7429965648805515e-06,
+      "held_out_rms": 1.5401391760317041e-06,
+      "momentum_max_abs": 3.407274462531256e-12,
+      "projected_max_abs": 1.0342256996228771e-08
+    },
+    "fixed_assumptions": [
+      "same U on every column, applied on nf before prolongation",
+      "plus phi1 = i phi0 and minus = recorded phase times conjugate(plus)",
+      "equal pair occupations 0.75, 0.5 and 0.25",
+      "delta Q, delta chi and all geometric momentum variations are zero",
+      "J_r is the existing pre-gauge projected radius Jacobian",
+      "full quadrature remainder is reported and is not removed",
+      "the saved nonzero projected constraint level is held fixed",
+      "initial Q is held fixed, so the observer clock variation is delta_r/r"
+    ],
+    "generator": "cos(2*pi*xi_f/length)",
+    "geometry_variations_per_epsilon": {
+      "Q": 0.0,
+      "chi": 0.0,
+      "p_Q": 0.0,
+      "p_chi": 0.0,
+      "p_r": 0.0
+    },
+    "gram_defect_max_abs": 4.440892098500626e-16,
+    "incomplete_continuum_constraints": {
+      "certified_invertibility": false,
+      "continuum_constraint_certified": false,
+      "formation_history": false,
+      "full_quadrature_constraint_removed": false,
+      "later_trajectory_keeps_this_chirality": false,
+      "retarded_kernel": false,
+      "time_integral_certified": false
+    },
+    "lu": {
+      "certified_invertibility": false,
+      "factorizations": 1,
+      "gecon_info": 0,
+      "norm": "1",
+      "rcond": 1.1220549930626274e-06,
+      "singular_warning": false,
+      "u_diagonal_min_abs": 969.6994976674614
+    },
+    "nf": 512,
+    "ng": 511,
+    "nq": 2048,
+    "observer": {
+      "Q_fixed": 0.25132493326913924,
+      "clock_identity": "Q fixed, so delta_N/N = delta_r/r",
+      "delta_N_over_N_per_epsilon": -0.27203771374589336,
+      "delta_r_over_r_per_epsilon": -0.27203771374589336,
+      "delta_r_per_epsilon": -1.305806131119695,
+      "label": "derivative per epsilon at the original initial observer; not an observed length, Lambda, or a continuum or formation result",
+      "light_cone_evolution": false,
+      "original_radius": 4.800092285510935,
+      "quadrature_index": 256,
+      "sample": "prolonged initial observer radius",
+      "x": 1.0
+    },
+    "pairs": 3,
+    "radius_response_per_epsilon": {
+      "coarse_max_abs": 1.3627941247904805,
+      "coarse_rms": 1.2163671368817044,
+      "dimensionless_coarse_max_abs": 0.2799154296293362,
+      "dimensionless_coarse_rms": 0.26940162001300944,
+      "dimensionless_quadrature_max_abs": 0.27991542399039354,
+      "dimensionless_quadrature_rms": 0.26940162001300944,
+      "label": "derivative per epsilon; not an observed length",
+      "quadrature_max_abs": 1.3628058204773366,
+      "quadrature_rms": 1.2163671368817044
+    },
+    "recorded_phase": -0.842669616901,
+    "solve": {
+      "certified_invertibility": false,
+      "geometric_response_max_abs": 36.90676694184879,
+      "relative_residual": 3.5078588387441126e-11,
+      "residual_max_abs": 1.294637286264333e-09,
+      "source_response_max_abs": 36.906766941839486,
+      "tolerance_relative": 1e-08
+    },
+    "source_tangent": {
+      "phi_only_density_max_abs": 36.95391475752377,
+      "phi_only_momentum_max_abs": 3.407274462531256e-12,
+      "projected_source_max_abs": 36.906766941839486
+    }
+  },
+  "threads": {
+    "pools": [
+      {
+        "internal_api": "openblas",
+        "num_threads": 8,
+        "prefix": "libscipy_openblas",
+        "user_api": "blas"
+      },
+      {
+        "internal_api": "openblas",
+        "num_threads": 8,
+        "prefix": "libscipy_openblas",
+        "user_api": "blas"
+      }
+    ],
+    "requested": 8
+  }
+}

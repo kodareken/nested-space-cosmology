@@ -49,6 +49,25 @@ failure remains; another exact-wave control would duplicate this check.
 
 ![Three-grid radius envelope and mass/flux trends](figures/nsc-atlas-fixed-endpoint-comparison.png)
 
+## Initial geometry response to a prepared-state change, 18 October 2026
+
+The [paired-phase calculation](schur-memory.md#a-paired-preparation-tangent-for-a-causal-response)
+now evaluates the initial gravitational response in the separate conformal
+Einstein/Weyl/Dirac episode. The fixed phase generator preserves the paired
+state's Gram matrix and zero current. Holding its original projected
+constraint level fixed gives **`d(log N)/d(epsilon)=-.2720377`** at `x=1`,
+equal to the fractional radius derivative because initial `Q` stays fixed.
+This is an initial derivative, not a propagated or observed signal.
+
+Ten controls pass. One factorization takes 9.984375 process-CPU seconds with
+eight BLAS threads; the [summary](../results/summaries/nsc-conformal-preparation-tangent-v2.json)
+is 7,323 bytes. The original full constraint defect `9.97845e-6` remains,
+and the unresolved constraint variation has maximum `5.742997e-6`.
+The first method incorrectly assumed a zero root; its
+[stopped attempt](../results/summaries/nsc-conformal-preparation-tangent-v1.json)
+is preserved. The finite initial-response probe is closed. Causal
+propagation and its observer-clock/light-cone consequence come next.
+
 ## One geometry at two resolutions, 18 October 2026
 
 The [fixed-state reduction](schur-memory.md#physical-resolution-of-one-fixed-geometry)

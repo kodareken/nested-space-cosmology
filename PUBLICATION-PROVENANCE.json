@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 246688,
+      "bytes": 246885,
       "path": "docs/active-code-map.md",
-      "sha256": "7f3911908a6f55cf6d574d5195d297ab675da3b6abef980c1f720c04b84f2335"
+      "sha256": "48cb40028a9cb34fa69a3948b498e17ed1f84bb3b690ed7d5c7c8229df36d1af"
     },
     {
       "bytes": 102489,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 389114,
+      "bytes": 390314,
       "path": "docs/current-result.md",
-      "sha256": "d508b090e0e4110de507a3cc81ccfb2ef8f9c3808dea5e2e036da5fb905f1edd"
+      "sha256": "24b8f05b15fe63d2ced4732a1862bc22129f74c010c58c9117fd86f006299abb"
     },
     {
       "bytes": 2481,
@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2383007,
+      "bytes": 2383491,
       "path": "docs/lab-snapshot.json",
-      "sha256": "4ac78083390f3fddc53bd41a48175f88251cde7dff0f07f36f4ab4ad1a3ac27e"
+      "sha256": "d1efd6fbc2862ed4ed1ec13faa566e0965ab9f3c12153381b6f4d205a22f6366"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "68363feed8b71ce5f57615dbdfad777c3da7bdeab1cbabb47b8efe0d1afe1080"
     },
     {
-      "bytes": 504352,
+      "bytes": 505279,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "eccf4495eebdf440961fbcd3e5a982fbd5d0d12d465451d90f2e31f0f79d6668"
+      "sha256": "33f609d37ff6c09159c27a7745ce74badded9e40ca542484054d79c9ea7fe9c9"
     },
     {
       "bytes": 6705,
@@ -2231,9 +2231,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 168035,
+      "bytes": 168419,
       "path": "docs/reproducing.md",
-      "sha256": "0ca28219ab5e9dd0c6af67e964836a9c57f209053c509987a7e57595b52073c8"
+      "sha256": "3ad2123f1358f6c80ced9cbf13155ab2ee478310d21d8cb06cd54cce820d2b1a"
     },
     {
       "bytes": 31710,
@@ -2256,9 +2256,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 85716,
+      "bytes": 86862,
       "path": "docs/schur-memory.md",
-      "sha256": "d841c5a035f10c07a40b6ef93e9924ce88a06408a5d5c1025ab8fd8224c0b14c"
+      "sha256": "cbee73ccd7a00e7d601777745aa0f2b2d55dbcfeaa51da475782b30d4490f803"
     },
     {
       "bytes": 537091,
@@ -14941,6 +14941,11 @@
       "sha256": "a68b553a53b3980bb328db4c56a12658376fdfab7951ee0bf58a6fe0ae355ad1"
     },
     {
+      "bytes": 7323,
+      "path": "results/summaries/nsc-conformal-preparation-tangent-v2.json",
+      "sha256": "2a502b31bd552517035b144bfb1255538e7047bd292cc3b9ef9dbb9c65fdb61c"
+    },
+    {
       "bytes": 8875,
       "path": "results/summaries/nsc-conformal-resolution-v1.json",
       "sha256": "3a41ef7076cbb2cd3653a748b066fa1074ed2f96bfbdc50d294300ae33b7fe5a"
@@ -21756,7 +21761,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "4ac78083390f3fddc53bd41a48175f88251cde7dff0f07f36f4ab4ad1a3ac27e",
+  "lab_snapshot_sha256": "d1efd6fbc2862ed4ed1ec13faa566e0965ab9f3c12153381b6f4d205a22f6366",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

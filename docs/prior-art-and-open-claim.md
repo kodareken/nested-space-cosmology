@@ -165,6 +165,20 @@ all sixteen logical processors. Admit one corrected frozen application at
 work below the original 200-second ceiling. There is no radius re-solve,
 state reset, relaxed zero-root claim or automatic retry.
 
+**Corrected outcome:** frozen method `76cf805` evaluates the saved level in
+9.984375 process-CPU seconds, using one factorization and eight BLAS threads.
+Ten controls pass. The
+[7,323-byte result](../results/summaries/nsc-conformal-preparation-tangent-v2.json)
+gives the initial observer fractional radius/clock-rate derivative
+`-.272037713746` per unit phase. Original full/projected defects remain
+`9.97845e-6` and `1.09023e-8`. The full directional remainder has maximum
+`5.742997e-6`; it is reported rather than discarded. The projected derivative
+check is `1.03423e-8` on a `36.9068` source scale, within the unchanged
+relative `1e-8` criterion. The combined stopped and successful calls remain
+under 69 CPU seconds using the conservative first-call bound. Close the
+initial-tangent calculation and proceed to causal propagation; no continuum
+preparation, finite phase interval, retarded kernel or Lambda is established.
+
 ## Two successive sourced boundaries, 18 October 2026
 
 The next missing connection is an actual second nesting level under the

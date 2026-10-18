@@ -2903,6 +2903,11 @@ and clock-rate derivatives, original constraint defect and unresolved
 quadrature remainder. The original defect is preserved; initial constraints
 are not solved. It supplies no evolution, light-cone signal or Lambda.
 No arrays are written. Ten manufactured controls precede the application.
+The [recorded response](../results/summaries/nsc-conformal-preparation-tangent-v2.json)
+binds method `76cf805`, costs 9.984375 CPU seconds and gives the initial
+fractional observer clock/radius derivative `-.272037713746`. It preserves
+the nonzero original defect. The first method's incorrect zero-root premise
+and stopped application are retained in the admission and v1 diagnosis.
 
 The shared-action wall check is a direct symbolic calculation:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q`.

@@ -411,10 +411,9 @@ continuum family follows.
 This is a declared one-parameter initial preparation in a fixed Dirac
 frame. It does not rotate the operator and frame along with the state.
 A complete preparation apparatus, continuum-compatible initial data and
-formation history remain to be supplied. A bounded application can evaluate
-this finite-model tangent before causal propagation. A first attempt stopped
-on an incorrect zero-root premise, as recorded in the admission; the
-constraint-level application and retarded kernel have not yet been evaluated.
+formation history remain to be supplied. The first attempt stopped on an
+incorrect zero-root premise, as recorded in the admission. The corrected
+finite-model application is below; the retarded kernel remains unevaluated.
 
 An independent analytic control fixes the source and radius normalization.
 On a constant `r=1,Q` chart, take three normalized chiral plane-wave pairs
@@ -426,6 +425,26 @@ the phase gives `delta_rho=M*sum(c_j)*f'/(Q*L)`. The radius derivative is
 checks both formulas and the full polarized constraint, without a numerical
 root or finite-difference Jacobian. This constant chart tests the operators;
 the archived sourced radius remains the background for the application.
+
+The [constraint-level application](../results/summaries/nsc-conformal-preparation-tangent-v2.json)
+uses frozen method `76cf805`, passes ten controls and completes one dense
+factorization in 9.984375 process-CPU seconds with eight BLAS threads.
+At the initial observer `x=1`, `r=4.80009228551`, it gives
+`dr/depsilon=-1.30580613112` and
+`(dN/depsilon)/N=(dr/depsilon)/r=-.272037713746`.
+These are first derivatives at zero phase, not a finite-amplitude error
+bound or a propagated observation.
+
+The original full Hamiltonian defect is `9.97845e-6`, with projected maximum
+`1.09023e-8`; neither is repaired. The linear solve has relative residual
+`3.51e-11`. Independent polarization of the full constraint leaves a
+projected variation `1.03423e-8` against a source scale `36.9068`, and an
+unresolved variation of maximum `5.742997e-6`. The reciprocal condition
+estimate is `1.12205e-6`; it is not a certified inverse bound. The retained
+7,323-byte summary contains these limits without arrays. This closes this
+finite initial-tangent probe. The next connection is its propagation with
+the original constraint forcing, followed by an observer-clock/light-cone
+response; an instantaneous derivative cannot supply that result.
 
 For that later propagation, write `A(T)=D X_H(z(T))` on the actual
 trajectory. The environment propagator obeys
