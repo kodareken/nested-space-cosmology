@@ -1568,7 +1568,7 @@
     {
       "bytes": 2378514,
       "path": "docs/lab-snapshot.json",
-      "sha256": "bda7255591aa75c50bfd09753e94833915b170846db6faa379c2ee3610873bef"
+      "sha256": "54ff24aa713caedc9a5777b72dc8508948c5ccbbdda50ded3af0eed3ce5e9677"
     },
     {
       "bytes": 4997,
@@ -2211,9 +2211,9 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 498649,
+      "bytes": 499981,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "3a7d19030bf46283a4f0db80384c3e6a910b8d3fed3896e86a09627509e56073"
+      "sha256": "074a5b130e36f3ab3fb955a4dc81636deed85849dce6d1b353de0913fd55454b"
     },
     {
       "bytes": 6705,
@@ -2251,9 +2251,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 81068,
+      "bytes": 84690,
       "path": "docs/schur-memory.md",
-      "sha256": "60f1b02d7e10b9f95e9a9c51927d2880202d9d7fb22e1dd54474e99a09d13ddd"
+      "sha256": "b21b954520f12004367d80b89b3639fe567df830a79ba0c410ed074f36e3f7d3"
     },
     {
       "bytes": 537091,
@@ -21711,7 +21711,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "bda7255591aa75c50bfd09753e94833915b170846db6faa379c2ee3610873bef",
+  "lab_snapshot_sha256": "54ff24aa713caedc9a5777b72dc8508948c5ccbbdda50ded3af0eed3ce5e9677",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.2",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

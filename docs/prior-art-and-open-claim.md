@@ -72,6 +72,28 @@ the dynamics, and a single Lambda does not represent its calculated
 instantaneous response. The next connection is a causal constraint-aware
 reduction, not a new cutoff or grid scan of this state.
 
+## Preparation needed before causal metric reduction, 18 October 2026
+
+The completed resolution response identifies a missing causal metric
+operator. Another three-time constraint norm or an optical shadow of the
+unphysical filtered state would not supply it. The energy already fixes
+the constant-mode constraint monopole at about `.5076`, far above the
+original full-state defect. Keep that probe closed.
+
+The [paired preparation derivation](schur-memory.md#a-paired-preparation-tangent-for-a-causal-response)
+instead gives a concrete source family using the original chiral/conjugate
+rank-six columns and equal pair occupations. The fixed lowest spatial
+harmonic generates one unitary phase parameter, preserves the Gram and
+pointwise zero current, and can change the energy source. Under its stated
+initial-slice premises the existing radius Jacobian supplies a projected
+Hamiltonian-compatible tangent. Independent Grok algebra review confirms
+the finite Fourier conjugation and source identities. This is a derivation,
+not an archived-data application, a formation mechanism or an evaluated
+retarded kernel. Before a numerical application, specify and freeze its
+producer, source-premise checks, dense-solve budget and full quadrature
+remainder controls. No new evolution, source fit or cutoff scan is admitted
+by this note.
+
 ## Two successive sourced boundaries, 18 October 2026
 
 The next missing connection is an actual second nesting level under the

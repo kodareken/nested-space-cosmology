@@ -352,6 +352,75 @@ single-snapshot probe. A causal elimination with the corresponding
 constraint and kinetic/matter operators is the next physical connection;
 the energy coefficient is not a generated cosmological vacuum constant.
 
+### A paired preparation tangent for a causal response
+
+A causal metric response needs admissible initial variations. The original
+rank-six preparation supplies a useful restricted family: each plus column
+has `phi1=i*phi0`; its minus partner is a constant phase times its complex
+conjugate, with equal occupation in the pair. Use the original initial
+slice, where `Q` is constant, `chi=0` and all geometric momenta vanish.
+These are preconditions to check on the archived initial data, not
+properties asserted for the evolved `T=.3` columns.
+
+Fix `f(x)=cos(2*pi*x/8)` and apply the same unitary on the finite fermion
+space to every column,
+
+$$
+U_\epsilon=\exp(i\epsilon\,\operatorname{diag}(f)\sigma_2).
+$$
+
+It multiplies the plus columns by `exp(+i*epsilon*f)` and the minus columns
+by its conjugate. All six column inner products and occupations stay fixed.
+The paired conjugacy and chiral component relations survive. The owned
+symmetric antiperiodic Fourier modes make their momentum matrix purely
+imaginary and their interpolation real in exact arithmetic. Thus
+`P_AP*conj(psi)=-conj(P_AP*psi)`, and prolongation intertwines conjugation.
+Apply the unitary on the fermion nodes before prolongation; no continuum
+product rule or equality of coarse and quadrature multiplication is used.
+
+The two members of each equally occupied pair consequently cancel their
+`Pmom` contributions at every quadrature node. The scalar bilinear `S1`
+also vanishes. Both properties hold for finite epsilon in this family.
+The kinetic bilinears add and may change for nonconstant `f`. A constant
+`f` merely rephases individual columns and leaves the covariance and every
+source unchanged. With `M=4*kappa` applied once, the initial first variation
+is `delta_force_L=M*delta_K/Q`, `delta_force_beta=0`. The existing
+`_constraint_directional` polarization gives `delta_K` without
+differentiating waveform samples.
+
+Let `Pi_g=(ng/nq)*A_g.T` be the Galerkin pullback, distinct from the
+physical resolution projector. At the original radius root the same
+source is independent of `r` in conformal variables. Its radius Jacobian
+therefore supplies the candidate tangent through
+
+$$
+J_r\,\delta r=-\Pi_g\frac{\delta F_L}{dx_q},\qquad
+\delta Q=\delta\chi=\delta p_Q=\delta p_r=\delta p_\chi=0.
+$$
+
+Here `J_r` is the existing dense `_projected_radius_jacobian`, not a new
+joint sparse operator. Conditional on a nonsingular radius root, this
+cancels the projected Hamiltonian variation; the full momentum variation
+remains zero. The held-out quadrature Hamiltonian variation must still be
+reported. It is not removed by the projected solve. No claim of a
+constraint-exact continuum family follows.
+
+This is a declared one-parameter initial preparation in a fixed Dirac
+frame. It does not rotate the operator and frame along with the state.
+A complete preparation apparatus and formation history remain to be
+supplied. The next bounded calculation can check the source premises and
+solve this tangent before attempting causal propagation. No such physical
+application or retarded kernel has yet been run.
+
+For that later propagation, write `A(T)=D X_H(z(T))` on the actual
+trajectory. The environment propagator obeys
+`partial_T U_EE=A_EE(T)*U_EE`. Eliminating its linearized variables gives
+the kernel `A_RE(T)*U_EE(T,S)*A_ER(S)` and an initial-environment drive.
+The original measured constraint forcing contributes its linearization
+as well. An instantaneous Hessian cannot replace that propagator. The
+resulting metric and lapse variation, with a specified observer proper
+clock, is what can enter the existing redshift and radar calculation.
+
 ### Observer clocks in the geometric average
 
 The selected larger-geometry route must compare resolutions in a declared
