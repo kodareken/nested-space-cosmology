@@ -1573,7 +1573,7 @@
     {
       "bytes": 2439238,
       "path": "docs/lab-snapshot.json",
-      "sha256": "e824ebaa4f3101266dcf30aae697015b3f5096a141ebdb891bc6e72c2c2c4f32"
+      "sha256": "399804693671e2ec498f6f5b4726603d5e69509b19e3ebd48d119326f049b79b"
     },
     {
       "bytes": 4997,
@@ -1631,9 +1631,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 155234,
+      "bytes": 156029,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "613fdfe4f1423498131751c33f5ccbb2d2c969706650108c4665c3cc51e730e8"
+      "sha256": "9fe75fc5ace3cf624475dac085225cf81c1244c1b5b206b195769ee8c4566ce7"
     },
     {
       "bytes": 17343,
@@ -17611,9 +17611,9 @@
       "sha256": "4f69a19ff30fc8148eb74eafee2ddcc4b4a126138cfcf2c9b720b6441a6e1efa"
     },
     {
-      "bytes": 10018,
+      "bytes": 10062,
       "path": "src/recursive_horizons/nsc_atlas_dirac_root_pairing.py",
-      "sha256": "01349e8eee72de33856233c47f58debe42a178b4f6dd01d43db94602872581a1"
+      "sha256": "9a17a0f9c7c1afef0f7bfe34adaa1f65f024f499e1c1f1e0c39722f21b5c7b2f"
     },
     {
       "bytes": 11438,
@@ -20051,9 +20051,9 @@
       "sha256": "3a9ec54ca6707a4025d357b529ef9f7ae69c366b31d70a8458241f12ed7ae776"
     },
     {
-      "bytes": 5379,
+      "bytes": 5482,
       "path": "tests/test_nsc_atlas_dirac_root_pairing.py",
-      "sha256": "23ba64a2d3769e53a688f583894221d14cb4bb35ee793a4419da0cdd983f766f"
+      "sha256": "fa8d8b7808373078cd3e614399d214756a8f16fe20a1d811dec757ad62e23c21"
     },
     {
       "bytes": 6259,
@@ -22341,7 +22341,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "e824ebaa4f3101266dcf30aae697015b3f5096a141ebdb891bc6e72c2c2c4f32",
+  "lab_snapshot_sha256": "399804693671e2ec498f6f5b4726603d5e69509b19e3ebd48d119326f049b79b",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.12",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

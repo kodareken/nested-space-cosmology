@@ -49,7 +49,8 @@ class NullResponse:
             coefficients=legder(coefficients,axis=0)*2/self.lengths[leg]
         elif derivative!=0:
             raise ValueError('only the first response derivative is supplied')
-        return np.einsum('...n,ni->...i',legvander(z,len(coefficients)-1),coefficients)
+        result=np.einsum('...n,ni->...i',legvander(z,len(coefficients)-1),coefficients)
+        return result.reshape(z.shape+(2,))
 
     def hilbert(self,leg,s,*,derivative=0):
         """PV integral G(t)/(s-t) dt, with the actual one-sided endpoints."""

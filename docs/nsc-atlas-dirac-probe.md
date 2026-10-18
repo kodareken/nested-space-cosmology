@@ -3032,3 +3032,15 @@ counterexample with a changed stress logarithm. The diagnosis route
 It reports the represented coefficients and those obtained by substituting
 the exact source jets. The substitution changes no covariance or finite
 stress; it isolates the missing identity before a reconstruction is changed.
+
+The native Grok algebra audit confirms the lower-limit signs, the complete
+leading-log coefficient and its reduction to the two universal local
+values. Its scope is this coefficient, not the uncomputed finite part.
+The first physical coefficient printout stopped on a scalar-shape bug:
+`NullResponse.value` returned shape (1,2) rather than (2,) at a scalar
+source coordinate. The pairing's outer products flattened it, so the
+previous bilocal values are unaffected; indexing the diagnostic exposed it.
+Correct the scalar contract and its control before repeating the diagnosis.
+No coefficient table was obtained from that attempt. Charge its full
+unreported 30-CPU allowance conservatively; the corrected fixed-domain
+diagnosis has a fresh 30-CPU allowance after this implementation diagnosis.

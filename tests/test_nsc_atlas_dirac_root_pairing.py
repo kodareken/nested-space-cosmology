@@ -101,6 +101,8 @@ def test_source_slope_can_change_the_stress_log_without_changing_value_or_mean()
     altered=[g.copy() for g in f.green];epsilon=.01
     altered[0][1,0]-=epsilon;altered[0][2,0]+=epsilon
     changed=NullResponse(f.lengths,tuple(altered),f.direct)
+    assert changed.value(0,.104).shape==(2,)
+    assert changed.value(0,.104,derivative=1).shape==(2,)
     coefficient=logarithmic_coefficients(changed,d)
     assert changed.value(0,.104)==pytest.approx(f.value(0,.104),abs=1e-14)
     assert changed.green[0][0]==pytest.approx(f.green[0][0],abs=1e-14)
