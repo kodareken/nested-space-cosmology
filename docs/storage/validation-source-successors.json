@@ -83,6 +83,12 @@
       "reason": "Authenticate saved source inventories against exact reviewed successor/origin bytes; creation still hashes current files, retained result bytes and numerical validation are unchanged.",
       "successor_sha256": "f68ba93c371d54b6e7b95b1a85a5ec0b6c164af8f0113bcb64d28ed964808c3e"
     },
+    "scripts/record_nsc_atlas_cap_wall_response.py": {
+      "classification": "validation-only",
+      "original_sha256": "031e45b3a7bf6dd727c381ff97583ad2a214b36eedd72ebe545c496db98c4654",
+      "reason": "The exterior predecessor source check accepts only reviewed successors, including the wall-mass recorder. Creation hashes, stored outputs and junction algebra stay unchanged.",
+      "successor_sha256": "06995c1447729dc7e2cce9aeb9874ba9233173856699081f1f8c3a3c19d38bf0"
+    },
     "scripts/record_nsc_atlas_central_ray.py": {
       "classification": "validation-only",
       "original_sha256": "f1d1d6b014597c80ef8d30f474642d2ffe4dc8466243e07dee182d73f069ed14",
@@ -196,6 +202,12 @@
       "original_sha256": "986a12a7c375c21c3eeb19b95f5bccbf24ffb272e08850e566d2376642b363b9",
       "reason": "Authenticate saved source inventories against exact reviewed successor/origin bytes; creation still hashes current files, retained result bytes and numerical validation are unchanged.",
       "successor_sha256": "0abfd78304e76119e7ecba408b7bd6e7e6094a8e15ffac69da2dbab0db1e6927"
+    },
+    "scripts/record_nsc_atlas_wall_mass_closure.py": {
+      "classification": "validation-only",
+      "original_sha256": "51ea235e2fbba21eb36a35f504b0890e52f8372e392ca028a6344ca1b05cefa5",
+      "reason": "Predecessor source checks accept only reviewed successors, including the source-mass recorder. Creation hashes, stored outputs and mass identities stay unchanged.",
+      "successor_sha256": "ed6544deccb04d4293e073e20ce7f9e4238148060efc7773c3c59411ce2fbd1a"
     },
     "scripts/record_nsc_atlas_wall_overlap.py": {
       "classification": "validation-only",
@@ -355,6 +367,12 @@
       "original_sha256": "8de7d4f1dd62fcc3ea84fae5926135e15ff3da8a6b3c02da79525c160a9a3646",
       "reason": "Isolated checks authenticate borrowed sources through the pinned Git objects and the reviewed registry. Tamper prefixes and retained scientific assertions are unchanged.",
       "successor_sha256": "76d8d90d02ea5160eda78fb18f50006c1fe56a747e07ac389ac39e234297336f"
+    },
+    "tests/test_nsc_atlas_wall_mass_closure.py": {
+      "classification": "test-only",
+      "original_sha256": "4317a95bbf9bd914e2e0c4836af6a32300d3b259eedb001bdb329090d8429657",
+      "reason": "Isolated checks authenticate predecessor sources through the pinned Git objects and the reviewed registry. Tamper prefixes and retained mass assertions are unchanged.",
+      "successor_sha256": "00121b899b140bf1b2d289cd62205099d7bd610a5c5fec140dffb8bad70dc108"
     },
     "tests/test_record_nsc_atlas_background_evolution.py": {
       "classification": "test-only",

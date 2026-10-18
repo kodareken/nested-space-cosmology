@@ -1,6 +1,6 @@
 # What the calculations show
 
-Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md) remains the 17 October edition. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.1`, includes the checked second nesting level and its central observer. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
 ## A checked nesting level and its observer, 18 October 2026
 

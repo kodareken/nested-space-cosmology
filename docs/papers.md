@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.1` adds Sections 10.1--10.3: a second unequal sourced
+body, a two-level initial geometry with a retained grandchild, regular bulk
+charts and a central wall-emitted flash. Figure 5 shows the actual radius
+profile. Section 6.1.5 retains the new hierarchy's negative trace and failed
+vacuum-form test. The flash has an exact clock/frequency relation under
+declared inputs; no cosmological scale, global evolution or unlimited
+inheritance is claimed. All nine figures are numbered in reading order.
+
 Revision `2026-10-17.5` connects the exterior Schur response to whole-body
 gravity, geometric averaging and causal distance measurements in Sections
 6.1.4-6.1.7. It includes the quiet-cap supernova comparison and the separate

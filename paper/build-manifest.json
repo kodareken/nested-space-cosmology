@@ -1,10 +1,10 @@
 {
-  "bytes": 3346185,
+  "bytes": 3560904,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "4cb77a0c0d82fbf6f4cd373a3451edad368d2c8492a79652a9daba77e1050d2d",
+  "metadata_sha256": "e437a60baad8cc5b390777bda32fcd41b21f71161b5db788fc1e4976ef9035af",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 47,
-  "pdf_sha256": "7d18deb3cc66bda119702abe5511f7d5cbc229de380cbc9d603a739f87f7fd26",
+  "pages": 50,
+  "pdf_sha256": "72a397d2243c8e510c301006be8483711088278df046130f63b13e2de4e36111",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -14,6 +14,10 @@
     {
       "path": "docs/figures/nsc-atlas-background-evolution.png",
       "sha256": "b466692a612df205cb6298d194fb26ca086f6eddb393eb4e44b1a53578c17f2d"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-nested-slice.png",
+      "sha256": "1996e39ef9fac6a9b8ffef6870b31d989c7b23569705ac367e9e118fc7b9f517"
     },
     {
       "path": "docs/figures/nsc-atlas-ssprk3-refinement.manifest.json",
@@ -416,6 +420,10 @@
       "sha256": "2a4aa2c18664e175ea9bf94f21bf0a0c881e9c41bce14780f4fef06930d5be0b"
     },
     {
+      "path": "results/summaries/nsc-atlas-nested-slice-v1.json",
+      "sha256": "adc7ddfb28c26379a0856b0c630410329d8bd6bd7e1d40f7697705995542908c"
+    },
+    {
       "path": "results/summaries/nsc-atlas-onset-geometry-bound-v1.json",
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
@@ -440,6 +448,10 @@
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
+      "path": "results/summaries/nsc-atlas-unequal-children-v1.json",
+      "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
+    },
+    {
       "path": "results/summaries/nsc-conformal-geometric-average-v1.json",
       "sha256": "cb57f10042c6ad58d23c55160d1a279271c5663e0fb13f00a7d389e7cc930b72"
     },
@@ -453,6 +465,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "4f7d8fc875f4d3d7666a880f72eff93664423202582f59cda7eef522afc72197",
-  "version": "working-2026-10-17.5"
+  "source_sha256": "35fce06b0053f4176808a882de28f03f84486e10c330e6931cc645c5d1928c44",
+  "version": "working-2026-10-18.1"
 }

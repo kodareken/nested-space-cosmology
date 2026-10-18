@@ -26,7 +26,7 @@ preferred-citation:
     - given-names: "Douglas"
       family-names: "Ek"
   year: 2026
-  date-released: 2026-10-12
-  version: "working-2026-10-12"
+  date-released: 2026-10-18
+  version: "working-2026-10-18.1"
   url: "https://github.com/kodareken/nested-space-cosmology/blob/main/paper/nested-space-cosmology.pdf"
   notes: "Working manuscript; not peer reviewed or submitted to arXiv. This manuscript revision is independent of software release 0.27.0. ChatGPT/Codex materially assisted with mathematical formulation, software, computation, drafting, comparison, and auditing; Douglas Ek retains scientific and publication responsibility."

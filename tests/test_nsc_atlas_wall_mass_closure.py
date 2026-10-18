@@ -4,6 +4,7 @@ import importlib.util
 import json
 from pathlib import Path
 import shutil
+import subprocess
 
 import pytest
 import sympy as sp
@@ -143,6 +144,15 @@ def isolated_root(tmp_path, monkeypatch):
     owner = root / tool.OWNER
     owner.parent.mkdir(parents=True, exist_ok=True)
     owner.write_text("Fixture owner; not a scientific derivation.\n", encoding="utf-8")
+    subprocess.run(["git", "init", "-q", str(root)], check=True, capture_output=True)
+    import validation_source_successors as successors
+    alternate = root / ".git" / "objects" / "info" / "alternates"
+    alternate.parent.mkdir(parents=True, exist_ok=True)
+    alternate.write_bytes(((REPOSITORY / ".git" / "objects").resolve().as_posix() + "\n").encode("ascii"))
+    for relative in (successors.REGISTRY, *successors.RESOLVER_SOURCES):
+        target = root / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(REPOSITORY / relative, target)
     monkeypatch.setattr(tool, "ROOT", root)
     return root
 

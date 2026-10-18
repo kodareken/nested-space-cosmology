@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 17 October 2026
+Working research manuscript, 18 October 2026
 
 ## Abstract
 
@@ -22,8 +22,11 @@ are established on their declared domains; longer nonlinear closure remains
 unresolved. The supplied cap vacuum term is an input. The actual exterior
 Robin response is nonzero, while the added smooth classical vacuum trace
 vanishes. Whole-body reduction gives pressureless mass at leading dilute,
-conserved order. A wall-inclusive slice average has a nonzero geometric
-trace but fails its vacuum-form condition.
+conserved order. One- and two-level sourced slices have nonzero geometric
+traces but fail vacuum form. The second level keeps the same membrane law
+and gives an inner-wall test-flash relation, $1+z=3.74639338$. Its exact
+vacuum end supports a conditional parent initial-data family with unequal
+children and a retained grandchild.
 
 A separate periodic Einstein--Weyl--Dirac realization permits averaging in
 a specified observer clock and direct light-cone calculation. Its final
@@ -534,6 +537,30 @@ retained bodies. The
 keeps the wall distribution, both bridge branches and the normal clock.
 The shared parent geometry and its observer domain remain absent.
 
+<!-- nsc-claim:atlas-nested-geometric-average -->
+
+The two-level initial geometry in Section 10.2 makes this test at an
+actual additional boundary, with the same outer mass and retention sphere.
+Both membranes obey $k\ell=2$; cap and host have the supplied $H\ell=1$.
+Including both wall curvature distributions gives
+
+$$
+\Lambda_{g,\mathrm{tr}}\ell^2=-0.0153506330754,\qquad
+(3Q+\langle{}^{(3)}R\rangle)\ell^2=2.11796240047.
+$$
+
+The geometric density and pressure again fail vacuum form. Gauss 64-minus-32
+differences in these quantities are $-1.28\times10^{-10}$ and
+$-3.91\times10^{-10}$; the integrated Hamiltonian residual is
+$-3.33\times10^{-16}$. These are numerical indicators, not total error
+bounds. Adding the level changes the physical state and its finite
+projection; this comparison is not solely a change of observational
+resolution of one fixed state. The
+[two-level record](../results/summaries/nsc-atlas-nested-slice-v1.json) and
+[average derivation](../docs/schur-memory.md#two-successive-sourced-levels)
+close this finite calculation. An evaluated parent and physical observer
+reduction remain necessary for the local cosmological target.
+
 <!-- nsc-claim:conformal-geometric-average -->
 
 A second, already evolved geometry supplies a different finite average. Its
@@ -951,13 +978,161 @@ Reattaching unchanged interiors on identical full $(h,K)$ data leaves
 the original shell delta source intact and creates no seam source.
 We do not apply a smooth global-data corollary directly to a thin shell.
 
-The resulting conditional initial-data family has one designated common
+The historical v4 conditional initial-data family has one designated common
 parent end **and the untouched other end of $B$**: two asymptotic ends
 in total. That second end has not become a cosmological child.
 Sufficiently large separation is required but no numerical threshold or
 explicit multi-body development has been calculated. The achievement is a
 compatible sourced initial connection, not a regular formation history,
 a general Einstein–shell evolution theorem or a stable cosmological future.
+
+### 10.1. Two unequal sourced children in the same theory
+
+<!-- nsc-claim:atlas-unequal-sourced-inputs -->
+
+The second body can now carry its own cap and wall. Keep $H\ell=1$,
+$k\ell=2$, $\xi=1/6$, quiet field $\phi=0$ and $R_w/\ell=1.5$ for
+both bodies. Use masses $M_A/\ell=.4$, $M_B/\ell=.6$, with vacuum
+slicing tapers ending at $R_{0,A}/\ell=1$ and $R_{0,B}/\ell=1.3$.
+Both stops lie outside their respective throats. The mass changes the
+object state; the taper changes the slice, with the action held fixed.
+
+For B the signed factors are $\beta_-=151/120$,
+$\beta_+=-209/120$ and $dR/d\tau=\sqrt{40801}/120$.
+Its wall stress projections, bulk and shell constraints, geometric mass
+and regular bridge pass the same checks as A. Its local normal-frame speed
+is $v=.161244881293$, while its areal rate exceeds unity.
+Each sourced body has one regular centre and one exact AE end. The
+[unequal-input record](../results/summaries/nsc-atlas-unequal-children-v1.json)
+reuses A's completed moments and evaluates B once; 42 focused controls pass.
+
+[Chrusciel, Corvino and Isenberg's end theorem](https://arxiv.org/html/1004.1355v1)
+therefore accepts two sourced inputs at sufficiently large separation.
+Their selected ends become one parent end, without B's former extra end.
+An exact quiet local solution neighbourhood can also be patched from the
+already known source solutions and an auxiliary smooth vacuum development,
+retaining wider identical annuli and trimming staggered cuts inside their
+common vacuum neighbourhood. The
+[local argument](../docs/nsc-atlas-connection-gluing.md#two-sourced-inputs-and-a-quiet-local-spacetime)
+uses smooth vacuum uniqueness only off the walls. It supplies no numerical
+separation threshold, uniform evolution interval, evaluated connector or
+general uniqueness theorem for matter shells. Their observer clocks and
+the cosmological reduction still need that geometry.
+
+### 10.2. A retained grandchild and an explicit second boundary
+
+<!-- nsc-claim:atlas-nested-slice -->
+
+A different input A2 now puts two transitions on one explicit spherical
+initial slice. It keeps the same quiet conformal-scalar and membrane law.
+The regional metric functions are $f=1-2M/R-H^2R^2$:
+
+| Region, ordered outward | $M/\ell$ | $H\ell$ | Connection |
+| --- | ---: | ---: | --- |
+| Inner regular cap | 0 | 1 | Centre to inner wall $R/\ell=.8$ |
+| Kottler host | .01 | 1 | Left static branch, black-hole throat, right branch and expanding patch to outer wall $R/\ell=1.5$ |
+| Outer Schwarzschild region | .4 | 0 | Left branch, throat $R/\ell=.8$, right AE end |
+
+Both positive-tension walls obey the same signed equations,
+
+$$
+\beta_-=\frac{f_--f_++(kR)^2}{2kR},\qquad
+\beta_+=\beta_--kR,\qquad \dot R^2=\beta_-^2-f_-.
+$$
+
+The expanding inner and outer factors are respectively
+$(517/640,-507/640)$ and $(727/600,-1073/600)$.
+The derivative of the same law gives the temporal Israel jump, while
+the mean worldtube curvature satisfies the normal-force condition.
+The equal-vacuum inner membrane remains a material source. All supplied
+vacuum values and masses are part of this state, not outputs selected by
+a cosmological observation.
+
+In each bulk the assigned slicing function gives
+
+$$
+R'=\varepsilon\sqrt{f+V^2},\quad
+R''=M/R^2-H^2R+VV_R,\quad
+K^l{}_l=-V_R,\quad K^\theta{}_\theta=-V/R.
+$$
+
+Smooth tapers connect the walls to static bridges and the host's expanding
+flat radial profile. Signed $y$ with $R=r_b+y^2$ resolves each minimum.
+The host's two horizons are $r_b/\ell=.020008009615388216$ and
+$r_c/\ell=.989845863754293$. The expanding profile crosses the latter
+with $R'=1$. Both Hamiltonian/momentum constraints and both wall
+distributions are retained. The slice ends analytically at its right AE
+infinity; $R_{\mathrm{cut}}/\ell=4$ is the finite calculation domain.
+
+![Two successive sourced boundaries and the resolved inner throat](../docs/figures/nsc-atlas-nested-slice.png)
+
+*Figure 5. One initial radial chain with two sourced boundaries. The inset
+resolves the host's positive-radius minimum. Proper radius versus areal
+radius is not a Euclidean embedding or a causal-passage diagram. The same
+membrane law holds at both walls; regional state and slicing data are supplied.*
+
+Explicit regular bulk charts are available. At a simple horizon $C$, let
+$\kappa_C=(1-3H^2C^2)/(2C)$ and $R=C+\kappa_Cuw$. Then
+
+$$
+ds^2=Fdu^2+2du\,dw+R^2d\Omega^2,\qquad
+F=\frac{w^2}{R}\left(\frac{1}{C}+H^2(R-C)\right).
+$$
+
+This is the algebraic form of
+[Lake's coordinates, equations (5)--(10)](https://arxiv.org/html/gr-qc/0507031v2).
+Independent warped-curvature algebra gives $R_{\mu\nu}=3H^2g_{\mu\nu}$;
+the radial determinant is $-1$. Finite local charts do not identify
+different cosmological regions or remove the $R=0$ singularity.
+The single Killing time has $T_l=V/f$ and future normal
+$N^T=R'/f$, negative on the left static branch. A matched worldtube
+clock atlas remains to be evaluated; one static time is insufficient.
+
+The [two-level calculation](../results/summaries/nsc-atlas-nested-slice-v1.json)
+and [slice derivation](../docs/nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
+retain all assumptions and one Gauss 32/64 comparison. Twenty independent
+controls pass. Its exact vacuum end can replace A in the end construction,
+giving a conditional initial-data family with two unequal sourced children
+and a retained grandchild. This establishes finite initial-data composition,
+not unlimited generations, formation, stability or inherited detector states.
+
+### 10.3. A central proper-clock and frequency observation
+
+<!-- nsc-claim:atlas-nested-flash -->
+
+Specify a radial inward geometric-optics flash from an ideal frequency
+standard comoving with the inner material wall, with negligible backreaction.
+The receiver follows the cap centre. Set flat-cap time $t=0$ at emission;
+it is the centre's proper time. For $R_w=.8\ell$ and $H\ell=1$, the
+null path and wall boost give
+
+$$
+t_{\mathrm{rec}}=-H^{-1}\log(1-HR_w)=\ell\log 5,
+$$
+$$
+1+z=\frac{\gamma(1+v)}{1-HR_w}
+=\frac{\beta_-+\dot R}{(1+HR_w)(1-HR_w)}
+=3.7463933761061194.
+$$
+
+Here $\gamma(1+v)$ is the material wall's Doppler factor. Its initial speed
+$v=-.280886551267$ is inward relative to the cap frame while its areal radius increases.
+The host affects these factors through the junction. The flash stays
+inside the wall: its inward radial speed is null, the wall is timelike,
+and the expanding wall root persists to every finite cap time.
+
+For the supplied ruler $\ell=10\,\mathrm{km}$, central receipt takes
+$53.6850701$ microseconds after the specified emission-time origin.
+The [recorded protocol](../results/summaries/nsc-atlas-nested-slice-v1.json)
+agrees with independent 80-digit rational evaluation to
+$1.45\times10^{-15}$ in the frequency ratio and
+$1.30\times10^{-16}$ in $t_{\mathrm{rec}}/\ell$.
+These measure roundoff, not input, model or experimental uncertainty.
+The [causal derivation](../docs/nsc-atlas-connection-slice.md#a-central-test-flash-protocol)
+uses no new field evolution. The source frequency standard and vacuum
+scale are explicit inputs. The result supplies a conditional measurable
+relation, not an observation of this emitter or an outer-wall signal
+through the host bridge.
 
 ## IV. What the observers can reach
 
@@ -1008,7 +1183,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 5. The isolated reference in joined causal charts. Horizons are
+*Figure 6. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -2014,7 +2189,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 6. Saved finite-window comparisons. A: the previous and current
+*Figure 7. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -2110,7 +2285,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 7. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 8. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -2805,7 +2980,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 8. Research dependencies, distinct from spacetime causal arrows.
+*Figure 9. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*
@@ -2868,7 +3043,9 @@ reproduces a nonzero temporal mass residual there. That stage is not the
 maximum over every saved comparison, and it is not a final radius or error
 for the evolution that is still running. The nonzero residual is not a
 reason to add further opening proofs. Sections 6.1.4--6.1.7 record the
-observer calculations that use completed geometries instead.
+observer calculations that use completed geometries instead. Sections
+10.1--10.3 now add two unequal sourced inputs, finite grandchild composition
+and an inner-wall flash with a specified central receiver.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -2886,6 +3063,7 @@ and renders their relationships without launching a new physics calculation.
 | Two-hole parent and radiation attachment screen | [Atlas v2](../docs/nsc-cosmological-atlas.md); [manifest](../results/development/nsc-cosmological-atlas-v2/manifest.json) |
 | Signed moving wall and gluing literature | [Atlas v3](../docs/nsc-cosmological-atlas.md); [manifest](../results/development/nsc-cosmological-atlas-v3/manifest.json) |
 | Sourced slice and vacuum observer domain | [Atlas v4](../docs/nsc-atlas-connection-slice.md); [manifest](../results/development/nsc-cosmological-atlas-v4/manifest.json) |
+| Unequal sourced bodies and finite grandchild composition | [End assembly](../docs/nsc-atlas-connection-gluing.md); [unequal bodies](../results/summaries/nsc-atlas-unequal-children-v1.json) and [two-level geometry/observer](../results/summaries/nsc-atlas-nested-slice-v1.json) |
 | Isolated causal completion and clocks | [Atlas v5](../docs/nsc-atlas-causal-classification.md); [manifest](../results/development/nsc-cosmological-atlas-v5/manifest.json) |
 | Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-atlas-field-transfer.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
 | Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |

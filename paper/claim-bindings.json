@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v2",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-17",
+  "recorded_on": "2026-10-18",
   "purpose": "Bind the living main manuscript's claims to directly linked evidence. Preserved historical findings remain indexed without promoting them to current cosmological results.",
   "historical_claim_bindings": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
   "how_records_are_found": "The checker reads links following each unique nsc-claim marker from the manuscript itself.",
@@ -238,6 +238,26 @@
       "section": "6.1.7",
       "status": "open",
       "owner": "docs/schur-memory.md"
+    },
+    "atlas-nested-geometric-average": {
+      "section": "6.1.5",
+      "status": "measured",
+      "owner": "docs/schur-memory.md"
+    },
+    "atlas-unequal-sourced-inputs": {
+      "section": "10.1",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-connection-slice.md"
+    },
+    "atlas-nested-slice": {
+      "section": "10.2",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-connection-slice.md"
+    },
+    "atlas-nested-flash": {
+      "section": "10.3",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-connection-slice.md"
     }
   },
   "findings": [

@@ -14,12 +14,15 @@ import json
 from pathlib import Path
 import time
 
+from validation_source_successors import verify_saved_bindings, verify_saved_source
+
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "nsc-atlas-wall-mass-closure-v1"
 MANIFEST_SCHEMA = SCHEMA+"-manifest"
 OWNER = "docs/nsc-atlas-wall-mass-closure.md"
 PRODUCER = "scripts/record_nsc_atlas_wall_mass_closure.py"
 TESTS = "tests/test_nsc_atlas_wall_mass_closure.py"
+SOURCE_PATHS = (OWNER, PRODUCER, TESTS)
 RELATIVE_OUTPUT = "results/development/nsc-atlas-wall-mass-closure-v1"
 DEFAULT = ROOT / RELATIVE_OUTPUT
 SYMPY_VERSION = "1.14.0"
@@ -90,7 +93,16 @@ def read_relative(relative):
 
 
 def source_bindings():
-    return {path: sha(read_relative(path)) for path in sorted((OWNER, PRODUCER, TESTS))}
+    return {path: sha(read_relative(path)) for path in sorted(SOURCE_PATHS)}
+
+
+def _require_saved_source(source, expected, label):
+    try:
+        verify_saved_source(source, expected, ROOT)
+    except FileNotFoundError as error:
+        raise ValueError("missing or unsafe prerequisite/source: "+source) from error
+    except ValueError as error:
+        raise ValueError(label) from error
 
 
 def authenticate_predecessors():
@@ -108,8 +120,7 @@ def authenticate_predecessors():
                 or specification["producer"] not in manifest["source_bindings"]):
             raise ValueError("predecessor schema/inventory mismatch: "+key)
         for source, expected in manifest["source_bindings"].items():
-            if sha(read_relative(source)) != expected:
-                raise ValueError("current predecessor source differs: "+source)
+            _require_saved_source(source, expected, "current predecessor source differs: "+source)
         payload = read_relative(specification["directory"]+"/"+specification["output"])
         binding = manifest["outputs"][specification["output"]]
         if sha(payload) != binding["sha256"] or len(payload) != binding["bytes"]:
@@ -315,8 +326,10 @@ def check(directory):
     manifest = json.loads((directory / "manifest.json").read_bytes())
     if manifest.get("schema") != MANIFEST_SCHEMA:
         raise ValueError("wall mass manifest schema mismatch")
-    if manifest.get("source_bindings") != source_bindings():
-        raise ValueError("wall mass source binding mismatch")
+    try:
+        verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCE_PATHS)
+    except ValueError as error:
+        raise ValueError("wall mass source binding mismatch") from error
     record, bindings = build_record()
     if manifest.get("predecessor_bindings") != bindings:
         raise ValueError("wall mass predecessor binding mismatch")

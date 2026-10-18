@@ -13,6 +13,8 @@ import json
 from pathlib import Path
 import time
 
+from validation_source_successors import verify_saved_bindings, verify_saved_source
+
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "nsc-atlas-cap-wall-response-v1"
 RELATIVE_OUTPUT = "results/development/" + SCHEMA
@@ -55,14 +57,22 @@ def source_bindings():
     return {path: sha(read_relative(path)) for path in sorted(SOURCES)}
 
 
+def _require_saved_source(source, expected, label):
+    try:
+        verify_saved_source(source, expected, ROOT)
+    except FileNotFoundError as error:
+        raise ValueError("missing or unsafe source: "+source) from error
+    except ValueError as error:
+        raise ValueError(label) from error
+
+
 def authenticate_predecessor():
     raw = read_relative(PREDECESSOR + "/manifest.json")
     if sha(raw) != PREDECESSOR_SHA256:
         raise ValueError("exterior predecessor manifest mismatch")
     manifest = json.loads(raw)
     for path, expected in manifest["source_bindings"].items():
-        if sha(read_relative(path)) != expected:
-            raise ValueError("exterior predecessor source mismatch: " + path)
+        _require_saved_source(path, expected, "exterior predecessor source mismatch: " + path)
     for name, binding in manifest["outputs"].items():
         payload = read_relative(PREDECESSOR + "/" + name)
         if sha(payload) != binding["sha256"] or len(payload) != binding["bytes"]:
@@ -151,8 +161,10 @@ def check(directory):
     manifest = json.loads((directory / "manifest.json").read_bytes())
     if manifest.get("schema") != SCHEMA + "-manifest":
         raise ValueError("cap-wall manifest schema mismatch")
-    if manifest.get("source_bindings") != source_bindings():
-        raise ValueError("cap-wall source binding mismatch")
+    try:
+        verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
+    except ValueError as error:
+        raise ValueError("cap-wall source binding mismatch") from error
     if manifest.get("predecessor") != authenticate_predecessor():
         raise ValueError("cap-wall predecessor mismatch")
     expected = {"cap-wall.json", "model-specification.json"}
