@@ -8,6 +8,14 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [infinite inherited-law proof](nsc-infinite-inheritance.md) extends the
+frozen finite family to a branching finite-energy operator. Its
+[recursion calculator](../src/recursive_horizons/nsc_infinite_inheritance.py),
+[independent controls](../tests/test_nsc_infinite_inheritance.py) and
+[small illustration](../scripts/check_nsc_infinite_inheritance.py) cover
+subtree scaling, full-tree elimination, finite-depth error and spectral
+counting. It does not use the paused quantum diagnostic chain or P001 grids.
+
 The [retarded-map adapter](nsc-atlas-dirac-probe.md#extracting-retarded-maps-from-the-existing-field-kernel)
 extracts [streamed endpoint rows](../src/recursive_horizons/nsc_atlas_dirac_retarded.py)
 from the existing field solver, retaining the direct f-prime term and exact

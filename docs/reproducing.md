@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+The [infinite inherited-law proof](nsc-infinite-inheritance.md) includes
+its domain, convergence bound and spectral dimension. Its small calculator
+can be reproduced without an exponentially large tree or any P001 grid:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_infinite_inheritance.py -q
+python scripts/run_python.py scripts/check_nsc_infinite_inheritance.py
+```
+
+The four controls compare full finite trees and a closed-form infinite
+response; they check the implementation of the proof. The analytic depth
+bound excludes arithmetic and physical-model uncertainty. No full arrays
+or result JSON file is created.
+
 The [common-cap causal support check](nsc-atlas-dirac-probe.md#causal-support-before-another-finite-part-inference)
 compares the existing plus-source rows before and after projection:
 

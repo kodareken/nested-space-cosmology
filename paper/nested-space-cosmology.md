@@ -9,8 +9,10 @@ Working research manuscript, 18 October 2026
 
 Nested-Space Cosmology develops a geometric account of regions, their
 transitions and the world accessible to an interior observer. Its proposed
-inherited law is realized by an exact finite operator construction, with
-nested elimination retaining the response of unresolved surroundings. We
+inherited law is realized by exact finite and positive infinite operator
+constructions, with nested elimination retaining the response of unresolved
+surroundings. The infinite finite-energy realization has a controlled local
+response and a derived spectral counting exponent. We
 connect this mathematical map to explicit geometries, specified fields and
 quantitative observer tests.
 
@@ -254,11 +256,120 @@ Douglas's proposed geometric interpretation is that an approximately spherical
 region can be the resolved envelope of finer nested structure. Repeated
 transitions preserve the inherited law while changes of depth, state and
 surroundings compound in the measured response. The next section's nested
-reduction provides a finite calculator for that compounding. A fractal
-realization would supply a measurable scaling relation, such as proper volume
-versus radius or mode count versus frequency. Its geometry, scale ratios and
-observer resolution are calculation targets in the
+reduction provides a finite calculator for that compounding. The following
+theorem extends this to an infinite operator and a derived mode-count
+scaling relation. Its spacetime geometry, physical scale ratios and
+observer resolution remain calculation targets in the
 [atlas programme](../docs/nsc-cosmological-atlas.md#working-geometric-hypothesis-inheritance-through-resolution).
+
+### 5.1. An infinite inherited law with a controlled local response
+
+Take a rooted tree with $b\geq2$ children per vertex, an inherited
+positive Hermitian $d\times d$ matrix $H$, link $B$, and $\Omega>1$.
+At depth $n$, the diagonal block is $\Omega^nH$ and the block to each
+child is $\Omega^nB$; reverse links are adjoints. Set
+
+$$
+h=\lambda_{\min}(H),\qquad c=\sqrt{b/\Omega}\,\|B\|,\qquad h>2c.
+$$
+
+On square-summable regional fields specify the finite-energy form domain
+
+$$
+\mathcal Q=\left\{u:\sum_v\Omega^{|v|}\|u_v\|^2<\infty\right\}.
+$$
+
+**Theorem.** The corresponding positive closed form defines a self-adjoint
+finite-energy realization $D$ with compact inverse. Every isolated child
+subtree is $\Omega D$ after relabeling, so normalized inheritance holds
+at unlimited depth. Its root response, for $\lambda\geq0$, satisfies
+
+$$
+R(\lambda)=\left[H+\lambda I-
+\frac{b}{\Omega} B R(\lambda/\Omega)B^\dagger\right]^{-1}.
+$$
+
+For $\gamma=(h+\sqrt{h^2-4c^2})/2$ and $r=c^2/\gamma^2<1$, this response
+is unique in the positive class
+$R(\lambda)\leq(\gamma+\lambda)^{-1}I$. Retaining depths $0,\ldots,N$ gives
+
+$$
+0\leq R_N(\lambda)\leq R(\lambda),\qquad
+\|R(\lambda)-R_N(\lambda)\|\leq r^{N+1}/\gamma.
+$$
+
+If $B$ is invertible, every added generation increases the response
+strictly. The eigenvalue-counting exponent is
+
+$$
+\lim_{E\to\infty}\frac{\log N_D(E)}{\log E}
+=\frac{\log b}{\log\Omega}.
+$$
+
+**Proof.** Let $S$ multiply depth-$n$ coordinates by $\Omega^{n/2}$, and
+let $C$ have diagonal $H$ and child blocks $\Omega^{-1/2}B$.
+Cauchy--Schwarz bounds the child-sum map by $c$, hence
+$(h-2c)I\leq C\leq(\|H\|+2c)I$. The form
+$q[u]=\langle Su,CSu\rangle$ is closed on $\mathcal Q$, with a norm
+equivalent to the complete graph norm of $S$. Its operator has
+
+$$
+D^{-1}=S^{-1}C^{-1}S^{-1},\qquad
+\operatorname{Dom}(D)=\{u\in\mathcal Q:CSu\in\mathcal Q\}.
+$$
+
+The diagonal entries of $S^{-1}$ tend to zero, with finite multiplicity
+at each depth, so the inverse is compact. This selects the finite-energy
+Friedrichs realization; essential self-adjointness under other possible
+conditions at infinity is not assumed.
+
+Relabeling a child multiplies every block and its closed form by
+$\Omega$. Its root inverse is therefore
+$\Omega^{-1}R(\lambda/\Omega)$. Eliminating the $b$ children yields the
+recursion, including all descendant responses. Finite-support fields
+are a form core. The variational expression for
+$\langle f,(D+\lambda I)^{-1}f\rangle$ is the supremum of
+$2\operatorname{Re}\langle f,u\rangle-q[u]-\lambda\|u\|^2$ over that
+domain. Successive finite-depth restrictions increase to this supremum,
+proving Loewner and norm convergence of the root matrices.
+
+Since $h-c^2/\gamma=\gamma$, every Schur denominator is bounded below
+by $(\gamma+\lambda)I$. The inverse identity bounds the outgoing
+difference of two responses by $c^2/(\gamma+\lambda)^2$ times their
+incoming difference. Its uniform factor $r<1$ proves uniqueness in
+the stated class. Iterating $N+1$ times from a zero terminal response
+gives the depth error. Inverse order and positive congruence give
+monotonicity, strictly when $B$ is invertible.
+
+Finally, the form bounds compare $D$ with positive constant multiples of
+$S^2$. The eigenvalue $\Omega^n$ of $S^2$ has multiplicity $db^n$.
+Min--max bounds $N_D(E)$ between geometric sums at constant multiples
+of $E$, proving the exponent. This completes the proof. The
+[full domain argument and calculator](../docs/nsc-infinite-inheritance.md)
+give its detailed implementation.
+
+For a second-order spectral interpretation,
+$d_s=2\log b/\log\Omega$; a first-order interpretation instead uses the
+counting exponent itself. These are spectral dimensions of this operator.
+A spacetime or embedding dimension requires its own geometric construction.
+
+For $H=3$, $B=1$, $b=3$, $\Omega=4$, the exact static response is
+
+$$
+R(0)=\frac{2}{3+\sqrt{6}},\qquad
+D_{\mathrm{eff}}(0)=\frac{3+\sqrt{6}}{2}=2.724744871391589.
+$$
+
+Thus the inherited coefficient3 changes by $-0.275255128608411$.
+Depths0 through6 give $R_6(0)=0.367006802721088$, with analytic depth
+bound $3.94041\times10^{-8}$; the closed-form difference is
+$3.54235\times10^{-8}$. Rounding is separate from this bound. The
+second-order spectral dimension is $\log3/\log2=1.584962500721156$.
+Four small controls compare full finite trees, noncommuting links,
+branch/scale factors, the exact scalar root and spectral bounds.
+They support the calculator; the infinite result follows from the proof.
+A metric-dependent action and physical source identification remain
+needed to connect this response to cosmological Lambda.
 
 ### 6. What an unresolved surrounding region can leave locally
 

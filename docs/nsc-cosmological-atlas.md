@@ -105,6 +105,14 @@ each region's own surroundings. Reuse that composition rule rather than
 adding independent corrections for overlapping eliminated regions. A physical
 realization must now supply its geometry, scale ratios, clocks and state.
 
+The [infinite inherited-law theorem](nsc-infinite-inheritance.md) now proves
+an actual infinite branching realization on a stated finite-energy domain.
+It gives exact normalized subtree inheritance, a unique bounded positive
+root response, an explicit finite-depth error bound and a spectral counting
+dimension. Its positive-matrix and coupling hypotheses are specified. This
+extends operator composition beyond finite windows; a compatible spacetime
+and metric-dependent source identification remain separate physical work.
+
 Here “fractal” means a proposed measurable scaling structure. A dimension
 must be obtained from a specified quantity, such as volume versus proper
 radius or mode count versus frequency. It is not assigned from spherical

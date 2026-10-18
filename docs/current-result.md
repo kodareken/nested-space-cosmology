@@ -1,5 +1,13 @@
 # What the calculations show
 
+The [infinite inherited-law theorem](nsc-infinite-inheritance.md) proves a
+positive finite-energy realization of unlimited branching, exact normalized
+subtree inheritance and a finite local response with an explicit depth
+error. Its spectral counting exponent is `log(b)/log(Omega)`. The proof
+states the full domain and coupling bound; four independent calculator
+controls pass. A spacetime/source identification and observational tests
+remain required for the cosmological claims.
+
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.12`, now includes the actual Dirac trace, radar chart, prepared mean metric/clock response, a correlated continuum parent and its local regularity proposition, and the archived PDE/boundary-lift diagnosis of P001. Its quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
 ## An explicit correlated parent state and local Dirac subtraction

@@ -6,6 +6,17 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-18.13` proves the infinite finite-energy inherited-law
+construction in Section5.1: normalized subtree scaling, an exact branching
+Schur equation, a uniform depth error bound and a spectral counting
+exponent. The proof states its domain and positivity assumptions; it does
+not identify the operator response with a cosmological vacuum source.
+
+Revision `2026-10-18.12` adds the correlated continuum preparation and
+its local Hadamard proposition in Section6.1.19. The local cap vacuum
+stress exists under those assumptions; its controlled amplitude and full
+source-induced Psi/Phi remain uncomputed.
+
 Revision `2026-10-18.11` adds the conserved compact-source family and
 its calculated prepared clock mass derivative in Section 6.1.18. The
 local tidal ratio changes by about five parts per million between the
