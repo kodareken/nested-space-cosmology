@@ -2998,7 +2998,7 @@ now reports both derivatives from the same potential and integrals.
 
 Let g_a, g_as and g_ax be a leg's endpoint value, source derivative and
 observation derivative, with e_a the direct unit column. In the chiral
-frame D0x_a=lambda_a*g_a, D1_a=lambda_a*e_a, lambda=(-1,+1). The candidate
+frame D0x_a=lambda_a*g_a, D1_a=lambda_a*e_a, lambda=(-1,+1). The
 coefficient of log(1/abs(eta)) in q_alpha is
 
 \[
@@ -3044,3 +3044,40 @@ Correct the scalar contract and its control before repeating the diagnosis.
 No coefficient table was obtained from that attempt. Charge its full
 unreported 30-CPU allowance conservatively; the corrected fixed-domain
 diagnosis has a fresh 30-CPU allowance after this implementation diagnosis.
+
+The corrected diagnostic, method `8bad871`, completes at the same central
+detector in 2.75 calculation CPU seconds / 1.57345 wall seconds; including
+imports its wrapper records 3.59375 CPU seconds. The source fingerprint is
+`1c4a40fbe52e2e14b3794d2d3726e716c2c5c9e53315da3e73b86d02e90a4357`.
+
+| Order | Represented q-log, nested | Represented q-log, cap | Relative pressure-log coefficient |
+|---|---|---|---|
+| 24 | .445347440091 | .448849764909 | -.002002889525 |
+| 48 | .484628661337 | .486418401135 | -.001023506179 |
+
+The exact local q-log is .600799070856 in both geometries; the common
+angular-log coefficient is -.618450133581. Substituting the exact source
+jets cancels the relative coefficient to working arithmetic precision.
+This confirms a missing cancellation in the finite representation. It
+does not calculate the finite stress or prove every approximation error
+has been identified.
+
+The leading-log estimates for halving the separation are -.00138830
+and -.00070944, whereas the observed v2 changes are -7.72801e-5 and
++7.18296e-5. The two existing splits therefore cannot be treated as a
+pure leading-log asymptotic regime. No finite amplitude is extracted from
+this diagnostic and no smaller split is scanned.
+
+The next reconstruction must retain c0 and enforce, for each ordinary
+field column on [0,L], both identities
+
+\[
+\sum_n c_n=G(L),\qquad
+\frac1L\sum_n n(n+1)c_n=G_s(L).
+\]
+
+Their targets are the Volterra values and source derivatives above. A
+minimum-L2 polynomial correction with these two constraints is fixed by
+the equations before covariance evaluation. Recompute only after this
+source compatibility is restored; finer field grids and further PV
+quadrature do not repair the missing identity.

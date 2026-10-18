@@ -29,6 +29,9 @@ uses `logarithmic_coefficients` in the root pairing and
 `volterra_endpoint_jets` in the retarded adapter. Independent Fourier,
 separable-kernel and source-slope counterexample controls pass. It diagnoses
 the residue without assigning a coincident finite part.
+The actual central-detector diagnostic confirms a nonzero relative log
+residue at both orders. Enforcing the exact source jet is the next
+necessary reconstruction correction; the finite stress stays open.
 
 The [root covariance pairing](nsc-atlas-dirac-probe.md#pairing-the-complete-root-covariance-in-null-coordinates)
 uses [one-sided retarded maps, analytic Hilbert/Bessel integration and endpoint derivatives](../src/recursive_horizons/nsc_atlas_dirac_root_pairing.py).

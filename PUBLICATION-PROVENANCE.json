@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 265369,
+      "bytes": 265574,
       "path": "docs/active-code-map.md",
-      "sha256": "15cbae19d65307b531fa281fc02991ab9d0118fb0cdc81312fc0fb56e6231931"
+      "sha256": "95dc4adf728d67a84d71588e69925cbee7adfe8f387f126a0fbd416706b0b78c"
     },
     {
       "bytes": 106460,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 425449,
+      "bytes": 425980,
       "path": "docs/current-result.md",
-      "sha256": "c5d0859fd087b50394c02fe33b8e89a2b28ccac795095292d0555b4809e985f6"
+      "sha256": "134d42d71c9ec7fefcbc41d14aeb31ec916b6a026710b5b62312df95908be9b9"
     },
     {
       "bytes": 2481,
@@ -1573,7 +1573,7 @@
     {
       "bytes": 2439238,
       "path": "docs/lab-snapshot.json",
-      "sha256": "399804693671e2ec498f6f5b4726603d5e69509b19e3ebd48d119326f049b79b"
+      "sha256": "e8e7687369400d9a3914ec8af3d00d23c53953be762654880115b32e77bb61ab"
     },
     {
       "bytes": 4997,
@@ -1631,9 +1631,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 156029,
+      "bytes": 157749,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "9fe75fc5ace3cf624475dac085225cf81c1244c1b5b206b195769ee8c4566ce7"
+      "sha256": "640cc39dc07328cb78ff411ad2bbdd71008a0edd9e00253f0f00d590e95aaf33"
     },
     {
       "bytes": 17343,
@@ -2241,9 +2241,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 199981,
+      "bytes": 200348,
       "path": "docs/reproducing.md",
-      "sha256": "ca981aab4fde01c3599c6ae024da9027077c2b06c5e79b6abcb6ec9c280276c2"
+      "sha256": "af42d97644a2d9c4123c5971870ec56109508ae76020797ad38fa0480f13673c"
     },
     {
       "bytes": 31710,
@@ -22341,7 +22341,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "399804693671e2ec498f6f5b4726603d5e69509b19e3ebd48d119326f049b79b",
+  "lab_snapshot_sha256": "e8e7687369400d9a3914ec8af3d00d23c53953be762654880115b32e77bb61ab",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-18.12",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

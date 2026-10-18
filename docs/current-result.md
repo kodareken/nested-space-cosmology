@@ -4,6 +4,14 @@ Current research, 18 October 2026: the [living atlas manuscript](../paper/nested
 
 ## An explicit correlated parent state and local Dirac subtraction
 
+The [source-endpoint diagnosis](nsc-atlas-dirac-probe.md#source-endpoint-jets-and-a-relative-logarithmic-diagnostic)
+finds an uncancelled relative stress logarithm: coefficients -.00200289
+and -.00102351 at orders 24/48. Exact Volterra source derivatives cancel
+it to arithmetic precision. This identifies a necessary reconstruction
+correction before taking coincidence; it does not yet give the finite
+vacuum stress. The two pilot amplitudes remain unresolved. No new field
+grid or smaller separation was used for the diagnosis.
+
 The [fixed-grid polynomial refinement](nsc-atlas-dirac-probe.md#polynomial-refinement-exposes-an-unresolved-amplitude)
 does not converge: order 48 gives .002245374289 at the smaller split,
 versus order 24's .001765398991. The new change is 3.325 times the old

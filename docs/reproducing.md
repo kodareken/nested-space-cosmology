@@ -12,6 +12,12 @@ Freeze the method first. This prints a small coefficient table within the
 does not evaluate a coincident finite stress. Three independent algebraic
 controls use 1.109375 process-CPU seconds before the physical diagnosis.
 
+The corrected diagnosis is pinned to `8bad871`. It prints nonzero legacy
+relative pressure-log residues at both orders; substituting the exact
+source jets cancels those coefficients. Calculation uses 2.75 CPU/1.57345
+wall seconds, or 3.59375 CPU seconds including imports. The owner retains
+the small coefficient table and its limits; no extra result JSON is saved.
+
 The [fixed-grid polynomial comparison](nsc-atlas-dirac-probe.md#fixed-grid-polynomial-comparison-and-useful-process-parallelism)
 keeps N=128 and compares orders 24/48. Its order-48 cylinder check uses the
 existing N=64 grid and 8.125 process-CPU seconds:
