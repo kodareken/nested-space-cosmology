@@ -1,0 +1,72 @@
+{
+  "limits": {
+    "CPU_seconds": 30,
+    "summary_bytes": 8000
+  },
+  "reference": {
+    "checks": {
+      "signed_chern_vs_closed_junction": 0.0,
+      "trace_coefficient_vs_closed_junction": 0.0
+    },
+    "counts": {
+      "Dirac_time_steps": 0,
+      "P001_time_steps": 0,
+      "algebraic_wall_points": 1,
+      "new_evolution_grids": 0,
+      "nonlocal_loop_polarizations": 0,
+      "type_A_surface_coefficients": 1
+    },
+    "excluded_terms": {
+      "Box_R": "scheme dependent; not set to zero at the wall",
+      "finite_wall_counterterms": "not selected",
+      "state_dependent_traceless_stress": "not calculated"
+    },
+    "inputs": {
+      "Dirac_mass": 0.0,
+      "G_SI": 6.6743e-11,
+      "H_ell": 1.0,
+      "M_over_ell": 0.4,
+      "Planck_length_squared_over_ell_squared": 2.6122803039748717e-78,
+      "Rwall_over_ell": 0.45,
+      "c_SI": 299792458.0,
+      "ell_is_predicted": false,
+      "ell_m": 10000.0,
+      "four_component_Dirac_fields": 1,
+      "h_SI": 6.62607015e-34,
+      "k_wall_ell": 2.0,
+      "normal_orientation": "cap to exterior on both sides",
+      "smoothing_class": "smooth kinked conformal factor; conformal product curvature remains bounded"
+    },
+    "nested_Psi_over_Phi": null,
+    "scope": "Euler part of the actual material-wall Dirac anomaly in the declared smoothing class. Not full surface stress, bulk Lambda, a microscopic wall model, nonlocal response or a slip prediction.",
+    "smooth_cap_continuation_euler_surface": 0.0,
+    "uncertainty_scope": "Exact algebraic coefficient within stated wall class; no physical state, full quantum uncertainty or wall-thickness extrapolation is supplied.",
+    "wall": {
+      "chern_minus": -486.98504145775826,
+      "chern_plus": -542.9850414577583,
+      "delta_Lambda_trace_surface_shape": 0.06808294787819968,
+      "ell_times_integrated_delta_Lambda_trace": 1.778517437787688e-79,
+      "euler_surface": 56.0,
+      "integrated_delta_Lambda_trace_per_m": 1.778517437787688e-83,
+      "intrinsic_acceleration": -9.717773821553099,
+      "intrinsic_curvature": 9.671772713245684,
+      "trace_delta_coefficient_per_m3": -1.0835737695083347e-14,
+      "trace_times_ell3_over_hbar_c": -0.010835737695083347
+    }
+  },
+  "runtime_cpu_seconds": 0.03125,
+  "schema": "nsc-atlas-dirac-euler-wall-v1",
+  "source_commit": "731c7345fcdd0cc324524c16eecc1908cf3bfe34",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_dirac_conformal.py": "129c6e6e3c806b4928bbe2a46d233d0a476455163950019aa87b7b76378a8eb8",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_dirac_conformal.py": "07049c70a4d51e54c995ab0645d347499f44f18b0e860bb9226d7a46381523ba",
+    "src/recursive_horizons/nsc_atlas_dirac_probe.py": "7bc14ce7184e67e914fe7843d6ce88a7e8971c2abd41cd4d92adebebf7aa2277",
+    "src/recursive_horizons/nsc_atlas_dirac_trace.py": "f6273fa39d5b3809d593f4f7070c3969277bb81798f8f5043dce3f450b699cad",
+    "tests/test_nsc_atlas_dirac_conformal.py": "2749302890ae81127150032f26b4481bb10cce22c1d56e5c8d3541ff5a12e4f8",
+    "tests/test_nsc_atlas_dirac_euler_wall.py": "521d8a7ad97b8d6ced056f56af52f75757e8155ce300cd47db13a901b5ffe8be",
+    "tests/test_nsc_atlas_dirac_trace.py": "6361430cb277a8a2beab8507f89cf0435440a86a388cfc2c6f0210a9a5893888"
+  },
+  "status": "type_A_surface_term_in_declared_smoothing_class"
+}

@@ -85,6 +85,9 @@ Commit the method first and use an unused output path. The exact normal
 curvature and Chern checks require no smoothing scan. The result is the
 Euler part of the wall trace, excluding `Box R`, finite interface terms
 and the state-dependent nonlocal response. It is not a slip calculation.
+The [frozen surface result](../results/summaries/nsc-atlas-dirac-euler-wall-v1.json)
+retains the arithmetic, stated smoothing class, excluded terms and source
+hashes only.
 
 The physical initial Dirac time generator and its moving-wall compatibility
 reproduce with:

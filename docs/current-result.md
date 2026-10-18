@@ -2,6 +2,25 @@
 
 Current research, 18 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-18.8`, distinguishes the imported flat Dirac slip from the actual cap--wall probe, and diagnoses the active-region limitation of P001's three-grid trial. The flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Actual Dirac Euler term at the material wall
+
+The [wall calculation](../results/summaries/nsc-atlas-dirac-euler-wall-v1.json)
+adds the Euler interface contribution missing from the smooth-bulk trace.
+The signed moving junction gives `E_Sigma=4*k_wall*(k_wall^2+3*H^2)=56/ell^3`;
+the exterior mass and wall radius cancel. Its Dirac type-A trace
+coefficient is `-.010835737695083347/ell^3` times the invariant wall delta.
+A smooth cap continuation has no interface coefficient.
+
+Four controls independently check the smooth Lorentz curvature contraction,
+Chern orientation/flux, signed wall identity, and units/domain. The
+[owner](nsc-atlas-dirac-probe.md#euler-curvature-contribution-at-the-material-interface)
+specifies bounded conformal-product curvature in the smoothing limit.
+`Box R`, finite wall terms and state-dependent/traceless stress remain
+open. The `.03125`-CPU-second reference is one local quantum contribution,
+not the complete wall stress or nested `Psi/Phi`. The same owner now gives
+the explicit covariance/commutator formula displaying the remaining
+[state dependence](nsc-atlas-dirac-probe.md#the-curved-metric-response-calculation-and-its-state-dependence).
+
 ## Shared finite field action passes its declared control
 
 The [exact normal-collar application](../results/summaries/nsc-atlas-collar-field-v1.json)

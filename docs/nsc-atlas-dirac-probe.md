@@ -748,6 +748,18 @@ the full wall stress or `Psi/Phi`. The formal trace-only projection has
 integrated surface term, not a bulk cosmological constant or an assertion
 of vacuum stress.
 
+The [frozen wall evaluation](../results/summaries/nsc-atlas-dirac-euler-wall-v1.json)
+at `Rwall=.45*ell` gives `B3_minus=-486.98504145775826/ell^3` and
+`B3_plus=-542.9850414577583/ell^3`, hence `E_Sigma=56/ell^3`.
+The trace coefficient is `-.010835737695083347/ell^3`. With the same
+supplied `ell=10000 m`, the trace-only integrated projection is
+`ell*integral dn DeltaLambda_trace=1.778517437787688e-79`.
+The two independently formed junction/trace comparisons differ by zero
+in reference arithmetic. Evaluation takes `.03125` process-CPU seconds,
+with no field evolution, smoothing scan or new state. This is the Euler
+surface contribution within the declared class; it is not a total
+physical error estimate for the uncomputed quantum metric response.
+
 ## The curved metric-response calculation and its state dependence
 
 The exact [wall-normal collar](nsc-atlas-conformal-action.md#a-shared-finite-field-action-on-a-quiet-wall-normal-collar)
