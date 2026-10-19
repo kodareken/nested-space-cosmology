@@ -14,6 +14,11 @@ couplings fixed. The same smooth cap has this same limit: its nesting
 offset is zero. The finite-time state, b>0 slip and origin of the supplied
 cap scale remain open. No new benchmark preparation or numerical field
 campaign is used. Seven new controls and13 existing controls pass.
+The [local retarded corollary](nsc-atlas-dirac-probe.md#consequence-for-a-local-late-retarded-response)
+also proves convergence of the smeared stress response for source and
+detector histories confined to a common finite late window. Physical
+conformal weights and local contacts remain; no flat slip value is copied.
+An independent exact Fock calculation checks the16 CAR component identities.
 
 The [infinite inherited-law theorem](nsc-infinite-inheritance.md) proves a
 positive finite-energy realization of unlimited branching, exact normalized
@@ -41,7 +46,7 @@ numbers. With b,L and the forcing independently known, the strictly
 decreasing response formula identifies q. A spacetime/source identification and observational tests
 remain required for the cosmological claims.
 
-Current research, 19 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-19.1`, adds the inherited local state, detector and late vacuum source in Section6.1.20. It retains the infinite inherited-law theorem in Section5.1, volume action and calibrated dynamic observable in Section5.2, actual curved Dirac work, and archived P001 diagnosis. The matching68-page PDF builds; visual inspection found inline notation commands requiring a typesetting correction, now in progress. Its compact-source quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 19 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-19.1`, adds the inherited local state, detector and late vacuum source in Section6.1.20. It retains the infinite inherited-law theorem in Section5.1, volume action and calibrated dynamic observable in Section5.2, actual curved Dirac work, and archived P001 diagnosis. The matching68-page PDF builds and the new section passes visual inspection after its inline notation correction. Its compact-source quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
 ## An explicit correlated parent state and local Dirac subtraction
 

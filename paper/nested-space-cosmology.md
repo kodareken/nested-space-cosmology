@@ -1848,12 +1848,12 @@ transparent massless Dirac probe. In $\ell$ units its signed wall obeys
 
 $$
 \beta_-=\frac{3R}{4}+\frac{1}{5R^2},\qquad
-\dot R^2=\frac{25R^2}{16}-1+\frac{3}{10R}+\frac{1}{25R^4}.
+v^2=\dot R^2=\frac{25R^2}{16}-1+\frac{3}{10R}+\frac{1}{25R^4}.
 $$
 
 This positive expanding root reaches $R>1$ in finite wall and central
 cap time. In the expanding flat cap chart its regular clock is
-$dt/d\tau=(1+\dot R^2)/(\beta_-+R\dot R)$; at $R=1$ it equals $761/760$.
+$dt/d\tau=(1+v^2)/(\beta_-+Rv)$; at $R=1$ it equals $761/760$.
 After that crossing choose a Cauchy ball of physical radius
 $H^{-1}<R_B<R_w$. Its conformal future contains a neighborhood of the
 central endpoint at $\eta=0$, with a positive spatial margin. The future
@@ -1867,7 +1867,7 @@ function approaches the conformal de Sitter one. Parent-dependent stress
 has a decaying amplitude, rather than a new freely chosen root state.
 
 **Proof.** Set the cut to $t=0$, $a=e^{Ht}$ and $\eta=-H^{-1}e^{-Ht}$.
-The conformal field $\widetilde\psi=a^{3/2}\psi$ satisfies the flat
+The conformal field $\psi_{\mathrm{flat}}=a^{3/2}\psi$ satisfies the flat
 massless Dirac equation. Subtract the conformal Minkowski two-point
 function as a proof reference. Its Cauchy-data difference is smooth.
 Cut off both arguments inside a smaller ball still larger than $H^{-1}$
@@ -1915,7 +1915,7 @@ The project result connects them to this sourced wall's causal future.
 
 Finally the existing cap trace, $A=-11\hbar cH^4/(240\pi^2)$, now has a
 full asymptotic stress interpretation. Homogeneity, isotropy and
-conservation give $-\rho+3p=A$ and $\dot\rho+4H\rho=-HA$.
+conservation give $-\rho+3p=A$ and $d\rho/dt+4H\rho=-HA$.
 The radiation constant decays as $a^{-4}$, leaving, at fixed renormalized
 classical $\Lambda$ and $G$,
 

@@ -1521,9 +1521,9 @@
       "sha256": "401d52e9c88ec12e1ed3b44d447c7786a3d1a4157b263346ae2da3d421ea9509"
     },
     {
-      "bytes": 431989,
+      "bytes": 432364,
       "path": "docs/current-result.md",
-      "sha256": "ac15df4b1069cda5251a915af9339f6a5c6d56944d1eb9dfade3113f3f1e15e9"
+      "sha256": "74cae4d82483adb17726c087e85f7331ccdc4281a7a55be224a796433b9c15f4"
     },
     {
       "bytes": 2481,
@@ -1573,7 +1573,7 @@
     {
       "bytes": 2443093,
       "path": "docs/lab-snapshot.json",
-      "sha256": "c7f18d1511e018cf9b37b7675091822fa71cfcd620e506b89873f5c35ccab24b"
+      "sha256": "8fdf417d0d2b642c6338e365f1248609250a38fe8f78203fd63c4fc5a591469b"
     },
     {
       "bytes": 4997,
@@ -1631,9 +1631,9 @@
       "sha256": "86dc238420a2aaf96d1df29eea3bf00225def2c5d1ac1945269ecc73c9dcd19d"
     },
     {
-      "bytes": 188349,
+      "bytes": 191654,
       "path": "docs/nsc-atlas-dirac-probe.md",
-      "sha256": "55a1803b17214a5ecfd39898d03fc20e6aa37f0c196da3780d88c0bb3d83ff28"
+      "sha256": "e731cd8069a1f979807918dfbb2ff799b10d9e58f03b39f5f84db1d18b30c5d4"
     },
     {
       "bytes": 17343,
@@ -2348,7 +2348,7 @@
     {
       "bytes": 23793,
       "path": "paper/build-manifest.json",
-      "sha256": "5d236067ba21d9ef54fe5dda45cc639b45cda36919524e771fc9f2d24651540f"
+      "sha256": "adbaaf264552b9b4d2f6566f014c7be99ebfd4994630df9e0dbd7600b56c9b40"
     },
     {
       "bytes": 3206,
@@ -2588,12 +2588,12 @@
     {
       "bytes": 221161,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "d7ddd07461a4c46ff5bd2586ccf6b46584df340f8f8c90429ff803e3c954f50f"
+      "sha256": "596db9470e798b3e3baa5d12978f395e255804280c58a5af748f97db955a013d"
     },
     {
-      "bytes": 4517301,
+      "bytes": 4518177,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "da92cfddded8676d2f171edee7337f1f4223b88f76fee80dc3b2f578c62f4dcf"
+      "sha256": "08ae1eb00687983c89460e899c631b004a5848288dbf1696d2b89c5cc16b6c44"
     },
     {
       "bytes": 1521,
@@ -22376,7 +22376,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "c7f18d1511e018cf9b37b7675091822fa71cfcd620e506b89873f5c35ccab24b",
+  "lab_snapshot_sha256": "8fdf417d0d2b642c6338e365f1248609250a38fe8f78203fd63c4fc5a591469b",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-19.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

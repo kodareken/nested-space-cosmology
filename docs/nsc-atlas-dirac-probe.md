@@ -3656,3 +3656,65 @@ source and its retarded response can use the limiting b=0 state, once its
 physical history is specified. The old pre-existing-mass family still
 needs a compatible finite-time inheritance rule. No further finite-split
 diagnostic campaign follows from this result.
+
+### Consequence for a local late retarded response
+
+Keep a smooth source and detector in a fixed finite physical region inside
+the common isolating domain, and translate their entire supports late by
+the cap isometry (t,x)->(t+T,exp(-HT)*x). This is a statement about a local
+response to a late perturbation, not about a compact mass that was already
+present in the remote past.
+
+The state proof extends to these compact spacetime windows. Pulling back
+to fixed physical coordinates gives exp(-3HT) times a smooth F evaluated
+at conformal arguments scaled by exp(-HT). Every fixed finite number of
+derivatives consequently tends to zero. There is a direct connection to
+the existing retarded metric calculation: for CAR bilinears
+Ahat=c^dagger*A*c and Bhat=c^dagger*B*c, the quartic terms cancel and
+
+$$
+\langle[\widehat A,\widehat B]\rangle=\operatorname{Tr}(C[A,B]),\qquad
+\Delta\langle[\widehat A,\widehat B]\rangle
+=\operatorname{Tr}(\Delta C[A,B]).
+$$
+
+This is the one-particle commutator already used by the
+[characteristic response](../src/recursive_horizons/nsc_atlas_dirac_scattering.py).
+An independent exact two-orbital Fock representation checks all16 component
+commutators in .453125 process-CPU seconds. The quadratic commutator identity
+itself needs only CAR; the quasifree assumption was used for the preceding
+density-detector correlation. This algebra check selects no physical state.
+Its continuum relative version pairs the fixed local CAR propagator and
+its finite derivatives with the smooth two-point difference. Multiplication
+of a fixed distribution by a smooth function is continuous in the required
+finite test-function seminorms. Thus the two states' smeared retarded stress
+commutators approach the same value on these translated supports.
+Use disjoint source/detector supports to avoid coincident contact extensions.
+For overlapping supports this statement additionally requires one fixed
+local covariant extension with its same-action metric contacts; the common
+state-independent terms cancel, and differences of local state-dependent
+contacts vanish with the smooth two-point jets. No numerical rate constant
+for this retarded limit has been evaluated.
+
+For the limiting conformal state, at separated points, the tetrad kernel is
+
+$$
+\Pi^R_{{\rm dS};\hat a\hat b\hat c\hat d}(X,Y)
+=a(X)^{-4}a(Y)^{-4}
+\Pi^R_{{\rm M};\hat a\hat b\hat c\hat d}(\widetilde X,\widetilde Y),
+$$
+
+where Pi^R=-i*theta(t_X-t_Y)*<[T(X),T(Y)]>. The conformal map preserves
+time ordering. Measures, clocks, tetrads and anomalous/local metric contacts
+must accompany this formula when it is paired with a physical metric
+perturbation. A flat static numerical slip cannot be copied into it.
+
+Consequently the same-H nested and smooth caps have zero asymptotic
+difference of this local retarded stress response as well as of the mean
+vacuum source. This does not say that either response vanishes. It does
+not supply a gauge-dependent global potential ratio, a b>0 stationary
+state, or a source history extending through the wall/pre-isolation past.
+A local gravitational response also needs compatible common retarded
+metric data and the gravitational equations. The corollary identifies
+which late quantum kernel that calculation may use; it does not bypass
+the missing finite-time source and state.
