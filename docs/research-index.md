@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [Lambda mechanism inventory and comparison](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
+rank the remaining gravitational, quantum, interface and extended-action
+routes. The checked additional nest changes the finite scalar average but
+fails vacuum form; the matched quiet exterior Lambda change is exactly
+zero. A common-parent reduction generating cosmological Lambda remains an
+open hypothesis, rather than a completed physical explanation.
+
 The [parent--child inheritance calculation](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
 now connects the actual quiet wall's future to a universal local late
 Dirac state, a stress-memory bound and a defined detector spectrum.

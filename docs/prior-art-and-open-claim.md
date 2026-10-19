@@ -1,5 +1,33 @@
 # Prior art and admission of new research
 
+## Remaining Lambda mechanisms and matched nesting test, 19 October 2026
+
+Audit the remaining mechanisms before another Lambda calculation. Reuse the
+same-action one-level and two-level quiet slices, their normal-clock scalar
+identities and the actual common Schwarzschild outer end. Rank mechanisms by
+their use of specified NSC geometry and their ability to supply a metric volume
+source. The missing physical connection is a constraint-preserving gravitational
+reduction of a collective parent; neither a scalar trace nor an adjustable
+connector moment substitutes for it.
+
+The bounded calculation is one paired comparison at the existing outer mass
+M/ell=.4, areal cut4*ell, H*ell=1 and tension k*ell=2. Reuse the existing
+32/64/adaptive quadratures, including both shell curvature distributions.
+Calculate the change in geometric density AND pressure, their trace and vacuum
+residual, then compare actual exterior Einstein tensors directly from metric
+jets. Borrowed inputs are the previously derived scalar averaging identities
+and spherical Einstein equations, checked against the independent coordinate
+Christoffel contraction and known flat/de Sitter limits.
+
+The allowance is30 process-CPU seconds for the paired application and30 for
+independent controls. No evolution, new physical grid, coupling selection,
+parent-connector fit, field state, retained full arrays or cosmological fit is
+admitted. Existing quadrature differences are indicators, not error bounds.
+Stop on a constraint/control mismatch or on failure of vacuum form; a failed
+vacuum test closes this finite test and does not authorize a precision campaign.
+The [Schur owner](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
+owns the ranked inventory, result and precise restatement of the Lambda claim.
+
 ## Inherited quiet-cap state, 19 October 2026
 
 Derive preparation from parent--child inheritance before selecting another

@@ -21,6 +21,7 @@ omitted, with no proved numerical bound.
 from __future__ import annotations
 
 import math
+import time
 
 KAPPA = 8*math.pi
 SCOPE = (
@@ -214,3 +215,113 @@ def exact_tube_identities():
         'mass_work': mass_differential,
         'adm_series': sp.simplify(series - (mu + mu**2/(2*radius))),
     }
+
+
+def spherical_einstein_response(*, radius, mass_length, hubble=0.):
+    """Mixed Einstein eigenvalues from the quiet spherical metric's jets.
+
+    f=1-2*mu/R-H^2*R^2. No wall distribution or quantum backreaction is
+    included. The returned trace is R/4; identifying it with Lambda also
+    requires the four Einstein eigenvalues to agree. This direct metric
+    calculation is independent of the initial-slice scalar fitting map.
+    """
+    radius = _real(radius, 'radius')
+    mu = _real(mass_length, 'mass length')
+    H = _real(hubble, 'Hubble inverse length')
+    if radius <= 0 or mu < 0 or H < 0:
+        raise ValueError('positive radius and nonnegative mass and H required')
+    f = 1-2*mu/radius-H*H*radius*radius
+    first = 2*mu/radius**2-2*H*H*radius
+    second = -4*mu/radius**3-2*H*H
+    radial = (radius*first+f-1)/radius**2
+    angular = second/2+first/radius
+    eigenvalues = (radial, radial, angular, angular)
+    projection = -math.fsum(eigenvalues)/4
+    return dict(f=f, mixed_einstein_eigenvalues=eigenvalues,
+                lambda_trace=projection,
+                vacuum_form_defect=max(abs(value+projection) for value in eigenvalues),
+                weyl_squared=48*mu*mu/radius**6)
+
+
+def paired_nesting_vacuum_test(*, ell_m=10000.):
+    """One fresh one-level/two-level comparison, with the same exact outer end.
+
+    Reuses the existing fixed quadratures and initial normal-clock rule.
+    Changes in scalar fitting sources are NOT a tensor coarse graining or
+    a vacuum term. An independent exterior metric comparison tests the
+    actual quiet parent-side curvature at the common Rcut=4*ell.
+    No physical evolution, grid scan, source fit or new state is used.
+    """
+    from .nsc_atlas_geometric_average import geometric_slice_average
+    from .nsc_atlas_nested_slice import nested_slice_record
+
+    ell = _real(ell_m, 'supplied physical ruler')
+    if ell <= 0:
+        raise ValueError('supplied physical ruler must be positive')
+    started = time.process_time()
+    base = geometric_slice_average(quadrature='adaptive')
+    base32 = geometric_slice_average(quadrature='gauss32')
+    base64 = geometric_slice_average(quadrature='gauss64')
+    nested = nested_slice_record()
+    mass = base['domain']['M_over_ell']
+    cut = base['domain']['Rcut_right_over_ell']
+    if (mass != nested['assumptions']['exterior_mass_over_ell']
+            or cut != nested['analytic_end']['retained_R_over_ell']
+            or base['domain']['k_ell'] != nested['assumptions']['k_ell']
+            or base['domain']['H_ell'] != nested['assumptions']['inner_hubble_ell']):
+        raise ValueError('the two geometries do not share the declared controls')
+    keys = ('Q', 'mean_intrinsic_curvature', 'kappa_geometric_density',
+            'kappa_geometric_pressure', 'geometric_trace_projection',
+            'geometric_vacuum_condition')
+    left = base['normalized_sources']
+    right = nested['average_diagnostic']['scalar_outputs_in_ell_units']
+    differences = {key: right[key]-left[key] for key in keys}
+    # These are paired quadrature comparisons, never certified error bounds.
+    gap = nested['quadrature']['scalar_diagnostic_64_minus_32']
+    indicators = {
+        key: max(abs((right[key]-gap[key])-base32['normalized_sources'][key]
+                     -differences[key]),
+                 abs(right[key]-base64['normalized_sources'][key]-differences[key]))
+        for key in keys}
+    density = differences['kappa_geometric_density']
+    pressure = differences['kappa_geometric_pressure']
+    # A trace and the independent rho+p condition must both be retained.
+    trace = (density-3*pressure)/4
+    nonvacuum = density+pressure
+    scale = max(abs(density), abs(pressure))
+    if max(abs(trace-differences['geometric_trace_projection']),
+           abs(nonvacuum+differences['geometric_vacuum_condition']/3)) > 2e-12:
+        raise RuntimeError('independent scalar stress contractions disagree')
+    outer_base = spherical_einstein_response(radius=cut, mass_length=mass)
+    outer_nested = spherical_einstein_response(
+        radius=nested['analytic_end']['retained_R_over_ell'],
+        mass_length=nested['assumptions']['exterior_mass_over_ell'],
+        hubble=nested['assumptions']['exterior_hubble_ell'])
+    exterior_delta = outer_nested['lambda_trace']-outer_base['lambda_trace']
+    elapsed = time.process_time()-started
+    if elapsed > 30:
+        raise RuntimeError('paired nesting test exceeded 30 process-CPU seconds')
+    return dict(
+        controls=dict(M_over_ell=mass, Rcut_over_ell=cut, k_ell=base['domain']['k_ell'],
+                      cap_H_ell=base['domain']['H_ell'],
+                      clock='each declared instantaneous Gaussian normal; common static outer tube',
+                      reference_length_m=ell, reference_length_is_supplied=True),
+        baseline_scalar_sources={key: left[key] for key in keys},
+        nested_scalar_sources={key: right[key] for key in keys},
+        nested_minus_baseline=differences,
+        paired_quadrature_indicators=indicators,
+        stress_test=dict(kappa_delta_rho_plus_delta_p_times_ell2=nonvacuum,
+                         delta_pressure_over_delta_density=pressure/density if density else None,
+                         relative_nonvacuum_residual=abs(nonvacuum)/scale if scale else 0.,
+                         scalar_trace_per_m2=trace/ell**2),
+        exact_quiet_exterior=dict(
+            baseline=outer_base, nested=outer_nested,
+            delta_Lambda_times_ell2=exterior_delta,
+            delta_Lambda_per_m2=exterior_delta/ell**2,
+            interpretation='identical spherical vacuum metrics with fixed outer mass and Lambda; no quantum backreaction or collective parent'),
+        counts=dict(new_evolution_grids=0, field_solves=0, evolution_steps=0,
+                    sampled_spatial_values=(base['spatial_evaluations']
+                        +base32['spatial_evaluations']+base64['spatial_evaluations']
+                        +nested['geometric_evaluations'])),
+        process_cpu_seconds=elapsed,
+        conclusion='Nonzero instantaneous scalar correlation change, failing vacuum form; exactly zero quiet exterior Lambda change. A collective parent gravitational reduction remains unspecified.')

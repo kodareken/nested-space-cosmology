@@ -14,12 +14,14 @@ It does not establish that every particle is a spherical interior or that our
 universe has a parent. The map distinguishes descent, geometric attachment,
 causal influence and correlation. Missing physical connections remain visible.
 
-The first [effective-Lambda calculation](docs/schur-memory.md) gives zero
-added smooth classical vacuum trace for the current conformal-scalar model.
-Its conditional quantum curvature and interface terms are calculated in the
-living manuscript, and the actual exterior causal boundary response is now
-implemented. A full cosmological Lambda still requires the physical reduction
-and its remaining state or averaging assumptions.
+The [Lambda mechanism audit](docs/schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
+ranks the remaining physical routes. No evaluated route establishes a nonzero
+nesting-induced bulk cosmological constant. A fresh one-level/two-level
+comparison gives a nonzero geometric trace change, -0.0461265238074 in ell
+units, but its independent density/pressure test fails vacuum form. Their
+actual matched quiet exteriors have exactly zero Lambda difference.
+Generating a nonzero vacuum source or a changing cosmological effective
+source remains a hypothesis requiring a specified gravitational reduction.
 
 The [inheritance derivation](docs/nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
 now selects one local late Dirac state in the actual quiet expanding cap,

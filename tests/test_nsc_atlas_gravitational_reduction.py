@@ -10,7 +10,70 @@ from recursive_horizons.nsc_atlas_gravitational_reduction import (
     homogeneous_action_variations, homogeneous_energy_stress,
     schwarzschild_boundary_response,
     schwarzschild_normal_weyl,
+    paired_nesting_vacuum_test, spherical_einstein_response,
 )
+
+
+def test_exterior_einstein_response_from_independent_curvature_contraction():
+    # The existing coordinate Christoffel route is independent of the new
+    # mixed-Einstein calculation. Nonzero H is a positive control against
+    # returning zero for every geometry; varying M changes Weyl, not Lambda.
+    from recursive_horizons.nsc_atlas_effective_vacuum import _coordinate_spherical_invariants
+    r = sp.symbols('r', positive=True)
+    mu, H = sp.Rational(2, 5), sp.Rational(1, 7)
+    invariants = _coordinate_spherical_invariants(1-2*mu/r-H**2*r**2)
+    row = spherical_einstein_response(radius=4., mass_length=float(mu), hubble=float(H))
+    assert row['lambda_trace'] == pytest.approx(float(invariants['ricci_scalar']/4), abs=2e-15)
+    assert row['vacuum_form_defect'] < 2e-15
+    other = spherical_einstein_response(radius=4., mass_length=.6, hubble=float(H))
+    assert other['lambda_trace'] == pytest.approx(row['lambda_trace'], abs=2e-15)
+    assert other['weyl_squared'] != row['weyl_squared']
+    scaled = spherical_einstein_response(radius=12., mass_length=1.2, hubble=float(H)/3)
+    assert scaled['lambda_trace'] == pytest.approx(row['lambda_trace']/9)
+    assert scaled['weyl_squared'] == pytest.approx(row['weyl_squared']/81)
+    flat = spherical_einstein_response(radius=4., mass_length=0.)
+    assert flat['lambda_trace'] == flat['weyl_squared'] == 0.
+
+
+def test_paired_nested_geometry_changes_correlations_without_a_vacuum_source():
+    row = paired_nesting_vacuum_test()
+    d = row['nested_minus_baseline']
+    # Independent contraction of the two existing moment sets. Equal normal
+    # clock prescriptions do not make their interiors isometric.
+    from recursive_horizons.nsc_atlas_geometric_average import geometric_slice_average
+    from recursive_horizons.nsc_atlas_nested_slice import nested_slice_record
+    a, b = geometric_slice_average(quadrature='adaptive'), nested_slice_record()
+    ma, mb = a['integrals_in_ell_units'], b['moments']
+    va, vb = a['volume_over_ell3'], mb['volume_over_ell3']
+    Qa = (2*ma['theta_squared']/3-2*ma['shear_squared'])/va-2*(ma['theta']/va)**2/3
+    Qb = mb['J_over_ell']/vb-2*(mb['I_theta_over_ell2']/vb)**2/3
+    Ra, Rb = ma['curvature_total']/va, mb['intrinsic_curvature_over_ell']/vb
+    delta_Q, delta_R = Qb-Qa, Rb-Ra
+    assert d['geometric_trace_projection'] == pytest.approx((delta_Q-delta_R)/4, abs=2e-13)
+    assert d['geometric_vacuum_condition'] == pytest.approx(3*delta_Q+delta_R, abs=2e-13)
+    assert d['geometric_trace_projection'] < -.04
+    assert d['geometric_vacuum_condition'] > .3
+    assert row['stress_test']['relative_nonvacuum_residual'] > .8
+    assert max(row['paired_quadrature_indicators'].values()) < 2e-8
+    assert row['exact_quiet_exterior']['delta_Lambda_times_ell2'] == 0.
+    assert row['exact_quiet_exterior']['baseline']['f'] == pytest.approx(.8)
+    assert row['counts']['field_solves'] == row['counts']['evolution_steps'] == 0
+
+
+def test_same_metric_conformal_state_difference_cannot_be_nonzero_vacuum():
+    # Local anomaly and fixed local counterterms cancel between two Hadamard
+    # states of the same conformal field on the same smooth metric. A general
+    # traceless difference may still have flux and anisotropic stress.
+    rho, pr, pt, flux, lam = sp.symbols('rho pr pt flux lam', real=True)
+    kappa = sp.symbols('kappa', positive=True)
+    T = sp.Matrix([[rho, flux, 0, 0], [flux, pr, 0, 0],
+                   [0, 0, pt, 0], [0, 0, 0, pt]])
+    metric = sp.diag(-1, 1, 1, 1)
+    trace = sp.trace(metric*T)
+    assert sp.expand(trace-(-rho+pr+2*pt)) == 0
+    vacuum = -lam*metric/kappa
+    assert sp.trace(metric*vacuum) == -4*lam/kappa
+    assert sp.solve(sp.trace(metric*vacuum), lam) == [0]
 
 
 def _tube_tau(mu, radius):

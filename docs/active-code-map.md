@@ -8,6 +8,15 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [Lambda mechanism audit](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
+uses `paired_nesting_vacuum_test` and `spherical_einstein_response` in the
+existing [parent gravitational reduction](../src/recursive_horizons/nsc_atlas_gravitational_reduction.py).
+The [small calculator](../scripts/check_nsc_atlas_lambda_mechanisms.py)
+recomputes the one-level/two-level scalar increment and actual matched
+exterior without retaining arrays. Independent coordinate-curvature and
+moment controls are in its existing test file. The nonzero scalar increment
+fails vacuum form, and the actual exterior Lambda increment is zero.
+
 The [infinite inherited-law proof](nsc-infinite-inheritance.md) extends the
 frozen finite family to a branching finite-energy operator. Its
 [recursion calculator](../src/recursive_horizons/nsc_infinite_inheritance.py),

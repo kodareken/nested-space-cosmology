@@ -1,5 +1,14 @@
 # Current NSC claim ledger
 
+The [19 October Lambda audit](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
+finds no demonstrated nonzero nesting-induced bulk cosmological constant.
+The matched quiet exterior difference is exactly zero. The nonzero
+one-level/two-level scalar trace increment fails its independent vacuum
+stress test. Gravitational correlations, complete quantum feedback and the
+other ranked extensions remain hypotheses with stated missing inputs.
+Calculable inherited geometric/causal response is established in its
+declared models; generating cosmological Lambda is not an achieved claim.
+
 ## Active scope
 
 The active objective is the exterior-first finite atlas. Borrow established

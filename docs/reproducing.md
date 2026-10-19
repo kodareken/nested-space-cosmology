@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+The [remaining Lambda mechanisms](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
+have a small paired one-level/two-level calculation:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_lambda_mechanisms.py
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q
+```
+
+It reuses the existing fixed quadratures, keeps scalar density and pressure
+alongside their trace, and directly compares the common quiet exterior
+Einstein tensors. Ten focused controls pass. No evolution, physical grid
+scan, fitted source, result file or retained arrays are needed. The
+nonzero scalar increment fails vacuum form; the exterior Lambda difference
+is exactly zero. The actual collective parent remains unspecified.
+
 The [inherited local Dirac limit](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
 has an analytic calculator, without a new parent benchmark or field grid:
 

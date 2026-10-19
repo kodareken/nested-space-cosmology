@@ -1,5 +1,20 @@
 # What the calculations show
 
+The [Lambda route audit and paired test](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
+rank the seven remaining mechanism families and separate them from apparent
+acceleration. No evaluated route establishes a nonzero nesting-induced bulk
+cosmological constant. At fixed outer mass, cut, tension and declared initial
+clock, adding the checked nest changes the geometric scalar trace by
+-0.0461265238074*ell^-2, but kappa*(Delta rho+Delta p)*ell^2=-0.105668740067.
+The increment's pressure/density ratio is -.157199240651; it fails vacuum
+form. Its actual common quiet exterior has exactly zero Lambda difference.
+The finite calculation uses1,579 spatial values and .0625 process-CPU seconds;
+ten focused controls pass. The fixed-metric conformal Ward argument also
+excludes a pure added vacuum source from inherited state changes alone.
+The common-parent nonlinear gravitational reduction is not yet specified;
+its missing data do not establish that all extensions vanish. The Lambda
+claim is an open hypothesis, with the precise restatement in its owner.
+
 The [inheritance derivation](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
 now proves one local late Dirac state for the actual quiet expanding cap,
 conditional on inherited Hadamard data on its isolating Cauchy ball. The

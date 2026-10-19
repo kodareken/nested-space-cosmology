@@ -11,6 +11,177 @@ boundary map and its local classical metric response are now calculated below.
 The finite matrix identity alone does not provide a physical reduction of the
 gravitational geometry, a quantum state or a cosmological vacuum term.
 
+## Remaining Lambda mechanisms and the matched nesting test
+
+**19 October 2026.** No evaluated NSC route has established a nonzero
+**nesting-induced bulk cosmological constant**. Nonzero scalar projections,
+interface coefficients and the ordinary cap anomaly are real calculations,
+with different physical meanings. The relevant target is the metric variation
+of a reduced action: a term proportional to the four-metric, with its amplitude
+and reference scale determined by the stated physical inputs. In a conserved
+smooth sector, a source `T_mu_nu=-Lambda(x)*g_mu_nu/kappa` requires constant
+Lambda by the Ward identity. A varying trace accompanied by other stress can
+instead be an effective gravitational response.
+
+The following inventory covers the mechanisms in the declared programme and
+its contemplated extensions. It is not an assertion about every unwritten
+theory. Ranking favors an actual inherited geometry and fewer additional
+physical choices, rather than assigning unsupported probabilities of success.
+Related mechanisms in a row must be varied together and counted once.
+
+| Rank | Mechanism and possible nonzero contribution | Present mathematical status and missing input |
+| --- | --- | --- |
+| 1 | Nonlinear gravitational correlations from eliminating resolved parent/child geometry: expansion variance, shear, spatial curvature, lapse, mutual binding, finite-size/tidal response and their causal memory | These can change the effective equations. The quiet isolated exterior and conserved monopoles do not create a volume term. The finite paired test below evaluates what is actually specified. A common evolving parent, compatible metric reduction, clock and complete stress remain absent; no free connector moments are chosen to force vacuum form. |
+| 2 | The full quantum influence action: curved nonlocal determinant, state/inheritance memory, Casimir/topology effects and curvature feedback | On a fixed common smooth metric, changing a regular state or remote boundary changes the conformal stress only by a traceless tensor. It cannot add a nonzero pure vacuum term there. Changed curvature, non-conformal physics or self-consistent backreaction can evade that restricted statement. The present late cap/smooth-cap difference is zero; the full gravitational solve is not supplied by a field self-energy. |
+| 3 | Material-wall or finite-thickness stress, interface anomaly and quantum wall forces, followed by physical coarse graining | Existing surface coefficients are nonzero, but are supported on the wall. Surface tension is not bulk vacuum density. A population/domain, physical thickness or complete interface action, its metric variation and exchange are needed to determine a four-dimensional source. |
+| 4 | A dynamically selected mass/condensate or stabilized internal geometric scale, including interaction running, dimensional transmutation or non-conformal field coupling | These can supply nonzero vacuum energy in a separately specified theory. The current free massless cap has no such mechanism. A fixed size, potential and stable state must be derived; replacing the reference ruler by a desired scale does not derive it. |
+| 5 | Higher-curvature, torsion or quantum-gravitational metric terms, brane/extra-dimensional reduction and genuinely nonlocal curvature response | These can alter effective gravity. In four dimensions local R^2 and Ricci^2 variations vanish on exact constant-curvature space; the Weyl term vanishes there too. Nonconstant geometry, nonlocal operators, additional dimensions or other interactions require their declared action/couplings and a solution. The separate periodic Einstein/Weyl/Dirac candidate already fails its tested vacuum-form average. |
+| 6 | Formation, branching or inheritance with sustained exchange or particle production | A maintained mean density is possible, but a source Q that holds dust density fixed does not give dust pressure -rho. The total exchanging stress, branch/source law and energy conservation must generate the vacuum equation of state; these are not specified by a nesting diagram. |
+| 7 | A recursive/global vacuum selection law, flux or topological constraint | A new physical equation could select a nonzero integration constant or volume coefficient. Normalized subtree inheritance alone does not select one. The retained zero-tadpole normalization deliberately sets the homogeneous coefficient to zero; that is a stated condition of its candidate, not a universal cancellation theorem and not a nonzero prediction. |
+
+Apparent acceleration from light-cone propagation, clock comparisons or fitting
+a homogeneous model is an additional **observational alternative**, not a
+new bulk Lambda mechanism. It needs a cosmological forward model and the same
+distance/growth/lensing comparisons as other proposals. The quiet-cap distance
+shape has already failed the stated supernova statistic.
+
+This ranking does not assert that nonlinear averaging must behave as a vacuum.
+[Buchert's scalar equations](https://arxiv.org/html/gr-qc/0102049v2) identify
+the possible curvature/kinematic terms, whereas the
+[Green--Wald weak-limit theorem](https://arxiv.org/abs/1011.4920) gives a
+traceless source under its small-metric/energy hypotheses. Neither set of
+hypotheses has been established for an evolving NSC parent with material walls.
+The tests here use the owned equations directly.
+
+### Fixed-metric quantum limitation
+
+For two Hadamard states of the same massless conformal field on locally
+isometric smooth regions, with the same renormalized couplings, the local
+anomaly and local counterterms agree. Consequently
+
+$$
+g^{\mu\nu}\Delta\langle T_{\mu\nu}\rangle=0.
+$$
+
+If this difference were `-deltaLambda*g_mu_nu/kappa`, its trace would be
+`-4*deltaLambda/kappa`; hence deltaLambda=0. This includes finite-time
+inherited-state and distant-boundary changes on the fixed geometry, not just
+the late limit. It allows nonzero anisotropic stress, radiation, flux,
+detector signals and metric response. It excludes a pure added bulk vacuum
+source from those state changes alone. Changed local geometry, a wall
+distribution, non-conformal fields and self-consistent gravitational
+backreaction are outside this fixed-metric argument. In particular, an
+anomaly evaluated on a Kottler host with different Weyl curvature can be
+nonzero and radially varying; this is not a constant vacuum source.
+
+### Finite calculation of the highest-ranked specified geometry
+
+The [admission](prior-art-and-open-claim.md#remaining-lambda-mechanisms-and-matched-nesting-test-19-october-2026)
+fixes the original one-level body A and two-level body A2, outer mass .4*ell,
+cut4*ell, tension2/ell, cap scale H=1/ell and existing Gaussian-normal
+initial-clock prescription. The regions are not all isometric: A2 includes
+its checked additional cap, membrane and Kottler host. The outer right-end
+vacuum metric and static tube clock are common. Changes in the scalar
+fitting quantities are computed with both surface curvature terms; no
+volume is added to enforce p=-rho. This is the strongest presently supplied
+paired geometry for route1, not the missing collective parent spacetime.
+
+Use the existing Q and proper mean3-curvature R3, and subtract the one-level
+result from the two-level result. The same algebra independently requires
+
+$$
+\kappa\Delta\rho_g=-\tfrac12(\Delta Q+\Delta R_3),\qquad
+\kappa\Delta p_g=-\tfrac12\Delta Q+\tfrac16\Delta R_3,
+$$
+$$
+\Delta\Lambda_{\rm tr}=(\Delta Q-\Delta R_3)/4,
+\qquad \kappa(\Delta\rho_g+\Delta p_g)
+=-(3\Delta Q+\Delta R_3)/3.
+$$
+
+The trace and independent vacuum residual are both retained by
+`paired_nesting_vacuum_test` in the existing
+[gravitational reduction](../src/recursive_horizons/nsc_atlas_gravitational_reduction.py).
+The fresh calculation gives
+
+| Two-level minus one-level quantity | Dimensionless value, multiplied by ell^2 |
+| --- | ---: |
+| Delta Q | 0.0331250312428 |
+| Delta mean3-curvature | 0.217631126473 |
+| kappa Delta rho_g | -0.125378078858 |
+| kappa Delta p_g | 0.0197093387907 |
+| Delta Lambda_trace | -0.0461265238074 |
+| 3 Delta Q + Delta mean3-curvature | 0.317006220201 |
+| kappa (Delta rho_g + Delta p_g) | -0.105668740067 |
+
+The pressure/density ratio of the increment is -0.157199240651, rather
+than -1. Its vacuum residual is84.28% of the larger absolute stress
+component. This nonzero change is therefore **not** a generated vacuum
+source. The trace's paired quadrature indicator is2.78e-11 and the
+vacuum-condition indicator8.55e-11, compared with the order.1 non-vacuum
+stress. They are numerical comparisons, not certified or physical error
+bounds. At the supplied10km ruler the trace is -4.61265238074e-10 per m^2;
+this unit conversion does not give it vacuum form or cosmological meaning.
+The cap H remains supplied throughout.
+An instantaneous non-vacuum total does not exclude a mixture containing a
+constant vacuum component plus another stress. Separating such a component
+requires the action/state and their evolution; the one-slice calculation
+does not determine that decomposition.
+
+The application uses1,579 spatial values and .0625 process-CPU seconds,
+with no evolution or field solve. Ten focused controls pass; these
+include the independent curvature and moment contractions and do not
+establish a tensor or dynamical cosmological reduction.
+The calculation prints its inputs, results and numerical indicators with
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_lambda_mechanisms.py
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q
+```
+
+The actual exterior check is separate from scalar averaging. For
+`f=1-2M/R-H_ext^2*R^2`, direct metric differentiation gives
+
+$$
+G^t{}_t=G^R{}_R=(Rf'+f-1)/R^2,\qquad
+G^\theta{}_\theta=G^\varphi{}_\varphi=f''/2+f'/R.
+$$
+
+All four equal `-3*H_ext^2`. Both declared quiet exteriors have H_ext=0
+and the same M. Their Einstein tensors, external redshifts at matched
+areal radii and local vacuum curvature are identical on the common vacuum
+domain. Changing a hidden spherical interior while keeping that domain
+and mass fixed cannot add an exterior Lambda. This is checked against
+the independent coordinate curvature contraction, including a nonzero-H
+positive control. It does not include escaping matter, quantum
+backreaction or nonspherical/collective parent geometry.
+At the common cut, f=.8 and C^2*ell^4=.001875 in both models, while
+all four Einstein eigenvalues vanish. Thus the actual quiet exterior
+result is exactly **Delta Lambda_exterior*ell^2=0** (also0 per m^2).
+The zero follows from the common metric throughout that vacuum domain,
+not from rounding the nonzero interior scalar projection.
+
+This does not compute route1 for an as-yet unspecified collective parent.
+The missing parent volume, extrinsic-curvature moments, physical clock and
+evolution cannot be replaced with numbers selected to enforce vacuum form.
+Nonlinear averaging is not universally excluded: the scalar equations
+algebraically admit Q=constant and R3=-3Q, which would give vacuum form.
+Showing that an actual NSC metric and its observer reduction realize that
+relation over time, with a predicted magnitude, is the missing construction.
+
+### Status of the Lambda claim
+
+The defensible claim is: **NSC supplies calculable inherited geometric and
+causal responses. Whether a physically specified reduction generates a
+nonzero bulk vacuum term, or instead a changing effective source that
+explains cosmological observations, remains an open hypothesis.**
+
+The current conformal-scalar/quiet massless-Dirac candidate has no
+demonstrated nesting-induced cosmological constant. A scalar projection
+or the imposed cap value `Lambda0*ell^2=3` does not complete that claim.
+The uncalculated routes above are not evidence of nonzero Lambda, and
+their incompleteness is not a proof that every extension vanishes.
+
 The [infinite inherited-law construction](nsc-infinite-inheritance.md#metric-variation-a-spatial-volume-and-its-pressure)
 now has a metric-source test. Its three-dimensional positive field lift gives
 M(a)=a^3*M0 and K(a)=a*K0. Lapse/scale variation then yields

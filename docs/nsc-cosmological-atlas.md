@@ -18,6 +18,16 @@ starting a derivation.
 
 ## Current execution priority — 19 October 2026
 
+Douglas's latest priority is the
+[Lambda mechanism audit](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
+before further work on the earlier branches below. Its ranked inventory
+and one-level/two-level comparison find no demonstrated nonzero nesting
+vacuum contribution. The common quiet exterior difference is zero; the
+nonzero scalar geometric increment fails vacuum form. A full collective
+parent reduction remains missing, not numerically ruled out. Keep the
+Lambda claim explicitly conditional and use that inventory to select the
+next physical construction; no further grids follow from this failed test.
+
 Derive preparation from parent--child inheritance before another benchmark.
 The [quiet-cap inheritance theorem](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
 now gives a local late Dirac state, explicit inherited stress decay and a
