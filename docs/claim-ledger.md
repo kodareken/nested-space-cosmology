@@ -1,5 +1,13 @@
 # Current NSC claim ledger
 
+Two constructive connections are now derived in their explicit models:
+the [scale-free spectral inverse and held-out coefficient](nsc-infinite-inheritance.md#a-scale-free-inverse-of-the-inherited-geometry),
+and [associative geometric composition with its time balance](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response).
+The former does not invert arbitrary unknown forcing or identify an atlas
+metric. The latter preserves the averaged scalar constraint and tests
+conservation, without constructing a parent history or observed expansion.
+Their source-hashed compact evidence is linked in the living manuscript.
+
 The [19 October Lambda audit](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
 finds no demonstrated nonzero nesting-induced bulk cosmological constant.
 The matched quiet exterior difference is exactly zero. The nonzero

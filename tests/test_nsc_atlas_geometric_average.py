@@ -8,7 +8,106 @@ from recursive_horizons.nsc_atlas_connection_slice import wall_slice_data
 from recursive_horizons.nsc_atlas_geometric_average import (
     KAPPA, clocked_scalar_average_sources, geometric_slice_average,
     periodic_spherical_average, scalar_average_sources, wall_slice_stress,
+    partitioned_scalar_average, partition_volume_rates, averaged_gravity_balance,
+    expansion_source_inference,
 )
+
+
+def test_partition_composition_from_point_moments_and_unique_surface_source():
+    # Weighted points independently supply raw moments; arbitrary regrouping
+    # must preserve Q, the interface delta and the integrated constraint.
+    theta = np.array([.3, .8, -.4, 1.2, .6, -.2])
+    volume = np.array([1., 2., .5, 3., 1.5, .7])
+    shear = np.array([.02, .01, .03, .04, .02, .01])
+    energy = np.array([.1, .2, .3, .1, .2, .3])
+    J = 2*theta**2/3-2*shear
+    R = 2*KAPPA*energy-J
+    raw = np.column_stack((volume, volume*theta, volume*theta**2,
+                           volume*shear, volume*R, volume*energy, -volume*energy))
+    names = ['a', 'b', 'c', 'd', 'e', 'f']
+    shell_E, shell_S = .23, -.19
+    shell = (2*KAPPA*shell_E, shell_E, shell_S)
+    direct = partitioned_scalar_average(dict(zip(names, raw)), surface_integrals=shell)
+    left = partitioned_scalar_average(dict(zip(names[:3], raw[:3])), surface_integrals=shell)
+    right = partitioned_scalar_average(dict(zip(names[3:], raw[3:])))
+    merged = partitioned_scalar_average(dict(left=left['moment_vector'], right=right['moment_vector']))
+    expected = 2*(np.average(theta**2, weights=volume)
+                  -np.average(theta, weights=volume)**2)/3-2*np.average(shear, weights=volume)
+    assert direct['sources']['Q'] == pytest.approx(expected)
+    assert abs(direct['sources']['hamiltonian_residual']) < 3e-14
+    assert direct['between_region_Q'] > 0
+    for key, value in direct['sources'].items():
+        assert merged['sources'][key] == pytest.approx(value, abs=3e-14)
+    assert abs(direct['Q_composition_residual']) < 2e-15
+    # Counting the same wall again violates the independently known total E.
+    assert direct['moment_vector'][5] == pytest.approx(volume @ energy+shell_E)
+
+
+def test_moving_partition_reynolds_rate_and_weighted_expansion_derivative():
+    import sympy as sp
+    t = sp.symbols('t', real=True)
+    V1, V2 = 1+t/3+t*t/7, 2+t/5+t*t/11
+    H1 = sp.Rational(3, 10)+t/10
+    H2 = (sp.diff(V1+V2, t)-3*V1*H1)/(3*V2)
+    flux1 = sp.diff(V1, t)-3*V1*H1
+    at = {t: sp.Rational(2, 7)}
+    value = lambda expression: float(expression.subs(at))
+    flux = value(flux1)
+    row = partition_volume_rates(dict(a=value(V1), b=value(V2)),
+        dict(a=value(H1), b=value(H2)), dict(a=flux, b=-flux))
+    total_H = sp.diff(V1+V2, t)/(3*(V1+V2))
+    regional_rate = value((V1*sp.diff(H1, t)+V2*sp.diff(H2, t))/(V1+V2))
+    assert row['H_normal'] == pytest.approx(value(total_H))
+    assert row['regional_volume_rates']['a'] == pytest.approx(value(sp.diff(V1, t)))
+    assert row['volume_fraction_rates']['a'] == pytest.approx(value(sp.diff(V1/(V1+V2), t)))
+    assert row['total_weight_H_rate'] == pytest.approx(row['direct_weight_H_rate'])
+    assert regional_rate+row['total_weight_H_rate'] == pytest.approx(value(sp.diff(total_H, t)))
+    assert abs(row['interface_weight_H_rate']) > .01
+
+
+def test_time_balance_from_independent_friedmann_and_raychaudhuri_with_lapse():
+    import sympy as sp
+    t = sp.symbols('t', real=True)
+    kappa = sp.symbols('kappa', positive=True)
+    H, E, S, P = (sp.Function(name)(t) for name in ('H', 'E', 'S', 'P'))
+    Q = 3*(sp.diff(H, t)+H*H)+kappa*(E+S)/2-P
+    R = 2*kappa*E-6*H*H-Q
+    trace, A = (Q-R+2*P)/4, 3*Q+R+2*P
+    J = sp.diff(E, t)+3*H*E+H*S
+    assert sp.simplify(sp.diff(trace, t)-sp.diff(A, t)/4-H*A+kappa*J) == 0
+    substitutions = {H: 1+t/7, E: (1+t*t)/kappa, S: -(1+t)/kappa, P: t/5}
+    evaluate = lambda expression: float(expression.subs(substitutions).doit().subs(
+        {t: sp.Rational(2, 3), kappa: KAPPA}))
+    row = averaged_gravity_balance(H=evaluate(H), Q=evaluate(Q), curvature=evaluate(R),
+        lapse_acceleration=evaluate(P), Q_rate=evaluate(sp.diff(Q, t)),
+        curvature_rate=evaluate(sp.diff(R, t)), lapse_acceleration_rate=evaluate(sp.diff(P, t)),
+        mean_energy=evaluate(E), mean_stress_trace=evaluate(S), mean_energy_rate=evaluate(sp.diff(E, t)))
+    inference = expansion_source_inference(H=evaluate(H), H_rate=evaluate(sp.diff(H, t)),
+        mean_energy=evaluate(E), mean_stress_trace=evaluate(S))
+    assert abs(row['integrability_residual']) < 2e-14
+    assert abs(row['trace_balance_residual']) < 2e-14
+    assert abs(row['geometric_continuity_residual']) < 2e-14
+    assert row['Lambda_trace'] == pytest.approx(inference['Lambda_trace'])
+    assert row['vacuum_condition'] == pytest.approx(inference['vacuum_condition'])
+
+
+def test_nonvacuum_radiation_mixture_can_have_a_constant_vacuum_trace():
+    # Manufactured averaged Lambda+radiation history: H=1, Lambda=.6,
+    # Hdot=-2(H^2-Lambda/3), explicit source zero. This is a control of the
+    # balance theorem, not a derived NSC metric or a fitted vacuum value.
+    H, lam = 1., .6
+    H_rate = -2*(H*H-lam/3)
+    A = 4*lam-12*H*H
+    A_rate = -24*H*H_rate
+    row = averaged_gravity_balance(H=H, Q=lam+A/4, curvature=A/4-3*lam,
+        Q_rate=A_rate/4, curvature_rate=A_rate/4,
+        mean_energy=0., mean_stress_trace=0., mean_energy_rate=0.)
+    assert row['vacuum_condition'] < 0
+    assert row['Lambda_trace'] == pytest.approx(lam)
+    assert row['Lambda_trace_rate'] == pytest.approx(0., abs=1e-14)
+    assert abs(row['integrability_residual']) < 1e-14
+    assert row['kappa_geometric_density']+row['kappa_geometric_pressure'] > 0
+    assert row['kappa_geometric_density'] == pytest.approx(3*H*H)
 
 
 def test_homogeneous_flat_cap_has_no_geometric_correction():

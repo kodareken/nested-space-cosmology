@@ -8,6 +8,16 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [compositional gravity proof](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
+uses `partitioned_scalar_average`, `partition_volume_rates`,
+`averaged_gravity_balance` and `expansion_source_inference` in the existing
+geometric-average module. `nested_slice_record(include_partition=True)`
+exposes its already integrated regional moments and separately owned walls.
+The [calculator](../scripts/check_nsc_atlas_compositional_gravity.py) writes
+only a compact summary on request. The inherited-operator module's
+`root_spectral_moments` and `scale_free_response_inverse` supply the
+separate geometry/readout theorem and held-out fifth coefficient.
+
 The [Lambda mechanism audit](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
 uses `paired_nesting_vacuum_test` and `spherical_einstein_response` in the
 existing [parent gravitational reduction](../src/recursive_horizons/nsc_atlas_gravitational_reduction.py).

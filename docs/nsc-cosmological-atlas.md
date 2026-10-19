@@ -18,7 +18,24 @@ starting a derivation.
 
 ## Current execution priority — 19 October 2026
 
-Douglas's latest priority is the
+**Rethinking decision.** The repeated quiet-limit checks fixed much of
+their answer in advance. Direct global gluing, curved quantum feedback,
+spectral inverse response and hierarchical composition were compared.
+The completed next connection is exact composition plus conservation,
+using seven existing regional moments and explicitly owned surface terms.
+No new coupling or physical state is introduced. The separate spectral
+inverse also supplies a dimensionless held-out prediction from the same
+inherited operator law.
+
+Complete: the Lambda mechanism audit, associative scalar composition,
+its finite nested-slice application, and the time-balance/inverse-response
+proofs in the [current results](current-result.md). Next physical work:
+derive a compatible parent history/closure and its observer light cone,
+or identify the inherited response operator in that geometry. The proofs
+do not close those missing physical connections. The older priorities
+below retain their domains and are not new grid instructions.
+
+The preceding priority was the
 [Lambda mechanism audit](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
 before further work on the earlier branches below. Its ranked inventory
 and one-level/two-level comparison find no demonstrated nonzero nesting

@@ -1,10 +1,10 @@
 {
-  "bytes": 4518177,
+  "bytes": 4668691,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "71dd769fb501f3105eed0a7610ab5b5f0d47f354096a0ac6962a88788a4cc0db",
+  "metadata_sha256": "3b31fac6647177b691213deb5aa902d6b6fe381b0377dd9e28d8e5a002e71da4",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 68,
-  "pdf_sha256": "08ae1eb00687983c89460e899c631b004a5848288dbf1696d2b89c5cc16b6c44",
+  "pages": 71,
+  "pdf_sha256": "d8771e745373d1b9903a85b31fa341007ae9ed5a14ee36025e042d63f01a680d",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -508,6 +508,10 @@
       "sha256": "318b0372094fe1904dab8a18acc615a1061485a02a4e33030fe5905d07ad81a8"
     },
     {
+      "path": "results/summaries/nsc-compositional-proofs-v1.json",
+      "sha256": "464f85a1af35049fdca33a49a6c973bd32a96bf15b27187114dd9daeced723a4"
+    },
+    {
       "path": "results/summaries/nsc-conformal-causal-response-v2.json",
       "sha256": "d6f73bf663e76d951cb078947c6c672c3be0eaed0479523eaa8fe673a7b28f50"
     },
@@ -545,6 +549,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "596db9470e798b3e3baa5d12978f395e255804280c58a5af748f97db955a013d",
-  "version": "working-2026-10-19.1"
+  "source_sha256": "7ec4fac3e00b1ac47c4381dd39ccfa13f57001dba1c577d509141afc6ece7269",
+  "version": "working-2026-10-19.2"
 }

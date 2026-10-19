@@ -1,5 +1,26 @@
 # What the calculations show
 
+The new [composition and time-balance proof](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
+connects hierarchical geometry, its averaged Hamiltonian and the expansion
+diagnostic. For the existing cap/host/exterior partition, the required
+between-region term is .233947711669/ell^2,45.50% of Q; the regrouped total
+remains .514139967042/ell^2. Material-boundary fluxes are retained. The
+general-clock identity is Lambda_trace_dot=A_dot/4+H*A-kappa*J, with
+A=3Q+R+2P and the explicit source balance J. A constant vacuum component
+can coexist with non-vacuum stress; for J=0 it requires A_dot+4HA=0.
+No missing derivative or parent history is selected to impose that result.
+
+The separate [scale-free inherited inverse](nsc-infinite-inheritance.md#a-scale-free-inverse-of-the-inherited-geometry)
+recovers q from four asymptotic transfer coefficients while cancelling
+constant gain and uniform clock scale. It predicts a fifth invariant:
+42.5872 for the existing q=1/2 example,181.7481718718 for q=2/5. A positive
+non-inherited grandchild counterexample passes the inversion but fails the
+held-out relation. Arbitrary unknown source spectra remain excluded.
+These are mathematical model tests, not a spacetime identification or
+observational validation. The [compact summary](../results/summaries/nsc-compositional-proofs-v1.json)
+binds the calculations and source hashes; Sections5.3 and6.1.21 of the
+living manuscript integrate the two connections.
+
 The [Lambda route audit and paired test](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
 rank the seven remaining mechanism families and separate them from apparent
 acceleration. No evaluated route establishes a nonzero nesting-induced bulk
@@ -61,7 +82,7 @@ numbers. With b,L and the forcing independently known, the strictly
 decreasing response formula identifies q. A spacetime/source identification and observational tests
 remain required for the cosmological claims.
 
-Current research, 19 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-19.1`, adds the inherited local state, detector and late vacuum source in Section6.1.20. It retains the infinite inherited-law theorem in Section5.1, volume action and calibrated dynamic observable in Section5.2, actual curved Dirac work, and archived P001 diagnosis. The matching68-page PDF builds and the new section passes visual inspection after its inline notation correction. Its compact-source quantum slip remains uncomputed; the imported flat ratio is not an NSC nesting prediction. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 19 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-19.2`, integrates the scale-free inverse and held-out coefficient in Section5.3 and compositional gravity/time balance in Section6.1.21. It retains the inherited local state, detector and late vacuum source in Section6.1.20, the infinite inherited-law theorem, volume action, actual curved Dirac work and archived P001 diagnosis. Compact-source quantum slip and the physical parent history remain uncomputed. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology; [the catalog](../paper/catalog.json) owns publication status.
 
 ## An explicit correlated parent state and local Dirac subtraction
 

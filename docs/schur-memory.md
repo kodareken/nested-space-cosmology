@@ -11,6 +11,219 @@ boundary map and its local classical metric response are now calculated below.
 The finite matrix identity alone does not provide a physical reduction of the
 gravitational geometry, a quantum state or a cosmological vacuum term.
 
+## From nested geometry to a conserved mean response
+
+**19 October 2026.** This connection addresses Steps5,7 and the expansion
+diagnostic in Step8. A nested collection must compose its geometric response
+without changing the answer when regions are regrouped. Its effective stress
+must then obey the same time-dependent scalar equations as the expansion.
+The theorem below supplies these two connections. It does not provide an
+unconstructed parent metric, a closed source history or a redshift light cone.
+
+### Associative composition with the material walls retained
+
+Work on one declared spacelike slice with one normal-clock convention.
+For disjoint positive-volume regions retain the seven integrals
+
+$$
+M_i=(V_i,I_i,U_i,W_i,C_i,E_i,S_i)
+=\int_{D_i}(1,\theta,\theta^2,\sigma^2,{}^{(3)}R,E,S)\,dV.
+$$
+
+The bulk integrals are added. Each surface curvature/energy/stress atom is
+added **once**, either in one owned child or at the first parent containing
+that interface. In the declared shell data, its constraint relation is
+`C_surface=2*kappa*E_surface`. It must not be discarded as zero-volume
+material or counted on both sides. Define f_i=V_i/V and H_i=I_i/(3V_i).
+Then the same scalar law holds after any finite regrouping:
+
+$$
+H_D=\sum_i f_iH_i,\qquad
+Q_D=\sum_i f_iQ_i+6\sum_i f_i(H_i-H_D)^2.
+\tag{C1}
+$$
+
+**Proof.** Expand `int theta^2/V-(int theta/V)^2` by adding and subtracting
+the squared regional means. This gives the within-region variance plus
+the variance of those means. The shear integral is additive, so it supplies
+no additional between-region term. All seven raw integrals add associatively;
+regrouping therefore leaves the result unchanged. The integrated Hamiltonian
+is `C+2*U/3-2*W=2*kappa*E`, including its surface atoms. Dividing by V and
+subtracting the squared mean gives
+
+$$
+3H_D^2=\kappa\langle E\rangle_D
+-\tfrac12(Q_D+\langle{}^{(3)}R\rangle_D).
+$$
+
+Thus composition preserves this scalar constraint. Dropping the last term
+of (C1) would break it. The multidomain variance identity is established
+mathematics; [Wiegand--Buchert](https://arxiv.org/html/1002.3912), SectionII,
+give the cosmological partition equations. The present application retains
+the actual atlas's wall atoms, arbitrary hierarchical regrouping and the
+existing signed geometry. It claims no new gluing theorem or proof that
+arbitrary supplied moments are realizable by a metric.
+
+Iterating (C1), a finite hierarchy gives the leaf terms plus
+`6*sum_nodes (V_node/V_root)*Var_children(H)`. For a sequence of refining
+partitions, the regional means are orthogonal projections of theta in
+L2(dV). Their successive differences are orthogonal. If these partitions
+resolve theta in L2, Pythagoras shows that the sum of positive inter-level
+variance contributions converges to its total variance. With finite V,
+theta in L2, shear squared in L1, and absolutely integrable bulk and
+surface source/curvature measures, the other means converge as well.
+This is a conditional infinite-resolution composition theorem for scalar
+observables, not existence of an infinite Lorentzian spacetime.
+
+### Motion of the boundaries is an explicit input
+
+For a partition inside a domain transported by the normal, let
+`F_i=int_boundary v_normal dA`. Shared interfaces have equal opposite
+fluxes, so sum_i F_i=0. Reynolds transport yields
+
+$$
+\frac{dV_i}{dt}=3H_iV_i+F_i,\qquad
+\frac{df_i}{dt}=3f_i(H_i-H_D)+F_i/V,
+$$
+$$
+\frac{dH_D}{dt}=\sum_i f_i\frac{dH_i}{dt}
++3\operatorname{Var}_f(H_i)+\frac1V\sum_iF_iH_i.
+\tag{C2}
+$$
+
+The averaged theta/3 of a material region is therefore not its volume
+expansion unless its boundary is comoving. For the current walls the
+initial flux is `4*pi*R_wall^2*v`, with v the already computed boost
+relative to the initial slice normal. The regional H derivatives in (C2)
+still require the physical history. Positive variance alone cannot be
+identified with the full acceleration.
+
+### The actual nested geometry gives a nonzero composition term
+
+The optional partition interface exposes the existing ten integrated
+pieces and two exact wall atoms without another quadrature. Group them as
+cap, Kottler host and Schwarzschild exterior, all on the declared initial
+normal slice. The result is
+
+| Group | Volume / ell^3 | Fraction | Mean H times ell |
+| --- | ---: | ---: | ---: |
+| Cap | 2.14466058485 | .005944883341 | 1 |
+| Host | 17.2551857608 | .047830443238 | .910577395410 |
+| Exterior | 341.357541472 | .946224673421 | .0455608970935 |
+
+The exact composition gives
+
+$$
+Q_D\ell^2=0.280192255373+0.233947711669
+=0.514139967042.
+$$
+
+The second term is the required between-region contribution,45.50% of
+the total for this partition. The decomposition changes with grouping;
+the full Q does not. It is not a newly generated cosmological constant or
+a redshift measurement. The two walls contribute integrated curvature
+295.275997740*ell and normal energy5.87432932708*ell, related by2*kappa.
+
+The signed volume fluxes in ell^2 units are -2.25902368244 for the cap,
+6.03328027292 for the host and -3.77425659048 for the exterior. They cancel
+in the full domain. Their additional contribution to the weight derivative
+in (C2) is .00848987863191/ell^2; the variance part is
+.116973855834/ell^2. This is a decomposition of dH_D/dt, not its full value.
+The cap volume rate also agrees directly with its wall proper-clock motion.
+
+The between-region32/64 comparison is -5.02e-11 in ell^-2 units, and the
+within-region comparison -1.75e-10. These are numerical indicators, not
+certified bounds. Direct moment evaluation and hierarchical regrouping agree
+at floating roundoff. The application uses the original1009 spatial values,
+no additional quadratures, no field grid and no evolution.
+
+### A time balance that distinguishes a vacuum component from other stress
+
+On any regular common-clock history for which the owned scalar equations
+hold, write H=a_dot/a, R for the curvature average, and P for the complete
+lapse-acceleration term. E and S here denote the explicit averaged energy
+and spatial stress trace; in a nontrivial reference clock they carry the
+same nu^2 weights as the existing clocked API. Then
+
+$$
+3H^2=\kappa E-(Q+R)/2,\qquad
+3(H_{,t}+H^2)=-\kappa(E+S)/2+Q+P.
+$$
+
+Define the weighted source balance J=E_dot+3HE+HS, and set
+
+$$
+A=3Q+R+2P,\qquad \Lambda_{\rm tr}=(Q-R+2P)/4.
+$$
+
+Differentiating the first scalar equation and inserting the second proves
+
+$$
+Q_{,t}+R_{,t}+2HA=2\kappa J,\qquad
+\boxed{\Lambda_{{\rm tr},t}=A_{,t}/4+HA-\kappa J.}
+\tag{C3}
+$$
+
+This uses no fitted closure. Equivalently
+`kappa*(rho_g_dot+3H*(rho_g+p_g))=-kappa*J`. General-clock J includes clock
+work as well as explicit-source exchange; it is not simply boundary energy
+flux. For zero shift, the correct lapse term is
+`P=<nu_dot*theta+nu*D^2(nu)>`. Raychaudhuri uses the four-divergence of
+normal acceleration, `div4(a)=div3(a)+a^2=D^2(N)/N`; subtracting an extra
+gradient square would count that part twice. The independent static-lapse
+metric control in the existing tests checks this sign and coefficient.
+[Buchert's equations](https://arxiv.org/html/gr-qc/0102049v2) and the
+[general-fluid treatment](https://arxiv.org/html/1912.04213) supply the
+averaging context; the displayed algebra is derived from the owned equations.
+
+The exact source decomposition is
+
+$$
+\kappa\rho_g=\Lambda_{\rm tr}-A/4,\qquad
+\kappa p_g=-\Lambda_{\rm tr}-A/12.
+$$
+
+Pure constant vacuum requires A=0 throughout the interval and J=0 there.
+A nonzero A does not eliminate a constant vacuum component: for J=0,
+Lambda_trace is constant exactly when A_dot+4HA=0. The remaining source
+then has radiation equation of state, with kappa*rho_rad=-A/4. Positivity
+of that remainder requires A<=0. This proves why one instantaneous failure
+of pure vacuum cannot settle the mixed-source question.
+
+Equation (C3) also gives a finite drift bound:
+`abs(Delta Lambda)<=abs(Delta A)/4+int abs(H*A)dt+kappa*int abs(J)dt`.
+Its right side needs a physical history; it is not filled with chosen rates.
+The existing initial slice supplies neither A_dot nor J. No Lambda drift
+number is claimed from it.
+
+Finally the same quantities can be reconstructed from the volume expansion:
+
+$$
+\Lambda_{\rm tr}=3H^2+\tfrac32H_{,t}-\kappa(E-S)/4,\qquad
+A=6H_{,t}+\kappa(3E+S).
+\tag{C4}
+$$
+
+Using the actual slice's declared instantaneous Raychaudhuri continuation,
+H*ell=.092609048739 and H_dot*ell^2=.278302667627 recover its original
+Lambda_trace*ell^2=-.0153506330754 and A*ell^2=2.11796240047 independently.
+Replacing this volume H by a sky-inferred redshift H requires the missing
+past-light-cone calculation. The connection to Step8 is an exact consistency
+relation to implement, not observational agreement.
+
+Reproduce the proof controls and finite application with
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_geometric_average.py tests/test_nsc_atlas_nested_slice.py -q
+python scripts/run_python.py scripts/check_nsc_atlas_compositional_gravity.py
+```
+
+The29 focused controls include independent point-moment grouping, a direct
+moving-volume derivative, symbolic differentiation with nonzero lapse term,
+the static-lapse metric and vacuum-plus-radiation history. This establishes
+the composition and balance identities in their domains. A common parent
+solution, its closure/state and observer map remain the next physical work.
+
 ## Remaining Lambda mechanisms and the matched nesting test
 
 **19 October 2026.** No evaluated NSC route has established a nonzero

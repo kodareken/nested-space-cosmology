@@ -206,3 +206,60 @@ def test_root_inertia_matches_the_full_static_profile_and_schur_derivative():
     half_upper=1+half['dimensionless_inertial_scale_squared']*.01
     other_lower=1+other['dimensionless_inertial_scale_squared']*.01-other['dimensionless_s4_remainder_coefficient']*.0001
     assert other_lower>half_upper
+def test_root_moments_from_independent_full_tree_and_positive_resolvent_remainder():
+    from recursive_horizons.nsc_infinite_inheritance import root_spectral_moments
+    tree = geometric_inherited_tree(3, .4, 1.7, spatial_dimension=3, cross_section=2.3)
+    row = root_spectral_moments(tree)
+    D, _ = tree.finite_matrix(2)
+    e = np.eye(len(D))[:, 0]
+    vector = e.copy()
+    for moment in row['moments']:
+        assert float((e @ vector).real) == pytest.approx(moment, rel=2e-13)
+        vector = D @ vector
+    # The spectral identity bounds the WHOLE infinite high-frequency tail;
+    # compare a finite tree whose first four moments are already exact.
+    lam = 10*row['moments'][1]
+    actual = np.linalg.solve(D+lam*np.eye(len(D)), e)[0].real
+    polynomial = sum((-1)**k*mu/lam**(k+1) for k, mu in enumerate(row['moments'][:4]))
+    assert 0 <= actual-polynomial <= row['moments'][4]/lam**5
+
+
+def test_scale_free_inverse_cancels_gain_length_and_uniform_clock():
+    from recursive_horizons.nsc_infinite_inheritance import (
+        root_spectral_moments, scale_free_response_inverse,
+    )
+    for q in (.5, .4):
+        tree = geometric_inherited_tree(3, q, 2.7, spatial_dimension=3, cross_section=1.3)
+        moments = root_spectral_moments(tree)['moments']
+        gain, clock = 7.1, 1.9
+        coefficients = [gain*(-1)**k*mu/clock**(2*k+2) for k, mu in enumerate(moments[:4])]
+        inferred = scale_free_response_inverse(coefficients)
+        assert inferred['length_ratio'] == pytest.approx(q, rel=3e-13)
+        assert inferred['Omega'] == pytest.approx(q**-2, rel=3e-13)
+        assert inferred['predicted_Upsilon'] == pytest.approx(moments[4]/moments[1]**4)
+    # Independent exact rational moments give the displayed invariant pair.
+    import sympy as sp
+    q, b = sp.Rational(1, 2), 3
+    ratio = b/(q*(1+b*q)**2)
+    assert 1+ratio == sp.Rational(49, 25)
+    assert 1+ratio*(2+q**-2) == sp.Rational(169, 25)
+
+
+def test_fifth_response_coefficient_detects_a_changed_grandchild_law():
+    from recursive_horizons.nsc_infinite_inheritance import scale_free_response_inverse
+    tree = geometric_inherited_tree(3, .5, spatial_dimension=3)
+    D, _ = tree.finite_matrix(2)
+    changed = D.copy()
+    # First three root moments cannot see a child-grandchild link change.
+    # The held-out fourth moment must detect it while positivity survives.
+    for child in range(1, 4):
+        for grandchild in range(3*child+1, 3*child+4):
+            changed[child, grandchild] *= 1.01
+            changed[grandchild, child] *= 1.01
+    assert np.linalg.eigvalsh(changed).min() > 0
+    reference = [float(np.linalg.matrix_power(D, k)[0, 0].real) for k in range(5)]
+    actual = [float(np.linalg.matrix_power(changed, k)[0, 0].real) for k in range(5)]
+    np.testing.assert_allclose(actual[:4], reference[:4], atol=2e-15)
+    inferred = scale_free_response_inverse([(-1)**k*actual[k] for k in range(4)])
+    assert inferred['predicted_Upsilon'] == pytest.approx(reference[4]/reference[1]**4)
+    assert abs(actual[4]/actual[1]**4-inferred['predicted_Upsilon']) > .1

@@ -566,6 +566,104 @@ The existing30 CPU-second allowance also covers one direct static-profile
 sum, an independently differentiated finite Schur recurrence and this paired
 readout. No evolution, parameter scan or observational dataset is needed.
 
+## A scale-free inverse of the inherited geometry
+
+The previous low-frequency readout requires a calibrated scale. A separate
+root spectral identity eliminates constant response gain, the edge length
+and a uniform clock calibration. This connects the inherited law to an
+identifiable length ratio in the specified scalar wave model. It does not
+remove an arbitrary unknown force spectrum or establish a spacetime metric.
+
+Let mu_k=<e_root,D^k e_root>, mu0=1, with scalar local coefficient H>0.
+Put g=b*abs(B)^2. Direct multiplication on the root and its first two levels
+gives
+
+$$
+\mu_1=H,\quad \mu_2=H^2+g,\quad
+\mu_3=H^3+gH(2+\Omega),
+$$
+$$
+\mu_4=(H^2+g)^2+gH^2(1+\Omega)^2+\Omega^2g^2.
+$$
+
+**Proof and controlled expansion.** D^k e_root has finite support at every
+finite k and is in the operator domain; thus these are moments of the same
+infinite Friedrichs realization. The root component of D^2 e is H^2+g,
+each child component is conjugate(B)*H*(1+Omega), and each grandchild
+component has magnitude Omega*abs(B)^2. Squaring its norm gives mu4.
+The spectral identity for lambda>0 is
+
+$$
+R(\lambda)=\lambda^{-1}-\mu_1\lambda^{-2}
++\mu_2\lambda^{-3}-\mu_3\lambda^{-4}+\epsilon(\lambda),
+\qquad 0\leq\epsilon(\lambda)\leq\mu_4\lambda^{-5}.
+$$
+
+The remainder is the integral of t^4/[lambda^4*(lambda+t)] against the
+positive root spectral measure. Hence no unjustified norm expansion of
+the unbounded D is used.
+
+For the zero-initial-data wave response, lambda=s^2 and chi=R/m0.
+Write a response measured with unknown nonzero gain C and uniform clock
+factor alpha>0 as T(s)=C*chi(alpha*s). Its first four coefficients are
+beta2/s^2+beta4/s^4+beta6/s^6+beta8/s^8. The combinations
+
+$$
+\Theta=\frac{\beta_2\beta_6}{\beta_4^2}=\frac{\mu_2}{\mu_1^2},\qquad
+\Psi=\frac{\beta_2^2\beta_8}{\beta_4^3}=\frac{\mu_3}{\mu_1^3}
+$$
+
+cancel gain, m0 and alpha. Since g>0,
+
+$$
+\boxed{\Omega=\frac{\Psi-1}{\Theta-1}-2,\qquad
+q=\Omega^{-1/2}.}
+$$
+
+The same Omega is the actual subtree scaling, not a new child parameter.
+For the volume action, Theta=1+b/[q*(1+bq)^2], strictly decreasing in q
+at fixed b. Thus even Theta alone determines q when b is known. The pair
+also determines q without knowing b. Inferring b itself can retain a
+reciprocal ambiguity b <-> Omega/b when both candidates are admissible.
+
+**A held-out prediction.** The fifth asymptotic response coefficient beta10
+supplies another gain/clock invariant Upsilon=beta2^3*beta10/beta4^4.
+The first four coefficients already predict it, without another fitted
+parameter:
+
+$$
+\boxed{\Upsilon=\Theta^2+(\Theta-1)(1+\Omega)^2
++\Omega^2(\Theta-1)^2.}
+$$
+
+This follows from mu4 above. A positive finite tree in which only the
+child--grandchild links change has identical first three nontrivial root
+moments but a different mu4. It therefore passes the first-stage inversion
+and fails this withheld coefficient. The relation tests another generation
+of the same law, rather than merely defining parameters from the readout.
+It is a prospective transfer-response test, not completed observational
+validation of NSC.
+
+At b=3 the already declared static-compliance twins give
+
+| q | Theta | Psi | Recovered Omega |
+| --- | ---: | ---: | ---: |
+| 1/2 | 49/25 | 169/25 | 4 |
+| 2/5 | 617/242 | 13343/968 | 25/4 |
+
+These are exact model relationships. Extracting asymptotic coefficients
+from finite noisy observations needs its own uncertainty calculation;
+the remainder bound is not a statistical precision claim. A known force
+history up to scale, or an independently measured force-to-field transfer,
+is still required. The inherited operator has not been identified with
+the cap--wall gravitational or Dirac operator by this theorem.
+
+`root_spectral_moments` and `scale_free_response_inverse` implement the
+connection. Independent full-tree powers check the moments, a finite
+resolvent checks the positive remainder, and gain/length/clock changes
+check the inverse. A positive non-inherited grandchild counterexample tests
+the withheld coefficient; the three new controls bring the group to12.
+
 ## Corollary: global evolution, energy and a local measurement
 
 For u0 in Q and v0 in the Hilbert space, the inherited wave equation

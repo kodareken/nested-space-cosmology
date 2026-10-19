@@ -1,0 +1,152 @@
+{
+  "schema": "nsc-compositional-proofs-v1",
+  "atlas_scalar_composition": {
+    "inputs": {
+      "geometry": "existing two-level cap/wall/Kottler/wall/Schwarzschild slice",
+      "H_cap_ell": 1.0,
+      "k_ell": 2.0,
+      "outer_M_over_ell": 0.4,
+      "Rcut_over_ell": 4.0,
+      "clock": "declared initial Gaussian normal; not observed redshift time"
+    },
+    "group_volumes_over_ell3": {
+      "cap": 2.1446605848506324,
+      "host": 17.25518576081282,
+      "exterior": 341.35754147163607
+    },
+    "volume_fractions": {
+      "cap": 0.005944883340647664,
+      "host": 0.04783044323835571,
+      "exterior": 0.9462246734209967
+    },
+    "regional_H_times_ell": {
+      "cap": 1.0,
+      "host": 0.910577395410355,
+      "exterior": 0.04556089709345642
+    },
+    "regional_Q_times_ell2": {
+      "cap": 0.0,
+      "host": 0.25084512318315466,
+      "exterior": 0.2834360902653924
+    },
+    "within_region_Q_times_ell2": 0.2801922553731253,
+    "between_region_Q_times_ell2": 0.23394771166850498,
+    "total_Q_times_ell2": 0.5141399670416302,
+    "vacuum_condition_times_ell2": 2.11796240046815,
+    "geometric_Lambda_trace_times_ell2": -0.015350633075407294,
+    "bulk_sources_and_wall_sources_separate": true,
+    "wall_integrals": {
+      "curvature_over_ell": 295.27599773979136,
+      "energy_over_ell": 5.87432932708489,
+      "stress_trace_over_ell": -11.190258608740905
+    },
+    "boundary_fluxes_over_ell2": {
+      "cap": -2.259023682440141,
+      "host": 6.033280272920312,
+      "exterior": -3.774256590480171
+    },
+    "initial_partition_rates": {
+      "H_normal": 0.09260904873897587,
+      "regional_volume_rates": {
+        "cap": 4.174958072111757,
+        "host": 53.16982659512867,
+        "exterior": 42.883410866713305
+      },
+      "volume_fraction_rates": {
+        "cap": 0.009921108376667175,
+        "host": 0.1340952928793751,
+        "exterior": -0.1440164012560423
+      },
+      "expansion_variance_H_rate": 0.11697385583425246,
+      "interface_weight_H_rate": 0.008489878631908296,
+      "total_weight_H_rate": 0.12546373446616077,
+      "direct_weight_H_rate": 0.1254637344661608,
+      "total_volume_rate": 100.22819553395374,
+      "scope": "Instantaneous partition kinematics; total H_rate also needs the weighted regional H_rates."
+    },
+    "expansion_inference": {
+      "H_times_ell": 0.09260904873897585,
+      "Raychaudhuri_H_rate_times_ell2": 0.2783026676270771,
+      "Lambda_trace": -0.015350633075407294,
+      "vacuum_condition": 2.11796240046815
+    },
+    "controls": {
+      "original_moment_map_max_error": 3.885780586188048e-16,
+      "associative_regrouping_max_error": 1.1102230246251565e-16,
+      "direct_cap_volume_rate_error": 8.881784197001252e-16,
+      "Q_composition_residual": -5.551115123125783e-17
+    },
+    "quadrature_indicators": {
+      "between_region_Q_64_minus_32": -5.017972148912975e-11,
+      "within_region_Q_64_minus_32": -1.7478840597107137e-10,
+      "not_error_bounds": true
+    },
+    "counts": {
+      "existing_spatial_values": 1009,
+      "additional_quadrature_values": 0,
+      "new_evolution_grids": 0,
+      "evolution_steps": 0
+    },
+    "process_cpu_seconds": 0.03125,
+    "scope": "Composition and instantaneous common-normal kinematics. No parent history, Lambda drift, inherited H, or light-cone observable is inferred."
+  },
+  "inherited_operator_response": {
+    "0.5": {
+      "root_moments": {
+        "moments": [
+          1.0,
+          0.9090909090909091,
+          1.6198347107438011,
+          5.078888054094664,
+          29.087630626323325
+        ],
+        "Theta": 1.9599999999999995,
+        "Psi": 6.759999999999999,
+        "Upsilon": 42.58719999999998,
+        "scope": "Scalar root spectral moments; force-history shape must be known to infer a transfer response."
+      },
+      "inference": {
+        "Theta": 1.9599999999999995,
+        "Psi": 6.759999999999999,
+        "Omega": 4.000000000000002,
+        "length_ratio": 0.4999999999999999,
+        "predicted_Upsilon": 42.587199999999996,
+        "scope": "Conditional scale-free inverse of a scalar transfer response, not an inverse of an arbitrary uncalibrated waveform."
+      }
+    },
+    "0.4": {
+      "root_moments": {
+        "moments": [
+          1.0,
+          0.5906040268456376,
+          0.8893293094905634,
+          2.839666512391817,
+          22.113407350459028
+        ],
+        "Theta": 2.5495867768595035,
+        "Psi": 13.784090909090905,
+        "Upsilon": 181.74817187179823,
+        "scope": "Scalar root spectral moments; force-history shape must be known to infer a transfer response."
+      },
+      "inference": {
+        "Theta": 2.5495867768595035,
+        "Psi": 13.784090909090905,
+        "Omega": 6.25,
+        "length_ratio": 0.4,
+        "predicted_Upsilon": 181.74817187179826,
+        "scope": "Conditional scale-free inverse of a scalar transfer response, not an inverse of an arbitrary uncalibrated waveform."
+      }
+    }
+  },
+  "source_sha256": {
+    "scripts/check_nsc_atlas_compositional_gravity.py": "a70b55c05f5be698d5f22e6cd9ec0bc544c45b0a4a1c40f54c04ff89ec167e07",
+    "src/recursive_horizons/nsc_atlas_geometric_average.py": "42f6bbc8e3520f1d3adfb0a07c0a6cd9cfc9879324d9167186f90da63af10da0",
+    "src/recursive_horizons/nsc_atlas_nested_slice.py": "fcd9f7b70046c215bd06cd2a78fd94aa40b0adb78290e889729a9b4cfb05df45",
+    "src/recursive_horizons/nsc_infinite_inheritance.py": "7afa6b3f76bfe244ec84c90067eccb39ee9cf86bf3fb377ab4218cac13499420",
+    "tests/test_nsc_atlas_geometric_average.py": "3f0e63bb1f84d62af0c02a190c992941b48951e490981343611bac964424774b",
+    "tests/test_nsc_atlas_nested_slice.py": "08b209f35731df7e14b3279caf3f69a08ea2afe6aace6b3ce3bec2f9989110fc",
+    "tests/test_nsc_infinite_inheritance.py": "9334974a99fcec95960d3b20f7e9503de2b920b985897a2b82748ad01b2c7793"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_compositional_gravity.py --output <fresh-path>",
+  "identification": "Two scoped mathematical bridges; the inherited tree is not identified with the cap-wall Einstein operator."
+}

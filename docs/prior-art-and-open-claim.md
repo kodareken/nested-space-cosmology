@@ -1,5 +1,56 @@
 # Prior art and admission of new research
 
+## Compositional gravity and its time balance, 19 October 2026
+
+Rethinking the route compares direct global spacetime gluing, curved quantum
+feedback, inverse spectral readout and composition of resolved geometry.
+The repeated quiet-limit tests fixed much of their answer in advance.
+Use exact geometric composition and conservation as the next bridge from
+Step5 to Step7 and the expansion part of Step8. The input contract is the
+seven existing regional moments on one common slice/clock plus separately
+owned surface integrals. This introduces no coupling or physical state.
+Moving material boundaries additionally report their normal volume flux;
+it is not silently replaced by a comoving-domain assumption.
+
+Re-derive the volume-partition variance identity and its associative
+constraint-preserving composition. Borrowed averaging equations and known
+multidomain identities are identified in the Schur owner. Derive the full
+time-dependent integrability identity with lapse acceleration and explicit
+source balance. The result must distinguish a constant vacuum component
+plus other stress from a pure vacuum total. Infer the same geometric trace
+and vacuum condition independently from volume expansion and the explicit
+sources. A conditional infinite-depth corollary must state moment and
+surface summability, not substitute the abstract operator theorem for a
+physical Einstein solution.
+
+Expose already integrated regional moments from `nested_slice_record` with
+an optional partition flag, preserving the default historical interface.
+One finite application reuses its existing32/64 quadratures and exact cap,
+groups cap/host/exterior, counts each wall once, and evaluates mixing and
+the signed material-boundary volume fluxes. No time history or unknown
+source derivative is chosen to satisfy the identities.
+
+Independent moment regrouping, direct moving-volume differentiation,
+symbolic Friedmann/Raychaudhuri differentiation with nonzero lapse term,
+and known vacuum/radiation limits have60 process-CPU seconds. The finite
+application has30 process-CPU seconds, with the existing100000 spatial
+value ceiling and no new field grids, evolution or observational fit.
+Stop on clock incompatibility, interface double counting or a failed
+identity. Failure remains local to that assertion; it does not reopen P001.
+The [Schur-memory owner](schur-memory.md) carries the proof and actual
+numbers. Next comes a physically specified parent history and its light
+cone; algebraic composition alone does not complete those constructions.
+
+The independent inverse-response route uses the same declared scalar
+volume action and the existing q=1/2,2/5 examples. Derive the first four
+root spectral moments from finite support, not a uniform expansion of an
+unbounded operator. Their spectral remainder supplies the controlled
+high-frequency expansion. Four transfer coefficients then remove constant
+gain and uniform clock scaling. Full finite-tree matrix powers and an
+independent exact rational calculation check the identities within the
+same60-second control allowance. No arbitrary source spectrum, metric
+identification or observational precision is inferred from that algebra.
+
 ## Remaining Lambda mechanisms and matched nesting test, 19 October 2026
 
 Audit the remaining mechanisms before another Lambda calculation. Reuse the

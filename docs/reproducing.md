@@ -1,5 +1,25 @@
 # Reproducing the root project
 
+The [geometric composition/time balance](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
+and [scale-free inherited response](nsc-infinite-inheritance.md#a-scale-free-inverse-of-the-inherited-geometry)
+have small proof calculators:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_geometric_average.py tests/test_nsc_atlas_nested_slice.py tests/test_nsc_infinite_inheritance.py -q
+python scripts/run_python.py scripts/check_nsc_atlas_compositional_gravity.py
+python scripts/run_python.py scripts/check_nsc_infinite_inheritance.py
+```
+
+The41 controls cover associative point moments, unique wall atoms, moving
+partition fluxes, clock/source balance, root moments and a held-out response
+coefficient violated by a positive non-inherited tree. The adjacent parent
+reduction's10 controls also pass. The retained compact summary is
+`results/summaries/nsc-compositional-proofs-v1.json`; regenerate into a fresh
+path with the compositional calculator's `--output` option. It retains
+source hashes and scalar results, without full fields, new grids or a
+selected parent history. The abstract tree and actual atlas are kept as
+separate models until their physical operators are identified.
+
 The [remaining Lambda mechanisms](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
 have a small paired one-level/two-level calculation:
 

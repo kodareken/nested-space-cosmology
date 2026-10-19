@@ -9,6 +9,14 @@ The [overview map](paper/figures/geometry-overview.png) connects geometry,
 observer access and the calculated early scalar response. Manuscript revisions
 are independent of the software distribution, which remains version 0.27.0.
 
+Two [constructive proof connections](docs/current-result.md) now join the
+map's components. A scale-free transfer-response identity recovers the
+inherited length ratio and predicts a held-out coefficient. Associative
+composition preserves the nested slice's averaged Hamiltonian constraint,
+including the material walls, and an exact balance relates its geometric
+trace to expansion and source exchange over time. Neither result supplies
+the missing collective cosmological spacetime or an observed Lambda value.
+
 Spherical symmetry supplies a definite areal radius and tractable matching laws.
 It does not establish that every particle is a spherical interior or that our
 universe has a parent. The map distinguishes descent, geometric attachment,

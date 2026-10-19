@@ -18,6 +18,118 @@ from .nsc_atlas_connection_slice import vacuum_transition, wall_slice_data
 KAPPA = 8*math.pi
 
 
+def partitioned_scalar_average(regions, *, surface_integrals=(0., 0., 0.)):
+    """Compose disjoint same-slice regions without losing expansion variance.
+
+    Each named region supplies (V, int theta, int theta^2, int sigma^2,
+    int R3, int E, int S) in one common normal-clock convention. The last
+    three surface integrals are curvature, energy and spatial stress trace.
+    Each material interface is assigned once, at one level of composition.
+    The returned moment_vector can itself be used as a region. This is an
+    exact scalar composition, not a metric gluing or autonomous evolution.
+    """
+    if not regions:
+        raise ValueError('at least one positive-volume region is required')
+    names = tuple(regions)
+    values = np.asarray([regions[name] for name in names], dtype=float)
+    surface = np.asarray(surface_integrals, dtype=float)
+    if (values.shape != (len(names), 7) or surface.shape != (3,)
+            or not np.isfinite(values).all() or not np.isfinite(surface).all()):
+        raise ValueError('seven finite regional moments and three surface integrals required')
+    children = [scalar_average_sources(*row) for row in values]
+    totals = np.sum(values, axis=0)
+    totals[4:] += surface
+    combined = scalar_average_sources(*totals)
+    fractions = values[:, 0]/totals[0]
+    rates = np.asarray([row['H_normal'] for row in children])
+    within = float(fractions @ np.asarray([row['Q'] for row in children]))
+    between = float(6*np.sum(fractions*(rates-combined['H_normal'])**2))
+    return dict(moment_vector=totals.tolist(), sources=combined,
+        volume_fractions=dict(zip(names, fractions.tolist())),
+        regional_H=dict(zip(names, rates.tolist())),
+        regional_Q={name: row['Q'] for name, row in zip(names, children)},
+        within_region_Q=within, between_region_Q=between,
+        Q_composition_residual=combined['Q']-within-between,
+        scope='Same-slice scalar composition; interfaces counted once; no constructed parent spacetime or observer light cone.')
+
+
+def partition_volume_rates(volumes, regional_H, boundary_volume_fluxes):
+    """Reynolds transport for a partition of one normal-transported domain.
+
+    F_i is int velocity_relative_to_slice_normal dA, positive outward.
+    Internal interfaces have equal opposite fluxes. Mean local theta/3 is
+    NOT the volume expansion of a moving material region. This API does
+    not infer local H derivatives, which require the physical evolution.
+    """
+    names = tuple(volumes)
+    if not names or set(names) != set(regional_H) or set(names) != set(boundary_volume_fluxes):
+        raise ValueError('matching named volumes, expansion rates and fluxes required')
+    V = np.asarray([volumes[name] for name in names], dtype=float)
+    H = np.asarray([regional_H[name] for name in names], dtype=float)
+    F = np.asarray([boundary_volume_fluxes[name] for name in names], dtype=float)
+    if (not np.isfinite([V, H, F]).all() or np.any(V <= 0)
+            or abs(math.fsum(F)) > 1e-12*max(1., float(np.sum(abs(F))))):
+        raise ValueError('finite positive volumes and cancelling internal boundary fluxes required')
+    total = math.fsum(V)
+    weights = V/total
+    root = float(weights @ H)
+    V_rate = 3*V*H+F
+    weight_rates = (V_rate-weights*math.fsum(V_rate))/total
+    mixing = float(3*np.sum(weights*(H-root)**2))
+    interface = float(F @ H/total)
+    return dict(H_normal=root, regional_volume_rates=dict(zip(names, V_rate.tolist())),
+        volume_fraction_rates=dict(zip(names, weight_rates.tolist())),
+        expansion_variance_H_rate=mixing, interface_weight_H_rate=interface,
+        total_weight_H_rate=mixing+interface,
+        direct_weight_H_rate=float(weight_rates @ H),
+        total_volume_rate=math.fsum(V_rate),
+        scope='Instantaneous partition kinematics; total H_rate also needs the weighted regional H_rates.')
+
+
+def averaged_gravity_balance(*, H, Q, curvature, lapse_acceleration=0.,
+        Q_rate, curvature_rate, lapse_acceleration_rate=0.,
+        mean_energy, mean_stress_trace, mean_energy_rate):
+    """Test the time-dependent integrability of the owned scalar equations.
+
+    All rates refer to the SAME declared clock. For the general-clock API,
+    E and S are its nu^2-weighted explicit sources and P is its complete
+    lapse acceleration. No missing rate is chosen to enforce conservation.
+    """
+    inputs = (H, Q, curvature, lapse_acceleration, Q_rate, curvature_rate,
+              lapse_acceleration_rate, mean_energy, mean_stress_trace, mean_energy_rate)
+    if not np.isfinite(inputs).all():
+        raise ValueError('finite geometric, source and rate inputs required')
+    H, Q, R, P, dQ, dR, dP, E, S, dE = map(float, inputs)
+    A = 3*Q+R+2*P
+    dA = 3*dQ+dR+2*dP
+    trace = (Q-R+2*P)/4
+    trace_rate = (dQ-dR+2*dP)/4
+    exchange = dE+3*H*E+H*S
+    integrability = dQ+dR+2*H*A-2*KAPPA*exchange
+    return dict(Lambda_trace=trace, vacuum_condition=A,
+        Lambda_trace_rate=trace_rate, vacuum_condition_rate=dA,
+        explicit_source_balance=exchange,
+        required_trace_rate=dA/4+H*A-KAPPA*exchange,
+        integrability_residual=integrability,
+        trace_balance_residual=trace_rate-dA/4-H*A+KAPPA*exchange,
+        geometric_continuity_residual=-(dQ+dR)/2-H*A+KAPPA*exchange,
+        kappa_geometric_density=trace-A/4,
+        kappa_geometric_pressure=-trace-A/12,
+        scope='Conditional differential identity, not a closure or a computed physical source history.')
+
+
+def expansion_source_inference(*, H, H_rate, mean_energy, mean_stress_trace):
+    """The same trace/vacuum test inferred from volume expansion and sources.
+
+    H must be the expansion of the stated averaging domain/clock. Replacing
+    it by an observed redshift H requires a separate light-cone derivation.
+    """
+    if not np.isfinite([H, H_rate, mean_energy, mean_stress_trace]).all():
+        raise ValueError('finite expansion and explicit source data required')
+    return dict(Lambda_trace=3*H*H+1.5*H_rate-KAPPA*(mean_energy-mean_stress_trace)/4,
+        vacuum_condition=6*H_rate+KAPPA*(3*mean_energy+mean_stress_trace))
+
+
 def scalar_average_sources(volume, theta_integral, theta_squared_integral,
                            shear_squared_integral, curvature_integral,
                            energy_integral, stress_trace_integral):

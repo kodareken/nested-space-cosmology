@@ -6,6 +6,13 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-19.2` adds Section5.3's scale-free inherited inverse and
+held-out response coefficient, and Section6.1.21's associative geometric
+composition, wall-volume transport and time-dependent effective-source
+balance. The finite application uses the existing nested slice; its
+nonzero mixing term is not a generated cosmological constant. A compact
+source-hashed record and independent controls accompany the two proofs.
+
 Revision `2026-10-19.1` adds Section6.1.20: the actual quiet wall's causal
 isolation and a local late-state theorem from inherited Hadamard data.
 The full four-spinor kernel, stress memory bound and scalar-density

@@ -354,7 +354,7 @@ def _positive_concave_lapse(lower, upper, mass, hubble, name, counter):
         _fail(f"{name} endpoint lapse is not positive, so the taper is not outside its horizon")
 
 
-def nested_slice_record(length_scale=1.0):
+def nested_slice_record(length_scale=1.0, *, include_partition=False):
     """Scalar milestones and moments through Rcut. The AE end remains analytic."""
     started = time.process_time()
     ell = float(length_scale)
@@ -566,7 +566,7 @@ def nested_slice_record(length_scale=1.0):
     _require("retained cut slope", cut["Rprime"]-reference_slope)
     if time.process_time()-started > CPU_SECONDS:
         _fail("nested-slice CPU budget exhausted")
-    return {
+    record = {
         "schema": "nsc-atlas-nested-slice-v1",
         "assumptions": {
             "ell_positive": True, "c": 1, "G": 1, "k_ell": TENSION, "xi": "1/6",
@@ -674,6 +674,32 @@ def nested_slice_record(length_scale=1.0):
             "Beyond Rcut the right AE end is the analytic Schwarzschild sheet; enlarging that cut changes volume only",
         ],
     }
+    if include_partition:
+        # Expose already integrated scalar moments, never a new quadrature or
+        # stored field grid. Keep the historical record's default shape.
+        def moment_rows(integrated_regions):
+            rows = {}
+            for name, integrated in integrated_regions:
+                part = cap_exact if name == 'cap' else integrated
+                V, I, I2, shear, R3 = (float(part[i]) for i in range(1, 6))
+                E = 0. if name.startswith('outer_') else rho*V
+                rows[name] = [V/ell**3, I/ell**2, I2/ell,
+                              shear/ell, R3/ell, E/ell, -3*E/ell]
+            return rows
+        surfaces = {}
+        for name, wall in (('inner', inner), ('outer', outer)):
+            surfaces[name] = dict(curvature=wall_curvature(wall)/ell,
+                energy=wall_energy(wall)/ell, stress_trace=wall_stress(wall)/ell,
+                volume_flux=4*math.pi*(wall['radius']/ell)**2*wall['v'])
+        record['partition'] = dict(
+            bulk_regions_in_ell_units=moment_rows(regions),
+            coarse_bulk_regions_in_ell_units=moment_rows(coarse_regions),
+            surfaces_in_ell_units=surfaces,
+            moment_order=['volume', 'theta', 'theta_squared', 'shear_squared',
+                          'curvature', 'energy', 'stress_trace'],
+            clock='Existing initial common normal frame; no common future observer clock inferred.',
+            additional_quadrature_values=0)
+    return record
 
 
 def _wall_report(wall, ell):

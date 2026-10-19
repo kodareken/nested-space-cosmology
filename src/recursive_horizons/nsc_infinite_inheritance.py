@@ -88,6 +88,54 @@ def volume_root_observables(branching,ratio,length=1.,cross_section=1.):
         scope='Calibrated root force and zero initial data in the volume-weighted inherited geometry; inertial scale is not an arrival time.')
 
 
+def root_spectral_moments(tree):
+    """First four root moments of a scalar inherited operator, at any depth.
+
+    Finite support of D^k e_root makes these moments valid for the stated
+    infinite Friedrichs realization. The resolvent remainder after mu3 is
+    between zero and mu4/lambda^5 for lambda>0. No high-frequency data fit
+    or cap--wall identification is made by this algebraic calculator.
+    """
+    if tree.local.shape != (1, 1):
+        raise ValueError('scalar inherited operator required for this inverse')
+    H = float(tree.local[0, 0].real)
+    link = tree.branching*float(abs(tree.link[0, 0])**2)
+    omega = tree.omega
+    mu2 = H*H+link
+    mu3 = H**3+link*H*(2+omega)
+    mu4 = mu2**2+link*H*H*(1+omega)**2+omega*omega*link*link
+    return dict(moments=(1., H, mu2, mu3, mu4),
+        Theta=mu2/H**2, Psi=mu3/H**3, Upsilon=mu4/H**4,
+        scope='Scalar root spectral moments; force-history shape must be known to infer a transfer response.')
+
+
+def scale_free_response_inverse(coefficients):
+    """Infer inherited length ratio from beta2,beta4,beta6,beta8.
+
+    T(s)=beta2/s^2+beta4/s^4+beta6/s^6+beta8/s^8+remainder.
+    A constant force/readout gain and uniform clock calibration cancel.
+    An arbitrary unknown force spectrum does not cancel. The geometric
+    interpretation q=Omega^-1/2 requires the declared inherited action.
+    """
+    beta = np.asarray(coefficients, dtype=float)
+    if beta.shape != (4,) or not np.isfinite(beta).all() or beta[0] == 0 or beta[1] == 0:
+        raise ValueError('four finite response coefficients with nonzero leading two required')
+    a, b, c, d = beta
+    theta = a*c/b**2
+    psi = a*a*d/b**3
+    if theta <= 1:
+        raise ValueError('nonzero inherited coupling requires Theta>1')
+    omega = (psi-1)/(theta-1)-2
+    if not math.isfinite(omega) or omega <= 1:
+        raise ValueError('response coefficients do not give inherited Omega>1')
+    ratio = theta-1
+    prediction = theta**2+ratio*(1+omega)**2+omega**2*ratio**2
+    return dict(Theta=float(theta), Psi=float(psi), Omega=float(omega),
+                length_ratio=omega**-.5,
+                predicted_Upsilon=float(prediction),
+                scope='Conditional scale-free inverse of a scalar transfer response, not an inverse of an arbitrary uncalibrated waveform.')
+
+
 @dataclass(frozen=True)
 class InheritedTree:
     local: np.ndarray

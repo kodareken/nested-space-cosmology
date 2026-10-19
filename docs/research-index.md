@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [compositional gravity connection](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
+joins the finite nested geometry to an associative averaged constraint and
+a time-dependent expansion/source diagnostic. The separate
+[scale-free inverse](nsc-infinite-inheritance.md#a-scale-free-inverse-of-the-inherited-geometry)
+turns inherited operator scaling into a response ratio and a held-out
+coefficient prediction. Both include the mathematical proof, controls and
+remaining physical identifications.
+
 The [Lambda mechanism inventory and comparison](schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
 rank the remaining gravitational, quantum, interface and extended-action
 routes. The checked additional nest changes the finite scalar average but

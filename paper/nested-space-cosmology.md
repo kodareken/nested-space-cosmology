@@ -468,6 +468,69 @@ predictions of the stated geometric action, with no observational
 calibration. A compatible cap--wall/parent metric and its gravitational
 source remain necessary for a cosmological Lambda prediction.
 
+### 5.3. A response shape that recovers the nesting ratio
+
+<!-- nsc-claim:scale-free-inherited-response -->
+
+For the scalar volume action above, let mu_k denote the kth root spectral
+moment and set g=b*abs(B)^2. Direct multiplication on two inherited levels
+gives
+
+$$
+\mu_1=H,\quad \mu_2=H^2+g,\quad
+\mu_3=H^3+gH(2+\Omega).
+$$
+
+All moments exist because every finite power of D applied to the root
+has finite support. The positive root spectral measure yields
+
+$$
+R(\lambda)=\lambda^{-1}-\mu_1\lambda^{-2}
++\mu_2\lambda^{-3}-\mu_3\lambda^{-4}+\epsilon(\lambda),
+\qquad 0\leq\epsilon(\lambda)\leq\mu_4\lambda^{-5},
+$$
+$$
+\mu_4=(H^2+g)^2+gH^2(1+\Omega)^2+\Omega^2g^2.
+$$
+
+For the wave response, lambda=s^2. Write an unknown constant gain and
+uniform clock factor into its measured coefficients beta2, beta4, beta6,
+beta8 multiplying s^-2, s^-4, s^-6, s^-8. Then
+
+$$
+\Theta=\frac{\beta_2\beta_6}{\beta_4^2},\qquad
+\Psi=\frac{\beta_2^2\beta_8}{\beta_4^3},\qquad
+\Omega=\frac{\Psi-1}{\Theta-1}-2,\qquad q=\Omega^{-1/2}.
+$$
+
+Gain, root kinetic normalization and uniform clock calibration cancel.
+At b=3, q=1/2 gives (Theta,Psi)=(49/25,169/25); q=2/5 gives
+(617/242,13343/968). The recovered ratios are exactly 1/2 and 2/5, despite
+the equal static compliance. At fixed b, Theta alone is strictly
+monotone in q; the pair determines q even without a known b.
+
+There is also a held-out consequence. The fifth coefficient beta10 must
+obey the parameter-free relation
+
+$$
+\Upsilon=\frac{\beta_2^3\beta_{10}}{\beta_4^4}
+=\Theta^2+(\Theta-1)(1+\Omega)^2+\Omega^2(\Theta-1)^2.
+$$
+
+A positive tree with altered child--grandchild links can retain the first
+four response coefficients and violate this fifth one. The relation thus
+tests continuation of the inherited law at the next level, using a
+quantity not used in the inversion.
+
+This is a conditional inverse of the specified transfer function. An
+arbitrary unknown force spectrum does not cancel. Finite noisy data need
+their own coefficient errors. The [complete proof and controls](../docs/nsc-infinite-inheritance.md#a-scale-free-inverse-of-the-inherited-geometry)
+keep these requirements explicit. This connects the inherited operator
+to an observable relationship, with its physical atlas identification
+still to be established. The [compact calculation and source hashes](../results/summaries/nsc-compositional-proofs-v1.json)
+retain these exact model examples alongside the separately scoped atlas
+composition below.
+
 ### 6. What an unresolved surrounding region can leave locally
 
 Split a specified operator into retained and complementary blocks $A,D$
@@ -1939,6 +2002,102 @@ backreaction. Regularity of a fully transmitted inherited state on the
 later ball remains a hypothesis. The compact-source $b>0$ cap is not
 conformally flat; its finite-time state and $\Psi/\Phi$ require their
 own compatible source history and retarded response.
+
+### 6.1.21. Composition and conservation of a nested geometric response
+
+<!-- nsc-claim:atlas-compositional-gravity -->
+
+The next connection runs from a nested geometry to its effective scalar
+gravity and expansion test. On one common slice/clock, retain each
+region's volume and integrals of theta, theta squared, shear squared,
+intrinsic curvature, normal energy and spatial stress trace. Add these
+seven moments, with every material interface counted once. If f_i is
+its volume fraction and H_i its mean theta/3, the variance identity gives
+
+$$
+H_D=\sum_i f_iH_i,\qquad
+Q_D=\sum_i f_iQ_i+6\sum_i f_i(H_i-H_D)^2.
+$$
+
+Moment addition is associative. The same result therefore follows from
+direct integration or successive child-to-parent composition. With the
+surface relation C_surface=2*kappa*E_surface retained, summing the local
+Hamiltonian preserves the averaged scalar constraint at every level.
+Dropping the inter-region variance would violate it. This applies
+[established multidomain averaging](https://arxiv.org/html/1002.3912)
+to the actual signed atlas and its material walls; it is not a new
+spacetime gluing theorem.
+
+For the existing two-level slice, grouping its cap, Kottler host and
+Schwarzschild exterior gives
+
+$$
+Q_D\ell^2=0.280192255373+0.233947711669
+=0.514139967042.
+$$
+
+The required between-region term is 45.50% of the total for this grouping.
+Its 32/64 quadrature change is -5.02e-11; this is a numerical indicator,
+not a certified bound. All wall atoms remain explicit. The initial
+material-boundary fluxes in ell^2 units are -2.25902368244,
+6.03328027292 and -3.77425659048; they cancel globally. Reynolds transport
+adds these fluxes to the individual volume rates. Their contribution to
+the derivative of the H weights is .008489878632/ell^2; local H
+derivatives remain separate physical inputs. Mean local expansion cannot
+silently be used as the expansion of a moving material volume.
+
+For a regular history in the same clock, let R be its mean3-curvature,
+P its complete lapse acceleration, and E,S its correspondingly weighted
+explicit energy and spatial stress trace. The averaged Hamiltonian and
+Raychaudhuri equations give
+
+$$
+3H^2=\kappa E-(Q+R)/2,\qquad
+3(H_{,t}+H^2)=-\kappa(E+S)/2+Q+P.
+$$
+
+Set A=3Q+R+2P and Lambda_trace=(Q-R+2P)/4. Define the explicit-source
+balance J=E_dot+3HE+HS. Differentiation now proves
+
+$$
+Q_{,t}+R_{,t}+2HA=2\kappa J,\qquad
+\Lambda_{{\rm tr},t}=A_{,t}/4+HA-\kappa J.
+$$
+
+The corresponding source is
+
+$$
+\kappa\rho_g=\Lambda_{\rm tr}-A/4,\qquad
+\kappa p_g=-\Lambda_{\rm tr}-A/12.
+$$
+
+Pure constant vacuum requires A=0 and J=0 on an interval. A constant
+vacuum component plus radiation is also possible: for J=0, the trace
+is constant exactly when A_dot+4HA=0. A non-vacuum result at one instant
+does not distinguish those histories. Neither missing derivative is
+chosen to satisfy this equation.
+
+The same trace and vacuum condition follow independently from expansion:
+
+$$
+\Lambda_{\rm tr}=3H^2+\frac{3}{2}H_{,t}-\kappa(E-S)/4,\qquad
+A=6H_{,t}+\kappa(3E+S).
+$$
+
+On the declared instantaneous normal continuation, H*ell=.092609048739
+and H_dot*ell^2=.278302667627 recover the recorded trace -.0153506330754
+and vacuum condition 2.11796240047 in ell units. H here is domain volume
+expansion; its identification with sky-inferred expansion requires the
+missing light-cone calculation. The [full derivation and calculator](../docs/schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
+state the common-clock, source and infinite-resolution conditions.
+
+These proofs establish a composable scalar response and its required
+time balance. They do not supply a collective parent metric, a closed
+history or a generated cosmological constant. The existing quiet
+massless model still has no demonstrated nesting-induced bulk Lambda.
+The [compact proof calculation](../results/summaries/nsc-compositional-proofs-v1.json)
+binds the source hashes and the finite application; full fields need not
+be stored to reproduce it.
 
 ### 6.2. The retained local incoming gate
 
