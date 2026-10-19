@@ -276,13 +276,19 @@ def paired_nesting_vacuum_test(*, ell_m=10000.):
     left = base['normalized_sources']
     right = nested['average_diagnostic']['scalar_outputs_in_ell_units']
     differences = {key: right[key]-left[key] for key in keys}
-    # These are paired quadrature comparisons, never certified error bounds.
+    # Keep the two geometries' discrepancies separate: cancellation between
+    # them must not make the numerical indicator look artificially small.
+    # Their absolute sum is still only an indicator, not an error bound.
     gap = nested['quadrature']['scalar_diagnostic_64_minus_32']
-    indicators = {
-        key: max(abs((right[key]-gap[key])-base32['normalized_sources'][key]
-                     -differences[key]),
-                 abs(right[key]-base64['normalized_sources'][key]-differences[key]))
+    comparisons = {key: dict(
+        nested_64_minus_32=abs(gap[key]),
+        baseline_adaptive_minus_32=abs(left[key]-base32['normalized_sources'][key]),
+        baseline_adaptive_minus_64=abs(left[key]-base64['normalized_sources'][key]))
         for key in keys}
+    indicators = {key: values['nested_64_minus_32']
+                  +max(values['baseline_adaptive_minus_32'],
+                       values['baseline_adaptive_minus_64'])
+                  for key, values in comparisons.items()}
     density = differences['kappa_geometric_density']
     pressure = differences['kappa_geometric_pressure']
     # A trace and the independent rho+p condition must both be retained.
@@ -309,7 +315,12 @@ def paired_nesting_vacuum_test(*, ell_m=10000.):
         baseline_scalar_sources={key: left[key] for key in keys},
         nested_scalar_sources={key: right[key] for key in keys},
         nested_minus_baseline=differences,
-        paired_quadrature_indicators=indicators,
+        separate_quadrature_comparisons=comparisons,
+        summed_quadrature_indicators=indicators,
+        geometric_source_scope=('Only the Q and mean-3-curvature fitting correction; '
+            'supplied cap vacuum and wall/matter mean energy and pressure are '
+            'not included. One slice cannot separate a possible constant '
+            'component from other stress.'),
         stress_test=dict(kappa_delta_rho_plus_delta_p_times_ell2=nonvacuum,
                          delta_pressure_over_delta_density=pressure/density if density else None,
                          relative_nonvacuum_residual=abs(nonvacuum)/scale if scale else 0.,

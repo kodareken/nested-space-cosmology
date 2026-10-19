@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "9fbd5660f9eceb8a676fb69614670115bc8bd51a",
+  "current_receipt_commit_parent": "948e66bbe57ff87bd3154fe89e50b38a8edf006c",
   "files": [
     {
       "bytes": 3120,
@@ -11531,12 +11531,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 127950,
-      "change": "Audit remaining Lambda mechanisms and compare the matched one-level and two-level geometries without a cosmological fit.",
-      "changed_from_commit": "9fbd5660f9eceb8a676fb69614670115bc8bd51a",
+      "bytes": 128824,
+      "change": "Keep independent quadrature comparisons and distinguish the geometric increment from the full source.",
+      "changed_from_commit": "948e66bbe57ff87bd3154fe89e50b38a8edf006c",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "5201e48762b6d7aa6183c11285d567e34818b6858360b7d5adb5efae8d419a49"
+      "sha256": "fc24fa450d5ca4b4377bf6287d8955e5165b25d9a8cfdaad7f0658f89f216850"
     },
     {
       "bytes": 537091,
@@ -34381,12 +34381,12 @@
       "sha256": "99053a52f7cc96070bb08171e59e876133395e2731f8290c38a3eca977585c7c"
     },
     {
-      "bytes": 15262,
-      "change": "Audit remaining Lambda mechanisms and compare the matched one-level and two-level geometries without a cosmological fit.",
-      "changed_from_commit": "9fbd5660f9eceb8a676fb69614670115bc8bd51a",
+      "bytes": 16000,
+      "change": "Keep independent quadrature comparisons and distinguish the geometric increment from the full source.",
+      "changed_from_commit": "948e66bbe57ff87bd3154fe89e50b38a8edf006c",
       "path": "src/recursive_horizons/nsc_atlas_gravitational_reduction.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "772215ad40011d769dc8a6b53115e1bb1847502a9e47b7343147e8a386caaa95"
+      "sha256": "9814cda8ba1a3956c5bc92b756ea0c1ebc39b42525525373570f356381144c14"
     },
     {
       "bytes": 4822,
@@ -38565,12 +38565,12 @@
       "sha256": "f1e9b4dd20d1d4f676206a433bf4a7834ea7f5c88dce4a307fbe169b78b3545f"
     },
     {
-      "bytes": 13227,
-      "change": "Audit remaining Lambda mechanisms and compare the matched one-level and two-level geometries without a cosmological fit.",
-      "changed_from_commit": "9fbd5660f9eceb8a676fb69614670115bc8bd51a",
+      "bytes": 13824,
+      "change": "Keep independent quadrature comparisons and distinguish the geometric increment from the full source.",
+      "changed_from_commit": "948e66bbe57ff87bd3154fe89e50b38a8edf006c",
       "path": "tests/test_nsc_atlas_gravitational_reduction.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "e17a5efbe51fec9fa8f79a60a052dc4256d99c9a7749fcbfb2ac7728d3c7432c"
+      "sha256": "b39792080cb6d6c7fc7b7b9816160412c5acee39fac74a47064d9d137491c59c"
     },
     {
       "bytes": 4080,

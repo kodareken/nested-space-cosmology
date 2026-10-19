@@ -1571,9 +1571,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2444091,
+      "bytes": 2444034,
       "path": "docs/lab-snapshot.json",
-      "sha256": "a2725635739a46dca6ed9cb70277c3b53afbbe7bbf071102671952bdbe64d650"
+      "sha256": "60d4707cf171a51d2d5c0b0999c74af45ca75ac599249df8da2cc79dd53f6890"
     },
     {
       "bytes": 4997,
@@ -2271,9 +2271,9 @@
       "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
     },
     {
-      "bytes": 127950,
+      "bytes": 128824,
       "path": "docs/schur-memory.md",
-      "sha256": "5201e48762b6d7aa6183c11285d567e34818b6858360b7d5adb5efae8d419a49"
+      "sha256": "fc24fa450d5ca4b4377bf6287d8955e5165b25d9a8cfdaad7f0658f89f216850"
     },
     {
       "bytes": 537091,
@@ -17746,9 +17746,9 @@
       "sha256": "f007f4842d3b6f2490559e6035d6b5859d8848e477d39b8e77731a0e136d445d"
     },
     {
-      "bytes": 15262,
+      "bytes": 16000,
       "path": "src/recursive_horizons/nsc_atlas_gravitational_reduction.py",
-      "sha256": "772215ad40011d769dc8a6b53115e1bb1847502a9e47b7343147e8a386caaa95"
+      "sha256": "9814cda8ba1a3956c5bc92b756ea0c1ebc39b42525525373570f356381144c14"
     },
     {
       "bytes": 4822,
@@ -20241,9 +20241,9 @@
       "sha256": "4249b32980f375cd589de390a3456815c9362942f6c235ffdc3a07baa496ee13"
     },
     {
-      "bytes": 13227,
+      "bytes": 13824,
       "path": "tests/test_nsc_atlas_gravitational_reduction.py",
-      "sha256": "e17a5efbe51fec9fa8f79a60a052dc4256d99c9a7749fcbfb2ac7728d3c7432c"
+      "sha256": "b39792080cb6d6c7fc7b7b9816160412c5acee39fac74a47064d9d137491c59c"
     },
     {
       "bytes": 4080,
@@ -22381,7 +22381,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "a2725635739a46dca6ed9cb70277c3b53afbbe7bbf071102671952bdbe64d650",
+  "lab_snapshot_sha256": "60d4707cf171a51d2d5c0b0999c74af45ca75ac599249df8da2cc79dd53f6890",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-19.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

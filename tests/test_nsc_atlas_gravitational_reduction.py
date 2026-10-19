@@ -54,7 +54,10 @@ def test_paired_nested_geometry_changes_correlations_without_a_vacuum_source():
     assert d['geometric_trace_projection'] < -.04
     assert d['geometric_vacuum_condition'] > .3
     assert row['stress_test']['relative_nonvacuum_residual'] > .8
-    assert max(row['paired_quadrature_indicators'].values()) < 2e-8
+    assert max(row['summed_quadrature_indicators'].values()) < 2e-8
+    for key, values in row['separate_quadrature_comparisons'].items():
+        # Independent discrepancies cannot cancel in the displayed indicator.
+        assert row['summed_quadrature_indicators'][key] >= max(values.values())
     assert row['exact_quiet_exterior']['delta_Lambda_times_ell2'] == 0.
     assert row['exact_quiet_exterior']['baseline']['f'] == pytest.approx(.8)
     assert row['counts']['field_solves'] == row['counts']['evolution_steps'] == 0
@@ -71,9 +74,15 @@ def test_same_metric_conformal_state_difference_cannot_be_nonzero_vacuum():
     metric = sp.diag(-1, 1, 1, 1)
     trace = sp.trace(metric*T)
     assert sp.expand(trace-(-rho+pr+2*pt)) == 0
+    tracefree = T.subs(pr, rho-2*pt)
+    assert sp.trace(metric*tracefree) == 0
+    assert tracefree.subs({rho: 3, pt: 1, flux: 1}) != sp.zeros(4)
+    # Impose both the traceless state-difference constraint and the entire
+    # vacuum tensor, including zero flux. Only their zero intersection remains.
     vacuum = -lam*metric/kappa
-    assert sp.trace(metric*vacuum) == -4*lam/kappa
-    assert sp.solve(sp.trace(metric*vacuum), lam) == [0]
+    equations = [trace, *(T-vacuum)]
+    solution = sp.solve(equations, (rho, pr, pt, flux, lam), dict=True)
+    assert solution == [{rho: 0, pr: 0, pt: 0, flux: 0, lam: 0}]
 
 
 def _tube_tau(mu, radius):

@@ -29,6 +29,12 @@ theory. Ranking favors an actual inherited geometry and fewer additional
 physical choices, rather than assigning unsupported probabilities of success.
 Related mechanisms in a row must be varied together and counted once.
 
+Already closed in their declared domains: the on-shell classical conformal
+scalar trace is zero; the classical exterior functional has zero metric
+variation supported strictly inside the cap; and the positive kinetic/gradient
+tree lift obeys rho+p>0 and rho+3p>=0 for every nonzero field. None of these
+identities is a theorem eliminating all gravitational reductions in row1.
+
 | Rank | Mechanism and possible nonzero contribution | Present mathematical status and missing input |
 | --- | --- | --- |
 | 1 | Nonlinear gravitational correlations from eliminating resolved parent/child geometry: expansion variance, shear, spatial curvature, lapse, mutual binding, finite-size/tidal response and their causal memory | These can change the effective equations. The quiet isolated exterior and conserved monopoles do not create a volume term. The finite paired test below evaluates what is actually specified. A common evolving parent, compatible metric reduction, clock and complete stress remain absent; no free connector moments are chosen to force vacuum form. |
@@ -115,18 +121,28 @@ The fresh calculation gives
 | kappa (Delta rho_g + Delta p_g) | -0.105668740067 |
 
 The pressure/density ratio of the increment is -0.157199240651, rather
-than -1. Its vacuum residual is84.28% of the larger absolute stress
-component. This nonzero change is therefore **not** a generated vacuum
-source. The trace's paired quadrature indicator is2.78e-11 and the
-vacuum-condition indicator8.55e-11, compared with the order.1 non-vacuum
+than -1. The absolute value of kappa*(Delta rho_g+Delta p_g) is84.28% of
+the larger absolute stress component. The geometric increment is not pure
+vacuum. An instantaneous non-vacuum correction does not exclude a mixture
+containing a constant vacuum component plus another stress. Separating such
+a component requires the action/state and their evolution; this one-slice
+calculation does not determine that decomposition or establish a generated
+vacuum source.
+
+The table contains only the Q and mean3-curvature fitting correction. It
+omits the explicit mean cap vacuum, wall and matter energy/pressure, and
+therefore does not give the change in the full scalar source. In the
+existing API those explicit terms are `kappa_mean_energy` and
+`kappa_mean_pressure`; `total_trace_projection` includes them. The cap H
+remains supplied throughout.
+
+The separate nested64/32 and baseline adaptive32/64 discrepancies are
+retained. Their non-cancelling summed indicator for the trace is2.27e-10
+and for the vacuum condition6.96e-10, compared with the order.1 non-vacuum
 stress. They are numerical comparisons, not certified or physical error
-bounds. At the supplied10km ruler the trace is -4.61265238074e-10 per m^2;
-this unit conversion does not give it vacuum form or cosmological meaning.
-The cap H remains supplied throughout.
-An instantaneous non-vacuum total does not exclude a mixture containing a
-constant vacuum component plus another stress. Separating such a component
-requires the action/state and their evolution; the one-slice calculation
-does not determine that decomposition.
+bounds. At the supplied10km ruler the geometric trace increment is
+-4.61265238074e-10 per m^2; this conversion does not give it vacuum form
+or cosmological meaning.
 
 The application uses1,579 spatial values and .0625 process-CPU seconds,
 with no evolution or field solve. Ten focused controls pass; these
