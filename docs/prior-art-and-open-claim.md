@@ -1,5 +1,38 @@
 # Prior art and admission of new research
 
+## Inherited quiet-cap state, 19 October 2026
+
+Derive preparation from parent--child inheritance before selecting another
+root benchmark. Reuse the existing transparent massless Dirac action,
+signed quiet wall and current-normalized covariance transport. The missing
+connection is whether the geometry selects any state information beyond
+that exact finite transport. The current owner proves causal isolation of
+the expanding M=0 de Sitter cap and a universal local late limit for
+Hadamard inherited data on an isolating Cauchy ball. The full four-spinor
+conformal calculation keeps the smooth inherited remainder and its finite
+derivative bound. The existing curvature trace then determines the full
+late vacuum-form source at fixed renormalized classical couplings.
+
+The domain is the smooth cap after its wall passes H^-1, not a new
+finite scalar evolution or compact-mass SdS family. Borrowed inputs are
+massless Dirac conformal covariance, smooth Cauchy evolution, Hadamard
+subtraction, local trace/Ward identities and weak scalar-density detector
+theory. These are checked by explicit field/action algebra, not by using
+a citation as the result. The [source reading](arxiv-studies.md#quiet-cap-inherited-state-and-detector-19-october-2026)
+distinguishes detector statistics and prior no-hair work.
+
+The allowance is30 process-CPU seconds for small calculator/independent
+controls, with no field grid, parameter scan, trajectory integration or
+P001 work. Use actual wall normalization at its regular cap-horizon
+crossing, full-spinor solutions, direct Dirac energy, a nonsingular
+Fourier contour, unit controls and FLRW conservation. Stop this route if
+the isolating ball or smooth inherited remainder cannot be justified.
+An unknown inherited norm produces an explicit symbolic error bound,
+not another cutoff campaign. A b>0 slip calculation requires its own
+compatible source history; it does not inherit conformal flatness from
+the quiet cap. The result and reproduction command live in the
+[existing Dirac owner](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026).
+
 ## Conserved mean Dirac source and spherical metric reconstruction
 
 Use the existing finite exterior occupation difference on the actual quiet

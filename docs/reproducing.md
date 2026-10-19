@@ -1,5 +1,23 @@
 # Reproducing the root project
 
+The [inherited local Dirac limit](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
+has an analytic calculator, without a new parent benchmark or field grid:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_dirac_inheritance.py -q
+python scripts/run_python.py scripts/check_nsc_atlas_dirac_inheritance.py
+```
+
+Seven controls check the actual quiet wall's regular horizon clock, full
+four-component conformal field/energy, inherited remainder bound, central
+KMS kernel, detector spectrum by an independent contour quadrature, units
+and the conserved late vacuum source. Together with the existing clock
+and bulk-trace controls,20 tests pass in2.625 process-CPU seconds. The
+shared new-control allowance is30 seconds; all development runs stay below
+it. The calculator prints conditional scales for a supplied10km ruler.
+It does not save arrays, assign a finite-time ancestor covariance, derive
+the cap's classical H or compute compact-source Psi/Phi.
+
 The [infinite inherited-law proof](nsc-infinite-inheritance.md) includes
 its domain, convergence bound and spectral dimension. Its small calculator
 can be reproduced without an exponentially large tree or any P001 grid:

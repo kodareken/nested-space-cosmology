@@ -1875,6 +1875,12 @@ operator relation alone does not fix it: changing an allowed covariance
 at the same operator changes the computed response. This local tidal
 reduction narrows the next calculation; full vacuum Psi/Phi remains open.
 
+The [inheritance calculation below](#inheritance-and-the-late-local-cap-state-19-october-2026)
+now supplies a different, asymptotic result for the exact quiet b=0 cap:
+regular inherited states have one local late limit, with a calculable
+decay law for their differences. This does not select the finite-time
+covariance of the compact-mass family used by the tidal calculation above.
+
 ## A candidate parent preparation from clock energy
 
 The next missing object is a state rule, not another prepared-packet
@@ -3409,3 +3415,244 @@ Work decision: stop extending this diagnostic chain as a research goal.
 The finite vacuum amplitude and full slip remain open. These results are
 available when a calculation of an actual physical prediction needs them;
 another diagnostic round is not itself progress toward that prediction.
+
+## Inheritance and the late local cap state, 19 October 2026
+
+Douglas selected physical parent--child inheritance before another benchmark
+preparation. Finite inheritance transports a complete covariance rather than
+choosing a new one. On the original radar diamond the incoming plus leg lies
+in the cap and the minus leg in the exterior. A compatible parent Cauchy
+state must supply both, including their cross-correlation. If K is the
+current-normalized restriction/evolution map from a complete ancestral
+Cauchy space to the child, then KK^dagger=I_child and
+
+```text
+C_child = K C_ancestor K^dagger,
+I_child-C_child = K (I_ancestor-C_ancestor) K^dagger.
+```
+
+Splitting the ancestor into two sectors produces four terms, including
+both cross terms. A null-clock change z=phi(s) acts on the canonical flux
+field by sqrt(abs(phi')) and on every covariance block by the corresponding
+two square-root factors. Future orientation is carried with the map; the
+decreasing exterior optical v must not be treated as an increasing clock.
+The existing [characteristic transfer](../src/recursive_horizons/nsc_atlas_dirac_scattering.py)
+and [correlated boundary owner](../src/recursive_horizons/nsc_boundary_state.py)
+already implement the finite transport and four-term reconstruction.
+Setting a *classical field* to zero is distinct from dropping a quantum
+leg. Zero occupation C=0 is a valid empty CAR state when its complement I
+is retained; deleting the leg also deletes its anticommutator and is not
+that state. Unitary transport alone preserves the supplied state information.
+
+There is nevertheless a positive state-selection result on the actual
+quiet cap. Expansion and causal isolation select a **local late limit**
+independent of the regular inherited state, with explicit memory weights.
+No cylinder radius, auxiliary switch or finite energy minimizer enters it.
+
+### Causal isolation follows from the existing wall action
+
+Keep the exact quiet reference: phi=0, H*ell=1 inside, M/ell=.4 outside,
+k_wall*ell=2, and no direct Dirac wall interaction. There is no compact cap
+mass b in this result. In ell units the existing signed junction law gives
+
+$$
+\beta_-={3R\over4}+{1\over5R^2},\qquad
+\beta_+=-{5R\over4}+{1\over5R^2},\qquad
+v^2={25R^2\over16}-1+{3\over10R}+{1\over25R^4}.
+$$
+
+The positive root remains positive for every R>=.45. For .45<=R<=.8 use
+v^2=beta_+^2+.8/R-1, with beta_+ nonzero at .8. On [.8,1], beta_->=.8
+and 1-R^2<=.36 give v^2>=.28. For R>=1 the cap f<=0. On R>=1,
+v^2<=(761/400)R^2 prevents a finite-proper-time blow-up. Every fixed
+R>1 is reached in finite wall proper time, and the future branch persists.
+
+The cap's expanding flat metric, with t measured in length units, is
+
+$$
+ds^2=-(1-H^2R^2)dt^2-2HR\,dt\,dR+dR^2+R^2d\Omega^2.
+$$
+
+The regular boost, or direct normalization of the wall velocity, gives
+
+$$
+{dt\over d\tau}
+={1+v^2\over\beta_-+HRv}>0.
+$$
+
+For this reference, at HR=1, beta_-=v=19/20 and dt/dtau=761/760.
+There is no clock singularity at this horizon. Choose a finite cut t0
+after the wall passes H^-1, and a cap Cauchy ball with physical radius
+H^-1<R_B<R_wall(t0). Set a(t0)=1, write N=H(t-t0), and use
+
+$$
+g=a^2(-d\eta^2+d\mathbf x^2),\qquad
+a=e^N,\qquad\eta=-H^{-1}e^{-N}.
+$$
+
+The flat future domain of this ball has radius R_B-(eta-eta0). At eta=0
+it still has the strictly positive radius R_B-H^-1. A future timelike
+wall satisfies |d x_wall/d eta|<1, so it stays outside that shrinking
+null boundary. Explicitly, the radial gap d=x_wall-[R_B-(eta-eta0)]
+has d'=x_wall'+1>0 and initially d>0. The comoving wall radius may
+temporarily decrease; no lower bound by the initial comoving ball
+radius is required. Thus the entire central future and a neighborhood of its
+virtual conformal endpoint lie inside this cap domain. Outer-wall clocks
+or travel across a spatial bridge are not needed for this statement.
+
+### A full four-dimensional inherited-state limit
+
+**Proposition.** Take any inherited massless Dirac state that is Hadamard
+on a neighborhood of the closed Cauchy ball above. For Gaussian detector
+correlations, take a gauge-invariant quasifree state, as in the existing
+covariance programme. Its local central two-point function approaches the
+conformal de Sitter one in every fixed translated proper-time window.
+Differences of inherited two-point functions decay as exp(-3HT).
+Tetrad stress differences have the more precise form below. The background
+is held fixed, so this is a free-probe statement rather than a nonlinear
+semiclassical evolution theorem.
+
+**Proof.** Work with the four-component Cartesian field, not a single
+angular sector. Conformal covariance gives psi=a^(-3/2)*psi_tilde and the
+ordinary flat massless Dirac equation for psi_tilde. Subtract the conformal
+Minkowski two-point function as a proof reference. This subtraction does
+not assign the parent's state. The equal-time two-point difference on the
+ball is smooth: the two Hadamard singular parts agree, and distinct points
+of that Cauchy surface are spacelike separated in its domain.
+
+Choose a slightly smaller ball still of radius greater than H^-1. A
+smooth spatial cutoff equal to one there extends both Cauchy arguments
+of this smooth difference to compactly supported flat data. Evolving in
+each argument with the flat Dirac propagator, whose Fourier multiplier is
+exp(-i alpha.p*(eta-eta0)), gives a smooth bisolution across eta=0. Finite
+propagation makes it agree with the physical difference near the central
+future. On compact paired neighborhoods its derivatives are bounded.
+This supplies the conformal-endpoint regularity rather than assuming it
+as a condition at a physical infinity.
+
+Measure subsequent proper times from t0. For fixed offsets s,s' and T
+tending to infinity the difference is exactly
+
+$$
+\Delta S(T+s,T+s')=
+e^{-3H[T+(s+s')/2]}F(\eta(T+s),0;\eta(T+s'),0),
+$$
+
+with F the smooth conformal bisolution. Its bounded norm proves the
+claimed convergence. In the same physical cap, conformal covariance of
+the massless stress **difference** gives
+
+$$
+\Delta T_{\hat a\hat b}(t,0)=e^{-4N}Q_{\hat a\hat b}(-H^{-1}e^{-N}).
+$$
+
+Anomaly and local finite curvature tensors cancel between the two states.
+For each component, if |dQ/deta|<=M1 on [-H^-1,0], the fundamental theorem
+of calculus gives the finite error statement
+
+$$
+\left|\Delta T_{\hat a\hat b}-e^{-4N}Q_{\hat a\hat b}(0)\right|
+\le {M_1\over H}e^{-5N}.
+$$
+
+The amplitude Q(0) and bound M1 are inherited state data. This is not a
+state-independent numerical error bar or proof of equal finite states.
+The limiting local state is unique; global unitary state information has
+not disappeared. This completes the proof.
+
+### The central detector and the full late vacuum source
+
+At the central geodesic the conformal reference has its flat spinor
+prefactor multiplied by
+
+$$
+\left[{H\over2\sinh(H(s-s'-i0)/2)}\right]^3.
+$$
+
+This follows by substituting eta(t) into the flat inverse-cube kernel:
+the mean-time exponential cancels the two spinor weights. The analytic
+kernel is antiperiodic under s-s' -> s-s'-2*pi*i/H, with the appropriate
+ordered boundary values. It has the fermionic KMS temperature
+k_B*T=hbar*c*H/(2*pi).
+
+A weak detector coupled to the scalar density :bar psi psi: measures a
+bosonic bilinear. Wick contraction gives a kernel proportional to
+[2*i*sinh((s-i0)/2)]^-6 in H=1 units. Shift the Fourier contour to
+s=y-i*pi. Its transform is exp(-pi*x) times the nonsingular integral
+of exp(-i*x*y)/(2*cosh(y/2))^6. Substituting z=exp(y) gives
+|Gamma(3+i*x)|^2/120. Removing one overall positive detector constant,
+
+$$
+\mathcal R(x)={x(x^2+1)(x^2+4)\over e^{2\pi x}-1},\quad
+x={E\over\hbar cH},\quad
+{\mathcal R(x)\over\mathcal R(-x)}=e^{-2\pi x}.
+$$
+
+At x=0 the continuous value is 2/pi. The late-state translation is taken
+first for compact smooth detector windows; the stationary long-window,
+weak-coupling rate is then taken. A finite switched detector does not have
+this exact rate ratio. The detector operator, conformal covariance and
+thermal/no-hair mechanism have prior literature; the calculation here
+connects them to this sourced wall's admitted causal future and keeps the
+inherited remainder. See the [source reading](arxiv-studies.md#quiet-cap-inherited-state-and-detector-19-october-2026).
+
+The local limiting stress also has a determined vacuum form. The already
+calculated cap trace is A=-11*hbar*c*H^4/(240*pi^2). Homogeneity/isotropy
+and conservation give -rho+3p=A and rho_dot+4H*rho=-H*A; hence
+rho=-A/4+C*a^-4. The radiation constant and all inherited stress differences
+vanish in the limit. With renormalized classical Lambda and G held fixed,
+
+$$
+\langle T_{\mu\nu}\rangle_{\rm late}
+=-{11\hbar c H^4\over960\pi^2}g_{\mu\nu},\qquad
+\delta\Lambda\,\ell^2={11\over120\pi}{\ell_P^2\over\ell^2},\quad\ell=H^{-1}.
+$$
+
+The finite g and Einstein-tensor ambiguities belong to those fixed
+classical couplings; four-derivative local metric variations vanish on
+exact four-dimensional de Sitter space, and Box R=0. This upgrades the
+earlier trace projection to a conditional **full asymptotic source**.
+It is a one-loop source on the fixed metric, not a self-consistent quantum
+wall/spacetime solution. The identical smooth cap has the same limit:
+the nesting-specific late vacuum offset is zero at the same H.
+
+With the independently supplied ell=10 km, the temperature is
+3.64446440565e-8 K, the stress e-folding interval is 8.33910237995 us,
+and the x=1 excitation/de-excitation ratio is .00186744273171.
+The late one-loop source gives deltaLambda*ell^2=7.62221759052e-80 for
+the supplied G=6.67430e-11 SI, compared with the supplied classical3.
+These are conditional model scales, not comparisons with the sky. After
+one expansion e-fold the two-point and stress *weights* are .0497871 and
+.0183156. Q can vary with conformal time; these weights are not exact
+ratios of arbitrary finite-time readouts. A numerical total error needs
+the inherited norm, input uncertainty and detector switching errors.
+
+### Implementation, checks and next calculation
+
+The [preparation owner](../src/recursive_horizons/nsc_atlas_dirac_preparation.py)
+now transports an arbitrary smooth four-spinor remainder, computes the
+stress asymptotic error from a supplied derivative norm, and evaluates
+the limiting detector shape and physical scales. The
+[clock owner](../src/recursive_horizons/nsc_atlas_nested_spacetime.py)
+uses the regular cap boost through HR=1. The
+[trace owner](../src/recursive_horizons/nsc_atlas_dirac_trace.py)
+reuses its existing curvature calculation for the full late source.
+
+The [independent controls](../tests/test_nsc_atlas_dirac_inheritance.py)
+compare signed-wall normalization, exact full-spinor flat solutions,
+direct curved Dirac energy, the finite derivative bound, conformal kernel
+transformation, KMS shift and detector-contour quadrature, units, and the
+FLRW Ward identity. The [small calculator](../scripts/check_nsc_atlas_dirac_inheritance.py)
+prints only a summary and writes no arrays or result JSON. The shared
+allowance is30 process-CPU seconds for these controls and algebraic
+illustrations; no field grids, P001 evolution or trajectory integration.
+
+This selects a local asymptotic preparation by geometry and inherited
+regularity. It does not select a finite-time ancestor covariance, derive
+the supplied H or explain the classical cap Lambda. The compact-source
+b>0 cap is not conformally flat; its source-induced Psi/Phi does not
+follow by applying this theorem to that metric. A late, conserved compact
+source and its retarded response can use the limiting b=0 state, once its
+physical history is specified. The old pre-existing-mass family still
+needs a compatible finite-time inheritance rule. No further finite-split
+diagnostic campaign follows from this result.

@@ -62,6 +62,36 @@ def reference_bulk_trace_report(radius=.45, *, ell_m=10000.):
         uncertainty_scope='Algebraic curvature coefficient conditional on imported free Dirac theory; supplied G and fiducial length, not a total physical uncertainty or a converged full quantum model.')
 
 
+def inherited_late_cap_vacuum(*,ell_m=10000.,G_SI=6.67430e-11):
+    """Conditional full asymptotic cap source after inherited-state dilution.
+
+    The Dirac owner's late-cap theorem supplies local state convergence;
+    de Sitter symmetry and conservation then turn the existing trace into
+    vacuum-form stress. One free massless four-component Dirac field,
+    fixed renormalized classical Lambda/G, exact quiet b=0 cap. The same
+    H smooth cap has this same limit: this is not a nesting-induced offset
+    or a derivation of the supplied classical cap scale.
+    """
+    ell,G=map(float,(ell_m,G_SI))
+    if not all(math.isfinite(v) and v>0 for v in (ell,G)):
+        raise ValueError('positive finite supplied length and Newton coupling required')
+    trace_shape=dirac_bulk_trace(R=12.,Ricci_squared=36.,Riemann_squared=24.)
+    rho_shape=-trace_shape/4
+    h,c=6.62607015e-34,299792458.
+    lP2=h*G/(2*math.pi*c**3)
+    shape=8*math.pi*rho_shape
+    return dict(trace_times_ell4_over_hbar_c=trace_shape,
+        energy_density_times_ell4_over_hbar_c=rho_shape,
+        pressure_times_ell4_over_hbar_c=-rho_shape,
+        delta_Lambda_times_ell2=shape*lP2/ell**2,
+        delta_Lambda_per_m2=shape*lP2/ell**4,
+        nested_minus_smooth_late_vacuum_source=0.,
+        supplied_inputs=dict(ell_m=ell,G_SI=G,cap_classical_Lambda_times_ell2=3.),
+        scope=('Asymptotic one-loop source for any locally Hadamard inherited '
+            'state on the causally isolating Cauchy ball; unknown finite-time '
+            'memory, compact-source slip and global backreaction remain open.'))
+
+
 def euler_chern_scalar(*, Ktau, Ksphere, intrinsic_acceleration, intrinsic_curvature):
     """4*(J-2*Ghat.K) for induced -dtau^2+R(tau)^2*dOmega^2.
 

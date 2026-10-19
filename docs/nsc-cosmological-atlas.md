@@ -16,7 +16,18 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 18 October 2026
+## Current execution priority — 19 October 2026
+
+Derive preparation from parent--child inheritance before another benchmark.
+The [quiet-cap inheritance theorem](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
+now gives a local late Dirac state, explicit inherited stress decay and a
+detector spectrum on the actual expanding cap. At fixed classical
+couplings its one-loop late source has vacuum form; the same-H smooth
+cap has the identical limit. This settles that conditional asymptotic
+calculation. It leaves the finite-time parent covariance and the
+compact-source b>0 response open. Continue toward an actual conserved
+source history and curved retarded gravitational observable; the quiet
+conformal result is not a b>0 state prescription or a generated cap H.
 
 The three-grid finite-amplitude P001 run has finished. Its mass gap grows
 under refinement, so Step 2 remains open. Keep new P001 grids paused while

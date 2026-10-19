@@ -96,3 +96,26 @@ def central_inward_flash(*, radius, H, beta_minus, Rdot):
             "emitter_local_speed": gamma_v/gamma,
             "cap_clock_origin": "flat-slicing emission event t=0",
             "probe": "inward test flash from material wall to central geodesic"}
+
+
+def expanding_cap_wall_clock(*,radius,H,beta_minus,Rdot):
+    """Future wall clock in a flat expanding de Sitter cap, through HR=1.
+
+    ds2=-(1-H2*R2)dt2-2*HR*dt*dR+dR2, c=1. The supplied signed
+    wall factors must belong to this cap. No wall trajectory is integrated.
+    The clock formula uses the regular local boost, with no division by
+    1-H2*R2; t is central proper time. Its origin is left unspecified.
+    """
+    R,H,beta,speed=map(float,(radius,H,beta_minus,Rdot))
+    if (not all(math.isfinite(x) for x in (R,H,beta,speed)) or R<=0 or H<0
+            or not math.isclose(beta*beta-speed*speed,1-(H*R)**2,
+                rel_tol=2e-13,abs_tol=2e-13*max(1.,beta*beta,speed*speed,(H*R)**2))):
+        raise ValueError('finite wall factors matching the expanding cap required')
+    doppler=(beta+speed)/(1+H*R)
+    if doppler<=0:
+        raise ValueError('wall must lie in the future expanding flat patch')
+    gamma=(doppler+1/doppler)/2
+    return dict(d_cap_time_d_wall_time=gamma,wall_speed_in_cap_time=speed/gamma,
+        local_radial_velocity=(doppler-1/doppler)/(2*gamma),
+        inward_null_speed_in_cap_time=H*R-1,
+        outside_central_horizon=H*R>1)

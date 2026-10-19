@@ -1,9 +1,11 @@
-"""Separate wall-clock and correlated-cylinder state preparations.
+"""Wall-clock/cylinder preparations and the quiet cap's inherited local limit.
 
 The finite clock-energy minimizer and the continuum cylinder parent are
 different candidates. Both reuse the existing field kernel. A finite
 spectral panel does not establish an ultraviolet stress limit; definitions,
 the local continuum proposition and controls live in the Dirac owner.
+The late-cap functions transport arbitrary smooth inherited differences;
+they select no finite-time parent covariance or auxiliary preparation.
 """
 from __future__ import annotations
 
@@ -485,3 +487,118 @@ class PreparedCylinderModes:
         value=pair(plus,minus)
         derivative=(pair(plus_x,minus)-pair(plus,minus_x))/2
         return KSKernelSample(value,derivative,eta,declaration,'radar_cylinder_preparation')
+
+
+def _cap_expansion(efolds,length):
+    raw=np.asarray(efolds)
+    if (raw.dtype.kind not in 'iuf' or not np.isfinite(raw).all()
+            or np.any(raw<0) or isinstance(length,bool)
+            or not np.isscalar(length) or not np.isrealobj(length)
+            or not np.isfinite(length) or length<=0):
+        raise ValueError('nonnegative finite expansion and positive cap length required')
+    n=np.asarray(raw,dtype=float)
+    return n,-float(length)*np.exp(-n)
+
+
+def inherit_cap_two_point(efolds,efolds_prime,smooth_difference,*,length=1.):
+    """Full 4D central spinor difference from inherited conformal Cauchy data.
+
+    N=H*(t-t0), a(t0)=1, eta=-length*exp(-N), c=1. The caller supplies
+    a SMOOTH difference of two admissible inherited two-point kernels on
+    the conformal causal ball, not an angular cutoff or a chosen vacuum.
+    Its four-spinor matrix is expressed in the central parallel tetrad.
+    The owner proves bounded continuation to eta=0 after causal isolation.
+    No bound on the supplied smooth difference is inferred here.
+    """
+    n,eta=_cap_expansion(efolds,length)
+    m,eta_prime=_cap_expansion(efolds_prime,length)
+    n,m,eta,eta_prime=np.broadcast_arrays(n,m,eta,eta_prime)
+    value=np.asarray(smooth_difference(eta,eta_prime),dtype=complex)
+    if value.shape!=n.shape+(4,4) or not np.isfinite(value).all():
+        raise ValueError('finite smooth four-spinor kernel at the supplied paired times required')
+    return np.exp(-1.5*(n+m))[...,None,None]*value
+
+
+def inherit_cap_stress(efolds,conformal_stress,*,length=1.,derivative_bound=None):
+    """Tetrad stress DIFFERENCE and its inherited-memory asymptotic error.
+
+    The caller's flat conformal stress is a real symmetric 4x4 difference
+    from the same massless Dirac action, smooth through eta=0. Local
+    anomaly/counterterm tensors cancel between the two states. Optional M1
+    bounds EACH component's |d Ttilde/d eta| on [-length,0]. The leading
+    approximation error is <= length*M1*exp(-5*N), not a fitted error bar.
+    """
+    n,eta=_cap_expansion(efolds,length)
+    value=np.asarray(conformal_stress(eta))
+    limit=np.asarray(conformal_stress(np.asarray(0.)))
+    for tensor,shape in ((value,n.shape+(4,4)),(limit,(4,4))):
+        if (tensor.shape!=shape or tensor.dtype.kind not in 'iuf'
+                or not np.isfinite(tensor).all()
+                or not np.allclose(tensor,tensor.swapaxes(-1,-2),rtol=1e-12,atol=0)):
+            raise ValueError('finite real symmetric conformal tetrad stress difference required')
+    if derivative_bound is not None:
+        if (isinstance(derivative_bound,bool) or not np.isscalar(derivative_bound)
+                or not np.isrealobj(derivative_bound) or not np.isfinite(derivative_bound)
+                or derivative_bound<0):
+            raise ValueError('nonnegative finite conformal derivative bound required')
+    weight=np.exp(-4*n)[...,None,None]
+    return dict(stress_difference=weight*value,scaled_memory=value,
+        limiting_scaled_memory=limit,leading_stress_difference=weight*limit,
+        component_error_bound=(None if derivative_bound is None else
+            float(length)*float(derivative_bound)*np.exp(-5*n)))
+
+
+def cap_dirac_limit_factor(separation,*,length=1.):
+    """Meromorphic central Dirac two-point scalar factor, dimension L^-3.
+
+    The physical Wightman kernel uses separation s-i0 and its fixed flat
+    spinor prefactor. This calculator evaluates off the poles; it does not
+    replace the distribution by a finite regulator. Its antiperiod is
+    2*pi*i*length. All angular modes are included in the full 4D kernel.
+    """
+    _cap_expansion(0.,length)
+    s=np.asarray(separation,dtype=complex)
+    if not np.isfinite(s).all():
+        raise ValueError('finite complex proper separation required')
+    denominator=2*float(length)*np.sinh(s/(2*float(length)))
+    if np.any(np.abs(denominator)<=16*np.finfo(float).eps*float(length)):
+        raise ValueError('two-point distribution has a pole at this separation')
+    return denominator**-3
+
+
+def cap_dirac_detector_shape(gap_over_hubble):
+    """Stationary-limit scalar-density detector spectrum, overall factor removed.
+
+    x=E/(hbar*c*H). A weak detector coupled to :bar psi psi: has rate
+    proportional to H^5*x*(x^2+1)*(x^2+4)/(exp(2*pi*x)-1). The normalizing
+    positive detector constant is not supplied. This bosonic readout is
+    distinct from the fermionic two-point spectrum. Late-state translation
+    precedes the long, smoothly switched observation limit.
+    """
+    raw=np.asarray(gap_over_hubble)
+    if raw.dtype.kind not in 'iuf' or not np.isfinite(raw).all():
+        raise ValueError('finite real dimensionless detector gaps required')
+    x=np.asarray(raw,dtype=float);a=np.abs(x)
+    # Using a negative exponential avoids overflow at positive detector gap.
+    with np.errstate(over='ignore',invalid='ignore',divide='ignore'):
+        base=a*(a*a+1)*(a*a+4)/(-np.expm1(-2*math.pi*a))
+        result=np.where(x>=0,base*np.exp(-2*math.pi*a),base)
+    result=np.where(a==0,2/math.pi,result)
+    if not np.isfinite(result).all():
+        raise ValueError('detector polynomial exceeds floating-point range')
+    return result
+
+
+def cap_inheritance_scales(length_m):
+    """Conditional SI scales for the supplied quiet cap H=1/length.
+
+    The metre ruler is an input. Planck and Boltzmann constants and c use
+    their exact SI definitions. No H, Lambda or parent state is calibrated.
+    """
+    _cap_expansion(0.,length_m)
+    c,h,kB=299792458.,6.62607015e-34,1.380649e-23
+    length=float(length_m);hbar=h/(2*math.pi)
+    return dict(length_m=length,temperature_K=hbar*c/(2*math.pi*kB*length),
+        expansion_time_s=length/c,stress_decay_time_s=length/(4*c),
+        kms_time_s=2*math.pi*length/c,gap_unit_J=hbar*c/length,
+        excitation_to_deexcitation_at_unit_gap=math.exp(-2*math.pi))

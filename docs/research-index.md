@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [parent--child inheritance calculation](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
+now connects the actual quiet wall's future to a universal local late
+Dirac state, a stress-memory bound and a defined detector spectrum.
+It reuses the existing trace for a full asymptotic vacuum source at fixed
+classical couplings. The same-H smooth cap has the same limit; finite-time
+preparation, compact-source slip and the origin of the cap scale remain
+open. The source reading and seven controls are linked from that owner.
+
 The [atlas programme](nsc-cosmological-atlas.md) owns the eight linked research
 questions and their [prerequisites, decisions and unlocks](nsc-cosmological-atlas.md#programme-dependencies).
 The [signal-origin cycle](nsc-cosmological-atlas.md#signal-origin-cycle) now

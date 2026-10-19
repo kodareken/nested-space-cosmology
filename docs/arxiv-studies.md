@@ -8,6 +8,29 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Quiet-cap inherited state and detector, 19 October 2026
+
+- [Louko and Toussaint,1608.01002v2](https://arxiv.org/pdf/1608.01002):
+  sections2 and3.2, equations2.1--2.5,3.21--3.25 and Theorem1 inspected.
+  Reuse the weak scalar-density detector and its distributional/Wick
+  formulation. The detector has a bosonic Planck factor, distinct from
+  the Dirac field's fermionic two-point spectrum. The NSC owner derives
+  its central sinh^-6 kernel and Fourier polynomial independently, then
+  checks the transform by a nonsingular contour quadrature. The source's
+  later cylindrical examples are not imported as the parent state.
+- [Hollands,1010.5367](https://arxiv.org/abs/1010.5367): abstract-level
+  comparison with quantum no-hair for scalar correlations. No interacting
+  scalar theorem is substituted for the massless Dirac proof here.
+
+The inherited-state limit and its decay mechanism are conformal-field and
+de Sitter mathematics with prior literature. The project connection is
+the actual sourced wall's future causal isolation, the full four-spinor
+inheritance bound, and its relation to the already calculated cap trace.
+The [Dirac owner](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
+states the regularity and finite-time limits. This proof does not establish
+that an arbitrary state transmitted through the entire material wall is
+Hadamard on the later Cauchy ball; that remains its explicit input.
+
 The question is a nested spherical geometry. Structure that one region does not resolve can still leave a local response, and the same relation can recur across scales. The candidate geometry that would enclose a region is a sphere. That is the picture under test. It is not an observation, and it is not a settled theory. The owning note keeps the method, the domain, and the evidence. [Scientific framing](instructions.md#scientific-framing-and-authority) remains the authority.
 
 An enclosing region and its interior can be studied through their coupled

@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 18 October 2026
+Working research manuscript, 19 October 2026
 
 ## Abstract
 
@@ -1832,6 +1832,113 @@ preparation. It does not evaluate it or provide a numerical tail constant.
 The full vacuum $\Psi/\Phi$, wall renormalization and physical selection
 of the preparation remain separate work. No astronomical measurement
 sets this root radius, switch, state or resulting numerical coefficients.
+
+### 6.1.20. Inherited preparation and the cap's local late state
+
+Derive the state transport before choosing another parent benchmark. A
+complete ancestral covariance is inherited as $C_c=K C_aK^\dagger$, with
+$KK^\dagger=I_c$ for current-normalized restriction and evolution.
+Both incoming null branches, their cross-correlation and $I-C_a$ are
+transported. A change of null clock carries a square-root Jacobian on
+each kernel argument. Finite unitary transport does not select $C_a$.
+
+The actual quiet cap nevertheless selects a local asymptotic state.
+Keep $M_-=0$, $H\ell=1$, $M_+/\ell=.4$, $k_{\rm wall}\ell=2$, and the
+transparent massless Dirac probe. In $\ell$ units its signed wall obeys
+
+$$
+\beta_-=\frac{3R}{4}+\frac{1}{5R^2},\qquad
+\dot R^2=\frac{25R^2}{16}-1+\frac{3}{10R}+\frac{1}{25R^4}.
+$$
+
+This positive expanding root reaches $R>1$ in finite wall and central
+cap time. In the expanding flat cap chart its regular clock is
+$dt/d\tau=(1+\dot R^2)/(\beta_-+R\dot R)$; at $R=1$ it equals $761/760$.
+After that crossing choose a Cauchy ball of physical radius
+$H^{-1}<R_B<R_w$. Its conformal future contains a neighborhood of the
+central endpoint at $\eta=0$, with a positive spatial margin. The future
+timelike wall remains outside that null domain.
+
+**Inherited-state proposition.** Suppose the inherited field state is
+Hadamard on a neighborhood of this closed ball. For Gaussian detector
+correlations take a gauge-invariant quasifree state. In each fixed
+translated central proper-time window, its full four-component two-point
+function approaches the conformal de Sitter one. Parent-dependent stress
+has a decaying amplitude, rather than a new freely chosen root state.
+
+**Proof.** Set the cut to $t=0$, $a=e^{Ht}$ and $\eta=-H^{-1}e^{-Ht}$.
+The conformal field $\widetilde\psi=a^{3/2}\psi$ satisfies the flat
+massless Dirac equation. Subtract the conformal Minkowski two-point
+function as a proof reference. Its Cauchy-data difference is smooth.
+Cut off both arguments inside a smaller ball still larger than $H^{-1}$
+and evolve with the flat Dirac propagator. Finite propagation and the
+strict margin extend this smooth difference through a neighborhood of
+the virtual endpoint. No condition at a physical infinity is added.
+
+The physical two-point difference is $a^{-3/2}a'^{-3/2}F(\eta,\eta')$,
+with $F$ smooth and bounded there, so it decays as $e^{-3HT}$ under a
+common time translation $T$. The same-action tetrad stress difference is
+
+$$
+\Delta T_{\hat a\hat b}=e^{-4Ht}Q_{\hat a\hat b}(-H^{-1}e^{-Ht}),
+\qquad
+\left|\Delta T_{\hat a\hat b}-e^{-4Ht}Q_{\hat a\hat b}(0)\right|
+\leq \frac{M_1}{H}e^{-5Ht}.
+$$
+
+Here $M_1$ bounds the corresponding conformal-time derivative; anomaly
+and local curvature ambiguities cancel in the state difference.
+The amplitude $Q(0)$ and its bound are inherited data. This proves a
+local limit and a finite conditional error, without asserting equal
+finite-time states or loss of global unitary information. The
+[complete proof and calculator](../docs/nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
+give the wall positivity and domain argument.
+
+On the central geodesic the limiting Dirac kernel's scalar factor is
+$[H/(2\sinh(H(s-s'-i0)/2))]^3$. Its imaginary-time antiperiod is
+$2\pi/H$. A weak scalar-density detector coupled to $:\bar\psi\psi:$
+has a bosonic bilinear kernel with power six, giving, up to one positive
+detector constant,
+
+$$
+\mathcal R(x)=\frac{x(x^2+1)(x^2+4)}{e^{2\pi x}-1},\qquad
+x=\frac{E}{\hbar cH},\qquad
+\frac{\mathcal R(x)}{\mathcal R(-x)}=e^{-2\pi x}.
+$$
+
+The polynomial follows independently by shifting the Fourier contour
+to a nonsingular $\cosh^{-6}$ integral. Late-state translation precedes
+the long smooth observation limit; finite switching does not have the
+exact stationary ratio. Detector statistics and the conformal/no-hair
+mechanism have [prior literature](../docs/arxiv-studies.md#quiet-cap-inherited-state-and-detector-19-october-2026).
+The project result connects them to this sourced wall's causal future.
+
+Finally the existing cap trace, $A=-11\hbar cH^4/(240\pi^2)$, now has a
+full asymptotic stress interpretation. Homogeneity, isotropy and
+conservation give $-\rho+3p=A$ and $\dot\rho+4H\rho=-HA$.
+The radiation constant decays as $a^{-4}$, leaving, at fixed renormalized
+classical $\Lambda$ and $G$,
+
+$$
+\langle T_{\mu\nu}\rangle_{\rm late}
+=-\frac{11\hbar cH^4}{960\pi^2}g_{\mu\nu},\qquad
+\delta\Lambda\ell^2=\frac{11}{120\pi}\frac{\ell_P^2}{\ell^2}.
+$$
+
+For the supplied $\ell=10$ km ruler this is $7.62221759052\times10^{-80}$;
+the temperature is $3.64446440565\times10^{-8}$ K and the stress
+e-folding interval is $8.33910237995$ microseconds. At $x=1$ the
+detector ratio is $0.00186744273171$. These are conditional model
+scales, with no observational calibration. Seven new independent controls
+pass, including the separate detector integral and the FLRW Ward identity.
+
+The same smooth cap has the same late state and source: the late
+nesting-specific vacuum offset is zero at fixed $H$. This does not
+generate the supplied classical cap scale or solve quantum wall
+backreaction. Regularity of a fully transmitted inherited state on the
+later ball remains a hypothesis. The compact-source $b>0$ cap is not
+conformally flat; its finite-time state and $\Psi/\Phi$ require their
+own compatible source history and retarded response.
 
 ### 6.2. The retained local incoming gate
 

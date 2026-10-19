@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-19.1` adds Section6.1.20: the actual quiet wall's causal
+isolation and a local late-state theorem from inherited Hadamard data.
+The full four-spinor kernel, stress memory bound and scalar-density
+detector spectrum are calculated. The previous trace now fixes a full
+asymptotic one-loop vacuum source at fixed classical couplings. Its
+nesting-specific offset against the same-H smooth cap is zero; the
+finite parent state, compact-source slip and origin of H remain open.
+
 Revision `2026-10-18.14` adds Section5.2: an explicit volume-weighted
 action, its lapse/scale pressure variation and a calibrated dynamic root
 observable. The positive field sector fails vacuum form at every inherited

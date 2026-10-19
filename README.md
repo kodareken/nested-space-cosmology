@@ -21,6 +21,13 @@ living manuscript, and the actual exterior causal boundary response is now
 implemented. A full cosmological Lambda still requires the physical reduction
 and its remaining state or averaging assumptions.
 
+The [inheritance derivation](docs/nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
+now selects one local late Dirac state in the actual quiet expanding cap,
+conditional on regular inherited Cauchy data. It gives a detector spectrum
+and a full asymptotic one-loop vacuum source. The same smooth cap has the
+same limit; finite-time preparation, compact-source slip and the origin of
+the supplied cap scale remain open.
+
 The first [supernova distance comparison](docs/schur-memory.md#a-distance-observable-for-the-lambda-target)
 now calculates an observer statistic from 596 light curves and their full
 published covariance. The exact quiet-cap prediction does not match that
