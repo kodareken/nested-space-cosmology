@@ -1,5 +1,15 @@
 # Current NSC claim ledger
 
+The [physical radar/clock theorem](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+now reconstructs a declared quiet cap and its membrane combinations from
+calibrated clocks, then predicts a later received frequency. Both existing
+states recover the common tension. The finite prediction distinguishes a
+changed material law; cap-side clocks cannot distinguish identical a,c
+branches or identify a general angular-radius function. Input-box bounds
+are conditional synthetic instrument assumptions. This is a measured-lapse
+and junction-law connection, not generation of the cap scale or a common
+parent history.
+
 Two constructive connections are now derived in their explicit models:
 the [scale-free spectral inverse and held-out coefficient](nsc-infinite-inheritance.md#a-scale-free-inverse-of-the-inherited-geometry),
 and [associative geometric composition with its time balance](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response).

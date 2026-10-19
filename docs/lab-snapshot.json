@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+  "current_receipt_commit_parent": "374a11d0debd45e88deb254189c923c87de46f0a",
   "files": [
     {
       "bytes": 3120,
@@ -41,11 +41,11 @@
     },
     {
       "bytes": 1266,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "CITATION.cff",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "cbfe1dc5d61e466a252a5e5992a01984dd145c5417849e800351fe6b158734ab"
+      "sha256": "3de996ba10756821018fb48ee1ccbf125b3e0ecd5ae89180244fb8716167f8a9"
     },
     {
       "bytes": 5974,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 15142,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 15634,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "aa7ccb83aa0066802be7a54ea2e4d179ac79f4c86cbc293bcd95ba74b155e376"
+      "sha256": "6563e7cd557791abb1383686e16d0dec96497d843430e73d0cb49162601b5c09"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 271400,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 271995,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "b2a12ee88a1b569b54cba915a7fa30f2e79c7c659f91e13f90e62745dc41e4ca"
+      "sha256": "f94b92059e3463c5f370b36bb5e307a329716baa0faee866f9e3b56e910de1fc"
     },
     {
       "bytes": 107912,
@@ -10312,9 +10312,9 @@
       "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
-      "bytes": 103433,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 104071,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "import_bytes": 102088,
       "import_sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a",
       "migration_disposition": "active_owner",
@@ -10322,15 +10322,15 @@
       "original_path": "lab/docs/claim-ledger.md",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
-      "sha256": "196dc89c42f9ae4137d23b920e5f7fbad5a0c2a13ddb8f72fb903166db147c07"
+      "sha256": "5599b96dda0b9bb610304bfba1b09bfb2f4c84b343609abf985f40f351781dcc"
     },
     {
-      "bytes": 434770,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 436293,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ea69f4261facaeedc32525d860017fcf0b601173b720f1da8e1fe29b1fd4a00e"
+      "sha256": "176bacfb4099e742309cb001f5ddec1d6b326770cc9ce1655193e9cb8137447a"
     },
     {
       "bytes": 336399,
@@ -10479,6 +10479,14 @@
       "sha256": "8528a6a5c0100359557cd16b1e53e94fe1b28da0740aff012c0ded19e124dcae"
     },
     {
+      "bytes": 21766,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
+      "path": "docs/nsc-atlas-observer-inference.md",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "9e0431eb9637240129cbee75c66c12d9245330acdb44889f93a49fc6ecfa8aa5"
+    },
+    {
       "bytes": 9716,
       "path": "docs/nsc-atlas-wall-mass-closure.md",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
@@ -10514,15 +10522,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 64867,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 66416,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "21670a3024f7097c7b593bda1c5e4b1846d657131e79f097aa6e32a2cee81cce"
+      "sha256": "9fb99785b690908652830d6b3c0fac24a1194f72a3b7880255aad4d377c1b0e6"
     },
     {
       "bytes": 30876,
@@ -11474,12 +11482,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 17325,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 17764,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "cdb5f064da714238ed8e112ecff24fc2aa78824191737c5939b1ec08b8553900"
+      "sha256": "8b82631ebaf124dab58988e4d8afd7c7ada376fbd00813af906961dc4cea6784"
     },
     {
       "bytes": 9302,
@@ -11490,12 +11498,12 @@
       "sha256": "2de9c90a1995f51dada247d902553e3f1f3b7778649f8f1450a605aefa7e7b03"
     },
     {
-      "bytes": 571520,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 573516,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "19785d35e4bbd3c3229733d934e2acb93a430c75b60b6da6bb0613f793b4520b"
+      "sha256": "fce4c1eed12d23303b688dd99cd24cd67fffc302bd4915de285993bb9f5d4b37"
     },
     {
       "bytes": 6705,
@@ -11504,20 +11512,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 209847,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 210970,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "34affcc4a8c8c95c5b04351d2775b812b8960694c45a273ec8af5a8165c33995"
+      "sha256": "3d3302443bfe3f42234114eed1ae6e1db4e271631a83e82250245758b9a04e0c"
     },
     {
-      "bytes": 33265,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 33672,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "b0b57c4ec03d424eef83d8ceca9ffd55fcf8b3c25b499c2a060e3b411d2a8184"
+      "sha256": "de8bc9e29705e61319d57e867d5c9085ddd5c3187535d9646a2e096fec51d45b"
     },
     {
       "bytes": 18356,
@@ -11586,28 +11594,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 23957,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 24120,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "fae86161b21852fb1df595854787c69d2b796dc8f36116632303a00debdf3822"
+      "sha256": "345a190ed00073f6a0420080ab81d2dbe4bb31acd3233158a099e4edd2a73a12"
     },
     {
       "bytes": 3206,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "aecda7c46703f5babbd7ebc528af3e2eaf3e80282be5206e7f735715d9a3bdd9"
+      "sha256": "3653852207035b8e840fcbd87634452ea6efd0705d8292e439eccb193ebd7500"
     },
     {
-      "bytes": 26899,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 27047,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "6e9bdd097371bf2507e5f357ccb8a51f6a1ed358d08bb9aa3cc6e3826c0b1113"
+      "sha256": "504f4c87defe56464a90e41f8e5b605b75728beba49d61c30b6d16741fcebfe8"
     },
     {
       "bytes": 226492,
@@ -11619,27 +11627,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "3b31fac6647177b691213deb5aa902d6b6fe381b0377dd9e28d8e5a002e71da4"
+      "sha256": "2d0d4465ff40d1ddf224cd020b53444000ba6f25a718320e014e2c65a89af5ab"
     },
     {
-      "bytes": 227618,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 232383,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7ec4fac3e00b1ac47c4381dd39ccfa13f57001dba1c577d509141afc6ece7269"
+      "sha256": "cf86491f9b370d3286ae9d651c110afe852eba4e71f0a76e5a8f352ffc2214d2"
     },
     {
-      "bytes": 4668691,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 4726790,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d8771e745373d1b9903a85b31fa341007ae9ed5a14ee36025e042d63f01a680d"
+      "sha256": "cd8ff3de0192a45b8500c4d24d6fe6bfbc6a7e2b5090c4da43fd6e83f79a0c04"
     },
     {
       "bytes": 3283,
@@ -30352,6 +30360,14 @@
       "sha256": "656b489f65623303cf4b18891b7bb496a5dc00678fe60bfc77c00861abb32316"
     },
     {
+      "bytes": 8282,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
+      "path": "results/summaries/nsc-atlas-radar-inverse-v1.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "a91459e69e5cfab2c273da1c7a2d6d979f06fac3809c2ef7f89f42cb4b05938f"
+    },
+    {
       "bytes": 13822,
       "change": "Record certified whole-cell reference wall and clock coefficients.",
       "changed_from_commit": "81b01709e813debba7c3dbb4c458a5dd97e8f1ff",
@@ -30729,6 +30745,14 @@
       "path": "scripts/check_nsc_atlas_quiet_source_front.py",
       "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
       "sha256": "ecf8bdedae17d7816708debcb8c400af94e3a8bf4f6ca27ff32a514fa677d1e5"
+    },
+    {
+      "bytes": 10291,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
+      "path": "scripts/check_nsc_atlas_radar_inverse.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "8e53ef973dfc3b7838f5784e0e8ad07a29d43eec64469f795534d822e0cac412"
     },
     {
       "bytes": 3175,
@@ -34443,12 +34467,12 @@
       "sha256": "fcd9f7b70046c215bd06cd2a78fd94aa40b0adb78290e889729a9b4cfb05df45"
     },
     {
-      "bytes": 5795,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "40461561ad15bb4dc9d1d746ee0c9333bfb020c1",
+      "bytes": 12494,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "src/recursive_horizons/nsc_atlas_nested_spacetime.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "3113d59d8cb99fc5e10c7ab5f688938c65178d86df6560ad8415f81875e1bf4d"
+      "sha256": "a6788bc42cbd82383e37d7a0c770e238e7adf1c5118f0ea99eeb7dc89665a29b"
     },
     {
       "bytes": 3168,
@@ -38659,12 +38683,12 @@
       "sha256": "08b209f35731df7e14b3279caf3f69a08ea2afe6aace6b3ce3bec2f9989110fc"
     },
     {
-      "bytes": 4444,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "69ac1279395903ee403da369b5db58a6ed850616",
+      "bytes": 12960,
+      "change": "Derive the radar/clock metric readout and quiet-wall inverse, with finite predictions and checked manuscript.",
+      "changed_from_commit": "374a11d0debd45e88deb254189c923c87de46f0a",
       "path": "tests/test_nsc_atlas_nested_spacetime.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "8909ec955ebed2ef282fe5b1152a02e288545a8760632ec43df0e26c94edb80b"
+      "sha256": "1335b8f3c2703ab72bf93207ddafa9afbc9c5b19c43af8ea368ae63e8309c21e"
     },
     {
       "bytes": 3969,

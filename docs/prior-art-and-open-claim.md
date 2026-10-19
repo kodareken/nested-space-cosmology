@@ -1,5 +1,38 @@
 # Prior art and admission of new research
 
+## Physical radar/clock reconstruction, 19 October 2026
+
+Connect the actual quiet cap/wall action to an identifiable observer
+readout, rather than adding an abstract response coefficient. Re-derive
+radial radar times from the metric and differentiate the existing signed
+wall law. A central clock, negligible ideal transponder and calibrated
+proper wall clock give radar distance, echo stretch, one-way redshift and
+its receiver-time drift. Unknown source gain, delay or clock variation is
+not silently fitted. The bulk scalar remains quiet and transparent.
+
+Use the existing one-level state H=1,k=2,M=.4 at R=.5 and the nested inner
+state H=1,k=2,M=.01,H_host=1 at R=.8, in ell units. Reconstruct the cap
+curvature and junction combinations from the first event. Predict the
+redshift after receiver interval .04*ell/c, with no additional calibration.
+The fiducial ruler remains ell=10000m. Check a 100ppm independent input
+box as an explicitly assumed instrument bound, not an observational error.
+
+Extend the existing nested-spacetime component and observer-inference
+owner. Independent static-metric/null and proper-time ODE derivations,
+symbolic drift algebra, flat/contracting/unit limits, positive-root
+degeneracy, interval enclosures and a changed-material-law counterexample
+have 60 CPU seconds. The two finite applications have 30 CPU seconds and
+at most 10000 scalar evaluations; compare fixed 32/64 Gauss rules with an
+independent proper-time integration. Save only scalar summaries and hashes.
+No field grids, cosmological fit or new parent state are admitted.
+
+Stop a readout at a lost static-cap domain or incompatible clock data;
+retain every positive tension branch instead of selecting one by hand.
+Failure of a finite-time prediction tests the quiet metric/material law.
+It does not authorize changing the source or reopening a cap solver. A
+successful inverse measures a supplied cap curvature; it does not generate
+that curvature or complete the missing cosmological parent.
+
 ## Compositional gravity and its time balance, 19 October 2026
 
 Rethinking the route compares direct global spacetime gluing, curved quantum

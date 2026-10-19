@@ -1,0 +1,218 @@
+{
+  "schema": "nsc-atlas-radar-inverse-v1",
+  "cases": {
+    "one_level": {
+      "inputs": {
+        "R_over_ell": 0.5,
+        "H_ell": 1.0,
+        "k_ell": 2.0,
+        "M_over_ell": 0.4,
+        "host_H_ell": 0.0,
+        "scalar_state": "quiet"
+      },
+      "first_event_clocks": {
+        "radar_distance": 0.5493061443340549,
+        "one_plus_redshift": 2.6254920116179066,
+        "echo_stretch": 5.16990622730208,
+        "log_redshift_rate": -0.4331584286520973,
+        "send_clock_rate": 0.5078413217154273,
+        "receive_clock_rate": 2.6254920116179066,
+        "cap_lapse_squared": 0.75,
+        "scope": "Calibrated test clocks on a quiet cap; no uncalibrated source inverse."
+      },
+      "model_independent_radial_readout": {
+        "radial_metric_factor": 0.7499999999999999,
+        "centre_clock_rate": 1.5666666666666669,
+        "radar_distance_rate": 1.0588253449512397,
+        "radar_velocity": 0.6758459648624933,
+        "scope": "Measured radial metric on the beacon, not a full spacetime or angular-radius reconstruction."
+      },
+      "inferred_geometry": {
+        "H": 1.0000000000000002,
+        "radius": 0.5,
+        "Lambda_cap": 3.0000000000000018,
+        "beta_minus": 1.175,
+        "Rdot": 0.7941190087134296,
+        "beta_radius": -2.45,
+        "mass_over_tension": 0.20000000000000004,
+        "junction_radius_coefficient": 0.75,
+        "cap_lapse_squared": 0.7499999999999999,
+        "scope": "Conditional quiet-cap inverse; Lambda_cap is reconstructed, not generated."
+      },
+      "junction_branches": [
+        {
+          "tension": 2.0,
+          "mass": 0.4000000000000001,
+          "host_H": 0.0
+        }
+      ],
+      "assumed_100ppm_clock_box": {
+        "H_squared": [
+          0.9987079956423882,
+          1.0012925698792277
+        ],
+        "Lambda_cap": [
+          2.9961239869271648,
+          3.003877709637683
+        ],
+        "radius": [
+          0.49990193715976566,
+          0.5000980806974467
+        ],
+        "cap_lapse_squared": [
+          0.7497750374947506,
+          0.7502250375052505
+        ],
+        "scope": "Conditional analytic input-box bounds evaluated in float64; no observational calibration."
+      },
+      "SI": {
+        "length_metres": 10000.0,
+        "radar_one_way_time_seconds": 1.8322880702157454e-05,
+        "log_redshift_rate_per_second": -12985.763002902988,
+        "inferred_cap_Lambda_per_metre_squared": 3.000000000000002e-08,
+        "assumed_cap_Lambda_range_per_metre_squared": [
+          2.9961239869271645e-08,
+          3.003877709637683e-08
+        ]
+      },
+      "held_out_reception": {
+        "receiver_interval_over_ell": 0.04,
+        "receiver_interval_seconds": 1.3342563807926082e-06,
+        "predicted_radius_over_ell": 0.5119302173564618,
+        "predicted_one_plus_redshift": 2.5846610224936684,
+        "independent_proper_time_solution": {
+          "radius": 0.5119302173564616,
+          "one_plus_redshift": 2.584661022493665,
+          "wall_proper_interval": 0.015359448333860087,
+          "receiver_event_residual": 1.457167719820518e-16,
+          "normalization_residual": -8.881784197001252e-16,
+          "temporal_drift_check": 1.3467560400215461e-12,
+          "positive_wall_surface_density": true,
+          "scalar_evaluations": 34
+        },
+        "quadrature_64_minus_32": {
+          "radius": 0.0,
+          "one_plus_redshift": 0.0
+        },
+        "independent_radius_gap": 2.220446049250313e-16,
+        "independent_redshift_gap": 3.552713678800501e-15,
+        "counterexample_redshift_gap": 0.00024139530453526348,
+        "counterexample_positive_surface_density": true
+      },
+      "limits": "Synthetic quiet model and ideal clocks; supplied curvature is recovered, not generated. No observed Lambda or total physical error inferred."
+    },
+    "nested_inner": {
+      "inputs": {
+        "R_over_ell": 0.8,
+        "H_ell": 1.0,
+        "k_ell": 2.0,
+        "M_over_ell": 0.01,
+        "host_H_ell": 1.0,
+        "scalar_state": "quiet"
+      },
+      "first_event_clocks": {
+        "radar_distance": 1.0986122886681098,
+        "one_plus_redshift": 3.7463933761061208,
+        "echo_stretch": 5.052766798271452,
+        "log_redshift_rate": 1.0617100372462935,
+        "send_clock_rate": 0.7414538461161041,
+        "receive_clock_rate": 3.7463933761061208,
+        "cap_lapse_squared": 0.3599999999999999,
+        "scope": "Calibrated test clocks on a quiet cap; no uncalibrated source inverse."
+      },
+      "model_independent_radial_readout": {
+        "radial_metric_factor": 0.3599999999999998,
+        "centre_clock_rate": 2.2439236111111125,
+        "radar_distance_rate": 1.5024697649950083,
+        "radar_velocity": 0.6695725993323979,
+        "scope": "Measured radial metric on the beacon, not a full spacetime or angular-radius reconstruction."
+      },
+      "inferred_geometry": {
+        "H": 1.0,
+        "radius": 0.8,
+        "Lambda_cap": 3.0,
+        "beta_minus": 0.8078125,
+        "Rdot": 0.5408891153982027,
+        "beta_radius": 0.9804687500000001,
+        "mass_over_tension": 0.0049999999999999776,
+        "junction_radius_coefficient": 1.0,
+        "cap_lapse_squared": 0.3599999999999998,
+        "scope": "Conditional quiet-cap inverse; Lambda_cap is reconstructed, not generated."
+      },
+      "junction_branches": [
+        {
+          "tension": 2.0,
+          "mass": 0.009999999999999955,
+          "host_H": 1.0
+        }
+      ],
+      "assumed_100ppm_clock_box": {
+        "H_squared": [
+          0.9994587675800026,
+          1.0005414470337572
+        ],
+        "Lambda_cap": [
+          2.9983763027400077,
+          3.0016243411012717
+        ],
+        "radius": [
+          0.7998509767388017,
+          0.8001490485091627
+        ],
+        "cap_lapse_squared": [
+          0.35989201799748016,
+          0.3601080180025201
+        ],
+        "scope": "Conditional analytic input-box bounds evaluated in float64; no observational calibration."
+      },
+      "SI": {
+        "length_metres": 10000.0,
+        "radar_one_way_time_seconds": 3.664576140431491e-05,
+        "log_redshift_rate_per_second": 31829.26617493379,
+        "inferred_cap_Lambda_per_metre_squared": 3e-08,
+        "assumed_cap_Lambda_range_per_metre_squared": [
+          2.998376302740008e-08,
+          3.0016243411012716e-08
+        ]
+      },
+      "held_out_reception": {
+        "receiver_interval_over_ell": 0.04,
+        "receiver_interval_seconds": 1.3342563807926082e-06,
+        "predicted_radius_over_ell": 0.8057415174324085,
+        "predicted_one_plus_redshift": 3.908526344731711,
+        "independent_proper_time_solution": {
+          "radius": 0.8057415174324085,
+          "one_plus_redshift": 3.908526344731711,
+          "wall_proper_interval": 0.01045374762659974,
+          "receiver_event_residual": -1.8735013540549517e-16,
+          "normalization_residual": 0.0,
+          "temporal_drift_check": 2.2922552744830682e-11,
+          "positive_wall_surface_density": true,
+          "scalar_evaluations": 34
+        },
+        "quadrature_64_minus_32": {
+          "radius": 0.0,
+          "one_plus_redshift": 0.0
+        },
+        "independent_radius_gap": 0.0,
+        "independent_redshift_gap": 0.0,
+        "counterexample_redshift_gap": 0.00011630562296449654,
+        "counterexample_positive_surface_density": true
+      },
+      "limits": "Synthetic quiet model and ideal clocks; supplied curvature is recovered, not generated. No observed Lambda or total physical error inferred."
+    }
+  },
+  "counts": {
+    "scalar_evaluations": 1480,
+    "new_field_grids": 0,
+    "P001_evolutions": 0
+  },
+  "process_cpu_seconds": 0.0,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_nested_spacetime.py": "a6788bc42cbd82383e37d7a0c770e238e7adf1c5118f0ea99eeb7dc89665a29b",
+    "src/recursive_horizons/nsc_atlas_nested_slice.py": "fcd9f7b70046c215bd06cd2a78fd94aa40b0adb78290e889729a9b4cfb05df45",
+    "scripts/check_nsc_atlas_radar_inverse.py": "8e53ef973dfc3b7838f5784e0e8ad07a29d43eec64469f795534d822e0cac412",
+    "tests/test_nsc_atlas_nested_spacetime.py": "1335b8f3c2703ab72bf93207ddafa9afbc9c5b19c43af8ea368ae63e8309c21e"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_radar_inverse.py"
+}

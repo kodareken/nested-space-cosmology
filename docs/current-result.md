@@ -1,5 +1,27 @@
 # What the calculations show
 
+The [physical radar/clock inverse](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+connects actual cap geometry, its signed membrane law and central
+observations. Echo stretch K and calibrated wall redshift Z give the
+radial radar metric C=K/Z^2, including time-dependent geometries. This
+measures the transponder's worldline; the angular radius and wider metric
+remain separate. The declared vacuum-cap inverse recovers H, areal radius and
+wall motion; redshift drift then gives M/k and the curvature/tension
+combination. An independently specified host permits every positive
+tension branch, rather than an assumed unique result.
+
+Both existing quiet states recover H*ell=1,k*ell=2 and their supplied
+host masses .4*ell and .01*ell. After .04*ell/c of receiver time, the
+nested clock prediction is Z=3.90852634473171. At ell=10km this is
+1.33425638079 microseconds. Independent proper-time and 80-digit controls
+agree. A changed material law preserves all initial readouts but fails
+this finite consequence. An assumed 100ppm D,Z,K box bounds the inner
+Lambda_cap*ell^2 by [2.99837630274001,3.00162434110127]; this reconstructs
+the supplied cap curvature, not its origin or an observed cosmological
+Lambda. The [compact evidence](../results/summaries/nsc-atlas-radar-inverse-v1.json)
+uses 1480 scalar evaluations and no field grids. The 60 focused checks
+and 35 existing waveform-inverse controls pass.
+
 The new [composition and time-balance proof](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
 connects hierarchical geometry, its averaged Hamiltonian and the expansion
 diagnostic. For the existing cap/host/exterior partition, the required
@@ -82,7 +104,7 @@ numbers. With b,L and the forcing independently known, the strictly
 decreasing response formula identifies q. A spacetime/source identification and observational tests
 remain required for the cosmological claims.
 
-Current research, 19 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-19.2`, integrates the scale-free inverse and held-out coefficient in Section5.3 and compositional gravity/time balance in Section6.1.21. It retains the inherited local state, detector and late vacuum source in Section6.1.20, the infinite inherited-law theorem, volume action, actual curved Dirac work and archived P001 diagnosis. Compact-source quantum slip and the physical parent history remain uncomputed. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 19 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-19.3`, adds the physical radar/clock inverse and finite membrane-law prediction in Section10.4. It integrates the scale-free inverse and held-out coefficient in Section5.3 and compositional gravity/time balance in Section6.1.21. It retains the inherited local state, detector and late vacuum source in Section6.1.20, the infinite inherited-law theorem, volume action, actual curved Dirac work and archived P001 diagnosis. Compact-source quantum slip and the physical parent history remain uncomputed. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology; [the catalog](../paper/catalog.json) owns publication status.
 
 ## An explicit correlated parent state and local Dirac subtraction
 

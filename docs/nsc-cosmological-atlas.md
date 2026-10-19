@@ -18,6 +18,29 @@ starting a derivation.
 
 ## Current execution priority — 19 October 2026
 
+**Next connection, radar and wall clocks.** The broad follow-up compared a
+common-parent evolution, continuum inherited propagation, another quiet
+vacuum reduction, and a physical observer inverse. The first needs an
+unspecified parent state; an abstract response inverse still lacks its
+spacetime identification. Develop the fourth route on the existing quiet
+cap/wall geometries: central send/receive times, a calibrated wall clock
+and redshift drift recover the radial metric on the observed wall, even
+for time-dependent geometry, then test the declared cap/junction law.
+This introduces a test transponder and four readout quantities, not a new
+bulk state, coupling or reflective field boundary. The transponder's
+calibration is explicit; an arbitrary unknown source is not inverted.
+
+Complete: the preceding composition/time balance, the physical radar/clock
+inverse, its two finite receiver-time predictions and the common inferred
+membrane law. The [observer owner](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+states the host/metric ambiguities and conditional input bounds. The
+changed-material counterexample passes the first readout and fails the
+later prediction. The checked result and compact evidence are integrated
+in manuscript revision `2026-10-19.3`, Section 10.4. Its 73-page PDF builds
+and the new pages pass visual inspection. Next physical connection: the parent history or
+a physical inherited response operator. No P001 grid or additional
+quiet-limit precision campaign follows from this task.
+
 **Rethinking decision.** The repeated quiet-limit checks fixed much of
 their answer in advance. Direct global gluing, curved quantum feedback,
 spectral inverse response and hierarchical composition were compared.

@@ -2489,6 +2489,107 @@ scale are explicit inputs. The result supplies a conditional measurable
 relation, not an observation of this emitter or an outer-wall signal
 through the host bridge.
 
+### 10.4. Radar and a wall clock recover a physical junction
+
+<!-- nsc-claim:atlas-radar-clock-inverse -->
+
+The atlas now has a geometry inverse using an ideal negligible transponder
+and a calibrated proper clock on its quiet membrane. A central clock sends
+a radial pulse at t_minus and receives its immediate return at t_plus.
+The transponder is a test device; the scalar's transparent boundary law
+is unchanged. Work inside the static cap, where f=1-H^2*R^2>0 and
+the optical radius is r_star=artanh(HR)/H. In central proper time T,
+the reflection event obeys t_minus=T-r_star and t_plus=T+r_star.
+
+Let D be half the round-trip interval, Z=dt_plus/dtau the calibrated
+wall-clock redshift, K=dt_plus/dt_minus the echo stretch, and
+s=d(log Z)/dt_plus its local receiver-time drift. For beta=f*T_tau>0
+and v=R_tau, normalization gives beta^2-v^2=f. Thus
+
+$$
+Z=\frac{\beta+v}{f}=\frac{1}{\beta-v},\qquad
+K=\frac{\beta+v}{\beta-v},\qquad f=K/Z^2.
+$$
+
+The Doppler motion cancels. More generally, send and return times are
+null coordinates for a radial patch with unique light paths. In their
+radar coordinates T=(t_plus+t_minus)/2 and D=(t_plus-t_minus)/2,
+
+$$
+ds_2^2=C(T,D)(-dT^2+dD^2),\qquad
+1=C\frac{dt_-}{d\tau}\frac{dt_+}{d\tau},\qquad C=K/Z^2.
+$$
+
+This measures the radial metric on the transponder worldline even in
+a time-dependent geometry, without imposing a gravitational field
+equation. Its angular-radius function and off-worldline metric remain
+undetermined. The separate quiet-cap inverse may fail while this readout
+remains valid; an explicit evolving-metric control checks that case.
+For the declared regular vacuum-cap family, put x=sqrt(1-f) and u=artanh(x):
+
+$$
+H=\frac{u}{D},\qquad R=\frac{Dx}{u},\qquad
+\beta=\frac{Zf+Z^{-1}}{2},\qquad v=\frac{Zf-Z^{-1}}{2}.
+$$
+
+The zero-curvature limits are H=0 and R=D. This reconstructs the supplied
+cap curvature; it does not generate it. The signed constant-tension
+junction has beta=a/R^2+cR, where a=M_host/k and
+c=(k^2+H_host^2-H^2)/(2k). Differentiate the null clock and the same
+wall dynamics to obtain
+
+$$
+\beta_R=Z(s-H^2R),\qquad
+c=\frac{\beta_R+2\beta/R}{3},\qquad
+a=\frac{R^2(\beta-R\beta_R)}{3}.
+$$
+
+For an independently specified host curvature, retain every positive
+root of k^2-2ck+H_host^2-H^2=0 and set M_host=ka. An unknown host
+curvature leaves a continuous ambiguity; a larger known host curvature
+can leave two positive tensions with identical cap-side clock histories.
+The ordinary Schwarzschild host and the equal-curvature inner host each
+give a unique positive root for the states used here.
+
+The original one-level reference at R/ell=.5 and the nested inner wall
+at R/ell=.8 supply the following conditional readouts:
+
+| Readout | One-level reference | Nested inner wall |
+| --- | ---: | ---: |
+| D/ell | .549306144334055 | 1.09861228866811 |
+| Z | 2.62549201161791 | 3.74639337610612 |
+| K | 5.16990622730208 | 5.05276679827145 |
+| s*ell | -.433158428652097 | 1.06171003724629 |
+| Z after .04 ell of receiver time | 2.58466102249367 | 3.90852634473171 |
+
+The first local readout and its derivative recover H*ell=1 and k*ell=2
+in both states, with M_host/ell=.4 and .01 respectively. These are
+different established states under one membrane law; no common-parent
+clock history is assumed. After inference, integrate dt_plus/dR using
+only H,a,c to predict the later row without additional calibration.
+An independent proper-time evolution agrees within 3.56e-15 in Z, and
+an 80-digit quadrature checks the nested result. These are numerical
+comparison indicators, not physical error bars.
+
+A changed material law beta_new=beta+.5*(R-R0)^2/ell^2 has exactly the
+same first local readout. Its later Z differs by .0002413953 and
+.0001163056, while the corresponding short-interval surface density
+stays positive. The finite prediction therefore tests continuation of
+the constant membrane law. It cannot separate the two tension branches
+when their full cap histories agree.
+
+At ell=10km the later receiver interval is **1.33425638079 microseconds**.
+For an explicitly assumed independent 100ppm bound on D,Z,K, monotonic
+analytic input bounds give the nested Lambda_cap*ell^2 in
+[2.99837630274001,3.00162434110127]. This is a synthetic instrument
+bound, with float64 endpoint evaluation, not an astronomical measurement,
+a total model uncertainty or a new effective cosmological constant.
+An uncalibrated beacon or unknown reflection delay restores degeneracy.
+The [full proof and domain](../docs/nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+and [compact calculation](../results/summaries/nsc-atlas-radar-inverse-v1.json)
+bind the source bytes and independent controls. The missing parent
+history and physical origin of the cap scale remain separate work.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows

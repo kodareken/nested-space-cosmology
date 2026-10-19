@@ -1,5 +1,24 @@
 # Reproducing the root project
 
+The [physical radar/clock inverse](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+uses the existing quiet junction, with no new field grid:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_nested_spacetime.py tests/test_nsc_atlas_nested_slice.py tests/test_nsc_atlas_causal_observers.py -q
+python scripts/run_python.py scripts/check_nsc_atlas_radar_inverse.py
+```
+
+The 60 focused checks include symbolic clock differentiation, a genuinely
+evolving radar metric outside the quiet-cap inverse, direct
+radar-metric normalization, flat/contracting/unit controls, the two-positive-
+tension ambiguity, analytic input boxes, an independent proper-time
+receiver event and 80-digit quadrature. A changed material law passes
+the initial readout but fails the finite clock prediction. The compact
+record is `results/summaries/nsc-atlas-radar-inverse-v1.json`; its source
+hashes and scalar results can be regenerated with `--output <fresh-path>`.
+The 100ppm box is an explicitly assumed instrument bound. The cap scale
+is reconstructed, not generated, and the scalar remains quiet.
+
 The [geometric composition/time balance](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
 and [scale-free inherited response](nsc-infinite-inheritance.md#a-scale-free-inverse-of-the-inherited-geometry)
 have small proof calculators:

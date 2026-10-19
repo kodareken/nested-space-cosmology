@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [radar and wall-clock inverse](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+joins the actual quiet geometry to a finite observer test of the membrane
+law. It recovers the supplied cap curvature and common tension, predicts
+a later frequency and gives conditional instrument bounds. General metric
+and unknown-host ambiguities remain explicit; no parent history is inferred.
+
 The [compositional gravity connection](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
 joins the finite nested geometry to an associative averaged constraint and
 a time-dependent expansion/source diagnostic. The separate

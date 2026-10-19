@@ -17,6 +17,13 @@ including the material walls, and an exact balance relates its geometric
 trace to expansion and source exchange over time. Neither result supplies
 the missing collective cosmological spacetime or an observed Lambda value.
 
+The actual atlas now also has a [radar and wall-clock inverse](docs/nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse).
+It cancels Doppler motion, reconstructs a declared quiet cap and its
+membrane combinations, then predicts a later received frequency. Two
+existing states recover the same tension; a changed material law fails
+the later clock test. The calculation supplies explicit conditional
+instrument bounds and preserves the remaining host/metric degeneracies.
+
 Spherical symmetry supplies a definite areal radius and tractable matching laws.
 It does not establish that every particle is a spherical interior or that our
 universe has a parent. The map distinguishes descent, geometric attachment,

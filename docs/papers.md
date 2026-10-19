@@ -6,6 +6,13 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-19.3` adds Section10.4's physical radar/clock inverse:
+the quiet cap lapse and signed junction combinations are reconstructed
+from calibrated clocks, then predict a later received frequency. Both
+existing wall states recover the same membrane tension. Conditional input
+bounds, an alternative material law and independent proper-time/high-precision
+controls keep the scope explicit; no cosmological Lambda is generated.
+
 Revision `2026-10-19.2` adds Section5.3's scale-free inherited inverse and
 held-out response coefficient, and Section6.1.21's associative geometric
 composition, wall-volume transport and time-dependent effective-source

@@ -8,6 +8,16 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
+The [physical radar/clock inverse](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+extends `nsc_atlas_nested_spacetime` with `radar_clock_metric`,
+`central_radar_clock`,
+`invert_central_radar_clock`, `radar_junction_branches` and
+`radar_cap_input_bounds`. The [small calculator](../scripts/check_nsc_atlas_radar_inverse.py)
+compares an inferred null-quadrature prediction with second-order
+proper-time dynamics from the existing `tension_wall`. It retains only
+scalar evidence; the core and controls keep unknown host curvature and
+multiple positive tensions explicit.
+
 The [compositional gravity proof](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
 uses `partitioned_scalar_average`, `partition_volume_rates`,
 `averaged_gravity_balance` and `expansion_source_inference` in the existing
