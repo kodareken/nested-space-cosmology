@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+The [compact shared parent](nsc-atlas-compact-parent.md) compares two fixed
+S3 completions, their evolving volume fractions and their causal restriction:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_compact_parent.py
+python scripts/run_python.py scripts/plot_nsc_atlas_compact_parent.py
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_compact_parent.py -q
+```
+
+The finite application shares a 3,000,000 scalar-evaluation/120 CPU-second
+allowance across fixed 32/64 rules and the independent time-balance check.
+It retains compact scalars and source hashes. The plot evaluates intrinsic
+initial profiles and does not replay a field evolution.
+
 The [normal-clock parent](nsc-atlas-parent-evolution.md) transports the full
 quiet slice, including moving walls, and calculates its effective trace:
 

@@ -1,5 +1,13 @@
 # Schur memory and the local effective Lambda target
 
+The [compact-parent successor](nsc-atlas-compact-parent.md) removes the
+isolated AE cutoff by joining two sourced interiors through one explicit
+bridge. It derives finite evolving volume fractions and a nonzero global
+trace difference under remote nesting. The retained cap's light signal
+is unchanged, so that global difference cannot be identified with its
+local Lambda. The decomposition retains the supplied regional vacua,
+material-wall trace and geometric contribution separately.
+
 For $D=\begin{pmatrix}D_p&\Phi\\\Phi^\dagger&D_c\end{pmatrix}$, eliminating
 the exterior gives $\Sigma(z)=\Phi(z-D_c)^{-1}\Phi^\dagger$ and the interior
 resolvent $(z-D_p-\Sigma)^{-1}$. The corresponding causal memory carries an

@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [compact-parent owner](nsc-atlas-compact-parent.md) uses
+`nsc_atlas_compact_parent.py`: `CompactParent` composes the two finite
+centre-to-throat developments, `reflected_initial_wall` tests their signed
+orientation, `connector_event` fixes their common Kruskal clocks, and
+`quiet_throat_continuation` evaluates the endpoint and necessary source
+condition. It reuses `normal_bulk` and `normal_moments`.
+The corresponding `check_nsc_atlas_compact_parent.py`, plotting script and
+test module own compact evidence, the intrinsic profile and verification.
+
 The [shared-parent normal evolution](nsc-atlas-parent-evolution.md) is owned
 by `nsc_atlas_parent_evolution.py`: `NormalParent` transports the existing
 slice, `normal_bulk` evolves geodesics and Jacobi fields, and `normal_moments`

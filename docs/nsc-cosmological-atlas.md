@@ -18,6 +18,28 @@ starting a derivation.
 
 ## Current execution priority — 20 October 2026
 
+**Completed outward proof: a compact shared parent.** The
+[compact completion](nsc-atlas-compact-parent.md) joins two sourced interiors
+through the same Schwarzschild bridge, preserving future orientation and
+adding no seam source. The S3 slice has two regular centres and no AE end
+or outer cutoff. At t/ell=.01 its geometrically derived nonzero-vacuum
+fraction is .4862033316 with a regular right interior, .5222872891 with a
+nested right interior. Their total trace projections differ by
+.040940072190/ell^2 while the left cap signal is exactly unchanged.
+The compact geometry therefore removes dilution but does not identify
+the global trace with an observer's local cosmological Lambda.
+
+**Next physical proof.** The quiet host throat's normal lifetime is
+.0314434597796 ell. The same Einstein equations give the necessary
+regular-bounce conditions `kappa*p_r<-1/R^2` and `rho+p_r<0` at a
+temporal turn that is also a strict spatial minimum. Constructing such
+a compatible source and its conserved evolution, or selecting a different
+cosmological parent, is the next physical connection. No bounce source,
+generation of H, late-time cosmology or observational match is claimed.
+The completed compact state and its short-time averages need no further
+precision campaign. Lattice and infinite-hierarchy alternatives retain
+their own missing data.
+
 **Completed shared-parent reduction.** The
 [normal-clock construction](nsc-atlas-parent-evolution.md) transports the
 entire quiet nested slice through `0<=t/ell<=.01`, retaining both moving

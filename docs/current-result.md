@@ -1,5 +1,30 @@
 # What the calculations show
 
+The [compact parent](nsc-atlas-compact-parent.md) now contains two sourced
+interiors on a complete S3 slice, with a common explicit Schwarzschild
+connector and no artificial outer cut. The positive-tension walls and
+normal evolution retain their original laws. One completion has a regular
+right interior; the other adds its own nested descendant. At t/ell=.01,
+the derived nonzero-vacuum volume fractions are .4862033316 and .5222872891.
+Their geometric trace projections are -1.0374000040 and -1.2193305237 in
+L_ref=ell=2/k units; total traces including supplied bulk and wall sources
+are 3.1713767577 and 3.2123168299.
+
+The remote nesting changes the global total trace by .040940072190/ell^2
+but leaves the left flash exactly unchanged: 1+z=3.895009111788 at
+t_rec/ell=1.646160028498. Shared Kruskal coordinates prove the causal
+restriction. This is an explicit counterexample to identifying the whole
+spatial average with the local cap Lambda. The geometric stresses are
+non-vacuum and the cap H remains supplied.
+
+The same quiet throat also supplies a concrete continuation target: its
+normal lifetime is .0314434597796 ell, bounded by a closed analytic
+inequality. A same-framework regular bounce at a strict spatial minimum
+requires negative radial rho+p and `kappa*p_r<-1/R^2` at the turn.
+No physical singularity, topology change or bounce source is inferred.
+The [compact evidence](../results/summaries/nsc-atlas-compact-parent-v1.json)
+and independent geometric, causal and conservation controls are reproducible.
+
 The [transported shared parent](nsc-atlas-parent-evolution.md) connects
 the actual two-wall history to an evolving gravitational average on one
 normal proper clock. Both wall crossings include their Jacobi impulses.

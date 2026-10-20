@@ -1,5 +1,14 @@
 # Current NSC claim ledger
 
+The [compact-parent proof](nsc-atlas-compact-parent.md) supplies an explicit
+S3 completion with two regular centres, three or four positive-tension
+walls, one common Schwarzschild connector and no additional seam source.
+The finite evolved averages change under remote nesting while the retained
+local cap signal does not. This proves a local-observability restriction
+on the global trace. The computed quiet-throat lifetime and necessary
+bounce-stress inequality define a continuation problem; they establish
+neither a physical singularity nor a constructed bounce or cosmic Lambda.
+
 The [normal-clock parent](nsc-atlas-parent-evolution.md) derives a finite
 evolving average of the quiet nested geometry, retaining material-wall
 Jacobi jumps, swept volumes, source exchange and checked conservation.

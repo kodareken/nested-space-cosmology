@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [compact shared parent](nsc-atlas-compact-parent.md) connects two sourced
+interiors and descendants to a finite evolving global volume without an
+AE cutoff. Its matched remote-nesting comparison separates changes in
+global averages from unchanged local observations. The throat lifetime
+and required bounce stress identify the next source/continuation question.
+
 The [transported shared parent](nsc-atlas-parent-evolution.md) connects the
 two-wall history to future normal-clock slices and effective source evolution.
 It evaluates the trace drift and source balance, and proves a zero effective

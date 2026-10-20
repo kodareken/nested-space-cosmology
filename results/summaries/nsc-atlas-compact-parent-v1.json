@@ -1,0 +1,485 @@
+{
+  "schema": "nsc-atlas-compact-parent-v1",
+  "construction": {
+    "topology": "S3",
+    "regular_centres": 2,
+    "asymptotic_ends": 0,
+    "added_bridge_surface_source": 0,
+    "common_connector_mass": 0.4,
+    "common_tension": 2.0,
+    "curved_region_H": 1.0,
+    "vacuum_connector_H": 0.0,
+    "reference_length": "L_ref=ell=2/k",
+    "scalar_field": "zero",
+    "states": "Nested left + regular right; nested left + nested right.",
+    "clock": "Proper time of the shared original normal congruence.",
+    "supplied": "Regional vacuum values, masses, membrane law, initial wall radii and slicing; no observed fraction or target Lambda."
+  },
+  "right_initial_reflection": {
+    "Rprime_minus": 2.02778608980571,
+    "Rprime_plus": -1.0,
+    "V_minus": 1.9092537179073037,
+    "V_plus": 1.5,
+    "beta_minus": 1.7861111111111112,
+    "beta_plus": -1.2138888888888888,
+    "gamma": 1.0092620299352366,
+    "b": -0.13641790596910125,
+    "radial_jump_residual": 0.0,
+    "velocity_jump_residual": 5.551115123125783e-17,
+    "angular_Israel_residual": 0.0,
+    "temporal_Israel_residual": 8.881784197001252e-16
+  },
+  "snapshots": {
+    "regular": [
+      {
+        "time": 0.0,
+        "total_volume": 69.22222875065802,
+        "curved_region_volume_fraction": 0.4844832923195746,
+        "supplied_bulk_trace": 1.4534498769587239,
+        "material_wall_trace": 2.763050972075787,
+        "sources": {
+          "H_normal": 0.9115810219757837,
+          "Q": 0.6470148434894707,
+          "mean_intrinsic_curvature": 4.837553741934096,
+          "kappa_mean_energy": 5.235224171591025,
+          "kappa_mean_pressure": -3.87692640818234,
+          "kappa_geometric_density": -2.7422842927117834,
+          "kappa_geometric_pressure": 0.4827515352442807,
+          "geometric_trace_projection": -1.0476347246111564,
+          "geometric_vacuum_condition": 6.778598272402508,
+          "three_volume_acceleration": 3.844792369967468,
+          "total_trace_projection": 3.1688661244233542,
+          "hamiltonian_residual": 1.7763568394002505e-15,
+          "scalar_fitting_acceleration_residual": 0.0
+        },
+        "wall_count": 3,
+        "controls": {
+          "max_bulk_constraint": 9.094947017729282e-13,
+          "min_Jacobi_scale": 1.0
+        },
+        "left_flash": {
+          "emission_normal_time": 0.0,
+          "emission_wall_proper_time": 0.0,
+          "central_reception_time": 1.6094379124341005,
+          "one_plus_redshift": 3.7463933761061194,
+          "protocol": "Negligible inward flash with calibrated wall proper frequency; quiet cap continuation."
+        }
+      },
+      {
+        "time": 0.005,
+        "total_volume": 70.17643437918215,
+        "curved_region_volume_fraction": 0.48534175156686193,
+        "supplied_bulk_trace": 1.4560252547005859,
+        "material_wall_trace": 2.756664390003005,
+        "sources": {
+          "H_normal": 0.9138165924609424,
+          "Q": 0.6319389286882395,
+          "mean_intrinsic_curvature": 4.8006937046848694,
+          "kappa_mean_energy": 5.221498610657339,
+          "kappa_mean_pressure": -3.8764199893856746,
+          "kappa_geometric_density": -2.7163163166865543,
+          "kappa_geometric_pressure": 0.4841461531033585,
+          "geometric_trace_projection": -1.0421886939991576,
+          "geometric_vacuum_condition": 6.6965104907495885,
+          "three_volume_acceleration": 3.835819607438082,
+          "total_trace_projection": 3.1705009507044335,
+          "hamiltonian_residual": -8.881784197001252e-16,
+          "scalar_fitting_acceleration_residual": 0.0
+        },
+        "wall_count": 3,
+        "controls": {
+          "max_bulk_constraint": 2.686562083908939e-10,
+          "min_Jacobi_scale": 1.0000029530236503
+        },
+        "left_flash": {
+          "emission_normal_time": 0.005,
+          "emission_wall_proper_time": 0.0048027928527818705,
+          "central_reception_time": 1.627605020672774,
+          "one_plus_redshift": 3.819274669278198,
+          "protocol": "Negligible inward flash with calibrated wall proper frequency; quiet cap continuation."
+        }
+      },
+      {
+        "time": 0.01,
+        "total_volume": 71.14615994849837,
+        "curved_region_volume_fraction": 0.4862033315833511,
+        "supplied_bulk_trace": 1.4586099947500535,
+        "material_wall_trace": 2.7501667669672156,
+        "sources": {
+          "H_normal": 0.9160158276553951,
+          "Q": 0.6159691583572071,
+          "mean_intrinsic_curvature": 4.765569174255322,
+          "kappa_mean_energy": 5.208024155851862,
+          "kappa_mean_pressure": -3.875694297005739,
+          "kappa_geometric_density": -2.6907691663062647,
+          "kappa_geometric_pressure": 0.4862769498639502,
+          "geometric_trace_projection": -1.0374000039745288,
+          "geometric_vacuum_condition": 6.613476649326944,
+          "three_volume_acceleration": 3.8254985259398846,
+          "total_trace_projection": 3.171376757742741,
+          "hamiltonian_residual": -1.7763568394002505e-15,
+          "scalar_fitting_acceleration_residual": -4.440892098500626e-16
+        },
+        "wall_count": 3,
+        "controls": {
+          "max_bulk_constraint": 2.186311576224398e-09,
+          "min_Jacobi_scale": 1.0000117671920445
+        },
+        "left_flash": {
+          "emission_normal_time": 0.01,
+          "emission_wall_proper_time": 0.009613643763932311,
+          "central_reception_time": 1.646160028497995,
+          "one_plus_redshift": 3.895009111788495,
+          "protocol": "Negligible inward flash with calibrated wall proper frequency; quiet cap continuation."
+        }
+      }
+    ],
+    "nested": [
+      {
+        "time": 0.0,
+        "total_volume": 74.48646177845768,
+        "curved_region_volume_fraction": 0.5208959019523225,
+        "supplied_bulk_trace": 1.5626877058569675,
+        "material_wall_trace": 2.8789115667852516,
+        "sources": {
+          "H_normal": 0.8970596189865009,
+          "Q": 0.650387541567385,
+          "mean_intrinsic_curvature": 5.57500527434002,
+          "kappa_mean_energy": 5.5268442880023185,
+          "kappa_mean_pressure": -4.079850934188852,
+          "kappa_geometric_density": -3.1126964079537025,
+          "kappa_geometric_pressure": 0.6039737749396442,
+          "geometric_trace_projection": -1.2311544331931588,
+          "geometric_vacuum_condition": 7.526167899042175,
+          "three_volume_acceleration": 4.006741798849504,
+          "total_trace_projection": 3.210444839449061,
+          "hamiltonian_residual": 2.6645352591003757e-15,
+          "scalar_fitting_acceleration_residual": 0.0
+        },
+        "wall_count": 4,
+        "controls": {
+          "max_bulk_constraint": 9.094947017729282e-13,
+          "min_Jacobi_scale": 1.0
+        },
+        "left_flash": {
+          "emission_normal_time": 0.0,
+          "emission_wall_proper_time": 0.0,
+          "central_reception_time": 1.6094379124341005,
+          "one_plus_redshift": 3.7463933761061194,
+          "protocol": "Negligible inward flash with calibrated wall proper frequency; quiet cap continuation."
+        }
+      },
+      {
+        "time": 0.005,
+        "total_volume": 75.4970125929651,
+        "curved_region_volume_fraction": 0.521588554694058,
+        "supplied_bulk_trace": 1.564765664082174,
+        "material_wall_trace": 2.8719043886363504,
+        "sources": {
+          "H_normal": 0.8996933150756656,
+          "Q": 0.6331565697360988,
+          "mean_intrinsic_curvature": 5.531558779739084,
+          "kappa_mean_energy": 5.510701858313115,
+          "kappa_mean_pressure": -4.078659450853661,
+          "kappa_geometric_density": -3.0823576747375916,
+          "kappa_geometric_pressure": 0.605348178421798,
+          "geometric_trace_projection": -1.2246005525007464,
+          "geometric_vacuum_condition": 7.431028488947381,
+          "three_volume_acceleration": 3.9957948168600326,
+          "total_trace_projection": 3.2120695002177775,
+          "hamiltonian_residual": -4.440892098500626e-16,
+          "scalar_fitting_acceleration_residual": 4.440892098500626e-16
+        },
+        "wall_count": 4,
+        "controls": {
+          "max_bulk_constraint": 2.686562083908939e-10,
+          "min_Jacobi_scale": 1.0000029530236503
+        },
+        "left_flash": {
+          "emission_normal_time": 0.005,
+          "emission_wall_proper_time": 0.0048027928527818705,
+          "central_reception_time": 1.627605020672774,
+          "one_plus_redshift": 3.819274669278198,
+          "protocol": "Negligible inward flash with calibrated wall proper frequency; quiet cap continuation."
+        }
+      },
+      {
+        "time": 0.01,
+        "total_volume": 76.52427172242868,
+        "curved_region_volume_fraction": 0.5222872891276419,
+        "supplied_bulk_trace": 1.5668618673829258,
+        "material_wall_trace": 2.864785486268169,
+        "sources": {
+          "H_normal": 0.9022831467829769,
+          "Q": 0.6138381238474242,
+          "mean_intrinsic_curvature": 5.4911602187209825,
+          "kappa_mean_energy": 5.494843802189979,
+          "kappa_mean_pressure": -4.077248537471468,
+          "kappa_geometric_density": -3.0524991712842033,
+          "kappa_geometric_pressure": 0.6082743078631183,
+          "geometric_trace_projection": -1.2193305237183896,
+          "geometric_vacuum_condition": 7.332674590263255,
+          "three_volume_acceleration": 3.9822890289596367,
+          "total_trace_projection": 3.212316829932706,
+          "hamiltonian_residual": -2.220446049250313e-15,
+          "scalar_fitting_acceleration_residual": 4.440892098500626e-16
+        },
+        "wall_count": 4,
+        "controls": {
+          "max_bulk_constraint": 2.186311576224398e-09,
+          "min_Jacobi_scale": 1.0000117671920445
+        },
+        "left_flash": {
+          "emission_normal_time": 0.01,
+          "emission_wall_proper_time": 0.009613643763932311,
+          "central_reception_time": 1.646160028497995,
+          "one_plus_redshift": 3.895009111788495,
+          "protocol": "Negligible inward flash with calibrated wall proper frequency; quiet cap continuation."
+        }
+      }
+    ]
+  },
+  "matched_remote_nesting_differences": [
+    {
+      "time": 0.0,
+      "Delta_geometric_trace": -0.1835197085820024,
+      "Delta_total_trace": 0.041578715025706536,
+      "Delta_curved_volume_fraction": 0.036412609632747894,
+      "Delta_left_flash_redshift": 0.0,
+      "Delta_left_flash_reception": 0.0
+    },
+    {
+      "time": 0.005,
+      "Delta_geometric_trace": -0.1824118585015888,
+      "Delta_total_trace": 0.04156854951334399,
+      "Delta_curved_volume_fraction": 0.036246803127196026,
+      "Delta_left_flash_redshift": 0.0,
+      "Delta_left_flash_reception": 0.0
+    },
+    {
+      "time": 0.01,
+      "Delta_geometric_trace": -0.18193051974386076,
+      "Delta_total_trace": 0.04094007218996509,
+      "Delta_curved_volume_fraction": 0.03608395754429078,
+      "Delta_left_flash_redshift": 0.0,
+      "Delta_left_flash_reception": 0.0
+    }
+  ],
+  "comparisons_32_64": {
+    "regular": {
+      "H_normal": 5.106534084475811e-10,
+      "Q": 3.910471058077292e-09,
+      "mean_intrinsic_curvature": 2.6318787149648415e-09,
+      "kappa_mean_energy": 5.522782231537349e-11,
+      "kappa_mean_pressure": 4.00857125271159e-11,
+      "kappa_geometric_density": 2.8054065737137535e-09,
+      "kappa_geometric_pressure": 2.0454744564801786e-09,
+      "geometric_trace_projection": 1.112976155681622e-09,
+      "geometric_vacuum_condition": 1.1568683788709677e-08,
+      "three_volume_acceleration": 3.942985937754884e-09,
+      "total_trace_projection": 1.156847062588895e-09,
+      "hamiltonian_residual": 1.3322676295501878e-15,
+      "scalar_fitting_acceleration_residual": 8.881784197001252e-16
+    },
+    "nested": {
+      "H_normal": 5.11882869425051e-10,
+      "Q": 3.6708174278032857e-09,
+      "mean_intrinsic_curvature": 2.763353101897792e-09,
+      "kappa_mean_energy": 5.749889453454671e-11,
+      "kappa_mean_pressure": 4.076472492897665e-11,
+      "kappa_geometric_density": 2.7676083647065752e-09,
+      "kappa_geometric_pressure": 1.8640901044975067e-09,
+      "geometric_trace_projection": 9.60726387333466e-10,
+      "geometric_vacuum_condition": 1.1078945760800707e-08,
+      "three_volume_acceleration": 3.7032146238402674e-09,
+      "total_trace_projection": 1.005674654663835e-09,
+      "hamiltonian_residual": 2.6645352591003757e-15,
+      "scalar_fitting_acceleration_residual": 8.881784197001252e-16
+    }
+  },
+  "midpoint_balance": {
+    "regular": [
+      {
+        "step": 0.0001,
+        "trace_rate": 1.0245350936050057,
+        "source_balance": 0.038498169108917235,
+        "integrability_residual": 3.2289633256077366e-07,
+        "trace_balance_residual": -1.6144816628038683e-07,
+        "volume_rate_residual": 3.180044018336048e-06,
+        "H_rate_residual": -2.5919015045339222e-08
+      },
+      {
+        "step": 5e-05,
+        "trace_rate": 1.0245354000371076,
+        "source_balance": 0.03849817030939989,
+        "integrability_residual": 8.075891333447771e-08,
+        "trace_balance_residual": -4.0379456667238856e-08,
+        "volume_rate_residual": 7.945388915686635e-07,
+        "H_rate_residual": -6.479009884152731e-09
+      }
+    ],
+    "nested": [
+      {
+        "step": 0.0001,
+        "trace_rate": 1.1843829489910362,
+        "source_balance": 0.026469853763272766,
+        "integrability_residual": 6.164573649325433e-07,
+        "trace_balance_residual": -3.0822868246627166e-07,
+        "volume_rate_residual": 3.4089674443293916e-06,
+        "H_rate_residual": -5.200260699833592e-08
+      },
+      {
+        "step": 5e-05,
+        "trace_rate": 1.1843835233038558,
+        "source_balance": 0.026469855096278583,
+        "integrability_residual": 1.5414717435824343e-07,
+        "trace_balance_residual": -7.707358717912172e-08,
+        "volume_rate_residual": 8.51795192602367e-07,
+        "H_rate_residual": -1.3001582366278797e-08
+      }
+    ]
+  },
+  "causal_comparison": {
+    "regular": {
+      "initial": {
+        "left": {
+          "normal_time": 0.0,
+          "wall_proper_time": 0.0,
+          "R": 1.5,
+          "T": -0.8048058735794451,
+          "U": 3.95008846424996,
+          "V": -1.4444528981890141,
+          "U_tau": 18.204171966295462,
+          "V_tau": 0.26235692430782603,
+          "radius_identity": -2.6645352591003757e-15,
+          "tangent_norm": -0.9999999999999991
+        },
+        "right": {
+          "normal_time": 0.0,
+          "wall_proper_time": 0.0,
+          "R": 1.5,
+          "T": 0.8048920006188245,
+          "U": -1.4443751462494256,
+          "V": 3.950301100863405,
+          "U_tau": 0.26269603969570277,
+          "V_tau": 18.180672126539736,
+          "radius_identity": -8.881784197001252e-16,
+          "tangent_norm": -1.0000000000000009
+        }
+      },
+      "endpoint": {
+        "left": {
+          "normal_time": 0.01,
+          "wall_proper_time": 0.009919162877672924,
+          "R": 1.5165054036477084,
+          "T": -0.8428195454465818,
+          "U": 4.134908184824386,
+          "V": -1.4418697257454844,
+          "U_tau": 19.068522491221433,
+          "V_tau": 0.2584993034353786,
+          "radius_identity": 1.7763568394002505e-15,
+          "tangent_norm": -1.0000000000000018
+        },
+        "right": {
+          "normal_time": 0.01,
+          "wall_proper_time": 0.009917014109523697,
+          "R": 1.5164780649113174,
+          "T": 0.8428510069813001,
+          "U": -1.4417892307655893,
+          "V": 4.134839953427795,
+          "U_tau": 0.2588263314974871,
+          "V_tau": 19.043435226875,
+          "radius_identity": 0.0,
+          "tangent_norm": -1.0000000000000009
+        }
+      },
+      "initial_U_left_times_V_right": 15.604038808834453,
+      "argument": "Future causal paths have dU>=0,dV>=0. Opposite exterior quadrants cannot communicate. The two initial inward null fronts require UV>=this product>1, beyond the physical connector R>0.",
+      "local_signal_comparison": "Exact retained left geometry and cap flash; no claimed signal from the remote extra nest."
+    },
+    "nested": {
+      "initial": {
+        "left": {
+          "normal_time": 0.0,
+          "wall_proper_time": 0.0,
+          "R": 1.5,
+          "T": -0.8048058735794451,
+          "U": 3.95008846424996,
+          "V": -1.4444528981890141,
+          "U_tau": 18.204171966295462,
+          "V_tau": 0.26235692430782603,
+          "radius_identity": -2.6645352591003757e-15,
+          "tangent_norm": -0.9999999999999991
+        },
+        "right": {
+          "normal_time": 0.0,
+          "wall_proper_time": 0.0,
+          "R": 1.5,
+          "T": 0.8048058735794451,
+          "U": -1.4444528981890141,
+          "V": 3.95008846424996,
+          "U_tau": 0.26235692430782603,
+          "V_tau": 18.204171966295462,
+          "radius_identity": -2.6645352591003757e-15,
+          "tangent_norm": -0.9999999999999991
+        }
+      },
+      "endpoint": {
+        "left": {
+          "normal_time": 0.01,
+          "wall_proper_time": 0.009919162877672924,
+          "R": 1.5165054036477084,
+          "T": -0.8428195454465818,
+          "U": 4.134908184824386,
+          "V": -1.4418697257454844,
+          "U_tau": 19.068522491221433,
+          "V_tau": 0.2584993034353786,
+          "radius_identity": 1.7763568394002505e-15,
+          "tangent_norm": -1.0000000000000018
+        },
+        "right": {
+          "normal_time": 0.01,
+          "wall_proper_time": 0.009919162877672924,
+          "R": 1.5165054036477084,
+          "T": 0.8428195454465818,
+          "U": -1.4418697257454844,
+          "V": 4.134908184824386,
+          "U_tau": 0.2584993034353786,
+          "V_tau": 19.068522491221433,
+          "radius_identity": 1.7763568394002505e-15,
+          "tangent_norm": -1.0000000000000018
+        }
+      },
+      "initial_U_left_times_V_right": 15.603198875400606,
+      "argument": "Future causal paths have dU>=0,dV>=0. Opposite exterior quadrants cannot communicate. The two initial inward null fronts require UV>=this product>1, beyond the physical connector R>0.",
+      "local_signal_comparison": "Exact retained left geometry and cap flash; no claimed signal from the remote extra nest."
+    }
+  },
+  "quiet_throat": {
+    "throat_radius": 0.020008009615388216,
+    "normal_lifetime": 0.03144345977964446,
+    "analytic_lower_bound": 0.03143480063690757,
+    "analytic_upper_bound": 0.031447397237602696,
+    "kappa_radial_pressure_bounce_threshold": -2497.998798397307,
+    "supplied_kappa_radial_pressure": -3.0,
+    "necessary_added_kappa_radial_pressure": -2494.998798397307,
+    "condition": "Strict inequalities for a regular temporal bounce at this radius with a strict spatial minimum; radial rho+p must be negative in the Einstein model.",
+    "scope": "Upper limit for a smooth whole normal foliation; not proof that this is its first breakdown or that topology physically changes."
+  },
+  "throat_lifetime_32_64_difference": -6.938893903907228e-18,
+  "interpretation": "Compactness removes isolated AE dilution; nesting changes global averages. Non-vacuum stress and the exact local causal screen prevent identifying those changes as a generated local cosmological Lambda.",
+  "uncertainty": "Quadrature and derivative differences are numerical indicators, not certified bounds or observational/model uncertainties.",
+  "scalar_evaluations": 1258572,
+  "process_cpu_seconds": 18.03125,
+  "new_field_grids": 0,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_compact_parent.py": "849974387b06c1a5a5c65a15b2baff269882c6036f46828cc3bdf978944255e6",
+    "src/recursive_horizons/nsc_atlas_parent_evolution.py": "fb0034ccb16dd83a4f6e6650d9b94bdef2dbc9c75c5361c7dcd2aae56edb4f55",
+    "src/recursive_horizons/nsc_atlas_nested_slice.py": "fcd9f7b70046c215bd06cd2a78fd94aa40b0adb78290e889729a9b4cfb05df45",
+    "src/recursive_horizons/nsc_atlas_geometric_average.py": "42f6bbc8e3520f1d3adfb0a07c0a6cd9cfc9879324d9167186f90da63af10da0",
+    "scripts/check_nsc_atlas_compact_parent.py": "73e42ec30959ccdc7b84a36f50f638813a28744ef90794393d75b5193c9978f5",
+    "scripts/plot_nsc_atlas_compact_parent.py": "73b653e582ba201ed2cfa1443f9858116f315a70fe74032e117bbba7c9876609",
+    "tests/test_nsc_atlas_compact_parent.py": "6cf70145c5429d6118a75678c98bb48f7b8706c798c6c92657862068346c7676"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_compact_parent.py"
+}

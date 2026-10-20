@@ -362,6 +362,13 @@ Lambda would be a fit, not its derivation.
 
 ## Reproduction and remaining connection
 
+The [compact-parent successor](nsc-atlas-compact-parent.md) now supplies
+a complete non-AE domain with two sourced interiors. Its volume fractions
+follow from the metric and its normal evolution. The matched causal
+comparison still prevents treating the global trace as a locally generated
+cap Lambda. The quiet throat's continuation and an observational cosmological
+source history remain physical tasks beyond compactness.
+
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_parent_evolution.py
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_parent_evolution.py -q

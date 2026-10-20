@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "3bf0edaf55e52879947c9ac06a68b8efaa194b77",
+  "current_receipt_commit_parent": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 16827,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 17432,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "8509736802aa5f72b1730494234ea02101a25a4e0b348d9cbf980c6685dd4191"
+      "sha256": "4fba6f5e0c3fffb4484e79d3f3eba3e3425066cca27a3f419778e74aa67eff26"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 273295,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 273851,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "5f13ff4f17c5d2b539a9c70cbc178ae51480066a662dc76e0f3557caaef3b0da"
+      "sha256": "4e9522db3ec1450083066dac6e25d0755780d56d6790fe14dd27de57cf7bde38"
     },
     {
       "bytes": 108699,
@@ -10312,9 +10312,9 @@
       "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
-      "bytes": 105769,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 106354,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "import_bytes": 102088,
       "import_sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a",
       "migration_disposition": "active_owner",
@@ -10322,15 +10322,23 @@
       "original_path": "lab/docs/claim-ledger.md",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
-      "sha256": "de55916d1e63e90130f8be63e2f162561aa1c3dcebb32aa13646218c52669273"
+      "sha256": "0571c9ed52b14f6645f13abcbda04be14111cec4a303bdb163d188680c2c8fff"
     },
     {
-      "bytes": 439392,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 440919,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2b0862ea655c89e6701c3cc10b1aac4745090162489c78092b2b60a21200cce7"
+      "sha256": "9f3763b7722b68e8588f7cef588b87eeb8c9eb6104c0e4822708af5f12c90ece"
+    },
+    {
+      "bytes": 173938,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "path": "docs/figures/nsc-atlas-compact-parent.png",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "a64a3240ded38e00ef7abef1bc7d41f3ec7e54d3cb543fa298d39ad732ef86c1"
     },
     {
       "bytes": 336399,
@@ -10424,6 +10432,14 @@
       "sha256": "4c88393baedca74992b24af7f659064f9166a758d33cc314bc31a67799d356fa"
     },
     {
+      "bytes": 14610,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "path": "docs/nsc-atlas-compact-parent.md",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "0719b0fff6cba0ae1927011673eb2a3ecfdf0898b271cebdbe74685f10c800ce"
+    },
+    {
       "bytes": 11128,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "8cf250dd229621c2870b3be40ef81fabff9fa8e0",
@@ -10511,12 +10527,12 @@
       "sha256": "aeb030a33bbdfaaf9c51c90b3c7bc5a78c211c4cb782d575b83f3b1c6189a64e"
     },
     {
-      "bytes": 17260,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 17686,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "path": "docs/nsc-atlas-parent-evolution.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "414da4fa2aaf5535bb9fabb4c75e758b95c7d8618cebfc8d44402f62c65de587"
+      "sha256": "fd3e5790c281f6f86262f1ebcc930efe9560cc9ffdfe7f53170ccf52843016c1"
     },
     {
       "bytes": 9702,
@@ -10560,15 +10576,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 67653,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 69004,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "3c135c9adc98634b86ddb60107ebf8e0e17d0373a5d17a6d31009542afea8a23"
+      "sha256": "8449c93a6824a6a64627d8aee2852e76eed779dd2ecdfa036c27792a493d1801"
     },
     {
       "bytes": 30876,
@@ -11536,12 +11552,12 @@
       "sha256": "2de9c90a1995f51dada247d902553e3f1f3b7778649f8f1450a605aefa7e7b03"
     },
     {
-      "bytes": 577956,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 580112,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "cd579e7f8f71419c704aca2e1a4130513bc10156c72f241d4a1c6da16d24882d"
+      "sha256": "5d56d019b588941094a838d245f40863d354e40e149216971525f7491ebc2ec2"
     },
     {
       "bytes": 6705,
@@ -11550,20 +11566,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 213683,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 214361,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "30edf8de8c67ff415be40bbd8dd1b7717ab4ccb459f8bcc8f25f2ec65b183fb9"
+      "sha256": "341ddd80da10c59e46b63f703e51e62fea26d39b73759b3d9ede169c26dd54c5"
     },
     {
-      "bytes": 34596,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 34963,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "358a572ec02cde2a5fadaf0b4223c86577ea4e033f29c621b188568d539ad65a"
+      "sha256": "0f61d3b1edb7fd2a7da1f69958e4e7175d6576d5b68b8bb74928a8a549cd44e7"
     },
     {
       "bytes": 18356,
@@ -11577,12 +11593,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 138696,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 139184,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "82b64c6e28f427922ea2be890ef9fa0d1d34abba308963f4cd54115a05684357"
+      "sha256": "f96be232b66625d6344912a506b8133880c7510043ac8fbb814fd512ce2e17e5"
     },
     {
       "bytes": 537091,
@@ -29815,6 +29831,14 @@
       "sha256": "19a4d2c32e30568b925c0cee9163085ba374a7ca2997ab133a538c4076d091f0"
     },
     {
+      "bytes": 20392,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "path": "results/summaries/nsc-atlas-compact-parent-v1.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "221cc83583b663b6e51f36e8c17dc15d3e5ef159e8ade1949b77339def397445"
+    },
+    {
       "bytes": 29878,
       "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
       "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
@@ -30693,6 +30717,14 @@
       "path": "scripts/check_nsc_atlas_cap_profile_projection.py",
       "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
       "sha256": "6ea75e024593da8dfc24fac9f4c37870754a1c03e7b9a8d7ad47fef702f9637b"
+    },
+    {
+      "bytes": 7369,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "path": "scripts/check_nsc_atlas_compact_parent.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "73e42ec30959ccdc7b84a36f50f638813a28744ef90794393d75b5193c9978f5"
     },
     {
       "bytes": 7741,
@@ -33528,6 +33560,14 @@
       "sha256": "b295aad0f27c80edd1a5561e61e085021fbba16d4ca4d234b431b4f935d56cd0"
     },
     {
+      "bytes": 3726,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "path": "scripts/plot_nsc_atlas_compact_parent.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "73b653e582ba201ed2cfa1443f9858116f315a70fe74032e117bbba7c9876609"
+    },
+    {
       "bytes": 19848,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
@@ -34212,6 +34252,14 @@
       "path": "src/recursive_horizons/nsc_atlas_collar_field.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "4a30f8a4aabb2bddbd685ba7a8d9f3a807a1aa15e65e7d5f515a7c69db10d302"
+    },
+    {
+      "bytes": 11989,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "path": "src/recursive_horizons/nsc_atlas_compact_parent.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "849974387b06c1a5a5c65a15b2baff269882c6036f46828cc3bdf978944255e6"
     },
     {
       "bytes": 3432,
@@ -38298,6 +38346,14 @@
       "path": "tests/test_nsc_atlas_collar_field.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "b8adeba6589ee99cac4659ae9fc76b5e31b8c613cec6b8301204b3ddbc5a7753"
+    },
+    {
+      "bytes": 7139,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "path": "tests/test_nsc_atlas_compact_parent.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "6cf70145c5429d6118a75678c98bb48f7b8706c798c6c92657862068346c7676"
     },
     {
       "bytes": 5745,

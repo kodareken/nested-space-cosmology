@@ -3,6 +3,16 @@
 Start with regions, boundaries and fields; assemble possible nested geometries;
 specify inheritance and transmission; calculate what an interior observer measures.
 
+The [compact parent construction](docs/nsc-atlas-compact-parent.md) now joins
+two sourced interiors, including nested descendants, in one closed S3
+geometry. Its volume fractions and effective source evolve from the actual
+metric. Adding a remote descendant changes the global average while
+leaving the retained cap's clock signal unchanged. This establishes both
+a physical compact atlas connection and a precise limit on interpreting
+its average as locally measured Lambda. The next source problem is a
+regular continuation of the current quiet throat, with its necessary
+stress condition now derived.
+
 The [shared parent now has an evolved geometric average](docs/nsc-atlas-parent-evolution.md).
 Freely falling clocks transport the full quiet two-wall slice, including
 both throats and wall crossings. Its geometric trace changes from

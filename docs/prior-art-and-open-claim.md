@@ -1,5 +1,41 @@
 # Prior art and admission of new research
 
+## Compact parent and its observer restriction, 20 October 2026
+
+Replace the isolated AE end by a second sourced cap through the same
+Schwarzschild bridge, retaining the common membrane action. Borrow the
+existing signed Israel factors, original smooth static bridge collar and
+the completed normal/Jacobi transport. The missing connection is a
+complete compact domain, including orientation reversal, source counting,
+shared time and a physical rather than fitted regional volume fraction.
+
+Compare two fixed states: the existing nested body joined to a regular
+one-level body, and two copies of the nested body. Both outer walls start
+at R/ell=1.5, their common connector mass is .4 ell, H*ell=1 in the
+nonzero-vacuum regions, k*ell=2, and phi=0. The nested side retains the
+inner .01 ell Kottler region and wall at .8 ell. These states have different
+interior structures; unequal connector mass is not asserted in one
+spherical vacuum region. The right body uses an orientation-reflected
+copy of its already checked local law.
+
+Use the original normal clock through t/ell=.01, fixed 32/64 rules and
+three time cuts. Permit 3,000,000 charged scalar evaluations and 120 CPU
+seconds for the finite application. Stop on an unmatched bridge,
+wrong-sign wall, failed normal-domain bound, constraint or conservation
+comparison. Test reflection directly, reconstruct the global moments
+independently, and compare the left observer's actual causal domain.
+Compactness can remove AE dilution; it cannot by itself generate a regional
+vacuum value or make a spatial average a locally measured cosmological
+constant. The resulting calculation must decide those distinctions.
+
+The observer review identifies one additional outward-time check: the
+already specified quiet host throat has an E=0 normal geodesic ending at
+R=0. Evaluate its closed Kottler proper-time integral with 32/64 fixed
+rules inside the same allowance, and derive the local radial stress
+condition for replacing that endpoint by a regular bounce. This concerns
+the current classical candidate's continuation; it assumes no physical
+singularity, remnant, atom interpretation or new source state.
+
 ## Shared-parent normal evolution, 20 October 2026
 
 Connect the established two-wall host history to the effective Lambda target
