@@ -63,8 +63,11 @@ now extends the retained exterior and yields a received frequency ratio
 $1+z=1.778824923298$. Separate bulk-gravity constructions exhibit induced
 curvature and an attributed shadow-matter lensing discriminator. The
 existing constant-tension wall has no stable equilibrium selecting its
-cap scale. An inherited material/state law and a realistic cosmological
-and thermal history remain to be derived and tested.
+cap scale. An explicit new worldvolume Dirac state now supplies material
+pressure and a radially stable horizonless attachment. Two unequal occupied
+rooms share one dust parent, with calculable central clock signals under
+fixed couplings. Initial state selection, general stability and a realistic
+cosmological and thermal history remain to be derived and tested.
 
 ## I. The question and the spherical idea
 
@@ -100,7 +103,7 @@ The route through the book is therefore also a route through other authors'
 constructions. Attribution belongs beside the useful equation, with the
 assumptions that allow it to enter the map.
 
-Several building blocks guide the new comparison in Sections 10.8--10.11:
+Several building blocks guide the new comparison in Sections 10.8--10.13:
 
 | Construction and contributors | What it contributes to the atlas |
 | --- | --- |
@@ -108,6 +111,7 @@ Several building blocks guide the new comparison in Sections 10.8--10.11:
 | Shiromizu, Maeda and Sasaki; Maartens and Koyama | Equations linking a surrounding bulk to local gravitational sources |
 | Garriga and Tanaka | An outside-matter effect with distinct lensing and orbital measurements |
 | Mazur and Mottola; Visser and Wiltshire | Material interfaces and stability tools beyond a constant-tension wall |
+| Abrikosov; Macpherson and Campbell; Ogure, Yoshida and Arafune | A finite sphere spectrum and localized-fermion material pressure |
 | Morris and Thorne; Easson and Brandenberger | Established throat and black-hole-interior cosmology constructions |
 
 Their primary sources and the actual connections appear with the calculations.
@@ -3386,6 +3390,274 @@ connection, an observable clock relation, useful external mechanisms
 and a decided equilibrium question. It does not yet predict the
 cosmological density fractions or matter--antimatter asymmetry.
 
+### 10.12. Sourced rooms from an occupied wall spectrum
+
+<!-- nsc-claim:occupied-wall-source -->
+
+Evidence: [state, stress and signed geometry](../docs/nsc-atlas-occupied-wall.md),
+[finite calculation](../results/summaries/nsc-atlas-occupied-wall-v1.json)
+and [independent controls](../tests/test_nsc_atlas_occupied_wall.py).
+
+The equilibrium question in Section 10.10 asks for a material law.
+A finite occupied field supplies one: its energy changes when the
+surface changes, and that derivative determines pressure. This connects
+the geometric spectrum to a gravitational source before a wall potential
+is chosen.
+
+The construction introduces a new surface theory. Its Einstein bulk has
+a de Sitter core, a Schwarzschild collar and a zero classical scalar.
+The wall carries a positive bare tension and two parity-paired massless
+Dirac species:
+
+$$
+S_\Sigma=-\sigma_0\int_\Sigma\sqrt{-\gamma}\,d^3y+S_D,
+$$
+
+$$
+S_D=\sum_{j=1}^{2}\int_\Sigma\sqrt{-\gamma}\,
+\overline{\chi}_j\,i\hbar D_\Sigma\chi_j\,d^3y.
+$$
+
+Use the conformal reference vacuum and its normal-ordered finite
+excitation stress, with specified renormalized tension and no additional
+surface-curvature terms. This is a declared effective material candidate.
+The original transparent bulk probe has no trapping interaction and is
+not reinterpreted as this surface field.
+
+[Macpherson and Campbell](https://arxiv.org/html/hep-ph/9408387)
+provide the localized-fermion wall precedent.
+[Ogure, Yoshida and Arafune](https://arxiv.org/html/hep-ph/0212332)
+calculate its finite spherical occupation and discuss fragmentation.
+A finite-thickness realization of the present gravitating surface
+theory remains a separate problem.
+
+For one two-component spinor, the positive sphere eigenvalues are
+$n/R$, with degeneracy $2n$.
+[Abrikosov's spherical Dirac analysis](https://arxiv.org/html/hep-th/0212134)
+gives the spectrum and its rotational representations, with attribution
+to earlier Newman--Penrose and related work. Fill all angular states
+through level $q$ in each of $g=2$ species. The state is isotropic and
+has the exact finite sums
+
+$$
+N_q=gq(q+1),\qquad
+\mathcal A_q=\frac{gq(q+1)(2q+1)}{3},\qquad
+E_q=\frac{\hbar c\,\mathcal A_q}{R}.
+$$
+
+The negative-energy reference branch is not counted again as occupied
+positive particles. Varying the energy with area at fixed occupation gives
+
+$$
+\sigma=\sigma_0+\frac{\hbar c\,\mathcal A_q}{4\pi R^3},
+\qquad
+p=-\sigma_0+\frac{\hbar c\,\mathcal A_q}{8\pi R^3}.
+$$
+
+The gas pressure is half its surface energy density. The total obeys
+$d(\sigma R^2)/dR+2pR=0$. Its occupied part has zero trace, yet
+changes the full stress tensor and the resulting geometry.
+
+This state is transported exactly within the surface theory.
+On $-d\tau^2+R(\tau)^2d\Omega^2$, use $d\eta=d\tau/R$ and
+rescale the spinor by $R^{-1}$. The resulting Hamiltonian is the same
+unit-sphere Dirac operator. Its occupied projectors commute with
+the unitary evolution. Number is conserved and energy scales as $1/R$,
+without assuming adiabatic motion. This inherits a specified occupation
+along a wall; it does not select its initial value.
+
+In $c=1$ units put $k_0=4\pi G\sigma_0$ and
+$d=\ell_P^2\mathcal A_q$, with $\ell_P^2=G\hbar/c^3$ when units
+are restored. The angular junction is
+
+$$
+\sqrt{\dot R^2+f_-}-\epsilon\sqrt{\dot R^2+f_+}
+=s(R),\qquad s(R)=k_0R+\frac{d}{R^2}.
+$$
+
+Here $f_-=1-H^2R^2$ and $f_+=1-2M/R$.
+The ordinary orientation is $\epsilon=+1$; the previous
+wormhole-side orientation is $\epsilon=-1$.
+For the latter, at a static point with $a=\sqrt{f_-}$ and
+$b=\sqrt{f_+}$, implicit differentiation gives
+
+$$
+V''=
+\frac{-H^2/a^3-2M/(bR^3)-M^2/(b^3R^4)-6d/R^4}
+{1/(2a)+1/(2b)}<0.
+$$
+
+Thus positive occupation does not stabilize the former wormhole
+branch. The ordinary orientation has a different sign in this test.
+One exact reference, specified before comparison with observations, is
+
+$$
+a=\frac{24}{25},\qquad b=\frac{4}{5},\qquad
+H^2R_0^2=\frac{49}{625},\qquad \frac{M_0}{R_0}=\frac{9}{50}.
+$$
+
+Both Israel conditions then fix positive components,
+
+$$
+k_0R_0=\frac{1}{225},\qquad
+\frac{d}{R_0^2}=\frac{7}{45},\qquad
+4\pi G R_0\sigma=\frac{4}{25},\qquad
+4\pi G R_0p=\frac{11}{150}.
+$$
+
+The centre is regular, the wall lies inside the core's static horizon,
+and the exterior starts outside $2M$. The resulting room is horizonless.
+At fixed mass, curvature, bare tension and occupation, its radial potential has
+
+$$
+V=V'=0,\qquad R_0^2V''=\frac{35159}{7200}>0,\qquad
+\frac{\omega_{\rm radial}R_0}{c}
+=\frac{\sqrt{35159}}{120}=1.562561109916.
+$$
+
+This establishes linear radial stability in the mean-stress surface
+model. Finite disturbances carry energy and change the exterior mass
+at second order. Nonspherical and fragmentation stability are not
+established; the localized-fermion literature makes that distinction
+essential.
+
+**Fixed couplings, unequal occupied states.**
+
+Choose the finite reference $q_0=1000$, with $N_0=2,002,000$.
+The spectral sum and the declared gas compactness give
+
+$$
+\frac{R_0}{\ell_P}=\sqrt{\frac{45\mathcal A_{1000}}{7}}
+=92651.4435937.
+$$
+
+This is a physical ruler for the conditional example, not a predicted
+cosmological length. The reference shape and state determine its action
+parameters once. Thereafter keep $G,\hbar,\sigma_0,H$ fixed and change
+only the occupation.
+
+For geometric shell mass $m_s=k_0R^2+d/R$, the signed static junction gives
+
+$$
+M(R,q)=\frac{H^2R^3}{2}
++m_s\sqrt{1-H^2R^2}-\frac{m_s^2}{2R}.
+$$
+
+Equilibrium requires $M_R=0$. The positive reference Hessian
+$R_0M_{RR}=35159/86400$ gives a locally unique family.
+Its exact response to spectral energy is
+
+$$
+\frac{dM_{\rm eq}}{d\mathcal A}
+=\frac{\ell_P^2\beta_+}{R}.
+$$
+
+The extra local energy contributes to the mass measured outside with
+its gravitational redshift. This accounts for the interior through
+the same mass used in the parent matching.
+
+| q | Radius / R0 | Mass / R0 | Mode / level spacing |
+| ---: | ---: | ---: | ---: |
+| 999 | .9993406734 | .1796270290 | 1.563237585 |
+| 1000 | 1.0000000000 | .1800000000 | 1.562561110 |
+| 1001 | 1.0006588232 | .1803733226 | 1.561883618 |
+
+The last column also compares the radial mode to the adjacent surface
+level spacing $c/R$. A detector interaction and selection rules are
+needed before identifying that spacing with an observed spectral line.
+
+### 10.13. Two physical interiors, one parent, and a central beacon
+
+<!-- nsc-claim:occupied-wall-parent-clocks -->
+
+Evidence: [common parent and null transport](../docs/nsc-atlas-occupied-wall.md#two-unequal-interiors-in-one-evolving-cosmology),
+[state and clock results](../results/summaries/nsc-atlas-occupied-wall-v1.json)
+and [piecewise null-ODE controls](../tests/test_nsc_atlas_occupied_wall.py).
+
+The same dust matching can now hold two unequal, completely specified
+interiors. Set the common parent $H_p(0)R_0/c=.075$ and
+$a_p(0)=1$. The exterior mass of each room fixes its comoving
+matching sphere:
+
+$$
+R_{b,q}(0)=\left(\frac{2M_q}{H_p(0)^2}\right)^{1/3}.
+$$
+
+Place the $q=999$ and $q=1001$ centres twelve $R_0$ apart in parent
+comoving coordinates. Their matching radii are
+$3.997235341585R_0$ and $4.002763442849R_0$, leaving positive
+clearance. The two excised spheres stay disjoint as the parent expands.
+Each local Darmois match has the same dust density on its outside.
+Together they therefore define one shared piecewise Einstein solution.
+The wall law and couplings are common; the states, radii and masses differ.
+
+![Occupied states, two rooms and their observer responses](../docs/figures/nsc-atlas-occupied-wall.png)
+
+*Figure 10. Two disjoint compensated regions in the same expanding dust
+parent. Parent positions are comoving; the interiors are schematic.
+The right panels show the reference radial mass minimum and the
+clock response to three finite states with unchanged couplings.
+The ordinary horizonless attachment and linear radial result are
+distinct from black-hole offspring formation and general stability.*
+
+A beacon at each regular centre now crosses the entire connection.
+At the static material wall, proper-time matching gives
+$dT=(a/b)dt_c$, where $t_c$ is central proper time and $T$
+is exterior Killing time. An emission at the Killing time of the
+join's initial cosmic event spends
+
+$$
+\Delta T_{\rm core}=\frac{a}{bH}\operatorname{atanh}(HR)
+$$
+
+inside the core. With $v_b=\sqrt{2M/R_b}$, reception at the
+moving dust join satisfies
+
+$$
+\int_0^{\tau_b}\frac{d\tau}{1+v_b(\tau)}
+=\Delta T_{\rm core}+r_*(R_b(0))-r_*(R).
+$$
+
+Continue through the dust to an observer eight $R_0$ away from each
+centre in the same comoving direction. Those two rays avoid the
+other matching sphere. The explicit dust conformal time determines
+the remaining arrival, and the total frequency ratio is
+
+$$
+1+z=\frac{a}{b}(1+v_b(\tau_b))
+\frac{a_p(\tau_r)}{a_p(\tau_b)}.
+$$
+
+| q | Reception time / (R0/c) | 1+z |
+| ---: | ---: | ---: |
+| 999 | 12.61376979 | 1.903001657 |
+| 1000 | 12.61774703 | 1.903495521 |
+| 1001 | 12.62172978 | 1.903990397 |
+
+The parent density and observer comoving offsets are the same in all
+three calculations. A separate null ODE crosses the core, collar and
+dust regions; differentiating reception proper time with respect to
+emission proper time independently recovers the redshift.
+The saved root comparison is at $3\times10^{-15}R_0$ and the
+clock-derivative difference at $1.2\times10^{-11}$.
+These are numerical indicators, not a microscopic or observational
+error budget.
+
+This connection reaches from a specified finite state to a conserved
+surface pressure, a compatible geometry, a common parent and an
+observer signal. Its inheritance law transports the occupation but
+does not select it. At fixed fundamental constants, copying that
+occupation to a scaled radius changes both $k_0R$ and
+$\ell_P^2\mathcal A/R^2$. A normalized operator relation alone does
+not preserve gravitational compactness.
+
+The supplied cap curvature is still
+$\Lambda_{\rm cap}R_0^2=147/625$; the common parent still has zero
+cosmological Lambda. Formation, occupation transfer, general stability
+and a collective source law remain physical questions. No cosmic
+density fraction or matter--antimatter asymmetry is inferred from
+this finite state-to-observer proof.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -3435,7 +3707,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 10. The isolated reference in joined causal charts. Horizons are
+*Figure 11. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -4441,7 +4713,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 11. Saved finite-window comparisons. A: the previous and current
+*Figure 12. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -4537,7 +4809,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 12. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 13. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -5322,7 +5594,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 13. Research dependencies, distinct from spacetime causal arrows.
+*Figure 14. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

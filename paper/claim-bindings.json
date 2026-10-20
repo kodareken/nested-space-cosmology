@@ -318,6 +318,16 @@
       "section": "10.11",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-observables.md"
+    },
+    "occupied-wall-source": {
+      "section": "10.12",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-occupied-wall.md"
+    },
+    "occupied-wall-parent-clocks": {
+      "section": "10.13",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-occupied-wall.md"
     }
   },
   "findings": [

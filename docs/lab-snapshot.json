@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e1474f71a1a17bb37160a6953bc7b65ca768ba06",
+  "current_receipt_commit_parent": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
   "files": [
     {
       "bytes": 3120,
@@ -41,11 +41,11 @@
     },
     {
       "bytes": 1266,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
+      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
+      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
       "path": "CITATION.cff",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "575b58a99739016799d66ae887a3270401dd7f9e625dbfce202395d43850118a"
+      "sha256": "886686fde59a4c6b0074664870069f1623d643bd22f7eb5af7c11486ea47c67a"
     },
     {
       "bytes": 5974,
@@ -11568,12 +11568,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 19953,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
+      "bytes": 20530,
+      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
+      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "51b569bbafbc39369780fc8b94f93123a9fdac3f79c355fcc0798fb968c5920d"
+      "sha256": "d6faa7c1ddf19b0aa73a91b329fbdcb2f4eab5f9154389da50ed8a9bd9a34841"
     },
     {
       "bytes": 9302,
@@ -11680,28 +11680,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 25413,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
+      "bytes": 25730,
+      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
+      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4761ba085b4a2c04ecf3e5dad55535255038d6ad3e83b669bf90b4846575b23c"
+      "sha256": "93b04159b860bc91fa7e5a581352b34066f17d85eaa2493b836c3e2f62713793"
     },
     {
       "bytes": 3206,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
+      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
+      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "c8b02ac306b3641a34f734d8ced24d83b6620c4370ab25eb4e0043348c3f7f29"
+      "sha256": "aed007e73d45fd63d2a496d46748e2cc5de9843c8dd8189c2079cf3d7364b66b"
     },
     {
-      "bytes": 28079,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
+      "bytes": 28365,
+      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
+      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "bcb99ab5dd4c62036e94d4c7994176c068a82152b9ec5741d367fb97871aaf58"
+      "sha256": "7246c76ad5f24b4b6ba233750903e5deffda5820e293f7244d55d5b2e3d6e6a3"
     },
     {
       "bytes": 226492,
@@ -11713,27 +11713,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
+      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
+      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "50010f3379dcafe1070efe1fcef7de8c15138eacc83c1bef5253b351513c7635"
+      "sha256": "45e42f021a490cb000303ab4d4384ce8e85514adbfda9b38c607fb354d418aaf"
     },
     {
-      "bytes": 268007,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
+      "bytes": 278580,
+      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
+      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "dafd6020419b135311827972d3d354c857a8f0face9715918afa4512f1cc6a6d"
+      "sha256": "350c69588da7ba888ed705916b9a1c76000b323c5d098a66e62015550efb85dd"
     },
     {
-      "bytes": 5783133,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
+      "bytes": 6183909,
+      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
+      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "74301ad8ec6fdb66f5aa88cc75bde7c3685913845e326048f72084f881a8ac62"
+      "sha256": "539b5393c1777fe8b2bc112fe5062cb4e6944e9d472fef10404dfc00e8423903"
     },
     {
       "bytes": 3283,

@@ -1,10 +1,10 @@
 {
-  "bytes": 5783133,
+  "bytes": 6183909,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "50010f3379dcafe1070efe1fcef7de8c15138eacc83c1bef5253b351513c7635",
+  "metadata_sha256": "45e42f021a490cb000303ab4d4384ce8e85514adbfda9b38c607fb354d418aaf",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 85,
-  "pdf_sha256": "74301ad8ec6fdb66f5aa88cc75bde7c3685913845e326048f72084f881a8ac62",
+  "pages": 89,
+  "pdf_sha256": "539b5393c1777fe8b2bc112fe5062cb4e6944e9d472fef10404dfc00e8423903",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -22,6 +22,10 @@
     {
       "path": "docs/figures/nsc-atlas-nested-slice.png",
       "sha256": "1996e39ef9fac6a9b8ffef6870b31d989c7b23569705ac367e9e118fc7b9f517"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-occupied-wall.png",
+      "sha256": "3e2fd38f123ac628121552f0cbed2d7d7bad95424b7c8e7f31a8273c29962f75"
     },
     {
       "path": "docs/figures/nsc-atlas-parent-observables.png",
@@ -492,6 +496,10 @@
       "sha256": "adc7ddfb28c26379a0856b0c630410329d8bd6bd7e1d40f7697705995542908c"
     },
     {
+      "path": "results/summaries/nsc-atlas-occupied-wall-v1.json",
+      "sha256": "0e2270cafcce1d3c42d12b0a0a36cfe11a9b3661fff29848d4f38f5ba0324784"
+    },
+    {
       "path": "results/summaries/nsc-atlas-onset-geometry-bound-v1.json",
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
@@ -585,6 +593,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "dafd6020419b135311827972d3d354c857a8f0face9715918afa4512f1cc6a6d",
-  "version": "working-2026-10-20.4"
+  "source_sha256": "350c69588da7ba888ed705916b9a1c76000b323c5d098a66e62015550efb85dd",
+  "version": "working-2026-10-20.5"
 }

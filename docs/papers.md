@@ -6,6 +6,16 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision 2026-10-20.5 adds Sections 10.12--10.13: a declared occupied
+surface-Dirac material, its conserved pressure, a radially stable
+horizonless reference and nearby states under one fixed action.
+Two unequal sourced interiors fit one compensated dust parent, and
+their central beacons reach cosmological observers with distinct
+calculated redshifts. The new plate connects spectrum, material,
+geometry and signal. It keeps the supplied occupation and cap vacuum,
+the unstable wormhole orientation, and the unresolved shape,
+fragmentation and formation questions explicit.
+
 Revision `2026-10-20.4` develops the illustrated-atlas direction with a
 reader's construction map and Sections 10.8--10.11. Einstein--Straus
 matching gives the retained exterior an expanding dust parent and a
