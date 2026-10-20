@@ -273,6 +273,7 @@ and the detuned dS brane in B have not been combined into one geometry.
 
 ## D. Does the actual wall select its own cap scale?
 
+First test the original massless de Sitter cap joined to Schwarzschild.
 The [owned tension wall](../src/recursive_horizons/nsc_atlas_nested_slice.py)
 uses a constant positive sigma and surface pressure p_s=-sigma,
 with k=4 pi G sigma in c=1 units. Reusing the published
@@ -328,6 +329,19 @@ V_u=x beta_+<0 and V_mu=-2 beta_-/x^2<0, so
 d mu_crit/du=-V_u/V_mu<0. At u=0, mu_crit=16/27.
 The existing state has mu=.8>16/27: at its fixed M and k it has
 no static solution for any nonnegative H^2.
+The stationary equation has only one positive radius, and its value is
+V_max=1-(mu/mu_crit(u))^(2/3). Thus above the critical mass the
+potential is negative at every radius, not merely at the original wall.
+
+The actual nested outer wall has inner Kottler mass m=.01 ell.
+Its potential has the same form with
+A=(M-m)^2/k^2 and B=M+m-(M-m)u; C is unchanged.
+The instability identity P17 therefore still applies. Its dimensionless
+potential equals the massless-cap expression at mu=k(M-m)=.78,
+minus 2km/x=.04/x. The massless expression is already everywhere
+negative for .78>16/27, so this actual outer wall also has no static
+root for any u>=0. The massless critical curve P18 is used as a
+comparison bound, not misidentified as the nested wall's critical curve.
 
 For illustration, keeping u=.25 but changing the mass to the critical
 one gives x=1.126996043952, mu=.512485700729 and V_xx=-3.881941479272.
@@ -428,6 +442,7 @@ The [calculator](../src/recursive_horizons/nsc_atlas_parent_observables.py),
 [23 checks](../tests/test_nsc_atlas_parent_observables.py) and
 [compact scalar record](../results/summaries/nsc-atlas-parent-observables-v1.json)
 retain equations, domains, source hashes and numerical indicators.
-No field grid is saved. The recorded calculation uses 882 parent-state
-evaluations and .015625 process-CPU seconds. This analytic workload
-benefits from parallel independent review, not numerical grid expansion.
+No field grid is saved. The calculation uses 882 parent-state evaluations
+and completes below a tenth of a process-CPU second; the recorded Windows
+CPU timer can round this short run to zero. This analytic workload benefits
+from parallel independent review, not numerical grid expansion.

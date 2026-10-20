@@ -298,6 +298,26 @@
       "section": "10.7",
       "status": "derived",
       "owner": "docs/nsc-atlas-compact-parent.md"
+    },
+    "atlas-cosmological-parent": {
+      "section": "10.8",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-parent-observables.md"
+    },
+    "surrounding-bulk-reference": {
+      "section": "10.9",
+      "status": "external_reference",
+      "owner": "docs/nsc-atlas-parent-observables.md"
+    },
+    "wall-equilibrium-closure": {
+      "section": "10.10",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-observables.md"
+    },
+    "population-source-balance": {
+      "section": "10.11",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-observables.md"
     }
   },
   "findings": [

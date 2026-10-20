@@ -1,10 +1,10 @@
 {
-  "bytes": 5221402,
+  "bytes": 5783133,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "f036437f66f689617c0e10a8db463b22993d9ab45a8d1e47122c9681a3e459f2",
+  "metadata_sha256": "50010f3379dcafe1070efe1fcef7de8c15138eacc83c1bef5253b351513c7635",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 79,
-  "pdf_sha256": "ec4bfbdba0267f915045f3755e913ff39635edf3660af6d33b6edc6d8a9b12de",
+  "pages": 85,
+  "pdf_sha256": "74301ad8ec6fdb66f5aa88cc75bde7c3685913845e326048f72084f881a8ac62",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -22,6 +22,10 @@
     {
       "path": "docs/figures/nsc-atlas-nested-slice.png",
       "sha256": "1996e39ef9fac6a9b8ffef6870b31d989c7b23569705ac367e9e118fc7b9f517"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-parent-observables.png",
+      "sha256": "4009b185b88dc9b577ceddc5d14b235046269f7190984ef4f7871836b3e9c328"
     },
     {
       "path": "docs/figures/nsc-atlas-ssprk3-refinement.manifest.json",
@@ -496,6 +500,10 @@
       "sha256": "cbaeef6d7e1c6ffe93aefcaa1e1ab4dd6f5bb6425038a558435dfa10d60246c8"
     },
     {
+      "path": "results/summaries/nsc-atlas-parent-observables-v1.json",
+      "sha256": "936469cad670eda71f267008bd194d8e7f31f36d9229ffde43ec90a8242083bf"
+    },
+    {
       "path": "results/summaries/nsc-atlas-radar-inverse-v1.json",
       "sha256": "a91459e69e5cfab2c273da1c7a2d6d979f06fac3809c2ef7f89f42cb4b05938f"
     },
@@ -577,6 +585,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "1121a9a4a0f33289cba4e6dabedaa6c6b6000a28dbee0c56fd98b27ab82d21f5",
-  "version": "working-2026-10-20.3"
+  "source_sha256": "dafd6020419b135311827972d3d354c857a8f0face9715918afa4512f1cc6a6d",
+  "version": "working-2026-10-20.4"
 }

@@ -93,6 +93,8 @@ def calculation():
         open_population_counterexample=[population_balance(a, exponent=3.) for a in (1., 1.5, 2.)],
         original_wall_balance=dict(
             existing_mu=.8, maximum_static_mu=16/27,
+            nested_outer_inner_mass=.01, nested_outer_delta_mu=.78,
+            nested_outer_potential="Massless-cap V at mu=.78 minus .04/x; its upper bound is already negative for every u>=0.",
             existing_state_has_static_solution_for_any_nonnegative_H_squared=False,
             critical_example=critical_tension_wall(.25),
             proof="At every stationary potential point V_RR=-12A/R^6-6C<0. The critical mass decreases from mu=16/27 as u=H^2/k^2 grows.",

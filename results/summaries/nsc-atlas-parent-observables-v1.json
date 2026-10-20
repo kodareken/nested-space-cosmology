@@ -161,6 +161,9 @@
   "original_wall_balance": {
     "existing_mu": 0.8,
     "maximum_static_mu": 0.5925925925925926,
+    "nested_outer_inner_mass": 0.01,
+    "nested_outer_delta_mu": 0.78,
+    "nested_outer_potential": "Massless-cap V at mu=.78 minus .04/x; its upper bound is already negative for every u>=0.",
     "existing_state_has_static_solution_for_any_nonnegative_H_squared": false,
     "critical_example": {
       "u": 0.25,
@@ -179,13 +182,13 @@
   },
   "uncertainty": "Fixed-rule and ODE differences are numerical indicators; no observed fit or physical error distribution is supplied.",
   "charged_parent_state_evaluations": 882,
-  "process_cpu_seconds": 0.015625,
+  "process_cpu_seconds": 0.0,
   "field_grids": 0,
   "source_sha256": {
     "src/recursive_horizons/nsc_atlas_parent_observables.py": "8eea650fcbac343c353fd2b0ccc68c92a8d9d0115ee417345cd23e1abeec9974",
-    "scripts/check_nsc_atlas_parent_observables.py": "52c2421c7fa30b7e26b9cb7b02af24177b26f3733aa4aa277008dde2d41da4f5",
+    "scripts/check_nsc_atlas_parent_observables.py": "98ad759f64f820533ec0aeb39bef2bbe609d616aa44192e179aa802c7e33437f",
     "scripts/plot_nsc_atlas_parent_observables.py": "0bf8332703a137e0c02568577e23051e5772626afe472340f0d2b52feab85163",
-    "tests/test_nsc_atlas_parent_observables.py": "7afad015d1bd20bc149e6043003f21f8c90c1e8773f4a7d5a8f4b40975d893a6",
+    "tests/test_nsc_atlas_parent_observables.py": "b96da505e1f8e4f79ed8ca9967f6e2a38cb706d787e76346797c76ec35d09e32",
     "src/recursive_horizons/nsc_atlas_nested_slice.py": "fcd9f7b70046c215bd06cd2a78fd94aa40b0adb78290e889729a9b4cfb05df45"
   },
   "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_parent_observables.py"

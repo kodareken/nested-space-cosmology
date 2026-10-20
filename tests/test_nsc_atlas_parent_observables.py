@@ -173,6 +173,10 @@ def test_potential_is_the_existing_signed_wall_motion():
         assert float(p["V"]) == pytest.approx(-old["Rdot"]**2, abs=2e-14)
         assert float(p["beta_minus"]) == pytest.approx(old["beta_minus"], abs=2e-14)
         assert float(p["beta_plus"]) == pytest.approx(old["beta_plus"], abs=2e-14)
+        nested = tension_wall(R, .01, 1., .4, 0., 2.)
+        comparison = tension_potential(2*R, mu=.78, u=.25)
+        assert float(comparison["V"])-.04/(2*R) == pytest.approx(
+            -nested["Rdot"]**2, abs=2e-14)
 
 
 @pytest.mark.parametrize("u", [0., .25, 1., 4.])
@@ -204,6 +208,12 @@ def test_no_stable_equilibrium_is_an_identity_not_a_grid_inference():
         Vu = s["x"]*s["beta_plus"]
         Vmu = -2*s["beta_minus"]/s["x"]**2
         assert -Vu/Vmu < 0
+        # The sole positive stationary radius scales as mu**(1/3).
+        x_max = s["x"]*(.78/s["mu"])**(1/3)
+        state = tension_potential(x_max, mu=.78, u=u)
+        assert abs(float(state["derivative"])) < 2e-13
+        assert float(state["V"]) == pytest.approx(1-(.78/s["mu"])**(2/3), abs=2e-14)
+        assert state["V"] < 0
     assert .4*2 > 16/27
 
 

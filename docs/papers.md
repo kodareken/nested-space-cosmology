@@ -6,6 +6,17 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-20.4` develops the illustrated-atlas direction with a
+reader's construction map and Sections 10.8--10.11. Einstein--Straus
+matching gives the retained exterior an expanding dust parent and a
+clock prediction. Attributed brane examples show induced curvature and
+shadow-matter lensing. The existing constant-tension wall has no stable
+equilibrium selecting Lambda; its exact critical-mass bound and the
+remaining inheritance invariants are displayed. Gravastar material
+laws and established throat/interior-universe work are credited as
+building blocks. The new four-panel plate compares these calculations
+without identifying their different actions or backgrounds.
+
 Revision `2026-10-20.3` adds Section 10.7's explicit compact S3 parent,
 its intrinsic geometry figure, and the matched remote-nesting comparison.
 Global effective traces and physical volume fractions change while the

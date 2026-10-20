@@ -58,9 +58,13 @@ light curves and their published covariance. A brightness-scale-independent
 contrast differs from its zero prediction by $-0.1046\pm0.0144$ magnitudes.
 This retrospective test challenges that quiet limit without fitting
 $\Lambda$CDM parameters. Together these calculations provide finite
-connections and explicit failed limits. A collective evolving parent, physical
-inheritance, source selection and a cosmological vacuum contribution remain
-to be derived and tested.
+connections and explicit failed limits. An exact compensated dust parent
+now extends the retained exterior and yields a received frequency ratio
+$1+z=1.778824923298$. Separate bulk-gravity constructions exhibit induced
+curvature and an attributed shadow-matter lensing discriminator. The
+existing constant-tension wall has no stable equilibrium selecting its
+cap scale. An inherited material/state law and a realistic cosmological
+and thermal history remain to be derived and tested.
 
 ## I. The question and the spherical idea
 
@@ -88,6 +92,30 @@ coverage of declared model families, including exclusions and observational
 degeneracies. Establishing that a family describes our universe is a further
 empirical achievement. The present finite connections are steps toward that
 destination, not a claim to have reached it.
+
+Read this as an illustrated mathematical atlas. A picture introduces a
+geometry; the equations state what it contains and how its regions connect;
+a clock, a ray or a spectrum shows what an observer could distinguish.
+The route through the book is therefore also a route through other authors'
+constructions. Attribution belongs beside the useful equation, with the
+assumptions that allow it to enter the map.
+
+Several building blocks guide the new comparison in Sections 10.8--10.11:
+
+| Construction and contributors | What it contributes to the atlas |
+| --- | --- |
+| Einstein--Straus; matching reviewed by Mars, Mena and Vera | An expanding cosmological parent with exact mass compensation |
+| Shiromizu, Maeda and Sasaki; Maartens and Koyama | Equations linking a surrounding bulk to local gravitational sources |
+| Garriga and Tanaka | An outside-matter effect with distinct lensing and orbital measurements |
+| Mazur and Mottola; Visser and Wiltshire | Material interfaces and stability tools beyond a constant-tension wall |
+| Morris and Thorne; Easson and Brandenberger | Established throat and black-hole-interior cosmology constructions |
+
+Their primary sources and the actual connections appear with the calculations.
+A shared visual motif is an invitation to check compatibility; a joined model
+requires compatible actions, sources, orientations and states. The intended
+synthesis is a common derivation of expansion, clustering and matter history.
+The density fractions and matter--antimatter asymmetry become outputs only
+when that common history has been specified and calculated.
 
 The first motif contains two spatially separated black holes in a common
 parent, possible unequal children, and one further generation. A separate
@@ -3001,6 +3029,363 @@ continuation, cosmological observer history and the origin of the
 regional vacuum values remain the next physical questions.
 
 
+### 10.8. The nested body in an expanding parent
+
+<!-- nsc-claim:atlas-cosmological-parent -->
+
+Evidence: [cosmological attachment and observer derivation](../docs/nsc-atlas-parent-observables.md),
+[compact calculation](../results/summaries/nsc-atlas-parent-observables-v1.json)
+and [independent checks](../tests/test_nsc_atlas_parent_observables.py).
+
+An atlas needs both its local rooms and the world they inhabit. The
+isolated and compact constructions above supply two completions of the
+same nested body. A third now attaches its right Schwarzschild exterior
+to an expanding dust universe. The new join has no material membrane.
+Its geometry is borrowed from Einstein and Straus; the matching formulas
+are presented in [Mars, Mena and Vera, Section 2](https://arxiv.org/html/1307.4371#S2).
+The connection here is to the already sourced NSC interior and its
+observer map.
+
+Keep $M=.4\ell$, the original $L_{\rm ref}=\ell=2/k$, and the
+increasing-radius exterior beyond the bridge. Choose the initial
+cosmological join at $R_b(0)=4\ell$. With $G=c=1$, the two metrics are
+
+$$
+ds_F^2=-d\tau^2+a(\tau)^2(d\chi^2+\chi^2d\Omega^2),
+$$
+
+$$
+ds_S^2=-f\,dT^2+f^{-1}dR^2+R^2d\Omega^2,\qquad f=1-\frac{2M}{R}.
+$$
+
+On the comoving boundary $R_b=a\chi_b$, equality of the angular
+extrinsic curvature requires
+
+$$
+\sqrt{\dot R_b^2+f_b}=1,\qquad
+\dot R_b^2=\frac{2M}{R_b},\qquad \dot T_b=\frac{1}{f_b}.
+$$
+
+Both induced metrics equal $-d\tau^2+R_b^2d\Omega^2$.
+The boundary is geodesic, with radial acceleration $-M/R_b^2$, so the temporal
+extrinsic curvature is also zero on both sides. The full Darmois
+conditions hold. The flat dust Friedmann equation gives
+
+$$
+M=\frac{4\pi}{3}\rho_d R_b^3,\qquad
+H_0^2=\frac{2M}{R_b(0)^3},\qquad
+a(\tau)=\left(1+\frac{3}{2}H_0\tau\right)^{2/3}.
+$$
+
+This identity supplies the mass accounting. The exterior mass replaces
+the dust removed to accommodate the attached interior. Its internal
+proper energy is not another exterior mass to add to that equation.
+The parent has $H_0\ell=.111803398875$ and
+$\rho_d(0)\ell^2=.00149207759149$. The join radius and the dust
+assumption are supplied; these values are conditional outputs.
+
+The initial surface also needs a connection. Preserve the old static
+collar through $R=\ell$, then set $dT/dR=w(R)\sqrt{2M/R}/f$.
+A smoothstep takes $w$ from zero to one by $R=3.5\ell$.
+The induced radial metric is $(1-w^2\,2M/R)/f>0$, becomes one near
+the join, and satisfies the vacuum constraints. It supplies a spacelike
+surface connecting the retained interior to the cosmic clock.
+Keeping the old zero-velocity normal at the join instead would select
+a different, closed-dust turnaround. The expanding construction changes
+the outer slicing explicitly; it does not reinterpret the previous
+normal averages or evolve the compact $S^3$ into a different topology.
+
+Now follow a light ray. A static emitter at $R_e=2\ell$ emits at the
+Killing time of the boundary's $\tau=0$ event. A comoving observer on
+the join receives it. With $v_b=\sqrt{2M/R_b}$ and
+$r_*=R+2M\log(R/(2M)-1)$,
+
+$$
+\int_0^{\tau_r}\frac{d\tau}{1+v_b(\tau)}
+=r_*(R_b(0))-r_*(R_e),\qquad
+1+z=\frac{1+v_b(\tau_r)}{\sqrt{f_e}}.
+$$
+
+The calculated reception is
+$\tau_r/\ell=3.921887982097$, $R_b(\tau_r)/\ell=5.602745333858$,
+and $1+z=1.778824923298$. An independent null ODE changes the
+arrival by $1.3\times10^{-12}\ell$; a proper-clock derivative checks
+the redshift. The experiment lies entirely on the parent side of
+the bridge. It transmits no signal from the causally separated cap.
+Its longer exterior history does not assert a regular continuation of
+the inner throat. Seconds require an independent physical value of $\ell/c$.
+
+The parent decelerates with $q=1/2$ and generates no cosmological
+vacuum term. Its initial Ricci scalar divided by four is nevertheless
+$.009375/\ell^2$, supplied by dust. The connected geometry therefore
+distinguishes expansion, curvature trace and vacuum pressure.
+
+![Four calculated views of surrounding geometry](../docs/figures/nsc-atlas-parent-observables.png)
+
+*Figure 9. A: the cosmological join and its received light ray.
+B: the attributed two-brane lensing discriminator. C: the existing
+constant-tension wall and its unstable critical comparison.
+D: a separate bulk geometry inducing positive local curvature.
+The curves are regenerated from the stated equations. Panels A and C
+belong to the current four-dimensional family; B and D have different
+five-dimensional backgrounds and have not been combined into one model.*
+
+### 10.9. Two explicit ways surrounding geometry enters local gravity
+
+<!-- nsc-claim:surrounding-bulk-reference -->
+
+Evidence: [source conventions and geometric checks](../docs/nsc-atlas-parent-observables.md#b-a-surrounding-bulk-can-induce-local-curvature),
+[finite examples](../results/summaries/nsc-atlas-parent-observables-v1.json),
+[Shiromizu--Maeda--Sasaki](https://arxiv.org/html/gr-qc/9910076v3),
+[Maartens--Koyama](https://arxiv.org/html/1004.3962)
+and [Garriga--Tanaka](https://arxiv.org/html/hep-th/9911055v3).
+
+The surrounding region can have a different mathematical role from an
+ordinary exterior. In a brane construction, an observer occupies a
+four-dimensional hypersurface of a five-dimensional bulk. The surface
+curvature then depends on how it lies in that bulk. This is a distinct
+candidate from the two-sphere membrane of the preceding sections.
+
+For a $Z_2$-symmetric brane with tension $\lambda$, confined matter
+$T_{\mu\nu}$ and a bulk cosmological term, the Gauss and Israel
+equations yield
+
+$$
+G_{\mu\nu}=-\Lambda_4q_{\mu\nu}+\kappa_4^2T_{\mu\nu}
++\kappa_5^4\pi_{\mu\nu}-E_{\mu\nu},
+$$
+
+$$
+\kappa_4^2=\frac{\kappa_5^4\lambda}{6},\qquad
+\Lambda_4=\frac{\Lambda_5}{2}+\frac{\kappa_5^4\lambda^2}{12}.
+$$
+
+The full quadratic tensor $\pi_{\mu\nu}$ and the conservation equation
+are given in the linked derivation. $E_{\mu\nu}$ is the traceless
+projection of bulk Weyl curvature. Direct contraction of the Gauss
+equation agrees with this decomposition for the checked tensors,
+including momentum flux and anisotropic pressure. That algebra does
+not supply a bulk solution for arbitrary matter data.
+
+A vacuum example does supply the whole surrounding metric. Set
+$\Lambda_5=-6/L_5^2$ and
+
+$$
+ds_5^2=dy^2+A(y)^2ds_{\mathrm{dS}_4}^2,\qquad
+A(y)=\cosh(y/L_5)-s\sinh(|y|/L_5),
+$$
+
+$$
+s=\frac{\kappa_5^2\lambda L_5}{6}>1,\qquad
+0\leq |y|<L_5\operatorname{atanh}(1/s).
+$$
+
+Both independent bulk sectional curvatures equal $-1/L_5^2$.
+The junction fixes the first derivative of $A$ at the brane, giving
+
+$$
+\Lambda_4L_5^2=3(s^2-1).
+$$
+
+For the declared demonstration $s=1.1$, this is $.63$, with
+$H_4L_5=.458257569496$. It is a positive, locally measurable
+curvature induced by surrounding geometry and tension. The two inputs
+$s,L_5$ have not been selected by inheritance, and $L_5$ is not
+identified with the membrane ruler $\ell$.
+
+The source channels can be distinguished. In a homogeneous isotropic
+brane, a separately conserved Weyl contribution behaves as radiation,
+$p_E=\rho_E/3$ and its density decreases as $a^{-4}$. For confined dust the
+quadratic source obeys
+$\rho_{\rm quad}=p_{\rm quad}=\rho^2/(2\lambda)$. Neither is the
+constant vacuum term in this explicit example.
+
+Garriga and Tanaka give a second, observationally useful construction:
+matter on another flat brane affects the observer's metric through a
+bulk gravitational response. With two branes and an unstabilized
+massless radion, the static zero-mode source tensor is
+$T_{\mu\nu}-q_{\mu\nu}T/3$. Its nonrelativistic time and spatial
+components have ratio $2:1$. Use the metric convention
+
+$$
+ds^2=-(1+2\Phi)dt^2+(1-2\Psi)(dx^2+dy^2+dz^2).
+$$
+
+A pure shadow source then has $\Psi/\Phi=1/2$.
+
+Slow orbits determine the dynamical potential, while light deflection
+depends on both potentials. The straight-ray integral gives
+
+$$
+\alpha=\frac{2(1+\Psi/\Phi)G_4M_{\rm dyn}}{bc^2},\qquad
+\frac{\alpha_{\rm shadow}}{\alpha_{\rm GR}}=\frac{3}{4}.
+$$
+
+This 25% reduction at the same dynamical mass is their published
+discriminator, recovered here from the tensor and ray integral.
+It shows what a quantitative outside-matter claim can look like.
+For positive-brane observers, mixed sources with common profiles and
+shadow potential fraction $f$ give
+
+$$
+\gamma_v=\frac{3-e^{-2d/L_5}}{3+e^{-2d/L_5}},\qquad
+\frac{\Psi}{\Phi}=(1-f)\gamma_v+\frac{f}{2}.
+$$
+
+At $d/L_5=5$, the lensing ratios for $f=0,.5,1$ are
+$.99998487$, $.87499243$ and $.75$. This $f$ is not a cosmological
+density fraction. A stabilized radion or a different background
+requires a new response calculation. In particular, these flat-brane
+perturbations have not been grafted onto the detuned de Sitter example.
+
+### 10.10. Can the enclosing wall select the cap curvature?
+
+<!-- nsc-claim:wall-equilibrium-closure -->
+
+Evidence: [signed wall proof and inheritance map](../docs/nsc-atlas-parent-observables.md#d-does-the-actual-wall-select-its-own-cap-scale),
+[original wall implementation](../src/recursive_horizons/nsc_atlas_nested_slice.py)
+and [symbolic and geometric controls](../tests/test_nsc_atlas_parent_observables.py).
+The [compact evidence](../results/summaries/nsc-atlas-parent-observables-v1.json)
+records the retained parameters and the critical comparison.
+
+The natural equilibrium question is whether the wall itself determines
+$H$, making $\Lambda=3H^2$ an output. The relevant building block is
+the published vacuum-bubble dynamics, credited through
+[Ansoldi, Guendelman and Shilon](https://arxiv.org/html/0711.2198v1#S3).
+First consider the original massless cap-to-Schwarzschild member.
+For its constant positive tension,
+$p_s=-\sigma$, $k=4\pi G\sigma$ in $c=1$ units, the signed junction
+gives the existing radial equation
+
+$$
+\dot R^2+V(R)=0,
+$$
+
+with potential
+
+$$
+V(R)=1-\frac{M^2}{k^2R^4}
+-\frac{M(1-H^2/k^2)}{R}
+-\frac{(k^2+H^2)^2R^2}{4k^2}.
+$$
+
+Write this as $1-A/R^4-B/R-CR^2$, with $A,C>0$.
+At a stationary point, $B/R^3=2C-4A/R^6$. Substitution gives
+
+$$
+\left.V''\right|_{V'=0}=-\frac{12A}{R^6}-6C<0.
+$$
+
+Every static wall in this family is radially unstable. This exact
+identity decides the suggested stable-equilibrium closure without
+a scan. The full static family, with $u=H^2/k^2$, $x=kR$ and
+$\mu=kM$, can be parameterized by
+
+$$
+q_*=\frac{u-1+\sqrt{9u^2+14u+9}}{8},\qquad
+x^2=\frac{1}{3[(1+u)^2/4-q_*^2]},\qquad
+\mu_{\rm crit}=q_*x^3 .
+$$
+
+Its signed factors obey $\beta_->0>\beta_+$ and the temporal
+Israel condition. Thus the exterior remains on the wormhole branch.
+The critical mass decreases with $u\geq0$ from
+$\mu_{\rm crit}(0)=16/27$. Our retained $\mu=.8$ exceeds that
+ceiling: at fixed $M,k$ it admits no static state at any nonnegative
+$H^2$. At the illustrative critical state with $u=.25$,
+$\mu=.512485700729$, $x=1.126996043952$ and
+$V_{xx}=-3.881941479272$.
+
+The actual nested outer wall has inner Kottler mass $m=.01\ell$.
+Its potential replaces $A$ by $(M-m)^2/k^2$ and $B$ by
+$M+m-(M-m)u$. The same negative-curvature identity applies.
+More strongly, its dimensionless potential is the massless expression
+at $k(M-m)=.78$, minus $.04/x$. Since $.78>16/27$, it is
+everywhere negative and also has no static root. The massless
+critical curve is a comparison bound for this nested wall.
+
+The scale-compatible inheritance map
+
+$$
+(R,M,k,H)\longmapsto(aR,aM,k/a,H/a)
+$$
+
+preserves $kM$ and $H/k$ for every $a>0$. It transports a
+dimensionless model without selecting those invariants.
+The full inherited-operator programme may supply additional conditions;
+this wall calculation does not yet identify them. The cap radius
+$H^{-1}$ and its material wall radius $R$ are different quantities.
+The compact average counterexample does not make them equal.
+
+Gravastars provide a useful next building block.
+[Mazur and Mottola](https://arxiv.org/html/gr-qc/0109035) place a
+material transition layer between a de Sitter core and a Schwarzschild
+exterior. [Visser and Wiltshire](https://arxiv.org/html/gr-qc/0310107)
+make stability depend explicitly on the thin shell's equation of state.
+For a no-flux shell,
+
+$$
+\frac{d\sigma}{dR}=-\frac{2(\sigma+p_s)}{R}.
+$$
+
+The current $p_s=-\sigma$ is one special case. An inherited material
+or state response could supply another and change stability.
+That is the connection to derive before using a stable gravastar to
+select the cap scale. These published results do not select the
+new material law for us.
+
+The classic [Morris--Thorne construction](https://doi.org/10.1119/1.15620)
+already relates traversable throats to negative radial null stress.
+Section 10.7 applies a related Einstein-equation condition at the
+specified dynamical turn; it makes no priority claim for that
+requirement. [Easson and Brandenberger](https://arxiv.org/abs/hep-th/0103019)
+likewise belongs in the black-hole-interior cosmology family. Each
+construction contributes its established mechanism with its premises.
+
+### 10.11. The source law behind a growing mass
+
+<!-- nsc-claim:population-source-balance -->
+
+Evidence: [energy accounting and finite counterexample](../docs/nsc-atlas-parent-observables.md#e-growing-black-hole-masses-and-the-missing-energy-equation),
+[calculated balances](../results/summaries/nsc-atlas-parent-observables-v1.json)
+and [conservation checks](../tests/test_nsc_atlas_parent_observables.py).
+
+The proposal that black holes supply dark energy makes the source
+question especially sharp. For fixed comoving number,
+a mass growing as $a^n$ gives a density growing as $a^{n-3}$.
+The balance law is
+
+$$
+\dot\rho_B+3H(\rho_B+p_B)=Q.
+$$
+
+A separately conserved effective component has $Q=0$ and
+$w_B=-n/3$. Pressureless mass receiving energy instead has
+$p_B=0$ and $Q=nH\rho_B$. The mass law alone does not decide which
+description follows from the geometry.
+
+For example, take $\rho_B=.1$ and a pressureless reservoir
+$\rho_X=a^{-3}-.1$, in units of the initial total density.
+Over $1\leq a\leq2$, both are nonnegative and the transfers cancel.
+The total density is $a^{-3}$, total pressure zero and $q=1/2$,
+even though the black-hole component has constant density.
+This is a homogeneous conservation counterexample, not a microscopic
+accretion model. It identifies the equation an inherited coupling must supply.
+
+[Farrah and collaborators](https://arxiv.org/abs/2302.07878) propose
+a cosmological mass-growth mechanism; [Ghodla and collaborators](https://arxiv.org/abs/2306.08199)
+derive binary-merger consequences of such growth. The atlas includes
+both the proposed connection and an independent way of testing it.
+Neither supplies an observational validation of the present NSC geometry.
+
+The next selection problem is now explicit: derive an inherited
+stress/state law or gravitational reduction, obtain its dimensionless
+parameters, and propagate the same solution to expansion, clustering,
+lensing and thermal history. The present chapter adds a cosmological
+connection, an observable clock relation, useful external mechanisms
+and a decided equilibrium question. It does not yet predict the
+cosmological density fractions or matter--antimatter asymmetry.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -3050,7 +3435,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 9. The isolated reference in joined causal charts. Horizons are
+*Figure 10. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -4056,7 +4441,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 10. Saved finite-window comparisons. A: the previous and current
+*Figure 11. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -4152,7 +4537,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 11. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 12. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -4937,7 +5322,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 12. Research dependencies, distinct from spacetime causal arrows.
+*Figure 13. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

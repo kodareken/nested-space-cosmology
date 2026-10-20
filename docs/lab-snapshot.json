@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f28bb848b3d13f6d0f4dca573c30464e7c0cc2be",
+  "current_receipt_commit_parent": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
   "files": [
     {
       "bytes": 3120,
@@ -41,11 +41,11 @@
     },
     {
       "bytes": 1266,
-      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
+      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "CITATION.cff",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "0640f3cca5479942f2d543a46c0eb11e1b8ae74904fa901959d470ce86039dde"
+      "sha256": "575b58a99739016799d66ae887a3270401dd7f9e625dbfce202395d43850118a"
     },
     {
       "bytes": 5974,
@@ -10543,12 +10543,12 @@
       "sha256": "fd3e5790c281f6f86262f1ebcc930efe9560cc9ffdfe7f53170ccf52843016c1"
     },
     {
-      "bytes": 17464,
+      "bytes": 18374,
       "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "f28bb848b3d13f6d0f4dca573c30464e7c0cc2be",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "docs/nsc-atlas-parent-observables.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "7f5b7b5deb8a307f3d3c92b39747e3bb9b78312eec3fc9fc77339d32e957d230"
+      "sha256": "3b275b055e685bb051154469721d54101929cc9ed7d9abfd7a919bfe328a31a8"
     },
     {
       "bytes": 9702,
@@ -11552,12 +11552,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 19268,
-      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
+      "bytes": 19953,
+      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "334a2845af9d8f0adac2c9f024ee6ef9699533e1f25286b4bd8374de4d475f48"
+      "sha256": "51b569bbafbc39369780fc8b94f93123a9fdac3f79c355fcc0798fb968c5920d"
     },
     {
       "bytes": 9302,
@@ -11664,28 +11664,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 25086,
-      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
+      "bytes": 25413,
+      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2baaaca6c6e283b5022dd9533baa05b0317748ca4db91ac351535f6040b4daab"
+      "sha256": "4761ba085b4a2c04ecf3e5dad55535255038d6ad3e83b669bf90b4846575b23c"
     },
     {
       "bytes": 3206,
-      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
+      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0f986240c82382060173a4639adf64bd0733d6cfc227b0bf41a89b6397fba363"
+      "sha256": "c8b02ac306b3641a34f734d8ced24d83b6620c4370ab25eb4e0043348c3f7f29"
     },
     {
-      "bytes": 27473,
-      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
+      "bytes": 28079,
+      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0676f2f4fd5e1727ea7ff3eab634856842f75406cc7eada3b0a0973ef204609b"
+      "sha256": "bcb99ab5dd4c62036e94d4c7994176c068a82152b9ec5741d367fb97871aaf58"
     },
     {
       "bytes": 226492,
@@ -11697,27 +11697,27 @@
     },
     {
       "bytes": 396,
-      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
+      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f036437f66f689617c0e10a8db463b22993d9ab45a8d1e47122c9681a3e459f2"
+      "sha256": "50010f3379dcafe1070efe1fcef7de8c15138eacc83c1bef5253b351513c7635"
     },
     {
-      "bytes": 251102,
-      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
+      "bytes": 268007,
+      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1121a9a4a0f33289cba4e6dabedaa6c6b6000a28dbee0c56fd98b27ab82d21f5"
+      "sha256": "dafd6020419b135311827972d3d354c857a8f0face9715918afa4512f1cc6a6d"
     },
     {
-      "bytes": 5221402,
-      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
+      "bytes": 5783133,
+      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ec4bfbdba0267f915045f3755e913ff39635edf3660af6d33b6edc6d8a9b12de"
+      "sha256": "74301ad8ec6fdb66f5aa88cc75bde7c3685913845e326048f72084f881a8ac62"
     },
     {
       "bytes": 3283,
@@ -30398,12 +30398,12 @@
       "sha256": "cbaeef6d7e1c6ffe93aefcaa1e1ab4dd6f5bb6425038a558435dfa10d60246c8"
     },
     {
-      "bytes": 7154,
+      "bytes": 7344,
       "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "f28bb848b3d13f6d0f4dca573c30464e7c0cc2be",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "results/summaries/nsc-atlas-parent-observables-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "4f037f3be29c2405b18d6890713b698239bcea78606852958d9d3dccf52f1798"
+      "sha256": "936469cad670eda71f267008bd194d8e7f31f36d9229ffde43ec90a8242083bf"
     },
     {
       "bytes": 14948,
@@ -30839,12 +30839,12 @@
       "sha256": "55d15083f279ae4700f12d765482e0ae4e2242697f6b7173c7209c517ad28d73"
     },
     {
-      "bytes": 6102,
+      "bytes": 6298,
       "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "f28bb848b3d13f6d0f4dca573c30464e7c0cc2be",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "scripts/check_nsc_atlas_parent_observables.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "52c2421c7fa30b7e26b9cb7b02af24177b26f3733aa4aa277008dde2d41da4f5"
+      "sha256": "98ad759f64f820533ec0aeb39bef2bbe609d616aa44192e179aa802c7e33437f"
     },
     {
       "bytes": 14645,
@@ -38942,12 +38942,12 @@
       "sha256": "fefc8946529c61b7ca53bd55aa15ef8a1d0640e9c3ebbc4ed2cbb7f32a5b893c"
     },
     {
-      "bytes": 9463,
+      "bytes": 10020,
       "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "f28bb848b3d13f6d0f4dca573c30464e7c0cc2be",
+      "changed_from_commit": "9d74b0b49887d4f8a463a3ed91f4731aa1cb2331",
       "path": "tests/test_nsc_atlas_parent_observables.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "7afad015d1bd20bc149e6043003f21f8c90c1e8773f4a7d5a8f4b40975d893a6"
+      "sha256": "b96da505e1f8e4f79ed8ca9967f6e2a38cb706d787e76346797c76ec35d09e32"
     },
     {
       "bytes": 5358,
