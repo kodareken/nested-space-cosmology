@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+  "current_receipt_commit_parent": "3bf0edaf55e52879947c9ac06a68b8efaa194b77",
   "files": [
     {
       "bytes": 3120,
@@ -11633,11 +11633,11 @@
     },
     {
       "bytes": 24767,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "change": "Finalize the visually checked 76-page shared-parent manuscript and matching build evidence.",
+      "changed_from_commit": "3bf0edaf55e52879947c9ac06a68b8efaa194b77",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "648c5485862ade995fda90dd5dcdc8ce95bbb68bded03fea9484cf859ec8ae1f"
+      "sha256": "54d59b75ea3a6b8fb5d3664746abe79bf6ee21cf5883e3ed110b3690732767fe"
     },
     {
       "bytes": 3206,
@@ -11680,12 +11680,12 @@
       "sha256": "ec7abeee6004d6de6d60435e8d79be9b01cbd5a95367d26e3bf5279d2a309092"
     },
     {
-      "bytes": 4995067,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 4995074,
+      "change": "Finalize the visually checked 76-page shared-parent manuscript and matching build evidence.",
+      "changed_from_commit": "3bf0edaf55e52879947c9ac06a68b8efaa194b77",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "8a26f57e60139ea52f0fa5accab58c0076cd4b5e2484ea00980236edbe960871"
+      "sha256": "262825750958108ff0f086590b04c9c2a0c8b1997174cf988d74fce065f58843"
     },
     {
       "bytes": 3283,
