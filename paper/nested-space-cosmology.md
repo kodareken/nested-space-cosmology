@@ -2837,6 +2837,170 @@ a physically determined nonzero regional volume fraction and compatible
 connector/history, followed by its observer light cone. The cap curvature
 has not been derived by recovering its supplied value.
 
+### 10.7. A compact parent and the limits of its global average
+
+<!-- nsc-claim:atlas-compact-parent -->
+
+Evidence: [compact-parent derivation](../docs/nsc-atlas-compact-parent.md)
+and [complete-domain calculation](../results/summaries/nsc-atlas-compact-parent-v1.json).
+
+The isolated parent's dilution can be removed by constructing a complete
+compact domain. Retain its nested centre-to-outer-throat body and attach a
+second sourced body on the other sheet of the same Schwarzschild bridge.
+The regular completion uses the original one-level cap and membrane on
+the right. The nested completion uses another copy of the nested body.
+Both retain connector mass $.4\ell$, common tension $k=2/\ell$, regional
+$H\ell=1$ or $0$, and $\phi=0$. The two outer walls begin at $1.5\ell$;
+each nested interior retains its inner wall at $.8\ell$.
+
+These are different global states in the same piecewise theory. The
+interiors differ by their structure, while the connected vacuum has one
+mass invariant. There is no ADM mass at infinity in the compact geometry.
+No regional vacuum value or measured volume fraction is fitted.
+
+Reflection reverses the right body's radial label and preserves its future
+normal. Consequently $(E,V,A,B)$ maps to $(-E,V,A,B)$. Reversing the
+side order at its outer wall also gives
+
+$$
+\beta_-^{g}=-\beta_+^{loc},\qquad
+\beta_+^{g}=-\beta_-^{loc},\qquad
+b_g=-b_{loc},\qquad \gamma_g=\gamma_{loc}.
+$$
+
+The global jumps remain $[E]=-kR\gamma$ and $[V]=kRb$; the angular
+and temporal Israel jumps remain $-k$. At the regular right wall the
+global spatial slopes are $2.027786089806$ and $-1$, while the future
+wall areal derivative stays $1.650310950872$. The right body has not
+been time-reversed.
+
+Both tapers reach the same static vacuum collar at $R=\ell$. In the
+bridge coordinate $R=2M+y^2$, the initial geometry is even in $y$,
+$E$ is odd, and $V=B=0$. The halves agree on open extensions through
+the throat, adding no seam source. The radial interval's two endpoint
+spheres collapse regularly to centres, so the underlying manifold is
+$S^3$, with three or four material walls and no asymptotic end or
+arbitrary outer cutoff.
+
+![Intrinsic profiles of two compact parent completions](../docs/figures/nsc-atlas-compact-parent.png)
+
+*Figure 8. The two complete compact initial profiles. Both use the same
+connector and local membrane law; the lower state contains an additional
+right-side descendant. Dashed lines are physical membranes. The radius
+is plotted against proper distance, so these are intrinsic profiles rather
+than Euclidean embeddings or causal diagrams.*
+
+The normal evolution of Section 10.6 commutes with reflection. Its
+positive Jacobi scale and radius bounds apply to each half through
+$0\leq t/\ell\leq.01$. Each half contributes its seven moments and
+its physical wall atoms once. The common throat has no surface source.
+For the symmetric double, extensive moments double and all means stay
+unchanged. Different halves require the between-region expansion
+variance from Section 6.1.21.
+
+Thus the proper-volume fraction $f_H$ of regions with $H\ell=1$ follows
+from the geometry and its evolution. At $t/\ell=.01$,
+$L_{\rm ref}=2/k=\ell$ gives:
+
+| Right interior | $f_H$ | $\Lambda_{g,\rm tr}\ell^2$ | $\Lambda_{\rm total,tr}\ell^2$ |
+| --- | ---: | ---: | ---: |
+| Regular | .48620333 | -1.037400004 | 3.171376758 |
+| Nested | .52228729 | -1.219330524 | 3.212316830 |
+
+The total volumes are $71.1461599485\ell^3$ and $76.5242717224\ell^3$.
+The total trace has a definite source decomposition,
+
+$$
+\Lambda_{\rm total,tr}
+=\Lambda_{g,\rm tr}+3H^2f_H
++\frac{\kappa}{4V_D}\sum_W(E_W-S_W).
+$$
+
+For the regular completion its terms in $\ell^{-2}$ units are
+$-1.037400003975$, $1.458609994750$ and $2.750166766967$.
+The value near three therefore includes the supplied cap vacuum and
+material-wall stress. The geometric vacuum defects are
+$6.6134766493/\ell^2$ and $7.3326745903/\ell^2$; both effective
+geometric sources fail vacuum form. Their midpoint trace derivatives
+are approximately $1.0245354/\ell^3$ and $1.1843835/\ell^3$.
+The actual moment histories satisfy the same source-conservation
+identity, with approximately fourfold residual reduction on halving
+the time-difference step. The largest 32/64 trace change is below
+$1.2\times10^{-9}/\ell^2$, a numerical indicator rather than a
+certified or observational uncertainty.
+
+The comparison also proves a local-observability restriction. Adding
+the remote nest changes the global total trace by
+$.040940072190/\ell^2$ at the endpoint. The entire retained left
+geometry and its inner-cap flash remain unchanged:
+$1+z=3.895009111788$ at $t_{\rm rec}/\ell=1.646160028498$.
+
+This follows from the actual connector clocks. Set $T=0$ on the
+original static bridge and use its standard Kruskal coordinates $U,W$,
+with future $dU,dW\geq0$ and
+
+$$
+-UW=(R/(2M)-1)e^{R/(2M)}.
+$$
+
+The left outer wall has $U>0,W<0$, and the right one has
+$U<0,W>0$. Neither can signal the other through the constructed
+connector. Their initial inward null fronts would require
+$UW\geq15.6040388088$ to meet in the regular completion
+($15.6031988754$ in the nested one), whereas the physical connector
+has $UW<1$. This concerns those emission events; it is not a claim
+that arbitrary future light cones never overlap.
+
+The compact states therefore give different global averages but the
+same local cap curvature and clock observation. Compactness removes
+AE dilution; an additional causal/state mechanism is needed before a
+global average can be identified with a locally measured cosmological
+Lambda. The integrated constraint is satisfied by the local identities
+and supplies no extra condition selecting the cap $H$ or absolute scale.
+
+There is a separate continuation question. The small host throat starts
+with $E=R_t=0$, and its exact quiet inward geodesic obeys
+$R_t^2=2M_h/R+H^2R^2-1$. With $R=r_b\sin^2\chi$ and
+$a=H^2r_b^2$, its proper lifetime to the classical endpoint is
+
+$$
+\tau_b=2r_b\int_0^{\pi/2}
+\frac{\sin^2\chi\,d\chi}
+{\sqrt{1-a(1+\sin^2\chi+\sin^4\chi)}}.
+$$
+
+The result is $.0314434597796\ell$, with analytic bounds
+$.031434800637\ell\leq\tau_b\leq.031447397238\ell$.
+The curvature contains $48M_h^2/R^6$, so this exact quiet geometry
+does not smoothly continue the whole normal foliation through that
+event. No physical topology change or claim of a literal infinity in
+nature follows.
+
+The spherical Einstein equations make the replacement problem precise.
+For geometric mass $m=R(1-|\nabla R|^2)/2$, normal energy density
+$\rho$ and radial pressure $p_r$,
+
+$$
+\nabla_N\nabla_N R=-\frac{m}{R^2}-\frac{\kappa R}{2}p_r,\qquad
+\nabla_N\nabla_N R+\nabla_s\nabla_s R
+=-\frac{\kappa R}{2}(\rho+p_r).
+$$
+
+At a temporal turn that is also a strict spatial minimum,
+$E=R_t=0$ and $m=R/2$. A regular bounce requires
+$\kappa p_r<-1/R^2$ and $\rho+p_r<0$.
+At the current $r_b$, the pressure threshold is
+$\kappa p_r\ell^2<-2497.9987983973$, compared with the supplied
+vacuum value $-3$. This is a necessary source condition at that
+radius, with compatible density and conservation still required.
+It does not construct a bounce or prove that one occurs.
+
+The compact atlas connection and its global-versus-local comparison
+are complete on the stated finite domain. A source-derived regular
+continuation, cosmological observer history and the origin of the
+regional vacuum values remain the next physical questions.
+
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -2886,7 +3050,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 8. The isolated reference in joined causal charts. Horizons are
+*Figure 9. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -3892,7 +4056,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 9. Saved finite-window comparisons. A: the previous and current
+*Figure 10. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -3988,7 +4152,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 10. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 11. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -4773,7 +4937,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 11. Research dependencies, distinct from spacetime causal arrows.
+*Figure 12. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+  "current_receipt_commit_parent": "773291b0a6da290090aee747712ab896071e2313",
   "files": [
     {
       "bytes": 3120,
@@ -41,11 +41,11 @@
     },
     {
       "bytes": 1266,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "CITATION.cff",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "48c3a85f5b3a23b4797376adf1e5d1ad3277a92f74022a1972ddea136edcd5f1"
+      "sha256": "0640f3cca5479942f2d543a46c0eb11e1b8ae74904fa901959d470ce86039dde"
     },
     {
       "bytes": 5974,
@@ -10432,12 +10432,12 @@
       "sha256": "4c88393baedca74992b24af7f659064f9166a758d33cc314bc31a67799d356fa"
     },
     {
-      "bytes": 14610,
+      "bytes": 14835,
       "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "docs/nsc-atlas-compact-parent.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "0719b0fff6cba0ae1927011673eb2a3ecfdf0898b271cebdbe74685f10c800ce"
+      "sha256": "3c4c3b553bb7664092b56add6b122e8d2a396e92414456fccff329b4c2bbe894"
     },
     {
       "bytes": 11128,
@@ -10576,15 +10576,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 69004,
+      "bytes": 69032,
       "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8449c93a6824a6a64627d8aee2852e76eed779dd2ecdfa036c27792a493d1801"
+      "sha256": "b861ada068fc626770c4e901556f3fe2cd793110903f09c0147f668b58020d76"
     },
     {
       "bytes": 30876,
@@ -11536,12 +11536,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 18775,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 19268,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "3eeb8814afba2844564126776b25159b5e8f4284160a8343c9ac6207ef07057f"
+      "sha256": "334a2845af9d8f0adac2c9f024ee6ef9699533e1f25286b4bd8374de4d475f48"
     },
     {
       "bytes": 9302,
@@ -11552,12 +11552,12 @@
       "sha256": "2de9c90a1995f51dada247d902553e3f1f3b7778649f8f1450a605aefa7e7b03"
     },
     {
-      "bytes": 580112,
+      "bytes": 580114,
       "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
-      "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5d56d019b588941094a838d245f40863d354e40e149216971525f7491ebc2ec2"
+      "sha256": "496bfc3976068189ec45c4a354f00be00280c6bb62bb8aba29f09209d18dbbf6"
     },
     {
       "bytes": 6705,
@@ -11648,28 +11648,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 24767,
-      "change": "Finalize the visually checked 76-page shared-parent manuscript and matching build evidence.",
-      "changed_from_commit": "3bf0edaf55e52879947c9ac06a68b8efaa194b77",
+      "bytes": 25086,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "54d59b75ea3a6b8fb5d3664746abe79bf6ee21cf5883e3ed110b3690732767fe"
+      "sha256": "2baaaca6c6e283b5022dd9533baa05b0317748ca4db91ac351535f6040b4daab"
     },
     {
       "bytes": 3206,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "034155b3978879b14c9c0831406b8ccb97ec74e4cd6d30513b09b0a07ea57eed"
+      "sha256": "0f986240c82382060173a4639adf64bd0733d6cfc227b0bf41a89b6397fba363"
     },
     {
-      "bytes": 27334,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 27473,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e24495d62b769366b645c671d9b0127f6bd3f7f2a314f17f64a7b5e72ebddb07"
+      "sha256": "0676f2f4fd5e1727ea7ff3eab634856842f75406cc7eada3b0a0973ef204609b"
     },
     {
       "bytes": 226492,
@@ -11681,27 +11681,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "57c24e2585e3d3d18f1452de36283a8c0fcc9badef479f9a567a196983e31c00"
+      "sha256": "f036437f66f689617c0e10a8db463b22993d9ab45a8d1e47122c9681a3e459f2"
     },
     {
-      "bytes": 243707,
-      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
-      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "bytes": 251102,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ec7abeee6004d6de6d60435e8d79be9b01cbd5a95367d26e3bf5279d2a309092"
+      "sha256": "1121a9a4a0f33289cba4e6dabedaa6c6b6000a28dbee0c56fd98b27ab82d21f5"
     },
     {
-      "bytes": 4995074,
-      "change": "Finalize the visually checked 76-page shared-parent manuscript and matching build evidence.",
-      "changed_from_commit": "3bf0edaf55e52879947c9ac06a68b8efaa194b77",
+      "bytes": 5221402,
+      "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
+      "changed_from_commit": "773291b0a6da290090aee747712ab896071e2313",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "262825750958108ff0f086590b04c9c2a0c8b1997174cf988d74fce065f58843"
+      "sha256": "ec4bfbdba0267f915045f3755e913ff39635edf3660af6d33b6edc6d8a9b12de"
     },
     {
       "bytes": 3283,

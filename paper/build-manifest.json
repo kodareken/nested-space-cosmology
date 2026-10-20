@@ -1,10 +1,10 @@
 {
-  "bytes": 4995074,
+  "bytes": 5221402,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "57c24e2585e3d3d18f1452de36283a8c0fcc9badef479f9a567a196983e31c00",
+  "metadata_sha256": "f036437f66f689617c0e10a8db463b22993d9ab45a8d1e47122c9681a3e459f2",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 76,
-  "pdf_sha256": "262825750958108ff0f086590b04c9c2a0c8b1997174cf988d74fce065f58843",
+  "pages": 79,
+  "pdf_sha256": "ec4bfbdba0267f915045f3755e913ff39635edf3660af6d33b6edc6d8a9b12de",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -14,6 +14,10 @@
     {
       "path": "docs/figures/nsc-atlas-background-evolution.png",
       "sha256": "b466692a612df205cb6298d194fb26ca086f6eddb393eb4e44b1a53578c17f2d"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-compact-parent.png",
+      "sha256": "a64a3240ded38e00ef7abef1bc7d41f3ec7e54d3cb543fa298d39ad732ef86c1"
     },
     {
       "path": "docs/figures/nsc-atlas-nested-slice.png",
@@ -396,6 +400,10 @@
       "sha256": "19a4d2c32e30568b925c0cee9163085ba374a7ca2997ab133a538c4076d091f0"
     },
     {
+      "path": "results/summaries/nsc-atlas-compact-parent-v1.json",
+      "sha256": "221cc83583b663b6e51f36e8c17dc15d3e5ef159e8ade1949b77339def397445"
+    },
+    {
       "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
@@ -569,6 +577,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "ec7abeee6004d6de6d60435e8d79be9b01cbd5a95367d26e3bf5279d2a309092",
-  "version": "working-2026-10-20.2"
+  "source_sha256": "1121a9a4a0f33289cba4e6dabedaa6c6b6000a28dbee0c56fd98b27ab82d21f5",
+  "version": "working-2026-10-20.3"
 }

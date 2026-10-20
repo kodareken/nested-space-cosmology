@@ -293,6 +293,11 @@
       "section": "10.6",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-evolution.md"
+    },
+    "atlas-compact-parent": {
+      "section": "10.7",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-compact-parent.md"
     }
   },
   "findings": [

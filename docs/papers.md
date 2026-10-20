@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-20.3` adds Section 10.7's explicit compact S3 parent,
+its intrinsic geometry figure, and the matched remote-nesting comparison.
+Global effective traces and physical volume fractions change while the
+retained local cap signal remains identical. A quiet-throat lifetime and
+necessary bounce-stress condition identify the next continuation problem.
+This establishes a finite atlas connection, not a generated cosmological
+Lambda, a regular bounce, or observational validation.
+
 Revision `2026-10-20.2` adds Section 10.6's transported normal-clock parent.
 The whole quiet nested slice evolves with material-wall Jacobi impulses;
 its effective trace, explicit source exchange and delayed cap-clock signal

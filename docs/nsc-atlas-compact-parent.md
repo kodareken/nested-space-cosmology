@@ -317,7 +317,6 @@ source-derived regular continuation on the actual throat, or select a
 different non-AE parent whose observer domain evolves cosmologically.
 The supplied quiet cap H, nonspherical stability, formation, quantum
 state and observed expansion have not been derived by compact gluing.
-The playful atom/remnant interpretation is not an input to this work.
 
 ## Reproduce and inspect
 
@@ -334,3 +333,8 @@ grid. Independent controls include the original regular body's separate
 quadrature and analytic bridge primitive, the former nested parent's
 retained half, signed wall normalization, finite bridge reflection,
 Kruskal clock identities, volume evolution and source conservation.
+
+The completed run passes 84 connected scientific tests. Its compact record
+is 20,392 bytes and uses 1,258,572 charged scalar evaluations, with 18.03125
+process-CPU seconds in the recorded run. The plot adds 23,136 geometric
+queries and retains only the figure; no field samples are serialized.

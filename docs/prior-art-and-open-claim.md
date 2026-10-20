@@ -33,8 +33,8 @@ already specified quiet host throat has an E=0 normal geodesic ending at
 R=0. Evaluate its closed Kottler proper-time integral with 32/64 fixed
 rules inside the same allowance, and derive the local radial stress
 condition for replacing that endpoint by a regular bounce. This concerns
-the current classical candidate's continuation; it assumes no physical
-singularity, remnant, atom interpretation or new source state.
+the current classical candidate's continuation; it assumes no new source
+state or physical continuation through the classical endpoint.
 
 ## Shared-parent normal evolution, 20 October 2026
 

@@ -33,7 +33,7 @@ the global trace with an observer's local cosmological Lambda.
 .0314434597796 ell. The same Einstein equations give the necessary
 regular-bounce conditions `kappa*p_r<-1/R^2` and `rho+p_r<0` at a
 temporal turn that is also a strict spatial minimum. Constructing such
-a compatible source and its conserved evolution, or selecting a different
+a compatible source from inherited fields/state and its conserved evolution, or selecting a different
 cosmological parent, is the next physical connection. No bounce source,
 generation of H, late-time cosmology or observational match is claimed.
 The completed compact state and its short-time averages need no further
