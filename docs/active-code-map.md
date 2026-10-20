@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [occupied-wall owner](nsc-atlas-occupied-wall.md) uses
+nsc_atlas_occupied_wall.py: filled_shell supplies exact finite
+occupation sums; OccupiedWall derives material stress, the rest-mass
+functional and nearby equilibria at fixed couplings; its
+central_parent_signal crosses the core, wall, collar and common
+cosmology. nested_branch_curvature keeps the opposite-orientation
+stability obstruction explicit. Check, plot and test files use the same
+name and retain compact state/clock results.
+
 The [cosmological attachment and observer owner](nsc-atlas-parent-observables.md)
 uses `nsc_atlas_parent_observables.py`: `DustParent` evaluates the exact
 join and null clock; `projected_brane_source` and `de_sitter_bulk_slice`

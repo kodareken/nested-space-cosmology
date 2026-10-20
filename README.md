@@ -3,6 +3,14 @@
 Start with regions, boundaries and fields; assemble possible nested geometries;
 specify inheritance and transmission; calculate what an interior observer measures.
 
+The [occupied-wall construction](docs/nsc-atlas-occupied-wall.md) now
+calculates a material pressure from a finite spherical Dirac state,
+supports a linearly radially stable horizonless room, and joins two
+unequal sourced rooms to one expanding parent. Changing occupation
+with the action fixed changes the received central clock signal.
+The new surface matter and supplied state are explicit; this does not
+stabilize the earlier wormhole branch or select the cosmic vacuum.
+
 The [surrounding-geometry atlas](docs/nsc-atlas-parent-observables.md) now
 attaches the retained exterior to an expanding dust parent, checks its
 mass compensation and predicts a received clock frequency. Its illustrated

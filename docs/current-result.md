@@ -1,5 +1,25 @@
 # What the calculations show
 
+The [occupied-wall construction](nsc-atlas-occupied-wall.md) connects a
+finite sphere spectrum to surface pressure, a sourced horizonless room,
+and an observer in the same expanding parent. This explicitly adds
+worldvolume Dirac matter; the previous transparent bulk probe is unchanged.
+Its reference has positive bare tension and positive finite occupation,
+with R_0^2 V''=35159/7200 and omega_radial R_0/c=1.562561109916.
+This establishes linear radial stability only.
+
+With one common action, levels q=999,1000,1001 give radius ratios
+.999340673378,1,1.000658823213 and exterior mass ratios
+.179627029017,.18,.180373322580. The complete central beacon has
+1+z=1.903001657193,1.903495520625,1.903990396807 at observers with
+the same comoving offset. The q=999 and q=1001 rooms coexist in one
+exact compensated dust parent with disjoint matching spheres.
+Their mass response obeys dM_eq/dA=ell_P^2 beta_plus/R.
+The initial occupation, cap curvature and surface coupling remain inputs.
+The [compact evidence](../results/summaries/nsc-atlas-occupied-wall-v1.json)
+and independent signed-junction, spectral, mass and null-clock checks
+retain those distinctions.
+
 The [cosmological attachment and surrounding-gravity atlas](nsc-atlas-parent-observables.md)
 now gives the existing M=.4 ell exterior an exact expanding flat dust
 parent at R_b(0)=4 ell. The join adds no material shell and replaces

@@ -18,6 +18,27 @@ starting a derivation.
 
 ## Current execution priority — 20 October 2026
 
+**Completed state-to-geometry connection.** The
+[occupied-wall candidate](nsc-atlas-occupied-wall.md) derives a surface
+pressure from a finite, isotropic sphere-Dirac state. Its normalized
+operator transports occupation exactly. The signed junction has an
+explicit linear-radially-stable ordinary-orientation reference; the
+wormhole-side orientation remains unstable for this positive gas.
+Holding the new action fixed while changing one filled level predicts
+different radii, exterior masses and centre-to-cosmological-observer
+signals. Two such unequal, fully sourced interiors fit one disjoint-
+vacuole dust parent. This is an explicit new material candidate, not a
+reinterpretation of the original transparent fields.
+
+**Next inherited datum.** The initial occupation, bare surface coupling
+and cap vacuum are still supplied. The normalized operator alone does
+not select them or preserve gravitational compactness across a change
+of physical scale. Next investigate an actual preparation/transition
+law or collective source, retaining the known distinction between
+radial persistence and nonspherical/fragmentation stability. The new
+spherical construction and its clock comparison are complete at their
+declared scope; no grid refinement follows.
+
 **Completed cosmological attachment and comparison.** The
 [surrounding-geometry owner](nsc-atlas-parent-observables.md) replaces
 the original AE end with an exact flat dust parent. Both Darmois forms,

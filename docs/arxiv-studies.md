@@ -8,6 +8,37 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Occupied wall state and a common cosmological parent, 20 October 2026
+
+- [Abrikosov, hep-th/0212134v1](https://arxiv.org/html/hep-th/0212134):
+  Sections 2.1--2.2, especially (23)--(24), (35)--(37), inspected.
+  Reuse the unit-sphere eigenvalues and angular degeneracy. The paper
+  credits Newman--Penrose and other earlier spherical-spinor work.
+- [Macpherson--Campbell, hep-ph/9408387v1](https://arxiv.org/html/hep-ph/9408387):
+  (1)--(7), Yukawa localization and the following shape/fragmentation
+  discussion inspected. Supplies the physical surface-fermion precedent,
+  not a microscopic completion or general stability proof for this atlas.
+- [Ogure--Yoshida--Arafune, hep-ph/0212332v1](https://arxiv.org/html/hep-ph/0212332):
+  Sections II--III through (36), introduction and conclusion inspected.
+  Reuse the bound normal profile, exact finite occupation sum and
+  distinction between spherical equilibrium and fragmentation.
+  The finite-thickness corrections were not solved here.
+- [Visser--Wiltshire, gr-qc/0310107v2](https://arxiv.org/html/gr-qc/0310107):
+  previously inspected signed material-shell and conservation framework
+  reused. Here a specified surface Dirac state supplies the radial
+  equation of state before the junction and stability calculation.
+- [Mars--Mena--Vera, 1307.4371v1](https://arxiv.org/html/1307.4371#S2):
+  reuse the already checked disjoint Einstein--Straus replacements.
+  This connects the two computed interiors to one common dust history.
+
+The [new connection](nsc-atlas-occupied-wall.md) is the explicit
+mean-stress surface candidate, its fixed-action neighboring states,
+gravitational mass first law, shared parent and central observer signal.
+The spectrum, localized-fermion idea and thin-shell stability machinery
+remain attributed. No priority claim or cosmological population
+prediction is made. The free conformal bulk fields of the earlier
+candidate are not silently turned into trapped surface fermions.
+
 ### Surrounding geometry and wall balance, 20 October 2026
 
 The [connected atlas entry](nsc-atlas-parent-observables.md) uses these

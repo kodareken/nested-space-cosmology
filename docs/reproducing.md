@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+The [occupied-wall connection](nsc-atlas-occupied-wall.md) needs only
+finite sums and three neighboring equilibrium states:
+
+    python scripts/run_python.py scripts/check_nsc_atlas_occupied_wall.py
+    python scripts/run_python.py scripts/plot_nsc_atlas_occupied_wall.py
+    python scripts/run_python.py -m pytest tests/test_nsc_atlas_occupied_wall.py -q
+
+The compact result records the fixed action, changed states, exact
+reference, source hashes and independent root/clock comparisons.
+The 17 checks include a symbolic radial mode, full signed junctions,
+conservation and a piecewise null ODE through all three metric regions.
+
 The [surrounding-geometry atlas](nsc-atlas-parent-observables.md) uses
 closed equations and small independent checks:
 

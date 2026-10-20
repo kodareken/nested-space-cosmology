@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [occupied sphere and material wall](nsc-atlas-occupied-wall.md)
+connect a finite inherited surface state to its conserved pressure law,
+a radially stable horizonless attachment, and two unequal sourced rooms
+in one dust parent. Central beacon signals change when the occupied
+state changes under fixed couplings. The source is a declared new
+worldvolume theory; initial state selection, formation, general stability
+and cosmological vacuum generation remain separate questions.
+
 The [surrounding-geometry atlas](nsc-atlas-parent-observables.md) joins
 the existing exterior to an expanding parent, then compares explicitly
 different bulk-gravity mechanisms. It provides a clock prediction,

@@ -1,5 +1,40 @@
 # Prior art and admission of new research
 
+## A finite wall state and its gravitational inheritance, 20 October 2026
+
+The next connection is state -> surface stress -> geometry -> observer.
+Compare the already transparent bulk probes, a localized wall field and
+unspecified interface vacuum corrections. The original classical scalar
+has zero added singular surface stress; the Dirac probe has no trapping
+interaction. A finite occupied worldvolume Dirac sector is therefore an
+explicit new material candidate, not a consequence of those probes.
+Published Fermi-ball localization and spherical Dirac spectra supply
+the construction to inspect. A microscopic localization mechanism and
+its finite-thickness corrections retain their own domain.
+
+Use a parity-paired massless Dirac field on the timelike wall with a
+fixed positive bare tension, a finite isotropic filled-shell state and
+normal-ordered excitation stress. Derive its exact R dependence and
+conserved number, then use the signed Israel conditions in both exterior
+orientations. First seek an algebraic decision on radial stability.
+For a constructive ordinary-orientation reference fix sqrt(f_minus)=24/25
+and sqrt(f_plus)=4/5 before any observational comparison. If its material
+coefficients are positive and its radial mode is stable, bind them to
+one finite spectral state and predict a neighboring occupation with the
+action held fixed. Reuse the completed dust-parent matching and null
+clock; do not add a new grid engine.
+
+Admit exact sums, symbolic identities, at most three nearby spectral
+states and one independent high-precision/root or ODE comparison, within
+200,000 evaluations and 120 CPU seconds. Retain compact scalar/hash
+evidence. Stop on incompatible signed junctions, negative required
+occupation or an unstable candidate; report the actual source property
+needed. Distinguish inherited conservation from a selected occupation,
+and a stable horizonless room from the earlier wormhole geometry.
+The likely failures are transferring a reflecting state to a transparent
+wall, borrowing stability across the wrong orientation, and retuning
+the action while varying the state. Each is checked explicitly.
+
 ## Cosmological attachment and surrounding-gravity atlas, 20 October 2026
 
 The user asks for an illustrated mathematical atlas that connects the

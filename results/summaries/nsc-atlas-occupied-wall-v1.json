@@ -1,0 +1,218 @@
+{
+  "schema": "nsc-atlas-occupied-wall-v1",
+  "candidate": "Einstein de Sitter core / occupied worldvolume Dirac membrane / Schwarzschild / compensated flat dust parent",
+  "action_data": {
+    "bare_k_Rref": 0.0044444444444444444,
+    "H_squared_Rref_squared": 0.0784,
+    "planck_length_squared_over_Rref_squared": 1.1649187061480913e-10,
+    "species": 2,
+    "parent_H0_Rref": 0.075
+  },
+  "preparation": "Two parity-paired species, positive levels1..q fully occupied. No occupation fit to sky data. Normal-ordered excitation stress; fixed renormalized surface tension, no extra surface curvature terms.",
+  "reference": {
+    "level": 1000,
+    "beta_minus": "24/25",
+    "beta_plus": "4/5",
+    "gas_compactness": "7/45",
+    "bare_tension_compactness": "1/225",
+    "radial_V_second_Rref_squared": "35159/7200",
+    "radial_omega_squared_Rref_squared": "35159/14400",
+    "Rref_over_planck_length": 92651.4435937185,
+    "Lambda_cap_Rref_squared": 0.2352
+  },
+  "states": [
+    {
+      "level": 999,
+      "species": 2,
+      "number": 1998000,
+      "energy_coefficient": 1331334000,
+      "radius": 0.9993406733776616,
+      "mass": 0.17962702901719174,
+      "beta_minus": 0.9600538257478034,
+      "beta_plus": 0.8003180117465998,
+      "four_pi_G_sigma": 0.15984120156073917,
+      "four_pi_G_pressure": 0.07325393411370291,
+      "shell_mass": 0.15963049592649173,
+      "gas_coefficient": 0.1550895880730963,
+      "s": 0.15973581400120362,
+      "s_prime": -0.306349069788145,
+      "s_second": 0.9329956915957643,
+      "mass_radial_second_derivative": 0.40685825245021795,
+      "V_second": 4.893874688978861,
+      "V_second_mass_check": 4.893874688978821,
+      "radial_omega": 1.5642689488989514,
+      "surface_level_spacing": 1.0006597616207393,
+      "radial_to_spectral_frequency_ratio": 1.563237584736445,
+      "angular_junction_residual": 0.0,
+      "temporal_junction_residual": -1.7486012637846216e-15,
+      "potential_residual": -2.220446049250313e-16,
+      "mass_stationarity_residual": -1.3739009929736312e-15,
+      "mass_derivative_wrt_spectral_coefficient": 9.329205220876002e-11,
+      "central_to_static_infinity_redshift": 1.1995904273759865
+    },
+    {
+      "level": 1000,
+      "species": 2,
+      "number": 2002000,
+      "energy_coefficient": 1335334000,
+      "radius": 0.9999999999999958,
+      "mass": 0.18,
+      "beta_minus": 0.9600000000000003,
+      "beta_plus": 0.799999999999999,
+      "four_pi_G_sigma": 0.16000000000000195,
+      "four_pi_G_pressure": 0.0733333333333343,
+      "shell_mass": 0.1600000000000006,
+      "gas_coefficient": 0.15555555555555553,
+      "s": 0.16000000000000128,
+      "s_prime": -0.3066666666666706,
+      "s_second": 0.9333333333333489,
+      "mass_radial_second_derivative": 0.40693287037037024,
+      "V_second": 4.883194444444476,
+      "V_second_mass_check": 4.883194444444426,
+      "radial_omega": 1.5625611099161012,
+      "surface_level_spacing": 1.0000000000000042,
+      "radial_to_spectral_frequency_ratio": 1.5625611099160945,
+      "angular_junction_residual": -2.7755575615628914e-17,
+      "temporal_junction_residual": -2.0539125955565396e-15,
+      "potential_residual": 4.440892098500626e-16,
+      "mass_stationarity_residual": -1.6740081543176188e-15,
+      "mass_derivative_wrt_spectral_coefficient": 9.319349649184758e-11,
+      "central_to_static_infinity_redshift": 1.2000000000000017
+    },
+    {
+      "level": 1001,
+      "species": 2,
+      "number": 2006004,
+      "energy_coefficient": 1339342004,
+      "radius": 1.000658823212852,
+      "mass": 0.18037332257983246,
+      "beta_minus": 0.9599461768718388,
+      "beta_plus": 0.7996817283306198,
+      "four_pi_G_sigma": 0.16015893211899349,
+      "four_pi_G_pressure": 0.07341279939283007,
+      "shell_mass": 0.16037003448011292,
+      "gas_coefficient": 0.1560224554389472,
+      "s": 0.16026444854121905,
+      "s_prime": -0.30698453090465366,
+      "s_second": 0.9336718013913521,
+      "mass_radial_second_derivative": 0.4070067580434517,
+      "V_second": 4.8725384715591655,
+      "V_second_mass_check": 4.872538471559203,
+      "radial_omega": 1.560855289826569,
+      "surface_level_spacing": 0.9993416105494012,
+      "radial_to_spectral_frequency_ratio": 1.5618836175234097,
+      "angular_junction_residual": -2.7755575615628914e-17,
+      "temporal_junction_residual": 1.5543122344752192e-15,
+      "potential_residual": -2.220446049250313e-16,
+      "mass_stationarity_residual": 1.1969591984239969e-15,
+      "mass_derivative_wrt_spectral_coefficient": 9.309508722525103e-11,
+      "central_to_static_infinity_redshift": 1.2004102918241986
+    }
+  ],
+  "central_to_cosmological_observer": [
+    {
+      "initial_join_radius": 3.997235341585394,
+      "parent_H0": 0.075,
+      "parent_density": 0.0006714349161689335,
+      "observer_chi": 8.0,
+      "central_emission_time": 0.0,
+      "cap_Killing_delay": 1.2316442009326123,
+      "join_reception_time": 6.177140237968114,
+      "reception_time": 12.613769788439678,
+      "one_plus_redshift": 1.9030016571926598,
+      "join_radius_at_reception": 5.682340689780683,
+      "join_scale_factor": 1.4215677097278285,
+      "observer_scale_factor": 1.8020345876582498,
+      "static_limit_redshift": 1.1995904273759865
+    },
+    {
+      "initial_join_radius": 3.9999999999999996,
+      "parent_H0": 0.075,
+      "parent_density": 0.0006714349161689335,
+      "observer_chi": 8.0,
+      "central_emission_time": 0.0,
+      "cap_Killing_delay": 1.2329231676504857,
+      "join_reception_time": 6.184208815192058,
+      "reception_time": 12.617747026337039,
+      "one_plus_redshift": 1.9034955206248652,
+      "join_radius_at_reception": 5.688049263820258,
+      "join_scale_factor": 1.4220123159550648,
+      "observer_scale_factor": 1.8022567896174209,
+      "static_limit_redshift": 1.2000000000000017
+    },
+    {
+      "initial_join_radius": 4.002763442849455,
+      "parent_H0": 0.075,
+      "parent_density": 0.0006714349161689335,
+      "observer_chi": 8.0,
+      "central_emission_time": 0.0,
+      "cap_Killing_delay": 1.2342029003690782,
+      "join_reception_time": 6.191281840754685,
+      "reception_time": 12.621729781265142,
+      "one_plus_redshift": 1.9039903968067426,
+      "join_radius_at_reception": 5.693759408664079,
+      "join_scale_factor": 1.4224571324182105,
+      "observer_scale_factor": 1.802479286078917,
+      "static_limit_redshift": 1.2004102918241986
+    }
+  ],
+  "two_room_parent": {
+    "centres": [
+      [
+        -6.0,
+        0.0,
+        0.0
+      ],
+      [
+        6.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "levels": [
+      999,
+      1001
+    ],
+    "initial_comoving_clearance": 4.000001215565151,
+    "observer_locations": [
+      [
+        -6.0,
+        8.0,
+        0.0
+      ],
+      [
+        6.0,
+        8.0,
+        0.0
+      ]
+    ],
+    "common_density": 0.0006714349161689335,
+    "statement": "Disjoint comoving vacuoles share one exact dust exterior for tau>=0. Ordinary horizonless orientation; not black-hole offspring formation."
+  },
+  "checks": {
+    "max_signed_junction_residual": 2.0539125955565396e-15,
+    "neighboring_radius_50_digit_gap": 2.886579864025407e-15,
+    "neighboring_mass_50_digit_gap": 0.0,
+    "proper_clock_derivative_gap": 1.1646017483712967e-11,
+    "max_two_stability_formula_gap": 5.062616992290714e-14
+  },
+  "inheritance": {
+    "conserved": "N and its spectral coefficient along the conformal wall history",
+    "unselected": "Initial occupation, surface coupling and cap vacuum; branching transfer is not constructed.",
+    "homothety": "At fixed constants, a copy with R->aR and the same occupation has bare_k*R multiplied by a and ell_P^2*A/R^2 divided by a^2."
+  },
+  "limits": "Exact thin-surface mean-stress model and linear radial stability. No claim of nonspherical/fragmentation stability, microscopic localization, formation, generated cap Lambda, cosmic fractions or baryon asymmetry.",
+  "numerical_uncertainty": "Independent arithmetic/root and clock differences only; no microscopic-model error bound or observational fit.",
+  "evaluated_spectral_states": 3,
+  "field_grids": 0,
+  "process_cpu_seconds": 0.0,
+  "elapsed_seconds": 0.003783999942243099,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_occupied_wall.py": "4742e25a3b0ae7a1a09e88b0e42f2ac964f5a36f0ce4f7bb976817079ecba05a",
+    "src/recursive_horizons/nsc_atlas_parent_observables.py": "8eea650fcbac343c353fd2b0ccc68c92a8d9d0115ee417345cd23e1abeec9974",
+    "scripts/check_nsc_atlas_occupied_wall.py": "357b39139eeb2bfddf5455ff46489418fd1069cec360f704dc50ea44d0396ee3",
+    "scripts/plot_nsc_atlas_occupied_wall.py": "a8429132c9a07f9197dbfea17937c69469073e315d89f75bbd06ec551349323c",
+    "tests/test_nsc_atlas_occupied_wall.py": "d9f01d5a5d8ed4bb950440a712d46327ef04a6ce7113262fde03816a78d52bfb"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_occupied_wall.py"
+}
