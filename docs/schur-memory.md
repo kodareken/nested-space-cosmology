@@ -417,6 +417,15 @@ relation over time, with a predicted magnitude, is the missing construction.
 
 ### Status of the Lambda claim
 
+The [20 October programme reassessment](nsc-cosmological-atlas.md#programme-reassessment-the-generative-and-cosmological-connection)
+now prioritizes the physical parent/state-to-gravitational-source map and
+its cosmological observer test. Completed wall and clock examples are
+references, not automatic further campaigns. The earlier mechanism
+inventory remains a record of established restrictions; an explicitly
+vacuum-changing membrane/flux action is a literature comparison under
+row 7, with its additional state, normalization and scale assumptions.
+No new vacuum contribution has been calculated by this reassessment.
+
 The defensible claim is: **NSC supplies calculable inherited geometric and
 causal responses. Whether a physically specified reduction generates a
 nonzero bulk vacuum term, or instead a changing effective source that

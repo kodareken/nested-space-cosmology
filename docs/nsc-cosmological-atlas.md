@@ -18,6 +18,143 @@ starting a derivation.
 
 ## Current execution priority — 20 October 2026
 
+### Programme reassessment: the generative and cosmological connection
+
+Douglas asked for a broad adaptive-design/rethinking assessment after the
+occupied-wall result. The finish line remains the connected, quantitatively
+tested atlas. The current bottleneck is a physical parent--child law whose
+state and metric response determine a cosmological source and observer
+consequences. More conditional shell examples do not close this connection.
+
+**What is complete.** The finite attachments, transport identities, compact
+parent comparison, dust completion and occupied-wall state-to-clock example
+are useful atlas results within their declared domains. Their clocks are
+calculated benchmarks, not measured agreements with the sky. The inherited
+operator theorem and its inverse are mathematical results; their blocks and
+measure are not yet the gravitational reduction of these spacetimes.
+
+**What is missing.**
+
+1. A common action and actual transition/response map connecting parent
+   geometry and admissible state to child stress, state and evolution.
+   Transporting a supplied occupation is not selecting its preparation.
+2. Cosmological closure: the background, populations and perturbations
+   must follow from that source. A stipulated dust exterior cannot acquire
+   dark-energy acceleration by improving its internal shell calculation.
+3. An independently fixed physical ruler and a common parameter account.
+   Bare vacuum terms, initial states and calibration quantities must remain
+   distinguishable from predicted quantities.
+4. An observation-facing relation that survives source freedom and clock
+   choices. Expansion and clustering/lensing require different components
+   of the same source, not separate adjusted functions.
+5. Formation, relevant stability and thermal/charge history for the chosen
+   physical interpretation. The latest radial result does not establish
+   fragmentation stability, branching preparation or baryon asymmetry.
+
+Ordinary couplings and initial conditions may remain physical inputs.
+Failure to determine every initial condition is not a rejection criterion.
+The failure is claiming to derive a quantity that was supplied, or using
+unconstrained state freedom to fit every proposed test independently.
+Parity-paired species also do not force zero fermion number: the occupied
+reference explicitly supplies a nonzero number, without a mechanism for
+the observed baryon asymmetry.
+
+### Routes compared and selected direction
+
+| Route | Physical data that must be owned | What would change the decision | Disposition |
+| --- | --- | --- | --- |
+| Actual four-dimensional parent reduction and causal metric response | One action, parent geometry, joint state/covariance and boundary data. Hamiltonians, vertices and stress factors must be derived from them. | A conserved full source and a relation between observer channels; the physical meaning of the inherited operator is established. | Main connection to pursue. Reuse the known zero/trace results; do not numerically retest them. |
+| Explicit vacuum-changing transition, such as a charged membrane coupled to a four-form | A new field sector, shared membrane charge/tension, a parent flux sector and bare vacuum normalization. Absolute flux quantization needs its own assumptions. | A child vacuum change follows from parent data and the shared action, with compatible junctions and a measurable consequence beyond relabelling a free H. | First bounded alternative to compare if the retained action cannot supply the required source. |
+| Five-dimensional bulk projection | Bulk action and state, curvature scale, brane tension and, for the shadow channel, interbrane/radion data. | A common bulk solution produces background and perturbation response together. | Keep as an attributed comparison until that common geometry is supplied; do not combine the separate existing examples by notation. |
+| Further occupied-wall preparation or refinement | Its existing surface action and initial occupation; a physical transfer adds a coupling or preparation law. | It supplies an input required by the selected cosmological mechanism or a distinct observational prediction. | Completed reference by default. No automatic thicker-wall, finer-clock or occupation campaign. |
+
+The aim is a source with the required observable behaviour, not necessarily
+an exactly constant vacuum tensor. If the derived term is anisotropic,
+time-dependent or nonlocal, retain that structure and calculate its
+consequences. Only a controlled vacuum-form contribution is reported as
+Lambda. Coordinate slicing profiles are not additional physical couplings.
+
+### Execution map for the next scientific step
+
+1. **Fix one parent--child question and its input/output split.**
+   Use model_specification, programme_record and the existing validation
+   in nsc_cosmological_atlas.py. Name the actual action, observer region,
+   finite domain, state family and independent reference scale. Keep the
+   dust completion as a known control, with its zero parent Lambda.
+   Do not require a unique universe initial condition before making a
+   conditional prediction.
+2. **Supply the physical operator/source connection.** The actual radial
+   generator and metric vertices in nsc_atlas_dirac_evolution.py and
+   nsc_atlas_dirac_stress.py, or the owned scalar boundary map, provide
+   geometry-dependent ingredients. CausalCommonFunctional.evaluate in
+   nsc_causal_common.py accepts histories, covariance and induced forces;
+   it does not derive these inputs merely by being called. Establish
+   their action-based identification and conservation first. The Schur
+   and inheritance owners record what is borrowed and what this connects.
+   If the chosen target is already excluded by a known trace/support
+   identity, report that result and compare the explicit transition route.
+3. **Return a full gravitational response.** Calculate density, pressure,
+   exchange and the relevant perturbation/anisotropic response from the
+   same state and couplings. Use nsc_atlas_geometric_average.py for
+   balance identities without identifying a spatial trace with local
+   Lambda. A repeated parent--child application must use the same physical
+   law; a unit rescaling alone is not a physical transition.
+4. **Take that response to observers immediately.** Extend the existing
+   nsc_atlas_cosmological_distance.py and pinned distance-contrast
+   machinery for the chosen history, with explicit emitter and observer
+   populations. The homogeneous dust distance law is a useful control
+   for rays and emitters remaining in the unperturbed dust region; it
+   is not automatically the luminosity distance of every ray through
+   a multi-vacuole spacetime. The already-seen Pantheon+ contrast is a
+   retrospective screen, not newly withheld evidence. Add one second
+   response channel from the same model, such as lensing versus dynamics
+   or growth, and reserve its test data before calibration.
+5. **Advance or redirect on the result.** A successful relation earns
+   the required formation, nonspherical stability and thermal-history
+   work for that candidate. An uncontrolled kernel or independently
+   retuned output remains an open mechanism, not a cosmological result.
+   Failures stay local to the candidate; all completed atlas entries
+   remain available. Update the existing prediction register and paper
+   when this step yields a scientific result, rather than rebuilding
+   the book for a planning change.
+
+The first deliverable is one explicit parent-to-child source/transition
+calculation, its remaining physical inputs, a controlled dimensional or
+dimensionless output, and the observer comparison it enables. This is
+the target for implementation, not another complete-theory prerequisite.
+No new dependency, runtime or simulation framework is currently justified;
+reuse the package's field, matching, conservation and distance interfaces.
+
+### Finish-line proof for this next connection
+
+With the action and calibration held fixed, the same physical mechanism
+must predict a second independent observable with declared model and
+numerical uncertainty. It must survive an equivalent coordinate
+description and a control that removes or changes the nested connection
+without silently changing source preparation. A robust discrepancy in
+the reserved observation rejects that tested claim. A free parent state
+is permitted only with a stated inference or a demonstrable insensitivity
+of the advertised relation to the unmeasured freedom.
+
+### Three-obstacle forecast
+
+- **Formal objects remain disconnected.** A matrix complement, geometric
+  average and local stress share symbols but have different domains or
+  actions. The symptom is an unevaluated physical map or Ward residual.
+  Resolve that map or redirect; do not add another conditional geometry.
+- **The answer enters as an input.** A vacuum coefficient, flux sector,
+  occupation or physical ruler is adjusted separately for the target.
+  The symptom is loss of a held-out relation. Expose the dependency and
+  reduce the claim to what the model actually predicts.
+- **The source has the wrong cosmological effect or loses viability.**
+  A pressureless/radiative term, unchanged null observable, unstable
+  source or incompatible thermal history cannot carry the advertised
+  explanation. Preserve the result and change the identified mechanism,
+  rather than deepening an already settled local calculation.
+
+The historical execution notes below retain their scientific scope.
+Their former next-step suggestions do not override this reassessment.
+
 **Completed state-to-geometry connection.** The
 [occupied-wall candidate](nsc-atlas-occupied-wall.md) derives a surface
 pressure from a finite, isotropic sphere-Dirac state. Its normalized
@@ -30,11 +167,11 @@ signals. Two such unequal, fully sourced interiors fit one disjoint-
 vacuole dust parent. This is an explicit new material candidate, not a
 reinterpretation of the original transparent fields.
 
-**Next inherited datum.** The initial occupation, bare surface coupling
+**Remaining datum of the occupied-wall candidate.** The initial occupation, bare surface coupling
 and cap vacuum are still supplied. The normalized operator alone does
 not select them or preserve gravitational compactness across a change
-of physical scale. Next investigate an actual preparation/transition
-law or collective source, retaining the known distinction between
+of physical scale. This candidate would need an actual preparation/transition
+law or a role in the selected collective source, retaining the distinction between
 radial persistence and nonspherical/fragmentation stability. The new
 spherical construction and its clock comparison are complete at their
 declared scope; no grid refinement follows.

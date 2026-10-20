@@ -8,6 +8,20 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Vacuum-transition comparison in the programme reassessment
+
+[Bousso--Polchinski, hep-th/0004134v3](https://arxiv.org/html/hep-th/0004134):
+Sections 2.1--2.3, 3.1 and the opening of 3.2 inspected. The action,
+fixed-flux boundary term and charged-membrane jump give an explicit
+vacuum-changing transition. Membrane-induced flux differences do not
+alone imply absolute flux quantization in a standalone four-dimensional
+theory. The paper also states the single-flux spacing and empty-universe
+problems; its multiple-flux solution introduces additional assumptions.
+This supplies a bounded alternative for the [programme reassessment](nsc-cosmological-atlas.md#programme-reassessment-the-generative-and-cosmological-connection).
+It is not an implemented NSC action, selected cosmological value or new
+numerical result. Inspect compatibility and predictive freedom before
+adopting it; do not repeat its published derivation as an NSC discovery.
+
 ### Occupied wall state and a common cosmological parent, 20 October 2026
 
 - [Abrikosov, hep-th/0212134v1](https://arxiv.org/html/hep-th/0212134):
