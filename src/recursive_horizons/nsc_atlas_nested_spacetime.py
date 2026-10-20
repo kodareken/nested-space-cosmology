@@ -257,3 +257,293 @@ def radar_cap_input_bounds(*, radar_distance, one_plus_redshift, echo_stretch):
     return dict(H_squared=curvature, Lambda_cap=[3*x for x in curvature],
         radius=[D0*r0, D1*r1], cap_lapse_squared=[f0, f1],
         scope='Conditional analytic input-box bounds evaluated in float64; no observational calibration.')
+
+
+class TwoWallHistoryBudget:
+    """Count scalar geometry/RHS work across one finite application."""
+
+    def __init__(self, limit=20000, cpu_seconds=60.):
+        import time
+        self.limit = int(limit)
+        self.cpu_seconds = float(cpu_seconds)
+        self.count = 0
+        self.started = time.process_time()
+
+    def add(self, count=1):
+        import time
+        self.count += int(count)
+        if self.count > self.limit:
+            raise RuntimeError('two-wall scalar evaluation allowance exhausted')
+        if time.process_time()-self.started > self.cpu_seconds:
+            raise RuntimeError('two-wall process-CPU allowance exhausted')
+
+
+class TwoWallHostHistory:
+    """The existing quiet two-wall state in one oriented host atlas.
+
+    The bridge has T=0 and r_star(.5*ell)=0; Lake's scale is L0=ell.
+    Clock origins come from the original slice, not independent wall resets.
+    Only the admitted tau/ell in [0,.04] is continued. Equal proper times on
+    different walls are not asserted simultaneous. No new field is evolved.
+    """
+
+    def __init__(self, *, order=64, length_scale=1., budget=None):
+        from recursive_horizons.nsc_atlas_nested_slice import kottler_horizons
+        if order not in (32, 64):
+            raise ValueError('two-wall quadrature order must be 32 or 64')
+        self.ell = float(length_scale)
+        if not math.isfinite(self.ell) or self.ell <= 0:
+            raise ValueError('positive finite length scale required')
+        self.order = order
+        self.budget = budget if budget is not None else TwoWallHistoryBudget()
+        self.nodes, self.weights = np.polynomial.legendre.leggauss(order)
+        self.mass, self.H, self.tension = .01*self.ell, 1/self.ell, 2/self.ell
+        roots = kottler_horizons(self.mass, self.H, self.budget)
+        self.rb, self.rc = roots['rb'], roots['rc']
+        self.ro = -self.rb-self.rc
+        self.kappa = (1-3*(self.H*self.rb)**2)/(2*self.rb)
+        self.reference = .5*self.ell
+        self.initial_walls = {name: self.wall(name, radius*self.ell)
+                              for name, radius in (('inner', .8), ('outer', 1.5))}
+        self._initial_events = {}
+        self._outer_label = None
+
+    def _integral(self, function, lower, upper):
+        if lower == upper:
+            return 0.
+        points = (upper+lower)/2+(upper-lower)/2*self.nodes
+        self.budget.add(points.size)
+        return float((upper-lower)/2*self.weights @ np.asarray(function(points)))
+
+    def lapse(self, radius):
+        radius = np.asarray(radius)
+        return 1-2*self.mass/radius-(self.H*radius)**2
+
+    def wall(self, name, radius):
+        from recursive_horizons.nsc_atlas_nested_slice import tension_wall
+        self.budget.add()
+        if name == 'inner':
+            result = tension_wall(radius, 0., self.H, self.mass, self.H, self.tension)
+            result['host_beta'] = result['beta_plus']
+        elif name == 'outer':
+            result = tension_wall(radius, self.mass, self.H, .4*self.ell, 0., self.tension)
+            result['host_beta'] = result['beta_minus']
+        else:
+            raise ValueError('wall must be inner or outer')
+        return result
+
+    def _wall_arrays(self, name, radius):
+        """Vectorized signed motion used only inside counted quadrature."""
+        radius = np.asarray(radius)
+        if name == 'inner':
+            minus_mass, minus_H, plus_mass, plus_H = 0., self.H, self.mass, self.H
+        elif name == 'outer':
+            minus_mass, minus_H, plus_mass, plus_H = self.mass, self.H, .4*self.ell, 0.
+        else:
+            raise ValueError('wall must be inner or outer')
+        f_minus = 1-2*minus_mass/radius-(minus_H*radius)**2
+        f_plus = 1-2*plus_mass/radius-(plus_H*radius)**2
+        beta_minus = (f_minus-f_plus+(self.tension*radius)**2)/(2*self.tension*radius)
+        speed = np.sqrt(beta_minus**2-f_minus)
+        beta_host = beta_minus-self.tension*radius if name == 'inner' else beta_minus
+        return speed, beta_host
+
+    def initial_frame(self, branch, radius):
+        """Original (Rprime,V), never a newly chosen taper."""
+        from recursive_horizons.nsc_atlas_nested_slice import (
+            positive_sheet_velocity, taper_velocity, transition_velocity,
+        )
+        radius = np.asarray(radius)
+        if branch == 'inner':
+            if np.any(radius < .1*self.ell) or np.any(radius > .8*self.ell):
+                raise ValueError('inner source outside original left taper')
+            V, _ = taper_velocity(radius, .1*self.ell, .8*self.ell,
+                                  self.initial_walls['inner']['V_plus'])
+            Rp = -np.sqrt(self.lapse(radius)+V*V)
+        elif branch == 'outer':
+            if np.any(radius < .5*self.ell) or np.any(radius > 1.5*self.ell):
+                raise ValueError('outer source outside original right host')
+            transition, _ = transition_velocity(radius, .5*self.ell, .9*self.ell,
+                                                 self.mass, self.H)
+            sheet, _ = positive_sheet_velocity(radius, self.mass, self.H)
+            V = np.where(radius < .9*self.ell, transition, sheet)
+            Rp = np.sqrt(self.lapse(radius)+V*V)
+        else:
+            raise ValueError('branch must be inner or outer')
+        return Rp, V
+
+    def tortoise_regular_part(self, radius):
+        """Smooth remainder at rb from the exact partial fractions of 1/f."""
+        radius = float(radius)
+        value = 0.
+        for root in (self.rc, self.ro):
+            derivative = 2*self.mass/root**2-2*self.H**2*root
+            value += math.log(abs((radius-root)/(self.reference-root)))/derivative
+        return value
+
+    def tortoise(self, radius):
+        radius = float(radius)
+        if radius == self.rb:
+            return -math.inf
+        if radius == self.rc:
+            return math.inf
+        return (math.log(abs((radius-self.rb)/(self.reference-self.rb)))/(2*self.kappa)
+                + self.tortoise_regular_part(radius))
+
+    def _initial_null(self, branch, radius):
+        """p on the left and q on the right, with the shared bridge origin."""
+        radius = float(radius)
+        if branch == 'inner':
+            def integrand(points):
+                Rp, V = self.initial_frame('inner', points)
+                return V/(self.lapse(points)*Rp)
+            T = self._integral(integrand, .1*self.ell, radius)
+            return T+self.tortoise(radius)
+        if branch == 'outer':
+            def integrand(points):
+                Rp, V = self.initial_frame('outer', points)
+                return -1/(Rp*(V+Rp))
+            split = min(radius, .9*self.ell)
+            return (self._integral(integrand, .5*self.ell, split)
+                    + self._integral(integrand, split, radius))
+        raise ValueError('branch must be inner or outer')
+
+    def lake_event(self, radius, q, sign, *, speed=None, beta=None):
+        """Common Lake coordinates, optionally with a wall proper tangent."""
+        self.budget.add()
+        u = sign*self.ell*math.exp(-self.kappa*q)
+        w = (radius-self.rb)/(self.kappa*u)
+        chart = regular_kottler_chart(u, w, mass=self.mass, H=self.H, horizon=self.rb)
+        result = dict(u=u, w=w, F=float(chart['F']),
+                      radius_residual=float(chart['R'])-radius)
+        if speed is not None:
+            q_tau = 1/(beta+speed)
+            u_tau = -self.kappa*u*q_tau
+            w_tau = speed/(self.kappa*u)-w*u_tau/u
+            result.update(u_tau=u_tau, w_tau=w_tau,
+                normalization_residual=result['F']*u_tau*u_tau+2*u_tau*w_tau+1,
+                radial_rate_residual=self.kappa*(w*u_tau+u*w_tau)-speed)
+        return result
+
+    def initial_event(self, branch, radius):
+        self.budget.add()
+        radius = float(radius)
+        Rp, V = map(float, self.initial_frame(branch, radius))
+        null = self._initial_null(branch, radius)
+        star = self.tortoise(radius)
+        q = null-2*star if branch == 'inner' else null
+        T = null-star if branch == 'inner' else null+star
+        lake = self.lake_event(radius, q, -1 if branch == 'inner' else 1)
+        q_l = -1/(Rp+V)
+        u_l = -self.kappa*lake['u']*q_l
+        w_l = Rp/(self.kappa*lake['u'])-lake['w']*u_l/lake['u']
+        N_u, N_w = -u_l, lake['F']*u_l+w_l
+        lake.update(u_l=u_l, w_l=w_l, N_u=N_u, N_w=N_w,
+            spatial_norm_residual=lake['F']*u_l*u_l+2*u_l*w_l-1,
+            normal_norm_residual=lake['F']*N_u*N_u+2*N_u*N_w+1,
+            orthogonality_residual=lake['F']*u_l*N_u+u_l*N_w+w_l*N_u,
+            normal_radius_residual=self.kappa*(lake['w']*N_u+lake['u']*N_w)-V)
+        return dict(radius=radius, T=T if math.isfinite(T) else None,
+                    null_coordinate=null, q=q, Rprime=Rp, V=V, lake=lake)
+
+    def bridge_event(self, y):
+        """Smooth signed static bridge, including its bifurcation sphere."""
+        from recursive_horizons.nsc_atlas_nested_slice import bridge_chart
+        self.budget.add()
+        y = float(y)
+        radius = self.rb+y*y
+        remainder = self.tortoise_regular_part(radius)
+        factor = self.ell/math.sqrt(self.reference-self.rb)*math.exp(self.kappa*remainder)
+        u, w = y*factor, y/(self.kappa*factor)
+        remainder_R = sum(1/((2*self.mass/root**2-2*self.H**2*root)*(radius-root))
+                          for root in (self.rc, self.ro))
+        u_y = factor*(1+2*self.kappa*y*y*remainder_R)
+        w_y = (1-2*self.kappa*y*y*remainder_R)/(self.kappa*factor)
+        slice_row = bridge_chart(y, self.rb, self.H, self.mass)
+        dl_dy = slice_row['dl_dy']
+        chart = regular_kottler_chart(u, w, mass=self.mass, H=self.H, horizon=self.rb)
+        F = float(chart['F'])
+        u_l, w_l = u_y/dl_dy, w_y/dl_dy
+        N_u, N_w = -u_l, F*u_l+w_l
+        return dict(radius=radius, u=u, w=w, T=0., F=F, dl_dy=dl_dy,
+            induced_dy_squared=F*u_y*u_y+2*u_y*w_y,
+            spatial_norm_residual=F*u_l*u_l+2*u_l*w_l-1,
+            normal_radius_residual=self.kappa*(w*N_u+u*N_w),
+            future_N_u=N_u, future_N_w=N_w)
+
+    def initial_wall(self, name):
+        if name not in self._initial_events:
+            radius = self.initial_walls[name]['radius']
+            self._initial_events[name] = self.initial_event(name, radius)
+        return self._initial_events[name]
+
+    def wall_event(self, name, proper_time):
+        from scipy.optimize import brentq
+        tau = float(proper_time)
+        if not math.isfinite(tau) or not 0 <= tau <= .04*self.ell:
+            raise ValueError('wall proper time outside admitted [0,.04 ell]')
+        initial = self.initial_wall(name)
+        R0 = initial['radius']
+        upper = (.85 if name == 'inner' else 1.6)*self.ell
+        def elapsed(radius):
+            return self._integral(lambda x: 1/self._wall_arrays(name, x)[0], R0, radius)
+        radius = R0 if tau == 0 else brentq(lambda r: elapsed(r)-tau, R0, upper,
+                                           xtol=5e-15*self.ell, rtol=8e-15)
+        def null_rate(points):
+            speed, beta = self._wall_arrays(name, points)
+            denominator = beta-speed if name == 'inner' else beta+speed
+            return 1/(speed*denominator)
+        null = initial['null_coordinate']+self._integral(null_rate, R0, radius)
+        star = self.tortoise(radius)
+        q = null-2*star if name == 'inner' else null
+        T = null-star if name == 'inner' else null+star
+        wall = self.wall(name, radius)
+        lake = self.lake_event(radius, q, -1 if name == 'inner' else 1,
+                               speed=wall['Rdot'], beta=wall['host_beta'])
+        return dict(proper_time=tau, radius=radius, T=T, q=q,
+            null_coordinate=null, null_kind='p=T+rstar' if name == 'inner' else 'q=T-rstar',
+            Rdot=wall['Rdot'], host_beta=wall['host_beta'], lake=lake,
+            junction_residuals={key:wall[key] for key in
+                ('mass_map_residual', 'normal_force_residual',
+                 'minus_rate_residual', 'plus_rate_residual')},
+            angular_jump_residual=wall['angular_jump']+self.tension,
+            temporal_jump_residual=wall['temporal_jump']+self.tension)
+
+    def outer_initial_label(self):
+        from recursive_horizons.nsc_atlas_nested_slice import bridge_chart
+        if self._outer_label is None:
+            left = self._integral(lambda x: -1/self.initial_frame('inner', x)[0],
+                                  .1*self.ell, .8*self.ell)
+            def bridge(points):
+                return bridge_chart(points, self.rb, self.H, self.mass)['dl_dy']
+            neck = (self._integral(bridge, -math.sqrt(.1*self.ell-self.rb), 0.)
+                    + self._integral(bridge, 0., math.sqrt(.5*self.ell-self.rb)))
+            right = (self._integral(lambda x: 1/self.initial_frame('outer', x)[0],
+                                    .5*self.ell, .9*self.ell)+.6*self.ell)
+            self._outer_label = .8*self.ell+left+neck+right
+        return self._outer_label
+
+    def characteristic_origin(self, name, event):
+        """Unique original-slice origin of the incoming host characteristic."""
+        from scipy.optimize import brentq
+        R0 = self.initial_walls[name]['radius']
+        lower = (.7 if name == 'inner' else 1.3)*self.ell
+        target = event['null_coordinate']
+        if event['proper_time'] == 0:
+            radius = R0
+        else:
+            radius = brentq(lambda r: self._initial_null(name, r)-target, lower, R0,
+                             xtol=5e-15*self.ell, rtol=8e-15)
+        initial = self.initial_event(name, radius)
+        Rp, V = initial['Rprime'], initial['V']
+        if name == 'inner':
+            label = .8*self.ell+self._integral(
+                lambda x: -1/self.initial_frame(name, x)[0], radius, R0)
+            derivative = (event['host_beta']-event['Rdot'])/(Rp-V)
+        else:
+            label = self.outer_initial_label()-self._integral(
+                lambda x: 1/self.initial_frame(name, x)[0], radius, R0)
+            derivative = -(event['host_beta']+event['Rdot'])/(Rp+V)
+        return dict(radius=radius, proper_label=label, arrival_d_tau_d_label=derivative,
+            null_matching_residual=initial['null_coordinate']-target,
+            initial_event=initial)

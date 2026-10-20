@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-20.1` adds Section 10.5's shared two-wall host history.
+Both original wall intersections retain their common chart normalization,
+and incoming characteristics locate source collars on the initial slice.
+The finite segments have no causal path to one another within the
+constructed host patch. Equal elapsed proper times do not define
+simultaneity. This supplies the geometry for later field transfer;
+physical foliation, field state and cosmological averaging remain separate.
+
 Revision `2026-10-19.3` adds Section10.4's physical radar/clock inverse:
 the quiet cap lapse and signed junction combinations are reconstructed
 from calibrated clocks, then predict a later received frequency. Both

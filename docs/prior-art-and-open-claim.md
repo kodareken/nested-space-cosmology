@@ -1,5 +1,52 @@
 # Prior art and admission of new research
 
+## Shared two-wall history and characteristic access, 20 October 2026
+
+Continue the existing quiet two-level slice into a finite, shared spacetime
+before using it as a physical propagation or averaging history. The missing
+connection is the event identification of both material worldtubes in their
+common host, including their initial slice and characteristic origins.
+Independent wall clock resets would discard that shared geometric data.
+
+Borrow the existing signed Israel motion, the explicit cap/Kottler/Schwarzschild
+metrics, Lake's regular chart [gr-qc/0507031v2](https://arxiv.org/html/gr-qc/0507031v2),
+(5)--(10), and ordinary radial null propagation. Keep masses in ell units
+0,.01,.4, regional H*ell=1,1,0, common tension k*ell=2, the initial wall radii
+.8 and1.5, and the full original slicing functions. The scalar remains zero.
+Set the host bridge Killing-time constant to zero as a coordinate convention,
+then determine both wall embeddings from that same slice. Continue each
+wall through 0<=tau_i/ell<=.04; equal elapsed proper times do not define
+simultaneity. Trace the host-side past characteristic from these finite
+worldtube segments to the original retained slice and determine whether
+either segment can signal the other.
+
+The output is a shared chart/worldtube map, source intervals in original
+proper-distance labels, arrival-map derivatives and a causal-access table.
+This unlocks a physically located field transfer and a separately specified
+transport of the averaging slice. It does not supply a new field state,
+collective sibling parent, cosmological light cone, Lambda drift or the
+origin of the regional vacuum values.
+
+Use at most20000 scalar geometry/RHS evaluations and60 process-CPU seconds
+for one finite application, including its independent32/64 quadrature and
+proper-time ODE comparisons. Exact chart/junction controls have a separate
+60-second allowance. No field grid, parameter scan or averaging evolution
+is admitted. Check initial induced geometry and normal orientation, metric
+normalization, both signed junctions, common chart overlaps, null origins,
+unit rescaling and the absence of a false causal channel. Preserve all
+fixed inputs if a chart must be replaced at coordinate infinity.
+The illustrated map may regenerate at most17 wall events per side within
+50000 counted geometric evaluations and30 process-CPU seconds, using the
+same formulas and domain; it introduces no additional field or parameter test.
+
+The likely failures are inconsistent left/right time orientations, independent
+clock origins that destroy the common embedding, and a null ray leaving the
+retained domain. Regular overlapping coordinates, the actual initial slice,
+and event-by-event characteristic membership expose these failures. Stop
+with a specific matching obstruction rather than change a wall or source.
+Do not differentiate a moving family of hand-set radial tapers and call it
+an evolved foliation; moment rates remain a subsequent physical calculation.
+
 ## Physical radar/clock reconstruction, 19 October 2026
 
 Connect the actual quiet cap/wall action to an identifiable observer

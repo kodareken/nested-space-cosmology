@@ -46,7 +46,9 @@ def deterministic_pdf_compression():
 
     original = pdfdoc.zlib
 
-    @lru_cache(maxsize=256)
+    # A full manuscript has more than 300 image streams. Retain every stream
+    # across its table-of-contents passes; the cache is cleared below per build.
+    @lru_cache(maxsize=None)
     def encode(data: bytes) -> bytes:
         return compress(data, **PDF_COMPRESSION_OPTIONS)
 

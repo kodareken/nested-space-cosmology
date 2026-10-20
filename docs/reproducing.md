@@ -1,6 +1,31 @@
 # Reproducing the root project
 
-The [physical radar/clock inverse](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+The [shared two-wall history](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+uses the original quiet slice and its signed wall law:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_two_wall_history.py tests/test_nsc_atlas_nested_spacetime.py tests/test_nsc_atlas_nested_slice.py -q
+python scripts/run_python.py scripts/check_nsc_atlas_two_wall_history.py
+python scripts/run_python.py scripts/plot_nsc_atlas_two_wall_history.py
+```
+
+The calculator retains the bridge convention `T=0,r_star(.5*ell)=0`
+and derives both wall origins from the same slice. It maps one incoming
+host characteristic per wall to its original source label and compares
+32/64 quadrature with independent proper-time evolution. The controls
+include signed normals, the regular bridge, cosmological-horizon overlap,
+both junctions, arrival derivatives and unit rescaling. The compact
+record is `results/summaries/nsc-atlas-two-wall-history-v1.json`; use
+`--output <fresh-path>` to regenerate it without replacing evidence.
+The seven new controls pass alongside the existing chart controls. The largest
+recorded 32/64 difference is `1.31e-12` in the arrival derivative;
+the independent wall-clock and null integrations agree below `3.50e-15`
+in ell units. These are comparison indicators, not a total error bound.
+Each wall ends at its own `.04*ell` proper interval; equal elapsed wall
+times do not define simultaneous endpoints. No field grid or transported
+averaging slice is run.
+
+The [physical radar/clock inverse](nsc-atlas-radar-clock.md)
 uses the existing quiet junction, with no new field grid:
 
 ```powershell
@@ -18,6 +43,14 @@ record is `results/summaries/nsc-atlas-radar-inverse-v1.json`; its source
 hashes and scalar results can be regenerated with `--output <fresh-path>`.
 The 100ppm box is an explicitly assumed instrument bound. The cap scale
 is reconstructed, not generated, and the scalar remains quiet.
+
+The radar extension has its own [owner](nsc-atlas-radar-clock.md). The older
+[field-inverse proof](nsc-atlas-observer-inference.md) retains its exact
+authenticated bytes; no stored proof record was rewritten when the later
+radar material was separated from it. The PDF compressor retains all unique
+streams only for one build and clears them afterward, preventing repeated
+equation-image compression across table-of-contents passes without changing
+the compression function or its output bytes.
 
 The [geometric composition/time balance](schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
 and [scale-free inherited response](nsc-infinite-inheritance.md#a-scale-free-inverse-of-the-inherited-geometry)
@@ -1043,7 +1076,7 @@ A successful older run is evidence for that commit, not for a newer queued one.
 
 ## Current work
 
-The next two-level composition uses the same quiet membrane law at both
+The initial two-level composition uses the same quiet membrane law at both
 boundaries. Its tests do not run the full physical record:
 
 ```sh
@@ -1062,6 +1095,8 @@ it is a radius profile rather than a Euclidean embedding or a causal diagram.
 The [owner](nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
 defines the model and central flash. Neither a new cosmological vacuum
 value nor a complete two-wall clock atlas is supplied by these commands.
+The separate shared-history commands at the top of this guide now
+continue both walls from the same original slice.
 
 The [saved application](../results/summaries/nsc-atlas-nested-slice-v1.json)
 binds method `acc5a176ac074999ed23af770045003c4123cd57`. It stores all

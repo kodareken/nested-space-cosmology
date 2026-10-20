@@ -1,0 +1,381 @@
+{
+  "schema": "nsc-atlas-two-wall-history-v1",
+  "inputs": {
+    "masses": [
+      0.0,
+      0.01,
+      0.4
+    ],
+    "H_values": [
+      1.0,
+      1.0,
+      0.0
+    ],
+    "common_tension": 2.0,
+    "initial_wall_radii": [
+      0.8,
+      1.5
+    ],
+    "scalar": "zero",
+    "gauge": "Bridge T=0; rstar(.5 ell)=0; Lake L0=ell. Original slice fixes both wall origins."
+  },
+  "units": "Lengths and proper times in ell, velocities in c=1 units.",
+  "cases": {
+    "inner": {
+      "host_null_family": "p=T+rstar",
+      "initial_event": {
+        "proper_time": 0.0,
+        "radius": 0.8,
+        "T": -0.2704040434216888,
+        "q": -0.8527886304520301,
+        "null_coordinate": 0.31198054360865257,
+        "null_kind": "p=T+rstar",
+        "Rdot": 0.5408891153982027,
+        "host_beta": -0.7921875,
+        "lake": {
+          "u": -1754741059.339511,
+          "w": -1.7808726824709445e-11,
+          "F": 2.0123205631151713e-20,
+          "radius_residual": 0.0,
+          "u_tau": -174288035200.4623,
+          "w_tau": 1.7564857999499642e-09,
+          "normalization_residual": 1.1368683772161603e-13,
+          "radial_rate_residual": 8.215650382226158e-15
+        },
+        "junction_residuals": {
+          "mass_map_residual": 8.673617379884035e-18,
+          "normal_force_residual": 0.0,
+          "minus_rate_residual": 1.1102230246251565e-16,
+          "plus_rate_residual": 1.1102230246251565e-16
+        },
+        "angular_jump_residual": 0.0,
+        "temporal_jump_residual": 0.0
+      },
+      "endpoint": {
+        "proper_time": 0.04,
+        "radius": 0.8229211921074792,
+        "T": -0.3718928814062154,
+        "q": -1.0267009349030283,
+        "null_coordinate": 0.2829151720905974,
+        "null_kind": "p=T+rstar",
+        "Rdot": 0.6054790852029553,
+        "host_beta": -0.8155378411714959,
+        "lake": {
+          "u": -134716010648.71544,
+          "w": -2.3878395557615055e-13,
+          "F": 3.518596866663613e-24,
+          "radius_residual": 0.0,
+          "u_tau": -16007468541425.05,
+          "w_tau": 2.8193149746348094e-11,
+          "normalization_residual": 1.1368683772161603e-13,
+          "radial_rate_residual": 5.551115123125783e-15
+        },
+        "junction_residuals": {
+          "mass_map_residual": 2.3071822230491534e-16,
+          "normal_force_residual": 3.533949646070574e-17,
+          "minus_rate_residual": 0.0,
+          "plus_rate_residual": 1.1102230246251565e-16
+        },
+        "angular_jump_residual": 0.0,
+        "temporal_jump_residual": 8.881784197001252e-16
+      },
+      "source_radius_interval": [
+        0.7800767070804213,
+        0.8
+      ],
+      "source_proper_label_interval": [
+        0.8,
+        0.8293623698204581
+      ],
+      "arrival_derivatives_at_initial_midpoint_endpoint": [
+        1.3346169230089877,
+        1.3623175678061812,
+        1.3910066896226447
+      ],
+      "endpoint_source": {
+        "radius": 0.7800767070804213,
+        "proper_label": 0.8293623698204581,
+        "arrival_d_tau_d_label": 1.3910066896226447,
+        "null_matching_residual": -5.551115123125783e-17,
+        "initial_event": {
+          "radius": 0.7800767070804213,
+          "T": -0.24258853037224803,
+          "null_coordinate": 0.28291517209059736,
+          "q": -0.7680922328350934,
+          "Rprime": -0.6898450715779622,
+          "V": 0.3317294017697885,
+          "lake": {
+            "u": -211887652.26553315,
+            "w": -1.4371528664804788e-10,
+            "F": 1.3434438961385043e-18,
+            "radius_residual": 0.0,
+            "u_l": 14768165716.38514,
+            "w_l": -9.886244436253106e-09,
+            "N_u": -14768165716.38514,
+            "N_w": 9.953957652586432e-09,
+            "spatial_norm_residual": 0.0,
+            "normal_norm_residual": 0.0,
+            "orthogonality_residual": 0.0,
+            "normal_radius_residual": 7.93809462606987e-15
+          }
+        }
+      },
+      "comparisons": {
+        "radius_64_minus_32": 0.0,
+        "shared_T_64_minus_32": 8.762990333366361e-13,
+        "source_radius_64_minus_32": 8.467671008816069e-13,
+        "source_label_64_minus_32": 1.247668635073751e-12,
+        "arrival_derivative_64_minus_32": 1.3020695632803836e-12,
+        "radius_vs_second_order": 0.0,
+        "velocity_vs_second_order": 1.1102230246251565e-16,
+        "shared_T_vs_second_order": 3.3306690738754696e-16,
+        "null_T_vs_independent_ODE": 3.497202527569243e-15
+      },
+      "residuals": {
+        "wall_normalization": 1.1368683772161603e-13,
+        "junction": 8.881784197001252e-16,
+        "characteristic_matching": 3.4416913763379853e-15
+      },
+      "whole_interval_certificate": {
+        "analytic_radius_upper_bound": 0.8465593151391879,
+        "speed_squared_positive_lower_bound": 0.28000000000000025,
+        "subtracted_growth_remainder_upper_bound": 0.012561035156249999,
+        "growth_inequality": "Rdot^2=2R^2-1+.01/R+.000025/R^4<2R^2",
+        "source_endpoint_bracket_product": -0.003003466301127226,
+        "source_monotonicity": "p_R=1/[Rprime*(Rprime-V)]>0; p_tau<0",
+        "patch_argument": "R>=R0>rb; finite q preserves sign(u); w=(R-rb)/(kappa*u) has the same sign. Thus signs hold on the entire proper-time interval.",
+        "time_orientation": "q_tau and u have the same sign, so u_tau<0. F>0 and proper normalization then imply w_tau>0.",
+        "host_f_positive_lower_bound": 0.25971228321355966,
+        "host_beta_negative_reason": "beta_host=-R+.005/R^2<0 for R>=.8"
+      },
+      "domain": {
+        "wall_radius_bracket": [
+          0.8,
+          0.85
+        ],
+        "original_source_bracket": [
+          0.7,
+          0.8
+        ],
+        "proper_time_interval": [
+          0.0,
+          0.04
+        ],
+        "continuation": "Positive expanding root throughout the declared radius bracket."
+      }
+    },
+    "outer": {
+      "host_null_family": "q=T-rstar",
+      "initial_event": {
+        "proper_time": 0.0,
+        "radius": 1.5,
+        "T": -0.4495395685055907,
+        "q": -0.7005694394555648,
+        "null_coordinate": -0.7005694394555648,
+        "null_kind": "q=T-rstar",
+        "Rdot": 1.6527157784823272,
+        "host_beta": 1.2116666666666667,
+        "lake": {
+          "u": 39278944.87509995,
+          "w": 1.5095771706184737e-09,
+          "F": 7.817879257302515e-17,
+          "radius_residual": 0.0,
+          "u_tau": -342273315.8963335,
+          "w_tau": 1.4840078144297424e-08,
+          "normalization_residual": 0.0,
+          "radial_rate_residual": -8.881784197001252e-16
+        },
+        "junction_residuals": {
+          "mass_map_residual": -5.551115123125783e-16,
+          "normal_force_residual": 0.0,
+          "minus_rate_residual": 0.0,
+          "plus_rate_residual": 0.0
+        },
+        "angular_jump_residual": 0.0,
+        "temporal_jump_residual": 2.220446049250313e-16
+      },
+      "endpoint": {
+        "proper_time": 0.04,
+        "radius": 1.567950150020483,
+        "T": -0.4857159969936945,
+        "q": -0.6869241666575763,
+        "null_coordinate": -0.6869241666575763,
+        "null_kind": "q=T-rstar",
+        "Rdot": 1.7455520164497251,
+        "host_beta": 1.2552803119692144,
+        "lake": {
+          "u": 27941216.307266753,
+          "w": 2.219551280491265e-09,
+          "F": 1.6189773738093438e-16,
+          "radius_residual": -2.220446049250313e-16,
+          "u_tau": -232406253.71962142,
+          "w_tau": 2.0964428417239935e-08,
+          "normalization_residual": 0.0,
+          "radial_rate_residual": 6.661338147750939e-16
+        },
+        "junction_residuals": {
+          "mass_map_residual": 1.2212453270876722e-15,
+          "normal_force_residual": 0.0,
+          "minus_rate_residual": 0.0,
+          "plus_rate_residual": 0.0
+        },
+        "angular_jump_residual": 0.0,
+        "temporal_jump_residual": 4.440892098500626e-16
+      },
+      "source_radius_interval": [
+        1.4660569643574437,
+        1.5
+      ],
+      "source_proper_label_interval": [
+        3.3386896157544492,
+        3.3726326513970055
+      ],
+      "arrival_derivatives_at_initial_midpoint_endpoint": [
+        -1.143722696646992,
+        -1.1786272881244972,
+        -1.2145665667945973
+      ],
+      "endpoint_source": {
+        "radius": 1.4660569643574437,
+        "proper_label": 3.3386896157544492,
+        "arrival_d_tau_d_label": -1.2145665667945973,
+        "null_matching_residual": 1.1102230246251565e-16,
+        "initial_event": {
+          "radius": 1.4660569643574437,
+          "T": -0.4078945829593977,
+          "null_coordinate": -0.6869241666575762,
+          "q": -0.6869241666575762,
+          "Rprime": 1.0,
+          "V": 1.4707022327631945,
+          "lake": {
+            "u": 27941216.307266656,
+            "w": 2.073449469054994e-09,
+            "F": 1.5080616291514673e-16,
+            "radius_residual": -2.220446049250313e-16,
+            "u_l": 282272865.68183374,
+            "w_l": -1.951290819887831e-08,
+            "N_u": -282272865.68183374,
+            "N_w": 2.3055579569661642e-08,
+            "spatial_norm_residual": 1.7763568394002505e-15,
+            "normal_norm_residual": 0.0,
+            "orthogonality_residual": -8.881784197001252e-16,
+            "normal_radius_residual": 8.881784197001252e-16
+          }
+        }
+      },
+      "comparisons": {
+        "radius_64_minus_32": 0.0,
+        "shared_T_64_minus_32": 1.2290168882600483e-13,
+        "source_radius_64_minus_32": 2.220446049250313e-16,
+        "source_label_64_minus_32": 9.35695965154082e-13,
+        "arrival_derivative_64_minus_32": 0.0,
+        "radius_vs_second_order": 2.220446049250313e-16,
+        "velocity_vs_second_order": 2.220446049250313e-16,
+        "shared_T_vs_second_order": 1.6653345369377348e-16,
+        "null_T_vs_independent_ODE": 2.220446049250313e-16
+      },
+      "residuals": {
+        "wall_normalization": 3.552713678800501e-15,
+        "junction": 1.4432899320127035e-15,
+        "characteristic_matching": 1.1102230246251565e-16
+      },
+      "whole_interval_certificate": {
+        "analytic_radius_upper_bound": 1.576906644564036,
+        "speed_squared_positive_lower_bound": 2.515625,
+        "subtracted_growth_remainder_upper_bound": 0.21584444444444445,
+        "growth_inequality": "Rdot^2=25R^2/16-1+.3125/R+.038025/R^4<(5R/4)^2",
+        "source_endpoint_bracket_product": -0.0009491375327158357,
+        "source_monotonicity": "q_R=-1/[Rprime*(Rprime+V)]<0; q_tau>0",
+        "patch_argument": "R>=R0>rb; finite q preserves sign(u); w=(R-rb)/(kappa*u) has the same sign. Thus signs hold on the entire proper-time interval.",
+        "time_orientation": "q_tau and u have the same sign, so u_tau<0. F>0 and proper normalization then imply w_tau>0.",
+        "host_beta_positive_reason": "beta_host=.195/R^2+.75R>0"
+      },
+      "domain": {
+        "wall_radius_bracket": [
+          1.5,
+          1.6
+        ],
+        "original_source_bracket": [
+          1.3,
+          1.5
+        ],
+        "proper_time_interval": [
+          0.0,
+          0.04
+        ],
+        "continuation": "Positive expanding root throughout the declared radius bracket."
+      }
+    }
+  },
+  "common_host": {
+    "black_hole_radius": 0.020008009615388216,
+    "cosmological_radius": 0.989845863754293,
+    "surface_gravity": 24.95997997435768,
+    "outer_initial_proper_label": 3.3726326513970055,
+    "neck": {
+      "radius": 0.020008009615388216,
+      "u": 0.0,
+      "w": 0.0,
+      "T": 0.0,
+      "F": 0.0,
+      "dl_dy": 0.28306937209077904,
+      "induced_dy_squared": 0.08012826941586791,
+      "spatial_norm_residual": -1.1102230246251565e-16,
+      "normal_radius_residual": 0.0,
+      "future_N_u": -7.849542999247864e-06,
+      "future_N_w": 63697.97579908912
+    },
+    "initial_cosmological_horizon": {
+      "radius": 0.989845863754293,
+      "T": null,
+      "null_coordinate": -0.47304389124178614,
+      "q": -0.47304389124178614,
+      "Rprime": 0.9999999999999999,
+      "V": 0.9999999999999999,
+      "lake": {
+        "u": 134210.6758826396,
+        "w": 2.8951284372527884e-07,
+        "F": 4.3143042358037615e-12,
+        "radius_residual": 0.0,
+        "u_l": 1674947.8911878471,
+        "w_l": -3.3146006413865423e-06,
+        "N_u": -1674947.8911878471,
+        "N_w": 3.911634140315764e-06,
+        "spatial_norm_residual": 1.7763568394002505e-15,
+        "normal_norm_residual": -1.7763568394002505e-15,
+        "orthogonality_residual": 0.0,
+        "normal_radius_residual": 4.3298697960381105e-15
+      }
+    },
+    "initial_embedding_max_residual": 4.3298697960381105e-15
+  },
+  "causal_access": {
+    "inner_segment_to_outer_segment": false,
+    "outer_segment_to_inner_segment": false,
+    "reason": "On the common retained host chart, future causal curves have du<=0 and dw>=0; F>=0 for R>0. The inner segment has u,w<0 and outer has u,w>0.",
+    "scope": "Within the constructed retained host patch only; no unbuilt global identifications or formation history are assumed."
+  },
+  "counts": {
+    "scalar_geometry_or_RHS_evaluations": 9587,
+    "new_field_grids": 0,
+    "counting_rule": "Quadrature nodes, scalar wall queries, explicit initial/frame and Lake-chart queries, Kottler root-lapse evaluations and independent ODE RHS calls; constituent arithmetic and transcendental primitives are not counted separately.",
+    "quadrature_orders": [
+      32,
+      64
+    ],
+    "wall_proper_time_cuts": [
+      0.0,
+      0.02,
+      0.04
+    ]
+  },
+  "process_cpu_seconds": 0.03125,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_nested_spacetime.py": "36e414a4fa632e5ee83e95663ab4f553a8fbab59756cbd2c7c9ea097260f6159",
+    "src/recursive_horizons/nsc_atlas_nested_slice.py": "fcd9f7b70046c215bd06cd2a78fd94aa40b0adb78290e889729a9b4cfb05df45",
+    "scripts/check_nsc_atlas_two_wall_history.py": "4599c8b7e77533b62a27593d2862e4f43d9c218fd773823bb27ea14c7f84086f",
+    "tests/test_nsc_atlas_two_wall_history.py": "fc6d7e91c844e3ea7dd8212e19af23fb20abae8723b9dad1ad06f3d3c1383fcf"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_two_wall_history.py",
+  "limits": "Conditional quiet two-level state. Proper wall clocks are not a simultaneity slicing; no evolved volume average, new field state or generated vacuum curvature."
+}

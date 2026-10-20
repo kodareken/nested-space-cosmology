@@ -9,6 +9,14 @@ The [overview map](paper/figures/geometry-overview.png) connects geometry,
 observer access and the calculated early scalar response. Manuscript revisions
 are independent of the software distribution, which remains version 0.27.0.
 
+The [shared two-wall history](docs/nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+now continues the quiet two-level geometry in one host atlas fixed by its
+original slice. It locates both moving walls and their incoming source
+collars through `.04 ell` of each wall's proper time. Equal elapsed wall
+times do not define simultaneous endpoints. Neither segment can signal the
+other within the constructed host patch. The result supplies a domain for field transfer;
+a physical evolving foliation is still needed for the geometric average.
+
 Two [constructive proof connections](docs/current-result.md) now join the
 map's components. A scale-free transfer-response identity recovers the
 inherited length ratio and predicts a held-out coefficient. Associative
@@ -17,7 +25,7 @@ including the material walls, and an exact balance relates its geometric
 trace to expansion and source exchange over time. Neither result supplies
 the missing collective cosmological spacetime or an observed Lambda value.
 
-The actual atlas now also has a [radar and wall-clock inverse](docs/nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse).
+The actual atlas now also has a [radar and wall-clock inverse](docs/nsc-atlas-radar-clock.md).
 It cancels Doppler motion, reconstructs a declared quiet cap and its
 membrane combinations, then predicts a later received frequency. Two
 existing states recover the same tension; a changed material law fails
@@ -163,6 +171,7 @@ expansion and recycling remain research questions.
 - [Prediction register](docs/prediction-register.md): the closed perturbative cap–wall relation and its computed coefficients.
 - [Compact result storage](docs/nsc-storage.md#current-calculation-outputs-16-october-2026): summaries and hashes in Git, regenerable raw arrays locally.
 - [Atlas programme and calculation dependencies](docs/nsc-cosmological-atlas.md)
+- [Shared two-wall history and characteristic source collars](docs/nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
 - [Current prepared response and evidence](docs/nsc-atlas-prepared-response.md)
 - [Observer inverse and preparation restrictions](docs/nsc-atlas-observer-inference.md)
 - [Scalar stress and shell compatibility](docs/nsc-atlas-scalar-wall-consistency.md)

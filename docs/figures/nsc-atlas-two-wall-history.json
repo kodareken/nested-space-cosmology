@@ -1,0 +1,16 @@
+{
+  "schema": "nsc-atlas-two-wall-history-figure-v1",
+  "inputs": {
+    "results/summaries/nsc-atlas-two-wall-history-v1.json": "4f2955e336d6cbe602e14e8bffa964091f460dd2a0b15f9a7a14bd88bbdb4c51",
+    "src/recursive_horizons/nsc_atlas_nested_spacetime.py": "36e414a4fa632e5ee83e95663ab4f553a8fbab59756cbd2c7c9ea097260f6159",
+    "scripts/plot_nsc_atlas_two_wall_history.py": "7bafdeafd4bb3f69eca914ef13eb6851c42832fa2df1568e6d39cfa8312a0eb0"
+  },
+  "outputs": {
+    "docs/figures/nsc-atlas-two-wall-history.png": "8b6649344367a8eb025f5ca2fe3d7b24f60a8e57dd32a5c2a21c931c77a97d92",
+    "docs/figures/nsc-atlas-two-wall-history.svg": "7ca990995b482208c4d4895e8c8c3044208fa145ee74ad8dc63d6042b097b523"
+  },
+  "geometry_evaluations": 22119,
+  "wall_samples_per_side": 17,
+  "process_cpu_seconds": 1.0,
+  "scope": "Regenerated display of the admitted finite geometry; no new field or parameter experiment."
+}

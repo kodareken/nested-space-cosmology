@@ -8,7 +8,20 @@ and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
-The [physical radar/clock inverse](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+The [shared host history](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+uses `TwoWallHostHistory` in
+[`nsc_atlas_nested_spacetime`](../src/recursive_horizons/nsc_atlas_nested_spacetime.py).
+It reuses the original signed walls, tapers and bridge, fixes the common
+chart origins, and maps host-side incoming characteristics to initial
+proper-distance labels. The
+[finite calculator](../scripts/check_nsc_atlas_two_wall_history.py) and
+[controls](../tests/test_nsc_atlas_two_wall_history.py) check wall motion,
+normalization, chart overlap and the source maps. Its
+[compact summary](../results/summaries/nsc-atlas-two-wall-history-v1.json)
+contains scalar comparisons rather than a field grid or evolved averaging
+foliation.
+
+The [physical radar/clock inverse](nsc-atlas-radar-clock.md)
 extends `nsc_atlas_nested_spacetime` with `radar_clock_metric`,
 `central_radar_clock`,
 `invert_central_radar_clock`, `radar_junction_branches` and

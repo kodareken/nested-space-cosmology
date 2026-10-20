@@ -1,6 +1,15 @@
 # Scientific strand index
 
-The [radar and wall-clock inverse](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+The [shared two-wall host history](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+continues the quiet nested slice with both wall origins fixed by the same
+host bridge. Host-side incoming characteristics identify the original
+source collars and their arrival maps. Neither finite wall segment can
+signal the other through this patch; the two equal elapsed proper times
+are not a simultaneity prescription. This supplies a physical domain for
+field transfer, with the field state and an evolving averaging foliation
+still to be specified.
+
+The [radar and wall-clock inverse](nsc-atlas-radar-clock.md)
 joins the actual quiet geometry to a finite observer test of the membrane
 law. It recovers the supplied cap curvature and common tension, predicts
 a later frequency and gives conditional instrument bounds. General metric

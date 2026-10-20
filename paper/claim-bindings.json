@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v2",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-19",
+  "recorded_on": "2026-10-20",
   "purpose": "Bind the living main manuscript's claims to directly linked evidence. Preserved historical findings remain indexed without promoting them to current cosmological results.",
   "historical_claim_bindings": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
   "how_records_are_found": "The checker reads links following each unique nsc-claim marker from the manuscript itself.",
@@ -14,10 +14,15 @@
     "unspecified": "Historical classification not yet assigned."
   },
   "claims": {
+    "atlas-two-wall-history": {
+      "section": "10.5",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-connection-slice.md"
+    },
     "atlas-radar-clock-inverse": {
       "section": "10.4",
       "status": "derived",
-      "owner": "docs/nsc-atlas-observer-inference.md"
+      "owner": "docs/nsc-atlas-radar-clock.md"
     },
     "finite-normalized-inheritance": {
       "section": "5",

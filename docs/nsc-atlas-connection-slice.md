@@ -429,3 +429,176 @@ passes its global constraint check. Its geometric trace is negative and
 its stress fails the vacuum-form test, so it does not generate a cosmological
 Lambda. This finite calculation is closed. Further work concerns the parent
 geometry, states and observer reduction, rather than a precision scan here.
+
+## A shared two-wall history and its characteristic origins
+
+**20 October 2026.** The two-level initial slice now supplies the relative
+embedding of two finite wall histories in their common Kottler host. This
+fills the event-identification gap of the initial-slice construction above.
+It uses the same quiet bulks, supplied vacuum values and material law;
+there is no new field state or adjusted coupling. The
+[admission](prior-art-and-open-claim.md#shared-two-wall-history-and-characteristic-access-20-october-2026)
+fixes each wall's proper interval to $0\leq\tau_i/\ell\leq0.04$.
+Equal elapsed proper times label separate events, not simultaneous cuts.
+
+### One initial slice fixes both host clocks
+
+Use $f(R)=1-2M_h/R-H_h^2R^2$, the original proper-distance label $l$,
+normal radial velocity $V$ and signed slope $R'$. Retain the original
+left taper, static bridge and right expanding transition without moving
+their defining radii. Set the bridge Killing constant to $T=0$ and choose
+$r_*(0.5\ell)=0$, where $dr_*/dR=1/f$. These fix coordinate origins;
+they do not identify a preferred physical age.
+
+On a static overlap the inherited slice has
+
+$$
+\frac{dT}{dl}=\frac{V}{f},\qquad
+\frac{dT}{dR}=\frac{V}{fR'},\qquad R'^2-V^2=f.
+$$
+
+The left future has decreasing $T$, while the right future has increasing
+$T$. Define $p=T+r_*$ and $q=T-r_*$. Directly on the oriented slice,
+
+$$
+p_l=\frac1{R'-V},\qquad q_l=-\frac1{R'+V}.
+$$
+
+The right expanding sheet has $R'=1$ and $V>0$. Its $q$ coordinate
+therefore crosses the cosmological horizon regularly; dividing the two
+static terms separately by $f$ would introduce a spurious singularity.
+The same initial curve, including its bridge, fixes the relative offset
+of the two wall events. Resetting either wall's host clock independently
+would describe different initial data.
+
+At the host black-hole root $r_b$, let $\kappa_b=f'(r_b)/2>0$ and use
+the existing Lake coordinates with
+
+$$
+q=-\kappa_b^{-1}\log(|u|/L_0),\qquad
+R=r_b+\kappa_buw,\qquad
+ds_2^2=F\,du^2+2du\,dw,
+$$
+$$
+F=w^2\left[H_h^2+\frac{1/r_b-H_h^2r_b}{R}\right].
+$$
+
+The bridge's signed $y$, $R=r_b+y^2$, gives $u\sim a y$ and
+$w\sim y/(\kappa_b a)$, with nonzero $a$ fixed by the coordinate scale
+$L_0$. Both coordinates are smooth through the neck. Their induced
+metric has $dl^2/dy^2=2/\kappa_b=4/f'(r_b)$ there, exactly the original
+regular bridge value. This is a spacetime coordinate connection, not an
+identification of a spatial throat with a causal passage.
+
+### Worldtubes and the host-side past characteristics
+
+At each wall reuse the signed factors and positive radial root above.
+The common-host normal is $\beta_h=\beta_+$ at the inner wall and
+$\beta_h=\beta_-$ at the outer wall. Along either wall,
+
+$$
+\frac{dR}{d\tau}=\dot R,\qquad
+p_\tau=\frac1{\beta_h-\dot R},\qquad
+q_\tau=\frac1{\beta_h+\dot R}.
+$$
+
+These expressions follow from $\beta_h^2-\dot R^2=f$ and the proper
+normalization of the wall tangent. The initial values come from the
+shared slice. The finite evolution retains the angular and temporal
+Israel jumps and the normal-force balance; it is not a new wall ansatz.
+
+For a future inner-wall event, the past characteristic entering the host
+has constant $p$. Its initial foot obeys
+$p_0(R_{\rm foot})=p_W(\tau)$ on the original left taper. For an
+outer-wall event the host-side past characteristic has constant $q$,
+with $q_0(R_{\rm foot})=q_W(\tau)$ on the expanding sheet.
+Both initial foot radii decrease along the selected future wall segments,
+although their original proper-distance labels move in opposite directions.
+Their arrival-map derivatives are
+
+$$
+\frac{d\tau_{\rm inner}}{dl_{\rm foot}}
+=\frac{\beta_h-\dot R}{R'-V},\qquad
+\frac{d\tau_{\rm outer}}{dl_{\rm foot}}
+=-\frac{\beta_h+\dot R}{R'+V}.
+$$
+
+The numerator is evaluated at arrival and the denominator on the original
+slice. These derivatives connect a spatial source label to wall proper
+time; they are not a comparison of universe ages or an independent
+emitter-clock redshift.
+
+The inherited future orientation in the Lake chart has $du\leq0$ and
+$dw\geq0$, since $F\geq0$. The inner segment has $u,w<0$ and the outer
+segment has $u,w>0$. A future path from the inner to outer segment would
+need $u$ to increase; a path in the reverse direction would need $w$ to
+decrease. Thus neither segment can signal the other through this
+constructed host patch. This statement concerns the retained domain and
+chosen continuation; additional global identifications are not assumed.
+Shared ancestry or initial correlations are separate from these causal edges.
+
+The quadrant argument holds throughout the interval, rather than only at
+sampled events. In ell units the fixed wall laws give
+
+$$
+\dot R_{\rm inner}^2
+=2R^2-1+\frac{0.01}{R}+\frac{0.000025}{R^4}<2R^2,
+$$
+$$
+\dot R_{\rm outer}^2
+=\frac{25R^2}{16}-1+\frac{0.3125}{R}
++\frac{0.038025}{R^4}<\frac{25R^2}{16}
+$$
+
+for $R\geq0.8$ and $R\geq1.5$, respectively. The first radius stays
+below $0.8e^{\sqrt2(0.04)}<r_c$ and the second below
+$1.5e^{(5/4)(0.04)}$. The clock denominators retain their signs,
+both radii stay above $r_b$, and the Lake quadrant signs persist.
+These inequalities protect the finite domain independently of the
+trajectory integrator's sample spacing.
+
+The finite continuation provides the domain and clocks for a physical field
+transfer. It does not transport the averaging slice: obtaining moment rates
+still requires a declared evolving foliation and the treatment of moving
+shell crossings. Differentiating the fixed radial tapers after moving their
+endpoints would select a different family of slices, not supply that evolution.
+The collective parent and the origin of the regional vacuum values remain
+open connections.
+
+### Finite shared-history result
+
+The [compact record](../results/summaries/nsc-atlas-two-wall-history-v1.json)
+and [calculator](../scripts/check_nsc_atlas_two_wall_history.py) retain
+the original input identities, source hashes and independent comparisons.
+At each wall's proper endpoint $\tau_i/\ell=0.04$:
+
+| Quantity | Inner wall | Outer wall |
+| --- | ---: | ---: |
+| Wall areal radius $R/\ell$ | 0.8229211921074792 | 1.567950150020483 |
+| Initial host-foot radius $R_{\rm foot}/\ell$ | 0.7800767070804213 | 1.4660569643574437 |
+| Initial source-label interval $l/\ell$ | [0.8, 0.8293623698204581] | [3.3386896157544492, 3.3726326513970055] |
+| Endpoint arrival derivative $d\tau/dl_{\rm foot}$ | 1.3910066896226447 | -1.2145665667945973 |
+
+The two source collars have finite, disjoint locations on the same initial
+host. Their opposite arrival-derivative signs reflect the original outward
+proper-distance orientation, not a reversed physical clock. Each derivative
+is evaluated at an event; three stored cuts do not establish its extrema.
+
+![Shared host worldtubes and their initial characteristic origins](figures/nsc-atlas-two-wall-history.png)
+
+The two panels use different regular host null coordinates. Horizontal green
+lines are incoming characteristics from the original slice, with their
+future direction marked. The walls share the bridge-anchored host geometry;
+the panels do not imply a signal between them. The
+[figure receipt](figures/nsc-atlas-two-wall-history.json) authenticates the
+regenerated display, with 17 wall events per side and no new field solution.
+
+All 28 new and existing spacetime controls pass. The full application uses
+9,587 charged quadrature, geometry and RHS queries and 0.03125 process-CPU
+seconds. The largest separate 32/64 comparison is about $1.31\times10^{-12}$
+in an arrival derivative; independent second-order wall clocks differ by
+at most $3.34\times10^{-16}\ell$, and independent null propagation by
+$3.50\times10^{-15}\ell$. The largest wall-normalization residual is
+$1.14\times10^{-13}$. These are numerical consistency indicators, not
+observational uncertainties or rigorous rounding enclosures. The analytic
+growth and orientation bounds above establish the finite domain.

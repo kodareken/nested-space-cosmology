@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 19 October 2026
+Working research manuscript, 20 October 2026
 
 ## Abstract
 
@@ -28,7 +28,9 @@ conserved order. One- and two-level sourced slices have nonzero geometric
 traces but fail vacuum form. The second level keeps the same membrane law
 and gives an inner-wall test-flash relation, $1+z=3.74639338$. Its exact
 vacuum end supports a conditional parent initial-data family with unequal
-children and a retained grandchild.
+children and a retained grandchild. A finite shared host history now locates
+both wall segments and their incoming source collars on that original slice;
+neither segment can signal the other within the constructed host patch.
 
 A massless Dirac probe on that quiet geometry now has local bulk and
 Euler-interface trace terms, a finite wall radar chart, and action-derived
@@ -56,7 +58,7 @@ light curves and their published covariance. A brightness-scale-independent
 contrast differs from its zero prediction by $-0.1046\pm0.0144$ magnitudes.
 This retrospective test challenges that quiet limit without fitting
 $\Lambda$CDM parameters. Together these calculations provide finite
-connections and explicit failed limits. A shared evolving parent, physical
+connections and explicit failed limits. A collective evolving parent, physical
 inheritance, source selection and a cosmological vacuum contribution remain
 to be derived and tested.
 
@@ -1204,7 +1206,7 @@ response; no boundary energy normalization is selected.
 
 On $R\ge R_0$, impose a compatible causal curvature history at $R_0$ and
 no incoming perturbation at infinity. For a Laplace parameter $s$ with real
-part greater than $\gamma=\sqrt{\max(0,-m^2)}$, the decaying branch
+part greater than $\gamma=\sqrt{\mathrm{max}(0,-m^2)}$, the decaying branch
 $q=\sqrt{s^2+m^2}$, with positive real part, yields
 
 $$
@@ -1231,7 +1233,7 @@ process-CPU seconds:
 | $K/L_{\mathrm{ref}}^2$ | $-5.754230595887687\times10^{-6}$ |
 
 For $m^2=-\gamma^2$, a compact sine beyond
-$\max(R_0,4/\gamma)$ with width $4\pi/\gamma$ has spatial quadratic-form
+$\mathrm{max}(R_0,4/\gamma)$ with width $4\pi/\gamma$ has spatial quadratic-form
 quotient at most $-9\gamma^2/16$. Every finite inner radius therefore leaves
 growing modes in this infinite flat exterior. The retarded map exists in
 the stated half-plane, while a stable stationary reduction about this
@@ -1449,7 +1451,7 @@ At the material wall, integrate a smooth normal curvature jet before
 taking a thin limit. The declared class smooths the kinked conformal factor
 while the conformal product curvature remains bounded. With one normal
 pointing from cap to exterior, put $t=K^\tau{}_\tau$, $b=K^\Omega{}_\Omega$,
-$A=\ddot{R}/R$ and $B=(1+\dot{R}^2)/R^2$. The Chern scalar is
+$A=R_{\tau\tau}/R$ and $B=(1+R_\tau^2)/R^2$. The Chern scalar is
 $\mathcal{B}_3=-8tb^2+8Bt+16Ab$. Direct Lorentz curvature contraction gives
 the Euler surface coefficient
 
@@ -1527,8 +1529,8 @@ $\omega_{\rm rec}/\omega_{\rm wall}=1/N_{\rm rec}$.
 
 | Quiet geometry with the same radar protocol | $r_{\rm rec}/\ell$ | $N_{\rm rec}$ | $\omega_{\rm rec}/\omega_{\rm wall}$ | $W_1\ell$ |
 | --- | ---: | ---: | ---: | ---: |
-| Nested cap--wall--exterior | .5068911 | .8668323 | 1.153626 | 1.710096 |
-| Smooth cap continuation | .5364941 | .9253385 | 1.080686 | 1.724788 |
+| Nested cap--wall--exterior | .5068911 | .8668323 | 1.153626 | 1.7101 |
+| Smooth cap continuation | .5364941 | .9253385 | 1.080686 | 1.7248 |
 
 For the independently supplied $\ell=10\,{\rm km}$, this radar range is
 $314.674$ m. The smooth continuation is a geometric control with the same
@@ -2440,8 +2442,9 @@ Independent warped-curvature algebra gives $R_{\mu\nu}=3H^2g_{\mu\nu}$;
 the radial determinant is $-1$. Finite local charts do not identify
 different cosmological regions or remove the $R=0$ singularity.
 The single Killing time has $T_l=V/f$ and future normal
-$N^T=R'/f$, negative on the left static branch. A matched worldtube
-clock atlas remains to be evaluated; one static time is insufficient.
+$N^T=R'/f$, negative on the left static branch. Section 10.5 now matches
+both finite worldtube segments to this same initial slice using regular
+overlapping coordinates; a static time alone does not cover the host.
 
 The [two-level calculation](../results/summaries/nsc-atlas-nested-slice-v1.json)
 and [slice derivation](../docs/nsc-atlas-connection-slice.md#two-successive-sourced-boundaries)
@@ -2585,10 +2588,110 @@ analytic input bounds give the nested Lambda_cap*ell^2 in
 bound, with float64 endpoint evaluation, not an astronomical measurement,
 a total model uncertainty or a new effective cosmological constant.
 An uncalibrated beacon or unknown reflection delay restores degeneracy.
-The [full proof and domain](../docs/nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+The [full proof and domain](../docs/nsc-atlas-radar-clock.md)
 and [compact calculation](../results/summaries/nsc-atlas-radar-inverse-v1.json)
-bind the source bytes and independent controls. The missing parent
-history and physical origin of the cap scale remain separate work.
+bind the source bytes and independent controls. The next section supplies
+a finite two-wall host history. A collective parent and the physical
+origin of the cap scale remain separate work.
+
+### 10.5. Both walls in one host history
+
+<!-- nsc-claim:atlas-two-wall-history -->
+
+Continue the two walls of Section 10.2 through $0\leq\tau_i/\ell\leq.04$,
+retaining all three regional metrics, the common tension and the original
+slicing functions. Each $\tau_i=0$ is its own intersection with that
+initial slice. Equal elapsed wall proper times do not define simultaneous
+events. The scalar stays zero; this continuation supplies the geometry
+on which a subsequent field can propagate.
+
+Fix the host bridge at $T=0$ and its tortoise coordinate by
+$r_*(.5\ell)=0$. The original oriented slice then determines
+$T_l=V/f$ and both wall origins. With $p=T+r_*$ and $q=T-r_*$,
+
+$$
+p_l=\frac{1}{R'-V},\qquad q_l=-\frac{1}{R'+V}.
+$$
+
+The second expression stays regular through the right cosmological
+horizon. At the host black-hole root $r_b$, the Lake chart of Section 10.2
+uses $q=-\log(|u|/\ell)/\kappa_b$ and
+$R=r_b+\kappa_buw$, where $\kappa_b=f'(r_b)/2$.
+Signed bridge coordinate $R=r_b+y^2$ gives leading terms $u=a y$ and
+$w=y/(\kappa_ba)$ smoothly through the neck. Their signs identify the two
+branches; independently resetting a wall's host clock would lose the
+shared embedding.
+
+Let $\beta_h=\beta_+$ at the inner wall and $\beta_h=\beta_-$ at the
+outer wall. The signed junction motion and proper normalization give
+
+$$
+p_\tau=\frac{1}{\beta_h-\dot R},\qquad
+q_\tau=\frac{1}{\beta_h+\dot R}.
+$$
+
+The incoming host characteristic has constant $p$ at the inner wall and
+constant $q$ at the outer wall. Its intersection with the original slice
+defines a source label $l_{\rm foot}$. The arrival maps obey
+
+$$
+\frac{d\tau_{\rm inner}}{dl_{\rm foot}}
+=\frac{\beta_h-\dot R}{R'-V},\qquad
+\frac{d\tau_{\rm outer}}{dl_{\rm foot}}
+=-\frac{\beta_h+\dot R}{R'+V}.
+$$
+
+The numerator is evaluated at the receiving wall event and the denominator
+at the initial foot. These maps convert the original spatial source
+labels into arrival proper times. They do not assign emitter-clock
+redshifts or ages to whole regions.
+
+At the two distinct endpoint events $\tau_i=.04\ell$, the calculation gives:
+
+| Quantity in $\ell$ units | Inner wall | Outer wall |
+| --- | ---: | ---: |
+| Wall areal radius | .822921192107 | 1.567950150020 |
+| Initial incoming-foot areal radius | .780076707080 | 1.466056964357 |
+| Original source-label interval | [.8, .829362369820] | [3.338689615754, 3.372632651397] |
+
+At $\tau_i/\ell=(0,.02,.04)$ the arrival derivatives are
+$(1.334617,1.362318,1.391007)$ for the inner wall and
+$(-1.143723,-1.178627,-1.214567)$ for the outer wall.
+These are three evaluated cuts, not extrema of the derivative.
+The largest recorded 32/64 quadrature change is $1.31\times10^{-12}$,
+in the arrival derivative. Independent second-order wall evolution agrees
+in $T/\ell$ within $3.34\times10^{-16}$; separate null integration
+agrees within $3.50\times10^{-15}$. The wall metric-normalization residual
+is below $1.14\times10^{-13}$. These are numerical comparison indicators,
+without a physical input-uncertainty estimate.
+
+The future orientation has $du\leq0,dw\geq0$ for $F\geq0$.
+Throughout these segments the inner wall has $u,w<0$ and the outer wall
+has $u,w>0$; the wall-growth bounds preserve these signs over the full
+proper-time intervals. Inner-to-outer propagation would require increasing $u$;
+outer-to-inner propagation would require decreasing $w$. Neither causal
+edge exists through this constructed host patch. This is a domain-specific
+result, without an assertion about additional global extensions.
+
+![Incoming host characteristics from the original slice to both material walls](../docs/figures/nsc-atlas-two-wall-history.png)
+
+*Figure 7. Two host null-coordinate panels of the common embedding.
+Horizontal constant-$p$ and constant-$q$ rays connect the original slice
+(grey) to the inner and outer worldtubes (blue), respectively. Displayed
+coordinate offsets position each panel; both host origins remain fixed
+by one initial slice. The marked endpoints use separate wall proper
+clocks and do not define a common time slice. The
+[figure record](../docs/figures/nsc-atlas-two-wall-history.json)
+binds these views to the finite calculation.*
+
+The [shared-history derivation](../docs/nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+and [compact calculation](../results/summaries/nsc-atlas-two-wall-history-v1.json)
+retain the common chart convention, signed normalization and finite
+comparison indicators. The history locates the next field-transfer
+problem. Evolving the geometric average also requires a physical foliation
+and moving-wall crossings; differentiating newly adjusted radial tapers
+does not provide it. No field state, formation mechanism or cosmological
+$\Lambda$ drift is inferred.
 
 ## IV. What the observers can reach
 
@@ -2639,7 +2742,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 7. The isolated reference in joined causal charts. Horizons are
+*Figure 8. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -3645,7 +3748,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 8. Saved finite-window comparisons. A: the previous and current
+*Figure 9. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -3741,7 +3844,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 9. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 10. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -4526,7 +4629,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 10. Research dependencies, distinct from spacetime causal arrows.
+*Figure 11. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

@@ -16,30 +16,34 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 19 October 2026
+## Current execution priority — 20 October 2026
 
-**Next connection, radar and wall clocks.** The broad follow-up compared a
-common-parent evolution, continuum inherited propagation, another quiet
-vacuum reduction, and a physical observer inverse. The first needs an
-unspecified parent state; an abstract response inverse still lacks its
-spacetime identification. Develop the fourth route on the existing quiet
-cap/wall geometries: central send/receive times, a calibrated wall clock
-and redshift drift recover the radial metric on the observed wall, even
-for time-dependent geometry, then test the declared cap/junction law.
-This introduces a test transponder and four readout quantities, not a new
-bulk state, coupling or reflective field boundary. The transponder's
-calibration is explicit; an arbitrary unknown source is not inverted.
+**Shared host history.** The
+[two-wall continuation](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+now follows both walls of the existing quiet nested slice in one host atlas,
+through `.04 ell` of each wall's proper time. The original slice fixes their
+relative chart origins. Host-side incoming characteristics locate the
+source collars and arrival derivatives; the two retained segments have
+no causal path to one another within the constructed host patch.
+Equal elapsed proper times are not a simultaneity condition.
 
-Complete: the preceding composition/time balance, the physical radar/clock
-inverse, its two finite receiver-time predictions and the common inferred
-membrane law. The [observer owner](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
-states the host/metric ambiguities and conditional input bounds. The
-changed-material counterexample passes the first readout and fails the
-later prediction. The checked result and compact evidence are integrated
-in manuscript revision `2026-10-19.3`, Section 10.4. Its 73-page PDF builds
-and the new pages pass visual inspection. Next physical connection: the parent history or
-a physical inherited response operator. No P001 grid or additional
-quiet-limit precision campaign follows from this task.
+This completes the missing finite geometric connection before field
+transfer. Its next physical inputs are a declared field preparation on
+the located domain and, for averaging, a transported spacelike foliation
+with moving-wall crossings. Moving the endpoints of the old radial tapers
+does not derive that foliation. The construction supplies no new vacuum
+value, field state, formation mechanism or cosmological Lambda drift.
+Manuscript revision `2026-10-20.1`, Section 10.5, carries the connection.
+
+**Completed observer inverse.** The
+[radar and wall-clock calculation](nsc-atlas-radar-clock.md)
+recovers the supplied quiet cap and junction combinations, then predicts
+a later frequency. Both existing states recover the common membrane law.
+The changed-material counterexample passes the first readout and fails
+the later prediction; host/metric ambiguities and conditional input
+bounds remain explicit. This was integrated in revision `2026-10-19.3`,
+Section 10.4. No P001 grid or further quiet-limit precision campaign
+follows from these completed connections.
 
 **Rethinking decision.** The repeated quiet-limit checks fixed much of
 their answer in advance. Direct global gluing, curved quantum feedback,
@@ -146,9 +150,12 @@ The [checked two-level state](nsc-atlas-connection-slice.md#two-successive-sourc
 adds an actual grandchild input under the same membrane law. Its exact vacuum
 end can replace A in that family. A central inward test flash now has a
 specified arrival time and redshift, while the enlarged normal-volume
-projection fails vacuum form. Reuse these finite results; the next connection
-is the physical parent and observer reduction rather than more precision
-on this quiet initial state.
+projection fails vacuum form. The
+[shared host continuation](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+now locates both moving walls and their initial characteristic source
+collars. Reuse these finite results for physical transfer and observer
+reduction; further precision on the quiet initial slice is not the next
+connection.
 
 ## Working geometric hypothesis: inheritance through resolution
 

@@ -8,6 +8,19 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Shared two-wall host history, 20 October 2026
+
+[Lake, gr-qc/0507031v2](https://arxiv.org/html/gr-qc/0507031v2):
+Sections II--III, equations (5)--(10) and (14) read directly. The metric
+and radial null equation supply the regular host coordinates; their
+curvature identities provide independent controls. The
+[shared-history derivation](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+fixes the signed branches and relative wall origins from the existing
+initial slice, then calculates its characteristic feet and arrival maps.
+Those wall/source connections are the present calculation. Lake's global
+extensions are not imported as identifications of the retained host;
+the construction supplies neither a new field state nor a formation law.
+
 ### Quiet-cap inherited state and detector, 19 October 2026
 
 - [Louko and Toussaint,1608.01002v2](https://arxiv.org/pdf/1608.01002):

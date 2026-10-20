@@ -1,10 +1,10 @@
 {
-  "bytes": 4726790,
+  "bytes": 4886933,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "2d0d4465ff40d1ddf224cd020b53444000ba6f25a718320e014e2c65a89af5ab",
+  "metadata_sha256": "66fc874a4a9c565838f38a2362af18989d8e666fa8a499c1c739801d28243a33",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 73,
-  "pdf_sha256": "cd8ff3de0192a45b8500c4d24d6fe6bfbc6a7e2b5090c4da43fd6e83f79a0c04",
+  "pages": 74,
+  "pdf_sha256": "2655d7015cd0838d39bcd82d4ac37f70a1beb28aec88568ac926132e01cae3bc",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -26,6 +26,14 @@
     {
       "path": "docs/figures/nsc-atlas-ssprk3-refinement.png",
       "sha256": "f0b1809bdc800e28cdb7d8a6871687b16ec43300b82eb102aceffdc3e2d5d64a"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-two-wall-history.json",
+      "sha256": "c6a9638f6a8d0971c90d9feab9fc986c844ba494975224eb89841910b8f35448"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-two-wall-history.png",
+      "sha256": "8b6649344367a8eb025f5ca2fe3d7b24f60a8e57dd32a5c2a21c931c77a97d92"
     },
     {
       "path": "docs/figures/nsc-conformal-lightcone.png",
@@ -500,6 +508,10 @@
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
+      "path": "results/summaries/nsc-atlas-two-wall-history-v1.json",
+      "sha256": "4f2955e336d6cbe602e14e8bffa964091f460dd2a0b15f9a7a14bd88bbdb4c51"
+    },
+    {
       "path": "results/summaries/nsc-atlas-unequal-children-v1.json",
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
@@ -549,10 +561,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "cc41f44f6f8d743b8585b67d4e6abc650a93210c73e3c1498f3304cebed55ab8"
+      "sha256": "b40f91deed632c3bae0af28121f12d2577d4ea8a01f7d85d4d6a2f7683b558db"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "cf86491f9b370d3286ae9d651c110afe852eba4e71f0a76e5a8f352ffc2214d2",
-  "version": "working-2026-10-19.3"
+  "source_sha256": "689f8348b8c24712b7ae5264f5faa29ff083442e947f724ff954c03a9f59f490",
+  "version": "working-2026-10-20.1"
 }

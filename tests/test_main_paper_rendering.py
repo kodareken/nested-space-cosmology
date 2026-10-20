@@ -167,3 +167,24 @@ def test_wrong_rendering_dependency_fails_before_writing_pdf(
         paper.build_pdf(tmp_path / "source.md", output, {})
     assert not output.exists()
 
+
+def test_compression_reuses_full_manuscript_stream_set_across_layout_passes(monkeypatch):
+    from reportlab.pdfbase import pdfdoc
+    import zopfli.zlib
+
+    actual = zopfli.zlib.compress
+    calls = []
+
+    def counted(data, **options):
+        calls.append(data)
+        return actual(data, **options)
+
+    monkeypatch.setattr(zopfli.zlib, "compress", counted)
+    streams = [f"distinct mathematical image stream {i}".encode() for i in range(320)]
+    with paper.deterministic_pdf_compression():
+        first = [pdfdoc.zlib.compress(data) for data in streams]
+        second = [pdfdoc.zlib.compress(data) for data in streams]
+        assert first == second
+        assert len(calls) == len(streams)
+        assert all(zlib.decompress(value) == data for data, value in zip(streams, first))
+

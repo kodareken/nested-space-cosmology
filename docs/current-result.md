@@ -1,6 +1,41 @@
 # What the calculations show
 
-The [physical radar/clock inverse](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+The [shared two-wall history](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+now continues both material walls of the quiet nested slice in their
+common host. The original slice fixes their relative clock origins through
+the regular bridge and cosmological-horizon overlap. Each wall advances
+through `0<=tau_i/ell<=.04`; equal elapsed wall times do not define
+simultaneous terminal events.
+Host-side incoming rays locate two source collars on the original
+proper-distance coordinate and supply their arrival derivatives.
+
+The endpoint areal radii are `.822921192107*ell` and
+`1.567950150020*ell`. Their initial incoming feet are at
+`.780076707080*ell` and `1.466056964357*ell`, with source proper-label
+intervals `[.8,.829362369820]*ell` and
+`[3.338689615754,3.372632651397]*ell`. At the initial, midpoint and
+terminal proper-time cuts, `d_tau/d_lfoot` is
+`(1.334617,1.362318,1.391007)` for the inner wall and
+`(-1.143723,-1.178627,-1.214567)` for the outer wall. These three values
+are samples, not proved derivative extrema. The largest 32/64 comparison
+change is `1.31e-12`; independent second-order wall-clock and radial-null
+comparisons are below `3.34e-16` and `3.50e-15` in ell units.
+They measure numerical agreement, not physical input uncertainty.
+
+The inner segment stays at negative Lake coordinates `(u,w)`, the outer
+at positive coordinates. Future causal curves have decreasing `u` and
+increasing `w`; neither segment can signal the other through this
+constructed host patch. The
+[compact evidence](../results/summaries/nsc-atlas-two-wall-history-v1.json)
+retains the signed normalization, both wall junctions and independent
+chart, motion and characteristic comparisons. This gives a physically
+located domain for later field transfer. Its finite calculation uses
+9,587 charged scalar queries and `.03125` process-CPU seconds.
+An evolving averaging foliation
+and its moving-wall crossings remain to be specified; no field state,
+formation history or cosmological Lambda drift is calculated.
+
+The [physical radar/clock inverse](nsc-atlas-radar-clock.md)
 connects actual cap geometry, its signed membrane law and central
 observations. Echo stretch K and calibrated wall redshift Z give the
 radial radar metric C=K/Z^2, including time-dependent geometries. This

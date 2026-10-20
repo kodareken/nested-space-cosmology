@@ -1,6 +1,15 @@
 # Current NSC claim ledger
 
-The [physical radar/clock theorem](nsc-atlas-observer-inference.md#a-physical-radar-and-wall-clock-inverse)
+The [two-wall continuation](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
+now supplies one finite shared host history for the existing quiet nested
+slice. The original bridge and slicing data fix both wall embeddings;
+incoming characteristic feet and arrival derivatives locate two source
+collars. Neither wall segment can signal the other within this constructed
+host patch. Equal elapsed proper times do not select simultaneous events.
+This is a geometric propagation domain, without a selected field state,
+transported averaging slice, formation law or cosmological Lambda drift.
+
+The [physical radar/clock theorem](nsc-atlas-radar-clock.md)
 now reconstructs a declared quiet cap and its membrane combinations from
 calibrated clocks, then predicts a later received frequency. Both existing
 states recover the common tension. The finite prediction distinguishes a
@@ -56,6 +65,7 @@ they are not instructions to restart their campaigns.
 
 | Piece | Status | Where it lives |
 |---|---|---|
+| Shared quiet two-wall history | Both original wall intersections are embedded in one host atlas and continued through tau_i/ell in [0,.04]. Two original-slice incoming source collars and their arrival derivatives are calculated. No inter-wall causal path lies within the constructed patch. The field state and physical averaging foliation remain separate inputs. | [Derivation](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins), [compact evidence](../results/summaries/nsc-atlas-two-wall-history-v1.json) |
 | Inherited local late Dirac state | Conditional theorem on the actual quiet M=0 cap after the wall passes H^-1. Hadamard inherited Cauchy data approach one local four-spinor limit; stress memory is a^-4[Q0+O(a^-1)]. The limiting scalar-density detector ratio and full one-loop vacuum-form source are calculated. At fixed H the same smooth cap has the same source, so the late nesting-specific offset is zero. No finite-time parent covariance, b>0 slip, generated classical cap scale or global semiclassical wall solution follows. | [Proof, assumptions and controls](nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026) |
 | Exterior-first atlas | Reproducible finite candidate graph and imported compatibility controls. V4 supplies one sourced initial attachment; v5 locates observers in its isolated causal reference; v6 adds a conditional classical field response. Regular formation, global exterior state, the glued parent's future, inheritance and multi-region Hamiltonian remain unresolved. Software validation is not a discovery claim. | [Current owner](nsc-atlas-field-transfer.md), [original map](nsc-cosmological-atlas.md) |
 | Shared-parent atlas v2, preserved | Imported Brill-Lindquist spatial initial data for two unequal holes. A separate comoving closed-radiation/Schwarzschild/constant-wall pairing is incompatible on a varying-radius interval. Motion was not checked in v2; the scoped v3 extension is below. Neither supplies a child attachment to BL. | [Owner and evidence](nsc-cosmological-atlas.md), [source screen](nsc-cosmological-atlas.md) |
