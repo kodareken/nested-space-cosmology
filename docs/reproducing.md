@@ -1,5 +1,22 @@
 # Reproducing the root project
 
+The [surrounding-geometry atlas](nsc-atlas-parent-observables.md) uses
+closed equations and small independent checks:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_observables.py
+python scripts/run_python.py scripts/plot_nsc_atlas_parent_observables.py
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_parent_observables.py -q
+```
+
+The summary retains scalar outputs and hashes, not field grids.
+Its 23 tests include the full Darmois join, a null ODE and clock derivative,
+direct Gauss projection, the exact bulk warp, shadow lensing, source
+conservation and the original wall's algebraic stability obstruction.
+The fixed 32/64 check measures numerical sensitivity only. The analytic
+run has a 200,000 parent-state/120 CPU-second allowance and completes
+well below it.
+
 The [compact shared parent](nsc-atlas-compact-parent.md) compares two fixed
 S3 completions, their evolving volume fractions and their causal restriction:
 

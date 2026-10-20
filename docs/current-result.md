@@ -1,5 +1,27 @@
 # What the calculations show
 
+The [cosmological attachment and surrounding-gravity atlas](nsc-atlas-parent-observables.md)
+now gives the existing M=.4 ell exterior an exact expanding flat dust
+parent at R_b(0)=4 ell. The join adds no material shell and replaces
+exactly M of cosmological dust. H_0 ell=.111803398875 follows from those
+supplied data. A parent-side clock experiment gives
+tau_r/ell=3.921887982097 and 1+z=1.778824923298, checked independently.
+The parent has q=1/2 and zero new cosmological Lambda.
+
+The same entry explicitly separates imported bulk-gravity examples:
+an AdS5/dS4 embedding gives Lambda_4 L_5^2=3(s^2-1), hence .63 for
+supplied s=1.1; the flat two-brane shadow source gives lensing .75 of
+GR at equal dynamical mass. These backgrounds are not combined or
+identified with the current four-dimensional shell.
+
+The proposed stable-wall closure is decided exactly. For the owned
+constant-tension potential, V''=-12A/R^6-6C<0 at every stationary point.
+The retained kM=.8 is above the static-family ceiling 16/27.
+An inherited shell equation of state or another physical reduction,
+rather than a further grid, is needed to select the curvature.
+The [compact record](../results/summaries/nsc-atlas-parent-observables-v1.json)
+and 23 new scientific checks accompany the illustrated comparison.
+
 The [compact parent](nsc-atlas-compact-parent.md) now contains two sourced
 interiors on a complete S3 slice, with a common explicit Schwarzschild
 connector and no artificial outer cut. The positive-tension walls and

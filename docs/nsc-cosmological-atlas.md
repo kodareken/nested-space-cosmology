@@ -18,6 +18,35 @@ starting a derivation.
 
 ## Current execution priority — 20 October 2026
 
+**Completed cosmological attachment and comparison.** The
+[surrounding-geometry owner](nsc-atlas-parent-observables.md) replaces
+the original AE end with an exact flat dust parent. Both Darmois forms,
+the mass-compensation identity and a spacelike clock splice are checked.
+The exterior emitter-to-join experiment gives 1+z=1.778824923298.
+The parent decelerates and generates no Lambda. Separate five-dimensional
+examples exhibit induced curvature and a lensing discriminator with their
+own supplied bulk/tension data. Their equations are now part of the map.
+
+**Rethinking decision and next connection.** The compact mean did not
+identify local gravity; repeating that calculation cannot supply the missing
+source. Direct cosmological matching, averaging and bulk projection were
+compared. Matching gives the compatible outward continuation of the
+existing model; projection supplies a separate concrete comparison.
+The user's equilibrium suggestion is decided algebraically: every
+stationary point of the current constant-tension potential has V''<0,
+and the retained kM=.8 exceeds the entire static family's 16/27 ceiling.
+Scale-compatible inheritance preserves kM and H/k but does not select
+them. Next derive the inherited material/state response or the physical
+reduction that fixes those invariants, using published gravastar and
+junction results where applicable. No additional quiet-region precision
+campaign follows from this completed calculation.
+
+**Book direction.** Present a mathematical atlas of compatible constructions,
+including other authors' useful results, original connecting calculations,
+causal maps and observer tests. Each model retains its own action and
+state. The final dark-sector and matter-asymmetry explanation remains
+a quantitative destination, not an assertion attached to the illustrations.
+
 **Completed outward proof: a compact shared parent.** The
 [compact completion](nsc-atlas-compact-parent.md) joins two sourced interiors
 through the same Schwarzschild bridge, preserving future orientation and
@@ -29,7 +58,7 @@ nested right interior. Their total trace projections differ by
 The compact geometry therefore removes dilution but does not identify
 the global trace with an observer's local cosmological Lambda.
 
-**Next physical proof.** The quiet host throat's normal lifetime is
+**Remaining compact-parent continuation problem.** The quiet host throat's normal lifetime is
 .0314434597796 ell. The same Einstein equations give the necessary
 regular-bounce conditions `kappa*p_r<-1/R^2` and `rho+p_r<0` at a
 temporal turn that is also a strict spatial minimum. Constructing such

@@ -1,5 +1,50 @@
 # Prior art and admission of new research
 
+## Cosmological attachment and surrounding-gravity atlas, 20 October 2026
+
+The user asks for an illustrated mathematical atlas that connects the
+project with useful published constructions. The immediate missing link
+is an expanding parent and its observer response. Compare exact four-
+dimensional cosmological matching, scalar averaging and five-dimensional
+gravitational projection. Select Einstein--Straus matching for the
+existing Schwarzschild end; keep the bulk/brane response as a separately
+declared comparison with its own dimension, action and boundary law.
+
+Reuse the original nested body's M=.4 ell exterior, quiet local history,
+and the Darmois/Israel, Friedmann, Gauss and null-geodesic equations.
+At the new comoving join choose R_b(0)=4 ell, flat dust and exterior
+Lambda=0. This boundary radius is an initial datum, not a predicted
+cosmological scale. Derive mass compensation, both fundamental forms,
+an admissible slice connecting the retained collar to cosmic time, and
+an exterior clock experiment. This replaces the AE completion; it
+does not evolve the completed compact S3 state into a different topology.
+
+For the separate five-dimensional example check the full Gauss/Israel
+source decomposition, an explicit AdS-to-de-Sitter warp, and the
+Garriga--Tanaka weak shadow-matter lensing ratio. Supplied tension and
+bulk scale remain inputs. Derive the population mass/pressure accounting
+without equating energy exchange with vacuum stress.
+
+This finite calculation permits 200,000 scalar evaluations and 120 CPU
+seconds, with fixed 32/64 quadrature where needed, no field grids and
+compact scalar/hash output. Independent controls are direct induced
+metric and extrinsic-curvature contractions, geodesic ODE versus null
+quadrature, Gauss contraction versus the effective tensor, and
+pressure/conservation limits. Stop or redirect on incompatible
+orientation, missing bulk/state data or a failed conservation identity.
+The likely failure modes are a join on the wrong exterior branch,
+confusing an imported action with the retained shell theory, and
+counting supplied curvature or transferred energy as newly derived
+vacuum. Each has an explicit equation-level check.
+
+The user's subsequent wall-balance suggestion adds one algebraic check
+within this allowance: evaluate the already owned constant-tension
+potential, its static stability and its dimensionless inheritance
+parameters. Reuse published bubble/gravastar dynamics. A different shell
+equation of state is a different candidate; no parameter scan or new
+bounce campaign follows. The exact potential-curvature identity decides
+whether this particular equilibrium can select the cap scale.
+
 ## Compact parent and its observer restriction, 20 October 2026
 
 Replace the isolated AE end by a second sourced cap through the same

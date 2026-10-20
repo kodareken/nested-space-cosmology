@@ -3,6 +3,16 @@
 Start with regions, boundaries and fields; assemble possible nested geometries;
 specify inheritance and transmission; calculate what an interior observer measures.
 
+The [surrounding-geometry atlas](docs/nsc-atlas-parent-observables.md) now
+attaches the retained exterior to an expanding dust parent, checks its
+mass compensation and predicts a received clock frequency. Its illustrated
+comparison credits Einstein--Straus, the brane-gravity projection and
+Garriga--Tanaka's shadow-matter lensing result. An exact check of the
+current wall shows that constant tension cannot supply the proposed stable
+equilibrium selecting Lambda. An inherited material/state law remains the
+next selection problem. These connections develop the paper as an
+explorable mathematical atlas, with each construction's assumptions visible.
+
 The [compact parent construction](docs/nsc-atlas-compact-parent.md) now joins
 two sourced interiors, including nested descendants, in one closed S3
 geometry. Its volume fractions and effective source evolve from the actual

@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [cosmological attachment and observer owner](nsc-atlas-parent-observables.md)
+uses `nsc_atlas_parent_observables.py`: `DustParent` evaluates the exact
+join and null clock; `projected_brane_source` and `de_sitter_bulk_slice`
+check the separate bulk geometry; `shadow_lensing` evaluates the imported
+two-brane discriminator; `population_balance` exposes energy exchange;
+`tension_potential` and `critical_tension_wall` decide the original
+equilibrium suggestion. The matching check/plot scripts and test module
+retain compact evidence and an original four-panel plate.
+
 The [compact-parent owner](nsc-atlas-compact-parent.md) uses
 `nsc_atlas_compact_parent.py`: `CompactParent` composes the two finite
 centre-to-throat developments, `reflected_initial_wall` tests their signed

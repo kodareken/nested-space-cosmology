@@ -8,6 +8,67 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Surrounding geometry and wall balance, 20 October 2026
+
+The [connected atlas entry](nsc-atlas-parent-observables.md) uses these
+published constructions as attributed building blocks, with separate
+actions and state assumptions.
+
+- [Mars--Mena--Vera, 1307.4371v1](https://arxiv.org/html/1307.4371):
+  Section 2, both fundamental forms and mass compensation, inspected
+  directly. Reuse Einstein--Straus matching on the existing right
+  Schwarzschild collar; calculate its clock splice and light experiment.
+  No nonspherical stability theorem is imported. The Kottler display
+  in the HTML has a squared lapse inconsistent with the surrounding
+  equations; the calculation uses the independently checked standard
+  f and f^-1 metric, not that transcription.
+- [Shiromizu--Maeda--Sasaki, gr-qc/9910076v3](https://arxiv.org/html/gr-qc/9910076v3):
+  equations 1--22 inspected; Gauss, Israel, quadratic source, Weyl trace
+  and conservation supply the projection. Use geometric Lambda_5,
+  equal to kappa_5^2 times the paper's bulk energy-density convention.
+- [Maartens--Koyama, 1004.3962](https://arxiv.org/html/1004.3962):
+  the bulk/brane normalization and Section 3 effective-source and
+  conservation equations cross-checked in the independent Grok review.
+  The explicit warp here is verified by both sectional curvatures.
+- [Garriga--Tanaka, hep-th/9911055v3](https://arxiv.org/html/hep-th/9911055v3):
+  equations 1--28 and the final shadow-matter discussion inspected.
+  Reuse the zero-mode projector and recover the 3/4 deflection ratio.
+  The massless radion, two flat branes and weak static sources are
+  essential. This is not the de Sitter-bulk example or the NSC throat.
+- [Ansoldi--Guendelman--Shilon, 0711.2198v1](https://arxiv.org/html/0711.2198v1):
+  Sections 2--3 supply the already attributed vacuum-bubble dynamics
+  and its Blau--Guendelman--Guth antecedent. The new use checks the
+  proposed stable-wall closure against the existing signed equation;
+  no novelty is claimed for the bubble potential or its instability.
+- [Mazur--Mottola, gr-qc/0109035v6](https://arxiv.org/html/gr-qc/0109035):
+  original-model description, static regions and Section IV inspected.
+  The finite stiff transition layer is not the owned pure-tension membrane.
+- [Visser--Wiltshire, gr-qc/0310107v2](https://arxiv.org/html/gr-qc/0310107):
+  Sections 2, 3.3 and 4, including equations 31--35 and 48--49,
+  inspected. Reuse the shell conservation and material-law dependence;
+  stability cannot transfer merely because both models have a de Sitter
+  core and Schwarzschild exterior.
+- [Morris--Thorne, 1988, DOI 10.1119/1.15620](https://doi.org/10.1119/1.15620):
+  bibliographic attribution and original abstract located; the publisher
+  full text was inaccessible in this pass. The classic traversable-throat
+  null-stress antecedent is acknowledged; its full construction is not
+  imported as the current dynamical bounce.
+- [Easson--Brandenberger, hep-th/0103019](https://arxiv.org/html/hep-th/0103019):
+  title, abstract and section structure inspected. A black-hole-interior
+  cosmology comparison, not an inherited wall-parameter closure.
+- [Farrah et al., 2302.07878](https://arxiv.org/abs/2302.07878) and
+  [Ghodla et al., 2306.08199v2](https://arxiv.org/abs/2306.08199):
+  abstracts inspected for the cosmological mass-growth proposal and
+  binary-merger consequences. The open-versus-closed energy accounting
+  in the atlas is derived directly; neither empirical claim is adopted
+  as evidence validating NSC.
+
+Independent Grok reviews checked matching, bulk projection and the
+constant-tension algebra. Their suggestions were checked against the
+equations before use; a global average is not inferred to fix a local
+curvature, and the unverified claim that no prior inheritance closure
+exists is not adopted.
+
 ### Shared two-wall host history, 20 October 2026
 
 [Lake, gr-qc/0507031v2](https://arxiv.org/html/gr-qc/0507031v2):

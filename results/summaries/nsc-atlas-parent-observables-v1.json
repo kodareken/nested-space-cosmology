@@ -1,0 +1,192 @@
+{
+  "schema": "nsc-atlas-parent-observables-v1",
+  "attachment": {
+    "model": "Four-dimensional flat dust Einstein-Straus exterior",
+    "retained_Schwarzschild_mass": 0.4,
+    "initial_join_radius": 4.0,
+    "reference_length": "Original ell=2/k; G=c=1",
+    "supplied": "M, join radius, flat dust and zero parent Lambda",
+    "branch": "Original increasing-R right exterior beyond the bridge",
+    "change": "Alternative completion of AE end, not topology change of S3",
+    "material_surface_at_join": false,
+    "new_vacuum_contribution": 0.0
+  },
+  "cosmic_snapshots": [
+    {
+      "tau": 0.0,
+      "scale_factor": 1.0,
+      "radius": 4.0,
+      "H": 0.11180339887498948,
+      "density": 0.0014920775914865187,
+      "radial_velocity": 0.4472135954999579,
+      "radial_acceleration": -0.025,
+      "f": 0.8,
+      "T_rate": 1.25,
+      "mass_removed": 0.39999999999999997,
+      "K_angular": 0.25,
+      "K_time": 0.0,
+      "deceleration": 0.5,
+      "parent_Lambda": 0.0,
+      "Ricci_trace_over_four": 0.009375
+    },
+    {
+      "tau": 0.01,
+      "scale_factor": 1.001117721721446,
+      "radius": 4.004470886885784,
+      "H": 0.11161621279558798,
+      "density": 0.0014870855724159247,
+      "radial_velocity": 0.4469638746443806,
+      "radial_acceleration": -0.024944207472123846,
+      "f": 0.8002232947628825,
+      "T_rate": 1.249651199289711,
+      "mass_removed": 0.3999999999999999,
+      "K_angular": 0.24972088154639696,
+      "K_time": 0.0,
+      "deceleration": 0.5,
+      "parent_Lambda": 0.0,
+      "Ricci_trace_over_four": 0.009343634219122482
+    },
+    {
+      "tau": 1.0,
+      "scale_factor": 1.1088908100215318,
+      "radius": 4.435563240086127,
+      "H": 0.09574626250802777,
+      "density": 0.0010942714168139698,
+      "radial_velocity": 0.42468860235624456,
+      "radial_acceleration": -0.020331173202684204,
+      "f": 0.8196395910286997,
+      "T_rate": 1.2200484346356875,
+      "mass_removed": 0.40000000000000013,
+      "K_angular": 0.22545051121412543,
+      "K_time": 0.0,
+      "deceleration": 0.5,
+      "parent_Lambda": 0.0,
+      "Ricci_trace_over_four": 0.006875510088192124
+    },
+    {
+      "tau": 4.0,
+      "scale_factor": 1.4080557322234042,
+      "radius": 5.632222928893617,
+      "H": 0.06691527068179906,
+      "density": 0.0005344805100649313,
+      "radial_velocity": 0.37688172182715146,
+      "radial_acceleration": -0.012609571215543168,
+      "f": 0.8579601677526016,
+      "T_rate": 1.1655552758579306,
+      "mass_removed": 0.39999999999999997,
+      "K_angular": 0.17754979030924795,
+      "K_time": 0.0,
+      "deceleration": 0.5,
+      "parent_Lambda": 0.0,
+      "Ricci_trace_over_four": 0.0033582400878138276
+    }
+  ],
+  "exterior_clock": {
+    "emitter_radius": 2.0,
+    "reception_time": 3.9218879820966994,
+    "reception_radius": 5.602745333857722,
+    "one_plus_redshift": 1.778824923297566,
+    "received_over_emitted_frequency": 0.5621688716538843,
+    "null_equation_residual": -2.353672812205332e-14
+  },
+  "independent_checks": {
+    "null_ODE_arrival_gap": -1.2509993041476264e-12,
+    "Gauss_32_64_arrival_gap": 4.440892098500626e-16,
+    "direct_Gauss_Israel_residual": 9.992007221626409e-16,
+    "bulk_tangential_curvature_residual": 1.5543122344752192e-15,
+    "bulk_normal_curvature_residual": 0.0
+  },
+  "separate_bulk_candidate": {
+    "dimension": 5,
+    "geometric_Lambda5_L5_squared": -6.0,
+    "supplied_detuning": 1.1,
+    "induced_Lambda4_L5_squared": 0.6300000000000006,
+    "H4_L5": 0.4582575694955842,
+    "warp_coordinate_horizon_over_L5": 1.5222612188617113,
+    "scope": "Exact supplied-tension AdS5/dS4 embedding. Not the original four-dimensional shell model or a scale-selection law."
+  },
+  "shadow_matter": [
+    {
+      "shadow_fraction": 0.0,
+      "gamma_visible": 0.9999697338381857,
+      "Psi_over_Phi": 0.9999697338381857,
+      "lensing_over_GR_same_dynamical_mass": 0.9999848669190928
+    },
+    {
+      "shadow_fraction": 0.5,
+      "gamma_visible": 0.9999697338381857,
+      "Psi_over_Phi": 0.7499848669190928,
+      "lensing_over_GR_same_dynamical_mass": 0.8749924334595465
+    },
+    {
+      "shadow_fraction": 1.0,
+      "gamma_visible": 0.9999697338381857,
+      "Psi_over_Phi": 0.5,
+      "lensing_over_GR_same_dynamical_mass": 0.75
+    }
+  ],
+  "shadow_domain": "Positive observer brane, massless unstabilized radion, zero mode, static weak field. Same profile; f is dynamical-potential fraction.",
+  "open_population_counterexample": [
+    {
+      "scale_factor": 1.0,
+      "black_hole_density": 0.1,
+      "reservoir_density": 0.9,
+      "total_density": 1.0,
+      "total_pressure": 0.0,
+      "transfer_Q_over_H": 0.30000000000000004,
+      "closed_effective_w_if_separately_conserved": -1.0,
+      "total_deceleration": 0.5
+    },
+    {
+      "scale_factor": 1.5,
+      "black_hole_density": 0.1,
+      "reservoir_density": 0.19629629629629627,
+      "total_density": 0.2962962962962963,
+      "total_pressure": 0.0,
+      "transfer_Q_over_H": 0.30000000000000004,
+      "closed_effective_w_if_separately_conserved": -1.0,
+      "total_deceleration": 0.5
+    },
+    {
+      "scale_factor": 2.0,
+      "black_hole_density": 0.1,
+      "reservoir_density": 0.024999999999999994,
+      "total_density": 0.125,
+      "total_pressure": 0.0,
+      "transfer_Q_over_H": 0.30000000000000004,
+      "closed_effective_w_if_separately_conserved": -1.0,
+      "total_deceleration": 0.5
+    }
+  ],
+  "original_wall_balance": {
+    "existing_mu": 0.8,
+    "maximum_static_mu": 0.5925925925925926,
+    "existing_state_has_static_solution_for_any_nonnegative_H_squared": false,
+    "critical_example": {
+      "u": 0.25,
+      "x": 1.1269960439516147,
+      "mu": 0.5124857007290078,
+      "beta_minus": 0.8261174124961612,
+      "beta_plus": -0.3008786314554535,
+      "V": 0.0,
+      "derivative": 0.0,
+      "second_derivative": -3.8819414792718074,
+      "Lambda_Lref_squared": 3.0,
+      "static_is_radially_stable": false
+    },
+    "proof": "At every stationary potential point V_RR=-12A/R^6-6C<0. The critical mass decreases from mu=16/27 as u=H^2/k^2 grows.",
+    "inherited_invariants": "kM and H/k remain free under (R,M,k,H)->(sR,sM,k/s,H/s)."
+  },
+  "uncertainty": "Fixed-rule and ODE differences are numerical indicators; no observed fit or physical error distribution is supplied.",
+  "charged_parent_state_evaluations": 882,
+  "process_cpu_seconds": 0.015625,
+  "field_grids": 0,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_parent_observables.py": "8eea650fcbac343c353fd2b0ccc68c92a8d9d0115ee417345cd23e1abeec9974",
+    "scripts/check_nsc_atlas_parent_observables.py": "52c2421c7fa30b7e26b9cb7b02af24177b26f3733aa4aa277008dde2d41da4f5",
+    "scripts/plot_nsc_atlas_parent_observables.py": "0bf8332703a137e0c02568577e23051e5772626afe472340f0d2b52feab85163",
+    "tests/test_nsc_atlas_parent_observables.py": "7afad015d1bd20bc149e6043003f21f8c90c1e8773f4a7d5a8f4b40975d893a6",
+    "src/recursive_horizons/nsc_atlas_nested_slice.py": "fcd9f7b70046c215bd06cd2a78fd94aa40b0adb78290e889729a9b4cfb05df45"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_parent_observables.py"
+}

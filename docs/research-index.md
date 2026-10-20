@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [surrounding-geometry atlas](nsc-atlas-parent-observables.md) joins
+the existing exterior to an expanding parent, then compares explicitly
+different bulk-gravity mechanisms. It provides a clock prediction,
+an attributed lensing discriminator and the exact obstruction to stable
+equilibrium of the current constant-tension wall. It advances the
+cosmological connection and identifies the inherited material/state law
+still needed to select the model's dimensionless parameters.
+
 The [compact shared parent](nsc-atlas-compact-parent.md) connects two sourced
 interiors and descendants to a finite evolving global volume without an
 AE cutoff. Its matched remote-nesting comparison separates changes in
