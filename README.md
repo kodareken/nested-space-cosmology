@@ -3,6 +3,15 @@
 Start with regions, boundaries and fields; assemble possible nested geometries;
 specify inheritance and transmission; calculate what an interior observer measures.
 
+The [charged vacuum transition](docs/nsc-atlas-flux-transition.md) now connects
+one explicit four-form/membrane action to two nested moving boundaries,
+a shared intermediate spacetime and an expanding cosmological parent.
+The benchmark's inherited vacuum values are 1.125, .5 and .125 in
+Lambda L_ref^2. A mass-independent tidal trace and an equal-charge
+second-difference law provide conditional observer tests. This attributed
+alternative is NSC-P002; parent flux and charge remain inputs, and the
+observed cosmological scale has not been selected.
+
 The [occupied-wall construction](docs/nsc-atlas-occupied-wall.md) now
 calculates a material pressure from a finite spherical Dirac state,
 supports a linearly radially stable horizonless room, and joins two
@@ -74,8 +83,10 @@ universe has a parent. The map distinguishes descent, geometric attachment,
 causal influence and correlation. Missing physical connections remain visible.
 
 The [Lambda mechanism audit](docs/schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
-ranks the remaining physical routes. No evaluated route establishes a nonzero
-nesting-induced bulk cosmological constant. A fresh one-level/two-level
+ranks the remaining physical routes of the original field candidate.
+Its evaluated reductions do not establish a nonzero nesting-induced bulk
+cosmological constant; the charged alternative above adds a different
+physical source. A fresh one-level/two-level
 comparison gives a nonzero geometric trace change, -0.0461265238074 in ell
 units, but its independent density/pressure test fails vacuum form. Their
 actual matched quiet exteriors have exactly zero Lambda difference.

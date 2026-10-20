@@ -8,6 +8,18 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Charged source and composed geometry, 20 October 2026
+
+[Hirano, 1804.09985v1](https://arxiv.org/html/1804.09985), Sections 2.1
+and 2.3, equations (2.1)--(2.4), (2.28)--(2.38), inspected: canonical
+four-form stress, flux jump, gravitational junction and normal force.
+His extrinsic-curvature convention is opposite to our outward positive
+K convention. The [new finite connection](nsc-atlas-flux-transition.md)
+uses those equations for two moving boundaries sharing a middle Kottler
+region, then joins the exterior to dust with the same vacuum. It does
+not import the nucleation radius or rate for its supplied two-wall data.
+Brown--Teitelboim is the original mechanism, not an NSC novelty.
+
 ### Vacuum-transition comparison in the programme reassessment
 
 [Bousso--Polchinski, hep-th/0004134v3](https://arxiv.org/html/hep-th/0004134):
@@ -18,9 +30,10 @@ alone imply absolute flux quantization in a standalone four-dimensional
 theory. The paper also states the single-flux spacing and empty-universe
 problems; its multiple-flux solution introduces additional assumptions.
 This supplies a bounded alternative for the [programme reassessment](nsc-cosmological-atlas.md#programme-reassessment-the-generative-and-cosmological-connection).
-It is not an implemented NSC action, selected cosmological value or new
-numerical result. Inspect compatibility and predictive freedom before
-adopting it; do not repeat its published derivation as an NSC discovery.
+At that reassessment it was not implemented. The subsequent finite
+connection above now supplies an explicitly separate action and result.
+It still does not select the observed cosmological value. The published
+source law remains attributed rather than presented as an NSC discovery.
 
 ### Occupied wall state and a common cosmological parent, 20 October 2026
 

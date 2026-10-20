@@ -1,0 +1,209 @@
+{
+  "schema": "nsc-atlas-flux-transition-v1",
+  "candidate": "Einstein/canonical four-form/charged pure-tension membranes/dust",
+  "borrowed": "Brown-Teitelboim flux transition; Bousso-Polchinski action/boundary ensemble; Hirano 1804.09985 Eqs2.1-2.4 and2.28-2.31; Kottler and Einstein-Straus matching",
+  "connection": "One action determines regional vacuum jumps, both wall forces, a shared intermediate mass, cosmological matching and a mass-independent tidal trace.",
+  "inputs": {
+    "kappa": 1.0,
+    "bare_Lambda_Lref_squared": 0.0,
+    "sqrt_kappa_parent_flux_Lref": 1.5,
+    "sqrt_kappa_charge_Lref": 0.5,
+    "k_Lref": 0.1,
+    "initial_radii_Lref": [
+      0.8,
+      0.4
+    ],
+    "initial_proper_speeds": [
+      0.0,
+      0.0
+    ],
+    "central_geometric_mass": 0.0,
+    "initial_cosmological_join_Lref": 1.2,
+    "physical_scale": "Lref is an independent reference unit; no SI value, charge or parent flux is inferred from observations."
+  },
+  "inherited": [
+    {
+      "generation": 0,
+      "flux": 1.5,
+      "Lambda": 1.125
+    },
+    {
+      "generation": 1,
+      "flux": 1.0,
+      "Lambda": 0.5
+    },
+    {
+      "generation": 2,
+      "flux": 0.5,
+      "Lambda": 0.125
+    }
+  ],
+  "vacuum_changes_Lref_squared": [
+    -0.625,
+    -0.375
+  ],
+  "curvature_second_difference_Lref_squared": 0.25,
+  "regions_outside_to_inside": [
+    {
+      "mass": 0.015231455716127792,
+      "Lambda": 1.125
+    },
+    {
+      "mass": 0.011626577480241127,
+      "Lambda": 0.5
+    },
+    {
+      "mass": 0.0,
+      "Lambda": 0.125
+    }
+  ],
+  "common_clock": {
+    "name": "middle Kottler T/Lref",
+    "interval": [
+      0.0,
+      0.25
+    ],
+    "outer": {
+      "radius": 0.8265608996530406,
+      "velocity": 0.23281518506625634,
+      "acceleration": 1.0414472094597411,
+      "f_inside": 0.8580004306700881,
+      "f_outside": 0.7069438932229667,
+      "beta_inside": 0.9550933677225087,
+      "beta_outside": 0.8724372777572047,
+      "K_inside": 3.275,
+      "K_outside": 2.975,
+      "vacuum_pressure_drop": 0.625,
+      "angular_residual": -1.3877787807814457e-17,
+      "temporal_residual": -8.326672684688674e-17,
+      "force_residual": 0.0,
+      "energy_residual": 0.0
+    },
+    "inner": {
+      "radius": 0.3178519453127565,
+      "velocity": -0.9318835432955263,
+      "acceleration": -8.951882959460605,
+      "f_inside": 0.9957904225358707,
+      "f_outside": 0.9100045007558203,
+      "beta_inside": 1.3653561296602788,
+      "beta_outside": 1.3335709351290037,
+      "K_inside": 2.0250000000003023,
+      "K_outside": 1.725000000000314,
+      "vacuum_pressure_drop": 0.375,
+      "angular_residual": -6.106226635438361e-16,
+      "temporal_residual": 7.466249840604178e-15,
+      "force_residual": 6.167288901792745e-14,
+      "energy_residual": 7.460698725481052e-14
+    },
+    "outer_proper_time": 0.22977119877506796,
+    "inner_proper_time": 0.21669213569815196,
+    "parent_static_time": 0.2747328547751613,
+    "core_static_time": 0.23801417711052353
+  },
+  "cosmological_parent": {
+    "tau": 0.10872542374876722,
+    "scale_factor": 1.0703452857824176,
+    "H": 0.6240004748893362,
+    "radius": 1.284414342938901,
+    "velocity": 0.8014751599485489,
+    "f": 0.3576375679854483,
+    "kappa_rho_m": 0.04312977798635059,
+    "acceleration": 0.4724226276931813,
+    "deceleration": -0.9446168840151914,
+    "dust_tidal_trace": 1.1034351110068246,
+    "vacuum_from_expansion": 1.125,
+    "Lambda": 1.125,
+    "compensation_residual": -5.204170427930421e-18,
+    "angular_residual": 4.440892098500626e-16,
+    "temporal_residual": -5.551115123125783e-17,
+    "Friedmann_residual": 6.661338147750939e-16
+  },
+  "observer": {
+    "kind": "Geodesic-deviation trace in static orthonormal laboratories, excluding walls and dust",
+    "radii_Lref": [
+      1.1,
+      0.6,
+      0.1
+    ],
+    "local": [
+      {
+        "radial": 0.39788723623760747,
+        "transverse": 0.36355638188119627,
+        "trace": 1.125,
+        "Ricci_scalar": 4.5
+      },
+      {
+        "radial": 0.27432016185408453,
+        "transverse": 0.11283991907295773,
+        "trace": 0.5,
+        "Ricci_scalar": 2.0
+      },
+      {
+        "radial": 0.041666666666666664,
+        "transverse": 0.041666666666666664,
+        "trace": 0.125,
+        "Ricci_scalar": 0.5
+      }
+    ],
+    "relation": "A_radial+2 A_transverse=Lambda; successive trace differences have second difference kappa*e^2",
+    "SI": "Relative acceleration per separation is c^2*A. Divide its trace by c^2 before comparing with Lambda.",
+    "uncharged_control": "With the same parent flux, gravity, tension and radii but e=0, all regional tidal traces equal the parent Lambda despite altered masses."
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "unsquared_constraint": "0",
+      "same_velocity_on_both_sides": "0",
+      "full_temporal_Israel": "0",
+      "normal_force": "0",
+      "tidal_trace_from_metric": "0",
+      "inheritance_second_difference": "0"
+    },
+    "max_sampled_junction_residuals": {
+      "angular_residual": 3.892719480091955e-15,
+      "temporal_residual": 4.848899060050371e-14,
+      "force_residual": 3.4555691641457997e-13,
+      "energy_residual": 4.156675004196586e-13
+    },
+    "sampled_min_wall_lapse": 0.7069438932229667,
+    "sampled_min_wall_separation": 0.4,
+    "tolerance_comparison_max_state_difference": 2.947753152682253e-12,
+    "independent_quadratures": {
+      "masses": [
+        0.015231455716127787,
+        0.011626577480241124,
+        0.0
+      ],
+      "walls": [
+        {
+          "radius": 0.8265608996530406,
+          "proper_time": 0.229771198775068,
+          "other_static_time": 0.27473285477516124
+        },
+        {
+          "radius": 0.3178519453127555,
+          "proper_time": 0.21669213569815113,
+          "other_static_time": 0.23801417711052344
+        }
+      ],
+      "decimal_digits": 40
+    },
+    "max_quadrature_endpoint_gap": 9.992007221626409e-16,
+    "common_parent_clock_gap": -3.885780586188048e-16,
+    "ode_evaluations": [
+      167,
+      197
+    ]
+  },
+  "validity": "Ordinary spherical timelike thin walls on 0<=T_middle/Lref<=.25, regular center, nonintersecting shells and timelike cosmological join. Existence is supported analytically by speed bounds and positive static collars; sampled residuals alone are not a proof.",
+  "uncertainty": "Numerical differences check this benchmark, not model uncertainty, observational error bars or interval-certified endpoints.",
+  "remaining": "Parent flux, charge, bare vacuum, tension, initial radii and physical ruler remain inputs. No nucleation probability, selection of observed Lambda, reheating, cosmological matter fractions or nonspherical stability is derived. This action does not identify the earlier inherited Schur operator.",
+  "field_grids": 0,
+  "process_cpu_seconds": 0.765625,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "scripts/check_nsc_atlas_flux_transition.py": "796fc363bf5172e8b80ad56577b3350d0ac3ffd04fcb0c1370f8ffc4323dd31d",
+    "tests/test_nsc_atlas_flux_transition.py": "0cd0fa48b2b68482247c4010481d43e4bb8508ca816fd58e5becf57a708c4a57",
+    "scripts/plot_nsc_atlas_flux_transition.py": "2a98127387d0c982165e59ff93062054cd369156e7573dff1f7693e7099f1bd8"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_flux_transition.py"
+}

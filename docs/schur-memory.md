@@ -273,7 +273,7 @@ identities is a theorem eliminating all gravitational reductions in row1.
 | 4 | A dynamically selected mass/condensate or stabilized internal geometric scale, including interaction running, dimensional transmutation or non-conformal field coupling | These can supply nonzero vacuum energy in a separately specified theory. The current free massless cap has no such mechanism. A fixed size, potential and stable state must be derived; replacing the reference ruler by a desired scale does not derive it. |
 | 5 | Higher-curvature, torsion or quantum-gravitational metric terms, brane/extra-dimensional reduction and genuinely nonlocal curvature response | These can alter effective gravity. In four dimensions local R^2 and Ricci^2 variations vanish on exact constant-curvature space; the Weyl term vanishes there too. Nonconstant geometry, nonlocal operators, additional dimensions or other interactions require their declared action/couplings and a solution. The separate periodic Einstein/Weyl/Dirac candidate already fails its tested vacuum-form average. |
 | 6 | Formation, branching or inheritance with sustained exchange or particle production | A maintained mean density is possible, but a source Q that holds dust density fixed does not give dust pressure -rho. The total exchanging stress, branch/source law and energy conservation must generate the vacuum equation of state; these are not specified by a nesting diagram. |
-| 7 | A recursive/global vacuum selection law, flux or topological constraint | A new physical equation could select a nonzero integration constant or volume coefficient. Normalized subtree inheritance alone does not select one. The retained zero-tadpole normalization deliberately sets the homogeneous coefficient to zero; that is a stated condition of its candidate, not a universal cancellation theorem and not a nonzero prediction. |
+| 7 | A recursive/global vacuum selection law, flux or topological constraint | The [charged four-form alternative](nsc-atlas-flux-transition.md) now gives nonzero child vacuum changes and a composed finite geometry from supplied parent flux and charge. Absolute vacuum/scale selection remains open. Normalized subtree inheritance alone does not select these data. The retained zero-tadpole normalization sets the homogeneous coefficient to zero only in its original candidate. |
 
 Apparent acceleration from light-cone propagation, clock comparisons or fitting
 a homogeneous model is an additional **observational alternative**, not a
@@ -424,7 +424,12 @@ references, not automatic further campaigns. The earlier mechanism
 inventory remains a record of established restrictions; an explicitly
 vacuum-changing membrane/flux action is a literature comparison under
 row 7, with its additional state, normalization and scale assumptions.
-No new vacuum contribution has been calculated by this reassessment.
+The subsequent [charged four-form calculation](nsc-atlas-flux-transition.md)
+now realizes that alternative in one finite joined geometry. Its inward
+vacuum changes are -.625 and -.375 in L_ref^-2, with a full vacuum tensor
+derived from the added field action. The parent flux, charge, bare term
+and physical scale remain inputs. This is not a new term from the original
+Schur reduction, and it does not determine the observed absolute Lambda.
 
 The defensible claim is: **NSC supplies calculable inherited geometric and
 causal responses. Whether a physically specified reduction generates a

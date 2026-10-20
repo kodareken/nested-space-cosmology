@@ -1,5 +1,16 @@
 # What the calculations show
 
+The [charged flux transition](nsc-atlas-flux-transition.md) adds an explicitly
+different field action with a derived vacuum stress. Parent, child and
+grandchild fluxes give Lambda L_ref^2=1.125,.5,.125, with one common
+charge and tension. Both moving walls satisfy full junction and normal-force
+conditions in a shared finite spacetime; the exterior joins an accelerating
+dust-plus-vacuum parent. Local tidal traces remove the mass dependence.
+This is a conditional connection with unselected parent flux, charge and
+physical scale, not a measured cosmic Lambda. The
+[compact calculation](../results/summaries/nsc-atlas-flux-transition-v1.json)
+and NSC-P002 preserve those distinctions. Formation/state selection is next.
+
 The [occupied-wall construction](nsc-atlas-occupied-wall.md) connects a
 finite sphere spectrum to surface pressure, a sourced horizonless room,
 and an observer in the same expanding parent. This explicitly adds

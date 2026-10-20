@@ -1,5 +1,14 @@
 # Reproducing the root project
 
+The [charged transition](nsc-atlas-flux-transition.md) uses
+```
+python scripts/run_python.py scripts/check_nsc_atlas_flux_transition.py
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_flux_transition.py -q
+python scripts/run_python.py scripts/plot_nsc_atlas_flux_transition.py
+```
+It performs two small ODE solves and independent high-precision quadrature;
+the committed result is a compact summary, without full sampled histories.
+
 The [occupied-wall connection](nsc-atlas-occupied-wall.md) needs only
 finite sums and three neighboring equilibrium states:
 

@@ -69,6 +69,14 @@ rooms share one dust parent, with calculable central clock signals under
 fixed couplings. Initial state selection, general stability and a realistic
 cosmological and thermal history remain to be derived and tested.
 
+A separate Einstein/four-form candidate now derives vacuum changes from
+a charged-membrane inheritance law. Two moving boundaries share one
+intermediate spacetime and join an expanding cosmological parent. The
+benchmark gives $\Lambda L_{\rm ref}^2=1.125,.5,.125$ across three regions,
+with a mass-independent tidal observable and equal-charge second-difference
+identity. The mechanism is borrowed from Brown--Teitelboim; parent flux,
+charge, vacuum normalization and physical scale remain inputs.
+
 ## I. The question and the spherical idea
 
 ### 1. A universe viewed from within
@@ -103,7 +111,7 @@ The route through the book is therefore also a route through other authors'
 constructions. Attribution belongs beside the useful equation, with the
 assumptions that allow it to enter the map.
 
-Several building blocks guide the new comparison in Sections 10.8--10.13:
+Several building blocks guide the new comparison in Sections 10.8--10.15:
 
 | Construction and contributors | What it contributes to the atlas |
 | --- | --- |
@@ -112,6 +120,7 @@ Several building blocks guide the new comparison in Sections 10.8--10.13:
 | Garriga and Tanaka | An outside-matter effect with distinct lensing and orbital measurements |
 | Mazur and Mottola; Visser and Wiltshire | Material interfaces and stability tools beyond a constant-tension wall |
 | Abrikosov; Macpherson and Campbell; Ogure, Yoshida and Arafune | A finite sphere spectrum and localized-fermion material pressure |
+| Brown and Teitelboim; Bousso and Polchinski; Hirano | A charged boundary that changes vacuum stress through a common field law |
 | Morris and Thorne; Easson and Brandenberger | Established throat and black-hole-interior cosmology constructions |
 
 Their primary sources and the actual connections appear with the calculations.
@@ -3657,6 +3666,184 @@ cosmological Lambda. Formation, occupation transfer, general stability
 and a collective source law remain physical questions. No cosmic
 density fraction or matter--antimatter asymmetry is inferred from
 this finite state-to-observer proof.
+
+### 10.14. A field law that changes the inherited vacuum
+
+<!-- nsc-claim:charged-vacuum-inheritance -->
+
+Evidence: [action, conservation and composition](../docs/nsc-atlas-flux-transition.md),
+[symbolic and numerical record](../results/summaries/nsc-atlas-flux-transition-v1.json)
+and [scientific checks](../tests/test_nsc_atlas_flux_transition.py).
+
+The preceding constructions supply their cap vacuum independently.
+Brown--Teitelboim's charged-membrane mechanism supplies an alternative:
+one field law determines the vacuum change at a boundary. We use the
+fixed-flux action in [Bousso--Polchinski](https://arxiv.org/html/hep-th/0004134),
+Section 2.1, and the full membrane conditions in
+[Hirano](https://arxiv.org/html/1804.09985), Section 2.3.
+This is a new declared matter sector, not an extra term calculated from
+the original conformal-field Schur response.
+
+With $c=\hbar=1$, $\kappa=8\pi G$, $F=dA$ a four-form, shared membrane
+tension $\sigma$ and charge $e$, the action contains
+
+$$
+S_{\rm bulk}=\int\sqrt{-g}\left[
+\frac{\mathcal R-2\Lambda_b}{2\kappa}-\frac{F^2}{2\,4!}\right]d^4x,
+\qquad
+S_\Sigma=-\sigma\int_\Sigma\sqrt{-\gamma}\,d^3y+e\int_\Sigma A.
+$$
+
+Gravitational and fixed-flux boundary terms complete the action.
+Varying before substituting the solution gives
+
+$$
+F=f\epsilon,\qquad T^F_{\mu\nu}=-\frac{f^2}{2}g_{\mu\nu},\qquad
+\Lambda(f)=\Lambda_b+\frac{\kappa f^2}{2}.
+$$
+
+The oriented membrane gives $f_{\rm in}=f_{\rm out}-e$.
+Repeating that same law gives the composable sequence
+
+$$
+f_n=f_0-ne,\qquad
+\Lambda_n=\Lambda_b+\frac{\kappa}{2}(f_0-ne)^2,
+$$
+$$
+\Lambda_{n+1}-\Lambda_n=-\kappa e(f_n-e/2),\qquad
+\Lambda_{n+2}-2\Lambda_{n+1}+\Lambda_n=\kappa e^2.
+$$
+
+The second difference removes the bare vacuum and parent flux. It does
+not quantize the absolute flux, select which transitions occur, or
+determine the observed cosmological constant. The action is common;
+the state changes. Its relation to the earlier inherited operator is open.
+
+Each vacuum region has
+$F_n(r)=1-2M_n/r-\Lambda_n r^2/3$. On the ordinary outward orientation,
+$\beta_--\beta_+=kR$, with
+$\beta_\pm=\sqrt{\dot R^2+F_\pm}$ and $k=\kappa\sigma/2$.
+Both the temporal junction and membrane force must also hold:
+
+$$
+[K^a{}_b]=-k\delta^a_b,\qquad
+\sigma\overline{K}=e\,\frac{f_{\rm out}+f_{\rm in}}{2}
+=\frac{\Lambda_{\rm out}-\Lambda_{\rm in}}{\kappa}.
+$$
+
+Our $K_{ab}=+h_a{}^c\nabla_c n_b$ is opposite to Hirano's convention.
+The last equation is also the distributional normal conservation law.
+Pure vacuum has no tangential flux, and the constant tension obeys
+intrinsic wall conservation.
+
+Let $A=(M_{\rm out}-M_{\rm in})/k$ and
+$B=(\Lambda_{\rm out}-\Lambda_{\rm in})/(6k)+k/2$. Then
+
+$$
+\dot R^2+V(R)=0,\qquad
+V=1-\frac{A^2}{R^4}-\frac{2(M_{\rm in}+AB)}{R}
+-\left(\frac{\Lambda_{\rm in}}{3}+B^2\right)R^2,
+$$
+$$
+\beta_-=\frac{A}{R^2}+BR,\qquad
+\beta_+=\frac{A}{R^2}+(B-k)R.
+$$
+
+The signs are retained after using this potential. Given the inner mass
+and initial radius/speed, the unsquared equation fixes the outer mass.
+That same mass becomes the next wall's inner mass.
+
+### 10.15. Three vacuum regions in one evolving cosmology
+
+<!-- nsc-claim:charged-shared-parent -->
+
+Evidence: [finite continuation and cosmological observer](../docs/nsc-atlas-flux-transition.md#a-composed-finite-geometry-with-calculated-vacuum-changes),
+[endpoint values and independent quadratures](../results/summaries/nsc-atlas-flux-transition-v1.json).
+
+Declare $\Lambda_bL_{\rm ref}^2=0$,
+$\sqrt{\kappa}f_0L_{\rm ref}=3/2$,
+$\sqrt{\kappa}eL_{\rm ref}=1/2$ and $kL_{\rm ref}=1/10$.
+Choose initially resting membranes at $R/L_{\rm ref}=.8,.4$
+and a regular massless center. These are benchmark inputs, not measurements.
+
+| Region | $\Lambda L_{\rm ref}^2$ | $M/L_{\rm ref}$ |
+| --- | ---: | ---: |
+| Parent vacuum collar | 1.125 | .01523145571612779 |
+| Shared child region | .5 | .01162657748024113 |
+| Regular grandchild core | .125 | 0 |
+
+The two vacuum changes are -.625 and -.375 in $L_{\rm ref}^{-2}$.
+Both walls satisfy the full junction and charged force law, on one
+middle-region clock $0\leq T/L_{\rm ref}\leq.25$. Timelike coordinate
+speed bounds keep the inner radius above $.15L_{\rm ref}$ and the
+outer radius below $1.05L_{\rm ref}$. Positive collars and bounded
+ODE coefficients establish finite continuation. At the endpoint,
+
+$$
+R_{\rm outer}/L_{\rm ref}=.82656089965304,\qquad
+R_{\rm inner}/L_{\rm ref}=.31785194531276.
+$$
+
+Join the outer vacuum to flat dust at $R_b(0)=1.2L_{\rm ref}$, with
+the same four-form flux and no added shell. Both Darmois forms give
+
+$$
+M_0=\frac{\kappa\rho_mR_b^3}{6},\qquad
+H_p^2=\frac{\kappa\rho_m+\Lambda_0}{3},\qquad \rho_m\propto a_p^{-3}.
+$$
+
+The exact expanding solution, with $h=\sqrt{\Lambda_0/3}$, is
+
+$$
+a_p(\tau)=\left[\cosh(3h\tau/2)
++\frac{H_p(0)}{h}\sinh(3h\tau/2)\right]^{2/3}.
+$$
+
+Clock matching puts the displayed endpoint at cosmic time
+$.10872542374877L_{\rm ref}$, with $a_p=1.07034528578242$.
+This parent accelerates from its declared four-form vacuum.
+Inner transitions do not change the outside flux or select its value.
+
+![Inherited flux, common evolution and tidal curvature](../docs/figures/nsc-atlas-flux-transition.png)
+
+*Figure 11. One shared charged-membrane law gives three vacuum values.
+The middle panel uses one common clock and its synchronized cosmological
+join. The right panel separates mass and vacuum in free-fall tidal
+measurements. The initial-region drawing is not a nucleation history.*
+
+For locally released freely falling probes in each vacuum collar,
+
+$$
+\mathcal A_r=\frac{2M}{r^3}+\frac{\Lambda}{3},\qquad
+\mathcal A_t=-\frac{M}{r^3}+\frac{\Lambda}{3},\qquad
+\mathcal A_r+2\mathcal A_t=\Lambda.
+$$
+
+The trace removes the Weyl mass. In SI its measured relative acceleration
+per separation is multiplied by $c^2$. A second relation reconstructs
+the same vacuum from the flat dust parent's expansion:
+
+$$
+\Lambda_0=H_p^2+2\ddot a_p/a_p.
+$$
+
+These conditional relations are registered retrospectively as
+[NSC-P002](../docs/prediction-register.md#nsc-p002--a-charged-vacuum-transition-and-its-curvature-observable).
+Finite instruments and cross-region communication require their own
+measurement model; these calculated values are not sky measurements.
+
+Six symbolic identities vanish exactly. Independent 40-digit separated
+quadratures reproduce endpoint radii and clocks within
+$1.0\times10^{-15}L_{\rm ref}$; two ODE tolerances differ by less than
+$3.0\times10^{-12}$ in the normalized state. These are numerical
+diagnostics, not model or observational error bars.
+
+This closes the declared finite source-to-geometry-to-observer connection.
+Parent flux, charge, bare vacuum, tension and a physical ruler remain
+inputs. The supplied two-wall Cauchy data have not been derived from
+nucleation. Selecting a formation history and flux sector, with reheating
+and observable consequences, is next; refining these trajectories would
+not select the cosmological scale.
 
 ## IV. What the observers can reach
 

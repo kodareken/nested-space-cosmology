@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [four-form and charged-membrane transition](nsc-atlas-flux-transition.md)
+connects inherited vacuum stress, two moving walls, one shared intermediate
+geometry and a cosmological parent. NSC-P002 records a tidal-trace relation
+and the equal-charge curvature second difference. Its source law is
+attributed; absolute flux/scale selection and formation remain open.
+
 The [occupied sphere and material wall](nsc-atlas-occupied-wall.md)
 connect a finite inherited surface state to its conserved pressure law,
 a radially stable horizonless attachment, and two unequal sourced rooms

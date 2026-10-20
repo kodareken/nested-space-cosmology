@@ -444,13 +444,40 @@ def check_p001(entry, records, root):
         check_finite_amplitude(root, entry)
 
 
+def check_p002(root, entry):
+    exact(entry["model_id"], "einstein-four-form-charged-membranes", "P002 model")
+    exact(entry["status"], "conditional_source_geometry_observer_result", "P002 status")
+    exact(entry["observational_validation"], False, "P002 observation status")
+    exact(entry["registration"], "retrospective_no_withheld_data", "P002 registration")
+    evidence = entry["evidence"]
+    exact(evidence["path"], "results/summaries/nsc-atlas-flux-transition-v1.json", "P002 evidence path")
+    raw = local_file(root, evidence["path"]).read_bytes()
+    exact(len(raw), evidence["bytes"], "P002 evidence size")
+    exact(hashlib.sha256(raw).hexdigest(), evidence["sha256"], "P002 evidence hash")
+    record = read_json(raw)
+    values = [r["Lambda"] for r in record["inherited"]]
+    supplied = entry["Lambda_Lref_squared"]
+    require(len(supplied) == len(values), "P002 vacuum count")
+    for actual, expected in zip(supplied, values):
+        require(type(actual) in (float, int) and math.isclose(actual, expected, rel_tol=1e-12, abs_tol=1e-14),
+                "P002 vacuum projection")
+    require(math.isclose(entry["second_difference_Lref_squared"],
+                        record["curvature_second_difference_Lref_squared"], rel_tol=1e-12), "P002 second difference")
+    exact(entry["inputs"], record["inputs"], "P002 physical inputs")
+    exact(entry["uncertainty"], record["uncertainty"], "P002 uncertainty")
+    exact(entry["limits"], record["remaining"], "P002 limits")
+    require(bool(entry["rejection"].strip()), "P002 rejection condition required")
+
+
 def check_register(root, register):
     root = Path(root).resolve()
     exact(register["schema"], SCHEMA, "register schema")
     exact(register["document"], DOCUMENT, "register document")
     document = local_file(root, DOCUMENT).read_text(encoding="utf-8")
     entries = register["entries"]
-    require(isinstance(entries, list) and len(entries) == 1, "one currently registered prediction required")
+    require(isinstance(entries, list) and [e["id"] for e in entries] in
+            (["NSC-P001"], ["NSC-P001", "NSC-P002"]),
+            "one currently registered P001 and optional unique P002 required")
     entry = entries[0]
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")
@@ -461,6 +488,11 @@ def check_register(root, register):
     if "finite_amplitude" in entry:
         result["finite_amplitude_files"] = 4
         result["finite_amplitude_endpoints"] = 3
+    if len(entries) == 2:
+        require("## NSC-P002" in document, "P002 missing from reader-facing register")
+        check_p002(root, entries[1])
+        result["predictions"] += 1
+        result["evidence_files"] += 1
     return result
 
 

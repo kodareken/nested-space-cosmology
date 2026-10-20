@@ -5,6 +5,32 @@ agreement could be rejected. Each entry distinguishes derived consequences,
 numerical sensitivity and observations. The [machine-readable register](../results/prediction-register.json)
 binds the evidence bytes and the exact locations of reported values.
 
+## NSC-P002 — A charged vacuum transition and its curvature observable
+
+Registered retrospectively on 20 October 2026; no withheld observations.
+This is the explicit Einstein/four-form/charged-membrane alternative,
+described in the [source and shared-parent derivation](nsc-atlas-flux-transition.md)
+and [compact result](../results/summaries/nsc-atlas-flux-transition-v1.json).
+It does not change P001's action or unresolved finite-amplitude status.
+
+With the declared parent flux, bare vacuum and shared charge,
+Lambda L_ref^2 is 1.125, .5 and .125 in the parent collar, child and
+grandchild core. Two signed moving walls and a common cosmological
+join realize those regions on 0<=T_middle/L_ref<=.25. The local
+free-fall tidal trace equals Lambda in each vacuum region and removes
+its mass contribution. Three consecutive equal-charge regions obey
+Delta^2 Lambda=kappa e^2; the benchmark second difference is .25/L_ref^2.
+The flat dust parent's H^2+2 a_ddot/a must equal the outer vacuum trace.
+
+These are conditional predictions from stated inputs. The physical ruler,
+charge, parent flux, bare vacuum and preparation are not inferred from
+observations. Independent quadrature/ODE differences and sampled
+residuals check the calculation, not experimental uncertainty.
+A discrepancy in these relations beyond declared instrument/model
+corrections would reject this candidate's tested claim. Establishing
+cross-region measurement access, formation and a realistic cosmological
+history remains separate.
+
 ## NSC-P001 — Perturbative cap and moving wall
 
 **Registered retrospectively on 16 October 2026.** These results had already

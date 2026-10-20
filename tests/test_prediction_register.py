@@ -20,7 +20,8 @@ def old_register_view(root):
     path = root/checker.REGISTER
     data = json.loads(path.read_text(encoding="utf-8"))
     entry = data["entries"][0]
-    changed = "finite_amplitude" in entry
+    changed = "finite_amplitude" in entry or len(data["entries"]) != 1
+    data["entries"] = [entry]
     entry.pop("finite_amplitude", None)
     if entry["observational_test"].get("SI_scale_selected") is not False:
         entry["observational_test"]["SI_scale_selected"] = False
@@ -147,3 +148,17 @@ def test_duplicate_json_keys_and_nonfinite_coefficients_are_rejected():
     for raw in ('{"value":1,"value":2}', '{"value":NaN}', '{"value":Infinity}'):
         with pytest.raises(ValueError):
             checker.read_json(raw)
+
+
+@pytest.mark.parametrize("mutation", [
+    lambda e:e.update(observational_validation=True),
+    lambda e:e.update(Lambda_Lref_squared=[1.125,.5,.126]),
+    lambda e:e.update(inputs={}),
+    lambda e:e.update(limits="Observed Lambda explained"),
+])
+def test_charged_result_keeps_inputs_and_conditional_scope(mutation):
+    entry=copy.deepcopy(json.loads((ROOT/checker.REGISTER).read_text(encoding="utf-8"))["entries"][1])
+    checker.check_p002(ROOT,entry)
+    mutation(entry)
+    with pytest.raises(ValueError):
+        checker.check_p002(ROOT,entry)

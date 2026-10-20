@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "5e4d42a377a94b954ef03e14998f05083f5e1b96",
+  "current_receipt_commit_parent": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 18562,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "e1474f71a1a17bb37160a6953bc7b65ca768ba06",
+      "bytes": 19221,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "3b94b40733823781c19c12c0a84d6befd47f7f380dcea772edbdcb1c63ff0e0c"
+      "sha256": "86b995bbaa2ce63ed3e889715c6c5c6b668bd862c03cc18da5357602a3da049e"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 274919,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "e1474f71a1a17bb37160a6953bc7b65ca768ba06",
+      "bytes": 275420,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "f246d47c32d979790aa3cac907c4f7ddeeca3154579e3d8465610f6b03246de8"
+      "sha256": "a516cfecbcc9296bfbd903508eeea20f7c940436bf5cc468ce8323e9109db1d1"
     },
     {
-      "bytes": 115431,
-      "change": "Refocus the programme on a physical parent-child source and cosmological tests.",
-      "changed_from_commit": "5e4d42a377a94b954ef03e14998f05083f5e1b96",
+      "bytes": 116195,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "c3d8ab043a477a8ddc0f4311b5db39c6b1c6d57891f785cf4ba9fd3539e4fe22"
+      "sha256": "cb41a401dd69802aab32c3d6317113fa580de85e06ffa0d2eb0b31cb2103b0da"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "0571c9ed52b14f6645f13abcbda04be14111cec4a303bdb163d188680c2c8fff"
     },
     {
-      "bytes": 443369,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "e1474f71a1a17bb37160a6953bc7b65ca768ba06",
+      "bytes": 444092,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "eb092ce23c742a29542f85a9da32097b48828d61f8a9d0afc378a9477ff733e8"
+      "sha256": "d17e3e90dffdc270d851e795e55c7be2b7104d3d747b8c3f7ae35f05060684af"
     },
     {
       "bytes": 173938,
@@ -10347,6 +10347,14 @@
       "path": "docs/figures/nsc-atlas-fixed-endpoint-comparison.png",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "a5076d876f0a1019b99e790992fd14f4eee59e678821b29029cf6821262bbd33"
+    },
+    {
+      "bytes": 171487,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "path": "docs/figures/nsc-atlas-flux-transition.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a4a97bbdc6ea98e2b286741e4c58c81811b35d29b4efbbfc14ebf23589ef9193"
     },
     {
       "bytes": 126083,
@@ -10524,6 +10532,14 @@
       "sha256": "48bcd7f4e6bf1595dacf25e241d08de50e5e45e2c81ed93a8f975f16356d78dc"
     },
     {
+      "bytes": 15177,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "path": "docs/nsc-atlas-flux-transition.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "eca9cf50422681d49d526f9d852c0d3f62ac280095a97b2b172821384b5b35ef"
+    },
+    {
       "bytes": 8895,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
@@ -10608,15 +10624,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 81785,
-      "change": "Refocus the programme on a physical parent-child source and cosmological tests.",
-      "changed_from_commit": "5e4d42a377a94b954ef03e14998f05083f5e1b96",
+      "bytes": 83067,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "ea4c96abd7bd14de550f9fa5d5244383aac4c7583a70b279722a069ae3c0005a"
+      "sha256": "42dfb424c9054b948ac6683c263a28a3bcc4d7d031ce07dac7d9e76964fd67d4"
     },
     {
       "bytes": 30876,
@@ -11568,28 +11584,28 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 20530,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
+      "bytes": 20959,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d6faa7c1ddf19b0aa73a91b329fbdcb2f4eab5f9154389da50ed8a9bd9a34841"
+      "sha256": "49475c585cf0d0cea5cbe357fb9fe1a419ffb163647dc1a32aa662919df3f7e8"
     },
     {
-      "bytes": 9302,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "85bdafcb9542b1de2bca3000278da1b7ef2fa4d2",
+      "bytes": 10809,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2de9c90a1995f51dada247d902553e3f1f3b7778649f8f1450a605aefa7e7b03"
+      "sha256": "420b0342c1b5230c75a91080110781501556acb8d39e7b43c69d969e52d49dee"
     },
     {
-      "bytes": 584926,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "e1474f71a1a17bb37160a6953bc7b65ca768ba06",
+      "bytes": 585627,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5bdcf4ff96f187354bb8cd9487dde616287d59f738a0a3aa46de65edb90a0f81"
+      "sha256": "9e0c1bb322630746d7e0108910e60c6132faa94683398bb9372711001927fe06"
     },
     {
       "bytes": 6705,
@@ -11598,20 +11614,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 215802,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "e1474f71a1a17bb37160a6953bc7b65ca768ba06",
+      "bytes": 216247,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "720fd13f28ff098041e4f9d32959dfad21004e374d2f06570003ff407b542768"
+      "sha256": "e6a414837573d410871e7e23a87c627c2c12d9dfe9044b51d9d2eb10f98b860b"
     },
     {
-      "bytes": 35928,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "e1474f71a1a17bb37160a6953bc7b65ca768ba06",
+      "bytes": 36296,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "f32c286baa34bcfbe57eb3753392201fb69cb827f186bf8a4d2bc82fbe75938f"
+      "sha256": "04a9440f5e62c554639da3ca009398441fdcdfde377e0061f1f95daf520148dd"
     },
     {
       "bytes": 18356,
@@ -11625,12 +11641,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 139809,
-      "change": "Refocus the programme on a physical parent-child source and cosmological tests.",
-      "changed_from_commit": "5e4d42a377a94b954ef03e14998f05083f5e1b96",
+      "bytes": 140225,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "2240d5250ba713e5ed58cbe3ba8ad4426b00eb49177fcbc2b411da970d6c86ef"
+      "sha256": "a8d3d759554e23fd1956888c4c33d586266634afee081d83387a0ede96432b1e"
     },
     {
       "bytes": 537091,
@@ -11680,28 +11696,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 25730,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
+      "bytes": 26051,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "93b04159b860bc91fa7e5a581352b34066f17d85eaa2493b836c3e2f62713793"
+      "sha256": "0e17bf84db3e072282033b2512c88c653690935fdb782828701fd76121a38df5"
     },
     {
       "bytes": 3206,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "aed007e73d45fd63d2a496d46748e2cc5de9843c8dd8189c2079cf3d7364b66b"
+      "sha256": "b69c59bd8dfc00eea8a9a1d13a77f86e40062d19498d3fbd22a00deb4c533c28"
     },
     {
-      "bytes": 28365,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
+      "bytes": 28655,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7246c76ad5f24b4b6ba233750903e5deffda5820e293f7244d55d5b2e3d6e6a3"
+      "sha256": "55874648ebef7e01f8fccff70c104003d9356f4654e0d8847848b613e3215aef"
     },
     {
       "bytes": 226492,
@@ -11713,27 +11729,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "45e42f021a490cb000303ab4d4384ce8e85514adbfda9b38c607fb354d418aaf"
+      "sha256": "0253ea4a1055a45c904b0d2c963a205f0f529849e92def734f5137207e778cdb"
     },
     {
-      "bytes": 278580,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
+      "bytes": 286151,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "350c69588da7ba888ed705916b9a1c76000b323c5d098a66e62015550efb85dd"
+      "sha256": "3142a32f9293ec8c168fc6bd6fa2ef7964f86b955f509cc11f7ed6fd61af61b4"
     },
     {
-      "bytes": 6183909,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "978d5ae1fe09f72881d02a6c0e7e8471b4abd3c9",
+      "bytes": 6499693,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "539b5393c1777fe8b2bc112fe5062cb4e6944e9d472fef10404dfc00e8423903"
+      "sha256": "69c309205af16bd99b0802e2991c9ebb86db5c520ec99ef79bd2c522b911c64b"
     },
     {
       "bytes": 3283,
@@ -29722,12 +29738,12 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 11087,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "f2a767fe8e476e4322e4c72dbde75f3a2acee257",
+      "bytes": 13060,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "results/prediction-register.json",
       "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
-      "sha256": "5eacda744076048d0e73e65b6f87dcc7e02f64170fb9922b4072a7e7cf4c66f5"
+      "sha256": "85b9a35273854d180819a957c095a7c13912926a0d44dfb56eacaf8345468d7b"
     },
     {
       "bytes": 11412,
@@ -30326,6 +30342,14 @@
       "sha256": "c9f24a5073d28ceac899f5d31d03c418d3ecfdd450ec8390dd1cc5dedbe5416c"
     },
     {
+      "bytes": 7432,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "path": "results/summaries/nsc-atlas-flux-transition-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ad77b5643dd948d2489186c8cccee2759adbbb6d29f5a0484c5674af26ead4fa"
+    },
+    {
       "bytes": 4505,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "e1c2027356fee463632f7f7dba23256cd782b7ce",
@@ -30805,6 +30829,14 @@
       "path": "scripts/check_nsc_atlas_fixed_history_endpoint.py",
       "retention_reason": "Exact scalar-boundary channel attribution and bounded endpoint diagnostics.",
       "sha256": "4057c89fa075d9dcf847f3c4987bcf0cddec8d6b97d5cc5bee2e68115649a10a"
+    },
+    {
+      "bytes": 9538,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "path": "scripts/check_nsc_atlas_flux_transition.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "796fc363bf5172e8b80ad56577b3350d0ac3ffd04fcb0c1370f8ffc4323dd31d"
     },
     {
       "bytes": 4838,
@@ -31360,12 +31392,12 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 26239,
-      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "2e27ab2ec980b23984e89d4ab1433fb86700595a",
+      "bytes": 28139,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "scripts/check_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "24e16bc0914f1777947f6622770fbd4378399e4d0bd71483629d247bb628bb72"
+      "sha256": "acae850621ca2645edc1e60b6736fe86b54337b8cc40c4bf1106531e4c4c6b64"
     },
     {
       "bytes": 13188,
@@ -33640,6 +33672,14 @@
       "sha256": "3603f69db3af16d26d0578a80746d97dac5f74aef0f902e2a977f64329274da1"
     },
     {
+      "bytes": 2341,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "path": "scripts/plot_nsc_atlas_flux_transition.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2a98127387d0c982165e59ff93062054cd369156e7573dff1f7693e7099f1bd8"
+    },
+    {
       "bytes": 5347,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "69ac1279395903ee403da369b5db58a6ed850616",
@@ -34597,6 +34637,14 @@
       "path": "src/recursive_horizons/nsc_atlas_fixed_cap_time.py",
       "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
       "sha256": "936c9cbeb68a11054e53c6766c0e121100a035f67bb9bbde7b7e67c671a9595b"
+    },
+    {
+      "bytes": 9826,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "path": "src/recursive_horizons/nsc_atlas_flux_transition.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7"
     },
     {
       "bytes": 21701,
@@ -38813,6 +38861,14 @@
       "sha256": "34247ee751589c91132864b5e070b6e45273106d12be145470cfed6de3f3a464"
     },
     {
+      "bytes": 5598,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "path": "tests/test_nsc_atlas_flux_transition.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0cd0fa48b2b68482247c4010481d43e4bb8508ca816fd58e5becf57a708c4a57"
+    },
+    {
       "bytes": 4821,
       "change": "Derive the same-family formation diagnostic from quiet-corner expansions, null constraints and material-wall focusing.",
       "changed_from_commit": "cd037ab58884d36db4b45f1539866c259be61ae3",
@@ -42554,12 +42610,12 @@
       "sha256": "1d4d86c5cb2d92758a511419414b490815a77c0eca535ec12d5c9edf20cf261d"
     },
     {
-      "bytes": 6912,
-      "change": "Check one-sided radial endpoint effects and retain Grok register tolerance fixes.",
-      "changed_from_commit": "253f675672747c43690335a4c8c54ca25a1e6f04",
+      "bytes": 7525,
+      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
+      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
       "path": "tests/test_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "5c91462580759a415e74f8b86ee8d3b0167815e7c1fdd316d907db4524e84021"
+      "sha256": "a1cd2422973a54bf0105984959d61700c3aebdc316abf5daab4e2ebbf2ed41c2"
     },
     {
       "bytes": 1420,

@@ -6,6 +6,13 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision 2026-10-20.6 adds Sections 10.14--10.15 and Figure 11: an
+attributed four-form/charged-membrane action supplies vacuum inheritance,
+two compatible moving boundaries and an expanding cosmological join.
+Free-fall tidal traces and the equal-charge second difference define
+conditional observer tests. Absolute flux/scale selection and formation
+remain open; this separate candidate does not alter the earlier Schur zeros.
+
 Revision 2026-10-20.5 adds Sections 10.12--10.13: a declared occupied
 surface-Dirac material, its conserved pressure, a radially stable
 horizonless reference and nearby states under one fixed action.

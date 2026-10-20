@@ -1,5 +1,17 @@
 # Prior art and admission of new research
 
+## Charged vacuum inheritance and the common parent, 20 October 2026
+
+The [calculation owner](nsc-atlas-flux-transition.md#borrowed-construction-and-finite-calculation)
+records the bounded alternative admitted by the programme reassessment:
+the Brown--Teitelboim action and full membrane equations, two shared
+Kottler interfaces, and the same-vacuum cosmological join. It fixes
+inputs, finite interval, two ODE solves, independent 40-digit quadrature,
+symbolic checks and a 120 CPU-second budget. The completed source and
+observer relation is NSC-P002. Initial flux/scale selection and formation
+remain the next connection; no further trajectory refinement is admitted
+by the completed result alone.
+
 ## A finite wall state and its gravitational inheritance, 20 October 2026
 
 The next connection is state -> surface stress -> geometry -> observer.

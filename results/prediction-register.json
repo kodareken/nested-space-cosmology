@@ -270,6 +270,47 @@
           "sha256": "ee033123d163061402c48b098bed9be73ef54df391fae18b7f444d1a481eb35d"
         }
       }
+    },
+    {
+      "id": "NSC-P002",
+      "title": "Charged vacuum inheritance and a local curvature observable",
+      "model_id": "einstein-four-form-charged-membranes",
+      "status": "conditional_source_geometry_observer_result",
+      "registered_on": "2026-10-20",
+      "registration": "retrospective_no_withheld_data",
+      "observational_validation": false,
+      "evidence": {
+        "path": "results/summaries/nsc-atlas-flux-transition-v1.json",
+        "bytes": 7432,
+        "sha256": "ad77b5643dd948d2489186c8cccee2759adbbb6d29f5a0484c5674af26ead4fa"
+      },
+      "inputs": {
+        "kappa": 1.0,
+        "bare_Lambda_Lref_squared": 0.0,
+        "sqrt_kappa_parent_flux_Lref": 1.5,
+        "sqrt_kappa_charge_Lref": 0.5,
+        "k_Lref": 0.1,
+        "initial_radii_Lref": [
+          0.8,
+          0.4
+        ],
+        "initial_proper_speeds": [
+          0.0,
+          0.0
+        ],
+        "central_geometric_mass": 0.0,
+        "initial_cosmological_join_Lref": 1.2,
+        "physical_scale": "Lref is an independent reference unit; no SI value, charge or parent flux is inferred from observations."
+      },
+      "Lambda_Lref_squared": [
+        1.125,
+        0.5,
+        0.125
+      ],
+      "second_difference_Lref_squared": 0.25,
+      "uncertainty": "Numerical differences check this benchmark, not model uncertainty, observational error bars or interval-certified endpoints.",
+      "limits": "Parent flux, charge, bare vacuum, tension, initial radii and physical ruler remain inputs. No nucleation probability, selection of observed Lambda, reheating, cosmological matter fractions or nonspherical stability is derived. This action does not identify the earlier inherited Schur operator.",
+      "rejection": "With a fixed action, state and measurement domain, an independent violation of the signed junction/conservation identities or a tidal/expansion relation beyond stated instrument and model error rejects that tested claim."
     }
   ]
 }

@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [charged transition](nsc-atlas-flux-transition.md) is implemented in
+nsc_atlas_flux_transition.py: FluxLaw owns the common action data;
+ChargedWall solves the signed junction and normal force; reference_geometry
+shares the intermediate region; evolve_reference uses one middle clock;
+DustFluxParent joins the same vacuum to cosmology. Its check script uses
+independent symbolic identities and 40-digit separated quadratures.
+The plot, scientific tests and compact summary use the same base name.
+
 The [occupied-wall owner](nsc-atlas-occupied-wall.md) uses
 nsc_atlas_occupied_wall.py: filled_shell supplies exact finite
 occupation sums; OccupiedWall derives material stress, the rest-mass

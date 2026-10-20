@@ -18,6 +18,27 @@ starting a derivation.
 
 ## Current execution priority — 20 October 2026
 
+### Completed next connection: a charged inherited vacuum
+
+The [four-form transition](nsc-atlas-flux-transition.md) now implements
+the first bounded alternative below. The original conformal trace/support
+restrictions were reused without another numerical test. One new declared
+action fixes the flux jump, full vacuum stress and membrane force; two
+moving walls share the same intermediate Kottler mass and join a dust-plus-
+vacuum cosmological parent. The finite benchmark gives Lambda L_ref^2 =
+1.125, .5, .125 and an equal-charge second difference .25. Free-fall
+tidal traces and the parent's H^2+2 a_ddot/a give explicit observer checks.
+This is NSC-P002, a conditional source/geometry result, not a fit to cosmic
+Lambda or an identification of the earlier Schur operator.
+
+The next missing connection is physical preparation/transition history:
+which flux sector and physical scale are reached, and whether that
+history supports a testable cosmology. Reuse published membrane formation
+conditions and apply them to the actual parent. The initial two-wall data
+are compatible Cauchy data; their nucleation history is not yet derived.
+Do not deepen this completed finite trajectory unless that next test
+requires it. The broader reassessment below remains the programme owner.
+
 ### Programme reassessment: the generative and cosmological connection
 
 Douglas asked for a broad adaptive-design/rethinking assessment after the

@@ -328,6 +328,16 @@
       "section": "10.13",
       "status": "measured",
       "owner": "docs/nsc-atlas-occupied-wall.md"
+    },
+    "charged-vacuum-inheritance": {
+      "section": "10.14",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-flux-transition.md"
+    },
+    "charged-shared-parent": {
+      "section": "10.15",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-flux-transition.md"
     }
   },
   "findings": [
