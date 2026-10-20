@@ -288,6 +288,11 @@
       "section": "6.1.21",
       "status": "derived",
       "owner": "docs/schur-memory.md"
+    },
+    "atlas-parent-normal-evolution": {
+      "section": "10.6",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-evolution.md"
     }
   },
   "findings": [

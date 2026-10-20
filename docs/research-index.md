@@ -1,13 +1,19 @@
 # Scientific strand index
 
+The [transported shared parent](nsc-atlas-parent-evolution.md) connects the
+two-wall history to future normal-clock slices and effective source evolution.
+It evaluates the trace drift and source balance, and proves a zero effective
+trace on this isolated parent's large-domain limit. The next physical
+connection is a cosmological parent with a determined volume law.
+
 The [shared two-wall host history](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
 continues the quiet nested slice with both wall origins fixed by the same
 host bridge. Host-side incoming characteristics identify the original
 source collars and their arrival maps. Neither finite wall segment can
 signal the other through this patch; the two equal elapsed proper times
 are not a simultaneity prescription. This supplies a physical domain for
-field transfer, with the field state and an evolving averaging foliation
-still to be specified.
+field transfer. The normal-clock successor supplies its averaging
+foliation; the field state remains to be specified.
 
 The [radar and wall-clock inverse](nsc-atlas-radar-clock.md)
 joins the actual quiet geometry to a finite observer test of the membrane

@@ -557,13 +557,12 @@ both radii stay above $r_b$, and the Lake quadrant signs persist.
 These inequalities protect the finite domain independently of the
 trajectory integrator's sample spacing.
 
-The finite continuation provides the domain and clocks for a physical field
-transfer. It does not transport the averaging slice: obtaining moment rates
-still requires a declared evolving foliation and the treatment of moving
-shell crossings. Differentiating the fixed radial tapers after moving their
-endpoints would select a different family of slices, not supply that evolution.
-The collective parent and the origin of the regional vacuum values remain
-open connections.
+The finite continuation provides the domain and clocks for field transfer.
+The [normal-clock successor](nsc-atlas-parent-evolution.md) now transports
+the averaging slice and derives its moment rates, including moving-shell
+crossings. Moving the endpoints of fixed radial tapers would not supply
+that evolution. The cosmological parent and the origin of the regional
+vacuum values remain open connections.
 
 ### Finite shared-history result
 

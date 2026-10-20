@@ -2688,10 +2688,154 @@ The [shared-history derivation](../docs/nsc-atlas-connection-slice.md#a-shared-t
 and [compact calculation](../results/summaries/nsc-atlas-two-wall-history-v1.json)
 retain the common chart convention, signed normalization and finite
 comparison indicators. The history locates the next field-transfer
-problem. Evolving the geometric average also requires a physical foliation
-and moving-wall crossings; differentiating newly adjusted radial tapers
-does not provide it. No field state, formation mechanism or cosmological
-$\Lambda$ drift is inferred.
+problem. Section 10.6 supplies a transported averaging foliation and its
+moving-wall crossings. Neither connection supplies a new field state,
+formation mechanism or origin of the regional vacuum values.
+
+### 10.6. The shared parent evolves into a calculable effective source
+
+<!-- nsc-claim:atlas-parent-normal-evolution -->
+
+Evidence: [normal-clock derivation](../docs/nsc-atlas-parent-evolution.md)
+and [compact evolving-parent calculation](../results/summaries/nsc-atlas-parent-evolution-v1.json).
+
+Choose freely falling observers initially normal to the original shared
+slice. Their proper time defines one simultaneous leaf through both
+walls and both bridge minima. Its outer boundary follows the original
+$R=4\ell$ normal ray. This is a declared averaging clock on the same
+quiet spacetime, with unchanged masses, regional curvatures and membrane
+law. It provides the previously missing physical history for the
+composition and source-balance equations in Section 6.1.21.
+
+In a smooth regional chart write
+$ds^2=-dt^2+A^2dx^2+R^2d\Omega^2$, with $x$ the initial proper-distance
+label, $V=R_t$, $B=A_t$ and signed $E=R_x/A$. The complete bulk transport is
+
+$$
+R_t=V,\qquad V_t=-\frac{M}{R^2}+H_i^2R,\qquad
+A_t=B,\qquad B_t=\left(\frac{2M}{R^3}+H_i^2\right)A.
+$$
+
+Initially $A=1$, $B=V_R$. The signed Killing energy $E$ is conserved
+on each smooth geodesic segment and satisfies $V^2+f=E^2$. Differentiating
+the radial equation proves $R_x=EA$, including the regular $E=0$
+bridge limit. The clock therefore crosses horizons without dividing by
+$f$ or treating a spatial minimum as a focal point. Intrinsic curvature,
+expansion and shear follow independently:
+
+$$
+{}^{(3)}R=-\frac{4E_x}{AR}+\frac{2(1-E^2)}{R^2},\quad
+\theta=\frac{B}{A}+\frac{2V}{R},\quad
+\sigma^2=\frac13\left(\frac{B}{A}-\frac{V}{R}\right)^2.
+$$
+
+At a material wall put $U=\gamma N+b s$ and $b=\gamma v$.
+The signed Israel law implies the outward spatial jumps
+$[V]=kRb$ and $[E]=-kR\gamma$. A normal geodesic crosses in the
+direction opposite $b$, so its future crossing data obey
+
+$$
+V_{\rm after}=V_{\rm before}-kR|b|,\qquad
+A_{\rm after}=A_{\rm before},\qquad
+B_{\rm after}=B_{\rm before}+\frac{kA}{|b|}.
+$$
+
+The last impulse follows from the radial Jacobi equation:
+$R_{NsNs}^{\rm sing}=-k\delta(\eta)$ and $N(\eta)=-b$.
+Omitting it would lose the physical membrane curvature. The inner
+crossed normals come from the cap; the outer crossed normals come from
+the exterior. Both enter the host. Their wall clocks satisfy
+$dt/d\tau=\gamma$; they are not reset independently.
+
+The new strip from crossings at time $s$ has proper-volume element
+
+$$
+dV(t;s)=4\pi R(t;s)^2A(t;s)\frac{|v(s)|}{A(s;s)}\,ds.
+$$
+
+It is added once, together with each wall's curvature, energy and spatial
+stress atoms:
+$C_W=2\kappa E_W$,
+$E_W=4\pi R^2\sigma\gamma$, and
+$S_W=4\pi R^2\sigma(\gamma-3/\gamma)$.
+The analytic normal map has $A>0$ because $B(0)\geq0$, the smooth
+Jacobi coefficient is nonnegative, and each impulse increases $B$.
+For the smallest host throat, a first-exit estimate gives
+$R\geq r_b-2Mt^2/r_b^2\geq .0150120120\ell>r_b/2$
+through $0\leq t/\ell\leq.01$. The cap centre is exact and regular.
+The wall rapidity bounds preserve both incoming branches on this interval.
+The derivation records the piecewise charts at the transported initial
+wall labels; no additional physical shell is introduced there.
+
+Let $C_D$ denote the proper-volume average of intrinsic three-curvature.
+Using $L_{\rm ref}=2/k=\ell$, the same scalar effective source gives:
+
+| Normal time $t/\ell$ | $H_D\ell$ | $\Lambda_{g,\rm tr}\ell^2$ | $(3Q+C_D)\ell^2$ |
+| ---: | ---: | ---: | ---: |
+| 0 | .092609049 | -.0153506330754 | 2.11796240047 |
+| .005 | .094009378 | -.0143471868939 | 2.13982145265 |
+| .01 | .095427142 | -.0134681818918 | 2.16143093935 |
+
+Here $\Lambda_{g,\rm tr}=(Q-C_D)/4$ is the geometric
+trace after retaining the explicit regional and wall sources. Including
+those sources gives a different total trace, $.455231112462/\ell^2$ at
+the endpoint. Neither scalar alone specifies a vacuum stress tensor.
+At the midpoint the actual moment histories give
+
+$$
+\Lambda_{g,\rm tr,t}\ell^3\simeq .18865034,\qquad
+J\ell^3\simeq .0437522915.
+$$
+
+The independently differentiated history satisfies
+$Q_t+C_D_t+2H_DA_D=2\kappa J$,
+with $A_D=3Q+C_D$. Halving the time-difference
+step reduces its residual from $7.22\times10^{-9}$ to
+$1.80\times10^{-9}/\ell^3$. The largest 32/64 change in the trace is
+$1.28\times10^{-10}/\ell^2$. These are numerical indicators, not
+observational uncertainties or a certified error enclosure.
+
+The same inner-wall events supply a received signal. For an inward
+test flash with calibrated wall proper frequency,
+
+$$
+t_{\rm rec}=t_e-H^{-1}\log(1-HR_W(t_e)),\qquad
+1+z=\frac{\beta_-+\dot R_W}{1-H^2R_W^2}.
+$$
+
+At $t_e/\ell=0$ and $.01$, the central reception times are
+$1.60943791243410\ell$ and $1.64616002849800\ell$, and the redshift
+factors are $3.74639337610612$ and $3.89500911178850$.
+Differentiating reception time with wall proper time independently
+recovers the frequency ratio. Reception uses the established quiet cap
+continuation, not an extension of the whole Gaussian foliation to that
+later time. Thus one history produces both the evolving effective-source
+table and a clock observable. The redshift alone does not measure the
+whole average.
+
+There is also a finite-time large-domain conclusion. On the original
+outer time-symmetric Schwarzschild end, a geodesic starting at rest at
+areal radius $r$ has
+
+$$
+R=r-\frac{Mt^2}{2r^2}-\frac{M^2t^4}{12r^5}+O(r^{-8}),\quad
+A=1+\frac{Mt^2}{r^3}+\frac{5M^2t^4}{12r^6}+O(r^{-9}).
+$$
+
+At fixed bounded regular time, $\theta$, $\sigma^2$ and
+intrinsic three-curvature are $O(r^{-6})$. Their proper integrals converge while
+volume grows as the cube of the outer cut. All explicit sources remain
+confined to the interior and its walls. Hence both geometric and total
+effective trace averages tend to zero as the parent domain grows.
+The local outer Schwarzschild vacuum contribution also remains zero.
+
+This closes the shared-history-to-effective-source calculation on its
+finite domain. It does not generate cosmological Lambda: the source
+fails vacuum form, evolves, and dilutes in this isolated AE parent.
+The outward connection now requires an actual cosmological domain with
+a physically determined nonzero regional volume fraction and compatible
+connector/history, followed by its observer light cone. The cap curvature
+has not been derived by recovering its supplied value.
 
 ## IV. What the observers can reach
 

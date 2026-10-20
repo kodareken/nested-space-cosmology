@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+  "current_receipt_commit_parent": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
   "files": [
     {
       "bytes": 3120,
@@ -41,11 +41,11 @@
     },
     {
       "bytes": 1266,
-      "change": "Shared two-wall history, characteristic origins and synchronized manuscript.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "CITATION.cff",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "dfc4243d5855812cb65b9895a112e5afab3f8ac88b7a55d3948fd68d9d5acbcc"
+      "sha256": "48c3a85f5b3a23b4797376adf1e5d1ad3277a92f74022a1972ddea136edcd5f1"
     },
     {
       "bytes": 5974,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 16322,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 16827,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "d91e0badcac81994112a9b5816540136598ab91cbad8f35fa0d03a69b1db5834"
+      "sha256": "8509736802aa5f72b1730494234ea02101a25a4e0b348d9cbf980c6685dd4191"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 272713,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 273295,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "cfe6c63c49f3d0ea7ebe9c032ff7f4120f32f3f959aebba834eb3e52a408f191"
+      "sha256": "5f13ff4f17c5d2b539a9c70cbc178ae51480066a662dc76e0f3557caaef3b0da"
     },
     {
       "bytes": 108699,
@@ -10312,9 +10312,9 @@
       "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
-      "bytes": 105197,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 105769,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "import_bytes": 102088,
       "import_sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a",
       "migration_disposition": "active_owner",
@@ -10322,15 +10322,15 @@
       "original_path": "lab/docs/claim-ledger.md",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
-      "sha256": "8f551cfe5f8e8951ff1ad2698528e5dfa3ef174e7d80a31942787f45e18ddbf2"
+      "sha256": "de55916d1e63e90130f8be63e2f162561aa1c3dcebb32aa13646218c52669273"
     },
     {
-      "bytes": 438296,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 439392,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "48cfcdd7e5a779c38de16516273de7528804c85798985f0d39336a56b3d2073b"
+      "sha256": "2b0862ea655c89e6701c3cc10b1aac4745090162489c78092b2b60a21200cce7"
     },
     {
       "bytes": 336399,
@@ -10443,15 +10443,15 @@
       "sha256": "6d249cb0e722bd29ef4de29255cda460e955be34d98d620a1e925ab5bd3c5708"
     },
     {
-      "bytes": 29183,
-      "change": "Shared two-wall history, characteristic origins and synchronized manuscript.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 29115,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "import_bytes": 8541,
       "import_sha256": "e739c1c6513cb58b2ff56a24c9e91cab93db8724ddac1a588be31ec9678f3433",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-atlas-connection-slice.md",
       "path": "docs/nsc-atlas-connection-slice.md",
-      "sha256": "38f5be296cc78ccb7ae1b10ece648451c0c25b42236a47ff5b579daceddbcf68"
+      "sha256": "900dbc754f0d8472fdd42888c16b5e1606099f36be3e4454d64b18dc3fc0ab50"
     },
     {
       "bytes": 191654,
@@ -10511,6 +10511,14 @@
       "sha256": "aeb030a33bbdfaaf9c51c90b3c7bc5a78c211c4cb782d575b83f3b1c6189a64e"
     },
     {
+      "bytes": 17260,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "path": "docs/nsc-atlas-parent-evolution.md",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "414da4fa2aaf5535bb9fabb4c75e758b95c7d8618cebfc8d44402f62c65de587"
+    },
+    {
       "bytes": 9702,
       "path": "docs/nsc-atlas-radar-clock.md",
       "retention_reason": "Current shared two-wall geometry, focused controls and authenticated figure.",
@@ -10552,15 +10560,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 66693,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 67653,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "741a5768471c57846feacd1ffabf3dc7ae899e705f14e9f97c2d5540dee24085"
+      "sha256": "3c135c9adc98634b86ddb60107ebf8e0e17d0373a5d17a6d31009542afea8a23"
     },
     {
       "bytes": 30876,
@@ -11512,12 +11520,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 18260,
-      "change": "Shared two-wall history, characteristic origins and synchronized manuscript.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 18775,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7f7c02f1cacbced126dca2220341cbbd131976d0481db4b3f7b4d1457e28491d"
+      "sha256": "3eeb8814afba2844564126776b25159b5e8f4284160a8343c9ac6207ef07057f"
     },
     {
       "bytes": 9302,
@@ -11528,12 +11536,12 @@
       "sha256": "2de9c90a1995f51dada247d902553e3f1f3b7778649f8f1450a605aefa7e7b03"
     },
     {
-      "bytes": 576512,
-      "change": "Shared two-wall history, characteristic origins and synchronized manuscript.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 577956,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ced1fd67dd3d1b7ad4622bad8e97efa6ca82fa5d08d92ed3f39b3f55407b4fa2"
+      "sha256": "cd579e7f8f71419c704aca2e1a4130513bc10156c72f241d4a1c6da16d24882d"
     },
     {
       "bytes": 6705,
@@ -11542,20 +11550,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 213059,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 213683,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1970393ae257b0bc0bc5df52b534e12940407625bf278e644fee0685b9c2f532"
+      "sha256": "30edf8de8c67ff415be40bbd8dd1b7717ab4ccb459f8bcc8f25f2ec65b183fb9"
     },
     {
-      "bytes": 34205,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 34596,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "9dbd7cd26055655d391af2f43949f7c2c93c77709ae6332c6f16f77450446fa0"
+      "sha256": "358a572ec02cde2a5fadaf0b4223c86577ea4e033f29c621b188568d539ad65a"
     },
     {
       "bytes": 18356,
@@ -11569,12 +11577,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 138150,
-      "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
-      "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
+      "bytes": 138696,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "ac0c4d1f407b2987baced05f607d7bc47bcf360688cbb26133174c25ff5fe4c4"
+      "sha256": "82b64c6e28f427922ea2be890ef9fa0d1d34abba308963f4cd54115a05684357"
     },
     {
       "bytes": 537091,
@@ -11624,28 +11632,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 25171,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 24767,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2bfa227e06a3c2e1aaeac2a7ebd52daf72aaf41e441e36baefd83aaf24671519"
+      "sha256": "648c5485862ade995fda90dd5dcdc8ce95bbb68bded03fea9484cf859ec8ae1f"
     },
     {
       "bytes": 3206,
-      "change": "Shared two-wall history, characteristic origins and synchronized manuscript.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "90c34be75edf8dfe7a4f8a8d2be799d0ee515a02b9c0c6e36df72717494334d6"
+      "sha256": "034155b3978879b14c9c0831406b8ccb97ec74e4cd6d30513b09b0a07ea57eed"
     },
     {
-      "bytes": 27184,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 27334,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "601eb2fc514c97f85c6101dbc50ce9748d2d33d3cc9ff349845c65a7d1790bbd"
+      "sha256": "e24495d62b769366b645c671d9b0127f6bd3f7f2a314f17f64a7b5e72ebddb07"
     },
     {
       "bytes": 226492,
@@ -11657,27 +11665,27 @@
     },
     {
       "bytes": 396,
-      "change": "Shared two-wall history, characteristic origins and synchronized manuscript.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "66fc874a4a9c565838f38a2362af18989d8e666fa8a499c1c739801d28243a33"
+      "sha256": "57c24e2585e3d3d18f1452de36283a8c0fcc9badef479f9a567a196983e31c00"
     },
     {
-      "bytes": 237439,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 243707,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "689f8348b8c24712b7ae5264f5faa29ff083442e947f724ff954c03a9f59f490"
+      "sha256": "ec7abeee6004d6de6d60435e8d79be9b01cbd5a95367d26e3bf5279d2a309092"
     },
     {
-      "bytes": 4886933,
-      "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
-      "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
+      "bytes": 4995067,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2655d7015cd0838d39bcd82d4ac37f70a1beb28aec88568ac926132e01cae3bc"
+      "sha256": "8a26f57e60139ea52f0fa5accab58c0076cd4b5e2484ea00980236edbe960871"
     },
     {
       "bytes": 3283,
@@ -30342,6 +30350,14 @@
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
     {
+      "bytes": 11770,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "path": "results/summaries/nsc-atlas-parent-evolution-v1.json",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "cbaeef6d7e1c6ffe93aefcaa1e1ab4dd6f5bb6425038a558435dfa10d60246c8"
+    },
+    {
       "bytes": 14948,
       "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
       "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
@@ -30757,6 +30773,14 @@
       "path": "scripts/check_nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "e6fb6f1804418b1271ac6834c9055a0a8e6f10f42ca9d60e976eaee6dd8df78f"
+    },
+    {
+      "bytes": 5358,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "path": "scripts/check_nsc_atlas_parent_evolution.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "55d15083f279ae4700f12d765482e0ae4e2242697f6b7173c7209c517ad28d73"
     },
     {
       "bytes": 14645,
@@ -34539,6 +34563,14 @@
       "path": "src/recursive_horizons/nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "502191913f4e851a665949bffa8ba97a80ceba796ac4bd6df1e5801394c9efc4"
+    },
+    {
+      "bytes": 14990,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "path": "src/recursive_horizons/nsc_atlas_parent_evolution.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "fb0034ccb16dd83a4f6e6650d9b94bdef2dbc9c75c5361c7dcd2aae56edb4f55"
     },
     {
       "bytes": 11824,
@@ -38785,6 +38817,14 @@
       "path": "tests/test_nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "dda2a08e7908086d32cfa1aa72fd761c722acc042747f3d3c4a2d01e4c047a07"
+    },
+    {
+      "bytes": 5618,
+      "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
+      "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
+      "path": "tests/test_nsc_atlas_parent_evolution.py",
+      "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
+      "sha256": "a120bddba36d7073ea01458a3ca7e3e3f169264c4960b7770bff1b0f2a3906f8"
     },
     {
       "bytes": 7216,

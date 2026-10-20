@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision `2026-10-20.2` adds Section 10.6's transported normal-clock parent.
+The whole quiet nested slice evolves with material-wall Jacobi impulses;
+its effective trace, explicit source exchange and delayed cap-clock signal
+come from the same history. Conservation and independent ray derivatives
+are checked. The effective source is non-vacuum, and the isolated parent's
+large-domain trace vanishes at fixed finite time. Cosmological parent
+construction and the origin of the regional vacuum values remain open.
+
 Revision `2026-10-20.1` adds Section 10.5's shared two-wall host history.
 Both original wall intersections retain their common chart normalization,
 and incoming characteristics locate source collars on the initial slice.

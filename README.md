@@ -3,6 +3,14 @@
 Start with regions, boundaries and fields; assemble possible nested geometries;
 specify inheritance and transmission; calculate what an interior observer measures.
 
+The [shared parent now has an evolved geometric average](docs/nsc-atlas-parent-evolution.md).
+Freely falling clocks transport the full quiet two-wall slice, including
+both throats and wall crossings. Its geometric trace changes from
+`-.0153506330754` to `-.0134681818918` in `Lambda*L_ref^2` units.
+Conservation is checked on that actual history. The result is non-vacuum,
+and its large-domain limit is zero for this isolated parent. The next
+connection is a cosmological parent with a physical volume law.
+
 The living research paper is [the manuscript](paper/nested-space-cosmology.md)
 and [its illustrated PDF](paper/nested-space-cosmology.pdf).
 The [overview map](paper/figures/geometry-overview.png) connects geometry,
@@ -15,7 +23,7 @@ original slice. It locates both moving walls and their incoming source
 collars through `.04 ell` of each wall's proper time. Equal elapsed wall
 times do not define simultaneous endpoints. Neither segment can signal the
 other within the constructed host patch. The result supplies a domain for field transfer;
-a physical evolving foliation is still needed for the geometric average.
+the normal-clock successor supplies the evolving averaging foliation.
 
 Two [constructive proof connections](docs/current-result.md) now join the
 map's components. A scale-free transfer-response identity recovers the

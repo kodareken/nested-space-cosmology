@@ -1,13 +1,23 @@
 # Current NSC claim ledger
 
+The [normal-clock parent](nsc-atlas-parent-evolution.md) derives a finite
+evolving average of the quiet nested geometry, retaining material-wall
+Jacobi jumps, swept volumes, source exchange and checked conservation.
+Its geometric trace is time-dependent and non-vacuum. Both geometric and
+total effective traces vanish in the isolated AE large-domain limit at
+fixed finite regular time. This closes the finite parent-averaging
+connection; cosmological parent construction, generation of the cap scale
+and observational validation remain open.
+
 The [two-wall continuation](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
 now supplies one finite shared host history for the existing quiet nested
 slice. The original bridge and slicing data fix both wall embeddings;
 incoming characteristic feet and arrival derivatives locate two source
 collars. Neither wall segment can signal the other within this constructed
 host patch. Equal elapsed proper times do not select simultaneous events.
-This is a geometric propagation domain, without a selected field state,
-transported averaging slice, formation law or cosmological Lambda drift.
+This is a geometric propagation domain without a selected field state
+or formation law. Its normal-clock successor supplies the averaging
+history and effective trace drift.
 
 The [physical radar/clock theorem](nsc-atlas-radar-clock.md)
 now reconstructs a declared quiet cap and its membrane combinations from

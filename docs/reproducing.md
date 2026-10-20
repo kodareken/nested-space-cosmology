@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+The [normal-clock parent](nsc-atlas-parent-evolution.md) transports the full
+quiet slice, including moving walls, and calculates its effective trace:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_evolution.py
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_parent_evolution.py -q
+```
+
+The application has a 3,000,000 scalar-evaluation/120 CPU-second allowance,
+fixed 32/64 quadrature and three normal-time cuts through `.01 ell`.
+It writes only a compact record to a fresh `--output` path when requested.
+No P001 field grid, fitted vacuum value or cosmological observation is used.
+
 The [shared two-wall history](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
 uses the original quiet slice and its signed wall law:
 

@@ -1,5 +1,23 @@
 # What the calculations show
 
+The [transported shared parent](nsc-atlas-parent-evolution.md) connects
+the actual two-wall history to an evolving gravitational average on one
+normal proper clock. Both wall crossings include their Jacobi impulses.
+Over `0<=t/ell<=.01`, `Lambda_g,tr*L_ref^2` changes from
+`-.0153506330754` to `-.0134681818918`, with `L_ref=ell=2/k`.
+The midpoint trace derivative is `.18865034/ell^3`; the explicit source
+balance is `J=.0437522915/ell^3`. Independent volume evolution and
+conservation agree with decreasing time-difference residuals.
+
+The endpoint vacuum-form defect is `2.16143093935/ell^2`; including the
+supplied regional and wall sources gives total trace `.455231112462/ell^2`.
+Neither is a generated cosmological constant. A finite-time asymptotic
+proof shows both effective traces tend to zero on an unbounded isolated
+AE parent. The next outward connection needs an actual cosmological
+parent and its physical volume law. The
+[compact record](../results/summaries/nsc-atlas-parent-evolution-v1.json)
+retains scalars and source hashes, with no raw field grid.
+
 The [shared two-wall history](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
 now continues both material walls of the quiet nested slice in their
 common host. The original slice fixes their relative clock origins through
@@ -31,9 +49,9 @@ retains the signed normalization, both wall junctions and independent
 chart, motion and characteristic comparisons. This gives a physically
 located domain for later field transfer. Its finite calculation uses
 9,587 charged scalar queries and `.03125` process-CPU seconds.
-An evolving averaging foliation
-and its moving-wall crossings remain to be specified; no field state,
-formation history or cosmological Lambda drift is calculated.
+The normal-clock successor above now supplies the evolving averaging
+foliation and moving-wall crossings. A field state, formation history
+and generated cosmological Lambda remain separate.
 
 The [physical radar/clock inverse](nsc-atlas-radar-clock.md)
 connects actual cap geometry, its signed membrane law and central

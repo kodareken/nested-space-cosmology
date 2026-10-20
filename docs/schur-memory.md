@@ -13,6 +13,13 @@ gravitational geometry, a quantum state or a cosmological vacuum term.
 
 ## From nested geometry to a conserved mean response
 
+**Evolving application, 20 October 2026.** The
+[normal-clock parent](nsc-atlas-parent-evolution.md) now supplies common
+future slices, wall crossings, moment rates and source balance for the
+actual quiet two-level geometry. It gives `Lambda_g,tr*ell^2=-.0134681818918`
+at `t=.01 ell`, a nonzero trace drift, and an analytic zero large-domain
+limit. The identities below are evaluated on that constructed finite history.
+
 **19 October 2026.** This connection addresses Steps5,7 and the expansion
 diagnostic in Step8. A nested collection must compose its geometric response
 without changing the answer when regions are regrouped. Its effective stress
@@ -193,8 +200,10 @@ of pure vacuum cannot settle the mixed-source question.
 Equation (C3) also gives a finite drift bound:
 `abs(Delta Lambda)<=abs(Delta A)/4+int abs(H*A)dt+kappa*int abs(J)dt`.
 Its right side needs a physical history; it is not filled with chosen rates.
-The existing initial slice supplies neither A_dot nor J. No Lambda drift
-number is claimed from it.
+The initial slice alone supplied neither A_dot nor J. The
+[normal-clock successor](nsc-atlas-parent-evolution.md) now derives them
+from the actual geometry and moving walls, rather than choosing rates
+to enforce the balance.
 
 Finally the same quantities can be reconstructed from the volume expansion:
 

@@ -1,5 +1,28 @@
 # Prior art and admission of new research
 
+## Shared-parent normal evolution, 20 October 2026
+
+Connect the established two-wall host history to the effective Lambda target
+by transporting its original slice. The [derivation and decision](nsc-atlas-parent-evolution.md)
+compare normal geodesics, radar leaves and four-volume projection; normal
+transport closes the existing spatial average. Reuse the regional metrics,
+Israel law, geodesic deviation and the already derived scalar balances.
+The missing connection is the material-wall crossing and proper-volume map.
+
+Keep the existing regional masses, H values, tension, scalar zero and slice;
+declare normal proper time and the normal-transported outer cut. Evaluate
+`0<=t/ell<=.01` with fixed 32/64 spatial rules, three cuts and two derivative
+steps. Allow at most 3,000,000 charged scalar evaluations and 120 CPU seconds.
+Initial exploratory numbers preceded this completed specification; no
+observational preregistration is asserted. Stop on a failed signed crossing,
+positive-radius/Jacobi bound, independent constraint or conservation check.
+
+Independent checks use exact de Sitter and parametric Schwarzschild motion,
+neighbouring transmitted rays, the original moments and direct volume rates.
+The result now supplies a nonzero effective trace drift; its non-vacuum stress
+and analytic zero AE large-domain limit redirect the next step to a physical
+cosmological parent. No finer scan of this completed isolated parent follows.
+
 ## Shared two-wall history and characteristic access, 20 October 2026
 
 Continue the existing quiet two-level slice into a finite, shared spacetime

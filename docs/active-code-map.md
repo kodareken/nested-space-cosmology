@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [shared-parent normal evolution](nsc-atlas-parent-evolution.md) is owned
+by `nsc_atlas_parent_evolution.py`: `NormalParent` transports the existing
+slice, `normal_bulk` evolves geodesics and Jacobi fields, and `normal_moments`
+independently evaluates intrinsic curvature and sources.
+`scripts/check_nsc_atlas_parent_evolution.py` produces the compact record;
+`tests/test_nsc_atlas_parent_evolution.py` checks exact limits, wall-crossing
+spatial derivatives and evolving conservation. The regional model remains
+owned by `nsc_atlas_nested_slice.py` and its shared host history.
+
 Routing index for retained laboratory owners. The active work is the finite
 exterior-first atlas: compatible geometry and state, causal paths, inheritance,
 clocks and only then local consequences. The universal-action and regeneration

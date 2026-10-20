@@ -18,6 +18,23 @@ starting a derivation.
 
 ## Current execution priority — 20 October 2026
 
+**Completed shared-parent reduction.** The
+[normal-clock construction](nsc-atlas-parent-evolution.md) transports the
+entire quiet nested slice through `0<=t/ell<=.01`, retaining both moving
+walls, their Jacobi impulses and both regular bridge minima. It evaluates
+the missing moment evolution and source balance. The geometric trace changes
+from `-.0153506330754` to `-.0134681818918` in `L_ref=ell=2/k` units;
+its midpoint derivative is `.18865034/ell^3`. The source fails vacuum form.
+The analytic finite-time large-domain limit is zero for this isolated AE parent.
+
+**Decision and next connection.** Normal transport, radar leaves and four-volume
+projection were compared. Normal transport closes the existing averaging
+definition with one clock choice and no new source. This step is complete
+at its stated domain. The outward requirement is a cosmological parent with
+a physically determined volume fraction and compatible connector/evolution,
+followed by its observer light cone. Enlarging this isolated body's cutoff
+cannot supply that parent. The cap curvature remains a supplied input.
+
 **Shared host history.** The
 [two-wall continuation](nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
 now follows both walls of the existing quiet nested slice in one host atlas,
@@ -27,12 +44,10 @@ source collars and arrival derivatives; the two retained segments have
 no causal path to one another within the constructed host patch.
 Equal elapsed proper times are not a simultaneity condition.
 
-This completes the missing finite geometric connection before field
-transfer. Its next physical inputs are a declared field preparation on
-the located domain and, for averaging, a transported spacelike foliation
-with moving-wall crossings. Moving the endpoints of the old radial tapers
-does not derive that foliation. The construction supplies no new vacuum
-value, field state, formation mechanism or cosmological Lambda drift.
+This completes the finite geometric connection before field transfer.
+A field preparation remains open. The normal-clock successor above now
+supplies the transported averaging leaves and their moving-wall crossings.
+Neither construction supplies a new regional vacuum value or formation law.
 Manuscript revision `2026-10-20.1`, Section 10.5, carries the connection.
 
 **Completed observer inverse.** The
