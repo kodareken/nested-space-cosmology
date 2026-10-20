@@ -8,6 +8,23 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Flux selection and conversion, 21 October 2026
+
+- [Kaloper--Sorbo, 0811.1989v2](https://arxiv.org/html/0811.1989),
+  equations (1)--(3) and discussion through (4): read the scalar/four-form
+  action, boundary ensemble, displacement-flux jump and moving minimum.
+  The [conversion calculation](nsc-atlas-flux-conversion.md) adds an
+  explicit positive scalar mass. No axion periodicity, shift protection,
+  matter couplings or reheating temperature is imported for that addition.
+- [Hirano, 1804.09985v1](https://arxiv.org/html/1804.09985),
+  equations (2.37), (2.42)--(2.45): reuse isolated zero-mass formation
+  controls, retaining cap signs, the Minkowski limit and the physical
+  action normalization. These are not P002's finite-parent rates.
+- [Bousso--Polchinski, hep-th/0004134v3](https://arxiv.org/html/hep-th/0004134),
+  Sections 2--3: revisit flux spacing and the need for a populated history.
+  The exact residue calculation applies that restriction to P002's
+  supplied charge and offset. Rates do not create absent flux levels.
+
 ### Charged source and composed geometry, 20 October 2026
 
 [Hirano, 1804.09985v1](https://arxiv.org/html/1804.09985), Sections 2.1

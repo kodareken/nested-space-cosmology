@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The [flux conversion owner](nsc-atlas-flux-conversion.md) uses
+nsc_atlas_flux_conversion.py: sector_minimum is exact rational arithmetic;
+isolated_bounce is an attributed vacuum control; ScalarFlux supplies
+the potential, inherited preparation and actual-field wall pressure;
+evolve_prepared compares proper and expansion clocks. Its check script
+records symbolic identities and a compact homogeneous comparison.
+
 The [charged transition](nsc-atlas-flux-transition.md) is implemented in
 nsc_atlas_flux_transition.py: FluxLaw owns the common action data;
 ChargedWall solves the signed junction and normal force; reference_geometry

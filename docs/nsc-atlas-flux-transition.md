@@ -356,6 +356,11 @@ The supplied two-wall Cauchy data are not claimed to arise from two
 independent nucleation instantons. Classical finite evolution and
 quantum formation probabilities are different problems.
 
+The [21 October selection and conversion calculation](nsc-atlas-flux-conversion.md)
+now decides what the fixed flux sector and isolated bounce formulas can
+supply, and studies an explicitly separate scalar response. It retains
+this completed geometry and its limits.
+
 The next useful question is whether a specified transition/preparation
 history selects flux sectors and a physical scale while leaving a
 predictive observer relation. The literature's membrane formation

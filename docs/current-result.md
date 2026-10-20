@@ -1,5 +1,17 @@
 # What the calculations show
 
+The [selection/conversion calculation](nsc-atlas-flux-conversion.md)
+now gives a conditional scalar response to a flux transfer. One potential
+fixes residual vacuum .125, initial oscillation energy .09375 and local
+transition release .0625 in declared normalized units. Its actual wall
+pressure depends on the instantaneous scalar, not separately relaxed
+vacua. Direct homogeneous evolution through two e-folds conserves
+energy and approximately dilutes the oscillating component as dust.
+The parent-state map and a ground-state no-injection bound identify
+what preparation must supply. A coupled scalar-wall spacetime, clustering,
+thermalization and measured cosmic abundances remain open. This separate
+prototype does not replace P002 or modify the current manuscript.
+
 The [charged flux transition](nsc-atlas-flux-transition.md) adds an explicitly
 different field action with a derived vacuum stress. Parent, child and
 grandchild fluxes give Lambda L_ref^2=1.125,.5,.125, with one common

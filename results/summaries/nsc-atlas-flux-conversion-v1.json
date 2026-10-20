@@ -1,0 +1,190 @@
+{
+  "schema": "nsc-atlas-flux-conversion-v1",
+  "decision": "Test selection capability, then connect a specified flux transfer to residual vacuum and an evolving scalar. Full P002 nucleation is deferred.",
+  "pure_flux": {
+    "aligned": {
+      "flux_residue_mod_charge": "0",
+      "nearest_generations": [
+        3
+      ],
+      "residual_fluxes": [
+        "0"
+      ],
+      "minimum_vacuum": "0",
+      "minimum_vacuum_float": 0.0,
+      "domain": "n>=0",
+      "interpretation": "Kinematic minimum, not a selected terminal state or probability"
+    },
+    "offset": {
+      "flux_residue_mod_charge": "1/20",
+      "nearest_generations": [
+        3
+      ],
+      "residual_fluxes": [
+        "1/20"
+      ],
+      "minimum_vacuum": "1/800",
+      "minimum_vacuum_float": 0.00125,
+      "domain": "n>=0",
+      "interpretation": "Kinematic minimum, not a selected terminal state or probability"
+    },
+    "exact_aligned_smallest_positive_Lambda": "1/8",
+    "invariant": "f modulo e is unchanged by any integer-charge sequence; rates cannot create absent levels.",
+    "local_degeneracy": "A constant-flux bulk supplies only a cosmological-constant source; away from transitions it has no additional propagating mode.",
+    "isolated_controls": [
+      {
+        "parent_Lambda": 1.125,
+        "child_Lambda": 0.5,
+        "radius": 0.8579969015642838,
+        "beta_inside": 0.9366466175410096,
+        "beta_outside": 0.8508469273845813,
+        "action": 0.6956583643045935,
+        "angular_residual": -8.326672684688674e-17,
+        "inside_constraint": -4.440892098500626e-16,
+        "outside_constraint": -2.220446049250313e-16,
+        "scope": "Isolated zero-mass vacuum bounce; no determinant or finite-parent nucleation rate"
+      },
+      {
+        "parent_Lambda": 0.5,
+        "child_Lambda": 0.125,
+        "radius": 1.4180593547073335,
+        "beta_inside": 0.95719006442745,
+        "beta_outside": 0.8153841289567166,
+        "action": 3.168410381063264,
+        "angular_residual": 2.7755575615628914e-17,
+        "inside_constraint": 0.0,
+        "outside_constraint": 0.0,
+        "scope": "Isolated zero-mass vacuum bounce; no determinant or finite-parent nucleation rate"
+      },
+      {
+        "parent_Lambda": 0.125,
+        "child_Lambda": 0.0,
+        "radius": 3.8709677419354844,
+        "beta_inside": 1.0,
+        "beta_outside": 0.6129032258064515,
+        "action": 70.98720668088416,
+        "angular_residual": 0.0,
+        "inside_constraint": 0.0,
+        "outside_constraint": 0.0,
+        "scope": "Isolated zero-mass vacuum bounce; no determinant or finite-parent nucleation rate"
+      }
+    ],
+    "bounce_scale": "Actions listed are Bhat; physical B=Bhat*Lref^2/kappa_phys in normalized variables. No determinant, absolute rate or semiclassical validity is asserted.",
+    "boundary_limit": "P002 has nonzero Kottler masses and a finite dust parent; these isolated vacuum instantons are not its preparation or rates."
+  },
+  "scalar_candidate": {
+    "potential": "rho_b + m^2*phi^2/2 + (q+mu*phi)^2/2",
+    "epsilon": 0.25,
+    "omega": 20.0,
+    "bare_density": 0.0,
+    "normalization": "phi_hat=sqrt(kappa_phys)*phi, q_hat=sqrt(kappa_phys)*Lref*q, omega_hat=Lref*omega, rho_hat=kappa_phys*Lref^2*rho. Arithmetic kappa=1 selects no SI scale.",
+    "imported": "Kaloper-Sorbo0811.1989 Eqs1-3 for scalar/four-form mixing; additional positive m^2 is declared, without an axion symmetry or ultraviolet-completion claim.",
+    "preparation": {
+      "parent_flux": 1.5,
+      "charge": 0.5,
+      "child_flux": 1.0,
+      "inherited_phi": -0.06495190528383289,
+      "child_minimum": -0.043301270189221926,
+      "displacement": -0.021650635094610966,
+      "inherited_velocity": 0.0,
+      "parent_vacuum": 0.28125,
+      "parent_displacement": 0.0,
+      "parent_total_energy": 0.28125,
+      "child_vacuum": 0.125,
+      "oscillation_energy": 0.09375,
+      "released_to_transition": 0.0625,
+      "actual_wall_pressure": 0.06250000000000011,
+      "required_external_work": 0.0,
+      "energy_balance_residual": 0.0,
+      "interpretation": "Conditional rapid transfer with continuous phi and velocity; boundary work and parent excitation are explicit. No nucleation or homogeneous wall passage is derived."
+    },
+    "no_work_condition": "e <= 2*epsilon*q_parent for e>0 in this rapid ground-state transfer, not a condition on every possible tunnelling history",
+    "initial_excitation_to_vacuum_ratio": 0.75,
+    "strong_suppression_control": {
+      "parent_flux": 1.5,
+      "charge": 0.5,
+      "child_flux": 1.0,
+      "inherited_phi": -0.0746240577829965,
+      "child_minimum": -0.049749371855330994,
+      "displacement": -0.0248746859276655,
+      "inherited_velocity": 0.0,
+      "parent_vacuum": 0.01125,
+      "parent_displacement": 0.0,
+      "parent_total_energy": 0.01125,
+      "child_vacuum": 0.005,
+      "oscillation_energy": 0.12375000000000001,
+      "released_to_transition": -0.1175,
+      "actual_wall_pressure": -0.11749999999999994,
+      "required_external_work": 0.1175,
+      "energy_balance_residual": -1.3877787807814457e-17,
+      "interpretation": "Conditional rapid transfer with continuous phi and velocity; boundary work and parent excitation are explicit. No nucleation or homogeneous wall passage is derived."
+    },
+    "excited_parent_control": {
+      "parent_flux": 1.5,
+      "charge": 0.5,
+      "child_flux": 1.0,
+      "inherited_phi": -0.03495190528383289,
+      "child_minimum": -0.043301270189221926,
+      "displacement": 0.008349364905389033,
+      "inherited_velocity": 0.4,
+      "parent_vacuum": 0.28125,
+      "parent_displacement": 0.03,
+      "parent_total_energy": 0.54125,
+      "child_vacuum": 0.125,
+      "oscillation_energy": 0.09394237886466841,
+      "released_to_transition": 0.32230762113533157,
+      "actual_wall_pressure": 0.3223076211353317,
+      "required_external_work": 0.0,
+      "energy_balance_residual": 5.551115123125783e-17,
+      "interpretation": "Conditional rapid transfer with continuous phi and velocity; boundary work and parent excitation are explicit. No nucleation or homogeneous wall passage is derived."
+    },
+    "ground_state_no_work_bound": "For rho_b=0, q_parent>0 and 0<epsilon<1/2, Eosc/rho_v <= 4 epsilon(1-epsilon)/(1-2epsilon)^2 if the rapid ground-state transfer releases nonnegative energy. This bound does not apply to an excited parent.",
+    "scope": "A prescribed rapid-transfer preparation and a homogeneous post-transfer patch. No moving scalar/membrane junction or causal creation of a whole homogeneous slice has been solved."
+  },
+  "evolution": {
+    "efolds": 2.0,
+    "scale_factor": 7.389056098930653,
+    "proper_time": 9.31040100557882,
+    "initial_H": 0.27003086243366087,
+    "initial_omega_over_H": 74.0656079818041,
+    "final_H": 0.2043167787639488,
+    "vacuum_density": 0.125,
+    "final_oscillation_density": 0.0002360382533652313,
+    "final_oscillation_to_vacuum": 0.0018883060269218504,
+    "rho_osc_a_cubed_over_initial": 1.0157293629148583,
+    "statement": "The oscillating component dilutes approximately as dust; no perturbation/clustering or thermalization result is implied.",
+    "pressure_identity": "d(a^3*chi*chi_dot)/dt=2*a^3*p_osc; a zero-endpoint full-cycle comoving pressure integral vanishes exactly."
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "completed_square": "0",
+      "prepared_excitation": "0",
+      "transition_energy": "0",
+      "wall_force_uses_actual_field": "0",
+      "excited_parent_transfer": "0",
+      "scalar_conservation": "0",
+      "Friedmann_propagation": "0",
+      "comoving_virial": "0"
+    },
+    "Friedmann_max_residual": 5.694333893302428e-13,
+    "integrated_energy_max_residual": 5.707517791719852e-13,
+    "tolerance_max_state_difference": 2.6244544731879316e-10,
+    "independent_efold_clock_max_endpoint_gap": 2.595257342363766e-12,
+    "rhs_evaluations": [
+      7274,
+      12698,
+      15017
+    ]
+  },
+  "remaining": "Boundary-driven preparation and coupled scalar-wall evolution using the derived actual-field normal force; perturbations, measured couplings/scale, thermalization and observed density fractions.",
+  "numerical_uncertainty": "Tolerance and clock comparisons only, not a rigorous interval enclosure, model error or observational uncertainty.",
+  "field_grids": 0,
+  "process_cpu_seconds": 0.546875,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "scripts/check_nsc_atlas_flux_conversion.py": "497213cd3e24a8a0a8b41938de9192b7a461803c8f39a588b96ce94bef7c1a43",
+    "tests/test_nsc_atlas_flux_conversion.py": "53aa9350745263449ab03182340f7421286b71159aa8d587ef4bf44cd519adfb"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_flux_conversion.py"
+}

@@ -16,7 +16,47 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 20 October 2026
+## Current execution priority — 21 October 2026
+
+### Rethinking: selection and conversion before a formation campaign
+
+The last result closed a conditional geometry. Automatically making its
+full nucleation history the next campaign would still leave the question
+of what can select a vacuum and populate an evolving universe.
+
+Three routes were compared: full formation amplitudes in P002's finite
+massive parent (adds boundary/state data and a determinant calculation);
+immediate observer fitting of constant-flux domains (locally the same
+Einstein source as a supplied cosmological constant); and an action-based
+energy-conversion calculation (a scalar response ties residual vacuum to
+an evolving component). The third is the useful next connection, preceded
+by a short exact reachability test of the original flux sector.
+
+Complete: P002 and its finite evolving parent. The
+[selection and conversion calculation](nsc-atlas-flux-conversion.md)
+now also establishes the invariant flux offset, isolated-bounce controls,
+and a declared scalar/four-form transfer's energy split and homogeneous
+evolution. The actual scalar-dependent normal-force law is derived;
+the moving boundary that prepares this history is still unsolved.
+The extension adds one scalar, its frequency and mixing ratio; it must
+record transition work and inherited data instead of independently fitting
+vacuum and evolving densities. It is a separate candidate, not a mutation
+of P002's pure-tension solution. Reuse SciPy and the existing FluxLaw;
+no new runtime, grid solver or parameter search.
+
+Active next: derive its preparation from an actual moving boundary,
+including inherited parent excitation, and its perturbation response. A homogeneous
+post-transfer history does not itself supply that boundary or establish
+dark-matter clustering. Full formation rates earn priority when they can
+resolve a stated selection/preparation question. Keep the previous finite
+proof and PDF intact while this new connection is developed in its owner.
+
+Finish-line test: after preparation and couplings are fixed, one source
+must predict both a vacuum observable and an independent evolving-field
+observable. The three likely failures are unaccounted transition work,
+freedom to retune those outputs independently, and a scalar response
+that fails the required clustering or thermal history. Diagnose each at
+its actual equation; none calls for another P002 trajectory refinement.
 
 ### Completed next connection: a charged inherited vacuum
 

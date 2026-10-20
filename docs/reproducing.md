@@ -1,5 +1,13 @@
 # Reproducing the root project
 
+The [selection and scalar conversion](nsc-atlas-flux-conversion.md) uses
+```
+python scripts/run_python.py scripts/check_nsc_atlas_flux_conversion.py
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_flux_conversion.py -q
+```
+It is a separate conditional homogeneous calculation, not a replay or
+extension of P002's moving boundaries.
+
 The [charged transition](nsc-atlas-flux-transition.md) uses
 ```
 python scripts/run_python.py scripts/check_nsc_atlas_flux_transition.py

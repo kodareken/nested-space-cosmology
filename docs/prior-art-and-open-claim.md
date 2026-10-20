@@ -1,5 +1,14 @@
 # Prior art and admission of new research
 
+## Flux selection and scalar conversion, 21 October 2026
+
+The [calculation owner](nsc-atlas-flux-conversion.md#the-decision-and-the-scope)
+admits exact flux-sector bounds and three isolated bubble controls, followed
+by a separately declared scalar/four-form preparation and homogeneous
+history. Eight symbolic identities and independent proper/expansion
+clocks check one two-e-fold benchmark. No P002 trajectory refinement,
+observational fit or full formation campaign is admitted by this step.
+
 ## Charged vacuum inheritance and the common parent, 20 October 2026
 
 The [calculation owner](nsc-atlas-flux-transition.md#borrowed-construction-and-finite-calculation)

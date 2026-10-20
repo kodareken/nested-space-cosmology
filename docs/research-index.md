@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [flux selection and scalar conversion](nsc-atlas-flux-conversion.md)
+compares reachable vacuum levels, isolated formation controls and a
+specified scalar response. It derives the energy split, actual-field
+wall force, inherited state map and conditional homogeneous evolution.
+
 The [four-form and charged-membrane transition](nsc-atlas-flux-transition.md)
 connects inherited vacuum stress, two moving walls, one shared intermediate
 geometry and a cosmological parent. NSC-P002 records a tidal-trace relation

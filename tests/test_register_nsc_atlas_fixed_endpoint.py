@@ -54,22 +54,47 @@ def receipts(radii=(.54, .545, .546), gaps=(1., .5, .25)):
     return rows
 
 
-def historical_root(tmp_path, source=ROOT):
-    """Copy one repository and restore the explicit pre-extension P001 view.
+def bound_evidence_paths(value):
+    found = []
 
-    Only the optional finite-amplitude object is removed, and its SI flag is
-    reset. A source that already carries a completed extension still yields
-    the historical register.
-    """
+    def walk(node):
+        if isinstance(node, dict):
+            path = node.get("path")
+            if (isinstance(path, str) and isinstance(node.get("bytes"), int)
+                    and isinstance(node.get("sha256"), str)):
+                found.append(path)
+            for item in node.values():
+                walk(item)
+        elif isinstance(node, list):
+            for item in node:
+                walk(item)
+
+    walk(value)
+    return found
+
+
+def copy_named(source, destination_root, names):
     source = Path(source)
-    for name in (checker.REGISTER, checker.DOCUMENT, *checker.EVIDENCE.values()):
-        destination = tmp_path / name
+    for name in dict.fromkeys(names):
+        destination = destination_root / name
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source / name, destination)
+
+
+def historical_root(tmp_path, source=ROOT):
+    """Copy one repository and restore the explicit historical P001 register.
+
+    Later entries are omitted. The optional finite-amplitude object is removed
+    from NSC-P001 and its SI flag is reset. A source that already carries a
+    completed extension still yields that one-entry historical register.
+    """
+    source = Path(source)
+    copy_named(source, tmp_path, (checker.REGISTER, checker.DOCUMENT, *checker.EVIDENCE.values()))
     path = tmp_path / checker.REGISTER
     document = json.loads(path.read_text(encoding="utf-8"))
     saved = document["entries"][0]
-    changed = "finite_amplitude" in saved
+    changed = len(document["entries"]) != 1 or "finite_amplitude" in saved
+    document["entries"] = [saved]
     saved.pop("finite_amplitude", None)
     if saved["observational_test"].get("SI_scale_selected") is not False:
         saved["observational_test"]["SI_scale_selected"] = False
@@ -77,6 +102,20 @@ def historical_root(tmp_path, source=ROOT):
     if changed:
         path.write_text(json.dumps(document, indent=2, allow_nan=False) + "\n",
                         encoding="utf-8", newline="\n")
+    return tmp_path
+
+
+def current_root(tmp_path, source=ROOT):
+    """Copy the live register and every evidence file its entries already bind."""
+    source = Path(source)
+    document = json.loads((source / checker.REGISTER).read_text(encoding="utf-8"))
+    names = [checker.REGISTER, checker.DOCUMENT, *checker.EVIDENCE.values()]
+    for item in document["entries"]:
+        names.extend(bound_evidence_paths(item.get("evidence")))
+        extension = item.get("finite_amplitude")
+        if isinstance(extension, dict):
+            names.extend(bound_evidence_paths(extension.get("evidence")))
+    copy_named(source, tmp_path, names)
     return tmp_path
 
 
@@ -104,10 +143,11 @@ def entry(root):
 
 
 def test_current_register_checker_accepts_either_valid_state():
-    saved = json.loads((ROOT / checker.REGISTER).read_text(encoding="utf-8"))["entries"][0]
+    entries = json.loads((ROOT / checker.REGISTER).read_text(encoding="utf-8"))["entries"]
+    saved = entries[0]
     result = checker.check(ROOT)
-    assert result["predictions"] == 1
-    assert result["evidence_files"] == 7
+    assert result["predictions"] == len(entries)
+    assert result["evidence_files"] == len(checker.EVIDENCE) + len(entries) - 1
     assert result["coefficient_projections"] == 4
     assert result["exact_identity_projections"] == 2
     assert result["scientific_replays"] == 0
@@ -158,6 +198,25 @@ def test_historical_view_drops_an_installed_extension(tmp_path):
         predictions=1, evidence_files=7, coefficient_projections=4,
         exact_identity_projections=2, scientific_replays=0)
     assert checker.check(source)["finite_amplitude_endpoints"] == 3
+
+
+def test_registration_retains_every_live_entry(tmp_path):
+    root = current_root(tmp_path)
+    before = json.loads((root / checker.REGISTER).read_text(encoding="utf-8"))
+    live = json.loads((ROOT / checker.REGISTER).read_text(encoding="utf-8"))["entries"]
+    later = copy.deepcopy(before["entries"][1:])
+    assert [item["id"] for item in before["entries"]] == [item["id"] for item in live]
+    write_comparison(root, receipts())
+    result = registrar.register(root, COMPARISON)
+    saved = json.loads((root / checker.REGISTER).read_text(encoding="utf-8"))
+    assert result["prediction"] == "NSC-P001"
+    assert [item["id"] for item in saved["entries"]] == [item["id"] for item in live]
+    assert saved["entries"][1:] == later
+    assert "finite_amplitude" in saved["entries"][0]
+    checked = checker.check(root)
+    assert checked["predictions"] == len(live)
+    assert checked["evidence_files"] == len(checker.EVIDENCE) + len(live) - 1
+    assert checked["finite_amplitude_endpoints"] == 3
 
 
 def test_synthetic_extension_preserves_historical_coefficients(tmp_path, monkeypatch):
@@ -432,7 +491,7 @@ def test_scale_event_and_uncertainty_cannot_be_promoted(tmp_path):
            "finite-amplitude event")
     reject(lambda item: item["observational_test"].update(SI_scale_selected=False), "observational status")
     reject(lambda item: item["observational_test"].update(status="confirmed"), "observational status")
-    reject(lambda item: item.update(id="NSC-P002"), "prediction identity")
+    reject(lambda item: item.update(id="NSC-P002"), "optional unique P002")
     reject(lambda item: item["finite_amplitude"].update(id="NSC-P002"), "finite-amplitude fields")
 
 
