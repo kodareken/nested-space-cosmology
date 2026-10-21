@@ -10,6 +10,12 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ### Coupled regular preparation, 21 October 2026
 
+- [Bandos, Blanco-Pillado, Sousa and Urkiola, 2306.09412v1](https://arxiv.org/html/2306.09412),
+  abstract and Section5 through equations(5.1)--(5.13) inspected:
+  published scalar/membrane/gravity instanton construction. Their
+  supersymmetric field-dependent membrane term gives a scalar jump;
+  our constant-tension example does not import that boundary law.
+  The general combined construction is prior art.
 - [Coleman--De Luccia, Phys. Rev. D21,3305](https://doi.org/10.1103/PhysRevD.21.3305):
   source attribution for gravitational vacuum preparation; publisher record
   inspected. Explicit equations and continuation were read in the next source.

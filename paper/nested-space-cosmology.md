@@ -3,79 +3,48 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 20 October 2026
+Working research manuscript, 21 October 2026
 
 ## Abstract
 
-Nested-Space Cosmology develops a geometric account of regions, their
-transitions and the world accessible to an interior observer. Its proposed
-inherited law is realized by exact finite and positive infinite operator
-constructions, with nested elimination retaining the response of unresolved
-surroundings. The infinite finite-energy realization has a controlled local
-response and a derived spectral counting exponent. We
-connect this mathematical map to explicit geometries, specified fields and
-quantitative observer tests.
+Nested-Space Cosmology develops a mathematical atlas of regions, boundaries,
+fields and the world accessible to an interior observer. It combines
+attributed geometric constructions with explicit sources, evolution and
+observable consequences. Finite and positive infinite operator models
+realize an inherited law and retain unresolved surroundings through
+Schur reduction. Their physical identification is investigated through
+separately specified spacetime and field candidates.
 
-A spherical Einstein/conformal-scalar candidate joins a regular de Sitter
-cap to a Schwarzschild end through a pure-tension wall. Characteristic
-preparation supplies a transmitted pulse and finite scattering tail.
-Perturbative gravitational response and a finite-amplitude onset solution
-are established on their declared domains; longer nonlinear closure remains
-unresolved. The supplied cap vacuum term is an input. The actual exterior
-Robin response is nonzero, while the added smooth classical vacuum trace
-vanishes. Whole-body reduction gives pressureless mass at leading dilute,
-conserved order. One- and two-level sourced slices have nonzero geometric
-traces but fail vacuum form. The second level keeps the same membrane law
-and gives an inner-wall test-flash relation, $1+z=3.74639338$. Its exact
-vacuum end supports a conditional parent initial-data family with unequal
-children and a retained grandchild. A finite shared host history now locates
-both wall segments and their incoming source collars on that original slice;
-neither segment can signal the other within the constructed host patch.
+An Einstein/conformal-scalar cap, membrane and exterior provide prepared
+field transfer, perturbative gravitational response and a finite-amplitude
+onset construction. Longer nonlinear closure remains unresolved. A compact
+shared parent demonstrates that changing a global geometric average need
+not change a retained observer's signal. Material sphere states support
+radially stable horizonless attachments and distinct clock responses in
+one dust cosmology. These results have finite domains; their supplied
+vacuum scales are not predictions of the observed cosmological constant.
 
-A massless Dirac probe on that quiet geometry now has local bulk and
-Euler-interface trace terms, a finite wall radar chart, and action-derived
-stress vertices. A specified finite occupation difference now propagates
-through the actual wall and sources a mean metric and radar-clock correction.
-Its logarithmic clock coefficient is $-.41780$, with a 64/128 numerical
-spread $1.12\times10^{-5}$. A conserved compact-source family also gives
-a stable prepared clock mass derivative and a local tidal-response
-difference of about five parts per million. A separately declared static-product
-parent now supplies a correlated continuum preparation. A folded-interface
-argument establishes its local Hadamard class inside the common smooth cap.
-Its numerical vacuum stress and full gravitational slip remain uncomputed.
+A charged four-form extension relates regional vacuum changes through one
+field law and gives a composed finite geometry and a curvature observable.
+Adding a declared scalar response now permits a coupled regular
+scalar--gravity--membrane preparation. Its physical Dirichlet-to-Neumann
+maps reproduce the scalar action by Schur elimination, and its Lorentzian
+continuation gives an expanding boundary and an open child cosmology.
+For the fixed benchmark, the prepared homogeneous excitation is about
+$9.62\times10^{-47}$ in normalized units, far below the earlier assumed
+sudden-transfer value $.09375$. The field excitation is concentrated
+in the spatial layer. Exact matching and continuation identities accompany
+the converged numerical construction; a quantum decay rate is not inferred.
 
-A separate periodic Einstein--Weyl--Dirac realization permits averaging in
-a specified observer clock and direct light-cone calculation. Its final
-dimensionless geometric trace is $-0.57251629$, with vacuum-form defect
-$2.17744464$; the domain contracts. Normal test probes nevertheless produce
-opposite signs of redshift on the two radial sides. At the longest declared
-lookback their luminosity-to-radar distance ratios are $1.000074$ and
-$0.991109$. These are finite metric predictions with recorded numerical
-comparison indicators.
-
-The exact quiet-cap luminosity law is also tested against 596 Pantheon+
-light curves and their published covariance. A brightness-scale-independent
-contrast differs from its zero prediction by $-0.1046\pm0.0144$ magnitudes.
-This retrospective test challenges that quiet limit without fitting
-$\Lambda$CDM parameters. Together these calculations provide finite
-connections and explicit failed limits. An exact compensated dust parent
-now extends the retained exterior and yields a received frequency ratio
-$1+z=1.778824923298$. Separate bulk-gravity constructions exhibit induced
-curvature and an attributed shadow-matter lensing discriminator. The
-existing constant-tension wall has no stable equilibrium selecting its
-cap scale. An explicit new worldvolume Dirac state now supplies material
-pressure and a radially stable horizonless attachment. Two unequal occupied
-rooms share one dust parent, with calculable central clock signals under
-fixed couplings. Initial state selection, general stability and a realistic
-cosmological and thermal history remain to be derived and tested.
-
-A separate Einstein/four-form candidate now derives vacuum changes from
-a charged-membrane inheritance law. Two moving boundaries share one
-intermediate spacetime and join an expanding cosmological parent. The
-benchmark gives $\Lambda L_{\rm ref}^2=1.125,.5,.125$ across three regions,
-with a mass-independent tidal observable and equal-charge second-difference
-identity. The mechanism is borrowed from Brown--Teitelboim; parent flux,
-charge, vacuum normalization and physical scale remain inputs.
+Observer tests remain essential. The exact quiet-cap distance law differs
+from a brightness-scale-independent contrast of 596 Pantheon+ light curves
+by $-0.1046\pm0.0144$ magnitudes using their published covariance. That
+retrospective comparison challenges the quiet limit, while the other
+clock and curvature values are conditional calculations. Absolute vacuum
+selection, physical preparation producing substantial matter, general
+stability and a realistic cosmological and thermal history remain open.
+The atlas records both constructive connections and failed identifications
+without combining incompatible actions into one claimed theory.
 
 ## I. The question and the spherical idea
 
@@ -111,7 +80,7 @@ The route through the book is therefore also a route through other authors'
 constructions. Attribution belongs beside the useful equation, with the
 assumptions that allow it to enter the map.
 
-Several building blocks guide the new comparison in Sections 10.8--10.15:
+Several building blocks guide the new comparison in Sections 10.8--10.17:
 
 | Construction and contributors | What it contributes to the atlas |
 | --- | --- |
@@ -121,6 +90,7 @@ Several building blocks guide the new comparison in Sections 10.8--10.15:
 | Mazur and Mottola; Visser and Wiltshire | Material interfaces and stability tools beyond a constant-tension wall |
 | Abrikosov; Macpherson and Campbell; Ogure, Yoshida and Arafune | A finite sphere spectrum and localized-fermion material pressure |
 | Brown and Teitelboim; Bousso and Polchinski; Hirano | A charged boundary that changes vacuum stress through a common field law |
+| Kaloper and Sorbo; Coleman and De Luccia; Dong and Harlow | Scalar response, regular gravitational preparation and an expanding child continuation |
 | Morris and Thorne; Easson and Brandenberger | Established throat and black-hole-interior cosmology constructions |
 
 Their primary sources and the actual connections appear with the calculations.
@@ -3845,6 +3815,195 @@ nucleation. Selecting a formation history and flux sector, with reheating
 and observable consequences, is next; refining these trajectories would
 not select the cosmological scale.
 
+### 10.16. Preparing the scalar, membrane and geometry together
+
+<!-- nsc-claim:scalar-gravity-preparation -->
+
+Evidence: [coupled preparation and scope](../docs/nsc-atlas-scalar-preparation.md),
+[regular geometry and checks](../results/summaries/nsc-atlas-scalar-preparation-v1.json)
+and [scientific controls](../tests/test_nsc_atlas_scalar_preparation.py).
+
+A constant four-form alone supplies vacuum stress. To investigate an
+evolving component, explicitly add a canonical scalar with
+
+$$
+U(\phi,q)=\rho_b+\frac{m^2\phi^2}{2}+\frac{(q+\mu\phi)^2}{2},
+\qquad
+\omega^2=m^2+\mu^2,\qquad \epsilon=\frac{m^2}{\omega^2}.
+$$
+
+The mixing and fixed-flux elimination come from
+[Kaloper--Sorbo](https://arxiv.org/html/0811.1989), equations (1)--(3).
+The positive mass term is an additional declared choice; their axion
+symmetry is not assumed for it. The minimum and residual density are
+
+$$
+\phi_*(q)=-\frac{\mu q}{\omega^2},\qquad
+\rho_{\rm vac}(q)=\rho_b+\frac{\epsilon q^2}{2}.
+$$
+
+A [conditional rapid-transfer calculation](../docs/nsc-atlas-flux-conversion.md)
+gave residual density $.125$, excitation $.09375$ and local energy
+release $.0625$ for $\epsilon=1/4$, $\omega=20$, $q_p=1.5$,
+$e=.5$ and $\rho_b=0$. Its
+[conserving homogeneous history](../results/summaries/nsc-atlas-flux-conversion-v1.json)
+did not establish the moving boundary that prepares those data.
+
+There is an exact matching obstruction. At a timelike interface, continuity
+between a homogeneous child $\phi_c(t)$ and a constant parent requires
+$(d\phi_c/dt)(dt_W/d\tau_W)=0$. Since $dt_W/d\tau_W\geq1$, the child cannot
+roll there. Its constant value also fails the child field equation when
+$U_{\phi,c}-U_{\phi,p}=-\mu e\ne0$. A spatial scalar layer is necessary.
+
+We retain those couplings and constant tension $\sigma=.2$, then use
+regular gravitational preparation in the
+[Coleman--De Luccia](https://doi.org/10.1103/PhysRevD.21.3305) construction,
+with the continuation described by
+[Dong--Harlow, Sections 2.1--2.2](https://arxiv.org/html/1109.0011).
+Combined scalar, membrane and gravity preparations also appear in
+[Bandos, Blanco-Pillado, Sousa and Urkiola, Section 5](https://arxiv.org/html/2306.09412).
+Their field-dependent membrane coupling gives a scalar derivative jump;
+our constant-tension example retains a continuous normal derivative.
+Each cap has a pole-to-wall coordinate $\xi_j$,
+
+$$
+ds_E^2=d\xi_j^2+a_j^2d\Omega_3^2,\qquad
+\chi_j=\phi_j-\phi_*(q_j),
+$$
+$$
+\chi_j''+3\frac{a_j'}{a_j}\chi_j'=\omega^2\chi_j,\qquad
+a_j''=-\frac{\kappa a_j}{3}
+\left(\chi_j'^2+\rho_j+\frac{\omega^2\chi_j^2}{2}\right).
+$$
+
+Regularity imposes $a_j(0)=0$, $a_j'(0)=1$ and $\chi_j'(0)=0$.
+The Hamilton constraint propagates from these poles. The two lengths
+and scalar pole values are outputs. At the wall,
+
+$$
+a_i=a_o=R_*,\qquad
+\chi_i-\chi_o=-\Delta,\qquad \chi_i'+\chi_o'=0,
+$$
+$$
+a_i'+a_o'=\frac{\kappa\sigma R_*}{2},\qquad
+\Delta=\frac{\mu e}{\omega^2}.
+$$
+
+The parent pole-to-wall derivative points opposite to the common outward
+normal. Both caps therefore satisfy the same charged force,
+
+$$
+\sigma\overline{K}
+=e\left(q_p+\mu\phi_W-\frac{e}{2}\right),
+\qquad [K^a{}_b]=-\frac{\kappa\sigma}{2}\delta^a_b.
+$$
+
+All field gradients and gravitational effects are retained in the solve.
+The converged ordinary-cap branch gives
+
+| Quantity | Normalized value |
+| --- | ---: |
+| Wall radius $R_*$ | 2.70634531321651 |
+| Child pole-to-wall length | 2.86731015671418 |
+| Parent pole-to-wall length | 7.07049444470919 |
+| Wall field $\phi_W$ | -.0543355679824020 |
+| Common normal field derivative | -.215595888249873 |
+| Wall normal pressure | .154440177981835 |
+
+The two collocation tolerances change the radius by $3.81\times10^{-12}$.
+The independent Hamilton constraint is below $6.9\times10^{-13}$ and
+the sampled scalar equation below $2.2\times10^{-9}$.
+These are numerical checks of a nonlinear construction, not a
+validated interval proof of existence or uniqueness.
+
+![Scalar layer, shared geometry and continued boundary](../docs/figures/nsc-atlas-scalar-preparation.png)
+
+*Figure 12. The scalar transition layer and gravitational caps are solved
+together with the membrane. Both field value and common-normal derivative
+are continuous. The right panel shows the continued timelike boundary.
+Lengths and field values use the declared normalized variables.*
+
+### 10.17. Physical boundary reduction and the prepared child
+
+<!-- nsc-claim:scalar-preparation-schur -->
+
+Evidence: [boundary action and continuation](../docs/nsc-atlas-scalar-preparation.md#a-physical-scalar-boundary-reduction),
+[independent action and pole transfer](../results/summaries/nsc-atlas-scalar-preparation-v1.json).
+
+At this solved geometry, the regular scalar maps
+$s_j=\chi_j'(L_j)/\chi_j(L_j)$ are actual Dirichlet-to-Neumann coefficients.
+Continuity and normal matching determine
+
+$$
+\chi_i=-\frac{\Delta s_o}{s_i+s_o},\qquad
+\chi_o=\frac{\Delta s_i}{s_i+s_o}.
+$$
+
+Integrating $(a^3\chi\chi')'=a^3(\chi'^2+\omega^2\chi^2)$ gives
+the scalar excitation action at fixed geometry:
+
+$$
+S_\chi=\pi^2R_*^3
+\left(s_i\chi_i^2+s_o\chi_o^2\right)
+=\pi^2R_*^3\Delta^2\frac{s_i s_o}{s_i+s_o}.
+$$
+
+The coefficients are $s_i=19.53870489005$ and $s_o=20.30793503714$,
+with Schur coefficient $9.95794752938$. Direct bulk integration and
+the boundary expression give $S_\chi=.913188612282$, differing by less
+than $2.8\times10^{-13}$. This is a physical elliptic preparation
+reduction. It is not yet a retarded memory kernel or an added bulk Lambda.
+
+Continuing one sphere angle gives
+
+$$
+ds_L^2=d\xi_j^2+a_j^2
+\left(-d\eta^2+\cosh^2\eta\,d\Omega_2^2\right).
+$$
+
+The same scalar and junction equations hold. Wall proper time is
+$\tau_W=R_*\eta$, and
+$R_W=R_*\cosh(\tau_W/R_*)$. At $\eta=1$ the areal radius is
+$4.17610904394739$. Scalar energy flux vanishes in the symmetric wall's
+rest frame; the spatial layer and its stresses are part of the solution.
+
+Near the child pole, $\xi=i\tau$ produces an open cosmology:
+
+$$
+\ddot\chi+3\frac{\dot b}{b}\dot\chi+\omega^2\chi=0,\qquad
+\dot b^2=1+\frac{\kappa b^2}{3}(\rho_i+E),
+\qquad E=\frac{1}{2}(\dot\chi^2+\omega^2\chi^2).
+$$
+
+Its regular data are $b(0)=0$, $(db/d\tau)(0)=1$, $(d\chi/d\tau)(0)=0$ and
+the calculated pole value $\chi(0)=\chi_i(0)$. The coordinate origin
+has finite curvature. Since $dE/d\tau=-3H(d\chi/d\tau)^2\leq0$ and
+$\rho_i>0$, comparison bounds $b$ between open de Sitter solutions
+with densities $\rho_i$ and $\rho_i+E_0$. The homogeneous future chart
+therefore continues through every finite proper time.
+
+An independent logarithmic-mode calculation determines the small pole
+state without subtracting nearly equal field minima:
+
+$$
+\chi_i(0)=-6.9370429853\times10^{-25},\qquad
+E_0=9.6245130760\times10^{-47}.
+$$
+
+This preparation does not realize the earlier assumed excitation $.09375$.
+The spatial scalar layer carries energy per membrane area
+$.00233741846805$, distinct from the bare tension $.2$. The homogeneous
+child remains vacuum dominated, with $E/\rho_i\leq7.70\times10^{-46}$.
+The calculation identifies where the excitation resides and prevents
+importing the rapid-transfer amplitude into a different prepared state.
+
+Regular Euclidean preparation is a declared state choice. No negative-mode
+count, determinant, preferred contour or tunnelling probability has been
+derived. A physically specified excited-parent or nonequilibrium
+preparation is needed if substantial child matter is claimed. Absolute
+vacuum scale, black-hole collapse formation and infinite physical nesting
+remain separate questions.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -3894,7 +4053,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 11. The isolated reference in joined causal charts. Horizons are
+*Figure 13. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -4900,7 +5059,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 12. Saved finite-window comparisons. A: the previous and current
+*Figure 14. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -4996,7 +5155,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 13. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 15. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -5781,7 +5940,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 14. Research dependencies, distinct from spacetime causal arrows.
+*Figure 16. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

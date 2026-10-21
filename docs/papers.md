@@ -6,6 +6,14 @@ The one living manuscript is **Nested-Space Cosmology: The Geometry of a Univers
 of the software release. Future writing updates these files. The
 [catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
+Revision 2026-10-21.1 adds Sections 10.16--10.17 and Figure 12: a coupled
+regular scalar/gravity/membrane preparation, its physical boundary
+Schur reduction, and its Lorentzian wall and open-child continuation.
+The selected branch's homogeneous excitation is tiny, so it does not
+realize the earlier rapid-transfer matter component. The abstract now
+summarizes the connected results and their domains rather than listing
+every historical benchmark. Quantum transition probability remains open.
+
 Revision 2026-10-20.6 adds Sections 10.14--10.15 and Figure 11: an
 attributed four-form/charged-membrane action supplies vacuum inheritance,
 two compatible moving boundaries and an expanding cosmological join.

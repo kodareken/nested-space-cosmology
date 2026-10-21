@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "86ac8e3b2fdeb20648acca7ef0a973d1550a6dc4",
+  "current_receipt_commit_parent": "ce24d5a29264e83226339443acd18e34f0fdb8de",
   "files": [
     {
       "bytes": 3120,
@@ -10282,12 +10282,12 @@
       "sha256": "acd9f4e6b5880e8cb78bc9a51a1c0793de8d5e0cab98d8ebcccf38cf4659e90a"
     },
     {
-      "bytes": 118226,
+      "bytes": 118638,
       "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
-      "changed_from_commit": "86ac8e3b2fdeb20648acca7ef0a973d1550a6dc4",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "121bf4df33aaa4568b027db7997bcd2692c399b413f3cda8f226db47d0423de4"
+      "sha256": "4b70baa07b927e1cf0edc83e596091fcea1f4b0a1cd8f36d3566f0a87db99ca8"
     },
     {
       "bytes": 9543,
@@ -10605,12 +10605,12 @@
       "sha256": "91b43432388a01470a6958102ec5b79ad7041d8c803b561a5d407f0bc12bf67a"
     },
     {
-      "bytes": 11560,
+      "bytes": 13072,
       "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
-      "changed_from_commit": "86ac8e3b2fdeb20648acca7ef0a973d1550a6dc4",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "docs/nsc-atlas-scalar-preparation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "5e77ca779094c5a57fab4668bcfac72e40b4bd7a39b94dbc27a95005b1e0d4ba"
+      "sha256": "b35adc596ea174a27f22833a338a655329791d2253460b2713920e3282b92dc5"
     },
     {
       "bytes": 9716,
@@ -11608,12 +11608,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 20959,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 21454,
+      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "49475c585cf0d0cea5cbe357fb9fe1a419ffb163647dc1a32aa662919df3f7e8"
+      "sha256": "940a6e4229b948dd99e964f87b3d4878884f47374249ccea1f1fe1225c54167d"
     },
     {
       "bytes": 10809,
@@ -11720,28 +11720,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 26051,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 26543,
+      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0e17bf84db3e072282033b2512c88c653690935fdb782828701fd76121a38df5"
+      "sha256": "4b108606f8260fb65b8ed11f9079e25f84785db570efe2854b5fe1869951f08a"
     },
     {
       "bytes": 3206,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "b69c59bd8dfc00eea8a9a1d13a77f86e40062d19498d3fbd22a00deb4c533c28"
+      "sha256": "f36298bd646499706b7aacd325349bfb5a1b52903e74e7b51c374a5801a2c21f"
     },
     {
-      "bytes": 28655,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 28954,
+      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "55874648ebef7e01f8fccff70c104003d9356f4654e0d8847848b613e3215aef"
+      "sha256": "92c6c4e9e59fca3dbb0156b67ce1c4a544695332cc1a1b1df5c72dddd0a0dba7"
     },
     {
       "bytes": 226492,
@@ -11753,27 +11753,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0253ea4a1055a45c904b0d2c963a205f0f529849e92def734f5137207e778cdb"
+      "sha256": "a6388809b807d89b0b66cae49e654fb6528cb66a99e92f5e20f5660e8b1b5a24"
     },
     {
-      "bytes": 286151,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 291764,
+      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "3142a32f9293ec8c168fc6bd6fa2ef7964f86b955f509cc11f7ed6fd61af61b4"
+      "sha256": "76450e02bf677bd1a9ae23fc6f91aa98342f8714863924dec7ae766aa35ce624"
     },
     {
-      "bytes": 6499693,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 6799198,
+      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
+      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "69c309205af16bd99b0802e2991c9ebb86db5c520ec99ef79bd2c522b911c64b"
+      "sha256": "7cb9fe0d682052ecfdca71ebf395a611cb3b76f49f653984aa078722a995f851"
     },
     {
       "bytes": 3283,

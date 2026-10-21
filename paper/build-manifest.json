@@ -1,10 +1,10 @@
 {
-  "bytes": 6499693,
+  "bytes": 6799198,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "0253ea4a1055a45c904b0d2c963a205f0f529849e92def734f5137207e778cdb",
+  "metadata_sha256": "a6388809b807d89b0b66cae49e654fb6528cb66a99e92f5e20f5660e8b1b5a24",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 92,
-  "pdf_sha256": "69c309205af16bd99b0802e2991c9ebb86db5c520ec99ef79bd2c522b911c64b",
+  "pages": 95,
+  "pdf_sha256": "7cb9fe0d682052ecfdca71ebf395a611cb3b76f49f653984aa078722a995f851",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -34,6 +34,10 @@
     {
       "path": "docs/figures/nsc-atlas-parent-observables.png",
       "sha256": "4009b185b88dc9b577ceddc5d14b235046269f7190984ef4f7871836b3e9c328"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-scalar-preparation.png",
+      "sha256": "6b1b045a9ae28b3398f3c21cfecc88aee986e1a6b7d2f9f0efdeae0688339f04"
     },
     {
       "path": "docs/figures/nsc-atlas-ssprk3-refinement.manifest.json",
@@ -472,6 +476,10 @@
       "sha256": "e1c65bb9b3dc289899206abd39fdf09dc2277b3cec9132a83a3ee303e86133cc"
     },
     {
+      "path": "results/summaries/nsc-atlas-flux-conversion-v1.json",
+      "sha256": "b9e3343d04c0574878395c99164a451277446860d9413595dc135116182430ef"
+    },
+    {
       "path": "results/summaries/nsc-atlas-flux-transition-v1.json",
       "sha256": "ad77b5643dd948d2489186c8cccee2759adbbb6d29f5a0484c5674af26ead4fa"
     },
@@ -534,6 +542,10 @@
     {
       "path": "results/summaries/nsc-atlas-scalar-departure-bound-v1.json",
       "sha256": "fb52782856689b88ce2d6bee893085352eda9c380372ec178d2aa670196ef7f5"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-scalar-preparation-v1.json",
+      "sha256": "1ce1ce949be809410b488f7392eecb1c3ed1838cfd890e0110b5f2361139bb38"
     },
     {
       "path": "results/summaries/nsc-atlas-source-forcing-bound-v1.json",
@@ -601,6 +613,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "3142a32f9293ec8c168fc6bd6fa2ef7964f86b955f509cc11f7ed6fd61af61b4",
-  "version": "working-2026-10-20.6"
+  "source_sha256": "76450e02bf677bd1a9ae23fc6f91aa98342f8714863924dec7ae766aa35ce624",
+  "version": "working-2026-10-21.1"
 }

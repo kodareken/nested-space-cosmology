@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v2",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-20",
+  "recorded_on": "2026-10-21",
   "purpose": "Bind the living main manuscript's claims to directly linked evidence. Preserved historical findings remain indexed without promoting them to current cosmological results.",
   "historical_claim_bindings": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
   "how_records_are_found": "The checker reads links following each unique nsc-claim marker from the manuscript itself.",
@@ -338,6 +338,16 @@
       "section": "10.15",
       "status": "measured",
       "owner": "docs/nsc-atlas-flux-transition.md"
+    },
+    "scalar-gravity-preparation": {
+      "section": "10.16",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-scalar-preparation.md"
+    },
+    "scalar-preparation-schur": {
+      "section": "10.17",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-scalar-preparation.md"
     }
   },
   "findings": [

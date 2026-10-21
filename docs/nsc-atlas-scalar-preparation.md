@@ -57,6 +57,13 @@ The charged-wall convention remains the one checked against
 [Hirano, Section 2.3](https://arxiv.org/html/1804.09985).
 No supersymmetric or field-dependent membrane tension is imported.
 
+Closely related combined scalar/membrane/gravity preparations are already
+published in [Bandos, Blanco-Pillado, Sousa and Urkiola, Section5](https://arxiv.org/html/2306.09412).
+Their field-dependent membrane tension also sources a scalar derivative
+jump. Our constant-tension quadratic example retains continuous normal
+derivatives. The general combination is prior art; the result here is
+the stated model's checked profile, boundary reduction and child state.
+
 **Finite question and budget.** Construct one regular two-cap solution
 with the declared action, then determine its field transfer and child
 excitation. Compare adaptive collocation tolerances 1e-7 and 1e-9,
@@ -140,6 +147,9 @@ conditions of the common action, not a pressure fitted afterward.
 
 At the solved geometry, define regular-cap maps
 s_i=chi_i'(L_i)/chi_i(L_i) and s_o=chi_o'(L_o)/chi_o(L_o).
+For a positive cap scale factor, (a^3 chi')'=a^3 omega^2 chi shows
+that a nonzero regular mode keeps its sign and grows in absolute value
+from the pole. It has no zero on the cap, and both coefficients are positive.
 These are Dirichlet-to-Neumann coefficients of the actual scalar operator
 
 $$
@@ -212,11 +222,30 @@ $$
 R_W(\tau_W)=R_*\cosh(\tau_W/R_*).
 $$
 
+The eta=0 slice is an additional direct check of the physical connection.
+It has induced metric dxi^2+a^2 dOmega_2^2 and vanishing extrinsic
+curvature in time. S1--S2 give
+
+$$
+{}^{(3)}R=-\frac{4a''}{a}+\frac{2(1-a'^2)}{a^2}
+=2\kappa\left(\frac{\phi'^2}{2}+U\right).
+$$
+
+The wall derivative jump [a']=-kR_* contributes
+-4[a']/R_*=4k=2kappa sigma to the curvature delta. The Hamilton
+constraint therefore includes exactly the rest membrane energy.
+All scalar and wall momentum densities vanish on this slice. Thus
+the preparation supplies compatible Lorentzian initial data, including
+the surface source, rather than only formal Euclidean profiles.
+
 For eta=1, tau_W=2.70634531321651 and R_W=4.17610904394739.
 The wall is timelike; its areal-radius derivative exceeding one is not
 a local superluminal velocity. In its rest frame the scalar energy
 flux is zero for this symmetric prepared solution. The spatial layer
 and its stresses are present in the geometry.
+Likewise d^2R_W/dtau_W^2 is an areal-radius second derivative, not the
+invariant proper acceleration; the two side accelerations are K_i/3
+and K_o/3 in the adopted orientation.
 
 Near the child pole, xi=i tau gives an open FLRW chart,
 
@@ -263,7 +292,7 @@ $$
 E_0=9.6245130760\,10^{-47}.
 $$
 
-The gain from child pole to wall is51.1210048481. The large homogeneous
+The gain from child pole to wall is 51.1210048481. The large homogeneous
 excitation .09375 from the earlier frozen transfer is therefore not
 realized by this preparation. E_0/.09375=1.0266e-45, and S9 limits
 the child excitation to E/rho_i<=7.70e-46 throughout this homogeneous
@@ -273,7 +302,7 @@ for further tiny-tail certification.
 For an illustrative local response at tau=1, evolve the normalized
 scalar on the open de Sitter background. The actual Friedmann correction
 at fixed b is bounded by kappa E_0/3=3.21e-47. The computed excitation
-is2.84e-50; the local free-fall tidal-trace increment is -4.44e-50
+is 2.84e-50; the local free-fall tidal-trace increment is -4.44e-50
 against vacuum trace .125. These are approximation-controlled reference
 values, not observational error bars or a measured dark-matter abundance.
 
@@ -281,11 +310,11 @@ values, not observational error bars or a measured dark-matter abundance.
 
 The [compact record](../results/summaries/nsc-atlas-scalar-preparation-v1.json)
 binds source, producer, tests and figure. Six identities vanish exactly.
-The two collocation tolerances change R_* by3.81e-12 and the logarithmic
-pole-transfer amplitude by9.0e-11 relatively. The independent Hamilton
-constraint is below6.9e-13, the sampled scalar equation below2.2e-9,
-and the weighted tangential Einstein equation below1.2e-9. Wall matching
-and force residuals are below1e-14. These are controlled numerical checks,
+The two collocation tolerances change R_* by 3.81e-12 and the logarithmic
+pole-transfer amplitude by 9.0e-11 relatively. The independent Hamilton
+constraint is below 6.9e-13, the sampled scalar equation below 2.2e-9,
+and the weighted tangential Einstein equation below 1.2e-9. Wall matching
+and force residuals are below 1e-14. These are controlled numerical checks,
 not an interval-certified nonlinear existence or uniqueness proof.
 The zero-mixing control recovers the imported pure-flux cap solution.
 
