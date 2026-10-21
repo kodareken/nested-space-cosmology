@@ -1,5 +1,12 @@
 # Current NSC claim ledger
 
+The [parent perturbation calculation](nsc-atlas-parent-perturbations.md)
+proves exact linear constraint propagation and constructs a compact
+constraint-compatible perturbation of the same initial atlas. Its calculated
+parent density growth, phase dependence and pressure scale have a finite
+linear domain. These do not select a primordial state, observed abundance,
+SI scale, nonlinear completion or unique evidence for nesting.
+
 The [shared scalar atlas](nsc-atlas-shared-scalar-slice.md) establishes
 compact three-region initial constraints and full instantaneous wall matching,
 plus a smooth protected-parent cosmology. Its all-sector canonical energy

@@ -18,6 +18,34 @@ starting a derivation.
 
 ## Current execution priority — 21 October 2026
 
+### From inherited excitation to gravitational growth
+
+The current rethink compares full wall evolution, an averaged dust/Jeans
+estimate, and constrained scalar/metric perturbations of the protected
+parent. Select the third: it tests structure directly with the same action
+and actual evolving parent, without assuming that near-dust background
+dilution proves clustering. The existing averaged-scalar literature supplies
+a comparison, not a replacement for the curved unaveraged calculation.
+
+Complete: the shared constrained slice, inherited-law obstruction and
+protected homogeneous parent. The [completed perturbation connection](nsc-atlas-parent-perturbations.md)
+now gives a regular constraint-propagating system and a compact packet that
+leaves the initial walls unchanged. Its central density contrast grows by
+15.19% through one e-fold. Initial scalar velocity remains an independent
+input, and the pressure scale is a substantial fraction of the vacuum radius.
+Next: connect the prepared perturbation covariance and physical frequency
+to the inherited source, then calculate the linked observer/lensing response. No new physical couplings enter;
+field displacement, its velocity and metric potential are the perturbation
+state. A full two-wall future remains a separate branch.
+
+The bounded run compares independent evolution formulations and initial
+constraints, with an explicit finite endpoint and compact outputs. The main
+failure risks are a turning-point/gauge singularity, spurious growth from a
+constraint defect, or a nonlocal harmonic preparation mistaken for a
+perturbation of the complete atlas. Each has a direct equation or local
+support check. Later falsification is failure of the frozen transfer law
+on independently specified initial data or a measured scale dependence.
+
 ### Shared scalar regions selected by the current rethink
 
 Compare a double O(4) preparation, full one-wall excited evolution, and
@@ -38,8 +66,9 @@ The rethink also removes complete wall evolution as a prerequisite for all
 cosmology: at least 90.7036% of the initial parent volume lies in a smooth
 future domain protected from both walls. The same-source closed-FLRW
 evolution reaches one e-fold, and its inherited Lambda*a0^2 is 12.348252398928.
-The next connection is scalar/metric perturbations and observer transfer on
-this evolving parent, to test clustering and physical scales. The interacting
+The scalar/metric perturbation entry above now tests linear clustering
+and identifies the frequency/scale condition. Prepared covariance and
+observer transfer are the next connection. The interacting
 two-wall weak development remains a separate active mathematical problem.
 
 ### Using the atlas to test our universe

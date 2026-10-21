@@ -1,5 +1,10 @@
 # Paper guide
 
+Revision 2026-10-21.6 adds Sections 10.25--10.26 and Figure 17: constrained
+same-source perturbations of the protected parent, measured gravitational
+growth, independent scalar-phase response, and the connection between the
+vacuum and structure scales. The approximation domains remain explicit.
+
 Revision 2026-10-21.5 adds Sections 10.23--10.24 and Figure 16: a compact
 three-region scalar initial atlas, a source-independent inherited-law
 obstruction, and the actual protected parent's cosmological evolution.

@@ -1,5 +1,12 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [inherited parent perturbation](docs/nsc-atlas-parent-perturbations.md)
+now connects that scalar to gravitational structure: a constrained packet
+inside the actual parent gains 15.19% central density contrast in one
+e-fold. The unaveraged calculation retains curvature and scalar turning
+points. Its scale-dependent transfer and remaining scalar-phase freedom
+identify what a dark-matter interpretation must still establish.
+
 The [shared scalar atlas](docs/nsc-atlas-shared-scalar-slice.md) now joins
 three sourced regions on one compact initial slice and evolves a causally
 protected part of its parent. An exact energy-floor comparison distinguishes

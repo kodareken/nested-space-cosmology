@@ -1,5 +1,16 @@
 # Prior art and admission of new research
 
+## Inherited parent structure, 21 October 2026
+
+The [parent perturbation owner](nsc-atlas-parent-perturbations.md#decision-and-borrowed-mathematics)
+reuses curved-background Einstein-scalar perturbations and separately compares
+the attributed averaged massive-scalar Jeans scale. The new connection is a
+compact constrained initial packet inside the actual shared parent, leaving
+its wall joins unchanged, and its unaveraged density/metric transfer. Four
+diagnostic harmonics, three packet cutoffs, independent time formulations and
+a fixed-metric control fit 120 CPU seconds. A preparation covariance and
+physical scale remain inputs to establish before an observed spectrum claim.
+
 ## Shared scalar composition and protected cosmology, 21 October 2026
 
 The [shared-slice owner](nsc-atlas-shared-scalar-slice.md#rethinking-inputs-and-calculation-boundary)

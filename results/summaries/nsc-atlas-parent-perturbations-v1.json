@@ -1,0 +1,230 @@
+{
+  "schema": "nsc-atlas-parent-perturbations-v1",
+  "result": "A regular, constraint-propagating linear Einstein-scalar system and a compact parent-supported perturbation with gravitational density growth and scale-dependent transfer.",
+  "inherited_background": {
+    "a": 6.626077076099549,
+    "H": 0.44268894003848014,
+    "chi": 0.04330127018922193,
+    "Pi": 0.0,
+    "vacuum": 0.28125,
+    "kappa": 1.0,
+    "omega": 20.0
+  },
+  "equations": {
+    "metric": "ds2=-(1+2Phi)dt2+a2(1-2Phi)gamma_ij dxidxj; curvature K=1, no linear anisotropic stress",
+    "harmonics": "lambda=n(n+2), n>=2; computational S3 extension, not wall spectrum",
+    "constraint": "C=(lambda-3)*Phi/a2+kappa*(Pi*Y-Pi2*Phi+omega2*chi*X+3H*Pi*X)/2; Cdot=-3H*C",
+    "observable": "Delta=(delta_rho+3H*Pi*X)/E=-2*(lambda-3)*Phi/(kappa*a2*E); lensing potential Phi+Psi=2Phi",
+    "regularity": "No division by Pi or by a time-dependent constraint coefficient; all scalar turning points retained."
+  },
+  "mode_transfer": [
+    {
+      "clock": "proper",
+      "proper_time": 2.888845513112623,
+      "efolds": 1.0,
+      "rows": [
+        {
+          "n": 2,
+          "eigenvalue": 8,
+          "initial_physical_wavenumber": 0.42686299785862863,
+          "density_seed_final_Delta": 1.150918745087205,
+          "phase_seed_final_Delta": 0.007027759073439167,
+          "density_seed_potential_ratio": 0.43076405369988496
+        },
+        {
+          "n": 8,
+          "eigenvalue": 80,
+          "initial_physical_wavenumber": 1.3498593220808441,
+          "density_seed_final_Delta": 1.1522619835110914,
+          "phase_seed_final_Delta": 0.1080127400591862,
+          "density_seed_potential_ratio": 0.43126679885980934
+        },
+        {
+          "n": 32,
+          "eigenvalue": 1088,
+          "initial_physical_wavenumber": 4.978035212406232,
+          "density_seed_final_Delta": 0.923804087396279,
+          "phase_seed_final_Delta": 1.3672467630784728,
+          "density_seed_potential_ratio": 0.345759937623739
+        },
+        {
+          "n": 128,
+          "eigenvalue": 16640,
+          "initial_physical_wavenumber": 19.467948001702172,
+          "density_seed_final_Delta": -0.9830241721441569,
+          "phase_seed_final_Delta": -0.9877256534921183,
+          "density_seed_potential_ratio": -0.36792473759362193
+        }
+      ],
+      "rhs_calls": 2552,
+      "max_normalized_Hamilton": 8.553527515905065e-10,
+      "max_density_constraint_gap": 5.103069300460561e-09,
+      "max_Friedmann": 6.276479336264629e-11,
+      "max_energy_balance": 6.317757428320192e-11,
+      "scalar_velocity_zero_crossings": 18
+    },
+    {
+      "clock": "efolds",
+      "proper_time": 2.8888455131429005,
+      "efolds": 1.0,
+      "rows": [
+        {
+          "n": 2,
+          "eigenvalue": 8,
+          "initial_physical_wavenumber": 0.42686299785862863,
+          "density_seed_final_Delta": 1.1509187455434535,
+          "phase_seed_final_Delta": 0.007027759076443294,
+          "density_seed_potential_ratio": 0.4307640537080572
+        },
+        {
+          "n": 8,
+          "eigenvalue": 80,
+          "initial_physical_wavenumber": 1.3498593220808441,
+          "density_seed_final_Delta": 1.1522619839680788,
+          "phase_seed_final_Delta": 0.10801274010537765,
+          "density_seed_potential_ratio": 0.4312667988680683
+        },
+        {
+          "n": 32,
+          "eigenvalue": 1088,
+          "initial_physical_wavenumber": 4.978035212406232,
+          "density_seed_final_Delta": 0.9238040877392005,
+          "phase_seed_final_Delta": 1.3672467636478565,
+          "density_seed_potential_ratio": 0.3457599376215801
+        },
+        {
+          "n": 128,
+          "eigenvalue": 16640,
+          "initial_physical_wavenumber": 19.467948001702172,
+          "density_seed_final_Delta": -0.9830241707468695,
+          "phase_seed_final_Delta": -0.9877256564959236,
+          "density_seed_potential_ratio": -0.3679247369317743
+        }
+      ],
+      "rhs_calls": 3473,
+      "max_normalized_Hamilton": 1.0977618813967638e-10,
+      "max_density_constraint_gap": 5.317180029607016e-10,
+      "max_Friedmann": 1.0956902052328132e-11,
+      "max_energy_balance": 1.0949019468853294e-11,
+      "scalar_velocity_zero_crossings": 18
+    }
+  ],
+  "transfer_basis": {
+    "density": "Delta0=1, X0=chi0/2, Y0=0; Phi0 fixed by Hamilton constraint",
+    "phase": "Delta0=Phi0=X0=0, Y0=omega*chi0; free scalar velocity remains physical initial data",
+    "amplitude": "Unit linear response columns; finite benchmark multiplies by epsilon=1e-5, without a certified nonlinear remainder."
+  },
+  "packet": {
+    "support_angle": 1.4,
+    "potential_regular_class": "C7; scalar displacement C5",
+    "prescription": "(cos(theta)-cos(theta_b))^8 times a degree-two polynomial orthogonal to 1 and cos(theta) in the weighted cap measure; zero outside; central initial Delta=1, Y=0.",
+    "polynomial_coefficients_ascending": [
+      4.80369149707472e-07,
+      -2.3774665956071508e-05,
+      0.000521105498588207,
+      -0.006640219949436905,
+      0.054249761801055715,
+      -0.295276695768745,
+      1.076107105323171,
+      -2.565395852784218,
+      3.772342000488459,
+      -3.031944583803692,
+      1.0
+    ],
+    "normalization": -25.436087685006235,
+    "preserves_wall_initial_data": true,
+    "whole_future_causal_margin": 0.4199275665457569,
+    "finite_endpoint_proper_time": 2.8888455131435653,
+    "truncation_checks": [
+      {
+        "cutoff": 64,
+        "initial_center": 1.0000002794944705,
+        "final_center": 1.1518813201247324,
+        "final_center_metric_potential": -0.04320142551264174,
+        "maximum_initial_density_reconstruction_error": 2.7949447045649833e-07,
+        "final_maximum_tail_beyond_causal_support": 8.937875812357257e-09,
+        "density_difference_from_previous_cutoff": null,
+        "initial_lowest_mode_coefficients": [
+          2.003529787149159e-16,
+          6.557357379307823e-16
+        ],
+        "coefficient_sha256": "a605fc19cba40e3d202a85e3df33335758337c850446b4b030eb68394585ff90"
+      },
+      {
+        "cutoff": 128,
+        "initial_center": 1.0000000031274925,
+        "final_center": 1.1518815882803572,
+        "final_center_metric_potential": -0.043201425705996034,
+        "maximum_initial_density_reconstruction_error": 3.127492487209338e-09,
+        "final_maximum_tail_beyond_causal_support": 1.2267846016561084e-10,
+        "density_difference_from_previous_cutoff": 2.6815562481630195e-07,
+        "initial_lowest_mode_coefficients": [
+          2.003529787149159e-16,
+          6.557357379307823e-16
+        ],
+        "coefficient_sha256": "0b1a3587d48c00e6e0f83bb98bdbefc566492cfaccd6c1f79df33982b3077f9f"
+      },
+      {
+        "cutoff": 256,
+        "initial_center": 1.0000000000018228,
+        "final_center": 1.151881591218557,
+        "final_center_metric_potential": -0.043201425707311274,
+        "maximum_initial_density_reconstruction_error": 1.5543566433962042e-11,
+        "final_maximum_tail_beyond_causal_support": 1.7071268809489224e-12,
+        "density_difference_from_previous_cutoff": 2.9381996835553537e-09,
+        "initial_lowest_mode_coefficients": [
+          2.071150015405065e-16,
+          6.793792153103446e-16
+        ],
+        "coefficient_sha256": "7b9c038f748017a6391b8d69fd08060eb042267a6ac2f5078ac6326b533db06c"
+      }
+    ],
+    "independent_clock_max_density_gap": 8.068479218081848e-11,
+    "central_growth_factor": 1.151881591218557,
+    "central_growth_percent": 15.188159121855694,
+    "central_density_history_range": [
+      0.9688730289170011,
+      1.1952320401400167
+    ],
+    "fixed_metric_control_center": 0.9839341303286786,
+    "fixed_metric_control_scope": "Fixed-background test field only; the gravitational response is deliberately omitted.",
+    "central_growth_due_to_metric_response_comparison": 0.16794746088987833,
+    "scope": "A constrained linear perturbation of the actual compact initial atlas, extended by zero near both walls. Its smooth-parent causal development is calculated; no nonlinear finite-amplitude completion, formation rate, observed power spectrum or full perturbed wall future is supplied."
+  },
+  "scale_comparison": {
+    "initial_excitation_to_vacuum_ratio": 1.3333333333333333,
+    "initial_H_over_frequency": 0.022134447001924008,
+    "initial_physical_Jeans_wavenumber": 4.161791450287817,
+    "initial_Jeans_wavelength_over_vacuum_radius": 0.4622588056664277,
+    "initial_Jeans_wavelength_over_a0": 0.2278468722869422,
+    "initial_curvature_over_Jeans_wavenumber_squared": 0.001315001977313602,
+    "formula": "k_J,physical^4=2*kappa*E*omega^2; leading averaged, short-curvature-scale estimate only"
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "Hamilton_constraint_propagation": "0",
+      "independent_spatial_Einstein_equation": "0",
+      "perturbed_scalar_energy_conservation": "0",
+      "comoving_density_gauge_invariance": "0",
+      "initial_metric_and_scalar_constraint": "0",
+      "two_step_inherited_excitation": "0",
+      "S3_radial_eigenvalue_2": "0",
+      "S3_radial_eigenvalue_3": "0"
+    },
+    "independent_mode_clock_gap": 3.003805315593411e-09,
+    "retained_numerical_comparison_tolerance": 1e-07,
+    "meaning": "Finite numerical consistency tolerance; spectral differences and sampled residuals are recorded separately, not a rigorous uniform enclosure."
+  },
+  "limits": "Initial perturbation shape and scalar phase are specified, not derived from inheritance. The sampled longer modes grow weakly; shorter modes oscillate and are preparation dependent. The Jeans comparison uses averaged short-curvature-scale mathematics only; the evolution itself is unaveraged and includes positive spatial curvature. No SI ruler or measured dark-matter abundance is selected.",
+  "next": "Derive a prepared perturbation covariance or formation mechanism, and connect the same-field density and lensing transfer to observers. Check physical scale selection before interpreting this benchmark as small-scale dark matter.",
+  "process_cpu_seconds": 1.640625,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_parent_perturbations.py": "9731a55f12bd3bf90e0fd9d6e8b4839fa67e48dec51912ee43b9c17a6f4e0877",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "scripts/check_nsc_atlas_parent_perturbations.py": "1df91b944d2f370f4c29119e0d6743be037c1bfbedc1d12c24124acb529973b7",
+    "scripts/plot_nsc_atlas_parent_perturbations.py": "5715d0ba55b6ffa2d1531c238a3d7cf1a40bc6ea2902731591d8ef13fcaeac25",
+    "tests/test_nsc_atlas_parent_perturbations.py": "b7a95d4991d632078c2624745a13dd91940c5474e727bf211ccfb365f9f59020"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_parent_perturbations.py"
+}

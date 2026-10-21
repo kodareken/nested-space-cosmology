@@ -332,9 +332,10 @@ Grok independently checked the constraints, lapse and energy-floor argument,
 then verified the parent causal bound and reproduced both evolution clocks.
 The retained endpoint comparison covers the declared one-e-fold interval.
 
-Next: evolve scalar and metric perturbations on this protected parent and
-calculate whether the same inherited excitation can cluster, at which
-scales, and with what observer transfer. That advances the cosmology and
+The [subsequent parent perturbation](nsc-atlas-parent-perturbations.md)
+now calculates linear gravitational growth and scale-dependent response
+from a compact constrained packet. Its initial covariance, physical
+frequency/scale and observer transfer remain the next connection. That advances the cosmology and
 dark-matter questions using the constructed source. The wall transmission,
 formation and full atlas future remain important distinct tasks; none is
 silently promoted from these initial constraints or the protected domain.

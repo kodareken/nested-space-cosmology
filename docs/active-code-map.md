@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [parent perturbation owner](nsc-atlas-parent-perturbations.md) uses
+nsc_atlas_parent_perturbations.py: ParentModes propagates the constrained
+field/metric system through scalar turning points; ModeEvolution compares
+matter and geometric density. ParentPacket supplies a compact compensated
+initial profile, spectral reconstruction and causal support checks.
+fixed_metric_control deliberately omits metric response as a diagnostic;
+jeans_comparison is an attributed approximation, not an evolution input.
+SharedScalarSlice.parent_rates now supplies both background callers.
+
 The [shared scalar slice owner](nsc-atlas-shared-scalar-slice.md) uses
 nsc_atlas_shared_scalar_slice.py: SharedScalarSlice owns the three regions,
 two wall jets, common middle geometry, positive initial lapse and independent

@@ -1,5 +1,17 @@
 # Cited arXiv studies
 
+## Curved scalar perturbations and their pressure scale
+
+[Hwang and Noh, astro-ph/0103244, Sections 2 and 4](https://arxiv.org/html/astro-ph/0103244)
+give gauge-ready Einstein/scalar perturbations with background spatial
+curvature. [Hwang and Noh, 0902.4738, equations 23--27](https://arxiv.org/html/0902.4738)
+derive an averaged massive-scalar pressure and Jeans scale. The latter uses
+an oscillation approximation and a flat background; it is a comparison in
+the [parent structure calculation](nsc-atlas-parent-perturbations.md), whose
+main evolution is curved and unaveraged. [Noh, Hwang and Barrow, 2003.14108](https://arxiv.org/html/2003.14108v2)
+explain exceptional low harmonics and linearization-stability issues; n=0,1
+are explicitly compensated out here, not declared universally fictitious.
+
 Check this file before opening a paper, rederiving a formula, or defending a familiar local model. If a study helps, supplies a clue, constrains a step, or shows why a route fails, document that use here. One line: the identifier, and what this repository referenced. A citation is not an NSC result.
 
 Do not demand a finished citation before exploring. A name, a news item, or a rough picture of nested geometry is a lead. Look it up, record what it points at, and keep the search moving. The Figueiredo prize was that kind of lead: the Russian-doll geometry and the award were real before the wording was a bibliography entry. Stopping until the citation was perfect would have dropped the clue. A reported result still names what was checked. Exploration does not wait for that sentence.

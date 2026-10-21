@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+The inherited parent structure calculation uses:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_perturbations.py
+python scripts/run_python.py scripts/plot_nsc_atlas_parent_perturbations.py
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_perturbations.py
+```
+
+The [owner](nsc-atlas-parent-perturbations.md) specifies the two independent
+initial-state columns, compact packet, finite numerical tolerance and the
+approximate Jeans comparison. Full trajectories are regenerated.
+
 The shared scalar atlas and protected parent use:
 
 ```powershell

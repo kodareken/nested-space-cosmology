@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [inherited parent perturbations](nsc-atlas-parent-perturbations.md)
+connect same-action geometry to unaveraged linear density/metric transfer.
+A compact constrained packet preserves both initial wall joins and grows
+under gravitational response; the inherited vacuum and scalar frequency
+also determine a conditional pressure-scale comparison.
+
 The [shared scalar atlas and protected parent](nsc-atlas-shared-scalar-slice.md)
 construct three same-action constrained regions, prove an all-sector
 energy-floor obstruction for the locally equivalent alternative, and evolve

@@ -287,6 +287,16 @@ class SharedScalarSlice:
             protected_initial_parent_volume_fraction_lower_bound=volume(protected)/volume(boundary),
             scope='Smooth Einstein-scalar evolution on the parent cap domain of dependence. A causal global completion would agree there, but the walls and their interacting future are not constructed by this bound.')
 
+    def parent_rates(self,chi,Pi,N,H):
+        """Proper-time scalar, expansion, work and conformal rates.
+
+        Shared by the background and its linear perturbation evolution.
+        """
+        a0=self.cap_geometry['parent_maximum_radius']
+        a=a0*math.exp(N)
+        return (Pi,-3*H*Pi-self.scalar.omega**2*chi,H,
+                1/(a*a)-self.scalar.kappa*Pi*Pi/2,3*H*Pi*Pi,1/a)
+
     def evolve_parent(self,*,efolds=1.,clock='proper',rtol=2e-11,atol=2e-13):
         if not 0<efolds<=1 or clock not in ('proper','efolds'):
             raise ValueError('declared parent evolution is 0<N<=1 in a named clock')
@@ -303,9 +313,7 @@ class SharedScalarSlice:
                 calls+=1
                 if calls>30000:raise RuntimeError('parent ODE budget exceeded')
                 chi,Pi,N,H,_,_=y
-                a=a0*math.exp(N)
-                return (Pi,-3*H*Pi-omega**2*chi,H,1/(a*a)-kap*Pi*Pi/2,
-                        3*H*Pi*Pi,1/a)
+                return self.parent_rates(chi,Pi,N,H)
             def endpoint(t,y):return y[2]-efolds
             endpoint.terminal=True
             endpoint.direction=1
@@ -324,10 +332,9 @@ class SharedScalarSlice:
                 calls+=1
                 if calls>30000:raise RuntimeError('parent ODE budget exceeded')
                 chi,Pi,H,_,_,_=y
-                a=a0*math.exp(N)
                 if H<=0:raise RuntimeError('expanding parent branch lost')
-                return (Pi/H,-3*Pi-omega**2*chi/H,(1/(a*a)-kap*Pi*Pi/2)/H,
-                        3*Pi*Pi,1/(a*H),1/H)
+                rates=self.parent_rates(chi,Pi,N,H)
+                return (rates[0]/H,rates[1]/H,rates[3]/H,rates[4]/H,rates[5]/H,1/H)
             sol=solve_ivp(rhs,(0,efolds),(chi0,0.,H0,0.,0.,0.),method='DOP853',
                 dense_output=True,rtol=rtol,atol=atol,max_step=.008)
             if not sol.success:raise RuntimeError(sol.message)

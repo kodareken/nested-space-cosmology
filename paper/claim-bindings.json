@@ -383,6 +383,16 @@
       "section": "10.24",
       "status": "derived",
       "owner": "docs/nsc-atlas-shared-scalar-slice.md"
+    },
+    "inherited-parent-structure": {
+      "section": "10.25",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-perturbations.md"
+    },
+    "inherited-structure-scale": {
+      "section": "10.26",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-perturbations.md"
     }
   },
   "findings": [
@@ -721,6 +731,22 @@
       "note": "docs/nsc-atlas-shared-scalar-slice.md",
       "record": "results/summaries/nsc-atlas-shared-scalar-slice-v1.json",
       "paper_section": "10.24"
+    },
+    {
+      "id": "inherited-parent-structure",
+      "status": "derived",
+      "summary": "A compact parent-supported perturbation satisfies the linear initial Einstein/scalar constraints and preserves both membrane joins. A regular constraint-propagating system gives finite gravitational density growth in the protected domain; full nonlinear and interacting-wall evolution are not inferred.",
+      "note": "docs/nsc-atlas-parent-perturbations.md",
+      "record": "results/summaries/nsc-atlas-parent-perturbations-v1.json",
+      "paper_section": "10.25"
+    },
+    {
+      "id": "inherited-structure-scale",
+      "status": "derived",
+      "summary": "Same-source mode transfer resolves initial density and scalar-phase columns. The inherited excitation/vacuum ratio gives a conditional averaged Jeans-scale requirement, while the actual evolution is curved and unaveraged. No primordial covariance, SI scale, observed spectrum or unique nesting signature is selected.",
+      "note": "docs/nsc-atlas-parent-perturbations.md",
+      "record": "results/summaries/nsc-atlas-parent-perturbations-v1.json",
+      "paper_section": "10.26"
     }
   ]
 }

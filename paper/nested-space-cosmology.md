@@ -40,7 +40,10 @@ A distinct uniform scalar preparation now admits three sourced regions
 on one compact constrained slice. Its third region distinguishes laws
 that were equivalent at one interface. A causally protected parent domain
 evolves under the same scalar action, supplying a conditional expansion
-calculation while the complete two-wall future remains open.
+calculation while the complete two-wall future remains open. A compact
+constraint-compatible parent perturbation subsequently develops linear
+gravitational density growth. Its transfer is scale and preparation
+dependent, giving a joint requirement on vacuum and structure scales.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -4708,10 +4711,180 @@ or observational uncertainty.
 
 The [compact evidence](../results/summaries/nsc-atlas-shared-scalar-slice-v1.json)
 binds these numbers to the same action, constraints and implementation.
-The next cosmological connection is scalar and metric perturbation
-growth on this evolving domain, followed by its observer transfer.
-That tests whether the inherited excitation can function as a
-clustering component, while the full wall problem remains explicit.
+The following calculation tests scalar and metric perturbation growth
+on this evolving domain. Its observer transfer and physical scale
+remain further connections, while the full wall problem stays explicit.
+
+### 10.25. A constrained parent perturbation that grows
+
+<!-- nsc-claim:inherited-parent-structure -->
+
+Near-pressureless homogeneous dilution does not determine whether a
+field develops gravitational structure. We now perturb the same
+protected parent, keeping its scalar action and curvature fixed.
+The linear equations reuse the general curved-background formalism
+of [Hwang and Noh](https://arxiv.org/html/astro-ph/0103244).
+In Newtonian gauge the canonical scalar has no linear anisotropic
+stress, so both metric potentials equal Phi. Let X be its field
+perturbation and Y its proper-time derivative. For S3 scalar harmonics
+with $\lambda=n(n+2)$ and $n\geq2$,
+
+$$
+\dot X=Y,\qquad
+\dot Y=-3HY-(\omega^2+\lambda/a^2)X
+ +4\Pi\dot\Phi-2\omega^2\chi\Phi,
+$$
+
+$$
+\dot\Phi=-H\Phi+\frac{\kappa}{2}\Pi X.
+$$
+
+Here chi and Pi are the existing homogeneous parent field and
+velocity. Its energy constraint is
+
+$$
+C=\left(\frac{\lambda-3}{a^2}-\frac{\kappa\Pi^2}{2}\right)\Phi
+ +\frac{\kappa}{2}\left[\Pi Y+(\omega^2\chi+3H\Pi)X\right]=0.
+$$
+
+Direct differentiation proves
+
+$$
+\dot C=-3HC.
+$$
+
+The spatial Einstein
+equation and perturbed energy conservation are independently verified.
+No step divides by the oscillating scalar velocity; the numerical
+evolution passes eighteen ordinary velocity sign changes.
+The gauge-invariant comoving density contrast is
+
+$$
+\Delta=\frac{\delta\rho+3H\Pi X}{E}
+=-\frac{2(\lambda-3)\Phi}{\kappa a^2E}.
+$$
+
+Density and metric transfer are therefore connected. The local
+lensing-potential combination is $\Phi+\Psi=2\Phi$; an actual
+light-cone lensing prediction still needs its observer and source map.
+
+A compact perturbation makes this calculation belong to the actual
+atlas. Choose an initial radial potential supported at parent-pole
+angle $\theta<1.4$, with its n=0 and n=1 projections removed by two
+weighted moments. The explicit C7 profile and normalization are in
+the [calculation owner](../docs/nsc-atlas-parent-perturbations.md).
+The lowest modes are excluded by preparation, not deemed unphysical;
+their special roles are discussed by
+[Noh, Hwang and Barrow](https://arxiv.org/html/2003.14108v2).
+Since the background starts at zero scalar momentum, choose
+
+$$
+X_0=\frac{2(\nabla_\gamma^2+3)\Phi_0}
+ {\kappa a_0^2\omega^2\chi_0},\qquad
+Y_0=0,\qquad \dot\Phi_0=-H_0\Phi_0.
+$$
+
+These data satisfy the linear Hamiltonian and momentum constraints.
+They vanish on an open neighborhood of both membranes, preserving
+their initial junction and scalar data. The parent causal bound gives
+
+$$
+\theta_w-1.4-2\eta_{\rm bound}=.419927566546>0.
+$$
+
+Thus the entire packet's causal cone fits inside the protected parent.
+S3 harmonics serve as a computational extension, with no imposed
+reflecting material boundary. Finite spectral tails are checked
+explicitly; the exact initial profile has compact support.
+
+Normalize the initial central contrast to one as a linear response
+coefficient. At one e-fold, proper time 2.88884551314, it becomes
+
+$$
+\Delta_{\rm center}=1.15188159122.
+$$
+
+This is a 15.188159% increase. Multiplication by an example initial
+amplitude $10^{-5}$ gives the corresponding linear forecast. It
+does not certify the nonlinear remainder at that amplitude. The
+contrast oscillates during the interval; endpoint growth is not
+monotonic growth. The same field perturbation on a deliberately
+fixed metric instead gives .983934130329. That control removes the
+gravitational response and is not another coupled Einstein solution.
+
+The packet's final sampled density changes by $2.94\times10^{-9}$
+between cutoffs 128 and 256. Independent proper-time and expansion-clock
+formulations differ by $8.07\times10^{-11}$ on the retained packet.
+The declared numerical comparison tolerance is $10^{-7}$, distinct
+from a uniform error bound or physical state uncertainty. The
+[compact evidence](../results/summaries/nsc-atlas-parent-perturbations-v1.json)
+retains the constraints, state, comparisons and producer hashes.
+
+### 10.26. Inheritance must also supply the structure scale
+
+<!-- nsc-claim:inherited-structure-scale -->
+
+One density history does not fix the initial scalar velocity. For
+each harmonic, retain two independent linear columns: a unit initial
+density contrast with Y0=0, and a unit initial scalar phase with
+$Y_0=\omega\chi_0$ but zero initial density, field displacement and
+metric potential. Their one-e-fold density responses are:
+
+| Harmonic n | Density column | Phase column |
+| --- | ---: | ---: |
+| 2 | 1.15091875 | .00702776 |
+| 8 | 1.15226198 | .10801274 |
+| 32 | .92380409 | 1.36724676 |
+| 128 | -.98302417 | -.98772566 |
+
+The two columns give a transfer map for a specified preparation.
+They do not invent the covariance or formation mechanism that
+selects it. Shorter modes can be suppressed or reverse sign in
+oscillatory evolution, rather than sharing the long-mode growth.
+
+![Parent perturbation growth and scale dependence](../docs/figures/nsc-atlas-parent-perturbations.png)
+
+*Figure 17. Left: a compact constrained packet develops a larger
+central density contrast under the same inherited source. Right:
+the two independent initial-state columns have different scale
+responses. The dotted Jeans estimate is a separate averaged
+comparison; the evolution itself retains curvature and oscillations.*
+
+[Hwang and Noh's massive-scalar calculation](https://arxiv.org/html/0902.4738)
+provides the leading averaged, short-curvature-scale estimate
+
+$$
+k_{J,\rm physical}^4=2\kappa E\omega^2,\qquad
+\ell_\Lambda=\sqrt{3/\Lambda}.
+$$
+
+The actual parent preparation has $E_0/\rho_v=4/3$, giving an
+initial Jeans wavelength of $.462258806\ell_\Lambda$. Its
+$H_0/\omega=.022134447$ and curvature-to-Jeans squared-wavenumber
+ratio .001315002 characterize this comparison's scale separation;
+they are not a proved approximation error. The unaveraged transfer
+above does not depend on replacing the field by dust.
+
+For this inherited excitation ratio the estimate implies
+
+$$
+\frac{\omega}{\sqrt{\Lambda}}
+=\frac{\pi^2\sqrt{2/3}}{(\lambda_J/\ell_\Lambda)^2}.
+$$
+
+A smaller pressure cutoff therefore requires a larger scalar
+frequency relative to the vacuum scale, with a compatible history.
+The present benchmark's cutoff is a substantial fraction of its
+vacuum radius; it cannot simply be called cold on every smaller
+scale. The inherited law has not yet selected the required ratio.
+
+These [calculated responses](../results/summaries/nsc-atlas-parent-perturbations-v1.json)
+connect geometry, inheritance, expansion and linear structure.
+An unnested model with identical local field and geometric initial
+data has the same protected-domain response, so this growth alone
+does not uniquely demonstrate nesting. The next physical connection
+is a prepared perturbation state and frequency/scale, followed by
+the linked density and metric response seen by observers.
 
 ## IV. What the observers can reach
 
@@ -4762,7 +4935,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 17. The isolated reference in joined causal charts. Horizons are
+*Figure 18. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -5768,7 +5941,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 18. Saved finite-window comparisons. A: the previous and current
+*Figure 19. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -5864,7 +6037,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 19. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 20. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -6649,7 +6822,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 20. Research dependencies, distinct from spacetime causal arrows.
+*Figure 21. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

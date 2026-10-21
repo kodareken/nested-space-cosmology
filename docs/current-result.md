@@ -1,5 +1,20 @@
 # What the calculations show
 
+The [parent structure calculation](nsc-atlas-parent-perturbations.md)
+evolves a compact linear perturbation that satisfies the initial gravitational
+constraints and vanishes near both membranes. Central comoving density
+contrast changes from 1 to 1.15188159122 in one e-fold; the fixed-metric field
+control gives .983934130329. Exact constraint propagation, independent clocks
+and spectral cutoffs check this gravitational response. The local metric
+and density transfer are linked by the same action.
+
+The result is scale dependent and sensitive to initially unspecified scalar
+velocity. Its leading initial Jeans estimate is .462258806 of the vacuum
+radius, so it is not automatically cold on every smaller scale. The
+prepared perturbation covariance, physical frequency/scale and observational
+growth/lensing comparisons remain open. This is a linear contribution on
+the actual parent domain, not a completed nonlinear halo or wall evolution.
+
 The [shared scalar atlas](nsc-atlas-shared-scalar-slice.md) now gives
 three sourced regions on one compact initial slice, with two moving walls,
 one middle mass and regular poles. Bulk, surface and instantaneous temporal
