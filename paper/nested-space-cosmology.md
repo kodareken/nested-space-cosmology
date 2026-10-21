@@ -4004,6 +4004,129 @@ preparation is needed if substantial child matter is claimed. Absolute
 vacuum scale, black-hole collapse formation and infinite physical nesting
 remain separate questions.
 
+### 10.18. Real parent sources and received energy
+
+<!-- nsc-claim:prepared-parent-transport -->
+
+Evidence: [causal and energy derivation](../docs/nsc-atlas-parent-transport.md),
+[compact calculation and independent checks](../results/summaries/nsc-atlas-parent-transport-v1.json).
+
+The small regular pole amplitude is not the transmission coefficient
+for energy already present in the parent. Before choosing an excited
+parent field, determine which sources can reach the child. Use the
+same solved scalar/gravity profiles and membrane. An inward radial
+test body starts at parent distance $.3L_{\rm ref}$ from the wall
+on $\eta=0$, with supplied local Lorentz factor $\gamma_s$.
+There is no direct material interaction with the membrane in this
+test-body calculation.
+
+The regular child pole fixes $x$ by $dx=d\xi/a$, with $e^x/\xi$ tending
+to one. The conserved radial charge is $K=a_s\gamma_s$. An inward
+trajectory requires $K$ greater than the largest $a$ along its path.
+Its delay relative to a null ray
+fixes the label transmitted across the child cone:
+
+$$
+D(K)=\int \frac{|d\xi|}{a}
+\left[\frac{1}{\sqrt{1-a^2/K^2}}-1\right],\qquad
+L=\exp(\eta_s+x_s+D).
+$$
+
+The integral includes the parent cap, membrane and child cap. The
+metric and geodesic tangent are continuous at the wall. In the open
+child, $b^2|d\chi/ds|=K$. For the vacuum comparison metric
+$b=\sinh(h\tau)/h$, $h^2=\kappa\rho_i/3$, the regularized radial
+integral has the closed form
+
+$$
+e^{I(\tau)}=\frac{2/h}{\coth(h\tau)+
+\sqrt{\coth^2(h\tau)+(hK)^{-2}-1}},\qquad
+\chi=\ln L-I(\tau).
+$$
+
+Hence a finite central arrival exists exactly when
+
+$$
+L<\frac{2K}{1+hK}.
+$$
+
+Failing this condition does not prevent entry into the child: a body
+can remain at positive comoving distance and never reach its center.
+For light the bound is $N=\exp(\eta_s+x_s)<2/h$. On the initial
+slice, only parent distances below $3.700717257L_{\rm ref}$ can signal
+the center, out of a parent cap length $7.070494445L_{\rm ref}$.
+This is a specified observer's causal region, not a universal boundary
+between different kinds of matter.
+
+At source depth $.3L_{\rm ref}$ the massive threshold is
+$\gamma_s=1.290485734$. The primary choice $\gamma_s=2$ yields
+
+$$
+\frac{c\tau_r}{L_{\rm ref}}=4.285837228,\qquad
+\gamma_r=\sqrt{1+\frac{K^2}{b_r^2}}=1.546392954,\qquad
+\frac{E_r}{E_s}=.773196477.
+$$
+
+The null control arrives at $3.420193817L_{\rm ref}/c$ with
+$1+z=1.294206955$. The massive received speed is $.762773146c$;
+arrival is not the production of cold matter. Its energy ratio refers
+to two local frames, not a conserved global energy.
+
+For a geometric comparison, replace the parent and membrane with a
+single de Sitter space at the same child $h$. Fix the source's initial
+areal radius, inward $\gamma_s=2$ and time-symmetric slice, using the
+hemisphere nearest the receiver. The embedding control gives reception
+at $4.014164210L_{\rm ref}/c$ and $E_r/E_s=.811509668$. The nested
+geometry therefore delays reception by $.271673018L_{\rm ref}/c$ and
+reduces received energy by $4.721224$ percent relative to that control.
+This distinguishes these two supplied source/geometry pairs; unknown
+source data or other geometries can retain degeneracies.
+
+![Parent causal access and received trajectories](../docs/figures/nsc-atlas-parent-transport.png)
+
+*Figure 13. The left panel identifies the parent region that can signal
+the central child from the selected initial slice. The right panel shows
+three transmitted massive trajectories. The lowest-energy example enters
+the child but misses the center; the other two reach it at finite times.*
+
+An independent de Sitter embedding recovers the zero-wall limit:
+for source angle $\theta=h\xi_s$, central access requires
+$\gamma_s>1/\cos\theta$ and gives $\gamma_r=\gamma_s\cos\theta$.
+Direct integration of the child trajectory agrees with the closed
+inverse within $7\times10^{-14}L_{\rm ref}/c$. Two background
+tolerances change the primary arrival by $1.06\times10^{-11}$ and
+its energy ratio by $8.74\times10^{-13}$. These are numerical checks,
+not observational errors. Section 10.17's two de Sitter comparison
+metrics bracket the residual homogeneous-background correction; they
+do not bound backreaction from a new material population.
+
+A simple collision alternative also has an exact diagnostic. The
+[free-passage construction of Giblin, Hui, Lim and Yang](https://arxiv.org/abs/1005.3493)
+motivates adding two scalar profiles. On one prescribed metric, with
+additive swept flux and continuing prescribed membranes, the present
+linear scalar equation gives
+
+$$
+\phi_*(q_p-e_L)+\phi_*(q_p-e_R)-\phi_*(q_p)
+=\phi_*(q_p-e_L-e_R).
+$$
+
+Two equal charges $.5$ from $q_p=1.5$ therefore land on the
+$q=.5$ minimum, with vacuum density $.03125$ and no homogeneous
+displacement energy there. This control does not solve the interacting
+gravitational collision or exclude radiation from deflected walls.
+It prevents assigning the instantaneous quench energy to free passage.
+
+The next source must be a finite, constraint-compatible parent field
+preparation in the accessible region. Its scalar, metric and membrane
+perturbations must be matched together before calculating transmitted
+stress, isotropy or clustering. The smooth-wall bulk framework of
+[Garriga, Montes, Sasaki and Tanaka](https://arxiv.org/html/astro-ph/9811257)
+is useful input; an independently charged membrane requires its own
+interface equations. Population normalization and the physical ruler
+remain inputs to be supplied. The present result makes the geometric
+part of that future source-to-observer calculation explicit.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -4053,7 +4176,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 13. The isolated reference in joined causal charts. Horizons are
+*Figure 14. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -5059,7 +5182,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 14. Saved finite-window comparisons. A: the previous and current
+*Figure 15. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -5155,7 +5278,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 15. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 16. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -5940,7 +6063,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 16. Research dependencies, distinct from spacetime causal arrows.
+*Figure 17. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

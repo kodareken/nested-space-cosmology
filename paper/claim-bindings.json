@@ -348,6 +348,11 @@
       "section": "10.17",
       "status": "derived",
       "owner": "docs/nsc-atlas-scalar-preparation.md"
+    },
+    "prepared-parent-transport": {
+      "section": "10.18",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-parent-transport.md"
     }
   },
   "findings": [
@@ -630,6 +635,14 @@
       "note": "docs/nsc-atlas-finite-amplitude.md",
       "record": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "paper_section": "13.19"
+    },
+    {
+      "id": "prepared-parent-transport",
+      "status": "measured",
+      "summary": "On the solved scalar/gravity cap and membrane, specified radial parent test bodies have a central-access threshold, reception time and local energy ratio. Independent embedding, trajectory and tolerance checks retain the test-body and vacuum-comparison domain; source abundance and coupled field transmission remain open.",
+      "note": "docs/nsc-atlas-parent-transport.md",
+      "record": "results/summaries/nsc-atlas-parent-transport-v1.json",
+      "paper_section": "10.18"
     }
   ]
 }

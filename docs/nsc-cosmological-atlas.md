@@ -30,6 +30,25 @@ from withheld tests, and compare against an ordinary model with equivalent
 local sources. Agreement with expansion alone cannot distinguish nesting.
 Keep the successful geometry and failed preparations as reusable entries.
 
+The first prerequisite is now calculated: the
+[parent transport map](nsc-atlas-parent-transport.md) identifies the finite
+parent region that can signal the child center, a massive-source threshold,
+arrival times and received energies on the coupled background. At source
+depth .3 and gamma=2, reception is tau=4.285837228 with energy ratio
+.773196477. These are radial test-body predictions, not a populated
+cosmology. At matched initial areal radius and velocity, received energy
+is 4.721224 percent lower than the unwalled de Sitter control with the
+same child curvature. Unknown preparations can still mimic that change.
+The simple additive collision control lands on another minimum
+and does not create the earlier homogeneous quench excitation.
+
+Active next: specify a finite scalar packet in that accessible parent
+region, solve its initial constraints, and derive the coupled scalar,
+metric and membrane-displacement matching. Compute the transmitted stress
+before inferring isotropy, cold matter or clustering. The regular branch
+and the new causal/energy map supply controls; neither needs further
+precision work unless that packet calculation fails because of them.
+
 ### Coupled regular preparation: scalar, gravity and wall
 
 The [regular scalar preparation](nsc-atlas-scalar-preparation.md) now

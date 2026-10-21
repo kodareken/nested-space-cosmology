@@ -1,5 +1,20 @@
 # What the calculations show
 
+The [real-parent transport calculation](nsc-atlas-parent-transport.md)
+connects the prepared geometry to central arrival and local received
+energy. A source .3 L_ref into the parent with gamma=2 arrives at
+4.285837228 L_ref/c and retains .773196477 of its source-frame energy.
+The central threshold is gamma=1.290485734; slower bodies may enter
+the child without reaching its center. Independent de Sitter embedding,
+trajectory integration and background-tolerance checks agree. This is
+a radial test-body result, not a scalar-production or abundance result.
+Against an unwalled de Sitter geometry with the same child curvature,
+initial source areal radius and velocity, the nested reference delays
+reception by .271673018 L_ref/c and lowers received energy by 4.721224
+percent. This conditional distinction does not remove source degeneracy.
+The primary arrival is still fast, .762773146 c. Constraint-compatible
+parent field data and coupled membrane/metric transmission are next.
+
 The [regular scalar-gravity preparation](nsc-atlas-scalar-preparation.md)
 now connects a continuous field layer, full charged-wall matching, a
 physical scalar Schur reduction and an expanding Lorentzian child.

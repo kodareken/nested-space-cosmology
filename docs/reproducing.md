@@ -1,5 +1,12 @@
 # Reproducing the root project
 
+The [parent source/receiver map](nsc-atlas-parent-transport.md) is reproduced by
+`python scripts/run_python.py scripts/check_nsc_atlas_parent_transport.py`.
+Its focused tests are `tests/test_nsc_atlas_parent_transport.py`; regenerate
+the figure with `scripts/plot_nsc_atlas_parent_transport.py` through the same
+runtime. It reuses the solved regular preparation, with a 120 CPU-second
+budget and a compact result rather than stored trajectories.
+
 The [regular scalar preparation](nsc-atlas-scalar-preparation.md) uses
 ```
 python scripts/run_python.py scripts/check_nsc_atlas_scalar_preparation.py

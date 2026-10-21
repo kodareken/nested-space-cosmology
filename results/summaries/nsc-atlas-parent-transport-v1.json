@@ -1,0 +1,194 @@
+{
+  "schema": "nsc-atlas-parent-transport-v1",
+  "question": "Which pre-existing parent sources can reach the child center, when, and with what locally measured energy?",
+  "background": "The existing scalar/four-form/gravity saddle and constant-tension membrane; unchanged couplings and solved spatial layer.",
+  "action_parameters": {
+    "epsilon": 0.25,
+    "omega": 20.0,
+    "kappa": 1.0,
+    "parent_flux": 1.5,
+    "charge": 0.5,
+    "tension": 0.2,
+    "bare_density": 0.0
+  },
+  "preparation": "Specified inward radial test bodies at parent proper depth .3 L_ref on eta=0; gamma is source input. No abundance or added material species is selected.",
+  "units": "c=1, lengths and proper times in L_ref; physical time is tau_hat L_ref/c. The SI ruler remains unselected.",
+  "geometry": {
+    "wall_radius": 2.7063453132165107,
+    "child_length": 2.867310156714175,
+    "parent_length": 7.07049444470919,
+    "wall_x": 1.0825058206063947,
+    "child_h": 0.2041241452319315,
+    "vacuum_Lambda_Lref_squared": 0.125
+  },
+  "central_threshold_gamma": 1.290485733673878,
+  "reference_trajectories": [
+    {
+      "source": {
+        "depth": 0.3,
+        "eta": 0.0,
+        "parent_pole_coordinate": 6.770494444709191,
+        "a_source": 2.8626647371485587,
+        "x_source": 1.1901968005233363,
+        "maximum_a_on_route": 2.8626647371485587
+      },
+      "gamma_source": 1.1,
+      "radial_charge": 3.148931210863415,
+      "central_arrival": false,
+      "delay": 0.4346490282259186,
+      "log_label": 1.6248458287492549,
+      "central_label_limit": 3.8336780775470207,
+      "status": "enters_child_but_misses_central_observer"
+    },
+    {
+      "source": {
+        "depth": 0.3,
+        "eta": 0.0,
+        "parent_pole_coordinate": 6.770494444709191,
+        "a_source": 2.8626647371485587,
+        "x_source": 1.1901968005233363,
+        "maximum_a_on_route": 2.8626647371485587
+      },
+      "gamma_source": 1.5,
+      "radial_charge": 4.293997105722838,
+      "central_arrival": true,
+      "delay": 0.16393128365319393,
+      "log_label": 1.3541280841765302,
+      "central_label_limit": 4.57658159424671,
+      "status": "central_arrival",
+      "arrival_time": 5.816966363296175,
+      "child_scale_factor": 7.283490967131681,
+      "gamma_received": 1.1608495302077542,
+      "energy_ratio": 0.7738996868051694,
+      "speed_received": 0.5078625997093512
+    },
+    {
+      "source": {
+        "depth": 0.3,
+        "eta": 0.0,
+        "parent_pole_coordinate": 6.770494444709191,
+        "a_source": 2.8626647371485587,
+        "x_source": 1.1901968005233363,
+        "maximum_a_on_route": 2.8626647371485587
+      },
+      "gamma_source": 2.0,
+      "radial_charge": 5.7253294742971175,
+      "central_arrival": true,
+      "delay": 0.082559284157661,
+      "log_label": 1.2727560846809973,
+      "central_label_limit": 5.280018069627075,
+      "status": "central_arrival",
+      "arrival_time": 4.285837227755037,
+      "child_scale_factor": 4.853837436938452,
+      "gamma_received": 1.5463929537884902,
+      "energy_ratio": 0.7731964768942451,
+      "speed_received": 0.7627731457572624
+    },
+    {
+      "source": {
+        "depth": 0.3,
+        "eta": 0.0,
+        "parent_pole_coordinate": 6.770494444709191,
+        "a_source": 2.8626647371485587,
+        "x_source": 1.1901968005233363,
+        "maximum_a_on_route": 2.8626647371485587
+      },
+      "gamma_source": 5.0,
+      "radial_charge": 14.313323685742795,
+      "central_arrival": true,
+      "delay": 0.01198688596911976,
+      "log_label": 1.202183686492456,
+      "central_label_limit": 7.2995599206908475,
+      "status": "central_arrival",
+      "arrival_time": 3.5235081271463207,
+      "child_scale_factor": 3.8352458001720273,
+      "gamma_received": 3.8637011643852084,
+      "energy_ratio": 0.7727402328770416,
+      "speed_received": 0.9659257878639238
+    }
+  ],
+  "null_reference": {
+    "source": {
+      "depth": 0.3,
+      "eta": 0.0,
+      "parent_pole_coordinate": 6.770494444709191,
+      "a_source": 2.8626647371485587,
+      "x_source": 1.1901968005233363,
+      "maximum_a_on_route": 2.8626647371485587
+    },
+    "log_label": 1.1901968005233363,
+    "central_arrival": true,
+    "latest_emission_eta": 1.0919772952105817,
+    "arrival_time": 3.420193816982987,
+    "one_plus_redshift": 1.294206954902826
+  },
+  "parent_null_collar": {
+    "depth": 3.7007172571396234,
+    "parent_slice_volume_fraction": 0.775076272171506
+  },
+  "matched_unwalled_control": {
+    "geometry": "Single open de Sitter space with the same child h, no membrane or parent vacuum change.",
+    "matching": "Same initial areal radius a_source, inward gamma=2 and time-symmetric initial slice. Source is on the hemisphere nearest the receiving pole.",
+    "source_angle": 0.6240652782161886,
+    "arrival_time": 4.014164210052482,
+    "gamma_received": 1.6230193366421615,
+    "threshold": 1.2322712088802144,
+    "energy_ratio": 0.8115096683210807,
+    "nested_minus_control_arrival": 0.2716730177025548,
+    "nested_minus_control_energy_ratio": -0.03831319142683565,
+    "relative_received_energy_change": -0.04721224271560587,
+    "limit": "Distinguishes this supplied source/geometry pair, not all alternatives or arbitrary unknown preparations."
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "regularized_timelike_primitive": "0",
+      "wall_chart_mass_shell": "0",
+      "child_chart_mass_shell": "0",
+      "additive_flux_passage_lands_on_minimum": "0"
+    },
+    "fine_background": {
+      "nodes": 2550,
+      "rhs_calls": 179,
+      "iterations": 6,
+      "max_collocation_residual": 9.990336327442036e-10
+    },
+    "two_background_tolerance_spreads": {
+      "arrival_time": 1.0561329588654189e-11,
+      "energy_ratio": 8.733014311701481e-13,
+      "gamma_received": 1.7466028623402963e-12,
+      "threshold_gamma": 1.3447021274259896e-12
+    },
+    "independent_child_ODE_time_gaps": [
+      -6.394884621840902e-14,
+      2.930988785010413e-14,
+      2.220446049250313e-14
+    ],
+    "conservative_numerical_comparison_tolerance": 2e-08
+  },
+  "child_approximation": {
+    "initial_scalar_energy": 9.624513075997365e-47,
+    "bracket": "b_hminus(tau)<=b_actual(tau)<=b_hplus(tau); hplus^2-hminus^2=kappa E0/3. At fixed transmitted K and label, tau_hminus<=tau_actual<=tau_hplus when both arrive. The zero-source de Sitter comparison is used numerically.",
+    "meaning": "Analytic background comparison, not a bound on finite-density source backreaction or scalar-wave scattering."
+  },
+  "collision_control": {
+    "parent_flux": 1.5,
+    "equal_charge": 0.5,
+    "overlap_flux": 0.5,
+    "overlap_vacuum": 0.03125,
+    "homogeneous_excitation_at_minima": 0.0,
+    "domain": "Linear scalar equation on one prescribed metric with additive swept flux and continuing prescribed membranes. This is not a solved self-gravitating collision or an annihilation rule."
+  },
+  "validity": "Radial freely falling test bodies with no nongravitational membrane interaction. Primary reception tau<6; analytic central-access thresholds include the asymptotic vacuum comparison. O(3,1) background continuation is reused, without a new evolution grid.",
+  "limits": "No population normalization, coupled scalar-wave transmission, finite-density backreaction, isotropization, cold-matter abundance, clustering spectrum, new vacuum selection, or measured cosmological correlation. Entering the child does not imply reaching its center.",
+  "next": "Use a constraint-compatible parent scalar packet in the accessible collar and derive its full scalar/metric/membrane perturbation matching before computing deposited stress and clustering.",
+  "process_cpu_seconds": 1.046875,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_parent_transport.py": "c97f774c2fd95f9aa34bd8f6ae0a71d7c585aeb9e509ea7ace46d2b6929f0fb7",
+    "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "scripts/check_nsc_atlas_parent_transport.py": "94d6212bd314328481dda31cc3ec1c5ecaa43d624c051c6bf4f3145ce9b3b752",
+    "tests/test_nsc_atlas_parent_transport.py": "1ff2bda4d91db7ff0443c25e650d73ac38039b457a72bca74d30616e3d4d0e15",
+    "scripts/plot_nsc_atlas_parent_transport.py": "0eba7eb608d49fe4b9cbf7aaade5f6f1408e82da857edf024cbc205faa07f0f7"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_parent_transport.py"
+}

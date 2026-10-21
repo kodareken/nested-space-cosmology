@@ -1,5 +1,17 @@
 # Prior art and admission of new research
 
+## Parent causal access and received energy, 21 October 2026
+
+The [transport owner](nsc-atlas-parent-transport.md#scope-reusable-mathematics-and-choice-of-calculation)
+reuses the coupled cap profiles and published open-chart continuation.
+It calculates radial test-body access and reception before choosing a
+finite parent scalar preparation. Four supplied velocities, a threshold
+root, two existing background tolerances, independent child trajectories
+and the de Sitter embedding control fit a 120 CPU-second budget. A
+separate exact additive-flux identity limits the simplest collision
+preparation. No scalar transmission coefficient or matter abundance is
+inferred from these kinematics.
+
 ## A regular scalar-gravity preparation, 21 October 2026
 
 The [new owner](nsc-atlas-scalar-preparation.md#inputs-and-borrowed-geometry)

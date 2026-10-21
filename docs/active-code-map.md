@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The [parent transport owner](nsc-atlas-parent-transport.md) uses
+nsc_atlas_parent_transport.py: RadialCapTransport retains the solved cap
+profiles, computes null access and massive delays, and matches reception
+to the open child. Independent trajectory integration and a de Sitter
+embedding test the analytic inverse. The check and plot scripts regenerate
+the compact record and causal figure without a new spacetime grid.
+
 The [coupled scalar preparation](nsc-atlas-scalar-preparation.md) is owned
 by nsc_atlas_scalar_preparation.py: ScalarPreparation.solve handles
 regular poles and opposite cap normals; diagnostics checks independent

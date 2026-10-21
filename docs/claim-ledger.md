@@ -1,5 +1,12 @@
 # Current NSC claim ledger
 
+The [parent source/receiver map](nsc-atlas-parent-transport.md) calculates
+radial geodesic access and received energy on the prepared coupled
+background, including its moving wall and a bounded vacuum comparison
+for the open child. It proves a conditional central-access criterion and
+checks finite reception numbers independently. Source population, coupled
+scalar scattering, backreaction and clustering remain separate questions.
+
 The [compact-parent proof](nsc-atlas-compact-parent.md) supplies an explicit
 S3 completion with two regular centres, three or four positive-tension
 walls, one common Schwarzschild connector and no additional seam source.

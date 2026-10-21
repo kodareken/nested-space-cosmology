@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [real-parent transport map](nsc-atlas-parent-transport.md) identifies
+causal source access, radial massive thresholds, arrival clocks and local
+energies on the prepared background. It is the kinematic prerequisite to
+excited-parent field preparation, with independent embedding controls.
+
 The [regular scalar preparation](nsc-atlas-scalar-preparation.md) solves
 two gravitational caps, a charged membrane and the scalar transition
 layer. It connects their physical boundary maps to a Lorentzian wall
