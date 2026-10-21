@@ -373,6 +373,16 @@
       "section": "10.22",
       "status": "derived",
       "owner": "docs/nsc-atlas-geometric-observer.md"
+    },
+    "shared-scalar-initial-atlas": {
+      "section": "10.23",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-shared-scalar-slice.md"
+    },
+    "protected-parent-cosmology": {
+      "section": "10.24",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-shared-scalar-slice.md"
     }
   },
   "findings": [
@@ -695,6 +705,22 @@
       "note": "docs/nsc-atlas-geometric-observer.md",
       "record": "results/summaries/nsc-atlas-geometric-observer-v1.json",
       "paper_section": "10.22"
+    },
+    {
+      "id": "shared-scalar-initial-atlas",
+      "status": "derived",
+      "summary": "Compact three-region same-action scalar/membrane initial constraints with one shared middle mass, full instantaneous Israel jets and regular poles. The third-region density is below every canonical state of the locally equivalent alternative law. Complete weak wall evolution is not inferred.",
+      "note": "docs/nsc-atlas-shared-scalar-slice.md",
+      "record": "results/summaries/nsc-atlas-shared-scalar-slice-v1.json",
+      "paper_section": "10.23"
+    },
+    {
+      "id": "protected-parent-cosmology",
+      "status": "derived",
+      "summary": "A sufficient future conformal bound protects at least90.7036 percent of initial parent volume. The actual smooth parent domain evolves by the same scalar/closed-FLRW equations, checked in two clocks. Dimensionless vacuum and dilution are conditional on supplied couplings and initial geometry, not observed abundances or clustering.",
+      "note": "docs/nsc-atlas-shared-scalar-slice.md",
+      "record": "results/summaries/nsc-atlas-shared-scalar-slice-v1.json",
+      "paper_section": "10.24"
     }
   ]
 }

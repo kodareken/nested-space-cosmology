@@ -36,6 +36,12 @@ sudden-transfer value $.09375$. The field excitation is concentrated
 in the spatial layer. Exact matching and continuation identities accompany
 the converged numerical construction; a quantum decay rate is not inferred.
 
+A distinct uniform scalar preparation now admits three sourced regions
+on one compact constrained slice. Its third region distinguishes laws
+that were equivalent at one interface. A causally protected parent domain
+evolves under the same scalar action, supplying a conditional expansion
+calculation while the complete two-wall future remains open.
+
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
 by $-0.1046\pm0.0144$ magnitudes using their published covariance. That
@@ -4525,8 +4531,187 @@ respectively. The inverse recovers both parameter choices. This is
 a test of an inherited-law hypothesis using additional regional
 information. It does not prove that constants are inherited, that the
 third region exists, or that these regions can all be observed in a
-common normalization. Constructing the next physical transition and
-evolving the excited parent remain separate, useful requirements.
+common normalization. The following construction supplies the third
+initial region and a protected evolving parent domain.
+
+### 10.23. Three sourced regions on one compact initial slice
+
+<!-- nsc-claim:shared-scalar-initial-atlas -->
+
+The previous ambiguity can now be tested on a physical third initial
+region. Keep the scalar/four-form action of Section 10.16, with
+$\kappa=1$, $\epsilon=1/4$, $\omega=20$, $e=1/2$, $\sigma=1/5$
+and zero bare density. Inside outward, use fluxes $(1/2,1,3/2)$ and
+one uniform initial field $\phi_0=-\sqrt{3}/80$, at the grandchild
+minimum. Its momentum and spatial gradient vanish. The initial and
+ground densities differ:
+
+$$
+(U_g,U_m,U_p)=(1,7,21)/32,\qquad
+(\rho_{v,g},\rho_{v,m},\rho_{v,p})=(1/32,1/8,9/32).
+$$
+
+The supplied radii are 1 and 1.9, and the middle mass constant is .12;
+both pole-region constants vanish. These are declared initial data.
+The Kottler functions with $\Lambda_j=\kappa U_j$ represent the
+instantaneous constraints. They cannot represent the excited scalar's
+subsequent vacuum evolution. Reusing the signed Israel equations,
+
+$$
+\beta_i=\frac{M_o-M_i}{kR^2}
+ +\frac{\kappa(U_o-U_i)+3k^2}{6k}R,\qquad
+\beta_o=\beta_i-kR,\quad v^2=\beta_i^2-f_i,
+$$
+
+gives two expanding timelike walls. The inner pair of signed beta
+values is (1.5625,1.4625), with areal speed 1.204916145077. The outer
+pair is (1.148006694367,.958006694367), with speed .841108986073.
+An areal speed above one is compatible with timelike normalization.
+The same middle mass is used on both boundaries.
+
+The caps have slice extrinsic curvature $L^i{}_j=-H\delta^i{}_j$,
+where $H=v/R$ on the corresponding wall. The grandchild sectional
+curvature is $-369/256$; the parent's is .022776502368. Between them
+choose a quintic interpolation of H whose first two derivatives vanish
+at both ends, and put
+
+$$
+v_s=RH(R),\quad R_\ell=\sqrt{f_m+v_s^2},\quad
+L_r=-v_s',\quad L_\theta=-v_s/R.
+$$
+
+Direct substitution proves both smooth Einstein constraints. The
+angular jump gives the distributional Hamiltonian source
+$-4[\beta]/R=2\kappa\sigma$, and the continuous $L_\theta$ gives
+zero surface momentum. Both caps close at regular poles, producing
+a compact S3 slice of proper length 20.393422999807. This uses the
+standard Einstein-scalar constraints of Choquet-Bruhat, Isenberg and
+Pollack (Section 2), together with the material Israel conditions;
+their smooth theorem is not a shell-evolution theorem.
+
+The temporal jump is also retained. The pressure relation fixes
+
+$$
+\overline{A}=P/\sigma-(B_i+B_o),\qquad [A]=-k.
+$$
+
+A positive lapse
+collar realizes both one-sided derivatives while taking N=1 on the
+walls and near the poles. Its global bounds are .95649 and 1.04549.
+Independent acceleration checks use the full moving mass
+$m=R(1+v^2-\beta^2)/2$. The detailed construction and exact constraint
+proof are in the [shared-slice owner](../docs/nsc-atlas-shared-scalar-slice.md).
+
+The one-sided observer formula at each wall recovers the common field.
+After subtracting the excitation, the three ground values are those
+of candidate A. More strongly, candidate B from Section 10.22 obeys,
+for every integer sector and every real canonical scalar state,
+
+$$
+q_n=e_B(3/5-n),\qquad
+\rho_B\geq U_{\min,B}(n)=\frac{25}{32}(3/5-n)^2\geq\frac18.
+$$
+
+The new grandchild geometry instead requires density 1/32 from its
+Hamiltonian constraint. The unavoidable gap is at least 3/32. Thus
+changing B's preparation, including its gradients or momenta, cannot
+reproduce this geometry under its unchanged law. This is a stronger
+inheritance distinction than the previous potential-only comparison.
+It is a mathematical rejection on the constructed geometry, not an
+astronomical measurement or exclusion of all alternative actions.
+
+The scalar corners remain weak: conditional short-time inward flux
+coefficients are 18.75 and 56.25 at the two separate wall proper clocks.
+They do not establish a finite interacting evolution. Initial
+composition is now explicit; a full weak future remains open. The
+[constraint and sector record](../results/summaries/nsc-atlas-shared-scalar-slice-v1.json)
+contains the independent checks and exact parameters.
+
+### 10.24. Cosmology in the protected parent domain
+
+<!-- nsc-claim:protected-parent-cosmology -->
+
+The initial parent cap is homogeneous closed-FLRW scalar data with
+$a_0=6.626077076100$, $H_0=.442688940038$, ground density 9/32 and
+excitation 3/8. Its angular extent from the parent pole is
+$\theta_w=2.850764359770$. The smooth homogeneous solution determines
+the domain of dependence of these actual cap data. Any causal
+completion of the whole atlas must agree there; no completed wall
+future is required to calculate this domain.
+
+Writing chi for displacement from the parent minimum gives
+
+$$
+\dot\chi=\Pi,\quad \dot\Pi=-3H\Pi-\omega^2\chi,\quad
+\dot a=aH,\quad \dot H=a^{-2}-\kappa\Pi^2/2,
+$$
+
+$$
+E=(\Pi^2+\omega^2\chi^2)/2,\quad
+3(H^2+a^{-2})=\kappa(\rho_v+E),\quad \dot E=-3H\Pi^2.
+$$
+
+Put $h_{\min}^2=\kappa\rho_v/3$. Because $a_0h_{\min}>1$,
+H cannot vanish on the expanding branch; it stays above .266408516441.
+The energy decreases, bounding the scalar and H and allowing smooth
+continuation at every finite future time. Total future conformal
+distance has the explicit bound
+
+$$
+\int_0^\infty\frac{dt}{a(t)}
+\leq\arcsin\frac{1}{a_0h_{\min}}=.515418396612.
+$$
+
+Hence all comoving points with $\theta<2.335345963158$ remain within
+the parent domain of dependence for all future proper time. They
+occupy at least 90.703557% of the initial parent volume. This is a
+sufficient causal bound, not the exact horizon or a construction
+of the remaining wall spacetime. The initial lapse collar merely
+changes coordinates on the smooth development.
+
+![Shared scalar atlas and protected parent](../docs/figures/nsc-atlas-shared-scalar-slice.png)
+
+*Figure 16. The compact initial geometry, with the two joins enlarged
+at right. Shading marks the sufficient protected parent cap. The
+parent contains an evolved scalar source under the same action;
+the unshaded interacting wall future remains a separate problem.*
+
+Taking the initial parent curvature radius as the independently
+specified reference length gives the conditional inherited value
+
+$$
+\Lambda_{\rm parent}L_{\rm ref}^2
+=\kappa\rho_v a_0^2=12.348252398928.
+$$
+
+This depends on the declared couplings and initial data. It does
+not select the measured cosmic Lambda or provide an SI ruler.
+Integrating in proper time and independently in expansion e-folds
+produces the same one-e-fold endpoint:
+
+| Quantity | Same-source parent value |
+| --- | ---: |
+| Proper time | 2.888845513139 |
+| Scale factor | 18.011544909930 |
+| H | .311446897816 |
+| Scalar excitation | .018994903671 |
+| Integrated scalar expansion work | .356005096325 |
+| Comoving scalar energy divided by its initial value | 1.017394237405 |
+
+The excitation is within 1.74% of pressureless dilution across this
+interval, which motivates a perturbation calculation but does not
+prove clustering. Maximum Friedmann and work residuals are below
+$3.3\times10^{-11}$; independent endpoint differences are below
+$1.5\times10^{-11}$. The declared numerical comparison tolerance
+is $10^{-9}$ in normalized variables, not an interval enclosure
+or observational uncertainty.
+
+The [compact evidence](../results/summaries/nsc-atlas-shared-scalar-slice-v1.json)
+binds these numbers to the same action, constraints and implementation.
+The next cosmological connection is scalar and metric perturbation
+growth on this evolving domain, followed by its observer transfer.
+That tests whether the inherited excitation can function as a
+clustering component, while the full wall problem remains explicit.
 
 ## IV. What the observers can reach
 
@@ -4577,7 +4762,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 16. The isolated reference in joined causal charts. Horizons are
+*Figure 17. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -5583,7 +5768,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 17. Saved finite-window comparisons. A: the previous and current
+*Figure 18. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -5679,7 +5864,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 18. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 19. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -6464,7 +6649,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 19. Research dependencies, distinct from spacetime causal arrows.
+*Figure 20. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

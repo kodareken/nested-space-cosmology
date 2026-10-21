@@ -1,10 +1,17 @@
 # Scientific strand index
 
+The [shared scalar atlas and protected parent](nsc-atlas-shared-scalar-slice.md)
+construct three same-action constrained regions, prove an all-sector
+energy-floor obstruction for the locally equivalent alternative, and evolve
+the actual parent domain of dependence. Causal shielding advances cosmology
+while full coupled membrane evolution remains a separate task.
+
 The [geometric observer and inheritance inverse](nsc-atlas-geometric-observer.md)
 connect child-side wall geometry to scalar reconstruction, an independent
 tidal relation and the full flux/pressure-work mass balance. An exact
 one-interface coupling ambiguity is resolved algebraically by an additional
-same-law ground-vacuum sector; physical composition remains open.
+same-law ground-vacuum sector. The shared-slice entry above constructs
+that third initial region; the complete composed future remains open.
 
 The [finite parent scalar source](nsc-atlas-parent-source.md) solves its
 spatial gravity and charged-wall constraint together with the scalar

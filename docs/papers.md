@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision 2026-10-21.5 adds Sections 10.23--10.24 and Figure 16: a compact
+three-region scalar initial atlas, a source-independent inherited-law
+obstruction, and the actual protected parent's cosmological evolution.
+The whole two-wall future remains open; the protected smooth domain and
+conditional dimensionless vacuum are calculated under the same action.
+
 The one living manuscript is **Nested-Space Cosmology: The Geometry of a Universe**:
 [Markdown source](../paper/nested-space-cosmology.md) and
 [illustrated PDF](../paper/nested-space-cosmology.pdf). Its revision is independent
@@ -66,7 +72,7 @@ constructed host patch. Equal elapsed proper times do not define
 simultaneity. This supplies the geometry for later field transfer;
 physical foliation, field state and cosmological averaging remain separate.
 
-Revision `2026-10-19.3` adds Section10.4's physical radar/clock inverse:
+Revision `2026-10-19.3` adds Section 10.4's physical radar/clock inverse:
 the quiet cap lapse and signed junction combinations are reconstructed
 from calibrated clocks, then predict a later received frequency. Both
 existing wall states recover the same membrane tension. Conditional input

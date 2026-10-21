@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [shared scalar slice owner](nsc-atlas-shared-scalar-slice.md) uses
+nsc_atlas_shared_scalar_slice.py: SharedScalarSlice owns the three regions,
+two wall jets, common middle geometry, positive initial lapse and independent
+constraints. alternative_floor_test reuses exact charge-lattice arithmetic.
+parent_causal_domain proves the protected smooth region; evolve_parent uses
+proper and e-fold clocks for its same-source cosmology. Frozen Kottler
+expressions are initial constraint data, not the excited scalar's future.
+
 The [geometric observer owner](nsc-atlas-geometric-observer.md) uses
 nsc_atlas_geometric_observer.py: WallGeometry owns proper-time/normal
 derivatives; ScalarWallObserver reconstructs the field and tests an

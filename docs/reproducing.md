@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+The shared scalar atlas and protected parent use:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_shared_scalar_slice.py
+python scripts/run_python.py scripts/plot_nsc_atlas_shared_scalar_slice.py
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_shared_scalar_slice.py
+```
+
+The compact record stores constraints, causal bounds and two-clock endpoints,
+not full arrays. Its numerical comparison tolerance is 1e-9 in the declared
+normalized variables. See the [owner](nsc-atlas-shared-scalar-slice.md).
+
 The [geometric observer](nsc-atlas-geometric-observer.md) is reproduced by
 `python scripts/run_python.py scripts/check_nsc_atlas_geometric_observer.py`.
 Its focused tests are `tests/test_nsc_atlas_geometric_observer.py`; regenerate

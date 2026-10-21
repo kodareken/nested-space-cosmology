@@ -1,5 +1,20 @@
 # What the calculations show
 
+The [shared scalar atlas](nsc-atlas-shared-scalar-slice.md) now gives
+three sourced regions on one compact initial slice, with two moving walls,
+one middle mass and regular poles. Bulk, surface and instantaneous temporal
+Israel conditions agree. Its grandchild requires density 1/32; the previously
+one-wall-equivalent alternative has an all-sector canonical energy floor 1/8,
+so no scalar preparation within that law can reproduce this geometry.
+
+At least 90.7036% of the initial parent volume has a smooth future domain
+protected from the walls. The same-source closed-FLRW calculation reaches
+one e-fold at proper time 2.888845513139 with H=.311446897816. Its inherited
+vacuum gives Lambda*a0^2=12.348252398928, conditional on the declared action
+and initial geometry. Two clock formulations agree to 1.5e-11. The complete
+two-wall weak future, clustering, physical scale selection and observed
+abundances remain open; the protected bulk evolution does not assume them.
+
 The [one-sided geometric observer](nsc-atlas-geometric-observer.md) now
 reconstructs the local scalar and flux from the charged wall's geometry
 and predicts an independent tidal contraction. Its corrected tidal curve
@@ -13,15 +28,16 @@ Two fixed parameter choices have identical one-interface classical
 scalar/gravity dynamics under a field translation, while their next
 ground-vacuum values are1/32 and49/32. A third comparable vacuum value
 and the local tidal coefficient resolve their mixing/charge ambiguity.
-This is an exact potential-level inverse, not a constructed third region
-or observational verification. The coupled excited-parent evolution remains
-open and now has exact finite-time diagnostics.
+This earlier result is an exact potential-level inverse. The shared-slice
+entry above now supplies a third constrained physical region and protected
+parent evolution. Full coupled wall evolution and observational verification
+remain open.
 
 The [excited-parent transfer limit](nsc-atlas-parent-source.md#a-weak-initial-corner-can-carry-a-real-inward-pulse)
 now gives a nonzero conditional inward energy source. A uniform field at
-the child minimum leaves parent excitation density3/32 and admits exact
+the child minimum leaves parent excitation density 3/32 and admits exact
 round Cauchy caps with radius squared1800/467. For a bounded-geometry
-causal weak development, inward flux is18.75 tau^2+O(tau^3), child
+causal weak development, inward flux is 18.75 tau^2+O(tau^3), child
 energy per initial area is6.25 tau^3+O(tau^4), and the wall pressure
 drops by the same leading flux amount. The initial state has a weak
 corner, distinct from the smooth preparation below. A full coupled
@@ -315,7 +331,7 @@ numbers. With b,L and the forcing independently known, the strictly
 decreasing response formula identifies q. A spacetime/source identification and observational tests
 remain required for the cosmological claims.
 
-Current research, 19 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-19.3`, adds the physical radar/clock inverse and finite membrane-law prediction in Section10.4. It integrates the scale-free inverse and held-out coefficient in Section5.3 and compositional gravity/time balance in Section6.1.21. It retains the inherited local state, detector and late vacuum source in Section6.1.20, the infinite inherited-law theorem, volume action, actual curved Dirac work and archived P001 diagnosis. Compact-source quantum slip and the physical parent history remain uncomputed. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology; [the catalog](../paper/catalog.json) owns publication status.
+Current research, 19 October 2026: the [living atlas manuscript](../paper/nested-space-cosmology.md), revision `2026-10-19.3`, adds the physical radar/clock inverse and finite membrane-law prediction in Section 10.4. It integrates the scale-free inverse and held-out coefficient in Section5.3 and compositional gravity/time balance in Section6.1.21. It retains the inherited local state, detector and late vacuum source in Section6.1.20, the infinite inherited-law theorem, volume action, actual curved Dirac work and archived P001 diagnosis. Compact-source quantum slip and the physical parent history remain uncomputed. The [overview](../paper/figures/geometry-overview.png) and dated entries below preserve their original numerical domains and chronology; [the catalog](../paper/catalog.json) owns publication status.
 
 ## An explicit correlated parent state and local Dirac subtraction
 
@@ -505,7 +521,7 @@ endpoint is unchanged and remains unconverged; no P001 grids ran.
 
 The [compact-source bridge](nsc-atlas-dirac-probe.md#conserved-compact-source-mass-tangent)
 now supplies a conserved central-mass perturbation of this annulus, with
-the parent mass changing to preserve the initial physical wall speed.
+the parent mass changing to preserve the initial physical wall speed .
 Five independent nonlinear-family controls pass. This is the classical
 source and analytic Dirac-potential tangent needed for a later mixed
 response, rather than a calculated replacement for the flat slip.

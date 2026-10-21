@@ -1,5 +1,13 @@
 # Current NSC claim ledger
 
+The [shared scalar atlas](nsc-atlas-shared-scalar-slice.md) establishes
+compact three-region initial constraints and full instantaneous wall matching,
+plus a smooth protected-parent cosmology. Its all-sector canonical energy
+floor rejects the previous alternative law on the new grandchild geometry.
+The conditional corner pulses do not establish coupled wall evolution;
+the inherited dimensionless vacuum and scalar dilution are benchmark outputs,
+not observed cosmic abundance or clustering claims.
+
 The [geometric observer](nsc-atlas-geometric-observer.md) gives exact
 necessary one-sided scalar, flux, tidal and mass/work identities for the
 declared charged-wall action. The existing coupled geometry checks them;

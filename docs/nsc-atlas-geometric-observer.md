@@ -16,7 +16,10 @@ different parameter sets have identical reduced classical dynamics for one
 parent--child interface, yet give next-sector vacuum values 1/32 and 49/32.
 A third comparable ground-vacuum value can distinguish them and determine
 the charge magnitude and mixing ratio under the shared-law assumptions.
-It does not construct the third physical region.
+This entry alone does not construct the third physical region. The
+[subsequent shared-slice construction](nsc-atlas-shared-scalar-slice.md) now
+supplies it on one compact constrained slice, and strengthens the alternative
+law exclusion to every canonical scalar state and integer charge sector.
 
 ## Decision, prior work and finite calculation
 

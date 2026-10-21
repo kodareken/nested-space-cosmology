@@ -18,6 +18,30 @@ starting a derivation.
 
 ## Current execution priority — 21 October 2026
 
+### Shared scalar regions selected by the current rethink
+
+Compare a double O(4) preparation, full one-wall excited evolution, and
+moving three-region constraint data. The selected next connection is one
+compact Lorentzian initial slice with two moving material walls and a
+shared middle mass. It keeps the scalar/four-form action fixed and avoids
+imposing simultaneous time symmetry as an extra formation assumption.
+The scalar is initially uniform at the innermost minimum; its momentum
+vanishes. Existing Kottler junction formulas represent its instantaneous
+stress, but are not continued as the scalar's future vacuum evolution.
+The [completed shared slice](nsc-atlas-shared-scalar-slice.md) checks the
+common spatial/extrinsic geometry, both distributional constraints, the full
+instantaneous wall force, positive lapse and observer reconstruction. Its
+third-region energy density excludes the locally equivalent alternative law
+for every canonical state and allowed integer sector.
+
+The rethink also removes complete wall evolution as a prerequisite for all
+cosmology: at least 90.7036% of the initial parent volume lies in a smooth
+future domain protected from both walls. The same-source closed-FLRW
+evolution reaches one e-fold, and its inherited Lambda*a0^2 is 12.348252398928.
+The next connection is scalar/metric perturbations and observer transfer on
+this evolving parent, to test clustering and physical scales. The interacting
+two-wall weak development remains a separate active mathematical problem.
+
 ### Using the atlas to test our universe
 
 The atlas can already guide conditional observational tests; a complete
@@ -42,7 +66,7 @@ same child curvature. Unknown preparations can still mimic that change.
 The simple additive collision control lands on another minimum
 and does not create the earlier homogeneous quench excitation.
 
-Active next: construct the coupled causal development of the uniform
+The interacting-wall branch still requires the coupled causal development of the uniform
 excited-parent preparation below, with both cap metrics and the moving
 material wall. Compute its integrated transmitted
 stress before inferring isotropy, cold matter or clustering. The regular
@@ -61,7 +85,7 @@ supplies those initial data: proper scalar excess 1.112671383, wall radius
 2.764905208 and initial areal acceleration .386385323 for amplitude .02.
 Its derived wall-layer coefficient removes a scalar compatibility failure
 that the Einstein constraint alone would miss. The initial flux slope is
-outward. Active next is the coupled finite-time evolution and its integrated
+outward. That preparation still needs coupled finite-time evolution and its integrated
 transmitted stress. Finite-time transmission and
 clustering follow afterward; initial-data comparison is not causal
 propagation or a completed cosmological matter model.
@@ -941,7 +965,7 @@ laws, changed state and environmental dressing in a specified attachment?
 regional constants. Planck length is a derived scale; a shortest allowed
 wavelength requires another hypothesis. Absolute zero is a thermodynamic
 state limit, not the other end of a wavelength interval. Coordinate light
-delays alone do not change locally measured vacuum light speed.
+delays alone do not change locally measured vacuum light speed .
 
 <a id="question-charge"></a>
 

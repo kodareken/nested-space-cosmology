@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+  "current_receipt_commit_parent": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 20801,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 21239,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "8f4b573b70497559eef4244370f2dd9c572f1b85c8aacf4069ae8c7a012133d5"
+      "sha256": "62b209d6dacd33ae3cfc723d1675f5108a4efa35d57f4f4559b96db016403056"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 278108,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 278631,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "68078aa05d1288e46cf4ce62c92aacf289993ddcdf7104978289b99ddfbcf74e"
+      "sha256": "071ed142f8e8dbfaa60d10896dd18e390342ee4f6235fcb98abed1dc6b980e5f"
     },
     {
       "bytes": 119691,
@@ -10312,9 +10312,9 @@
       "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
-      "bytes": 107862,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 108364,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "import_bytes": 102088,
       "import_sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a",
       "migration_disposition": "active_owner",
@@ -10322,15 +10322,15 @@
       "original_path": "lab/docs/claim-ledger.md",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
-      "sha256": "df6f74a53e8a8515990f3e8d51275d3d0ed6886873a6da6e1ad45f75822380f3"
+      "sha256": "d02ff0ea583d5fa275d11f9a15da2df63be9a51291347c3cf8c9a535f62e3842"
     },
     {
-      "bytes": 449192,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 450212,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "beb5cbba7b6bd9270b8d2ad4cdda522ebc29feffb79a497ed4db4764e19da83c"
+      "sha256": "284decd63ccff9f5b87fd7d65ed37edafb801326ddf21a466748975b5204ccd7"
     },
     {
       "bytes": 173938,
@@ -10411,6 +10411,14 @@
       "path": "docs/figures/nsc-atlas-scalar-preparation.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "6b1b045a9ae28b3398f3c21cfecc88aee986e1a6b7d2f9f0efdeae0688339f04"
+    },
+    {
+      "bytes": 140231,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+      "path": "docs/figures/nsc-atlas-shared-scalar-slice.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6c4767221b8599234e9b4f4bbb39e3637a77df8298d34b1775755a4fcb64daad"
     },
     {
       "bytes": 919,
@@ -10580,12 +10588,12 @@
       "sha256": "93e5167853adf47ae9b61961cae3ec6a8c0efcdda0b1dcb2e3c5e1cf72901fbb"
     },
     {
-      "bytes": 15205,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 15451,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "docs/nsc-atlas-geometric-observer.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "5858e637bb48c76bcd66fc88c6cfbd666bec4d8b4cf77dff2e3e5829faf3e9c2"
+      "sha256": "58fcb5128f13af52aad4277447556312a228a7a1635b01c871b21ea874a16bf3"
     },
     {
       "bytes": 8895,
@@ -10661,6 +10669,14 @@
       "sha256": "b35adc596ea174a27f22833a338a655329791d2253460b2713920e3282b92dc5"
     },
     {
+      "bytes": 14379,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+      "path": "docs/nsc-atlas-shared-scalar-slice.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6174c67632e447bc878cd5a4e20da003582ba922eb30a9d08258a7e74a25e8cc"
+    },
+    {
       "bytes": 9716,
       "path": "docs/nsc-atlas-wall-mass-closure.md",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
@@ -10696,15 +10712,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 92063,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 93611,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "f894a7b7dc7f6439e2d63de7897b655159c3ee75f20da3bfc4826894dc42270a"
+      "sha256": "84411a98a43da71485e67fe6cbb5e6dfaeb6d175fd4915de660cb35c75b1c2c4"
     },
     {
       "bytes": 30876,
@@ -11656,12 +11672,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 21454,
-      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
-      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
+      "bytes": 21814,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "940a6e4229b948dd99e964f87b3d4878884f47374249ccea1f1fe1225c54167d"
+      "sha256": "cbf0300c1d75c8cd5b18f297122f101aaf7817771d091cadcde55abcddf14d10"
     },
     {
       "bytes": 10809,
@@ -11672,12 +11688,12 @@
       "sha256": "420b0342c1b5230c75a91080110781501556acb8d39e7b43c69d969e52d49dee"
     },
     {
-      "bytes": 589209,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 589906,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5cf70fc7e09d473dd5cf36d428d7e78d7d78b33432aa122e51a1101772425383"
+      "sha256": "b0a07fff28b9ae0350107ab2987ae0f20387bc2494897e32b0fc74dd16784548"
     },
     {
       "bytes": 6705,
@@ -11686,20 +11702,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 218360,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 218895,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5a5cac157994f12ef44399705f5648dc44529e112b188f7f0219b49bcc99b179"
+      "sha256": "c9575e5b331adfd20c509c2cf6946b17ef6489fd9570beaf561068c4b7f152a6"
     },
     {
-      "bytes": 37822,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 38263,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "3c0b6c1af01716865ab76b301021ef534e5ebde33ec19fb41efccdea0701268b"
+      "sha256": "af0a7a6168b7f78a743e9e218490a8f5b01ed35ec58cfbd836500ee8f19ee416"
     },
     {
       "bytes": 18356,
@@ -11768,28 +11784,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 27511,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 27840,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "b152a4c8df82478c91ee543f0fe658e0428db116bd86779b860183a48afb2c57"
+      "sha256": "98ffc17f8d51b73ac9607d599f970129028ced64345162a36d3f506d901ed4b2"
     },
     {
       "bytes": 3206,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e3e3b9970bac28525c22b8f1244cd05789e5475bd357a62ec5826746e5a7c744"
+      "sha256": "60787a67b10248dfc62e378d637f0a97c5f9586820415603f34ddf08db8d2d1f"
     },
     {
-      "bytes": 32723,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 34179,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "833013f0aa84e2f1d8a4b0d6b4ef5364e05e89943caf99d89237b922d2b48474"
+      "sha256": "89b28841aeb69c9a94210bbd751b5a8119eae4f5d38a21e5dc870b2cb06553af"
     },
     {
       "bytes": 226492,
@@ -11801,27 +11817,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5d9bf4c0a4748f381ef21b39080976912c1c7cddbd88007e255c88e70747fefa"
+      "sha256": "35c50b07e6a2e83e01aec3480246ac2fdc8eb24865224e661d090b30f9c70d35"
     },
     {
-      "bytes": 315021,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 322903,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "35f5019ea25f79d0e4c8c0003a7ab53248e706503ef6c6bf332931abd59137e8"
+      "sha256": "443d7baf40df4c13aaedfd964e8041a81e7bd7332ff1692fd86aef4a52972bfc"
     },
     {
-      "bytes": 7551880,
-      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
-      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "bytes": 7808509,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "56957f42f1473c452ab6096e630e2af75eb128b2be60c5c83b78f5c38d6606f2"
+      "sha256": "15641ef3594dc5f3c40d18b5b135ef182e14da11b7e2280788972e96c974a061"
     },
     {
       "bytes": 3283,
@@ -30646,6 +30662,14 @@
       "sha256": "1ce1ce949be809410b488f7392eecb1c3ed1838cfd890e0110b5f2361139bb38"
     },
     {
+      "bytes": 15941,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+      "path": "results/summaries/nsc-atlas-shared-scalar-slice-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5167b77546768e552c01a92ba3e068fc739e0309955dfa5f4fdfc679fcca5074"
+    },
+    {
       "bytes": 13697,
       "change": "Preserve the source-cell certificate and include the actual final-knot value and first-jet owner.",
       "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
@@ -31117,6 +31141,14 @@
       "path": "scripts/check_nsc_atlas_scalar_preparation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "957bc18b1e2444563594e8d95d8700391dd4a217400d7fbe648050b61c7501d1"
+    },
+    {
+      "bytes": 6371,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+      "path": "scripts/check_nsc_atlas_shared_scalar_slice.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "17c9bb5ac6e9d52ced561edc845f044f11bff3af54b9f3c93e9736ee65bd251a"
     },
     {
       "bytes": 5510,
@@ -33888,6 +33920,14 @@
       "sha256": "5b90e083b9b3672062b23c019d65737111a9cc34cc647235f80b4e5678dda237"
     },
     {
+      "bytes": 2529,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+      "path": "scripts/plot_nsc_atlas_shared_scalar_slice.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6e35503e330d3dd0d73f277f067460b1c0aa5a334ffb6270f36870333b5e2fb5"
+    },
+    {
       "bytes": 5846,
       "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
       "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
@@ -35030,6 +35070,14 @@
       "path": "src/recursive_horizons/nsc_atlas_scalar_preparation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5"
+    },
+    {
+      "bytes": 19451,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+      "path": "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "067195010ff1a306e51a058093f50b8bc27abd2904fec42d1394f549082b5b4c"
     },
     {
       "bytes": 4099,
@@ -39404,6 +39452,14 @@
       "path": "tests/test_nsc_atlas_scalar_preparation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "892bb9edb62740ef43928d83bb4a50d58267c89cf4a80209c2e2d652a56a0e34"
+    },
+    {
+      "bytes": 6906,
+      "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
+      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+      "path": "tests/test_nsc_atlas_shared_scalar_slice.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5d0b93f3a318e7a54d1058551e945bfe37cbe1b0369a80429c0b14fd73a54f56"
     },
     {
       "bytes": 6166,

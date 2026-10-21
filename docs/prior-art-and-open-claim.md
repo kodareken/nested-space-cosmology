@@ -1,5 +1,16 @@
 # Prior art and admission of new research
 
+## Shared scalar composition and protected cosmology, 21 October 2026
+
+The [shared-slice owner](nsc-atlas-shared-scalar-slice.md#rethinking-inputs-and-calculation-boundary)
+reuses Einstein-scalar constraints, signed Israel matching, canonical energy
+positivity and FLRW evolution. Its missing connection is three actual
+same-action constrained regions, followed by the smooth domain of dependence
+of the parent. One quadrature/independent connector ODE, exact identities,
+two finite parent-clock integrations and the all-sector floor test fit 120
+CPU seconds. Success advances to perturbations and observer transfer; it
+does not admit a new grid campaign or infer the complete weak wall future.
+
 ## Geometric observer and inherited-parameter identification, 21 October 2026
 
 The [observer owner](nsc-atlas-geometric-observer.md#decision-prior-work-and-finite-calculation)
@@ -8,7 +19,7 @@ Hayward's mass/work law. New work derives their one-sided charged-wall
 connection, tests it on the existing continued geometry, and proves an
 explicit two-sector coupling equivalence broken by a third charge sector.
 One cap solve, finite analytic wall times, an independent work integral,
-symbolic identities and synthetic calibration checks fit120 CPU seconds.
+symbolic identities and synthetic calibration checks fit 120 CPU seconds.
 No new grid, fitted source waveform or global spacetime-existence claim is
 admitted by this calculation.
 
