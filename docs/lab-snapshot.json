@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+  "current_receipt_commit_parent": "e807b81263f9baa429d4709d50e2e81c7ff43ce9",
   "files": [
     {
       "bytes": 3120,
@@ -10647,12 +10647,12 @@
       "sha256": "3b275b055e685bb051154469721d54101929cc9ed7d9abfd7a919bfe328a31a8"
     },
     {
-      "bytes": 12884,
+      "bytes": 13254,
       "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "changed_from_commit": "e807b81263f9baa429d4709d50e2e81c7ff43ce9",
       "path": "docs/nsc-atlas-parent-perturbations.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "0bc7422956c477f8c20f6e0c1f5be7c783aed2a3e58a178bc1787a938f9bc293"
+      "sha256": "3a9b7375114e102a5a6ae6847012da6cced8081462a975043c2102dc7744f008"
     },
     {
       "bytes": 19314,

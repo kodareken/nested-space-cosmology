@@ -273,6 +273,12 @@ comparison tolerance is1e-7 in normalized linear response. These are finite
 numerical consistency checks, not a uniform spectral enclosure or a
 finite-amplitude nonlinear remainder.
 
+Two independent Grok reviews confirmed the retained n>=2 Einstein-scalar
+system, its constraint propagation and turning-point regularity, and the
+compact-parent domain-of-dependence construction. The distinction between
+the exact compact profile and its finite harmonic approximation is retained.
+No universal classification of the excluded n=0,1 modes is needed here.
+
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_parent_perturbations.py
 python scripts/run_python.py scripts/plot_nsc_atlas_parent_perturbations.py
