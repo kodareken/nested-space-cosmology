@@ -44,6 +44,9 @@ calculation while the complete two-wall future remains open. A compact
 constraint-compatible parent perturbation subsequently develops linear
 gravitational density growth. Its transfer is scale and preparation
 dependent, giving a joint requirement on vacuum and structure scales.
+An operational three-clock relation then eliminates its two free state
+amplitudes within the fixed profile family, with independently checked
+free-fall and light-propagation effects.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -4886,6 +4889,143 @@ does not uniquely demonstrate nesting. The next physical connection
 is a prepared perturbation state and frequency/scale, followed by
 the linked density and metric response seen by observers.
 
+### 10.27. What the inherited law leaves to the state
+
+<!-- nsc-claim:finite-parent-state-observability -->
+
+The two independent perturbation columns cannot be replaced by a
+unique initial phase without additional physics. After inserting
+the metric momentum equation, the linear flow on $(X,Y,\Phi)$ has
+matrix trace -4H. Its fundamental matrix therefore obeys
+
+$$
+\det U(t,t_0)=\exp[-4N(t)]>0.
+$$
+
+Together with the exact constraint propagation, this makes finite
+evolution a bijection between the initial and final two-dimensional
+constraint spaces. Distinct admissible states cannot become the
+same complete state at finite time. Their covariances transform by
+U times the initial covariance times U-transpose, rather than being
+selected by the deterministic equations. Asymptotic attraction,
+open-system elimination, a boundary condition or an actual formation
+law remains a separately specified possibility.
+
+The useful next connection can nevertheless proceed: retain the
+existing compact spatial profile and its two density/phase amplitudes,
+use two operational observations to infer them, and test a third.
+This does not select an arbitrary primordial spectrum. It creates
+a falsifiable observer relation within a declared preparation family.
+The [state-flow identities](../results/summaries/nsc-atlas-parent-clocks-v1.json)
+are retained with the observer calculation.
+
+### 10.28. Three freely falling clocks and a withheld prediction
+
+<!-- nsc-claim:three-clock-parent-relation -->
+
+Let $L_{\rm ref}=a_0$ and initialize three ideal test emitters at
+proper separations $(.04,.08,.12)L_{\rm ref}$ from the parent pole.
+They initially rest relative to the slice normal, emit continuously
+at known rest frequencies, and freely fall without backreaction.
+The central free-fall receiver observes at fixed proper age
+2.251557477076, corresponding to background N=.8. All rays remain
+inside the protected parent domain.
+
+Observer terms are essential in relativistic measured quantities;
+see [Scaccabarozzi, Yoo and Biern](https://arxiv.org/html/1807.09796).
+Here the actual closed-parent metric supplies the calculation.
+Holding initial proper distance and receiver age fixed gives
+
+$$
+\delta\theta_s(0)=\int_0^s\Phi(0,\theta)d\theta,
+\qquad \delta t_o=-\int_0^{t_o}\Phi(t,0)dt.
+$$
+
+The source's outward peculiar velocity obeys
+
+$$
+\dot v_s+Hv_s=-\frac{\partial_\theta\Phi(t,s)}{a},
+\qquad \delta\dot\theta_s=v_s/a.
+$$
+
+Along the unperturbed incoming ray, $\theta=\eta_o-\eta(t)$. The perturbed
+null equation sets the emission-time correction,
+
+$$
+\delta t_e=a_e\left[\frac{\delta t_o}{a_o}
+ +2\int_{t_e}^{t_o}\frac{\Phi}{a}dt-\delta\theta_s(t_e)\right].
+$$
+
+The measured log-frequency departure from the background is
+
+$$
+y=\log\frac{(\nu_o/\nu_e)}{a_e/a_o}
+=H_e\delta t_e-H_o\delta t_o+\Phi_e-\Phi_o-v_e
+ +2\int_{t_e}^{t_o}\partial_t\Phi\,dt.
+$$
+
+The last derivative is partial at fixed position. Source motion,
+potential, propagation and clock contributions all enter; no
+instantaneous potential difference alone determines the measurement.
+
+Writing $y_i=R_{i1}\alpha+R_{i2}\beta$ for the two retained amplitudes,
+the computed response is:
+
+| Initial distance / $L_{\rm ref}$ | Background frequency ratio | Density column | Phase column |
+| --- | ---: | ---: | ---: |
+| .04 | .840672581087 | .017861103048 | -.000731094396 |
+| .08 | .721722111018 | .030644152339 | -.001671366286 |
+| .12 | .628648035135 | .038548233209 | -.002804913120 |
+
+The first two rows have nonzero determinant and condition number
+169.341 in this amplitude normalization. Eliminating both amplitudes
+gives the conditional prediction
+
+$$
+y_3=-2.88990465\,y_1+2.94232704\,y_2.
+$$
+
+This is [NSC-P003](../docs/prediction-register.md), registered
+retrospectively without astronomical data. In the synthetic check,
+amplitudes $(10^{-5},-4\times10^{-6})$ give departures
+$(1.81535408,3.13126989,3.96701985)\times10^{-7}$. Calibrating only
+the first two recovers the amplitudes and predicts the withheld third.
+
+![Operational three-clock protocol and synthetic test](../docs/figures/nsc-atlas-parent-clocks.png)
+
+*Figure 18. Left: three emitters on the central past radial light cone;
+their initial proper distances and the receiver's proper age are fixed.
+Right: a withheld synthetic frequency response agrees with the prediction
+from two state calibrations. No observational confirmation is inferred.*
+
+An independent check integrates timelike sources and radial photons
+in finite metric deformations, fixing the physical distances and
+proper age by direct integration. The null Hamilton equation is
+
+$$
+\frac{d\log(-p_t)}{dt}
+=\frac{\partial_tA}{2A}-\frac{\partial_tB}{2B},
+\qquad A=1+2\Phi,\quad B=a^2(1-2\Phi).
+$$
+
+Symmetric metric variations verify the linear clock response;
+the mixed-direction derivative differs by $5.23\times10^{-11}$
+at variation step .0005. The finite metrics validate the first
+variation, not a nonlinear Einstein-scalar solution. Refinement
+changes the null weights by $1.35\times10^{-9}$; the retained
+coefficient comparison tolerance is $10^{-7}$.
+
+For independent equal frequency-log errors $\sigma_y$, the null residual
+has uncertainty $4.243682044\sigma_y$. A full covariance must replace
+that example for correlated measurements. Unknown source velocities,
+an arbitrary spatial profile or extra fields would add parameters
+and need not obey the three-clock relation. The
+[derivation](../docs/nsc-atlas-parent-clocks.md) and
+[compact evidence](../results/summaries/nsc-atlas-parent-clocks-v1.json)
+keep those restrictions explicit. The advance is an operational test
+surviving the two unknown state amplitudes, while physical formation
+and an unrestricted primordial spectrum remain open.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -4935,7 +5075,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 18. The isolated reference in joined causal charts. Horizons are
+*Figure 19. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -5941,7 +6081,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 19. Saved finite-window comparisons. A: the previous and current
+*Figure 20. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -6037,7 +6177,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 20. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 21. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -6822,7 +6962,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 21. Research dependencies, distinct from spacetime causal arrows.
+*Figure 22. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

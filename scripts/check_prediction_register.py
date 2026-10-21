@@ -469,6 +469,22 @@ def check_p002(root, entry):
     require(bool(entry["rejection"].strip()), "P002 rejection condition required")
 
 
+def check_p003(root, entry):
+    exact(entry['model_id'], 'inherited-scalar-protected-parent-clocks', 'P003 model')
+    exact(entry['status'], 'conditional_linear_observer_relation', 'P003 status')
+    exact(entry['registration'], 'retrospective_synthetic_check_no_observations', 'P003 registration')
+    exact(entry['observational_validation'], False, 'P003 observation status')
+    evidence=entry['evidence']
+    exact(evidence['path'], 'results/summaries/nsc-atlas-parent-clocks-v1.json', 'P003 evidence path')
+    raw=local_file(root,evidence['path']).read_bytes()
+    exact(len(raw),evidence['bytes'],'P003 evidence size')
+    exact(hashlib.sha256(raw).hexdigest(),evidence['sha256'],'P003 evidence hash')
+    record=read_json(raw)
+    for key in ('same_action','prediction','limits'):
+        exact(entry[key],record[key],'P003 '+key+' projection')
+    require(bool(entry['rejection'].strip()),'P003 rejection condition required')
+
+
 def check_register(root, register):
     root = Path(root).resolve()
     exact(register["schema"], SCHEMA, "register schema")
@@ -476,8 +492,8 @@ def check_register(root, register):
     document = local_file(root, DOCUMENT).read_text(encoding="utf-8")
     entries = register["entries"]
     require(isinstance(entries, list) and [e["id"] for e in entries] in
-            (["NSC-P001"], ["NSC-P001", "NSC-P002"]),
-            "one currently registered P001 and optional unique P002 required")
+            (["NSC-P001"], ["NSC-P001", "NSC-P002"], ["NSC-P001", "NSC-P002", "NSC-P003"]),
+            "one currently registered P001 and ordered unique optional P002/P003 required")
     entry = entries[0]
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")
@@ -488,11 +504,16 @@ def check_register(root, register):
     if "finite_amplitude" in entry:
         result["finite_amplitude_files"] = 4
         result["finite_amplitude_endpoints"] = 3
-    if len(entries) == 2:
+    if len(entries) >= 2:
         require("## NSC-P002" in document, "P002 missing from reader-facing register")
         check_p002(root, entries[1])
         result["predictions"] += 1
         result["evidence_files"] += 1
+    if len(entries) == 3:
+        require('## NSC-P003' in document,'P003 missing from reader-facing register')
+        check_p003(root,entries[2])
+        result['predictions']+=1
+        result['evidence_files']+=1
     return result
 
 

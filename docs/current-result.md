@@ -1,5 +1,19 @@
 # What the calculations show
 
+The [operational clock calculation](nsc-atlas-parent-clocks.md) connects
+the inherited scalar perturbation to freely falling source/receiver signals.
+It derives the initial-distance and proper-age shifts, source motion and
+photon frequency transport; independent finite metric geodesics verify the
+first variation. The finite deterministic field flow is invertible, so it
+cannot select a unique initial phase on its own.
+
+Within the existing compact-profile family, two frequency departures
+calibrate the density/phase amplitudes and predict a third:
+y3=-2.88990465*y1+2.94232704*y2. NSC-P003 freezes this conditional protocol.
+The withheld check is synthetic. Arbitrary profiles, unknown source motions,
+nonlinear completion and an empirical cosmological identification remain
+outside the result.
+
 The [parent structure calculation](nsc-atlas-parent-perturbations.md)
 evolves a compact linear perturbation that satisfies the initial gravitational
 constraints and vanishes near both membranes. Central comoving density

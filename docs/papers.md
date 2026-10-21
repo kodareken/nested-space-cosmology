@@ -1,5 +1,10 @@
 # Paper guide
 
+Revision 2026-10-21.7 adds Sections 10.27--10.28 and Figure 18: the finite
+state-flow obstruction to automatic phase selection, an operational
+free-fall clock transfer, and NSC-P003's third-clock prediction after two
+state calibrations. Independent metric variation checks the clock formula.
+
 Revision 2026-10-21.6 adds Sections 10.25--10.26 and Figure 17: constrained
 same-source perturbations of the protected parent, measured gravitational
 growth, independent scalar-phase response, and the connection between the

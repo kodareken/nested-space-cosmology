@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e807b81263f9baa429d4709d50e2e81c7ff43ce9",
+  "current_receipt_commit_parent": "0328c38c82745cacee5b8bcae360da56328b09a3",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 21669,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 22090,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "b56615e9ed8a32477f3ac5e84fda821b72af3d3c5d25c1ae167bf9895727489c"
+      "sha256": "cc89811eb54908aeecae4c82c46d831b30c8a0d17c40a7a807c347b604bf0062"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 279209,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 279712,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "fb8077c96a8cc5cce47d9cc27feab881e686a7c3c829f8a6ab5d22cdcd92404e"
+      "sha256": "46c1411d711e6a2f4153f2878742c8c39291e1f26c7a161d5651c4d1ab3a8200"
     },
     {
-      "bytes": 120494,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 120970,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "9317c929b31121bd83f42b54f8d430d21c8ac9448d71b2a3bea83236c925248d"
+      "sha256": "60ba4e3cc910d482179fbd8cf37aca5d718bb12db392afee8242f7ce78bc819f"
     },
     {
       "bytes": 9543,
@@ -10312,9 +10312,9 @@
       "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
-      "bytes": 108794,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 109252,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "import_bytes": 102088,
       "import_sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a",
       "migration_disposition": "active_owner",
@@ -10322,15 +10322,15 @@
       "original_path": "lab/docs/claim-ledger.md",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
-      "sha256": "5953c3cb74350e27e123cd6c6886b0623545ed198beb7aebc44d1d2df0107777"
+      "sha256": "99e4b1f9ea14273d73995762dcac4346f6304768777ae639e4463d284c139ee6"
     },
     {
-      "bytes": 451159,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 451958,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "01b093b5b35c6f0a20b846078ad39534941556006b85747e4b78ac1191097783"
+      "sha256": "062295d1a01fe070d6952027d803149f6040c518db8e762c712d33c08cb196d4"
     },
     {
       "bytes": 173938,
@@ -10379,6 +10379,14 @@
       "path": "docs/figures/nsc-atlas-occupied-wall.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "3e2fd38f123ac628121552f0cbed2d7d7bad95424b7c8e7f31a8273c29962f75"
+    },
+    {
+      "bytes": 131413,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "path": "docs/figures/nsc-atlas-parent-clocks.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "797af0c0ecdb15496446c665d56a4bf96bd4712b3aad0a07b52c2bf119d8e6c8"
     },
     {
       "bytes": 390889,
@@ -10631,6 +10639,14 @@
       "sha256": "6814e8683a0ea4642b70e5b1a355bd8b43b7dceb0b32c4272a343e519c08d3d1"
     },
     {
+      "bytes": 10962,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "path": "docs/nsc-atlas-parent-clocks.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "43ddfc7ad87051cb611c9f8ac226a3bf7c1769583a85b69d0e5a7373976cdebc"
+    },
+    {
       "bytes": 17686,
       "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
       "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
@@ -10728,15 +10744,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 95457,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 96990,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "87aca91c56c48b959a8b6505ba1e6aa64ffe81112dfe186fa3f0b768b45dd893"
+      "sha256": "2c3dfe7c9dc482af32dd6552ca32ff1072384546c898e5385e586c3e10263584"
     },
     {
       "bytes": 30876,
@@ -11688,28 +11704,28 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 22111,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 22404,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "68dc593e996f9173c9026bd20e9633c006106bcb5c676876a1501ed0d65632d0"
+      "sha256": "c03d85aad9e1ce974cafc36c0b1ff82b9fac17cfed89e85af4f8874051671d49"
     },
     {
-      "bytes": 10809,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 12284,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "420b0342c1b5230c75a91080110781501556acb8d39e7b43c69d969e52d49dee"
+      "sha256": "7398cba18661886990f700660d6d11564db27ddd912bd695ecbbab3a96bf177a"
     },
     {
-      "bytes": 590590,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 591253,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9efc5818b3a0bd612f1db6ace77afc9e3ae8e9af9f7e87f92349985c9036999c"
+      "sha256": "4ae911fc363c2b4830615f41936df4b4ee6b1ab77801402a6e58ba7a78107bc8"
     },
     {
       "bytes": 6705,
@@ -11718,20 +11734,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 219421,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 219991,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "97712e3650630ebb3b55d5eee6f4852e8c907cc7f1d152094762dfaaf37cb8bc"
+      "sha256": "646c0188848a2c3e002d1e7bc7b5c5aa7b522b18c862aa04f1489cecc85d752f"
     },
     {
-      "bytes": 38612,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 38982,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "dbed062452ebe37ee16be03cae9ca52c78ec8dd1aa98a57258fd422f8c3e8da8"
+      "sha256": "569c7229ed0d78175775d145b4d3db16f7a142bcfc477251055f03635b02d16d"
     },
     {
       "bytes": 18356,
@@ -11800,28 +11816,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 28171,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 28488,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ccd44b0bbc1f8346f79dacafe04d2eff13d1c215b305896393586dcfcdd2f1df"
+      "sha256": "cf4161d7412db8a1f3014f596053fea552c9b3440e85a9ab3bc37dee8669f4bf"
     },
     {
       "bytes": 3206,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "04dc74e453a3216abfcbabde614cf21a6e11ecd7df2f7ff5309497fbacef8e78"
+      "sha256": "4fefc81353a4bfcc5be9077987e30f755b1f905889cb48b57ec5dfa8ff24528d"
     },
     {
-      "bytes": 35631,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 37065,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e36bdc370dd0931561e3e972c32a7921c5041ab6a72a686ce23396f269c7e07a"
+      "sha256": "1be9c1c4c341ca0de0e96d07a5f2aacd6cafccbae879af92c6b4d76a4e26bc4e"
     },
     {
       "bytes": 226492,
@@ -11833,27 +11849,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d053a5a249d6f647da2c0afe3adb8ca9a96646093486d1eba901835079dc035f"
+      "sha256": "8de0d4cc339953f6a23082b71d1a7f1afda4b95fb4a1386f51c283f89212dc03"
     },
     {
-      "bytes": 329888,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 335768,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "26db4042dbf78085212e1e91c93516ce9ed7949d31f094e1f0f0b3b06f6b9674"
+      "sha256": "09743874e8f08a85bad7a02216cb657f4e53a88d6ffaf85e0a26d3c62d29c3e9"
     },
     {
-      "bytes": 8076386,
-      "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
-      "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
+      "bytes": 8290736,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "94aa0d963f8859d5bb5e543a5278aa4b82d0b4a9db8ce5b3246916b2a3001881"
+      "sha256": "52eddaf68eadecbfa0ca4e6c4b6a9a5c88b32b578021726b00bb3ad43ec8b2f4"
     },
     {
       "bytes": 3283,
@@ -29842,12 +29858,12 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 13060,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 16111,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "results/prediction-register.json",
       "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
-      "sha256": "85b9a35273854d180819a957c095a7c13912926a0d44dfb56eacaf8345468d7b"
+      "sha256": "a0ab3d119c76141c6fa3b564d397a1f345f99088151ce9b15209eee206eab00f"
     },
     {
       "bytes": 11412,
@@ -30558,6 +30574,14 @@
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
     {
+      "bytes": 13096,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "path": "results/summaries/nsc-atlas-parent-clocks-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b50e1c0f4430c2f7fc93147947b3eb337c792815091f1d9adcdc2af144d4457a"
+    },
+    {
       "bytes": 11770,
       "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
       "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
@@ -31069,6 +31093,14 @@
       "path": "scripts/check_nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "e6fb6f1804418b1271ac6834c9055a0a8e6f10f42ca9d60e976eaee6dd8df78f"
+    },
+    {
+      "bytes": 10086,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "path": "scripts/check_nsc_atlas_parent_clocks.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b74ae360fef8013bbca63d9715574a11468e7f6876e882af35f3c2e776ab16b8"
     },
     {
       "bytes": 5358,
@@ -31608,12 +31640,12 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 28139,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 29346,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "scripts/check_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "acae850621ca2645edc1e60b6736fe86b54337b8cc40c4bf1106531e4c4c6b64"
+      "sha256": "e42c5c197404279141f04991df452cce6d465338f1b61137cbadbf5fd2343439"
     },
     {
       "bytes": 13188,
@@ -33920,6 +33952,14 @@
       "sha256": "a8429132c9a07f9197dbfea17937c69469073e315d89f75bbd06ec551349323c"
     },
     {
+      "bytes": 2444,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "path": "scripts/plot_nsc_atlas_parent_clocks.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "23d755da5be404c8c255c5bf446668b6a62797e6c531a29fc551c006e1d0b4a4"
+    },
+    {
       "bytes": 4835,
       "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
       "changed_from_commit": "f28bb848b3d13f6d0f4dca573c30464e7c0cc2be",
@@ -35027,6 +35067,14 @@
       "path": "src/recursive_horizons/nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "502191913f4e851a665949bffa8ba97a80ceba796ac4bd6df1e5801394c9efc4"
+    },
+    {
+      "bytes": 7919,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "path": "src/recursive_horizons/nsc_atlas_parent_clocks.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9cb31743f42b3edf23582890d49f1aa2bdc57c2e618423b5a5e35259e21a394b"
     },
     {
       "bytes": 14990,
@@ -39371,6 +39419,14 @@
       "sha256": "dda2a08e7908086d32cfa1aa72fd761c722acc042747f3d3c4a2d01e4c047a07"
     },
     {
+      "bytes": 4015,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "path": "tests/test_nsc_atlas_parent_clocks.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b77fdc0dc787f570735e451f02ac90fc1be6a7c1392d4c8f87c07ebd37cb780d"
+    },
+    {
       "bytes": 5618,
       "change": "Derive the normal-clock parent, effective source evolution and linked cap signal; finalize PDF layout next.",
       "changed_from_commit": "b4e1f9569a1e3381e2b4b0cc5cfa6c7973af7e9e",
@@ -42986,12 +43042,12 @@
       "sha256": "1d4d86c5cb2d92758a511419414b490815a77c0eca535ec12d5c9edf20cf261d"
     },
     {
-      "bytes": 7525,
-      "change": "Connect charged vacuum inheritance, shared moving boundaries and cosmological curvature measurements.",
-      "changed_from_commit": "1d91515ee85f56fbcb93394ccfa47a302b921a0f",
+      "bytes": 8145,
+      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
+      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
       "path": "tests/test_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "a1cd2422973a54bf0105984959d61700c3aebdc316abf5daab4e2ebbf2ed41c2"
+      "sha256": "c6d0573e2d082978d4d29603be3e93a3ff9cfd943749ebc9f08156f7c2f3eb0a"
     },
     {
       "bytes": 1420,

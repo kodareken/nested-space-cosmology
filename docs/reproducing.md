@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+The operational parent-clock calculation uses:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_clocks.py
+python scripts/run_python.py scripts/plot_nsc_atlas_parent_clocks.py
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_clocks.py
+python scripts/run_python.py scripts/check_prediction_register.py
+```
+
+The [owner](nsc-atlas-parent-clocks.md) specifies source distances, free-fall
+motion, receiver proper age, state inference, numerical comparisons and
+the synthetic scope. The compact record is registered as NSC-P003.
+
 The inherited parent structure calculation uses:
 
 ```powershell

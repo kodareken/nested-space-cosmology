@@ -1,5 +1,14 @@
 # Cited arXiv studies
 
+## Receiver lapse and observable frequency
+
+[Scaccabarozzi, Yoo and Biern, 1807.09796, Section 2](https://arxiv.org/html/1807.09796)
+retain observer terms in relativistic observed quantities. Their
+flat-background galaxy model supplies attribution for the importance of
+the observer lapse, not the background used here. The
+[parent clock owner](nsc-atlas-parent-clocks.md) derives its radial transfer
+directly on the closed scalar parent and checks it with metric geodesics.
+
 ## Curved scalar perturbations and their pressure scale
 
 [Hwang and Noh, astro-ph/0103244, Sections 2 and 4](https://arxiv.org/html/astro-ph/0103244)

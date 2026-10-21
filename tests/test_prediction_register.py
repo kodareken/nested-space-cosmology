@@ -58,6 +58,17 @@ def test_saved_projection_requires_no_subprocess_or_scientific_replay(register_r
     assert before == {str(path):path.read_bytes() for path in register_root.rglob("*") if path.is_file()}
 
 
+def test_p003_binds_the_observable_and_preserves_synthetic_scope(tmp_path):
+    entry=json.loads((ROOT/checker.REGISTER).read_text(encoding='utf-8'))['entries'][2]
+    path=entry['evidence']['path'];target=tmp_path/path
+    target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/path,target)
+    checker.check_p003(tmp_path,entry)
+    bad=copy.deepcopy(entry);bad['prediction']['null_weights'][0]+=.01
+    with pytest.raises(ValueError):checker.check_p003(tmp_path,bad)
+    bad=copy.deepcopy(entry);bad['observational_validation']=True
+    with pytest.raises(ValueError):checker.check_p003(tmp_path,bad)
+
+
 @pytest.mark.parametrize("mutation", [
     lambda e:e["coefficients"]["rho"].update(value=-5.0),
     lambda e:e["coefficients"]["eta"].update(field_refinement_maximum_absolute_difference=0.),

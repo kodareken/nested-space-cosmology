@@ -18,6 +18,30 @@ starting a derivation.
 
 ## Current execution priority — 21 October 2026
 
+### From free scalar phase to a clock prediction
+
+The next rethink compares a new quantum-vacuum preparation, a full formation
+history, and operational observations that eliminate the still-free state
+amplitudes. The current deterministic inherited law does not select scalar
+phase or a primordial covariance: its finite linear evolution is invertible.
+Choose the third route while preserving that missing formation question.
+
+Complete: same-action linear growth and its scale condition. The
+[completed clock connection](nsc-atlas-parent-clocks.md) now retains
+receiver proper time, source motion and null propagation. Its three clock
+responses give a null relation after two state calibrations, with independent
+metric-geodesic checks and an explicit noise condition. NSC-P003 records
+the fixed compact-profile family and its retrospective synthetic test. This introduces emitter positions and a receiver age, not
+a new field coupling or a secretly selected primordial state. Next is a physical formation/preparation mechanism and additional
+observables that test the fixed profile/source-motion assumptions.
+Unrestricted primordial spectra stay open.
+
+The main failure modes are a missed clock/endpoint shift, a rank-deficient
+response mistaken for state inference, or an arbitrary spatial preparation
+being hidden by a two-amplitude model. Independent geodesic variation, matrix
+conditioning and explicit shape scope test these separately. The finite
+calculation budget is 120 CPU seconds, with compact outputs and no new grids.
+
 ### From inherited excitation to gravitational growth
 
 The current rethink compares full wall evolution, an averaged dust/Jeans

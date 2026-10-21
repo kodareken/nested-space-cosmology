@@ -1,5 +1,12 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [three-clock prediction](docs/nsc-atlas-parent-clocks.md) now follows
+light from freely falling emitters through the evolving parent to a receiver
+at a fixed proper age. Two frequency measurements determine the remaining
+density/phase amplitudes; a third obeys a computed relation independent of
+those amplitudes. NSC-P003 records its fixed preparation family and synthetic
+test, with no observational confirmation.
+
 The [inherited parent perturbation](docs/nsc-atlas-parent-perturbations.md)
 now connects that scalar to gravitational structure: a constrained packet
 inside the actual parent gains 15.19% central density contrast in one

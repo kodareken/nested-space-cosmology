@@ -1,10 +1,10 @@
 {
-  "bytes": 8076386,
+  "bytes": 8290736,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "d053a5a249d6f647da2c0afe3adb8ca9a96646093486d1eba901835079dc035f",
+  "metadata_sha256": "8de0d4cc339953f6a23082b71d1a7f1afda4b95fb4a1386f51c283f89212dc03",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 109,
-  "pdf_sha256": "94aa0d963f8859d5bb5e543a5278aa4b82d0b4a9db8ce5b3246916b2a3001881",
+  "pages": 111,
+  "pdf_sha256": "52eddaf68eadecbfa0ca4e6c4b6a9a5c88b32b578021726b00bb3ad43ec8b2f4",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -34,6 +34,10 @@
     {
       "path": "docs/figures/nsc-atlas-occupied-wall.png",
       "sha256": "3e2fd38f123ac628121552f0cbed2d7d7bad95424b7c8e7f31a8273c29962f75"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-parent-clocks.png",
+      "sha256": "797af0c0ecdb15496446c665d56a4bf96bd4712b3aad0a07b52c2bf119d8e6c8"
     },
     {
       "path": "docs/figures/nsc-atlas-parent-observables.png",
@@ -544,6 +548,10 @@
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
     {
+      "path": "results/summaries/nsc-atlas-parent-clocks-v1.json",
+      "sha256": "b50e1c0f4430c2f7fc93147947b3eb337c792815091f1d9adcdc2af144d4457a"
+    },
+    {
       "path": "results/summaries/nsc-atlas-parent-evolution-v1.json",
       "sha256": "cbaeef6d7e1c6ffe93aefcaa1e1ab4dd6f5bb6425038a558435dfa10d60246c8"
     },
@@ -653,6 +661,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "26db4042dbf78085212e1e91c93516ce9ed7949d31f094e1f0f0b3b06f6b9674",
-  "version": "working-2026-10-21.6"
+  "source_sha256": "09743874e8f08a85bad7a02216cb657f4e53a88d6ffaf85e0a26d3c62d29c3e9",
+  "version": "working-2026-10-21.7"
 }

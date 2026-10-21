@@ -311,6 +311,66 @@
       "uncertainty": "Numerical differences check this benchmark, not model uncertainty, observational error bars or interval-certified endpoints.",
       "limits": "Parent flux, charge, bare vacuum, tension, initial radii and physical ruler remain inputs. No nucleation probability, selection of observed Lambda, reheating, cosmological matter fractions or nonspherical stability is derived. This action does not identify the earlier inherited Schur operator.",
       "rejection": "With a fixed action, state and measurement domain, an independent violation of the signed junction/conservation identities or a tidal/expansion relation beyond stated instrument and model error rejects that tested claim."
+    },
+    {
+      "id": "NSC-P003",
+      "title": "A three-clock relation in the inherited scalar parent",
+      "model_id": "inherited-scalar-protected-parent-clocks",
+      "status": "conditional_linear_observer_relation",
+      "registered_on": "2026-10-21",
+      "registration": "retrospective_synthetic_check_no_observations",
+      "observational_validation": false,
+      "evidence": {
+        "path": "results/summaries/nsc-atlas-parent-clocks-v1.json",
+        "bytes": 13096,
+        "sha256": "b50e1c0f4430c2f7fc93147947b3eb337c792815091f1d9adcdc2af144d4457a"
+      },
+      "same_action": {
+        "kappa": 1.0,
+        "epsilon": 0.25,
+        "omega": 20.0,
+        "charge": 0.5,
+        "tension": 0.2,
+        "bare_density": 0.0,
+        "parent_flux": 1.5
+      },
+      "prediction": {
+        "observable": "y_i=log[(nu_received/nu_emitted)_i/(a_e/a_o)_i]; first-order log frequency departure",
+        "reference_length": "Lref=a0, initial parent spatial curvature radius; no SI value selected",
+        "initial_proper_separations_over_Lref": [
+          0.04,
+          0.08,
+          0.12
+        ],
+        "receiver_proper_age_over_Lref": 0.33980248814148667,
+        "emitter_rule": "Radial freely falling test clocks, initially at rest relative to the Cauchy normal, at fixed initial proper separations.",
+        "receiver_rule": "Central freely falling receiver, fixed proper age from the shared initial slice.",
+        "preparation_family": "Existing compact support-angle1.4 potential, power8 compensated profile; independent density and phase amplitudes, fixed shape and couplings.",
+        "response_matrix": [
+          [
+            0.017861103047793724,
+            -0.0007310943956289669
+          ],
+          [
+            0.030644152338988633,
+            -0.0016713662863021375
+          ],
+          [
+            0.0385482332090335,
+            -0.0028049131201507527
+          ]
+        ],
+        "null_weights": [
+          2.8899046512872317,
+          -2.942327038012268,
+          1.0
+        ],
+        "null_relation": "sum_i null_weights_i*y_i=0 at retained linear order; third row withheld after first two calibrate the state",
+        "coefficient_comparison_tolerance": 1e-07,
+        "observational_validation": false
+      },
+      "limits": "The compact shape, background, initial proper source separations and clock rule are fixed inputs. Arbitrary spatial profiles, unknown source peculiar velocities or additional matter add independent degrees of freedom and need not obey this three-clock closure. No empirical data, SI ruler, primordial spectrum or nonlinear remainder bound is supplied.",
+      "rejection": "After fixing the action, profile, proper source positions and free-fall/receiver-clock protocol, calibrate only the two state amplitudes on the first two frequency observations. A withheld third-clock discrepancy beyond propagated measurement, numerical and justified nonlinear/model errors rejects this tested family. No observational comparison has been performed."
     }
   ]
 }

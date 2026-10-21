@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [parent clock owner](nsc-atlas-parent-clocks.md) uses
+nsc_atlas_parent_clocks.py: ParentClocks evaluates the existing packet and
+its first derivatives, evolves free-fall emitter responses, solves the
+proper-age/null event shifts and returns two frequency-response columns.
+finite_metric_clock independently integrates timelike/null geodesics and
+clock/distance integrals to check the first variation. infer_two_amplitudes
+uses two rows; the prediction register binds the third-clock null relation.
+
 The [parent perturbation owner](nsc-atlas-parent-perturbations.md) uses
 nsc_atlas_parent_perturbations.py: ParentModes propagates the constrained
 field/metric system through scalar turning points; ModeEvolution compares

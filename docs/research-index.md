@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [parent clock relation](nsc-atlas-parent-clocks.md) turns the retained
+density/phase freedom into operational state inference and a third-signal
+test. It uses fixed proper source distances and receiver age, free-fall
+motion and null geodesics on the same protected parent. NSC-P003 is the
+conditional observer prediction; formation has not selected its amplitudes.
+
 The [inherited parent perturbations](nsc-atlas-parent-perturbations.md)
 connect same-action geometry to unaveraged linear density/metric transfer.
 A compact constrained packet preserves both initial wall joins and grows

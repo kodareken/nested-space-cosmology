@@ -5,6 +5,35 @@ agreement could be rejected. Each entry distinguishes derived consequences,
 numerical sensitivity and observations. The [machine-readable register](../results/prediction-register.json)
 binds the evidence bytes and the exact locations of reported values.
 
+## NSC-P003 — Three freely falling clocks in the inherited parent
+
+Registered retrospectively on 21 October 2026, with a synthetic check and
+no astronomical observations. The [clock derivation](nsc-atlas-parent-clocks.md)
+uses the existing compact scalar perturbation and two unknown density/phase
+amplitudes. Initial proper emitter separations are .04, .08 and .12 times
+the initial parent curvature radius. The receiver samples at the fixed
+proper age corresponding to background N=.8; all clocks freely fall.
+
+For y_i=log[(received/emitted frequency)_i/(background a_e/a_o)_i],
+the conditional linear prediction is
+
+\[
+y_3=-2.88990465\,y_1+2.94232704\,y_2.
+\]
+
+The first two measurements may calibrate only the two state amplitudes;
+the third is withheld. The [record](../results/summaries/nsc-atlas-parent-clocks-v1.json)
+retains the fixed couplings, profile, clock events, independent geodesic
+variation and numerical comparisons. Refinement changes null weights by
+1.35e-9; the comparison tolerance is 1e-7. With independent equal clock
+errors sigma_y, the null residual has uncertainty 4.243682044 sigma_y.
+
+This is not a preregistration, empirical confirmation, SI scale selection
+or a relation for arbitrary incident profiles. A discrepancy beyond the
+full measurement and justified model/remainder error would reject the
+declared family. Additional source velocities or arbitrary spatial states
+must be included as additional inputs rather than hidden retuning.
+
 ## NSC-P002 — A charged vacuum transition and its curvature observable
 
 Registered retrospectively on 20 October 2026; no withheld observations.

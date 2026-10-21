@@ -1,0 +1,402 @@
+{
+  "schema": "nsc-atlas-parent-clocks-v1",
+  "result": "Operational freely falling clock response in the inherited scalar parent; a three-clock relation eliminates both free state amplitudes within the fixed compact-profile family.",
+  "same_action": {
+    "kappa": 1.0,
+    "epsilon": 0.25,
+    "omega": 20.0,
+    "charge": 0.5,
+    "tension": 0.2,
+    "bare_density": 0.0,
+    "parent_flux": 1.5
+  },
+  "state_nonselection": {
+    "flow_trace": "-4H",
+    "full_flow_determinant": "exp(-4N)>0 for every finite N",
+    "determinant_at_one_efold": 0.01831563888873418,
+    "scope": "Finite deterministic evolution maps the two-dimensional constraint space bijectively. It does not select a unique phase or covariance. An asymptotic selection rule, a boundary condition, open-system tracing or a different formation law is a separate physical input."
+  },
+  "prediction": {
+    "observable": "y_i=log[(nu_received/nu_emitted)_i/(a_e/a_o)_i]; first-order log frequency departure",
+    "reference_length": "Lref=a0, initial parent spatial curvature radius; no SI value selected",
+    "initial_proper_separations_over_Lref": [
+      0.04,
+      0.08,
+      0.12
+    ],
+    "receiver_proper_age_over_Lref": 0.33980248814148667,
+    "emitter_rule": "Radial freely falling test clocks, initially at rest relative to the Cauchy normal, at fixed initial proper separations.",
+    "receiver_rule": "Central freely falling receiver, fixed proper age from the shared initial slice.",
+    "preparation_family": "Existing compact support-angle1.4 potential, power8 compensated profile; independent density and phase amplitudes, fixed shape and couplings.",
+    "response_matrix": [
+      [
+        0.017861103047793724,
+        -0.0007310943956289669
+      ],
+      [
+        0.030644152338988633,
+        -0.0016713662863021375
+      ],
+      [
+        0.0385482332090335,
+        -0.0028049131201507527
+      ]
+    ],
+    "null_weights": [
+      2.8899046512872317,
+      -2.942327038012268,
+      1.0
+    ],
+    "null_relation": "sum_i null_weights_i*y_i=0 at retained linear order; third row withheld after first two calibrate the state",
+    "coefficient_comparison_tolerance": 1e-07,
+    "observational_validation": false
+  },
+  "clock_rows": [
+    {
+      "initial_angle": 0.04,
+      "initial_proper_separation": 0.265043083043982,
+      "receiver_proper_age": 2.251557477075894,
+      "receiver_background_efold": 0.8,
+      "background_emission_time": 1.7111776643672179,
+      "background_emission_efold": 0.6264469842424673,
+      "background_frequency_ratio": 0.8406725810867103,
+      "initial_coordinate_displacement": [
+        -0.003977848314637926,
+        0.0
+      ],
+      "emitter_displacement": [
+        -0.005359771491210512,
+        -5.242742673823856e-05
+      ],
+      "emitter_velocity": [
+        -0.011747710001922368,
+        -0.0006665828260599607
+      ],
+      "receiver_time_shift": [
+        0.16006417007155088,
+        0.008826462986290837
+      ],
+      "emission_time_shift": [
+        0.1467098309647551,
+        0.0033051618050346523
+      ],
+      "log_frequency_response": [
+        0.017861103047793724,
+        -0.0007310943956289669
+      ],
+      "parts": {
+        "emission_event": [
+          0.04777434668823446,
+          0.0010762874232495701
+        ],
+        "receiver_event": [
+          -0.050805634252987474,
+          -0.0028015892003098986
+        ],
+        "endpoint_potential": [
+          -0.006600150805637486,
+          -6.58042279889472e-05
+        ],
+        "emitter_Doppler": [
+          0.011747710001922368,
+          0.0006665828260599607
+        ],
+        "integrated_time_potential": [
+          0.01574483141626186,
+          0.0003934287833603481
+        ]
+      }
+    },
+    {
+      "initial_angle": 0.08,
+      "initial_proper_separation": 0.530086166087964,
+      "receiver_proper_age": 2.251557477075894,
+      "receiver_background_efold": 0.8,
+      "background_emission_time": 1.2519198261448563,
+      "background_emission_efold": 0.4738848980360895,
+      "background_frequency_ratio": 0.7217221110183026,
+      "initial_coordinate_displacement": [
+        -0.007777968615489698,
+        0.0
+      ],
+      "emitter_displacement": [
+        -0.009553218317150114,
+        -5.499660947715955e-05
+      ],
+      "emitter_velocity": [
+        -0.020304510405473493,
+        -0.0009433172374630946
+      ],
+      "receiver_time_shift": [
+        0.16006417007155088,
+        0.008826462986290837
+      ],
+      "emission_time_shift": [
+        0.11982890090841425,
+        -0.0010032619165720542
+      ],
+      "log_frequency_response": [
+        0.030644152338988633,
+        -0.0016713662863021375
+      ],
+      "parts": {
+        "emission_event": [
+          0.04062432079601283,
+          -0.00034012524217673015
+        ],
+        "receiver_event": [
+          -0.050805634252987474,
+          -0.0028015892003098986
+        ],
+        "endpoint_potential": [
+          -0.00968807475298613,
+          0.0004856500988326181
+        ],
+        "emitter_Doppler": [
+          0.020304510405473493,
+          0.0009433172374630946
+        ],
+        "integrated_time_potential": [
+          0.030209030143475913,
+          4.1380819888778465e-05
+        ]
+      }
+    },
+    {
+      "initial_angle": 0.12,
+      "initial_proper_separation": 0.7951292491319459,
+      "receiver_proper_age": 2.251557477075894,
+      "receiver_background_efold": 0.8,
+      "background_emission_time": 0.8546778043985601,
+      "background_emission_efold": 0.3358162585213259,
+      "background_frequency_ratio": 0.6286480351350358,
+      "initial_coordinate_displacement": [
+        -0.011239346155895651,
+        0.0
+      ],
+      "emitter_displacement": [
+        -0.01265943966423137,
+        -3.304635142245113e-05
+      ],
+      "emitter_velocity": [
+        -0.023322982424499386,
+        -0.000816363679902496
+      ],
+      "receiver_time_shift": [
+        0.16006417007155088,
+        0.008826462986290837
+      ],
+      "emission_time_shift": [
+        0.08796811627334536,
+        -0.003873531364815026
+      ],
+      "log_frequency_response": [
+        0.0385482332090335,
+        -0.0028049131201507527
+      ],
+      "parts": {
+        "emission_event": [
+          0.031512132198591475,
+          -0.0013875849297960599
+        ],
+        "receiver_event": [
+          -0.050805634252987474,
+          -0.0028015892003098986
+        ],
+        "endpoint_potential": [
+          -0.009190205661239896,
+          0.0015224312814223896
+        ],
+        "emitter_Doppler": [
+          0.023322982424499386,
+          0.000816363679902496
+        ],
+        "integrated_time_potential": [
+          0.04370895850017001,
+          -0.0009545339513696796
+        ]
+      }
+    }
+  ],
+  "calibration": {
+    "matrix_condition_number": 169.34107611229712,
+    "two_clock_singular_values": [
+      0.03551572965174801,
+      0.00020972897106308724
+    ],
+    "three_clock_singular_values": [
+      0.05248697138887724,
+      0.0006022412391764086
+    ],
+    "determinant": -7.448677436415889e-06,
+    "basis": "alpha is initial central density contrast; beta is the existing unit phase-column amplitude",
+    "scope": "Conditioning depends on the specified amplitude normalization; noise propagation is reported in that same basis."
+  },
+  "synthetic_test": {
+    "scope": "Generated check only, not astronomical data, fitted fundamental parameters or observational confirmation.",
+    "true_amplitudes": [
+      1e-05,
+      -4e-06
+    ],
+    "log_frequency_departures": [
+      1.8153540806045313e-07,
+      3.131269885350949e-07,
+      3.9670198457093805e-07
+    ],
+    "recovered_from_first_two": [
+      1.000000000000001e-05,
+      -3.999999999999832e-06
+    ],
+    "predicted_third": 3.967019845709379e-07,
+    "withheld_error": -1.5881867761018131e-22,
+    "hypothetical_independent_clock_sigma": 1e-10,
+    "amplitude_standard_deviations": [
+      2.4491205386202263e-08,
+      4.76184760273162e-07
+    ],
+    "null_residual_noise_gain": 4.243682044186348,
+    "corrupted_third_shift": 2.5e-09,
+    "corrupted_null_residual": 2.499999999999976e-09,
+    "corrupted_standardized_residual": 5.891110535542744
+  },
+  "independent_geodesic_check": {
+    "zero_source_log_frequency_gap": 1.5332179970073412e-13,
+    "variations": [
+      {
+        "initial_angle": 0.12,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "linear": 0.0385482332090335,
+        "central_differences": [
+          {
+            "step": 0.001,
+            "value": 0.03854823328028334,
+            "error": 7.124983936179774e-11
+          },
+          {
+            "step": 0.0005,
+            "value": 0.038548233230184525,
+            "error": 2.115102537558755e-11
+          }
+        ]
+      },
+      {
+        "initial_angle": 0.12,
+        "direction": [
+          0.0,
+          1.0
+        ],
+        "linear": -0.0028049131201507527,
+        "central_differences": [
+          {
+            "step": 0.001,
+            "value": -0.002804913120962871,
+            "error": -8.121181678533151e-13
+          },
+          {
+            "step": 0.0005,
+            "value": -0.002804913120491026,
+            "error": -3.402733823876236e-13
+          }
+        ]
+      },
+      {
+        "initial_angle": 0.12,
+        "direction": [
+          1.0,
+          -0.4
+        ],
+        "linear": 0.039670198457093804,
+        "central_differences": [
+          {
+            "step": 0.001,
+            "value": 0.03967019866682464,
+            "error": 2.0973083686426364e-10
+          },
+          {
+            "step": 0.0005,
+            "value": 0.03967019850936726,
+            "error": 5.227345639680081e-11
+          }
+        ]
+      },
+      {
+        "initial_angle": 0.04,
+        "direction": [
+          1.0,
+          -0.4
+        ],
+        "linear": 0.01815354080604531,
+        "central_differences": [
+          {
+            "step": 0.0005,
+            "value": 0.018153540803422796,
+            "error": -2.6225133176183135e-12
+          }
+        ]
+      },
+      {
+        "initial_angle": 0.08,
+        "direction": [
+          1.0,
+          -0.4
+        ],
+        "linear": 0.031312698853509485,
+        "central_differences": [
+          {
+            "step": 0.0005,
+            "value": 0.03131269901890388,
+            "error": 1.6539439262608369e-10
+          }
+        ]
+      }
+    ],
+    "scope": "Exact radial geodesics and clock/distance integrals in a prescribed finite metric deformation validate its first variation. The finite metric is not asserted to solve the nonlinear Einstein-scalar equations."
+  },
+  "coordinate_age_counterfactual": {
+    "response_matrix": [
+      [
+        0.024848333803256326,
+        -0.0003457955894551982
+      ],
+      [
+        0.04228563931932378,
+        -0.0010294165364525439
+      ],
+      [
+        0.05330810742596179,
+        -0.0019910052768164813
+      ]
+    ],
+    "meaning": "Dropping the receiver proper-age shift changes the events and these responses; it is not an equivalent observable."
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "finite_state_flow_trace": "0",
+      "null_covariant_energy_transport": "0",
+      "perturbed_metric_null_energy": "0",
+      "observer_age_response": "0",
+      "static_Killing_frequency_sign": "0",
+      "recession_Doppler_sign": "0",
+      "first_state_eliminated": "0",
+      "second_state_eliminated": "0"
+    },
+    "maximum_refined_response_gap": 1.8480078578519965e-12,
+    "maximum_refined_null_weight_gap": 1.348157141478623e-09,
+    "maximum_null_relation_coefficient_residual": 6.938893903907228e-18
+  },
+  "limits": "The compact shape, background, initial proper source separations and clock rule are fixed inputs. Arbitrary spatial profiles, unknown source peculiar velocities or additional matter add independent degrees of freedom and need not obey this three-clock closure. No empirical data, SI ruler, primordial spectrum or nonlinear remainder bound is supplied.",
+  "next": "Use additional operational observables to test the declared shape and source-motion assumptions, and connect a physical formation mechanism to the remaining initial-state family before a cosmological inference.",
+  "process_cpu_seconds": 8.484375,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_parent_clocks.py": "9cb31743f42b3edf23582890d49f1aa2bdc57c2e618423b5a5e35259e21a394b",
+    "src/recursive_horizons/nsc_atlas_parent_perturbations.py": "9731a55f12bd3bf90e0fd9d6e8b4839fa67e48dec51912ee43b9c17a6f4e0877",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "scripts/check_nsc_atlas_parent_clocks.py": "b74ae360fef8013bbca63d9715574a11468e7f6876e882af35f3c2e776ab16b8",
+    "scripts/plot_nsc_atlas_parent_clocks.py": "23d755da5be404c8c255c5bf446668b6a62797e6c531a29fc551c006e1d0b4a4",
+    "tests/test_nsc_atlas_parent_clocks.py": "b77fdc0dc787f570735e451f02ac90fc1be6a7c1392d4c8f87c07ebd37cb780d"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_parent_clocks.py"
+}

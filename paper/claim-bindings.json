@@ -393,6 +393,16 @@
       "section": "10.26",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-perturbations.md"
+    },
+    "finite-parent-state-observability": {
+      "section": "10.27",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-clocks.md"
+    },
+    "three-clock-parent-relation": {
+      "section": "10.28",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-clocks.md"
     }
   },
   "findings": [
@@ -747,6 +757,22 @@
       "note": "docs/nsc-atlas-parent-perturbations.md",
       "record": "results/summaries/nsc-atlas-parent-perturbations-v1.json",
       "paper_section": "10.26"
+    },
+    {
+      "id": "finite-parent-state-observability",
+      "status": "derived",
+      "summary": "The regular finite linear parent flow is invertible and maps the constraint space bijectively; it cannot select a unique phase or covariance from unrestricted initial states. This does not exclude extra boundary, formation or open-system state selection.",
+      "note": "docs/nsc-atlas-parent-clocks.md",
+      "record": "results/summaries/nsc-atlas-parent-clocks-v1.json",
+      "paper_section": "10.27"
+    },
+    {
+      "id": "three-clock-parent-relation",
+      "status": "derived",
+      "summary": "Three operational free-fall clock responses in the fixed compact-profile family yield a null relation eliminating two state amplitudes after two calibrations. Proper distances, receiver age, source motion and photon transport are retained and independently checked by finite metric variation. NSC-P003 is conditional and synthetically checked, not empirically validated.",
+      "note": "docs/nsc-atlas-parent-clocks.md",
+      "record": "results/summaries/nsc-atlas-parent-clocks-v1.json",
+      "paper_section": "10.28"
     }
   ]
 }

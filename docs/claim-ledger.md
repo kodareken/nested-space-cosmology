@@ -1,5 +1,12 @@
 # Current NSC claim ledger
 
+The [three-clock relation](nsc-atlas-parent-clocks.md) is a conditional
+linear observer prediction in the fixed compact-profile family. It eliminates
+two free state amplitudes after two calibrations and includes source motion,
+receiver proper age and null propagation. NSC-P003 is retrospective and
+synthetically checked, with no empirical test or unrestricted state-selection
+claim. Finite metric deformations check geodesics, not nonlinear field closure.
+
 The [parent perturbation calculation](nsc-atlas-parent-perturbations.md)
 proves exact linear constraint propagation and constructs a compact
 constraint-compatible perturbation of the same initial atlas. Its calculated

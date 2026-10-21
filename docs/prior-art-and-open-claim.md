@@ -1,5 +1,16 @@
 # Prior art and admission of new research
 
+## Operational parent clocks, 21 October 2026
+
+The [clock owner](nsc-atlas-parent-clocks.md#why-the-next-step-is-an-observer-relation)
+reuses relativistic redshift transport and the existing constrained parent
+perturbations. The missing connection is the physical source/receiver event
+specification and a test surviving the unselected density/phase amplitudes.
+Three fixed source positions, one receiver age, spectral/tolerance comparison
+and independent metric variations fit 120 CPU seconds. The shape and source
+motion stay fixed; arbitrary preparations are not silently reduced to two
+unknowns. NSC-P003 records the resulting conditional observer relation.
+
 ## Inherited parent structure, 21 October 2026
 
 The [parent perturbation owner](nsc-atlas-parent-perturbations.md#decision-and-borrowed-mathematics)
