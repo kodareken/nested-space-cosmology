@@ -1,0 +1,378 @@
+{
+  "schema": "nsc-atlas-parent-source-v1",
+  "question": "Which finite parent preparations satisfy the coupled initial constraints, and what early energy transfer follows under their declared interface regularity?",
+  "action": "Unchanged Einstein/canonical scalar/four-form/constant-tension charged membrane; no extra species or source coupling.",
+  "inputs": {
+    "epsilon": 0.25,
+    "omega": 20.0,
+    "kappa": 1.0,
+    "parent_flux": 1.5,
+    "charge": 0.5,
+    "tension": 0.2,
+    "bare_density": 0.0,
+    "packet_center": 0.3,
+    "packet_half_width": 0.12,
+    "collar_width": 0.08,
+    "packet": "f=A*(1-z^2)^6 for abs(z)<1, z=(parent seed distance from wall-center)/half_width; zero outside.",
+    "collar": "g=lambda*d^2*(1-d/collar_width)^6/2 for 0<=d<collar_width; lambda is solved, not fitted.",
+    "Cauchy_state": "K_ij=0, scalar Pi=0; original scalar values and first seed-coordinate derivatives at the wall; compact parent displacement. Physical normal derivatives scale with Psi^-2 and remain continuous."
+  },
+  "units": "Existing normalized variables, c=1. Proper energy is an integral on the sourced slice; no SI ruler or global ADM energy is selected.",
+  "solved": [
+    {
+      "amplitude": 0.0,
+      "solver": {
+        "nodes": 582,
+        "rhs_calls": 19,
+        "iterations": 1,
+        "maximum_collocation_residual": 2.8359116544006215e-17,
+        "maximum_boundary_residual": 1.6227775301252482e-18
+      },
+      "wall": {
+        "radius": 2.7063453132165107,
+        "wall_factor": 1.0,
+        "second_jet": -1.6227775301252482e-18,
+        "pressure": 0.15444017798183507,
+        "inside": {
+          "beta": 0.8319313520832599,
+          "angular_curvature": 0.30740029663639024,
+          "normal_acceleration": 0.30740029663639484,
+          "normal_field": -0.21559588824987258,
+          "second_normal_field": -4.214896397267235,
+          "radial_pressure": -0.12611035204258988,
+          "Misner_Sharp_mass": 0.4166286342765398,
+          "wall_areal_acceleration": 0.3695019978110268,
+          "wall_field_acceleration": -6.522560269672795e-16,
+          "outward_flux_slope": -1.4062371750034345e-16
+        },
+        "outside": {
+          "beta": 0.5612968207616087,
+          "angular_curvature": 0.2074002966363902,
+          "normal_acceleration": 0.20740029663639487,
+          "normal_field": -0.21559588824987258,
+          "second_normal_field": 4.38067887410219,
+          "radial_pressure": -0.28055053002442487,
+          "Misner_Sharp_mass": 0.9268500347232451,
+          "wall_areal_acceleration": 0.36950199781102666,
+          "wall_field_acceleration": -2.7755575615628914e-16,
+          "outward_flux_slope": -5.983987978738019e-17
+        },
+        "angular_Israel_gap": -2.7755575615628914e-17,
+        "temporal_Israel_gap": 2.7755575615628914e-17,
+        "mean_force_gap": 0.0,
+        "scalar_second_jet_gap": 1.7763568394002505e-15,
+        "areal_acceleration_gap": -1.6653345369377348e-16,
+        "field_acceleration_gap": 3.7470027081099033e-16,
+        "outward_flux_slope_gap": 8.078383771296326e-17
+      },
+      "constraints": {
+        "weighted_Hamilton_residual": [
+          7.771561172376096e-15,
+          1.3642420526593924e-12
+        ],
+        "Hamilton_residual": [
+          7.511915143436036e-10,
+          2.3165516647246136e-08
+        ],
+        "minimum_factor": 1.0,
+        "maximum_factor": 1.0,
+        "momentum_constraint": "Exactly zero: K_ij=0 and scalar Pi=0."
+      },
+      "energy": {
+        "positive_quadratic": 1.5861273214207006e-41,
+        "interference": 4.239426295524969e-24,
+        "total_scalar_excess": 4.239426295524969e-24
+      },
+      "mass_checks": [
+        {
+          "side": "inside",
+          "integrated_mass": 0.416628634276539,
+          "geometric_mass": 0.4166286342765398,
+          "gap": -7.771561172376096e-16
+        },
+        {
+          "side": "outside",
+          "integrated_mass": 0.926850034721854,
+          "geometric_mass": 0.9268500347232451,
+          "gap": -1.3911094498553211e-12
+        }
+      ]
+    },
+    {
+      "amplitude": 0.01,
+      "solver": {
+        "nodes": 1280,
+        "rhs_calls": 81,
+        "iterations": 4,
+        "maximum_collocation_residual": 9.939692896615266e-10,
+        "maximum_boundary_residual": 2.9559688030644793e-15
+      },
+      "wall": {
+        "radius": 2.7217055632655547,
+        "wall_factor": 1.0028338063108955,
+        "second_jet": 0.09833926484796197,
+        "pressure": 0.15444017798183507,
+        "inside": {
+          "beta": 0.8298352753484571,
+          "angular_curvature": 0.3048953151099874,
+          "normal_acceleration": 0.3124102596892006,
+          "normal_field": -0.21437914871795552,
+          "second_normal_field": -4.167621264414265,
+          "radial_pressure": -0.12637193585519801,
+          "Misner_Sharp_mass": 0.42373337900071506,
+          "wall_areal_acceleration": 0.37402076222332803,
+          "wall_field_acceleration": 0.048397211132090334,
+          "outward_flux_slope": 0.010375352922820685
+        },
+        "outside": {
+          "beta": 0.5576647190219015,
+          "angular_curvature": 0.20489531510998737,
+          "normal_acceleration": 0.21241025968920063,
+          "normal_field": -0.21437914871795552,
+          "second_normal_field": 4.428319028814738,
+          "radial_pressure": -0.280812113837033,
+          "Misner_Sharp_mass": 0.9376412583001388,
+          "wall_areal_acceleration": 0.37402076222332775,
+          "wall_field_acceleration": 0.04839721113209363,
+          "outward_flux_slope": 0.010375352922821393
+        },
+        "angular_Israel_gap": -5.551115123125783e-17,
+        "temporal_Israel_gap": 2.7755575615628914e-17,
+        "mean_force_gap": 0.0,
+        "scalar_second_jet_gap": 3.552713678800501e-15,
+        "areal_acceleration_gap": -2.7755575615628914e-16,
+        "field_acceleration_gap": 3.2959746043559335e-15,
+        "outward_flux_slope_gap": 7.077671781985373e-16
+      },
+      "constraints": {
+        "weighted_Hamilton_residual": [
+          1.0936570760122777e-08,
+          1.3057665171345434e-08
+        ],
+        "Hamilton_residual": [
+          1.5239805519282857e-09,
+          2.367854396368325e-08
+        ],
+        "minimum_factor": 0.9945541304159855,
+        "maximum_factor": 1.0034049455482048,
+        "momentum_constraint": "Exactly zero: K_ij=0 and scalar Pi=0."
+      },
+      "energy": {
+        "positive_quadratic": 0.27053487159926515,
+        "interference": 1.7788891149518951e-06,
+        "total_scalar_excess": 0.2705366504883801
+      },
+      "mass_checks": [
+        {
+          "side": "inside",
+          "integrated_mass": 0.42373337900039176,
+          "geometric_mass": 0.42373337900071506,
+          "gap": -3.232969447708456e-13
+        },
+        {
+          "side": "outside",
+          "integrated_mass": 0.9376412583001237,
+          "geometric_mass": 0.9376412583001388,
+          "gap": -1.509903313490213e-14
+        }
+      ]
+    },
+    {
+      "amplitude": 0.02,
+      "solver": {
+        "nodes": 1657,
+        "rhs_calls": 87,
+        "iterations": 4,
+        "maximum_collocation_residual": 9.921974935676014e-10,
+        "maximum_boundary_residual": 1.887379141862766e-15
+      },
+      "wall": {
+        "radius": 2.764905207557582,
+        "wall_factor": 1.0107610983563962,
+        "second_jet": 0.3779028621022369,
+        "pressure": 0.15444017798183507,
+        "inside": {
+          "beta": 0.8238477881062121,
+          "angular_curvature": 0.29796601556332186,
+          "normal_acceleration": 0.32626885878253176,
+          "normal_field": -0.21102962955797527,
+          "second_normal_field": -4.038863510564409,
+          "radial_pressure": -0.12708439328202753,
+          "Misner_Sharp_mass": 0.44414721424739995,
+          "wall_areal_acceleration": 0.38638532338659026,
+          "wall_field_acceleration": 0.1802438945320486,
+          "outward_flux_slope": 0.03803680229318498
+        },
+        "outside": {
+          "beta": 0.5473572673504538,
+          "angular_curvature": 0.1979660155633218,
+          "normal_acceleration": 0.22626885878253178,
+          "normal_field": -0.21102962955797527,
+          "second_normal_field": 4.558081638412583,
+          "radial_pressure": -0.2815245712638625,
+          "Misner_Sharp_mass": 0.9682698339328535,
+          "wall_areal_acceleration": 0.38638532338659004,
+          "wall_field_acceleration": 0.18024389453204573,
+          "outward_flux_slope": 0.038036802293184374
+        },
+        "angular_Israel_gap": -2.7755575615628914e-17,
+        "temporal_Israel_gap": 2.7755575615628914e-17,
+        "mean_force_gap": 0.0,
+        "scalar_second_jet_gap": 0.0,
+        "areal_acceleration_gap": -2.220446049250313e-16,
+        "field_acceleration_gap": -2.858824288409778e-15,
+        "outward_flux_slope_gap": -6.036837696399289e-16
+      },
+      "constraints": {
+        "weighted_Hamilton_residual": [
+          2.1398763649926877e-08,
+          1.3101493223643956e-08
+        ],
+        "Hamilton_residual": [
+          2.921008546582007e-09,
+          2.521555528770774e-08
+        ],
+        "minimum_factor": 0.9790499293311408,
+        "maximum_factor": 1.0129865867298804,
+        "momentum_constraint": "Exactly zero: K_ij=0 and scalar Pi=0."
+      },
+      "energy": {
+        "positive_quadratic": 1.1126053970781078,
+        "interference": 6.598555097075756e-05,
+        "total_scalar_excess": 1.1126713826290786
+      },
+      "mass_checks": [
+        {
+          "side": "inside",
+          "integrated_mass": 0.4441472142469788,
+          "geometric_mass": 0.44414721424739995,
+          "gap": -4.2116310439155313e-13
+        },
+        {
+          "side": "outside",
+          "integrated_mass": 0.9682698339322053,
+          "geometric_mass": 0.9682698339328535,
+          "gap": -6.481482017761664e-13
+        }
+      ]
+    }
+  ],
+  "background_solver": {
+    "nodes": 2550,
+    "rhs_calls": 179,
+    "iterations": 6,
+    "max_collocation_residual": 9.990336327442036e-10
+  },
+  "exact_wall_rule": "lambda=mu*e*(Psi_W^4-1)+2*k*phi0_n*(Psi_W^2-1).",
+  "rejection_control": {
+    "name": "Freeze the old scalar second-normal layer after changing the geometry",
+    "weighted_Hamilton_residual": [
+      1.8607995144748202e-07,
+      1.3710687341017547e-07
+    ],
+    "scalar_compatibility_gap": -0.3620640876242138,
+    "wall_field_acceleration_gap": -0.3620640876242159,
+    "interpretation": "Passing the Einstein constraint does not give C2 scalar compatibility at the initial corner. A causal finite-energy weak transient is not ruled out."
+  },
+  "uniform_parent_preparation": {
+    "field_value": -0.043301270189221926,
+    "child_density": 0.125,
+    "parent_initial_density": 0.3750000000000001,
+    "parent_ground_density": 0.28125,
+    "parent_excitation_density": 0.09375000000000011,
+    "parent_proper_excitation": 38.30744838161099,
+    "radius": 1.9632599730110647,
+    "child_length": 2.0200156122469886,
+    "parent_length": 6.715816791631296,
+    "child_h": 0.2041241452319315,
+    "parent_initial_h": 0.3535533905932738,
+    "beta_inside": 0.9161879874051639,
+    "beta_outside": 0.7198619901040576,
+    "initial_wall_areal_acceleration": 0.509356892997871,
+    "pressure": 0.2500000000000001,
+    "field_force_jump": 8.660254037844386,
+    "angular_Israel_gap": -5.4491410634046186e-17,
+    "mean_force_gap": 5.551115123125783e-17,
+    "child_constraint_gap": 0.0,
+    "parent_constraint_gap": 2.220446049250313e-16,
+    "scalar_initial_C2_gap": -8.660254037844386,
+    "conditional_inward_flux_over_time_squared": 18.749999999999996,
+    "conditional_child_energy_per_area_over_time_cubed": 6.249999999999999,
+    "conditional_child_energy_over_time_cubed": 302.72306083841664,
+    "conditional_pressure_drop_over_time_squared": 18.749999999999996,
+    "earliest_central_front_time": 2.079815856348478,
+    "scope": "Exact initial constraints. Flux/energy coefficients are conditional short-time limits of a causal weak development with bounded one-sided geometry; no finite-time coupled evolution or error bar is supplied."
+  },
+  "conditional_weak_transfer": {
+    "assumptions": "A causal local development with continuous field/normal matching, bounded one-sided geometric coefficients and no extra incoming initial waves; existence of the full Einstein/membrane development is not established here.",
+    "scalar_wall_displacement": "-S*tau^2/4+O(tau^3), S=mu*e, from the retarded tangent equation.",
+    "inward_flux": "S^2*tau^2/4+O(tau^3)",
+    "child_excitation_per_initial_area": "S^2*tau^3/12+O(tau^4)",
+    "pressure_relation": "(P(0)-sigma*K_mean)/F_in tends to 1; same charge/scalar source fixes both coefficients.",
+    "contribution": "Exact round constrained initial data and a nonzero conditional causal transfer coefficient. This allows an initial weak corner instead of treating C2 compatibility as a compulsory physical gate."
+  },
+  "planar_massive_control": {
+    "time": 0.01,
+    "wall_displacement": -0.00021578562467305492,
+    "wall_time_derivative": -0.04301317185534427,
+    "wall_normal_derivative": -0.04315714895652853,
+    "inward_flux": 0.0018563258648538533,
+    "child_energy_per_area": 6.2126084344390895e-06,
+    "pressure_drop": 0.0018687583273835969,
+    "scope": "Exact planar fixed-interface massive-field control only.",
+    "independent_volume_energy": 6.212608434439091e-06,
+    "volume_boundary_energy_gap": 1.6940658945086007e-21,
+    "quadrature_order_gap": 2.541098841762901e-21,
+    "two_sided_volume_energy": {
+      "child": 6.212608434439091e-06,
+      "parent_excess": -6.212608434439092e-06,
+      "net": -8.470329472543003e-22
+    }
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "conformal_Hamiltonian": "0",
+      "fixed_tension_spatial_jump": "0",
+      "scalar_second_normal_matching": "0",
+      "two_sided_wall_acceleration": "0",
+      "surface_mass_relation": "0",
+      "tangent_child_wave": "0",
+      "tangent_parent_force": "0",
+      "tangent_interface_value": "0",
+      "tangent_interface_normal": "0",
+      "tangent_child_energy_balance": "0",
+      "tangent_parent_supplies_child_energy": "0",
+      "tangent_pressure_inflow_relation": "0"
+    },
+    "two_tolerance_spreads": {
+      "radius": 4.3576786623589214e-10,
+      "second_jet": 2.8169316323989335e-09,
+      "wall_factor": 7.894040976452743e-11,
+      "wall_areal_acceleration": 1.2165024543264735e-10,
+      "wall_field_acceleration": 1.2859887599248054e-09,
+      "outward_flux_slope": 2.6544605402634147e-10,
+      "total_scalar_excess": 2.884772420941317e-10
+    },
+    "numerical_comparison_tolerance": 2e-07
+  },
+  "initial_flux": {
+    "preparation": "Smooth compact packet with amplitude .02, distinct from the uniform weak-corner seed.",
+    "sign": "Positive is child-to-parent; F=-T(n,u).",
+    "value": 0.0,
+    "slope": 0.03803680229318498,
+    "conclusion": "The compatible preparation has an initially outward flux slope, not demonstrated matter deposition in the child."
+  },
+  "validity": "Three finite Cauchy examples with second-order smooth interface compatibility; also one exact uniform-parent constrained seed with a weak initial corner and conditional leading transfer coefficients. The planar massive control has its own fixed-background domain.",
+  "limits": "No full coupled finite-time evolving solution, all-order corner compatibility, global existence, stability, finite-time curved deposited energy/error bound, isotropization, clustering, selected source history or observational abundance. Initial geometry differences are not instantaneous causal signals.",
+  "next": "Construct the coupled causal evolution of the uniform excited parent and test the nonzero limiting flux and pressure relation; retain the smooth constrained source as a distinct initial-data control.",
+  "process_cpu_seconds": 0.59375,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_parent_source.py": "fb28612ba5d2a23100a124fbc2f209317b3c7e36c68c70495ef0e8347e6999d6",
+    "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "scripts/check_nsc_atlas_parent_source.py": "fcf7e1c55fe054dea677aa4bb27c4d23b975afdd5f4dbcf0214953f0e7142daa",
+    "tests/test_nsc_atlas_parent_source.py": "3fc68263805b7869c30997804ec56c412a66f5c1cdff3447ab5e5bb8ddc1216b",
+    "scripts/plot_nsc_atlas_parent_source.py": "c1c38f57922cc15a072377e21238cadf687f6e1396e81fff0754ee3667747484"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_parent_source.py"
+}

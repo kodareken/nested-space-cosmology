@@ -1,5 +1,12 @@
 # Reproducing the root project
 
+The [finite parent source](nsc-atlas-parent-source.md) is reproduced by
+`python scripts/run_python.py scripts/check_nsc_atlas_parent_source.py`.
+Its tests are `tests/test_nsc_atlas_parent_source.py`; regenerate its figure
+with `scripts/plot_nsc_atlas_parent_source.py` through the same runtime.
+The producer solves initial constraints and matching, including a rejected
+frozen-layer control, within a 120 CPU-second budget.
+
 The [parent source/receiver map](nsc-atlas-parent-transport.md) is reproduced by
 `python scripts/run_python.py scripts/check_nsc_atlas_parent_transport.py`.
 Its focused tests are `tests/test_nsc_atlas_parent_transport.py`; regenerate

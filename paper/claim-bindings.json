@@ -353,6 +353,16 @@
       "section": "10.18",
       "status": "measured",
       "owner": "docs/nsc-atlas-parent-transport.md"
+    },
+    "finite-parent-scalar-source": {
+      "section": "10.19",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-parent-source.md"
+    },
+    "parent-inward-transfer-limit": {
+      "section": "10.20",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-source.md"
     }
   },
   "findings": [
@@ -643,6 +653,22 @@
       "note": "docs/nsc-atlas-parent-transport.md",
       "record": "results/summaries/nsc-atlas-parent-transport-v1.json",
       "paper_section": "10.18"
+    },
+    {
+      "id": "finite-parent-scalar-source",
+      "status": "measured",
+      "summary": "Finite parent scalar Cauchy data solve the conformal Hamiltonian constraint with the material-wall jump and a derived scalar second-normal correction. Proper energy, integrated masses and two-sided initial response are checked. A frozen layer fails scalar compatibility despite passing gravity. Finite-time evolution, higher corner compatibility and child matter deposition remain open.",
+      "note": "docs/nsc-atlas-parent-source.md",
+      "record": "results/summaries/nsc-atlas-parent-source-v1.json",
+      "paper_section": "10.19"
+    },
+    {
+      "id": "parent-inward-transfer-limit",
+      "status": "derived",
+      "summary": "A uniform excited parent admits exact round constrained caps with the child initially at its scalar minimum. Conditional on a bounded-geometry causal weak development, the charge/scalar force jump fixes nonzero leading inward flux, balanced parent/child energy and the same leading wall-pressure decrease. Full coupled existence and finite-time curved error remain open; planar massive results are separate controls.",
+      "note": "docs/nsc-atlas-parent-source.md",
+      "record": "results/summaries/nsc-atlas-parent-source-v1.json",
+      "paper_section": "10.20"
     }
   ]
 }

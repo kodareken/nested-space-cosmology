@@ -42,12 +42,40 @@ same child curvature. Unknown preparations can still mimic that change.
 The simple additive collision control lands on another minimum
 and does not create the earlier homogeneous quench excitation.
 
-Active next: specify a finite scalar packet in that accessible parent
-region, solve its initial constraints, and derive the coupled scalar,
-metric and membrane-displacement matching. Compute the transmitted stress
-before inferring isotropy, cold matter or clustering. The regular branch
-and the new causal/energy map supply controls; neither needs further
-precision work unless that packet calculation fails because of them.
+Active next: construct the coupled causal development of the uniform
+excited-parent preparation below, with both cap metrics and the moving
+material wall. Compute its integrated transmitted
+stress before inferring isotropy, cold matter or clustering. The regular
+branch and the causal/energy map supply controls; neither needs further
+precision work unless that evolution fails because of them.
+
+The 21 October rethinking selects a finite time-symmetric parent scalar
+preparation as the next concrete connection. Full evolution needs these
+constraints first; the simplest additive collision leaves no homogeneous
+excitation, and more test-body transport does not include source gravity.
+Keep the same action and solve the conformal Hamiltonian constraint with
+the material-wall jump. A changed metric also changes scalar normal jets:
+retain the field equation's wall compatibility instead of freezing the
+old layer. The [finite parent source](nsc-atlas-parent-source.md) now
+supplies those initial data: proper scalar excess 1.112671383, wall radius
+2.764905208 and initial areal acceleration .386385323 for amplitude .02.
+Its derived wall-layer coefficient removes a scalar compatibility failure
+that the Einstein constraint alone would miss. The initial flux slope is
+outward. Active next is the coupled finite-time evolution and its integrated
+transmitted stress. Finite-time transmission and
+clustering follow afterward; initial-data comparison is not causal
+propagation or a completed cosmological matter model.
+
+The broader rethink also removes second-order corner smoothness as an
+automatic physical gate. A uniform field at the child minimum gives an
+exact round constrained seed with the excitation in the parent. For a
+bounded-geometry causal weak development, its derived inward flux begins
+as 18.75 tau^2 and the pressure decreases by the same leading amount.
+This is a nonzero conditional energy/curvature relation under one action.
+The coupled finite-time development and remainder remain open; the exact
+planar massive-field calculation only checks the tangent normalization.
+Use this route for the next transfer calculation, retaining the smooth
+finite source as a distinct preparation control.
 
 ### Coupled regular preparation: scalar, gravity and wall
 

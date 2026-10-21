@@ -1,5 +1,23 @@
 # Prior art and admission of new research
 
+## Finite source gravity and scalar wall compatibility, 21 October 2026
+
+The [source owner](nsc-atlas-parent-source.md#rethinking-decision-and-scope)
+reuses the Einstein-scalar conformal constraint and full Israel condition,
+deriving the material jump and scalar second-order compatibility in the
+current charged model. Three finite initial amplitudes, one frozen-layer
+rejection and a two-tolerance comparison fit 120 CPU seconds. Initial
+energy, mass and wall response are the outputs. Finite evolution and
+cosmological abundance are not inferred from a Cauchy constraint solve.
+
+The same bounded source comparison also admits the uniform excited-parent
+seed and its conditional retarded tangent limit. It distinguishes a weak
+initial interface from a second-order smooth one. The exact constrained
+geometry, step-forced wave solution and independent massive planar volume/
+flux integrals decide the leading energy/pressure relation. They do not
+constitute a full weak Einstein/membrane existence theorem or finite-time
+curved evolution. No second source law or fitted child density is added.
+
 ## Parent causal access and received energy, 21 October 2026
 
 The [transport owner](nsc-atlas-parent-transport.md#scope-reusable-mathematics-and-choice-of-calculation)

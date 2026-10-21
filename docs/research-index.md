@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [finite parent scalar source](nsc-atlas-parent-source.md) solves its
+spatial gravity and charged-wall constraint together with the scalar
+second-order interface condition. It calculates finite proper energy and
+initial boundary response; subsequent transmission is a separate evolution.
+
 The [real-parent transport map](nsc-atlas-parent-transport.md) identifies
 causal source access, radial massive thresholds, arrival clocks and local
 energies on the prepared background. It is the kinematic prerequisite to

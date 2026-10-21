@@ -4127,6 +4127,224 @@ interface equations. Population normalization and the physical ruler
 remain inputs to be supplied. The present result makes the geometric
 part of that future source-to-observer calculation explicit.
 
+### 10.19. A finite parent source with its gravitational response
+
+<!-- nsc-claim:finite-parent-scalar-source -->
+
+Evidence: [source, constraint and matching derivation](../docs/nsc-atlas-parent-source.md),
+[finite preparations and independent checks](../results/summaries/nsc-atlas-parent-source-v1.json).
+
+The next preparation includes the source's gravity. Retain the action,
+charges and tension of Section 10.16, and prescribe a finite compact
+scalar displacement in the parent. On the initial slice, the spatial
+extrinsic curvature and scalar momentum vanish. This is a time-symmetric
+packet, not a purely incoming wave. Its prior formation history is supplied
+neither by the regular saddle nor by this Cauchy construction.
+
+Let $h_0$ and $\phi_0$ denote the regular reference data. Solve
+$h=\Psi^4h_0$ with $\phi=\phi_0+f+g$, where $f$ is the specified
+parent packet and $g$ is a small wall-layer correction. The scalar
+Hamiltonian constraint and conformal curvature identity, as in
+[Choquet-Bruhat, Isenberg and Pollack, Section 2](https://arxiv.org/html/gr-qc/0610045), give
+
+$$
+\Delta_0\Psi=
+\frac{\kappa}{8}\left[(\phi_0')^2-(\phi')^2\right]\Psi
++\frac{\kappa U_0}{4}\Psi-\frac{\kappa U}{4}\Psi^5.
+$$
+
+Primes use seed proper radial distance. The momentum constraint is
+zero. Regularity gives $\Psi'=0$ at both poles; the same material
+tension gives, in the common child-to-parent normal convention,
+
+$$
+[\Psi]=0,\qquad [\Psi']=\frac{k}{2}(\Psi-\Psi^3),
+\qquad k=\frac{\kappa\sigma}{2}.
+$$
+
+For a second-order smooth initial corner there is an additional scalar
+requirement. If the old field value and
+first seed-normal derivative $s$ are retained at the wall, the physical
+normal derivative becomes $s/\Psi_W^2$. The scalar wave equation and
+the full trace jump $[K]=-3k$ require
+
+$$
+[\phi_{;nn}]-3k\phi_n-\mu e=0.
+$$
+
+Freezing the old layer after changing the metric violates this condition
+unless $\Psi_W=1$ for the stated couplings. A parent-side correction
+with $g(0)=g'(0)=0$ and $g''(0)=\lambda$ repairs it precisely when
+
+$$
+\lambda=\mu e(\Psi_W^4-1)+2ks(\Psi_W^2-1).
+$$
+
+Thus the scalar correction is solved with gravity. It is not an extra
+surface impulse or an adjustable energy injection. The finite example
+uses $f=A(1-z^2)^6$ for $|z|<1$, with $z=(d-.3)/.12$, and zero
+outside. Here $d$ is seed distance into the parent from the wall.
+The correction is $g=\lambda d^2(1-d/.08)^6/2$ for $0\le d<.08$,
+and zero outside. These profile choices are explicit state data.
+
+The complete instantaneous Israel conditions determine the two normal
+wall accelerations. With $B_j=\beta_j/R$, $\beta_j=\partial_nR$ and
+$P=e(q_p+\mu\phi_W-e/2)$, they are
+
+$$
+\overline{A}=\frac{P}{\sigma}-(B_i+B_o),\qquad
+A_i=\overline{A}+\frac{k}{2},\qquad A_o=\overline{A}-\frac{k}{2}.
+$$
+
+The radial Einstein equation then gives the initial areal acceleration:
+
+$$
+\frac{d^2R}{d\tau_W^2}
+=-\frac{m_j}{R^2}-\frac{\kappa R p_{r,j}}{2}+A_j\beta_j,
+\qquad m_j=\frac{R}{2}(1-\beta_j^2).
+$$
+
+The two sides agree algebraically using the force and Israel conditions.
+The scalar acceleration computed from each side agrees only after the
+second-normal matching condition is included.
+
+| Amplitude | Proper scalar excess | Wall radius | Initial areal acceleration |
+|---|---|---|---|
+| 0 | 0 | 2.706345313 | .369501998 |
+| .01 | .270536650 | 2.721705563 | .374020762 |
+| .02 | 1.112671383 | 2.764905208 | .386385323 |
+
+The table uses the declared normalized units. Proper scalar excess
+includes the quadratic excitation and its interference with the original
+field, both evaluated on the same sourced metric. It is not a global
+conserved energy or an ADM mass. For $A=.02$, $\Psi_W=1.010761098$
+and $\lambda=.3779028621$. The radius increases by $2.163800$ percent
+and its initial areal acceleration by $4.569211$ percent.
+
+![Finite scalar preparation and its spatial gravity](../docs/figures/nsc-atlas-parent-source.png)
+
+*Figure 14. The specified scalar packet and required narrow wall correction
+are accompanied by a jointly solved spatial geometry. The conformal factor
+changes on both caps. These are different constrained initial data, not
+an instantaneous signal travelling from the packet to the child.*
+
+For this example the shared initial scalar acceleration at the wall is
+$.180243894532$. With outward flux $F=-T(n,u)$, its initial value
+vanishes and its derivative is $.038036802293$. Positive denotes
+child-to-parent exchange. The initial direction therefore does not
+establish inward matter deposition; later arrival and transmission of
+the parent packet must be evolved.
+
+The deliberately frozen-layer control passes the gravitational constraint
+but leaves scalar compatibility residual $-.362064088$. The solved
+correction reduces the reported two-sided matching gaps below
+$3\times10^{-15}$. Independent mass integration from the two poles gives
+$.44414721424740$ and $.96826983393285$, matching the geometric masses
+within $7\times10^{-13}$. Direct Hamiltonian residuals remain below
+$3\times10^{-8}$, and two tolerances change the wall radius by
+$4.36\times10^{-10}$. Five symbolic identities and the zero-source
+limit check the construction. These numerical comparisons establish
+neither interval-certified existence nor uniqueness.
+
+The result supplies finite source gravity, instantaneous wall matching
+and scalar compatibility through second order. It is not a finite-time
+evolution or an all-order corner-compatibility theorem. The physical
+ruler, preparation history and subsequent transmitted stress remain
+open. The bulk vacuum values are unchanged. The next connected problem
+is the evolution of these data and the energy delivered through their
+moving boundary, followed by the stress required for clustering.
+
+### 10.20. A conditional inward pulse from the excited parent
+
+<!-- nsc-claim:parent-inward-transfer-limit -->
+
+Evidence: [weak-corner preparation and transfer derivation](../docs/nsc-atlas-parent-source.md#a-weak-initial-corner-can-carry-a-real-inward-pulse),
+[exact seed and independent massive-field control](../results/summaries/nsc-atlas-parent-source-v1.json).
+
+Smooth second-order compatibility at the initial interface is a choice
+of regularity. Its failure does not by itself exclude a finite-energy
+weak transient. A different preparation with the same action makes this
+distinction useful: put the field uniformly at the child minimum on
+the entire time-symmetric slice. The child has no initial excitation;
+the parent has excitation density $3/32$ above its own minimum.
+
+The initial densities are $\rho_i=1/8$ and $\rho_p=3/8$. Round Cauchy
+caps satisfy the gravitational constraints and instantaneous wall laws
+exactly with
+
+$$
+B_i=\frac{7}{15},\qquad B_o=\frac{11}{30},\qquad
+R_*^2=\frac{1800}{467},\qquad R_*=1.96325997301.
+$$
+
+Both poles are regular, and the parent excitation has finite proper
+integral $38.30744838$ in normalized units. The initial wall pressure
+is $P_0=1/4$ and its areal acceleration is $1/R_*$. This is a turning
+instant, not static equilibrium. The parent is an excited scalar
+region; its future is not a de Sitter vacuum continuation.
+
+The scalar's initial corner is not twice differentiable in the required
+piecewise spacetime sense. Suppose a causal local weak development
+exists with continuous scalar value and normal derivative and bounded
+one-sided geometric coefficients. Existence of that full coupled
+development remains a separate question. With wall proper time $\tau$
+and normal coordinate $x$, child $x<0$, the tangent equation is
+
+$$
+(\partial_\tau^2-\partial_x^2)\chi=-S H(x),\qquad
+S=\mu e=5\sqrt{3}.
+$$
+
+The initial field displacement and its time derivative vanish. Retarded
+integration in the child portion of the initial cone gives
+
+$$
+\chi_i=-\frac{S}{4}(\tau+x)^2\quad(-\tau<x<0).
+$$
+
+The corresponding parent expression matches its value and first
+derivatives at the wall. Spherical terms, finite wall acceleration and
+the massive-field term enter at higher order under the stated bounded
+geometry assumptions. Thus the local coupled-development limit is
+
+$$
+F_{\rm in}=18.75\tau^2+O(\tau^3),\qquad
+\frac{E_{\rm child}}{\mathcal{A}_0}=6.25\tau^3+O(\tau^4),
+\qquad \mathcal{A}_0=4\pi R_*^2.
+$$
+
+Positive flux here means parent-to-child. It is generated by the
+different potential slopes, with the energy initially stored in the
+parent. The leading parent-layer energy loss equals the child gain;
+there is no separately prescribed incoming waveform. The same
+field controls the membrane pressure and gives a geometric relation:
+
+$$
+P(\tau)=\frac14-18.75\tau^2+O(\tau^3),\qquad
+\sigma\overline{K}=P(\tau),\qquad
+\lim_{\tau\to0^+}\frac{P_0-\sigma\overline{K}}{F_{\rm in}}=1.
+$$
+
+This links transmitted scalar energy and wall curvature from one source
+and one set of couplings. It is a conditional short-time prediction,
+not a calculated finite-time cosmological abundance. No remainder
+constant for the curved coupled evolution has been established.
+
+As a separate check, the exact planar massive retarded solution gives
+inward flux $.001856325865$ and child energy per area
+$.000006212608434$ at $t=.01$. Direct integration of the field energy
+agrees with the integrated boundary flux and the parent energy loss. Those finite-time numbers
+belong to that planar control only. The sharp membrane model also
+leaves finite-thickness corrections outside this limit.
+
+In the initially quiet child, the leading edge cannot reach the center
+before proper time $2.07981585635L_{\rm ref}/c$, obtained from its
+de Sitter domain of dependence. This is a causal front time, not a
+detector threshold or received waveform. The next step is a coupled
+causal development that tests the nonzero transfer and pressure relation
+at finite times. The smooth source of Section 10.19 remains a distinct
+preparation control, not a compulsory gate on this weak-corner route.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -4176,7 +4394,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 14. The isolated reference in joined causal charts. Horizons are
+*Figure 15. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -5182,7 +5400,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 15. Saved finite-window comparisons. A: the previous and current
+*Figure 16. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -5278,7 +5496,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 16. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 17. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -6063,7 +6281,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 17. Research dependencies, distinct from spacetime causal arrows.
+*Figure 18. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

@@ -1,5 +1,19 @@
 # Active code and evidence map
 
+The [parent source owner](nsc-atlas-parent-source.md) uses
+nsc_atlas_parent_source.py: ParentScalarSource.solve couples the conformal
+Hamiltonian constraint to the wall's scalar second jet. wall evaluates
+both sides of the initial Israel/scalar response; diagnostics reconstructs
+physical spatial curvature; energy retains interference; mass_checks
+integrates independently from each pole. The frozen-layer mode is a
+deliberately rejected control, not an admissible sourced solution.
+
+Here that rejection refers to second-order classical corner compatibility.
+uniform_excited_parent supplies a distinct exact constrained seed with a
+weak initial corner. planar_interface_control and the independent
+planar_child_energy_integral check its conditional tangent transfer;
+their finite-time values are not a curved coupled evolution.
+
 The [parent transport owner](nsc-atlas-parent-transport.md) uses
 nsc_atlas_parent_transport.py: RadialCapTransport retains the solved cap
 profiles, computes null access and massive delays, and matches reception

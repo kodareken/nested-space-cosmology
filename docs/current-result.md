@@ -1,5 +1,28 @@
 # What the calculations show
 
+The [excited-parent transfer limit](nsc-atlas-parent-source.md#a-weak-initial-corner-can-carry-a-real-inward-pulse)
+now gives a nonzero conditional inward energy source. A uniform field at
+the child minimum leaves parent excitation density3/32 and admits exact
+round Cauchy caps with radius squared1800/467. For a bounded-geometry
+causal weak development, inward flux is18.75 tau^2+O(tau^3), child
+energy per initial area is6.25 tau^3+O(tau^4), and the wall pressure
+drops by the same leading flux amount. The initial state has a weak
+corner, distinct from the smooth preparation below. A full coupled
+development and finite-time curved error bound are not yet established.
+Independent massive planar field/flux integrals check the normalization.
+
+The [finite parent scalar preparation](nsc-atlas-parent-source.md) now
+includes source gravity and the material wall in one constrained Cauchy
+slice. A supplied amplitude .02 gives proper scalar excess 1.112671383,
+wall radius 2.764905208 and initial areal acceleration .386385323. The
+radius is 2.163800 percent above the regular reference. An exact interface
+condition fixes the required scalar second-normal correction; freezing
+the old layer instead gives an incompatible acceleration jump -.362064088.
+Both sides agree after correction, and integrated masses independently
+match the geometry. This is initial data and initial response, not a
+finite-time evolution. The initial flux slope is outward; later deposited
+child energy and clustering remain to be calculated.
+
 The [real-parent transport calculation](nsc-atlas-parent-transport.md)
 connects the prepared geometry to central arrival and local received
 energy. A source .3 L_ref into the parent with gamma=2 arrives at

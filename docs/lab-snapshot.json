@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a18e028f67414f16025a497c308eaedef3fd14d8",
+  "current_receipt_commit_parent": "982d668e8198eb467e53fe2e4c56722924998594",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 19644,
-      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
-      "changed_from_commit": "86ac8e3b2fdeb20648acca7ef0a973d1550a6dc4",
+      "bytes": 20359,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "0deb9da7f90c6a4d43a1189b8ad05237fdb01f4415d8cbd709d8b72a56707667"
+      "sha256": "4712c0d2875c8912e636a3749231ba37481e8ae26e198cbef9eb2a5a12806e4d"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 276754,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 277584,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "3012503279a1b0778b60a6a9a46b6bc4b16667708b77631553c213f2a44c01e7"
+      "sha256": "cc5b2732aed28484a8e881e8ce75d7d9e050535076a8662cfa63ad7de65e63b0"
     },
     {
       "bytes": 119068,
@@ -10312,9 +10312,9 @@
       "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
-      "bytes": 106788,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 107277,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "import_bytes": 102088,
       "import_sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a",
       "migration_disposition": "active_owner",
@@ -10322,15 +10322,15 @@
       "original_path": "lab/docs/claim-ledger.md",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
-      "sha256": "60b04b0e97a63f3a70f05241b99d3a26c069acc2bff3927732eca7592b39c816"
+      "sha256": "6239bd3f8ebcf9a4fa4a3ea0e7d3929682152094f87cc03af1b111fc66edcf33"
     },
     {
-      "bytes": 446620,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 448143,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "918b8e83c5f42e13a23c6986846250d67c40eddc4ae1b4ee906fda16a2fcfd78"
+      "sha256": "f9ddaae7ed9f17638a6873f6875a54fbffb450591936c261f3d949d0e45078bd"
     },
     {
       "bytes": 173938,
@@ -10379,6 +10379,14 @@
       "path": "docs/figures/nsc-atlas-parent-observables.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "4009b185b88dc9b577ceddc5d14b235046269f7190984ef4f7871836b3e9c328"
+    },
+    {
+      "bytes": 148331,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "path": "docs/figures/nsc-atlas-parent-source.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ed4705ba29f1098a67893b855aba38feee849b3bf17f40e437188746c238e51e"
     },
     {
       "bytes": 136091,
@@ -10607,6 +10615,14 @@
       "sha256": "3b275b055e685bb051154469721d54101929cc9ed7d9abfd7a919bfe328a31a8"
     },
     {
+      "bytes": 19314,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "path": "docs/nsc-atlas-parent-source.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "471f0b3ac716add79b9772f2351509164a42650ab5abf536a8d235f138cf8da8"
+    },
+    {
       "bytes": 13275,
       "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
       "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
@@ -10664,15 +10680,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 88899,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 90685,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "6c90c7daf4662ecebd695561992ee83b13e8a9ade1f179bede96dbc971e9b684"
+      "sha256": "78ec0c2063f02b8fbe77d0ebb3c759bba631a5edb00169814a865523ced3fc71"
     },
     {
       "bytes": 30876,
@@ -11640,12 +11656,12 @@
       "sha256": "420b0342c1b5230c75a91080110781501556acb8d39e7b43c69d969e52d49dee"
     },
     {
-      "bytes": 587395,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 588491,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c2598812a5e7d19121064e51c9207622962913c90fa9e86198ad603626b94928"
+      "sha256": "384e66544818aa6d1835cd3045efaf6566dc2682929e5733750fbc3634b66836"
     },
     {
       "bytes": 6705,
@@ -11654,20 +11670,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 217495,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 217920,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "03fb54fe032a1875653ef38d660ec5e110f40fbbe54f9983976d563cb011ed81"
+      "sha256": "d0cfd58ef659378f7b8188e7496bb1965e0ee40ebd2ab50b6e1aa922c8e1f531"
     },
     {
-      "bytes": 37161,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 37453,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "f2bb63c5e30ded4115e5bfc9d9f99901061b08160cba54e59d4efa9874b9d996"
+      "sha256": "ebb6c5af652d8b64e3f7f55f569a1a13617df5fdb6cd9f40a024a6cd77a6566d"
     },
     {
       "bytes": 18356,
@@ -11736,28 +11752,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 26866,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 27184,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "a2968e0fb11a60cd50b46697434bcacc12bc5fd1daeaafa5180600ad0489be74"
+      "sha256": "96750f6d3c71e8b466643fd849f3f64200941eac115fb832ca640805eb9d5418"
     },
     {
       "bytes": 3206,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "228a3edae543a80ce40be12bb902e16f815e5391b92c1bd4c164b56852953abc"
+      "sha256": "032feb2ae19949c413797fd4bc6f1fd169e9dbc08532cf7cb9152be6a6ab0014"
     },
     {
-      "bytes": 29681,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 31285,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d398f7bdf203fb5c02d61ae243f213e028184406037b88af96095c2caf8e8af1"
+      "sha256": "f7883f2317c2bc7c6f43b1037be3ab4e9520725d7720b997fbe5a5b45179fbb0"
     },
     {
       "bytes": 226492,
@@ -11769,27 +11785,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "50c5ffb13fbc35b2df3e5925a756738b8227eded22517809f679d8401bbd2d2d"
+      "sha256": "02f5046438602a0d6489ea7ad0426f89deaec168e5d5ef6376399ab294e007fb"
     },
     {
-      "bytes": 297358,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 307194,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "cb7b83a247c27e42401ba7139e55d4f6b4b6388a340245b793df3845e77eb708"
+      "sha256": "f0e6ebeb28dc6e68dc6ed88c6c499335313375ac87f2705e4cae20710fa61a30"
     },
     {
-      "bytes": 7002831,
-      "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
-      "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
+      "bytes": 7285651,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "76536cf4203daefa5b6ef51aa902e10509816521db75f7441b81d6df4ff633a8"
+      "sha256": "127e09db034f9aa5d3ac8ca720e05d073084d0332e7e4ff122ee51ec60ed74b3"
     },
     {
       "bytes": 3283,
@@ -30502,6 +30518,14 @@
       "sha256": "936469cad670eda71f267008bd194d8e7f31f36d9229ffde43ec90a8242083bf"
     },
     {
+      "bytes": 16701,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "path": "results/summaries/nsc-atlas-parent-source-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "06d2f9a5107ff9b12fe764ab633b89189a8a05d712ed4b5b9140272f4b19db5f"
+    },
+    {
       "bytes": 8537,
       "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
       "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
@@ -30981,6 +31005,14 @@
       "path": "scripts/check_nsc_atlas_parent_observables.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "98ad759f64f820533ec0aeb39bef2bbe609d616aa44192e179aa802c7e33437f"
+    },
+    {
+      "bytes": 11038,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "path": "scripts/check_nsc_atlas_parent_source.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "fcf7e1c55fe054dea677aa4bb27c4d23b975afdd5f4dbcf0214953f0e7142daa"
     },
     {
       "bytes": 7617,
@@ -33792,6 +33824,14 @@
       "sha256": "0bf8332703a137e0c02568577e23051e5772626afe472340f0d2b52feab85163"
     },
     {
+      "bytes": 1698,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "path": "scripts/plot_nsc_atlas_parent_source.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "c1c38f57922cc15a072377e21238cadf687f6e1396e81fff0754ee3667747484"
+    },
+    {
       "bytes": 2111,
       "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
       "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
@@ -34886,6 +34926,14 @@
       "path": "src/recursive_horizons/nsc_atlas_parent_observables.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "8eea650fcbac343c353fd2b0ccc68c92a8d9d0115ee417345cd23e1abeec9974"
+    },
+    {
+      "bytes": 16863,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "path": "src/recursive_horizons/nsc_atlas_parent_source.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "fb28612ba5d2a23100a124fbc2f209317b3c7e36c68c70495ef0e8347e6999d6"
     },
     {
       "bytes": 8506,
@@ -39196,6 +39244,14 @@
       "path": "tests/test_nsc_atlas_parent_observables.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "b96da505e1f8e4f79ed8ca9967f6e2a38cb706d787e76346797c76ec35d09e32"
+    },
+    {
+      "bytes": 5596,
+      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
+      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "path": "tests/test_nsc_atlas_parent_source.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3fc68263805b7869c30997804ec56c412a66f5c1cdff3447ab5e5bb8ddc1216b"
     },
     {
       "bytes": 4561,

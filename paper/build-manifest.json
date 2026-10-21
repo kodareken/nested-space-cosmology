@@ -1,10 +1,10 @@
 {
-  "bytes": 7002831,
+  "bytes": 7285651,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "50c5ffb13fbc35b2df3e5925a756738b8227eded22517809f679d8401bbd2d2d",
+  "metadata_sha256": "02f5046438602a0d6489ea7ad0426f89deaec168e5d5ef6376399ab294e007fb",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 97,
-  "pdf_sha256": "76536cf4203daefa5b6ef51aa902e10509816521db75f7441b81d6df4ff633a8",
+  "pages": 101,
+  "pdf_sha256": "127e09db034f9aa5d3ac8ca720e05d073084d0332e7e4ff122ee51ec60ed74b3",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -34,6 +34,10 @@
     {
       "path": "docs/figures/nsc-atlas-parent-observables.png",
       "sha256": "4009b185b88dc9b577ceddc5d14b235046269f7190984ef4f7871836b3e9c328"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-parent-source.png",
+      "sha256": "ed4705ba29f1098a67893b855aba38feee849b3bf17f40e437188746c238e51e"
     },
     {
       "path": "docs/figures/nsc-atlas-parent-transport.png",
@@ -532,6 +536,10 @@
       "sha256": "936469cad670eda71f267008bd194d8e7f31f36d9229ffde43ec90a8242083bf"
     },
     {
+      "path": "results/summaries/nsc-atlas-parent-source-v1.json",
+      "sha256": "06d2f9a5107ff9b12fe764ab633b89189a8a05d712ed4b5b9140272f4b19db5f"
+    },
+    {
       "path": "results/summaries/nsc-atlas-parent-transport-v1.json",
       "sha256": "7cf3245ec5c88695944c527943f62654f693daf16edb93ee719b5146e3d0039d"
     },
@@ -621,6 +629,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "cb7b83a247c27e42401ba7139e55d4f6b4b6388a340245b793df3845e77eb708",
-  "version": "working-2026-10-21.2"
+  "source_sha256": "f0e6ebeb28dc6e68dc6ed88c6c499335313375ac87f2705e4cae20710fa61a30",
+  "version": "working-2026-10-21.3"
 }

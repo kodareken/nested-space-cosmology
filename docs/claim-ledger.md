@@ -1,5 +1,13 @@
 # Current NSC claim ledger
 
+The [finite parent source](nsc-atlas-parent-source.md) constructs a positive
+conformal metric with finite scalar excitation and the same charged wall.
+An exact second-normal matching rule repairs the scalar incompatibility of
+a frozen layer after gravity changes. Geometric and integrated masses,
+two-sided initial acceleration and flux-derivative checks agree. This
+establishes the stated initial constraints and initial response, not a
+finite-time spacetime or child-matter production.
+
 The [parent source/receiver map](nsc-atlas-parent-transport.md) calculates
 radial geodesic access and received energy on the prepared coupled
 background, including its moving wall and a bounded vacuum comparison

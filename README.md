@@ -3,6 +3,18 @@
 Start with regions, boundaries and fields; assemble possible nested geometries;
 specify inheritance and transmission; calculate what an interior observer measures.
 
+The [finite parent scalar source](docs/nsc-atlas-parent-source.md) now solves
+source gravity and the charged wall's initial matching together. It derives
+the scalar-layer correction for second-order smooth matching, and computes
+proper source energy and the wall's initial response. This is a finite Cauchy
+preparation; its evolving transmission and child-matter consequences remain
+the next connection.
+
+A distinct excited-parent seed now gives a conditional inward energy-transfer
+coefficient and a linked wall-pressure response. Its initial constraints are
+exact; the retarded short-time limit assumes a causal weak coupled development.
+The full evolution and its finite-time error remain the next calculation.
+
 The [regular scalar preparation](docs/nsc-atlas-scalar-preparation.md)
 now solves a scalar transition layer, charged boundary and gravity
 together, then continues them into an expanding child geometry.
