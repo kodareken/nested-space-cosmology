@@ -493,7 +493,7 @@ def check_register(root, register):
     entries = register["entries"]
     require(isinstance(entries, list) and [e["id"] for e in entries] in
             (["NSC-P001"], ["NSC-P001", "NSC-P002"], ["NSC-P001", "NSC-P002", "NSC-P003"]),
-            "one currently registered P001 and ordered unique optional P002/P003 required")
+            "one currently registered P001 and optional unique P002/P003 in order required")
     entry = entries[0]
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")
