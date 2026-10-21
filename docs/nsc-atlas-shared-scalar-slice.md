@@ -328,8 +328,9 @@ contains parameters, wall jets, bounds, endpoint comparisons and producer
 hashes; it stores no trajectory arrays. Eleven symbolic identities and
 eleven targeted tests include an independent derivative check, proper-radius
 integration, exact lattice floor, lapse derivatives and both evolution clocks.
-Grok independently checked the constraints, lapse and energy-floor argument;
-the parent causal/evolution review is recorded when complete.
+Grok independently checked the constraints, lapse and energy-floor argument,
+then verified the parent causal bound and reproduced both evolution clocks.
+The retained endpoint comparison covers the declared one-e-fold interval.
 
 Next: evolve scalar and metric perturbations on this protected parent and
 calculate whether the same inherited excitation can cluster, at which

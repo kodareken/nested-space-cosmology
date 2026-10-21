@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+  "current_receipt_commit_parent": "b9fab58607cc2c28ac6317e98432e67c3e4e95b9",
   "files": [
     {
       "bytes": 3120,
@@ -10669,12 +10669,12 @@
       "sha256": "b35adc596ea174a27f22833a338a655329791d2253460b2713920e3282b92dc5"
     },
     {
-      "bytes": 14379,
+      "bytes": 14467,
       "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
-      "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
+      "changed_from_commit": "b9fab58607cc2c28ac6317e98432e67c3e4e95b9",
       "path": "docs/nsc-atlas-shared-scalar-slice.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "6174c67632e447bc878cd5a4e20da003582ba922eb30a9d08258a7e74a25e8cc"
+      "sha256": "6c6b9dc3b6713f1547c50dbe252b2775b9a60091f159ecbd476d4a8e1c8fd371"
     },
     {
       "bytes": 9716,
