@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision 2026-10-22.1 adds Sections 10.29--10.30 and Figure 19: physical
+profile selection by scalar self-gravity, a controlled local cooling
+example, and coherent admission into the shared atlas. It calculates how
+the inherited ambient phase changes the geometric mass. The coupling
+choice and the missing full parent formation history remain explicit.
+
 Revision 2026-10-21.7 adds Sections 10.27--10.28 and Figure 18: the finite
 state-flow obstruction to automatic phase selection, an operational
 free-fall clock transfer, and NSC-P003's third-clock prediction after two

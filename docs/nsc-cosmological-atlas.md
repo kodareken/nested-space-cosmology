@@ -16,7 +16,39 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 21 October 2026
+## Current execution priority — 22 October 2026
+
+### Physical profile selection by scalar self-gravity
+
+The current rethink compares a Gaussian/Euclidean state prescription, a
+wall-generated profile in a reachable collar, and gravitational cooling of
+the existing real scalar. Current walls cannot prepare the protected packet
+after the retained slice; an instantaneous vacuum prescription would add a
+state choice rather than derive it. Select scalar self-gravity as a concrete
+internal profile-selection mechanism, reusing published oscillaton and
+Schrodinger--Newton constructions under their stated approximations.
+
+Complete: operational P003 for the supplied compact profile. The
+[scalar core connection](nsc-atlas-scalar-core.md) now derives the hierarchy,
+solves the self-consistent nodeless profile and checks two local cooling
+examples with radiated norm/energy accounting. Its mass-selected coherent
+representative admits a sourced compact initial slice, including the
+ambient field and both walls. Relative phase changes that geometric mass.
+Next is a single formation history retaining the ambient field, outgoing
+radiation and membrane dynamics, plus physical frequency/seed selection. The initial atlas has an
+exact frequency family with identical initial geometry and stress but
+different scalar clocks; compare its original frequency with one explicitly
+declared member in a controlled weak-field regime. No frequency is fitted
+to observations, and P003's original action/record remains its own claim.
+
+The new calculation concerns a local real-scalar envelope and its vacuum
+limit, not a proof of the full nonlinear membrane history or primordial
+seed abundance. Its inputs are an admitted frequency member and cloud
+mass/energy; output profiles must follow the equations, not a fitted shape.
+Failure risks are no usable approximation hierarchy, reflection mistaken
+for cooling, and an unconserved numerical sink. Independent profile/virial,
+finite-domain and mass/energy-flux checks decide those separately. The
+producer records the finite domain and a 240 CPU-second budget including workers.
 
 ### From free scalar phase to a clock prediction
 

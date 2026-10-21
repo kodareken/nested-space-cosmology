@@ -1,5 +1,13 @@
 # Current NSC claim ledger
 
+The [scalar-core calculation](nsc-atlas-scalar-core.md) establishes a
+frequency-independent initial-geometry identity, an independently solved
+coherent profile, finite local cooling examples and a sourced initial-atlas
+admission for two relative phases. The frequency 2000 member is explicit;
+the full parent formation history, seed abundance, coupling selection and
+observational interpretation are not claimed. The complex envelope does
+not introduce a second fundamental field or an exact real-field U(1) charge.
+
 The [three-clock relation](nsc-atlas-parent-clocks.md) is a conditional
 linear observer prediction in the fixed compact-profile family. It eliminates
 two free state amplitudes after two calibrations and includes source motion,

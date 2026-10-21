@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+The scalar-core calculation uses six worker processes:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_scalar_core.py --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_scalar_core.py
+```
+
+The [owner](nsc-atlas-scalar-core.md) separates local envelope cooling,
+the explicit frequency-family input, and the sourced initial-atlas result.
+The producer emits a compact summary and optional figure, retaining no raw
+radial histories in version control.
+
 The operational parent-clock calculation uses:
 
 ```powershell

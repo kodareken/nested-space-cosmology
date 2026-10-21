@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 21 October 2026
+Working research manuscript, 22 October 2026
 
 ## Abstract
 
@@ -46,7 +46,10 @@ gravitational density growth. Its transfer is scale and preparation
 dependent, giving a joint requirement on vacuum and structure scales.
 An operational three-clock relation then eliminates its two free state
 amplitudes within the fixed profile family, with independently checked
-free-fall and light-propagation effects.
+free-fall and light-propagation effects. A separate controlled frequency
+member supplies local gravitational-cooling examples and a mass-selected
+coherent core with a sourced initial-atlas embedding; relative phase
+with the inherited ambient field changes its geometric mass.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -5026,6 +5029,180 @@ keep those restrictions explicit. The advance is an operational test
 surviving the two unknown state amplitudes, while physical formation
 and an unrestricted primordial spectrum remain open.
 
+### 10.29. A profile selected by scalar self-gravity
+
+<!-- nsc-claim:scalar-core-profile-selection -->
+
+The polynomial used for P003 was a specified profile. A physical
+selection mechanism is now calculated: a real massive scalar can
+concentrate through its own gravity and shed radiation, leaving a
+coherent core. Gravitational cooling is established prior work of
+[Seidel and Suen](https://arxiv.org/abs/gr-qc/9309015). The stationary
+equations are also those studied by
+[Moroz, Penrose and Tod](https://doi.org/10.1088/0264-9381/15/9/019),
+with time-dependent examples in
+[Harrison, Moroz and Tod](https://arxiv.org/html/math-ph/0208046).
+
+The weak-field real-scalar reduction with positive vacuum curvature
+is supplied by [Fodor, Forgacs and Mezei](https://arxiv.org/html/1007.0388).
+Here its complex envelope represents one classical real field.
+It introduces neither a new charged species nor a quantum
+state-reduction law. We independently solve the profile and its
+finite local evolution, then construct a sourced atlas initial slice.
+
+First distinguish a coupling from a unit convention. At fixed mixing,
+fluxes and tension, the common field at the grandchild minimum gives
+
+$$
+\phi_0=-\frac{\sqrt{1-\epsilon}\,q_g}{\omega},\qquad
+U(\phi_0,q)=\frac{\epsilon q^2}{2}
+ +\frac{(1-\epsilon)(q-q_g)^2}{2}.
+$$
+
+Thus the initial stress, wall jets and shared geometry do not select
+omega. The later dynamics change with it. For weak amplitude zeta,
+the local core approximation requires small $\zeta^2$ and
+
+$$
+h=\frac{H_\Lambda}{\omega\zeta^2},\qquad
+H_\Lambda=\sqrt{\kappa\rho_v/3}.
+$$
+
+With zeta=.1 and the same parent vacuum 9/32, omega 20 gives h=1.53093,
+outside the small-h approximation. The explicitly different
+common-frequency member omega 2000 gives h=.0153093. It is chosen
+for this hierarchy, not fitted to data. P003 retains omega 20; the
+comparison does not rule out relativistic structures there.
+The wall radii remain 1 and 1.9, with common middle mass .12. All
+numbers use those same atlas coordinate units, with no selected SI ruler.
+
+In local coordinates $\rho=\omega\zeta r$ and $\tau=\omega\zeta^2t$,
+
+$$
+i\partial_\tau\psi=-\frac{1}{2}\Delta\psi
+ +(V-h^2\rho^2/2)\psi,\qquad \Delta V=\frac{1}{2}|\psi|^2.
+$$
+
+The h=0 nodeless core, with eigenvalue -1/2, satisfies
+
+$$
+S''+2S'/\rho+sS=0,\qquad
+s''+2s'/\rho+S^2=0,\qquad s(\infty)=-1.
+$$
+
+Regularity and decay give $S(0)=1.02149303621$ and radial mass norm
+$I=3.50532970334$. The 99%-mass radius is 5.67468871483 in rho.
+Its virial identity is checked independently. Scaling the shape
+fixes an isolated mass-radius relation,
+
+$$
+\mathfrak{M} R_f\omega^2=\frac{I\rho_f}{2},
+\qquad \mathfrak{M}=GM.
+$$
+
+The core mass and frequency remain inputs; its dimensionless shape
+is calculated. In the isolated problem, symmetric decreasing
+rearrangement lowers the energy at fixed norm; this is the setting
+of [Lieb's minimizing-solution theorem](https://doi.org/10.1002/sapm197757293).
+Norm-preserving dilation gives energy $b^2T+bW$ with a finite minimum
+at $b=-W/(2T)$. This explains the reference's spherical form and size
+without establishing nonspherical stability in the full atlas.
+Gaussian and super-Gaussian clouds with equal initial
+norm evolve to tau 600. Their late density profiles, averaged over
+$500\leq\tau\leq600$ and normalized by remaining mass, differ from the
+independent coherent shape by 3.77% and 4.11%, compared with initial
+discrepancies near 80%. Residual oscillations remain.
+
+![Gravitational cooling and selected core shape](../docs/figures/nsc-atlas-scalar-core.png)
+
+*Figure 19. Left: two distinct initial cloud shapes approach the
+independently calculated coherent profile after mass normalization.
+Right: scalar norm leaves the central region during relaxation.
+This is a finite local envelope calculation, not the full evolving
+parent and membrane history.*
+
+The six independent runs use six worker processes. Outgoing current
+at radius 20 checks loss from the core independently of the outer
+absorber. Fine-run energy-accounting errors stay below $3.4\times10^{-6}$;
+moving the outer boundary changes the late inner mass by about .165%.
+A free-field control recovers analytic dispersion. The
+[compact record](../results/summaries/nsc-atlas-scalar-core-v1.json)
+keeps numerical discrepancies distinct from the weak-field, ambient
+and relativistic approximations. The original cloud and its energy
+are supplied, so this does not generate a primordial seed from nothing.
+
+### 10.30. The coherent core and its inherited environment
+
+<!-- nsc-claim:scalar-core-atlas-admission -->
+
+The Gaussian late inner mass selects a coherent representative with
+$\zeta_{\rm core}=.0826621713254$. It is the nodeless representative
+of that mass, not the full radiating snapshot. Add its displacement
+f to the inherited parent field, and taper its very small tail
+smoothly to zero before the material wall. Retain zero scalar
+momentum and homogeneous parent slice expansion v=HR.
+
+The gravitational constraint must include the ambient scalar.
+Writing $m=M(R)+\kappa U_0R^3/6$, with $U_0=21/32$, gives
+
+$$
+\beta^2=1+H^2R^2-\frac{\kappa U_0R^2}{3}-\frac{2M(R)}{R},
+$$
+
+$$
+M'=\frac{\kappa R^2}{4}\beta^2f'^2
+ +\frac{\kappa R^2}{2}U'_0f
+ +\frac{\kappa R^2}{4}\omega^2f^2.
+$$
+
+The first and last terms are the gradient and quadratic core
+contributions. The middle term is coherent interference with the
+same inherited field. It cannot be discarded as if the core were
+an independently added fluid.
+
+M(0)=0 gives a regular pole. Outside the core M becomes constant;
+the unsquared Israel condition then fixes the outer-wall speed and
+H. Solving that condition with the mass equation rebuilds the large
+parent cap and common middle. Both wall conditions and the middle
+seams agree. The positive initial lapse realizes the temporal jets.
+Removing the core recovers the same-frequency reference and extrinsic curvature.
+
+| Coherent turning-point phase | Geometric mass offset | Outer-wall areal speed change |
+| --- | ---: | ---: |
+| Positive relative displacement | .0000957140113 | .000361840526 |
+| Opposite relative displacement | .0000494933577 | .000187115382 |
+
+Both have the same isolated leading mass .0000724395411. The exact
+potential difference explains the main change:
+
+$$
+U(\phi_0+f)-U(\phi_0-f)=2U'_0f.
+$$
+
+The cross contribution has magnitude .0000231104644. The gradient
+contribution also changes slightly through the metric. The positive-phase
+proper slice energy excess is .00241200566080; it is distinct from the
+geometric mass converted to energy units. Canonical absolute energy
+remains nonnegative even where an excess relative to the background
+is negative.
+
+Independent field quadrature and proper-distance integration check
+the mass. Sampled Hamilton residuals stay below $2\times10^{-8}$,
+with wall and middle residuals near floating precision. The
+[source derivation](../docs/nsc-atlas-scalar-core.md) and
+[computed admission](../results/summaries/nsc-atlas-scalar-core-v1.json)
+specify the complete initial construction.
+
+The changed wall speed compares jointly prepared initial slices;
+it is not a wall response propagated by the local cooling run. The
+homogeneous reference's future shielding theorem is not asserted
+for this new core geometry. A single formation history must also contain the
+outgoing radiation, ambient-field interaction and moving walls.
+This calculation supplies a profile-selection candidate and its
+sourced initial admission. It leaves cloud origin, coupling and
+relative-phase selection, nonlinear global evolution and observed
+abundance as further physical connections.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -5075,7 +5252,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 19. The isolated reference in joined causal charts. Horizons are
+*Figure 20. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -6081,7 +6258,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 20. Saved finite-window comparisons. A: the previous and current
+*Figure 21. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -6177,7 +6354,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 21. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 22. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -6962,7 +7139,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 22. Research dependencies, distinct from spacetime causal arrows.
+*Figure 23. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

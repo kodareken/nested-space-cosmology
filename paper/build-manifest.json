@@ -1,10 +1,10 @@
 {
-  "bytes": 8290736,
+  "bytes": 8525227,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "8de0d4cc339953f6a23082b71d1a7f1afda4b95fb4a1386f51c283f89212dc03",
+  "metadata_sha256": "ac9c915132a77cdfce8c1f7cb89b8116c6bd226c09c8f9cc1cbb0521a28074ea",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 111,
-  "pdf_sha256": "52eddaf68eadecbfa0ca4e6c4b6a9a5c88b32b578021726b00bb3ad43ec8b2f4",
+  "pages": 114,
+  "pdf_sha256": "04aa028a5d0f06f307d7b59e7772f80c9c2a007ce922c1d662f45f094bee0141",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -54,6 +54,10 @@
     {
       "path": "docs/figures/nsc-atlas-parent-transport.png",
       "sha256": "eb1cdc8c254ff39485da02d940eca20bef6883ac753d7b039a4a014613793e34"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-scalar-core.png",
+      "sha256": "b12ae26b6b036dc043ebb5336d91040bc46f7bc4da44d0a68e298ff765283c76"
     },
     {
       "path": "docs/figures/nsc-atlas-scalar-preparation.png",
@@ -584,6 +588,10 @@
       "sha256": "b1d29d8a2c78518889706adbb8ab3293edda596725949347d2830c187f9ffde9"
     },
     {
+      "path": "results/summaries/nsc-atlas-scalar-core-v1.json",
+      "sha256": "93946e687370ba27b420405df4f24e9fd416cf7bdb806447b0b0dd8e830ece71"
+    },
+    {
       "path": "results/summaries/nsc-atlas-scalar-departure-bound-v1.json",
       "sha256": "fb52782856689b88ce2d6bee893085352eda9c380372ec178d2aa670196ef7f5"
     },
@@ -661,6 +669,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "09743874e8f08a85bad7a02216cb657f4e53a88d6ffaf85e0a26d3c62d29c3e9",
-  "version": "working-2026-10-21.7"
+  "source_sha256": "ece07672a70c4275f33c2ffc2467c6e93bada47e30ea8768a3e4116af9850bda",
+  "version": "working-2026-10-22.1"
 }

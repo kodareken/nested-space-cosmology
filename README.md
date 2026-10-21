@@ -1,5 +1,13 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [self-gravitating scalar core](docs/nsc-atlas-scalar-core.md) now
+supplies a physical profile-selection candidate. Two distinct clouds shed
+radiation toward the independently solved nodeless shape in a controlled
+local envelope example. Its mass-selected coherent representative fits the
+atlas's initial constraints; relative phase with the inherited ambient
+field changes its geometric mass and the matching wall data. The example
+uses an explicitly different frequency member, not a reinterpretation of P003.
+
 The [three-clock prediction](docs/nsc-atlas-parent-clocks.md) now follows
 light from freely falling emitters through the evolving parent to a receiver
 at a fixed proper age. Two frequency measurements determine the remaining

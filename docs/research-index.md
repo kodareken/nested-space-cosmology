@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [self-gravitating scalar core](nsc-atlas-scalar-core.md) connects an
+independently solved radial profile, finite local cooling, the frequency
+hierarchy and an exact sourced initial-atlas admission. It retains the
+ambient scalar interference and both material walls. The local cooling and
+global initial slice are separate from a complete nonlinear formation history.
+
 The [parent clock relation](nsc-atlas-parent-clocks.md) turns the retained
 density/phase freedom into operational state inference and a third-signal
 test. It uses fixed proper source distances and receiver age, free-fall

@@ -1,5 +1,17 @@
 # Prior art and admission of new research
 
+## Scalar self-gravity and coherent admission, 22 October 2026
+
+The [core owner](nsc-atlas-scalar-core.md#choice-of-route-and-mathematical-attribution)
+reuses the real-field weak-gravity reduction, Schrodinger--Newton profile
+and gravitational-cooling literature. The connection sought is a profile
+selected by dynamics and an atlas admission that retains the inherited
+ambient field. One profile solve and independent outer interval, six
+parallel local controls, and two phase-dependent constraint embeddings fit
+a 240 CPU-second producer budget. Small-h vacuum-limit cooling does not
+stand in for full evolution of the excited shared parent. The original
+frequency 20 result is not silently replaced by the frequency 2000 example.
+
 ## Operational parent clocks, 21 October 2026
 
 The [clock owner](nsc-atlas-parent-clocks.md#why-the-next-step-is-an-observer-relation)

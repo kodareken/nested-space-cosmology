@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0328c38c82745cacee5b8bcae360da56328b09a3",
+  "current_receipt_commit_parent": "13dd344f2448352117d7bdb6b410024565eb210d",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 22090,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 22606,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "cc89811eb54908aeecae4c82c46d831b30c8a0d17c40a7a807c347b604bf0062"
+      "sha256": "7a7cc49c9133d4cce8e28ad2e813980b6b4137bde2a11621f567c4100efce113"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 279712,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 280218,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "46c1411d711e6a2f4153f2878742c8c39291e1f26c7a161d5651c4d1ab3a8200"
+      "sha256": "452ecb4d6cd63387b77b3a7b50387d654259ba4b430134852e4705cb90b946f3"
     },
     {
-      "bytes": 120970,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 121829,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "60ba4e3cc910d482179fbd8cf37aca5d718bb12db392afee8242f7ce78bc819f"
+      "sha256": "83e667a318c8abdd99be6b3f6133a8c6d0d9252025bad89db44c0136366ab4e9"
     },
     {
       "bytes": 9543,
@@ -10312,9 +10312,9 @@
       "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
-      "bytes": 109252,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 109769,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "import_bytes": 102088,
       "import_sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a",
       "migration_disposition": "active_owner",
@@ -10322,15 +10322,15 @@
       "original_path": "lab/docs/claim-ledger.md",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
-      "sha256": "99e4b1f9ea14273d73995762dcac4346f6304768777ae639e4463d284c139ee6"
+      "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 451958,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 452964,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "062295d1a01fe070d6952027d803149f6040c518db8e762c712d33c08cb196d4"
+      "sha256": "43ce454bae0867f434ba2214755f701636ad07dee9fc29cbf74843e3af74efd8"
     },
     {
       "bytes": 173938,
@@ -10419,6 +10419,14 @@
       "path": "docs/figures/nsc-atlas-parent-transport.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "eb1cdc8c254ff39485da02d940eca20bef6883ac753d7b039a4a014613793e34"
+    },
+    {
+      "bytes": 143929,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
+      "path": "docs/figures/nsc-atlas-scalar-core.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b12ae26b6b036dc043ebb5336d91040bc46f7bc4da44d0a68e298ff765283c76"
     },
     {
       "bytes": 136715,
@@ -10693,6 +10701,14 @@
       "sha256": "91b43432388a01470a6958102ec5b79ad7041d8c803b561a5d407f0bc12bf67a"
     },
     {
+      "bytes": 14682,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
+      "path": "docs/nsc-atlas-scalar-core.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "c3336b9b0a96e8a2461a51977854769037737ecb22e1da64b5db60fa536428d3"
+    },
+    {
       "bytes": 13072,
       "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
       "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
@@ -10744,15 +10760,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 96990,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 99054,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "2c3dfe7c9dc482af32dd6552ca32ff1072384546c898e5385e586c3e10263584"
+      "sha256": "5a94b4d18b61e0cb62279af774be56f749b07188ef680143d8d223f0e3efa201"
     },
     {
       "bytes": 30876,
@@ -11704,12 +11720,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 22404,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 22759,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "c03d85aad9e1ce974cafc36c0b1ff82b9fac17cfed89e85af4f8874051671d49"
+      "sha256": "210e34d2fbf5949fa4d149a65e2748b9603a42311638f37e894cd06143ae42de"
     },
     {
       "bytes": 12284,
@@ -11720,12 +11736,12 @@
       "sha256": "7398cba18661886990f700660d6d11564db27ddd912bd695ecbbab3a96bf177a"
     },
     {
-      "bytes": 591253,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 591987,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4ae911fc363c2b4830615f41936df4b4ee6b1ab77801402a6e58ba7a78107bc8"
+      "sha256": "d3536aabcc0c85bfde84e8c85aa2fa04ca84ad0f05c9d9e3ad3a76981940cc16"
     },
     {
       "bytes": 6705,
@@ -11734,20 +11750,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 219991,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 220481,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "646c0188848a2c3e002d1e7bc7b5c5aa7b522b18c862aa04f1489cecc85d752f"
+      "sha256": "be14723ac6bdbb45f71d69d46496785b8f2ac41e1de9945973b9f39d435d073f"
     },
     {
-      "bytes": 38982,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 39354,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "569c7229ed0d78175775d145b4d3db16f7a142bcfc477251055f03635b02d16d"
+      "sha256": "c6cde9bba2c8fa7c4e930724186b26e9e817ae546d556571186515e3624b41f0"
     },
     {
       "bytes": 18356,
@@ -11816,28 +11832,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 28488,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 28801,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "cf4161d7412db8a1f3014f596053fea552c9b3440e85a9ab3bc37dee8669f4bf"
+      "sha256": "607f21b859e3d9ae69952d896fc79f4b0db7e04ebf948bd91a85b00196a077c8"
     },
     {
       "bytes": 3206,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4fefc81353a4bfcc5be9077987e30f755b1f905889cb48b57ec5dfa8ff24528d"
+      "sha256": "e2598b38dbb9756ced9badf604e6f1a58671338588af0348572fb23db5b5d50c"
     },
     {
-      "bytes": 37065,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 38557,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1be9c1c4c341ca0de0e96d07a5f2aacd6cafccbae879af92c6b4d76a4e26bc4e"
+      "sha256": "94beafe2bd656ed0e3898c1f1be90c4f8e373314e703fa2164c409e4d045cdcc"
     },
     {
       "bytes": 226492,
@@ -11849,27 +11865,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "8de0d4cc339953f6a23082b71d1a7f1afda4b95fb4a1386f51c283f89212dc03"
+      "sha256": "ac9c915132a77cdfce8c1f7cb89b8116c6bd226c09c8f9cc1cbb0521a28074ea"
     },
     {
-      "bytes": 335768,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 343600,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "09743874e8f08a85bad7a02216cb657f4e53a88d6ffaf85e0a26d3c62d29c3e9"
+      "sha256": "ece07672a70c4275f33c2ffc2467c6e93bada47e30ea8768a3e4116af9850bda"
     },
     {
-      "bytes": 8290736,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 8525227,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "52eddaf68eadecbfa0ca4e6c4b6a9a5c88b32b578021726b00bb3ad43ec8b2f4"
+      "sha256": "04aa028a5d0f06f307d7b59e7772f80c9c2a007ce922c1d662f45f094bee0141"
     },
     {
       "bytes": 3283,
@@ -30694,6 +30710,14 @@
       "sha256": "b1d29d8a2c78518889706adbb8ab3293edda596725949347d2830c187f9ffde9"
     },
     {
+      "bytes": 20605,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
+      "path": "results/summaries/nsc-atlas-scalar-core-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "93946e687370ba27b420405df4f24e9fd416cf7bdb806447b0b0dd8e830ece71"
+    },
+    {
       "bytes": 11630,
       "change": "Record the certified scalar amplitude comparison and independent exact audit.",
       "changed_from_commit": "a0fce1a9a77b0a5c70463dd656ba2288a29161d2",
@@ -31189,6 +31213,14 @@
       "path": "scripts/check_nsc_atlas_reference_initial_bound.py",
       "retention_reason": "Exact initial reference, original-source compatibility and residual reconstruction.",
       "sha256": "c1917774f80e383813644540683e5b6273d0c0d6987ae576fb82f81b30aef241"
+    },
+    {
+      "bytes": 11355,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
+      "path": "scripts/check_nsc_atlas_scalar_core.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4ab8f977219189dc6f9fa5cd2e4bb1f47e28be1c314278f1e0c2585f0439200a"
     },
     {
       "bytes": 4898,
@@ -33992,6 +34024,14 @@
       "sha256": "0eba7eb608d49fe4b9cbf7aaade5f6f1408e82da857edf024cbc205faa07f0f7"
     },
     {
+      "bytes": 1851,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
+      "path": "scripts/plot_nsc_atlas_scalar_core.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "74e9c9dd6f80c3c485856a461ca7c46be67d9104a9f2b87eed2db8a029024bb9"
+    },
+    {
       "bytes": 1821,
       "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
       "changed_from_commit": "86ac8e3b2fdeb20648acca7ef0a973d1550a6dc4",
@@ -35150,6 +35190,14 @@
       "path": "src/recursive_horizons/nsc_atlas_reference_initial_bound.py",
       "retention_reason": "Exact initial reference, original-source compatibility and residual reconstruction.",
       "sha256": "3389cd95870bba13adfb9310bc4ec298a52c73ff3ae655b43ba065437d609fa1"
+    },
+    {
+      "bytes": 18454,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
+      "path": "src/recursive_horizons/nsc_atlas_scalar_core.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8"
     },
     {
       "bytes": 9149,
@@ -39540,6 +39588,14 @@
       "path": "tests/test_nsc_atlas_retained_onset.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "6a0e36bd6cd942834d0a222041d8d3c8db4d45c4a5e49264980cf1f048d4be3b"
+    },
+    {
+      "bytes": 4269,
+      "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
+      "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
+      "path": "tests/test_nsc_atlas_scalar_core.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "dbb6e648c80641417f2a0d78d2485c41acf60c9a709ad11b51c3d35d72f45e6c"
     },
     {
       "bytes": 3447,

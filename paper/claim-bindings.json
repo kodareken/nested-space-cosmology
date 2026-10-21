@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v2",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-21",
+  "recorded_on": "2026-10-22",
   "purpose": "Bind the living main manuscript's claims to directly linked evidence. Preserved historical findings remain indexed without promoting them to current cosmological results.",
   "historical_claim_bindings": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
   "how_records_are_found": "The checker reads links following each unique nsc-claim marker from the manuscript itself.",
@@ -403,6 +403,16 @@
       "section": "10.28",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-clocks.md"
+    },
+    "scalar-core-profile-selection": {
+      "section": "10.29",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-scalar-core.md"
+    },
+    "scalar-core-atlas-admission": {
+      "section": "10.30",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-scalar-core.md"
     }
   },
   "findings": [
@@ -773,6 +783,22 @@
       "note": "docs/nsc-atlas-parent-clocks.md",
       "record": "results/summaries/nsc-atlas-parent-clocks-v1.json",
       "paper_section": "10.28"
+    },
+    {
+      "id": "scalar-core-profile-selection",
+      "status": "measured",
+      "summary": "An exact frequency-family identity preserves initial atlas geometry while changing scalar clocks. An independently solved real-scalar envelope profile and two finite cooling examples select a near-coherent radial core in an explicit local de Sitter approximation. The coupling and initial clouds remain inputs; no universal attractor or full parent formation is claimed.",
+      "note": "docs/nsc-atlas-scalar-core.md",
+      "record": "results/summaries/nsc-atlas-scalar-core-v1.json",
+      "paper_section": "10.29"
+    },
+    {
+      "id": "scalar-core-atlas-admission",
+      "status": "measured",
+      "summary": "A coherent representative fixed by the cooled inner mass admits a sourced compact initial atlas with both wall conditions. Relative phase reverses the inherited scalar cross term and changes geometric mass despite equal isolated quadratic core energy. These are initial constraints, not one complete nonlinear formation history.",
+      "note": "docs/nsc-atlas-scalar-core.md",
+      "record": "results/summaries/nsc-atlas-scalar-core-v1.json",
+      "paper_section": "10.30"
     }
   ]
 }

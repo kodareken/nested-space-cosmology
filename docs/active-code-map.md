@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [scalar core owner](nsc-atlas-scalar-core.md) uses
+nsc_atlas_scalar_core.py: solve_core constructs the nodeless eigenprofile;
+evolve_core advances a real-scalar envelope with explicit outflow accounting;
+CoreAtlasEmbedding solves the source mass and outer-wall speed together and
+rebuilds the middle/parent slice. The producer runs six independent controls
+in separate processes and stores compact comparisons plus field hashes.
+The plot receives transient profiles, not a committed waveform archive.
+
 The [parent clock owner](nsc-atlas-parent-clocks.md) uses
 nsc_atlas_parent_clocks.py: ParentClocks evaluates the existing packet and
 its first derivatives, evolves free-fall emitter responses, solves the

@@ -1,0 +1,484 @@
+{
+  "schema": "nsc-atlas-scalar-core-v1",
+  "result": "A calculated self-gravitating real-scalar envelope profile, finite local cooling controls and an exactly sourced compact-atlas initial-constraint embedding.",
+  "frequency_family": {
+    "exact_identity": "U(phi0,q)=epsilon*q^2/2+(1-epsilon)*(q-q_g)^2/2 with phi0=-sqrt(1-epsilon)*q_g/omega",
+    "maximum_initial_energy_or_wall_expansion_gap": 2.7755575615628914e-16,
+    "interpretation": "Initial stress and geometry do not select the scalar frequency. The stated frequency member is part of the model input."
+  },
+  "stationary_profile": {
+    "central_amplitude": 1.0214930362094732,
+    "radial_mass_norm": 3.505329703339998,
+    "integrated_mass": 3.5053297024525345,
+    "mass_integral_gap": -8.874634360722666e-10,
+    "kinetic": 0.5842216170464822,
+    "gravitational_energy": -1.1684432341227338,
+    "virial_residual": -2.976929813769402e-11,
+    "eigenvalue_identity": 2.7281954473323822e-11,
+    "mass_fraction_radii": {
+      "0.5": 2.2395047952136995,
+      "0.95": 4.471388894081041,
+      "0.99": 5.674688714825667
+    },
+    "isolated_mass_radius_frequency_squared": {
+      "0.5": 3.92510133971747,
+      "0.95": 7.836846152803429,
+      "0.99": 9.945827454643345
+    },
+    "outer_radius": 24.73559169727937,
+    "maximum_collocation_residual": 9.999472437960798e-09
+  },
+  "stationary_independent_domain": {
+    "central_difference": 8.12430123176e-11,
+    "mass_difference": -5.102327449435506e-10
+  },
+  "physical_hierarchy": {
+    "frequency": 2000.0,
+    "weak_amplitude": 0.1,
+    "vacuum_density": 0.28125,
+    "inherited_vacuum_H": 0.30618621784789724,
+    "weak_field_order": 0.010000000000000002,
+    "vacuum_binding_ratio": 0.015309310892394862,
+    "original_frequency_binding_ratio": 1.530931089239486,
+    "formed_coherent_weak_amplitude": 0.0826621713254157,
+    "formed_coherent_binding_ratio": 0.022404849177215844,
+    "physical_radius50": 0.011197523976068498,
+    "physical_radius99": 0.028373443574128333,
+    "physical_envelope_time": 0.05,
+    "initial_core_amplitude": 0.014446093056771084,
+    "ambient_parent_displacement": 0.00043301270189221924,
+    "core_density_leading": 417.3792092097793,
+    "local_formation_duration": 30.0,
+    "coupling_status": "Frequency2000 is an explicitly different shared coupling, chosen for an approximation hierarchy, not inferred or fitted. Original frequency20 and P003 are not reinterpreted."
+  },
+  "local_envelope_equations": {
+    "field": "chi=sqrt(2/kappa)*zeta^2*Re[psi(rho,tau)*exp(-i*omega*t)]",
+    "coordinates": "rho=omega*zeta*r; tau=omega*zeta^2*t",
+    "evolution": "i psi_tau=-laplacian(psi)/2+V psi-h^2 rho^2 psi/2; laplacian(V)=|psi|^2/2",
+    "scope": "Leading weak-field slow-envelope equations in a local de Sitter vacuum limit; the complex envelope represents one real scalar, not an added charged field. No primordial seed or full evolving-parent formation is asserted."
+  },
+  "cooling_runs": {
+    "gaussian_coarse": {
+      "config": {
+        "shape": "gaussian",
+        "points": 1023,
+        "outer": 64.0,
+        "step": 0.04,
+        "end": 600.0,
+        "h": 0.015309310892394859,
+        "width": 6.0,
+        "gravity": true,
+        "absorber": true
+      },
+      "initial_mass": 3.505329703339998,
+      "final_mass": 2.9015641957166243,
+      "removed_mass": 0.6037655076046908,
+      "initial_energy": -0.35765298741311397,
+      "final_energy": -0.3308071300778057,
+      "removed_energy": -0.026846848120328615,
+      "mass_balance": -1.8682833058392134e-11,
+      "energy_balance": -9.907850203605406e-07,
+      "maximum_sampled_energy_balance": 1.3310334672667068e-05,
+      "outward_flux_at20": 0.6062231810329906,
+      "inside20_mass_change": -0.6062074797200485,
+      "independent_flux_balance": 1.5701312942040246e-05,
+      "averaging_interval": [
+        500.0,
+        600.0
+      ],
+      "mean_core_mass_inside10": 2.897001581338218,
+      "mass_selected_scale": 0.8266163209809854,
+      "initial_profile_gap": 0.8159858604569272,
+      "late_profile_gap": 0.037628386345581154,
+      "final_central_amplitude": 0.6010653338722715,
+      "mean_central_density": 0.4585281107990317,
+      "cpu_seconds": 5.5625,
+      "wall_seconds": 5.567446899993229,
+      "final_field_sha256": "6501d15bff7aa88d4b8ee942c90ed2a3ee7b13c6c3d1feacd6b04980abcb1208"
+    },
+    "gaussian_fine": {
+      "config": {
+        "shape": "gaussian",
+        "points": 2047,
+        "outer": 64.0,
+        "step": 0.02,
+        "end": 600.0,
+        "h": 0.015309310892394859,
+        "width": 6.0,
+        "gravity": true,
+        "absorber": true
+      },
+      "initial_mass": 3.505329703339998,
+      "final_mass": 2.90160981989069,
+      "removed_mass": 0.6037198834510034,
+      "initial_energy": -0.35765021707387634,
+      "final_energy": -0.33079493825357886,
+      "removed_energy": -0.02685552569440325,
+      "mass_balance": 1.695532603207539e-12,
+      "energy_balance": -2.4687410576929025e-07,
+      "maximum_sampled_energy_balance": 3.3235953564858534e-06,
+      "outward_flux_at20": 0.6061707169456735,
+      "inside20_mass_change": -0.6061655493296216,
+      "independent_flux_balance": 5.167616051848789e-06,
+      "averaging_interval": [
+        500.0,
+        600.0
+      ],
+      "mean_core_mass_inside10": 2.8970087942297775,
+      "mass_selected_scale": 0.8266217132541569,
+      "initial_profile_gap": 0.8146728955278775,
+      "late_profile_gap": 0.03766955606369854,
+      "final_central_amplitude": 0.6008044344123266,
+      "mean_central_density": 0.4584229965223609,
+      "cpu_seconds": 17.359375,
+      "wall_seconds": 17.56695249999757,
+      "final_field_sha256": "8c1b6cc2e72a0c7df37c26912d261a16b2dee72d39b265876595d2d47e0b392e"
+    },
+    "gaussian_outer": {
+      "config": {
+        "shape": "gaussian",
+        "points": 3071,
+        "outer": 96,
+        "step": 0.02,
+        "end": 600.0,
+        "h": 0.015309310892394859,
+        "width": 6.0,
+        "gravity": true,
+        "absorber": true
+      },
+      "initial_mass": 3.505329703339998,
+      "final_mass": 2.9154904844380196,
+      "removed_mass": 0.5898392189557855,
+      "initial_energy": -0.35765021707387634,
+      "final_energy": -0.331080535359676,
+      "removed_energy": -0.02656997196861799,
+      "mass_balance": 5.3807180933063137e-11,
+      "energy_balance": -2.902544176675015e-07,
+      "maximum_sampled_energy_balance": 3.323596154736208e-06,
+      "outward_flux_at20": 0.6043398192835324,
+      "inside20_mass_change": -0.6043409610997172,
+      "independent_flux_balance": -1.1418161848242292e-06,
+      "averaging_interval": [
+        500.0,
+        600.0
+      ],
+      "mean_core_mass_inside10": 2.892227872434419,
+      "mass_selected_scale": 0.8252611074645011,
+      "initial_profile_gap": 0.8146728955278775,
+      "late_profile_gap": 0.039841858236158864,
+      "final_central_amplitude": 0.597976594534726,
+      "mean_central_density": 0.4554231426791206,
+      "cpu_seconds": 23.171875,
+      "wall_seconds": 23.29107509998721,
+      "final_field_sha256": "8b54155ad1a6a7da56afe04f2adbab05ed07b2a7999040361ac807e7bf506a4b"
+    },
+    "supergaussian_fine": {
+      "config": {
+        "shape": "supergaussian",
+        "points": 2047,
+        "outer": 64.0,
+        "step": 0.02,
+        "end": 600.0,
+        "h": 0.015309310892394859,
+        "width": 6.0,
+        "gravity": true,
+        "absorber": true
+      },
+      "initial_mass": 3.5053297033399975,
+      "final_mass": 3.0161261133669477,
+      "removed_mass": 0.4892035899747422,
+      "initial_energy": -0.39188252917380445,
+      "final_energy": -0.37021776977646814,
+      "removed_energy": -0.021665313397013553,
+      "mass_balance": 1.6924239787385886e-12,
+      "energy_balance": -5.539996772441214e-07,
+      "maximum_sampled_energy_balance": 2.460326578523908e-06,
+      "outward_flux_at20": 0.49328579066569533,
+      "inside20_mass_change": -0.4932798250508461,
+      "independent_flux_balance": 5.965614849223755e-06,
+      "averaging_interval": [
+        500.0,
+        600.0
+      ],
+      "mean_core_mass_inside10": 3.0106059525510505,
+      "mass_selected_scale": 0.8589666085969567,
+      "initial_profile_gap": 0.7947399981538198,
+      "late_profile_gap": 0.04112949621545499,
+      "final_central_amplitude": 0.7626588936880442,
+      "mean_central_density": 0.5330942047160552,
+      "cpu_seconds": 17.625,
+      "wall_seconds": 17.75725369999418,
+      "final_field_sha256": "6131dc1a2e9de766887bdc834167e34a1a540dc939f022f39fc16d6f47b6e17f"
+    },
+    "stationary_control": {
+      "config": {
+        "shape": "stationary",
+        "points": 1023,
+        "outer": 64.0,
+        "step": 0.04,
+        "end": 40,
+        "h": 0.0,
+        "width": 6.0,
+        "gravity": true,
+        "absorber": false
+      },
+      "initial_mass": 3.5053297033399984,
+      "final_mass": 3.5053297033386195,
+      "removed_mass": 0.0,
+      "initial_energy": -0.5843132951236661,
+      "final_energy": -0.5843133050464026,
+      "removed_energy": 0.0,
+      "mass_balance": -1.3788969965844444e-12,
+      "energy_balance": -9.922736410317157e-09,
+      "maximum_sampled_energy_balance": 1.1722339654518521e-08,
+      "outward_flux_at20": 3.6464687122145486e-09,
+      "inside20_mass_change": -3.6478522424943094e-09,
+      "independent_flux_balance": -1.3835302797608146e-12,
+      "averaging_interval": [
+        0,
+        40
+      ],
+      "mean_core_mass_inside10": 3.5052895023008928,
+      "mass_selected_scale": 1.0000000259411341,
+      "initial_profile_gap": 2.823208718482161e-10,
+      "late_profile_gap": 0.00019701247756767222,
+      "final_central_amplitude": 1.0219559564585452,
+      "mean_central_density": 1.0440606549509799,
+      "cpu_seconds": 0.265625,
+      "wall_seconds": 0.26976250000006985,
+      "final_field_sha256": "d583189081187187a8b92240f9dfaf3f23fc39535518880ed12a185d6c79f8ff"
+    },
+    "dispersive_control": {
+      "config": {
+        "shape": "gaussian",
+        "points": 1023,
+        "outer": 64.0,
+        "step": 0.04,
+        "end": 60,
+        "h": 0.0,
+        "width": 6.0,
+        "gravity": false,
+        "absorber": false
+      },
+      "initial_mass": 3.505329703339998,
+      "final_mass": 3.5053297033378126,
+      "removed_mass": 0.0,
+      "initial_energy": 0.07302770215291661,
+      "final_energy": 0.07302770215287133,
+      "removed_energy": 0.0,
+      "mass_balance": -2.185363001672158e-12,
+      "energy_balance": -4.528322161689857e-14,
+      "maximum_sampled_energy_balance": 4.528322161689857e-14,
+      "outward_flux_at20": 0.41158814517341363,
+      "inside20_mass_change": -0.4115946369102992,
+      "independent_flux_balance": -6.491736885549937e-06,
+      "averaging_interval": [
+        0,
+        60
+      ],
+      "mean_core_mass_inside10": 2.2164764331353237,
+      "mass_selected_scale": 0.6346637372383042,
+      "initial_profile_gap": 0.8159858604569272,
+      "late_profile_gap": 0.642506237790455,
+      "final_central_amplitude": 0.07062407659943419,
+      "mean_central_density": 0.0188742848274388,
+      "cpu_seconds": 0.3125,
+      "wall_seconds": 0.3106864999863319,
+      "analytic_free_field_error_inside20": 2.767645357277557e-14,
+      "final_field_sha256": "1f2970454e75d9a991f1bb192af31915dc71df1ea1d07786008aef2cb8e6c9a3"
+    }
+  },
+  "finite_comparisons": {
+    "coarse_to_fine": {
+      "final_mass": -4.5624174065839185e-05,
+      "mean_core_mass_inside10": -7.2128915595826015e-06,
+      "mass_selected_scale": -5.392273171533901e-06,
+      "late_profile_gap": -4.116971811738562e-05,
+      "outward_flux_at20": 5.2464087317072305e-05
+    },
+    "outer_domain": {
+      "final_mass": 0.013880664547329502,
+      "mean_core_mass_inside10": -0.004780921795358495,
+      "mass_selected_scale": -0.0013606057896558,
+      "late_profile_gap": 0.0021723021724603248,
+      "outward_flux_at20": -0.0018308976621410622
+    }
+  },
+  "atlas_embedding": {
+    "frequency": 2000.0,
+    "weak_amplitude": 0.0826621713254157,
+    "coherent_phase_sign": 1,
+    "core_cutoff_radius": 0.1209743204135427,
+    "geometric_core_mass": 9.57140112889161e-05,
+    "leading_isolated_mass": 7.243954112238987e-05,
+    "mass_difference_from_isolated_estimate": 2.327447016652623e-05,
+    "geometric_mass_in_energy_units": 0.002405555477686955,
+    "proper_slice_energy_excess": 0.002412005660799397,
+    "geometric_mass_parts": {
+      "gradient": 1.64005765155314e-07,
+      "inherited_cross_term": 2.3110464432718887e-05,
+      "quadratic": 7.243954109328227e-05
+    },
+    "independent_field_mass_gap": 2.2403682641697342e-15,
+    "outer_wall": {
+      "radius": 1.9,
+      "velocity": 0.8414708265988633,
+      "acceleration": 1.4014616556600292,
+      "f_inside": 0.6104550438596492,
+      "f_outside": 0.21021174840916967,
+      "beta_inside": 1.1482718301328407,
+      "beta_outside": 0.9582718301328408,
+      "K_inside": 2.3374999999999995,
+      "K_outside": 2.0374999999999996,
+      "vacuum_pressure_drop": 0.4375,
+      "angular_residual": -5.551115123125783e-17,
+      "temporal_residual": -8.326672684688674e-17,
+      "force_residual": -5.551115123125783e-17,
+      "energy_residual": 6.661338147750939e-16,
+      "expansion": 0.4428793824204544
+    },
+    "outer_wall_speed_change": 0.00036184052575050085,
+    "parent_curvature_parameter": 0.022607852626876923,
+    "parent_maximum_radius": 6.650649998053776,
+    "parent_pole_to_wall_length": 18.967734430009934,
+    "core_proper_radius": 0.1211854925754208,
+    "minimum_core_beta_squared": 0.9931170289935991,
+    "maximum_sampled_Hamilton_residual": 1.5022806110209785e-08,
+    "independent_radius_gap": -1.069727639801954e-12,
+    "independent_mass_gap": 4.280593593345219e-12,
+    "middle_constraint_residual": 8.881784197001252e-16,
+    "middle_seams": {
+      "inner_beta": 0.0,
+      "outer_beta": 0.0,
+      "inner_expansion": 0.0,
+      "outer_expansion": 5.551115123125783e-17
+    },
+    "middle_proper_length": 0.6574255101079343,
+    "total_pole_to_pole_length": 20.471703436899688,
+    "initial_lapse": {
+      "collar_width": 0.1,
+      "outer_one_sided_log_derivatives": [
+        1.1287928103864828,
+        1.028792810386483
+      ],
+      "global_bounds": [
+        0.9564937501228918,
+        1.0454851376410128
+      ],
+      "construction": "Same positive compact log-lapse collars as the shared-slice owner, with the updated outer A jets; unit lapse at the core and both poles."
+    },
+    "fixed_middle_mass": 0.12,
+    "inner_wall_unchanged": true,
+    "scalar_value_and_first_derivative_at_core_cutoff": [
+      0.0,
+      -0.0
+    ],
+    "scope": "Exact spherical initial-constraint equations with a supplied coherent core profile from the envelope eigenproblem. This is not its full nonlinear formation history or a retroactive preparation of the P003 packet.",
+    "representative_from_run": "gaussian_fine",
+    "representative_rule": "Nodeless coherent representative with scale fixed by the late time-averaged mass inside envelope radius10; not the full oscillating/radiating snapshot."
+  },
+  "opposite_phase_embedding": {
+    "frequency": 2000.0,
+    "weak_amplitude": 0.0826621713254157,
+    "coherent_phase_sign": -1,
+    "core_cutoff_radius": 0.1209743204135427,
+    "geometric_core_mass": 4.949335772679871e-05,
+    "leading_isolated_mass": 7.243954112238987e-05,
+    "mass_difference_from_isolated_estimate": -2.294618339559116e-05,
+    "geometric_mass_in_energy_units": 0.0012439037522880196,
+    "proper_slice_energy_excess": 0.0012463471357615624,
+    "geometric_mass_parts": {
+      "gradient": 1.642810650629805e-07,
+      "inherited_cross_term": -2.3110464432718887e-05,
+      "quadratic": 7.243954109328227e-05
+    },
+    "independent_field_mass_gap": -1.172347809108576e-15,
+    "outer_wall": {
+      "radius": 1.9,
+      "velocity": 0.8412961014555586,
+      "acceleration": 1.4014718702459201,
+      "f_inside": 0.6104550438596492,
+      "f_outside": 0.21026040172870875,
+      "beta_inside": 1.1481437950814222,
+      "beta_outside": 0.9581437950814221,
+      "K_inside": 2.3374999999999995,
+      "K_outside": 2.0374999999999996,
+      "vacuum_pressure_drop": 0.4375,
+      "angular_residual": 5.551115123125783e-17,
+      "temporal_residual": -8.326672684688674e-17,
+      "force_residual": -5.551115123125783e-17,
+      "energy_residual": 4.440892098500626e-16,
+      "expansion": 0.44278742181871505
+    },
+    "outer_wall_speed_change": 0.0001871153824457572,
+    "parent_curvature_parameter": 0.022689299079135306,
+    "parent_maximum_radius": 6.6387485918516616,
+    "parent_pole_to_wall_length": 18.92980521528291,
+    "core_proper_radius": 0.1211034092055719,
+    "minimum_core_beta_squared": 0.995009480033137,
+    "maximum_sampled_Hamilton_residual": 1.9353365132701583e-08,
+    "independent_radius_gap": -1.0430545316353346e-13,
+    "independent_mass_gap": 6.406350059814936e-13,
+    "middle_constraint_residual": 1.3322676295501878e-15,
+    "middle_seams": {
+      "inner_beta": 0.0,
+      "outer_beta": 0.0,
+      "inner_expansion": 0.0,
+      "outer_expansion": 5.551115123125783e-17
+    },
+    "middle_proper_length": 0.657459126085059,
+    "total_pole_to_pole_length": 20.43380783814979,
+    "initial_lapse": {
+      "collar_width": 0.1,
+      "outer_one_sided_log_derivatives": [
+        1.128927584124818,
+        1.0289275841248184
+      ],
+      "global_bounds": [
+        0.9564937501228918,
+        1.0454851376410128
+      ],
+      "construction": "Same positive compact log-lapse collars as the shared-slice owner, with the updated outer A jets; unit lapse at the core and both poles."
+    },
+    "fixed_middle_mass": 0.12,
+    "inner_wall_unchanged": true,
+    "scalar_value_and_first_derivative_at_core_cutoff": [
+      -0.0,
+      0.0
+    ],
+    "scope": "Exact spherical initial-constraint equations with a supplied coherent core profile from the envelope eigenproblem. This is not its full nonlinear formation history or a retroactive preparation of the P003 packet."
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "frequency_independent_initial_energy": "0",
+      "initial_energy_completed_square": "0",
+      "spherical_Hamilton_mass_identity": "0",
+      "momentum_constraint": "0",
+      "geometric_mass_normalization": "0",
+      "virial_scaling": "0",
+      "real_potential_norm_flux": "0",
+      "inherited_phase_interference": "0"
+    },
+    "zero_core_parent_length_gap": -5.39159827894764e-11,
+    "zero_core_outer_wall_speed_change": 0.0,
+    "independent_profile_tolerance": 2e-07,
+    "initial_constraint_tolerance": 1e-07,
+    "mass_balance_tolerance": 2e-09,
+    "note": "Envelope discretization checks and physical residual breathing are distinct from relativistic and embedding-history errors."
+  },
+  "limits": "Two initial cloud shapes and their mass/phase are supplied. Finite cooling demonstrates radial profile selection for those examples, not a global attractor theorem or an origin of primordial structure. The isolated vacuum-limit cooling evolution and the exact sourced initial atlas are separate constructions; their full dynamical matching, ambient-field interaction, membrane evolution, nonspherical stability and observational identification remain open. No quantum reduction, unique particle mass or generated cosmic Lambda is claimed.",
+  "next": "Develop the interacting core and ambient inherited field on the shared evolving geometry, using the computed cross-term and conserved flux as compatibility data; retain the supplied cloud origin and coupling selection as explicit questions.",
+  "process_cpu_seconds_including_workers": 66.40625,
+  "wall_seconds": 27.011436999993748,
+  "worker_count": 6,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_scalar_core.py": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "scripts/check_nsc_atlas_scalar_core.py": "4ab8f977219189dc6f9fa5cd2e4bb1f47e28be1c314278f1e0c2585f0439200a",
+    "scripts/plot_nsc_atlas_scalar_core.py": "74e9c9dd6f80c3c485856a461ca7c46be67d9104a9f2b87eed2db8a029024bb9",
+    "tests/test_nsc_atlas_scalar_core.py": "dbb6e648c80641417f2a0d78d2485c41acf60c9a709ad11b51c3d35d72f45e6c"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_scalar_core.py"
+}

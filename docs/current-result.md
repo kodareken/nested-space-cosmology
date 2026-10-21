@@ -1,5 +1,21 @@
 # What the calculations show
 
+The [scalar core connection](nsc-atlas-scalar-core.md) calculates a
+self-gravitating nodeless profile and finite local gravitational-cooling
+examples. After mass normalization, two distinct cloud shapes approach it
+within 3.77% and 4.11% in the late time-averaged comparison. Norm, energy
+and independent outgoing-flux checks retain their finite envelope scope.
+
+The initial atlas has an exact frequency family: omega 20 and2000 give the
+same initial stress and geometry but different field clocks. The local
+weak-field example explicitly uses omega 2000; P003's omega 20 is unchanged.
+A coherent representative selected by the cooled inner mass admits an
+exactly sourced initial atlas. Its geometric mass is .0000957140113 in
+one relative phase and .0000494933577 in the opposite phase, despite equal
+isolated quadratic core energy. The ambient scalar cross term causes the
+main difference. A full formation history in the excited parent, including
+its outgoing radiation and moving walls, remains open.
+
 The [operational clock calculation](nsc-atlas-parent-clocks.md) connects
 the inherited scalar perturbation to freely falling source/receiver signals.
 It derives the initial-distance and proper-age shifts, source motion and

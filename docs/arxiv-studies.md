@@ -1,5 +1,20 @@
 # Cited arXiv studies
 
+## Self-gravitating scalar profiles and cooling
+
+[Seidel and Suen, gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015)
+study gravitational cooling of scalar configurations. The stationary
+Schrodinger--Newton equations were studied by
+[Moroz, Penrose and Tod](https://doi.org/10.1088/0264-9381/15/9/019);
+[Harrison, Moroz and Tod, math-ph/0208046](https://arxiv.org/html/math-ph/0208046)
+give time-dependent examples and outgoing-radiation controls.
+[Fodor, Forgacs and Mezei, 1007.0388](https://arxiv.org/html/1007.0388)
+derive the real-field weak-amplitude system with positive vacuum curvature.
+The [NSC core owner](nsc-atlas-scalar-core.md) solves these equations
+independently and keeps their local approximation separate from its
+full initial-constraint embedding. Neither probability collapse nor a
+complete primordial formation mechanism is imported.
+
 ## Receiver lapse and observable frequency
 
 [Scaccabarozzi, Yoo and Biern, 1807.09796, Section 2](https://arxiv.org/html/1807.09796)
