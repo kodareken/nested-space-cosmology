@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ce24d5a29264e83226339443acd18e34f0fdb8de",
+  "current_receipt_commit_parent": "617e7171cdb8edfe278e293a9b5417cd06a5cc4d",
   "files": [
     {
       "bytes": 3120,
@@ -10282,12 +10282,12 @@
       "sha256": "acd9f4e6b5880e8cb78bc9a51a1c0793de8d5e0cab98d8ebcccf38cf4659e90a"
     },
     {
-      "bytes": 118638,
-      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
-      "changed_from_commit": "ce24d5a29264e83226339443acd18e34f0fdb8de",
+      "bytes": 119068,
+      "change": "Clarify the observational bridge and reconcile regular-preparation status.",
+      "changed_from_commit": "617e7171cdb8edfe278e293a9b5417cd06a5cc4d",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "4b70baa07b927e1cf0edc83e596091fcea1f4b0a1cd8f36d3566f0a87db99ca8"
+      "sha256": "838e89218d11a41d15388bf7638eb6b001f44bfc8ed81f2684b508d29aecc0a2"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "0571c9ed52b14f6645f13abcbda04be14111cec4a303bdb163d188680c2c8fff"
     },
     {
-      "bytes": 445516,
-      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
-      "changed_from_commit": "86ac8e3b2fdeb20648acca7ef0a973d1550a6dc4",
+      "bytes": 445636,
+      "change": "Clarify the observational bridge and reconcile regular-preparation status.",
+      "changed_from_commit": "617e7171cdb8edfe278e293a9b5417cd06a5cc4d",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fa6180874dc8132bfb62c93266258c6505e7faced0d8100f9c8886aa3c7cb598"
+      "sha256": "3c785f5638bbe46465b6c462c76eb874dec5b2b6c70c7e3685db6333c9477f4b"
     },
     {
       "bytes": 173938,
@@ -10648,15 +10648,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 86854,
-      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
-      "changed_from_commit": "86ac8e3b2fdeb20648acca7ef0a973d1550a6dc4",
+      "bytes": 87722,
+      "change": "Clarify the observational bridge and reconcile regular-preparation status.",
+      "changed_from_commit": "617e7171cdb8edfe278e293a9b5417cd06a5cc4d",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "d91371168dc1de42ca2dce6a60aaba7ec47fecc49092f8c9fbd216e11a36bd2c"
+      "sha256": "7a6187a9ecd7f41ed24fb832e640ab7315f98e407557589408aed6026f69e722"
     },
     {
       "bytes": 30876,

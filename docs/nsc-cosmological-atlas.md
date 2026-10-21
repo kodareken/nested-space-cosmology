@@ -18,6 +18,18 @@ starting a derivation.
 
 ## Current execution priority — 21 October 2026
 
+### Using the atlas to test our universe
+
+The atlas can already guide conditional observational tests; a complete
+origin of every coupling is not a prerequisite. Develop the next physical
+parent preparation together with its perturbation/observer calculation.
+The immediate question is whether one inherited source can supply a
+substantial evolving component with the required clustering and a shared
+vacuum response. Fix physical units independently, separate calibration
+from withheld tests, and compare against an ordinary model with equivalent
+local sources. Agreement with expansion alone cannot distinguish nesting.
+Keep the successful geometry and failed preparations as reusable entries.
+
 ### Coupled regular preparation: scalar, gravity and wall
 
 The [regular scalar preparation](nsc-atlas-scalar-preparation.md) now
@@ -60,8 +72,10 @@ Complete: P002 and its finite evolving parent. The
 [selection and conversion calculation](nsc-atlas-flux-conversion.md)
 now also establishes the invariant flux offset, isolated-bounce controls,
 and a declared scalar/four-form transfer's energy split and homogeneous
-evolution. The actual scalar-dependent normal-force law is derived;
-the moving boundary that prepares this history is still unsolved.
+evolution. The actual scalar-dependent normal-force law is derived.
+The subsequent regular preparation solves a coupled moving-boundary branch,
+but produces a different child state; preparation of the substantial
+excitation assumed in the rapid-transfer calculation remains unresolved.
 The extension adds one scalar, its frequency and mixing ratio; it must
 record transition work and inherited data instead of independently fitting
 vacuum and evolving densities. It is a separate candidate, not a mutation
@@ -72,8 +86,9 @@ Active next: derive its preparation from an actual moving boundary,
 including inherited parent excitation, and its perturbation response. A homogeneous
 post-transfer history does not itself supply that boundary or establish
 dark-matter clustering. Full formation rates earn priority when they can
-resolve a stated selection/preparation question. Keep the previous finite
-proof and PDF intact while this new connection is developed in its owner.
+resolve a stated selection/preparation question. The previous finite proofs
+retain their domains; regular preparation now appears in manuscript
+Sections 10.16--10.17.
 
 Finish-line test: after preparation and couplings are fixed, one source
 must predict both a vacuum observable and an independent evolving-field

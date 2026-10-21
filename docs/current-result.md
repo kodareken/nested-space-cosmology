@@ -19,9 +19,11 @@ pressure depends on the instantaneous scalar, not separately relaxed
 vacua. Direct homogeneous evolution through two e-folds conserves
 energy and approximately dilutes the oscillating component as dust.
 The parent-state map and a ground-state no-injection bound identify
-what preparation must supply. A coupled scalar-wall spacetime, clustering,
-thermalization and measured cosmic abundances remain open. This separate
-prototype does not replace P002 or modify the current manuscript.
+what preparation must supply. The regular scalar-wall spacetime above
+realizes a different state. Preparation of a substantial evolving component,
+clustering, thermalization and measured cosmic abundances remain open.
+The manuscript compares this conditional prototype with the regular branch;
+neither changes P002's original action.
 
 The [charged flux transition](nsc-atlas-flux-transition.md) adds an explicitly
 different field action with a derived vacuum stress. Parent, child and

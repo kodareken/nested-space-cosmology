@@ -1496,9 +1496,9 @@
       "sha256": "acd9f4e6b5880e8cb78bc9a51a1c0793de8d5e0cab98d8ebcccf38cf4659e90a"
     },
     {
-      "bytes": 118638,
+      "bytes": 119068,
       "path": "docs/arxiv-studies.md",
-      "sha256": "4b70baa07b927e1cf0edc83e596091fcea1f4b0a1cd8f36d3566f0a87db99ca8"
+      "sha256": "838e89218d11a41d15388bf7638eb6b001f44bfc8ed81f2684b508d29aecc0a2"
     },
     {
       "bytes": 1458,
@@ -1521,9 +1521,9 @@
       "sha256": "0571c9ed52b14f6645f13abcbda04be14111cec4a303bdb163d188680c2c8fff"
     },
     {
-      "bytes": 445516,
+      "bytes": 445636,
       "path": "docs/current-result.md",
-      "sha256": "fa6180874dc8132bfb62c93266258c6505e7faced0d8100f9c8886aa3c7cb598"
+      "sha256": "3c785f5638bbe46465b6c462c76eb874dec5b2b6c70c7e3685db6333c9477f4b"
     },
     {
       "bytes": 2481,
@@ -1611,9 +1611,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2470927,
+      "bytes": 2470843,
       "path": "docs/lab-snapshot.json",
-      "sha256": "13652a2360301551abd15f9c568c0ae869cd2186af9d49e92b01179393b6b0e4"
+      "sha256": "473c4ec92380317d2cae02012ebf1dcdd1e8a59227bb7aed0073b3a78a2fcfe8"
     },
     {
       "bytes": 4997,
@@ -1821,9 +1821,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 86854,
+      "bytes": 87722,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "d91371168dc1de42ca2dce6a60aaba7ec47fecc49092f8c9fbd216e11a36bd2c"
+      "sha256": "7a6187a9ecd7f41ed24fb832e640ab7315f98e407557589408aed6026f69e722"
     },
     {
       "bytes": 30876,
@@ -22666,7 +22666,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "13652a2360301551abd15f9c568c0ae869cd2186af9d49e92b01179393b6b0e4",
+  "lab_snapshot_sha256": "473c4ec92380317d2cae02012ebf1dcdd1e8a59227bb7aed0073b3a78a2fcfe8",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-21.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

@@ -8,6 +8,14 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Observer bridge lead, 21 October 2026
+
+[Hu--Barkana--Gruzinov, astro-ph/0003365v2](https://arxiv.org/abs/astro-ph/0003365):
+abstract inspected as a perturbation-method lead. Scalar wave effects can
+change clustering even when a component is described as cold matter.
+No mass, structure cutoff, equation or observational conclusion is imported
+into NSC; its chosen source and geometry need their own perturbation calculation.
+
 ### Coupled regular preparation, 21 October 2026
 
 - [Bandos, Blanco-Pillado, Sousa and Urkiola, 2306.09412v1](https://arxiv.org/html/2306.09412),
