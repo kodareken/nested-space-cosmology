@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [coupled scalar preparation](nsc-atlas-scalar-preparation.md) is owned
+by nsc_atlas_scalar_preparation.py: ScalarPreparation.solve handles
+regular poles and opposite cap normals; diagnostics checks independent
+Einstein constraints and wall force; scalar_reduction compares physical
+DtN/Schur maps with bulk action; pole_transfer uses a logarithmic mode;
+lorentzian_wall and child_response evaluate the continued geometry.
+The matching check, tests and plot scripts retain a compact summary.
+
 The [flux conversion owner](nsc-atlas-flux-conversion.md) uses
 nsc_atlas_flux_conversion.py: sector_minimum is exact rational arithmetic;
 isolated_bounce is an attributed vacuum control; ScalarFlux supplies

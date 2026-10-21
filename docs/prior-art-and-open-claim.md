@@ -1,5 +1,16 @@
 # Prior art and admission of new research
 
+## A regular scalar-gravity preparation, 21 October 2026
+
+The [new owner](nsc-atlas-scalar-preparation.md#inputs-and-borrowed-geometry)
+keeps the conversion potential and membrane couplings fixed. Two
+regular caps, full scalar/Israel matching, a physical boundary reduction
+and Lorentzian continuation supply one prepared branch. The bounded
+calculation uses two adaptive collocation tolerances and independent
+constraint, logarithmic-transfer and bulk-action checks within120 CPU
+seconds. It does not admit a field-grid campaign, observational fit or
+negative-mode/rate claim.
+
 ## Flux selection and scalar conversion, 21 October 2026
 
 The [calculation owner](nsc-atlas-flux-conversion.md#the-decision-and-the-scope)

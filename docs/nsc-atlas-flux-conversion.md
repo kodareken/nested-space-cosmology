@@ -1,5 +1,11 @@
 # From a flux transition to vacuum and an evolving component
 
+The subsequent [coupled preparation](nsc-atlas-scalar-preparation.md)
+solves the necessary scalar layer, gravity and membrane together under
+regular Euclidean boundary data. Its continued child state is far less
+excited than the rapid transfer assumed here. The present calculation
+remains the conditional energy account, not the preparation of that branch.
+
 ## The decision and the scope
 
 The [P002 construction](nsc-atlas-flux-transition.md) established a finite

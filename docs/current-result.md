@@ -1,5 +1,16 @@
 # What the calculations show
 
+The [regular scalar-gravity preparation](nsc-atlas-scalar-preparation.md)
+now connects a continuous field layer, full charged-wall matching, a
+physical scalar Schur reduction and an expanding Lorentzian child.
+With unchanged conversion couplings it determines wall radius
+2.70634531321651 and pressure .154440177981835. Regular pole transfer
+sets the child excitation to9.6245e-47, so the earlier sudden-transfer
+energy .09375 is not realized by this state. The coupled saddle is a
+controlled numerical construction; exact identities establish its
+matching, reduction and continuation rules. No fluctuation index or
+nucleation rate has been inferred.
+
 The [selection/conversion calculation](nsc-atlas-flux-conversion.md)
 now gives a conditional scalar response to a flux transfer. One potential
 fixes residual vacuum .125, initial oscillation energy .09375 and local

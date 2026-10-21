@@ -18,6 +18,30 @@ starting a derivation.
 
 ## Current execution priority — 21 October 2026
 
+### Coupled regular preparation: scalar, gravity and wall
+
+The [regular scalar preparation](nsc-atlas-scalar-preparation.md) now
+supplies a converged coupled cap geometry with full charged-wall and scalar
+matching, followed by its Lorentzian continuation. It retains the conversion
+action and couplings and derives the wall radius and child pole state.
+An actual regular-cap Dirichlet-to-Neumann/Schur reduction reproduces the
+wall field and scalar action on that geometry.
+
+This closes the regular-saddle branch as a numerical construction with
+exact matching/conservation identities, not a proof of a decay rate or
+uniqueness. The prepared child excitation is about9.62e-47 in normalized
+units, rather than the assumed sudden-transfer .09375. The scalar energy
+is concentrated in the spatial layer; this branch does not supply a
+substantial homogeneous matter component. Its positive vacuum supports
+future continuation of the homogeneous child chart.
+
+Next: a physically specified excited-parent or nonequilibrium preparation
+if the matter-production claim is retained. Keep this regular branch as
+the comparison, and preserve the actual-field force and boundary response.
+Do not refine its tiny tail again or import the previous quench amplitude.
+Fluctuation/negative-mode analysis is required before assigning a quantum
+transition probability; it does not by itself populate the child.
+
 ### Rethinking: selection and conversion before a formation campaign
 
 The last result closed a conditional geometry. Automatically making its

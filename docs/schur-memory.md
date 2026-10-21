@@ -417,6 +417,14 @@ relation over time, with a predicted magnitude, is the missing construction.
 
 ### Status of the Lambda claim
 
+The [regular scalar preparation](nsc-atlas-scalar-preparation.md#a-physical-scalar-boundary-reduction)
+now supplies actual cap Dirichlet-to-Neumann maps in a solved coupled
+geometry. Their Schur combination reproduces the wall field and scalar
+excitation action. This is an elliptic preparation-sector reduction,
+not a retarded influence kernel or a newly generated bulk vacuum term.
+The regular state's homogeneous child excitation is extremely small;
+the prior instantaneous-transfer amplitude is not its physical state.
+
 The [20 October programme reassessment](nsc-cosmological-atlas.md#programme-reassessment-the-generative-and-cosmological-connection)
 now prioritizes the physical parent/state-to-gravitational-source map and
 its cosmological observer test. Completed wall and clock examples are

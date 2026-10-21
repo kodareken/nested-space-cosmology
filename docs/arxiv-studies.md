@@ -8,6 +8,22 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Coupled regular preparation, 21 October 2026
+
+- [Coleman--De Luccia, Phys. Rev. D21,3305](https://doi.org/10.1103/PhysRevD.21.3305):
+  source attribution for gravitational vacuum preparation; publisher record
+  inspected. Explicit equations and continuation were read in the next source.
+- [Dong--Harlow, 1109.0011v3](https://arxiv.org/html/1109.0011), Sections
+  2.1--2.2, equations (1)--(18): regular cap equations, pole series,
+  warped-de-Sitter and open-FLRW continuations. Applied separately on
+  the smooth caps, with the charged wall's junction retained explicitly.
+- [Bandos et al., 1903.02841](https://arxiv.org/html/1903.02841),
+  Sections2,4--5 selected equations (2), (48)--(54), (61)--(63):
+  inspected the distinction between a bare membrane and its scalar
+  layer, and the field-dependent tension in that supersymmetric example.
+  That tension and its derivative jump are not imported into our constant
+  tension model; our scalar normal derivative is continuous.
+
 ### Flux selection and conversion, 21 October 2026
 
 - [Kaloper--Sorbo, 0811.1989v2](https://arxiv.org/html/0811.1989),

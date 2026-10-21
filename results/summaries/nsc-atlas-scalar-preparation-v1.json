@@ -1,0 +1,140 @@
+{
+  "schema": "nsc-atlas-scalar-preparation-v1",
+  "action": "Einstein + canonical scalar U=rho_b+m^2 phi^2/2+(q+mu phi)^2/2 + charged constant-tension membrane",
+  "inputs": {
+    "epsilon": 0.25,
+    "omega": 20.0,
+    "parent_flux": 1.5,
+    "child_flux": 1.0,
+    "tension": 0.2,
+    "bare_density": 0.0,
+    "normalization": "Same normalized classical variables as flux conversion; no physical SI ruler selected."
+  },
+  "preparation": "Regular compact O(4) scalar/gravity saddle with two poles and full charged-wall conditions. This selects one candidate preparation, not a nucleation probability.",
+  "solved": {
+    "radius": 2.7063453132165107,
+    "lengths": [
+      2.867310156714175,
+      7.07049444470919
+    ],
+    "phi_wall": -0.05433556798240199,
+    "child_wall_displacement": -0.011034297793180063,
+    "parent_wall_displacement": 0.010616337301430903,
+    "child_normal_derivative": -0.21559588824987258,
+    "parent_normal_derivative": -0.21559588824987258,
+    "K_inside": 0.9222008899091707,
+    "K_outside": 0.6222008899091707,
+    "wall_pressure": 0.15444017798183507,
+    "force_residual": -9.159339953157541e-16,
+    "full_Israel_component_residual": -1.3877787807814457e-17,
+    "scalar_value_jump": 0.0,
+    "scalar_normal_jump": 0.0,
+    "Hamilton_max": [
+      3.83026943495679e-15,
+      6.811218256075335e-13
+    ],
+    "scalar_equation_max": [
+      5.402695929523915e-10,
+      2.138424548547846e-09
+    ],
+    "weighted_tangential_Einstein_max": [
+      8.432077258646586e-11,
+      1.1266547694788187e-09
+    ],
+    "max_boundary_residual": 5.551115123125783e-17
+  },
+  "scalar_reduction": {
+    "child_DtN": 19.53870489004976,
+    "parent_DtN": 20.307935037144485,
+    "Schur_coefficient": 9.957947529379233,
+    "wall_displacement_reconstruction_gap": 1.734723475976807e-18,
+    "boundary_excitation_action": 0.913188612281953,
+    "direct_bulk_excitation_action": 0.9131886122816816,
+    "bulk_boundary_action_gap": -2.7144952952085077e-13,
+    "field_layer_energy_per_wall_area": 0.0023374184680511204
+  },
+  "child_pole": {
+    "pole_displacement": -6.937042985306262e-25,
+    "wall_displacement": -0.011034297793180063,
+    "log_gain": 51.12100484813201,
+    "logarithmic_derivative_gap": 3.552713678800501e-15,
+    "scalar_energy_at_pole": 9.624513075997365e-47,
+    "ode_evaluations": 7298
+  },
+  "parent_pole": {
+    "pole_displacement": 2.1135066083774823e-61,
+    "wall_displacement": 0.010616337301430903,
+    "log_gain": 135.16398099534464,
+    "logarithmic_derivative_gap": -1.0658141036401503e-14,
+    "scalar_energy_at_pole": 8.933820367310576e-120,
+    "ode_evaluations": 17390
+  },
+  "lorentzian_wall": {
+    "eta": 1.0,
+    "proper_time": 2.7063453132165107,
+    "areal_radius": 4.176109043947393,
+    "radius_proper_speed": 1.1752011936438014,
+    "radius_proper_acceleration": 0.5701713773477345,
+    "worldvolume_scalar_curvature": 0.8191903583180242,
+    "scalar_rest_frame_flux": 0.0
+  },
+  "child_response": {
+    "proper_time": 1.0,
+    "normalized_field": 0.006581059915700049,
+    "normalized_field_velocity": 0.3175686056744547,
+    "excitation_density": 2.8434170378393696e-50,
+    "initial_excitation_density": 9.624513075997363e-47,
+    "tidal_trace_increment": -4.436310997119878e-50,
+    "vacuum_tidal_trace": 0.125,
+    "vacuum_scale_factor": 1.0069589263981167,
+    "max_extra_H_squared_at_fixed_a": 3.2081710253324544e-47,
+    "spatial_curvature": -1,
+    "approximation": "Scalar on open de Sitter, with actual Friedmann source correction bounded by kappa*E0/3 at fixed scale factor. Not an exactly flat FRW quench."
+  },
+  "comparison": {
+    "previous_instant_transfer_energy": 0.09375,
+    "prepared_to_instant_transfer_energy": 1.0266147281063855e-45,
+    "uniform_child_vacuum_density": 0.125,
+    "maximum_prepared_excitation_to_vacuum": 7.699610460797892e-46,
+    "interpretation": "The selected regular branch puts scalar excitation mainly in its spatial layer, not in a large homogeneous child condensate. It does not realize the previous sudden-transfer preparation."
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "Euclidean_constraint_propagation": "0",
+      "bulk_to_boundary_scalar_action": "0",
+      "Schur_value_matching": "0",
+      "Schur_normal_matching": "0",
+      "Schur_quadratic": "0",
+      "normal_force_from_constraints": "0"
+    },
+    "coarse": {
+      "nodes": 668,
+      "rhs_calls": 147,
+      "iterations": 5,
+      "max_collocation_residual": 9.971929573369012e-08
+    },
+    "fine": {
+      "nodes": 2550,
+      "rhs_calls": 179,
+      "iterations": 6,
+      "max_collocation_residual": 9.990336327442036e-10
+    },
+    "radius_tolerance_difference": -3.807176796044587e-12,
+    "pole_log_transfer_relative_difference": 8.974931908767303e-11,
+    "direct_collocation_pole_relative_difference": 2.381060987044492e-06,
+    "sampled_min_positive_cap_scale_factor": 0.002867309993009329
+  },
+  "validity": "Regular cap branch, O(3,1) wall continuation |eta|<=1, child proper-time response0<tau<=1. The analytic field/constraint/junction identities are exact; the nonlinear saddle is a converged numerical construction, not interval-certified existence or a uniqueness proof.",
+  "limits": "No negative-mode count, determinant, tunnelling probability, preferred quantum state, black-hole collapse history, complete matter production, measured cosmological scale or infinite nesting theorem. The finite P002 dust parent is not imported into this different prepared geometry.",
+  "next": "Determine a physically specified excited-parent or nonequilibrium preparation if a substantial child matter component is claimed; do not infer it from the previous instantaneous quench.",
+  "numerical_error": "Residuals, two collocation tolerances, direct bulk/boundary action and independent Riccati transfer; not observational or model error bars.",
+  "process_cpu_seconds": 1.109375,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "scripts/check_nsc_atlas_scalar_preparation.py": "957bc18b1e2444563594e8d95d8700391dd4a217400d7fbe648050b61c7501d1",
+    "tests/test_nsc_atlas_scalar_preparation.py": "892bb9edb62740ef43928d83bb4a50d58267c89cf4a80209c2e2d652a56a0e34",
+    "scripts/plot_nsc_atlas_scalar_preparation.py": "5b90e083b9b3672062b23c019d65737111a9cc34cc647235f80b4e5678dda237"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_scalar_preparation.py"
+}

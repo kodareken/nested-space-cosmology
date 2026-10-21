@@ -1,5 +1,14 @@
 # Reproducing the root project
 
+The [regular scalar preparation](nsc-atlas-scalar-preparation.md) uses
+```
+python scripts/run_python.py scripts/check_nsc_atlas_scalar_preparation.py
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_scalar_preparation.py -q
+python scripts/run_python.py scripts/plot_nsc_atlas_scalar_preparation.py
+```
+It solves one coupled boundary problem at two tolerances, followed by
+independent logarithmic transfer and action checks; no trajectory scan.
+
 The [selection and scalar conversion](nsc-atlas-flux-conversion.md) uses
 ```
 python scripts/run_python.py scripts/check_nsc_atlas_flux_conversion.py

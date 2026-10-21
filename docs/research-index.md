@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [regular scalar preparation](nsc-atlas-scalar-preparation.md) solves
+two gravitational caps, a charged membrane and the scalar transition
+layer. It connects their physical boundary maps to a Lorentzian wall
+and an open child state, with the regular branch's small excitation explicit.
+
 The [flux selection and scalar conversion](nsc-atlas-flux-conversion.md)
 compares reachable vacuum levels, isolated formation controls and a
 specified scalar response. It derives the energy split, actual-field

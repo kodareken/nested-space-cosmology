@@ -3,6 +3,13 @@
 Start with regions, boundaries and fields; assemble possible nested geometries;
 specify inheritance and transmission; calculate what an interior observer measures.
 
+The [regular scalar preparation](docs/nsc-atlas-scalar-preparation.md)
+now solves a scalar transition layer, charged boundary and gravity
+together, then continues them into an expanding child geometry.
+Its physical boundary reduction reproduces the scalar action and fixes
+the child state. That regular state has very little homogeneous excitation;
+it does not realize the earlier assumed rapid-transfer matter component.
+
 The [charged vacuum transition](docs/nsc-atlas-flux-transition.md) now connects
 one explicit four-form/membrane action to two nested moving boundaries,
 a shared intermediate spacetime and an expanding cosmological parent.
