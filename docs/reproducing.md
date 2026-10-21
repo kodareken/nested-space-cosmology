@@ -1,5 +1,12 @@
 # Reproducing the root project
 
+The [geometric observer](nsc-atlas-geometric-observer.md) is reproduced by
+`python scripts/run_python.py scripts/check_nsc_atlas_geometric_observer.py`.
+Its focused tests are `tests/test_nsc_atlas_geometric_observer.py`; regenerate
+the figure with `scripts/plot_nsc_atlas_geometric_observer.py` through the
+same runtime. It reuses one prepared geometry, with independent work and
+tidal checks and explicitly synthetic calibration samples.
+
 The [finite parent source](nsc-atlas-parent-source.md) is reproduced by
 `python scripts/run_python.py scripts/check_nsc_atlas_parent_source.py`.
 Its tests are `tests/test_nsc_atlas_parent_source.py`; regenerate its figure

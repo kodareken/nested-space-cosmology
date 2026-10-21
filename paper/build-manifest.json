@@ -1,10 +1,10 @@
 {
-  "bytes": 7285651,
+  "bytes": 7551880,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "02f5046438602a0d6489ea7ad0426f89deaec168e5d5ef6376399ab294e007fb",
+  "metadata_sha256": "5d9bf4c0a4748f381ef21b39080976912c1c7cddbd88007e255c88e70747fefa",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 101,
-  "pdf_sha256": "127e09db034f9aa5d3ac8ca720e05d073084d0332e7e4ff122ee51ec60ed74b3",
+  "pages": 103,
+  "pdf_sha256": "56957f42f1473c452ab6096e630e2af75eb128b2be60c5c83b78f5c38d6606f2",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -22,6 +22,10 @@
     {
       "path": "docs/figures/nsc-atlas-flux-transition.png",
       "sha256": "a4a97bbdc6ea98e2b286741e4c58c81811b35d29b4efbbfc14ebf23589ef9193"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-geometric-observer.png",
+      "sha256": "e007d2cd3888c4fc99574bb09d98dec251350052de9612eeb9a104a1fd64a1d0"
     },
     {
       "path": "docs/figures/nsc-atlas-nested-slice.png",
@@ -500,6 +504,10 @@
       "sha256": "1c6fab9b40ba7fb623dffca80ec8e06b859531ccec3497361649269e580afd62"
     },
     {
+      "path": "results/summaries/nsc-atlas-geometric-observer-v1.json",
+      "sha256": "1bf3e741a784988cac325fe941a7a9a8c664a0f624f7e2331fee960b573e65d1"
+    },
+    {
       "path": "results/summaries/nsc-atlas-geometric-remainder-bound-v2.json",
       "sha256": "b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2"
     },
@@ -629,6 +637,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "f0e6ebeb28dc6e68dc6ed88c6c499335313375ac87f2705e4cae20710fa61a30",
-  "version": "working-2026-10-21.3"
+  "source_sha256": "35f5019ea25f79d0e4c8c0003a7ab53248e706503ef6c6bf332931abd59137e8",
+  "version": "working-2026-10-21.4"
 }

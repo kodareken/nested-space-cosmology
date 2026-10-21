@@ -77,6 +77,29 @@ planar massive-field calculation only checks the tangent normalization.
 Use this route for the next transfer calculation, retaining the smooth
 finite source as a distinct preparation control.
 
+### Observer relation selected by the next rethink
+
+Compare full nonlinear evolution, an exact finite-time energy balance,
+and elimination of the unknown source history from an observer test.
+The [completed observer connection](nsc-atlas-geometric-observer.md)
+combines the last two: reconstruct the
+scalar from child-side wall geometry under the same action, predict an
+independent tidal projection, and retain the pressure-work term in the
+Misner--Sharp balance. It introduces no new physical coupling or incoming
+waveform. One geometry-derivative record owns the reconstruction inputs.
+The existing evolved regular preparation is a physical check; synthetic
+samples test calibration/rejection only and are not new bulk solutions.
+Coupled evolution remains open and gains these exact diagnostics.
+
+The local tidal curve has second divided difference -8/3 for the fixed
+benchmark. The existing coupled continuation also gives a finite mass
+increase with zero scalar influx, entirely accounted for by pressure work.
+An explicit pair of coupling choices has identical two-sector classical
+dynamics but predicts different next-sector vacua, 1/32 and49/32. The
+local curve plus a third same-law ground-vacuum value can identify charge
+and mixing; a physically composed third region is still needed. This is
+why further one-wall precision alone cannot settle inherited parameters.
+
 ### Coupled regular preparation: scalar, gravity and wall
 
 The [regular scalar preparation](nsc-atlas-scalar-preparation.md) now

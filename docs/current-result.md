@@ -1,5 +1,22 @@
 # What the calculations show
 
+The [one-sided geometric observer](nsc-atlas-geometric-observer.md) now
+reconstructs the local scalar and flux from the charged wall's geometry
+and predicts an independent tidal contraction. Its corrected tidal curve
+has exact second divided difference -8/3 with the declared couplings,
+without specifying an incoming waveform. The actual regular continuation
+reconstructs the wall field and separates tidal magnitude .149351145558
+from vacuum .125. Its mass above vacuum grows by .009809732745 with
+zero scalar influx; independent pressure work explains the whole change.
+
+Two fixed parameter choices have identical one-interface classical
+scalar/gravity dynamics under a field translation, while their next
+ground-vacuum values are1/32 and49/32. A third comparable vacuum value
+and the local tidal coefficient resolve their mixing/charge ambiguity.
+This is an exact potential-level inverse, not a constructed third region
+or observational verification. The coupled excited-parent evolution remains
+open and now has exact finite-time diagnostics.
+
 The [excited-parent transfer limit](nsc-atlas-parent-source.md#a-weak-initial-corner-can-carry-a-real-inward-pulse)
 now gives a nonzero conditional inward energy source. A uniform field at
 the child minimum leaves parent excitation density3/32 and admits exact

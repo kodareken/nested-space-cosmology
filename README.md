@@ -3,6 +3,13 @@
 Start with regions, boundaries and fields; assemble possible nested geometries;
 specify inheritance and transmission; calculate what an interior observer measures.
 
+The [one-sided geometric observer](docs/nsc-atlas-geometric-observer.md)
+now links the charged wall's geometry to a local scalar reconstruction,
+an independent tidal test and the full mass/pressure-work balance.
+An exact pair of locally equivalent coupling choices shows why additional
+nested-region information is needed to identify the inherited parameters.
+The third-sector prediction is algebraic; its physical composition remains open.
+
 The [finite parent scalar source](docs/nsc-atlas-parent-source.md) now solves
 source gravity and the charged wall's initial matching together. It derives
 the scalar-layer correction for second-order smooth matching, and computes

@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [geometric observer owner](nsc-atlas-geometric-observer.md) uses
+nsc_atlas_geometric_observer.py: WallGeometry owns proper-time/normal
+derivatives; ScalarWallObserver reconstructs the field and tests an
+independent Ricci projection. Calibration preserves the declared action
+constraint on the vacuum term. equivalent_one_wall_example gives two
+locally equivalent parameter choices; infer_mixing_and_charge uses the
+additional same-law vacuum spacing. Synthetic samples are software checks,
+not new spacetime solutions.
+
 The [parent source owner](nsc-atlas-parent-source.md) uses
 nsc_atlas_parent_source.py: ParentScalarSource.solve couples the conformal
 Hamiltonian constraint to the wall's scalar second jet. wall evaluates

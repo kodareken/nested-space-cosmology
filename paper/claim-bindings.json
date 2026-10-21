@@ -363,6 +363,16 @@
       "section": "10.20",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-source.md"
+    },
+    "geometric-wall-observer": {
+      "section": "10.21",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-geometric-observer.md"
+    },
+    "one-wall-inheritance-ambiguity": {
+      "section": "10.22",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-geometric-observer.md"
     }
   },
   "findings": [
@@ -669,6 +679,22 @@
       "note": "docs/nsc-atlas-parent-source.md",
       "record": "results/summaries/nsc-atlas-parent-source-v1.json",
       "paper_section": "10.20"
+    },
+    {
+      "id": "geometric-wall-observer",
+      "status": "derived",
+      "summary": "Exact necessary one-sided scalar, flux, tidal and mass/work identities for the charged canonical scalar wall. The existing coupled continuation supplies independent field, Ricci and work checks; synthetic calibration is separate. These are not a full geometrization or bulk existence theorem.",
+      "note": "docs/nsc-atlas-geometric-observer.md",
+      "record": "results/summaries/nsc-atlas-geometric-observer-v1.json",
+      "paper_section": "10.21"
+    },
+    {
+      "id": "one-wall-inheritance-ambiguity",
+      "status": "derived",
+      "summary": "Two fixed coupling choices have identical two-sector reduced classical dynamics after a field translation but different next-sector vacuum values. An additional same-law vacuum spacing identifies mixing and charge magnitude under the declared assumptions. No third-region geometry or empirical identification is claimed.",
+      "note": "docs/nsc-atlas-geometric-observer.md",
+      "record": "results/summaries/nsc-atlas-geometric-observer-v1.json",
+      "paper_section": "10.22"
     }
   ]
 }

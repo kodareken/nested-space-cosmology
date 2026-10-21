@@ -1,5 +1,17 @@
 # Prior art and admission of new research
 
+## Geometric observer and inherited-parameter identification, 21 October 2026
+
+The [observer owner](nsc-atlas-geometric-observer.md#decision-prior-work-and-finite-calculation)
+reuses scalar Rainich geometrization, Gauss--Codazzi, Israel matching and
+Hayward's mass/work law. New work derives their one-sided charged-wall
+connection, tests it on the existing continued geometry, and proves an
+explicit two-sector coupling equivalence broken by a third charge sector.
+One cap solve, finite analytic wall times, an independent work integral,
+symbolic identities and synthetic calibration checks fit120 CPU seconds.
+No new grid, fitted source waveform or global spacetime-existence claim is
+admitted by this calculation.
+
 ## Finite source gravity and scalar wall compatibility, 21 October 2026
 
 The [source owner](nsc-atlas-parent-source.md#rethinking-decision-and-scope)

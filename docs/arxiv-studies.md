@@ -8,6 +8,17 @@ The same study in `docs/` and `lab/docs/` is listed once. Version suffixes are f
 
 ## How to approach the work
 
+### Geometric observer and inheritance, 21 October 2026
+
+- [Krongos--Torre, 1503.06311v3](https://arxiv.org/html/1503.06311),
+  Section3: scalar geometrization and the need for differential as well
+  as algebraic conditions. The charged wall fixes the quadratic-potential
+  field branch; the local observer tests do not replace their full theorem.
+- The existing [Hayward source-leg mass reading](#source-leg-mass-library)
+  is reused for finite wall-frame energy supply and pressure work in the
+  [geometric observer](nsc-atlas-geometric-observer.md); no new bulk
+  existence or thermodynamic interpretation is inferred.
+
 ### Observer bridge lead, 21 October 2026
 
 [Hu--Barkana--Gruzinov, astro-ph/0003365v2](https://arxiv.org/abs/astro-ph/0003365):

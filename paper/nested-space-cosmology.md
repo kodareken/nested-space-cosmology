@@ -4345,6 +4345,189 @@ causal development that tests the nonzero transfer and pressure relation
 at finite times. The smooth source of Section 10.19 remains a distinct
 preparation control, not a compulsory gate on this weak-corner route.
 
+### 10.21. A one-sided geometric observer and the full mass balance
+
+<!-- nsc-claim:geometric-wall-observer -->
+
+Evidence: [observer and energy derivation](../docs/nsc-atlas-geometric-observer.md),
+[coupled reference and independent checks](../results/summaries/nsc-atlas-geometric-observer-v1.json).
+
+An observer relation can be derived without first knowing the incident
+waveform. It combines the charged-wall force with the scalar geometrization
+approach reviewed by [Krongos and Torre](https://arxiv.org/html/1503.06311).
+Their full metric conditions include differential integrability; the local
+tests here do not replace them or prove a bulk spacetime exists.
+
+Use child-side geometry, the normal pointing into the parent, and wall
+proper time. Write the mixed extrinsic eigenvalues as $A,B,B$, where
+$A=n\cdot a$ is normal proper acceleration and $B=n(R)/R$.
+These are not generally the areal acceleration or the radius's fractional
+rate of increase.
+Israel and the material force give
+
+$$
+P=\sigma\left(A+2B-\frac{3k}{2}\right),\qquad
+\chi_W=\frac{P-P_c}{S},\qquad
+\Pi=\frac{\dot P}{S},
+$$
+
+where $k=\kappa\sigma/2$, $S=\mu e$ and
+$P_c=e(\epsilon q_c+e/2)$. Thus the field and its wall-time derivative
+are determined by one-sided geometry once the action parameters are fixed.
+No parent-side metric observation is needed for this step.
+
+Gauss and Codazzi supply the normal pressure and inward flux:
+
+$$
+\kappa p_n=-\frac{2\ddot R}{R}-\frac{1+\dot R^2}{R^2}+2AB+B^2,
+$$
+$$
+\kappa F_{\rm in}=2\left[\frac{\dot R}{R}(A-B)-\dot B\right].
+$$
+
+For the canonical scalar, $Q=2(p_n+U)-\Pi^2$ must be nonnegative
+and $F_{\rm in}^2=\Pi^2Q$. When $\Pi\ne0$, its signed normal
+derivative is $F_{\rm in}/\Pi$. At $\Pi=0$ only its magnitude is
+identified by these observables; the inversion is sensitive to noise near that limit.
+
+An independent bulk tidal contraction must then obey
+
+$$
+Y\equiv R_{uu}-\frac{\kappa}{S^2}\dot P^2
+=-\Lambda_c-C(P-P_c)^2,\qquad
+C=\frac{\kappa\omega^2}{2S^2}
+=\frac{\kappa}{2(1-\epsilon)e^2}.
+$$
+
+For three distinct pressures on the same wall, the second divided
+difference of $Y$ is exactly $-C=-8/3$ in the reference model.
+This relation holds on regular finite intervals, beyond the short-time
+expansion. Source history has disappeared; the field action has not.
+
+With $S$ and $C$ fixed, two calibration points determine $P_c$ and
+$\Lambda_c$ phenomenologically. They must also satisfy the action's
+relation between flux, mixing and vacuum; the bare term cannot be
+independently retuned. A withheld third value tests the resulting curve.
+The synthetic example in the record performs that recovery and detects
+a deliberate $.001$ discrepancy. It is not an observational comparison.
+
+The actual regular continuation provides a separate physical model check.
+From its wall geometry the inverse recovers
+$\phi_W=-.0543355679824$ and $|\Phi|=.215595888250$.
+An independent metric calculation gives $R_{uu}=-.149351145558$.
+The potential excitation accounts for $.024351145558$, leaving the
+declared vacuum $.125$. Interpreting the whole tidal magnitude as vacuum
+would therefore overestimate it by about $19.48$ percent in this example.
+The continuation has constant $P$; multiple times repeat one point of
+the tidal curve rather than supplying several distinct calibration points.
+
+Energy accounting supplies another exact check. For the geometric
+Misner--Sharp mass,
+
+$$
+m=\frac{R}{2}\left[1+\dot R^2-(BR)^2\right],\qquad
+\dot m=\frac{\kappa R^2}{2}
+\left[BR F_{\rm in}-\dot R p_n\right].
+$$
+
+This is the signed wall-frame form of
+[Hayward's energy-supply and work law](https://arxiv.org/html/gr-qc/9710089).
+Subtracting $\Lambda_cR^3/6$ leaves an excitation-pressure work term.
+On the existing evolved reference the scalar influx is exactly zero,
+yet the mass above vacuum grows from $.003668251239$ to $.013477983984$
+over $0\le\tau\le2.706345313217$. Independent pressure integration
+accounts for the increase $.00980973274508$, agreeing within
+$1.8\times10^{-15}$. Enclosed mass growth alone is therefore not an
+accretion measurement, even in this explicit coupled nested geometry.
+
+![Pressure work and the source-independent tidal test](../docs/figures/nsc-atlas-geometric-observer.png)
+
+*Figure 15. Left: the solved continuation gains mass with zero scalar
+influx; pressure work explains the change. Right: the star is its one
+pressure/curvature point. The other markers are explicitly synthetic
+calibration and withholding checks, not observed universes or new solutions.*
+
+The observable test requires normal metric information and independent
+tidal curvature. Radius or cosmological expansion alone is insufficient.
+Its identities are necessary conditions for this action, not a complete
+Rainich theorem, a globally reconstructed parent or an empirically selected
+cosmology. They supply finite-time diagnostics for the coupled evolution
+that remains to be constructed.
+
+### 10.22. What an additional inherited region can identify
+
+<!-- nsc-claim:one-wall-inheritance-ambiguity -->
+
+Evidence: [coupling equivalence and inverse](../docs/nsc-atlas-geometric-observer.md#why-one-wall-cannot-determine-the-inherited-couplings),
+[exact identity and numerical controls](../results/summaries/nsc-atlas-geometric-observer-v1.json).
+
+There is a precise reason to extend the atlas beyond one interface.
+Two fixed parameter choices in the same scalar/four-form family can
+produce identical local classical dynamics while predicting different
+consequences for the next charge sector. Keep $\omega=20$, $\kappa=1$,
+$\sigma=.2$ and $\rho_b=0$ in both candidates, and choose
+
+$$
+(\epsilon,e,q_c)_A=(1/4,1/2,1),\qquad
+(\epsilon,e,q_c)_B=(25/28,\sqrt{7}/2,-\sqrt{7}/5).
+$$
+
+In each case $q_p=q_c+e$. Let $\delta=3\sqrt{3}/100$. Direct
+expansion gives the exact potential identity
+
+$$
+U_B\left(\phi+\delta,\sqrt{7}(q-6/5)\right)-U_A(\phi,q)
+=3(q-1)(q-3/2).
+$$
+
+The difference vanishes for every field value in the original parent
+and child sectors. A constant field translation preserves the kinetic
+term, and the two models share both vacuum densities, $S=\mu e$,
+tension and wall-force law. Their reduced classical scalar/gravity
+equations and matching are identical at that interface, including for
+mapped time-dependent states. More precision in those observations alone
+cannot choose between the two parameter sets.
+
+This equivalence excludes independent charge probes, extra matter
+couplings that fix an absolute field origin and quantum preparation
+probabilities. It is a statement about the declared classical sector.
+
+One further step of each model's unchanged oriented charge gives
+
+$$
+(\Lambda_p,\Lambda_c,\Lambda_g)_A=(9/32,1/8,1/32),\qquad
+(\Lambda_p,\Lambda_c,\Lambda_g)_B=(9/32,1/8,49/32).
+$$
+
+These are relaxed potential values, not a constructed grandchild
+spacetime. Candidate B's next step is upward in ground energy, so the
+ordinary descending-cap preparation cannot simply be repeated there.
+The distinct prediction nonetheless identifies information that the
+first interface cannot supply.
+
+For three comparable ground-vacuum sectors with a common action and
+equal oriented charge steps,
+
+$$
+D=\Delta^2\Lambda=\kappa\epsilon e^2.
+$$
+
+Combining this with the local tidal coefficient $C$ resolves the
+mixing and charge magnitude:
+
+$$
+e^2=\frac{D}{\kappa}+\frac{\kappa}{2C},\qquad
+\epsilon=\frac{D/\kappa}{D/\kappa+\kappa/(2C)}.
+$$
+
+Both candidates have $C=8/3$, but $D=1/16$ and $D=25/16$
+respectively. The inverse recovers both parameter choices. This is
+a test of an inherited-law hypothesis using additional regional
+information. It does not prove that constants are inherited, that the
+third region exists, or that these regions can all be observed in a
+common normalization. Constructing the next physical transition and
+evolving the excited parent remain separate, useful requirements.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -4394,7 +4577,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 15. The isolated reference in joined causal charts. Horizons are
+*Figure 16. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -5400,7 +5583,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 16. Saved finite-window comparisons. A: the previous and current
+*Figure 17. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -5496,7 +5679,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 17. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 18. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -6281,7 +6464,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 18. Research dependencies, distinct from spacetime causal arrows.
+*Figure 19. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

@@ -1,0 +1,285 @@
+{
+  "schema": "nsc-atlas-geometric-observer-v1",
+  "result": "One-sided local scalar reconstruction, independent tidal correlation and exact pressure-work/mass balance for the existing charged canonical scalar action.",
+  "geometry_inputs": "Child-side R,Rdot,Rddot,A,B,Adot,Bdot in wall proper time; common normal points child to parent. Independent bulk Ruu is a test output, not an input to scalar reconstruction.",
+  "fixed_parameters": {
+    "kappa": 1.0,
+    "omega": 20.0,
+    "epsilon": 0.25,
+    "charge": 0.5,
+    "tension": 0.2,
+    "parent_flux": 1.5,
+    "bare_density": 0.0
+  },
+  "reconstructed_reference": [
+    {
+      "pressure": 0.15444017798183415,
+      "pressure_dot": 0.0,
+      "scalar_value": -0.054335567982402085,
+      "child_displacement": -0.011034297793180157,
+      "scalar_time_derivative": 0.0,
+      "normal_square": 0.04648158703025218,
+      "normal_magnitude": 0.21559588824987405,
+      "signed_normal": null,
+      "normal_sign_identified": false,
+      "normal_flux_sensitivity": null,
+      "scalar_stress_residual": 0.0,
+      "potential": 0.1493511455577161,
+      "predicted_Ruu": -0.1493511455577161,
+      "predicted_tidal_corrected": -0.1493511455577161,
+      "vacuum_subtracted_mass": 0.003668251238520215,
+      "vacuum_subtracted_mass_dot": 0.0,
+      "excitation_pressure_work": 0.0,
+      "radial_pressure": -0.12611035204259,
+      "inward_flux": 0.0,
+      "G_nn": -0.12611035204259,
+      "G_nu": 0.0,
+      "Misner_Sharp_mass": 0.4166286342765398,
+      "geometric_mass_dot": 0.0,
+      "flux_contribution": 0.0,
+      "pressure_work": 0.0,
+      "measured_Ruu": -0.14935114555771575,
+      "tidal_residual": 3.3306690738754696e-16,
+      "measured_tidal_corrected": -0.14935114555771575,
+      "inferred_vacuum": 0.12499999999999965,
+      "eta": 0.0,
+      "proper_time": 0.0,
+      "scalar_value_error": -9.71445146547012e-17,
+      "normal_magnitude_error": 1.4710455076283324e-15,
+      "direct_field_pressure_error": -1.1102230246251565e-16,
+      "direct_field_mass_derivative_error": 0.0
+    },
+    {
+      "pressure": 0.15444017798183415,
+      "pressure_dot": 0.0,
+      "scalar_value": -0.054335567982402085,
+      "child_displacement": -0.011034297793180157,
+      "scalar_time_derivative": 0.0,
+      "normal_square": 0.04648158703025196,
+      "normal_magnitude": 0.21559588824987352,
+      "signed_normal": null,
+      "normal_sign_identified": false,
+      "normal_flux_sensitivity": null,
+      "scalar_stress_residual": 0.0,
+      "potential": 0.1493511455577161,
+      "predicted_Ruu": -0.1493511455577161,
+      "predicted_tidal_corrected": -0.1493511455577161,
+      "vacuum_subtracted_mass": 0.00525961887874804,
+      "vacuum_subtracted_mass_dot": 0.002694290465427518,
+      "excitation_pressure_work": 0.0026942904654277365,
+      "radial_pressure": -0.1261103520425901,
+      "inward_flux": 0.0,
+      "G_nn": -0.1261103520425901,
+      "G_nu": 0.0,
+      "Misner_Sharp_mass": 0.5973712507084734,
+      "geometric_mass_dot": 0.3060091809328229,
+      "flux_contribution": 0.0,
+      "pressure_work": 0.30600918093282314,
+      "measured_Ruu": -0.14935114555771575,
+      "tidal_residual": 3.3306690738754696e-16,
+      "measured_tidal_corrected": -0.14935114555771575,
+      "inferred_vacuum": 0.12499999999999965,
+      "eta": 0.5,
+      "proper_time": 1.3531726566082554,
+      "scalar_value_error": -9.71445146547012e-17,
+      "normal_magnitude_error": 9.43689570931383e-16,
+      "direct_field_pressure_error": -2.220446049250313e-16,
+      "direct_field_mass_derivative_error": 3.3306690738754696e-16
+    },
+    {
+      "pressure": 0.15444017798183415,
+      "pressure_dot": 0.0,
+      "scalar_value": -0.054335567982402085,
+      "child_displacement": -0.011034297793180157,
+      "scalar_time_derivative": 0.0,
+      "normal_square": 0.04648158703025196,
+      "normal_magnitude": 0.21559588824987352,
+      "signed_normal": null,
+      "normal_sign_identified": false,
+      "normal_flux_sensitivity": null,
+      "scalar_stress_residual": 0.0,
+      "potential": 0.1493511455577161,
+      "predicted_Ruu": -0.1493511455577161,
+      "predicted_tidal_corrected": -0.1493511455577161,
+      "vacuum_subtracted_mass": 0.013477983983602337,
+      "vacuum_subtracted_mass_dot": 0.01137854114829584,
+      "excitation_pressure_work": 0.011378541148295892,
+      "radial_pressure": -0.1261103520425901,
+      "inward_flux": 0.0,
+      "G_nn": -0.1261103520425901,
+      "G_nu": 0.0,
+      "Misner_Sharp_mass": 1.5307877500109168,
+      "geometric_mass_dot": 1.292339523774275,
+      "flux_contribution": 0.0,
+      "pressure_work": 1.292339523774275,
+      "measured_Ruu": -0.14935114555771575,
+      "tidal_residual": 3.3306690738754696e-16,
+      "measured_tidal_corrected": -0.14935114555771575,
+      "inferred_vacuum": 0.12499999999999965,
+      "eta": 1.0,
+      "proper_time": 2.7063453132165107,
+      "scalar_value_error": -9.71445146547012e-17,
+      "normal_magnitude_error": 9.43689570931383e-16,
+      "direct_field_pressure_error": -2.220446049250313e-16,
+      "direct_field_mass_derivative_error": 2.220446049250313e-15
+    }
+  ],
+  "reference_solver": {
+    "nodes": 2550,
+    "rhs_calls": 179,
+    "iterations": 6,
+    "max_collocation_residual": 9.990336327442036e-10
+  },
+  "mass_balance": {
+    "interval_wall_proper_time": [
+      0.0,
+      2.7063453132165107
+    ],
+    "inward_flux": 0.0,
+    "vacuum_subtracted_mass_change": 0.009809732745082123,
+    "independent_excitation_pressure_work": 0.009809732745080346,
+    "gap": -1.7763568394002505e-15,
+    "conclusion": "Mass above the vacuum contribution grows in this evolved coupled reference with zero wall-rest-frame scalar influx; pressure work accounts for the change."
+  },
+  "tidal_relation": {
+    "form": "Y=Ruu-kappa*Pdot^2/(mu*e)^2=-Lambda_c-C*(P-Pc)^2",
+    "C": 2.666666666666667,
+    "second_divided_difference": -2.666666666666667,
+    "meaning": "Exact necessary local relation on any regular finite interval of a solution; independent of the unknown preparation history, not independent of the fixed action."
+  },
+  "synthetic_calibration": {
+    "scope": "Algebraic recovery and rejection test, not observations or new bulk solutions.",
+    "samples": [
+      {
+        "pressure": 0.2,
+        "pressure_dot": 0.25980762113533157,
+        "Ruu": -0.13076666666666664
+      },
+      {
+        "pressure": 0.22,
+        "pressure_dot": 0.3464101615137754,
+        "Ruu": -0.12580000000000002
+      },
+      {
+        "pressure": 0.24,
+        "pressure_dot": 0.1732050807568877,
+        "Ruu": -0.12486666666666667
+      }
+    ],
+    "calibration_indices": [
+      0,
+      1
+    ],
+    "withheld_index": 2,
+    "calibration": {
+      "ground_pressure": 0.2499999999999999,
+      "vacuum": 0.125,
+      "inferred_child_flux": 0.9999999999999991,
+      "fixed_action_vacuum_residual": 2.220446049250313e-16,
+      "calibration_pressure_separation": 0.01999999999999999
+    },
+    "predicted_withheld_Ruu": -0.12486666666666667,
+    "withheld_error": 0.0,
+    "computed_second_divided_difference": -2.6666666666666288,
+    "corrupted_withheld_shift": 0.001,
+    "corrupted_prediction_error": 0.0010000000000000009
+  },
+  "inheritance_potential_identity": {
+    "fluxes": [
+      1.5,
+      1.0,
+      0.5
+    ],
+    "ground_Lambda_values": [
+      0.28125,
+      0.125,
+      0.03125
+    ],
+    "second_difference": 0.0625,
+    "local_C_times_spacing_over_kappa_squared": 0.16666666666666669,
+    "exact_relation": "C*Delta2Lambda/kappa^2=epsilon/[2(1-epsilon)]",
+    "scope": "Same-action potential-level relation. No composed three-generation scalar spacetime or origin of the couplings is proved; these are not the pure-flux P002 numbers."
+  },
+  "one_wall_nonidentifiability": {
+    "models": [
+      {
+        "epsilon": 0.25,
+        "charge": 0.5,
+        "parent_flux": 1.5,
+        "child_flux": 1.0,
+        "mu": 17.32050807568877,
+        "force_scale": 8.660254037844386,
+        "ground_pressure": 0.25,
+        "tidal_C": 2.666666666666667,
+        "ground_Lambda": [
+          0.28125,
+          0.125,
+          0.03125
+        ],
+        "vacuum_second_difference": 0.0625,
+        "next_ground_transition_is_downward": true,
+        "recovered": {
+          "epsilon": 0.25000000000000006,
+          "charge_magnitude": 0.49999999999999994,
+          "charge_squared": 0.24999999999999997
+        }
+      },
+      {
+        "epsilon": 0.8928571428571429,
+        "charge": 1.3228756555322954,
+        "parent_flux": 0.7937253933193772,
+        "child_flux": -0.5291502622129182,
+        "mu": 6.5465367070797695,
+        "force_scale": 8.660254037844384,
+        "ground_pressure": 0.25,
+        "tidal_C": 2.6666666666666683,
+        "ground_Lambda": [
+          0.28125000000000006,
+          0.12500000000000003,
+          1.5312500000000002
+        ],
+        "vacuum_second_difference": 1.5625000000000002,
+        "next_ground_transition_is_downward": false,
+        "recovered": {
+          "epsilon": 0.892857142857143,
+          "charge_magnitude": 1.3228756555322954,
+          "charge_squared": 1.75
+        }
+      }
+    ],
+    "scalar_translation": 0.05196152422706632,
+    "exact_potential_difference": "U_B(phi+3sqrt(3)/100,sqrt(7)*(q-6/5))-U_A(phi,q)=3*(q-1)*(q-3/2)",
+    "maximum_numerical_two_sector_potential_gap": 1.1102230246251565e-16,
+    "interpretation": "The first two charge sectors have identical reduced classical scalar/gravity/wall dynamics after field translation. Same-oriented inheritance predicts different third-sector ground energies. Independent charge probes, additional matter couplings and quantum formation are outside this equivalence.",
+    "inverse": "e^2=D/kappa+kappa/(2C); epsilon=(D/kappa)/e^2",
+    "limits": "Three compatible physical regions are not constructed here. The second model predicts an upward next ground transition, so the ordinary descending-cap preparation cannot simply be copied."
+  },
+  "checks": {
+    "symbolic_zero_identities": {
+      "finite_time_mass_balance": "0",
+      "vacuum_subtracted_mass_balance": "0",
+      "canonical_scalar_stress_identity": "0",
+      "independent_tidal_parabola": "0",
+      "source_free_second_divided_difference": "0",
+      "equal_charge_ground_spacing": "0",
+      "local_tidal_and_inherited_vacuum_relation": "0",
+      "two_sector_potential_equivalence": "0",
+      "inheritance_charge_inverse": "0",
+      "inheritance_mixing_inverse": "0"
+    },
+    "maximum_numerical_comparison_error": 3.8191672047105385e-14,
+    "comparison_tolerance": 2e-08
+  },
+  "limits": "Requires normal geometric information, not radius or expansion alone. At Pi=0 this input set identifies only the magnitude of the normal scalar gradient; extra curvature derivatives can add information. Derivative noise and nearby calibration pressures can make inversion ill-conditioned. Local identities are necessary, not a bulk existence theorem, finite-time excited-parent evolution, empirical cosmology, or prediction of the observed vacuum scale.",
+  "next": "Use the invariant flux, pressure-work balance and independent tidal relation to test the coupled excited-parent evolution; freeze calibrations before testing independent observations.",
+  "process_cpu_seconds": 0.3125,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+    "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "scripts/check_nsc_atlas_geometric_observer.py": "de499d9263f83e06eb011d2a5839aef6af00ae3c7adaba89609479fc53933c6f",
+    "scripts/plot_nsc_atlas_geometric_observer.py": "64d3904f6d328d531252066db5765ab490fba35281ee2f1cd9d88d7f106e12d0",
+    "tests/test_nsc_atlas_geometric_observer.py": "5d9ce121d0e2984c24725a8f5e3bb9d6fafcb550699207d81c437bc87cb9e5e5"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_geometric_observer.py"
+}

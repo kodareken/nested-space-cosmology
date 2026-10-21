@@ -1,5 +1,14 @@
 # Current NSC claim ledger
 
+The [geometric observer](nsc-atlas-geometric-observer.md) gives exact
+necessary one-sided scalar, flux, tidal and mass/work identities for the
+declared charged-wall action. The existing coupled geometry checks them;
+synthetic calibration is labelled separately. A polynomial identity proves
+that one wall cannot distinguish two fixed coupling choices, while the next
+same-oriented charge sector distinguishes their vacuum potentials. The
+inverse needs that additional comparable ground-vacuum information and does
+not establish a third physical region or a unique fundamental theory.
+
 The [finite parent source](nsc-atlas-parent-source.md) constructs a positive
 conformal metric with finite scalar excitation and the same charged wall.
 An exact second-normal matching rule repairs the scalar incompatibility of

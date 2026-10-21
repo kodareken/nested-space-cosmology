@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [geometric observer and inheritance inverse](nsc-atlas-geometric-observer.md)
+connect child-side wall geometry to scalar reconstruction, an independent
+tidal relation and the full flux/pressure-work mass balance. An exact
+one-interface coupling ambiguity is resolved algebraically by an additional
+same-law ground-vacuum sector; physical composition remains open.
+
 The [finite parent scalar source](nsc-atlas-parent-source.md) solves its
 spatial gravity and charged-wall constraint together with the scalar
 second-order interface condition. It calculates finite proper energy and

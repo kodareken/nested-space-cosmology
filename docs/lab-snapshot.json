@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "982d668e8198eb467e53fe2e4c56722924998594",
+  "current_receipt_commit_parent": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 20359,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 20801,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "4712c0d2875c8912e636a3749231ba37481e8ae26e198cbef9eb2a5a12806e4d"
+      "sha256": "8f4b573b70497559eef4244370f2dd9c572f1b85c8aacf4069ae8c7a012133d5"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 277584,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 278108,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "cc5b2732aed28484a8e881e8ce75d7d9e050535076a8662cfa63ad7de65e63b0"
+      "sha256": "68078aa05d1288e46cf4ce62c92aacf289993ddcdf7104978289b99ddfbcf74e"
     },
     {
-      "bytes": 119068,
-      "change": "Clarify the observational bridge and reconcile regular-preparation status.",
-      "changed_from_commit": "617e7171cdb8edfe278e293a9b5417cd06a5cc4d",
+      "bytes": 119691,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "838e89218d11a41d15388bf7638eb6b001f44bfc8ed81f2684b508d29aecc0a2"
+      "sha256": "253abe8d94889bf10b46689d95699450f81b7d6d37e695cd5fb2b3922468b2af"
     },
     {
       "bytes": 9543,
@@ -10312,9 +10312,9 @@
       "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
-      "bytes": 107277,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 107862,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "import_bytes": 102088,
       "import_sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a",
       "migration_disposition": "active_owner",
@@ -10322,15 +10322,15 @@
       "original_path": "lab/docs/claim-ledger.md",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
-      "sha256": "6239bd3f8ebcf9a4fa4a3ea0e7d3929682152094f87cc03af1b111fc66edcf33"
+      "sha256": "df6f74a53e8a8515990f3e8d51275d3d0ed6886873a6da6e1ad45f75822380f3"
     },
     {
-      "bytes": 448143,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 449192,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "f9ddaae7ed9f17638a6873f6875a54fbffb450591936c261f3d949d0e45078bd"
+      "sha256": "beb5cbba7b6bd9270b8d2ad4cdda522ebc29feffb79a497ed4db4764e19da83c"
     },
     {
       "bytes": 173938,
@@ -10355,6 +10355,14 @@
       "path": "docs/figures/nsc-atlas-flux-transition.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "a4a97bbdc6ea98e2b286741e4c58c81811b35d29b4efbbfc14ebf23589ef9193"
+    },
+    {
+      "bytes": 142652,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "path": "docs/figures/nsc-atlas-geometric-observer.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e007d2cd3888c4fc99574bb09d98dec251350052de9612eeb9a104a1fd64a1d0"
     },
     {
       "bytes": 126083,
@@ -10572,6 +10580,14 @@
       "sha256": "93e5167853adf47ae9b61961cae3ec6a8c0efcdda0b1dcb2e3c5e1cf72901fbb"
     },
     {
+      "bytes": 15205,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "path": "docs/nsc-atlas-geometric-observer.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5858e637bb48c76bcd66fc88c6cfbd666bec4d8b4cf77dff2e3e5829faf3e9c2"
+    },
+    {
       "bytes": 8895,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
@@ -10680,15 +10696,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 90685,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 92063,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "78ec0c2063f02b8fbe77d0ebb3c759bba631a5edb00169814a865523ced3fc71"
+      "sha256": "f894a7b7dc7f6439e2d63de7897b655159c3ee75f20da3bfc4826894dc42270a"
     },
     {
       "bytes": 30876,
@@ -11656,12 +11672,12 @@
       "sha256": "420b0342c1b5230c75a91080110781501556acb8d39e7b43c69d969e52d49dee"
     },
     {
-      "bytes": 588491,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 589209,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "384e66544818aa6d1835cd3045efaf6566dc2682929e5733750fbc3634b66836"
+      "sha256": "5cf70fc7e09d473dd5cf36d428d7e78d7d78b33432aa122e51a1101772425383"
     },
     {
       "bytes": 6705,
@@ -11670,20 +11686,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 217920,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 218360,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d0cfd58ef659378f7b8188e7496bb1965e0ee40ebd2ab50b6e1aa922c8e1f531"
+      "sha256": "5a5cac157994f12ef44399705f5648dc44529e112b188f7f0219b49bcc99b179"
     },
     {
-      "bytes": 37453,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 37822,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "ebb6c5af652d8b64e3f7f55f569a1a13617df5fdb6cd9f40a024a6cd77a6566d"
+      "sha256": "3c0b6c1af01716865ab76b301021ef534e5ebde33ec19fb41efccdea0701268b"
     },
     {
       "bytes": 18356,
@@ -11752,28 +11768,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 27184,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 27511,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "96750f6d3c71e8b466643fd849f3f64200941eac115fb832ca640805eb9d5418"
+      "sha256": "b152a4c8df82478c91ee543f0fe658e0428db116bd86779b860183a48afb2c57"
     },
     {
       "bytes": 3206,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "032feb2ae19949c413797fd4bc6f1fd169e9dbc08532cf7cb9152be6a6ab0014"
+      "sha256": "e3e3b9970bac28525c22b8f1244cd05789e5475bd357a62ec5826746e5a7c744"
     },
     {
-      "bytes": 31285,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 32723,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f7883f2317c2bc7c6f43b1037be3ab4e9520725d7720b997fbe5a5b45179fbb0"
+      "sha256": "833013f0aa84e2f1d8a4b0d6b4ef5364e05e89943caf99d89237b922d2b48474"
     },
     {
       "bytes": 226492,
@@ -11785,27 +11801,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "02f5046438602a0d6489ea7ad0426f89deaec168e5d5ef6376399ab294e007fb"
+      "sha256": "5d9bf4c0a4748f381ef21b39080976912c1c7cddbd88007e255c88e70747fefa"
     },
     {
-      "bytes": 307194,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 315021,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f0e6ebeb28dc6e68dc6ed88c6c499335313375ac87f2705e4cae20710fa61a30"
+      "sha256": "35f5019ea25f79d0e4c8c0003a7ab53248e706503ef6c6bf332931abd59137e8"
     },
     {
-      "bytes": 7285651,
-      "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
-      "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
+      "bytes": 7551880,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "127e09db034f9aa5d3ac8ca720e05d073084d0332e7e4ff122ee51ec60ed74b3"
+      "sha256": "56957f42f1473c452ab6096e630e2af75eb128b2be60c5c83b78f5c38d6606f2"
     },
     {
       "bytes": 3283,
@@ -30430,6 +30446,14 @@
       "sha256": "1c6fab9b40ba7fb623dffca80ec8e06b859531ccec3497361649269e580afd62"
     },
     {
+      "bytes": 12125,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "path": "results/summaries/nsc-atlas-geometric-observer-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1bf3e741a784988cac325fe941a7a9a8c664a0f624f7e2331fee960b573e65d1"
+    },
+    {
       "bytes": 6424,
       "change": "Preserve the stopped geometric calculation and enclose signed derivative squares by interval multiplication.",
       "changed_from_commit": "86bb90630b706f3b15ab7dd96459547a0f03225d",
@@ -30941,6 +30965,14 @@
       "path": "scripts/check_nsc_atlas_geometric_departure_bound.py",
       "retention_reason": "Positive comparison for uniform geometric amplitude departures, controls and producer.",
       "sha256": "5d782ef2df70a91c0b70556d9cc43e52937d427825708113cebc395a919627d5"
+    },
+    {
+      "bytes": 11663,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "path": "scripts/check_nsc_atlas_geometric_observer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "de499d9263f83e06eb011d2a5839aef6af00ae3c7adaba89609479fc53933c6f"
     },
     {
       "bytes": 7291,
@@ -33800,6 +33832,14 @@
       "sha256": "2a98127387d0c982165e59ff93062054cd369156e7573dff1f7693e7099f1bd8"
     },
     {
+      "bytes": 2410,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "path": "scripts/plot_nsc_atlas_geometric_observer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "64d3904f6d328d531252066db5765ab490fba35281ee2f1cd9d88d7f106e12d0"
+    },
+    {
       "bytes": 5347,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "69ac1279395903ee403da369b5db58a6ed850616",
@@ -34813,6 +34853,14 @@
       "path": "src/recursive_horizons/nsc_atlas_geometric_departure_bound.py",
       "retention_reason": "Positive comparison for uniform geometric amplitude departures, controls and producer.",
       "sha256": "51989c2c1be89df725202dfa72443ff11acdd87a23a29f99cc6c3315ccdf4b33"
+    },
+    {
+      "bytes": 8517,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "path": "src/recursive_horizons/nsc_atlas_geometric_observer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc"
     },
     {
       "bytes": 13090,
@@ -39075,6 +39123,14 @@
       "path": "tests/test_nsc_atlas_geometric_departure_bound.py",
       "retention_reason": "Positive comparison for uniform geometric amplitude departures, controls and producer.",
       "sha256": "b45f4fda05d2ce5185575f2139774302c141d83a3ad45ddf8ec805579484ea39"
+    },
+    {
+      "bytes": 7269,
+      "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
+      "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
+      "path": "tests/test_nsc_atlas_geometric_observer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5d9ce121d0e2984c24725a8f5e3bb9d6fafcb550699207d81c437bc87cb9e5e5"
     },
     {
       "bytes": 7941,
