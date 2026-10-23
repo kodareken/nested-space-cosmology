@@ -16,7 +16,32 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 22 October 2026
+## Current execution priority — 23 October 2026
+
+### Conserved local structure inside the inherited parent
+
+The preceding core-only embedding adds geometric mass and changes the
+enclosing wall. It cannot represent redistribution of the original parent
+without the ambient reservoir and escaping field. Compare a full membrane
+evolution, a cosmological envelope simulation, and exact compensated
+Einstein--scalar data with a covariant mass-transport law. Select the third
+as the immediate connection: it makes the energy source and exterior
+matching explicit before evolving a changed state.
+
+Complete: isolated cooling, coherent-core admission and the
+[compensated source construction](nsc-atlas-core-reservoir.md). A core,
+ambient depletion annulus and outward-current pulse have zero total mass
+offset with the actual parent expansion and both initial walls retained.
+A protected exterior annulus now connects this data to the same evolving
+cosmology and inherited vacuum. The depletion amplitude is fixed by the constraint;
+the core mass, shell support and pulse preparation remain supplied data.
+Next: evolve this compensated preparation rather than inserting a cooled
+profile into an unrelated future background. The finite calculation uses
+at most 120 CPU seconds, no old grid campaigns, and compact results.
+Independent proper-distance constraints, mass-flux identities and a
+zero-source limit address the three main risks: a momentum sign error,
+insufficient positive-energy reservoir, or initial matching mistaken for
+a completed formation history.
 
 ### Physical profile selection by scalar self-gravity
 

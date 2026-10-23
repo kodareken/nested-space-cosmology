@@ -1,5 +1,12 @@
 # Paper guide
 
+Revision2026-10-23.1 adds Sections10.31--10.32 and Figure20: a nonlinear
+compensated core, inherited reservoir and outward-current pulse, plus the
+surrounding parent domain whose evolution remains unchanged. Local
+redistribution supplies structure while preserving the inherited vacuum.
+Initial compatibility and causal evolution are distinguished from the
+still-missing complete formation history.
+
 Revision 2026-10-22.1 adds Sections 10.29--10.30 and Figure 19: physical
 profile selection by scalar self-gravity, a controlled local cooling
 example, and coherent admission into the shared atlas. It calculates how

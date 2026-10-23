@@ -309,3 +309,8 @@ candidate and compatible sourced initial geometry for that next problem;
 it does not relabel P003 or generate a new cosmological constant.
 In a single global formation history the outgoing scalar radiation and
 the original cloud's gravitational contribution must also be included.
+
+The [next reservoir connection](nsc-atlas-core-reservoir.md) now supplies
+a constrained core/depletion/pulse preparation with the original initial
+walls and a protected evolving exterior. It closes the initial mass-source
+question for that supplied state; a full cooling-to-parent history remains open.

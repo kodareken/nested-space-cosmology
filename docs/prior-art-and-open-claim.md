@@ -1,5 +1,18 @@
 # Prior art and admission of new research
 
+## Compensated core and evolving exterior, 23 October 2026
+
+The [reservoir owner](nsc-atlas-core-reservoir.md) reuses Hayward's spherical
+mass/work law and the Einstein--scalar Cauchy framework. The missing
+connection is an ambient source and outgoing field for the previously
+added coherent core, while retaining the actual parent and wall data.
+A supplied core and pulse, one solved depletion amplitude, exact constraint
+reduction and a two-sided causal-domain bound address that connection.
+Four parallel finite cases use at most120 CPU seconds. Independent
+proper-distance geometry, omitted-momentum failure, zero-source recovery
+and tighter integration check signs and accuracy; no initial result is
+promoted to a complete formation history or an observed abundance.
+
 ## Scalar self-gravity and coherent admission, 22 October 2026
 
 The [core owner](nsc-atlas-scalar-core.md#choice-of-route-and-mathematical-attribution)

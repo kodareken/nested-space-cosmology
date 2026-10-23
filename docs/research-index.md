@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [compensated core and evolving parent](nsc-atlas-core-reservoir.md)
+connect nonlinear local structure, a finite ambient source, scalar flux
+and unchanged initial wall data. The exterior causal annulus retains
+same-action cosmological evolution; the central formation history is open.
+
 The [self-gravitating scalar core](nsc-atlas-scalar-core.md) connects an
 independently solved radial profile, finite local cooling, the frequency
 hierarchy and an exact sourced initial-atlas admission. It retains the

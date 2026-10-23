@@ -1,5 +1,16 @@
 # Reproducing the root project
 
+The compensated core/reservoir calculation uses four worker processes:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_core_reservoir.py --output results/summaries/nsc-atlas-core-reservoir-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_core_reservoir.py
+```
+
+The [owner](nsc-atlas-core-reservoir.md) states the supplied preparation,
+solved depletion, exact initial matching, causal domain and evolution limits.
+The producer stores no full radial arrays; its budget is120 CPU seconds.
+
 The scalar-core calculation uses six worker processes:
 
 ```powershell

@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 22 October 2026
+Working research manuscript, 23 October 2026
 
 ## Abstract
 
@@ -50,6 +50,11 @@ free-fall and light-propagation effects. A separate controlled frequency
 member supplies local gravitational-cooling examples and a mass-selected
 coherent core with a sourced initial-atlas embedding; relative phase
 with the inherited ambient field changes its geometric mass.
+A compensated core, depleted ambient reservoir and outward-current pulse
+then satisfy the nonlinear initial constraints with unchanged enclosing
+wall data. A surrounding causal annulus retains the same evolving parent
+and inherited vacuum, connecting local structure to that cosmology without
+asserting a completed formation history.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -5203,6 +5208,142 @@ sourced initial admission. It leaves cloud origin, coupling and
 relative-phase selection, nonlinear global evolution and observed
 abundance as further physical connections.
 
+### 10.31. Supplying a local core from the inherited parent
+
+<!-- nsc-claim:compensated-core-reservoir -->
+
+The core-only admission adds geometric mass. A local redistribution instead
+needs a reservoir and the outgoing scalar field in the same geometry. Keep
+the previous coherent core, the original parent expansion and the same
+frequency-2000 action. Surround the core with a depleted scalar annulus and
+a compact outward-current pulse. Determine the depletion by requiring zero
+enclosing mass offset. The pulse and reservoir profiles are specified initial
+data; no formation history is silently imported from the isolated cooling run.
+
+With future normal $n$, outward unit spatial vector $s$, define $v=n(R)$,
+$\beta=s(R)$, $\Pi=n(\phi)$ and $F=d\phi/dR$. The exact spherical constraints
+in the convention $K=-\mathcal L_n h/2$ reduce to
+
+$$
+K_t=-\frac{v}{R},\qquad K_r=-v_R-\frac{\kappa R}{2}\Pi F,
+\qquad M_R=\frac{\kappa R^2}{2}(\rho-U_0-v\Pi F),
+$$
+
+where $\rho=(\Pi^2+\beta^2F^2)/2+U$, $U_0=21/32$ and
+
+$$
+m=\frac{R}{2}(1+v^2-\beta^2)
+=M+\frac{\kappa U_0R^3}{6}.
+$$
+
+Here $m$ is geometric mass, equal to $G$ times physical mass for $c=1$.
+Fix $v=H_0R$. The pulse requires the displayed radial extrinsic-curvature
+correction; retaining $K_r=-H_0$ there would violate the momentum constraint.
+
+The core ends at $R_c=.120974320414$. A C4 bump depletes the inherited
+displacement $\chi_0=.000433012702$ on $[R_c,2R_c]$. A sinusoidal pulse
+with peak envelope $.02\chi_0$ occupies $[3R_c,4R_c]$ and has
+$\Pi=-\beta F$. Its outward current is $j=\beta^2F^2$. The potential
+is retained, so this instantaneous characteristic choice is not a claim
+of purely outward massive propagation at all later times.
+
+Solving $M(4R_c)=0$ fixes the maximum displacement reduction to
+18.5913687%. The mass contributions are
+
+| Region | Geometric excess, atlas units |
+| --- | ---: |
+| Coherent core | .0000957140112793 |
+| Ambient reservoir | -.0000964548506037 |
+| Outward-current pulse | .000000740839324389 |
+| Enclosing offset | zero within $2\times10^{-11}$ |
+
+The canonical absolute energy obeys $\rho\geq\rho_v=9/32$ throughout.
+Depletion concerns excitation above that floor. Both original walls retain
+their initial speed, acceleration and full junction data. Local geometry
+does change: the maximum compactness excess $2M/R$ is about .00687441,
+and the parent's proper length increases by .000244008403. Equal enclosing
+mass does not imply identical internal geometry or proper energy integrals.
+
+![A scalar core supplied by a compensated inherited reservoir](../docs/figures/nsc-atlas-core-reservoir.png)
+
+*Figure 20. Left: the core's positive geometric mass is supplied by ambient
+depletion, with the outward-current pulse included in the balance. Right:
+the pulse carries nonzero outward scalar energy while the total initial
+exterior mass offset vanishes. These are constrained initial data, not a
+claim that the previous vacuum-limit cooling run formed this configuration.*
+
+Independent proper-distance integration, exact symbolic constraints and
+zero-source/no-pulse controls check the construction. Tightening integration
+changes the depletion fraction by less than $10^{-7}$. The
+[source and compensation derivation](../docs/nsc-atlas-core-reservoir.md)
+and [finite record](../results/summaries/nsc-atlas-core-reservoir-v1.json)
+give the full preparation and numerical comparison. The solved root fixes
+one compatibility datum; it does not select a primordial seed or abundance.
+
+### 10.32. A perturbed centre and the same evolving cosmology
+
+<!-- nsc-claim:compensated-parent-domain -->
+
+At $R_b=4R_c$, the perturbation and its matching derivatives vanish,
+$\Pi=0$ and $M=0$. Outside this sphere the spatial metric, extrinsic
+curvature and scalar data equal the original parent exactly. This makes
+the causal connection stronger than the earlier core-only admission.
+
+Use the homogeneous reference angle $\theta$, with
+$a_0=6.62607707610$, $\theta_b=\arcsin(R_b/a_0)=.0730942965661$ and
+$\theta_w=2.85076435977$. Its future conformal-distance bound remains
+$\eta_*=.515418396612$. Local Einstein--scalar uniqueness gives the
+reference evolution on $\theta_b+\eta(t)<\theta<\theta_w-\eta(t)$.
+The fixed annulus
+
+$$
+.588512693178<\theta<2.335345963158
+$$
+
+therefore stays in that domain for all future reference proper time.
+It occupies at least 86.6472% of the **actual initial parent volume**.
+The bound concerns a smooth exterior domain; it does not assume the same
+light cones inside the perturbed core or establish a complete moving-wall
+continuation. Any compatible causal development agrees on this domain.
+
+For $L_{\rm ref}=a_0$ fixed by the retained geometry, its inherited vacuum
+component remains
+
+$$
+\Lambda_{\rm vac}L_{\rm ref}^2
+=\kappa\rho_v a_0^2=12.3482523989285.
+$$
+
+The excited scalar still contributes to the total stress. Rearranging it
+into local structure does not change the inherited vacuum floor. This
+establishes coexistence of a nonlinear local source and a connected,
+evolving surrounding cosmology. It does not determine the observed Lambda
+or an observed dark-matter abundance.
+
+The dynamical connection must keep flux and pressure work together.
+[Hayward's spherical mass law](https://arxiv.org/html/gr-qc/9710089) gives
+
+$$
+n(m)=\frac{\kappa R^2}{2}(\Pi\beta^2F-vp_r),
+\qquad p_r=\frac{\Pi^2+\beta^2F^2}{2}-U.
+$$
+
+For the supplied outward characteristic, the fixed-areal-radius derivative
+$D=n-(v/\beta)s$ satisfies
+
+$$
+D(m)=-\frac{\kappa R^2}{2}\beta F^2(\beta+v)^2\leq0.
+$$
+
+Where the fixed-radius trajectory is timelike, normalize $D$ to its proper
+time. At the sampled peak current its mass rate is approximately
+$-3.81559\times10^{-5}$. An expanding normal sphere has a different rate
+because pressure does work. The [connected derivation](../docs/nsc-atlas-core-reservoir.md)
+and [checks](../results/summaries/nsc-atlas-core-reservoir-v1.json) retain
+both contributions. The next task is to evolve this compensated preparation
+and calculate a local signal, preserving the source, outgoing field and
+same-action geometry throughout.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -5252,7 +5393,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 20. The isolated reference in joined causal charts. Horizons are
+*Figure 21. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -6258,7 +6399,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 21. Saved finite-window comparisons. A: the previous and current
+*Figure 22. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -6354,7 +6495,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 22. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 23. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -7139,7 +7280,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 23. Research dependencies, distinct from spacetime causal arrows.
+*Figure 24. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

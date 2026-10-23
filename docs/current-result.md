@@ -1,5 +1,19 @@
 # What the calculations show
 
+The [core-reservoir connection](nsc-atlas-core-reservoir.md) constructs
+nonlinear scalar/geometry data with a coherent core, ambient depletion
+and an outward-current pulse. Their geometric masses balance with no
+change to either initial wall. The solved depletion fraction is .1859136874;
+absolute canonical density stays above its vacuum floor. An independent
+proper-distance calculation checks both gravitational constraints.
+
+Exact exterior matching supplies a protected evolving annulus covering
+at least86.6472% of the actual initial parent volume. It retains the inherited
+vacuum Lambda*a0^2=12.3482523989285. This is a connected initial construction,
+causal-domain theorem and mass-flux law, not a completed nonlinear formation
+history or an observed dark-matter abundance. The next step is evolution
+of this combined preparation, retaining its reservoir and radiation.
+
 The [scalar core connection](nsc-atlas-scalar-core.md) calculates a
 self-gravitating nodeless profile and finite local gravitational-cooling
 examples. After mass normalization, two distinct cloud shapes approach it

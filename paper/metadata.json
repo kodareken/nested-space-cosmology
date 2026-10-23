@@ -1,14 +1,14 @@
 {
   "author": "Douglas Ek",
-  "date": "22 October 2026",
-  "date_iso": "2026-10-22",
+  "date": "23 October 2026",
+  "date_iso": "2026-10-23",
   "project": "Nested-Space Cosmology",
-  "source_date_epoch": 1792627200,
+  "source_date_epoch": 1792713600,
   "status": "WORKING DRAFT",
   "subtitle": "The Geometry of a Universe",
   "title": "Nested-Space Cosmology",
-  "version": "working-2026-10-22.1",
-  "revision": "2026-10-22.1",
+  "version": "working-2026-10-23.1",
+  "revision": "2026-10-23.1",
   "submission_ready": false,
   "author_review": "pending"
 }

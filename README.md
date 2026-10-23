@@ -1,5 +1,12 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [compensated core and parent](docs/nsc-atlas-core-reservoir.md) now
+connect local structure to a definite ambient energy source. A solved
+18.5914% displacement depletion balances a core and outward-current pulse,
+leaving the original initial walls unchanged. A surrounding annulus with
+at least 86.6472% of initial parent volume retains the same homogeneous
+future and inherited vacuum. Full core formation remains open.
+
 The [self-gravitating scalar core](docs/nsc-atlas-scalar-core.md) now
 supplies a physical profile-selection candidate. Two distinct clouds shed
 radiation toward the independently solved nodeless shape in a controlled

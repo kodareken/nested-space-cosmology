@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v2",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-22",
+  "recorded_on": "2026-10-23",
   "purpose": "Bind the living main manuscript's claims to directly linked evidence. Preserved historical findings remain indexed without promoting them to current cosmological results.",
   "historical_claim_bindings": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
   "how_records_are_found": "The checker reads links following each unique nsc-claim marker from the manuscript itself.",
@@ -413,6 +413,16 @@
       "section": "10.30",
       "status": "measured",
       "owner": "docs/nsc-atlas-scalar-core.md"
+    },
+    "compensated-core-reservoir": {
+      "section": "10.31",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-core-reservoir.md"
+    },
+    "compensated-parent-domain": {
+      "section": "10.32",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-core-reservoir.md"
     }
   },
   "findings": [
@@ -799,6 +809,22 @@
       "note": "docs/nsc-atlas-scalar-core.md",
       "record": "results/summaries/nsc-atlas-scalar-core-v1.json",
       "paper_section": "10.30"
+    },
+    {
+      "id": "compensated-core-reservoir",
+      "status": "measured",
+      "summary": "A supplied coherent scalar core, solved ambient depletion and outward-current pulse satisfy nonlinear Einstein constraints with zero exterior geometric mass offset and unchanged initial wall data. Independent proper-distance constraints and finite controls verify the preparation, not a formation history.",
+      "note": "docs/nsc-atlas-core-reservoir.md",
+      "record": "results/summaries/nsc-atlas-core-reservoir-v1.json",
+      "paper_section": "10.31"
+    },
+    {
+      "id": "compensated-parent-domain",
+      "status": "derived",
+      "summary": "Exact exterior initial matching supplies a surrounding homogeneous domain protected from both core and walls by the reference conformal bound. At least86.6472 percent of actual initial parent volume retains the inherited cosmology. Covariant mass transport includes radiation and pressure work; no full wall evolution or observed vacuum selection is inferred.",
+      "note": "docs/nsc-atlas-core-reservoir.md",
+      "record": "results/summaries/nsc-atlas-core-reservoir-v1.json",
+      "paper_section": "10.32"
     }
   ]
 }

@@ -1,0 +1,355 @@
+{
+  "schema": "nsc-atlas-core-reservoir-v1",
+  "result": "A nonlinear local core, inherited-scalar depletion and outward-current pulse satisfy the shared atlas constraints with zero enclosing mass offset and unchanged initial wall data.",
+  "symbolic_zero_identities": {
+    "momentum_constraint": "0",
+    "Hamilton_mass_constraint": "0",
+    "normal_mass_transport": "0",
+    "outgoing_fixed_radius_flux": "0",
+    "homogeneous_pressure_work": "0",
+    "fixed_radius_vacuum_work_cancels": "0"
+  },
+  "runs": {
+    "compensated": {
+      "depletion_fraction": 0.18591368740132616,
+      "ambient_displacement": 0.00043301270189221924,
+      "frequency": 2000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "pulse_fraction": 0.02,
+      "annulus_boundaries": [
+        0.0,
+        0.12097432041354271,
+        0.24194864082708542,
+        0.3629229612406281,
+        0.48389728165417084
+      ],
+      "mass_at_boundaries": [
+        0.0,
+        9.571401127926372e-05,
+        -7.408393243893545e-07,
+        -7.408393243897154e-07,
+        -9.583207758968884e-19
+      ],
+      "core_geometric_excess": 9.571401127926372e-05,
+      "reservoir_geometric_excess": -9.645485060365307e-05,
+      "pulse_geometric_excess": 7.408393243887571e-07,
+      "total_geometric_excess": -9.583207758968884e-19,
+      "unbalanced_geometric_excess": 9.645463140241812e-05,
+      "full_depletion_geometric_excess": -0.0002571697237326916,
+      "mass_integral_parts": {
+        "gradient": 3.8600847175305873e-07,
+        "kinetic": 2.1918130012602025e-07,
+        "potential_excess": -6.876707687519211e-07,
+        "momentum": 8.24809984827277e-08
+      },
+      "mass_integral_gap": 1.6108438575248786e-15,
+      "proper_energy_excess": 2.7981404451458993e-06,
+      "local_proper_radius": 0.4845724512735636,
+      "parent_proper_length_change": 0.00024400840324750872,
+      "parent_proper_volume_change": 1.9811574969956423e-05,
+      "protected_reference_annulus": {
+        "initial_support_angle": 0.07309429656610848,
+        "future_conformal_distance_bound": 0.5154183966121337,
+        "permanent_inner_angle": 0.5885126931782422,
+        "permanent_outer_angle": 2.3353459631578986,
+        "initial_protected_proper_volume": 4950.16096214887,
+        "actual_initial_parent_volume": 5713.00345079418,
+        "fraction_of_actual_initial_parent_volume": 0.8664726014581234,
+        "scope": "Domain of dependence of identical smooth exterior initial data. The central perturbed ball and complete material-wall future are excluded. No bound on null propagation inside the altered core is assumed."
+      },
+      "minimum_absolute_density": 0.5297770835865706,
+      "vacuum_floor": 0.28125,
+      "minimum_beta_squared": 0.9931169559333142,
+      "maximum_local_compactness_excess": 0.00687440813213784,
+      "reservoir_absolute_capacity_bound": 0.0007745645752618565,
+      "minimum_reservoir_outer_radius_bound": 0.14890848388818975,
+      "maximum_sampled_Hamilton_residual": 4.550997800834011e-09,
+      "maximum_sampled_momentum_residual": 1.4658852356755102e-16,
+      "independent_radius_gap": -1.4988010832439613e-15,
+      "independent_mass_gap": -3.14761351851882e-16,
+      "outer_wall_speed_gap": 0.0,
+      "outer_wall_acceleration_gap": 0.0,
+      "peak_outward_current": {
+        "radius": 0.4226189493918949,
+        "current": 0.00029823858633062846,
+        "normal_mass_rate": 0.0109357067973492,
+        "fixed_areal_radius_rate": -3.74794302207028e-05,
+        "fixed_areal_radius_rate_per_proper_time": -3.8155921890260944e-05
+      },
+      "maximum_fixed_radius_rate_in_pulse": 3.469446951953614e-18,
+      "exterior_field_jets": [
+        0.0,
+        0.0
+      ],
+      "vacuum_Lambda_reference_radius_squared": 12.348252398928496,
+      "scope": "Exact nonlinear initial constraints and instantaneous Einstein mass transport. Supplied core/pulse and solved depletion; no claim that the isolated cooling run evolved into this state, no full membrane history or observed abundance.",
+      "sampled_state_sha256": "73cf396c598e7906003ca9f5c4e37a8b16a4a8230ee67756408223ad9c47ee46",
+      "cpu_seconds": 21.71875
+    },
+    "refined": {
+      "depletion_fraction": 0.1859136873999859,
+      "ambient_displacement": 0.00043301270189221924,
+      "frequency": 2000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "pulse_fraction": 0.02,
+      "annulus_boundaries": [
+        0.0,
+        0.12097432041354271,
+        0.24194864082708542,
+        0.3629229612406281,
+        0.48389728165417084
+      ],
+      "mass_at_boundaries": [
+        0.0,
+        9.571401127882329e-05,
+        -7.408393241849836e-07,
+        -7.40839324185242e-07,
+        2.4195060998294865e-18
+      ],
+      "core_geometric_excess": 9.571401127882329e-05,
+      "reservoir_geometric_excess": -9.645485060300827e-05,
+      "pulse_geometric_excess": 7.408393241876615e-07,
+      "total_geometric_excess": 2.4195060998294865e-18,
+      "unbalanced_geometric_excess": 9.645463140136507e-05,
+      "full_depletion_geometric_excess": -0.0002571697237378582,
+      "mass_integral_parts": {
+        "gradient": 3.8600847175302887e-07,
+        "kinetic": 2.191813001260201e-07,
+        "potential_excess": -6.876707681071461e-07,
+        "momentum": 8.248099848272767e-08
+      },
+      "mass_integral_gap": 2.2522110061915442e-15,
+      "proper_energy_excess": 2.79814046128886e-06,
+      "local_proper_radius": 0.48457245127356274,
+      "parent_proper_length_change": 0.00024400840324667605,
+      "parent_proper_volume_change": 1.9811574970054163e-05,
+      "protected_reference_annulus": {
+        "initial_support_angle": 0.07309429656610848,
+        "future_conformal_distance_bound": 0.5154183966121337,
+        "permanent_inner_angle": 0.5885126931782422,
+        "permanent_outer_angle": 2.3353459631578986,
+        "initial_protected_proper_volume": 4950.16096214887,
+        "actual_initial_parent_volume": 5713.00345079418,
+        "fraction_of_actual_initial_parent_volume": 0.8664726014581234,
+        "scope": "Domain of dependence of identical smooth exterior initial data. The central perturbed ball and complete material-wall future are excluded. No bound on null propagation inside the altered core is assumed."
+      },
+      "minimum_absolute_density": 0.5297770835873891,
+      "vacuum_floor": 0.28125,
+      "minimum_beta_squared": 0.9931169559333496,
+      "maximum_local_compactness_excess": 0.006874408132102355,
+      "reservoir_absolute_capacity_bound": 0.0007745645752618565,
+      "minimum_reservoir_outer_radius_bound": 0.1489084838880838,
+      "maximum_sampled_Hamilton_residual": 5.806953140563564e-09,
+      "maximum_sampled_momentum_residual": 1.4658852439473163e-16,
+      "independent_radius_gap": -3.164135620181696e-15,
+      "independent_mass_gap": 1.9707369363750332e-16,
+      "outer_wall_speed_gap": 0.0,
+      "outer_wall_acceleration_gap": 0.0,
+      "peak_outward_current": {
+        "radius": 0.4226189493918949,
+        "current": 0.000298238586330628,
+        "normal_mass_rate": 0.0109357067973492,
+        "fixed_areal_radius_rate": -3.74794302207028e-05,
+        "fixed_areal_radius_rate_per_proper_time": -3.8155921890260944e-05
+      },
+      "maximum_fixed_radius_rate_in_pulse": 3.469446951953614e-18,
+      "exterior_field_jets": [
+        0.0,
+        0.0
+      ],
+      "vacuum_Lambda_reference_radius_squared": 12.348252398928496,
+      "scope": "Exact nonlinear initial constraints and instantaneous Einstein mass transport. Supplied core/pulse and solved depletion; no claim that the isolated cooling run evolved into this state, no full membrane history or observed abundance.",
+      "sampled_state_sha256": "15563d539427e0e3d3456ae4205b615d9523b77d64bd6d818d2ce31170f89be3",
+      "cpu_seconds": 27.671875
+    },
+    "no_pulse": {
+      "depletion_fraction": 0.18437476992068438,
+      "ambient_displacement": 0.00043301270189221924,
+      "frequency": 2000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "pulse_fraction": 0.0,
+      "annulus_boundaries": [
+        0.0,
+        0.12097432041354271,
+        0.24194864082708542,
+        0.3629229612406281,
+        0.48389728165417084
+      ],
+      "mass_at_boundaries": [
+        0.0,
+        9.571401127926372e-05,
+        5.503285105232458e-19,
+        2.0348425762562618e-19,
+        4.1629625377284346e-20
+      ],
+      "core_geometric_excess": 9.571401127926372e-05,
+      "reservoir_geometric_excess": -9.571401127926317e-05,
+      "pulse_geometric_excess": -1.6185463224834184e-19,
+      "total_geometric_excess": 4.1629625377284346e-20,
+      "unbalanced_geometric_excess": 9.571401127926322e-05,
+      "full_depletion_geometric_excess": -0.0002579111474826224,
+      "mass_integral_parts": {
+        "gradient": 1.6678064452558037e-07,
+        "kinetic": 0.0,
+        "potential_excess": -1.6678064289415648e-07,
+        "momentum": 0.0
+      },
+      "mass_integral_gap": 1.6313822609063869e-15,
+      "proper_energy_excess": 4.844876967230113e-06,
+      "local_proper_radius": 0.48457307190925,
+      "parent_proper_length_change": 0.00024462903893390786,
+      "parent_proper_volume_change": 2.0492218047458168e-05,
+      "protected_reference_annulus": {
+        "initial_support_angle": 0.07309429656610848,
+        "future_conformal_distance_bound": 0.5154183966121337,
+        "permanent_inner_angle": 0.5885126931782422,
+        "permanent_outer_angle": 2.3353459631578986,
+        "initial_protected_proper_volume": 4950.16096214887,
+        "actual_initial_parent_volume": 5713.003451474823,
+        "fraction_of_actual_initial_parent_volume": 0.8664726013548926,
+        "scope": "Domain of dependence of identical smooth exterior initial data. The central perturbed ball and complete material-wall future are excluded. No bound on null propagation inside the altered core is assumed."
+      },
+      "minimum_absolute_density": 0.5307175747491645,
+      "vacuum_floor": 0.28125,
+      "minimum_beta_squared": 0.9931169559333142,
+      "maximum_local_compactness_excess": 0.00687440813213784,
+      "reservoir_absolute_capacity_bound": 0.0007745645752618565,
+      "minimum_reservoir_outer_radius_bound": 0.14890848388818975,
+      "maximum_sampled_Hamilton_residual": 4.550997800834011e-09,
+      "maximum_sampled_momentum_residual": 0.0,
+      "independent_radius_gap": -1.7208456881689926e-15,
+      "independent_mass_gap": -7.355643834395435e-16,
+      "outer_wall_speed_gap": 0.0,
+      "outer_wall_acceleration_gap": 0.0,
+      "peak_outward_current": {
+        "radius": 0.00012097432041354271,
+        "current": 0.0,
+        "normal_mass_rate": 8.331424565887634e-11,
+        "fixed_areal_radius_rate": -4.08319652292524e-17,
+        "fixed_areal_radius_rate_per_proper_time": -4.083196528780612e-17
+      },
+      "maximum_fixed_radius_rate_in_pulse": 3.469446951953614e-18,
+      "exterior_field_jets": [
+        0.0,
+        0.0
+      ],
+      "vacuum_Lambda_reference_radius_squared": 12.348252398928496,
+      "scope": "Exact nonlinear initial constraints and instantaneous Einstein mass transport. Supplied core/pulse and solved depletion; no claim that the isolated cooling run evolved into this state, no full membrane history or observed abundance.",
+      "sampled_state_sha256": "afff40c57302c3baf6bf9fd11cce946d1f091317ac736e25ad843d76b2f57ec6",
+      "cpu_seconds": 14.390625
+    },
+    "zero": {
+      "depletion_fraction": 0.0,
+      "ambient_displacement": 0.00043301270189221924,
+      "frequency": 2000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "pulse_fraction": 0.0,
+      "annulus_boundaries": [
+        0.0,
+        0.12097432041354271,
+        0.24194864082708542,
+        0.3629229612406281,
+        0.48389728165417084
+      ],
+      "mass_at_boundaries": [
+        0.0,
+        1.1694401072510724e-21,
+        -3.7816569926478064e-20,
+        2.099837352579389e-20,
+        1.3422763800698844e-19
+      ],
+      "core_geometric_excess": 1.1694401072510724e-21,
+      "reservoir_geometric_excess": -3.8986010033729136e-20,
+      "pulse_geometric_excess": 1.1322926448119455e-19,
+      "total_geometric_excess": 1.3422763800698844e-19,
+      "unbalanced_geometric_excess": 1.3422763800698844e-19,
+      "full_depletion_geometric_excess": -0.0003536250738835774,
+      "mass_integral_parts": {
+        "gradient": 0.0,
+        "kinetic": 0.0,
+        "potential_excess": 0.0,
+        "momentum": 0.0
+      },
+      "mass_integral_gap": -1.3422763800698844e-19,
+      "proper_energy_excess": 0.0,
+      "local_proper_radius": 0.484328442870316,
+      "parent_proper_length_change": -5.551115123125783e-17,
+      "parent_proper_volume_change": 5.002682324965077e-18,
+      "protected_reference_annulus": {
+        "initial_support_angle": 0.07309429656610848,
+        "future_conformal_distance_bound": 0.5154183966121337,
+        "permanent_inner_angle": 0.5885126931782422,
+        "permanent_outer_angle": 2.3353459631578986,
+        "initial_protected_proper_volume": 4950.16096214887,
+        "actual_initial_parent_volume": 5713.003430982605,
+        "fraction_of_actual_initial_parent_volume": 0.8664726044628804,
+        "scope": "Domain of dependence of identical smooth exterior initial data. The central perturbed ball and complete material-wall future are excluded. No bound on null propagation inside the altered core is assumed."
+      },
+      "minimum_absolute_density": 0.65625,
+      "vacuum_floor": 0.28125,
+      "minimum_beta_squared": 0.9946667321196361,
+      "maximum_local_compactness_excess": 1.062952084952889e-18,
+      "reservoir_absolute_capacity_bound": 0.0007745645752618565,
+      "minimum_reservoir_outer_radius_bound": 0.12097432041354272,
+      "maximum_sampled_Hamilton_residual": 1.6616275022585114e-08,
+      "maximum_sampled_momentum_residual": 0.0,
+      "independent_radius_gap": -1.8318679906315083e-15,
+      "independent_mass_gap": 1.2823530958427673e-16,
+      "outer_wall_speed_gap": 0.0,
+      "outer_wall_acceleration_gap": 0.0,
+      "peak_outward_current": {
+        "radius": 0.00012097432041354271,
+        "current": 0.0,
+        "normal_mass_rate": 2.5716837811052033e-13,
+        "fixed_areal_radius_rate": 0.0,
+        "fixed_areal_radius_rate_per_proper_time": 0.0
+      },
+      "maximum_fixed_radius_rate_in_pulse": 3.469446951953614e-18,
+      "exterior_field_jets": [
+        0.0,
+        0.0
+      ],
+      "vacuum_Lambda_reference_radius_squared": 12.348252398928496,
+      "scope": "Exact nonlinear initial constraints and instantaneous Einstein mass transport. Supplied core/pulse and solved depletion; no claim that the isolated cooling run evolved into this state, no full membrane history or observed abundance.",
+      "sampled_state_sha256": "e87e711f16e82c2ffa39e9a9fe17c931931bdef02b851d265882d4fa81dca69e",
+      "cpu_seconds": 4.015625
+    }
+  },
+  "independent_tolerance_comparison": {
+    "depletion_fraction": -1.340261235327489e-12,
+    "core_geometric_excess": -4.4043002751792404e-16,
+    "pulse_geometric_excess": -2.0109557431530114e-16,
+    "proper_energy_excess": 1.6142960584811586e-14,
+    "parent_proper_length_change": -8.326672684688674e-16
+  },
+  "preparation": {
+    "core": "Same mass-selected coherent representative as scalar-core-v1; not its full cooling snapshot.",
+    "depletion": "-a*chi0*1024*x^5*(1-x)^5 on [Rc,2Rc], a solved by M(4Rc)=0.",
+    "pulse": ".02*chi0*1024*x^5*(1-x)^5*sin(omega*(R-3Rc)) on [3Rc,4Rc]; Pi=-beta*phi_R.",
+    "slicing": "v=H_reference*R; Kt=-H_reference; Kr=-H_reference-kappa*R*Pi*phi_R/2.",
+    "supplied": "Frequency, core norm/phase, radial supports and pulse shape/amplitude are preparation inputs. Only depletion is fixed by compensation."
+  },
+  "equations": {
+    "mass": "m=R*(1+v^2-beta^2)/2=M+kappa*U0*R^3/6",
+    "radial": "M_R=kappa*R^2*(rho-U0-v*Pi*phi_R)/2",
+    "normal": "n(m)=kappa*R^2*(Pi*beta^2*phi_R-v*p_r)/2",
+    "fixed_radius_outgoing": "(n-v*s/beta)(m)=-kappa*R^2*beta*phi_R^2*(beta+v)^2/2 for Pi=-beta*phi_R"
+  },
+  "limits": "Initial nonlinear compatibility plus exact transport identities; no finite formation evolution, unique seed, abundance, nonspherical stability or observational fit. Exterior initial data coincide; equality of future observables is restricted to their common causal domain. The old homogeneous-parent shielding bound is not assigned to the altered interior.",
+  "next": "Evolve the compensated scalar state and geometry together, retaining the outgoing field and pressure work; derive the initial cloud from inheritance and connect to an observer signal.",
+  "worker_count": 4,
+  "process_cpu_seconds_including_workers": 68.03125,
+  "wall_seconds": 29.042764799989527,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_core_reservoir.py": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898",
+    "src/recursive_horizons/nsc_atlas_scalar_core.py": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "scripts/check_nsc_atlas_core_reservoir.py": "524b4aa6c11e2cd6a33e612b2171d59b940df7759b7369815dbb7c9315d883c6",
+    "scripts/plot_nsc_atlas_core_reservoir.py": "c147c1e3da1f366292b08469597199894e24414c57cc1684bd25ed1cf6d23d8c",
+    "tests/test_nsc_atlas_core_reservoir.py": "a512a17b1a58a3d5f7b1ebe48f2c9ac9e90c2e512d93ad7c3140e6afba62b215",
+    "results/summaries/nsc-atlas-scalar-core-v1.json": "93946e687370ba27b420405df4f24e9fd416cf7bdb806447b0b0dd8e830ece71"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_core_reservoir.py --figure"
+}

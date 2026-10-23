@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The [core-reservoir owner](nsc-atlas-core-reservoir.md) uses
+nsc_atlas_core_reservoir.py: CoreReservoir solves the canonical scalar and
+momentum-bearing radial constraints; ReservoirSolution checks proper-distance
+geometry and the protected exterior annulus. mass_transport provides the
+covariant flux/work and fixed-radius rates. Four independent producer cases
+run in parallel; only compact summaries and hashes persist.
+
 The [scalar core owner](nsc-atlas-scalar-core.md) uses
 nsc_atlas_scalar_core.py: solve_core constructs the nodeless eigenprofile;
 evolve_core advances a real-scalar envelope with explicit outflow accounting;

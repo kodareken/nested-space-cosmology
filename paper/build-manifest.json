@@ -1,10 +1,10 @@
 {
-  "bytes": 8525227,
+  "bytes": 8721045,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "ac9c915132a77cdfce8c1f7cb89b8116c6bd226c09c8f9cc1cbb0521a28074ea",
+  "metadata_sha256": "50dec707d7effd663bd3d8600944585faf4fd1617c4f4083164232b51841964d",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 114,
-  "pdf_sha256": "04aa028a5d0f06f307d7b59e7772f80c9c2a007ce922c1d662f45f094bee0141",
+  "pages": 116,
+  "pdf_sha256": "06ee8b220756cc203884a743057d9a2c7030f29cbf2b1b0f9ef27db9860510b9",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -18,6 +18,10 @@
     {
       "path": "docs/figures/nsc-atlas-compact-parent.png",
       "sha256": "a64a3240ded38e00ef7abef1bc7d41f3ec7e54d3cb543fa298d39ad732ef86c1"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-core-reservoir.png",
+      "sha256": "59bb0c3656f489a0c9d163e6d9bde4d80e646189ef3b600dca5d11ae192208c0"
     },
     {
       "path": "docs/figures/nsc-atlas-flux-transition.png",
@@ -448,6 +452,10 @@
       "sha256": "221cc83583b663b6e51f36e8c17dc15d3e5ef159e8ade1949b77339def397445"
     },
     {
+      "path": "results/summaries/nsc-atlas-core-reservoir-v1.json",
+      "sha256": "0665f9a4cfa0e576854901d7c706f7ac9bbc0c7a521babee6ec2548f03cf0a24"
+    },
+    {
       "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
@@ -669,6 +677,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "ece07672a70c4275f33c2ffc2467c6e93bada47e30ea8768a3e4116af9850bda",
-  "version": "working-2026-10-22.1"
+  "source_sha256": "e3d44e892fe6f3b0ab188e89ef8ab9a336d1901247b94e3b5831ac56b70d8139",
+  "version": "working-2026-10-23.1"
 }

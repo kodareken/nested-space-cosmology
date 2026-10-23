@@ -1,5 +1,18 @@
 # Cited arXiv studies
 
+## Conserved structure and a reference exterior, 23 October 2026
+
+Reread [Hayward, gr-qc/9710089v2](https://arxiv.org/html/gr-qc/9710089),
+SectionII equations2.2--2.9: geometric mass, work density and the unified
+mass gradient. Its orthonormal projections give the reservoir owner's
+radial, normal and fixed-areal-radius mass laws. No thermodynamic or
+quantum claims from later sections are imported.
+[Choquet-Bruhat, Isenberg and Pollack, gr-qc/0610045](https://arxiv.org/abs/gr-qc/0610045)
+supplies the existing Einstein--scalar constraint/Cauchy setting; the
+new [finite construction](nsc-atlas-core-reservoir.md) solves its radial
+specialization directly and uses local domain-of-dependence uniqueness,
+not a global existence theorem for the material walls.
+
 ## Self-gravitating scalar profiles and cooling
 
 [Seidel and Suen, gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015)
