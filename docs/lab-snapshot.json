@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
+  "current_receipt_commit_parent": "8f42fdc33a492bca815c376c13a2f066b653bfbf",
   "files": [
     {
       "bytes": 3120,
@@ -10582,6 +10582,14 @@
       "sha256": "59fbfc5f4958888df061dda4d15c20053292d7d40b749f333c9ca6d7c7afe198"
     },
     {
+      "bytes": 11077,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "8f42fdc33a492bca815c376c13a2f066b653bfbf",
+      "path": "docs/nsc-atlas-core-optics.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1325f94e3c7d561a090e1cca1fc112a205494a3c07fefab23ef47fa1d1226321"
+    },
+    {
       "bytes": 11960,
       "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
       "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
@@ -10792,15 +10800,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 103320,
+      "bytes": 105191,
       "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
-      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
+      "changed_from_commit": "8f42fdc33a492bca815c376c13a2f066b653bfbf",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "f332763d075b0ab9b4766d5e1977d541d46dd061e8e65891c6f9bc5ea0845c49"
+      "sha256": "d824cbc0921613677324bb7ff4a8f6b05fd976aa7092a4f323b41937db0420ed"
     },
     {
       "bytes": 30876,
@@ -31071,6 +31079,14 @@
       "sha256": "754b8715c20e44e69147509e0f037031a0bf99597df5008e80deb1ee8993fca3"
     },
     {
+      "bytes": 11663,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "8f42fdc33a492bca815c376c13a2f066b653bfbf",
+      "path": "scripts/check_nsc_atlas_core_optics.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ce04c3d25c6df544a44b4f3136b61cf0e6dbab1dadc72f7a3c00230f2b6028a0"
+    },
+    {
       "bytes": 7013,
       "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
       "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
@@ -34016,6 +34032,14 @@
       "sha256": "128a98477561b0c8e3b31825da94a1d2daf09ad2a2be1fabf4c9aad00bff572e"
     },
     {
+      "bytes": 3044,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "8f42fdc33a492bca815c376c13a2f066b653bfbf",
+      "path": "scripts/plot_nsc_atlas_core_optics.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a498dc9b7741d021742cbf0ff92bfb93fd1e5cbccdb9f8a53602545a4c573579"
+    },
+    {
       "bytes": 1813,
       "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
       "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
@@ -34842,6 +34866,14 @@
       "path": "src/recursive_horizons/nsc_atlas_core_evolution.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "21ee66faa161cd6545155db954994c5f126d2dfa2a1b34249ed3193dae37755d"
+    },
+    {
+      "bytes": 11218,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "8f42fdc33a492bca815c376c13a2f066b653bfbf",
+      "path": "src/recursive_horizons/nsc_atlas_core_optics.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5cddb759ad55b4a28fec71226db62b1184ef7ba95418fdc14b4da08cc0b13a8f"
     },
     {
       "bytes": 12883,
@@ -39048,6 +39080,14 @@
       "path": "tests/test_nsc_atlas_core_evolution.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "acf84dcc968d483fbe7a36670837e8e7e92f82f8a5027bfc706c40383ed124ee"
+    },
+    {
+      "bytes": 2921,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "8f42fdc33a492bca815c376c13a2f066b653bfbf",
+      "path": "tests/test_nsc_atlas_core_optics.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b5627281e6096387b2333cb0f8709eb82a5807c400948ddc1a2464732a9f26ff"
     },
     {
       "bytes": 3591,

@@ -18,6 +18,36 @@ starting a derivation.
 
 ## Current execution priority — 23 October 2026
 
+### From formed structure to lensing and curvature focusing
+
+The completed radial clock result does not yet show how the concentration
+distorts an image. Compare inherited cloud/population selection, nonspherical
+persistence and optical focusing on the actual evolving geometry. Select
+lensing: it supplies an independent observable with no new physical source.
+Preparation still requires a state-selection input; stability remains a
+separate next question rather than a reason to repeat the closed radial run.
+
+Active: reuse the frozen Einstein-scalar evolution to transport nonradial
+null rays between held areal-radius screens. Use fixed proper emission
+ages2.8 and3.4, a finite angular fan and the same homogeneous control.
+Derive both canonical geodesics and the two Sachs/Jacobi focusing equations;
+compare beam area from curvature with the angular ray map. The exact
+identity R_ab k^a k^b=kappa(k phi)^2 separates direct null focusing from
+the vacuum potential, while Weyl curvature retains inhomogeneous gravity.
+Observer position, emission age and sky angle define the experiment; they
+are not new couplings or a fitted cloud profile.
+
+The implementation will stream the existing field solver in finite blocks,
+leaving its equations and source records unchanged. Independent optical
+equations, homogeneous/flat recovery, time/angular refinement and the
+finite-domain check address the main risks: a screen or Doppler convention
+error, unresolved caustics, or frozen-metric focusing mistaken for the
+evolving result. The initial optical campaign is bounded by4500 CPU seconds
+including parallel workers. Persist compact checkpoints before reporting
+any exhausted budget; do not discard completed calculations. Next is a
+joint optical/clock relation and its preparation degeneracies, with no
+claim of an observed dark-matter population from this benchmark alone.
+
 ### Coupled evolution, diffuse preparation and a received clock signal
 
 Complete: the [finite coupled evolution](nsc-atlas-core-evolution.md)

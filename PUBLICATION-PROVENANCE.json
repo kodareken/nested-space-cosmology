@@ -1656,9 +1656,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2499685,
+      "bytes": 2501889,
       "path": "docs/lab-snapshot.json",
-      "sha256": "8ef4779b1c765d592e4d53e5f3fcf67bbc7253ccb62cbedac23faa6a41f0aa38"
+      "sha256": "91e83044be2beffde9fd27c77215124a56f523ddd5dd14a6b08594377b3526ed"
     },
     {
       "bytes": 4997,
@@ -1724,6 +1724,11 @@
       "bytes": 14369,
       "path": "docs/nsc-atlas-core-evolution.md",
       "sha256": "59fbfc5f4958888df061dda4d15c20053292d7d40b749f333c9ca6d7c7afe198"
+    },
+    {
+      "bytes": 11077,
+      "path": "docs/nsc-atlas-core-optics.md",
+      "sha256": "1325f94e3c7d561a090e1cca1fc112a205494a3c07fefab23ef47fa1d1226321"
     },
     {
       "bytes": 11960,
@@ -1911,9 +1916,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 103320,
+      "bytes": 105191,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "f332763d075b0ab9b4766d5e1977d541d46dd061e8e65891c6f9bc5ea0845c49"
+      "sha256": "d824cbc0921613677324bb7ff4a8f6b05fd976aa7092a4f323b41937db0420ed"
     },
     {
       "bytes": 30876,
@@ -15551,6 +15556,11 @@
       "sha256": "754b8715c20e44e69147509e0f037031a0bf99597df5008e80deb1ee8993fca3"
     },
     {
+      "bytes": 11663,
+      "path": "scripts/check_nsc_atlas_core_optics.py",
+      "sha256": "ce04c3d25c6df544a44b4f3136b61cf0e6dbab1dadc72f7a3c00230f2b6028a0"
+    },
+    {
       "bytes": 7013,
       "path": "scripts/check_nsc_atlas_core_reservoir.py",
       "sha256": "524b4aa6c11e2cd6a33e612b2171d59b940df7759b7369815dbb7c9315d883c6"
@@ -17211,6 +17221,11 @@
       "sha256": "128a98477561b0c8e3b31825da94a1d2daf09ad2a2be1fabf4c9aad00bff572e"
     },
     {
+      "bytes": 3044,
+      "path": "scripts/plot_nsc_atlas_core_optics.py",
+      "sha256": "a498dc9b7741d021742cbf0ff92bfb93fd1e5cbccdb9f8a53602545a4c573579"
+    },
+    {
       "bytes": 1813,
       "path": "scripts/plot_nsc_atlas_core_reservoir.py",
       "sha256": "c147c1e3da1f366292b08469597199894e24414c57cc1684bd25ed1cf6d23d8c"
@@ -17994,6 +18009,11 @@
       "bytes": 18714,
       "path": "src/recursive_horizons/nsc_atlas_core_evolution.py",
       "sha256": "21ee66faa161cd6545155db954994c5f126d2dfa2a1b34249ed3193dae37755d"
+    },
+    {
+      "bytes": 11218,
+      "path": "src/recursive_horizons/nsc_atlas_core_optics.py",
+      "sha256": "5cddb759ad55b4a28fec71226db62b1184ef7ba95418fdc14b4da08cc0b13a8f"
     },
     {
       "bytes": 12883,
@@ -20501,6 +20521,11 @@
       "sha256": "acf84dcc968d483fbe7a36670837e8e7e92f82f8a5027bfc706c40383ed124ee"
     },
     {
+      "bytes": 2921,
+      "path": "tests/test_nsc_atlas_core_optics.py",
+      "sha256": "b5627281e6096387b2333cb0f8709eb82a5807c400948ddc1a2464732a9f26ff"
+    },
+    {
       "bytes": 3591,
       "path": "tests/test_nsc_atlas_core_reservoir.py",
       "sha256": "a512a17b1a58a3d5f7b1ebe48f2c9ac9e90c2e512d93ad7c3140e6afba62b215"
@@ -22981,7 +23006,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "8ef4779b1c765d592e4d53e5f3fcf67bbc7253ccb62cbedac23faa6a41f0aa38",
+  "lab_snapshot_sha256": "91e83044be2beffde9fd27c77215124a56f523ddd5dd14a6b08594377b3526ed",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-23.2",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
