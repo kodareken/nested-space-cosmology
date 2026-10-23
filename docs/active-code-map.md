@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The [coupled core owner](nsc-atlas-core-evolution.md) uses
+nsc_atlas_core_evolution.py: DiffuseReservoir fixes the alternative initial
+mass; geometry solves mass/lapse on a moving radial chart; rates and
+evolve_arrays advance the unaveraged scalar, parent and clocks with Numba.
+Independent integrated mass flux and canonical photon momentum check the
+constrained evolution. The producer runs independent cases in six processes.
+
 The [core-reservoir owner](nsc-atlas-core-reservoir.md) uses
 nsc_atlas_core_reservoir.py: CoreReservoir solves the canonical scalar and
 momentum-bearing radial constraints; ReservoirSolution checks proper-distance

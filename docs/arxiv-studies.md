@@ -1,5 +1,22 @@
 # Cited arXiv studies
 
+## Coupled finite scalar evolution, 23 October 2026
+
+[Balakrishna et al.,0710.4131](https://arxiv.org/html/0710.4131), SectionII,
+supplies spherical Einstein-Klein-Gordon and oscillaton precedent. Its
+isolated boundary data and reported stellar states are not copied into
+the excited parent. [Alcubierre and Gonzalez,gr-qc/0401113](https://arxiv.org/html/gr-qc/0401113),
+Introduction/SectionII, explains the origin cancellations and constrained
+radial approach. The [new owner](nsc-atlas-core-evolution.md) derives its
+nonzero-shift parent-expansion slicing explicitly.
+
+[Lawson,1967](https://doi.org/10.1137/0704033), the integrating-factor
+Runge-Kutta source, is attributed for the numerical method. The publisher
+metadata were checked; the implementation's stages are derived from the
+exact oscillator rotation and checked independently, without claiming a
+complete reading of the original paper. Hayward's earlier mass/work law
+supplies the separate geometric transport check.
+
 ## Conserved structure and a reference exterior, 23 October 2026
 
 Reread [Hayward, gr-qc/9710089v2](https://arxiv.org/html/gr-qc/9710089),

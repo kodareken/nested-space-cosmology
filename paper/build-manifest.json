@@ -1,10 +1,10 @@
 {
-  "bytes": 8721045,
+  "bytes": 9015584,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "50dec707d7effd663bd3d8600944585faf4fd1617c4f4083164232b51841964d",
+  "metadata_sha256": "e092db3ef50b6a1c7cbeceb1d1927ceb8cf6d42a68e9c8c0272028588d19bc07",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 116,
-  "pdf_sha256": "06ee8b220756cc203884a743057d9a2c7030f29cbf2b1b0f9ef27db9860510b9",
+  "pages": 119,
+  "pdf_sha256": "7cc56523830d81850fa63d0db20d5074dc97885e47929fb30160e6cd6f00d894",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -18,6 +18,10 @@
     {
       "path": "docs/figures/nsc-atlas-compact-parent.png",
       "sha256": "a64a3240ded38e00ef7abef1bc7d41f3ec7e54d3cb543fa298d39ad732ef86c1"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-core-evolution.png",
+      "sha256": "0c2540dda03c5da7f57af9b1d9659ace779285fc8846385f2aaa01de55f248b3"
     },
     {
       "path": "docs/figures/nsc-atlas-core-reservoir.png",
@@ -452,6 +456,10 @@
       "sha256": "221cc83583b663b6e51f36e8c17dc15d3e5ef159e8ade1949b77339def397445"
     },
     {
+      "path": "results/summaries/nsc-atlas-core-evolution-v1.json",
+      "sha256": "b3f7eb0beab13bbb2cf4498a040455116506c1df10e5c4c935d49d5bf6c06690"
+    },
+    {
       "path": "results/summaries/nsc-atlas-core-reservoir-v1.json",
       "sha256": "0665f9a4cfa0e576854901d7c706f7ac9bbc0c7a521babee6ec2548f03cf0a24"
     },
@@ -677,6 +685,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "e3d44e892fe6f3b0ab188e89ef8ab9a336d1901247b94e3b5831ac56b70d8139",
-  "version": "working-2026-10-23.1"
+  "source_sha256": "d606765a98088510bb4b99ca16cf67841459e8aa2b3cede4357b0b9ed31b4a1c",
+  "version": "working-2026-10-23.2"
 }

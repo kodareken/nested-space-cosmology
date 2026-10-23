@@ -1,5 +1,12 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [coupled core evolution](docs/nsc-atlas-core-evolution.md) now follows
+the inherited scalar and gravity together. A supplied diffuse nonlinear
+cloud develops a compact, breathing concentration; an operational clock
+emitted after contraction tests the resulting geometry. Three resolutions,
+independent mass flux and canonical photon transport check the finite result.
+The cloud origin and asymptotic/nonradial stability remain open.
+
 The [compensated core and parent](docs/nsc-atlas-core-reservoir.md) now
 connect local structure to a definite ambient energy source. A solved
 18.5914% displacement depletion balances a core and outward-current pulse,

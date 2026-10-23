@@ -1,5 +1,18 @@
 # Prior art and admission of new research
 
+## Coupled core evolution and observed clocks, 23 October 2026
+
+The [evolution owner](nsc-atlas-core-evolution.md) reuses spherical
+Einstein-scalar evolution, centre regularity, Hayward mass transport and
+Lawson integrating factors. It connects the compensated inherited source
+to a self-consistent finite metric and an operational signal. A t=1 pilot
+and t=2 diffuse continuation motivate the admitted t=5 formation window.
+A parent-comoving outer boundary avoids an artificial absorber while core
+resolution stays fixed. Three resolutions, independent time/outer controls,
+a fixed-geometry diagnostic and exact homogeneous photons fit a3600
+CPU-second evidence budget. Failures of chart positivity, mass-flux
+convergence or observed concentration must remain distinct outcomes.
+
 ## Compensated core and evolving exterior, 23 October 2026
 
 The [reservoir owner](nsc-atlas-core-reservoir.md) reuses Hayward's spherical

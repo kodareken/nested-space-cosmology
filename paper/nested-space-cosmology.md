@@ -54,7 +54,10 @@ A compensated core, depleted ambient reservoir and outward-current pulse
 then satisfy the nonlinear initial constraints with unchanged enclosing
 wall data. A surrounding causal annulus retains the same evolving parent
 and inherited vacuum, connecting local structure to that cosmology without
-asserting a completed formation history.
+asserting a completed formation history. A subsequent full spherical
+scalar/gravity evolution now develops a compact, breathing concentration
+from a supplied diffuse nonlinear cloud and predicts a received clock
+signal after contraction, with independent flux and photon checks.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -5344,6 +5347,196 @@ both contributions. The next task is to evolve this compensated preparation
 and calculate a local signal, preserving the source, outgoing field and
 same-action geometry throughout.
 
+### 10.33. Evolving the inherited field and its geometry together
+
+<!-- nsc-claim:coupled-core-parent-evolution -->
+
+The compensated slice now supplies a full finite spherical evolution.
+The scalar, its ambient reservoir and radiation source the local metric
+throughout. The earlier envelope profile is an initial control; it does
+not replace the Einstein--Klein--Gordon evolution equation. The action,
+frequency 2000, regional flux and inherited vacuum remain fixed.
+
+Use areal radius and the parent expansion H(t) in the metric
+
+$$
+ds^2=-\alpha^2dt^2+
+\frac{(dR-\alpha HR\,dt)^2}{B}+R^2d\Omega^2,
+\qquad B=1+H^2R^2-\frac{2m}{R}.
+$$
+
+This fixes angular extrinsic curvature $K_t=-H$, while the radial
+curvature, mass and lapse respond to the source. With $F=\phi_R$ and
+$\Pi=n(\phi)$, the momentum and Hamilton constraints give
+
+$$
+K_r=-H-\frac{\kappa R}{2}\Pi F,\qquad
+m_R=\frac{\kappa R^2}{2}(\rho-HR\Pi F).
+$$
+
+The angular Einstein equation preserves that slicing by determining
+
+$$
+B\alpha_R=\dot H R+
+\alpha\left(H^2R+\frac{m}{R^2}+\frac{\kappa R}{2}p_r\right).
+$$
+
+The lapse is normalized in the untouched parent. Central proper time
+is calculated from it. The scalar evolves by its unaveraged wave equation
+on this metric, and the same scalar drives the reference H(t). The
+[equations and implementation](../docs/nsc-atlas-core-evolution.md) retain
+the shift, lapse gradient, radial momentum and regular-centre limit.
+The [finite record](../results/summaries/nsc-atlas-core-evolution-v1.json)
+binds the model inputs and numerical controls.
+
+Independent of the radial constraint, the geometric mass obeys
+
+$$
+m_t=\frac{\alpha\kappa R^2}{2}
+\left[(B+H^2R^2)\Pi F-HR(\Pi^2+BF^2)\right].
+$$
+
+Its time integral is compared with reconstructed mass at six fixed
+radii. Both expressions subtract the evolving homogeneous density.
+No absorber deletes radiation, and expansion pressure work is retained.
+
+A smooth moving radial map keeps the core at fixed physical resolution
+and carries the outer grid with the parent. The boundary's initial
+angle .648103368884 lies in the permanently protected reference annulus.
+It can therefore receive the exact homogeneous data without introducing
+an artificial reflecting wall. This connects the local evolution to an
+actual parent domain while leaving the complete material-wall future open.
+
+The calculation reuses the
+[spherical oscillaton literature](https://arxiv.org/html/0710.4131),
+[regular-centre methods](https://arxiv.org/html/gr-qc/0401113) and
+[Lawson's integrating-factor approach](https://doi.org/10.1137/0704033).
+The latter integrates the fast scalar rotation exactly within the time
+step, so numerical damping of that oscillator is not interpreted as cooling.
+The new connection is the sourced inherited preparation and its observer,
+rather than a new generic scalar-gravity equation.
+
+### 10.34. A diffuse cloud develops a compact, breathing concentration
+
+<!-- nsc-claim:inherited-diffuse-concentration -->
+
+Replace the supplied coherent core by a compactly tapered Gaussian of
+width .03. Solve its amplitude, .00186251874314, to preserve the initial
+geometric mass inside the core boundary. This fixes the same total
+gravitational budget, including the ambient cross term. It does not
+equate isolated scalar norm between different profiles.
+
+The resulting data are evolved to parent time5. Their final shape is
+not imposed. The diffuse cloud initially expands, subsequently contracts
+and then breathes. The same scalar preparation on the homogeneous metric
+provides a diagnostic of evolution without local gravitational response;
+that control is not claimed to satisfy the sourced Einstein equations.
+
+Over parent times 4.5--5, the half excess-mass radius inside R=.12
+averages .01849207, compared with .03930864 initially: a ratio .470433.
+The late central excitation averages 148.3729 against 10.53893 initially,
+a factor 14.0786. With the same field on the homogeneous metric it instead
+averages .0477285. Thus the concentration depends on the computed local
+gravitational response. The medium/fine spreads are 1.19e-7 in mean radius
+and .00232 in mean central excitation.
+
+| Resolution multiplier | Maximum integrated mass-flux gap, diffuse run |
+| --- | ---: |
+| 1 | 2.55e-7 |
+| 2 | 1.27e-8 |
+| 4 | 8.42e-10 |
+
+The finest run keeps the local lapse above .98145. Its final exterior
+mass offset is 2.04e-9, against the initial core excess 9.57e-5. These finite
+residuals are numerical diagnostics, not exact-zero assertions. The
+formation is followed by substantial breathing; no stationary endpoint
+is imposed or inferred.
+
+
+![Inherited scalar concentration, conserved mass and a received clock](../docs/figures/nsc-atlas-core-evolution.png)
+
+*Figure 21. The diffuse preparation develops a compact concentration under
+its computed gravity. The fixed-geometry field control separates ordinary
+scalar propagation from that response. Refinement checks the independent
+mass-flux law. Clock departures use the stated central proper emission
+ages and a receiver held at the same areal radius in each corresponding
+homogeneous comparison.*
+
+These are finite nonlinear concentration and breathing results. They do
+not establish an asymptotic stationary remnant, universal formation from
+arbitrary preparations or nonspherical stability. The
+[formation and refinement record](../results/summaries/nsc-atlas-core-evolution-v1.json)
+and [source owner](../docs/nsc-atlas-core-evolution.md) retain those limits.
+
+### 10.35. A signal from the concentration's evolving geometry
+
+<!-- nsc-claim:formed-core-clock -->
+
+The central emitter is geodesic. The receiver is actively held at areal
+radius .6 and starts its proper clock on the initial slice. In the diffuse
+case the emission occurs at central proper age 4, after the contraction
+has developed. Reception time is determined by propagation, not chosen
+as an equal-coordinate-time comparison.
+
+An outgoing photon with frequency E measured by the slice normal obeys
+
+$$
+\frac{dR_\gamma}{dt}=\alpha(HR_\gamma+\sqrt{B}),\qquad
+\frac{d\log E}{dt}=\alpha K_r-\sqrt{B}\alpha_R.
+$$
+
+At reception, the held-radius observer's velocity relative to that normal
+adds a necessary Doppler factor:
+
+$$
+\frac{\nu_o}{\nu_e}=\frac{E_o}{E_e}
+\sqrt{\frac{\sqrt{B_o}+H_oR_o}{\sqrt{B_o}-H_oR_o}},
+\qquad
+\frac{d\tau_o}{dt}=\alpha_o
+\sqrt{1-\frac{H_o^2R_o^2}{B_o}}.
+$$
+
+An independent canonical null-geodesic calculation transports p_R with
+Hamiltonian $\alpha(HR+\sqrt{B})p_R$. It is checked against this normal-frame
+formula. A separate unaveraged homogeneous integration gives the
+corresponding control signal analytically along its FLRW light cone.
+
+For the diffuse run emitted at central proper age 4, the fractional
+frequency departure from the homogeneous comparison is
+
+$$
+\frac{(\nu_o/\nu_e)}{(\nu_o/\nu_e)_{\rm hom}}-1
+=-0.0041375586\pm 1.1\times10^{-8}.
+$$
+
+This is approximately -0.413756 percent, with a finite numerical error
+estimate of .0000011 percentage points. The receiver's additional proper
+arrival time is .01703546, with numerical comparison error 2.2e-7 in atlas
+time units. Both the emitter's accumulated proper clock and propagation
+contribute to this delay. The independent canonical frequency differs by
+less than 4.7e-11 on the finest run.
+
+The coherent control, emitted at central age 0, has frequency departure
+-.007456287 with numerical comparison error 2.1e-7 and proper arrival delay
+.000476466. These use different declared emission ages; they are not a
+same-epoch comparison of the two states. All errors here concern numerical
+resolution and event calculation, not physical preparation uncertainty.
+
+
+The frequency departures are dimensionless. Delays are in atlas time units;
+an independent physical length would convert them to seconds. These
+conditional observables do not import P003's earlier linear coefficients
+or select a primordial population. The
+[complete protocol](../docs/nsc-atlas-core-evolution.md) and
+[numerical comparisons](../results/summaries/nsc-atlas-core-evolution-v1.json)
+give the emission events, receiver motion, error estimates and model scope.
+
+The connection now runs from a declared inherited scalar preparation,
+through self-consistent local evolution, to a received signal. The parent
+vacuum remains $\Lambda_{\rm vac}a_0^2=12.3482523989285$. Selecting its
+observed scale, explaining the population of structures and testing their
+nonradial persistence remain further physical questions.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -5393,7 +5586,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 21. The isolated reference in joined causal charts. Horizons are
+*Figure 22. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -6399,7 +6592,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 22. Saved finite-window comparisons. A: the previous and current
+*Figure 23. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -6495,7 +6688,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 23. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 24. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -7280,7 +7473,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 24. Research dependencies, distinct from spacetime causal arrows.
+*Figure 25. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

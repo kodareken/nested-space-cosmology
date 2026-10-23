@@ -74,7 +74,7 @@ def midpoint(u,i):
 
 
 @njit(cache=True)
-def geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0):
+def geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0,backreaction=True):
     """Radial mass and angular-evolution lapse equations, RK4 in radius."""
     chi0,P0,a,H=bg
     n=len(delta);F,Fp=derivatives(delta,dr);Pr,_=derivatives(Pi,dr)
@@ -82,6 +82,8 @@ def geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0):
     Rgrid=np.arange(n)*dr+(scale-1)*mesh[0]
     J=1+(scale-1)*mesh[1];Jx=(scale-1)*mesh[2]
     Fp=Fp/(J*J)-F*Jx/(J*J*J);F=F/J;Pr=Pr/J
+    if not backreaction:
+        return F,Fp,Pr,np.zeros(n),1-Rgrid**2/a**2,-2*Rgrid/a**2,np.ones(n),np.zeros(n),Rgrid,J
     M=np.zeros(n);B=np.ones(n);Q=np.zeros(n);P=np.zeros(n)
     coef=np.zeros(n);source=np.zeros(n)
     Hdot=1/(a*a)-kappa*P0*P0/2
@@ -127,9 +129,8 @@ def geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0):
 @njit(cache=True)
 def interpolate(u,R,grid):
     i=int(np.searchsorted(grid,R))-1
-    if i<1:
-        if R<=0:return u[0]
-        return u[0]+(u[1]-u[0])*R/grid[1]
+    if R<=0:return u[0]
+    if i<1:i=1
     if i>=len(u)-2:return u[-1]
     result=0.
     for j in range(i-1,i+3):
@@ -141,8 +142,9 @@ def interpolate(u,R,grid):
 
 
 @njit(cache=True)
-def rates(delta,Pi,bg,aux,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0):
-    F,Fp,Pr,M,B,Br,alpha,alphar,grid,J=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0)
+def rates(delta,Pi,bg,aux,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0,backreaction,emission_age):
+    F,Fp,Pr,M,B,Br,alpha,alphar,grid,J=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0,backreaction)
+    k_local=kappa if backreaction else 0.
     chi0,P0,a,H=bg;n=len(delta)
     dchi=np.zeros(n);dPi=np.zeros(n)
     bgdot=np.array([P0,-3*H*P0-omega*omega*chi0,a*H,1/(a*a)-kappa*P0*P0/2])
@@ -151,7 +153,7 @@ def rates(delta,Pi,bg,aux,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0):
         dchi[i]=alpha[i]*Pi[i]+(u-alpha[i]*v)*F[i]+(alpha[i]-1)*P0
         lap=3*Fp[0] if i==0 else B[i]*(Fp[i]+2*F[i]/R)
         dPi[i]=alpha[i]*(lap+(Br[i]/2+B[i]*alphar[i]/alpha[i])*F[i]
-            -3*H*Pi[i]-kappa*R*p*p*F[i]/2-omega*omega*delta[i])+ (u-alpha[i]*v)*Pr[i]
+            -3*H*Pi[i]-k_local*R*p*p*F[i]/2-omega*omega*delta[i])+ (u-alpha[i]*v)*Pr[i]
         dPi[i]+=(alpha[i]-1)*bgdot[1]
     da=np.zeros(len(aux))
     da[0]=alpha[0]  # central proper clock
@@ -160,10 +162,11 @@ def rates(delta,Pi,bg,aux,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0):
     R=aux[2]
     A=interpolate(alpha,R,grid);bb=interpolate(B,R,grid);fp=interpolate(F,R,grid)
     p=P0+interpolate(Pi,R,grid);Ar=interpolate(alphar,R,grid);v=H*R
-    Kr=-H-kappa*R*p*fp/2
+    Kr=-H-k_local*R*p*fp/2
     da[2]=A*(v+math.sqrt(bb));da[3]=A*Kr-math.sqrt(bb)*Ar
     # Independent canonical null-geodesic momentum: Hamiltonian C*p_R.
     da[-2]=-Ar*(v+math.sqrt(bb))-A*(H+interpolate(Br,R,grid)/(2*math.sqrt(bb)))
+    if aux[0]<emission_age:da[2]=0.;da[3]=0.;da[-2]=0.
     da[-1]=1/a  # reference conformal distance
     # Independent integrated geometric mass evolution at fixed radii.
     for j in range(len(cuts)):
@@ -171,6 +174,7 @@ def rates(delta,Pi,bg,aux,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0):
         fp=interpolate(F,R,grid);dp=interpolate(Pi,R,grid);p=P0+dp;v=H*R
         da[4+j]=A*kappa*R*R*((bb+v*v)*p*fp-v*(dp*(dp+2*P0)+bb*fp*fp))/2
         da[4+j]-=(A-1)*kappa*H*R**3*P0*P0/2
+        if not backreaction:da[4+j]=0.
     # Lawson integrating factor: remove the exactly solvable frequency-omega
     # rotation, retaining lapse, gravity, gradients and expansion in N(y).
     dchi-=Pi;dPi+=omega*omega*delta
@@ -191,23 +195,39 @@ def rotate_bg(bg,h,omega):
 
 
 @njit(cache=True)
-def evolve_arrays(delta,Pi,bg,dr,dt,steps,omega,kappa,vacuum,receiver,cuts,stride,mesh,a0):
-    n=len(delta);aux=np.zeros(6+len(cuts));arrival=np.zeros(7)
+def event_photon_rates(y,f,g0,g1,bg0,bg1,kappa,backreaction):
+    """One partial emission step, on linearly interpolated metric data."""
+    R=y[0];fields=np.zeros(5)
+    # alpha, B, alpha_R, B_R, and K_r, each interpolated independently.
+    for j,index in enumerate((6,4,7,5)):
+        fields[j]=(1-f)*interpolate(g0[index],R,g0[8])+f*interpolate(g1[index],R,g1[8])
+    H=(1-f)*bg0[3]+f*bg1[3];Kr=-H
+    if backreaction:
+        p0=bg0[1]+interpolate(g0[10],R,g0[8]);p1=bg1[1]+interpolate(g1[10],R,g1[8])
+        F0=interpolate(g0[0],R,g0[8]);F1=interpolate(g1[0],R,g1[8])
+        Kr-=kappa*R*((1-f)*p0*F0+f*p1*F1)/2
+    A,B,Ar,Br=fields[:4];beta=math.sqrt(B);v=H*R
+    return np.array([A*(v+beta),A*Kr-beta*Ar,-Ar*(v+beta)-A*(H+Br/(2*beta))])
+
+
+@njit(cache=True)
+def evolve_arrays(delta,Pi,bg,dr,dt,steps,omega,kappa,vacuum,receiver,cuts,stride,mesh,a0,backreaction,emission_age):
+    n=len(delta);aux=np.zeros(6+len(cuts));arrival=np.zeros(8)
     snapshots=np.zeros(((steps+stride-1)//stride,13+2*len(cuts)));count=0
-    geom=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0)
+    geom=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0,backreaction)
     initial_mass=np.array([interpolate(geom[3],x,geom[8]) for x in cuts])
     max_flux_error=np.zeros(len(cuts));minB=1.;minAlpha=1.;maxspeed=0.
     for it in range(steps):
         oldaux=aux.copy();oldbg=bg.copy();old_delta=delta;old_Pi=Pi
-        k1=rates(delta,Pi,bg,aux,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0)
+        k1=rates(delta,Pi,bg,aux,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0,backreaction,emission_age)
         x2,p2=rotate(delta+dt*k1[0]/2,Pi+dt*k1[1]/2,dt/2,omega)
         b2=rotate_bg(bg+dt*k1[2]/2,dt/2,omega)
-        k2=rates(x2,p2,b2,aux+dt*k1[3]/2,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0)
+        k2=rates(x2,p2,b2,aux+dt*k1[3]/2,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0,backreaction,emission_age)
         ehx,ehp=rotate(delta,Pi,dt/2,omega);ehb=rotate_bg(bg,dt/2,omega)
-        k3=rates(ehx+dt*k2[0]/2,ehp+dt*k2[1]/2,ehb+dt*k2[2]/2,aux+dt*k2[3]/2,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0)
+        k3=rates(ehx+dt*k2[0]/2,ehp+dt*k2[1]/2,ehb+dt*k2[2]/2,aux+dt*k2[3]/2,dr,omega,kappa,vacuum,receiver,cuts,mesh,a0,backreaction,emission_age)
         ex,ep=rotate(delta,Pi,dt,omega);eb=rotate_bg(bg,dt,omega)
         q3x,q3p=rotate(k3[0],k3[1],dt/2,omega);q3b=rotate_bg(k3[2],dt/2,omega)
-        k4=rates(ex+dt*q3x,ep+dt*q3p,eb+dt*q3b,aux+dt*k3[3],dr,omega,kappa,vacuum,receiver,cuts,mesh,a0)
+        k4=rates(ex+dt*q3x,ep+dt*q3p,eb+dt*q3b,aux+dt*k3[3],dr,omega,kappa,vacuum,receiver,cuts,mesh,a0,backreaction,emission_age)
         q1x,q1p=rotate(k1[0],k1[1],dt,omega);q1b=rotate_bg(k1[2],dt,omega)
         q2x,q2p=rotate(k2[0],k2[1],dt/2,omega);q2b=rotate_bg(k2[2],dt/2,omega)
         delta=ex+dt*(q1x+2*q2x+2*q3x+k4[0])/6
@@ -215,10 +235,26 @@ def evolve_arrays(delta,Pi,bg,dr,dt,steps,omega,kappa,vacuum,receiver,cuts,strid
         bg=eb+dt*(q1b+2*q2b+2*q3b+k4[2])/6
         aux+=dt*(k1[3]+2*k2[3]+2*k3[3]+k4[3])/6
         if not np.isfinite(delta[0]):raise ValueError('nonfinite scalar evolution')
+        if oldaux[0]<emission_age and aux[0]>=emission_age:
+            g0=geometry(old_delta,old_Pi,oldbg,dr,omega,kappa,mesh,a0,backreaction)
+            g1=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0,backreaction)
+            d=aux[0]-oldaux[0];z=(emission_age-oldaux[0])/d
+            aa=dt*g0[6][0];bb=3*d-dt*(2*g0[6][0]+g1[6][0]);cc=-2*d+dt*(g0[6][0]+g1[6][0])
+            for trial in range(5):
+                val=oldaux[0]+aa*z+bb*z*z+cc*z**3-emission_age
+                z=min(1.,max(0.,z-val/(aa+2*bb*z+3*cc*z*z)))
+            h=dt*(1-z);y=np.zeros(3)
+            q0=g0+(old_Pi,);q1=g1+(Pi,)
+            p1=event_photon_rates(y,z,q0,q1,oldbg,bg,kappa,backreaction)
+            p2=event_photon_rates(y+h*p1/2,(z+1)/2,q0,q1,oldbg,bg,kappa,backreaction)
+            p3=event_photon_rates(y+h*p2/2,(z+1)/2,q0,q1,oldbg,bg,kappa,backreaction)
+            p4=event_photon_rates(y+h*p3,1.,q0,q1,oldbg,bg,kappa,backreaction)
+            y+=h*(p1+2*p2+2*p3+p4)/6
+            aux[2]=y[0];aux[3]=y[1];aux[-2]=y[2];arrival[7]=(it+z)*dt
         if arrival[0]==0 and aux[2]>=receiver:
             f=(receiver-oldaux[2])/(aux[2]-oldaux[2])
-            geom=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0)
-            oldgeom=geometry(old_delta,old_Pi,oldbg,dr,omega,kappa,mesh,a0)
+            geom=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0,backreaction)
+            oldgeom=geometry(old_delta,old_Pi,oldbg,dr,omega,kappa,mesh,a0,backreaction)
             B0=interpolate(oldgeom[4],receiver,oldgeom[8]);B1=interpolate(geom[4],receiver,geom[8])
             b=math.sqrt(B0+f*(B1-B0));v=(oldbg[3]+f*(bg[3]-oldbg[3]))*receiver
             lognormal=oldaux[3]+f*(aux[3]-oldaux[3])
@@ -229,7 +265,7 @@ def evolve_arrays(delta,Pi,bg,dr,dt,steps,omega,kappa,vacuum,receiver,cuts,strid
             logp=oldaux[-2]+f*(aux[-2]-oldaux[-2])
             arrival[6]=math.exp(logp)*b*math.sqrt((b+v)/(b-v))
         if (it+1)%stride==0 or it==steps-1:
-            g=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0)
+            g=geometry(delta,Pi,bg,dr,omega,kappa,mesh,a0,backreaction)
             B=g[4];alpha=g[6];M=g[3];grid=g[8];J=g[9]
             row=np.zeros(13+2*len(cuts))
             row[0]=(it+1)*dt;row[1:5]=bg;row[5]=delta[0];row[6]=Pi[0]
@@ -278,6 +314,8 @@ class EvolutionRun:
     step: float = .0001
     end: float = 1.
     receiver: float = .6
+    emission_age: float = 0.
+    backreaction: bool = True
 
 
 def initial_state(kind,radius):
@@ -301,7 +339,7 @@ def run_evolution(config=EvolutionRun(),*,retain=False):
     c=config;start=time.process_time();wall=time.perf_counter()
     if not (.5<=c.outer<=5 and .0001<=c.spacing<=.002 and 0<c.step<=.0002 and 0<c.end<=6):
         raise ValueError('outside admitted finite evolution')
-    if not (0<c.receiver<min(1.,c.outer) and c.step/c.spacing<=.25):
+    if not (0<c.receiver<min(1.,c.outer) and c.step/c.spacing<=.25 and 0<=c.emission_age<c.end):
         raise ValueError('receiver must lie inside the resolved chart and step/spacing<=.25')
     n=round(c.outer/c.spacing)+1;r=np.arange(n)*c.spacing
     if not math.isclose(r[-1],c.outer,abs_tol=1e-12):raise ValueError('outer must lie on mesh')
@@ -312,26 +350,30 @@ def run_evolution(config=EvolutionRun(),*,retain=False):
     if c.outer<=max(cuts):cuts=cuts[cuts<c.outer]
     mesh=moving_mesh(r)
     a0=bg[2]
-    initial_geom=geometry(delta,Pi,bg,c.spacing,model.frequency,model.reference.scalar.kappa,mesh,a0)
+    initial_geom=geometry(delta,Pi,bg,c.spacing,model.frequency,model.reference.scalar.kappa,mesh,a0,c.backreaction)
     initial_energy=(Pi[0]**2+model.frequency**2*(bg[0]+delta[0])**2)/2
     from scipy.optimize import brentq
-    initial_half=brentq(lambda R:interpolate(initial_geom[3],R,r)-interpolate(initial_geom[3],.12,r)/2,0,.12) if c.kind!='homogeneous' else None
+    initial_half=brentq(lambda R:interpolate(initial_geom[3],R,r)-interpolate(initial_geom[3],.12,r)/2,0,.12) if c.kind!='homogeneous' and c.backreaction else None
     out=evolve_arrays(delta,Pi,bg,c.spacing,c.step,steps,model.frequency,model.reference.scalar.kappa,
-        model.reference.scalar.vacuum(model.reference.parent_flux),c.receiver,cuts,max(1,round(.001/c.step)),mesh,a0)
+        model.reference.scalar.vacuum(model.reference.parent_flux),c.receiver,cuts,max(1,round(.001/c.step)),mesh,a0,c.backreaction,c.emission_age)
     d,p,b,a,snap,arrival,error,minB,minAlpha,speed,initial_mass=out
     theta0=math.asin(note['support']/model.reference.cap_geometry['parent_maximum_radius'])
     front=b[2]*math.sin(theta0+a[-1])
+    outer_radius=c.outer+(b[2]/a0-1)*mesh[0,-1]
+    final_geometry=geometry(d,p,b,c.spacing,model.frequency,model.reference.scalar.kappa,mesh,a0,c.backreaction)
     result=dict(config=c.__dict__,preparation=note,arrival=dict(coordinate_time=arrival[0],receiver_proper_age=arrival[1],
-        received_to_emitted_frequency=arrival[2],central_proper_age_at_arrival=arrival[3],normal_log_frequency=arrival[4],receiver_boost=arrival[5]),
+        received_to_emitted_frequency=arrival[2],central_proper_age_at_arrival=arrival[3],normal_log_frequency=arrival[4],receiver_boost=arrival[5],emission_coordinate_time=arrival[7],emission_proper_age=c.emission_age),
         initial_mass_at_cuts=initial_mass.tolist(),cuts=cuts.tolist(),maximum_mass_flux_error=error.tolist(),
         minimum_B=minB,minimum_lapse=minAlpha,maximum_sampled_grid_light_speed=speed,
         initial_central_excitation=initial_energy,initial_half_mass_radius=initial_half,
-        reference_outgoing_front=front,reference_front_buffer=c.outer*b[2]/a0-front,physical_outer_radius=c.outer*b[2]/a0,
+        reference_outgoing_front=front,reference_front_buffer=outer_radius-front,physical_outer_radius=outer_radius,
         independent_canonical_frequency=arrival[6],geodesic_frequency_gap=arrival[6]-arrival[2],
+        final_outer_mass_offset=float(final_geometry[3][-1]),
+        minimum_receiver_timelike_margin=float(1-(b[3]*c.receiver)**2/interpolate(final_geometry[4],c.receiver,final_geometry[8])),
         maximum_background_constraint=float(np.max(abs(snap[:,10]))),
         final_central_excitation=float(snap[-1,11]),final_mass_at_cuts=snap[-1,12:12+len(cuts)].tolist(),
         late_mean_central_excitation=float(np.mean(snap[snap[:,0]>=.9*c.end,11])),
-        late_mean_half_mass_radius=float(np.nanmean(snap[snap[:,0]>=.9*c.end,-1])) if c.kind!='homogeneous' else None,
+        late_mean_half_mass_radius=float(np.nanmean(snap[snap[:,0]>=.9*c.end,-1])) if c.kind!='homogeneous' and c.backreaction else None,
         cpu_seconds=time.process_time()-start,wall_seconds=time.perf_counter()-wall)
     if retain:return result,dict(radius=r+(b[2]/a0-1)*mesh[0],delta=d,Pi=p,background=b,history=snap)
     return result

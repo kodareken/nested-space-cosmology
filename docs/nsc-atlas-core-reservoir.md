@@ -259,3 +259,8 @@ and the protected-annulus argument. The second checked the implementation
 and actual-volume normalization against the compact record and found no
 material defect. The constraint construction and the evolution-uniqueness
 input are attributed separately above.
+
+The [coupled evolution](nsc-atlas-core-evolution.md) now advances this source
+and a same-mass diffuse preparation with their gravitational response and
+received clock signals. Its finite concentration does not imply a unique
+inherited cloud population or complete asymptotic formation.

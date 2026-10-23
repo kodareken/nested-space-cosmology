@@ -1,5 +1,17 @@
 # What the calculations show
 
+The [coupled evolution](nsc-atlas-core-evolution.md) advances the compensated
+scalar and its actual gravitational response together. The diffuse test
+matches the coherent preparation's initial geometric core mass, evolves
+without a prescribed final profile and develops finite concentration and
+breathing. A held-radius receiver records a photon emitted at central
+proper age4. The late mean half-mass radius is47.04% of its initial value; central
+excitation grows by14.08 times. The received frequency departure from the
+homogeneous control is-.413756%, with a finite numerical comparison error
+of .0000011 percentage points. Mass-flux gaps shrink to8.42e-10.
+The new compact record retains all comparisons; the supplied nonlinear cloud is not a prediction of primordial
+abundance or a continuation of the earlier linear P003 state.
+
 The [core-reservoir connection](nsc-atlas-core-reservoir.md) constructs
 nonlinear scalar/geometry data with a coherent core, ambient depletion
 and an outward-current pulse. Their geometric masses balance with no

@@ -20,7 +20,8 @@ starting a derivation.
 
 ### Coupled evolution, diffuse preparation and a received clock signal
 
-Active: evolve the compensated scalar and geometry together in an
+Complete: the [finite coupled evolution](nsc-atlas-core-evolution.md)
+advances the compensated scalar and geometry together in an
 areal-radius gauge whose angular expansion equals the reference parent H.
 The radial mass constraint and angular Einstein equation determine mass
 and lapse each step; scalar momentum fixes radial extrinsic curvature.
@@ -52,6 +53,14 @@ by an artificial absorbing exterior. The continuation budget is3600 CPU
 seconds including four parallel workers and its controls; core resolution,
 not carrier frequency, determines the required refinement. The longer
 endpoint tests concentration/formation rather than just the first oscillations.
+
+The completed t=5 result shows nonlinear concentration and breathing,
+with a late half-mass radius .470433 of the initial value, a14.0786-fold
+central excitation increase, and a received frequency departure of-.413756%
+for the specified late emission. Three resolutions and the time, outer,
+homogeneous and fixed-geometry controls pass. Next is preparation/population
+selection from inheritance and nonradial longevity; the same cloud need not
+be deepened until those connections require it.
 
 ### Conserved local structure inside the inherited parent
 

@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [coupled core/parent evolution](nsc-atlas-core-evolution.md) joins
+compensated initial data to full finite spherical Einstein-scalar dynamics,
+diffuse concentration and a received proper-clock signal. It preserves
+the fixed inherited action and protected outer parent; formation/population
+from earlier small perturbations and the complete wall future remain open.
+
 The [compensated core and evolving parent](nsc-atlas-core-reservoir.md)
 connect nonlinear local structure, a finite ambient source, scalar flux
 and unchanged initial wall data. The exterior causal annulus retains

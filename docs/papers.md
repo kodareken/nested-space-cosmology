@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision2026-10-23.2 adds Sections10.33--10.35 and Figure21: full finite
+scalar/gravity evolution, a same-mass diffuse concentration test, and an
+operational received frequency after contraction. The moving outer grid
+retains the protected parent and all outgoing radiation. Finite breathing
+is distinguished from asymptotic or nonspherical stability.
+
 Revision2026-10-23.1 adds Sections10.31--10.32 and Figure20: a nonlinear
 compensated core, inherited reservoir and outward-current pulse, plus the
 surrounding parent domain whose evolution remains unchanged. Local

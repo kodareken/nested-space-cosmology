@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+The coupled core/parent campaign uses six worker processes and Numba:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_core_evolution.py --output results/summaries/nsc-atlas-core-evolution-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_core_evolution.py
+```
+
+Its [owner](nsc-atlas-core-evolution.md) specifies the finite endpoint,
+source preparations, moving outer chart, mass-flux checks and proper-clock
+protocol. Full fields are regenerated; only compact comparisons and hashes
+are retained. The producer budget is3600 CPU seconds including workers.
+
 The compensated core/reservoir calculation uses four worker processes:
 
 ```powershell

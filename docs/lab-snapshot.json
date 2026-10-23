@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "07e2895c226329db081819736c85a4a3659e92a2",
+  "current_receipt_commit_parent": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 23032,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 23470,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "156210f3825e51013c0accd27aa77b5c7c57cfdf556e2066115b22b3f56a3f4c"
+      "sha256": "a9994b5a2a9967782a17e18096ce2544208d94103db987f41bd0cf0b265ed85b"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 280642,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 281072,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "95377be34300193aad40f80a0684474632a579cb0c2554dab88ad58a250edc6e"
+      "sha256": "5e61c75f1cc99afba3482ef825178fa905c19e58576ec4f2d89791487a42870d"
     },
     {
-      "bytes": 122882,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "73fb137ff5ca21b9bcbe61a5fda77457e0173b64",
+      "bytes": 123864,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "dc5bbc9e5144d93c705ba1eba4d4d23cfe7d743b443f2b0077ca339ae79d02eb"
+      "sha256": "666c8510c2dd81785c17f984621351e379103c5f8066fd097204d4aeb52bc971"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 453842,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 454677,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "71db72c2aca2eae607c0a5f4ef3b9b9a484655c1401f66175fd3a21cd5245663"
+      "sha256": "59b19058add0d823ec7fae6b044871fc3088db9fc74998e45123e3cc45c54851"
     },
     {
       "bytes": 173938,
@@ -10339,6 +10339,14 @@
       "path": "docs/figures/nsc-atlas-compact-parent.png",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "a64a3240ded38e00ef7abef1bc7d41f3ec7e54d3cb543fa298d39ad732ef86c1"
+    },
+    {
+      "bytes": 214634,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
+      "path": "docs/figures/nsc-atlas-core-evolution.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0c2540dda03c5da7f57af9b1d9659ace779285fc8846385f2aaa01de55f248b3"
     },
     {
       "bytes": 111966,
@@ -10566,12 +10574,20 @@
       "sha256": "900dbc754f0d8472fdd42888c16b5e1606099f36be3e4454d64b18dc3fc0ab50"
     },
     {
-      "bytes": 11673,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "73fb137ff5ca21b9bcbe61a5fda77457e0173b64",
+      "bytes": 14369,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
+      "path": "docs/nsc-atlas-core-evolution.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "59fbfc5f4958888df061dda4d15c20053292d7d40b749f333c9ca6d7c7afe198"
+    },
+    {
+      "bytes": 11960,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "docs/nsc-atlas-core-reservoir.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "9798b2690b38237d97b359d84848eb0e359f61df15d4587c1ed37e73e901768d"
+      "sha256": "90eb79c787ea25dac6aa95d9b0531c3e156d5a65fd84b964b84e70c132f341c0"
     },
     {
       "bytes": 191654,
@@ -10776,15 +10792,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 102763,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "07e2895c226329db081819736c85a4a3659e92a2",
+      "bytes": 103320,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "71fdc7f24c344c807c1d755822a2983cde0ff4612a45099e758cad9b8980de03"
+      "sha256": "f332763d075b0ab9b4766d5e1977d541d46dd061e8e65891c6f9bc5ea0845c49"
     },
     {
       "bytes": 30876,
@@ -11736,12 +11752,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 23159,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 23512,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "34b95aff2d05758ad4d9910dc87af7ccb45dd6db3c4a7b67ec09c8a28b2b66e4"
+      "sha256": "6246aff825f819bd486347f686d5f1e59c77a4ef33c3791c7f916b939d9b00ac"
     },
     {
       "bytes": 12284,
@@ -11752,12 +11768,12 @@
       "sha256": "7398cba18661886990f700660d6d11564db27ddd912bd695ecbbab3a96bf177a"
     },
     {
-      "bytes": 592760,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 593541,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1805d3ff6488308b5247726e9f7a5136203d32e39e69d96b39a56eb921a63d73"
+      "sha256": "a846bba26422a80fd4d8923a41367177d5b67a8e2f3e34580a1a792ab5d178ea"
     },
     {
       "bytes": 6705,
@@ -11766,20 +11782,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 221019,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 221625,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e0748d16af069bcb1cee32de14efebff858147b622e316ddf4586098920e6b01"
+      "sha256": "acb9507687fcf4ffd57c1120516b1d6130664aa13b098229fa9379635b36e489"
     },
     {
-      "bytes": 39643,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 40013,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "9cf8ce4746261c1b0c22cc0a160a11b88278e67885e6e6d15a9fa07955ebd74b"
+      "sha256": "e9fe15afd74fe5ee5f9160b4b740ae94547db2c9a16baf7fa14718b7073e5e77"
     },
     {
       "bytes": 18356,
@@ -11848,28 +11864,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 29120,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 29439,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "6339fc9186c8145f698a67b30dfc6c10b582d176220af224c1aeeb6a544e3844"
+      "sha256": "b10a43ffc3d789f0889e70a618b8cad8d6d79191390a6c02e9e5d3531ad2a672"
     },
     {
       "bytes": 3206,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4f3e6cfb285a92c1559276a3e8b21f6d4ad9df84dee8116be387a020111fb732"
+      "sha256": "b5789d8adddc32be01f829a56f093bdc36ba8c5aa94c67504500b5e04a0a7f08"
     },
     {
-      "bytes": 40021,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 42062,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "90ced2592b6d7b5963e41639dfbaa15ad2de48db18fa8a64b5190b8befc64b5b"
+      "sha256": "a1762662285638bfcd71d4aaf8a97cddedb691c8ad12b10cf5722f8a4df168f9"
     },
     {
       "bytes": 226492,
@@ -11881,27 +11897,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "50dec707d7effd663bd3d8600944585faf4fd1617c4f4083164232b51841964d"
+      "sha256": "e092db3ef50b6a1c7cbeceb1d1927ceb8cf6d42a68e9c8c0272028588d19bc07"
     },
     {
-      "bytes": 350008,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 358685,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e3d44e892fe6f3b0ab188e89ef8ab9a336d1901247b94e3b5831ac56b70d8139"
+      "sha256": "d606765a98088510bb4b99ca16cf67841459e8aa2b3cede4357b0b9ed31b4a1c"
     },
     {
-      "bytes": 8721045,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "bytes": 9015584,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "06ee8b220756cc203884a743057d9a2c7030f29cbf2b1b0f9ef27db9860510b9"
+      "sha256": "7cc56523830d81850fa63d0db20d5074dc97885e47929fb30160e6cd6f00d894"
     },
     {
       "bytes": 3283,
@@ -30039,6 +30055,14 @@
       "sha256": "221cc83583b663b6e51f36e8c17dc15d3e5ef159e8ade1949b77339def397445"
     },
     {
+      "bytes": 47280,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
+      "path": "results/summaries/nsc-atlas-core-evolution-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b3f7eb0beab13bbb2cf4498a040455116506c1df10e5c4c935d49d5bf6c06690"
+    },
+    {
       "bytes": 17871,
       "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
       "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
@@ -31037,6 +31061,14 @@
       "path": "scripts/check_nsc_atlas_compositional_gravity.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "a70b55c05f5be698d5f22e6cd9ec0bc544c45b0a4a1c40f54c04ff89ec167e07"
+    },
+    {
+      "bytes": 12226,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
+      "path": "scripts/check_nsc_atlas_core_evolution.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "754b8715c20e44e69147509e0f037031a0bf99597df5008e80deb1ee8993fca3"
     },
     {
       "bytes": 7013,
@@ -33976,6 +34008,14 @@
       "sha256": "73b653e582ba201ed2cfa1443f9858116f315a70fe74032e117bbba7c9876609"
     },
     {
+      "bytes": 2497,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
+      "path": "scripts/plot_nsc_atlas_core_evolution.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "128a98477561b0c8e3b31825da94a1d2daf09ad2a2be1fabf4c9aad00bff572e"
+    },
+    {
       "bytes": 1813,
       "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
       "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
@@ -34796,12 +34836,12 @@
       "sha256": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7"
     },
     {
-      "bytes": 15867,
-      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "07e2895c226329db081819736c85a4a3659e92a2",
+      "bytes": 18714,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
       "path": "src/recursive_horizons/nsc_atlas_core_evolution.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "1dcb9542c8f6e9bec363b0725e6da9c9d02eb68834c65f0ff21797a7693010d7"
+      "sha256": "21ee66faa161cd6545155db954994c5f126d2dfa2a1b34249ed3193dae37755d"
     },
     {
       "bytes": 12883,
@@ -39000,6 +39040,14 @@
       "original_path": "lab/tests/test_nsc_atlas_connection_slice.py",
       "path": "tests/test_nsc_atlas_connection_slice.py",
       "sha256": "66607ff4b641cfbddf5ee63aaa66946a64e7dbe378fe52b3d71662159ee4de1a"
+    },
+    {
+      "bytes": 3254,
+      "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
+      "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
+      "path": "tests/test_nsc_atlas_core_evolution.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "acf84dcc968d483fbe7a36670837e8e7e92f82f8a5027bfc706c40383ed124ee"
     },
     {
       "bytes": 3591,

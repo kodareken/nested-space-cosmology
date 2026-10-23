@@ -423,6 +423,21 @@
       "section": "10.32",
       "status": "derived",
       "owner": "docs/nsc-atlas-core-reservoir.md"
+    },
+    "coupled-core-parent-evolution": {
+      "section": "10.33",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-core-evolution.md"
+    },
+    "inherited-diffuse-concentration": {
+      "section": "10.34",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-core-evolution.md"
+    },
+    "formed-core-clock": {
+      "section": "10.35",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-core-evolution.md"
     }
   },
   "findings": [
@@ -825,6 +840,30 @@
       "note": "docs/nsc-atlas-core-reservoir.md",
       "record": "results/summaries/nsc-atlas-core-reservoir-v1.json",
       "paper_section": "10.32"
+    },
+    {
+      "id": "coupled-core-parent-evolution",
+      "status": "measured",
+      "summary": "Finite constrained Einstein-Klein-Gordon evolution of the compensated source on a parent-expansion slicing, with mass-flux, homogeneous, radial and time refinement checks. The moving boundary stays in the protected parent domain. Complete membrane future remains open.",
+      "note": "docs/nsc-atlas-core-evolution.md",
+      "record": "results/summaries/nsc-atlas-core-evolution-v1.json",
+      "paper_section": "10.33"
+    },
+    {
+      "id": "inherited-diffuse-concentration",
+      "status": "measured",
+      "summary": "A supplied diffuse same-action state with matched total geometric core mass develops nonlinear concentration and breathing in a finite evolution. A fixed-geometry field control and refinement test the source of the concentration. No universal or asymptotic formation theorem is asserted.",
+      "note": "docs/nsc-atlas-core-evolution.md",
+      "record": "results/summaries/nsc-atlas-core-evolution-v1.json",
+      "paper_section": "10.34"
+    },
+    {
+      "id": "formed-core-clock",
+      "status": "measured",
+      "summary": "A central proper-time emission and held-radius receiver define a conditional frequency departure and arrival delay on the evolved geometry. Independent canonical photons and homogeneous null paths check the result. The physical SI scale and observational identification remain open.",
+      "note": "docs/nsc-atlas-core-evolution.md",
+      "record": "results/summaries/nsc-atlas-core-evolution-v1.json",
+      "paper_section": "10.35"
     }
   ]
 }

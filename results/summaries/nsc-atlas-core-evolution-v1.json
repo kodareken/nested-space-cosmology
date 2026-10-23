@@ -1,0 +1,1375 @@
+{
+  "schema": "nsc-atlas-core-evolution-v1",
+  "result": "Full finite spherical Einstein-scalar evolution connects a compensated inherited preparation, nonlinear concentration, mass/flux conservation and operational clock signals.",
+  "symbolic_zero_identities": {
+    "canonical_and_normal_photon": "0",
+    "subtracted_lapse": "0",
+    "subtracted_time_mass_flux": "0"
+  },
+  "runs": {
+    "diffuse_fine": {
+      "config": {
+        "kind": "diffuse",
+        "outer": 4.0,
+        "spacing": 0.00025,
+        "step": 2.5e-05,
+        "end": 5.0,
+        "receiver": 0.6,
+        "emission_age": 4.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "diffuse",
+        "depletion": 0.18591368739798825,
+        "cloud_amplitude": 0.0018625187431434292,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 4.568141970002008,
+        "receiver_proper_age": 4.47524605053323,
+        "received_to_emitted_frequency": 1.0130091684946978,
+        "central_proper_age_at_arrival": 4.54894895994153,
+        "normal_log_frequency": -0.17319747897127502,
+        "receiver_boost": 0.18400292238185462,
+        "emission_coordinate_time": 4.016752694560116,
+        "emission_proper_age": 4.0
+      },
+      "initial_mass_at_cuts": [
+        1.8963901692706464e-05,
+        7.991925989002696e-05,
+        9.571401067982711e-05,
+        -7.408379743257951e-07,
+        -3.0702183236881154e-12,
+        -3.070218335931699e-12
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        1.0102609115379181e-11,
+        9.918210014809832e-12,
+        1.1217930445078146e-11,
+        2.971038368939586e-11,
+        8.413736350749204e-10,
+        5.936198023319278e-10
+      ],
+      "minimum_B": 0.6355759619224829,
+      "minimum_lapse": 0.9814535163739005,
+      "maximum_sampled_grid_light_speed": 1.5023184814796438,
+      "initial_central_excitation": 10.538929230294904,
+      "initial_half_mass_radius": 0.03930864226149509,
+      "reference_outgoing_front": 14.294427390517075,
+      "reference_front_buffer": 6.525784830810913,
+      "physical_outer_radius": 20.82021222132799,
+      "independent_canonical_frequency": 1.013009168448165,
+      "geodesic_frequency_gap": -4.6532777631114186e-11,
+      "final_outer_mass_offset": 2.0384020408290818e-09,
+      "minimum_receiver_timelike_margin": 0.9662095590682009,
+      "maximum_background_constraint": 1.309063968335522e-12,
+      "final_central_excitation": 239.40015627306997,
+      "final_mass_at_cuts": [
+        6.416964066858596e-05,
+        6.94851228005889e-05,
+        8.804486648242162e-05,
+        0.00010501673847346884,
+        0.00011943552432650112,
+        0.00010119894414669585
+      ],
+      "late_mean_central_excitation": 148.37288923732712,
+      "late_mean_half_mass_radius": 0.01849206756925333,
+      "cpu_seconds": 1169.890625,
+      "wall_seconds": 1171.7999826000014,
+      "final_state_sha256": "de41999ff2f0f6f9f2479e815ba1a9cc4e96a0b577fa759b24c6c5e34c1ee065",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 8.200342992305517,
+          "mass_inside_025": 1.4589767996698397e-05,
+          "half_mass_radius": 0.045846170999109745
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 9.4591416795616,
+          "mass_inside_025": 1.5470787790246458e-05,
+          "half_mass_radius": 0.04824443944543601
+        },
+        {
+          "time": 2.0,
+          "central_excitation": 22.56944043891091,
+          "mass_inside_025": 2.6582033817337352e-05,
+          "half_mass_radius": 0.03957573673874139
+        },
+        {
+          "time": 3.0,
+          "central_excitation": 177.7718039711801,
+          "mass_inside_025": 6.208149543036792e-05,
+          "half_mass_radius": 0.01724103068560362
+        },
+        {
+          "time": 3.5,
+          "central_excitation": 502.28740945245016,
+          "mass_inside_025": 6.920756635118827e-05,
+          "half_mass_radius": 0.011505733646452427
+        },
+        {
+          "time": 4.0,
+          "central_excitation": 26.04386720367137,
+          "mass_inside_025": 5.030472487934873e-05,
+          "half_mass_radius": 0.023663099415600304
+        },
+        {
+          "time": 4.5,
+          "central_excitation": 75.58284118757955,
+          "mass_inside_025": 4.949960389899558e-05,
+          "half_mass_radius": 0.02294996171444654
+        },
+        {
+          "time": 5.0,
+          "central_excitation": 239.40015627306997,
+          "mass_inside_025": 6.416964066858596e-05,
+          "half_mass_radius": 0.014735269747674466
+        }
+      ]
+    },
+    "diffuse_medium": {
+      "config": {
+        "kind": "diffuse",
+        "outer": 4.0,
+        "spacing": 0.0005,
+        "step": 5e-05,
+        "end": 5.0,
+        "receiver": 0.6,
+        "emission_age": 4.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "diffuse",
+        "depletion": 0.18591368739798825,
+        "cloud_amplitude": 0.0018625187431434292,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 4.568141789886773,
+        "receiver_proper_age": 4.4752459413413135,
+        "received_to_emitted_frequency": 1.0130091737389804,
+        "central_proper_age_at_arrival": 4.548948973230105,
+        "normal_log_frequency": -0.1731974733315501,
+        "receiver_boost": 0.1840029219347336,
+        "emission_coordinate_time": 4.016752521622558,
+        "emission_proper_age": 4.0
+      },
+      "initial_mass_at_cuts": [
+        1.8963901849238498e-05,
+        7.991925967262312e-05,
+        9.571401057777416e-05,
+        -7.408381195303791e-07,
+        -6.384380653574033e-10,
+        -6.384380749222313e-10
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        1.3350555415277436e-10,
+        1.5126432656491435e-10,
+        1.6874097848284178e-10,
+        4.306758990386771e-10,
+        1.272893638572868e-08,
+        9.039531155663982e-09
+      ],
+      "minimum_B": 0.6355759623402243,
+      "minimum_lapse": 0.9815304859410786,
+      "maximum_sampled_grid_light_speed": 1.5023184825789575,
+      "initial_central_excitation": 10.538929230294904,
+      "initial_half_mass_radius": 0.03930864274633603,
+      "reference_outgoing_front": 14.294427390195947,
+      "reference_front_buffer": 6.525784830499449,
+      "physical_outer_radius": 20.820212220695396,
+      "independent_canonical_frequency": 1.0130091728264816,
+      "geodesic_frequency_gap": -9.12498743232959e-10,
+      "final_outer_mass_offset": -6.433719354744097e-07,
+      "minimum_receiver_timelike_margin": 0.9662095589544132,
+      "maximum_background_constraint": 1.2406686789034893e-11,
+      "final_central_excitation": 239.40275420881753,
+      "final_mass_at_cuts": [
+        6.416953873616248e-05,
+        6.948511204114142e-05,
+        8.804485011040893e-05,
+        0.0001050167134825041,
+        0.0001194353875487903,
+        0.00010119473742631797
+      ],
+      "late_mean_central_excitation": 148.3705782569505,
+      "late_mean_half_mass_radius": 0.018492186361057556,
+      "cpu_seconds": 362.78125,
+      "wall_seconds": 363.5957812999841,
+      "final_state_sha256": "e6dc16380f087790ee5db6d24efd4262e6343742d6c620b609758f628f12352b",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 8.200342459019659,
+          "mass_inside_025": 1.458976818749659e-05,
+          "half_mass_radius": 0.04584607531130315
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 9.459176539136028,
+          "mass_inside_025": 1.5470783343345037e-05,
+          "half_mass_radius": 0.04824433808028697
+        },
+        {
+          "time": 2.0,
+          "central_excitation": 22.569410618497617,
+          "mass_inside_025": 2.6582010879653858e-05,
+          "half_mass_radius": 0.03957575140893459
+        },
+        {
+          "time": 3.0,
+          "central_excitation": 177.7711227209882,
+          "mass_inside_025": 6.208143564813048e-05,
+          "half_mass_radius": 0.01724106653034687
+        },
+        {
+          "time": 3.5,
+          "central_excitation": 502.28512456046576,
+          "mass_inside_025": 6.920746656494238e-05,
+          "half_mass_radius": 0.011505774214863776
+        },
+        {
+          "time": 4.0,
+          "central_excitation": 26.044230396096257,
+          "mass_inside_025": 5.030462985228528e-05,
+          "half_mass_radius": 0.023663123950362207
+        },
+        {
+          "time": 4.5,
+          "central_excitation": 75.58026535462001,
+          "mass_inside_025": 4.9499320283949876e-05,
+          "half_mass_radius": 0.0229500944763422
+        },
+        {
+          "time": 5.0,
+          "central_excitation": 239.40275420881753,
+          "mass_inside_025": 6.416953873616248e-05,
+          "half_mass_radius": 0.014735352739691735
+        }
+      ]
+    },
+    "diffuse_coarse": {
+      "config": {
+        "kind": "diffuse",
+        "outer": 4.0,
+        "spacing": 0.001,
+        "step": 0.0001,
+        "end": 5.0,
+        "receiver": 0.6,
+        "emission_age": 4.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "diffuse",
+        "depletion": 0.18591368739798825,
+        "cloud_amplitude": 0.0018625187431434292,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 4.568138751904933,
+        "receiver_proper_age": 4.47524379375679,
+        "received_to_emitted_frequency": 1.0130093539821265,
+        "central_proper_age_at_arrival": 4.54894942739673,
+        "normal_log_frequency": -0.1731972913216152,
+        "receiver_boost": 0.1840029179914145,
+        "emission_coordinate_time": 4.0167495327288245,
+        "emission_proper_age": 4.0
+      },
+      "initial_mass_at_cuts": [
+        1.896390209458627e-05,
+        7.991925393431141e-05,
+        9.571400637933666e-05,
+        -7.40843012279698e-07,
+        -6.702241880769119e-08,
+        -6.702242039681669e-08
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        7.820883265267638e-09,
+        7.63869476504239e-09,
+        8.518760717771142e-09,
+        1.0380770572117662e-08,
+        1.9808889641638574e-07,
+        2.5490174243403594e-07
+      ],
+      "minimum_B": 0.6355759859302693,
+      "minimum_lapse": 0.9818347934486711,
+      "maximum_sampled_grid_light_speed": 1.5023181734351294,
+      "initial_central_excitation": 10.538929230294904,
+      "initial_half_mass_radius": 0.03930865046831404,
+      "reference_outgoing_front": 14.294427379931554,
+      "reference_front_buffer": 6.525784820578691,
+      "physical_outer_radius": 20.820212200510245,
+      "independent_canonical_frequency": 1.0130093381822407,
+      "geodesic_frequency_gap": -1.57998858441033e-08,
+      "final_outer_mass_offset": -8.192288531059577e-07,
+      "minimum_receiver_timelike_margin": 0.966209559101712,
+      "maximum_background_constraint": 3.6855035689953297e-10,
+      "final_central_excitation": 245.742303959134,
+      "final_mass_at_cuts": [
+        6.416504489777696e-05,
+        6.948519504006989e-05,
+        8.804657280316666e-05,
+        0.00010501753144718357,
+        0.0001194358534016239,
+        0.0001011995539432709
+      ],
+      "late_mean_central_excitation": 148.34531713228284,
+      "late_mean_half_mass_radius": 0.018496993961745867,
+      "cpu_seconds": 119.34375,
+      "wall_seconds": 119.49499070001184,
+      "final_state_sha256": "74ba75d33ff6b4de27f7a66ec6e3c2ca648f7cbe01f5029987ce70bedd4294a3",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 8.200341574084065,
+          "mass_inside_025": 1.4589766699538865e-05,
+          "half_mass_radius": 0.04585085293650628
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 9.463273944224419,
+          "mass_inside_025": 1.547040207579674e-05,
+          "half_mass_radius": 0.04824972978234292
+        },
+        {
+          "time": 2.0,
+          "central_excitation": 22.566726633382824,
+          "mass_inside_025": 2.6580148437778192e-05,
+          "half_mass_radius": 0.03957701918482781
+        },
+        {
+          "time": 3.0,
+          "central_excitation": 177.73410367720373,
+          "mass_inside_025": 6.207759787158784e-05,
+          "half_mass_radius": 0.017242306262254717
+        },
+        {
+          "time": 3.5,
+          "central_excitation": 502.1911322095747,
+          "mass_inside_025": 6.920483959407876e-05,
+          "half_mass_radius": 0.011506945461034774
+        },
+        {
+          "time": 4.0,
+          "central_excitation": 26.044662728553593,
+          "mass_inside_025": 5.030232961699642e-05,
+          "half_mass_radius": 0.023663695126771925
+        },
+        {
+          "time": 4.5,
+          "central_excitation": 75.66809726904165,
+          "mass_inside_025": 4.948637545004232e-05,
+          "half_mass_radius": 0.022955247670412064
+        },
+        {
+          "time": 5.0,
+          "central_excitation": 245.742303959134,
+          "mass_inside_025": 6.416504489777696e-05,
+          "half_mass_radius": 0.014740399748086925
+        }
+      ]
+    },
+    "diffuse_time_control": {
+      "config": {
+        "kind": "diffuse",
+        "outer": 4.0,
+        "spacing": 0.0005,
+        "step": 2.5e-05,
+        "end": 5.0,
+        "receiver": 0.6,
+        "emission_age": 4.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "diffuse",
+        "depletion": 0.18591368739798825,
+        "cloud_amplitude": 0.0018625187431434292,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 4.568141790229352,
+        "receiver_proper_age": 4.475245941334199,
+        "received_to_emitted_frequency": 1.013009173540686,
+        "central_proper_age_at_arrival": 4.548948972292425,
+        "normal_log_frequency": -0.17319747393011284,
+        "receiver_boost": 0.1840029223239104,
+        "emission_coordinate_time": 4.016752521553487,
+        "emission_proper_age": 4.0
+      },
+      "initial_mass_at_cuts": [
+        1.8963901849238498e-05,
+        7.991925967262312e-05,
+        9.571401057777416e-05,
+        -7.408381195303791e-07,
+        -6.384380653574033e-10,
+        -6.384380749222313e-10
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        1.334592110320543e-10,
+        1.5123946300372613e-10,
+        1.6866378385292003e-10,
+        4.308073051940975e-10,
+        1.27443701382215e-08,
+        8.96383755886063e-09
+      ],
+      "minimum_B": 0.6355759623395635,
+      "minimum_lapse": 0.9815304110822923,
+      "maximum_sampled_grid_light_speed": 1.5023184826001221,
+      "initial_central_excitation": 10.538929230294904,
+      "initial_half_mass_radius": 0.03930864274633603,
+      "reference_outgoing_front": 14.294427390517075,
+      "reference_front_buffer": 6.525784830810913,
+      "physical_outer_radius": 20.82021222132799,
+      "independent_canonical_frequency": 1.013009172628026,
+      "geodesic_frequency_gap": -9.126601696607395e-10,
+      "final_outer_mass_offset": -6.43329893792326e-07,
+      "minimum_receiver_timelike_margin": 0.966209558953035,
+      "maximum_background_constraint": 1.309063968335522e-12,
+      "final_central_excitation": 239.40280604576478,
+      "final_mass_at_cuts": [
+        6.416953687894061e-05,
+        6.94851120053092e-05,
+        8.804484965781193e-05,
+        0.00010501671287656687,
+        0.00011943538720897225,
+        0.00010119473392228629
+      ],
+      "late_mean_central_excitation": 148.37053515333469,
+      "late_mean_half_mass_radius": 0.018492188202734003,
+      "cpu_seconds": 714.15625,
+      "wall_seconds": 715.4560129999882,
+      "final_state_sha256": "1224c55f517ef04a17967378367c2cabfa8d501d434f2753926bcc5fbe879116",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 8.20034241349571,
+          "mass_inside_025": 1.4589768128440376e-05,
+          "half_mass_radius": 0.045846073731780054
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 9.459177121207823,
+          "mass_inside_025": 1.547078332354997e-05,
+          "half_mass_radius": 0.048244335368275645
+        },
+        {
+          "time": 2.0,
+          "central_excitation": 22.569410578142673,
+          "mass_inside_025": 2.658201093014675e-05,
+          "half_mass_radius": 0.03957575134932993
+        },
+        {
+          "time": 3.0,
+          "central_excitation": 177.7711104074316,
+          "mass_inside_025": 6.208143510101054e-05,
+          "half_mass_radius": 0.01724106679856777
+        },
+        {
+          "time": 3.5,
+          "central_excitation": 502.28505478026136,
+          "mass_inside_025": 6.920746609440486e-05,
+          "half_mass_radius": 0.011505774602293968
+        },
+        {
+          "time": 4.0,
+          "central_excitation": 26.044232335950305,
+          "mass_inside_025": 5.030462845265697e-05,
+          "half_mass_radius": 0.02366312424838543
+        },
+        {
+          "time": 4.5,
+          "central_excitation": 75.58023387864907,
+          "mass_inside_025": 4.9499315890534625e-05,
+          "half_mass_radius": 0.02295009644329548
+        },
+        {
+          "time": 5.0,
+          "central_excitation": 239.40280604576478,
+          "mass_inside_025": 6.416953687894061e-05,
+          "half_mass_radius": 0.014735353961586952
+        }
+      ]
+    },
+    "diffuse_outer_control": {
+      "config": {
+        "kind": "diffuse",
+        "outer": 4.5,
+        "spacing": 0.0005,
+        "step": 5e-05,
+        "end": 5.0,
+        "receiver": 0.6,
+        "emission_age": 4.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "diffuse",
+        "depletion": 0.18591368739798825,
+        "cloud_amplitude": 0.0018625187431434292,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 4.568141770915195,
+        "receiver_proper_age": 4.475245941334077,
+        "received_to_emitted_frequency": 1.0130091737394658,
+        "central_proper_age_at_arrival": 4.548948973226348,
+        "normal_log_frequency": -0.17319747332893443,
+        "receiver_boost": 0.18400292193266915,
+        "emission_coordinate_time": 4.016752506091912,
+        "emission_proper_age": 4.0
+      },
+      "initial_mass_at_cuts": [
+        1.8963901849238498e-05,
+        7.991925967262312e-05,
+        9.571401057777416e-05,
+        -7.408381195303791e-07,
+        -6.384380653574033e-10,
+        -6.384380749222313e-10
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        1.335055387672679e-10,
+        1.51264294291265e-10,
+        1.6874094851778072e-10,
+        4.3067587609255456e-10,
+        1.272893639212039e-08,
+        9.039530871253189e-09
+      ],
+      "minimum_B": 0.5387758272532369,
+      "minimum_lapse": 0.9815534284736532,
+      "maximum_sampled_grid_light_speed": 1.5023184825910458,
+      "initial_central_excitation": 10.538929230294904,
+      "initial_half_mass_radius": 0.03930864274633603,
+      "reference_outgoing_front": 14.294427390195947,
+      "reference_front_buffer": 9.128311358086373,
+      "physical_outer_radius": 23.42273874828232,
+      "independent_canonical_frequency": 1.0130091728269635,
+      "geodesic_frequency_gap": -9.125022959466378e-10,
+      "final_outer_mass_offset": -6.436102433843984e-07,
+      "minimum_receiver_timelike_margin": 0.9662095589548139,
+      "maximum_background_constraint": 1.2406686789034893e-11,
+      "final_central_excitation": 239.40271029155141,
+      "final_mass_at_cuts": [
+        6.41695378848254e-05,
+        6.948511194187613e-05,
+        8.804485014225739e-05,
+        0.00010501671346694942,
+        0.00011943538585174079,
+        0.00010119473722296019
+      ],
+      "late_mean_central_excitation": 148.3705822404366,
+      "late_mean_half_mass_radius": 0.01849218609081414,
+      "cpu_seconds": 413.21875,
+      "wall_seconds": 414.0154528999992,
+      "final_state_sha256": "3c891c304e7f8678cffe0779bda9543bbf9f88cb50b9e70e2449c2bf44210623",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 8.200342458981982,
+          "mass_inside_025": 1.4589768187429644e-05,
+          "half_mass_radius": 0.04584607531130315
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 9.459176539321204,
+          "mass_inside_025": 1.54707833434397e-05,
+          "half_mass_radius": 0.04824433808028697
+        },
+        {
+          "time": 2.0,
+          "central_excitation": 22.569410557900504,
+          "mass_inside_025": 2.6582010869612062e-05,
+          "half_mass_radius": 0.03957575137913226
+        },
+        {
+          "time": 3.0,
+          "central_excitation": 177.77111004916,
+          "mass_inside_025": 6.208143589075562e-05,
+          "half_mass_radius": 0.017241066738963126
+        },
+        {
+          "time": 3.5,
+          "central_excitation": 502.28505536523767,
+          "mass_inside_025": 6.920746625435891e-05,
+          "half_mass_radius": 0.011505774661898612
+        },
+        {
+          "time": 4.0,
+          "central_excitation": 26.044230076259495,
+          "mass_inside_025": 5.030462987460428e-05,
+          "half_mass_radius": 0.023663123920559886
+        },
+        {
+          "time": 4.5,
+          "central_excitation": 75.5802790666869,
+          "mass_inside_025": 4.949932107432905e-05,
+          "half_mass_radius": 0.022950093939900395
+        },
+        {
+          "time": 5.0,
+          "central_excitation": 239.40271029155141,
+          "mass_inside_025": 6.41695378848254e-05,
+          "half_mass_radius": 0.014735353752970696
+        }
+      ]
+    },
+    "fixed_geometry_control": {
+      "config": {
+        "kind": "diffuse",
+        "outer": 4.0,
+        "spacing": 0.0005,
+        "step": 5e-05,
+        "end": 5.0,
+        "receiver": 0.6,
+        "emission_age": 4.0,
+        "backreaction": false
+      },
+      "preparation": {
+        "kind": "diffuse",
+        "depletion": 0.18591368739798825,
+        "cloud_amplitude": 0.0018625187431434292,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 4.550775250647304,
+        "receiver_proper_age": 4.458210589213004,
+        "received_to_emitted_frequency": 1.0172179663926106,
+        "central_proper_age_at_arrival": 4.550775250643367,
+        "normal_log_frequency": -0.16902369570995474,
+        "receiver_boost": 0.1839762158190079,
+        "emission_coordinate_time": 4.000000000002653,
+        "emission_proper_age": 4.0
+      },
+      "initial_mass_at_cuts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "minimum_B": 0.6355759621182927,
+      "minimum_lapse": 1.0,
+      "maximum_sampled_grid_light_speed": 1.5023184814527026,
+      "initial_central_excitation": 10.538929230294904,
+      "initial_half_mass_radius": null,
+      "reference_outgoing_front": 14.294427390195947,
+      "reference_front_buffer": 6.525784830499449,
+      "physical_outer_radius": 20.820212220695396,
+      "independent_canonical_frequency": 1.0172179663927985,
+      "geodesic_frequency_gap": 1.8784973576657649e-13,
+      "final_outer_mass_offset": 0.0,
+      "minimum_receiver_timelike_margin": 0.9662232763380445,
+      "maximum_background_constraint": 1.2406686789034893e-11,
+      "final_central_excitation": 0.03728966637642882,
+      "final_mass_at_cuts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_mean_central_excitation": 0.047728483985756714,
+      "late_mean_half_mass_radius": null,
+      "cpu_seconds": 175.8125,
+      "wall_seconds": 176.09334809999564,
+      "final_state_sha256": "34fee8adeaf622fd92d4c89589a9da9e9dcce4440247d5e929149540b3e01a0a",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 5.280163293692757,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 2.675450141287153,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 2.0,
+          "central_excitation": 0.7944724243266602,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 3.0,
+          "central_excitation": 0.26662844576450145,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 3.5,
+          "central_excitation": 0.1599529117600645,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 4.0,
+          "central_excitation": 0.09751388403584918,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 4.5,
+          "central_excitation": 0.060084281416799584,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 5.0,
+          "central_excitation": 0.03728966637642882,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        }
+      ]
+    },
+    "core_fine": {
+      "config": {
+        "kind": "core",
+        "outer": 4.0,
+        "spacing": 0.00025,
+        "step": 2.5e-05,
+        "end": 1.0,
+        "receiver": 0.6,
+        "emission_age": 0.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "core",
+        "depletion": 0.18591368740132616,
+        "cloud_amplitude": null,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 0.5390772406839011,
+        "receiver_proper_age": 0.5225867517374492,
+        "received_to_emitted_frequency": 1.0053594948466598,
+        "central_proper_age_at_arrival": 0.5349455519498884,
+        "normal_log_frequency": -0.22685146276583126,
+        "receiver_boost": 0.22811173707267776,
+        "emission_coordinate_time": 0.0,
+        "emission_proper_age": 0.0
+      },
+      "initial_mass_at_cuts": [
+        8.113035039955891e-05,
+        9.549321562317647e-05,
+        9.571401043607491e-05,
+        -7.408388144681347e-07,
+        -3.9103597904771125e-12,
+        -3.910359802720696e-12
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        3.157731822401558e-11,
+        2.931147963168806e-11,
+        2.926319818745304e-11,
+        2.9745185076496196e-11,
+        8.413008681233831e-10,
+        5.934142935122459e-10
+      ],
+      "minimum_B": 0.6355759621070507,
+      "minimum_lapse": 0.965447374867533,
+      "maximum_sampled_grid_light_speed": 1.5023184814812365,
+      "initial_central_excitation": 212.34804789775035,
+      "initial_half_mass_radius": 0.014924388986203274,
+      "reference_outgoing_front": 1.9125767733665207,
+      "reference_front_buffer": 3.977429132578301,
+      "physical_outer_radius": 5.890005905944822,
+      "independent_canonical_frequency": 1.0053594964228616,
+      "geodesic_frequency_gap": 1.5762018357179386e-09,
+      "final_outer_mass_offset": -1.0845256085091176e-11,
+      "minimum_receiver_timelike_margin": 0.9557726485959814,
+      "maximum_background_constraint": 8.694156505839601e-13,
+      "final_central_excitation": 1690.4846543822691,
+      "final_mass_at_cuts": [
+        9.844105618862415e-05,
+        0.00010068973332358153,
+        0.00010043586851356388,
+        8.454603179692082e-05,
+        -7.583779402145107e-07,
+        -7.174797280568467e-07
+      ],
+      "late_mean_central_excitation": 1566.4522090034,
+      "late_mean_half_mass_radius": 0.007433676603775804,
+      "cpu_seconds": 297.484375,
+      "wall_seconds": 298.02215149998665,
+      "final_state_sha256": "467824c755536f84d391aa198130b22cc1d93a288edd164020e80e5dce02aa08",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 295.36126308467,
+          "mass_inside_025": 8.649461076047338e-05,
+          "half_mass_radius": 0.013433621756732463
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 1690.4846543822691,
+          "mass_inside_025": 9.844105618862415e-05,
+          "half_mass_radius": 0.007267576061189175
+        }
+      ]
+    },
+    "core_medium": {
+      "config": {
+        "kind": "core",
+        "outer": 4.0,
+        "spacing": 0.0005,
+        "step": 5e-05,
+        "end": 1.0,
+        "receiver": 0.6,
+        "emission_age": 0.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "core",
+        "depletion": 0.18591368740132616,
+        "cloud_amplitude": null,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 0.5390772391859421,
+        "receiver_proper_age": 0.5225867514868808,
+        "received_to_emitted_frequency": 1.0053594717300236,
+        "central_proper_age_at_arrival": 0.5349455877679018,
+        "normal_log_frequency": -0.22685142139562067,
+        "receiver_boost": 0.22811167605822114,
+        "emission_coordinate_time": 0.0,
+        "emission_proper_age": 0.0
+      },
+      "initial_mass_at_cuts": [
+        8.113032547964003e-05,
+        9.549319003476978e-05,
+        9.571398481048259e-05,
+        -7.408644671535756e-07,
+        -6.647856612565626e-10,
+        -6.647856708213905e-10
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        6.621218933783269e-10,
+        6.628566095399349e-10,
+        7.216685124338481e-10,
+        6.735044710522511e-10,
+        1.273106693118285e-08,
+        9.046318548344066e-09
+      ],
+      "minimum_B": 0.635575962353267,
+      "minimum_lapse": 0.9654506675762095,
+      "maximum_sampled_grid_light_speed": 1.5023184826289113,
+      "initial_central_excitation": 212.34804789775035,
+      "initial_half_mass_radius": 0.014924398053712155,
+      "reference_outgoing_front": 1.9125767733600452,
+      "reference_front_buffer": 3.977429132559127,
+      "physical_outer_radius": 5.890005905919172,
+      "independent_canonical_frequency": 1.0053595094154821,
+      "geodesic_frequency_gap": 3.768545853155558e-08,
+      "final_outer_mass_offset": -7.949151078097603e-09,
+      "minimum_receiver_timelike_margin": 0.9557726487090515,
+      "maximum_background_constraint": 8.543499241397967e-12,
+      "final_central_excitation": 1690.4284101464411,
+      "final_mass_at_cuts": [
+        9.844039490351709e-05,
+        0.00010068907394200021,
+        0.00010043477844144586,
+        8.454529726105268e-05,
+        -7.591230756332643e-07,
+        -7.181598914893925e-07
+      ],
+      "late_mean_central_excitation": 1566.407756515997,
+      "late_mean_half_mass_radius": 0.00743380682052362,
+      "cpu_seconds": 85.0625,
+      "wall_seconds": 85.17094949999591,
+      "final_state_sha256": "c3e4873ddb2c930ca68ba629f9d6d902ab281604baa8e5431cfad5e0adafaa1b",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 295.3606814535181,
+          "mass_inside_025": 8.649455547245664e-05,
+          "half_mass_radius": 0.013433615073561674
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 1690.4284101464411,
+          "mass_inside_025": 9.844039490351709e-05,
+          "half_mass_radius": 0.007267719164490699
+        }
+      ]
+    },
+    "core_coarse": {
+      "config": {
+        "kind": "core",
+        "outer": 4.0,
+        "spacing": 0.001,
+        "step": 0.0001,
+        "end": 1.0,
+        "receiver": 0.6,
+        "emission_age": 0.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "core",
+        "depletion": 0.18591368740132616,
+        "cloud_amplitude": null,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 0.5390771049782882,
+        "receiver_proper_age": 0.522586749522674,
+        "received_to_emitted_frequency": 1.005360111328757,
+        "central_proper_age_at_arrival": 0.5349461013184105,
+        "normal_log_frequency": -0.22685066372211454,
+        "receiver_boost": 0.22811156089504936,
+        "emission_coordinate_time": 0.0,
+        "emission_proper_age": 0.0
+      },
+      "initial_mass_at_cuts": [
+        8.112957580084627e-05,
+        9.549242981297933e-05,
+        9.571322399339505e-05,
+        -7.416257223226015e-07,
+        -6.78051282444073e-08,
+        -6.78051298335328e-08
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        1.6535609027424036e-08,
+        1.672759763710455e-08,
+        1.7294165354116244e-08,
+        1.7617018181173734e-08,
+        1.981735009537363e-07,
+        2.5555355970070454e-07
+      ],
+      "minimum_B": 0.6355759863214522,
+      "minimum_lapse": 0.9656228509221236,
+      "maximum_sampled_grid_light_speed": 1.5023181749180958,
+      "initial_central_excitation": 212.34804789775035,
+      "initial_half_mass_radius": 0.014924558408736688,
+      "reference_outgoing_front": 1.912576773156174,
+      "reference_front_buffer": 3.9774291319559225,
+      "physical_outer_radius": 5.890005905112097,
+      "independent_canonical_frequency": 1.0053608396740974,
+      "geodesic_frequency_gap": 7.283453404838269e-07,
+      "final_outer_mass_offset": -3.3937798387665e-07,
+      "minimum_receiver_timelike_margin": 0.9557726522646588,
+      "maximum_background_constraint": 2.5468060993460995e-10,
+      "final_central_excitation": 1688.7558332076105,
+      "final_mass_at_cuts": [
+        9.842392898266657e-05,
+        0.00010067236498494064,
+        0.00010039776983998017,
+        8.452234824240739e-05,
+        -7.831177414075104e-07,
+        -7.454487969690382e-07
+      ],
+      "late_mean_central_excitation": 1564.889567354398,
+      "late_mean_half_mass_radius": 0.007436938925839887,
+      "cpu_seconds": 35.03125,
+      "wall_seconds": 35.17995859999792,
+      "final_state_sha256": "facb2c8198502340c1c646ac12d80541fa8865ee32ef8b5c530caff39a9a9e20",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 295.3296870794022,
+          "mass_inside_025": 8.649279231439111e-05,
+          "half_mass_radius": 0.013435669928789142
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 1688.7558332076105,
+          "mass_inside_025": 9.842392898266657e-05,
+          "half_mass_radius": 0.007270388215780259
+        }
+      ]
+    },
+    "homogeneous_early": {
+      "config": {
+        "kind": "homogeneous",
+        "outer": 4.0,
+        "spacing": 0.002,
+        "step": 0.0001,
+        "end": 1.0,
+        "receiver": 0.6,
+        "emission_age": 0.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "homogeneous",
+        "depletion": 0.0,
+        "cloud_amplitude": null,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 0.5385878620741381,
+        "receiver_proper_age": 0.5221102854607879,
+        "received_to_emitted_frequency": 1.0129121602321827,
+        "central_proper_age_at_arrival": 0.5385878620740951,
+        "normal_log_frequency": -0.2193682938886663,
+        "receiver_boost": 0.22811283316635875,
+        "emission_coordinate_time": 0.0,
+        "emission_proper_age": 0.0
+      },
+      "initial_mass_at_cuts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "minimum_B": 0.6355759621182927,
+      "minimum_lapse": 1.0,
+      "maximum_sampled_grid_light_speed": 1.5023180554186781,
+      "initial_central_excitation": 0.37499999999999983,
+      "initial_half_mass_radius": null,
+      "reference_outgoing_front": 1.912576773156174,
+      "reference_front_buffer": 3.9774291319559225,
+      "physical_outer_radius": 5.890005905112097,
+      "independent_canonical_frequency": 1.0129121602353421,
+      "geodesic_frequency_gap": 3.1594726834782705e-12,
+      "final_outer_mass_offset": 0.0,
+      "minimum_receiver_timelike_margin": 0.9557725364393692,
+      "maximum_background_constraint": 2.5468060993460995e-10,
+      "final_central_excitation": 0.11743194621578762,
+      "final_mass_at_cuts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_mean_central_excitation": 0.12387066816655176,
+      "late_mean_half_mass_radius": null,
+      "cpu_seconds": 8.546875,
+      "wall_seconds": 8.551837099978002,
+      "final_state_sha256": "6f1b7a1e4ddcc6a211e980a499625d1b5b311aa5efbc241a32d182c721090a27",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 0.20299318116147624,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 0.11743194621578762,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        }
+      ]
+    },
+    "homogeneous_late": {
+      "config": {
+        "kind": "homogeneous",
+        "outer": 4.0,
+        "spacing": 0.002,
+        "step": 0.0001,
+        "end": 5.0,
+        "receiver": 0.6,
+        "emission_age": 4.0,
+        "backreaction": true
+      },
+      "preparation": {
+        "kind": "homogeneous",
+        "depletion": 0.0,
+        "cloud_amplitude": null,
+        "support": 0.48389728165417084,
+        "frequency": 2000.0
+      },
+      "arrival": {
+        "coordinate_time": 4.550775250480237,
+        "receiver_proper_age": 4.458210589154172,
+        "received_to_emitted_frequency": 1.0172179646321133,
+        "central_proper_age_at_arrival": 4.550775250482969,
+        "normal_log_frequency": -0.16902369554930413,
+        "receiver_boost": 0.1839762139916762,
+        "emission_coordinate_time": 3.999999999995983,
+        "emission_proper_age": 4.0
+      },
+      "initial_mass_at_cuts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cuts": [
+        0.025,
+        0.06,
+        0.12,
+        0.24,
+        0.484,
+        0.8
+      ],
+      "maximum_mass_flux_error": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "minimum_B": 0.6355759621182927,
+      "minimum_lapse": 1.0,
+      "maximum_sampled_grid_light_speed": 1.5023180554186781,
+      "initial_central_excitation": 0.37499999999999983,
+      "initial_half_mass_radius": null,
+      "reference_outgoing_front": 14.294427379931554,
+      "reference_front_buffer": 6.525784820578691,
+      "physical_outer_radius": 20.820212200510245,
+      "independent_canonical_frequency": 1.0172179646326698,
+      "geodesic_frequency_gap": 5.564437799421285e-13,
+      "final_outer_mass_offset": 0.0,
+      "minimum_receiver_timelike_margin": 0.9662232763819427,
+      "maximum_background_constraint": 3.6855035689953297e-10,
+      "final_central_excitation": 0.0026595845886870865,
+      "final_mass_at_cuts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_mean_central_excitation": 0.0033757836768425254,
+      "late_mean_half_mass_radius": null,
+      "cpu_seconds": 44.484375,
+      "wall_seconds": 44.54436759999953,
+      "final_state_sha256": "0e92b90098e0034e9aa828c6ee4ced755181f7c492babfeb12894208474de189",
+      "checkpoints": [
+        {
+          "time": 0.5,
+          "central_excitation": 0.20299318116147624,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 1.0,
+          "central_excitation": 0.11743194621578762,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 2.0,
+          "central_excitation": 0.04331106577726955,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 3.0,
+          "central_excitation": 0.016840462288323536,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 3.5,
+          "central_excitation": 0.010590711861101453,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 4.0,
+          "central_excitation": 0.006672952329617235,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 4.5,
+          "central_excitation": 0.004209900971823342,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        },
+        {
+          "time": 5.0,
+          "central_excitation": 0.0026595845886870865,
+          "mass_inside_025": 0.0,
+          "half_mass_radius": null
+        }
+      ]
+    }
+  },
+  "formation": {
+    "initial_core_mass": 9.571401067982711e-05,
+    "initial_half_mass_radius": 0.03930864226149509,
+    "late_half_mass_radius": 0.01849206756925333,
+    "radius_ratio": 0.4704326200390619,
+    "initial_central_excitation": 10.538929230294904,
+    "late_central_excitation": 148.37288923732712,
+    "central_excitation_gain": 14.078554471247292,
+    "fixed_geometry_late_excitation": 0.047728483985756714,
+    "gravity_to_fixed_geometry_ratio": 3108.686403733356,
+    "radius_medium_fine_spread": 1.1879180422669222e-07,
+    "excitation_medium_fine_spread": 0.002310980376620364,
+    "scope": "Finite nonlinear concentration followed by breathing. Neither an asymptotic stationary remnant nor universal formation from arbitrary inherited data is asserted."
+  },
+  "observer_predictions": {
+    "core": {
+      "frequency_fractional_departure": -0.0074562870518390945,
+      "frequency_log_departure": -0.00748422411796183,
+      "frequency_ratio_numerical_error": 2.046469731453726e-07,
+      "fractional_departure_numerical_error": 2.0203824364367424e-07,
+      "receiver_proper_delay": 0.00047646611580309806,
+      "proper_delay_numerical_error": 5.011366877027967e-10,
+      "interpretation": "Same initial slice, central proper emission age and held receiver areal radius; error is a finite comparison envelope, not a rigorous error bound or physical/model uncertainty."
+    },
+    "diffuse": {
+      "frequency_fractional_departure": -0.0041375585659017,
+      "frequency_log_departure": -0.004146141945684048,
+      "frequency_ratio_numerical_error": 1.0488565127531047e-08,
+      "fractional_departure_numerical_error": 1.0311030146513708e-08,
+      "receiver_proper_delay": 0.017035461263534835,
+      "proper_delay_numerical_error": 2.1838383368333325e-07,
+      "interpretation": "Same initial slice, central proper emission age and held receiver areal radius; error is a finite comparison envelope, not a rigorous error bound or physical/model uncertainty."
+    }
+  },
+  "independent_homogeneous": {
+    "early": {
+      "coordinate_time": 0.5385878622494562,
+      "receiver_proper_age": 0.5221102856216461,
+      "received_to_emitted_frequency": 1.012912057908696,
+      "rhs_calls": 120689,
+      "emission_proper_age": 0.0
+    },
+    "late": {
+      "coordinate_time": 4.550775250729177,
+      "receiver_proper_age": 4.4582105892696955,
+      "received_to_emitted_frequency": 1.0172179674091406,
+      "rhs_calls": 546734,
+      "emission_proper_age": 4.0
+    }
+  },
+  "units": {
+    "kappa": 1,
+    "omega": 2000,
+    "reference_length": "a0=6.62607707610 atlas length units, fixed by initial parent geometry",
+    "receiver_radius": 0.6,
+    "receiver_radius_over_reference": 0.090551316127036,
+    "vacuum_Lambda_reference_squared": 12.3482523989285,
+    "physical_scale": "No SI length or observed scalar mass is selected. Frequency departures are dimensionless; delays scale as the declared atlas length divided by c."
+  },
+  "protocol": "Central geodesic emits at proper age0 for the core control and4 for the diffuse formation run. Receiver is actively held at areal radius.6, with its clock set to zero on the initial slice. Arrival age is an output, not a fixed coordinate-time comparison.",
+  "method": "Unaveraged constrained Einstein-Klein-Gordon; eighth-order spatial derivatives, fourth-order radial constraints and Lawson RK4 exact frequency rotation. Smooth outer moving mesh is fixed belowR=1 and comoving above initial radius2; outer initial radius4 lies in the protected reference annulus.",
+  "limits": "Fixed frequency/action, supplied initial shape/phase/pulse and compensated mass. Spherical finite-time evidence; no complete membrane future, nonspherical stability, thermal history, primordial abundance or measured cosmological identification. The finite breathing concentration is not an asymptotic formation theorem.",
+  "next": "Test how inherited preparation selects the cloud mass/phase and population, and whether the formed concentrations persist under nonradial disturbances; compare multiple late proper-age signals without retuning the initial state.",
+  "worker_count": 6,
+  "process_cpu_seconds_including_workers": 3431.34375,
+  "wall_seconds": 1179.0864259999944,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_core_evolution.py": "21ee66faa161cd6545155db954994c5f126d2dfa2a1b34249ed3193dae37755d",
+    "src/recursive_horizons/nsc_atlas_core_reservoir.py": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898",
+    "src/recursive_horizons/nsc_atlas_scalar_core.py": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "scripts/check_nsc_atlas_core_evolution.py": "754b8715c20e44e69147509e0f037031a0bf99597df5008e80deb1ee8993fca3",
+    "scripts/plot_nsc_atlas_core_evolution.py": "128a98477561b0c8e3b31825da94a1d2daf09ad2a2be1fabf4c9aad00bff572e",
+    "tests/test_nsc_atlas_core_evolution.py": "acf84dcc968d483fbe7a36670837e8e7e92f82f8a5027bfc706c40383ed124ee",
+    "results/summaries/nsc-atlas-core-reservoir-v1.json": "0665f9a4cfa0e576854901d7c706f7ac9bbc0c7a521babee6ec2548f03cf0a24"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_core_evolution.py --figure"
+}
