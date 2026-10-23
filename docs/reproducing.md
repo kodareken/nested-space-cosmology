@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+The nonradial optical campaign reuses the frozen scalar stepper:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_core_optics.py --output results/summaries/nsc-atlas-core-optics-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_core_optics.py
+```
+
+The [owner](nsc-atlas-core-optics.md) specifies the source proper ages,
+launch angles, receiving screens and independent beam checks. Six workers
+use an initial4500 CPU-second budget. Per-run completed checkpoints are
+cached by configuration and scientific source hashes under .build, so a
+later report or failed check need not repeat the evolved source.
+
 The coupled core/parent campaign uses six worker processes and Numba:
 
 ```powershell

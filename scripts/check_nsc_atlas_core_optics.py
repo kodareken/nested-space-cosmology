@@ -14,6 +14,15 @@ import sympy as sp
 from recursive_horizons.nsc_atlas_core_optics import OpticalRun,run_optics,homogeneous_screen
 
 ROOT=Path(__file__).resolve().parents[1]
+SOURCE_INPUTS=('src/recursive_horizons/nsc_atlas_core_optics.py','src/recursive_horizons/nsc_atlas_core_evolution.py',
+    'src/recursive_horizons/nsc_atlas_core_reservoir.py','src/recursive_horizons/nsc_atlas_scalar_core.py',
+    'src/recursive_horizons/nsc_atlas_shared_scalar_slice.py','src/recursive_horizons/nsc_atlas_flux_conversion.py',
+    'src/recursive_horizons/nsc_atlas_flux_transition.py')
+
+
+def cache_identity(config,root=ROOT):
+    return hashlib.sha256(json.dumps(dict(config=asdict(config),
+        sources={f:hashlib.sha256((root/f).read_bytes()).hexdigest() for f in SOURCE_INPUTS}),sort_keys=True).encode()).hexdigest()
 
 
 def identities():
@@ -61,11 +70,7 @@ def map_checks(record):
 
 def worker(item):
     label,config=item
-    names=('src/recursive_horizons/nsc_atlas_core_optics.py','src/recursive_horizons/nsc_atlas_core_evolution.py',
-           'src/recursive_horizons/nsc_atlas_core_reservoir.py','src/recursive_horizons/nsc_atlas_scalar_core.py',
-           'src/recursive_horizons/nsc_atlas_shared_scalar_slice.py')
-    key=hashlib.sha256(json.dumps(dict(config=asdict(config),
-        sources={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in names}),sort_keys=True).encode()).hexdigest()
+    key=cache_identity(config)
     folder=ROOT/'.build/core-optics'/key
     path=folder/'completed.json'
     if path.is_file():result=json.loads(path.read_text(encoding='utf-8'))
@@ -116,10 +121,21 @@ def calculation():
     fan={}
     for age in (2.8,3.4):
         rows=[r for r in raw['fine']['rays'] if r['emission_proper_age']==age]
-        brackets=[]
-        for a,b in zip(rows[:-1],rows[1:]):
-            if a['jacobi_perpendicular']*b['jacobi_perpendicular']<0:brackets.append([a['sky_angle'],b['sky_angle']])
+        by_resolution={};margins=[]
+        for name in ('coarse','medium','fine'):
+            rr=[r for r in raw[name]['rays'] if r['emission_proper_age']==age]
+            by_resolution[name]=[]
+            for a,b in zip(rr[:-1],rr[1:]):
+                if a['jacobi_perpendicular']*b['jacobi_perpendicular']<0:
+                    by_resolution[name].append([a['sky_angle'],b['sky_angle']])
+                    margins.extend(abs(x['jacobi_perpendicular'])-2*abs(x['rotation_jacobi_gap']) for x in (a,b))
+        brackets=by_resolution['fine']
         fan[str(age)]=dict(tangential_caustic_angle_brackets=brackets,
+            brackets_by_resolution=by_resolution,
+            same_brackets_at_all_resolutions=all(x==brackets for x in by_resolution.values()),
+            minimum_sign_margin_after_two_rotation_discrepancies=min(margins) if margins else None,
+            fine_bracket_endpoints=[dict(sky_angle=x['sky_angle'],jacobi_perpendicular=x['jacobi_perpendicular'],
+                rotation_jacobi_gap=x['rotation_jacobi_gap']) for x in rows if any(x['sky_angle'] in pair for pair in brackets)],
             minimum_signed_beam_area=min(r['signed_beam_area'] for r in rows),
             angle_range=[rows[0]['sky_angle'],rows[-1]['sky_angle']])
     compact={name:dict(config=r['config'],final_field_sha256=r['final_field_sha256'],cpu_seconds=r['cpu_seconds'],
@@ -127,9 +143,7 @@ def calculation():
         maximum_rotation_jacobi_gap=max(abs(p['rotation_jacobi_gap']) for p in r['rays']),
         maximum_frequency_transport_gap=max(abs(p['frequency_transport_gap']) for p in r['rays'])) for name,r in raw.items()}
     cpu=time.process_time()-cpu0+sum(r['cpu_seconds'] for r in raw.values())
-    files=('src/recursive_horizons/nsc_atlas_core_optics.py','src/recursive_horizons/nsc_atlas_core_evolution.py',
-        'src/recursive_horizons/nsc_atlas_core_reservoir.py','src/recursive_horizons/nsc_atlas_shared_scalar_slice.py',
-        'scripts/check_nsc_atlas_core_optics.py','scripts/plot_nsc_atlas_core_optics.py','tests/test_nsc_atlas_core_optics.py',
+    files=SOURCE_INPUTS+('scripts/check_nsc_atlas_core_optics.py','scripts/plot_nsc_atlas_core_optics.py','tests/test_nsc_atlas_core_optics.py',
         'results/summaries/nsc-atlas-core-evolution-v1.json')
     errors=[]
     if not all(exact.values()):errors.append('streamed source does not reproduce the frozen field bit for bit')
@@ -139,6 +153,13 @@ def calculation():
     if max(abs(p['angular_jacobi_gap']) for p in probes['fine'])>5e-6:errors.append('parallel beam scale unresolved')
     if max(abs(p['frequency_transport_gap']) for p in probes['fine'])>1e-7:errors.append('photon frequency mismatch')
     if homogeneous_checks['jacobi_perpendicular']>2e-6:errors.append('homogeneous analytic beam check failed')
+    if homogeneous_checks['received_frequency']>1e-7:errors.append('homogeneous held-observer frequency check failed')
+    if homogeneous_checks['landing_angle']>5e-8:errors.append('homogeneous landing-angle check failed')
+    if homogeneous_checks['arrival_proper_age']>5e-8:errors.append('homogeneous proper arrival check failed')
+    for values in fan.values():
+        if not values['same_brackets_at_all_resolutions']:errors.append('tangential caustic bracket changes under refinement')
+        margin=values['minimum_sign_margin_after_two_rotation_discrepancies']
+        if margin is not None and margin<=0:errors.append('tangential caustic sign margin is unresolved')
     record=dict(schema='nsc-atlas-core-optics-v1',result='Nonradial light bending, anisotropic focusing and received beam flux from the same frozen evolved scalar geometry.',
         symbolic_zero_identities=symbolic,source_replay_exact_matches=exact,runs=compact,
         predictions=predictions,angular_fan=fan,homogeneous_analytic_checks=homogeneous_checks,
@@ -148,6 +169,7 @@ def calculation():
         limits='Same supplied nonlinear cloud, action and parent; no new physical scale or abundance selection. Geometric optics and finite spherical evolution. Caustic brackets do not predict infinite physical brightness or resolve finite-source/wavelength smoothing. Error envelopes are finite numerical comparisons, not rigorous bounds or preparation uncertainty.',
         numerical_validation_errors=errors,worker_count=6,process_cpu_seconds_including_workers=cpu,
         wall_seconds=time.perf_counter()-wall,compute_budget_seconds=4500,budget_exhausted=cpu>4500,
+        timing_scope='Worker CPU figures cover the underlying scientific computations, including any cached completed runs; wall_seconds measures this invocation. Cached postprocessing does not rerun the field evolution.',
         source_sha256={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files},
         reproduce='python scripts/run_python.py scripts/check_nsc_atlas_core_optics.py --figure',
         next='Use the same ray map for fixed source/receiver imaging and compare its frequency/focusing relation against alternative admissible preparations; population selection and nonspherical longevity remain separate.')

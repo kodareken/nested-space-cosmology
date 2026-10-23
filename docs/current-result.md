@@ -1,5 +1,17 @@
 # What the calculations show
 
+The [nonradial optical calculation](nsc-atlas-core-optics.md) connects
+the formed concentration to light bending and anisotropic beam focusing.
+The source is replayed unchanged; canonical rays, two curvature-based
+Jacobi scales and the complete landing-angle map provide independent
+computational checks. A separate closed-FLRW great-circle solution fixes
+the homogeneous comparison. The protocol is a finite-screen beam test,
+not an astronomical fixed-observer magnification fit. For launch angle
+.02 rad, the beam-flux factors are1.648532 and1.381442 at source proper
+ages2.8 and3.4, with finite numerical ranges about2e-5. The early fan
+brackets a tangential optical caustic between .006 and .008 rad; the
+metric remains regular. All source replay hashes match exactly.
+
 The [coupled evolution](nsc-atlas-core-evolution.md) advances the compensated
 scalar and its actual gravitational response together. The diffuse test
 matches the coherent preparation's initial geometric core mass, evolves

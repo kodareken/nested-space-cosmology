@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision2026-10-23.3 adds Sections10.36--10.37 and Figure22: nonradial
+lensing on the same evolved scalar parent, the direct null-contraction
+identity, Weyl shear and independent ray-map/Jacobi checks. The experiment
+uses specified proper clocks and screens; a conventional astronomical
+source/observer image fit and population inference remain open.
+
 Revision2026-10-23.2 adds Sections10.33--10.35 and Figure21: full finite
 scalar/gravity evolution, a same-mass diffuse concentration test, and an
 operational received frequency after contraction. The moving outer grid

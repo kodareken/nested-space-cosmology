@@ -66,3 +66,20 @@ def test_angular_checks_use_one_fixed_physical_family():
 def test_curvature_and_boost_identities_are_exact():
     from scripts.check_nsc_atlas_core_optics import identities
     assert set(identities().values())=={'0'}
+
+
+def test_changing_the_upstream_potential_or_wall_geometry_invalidates_cache(tmp_path):
+    from scripts.check_nsc_atlas_core_optics import cache_identity,SOURCE_INPUTS
+    from recursive_horizons.nsc_atlas_core_optics import OpticalRun
+    # The two concrete upstream changes must alter the identity, even when
+    # the optics and field-stepper files themselves stay unchanged.
+    upstream=('src/recursive_horizons/nsc_atlas_flux_conversion.py',
+              'src/recursive_horizons/nsc_atlas_flux_transition.py')
+    for name in set(SOURCE_INPUTS)|set(upstream):
+        p=tmp_path/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text('original source\n')
+    before=cache_identity(OpticalRun(),tmp_path)
+    for name in upstream:
+        p=tmp_path/name;p.write_text('changed physical source\n')
+        assert cache_identity(OpticalRun(),tmp_path)!=before
+        p.write_text('original source\n')
+    assert cache_identity(OpticalRun(),tmp_path)==before

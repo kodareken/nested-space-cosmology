@@ -27,7 +27,16 @@ def render(record,raw,homogeneous):
     axes[0,1].axhline(0,color='#777777',lw=.7)
     axes[0,1].axhline(1,color='#999999',lw=.7,ls=':')
     axes[0,1].set(title='Beam focusing changes as the core breathes',xlabel='Inward launch angle (degrees)',ylabel='Signed beam area / homogeneous area')
-    axes[0,1].legend(frameon=False,fontsize=9)
+    axes[0,1].legend(frameon=False,fontsize=9,loc='upper left')
+    inset=axes[0,1].inset_axes([.57,.12,.39,.29])
+    near=[r for r in raw['fine']['rays'] if r['emission_proper_age']==2.8 and r['sky_angle']<=.008]
+    inset.plot([math.degrees(r['sky_angle']) for r in near],[r['jacobi_perpendicular'] for r in near],
+               'o-',color=colors[2.8],lw=1.2,ms=3)
+    inset.axhline(0,color='#555555',lw=.7)
+    inset.axvspan(math.degrees(.006),math.degrees(.008),color=colors[2.8],alpha=.08)
+    inset.set(title='Early caustic bracket',ylabel=r'$D_\perp$',xlabel='Launch angle (degrees)')
+    inset.tick_params(labelsize=7);inset.title.set_fontsize(8)
+    inset.xaxis.label.set_size(7);inset.yaxis.label.set_size(8)
     for key,label,color in (('rotation_jacobi_gap','Rotation Jacobi field','#176d8a'),('angular_jacobi_gap','In-plane ray derivative','#a56338')):
         values=[max(abs(r[key]) for r in record['runs'][name]['probes']) for name in ('coarse','medium','fine')]
         axes[1,0].semilogy([1,2,4],values,'o-',color=color,label=label)

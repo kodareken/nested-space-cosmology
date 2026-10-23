@@ -26,10 +26,16 @@ The exact lens-map approach is attributed to
 Their static worked example is not imposed on this evolving metric. The
 ray, affine normalization, screen projection and curvature equations are
 derived for the existing NSC field and checked independently.
+Scalar lenses also have explicit prior art in
+[Dabrowski and Schunck](https://arxiv.org/abs/astro-ph/9807039), while
+[Aimar et al.](https://arxiv.org/abs/2512.23800) investigate optical effects
+of time-dependent real-scalar objects. Their assumed object profiles and
+physical calibrations are not imported here. This calculation follows the
+existing NSC formation history in its inherited parent.
 
 The optical campaign uses a finite fan at two proper ages, three spatial/time
 resolutions, a separate optical-step comparison, a larger outer chart and
-an independent homogeneous control. The admitted budget is4500 CPU seconds
+an independent homogeneous control. The admitted budget is 4500 CPU seconds
 including six workers. Compact completed checkpoints are retained before
 validation or budget reporting. Full fields remain regenerable local data.
 
@@ -37,11 +43,13 @@ validation or budget reporting. Full fields remain regenerable local data.
 
 A source and a spherical family of receivers are held at areal radius
 Rs=.6. Their clocks are zero on the initial slice; spherical symmetry makes
-their proper-time rates identical. The source emits at proper ages2.8 and3.4,
+their proper-time rates identical. The source emits at proper ages 2.8 and 3.4,
 bracketing different phases of the already computed contraction and breathing.
 Its inward rest-frame sky angle is psi, with unit emitted energy fixing the
 affine normalization. The primary declared angles are .02, .04 and .08 radians.
 A wider finite fan examines the geometry between them and nearer the axis.
+As in the preceding clock calculation, light is a transparent test beam in
+geometric optics; its stress does not alter the scalar-parent solution.
 
 In the retained metric,
 
@@ -118,6 +126,9 @@ The canonical Einstein equation in the computed parent is
 R_{ab}=\kappa\left(\nabla_a\phi\nabla_b\phi+Ug_{ab}\right).
 \]
 
+The implementation evaluates the retained kappa=1 benchmark; the
+mathematical identities keep kappa explicit.
+
 For any null ray, therefore,
 
 \[
@@ -129,6 +140,20 @@ This exact contraction removes the direct potential term, including the
 constant inherited vacuum. It does not remove the potential's effects on
 the field, expansion, light path or redshift. It is not a statement that
 changing Lambda leaves a lens experiment unchanged.
+
+The preparation's initially outward characteristic pulse has Pi=-beta F.
+At an event satisfying that condition, a ray with normal-frame radial
+cosine mu=q/E obeys
+
+\[
+R_{ab}k^ak^b=\kappa E^2BF^2(1-\mu)^2.
+\]
+
+A co-propagating radial ray therefore has zero direct Ricci focusing from
+that characteristic field derivative, while oblique and counter-propagating
+rays need not. This instantaneous identity does not preserve the initial
+characteristic condition during massive-field evolution. It explains why
+directional optics probes information absent from one radial ray.
 
 For the spherical scalar, define the Weyl curvature scalar
 
@@ -264,6 +289,36 @@ records the declared probes, angular caustic brackets, independent optical
 comparisons, hashes and finite numerical error envelopes. Those envelopes
 are not rigorous interval bounds or uncertainties in the physical preparation.
 
+## Calculated optical result
+
+For inward launch angle .02 rad, the same source gives the following
+finite-screen results. Errors are numerical comparison envelopes, not
+uncertainties in the physical preparation.
+
+| Source proper age | Landing-angle departure | Beam flux / homogeneous | Principal-axis ratio |
+| --- | ---: | ---: | ---: |
+| 2.8 | 0.01928843 rad | 1.648532 +/- 0.000021 | 2.19831 |
+| 3.4 | 0.00666950 rad | 1.381442 +/- 0.000018 | 1.03582 |
+
+The early landing-angle departure is about 1.105 degrees. The beam is
+focused and distorted by different amounts at the two epochs, with no
+change to the scalar action or initial preparation. The six source replays
+match the prior field-state hashes exactly.
+
+The independent rotation-Jacobi discrepancy at the primary probes falls
+from 1.35e-5 to 8.80e-7 to 5.16e-8 under refinement. The in-plane angular-map
+discrepancy falls to 1.82e-6. The independent homogeneous area distance
+agrees within 1.42e-8; its frequency check agrees within 2.05e-8.
+
+The early fan brackets a tangential caustic between source angles .006
+and .008 rad at all three resolutions. On the finest run the signed
+perpendicular scales at those endpoints are -.00118667 and .0802128;
+their independent rotation checks differ by less than 1.7e-6. No tangential
+sign change is found in the sampled late fan. This is finite numerical
+evidence for the optical caustic, not a certified interval root or a
+prediction of infinite physical brightness. The calculated metric remains
+regular; a light-bundle caustic is not a spacetime singularity.
+
 ## Reproduce and continue
 
 ```powershell
@@ -278,3 +333,17 @@ selection, nonspherical persistence, physical calibration and a comparison
 with astronomical lensing data remain further connections. A useful next
 observer problem is inversion of this map at fixed source and receiving
 worldlines, rather than silently identifying different landing points.
+Identifying nesting specifically also needs a cross-region or preparation
+prediction: the optical calculation here tests the local scalar source
+and its already constructed connection to the parent.
+
+The initial uncached campaign used about3190 process-CPU seconds for its
+underlying worker computations and1494 seconds wall time, within the
+4500-second budget. Reused checkpoints retain their original worker CPU figures;
+wall time describes the invocation. Independent Grok derivations checked
+the screen boosts, curvature eigenvalues, affine normalization and homogeneous
+limits. The frozen source files remain unchanged.
+The implementation audit also identified omitted upstream cache inputs
+and a missing homogeneous-frequency acceptance check. Both were corrected;
+checkpoint reuse now includes the potential and wall-geometry modules,
+and all four independent homogeneous observables have acceptance limits.

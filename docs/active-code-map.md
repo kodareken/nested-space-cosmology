@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [optical owner](nsc-atlas-core-optics.md) uses nsc_atlas_core_optics.py:
+stream_rays advances the existing field solver unchanged in blocks;
+ray_rates carries canonical nonradial photons, independent normal energy
+and two Sachs/Jacobi fields. homogeneous_screen supplies an independent
+closed-FLRW great-circle control. The producer checks exact source hashes,
+angular landing derivatives, resolution and optical-step comparisons.
+Completed raw optical checkpoints remain under .build; the public result
+retains only declared probes and compact diagnostics.
+
 The [coupled core owner](nsc-atlas-core-evolution.md) uses
 nsc_atlas_core_evolution.py: DiffuseReservoir fixes the alternative initial
 mass; geometry solves mass/lapse on a moving radial chart; rates and

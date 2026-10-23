@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [evolving scalar lens](nsc-atlas-core-optics.md) connects the same
+nonlinear concentration to a proper-clock optical map and independently
+computed curvature focusing. It separates direct scalar null focusing
+from the uniform vacuum contribution, while keeping their shared dynamics.
+Finite-screen predictions do not select an observed lens population.
+
 The [coupled core/parent evolution](nsc-atlas-core-evolution.md) joins
 compensated initial data to full finite spherical Einstein-scalar dynamics,
 diffuse concentration and a received proper-clock signal. It preserves

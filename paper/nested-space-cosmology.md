@@ -58,6 +58,8 @@ asserting a completed formation history. A subsequent full spherical
 scalar/gravity evolution now develops a compact, breathing concentration
 from a supplied diffuse nonlinear cloud and predicts a received clock
 signal after contraction, with independent flux and photon checks.
+Nonradial rays and curvature-based Jacobi transport then predict light
+bending and anisotropic beam focusing on that same evolution.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -5496,7 +5498,7 @@ $$
 \sqrt{1-\frac{H_o^2R_o^2}{B_o}}.
 $$
 
-An independent canonical null-geodesic calculation transports p_R with
+An independent canonical null-geodesic calculation transports $p_R$ with
 Hamiltonian $\alpha(HR+\sqrt{B})p_R$. It is checked against this normal-frame
 formula. A separate unaveraged homogeneous integration gives the
 corresponding control signal analytically along its FLRW light cone.
@@ -5536,6 +5538,170 @@ through self-consistent local evolution, to a received signal. The parent
 vacuum remains $\Lambda_{\rm vac}a_0^2=12.3482523989285$. Selecting its
 observed scale, explaining the population of structures and testing their
 nonradial persistence remain further physical questions.
+
+### 10.36. The same concentration bends and focuses light
+
+<!-- nsc-claim:evolved-core-null-focusing -->
+
+The radial clock is followed by a nonradial optical test on the same
+evolved scalar geometry. The field stepper and its physical inputs remain
+unchanged; final-state hashes must reproduce the preceding source calculation
+at every retained resolution. The lens is not replaced by a fitted density
+profile or a static metric.
+
+Scalar lenses have published precedents in
+[Dabrowski and Schunck](https://arxiv.org/abs/astro-ph/9807039), and
+[Aimar et al.](https://arxiv.org/abs/2512.23800) study time-dependent
+real-scalar optical signatures. The contribution here is the connection
+to the computed inherited parent and its formation history. The exact
+lens-map approach follows
+[Frittelli and Newman](https://arxiv.org/html/gr-qc/9810017), with the
+observer-screen formulation made explicit below.
+
+The canonical bulk equation gives an exact null contraction:
+
+$$
+R_{ab}=\kappa(\nabla_a\phi\nabla_b\phi+Ug_{ab}),
+\qquad R_{ab}k^ak^b=\kappa(k\phi)^2.
+$$
+
+The potential, including the inherited vacuum, drops out of this direct
+focusing term. It still affects the field and spacetime through which the
+ray travels. Its absence from this contraction is not invariance of the
+whole optical experiment under a change of Lambda.
+
+For normal energy E, radial momentum $q=\sqrt{B}p_R$ and conserved angular
+momentum L, the two principal tidal eigenvalues are
+
+$$
+T_\perp=\frac{\kappa}{2}(E\Pi+q\sqrt{B}F)^2
++\frac{3WL^2}{R^2},\qquad
+T_\parallel=\frac{\kappa}{2}(E\Pi+q\sqrt{B}F)^2
+-\frac{3WL^2}{R^2},
+$$
+
+where
+
+$$
+W=\frac{m}{R^3}-\frac{\kappa}{6}
+\left(U+\frac{\Pi^2-BF^2}{2}\right).
+$$
+
+Ricci curvature focuses both directions. Weyl curvature changes them with
+opposite signs, producing optical shear. The spherical Einstein Hessians
+and warped-product Riemann tensor independently give these factors and
+signs. In the homogeneous parent W vanishes. At a pure vacuum extremum
+both tidal eigenvalues vanish, although expansion and distances still
+depend on the vacuum scale.
+
+The principal Jacobi scales obey
+
+$$
+\frac{d^2D_i}{d\lambda^2}=-T_iD_i,
+\qquad D_i(0)=0,\qquad D_i'(0)=1.
+$$
+
+This is the attributed optical transport framework of
+[Seitz, Schneider and Ehlers](https://arxiv.org/abs/astro-ph/9403056),
+applied to the current source. The
+[curvature derivation](../docs/nsc-atlas-core-optics.md) and
+[compact calculation](../results/summaries/nsc-atlas-core-optics-v1.json)
+separate the exact identities from finite numerical lensing evidence.
+
+### 10.37. A proper-clock lens map during contraction and breathing
+
+<!-- nsc-claim:evolved-core-lens-map -->
+
+Hold a source and a spherical family of receivers at areal radius .6.
+Their clocks start on the initial slice. The source emits transparent
+test light at proper ages 2.8 and 3.4, with inward rest-frame angle $\psi$.
+The primary declared angles are .02, .04 and .08 radians. Unit emitted
+energy fixes affine normalization; beam stress is neglected as in the
+previous clock calculation.
+
+The null Hamiltonian is
+
+$$
+\mathcal H=-p_t=\alpha(E+HRp_R),\qquad
+E=\sqrt{Bp_R^2+L^2/R^2}.
+$$
+
+Each ray is followed to its first outward recrossing of the receiving
+sphere. Proper emission time, the changing metric and the receiver's
+velocity relative to the slice normal are retained. A separate normal-frame
+frequency equation checks canonical photon transport.
+
+The full landing map gives an independent computation of both beam scales:
+
+$$
+D_\perp=\frac{R_s\sin\varphi_o}{\sin\psi},\qquad
+D_\parallel=-R_s\mu_o\frac{d\varphi_o}{d\psi}.
+$$
+
+Here $\mu_o$ is the measured outward radial cosine. The derivative includes
+the angle-dependent arrival event. These screen identities and the
+curvature equations calculate the same beam by different routes. Flat
+space gives both scales equal to the chord length; a separate closed-FLRW
+great-circle solution checks the evolving homogeneous control.
+
+For inward launch angle .02 rad, the same source gives the following
+finite-screen results. Errors are numerical comparison envelopes, not
+uncertainties in the physical preparation.
+
+| Source proper age | Landing-angle departure | Beam flux / homogeneous | Principal-axis ratio |
+| --- | ---: | ---: | ---: |
+| 2.8 | 0.01928843 rad | 1.648532 +/- 0.000021 | 2.19831 |
+| 3.4 | 0.00666950 rad | 1.381442 +/- 0.000018 | 1.03582 |
+
+The early landing-angle departure is about 1.105 degrees. The beam is
+focused and distorted by different amounts at the two epochs, with no
+change to the scalar action or initial preparation. The six source replays
+match the prior field-state hashes exactly.
+
+The independent rotation-Jacobi discrepancy at the primary probes falls
+from 1.35e-5 to 8.80e-7 to 5.16e-8 under refinement. The in-plane angular-map
+discrepancy falls to 1.82e-6. The independent homogeneous area distance
+agrees within 1.42e-8; its frequency check agrees within 2.05e-8.
+
+The early fan brackets a tangential caustic between source angles .006
+and .008 rad at all three resolutions. On the finest run the signed
+perpendicular scales at those endpoints are -.00118667 and .0802128;
+their independent rotation checks differ by less than 1.7e-6. No tangential
+sign change is found in the sampled late fan. This is finite numerical
+evidence for the optical caustic, not a certified interval root or a
+prediction of infinite physical brightness. The calculated metric remains
+regular; a light-bundle caustic is not a spacetime singularity.
+
+
+![Nonradial light bending and beam focusing from the evolved scalar](../docs/figures/nsc-atlas-core-optics.png)
+
+*Figure 22. Two proper emission ages probe the same evolving concentration.
+The landing-angle map and signed beam area change as the core breathes.
+The inset shows the sampled transverse-scale sign change near the early caustic.
+Curvature-based Jacobi scales converge toward their independent ray-map
+values. Relative received beam flux uses the fixed source luminosity,
+measured frequency and projected beam area.*
+
+For fixed isotropic emitted luminosity, the received bolometric beam flux
+is proportional to
+
+$$
+\frac{\nu_o^2}{|D_\perp D_\parallel|}.
+$$
+
+The absolute area enters flux; its sign retains parity relative to the
+homogeneous beam. Comparisons identify the same source proper age and
+launch angle on the two geometries, so receiving worldlines can differ.
+This finite-screen experiment is not yet a fixed-source/fixed-observer
+astronomical image fit. Optical caustics, when bracketed by the fan, do
+not establish infinite physical brightness; finite-source and wavelength
+effects would require a further calculation.
+
+The [observer protocol and limits](../docs/nsc-atlas-core-optics.md) and
+[numerical comparisons](../results/summaries/nsc-atlas-core-optics-v1.json)
+bind these optical numbers to the same source that produced concentration
+and the radial clock signal. The inherited law has not thereby selected
+a cloud population, a physical SI scale or an observed dark-matter fraction.
 
 ## IV. What the observers can reach
 
@@ -5586,7 +5752,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 22. The isolated reference in joined causal charts. Horizons are
+*Figure 23. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -6592,7 +6758,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 23. Saved finite-window comparisons. A: the previous and current
+*Figure 24. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -6688,7 +6854,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 24. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 25. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -7473,7 +7639,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 25. Research dependencies, distinct from spacetime causal arrows.
+*Figure 26. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

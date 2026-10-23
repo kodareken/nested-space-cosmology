@@ -27,7 +27,8 @@ lensing: it supplies an independent observable with no new physical source.
 Preparation still requires a state-selection input; stability remains a
 separate next question rather than a reason to repeat the closed radial run.
 
-Active: reuse the frozen Einstein-scalar evolution to transport nonradial
+Complete: the [optical connection](nsc-atlas-core-optics.md) reuses the
+frozen Einstein-scalar evolution to transport nonradial
 null rays between held areal-radius screens. Use fixed proper emission
 ages2.8 and3.4, a finite angular fan and the same homogeneous control.
 Derive both canonical geodesics and the two Sachs/Jacobi focusing equations;
@@ -47,6 +48,14 @@ including parallel workers. Persist compact checkpoints before reporting
 any exhausted budget; do not discard completed calculations. Next is a
 joint optical/clock relation and its preparation degeneracies, with no
 claim of an observed dark-matter population from this benchmark alone.
+
+The completed optical campaign passes source identity and independent
+Jacobi/ray-map checks. The declared .02-rad beam has relative flux1.648532
+at source age2.8 and1.381442 at age3.4. An early tangential caustic is
+bracketed in the finite fan, while the calculated geometry stays regular.
+Next: invert the same map at fixed source/receiving worldlines and connect
+optical/clock relations to preparation constraints. Population selection
+and nonspherical persistence remain open, separate physical questions.
 
 ### Coupled evolution, diffuse preparation and a received clock signal
 

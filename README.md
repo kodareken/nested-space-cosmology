@@ -1,5 +1,11 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [evolved concentration now has a lens map](docs/nsc-atlas-core-optics.md).
+Nonradial photons and curvature-based beam transport use the same frozen
+scalar evolution. Proper emission ages and receiving screens specify light
+bending, anisotropic focusing and relative beam flux without fitting a new
+lens mass. Preparation and population selection remain separate questions.
+
 The [coupled core evolution](docs/nsc-atlas-core-evolution.md) now follows
 the inherited scalar and gravity together. A supplied diffuse nonlinear
 cloud develops a compact, breathing concentration; an operational clock

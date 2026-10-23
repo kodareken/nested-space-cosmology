@@ -438,6 +438,16 @@
       "section": "10.35",
       "status": "measured",
       "owner": "docs/nsc-atlas-core-evolution.md"
+    },
+    "evolved-core-null-focusing": {
+      "section": "10.36",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-core-optics.md"
+    },
+    "evolved-core-lens-map": {
+      "section": "10.37",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-core-optics.md"
     }
   },
   "findings": [
@@ -864,6 +874,22 @@
       "note": "docs/nsc-atlas-core-evolution.md",
       "record": "results/summaries/nsc-atlas-core-evolution-v1.json",
       "paper_section": "10.35"
+    },
+    {
+      "id": "evolved-core-null-focusing",
+      "status": "derived",
+      "summary": "Canonical null contraction and spherical Weyl/Ricci tidal eigenvalues connect the frozen evolving scalar source to two Jacobi scales. Direct potential cancellation is local, not invariance of the full optical experiment under Lambda changes.",
+      "note": "docs/nsc-atlas-core-optics.md",
+      "record": "results/summaries/nsc-atlas-core-optics-v1.json",
+      "paper_section": "10.36"
+    },
+    {
+      "id": "evolved-core-lens-map",
+      "status": "measured",
+      "summary": "A held-radius finite-screen protocol at two proper emission ages yields nonradial bending, anisotropic focusing and received beam flux from the unchanged scalar evolution. Curvature, angular-ray and homogeneous controls check the result; no fixed-observer catalogue fit or new population is inferred.",
+      "note": "docs/nsc-atlas-core-optics.md",
+      "record": "results/summaries/nsc-atlas-core-optics-v1.json",
+      "paper_section": "10.37"
     }
   ]
 }

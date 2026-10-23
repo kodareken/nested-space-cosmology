@@ -1,5 +1,18 @@
 # Prior art and admission of new research
 
+## Evolved scalar optics, 23 October 2026
+
+The [optical owner](nsc-atlas-core-optics.md) reuses exact null lens maps,
+Jacobi/Sachs transport and scalar-lensing precedent. The missing connection
+is a nonradial optical observable from the already formed source, rather
+than a separate fitted mass profile. Freeze the complete scalar evolution,
+use declared proper emission ages and a finite angular fan, and check its
+curvature-derived beam against the landing map and closed-FLRW control.
+Three resolutions, optical-time and outer controls use six workers within
+an initial4500 CPU-second budget. Preserve completed checkpoints before
+reporting budget exhaustion or a failed comparison. Frame errors, unresolved
+caustics and a changed source must remain distinct failures.
+
 ## Coupled core evolution and observed clocks, 23 October 2026
 
 The [evolution owner](nsc-atlas-core-evolution.md) reuses spherical

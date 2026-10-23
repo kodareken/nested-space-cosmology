@@ -1,5 +1,24 @@
 # Cited arXiv studies
 
+## Exact lens maps and scalar lens precedent, 23 October 2026
+
+[Frittelli and Newman,gr-qc/9810017](https://arxiv.org/html/gr-qc/9810017),
+Sections1--2, gives the general light-cone/lens-map construction.
+[Frittelli, Kling and Newman,gr-qc/0001037](https://arxiv.org/html/gr-qc/0001037),
+Introduction/SectionII, provides the static worked comparison. The
+[new optical owner](nsc-atlas-core-optics.md) directly evolves nonradial
+rays and screen Jacobi fields on its time-dependent scalar solution.
+[Seitz, Schneider and Ehlers,astro-ph/9403056](https://arxiv.org/abs/astro-ph/9403056)
+is credited for arbitrary-spacetime beam transport; abstract and bibliographic
+record checked, with the scalar tidal reduction derived independently here.
+
+[Dabrowski and Schunck,astro-ph/9807039](https://arxiv.org/abs/astro-ph/9807039)
+is a scalar-lensing precedent. [Aimar et al.,2512.23800v2](https://arxiv.org/abs/2512.23800v2)
+investigates optical signatures of time-dependent real-scalar objects.
+Their abstracts and source identities were checked. Their selected profiles,
+physical masses, intensity models and detectability assumptions are not
+imported. No claim of a full reading or first scalar-lensing result is made.
+
 ## Coupled finite scalar evolution, 23 October 2026
 
 [Balakrishna et al.,0710.4131](https://arxiv.org/html/0710.4131), SectionII,

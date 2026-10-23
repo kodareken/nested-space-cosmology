@@ -322,3 +322,7 @@ independently checked the expanding-slice equations and audited the moving
 map, Lawson stages, regular centre and observer implementation. One proposed
 central-lapse restriction was rejected by retaining the acceleration-divergence
 term; the final implementation review confirmed the exterior clock normalization.
+
+The [nonradial optical connection](nsc-atlas-core-optics.md) now reuses this
+source without changing its final field state. It adds a finite-screen lens
+map and curvature focusing, while keeping cloud/population selection open.
