@@ -18,6 +18,41 @@ starting a derivation.
 
 ## Current execution priority — 23 October 2026
 
+### Coupled evolution, diffuse preparation and a received clock signal
+
+Active: evolve the compensated scalar and geometry together in an
+areal-radius gauge whose angular expansion equals the reference parent H.
+The radial mass constraint and angular Einstein equation determine mass
+and lapse each step; scalar momentum fixes radial extrinsic curvature.
+The unaveraged inherited scalar drives the reference expansion. The exact
+frequency rotation is integrated analytically inside a fourth-order time
+method, avoiding artificial oscillator damping.
+
+Use the coherent representative as a control and a diffuse compensated
+cloud with the same initial core geometric mass as the formation test.
+Compute an outgoing central-clock signal received at a fixed areal radius,
+including receiver motion relative to the slice normal and proper time.
+The initial pulse and source profiles remain specified preparations.
+The first admitted endpoint is t=1 atlas unit, over13 core binding times,
+with an outer chart R=3.5 and an explicit causal buffer. Independent
+radial-mass/time-flux agreement, homogeneous recovery and refinement decide
+whether a finite result can be reported. At most1800 CPU seconds are
+allocated to the first four-process evidence campaign including controls;
+raw fields stay local. Gauge failure, nonconvergent flux balance or absence
+of actual concentration must be reported as such, not hidden by shorter
+windows or an assumed formed profile. Any longer continuation gets its
+own diagnosis and physical endpoint.
+
+The t=1 pilot passes mass-flux refinement and independent photon transport;
+the diffuse cloud spreads first and starts concentrating by t=2. Continue
+the formation test to t=5 using a smooth moving outer grid R=x+(a/a0-1)g(x),
+fixed for x<=1 and parent-comoving for x>=2. Its x=4 boundary is in the
+permanently protected reference annulus. This avoids replacing the parent
+by an artificial absorbing exterior. The continuation budget is3600 CPU
+seconds including four parallel workers and its controls; core resolution,
+not carrier frequency, determines the required refinement. The longer
+endpoint tests concentration/formation rather than just the first oscillations.
+
 ### Conserved local structure inside the inherited parent
 
 The preceding core-only embedding adds geometric mass and changes the

@@ -1651,9 +1651,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2496534,
+      "bytes": 2496986,
       "path": "docs/lab-snapshot.json",
-      "sha256": "fcabbb01b73e60cb1da2f086958a3be20759d4e3ebbf6c1b63bbd60e1505194f"
+      "sha256": "98b02ef5a8c9ccab242b9f476d67d53dacd569ae960626b378364f73f8ffb396"
     },
     {
       "bytes": 4997,
@@ -1901,9 +1901,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 100564,
+      "bytes": 102763,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8721a1b4aae0a04527f86cc3082de08112e6035ba67121a860e0ec04bfb31fdf"
+      "sha256": "71fdc7f24c344c807c1d755822a2983cde0ff4612a45099e758cad9b8980de03"
     },
     {
       "bytes": 30876,
@@ -17966,6 +17966,11 @@
       "sha256": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7"
     },
     {
+      "bytes": 15867,
+      "path": "src/recursive_horizons/nsc_atlas_core_evolution.py",
+      "sha256": "1dcb9542c8f6e9bec363b0725e6da9c9d02eb68834c65f0ff21797a7693010d7"
+    },
+    {
       "bytes": 12883,
       "path": "src/recursive_horizons/nsc_atlas_core_reservoir.py",
       "sha256": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898"
@@ -22946,7 +22951,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "fcabbb01b73e60cb1da2f086958a3be20759d4e3ebbf6c1b63bbd60e1505194f",
+  "lab_snapshot_sha256": "98b02ef5a8c9ccab242b9f476d67d53dacd569ae960626b378364f73f8ffb396",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-23.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

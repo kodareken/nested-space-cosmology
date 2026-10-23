@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "73fb137ff5ca21b9bcbe61a5fda77457e0173b64",
+  "current_receipt_commit_parent": "07e2895c226329db081819736c85a4a3659e92a2",
   "files": [
     {
       "bytes": 3120,
@@ -10776,15 +10776,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 100564,
+      "bytes": 102763,
       "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "changed_from_commit": "07e2895c226329db081819736c85a4a3659e92a2",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8721a1b4aae0a04527f86cc3082de08112e6035ba67121a860e0ec04bfb31fdf"
+      "sha256": "71fdc7f24c344c807c1d755822a2983cde0ff4612a45099e758cad9b8980de03"
     },
     {
       "bytes": 30876,
@@ -34794,6 +34794,14 @@
       "original_path": "lab/src/recursive_horizons/nsc_atlas_connection_slice.py",
       "path": "src/recursive_horizons/nsc_atlas_connection_slice.py",
       "sha256": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7"
+    },
+    {
+      "bytes": 15867,
+      "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
+      "changed_from_commit": "07e2895c226329db081819736c85a4a3659e92a2",
+      "path": "src/recursive_horizons/nsc_atlas_core_evolution.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1dcb9542c8f6e9bec363b0725e6da9c9d02eb68834c65f0ff21797a7693010d7"
     },
     {
       "bytes": 12883,
