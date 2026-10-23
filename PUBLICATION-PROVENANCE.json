@@ -1496,9 +1496,9 @@
       "sha256": "95377be34300193aad40f80a0684474632a579cb0c2554dab88ad58a250edc6e"
     },
     {
-      "bytes": 122592,
+      "bytes": 122882,
       "path": "docs/arxiv-studies.md",
-      "sha256": "65ad2189f496d3f43b0779d6123397949a97350fe882185a2fe53b1ce2e8384a"
+      "sha256": "dc5bbc9e5144d93c705ba1eba4d4d23cfe7d743b443f2b0077ca339ae79d02eb"
     },
     {
       "bytes": 1458,
@@ -1653,7 +1653,7 @@
     {
       "bytes": 2496534,
       "path": "docs/lab-snapshot.json",
-      "sha256": "ec234a0e23e324dd8bb58005e1b91b36ae58c63025860ae639042dbf9aedf453"
+      "sha256": "fcabbb01b73e60cb1da2f086958a3be20759d4e3ebbf6c1b63bbd60e1505194f"
     },
     {
       "bytes": 4997,
@@ -1716,9 +1716,9 @@
       "sha256": "900dbc754f0d8472fdd42888c16b5e1606099f36be3e4454d64b18dc3fc0ab50"
     },
     {
-      "bytes": 11035,
+      "bytes": 11673,
       "path": "docs/nsc-atlas-core-reservoir.md",
-      "sha256": "d2f7d7fd901e89ca1055eb5c2bccf5d504d20cdcbf480d1fed3b1ab3a04a888f"
+      "sha256": "9798b2690b38237d97b359d84848eb0e359f61df15d4587c1ed37e73e901768d"
     },
     {
       "bytes": 191654,
@@ -22946,7 +22946,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "ec234a0e23e324dd8bb58005e1b91b36ae58c63025860ae639042dbf9aedf453",
+  "lab_snapshot_sha256": "fcabbb01b73e60cb1da2f086958a3be20759d4e3ebbf6c1b63bbd60e1505194f",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-23.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

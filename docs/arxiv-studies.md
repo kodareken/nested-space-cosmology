@@ -12,6 +12,10 @@ supplies the existing Einstein--scalar constraint/Cauchy setting; the
 new [finite construction](nsc-atlas-core-reservoir.md) solves its radial
 specialization directly and uses local domain-of-dependence uniqueness,
 not a global existence theorem for the material walls.
+The separate geometric maximal-development/uniqueness foundation is
+[Choquet-Bruhat and Geroch, 1969](https://doi.org/10.1007/BF01645389);
+the publisher abstract and bibliographic record were checked. No claim
+of a full reading of that paper or a new global wall-existence theorem is made.
 
 ## Self-gravitating scalar profiles and cooling
 

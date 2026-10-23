@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+  "current_receipt_commit_parent": "73fb137ff5ca21b9bcbe61a5fda77457e0173b64",
   "files": [
     {
       "bytes": 3120,
@@ -10282,12 +10282,12 @@
       "sha256": "95377be34300193aad40f80a0684474632a579cb0c2554dab88ad58a250edc6e"
     },
     {
-      "bytes": 122592,
+      "bytes": 122882,
       "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "changed_from_commit": "73fb137ff5ca21b9bcbe61a5fda77457e0173b64",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "65ad2189f496d3f43b0779d6123397949a97350fe882185a2fe53b1ce2e8384a"
+      "sha256": "dc5bbc9e5144d93c705ba1eba4d4d23cfe7d743b443f2b0077ca339ae79d02eb"
     },
     {
       "bytes": 9543,
@@ -10566,12 +10566,12 @@
       "sha256": "900dbc754f0d8472fdd42888c16b5e1606099f36be3e4454d64b18dc3fc0ab50"
     },
     {
-      "bytes": 11035,
+      "bytes": 11673,
       "change": "Connect a compensated scalar core, inherited reservoir and radiation to the shared parent.",
-      "changed_from_commit": "1c3993d8a751191ce54dbfa540be1372bfbafb9d",
+      "changed_from_commit": "73fb137ff5ca21b9bcbe61a5fda77457e0173b64",
       "path": "docs/nsc-atlas-core-reservoir.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "d2f7d7fd901e89ca1055eb5c2bccf5d504d20cdcbf480d1fed3b1ab3a04a888f"
+      "sha256": "9798b2690b38237d97b359d84848eb0e359f61df15d4587c1ed37e73e901768d"
     },
     {
       "bytes": 191654,

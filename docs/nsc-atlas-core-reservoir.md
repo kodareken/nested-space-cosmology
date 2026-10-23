@@ -29,9 +29,12 @@ are inputs; one depletion amplitude is determined by exterior matching.
 
 The spherical mass law is borrowed from
 [Hayward, Section II, equations 2.2--2.9](https://arxiv.org/html/gr-qc/9710089).
-Einstein--scalar constraint data and their local developments belong to the
-standard Cauchy framework, including
+Einstein--scalar constraint data use
 [Choquet-Bruhat, Isenberg and Pollack](https://arxiv.org/abs/gr-qc/0610045).
+The separate evolution input is geometric uniqueness and finite propagation
+for the hyperbolic Einstein--scalar Cauchy problem; the maximal-development
+framework is due to
+[Choquet-Bruhat and Geroch](https://doi.org/10.1007/BF01645389).
 The additional work is their application to the same inherited scalar,
 the retained core representative and the compact two-wall atlas. No general
 mass law or generic compensation construction is claimed as new.
@@ -187,6 +190,8 @@ remains inside the reference domain for all its future proper time. This
 does **not** bound propagation inside the altered central core. A putative
 singularity there cannot send a signal faster than the boundary of this
 domain. Existence of a complete global wall/core continuation is not inferred.
+The statement concerns the globally hyperbolic domain of dependence; it
+does not constrain non-globally-hyperbolic extensions beyond that domain.
 
 Integrating 4 pi a0^3 sin^2(theta) and using the **actual** modified initial
 parent volume gives a protected fraction above .866472. The same-source
@@ -248,3 +253,9 @@ states are regenerated, not committed. The next calculation is coupled
 evolution of this compensated preparation, with its ambient source and
 outgoing field retained, followed by a local observer signal. It must not
 reuse the isolated cooling endpoint as an already derived global history.
+
+Two independent Grok reviews confirmed the signed mass/constraint laws
+and the protected-annulus argument. The second checked the implementation
+and actual-volume normalization against the compact record and found no
+material defect. The constraint construction and the evolution-uniqueness
+input are attributed separately above.
