@@ -1,5 +1,12 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [fixed-vacuum scale hierarchy](docs/nsc-atlas-scale-hierarchy.md)
+now connects local core size to the energy available in its inherited
+surroundings. An exact supply bound rules out arbitrarily shrinking a
+fixed-proportion reservoir. Solving its outer radius produces compatible
+initial data with widely separated core, reservoir and parent scales.
+The vacuum-radius-mass relation retains its explicit preparation dependence.
+
 The [fixed-observer image calculation](docs/nsc-atlas-core-images.md)
 connects the same evolving lens to two paths from one emitted pulse to one
 receiving worldline. Image directions, proper delays and frequency/fluence

@@ -22,6 +22,8 @@ def test_resolved_reservoir_matches_independent_hamilton_geometry():
     assert abs(r['independent_proper_distance']['endpoint_mass_ratio'])<1e-9
     assert r['reservoir_outer_radius']>r['ideal_capacity_lower_radius']>r['core']['cutoff_radius']
     assert r['parent_vacuum']==.28125
+    assert r['strict_supply_floor']==pytest.approx(4.5)
+    assert r['dimensionless_supply_ratio']>r['strict_supply_floor']
     assert r['protected_parent_angles'][0]<r['protected_parent_angles'][1]
 
 

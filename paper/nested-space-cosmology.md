@@ -61,7 +61,10 @@ signal after contraction, with independent flux and photon checks.
 Nonradial rays and curvature-based Jacobi transport then predict light
 bending and anisotropic beam focusing on that same evolution. A fixed-worldline
 inverse then links multiple pulse arrivals, image directions and frequencies;
-their delay shares a dimensionless scale relation with the parent vacuum.
+their delay shares a dimensionless scale relation with the parent vacuum. An exact supply bound
+then requires core and reservoir radii to scale differently. A solved
+initial-data family admits separated local/cosmological scales and a
+linked vacuum-radius-mass relation.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -5862,6 +5865,202 @@ astronomical application. The atlas now provides the mathematical route
 from inherited vacuum, through formed structure, to a fixed observer's
 measurements without an independently fitted lens mass.
 
+### 10.40. Conservation selects a second local scale
+
+The image-delay connection leaves a physical question: can the inherited
+field support a structure much smaller than its cosmological parent?
+Changing a unit rescales both. Changing the scalar frequency changes the
+physical model. The frequency family already constructed above holds
+$\kappa=1$, mixing $\epsilon=1/4$, fluxes $(.5,1,1.5)$, charge $.5$ and
+tension $.2$ fixed. Its common initial scalar is at the grandchild minimum.
+The parent vacuum, excited density and available excitation are then
+
+$$
+\Lambda_v=\kappa U_v=\frac{9}{32},\qquad
+U_0=\frac{21}{32},\qquad E_b=U_0-U_v=\frac{3}{8}.
+$$
+
+The original initial wall data and parent reference radius are independent
+of frequency. The later scalar history depends on it. The following
+preparations use the existing coherent core shape, a depleted ambient
+annulus and zero scalar normal momentum. They contain no added outgoing
+pulse and are distinct from the previously evolved diffuse lens.
+
+Let $x=\omega\zeta R$, let $A(x)$ be the retained core shape with its cutoff
+at $x=20$, and write
+
+$$
+f=\sqrt{2/\kappa}\,\zeta^2A(x),\qquad
+\mathfrak{M}=\frac{\zeta}{\omega}N(x).
+$$
+
+The ambient scalar displacement is $d/\omega$, with $d=\sqrt{3}/2$.
+If $C$ is the original parent spatial curvature, its exact initial mass
+constraint becomes
+
+$$
+N'=-\zeta^4x(A')^2N
++\frac{x^2}{2}\left[A^2+\zeta^2(A')^2\right]
++\frac{x^2\sqrt{\kappa/2}\,dA}{\omega\zeta^2}
+-\frac{Cx^4(A')^2}{2\omega^2}.
+$$
+
+The coefficient multiplying $N$ does not depend on frequency. With a
+regular centre this proves, for the supplied shape,
+
+$$
+\mathfrak{M}_c=\frac{\zeta N_0(20)}{\omega}
++\frac{\zeta N_1(20)}{\omega^2}
++\frac{\zeta N_2(20)}{\omega^3}.
+$$
+
+This exact decomposition is not a fitted scaling curve. Its coefficients
+retain self-gravity, interference with the inherited ambient field, and
+parent curvature. Geometric excess mass is measured above the excited
+homogeneous parent; in physical units it is $GM_c/c^2$.
+
+A reservoir cannot supply arbitrary positive core mass. For zero initial
+scalar momentum, the positive radial chart gives
+
+$$
+\mathfrak{M}_R=\frac{\kappa R^2}{2}
+\left(\frac{BF^2}{2}+U-U_0\right)
+\geq-\frac{\kappa E_bR^2}{2}.
+$$
+
+Reducing the core mass to zero at the reservoir's outer radius therefore
+requires
+
+$$
+R_d^3-R_c^3\geq\frac{6\mathfrak{M}_c}{\kappa E_b},\qquad
+R_c=\frac{20}{\omega\zeta}.
+$$
+
+Since $\kappa E_b=4\Lambda_v/3$ for this inherited state, every smooth
+finite-energy match in the stated domain satisfies
+
+$$
+\frac{\Lambda_v(R_d^3-R_c^3)}{\mathfrak{M}_c}>\frac{9}{2}.
+$$
+
+Equality would require the scalar to remain at its parent minimum almost
+everywhere through the annulus, contradicting continuous matching to the
+excited ambient field at its ends. This lower bound does not depend on a
+chosen depletion profile. Its coefficient belongs to the declared inherited
+excitation/vacuum ratio, rather than to every possible scalar state.
+
+The core mass falls as $\omega^{-1}$, whereas a reservoir with a fixed
+ratio $R_d/R_c$ has available excitation falling as $\omega^{-3}$.
+For $R_d=2R_c$ and the retained $\zeta=.0826621713$, the resulting
+necessary frequency ceiling is $6221.94$. Above it, even full removal
+of the excitation from that annulus cannot supply the core. Gradient
+energy strengthens the restriction. The [full derivation](../docs/nsc-atlas-scale-hierarchy.md)
+also extends the inequality to arbitrary scalar momentum where $B\geq v^2$.
+
+Allowing the reservoir radius to respond resolves the obstruction. Choose
+
+$$
+\chi(R)=\frac{d}{\omega}[1-a b(x)],\qquad
+x=\frac{R-R_c}{R_d-R_c},\qquad b(x)=1024x^5(1-x)^5,
+$$
+
+with supplied depletion $0<a\leq1$. The scalar returns smoothly to its
+original parent value at both joins. Solve the exact constraint for $R_d$
+so that the exterior geometric mass offset vanishes. Outside this radius the original initial
+parent geometry and material-wall matching data are recovered exactly.
+The independent proper-distance Hamilton equation checks the matching.
+
+For fixed core amplitude and depletion, put $R_d=z\omega^{-1/3}$ and
+use the positive leading mass coefficient $C_m=\zeta N_0(20)$. The scaled endpoint constraint
+tends to
+
+$$
+0=1-\frac{\kappa d^2z^3}{4C_m}J(a),\qquad
+J(a)=\int_0^1 x^2[2ab(x)-a^2b(x)^2]dx>0.
+$$
+
+Its positive root has nonzero derivative. The implicit-function theorem
+continues it to sufficiently large finite frequency. Provided the limiting
+core retains a positive radial-chart margin, the reservoir also remains
+regular and lies inside the parent. The finite examples check these
+conditions. This yields the hierarchy
+
+$$
+R_c\sim\omega^{-1},\qquad R_d\sim\omega^{-1/3},\qquad
+R_d/R_c\sim\omega^{2/3},\qquad R_d\ll L_{\rm ref}.
+$$
+
+The parent vacuum and original initial wall geometry remain fixed. Each
+member retains a causally protected parent annulus under the previously
+derived energy-floor bound. These are initial-constraint and causal-domain
+results; formation, persistence and the complete coupled wall future are
+separate calculations.
+
+### 10.41. A mass--reservoir--vacuum relation and a dimensional example
+
+The same construction produces a dimensionless correlation:
+
+$$
+\frac{\Lambda_vR_d^3}{\mathfrak{M}_c}
+\longrightarrow\frac{4\Lambda_v}{\kappa d^2J(a)}.
+$$
+
+For the declared half-depletion profile,
+
+$$
+J(1/2)=\frac{5476736}{66927861},\qquad
+\frac{\Lambda_vR_d^3}{\mathfrak{M}_c}
+\longrightarrow\frac{200783583}{10953472}=18.3305880546.
+$$
+
+The finite construction reaches $18.33027699$ at $\omega=10^{10}$.
+Its reservoir/core cutoff ratio is then $40578.7$, while
+$\Lambda_v L_{\rm ref}^2=12.34825239893$ is unchanged. The coefficient
+is specific to the supplied bump and depletion. The additional quarter-
+and three-quarter-depletion examples preserve that physical freedom
+explicitly; this is not a universal constant selected by nesting.
+
+![Different core and reservoir scales at fixed inherited vacuum](../docs/figures/nsc-atlas-scale-hierarchy.png)
+
+*Figure 24. The core shrinks faster than its energy-supply region while the
+parent reference radius remains fixed. A reservoir constrained to twice
+the core cutoff becomes insufficient above its ideal supply ceiling.
+Solving for the reservoir radius restores the initial constraints and
+approaches the independently derived vacuum-radius-mass relation.*
+
+An illustrative member takes $\omega=10^9$, $\zeta=.001$ and half-depletion.
+If the dimensional reference $\Lambda_v=10^{-52}\,{\rm m}^{-2}$ is supplied,
+the consistent conversion gives:
+
+| Quantity | Conditional value |
+| --- | ---: |
+| Core geometric excess mass | $6.32\times10^{10}$ nominal solar masses |
+| Half-core-mass radius | 3.86 kpc |
+| Compact core cutoff | 34.4 kpc |
+| Compensating reservoir outer radius | 828 kpc |
+
+The unit conversion uses the [IAU nominal solar mass parameter](https://www.iau.org/static/resolutions/IAU2015_English.pdf).
+Neither that reference vacuum nor the chosen field/preparation parameters
+were inferred here. No galaxy observation was fitted. The example proves
+that compatible initial data can admit these separated scales; it does
+not establish a stable halo, an observed rotation curve or a cosmic abundance.
+The exterior total mass offset is zero: the core is supplied by redistribution
+of the inherited excitation, not by creation of additional total mass.
+
+The [compact evidence](../results/summaries/nsc-atlas-scale-hierarchy-v1.json)
+contains thirteen examples and controls. The exact scaled core identity
+has zero symbolic residual. Its mass agrees with the original constraint
+integrator within $2.7\times10^{-16}$ atlas units. The proper-distance
+Hamilton check leaves less than $4.2\times10^{-13}$ of core mass at the
+outer join; tighter integration changes reported masses and radii by
+less than $1.1\times10^{-11}$ relatively. Those are finite integration
+checks for the supplied profile, not a bound on its uncomputed evolution.
+
+The next connection is to evolve this two-scale preparation with its
+reservoir retained and determine the surviving localized mass. The image
+predictions of Section10.38 belong to the earlier evolved preparation;
+they cannot be assigned to this new family by changing units.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -5911,7 +6110,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 24. The isolated reference in joined causal charts. Horizons are
+*Figure 25. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -6917,7 +7116,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 25. Saved finite-window comparisons. A: the previous and current
+*Figure 26. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -7013,7 +7212,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 26. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 27. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -7798,7 +7997,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 27. Research dependencies, distinct from spacetime causal arrows.
+*Figure 28. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

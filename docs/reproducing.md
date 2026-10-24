@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+## Core supply and a fixed-vacuum hierarchy
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_scale_hierarchy.py --output results/summaries/nsc-atlas-scale-hierarchy-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_scale_hierarchy.py
+```
+
+The [owner](nsc-atlas-scale-hierarchy.md) specifies frequency, core amplitude,
+reservoir shape and depletion. The radius follows from the exact mass
+constraint. Thirteen cases use six processes and about 19 CPU seconds
+inside a 120-second budget. The optional physical conversion supplies
+Lambda=1e-52 m^-2 explicitly; it does not fit observations or rerun the
+older diffuse-lens evolution.
+
 ## Fixed-observer images and their parent-vacuum scale
 
 ```powershell

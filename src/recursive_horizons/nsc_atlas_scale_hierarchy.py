@@ -162,6 +162,8 @@ class ScaleHierarchy:
             ideal_capacity_lower_radius=ideal,lower_bound_margin=Rd-ideal,
             reservoir_constraint=reservoir,independent_proper_distance=proper,
             Lambda_reservoir_radius_cubed_over_core_mass=self.vacuum*Rd**3/M,
+            dimensionless_supply_ratio=self.vacuum*(Rd**3-Rc**3)/M,
+            strict_supply_floor=6*self.vacuum/(k*self.excitation),
             asymptotic_Lambda_reservoir_radius_cubed_over_core_mass=asymptotic,
             core_radius_over_parent_radius=Rc/self.reference.cap_geometry['parent_maximum_radius'],
             reservoir_radius_over_parent_radius=Rd/self.reference.cap_geometry['parent_maximum_radius'],

@@ -1,5 +1,17 @@
 # What the calculations show
 
+The [scale hierarchy](nsc-atlas-scale-hierarchy.md) now proves an exact
+core mass decomposition and a shape-independent supply bound. For the
+declared inherited state, smooth joins require Lambda*(Rd^3-Rc^3)/M>9/2.
+The solved half-depletion family has Rc proportional to omega^-1 and Rd
+proportional to omega^-1/3, while the original initial parent geometry and
+vacuum remain fixed. Thirteen numerical cases pass the original-solver,
+proper-distance Hamilton and tighter-tolerance comparisons. The illustrative
+small-amplitude member admits a 3.86 kpc half-core radius and 6.32e10 nominal
+solar masses if Lambda=1e-52 m^-2 is supplied. Its 828 kpc supply region is
+part of that initial construction, not an observed halo or a computed
+formation history. The previous image pair is unchanged.
+
 The [fixed-worldline inverse](nsc-atlas-core-images.md) connects the
 formed scalar concentration to two pulse arrivals on one observer's clock.
 The null endpoint identity links the delay derivative to the images'

@@ -16,20 +16,20 @@ def render(record):
     fig,axes=plt.subplots(1,3,figsize=(12,4.2))
     axes[0].loglog(w,rc,'o-',color='#176d8a',label='Core cutoff')
     axes[0].loglog(w,rd,'s-',color='#a56338',label='Solved supply radius')
-    axes[0].loglog(w,rc[0]*np.ones_like(w)*6.62607707610/rc[0],':',color='#777777',label='Parent reference radius')
-    axes[0].set(title='One parent, two local scales',xlabel='Inherited scalar frequency',ylabel='Radius in atlas units')
+    axes[0].loglog(w,np.full_like(w,1/np.sqrt(rows[0]['parent_initial_curvature'])),':',color='#777777',label='Parent reference radius')
+    axes[0].set(title='Core and reservoir separate',xlabel='Inherited scalar frequency',ylabel='Radius in atlas units')
     axes[0].legend(frameon=False,fontsize=8,loc='lower left')
     axes[1].loglog(w,rd/rc,'o-',color='#176d8a')
     axes[1].axhline(2,color='#777777',ls=':',label='Fixed radius factor 2')
     axes[1].axvline(record['fixed_ratio_obstruction']['necessary_frequency_ceiling'],color='#a56338',ls='--',
-        label='Ideal supply ceiling at factor 2')
-    axes[1].set(title='A fixed proportion cannot supply the core',xlabel='Inherited scalar frequency',ylabel='Supply radius / core cutoff')
+        label='Factor-2 ideal supply ceiling')
+    axes[1].set(title='The supply radius must grow',xlabel='Inherited scalar frequency',ylabel='Supply radius / core cutoff')
     axes[1].legend(frameon=False,fontsize=7,loc='upper left')
     ratio=[r['Lambda_reservoir_radius_cubed_over_core_mass'] for r in rows]
     axes[2].semilogx(w,ratio,'o-',color='#176d8a',label='Exact finite constraints')
     axes[2].axhline(rows[0]['asymptotic_Lambda_reservoir_radius_cubed_over_core_mass'],color='#a56338',ls='--',
         label='Derived limit 18.330588')
-    axes[2].set(title='Vacuum, mass and supply radius stay linked',xlabel='Inherited scalar frequency',
+    axes[2].set(title='A derived dimensionless limit',xlabel='Inherited scalar frequency',
         ylabel=r'$\Lambda_v R_d^3/\mathfrak{M}_c$')
     axes[2].legend(frameon=False,fontsize=8)
     for ax in axes:ax.grid(alpha=.15)

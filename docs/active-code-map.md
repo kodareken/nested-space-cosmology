@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [hierarchy owner](nsc-atlas-scale-hierarchy.md) uses
+nsc_atlas_scale_hierarchy.py: core_coefficients separates the exact frequency
+powers; reservoir integrates the normalized mass constraint and an
+independent proper-distance Hamilton system; solve finds the conserved
+supply radius and protected parent annulus. The producer checks thirteen
+finite cases and records the dimensionless bound and illustrative unit
+conversion. The old core, field evolution and optical modules are unchanged.
+
 The [fixed-observer owner](nsc-atlas-core-images.md) uses
 nsc_atlas_core_images.py: run_images batches angular patches and nearby
 source ages through the unchanged stream_rays solver; invert_patch checks

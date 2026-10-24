@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+  "current_receipt_commit_parent": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 24273,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 24704,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "e4e9b81e11de0d19557bb3082f75a7450852ab176490ce9f68cdb994b9ff5682"
+      "sha256": "35385b17b3eea9b910a14e5313e7eddc12a158b1331896d537a6ba414d539ace"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 282129,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 282624,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "e1d76267812c1d3f7f25162ae2a7b78411d5b875a3a764ac4470021588cda287"
+      "sha256": "3cbcd592af0d73e9f93e472a6d782c12aaf7bca6dd4c8c857b2bf407090affe9"
     },
     {
-      "bytes": 126024,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 126845,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "20f6662c593497a7a72751b3ed037898faaf9ffd81a04ed7ef4680ca00f0cef0"
+      "sha256": "a2402e78dfbc63ccc2c4bac96cb2b3847e8e8f1bfa25cdc1c1080896d5d79271"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 456384,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 457177,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "f36697e3b813313867414288e5901021217b502738fa592e0c8fa940af9d2b90"
+      "sha256": "af381f8d2b3155f1037edbe10481af641b691de72b3b6367216a889ef4f2addd"
     },
     {
       "bytes": 173938,
@@ -10469,12 +10469,12 @@
       "sha256": "6b1b045a9ae28b3398f3c21cfecc88aee986e1a6b7d2f9f0efdeae0688339f04"
     },
     {
-      "bytes": 163408,
+      "bytes": 161555,
       "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "docs/figures/nsc-atlas-scale-hierarchy.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "6a0c320570696d7b623942bbc7cd25366c252e015e6244364dbbe3f6cde3fb7a"
+      "sha256": "a9a9d82d6eed086b8bf24288109bd63452ad2dbe95b1bd8874062df4b32f5d12"
     },
     {
       "bytes": 140231,
@@ -10789,12 +10789,12 @@
       "sha256": "b35adc596ea174a27f22833a338a655329791d2253460b2713920e3282b92dc5"
     },
     {
-      "bytes": 11202,
+      "bytes": 12303,
       "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "docs/nsc-atlas-scale-hierarchy.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "842a0fbad7c13487dcb0a9524575289281dc0f1337016538214e4820be730ed3"
+      "sha256": "86fdcf5005e36ab36b9775ade5f5b1c31331fdec9f60f8e5b9d91d3d79dfc8cc"
     },
     {
       "bytes": 14560,
@@ -10840,15 +10840,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 107639,
+      "bytes": 107831,
       "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "2412fef2486178044e6f0ab42e8c55476bb65eef206169b2e9856ab140e628e4"
+      "sha256": "cd49d236844fdc816f2855c0065723a1155ac74117af2bb1b172c4a0d9c14b87"
     },
     {
       "bytes": 30876,
@@ -11830,20 +11830,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 223069,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 223749,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1387a34237a2fc1d2cbdaa6533f8186142e118d446ce176b15a0d7dab6b47c49"
+      "sha256": "c98f59608deb9e9e23de053c8e634b3799a3658519f5fbe53514ffb8949bd991"
     },
     {
-      "bytes": 40671,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 40993,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "85ff81cc8398c1300d52981dc2fff46238801e142574ed6b032b2156e776b931"
+      "sha256": "09cb040fc35aec466c63d7d4774d019ed67fde52853e4b6febb1293f3b4c8790"
     },
     {
       "bytes": 18356,
@@ -11912,20 +11912,20 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 30065,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 30386,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "9b9b765e8b6944f61730e7ee8e7b16b494e6b202e3ebff13b464f999c2311edf"
+      "sha256": "79fcaa2971a766e646fd78d8140ffc4ee1db8eadee202f14ffd70137770970aa"
     },
     {
       "bytes": 3206,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "073dfd50e79882700b7869e81da5a30fd301360d94fb8796f987e0d38adc7157"
+      "sha256": "d9457b05442e1c0ef24996ad348f4846e5b39cb977e1016308e711840b55ee4a"
     },
     {
       "bytes": 43377,
@@ -11945,27 +11945,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "be3ff74e0b37940857d2d07b022cb6c9cad35afa268f02a7fbb0051d912326c1"
+      "sha256": "42441be758dd97a074c722d39ba2c0f59fb3d40371d761a4f6ceefa8807cbf5a"
     },
     {
-      "bytes": 372854,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 381255,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "933dfc9e8e4fe2ae7ff38628804d7fef37172fc0201d2029ca5f45180ca1f34c"
+      "sha256": "c9b0b5c783304e0cb5c6b47e8905f4e2f5dd7d9bd5e13c99ed191bf713e529db"
     },
     {
-      "bytes": 9623689,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 9942640,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2e3a3a3bb5a4feab7bde7b056e2b5078b9a7c9a39a6324a822ae428d90de120a"
+      "sha256": "80085be468c4f5b3890821ff7aa31640e13457dfdc692d5420783970e3ce3b41"
     },
     {
       "bytes": 3283,
@@ -30846,12 +30846,12 @@
       "sha256": "1ce1ce949be809410b488f7392eecb1c3ed1838cfd890e0110b5f2361139bb38"
     },
     {
-      "bytes": 29745,
+      "bytes": 31085,
       "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "results/summaries/nsc-atlas-scale-hierarchy-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "4d19dad0a4f234db4e26d18006982280283cec884c9c95a086ecef741cc83a59"
+      "sha256": "f135b3ad60d6c3f842e7fde84a9582bf7c5b6afcc92622660e486aeb0c6ff939"
     },
     {
       "bytes": 15941,
@@ -34232,12 +34232,12 @@
       "sha256": "5b90e083b9b3672062b23c019d65737111a9cc34cc647235f80b4e5678dda237"
     },
     {
-      "bytes": 2245,
+      "bytes": 2235,
       "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "scripts/plot_nsc_atlas_scale_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "7e1b7bac0e635bf1b446bdcdee2b94a0b4087792e69b84d15307a45968f274df"
+      "sha256": "26901cf917e82d8cdabed508b8cc01023505be045defc5b76c601bda27557b0a"
     },
     {
       "bytes": 2529,
@@ -35448,12 +35448,12 @@
       "sha256": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5"
     },
     {
-      "bytes": 9055,
+      "bytes": 9190,
       "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "src/recursive_horizons/nsc_atlas_scale_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "f6a80cd7697a2ff9cc2cb58982a98e4bd4b1ff1b32fe90a6fc46d09025f2f4ea"
+      "sha256": "78255e7f3b63cfde9b49e00a13fc66934bf528eaef305af2e7164f07cb582637"
     },
     {
       "bytes": 19736,
@@ -39894,12 +39894,12 @@
       "sha256": "892bb9edb62740ef43928d83bb4a50d58267c89cf4a80209c2e2d652a56a0e34"
     },
     {
-      "bytes": 2975,
+      "bytes": 3099,
       "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
       "path": "tests/test_nsc_atlas_scale_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "e9e37fc75e3d657adc9a37405508dc98c8894910061a9023516c34e812885c6c"
+      "sha256": "28ca9b7467d656ae3de6f5211ba203fcc7b5aea532beb54b3d163c705284b6e2"
     },
     {
       "bytes": 6906,

@@ -20,14 +20,16 @@ starting a derivation.
 
 ### A local core and its supply radius at fixed parent vacuum
 
-Active: the [scale hierarchy](nsc-atlas-scale-hierarchy.md) exposes a supply
+Complete: the [scale hierarchy](nsc-atlas-scale-hierarchy.md) exposes a supply
 constraint before attempting a larger-frequency evolution. The initial
 core mass has an exact three-term inverse-frequency form. A fixed-proportion
 reservoir eventually fails the vacuum-floor capacity bound; solving its
 outer radius restores compatible initial data. The new family holds the
 parent vacuum and initial walls fixed, with a supplied coherent core and
 depletion, Pi=0 and no pulse. Thirteen finite cases and independent Hamilton
-checks fit a120 CPU-second budget. The conditional asymptotic proof yields
+checks used about 19 CPU seconds within a 120 CPU-second budget. The exact
+shape-independent supply ratio Lambda*(Rd^3-Rc^3)/M exceeds 9/2 for these
+smooth joins; the half-depletion family approaches Lambda*Rd^3/M=18.330588. The conditional asymptotic proof yields
 Rc proportional to omega^-1 and Rd proportional to omega^-1/3.
 Next: evolve this two-scale preparation and test retained localization;
 the previous image result cannot be rescaled into its uncomputed future.

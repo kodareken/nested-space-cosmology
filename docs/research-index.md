@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [core supply hierarchy](nsc-atlas-scale-hierarchy.md) separates local
+core and reservoir scales within the inherited parent. Exact initial
+constraints yield a supply bound, a three-term core mass law and a solved
+reservoir radius; high-frequency evolution and physical state selection
+remain distinct next questions.
+
 The [fixed-worldline image connection](nsc-atlas-core-images.md) inverts
 the same optical map for one source pulse and one receiver. It links image
 directions, time delay and frequencies, and binds that delay to the same

@@ -1,5 +1,18 @@
 # Cited arXiv studies
 
+## Scalar mass, vacuum and supply scales, 24 October 2026
+
+Revisited [Fodor, Forgacs and Mezei,1007.0388](https://arxiv.org/html/1007.0388)
+for the real-scalar/de Sitter setting and its scaling/small-amplitude
+structure. Its evolution and lifetime results are not asserted for the
+new compensated initial preparations. The exact spherical mass-gradient
+framework remains [Hayward,gr-qc/9710089](https://arxiv.org/html/gr-qc/9710089).
+The [new hierarchy owner](nsc-atlas-scale-hierarchy.md) derives its supply
+bound and scaled mass constraint directly from the existing action.
+Dimensional illustration uses the [IAU2015 nominal constants](https://www.iau.org/static/resolutions/IAU2015_English.pdf)
+as conversion factors, with a supplied reference Lambda; no astrophysical
+measurement is imported as a predicted result.
+
 ## Fixed-worldline images and proper arrival variation, 24 October 2026
 
 Revisited [Frittelli and Newman, gr-qc/9810017](https://arxiv.org/html/gr-qc/9810017),
