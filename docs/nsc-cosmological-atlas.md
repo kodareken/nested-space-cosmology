@@ -16,7 +16,21 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 23 October 2026
+## Current execution priority — 24 October 2026
+
+### Fixed source, fixed observer and the image-delay connection
+
+Active: [invert the evolved lens](nsc-atlas-core-images.md) for one held
+receiving worldline. Two opposite-orientation branches from the same pulse
+supply image positions, relative proper arrival times and frequency/fluence
+ratios. The null endpoint variation connects delay drift to the frequency
+ratio without assuming a static lens. Three resolutions and an optical-time
+control reuse the unchanged source within4500 CPU seconds. The independent
+flat/closed-FLRW inverse checks pass; the batched physical runs are active.
+Next: use the resolved dimensionless correlations to specify calibration
+versus withheld observables. Physical cloud/population selection and
+nonspherical persistence remain open.
+
 
 ### From formed structure to lensing and curvature focusing
 

@@ -1,5 +1,17 @@
 # Prior art and admission of new research
 
+## Fixed-observer images and delay-frequency closure, 24 October 2026
+
+The [image owner](nsc-atlas-core-images.md) reuses exact lens maps, null
+endpoint variation and Jacobi photon counting. The missing connection is
+two images received on the same worldline from the existing forming source.
+Freeze the physical solution; specify only receiver offset .0002 at R=.6,
+source age2.8 and two angular patches. Three resolutions and one optical-time
+control run in parallel within4500 CPU seconds. Independent curvature slopes,
+angular resampling and two emission-time steps test the inverse and the
+proper-delay/redshift identity. Missing roots, unresolved small differences
+and source changes are separate stopping outcomes.
+
 ## Evolved scalar optics, 23 October 2026
 
 The [optical owner](nsc-atlas-core-optics.md) reuses exact null lens maps,
