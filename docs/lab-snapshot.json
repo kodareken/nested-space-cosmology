@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+  "current_receipt_commit_parent": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
   "files": [
     {
       "bytes": 3120,
@@ -10469,6 +10469,14 @@
       "sha256": "6b1b045a9ae28b3398f3c21cfecc88aee986e1a6b7d2f9f0efdeae0688339f04"
     },
     {
+      "bytes": 163408,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "path": "docs/figures/nsc-atlas-scale-hierarchy.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6a0c320570696d7b623942bbc7cd25366c252e015e6244364dbbe3f6cde3fb7a"
+    },
+    {
       "bytes": 140231,
       "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
       "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
@@ -10781,6 +10789,14 @@
       "sha256": "b35adc596ea174a27f22833a338a655329791d2253460b2713920e3282b92dc5"
     },
     {
+      "bytes": 11202,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "path": "docs/nsc-atlas-scale-hierarchy.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "842a0fbad7c13487dcb0a9524575289281dc0f1337016538214e4820be730ed3"
+    },
+    {
       "bytes": 14560,
       "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
       "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
@@ -10824,15 +10840,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 106772,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "bytes": 107639,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "b83358c4316151aae726d9facb16934b9aab91bc156deffe762d22f6e831a98a"
+      "sha256": "2412fef2486178044e6f0ab42e8c55476bb65eef206169b2e9856ab140e628e4"
     },
     {
       "bytes": 30876,
@@ -11800,12 +11816,12 @@
       "sha256": "7398cba18661886990f700660d6d11564db27ddd912bd695ecbbab3a96bf177a"
     },
     {
-      "bytes": 595037,
-      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "a8b2e4a74d616e102b55339d5c469ed6feb76344",
+      "bytes": 595965,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ed651edb4da6e8c88d303c56c10a42ff828bb85d90bbb31b050f6cef822d6850"
+      "sha256": "6d6e34a40199021dd393631b82a32607a9a70a04df1c9f8854bca78699fbae6b"
     },
     {
       "bytes": 6705,
@@ -30830,6 +30846,14 @@
       "sha256": "1ce1ce949be809410b488f7392eecb1c3ed1838cfd890e0110b5f2361139bb38"
     },
     {
+      "bytes": 29745,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "path": "results/summaries/nsc-atlas-scale-hierarchy-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4d19dad0a4f234db4e26d18006982280283cec884c9c95a086ecef741cc83a59"
+    },
+    {
       "bytes": 15941,
       "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
       "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
@@ -31365,6 +31389,14 @@
       "path": "scripts/check_nsc_atlas_scalar_preparation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "957bc18b1e2444563594e8d95d8700391dd4a217400d7fbe648050b61c7501d1"
+    },
+    {
+      "bytes": 8724,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "path": "scripts/check_nsc_atlas_scale_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1d38f2921edf8f735388a9c2b33b3ed9549f5bd8d0dfa4f2bc7dbedf601862e5"
     },
     {
       "bytes": 6371,
@@ -34200,6 +34232,14 @@
       "sha256": "5b90e083b9b3672062b23c019d65737111a9cc34cc647235f80b4e5678dda237"
     },
     {
+      "bytes": 2245,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "path": "scripts/plot_nsc_atlas_scale_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7e1b7bac0e635bf1b446bdcdee2b94a0b4087792e69b84d15307a45968f274df"
+    },
+    {
       "bytes": 2529,
       "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
       "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
@@ -35406,6 +35446,14 @@
       "path": "src/recursive_horizons/nsc_atlas_scalar_preparation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5"
+    },
+    {
+      "bytes": 9055,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "path": "src/recursive_horizons/nsc_atlas_scale_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f6a80cd7697a2ff9cc2cb58982a98e4bd4b1ff1b32fe90a6fc46d09025f2f4ea"
     },
     {
       "bytes": 19736,
@@ -39844,6 +39892,14 @@
       "path": "tests/test_nsc_atlas_scalar_preparation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "892bb9edb62740ef43928d83bb4a50d58267c89cf4a80209c2e2d652a56a0e34"
+    },
+    {
+      "bytes": 2975,
+      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
+      "changed_from_commit": "96a9a4c1d8c19037f2e4b1eaae6102215518bac2",
+      "path": "tests/test_nsc_atlas_scale_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e9e37fc75e3d657adc9a37405508dc98c8894910061a9023516c34e812885c6c"
     },
     {
       "bytes": 6906,

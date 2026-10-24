@@ -1,0 +1,668 @@
+{
+  "schema": "nsc-atlas-scale-hierarchy-v1",
+  "result": "An exact initial-constraint family separates core and supply radii while retaining inherited parent vacuum and original initial wall data.",
+  "symbolic_identities": {
+    "core_constraint_polynomial_residual": "0",
+    "untrapped_supply_square_identity": "0",
+    "weighted_depletion_integral": "-256*a*(18432*a - 52003)/66927861",
+    "half_depletion_integral": "5476736/66927861",
+    "asymptotic_vacuum_radius_mass_ratio": "200783583/10953472"
+  },
+  "runs": {
+    "frequency_2000": {
+      "frequency": 2000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 9.571401127885187e-05,
+        "half_mass_radius": 0.014924388329768723,
+        "cutoff_radius": 0.12097432041354271,
+        "coefficients": [
+          1.756636312121066,
+          1118.3024306433026,
+          -0.1349602551270665
+        ],
+        "scaled_mass": 2.3157874937026537,
+        "minimum_core_beta_squared": 0.9931169654114692,
+        "scaled_core_compactness": 0.006874411790758647
+      },
+      "reservoir_outer_radius": 0.19045130610921837,
+      "reservoir_to_core_cutoff": 1.5743118494749397,
+      "ideal_capacity_lower_radius": 0.1489084838880907,
+      "lower_bound_margin": 0.04154282222112768,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.691532536504475e-14,
+        "minimum_beta_squared": 0.9980842851577623,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 3.640718403521223e-14,
+        "proper_width": 0.06952129787765188
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 20.298730602927623,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 0.018257306551700086,
+      "reservoir_radius_over_parent_radius": 0.028742694043837894,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5441650497213184,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.59375
+    },
+    "frequency_8000": {
+      "frequency": 8000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 1.959531687551462e-05,
+        "half_mass_radius": 0.0034835674782742326,
+        "cutoff_radius": 0.030243580103385678,
+        "coefficients": [
+          1.756636312121066,
+          1118.3024306433026,
+          -0.1349602551270665
+        ],
+        "scaled_mass": 1.8964241138427247,
+        "minimum_core_beta_squared": 0.9938561823718923,
+        "scaled_core_compactness": 0.006143322453661326
+      },
+      "reservoir_outer_radius": 0.1045557636021349,
+      "reservoir_to_core_cutoff": 3.4571225775757344,
+      "ideal_capacity_lower_radius": 0.06987652317451308,
+      "lower_bound_margin": 0.03467924042762181,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 2.644180887976625e-13,
+        "minimum_beta_squared": 0.9986833337697507,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 2.643160763880106e-13,
+        "proper_width": 0.07433286459878481
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 16.40529992836981,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 0.0045643266379250215,
+      "reservoir_radius_over_parent_radius": 0.015779436671400936,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5311984881788733,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.578125
+    },
+    "frequency_32000": {
+      "frequency": 32000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 4.628005082045675e-06,
+        "half_mass_radius": 0.0008532451887317767,
+        "cutoff_radius": 0.007560895025846419,
+        "coefficients": [
+          1.756636312121066,
+          1118.3024306433026,
+          -0.1349602551270665
+        ],
+        "scaled_mass": 1.7915832629468722,
+        "minimum_core_beta_squared": 0.9940355508062663,
+        "scaled_core_compactness": 0.0059644189108469725
+      },
+      "reservoir_outer_radius": 0.06559560514619225,
+      "reservoir_to_core_cutoff": 8.675640241262181,
+      "ideal_capacity_lower_radius": 0.04207400331926869,
+      "lower_bound_margin": 0.023521601826923567,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 2.7977799463819487e-13,
+        "minimum_beta_squared": 0.9987745028958881,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 2.8093118771558195e-13,
+        "proper_width": 0.05804342676925828
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 17.152322463651473,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 0.0011410816594812554,
+      "reservoir_radius_over_parent_radius": 0.009899613963561808,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.52531817228041,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.578125
+    },
+    "frequency_128000": {
+      "frequency": 128000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 1.1400747617199733e-06,
+        "half_mass_radius": 0.00021217059159335638,
+        "cutoff_radius": 0.0018902237564616048,
+        "coefficients": [
+          1.756636312121066,
+          1118.3024306433026,
+          -0.1349602551270665
+        ],
+        "scaled_mass": 1.7653730498522293,
+        "minimum_core_beta_squared": 0.9940800588557541,
+        "scaled_core_compactness": 0.005919939272193273
+      },
+      "reservoir_outer_radius": 0.041632072003175896,
+      "reservoir_to_core_cutoff": 22.024943798774835,
+      "ideal_capacity_lower_radius": 0.026327201229772473,
+      "lower_bound_margin": 0.015304870773403423,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.0662135578276835e-13,
+        "minimum_beta_squared": 0.9987936331132438,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 3.088898797860594e-13,
+        "proper_width": 0.03974502008188235
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 17.800953982305874,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 0.00028527041487031384,
+      "reservoir_radius_over_parent_radius": 0.006283064854971843,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5217015028071647,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.59375
+    },
+    "frequency_512000": {
+      "frequency": 512000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 2.8396078362678764e-07,
+        "half_mass_radius": 5.297074691377901e-05,
+        "cutoff_radius": 0.0004725559391154012,
+        "coefficients": [
+          1.756636312121066,
+          1118.3024306433026,
+          -0.1349602551270665
+        ],
+        "scaled_mass": 1.7588204965554013,
+        "minimum_core_beta_squared": 0.9940911481545883,
+        "scaled_core_compactness": 0.0059088517284083915
+      },
+      "reservoir_outer_radius": 0.026345273632522877,
+      "reservoir_to_core_cutoff": 55.75059257924,
+      "ideal_capacity_lower_radius": 0.0165626368062929,
+      "lower_bound_margin": 0.009782636826229978,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.1998768415752936e-13,
+        "minimum_beta_squared": 0.9987981867885716,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 2.9872262225104816e-13,
+        "proper_width": 0.025873768019852174
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 18.110994812851917,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 7.131760371757846e-05,
+      "reservoir_radius_over_parent_radius": 0.003975998668586409,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5193944057566005,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.578125
+    },
+    "frequency_2e+06": {
+      "frequency": 2000000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 7.262679622127647e-08,
+        "half_mass_radius": 1.3555936675980058e-05,
+        "cutoff_radius": 0.0001209743204135427,
+        "coefficients": [
+          1.7566363121210669,
+          1118.302430643303,
+          -0.13496025512706653
+        ],
+        "scaled_mass": 1.7571954633363547,
+        "minimum_core_beta_squared": 0.9940938979747841,
+        "scaled_core_compactness": 0.005906102017547892
+      },
+      "reservoir_outer_radius": 0.016762847741523725,
+      "reservoir_to_core_cutoff": 138.56533919116916,
+      "ideal_capacity_lower_radius": 0.010513302896922054,
+      "lower_bound_margin": 0.006249544844601671,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.243623200661963e-13,
+        "minimum_beta_squared": 0.9987993019322589,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 3.239574540424489e-13,
+        "proper_width": 0.016642207852160522
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 18.24059687725497,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 1.8257306551700082e-05,
+      "reservoir_radius_over_parent_radius": 0.002529829875053477,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5179482291856967,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.578125
+    },
+    "frequency_1e+08": {
+      "frequency": 100000000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 1.4520829620206922e-09,
+        "half_mass_radius": 2.710878650834056e-07,
+        "cutoff_radius": 2.419486408270854e-06,
+        "coefficients": [
+          1.7566363121210675,
+          1118.3024306433028,
+          -0.13496025512706666
+        ],
+        "scaled_mass": 1.7566474951453739,
+        "minimum_core_beta_squared": 0.994094825196778,
+        "scaled_core_compactness": 0.005905174803218852
+      },
+      "reservoir_outer_radius": 0.004556578622314411,
+      "reservoir_to_core_cutoff": 1883.2834136774022,
+      "ideal_capacity_lower_radius": 0.002853451339692524,
+      "lower_bound_margin": 0.0017031272826218873,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.2811175615182906e-13,
+        "minimum_beta_squared": 0.9987996766940139,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 3.8248388357467234e-13,
+        "proper_width": 0.004554169607544172
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 18.323891278862686,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 3.651461310340017e-07,
+      "reservoir_radius_over_parent_radius": 0.0006876736521448108,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5161060703184781,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.5625
+    },
+    "frequency_1e+10": {
+      "frequency": 10000000000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 1.4520738103312878e-11,
+        "half_mass_radius": 2.710872413245926e-09,
+        "cutoff_radius": 2.4194864082708544e-08,
+        "coefficients": [
+          1.7566363121210673,
+          1118.3024306433024,
+          -0.13496025512706808
+        ],
+        "scaled_mass": 1.7566364239513104,
+        "minimum_core_beta_squared": 0.9940948439302951,
+        "scaled_core_compactness": 0.0059051560697048555
+      },
+      "reservoir_outer_radius": 0.000981797065438793,
+      "reservoir_to_core_cutoff": 40578.73861504593,
+      "ideal_capacity_lower_radius": 0.0006147561636335319,
+      "lower_bound_margin": 0.0003670409018052611,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.281413145725938e-13,
+        "minimum_beta_squared": 0.9987996842591325,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 4.1887991268144677e-13,
+        "proper_width": 0.0009817730198693909
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 18.330276987310192,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 3.6514613103400374e-09,
+      "reservoir_radius_over_parent_radius": 0.00014817169407524148,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.02277650236760695,
+      "parent_Lambda_reference_radius_squared": 12.348252398928361,
+      "protected_parent_angles": [
+        0.5155665683067543,
+        2.3353459631578937
+      ],
+      "future_conformal_distance_bound": 0.5154183966121368,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.5625
+    },
+    "small_compactness": {
+      "frequency": 1000000000.0,
+      "weak_amplitude": 0.001,
+      "depletion": 0.5,
+      "core": {
+        "mass": 1.7603068798514787e-12,
+        "half_mass_radius": 2.243066731836029e-06,
+        "cutoff_radius": 2e-05,
+        "coefficients": [
+          1.752665435170552,
+          7641444.680926754,
+          -0.1349608612424663
+        ],
+        "scaled_mass": 1.7603068798514787,
+        "minimum_core_beta_squared": 0.9999991353950327,
+        "scaled_core_compactness": 8.646047576867499e-07
+      },
+      "reservoir_outer_radius": 0.0004815623798469198,
+      "reservoir_to_core_cutoff": 24.07811899234599,
+      "ideal_capacity_lower_radius": 0.00030428268257166424,
+      "lower_bound_margin": 0.00017727969727525557,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.0812215117755994e-13,
+        "minimum_beta_squared": 0.9999998239602014,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 3.004634453008513e-13,
+        "proper_width": 0.0004615623848966893
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 17.84275042712763,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 3.0183772042345338e-06,
+      "reservoir_radius_over_parent_radius": 7.267684548734372e-05,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5154910734576851,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.546875
+    },
+    "small_compactness_tight": {
+      "frequency": 1000000000.0,
+      "weak_amplitude": 0.001,
+      "depletion": 0.5,
+      "core": {
+        "mass": 1.7603068798536234e-12,
+        "half_mass_radius": 2.2430667318592568e-06,
+        "cutoff_radius": 2e-05,
+        "coefficients": [
+          1.7526654351726938,
+          7641444.680929624,
+          -0.13496086124378298
+        ],
+        "scaled_mass": 1.7603068798536234,
+        "minimum_core_beta_squared": 0.9999991353950327,
+        "scaled_core_compactness": 8.646047576849982e-07
+      },
+      "reservoir_outer_radius": 0.0004815623798471169,
+      "reservoir_to_core_cutoff": 24.078118992355844,
+      "ideal_capacity_lower_radius": 0.0003042826825717878,
+      "lower_bound_margin": 0.00017727969727532913,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.0929674080400144e-13,
+        "minimum_beta_squared": 0.9999998239602014,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 3.0940688916403174e-13,
+        "proper_width": 0.0004615623848968863
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 17.842750427127804,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 3.0183772042345338e-06,
+      "reservoir_radius_over_parent_radius": 7.267684548737347e-05,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5154910734576851,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.578125
+    },
+    "baseline_tight": {
+      "frequency": 2000.0,
+      "weak_amplitude": 0.08266217132541569,
+      "depletion": 0.5,
+      "core": {
+        "mass": 9.571401127893517e-05,
+        "half_mass_radius": 0.01492438832964789,
+        "cutoff_radius": 0.12097432041354271,
+        "coefficients": [
+          1.7566363121210393,
+          1118.3024306473867,
+          -0.13496025512653645
+        ],
+        "scaled_mass": 2.315787493704669,
+        "minimum_core_beta_squared": 0.9931169654114913,
+        "scaled_core_compactness": 0.006874411790736515
+      },
+      "reservoir_outer_radius": 0.19045130610926003,
+      "reservoir_to_core_cutoff": 1.5743118494752841,
+      "ideal_capacity_lower_radius": 0.14890848388811073,
+      "lower_bound_margin": 0.0415428222211493,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.568891142318129e-14,
+        "minimum_beta_squared": 0.9980842851577608,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 3.72074032680041e-14,
+        "proper_width": 0.06952129787769354
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 20.298730602923275,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+      "core_radius_over_parent_radius": 0.018257306551700086,
+      "reservoir_radius_over_parent_radius": 0.02874269404384418,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5441650497213247,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.53125
+    },
+    "depletion_quarter": {
+      "frequency": 1000000000.0,
+      "weak_amplitude": 0.001,
+      "depletion": 0.25,
+      "core": {
+        "mass": 1.7603068798514787e-12,
+        "half_mass_radius": 2.243066731836029e-06,
+        "cutoff_radius": 2e-05,
+        "coefficients": [
+          1.752665435170552,
+          7641444.680926754,
+          -0.1349608612424663
+        ],
+        "scaled_mass": 1.7603068798514787,
+        "minimum_core_beta_squared": 0.9999991353950327,
+        "scaled_core_compactness": 8.646047576867499e-07
+      },
+      "reservoir_outer_radius": 0.0005872063533681507,
+      "reservoir_to_core_cutoff": 29.360317668407532,
+      "ideal_capacity_lower_radius": 0.00030428268257166424,
+      "lower_bound_margin": 0.0002829236707964864,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": 3.640722096159929e-15,
+        "minimum_beta_squared": 0.9999998239602014,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": 7.692012420480636e-14,
+        "proper_width": 0.0005672063590958133
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 32.35015622674717,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 33.096776921352465,
+      "core_radius_over_parent_radius": 3.0183772042345338e-06,
+      "reservoir_radius_over_parent_radius": 8.862051355940571e-05,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5155070171258092,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.546875
+    },
+    "depletion_three_quarters": {
+      "frequency": 1000000000.0,
+      "weak_amplitude": 0.001,
+      "depletion": 0.75,
+      "core": {
+        "mass": 1.7603068798514787e-12,
+        "half_mass_radius": 2.243066731836029e-06,
+        "cutoff_radius": 2e-05,
+        "coefficients": [
+          1.752665435170552,
+          7641444.680926754,
+          -0.1349608612424663
+        ],
+        "scaled_mass": 1.7603068798514787,
+        "minimum_core_beta_squared": 0.9999991353950327,
+        "scaled_core_compactness": 8.646047576867499e-07
+      },
+      "reservoir_outer_radius": 0.00043670141952868307,
+      "reservoir_to_core_cutoff": 21.835070976434153,
+      "ideal_capacity_lower_radius": 0.00030428268257166424,
+      "lower_bound_margin": 0.00013241873695701883,
+      "reservoir_constraint": {
+        "endpoint_mass_ratio": -3.460271767630909e-13,
+        "minimum_beta_squared": 0.9999998239602014,
+        "maximum_mass_ratio": 1.0
+      },
+      "independent_proper_distance": {
+        "endpoint_mass_ratio": -3.043805202784198e-13,
+        "proper_width": 0.0004167014243127124
+      },
+      "Lambda_reservoir_radius_cubed_over_core_mass": 13.306319761012908,
+      "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 13.695327642486708,
+      "core_radius_over_parent_radius": 3.0183772042345338e-06,
+      "reservoir_radius_over_parent_radius": 6.590648048811192e-05,
+      "parent_vacuum": 0.28125,
+      "parent_initial_density": 0.65625,
+      "parent_initial_curvature": 0.0227765023676067,
+      "parent_Lambda_reference_radius_squared": 12.348252398928496,
+      "protected_parent_angles": [
+        0.5154843030926696,
+        2.3353459631578986
+      ],
+      "future_conformal_distance_bound": 0.5154183966121337,
+      "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied.",
+      "cpu_seconds": 0.484375
+    }
+  },
+  "original_implementation_checks": {
+    "original_core_mass_gap": 2.630274470449834e-16,
+    "original_depletion": 0.18437476992068438,
+    "original_no_pulse_mass_endpoint": 4.1629625377284346e-20,
+    "scaled_reservoir_at_original_depletion": -4.300157728342617e-12
+  },
+  "fixed_ratio_obstruction": {
+    "reservoir_to_core_cutoff": 2,
+    "necessary_frequency_ceiling": 6221.943443749164,
+    "scope": "Above this frequency, even complete removal of available excitation throughout the annulus cannot compensate the supplied positive core. The bound permits arbitrary depletion profiles with Pi=0 and U>=Uvac; gradient energy only strengthens it."
+  },
+  "refinement": {
+    "small_compactness": {
+      "core_mass_relative": 1.2183587472236468e-12,
+      "reservoir_radius_relative": 4.093392291792952e-13,
+      "half_mass_radius_relative": 1.0355383217586223e-11
+    },
+    "frequency_2000": {
+      "core_mass_relative": 8.701928067011977e-13,
+      "reservoir_radius_relative": 2.1871393585115584e-13,
+      "half_mass_radius_relative": 8.096190384776492e-12
+    }
+  },
+  "illustrative_physical_conversion": {
+    "assumed_Lambda_per_m2": 1e-52,
+    "length_unit_metres": 5.3033008588991065e+25,
+    "core_geometric_mass_in_nominal_solar_units": 63221445846.33175,
+    "core_half_mass_radius_kpc": 3.8551201191164712,
+    "core_cutoff_radius_kpc": 34.37365517842548,
+    "reservoir_outer_radius_kpc": 827.6529595879986,
+    "interpretation": "Unit conversion of an explicitly supplied omega=1e9, zeta=.001, depletion=.5 initial preparation at the illustrative Lambda=1e-52 m^-2. No observation was fitted, and no actual galaxy or stable halo is identified.",
+    "constants": {
+      "c_m_per_s": 299792458.0,
+      "au_metres": 149597870700.0,
+      "parsec_metres": 3.085677581491367e+16,
+      "nominal_solar_GM_m3_per_s2": 1.3271244e+20
+    },
+    "constants_source": "https://www.iau.org/static/resolutions/IAU2015_English.pdf"
+  },
+  "numerical_validation_errors": [],
+  "process_cpu_seconds_including_workers": 18.96875,
+  "wall_seconds": 14.318225399998482,
+  "compute_budget_seconds": 120,
+  "budget_exhausted": false,
+  "limits": "Initial Einstein-scalar constraints and conditional asymptotic hierarchy, not a high-frequency formation/evolution or lens prediction. Frequency, weak amplitude, reservoir bump and depletion are supplied. The ratio18.330588 is specific to half-depletion and the declared bump, not a universal constant or an observed dark-matter fraction.",
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_scale_hierarchy.py": "f6a80cd7697a2ff9cc2cb58982a98e4bd4b1ff1b32fe90a6fc46d09025f2f4ea",
+    "scripts/check_nsc_atlas_scale_hierarchy.py": "1d38f2921edf8f735388a9c2b33b3ed9549f5bd8d0dfa4f2bc7dbedf601862e5",
+    "src/recursive_horizons/nsc_atlas_scalar_core.py": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8",
+    "src/recursive_horizons/nsc_atlas_core_reservoir.py": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "scripts/plot_nsc_atlas_scale_hierarchy.py": "7e1b7bac0e635bf1b446bdcdee2b94a0b4087792e69b84d15307a45968f274df",
+    "tests/test_nsc_atlas_scale_hierarchy.py": "e9e37fc75e3d657adc9a37405508dc98c8894910061a9023516c34e812885c6c"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_scale_hierarchy.py --output results/summaries/nsc-atlas-scale-hierarchy-v1.json"
+}

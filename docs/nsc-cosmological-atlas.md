@@ -18,6 +18,21 @@ starting a derivation.
 
 ## Current execution priority — 24 October 2026
 
+### A local core and its supply radius at fixed parent vacuum
+
+Active: the [scale hierarchy](nsc-atlas-scale-hierarchy.md) exposes a supply
+constraint before attempting a larger-frequency evolution. The initial
+core mass has an exact three-term inverse-frequency form. A fixed-proportion
+reservoir eventually fails the vacuum-floor capacity bound; solving its
+outer radius restores compatible initial data. The new family holds the
+parent vacuum and initial walls fixed, with a supplied coherent core and
+depletion, Pi=0 and no pulse. Thirteen finite cases and independent Hamilton
+checks fit a120 CPU-second budget. The conditional asymptotic proof yields
+Rc proportional to omega^-1 and Rd proportional to omega^-1/3.
+Next: evolve this two-scale preparation and test retained localization;
+the previous image result cannot be rescaled into its uncomputed future.
+
+
 ### Fixed source, fixed observer and the image-delay connection
 
 Complete: [invert the evolved lens](nsc-atlas-core-images.md) for one held

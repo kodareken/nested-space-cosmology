@@ -1621,6 +1621,11 @@
       "sha256": "6b1b045a9ae28b3398f3c21cfecc88aee986e1a6b7d2f9f0efdeae0688339f04"
     },
     {
+      "bytes": 163408,
+      "path": "docs/figures/nsc-atlas-scale-hierarchy.png",
+      "sha256": "6a0c320570696d7b623942bbc7cd25366c252e015e6244364dbbe3f6cde3fb7a"
+    },
+    {
       "bytes": 140231,
       "path": "docs/figures/nsc-atlas-shared-scalar-slice.png",
       "sha256": "6c4767221b8599234e9b4f4bbb39e3637a77df8298d34b1775755a4fcb64daad"
@@ -1666,9 +1671,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2505558,
+      "bytes": 2508616,
       "path": "docs/lab-snapshot.json",
-      "sha256": "78767e14303f568f96dde2ad254dbe128f0355d30954e236c35839e5429aacc8"
+      "sha256": "b6891097f5169067129cf7845ebed5ea836a11caefdafbd696afc27fbfde0ad5"
     },
     {
       "bytes": 4997,
@@ -1886,6 +1891,11 @@
       "sha256": "d488b9ada96425252da85e99145a61d520e2d547284a2d707fe98e768afa5945"
     },
     {
+      "bytes": 11202,
+      "path": "docs/nsc-atlas-scale-hierarchy.md",
+      "sha256": "842a0fbad7c13487dcb0a9524575289281dc0f1337016538214e4820be730ed3"
+    },
+    {
       "bytes": 14560,
       "path": "docs/nsc-atlas-shared-scalar-slice.md",
       "sha256": "bc059e375d82047269a6d29cabfb11384c548615df1d86580a8b6b1a79b66d0f"
@@ -1931,9 +1941,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 106772,
+      "bytes": 107639,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "b83358c4316151aae726d9facb16934b9aab91bc156deffe762d22f6e831a98a"
+      "sha256": "2412fef2486178044e6f0ab42e8c55476bb65eef206169b2e9856ab140e628e4"
     },
     {
       "bytes": 30876,
@@ -2421,9 +2431,9 @@
       "sha256": "7398cba18661886990f700660d6d11564db27ddd912bd695ecbbab3a96bf177a"
     },
     {
-      "bytes": 595037,
+      "bytes": 595965,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "ed651edb4da6e8c88d303c56c10a42ff828bb85d90bbb31b050f6cef822d6850"
+      "sha256": "6d6e34a40199021dd393631b82a32607a9a70a04df1c9f8854bca78699fbae6b"
     },
     {
       "bytes": 6705,
@@ -15311,6 +15321,11 @@
       "sha256": "1ce1ce949be809410b488f7392eecb1c3ed1838cfd890e0110b5f2361139bb38"
     },
     {
+      "bytes": 29745,
+      "path": "results/summaries/nsc-atlas-scale-hierarchy-v1.json",
+      "sha256": "4d19dad0a4f234db4e26d18006982280283cec884c9c95a086ecef741cc83a59"
+    },
+    {
       "bytes": 15941,
       "path": "results/summaries/nsc-atlas-shared-scalar-slice-v1.json",
       "sha256": "fcbd4d84edc386607e7f588beea4a679a22c83486393bba7bc3262da409ed608"
@@ -15734,6 +15749,11 @@
       "bytes": 6345,
       "path": "scripts/check_nsc_atlas_scalar_preparation.py",
       "sha256": "957bc18b1e2444563594e8d95d8700391dd4a217400d7fbe648050b61c7501d1"
+    },
+    {
+      "bytes": 8724,
+      "path": "scripts/check_nsc_atlas_scale_hierarchy.py",
+      "sha256": "1d38f2921edf8f735388a9c2b33b3ed9549f5bd8d0dfa4f2bc7dbedf601862e5"
     },
     {
       "bytes": 6371,
@@ -17326,6 +17346,11 @@
       "sha256": "5b90e083b9b3672062b23c019d65737111a9cc34cc647235f80b4e5678dda237"
     },
     {
+      "bytes": 2245,
+      "path": "scripts/plot_nsc_atlas_scale_hierarchy.py",
+      "sha256": "7e1b7bac0e635bf1b446bdcdee2b94a0b4087792e69b84d15307a45968f274df"
+    },
+    {
       "bytes": 2529,
       "path": "scripts/plot_nsc_atlas_shared_scalar_slice.py",
       "sha256": "6e35503e330d3dd0d73f277f067460b1c0aa5a334ffb6270f36870333b5e2fb5"
@@ -18444,6 +18469,11 @@
       "bytes": 11442,
       "path": "src/recursive_horizons/nsc_atlas_scalar_preparation.py",
       "sha256": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5"
+    },
+    {
+      "bytes": 9055,
+      "path": "src/recursive_horizons/nsc_atlas_scale_hierarchy.py",
+      "sha256": "f6a80cd7697a2ff9cc2cb58982a98e4bd4b1ff1b32fe90a6fc46d09025f2f4ea"
     },
     {
       "bytes": 19736,
@@ -21136,6 +21166,11 @@
       "sha256": "291ce46db838898550a7a428502967fd79d242bb6e1173a7220955ccf4f92f4d"
     },
     {
+      "bytes": 2975,
+      "path": "tests/test_nsc_atlas_scale_hierarchy.py",
+      "sha256": "e9e37fc75e3d657adc9a37405508dc98c8894910061a9023516c34e812885c6c"
+    },
+    {
       "bytes": 6906,
       "path": "tests/test_nsc_atlas_shared_scalar_slice.py",
       "sha256": "5d0b93f3a318e7a54d1058551e945bfe37cbe1b0369a80429c0b14fd73a54f56"
@@ -23051,7 +23086,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "78767e14303f568f96dde2ad254dbe128f0355d30954e236c35839e5429aacc8",
+  "lab_snapshot_sha256": "b6891097f5169067129cf7845ebed5ea836a11caefdafbd696afc27fbfde0ad5",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-24.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

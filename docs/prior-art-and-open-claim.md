@@ -1,5 +1,20 @@
 # Prior art and admission of new research
 
+## Inherited vacuum and a two-scale supply construction, 24 October 2026
+
+The [hierarchy owner](nsc-atlas-scale-hierarchy.md) reuses the existing
+Schrodinger--Newton core, canonical scalar potential and spherical
+Einstein/Hayward constraints. The missing connection is conservation when
+the local core shrinks relative to a fixed-vacuum parent. Derive the exact
+core mass polynomial, a shape-independent capacity bound and a solved
+reservoir radius. Hold regional fluxes, mixing, charge and tension fixed;
+vary declared frequency and core amplitude. Supply a C4 reservoir bump,
+depletion and zero initial scalar momentum. Thirteen cases and controls
+use six processes within120 CPU seconds; no coupled-evolution grid is run.
+Original-solver agreement, proper-distance Hamilton geometry and tolerance
+refinement check the result. A failed bound redirects the preparation;
+no failure changes the existing omega2000 diffuse lens.
+
 ## Fixed-observer images and delay-frequency closure, 24 October 2026
 
 The [image owner](nsc-atlas-core-images.md) reuses exact lens maps, null
