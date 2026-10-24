@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [fixed-observer owner](nsc-atlas-core-images.md) uses
+nsc_atlas_core_images.py: run_images batches angular patches and nearby
+source ages through the unchanged stream_rays solver; invert_patch checks
+plain and curvature-slope inverses; reduce_run checks the exact delay/redshift
+identity. check_nsc_atlas_core_images.py authenticates source replay, compares
+three resolutions and optical time steps, and eliminates the dimensional
+unit between the image delay and inherited parent vacuum.
+
 The [optical owner](nsc-atlas-core-optics.md) uses nsc_atlas_core_optics.py:
 stream_rays advances the existing field solver unchanged in blocks;
 ray_rates carries canonical nonradial photons, independent normal energy

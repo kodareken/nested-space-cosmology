@@ -43,7 +43,7 @@ general lens equations. Existing real-scalar optical research, including
 
 The source and receiver are held at areal radius Rs=.6. Their proper clocks
 are zero on the initial slice. Put the source at azimuth zero and the receiver
-at pi-b, with b=.0002 radians. Emit the central pulse at source proper age2.8.
+at pi-b, with b=.0002 radians. Emit the central pulse at source proper age 2.8.
 
 Let Phi(psi,tau_e) be the unwrapped positive-orientation landing angle from
 the old optical calculation. Two branches solve
@@ -78,11 +78,18 @@ and boosts are evaluated at each image's own arrival event.
 
 ## An exact connection between image geometry, delay and frequency
 
-For a smooth family of null geodesics, variation of the null action gives
-the endpoint identity
+For a smooth family of affinely parametrized null geodesics, let J be
+the connecting vector with [k,J]=0. Then the geodesic equation and k^2=0 give
 
 \[
-p_a\delta x_o^a-p_a\delta x_e^a=0.
+\nabla_k(k\cdot J)=k\cdot\nabla_J k
+=\frac{1}{2}\nabla_J(k^2)=0.
+\]
+
+Thus the endpoint contraction is conserved, giving the null-action identity
+
+\[
+(p_a\delta x^a)_o-(p_a\delta x^a)_e=0.
 \]
 
 At the held emitter, with fixed spatial position and emitted energy one,
@@ -119,7 +126,7 @@ and geometry, not nesting uniquely.
 
 The calculation checks the first identity with independently interpolated
 arrival times and landing angles. It checks the fixed-worldline derivative
-by emitting at proper ages2.8 plus/minus .0002 and .0001, solving the inverse
+by emitting at proper ages 2.8 plus/minus .0002 and .0001, solving the inverse
 again at each age, and comparing Richardson-combined delay differences with
 the transported frequencies. Angles, delays and frequencies cannot be
 adjusted separately without violating this relation.
@@ -169,6 +176,37 @@ not selected a scalar mass or established that an observed lens is this
 benchmark. A narrow-band common pulse and a sufficiently small, transparent
 source are explicit measurement assumptions.
 
+## The parent-vacuum connection
+
+The protected parent of the same solution has inherited vacuum
+Lambda_hat=kappa U_vac=9/32 and reference radius Lref_hat=6.62607707610.
+The earlier result Lambda Lref^2=12.34825239893 therefore remains fixed.
+A consistent dimensional embedding implies
+
+\[
+\Lambda_{\rm phys}(c\Delta t)^2
+=\widehat\Lambda\,\delta^2.
+\]
+
+This relates a local image delay to the inherited vacuum without an adjustable
+unit. It follows by eliminating L_unit between Lambda_phys=Lambda_hat/L_unit^2
+and Delta t=L_unit delta/c. It is conditional on the supplied action, cloud
+and experiment; it is not a newly selected numerical cosmological constant.
+Changing the initial cloud or geometry changes delta and defines another
+candidate, rather than another unit choice for this one. The proposed
+identification with our universe would have to pass both sides together.
+
+## Next observational connection
+
+Use the joint vacuum-delay product, image angles and frequency/fluence
+ratios to constrain a family of physical preparations and inherited scalar
+couplings. The present frequency 2000 member is one conditional example.
+A physical comparison must supply source/receiver motion and identify
+which measurement calibrates a scale and which remains a test. Altering a
+coupling or cloud requires recomputing its geometry and observables; a unit
+conversion cannot accomplish that. This is the next scale-selection question,
+rather than more refinement of a resolved finite image pair.
+
 ## Reproduction and current state
 
 ```powershell
@@ -176,9 +214,49 @@ python scripts/run_python.py scripts/check_nsc_atlas_core_images.py --output res
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_core_images.py
 ```
 
-The inverse implementation and independent flat/closed-FLRW tests are in
-place. The four-run calculation is active; no image numbers or successful
-convergence are claimed before its checks finish. Numerical interpolation,
-near-caustic conditioning and small delay differences are the principal
-failure risks. Completed evidence determines whether the two-image result
-is resolved or requires a specifically identified correction.
+The completed [compact result](../results/summaries/nsc-atlas-core-images-v1.json)
+authenticates all four field replays against the retained evolution. The
+initial campaign used about 2303 process-CPU seconds and 1340 elapsed seconds,
+within budget. Subsequent cache-only postprocessing retains the original
+worker CPU times and records its own elapsed time. Six image/inverse tests
+pass; the unchanged optical, evolution and reservoir tests also pass.
+
+## Calculated pair and joint scale relation
+
+| Quantity | Fine result | Numerical comparison envelope |
+| --- | ---: | ---: |
+| Receiving-sky image separation | 0.682670 degrees | 0.000493 degrees |
+| Negative-minus-positive proper arrival delay | 1.44125317e-6 atlas units | 9.54e-10 atlas units |
+| Negative/positive received frequency | 1.00000922695 | 8.52e-9 |
+| Negative/positive pulse fluence | 1.401958 | 0.006483 |
+| Negative/positive luminosity flux | 1.401971 | 0.006483 |
+| Lambda_vac*(c*Delta t)^2 | 5.84215508e-13 | 7.74e-16 |
+
+The two selected images have positive and negative parity respectively.
+Their ray directions are approximately +.373211 and -.309459 degrees.
+The brighter negative-parity image arrives later. These are finite,
+conditional predictions for this observer protocol, not an astronomical
+measurement or a uniqueness result for the nested interpretation.
+
+The rotation/Jacobi discrepancy decreases from 5.65e-4 to 3.35e-5 to 1.92e-6.
+The fine independent angular-root difference is below1.31e-10 radians;
+nested angular sampling moves roots by less than 7.05e-10 radians. The
+parallel Jacobi discrepancy decreases to 5.55e-6. Numerical envelopes use
+twice the medium/fine or optical-time change, with the independent ray-map
+beam area also included for flux/fluence ratios. They are comparison
+estimates, not rigorous interval bounds or physical preparation uncertainty.
+
+The direct fine delay derivative is -9.23618e-6 per source proper time;
+the inverse-frequency prediction is -9.22076e-6. Their 1.55e-8 difference
+is inside the 1.67e-7 derivative comparison envelope. This derivative check
+is not monotone between the middle and fine grids: the middle residual is
+smaller. It subtracts nearby arrival differences, whereas the frequency
+transport is evaluated directly. Report that finite sensitivity rather
+than promoting it to an asymptotic convergence theorem. The exact endpoint
+identity remains the independent mathematical constraint.
+
+Grok independently checked the held-frame directions, reflection,
+endpoint variation, parity and pulse/continuous-source energy factors.
+The source files are unchanged. The completed finite image pair now feeds
+the scale-selection question above; no further grid campaign is needed
+for the claims and uncertainties stated here.

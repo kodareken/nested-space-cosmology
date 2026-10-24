@@ -20,15 +20,17 @@ starting a derivation.
 
 ### Fixed source, fixed observer and the image-delay connection
 
-Active: [invert the evolved lens](nsc-atlas-core-images.md) for one held
+Complete: [invert the evolved lens](nsc-atlas-core-images.md) for one held
 receiving worldline. Two opposite-orientation branches from the same pulse
 supply image positions, relative proper arrival times and frequency/fluence
 ratios. The null endpoint variation connects delay drift to the frequency
 ratio without assuming a static lens. Three resolutions and an optical-time
-control reuse the unchanged source within4500 CPU seconds. The independent
-flat/closed-FLRW inverse checks pass; the batched physical runs are active.
-Next: use the resolved dimensionless correlations to specify calibration
-versus withheld observables. Physical cloud/population selection and
+control reuse the unchanged source within4500 CPU seconds. All four replays match the retained source exactly. The resolved pair has
+separation .682670 +/- .000493 degrees and pulse-fluence ratio1.401958 +/-
+.006483. The same parent gives Lambda*(c*Delta t)^2=(5.8422 +/- .0078)e-13.
+The finite delay-derivative sensitivity is recorded explicitly.
+Next: constrain physical scale and preparation/coupling families with these
+joint correlations, specifying calibration versus withheld observables. Physical cloud/population selection and
 nonspherical persistence remain open.
 
 

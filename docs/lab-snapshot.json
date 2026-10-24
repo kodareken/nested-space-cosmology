@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a8b2e4a74d616e102b55339d5c469ed6feb76344",
+  "current_receipt_commit_parent": "ffb3634cb7055449f4758077b81bc1197f3f786e",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 23848,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 24273,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "8df876a13ffe6304dc19f29cf970744b053e55690b42af0d55ac6fac892b3116"
+      "sha256": "e4e9b81e11de0d19557bb3082f75a7450852ab176490ce9f68cdb994b9ff5682"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 281635,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 282129,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "9f6d83f94c828d534b9cc9a16b521eac7f17e4caa5c875b61e796afbb3977dfd"
+      "sha256": "e1d76267812c1d3f7f25162ae2a7b78411d5b875a3a764ac4470021588cda287"
     },
     {
-      "bytes": 125078,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 126024,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "ede44c08e23a1f4d2eb3acbac74cd41e9d6fd28fa87b1a6339543462baf0d4c6"
+      "sha256": "20f6662c593497a7a72751b3ed037898faaf9ffd81a04ed7ef4680ca00f0cef0"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 455451,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 456384,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2f6d4890fac7946a9f8261613f18ddd1d004e18413574c16cf8e68551a5c2c35"
+      "sha256": "f36697e3b813313867414288e5901021217b502738fa592e0c8fa940af9d2b90"
     },
     {
       "bytes": 173938,
@@ -10347,6 +10347,14 @@
       "path": "docs/figures/nsc-atlas-core-evolution.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "0c2540dda03c5da7f57af9b1d9659ace779285fc8846385f2aaa01de55f248b3"
+    },
+    {
+      "bytes": 221445,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "path": "docs/figures/nsc-atlas-core-images.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e4e51ceb9a2c06f4691429f4f20a59c45d430474604173b095358fff135d0666"
     },
     {
       "bytes": 248535,
@@ -10590,12 +10598,12 @@
       "sha256": "c46b7e23e8f10c74ed57d34b4dd409813136160c9d570baa5524356ffce37fc3"
     },
     {
-      "bytes": 8058,
+      "bytes": 12090,
       "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "a8b2e4a74d616e102b55339d5c469ed6feb76344",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "docs/nsc-atlas-core-images.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "aa370e566ba1edfadb592ec793396e48e6467a7ceba9f8abeb788c3fde84a3cc"
+      "sha256": "c9b92da9e4af785d650d70484038a9e3c90fb89b2466e2698b2ee5b5072fc681"
     },
     {
       "bytes": 14792,
@@ -10816,15 +10824,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 106527,
+      "bytes": 106772,
       "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "a8b2e4a74d616e102b55339d5c469ed6feb76344",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "dba2d944a4824ef31622c58a4c050a931e924f8c6cbe82c76eeca4804cfd37f5"
+      "sha256": "b83358c4316151aae726d9facb16934b9aab91bc156deffe762d22f6e831a98a"
     },
     {
       "bytes": 30876,
@@ -11806,20 +11814,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 222278,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 223069,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "da7ceacd9c093d8f2c1ab37658137775c6bedd96ed9c1f747abd9f77df2419ff"
+      "sha256": "1387a34237a2fc1d2cbdaa6533f8186142e118d446ce176b15a0d7dab6b47c49"
     },
     {
-      "bytes": 40371,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 40671,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "ed03c7a43f12d68e0954a6c3128d61719f9556f629e8e919dd726d85eb038341"
+      "sha256": "85ff81cc8398c1300d52981dc2fff46238801e142574ed6b032b2156e776b931"
     },
     {
       "bytes": 18356,
@@ -11888,20 +11896,20 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 29752,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 30065,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "48f6abe36dbb0e94566dc73a2f4e83f4447194e7e00dbf6a026389be5f406fd4"
+      "sha256": "9b9b765e8b6944f61730e7ee8e7b16b494e6b202e3ebff13b464f999c2311edf"
     },
     {
       "bytes": 3206,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1610a7bd61af8256c1d229da80025ed4d0574b05bf5c7a094e4522ff3303b32b"
+      "sha256": "073dfd50e79882700b7869e81da5a30fd301360d94fb8796f987e0d38adc7157"
     },
     {
       "bytes": 43377,
@@ -11921,27 +11929,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "8bc6c6262efe018a72a3b61c6ab9905d022b557a0f1bde459b09cb454bf4adbd"
+      "sha256": "be3ff74e0b37940857d2d07b022cb6c9cad35afa268f02a7fbb0051d912326c1"
     },
     {
-      "bytes": 365820,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 372854,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "c995bfdf0a5bf7e9890c80a7c6894206b060e7b39629db801dade0140fa91252"
+      "sha256": "933dfc9e8e4fe2ae7ff38628804d7fef37172fc0201d2029ca5f45180ca1f34c"
     },
     {
-      "bytes": 9334348,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 9623689,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "034243561e8c6453b11893e39cd2228b350455d471703f8f536b00061111f144"
+      "sha256": "2e3a3a3bb5a4feab7bde7b056e2b5078b9a7c9a39a6324a822ae428d90de120a"
     },
     {
       "bytes": 3283,
@@ -30087,6 +30095,14 @@
       "sha256": "b3f7eb0beab13bbb2cf4498a040455116506c1df10e5c4c935d49d5bf6c06690"
     },
     {
+      "bytes": 13179,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "path": "results/summaries/nsc-atlas-core-images-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e577e370a1ad0247b2dfc42a685207b5c968868cdae3edc5c7405c36a5f1163b"
+    },
+    {
       "bytes": 50931,
       "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
       "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
@@ -31103,12 +31119,12 @@
       "sha256": "754b8715c20e44e69147509e0f037031a0bf99597df5008e80deb1ee8993fca3"
     },
     {
-      "bytes": 6864,
+      "bytes": 9982,
       "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "a8b2e4a74d616e102b55339d5c469ed6feb76344",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "scripts/check_nsc_atlas_core_images.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "baa9cbc7f3ca48fbf91711cfe93cc2d6c5f9d0bf6027045fb0914877fd6e1a65"
+      "sha256": "5dbba331d67640e175dc514dd73ea8d841fbea21dcf2b5cd5db10626f1fe12a6"
     },
     {
       "bytes": 13385,
@@ -34062,6 +34078,14 @@
       "path": "scripts/plot_nsc_atlas_core_evolution.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "128a98477561b0c8e3b31825da94a1d2daf09ad2a2be1fabf4c9aad00bff572e"
+    },
+    {
+      "bytes": 3736,
+      "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
+      "path": "scripts/plot_nsc_atlas_core_images.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "bd91e606bd7b22f2878250814e577dde7747e12154e4470bf8ebaf1b036ff27c"
     },
     {
       "bytes": 3717,
@@ -39122,12 +39146,12 @@
       "sha256": "acf84dcc968d483fbe7a36670837e8e7e92f82f8a5027bfc706c40383ed124ee"
     },
     {
-      "bytes": 3402,
+      "bytes": 4536,
       "change": "Connect the evolved lens to fixed-observer images and delay-frequency relations.",
-      "changed_from_commit": "a8b2e4a74d616e102b55339d5c469ed6feb76344",
+      "changed_from_commit": "ffb3634cb7055449f4758077b81bc1197f3f786e",
       "path": "tests/test_nsc_atlas_core_images.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "679fb89b59a55314e67d4890514adf4725a4d61dc96e6905693e812b18613fdf"
+      "sha256": "b4444e8ee463fa3b98d1f001e7189dc56961fbab3766eec1eb0d0177c5cb26f2"
     },
     {
       "bytes": 3892,

@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 23 October 2026
+Working research manuscript, 24 October 2026
 
 ## Abstract
 
@@ -59,7 +59,9 @@ scalar/gravity evolution now develops a compact, breathing concentration
 from a supplied diffuse nonlinear cloud and predicts a received clock
 signal after contraction, with independent flux and photon checks.
 Nonradial rays and curvature-based Jacobi transport then predict light
-bending and anisotropic beam focusing on that same evolution.
+bending and anisotropic beam focusing on that same evolution. A fixed-worldline
+inverse then links multiple pulse arrivals, image directions and frequencies;
+their delay shares a dimensionless scale relation with the parent vacuum.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -5703,6 +5705,163 @@ bind these optical numbers to the same source that produced concentration
 and the radial clock signal. The inherited law has not thereby selected
 a cloud population, a physical SI scale or an observed dark-matter fraction.
 
+### 10.38. Two paths, one receiving clock
+
+A lens map becomes an image prediction when the emitting and receiving
+worldlines are fixed. Keep the scalar-parent solution of the preceding
+sections. Hold both worldlines at areal radius $R_s=.6$, put the emitter at
+azimuth zero and the receiver at $\pi-b$, with $b=.0002$. A pulse leaves at
+emitter proper age $2.8$. If $\Phi(\psi,\tau_e)$ is the positive-orientation
+landing map, the two selected branches satisfy
+
+$$
+\Phi(\psi_+,\tau_e)=\pi-b,\qquad
+\Phi(\psi_-,\tau_e)=\pi+b.
+$$
+
+Reflection sends the second ray to $-(\pi+b)$, which is the same receiving
+worldline modulo $2\pi$. The images arrive at different proper times on
+that one observer's clock. This improves on a fixed-launch-angle comparison,
+where the landing observer itself can change. The two selected angular
+patches do not constitute a census of all possible images.
+
+A null geodesic's endpoint variation relates these image measurements.
+Normalize its emitted energy to one. The null action gives
+$p_a\delta x_o^a-p_a\delta x_e^a=0$. The emitter is spatially fixed;
+the held receiving sphere contributes the local energy and conserved
+angular momentum $L$. Hence
+
+$$
+d\tau_o=\frac{d\tau_e}{\nu_o}
++\frac{L}{\nu_o}\,d\varphi_o.
+$$
+
+This equation does not assume a static lens or a conserved photon energy.
+It uses the actual evolving metric and endpoint observer tetrads. At a
+fixed receiving worldline, each image obeys $d\tau_i/d\tau_e=1/\nu_i$.
+For the relative delay $\Delta=\tau_--\tau_+$,
+
+$$
+\frac{d\Delta}{d\tau_e}=\frac{1}{\nu_-}-\frac{1}{\nu_+},\qquad
+\frac{d\Delta}{d\tau_+}=\frac{\nu_+}{\nu_-}-1.
+$$
+
+The second expression requires only the receiver's clock and the ratio
+of frequencies of matched source features. Image delays and frequency
+shifts are linked consequences of one geometry. The general endpoint and
+lens-map ideas are established mathematics; their evaluated connection
+to the forming source in this atlas is the present result.
+
+Conserved angular momentum also fixes the received image directions:
+$\sin|\xi_i|=\sin\psi_i/\nu_i$. Choose positive sky direction opposite
+increasing azimuth, so that $\xi_+>0$ and $\xi_-<0$. For a common,
+infinitesimal isotropic pulse, its observed bolometric fluence is
+
+$$
+\mathcal F_i=\frac{E_e}{4\pi}
+\frac{\nu_i}{|D_{\perp,i}D_{\parallel,i}|}.
+$$
+
+A continuous source instead gives a flux proportional to
+$\nu_i^2/|D_{\perp,i}D_{\parallel,i}|$, because reception rate adds a
+second frequency factor. The signed determinant retains image parity.
+These relations assume transparent geometric optics and a detector
+perpendicular to the arriving ray. Finite source size, duration and
+wavelength require separate modeling.
+
+The [fixed-worldline derivation](../docs/nsc-atlas-core-images.md) gives
+its endpoint proof, angular inverse and independent checks. Source ages
+$2.8\pm.0002$ and $2.8\pm.0001$ test the delay derivative; curvature
+and angular resampling test the two image inverses. All source evolution
+files remain unchanged.
+
+The completed pair is resolved at three grid spacings, with an additional
+optical-time comparison. Its conditional observables are:
+
+| Observable | Calculated value | Numerical comparison range |
+| --- | ---: | ---: |
+| Image separation | 0.682670 degrees | 0.000493 degrees |
+| Relative proper arrival delay | 1.44125317e-6 atlas units | 9.54e-10 atlas units |
+| Negative/positive frequency | 1.00000922695 | 8.52e-9 |
+| Negative/positive pulse fluence | 1.401958 | 0.006483 |
+
+The negative-parity image is brighter and arrives later. The rotation/Jacobi
+error decreases from $5.65\times10^{-4}$ to $3.35\times10^{-5}$ to
+$1.92\times10^{-6}$. The angular inverse and its curvature-based check
+agree to better than $1.31\times10^{-10}$ radians on the fine patches.
+All four field replays match the previously retained solutions exactly.
+The [compact evidence](../results/summaries/nsc-atlas-core-images-v1.json)
+records the fixed inputs, individual images and numerical comparisons.
+
+The directly differentiated delay agrees with the inverse-frequency
+identity to $1.55\times10^{-8}$ per source proper time, within its
+$1.67\times10^{-7}$ numerical comparison envelope. That small derivative
+residual is not monotone between the middle and fine grids. The result
+is a finite checked prediction with numerical ranges, not a rigorous
+interval enclosure or an asymptotic stability statement.
+
+![One receiving worldline sees two images from the evolved scalar concentration](../docs/figures/nsc-atlas-core-images.png)
+
+*Figure 23. The two angular roots reach one receiver after reflection of the
+negative branch. Their sky positions, pulse fluences and arrival times are
+computed from the unchanged scalar-parent evolution. Two independent
+calculations check the delay-frequency identity. The final panel links
+the resolved delay to the inherited parent vacuum through a scale-free
+product; it does not identify this benchmark with an observed lens.*
+
+### 10.39. A local image delay and the parent's vacuum must share one scale
+
+The local concentration belongs to the same sourced parent whose protected
+annulus retains the inherited vacuum. For this declared action and flux,
+the vacuum and reference radius in atlas units are
+
+$$
+\widehat\Lambda=\kappa U_{\rm vac}=9/32,\qquad
+\widehat L_{\rm ref}=6.62607707610.
+$$
+
+Thus the earlier conditional result
+$\Lambda L_{\rm ref}^2=12.34825239893$ still applies.
+
+Let $L_{\rm unit}$ be the physical length assigned to one atlas unit and
+let $\delta$ be the computed dimensionless image delay. Any consistent
+dimensional embedding must obey
+
+$$
+\Lambda_{\rm phys}=\frac{\widehat\Lambda}{L_{\rm unit}^2},\qquad
+\Delta t=\frac{L_{\rm unit}}{c}\,\delta,
+$$
+
+and therefore
+
+$$
+\Lambda_{\rm phys}(c\Delta t)^2=\widehat\Lambda\,\delta^2.
+$$
+
+For the computed pair,
+
+$$
+\Lambda_{\rm phys}(c\Delta t)^2
+=(5.8422\pm.0078)\times10^{-13}.
+$$
+
+The quoted range propagates the numerical delay envelope while holding
+the declared parent vacuum fixed. It does not include uncertainty in a
+physical interpretation or an unspecified preparation law.
+
+The free unit cancels. Calibrating a physical scale with an image delay
+leaves the vacuum value, angular image separation and frequency/fluence
+ratios as linked tests. Matching each by an independent scale choice
+would break this connection. This does not select the physical scale or
+prove that the inherited vacuum equals the value inferred from cosmology.
+It creates a precise joint requirement on that proposed identification.
+
+The cloud, emitting age and receiver position remain specified inputs.
+Population selection and nonspherical persistence remain necessary for an
+astronomical application. The atlas now provides the mathematical route
+from inherited vacuum, through formed structure, to a fixed observer's
+measurements without an independently fitted lens mass.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -5752,7 +5911,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 23. The isolated reference in joined causal charts. Horizons are
+*Figure 24. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -6758,7 +6917,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 24. Saved finite-window comparisons. A: the previous and current
+*Figure 25. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -6854,7 +7013,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 25. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 26. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -7639,7 +7798,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 26. Research dependencies, distinct from spacetime causal arrows.
+*Figure 27. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

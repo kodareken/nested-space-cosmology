@@ -1,0 +1,299 @@
+{
+  "schema": "nsc-atlas-core-images-v1",
+  "result": "Two resolved images of the same emitted pulse on one held receiver in the unchanged evolved scalar parent.",
+  "protocol": {
+    "screen_radius": 0.6,
+    "source_proper_age": 2.8,
+    "receiver_azimuth": "pi - offset",
+    "offset": 0.0002,
+    "opposite_orientation_target": "pi + offset",
+    "claim": "Two resolved branches in declared patches; not an exhaustive image census."
+  },
+  "central_pair": {
+    "emission_proper_age": 2.8,
+    "image_separation": 0.011914834979266351,
+    "delay_negative_minus_positive": 1.4412531683660745e-06,
+    "frequency_ratio_negative_over_positive": 1.0000092269518963,
+    "fluence_ratio_negative_over_positive": 1.4019578063047244,
+    "luminosity_flux_ratio_negative_over_positive": 1.401970742101964,
+    "predicted_delay_drift": -9.220757097305743e-06
+  },
+  "numerical_comparison_envelope": {
+    "image_separation": 8.597127643308194e-06,
+    "delay_negative_minus_positive": 9.537526324265855e-10,
+    "frequency_ratio_negative_over_positive": 8.51882031582818e-09,
+    "fluence_ratio_negative_over_positive": 0.006482409202283712,
+    "luminosity_flux_ratio_negative_over_positive": 0.006482474938370952,
+    "predicted_delay_drift": 8.51265946621993e-09
+  },
+  "parent_vacuum_connection": {
+    "vacuum_Lambda_in_atlas_units": 0.28125,
+    "reference_length_in_atlas_units": 6.626077076099586,
+    "vacuum_Lambda_reference_length_squared": 12.348252398928496,
+    "Lambda_c_delay_squared": 5.842155080602261e-13,
+    "numerical_envelope": 7.734677767673798e-16,
+    "delay_over_reference_length": 2.1751228544634777e-07,
+    "receiver_clock_delay_drift": -9.22686676041451e-06,
+    "interpretation": "Lambda is the specified inherited parent vacuum, not a newly selected observed cosmological constant. The same dimensional embedding implies Lambda_phys*(c*delay_seconds)^2 equals this number. A delay-based scale calibration leaves the parent vacuum, angles and ratios as linked tests; they cannot be independently rescaled."
+  },
+  "central_images": [
+    {
+      "branch": 1,
+      "emission_proper_age": 2.8,
+      "target_unwrapped_angle": 3.141392653589793,
+      "launch_angle": 0.006518072630342009,
+      "received_sky_angle": 0.00651375656159702,
+      "arrival_proper_age": 3.995099710131633,
+      "received_frequency": 1.00066259885538,
+      "jacobi_perpendicular": 0.01840923401246738,
+      "jacobi_parallel": 0.27212427255164506,
+      "signed_beam_area": 0.005009599413914949,
+      "parity": 1,
+      "fluence_weight": 199.74902505695013,
+      "luminosity_flux_weight": 199.88137853231615,
+      "angular_bracket": [
+        0.006437779515298096,
+        0.0065977795152980965
+      ],
+      "independent_root_gap": 3.998439600250148e-12,
+      "landing_residual": 0.0,
+      "endpoint_variation_gap": 2.3391266247736742e-08,
+      "rotation_jacobi_gap": -1.2464647018359254e-06,
+      "parallel_jacobi_gap": 3.784185893085379e-06,
+      "frequency_transport_gap": -1.4970681578996262e-10,
+      "nested_angular_gaps": {
+        "launch_angle": 8.60819228398757e-12,
+        "arrival_proper_age": 7.016609515630989e-14,
+        "received_frequency": -9.348077867343818e-14,
+        "fluence_weight": 1.8578424942461425e-05,
+        "received_sky_angle": 8.60310000322384e-12
+      }
+    },
+    {
+      "branch": -1,
+      "emission_proper_age": 2.8,
+      "target_unwrapped_angle": 3.141792653589793,
+      "launch_angle": 0.005404707069878607,
+      "received_sky_angle": -0.0054010784176693315,
+      "arrival_proper_age": 3.995101151384801,
+      "received_frequency": 1.000671831921044,
+      "jacobi_perpendicular": -0.022204882404051385,
+      "jacobi_parallel": 0.1609250252980078,
+      "signed_beam_area": -0.0035733212616805973,
+      "parity": -1,
+      "fluence_weight": 280.03970498034926,
+      "luminosity_flux_weight": 280.22784459331484,
+      "angular_bracket": [
+        0.005324164054473755,
+        0.005484164054473755
+      ],
+      "independent_root_gap": 1.2743760907651946e-11,
+      "landing_residual": 0.0,
+      "endpoint_variation_gap": 1.7615263952033312e-08,
+      "rotation_jacobi_gap": -1.9060229899253711e-06,
+      "parallel_jacobi_gap": 3.951414158875899e-06,
+      "frequency_transport_gap": -1.735214005965521e-10,
+      "nested_angular_gaps": {
+        "launch_angle": 4.056625521609014e-11,
+        "arrival_proper_age": 1.2256862191861728e-13,
+        "received_frequency": -4.847233725513433e-13,
+        "fluence_weight": -0.00011608076158609038,
+        "received_sky_angle": -4.054163515315734e-11
+      }
+    }
+  ],
+  "refinement": {
+    "coarse": {
+      "emission_proper_age": 2.8,
+      "image_separation": 0.01189364335789226,
+      "delay_negative_minus_positive": 1.4390195923752458e-06,
+      "frequency_ratio_negative_over_positive": 1.0000093416872218,
+      "fluence_ratio_negative_over_positive": 1.3496095303674336,
+      "luminosity_flux_ratio_negative_over_positive": 1.3496221379975375,
+      "predicted_delay_drift": -9.33541587799791e-06
+    },
+    "medium": {
+      "emission_proper_age": 2.8,
+      "image_separation": 0.011913398960771718,
+      "delay_negative_minus_positive": 1.4411059243712998e-06,
+      "frequency_ratio_negative_over_positive": 1.0000092248345236,
+      "fluence_ratio_negative_over_positive": 1.3987166017035826,
+      "luminosity_flux_ratio_negative_over_positive": 1.3987295046327786,
+      "predicted_delay_drift": -9.218641134234318e-06
+    },
+    "fine": {
+      "emission_proper_age": 2.8,
+      "image_separation": 0.011914834979266351,
+      "delay_negative_minus_positive": 1.4412531683660745e-06,
+      "frequency_ratio_negative_over_positive": 1.0000092269518963,
+      "fluence_ratio_negative_over_positive": 1.4019578063047244,
+      "luminosity_flux_ratio_negative_over_positive": 1.401970742101964,
+      "predicted_delay_drift": -9.220757097305743e-06
+    },
+    "optical_time_control": {
+      "emission_proper_age": 2.8,
+      "image_separation": 0.011909100396950064,
+      "delay_negative_minus_positive": 1.4406290480550865e-06,
+      "frequency_ratio_negative_over_positive": 1.0000092290939337,
+      "fluence_ratio_negative_over_positive": 1.3993348172831732,
+      "luminosity_flux_ratio_negative_over_positive": 1.3993477318756469,
+      "predicted_delay_drift": -9.222897463967428e-06
+    }
+  },
+  "independent_checks": {
+    "coarse": {
+      "independent_root_gap": 5.118551246914571e-09,
+      "landing_residual": 0.0,
+      "endpoint_variation_gap": 9.560051623437333e-07,
+      "rotation_jacobi_gap": 0.0005645890578331557,
+      "parallel_jacobi_gap": 0.0002546238371301801,
+      "frequency_transport_gap": 3.024592787052847e-08,
+      "maximum_nested_root_gap": 1.8037050863312087e-09,
+      "delay_drift": {
+        "delay_derivative": -8.968970381199407e-06,
+        "predicted": -9.33541587799791e-06,
+        "identity_gap": 3.6644549679850333e-07,
+        "derivative_refinement_gap": -2.0711210524382295e-08
+      }
+    },
+    "medium": {
+      "independent_root_gap": 1.1413192804038408e-09,
+      "landing_residual": 0.0,
+      "endpoint_variation_gap": 1.8182965643115216e-07,
+      "rotation_jacobi_gap": 3.3481540819123995e-05,
+      "parallel_jacobi_gap": 4.8108929708939874e-05,
+      "frequency_transport_gap": 6.247530583667165e-10,
+      "maximum_nested_root_gap": 7.763318278161679e-10,
+      "delay_drift": {
+        "delay_derivative": -9.221791478590072e-06,
+        "predicted": -9.218641134234318e-06,
+        "identity_gap": -3.1503443557543694e-09,
+        "derivative_refinement_gap": -4.034550471487819e-09
+      }
+    },
+    "fine": {
+      "independent_root_gap": 1.3034775515896602e-10,
+      "landing_residual": 0.0,
+      "endpoint_variation_gap": 8.481880441719384e-08,
+      "rotation_jacobi_gap": 1.918015931065553e-06,
+      "parallel_jacobi_gap": 5.546938181166805e-06,
+      "frequency_transport_gap": 2.382794166033952e-10,
+      "maximum_nested_root_gap": 7.040903303098811e-10,
+      "delay_drift": {
+        "delay_derivative": -9.236175158022775e-06,
+        "predicted": -9.220757097305743e-06,
+        "identity_gap": -1.541806071703178e-08,
+        "derivative_refinement_gap": 2.901012763345534e-09,
+        "derivative_comparison_envelope": 1.6613451355359038e-07
+      }
+    },
+    "optical_time_control": {
+      "independent_root_gap": 1.9908901402465595e-09,
+      "landing_residual": 0.0,
+      "endpoint_variation_gap": 3.247278001236673e-07,
+      "rotation_jacobi_gap": 3.33789581605827e-05,
+      "parallel_jacobi_gap": 8.809600469836254e-05,
+      "frequency_transport_gap": 1.9129431135133746e-09,
+      "maximum_nested_root_gap": 9.917497404907105e-10,
+      "delay_drift": {
+        "delay_derivative": -9.138724221813277e-06,
+        "predicted": -9.222897463967428e-06,
+        "identity_gap": 8.417324215415078e-08,
+        "derivative_refinement_gap": -1.3026246747926962e-08
+      }
+    }
+  },
+  "source_replay_exact_matches": {
+    "coarse": true,
+    "medium": true,
+    "fine": true,
+    "optical_time_control": true
+  },
+  "runs": {
+    "coarse": {
+      "config": {
+        "kind": "diffuse",
+        "spacing": 0.001,
+        "step": 0.0001,
+        "block_steps": 1,
+        "outer": 4.0,
+        "screen": 0.6,
+        "prefix": 2.5,
+        "end": 5.0
+      },
+      "final_field_sha256": "74ba75d33ff6b4de27f7a66ec6e3c2ca648f7cbe01f5029987ce70bedd4294a3",
+      "cpu_seconds": 142.8125
+    },
+    "medium": {
+      "config": {
+        "kind": "diffuse",
+        "spacing": 0.0005,
+        "step": 5e-05,
+        "block_steps": 1,
+        "outer": 4.0,
+        "screen": 0.6,
+        "prefix": 2.5,
+        "end": 5.0
+      },
+      "final_field_sha256": "e6dc16380f087790ee5db6d24efd4262e6343742d6c620b609758f628f12352b",
+      "cpu_seconds": 432.328125
+    },
+    "fine": {
+      "config": {
+        "kind": "diffuse",
+        "spacing": 0.00025,
+        "step": 2.5e-05,
+        "block_steps": 1,
+        "outer": 4.0,
+        "screen": 0.6,
+        "prefix": 2.5,
+        "end": 5.0
+      },
+      "final_field_sha256": "de41999ff2f0f6f9f2479e815ba1a9cc4e96a0b577fa759b24c6c5e34c1ee065",
+      "cpu_seconds": 1336.78125
+    },
+    "optical_time_control": {
+      "config": {
+        "kind": "diffuse",
+        "spacing": 0.0005,
+        "step": 5e-05,
+        "block_steps": 2,
+        "outer": 4.0,
+        "screen": 0.6,
+        "prefix": 2.5,
+        "end": 5.0
+      },
+      "final_field_sha256": "e6dc16380f087790ee5db6d24efd4262e6343742d6c620b609758f628f12352b",
+      "cpu_seconds": 390.484375
+    }
+  },
+  "identities": [
+    "d tau_o = d tau_e / nu_o + (L/nu_o) d phi_o",
+    "d(tau_minus-tau_plus)/d tau_e = 1/nu_minus - 1/nu_plus",
+    "sin xi = sign(L) sin psi / nu_o",
+    "fluence per emitted isotropic energy = nu_o/(4*pi*abs(D_perp*D_parallel))"
+  ],
+  "limits": "Conditional supplied cloud, source pulse, held source/receiver and geometric optics. Two angular patches do not exclude other images. No astronomical object identification, physical scale, population selection, finite-source smoothing or nonspherical stability is inferred. Numerical envelopes are comparison estimates, not interval proofs or preparation uncertainties.",
+  "numerical_validation_errors": [],
+  "process_cpu_seconds_including_workers": 2302.53125,
+  "wall_seconds": 1.3364207000122406,
+  "longest_worker_original_wall_seconds": 1338.6854837000137,
+  "compute_budget_seconds": 4500,
+  "budget_exhausted": false,
+  "timing_scope": "Worker CPU includes original cached computations; wall time is this invocation.",
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_core_optics.py": "5cddb759ad55b4a28fec71226db62b1184ef7ba95418fdc14b4da08cc0b13a8f",
+    "src/recursive_horizons/nsc_atlas_core_evolution.py": "21ee66faa161cd6545155db954994c5f126d2dfa2a1b34249ed3193dae37755d",
+    "src/recursive_horizons/nsc_atlas_core_reservoir.py": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898",
+    "src/recursive_horizons/nsc_atlas_scalar_core.py": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "src/recursive_horizons/nsc_atlas_core_images.py": "a8d0507c031fff86d150d44dd5755e2ae1478cd7b6004821fdaf66ff359038b3",
+    "scripts/check_nsc_atlas_core_images.py": "5dbba331d67640e175dc514dd73ea8d841fbea21dcf2b5cd5db10626f1fe12a6",
+    "scripts/plot_nsc_atlas_core_images.py": "bd91e606bd7b22f2878250814e577dde7747e12154e4470bf8ebaf1b036ff27c",
+    "tests/test_nsc_atlas_core_images.py": "b4444e8ee463fa3b98d1f001e7189dc56961fbab3766eec1eb0d0177c5cb26f2",
+    "results/summaries/nsc-atlas-core-evolution-v1.json": "b3f7eb0beab13bbb2cf4498a040455116506c1df10e5c4c935d49d5bf6c06690"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_core_images.py --output results/summaries/nsc-atlas-core-images-v1.json"
+}

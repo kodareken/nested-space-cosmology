@@ -67,3 +67,24 @@ def test_each_epoch_has_both_independent_angular_patches():
         for branch in (1,-1):
             x=angles[(epochs==age)&(branches==branch)]
             assert len(x)==5 and np.all(np.diff(x)>0)
+
+
+def test_retained_images_and_parent_vacuum_use_one_scale_and_one_source():
+    import hashlib
+    import json
+    from pathlib import Path
+    root=Path(__file__).resolve().parents[1]
+    r=json.loads((root/'results/summaries/nsc-atlas-core-images-v1.json').read_text(encoding='utf-8'))
+    assert not r['numerical_validation_errors']
+    assert all(r['source_replay_exact_matches'].values())
+    for name,digest in r['source_sha256'].items():
+        assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
+    pair=r['central_pair']; connection=r['parent_vacuum_connection']
+    delay=pair['delay_negative_minus_positive']; vacuum=connection['vacuum_Lambda_in_atlas_units']
+    for length in (.001,1.,1e24):
+        physical_vacuum=vacuum/length**2
+        physical_delay_length=length*delay
+        assert physical_vacuum*physical_delay_length**2==pytest.approx(connection['Lambda_c_delay_squared'],rel=3e-15)
+    assert connection['receiver_clock_delay_drift']==pytest.approx(
+        1/pair['frequency_ratio_negative_over_positive']-1,abs=1e-15)
+    assert [im['parity'] for im in r['central_images']]==[1,-1]

@@ -1,10 +1,10 @@
 {
-  "bytes": 9334348,
+  "bytes": 9623689,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "8bc6c6262efe018a72a3b61c6ab9905d022b557a0f1bde459b09cb454bf4adbd",
+  "metadata_sha256": "be3ff74e0b37940857d2d07b022cb6c9cad35afa268f02a7fbb0051d912326c1",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 122,
-  "pdf_sha256": "034243561e8c6453b11893e39cd2228b350455d471703f8f536b00061111f144",
+  "pages": 125,
+  "pdf_sha256": "2e3a3a3bb5a4feab7bde7b056e2b5078b9a7c9a39a6324a822ae428d90de120a",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -22,6 +22,10 @@
     {
       "path": "docs/figures/nsc-atlas-core-evolution.png",
       "sha256": "0c2540dda03c5da7f57af9b1d9659ace779285fc8846385f2aaa01de55f248b3"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-core-images.png",
+      "sha256": "e4e51ceb9a2c06f4691429f4f20a59c45d430474604173b095358fff135d0666"
     },
     {
       "path": "docs/figures/nsc-atlas-core-optics.png",
@@ -464,6 +468,10 @@
       "sha256": "b3f7eb0beab13bbb2cf4498a040455116506c1df10e5c4c935d49d5bf6c06690"
     },
     {
+      "path": "results/summaries/nsc-atlas-core-images-v1.json",
+      "sha256": "e577e370a1ad0247b2dfc42a685207b5c968868cdae3edc5c7405c36a5f1163b"
+    },
+    {
       "path": "results/summaries/nsc-atlas-core-optics-v1.json",
       "sha256": "3ed28ee6d163d526357503f365e46e1d4f407f5a92d6a8c23097aa6567846921"
     },
@@ -693,6 +701,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "c995bfdf0a5bf7e9890c80a7c6894206b060e7b39629db801dade0140fa91252",
-  "version": "working-2026-10-23.3"
+  "source_sha256": "933dfc9e8e4fe2ae7ff38628804d7fef37172fc0201d2029ca5f45180ca1f34c",
+  "version": "working-2026-10-24.1"
 }

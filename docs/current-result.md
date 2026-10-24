@@ -1,5 +1,19 @@
 # What the calculations show
 
+The [fixed-worldline inverse](nsc-atlas-core-images.md) connects the
+formed scalar concentration to two pulse arrivals on one observer's clock.
+The null endpoint identity links the delay derivative to the images'
+frequency ratio. A common dimensional embedding links the delay to the
+inherited parent vacuum through Lambda*(c*Delta t)^2. These are conditional
+connections for the specified cloud and observer experiment; they do not
+select an astronomical population or the observed cosmological constant.
+The pair's image separation is .682670 +/- .000493 degrees; its pulse-fluence
+ratio is1.401958 +/- .006483. Its delay is(1.441253 +/- .000954)e-6 atlas
+units, giving Lambda*(c*Delta t)^2=(5.8422 +/- .0078)e-13. Four field replays
+match the saved source exactly. The rotation/Jacobi gap shrinks with
+refinement; the smaller delay-derivative residual has a finite comparison
+range and is not monotone across the last two grids.
+
 The [nonradial optical calculation](nsc-atlas-core-optics.md) connects
 the formed concentration to light bending and anisotropic beam focusing.
 The source is replayed unchanged; canonical rays, two curvature-based

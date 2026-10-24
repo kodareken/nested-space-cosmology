@@ -1,5 +1,12 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [fixed-observer image calculation](docs/nsc-atlas-core-images.md)
+connects the same evolving lens to two paths from one emitted pulse to one
+receiving worldline. Image directions, proper delays and frequency/fluence
+ratios share an exact endpoint relation. The inherited parent vacuum and
+image delay also form a dimensionless product, linking local optics to the
+parent scale without an independently fitted lens mass.
+
 The [evolved concentration now has a lens map](docs/nsc-atlas-core-optics.md).
 Nonradial photons and curvature-based beam transport use the same frozen
 scalar evolution. Proper emission ages and receiving screens specify light

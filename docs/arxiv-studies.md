@@ -1,5 +1,20 @@
 # Cited arXiv studies
 
+## Fixed-worldline images and proper arrival variation, 24 October 2026
+
+Revisited [Frittelli and Newman, gr-qc/9810017](https://arxiv.org/html/gr-qc/9810017),
+Sections1--2, for the observer-worldline definition of an exact lens map.
+[Perlick, Living Reviews 7,9](https://doi.org/10.12942/lrr-2004-9) supplies
+the broader arbitrary-spacetime Fermat, screen and brightness framework;
+Section2.9 was checked for the proper-arrival variational principle and
+its applicability to nonstationary geometries.
+The [image owner](nsc-atlas-core-images.md) derives the endpoint variation
+on the held source/receiver, then inverts the actual evolving map. No static
+thin-lens profile is imported. The time-dependent real-scalar comparison
+[Aimar et al.,2512.23800v2](https://arxiv.org/abs/2512.23800v2) was checked
+again at abstract level; its disk/intensity or detectability assumptions
+are not used to identify this benchmark with an astronomical source.
+
 ## Exact lens maps and scalar lens precedent, 23 October 2026
 
 [Frittelli and Newman,gr-qc/9810017](https://arxiv.org/html/gr-qc/9810017),

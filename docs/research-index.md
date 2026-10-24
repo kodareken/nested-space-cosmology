@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [fixed-worldline image connection](nsc-atlas-core-images.md) inverts
+the same optical map for one source pulse and one receiver. It links image
+directions, time delay and frequencies, and binds that delay to the same
+parent-vacuum scale. Two selected image branches are not a full image census.
+
 The [evolving scalar lens](nsc-atlas-core-optics.md) connects the same
 nonlinear concentration to a proper-clock optical map and independently
 computed curvature focusing. It separates direct scalar null focusing

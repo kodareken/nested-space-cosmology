@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+## Fixed-observer images and their parent-vacuum scale
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_core_images.py --output results/summaries/nsc-atlas-core-images-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_core_images.py
+```
+
+The [owner](nsc-atlas-core-images.md) specifies one receiving worldline,
+two angular patches and five proper emission ages. Four parallel runs
+reuse the frozen field/ray steppers, with source-authenticated completed
+checkpoints under `.build/core-images`. The compact public result includes
+image ratios, delay and the conditional product Lambda*(c*Delta t)^2.
+The initial compute budget is4500 CPU seconds. A cache-only invocation
+retains original worker CPU figures while reporting its own wall time.
+
 The nonradial optical campaign reuses the frozen scalar stepper:
 
 ```powershell
