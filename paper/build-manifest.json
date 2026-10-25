@@ -1,10 +1,10 @@
 {
-  "bytes": 10323373,
+  "bytes": 10873806,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "5ac25f2f3ae2738eacdb12859c9fac17d96f828e5b8d5aed49c0f1b77b3a04bd",
+  "metadata_sha256": "0b7d952b64f35abe642f241535acbf2568031870e48ef4a280f3b33904bd0353",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 132,
-  "pdf_sha256": "10ae2c3ffc4df38e82a7a3d5262c34ef3addbdcea8cacbdef1c7697ae3b7a653",
+  "pages": 136,
+  "pdf_sha256": "7ce935821247ba47da2076d8d5211b9ba066e3d72909299db12248c28b6b515e",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -46,6 +46,10 @@
     {
       "path": "docs/figures/nsc-atlas-hierarchy-evolution.png",
       "sha256": "332ce9da4123b64f5cdf198be79642a66e99344acd984a96c0e19cbb0a2c9fce"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-hierarchy-perturbations.png",
+      "sha256": "e1fcac38ab49e5d63e3a7708381e9e0570f4d6fb3a01474de4ab35f87267972d"
     },
     {
       "path": "docs/figures/nsc-atlas-nested-slice.png",
@@ -576,6 +580,14 @@
       "sha256": "e41626e10540c5a9e39e8b1e4732be5fdcfe0a229d4e5380a922784cb1b0ffad"
     },
     {
+      "path": "results/summaries/nsc-atlas-hierarchy-perturbations-v1.json",
+      "sha256": "1dad4cfdad4c9908c971deece1489ad8c3161be7af1bc05e71ded54140da63ea"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-hierarchy-tidal-tail-v1.json",
+      "sha256": "8951d86ee7a86fa0ef1553717c264bcfa560bddd6d484d49f03c822079ea5efd"
+    },
+    {
       "path": "results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json",
       "sha256": "e324ff4570c045af7225dcb04aaee0dc7828fb9fade73ff92f3cc751c0a52df6"
     },
@@ -717,6 +729,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "84344f92cd27f084f68fccd68526b35b62f0f06db43e04ba0ae11b4278f00134",
-  "version": "working-2026-10-25.1"
+  "source_sha256": "3b3d3609f49eaf7e28c1825416f772fc60b63b2bd975131aeff81a839bcd3646",
+  "version": "working-2026-10-25.2"
 }

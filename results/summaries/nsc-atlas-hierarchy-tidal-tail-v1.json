@@ -1,0 +1,160 @@
+{
+  "schema": "nsc-atlas-hierarchy-tidal-tail-v1",
+  "result": "Leading homogeneous-ambient tidal-phase matching for the external quadrupole, following an unresolved Dirichlet probe.",
+  "runs": {
+    "coarse": {
+      "config": {
+        "outer": 1024.0,
+        "points": 4095,
+        "step": 0.04,
+        "end": 600.0,
+        "late_seed": 480.0
+      },
+      "source_final_field_sha256": "b648d89b68affc58c32e58efcfcc61a915db5f21fe3b02bdbb815ebaec45fcca",
+      "initial_basis_condition": 162.49943898346908,
+      "final": {
+        "field_norm_gain": 1.0391194088915723,
+        "core_density_gain": 0.5978059053570611,
+        "quadrupole_moment_gain": 1.128590659503062,
+        "density_gain_of_largest_field_direction": 0.0896644103233829,
+        "symplectic_gap": 1.3735278443240744e-14,
+        "total_mass_first_variation_norm": 0.0,
+        "worst_density_coefficients": [
+          -0.3033735457325484,
+          0.2224478378874083,
+          0.31279139381157267,
+          0.8721484937361829
+        ],
+        "tau": 600.0
+      },
+      "maximum_field_norm_gain": 1.0817352648031002,
+      "maximum_core_density_gain": 1.1565670771255683,
+      "maximum_symplectic_gap": 2.4989401679860848e-14,
+      "probe_radius_atlas": 0.0009631247596938396,
+      "potential_RMS_coefficient_per_initial_fractional_field_norm": 1.8139448871130017e-14,
+      "potential_pointwise_coefficient_per_initial_fractional_field_norm": 4.056104075022854e-14,
+      "boundary": "Leading harmonic tidal phase: q proportional to r^-2, implemented as a real self-adjoint outer diagonal correction. No claim of an exact transparent boundary for arbitrary radiative perturbations.",
+      "cpu_seconds": 60.59375,
+      "wall_seconds": 61.3283268999985
+    },
+    "medium": {
+      "config": {
+        "outer": 1024.0,
+        "points": 8191,
+        "step": 0.02,
+        "end": 600.0,
+        "late_seed": 480.0
+      },
+      "source_final_field_sha256": "f50fdb2029dc76cd111a0ddc76d5803eb78fd816c1efc9a623d9cb03037d4295",
+      "initial_basis_condition": 162.49943916367724,
+      "final": {
+        "field_norm_gain": 1.053571589529088,
+        "core_density_gain": 0.6087882867032824,
+        "quadrupole_moment_gain": 1.1106475996236098,
+        "density_gain_of_largest_field_direction": 0.4725596725516978,
+        "symplectic_gap": 2.853273173286652e-14,
+        "total_mass_first_variation_norm": 0.0,
+        "worst_density_coefficients": [
+          -0.06586962413525083,
+          -0.3886503598462834,
+          0.6400955896442764,
+          -0.6594616945096826
+        ],
+        "tau": 600.0
+      },
+      "maximum_field_norm_gain": 1.081249362580586,
+      "maximum_core_density_gain": 1.1567212260693276,
+      "maximum_symplectic_gap": 4.007905118896815e-14,
+      "probe_radius_atlas": 0.0009631247596938396,
+      "potential_RMS_coefficient_per_initial_fractional_field_norm": 9.34026198451558e-15,
+      "potential_pointwise_coefficient_per_initial_fractional_field_norm": 2.0885460725033926e-14,
+      "boundary": "Leading harmonic tidal phase: q proportional to r^-2, implemented as a real self-adjoint outer diagonal correction. No claim of an exact transparent boundary for arbitrary radiative perturbations.",
+      "cpu_seconds": 217.703125,
+      "wall_seconds": 221.4122325999997
+    },
+    "outer_control": {
+      "config": {
+        "outer": 1536.0,
+        "points": 12287,
+        "step": 0.02,
+        "end": 600.0,
+        "late_seed": 480.0
+      },
+      "source_final_field_sha256": "144842742d0c073d9daca19c4678e267570d56033943f2c33eecad07cd423196",
+      "initial_basis_condition": 162.49943916367724,
+      "final": {
+        "field_norm_gain": 1.053571589517699,
+        "core_density_gain": 0.6087882918284648,
+        "quadrupole_moment_gain": 1.1106476698749637,
+        "density_gain_of_largest_field_direction": 0.47255966557941126,
+        "symplectic_gap": 4.96269692007445e-14,
+        "total_mass_first_variation_norm": 0.0,
+        "worst_density_coefficients": [
+          -0.06586960228834583,
+          -0.3886503373026007,
+          0.6400955850653673,
+          -0.6594617144222817
+        ],
+        "tau": 600.0
+      },
+      "maximum_field_norm_gain": 1.0812493625805895,
+      "maximum_core_density_gain": 1.1567212260693018,
+      "maximum_symplectic_gap": 5.295763827461997e-14,
+      "probe_radius_atlas": 0.0009631247596938396,
+      "potential_RMS_coefficient_per_initial_fractional_field_norm": 9.267656462210467e-15,
+      "potential_pointwise_coefficient_per_initial_fractional_field_norm": 2.0723109841617816e-14,
+      "boundary": "Leading harmonic tidal phase: q proportional to r^-2, implemented as a real self-adjoint outer diagonal correction. No claim of an exact transparent boundary for arbitrary radiative perturbations.",
+      "cpu_seconds": 336.90625,
+      "wall_seconds": 341.72983569999997
+    }
+  },
+  "source_replay_exact_matches": {
+    "coarse": true,
+    "medium": true,
+    "outer_control": true
+  },
+  "final_potential_RMS_coefficient": 9.34026198451558e-15,
+  "numerical_comparison_envelope": 1.7598373773228874e-14,
+  "grid_change": 8.799186886614437e-15,
+  "outer_domain_change": 7.260552230511253e-17,
+  "outward_probe_resolved": false,
+  "old_Dirichlet_probe": {
+    "physical_probe_radius_atlas_units": 0.0009631247596938396,
+    "maximum_Phi_over_c_squared_per_initial_fractional_field_norm": 4.2290573076316385e-14,
+    "pointwise_angular_bound_per_initial_fractional_field_norm": 9.456459620606584e-14,
+    "numerical_comparison_envelope": 4.8093903116860514e-14,
+    "by_resolution": {
+      "fine": 4.2290573076316385e-14,
+      "medium": 3.3326367682862006e-14,
+      "coarse": 1.5698358221847065e-14,
+      "time_control": 3.2246943631203004e-14,
+      "outer_control": 9.279416124431747e-15
+    },
+    "resolved_nonzero_prediction": false,
+    "status": "Diagnostic only: the finite Dirichlet exterior probe is not resolved by its domain/grid comparisons.",
+    "meaning": "Largest first-order angular-RMS quadrupolar Newtonian metric-potential coefficient at the final fixed physical probe sphere, per unit initial core-field-norm perturbation in the declared radial span. Multiply by epsilon for a chosen infinitesimal perturbation. This is not a redshift or lens image."
+  },
+  "limits": "Separate leading harmonic-tail boundary model. The no-incoming-density harmonic exterior has eta proportional to i r^-3 and q proportional to i r^-2. General outgoing radiative and Jeans responses are not solved by this local condition. A finite-domain comparison tests its usefulness here.",
+  "numerical_validation_errors": [],
+  "process_cpu_seconds_including_workers": 615.21875,
+  "compute_budget_seconds": 800,
+  "budget_exhausted": false,
+  "wall_seconds": 1.2477920999990602,
+  "timing_scope": "CPU figures include the underlying computations reused from authenticated checkpoints; wall_seconds is this invocation.",
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_hierarchy_evolution.py": "a1495031b01f236cdca475cdcaffa41bdf0cccc974b6584133f006676fdf0921",
+    "src/recursive_horizons/nsc_atlas_scale_hierarchy.py": "78255e7f3b63cfde9b49e00a13fc66934bf528eaef305af2e7164f07cb582637",
+    "src/recursive_horizons/nsc_atlas_core_evolution.py": "21ee66faa161cd6545155db954994c5f126d2dfa2a1b34249ed3193dae37755d",
+    "src/recursive_horizons/nsc_atlas_core_reservoir.py": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898",
+    "src/recursive_horizons/nsc_atlas_scalar_core.py": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "src/recursive_horizons/nsc_atlas_hierarchy_perturbations.py": "b7a24f1a5c5ba4a61b83887af4c863ddd83dacba9f8d122fb85e119f52da5fff",
+    "src/recursive_horizons/nsc_atlas_hierarchy_tidal_tail.py": "0bf8bf2f2d33eb9decfa844d3295328516e70c64effcd66a799d70068d0c46bd",
+    "scripts/check_nsc_atlas_hierarchy_tidal_tail.py": "80d32e9f2fde0f7b8f36bec95caf8116f0ca6e77273b13fab4c8da49c88da6c2",
+    "tests/test_nsc_atlas_hierarchy_tidal_tail.py": "6ed0a0dac34e21b2e5da4e850c01f737bba687ef4e0cf5aa90ba492289c7ef5c",
+    "results/summaries/nsc-atlas-hierarchy-perturbations-v1.json": "1dad4cfdad4c9908c971deece1489ad8c3161be7af1bc05e71ded54140da63ea"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_hierarchy_tidal_tail.py --output results/summaries/nsc-atlas-hierarchy-tidal-tail-v1.json"
+}

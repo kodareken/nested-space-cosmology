@@ -1,5 +1,19 @@
 # Cited arXiv studies
 
+## Finite radial and angular perturbations, 25 October 2026
+
+[Harrison, Moroz and Tod,math-ph/0208045](https://arxiv.org/abs/math-ph/0208045)
+provides stationary Schrodinger--Newton stability precedent. Its abstract
+and bibliographic record were checked; the stationary conclusion is not
+imported into the expanding retained trajectory.
+[Zagorac, Sands, Padmanabhan and Easther,2109.01920v2](https://arxiv.org/abs/2109.01920v2)
+studies breathing, quadrupolar distortions and time-dependent soliton
+perturbations. The abstract and revision record were checked. The
+[new owner](nsc-atlas-hierarchy-perturbations.md) derives its actual real-linear
+transport, angular normalization and finite response matrices on the
+unchanged NSC source. Its homogeneous harmonic phase-tail condition is
+checked from the same outer equations and by a separate numerical comparison.
+
 ## Evolving real-scalar envelopes and the parent clock, 25 October 2026
 
 The [new evolution owner](nsc-atlas-hierarchy-evolution.md) derives its

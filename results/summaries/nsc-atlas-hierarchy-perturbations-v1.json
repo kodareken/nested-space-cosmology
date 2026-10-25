@@ -1,0 +1,816 @@
+{
+  "schema": "nsc-atlas-hierarchy-perturbations-v1",
+  "result": "Finite real-linear radial and quadrupole response on the authenticated evolving envelope source.",
+  "source_replay_exact_matches": {
+    "fine": true,
+    "medium": true,
+    "coarse": true,
+    "time_control": true,
+    "outer_control": true
+  },
+  "responses": {
+    "radial": {
+      "ell": 0,
+      "start": 0.0,
+      "end": 600.0,
+      "initial_basis_condition": 4014.4304810864846,
+      "initial_core_field_norm": 1.872252574181289,
+      "final": {
+        "field_norm_gain": 5.6042531294409965,
+        "core_density_gain": 3.231538199574137,
+        "quadrupole_moment_gain": null,
+        "density_gain_of_largest_field_direction": 0.4061692353790314,
+        "symplectic_gap": 1.1418976875177123e-11,
+        "total_mass_first_variation_norm": 0.0003736704282209117,
+        "worst_density_coefficients": [
+          -0.022546028003762854,
+          0.7926843814228285,
+          -0.1954678549881409,
+          0.5770056028635218
+        ],
+        "tau": 600.0
+      },
+      "maximum_field_norm_gain": 6.75560636895789,
+      "maximum_core_density_gain": 3.5915702485165264,
+      "maximum_symplectic_gap": 1.1418976875177123e-11,
+      "maximum_quadrupole_moment_gain": null
+    },
+    "quadrupole": {
+      "ell": 2,
+      "start": 0.0,
+      "end": 600.0,
+      "initial_basis_condition": 162.4994391753412,
+      "initial_core_field_norm": 1.872252574181289,
+      "final": {
+        "field_norm_gain": 1.0553197861314099,
+        "core_density_gain": 0.6046031455622559,
+        "quadrupole_moment_gain": 1.1299544099826384,
+        "density_gain_of_largest_field_direction": 0.480145779026132,
+        "symplectic_gap": 9.137135492665038e-14,
+        "total_mass_first_variation_norm": 0.0,
+        "worst_density_coefficients": [
+          -0.15811299657801353,
+          -0.35380278938504783,
+          0.7964637303152222,
+          -0.46418680811591573
+        ],
+        "tau": 600.0
+      },
+      "maximum_field_norm_gain": 1.081127993032333,
+      "maximum_core_density_gain": 1.1567528614701976,
+      "maximum_symplectic_gap": 9.758860386455126e-14,
+      "maximum_quadrupole_moment_gain": 1.3451064784313718
+    },
+    "passive_quadrupole": {
+      "ell": 2,
+      "start": 0.0,
+      "end": 600.0,
+      "initial_basis_condition": 162.4994391753412,
+      "initial_core_field_norm": 1.872252574181289,
+      "final": {
+        "field_norm_gain": 0.9999999999999507,
+        "core_density_gain": 0.17977151385448556,
+        "quadrupole_moment_gain": 0.06598395229484498,
+        "density_gain_of_largest_field_direction": 0.17977151385448556,
+        "symplectic_gap": 0.0,
+        "total_mass_first_variation_norm": 0.0,
+        "worst_density_coefficients": [
+          1.0
+        ],
+        "tau": 600.0
+      },
+      "maximum_field_norm_gain": 1.0000000000000007,
+      "maximum_core_density_gain": 0.8786476731234658,
+      "maximum_symplectic_gap": 0.0,
+      "maximum_quadrupole_moment_gain": 0.7135900950521538
+    },
+    "late_quadrupole": {
+      "ell": 2,
+      "start": 480.0,
+      "end": 600.0,
+      "initial_basis_condition": 162.49943917463779,
+      "initial_core_field_norm": 1.8769802490949279,
+      "final": {
+        "field_norm_gain": 1.0507123414075745,
+        "core_density_gain": 0.6061609344831115,
+        "quadrupole_moment_gain": 1.1709187948012139,
+        "density_gain_of_largest_field_direction": 0.3997432700651756,
+        "symplectic_gap": 1.0880185641326534e-14,
+        "total_mass_first_variation_norm": 0.0,
+        "worst_density_coefficients": [
+          -0.09022536117490258,
+          -0.0021108212440731355,
+          -0.6192449983774264,
+          0.7799939490913217
+        ],
+        "tau": 600.0
+      },
+      "maximum_field_norm_gain": 1.082034123233351,
+      "maximum_core_density_gain": 1.1720403643357915,
+      "maximum_symplectic_gap": 1.1546319456101628e-14,
+      "maximum_quadrupole_moment_gain": 1.478741891827586
+    }
+  },
+  "numerical_comparison_envelope": {
+    "radial": {
+      "maximum_field_norm_gain": 0.16163810207530283,
+      "maximum_core_density_gain": 0.03243951859889016,
+      "final": {
+        "field_norm_gain": 0.387426973173584,
+        "core_density_gain": 0.41879849929790414
+      }
+    },
+    "quadrupole": {
+      "maximum_field_norm_gain": 0.00024273909650585068,
+      "maximum_core_density_gain": 6.327080174006738e-05,
+      "maximum_quadrupole_moment_gain": 0.006048488848575673,
+      "final": {
+        "field_norm_gain": 0.0034963931997715747,
+        "core_density_gain": 0.008370317230564694,
+        "quadrupole_moment_gain": 0.038613371395791685
+      }
+    },
+    "late_quadrupole": {
+      "maximum_field_norm_gain": 0.0010803449792575748,
+      "maximum_core_density_gain": 0.004885761351344442,
+      "maximum_quadrupole_moment_gain": 0.02829577432639674,
+      "final": {
+        "field_norm_gain": 0.001020534203390877,
+        "core_density_gain": 0.014035133437200198,
+        "quadrupole_moment_gain": 0.022578170447220103
+      }
+    }
+  },
+  "radial_final_norm_maximizing_direction": {
+    "fine": {
+      "core_fraction_of_field_norm_squared": 0.9941633653269224,
+      "local_phase_fraction_of_core_field_norm_squared": 0.9949465686221618,
+      "meaning": "At the final event, for the initial direction maximizing full field norm. Decomposition is relative to the local phase of the nonzero base field inside the core. Spatial phase gradients can still affect later flow."
+    },
+    "medium": {
+      "core_fraction_of_field_norm_squared": 0.9951454831284132,
+      "local_phase_fraction_of_core_field_norm_squared": 0.992497614958913,
+      "meaning": "At the final event, for the initial direction maximizing full field norm. Decomposition is relative to the local phase of the nonzero base field inside the core. Spatial phase gradients can still affect later flow."
+    },
+    "coarse": {
+      "core_fraction_of_field_norm_squared": 0.9975324636307761,
+      "local_phase_fraction_of_core_field_norm_squared": 0.9853285228123039,
+      "meaning": "At the final event, for the initial direction maximizing full field norm. Decomposition is relative to the local phase of the nonzero base field inside the core. Spatial phase gradients can still affect later flow."
+    },
+    "time_control": {
+      "core_fraction_of_field_norm_squared": 0.9951529931354242,
+      "local_phase_fraction_of_core_field_norm_squared": 0.9924831007641184,
+      "meaning": "At the final event, for the initial direction maximizing full field norm. Decomposition is relative to the local phase of the nonzero base field inside the core. Spatial phase gradients can still affect later flow."
+    },
+    "outer_control": {
+      "core_fraction_of_field_norm_squared": 0.9951454830374488,
+      "local_phase_fraction_of_core_field_norm_squared": 0.9924976158518082,
+      "meaning": "At the final event, for the initial direction maximizing full field norm. Decomposition is relative to the local phase of the nonzero base field inside the core. Spatial phase gradients can still affect later flow."
+    }
+  },
+  "external_quadrupole_potential": {
+    "physical_probe_radius_atlas_units": 0.0009631247596938396,
+    "maximum_Phi_over_c_squared_per_initial_fractional_field_norm": 4.2290573076316385e-14,
+    "pointwise_angular_bound_per_initial_fractional_field_norm": 9.456459620606584e-14,
+    "numerical_comparison_envelope": 4.8093903116860514e-14,
+    "by_resolution": {
+      "fine": 4.2290573076316385e-14,
+      "medium": 3.3326367682862006e-14,
+      "coarse": 1.5698358221847065e-14,
+      "time_control": 3.2246943631203004e-14,
+      "outer_control": 9.279416124431747e-15
+    },
+    "resolved_nonzero_prediction": false,
+    "status": "Diagnostic only: the finite Dirichlet exterior probe is not resolved by its domain/grid comparisons.",
+    "meaning": "Largest first-order angular-RMS quadrupolar Newtonian metric-potential coefficient at the final fixed physical probe sphere, per unit initial core-field-norm perturbation in the declared radial span. Multiply by epsilon for a chosen infinitesimal perturbation. This is not a redshift or lens image."
+  },
+  "runs": {
+    "fine": {
+      "config": {
+        "outer": 1024.0,
+        "points": 16383,
+        "step": 0.01,
+        "end": 600.0,
+        "late_seed": 480.0
+      },
+      "responses": {
+        "radial": {
+          "ell": 0,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 4014.4304810864846,
+          "initial_core_field_norm": 1.872252574181289,
+          "final": {
+            "field_norm_gain": 5.6042531294409965,
+            "core_density_gain": 3.231538199574137,
+            "quadrupole_moment_gain": null,
+            "density_gain_of_largest_field_direction": 0.4061692353790314,
+            "symplectic_gap": 1.1418976875177123e-11,
+            "total_mass_first_variation_norm": 0.0003736704282209117,
+            "worst_density_coefficients": [
+              -0.022546028003762854,
+              0.7926843814228285,
+              -0.1954678549881409,
+              0.5770056028635218
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 6.75560636895789,
+          "maximum_core_density_gain": 3.5915702485165264,
+          "maximum_symplectic_gap": 1.1418976875177123e-11,
+          "maximum_quadrupole_moment_gain": null
+        },
+        "quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.4994391753412,
+          "initial_core_field_norm": 1.872252574181289,
+          "final": {
+            "field_norm_gain": 1.0553197861314099,
+            "core_density_gain": 0.6046031455622559,
+            "quadrupole_moment_gain": 1.1299544099826384,
+            "density_gain_of_largest_field_direction": 0.480145779026132,
+            "symplectic_gap": 9.137135492665038e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.15811299657801353,
+              -0.35380278938504783,
+              0.7964637303152222,
+              -0.46418680811591573
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.081127993032333,
+          "maximum_core_density_gain": 1.1567528614701976,
+          "maximum_symplectic_gap": 9.758860386455126e-14,
+          "maximum_quadrupole_moment_gain": 1.3451064784313718
+        },
+        "passive_quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.4994391753412,
+          "initial_core_field_norm": 1.872252574181289,
+          "final": {
+            "field_norm_gain": 0.9999999999999507,
+            "core_density_gain": 0.17977151385448556,
+            "quadrupole_moment_gain": 0.06598395229484498,
+            "density_gain_of_largest_field_direction": 0.17977151385448556,
+            "symplectic_gap": 0.0,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              1.0
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.0000000000000007,
+          "maximum_core_density_gain": 0.8786476731234658,
+          "maximum_symplectic_gap": 0.0,
+          "maximum_quadrupole_moment_gain": 0.7135900950521538
+        },
+        "late_quadrupole": {
+          "ell": 2,
+          "start": 480.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943917463779,
+          "initial_core_field_norm": 1.8769802490949279,
+          "final": {
+            "field_norm_gain": 1.0507123414075745,
+            "core_density_gain": 0.6061609344831115,
+            "quadrupole_moment_gain": 1.1709187948012139,
+            "density_gain_of_largest_field_direction": 0.3997432700651756,
+            "symplectic_gap": 1.0880185641326534e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.09022536117490258,
+              -0.0021108212440731355,
+              -0.6192449983774264,
+              0.7799939490913217
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.082034123233351,
+          "maximum_core_density_gain": 1.1720403643357915,
+          "maximum_symplectic_gap": 1.1546319456101628e-14,
+          "maximum_quadrupole_moment_gain": 1.478741891827586
+        }
+      },
+      "source_final_field_sha256": "113ae2de3be9d70395b4ffa0f4e2529458cb7456300335577c346ca0d92502d3",
+      "cpu_seconds": 1888.640625,
+      "wall_seconds": 1898.5593027000004
+    },
+    "medium": {
+      "config": {
+        "outer": 1024.0,
+        "points": 8191,
+        "step": 0.02,
+        "end": 600.0,
+        "late_seed": 480.0
+      },
+      "responses": {
+        "radial": {
+          "ell": 0,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 4014.430496772862,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 5.7979666160277885,
+            "core_density_gain": 3.440937449223089,
+            "quadrupole_moment_gain": null,
+            "density_gain_of_largest_field_direction": 0.5700682206678088,
+            "symplectic_gap": 2.865263581952604e-12,
+            "total_mass_first_variation_norm": 0.0003686515122409357,
+            "worst_density_coefficients": [
+              -0.012808893595768376,
+              0.788768449870297,
+              -0.22580902760205993,
+              0.5715684978963355
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 6.836425419995542,
+          "maximum_core_density_gain": 3.5753504892170813,
+          "maximum_symplectic_gap": 2.865263581952604e-12,
+          "maximum_quadrupole_moment_gain": null
+        },
+        "quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943916367724,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 1.053571589531524,
+            "core_density_gain": 0.6087883041775383,
+            "quadrupole_moment_gain": 1.1106477242847426,
+            "density_gain_of_largest_field_direction": 0.47255967210443833,
+            "symplectic_gap": 6.065786430437793e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.06586957712565969,
+              -0.3886503286015698,
+              0.6400955892164215,
+              -0.6594617180343836
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.081249362580586,
+          "maximum_core_density_gain": 1.1567212260693276,
+          "maximum_symplectic_gap": 6.065786430437793e-14,
+          "maximum_quadrupole_moment_gain": 1.342082234007084
+        },
+        "passive_quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943916367724,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 0.9999999999999797,
+            "core_density_gain": 0.24905637488733895,
+            "quadrupole_moment_gain": 0.01908818978494722,
+            "density_gain_of_largest_field_direction": 0.24905637488733895,
+            "symplectic_gap": 0.0,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              1.0
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.0000000000000022,
+          "maximum_core_density_gain": 0.8785367994822356,
+          "maximum_symplectic_gap": 0.0,
+          "maximum_quadrupole_moment_gain": 0.711568898457698
+        },
+        "late_quadrupole": {
+          "ell": 2,
+          "start": 480.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943920027167,
+          "initial_core_field_norm": 1.877536661761368,
+          "final": {
+            "field_norm_gain": 1.05122260850927,
+            "core_density_gain": 0.6131785012017116,
+            "quadrupole_moment_gain": 1.1596297095776038,
+            "density_gain_of_largest_field_direction": 0.40306361956850006,
+            "symplectic_gap": 1.7515687565563654e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.08451997954572689,
+              -0.026636367110717596,
+              -0.3637264392103874,
+              0.9272809468678115
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.0825742957229798,
+          "maximum_core_density_gain": 1.1744832450114637,
+          "maximum_symplectic_gap": 1.7515687565563654e-14,
+          "maximum_quadrupole_moment_gain": 1.4928897789907845
+        }
+      },
+      "source_final_field_sha256": "f50fdb2029dc76cd111a0ddc76d5803eb78fd816c1efc9a623d9cb03037d4295",
+      "cpu_seconds": 442.796875,
+      "wall_seconds": 445.49132869999994
+    },
+    "coarse": {
+      "config": {
+        "outer": 1024.0,
+        "points": 4095,
+        "step": 0.04,
+        "end": 600.0,
+        "late_seed": 480.0
+      },
+      "responses": {
+        "radial": {
+          "ell": 0,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 4014.430745275471,
+          "initial_core_field_norm": 1.8722525741797575,
+          "final": {
+            "field_norm_gain": 6.784278006339489,
+            "core_density_gain": 3.620481354876643,
+            "quadrupole_moment_gain": null,
+            "density_gain_of_largest_field_direction": 1.2308313999688543,
+            "symplectic_gap": 4.194089520126454e-12,
+            "total_mass_first_variation_norm": 0.0003490032299211982,
+            "worst_density_coefficients": [
+              0.021435459904160122,
+              0.7860001144952702,
+              -0.2784823550726794,
+              0.5515359634559588
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 7.238183063192843,
+          "maximum_core_density_gain": 3.678780175574121,
+          "maximum_symplectic_gap": 4.202971304323455e-12,
+          "maximum_quadrupole_moment_gain": null
+        },
+        "quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943898346908,
+          "initial_core_field_norm": 1.8722525741797575,
+          "final": {
+            "field_norm_gain": 1.0391194089057187,
+            "core_density_gain": 0.5978059053520425,
+            "quadrupole_moment_gain": 1.1285906594973816,
+            "density_gain_of_largest_field_direction": 0.08966441043708548,
+            "symplectic_gap": 3.633176424174744e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.30337354572302894,
+              0.222447837899593,
+              0.312791393812251,
+              0.8721484937361431
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.081735264803101,
+          "maximum_core_density_gain": 1.1565670771255683,
+          "maximum_symplectic_gap": 3.950910715698475e-14,
+          "maximum_quadrupole_moment_gain": 1.3489041268186588
+        },
+        "passive_quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943898346908,
+          "initial_core_field_norm": 1.8722525741797575,
+          "final": {
+            "field_norm_gain": 0.99999999999999,
+            "core_density_gain": 0.2845773012974365,
+            "quadrupole_moment_gain": 0.00907308689360173,
+            "density_gain_of_largest_field_direction": 0.2845773012974365,
+            "symplectic_gap": 0.0,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              1.0
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 0.9999999999999993,
+          "maximum_core_density_gain": 0.8780905143953945,
+          "maximum_symplectic_gap": 0.0,
+          "maximum_quadrupole_moment_gain": 0.7117849658295291
+        },
+        "late_quadrupole": {
+          "ell": 2,
+          "start": 480.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.4994391143422,
+          "initial_core_field_norm": 1.8802381894272557,
+          "final": {
+            "field_norm_gain": 1.0517494375566017,
+            "core_density_gain": 0.6211561894146623,
+            "quadrupole_moment_gain": 1.1268897925349464,
+            "density_gain_of_largest_field_direction": 0.381108487005607,
+            "symplectic_gap": 2.933190672978066e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.013325238489597855,
+              -0.07968221260494202,
+              0.7238230875031144,
+              0.6852396084662898
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.08339894073605,
+          "maximum_core_density_gain": 1.1681033429774188,
+          "maximum_symplectic_gap": 2.933190672978066e-14,
+          "maximum_quadrupole_moment_gain": 1.4932629440811507
+        }
+      },
+      "source_final_field_sha256": "b648d89b68affc58c32e58efcfcc61a915db5f21fe3b02bdbb815ebaec45fcca",
+      "cpu_seconds": 119.125,
+      "wall_seconds": 119.72872020000068
+    },
+    "time_control": {
+      "config": {
+        "outer": 1024.0,
+        "points": 8191,
+        "step": 0.01,
+        "end": 600.0,
+        "late_seed": 480.0
+      },
+      "responses": {
+        "radial": {
+          "ell": 0,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 4014.430496772862,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 5.7984836737410355,
+            "core_density_gain": 3.4416038241821214,
+            "quadrupole_moment_gain": null,
+            "density_gain_of_largest_field_direction": 0.5709867041957916,
+            "symplectic_gap": 5.65691937737256e-12,
+            "total_mass_first_variation_norm": 0.00036853388486334117,
+            "worst_density_coefficients": [
+              -0.01276181579946885,
+              0.7887757014676338,
+              -0.2258042052745607,
+              0.571561448763007
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 6.836733469438693,
+          "maximum_core_density_gain": 3.5757002537078373,
+          "maximum_symplectic_gap": 5.65691937737256e-12,
+          "maximum_quadrupole_moment_gain": null
+        },
+        "quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943916367724,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 1.0535548435437811,
+            "core_density_gain": 0.6087829292306064,
+            "quadrupole_moment_gain": 1.1105361996067111,
+            "density_gain_of_largest_field_direction": 0.47239918044626567,
+            "symplectic_gap": 7.294165271787278e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.06537394496565571,
+              -0.3886936688414301,
+              0.6390918996555826,
+              -0.6604581916494296
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.0812494533034351,
+          "maximum_core_density_gain": 1.1567001057248418,
+          "maximum_symplectic_gap": 8.248957072964913e-14,
+          "maximum_quadrupole_moment_gain": 1.3420483479859446
+        },
+        "passive_quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943916367724,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 0.999999999999955,
+            "core_density_gain": 0.24931891775759452,
+            "quadrupole_moment_gain": 0.01941446328735454,
+            "density_gain_of_largest_field_direction": 0.24931891775759452,
+            "symplectic_gap": 0.0,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              1.0
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.0000000000000016,
+          "maximum_core_density_gain": 0.8785251953339727,
+          "maximum_symplectic_gap": 0.0,
+          "maximum_quadrupole_moment_gain": 0.7115674441613896
+        },
+        "late_quadrupole": {
+          "ell": 2,
+          "start": 480.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943920027167,
+          "initial_core_field_norm": 1.8775392498372139,
+          "final": {
+            "field_norm_gain": 1.0512239406745807,
+            "core_density_gain": 0.6131876586645186,
+            "quadrupole_moment_gain": 1.1595694275971289,
+            "density_gain_of_largest_field_direction": 0.4030522125915569,
+            "symplectic_gap": 1.1753004473541655e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.0844832287863242,
+              -0.02674580372963864,
+              -0.36252798131022484,
+              0.9277503483178149
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.0825757154239273,
+          "maximum_core_density_gain": 1.1744717039890238,
+          "maximum_symplectic_gap": 1.1753004473541655e-14,
+          "maximum_quadrupole_moment_gain": 1.492928717969128
+        }
+      },
+      "source_final_field_sha256": "31729f190773e4acffbef6802fb219211e69f7af4c6aae2bf872c44973844519",
+      "cpu_seconds": 822.453125,
+      "wall_seconds": 827.9566365999999
+    },
+    "outer_control": {
+      "config": {
+        "outer": 1536.0,
+        "points": 12287,
+        "step": 0.02,
+        "end": 600.0,
+        "late_seed": 480.0
+      },
+      "responses": {
+        "radial": {
+          "ell": 0,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 4014.430496772862,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 5.7979667629045935,
+            "core_density_gain": 3.4409374355478444,
+            "quadrupole_moment_gain": null,
+            "density_gain_of_largest_field_direction": 0.5700682320985189,
+            "symplectic_gap": 1.4017786931219689e-11,
+            "total_mass_first_variation_norm": 8.789033660854525e-05,
+            "worst_density_coefficients": [
+              -0.012808825351759671,
+              0.7887684497739039,
+              -0.22580903264555138,
+              0.5715684975661809
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 6.836425483694459,
+          "maximum_core_density_gain": 3.575350459534519,
+          "maximum_symplectic_gap": 1.4017786931219689e-11,
+          "maximum_quadrupole_moment_gain": null
+        },
+        "quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943916367724,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 1.053571589519262,
+            "core_density_gain": 0.6087882917966984,
+            "quadrupole_moment_gain": 1.1106476647391608,
+            "density_gain_of_largest_field_direction": 0.4725596655220876,
+            "symplectic_gap": 4.8627768478581856e-14,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.06586960237608447,
+              -0.3886503372681074,
+              0.6400955850167241,
+              -0.6594617144810611
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.0812493625805895,
+          "maximum_core_density_gain": 1.1567212260693018,
+          "maximum_symplectic_gap": 5.229150445984487e-14,
+          "maximum_quadrupole_moment_gain": 1.3420822340485812
+        },
+        "passive_quadrupole": {
+          "ell": 2,
+          "start": 0.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943916367724,
+          "initial_core_field_norm": 1.8722525741827296,
+          "final": {
+            "field_norm_gain": 0.9999999999999805,
+            "core_density_gain": 0.24905636209304616,
+            "quadrupole_moment_gain": 0.01908823038902064,
+            "density_gain_of_largest_field_direction": 0.24905636209304616,
+            "symplectic_gap": 0.0,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              1.0
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.000000000000002,
+          "maximum_core_density_gain": 0.8785367994822262,
+          "maximum_symplectic_gap": 0.0,
+          "maximum_quadrupole_moment_gain": 0.7115688984576906
+        },
+        "late_quadrupole": {
+          "ell": 2,
+          "start": 480.0,
+          "end": 600.0,
+          "initial_basis_condition": 162.49943920027167,
+          "initial_core_field_norm": 1.8775366617236624,
+          "final": {
+            "field_norm_gain": 1.0512226085136565,
+            "core_density_gain": 0.6131785012500154,
+            "quadrupole_moment_gain": 1.1596297129825808,
+            "density_gain_of_largest_field_direction": 0.4030636195681795,
+            "symplectic_gap": 6.722129660466632e-15,
+            "total_mass_first_variation_norm": 0.0,
+            "worst_density_coefficients": [
+              -0.08451997994981743,
+              -0.026636365626491965,
+              -0.36372645473312293,
+              0.9272809407848128
+            ],
+            "tau": 600.0
+          },
+          "maximum_field_norm_gain": 1.082574295727254,
+          "maximum_core_density_gain": 1.1744832449776634,
+          "maximum_symplectic_gap": 6.722129660466632e-15,
+          "maximum_quadrupole_moment_gain": 1.4928897793576519
+        }
+      },
+      "source_final_field_sha256": "144842742d0c073d9daca19c4678e267570d56033943f2c33eecad07cd423196",
+      "cpu_seconds": 638.125,
+      "wall_seconds": 641.9238720000003
+    }
+  },
+  "nonlinear_radial_derivative_checks": [
+    {
+      "epsilon": 0.0001,
+      "coefficients": [
+        -0.012808893595768376,
+        0.788768449870297,
+        -0.22580902760205993,
+        0.5715684978963355
+      ],
+      "relative_field_derivative_error": 3.2909156606509564e-06,
+      "relative_core_density_derivative_error": 2.183466021656536e-06,
+      "cpu_seconds": 80.5,
+      "wall_seconds": 81.02837259999978
+    },
+    {
+      "epsilon": 5e-05,
+      "coefficients": [
+        -0.012808893595768376,
+        0.788768449870297,
+        -0.22580902760205993,
+        0.5715684978963355
+      ],
+      "relative_field_derivative_error": 8.235086070503107e-07,
+      "relative_core_density_derivative_error": 5.460843833431427e-07,
+      "cpu_seconds": 81.25,
+      "wall_seconds": 81.65004190000036
+    }
+  ],
+  "scope": "Two smooth compact radial profiles with widths2 and4, plus phase partners, real-orthonormalized. Radial seeds preserve total mass to first order. All five quadrupole components share the same radial propagator, so the four-column Gram bound extends to their20-dimensional real span. Late quadrupole seeds start at480; primary seeds start at0. Gains are maxima on saved unit-slow-time samples, not rigorous continuous-time enclosures or all-profile/asymptotic/nonlinear/full-GR stability.",
+  "field_versus_density": "Field-norm amplification and density deformation are distinct. A large field norm can be mainly phase sensitivity; it is not alone evidence of breakup.",
+  "numerical_validation_errors": [],
+  "process_cpu_seconds_including_workers": 4072.9375,
+  "wall_seconds": 2.59458099999938,
+  "compute_budget_seconds": 4500,
+  "budget_exhausted": false,
+  "timing_scope": "CPU figures include underlying cached runs; wall time measures this invocation. Raw histories and tangent fields remain local.",
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_hierarchy_evolution.py": "a1495031b01f236cdca475cdcaffa41bdf0cccc974b6584133f006676fdf0921",
+    "src/recursive_horizons/nsc_atlas_scale_hierarchy.py": "78255e7f3b63cfde9b49e00a13fc66934bf528eaef305af2e7164f07cb582637",
+    "src/recursive_horizons/nsc_atlas_core_evolution.py": "21ee66faa161cd6545155db954994c5f126d2dfa2a1b34249ed3193dae37755d",
+    "src/recursive_horizons/nsc_atlas_core_reservoir.py": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898",
+    "src/recursive_horizons/nsc_atlas_scalar_core.py": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "src/recursive_horizons/nsc_atlas_hierarchy_perturbations.py": "b7a24f1a5c5ba4a61b83887af4c863ddd83dacba9f8d122fb85e119f52da5fff",
+    "scripts/check_nsc_atlas_hierarchy_perturbations.py": "a03cff3e833e239f03d49fe1df73132223f92e1cd0006dece1b7315e9309f84f",
+    "tests/test_nsc_atlas_hierarchy_perturbations.py": "e2efb258b1f140f50514ed83e09109bace4e512ef0106bfae855d33b4689e84f",
+    "scripts/plot_nsc_atlas_hierarchy_perturbations.py": "2a0220ee8b41b91dc7cd9fc36658019ca68f8bfbc0683359d196387dba9d93bf",
+    "results/summaries/nsc-atlas-hierarchy-evolution-v1.json": "e41626e10540c5a9e39e8b1e4732be5fdcfe0a229d4e5380a922784cb1b0ffad"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_hierarchy_perturbations.py --output results/summaries/nsc-atlas-hierarchy-perturbations-v1.json"
+}

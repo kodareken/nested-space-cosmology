@@ -1,5 +1,15 @@
 # Active code and evidence map
 
+The [perturbation owner](nsc-atlas-hierarchy-perturbations.md) uses
+nsc_atlas_hierarchy_perturbations.py for multipole gravity, real seed bases,
+unitary centrifugal propagation and response Grams. The original envelope
+source is replayed unchanged. nonlinear_radial_check differentiates the
+original nonlinear flow independently. nsc_atlas_hierarchy_tidal_tail.py
+adds a rank-one self-adjoint kinetic boundary correction for the forced
+harmonic phase; its separate producer preserves the failed Dirichlet probe
+and the still-unresolved external amplitude. Full tangent histories stay
+local under `.build`.
+
 The [hierarchy evolution owner](nsc-atlas-hierarchy-evolution.md) uses
 nsc_atlas_hierarchy_evolution.py: initial_envelope keeps the solved supply
 region; background evolves the excited closed parent; potential uses the

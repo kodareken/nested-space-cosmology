@@ -20,15 +20,24 @@ starting a derivation.
 
 ### Radial and quadrupole response of the evolving core
 
-Active: [perturb the retained trajectory](nsc-atlas-hierarchy-perturbations.md)
+Complete within the declared span: [perturb the retained trajectory](nsc-atlas-hierarchy-perturbations.md)
 without changing its spherical source. Exact real-linear potential flow,
 self-consistent multipole gravity and a conserved symplectic form lead to
-finite Gram-matrix response bounds. The quadrupole result covers all five
-orientations in the declared two-profile amplitude/phase span. Compare
+finite Gram-matrix response bounds. The quadrupole result covers every orientation through five
+angular components in the declared two-profile amplitude/phase span. Compare
 field sensitivity with actual density deformation; add late quadrupole
 seeds and nonlinear radial centred differences. Five numerical controls
-plus two nonlinear checks fit a4500 CPU-second budget. The preceding
+plus two nonlinear checks fit a 4500 CPU-second budget. The preceding
 finite persistence result is preserved, not reopened as a new source model.
+The sampled quadrupole field amplification is 1.08113 +/- .00025 and the
+density response coefficient 1.15675 +/- .00007. Radial sensitivity is larger
+and predominantly phase-like for the largest endpoint field response.
+The nonlinear radial derivative check passes. A diagnosed exterior-boundary
+failure led to one 615 CPU-second harmonic-tail test within its 800-second
+budget: domain sensitivity improves 331-fold, but the external amplitude
+remains unresolved under refinement. No external clock/lens prediction is
+claimed from that coefficient. Next scientific use is an explicit physical
+preparation or resolved observer calculation, preserving these finite limits.
 
 
 ### Finite persistence of the core and its supply region
@@ -73,7 +82,7 @@ receiving worldline. Two opposite-orientation branches from the same pulse
 supply image positions, relative proper arrival times and frequency/fluence
 ratios. The null endpoint variation connects delay drift to the frequency
 ratio without assuming a static lens. Three resolutions and an optical-time
-control reuse the unchanged source within4500 CPU seconds. All four replays match the retained source exactly. The resolved pair has
+control reuse the unchanged source within 4500 CPU seconds. All four replays match the retained source exactly. The resolved pair has
 separation .682670 +/- .000493 degrees and pulse-fluence ratio1.401958 +/-
 .006483. The same parent gives Lambda*(c*Delta t)^2=(5.8422 +/- .0078)e-13.
 The finite delay-derivative sensitivity is recorded explicitly.

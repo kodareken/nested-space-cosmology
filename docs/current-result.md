@@ -1,5 +1,22 @@
 # What the calculations show
 
+The [perturbation result](nsc-atlas-hierarchy-perturbations.md) transports
+radial and quadrupole disturbances on exactly the retained spherical field.
+Its real Gram bound covers all five quadrupole components in the declared
+two-profile amplitude/phase span. Largest sampled field amplification is
+1.08113 +/- .00025; the fractional density response coefficient is1.15675
++/- .00007 per initial fractional field perturbation. Late seeds give a
+similarly modest field response. These are finite sampled linear results,
+not universal, asymptotic, nonlinear or full-GR stability.
+
+Radial response is larger. At the endpoint the most amplified field direction
+is predominantly phase-like inside the core. Independent nonlinear radial
+differences converge to the tangent result. The external-potential probe
+failed its first domain comparison. A derived harmonic phase-tail boundary
+reduces that sensitivity about 331-fold without changing the core response,
+but remaining refinement uncertainty still exceeds the exterior coefficient.
+Both diagnostic records preserve that unresolved outcome explicitly.
+
 The [hierarchy evolution](nsc-atlas-hierarchy-evolution.md) advances the
 supplied high-frequency core and solved reservoir with parent expansion in
 a leading classical envelope. The late mean mass inside its original fixed

@@ -82,3 +82,17 @@ def test_quadrupole_moment_normalization_matches_full_angular_integration():
         moments.append(float(np.sum(r**4*(density@(weights*P2)))/np.sum(r**4*(density@weights))))
     derivative=(moments[0]-moments[1])/(2*eps)
     assert derivative==pytest.approx(row['quadrupole_moment_gain'],rel=2e-9)
+
+
+def test_retained_response_preserves_source_and_separates_unresolved_exterior():
+    import json
+    import hashlib
+    from pathlib import Path
+    root=Path(__file__).resolve().parents[1]
+    r=json.loads((root/'results/summaries/nsc-atlas-hierarchy-perturbations-v1.json').read_text(encoding='utf-8'))
+    assert not r['numerical_validation_errors'] and not r['budget_exhausted']
+    assert all(r['source_replay_exact_matches'].values())
+    for name,digest in r['source_sha256'].items():assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
+    assert r['responses']['quadrupole']['maximum_field_norm_gain']<1.09
+    assert not r['external_quadrupole_potential']['resolved_nonzero_prediction']
+    assert r['radial_final_norm_maximizing_direction']['fine']['local_phase_fraction_of_core_field_norm_squared']>.98

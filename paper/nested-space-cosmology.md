@@ -64,10 +64,10 @@ inverse then links multiple pulse arrivals, image directions and frequencies;
 their delay shares a dimensionless scale relation with the parent vacuum. An exact supply bound
 then requires core and reservoir radii to scale differently. A solved
 initial-data family admits separated local/cosmological scales and a
-linked vacuum-radius-mass relation. A classical-envelope evolution then
-retains a localized core and reservoir while the parent expands, with
-mass-current and expansion-work checks and a short full-equation comparison.
-Its finite radial persistence does not establish general stability.
+linked vacuum-radius-mass relation. A classical-envelope evolution retains a localized core in the expanding
+parent, with mass-current, expansion-work and short full-equation checks.
+Real-linear transport then bounds a declared radial/quadrupole family while
+leaving universal stability open.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -6246,6 +6246,242 @@ is from the conserved initial supply construction to finite radial
 localization in its expanding parent, with a stated approximation and
 independent transport checks.
 
+### 10.44. Testing the breathing core beyond spherical symmetry
+
+A changing radius does not by itself diagnose an instability. We now
+linearize the actual evolving envelope of Section10.43 and calculate its
+radial and quadrupole response. The spherical field, reservoir and parent
+expansion are replayed unchanged. A stationary eigenproblem would answer
+a different question because this background is time dependent.
+
+Perturbations of Schrodinger--Newton stationary states have prior analyses
+by [Harrison, Moroz and Tod](https://arxiv.org/abs/math-ph/0208045).
+[Zagorac et al.](https://arxiv.org/abs/2109.01920) investigate breathing,
+quadrupolar deformation and time-dependent soliton perturbations. Their
+stability or profile conclusions are not substituted for this trajectory.
+
+Use real angular functions with angular mean square one. For an
+axisymmetric quadrupole, $Y_{20}=\sqrt{5}P_2$. With real perturbation
+parameter $\varepsilon$, write
+
+$$
+\psi=\psi_0+\varepsilon\eta_lY_{lm}+O(\varepsilon^2),\qquad
+V=V_0+\varepsilon v_lY_{lm}+O(\varepsilon^2).
+$$
+
+The real-linear equations are
+
+$$
+i\partial_\tau\eta_l=
+\left[-\frac{D_l}{2A^2}+V_0\right]\eta_l+v_l\psi_0,\qquad
+D_lv_l=\frac{\operatorname{Re}(\psi_0^*\eta_l)}{A},
+$$
+
+$$
+D_l=\partial_x^2+\frac{2}{x}\partial_x-\frac{l(l+1)}{x^2}.
+$$
+
+The potential source is real, so complex phase directions are included
+explicitly as independent real initial directions. With
+$d_l=2\operatorname{Re}(\psi_0^*\eta_l)$, regularity and the decaying exterior
+potential give
+
+$$
+v_l(x)=-\frac{1}{2A(2l+1)}
+\left[\frac{1}{x^{l+1}}\int_0^x s^{l+2}d_l(s)ds
++x^l\int_x^L s^{1-l}d_l(s)ds\right].
+$$
+
+Both integrals are retained. The finite source is zero outside $L$;
+the potential has its free decaying tail rather than a zero-potential wall.
+The $l=2$ density has zero angular mean, so its radial coefficient integral
+is not a monopole mass change.
+
+During the joint potential substep the base field rotates but its density
+and the density variation remain fixed. The exact tangent flow is therefore
+
+$$
+\eta_l^{\rm new}=e^{-ihV_0}(\eta_l-ihv_l\psi_0).
+$$
+
+This is also the derivative of the nonlinear potential step. In
+$q=x\eta$ variables, the kinetic operator is
+$-\partial_x^2/(2A^2)+l(l+1)/(2A^2x^2)$. The radial channel uses the
+same spectral kinetic step as the base. The quadrupole uses a unitary
+centrifugal step, checked against an analytic solid-harmonic Gaussian.
+
+The transported bilinear form
+
+$$
+S_{jk}=\operatorname{Im}\int q_j^*q_k\,dx
+$$
+
+is conserved. The kinetic and background-potential terms cancel by
+self-adjointness; the remaining source terms cancel through symmetry of
+the multipole Green kernel. This symplectic identity remains valid for a
+time-dependent background. It checks the transport but does not imply
+norm conservation or stability. A separate passive quadrupole, propagated
+without its own potential response, supplies the unitary control.
+
+### 10.45. A finite response theorem for every orientation in a declared span
+
+Choose two compact radial profiles of widths $2$ and $4$ in the physical
+scaled radius $Ax$, together with their phase partners. They taper to zero
+between radii $15$ and $20$. Project the radial seeds to preserve initial
+total mass to first order; quadrupoles have zero angular mean automatically.
+Real Gram orthonormalization gives four initial directions.
+
+Let $N_c$ be the initial core-field norm. For any real coefficient vector
+$c$ of unit Euclidean length, a fractional field perturbation is
+
+$$
+\delta q(\tau)=\varepsilon N_c\sum_{j=1}^{4}c_jq_j(\tau).
+$$
+
+Define $G_{jk}=\operatorname{Re}\int q_j^*q_kdx$. The Rayleigh quotient
+then gives the exact finite-span bound
+
+$$
+\frac{\|\delta q(\tau)\|_2}{\varepsilon N_c}
+\leq\sqrt{\lambda_{\max}(G(\tau))}.
+$$
+
+A second real Gram matrix uses the density variations inside the fixed
+physical core cutoff. Normalizing by the current base excess-density norm
+gives the fractional density response per fractional initial field
+perturbation. This is not a density-to-density growth factor: some initial
+phase directions have zero density variation. The density response of the
+direction with greatest field-norm growth is recorded separately.
+
+Spherical symmetry gives the same radial propagator for all five real
+quadrupole components. Angular orthogonality gives the direct-sum Gram
+matrix $I_5\otimes G$, with the same largest eigenvalue. The four-column
+calculation therefore covers every coefficient combination in the
+corresponding twenty-dimensional real quadrupole span. A new quadrupole
+family is also seeded on the evolved state at slow time $480$.
+
+The normalized core second-moment quadrupole is defined explicitly by
+
+$$
+\frac{\int R^2P_2\,\delta\rho\,d^3R}
+{\int R^2\rho_{\rm excess}\,d^3R}
+=\frac{\varepsilon N_c}{\sqrt{5}}
+\frac{\sum_jc_j\int x^4d_jdx}{\int x^4d_0dx}.
+$$
+
+The factor follows from the angular average of $P_2Y_{20}$, which is
+$1/\sqrt{5}$. Direct angular integration independently verifies this
+moment definition. It is distinct from the coefficient multiplying $P_2$
+and from a Cartesian trace-free tensor component. A core-truncated moment
+is not inserted into an exterior potential formula; that calculation
+uses the full multipole source.
+
+These are finite response statements on a specified radial span. Numerical
+maxima are reported on saved unit-slow-time events, not as rigorous bounds
+between every pair of samples. The result does not cover additional radial
+profiles, reservoir-supported seeds, higher angular multipoles, nonlinear
+three-dimensional evolution or full-GR stability.
+
+The [response calculation](../results/summaries/nsc-atlas-hierarchy-perturbations-v1.json)
+reproduces every retained spherical field hash. Its sampled extrema are:
+
+| Perturbation family | Field-norm amplification | Density response per initial field perturbation |
+| --- | ---: | ---: |
+| Radial, seeded at 0 | $6.756\pm.162$ | $3.592\pm.033$ |
+| Quadrupole, seeded at 0 | $1.08113\pm.00025$ | $1.15675\pm.00007$ |
+| Quadrupole, seeded at 480 | $1.0820\pm.0011$ | $1.1720\pm.0049$ |
+
+For example, a $1%$ fractional field-norm perturbation in the quadrupole
+span seeded at time zero gives a calculated first-order density response
+of at most about $1.157%$ at the saved events. The quoted ranges compare
+spatial/time refinement and the outer domain. They are not rigorous
+interval enclosures, bounds between samples, or nonlinear guarantees at
+finite amplitude. Different observables can have different maximizing
+initial coefficient vectors.
+
+Radial sensitivity is larger and more dependent on refinement. At the final
+event, the direction with greatest field amplification has $99.4%$ of
+its squared norm inside the core; $99.5%$ of that core part lies in the
+local phase direction relative to the base field. This does not make every
+radial response a phase change. Spatial phase gradients can affect later
+flow, and the independent density response is nonzero.
+
+The symplectic discrepancy stays below $1.15\times10^{-11}$ in the radial
+channel and $9.76\times10^{-14}$ in the quadrupole. The passive quadrupole
+norm remains one within $5\times10^{-14}$. Independently, centred differences
+of the nonlinear radial flow converge toward the tangent prediction:
+halving the initial amplitude from $10^{-4}$ to $5\times10^{-5}$ reduces
+the density-derivative error from $2.18\times10^{-6}$ to $5.46\times10^{-7}$.
+
+![Radial sensitivity and quadrupole response on the retained evolving source](../docs/figures/nsc-atlas-hierarchy-perturbations.png)
+
+*Figure 26. Field sensitivity and density deformation are distinct responses.
+The quadrupole field response remains modest for seeds at the initial and
+late events; the same radial matrices cover all five angular components
+in the declared span. Independent nonlinear radial differences converge to
+the tangent prediction. These finite sampled results do not establish
+universal or asymptotic stability.*
+
+### 10.46. The surrounding field must carry the tidal phase
+
+A quadrupole has zero angular mean, so its first-order monopole mass change
+vanishes. It can nevertheless produce a nonzero external tidal potential.
+The full multipole kernel was therefore evaluated at fixed physical radius
+$2R_d$, outside the initial reservoir. Cauchy--Schwarz bounds each response
+coefficient. The squared angular basis functions sum to five at every direction, so
+the pointwise all-orientation potential bound is $\sqrt{5}$ times its
+angular-RMS bound.
+
+The initial external amplitude failed its numerical comparison. At fixed
+spacing, enlarging the domain changed the coefficient from
+$3.33\times10^{-14}$ to $9.28\times10^{-15}$. This is a diagnostic value,
+not an accepted nonzero tidal prediction. The failure identifies an outer
+condition that matters for the observer calculation.
+
+In an ideal homogeneous ambient region, with no incoming density disturbance,
+let the quadrupolar potential be $v_2=C(\tau)/x^3$. It is harmonic:
+$D_2v_2=0$. The linearized field equation has the particular solution
+
+$$
+\eta_2(x,\tau)=-i b x^{-3}\int C(s)ds,\qquad
+2\operatorname{Re}(b\eta_2)=0.
+$$
+
+It carries a phase tail without a first-order density change. Therefore
+
+$$
+q=x\eta_2\propto x^{-2},\qquad q_x=-\frac{2q}{x}.
+$$
+
+A zero-field condition at a finite outer radius suppresses this forced
+phase and can generate spurious density there. A separate calculation
+allows the leading harmonic tail through a self-adjoint boundary correction.
+Its Cayley step remains unitary and agrees with an independent dense-matrix
+calculation. General outgoing radiative or Jeans responses are not replaced
+by this particular harmonic condition.
+
+The [tail-matching comparisons](../results/summaries/nsc-atlas-hierarchy-tidal-tail-v1.json)
+reduce the outer-domain change from $2.40\times10^{-14}$ to
+$7.26\times10^{-17}$, an improvement of about $331$. The final core-density
+response changes by less than $1.8\times10^{-8}$, supporting the core result
+against this boundary change.
+
+The external amplitude still fails the refinement requirement: its
+coarse-to-medium change is $8.80\times10^{-15}$, so twice that change
+exceeds the medium coefficient $9.34\times10^{-15}$. The public record
+explicitly leaves this outward prediction unresolved. The useful results
+are the finite core-response bound and the derived tidal-phase matching
+requirement. An external clock or lens prediction needs further controlled
+work; it is not inferred from the unresolved coefficient.
+
+The [perturbation owner](../docs/nsc-atlas-hierarchy-perturbations.md)
+records the definitions, interpretation, independent checks and compute
+limits. The original response campaign used about $4073$ CPU seconds
+within its $4500$-second budget. After the diagnosed boundary failure,
+the targeted tail calculation used about $615$ within its separate
+$800$-second budget. Both retain their completed evidence without enlarging
+their claims to all-profile, nonlinear or full-relativistic stability.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -6295,7 +6531,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 26. The isolated reference in joined causal charts. Horizons are
+*Figure 27. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -7301,7 +7537,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 27. Saved finite-window comparisons. A: the previous and current
+*Figure 28. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -7397,7 +7633,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 28. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 29. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -8182,7 +8418,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 29. Research dependencies, distinct from spacetime causal arrows.
+*Figure 30. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

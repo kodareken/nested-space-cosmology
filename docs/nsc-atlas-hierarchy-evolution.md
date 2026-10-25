@@ -227,9 +227,11 @@ The physical time and radii inherit the assumed ruler and approximation.
 The result advances initial compatibility to finite radial localization.
 It does not derive the initial cloud, select its abundance, prove asymptotic
 or nonspherical stability, or transfer the older lens image predictions.
-The next strong discriminator is a perturbation/persistence calculation
-on this evolved state, or a joint observable calculation with the same
-source law, rather than more refinement of this completed radial run.
+The [subsequent perturbation calculation](nsc-atlas-hierarchy-perturbations.md)
+now supplies finite radial and quadrupole response bounds on this evolved
+state. Its restricted linear span does not settle universal stability,
+and its exterior-potential diagnosis remains separate from the resolved
+core result.
 
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_hierarchy_evolution.py --output results/summaries/nsc-atlas-hierarchy-evolution-v1.json

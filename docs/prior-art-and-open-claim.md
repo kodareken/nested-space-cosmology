@@ -8,12 +8,19 @@ functions, evaluated on the actual retained expanding source. The missing
 connection is whether radial breathing accompanies amplification of angular
 distortions. Two smooth radial profiles and their phase partners define the
 finite initial span; real Gram matrices cover all coefficients and all five
-quadrupole orientations. Source hashes, symplectic transport, a passive
+quadrupole components. Source hashes, symplectic transport, a passive
 unitary control, analytic multipole/free-wave checks and nonlinear radial
 centred differences separate errors from physical response. Five grids/time/
 domain cases and two nonlinear validations use useful parallelism within
 4500 CPU seconds. Finite sampled bounds do not imply all-profile, asymptotic,
 nonlinear or full-GR stability.
+
+The later exterior probe failed its domain comparison. A homogeneous
+quadrupole potential drives a harmonic pure-phase tail, which a finite
+zero-field boundary suppresses. A separate three-case,800 CPU-second
+continuation was admitted to test that derived boundary condition while
+keeping the bulk and base trajectory fixed. Domain sensitivity improved;
+remaining refinement error left the external amplitude explicitly unresolved.
 
 ## Core/reservoir evolution in its expanding parent, 25 October 2026
 

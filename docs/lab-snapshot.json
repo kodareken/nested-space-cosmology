@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "3dcb7dcbf9811e514640d00d8de2980611560467",
+  "current_receipt_commit_parent": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 25153,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 25671,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "f15117e7db0cc05bb894712011d199b63a3b9818d868808ba375682c0c917ecd"
+      "sha256": "31423a262bfa801ecc5b87a0d5e5b4453349a8883d530351bae913b943bf89ad"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 283136,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 283743,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "51509213f99da71243b7d90d7f4fb298e8a32c764b4e3b400a62e475be5f2ffa"
+      "sha256": "de1c3f100d32bcb6a355bf6a09fd926f5a95f11097622c01688292802c6a9936"
     },
     {
-      "bytes": 127553,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 128417,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "533b925cf6bbff68f53237cf2622a9520b22cc988bc6c15bcb361ab60fe62b4e"
+      "sha256": "8807a76b68059900bd9d3da43c2be965d1690f604e0a043179526efc11e0ccd0"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 458189,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 459290,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9cfc2c9dfb633d17eaba156ddfecea4e35344d031a17cdca59ec59ea0e5ebabc"
+      "sha256": "0348a519e623ccfc9428891172f1096007cd345ceb5511b88920548559810f71"
     },
     {
       "bytes": 173938,
@@ -10403,6 +10403,14 @@
       "path": "docs/figures/nsc-atlas-hierarchy-evolution.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "332ce9da4123b64f5cdf198be79642a66e99344acd984a96c0e19cbb0a2c9fce"
+    },
+    {
+      "bytes": 392571,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "path": "docs/figures/nsc-atlas-hierarchy-perturbations.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e1fcac38ab49e5d63e3a7708381e9e0570f4d6fb3a01474de4ab35f87267972d"
     },
     {
       "bytes": 126083,
@@ -10700,20 +10708,20 @@
       "sha256": "58fcb5128f13af52aad4277447556312a228a7a1635b01c871b21ea874a16bf3"
     },
     {
-      "bytes": 11273,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 11370,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "docs/nsc-atlas-hierarchy-evolution.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "b0054d07bed4d5811ea0274d02a4869322913505f5144cb170aa7f9a829a36f9"
+      "sha256": "49af77bd2c4a40d422b6890fd0ba3e0f54a7a3d99dda8d7b303684671101d86a"
     },
     {
-      "bytes": 9128,
+      "bytes": 15138,
       "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "3dcb7dcbf9811e514640d00d8de2980611560467",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "docs/nsc-atlas-hierarchy-perturbations.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "3c39b30044b51e18fdc7057d30d83535c6d02ecdf4e31a5c686670368ede2199"
+      "sha256": "89cbbddbc4050fdb15cb350726cca33f4488c8b3cbee6beab419cd2b10cc3cba"
     },
     {
       "bytes": 8895,
@@ -10864,15 +10872,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 109637,
+      "bytes": 110366,
       "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "3dcb7dcbf9811e514640d00d8de2980611560467",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "798405e613f075797246a5ac94c52839682ce1a1ac5cb0078deca551e09dda76"
+      "sha256": "ea114bf7c7c672b8bcfaa7bc0a850ae3c6b29064e179ec993769d287e56aeded"
     },
     {
       "bytes": 30876,
@@ -11840,12 +11848,12 @@
       "sha256": "7398cba18661886990f700660d6d11564db27ddd912bd695ecbbab3a96bf177a"
     },
     {
-      "bytes": 597752,
+      "bytes": 598183,
       "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "3dcb7dcbf9811e514640d00d8de2980611560467",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1cf975b62488b7068496e6cac0b1deec1dfd5b835da323140a6b0b2aeff3231a"
+      "sha256": "e81183adfef46d5ba2e02ab08e980c8c9314d6ec68465aafe523411638e2e9ec"
     },
     {
       "bytes": 6705,
@@ -11854,20 +11862,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 224576,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 225750,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d95ff341ae52ce28bcfd82d35e1501177962fc23c4f9567ea4c7e4b757063e31"
+      "sha256": "307dbc2f86f97b316d54e20070da5dabb9089f11c35e17ae8ab12d8a3219c8f5"
     },
     {
-      "bytes": 41429,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 41834,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "341e3904ec2d0fd1b350e550a9e433da6dc5aa5be3901e116389922f306f7d17"
+      "sha256": "987f4f10ad4df98f3e9dcf055d49dd83d6b63a3860e35b69a465d7a06ca670a9"
     },
     {
       "bytes": 18356,
@@ -11936,20 +11944,20 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 30716,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 31223,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ef022bc61515ea0be9d0da7cb557143bf21e55da28919a3c6d41edabb10d15b6"
+      "sha256": "90f637b98737999538c7fba30a4be0ef23dc377fc158316ea852367502d1c73c"
     },
     {
       "bytes": 3206,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7307bb48bc70c5697f4d0272b482ad71868dd8b04cd677092b6f78089f6980a5"
+      "sha256": "fa44afee43b803ba1f4457555c3b5bff25f8c2aa19ea9a48e705726c20e26881"
     },
     {
       "bytes": 43377,
@@ -11969,27 +11977,27 @@
     },
     {
       "bytes": 396,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5ac25f2f3ae2738eacdb12859c9fac17d96f828e5b8d5aed49c0f1b77b3a04bd"
+      "sha256": "0b7d952b64f35abe642f241535acbf2568031870e48ef4a280f3b33904bd0353"
     },
     {
-      "bytes": 389341,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 400309,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "84344f92cd27f084f68fccd68526b35b62f0f06db43e04ba0ae11b4278f00134"
+      "sha256": "3b3d3609f49eaf7e28c1825416f772fc60b63b2bd975131aeff81a839bcd3646"
     },
     {
-      "bytes": 10323373,
-      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
+      "bytes": 10873806,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "10ae2c3ffc4df38e82a7a3d5262c34ef3addbdcea8cacbdef1c7697ae3b7a653"
+      "sha256": "7ce935821247ba47da2076d8d5211b9ba066e3d72909299db12248c28b6b515e"
     },
     {
       "bytes": 3283,
@@ -30686,6 +30694,22 @@
       "sha256": "e41626e10540c5a9e39e8b1e4732be5fdcfe0a229d4e5380a922784cb1b0ffad"
     },
     {
+      "bytes": 34061,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "path": "results/summaries/nsc-atlas-hierarchy-perturbations-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1dad4cfdad4c9908c971deece1489ad8c3161be7af1bc05e71ded54140da63ea"
+    },
+    {
+      "bytes": 8771,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "path": "results/summaries/nsc-atlas-hierarchy-tidal-tail-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8951d86ee7a86fa0ef1553717c264bcfa560bddd6d484d49f03c822079ea5efd"
+    },
+    {
       "bytes": 16769,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "ab8b89531aebabae54e7b97a2344b0e16e0b43f6",
@@ -31271,12 +31295,20 @@
       "sha256": "baf58c540444b122081aaf78d0a59a607beb3438c6d7caba9ec7129cca9a930a"
     },
     {
-      "bytes": 8801,
+      "bytes": 10749,
       "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "3dcb7dcbf9811e514640d00d8de2980611560467",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "scripts/check_nsc_atlas_hierarchy_perturbations.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "532227cfac8424b77e02ec93b5b8dc2d09f7666ec683de9e1ad21c30c7641c84"
+      "sha256": "a03cff3e833e239f03d49fe1df73132223f92e1cd0006dece1b7315e9309f84f"
+    },
+    {
+      "bytes": 4859,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "path": "scripts/check_nsc_atlas_hierarchy_tidal_tail.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "80d32e9f2fde0f7b8f36bec95caf8116f0ca6e77273b13fab4c8da49c88da6c2"
     },
     {
       "bytes": 6167,
@@ -34216,6 +34248,14 @@
       "sha256": "713b2488af624705247c51d57329cc184f0017d174247074c845fdd3c7f68123"
     },
     {
+      "bytes": 2537,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "path": "scripts/plot_nsc_atlas_hierarchy_perturbations.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2a0220ee8b41b91dc7cd9fc36658019ca68f8bfbc0683359d196387dba9d93bf"
+    },
+    {
       "bytes": 5347,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "69ac1279395903ee403da369b5db58a6ed850616",
@@ -35341,6 +35381,14 @@
       "path": "src/recursive_horizons/nsc_atlas_hierarchy_perturbations.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "b7a24f1a5c5ba4a61b83887af4c863ddd83dacba9f8d122fb85e119f52da5fff"
+    },
+    {
+      "bytes": 3739,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "path": "src/recursive_horizons/nsc_atlas_hierarchy_tidal_tail.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0bf8bf2f2d33eb9decfa844d3295328516e70c64effcd66a799d70068d0c46bd"
     },
     {
       "bytes": 4822,
@@ -39693,12 +39741,20 @@
       "sha256": "673c073df007b4c8862f0f3eae3105be6b4ff0ef3602adb1b33a70972fa2dddb"
     },
     {
-      "bytes": 3951,
+      "bytes": 4788,
       "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "3dcb7dcbf9811e514640d00d8de2980611560467",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
       "path": "tests/test_nsc_atlas_hierarchy_perturbations.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "15c803ef8ed3b8dfc8001fd2f4a48ff26b7a41216ab512a6d70098c7d82f161b"
+      "sha256": "e2efb258b1f140f50514ed83e09109bace4e512ef0106bfae855d33b4689e84f"
+    },
+    {
+      "bytes": 2395,
+      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
+      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "path": "tests/test_nsc_atlas_hierarchy_tidal_tail.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6ed0a0dac34e21b2e5da4e850c01f737bba687ef4e0cf5aa90ba492289c7ef5c"
     },
     {
       "bytes": 4080,

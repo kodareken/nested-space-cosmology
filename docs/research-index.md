@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [finite perturbation owner](nsc-atlas-hierarchy-perturbations.md)
+connects evolving structure to radial and quadrupole response. Exact tangent
+flow, symplectic transport and real Gram bounds separate phase sensitivity
+from density deformation. A targeted tidal-tail calculation addresses a
+failed exterior probe while preserving the resolved core result and the
+unresolved external-amplitude status.
+
 The [hierarchy evolution](nsc-atlas-hierarchy-evolution.md) connects the
 constrained two-scale preparation to finite radial localization. It keeps
 the ambient scalar and parent expansion in the derived envelope, checks

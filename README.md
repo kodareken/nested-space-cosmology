@@ -1,5 +1,13 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [radial and quadrupole response](docs/nsc-atlas-hierarchy-perturbations.md)
+now tests the retained evolving core beyond spherical symmetry. A real
+Gram-matrix bound covers every coefficient in a declared twenty-dimensional
+quadrupole family; the sampled field amplification is 1.08113 +/- .00025.
+Radial phase sensitivity is larger. A separate harmonic tidal-tail proof
+repairs an exterior boundary assumption, while the external amplitude remains
+unresolved under refinement and is not reported as a prediction.
+
 The [core--reservoir evolution](docs/nsc-atlas-hierarchy-evolution.md)
 now tests finite localization in the expanding inherited parent. A classical
 real-scalar envelope retains the reservoir and self-gravity; independent mass

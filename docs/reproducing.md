@@ -1,5 +1,23 @@
 # Reproducing the root project
 
+## Radial/quadrupole response and the tidal phase boundary
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_hierarchy_perturbations.py --output results/summaries/nsc-atlas-hierarchy-perturbations-v1.json --figure
+python scripts/run_python.py scripts/check_nsc_atlas_hierarchy_tidal_tail.py --output results/summaries/nsc-atlas-hierarchy-tidal-tail-v1.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_hierarchy_perturbations.py tests/test_nsc_atlas_hierarchy_tidal_tail.py
+```
+
+The [owner](nsc-atlas-hierarchy-perturbations.md) specifies the initial real
+span, angular normalization, seed ages, sample times and boundary models.
+The first campaign used about 4073 CPU seconds within 4500. A separate,
+physically diagnosed tail-matching calculation used about 615 within 800.
+Completed fields/histories remain local and are reused by their source keys;
+public records retain only compact outputs, comparisons and hashes. Run the
+two producers in order, because the tail record binds the original diagnostic.
+The core response passes its checks; the outward amplitude remains explicitly
+unresolved and must not be quoted as a prediction.
+
 ## Evolving the supplied core and its reservoir
 
 ```powershell
