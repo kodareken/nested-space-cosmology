@@ -18,6 +18,19 @@ starting a derivation.
 
 ## Current execution priority — 25 October 2026
 
+### Radial and quadrupole response of the evolving core
+
+Active: [perturb the retained trajectory](nsc-atlas-hierarchy-perturbations.md)
+without changing its spherical source. Exact real-linear potential flow,
+self-consistent multipole gravity and a conserved symplectic form lead to
+finite Gram-matrix response bounds. The quadrupole result covers all five
+orientations in the declared two-profile amplitude/phase span. Compare
+field sensitivity with actual density deformation; add late quadrupole
+seeds and nonlinear radial centred differences. Five numerical controls
+plus two nonlinear checks fit a4500 CPU-second budget. The preceding
+finite persistence result is preserved, not reopened as a new source model.
+
+
 ### Finite persistence of the core and its supply region
 
 Complete within its approximation: the [hierarchy evolution](nsc-atlas-hierarchy-evolution.md)

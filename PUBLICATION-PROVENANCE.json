@@ -1676,9 +1676,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2511996,
+      "bytes": 2513770,
       "path": "docs/lab-snapshot.json",
-      "sha256": "a6341f72d53e5f54acf1c6084176fafeebb6a5506fc0bc53cebb505a979939e5"
+      "sha256": "d1f399279905cee5f51366626157f4797f1c0d0644c4efc35f9df5edfffee817"
     },
     {
       "bytes": 4997,
@@ -1804,6 +1804,11 @@
       "bytes": 11273,
       "path": "docs/nsc-atlas-hierarchy-evolution.md",
       "sha256": "b0054d07bed4d5811ea0274d02a4869322913505f5144cb170aa7f9a829a36f9"
+    },
+    {
+      "bytes": 9128,
+      "path": "docs/nsc-atlas-hierarchy-perturbations.md",
+      "sha256": "3c39b30044b51e18fdc7057d30d83535c6d02ecdf4e31a5c686670368ede2199"
     },
     {
       "bytes": 8895,
@@ -1951,9 +1956,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 108918,
+      "bytes": 109637,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "a5b1bde62767393dfd953fdfbdd586017e5fe1bdca941d6c344218885991d2e2"
+      "sha256": "798405e613f075797246a5ac94c52839682ce1a1ac5cb0078deca551e09dda76"
     },
     {
       "bytes": 30876,
@@ -2441,9 +2446,9 @@
       "sha256": "7398cba18661886990f700660d6d11564db27ddd912bd695ecbbab3a96bf177a"
     },
     {
-      "bytes": 596831,
+      "bytes": 597752,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "eb09bd1c55895cc6081fd92f56970549de2cfa572c5f82928e9fb4d66240c3f2"
+      "sha256": "1cf975b62488b7068496e6cac0b1deec1dfd5b835da323140a6b0b2aeff3231a"
     },
     {
       "bytes": 6705,
@@ -15671,6 +15676,11 @@
       "sha256": "baf58c540444b122081aaf78d0a59a607beb3438c6d7caba9ec7129cca9a930a"
     },
     {
+      "bytes": 8801,
+      "path": "scripts/check_nsc_atlas_hierarchy_perturbations.py",
+      "sha256": "532227cfac8424b77e02ec93b5b8dc2d09f7666ec683de9e1ad21c30c7641c84"
+    },
+    {
       "bytes": 6167,
       "path": "scripts/check_nsc_atlas_jordan_radius_bound.py",
       "sha256": "1a5a996510aaca05c0ec668a95a23c434ff9bed787714db99cfe585436c9d999"
@@ -18331,6 +18341,11 @@
       "sha256": "a1495031b01f236cdca475cdcaffa41bdf0cccc974b6584133f006676fdf0921"
     },
     {
+      "bytes": 10153,
+      "path": "src/recursive_horizons/nsc_atlas_hierarchy_perturbations.py",
+      "sha256": "b7a24f1a5c5ba4a61b83887af4c863ddd83dacba9f8d122fb85e119f52da5fff"
+    },
+    {
       "bytes": 4822,
       "path": "src/recursive_horizons/nsc_atlas_jordan_radius_bound.py",
       "sha256": "1d88b2bb20313a00468013035c558a8e3101ed4e391a8909dee40a46ec052703"
@@ -20926,6 +20941,11 @@
       "sha256": "673c073df007b4c8862f0f3eae3105be6b4ff0ef3602adb1b33a70972fa2dddb"
     },
     {
+      "bytes": 3951,
+      "path": "tests/test_nsc_atlas_hierarchy_perturbations.py",
+      "sha256": "15c803ef8ed3b8dfc8001fd2f4a48ff26b7a41216ab512a6d70098c7d82f161b"
+    },
+    {
       "bytes": 4080,
       "path": "tests/test_nsc_atlas_history_onset.py",
       "sha256": "a6019f9384324596b3e09b6a52296439b93686fb78d949e741a021e74d743a13"
@@ -23121,7 +23141,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "a6341f72d53e5f54acf1c6084176fafeebb6a5506fc0bc53cebb505a979939e5",
+  "lab_snapshot_sha256": "d1f399279905cee5f51366626157f4797f1c0d0644c4efc35f9df5edfffee817",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-25.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

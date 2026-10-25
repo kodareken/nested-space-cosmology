@@ -1,5 +1,20 @@
 # Prior art and admission of new research
 
+## Finite angular response on the evolving hierarchy, 25 October 2026
+
+The [perturbation owner](nsc-atlas-hierarchy-perturbations.md) reuses
+Schrodinger--Poisson perturbation theory and spherical multipole Green
+functions, evaluated on the actual retained expanding source. The missing
+connection is whether radial breathing accompanies amplification of angular
+distortions. Two smooth radial profiles and their phase partners define the
+finite initial span; real Gram matrices cover all coefficients and all five
+quadrupole orientations. Source hashes, symplectic transport, a passive
+unitary control, analytic multipole/free-wave checks and nonlinear radial
+centred differences separate errors from physical response. Five grids/time/
+domain cases and two nonlinear validations use useful parallelism within
+4500 CPU seconds. Finite sampled bounds do not imply all-profile, asymptotic,
+nonlinear or full-GR stability.
+
 ## Core/reservoir evolution in its expanding parent, 25 October 2026
 
 The [evolution owner](nsc-atlas-hierarchy-evolution.md) reuses the real-scalar
