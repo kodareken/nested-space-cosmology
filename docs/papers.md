@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision2026-10-25.6 adds Sections10.53--10.54 and Figure30: a fixed-observer
+arrival map from the actual formed source. Direction, proper delay and
+frequency satisfy two independently tested endpoint identities. A frozen
+potential control exposes the frequency's sensitivity to source evolution.
+The held-clock and weak-metric assumptions are explicit.
+
 Revision2026-10-25.5 adds Sections10.51--10.52 and Figure29: compatible
 finite-amplitude compact data and nonlinear concentration from a weak seed.
 Physical mass-shell contraction separates the 10% formation example from

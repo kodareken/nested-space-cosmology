@@ -463,6 +463,11 @@
       "section": "10.51",
       "status": "measured",
       "owner": "docs/nsc-atlas-seed-collapse.md"
+    },
+    "atlas-formed-observer": {
+      "section": "10.53",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-formed-observer.md"
     }
   },
   "findings": [

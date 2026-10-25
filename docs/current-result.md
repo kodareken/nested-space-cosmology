@@ -1,5 +1,14 @@
 # What the calculations show
 
+The [formed-source observer](nsc-atlas-formed-observer.md) now connects
+the actual nonlinear concentration to image direction, proper delay and
+received frequency in a declared evolving weak metric. Fixed-clock and
+angular arrival-map identities independently link the three readouts.
+The primary shift is21.20 +/- .20 milliarcseconds; the supplied Lambda
+ruler converts its delay to27.5906 +/- .0120 days. No astronomical data
+were fitted. Held clocks, source preparation and metric approximation
+remain explicit; physical observer kinematics is the next connection.
+
 The [nonlinear compact seed](nsc-atlas-seed-collapse.md) now connects the
 formation window to a finite concentration without an installed core.
 A separately supplied 10% seed turns around and contracts a fixed-source

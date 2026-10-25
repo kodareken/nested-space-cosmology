@@ -13,7 +13,8 @@ Complete: the exact compact seed and its gradient correction satisfy the
 local initial constraint. The 5% envelope is checked through A=16, and the
 separate 10% preparation through its first compression/rebound at A=1.2.
 Fixed-mass contraction, conservation and refinement distinguish the two.
-Next: use the formed field for a finite observer calculation. No stationary
+The [formed-observer calculation](nsc-atlas-formed-observer.md) now carries
+its next finite signal. No stationary
 profile, core mass or observed collapse endpoint was fitted.
 
 Retain omega=1e9, Lambda=9/32, D=3/8, C=.0227765023676067, comoving

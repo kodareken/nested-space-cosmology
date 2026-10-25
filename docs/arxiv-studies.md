@@ -1,5 +1,17 @@
 # Cited arXiv studies
 
+## Spacetime arrival maps and the forming source, 25 October 2026
+
+[Perlick,1010.3416](https://arxiv.org/abs/1010.3416) supplies general
+spacetime lensing context; its abstract and the published review's Fermat
+discussion were read. [Fleury--Larena--Uzan,2011.04440v4](https://arxiv.org/html/2011.04440v4),
+time-delay/Fermat discussion and Appendix A, provides related endpoint
+and time-delay-gradient context. Their worked approximations are not
+imported as the NSC metric. The [new owner](nsc-atlas-formed-observer.md)
+derives and checks its own null endpoint relations and applies them to
+the short continuation of the retained formed field. These identities
+are general consistency relations, not a unique signature of nesting.
+
 ## Compact-seed nonlinear continuation, 25 October 2026
 
 [Seidel--Suen,gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015) provides

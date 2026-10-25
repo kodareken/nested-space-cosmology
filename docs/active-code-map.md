@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The [formed-observer owner](nsc-atlas-formed-observer.md) uses
+`nsc_atlas_formed_observer.py` for short reversible source propagation,
+mass-current metric derivatives, proper clocks and a fixed-receiver null
+boundary problem. Its check/plot scripts reuse authenticated raw formation
+fields. Photon endpoint identities, pure-phase data, analytic mass
+integrals and independent lens/background limits test the same calculation.
+
 The [nonlinear seed owner](nsc-atlas-seed-collapse.md) uses
 `nsc_atlas_seed_collapse.py` for the exact compact source, initial gradient
 correction, phase-consistent Poisson kernel, log-scale evolution and

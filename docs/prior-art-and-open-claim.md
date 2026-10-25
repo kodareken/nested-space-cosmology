@@ -1,5 +1,18 @@
 # Prior art and admission of new research
 
+## Observer map from the formed concentration, 25 October 2026
+
+The [owner](nsc-atlas-formed-observer.md) reuses the declared averaged
+metric, null Hamiltonian and spacetime endpoint/Fermat identities. The
+missing connection is a fixed-worldline signal from the actual forming
+source, retaining its time dependence. Seven source/integration controls
+and proper-age/angular differences run in four workers within120 CPU
+seconds, without a full formation replay. Mass-current metric derivatives,
+curved-background and Plummer controls, source echoes and arrival-map
+identities distinguish numerical failure from observer/metric assumptions.
+The full quoted errors apply to one fixed primary receiver; the additional
+two receiver offsets illustrate the finite map.
+
 ## Nonlinear compact-seed formation, 25 October 2026
 
 The [owner](nsc-atlas-seed-collapse.md) reuses spherical scalar constraints,

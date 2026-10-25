@@ -81,6 +81,10 @@ Its finite-amplitude continuation now distinguishes an expanding high-contrast
 regular concentration with a first rebound. The initial constraint,
 conservation laws and numerical controls accompany this finite envelope
 result; its early parent and seed statistics remain supplied.
+The actual forming field now predicts a fixed-observer image direction,
+proper delay and frequency in an explicit evolving weak metric. Two
+arrival-map identities connect those readouts, and a frozen-potential
+control exposes a frequency contribution from the source's dynamics.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -6987,6 +6991,166 @@ in the inherited parent. Its actual field can now supply an observer
 calculation. The old installed-core and different-frequency lens histories
 cannot be substituted for that next signal.
 
+### 10.53. The forming field supplies one connected observer map
+
+<!-- nsc-claim:atlas-formed-observer -->
+
+Evidence: [fixed-observer response](../results/summaries/nsc-atlas-formed-observer-v1.json)
+and [metric, mass-current and endpoint derivation](../docs/nsc-atlas-formed-observer.md).
+
+The finite concentration can now be used as a source for light. Start from
+the authenticated $A=1.2$ fields of the preceding formation calculation.
+Short backward and forward steps reconstruct a local interval around that
+event using the same field operators; no formation grid or fitted halo
+profile is substituted. The source's time dependence remains in the ray.
+
+The declared averaged weak metric is
+
+$$
+ds^2=-(1+2\Phi)dt^2+A^2L^2(1-2\Phi)
+\left(\frac{dr^2}{B_0}+r^2d\Omega^2\right),\qquad
+B_0=1-CL^2r^2,\qquad \Phi=\frac{DL^2}{A}V.
+$$
+
+It retains the parent spatial curvature and equal leading scalar
+potentials. Null propagation is solved in this metric. Omitted higher-order
+Einstein-scalar, carrier and stress terms remain approximation errors;
+the numerical ranges below are not bounds on the full relativistic model.
+
+There is a direct connection between the field current and the potential's
+time derivative. Let $N=\ln A$, $j=\operatorname{Im}(f^*f_r)$ and
+$m(r)=\int_0^r s^2(|f|^2-1)ds$. The existing envelope continuity equation
+gives $m_N=-ar^2j$, with $a=1/(\omega L^2A^2H)$. Since the boundary-clock
+potential is an integral of $m/r^2$,
+
+$$
+\Phi_r=\frac{DL^2}{2A}\frac{m(r)}{r^2},\qquad
+\Phi_N=-\Phi+\frac{DL^2a}{2A}\int_r^{L_{\rm box}}j(s)ds.
+$$
+
+The potential, its spatial force and its time variation therefore come
+from the same formed source. Spectral field derivatives and exact radial
+polynomial integrals evaluate them; no derivative of a stored plot is used.
+A Hermite interpolation in time preserves a consistent metric and its
+derivatives. Pure-phase data give an independent analytic check of the
+current term.
+
+Place test clocks at comoving radius $r_s=.25$, with the emitter at
+azimuth zero and receiver at $\Theta=\pi-.08$. They are held at these
+coordinates. They do not follow the scalar flow or the contracting mass
+shell that began at $r=.25$ in the earlier preparation. Their proper-clock
+rate is
+
+$$
+\frac{d\tau_s}{dN}=\frac{\sqrt{1+2\Phi(r_s,N)}}{H(N)}.
+$$
+
+Set both clocks to zero on the declared initial slab slice. The emission
+proper age equals the homogeneous reference clock's age at $A=1.2$.
+Solve its actual emission event in the perturbed metric, then shoot the
+inward angle to the fixed receiving worldline. This matches proper age
+and receiver position, rather than comparing different arrival locations.
+It resolves one weak-image branch in the declared angular bracket.
+
+With $dq=dt/(AL)$, the null Hamiltonian is
+
+$$
+\mathcal{H}_q=F\sqrt{B_0p^2+J^2/r^2},\qquad
+F=\sqrt{\frac{1+2\Phi}{1-2\Phi}}.
+$$
+
+The emitted frequency is normalized to one. Its received value obeys
+
+$$
+\log\frac{\nu_o}{\nu_e}=N_e-N_o+
+\frac{1}{2}\log\frac{1+2\Phi_e}{1+2\Phi_o}
++\int\frac{2\Phi_NN_q}{1-4\Phi^2}dq.
+$$
+
+The small time-dependent term is integrated directly, avoiding cancellation
+between nearly equal photon energies. An endpoint energy identity checks
+it independently. The receiver's proper flight time is also integrated;
+it differs from a coordinate Shapiro delay.
+
+### 10.54. Direction, delay and frequency are derivatives of one arrival map
+
+Let $T(\tau_e,\Theta)=\tau_o$ be the arrival map. Null endpoint variation
+gives, for the specified worldlines,
+
+$$
+\nu_o\,d\tau_o=\nu_e\,d\tau_e+J_{\rm physical}\,d\Theta.
+$$
+
+For unit emitted frequency this implies
+
+$$
+\frac{\partial T}{\partial\tau_e}=\frac{1}{\nu_o},\qquad
+\frac{\partial T}{\partial\Theta}=R_o\sin\beta_o,
+\qquad R_o=A_oLr_s\sqrt{1-2\Phi_o}.
+$$
+
+Here $\beta_o$ is the observed ray angle relative to the radial axis.
+Subtracting the homogeneous reference gives two independently testable
+relations for the excess delay. They belong to the general spacetime
+Fermat/endpoint framework described by
+[Perlick](https://arxiv.org/abs/1010.3416) and
+[Fleury--Larena--Uzan](https://arxiv.org/html/2011.04440v4).
+The contribution here is their evaluated application to the actual forming
+source. The identities check one connected prediction; they are not three
+independent confirmations of nesting.
+
+For the primary fixed observer, the result is:
+
+| Readout relative to the matched homogeneous parent | Fine result and numerical comparison range |
+| --- | ---: |
+| Image-direction change | $21.20\pm.20$ milliarcseconds |
+| Proper flight-time excess, with the supplied ruler | $27.5906\pm.0120$ days |
+| Log received-frequency change | $(-1.44088\pm.01399)\times10^{-11}$ |
+
+The delay conversion uses the previously supplied
+$\Lambda=10^{-52}\,\mathrm{m}^{-2}$ ruler; the angular conversion does
+not need an SI length. Source parameters, clock protocol and geometry are
+specified, and no astronomical data were fitted. The same calculation
+also fixes a scale-independent relation:
+
+$$
+\Lambda_{\rm physical}(c\,\Delta\tau)^2
+=(5.10730\pm.00441)\times10^{-23}.
+$$
+
+This connects the inherited vacuum to a local flight-time excess within
+the declared model. It does not determine the observed absolute vacuum.
+
+![Three readouts of one forming source and fixed observer map](../docs/figures/nsc-atlas-formed-observer.png)
+
+*Figure 30. The actual forming source supplies direction, proper delay and
+frequency for specified receiver offsets. The middle offset has the full
+quoted source and integration controls; the other two illustrate the map.
+The cross freezes the comoving potential under the same clock protocol.
+Its frequency discrepancy exposes the source's time dependence.*
+
+The time derivative of excess delay is $1.44090\times10^{-11}$, agreeing
+with the independently calculated frequency relation within
+$1.36\times10^{-15}$. The smaller-step angle derivative agrees with the
+direction relation within $6.59\times10^{-16}$. Source-grid, source-time,
+outer-domain, short-slab and ray-tolerance controls determine the reported
+numerical ranges. A curved homogeneous ray and an independent Plummer
+Born calculation check the geometry and optical normalization.
+
+Freezing the comoving potential removes its expansion-corrected frequency
+term. The total log-frequency contrast becomes $-6.79268\times10^{-12}$,
+while the direction and delay change much less. Thus an almost unchanged
+image can accompany a distinguishable dynamical frequency contribution.
+The frozen potential is an optical approximation control, not a second
+self-consistent formation history.
+
+This is a finite forward prediction for held test clocks in the stated
+weak metric. Freely falling clocks or emitters moving with the scalar flow
+need their own trajectories, Doppler effects and aberration. Those effects
+can exceed the small gravitational frequency contrast. The next link to
+observations is therefore physically prepared or measured kinematics and
+the assessment of omitted metric terms, using this same formed source.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -7036,7 +7200,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 30. The isolated reference in joined causal charts. Horizons are
+*Figure 31. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -8042,7 +8206,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 31. Saved finite-window comparisons. A: the previous and current
+*Figure 32. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -8138,7 +8302,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 32. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 33. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -8923,7 +9087,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 33. Research dependencies, distinct from spacetime causal arrows.
+*Figure 34. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

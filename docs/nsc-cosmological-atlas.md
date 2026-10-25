@@ -18,6 +18,21 @@ starting a derivation.
 
 ## Current execution priority — 25 October 2026
 
+### The formed source now supplies a joint observer response
+
+Complete within the declared weak metric and held-clock protocol:
+the [formed observer](nsc-atlas-formed-observer.md) predicts a direction,
+proper flight-time excess and received frequency from the authenticated
+concentration. The arrival map's emission-age and receiver-angle derivatives
+recover frequency and direction independently. Short source and optical
+controls preserve the same formation state; no old lens is rescaled.
+
+Next: physically prepared or measured observer trajectories and inference
+from this source, with Doppler/aberration and omitted metric terms explicit.
+The finite formation and held-observer calculations remain complete in
+their stated domains. A matching number alone would not identify nesting
+against alternative source or geometry models.
+
 ### A formed field for the next observer calculation
 
 Complete within its finite envelope domain: the

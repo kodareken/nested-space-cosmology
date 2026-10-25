@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+## Fixed observers of the formed source
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_formed_observer.py --output results/summaries/nsc-atlas-formed-observer-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_formed_observer.py
+```
+
+The [owner](nsc-atlas-formed-observer.md) specifies the weak metric and held
+clock protocol. About40 CPU seconds with four workers construct short source
+slabs, seven controls and endpoint derivative checks. The preceding ignored
+`.build/seed-collapse` final fields must exist; regenerate them with the
+seed-collapse producer below if needed. Their hashes are checked before
+use. No full source evolution is hidden in this observer producer.
+
 ## Nonlinear compact-seed formation
 
 ```powershell

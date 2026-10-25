@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "50980689dfeef889d3267c26103b06bf1475ff84",
+  "current_receipt_commit_parent": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 27331,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 27905,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "5b847acb9d1fa75c6fca89fd5ad0d18eaff578cba2fa5a4aa0fa871b052283df"
+      "sha256": "22035ead8c68efe065b808ed60aaeded9e9a8c8b43535f818308e1eee9dff854"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 284942,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 285369,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "1495c64bdf57b0b7d8ca8e23f4123f772140858760119d2f7747f6f672c4f91a"
+      "sha256": "ee7f8e83d6441ccb22d59280e141c9c5275bd17531bfa60a116c3c74f6ca3fed"
     },
     {
-      "bytes": 130663,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 131396,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "6f3c22c3085c59028b2614732155634413dffbb376723599c7a6396c7e6a03f9"
+      "sha256": "d44f544e7286680604136a3a82de782d7abcf5ac0beb21eb609fe7e5f4e496f3"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 460935,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 461504,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "77a45061d4e843036f5fb7cea721f7c18e5a283bf97be7625e4bc9d4235cde9f"
+      "sha256": "f568e0c55efe96ebc3914b36a5f49db23ae5a567c30720745f1a73bf3e8ffcbb"
     },
     {
       "bytes": 173938,
@@ -10403,6 +10403,14 @@
       "path": "docs/figures/nsc-atlas-formation-window.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "ecee3acc2d305a45d412eec70a60ec4511c4946a5dd437f4f45637ef3f2332e1"
+    },
+    {
+      "bytes": 136697,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
+      "path": "docs/figures/nsc-atlas-formed-observer.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9a122b78c978c3fef0092ade93abb6df52704808a470c8bbef04c987aeff0fca"
     },
     {
       "bytes": 142652,
@@ -10740,6 +10748,14 @@
       "sha256": "ad0e14bc90f6a26456ed7d1fa51c6bf28cce25c8aabd44bfa77ba5e85bc52ff2"
     },
     {
+      "bytes": 13191,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
+      "path": "docs/nsc-atlas-formed-observer.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "484c92050acfe8fdc3878cb836956873c9bc574069b8c1dccc5db108d0cbfc44"
+    },
+    {
       "bytes": 15451,
       "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
       "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
@@ -10869,12 +10885,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 16870,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 16908,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "docs/nsc-atlas-seed-collapse.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "112d97d4a8bf86c0fa1b6ef4d9acf92a0633f2d132dc932b71aae1235340dec6"
+      "sha256": "c8b4c1d70509075daac6de9b2b2103f2cda771dbe677a84ea649b92edc831825"
     },
     {
       "bytes": 14560,
@@ -10920,15 +10936,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 112869,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 113705,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "23e60a2b6ccd3d52fd3e54dc832db2d5cf79c23d1f4538ff48905170211517a8"
+      "sha256": "a4973e787420e3be975edfd89326905d64229199a3f09c810220ccb07fdfdbb6"
     },
     {
       "bytes": 30876,
@@ -11880,12 +11896,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 24926,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 25281,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "128b0c8237a452265ac29b1ecdf3ffeae6f18bf99e3af65dabf2615c344193d7"
+      "sha256": "87582b82c64cfdff71f961656fa770c8ad4757ed39cd98d9f2d1467c9d7e8625"
     },
     {
       "bytes": 12685,
@@ -11896,12 +11912,12 @@
       "sha256": "f7d8c592fa3d7cb71aad04d78a2f2fb3ff605bdfe3c943ee12aaf833ecd17005"
     },
     {
-      "bytes": 600710,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 601473,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c93ae965e88f558daee8c2d276a58688245ca66324c5681b8212a54944fce47b"
+      "sha256": "de613d6172819b99a6d09d9b5122ae83cd339d5c73f0893b86816765021afdd9"
     },
     {
       "bytes": 6705,
@@ -11910,20 +11926,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 227841,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 228568,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b9dfe34951b2ff4e1e39e0345478a69c7f8619f9aa6777e1c1f479e7bdd40932"
+      "sha256": "c59161fff622f829b12787ebeea3b97feafbe39dac833be36fec01f81b6ec74e"
     },
     {
-      "bytes": 43479,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 44048,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "f6845e9591b616170ba725d3243321c9d63901f809331e8f0360028dbecc19a8"
+      "sha256": "7b289688b0761d9662f3d4f4b4db74ae2ef08d889619374ce6f9655b144dcdc3"
     },
     {
       "bytes": 18356,
@@ -11992,28 +12008,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 32196,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 32517,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "046d6b988ab37252b53052eefa628350e271ebea4ffb2e68eb285e56cf4c8750"
+      "sha256": "394437f057c0d00a9983b501251b7205332695f2da627803cd35d9e923b501bb"
     },
     {
       "bytes": 3206,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e60c62f2c5a1076e0b6fa50039c5b1929b5b0798e10cebfc9084e5a3fc96c7fe"
+      "sha256": "018fd9c9539460c4ed755287409dd455efa9b0e7895c94d44ab4e63f92049edd"
     },
     {
-      "bytes": 43814,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 43957,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0767df8577ac71b96e649ab06e48183fa7c6f7dcfbd4fd3de263bd3c024cfba4"
+      "sha256": "14db1ac000dbc572c4918b3452a9154c05e622c49756b1bd6769ab4cc03afe37"
     },
     {
       "bytes": 226492,
@@ -12025,27 +12041,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1f00df26909f4a3e1e3f1ec9f59333653bf333c2ecc525061c68ccc1b641d9aa"
+      "sha256": "e2a97b1a9fa3fa6e487c9d96eff51c0fe493a95c39b3de6d98133a3908ee25f6"
     },
     {
-      "bytes": 423775,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 431048,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7681aa1bfbf7a37e555b16466b017cbecaf3d7a4fa4584119a764e186e8f5c28"
+      "sha256": "824bb44df3f72b96a28fc522ae3e2fca42263ed723fd512259448b2163f183da"
     },
     {
-      "bytes": 11694963,
-      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
-      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "bytes": 11934974,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "08de41b25df28ca4db122b570f720bab4c8d33e7d82ef5f422c35f218e7d464d"
+      "sha256": "a616e5ead34bc3dc22720cb7438b962e84aa84d1b0be0e57b83a79b32bb28f4b"
     },
     {
       "bytes": 3283,
@@ -30702,6 +30718,14 @@
       "sha256": "044233811d0c4ab54473efcb6a9318baa0d29f70a223e6885c927fa2baa5832f"
     },
     {
+      "bytes": 27582,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
+      "path": "results/summaries/nsc-atlas-formed-observer-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "207122a2a3dfebfc72a52f02a39b5b342f96bd316eb7294d4ba4c192369dad6b"
+    },
+    {
       "bytes": 4505,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "e1c2027356fee463632f7f7dba23256cd782b7ce",
@@ -31349,6 +31373,14 @@
       "path": "scripts/check_nsc_atlas_formation_window.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "4935b191ef08edd926edd7e4c067197e99c4d08edc5e5ef399c5e8f103b66390"
+    },
+    {
+      "bytes": 9451,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
+      "path": "scripts/check_nsc_atlas_formed_observer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8238ba6193ac18e4c72d9c3e2f0541782eb6aaaac5aa6c4a5cdf0d58e26d4cc7"
     },
     {
       "bytes": 4838,
@@ -34344,6 +34376,14 @@
       "sha256": "1866e9da1c860a99a805a6468132e24476d01a775c81b5530f780225efe0c595"
     },
     {
+      "bytes": 1608,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
+      "path": "scripts/plot_nsc_atlas_formed_observer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5dd897bf48780aedde0d1a5b72ed62bc279dd48b2e492603d17fdbad86a5289a"
+    },
+    {
       "bytes": 2410,
       "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
       "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
@@ -35461,6 +35501,14 @@
       "path": "src/recursive_horizons/nsc_atlas_formation_window.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "855d016db7f3f6ef55119e1f5ef6cdc9508ef17c9a3b29bc1c43333171c9a920"
+    },
+    {
+      "bytes": 10686,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
+      "path": "src/recursive_horizons/nsc_atlas_formed_observer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ce2ea91b266c134b3d3450a3a8032abae666fb80a850923ad577226d21976c5e"
     },
     {
       "bytes": 21701,
@@ -39851,6 +39899,14 @@
       "path": "tests/test_nsc_atlas_formation_window.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "b5adf85c302c5cfcc4179ff358be372dbdf6a50e9c9637e754a1839665e370ce"
+    },
+    {
+      "bytes": 4084,
+      "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
+      "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
+      "path": "tests/test_nsc_atlas_formed_observer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d3b4f091e6500a55273767aa02fc244a63129bf6f0642bc26e452ef8d17f1f65"
     },
     {
       "bytes": 19864,
