@@ -1,5 +1,19 @@
 # Prior art and admission of new research
 
+## Core/reservoir evolution in its expanding parent, 25 October 2026
+
+The [evolution owner](nsc-atlas-hierarchy-evolution.md) reuses the real-scalar
+nonrelativistic envelope and spherical Poisson framework, deriving their
+normalizations on the retained excited closed parent. The missing connection
+is finite persistence of the high-frequency constrained preparation. Keep
+the solved reservoir and ambient field, calculate parent expansion and
+measure fixed-physical-radius mass flux. Eleven independent cases run in
+six processes within1200 CPU seconds, with completed checkpoints retained.
+Free Gaussian propagation, an independent potential, moving-cut continuity,
+energy/expansion work and a short unmodified full-EKG comparison distinguish
+numerical failure from model error. The long envelope run does not complete
+full-GR, nonspherical or population claims.
+
 ## Inherited vacuum and a two-scale supply construction, 24 October 2026
 
 The [hierarchy owner](nsc-atlas-scale-hierarchy.md) reuses the existing

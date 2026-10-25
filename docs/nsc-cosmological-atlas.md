@@ -16,7 +16,25 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 24 October 2026
+## Current execution priority — 25 October 2026
+
+### Finite persistence of the core and its supply region
+
+Complete within its approximation: the [hierarchy evolution](nsc-atlas-hierarchy-evolution.md)
+retains the supplied omega1e9 core, its solved reservoir and the excited
+closed parent in a derived classical envelope. Eleven cases include three
+resolutions, time/outer controls, a no-gravity control, short full-EKG
+comparisons and one EKG refinement. They use about629 CPU seconds within
+a1200-second budget. The late mass inside the original fixed physical
+core cutoff is1.00374088 +/- .00001314 of its initial value while the parent
+scale factor reaches1.27443639. Without self-gravity the late ratio is.000190975.
+Exact reduced continuity, expansion-work and background-normalization
+identities accompany the calculation. The short full-EKG discrepancy
+shrinks with the weak-field parameter; no rigorous long-time full-GR
+error bound or nonspherical longevity is claimed.
+Next: perturb the evolved state or calculate a joint observable from it;
+retain source selection and population inference as separate requirements.
+
 
 ### A local core and its supply radius at fixed parent vacuum
 

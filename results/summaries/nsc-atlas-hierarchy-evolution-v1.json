@@ -1,0 +1,497 @@
+{
+  "schema": "nsc-atlas-hierarchy-evolution-v1",
+  "result": "Finite classical-envelope localization of the retained high-frequency core and solved reservoir in its expanding inherited parent.",
+  "runs": {
+    "fine": {
+      "config": {
+        "frequency": 1000000000.0,
+        "weak_amplitude": 0.001,
+        "depletion": 0.5,
+        "outer": 1024.0,
+        "points": 16383,
+        "step": 0.01,
+        "end": 600.0,
+        "gravity": true,
+        "expansion": true
+      },
+      "background_envelope": 0.0006123724356957944,
+      "initial_envelope_core_geometric_mass": 1.760306295610437e-12,
+      "initial_GR_core_geometric_mass": 1.7603068798514787e-12,
+      "initial_envelope_total_excess_over_core": -3.3192271670071666e-07,
+      "final_scale_factor": 1.2744363872283293,
+      "final_core_mass_ratio": 1.005492715384556,
+      "late_interval": [
+        480.0,
+        600.0
+      ],
+      "late_mean_core_mass_ratio": 1.0037408804840773,
+      "late_minimum_core_mass_ratio": 1.0022851793995005,
+      "late_mean_physical_half_mass_radius": 2.2325582071139825,
+      "maximum_core_mass_flux_gaps_over_initial_core": [
+        3.231058831806874e-07,
+        1.620914895198567e-07
+      ],
+      "maximum_total_mass_flux_gap_over_initial_core": 3.1447180062570937e-09,
+      "maximum_energy_work_gap_over_initial_energy": 1.0359048127765606e-06,
+      "outer_net_flux_over_initial_core": 8.655192957145624e-07,
+      "end_atlas_proper_time": 0.6,
+      "initial_weak_field_parameter": 1e-06,
+      "initial_H_over_frequency": 4.426889400384804e-10,
+      "parent_spatial_curvature_at_initial_reservoir": 5.281923869991233e-09,
+      "final_field_sha256": "113ae2de3be9d70395b4ffa0f4e2529458cb7456300335577c346ca0d92502d3",
+      "cpu_seconds": 152.046875,
+      "wall_seconds": 153.33645060000003
+    },
+    "medium": {
+      "config": {
+        "frequency": 1000000000.0,
+        "weak_amplitude": 0.001,
+        "depletion": 0.5,
+        "outer": 1024.0,
+        "points": 8191,
+        "step": 0.02,
+        "end": 600.0,
+        "gravity": true,
+        "expansion": true
+      },
+      "background_envelope": 0.0006123724356957944,
+      "initial_envelope_core_geometric_mass": 1.7603062956130624e-12,
+      "initial_GR_core_geometric_mass": 1.7603068798514787e-12,
+      "initial_envelope_total_excess_over_core": -3.319212248453387e-07,
+      "final_scale_factor": 1.2744363872283293,
+      "final_core_mass_ratio": 1.0054860402322745,
+      "late_interval": [
+        480.0,
+        600.0
+      ],
+      "late_mean_core_mass_ratio": 1.003747445653852,
+      "late_minimum_core_mass_ratio": 1.002287568288579,
+      "late_mean_physical_half_mass_radius": 2.2309593754323154,
+      "maximum_core_mass_flux_gaps_over_initial_core": [
+        1.2628921477113605e-06,
+        6.482224278985611e-07
+      ],
+      "maximum_total_mass_flux_gap_over_initial_core": 1.3180371296784804e-09,
+      "maximum_energy_work_gap_over_initial_energy": 4.185160830582878e-06,
+      "outer_net_flux_over_initial_core": 8.145906881177149e-07,
+      "end_atlas_proper_time": 0.6,
+      "initial_weak_field_parameter": 1e-06,
+      "initial_H_over_frequency": 4.426889400384804e-10,
+      "parent_spatial_curvature_at_initial_reservoir": 5.281923869991233e-09,
+      "final_field_sha256": "f50fdb2029dc76cd111a0ddc76d5803eb78fd816c1efc9a623d9cb03037d4295",
+      "cpu_seconds": 48.234375,
+      "wall_seconds": 48.64559320000012
+    },
+    "coarse": {
+      "config": {
+        "frequency": 1000000000.0,
+        "weak_amplitude": 0.001,
+        "depletion": 0.5,
+        "outer": 1024.0,
+        "points": 4095,
+        "step": 0.04,
+        "end": 600.0,
+        "gravity": true,
+        "expansion": true
+      },
+      "background_envelope": 0.0006123724356957944,
+      "initial_envelope_core_geometric_mass": 1.7603062956048003e-12,
+      "initial_GR_core_geometric_mass": 1.7603068798514787e-12,
+      "initial_envelope_total_excess_over_core": -3.319259188856009e-07,
+      "final_scale_factor": 1.2744363872283293,
+      "final_core_mass_ratio": 1.005459431149386,
+      "late_interval": [
+        480.0,
+        600.0
+      ],
+      "late_mean_core_mass_ratio": 1.0037727153748495,
+      "late_minimum_core_mass_ratio": 1.0022953461128576,
+      "late_mean_physical_half_mass_radius": 2.22412241793474,
+      "maximum_core_mass_flux_gaps_over_initial_core": [
+        5.12931207097509e-06,
+        2.5403016014453227e-06
+      ],
+      "maximum_total_mass_flux_gap_over_initial_core": 1.255080545707673e-08,
+      "maximum_energy_work_gap_over_initial_energy": 1.744667640030969e-05,
+      "outer_net_flux_over_initial_core": 6.257183523623611e-07,
+      "end_atlas_proper_time": 0.6,
+      "initial_weak_field_parameter": 1e-06,
+      "initial_H_over_frequency": 4.426889400384804e-10,
+      "parent_spatial_curvature_at_initial_reservoir": 5.281923869991233e-09,
+      "final_field_sha256": "b648d89b68affc58c32e58efcfcc61a915db5f21fe3b02bdbb815ebaec45fcca",
+      "cpu_seconds": 16.484375,
+      "wall_seconds": 16.548372900000004
+    },
+    "time_control": {
+      "config": {
+        "frequency": 1000000000.0,
+        "weak_amplitude": 0.001,
+        "depletion": 0.5,
+        "outer": 1024.0,
+        "points": 8191,
+        "step": 0.01,
+        "end": 600.0,
+        "gravity": true,
+        "expansion": true
+      },
+      "background_envelope": 0.0006123724356957944,
+      "initial_envelope_core_geometric_mass": 1.7603062956130624e-12,
+      "initial_GR_core_geometric_mass": 1.7603068798514787e-12,
+      "initial_envelope_total_excess_over_core": -3.319212248453387e-07,
+      "final_scale_factor": 1.2744363872283293,
+      "final_core_mass_ratio": 1.0054860160034502,
+      "late_interval": [
+        480.0,
+        600.0
+      ],
+      "late_mean_core_mass_ratio": 1.0037474669872872,
+      "late_minimum_core_mass_ratio": 1.002287581785744,
+      "late_mean_physical_half_mass_radius": 2.2309473201889007,
+      "maximum_core_mass_flux_gaps_over_initial_core": [
+        1.2629418584102534e-06,
+        6.482008606868316e-07
+      ],
+      "maximum_total_mass_flux_gap_over_initial_core": 1.3966098682891918e-09,
+      "maximum_energy_work_gap_over_initial_energy": 1.046639803408011e-06,
+      "outer_net_flux_over_initial_core": 8.112273064328972e-07,
+      "end_atlas_proper_time": 0.6,
+      "initial_weak_field_parameter": 1e-06,
+      "initial_H_over_frequency": 4.426889400384804e-10,
+      "parent_spatial_curvature_at_initial_reservoir": 5.281923869991233e-09,
+      "final_field_sha256": "31729f190773e4acffbef6802fb219211e69f7af4c6aae2bf872c44973844519",
+      "cpu_seconds": 85.4375,
+      "wall_seconds": 86.09221600000001
+    },
+    "outer_control": {
+      "config": {
+        "frequency": 1000000000.0,
+        "weak_amplitude": 0.001,
+        "depletion": 0.5,
+        "outer": 1536.0,
+        "points": 12287,
+        "step": 0.02,
+        "end": 600.0,
+        "gravity": true,
+        "expansion": true
+      },
+      "background_envelope": 0.0006123724356957944,
+      "initial_envelope_core_geometric_mass": 1.7603062956130624e-12,
+      "initial_GR_core_geometric_mass": 1.7603068798514787e-12,
+      "initial_envelope_total_excess_over_core": -3.3192122501878086e-07,
+      "final_scale_factor": 1.2744363872283293,
+      "final_core_mass_ratio": 1.005486040226098,
+      "late_interval": [
+        480.0,
+        600.0
+      ],
+      "late_mean_core_mass_ratio": 1.003747445665988,
+      "late_minimum_core_mass_ratio": 1.002287568313364,
+      "late_mean_physical_half_mass_radius": 2.230959375407145,
+      "maximum_core_mass_flux_gaps_over_initial_core": [
+        1.2629042294298207e-06,
+        6.482136729579725e-07
+      ],
+      "maximum_total_mass_flux_gap_over_initial_core": 1.5631483782492695e-10,
+      "maximum_energy_work_gap_over_initial_energy": 4.1851999026068475e-06,
+      "outer_net_flux_over_initial_core": 1.6854666465066544e-06,
+      "end_atlas_proper_time": 0.6,
+      "initial_weak_field_parameter": 1e-06,
+      "initial_H_over_frequency": 4.426889400384804e-10,
+      "parent_spatial_curvature_at_initial_reservoir": 5.281923869991233e-09,
+      "final_field_sha256": "144842742d0c073d9daca19c4678e267570d56033943f2c33eecad07cd423196",
+      "cpu_seconds": 68.515625,
+      "wall_seconds": 69.01845270000013
+    },
+    "no_gravity": {
+      "config": {
+        "frequency": 1000000000.0,
+        "weak_amplitude": 0.001,
+        "depletion": 0.5,
+        "outer": 1024.0,
+        "points": 8191,
+        "step": 0.02,
+        "end": 600.0,
+        "gravity": false,
+        "expansion": true
+      },
+      "background_envelope": 0.0006123724356957944,
+      "initial_envelope_core_geometric_mass": 1.7603062956130624e-12,
+      "initial_GR_core_geometric_mass": 1.7603068798514787e-12,
+      "initial_envelope_total_excess_over_core": -3.319212248453387e-07,
+      "final_scale_factor": 1.2744363872283293,
+      "final_core_mass_ratio": 9.510274067738233e-05,
+      "late_interval": [
+        480.0,
+        600.0
+      ],
+      "late_mean_core_mass_ratio": 0.000190974945483768,
+      "late_minimum_core_mass_ratio": 9.510274067738233e-05,
+      "late_mean_physical_half_mass_radius": 16.64380928035366,
+      "maximum_core_mass_flux_gaps_over_initial_core": [
+        1.6769722604673036e-05,
+        1.2548697539420111e-05
+      ],
+      "maximum_total_mass_flux_gap_over_initial_core": 1.6552463139898997e-06,
+      "maximum_energy_work_gap_over_initial_energy": 5.633439172418401e-10,
+      "outer_net_flux_over_initial_core": -0.00029155155836957126,
+      "end_atlas_proper_time": 0.6,
+      "initial_weak_field_parameter": 1e-06,
+      "initial_H_over_frequency": 4.426889400384804e-10,
+      "parent_spatial_curvature_at_initial_reservoir": 5.281923869991233e-09,
+      "final_field_sha256": "ab6ad5a9ccd5800c7b976b3750daf6fea141d22d28e297e85010c9f95a5bc471",
+      "cpu_seconds": 42.109375,
+      "wall_seconds": 42.49454909999986
+    },
+    "comparison_envelope_large": {
+      "config": {
+        "frequency": 2000.0,
+        "weak_amplitude": 0.08,
+        "depletion": 0.5,
+        "outer": 160.0,
+        "points": 4095,
+        "step": 0.002,
+        "end": 5.12,
+        "gravity": true,
+        "expansion": true
+      },
+      "background_envelope": 0.04784159653873393,
+      "initial_envelope_core_geometric_mass": 9.398610866602876e-05,
+      "initial_GR_core_geometric_mass": 9.41348223950988e-05,
+      "initial_envelope_total_excess_over_core": -0.0018804715669983472,
+      "final_scale_factor": 1.1805474803757905,
+      "final_core_mass_ratio": 1.0071393017270032,
+      "late_interval": [
+        4.096,
+        5.12
+      ],
+      "late_mean_core_mass_ratio": 1.0058713281152378,
+      "late_minimum_core_mass_ratio": 1.0045294652303756,
+      "late_mean_physical_half_mass_radius": 2.4993192302332514,
+      "maximum_core_mass_flux_gaps_over_initial_core": [
+        1.6665748998705487e-06,
+        2.827029647099048e-06
+      ],
+      "maximum_total_mass_flux_gap_over_initial_core": 4.901724885557811e-07,
+      "maximum_energy_work_gap_over_initial_energy": 3.564324747001816e-06,
+      "outer_net_flux_over_initial_core": 0.003719356610245192,
+      "end_atlas_proper_time": 0.39999999999999997,
+      "initial_weak_field_parameter": 0.0064,
+      "initial_H_over_frequency": 0.00022134447001924022,
+      "parent_spatial_curvature_at_initial_reservoir": 0.0008333698008797559,
+      "final_field_sha256": "2a25cb22ce1fc569765a60a8e65de9c111b875c76c91d066b468df7593690254",
+      "cpu_seconds": 2.765625,
+      "wall_seconds": 2.7771454999999605
+    },
+    "comparison_envelope_small": {
+      "config": {
+        "frequency": 8000.0,
+        "weak_amplitude": 0.04,
+        "depletion": 0.5,
+        "outer": 320.0,
+        "points": 8191,
+        "step": 0.002,
+        "end": 5.12,
+        "gravity": true,
+        "expansion": true
+      },
+      "background_envelope": 0.04784159653873393,
+      "initial_envelope_core_geometric_mass": 1.1748263583253595e-05,
+      "initial_GR_core_geometric_mass": 1.1752930745288187e-05,
+      "initial_envelope_total_excess_over_core": -0.000471916006456016,
+      "final_scale_factor": 1.1805474803757905,
+      "final_core_mass_ratio": 1.00712198135906,
+      "late_interval": [
+        4.096,
+        5.12
+      ],
+      "late_mean_core_mass_ratio": 1.0058564397176613,
+      "late_minimum_core_mass_ratio": 1.0045175738818237,
+      "late_mean_physical_half_mass_radius": 2.4992947121257267,
+      "maximum_core_mass_flux_gaps_over_initial_core": [
+        1.6784728535902244e-06,
+        2.760367840806089e-06
+      ],
+      "maximum_total_mass_flux_gap_over_initial_core": 4.7673579343402334e-07,
+      "maximum_energy_work_gap_over_initial_energy": 3.5648377680612417e-06,
+      "outer_net_flux_over_initial_core": 0.002783833700641887,
+      "end_atlas_proper_time": 0.39999999999999997,
+      "initial_weak_field_parameter": 0.0016,
+      "initial_H_over_frequency": 5.5336117504810054e-05,
+      "parent_spatial_curvature_at_initial_reservoir": 0.0002081999712917503,
+      "final_field_sha256": "b097321a4cd3868e1eca18266b4299c6d92e3c93046d36c36d3849b575fa743e",
+      "cpu_seconds": 4.375,
+      "wall_seconds": 4.383905799999866
+    },
+    "comparison_GR_large": {
+      "zeta": 0.08,
+      "omega": 2000.0,
+      "refinement": 1,
+      "end_atlas_time": 0.4,
+      "end_slow_time": 5.120000000000001,
+      "core_mass_ratio": 1.0074020246143056,
+      "initial_core_mass": 9.413480054952781e-05,
+      "final_core_mass": 9.483158866025815e-05,
+      "maximum_mass_flux_gap_over_initial_core": 3.5780270919780346e-08,
+      "minimum_lapse": 0.985336637624968,
+      "minimum_radial_chart": 0.9776218037091426,
+      "final_scale_factor": 1.1805475047889973,
+      "initial_support": 0.1912825544037628,
+      "outer_radius": 1.0,
+      "maximum_grid_characteristic_speed": 1.428141953106385,
+      "finite_boundary_margin": 0.23746066435368307,
+      "cpu_seconds": 6.734375,
+      "wall_seconds": 6.7909239999999045
+    },
+    "comparison_GR_small": {
+      "zeta": 0.04,
+      "omega": 8000.0,
+      "refinement": 1,
+      "end_atlas_time": 0.4,
+      "end_slow_time": 5.120000000000001,
+      "core_mass_ratio": 1.0071903745510689,
+      "initial_core_mass": 1.1752928010724933e-05,
+      "final_core_mass": 1.1837435965193795e-05,
+      "maximum_mass_flux_gap_over_initial_core": 3.452940590353835e-08,
+      "minimum_lapse": 0.9964598670773777,
+      "minimum_radial_chart": 0.9776218030820871,
+      "final_scale_factor": 1.1805474820274595,
+      "initial_support": 0.09560856855993981,
+      "outer_radius": 1.0,
+      "maximum_grid_characteristic_speed": 1.4281824215021457,
+      "finite_boundary_margin": 0.3331184628392019,
+      "cpu_seconds": 44.515625,
+      "wall_seconds": 44.88782500000002
+    },
+    "comparison_GR_small_refined": {
+      "zeta": 0.04,
+      "omega": 8000.0,
+      "refinement": 2,
+      "end_atlas_time": 0.4,
+      "end_slow_time": 5.120000000000001,
+      "core_mass_ratio": 1.007190395987462,
+      "initial_core_mass": 1.1752930658360564e-05,
+      "final_core_mass": 1.1837438883807357e-05,
+      "maximum_mass_flux_gap_over_initial_core": 1.17302836051227e-09,
+      "minimum_lapse": 0.9964598586492762,
+      "minimum_radial_chart": 0.977621803076998,
+      "final_scale_factor": 1.1805474820277557,
+      "initial_support": 0.09560856855993981,
+      "outer_radius": 1.0,
+      "maximum_grid_characteristic_speed": 1.428182421502201,
+      "finite_boundary_margin": 0.3331184628391798,
+      "cpu_seconds": 157.453125,
+      "wall_seconds": 158.8016083
+    }
+  },
+  "numerical_comparison_envelope": {
+    "late_mean_core_mass_ratio": 1.3130339549416448e-05,
+    "late_minimum_core_mass_ratio": 4.777778157105672e-06,
+    "late_mean_physical_half_mass_radius": 0.003197663363334158,
+    "final_core_mass_ratio": 1.3350304563175541e-05
+  },
+  "short_full_equation_comparison": {
+    "large": {
+      "zeta": 0.08,
+      "omega": 2000.0,
+      "full_core_mass_ratio": 1.0074020246143056,
+      "envelope_core_mass_ratio": 1.0071393017270032,
+      "difference": 0.00026272288730244675,
+      "scale_factor_difference": 2.441320678947534e-08,
+      "full_mass_flux_error": 3.5780270919780346e-08
+    },
+    "small": {
+      "zeta": 0.04,
+      "omega": 8000.0,
+      "full_core_mass_ratio": 1.0071903745510689,
+      "envelope_core_mass_ratio": 1.00712198135906,
+      "difference": 6.83931920089087e-05,
+      "scale_factor_difference": 1.6516690237722287e-09,
+      "full_mass_flux_error": 3.452940590353835e-08
+    },
+    "small_full_refinement_gap": 2.1436393105034313e-08
+  },
+  "symbolic_zero_identities": {
+    "background_dust_cancellation": "0",
+    "radial_geometric_mass_prefactor": "0",
+    "real_background_amplitude": "0"
+  },
+  "conditional_physical_interpretation": {
+    "assumed_Lambda_per_m2": 1e-52,
+    "duration_gigayears": 3.363356058563889,
+    "fixed_core_mass_cut_kpc": 34.37365517842548,
+    "late_mean_half_mass_radius_kpc": 3.837059298854992,
+    "numerical_half_mass_radius_range_kpc": 0.005495768891396629,
+    "interpretation": "Same supplied dimensional reference as the initial hierarchy example; not an independent observed age or galaxy fit. The long run is an envelope calculation, with no rigorous full-GR model-error range."
+  },
+  "preparation": {
+    "frequency": 1000000000.0,
+    "weak_amplitude": 0.001,
+    "depletion": 0.5,
+    "core": {
+      "mass": 1.7603068798514787e-12,
+      "half_mass_radius": 2.243066731836029e-06,
+      "cutoff_radius": 2e-05,
+      "coefficients": [
+        1.752665435170552,
+        7641444.680926754,
+        -0.1349608612424663
+      ],
+      "scaled_mass": 1.7603068798514787,
+      "minimum_core_beta_squared": 0.9999991353950327,
+      "scaled_core_compactness": 8.646047576867499e-07
+    },
+    "reservoir_outer_radius": 0.0004815623798469198,
+    "reservoir_to_core_cutoff": 24.07811899234599,
+    "ideal_capacity_lower_radius": 0.00030428268257166424,
+    "lower_bound_margin": 0.00017727969727525557,
+    "reservoir_constraint": {
+      "endpoint_mass_ratio": 3.0812215117755994e-13,
+      "minimum_beta_squared": 0.9999998239602014,
+      "maximum_mass_ratio": 1.0
+    },
+    "independent_proper_distance": {
+      "endpoint_mass_ratio": 3.004634453008513e-13,
+      "proper_width": 0.0004615623848966893
+    },
+    "Lambda_reservoir_radius_cubed_over_core_mass": 17.84275042712763,
+    "dimensionless_supply_ratio": 17.841472240905812,
+    "strict_supply_floor": 4.500000000000001,
+    "asymptotic_Lambda_reservoir_radius_cubed_over_core_mass": 18.330588054636927,
+    "core_radius_over_parent_radius": 3.0183772042345338e-06,
+    "reservoir_radius_over_parent_radius": 7.267684548734372e-05,
+    "parent_vacuum": 0.28125,
+    "parent_initial_density": 0.65625,
+    "parent_initial_curvature": 0.0227765023676067,
+    "parent_Lambda_reference_radius_squared": 12.348252398928496,
+    "protected_parent_angles": [
+      0.5154910734576851,
+      2.3353459631578986
+    ],
+    "future_conformal_distance_bound": 0.5154183966121337,
+    "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied."
+  },
+  "numerical_validation_errors": [],
+  "process_cpu_seconds_including_workers": 628.796875,
+  "wall_seconds": 1.4664520999999695,
+  "longest_worker_original_wall_seconds": 158.8016083,
+  "compute_budget_seconds": 1200,
+  "budget_exhausted": false,
+  "timing_scope": "Worker CPU includes original computations reused from authenticated local checkpoints. Wall time measures this invocation.",
+  "equations": "i psi_tau=-Delta psi/(2 A^2)+V psi; Delta V=(abs(psi)^2-b^2)/(2 A); dE/dtau=-(A_prime/A)*(2T+W). The real scalar is reconstructed with its fast frequency and A^-3/2 amplitude.",
+  "limits": "Leading weak-field, nonrelativistic and locally flat spatial envelope, with an averaged excited closed parent. This is not the full long-time Einstein-scalar evolution. Small expansion/curvature/weak-field parameters and a short full-equation comparison do not establish a rigorous model-error bound over the long run. Supplied initial core and reservoir; finite spherical localization is not formation from primordial data, asymptotic or nonspherical stability, a galaxy fit, or a dark-matter abundance.",
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_hierarchy_evolution.py": "a1495031b01f236cdca475cdcaffa41bdf0cccc974b6584133f006676fdf0921",
+    "src/recursive_horizons/nsc_atlas_scale_hierarchy.py": "78255e7f3b63cfde9b49e00a13fc66934bf528eaef305af2e7164f07cb582637",
+    "src/recursive_horizons/nsc_atlas_core_evolution.py": "21ee66faa161cd6545155db954994c5f126d2dfa2a1b34249ed3193dae37755d",
+    "src/recursive_horizons/nsc_atlas_core_reservoir.py": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898",
+    "src/recursive_horizons/nsc_atlas_scalar_core.py": "7b1c21ea1db02ceea5ebf6ba8afd760aa91c673a08d88b77ac7db719b336d7f8",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "scripts/check_nsc_atlas_hierarchy_evolution.py": "18d4033999af200dfed1d0d5ed1c9aa966085f040721639cfcf00ada8ea0985b",
+    "tests/test_nsc_atlas_hierarchy_evolution.py": "673c073df007b4c8862f0f3eae3105be6b4ff0ef3602adb1b33a70972fa2dddb",
+    "scripts/plot_nsc_atlas_hierarchy_evolution.py": "df5c559469d25ddc0c70d2487f2f5f5cd7f2d1796a0a88d7c7b6e01eb563e96b",
+    "results/summaries/nsc-atlas-scale-hierarchy-v1.json": "f135b3ad60d6c3f842e7fde84a9582bf7c5b6afcc92622660e486aeb0c6ff939"
+  },
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_hierarchy_evolution.py --output results/summaries/nsc-atlas-hierarchy-evolution-v1.json"
+}
