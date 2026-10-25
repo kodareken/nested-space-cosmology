@@ -1,5 +1,17 @@
 # Cited arXiv studies
 
+## Evolving real-scalar envelopes and the parent clock, 25 October 2026
+
+The [new evolution owner](nsc-atlas-hierarchy-evolution.md) derives its
+normalizations from the existing real-scalar action. The retained
+[Fodor, Forgacs and Mezei,1007.0388](https://arxiv.org/html/1007.0388)
+provides the small-amplitude real-scalar framework. The abstract and
+bibliographic record of [1504.05968](https://arxiv.org/abs/1504.05968)
+were checked for related Schrodinger--Poisson descriptions in an expanding
+Friedmann background; its linear analysis is not used as a nonlinear
+persistence theorem. Source/energy normalization and the full-equation
+comparison are calculated here, with the approximation domain stated.
+
 ## Scalar mass, vacuum and supply scales, 24 October 2026
 
 Revisited [Fodor, Forgacs and Mezei,1007.0388](https://arxiv.org/html/1007.0388)

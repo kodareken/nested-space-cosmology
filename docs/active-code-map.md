@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [hierarchy evolution owner](nsc-atlas-hierarchy-evolution.md) uses
+nsc_atlas_hierarchy_evolution.py: initial_envelope keeps the solved supply
+region; background evolves the excited closed parent; potential uses the
+symmetric contrast kernel; kinetic_step propagates the radial envelope;
+cut_flux includes the moving comoving boundary of a fixed physical radius.
+full_equation_comparison calls the original EKG functions unchanged.
+The producer authenticates local checkpoints and records compact summaries.
+
 The [hierarchy owner](nsc-atlas-scale-hierarchy.md) uses
 nsc_atlas_scale_hierarchy.py: core_coefficients separates the exact frequency
 powers; reservoir integrates the normalized mass constraint and an

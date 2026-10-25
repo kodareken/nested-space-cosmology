@@ -21,13 +21,13 @@ starting a derivation.
 ### Finite persistence of the core and its supply region
 
 Complete within its approximation: the [hierarchy evolution](nsc-atlas-hierarchy-evolution.md)
-retains the supplied omega1e9 core, its solved reservoir and the excited
+retains the supplied omega 1e9 core, its solved reservoir and the excited
 closed parent in a derived classical envelope. Eleven cases include three
 resolutions, time/outer controls, a no-gravity control, short full-EKG
-comparisons and one EKG refinement. They use about629 CPU seconds within
-a1200-second budget. The late mass inside the original fixed physical
-core cutoff is1.00374088 +/- .00001314 of its initial value while the parent
-scale factor reaches1.27443639. Without self-gravity the late ratio is.000190975.
+comparisons and one EKG refinement. They use about 629 CPU seconds within
+a 1200-second budget. The late mass inside the original fixed physical
+core cutoff is 1.00374088 +/- .00001314 of its initial value while the parent
+scale factor reaches 1.27443639. Without self-gravity the late ratio is .000190975.
 Exact reduced continuity, expansion-work and background-normalization
 identities accompany the calculation. The short full-EKG discrepancy
 shrinks with the weak-field parameter; no rigorous long-time full-GR

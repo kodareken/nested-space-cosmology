@@ -17,13 +17,14 @@ def render(record,folders):
     fig,axes=plt.subplots(2,2,figsize=(11.8,7.3))
     axes[0,0].semilogy([x['tau'] for x in fine],[x['core_mass_ratio'] for x in fine],color='#176d8a',label='Self-gravity retained')
     axes[0,0].semilogy([x['tau'] for x in free],[x['core_mass_ratio'] for x in free],color='#a56338',label='Same field, self-gravity removed')
-    axes[0,0].set(title='The supplied core stays localized',xlabel='Slow time',ylabel='Mass inside fixed physical cutoff / initial mass')
+    axes[0,0].set(title='The supplied core stays localized',xlabel='Slow time',ylabel='Enclosed mass / initial core mass')
     axes[0,0].legend(frameon=False,fontsize=8,loc='lower left')
     inset=axes[0,0].inset_axes([.56,.52,.4,.26])
     inset.plot([x['tau'] for x in fine],[x['core_mass_ratio'] for x in fine],color='#176d8a',lw=1)
     inset.axhline(1,color='#777777',ls=':',lw=.7);inset.set_title('Small inward transfer',fontsize=8)
     inset.tick_params(labelsize=7)
-    initial=record['preparation']['core']['half_mass_radius']*1e6
+    config=record['runs']['fine']['config']
+    initial=record['preparation']['core']['half_mass_radius']*config['frequency']*config['weak_amplitude']
     axes[0,1].plot([x['tau'] for x in fine],[x['physical_half_mass_radius'] for x in fine],color='#176d8a',label='Evolved core half-mass radius')
     axes[0,1].plot([x['tau'] for x in fine],[initial*x['scale_factor'] for x in fine],color='#a56338',ls='--',label='Initial radius multiplied by parent expansion')
     axes[0,1].set(title='Core size separates from parent expansion',xlabel='Slow time',ylabel=r'Physical half-mass radius $\omega\zeta R_{1/2}$')

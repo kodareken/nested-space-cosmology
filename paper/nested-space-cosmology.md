@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 24 October 2026
+Working research manuscript, 25 October 2026
 
 ## Abstract
 
@@ -64,7 +64,10 @@ inverse then links multiple pulse arrivals, image directions and frequencies;
 their delay shares a dimensionless scale relation with the parent vacuum. An exact supply bound
 then requires core and reservoir radii to scale differently. A solved
 initial-data family admits separated local/cosmological scales and a
-linked vacuum-radius-mass relation.
+linked vacuum-radius-mass relation. A classical-envelope evolution then
+retains a localized core and reservoir while the parent expands, with
+mass-current and expansion-work checks and a short full-equation comparison.
+Its finite radial persistence does not establish general stability.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -6056,10 +6059,192 @@ outer join; tighter integration changes reported masses and radii by
 less than $1.1\times10^{-11}$ relatively. Those are finite integration
 checks for the supplied profile, not a bound on its uncomputed evolution.
 
-The next connection is to evolve this two-scale preparation with its
-reservoir retained and determine the surviving localized mass. The image
-predictions of Section10.38 belong to the earlier evolved preparation;
+The following section evolves this two-scale preparation in a leading
+classical envelope with its reservoir retained. The image predictions of
+Section10.38 belong to the earlier evolved preparation;
 they cannot be assigned to this new family by changing units.
+
+### 10.42. Evolving the core together with its reservoir
+
+Initial compatibility does not establish persistence. The high-frequency
+member of Section10.41 has many fast carrier oscillations per binding
+time, so a direct relativistic grid is costly. We instead derive its
+leading classical envelope, retain the solved reservoir and excited parent,
+and test the reduction against the unchanged full Einstein--Klein--Gordon
+solver on a short, tractable family. The long result belongs to the reduced
+equations and their stated domain.
+
+For the real displacement $\chi=\phi-\phi_{\min}$, define
+
+$$
+\chi=\sqrt{2/\kappa}\,\zeta^2 A^{-3/2}
+\operatorname{Re}[\psi(x,\tau)e^{-i\omega t}],\qquad
+x=\frac{\omega\zeta R}{A},\qquad \tau=\omega\zeta^2t.
+$$
+
+The normalized parent scale factor starts at $A=1$. The complex amplitude
+$\psi$ describes the same real field; it is a total amplitude, including
+its homogeneous value
+
+$$
+b=\frac{\sqrt{\kappa/2}\,d}{\omega\zeta^2}
+=.000612372435696,\qquad d=\frac{\sqrt{3}}{2}.
+$$
+
+For this member $\omega=10^9$ and $\zeta=.001$. The initial field is the
+previously supplied tapered core plus its depleted ambient annulus.
+The real scalar value matches the exact constrained initial slice.
+The initial normal momentum matches only to leading order, since the
+slow prefactor contributes an $O(H/\omega)$ carrier-quadrature correction.
+The small initial gradient-mass difference is recorded rather than removed
+by renormalizing the field.
+
+Averaging the homogeneous carrier retains the parent's excitation,
+vacuum and positive spatial curvature:
+
+$$
+H^2=\frac{\Lambda_v}{3}+\frac{\kappa E_b}{3A^3}-\frac{C}{A^2},\qquad
+\dot H=\frac{C}{A^2}-\frac{\kappa E_b}{2A^3}.
+$$
+
+Here $\Lambda_v=9/32$, $E_b=3/8$ and $C=.0227765023676$. Excitation is
+initially $4/7$ of the parent density; a pure de Sitter replacement would
+lose a leading contribution. On the local, nearly flat spatial chart,
+the classical envelope obeys
+
+$$
+i\psi_\tau=-\frac{\Delta_x\psi}{2A^2}+V\psi,\qquad
+\Delta_xV=\frac{|\psi|^2-b^2}{2A}.
+$$
+
+The complete density contrast is retained, including its coherent cross
+term. The homogeneous background is already inside $\psi$, so it is not
+added a second time. The physical Newtonian potential is $\zeta^2V$.
+This uses the established real-scalar envelope framework in the explicit
+source normalization of this atlas; it introduces no additional field or
+measurement-probability law.
+
+One exact check clarifies why the homogeneous envelope can be constant.
+On the averaged parent, a field proportional to $A^{-3/2}\cos(\omega t)$
+satisfies
+
+$$
+(\partial_t^2+3H\partial_t+\omega^2)\chi_b
+=\left(-\frac{3}{2}\dot H-\frac{9}{4}H^2\right)\chi_b
+=\frac{3}{4}\left(\frac{C}{A^2}-\Lambda_v\right)\chi_b.
+$$
+
+The dust terms cancel. The residual is small relative to the carrier
+term, about $2\times10^{-19}$ for this member. This is an exact identity
+on the averaged background, not proof that it equals the full oscillating
+Einstein-scalar background at every instant.
+
+### 10.43. Conserved transport, finite persistence and a relativistic check
+
+The envelope's geometric excess mass is
+
+$$
+\mathfrak{M}_{\rm env}(R)=\frac{\zeta}{2\omega}
+\int_0^{\omega\zeta R/A}x^2(|\psi|^2-b^2)dx.
+$$
+
+The factor of one-half follows from the Einstein mass normalization.
+The initial envelope core mass differs from its exact GR value by
+$-3.31923\times10^{-7}$ relatively. That difference is retained. Continuity
+fixes the current; at a fixed physical radius the moving comoving cutoff
+$x_*=X/A$ adds a necessary term:
+
+$$
+\frac{dN_*}{d\tau}
+=-\frac{x_*^2}{A^2}\operatorname{Im}(\psi^*\psi_x)
+-\frac{A'}{A}x_*^3(|\psi|^2-b^2).
+$$
+
+Independently integrating this current tests the changing enclosed mass.
+The energy functional has kinetic and gravitational parts
+
+$$
+T=\frac{1}{2A^2}\int x^2|\psi_x|^2dx,\qquad
+W=\frac{1}{2}\int x^2V(|\psi|^2-b^2)dx.
+$$
+
+With the symmetric Newtonian kernel and a time-independent outer field
+value $\psi=b$, the reduced equations imply
+
+$$
+\frac{d(T+W)}{d\tau}=-\frac{A'}{A}(2T+W).
+$$
+
+Both terms contribute to expansion work. No absorber discards outgoing
+field. The outer mass current is measured, and a larger domain checks its
+influence on the core. These finite envelope-domain checks are not a new
+relativistic causal-shielding theorem.
+
+Eleven numerical cases evolve the retained high-frequency preparation to
+slow time $600$, with three resolutions and separate time, outer-boundary
+and no-gravity controls. The parent scale factor reaches $1.27443638723$.
+Over the late interval $480\leq\tau\leq600$, mass inside the original fixed
+physical core cutoff has ratio
+
+$$
+\frac{\langle\mathfrak{M}_{\rm core}\rangle}
+{\mathfrak{M}_{\rm core}(0)}=1.00374088\pm.00001314.
+$$
+
+This is a small inward transfer, checked by the mass current. With
+self-gravity removed, the same late ratio is $.000190975$. The core's
+late mean physical half-mass radius is $2.23255821$ in the scaled length
+$\omega\zeta R$, with numerical comparison range $.00319767$.
+Its radius breathes: the peak-to-peak range grows from $.0674$ in the first
+$120$ slow-time units to $.1399$ in the last $120$. Finite localization
+therefore does not establish asymptotic stability.
+
+![Finite localization of the supplied core and reservoir in the expanding parent](../docs/figures/nsc-atlas-hierarchy-evolution.png)
+
+*Figure 25. The same supplied field disperses without self-gravity and
+retains a localized core when self-gravity is included. Its physical size
+breathes while the parent expands; the dashed size reference is simply
+initial radius multiplied by the parent scale factor. Mass-current and
+energy-work checks improve under refinement. The last panel compares
+the reduced equations with full EKG over a separate short interval.*
+
+The mass-current discrepancy falls from $5.13\times10^{-6}$ through
+$1.26\times10^{-6}$ to $3.24\times10^{-7}$ of initial core mass. The
+energy-work discrepancy falls from $1.75\times10^{-5}$ to
+$1.04\times10^{-6}$ of initial energy. The
+[compact calculation](../results/summaries/nsc-atlas-hierarchy-evolution-v1.json)
+records source hashes, finite comparisons and the small net outer transport.
+The [derivation and domain](../docs/nsc-atlas-hierarchy-evolution.md)
+keep numerical error distinct from approximation error.
+
+For the independent short comparison, hold $\omega\zeta^2=12.8$ and evolve
+to atlas time $.4$, or slow time $5.12$. The original full EKG functions
+are unchanged:
+
+| Core amplitude | Frequency | Full-EKG mass ratio | Envelope mass ratio | Difference |
+| --- | ---: | ---: | ---: | ---: |
+| .08 | 2000 | 1.007402025 | 1.007139302 | .000262723 |
+| .04 | 8000 | 1.007190375 | 1.007121981 | .0000683932 |
+
+Halving the amplitude reduces the discrepancy by about $3.84$, consistent
+with weak-field ordering. Refining the smaller full-EKG case changes its
+ratio by $2.15\times10^{-8}$, far below that difference. Analytic free
+Gaussian propagation, an independent Gaussian gravitational potential
+and moving-cut continuity provide additional checks.
+
+Using the earlier supplied reference $\Lambda_v=10^{-52}\,{\rm m}^{-2}$,
+the long run spans $3.36$ billion years. Its fixed mass cutoff is $34.4$ kpc
+and its late mean half-mass radius is $3.837\pm.006$ kpc. Those physical
+values inherit the assumed ruler; their quoted ranges are numerical ranges
+within the envelope model. No galaxy observations were fitted.
+
+The short full-equation comparison and small expansion, curvature and
+weak-field parameters do not supply a rigorous full-GR error bound at slow
+time $600$. The supplied initial cloud, growing radial breathing and
+nonspherical persistence remain physical questions. The completed connection
+is from the conserved initial supply construction to finite radial
+localization in its expanding parent, with a stated approximation and
+independent transport checks.
 
 ## IV. What the observers can reach
 
@@ -6110,7 +6295,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 25. The isolated reference in joined causal charts. Horizons are
+*Figure 26. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -7116,7 +7301,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 26. Saved finite-window comparisons. A: the previous and current
+*Figure 27. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -7212,7 +7397,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 27. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 28. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -7997,7 +8182,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 28. Research dependencies, distinct from spacetime causal arrows.
+*Figure 29. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

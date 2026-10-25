@@ -1,5 +1,20 @@
 # Reproducing the root project
 
+## Evolving the supplied core and its reservoir
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_hierarchy_evolution.py --output results/summaries/nsc-atlas-hierarchy-evolution-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_hierarchy_evolution.py
+```
+
+The [owner](nsc-atlas-hierarchy-evolution.md) defines the reduced equations,
+full-equation comparison and finite domain. Eleven cases use six workers
+and about 629 underlying CPU seconds within a 1200-second budget. Completed
+field/history checkpoints remain local under `.build/hierarchy-evolution`;
+the public record contains compact results and source hashes. A cached
+invocation does not repeat the underlying evolution. The long calculation
+is an envelope approximation; its short full-GR check is a separate result.
+
 ## Core supply and a fixed-vacuum hierarchy
 
 ```powershell

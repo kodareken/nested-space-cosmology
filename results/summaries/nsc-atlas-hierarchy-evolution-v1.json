@@ -423,6 +423,26 @@
     "numerical_half_mass_radius_range_kpc": 0.005495768891396629,
     "interpretation": "Same supplied dimensional reference as the initial hierarchy example; not an independent observed age or galaxy fit. The long run is an envelope calculation, with no rigorous full-GR model-error range."
   },
+  "resolved_radial_breathing": {
+    "early": {
+      "slow_time_interval": [
+        0.0,
+        120.0
+      ],
+      "minimum": 2.2025792363513137,
+      "maximum": 2.269969855566995,
+      "peak_to_peak": 0.06739061921568146
+    },
+    "late": {
+      "slow_time_interval": [
+        480.0,
+        600.0
+      ],
+      "minimum": 2.1702615573346877,
+      "maximum": 2.310180596333905,
+      "peak_to_peak": 0.1399190389992171
+    }
+  },
   "preparation": {
     "frequency": 1000000000.0,
     "weak_amplitude": 0.001,
@@ -471,8 +491,8 @@
     "source": "Existing coherent C2-cutoff core plus a C4 depleted ambient scalar annulus; Pi=0 and no added pulse. Outer radius is solved, depletion is supplied."
   },
   "numerical_validation_errors": [],
-  "process_cpu_seconds_including_workers": 628.796875,
-  "wall_seconds": 1.4664520999999695,
+  "process_cpu_seconds_including_workers": 628.828125,
+  "wall_seconds": 1.4428044000001137,
   "longest_worker_original_wall_seconds": 158.8016083,
   "compute_budget_seconds": 1200,
   "budget_exhausted": false,
@@ -488,9 +508,9 @@
     "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
     "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
     "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
-    "scripts/check_nsc_atlas_hierarchy_evolution.py": "18d4033999af200dfed1d0d5ed1c9aa966085f040721639cfcf00ada8ea0985b",
+    "scripts/check_nsc_atlas_hierarchy_evolution.py": "baf58c540444b122081aaf78d0a59a607beb3438c6d7caba9ec7129cca9a930a",
     "tests/test_nsc_atlas_hierarchy_evolution.py": "673c073df007b4c8862f0f3eae3105be6b4ff0ef3602adb1b33a70972fa2dddb",
-    "scripts/plot_nsc_atlas_hierarchy_evolution.py": "df5c559469d25ddc0c70d2487f2f5f5cd7f2d1796a0a88d7c7b6e01eb563e96b",
+    "scripts/plot_nsc_atlas_hierarchy_evolution.py": "713b2488af624705247c51d57329cc184f0017d174247074c845fdd3c7f68123",
     "results/summaries/nsc-atlas-scale-hierarchy-v1.json": "f135b3ad60d6c3f842e7fde84a9582bf7c5b6afcc92622660e486aeb0c6ff939"
   },
   "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_hierarchy_evolution.py --output results/summaries/nsc-atlas-hierarchy-evolution-v1.json"

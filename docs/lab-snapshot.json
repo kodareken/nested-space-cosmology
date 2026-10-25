@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "fe2b7b0ff23a0ce9b8fa08161e0196785274a13b",
+  "current_receipt_commit_parent": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 24704,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 25153,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "35385b17b3eea9b910a14e5313e7eddc12a158b1331896d537a6ba414d539ace"
+      "sha256": "f15117e7db0cc05bb894712011d199b63a3b9818d868808ba375682c0c917ecd"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 282624,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 283136,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "3cbcd592af0d73e9f93e472a6d782c12aaf7bca6dd4c8c857b2bf407090affe9"
+      "sha256": "51509213f99da71243b7d90d7f4fb298e8a32c764b4e3b400a62e475be5f2ffa"
     },
     {
-      "bytes": 126845,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 127553,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "a2402e78dfbc63ccc2c4bac96cb2b3847e8e8f1bfa25cdc1c1080896d5d79271"
+      "sha256": "533b925cf6bbff68f53237cf2622a9520b22cc988bc6c15bcb361ab60fe62b4e"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 457177,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 458189,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "af381f8d2b3155f1037edbe10481af641b691de72b3b6367216a889ef4f2addd"
+      "sha256": "9cfc2c9dfb633d17eaba156ddfecea4e35344d031a17cdca59ec59ea0e5ebabc"
     },
     {
       "bytes": 173938,
@@ -10397,12 +10397,12 @@
       "sha256": "e007d2cd3888c4fc99574bb09d98dec251350052de9612eeb9a104a1fd64a1d0"
     },
     {
-      "bytes": 273047,
+      "bytes": 269452,
       "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "fe2b7b0ff23a0ce9b8fa08161e0196785274a13b",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "docs/figures/nsc-atlas-hierarchy-evolution.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "370788386482826b057dce080b1e5e58101327371508ed58f8ae6e7572333369"
+      "sha256": "332ce9da4123b64f5cdf198be79642a66e99344acd984a96c0e19cbb0a2c9fce"
     },
     {
       "bytes": 126083,
@@ -10700,12 +10700,12 @@
       "sha256": "58fcb5128f13af52aad4277447556312a228a7a1635b01c871b21ea874a16bf3"
     },
     {
-      "bytes": 10547,
+      "bytes": 11273,
       "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "fe2b7b0ff23a0ce9b8fa08161e0196785274a13b",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "docs/nsc-atlas-hierarchy-evolution.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "c7752311b72689ebae9a30245eab160f07b30ea334f5e4d52574f1b07d003cf5"
+      "sha256": "b0054d07bed4d5811ea0274d02a4869322913505f5144cb170aa7f9a829a36f9"
     },
     {
       "bytes": 8895,
@@ -10805,12 +10805,12 @@
       "sha256": "b35adc596ea174a27f22833a338a655329791d2253460b2713920e3282b92dc5"
     },
     {
-      "bytes": 12303,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 12388,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "docs/nsc-atlas-scale-hierarchy.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "86fdcf5005e36ab36b9775ade5f5b1c31331fdec9f60f8e5b9d91d3d79dfc8cc"
+      "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
       "bytes": 14560,
@@ -10856,15 +10856,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 108912,
+      "bytes": 108918,
       "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "fe2b7b0ff23a0ce9b8fa08161e0196785274a13b",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "2f7f97a89146b14d41185491a47b92d5bc3863baa1dd7460316b38d58e495713"
+      "sha256": "a5b1bde62767393dfd953fdfbdd586017e5fe1bdca941d6c344218885991d2e2"
     },
     {
       "bytes": 30876,
@@ -11846,20 +11846,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 223749,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 224576,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c98f59608deb9e9e23de053c8e634b3799a3658519f5fbe53514ffb8949bd991"
+      "sha256": "d95ff341ae52ce28bcfd82d35e1501177962fc23c4f9567ea4c7e4b757063e31"
     },
     {
-      "bytes": 40993,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 41429,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "09cb040fc35aec466c63d7d4774d019ed67fde52853e4b6febb1293f3b4c8790"
+      "sha256": "341e3904ec2d0fd1b350e550a9e433da6dc5aa5be3901e116389922f306f7d17"
     },
     {
       "bytes": 18356,
@@ -11928,20 +11928,20 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 30386,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 30716,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "79fcaa2971a766e646fd78d8140ffc4ee1db8eadee202f14ffd70137770970aa"
+      "sha256": "ef022bc61515ea0be9d0da7cb557143bf21e55da28919a3c6d41edabb10d15b6"
     },
     {
       "bytes": 3206,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d9457b05442e1c0ef24996ad348f4846e5b39cb977e1016308e711840b55ee4a"
+      "sha256": "7307bb48bc70c5697f4d0272b482ad71868dd8b04cd677092b6f78089f6980a5"
     },
     {
       "bytes": 43377,
@@ -11961,27 +11961,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "42441be758dd97a074c722d39ba2c0f59fb3d40371d761a4f6ceefa8807cbf5a"
+      "sha256": "5ac25f2f3ae2738eacdb12859c9fac17d96f828e5b8d5aed49c0f1b77b3a04bd"
     },
     {
-      "bytes": 381255,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 389341,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "c9b0b5c783304e0cb5c6b47e8905f4e2f5dd7d9bd5e13c99ed191bf713e529db"
+      "sha256": "84344f92cd27f084f68fccd68526b35b62f0f06db43e04ba0ae11b4278f00134"
     },
     {
-      "bytes": 9942640,
-      "change": "Derive the core supply bound and a compatible hierarchy at fixed inherited vacuum.",
-      "changed_from_commit": "58394be1456556bc3eecba9b1ea5ccbdb6b1ab44",
+      "bytes": 10323373,
+      "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "80085be468c4f5b3890821ff7aa31640e13457dfdc692d5420783970e3ce3b41"
+      "sha256": "10ae2c3ffc4df38e82a7a3d5262c34ef3addbdcea8cacbdef1c7697ae3b7a653"
     },
     {
       "bytes": 3283,
@@ -30670,12 +30670,12 @@
       "sha256": "4b875644a0876ef8c4283671bd114079a7b18bde280e86d34acbcd61e1945f0d"
     },
     {
-      "bytes": 22009,
+      "bytes": 22452,
       "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "fe2b7b0ff23a0ce9b8fa08161e0196785274a13b",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "results/summaries/nsc-atlas-hierarchy-evolution-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "48bf8ea17932a9e456e90893ebe3d6e66671c07e5b27d844d0d1b9effce91811"
+      "sha256": "e41626e10540c5a9e39e8b1e4732be5fdcfe0a229d4e5380a922784cb1b0ffad"
     },
     {
       "bytes": 16769,
@@ -31255,12 +31255,12 @@
       "sha256": "9e6c41b952191ea381df4d3efa2cd71282e378d2e19133c1e6bd4f5649c3b2b7"
     },
     {
-      "bytes": 9991,
+      "bytes": 10440,
       "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "fe2b7b0ff23a0ce9b8fa08161e0196785274a13b",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "scripts/check_nsc_atlas_hierarchy_evolution.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "18d4033999af200dfed1d0d5ed1c9aa966085f040721639cfcf00ada8ea0985b"
+      "sha256": "baf58c540444b122081aaf78d0a59a607beb3438c6d7caba9ec7129cca9a930a"
     },
     {
       "bytes": 6167,
@@ -34192,12 +34192,12 @@
       "sha256": "64d3904f6d328d531252066db5765ab490fba35281ee2f1cd9d88d7f106e12d0"
     },
     {
-      "bytes": 3366,
+      "bytes": 3436,
       "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
-      "changed_from_commit": "fe2b7b0ff23a0ce9b8fa08161e0196785274a13b",
+      "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
       "path": "scripts/plot_nsc_atlas_hierarchy_evolution.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "df5c559469d25ddc0c70d2487f2f5f5cd7f2d1796a0a88d7c7b6e01eb563e96b"
+      "sha256": "713b2488af624705247c51d57329cc184f0017d174247074c845fdd3c7f68123"
     },
     {
       "bytes": 5347,

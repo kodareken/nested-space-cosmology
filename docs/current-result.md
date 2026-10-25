@@ -1,5 +1,21 @@
 # What the calculations show
 
+The [hierarchy evolution](nsc-atlas-hierarchy-evolution.md) advances the
+supplied high-frequency core and solved reservoir with parent expansion in
+a leading classical envelope. The late mean mass inside its original fixed
+physical cutoff is 1.00374088 +/- .00001314 of the initial value while the
+parent scale factor reaches 1.27443639. Removing self-gravity leaves a late
+ratio .000190975. The half-mass radius stays localized but breathes with a
+larger late amplitude; this is not an asymptotic-stability result.
+
+Eleven cases check grid/time/domain changes, mass current, expansion work
+and a short full-EKG comparison. Halving the field amplitude reduces the
+full/envelope mass-ratio discrepancy from 2.63e-4 to 6.84e-5; a full-grid
+refinement changes that ratio by 2.15e-8. This supports the stated reduction
+without certifying long-time full-GR accuracy. Under the previously supplied
+Lambda ruler, the finite run spans 3.36 Gyr with late half-mass radius
+3.837 +/- .006 kpc; no galaxy data were fitted.
+
 The [scale hierarchy](nsc-atlas-scale-hierarchy.md) now proves an exact
 core mass decomposition and a shape-independent supply bound. For the
 declared inherited state, smooth joins require Lambda*(Rd^3-Rc^3)/M>9/2.

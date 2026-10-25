@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [hierarchy evolution](nsc-atlas-hierarchy-evolution.md) connects the
+constrained two-scale preparation to finite radial localization. It keeps
+the ambient scalar and parent expansion in the derived envelope, checks
+fixed-physical-radius currents and expansion work, and compares a short
+weak-field family against the unchanged full EKG solver. Its approximation,
+growing breathing and untested angular disturbances remain visible.
+
 The [core supply hierarchy](nsc-atlas-scale-hierarchy.md) separates local
 core and reservoir scales within the inherited parent. Exact initial
 constraints yield a supply bound, a three-term core mass law and a solved

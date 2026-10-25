@@ -1,10 +1,10 @@
 {
-  "bytes": 9942640,
+  "bytes": 10323373,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "42441be758dd97a074c722d39ba2c0f59fb3d40371d761a4f6ceefa8807cbf5a",
+  "metadata_sha256": "5ac25f2f3ae2738eacdb12859c9fac17d96f828e5b8d5aed49c0f1b77b3a04bd",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 129,
-  "pdf_sha256": "80085be468c4f5b3890821ff7aa31640e13457dfdc692d5420783970e3ce3b41",
+  "pages": 132,
+  "pdf_sha256": "10ae2c3ffc4df38e82a7a3d5262c34ef3addbdcea8cacbdef1c7697ae3b7a653",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -42,6 +42,10 @@
     {
       "path": "docs/figures/nsc-atlas-geometric-observer.png",
       "sha256": "e007d2cd3888c4fc99574bb09d98dec251350052de9612eeb9a104a1fd64a1d0"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-hierarchy-evolution.png",
+      "sha256": "332ce9da4123b64f5cdf198be79642a66e99344acd984a96c0e19cbb0a2c9fce"
     },
     {
       "path": "docs/figures/nsc-atlas-nested-slice.png",
@@ -568,6 +572,10 @@
       "sha256": "4b875644a0876ef8c4283671bd114079a7b18bde280e86d34acbcd61e1945f0d"
     },
     {
+      "path": "results/summaries/nsc-atlas-hierarchy-evolution-v1.json",
+      "sha256": "e41626e10540c5a9e39e8b1e4732be5fdcfe0a229d4e5380a922784cb1b0ffad"
+    },
+    {
       "path": "results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json",
       "sha256": "e324ff4570c045af7225dcb04aaee0dc7828fb9fade73ff92f3cc751c0a52df6"
     },
@@ -709,6 +717,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "c9b0b5c783304e0cb5c6b47e8905f4e2f5dd7d9bd5e13c99ed191bf713e529db",
-  "version": "working-2026-10-24.2"
+  "source_sha256": "84344f92cd27f084f68fccd68526b35b62f0f06db43e04ba0ae11b4278f00134",
+  "version": "working-2026-10-25.1"
 }

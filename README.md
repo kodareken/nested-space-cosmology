@@ -1,5 +1,12 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [core--reservoir evolution](docs/nsc-atlas-hierarchy-evolution.md)
+now tests finite localization in the expanding inherited parent. A classical
+real-scalar envelope retains the reservoir and self-gravity; independent mass
+transport and expansion-work checks accompany three resolutions. A short
+comparison against the full relativistic equations improves in the weaker
+field. Growing radial breathing and long-time model error remain explicit.
+
 The [fixed-vacuum scale hierarchy](docs/nsc-atlas-scale-hierarchy.md)
 now connects local core size to the energy available in its inherited
 surroundings. An exact supply bound rules out arbitrarily shrinking a

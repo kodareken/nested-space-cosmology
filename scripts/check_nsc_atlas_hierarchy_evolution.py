@@ -65,6 +65,12 @@ def calculation():
     with ProcessPoolExecutor(max_workers=6) as pool:outputs=list(pool.map(worker,jobs))
     raw={name:r for name,r,_ in outputs};folders={name:f for name,_,f in outputs}
     fine=raw['fine'];medium=raw['medium'];envelopes={}
+    history=json.loads((Path(folders['fine'])/'history.json').read_text(encoding='utf-8'))
+    breathing={}
+    for label,lo,hi in (('early',0.,120.),('late',480.,600.)):
+        values=[r['physical_half_mass_radius'] for r in history if lo<=r['tau']<=hi]
+        breathing[label]=dict(slow_time_interval=[lo,hi],minimum=min(values),maximum=max(values),
+            peak_to_peak=max(values)-min(values))
     for key in ('late_mean_core_mass_ratio','late_minimum_core_mass_ratio','late_mean_physical_half_mass_radius','final_core_mass_ratio'):
         envelopes[key]=2*max(abs(fine[key]-medium[key]),
             abs(raw['time_control'][key]-medium[key]),abs(raw['outer_control'][key]-medium[key]))
@@ -104,6 +110,7 @@ def calculation():
         result='Finite classical-envelope localization of the retained high-frequency core and solved reservoir in its expanding inherited parent.',
         runs=short,numerical_comparison_envelope=envelopes,short_full_equation_comparison=comparisons,
         symbolic_zero_identities=identities,conditional_physical_interpretation=dimensional,
+        resolved_radial_breathing=breathing,
         preparation=fine['preparation'],numerical_validation_errors=errors,
         process_cpu_seconds_including_workers=cpu_total,wall_seconds=time.perf_counter()-wall,
         longest_worker_original_wall_seconds=max(r['wall_seconds'] for r in raw.values()),

@@ -269,12 +269,13 @@ input core shape retains its earlier numerical profile error and its
 leading-envelope origin. No rigorous numerical interval or full evolution
 error bound is asserted.
 
-The next physical problem is evolving this **two-scale preparation** with
-its supply region retained, and testing how much mass remains localized.
-The previous omega 2000 diffuse lens is unchanged. Its image delay cannot
-be transferred to this family by a unit conversion. The broad construction
-has now identified what that evolution must include, rather than requesting
-an unexplained source or a finer version of the old grid.
+The [subsequent envelope evolution](nsc-atlas-hierarchy-evolution.md)
+now tests finite localization with this two-scale supply region retained.
+It derives and checks a leading approximation; the long carrier-resolved
+relativistic evolution and general stability remain open. The previous
+omega2000 diffuse lens is unchanged, and its image delay cannot be transferred
+to this new family by a unit conversion. The construction here supplies
+explicit initial data for the next dynamical and observational connections.
 
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_scale_hierarchy.py --output results/summaries/nsc-atlas-scale-hierarchy-v1.json
