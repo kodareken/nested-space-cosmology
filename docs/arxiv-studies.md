@@ -1,5 +1,17 @@
 # Cited arXiv studies
 
+## Compact-seed nonlinear continuation, 25 October 2026
+
+[Seidel--Suen,gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015) provides
+scalar gravitational-concentration precedent;
+[Banik et al.,1504.05968](https://arxiv.org/abs/1504.05968) discusses the
+expanding Schrodinger--Poisson/real-scalar dictionary. Their abstracts and
+bibliographic records were checked; earlier owners retain the detailed
+reduction sources. The [new calculation](nsc-atlas-seed-collapse.md)
+derives and verifies its own initial source correction, boundary clock,
+mass/work balances and finite contraction on the inherited parent.
+It does not claim a new general formation mechanism.
+
 ## Ambient scalar formation and finite growth, 25 October 2026
 
 [Hwang--Noh,0902.4738](https://arxiv.org/html/0902.4738), equations(19)--(28),

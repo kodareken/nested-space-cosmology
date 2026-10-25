@@ -18,6 +18,21 @@ starting a derivation.
 
 ## Current execution priority — 25 October 2026
 
+### A formed field for the next observer calculation
+
+Complete within its finite envelope domain: the
+[nonlinear compact seed](nsc-atlas-seed-collapse.md) has compatible local
+initial gravity and a converged 10% concentration/first rebound. A fixed
+source-mass shell contracts by about89% after turnaround. The separate
+5% preparation develops high contrast while its sampled shells expand.
+The physics controls, boundary clock and shrinking mass/work errors
+distinguish finite formation from a numerical or density-only effect.
+
+Next: calculate an operational observer signal from this actual forming
+source, keeping its declared earlier-parent and seed assumptions. Do not
+rescale the old different-frequency lens or deepen completed formation
+checks without an observational requirement or a failing test.
+
 ### Ambient formation before supplying a core
 
 Complete in the local linear envelope: the [formation window](nsc-atlas-formation-window.md)

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "35766642e362a293372998ac9fdbd0ac62748e8e",
+  "current_receipt_commit_parent": "50980689dfeef889d3267c26103b06bf1475ff84",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 26752,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 27331,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "1fca33c5efc11f73b21a34429205a5d75ad35b288d40713fc105cf5c82223d83"
+      "sha256": "5b847acb9d1fa75c6fca89fd5ad0d18eaff578cba2fa5a4aa0fa871b052283df"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 284528,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 284942,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "80dc7eed7be8d8f3c33611b698659d2aab86b6edb1d97a6965ac22ed467e3a25"
+      "sha256": "1495c64bdf57b0b7d8ca8e23f4123f772140858760119d2f7747f6f672c4f91a"
     },
     {
-      "bytes": 130003,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 130663,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "e01c5f860ef6b5e41ab78f10b340e53d73e56374e63a74b3922d868a49fe22f9"
+      "sha256": "6f3c22c3085c59028b2614732155634413dffbb376723599c7a6396c7e6a03f9"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 460361,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 460935,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "cb1508536d47f2987fcf2265dfa8c0ecbf442e8e3be4a906bc99e1d8677a391f"
+      "sha256": "77a45061d4e843036f5fb7cea721f7c18e5a283bf97be7625e4bc9d4235cde9f"
     },
     {
       "bytes": 173938,
@@ -10507,6 +10507,14 @@
       "path": "docs/figures/nsc-atlas-scale-hierarchy.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "a9a9d82d6eed086b8bf24288109bd63452ad2dbe95b1bd8874062df4b32f5d12"
+    },
+    {
+      "bytes": 140044,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "path": "docs/figures/nsc-atlas-seed-collapse.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0a84a076a124db019b4f7127e5eb0eda618acabc7f8882a4a71aef9645793f2b"
     },
     {
       "bytes": 140231,
@@ -10724,12 +10732,12 @@
       "sha256": "93e5167853adf47ae9b61961cae3ec6a8c0efcdda0b1dcb2e3c5e1cf72901fbb"
     },
     {
-      "bytes": 12936,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 12914,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "docs/nsc-atlas-formation-window.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "177b82ddcffd9b8120ea7a8cd9c7a194a03e028ccf2a918e46573a77a09e7e34"
+      "sha256": "ad0e14bc90f6a26456ed7d1fa51c6bf28cce25c8aabd44bfa77ba5e85bc52ff2"
     },
     {
       "bytes": 15451,
@@ -10861,6 +10869,14 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
+      "bytes": 16870,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "path": "docs/nsc-atlas-seed-collapse.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "112d97d4a8bf86c0fa1b6ef4d9acf92a0633f2d132dc932b71aae1235340dec6"
+    },
+    {
       "bytes": 14560,
       "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
       "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
@@ -10904,15 +10920,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 112059,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 112869,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8bd7794971bd0735f6e0c7da78983e6868678fd8a030a34139eb1ce2e3145281"
+      "sha256": "23e60a2b6ccd3d52fd3e54dc832db2d5cf79c23d1f4538ff48905170211517a8"
     },
     {
       "bytes": 30876,
@@ -11864,12 +11880,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 24579,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 24926,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ec18faabadaf60720d7888432cfaa8c293dcfa89779cd71dc07836eeef422df5"
+      "sha256": "128b0c8237a452265ac29b1ecdf3ffeae6f18bf99e3af65dabf2615c344193d7"
     },
     {
       "bytes": 12685,
@@ -11880,12 +11896,12 @@
       "sha256": "f7d8c592fa3d7cb71aad04d78a2f2fb3ff605bdfe3c943ee12aaf833ecd17005"
     },
     {
-      "bytes": 599857,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 600710,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c17b9e88e9406edf6f8ce8ae2ddea20c54f79ed06a358d727e0c894afa186fbc"
+      "sha256": "c93ae965e88f558daee8c2d276a58688245ca66324c5681b8212a54944fce47b"
     },
     {
       "bytes": 6705,
@@ -11894,20 +11910,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 227150,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 227841,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "04555867ed9181775d3e06aaad0dc87e8f45719278034e56859512d3726fd1ef"
+      "sha256": "b9dfe34951b2ff4e1e39e0345478a69c7f8619f9aa6777e1c1f479e7bdd40932"
     },
     {
-      "bytes": 42905,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 43479,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "23b5d62e33cddc3199741829d4dae4c70d5f4c1b7144780b081a642905ac086e"
+      "sha256": "f6845e9591b616170ba725d3243321c9d63901f809331e8f0360028dbecc19a8"
     },
     {
       "bytes": 18356,
@@ -11976,28 +11992,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 31879,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 32196,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2e411b9d144ee9c53d3b597f6b280e86bb943131674985dfc881f608e6acf62e"
+      "sha256": "046d6b988ab37252b53052eefa628350e271ebea4ffb2e68eb285e56cf4c8750"
     },
     {
       "bytes": 3206,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "694e1ab1d329ce9b931f668e8da28f021d00636f5fdb988af5057f6fbdbfc66f"
+      "sha256": "e60c62f2c5a1076e0b6fa50039c5b1929b5b0798e10cebfc9084e5a3fc96c7fe"
     },
     {
-      "bytes": 43675,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 43814,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "bd122785d7ca8b99b4ae47f691cb78a321c19674d816828e481feb76614cb9ae"
+      "sha256": "0767df8577ac71b96e649ab06e48183fa7c6f7dcfbd4fd3de263bd3c024cfba4"
     },
     {
       "bytes": 226492,
@@ -12009,27 +12025,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "fd17a670595701f862e790a11cdf48a2871d886f09eeac11ed74a4bbaf8f1d6f"
+      "sha256": "1f00df26909f4a3e1e3f1ec9f59333653bf333c2ecc525061c68ccc1b641d9aa"
     },
     {
-      "bytes": 415908,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 423775,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "316941eb6bb07f3501cdffb9f49d18413500baefb724bedaa17a640d953ef6c0"
+      "sha256": "7681aa1bfbf7a37e555b16466b017cbecaf3d7a4fa4584119a764e186e8f5c28"
     },
     {
-      "bytes": 11481678,
-      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
-      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "bytes": 11694963,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "425aa6b5d41d3165e21387595b4212c2bb986624eeb249d3c574dc43b4612c2b"
+      "sha256": "08de41b25df28ca4db122b570f720bab4c8d33e7d82ef5f422c35f218e7d464d"
     },
     {
       "bytes": 3283,
@@ -30958,6 +30974,14 @@
       "sha256": "f135b3ad60d6c3f842e7fde84a9582bf7c5b6afcc92622660e486aeb0c6ff939"
     },
     {
+      "bytes": 220286,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "path": "results/summaries/nsc-atlas-seed-collapse-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f3e28b869a3cade85d49469824d47cdf801c965f918738cc411848e06e37c897"
+    },
+    {
       "bytes": 15941,
       "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
       "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
@@ -31541,6 +31565,14 @@
       "path": "scripts/check_nsc_atlas_scale_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "1d38f2921edf8f735388a9c2b33b3ed9549f5bd8d0dfa4f2bc7dbedf601862e5"
+    },
+    {
+      "bytes": 11324,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "path": "scripts/check_nsc_atlas_seed_collapse.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a61d296c8171b29191be2e58911a931efb745719f7aa17d0503f3e4ae0ac2426"
     },
     {
       "bytes": 6371,
@@ -34416,6 +34448,14 @@
       "sha256": "26901cf917e82d8cdabed508b8cc01023505be045defc5b76c601bda27557b0a"
     },
     {
+      "bytes": 1529,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "path": "scripts/plot_nsc_atlas_seed_collapse.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a4627c932aac70a879fcab9ee40eee0cdc187848d4b557f491ccf96873d0c89e"
+    },
+    {
       "bytes": 2529,
       "change": "Connect a shared three-region scalar atlas to inherited-law discrimination and protected parent cosmology.",
       "changed_from_commit": "2e23af5af30a0ec3140bb09d2f6126f01b2764ad",
@@ -35670,6 +35710,14 @@
       "path": "src/recursive_horizons/nsc_atlas_scale_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "78255e7f3b63cfde9b49e00a13fc66934bf528eaef305af2e7164f07cb582637"
+    },
+    {
+      "bytes": 12928,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "path": "src/recursive_horizons/nsc_atlas_seed_collapse.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8c9093e542ed3c7323dd6e612228c480d5655575832c46001df39486445ad395"
     },
     {
       "bytes": 19736,
@@ -40156,6 +40204,14 @@
       "path": "tests/test_nsc_atlas_scale_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "28ca9b7467d656ae3de6f5211ba203fcc7b5aea532beb54b3d163c705284b6e2"
+    },
+    {
+      "bytes": 3588,
+      "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
+      "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
+      "path": "tests/test_nsc_atlas_seed_collapse.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "aee8ee536a5668d4ad9be392f65849171858ef8dc658bb622d1c3eb97714f0a8"
     },
     {
       "bytes": 6906,

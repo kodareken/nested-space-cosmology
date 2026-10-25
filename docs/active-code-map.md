@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The [nonlinear seed owner](nsc-atlas-seed-collapse.md) uses
+`nsc_atlas_seed_collapse.py` for the exact compact source, initial gradient
+correction, phase-consistent Poisson kernel, log-scale evolution and
+fixed-source mass shells. Its check/plot scripts authenticate local raw
+fields and produce compact summaries. Eleven finite controls distinguish
+formation from contrast and preserve the earlier linear owner.
+
 The [formation-window owner](nsc-atlas-formation-window.md) uses
 `nsc_atlas_formation_window.py` for reciprocal-scale density/phase transfer,
 the positive Volterra comparison, independent dust quadrature and a compact

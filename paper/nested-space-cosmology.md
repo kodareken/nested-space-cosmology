@@ -76,6 +76,11 @@ then excludes small zero-current formation seeds at the retained late
 epoch, while a compact disturbance on an explicitly earlier parent
 continuation identifies a nonlinear formation window without installing
 a stationary core.
+Its finite-amplitude continuation now distinguishes an expanding high-contrast
+5% seed from a separately supplied 10% seed that turns around and forms a
+regular concentration with a first rebound. The initial constraint,
+conservation laws and numerical controls accompany this finite envelope
+result; its early parent and seed statistics remain supplied.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -6827,6 +6832,161 @@ declared earlier parent. Retained mass, concentration, reservoir and the
 spatial turnover would then be outputs, tested together. No new core profile
 or desired observed spectrum needs to be inserted to start that experiment.
 
+### 10.51. Nonlinear formation without installing the final core
+
+<!-- nsc-claim:atlas-seed-collapse -->
+
+Evidence: [nonlinear compact-seed comparison](../results/summaries/nsc-atlas-seed-collapse-v1.json)
+and [initial constraints, boundary clock and balances](../docs/nsc-atlas-seed-collapse.md).
+
+The compact disturbance now has a finite-amplitude continuation. Keep the
+same action, inherited vacuum and excitation, comoving length and earlier
+epoch. The $5%$ seed is evolved to $A=16$. A separately declared $10%$
+preparation is tested through its first compression and rebound at $A=1.2$.
+This amplitude comparison is not a fit to an observed object or an inferred
+universal formation threshold. No stationary core is placed in either seed.
+
+The autocorrelation source from Section10.50 has an exact factored
+real-space polynomial. Its radial mass primitive is positive inside the
+support and vanishes at its edge. Normalize the total envelope by its
+homogeneous value and set
+
+$$
+f_i(r)=\sqrt{1+\epsilon S(r)-\lambda W(r)},\qquad
+r=\frac{R}{AL}.
+$$
+
+The square root preserves the intended finite density contrast. The fixed
+smooth bump $W$ occupies the outer part of the original support. Its
+coefficient is solved from the full local initial gravitational constraint,
+not chosen to force a later collapse. Let $M_*=DL^3/2$, $n=M/M_*$,
+$q=1/(\omega^2 A_i^2L^2)$, $c=CL^2$ and $\gamma=DL^2/A_i$. Then
+
+$$
+n_r=r^2\left[\epsilon S-\lambda W+qB(f_i')^2\right],\qquad
+B=1-cr^2-\frac{\gamma n}{r},\qquad n(0)=n(2)=0.
+$$
+
+Without the correction, positive scalar gradient energy leaves a small
+exterior mass offset. The derivative of the zero-gradient endpoint with
+respect to $\lambda$ is negative, so a nearby compensating branch exists.
+The solved values are $9.75930\times10^{-12}$ and $3.85046\times10^{-11}$
+for the two amplitudes. An independent proper-distance Hamilton solve
+checks the endpoint, and the initial radial metric remains positive.
+This constructs local turning-point Einstein-scalar data in the declared
+earlier parent patch. It does not construct the earlier material walls.
+
+The envelope omits that gradient contribution, so its small initial mass
+residual is retained in the subsequent balance. It also retains the stated
+carrier-quadrature difference from exact zero scalar momentum. These are
+identified approximation differences, not silently removed inputs.
+
+The nonlinear evolution uses logarithmic scale time $N=\ln A$:
+
+$$
+i f_N=-\frac{a}{2}\Delta f+bVf,\qquad
+\Delta V=\frac{|f|^2-1}{2},
+$$
+$$
+a=\frac{1}{\omega L^2A^2H},\qquad
+b=\frac{\omega DL^2}{AH}.
+$$
+
+The finite boundary field and its gravitational clock must agree. A fixed
+boundary phase uses $V(L_{\rm box})=0$, implemented by subtracting the
+free-space potential's boundary value. This leaves bulk spatial forces
+unchanged and preserves a symmetric Green kernel. An initially inconsistent
+boundary choice failed conservation before nonlinear growth and is rejected.
+The corrected kernel passes an independent radial eigenfunction test.
+
+The existing sine kinetic map and full-field potential kicks are retained.
+Integrated time coefficients follow the early expansion, and a potential
+phase limit resolves the first rapid compression. With the physical-time
+Hamiltonian split into kinetic $T$ and self-gravitational $W$, the exact
+expansion identity is
+
+$$
+\frac{d(T+W)}{d\ln A}=-(2T+W).
+$$
+
+Mass transport is checked at fixed comoving cuts and the outer boundary.
+The work integral is evaluated every step. Three spatial resolutions,
+an independent time control and a larger domain test the $10%$ history.
+The $5%$ history has its own three resolutions, with no-gravity and
+small-amplitude controls completing eleven runs.
+
+### 10.52. Physical contraction separates formation from density contrast
+
+Track a shell carrying a fixed amount of the oscillatory scalar source:
+
+$$
+M_{\rm shell}=\frac{DL^3}{2}\int_0^{r_m(N)}r^2|f|^2dr,
+\qquad R_m(N)=ALr_m(N).
+$$
+
+This is an exact mass label in the envelope continuity equation. It
+excludes vacuum volume mass and higher-order GR gradient corrections.
+A decreasing comoving radius alone is insufficient: the physical radius
+must turn around and contract.
+
+For the $10%$ preparation, the shell initially at $r=.25$ turns around
+near $A=.5852$. At $A=1.2$ it gives
+
+| Quantity | Fine value and numerical comparison range |
+| --- | ---: |
+| Central density contrast | $59971\pm1514$ |
+| Physical density half-height radius | $(4.22172\pm.02216)\times10^{-6}$ |
+| Selected shell physical radius | $(4.38056\pm.03788)\times10^{-6}$ |
+| Selected shell radius / largest sampled radius | $.109898\pm.000950$ |
+
+The selected mass contracts by about $89%$ from its largest sampled
+physical radius. The density profile also contracts and undergoes a first
+rebound. Ranges use twice the largest fine/medium, time-control or outer-domain
+difference. They describe numerical uncertainty within the envelope, not a
+full relativistic or observational error budget.
+
+![Nonlinear density, fixed-mass contraction and the first rebound](../docs/figures/nsc-atlas-seed-collapse.png)
+
+*Figure 29. Both supplied seeds develop large contrast, but the sampled
+fixed-mass shells of the 5% case continue expanding through its interval.
+The 10% case turns around and contracts. Removing self-gravity removes that
+contraction. The right panel resolves the forming concentration's first
+compression and rebound; it does not establish asymptotic stability.*
+
+The fixed-cut mass-flux discrepancy decreases from $8.88\times10^{-5}$
+through $2.11\times10^{-5}$ to $5.48\times10^{-6}$, relative to the initial
+positive excess. Expansion-work discrepancies decrease from $.007108$
+through $.001689$ to $.0004185$. The fine global mass/current discrepancy
+is $6.69\times10^{-10}$. The larger domain barely changes the central
+result. Halving a small seed amplitude also halves its departure from
+the independently calculated linear response.
+
+The no-gravity control keeps the sampled shells expanding. The $5%$ case
+likewise shows no sampled shell turnaround through $A=16$, despite a final
+central contrast near $2257$. Contrast can grow while the background thins
+and the physical region expands. That history is not promoted to a formed
+bound object. Conversely, finite contraction and rebound of the $10%$
+case do not prove an asymptotic soliton, nonspherical stability or a
+population of astronomical objects.
+
+Using the previously supplied $\Lambda=10^{-52}\,\mathrm{m}^{-2}$ ruler,
+the selected shell contains $4.251\times10^9$ nominal solar masses and
+contracts from a largest sampled radius of $68.51$ kpc to
+$7.529\pm.066$ kpc. The final density half-height radius is
+$7.256\pm.039$ kpc, enclosing a calculated scalar-source mass of
+$(3.919\pm.069)\times10^9$ nominal solar masses. This aperture mass is
+an output of the forming field. The ruler, seed amplitude, length and epoch
+remain inputs; no galaxy measurement was fitted.
+
+The general scalar concentration mechanism is established in work including
+[Seidel--Suen, gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015), with
+expanding-envelope context in [Banik et al.,1504.05968](https://arxiv.org/abs/1504.05968).
+Here the new connection is a specified weak compact seed, compatible
+local initial gravity and a conserved, converged finite formation history
+in the inherited parent. Its actual field can now supply an observer
+calculation. The old installed-core and different-frequency lens histories
+cannot be substituted for that next signal.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -6876,7 +7036,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 29. The isolated reference in joined causal charts. Horizons are
+*Figure 30. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -7882,7 +8042,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 30. Saved finite-window comparisons. A: the previous and current
+*Figure 31. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -7978,7 +8138,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 31. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 32. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -8763,7 +8923,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 32. Research dependencies, distinct from spacetime causal arrows.
+*Figure 33. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

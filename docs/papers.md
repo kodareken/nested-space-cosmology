@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision2026-10-25.5 adds Sections10.51--10.52 and Figure29: compatible
+finite-amplitude compact data and nonlinear concentration from a weak seed.
+Physical mass-shell contraction separates the 10% formation example from
+the still-expanding high-contrast 5% comparison. The source mass/radius
+conversion is conditional, with no astronomical fit.
+
 Revision2026-10-25.4 adds Sections10.49--10.50 and Figure28: a finite-future
 all-wavelength growth bound on the inherited parent and a compact earlier
 seed without an installed core. Its controlled linear amplification identifies

@@ -10,10 +10,10 @@ another nonlinear cloud, a new boundary-driven preparation, and the growth
 available to a small ambient disturbance in the same omega1e9 parent.
 The third tests the missing prerequisite without choosing a final core.
 
-Active: derive an all-wavelength finite-future linear growth bound and
-evaluate it at the already calculated core/supply scales. Next: use its
-result to identify a viable source epoch or an explicitly nonlinear
-preparation; no blind late-time collapse grid follows a failed criterion.
+Complete: the all-wavelength finite-future bound and compact earlier
+growth window are established below. Their
+[nonlinear continuation](nsc-atlas-seed-collapse.md) now tests two explicit
+finite-amplitude preparations, preserving the linear calculation's domain.
 
 The only new dynamical state is the linear density/phase perturbation.
 The parent action, vacuum, excitation and curvature remain unchanged.

@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+## Nonlinear compact-seed formation
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_seed_collapse.py --output results/summaries/nsc-atlas-seed-collapse-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_seed_collapse.py
+```
+
+The [owner](nsc-atlas-seed-collapse.md) separates the exact local initial
+constraint, approximate envelope future and two supplied amplitudes.
+Eleven runs use six workers and about276 CPU seconds; cached raw fields
+and full histories live under `.build/seed-collapse`. The public record
+keeps summaries, plotting samples and hashes. The finite result does not
+certify a long-lived or full-relativistic bound object.
+
 ## Ambient formation window
 
 ```powershell

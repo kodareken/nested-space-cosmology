@@ -1,5 +1,14 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [nonlinear compact seed](docs/nsc-atlas-seed-collapse.md) now connects the
+formation window to a finite concentration without an installed core.
+A separately supplied 10% seed turns around and contracts a fixed-source
+mass shell to .109898 +/- .000950 of its largest sampled physical radius.
+The 5% case has high contrast but still-expanding sampled shells through
+A=16. Exact local initial constraints, a consistent boundary clock,
+three-grid flux/work contraction and physics controls accompany the
+envelope result. The earlier parent and seed statistics remain supplied.
+
 The [formation window](docs/nsc-atlas-formation-window.md) proves a finite
 all-wavelength linear growth budget in the inherited expanding parent.
 Zero-current density gain from the retained late anchor is bounded by

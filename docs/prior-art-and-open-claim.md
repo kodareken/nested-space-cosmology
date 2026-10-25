@@ -1,5 +1,19 @@
 # Prior art and admission of new research
 
+## Nonlinear compact-seed formation, 25 October 2026
+
+The [owner](nsc-atlas-seed-collapse.md) reuses spherical scalar constraints,
+the established expanding envelope and gravitational concentration.
+The missing link is actual finite-amplitude evolution without supplying
+the stationary core. Exact real-space convolution and a solved gradient
+correction prepare the source. An initial phase-boundary failure is
+diagnosed and rejected; a matching boundary clock preserves the symmetric
+kernel. Separate 5% and 10% seeds, adaptive phase limits and independent
+balances define eleven accepted runs in six workers within1200 CPU seconds.
+The 10% domain covers first compression/rebound, not its unresolved long
+future. The 5% comparison remains expanding through its declared interval.
+No new observation selects the amplitude, length or inherited action.
+
 ## Ambient formation window, 25 October 2026
 
 The [owner](nsc-atlas-formation-window.md) reuses the declared scalar envelope,

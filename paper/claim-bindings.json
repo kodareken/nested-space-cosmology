@@ -458,6 +458,11 @@
       "section": "10.49",
       "status": "derived",
       "owner": "docs/nsc-atlas-formation-window.md"
+    },
+    "atlas-seed-collapse": {
+      "section": "10.51",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-seed-collapse.md"
     }
   },
   "findings": [

@@ -1,10 +1,10 @@
 {
-  "bytes": 11481678,
+  "bytes": 11694963,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "fd17a670595701f862e790a11cdf48a2871d886f09eeac11ed74a4bbaf8f1d6f",
+  "metadata_sha256": "1f00df26909f4a3e1e3f1ec9f59333653bf333c2ecc525061c68ccc1b641d9aa",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 141,
-  "pdf_sha256": "425aa6b5d41d3165e21387595b4212c2bb986624eeb249d3c574dc43b4612c2b",
+  "pages": 144,
+  "pdf_sha256": "08de41b25df28ca4db122b570f720bab4c8d33e7d82ef5f422c35f218e7d464d",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -98,6 +98,10 @@
     {
       "path": "docs/figures/nsc-atlas-scale-hierarchy.png",
       "sha256": "a9a9d82d6eed086b8bf24288109bd63452ad2dbe95b1bd8874062df4b32f5d12"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-seed-collapse.png",
+      "sha256": "0a84a076a124db019b4f7127e5eb0eda618acabc7f8882a4a71aef9645793f2b"
     },
     {
       "path": "docs/figures/nsc-atlas-shared-scalar-slice.png",
@@ -676,6 +680,10 @@
       "sha256": "f135b3ad60d6c3f842e7fde84a9582bf7c5b6afcc92622660e486aeb0c6ff939"
     },
     {
+      "path": "results/summaries/nsc-atlas-seed-collapse-v1.json",
+      "sha256": "f3e28b869a3cade85d49469824d47cdf801c965f918738cc411848e06e37c897"
+    },
+    {
       "path": "results/summaries/nsc-atlas-shared-scalar-slice-v1.json",
       "sha256": "fcbd4d84edc386607e7f588beea4a679a22c83486393bba7bc3262da409ed608"
     },
@@ -745,6 +753,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "316941eb6bb07f3501cdffb9f49d18413500baefb724bedaa17a640d953ef6c0",
-  "version": "working-2026-10-25.4"
+  "source_sha256": "7681aa1bfbf7a37e555b16466b017cbecaf3d7a4fa4584119a764e186e8f5c28",
+  "version": "working-2026-10-25.5"
 }
