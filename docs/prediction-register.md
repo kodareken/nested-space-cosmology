@@ -1,5 +1,12 @@
 # Prediction register
 
+The [spatial compensation calculation](nsc-atlas-compensation-response.md)
+now supplies a conditional mass/vacuum/turnover relation and its age
+dependence. It remains a spatial kernel, not a new registered astronomical
+observation: population/preparation and the light-cone dictionary must be
+specified before a survey test is frozen. P001--P003 retain their existing
+actions, statuses and evidence.
+
 This register states what the fixed model predicts, where it applies and how
 agreement could be rejected. Each entry distinguishes derived consequences,
 numerical sensitivity and observations. The [machine-readable register](../results/prediction-register.json)

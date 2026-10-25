@@ -448,6 +448,11 @@
       "section": "10.37",
       "status": "measured",
       "owner": "docs/nsc-atlas-core-optics.md"
+    },
+    "atlas-compensation-response": {
+      "section": "10.47",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-compensation-response.md"
     }
   },
   "findings": [

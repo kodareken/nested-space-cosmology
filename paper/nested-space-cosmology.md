@@ -67,7 +67,11 @@ initial-data family admits separated local/cosmological scales and a
 linked vacuum-radius-mass relation. A classical-envelope evolution retains a localized core in the expanding
 parent, with mass-current, expansion-work and short full-equation checks.
 Real-linear transport then bounds a declared radial/quadrupole family while
-leaving universal stability open.
+leaving universal stability open. The same constrained core and reservoir
+now give a spatial compensation kernel, a uniform initial envelope-error
+bound and a mass--vacuum--turnover relation. Reusing the evolving source
+shows how that relation changes with age; a population and light-cone
+interpretation remain to be constructed.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -6482,6 +6486,181 @@ the targeted tail calculation used about $615$ within its separate
 $800$-second budget. Both retain their completed evidence without enlarging
 their claims to all-profile, nonlinear or full-relativistic stability.
 
+### 10.47. A local concentration carries the signature of its surroundings
+
+<!-- nsc-claim:atlas-compensation-response -->
+
+Evidence: [spatial compensation and retained evolution](../results/summaries/nsc-atlas-compensation-response-v1.json)
+and [derivation and source dictionary](../docs/nsc-atlas-compensation-response.md).
+
+The dense core and its depleted surroundings are one initial solution.
+Their relation should therefore survive into a spatial statistic. Let
+$M(R)$ be excess geometric mass, $M_c$ its value at
+the core cutoff, and $R_d$ the solved compensation radius. On the retained
+zero-momentum initial slice,
+
+$$
+\frac{dM}{dR}=\frac{\kappa R^2}{2}
+\left(U-U_0+\frac{BF^2}{2}\right),\qquad
+M(0)=M(R_d)=0.
+$$
+
+This is the areal mass measure from the Einstein constraint. A proper-volume
+energy integral is a different object. With $s=R/R_d$ and $K=kR_d$, define
+
+$$
+W(K)=\frac{1}{M_c}\int j_0(Ks)\,dM,
+\qquad j_0(x)=\frac{\sin x}{x}.
+$$
+
+The transform is an exact descriptor of the specified mass profile. Its
+flat-space density interpretation is local, on scales small compared with
+the parent's curvature radius. It does not substitute continuous Fourier
+modes for the compact parent's global spectrum. Compensation gives
+
+$$
+W(K)=a_2K^2+\mathcal R_4(K),\qquad
+a_2=-\frac{1}{6M_c}\int s^2\,dM,
+$$
+$$
+|\mathcal R_4(K)|\leq
+\frac{K^4}{120M_c}\int s^4|dM|.
+$$
+
+To prove this bound, write $j_0(x)$ as the integral of $\cos(xt)$ from
+zero to one and integrate the fourth-order cosine remainder. The zeroth
+moment cancels, and spherical symmetry eliminates the dipole. The retained
+profile gives $a_2=.0608058925116$ and remainder coefficient
+$.00129586307998$. Integrating the solved mass primitive against $Kj_1(Ks)$
+independently reproduces the transform without differentiating stored data.
+
+The simpler initial scalar envelope omits positive gradient mass. Using
+the same normalization in both descriptions yields an all-wavelength bound:
+
+$$
+dM-dM_{\rm env}
+=\frac{\kappa R^2BF^2}{4}dR\geq0,\qquad
+|W-W_{\rm env}|\leq g
+=\frac{1}{M_c}\int\frac{\kappa R^2BF^2}{4}dR.
+$$
+
+For this source $g=3.31911631\times10^{-7}$. The initial envelope has
+$W_{\rm env}(0)=-g$; its small residual is retained. Near $K=.00234$ it
+competes with the quadratic term. Thus the absolute source bound cannot
+be converted into arbitrary relative accuracy near zero. Nor is it a
+long-time error bound for the reduced dynamics or an assertion that the
+instantaneous scalar pressure is dustlike.
+
+Let $W_c$ denote the core-only transform, with the same normalization.
+The resolved half-power crossing is defined by
+
+$$
+\left[\frac{W(K_{1/2})}{W_c(K_{1/2})}\right]^2=\frac{1}{2}.
+$$
+
+For the unchanged $\omega=10^9$, $\zeta=.001$, half-depletion preparation,
+
+$$
+K_{1/2}=4.0522389138,\qquad
+\frac{\Lambda_v}{M_c k_{1/2}^3}=.2681493031.
+$$
+
+The second number combines the already solved mass--reservoir--vacuum
+relation with the new spatial window. Three quadrature orders and a
+tighter constraint integration give comparison ranges below $9\times10^{-12}$
+and $1.8\times10^{-12}$, respectively. Those ranges concern integration
+of the fixed numerical core shape, not total model uncertainty.
+
+At fixed weak amplitude and depletion, the established large-frequency
+hierarchy makes the core pointlike relative to its reservoir. Its window
+tends to one minus the transform of the normalized positive weight
+$s^2[2ab(s)-a^2b(s)^2]/J(a)$. Half depletion gives limiting crossing
+$4.1423205290$ and limiting vacuum--mass--turnover ratio $.2578964084$.
+Finite quarter- and three-quarter-depletion preparations instead give
+$.47250817$ and $.20537800$. Inheritance has not selected one depletion.
+
+With the previously supplied $\Lambda_v=10^{-52}\,\mathrm{m}^{-2}$ ruler,
+the initial example has $R_d=.827653$ Mpc, $k_{1/2}=4.89606$ Mpc$^{-1}$
+and wavelength $2\pi/k_{1/2}=1.28331$ Mpc. These are conditional spatial
+numbers, not an observed halo population or a fitted cosmological spectrum.
+
+![Compensated mass profile, spatial response and projected deficit](../docs/figures/nsc-atlas-compensation-response.png)
+
+*Figure 27. One supplied core and its inherited reservoir, viewed through
+enclosed mass, spatial frequency and projected contrast. Including the
+reservoir suppresses long-wavelength response. The purple curve reuses
+the evolved field in the original mass/radius units. The projected deficit
+is a spatial statistic; a relativistic lens observation needs its own
+averaging and light-cone dictionary.*
+
+### 10.48. The age and population are part of the correlation
+
+The inherited vacuum remains fixed while the surrounding field evolves.
+Postprocessing the five authenticated spherical evolution checkpoints,
+with physical radius $R=Ax/(\omega\zeta)$, gives at slow time $600$:
+
+| Spatial quantity | Fine result and comparison range |
+| --- | ---: |
+| $k_{1/2}R_{d,0}$ | $3.165445\pm.000031$ |
+| $\Lambda_v/(M_{c,\mathrm{current}}k_{1/2}^3)$ | $.559473\pm.000024$ |
+| Quadratic coefficient in original mass/radius units | $.0998276\pm.0000072$ |
+
+The ranges include grid, time and outer-domain comparisons from the saved
+source; no evolution was rerun. This changes the initial coefficient by
+much more than numerical error. An age-independent interpretation of
+$.2681493$ is excluded for this history. Long-time full-relativistic
+accuracy remains outside the established envelope calculation.
+
+The finite-domain total excess agrees with initial excess minus the outer
+mass flux to better than $3.5\times10^{-9}$ of the initial core mass.
+Its small nonzero monopole is not resolved against outer-domain variation.
+Core accretion is not total mass creation. The turnover is nevertheless
+resolved, and neither exact compensation at the original $R_d$ nor a strict
+evolved zero-wave-number power law has been imposed.
+
+For a spatial density descriptor $h=M_R/(4\pi R^2)$, projection
+along a line of sight gives
+
+$$
+\Sigma(b)=2\int_b^{R_d}\frac{h(R)R\,dR}{\sqrt{R^2-b^2}}.
+$$
+
+Its planar Fourier transform equals the three-dimensional transform at
+zero line-of-sight wave number. The same compensation scale therefore
+appears in projection. Outside the core the initial example has negative
+surface contrast but positive mean-minus-local contrast, both vanishing
+outside $R_d$. A weak-field lens interpretation would connect those two
+quantities to convergence and tangential shear. It requires the averaged
+source and null-propagation approximation; the exact instantaneous scalar
+optics cannot be obtained by renaming this projection a lens map.
+
+The correlation framework is established in
+[Schmidt, 1511.02231v2](https://arxiv.org/html/1511.02231v2) and
+[Chen--Afshordi, 1912.04872v5, Section III](https://arxiv.org/html/1912.04872v5).
+The contribution here is a calculated compensated kernel from the inherited
+source, its mass--vacuum scale relation and its measured age dependence.
+For identical local profiles with number-density fluctuation $\Delta n$,
+
+$$
+\delta_{\rm red}(k)=\frac{M_c}{\rho_g}
+W(kR_d)\Delta n(k),\qquad
+P_{\rm red}(k)=\left(\frac{M_c}{\rho_g}\right)^2
+|W(kR_d)|^2P_n(k).
+$$
+
+Here $\rho_g$ is mean geometric-mass density, and $P_n$ is the spectrum
+of absolute number-density fluctuations. Bounded $P_n$ gives an initial
+$O(k^4)$ redistribution spectrum; independent centres have $P_n=n_{\mathrm{mean}}$.
+The total matter spectrum also contains the large-scale field and its
+cross correlations. Suppressing that field would discard the very signal
+one wants to explain. No abundance, formation law or matter fraction has
+been calculated by this single-profile construction.
+
+The next connection is consequently formation and age selection in the
+inherited parent, followed by the observation map for that population.
+The atlas now supplies a joint spatial relation to test when those inputs
+exist; it does not fix them by matching a desired sky spectrum.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -6531,7 +6710,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 27. The isolated reference in joined causal charts. Horizons are
+*Figure 28. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -7537,7 +7716,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 28. Saved finite-window comparisons. A: the previous and current
+*Figure 29. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -7633,7 +7812,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 29. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 30. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -8418,7 +8597,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 30. Research dependencies, distinct from spacetime causal arrows.
+*Figure 31. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

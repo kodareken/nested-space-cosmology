@@ -1,5 +1,13 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [compensation signature](docs/nsc-atlas-compensation-response.md) connects
+the existing core and inherited reservoir to a spatial turnover. An exact
+positive-gradient remainder bounds the initial envelope mass-window error
+by3.32e-7 of the core. The computed vacuum/mass/turnover ratio is .2681493
+initially and .559473 +/- .000024 at the retained evolved endpoint. A
+projected deficit and conditional population formula expose the observation
+route; formation, age selection and the lensing dictionary remain open.
+
 The [radial and quadrupole response](docs/nsc-atlas-hierarchy-perturbations.md)
 now tests the retained evolving core beyond spherical symmetry. A real
 Gram-matrix bound covers every coefficient in a declared twenty-dimensional

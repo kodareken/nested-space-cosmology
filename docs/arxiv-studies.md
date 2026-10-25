@@ -1,5 +1,18 @@
 # Cited arXiv studies
 
+## Conserved profiles and spatial correlations, 25 October 2026
+
+[Schmidt,1511.02231v2](https://arxiv.org/html/1511.02231v2), Introduction
+and Section II, supplies the distinction between conserved stochastic
+contributions and the complete matter spectrum.
+[Chen--Afshordi,1912.04872v5](https://arxiv.org/html/1912.04872v5), Section III,
+equations(8)--(11), keeps the large-scale field separate from compensated
+profiles. Those portions were read. Their fitted NFW/profile parameters
+and simulation calibration are not imported. The
+[new calculation](nsc-atlas-compensation-response.md) evaluates the window
+of the atlas's own constrained scalar source, its initial envelope error
+and its retained age dependence.
+
 ## Finite radial and angular perturbations, 25 October 2026
 
 [Harrison, Moroz and Tod,math-ph/0208045](https://arxiv.org/abs/math-ph/0208045)

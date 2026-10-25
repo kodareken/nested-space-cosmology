@@ -1,5 +1,13 @@
 # What the calculations show
 
+The [compensation signature](nsc-atlas-compensation-response.md) connects
+the existing core and inherited reservoir to a spatial turnover. An exact
+positive-gradient remainder bounds the initial envelope mass-window error
+by3.32e-7 of the core. The computed vacuum/mass/turnover ratio is .2681493
+initially and .559473 +/- .000024 at the retained evolved endpoint. A
+projected deficit and conditional population formula expose the observation
+route; formation, age selection and the lensing dictionary remain open.
+
 The [perturbation result](nsc-atlas-hierarchy-perturbations.md) transports
 radial and quadrupole disturbances on exactly the retained spherical field.
 Its real Gram bound covers all five quadrupole components in the declared

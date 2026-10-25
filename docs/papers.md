@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision2026-10-25.3 adds Sections10.47--10.48 and Figure27: the inherited
+core/reservoir spatial kernel, a uniform initial envelope-error bound,
+vacuum/mass/turnover relation and age dependence from the saved evolution.
+Projection and conditional population formulas identify the next route
+to observations without claiming an abundance or full sky spectrum.
+
 Revision2026-10-23.3 adds Sections10.36--10.37 and Figure22: nonradial
 lensing on the same evolved scalar parent, the direct null-contraction
 identity, Weyl shear and independent ray-map/Jacobi checks. The experiment

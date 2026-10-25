@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+## Spatial compensation and retained age dependence
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_compensation_response.py --output results/summaries/nsc-atlas-compensation-response-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_compensation_response.py
+```
+
+The [owner](nsc-atlas-compensation-response.md) defines the exact initial
+mass transform and the conditional spatial interpretation. About8 CPU
+seconds evaluate six initial cases and five saved fields. The producer
+requires the existing ignored `.build/hierarchy-evolution` fields: regenerate
+them with the hierarchy-evolution command below if absent. Their hashes
+are checked; no full data are added to Git and no new grid is hidden here.
+
 ## Radial/quadrupole response and the tidal phase boundary
 
 ```powershell

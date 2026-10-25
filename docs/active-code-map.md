@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The [compensation owner](nsc-atlas-compensation-response.md) uses
+`nsc_atlas_compensation_response.py` for exact initial mass measures,
+Fourier and projected response, the positive gradient remainder, and
+physical-wavenumber postprocessing of authenticated retained evolution.
+`check_nsc_atlas_compensation_response.py` produces the compact record;
+its plot and tests cover the same equations without another grid campaign.
+
 The [perturbation owner](nsc-atlas-hierarchy-perturbations.md) uses
 nsc_atlas_hierarchy_perturbations.py for multipole gravity, real seed bases,
 unitary centrifugal propagation and response Grams. The original envelope

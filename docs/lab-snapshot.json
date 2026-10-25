@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+  "current_receipt_commit_parent": "e90786baa56214fc784e9b7117b6d9beb704d0af",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 25671,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 26192,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "31423a262bfa801ecc5b87a0d5e5b4453349a8883d530351bae913b943bf89ad"
+      "sha256": "ef57ab1f1a20fb3880c7ed0aad14cf676c80e7cbe3c06ebf19a3cf69ee9fac9e"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 283743,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 284168,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "de1c3f100d32bcb6a355bf6a09fd926f5a95f11097622c01688292802c6a9936"
+      "sha256": "9117c14e4c1fa25fdfe5e6b4980973e9b10e935bed60d7343e028bf88c07a49c"
     },
     {
-      "bytes": 128417,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 129132,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "8807a76b68059900bd9d3da43c2be965d1690f604e0a043179526efc11e0ccd0"
+      "sha256": "ed4e9dd60c86872a4fffa162c9bfef7d5644e6c721575d254efa9380164d2645"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 459290,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 459806,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0348a519e623ccfc9428891172f1096007cd345ceb5511b88920548559810f71"
+      "sha256": "11b4ab13a6b560ff71e7476fe3f1d2db0a0761539ca8c527459cfadbb23d5e4d"
     },
     {
       "bytes": 173938,
@@ -10339,6 +10339,14 @@
       "path": "docs/figures/nsc-atlas-compact-parent.png",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "a64a3240ded38e00ef7abef1bc7d41f3ec7e54d3cb543fa298d39ad732ef86c1"
+    },
+    {
+      "bytes": 156988,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "path": "docs/figures/nsc-atlas-compensation-response.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d946c0809062c3aa39e4da1b90323da41f6e8cb58e7f78a8ea06b6e6fe74cc01"
     },
     {
       "bytes": 214634,
@@ -10582,6 +10590,14 @@
       "path": "docs/nsc-atlas-compact-parent.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "3c4c3b553bb7664092b56add6b122e8d2a396e92414456fccff329b4c2bbe894"
+    },
+    {
+      "bytes": 13317,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "path": "docs/nsc-atlas-compensation-response.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7f1cbafdd006956671511a71448c8ecef60ede4de8276fcff61f2e05fb1a39bb"
     },
     {
       "bytes": 11128,
@@ -10872,15 +10888,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 110366,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 111171,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "ea114bf7c7c672b8bcfaa7bc0a850ae3c6b29064e179ec993769d287e56aeded"
+      "sha256": "9fb1443688966d79a65706986547d8802dca0794c4a31eb812d65ce6a0ae28b9"
     },
     {
       "bytes": 30876,
@@ -11832,28 +11848,28 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 23864,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 24225,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d1240aafc742b59af687faf6050f92fed642ed817212f47e70d4334d43171882"
+      "sha256": "fb05950a437cf5bcd61095bdae3a8d6a7a15fe745205c58ec8eb92e6973c0f7d"
     },
     {
-      "bytes": 12284,
-      "change": "Connect inherited scalar state freedom to operational clock transfer and the conditional P003 observer relation.",
-      "changed_from_commit": "0328c38c82745cacee5b8bcae360da56328b09a3",
+      "bytes": 12685,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7398cba18661886990f700660d6d11564db27ddd912bd695ecbbab3a96bf177a"
+      "sha256": "f7d8c592fa3d7cb71aad04d78a2f2fb3ff605bdfe3c943ee12aaf833ecd17005"
     },
     {
-      "bytes": 598183,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 599014,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e81183adfef46d5ba2e02ab08e980c8c9314d6ec68465aafe523411638e2e9ec"
+      "sha256": "d3f8ef78a7e490bc2dfd12c6be6d900871a31ed4e9c5c7ca8539379f598b5f95"
     },
     {
       "bytes": 6705,
@@ -11862,20 +11878,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 225750,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 226505,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "307dbc2f86f97b316d54e20070da5dabb9089f11c35e17ae8ab12d8a3219c8f5"
+      "sha256": "6e6407b78cd6e3a9503587315d8f7dec14067976a14ed10f483c6c1ae959c304"
     },
     {
-      "bytes": 41834,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 42350,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "987f4f10ad4df98f3e9dcf055d49dd83d6b63a3860e35b69a465d7a06ca670a9"
+      "sha256": "4c02b15d5cb68deb02a53bb6bf32fb0ff3f6d1e51b520168406c5b5c8305d159"
     },
     {
       "bytes": 18356,
@@ -11944,28 +11960,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 31223,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 31556,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "90f637b98737999538c7fba30a4be0ef23dc377fc158316ea852367502d1c73c"
+      "sha256": "ebe2167584ee1bf9316db7dfe0b900161b6fa9708b738df05f451c785364b19b"
     },
     {
       "bytes": 3206,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "fa44afee43b803ba1f4457555c3b5bff25f8c2aa19ea9a48e705726c20e26881"
+      "sha256": "15a8b0b7e427523f44a7143f31b56fb4c76a26fd46da743fbe0010e6eb5b4b94"
     },
     {
-      "bytes": 43377,
-      "change": "Connect the unchanged scalar evolution to nonradial lensing and curvature focusing.",
-      "changed_from_commit": "277beef7801cf533c11f951a176662a27139ec92",
+      "bytes": 43531,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "84979663338a5fd857d79466b890cbad5af134e200b3e17036a737116f6abc60"
+      "sha256": "e40a412a8a326d8575bb9c3e709b3167d1e61aa017d30ca59961545d41583f27"
     },
     {
       "bytes": 226492,
@@ -11977,27 +11993,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0b7d952b64f35abe642f241535acbf2568031870e48ef4a280f3b33904bd0353"
+      "sha256": "c747079b9913b3d6a54f9aecf9c373d13825f07438bf4aa1e6003a4c0eb27406"
     },
     {
-      "bytes": 400309,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 408474,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "3b3d3609f49eaf7e28c1825416f772fc60b63b2bd975131aeff81a839bcd3646"
+      "sha256": "8bb99e2eb1118494ca89ba22c18251900856b1d4350dca4ea4f6da955b9ea5c9"
     },
     {
-      "bytes": 10873806,
-      "change": "Derive finite radial and quadrupole response bounds on the retained evolving hierarchy.",
-      "changed_from_commit": "a2dbc3228c6ea41e3a7bb023edad84e0fc150096",
+      "bytes": 11154021,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7ce935821247ba47da2076d8d5211b9ba066e3d72909299db12248c28b6b515e"
+      "sha256": "5277e715e525171cb4b980eb0b2ae70d373a214022e27666976bd392a85dbd8c"
     },
     {
       "bytes": 3283,
@@ -30135,6 +30151,14 @@
       "sha256": "221cc83583b663b6e51f36e8c17dc15d3e5ef159e8ade1949b77339def397445"
     },
     {
+      "bytes": 70249,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "path": "results/summaries/nsc-atlas-compensation-response-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "fc6e29a255a1226bb01786caa40ae3cd900a8b06eac024a8b5544c9d1b17263b"
+    },
+    {
       "bytes": 47280,
       "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
       "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
@@ -31181,6 +31205,14 @@
       "path": "scripts/check_nsc_atlas_compact_parent.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "73e42ec30959ccdc7b84a36f50f638813a28744ef90794393d75b5193c9978f5"
+    },
+    {
+      "bytes": 10890,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "path": "scripts/check_nsc_atlas_compensation_response.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "bc6c0880a8920191011924b5532b64a57d55488226cee8da246750c02bc14597"
     },
     {
       "bytes": 7741,
@@ -34184,6 +34216,14 @@
       "sha256": "73b653e582ba201ed2cfa1443f9858116f315a70fe74032e117bbba7c9876609"
     },
     {
+      "bytes": 2309,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "path": "scripts/plot_nsc_atlas_compensation_response.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "55072460c3d090630ed102f2707b776aceec51d3ba0f77899f8c5f9858a30191"
+    },
+    {
       "bytes": 2497,
       "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
       "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
@@ -35020,6 +35060,14 @@
       "path": "src/recursive_horizons/nsc_atlas_compact_parent.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "849974387b06c1a5a5c65a15b2baff269882c6036f46828cc3bdf978944255e6"
+    },
+    {
+      "bytes": 10183,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "path": "src/recursive_horizons/nsc_atlas_compensation_response.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4f398f9acd6176cd50ce2a7e73a9eb9212685cf60f00a414fc48bf119efca6ad"
     },
     {
       "bytes": 3432,
@@ -39274,6 +39322,14 @@
       "path": "tests/test_nsc_atlas_compact_parent.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "6cf70145c5429d6118a75678c98bb48f7b8706c798c6c92657862068346c7676"
+    },
+    {
+      "bytes": 4352,
+      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
+      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "path": "tests/test_nsc_atlas_compensation_response.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b3be81641b1430e90fa55b0d885b30284b267e1d2bf30b28471f91a7d3b79239"
     },
     {
       "bytes": 5745,

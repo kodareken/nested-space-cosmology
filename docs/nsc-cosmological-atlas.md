@@ -18,6 +18,21 @@ starting a derivation.
 
 ## Current execution priority — 25 October 2026
 
+### From inherited supply to a spatial correlation
+
+Complete: the [compensation response](nsc-atlas-compensation-response.md)
+uses the already solved core/reservoir to derive a local spatial window,
+its positive-gradient envelope remainder and a mass/vacuum/turnover relation.
+Reusing five authenticated evolved fields establishes a resolved age
+dependence without another grid. The projected deficit and conditional
+population formula connect Steps5,7 and8 while leaving abundance and
+observation selection explicit.
+
+Next: derive physical formation/preparation and age selection in the
+inherited parent, then construct that population's observation map.
+The local perturbation span is complete within its limits; the unresolved
+external quadrupole amplitude remains a separate optional response route.
+
 ### Radial and quadrupole response of the evolving core
 
 Complete within the declared span: [perturb the retained trajectory](nsc-atlas-hierarchy-perturbations.md)

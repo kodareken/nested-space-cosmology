@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [compensation signature](nsc-atlas-compensation-response.md) connects
+the existing core and inherited reservoir to a spatial turnover. An exact
+positive-gradient remainder bounds the initial envelope mass-window error
+by3.32e-7 of the core. The computed vacuum/mass/turnover ratio is .2681493
+initially and .559473 +/- .000024 at the retained evolved endpoint. A
+projected deficit and conditional population formula expose the observation
+route; formation, age selection and the lensing dictionary remain open.
+
 The [finite perturbation owner](nsc-atlas-hierarchy-perturbations.md)
 connects evolving structure to radial and quadrupole response. Exact tangent
 flow, symplectic transport and real Gram bounds separate phase sensitivity

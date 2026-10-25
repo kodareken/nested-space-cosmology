@@ -1,5 +1,19 @@
 # Prior art and admission of new research
 
+## Inherited compensation and spatial correlations, 25 October 2026
+
+The [owner](nsc-atlas-compensation-response.md) reuses the exact spherical
+mass constraint, Fourier moment expansion and compensated halo-model
+framework. The missing bridge is a calculated spatial signature of the
+already retained core/reservoir, including the envelope dictionary.
+Three quadrature orders, a constraint control and two previously declared
+depletion alternatives use four workers within120 CPU seconds. Five
+authenticated evolution checkpoints are postprocessed without time steps.
+Positive gradient mass, an independent mass primitive, analytic shell,
+projection and physical-scale checks distinguish mathematical error from
+unknown formation/population/light-cone inputs. No failed quadrupole
+amplitude or new empirical spectrum is imported.
+
 ## Finite angular response on the evolving hierarchy, 25 October 2026
 
 The [perturbation owner](nsc-atlas-hierarchy-perturbations.md) reuses
