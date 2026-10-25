@@ -1,5 +1,11 @@
 # Active code and evidence map
 
+The [formation-window owner](nsc-atlas-formation-window.md) uses
+`nsc_atlas_formation_window.py` for reciprocal-scale density/phase transfer,
+the positive Volterra comparison, independent dust quadrature and a compact
+autocorrelation seed with bounded spectral tail. Its check/plot scripts
+and tests reuse the inherited source parameters; no PDE grid is run.
+
 The [compensation owner](nsc-atlas-compensation-response.md) uses
 `nsc_atlas_compensation_response.py` for exact initial mass measures,
 Fourier and projected response, the positive gradient remainder, and

@@ -71,7 +71,11 @@ leaving universal stability open. The same constrained core and reservoir
 now give a spatial compensation kernel, a uniform initial envelope-error
 bound and a mass--vacuum--turnover relation. Reusing the evolving source
 shows how that relation changes with age; a population and light-cone
-interpretation remain to be constructed.
+interpretation remain to be constructed. A finite-future growth theorem
+then excludes small zero-current formation seeds at the retained late
+epoch, while a compact disturbance on an explicitly earlier parent
+continuation identifies a nonlinear formation window without installing
+a stationary core.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -6661,6 +6665,168 @@ inherited parent, followed by the observation map for that population.
 The atlas now supplies a joint spatial relation to test when those inputs
 exist; it does not fix them by matching a desired sky spectrum.
 
+### 10.49. Does the inherited parent leave enough time to form a core?
+
+<!-- nsc-claim:atlas-formation-window -->
+
+Evidence: [formation budget and compact seed](../results/summaries/nsc-atlas-formation-window-v1.json)
+and [all-wavelength comparison proof](../docs/nsc-atlas-formation-window.md).
+
+Persistence of an installed core does not explain its formation. The
+earlier diffuse-cloud example also began with a nonlinear overdensity.
+Before another collapse grid, ask how much a small ambient disturbance
+can grow in the same inherited parent. Keep $\omega=10^9$,
+$\Lambda=9/32$, $D=\kappa E_b=3/8$ and the retained curvature $C$:
+
+$$
+H^2=\frac{\Lambda}{3}+\frac{D}{3A^3}-\frac{C}{A^2}.
+$$
+
+Linearizing the existing classical envelope gives density contrast
+$\delta$ and phase $\theta$. For local comoving wave number $k$,
+
+$$
+\dot\delta=\frac{k^2\theta}{\omega A^2},\qquad
+\dot\theta=-\frac{k^2\delta}{4\omega A^2}
++\frac{\omega D\delta}{2Ak^2},
+$$
+$$
+\ddot\delta+2H\dot\delta+
+\left(\frac{k^4}{4\omega^2A^4}-\frac{D}{2A^3}\right)\delta=0.
+$$
+
+The related averaged massive-scalar equation is given by
+[Hwang--Noh, 0902.4738, equations (19)--(28)](https://arxiv.org/html/0902.4738).
+Here it follows from the already declared local envelope with the actual
+inherited expansion. This is not a global flat-parent approximation or a
+new quantum postulate. An initially real envelope has zero current;
+a growing-mode velocity would be additional preparation data.
+
+There is no need to guess a sufficiently late stopping time. Set
+$u=1/A$, $\nu=k^2/(2\omega)$ and introduce the rescaled density velocity:
+
+$$
+p=A^2\dot\delta,\qquad
+\delta_u=-\frac{up}{H(u)},\qquad
+p_u=\frac{\nu^2u-D/2}{H(u)}\delta.
+$$
+
+The entire expanding future ends at the regular point $u=0$, because
+$H$ stays positive and tends to the vacuum expansion rate. The transfer matrix
+in $(\delta,p)$ has determinant one, providing an independent check.
+Regularity of this reduced endpoint does not establish infinite-time
+agreement with full GR or complete the unresolved wall future.
+
+To bound every wavelength, use kinetic time $d\eta=dt/A^2$. The equation
+becomes a forced oscillator with nonnegative feedback:
+
+$$
+\delta_{\eta\eta}+\nu^2\delta=\frac{DA}{2}\delta.
+$$
+
+The free Green kernel obeys $|\sin[\nu(\eta-s)]/\nu|\leq\eta-s$.
+Iterating the positive Volterra comparison therefore bounds the absolute
+solution by the zero-frequency density and velocity responses. This proves
+the bound even when a finite-wave-number solution oscillates or changes
+sign; simply deleting its pressure term would not prove that statement.
+
+For zero initial current, an elementary Gronwall estimate gives
+
+$$
+|\delta_k|\leq
+\exp\left(\frac{D u_i^3}{12H_{\min}^2}\right)|\delta_i|.
+$$
+
+At $A_i=1$, this factor is $1.39616912$, below $1.397$. Solving the
+positive comparison gives the sharper evaluated relation
+
+$$
+|\delta_k(t)|\leq1.26934144123|\delta_i|
++0.68728524662|v_i|,\qquad v_i=\dot\delta_i/H_i.
+$$
+
+The exact comparison solutions define the coefficients; the printed
+decimals have numerical comparison ranges below $3.4\times10^{-12}$,
+not certified interval endpoints. The independent pressureless basis
+$H(A)$ and its reduction-of-order partner reproduces the result within
+$8\times10^{-15}$. The standard basis is attributed to
+[Heath (1977)](https://doi.org/10.1093/mnras/179.3.351); its governing
+identity is verified directly here.
+
+Thus a small zero-current disturbance introduced at this late anchor
+cannot reach nonlinear contrast through the stated linear mechanism,
+even if evolved forever. This conclusion is specific to its epoch,
+initial current and equations. Earlier seeds, forcing or already nonlinear
+data are different possibilities. The bound also applies to spatial L2
+norm; a pointwise statement needs an appropriate Fourier norm.
+
+### 10.50. A compact earlier seed identifies the nonlinear continuation
+
+Construct a local compensated disturbance without the stationary core:
+
+$$
+g(r)=(1-r^2/L^2)^4_+,\qquad
+\delta_i(r)=\epsilon\frac{-\Delta(g*g)(r)}
+{\int|\nabla g|^2d^3x}.
+$$
+
+It has support $2L$, zero total density contrast, central value $\epsilon$
+and nonnegative Fourier transform proportional to $k^2|G(k)|^2$, where
+$G$ is the Fourier transform of $g$.
+Consequently $|\delta_i(r)|\leq\epsilon$, and the mode comparison gives
+a pointwise future bound for this entire seed. Its linear Poisson potential
+is compact as well. These are smooth local-envelope data, not yet a new
+exact nonlinear shared-wall preparation.
+
+Take $L=.000481562379847$, the previous supply radius interpreted as a
+comoving length, a supplied peak contrast of $5%$, and zero initial phase.
+At $A_i=1$ the central future gain is $1.26488829$; the global pointwise
+bound keeps the contrast below about $6.35%$.
+
+Now place that same dimensionless seed at $A_i=.01$ on the earlier
+averaged-parent continuation. Its central linear gain is
+
+$$
+35.609032\pm.000004.
+$$
+
+The stated range combines an analytic spectral-tail bound with a numerical
+integration comparison. No truncated spectrum is renormalized. For
+$q=kL$, the normalized bump transform is $10395j_5(q)/q^5$; Parseval fixes
+the density-weight integral, while the explicit sine/cosine polynomial for
+$j_5$ bounds its omitted tail. At $q=60$ the omitted pointwise gain is at
+most $3.07\times10^{-6}$ for all future times. Quadrature and ODE comparisons
+add about $1.02\times10^{-8}$.
+
+The supplied $5%$ seed reaches linear contrast $.1$ near $A=.0957400$.
+Its formal linear extrapolation reaches contrast one near $A=1.0190483$.
+That second event is outside linear validity: it identifies the nonlinear
+continuation to calculate, not a completed collapse or a formed core.
+The late-parent bound and the earlier amplification together show why
+the preparation epoch is a physical part of the proposed formation route.
+
+![Finite future growth and the compact earlier preparation](../docs/figures/nsc-atlas-formation-window.png)
+
+*Figure 28. Left: the late parent permits only modest ambient amplification;
+the small core-scale mode oscillates. Middle: changing the supplied epoch
+changes both growth and wave phase. Right: a compact 5% seed on the earlier
+continuation approaches a nonlinear regime. The curve beyond small contrast
+is a linear extrapolation, not a simulated core.*
+
+The earlier benchmark has $H_i/\omega=3.53\times10^{-7}$ and maximum
+retained $k/(\omega A_i)=.01246$. These indicate a useful reduction hierarchy,
+not a total relativistic error estimate. Its homogeneous past and sufficient
+local parent domain are explicit assumptions. The existing material walls,
+radiation history and inherited seed statistics have not been supplied at
+that earlier epoch. Exactly homogeneous data remain homogeneous; numerical
+noise cannot establish a physical seed mechanism.
+
+The next calculation should solve the compatible initial source dictionary
+for this small compact disturbance and evolve it nonlinearly in the same
+declared earlier parent. Retained mass, concentration, reservoir and the
+spatial turnover would then be outputs, tested together. No new core profile
+or desired observed spectrum needs to be inserted to start that experiment.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -6710,7 +6876,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 28. The isolated reference in joined causal charts. Horizons are
+*Figure 29. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -7716,7 +7882,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 29. Saved finite-window comparisons. A: the previous and current
+*Figure 30. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -7812,7 +7978,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 30. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 31. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -8597,7 +8763,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 31. Research dependencies, distinct from spacetime causal arrows.
+*Figure 32. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

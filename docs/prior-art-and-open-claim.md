@@ -1,5 +1,19 @@
 # Prior art and admission of new research
 
+## Ambient formation window, 25 October 2026
+
+The [owner](nsc-atlas-formation-window.md) reuses the declared scalar envelope,
+averaged Jeans equation, pressureless growth basis and Volterra comparison.
+The missing link is whether small ambient data can produce nonlinear
+contrast without installing the previous core. Reciprocal scale makes the
+whole reduced future regular. Twelve mode/epoch/tolerance cases and five
+compact-seed controls run in four workers within120 CPU seconds. Independent
+phase equations, dust quadrature, transfer determinant, free oscillator,
+Parseval and an analytic spectral tail check the calculation. Earlier
+preparations remain conditional on a homogeneous parent continuation.
+Stop at the identified nonlinear window; a nonlinear initial-constraint
+construction and evolution need their own finite calculation.
+
 ## Inherited compensation and spatial correlations, 25 October 2026
 
 The [owner](nsc-atlas-compensation-response.md) reuses the exact spherical

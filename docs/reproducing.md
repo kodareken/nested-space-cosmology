@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Ambient formation window
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_formation_window.py --output results/summaries/nsc-atlas-formation-window-v1.json --figure
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_formation_window.py
+```
+
+The [owner](nsc-atlas-formation-window.md) declares the parent and epoch
+assumptions. Seventeen mode/packet controls use about4 CPU seconds and four
+workers. No prior raw fields or nonlinear grid are required. The compact
+record stores response curves, identity checks, source hashes and the
+analytic spectral-tail bound; its linear threshold is not a collapse result.
+
 ## Spatial compensation and retained age dependence
 
 ```powershell

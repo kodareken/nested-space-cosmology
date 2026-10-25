@@ -453,6 +453,11 @@
       "section": "10.47",
       "status": "derived",
       "owner": "docs/nsc-atlas-compensation-response.md"
+    },
+    "atlas-formation-window": {
+      "section": "10.49",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-formation-window.md"
     }
   },
   "findings": [

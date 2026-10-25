@@ -1,5 +1,14 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [formation window](docs/nsc-atlas-formation-window.md) proves a finite
+all-wavelength linear growth budget in the inherited expanding parent.
+Zero-current density gain from the retained late anchor is bounded by
+the positive comparison1.26934144. A compact compensated 5% seed without
+an installed core, placed on an explicitly earlier averaged-parent
+continuation, has central gain35.609032 +/- .000004. Its formal nonlinear
+threshold identifies the next evolution; no collapse is claimed from
+linear extrapolation and no primordial seed law is assumed.
+
 The [compensation signature](docs/nsc-atlas-compensation-response.md) connects
 the existing core and inherited reservoir to a spatial turnover. An exact
 positive-gradient remainder bounds the initial envelope mass-window error

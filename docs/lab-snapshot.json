@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+  "current_receipt_commit_parent": "35766642e362a293372998ac9fdbd0ac62748e8e",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 26192,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 26752,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "ef57ab1f1a20fb3880c7ed0aad14cf676c80e7cbe3c06ebf19a3cf69ee9fac9e"
+      "sha256": "1fca33c5efc11f73b21a34429205a5d75ad35b288d40713fc105cf5c82223d83"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 284168,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 284528,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "9117c14e4c1fa25fdfe5e6b4980973e9b10e935bed60d7343e028bf88c07a49c"
+      "sha256": "80dc7eed7be8d8f3c33611b698659d2aab86b6edb1d97a6965ac22ed467e3a25"
     },
     {
-      "bytes": 129132,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 130003,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "ed4e9dd60c86872a4fffa162c9bfef7d5644e6c721575d254efa9380164d2645"
+      "sha256": "e01c5f860ef6b5e41ab78f10b340e53d73e56374e63a74b3922d868a49fe22f9"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 459806,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 460361,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "11b4ab13a6b560ff71e7476fe3f1d2db0a0761539ca8c527459cfadbb23d5e4d"
+      "sha256": "cb1508536d47f2987fcf2265dfa8c0ecbf442e8e3be4a906bc99e1d8677a391f"
     },
     {
       "bytes": 173938,
@@ -10395,6 +10395,14 @@
       "path": "docs/figures/nsc-atlas-flux-transition.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "a4a97bbdc6ea98e2b286741e4c58c81811b35d29b4efbbfc14ebf23589ef9193"
+    },
+    {
+      "bytes": 196630,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "path": "docs/figures/nsc-atlas-formation-window.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ecee3acc2d305a45d412eec70a60ec4511c4946a5dd437f4f45637ef3f2332e1"
     },
     {
       "bytes": 142652,
@@ -10592,12 +10600,12 @@
       "sha256": "3c4c3b553bb7664092b56add6b122e8d2a396e92414456fccff329b4c2bbe894"
     },
     {
-      "bytes": 13317,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 13315,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "docs/nsc-atlas-compensation-response.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "7f1cbafdd006956671511a71448c8ecef60ede4de8276fcff61f2e05fb1a39bb"
+      "sha256": "344e6015a9ac8ea482090eb8f7da681d8fdbac3b416ba4d899fd8d5272150c15"
     },
     {
       "bytes": 11128,
@@ -10714,6 +10722,14 @@
       "path": "docs/nsc-atlas-flux-transition.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "93e5167853adf47ae9b61961cae3ec6a8c0efcdda0b1dcb2e3c5e1cf72901fbb"
+    },
+    {
+      "bytes": 12936,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "path": "docs/nsc-atlas-formation-window.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "177b82ddcffd9b8120ea7a8cd9c7a194a03e028ccf2a918e46573a77a09e7e34"
     },
     {
       "bytes": 15451,
@@ -10888,15 +10904,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 111171,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 112059,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "9fb1443688966d79a65706986547d8802dca0794c4a31eb812d65ce6a0ae28b9"
+      "sha256": "8bd7794971bd0735f6e0c7da78983e6868678fd8a030a34139eb1ce2e3145281"
     },
     {
       "bytes": 30876,
@@ -11848,12 +11864,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 24225,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 24579,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "fb05950a437cf5bcd61095bdae3a8d6a7a15fe745205c58ec8eb92e6973c0f7d"
+      "sha256": "ec18faabadaf60720d7888432cfaa8c293dcfa89779cd71dc07836eeef422df5"
     },
     {
       "bytes": 12685,
@@ -11864,12 +11880,12 @@
       "sha256": "f7d8c592fa3d7cb71aad04d78a2f2fb3ff605bdfe3c943ee12aaf833ecd17005"
     },
     {
-      "bytes": 599014,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 599857,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d3f8ef78a7e490bc2dfd12c6be6d900871a31ed4e9c5c7ca8539379f598b5f95"
+      "sha256": "c17b9e88e9406edf6f8ce8ae2ddea20c54f79ed06a358d727e0c894afa186fbc"
     },
     {
       "bytes": 6705,
@@ -11878,20 +11894,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 226505,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 227150,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "6e6407b78cd6e3a9503587315d8f7dec14067976a14ed10f483c6c1ae959c304"
+      "sha256": "04555867ed9181775d3e06aaad0dc87e8f45719278034e56859512d3726fd1ef"
     },
     {
-      "bytes": 42350,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 42905,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "4c02b15d5cb68deb02a53bb6bf32fb0ff3f6d1e51b520168406c5b5c8305d159"
+      "sha256": "23b5d62e33cddc3199741829d4dae4c70d5f4c1b7144780b081a642905ac086e"
     },
     {
       "bytes": 18356,
@@ -11960,28 +11976,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 31556,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 31879,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ebe2167584ee1bf9316db7dfe0b900161b6fa9708b738df05f451c785364b19b"
+      "sha256": "2e411b9d144ee9c53d3b597f6b280e86bb943131674985dfc881f608e6acf62e"
     },
     {
       "bytes": 3206,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "15a8b0b7e427523f44a7143f31b56fb4c76a26fd46da743fbe0010e6eb5b4b94"
+      "sha256": "694e1ab1d329ce9b931f668e8da28f021d00636f5fdb988af5057f6fbdbfc66f"
     },
     {
-      "bytes": 43531,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 43675,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e40a412a8a326d8575bb9c3e709b3167d1e61aa017d30ca59961545d41583f27"
+      "sha256": "bd122785d7ca8b99b4ae47f691cb78a321c19674d816828e481feb76614cb9ae"
     },
     {
       "bytes": 226492,
@@ -11993,27 +12009,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "c747079b9913b3d6a54f9aecf9c373d13825f07438bf4aa1e6003a4c0eb27406"
+      "sha256": "fd17a670595701f862e790a11cdf48a2871d886f09eeac11ed74a4bbaf8f1d6f"
     },
     {
-      "bytes": 408474,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 415908,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "8bb99e2eb1118494ca89ba22c18251900856b1d4350dca4ea4f6da955b9ea5c9"
+      "sha256": "316941eb6bb07f3501cdffb9f49d18413500baefb724bedaa17a640d953ef6c0"
     },
     {
-      "bytes": 11154021,
-      "change": "Connect inherited compensation to spatial response and its retained age dependence.",
-      "changed_from_commit": "e90786baa56214fc784e9b7117b6d9beb704d0af",
+      "bytes": 11481678,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5277e715e525171cb4b980eb0b2ae70d373a214022e27666976bd392a85dbd8c"
+      "sha256": "425aa6b5d41d3165e21387595b4212c2bb986624eeb249d3c574dc43b4612c2b"
     },
     {
       "bytes": 3283,
@@ -30662,6 +30678,14 @@
       "sha256": "ad77b5643dd948d2489186c8cccee2759adbbb6d29f5a0484c5674af26ead4fa"
     },
     {
+      "bytes": 119000,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "path": "results/summaries/nsc-atlas-formation-window-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "044233811d0c4ab54473efcb6a9318baa0d29f70a223e6885c927fa2baa5832f"
+    },
+    {
       "bytes": 4505,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "e1c2027356fee463632f7f7dba23256cd782b7ce",
@@ -31293,6 +31317,14 @@
       "path": "scripts/check_nsc_atlas_flux_transition.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "796fc363bf5172e8b80ad56577b3350d0ac3ffd04fcb0c1370f8ffc4323dd31d"
+    },
+    {
+      "bytes": 10999,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "path": "scripts/check_nsc_atlas_formation_window.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4935b191ef08edd926edd7e4c067197e99c4d08edc5e5ef399c5e8f103b66390"
     },
     {
       "bytes": 4838,
@@ -34272,6 +34304,14 @@
       "sha256": "2a98127387d0c982165e59ff93062054cd369156e7573dff1f7693e7099f1bd8"
     },
     {
+      "bytes": 2380,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "path": "scripts/plot_nsc_atlas_formation_window.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1866e9da1c860a99a805a6468132e24476d01a775c81b5530f780225efe0c595"
+    },
+    {
       "bytes": 2410,
       "change": "Connect one-sided geometric observations to energy accounting and inherited-parameter identification.",
       "changed_from_commit": "00553bb1e083a3c4cef1e170f10aa6223a274af8",
@@ -35373,6 +35413,14 @@
       "path": "src/recursive_horizons/nsc_atlas_flux_transition.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7"
+    },
+    {
+      "bytes": 7837,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "path": "src/recursive_horizons/nsc_atlas_formation_window.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "855d016db7f3f6ef55119e1f5ef6cdc9508ef17c9a3b29bc1c43333171c9a920"
     },
     {
       "bytes": 21701,
@@ -39747,6 +39795,14 @@
       "path": "tests/test_nsc_atlas_formation_diagnostic.py",
       "retention_reason": "Exact same-action null-expansion, focusing, wall-impulse and frame controls.",
       "sha256": "6eab8882d17144bc332e17cb67286298797872f28702eaae304908d0e773ed61"
+    },
+    {
+      "bytes": 3414,
+      "change": "Derive the inherited finite-future growth bound and compact-seed formation window.",
+      "changed_from_commit": "35766642e362a293372998ac9fdbd0ac62748e8e",
+      "path": "tests/test_nsc_atlas_formation_window.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b5adf85c302c5cfcc4179ff358be372dbdf6a50e9c9637e754a1839665e370ce"
     },
     {
       "bytes": 19864,

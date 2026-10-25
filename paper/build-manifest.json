@@ -1,10 +1,10 @@
 {
-  "bytes": 11154021,
+  "bytes": 11481678,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "c747079b9913b3d6a54f9aecf9c373d13825f07438bf4aa1e6003a4c0eb27406",
+  "metadata_sha256": "fd17a670595701f862e790a11cdf48a2871d886f09eeac11ed74a4bbaf8f1d6f",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 138,
-  "pdf_sha256": "5277e715e525171cb4b980eb0b2ae70d373a214022e27666976bd392a85dbd8c",
+  "pages": 141,
+  "pdf_sha256": "425aa6b5d41d3165e21387595b4212c2bb986624eeb249d3c574dc43b4612c2b",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -42,6 +42,10 @@
     {
       "path": "docs/figures/nsc-atlas-flux-transition.png",
       "sha256": "a4a97bbdc6ea98e2b286741e4c58c81811b35d29b4efbbfc14ebf23589ef9193"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-formation-window.png",
+      "sha256": "ecee3acc2d305a45d412eec70a60ec4511c4946a5dd437f4f45637ef3f2332e1"
     },
     {
       "path": "docs/figures/nsc-atlas-geometric-observer.png",
@@ -564,6 +568,10 @@
       "sha256": "ad77b5643dd948d2489186c8cccee2759adbbb6d29f5a0484c5674af26ead4fa"
     },
     {
+      "path": "results/summaries/nsc-atlas-formation-window-v1.json",
+      "sha256": "044233811d0c4ab54473efcb6a9318baa0d29f70a223e6885c927fa2baa5832f"
+    },
+    {
       "path": "results/summaries/nsc-atlas-geometric-average-v1.json",
       "sha256": "981e1f0c31ddcf657d8f90d548c78a660ed2a048a08a72e59b9b379830bab4ff"
     },
@@ -737,6 +745,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "8bb99e2eb1118494ca89ba22c18251900856b1d4350dca4ea4f6da955b9ea5c9",
-  "version": "working-2026-10-25.3"
+  "source_sha256": "316941eb6bb07f3501cdffb9f49d18413500baefb724bedaa17a640d953ef6c0",
+  "version": "working-2026-10-25.4"
 }

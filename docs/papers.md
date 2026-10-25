@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision2026-10-25.4 adds Sections10.49--10.50 and Figure28: a finite-future
+all-wavelength growth bound on the inherited parent and a compact earlier
+seed without an installed core. Its controlled linear amplification identifies
+where a nonlinear formation calculation becomes useful. Earlier parent
+completion and physical seed selection remain open.
+
 Revision2026-10-25.3 adds Sections10.47--10.48 and Figure27: the inherited
 core/reservoir spatial kernel, a uniform initial envelope-error bound,
 vacuum/mass/turnover relation and age dependence from the saved evolution.

@@ -1,5 +1,19 @@
 # Cited arXiv studies
 
+## Ambient scalar formation and finite growth, 25 October 2026
+
+[Hwang--Noh,0902.4738](https://arxiv.org/html/0902.4738), equations(19)--(28),
+provides the averaged massive-scalar density and Jeans framework. These
+equations and their approximation discussion were read. The NSC
+[formation window](nsc-atlas-formation-window.md) derives the local
+equations from its own envelope and retains its inherited curved expansion.
+[Heath (1977)](https://doi.org/10.1093/mnras/179.3.351) is credited for the
+pressureless growth basis; its abstract and bibliographic record were read.
+H's solution and the independent integral are verified directly. Neither
+source selects our initial disturbance or supplies the missing shared-wall
+past. The new result is the all-mode finite-future comparison, its evaluated
+coefficients and the compact seed's controlled earlier growth window.
+
 ## Conserved profiles and spatial correlations, 25 October 2026
 
 [Schmidt,1511.02231v2](https://arxiv.org/html/1511.02231v2), Introduction

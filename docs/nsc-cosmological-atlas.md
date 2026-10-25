@@ -18,6 +18,21 @@ starting a derivation.
 
 ## Current execution priority — 25 October 2026
 
+### Ambient formation before supplying a core
+
+Complete in the local linear envelope: the [formation window](nsc-atlas-formation-window.md)
+proves a finite-future all-mode comparison and tests a compact zero-current
+seed. The current late parent gives at most1.26934144 density amplification.
+On a declared earlier averaged continuation, a 5% compact disturbance has
+central gain35.609032 +/- .000004; its linear extrapolation reaches unit
+contrast near A=1.01905. This is a nonlinear continuation target, not a core.
+
+Next: construct compatible finite-amplitude initial scalar/gravity data for
+that small disturbance and evolve it in the same declared earlier parent.
+Keep its supplied seed/epoch separate from an inherited formation probability
+or completed past of both material walls. Mass, concentration and the
+spatial turnover should be measured outputs of this next calculation.
+
 ### From inherited supply to a spatial correlation
 
 Complete: the [compensation response](nsc-atlas-compensation-response.md)

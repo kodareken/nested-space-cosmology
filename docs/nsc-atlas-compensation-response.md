@@ -10,10 +10,10 @@ already constrained core plus reservoir. The third has the shortest
 verified connection to a local-universe correlation: its source, support,
 mass law and inherited vacuum already exist.
 
-Active: derive the compensated spatial kernel and its initial envelope
-error from `ScaleHierarchy`, calculate its turnover and vacuum/mass relation,
-then bind the result to the atlas. Next: physical population/preparation and
-time-dependent observables; an initial kernel alone does not supply them.
+Complete: the compensated spatial kernel, initial envelope error, turnover
+and retained age dependence are calculated below. The next preparation link
+is now the [ambient formation window](nsc-atlas-formation-window.md); physical
+population and light-cone observables remain separate requirements.
 
 Reuse spherical mass constraints, Fourier multipole expansion and the
 mass-conserving halo-model idea. Schmidt
