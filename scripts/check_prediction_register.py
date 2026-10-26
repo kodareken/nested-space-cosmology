@@ -485,6 +485,29 @@ def check_p003(root, entry):
     require(bool(entry['rejection'].strip()),'P003 rejection condition required')
 
 
+def check_p004(root, entry):
+    exact(entry['model_id'],'formed-source-dynamics-lensing','P004 model')
+    exact(entry['registration'],'prospective_synthetic_withheld_optical_ray','P004 registration')
+    exact(entry['observational_validation'],False,'P004 observation status')
+    raw=bound_bytes(root,entry['forecast'],'P004 frozen forecast')
+    record=read_json(raw)
+    exact(record['withheld_ray_evaluated'],False,'P004 forecast phase')
+    exact(record['prediction_id'],'NSC-P004','P004 forecast identity')
+    exact(entry['prediction'],record['prediction'],'P004 forecast projection')
+    require(record['prediction']['comparison_tolerance_radians']>0,'P004 tolerance missing')
+    require(bool(entry['rejection'].strip()),'P004 rejection criterion required')
+    if 'validation' in entry:
+        result=read_json(bound_bytes(root,entry['validation'],'P004 validation'))
+        exact(result['forecast_sha256'],hashlib.sha256(raw).hexdigest(),'P004 frozen forecast unchanged')
+        exact(result['observational_validation'],False,'P004 validation is synthetic')
+        exact(result['frozen_tolerance_radians'],record['prediction']['comparison_tolerance_radians'],'P004 unchanged tolerance')
+        require(math.isclose(result['residual_radians'],
+            result['runs']['fine']['image_shift']-record['prediction']['value_radians'],
+            rel_tol=1e-10,abs_tol=1e-18),'P004 residual projection')
+        exact(result['synthetic_check_passed'],
+              abs(result['residual_radians'])<=result['frozen_tolerance_radians'],'P004 pass/fail projection')
+
+
 def check_register(root, register):
     root = Path(root).resolve()
     exact(register["schema"], SCHEMA, "register schema")
@@ -492,8 +515,9 @@ def check_register(root, register):
     document = local_file(root, DOCUMENT).read_text(encoding="utf-8")
     entries = register["entries"]
     require(isinstance(entries, list) and [e["id"] for e in entries] in
-            (["NSC-P001"], ["NSC-P001", "NSC-P002"], ["NSC-P001", "NSC-P002", "NSC-P003"]),
-            "one currently registered P001 and optional unique P002/P003 in order required")
+            (["NSC-P001"], ["NSC-P001", "NSC-P002"], ["NSC-P001", "NSC-P002", "NSC-P003"],
+             ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004"]),
+            "one currently registered P001 and optional unique P002/P003/P004 in order required")
     entry = entries[0]
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")
@@ -509,11 +533,16 @@ def check_register(root, register):
         check_p002(root, entries[1])
         result["predictions"] += 1
         result["evidence_files"] += 1
-    if len(entries) == 3:
+    if len(entries) >= 3:
         require('## NSC-P003' in document,'P003 missing from reader-facing register')
         check_p003(root,entries[2])
         result['predictions']+=1
         result['evidence_files']+=1
+    if len(entries) >= 4:
+        require('## NSC-P004' in document,'P004 missing from reader-facing register')
+        check_p004(root,entries[3])
+        result['predictions']+=1
+        result['evidence_files']+=1+int('validation' in entries[3])
     return result
 
 

@@ -16,7 +16,18 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 25 October 2026
+## Current execution priority — 26 October 2026
+
+### NSC-P004: motion predicts an unevaluated optical response
+
+Active: the [dynamics--lensing preparation](nsc-atlas-dynamics-lensing.md)
+uses finite freely falling motions and calibrated observer trajectories
+to predict a new receiver angle. The force-timescale precheck does not
+support an equilibrium rotation-curve assumption. NSC-P004 freezes
+19.43948 mas with comparison tolerance .18328 mas before the target ray
+is evaluated. Next: commit that forecast, evaluate the independent null
+boundary problem and retain success or failure without changing the
+prediction. The old held-clock and formation results remain unchanged.
 
 ### The formed source now supplies a joint observer response
 

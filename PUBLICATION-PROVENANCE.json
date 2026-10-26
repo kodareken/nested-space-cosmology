@@ -1701,9 +1701,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2529241,
+      "bytes": 2531476,
       "path": "docs/lab-snapshot.json",
-      "sha256": "10f54272e745fcca0c88c0e22c7e10ae66ecf0597e343c78637b4b531fb4586b"
+      "sha256": "a12d7947ea5b499bc1c4b92693c37c5fd577a305b7eed13e6699ce1664f7adfe"
     },
     {
       "bytes": 4997,
@@ -1794,6 +1794,11 @@
       "bytes": 191654,
       "path": "docs/nsc-atlas-dirac-probe.md",
       "sha256": "e731cd8069a1f979807918dfbb2ff799b10d9e58f03b39f5f84db1d18b30c5d4"
+    },
+    {
+      "bytes": 4672,
+      "path": "docs/nsc-atlas-dynamics-lensing.md",
+      "sha256": "aff5f9d59df4af38c993c85a9e94b5f8d317735a5d1909c4c53aba8da6d865e5"
     },
     {
       "bytes": 17343,
@@ -2001,9 +2006,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 113705,
+      "bytes": 114337,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "a4973e787420e3be975edfd89326905d64229199a3f09c810220ccb07fdfdbb6"
+      "sha256": "cac9db9222d1d28f71fc5e05bb8b43ae3b19c4165816c215f682025518a1098b"
     },
     {
       "bytes": 30876,
@@ -2486,9 +2491,9 @@
       "sha256": "87582b82c64cfdff71f961656fa770c8ad4757ed39cd98d9f2d1467c9d7e8625"
     },
     {
-      "bytes": 12685,
+      "bytes": 13395,
       "path": "docs/prediction-register.md",
-      "sha256": "f7d8c592fa3d7cb71aad04d78a2f2fb3ff605bdfe3c943ee12aaf833ecd17005"
+      "sha256": "c7f7713483fb2fe9b669377e4c6080f20bd8730213656ca163e4d0f9600b7ddb"
     },
     {
       "bytes": 601473,
@@ -14826,9 +14831,9 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 16111,
+      "bytes": 17897,
       "path": "results/prediction-register.json",
-      "sha256": "a0ab3d119c76141c6fa3b564d397a1f345f99088151ce9b15209eee206eab00f"
+      "sha256": "86aff292a0d9f367abc92a175c3c5da374d21d4833d77a167c22df06230555d9"
     },
     {
       "bytes": 170273,
@@ -15511,6 +15516,11 @@
       "sha256": "4dced4c42934711b458bb3cf3a08368179c45d416a2bf24091decb2cd497cbbc"
     },
     {
+      "bytes": 66777,
+      "path": "results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json",
+      "sha256": "c31f2b806863a48eac384472987876c43f45ca3f0e4c3414f3fdee1f327187e3"
+    },
+    {
       "bytes": 4720,
       "path": "results/summaries/nsc-spectral-gravitational-response-v1.json",
       "sha256": "0c1bb779676a37b8af3e9605f0dab262c570af13b2364e29a6757328b5314951"
@@ -15719,6 +15729,11 @@
       "bytes": 1356,
       "path": "scripts/check_nsc_atlas_dirac_inheritance.py",
       "sha256": "6738eb571fe78b43904641708c80bb67279f0a25209ccea3bbaa819afc3da959"
+    },
+    {
+      "bytes": 9050,
+      "path": "scripts/check_nsc_atlas_dynamics_lensing.py",
+      "sha256": "5027b054b9031aaa8811b7bce3b861b2651efc13c0bf2473202993fc61d72413"
     },
     {
       "bytes": 4953,
@@ -16101,9 +16116,9 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 29347,
+      "bytes": 31244,
       "path": "scripts/check_prediction_register.py",
-      "sha256": "5f69d91c4475e2585c612fe13e1c5ba11fafd3c171efd5b9db2846756c520c73"
+      "sha256": "3b1b8971ca9664f5fff262ccb6828569799be04134cb034650a763363d6f2d1c"
     },
     {
       "bytes": 56847,
@@ -18379,6 +18394,11 @@
       "bytes": 3728,
       "path": "src/recursive_horizons/nsc_atlas_dirac_wall_integral.py",
       "sha256": "1dc8deec03b0e7078d7acbf39d801c04223dc104cc969c8c36b02703bd54d095"
+    },
+    {
+      "bytes": 9940,
+      "path": "src/recursive_horizons/nsc_atlas_dynamics_lensing.py",
+      "sha256": "641c58673766c8ddaf477ede3c29990551c27ad79d4035c8728ed982371bcfa3"
     },
     {
       "bytes": 24043,
@@ -20961,6 +20981,11 @@
       "sha256": "4cd7cc3e72037edf50e63f54c9de326eaf53f9bbc99c26a2f59eaff1e906ecd4"
     },
     {
+      "bytes": 2608,
+      "path": "tests/test_nsc_atlas_dynamics_lensing.py",
+      "sha256": "a566b3521bfa7774157b3c6333e9acb81dea7cf46f38bfa08c7d5c700e044399"
+    },
+    {
       "bytes": 8977,
       "path": "tests/test_nsc_atlas_effective_vacuum.py",
       "sha256": "cee1dd046c14722becb837dd1116a44b5e11fc34019e4dfbfdc2ae55e8b56ef0"
@@ -23316,7 +23341,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "10f54272e745fcca0c88c0e22c7e10ae66ecf0597e343c78637b4b531fb4586b",
+  "lab_snapshot_sha256": "a12d7947ea5b499bc1c4b92693c37c5fd577a305b7eed13e6699ce1664f7adfe",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-25.6",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

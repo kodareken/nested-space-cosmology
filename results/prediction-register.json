@@ -371,6 +371,33 @@
       },
       "limits": "The compact shape, background, initial proper source separations and clock rule are fixed inputs. Arbitrary spatial profiles, unknown source peculiar velocities or additional matter add independent degrees of freedom and need not obey this three-clock closure. No empirical data, SI ruler, primordial spectrum or nonlinear remainder bound is supplied.",
       "rejection": "After fixing the action, profile, proper source positions and free-fall/receiver-clock protocol, calibrate only the two state amplitudes on the first two frequency observations. A withheld third-clock discrepancy beyond propagated measurement, numerical and justified nonlinear/model errors rejects this tested family. No observational comparison has been performed."
+    },
+    {
+      "id": "NSC-P004",
+      "title": "Timelike motion predicts a withheld moving-observer image",
+      "model_id": "formed-source-dynamics-lensing",
+      "registered_on": "2026-10-26",
+      "registration": "prospective_synthetic_withheld_optical_ray",
+      "observational_validation": false,
+      "status": "forecast_frozen_before_optical_evaluation",
+      "forecast": {
+        "path": "results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json",
+        "bytes": 66777,
+        "sha256": "c31f2b806863a48eac384472987876c43f45ca3f0e4c3414f3fdee1f327187e3"
+      },
+      "prediction": {
+        "value_radians": 9.424527250279091e-08,
+        "value_milliarcseconds": 19.439482872492967,
+        "comparison_tolerance_radians": 8.885602264085617e-10,
+        "comparison_tolerance_milliarcseconds": 0.18327870293903806,
+        "numerical_envelope": 3.901987483123648e-10,
+        "probe_release_envelope": 2.3549442146737052e-11,
+        "born_allowance": 4.748120359494598e-10,
+        "born_allowance_fraction": 0.005,
+        "kind": "predeclared comparison tolerance; not a total physical confidence interval"
+      },
+      "limits": "Synthetic timelike calibration on the fixed weak metric. Observer kinematics are supplied calibration data; their empirical precision is not established. Equal leading potentials are a model premise. No independent lens mass, equilibrium rotation curve, astronomical fit or unique nesting identification.",
+      "rejection": "The exact withheld null image in the same fixed metric falls outside the frozen forecast tolerance. Preserve the forecast and report failure rather than changing lens normalization or tolerance. A later observational application requires its own measured kinematics and physical error model."
     }
   ]
 }

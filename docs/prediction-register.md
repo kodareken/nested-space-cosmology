@@ -235,3 +235,16 @@ The checker authenticates the seven evidence files, their manifest links,
 the parameter/domain declarations and the exact saved-value projections.
 It performs no symbolic derivation, numerical integration or generator run;
 cross-platform numerical replay belongs to the separate evidence validators.
+
+
+## NSC-P004 — motion predicts a withheld image
+
+Registered26 October2026 before evaluating the new null ray. The
+[frozen forecast](../results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json)
+uses finite timelike velocity changes and calibrated observer trajectories
+to predict the receiver at azimuth pi-.12. Its image shift is19.43948 mas
+with a predeclared comparison tolerance .18328 mas. The tolerance includes
+numerical and probe-release sensitivity plus a0.5% Born allowance; it is
+not a full-GR confidence interval. This is a prospective synthetic check,
+not an astronomical observation. The [owner](nsc-atlas-dynamics-lensing.md)
+defines calibration, withheld data, assumptions and rejection.
