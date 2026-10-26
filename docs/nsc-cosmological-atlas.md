@@ -20,14 +20,17 @@ starting a derivation.
 
 ### NSC-P004: motion predicts an unevaluated optical response
 
-Active: the [dynamics--lensing preparation](nsc-atlas-dynamics-lensing.md)
-uses finite freely falling motions and calibrated observer trajectories
-to predict a new receiver angle. The force-timescale precheck does not
-support an equilibrium rotation-curve assumption. NSC-P004 freezes
-19.43948 mas with comparison tolerance .18328 mas before the target ray
-is evaluated. Next: commit that forecast, evaluate the independent null
-boundary problem and retain success or failure without changing the
-prediction. The old held-clock and formation results remain unchanged.
+Complete: the [dynamics--lensing test](nsc-atlas-dynamics-lensing.md)
+uses finite freely falling motions and calibrated observer trajectories.
+The frozen19.43948 mas prediction agrees with the withheld19.43946 mas
+null result inside its unchanged .18328 mas tolerance. The source is too
+time-dependent to assume an equilibrium rotation curve at the sampled
+inner radii. This is prospective synthetic validation in the same weak metric.
+
+Next: move outward to the compensating environment and test whether its
+measurable scale relation breaks a specified same-core degeneracy.
+Keep measured observer kinematics and model-error propagation explicit.
+The completed formation and inner observer calculations remain closed.
 
 ### The formed source now supplies a joint observer response
 

@@ -10,8 +10,9 @@ The third connects the result outward without installing another mass model.
 Complete: the short source interval, weak metric, mass-current derivative
 and fixed-observer null problem are calculated below. Image direction,
 proper delay and frequency satisfy independently tested arrival-map
-identities. Next: physically prepared or measured observer kinematics and
-inference from the same source, keeping model and numerical errors separate.
+identities. The [NSC-P004 continuation](nsc-atlas-dynamics-lensing.md) now
+uses freely falling motion to predict a withheld optical response,
+keeping model and numerical errors separate.
 
 Keep the formed 10% seed, inherited action, background and source unchanged.
 Use a local averaged weak metric with equal leading scalar potentials and

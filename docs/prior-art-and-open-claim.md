@@ -1,5 +1,17 @@
 # Prior art and admission of new research
 
+## Motion-to-light forecast, 26 October 2026
+
+The [owner](nsc-atlas-dynamics-lensing.md) records the execution preparation
+before evaluation: compare equilibrium, fitted lens profiles and finite
+timelike calibration; choose the last after the stationarity check.
+NSC-P004 freezes an image prediction at the new receiver pi-.12 from
+motion and geometry only. The forecast was committed in e626f2f before
+the moving-endpoint null calculation. Source/impulse/quadrature controls
+and a predeclared tolerance remain fixed. The subsequent synthetic
+comparison passes; it is not an empirical or unique nesting test.
+The300 CPU-second budget covers preparation, validation and replay.
+
 ## Observer map from the formed concentration, 25 October 2026
 
 The [owner](nsc-atlas-formed-observer.md) reuses the declared averaged

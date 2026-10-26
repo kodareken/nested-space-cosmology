@@ -1,5 +1,13 @@
 # Scientific strand index
 
+[NSC-P004](nsc-atlas-dynamics-lensing.md) now predicts a new moving-observer
+image from finite freely falling motion. The19.43948 mas forecast and
+.18328 mas comparison tolerance were committed before evaluating the
+target ray; the independent result is19.43946 mas. No lens normalization
+or tolerance changed. This is a synthetic cross-observable check in the
+specified weak metric, with observer kinematics and approximation limits
+explicit. It does not identify nesting uniquely or constitute sky data.
+
 The [formed-source observer](nsc-atlas-formed-observer.md) now connects
 the actual nonlinear concentration to image direction, proper delay and
 received frequency in a declared evolving weak metric. Fixed-clock and

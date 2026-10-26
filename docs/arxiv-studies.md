@@ -1,5 +1,16 @@
 # Cited arXiv studies
 
+## Dynamics and lensing across probe channels, 26 October 2026
+
+[Reyes et al.,1003.2185](https://arxiv.org/abs/1003.2185) motivates combining
+motion and lensing in a distinct large-scale statistical setting.
+[Korzynski--Kulejewski,2601.13912v2](https://arxiv.org/abs/2601.13912v2)
+discusses frequency and direction effects with moving lensing participants.
+Their abstracts and bibliographic records were read; no data or estimator
+from either paper is used. The [NSC-P004 owner](nsc-atlas-dynamics-lensing.md)
+derives the local release law, fixed-endpoint Born kernel and radial
+boosts for the same retained formed source, then checks a frozen forecast.
+
 ## Spacetime arrival maps and the forming source, 25 October 2026
 
 [Perlick,1010.3416](https://arxiv.org/abs/1010.3416) supplies general

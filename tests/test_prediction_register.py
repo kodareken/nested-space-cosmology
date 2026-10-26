@@ -173,3 +173,18 @@ def test_charged_result_keeps_inputs_and_conditional_scope(mutation):
     mutation(entry)
     with pytest.raises(ValueError):
         checker.check_p002(ROOT,entry)
+def test_p004_forecast_cannot_be_retuned_in_register():
+    import copy
+    entry=copy.deepcopy(json.loads((ROOT/checker.REGISTER).read_text(encoding='utf-8'))['entries'][3])
+    checker.check_p004(ROOT,entry)
+    entry['prediction']['value_radians']+=1e-8
+    with pytest.raises(ValueError,match='P004 forecast projection'):
+        checker.check_p004(ROOT,entry)
+
+
+def test_p004_remains_a_synthetic_test():
+    import copy
+    entry=copy.deepcopy(json.loads((ROOT/checker.REGISTER).read_text(encoding='utf-8'))['entries'][3])
+    entry['observational_validation']=True
+    with pytest.raises(ValueError,match='P004 observation status'):
+        checker.check_p004(ROOT,entry)

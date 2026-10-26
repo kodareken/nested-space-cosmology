@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision2026-10-26.1 adds Sections10.55--10.56 and Figure31: the
+stationarity precheck, finite timelike calibration and prospectively frozen
+NSC-P004 image forecast. The independently evaluated moving-observer
+null ray passes the unchanged comparison tolerance. Synthetic validation,
+empirical calibration and unique nesting identification remain distinct.
+
 Revision2026-10-25.6 adds Sections10.53--10.54 and Figure30: a fixed-observer
 arrival map from the actual formed source. Direction, proper delay and
 frequency satisfy two independently tested endpoint identities. A frozen

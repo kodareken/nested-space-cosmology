@@ -506,6 +506,10 @@ def check_p004(root, entry):
             rel_tol=1e-10,abs_tol=1e-18),'P004 residual projection')
         exact(result['synthetic_check_passed'],
               abs(result['residual_radians'])<=result['frozen_tolerance_radians'],'P004 pass/fail projection')
+        exact(entry['status'],'synthetic_withheld_check_passed' if result['synthetic_check_passed']
+              else 'synthetic_withheld_check_failed','P004 final status')
+    else:
+        exact(entry['status'],'forecast_frozen_before_optical_evaluation','P004 pending status')
 
 
 def check_register(root, register):

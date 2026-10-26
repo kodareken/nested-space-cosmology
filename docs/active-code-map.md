@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [dynamics--lensing owner](nsc-atlas-dynamics-lensing.md) uses
+nsc_atlas_dynamics_lensing.py for timelike calibration, the data-only
+Born prediction, moving null endpoints and Doppler/aberration.
+The producer has separate prepare/validate stages and a creation-only
+forecast. replay_nsc_p004_calibration.py recomputes in a temporary output
+without changing frozen bytes. The prediction-register checker binds both
+records and their unchanged tolerance.
+
 The [formed-observer owner](nsc-atlas-formed-observer.md) uses
 `nsc_atlas_formed_observer.py` for short reversible source propagation,
 mass-current metric derivatives, proper clocks and a fixed-receiver null

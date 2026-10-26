@@ -12,7 +12,7 @@ agreement could be rejected. Each entry distinguishes derived consequences,
 numerical sensitivity and observations. The [machine-readable register](../results/prediction-register.json)
 binds the evidence bytes and the exact locations of reported values.
 
-## NSC-P003 — Three freely falling clocks in the inherited parent
+## NSC-P003 â€” Three freely falling clocks in the inherited parent
 
 Registered retrospectively on 21 October 2026, with a synthetic check and
 no astronomical observations. The [clock derivation](nsc-atlas-parent-clocks.md)
@@ -41,7 +41,7 @@ full measurement and justified model/remainder error would reject the
 declared family. Additional source velocities or arbitrary spatial states
 must be included as additional inputs rather than hidden retuning.
 
-## NSC-P002 — A charged vacuum transition and its curvature observable
+## NSC-P002 â€” A charged vacuum transition and its curvature observable
 
 Registered retrospectively on 20 October 2026; no withheld observations.
 This is the explicit Einstein/four-form/charged-membrane alternative,
@@ -67,7 +67,7 @@ corrections would reject this candidate's tested claim. Establishing
 cross-region measurement access, formation and a realistic cosmological
 history remains separate.
 
-## NSC-P001 — Perturbative cap and moving wall
+## NSC-P001 â€” Perturbative cap and moving wall
 
 **Registered retrospectively on 16 October 2026.** These results had already
 been derived and calculated. This entry is neither a preregistration nor a
@@ -237,7 +237,7 @@ It performs no symbolic derivation, numerical integration or generator run;
 cross-platform numerical replay belongs to the separate evidence validators.
 
 
-## NSC-P004 — motion predicts a withheld image
+## NSC-P004 â€” motion predicts a withheld image
 
 Registered26 October2026 before evaluating the new null ray. The
 [frozen forecast](../results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json)
@@ -248,3 +248,12 @@ numerical and probe-release sensitivity plus a0.5% Born allowance; it is
 not a full-GR confidence interval. This is a prospective synthetic check,
 not an astronomical observation. The [owner](nsc-atlas-dynamics-lensing.md)
 defines calibration, withheld data, assumptions and rejection.
+
+
+Validation: the [independent moving-endpoint null calculation](../results/summaries/nsc-p004-dynamics-lensing-validation-v1.json)
+returned19.43946116 mas, differing by-.00002171 mas from the frozen
+19.43948287 mas prediction. This passes the unchanged .18327870 mas
+comparison tolerance. The forecast was committed and pushed in e626f2f
+before the target ray was evaluated. Both channels are simulated in the
+same specified weak metric; this is not empirical confirmation, and the
+small closure residual does not replace the numerical/model uncertainty.

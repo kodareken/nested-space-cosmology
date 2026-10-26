@@ -1,10 +1,10 @@
 {
-  "bytes": 11934974,
+  "bytes": 12109180,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "e2a97b1a9fa3fa6e487c9d96eff51c0fe493a95c39b3de6d98133a3908ee25f6",
+  "metadata_sha256": "dd043809ac9e1d2cdbd3f11628c11741b213b4e73dd5e0494eb83b739229abbf",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 147,
-  "pdf_sha256": "a616e5ead34bc3dc22720cb7438b962e84aa84d1b0be0e57b83a79b32bb28f4b",
+  "pages": 149,
+  "pdf_sha256": "6e4f24f3cbaf08addd96464c7ca91e853505a3ef9ad28c6aa98de3402d146163",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -38,6 +38,10 @@
     {
       "path": "docs/figures/nsc-atlas-core-reservoir.png",
       "sha256": "59bb0c3656f489a0c9d163e6d9bde4d80e646189ef3b600dca5d11ae192208c0"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-dynamics-lensing.png",
+      "sha256": "07b97fafc83d2070205a15a29d09a47b917bcb0241830318597c7bf8a39505d3"
     },
     {
       "path": "docs/figures/nsc-atlas-flux-transition.png",
@@ -748,6 +752,14 @@
       "sha256": "4dced4c42934711b458bb3cf3a08368179c45d416a2bf24091decb2cd497cbbc"
     },
     {
+      "path": "results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json",
+      "sha256": "c31f2b806863a48eac384472987876c43f45ca3f0e4c3414f3fdee1f327187e3"
+    },
+    {
+      "path": "results/summaries/nsc-p004-dynamics-lensing-validation-v1.json",
+      "sha256": "41d18ce2453fbf5a7bb6c8902d319c528d46c00601121603b137f1ba64e25c14"
+    },
+    {
       "path": "results/summaries/nsc-spectral-gravitational-response-v1.json",
       "sha256": "0c1bb779676a37b8af3e9605f0dab262c570af13b2364e29a6757328b5314951"
     },
@@ -761,6 +773,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "824bb44df3f72b96a28fc522ae3e2fca42263ed723fd512259448b2163f183da",
-  "version": "working-2026-10-25.6"
+  "source_sha256": "cfdd9472b5382d950b3262476e53f06ab967c76c663ad69414add01df1c8a4ad",
+  "version": "working-2026-10-26.1"
 }

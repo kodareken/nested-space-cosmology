@@ -468,6 +468,11 @@
       "section": "10.53",
       "status": "measured",
       "owner": "docs/nsc-atlas-formed-observer.md"
+    },
+    "atlas-dynamics-lensing": {
+      "section": "10.55",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-dynamics-lensing.md"
     }
   },
   "findings": [

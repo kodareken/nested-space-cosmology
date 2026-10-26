@@ -379,7 +379,7 @@
       "registered_on": "2026-10-26",
       "registration": "prospective_synthetic_withheld_optical_ray",
       "observational_validation": false,
-      "status": "forecast_frozen_before_optical_evaluation",
+      "status": "synthetic_withheld_check_passed",
       "forecast": {
         "path": "results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json",
         "bytes": 66777,
@@ -397,7 +397,12 @@
         "kind": "predeclared comparison tolerance; not a total physical confidence interval"
       },
       "limits": "Synthetic timelike calibration on the fixed weak metric. Observer kinematics are supplied calibration data; their empirical precision is not established. Equal leading potentials are a model premise. No independent lens mass, equilibrium rotation curve, astronomical fit or unique nesting identification.",
-      "rejection": "The exact withheld null image in the same fixed metric falls outside the frozen forecast tolerance. Preserve the forecast and report failure rather than changing lens normalization or tolerance. A later observational application requires its own measured kinematics and physical error model."
+      "rejection": "The exact withheld null image in the same fixed metric falls outside the frozen forecast tolerance. Preserve the forecast and report failure rather than changing lens normalization or tolerance. A later observational application requires its own measured kinematics and physical error model.",
+      "validation": {
+        "path": "results/summaries/nsc-p004-dynamics-lensing-validation-v1.json",
+        "bytes": 7456,
+        "sha256": "41d18ce2453fbf5a7bb6c8902d319c528d46c00601121603b137f1ba64e25c14"
+      }
     }
   ]
 }

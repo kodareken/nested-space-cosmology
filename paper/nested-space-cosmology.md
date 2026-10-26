@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 25 October 2026
+Working research manuscript, 26 October 2026
 
 ## Abstract
 
@@ -81,10 +81,10 @@ Its finite-amplitude continuation now distinguishes an expanding high-contrast
 regular concentration with a first rebound. The initial constraint,
 conservation laws and numerical controls accompany this finite envelope
 result; its early parent and seed statistics remain supplied.
-The actual forming field now predicts a fixed-observer image direction,
-proper delay and frequency in an explicit evolving weak metric. Two
-arrival-map identities connect those readouts, and a frozen-potential
-control exposes a frequency contribution from the source's dynamics.
+The forming field supplies a joint clock/lensing map in an explicit weak
+metric. A prospectively frozen calibration from freely falling motion then
+predicts a withheld moving-observer image. Endpoint identities,
+Doppler/aberration and source controls accompany these conditional results.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -7151,6 +7151,162 @@ can exceed the small gravitational frequency contrast. The next link to
 observations is therefore physically prepared or measured kinematics and
 the assessment of omitted metric terms, using this same formed source.
 
+### 10.55. Motion calibrates a prediction before the new ray is evaluated
+
+<!-- nsc-claim:atlas-dynamics-lensing -->
+
+Evidence: [frozen NSC-P004 forecast](../results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json),
+[separate validation](../results/summaries/nsc-p004-dynamics-lensing-validation-v1.json)
+and [derivation and preparation](../docs/nsc-atlas-dynamics-lensing.md).
+
+The preceding result supplied light propagation from a known forming
+source. The next test reverses part of that inference: calibrate its force
+from finite timelike motion and predict a new optical response before
+computing the corresponding null ray. The source, weak metric and action
+remain unchanged.
+
+Preparation first checks whether an equilibrium rotation curve is justified.
+For the source acceleration $g$ at fixed physical radius, compare its
+variation rate with $\Omega^2=g/R$. The instantaneous ratios
+$|\partial_t\log g|/\Omega$ are about $.611$ near $r=.0073$ and $.457$
+near $r=.015$. They do not support slow variation over an orbital period.
+This is a timescale diagnostic, not a theorem excluding every orbit.
+The selected method therefore uses short freely falling motions.
+
+For positive lapse $\alpha^2=1+2\Phi$, spatial scale
+$s^2=A^2L^2(1-2\Phi)$ and $B=1-CL^2r^2$, a radial unit-mass test body has
+
+$$
+\mathcal{H}_t=\alpha\sqrt{1+BP^2/s^2}.
+$$
+
+Its trajectory and proper clock follow the timelike Hamilton equations.
+At release with zero peculiar velocity, the local radial velocity relative
+to the stated cosmological frame obeys
+
+$$
+-\left.\frac{dv}{d\tau}\right|_0
+=\frac{\sqrt{B}\,\Phi_r}
+{AL\sqrt{1-2\Phi}(1+2\Phi)}.
+$$
+
+The test body's proper four-acceleration is zero. This is a relative
+velocity change, measured in the specified reference frames.
+Centered before/after velocities reconstruct the leading force:
+
+$$
+\Phi_r^{\rm rec}=-\frac{AL}{\sqrt{B}}
+\frac{v_+-v_-}{\tau_+-\tau_-}.
+$$
+
+The refined calibration uses $96$ probes on the incoming and outgoing
+halves of the retarded background chord. Their central release events,
+proper-time intervals and initial velocities are specified. The initial
+source and receiver themselves are another pair of radial geodesics,
+released at the slab start. They have the same trajectory at a common
+time, but different radii at emission and reception.
+
+The new receiver is at $\Theta=\pi-.12$, absent from the earlier optical
+fan. Let its reference chord have impact parameter $b$, length $d$ and
+coordinate endpoints $z_e,z_o$. A fixed-endpoint Born calculation gives
+
+$$
+\Delta\beta_{\rm lens}
+=\frac{2}{d}\int_{z_e}^{z_o}(z-z_e)
+\Phi_r^{\rm rec}(N(z),r(z))\frac{b}{r(z)}dz.
+$$
+
+The endpoint weight follows by integrating the transverse displacement
+equation with both positions fixed. It differs from the total deflection
+of a freely specified incoming ray. The retarded times come from the
+background chord, not from the withheld optical path.
+
+Calibrated endpoint positions fix the geometric direction. The measured
+receiver velocity supplies the exact radial aberration:
+
+$$
+\cos\beta_{\rm obs}=
+\frac{\cos\beta_{\rm normal}-v_o}
+{1-v_o\cos\beta_{\rm normal}}.
+$$
+
+The prediction function consumes these motion measurements and geometric
+inputs only. It does not read the source potential or interpolate the old
+optical fan, and it does not fit an independent lens mass. Equal leading
+metric potentials remain a premise of this model. Combining dynamics and
+lensing is established practice, illustrated in a different statistical
+setting by [Reyes et al.,1003.2185](https://arxiv.org/abs/1003.2185).
+
+### 10.56. NSC-P004 passes its frozen synthetic cross-observable check
+
+The forecast and comparison tolerance were committed and pushed in
+[e626f2f](https://github.com/kodareken/nested-space-cosmology/commit/e626f2f)
+before evaluating the new null boundary problem. The forecast is
+creation-only and remains byte-identical after validation.
+
+| Stage | Image shift, milliarcseconds |
+| --- | ---: |
+| Motion-calibrated forecast | 19.43948287 |
+| Frozen comparison tolerance | .18327870 |
+| Withheld moving-endpoint null calculation | 19.43946116 |
+| Null result minus forecast | -.00002171 |
+| Null-grid comparison range | .08049 |
+
+The check passes without changing its prediction, tolerance, source or
+lens normalization. Adding the null-grid comparison range to the residual
+still leaves it inside the frozen window. The small closure residual is
+not a new absolute accuracy claim: both channels share the prescribed
+metric and underlying source. This is prospective synthetic validation,
+not astronomical confirmation or a unique signature of nesting.
+
+The frozen window contains a numerical comparison envelope, a probe-release
+sensitivity estimate and a predeclared Born allowance of $0.5%$ of the
+lens contribution. It is a test tolerance, not a certified error bound on
+the complete relativistic theory. Numerical refinement of the impulse and
+quadrature is performed before the optical target is evaluated.
+
+![Precheck, timelike calibration and frozen optical prediction](../docs/figures/nsc-atlas-dynamics-lensing.png)
+
+*Figure 31. The force-timescale precheck selects finite free-fall calibration.
+The middle panel reconstructs the force from motion along the retarded
+chord. The right panel compares the committed forecast with the later
+null calculation; its bars represent the stated comparison ranges, not
+empirical confidence intervals.*
+
+Observer motion is not a negligible relabeling. At the emission and
+reception events, radial velocities are approximately $-4.27921\times10^{-8}$
+and $-6.67110\times10^{-8}$ in units of $c$. Their Doppler contribution
+to log frequency is $1.09306\times10^{-7}$, while the expansion-removed
+normal-frame gravitational contribution is $-2.93250\times10^{-12}$.
+The exact endpoint boost is
+
+$$
+\log\frac{\nu_o}{\nu_e}
+=\log\frac{\nu_{o,\rm normal}}{\nu_{e,\rm normal}}
++\log\frac{\gamma_o(1-v_o\mu_o)}
+{\gamma_e(1-v_e\mu_e)}.
+$$
+
+Here $\mu$ is the local photon direction cosine. The moving-clock arrival
+identity remains valid and is checked by emission-age differences.
+Related frequency and viewing-direction effects are treated by
+[Korzynski--Kulejewski,2601.13912v2](https://arxiv.org/abs/2601.13912v2);
+the radial boosts and worldlines here are evaluated for this source.
+
+The calibration assumes known endpoint kinematics. Near the measured
+angle, velocity error changes the direction by approximately
+$\sin\beta\,\delta v$. Keeping that error alone below the frozen tolerance
+requires roughly $4.4$ m/s receiver-velocity precision with other quantities
+fixed. Position, distance and release-state errors also need propagation.
+No such astronomical calibration is claimed here.
+
+The new connection is a motion profile predicting a withheld light
+measurement, with its preparation and possible failure specified first.
+The calibration probes the inner chord. An alternative geometry agreeing
+there would pass the same test. The next outward comparison should ask
+whether the surrounding compensation and inherited scale relation break
+a specified same-core degeneracy.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -7200,7 +7356,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 31. The isolated reference in joined causal charts. Horizons are
+*Figure 32. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -8206,7 +8362,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 32. Saved finite-window comparisons. A: the previous and current
+*Figure 33. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -8302,7 +8458,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 33. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 34. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -9087,7 +9243,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 34. Research dependencies, distinct from spacetime causal arrows.
+*Figure 35. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

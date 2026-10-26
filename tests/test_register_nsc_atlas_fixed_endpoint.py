@@ -111,12 +111,14 @@ def current_root(tmp_path, source=ROOT):
     document = json.loads((source / checker.REGISTER).read_text(encoding="utf-8"))
     names = [checker.REGISTER, checker.DOCUMENT, *checker.EVIDENCE.values()]
     for item in document["entries"]:
-        names.extend(bound_evidence_paths(item.get("evidence")))
-        extension = item.get("finite_amplitude")
-        if isinstance(extension, dict):
-            names.extend(bound_evidence_paths(extension.get("evidence")))
+        names.extend(bound_evidence_paths(item))
     copy_named(source, tmp_path, names)
     return tmp_path
+
+
+def later_evidence_count(entries):
+    """Later predictions can bind separate forecast and validation records."""
+    return len({path for item in entries[1:] for path in bound_evidence_paths(item)})
 
 
 def write_comparison(root, rows, input_order=(0, 1, 2)):
@@ -147,7 +149,7 @@ def test_current_register_checker_accepts_either_valid_state():
     saved = entries[0]
     result = checker.check(ROOT)
     assert result["predictions"] == len(entries)
-    assert result["evidence_files"] == len(checker.EVIDENCE) + len(entries) - 1
+    assert result["evidence_files"] == len(checker.EVIDENCE) + later_evidence_count(entries)
     assert result["coefficient_projections"] == 4
     assert result["exact_identity_projections"] == 2
     assert result["scientific_replays"] == 0
@@ -215,7 +217,7 @@ def test_registration_retains_every_live_entry(tmp_path):
     assert "finite_amplitude" in saved["entries"][0]
     checked = checker.check(root)
     assert checked["predictions"] == len(live)
-    assert checked["evidence_files"] == len(checker.EVIDENCE) + len(live) - 1
+    assert checked["evidence_files"] == len(checker.EVIDENCE) + later_evidence_count(live)
     assert checked["finite_amplitude_endpoints"] == 3
 
 
