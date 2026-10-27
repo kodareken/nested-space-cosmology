@@ -1566,6 +1566,11 @@
       "sha256": "59bb0c3656f489a0c9d163e6d9bde4d80e646189ef3b600dca5d11ae192208c0"
     },
     {
+      "bytes": 190471,
+      "path": "docs/figures/nsc-atlas-cosmohedron-interaction.png",
+      "sha256": "bf108fe13638d7057f1cb455244b47fc989143e5f35eef2cc24c0d251c12c1f8"
+    },
+    {
       "bytes": 117856,
       "path": "docs/figures/nsc-atlas-dynamics-lensing.png",
       "sha256": "07b97fafc83d2070205a15a29d09a47b917bcb0241830318597c7bf8a39505d3"
@@ -1716,9 +1721,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2541475,
+      "bytes": 2544549,
       "path": "docs/lab-snapshot.json",
-      "sha256": "0ecfe60712b0e895cfee70a5148121cc011019ee7e923dabe9b7698756d5ec14"
+      "sha256": "877dc3fb3310e32dc2190134b59e7d4ef356d97725a6cac5ad0d17431acdabc4"
     },
     {
       "bytes": 4997,
@@ -1804,6 +1809,11 @@
       "bytes": 11960,
       "path": "docs/nsc-atlas-core-reservoir.md",
       "sha256": "90eb79c787ea25dac6aa95d9b0531c3e156d5a65fd84b964b84e70c132f341c0"
+    },
+    {
+      "bytes": 12145,
+      "path": "docs/nsc-atlas-cosmohedron-interaction.md",
+      "sha256": "e08acccd30c2c2b927646f53685443ee10c7ecb813a2acb567d4b27b12a1b2cd"
     },
     {
       "bytes": 191654,
@@ -2026,9 +2036,9 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 6808,
+      "bytes": 7176,
       "path": "docs/nsc-cosmohedra-assessment.md",
-      "sha256": "43fb3c8c24b739e8c9a17e61bb8c70e8d13fdc428a460371b0a23b54d76088e6"
+      "sha256": "409836408137097a8c8b6f4ef9297b25ce5cbff51391b8ee12ddc7405533908e"
     },
     {
       "bytes": 1868,
@@ -2041,9 +2051,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 117301,
+      "bytes": 118007,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "5520e4a242a7f8f817f2e7020be00e143954a9bf0b97412cef777d6671c6b690"
+      "sha256": "07256986ddc6d116ac5506a221d4a9cdee0252f63e0a1f1f4c9ed48d1613c2db"
     },
     {
       "bytes": 30876,
@@ -14981,6 +14991,11 @@
       "sha256": "0665f9a4cfa0e576854901d7c706f7ac9bbc0c7a521babee6ec2548f03cf0a24"
     },
     {
+      "bytes": 28024,
+      "path": "results/summaries/nsc-atlas-cosmohedron-interaction-v1.json",
+      "sha256": "6985239af01c04c1f15aecb287d5bbd3941f2c176642680bd9634f11d2f06005"
+    },
+    {
       "bytes": 29878,
       "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
@@ -15769,6 +15784,11 @@
       "bytes": 7013,
       "path": "scripts/check_nsc_atlas_core_reservoir.py",
       "sha256": "524b4aa6c11e2cd6a33e612b2171d59b940df7759b7369815dbb7c9315d883c6"
+    },
+    {
+      "bytes": 6147,
+      "path": "scripts/check_nsc_atlas_cosmohedron_interaction.py",
+      "sha256": "0326ed5b1dd3a699eb462b673edc5c3db363d53a493999aaf2187ec85d669263"
     },
     {
       "bytes": 4831,
@@ -17496,6 +17516,11 @@
       "sha256": "c147c1e3da1f366292b08469597199894e24414c57cc1684bd25ed1cf6d23d8c"
     },
     {
+      "bytes": 3667,
+      "path": "scripts/plot_nsc_atlas_cosmohedron_interaction.py",
+      "sha256": "5ad9d9fa59fe3efa7bd62f27bb7b13a332476c704f30da0d8b280d78d2a82f6d"
+    },
+    {
       "bytes": 2325,
       "path": "scripts/plot_nsc_atlas_dynamics_lensing.py",
       "sha256": "df002d381e9da7d65883bad986ddee7c80110fb25055a864570f80ef1b0419bb"
@@ -18344,6 +18369,11 @@
       "bytes": 12883,
       "path": "src/recursive_horizons/nsc_atlas_core_reservoir.py",
       "sha256": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898"
+    },
+    {
+      "bytes": 9314,
+      "path": "src/recursive_horizons/nsc_atlas_cosmohedron_interaction.py",
+      "sha256": "37e9ee2431b71ab964c3a2c1b12b30a42379c678a9a79e0dc5e366432a1a9caf"
     },
     {
       "bytes": 12199,
@@ -20916,6 +20946,11 @@
       "sha256": "a512a17b1a58a3d5f7b1ebe48f2c9ac9e90c2e512d93ad7c3140e6afba62b215"
     },
     {
+      "bytes": 5696,
+      "path": "tests/test_nsc_atlas_cosmohedron_interaction.py",
+      "sha256": "a575bb28c7f5f520c9dca0842af2fa23576b59949bbbe6fcc6fd711d27714599"
+    },
+    {
       "bytes": 8080,
       "path": "tests/test_nsc_atlas_cosmological_distance.py",
       "sha256": "d48814a67c8d2d380bc1bce802d2d617e9e51a0ee692718efd656d8a8038f56a"
@@ -23456,7 +23491,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "0ecfe60712b0e895cfee70a5148121cc011019ee7e923dabe9b7698756d5ec14",
+  "lab_snapshot_sha256": "877dc3fb3310e32dc2190134b59e7d4ef356d97725a6cac5ad0d17431acdabc4",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-27.2",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

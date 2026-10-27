@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "698df71564f9109b0f7b5172314cd71c4e2f7c15",
+  "current_receipt_commit_parent": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
   "files": [
     {
       "bytes": 3120,
@@ -10381,6 +10381,14 @@
       "sha256": "59bb0c3656f489a0c9d163e6d9bde4d80e646189ef3b600dca5d11ae192208c0"
     },
     {
+      "bytes": 190471,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "path": "docs/figures/nsc-atlas-cosmohedron-interaction.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "bf108fe13638d7057f1cb455244b47fc989143e5f35eef2cc24c0d251c12c1f8"
+    },
+    {
       "bytes": 117856,
       "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
       "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
@@ -10710,6 +10718,14 @@
       "sha256": "90eb79c787ea25dac6aa95d9b0531c3e156d5a65fd84b964b84e70c132f341c0"
     },
     {
+      "bytes": 12145,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "path": "docs/nsc-atlas-cosmohedron-interaction.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e08acccd30c2c2b927646f53685443ee10c7ecb813a2acb567d4b27b12a1b2cd"
+    },
+    {
       "bytes": 191654,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "b60fcd01415c7d1779b0cd1c8cc8181fdb4f772b",
@@ -10992,23 +11008,23 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 6808,
-      "change": "Assess cosmohedra and verify the formal cubic wavefunction seed and inherited scaling.",
-      "changed_from_commit": "698df71564f9109b0f7b5172314cd71c4e2f7c15",
+      "bytes": 7176,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
       "path": "docs/nsc-cosmohedra-assessment.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "43fb3c8c24b739e8c9a17e61bb8c70e8d13fdc428a460371b0a23b54d76088e6"
+      "sha256": "409836408137097a8c8b6f4ef9297b25ce5cbff51391b8ee12ddc7405533908e"
     },
     {
-      "bytes": 117301,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 118007,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "5520e4a242a7f8f817f2e7020be00e143954a9bf0b97412cef777d6671c6b690"
+      "sha256": "07256986ddc6d116ac5506a221d4a9cdee0252f63e0a1f1f4c9ed48d1613c2db"
     },
     {
       "bytes": 30876,
@@ -30303,6 +30319,14 @@
       "sha256": "0665f9a4cfa0e576854901d7c706f7ac9bbc0c7a521babee6ec2548f03cf0a24"
     },
     {
+      "bytes": 28024,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "path": "results/summaries/nsc-atlas-cosmohedron-interaction-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6985239af01c04c1f15aecb287d5bbd3941f2c176642680bd9634f11d2f06005"
+    },
+    {
       "bytes": 29878,
       "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
       "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
@@ -31421,6 +31445,14 @@
       "path": "scripts/check_nsc_atlas_core_reservoir.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "524b4aa6c11e2cd6a33e612b2171d59b940df7759b7369815dbb7c9315d883c6"
+    },
+    {
+      "bytes": 6147,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "path": "scripts/check_nsc_atlas_cosmohedron_interaction.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0326ed5b1dd3a699eb462b673edc5c3db363d53a493999aaf2187ec85d669263"
     },
     {
       "bytes": 4831,
@@ -34472,6 +34504,14 @@
       "sha256": "c147c1e3da1f366292b08469597199894e24414c57cc1684bd25ed1cf6d23d8c"
     },
     {
+      "bytes": 3667,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "path": "scripts/plot_nsc_atlas_cosmohedron_interaction.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5ad9d9fa59fe3efa7bd62f27bb7b13a332476c704f30da0d8b280d78d2a82f6d"
+    },
+    {
       "bytes": 2325,
       "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
       "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
@@ -35402,6 +35442,14 @@
       "path": "src/recursive_horizons/nsc_atlas_core_reservoir.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "14aa1b9def0f546bf7f0e61a655737b982490f88859833ec821687707af2d898"
+    },
+    {
+      "bytes": 9314,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "path": "src/recursive_horizons/nsc_atlas_cosmohedron_interaction.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "37e9ee2431b71ab964c3a2c1b12b30a42379c678a9a79e0dc5e366432a1a9caf"
     },
     {
       "bytes": 12199,
@@ -39712,6 +39760,14 @@
       "path": "tests/test_nsc_atlas_core_reservoir.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "a512a17b1a58a3d5f7b1ebe48f2c9ac9e90c2e512d93ad7c3140e6afba62b215"
+    },
+    {
+      "bytes": 5696,
+      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
+      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "path": "tests/test_nsc_atlas_cosmohedron_interaction.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a575bb28c7f5f520c9dca0842af2fa23576b59949bbbe6fcc6fd711d27714599"
     },
     {
       "bytes": 8080,

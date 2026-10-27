@@ -1,0 +1,695 @@
+{
+  "schema": "NSC-ATLAS-COSMOHEDRON-INTERACTION-v1",
+  "date": "2026-10-27",
+  "preparation": {
+    "theory": "Einstein/four-form/supporting surface scalar + one zero-background canonical surface probe per wall",
+    "scope": "conditional finite positive Gaussian sector; selected first axial-mode tree exchange only",
+    "outer_worldtube_over_M": 10.0,
+    "outer_mode_boundary": "Dirichlet axial master",
+    "gravity_multipole": [
+      2,
+      0
+    ],
+    "scalar_harmonics": [
+      "real l1m1 cosine",
+      "real l2m1 sine"
+    ],
+    "scalar_zero_mode": "outside retained sector",
+    "source_couplings": "derived, no cubic fit",
+    "state": "positive-frequency reference from the common static time",
+    "full_Einstein_four_point": false,
+    "quantum_backreaction_included": false,
+    "observational_validation": false
+  },
+  "families": [
+    {
+      "child_radius": 0.25,
+      "levels": [
+        {
+          "gravity_frequency": 0.3928041110899692,
+          "vertices": [
+            {
+              "radius": 0.25,
+              "lapse": 0.24082347807633334,
+              "frequencies": [
+                1.3623033153336415,
+                2.359578557477392
+              ],
+              "normalized_master": 7.828665231412921e-05,
+              "normalized_master_x": 0.00026076587512427387,
+              "h0_per_canonical_oscillator": 0.00010647427304761746,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.0014417202184628494,
+              "vacuum_pair_numerator": -0.0014377918799710794
+            },
+            {
+              "radius": 2.5,
+              "lapse": 0.44721359549995787,
+              "frequencies": [
+                0.25298221281347033,
+                0.4381780460041328
+              ],
+              "normalized_master": 0.10790390953136571,
+              "normalized_master_x": 0.04923039678615863,
+              "h0_per_canonical_oscillator": 0.20934764610778364,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.028346822705820847,
+              "vacuum_pair_numerator": -0.005249713449312481
+            }
+          ],
+          "Et": 4.413042131628637,
+          "EL": 4.114685983901003,
+          "ER": 1.0839643699075723,
+          "kernel": 0.05080544059015497,
+          "log_wavefunction_exchange_coefficient": -3.8347923032479733e-07,
+          "coefficient_shape": -3.8347923032479733e-07,
+          "selected_exchange_correlation": -3.2120879154239867e-07,
+          "correlation_shape": -3.2120879154239867e-07,
+          "sector": "one retained axial-mode exchange; constraint/contact and other modes excluded",
+          "inner_radius": 0.25,
+          "mass_scale": 1.0,
+          "rtol": 1e-08,
+          "norm_quadrature": 0.9999999910945374,
+          "mode_endpoint_gap": 1.266058369253642e-10,
+          "rayleigh_upper": 0.43728106784570336,
+          "interfaces": [
+            {
+              "radius": 0.25,
+              "sigma": 0.12933020331605932,
+              "pressure": 0.12933020331605938,
+              "scalar_proper_rate": 0.5085866756336807,
+              "clock_lapse": 0.24082347807633334,
+              "f_minus": 0.723931521955832,
+              "f_plus": 0.19761477886176865,
+              "V": -1.1102230246251565e-16,
+              "Vprime": 2.220446049250313e-15,
+              "Vsecond": 51.21256792084361,
+              "radial_proper_frequency": 5.0602652065303655,
+              "q": 0.39138902980737866,
+              "induced_clock_gap": -6.938893903907228e-18,
+              "israel_gap": 0.0,
+              "stiff_gap": 5.551115123125783e-17,
+              "force_gap": 1.1102230246251565e-16
+            },
+            {
+              "radius": 2.5,
+              "sigma": 0.012041763051338956,
+              "pressure": 0.012041763051338953,
+              "scalar_proper_rate": 0.15518867904160377,
+              "clock_lapse": 0.44721359549995787,
+              "f_minus": 0.6814778861768696,
+              "f_plus": 0.19999999999999996,
+              "V": 2.220446049250313e-16,
+              "Vprime": -2.7755575615628914e-16,
+              "Vsecond": 0.44276677722557106,
+              "radial_proper_frequency": 0.4705139621868681,
+              "q": 0.06767292357659824,
+              "induced_clock_gap": 2.7755575615628914e-17,
+              "israel_gap": 1.734723475976807e-18,
+              "stiff_gap": -3.469446951953614e-18,
+              "force_gap": 0.0
+            }
+          ],
+          "rhs_calls": 7920,
+          "mode_cpu_seconds": 0.140625
+        },
+        {
+          "gravity_frequency": 0.39280411113138913,
+          "vertices": [
+            {
+              "radius": 0.25,
+              "lapse": 0.24082347807633334,
+              "frequencies": [
+                1.3623033153336415,
+                2.359578557477392
+              ],
+              "normalized_master": 7.828665270172103e-05,
+              "normalized_master_x": 0.00026076587641494126,
+              "h0_per_canonical_oscillator": 0.00010647427357463164,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.0014417202255989111,
+              "vacuum_pair_numerator": -0.001437791887087697
+            },
+            {
+              "radius": 2.5,
+              "lapse": 0.44721359549995787,
+              "frequencies": [
+                0.25298221281347033,
+                0.4381780460041328
+              ],
+              "normalized_master": 0.10790391005589398,
+              "normalized_master_x": 0.04923039702133656,
+              "h0_per_canonical_oscillator": 0.20934764711047862,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.02834682284159126,
+              "vacuum_pair_numerator": -0.005249713474456595
+            }
+          ],
+          "Et": 4.413042131628637,
+          "EL": 4.114685983942423,
+          "ER": 1.0839643699489923,
+          "kernel": 0.05080544058770217,
+          "log_wavefunction_exchange_coefficient": -3.8347923404110367e-07,
+          "coefficient_shape": -3.8347923404110367e-07,
+          "selected_exchange_correlation": -3.2120879465524073e-07,
+          "correlation_shape": -3.2120879465524073e-07,
+          "sector": "one retained axial-mode exchange; constraint/contact and other modes excluded",
+          "inner_radius": 0.25,
+          "mass_scale": 1.0,
+          "rtol": 2e-10,
+          "norm_quadrature": 0.9999999999383716,
+          "mode_endpoint_gap": 1.3322676295501878e-15,
+          "rayleigh_upper": 0.43728106784570336,
+          "interfaces": [
+            {
+              "radius": 0.25,
+              "sigma": 0.12933020331605932,
+              "pressure": 0.12933020331605938,
+              "scalar_proper_rate": 0.5085866756336807,
+              "clock_lapse": 0.24082347807633334,
+              "f_minus": 0.723931521955832,
+              "f_plus": 0.19761477886176865,
+              "V": -1.1102230246251565e-16,
+              "Vprime": 2.220446049250313e-15,
+              "Vsecond": 51.21256792084361,
+              "radial_proper_frequency": 5.0602652065303655,
+              "q": 0.39138902980737866,
+              "induced_clock_gap": -6.938893903907228e-18,
+              "israel_gap": 0.0,
+              "stiff_gap": 5.551115123125783e-17,
+              "force_gap": 1.1102230246251565e-16
+            },
+            {
+              "radius": 2.5,
+              "sigma": 0.012041763051338956,
+              "pressure": 0.012041763051338953,
+              "scalar_proper_rate": 0.15518867904160377,
+              "clock_lapse": 0.44721359549995787,
+              "f_minus": 0.6814778861768696,
+              "f_plus": 0.19999999999999996,
+              "V": 2.220446049250313e-16,
+              "Vprime": -2.7755575615628914e-16,
+              "Vsecond": 0.44276677722557106,
+              "radial_proper_frequency": 0.4705139621868681,
+              "q": 0.06767292357659824,
+              "induced_clock_gap": 2.7755575615628914e-17,
+              "israel_gap": 1.734723475976807e-18,
+              "stiff_gap": -3.469446951953614e-18,
+              "force_gap": 0.0
+            }
+          ],
+          "rhs_calls": 12970,
+          "mode_cpu_seconds": 0.203125
+        },
+        {
+          "gravity_frequency": 0.39280411113194325,
+          "vertices": [
+            {
+              "radius": 0.25,
+              "lapse": 0.24082347807633334,
+              "frequencies": [
+                1.3623033153336415,
+                2.359578557477392
+              ],
+              "normalized_master": 7.8286652704674e-05,
+              "normalized_master_x": 0.0002607658764247725,
+              "h0_per_canonical_oscillator": 0.0001064742735786461,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.0014417202256532691,
+              "vacuum_pair_numerator": -0.001437791887141907
+            },
+            {
+              "radius": 2.5,
+              "lapse": 0.44721359549995787,
+              "frequencies": [
+                0.25298221281347033,
+                0.4381780460041328
+              ],
+              "normalized_master": 0.107903910059806,
+              "normalized_master_x": 0.049230397023039586,
+              "h0_per_canonical_oscillator": 0.20934764711777248,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.028346822842578893,
+              "vacuum_pair_numerator": -0.005249713474639501
+            }
+          ],
+          "Et": 4.413042131628637,
+          "EL": 4.1146859839429775,
+          "ER": 1.0839643699495465,
+          "kernel": 0.05080544058766935,
+          "log_wavefunction_exchange_coefficient": -3.8347923406867533e-07,
+          "coefficient_shape": -3.8347923406867533e-07,
+          "selected_exchange_correlation": -3.212087946783352e-07,
+          "correlation_shape": -3.212087946783352e-07,
+          "sector": "one retained axial-mode exchange; constraint/contact and other modes excluded",
+          "inner_radius": 0.25,
+          "mass_scale": 1.0,
+          "rtol": 2e-12,
+          "norm_quadrature": 0.9999999999992659,
+          "mode_endpoint_gap": 4.440892098500626e-16,
+          "rayleigh_upper": 0.43728106784570336,
+          "interfaces": [
+            {
+              "radius": 0.25,
+              "sigma": 0.12933020331605932,
+              "pressure": 0.12933020331605938,
+              "scalar_proper_rate": 0.5085866756336807,
+              "clock_lapse": 0.24082347807633334,
+              "f_minus": 0.723931521955832,
+              "f_plus": 0.19761477886176865,
+              "V": -1.1102230246251565e-16,
+              "Vprime": 2.220446049250313e-15,
+              "Vsecond": 51.21256792084361,
+              "radial_proper_frequency": 5.0602652065303655,
+              "q": 0.39138902980737866,
+              "induced_clock_gap": -6.938893903907228e-18,
+              "israel_gap": 0.0,
+              "stiff_gap": 5.551115123125783e-17,
+              "force_gap": 1.1102230246251565e-16
+            },
+            {
+              "radius": 2.5,
+              "sigma": 0.012041763051338956,
+              "pressure": 0.012041763051338953,
+              "scalar_proper_rate": 0.15518867904160377,
+              "clock_lapse": 0.44721359549995787,
+              "f_minus": 0.6814778861768696,
+              "f_plus": 0.19999999999999996,
+              "V": 2.220446049250313e-16,
+              "Vprime": -2.7755575615628914e-16,
+              "Vsecond": 0.44276677722557106,
+              "radial_proper_frequency": 0.4705139621868681,
+              "q": 0.06767292357659824,
+              "induced_clock_gap": 2.7755575615628914e-17,
+              "israel_gap": 1.734723475976807e-18,
+              "stiff_gap": -3.469446951953614e-18,
+              "force_gap": 0.0
+            }
+          ],
+          "rhs_calls": 20932,
+          "mode_cpu_seconds": 0.34375
+        }
+      ],
+      "indicators": {
+        "gravity_frequency": 3.9280411113194326e-11,
+        "coefficient_shape": 5.514332717391265e-17,
+        "correlation_shape": 4.618891837201381e-17
+      }
+    },
+    {
+      "child_radius": 0.3,
+      "levels": [
+        {
+          "gravity_frequency": 0.39280415718332734,
+          "vertices": [
+            {
+              "radius": 0.3,
+              "lapse": 0.3111568455780149,
+              "frequencies": [
+                1.4668074368055315,
+                2.5405850054670553
+              ],
+              "normalized_master": 0.00015175594128487727,
+              "normalized_master_x": 0.0005251821691060304,
+              "h0_per_canonical_oscillator": 0.0002672639336535513,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.0025131254570888713,
+              "vacuum_pair_numerator": -0.002698537743054269
+            },
+            {
+              "radius": 2.5,
+              "lapse": 0.44721359549995787,
+              "frequencies": [
+                0.25298221281347033,
+                0.4381780460041328
+              ],
+              "normalized_master": 0.10790341532648519,
+              "normalized_master_x": 0.04923050306003369,
+              "h0_per_canonical_oscillator": 0.2093478875644216,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.028346855400377652,
+              "vacuum_pair_numerator": -0.005249719504208169
+            }
+          ],
+          "Et": 4.69855270109019,
+          "EL": 4.4001965994559145,
+          "ER": 1.0839644160009305,
+          "kernel": 0.044621975241284105,
+          "log_wavefunction_exchange_coefficient": -6.321401672368113e-07,
+          "coefficient_shape": -6.321401672368113e-07,
+          "selected_exchange_correlation": -4.917673303211763e-07,
+          "correlation_shape": -4.917673303211763e-07,
+          "sector": "one retained axial-mode exchange; constraint/contact and other modes excluded",
+          "inner_radius": 0.3,
+          "mass_scale": 1.0,
+          "rtol": 1e-08,
+          "norm_quadrature": 0.9999999910789179,
+          "mode_endpoint_gap": 1.265720861454156e-10,
+          "rayleigh_upper": 0.43728108187527154,
+          "interfaces": [
+            {
+              "radius": 0.3,
+              "sigma": 0.07677160824817514,
+              "pressure": 0.07677160824817511,
+              "scalar_proper_rate": 0.3918459091228978,
+              "clock_lapse": 0.3111568455780149,
+              "f_minus": 0.7461334371255733,
+              "f_plus": 0.3298986148942802,
+              "V": 0.0,
+              "Vprime": -7.993605777301127e-15,
+              "Vsecond": 80.98424231562171,
+              "radial_proper_frequency": 6.363341980265626,
+              "q": 0.3001856051515844,
+              "induced_clock_gap": 0.0,
+              "israel_gap": 0.0,
+              "stiff_gap": -2.7755575615628914e-17,
+              "force_gap": 0.0
+            },
+            {
+              "radius": 2.5,
+              "sigma": 0.012041763051338956,
+              "pressure": 0.012041763051338953,
+              "scalar_proper_rate": 0.15518867904160377,
+              "clock_lapse": 0.44721359549995787,
+              "f_minus": 0.6814778861768696,
+              "f_plus": 0.19999999999999996,
+              "V": 2.220446049250313e-16,
+              "Vprime": -2.7755575615628914e-16,
+              "Vsecond": 0.44276677722557106,
+              "radial_proper_frequency": 0.4705139621868681,
+              "q": 0.06767292357659824,
+              "induced_clock_gap": 2.7755575615628914e-17,
+              "israel_gap": 1.734723475976807e-18,
+              "stiff_gap": -3.469446951953614e-18,
+              "force_gap": 0.0
+            }
+          ],
+          "rhs_calls": 7335,
+          "mode_cpu_seconds": 0.140625
+        },
+        {
+          "gravity_frequency": 0.3928041572251046,
+          "vertices": [
+            {
+              "radius": 0.3,
+              "lapse": 0.3111568455780149,
+              "frequencies": [
+                1.4668074368055315,
+                2.5405850054670553
+              ],
+              "normalized_master": 0.00015175594203042838,
+              "normalized_master_x": 0.0005251821716854936,
+              "h0_per_canonical_oscillator": 0.00026726393496628376,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.0025131254694327042,
+              "vacuum_pair_numerator": -0.0026985377563088
+            },
+            {
+              "radius": 2.5,
+              "lapse": 0.44721359549995787,
+              "frequencies": [
+                0.25298221281347033,
+                0.4381780460041328
+              ],
+              "normalized_master": 0.10790341585273852,
+              "normalized_master_x": 0.04923050329555358,
+              "h0_per_canonical_oscillator": 0.20934788856885314,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.028346855536383206,
+              "vacuum_pair_numerator": -0.005249719529395831
+            }
+          ],
+          "Et": 4.69855270109019,
+          "EL": 4.400196599497692,
+          "ER": 1.0839644160427078,
+          "kernel": 0.04462197523914067,
+          "log_wavefunction_exchange_coefficient": -6.321401733443071e-07,
+          "coefficient_shape": -6.321401733443071e-07,
+          "selected_exchange_correlation": -4.917673350724436e-07,
+          "correlation_shape": -4.917673350724436e-07,
+          "sector": "one retained axial-mode exchange; constraint/contact and other modes excluded",
+          "inner_radius": 0.3,
+          "mass_scale": 1.0,
+          "rtol": 2e-10,
+          "norm_quadrature": 0.9999999999370044,
+          "mode_endpoint_gap": -4.440892098500626e-16,
+          "rayleigh_upper": 0.43728108187527154,
+          "interfaces": [
+            {
+              "radius": 0.3,
+              "sigma": 0.07677160824817514,
+              "pressure": 0.07677160824817511,
+              "scalar_proper_rate": 0.3918459091228978,
+              "clock_lapse": 0.3111568455780149,
+              "f_minus": 0.7461334371255733,
+              "f_plus": 0.3298986148942802,
+              "V": 0.0,
+              "Vprime": -7.993605777301127e-15,
+              "Vsecond": 80.98424231562171,
+              "radial_proper_frequency": 6.363341980265626,
+              "q": 0.3001856051515844,
+              "induced_clock_gap": 0.0,
+              "israel_gap": 0.0,
+              "stiff_gap": -2.7755575615628914e-17,
+              "force_gap": 0.0
+            },
+            {
+              "radius": 2.5,
+              "sigma": 0.012041763051338956,
+              "pressure": 0.012041763051338953,
+              "scalar_proper_rate": 0.15518867904160377,
+              "clock_lapse": 0.44721359549995787,
+              "f_minus": 0.6814778861768696,
+              "f_plus": 0.19999999999999996,
+              "V": 2.220446049250313e-16,
+              "Vprime": -2.7755575615628914e-16,
+              "Vsecond": 0.44276677722557106,
+              "radial_proper_frequency": 0.4705139621868681,
+              "q": 0.06767292357659824,
+              "induced_clock_gap": 2.7755575615628914e-17,
+              "israel_gap": 1.734723475976807e-18,
+              "stiff_gap": -3.469446951953614e-18,
+              "force_gap": 0.0
+            }
+          ],
+          "rhs_calls": 10995,
+          "mode_cpu_seconds": 0.203125
+        },
+        {
+          "gravity_frequency": 0.39280415722566436,
+          "vertices": [
+            {
+              "radius": 0.3,
+              "lapse": 0.3111568455780149,
+              "frequencies": [
+                1.4668074368055315,
+                2.5405850054670553
+              ],
+              "normalized_master": 0.0001517559420359474,
+              "normalized_master_x": 0.0005251821717045845,
+              "h0_per_canonical_oscillator": 0.00026726393497599973,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.002513125469524065,
+              "vacuum_pair_numerator": -0.002698537756406901
+            },
+            {
+              "radius": 2.5,
+              "lapse": 0.44721359549995787,
+              "frequencies": [
+                0.25298221281347033,
+                0.4381780460041328
+              ],
+              "normalized_master": 0.10790341585672251,
+              "normalized_master_x": 0.04923050329729297,
+              "h0_per_canonical_oscillator": 0.20934788857629935,
+              "angular_integral": 0.8462843753216345,
+              "current_coupling": 0.02834685553739146,
+              "vacuum_pair_numerator": -0.005249719529582555
+            }
+          ],
+          "Et": 4.69855270109019,
+          "EL": 4.400196599498251,
+          "ER": 1.0839644160432675,
+          "kernel": 0.04462197523911195,
+          "log_wavefunction_exchange_coefficient": -6.321401733893649e-07,
+          "coefficient_shape": -6.321401733893649e-07,
+          "selected_exchange_correlation": -4.917673351074959e-07,
+          "correlation_shape": -4.917673351074959e-07,
+          "sector": "one retained axial-mode exchange; constraint/contact and other modes excluded",
+          "inner_radius": 0.3,
+          "mass_scale": 1.0,
+          "rtol": 2e-12,
+          "norm_quadrature": 0.999999999999261,
+          "mode_endpoint_gap": 5.773159728050814e-15,
+          "rayleigh_upper": 0.43728108187527154,
+          "interfaces": [
+            {
+              "radius": 0.3,
+              "sigma": 0.07677160824817514,
+              "pressure": 0.07677160824817511,
+              "scalar_proper_rate": 0.3918459091228978,
+              "clock_lapse": 0.3111568455780149,
+              "f_minus": 0.7461334371255733,
+              "f_plus": 0.3298986148942802,
+              "V": 0.0,
+              "Vprime": -7.993605777301127e-15,
+              "Vsecond": 80.98424231562171,
+              "radial_proper_frequency": 6.363341980265626,
+              "q": 0.3001856051515844,
+              "induced_clock_gap": 0.0,
+              "israel_gap": 0.0,
+              "stiff_gap": -2.7755575615628914e-17,
+              "force_gap": 0.0
+            },
+            {
+              "radius": 2.5,
+              "sigma": 0.012041763051338956,
+              "pressure": 0.012041763051338953,
+              "scalar_proper_rate": 0.15518867904160377,
+              "clock_lapse": 0.44721359549995787,
+              "f_minus": 0.6814778861768696,
+              "f_plus": 0.19999999999999996,
+              "V": 2.220446049250313e-16,
+              "Vprime": -2.7755575615628914e-16,
+              "Vsecond": 0.44276677722557106,
+              "radial_proper_frequency": 0.4705139621868681,
+              "q": 0.06767292357659824,
+              "induced_clock_gap": 2.7755575615628914e-17,
+              "israel_gap": 1.734723475976807e-18,
+              "stiff_gap": -3.469446951953614e-18,
+              "force_gap": 0.0
+            }
+          ],
+          "rhs_calls": 19543,
+          "mode_cpu_seconds": 0.265625
+        }
+      ],
+      "indicators": {
+        "gravity_frequency": 3.928041572256644e-11,
+        "coefficient_shape": 9.01156235001482e-17,
+        "correlation_shape": 7.010447012126535e-17
+      }
+    }
+  ],
+  "mass_rescaling_control": {
+    "gravity_frequency": 0.19640205556597243,
+    "vertices": [
+      {
+        "radius": 0.5,
+        "lapse": 0.24082347807633334,
+        "frequencies": [
+          0.6811516576668207,
+          1.179789278738696
+        ],
+        "normalized_master": 5.535702300387868e-05,
+        "normalized_master_x": 9.219465976101744e-05,
+        "h0_per_canonical_oscillator": 7.528868086938251e-05,
+        "angular_integral": 0.8462843753216345,
+        "current_coupling": 0.0002548625370333411,
+        "vacuum_pair_numerator": -0.00012708404916664793
+      },
+      {
+        "radius": 5.0,
+        "lapse": 0.44721359549995787,
+        "frequencies": [
+          0.12649110640673517,
+          0.2190890230020664
+        ],
+        "normalized_master": 0.07629958651984206,
+        "normalized_master_x": 0.01740557378775094,
+        "h0_per_canonical_oscillator": 0.1480311409024447,
+        "angular_integral": 0.8462843753216345,
+        "current_coupling": 0.005011057664270972,
+        "vacuum_pair_numerator": -0.00046401349965055877
+      }
+    ],
+    "Et": 2.2065210658143184,
+    "EL": 2.057342991971489,
+    "ER": 0.541982184974774,
+    "kernel": 0.40644352470135414,
+    "log_wavefunction_exchange_coefficient": -2.3967452129298558e-08,
+    "coefficient_shape": -3.834792340687769e-07,
+    "selected_exchange_correlation": -8.030219866960508e-08,
+    "correlation_shape": -3.212087946784203e-07,
+    "sector": "one retained axial-mode exchange; constraint/contact and other modes excluded",
+    "inner_radius": 0.5,
+    "mass_scale": 2.0,
+    "rtol": 2e-12,
+    "norm_quadrature": 0.999999999999624,
+    "mode_endpoint_gap": 8.43769498715119e-15,
+    "rayleigh_upper": 0.21864053392285168,
+    "interfaces": [
+      {
+        "radius": 0.5,
+        "sigma": 0.06466510165802966,
+        "pressure": 0.06466510165802969,
+        "scalar_proper_rate": 0.3596250871616986,
+        "clock_lapse": 0.24082347807633334,
+        "f_minus": 0.723931521955832,
+        "f_plus": 0.19761477886176865,
+        "V": -1.1102230246251565e-16,
+        "Vprime": 1.1102230246251565e-15,
+        "Vsecond": 12.803141980210903,
+        "radial_proper_frequency": 2.5301326032651827,
+        "q": 0.19569451490368933,
+        "induced_clock_gap": -6.938893903907228e-18,
+        "israel_gap": 0.0,
+        "stiff_gap": 2.7755575615628914e-17,
+        "force_gap": 2.7755575615628914e-17
+      },
+      {
+        "radius": 5.0,
+        "sigma": 0.006020881525669478,
+        "pressure": 0.006020881525669476,
+        "scalar_proper_rate": 0.10973496731370068,
+        "clock_lapse": 0.44721359549995787,
+        "f_minus": 0.6814778861768696,
+        "f_plus": 0.19999999999999996,
+        "V": 2.220446049250313e-16,
+        "Vprime": -1.3877787807814457e-16,
+        "Vsecond": 0.11069169430639277,
+        "radial_proper_frequency": 0.23525698109343404,
+        "q": 0.03383646178829912,
+        "induced_clock_gap": 2.7755575615628914e-17,
+        "israel_gap": 8.673617379884035e-19,
+        "stiff_gap": -1.734723475976807e-18,
+        "force_gap": 0.0
+      }
+    ],
+    "rhs_calls": 20902,
+    "mode_cpu_seconds": 0.28125
+  },
+  "comparison": {
+    "coefficient_relative_change": 0.648433910442614,
+    "correlation_relative_change": 0.5309896343279186,
+    "axial_frequency_relative_change": 1.1734531235596535e-07,
+    "same_exterior_and_outer_wall": true,
+    "note": "separately prepared static states; no instantaneous change or causal signal claim"
+  },
+  "inheritance": {
+    "shape": "Gamma_selected M^4/G invariant at fixed dimensionless geometry",
+    "normalized_selected_moment": "C_selected=(G/M^2)*shape in hbar=c=1 units",
+    "fixed_G_full_strength_invariant": false,
+    "scale_relative_gap": 2.6489921367556235e-13
+  },
+  "attribution": {
+    "cosmohedra": "https://arxiv.org/html/2412.19881v1; Eq49 energy kernel",
+    "gravity": "https://arxiv.org/html/gr-qc/0502028; Eq66 master relation, Eq84 flux normalization",
+    "scope": "one graph energy kernel; no full positive-geometry construction for Einstein theory"
+  },
+  "compute": {
+    "rhs_calls": 100597,
+    "cpu_seconds": 1.578125,
+    "workers": 4,
+    "elapsed_seconds": 1.2597601000015857,
+    "rhs_limit": 400000,
+    "cpu_limit_seconds": 180,
+    "note": "mode solver process CPU excludes imports and independent cap-norm quadrature"
+  },
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_cosmohedron_interaction.py": "37e9ee2431b71ab964c3a2c1b12b30a42379c678a9a79e0dc5e366432a1a9caf",
+    "src/recursive_horizons/nsc_atlas_gravitational_response.py": "0dbc5f629762fe757c70c25ee3a098c80e7e3df2b6a927e5c7f4a3cf68b3453b",
+    "scripts/check_nsc_atlas_cosmohedron_interaction.py": "0326ed5b1dd3a699eb462b673edc5c3db363d53a493999aaf2187ec85d669263",
+    "tests/test_nsc_atlas_cosmohedron_interaction.py": "a575bb28c7f5f520c9dca0842af2fa23576b59949bbbe6fcc6fd711d27714599"
+  }
+}

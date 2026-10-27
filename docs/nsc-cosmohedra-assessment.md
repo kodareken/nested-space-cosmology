@@ -2,6 +2,12 @@
 
 ## Assessment
 
+The subsequent [actual-mode interaction](nsc-atlas-cosmohedron-interaction.md)
+now supplies derived vertices and a nonzero selected exchange on the sourced
+two-wall geometry, under an explicit probe extension and conditional state.
+This advances the low-point seed to a physical mode calculation while
+retaining the distinction from the full Einstein wavefunctional.
+
 Cosmohedra are worth a bounded investigation as an interacting-wavefunction
 and geometric-composition entry in the atlas. Their connection to the current
 quadratic boundary response is not an established identification. The useful
