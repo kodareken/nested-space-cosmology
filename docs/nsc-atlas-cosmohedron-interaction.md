@@ -18,8 +18,8 @@ coupling to axial metric fluctuations can then be derived directly.
 
 Inputs fixed before evaluating the interaction:
 
-- The existing two-wall body, M=1, outer wall2.5M, inner wall.25M,
-  intermediate mass.1M and the same solved vacuum/source data.
+- The existing two-wall body, M=1, outer wall 2.5M, inner wall .25M,
+  intermediate mass .1M and the same solved vacuum/source data.
 - A finite conditional perturbation domain through r=10M, with regular center
   and Dirichlet axial master at the outer worldtube. This is a stated quantum
   preparation/domain, not an additional physical spacetime wall or the earlier
@@ -33,7 +33,7 @@ Inputs fixed before evaluating the interaction:
   averaging. The calculation is a projected tree-exchange contribution,
   not a nonperturbative vacuum or the complete Einstein four-point functional.
 
-Execute the following finite calculation:
+Executed finite route:
 
 1. Derive the scalar-mode normalization, angular selection integral and cubic
    metric/current interaction from the action, including the Legendre transform.
@@ -42,12 +42,12 @@ Execute the following finite calculation:
    Wronskian identity and spatial quadrature.
 3. Calculate both wall vertices. Test the actual momentum-type interaction in
    the perturbative Schrodinger equation and identify its four-point pole kernel.
-4. Compare the same outer geometry with inner radius.30M, re-solving only the
+4. Compare the same outer geometry with inner radius .30M, re-solving only the
    inner stiff junction. It must independently pass radial stability.
 5. Test scale dependence with G fixed, and distinguish geometric homogeneity
    from inheritance of the dimensionless quantum coupling G/M^2.
 
-Allow180 CPU seconds and400000 RHS/quadrature evaluations, with up to four
+Allow 180 CPU seconds and 400000 RHS/quadrature evaluations, with up to four
 useful workers. Preserve compact mode values, vertices, convergence indicators
 and source hashes, without mode histories. No old scalar or mass-closure grids
 are reopened. Complete only after canonical normalization, all required cubic
@@ -133,7 +133,7 @@ unit norm. The implementation restores k=1/M in the phase coordinates for
 the scale control; it does not reuse the M=1 formulas without their units.
 
 [Martel--Poisson](https://arxiv.org/html/gr-qc/0502028), the master relation
-and flux normalization (HTML equations66/84), fix
+and flux normalization (HTML equations 66/84), fix
 
 $$
 S_g=\frac{\alpha_\ell}{2}\int dt\,dx
@@ -149,7 +149,7 @@ h_0=\frac{Af\Psi_C+r\Psi_{C,x}}2.
 \tag{C7}
 $$
 
-The real tensor-harmonic norm is12 for ell=2, independently giving
+The real tensor-harmonic norm is 12 for ell=2, independently giving
 alpha_2=3/(8piG). The interface contributes a potential, not a kinetic
 norm. The retained Hamiltonian interaction is therefore
 
@@ -200,7 +200,7 @@ $$
 with Et=sum omega_i, EL=omega1+omega2+omega_g and
 ER=omega3+omega4+omega_g. Exact substitution in the Schrodinger equation
 checks this current-vertex result, including its sign and imaginary cubic
-phase. Its denominator matches [Cosmohedra, equation49](https://arxiv.org/html/2412.19881v1);
+phase. Its denominator matches [Cosmohedra, equation 49](https://arxiv.org/html/2412.19881v1);
 the derivative numerator is calculated from our selected material action.
 
 This is one retained propagating axial-mode tree contribution. Other radial
@@ -228,7 +228,7 @@ no instantaneous change or causal signal is claimed.
 | Gamma_selected M^4/G | -3.83479234069e-7 | -6.32140173389e-7 |
 | C_selected M^2/G | -3.21208794678e-7 | -4.91767335107e-7 |
 
-The selected coefficient changes64.8434%; this one linear frequency changes
+The selected coefficient changes 64.8434%; this one linear frequency changes
 1.17345e-7 relatively. Inner scalar frequencies also change; no universal
 degeneracy of all linear observations is claimed. The contrast is resolved
 above the declared numerical comparison indicators.
@@ -254,10 +254,14 @@ controlled Planck-scale cubic model.
 
 The [compact record](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json)
 binds the action, conditional state/domain, modes, vertices, three solver
-tolerances and M=2 control. It uses100597 RHS calls and about1.6 mode-solver
+tolerances and M=2 control. It uses 100597 RHS calls and about 1.6 mode-solver
 CPU seconds in four workers. Independent cap/spatial normalization and
 direct Regge--Wheeler propagation check the phase method. Eight new controls
-pass. Grok independently reviewed the action and mode normalization.
+pass. An [additional Fock-space check](../tests/test_nsc_cosmohedron_fock_exchange.py)
+independently recovers the mixed moment and kernel. In that calculation,
+the vacuum-to-second-order path and the two first-order states combine to
+cancel the apparent extra internal-frequency denominators. Grok independently
+reviewed the action, mode normalization and coefficient algebra.
 
 Next: include the remaining constrained axial terms and/or a controlled pole
 sum before claiming a full cross-wall four-point prediction, then extend to
@@ -267,5 +271,5 @@ polygon terminology.
 
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_cosmohedron_interaction.py
-python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_cosmohedron_interaction.py
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_cosmohedron_interaction.py tests/test_nsc_cosmohedron_fock_exchange.py
 ```

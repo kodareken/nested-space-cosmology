@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+## Actual geometric modes, derived vertices and selected quantum exchange
+
+    python scripts/run_python.py scripts/check_nsc_atlas_cosmohedron_interaction.py
+    python scripts/run_python.py scripts/plot_nsc_atlas_cosmohedron_interaction.py
+    python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_cosmohedron_interaction.py tests/test_nsc_cosmohedron_fock_exchange.py
+
+The [owner](nsc-atlas-cosmohedron-interaction.md) fixes the probe action,
+boundary condition, global-time reference state and selected modes. The
+producer solves the first mode at three tolerances, checks the norm by
+independent quadrature and compares a second inner radius and an M=2 scale.
+The 28kB record stores vertices and mode values, not histories. The plotter
+reads that record without starting another physical solve. Its channel
+coefficient is not the complete Einstein four-point prediction.
+
 ## Nonlinear initial transfer and its viscous budget
 
     python scripts/run_python.py scripts/check_nsc_atlas_vortex_transfer.py

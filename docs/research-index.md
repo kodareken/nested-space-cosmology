@@ -1,5 +1,16 @@
 # Scientific strand index
 
+The [geometry-derived cosmohedron interaction](nsc-atlas-cosmohedron-interaction.md)
+now calculates an actual normalized gravitational mode and two scalar-current
+vertices on the sourced two-wall body. The zero-background probe extension
+and finite Dirichlet quantum domain are explicit. Its selected tree exchange
+has the cosmohedron seed denominator, checked by two perturbation methods.
+Changing the inner radius from .25M to .30M preserves the exterior/outer wall
+and changes this coefficient 64.84%. Geometry-normalized shape inherits;
+fixed-G quantum strength runs as G/M^2. This is one propagating-mode
+contribution, with full constraint/contact terms, other modes and quantum
+backreaction outside the calculation.
+
 The [cosmohedra assessment](nsc-cosmohedra-assessment.md) now includes a
 direct formal Schrodinger reproduction of the simplest connected cubic
 wavefunction kernel and its normalized scaling. The

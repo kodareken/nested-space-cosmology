@@ -1,5 +1,24 @@
 # Cited arXiv studies
 
+## A physical mode vertex for the cosmohedron seed, 27 October 2026
+
+[Arkani-Hamed--Figueiredo--Vazao,2412.19881v1](https://arxiv.org/html/2412.19881v1),
+Appendix A equation49, supplies the single-graph energy denominator. The
+[new interaction owner](nsc-atlas-cosmohedron-interaction.md) derives the
+different derivative/current numerator from a canonical probe action on
+the sourced nested metric. No full cosmohedron for gravity or literal
+momentum-polygon/spacetime identification is claimed.
+
+[Martel--Poisson,gr-qc/0502028v1](https://arxiv.org/html/gr-qc/0502028),
+the harmonic definitions, master relation and radiation formulas (HTML66/84),
+were checked directly and in independent Grok review. The real ell2 tensor
+norm is12 and fixes the physical canonical coefficient3/(8piG). The
+harmonic sign relative to that paper is stated explicitly. The radial
+potential and material jumps retain the existing gravitational derivation.
+Independent review and number-state algebra confirm the mixed-current
+coefficient; a finite conditional quantum domain and omitted constraint,
+contact and other-mode contributions are retained in its scope.
+
 ## Cosmohedra relevance and the inherited-law question, 27 October 2026
 
 The [assessment and low-point seed](nsc-cosmohedra-assessment.md) compares

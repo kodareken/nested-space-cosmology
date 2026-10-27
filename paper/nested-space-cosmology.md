@@ -103,6 +103,16 @@ composition law retains momentum correlations and their energy/viscosity
 budget. This is an initial-transfer result, with a gravitational source
 identification and sustained cascade still to be constructed.
 
+The first geometry-derived quantum interaction now joins a finite probe
+sector to that sourced two-wall geometry. An added zero-background
+surface scalar has positive linear modes and a metric/current vertex fixed
+by its action. A normalized gravitational mode supplies a selected tree
+exchange whose energy denominator matches the cosmohedron seed. Changing
+the child radius while retaining the exterior changes this contribution
+substantially. Geometric shape covariance and the quantum-strength flow
+are separately checked; a full constrained quantum four-point function
+is not inferred from this projected contribution.
+
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
 by $-0.1046\pm0.0144$ magnitudes using their published covariance. That
@@ -7736,6 +7746,186 @@ Thus the source paper contributes a defined mathematical block, while the
 gravitational attachment and a sustained rotating hierarchy remain further
 connections to calculate.
 
+### 10.64. A material action now supplies the interaction vertex
+
+<!-- nsc-claim:atlas-geometric-cubic-vertex -->
+
+Evidence: [actual-mode normalization, vertices and controls](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
+The [interaction owner](../docs/nsc-atlas-cosmohedron-interaction.md) turns
+the cosmohedra comparison into a finite calculation on the sourced body.
+[Arkani-Hamed, Figueiredo and Vazao](https://arxiv.org/html/2412.19881v1)
+organize a cubic scalar wavefunction through nested energy factors;
+[Ardila-Mantilla and collaborators](https://arxiv.org/abs/2603.03425) prove
+the associated Matryoshka face combinatorics. Here the low-point kernel
+is tested with a vertex calculated from a selected material/gravity action.
+No cosmohedron in physical spacetime is assumed.
+
+The supporting wall scalar has a nonzero background and cannot be treated
+as a free probe. Explicitly add a second canonical component chi_s with
+zero background on each wall,
+
+$$
+S_\chi=-\frac{1}{2}\sum_s\int_{\Sigma_s}\sqrt{-\gamma}\,
+\gamma^{ab}\partial_a\chi_s\partial_b\chi_s\,d^3y.
+$$
+
+Its background and linear stress vanish. The classical geometry, original
+wall sources and axial operator are preserved. This adds stated probe
+matter; quantum vacuum loops and their backreaction are not calculated.
+For wall lapse $N_s=A\sqrt{f}$ and real unit spherical harmonics, the
+canonical modes use the shared global time:
+
+$$
+\chi_s=\frac{\sqrt{N_s}}{R_s}\sum_i Q_{si}Y_i,\qquad
+L_{2s}=\frac{1}{2}\sum_i(\dot Q_{si}^2-\omega_{si}^2Q_{si}^2),\qquad
+\omega_{s\ell}=\frac{N_s}{R_s}\sqrt{\ell(\ell+1)}.
+$$
+
+Select the ell=1,m=1 cosine and ell=2,m=1 sine harmonics on each wall.
+For the axial metric harmonic $X^A=\varepsilon^{AB}D_BY_{20}$ and
+$\delta\gamma_{tA}=h_0X_A$, direct variation yields
+
+$$
+L_{3s}=-\frac{h_0}{R_s^2}\sum_{ij}C_{ij}\dot Q_{si}Q_{sj},\qquad
+C_{ij}=\int Y_iX^AD_AY_j\,d\Omega=-C_{ji}.
+$$
+
+The selected real harmonics give $C_{12}=3/(2\sqrt{\pi})$. The sign
+convention is fixed in the owner. Its opposite reverses both vertices,
+leaving their exchange product unchanged. This angular integral and the
+proper-clock normalization determine the vertex without a cubic fit.
+
+### 10.65. An actual gravitational mode carries the cosmohedron seed
+
+<!-- nsc-claim:atlas-physical-cosmohedron-exchange -->
+
+Evidence: [mode, selected exchange and numerical controls](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
+Retain the first regular axial ell=2 mode, with Dirichlet master at r=10M.
+This is an explicitly conditional quantum domain. It differs from the
+earlier open characteristic experiment at that radius and adds no physical
+spacetime wall. The retained scalar harmonics have positive frequencies;
+the scalar shift zero mode is excluded. Quantum theory and the positive
+Gaussian reference state are imported explicitly.
+
+The existing spatial operator and real material jumps determine the mode.
+A trial Rayleigh quotient brackets its first eigenvalue. A phase and
+eigenvalue-sensitivity calculation gives the norm through a Wronskian
+identity; direct spatial quadrature and ordinary Regge--Wheeler propagation
+check it independently. The result is
+
+$$
+M\omega_g=.392804111132,
+$$
+
+with no interior node. [Martel--Poisson](https://arxiv.org/html/gr-qc/0502028),
+the master relation and radiation-flux normalization, fix the canonical
+Cunningham--Price--Moncrief field:
+
+$$
+\alpha_\ell=\frac{(\ell-1)\ell(\ell+1)(\ell+2)}{64\pi G},\qquad
+\Psi_C=\frac{e(r)Q_g}{\sqrt{\alpha_\ell}},\qquad
+h_0=\frac{Af\Psi_C+r\Psi_{C,x}}{2}.
+$$
+
+Here the spatial mode has unit square integral in x. Legendre transforming
+the scalar action therefore supplies the selected Hamiltonian vertex
+
+$$
+H_3=Q_g\sum_s c_s(P_{s1}Q_{s2}-P_{s2}Q_{s1}),\qquad
+c_s=\frac{C_{12}}{2R_s^2\sqrt{\alpha_2}}(Af e+R_s e_x)_{\Sigma_s}.
+$$
+
+Both sides of the actual material junction give the same h0 and coupling.
+The vacuum pair numerator is $n_s=c_s(\omega_{s1}-\omega_{s2})$.
+Equal-frequency pairs have zero numerator. In exterior M units and with
+G factored out, the calculated inputs are
+
+| Quantity | Inner wall | Outer wall |
+| --- | --- | --- |
+| First scalar frequency | 1.36230331533 | .252982212813 |
+| Second scalar frequency | 2.35957855748 | .438178046004 |
+| Current coupling divided by sqrt(G) | .001441720226 | .028346822842 |
+| Pair numerator divided by sqrt(G) | -.001437791887 | -.005249713475 |
+
+For the two distinct wall pairs, a direct perturbative Schrodinger
+calculation gives the mixed connected term in log(Psi):
+
+$$
+\Gamma_{1234}^{(g_1)}=-n_{\rm in}n_{\rm out}K_4,\qquad
+K_4=\frac{1}{E_tE_LE_R},
+$$
+
+$$
+E_t=\omega_1+\omega_2+\omega_3+\omega_4,\quad
+E_L=\omega_1+\omega_2+\omega_g,\quad
+E_R=\omega_3+\omega_4+\omega_g.
+$$
+
+The energy denominator is the seed of
+[Cosmohedra, equation 49](https://arxiv.org/html/2412.19881v1).
+The imaginary first-order phase and derivative numerator follow from this
+current interaction. An independent number-state perturbation calculation
+recovers the same kernel and selected normalized connected moment.
+
+This is one propagating-mode tree contribution in the specified basis.
+Other radial modes, even parity, nonpropagating constraint/contact terms
+and higher orders are excluded. It is not the complete Einstein four-point
+function. Mode frequencies replace plane-wave momentum magnitudes;
+the full momentum-polytope realization has not been identified with
+this geometry. The result is a calculated graph-kernel connection.
+
+### 10.66. Interior geometry changes the interaction and fixes its scale law
+
+<!-- nsc-claim:atlas-cosmohedron-interior-contrast -->
+
+Evidence: [two preparations and fixed-G scaling](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
+Move the inner wall from .25M to .30M and re-solve its stiff junction.
+Its radial potential curvature stays positive. The parent parameters,
+outer wall and exterior are unchanged. These are separately prepared
+static states, not an instantaneous change or a new signal claim.
+
+| Quantity | Child radius .25M | Child radius .30M |
+| --- | --- | --- |
+| M times gravitational frequency | .392804111132 | .392804157226 |
+| Selected coefficient times M^4/G | -3.83479234e-7 | -6.32140173e-7 |
+| Selected normalized moment times M^2/G | -3.21208795e-7 | -4.91767335e-7 |
+
+The selected coefficient changes 64.84%, while this one gravitational
+frequency changes about 1.17e-7 relatively. Inner scalar frequencies also
+change. This does not assert degeneracy of every linear observation.
+The numerical contrast is resolved by three solver tolerances and
+independent mode/action checks; it is not an astronomical measurement.
+
+![Derived interaction, interior contrast and quantum scaling](../docs/figures/nsc-atlas-cosmohedron-interaction.png)
+
+*Figure 34. The upper-left panel is the selected interaction graph, not a
+spacetime diagram. Its vertices are calculated from the same material action.
+The lower-left panel compares the two inner geometries. The scale control
+at fixed G preserves geometric shape while changing quantum strength.
+The panels concern the declared one-mode exchange contribution.*
+
+At fixed dimensionless geometry, unit-normalized mode shape scales as
+M to the power minus one-half. The action consequently gives
+
+$$
+c_s\sim\sqrt{G}M^{-5/2},\quad n_s\sim\sqrt{G}M^{-7/2},\quad
+\Gamma_{\rm selected}\sim GM^{-4},\quad C_{\rm selected}\sim G/M^2.
+$$
+
+Thus the M=2 calculation preserves the geometric quantities
+Gamma M^4/G and C M^2/G. The dimensionless quantum strength is G/M^2
+in hbar=c=1 units; restoring units gives squared Planck length over
+squared geometric mass length. A physical inherited-law map must carry
+that parameter and the state. A fixed quantum coupling does not follow
+from classical geometric covariance. Shapes tabulated per G are not
+assertions of perturbative control at a Planck-sized mass.
+
+The completed finite link is: material action, common clocks, actual modes,
+derived vertices, selected quantum exchange and an interior-dependent
+coefficient. Completing the constrained/pole-summed response and extending
+the state to a time-dependent parent remain further work. No black/white
+transition or observed Lambda value has been deduced from this graph kernel.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -7785,7 +7975,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 34. The isolated reference in joined causal charts. Horizons are
+*Figure 35. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -8791,7 +8981,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 35. Saved finite-window comparisons. A: the previous and current
+*Figure 36. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -8887,7 +9077,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 36. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 37. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -9672,7 +9862,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 37. Research dependencies, distinct from spacetime causal arrows.
+*Figure 38. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

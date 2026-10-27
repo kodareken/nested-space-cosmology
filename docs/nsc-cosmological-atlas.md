@@ -18,7 +18,7 @@ starting a derivation.
 
 ## Current execution priority — 27 October 2026
 
-### Active: a geometry-derived cosmohedron interaction
+### Complete: a geometry-derived cosmohedron interaction
 
 The [interaction owner](nsc-atlas-cosmohedron-interaction.md) now derives
 two scalar-current vertices and a propagating-mode exchange kernel on the
@@ -26,9 +26,11 @@ sourced two-wall geometry. The probe extension and finite quantum domain
 are explicit. Actual mode normalization, action/harmonic checks and the
 same-exterior inner-radius control pass; the selected coefficient changes
 64.84%. The geometric shape inherits while fixed-G quantum strength runs.
-The remaining work in this step is the final independent review and
-manuscript integration. Full constrained/pole-summed four-point physics is
-a subsequent connection, not a claim of this finite calculation.
+Independent action, mode, Schrodinger and Fock checks are complete;
+the manuscript now contains the finite result. Next: full constrained
+axial terms and/or a controlled pole sum, followed by a time-dependent
+parent state. A complete Einstein four-point function and Lambda selection
+are not claims of this finite calculation.
 
 ### Complete: nonlinear initial transfer from unresolved vortex motion
 

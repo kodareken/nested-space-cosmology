@@ -135,11 +135,13 @@ Their polygon coordinates are not yet the atlas's horizon radii, flow
 velocities or proper clocks. The checked K4 seed makes a bounded pilot
 worthwhile; it does not supply a black/white-hole transition or a Lambda value.
 
-Recommended next pilot: derive one cubic coupling between actual modes of
+The recommended pilot was to derive one cubic coupling between actual modes of
 a specified atlas region, compute its connected four-point boundary
 coefficient with a declared quantum state, and compare its energy poles
-and cut recursion with K4. Preserve the existing fluid/gravity work as
-separate evidence until that calculation provides a physical map.
+and cut recursion with K4. The [subsequent realization](nsc-atlas-cosmohedron-interaction.md) now supplies
+that selected mode/current kernel. A full physical map still needs the
+remaining constrained terms, broader modes and a state beyond the conditional
+finite domain; the earlier fluid/gravity results retain their own scopes.
 
 ```powershell
 python scripts/run_python.py -m pytest -q tests/test_nsc_cosmohedra_seed.py

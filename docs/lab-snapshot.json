@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+  "current_receipt_commit_parent": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 29918,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 30646,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "5aef06ec18df9d49596743b5f7b4e0201caea77ad3e6523e088130757b3fe703"
+      "sha256": "2ba6b4a215d1b47e68ddc10b3a970f2f3754a22d4553046bbdd641dd3eb72978"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 286975,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 287601,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "d624642f75c2ad9646f9dad3b6a81e4975a0d773416275a50829ae14770c6a85"
+      "sha256": "fef0dd8b361696869eba18d74351e09008ee0c4ec29b49d3ca376fcedc2e56da"
     },
     {
-      "bytes": 140308,
-      "change": "Assess cosmohedra and verify the formal cubic wavefunction seed and inherited scaling.",
-      "changed_from_commit": "698df71564f9109b0f7b5172314cd71c4e2f7c15",
+      "bytes": 141453,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "d00f252a2bfbbe18445e8bb01d3a890e937abae58ff8a31acdf77f34570ce56a"
+      "sha256": "e2db1e2efd736e3dd8cf18d4b6a6e5e209c5c782d213e43e9b7f837bd362d11c"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 464164,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 464887,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9406ca01297754cce6424804fa970ee46f80c9decb05b1004ff1d9fab079a92d"
+      "sha256": "3cb7aca86627ca3deeb1a08d6a4806443d979bab1bdf22da2688352cd5221a97"
     },
     {
       "bytes": 173938,
@@ -10718,12 +10718,12 @@
       "sha256": "90eb79c787ea25dac6aa95d9b0531c3e156d5a65fd84b964b84e70c132f341c0"
     },
     {
-      "bytes": 12145,
-      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
-      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "bytes": 12490,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "docs/nsc-atlas-cosmohedron-interaction.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "e08acccd30c2c2b927646f53685443ee10c7ecb813a2acb567d4b27b12a1b2cd"
+      "sha256": "25efd2f99302e3c59cc429758c9257623161a4829d17d755118ff87c60647983"
     },
     {
       "bytes": 191654,
@@ -11008,23 +11008,23 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 7176,
-      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
-      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "bytes": 7374,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "docs/nsc-cosmohedra-assessment.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "409836408137097a8c8b6f4ef9297b25ce5cbff51391b8ee12ddc7405533908e"
+      "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 118007,
-      "change": "Derive geometric scalar-current vertices and the selected cosmohedron exchange.",
-      "changed_from_commit": "fd7c37d03dec2a0183bf4d444d56ac7befee9afa",
+      "bytes": 118128,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "07256986ddc6d116ac5506a221d4a9cdee0252f63e0a1f1f4c9ed48d1613c2db"
+      "sha256": "f26ea34f20c0f646a8dc897190ebff5478ee764101a617218942aded008a56c4"
     },
     {
       "bytes": 30876,
@@ -11976,12 +11976,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 26376,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 26813,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "fe2334031606f2cf62e2a83785e77cc33a23e0bdcc17818597c09735dc7941f6"
+      "sha256": "5405e17fc2f877ac56a3be616c0b33f271793ffe26ea6de06eaf55989cda6491"
     },
     {
       "bytes": 13971,
@@ -11992,12 +11992,12 @@
       "sha256": "e4084dc669884d68ebedc282a2023de479a55bff74094247adbbe80616973a9c"
     },
     {
-      "bytes": 603922,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 605043,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c48348af2e4459d333fa8df3dc5717bf9b457ed43c28fe6e938dfc173d8aa0f6"
+      "sha256": "3176ef35b62744ebbd4312e738fac5c26a7395f0bd12bef232f3491cded328fb"
     },
     {
       "bytes": 6705,
@@ -12006,20 +12006,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 230887,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 231773,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7fc04fa8166ebe281c57370148e843c5d3a6e991c3c7d93cf9731ade0b9c31f2"
+      "sha256": "5e1834d9b86cb05fbdc80ba98fbc7fbc8911c696d71ad569eb92f1f778ebad6d"
     },
     {
-      "bytes": 47023,
-      "change": "Assess cosmohedra and verify the formal cubic wavefunction seed and inherited scaling.",
-      "changed_from_commit": "698df71564f9109b0f7b5172314cd71c4e2f7c15",
+      "bytes": 47746,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "7094c9ef3ad5cdbac02018fbe81a221b5b9a96decff5c24738013e867e5019ba"
+      "sha256": "b03cad305133e849eb67d339eb76e1de1b7cef4975f9fc8f5b3d057f3e1a31c2"
     },
     {
       "bytes": 18356,
@@ -12088,28 +12088,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 33680,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 34017,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "9861bdbfc7024c9cf1a63ee16a56acc4525c4c5bd749285a1fda9c21ba124c2f"
+      "sha256": "41541bf823d43848e8b6a28fcaae45f8948ccb96ea510ba30bf6dcda4f470d70"
     },
     {
       "bytes": 3206,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "3b153abc29b8dcf3a2c8403fbd4b198bdf9256fa3a0de7fc449c79e55e5302ce"
+      "sha256": "481fc159f8e0bc9893edbedd5c9b41a47aa3daf9a5265ac724b966e9155458d4"
     },
     {
-      "bytes": 45205,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 45691,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "fcb55058f4a43ea09f4e050aa3a98933917ccae34036ee669158bf5a529692e7"
+      "sha256": "dfc226684107411e7590eca27bb4769030b6cd274805ebbe70e77cbe856e06e4"
     },
     {
       "bytes": 226492,
@@ -12121,27 +12121,27 @@
     },
     {
       "bytes": 396,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d9fba3fd36ca75ebc74b5d029b2fcbeff7ea7af295ec47163d97900b4d0b4b97"
+      "sha256": "8fc99f7caa082ef30db1cda1778ddbf9c14197e832930d59d4944de04183869e"
     },
     {
-      "bytes": 457721,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 466584,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5977fe49b35d8f9ab4b90e0806b9ba2cfc607fe8265a31bb6b681bbe1d522f77"
+      "sha256": "5a508c38c807db3375bfae7dedefba833799f11fd6bca7aead0e6d5aad6d9db2"
     },
     {
-      "bytes": 13072302,
-      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
-      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "bytes": 13383653,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4389eea39b48e3f708a9edc2c61bce40f75fa1a8e0955e273aaa053bcfee5e48"
+      "sha256": "1a5c43eb764502072a0eceb0d04b9483e8d9dc4e1251f32345dedede58b2604b"
     },
     {
       "bytes": 3283,
@@ -40876,6 +40876,14 @@
       "path": "tests/test_nsc_cosmohedra_seed.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "6ea8bbe14bfcb6aa66cf4ea30bac273dc7f9c11f5c5e8bcde7f910fb1134f6ef"
+    },
+    {
+      "bytes": 1054,
+      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
+      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "path": "tests/test_nsc_cosmohedron_fock_exchange.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3f42b1704e32155760910d51339a605e9bb29d8dbfc07cd9706b0ecd7b9c4860"
     },
     {
       "bytes": 18748,

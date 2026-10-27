@@ -1,10 +1,10 @@
 {
-  "bytes": 13072302,
+  "bytes": 13383653,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "d9fba3fd36ca75ebc74b5d029b2fcbeff7ea7af295ec47163d97900b4d0b4b97",
+  "metadata_sha256": "8fc99f7caa082ef30db1cda1778ddbf9c14197e832930d59d4944de04183869e",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 157,
-  "pdf_sha256": "4389eea39b48e3f708a9edc2c61bce40f75fa1a8e0955e273aaa053bcfee5e48",
+  "pages": 161,
+  "pdf_sha256": "1a5c43eb764502072a0eceb0d04b9483e8d9dc4e1251f32345dedede58b2604b",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -38,6 +38,10 @@
     {
       "path": "docs/figures/nsc-atlas-core-reservoir.png",
       "sha256": "59bb0c3656f489a0c9d163e6d9bde4d80e646189ef3b600dca5d11ae192208c0"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-cosmohedron-interaction.png",
+      "sha256": "bf108fe13638d7057f1cb455244b47fc989143e5f35eef2cc24c0d251c12c1f8"
     },
     {
       "path": "docs/figures/nsc-atlas-dynamics-lensing.png",
@@ -524,6 +528,10 @@
       "sha256": "0665f9a4cfa0e576854901d7c706f7ac9bbc0c7a521babee6ec2548f03cf0a24"
     },
     {
+      "path": "results/summaries/nsc-atlas-cosmohedron-interaction-v1.json",
+      "sha256": "6985239af01c04c1f15aecb287d5bbd3941f2c176642680bd9634f11d2f06005"
+    },
+    {
       "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
@@ -789,6 +797,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "5977fe49b35d8f9ab4b90e0806b9ba2cfc607fe8265a31bb6b681bbe1d522f77",
-  "version": "working-2026-10-27.2"
+  "source_sha256": "5a508c38c807db3375bfae7dedefba833799f11fd6bca7aead0e6d5aad6d9db2",
+  "version": "working-2026-10-27.3"
 }

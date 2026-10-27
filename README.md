@@ -1,5 +1,16 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [geometry-derived cosmohedron interaction](docs/nsc-atlas-cosmohedron-interaction.md)
+now calculates an actual normalized gravitational mode and two scalar-current
+vertices on the sourced two-wall body. The zero-background probe extension
+and finite Dirichlet quantum domain are explicit. Its selected tree exchange
+has the cosmohedron seed denominator, checked by two perturbation methods.
+Changing the inner radius from .25M to .30M preserves the exterior/outer wall
+and changes this coefficient 64.84%. Geometry-normalized shape inherits;
+fixed-G quantum strength runs as G/M^2. This is one propagating-mode
+contribution, with full constraint/contact terms, other modes and quantum
+backreaction outside the calculation.
+
 The [vortex-transfer entry](docs/nsc-atlas-vortex-transfer.md) now incorporates
 the official OpenAI forced Navier--Stokes blowup paper with a pinned source
 and reading boundary. An independently checked compact preparation proves

@@ -1,5 +1,13 @@
 # Paper guide
 
+Revision 2026-10-27.3 adds Sections 10.64--10.66 and Figure 34:
+an explicit zero-background surface probe, actual normalized gravitational
+mode, action-derived scalar-current vertices and selected cosmohedron
+exchange kernel. A same-exterior child-radius contrast and the physical
+G/M^2 coupling flow are calculated. The result is a finite projected
+tree contribution; full constrained four-point and backreaction work
+are not implied.
+
 Revision 2026-10-27.2 adds Sections 10.61--10.63 and Figure 33:
 the official OpenAI Navier--Stokes paper, an independently derived finite
 nonlinear mean-circulation law and its momentum/viscous budget. Published

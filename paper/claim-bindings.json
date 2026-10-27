@@ -508,6 +508,21 @@
       "section": "10.63",
       "status": "measured",
       "owner": "docs/nsc-atlas-vortex-transfer.md"
+    },
+    "atlas-geometric-cubic-vertex": {
+      "section": "10.64",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-cosmohedron-interaction.md"
+    },
+    "atlas-physical-cosmohedron-exchange": {
+      "section": "10.65",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-cosmohedron-interaction.md"
+    },
+    "atlas-cosmohedron-interior-contrast": {
+      "section": "10.66",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-cosmohedron-interaction.md"
     }
   },
   "findings": [

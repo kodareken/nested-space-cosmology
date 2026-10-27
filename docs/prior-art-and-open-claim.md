@@ -1,5 +1,23 @@
 # Prior art and admission of new research
 
+## A mode-derived interaction and the cosmohedron seed, 27 October 2026
+
+The [preparation and proof](nsc-atlas-cosmohedron-interaction.md) derive a
+surface current vertex on the actual sourced nested metric. The original
+supporting scalar is not treated as a free probe: an explicit zero-background
+second component preserves the classical source. The finite state/domain,
+first axial mode and real scalar harmonics precede evaluation. Norms are
+fixed by the action/flux convention, not by fitting a cubic coupling.
+An independent Fock calculation checks the Schrodinger kernel and moment.
+The canonical action identifies the fixed-G quantum coupling flow.
+The retained production uses 100597 RHS calls and about 1.6 mode-solver
+CPU seconds, under the 180 CPU-second/400000-evaluation allowance.
+The initial symbolic chart check required sin(theta)>0; polynomial sphere
+integrals remove an unnecessary expensive trigonometric calculation.
+No physical parameter or selected coefficient is retuned.
+Only one propagating-mode contribution is claimed; the full constrained
+Einstein wavefunctional remains a subsequent task.
+
 ## Nonlinear vortex transfer, 27 October 2026
 
 The [preparation and proof](nsc-atlas-vortex-transfer.md) choose a finite

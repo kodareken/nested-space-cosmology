@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [actual-mode interaction owner](nsc-atlas-cosmohedron-interaction.md)
+uses [the phase/mode and vertex calculator](../src/recursive_horizons/nsc_atlas_cosmohedron_interaction.py),
+[eight field/mode controls](../tests/test_nsc_atlas_cosmohedron_interaction.py),
+[an independent Fock exchange check](../tests/test_nsc_cosmohedron_fock_exchange.py),
+[bounded producer](../scripts/check_nsc_atlas_cosmohedron_interaction.py) and
+[record-only plotter](../scripts/plot_nsc_atlas_cosmohedron_interaction.py).
+The background is reused from the existing sourced gravitational module;
+no old source hashes or histories are changed.
+
 The [vortex-transfer owner](nsc-atlas-vortex-transfer.md) uses
 [the compact solenoidal field and stress calculator](../src/recursive_horizons/nsc_atlas_vortex_transfer.py),
 [fourteen controls](../tests/test_nsc_atlas_vortex_transfer.py),
