@@ -18,6 +18,33 @@ starting a derivation.
 
 ## Current execution priority — 27 October 2026
 
+### Connected book and central physical closure
+
+The main manuscript now follows one argument across eight parts: spherical
+geometry and inherited law; physical regions and causal access; the
+scalar/four-form source history; concentration and conservation; interior
+observation; gravitational/fluid/quantum exchange; effective gravity; and
+physical completion. The detailed original field development remains a
+technical appendix. Existing equations, evidence and mathematical domains
+are preserved; no numerical campaign is reopened by the editorial revision.
+
+The spherical hypothesis is explicit. Positive isotropic surface tension at
+fixed Euclidean volume selects a sphere; an illustrative volume-preserving
+curvature law has a directly derived nonpositive surface-energy rate.
+Thermodynamics alone is not used to exclude anisotropic or driven structures
+or to certify unlimited physical universes. Repeated spherical inheritance
+is the proposed physical architecture, developed by the finite constructions
+and the separately proved infinite operator model.
+
+The next central research connection is the shared source/state history:
+carry one specified ancestral preparation and common couplings into the
+vacuum, excitation and structure population, and calculate their joint
+observer predictions. The seed statistics, physical ruler and early history
+remain inputs until their selection or independent calibration is supplied.
+Finish-line criteria and concrete failure mechanisms are in Part VIII;
+the existing scientific owners retain their implementation responsibilities.
+
+
 ### Complete: a geometry-derived cosmohedron interaction
 
 The [interaction owner](nsc-atlas-cosmohedron-interaction.md) now derives

@@ -1,5 +1,22 @@
 # Cited arXiv studies
 
+## Spherical energy and the book's geometric hypothesis — 27 October 2026
+
+[Neumayer, 1503.06705v2](https://arxiv.org/html/1503.06705v2), Section 1.1,
+states the Euclidean isoperimetric equality case and the anisotropic Wulff
+generalization. The atlas opening uses that established fixed-volume,
+isotropic-tension result. Its separate surface-relaxation identity follows
+directly from the first variations of area and volume for the explicitly
+chosen normal velocity; it is not a new gravitational or universal-entropy
+theorem.
+
+[Huisken, J. Reine Angew. Math. 382 (1987), 35–48](https://doi.org/10.1515/crll.1987.382.35)
+is credited for the volume-preserving mean-curvature-flow literature.
+Publication metadata was checked; the full primary text was unavailable
+through the accessed repository. No global convergence theorem from that
+paper is invoked. Spherical inheritance across all physical generations
+remains the atlas's stated hypothesis, distinct from these borrowed results.
+
 ## A physical mode vertex for the cosmohedron seed, 27 October 2026
 
 [Arkani-Hamed--Figueiredo--Vazao,2412.19881v1](https://arxiv.org/html/2412.19881v1),

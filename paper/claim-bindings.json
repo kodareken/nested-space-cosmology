@@ -45,97 +45,97 @@
       "owner": "docs/nsc-atlas-causal-observers.md"
     },
     "atlas-field-response": {
-      "section": "13",
+      "section": "A.1",
       "status": "measured",
       "owner": "docs/nsc-atlas-field-transfer.md"
     },
     "finite-transfer-memory": {
-      "section": "14",
+      "section": "A.24",
       "status": "measured",
       "owner": "paper/finite-regeneration/main.tex"
     },
     "target-constants": {
-      "section": "16",
-      "status": "proposal",
-      "owner": null
-    },
-    "target-dark-sector": {
       "section": "18",
       "status": "proposal",
       "owner": null
     },
+    "target-dark-sector": {
+      "section": "20",
+      "status": "proposal",
+      "owner": null
+    },
     "target-antimatter": {
-      "section": "19",
-      "status": "proposal",
-      "owner": null
-    },
-    "target-continuation": {
-      "section": "20",
-      "status": "proposal",
-      "owner": null
-    },
-    "target-recursion": {
-      "section": "20",
-      "status": "proposal",
-      "owner": null
-    },
-    "target-measurement": {
       "section": "21",
       "status": "proposal",
       "owner": null
     },
+    "target-continuation": {
+      "section": "22",
+      "status": "proposal",
+      "owner": null
+    },
+    "target-recursion": {
+      "section": "22",
+      "status": "proposal",
+      "owner": null
+    },
+    "target-measurement": {
+      "section": "23",
+      "status": "proposal",
+      "owner": null
+    },
     "atlas-field-preparation": {
-      "section": "13.1",
+      "section": "A.2",
       "status": "derived",
       "owner": "docs/nsc-atlas-field-preparation.md"
     },
     "atlas-prepared-response": {
-      "section": "13.2",
+      "section": "A.3",
       "status": "measured",
       "owner": "docs/nsc-atlas-prepared-response.md"
     },
     "atlas-observer-inverse": {
-      "section": "13.3",
+      "section": "A.4",
       "status": "derived",
       "owner": "docs/nsc-atlas-observer-inference.md"
     },
     "atlas-scalar-wall-consistency": {
-      "section": "13.4",
+      "section": "A.5",
       "status": "derived",
       "owner": "docs/nsc-atlas-scalar-wall-consistency.md"
     },
     "atlas-characteristic-initialization": {
-      "section": "13.5",
+      "section": "A.6",
       "status": "derived",
       "owner": "docs/nsc-atlas-characteristic-initialization.md"
     },
     "atlas-source-mass": {
-      "section": "13.6",
+      "section": "A.7",
       "status": "derived",
       "owner": "docs/nsc-atlas-source-mass.md"
     },
     "atlas-scalar-normal-force": {
-      "section": "13.7",
+      "section": "A.8",
       "status": "derived",
       "owner": "docs/nsc-atlas-scalar-normal-force.md"
     },
     "atlas-wall-mass-closure": {
-      "section": "13.8",
+      "section": "A.9",
       "status": "derived",
       "owner": "docs/nsc-atlas-wall-mass-closure.md"
     },
     "atlas-cap-wall-response": {
-      "section": "13.9",
+      "section": "A.10",
       "status": "derived",
       "owner": "docs/nsc-atlas-cap-wall-response.md"
     },
     "atlas-bulk-response": {
-      "section": "13.10",
+      "section": "A.11",
       "status": "measured",
       "owner": "docs/nsc-atlas-bulk-response.md"
     },
     "atlas-wall-evolution": {
-      "section": "13.11",
+      "section": "A.12",
       "status": "measured",
       "owner": "docs/nsc-atlas-wall-evolution.md"
     },
@@ -145,112 +145,112 @@
       "owner": "docs/schur-memory.md"
     },
     "local-source-insertion-majorant": {
-      "section": "6.2",
+      "section": "A.26",
       "status": "derived",
       "owner": "docs/nsc-ks-source-operator-majorant-v7.md"
     },
     "atlas-cap-response": {
-      "section": "13.12",
+      "section": "A.13",
       "status": "measured",
       "owner": "docs/nsc-atlas-cap-response.md"
     },
     "atlas-scalar-boundary": {
-      "section": "13.13",
+      "section": "A.14",
       "status": "measured",
       "owner": "docs/nsc-atlas-scalar-metric-response.md"
     },
     "atlas-scalar-evolution": {
-      "section": "13.14",
+      "section": "A.15",
       "status": "measured",
       "owner": "docs/nsc-atlas-scalar-evolution.md"
     },
     "atlas-central-scalar": {
-      "section": "13.15",
+      "section": "A.16",
       "status": "measured",
       "owner": "docs/nsc-atlas-central-scalar-response.md"
     },
     "atlas-nonlinear-background": {
-      "section": "13.16",
+      "section": "A.17",
       "status": "measured",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
     },
     "atlas-ssprk3-refinement": {
-      "section": "13.17",
+      "section": "A.18",
       "status": "measured",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
     },
     "atlas-operator-comparison": {
-      "section": "13.18",
+      "section": "A.19",
       "status": "measured",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
     },
     "atlas-finite-onset-existence": {
-      "section": "13.19",
+      "section": "A.20",
       "status": "derived",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
     },
     "atlas-onset-parameter-response": {
-      "section": "13.20",
+      "section": "A.21",
       "status": "derived",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
     },
     "atlas-onset-geometric-signs": {
-      "section": "13.21",
+      "section": "A.22",
       "status": "derived",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
     },
     "atlas-classical-vacuum-trace": {
-      "section": "6.1.1",
+      "section": "17.1",
       "status": "derived",
       "owner": "docs/schur-memory.md"
     },
     "atlas-quantum-vacuum-trace": {
-      "section": "6.1.2",
+      "section": "17.2",
       "status": "derived",
       "owner": "docs/schur-memory.md"
     },
     "atlas-quantum-interface": {
-      "section": "6.1.3",
+      "section": "17.3",
       "status": "derived",
       "owner": "docs/schur-memory.md"
     },
     "atlas-exterior-schur-metric": {
-      "section": "6.1.4",
+      "section": "17.4",
       "status": "derived",
       "owner": "docs/schur-memory.md"
     },
     "atlas-parent-metric-response": {
-      "section": "6.1.5",
+      "section": "17.5",
       "status": "derived",
       "owner": "docs/schur-memory.md"
     },
     "atlas-geometric-slice-average": {
-      "section": "6.1.5",
+      "section": "17.5",
       "status": "measured",
       "owner": "docs/schur-memory.md"
     },
     "conformal-geometric-average": {
-      "section": "6.1.5",
+      "section": "17.5",
       "status": "measured",
       "owner": "docs/schur-memory.md"
     },
     "atlas-supernova-distance": {
-      "section": "6.1.6",
+      "section": "15.11",
       "status": "measured",
       "owner": "docs/schur-memory.md"
     },
     "conformal-causal-distances": {
-      "section": "6.1.6",
+      "section": "15.11",
       "status": "measured",
       "owner": "docs/schur-memory.md"
     },
     "atlas-common-action-interface": {
-      "section": "6.1.7",
+      "section": "17.6",
       "status": "open",
       "owner": "docs/schur-memory.md"
     },
     "atlas-nested-geometric-average": {
-      "section": "6.1.5",
+      "section": "17.5",
       "status": "measured",
       "owner": "docs/schur-memory.md"
     },
@@ -265,12 +265,12 @@
       "owner": "docs/nsc-atlas-connection-slice.md"
     },
     "atlas-fixed-endpoint-trial": {
-      "section": "13.22",
+      "section": "A.23",
       "status": "measured",
       "owner": "docs/prediction-register.md"
     },
     "conformal-physical-resolution": {
-      "section": "6.1.8",
+      "section": "17.7",
       "status": "measured",
       "owner": "docs/schur-memory.md"
     },
@@ -285,7 +285,7 @@
       "owner": "docs/nsc-infinite-inheritance.md"
     },
     "atlas-compositional-gravity": {
-      "section": "6.1.21",
+      "section": "17.12",
       "status": "derived",
       "owner": "docs/schur-memory.md"
     },
@@ -330,199 +330,204 @@
       "owner": "docs/nsc-atlas-occupied-wall.md"
     },
     "charged-vacuum-inheritance": {
-      "section": "10.14",
+      "section": "13.1",
       "status": "derived",
       "owner": "docs/nsc-atlas-flux-transition.md"
     },
     "charged-shared-parent": {
-      "section": "10.15",
+      "section": "13.2",
       "status": "measured",
       "owner": "docs/nsc-atlas-flux-transition.md"
     },
     "scalar-gravity-preparation": {
-      "section": "10.16",
+      "section": "13.3",
       "status": "measured",
       "owner": "docs/nsc-atlas-scalar-preparation.md"
     },
     "scalar-preparation-schur": {
-      "section": "10.17",
+      "section": "13.4",
       "status": "derived",
       "owner": "docs/nsc-atlas-scalar-preparation.md"
     },
     "prepared-parent-transport": {
-      "section": "10.18",
+      "section": "13.5",
       "status": "measured",
       "owner": "docs/nsc-atlas-parent-transport.md"
     },
     "finite-parent-scalar-source": {
-      "section": "10.19",
+      "section": "13.6",
       "status": "measured",
       "owner": "docs/nsc-atlas-parent-source.md"
     },
     "parent-inward-transfer-limit": {
-      "section": "10.20",
+      "section": "13.7",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-source.md"
     },
     "geometric-wall-observer": {
-      "section": "10.21",
+      "section": "13.8",
       "status": "derived",
       "owner": "docs/nsc-atlas-geometric-observer.md"
     },
     "one-wall-inheritance-ambiguity": {
-      "section": "10.22",
+      "section": "13.9",
       "status": "derived",
       "owner": "docs/nsc-atlas-geometric-observer.md"
     },
     "shared-scalar-initial-atlas": {
-      "section": "10.23",
+      "section": "13.10",
       "status": "derived",
       "owner": "docs/nsc-atlas-shared-scalar-slice.md"
     },
     "protected-parent-cosmology": {
-      "section": "10.24",
+      "section": "13.11",
       "status": "derived",
       "owner": "docs/nsc-atlas-shared-scalar-slice.md"
     },
     "inherited-parent-structure": {
-      "section": "10.25",
+      "section": "13.12",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-perturbations.md"
     },
     "inherited-structure-scale": {
-      "section": "10.26",
+      "section": "13.13",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-perturbations.md"
     },
     "finite-parent-state-observability": {
-      "section": "10.27",
+      "section": "13.14",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-clocks.md"
     },
     "three-clock-parent-relation": {
-      "section": "10.28",
+      "section": "15.1",
       "status": "derived",
       "owner": "docs/nsc-atlas-parent-clocks.md"
     },
     "scalar-core-profile-selection": {
-      "section": "10.29",
+      "section": "14.1",
       "status": "measured",
       "owner": "docs/nsc-atlas-scalar-core.md"
     },
     "scalar-core-atlas-admission": {
-      "section": "10.30",
+      "section": "14.2",
       "status": "measured",
       "owner": "docs/nsc-atlas-scalar-core.md"
     },
     "compensated-core-reservoir": {
-      "section": "10.31",
+      "section": "14.3",
       "status": "measured",
       "owner": "docs/nsc-atlas-core-reservoir.md"
     },
     "compensated-parent-domain": {
-      "section": "10.32",
+      "section": "14.4",
       "status": "derived",
       "owner": "docs/nsc-atlas-core-reservoir.md"
     },
     "coupled-core-parent-evolution": {
-      "section": "10.33",
+      "section": "14.5",
       "status": "measured",
       "owner": "docs/nsc-atlas-core-evolution.md"
     },
     "inherited-diffuse-concentration": {
-      "section": "10.34",
+      "section": "14.6",
       "status": "measured",
       "owner": "docs/nsc-atlas-core-evolution.md"
     },
     "formed-core-clock": {
-      "section": "10.35",
+      "section": "15.2",
       "status": "measured",
       "owner": "docs/nsc-atlas-core-evolution.md"
     },
     "evolved-core-null-focusing": {
-      "section": "10.36",
+      "section": "15.3",
       "status": "derived",
       "owner": "docs/nsc-atlas-core-optics.md"
     },
     "evolved-core-lens-map": {
-      "section": "10.37",
+      "section": "15.4",
       "status": "measured",
       "owner": "docs/nsc-atlas-core-optics.md"
     },
     "atlas-compensation-response": {
-      "section": "10.47",
+      "section": "14.14",
       "status": "derived",
       "owner": "docs/nsc-atlas-compensation-response.md"
     },
     "atlas-formation-window": {
-      "section": "10.49",
+      "section": "14.16",
       "status": "derived",
       "owner": "docs/nsc-atlas-formation-window.md"
     },
     "atlas-seed-collapse": {
-      "section": "10.51",
+      "section": "14.18",
       "status": "measured",
       "owner": "docs/nsc-atlas-seed-collapse.md"
     },
     "atlas-formed-observer": {
-      "section": "10.53",
+      "section": "15.7",
       "status": "measured",
       "owner": "docs/nsc-atlas-formed-observer.md"
     },
     "atlas-dynamics-lensing": {
-      "section": "10.55",
+      "section": "15.9",
       "status": "measured",
       "owner": "docs/nsc-atlas-dynamics-lensing.md"
     },
     "atlas-flow-boundary-dictionary": {
-      "section": "10.57",
+      "section": "16.1",
       "status": "external_reference",
       "owner": "docs/nsc-atlas-flow-dictionary.md"
     },
     "atlas-gravitational-background": {
-      "section": "10.58",
+      "section": "16.2",
       "status": "derived",
       "owner": "docs/nsc-atlas-gravitational-response.md"
     },
     "atlas-gravitational-composition": {
-      "section": "10.59",
+      "section": "16.3",
       "status": "derived",
       "owner": "docs/nsc-atlas-gravitational-response.md"
     },
     "atlas-gravitational-contrast": {
-      "section": "10.60",
+      "section": "16.4",
       "status": "measured",
       "owner": "docs/nsc-atlas-gravitational-response.md"
     },
     "atlas-openai-navier-stokes-source": {
-      "section": "10.61",
+      "section": "16.5",
       "status": "external_reference",
       "owner": "docs/nsc-atlas-vortex-transfer.md"
     },
     "atlas-vortex-initial-transfer": {
-      "section": "10.62",
+      "section": "16.6",
       "status": "derived",
       "owner": "docs/nsc-atlas-vortex-transfer.md"
     },
     "atlas-vortex-resolution-budget": {
-      "section": "10.63",
+      "section": "16.7",
       "status": "measured",
       "owner": "docs/nsc-atlas-vortex-transfer.md"
     },
     "atlas-geometric-cubic-vertex": {
-      "section": "10.64",
+      "section": "16.8",
       "status": "derived",
       "owner": "docs/nsc-atlas-cosmohedron-interaction.md"
     },
     "atlas-physical-cosmohedron-exchange": {
-      "section": "10.65",
+      "section": "16.9",
       "status": "derived",
       "owner": "docs/nsc-atlas-cosmohedron-interaction.md"
     },
     "atlas-cosmohedron-interior-contrast": {
-      "section": "10.66",
+      "section": "16.10",
       "status": "measured",
       "owner": "docs/nsc-atlas-cosmohedron-interaction.md"
+    },
+    "atlas-spherical-inheritance-hypothesis": {
+      "section": "2",
+      "status": "proposal",
+      "owner": "docs/nsc-cosmological-atlas.md"
     }
   },
   "findings": [
@@ -645,14 +650,14 @@
       "status": "measured",
       "note": "docs/nsc-atlas-field-transfer.md",
       "record": "results/development/nsc-cosmological-atlas-v6/field-transfer.json",
-      "paper_section": "13"
+      "paper_section": "A.1"
     },
     {
       "id": "finite-transfer-memory",
       "status": "measured",
       "note": "paper/finite-regeneration/main.tex",
       "record": "paper/finite-regeneration/evidence/snapshot.json",
-      "paper_section": "14"
+      "paper_section": "A.24"
     },
     {
       "id": "atlas-field-preparation",
@@ -660,7 +665,7 @@
       "summary": "The v7 retained IV preparation defines a unique conditional transfer operator. Its v8 evaluation is recorded separately; remote generation remains open.",
       "note": "docs/nsc-atlas-field-preparation.md",
       "record": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
-      "paper_section": "13.1"
+      "paper_section": "A.2"
     },
     {
       "id": "atlas-prepared-response",
@@ -668,7 +673,7 @@
       "summary": "Fixed finite IV characteristic data produce a central pulse and positive post-input tail. The sign has a conditional analytic bound; numerical magnitudes have spatial, geometry and independent integral controls. Later persistence and remote preparation remain open.",
       "note": "docs/nsc-atlas-prepared-response.md",
       "record": "results/development/nsc-cosmological-atlas-v8/prepared-response.json",
-      "paper_section": "13.2"
+      "paper_section": "A.3"
     },
     {
       "id": "atlas-observer-inverse",
@@ -676,7 +681,7 @@
       "summary": "Complete compatible signed central traces determine a unique preparation in the fixed finite model. Positive compact sources impose additional range restrictions; no second-geometry equivalence or numerical inverse is claimed.",
       "note": "docs/nsc-atlas-observer-inference.md",
       "record": "results/development/nsc-atlas-observer-inference-v1/inference.json",
-      "paper_section": "13.3"
+      "paper_section": "A.4"
     },
     {
       "id": "atlas-scalar-wall-consistency",
@@ -684,7 +689,7 @@
       "summary": "The canonically normalized conformal probe adds no singular scalar surface stress or regular tangential flux jump at the fixed pure-tension wall. This quadratic local compatibility check leaves bulk backreaction, normal-force balance, quantitative amplitude validity and stability open.",
       "note": "docs/nsc-atlas-scalar-wall-consistency.md",
       "record": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
-      "paper_section": "13.4"
+      "paper_section": "A.5"
     },
     {
       "id": "atlas-characteristic-initialization",
@@ -692,7 +697,7 @@
       "summary": "The original compact conformal probe forces a quadratic source-leg radius correction at fixed corner geometry and affine normalization. The post-input coefficient and slope are negative, with independent integrated and smooth-exterior frame checks. No mass shift, coupled wall evolution or finite-amplitude error bound is established.",
       "note": "docs/nsc-atlas-characteristic-initialization.md",
       "record": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
-      "paper_section": "13.5"
+      "paper_section": "A.6"
     },
     {
       "id": "atlas-source-mass",
@@ -700,7 +705,7 @@
       "summary": "The fixed compact conformal preparation and declared corner data determine a geometric Misner-Sharp mass response along the same initial null leg. Full frame conversion, mixed-radius transport and improved-stress flux agree; the post-input quadratic coefficient is negative and constant. No vacuum future, asymptotic energy, evolved wall response or finite-amplitude bound is established.",
       "note": "docs/nsc-atlas-source-mass.md",
       "record": "results/development/nsc-atlas-source-mass-v1/mass.json",
-      "paper_section": "13.6"
+      "paper_section": "A.7"
     },
     {
       "id": "atlas-scalar-normal-force",
@@ -708,7 +713,7 @@
       "summary": "The full canonical conformal scalar stress has zero regular normal-stress jump on the fixed transmitting wall at quadratic order. Together with zero additional scalar surface stress and fixed vacuum/tension sources, this requires a vanishing quadratic variation of mean extrinsic-curvature trace. That variation includes bulk metric and wall displacement; no unchanged trajectory, bulk evolution or finite-amplitude validity bound is established.",
       "note": "docs/nsc-atlas-scalar-normal-force.md",
       "record": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
-      "paper_section": "13.7"
+      "paper_section": "A.8"
     },
     {
       "id": "atlas-wall-mass-closure",
@@ -716,7 +721,7 @@
       "summary": "The fixed leading wall field and quiet anchor determine a conditional quadratic geometric mass functional on the smooth exterior side through both null fluxes and the full conformal endpoint correction. Original-frame improved-stress transport agrees independently. No numerical mass curve, late mass sign or plateau, coupled cap/wall solution, corrected observer response or finite-amplitude bound is established.",
       "note": "docs/nsc-atlas-wall-mass-closure.md",
       "record": "results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json",
-      "paper_section": "13.8"
+      "paper_section": "A.9"
     },
     {
       "id": "atlas-cap-wall-response",
@@ -724,7 +729,7 @@
       "summary": "Subtracting the fixed cap vacuum at the actual radius gives a conditional cap mass functional. Together with the exterior functional and the shared quiet event, it determines a regular quadratic wall displacement equation; the angular, temporal and normal junction conditions agree with two-sided mass transport. No numerical mass or displacement curve, smooth sourced bulk metric, corrected observer response or finite-amplitude bound is established.",
       "note": "docs/nsc-atlas-cap-wall-response.md",
       "record": "results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json",
-      "paper_section": "13.9"
+      "paper_section": "A.10"
     },
     {
       "id": "atlas-bulk-response",
@@ -732,7 +737,7 @@
       "summary": "The original prepared scalar drives linear radius and lapse evolution on the genuine initial exterior rectangle. Geometric mass is compared with both independent scalar-flux paths and the integrated null constraints, with separate numerical refinements. The solved transverse leg supports later continuation; the moving-wall strip, cap metric, corrected observer response and finite-amplitude remainder remain open.",
       "note": "docs/nsc-atlas-bulk-response.md",
       "record": "results/development/nsc-atlas-bulk-response-v1/metric/response.json",
-      "paper_section": "13.10"
+      "paper_section": "A.11"
     },
     {
       "id": "atlas-wall-evolution",
@@ -740,7 +745,7 @@
       "summary": "The original leading field determines radial exterior mass and lapse on the retained wedge, independently compared with the timelike wall mass. Both mass functionals produce a computed quadratic wall displacement and exterior null-clock correction, with seven separately varied numerical comparisons. The cap metric, central observer correction, next scalar waveform and finite-amplitude remainder remain open.",
       "note": "docs/nsc-atlas-wall-evolution.md",
       "record": "results/development/nsc-atlas-wall-evolution-v1/field/response.json",
-      "paper_section": "13.11"
+      "paper_section": "A.12"
     },
     {
       "id": "atlas-cap-response",
@@ -748,7 +753,7 @@
       "summary": "The same prepared scalar supplies a regular-centre cap metric and Jordan central proper clock. Independent radial and timelike cap masses agree under separate numerical controls. Wall normalization and inward null integration yield formal central arrival coefficients at fixed wall proper time and fixed exterior label. The higher-order scalar amplitude and finite-amplitude remainder remain open.",
       "note": "docs/nsc-atlas-cap-response.md",
       "record": "results/development/nsc-atlas-cap-response-v1/field/response.json",
-      "paper_section": "13.12"
+      "paper_section": "A.13"
     },
     {
       "id": "atlas-scalar-boundary",
@@ -756,7 +761,7 @@
       "summary": "The computed cap metric produces a determined nonzero outgoing scalar correction on the original no-return window. Weighted transmission and the moving-wall pullback give its exterior areal derivative at nine cuts, with separate field, radial and ray refinements and independent coordinate integration. No boundary interpolant, propagated waveform or finite-amplitude validity range is claimed.",
       "note": "docs/nsc-atlas-scalar-metric-response.md",
       "record": "results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json",
-      "paper_section": "13.13"
+      "paper_section": "A.14"
     },
     {
       "id": "atlas-scalar-evolution",
@@ -764,7 +769,7 @@
       "summary": "A clock-resolved outgoing boundary and saved exterior forcing determine a formal cubic scalar coefficient on the retained wedge. Four evolutions separately compare forcing-cache time resolution, correction-grid resolution and ODE tolerance, preserving the original reduced-field preparation. The sampled wall response is computed; central reconstruction, uniform error bounds and finite-amplitude validity remain separate questions.",
       "note": "docs/nsc-atlas-scalar-evolution.md",
       "record": "results/development/nsc-atlas-scalar-evolution-v1/evolution.json",
-      "paper_section": "13.14"
+      "paper_section": "A.15"
     },
     {
       "id": "atlas-central-scalar",
@@ -772,7 +777,7 @@
       "summary": "The exterior correction, observer-clock pullback and full reflected cap forcing determine the formal cubic central Jordan scalar coefficient at five interior arrival times. Separate incoming radial and ray 16/32 comparisons and propagated exterior sensitivities retain their finite sampled scope. The exact nonlinear source, bulk and wall laws identify the remaining finite-amplitude existence and remainder problem.",
       "note": "docs/nsc-atlas-central-scalar-response.md",
       "record": "results/development/nsc-atlas-central-ray-v1/ray.json",
-      "paper_section": "13.15"
+      "paper_section": "A.16"
     },
     {
       "id": "atlas-nonlinear-background",
@@ -780,7 +785,7 @@
       "summary": "Six nonlinear cap, wall and exterior evolutions complete the original pre-arrival window at zero and one source-bound finite amplitude. A characteristic background reduces leading cap transport error; separate spatial and temporal comparisons resolve integrated geometry and clock responses within those tests. Scalar time sensitivity and independent exterior constraint and wall-slope defects remain unresolved. No converged spacetime, central-arrival waveform or finite-amplitude error enclosure is claimed.",
       "note": "docs/nsc-atlas-finite-amplitude.md",
       "record": "results/development/nsc-atlas-background-evolution-v1/background.json",
-      "paper_section": "13.16"
+      "paper_section": "A.17"
     },
     {
       "id": "atlas-ssprk3-refinement",
@@ -788,7 +793,7 @@
       "summary": "With the same source, computational profile and spatial operators, SSPRK3 histories at 128, 256 and 512 steps reduce the maximum paired scalar time difference to 1.67616 percent of the fine peak. An exact local cubic-kink identity exposes phase-dependent chain quadrature. The measured difference ratio establishes neither convergence order nor a temporal error enclosure; finite spatial constraints and the computational support defect remain open.",
       "note": "docs/nsc-atlas-finite-amplitude.md",
       "record": "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json",
-      "paper_section": "13.17"
+      "paper_section": "A.18"
     },
     {
       "id": "atlas-operator-comparison",
@@ -796,7 +801,7 @@
       "summary": "At fixed 64-cell/512-step resolution and unchanged physical and computational inputs, one quadratic exterior departure derivative supplies both radial first jets and moving-grid transport. Average constraint residuals and final wall kinematic mismatches decrease; the maximum incoming constraint and independent native wall-curvature estimates increase. The paired wall-scalar method change is 0.524 percent of its new peak. This mixed numerical sensitivity does not establish local accuracy, a junction failure, a converged spacetime or a finite-amplitude error enclosure.",
       "note": "docs/nsc-atlas-finite-amplitude.md",
       "record": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
-      "paper_section": "13.18"
+      "paper_section": "A.19"
     },
     {
       "id": "atlas-finite-onset-existence",
@@ -804,7 +809,7 @@
       "summary": "The unchanged C3 source and exact quiet anchor define a compatible nonlinear cap, material wall and exterior on the original source onset cell, uniformly over the admitted nonzero coupling interval. Primitive-preserving local construction, constraint propagation, uniform derivative and chart bounds, and strict first-exit estimates establish regional existence with the ten certified departures. The core remains quiet. This does not certify older numerical trajectories, central arrival, a perturbative remainder or observational agreement.",
       "note": "docs/nsc-atlas-finite-amplitude.md",
       "record": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
-      "paper_section": "13.19"
+      "paper_section": "A.20"
     },
     {
       "id": "prepared-parent-transport",
@@ -812,7 +817,7 @@
       "summary": "On the solved scalar/gravity cap and membrane, specified radial parent test bodies have a central-access threshold, reception time and local energy ratio. Independent embedding, trajectory and tolerance checks retain the test-body and vacuum-comparison domain; source abundance and coupled field transmission remain open.",
       "note": "docs/nsc-atlas-parent-transport.md",
       "record": "results/summaries/nsc-atlas-parent-transport-v1.json",
-      "paper_section": "10.18"
+      "paper_section": "13.5"
     },
     {
       "id": "finite-parent-scalar-source",
@@ -820,7 +825,7 @@
       "summary": "Finite parent scalar Cauchy data solve the conformal Hamiltonian constraint with the material-wall jump and a derived scalar second-normal correction. Proper energy, integrated masses and two-sided initial response are checked. A frozen layer fails scalar compatibility despite passing gravity. Finite-time evolution, higher corner compatibility and child matter deposition remain open.",
       "note": "docs/nsc-atlas-parent-source.md",
       "record": "results/summaries/nsc-atlas-parent-source-v1.json",
-      "paper_section": "10.19"
+      "paper_section": "13.6"
     },
     {
       "id": "parent-inward-transfer-limit",
@@ -828,7 +833,7 @@
       "summary": "A uniform excited parent admits exact round constrained caps with the child initially at its scalar minimum. Conditional on a bounded-geometry causal weak development, the charge/scalar force jump fixes nonzero leading inward flux, balanced parent/child energy and the same leading wall-pressure decrease. Full coupled existence and finite-time curved error remain open; planar massive results are separate controls.",
       "note": "docs/nsc-atlas-parent-source.md",
       "record": "results/summaries/nsc-atlas-parent-source-v1.json",
-      "paper_section": "10.20"
+      "paper_section": "13.7"
     },
     {
       "id": "geometric-wall-observer",
@@ -836,7 +841,7 @@
       "summary": "Exact necessary one-sided scalar, flux, tidal and mass/work identities for the charged canonical scalar wall. The existing coupled continuation supplies independent field, Ricci and work checks; synthetic calibration is separate. These are not a full geometrization or bulk existence theorem.",
       "note": "docs/nsc-atlas-geometric-observer.md",
       "record": "results/summaries/nsc-atlas-geometric-observer-v1.json",
-      "paper_section": "10.21"
+      "paper_section": "13.8"
     },
     {
       "id": "one-wall-inheritance-ambiguity",
@@ -844,7 +849,7 @@
       "summary": "Two fixed coupling choices have identical two-sector reduced classical dynamics after a field translation but different next-sector vacuum values. An additional same-law vacuum spacing identifies mixing and charge magnitude under the declared assumptions. No third-region geometry or empirical identification is claimed.",
       "note": "docs/nsc-atlas-geometric-observer.md",
       "record": "results/summaries/nsc-atlas-geometric-observer-v1.json",
-      "paper_section": "10.22"
+      "paper_section": "13.9"
     },
     {
       "id": "shared-scalar-initial-atlas",
@@ -852,7 +857,7 @@
       "summary": "Compact three-region same-action scalar/membrane initial constraints with one shared middle mass, full instantaneous Israel jets and regular poles. The third-region density is below every canonical state of the locally equivalent alternative law. Complete weak wall evolution is not inferred.",
       "note": "docs/nsc-atlas-shared-scalar-slice.md",
       "record": "results/summaries/nsc-atlas-shared-scalar-slice-v1.json",
-      "paper_section": "10.23"
+      "paper_section": "13.10"
     },
     {
       "id": "protected-parent-cosmology",
@@ -860,7 +865,7 @@
       "summary": "A sufficient future conformal bound protects at least90.7036 percent of initial parent volume. The actual smooth parent domain evolves by the same scalar/closed-FLRW equations, checked in two clocks. Dimensionless vacuum and dilution are conditional on supplied couplings and initial geometry, not observed abundances or clustering.",
       "note": "docs/nsc-atlas-shared-scalar-slice.md",
       "record": "results/summaries/nsc-atlas-shared-scalar-slice-v1.json",
-      "paper_section": "10.24"
+      "paper_section": "13.11"
     },
     {
       "id": "inherited-parent-structure",
@@ -868,7 +873,7 @@
       "summary": "A compact parent-supported perturbation satisfies the linear initial Einstein/scalar constraints and preserves both membrane joins. A regular constraint-propagating system gives finite gravitational density growth in the protected domain; full nonlinear and interacting-wall evolution are not inferred.",
       "note": "docs/nsc-atlas-parent-perturbations.md",
       "record": "results/summaries/nsc-atlas-parent-perturbations-v1.json",
-      "paper_section": "10.25"
+      "paper_section": "13.12"
     },
     {
       "id": "inherited-structure-scale",
@@ -876,7 +881,7 @@
       "summary": "Same-source mode transfer resolves initial density and scalar-phase columns. The inherited excitation/vacuum ratio gives a conditional averaged Jeans-scale requirement, while the actual evolution is curved and unaveraged. No primordial covariance, SI scale, observed spectrum or unique nesting signature is selected.",
       "note": "docs/nsc-atlas-parent-perturbations.md",
       "record": "results/summaries/nsc-atlas-parent-perturbations-v1.json",
-      "paper_section": "10.26"
+      "paper_section": "13.13"
     },
     {
       "id": "finite-parent-state-observability",
@@ -884,7 +889,7 @@
       "summary": "The regular finite linear parent flow is invertible and maps the constraint space bijectively; it cannot select a unique phase or covariance from unrestricted initial states. This does not exclude extra boundary, formation or open-system state selection.",
       "note": "docs/nsc-atlas-parent-clocks.md",
       "record": "results/summaries/nsc-atlas-parent-clocks-v1.json",
-      "paper_section": "10.27"
+      "paper_section": "13.14"
     },
     {
       "id": "three-clock-parent-relation",
@@ -892,7 +897,7 @@
       "summary": "Three operational free-fall clock responses in the fixed compact-profile family yield a null relation eliminating two state amplitudes after two calibrations. Proper distances, receiver age, source motion and photon transport are retained and independently checked by finite metric variation. NSC-P003 is conditional and synthetically checked, not empirically validated.",
       "note": "docs/nsc-atlas-parent-clocks.md",
       "record": "results/summaries/nsc-atlas-parent-clocks-v1.json",
-      "paper_section": "10.28"
+      "paper_section": "15.1"
     },
     {
       "id": "scalar-core-profile-selection",
@@ -900,7 +905,7 @@
       "summary": "An exact frequency-family identity preserves initial atlas geometry while changing scalar clocks. An independently solved real-scalar envelope profile and two finite cooling examples select a near-coherent radial core in an explicit local de Sitter approximation. The coupling and initial clouds remain inputs; no universal attractor or full parent formation is claimed.",
       "note": "docs/nsc-atlas-scalar-core.md",
       "record": "results/summaries/nsc-atlas-scalar-core-v1.json",
-      "paper_section": "10.29"
+      "paper_section": "14.1"
     },
     {
       "id": "scalar-core-atlas-admission",
@@ -908,7 +913,7 @@
       "summary": "A coherent representative fixed by the cooled inner mass admits a sourced compact initial atlas with both wall conditions. Relative phase reverses the inherited scalar cross term and changes geometric mass despite equal isolated quadratic core energy. These are initial constraints, not one complete nonlinear formation history.",
       "note": "docs/nsc-atlas-scalar-core.md",
       "record": "results/summaries/nsc-atlas-scalar-core-v1.json",
-      "paper_section": "10.30"
+      "paper_section": "14.2"
     },
     {
       "id": "compensated-core-reservoir",
@@ -916,7 +921,7 @@
       "summary": "A supplied coherent scalar core, solved ambient depletion and outward-current pulse satisfy nonlinear Einstein constraints with zero exterior geometric mass offset and unchanged initial wall data. Independent proper-distance constraints and finite controls verify the preparation, not a formation history.",
       "note": "docs/nsc-atlas-core-reservoir.md",
       "record": "results/summaries/nsc-atlas-core-reservoir-v1.json",
-      "paper_section": "10.31"
+      "paper_section": "14.3"
     },
     {
       "id": "compensated-parent-domain",
@@ -924,7 +929,7 @@
       "summary": "Exact exterior initial matching supplies a surrounding homogeneous domain protected from both core and walls by the reference conformal bound. At least86.6472 percent of actual initial parent volume retains the inherited cosmology. Covariant mass transport includes radiation and pressure work; no full wall evolution or observed vacuum selection is inferred.",
       "note": "docs/nsc-atlas-core-reservoir.md",
       "record": "results/summaries/nsc-atlas-core-reservoir-v1.json",
-      "paper_section": "10.32"
+      "paper_section": "14.4"
     },
     {
       "id": "coupled-core-parent-evolution",
@@ -932,7 +937,7 @@
       "summary": "Finite constrained Einstein-Klein-Gordon evolution of the compensated source on a parent-expansion slicing, with mass-flux, homogeneous, radial and time refinement checks. The moving boundary stays in the protected parent domain. Complete membrane future remains open.",
       "note": "docs/nsc-atlas-core-evolution.md",
       "record": "results/summaries/nsc-atlas-core-evolution-v1.json",
-      "paper_section": "10.33"
+      "paper_section": "14.5"
     },
     {
       "id": "inherited-diffuse-concentration",
@@ -940,7 +945,7 @@
       "summary": "A supplied diffuse same-action state with matched total geometric core mass develops nonlinear concentration and breathing in a finite evolution. A fixed-geometry field control and refinement test the source of the concentration. No universal or asymptotic formation theorem is asserted.",
       "note": "docs/nsc-atlas-core-evolution.md",
       "record": "results/summaries/nsc-atlas-core-evolution-v1.json",
-      "paper_section": "10.34"
+      "paper_section": "14.6"
     },
     {
       "id": "formed-core-clock",
@@ -948,7 +953,7 @@
       "summary": "A central proper-time emission and held-radius receiver define a conditional frequency departure and arrival delay on the evolved geometry. Independent canonical photons and homogeneous null paths check the result. The physical SI scale and observational identification remain open.",
       "note": "docs/nsc-atlas-core-evolution.md",
       "record": "results/summaries/nsc-atlas-core-evolution-v1.json",
-      "paper_section": "10.35"
+      "paper_section": "15.2"
     },
     {
       "id": "evolved-core-null-focusing",
@@ -956,7 +961,7 @@
       "summary": "Canonical null contraction and spherical Weyl/Ricci tidal eigenvalues connect the frozen evolving scalar source to two Jacobi scales. Direct potential cancellation is local, not invariance of the full optical experiment under Lambda changes.",
       "note": "docs/nsc-atlas-core-optics.md",
       "record": "results/summaries/nsc-atlas-core-optics-v1.json",
-      "paper_section": "10.36"
+      "paper_section": "15.3"
     },
     {
       "id": "evolved-core-lens-map",
@@ -964,7 +969,7 @@
       "summary": "A held-radius finite-screen protocol at two proper emission ages yields nonradial bending, anisotropic focusing and received beam flux from the unchanged scalar evolution. Curvature, angular-ray and homogeneous controls check the result; no fixed-observer catalogue fit or new population is inferred.",
       "note": "docs/nsc-atlas-core-optics.md",
       "record": "results/summaries/nsc-atlas-core-optics-v1.json",
-      "paper_section": "10.37"
+      "paper_section": "15.4"
     }
   ]
 }

@@ -1,5 +1,21 @@
 # Paper guide
 
+Revision 2026-10-27.4 rewrites the atlas as one connected book. Eight
+parts carry spherical geometry and inheritance through physical sources,
+formation, observation, gravitational/quantum exchange and effective gravity.
+The scalar/four-form parent history is the central worked sequence. The
+characteristic-field development moves to Appendix A, with evidence in
+Appendix B. The abstract, opening argument, chapter transitions and closing
+synthesis are rewritten; source attribution remains beside its use.
+
+All 439 original displayed equations, 102 existing claim markers and 38
+figure assets are retained. Sections and figures are renumbered by their
+new reader order, with claim bindings updated. The spherical energy argument
+is stated with its isotropic fixed-volume assumptions; repeated spherical
+inheritance has a separate proposal binding. This is an editorial synthesis,
+not a new vacuum-selection, quantum-foundations or observational result.
+Earlier section numbers refer to the recorded .3 edition and its Git history.
+
 Revision 2026-10-27.3 adds Sections 10.64--10.66 and Figure 34:
 an explicit zero-background surface probe, actual normalized gravitational
 mode, action-derived scalar-current vertices and selected cosmohedron

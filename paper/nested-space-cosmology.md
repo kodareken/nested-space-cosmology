@@ -7,253 +7,236 @@ Working research manuscript, 27 October 2026
 
 ## Abstract
 
-Nested-Space Cosmology develops a mathematical atlas of regions, boundaries,
-fields and the world accessible to an interior observer. It combines
-attributed geometric constructions with explicit sources, evolution and
-observable consequences. Finite and positive infinite operator models
-realize an inherited law and retain unresolved surroundings through
-Schur reduction. Their physical identification is investigated through
-separately specified spacetime and field candidates.
+NSC proposes a geometric account of the world seen from inside a region.
+Its organizing hypothesis is that approximately spherical, sourced regions
+can form a nested hierarchy: a child inherits physical laws and state data,
+while its boundary and unresolved surroundings contribute to what an interior
+observer measures. The atlas develops that hypothesis through explicit
+actions, matched spacetimes, inherited fields and observable relations.
 
-An Einstein/conformal-scalar cap, membrane and exterior provide prepared
-field transfer, perturbative gravitational response and a finite-amplitude
-onset construction. Longer nonlinear closure remains unresolved. A compact
-shared parent demonstrates that changing a global geometric average need
-not change a retained observer's signal. Material sphere states support
-radially stable horizonless attachments and distinct clock responses in
-one dust cosmology. These results have finite domains; their supplied
-vacuum scales are not predictions of the observed cosmological constant.
+The sphere provides the simplest isotropic closed interface. The
+isoperimetric inequality makes its energy advantage precise for positive
+isotropic surface tension at fixed volume. The physical programme then asks
+which gravitational sources preserve, deform or replace that geometry.
+Finite and infinite operator constructions establish normalized inheritance
+and controlled regional reduction. Their spacetime realization is developed
+through sourced interfaces and causal maps, with the contributions of earlier
+authors identified alongside the equations that enter the construction.
 
-A charged four-form extension relates regional vacuum changes through one
-field law and gives a composed finite geometry and a curvature observable.
-Adding a declared scalar response now permits a coupled regular
-scalar--gravity--membrane preparation. Its physical Dirichlet-to-Neumann
-maps reproduce the scalar action by Schur elimination, and its Lorentzian
-continuation gives an expanding boundary and an open child cosmology.
-For the fixed benchmark, the prepared homogeneous excitation is about
-$9.62\times10^{-47}$ in normalized units, far below the earlier assumed
-sudden-transfer value $.09375$. The field excitation is concentrated
-in the spatial layer. Exact matching and continuation identities accompany
-the converged numerical construction; a quantum decay rate is not inferred.
+The central worked family uses Einstein gravity, a scalar coupled to a
+four-form, and charged membranes. One action relates regional vacuum
+energies, supports a constrained three-region initial atlas and determines
+an evolving protected parent. The inherited scalar supplies both a vacuum
+floor and an oscillating excitation. Its perturbations grow; conservation
+ties local concentration to an ambient reservoir; finite nonlinear examples
+form contracting structures. The same evolved sources determine clocks,
+lensing, image delays and freely falling motion. Scale-independent
+relations connect these local measurements to the parent vacuum, and a
+motion-calibrated optical forecast passes its withheld synthetic test.
 
-A distinct uniform scalar preparation now admits three sourced regions
-on one compact constrained slice. Its third region distinguishes laws
-that were equivalent at one interface. A causally protected parent domain
-evolves under the same scalar action, supplying a conditional expansion
-calculation while the complete two-wall future remains open. A compact
-constraint-compatible parent perturbation subsequently develops linear
-gravitational density growth. Its transfer is scale and preparation
-dependent, giving a joint requirement on vacuum and structure scales.
-An operational three-clock relation then eliminates its two free state
-amplitudes within the fixed profile family, with independently checked
-free-fall and light-propagation effects. A separate controlled frequency
-member supplies local gravitational-cooling examples and a mass-selected
-coherent core with a sourced initial-atlas embedding; relative phase
-with the inherited ambient field changes its geometric mass.
-A compensated core, depleted ambient reservoir and outward-current pulse
-then satisfy the nonlinear initial constraints with unchanged enclosing
-wall data. A surrounding causal annulus retains the same evolving parent
-and inherited vacuum, connecting local structure to that cosmology without
-asserting a completed formation history. A subsequent full spherical
-scalar/gravity evolution now develops a compact, breathing concentration
-from a supplied diffuse nonlinear cloud and predicts a received clock
-signal after contraction, with independent flux and photon checks.
-Nonradial rays and curvature-based Jacobi transport then predict light
-bending and anisotropic beam focusing on that same evolution. A fixed-worldline
-inverse then links multiple pulse arrivals, image directions and frequencies;
-their delay shares a dimensionless scale relation with the parent vacuum. An exact supply bound
-then requires core and reservoir radii to scale differently. A solved
-initial-data family admits separated local/cosmological scales and a
-linked vacuum-radius-mass relation. A classical-envelope evolution retains a localized core in the expanding
-parent, with mass-current, expansion-work and short full-equation checks.
-Real-linear transport then bounds a declared radial/quadrupole family while
-leaving universal stability open. The same constrained core and reservoir
-now give a spatial compensation kernel, a uniform initial envelope-error
-bound and a mass--vacuum--turnover relation. Reusing the evolving source
-shows how that relation changes with age; a population and light-cone
-interpretation remain to be constructed. A finite-future growth theorem
-then excludes small zero-current formation seeds at the retained late
-epoch, while a compact disturbance on an explicitly earlier parent
-continuation identifies a nonlinear formation window without installing
-a stationary core.
-Its finite-amplitude continuation now distinguishes an expanding high-contrast
-5% seed from a separately supplied 10% seed that turns around and forms a
-regular concentration with a first rebound. The initial constraint,
-conservation laws and numerical controls accompany this finite envelope
-result; its early parent and seed statistics remain supplied.
-The forming field supplies a joint clock/lensing map in an explicit weak
-metric. A prospectively frozen calibration from freely falling motion then
-predicts a withheld moving-observer image. Endpoint identities,
-Doppler/aberration and source controls accompany these conditional results.
+Further atlas branches connect stable material interfaces to gravitational
+scattering, unresolved fluid motion to resolved momentum flux, and a
+geometry-derived quantum interaction to the cosmohedron energy kernel.
+Effective-gravity calculations determine when an eliminated or averaged
+source has vacuum form and when it does not. The quiet-cap distance law is
+tested against 596 Pantheon+ light curves and disagrees with their
+brightness-independent contrast by $-0.1046\pm0.0144$ magnitudes.
 
-A separate material-interface candidate now joins two static levels under
-Einstein gravity, four-form vacuum states and canonical surface scalars.
-Both junctions and radial linear stability hold. Its actual axial gravitational
-boundary action composes by Schur elimination, with a positive-energy stability
-proof in that sector. Replacing its regular child by an ingoing termination
-changes the returned wave energy while leaving the exterior mass and outer
-geometry fixed. Numerical controls and an observer-clock causal delay accompany
-this finite comparison; the rotating cascade and absolute vacuum selection
-remain separate questions.
+The resulting book connects geometry, inherited state, stress, structure and
+interior observation. Its completed results establish specified mathematical
+and physical constructions. Its cosmological completion requires one
+preparation and population history to fix the remaining freedoms and survive
+joint observational tests. The absolute vacuum scale, early thermal history,
+matter asymmetry and a geometry-based derivation of quantum probabilities
+remain explicit parts of that programme.
 
-A cited OpenAI Navier--Stokes result supplies a nonlinear pulse-stress
-mechanism. A separate compact preparation now gives an exact nonzero
-initial resolved circulation from zero-mean fine motion. Its finite
-composition law retains momentum correlations and their energy/viscosity
-budget. This is an initial-transfer result, with a gravitational source
-identification and sustained cascade still to be constructed.
+## I. Spherical geometry and inherited law
 
-The first geometry-derived quantum interaction now joins a finite probe
-sector to that sourced two-wall geometry. An added zero-background
-surface scalar has positive linear modes and a metric/current vertex fixed
-by its action. A normalized gravitational mode supplies a selected tree
-exchange whose energy denominator matches the cosmohedron seed. Changing
-the child radius while retaining the exterior changes this contribution
-substantially. Geometric shape covariance and the quantum-strength flow
-are separately checked; a full constrained quantum four-point function
-is not inferred from this projected contribution.
+Geometry is the organizing object. This part states the spherical hypothesis, proves the declared operator forms of inheritance, and determines what survives when unresolved regions are eliminated. The physical measure and state enter alongside the operator: they fix the energy and pressure that a local response can represent.
 
-Observer tests remain essential. The exact quiet-cap distance law differs
-from a brightness-scale-independent contrast of 596 Pantheon+ light curves
-by $-0.1046\pm0.0144$ magnitudes using their published covariance. That
-retrospective comparison challenges the quiet limit, while the other
-clock and curvature values are conditional calculations. Absolute vacuum
-selection, physical preparation producing substantial matter, general
-stability and a realistic cosmological and thermal history remain open.
-The atlas records both constructive connections and failed identifications
-without combining incompatible actions into one claimed theory.
+### 1. The central geometric proposal and the route through the atlas
 
-## I. The question and the spherical idea
+The central proposal of this book is that the physical world accessible
+inside a region can be the local expression of a larger nested geometry.
+A region contains fields and observers; its surroundings and boundary
+determine admissible states, exchange and gravitational response. What an
+interior observer describes as matter, expansion or a delayed signal must
+therefore be calculated from that connected system.
 
-### 1. A universe viewed from within
+Douglas's organizing intuition is spherical inheritance through resolution.
+A smooth envelope can be selected by a simple balance even when the fields
+it encloses have fine structure. Resolving that structure changes the local
+description; it need not change the law. Repeating the relation suggests an
+atlas of parents, children and descendants rather than a collection of
+unrelated objects. The mathematical question is how to carry geometry,
+physical state and conservation through each transition.
 
-An observer measures clocks, fields, curvature and correlations within a
-limited domain. Such measurements need not uniquely identify the larger
-structure containing that domain. Our question is whether this ambiguity
-can become a constructive research programme: assemble possible surroundings,
-determine which attachments satisfy their equations, and ask what each permits
-an interior observer to experience.
+The intended dark-sector account has two distinguishable channels. Fields
+inherited from a parent can reside and cluster inside the observed region.
+Unresolved surrounding geometry can instead contribute through a boundary
+or effective gravitational response. Both can be electromagnetically unseen
+in a stated model. Their stress, causal access and observational signatures
+decide how they enter the interior description. The phrase "outside or
+inherited" names this programme; the equations identify the actual channel.
 
-The organizing sequence is **borrow established mathematics, connect compatible
-regions, investigate branching and inheritance, calculate local consequences,
-then compare with observations**. A universal action tying together all fields
-and regions remains an ambitious candidate. It is not a prerequisite for
-learning whether a particular boundary can be joined or whether a signal can
-reach a particular observer.
+The book follows one continuous route:
 
-A mature atlas would let a reader follow a possible universe from its
-surroundings, through its boundaries, into an observer's world and onward
-through compatible transitions. It would compare families of histories with
-explicit geometry, dynamics and observables. Completion means dependable
-coverage of declared model families, including exclusions and observational
-degeneracies. Establishing that a family describes our universe is a further
-empirical achievement. The present finite connections are steps toward that
-destination, not a claim to have reached it.
+**Spherical geometry → inherited law and state → physical interfaces →
+vacuum and clustering → clocks, light and gravitational measurements.**
 
-Read this as an illustrated mathematical atlas. A picture introduces a
-geometry; the equations state what it contains and how its regions connect;
-a clock, a ray or a spectrum shows what an observer could distinguish.
-The route through the book is therefore also a route through other authors'
-constructions. Attribution belongs beside the useful equation, with the
-assumptions that allow it to enter the map.
+Parts I and II establish the geometry, inheritance and causal attachments.
+Part III gives the central scalar/four-form source history. Part IV follows
+its energy into concentrations and their surroundings. Part V derives the
+interior observer's measurements. Part VI develops compact-object, fluid
+and quantum connections. Part VII determines what effective gravitational
+sources these operations actually produce. Part VIII brings the results
+together and states the remaining physical closures. The detailed
+characteristic-field development and reproducibility material are retained
+in the appendices.
 
-Several building blocks guide the new comparison in Sections 10.8--10.17:
+An atlas can contain alternative branches within one book. Each branch
+retains its action, state and domain, and a connection between branches is
+made by a matching or reduction equation. The main scalar history and the
+later static material-interface example are therefore presented as distinct
+worked constructions. Their shared geometric questions are visible without
+assuming that their different wall sources already form one cosmic history.
 
-| Construction and contributors | What it contributes to the atlas |
+This synthesis builds with other researchers' mathematics. The table names
+the contributors at the points where their constructions enter; the
+subsequent chapters give the primary sources and the calculated connection.
+
+| Mathematical contribution | Contributors and role in this atlas |
 | --- | --- |
-| Einstein--Straus; matching reviewed by Mars, Mena and Vera | An expanding cosmological parent with exact mass compensation |
-| Shiromizu, Maeda and Sasaki; Maartens and Koyama | Equations linking a surrounding bulk to local gravitational sources |
-| Garriga and Tanaka | An outside-matter effect with distinct lensing and orbital measurements |
-| Mazur and Mottola; Visser and Wiltshire | Material interfaces and stability tools beyond a constant-tension wall |
-| Abrikosov; Macpherson and Campbell; Ogure, Yoshida and Arafune | A finite sphere spectrum and localized-fermion material pressure |
-| Brown and Teitelboim; Bousso and Polchinski; Hirano | A charged boundary that changes vacuum stress through a common field law |
-| Kaloper and Sorbo; Coleman and De Luccia; Dong and Harlow | Scalar response, regular gravitational preparation and an expanding child continuation |
-| Morris and Thorne; Easson and Brandenberger | Established throat and black-hole-interior cosmology constructions |
+| Surface-energy selection | Isoperimetric and Wulff theory; Neumayer supplies the isotropic/anisotropic distinction |
+| Sourced interfaces and energy balance | Israel, Brown--York and Hayward supply matching, boundary stress and mass/work laws |
+| Cosmological attachment | Einstein--Straus, with Mars, Mena and Vera, supplies exact mass compensation in an expanding parent |
+| Surrounding gravitational response | Shiromizu, Maeda and Sasaki; Maartens and Koyama; Garriga and Tanaka supply explicit bulk-to-local examples |
+| Regular material interiors | Mazur and Mottola; Visser and Wiltshire; Jampolski and Rezzolla supply gravastar, stability and nested-interface precedents |
+| Vacuum transitions and scalar response | Brown--Teitelboim, Bousso--Polchinski, Hirano and Kaloper--Sorbo supply charged flux and scalar couplings |
+| Regular preparation and continuation | Coleman--De Luccia and Dong--Harlow supply the geometric preparation framework |
+| Scalar concentration and growth | Seidel--Suen, Moroz--Penrose--Tod, Hwang--Noh and the cited scalar-field literature supply cooling, profiles and perturbation methods |
+| Light and gravitational waves | Frittelli--Newman, Perlick, Seitz--Schneider--Ehlers, Pani and collaborators, and Martel--Poisson supply observer and perturbation machinery |
+| Flow and quantum geometry | Hamilton--Lisle, Visser, Bredberg and collaborators, the cited OpenAI flow result, and Arkani-Hamed--Figueiredo--Vazao supply the separate flow and energy-kernel constructions |
 
-Their primary sources and the actual connections appear with the calculations.
-A shared visual motif is an invitation to check compatibility; a joined model
-requires compatible actions, sources, orientations and states. The intended
-synthesis is a common derivation of expansion, clustering and matter history.
-The density fractions and matter--antimatter asymmetry become outputs only
-when that common history has been specified and calculated.
+The atlas's contribution is the explicit work connecting these ingredients:
+compatible sourced regions, inherited state transport, conserved supply,
+finite evolution and linked observer predictions. A result is stated where
+its derivation closes. A remaining connection is stated as a specific
+mathematical problem, so that later work can extend the same argument.
 
-The first motif contains two spatially separated black holes in a common
-parent, possible unequal children, and one further generation. A separate
-motif lets one hole have multiple offspring. These pictures suggest questions;
-their arrows do not supply an equation of motion, a formation mechanism or
-a communication channel. Figure 1 distinguishes the broad motif from the
-specific attachment whose mathematics has been checked.
+The first motif contains two spatially separated compact regions in a
+common parent, unequal children, and a further generation. Figure 1
+distinguishes that proposal from a particular calculated attachment.
 
 ![Nested regions and the checked geometric connection](figures/geometry-overview.png)
 
-*Figure 1. Possible descent (upper panel) remains hypothetical; the lower
-panel shows the checked cap–wall–bridge body and observer/field reference.
+*Figure 1. Possible descent (upper panel) and the calculated
+cap--wall--bridge connection with its observer/field reference (lower panel).
 Colors distinguish attachment, descent, influence and correlation. Circles
-and spacing do not establish an embedding, relative scales or global
-spherical topology. The [figure record](figures/geometry-overview.json)
-identifies each connection's evidence and status.*
+show the regional hypothesis; their spacing does not specify a global
+embedding or scale. The [figure record](figures/geometry-overview.json)
+identifies the evidence for each connection.*
 
-### 2. What spherical geometry means here
+### 2. Why begin with the sphere? Energy, relaxation and inheritance
 
-There is a useful borrowed energy argument with a precise domain: in Euclidean
-space, a ball minimizes boundary area at fixed enclosed volume. A positive
-constant isotropic surface tension therefore favors a spherical boundary when
-surface energy is the quantity being minimized. Direction-dependent tension
-instead selects a Wulff shape; see [Neumayer, 1503.06705v2, Section 1.1](https://arxiv.org/html/1503.06705v2).
-This motivates testing rotational symmetry. It does not prove a cosmological
-equilibrium, dynamical relaxation or a probability ranking over all geometries.
-Gravity, rotation, matter stresses and the actual boundary law must be specified
-before importing that variational conclusion into a spacetime model.
+The sphere is the starting geometry because isotropic surface energy has
+an exact minimizer. In Euclidean three-space, area $A$ and enclosed volume $V$
+obey the established isoperimetric inequality
+
+$$
+A^3\geq36\pi V^2.
+$$
+
+Equality selects a ball, up to its position and size. For constant positive
+surface tension $\gamma$, the energy $E_{\rm surface}=\gamma A$ is minimized
+by a sphere at fixed $V$. The isotropic case and its anisotropic Wulff
+generalization are stated in [Neumayer, Section 1.1](https://arxiv.org/html/1503.06705v2).
+This is the precise energetic basis for the spherical organizing idea.
+
+A simple relaxation model also displays the direction of change. Let $h$ be
+the sum of the outward principal curvatures, $\bar h$ its surface average,
+and choose normal velocity $v_n=-\mathcal{M}\gamma(h-\bar h)$,
+with positive mobility $\mathcal{M}$.
+The first variations of volume and area give
+
+$$
+\frac{dV}{dt}=0,\qquad
+\frac{dE_{\rm surface}}{dt}
+=-\mathcal{M}\gamma^2\int_{\partial V}(h-\overline{h})^2\,dA\leq0.
+$$
+
+Indeed, the integral of $h-\bar h$ vanishes, and subtracting $\bar h$ in the
+area variation leaves the displayed square. This specifies an admissible
+dissipative law and its energy budget. Volume-preserving mean-curvature
+flow has its own developed theory, beginning with
+[Huisken's 1987 treatment](https://doi.org/10.1515/crll.1987.382.35).
+This illustrative surface law is not substituted for the relativistic
+membrane equations used later in the atlas.
+
+Simplicity here has a mathematical meaning: no angular direction is
+preferred by the surface energy. Finer resolution of a smooth sphere does
+not add a new sustaining force. Direction-dependent tension, rotation,
+gravity and driving contribute additional terms to the energy and dynamics.
+They determine whether a sphere persists, deforms or is replaced by another
+configuration. Entropy production alone fixes neither a universal geometry
+nor a maximum rate of dispersal.
+
+<!-- nsc-claim:atlas-spherical-inheritance-hypothesis -->
+
+**NSC's geometric hypothesis.** Persistent approximately spherical regions
+form the envelopes of a physical hierarchy. Across admissible parent--child
+transitions, a shared law is inherited while scale, state and resolved
+structure change. Repeated spherical inheritance is the proposed
+architecture to develop and test throughout this book.
+
+The energy theorem supplies one reason for that architecture. Its
+application to every universe or an unlimited spacetime hierarchy would
+add a universality claim requiring a physical transition and composition
+law. The finite and infinite operator results below establish their stated
+forms of inheritance; the sourced geometries establish finite physical
+connections. The [atlas owner](../docs/nsc-cosmological-atlas.md) records how
+those constructions develop the hypothesis.
 
 A spherical boundary is a two-dimensional surface with area $4\pi R^2$.
-A spatial interior may be a three-ball; a closed spatial universe may instead
-have three-sphere topology. These are different assertions. Drawing one circle
-inside another establishes none of them.
-
-In a locally spherically symmetric spacetime, a useful form is
+A spatial interior may be a three-ball; a closed spatial universe may
+have three-sphere topology. The local spherical spacetime form is
 
 $$
 ds^2=g_{ab}(x)\,dx^a dx^b+R(x)^2d\Omega^2.
 $$
 
-Here $g_{ab}$ is a Lorentzian metric on the two-dimensional orbit space and
-$R$ is areal radius. We use signature $(-+++)$ for the atlas. Radial
-proper distance, areal radius and a diagram's vertical coordinate need not
-coincide. In particular, a radial profile is not automatically a surface
-that can be embedded in Euclidean three-space.
+Here $g_{ab}$ is the Lorentzian metric on the two-dimensional orbit space and
+$R$ is areal radius. The atlas uses signature $(-+++)$. Proper radial distance,
+areal radius and an embedding diagram are different data. Several compact
+regions in one parent generally require a nonspherical parent even when
+each local interface has a spherical approximation. The next constructions
+specify which geometry is used at each level.
 
-The physical spherical hypothesis is that useful cosmological regions or
-interfaces may admit this structure, exactly or as a controlled approximation.
-It is not a theorem inferred from statistical isotropy of observations.
-Several off-center holes generally break global spherical symmetry.
-We therefore use local spherical charts where justified and an explicitly
-nonspherical parent where required. Deviations from symmetry are a question
-for each model, rather than a reason to discard the organizing idea.
+### 3. The same argument across operator, spacetime and observer descriptions
 
-### 3. One thread through three bodies of work
+The inherited relation, the physical geometry and the interior response
+are three stages of one programme. The first supplies a precise law to
+transport. The second supplies the regions, sources and states on which
+that law acts. The third calculates how an observer distinguishes the
+resulting histories.
 
-The continuing question is: **how do a region's fields, boundary and
-surroundings shape its state, geometry and measurements?**
-
-| Body of work | What it contributes | Connection still missing |
+| Stage | Mathematical owner | Role in the book |
 | --- | --- | --- |
-| [Preserved foundation](archive/foundation-v0.26.0/paper/nested-space-cosmology.md) | Spectral inheritance proposal, boundary operators, source and response constructions | A physical inheritance law and common cosmological source completion |
-| [Finite spherical companion](finite-regeneration/main.tex) | A finite realization of regional transfer, geometric feedback and memory with declared action and state | Identification with an actual assembled parent–child spacetime |
-| [Atlas evidence](../docs/nsc-cosmological-atlas.md) and this living manuscript | Geometric compatibility, a sourced slice, observer access, a calibration response and an evaluated finite exterior preparation | Remote preparation, later evolution, other attachments and observational discrimination |
+| Inherited law and spectral relations | [Preserved foundation](archive/foundation-v0.26.0/paper/nested-space-cosmology.md) | Operator identities, boundary maps and source constructions |
+| Regional transfer and geometric feedback | [Finite spherical companion](finite-regeneration/main.tex) | A specified action/state example of transfer and memory |
+| Sourced spacetime and observation | [Atlas evidence](../docs/nsc-cosmological-atlas.md) and this manuscript | Compatible attachments, physical inheritance, evolution and observer relations |
 
-Their mathematics is complementary. A finite operator's eliminated modes
-are not automatically the exterior spacetime beyond a black hole. The atlas
-must first identify a field equation, state, clock and matching law before
-an operator reduction can acquire that geometric meaning.
+The book connects these stages where an actual field equation, state,
+clock and matching condition identify their mathematical objects.
+Elimination of unresolved modes is used both in the inheritance calculator
+and in physical boundary problems; its physical interpretation follows
+from the operator and state supplied in each case.
 
-The foundation's useful historical calculations remain in their source-bound
-edition and owning notes. This manuscript changes the organizing story:
-geometry and observer access lead; stronger unifying claims follow only when
-their missing connections are supplied. No priority claim is made for junction
-conditions, Schur complements, branching processes or the published wall
-solutions used below.
-
-## II. Regions, inheritance and the meaning of a connection
+Earlier constructions retain their source-bound editions and attribution.
+The present synthesis begins with geometry and works outward to what an
+interior observer can measure. The source of expansion, the supply of
+localized structure and the meaning of a quantum mode are all pursued
+through that same sequence.
 
 ### 4. Four arrows that must not be confused
 
@@ -288,7 +271,7 @@ recorded in the [mathematical library](../docs/arxiv-studies.md).
 
 <!-- nsc-claim:finite-normalized-inheritance -->
 
-Evidence: [exact finite record](../results/development/nsc-nested-qualities-v1.json),
+Derivation and calculation: [exact finite record](../results/development/nsc-nested-qualities-v1.json),
 [frozen snapshot](nested-quality-evidence/snapshot.json), and
 [proof and domain](../docs/nsc-nested-qualities.md).
 
@@ -475,7 +458,7 @@ H=\frac{A(b+q^{-1})}{Lm_0},\quad
 B=-\frac{A}{Lm_0q^{3/2}},\quad\Omega=q^{-2}.
 $$
 
-The positive margin is $A(\sqrt{b}-q^{-1/2})^2/(Lm_0)$, so Section5.1
+The positive margin is $A(\sqrt{b}-q^{-1/2})^2/(Lm_0)$, so Section 5.1
 applies for $bq\ne1$. Its physical static root compliance is
 
 $$
@@ -643,7 +626,7 @@ $$
 The factor $1/\Omega$ is essential. This is borrowed finite linear
 algebra applied to the declared family, not an additional force law.
 To interpret $\Sigma$ as a cosmological exterior response requires a
-physical operator, field state and boundary map. Sections 14–15 give a separate
+physical operator, field state and boundary map. Sections A.24–A.25 give a separate
 finite Hilbert-space realization of this reduction, without identifying its
 complementary modes with a cosmological exterior.
 
@@ -663,1575 +646,9 @@ the reduction; it does not yet provide a measured cosmological value.
 The [Schur-memory owner](../docs/schur-memory.md) keeps this target and
 its retained spectral and geometric dictionary.
 
-### 6.1.1. The current scalar's classical vacuum projection
+## II. Physical regions, interfaces and causal access
 
-<!-- nsc-claim:atlas-classical-vacuum-trace -->
-
-The current cap-wall candidate allows a direct first calculation of this
-target. Its action fixes a real massless conformal scalar and independent
-regional vacuum terms. Contracting the complete improved scalar stress gives
-
-$$
-T^\phi{}^\mu{}_\mu
-=\phi(\Box-\mathcal R_J/6)\phi=0,
-\qquad \mathcal R_J=4\Lambda_0.
-$$
-
-Consequently its additional smooth classical trace projection is
-$\Delta\Lambda_{\mathrm{classical}}L_{\mathrm{ref}}^2=0$, including nonzero
-on-shell pulses. The scalar still carries stress, mass and flux. The cap
-baseline $\Lambda_{0,-}\ell^2=3(H\ell)^2=3$ is a supplied input, while
-$\Lambda_{0,+}=0$ outside. The scalar calculation does not derive that
-baseline. Distributional wall stress and geometric averaging are separate
-operations.
-
-The [exact calculation record](../results/summaries/nsc-atlas-effective-vacuum-v1.json)
-binds the symbolic expressions and their producer. The
-[calculation and frame check](../src/recursive_horizons/nsc_atlas_effective_vacuum.py)
-also recover the same Jordan curvature from the Einstein-frame potential.
-Independent [metric-jet checks](../tests/test_nsc_atlas_effective_vacuum.py)
-evaluate the implemented nonlinear equations at zero and nonzero amplitude.
-The [scientific owner](../docs/schur-memory.md) gives the complete derivation.
-
-### 6.1.2. A conditional quantum contribution and its physical scale
-
-<!-- nsc-claim:atlas-quantum-vacuum-trace -->
-
-As an explicit extension, import one quantized real four-dimensional
-massless conformal scalar with a Hadamard bulk state and locally covariant
-renormalization. This uses quantum field theory; it does not derive quantum
-statistics from the atlas. The local trace coefficient follows from the
-[scalar heat-kernel formula](https://arxiv.org/pdf/hep-th/0306138), equation
-(4.28), and [conformal anomaly](https://arxiv.org/pdf/hep-th/9308075),
-equations (15)-(16). Substituting $E=-\mathcal R/6$ cancels its
-$\mathcal R^2$ term. On either smooth quiet region,
-
-$$
-\langle T^\mu{}_{\mu}\rangle
-=\frac{\hbar}{2880\pi^2}
-(\mathcal R_{\mu\nu\rho\sigma}^2-\mathcal R_{\mu\nu}^2).
-$$
-
-The scheme-dependent $\Box\mathcal R$ term vanishes because the quiet
-scalar curvatures are constant. Finite volume and Newton counterterms
-remain supplied renormalized coefficients. Direct curvature contractions
-give $(\mathrm{Riemann}^2,\mathrm{Ricci}^2)=(24H^4,36H^4)$ in the cap
-and $(48M^2/R^6,0)$ outside.
-
-Set $h=H\ell$, $m=M/\ell$, $r=R/\ell$ and
-$\zeta=\kappa_4\hbar/\ell^2$. With
-$\Delta\Lambda_{\mathrm{tr}}=-\kappa_4\langle T^\mu{}_{\mu}\rangle/4$,
-
-$$
-\Delta\Lambda_{\mathrm{tr},-}\ell^2
-=\frac{\zeta h^4}{960\pi^2},\qquad
-\Delta\Lambda_{\mathrm{tr},+}\ell^2
-=-\frac{\zeta m^2}{240\pi^2r^6}.
-$$
-
-At the supplied $h=1$, $m=2/5$, $r=11/20$, the coefficients of
-$\zeta$ are $0.0001055428996274352$ and $-0.002440241780407079$.
-For the independently declared P001 fiducial $\ell=10000\,\mathrm m$,
-restoring SI units gives $\zeta=8\pi G\hbar/(c^3\ell^2)$ and
-
-| Quiet trace projection | $\Delta\Lambda_{\mathrm{tr}}\ell^2$ | Standard uncertainty from $G$ alone |
-| --- | ---: | ---: |
-| Cap | $6.92929\times10^{-81}$ | $1.5573\times10^{-85}$ |
-| Exterior at the reference wall radius | $-1.60211\times10^{-79}$ | $3.6006\times10^{-84}$ |
-
-These use [CODATA 2022 constants](https://physics.nist.gov/cuu/pdf/wall_2022.pdf).
-The length is a fiducial input; the quoted uncertainty is not a total
-theoretical or observational error band. The exterior term varies with
-radius. A constant cap trace alone does not establish a stress proportional
-to its metric, since the material wall need not preserve state symmetry.
-
-There is a necessary test of whether this term can generate the cap scale
-without supplying a volume term. Put $X=(H\ell)^2$ and
-$\lambda_0=\Lambda_0\ell^2$. The semiclassical constant-curvature trace
-equation requires
-
-$$
-3X=\lambda_0+\frac{\zeta X^2}{960\pi^2}.
-$$
-
-At $\lambda_0=0$ its roots are $X=0$ and $X=2880\pi^2/\zeta$.
-The nonzero root has $H^2\ell_P^2=360\pi$, outside the controlled
-small-curvature semiclassical regime. Thus this one-scalar contribution
-does not generate a nonzero small-curvature de Sitter cap by itself.
-The [same exact record](../results/summaries/nsc-atlas-effective-vacuum-v1.json)
-retains the coefficients, SI inputs and necessary trace condition. No
-cosmological observation selected these values.
-
-### 6.1.3. The quantum interface and the remaining exterior reduction
-
-<!-- nsc-claim:atlas-quantum-interface -->
-
-The wall contributes its own local operator data. The existing scalar
-matching $[\phi]=0$, $[n\phi]=k\phi$ identifies the transmittal coefficient
-$U_\Sigma=k$. In the inward-normal convention of the
-[transmittal heat-kernel theorem](https://arxiv.org/html/hep-th/0101105v1),
-$L^+=-K_+$ and $L^-=K_-$. Their sum is $kI$, so the second surface
-coefficient is proportional to $\operatorname{tr}(kI)/3-k=0$.
-
-Keeping every curvature term in the fourth coefficient gives the local
-surface polynomial
-
-$$
-a_4^\Sigma(1)=\int_\Sigma\sqrt{|\gamma|}\,q_\Sigma\,d^3y,
-\qquad q_\Sigma\ell^3
-=-\frac{b(b^2+3h^2)}{1440\pi^2}
-=-\frac{7}{720\pi^2},\quad b=k\ell=2,
-$$
-
-at $h=1$. This evaluates the imported Riemannian polynomial on the quiet
-wall's Lorentzian contractions. A joint Lorentzian quantum state and its
-interface stress have not been constructed. The
-[Gauss and Euler-boundary checks](../docs/schur-memory.md#quantum-interface-the-actual-transmission-law)
-agree with the [recorded coefficient](../results/summaries/nsc-atlas-effective-vacuum-v1.json).
-It is a surface invariant; obtaining its metric variation requires the
-full off-shell operators and their renormalized coefficients.
-
-The physical Schur connection must use the exterior conformal wave
-operator with this transmission law. For boundary field
-$\varphi=\phi|_\Sigma$, let $\mathcal N_\pm$ map it to the corresponding
-outward normal derivative. The homogeneous matching equation is
-$(\mathcal N_-+\mathcal N_++U_\Sigma)\varphi=0$; incoming initial data
-add a drive. In real time these are causal history operators. Their
-retarded response and the joint state's symmetric two-point function are
-needed for the effective stress. A coefficient multiplying a boundary
-field quadratic form alone does not supply a metric volume term.
-
-### 6.1.4. The exterior scalar response on the quiet wedge
-
-<!-- nsc-claim:atlas-exterior-schur-metric -->
-
-The physical exterior reduction begins with the quiet Schwarzschild wedge
-and the prepared source already fixed by the characteristic problem. The
-outward Robin response on the exterior side of the wall is
-
-$$
-B_+\phi=\mathcal N_+\phi+\frac{K_+}{3}\phi.
-$$
-
-For the original unit-amplitude source, zero bottom data and the prepared
-wall trace, the boundary pairing is
-
-$$
-\frac{1}{\varepsilon^2}\int\phi\,B_+\phi\,d\Sigma
-=0.3703318455512892.
-$$
-
-The response at the wall is therefore nonzero. A compact Weyl variation
-supported in the smooth cap, with the interface, exterior geometry and
-characteristic data held fixed, does not move that boundary integrand. The
-on-shell improved scalar trace remains zero, so this variation adds
-
-$$
-\Delta\Lambda_{\mathrm{Schur,cl,local}}L_{\mathrm{ref}}^2=0.
-$$
-
-The retarded map is causal. It is not in general equal to its adjoint, so
-the single-history pairing is not by itself a variational action for a
-metric stress. The [exterior response record](../results/summaries/nsc-atlas-exterior-schur-metric-v1.json)
-binds the pairing, the zero bulk variation and the quadrature diagnostics.
-The [Schur-memory owner](../docs/schur-memory.md) states the domain: a quiet
-finite wedge, not a whole-geometry reduction, a quantum state, or a
-cosmological value. The supplied cap input $\Lambda_{0,-}\ell^2=3$ is
-unchanged.
-
-### 6.1.5. Parent response, slice fit and a separate contracting geometry
-
-<!-- nsc-claim:atlas-parent-metric-response -->
-
-Eliminating the whole quiet body, as seen from its right Schwarzschild end,
-is a different operation from the cap-centre scalar map. On the static tube
-$R/\ell=4$, with $M/\ell=0.4$, proper boundary time and the outward normal,
-Minkowski subtraction gives, in geometrized units $G=c=1$,
-
-$$
-E=R\left(1-\sqrt{1-\frac{2M}{R}}\right),
-\qquad E/\ell=0.4222912360003365.
-$$
-
-The ADM mass is $M$, not this finite-radius energy. The accompanying surface
-pressure is a stress on the tube. It is not a bulk pressure and not a
-four-dimensional vacuum density. For dilute, slow, conserved bodies whose
-separations are large compared with their tubes, the leading parent action is
-
-$$
-S_{\mathrm{body}}=-\sum_i M_i\int d\tau_i.
-$$
-
-Its homogeneous metric variation has zero bulk pressure and density scaling
-as $a^{-3}$. A
-general on-shell energy $E(V)$ at fixed particle number and entropy obeys
-$\rho=E/V$ and $p=-dE/dV$. Vacuum form would require $E$ proportional to
-$V$ as a consequence of that action. Prescribing a growing population or a
-time-dependent mass by hand is exchange through the tube, not that
-variation. No parent population, source state or controlled interaction
-correction is supplied. The
-[gravitational reduction record](../results/summaries/nsc-atlas-gravitational-reduction-v1.json)
-contains the tube value and the dust-versus-extensive identities.
-
-<!-- nsc-claim:atlas-geometric-slice-average -->
-
-The isolated initial slice from the regular centre through the wall and
-bridge to $R_{\mathrm{cut}}/\ell=4$ can be averaged in the hypersurface-normal
-clock. Use the sign convention
-
-$$
-K_{ij}=-\frac{1}{2}\mathcal L_n h_{ij},\qquad
-\theta=-h^{ij}K_{ij}.
-$$
-
-The scalar fit absorbs the variance $Q$ and the mean three-curvature into
-
-$$
-\kappa_4\rho_g=-(Q+\langle{}^{(3)}R\rangle)/2,\qquad
-\kappa_4 p_g=-Q/2+\langle{}^{(3)}R\rangle/6.
-$$
-
-The trace projection and vacuum-form residual are
-
-$$
-\Lambda_{g,\mathrm{tr}}=\frac{Q-\langle{}^{(3)}R\rangle}{4},
-\qquad\Lambda_{g,\mathrm{tr}}\ell^2=0.030775890732,
-$$
-$$
-(3Q+\langle{}^{(3)}R\rangle)\ell^2=1.80095618027.
-$$
-
-The fit is therefore not vacuum. It is a scalar reduction of one slice, not
-the average of a four-dimensional stress tensor, and the domain is not the
-causal past of the cap centre. A $K=0$ connector added to repeated copies
-increases the vacuum volume and does not remove the defect inside the
-retained bodies. The
-[slice-average record](../results/summaries/nsc-atlas-geometric-average-v1.json)
-keeps the wall distribution, both bridge branches and the normal clock.
-The shared parent geometry and its observer domain remain absent.
-
-<!-- nsc-claim:atlas-nested-geometric-average -->
-
-The two-level initial geometry in Section 10.2 makes this test at an
-actual additional boundary, with the same outer mass and retention sphere.
-Both membranes obey $k\ell=2$; cap and host have the supplied $H\ell=1$.
-Including both wall curvature distributions gives
-
-$$
-\Lambda_{g,\mathrm{tr}}\ell^2=-0.0153506330754,\qquad
-(3Q+\langle{}^{(3)}R\rangle)\ell^2=2.11796240047.
-$$
-
-The geometric density and pressure again fail vacuum form. Gauss 64-minus-32
-differences in these quantities are $-1.28\times10^{-10}$ and
-$-3.91\times10^{-10}$; the integrated Hamiltonian residual is
-$-3.33\times10^{-16}$. These are numerical indicators, not total error
-bounds. Adding the level changes the physical state and its finite
-projection; this comparison is not solely a change of observational
-resolution of one fixed state. The
-[two-level record](../results/summaries/nsc-atlas-nested-slice-v1.json) and
-[average derivation](../docs/schur-memory.md#two-successive-sourced-levels)
-close this finite calculation. An evaluated parent and physical observer
-reduction remain necessary for the local cosmological target.
-
-<!-- nsc-claim:conformal-geometric-average -->
-
-A second, already evolved geometry supplies a different finite average. Its
-metric and action are not those of the cap-wall scalar. In the saved
-conformal gauge
-
-$$
-ds^2=r^2\left\{Q^2[-dT^2+dx^2]+d\Omega^2\right\},
-$$
-
-with $r,Q>0$, zero shift and periodic $S^1\times S^2$ topology. The action
-contains the Einstein term, a Weyl auxiliary and a Dirac source. The named
-clock is the normal worldline at $x=1$, $d\tau=rQ\,dT$. The reference length
-$L_{\mathrm{ref}}=4.80028044552352$ is that observer sphere's areal radius
-at $T=0.05$. Write $\nu=N/N_{\mathrm{observer}}$ and use the weighted
-moments $Q_\nu,\mathcal R_\nu$ defined in the
-[observer-clock derivation](../docs/schur-memory.md#observer-clocks-in-the-geometric-average).
-The clock term is
-
-$$
-P_\nu=\langle(\partial_{\tau_o}\nu)\theta\rangle
-+\langle\nu\,D^2\nu\rangle.
-$$
-
-The geometric trace and vacuum defect at $T=0.3$ are
-
-$$
-\Lambda_{g,\mathrm{tr}}L_{\mathrm{ref}}^2=-0.5725162917234052,
-\qquad
-(3Q_\nu+\mathcal R_\nu+2P_\nu)L_{\mathrm{ref}}^2=2.177444644645245.
-$$
-
-The domain contracts. The largest four-case deviations,
-$4.65\times10^{-9}$ and $1.92\times10^{-8}$, compare stored resolutions.
-They are refinement indicators, not a continuum or total-error bound. The
-metric identity used for $E$ and $S$ reconstructs an Einstein source from
-the geometry. It does not independently verify the matter constraint: the
-primary Hamiltonian defect remains about $9\times10^{-6}$ in its source
-normalization. No new evolution was run. The negative trace is not a
-positive cosmological vacuum response, and the periodic shell is not the
-parent of the quiet cap. The
-[conformal average record](../results/summaries/nsc-conformal-geometric-average-v1.json)
-binds the clock, the reference length and these two numbers.
-
-### 6.1.6. Two observer distances, on two metrics
-
-<!-- nsc-claim:atlas-supernova-distance -->
-
-Scalar volume averages do not by themselves give an observer a distance.
-On the exact zero-source quiet cap the luminosity shape is
-
-$$
-\frac{D_L}{c/H}=z(1+z).
-$$
-
-The comparison retains 596 released Pantheon+ light curves of 545 distinct
-supernovae, excluding calibrators and retaining correlated repeat light
-curves. The low band is $0.025\leq z_{\mathrm{HD}}<0.075$ (335 curves);
-the high band is $0.15\leq z_{\mathrm{HD}}\leq0.25$ (261 curves). Both
-lie inside the declared quiet-cap causal domain. For each curve define
-
-$$
-y_i=m_{b,i}^{\mathrm{corr}}
--5\log_{10}[z_{\mathrm{HD},i}(1+z_{\mathrm{HEL},i})].
-$$
-
-Generalized least squares fits the two band intercepts jointly using the
-selected full statistical and systematic covariance. Their high-minus-low
-contrast cancels a common brightness and Hubble scale. The quiet prediction
-is zero; the measured contrast is
-
-$$
-\Delta=-0.1046180474751224\pm0.014373986469318333
-\ \mathrm{mag}.
-$$
-
-The estimator was frozen before this evaluation. The catalogue itself was
-already public, so the test is a retrospective comparison of one quiet
-state, not a blind test and not a falsification of a completed
-Nested-Space cosmology. No $\Lambda$CDM parameter was fitted, and no
-cosmological constant was supplied to improve the residual. The uncertainty
-is conditional on the released covariance and standardization, including
-its peculiar-velocity treatment. The
-[distance-contrast record](../results/summaries/nsc-atlas-distance-contrast-v1.json)
-stores the estimator specification, selected-row identity, zero prediction
-and this residual.
-
-<!-- nsc-claim:conformal-causal-distances -->
-
-The separate evolving metric also has an explicit null cone. Receiver,
-emitters and ideal reflectors sit on fixed-coordinate normal worldlines.
-Those worldlines may be accelerated. They are not introduced as
-cosmological comoving matter, and a slope of redshift against lookback is
-not a measurement of $H_0$. For transparent, photon-conserving geometric
-optics, with $N=rQ$, reception $(T_o,x_o)=(0.3,1)$ and past rays
-$T_e=T_o-\chi$, $x_e=x_o+\eta\chi$,
-
-$$
-1+z=\frac{N_o}{N_e},\qquad
-D_A=\frac{r_or_e}{N_o}\int_0^\chi Q(T_o-s,x_o+\eta s)^2\,ds,
-$$
-$$
-D_L=(1+z)^2D_A,\qquad
-D_{\mathrm{radar}}=\frac{1}{2}\int_{T_o-2\chi}^{T_o}N(T,x_o)\,dT.
-$$
-
-The lapse in these formulae is the full product $rQ$. The three
-predeclared lookbacks are $\chi=0.025$, $0.075$ and $0.125$, in both
-directions. The longest radar trip begins at $T=0.05$, inside the saved
-time interval. At $\chi=0.125$ both directions have the same radar distance
-$D_{\mathrm{radar}}/L_{\mathrm{ref}}=0.031382863175331$.
-
-| Side at $\chi=0.125$ | Redshift | $D_L/D_{\mathrm{radar}}$ |
-| --- | ---: | ---: |
-| Smaller $x$ | $0.0016677447278268254$ | $1.0000739824887968$ |
-| Larger $x$ | $-0.007306104080127329$ | $0.991108506097534$ |
-
-The ratios carry no unit. The largest 32/64-point difference is
-$3.34\times10^{-16}$. Across the four stored cases the largest deviations
-are $2.94\times10^{-10}$ in redshift and $4.84\times10^{-10}$ in the ratio.
-Those figures do not bound interpolation or the total model uncertainty.
-The method was frozen at `f0f639d` before the rays were evaluated, with no
-new gravitational or field solve. The
-[light-cone record](../results/summaries/nsc-conformal-lightcone-v1.json)
-contains all six rays. Figure 2 shows the three declared lengths; the lines
-only connect those samples. This is a finite observer map on one saved
-metric, not a full-sky prediction and not a match to the Pantheon+ residual.
-
-![Redshift and luminosity-to-radar ratio on the saved conformal null cone](../docs/figures/nsc-conformal-lightcone.png)
-
-*Figure 2. Three predeclared lookbacks in each radial direction, for the
-fixed-coordinate normal probes of the saved conformal metric. Markers are
-the declared rays. Lines connect samples and do not fill intermediate
-evolution.*
-
-### 6.1.7. The interface required by a common action
-
-<!-- nsc-claim:atlas-common-action-interface -->
-
-The two actions remain alternatives. Importing the literal quiet tension
-wall into the Weyl-squared chart is a compatibility question, not a
-derivation of either model from the other. With the $(-+++)$ convention,
-spacelike normal and $[K_{ab}]=-kh_{ab}$, every singular coefficient in the
-linear Weyl tensor cancels. Thus the Weyl-squared term has no squared-delta
-coefficient from this pure-trace jump at that algebraic level. The regular Weyl tensor still
-steps from the conformally flat cap, where it vanishes, to the Schwarzschild
-value. In the orthonormal wall frame, and after a radial boost,
-
-$$
-[C_{anbn}]=\frac{M}{R_w^3}\operatorname{diag}(-2,-1,-1).
-$$
-
-At $M/\ell=0.4$ and $R_w/\ell=1.5$,
-
-$$
-\ell^2[C_{anbn}]
-=\operatorname{diag}(-32/135,-16/135,-16/135).
-$$
-
-The components have dimension inverse length squared. In a thin-layer limit
-that keeps the metric, connection and Weyl curvature bounded and approaching
-these one-sided values, the leading Bach double-layer strength is the jump
-$[C_{\mu n\nu n}]$. Ordinary tension is a delta-order source and does not
-supply that derivative of a delta. The quiet scalar vanishes. A continuous
-scalar with bounded one-sided first derivatives does not supply it either.
-The Euler and Box-R ledger completes divergences on smooth periodic metrics
-and finite time caps. It is not an adjustable source on this timelike wall.
-
-Lower-order products of discontinuous curvature, and a complete junction,
-remain unproved. A smooth transition, or an effective interface between
-resolutions whose action is actually derived, is still required. The check
-is necessary under the stated thin-layer control. It is not a universal
-impossibility, and it does not remove the separate P001 Einstein model.
-[Reina, Senovilla and Vera](https://arxiv.org/html/1510.05515v1), Sections
-3.1--3.2, discuss the hazards of formal quadratic cancellations. Their
-generic distributional class is not applied here as a theorem. The direct
-tensor calculation is in the
-[wall-connection note](../docs/schur-memory.md#the-wall-connection-between-the-two-action-choices),
-with the normal-Weyl components exposed by the
-[gravitational reduction](../src/recursive_horizons/nsc_atlas_gravitational_reduction.py)
-and checked in its
-[tests](../tests/test_nsc_atlas_gravitational_reduction.py).
-
-### 6.1.8. One state at two physical resolutions
-
-<!-- nsc-claim:conformal-physical-resolution -->
-
-The inherited law and a state's resolved structure are different mathematical
-objects. To calculate a resolution effect, hold the separate conformal
-candidate's full state fixed and choose a retained space from its physical
-radial Laplacian. On the reference slice $T=0.05$,
-
-$$
-\mathcal L=-\Delta_h=-\frac{1}{r^3Q}\partial_x\left(\frac{r}{Q}\partial_x\right),
-\qquad \mu L_{\mathrm{ref}}^2\leq1.
-$$
-
-The reference ruler remains $L_{\mathrm{ref}}=4.80028044552352$.
-The mass and stiffness integrals use the existing 511 geometry variables
-and their 2048-point quadrature. Orthonormalizing the selected eigenspace
-in the canonical coordinate measure gives a fixed symmetric projector $P$.
-Apply it to all six log-canonical variables $a=\log r$, $\pi_a=rp_r$,
-$b=\log Q$, $\pi_b=Qp_Q$, and $\chi,p_\chi$. The fermion columns and
-occupations remain fully retained. This rule keeps one geometric mode.
-The first omitted eigenvalue is $0.4795862384$, above the fixed cutoff
-$0.04339770651$. No observed target selects that cutoff or the ruler.
-
-At $T=0.3$, evaluate the same Hamiltonian and its vector field on the full
-and filtered states. The difference at fixed canonical environment is
-
-$$
-H_{\mathrm{corr}}(z_c;z_e)=H(z_c+z_e)-H(z_c),\qquad
-\delta F_c=P X_H(z)-P X_H(Pz).
-$$
-
-Here $P$ acts as the identity on the fermions. The exact change of canonical
-variables includes the momentum product rule. The four-dimensional vacuum
-volume supplies an independently derived comparison direction,
-
-$$
-H_\Lambda=8\pi A\Lambda\int r^4LQ\,dx,\qquad A=\frac{1}{16\pi G}.
-$$
-
-The owned action uses $R_E=-R_L$ and $-A R_L-2A\Lambda$; its existing
-$r^2$ potential is sphere curvature. The displayed $r^4$ weight follows
-from the physical volume. Varying before choosing $L=Q$ fixes the lapse
-constraint and both momentum forces. This potential changes no coordinate
-or fermion rate. Adjoint pullback precedes the nodal canonical change.
-
-The calculation gives $H_{\mathrm{full}}=-1.363\times10^{-11}$,
-$H_{\mathrm{coarse}}=1.015478298556$, and unit-volume generator
-$231.9284384454$. Their energy projection is
-
-$$
-\Lambda_E L_{\mathrm{ref}}^2=-0.100890404750047.
-$$
-
-Its force does not reproduce the correlation. Each row below uses that
-block's canonical units; the RMS values are not combined across blocks.
-
-| Log-momentum rate | Correlation RMS | Vacuum candidate RMS | Residual RMS |
-| --- | ---: | ---: | ---: |
-| $\pi_a$ | $0.21206304$ | $0.50773915$ | $0.29567611$ |
-| $\pi_b$ | $0.01318283$ | $0.25386957$ | $0.24068675$ |
-
-The residuals are 58.23% and 94.81% of the larger RMS in their respective
-rows. The retained $a_T$ and $\chi_T$ correlations are $0.00098884455$ and
-$0.67276495$ RMS per coordinate time, where a vacuum potential gives zero.
-The unchanged input fermions also acquire a rate difference. The $b_T$
-difference, $5.54\times10^{-18}$ RMS, is treated as roundoff.
-
-The original Hamiltonian-constraint maximum is $9.005\times10^{-6}$; the
-filtered state's is $25.5817$ in that density normalization. No constraint
-reset is performed, and the filtered metric with the retained fine matter
-is not a second physical solution. The missing correlation contains
-constraint, kinetic and matter response beyond a single volume term.
-Fifteen controls include the analytic spectrum under unit rescaling and
-independent energy differentiation. The relative eigen residual is
-$1.65\times10^{-15}$; replay of the archived prolonged rates differs by at
-most $8.72\times10^{-9}$ in a momentum component. These controls do not
-bound the continuum or physical model error. Rates use the same conformal
-coordinate generator; a matched proper clock, causal elimination, repeated
-scale composition and a fractal dimension remain open. The
-[fixed-state record](../results/summaries/nsc-conformal-resolution-v1.json)
-binds the original state and frozen method `cd00b35`. Its energy coefficient
-is a failed vacuum-volume representation of this instantaneous response,
-not a derived cosmological constant.
-
-### 6.1.9. A prepared-state change propagated to a photon measurement
-
-The same conformal episode now carries an initial matter variation through
-the coupled geometry to two received frequencies. Before prolongation,
-apply $U_\epsilon(x)=\exp[i\epsilon f(x)\sigma_2]$ to every original spinor,
-with $f(x)=\cos(2\pi x/8)$ and unchanged occupations. This preserves the
-initial Gram matrix and paired current cancellation. The radius direction
-is obtained by differentiating the original projected constraint level.
-The original full constraint defect, $9.97845\times10^{-6}$, remains; a zero
-root is not assumed. Initially at $x=1$,
-$d\log N/d\epsilon=-0.27203771374589336$.
-
-Evolve the complete state and its derivative together,
-$z_T=X_H(z)$ and $u_T=DX_H(z)u$, at the same four RK4 stages. All six
-geometry fields and both complex column blocks evolve. The fixed spatial
-grid is $n_f=512,n_g=511,n_q=2048$, period 8. The two original time steps
-$0.001$ and $0.0005$ take 300 and 600 steps to $T=0.3$. Both baseline
-states reproduce their saved histories at $T=0.05$ and $0.3$ within the
-declared field-scaled $10^{-8}$ tolerance.
-
-Reception is fixed at $(T_o,x_o)=(0.3,1)$; emission occurs at
-$(T_e,x_e)=(0.175,0.875)$ or $(0.175,1.125)$. These are exact step and
-quadrature events. The normal observers measure $1+z=N_o/N_e$, $N=rQ$,
-so the propagated response is
-
-$$
-K=\frac{d\log(1+z)}{d\epsilon}
-=\frac{u_{r,o}}{r_o}+\frac{u_{Q,o}}{Q_o}
--\frac{u_{r,e}}{r_e}-\frac{u_{Q,e}}{Q_e},
-\qquad \frac{dz}{d\epsilon}=(1+z)K.
-$$
-
-| Emitter $x_e$ | Fine $K$ | Fine $dz/d\epsilon$ | Absolute time-step change in $dz/d\epsilon$ |
-| --- | ---: | ---: | ---: |
-| 0.875 | $-0.0009129945410$ | $-0.0009145171829$ | $1.22\times10^{-13}$ |
-| 1.125 | $0.0027692088369$ | $0.0027489767089$ | $1.71\times10^{-13}$ |
-
-These differences are empirical temporal indicators. The inherited spatial
-and constraint errors, physical source mechanism and finite-$\epsilon$
-range are not bounded by them. At the fine endpoint, the full Hamiltonian
-constraint maximum is $8.91\times10^{-6}$ and the weighted constraint
-variation norm is $1.09\times10^{-6}$. The Gram and tangent-Gram errors
-are $1.63\times10^{-13}$ and $1.68\times10^{-14}$. The sampled Hamiltonian
-variation drifts by $8.59\times10^{-12}$, versus $2.76\times10^{-10}$ on the
-coarse time step; no uniform-in-time estimate is inferred.
-
-The [initial response](../results/summaries/nsc-conformal-preparation-tangent-v2.json)
-and [propagated response](../results/summaries/nsc-conformal-causal-response-v2.json)
-bind the original data, frozen method and reproduction command. A stopped
-central-difference preflight is preserved; the independent initial Fourier
-force check agrees to $6.35\times10^{-9}$ relative error without changing
-the force equations. The calculation uses 1736.1875 process-CPU seconds
-including that stopped attempt. One 477146-byte ignored checkpoint stores
-the final states and derivatives; the published summary stores its hash.
-This closes one finite prepared-direction observer calculation. The
-metric-dependent reduction still needs to retain the corresponding causal
-response and physical state before identifying an effective vacuum term.
-
-### 6.1.10. A constrained gravitational exterior and its validity test
-
-The same local auxiliary action now supplies a linear vacuum exterior
-response. This reference has zero Maxwell flux and Dirac field, physical
-metric $ds^2=N^2dt^2-a^2dR^2-R^2d\Omega^2$, and flat $N=a=1$, $\chi=0$.
-It is not an attachment to the charged periodic episode. Write
-$N=1+\epsilon n$, $a=1+\epsilon b$, $\chi=\epsilon c$, and
-$k=4\pi A/\alpha$, $\alpha=-4\pi C_W/3$.
-Varying before imposing areal gauge retains both constraints. They fix
-$kRb+c_R+c/R=kM$, with constant mass perturbation $M$; the full radius
-equation then vanishes. Linear Schwarzschild has
-$n=-M/R$, $b=M/R$, $c=-12M/R$.
-
-For zero initial perturbation and $M=0$, set $\psi=c/R$. Independent
-variation of all five original fields and elimination of the constraints
-give
-
-$$
-\psi_{tt}-\psi_{RR}+(6/R^2+m^2)\psi=0,
-\qquad m^2=\frac{A}{2C_W},
-$$
-
-$$
-S_{2,\mathrm{bulk}}=K\int
-[\psi_t^2-\psi_R^2-(6/R^2+m^2)\psi^2]dt\,dR,
-\qquad K=-\frac{8\pi C_W^2}{3A}.
-$$
-
-The action weight $K$ is distinct from the normalization of the wave
-equation. Radial total derivatives are retained in deriving the face
-response; no boundary energy normalization is selected.
-
-On $R\ge R_0$, impose a compatible causal curvature history at $R_0$ and
-no incoming perturbation at infinity. For a Laplace parameter $s$ with real
-part greater than $\gamma=\sqrt{\mathrm{max}(0,-m^2)}$, the decaying branch
-$q=\sqrt{s^2+m^2}$, with positive real part, yields
-
-$$
-\frac{\widehat c_R(R_0)}{\widehat c(R_0)}
-=-\frac{z^3+2z^2+3z+3}{R_0(z^2+3z+3)},\qquad z=qR_0.
-$$
-
-The outward normal of this exterior points toward decreasing $R$. The
-lapse and radial metric histories obey the same constraints, so this is
-one compatible response column. It is not a choice of three independent
-boundary histories or a bulk vacuum density.
-
-The [scalar evaluation](../results/summaries/nsc-vacuum-gravitational-response-v1.json)
-keeps the saved $A,C_W$ and independent ruler
-$R_0=L_{\mathrm{ref}}=4.80028044552352$. Frozen method `6c68d00` uses one
-declared Laplace point, no archive, trajectory, root or fit, and 0.015625
-process-CPU seconds:
-
-| Reference quantity | Value |
-| --- | ---: |
-| $m^2L_{\mathrm{ref}}^2$ | $-614.4717961513472$ |
-| $\gamma L_{\mathrm{ref}}$ | $24.788541630183637$ |
-| Growth time divided by $L_{\mathrm{ref}}/c$ | $0.04034121954082023$ |
-| $K/L_{\mathrm{ref}}^2$ | $-5.754230595887687\times10^{-6}$ |
-
-For $m^2=-\gamma^2$, a compact sine beyond
-$\mathrm{max}(R_0,4/\gamma)$ with width $4\pi/\gamma$ has spatial quadratic-form
-quotient at most $-9\gamma^2/16$. Every finite inner radius therefore leaves
-growing modes in this infinite flat exterior. The retarded map exists in
-the stated half-plane, while a stable stationary reduction about this
-reference is unavailable. Nine controls include the exact radial solution,
-pre-gauge constraints, Schwarzschild mass mode, reduced action and
-physical-clock face response.
-
-This tests the local action used nonperturbatively. The
-[spherical action owner](../docs/nsc-spherical-action.md) retains a
-conditional curvature expansion and an incomplete full spectral/state
-contribution. An effective-theory reading needs its cutoff, order reduction
-or causal completion specified before promoting this additional mode to a
-physical exterior state. The comparison ruler is not a derived ultraviolet
-cutoff. The finite periodic computations retain their stated domain; the
-actual nested exterior geometry and its physical state remain necessary
-for a cosmological Lambda calculation. No coupling was changed to remove
-the reference instability.
-
-### 6.1.11. The inherited spectral profile and its gravitational response
-
-The local coefficients have an existing spectral owner. For the fixed
-warped compact interval, its matched profile is
-$H(u)=h_\Lambda(u)-E_1(u/\mu_B^2)$, where
-$\Lambda_{\mathrm{UV}}=\Omega/r_e$ and
-$\mu_B=\sqrt{|q|}/r_e$. They are distinct from the observer ruler.
-The coefficient account gives $Q_1=\int_0^\infty H(u)\,du$,
-$Q_0=H(0)$, $A=Q_1/[6(4\pi)^2]$ and $C_W=-Q_0/[40(4\pi)^2]$.
-Compact interval, warp and matching scales are fixed during this external
-metric variation.
-
-The flat Euclidean transverse-traceless heat response of
-[Alkofer--Saueressig--Zanusso, 1410.7999v2](https://arxiv.org/html/1410.7999v2),
-Section II, supplies the linear spectral-profile dependence. With the
-existing zero-volume-term normalization, exchanging its integrations gives
-
-$$
-\mathcal P_H(x)=x\left[1-\frac{x}{4Q_1}\int_0^1
-(1+2v)\sqrt{1-v}\,H(xv/4)\,dv\right],\qquad x=p^2\geq0.
-$$
-
-For the owned half-trace action, the quadratic density is
-$(A/4)h_{\mathrm{TT}}\mathcal P_H(-\partial^2)h_{\mathrm{TT}}$.
-Its first two terms are $x+(2C_W/A)x^2$, exactly matching the local
-coefficient account. The [derivation and controls](../docs/schur-memory.md#the-induced-spectral-profile-beyond-the-local-gravitational-polynomial)
-retain the spectral-calculus assumptions, unit scaling and an independently
-integrated finite proper-time check. The earlier exponential example is
-not substituted for this compact profile.
-
-The [single evaluation](../results/summaries/nsc-spectral-gravitational-response-v1.json)
-keeps the saved $A,C_W$, $\Lambda_{\mathrm{UV}}=3.973074368754331$,
-$\mu_B=2$ and $L_{\mathrm{ref}}=4.80028044552352$. Frozen method
-`9b68122` uses $p^2L_{\mathrm{ref}}^2=1$:
-
-| Finite reference quantity | Value |
-|---|---|
-| $p/\Lambda_{\mathrm{UV}}$ | $0.05243324000377066$ |
-| $\mathcal P_H(p^2)/p^2$ | $0.9983741797605584$ |
-| Local polynomial divided by $p^2$ | $0.9983725860059594$ |
-| Full-profile minus local ratio | $1.5937545990718505\times10^{-6}$ |
-| Extra local root divided by $\Lambda_{\mathrm{UV}}^2$ | $1.6893333026263349$ |
-
-Both fixed Jacobi rules, of orders 16 and 32, round to the same normalized
-response; their raw correction integrals differ by about $10^{-15}$.
-This is an integration indicator, not a zero total error or a bound on
-inherited compact spectral errors. Seven controls pass, and the profile's
-zero limit recovers $C_W$ within $5.42\times10^{-19}$ absolute. The scalar
-application takes 0.1875 process-CPU seconds and stores 4720 bytes without
-a raw cache, scale root, trajectory or fit.
-
-The local polynomial's additional root lies above the stored ultraviolet
-cutoff. It therefore cannot by itself diagnose the full spectral theory's
-stability. This calculation does not locate the full kernel's other poles
-or replace the constrained spherical causal map. Curved real-time metric
-dependence and the exterior's physical state remain necessary before
-identifying an effective cosmological volume term.
-
-### 6.1.12. Flat-reference curvature channels and the relation between motion and lensing
-
-The same fixed-profile functional now has a covariant quadratic-curvature
-connection. Reusing [Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2),
-Section 5, and the owned Dirac Clifford traces gives Weyl and scalar
-functions $\mathcal F_C(-\nabla^2)$ and $\mathcal F_R(-\nabla^2)$ in the
-action $[C\mathcal F_C C+R\mathcal F_R R]/[2(4\pi)^2]$.
-The [complete derivation](../docs/schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)
-works to second order in curvatures with compact weak perturbations of
-Euclidean $\mathbb R^4$, fixed topology and fixed compact data. Euler and
-boundary terms are removed only within that domain; a material wall or
-strong-curvature attachment needs its own terms.
-
-This is an imported Dirac fixed-profile calculation about flat space. The
-numerical slip below is not a consequence of NSC's cap--wall nesting.
-
-The Weyl function recovers Section 6.1.11 through
-$a_2(x)=\mathcal P_H(x)/x=1+6x\mathcal F_C(x)/Q_1$. The scalar function is
-
-$$
-\mathcal F_R(x)=\frac{1}{72}\int_0^1
-\left(1-\frac{5v}{2}\right)\sqrt{1-v}\,[H(xv/4)-H(0)]\,dv.
-$$
-
-The constant subtraction changes nothing because its weight integrates to
-zero. Thus $\mathcal F_R(0)=0$, while a nonzero-momentum scalar response
-remains. Its trace factor is $a_0(x)=1-18x\mathcal F_R(x)/Q_1$.
-This correction adds no zero-momentum volume term; the previous vacuum
-normalization is still a premise.
-
-For a conserved weak static density perturbation $T_{00}=\rho$, $T_{ij}=0$,
-write the physical metric as
-$ds^2=(1+2\Phi)dt^2-(1-2\Psi)d\boldsymbol x^2$.
-Direct metric and source variation, with source action $+\int\rho\Phi$,
-gives the ratios to $\Phi_{\mathrm{GR}}=\Psi_{\mathrm{GR}}=-\rho/(4Ax)$:
-
-$$
-G_\Phi=\frac{4}{3a_2}-\frac{1}{3a_0},\qquad
-G_\Psi=\frac{2}{3a_2}+\frac{1}{3a_0}.
-$$
-
-Slow-motion acceleration measures $-\nabla\Phi$; the null optical index is
-$1-\Phi-\Psi$. Consequently the lensing ratio is
-$(G_\Phi+G_\Psi)/2=1/a_2$, and gravitational slip is
-$\Psi/\Phi=G_\Psi/G_\Phi$. The density normalization cancels from these
-relations. This is an external static probe, not a supplied astrophysical
-source or the earlier nested-body preparation.
-
-The [one application](../results/summaries/nsc-covariant-spectral-response-v1.json)
-keeps the old profile, couplings and reference scale, using frozen method
-`9796add` at $p^2L_{\mathrm{ref}}^2=1$:
-
-| Conditional weak-field quantity | Value |
-|---|---|
-| Scalar trace factor $a_0$ | $0.9999996814199501$ |
-| Motion-potential ratio $G_\Phi$ | $1.0021711842538266$ |
-| Spatial-potential ratio $G_\Psi$ | $1.0010857514169889$ |
-| Lensing-potential ratio | $1.0016284678354077$ |
-| Gravitational slip $\Psi/\Phi$ | $0.9989169187321566$ |
-
-Eight controls pass, including independent curvature contractions, pure
-gauge, the Einstein density and its flux, heat/profile integration and
-direct source variation. The fixed 16/32 rules round to the same response
-floats and recover the old TT factor. Their scalar kernels differ by
-$3.95\times10^{-16}$; these are integration indicators, not bounds on the
-inherited spectrum or physical model. The application takes 0.140625 CPU
-seconds and retains 5797 bytes without a trajectory or scale fit.
-
-A real-time response requires its state and closed-time-path variation.
-Putting a retarded kernel in an ordinary quadratic action instead produces
-its symmetric retarded--advanced average. The static relation therefore
-does not supply the actual curved causal exterior, physical length
-calibration or a cosmological Lambda. Those remain the connection needed
-between the larger geometry and its observer's effective volume response.
-
-### 6.1.13. The actual cap--wall Dirac operator and the missing nested slip
-
-The [cap--wall calculation](../docs/nsc-atlas-dirac-probe.md)
-adds a declared massless, minimally coupled probe with no direct surface
-spinor interaction to the original classical scalar candidate. It uses the
-known quiet reference; P001's unconverged endpoint supplies no controlled
-corrected background. In its static cap, let $A=1-H^2r^2$ and
-$z=\operatorname{atanh}(Hr)/H$. Rescaling the physical spinor by
-$\psi=A^{-1/4}r^{-1}u$ gives
-
-$$
-\mathsf{H}_k=-i\sigma_2\partial_z+\sigma_1 W,
-\qquad W=\frac{k\sqrt{A}}{r},
-\qquad V_\pm=W^2\pm\partial_zW,
-\qquad \partial_zW=-\frac{k\sqrt{A}}{r^2}.
-$$
-
-At $r/\ell=.5$, the lowest angular channel has
-$W\ell=\sqrt3$ and squared potentials
-$V_+\ell^2=-.4641016151$, $V_-\ell^2=6.4641016151$.
-Flat space at the same radius gives $0$ and $8$ for those potentials.
-These are curvature effects. The smooth control continues the same cap
-and retains its identical bulk operator.
-
-Nesting changes the material domain. For the common cap-to-exterior normal,
-$[K]=-6/\ell$. Continuity of the spinor and its Dirac image gives
-$[\partial_n\psi]=-[K]\psi/2=3\psi/\ell$ in a common normal frame.
-The smooth-cap control has no jump. The
-[reference record](../results/summaries/nsc-atlas-dirac-probe-reference-v1.json)
-and ten independent controls verify these operator inputs. The exterior's
-usual static coordinate is spacelike at this cut, so it cannot supply a
-static joined spectral problem.
-
-No nested $\Psi/\Phi$ or slip difference has yet been calculated. The
-loop requires a Dirac two-point state on the joined causal domain,
-renormalized bulk/interface response, and a conserved metric source with
-its wall displacement and gauge-invariant observer readout. Those inputs
-are absent from the classical scalar preparation and the flat profile.
-For free fermions the retarded bilinear response already depends explicitly
-on its initial covariance through $-i\operatorname{Tr}(C[V(t),V(0)])$;
-geometry alone does not select it. The completed result here is the curved
-operator/domain connection, not a loop polarization or an NSC slip number.
-
-### 6.1.14. Local Dirac trace on the cap and material wall
-
-The free four-component Dirac determinant and general
-[heat-coefficient framework](https://arxiv.org/pdf/hep-th/0306138)
-are imported; the spin/statistics contractions and actual curvature are
-calculated. In the two quiet smooth regions, where $\Box R=0$,
-
-$$
-\frac{\langle T^\mu{}_\mu\rangle}{\hbar c}
-=\frac{7R_{\alpha\beta\gamma\delta}R^{\alpha\beta\gamma\delta}
-+8R_{\alpha\beta}R^{\alpha\beta}-5R^2}{360(4\pi)^2}.
-$$
-
-The [one-sided evaluation](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.json)
-therefore gives $-11H^4/(240\pi^2)$ in the cap and
-$7M^2/(120\pi^2r^6)$ outside. A flat reference has zero local curvature
-trace. These are actual-background terms of the declared quantum probe,
-distinct from the flat nonlocal polarization in Section 6.1.12.
-
-At the material wall, integrate a smooth normal curvature jet before
-taking a thin limit. The declared class smooths the kinked conformal factor
-while the conformal product curvature remains bounded. With one normal
-pointing from cap to exterior, put $t=K^\tau{}_\tau$, $b=K^\Omega{}_\Omega$,
-$A=R_{\tau\tau}/R$ and $B=(1+R_\tau^2)/R^2$. The Chern scalar is
-$\mathcal{B}_3=-8tb^2+8Bt+16Ab$. Direct Lorentz curvature contraction gives
-the Euler surface coefficient
-
-$$
-\mathcal{E}_\Sigma=-[\mathcal{B}_3]
-=4k_{\rm wall}(k_{\rm wall}^2+3H^2)=56/\ell^3.
-$$
-
-The exterior mass and wall radius cancel through the signed junction
-equations. Pure-trace leading singular terms cancel in both Euler and
-Weyl curvature squares; no delta square is evaluated. The
-[Euler-wall reference](../results/summaries/nsc-atlas-dirac-euler-wall-v1.json)
-then gives
-
-$$
-\frac{\langle T^\mu{}_\mu\rangle_{\Sigma,E}}{\hbar c}
-=-\frac{77}{720\pi^2\ell^3}\delta_\Sigma.
-$$
-
-A smooth continuation of the cap has no such interface coefficient.
-The scheme-dependent total derivative, finite interface terms, traceless
-stress and quantum preparation remain separate inputs. This one Euler
-term is not the complete wall stress. Trace-only projections do not
-establish vacuum stress or replace the supplied cap $\Lambda_{0,-}\ell^2=3$.
-
-### 6.1.15. An actual wall radar chart and a finite clock prediction
-
-The [wall-clock construction](../results/summaries/nsc-atlas-dirac-radar-v1.json)
-uses the same $H\ell=1$, $k_{\rm wall}\ell=2$, $M/\ell=.4$ and
-$.45\le R_{\rm wall}/\ell\le.55$. In each static region take optical
-coordinates $u_i=t_i-r_i^*$, $v_i=t_i+r_i^*$. Their wall derivatives are
-
-$$
-\frac{du_i}{d\tau}=\frac{1}{\beta_i+\dot{R}},\qquad
-\frac{dv_i}{d\tau}=\frac{1}{\beta_i-\dot{R}}.
-$$
-
-Inside the exterior horizon the second derivative is negative. Label both
-null rays by their wall proper times $U,V$, preserving that orientation.
-Then
-
-$$
-T=(U+V)/2,\quad x=(V-U)/2,\quad
-ds_2^2=C_i(-dT^2+dx^2),\quad
-C_i=f_i(r)u_i'(U)v_i'(V)>0.
-$$
-
-The cap occupies $V\le U$ and exterior $V\ge U$. The proper-clock range
-$0\le U,V\le S$, $S/\ell=.1256873632901$, gives the finite causal diamond
-in Figure 3. An analytic conservative bound gives $N=\sqrt{C}\ge.3851891$
-throughout that domain. The material wall remains $x=0$, $T=\tau$,
-$C=1$; both Israel jumps are retained. This construction uses no spatial
-cutoff profile and has no reflecting timelike ends. The earlier wide
-coordinate chart's fold remains an unsuccessful construction, without
-changing the underlying quiet geometry.
-
-The actual Dirac half-density now has constant characteristic speed:
-
-$$
-\xi=C^{1/4}r\psi,\qquad
-H_\kappa=-i\sigma_2\partial_x+\sigma_1W_\kappa,\qquad
-W_\kappa=\kappa\sqrt{C}/r.
-$$
-
-Both $W_\kappa$ and its first derivatives are continuous at the wall.
-The density spinor and its spatial derivative are continuous in this
-frame, while the physical parallel-normal jump remains $3k_{\rm wall}\psi/2$.
-
-For a finite clock protocol, emit a radial optical phase at wall
-$U=\tau(.475)$ and receive at
-$(U,V)=(\tau(.475),\tau(.525))$ on a fixed wall-radar-position observer.
-The signed radar position is $x/\ell=.0314673818165$ and
-$T/\ell=.0584746895099$. The null phase $-U$ and receiver proper clock give
-$\omega_{\rm rec}/\omega_{\rm wall}=1/N_{\rm rec}$.
-
-| Quiet geometry with the same radar protocol | $r_{\rm rec}/\ell$ | $N_{\rm rec}$ | $\omega_{\rm rec}/\omega_{\rm wall}$ | $W_1\ell$ |
-| --- | ---: | ---: | ---: | ---: |
-| Nested cap--wall--exterior | .5068911 | .8668323 | 1.153626 | 1.7101 |
-| Smooth cap continuation | .5364941 | .9253385 | 1.080686 | 1.7248 |
-
-For the independently supplied $\ell=10\,{\rm km}$, this radar range is
-$314.674$ m. The smooth continuation is a geometric control with the same
-observer worldline and clock labels; it is not another matched membrane
-solution. These are conditional quiet-background predictions, with no
-observed frequency used to tune the geometry. They are not a quantum slip
-or an astronomical identification. The optical-map comparison with independent
-quadrature differs by $2.11\times10^{-14}$ or less; finite mode propagation and the full
-quantum error account are not supplied by this geometry calculation.
-
-![Wall radar causal diamond, clock lapse and actual change in Dirac potential](figures/dirac-wall-radar.png)
-
-*Figure 3. The finite quiet wall-clock diamond. The material wall is the
-vertical line; null edges are causal limits. Left: proper-clock lapse,
-with the emitted/reflected radar ray and receiver. Right: the radial
-Dirac-potential difference from a smooth continuation of the same cap,
-using the same wall clock and probe angular sector. These colors describe
-the background geometry, not an evolved quantum state or a metric-loop
-response.*
-
-### 6.1.16. Stress vertices and the inherited quantum preparation
-
-The same canonical radial Dirac action now supplies its gravitational
-sources. For a full magnetic multiplet let $d=2|\kappa|$,
-$f=d/(4\pi)$, $\xi=\sqrt{a}\,r\psi$,
-$q_A=-i(\xi^\dagger A\xi_y-\xi_y^\dagger A\xi)/2$ and
-$s_1=\xi^\dagger\sigma_1\xi$. Its real Hamiltonian density is
-$h=d[N(q_\alpha/a+\kappa s_1/r)-\beta q_I]$. Metric variation at fixed
-canonical half-density gives
-
-$$
-\rho=\frac{f}{ar^2}(q_\alpha/a+\kappa s_1/r),\qquad
-p_r=\frac{fq_\alpha}{a^2r^2},\qquad
-p_t=\frac{f\kappa s_1}{2ar^3},\qquad
-T^{\hat{0}\hat{1}}=\frac{fq_I}{a^2r^2}.
-$$
-
-The [stress and contact calculation](../docs/nsc-atlas-dirac-probe.md#dirac-stress-and-the-actual-gravitational-metric-vertices)
-checks the Hilbert energy/flux, complete angular normalization,
-four-dimensional covariant conservation and the first/second metric
-variations. Finite-mode stress has zero classical trace and transmits
-continuously; the anomaly in Section 6.1.14 is retained separately.
-Radial ports and first-order time-end variations remain in an integrated
-response. No scalar source or flat polarization is substituted.
-
-The radar characteristic equations define the transfer of prepared
-incoming data to the middle Cauchy segment. A parent covariance must
-include both incoming branches and their cross-correlations. Existing
-Gaussian boundary elimination can preserve those terms once the actual
-transfer is supplied. Neither the chart nor the common-law relation
-chooses a root state. Section 6.1.19 supplies one additional preparation
-axiom and establishes its local short-distance class; it is not inferred
-from a null-line frequency label alone.
-
-The characteristic transfer and a finite prepared-state mean response
-are evaluated next. A compatible baseline preparation, bulk/interface
-renormalization conditions and the complete mixed response to a physical
-source still separate them from a nested $\Psi/\Phi$ prediction.
-
-### 6.1.17. Prepared Dirac propagation, mean metric and clock
-
-The [actual transfer](../results/summaries/nsc-atlas-dirac-scattering-v1.json)
-propagates the canonical chiral field on the wall-clock diamond. With
-$P=\eta_+$ and $M=\eta_-$, the equations are
-$2P_V=-iW_\kappa M$ and $2M_U=-iW_\kappa P$.
-The characteristic cell map is a two-component Cayley unitary in positive
-null-flux weights. Direct metric variation gives the ordered matter
-response $-i[J_A,J_B]$ for the declared exterior source and later cap
-insertion. For one specified first-channel occupation difference its
-magnitude changes by about .3774% relative to the smooth-cap control.
-This is one matter-response component.
-
-The [mean-clock reference](../results/summaries/nsc-atlas-dirac-mean-clock-v1.json)
-then supplies the mean metric needed before a full mixed source/tadpole
-calculation. The incoming mode has $P(U,0)=0$ and
-$M(0,V)=A b(V)\exp(-12iV/S)$, where $b$ is the stated smooth peak-one
-bump centered at $.6S$ with half-width $.3S$: put
-$z=(V-.6S)/(.3S)$ and $b=\exp[1-1/(1-z^2)]$ for $|z|<1$,
-and zero otherwise. The constant $A$ normalizes its continuum null flux
-to one. For a compatible supplied parent
-covariance $C_H$, define $\Pi=I-|f\rangle\langle f|$,
-$C_{\mathrm{empty}}=\Pi C_H\Pi$ and
-$C_n=C_{\mathrm{empty}}+n_{\mathrm{occ}}|f\rangle\langle f|$,
-$0\leq n_{\mathrm{occ}}\leq1$. This declared preparation changes one mode's
-occupation and removes its cross terms; it selects no root vacuum.
-The parent must make the finite-rank modification smooth on this region;
-its global preparation remains an assumption.
-Both magnetic states of the $\kappa=1$ multiplet have the same radial data.
-Other inherited modes cancel between the two states.
-
-Analytically differentiated characteristic equations supply first
-derivatives of the propagated field. The same stress vertices then
-determine the nonvacuum Misner-Sharp mass one-form. In units $c=\hbar=1$,
-with $\kappa_g=8\pi G$ and the cap vacuum mass evaluated at the actual
-areal radius,
-
-$$
-m_{\rm total}=M_i+\Lambda_i r^3/6+m_i,\qquad
-(m_U,m_V)=\frac{\kappa_g r^2}{C}
-(t_{UV}r_U-t_{UU}r_V,\ t_{UV}r_V-t_{VV}r_U).
-$$
-
-The two wall masses drive the existing signed radius-response equation.
-In outgoing EF coordinates, the radial lapse follows from
-$\psi_V=\kappa_g r t_{VV}/(2r_V)$ and its proper-wall normalization.
-Analytic sensitivity of the ingoing null ray gives $s=\delta r$ and
-$z=s_V$, hence $q=\delta\ln C=\psi+z/r_V$. The specified radial phase
-and a receiver at fixed proper-wall radar position give
-$\delta\ln(\omega_{\mathrm{rec}}/\omega_{\mathrm{wall}})=-q/2$.
-No separate bulk metric grid is needed for this first-order supplied source.
-
-The proper-clock labels remain $U=\tau(.475)$ and $V=\tau(.525)$
-of the quiet reference. Define
-
-$$
-\varepsilon_q=\frac{8\pi\hbar G}{c^3\ell^2},\qquad
-\mathcal C_{\rm clock}
-=\frac{\delta\ln(\omega_{\rm rec}/\omega_{\rm wall})}
-{\varepsilon_q n_{\rm occ}}.
-$$
-
-| Geometry and observer protocol | $\mathcal C_{\mathrm{clock}}$, 128 cells | Absolute 64/128 spread |
-| --- | --- | --- |
-| Nested cap-wall-exterior | -.41780 | 1.12e-5 |
-| Smooth cap, shared observer motion | -.39929 | 9.95e-6 |
-
-The smooth cap has no membrane. Its observer worldtube is explicitly
-driven along the computed nested wall's areal-radius history. The
-coefficient difference is $-.01851197$, about 4.63625% in magnitude,
-with a correlated numerical spread $1.23\times10^{-6}$.
-This compares the two geometries at common observer motion; it is not
-an independently evolving alternative wall model.
-
-The normalized nested mass-path discrepancy decreases from
-$1.15\times10^{-6}$ to $2.92\times10^{-7}$; the smooth control also
-improves. Orders 8/12 of the piecewise quadrature differ by less than
-$5.34\times10^{-15}$ in the clock coefficient. Exact charged-wall and
-nonzero-lapse fluid families independently check the reconstruction.
-These indicators support the finite calculation; they are not a
-rigorous continuum remainder or an observational confidence interval.
-
-For the independently supplied $\ell=10\,\mathrm{km}$, the nominal
-prepared-state fractional frequency correction is
-
-$$
-\delta\ln(\omega_{\rm rec}/\omega_{\rm wall})
-\simeq-2.7430\times10^{-77}n_{\rm occ}
-\left(\frac{10\ {\rm km}}{\ell}\right)^2.
-$$
-
-The nested resolution spread converts to $7.34\times10^{-82}$ at unit
-occupation and that scale. The
-[CODATA 2022](https://physics.nist.gov/cuu/Constants/Table/allascii.txt)
-uncertainty in $G$ is separate. The length and mode preparation are
-inputs, and no astronomical datum selects them.
-
-This finite state-difference result supplies the mean $h_q$ needed in
-the later mixed Einstein and source variations. It does not determine
-the baseline vacuum, full retarded $\Psi/\Phi$ or a cosmological
-$\Lambda$. The finite-amplitude scalar P001 remains unconverged;
-its original solver and grids were not changed by this calculation.
-
-### 6.1.18. A conserved compact source and local gravitational tides
-
-A central mass source can be supplied on the same finite annulus, with
-its body or inner horizon below the causal domain. The cap and exterior
-vacuum functions and dimensionless source mass are
-
-$$
-f_-=1-2b/r-H^2r^2,\qquad f_+=1-2M_p(b)/r,\qquad \hat b=b/\ell.
-$$
-
-Hold the initial physical wall radius and proper speed fixed, as well
-as H and tension. Both signed junction constraints then require
-$dM_p/db|_0=\beta_{+,0}/\beta_{-,0}=2755/8587$. Holding the parent mass
-fixed would change that speed. No regular body interior or formation
-history is supplied by this annular construction.
-
-The same continuum-normalized Dirac occupation difference is propagated
-on each member of the mass family. The mean Einstein reconstruction,
-stress, wall and observer vary together. Its two mass-flux laws and
-wall displacement have an exact triangular solution: since
-$d\ln v/d\tau=\mathrm{acc}/v$,
-
-$$
-\frac{\rho(\tau)}{v(\tau)}
-=\frac{\rho(\tau_0)}{v(\tau_0)}
-+\int_{\tau_0}^{\tau}
-\frac{\beta_+(\mu-\nu)/(k_{\mathrm{wall}}R^2)+\mu/R}{v^2}\,d\tau'.
-$$
-
-Piecewise Gauss integration on the existing field-cell breakpoints
-evaluates these primitives. The prefactor v retains the acceleration
-term; no constraint residual is canceled. The independent exact
-charged and fluid families check this reconstruction.
-
-The [compact-source reference](../results/summaries/nsc-atlas-dirac-mass-response-v3.json)
-uses $b/\ell=0,5\times10^{-5},10^{-4}$, the same 64/128 field cells,
-and joint wall/bulk quadrature orders 8/12. Its receiver is inside
-the cap at $U=.8S,V=.7S$, at fixed proper-wall radar position.
-An inward phase -V is emitted at the earlier wall time V. The smooth
-SdS continuation shares the nested observer's classical and mean
-areal-radius history, without another material wall.
-
-Define
-
-$$
-\mathcal C_B=\left.\frac{\partial}{\partial\hat b}
-\frac{\delta\ln(\omega_{\mathrm{rec}}/\omega_{\mathrm{wall}})}
-{\varepsilon_q n_{\mathrm{occ}}}\right|_{\hat b=0}.
-$$
-
-This derivative uses a source present before the window, not a retarded
-mass-switching experiment. It includes the background Einstein variation
-that a matter-only insertion on fixed geometry would omit.
-
-A second readout uses actual orthonormal curvature. In the specified
-radar observer's frame put $A=R_{0r0r}-R_{0\theta0\theta}$ and
-$B=R_{r\theta r\theta}-R_{\theta\phi\theta\phi}$. Direct Ricci/Weyl
-decomposition gives
-
-$$
-w=\frac{b+m_q}{r^3}-\frac{\kappa_g}{6}(\rho_q-p_{rq}+p_{tq}),\qquad
-A=-3w-\frac{\kappa_g}{2}(p_{rq}-p_{tq}),\qquad
-B=-3w+\frac{\kappa_g}{2}(p_{rq}-p_{tq}).
-$$
-
-The fixed vacuum term cancels. At fixed radar labels its first-order
-Weyl variation also retains $-3b\,\delta r/r^4$. For nonzero b,
-$A_0=B_0=-3b/r^3$. Define the occupied-minus-empty local ratio response
-by $\delta(B/A)=\varepsilon_q n_{\mathrm{occ}}\mathcal C_{\mathrm{tid}}$.
-The 128-cell results are:
-
-| Geometry and observer | Clock derivative $C_B$ | Tidal coefficient at $b/\ell=10^{-4}$ |
-| --- | --- | --- |
-| Nested cap-wall-exterior | -.002329216 | -540762.871 |
-| Smooth SdS cap, shared motion | -.002329519 | -540765.571 |
-
-The clock-derivative difference is $+3.03553\times10^{-7}$, with a
-correlated grid spread $2.58\times10^{-9}$ and a source-step indicator
-$5.95\times10^{-10}$. The tidal-coefficient difference is +2.7001584,
-about 4.9932 parts per million of the prepared correction, with a
-correlated grid spread .0011855. Individual tidal-coefficient grid
-spreads are about 14.59. For the supplied $\ell=10\,\mathrm{km}$,
-the occupied-minus-empty changes in B/A are $-3.55031184\times10^{-71}$
-and $-3.55032957\times10^{-71}$. Their nominal nesting difference is
-$+1.77276\times10^{-76}$. The length, source and state are inputs.
-
-All prescribed reference checks pass. The maximum normalized nested
-mass-path gap falls from $8.08\times10^{-7}$ to $1.93\times10^{-8}$;
-joint quadrature changes the clock coefficient by less than
-$4.45\times10^{-15}$. These spreads are diagnostics, not rigorous
-remainder bounds or observational confidence intervals. Earlier failed
-precision/execution records remain in the scientific owner.
-
-The local ratio is a curvature observable in the stated frame. In a
-flat-FLRW Newtonian metric its comoving counterpart compares the radial
-trace-free Hessians of $\Psi$ and $\Phi$. Reconstructing those potentials
-also requires radial zero-mode and background-split data; below the
-exterior horizon one cap FLRW pair does not cover the joined spacetime.
-This finite prepared-state result therefore supplies no absolute empty
-vacuum ratio, full vacuum $\Psi/\Phi$ or cosmological $\Lambda$.
-
-### 6.1.19. A correlated continuum parent and local vacuum regularity
-
-Specify the parent before evaluating a baseline vacuum. One explicit
-alternative is the Dirac ground state on a static product of a radial
-line with a sphere of radius $R_0=.45\ell$. In its chiral canonical frame,
-
-$$
-\mathsf{H}_{\kappa}(p)=p\sigma_3+\mu\sigma_1,\qquad
-\mu=\frac{\kappa}{R_0},\qquad \omega=\sqrt{p^2+\mu^2}.
-$$
-
-Fill its negative band for every signed angular sector, including
-each magnetic multiplet once. The Fourier measure is $dp/(2\pi)$.
-On the two incoming null legs put $a=(\omega-p)/2$ and
-$b=(\omega+p)/2$. Their plane phases are $\exp(iaU)$ and $\exp(ibV)$.
-The same normalized spinor supplies both amplitudes, so the state has
-Hardy diagonal kernels and the cross-leg kernel
-
-$$
-C_{+-}(U,V)=-\frac{\mu}{2\pi}
-K_0\!\left(|\mu|\sqrt{UV}\right),\qquad U,V>0.
-$$
-
-Here $K_0$ is the modified Bessel function. Its normalization follows
-independently from the equal-time cylinder Fourier integral. Restricting
-the global projector to a finite diamond gives a generally mixed CAR
-covariance. Its exact finite compressions retain this cross term; filling
-the negative spectrum after truncating an energy matrix selects a
-different state.
-
-Use an explicit auxiliary preparation, with fixed physical duration $S$
-and a smooth switch $\chi(s)$ supported in $(.1S,S)$, equal to one on
-$[.2S,.9S]$. Define
-
-$$
-q=\frac{N}{r},\qquad
-q_{\mathrm{aux}}=\frac{1}{R_0}
-+\chi(U)\chi(V)\left(q-\frac{1}{R_0}\right).
-$$
-
-The auxiliary product metric has $r_{\mathrm{aux}}=R_0$ and
-$N_{\mathrm{aux}}=a_{\mathrm{aux}}=R_0q_{\mathrm{aux}}$.
-Blending q directly preserves its continuous first wall jets. Where the
-switches are one this metric is conformal to the physical metric and
-the canonical massless spinor is unchanged. This neighborhood includes
-the cap detector of Section 6.1.18. The construction assigns a state;
-it is not a physical formation history or an Einstein source model.
-Stress and clocks still use the physical metric, including its anomaly.
-
-For every angular sector the auxiliary Hamiltonian differs from the
-cylinder by a bounded time-dependent potential on a common radial
-domain. Its convergent interaction series gives unitary evolution.
-The angular direct sum is unitary as well. Moreover,
-
-$$
-\{H_{\kappa},\sigma_1\}=2\kappa q_{\mathrm{aux}}
-$$
-
-gives a gap at least $|\kappa|q_{\min}$ when
-$q_{\mathrm{aux}}\ge q_{\min}>0$.
-The prescribed covariance is $C(T)=U(T)C_0U(T)^\dagger$.
-
-**Local regularity proposition.** On an admitted regular patch, this
-state is Hadamard on any relatively compact smooth interior neighborhood
-inside the matched operator region. Both geometries therefore have a
-smooth physical two-point difference on their common cap neighborhood.
-
-The [proof and calculated boundary symbols](../docs/nsc-atlas-dirac-probe.md#local-hadamard-property-for-the-declared-preparation)
-make the calculus input explicit. Fold the two sides onto a half-line.
-The transparent condition is the allowed space of a constant Hermitian
-involution that anticommutes with the normal matrix. It has maximal zero
-flux. At real spacelike frequency the decaying-root map is invertible,
-uniformly away from glancing, including both angular polarizations.
-This verifies the complementing condition for the standard finite-bundle
-first-order boundary parametrix. One-sided smoothness supplies its jets.
-
-Normal regularity follows by pairing the unitary field with smooth
-tangential tests and transferring tangential derivatives through its
-first-order equation. The resulting map from the initial Hilbert space
-to every one-sided normal Sobolev space gives smooth normal traces.
-Boundary elliptic regularity confines singularities to the compressed
-causal cone. Splitting its two orientations then makes the unwanted
-component satisfy a smooth inhomogeneous boundary problem with absent
-past data; energy uniqueness makes it smooth. Glancing remains inside
-the causal cone and does not join its opposite time orientations.
-The local CAR and the regular physical conformal map finish the argument.
-
-The existing Weyl projector and transport algebra now receives the actual
-radar metric jets through fourth order. Here local p is conjugate to
-radar x, with $\omega=\sqrt{p^2+W^2}$; it is not the incoming cylinder
-momentum label. In the canonical Pauli frame the first subleading term
-is $c_1=-pW_T\sigma_3/(4\omega^3)$.
-The first discontinuous wall coefficient enters $c_2$, through
-$[W_{xx}]=-6\kappa(M_p-b)/R^4$. This curvature contribution is retained.
-At a cap detector the two models share all local subtraction terms.
-For a single covariance the fourth-order remainder is qualitatively
-of order minus five; the two-state difference is smooth there.
-
-This establishes existence of the local relative stress for this stated
-preparation. It does not evaluate it or provide a numerical tail constant.
-The full vacuum $\Psi/\Phi$, wall renormalization and physical selection
-of the preparation remain separate work. No astronomical measurement
-sets this root radius, switch, state or resulting numerical coefficients.
-
-### 6.1.20. Inherited preparation and the cap's local late state
-
-Derive the state transport before choosing another parent benchmark. A
-complete ancestral covariance is inherited as $C_c=K C_aK^\dagger$, with
-$KK^\dagger=I_c$ for current-normalized restriction and evolution.
-Both incoming null branches, their cross-correlation and $I-C_a$ are
-transported. A change of null clock carries a square-root Jacobian on
-each kernel argument. Finite unitary transport does not select $C_a$.
-
-The actual quiet cap nevertheless selects a local asymptotic state.
-Keep $M_-=0$, $H\ell=1$, $M_+/\ell=.4$, $k_{\rm wall}\ell=2$, and the
-transparent massless Dirac probe. In $\ell$ units its signed wall obeys
-
-$$
-\beta_-=\frac{3R}{4}+\frac{1}{5R^2},\qquad
-v^2=\dot R^2=\frac{25R^2}{16}-1+\frac{3}{10R}+\frac{1}{25R^4}.
-$$
-
-This positive expanding root reaches $R>1$ in finite wall and central
-cap time. In the expanding flat cap chart its regular clock is
-$dt/d\tau=(1+v^2)/(\beta_-+Rv)$; at $R=1$ it equals $761/760$.
-After that crossing choose a Cauchy ball of physical radius
-$H^{-1}<R_B<R_w$. Its conformal future contains a neighborhood of the
-central endpoint at $\eta=0$, with a positive spatial margin. The future
-timelike wall remains outside that null domain.
-
-**Inherited-state proposition.** Suppose the inherited field state is
-Hadamard on a neighborhood of this closed ball. For Gaussian detector
-correlations take a gauge-invariant quasifree state. In each fixed
-translated central proper-time window, its full four-component two-point
-function approaches the conformal de Sitter one. Parent-dependent stress
-has a decaying amplitude, rather than a new freely chosen root state.
-
-**Proof.** Set the cut to $t=0$, $a=e^{Ht}$ and $\eta=-H^{-1}e^{-Ht}$.
-The conformal field $\psi_{\mathrm{flat}}=a^{3/2}\psi$ satisfies the flat
-massless Dirac equation. Subtract the conformal Minkowski two-point
-function as a proof reference. Its Cauchy-data difference is smooth.
-Cut off both arguments inside a smaller ball still larger than $H^{-1}$
-and evolve with the flat Dirac propagator. Finite propagation and the
-strict margin extend this smooth difference through a neighborhood of
-the virtual endpoint. No condition at a physical infinity is added.
-
-The physical two-point difference is $a^{-3/2}a'^{-3/2}F(\eta,\eta')$,
-with $F$ smooth and bounded there, so it decays as $e^{-3HT}$ under a
-common time translation $T$. The same-action tetrad stress difference is
-
-$$
-\Delta T_{\hat a\hat b}=e^{-4Ht}Q_{\hat a\hat b}(-H^{-1}e^{-Ht}),
-\qquad
-\left|\Delta T_{\hat a\hat b}-e^{-4Ht}Q_{\hat a\hat b}(0)\right|
-\leq \frac{M_1}{H}e^{-5Ht}.
-$$
-
-Here $M_1$ bounds the corresponding conformal-time derivative; anomaly
-and local curvature ambiguities cancel in the state difference.
-The amplitude $Q(0)$ and its bound are inherited data. This proves a
-local limit and a finite conditional error, without asserting equal
-finite-time states or loss of global unitary information. The
-[complete proof and calculator](../docs/nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
-give the wall positivity and domain argument.
-
-On the central geodesic the limiting Dirac kernel's scalar factor is
-$[H/(2\sinh(H(s-s'-i0)/2))]^3$. Its imaginary-time antiperiod is
-$2\pi/H$. A weak scalar-density detector coupled to $:\bar\psi\psi:$
-has a bosonic bilinear kernel with power six, giving, up to one positive
-detector constant,
-
-$$
-\mathcal R(x)=\frac{x(x^2+1)(x^2+4)}{e^{2\pi x}-1},\qquad
-x=\frac{E}{\hbar cH},\qquad
-\frac{\mathcal R(x)}{\mathcal R(-x)}=e^{-2\pi x}.
-$$
-
-The polynomial follows independently by shifting the Fourier contour
-to a nonsingular $\cosh^{-6}$ integral. Late-state translation precedes
-the long smooth observation limit; finite switching does not have the
-exact stationary ratio. Detector statistics and the conformal/no-hair
-mechanism have [prior literature](../docs/arxiv-studies.md#quiet-cap-inherited-state-and-detector-19-october-2026).
-The project result connects them to this sourced wall's causal future.
-
-Finally the existing cap trace, $A=-11\hbar cH^4/(240\pi^2)$, now has a
-full asymptotic stress interpretation. Homogeneity, isotropy and
-conservation give $-\rho+3p=A$ and $d\rho/dt+4H\rho=-HA$.
-The radiation constant decays as $a^{-4}$, leaving, at fixed renormalized
-classical $\Lambda$ and $G$,
-
-$$
-\langle T_{\mu\nu}\rangle_{\rm late}
-=-\frac{11\hbar cH^4}{960\pi^2}g_{\mu\nu},\qquad
-\delta\Lambda\ell^2=\frac{11}{120\pi}\frac{\ell_P^2}{\ell^2}.
-$$
-
-For the supplied $\ell=10$ km ruler this is $7.62221759052\times10^{-80}$;
-the temperature is $3.64446440565\times10^{-8}$ K and the stress
-e-folding interval is $8.33910237995$ microseconds. At $x=1$ the
-detector ratio is $0.00186744273171$. These are conditional model
-scales, with no observational calibration. Seven new independent controls
-pass, including the separate detector integral and the FLRW Ward identity.
-
-The same smooth cap has the same late state and source: the late
-nesting-specific vacuum offset is zero at fixed $H$. This does not
-generate the supplied classical cap scale or solve quantum wall
-backreaction. Regularity of a fully transmitted inherited state on the
-later ball remains a hypothesis. The compact-source $b>0$ cap is not
-conformally flat; its finite-time state and $\Psi/\Phi$ require their
-own compatible source history and retarded response.
-
-### 6.1.21. Composition and conservation of a nested geometric response
-
-<!-- nsc-claim:atlas-compositional-gravity -->
-
-The next connection runs from a nested geometry to its effective scalar
-gravity and expansion test. On one common slice/clock, retain each
-region's volume and integrals of theta, theta squared, shear squared,
-intrinsic curvature, normal energy and spatial stress trace. Add these
-seven moments, with every material interface counted once. If f_i is
-its volume fraction and H_i its mean theta/3, the variance identity gives
-
-$$
-H_D=\sum_i f_iH_i,\qquad
-Q_D=\sum_i f_iQ_i+6\sum_i f_i(H_i-H_D)^2.
-$$
-
-Moment addition is associative. The same result therefore follows from
-direct integration or successive child-to-parent composition. With the
-surface relation C_surface=2*kappa*E_surface retained, summing the local
-Hamiltonian preserves the averaged scalar constraint at every level.
-Dropping the inter-region variance would violate it. This applies
-[established multidomain averaging](https://arxiv.org/html/1002.3912)
-to the actual signed atlas and its material walls; it is not a new
-spacetime gluing theorem.
-
-For the existing two-level slice, grouping its cap, Kottler host and
-Schwarzschild exterior gives
-
-$$
-Q_D\ell^2=0.280192255373+0.233947711669
-=0.514139967042.
-$$
-
-The required between-region term is 45.50% of the total for this grouping.
-Its 32/64 quadrature change is -5.02e-11; this is a numerical indicator,
-not a certified bound. All wall atoms remain explicit. The initial
-material-boundary fluxes in ell^2 units are -2.25902368244,
-6.03328027292 and -3.77425659048; they cancel globally. Reynolds transport
-adds these fluxes to the individual volume rates. Their contribution to
-the derivative of the H weights is .008489878632/ell^2; local H
-derivatives remain separate physical inputs. Mean local expansion cannot
-silently be used as the expansion of a moving material volume.
-
-For a regular history in the same clock, let R be its mean3-curvature,
-P its complete lapse acceleration, and E,S its correspondingly weighted
-explicit energy and spatial stress trace. The averaged Hamiltonian and
-Raychaudhuri equations give
-
-$$
-3H^2=\kappa E-(Q+R)/2,\qquad
-3(H_{,t}+H^2)=-\kappa(E+S)/2+Q+P.
-$$
-
-Set A=3Q+R+2P and Lambda_trace=(Q-R+2P)/4. Define the explicit-source
-balance J=E_dot+3HE+HS. Differentiation now proves
-
-$$
-Q_{,t}+R_{,t}+2HA=2\kappa J,\qquad
-\Lambda_{{\rm tr},t}=A_{,t}/4+HA-\kappa J.
-$$
-
-The corresponding source is
-
-$$
-\kappa\rho_g=\Lambda_{\rm tr}-A/4,\qquad
-\kappa p_g=-\Lambda_{\rm tr}-A/12.
-$$
-
-Pure constant vacuum requires A=0 and J=0 on an interval. A constant
-vacuum component plus radiation is also possible: for J=0, the trace
-is constant exactly when A_dot+4HA=0. A non-vacuum result at one instant
-does not distinguish those histories. Neither missing derivative is
-chosen to satisfy this equation.
-
-The same trace and vacuum condition follow independently from expansion:
-
-$$
-\Lambda_{\rm tr}=3H^2+\frac{3}{2}H_{,t}-\kappa(E-S)/4,\qquad
-A=6H_{,t}+\kappa(3E+S).
-$$
-
-On the declared instantaneous normal continuation, H*ell=.092609048739
-and H_dot*ell^2=.278302667627 recover the recorded trace -.0153506330754
-and vacuum condition 2.11796240047 in ell units. H here is domain volume
-expansion; its identification with sky-inferred expansion requires the
-missing light-cone calculation. The [full derivation and calculator](../docs/schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
-state the common-clock, source and infinite-resolution conditions.
-
-These proofs establish a composable scalar response and its required
-time balance. They do not supply a collective parent metric, a closed
-history or a generated cosmological constant. The existing quiet
-massless model still has no demonstrated nesting-induced bulk Lambda.
-The [compact proof calculation](../results/summaries/nsc-compositional-proofs-v1.json)
-binds the source hashes and the finite application; full fields need not
-be stored to reproduce it.
-
-### 6.2. The retained local incoming gate
-
-<!-- nsc-claim:local-source-insertion-majorant -->
-
-Evidence: [majorant v7 record](../results/development/nsc-ks-source-operator-majorant-v7.json)
-and [gate budget v5 record](../results/development/nsc-ks-gate-budget-v5.json).
-
-The [local incoming source-insertion majorant v7](../docs/nsc-ks-source-operator-majorant-v7.md)
-is a separate controlled application. For the fixed switched state law
-$C_\Sigma[g]=U_gC_{\mathrm{up}}U_g^\dagger$ on $I=S(1)+[.12,.18]$,
-family $(14,1)$ covers **1168/1168 signed rows**, with original weights
-counted once and no remaining row keys. Its continuous insertion bounds are
-
-$$
-\epsilon_N\leq
-3646674054457366029024452496769420151764188105426118876609\,2^{-229}.
-$$
-
-$$
-\epsilon_\beta\leq
-5793343250846686183515013928067141454707331929528967339969\,2^{-230}.
-$$
-
-These are approximately $4.226958072607968\times10^{-12}$ and
-$3.357610065481873\times10^{-12}$ for this family's source-error
-insertion. The physical local gate remains **OPEN**:
-`physical_upstream_budget_component` is null. Source quadrature,
-numerical field error, value-assembly arithmetic and every other source
-family are excluded from these bounds. Complete row coverage in this
-family does not supply those missing errors.
-
-The [v5 gate budget](../docs/nsc-ks-gate-budget-v5.md) names nine distinct
-components, with total error allocation $2\times10^{-11}$ and residual
-reserve $10^{-11}$ against the physical tolerance $3\times10^{-11}$.
-Its applicable component bounds remain null; 60 positive and 120 signed
-families are declared requirements rather than authenticated coverage.
-The gate is neither an existence nor a non-existence certificate and
-does not determine $\Lambda_{\mathrm{eff}}$. Its paused campaign does not
-invalidate the finite inheritance theorem or the scalar-chain results.
-Retired supporting records are cited at
-[Zenodo](https://doi.org/10.5281/zenodo.23090015).
-
-## III. A finite map of possible geometries
+A nested drawing becomes a spacetime through its sources and junctions. The constructions in this part assemble regular centres, material interfaces, shared parents and named observers. They show both successful attachments and precise exclusions. Causal access is established before a boundary or remote region is used as a source for an observer.
 
 ### 7. Start with two holes, without manufacturing two children
 
@@ -2255,7 +672,7 @@ construction and checks.
 
 ![Two-hole parent slice and its distinct asymptotic ends](../results/development/nsc-cosmological-atlas-v2/parent-slice.png)
 
-*Figure 4. The explicit two-hole initial-data benchmark. This is a
+*Figure 2. The explicit two-hole initial-data benchmark. This is a
 nonspherical common parent with unequal ends, not a solved evolution that
 creates children. Local spherical models must earn an attachment to it or
 belong to a separate parent family.*
@@ -2274,7 +691,7 @@ data unchanged. No explicit sufficient separation is certified here.
 
 <!-- nsc-claim:atlas-junction-screen -->
 
-Evidence: [radiation junction](../results/development/nsc-cosmological-atlas-v2/junction.json),
+Derivation and calculation: [radiation junction](../results/development/nsc-cosmological-atlas-v2/junction.json),
 [moving-boundary conservation/control](../results/development/nsc-cosmological-atlas-v3/moving-boundary.json),
 and [source assumptions](../docs/nsc-atlas-moving-boundaries.md).
 
@@ -2348,7 +765,7 @@ Section 11; the source has not been retuned to make the segment work.
 
 <!-- nsc-claim:atlas-sourced-slice -->
 
-Evidence: [slice constraints](../results/development/nsc-cosmological-atlas-v4/connection-slice.json),
+Derivation and calculation: [slice constraints](../results/development/nsc-cosmological-atlas-v4/connection-slice.json),
 [parent assembly](../results/development/nsc-cosmological-atlas-v4/parent-assembly.json),
 [slice derivation](../docs/nsc-atlas-connection-slice.md), and
 [end-only gluing argument](../docs/nsc-atlas-connection-gluing.md).
@@ -2410,7 +827,7 @@ estimate.
 
 ![A regular cap, sourced wall, vacuum transition and bridge](../results/development/nsc-cosmological-atlas-v4/connection-slice.png)
 
-*Figure 5. The verified initial connection. Spatial distances are not ages.
+*Figure 3. The verified initial connection. Spatial distances are not ages.
 Because $|R'|>1$ on part of the chosen slice, the radius profile should
 not be interpreted as a Euclidean surface of revolution. The protected
 right-exterior observer interval is a separate causal-domain statement.*
@@ -2511,7 +928,7 @@ infinity; $R_{\mathrm{cut}}/\ell=4$ is the finite calculation domain.
 
 ![Two successive sourced boundaries and the resolved inner throat](../docs/figures/nsc-atlas-nested-slice.png)
 
-*Figure 6. One initial radial chain with two sourced boundaries. The inset
+*Figure 4. One initial radial chain with two sourced boundaries. The inset
 resolves the host's positive-radius minimum. Proper radius versus areal
 radius is not a Euclidean embedding or a causal-passage diagram. The same
 membrane law holds at both walls; regional state and slicing data are supplied.*
@@ -2584,7 +1001,7 @@ through the host bridge.
 
 <!-- nsc-claim:atlas-radar-clock-inverse -->
 
-The atlas now has a geometry inverse using an ideal negligible transponder
+The atlas has a geometry inverse using an ideal negligible transponder
 and a calibrated proper clock on its quiet membrane. A central clock sends
 a radial pulse at t_minus and receives its immediate return at t_plus.
 The transponder is a test device; the scalar's transparent boundary law
@@ -2763,7 +1180,7 @@ result, without an assertion about additional global extensions.
 
 ![Incoming host characteristics from the original slice to both material walls](../docs/figures/nsc-atlas-two-wall-history.png)
 
-*Figure 7. Two host null-coordinate panels of the common embedding.
+*Figure 5. Two host null-coordinate panels of the common embedding.
 Horizontal constant-$p$ and constant-$q$ rays connect the original slice
 (grey) to the inner and outer worldtubes (blue), respectively. Displayed
 coordinate offsets position each panel; both host origins remain fixed
@@ -2784,7 +1201,7 @@ formation mechanism or origin of the regional vacuum values.
 
 <!-- nsc-claim:atlas-parent-normal-evolution -->
 
-Evidence: [normal-clock derivation](../docs/nsc-atlas-parent-evolution.md)
+Derivation and calculation: [normal-clock derivation](../docs/nsc-atlas-parent-evolution.md)
 and [compact evolving-parent calculation](../results/summaries/nsc-atlas-parent-evolution-v1.json).
 
 Choose freely falling observers initially normal to the original shared
@@ -2793,7 +1210,7 @@ walls and both bridge minima. Its outer boundary follows the original
 $R=4\ell$ normal ray. This is a declared averaging clock on the same
 quiet spacetime, with unchanged masses, regional curvatures and membrane
 law. It provides the previously missing physical history for the
-composition and source-balance equations in Section 6.1.21.
+composition and source-balance equations in Section 17.12.
 
 In a smooth regional chart write
 $ds^2=-dt^2+A^2dx^2+R^2d\Omega^2$, with $x$ the initial proper-distance
@@ -2929,7 +1346,7 @@ has not been derived by recovering its supplied value.
 
 <!-- nsc-claim:atlas-compact-parent -->
 
-Evidence: [compact-parent derivation](../docs/nsc-atlas-compact-parent.md)
+Derivation and calculation: [compact-parent derivation](../docs/nsc-atlas-compact-parent.md)
 and [complete-domain calculation](../results/summaries/nsc-atlas-compact-parent-v1.json).
 
 The isolated parent's dilution can be removed by constructing a complete
@@ -2972,7 +1389,7 @@ arbitrary outer cutoff.
 
 ![Intrinsic profiles of two compact parent completions](../docs/figures/nsc-atlas-compact-parent.png)
 
-*Figure 8. The two complete compact initial profiles. Both use the same
+*Figure 6. The two complete compact initial profiles. Both use the same
 connector and local membrane law; the lower state contains an additional
 right-side descendant. Dashed lines are physical membranes. The radius
 is plotted against proper distance, so these are intrinsic profiles rather
@@ -2984,7 +1401,7 @@ $0\leq t/\ell\leq.01$. Each half contributes its seven moments and
 its physical wall atoms once. The common throat has no surface source.
 For the symmetric double, extensive moments double and all means stay
 unchanged. Different halves require the between-region expansion
-variance from Section 6.1.21.
+variance from Section 17.12.
 
 Thus the proper-volume fraction $f_H$ of regions with $H\ell=1$ follows
 from the geometry and its evolution. At $t/\ell=.01$,
@@ -3088,12 +1505,11 @@ are complete on the stated finite domain. A source-derived regular
 continuation, cosmological observer history and the origin of the
 regional vacuum values remain the next physical questions.
 
-
 ### 10.8. The nested body in an expanding parent
 
 <!-- nsc-claim:atlas-cosmological-parent -->
 
-Evidence: [cosmological attachment and observer derivation](../docs/nsc-atlas-parent-observables.md),
+Derivation and calculation: [cosmological attachment and observer derivation](../docs/nsc-atlas-parent-observables.md),
 [compact calculation](../results/summaries/nsc-atlas-parent-observables-v1.json)
 and [independent checks](../tests/test_nsc_atlas_parent_observables.py).
 
@@ -3182,7 +1598,7 @@ distinguishes expansion, curvature trace and vacuum pressure.
 
 ![Four calculated views of surrounding geometry](../docs/figures/nsc-atlas-parent-observables.png)
 
-*Figure 9. A: the cosmological join and its received light ray.
+*Figure 7. A: the cosmological join and its received light ray.
 B: the attributed two-brane lensing discriminator. C: the existing
 constant-tension wall and its unstable critical comparison.
 D: a separate bulk geometry inducing positive local curvature.
@@ -3194,7 +1610,7 @@ five-dimensional backgrounds and have not been combined into one model.*
 
 <!-- nsc-claim:surrounding-bulk-reference -->
 
-Evidence: [source conventions and geometric checks](../docs/nsc-atlas-parent-observables.md#b-a-surrounding-bulk-can-induce-local-curvature),
+Derivation and calculation: [source conventions and geometric checks](../docs/nsc-atlas-parent-observables.md#b-a-surrounding-bulk-can-induce-local-curvature),
 [finite examples](../results/summaries/nsc-atlas-parent-observables-v1.json),
 [Shiromizu--Maeda--Sasaki](https://arxiv.org/html/gr-qc/9910076v3),
 [Maartens--Koyama](https://arxiv.org/html/1004.3962)
@@ -3302,7 +1718,7 @@ perturbations have not been grafted onto the detuned de Sitter example.
 
 <!-- nsc-claim:wall-equilibrium-closure -->
 
-Evidence: [signed wall proof and inheritance map](../docs/nsc-atlas-parent-observables.md#d-does-the-actual-wall-select-its-own-cap-scale),
+Derivation and calculation: [signed wall proof and inheritance map](../docs/nsc-atlas-parent-observables.md#d-does-the-actual-wall-select-its-own-cap-scale),
 [original wall implementation](../src/recursive_horizons/nsc_atlas_nested_slice.py)
 and [symbolic and geometric controls](../tests/test_nsc_atlas_parent_observables.py).
 The [compact evidence](../results/summaries/nsc-atlas-parent-observables-v1.json)
@@ -3406,7 +1822,7 @@ construction contributes its established mechanism with its premises.
 
 <!-- nsc-claim:population-source-balance -->
 
-Evidence: [energy accounting and finite counterexample](../docs/nsc-atlas-parent-observables.md#e-growing-black-hole-masses-and-the-missing-energy-equation),
+Derivation and calculation: [energy accounting and finite counterexample](../docs/nsc-atlas-parent-observables.md#e-growing-black-hole-masses-and-the-missing-energy-equation),
 [calculated balances](../results/summaries/nsc-atlas-parent-observables-v1.json)
 and [conservation checks](../tests/test_nsc_atlas_parent_observables.py).
 
@@ -3450,7 +1866,7 @@ cosmological density fractions or matter--antimatter asymmetry.
 
 <!-- nsc-claim:occupied-wall-source -->
 
-Evidence: [state, stress and signed geometry](../docs/nsc-atlas-occupied-wall.md),
+Derivation and calculation: [state, stress and signed geometry](../docs/nsc-atlas-occupied-wall.md),
 [finite calculation](../results/summaries/nsc-atlas-occupied-wall-v1.json)
 and [independent controls](../tests/test_nsc_atlas_occupied_wall.py).
 
@@ -3626,7 +2042,7 @@ needed before identifying that spacing with an observed spectral line.
 
 <!-- nsc-claim:occupied-wall-parent-clocks -->
 
-Evidence: [common parent and null transport](../docs/nsc-atlas-occupied-wall.md#two-unequal-interiors-in-one-evolving-cosmology),
+Derivation and calculation: [common parent and null transport](../docs/nsc-atlas-occupied-wall.md#two-unequal-interiors-in-one-evolving-cosmology),
 [state and clock results](../results/summaries/nsc-atlas-occupied-wall-v1.json)
 and [piecewise null-ODE controls](../tests/test_nsc_atlas_occupied_wall.py).
 
@@ -3649,7 +2065,7 @@ The wall law and couplings are common; the states, radii and masses differ.
 
 ![Occupied states, two rooms and their observer responses](../docs/figures/nsc-atlas-occupied-wall.png)
 
-*Figure 10. Two disjoint compensated regions in the same expanding dust
+*Figure 8. Two disjoint compensated regions in the same expanding dust
 parent. Parent positions are comoving; the interiors are schematic.
 The right panels show the reference radial mass minimum and the
 clock response to three finite states with unchanged couplings.
@@ -3714,11 +2130,142 @@ and a collective source law remain physical questions. No cosmic
 density fraction or matter--antimatter asymmetry is inferred from
 this finite state-to-observer proof.
 
-### 10.14. A field law that changes the inherited vacuum
+### 11. Complete one reference before assigning its causal arrows
+
+<!-- nsc-claim:atlas-causal-access -->
+
+Derivation and calculation: [isolated causal completion](../results/development/nsc-cosmological-atlas-v5/causal-map.json),
+[observer access](../results/development/nsc-cosmological-atlas-v5/observer-access.json),
+and [protected parent interval](../results/development/nsc-cosmological-atlas-v4/causal-window.json).
+
+The wall's isolated spherical completion is the flat-exterior limit of
+solution 13 in [Aguirre and Johnson, gr-qc/0508093v2,
+Figures 7 and 10](https://arxiv.org/html/gr-qc/0508093v2).
+Writing $x=R/\ell$, its expanding branch has
+
+$$
+\dot R^2=\frac{25x^2}{16}-1+\frac{3}{10x}+\frac{1}{25x^4}>0.
+$$
+
+It starts at a finite proper-past $R=0$ boundary in the Schwarzschild
+white-hole sector, crosses $R=2M$ into the left exterior, and crosses the
+de Sitter horizon into an expanding interior chart. It reaches arbitrarily
+large radius at infinite wall proper time. Its Schwarzschild curvature
+$48M^2/R^6$ diverges at the past boundary. The regular cap on the
+chosen slice therefore does not imply a regular past formation.
+The retained reference also contains the usual future Schwarzschild
+black-hole singular boundary.
+
+Choose three clocks. $C$ is the cap center, with de Sitter flat proper
+time $t_C$. $W$ carries wall proper time $\tau_W$, set to zero at
+$R=1.5\ell$. $P$ is static in the right exterior at
+$R_P=1.6\ell$, with proper time
+$\tau_P=\sqrt{1-2M/R_P}\,t_{\mathrm{Schw}}$. Their origins coincide
+with a selected slice convention; this is not an equality of universe ages.
+
+For the flat de Sitter chart,
+
+$$
+\eta=-\ell e^{-t_C/\ell},\qquad R=a r,\qquad a=e^{t_C/\ell}.
+$$
+
+Radial null lines have constant $\eta-r$ or $\eta+r$.
+At $W_0$, $\eta=-\ell$ and $r=1.5\ell$.
+Its inward ray would reach $\eta=0.5\ell$, outside the chart's
+future $\eta<0$; hence it never reaches $C$.
+A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
+
+![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
+
+*Figure 9. The isolated reference in joined causal charts. Horizons are
+clipped to retained domains; the central cosmological horizon continues
+into the Schwarzschild chart along its appropriate constant null coordinate.
+The faint past $R=0$ line also shows uncut chart context, part of which is
+excised. Open wall endpoints at $R/\ell=0.02$ and $6$ mark finite
+plot samples, not physical beginnings or endings.*
+
+| Emission and destination | Result in this reference | Required distinction |
+| --- | --- | --- |
+| New $C\to W$ or $W\to C$ emission at or after the anchor slice | No future reception | Earlier signals may arrive later |
+| Right parent $P\to W$ or $P\to C$ | No future causal route | Left and right exterior regions are different |
+| Early $W\to C$, while $R<\ell$ | Allowed | Reception time depends on the emission event |
+| Early $C\to W\to P$, crossing while $R<2M$ | Allowed | The limiting horizon ray has no finite parent reception |
+| These same arrows in a glued multi-body future | Unresolved | Initial-data gluing does not supply that global future |
+
+For a wall event with interior time $t_W$, the central emission reaching
+it and the reception of its inward ray satisfy
+
+$$
+t_e=t_W-\ell\ln(1+R/\ell),\qquad
+t_r=t_W-\ell\ln(1-R/\ell).
+$$
+
+The second relation requires $R<\ell$.
+At the early event $R=0.5\ell$, the recorded central emission is
+$-1.5242168241\ell$ and inward reception is
+$-0.4256045355\ell$. An outward early route through that event reaches
+$P$ at its own proper time $+2.5311656510\ell$.
+Thus exclusion of **new emissions** after a slice must never be rewritten
+as exclusion of all later receptions. Emissions approaching the central
+horizon from below can arrive arbitrarily late.
+
+The critical central emission for escape to the right parent is
+$t_C=-1.2312944525\ell$. Equality follows the parent horizon and has
+no finite parent reception. That horizon extends into the cap along
+$\eta-r=\eta_W(2M)-r_W(2M)$; it is not the surface $R=2M$
+everywhere. The central observer's de Sitter horizon $\eta+r=0$
+is a different boundary. Detailed clock domains and finite checks are
+retained in the [observer note](../docs/nsc-atlas-causal-observers.md).
+
+### 12. Different exteriors can be locally indistinguishable
+
+There is also a result that does not require the glued parent's full future.
+Retain the exact right Schwarzschild $K=0$ slice for
+$2M<R<R_{\mathrm{cut}}$, with $R_{\mathrm{cut}}=10M$.
+For a static observer at $R_{\mathrm{obs}}=4M$, the exterior cutoff
+cannot influence it within
+
+$$
+0<t_{\mathrm{Schw}}<
+r_*(R_{\mathrm{cut}})-r_*(R_{\mathrm{obs}}),\qquad
+r_*(R)=R+2M\ln(R/(2M)-1).
+$$
+
+The observer's proper duration is the right side multiplied by
+$\sqrt{1-2M/R_{\mathrm{obs}}}$.
+For $M=0.4\ell$, the bound is
+$t_{\mathrm{Schw}}<3.5090354889\ell$, or
+$\tau_P<2.4812627896\ell$.
+The inner optical boundary is at negative infinity, so it introduces no
+finite inner cutoff.
+
+Shared smooth vacuum data give the same vacuum development in this domain.
+The [owning argument](../docs/nsc-atlas-causal-observers.md) uses standard
+Cauchy-development uniqueness, with [Sbierski
+(1309.7591v2)](https://arxiv.org/html/1309.7591v2) as a source.
+The bound ends a guaranteed interval; it does not predict that a signal
+actually arrives then. Matching additional fields and their states requires
+additional data.
+
+This supplies one precise atlas of indistinguishable exteriors. Distinct
+larger assemblies can share a protected local geometry. The next useful
+question is which later measurement or extra state datum separates them.
+Failure to distinguish exteriors can be a result, rather than a reason to
+add unconstrained parameters until a preferred story appears.
+
+## III. One field law from parent vacuum to evolving matter
+
+This is the central source history of the atlas. A charged membrane changes four-form flux; a coupled scalar carries the resulting vacuum floor and excitation. The calculation follows that action through regular preparation, real parent sources, a three-region constrained slice and a protected evolving cosmology. Density growth and the remaining state freedom emerge from the same equations. The conditional initial data are stated once in each construction and carried through its consequences.
+
+### 13. The shared source and its cosmological domain
+
+The following sections give the worked constructions and their attributed mathematical inputs.
+
+### 13.1. A field law that changes the inherited vacuum
 
 <!-- nsc-claim:charged-vacuum-inheritance -->
 
-Evidence: [action, conservation and composition](../docs/nsc-atlas-flux-transition.md),
+Derivation and calculation: [action, conservation and composition](../docs/nsc-atlas-flux-transition.md),
 [symbolic and numerical record](../results/summaries/nsc-atlas-flux-transition-v1.json)
 and [scientific checks](../tests/test_nsc_atlas_flux_transition.py).
 
@@ -3800,11 +2347,11 @@ The signs are retained after using this potential. Given the inner mass
 and initial radius/speed, the unsquared equation fixes the outer mass.
 That same mass becomes the next wall's inner mass.
 
-### 10.15. Three vacuum regions in one evolving cosmology
+### 13.2. Three vacuum regions in one evolving cosmology
 
 <!-- nsc-claim:charged-shared-parent -->
 
-Evidence: [finite continuation and cosmological observer](../docs/nsc-atlas-flux-transition.md#a-composed-finite-geometry-with-calculated-vacuum-changes),
+Derivation and calculation: [finite continuation and cosmological observer](../docs/nsc-atlas-flux-transition.md#a-composed-finite-geometry-with-calculated-vacuum-changes),
 [endpoint values and independent quadratures](../results/summaries/nsc-atlas-flux-transition-v1.json).
 
 Declare $\Lambda_bL_{\rm ref}^2=0$,
@@ -3853,7 +2400,7 @@ Inner transitions do not change the outside flux or select its value.
 
 ![Inherited flux, common evolution and tidal curvature](../docs/figures/nsc-atlas-flux-transition.png)
 
-*Figure 11. One shared charged-membrane law gives three vacuum values.
+*Figure 10. One shared charged-membrane law gives three vacuum values.
 The middle panel uses one common clock and its synchronized cosmological
 join. The right panel separates mass and vacuum in free-fall tidal
 measurements. The initial-region drawing is not a nucleation history.*
@@ -3892,11 +2439,11 @@ nucleation. Selecting a formation history and flux sector, with reheating
 and observable consequences, is next; refining these trajectories would
 not select the cosmological scale.
 
-### 10.16. Preparing the scalar, membrane and geometry together
+### 13.3. Preparing the scalar, membrane and geometry together
 
 <!-- nsc-claim:scalar-gravity-preparation -->
 
-Evidence: [coupled preparation and scope](../docs/nsc-atlas-scalar-preparation.md),
+Derivation and calculation: [coupled preparation and scope](../docs/nsc-atlas-scalar-preparation.md),
 [regular geometry and checks](../results/summaries/nsc-atlas-scalar-preparation-v1.json)
 and [scientific controls](../tests/test_nsc_atlas_scalar_preparation.py).
 
@@ -3995,16 +2542,16 @@ validated interval proof of existence or uniqueness.
 
 ![Scalar layer, shared geometry and continued boundary](../docs/figures/nsc-atlas-scalar-preparation.png)
 
-*Figure 12. The scalar transition layer and gravitational caps are solved
+*Figure 11. The scalar transition layer and gravitational caps are solved
 together with the membrane. Both field value and common-normal derivative
 are continuous. The right panel shows the continued timelike boundary.
 Lengths and field values use the declared normalized variables.*
 
-### 10.17. Physical boundary reduction and the prepared child
+### 13.4. Physical boundary reduction and the prepared child
 
 <!-- nsc-claim:scalar-preparation-schur -->
 
-Evidence: [boundary action and continuation](../docs/nsc-atlas-scalar-preparation.md#a-physical-scalar-boundary-reduction),
+Derivation and calculation: [boundary action and continuation](../docs/nsc-atlas-scalar-preparation.md#a-physical-scalar-boundary-reduction),
 [independent action and pole transfer](../results/summaries/nsc-atlas-scalar-preparation-v1.json).
 
 At this solved geometry, the regular scalar maps
@@ -4081,11 +2628,11 @@ preparation is needed if substantial child matter is claimed. Absolute
 vacuum scale, black-hole collapse formation and infinite physical nesting
 remain separate questions.
 
-### 10.18. Real parent sources and received energy
+### 13.5. Real parent sources and received energy
 
 <!-- nsc-claim:prepared-parent-transport -->
 
-Evidence: [causal and energy derivation](../docs/nsc-atlas-parent-transport.md),
+Derivation and calculation: [causal and energy derivation](../docs/nsc-atlas-parent-transport.md),
 [compact calculation and independent checks](../results/summaries/nsc-atlas-parent-transport-v1.json).
 
 The small regular pole amplitude is not the transmission coefficient
@@ -4161,7 +2708,7 @@ source data or other geometries can retain degeneracies.
 
 ![Parent causal access and received trajectories](../docs/figures/nsc-atlas-parent-transport.png)
 
-*Figure 13. The left panel identifies the parent region that can signal
+*Figure 12. The left panel identifies the parent region that can signal
 the central child from the selected initial slice. The right panel shows
 three transmitted massive trajectories. The lowest-energy example enters
 the child but misses the center; the other two reach it at finite times.*
@@ -4173,7 +2720,7 @@ Direct integration of the child trajectory agrees with the closed
 inverse within $7\times10^{-14}L_{\rm ref}/c$. Two background
 tolerances change the primary arrival by $1.06\times10^{-11}$ and
 its energy ratio by $8.74\times10^{-13}$. These are numerical checks,
-not observational errors. Section 10.17's two de Sitter comparison
+not observational errors. Section 13.4's two de Sitter comparison
 metrics bracket the residual homogeneous-background correction; they
 do not bound backreaction from a new material population.
 
@@ -4204,15 +2751,15 @@ interface equations. Population normalization and the physical ruler
 remain inputs to be supplied. The present result makes the geometric
 part of that future source-to-observer calculation explicit.
 
-### 10.19. A finite parent source with its gravitational response
+### 13.6. A finite parent source with its gravitational response
 
 <!-- nsc-claim:finite-parent-scalar-source -->
 
-Evidence: [source, constraint and matching derivation](../docs/nsc-atlas-parent-source.md),
+Derivation and calculation: [source, constraint and matching derivation](../docs/nsc-atlas-parent-source.md),
 [finite preparations and independent checks](../results/summaries/nsc-atlas-parent-source-v1.json).
 
 The next preparation includes the source's gravity. Retain the action,
-charges and tension of Section 10.16, and prescribe a finite compact
+charges and tension of Section 13.3, and prescribe a finite compact
 scalar displacement in the parent. On the initial slice, the spatial
 extrinsic curvature and scalar momentum vanish. This is a time-symmetric
 packet, not a purely incoming wave. Its prior formation history is supplied
@@ -4300,7 +2847,7 @@ and its initial areal acceleration by $4.569211$ percent.
 
 ![Finite scalar preparation and its spatial gravity](../docs/figures/nsc-atlas-parent-source.png)
 
-*Figure 14. The specified scalar packet and required narrow wall correction
+*Figure 13. The specified scalar packet and required narrow wall correction
 are accompanied by a jointly solved spatial geometry. The conformal factor
 changes on both caps. These are different constrained initial data, not
 an instantaneous signal travelling from the packet to the child.*
@@ -4331,11 +2878,11 @@ open. The bulk vacuum values are unchanged. The next connected problem
 is the evolution of these data and the energy delivered through their
 moving boundary, followed by the stress required for clustering.
 
-### 10.20. A conditional inward pulse from the excited parent
+### 13.7. A conditional inward pulse from the excited parent
 
 <!-- nsc-claim:parent-inward-transfer-limit -->
 
-Evidence: [weak-corner preparation and transfer derivation](../docs/nsc-atlas-parent-source.md#a-weak-initial-corner-can-carry-a-real-inward-pulse),
+Derivation and calculation: [weak-corner preparation and transfer derivation](../docs/nsc-atlas-parent-source.md#a-weak-initial-corner-can-carry-a-real-inward-pulse),
 [exact seed and independent massive-field control](../results/summaries/nsc-atlas-parent-source-v1.json).
 
 Smooth second-order compatibility at the initial interface is a choice
@@ -4419,14 +2966,14 @@ before proper time $2.07981585635L_{\rm ref}/c$, obtained from its
 de Sitter domain of dependence. This is a causal front time, not a
 detector threshold or received waveform. The next step is a coupled
 causal development that tests the nonzero transfer and pressure relation
-at finite times. The smooth source of Section 10.19 remains a distinct
+at finite times. The smooth source of Section 13.6 remains a distinct
 preparation control, not a compulsory gate on this weak-corner route.
 
-### 10.21. A one-sided geometric observer and the full mass balance
+### 13.8. A one-sided geometric observer and the full mass balance
 
 <!-- nsc-claim:geometric-wall-observer -->
 
-Evidence: [observer and energy derivation](../docs/nsc-atlas-geometric-observer.md),
+Derivation and calculation: [observer and energy derivation](../docs/nsc-atlas-geometric-observer.md),
 [coupled reference and independent checks](../results/summaries/nsc-atlas-geometric-observer-v1.json).
 
 An observer relation can be derived without first knowing the incident
@@ -4519,7 +3066,7 @@ accretion measurement, even in this explicit coupled nested geometry.
 
 ![Pressure work and the source-independent tidal test](../docs/figures/nsc-atlas-geometric-observer.png)
 
-*Figure 15. Left: the solved continuation gains mass with zero scalar
+*Figure 14. Left: the solved continuation gains mass with zero scalar
 influx; pressure work explains the change. Right: the star is its one
 pressure/curvature point. The other markers are explicitly synthetic
 calibration and withholding checks, not observed universes or new solutions.*
@@ -4531,11 +3078,11 @@ Rainich theorem, a globally reconstructed parent or an empirically selected
 cosmology. They supply finite-time diagnostics for the coupled evolution
 that remains to be constructed.
 
-### 10.22. What an additional inherited region can identify
+### 13.9. What an additional inherited region can identify
 
 <!-- nsc-claim:one-wall-inheritance-ambiguity -->
 
-Evidence: [coupling equivalence and inverse](../docs/nsc-atlas-geometric-observer.md#why-one-wall-cannot-determine-the-inherited-couplings),
+Derivation and calculation: [coupling equivalence and inverse](../docs/nsc-atlas-geometric-observer.md#why-one-wall-cannot-determine-the-inherited-couplings),
 [exact identity and numerical controls](../results/summaries/nsc-atlas-geometric-observer-v1.json).
 
 There is a precise reason to extend the atlas beyond one interface.
@@ -4605,12 +3152,12 @@ third region exists, or that these regions can all be observed in a
 common normalization. The following construction supplies the third
 initial region and a protected evolving parent domain.
 
-### 10.23. Three sourced regions on one compact initial slice
+### 13.10. Three sourced regions on one compact initial slice
 
 <!-- nsc-claim:shared-scalar-initial-atlas -->
 
 The previous ambiguity can now be tested on a physical third initial
-region. Keep the scalar/four-form action of Section 10.16, with
+region. Keep the scalar/four-form action of Section 13.3, with
 $\kappa=1$, $\epsilon=1/4$, $\omega=20$, $e=1/2$, $\sigma=1/5$
 and zero bare density. Inside outward, use fluxes $(1/2,1,3/2)$ and
 one uniform initial field $\phi_0=-\sqrt{3}/80$, at the grandchild
@@ -4675,7 +3222,7 @@ proof are in the [shared-slice owner](../docs/nsc-atlas-shared-scalar-slice.md).
 
 The one-sided observer formula at each wall recovers the common field.
 After subtracting the excitation, the three ground values are those
-of candidate A. More strongly, candidate B from Section 10.22 obeys,
+of candidate A. More strongly, candidate B from Section 13.9 obeys,
 for every integer sector and every real canonical scalar state,
 
 $$
@@ -4698,7 +3245,7 @@ composition is now explicit; a full weak future remains open. The
 [constraint and sector record](../results/summaries/nsc-atlas-shared-scalar-slice-v1.json)
 contains the independent checks and exact parameters.
 
-### 10.24. Cosmology in the protected parent domain
+### 13.11. Cosmology in the protected parent domain
 
 <!-- nsc-claim:protected-parent-cosmology -->
 
@@ -4742,7 +3289,7 @@ changes coordinates on the smooth development.
 
 ![Shared scalar atlas and protected parent](../docs/figures/nsc-atlas-shared-scalar-slice.png)
 
-*Figure 16. The compact initial geometry, with the two joins enlarged
+*Figure 15. The compact initial geometry, with the two joins enlarged
 at right. Shading marks the sufficient protected parent cap. The
 parent contains an evolved scalar source under the same action;
 the unshaded interacting wall future remains a separate problem.*
@@ -4783,7 +3330,7 @@ The following calculation tests scalar and metric perturbation growth
 on this evolving domain. Its observer transfer and physical scale
 remain further connections, while the full wall problem stays explicit.
 
-### 10.25. A constrained parent perturbation that grows
+### 13.12. A constrained parent perturbation that grows
 
 <!-- nsc-claim:inherited-parent-structure -->
 
@@ -4888,7 +3435,7 @@ from a uniform error bound or physical state uncertainty. The
 [compact evidence](../results/summaries/nsc-atlas-parent-perturbations-v1.json)
 retains the constraints, state, comparisons and producer hashes.
 
-### 10.26. Inheritance must also supply the structure scale
+### 13.13. Inheritance must also supply the structure scale
 
 <!-- nsc-claim:inherited-structure-scale -->
 
@@ -4912,7 +3459,7 @@ oscillatory evolution, rather than sharing the long-mode growth.
 
 ![Parent perturbation growth and scale dependence](../docs/figures/nsc-atlas-parent-perturbations.png)
 
-*Figure 17. Left: a compact constrained packet develops a larger
+*Figure 16. Left: a compact constrained packet develops a larger
 central density contrast under the same inherited source. Right:
 the two independent initial-state columns have different scale
 responses. The dotted Jeans estimate is a separate averaged
@@ -4954,7 +3501,7 @@ does not uniquely demonstrate nesting. The next physical connection
 is a prepared perturbation state and frequency/scale, followed by
 the linked density and metric response seen by observers.
 
-### 10.27. What the inherited law leaves to the state
+### 13.14. What the inherited law leaves to the state
 
 <!-- nsc-claim:finite-parent-state-observability -->
 
@@ -4984,119 +3531,20 @@ a falsifiable observer relation within a declared preparation family.
 The [state-flow identities](../results/summaries/nsc-atlas-parent-clocks-v1.json)
 are retained with the observer calculation.
 
-### 10.28. Three freely falling clocks and a withheld prediction
+## IV. Concentration, conservation and the surrounding reservoir
 
-<!-- nsc-claim:three-clock-parent-relation -->
+A dark-matter account needs a physical source that forms structure and accounts for its surroundings. We first calculate admissible scalar concentrations and their conserved supply, then their persistence and spatial compensation, and finally formation from compact disturbances. The route preserves the inherited parent instead of adding an independent halo mass. Different frequencies and preparations are explicit members of the family; they are not exchanged between examples by a change of units.
 
-Let $L_{\rm ref}=a_0$ and initialize three ideal test emitters at
-proper separations $(.04,.08,.12)L_{\rm ref}$ from the parent pole.
-They initially rest relative to the slice normal, emit continuously
-at known rest frequencies, and freely fall without backreaction.
-The central free-fall receiver observes at fixed proper age
-2.251557477076, corresponding to background N=.8. All rays remain
-inside the protected parent domain.
+### 14. The energy supply and formation of structure
 
-Observer terms are essential in relativistic measured quantities;
-see [Scaccabarozzi, Yoo and Biern](https://arxiv.org/html/1807.09796).
-Here the actual closed-parent metric supplies the calculation.
-Holding initial proper distance and receiver age fixed gives
+The following sections give the worked constructions and their attributed mathematical inputs.
 
-$$
-\delta\theta_s(0)=\int_0^s\Phi(0,\theta)d\theta,
-\qquad \delta t_o=-\int_0^{t_o}\Phi(t,0)dt.
-$$
-
-The source's outward peculiar velocity obeys
-
-$$
-\dot v_s+Hv_s=-\frac{\partial_\theta\Phi(t,s)}{a},
-\qquad \delta\dot\theta_s=v_s/a.
-$$
-
-Along the unperturbed incoming ray, $\theta=\eta_o-\eta(t)$. The perturbed
-null equation sets the emission-time correction,
-
-$$
-\delta t_e=a_e\left[\frac{\delta t_o}{a_o}
- +2\int_{t_e}^{t_o}\frac{\Phi}{a}dt-\delta\theta_s(t_e)\right].
-$$
-
-The measured log-frequency departure from the background is
-
-$$
-y=\log\frac{(\nu_o/\nu_e)}{a_e/a_o}
-=H_e\delta t_e-H_o\delta t_o+\Phi_e-\Phi_o-v_e
- +2\int_{t_e}^{t_o}\partial_t\Phi\,dt.
-$$
-
-The last derivative is partial at fixed position. Source motion,
-potential, propagation and clock contributions all enter; no
-instantaneous potential difference alone determines the measurement.
-
-Writing $y_i=R_{i1}\alpha+R_{i2}\beta$ for the two retained amplitudes,
-the computed response is:
-
-| Initial distance / $L_{\rm ref}$ | Background frequency ratio | Density column | Phase column |
-| --- | ---: | ---: | ---: |
-| .04 | .840672581087 | .017861103048 | -.000731094396 |
-| .08 | .721722111018 | .030644152339 | -.001671366286 |
-| .12 | .628648035135 | .038548233209 | -.002804913120 |
-
-The first two rows have nonzero determinant and condition number
-169.341 in this amplitude normalization. Eliminating both amplitudes
-gives the conditional prediction
-
-$$
-y_3=-2.88990465\,y_1+2.94232704\,y_2.
-$$
-
-This is [NSC-P003](../docs/prediction-register.md), registered
-retrospectively without astronomical data. In the synthetic check,
-amplitudes $(10^{-5},-4\times10^{-6})$ give departures
-$(1.81535408,3.13126989,3.96701985)\times10^{-7}$. Calibrating only
-the first two recovers the amplitudes and predicts the withheld third.
-
-![Operational three-clock protocol and synthetic test](../docs/figures/nsc-atlas-parent-clocks.png)
-
-*Figure 18. Left: three emitters on the central past radial light cone;
-their initial proper distances and the receiver's proper age are fixed.
-Right: a withheld synthetic frequency response agrees with the prediction
-from two state calibrations. No observational confirmation is inferred.*
-
-An independent check integrates timelike sources and radial photons
-in finite metric deformations, fixing the physical distances and
-proper age by direct integration. The null Hamilton equation is
-
-$$
-\frac{d\log(-p_t)}{dt}
-=\frac{\partial_tA}{2A}-\frac{\partial_tB}{2B},
-\qquad A=1+2\Phi,\quad B=a^2(1-2\Phi).
-$$
-
-Symmetric metric variations verify the linear clock response;
-the mixed-direction derivative differs by $5.23\times10^{-11}$
-at variation step .0005. The finite metrics validate the first
-variation, not a nonlinear Einstein-scalar solution. Refinement
-changes the null weights by $1.35\times10^{-9}$; the retained
-coefficient comparison tolerance is $10^{-7}$.
-
-For independent equal frequency-log errors $\sigma_y$, the null residual
-has uncertainty $4.243682044\sigma_y$. A full covariance must replace
-that example for correlated measurements. Unknown source velocities,
-an arbitrary spatial profile or extra fields would add parameters
-and need not obey the three-clock relation. The
-[derivation](../docs/nsc-atlas-parent-clocks.md) and
-[compact evidence](../results/summaries/nsc-atlas-parent-clocks-v1.json)
-keep those restrictions explicit. The advance is an operational test
-surviving the two unknown state amplitudes, while physical formation
-and an unrestricted primordial spectrum remain open.
-
-### 10.29. A profile selected by scalar self-gravity
+### 14.1. A profile selected by scalar self-gravity
 
 <!-- nsc-claim:scalar-core-profile-selection -->
 
-The polynomial used for P003 was a specified profile. A physical
-selection mechanism is now calculated: a real massive scalar can
+The operational clock family in Section 15.1 uses a specified profile.
+Here a physical selection mechanism is calculated: a real massive scalar can
 concentrate through its own gravity and shed radiation, leaving a
 coherent core. Gravitational cooling is established prior work of
 [Seidel and Suen](https://arxiv.org/abs/gr-qc/9309015). The stationary
@@ -5177,7 +3625,7 @@ discrepancies near 80%. Residual oscillations remain.
 
 ![Gravitational cooling and selected core shape](../docs/figures/nsc-atlas-scalar-core.png)
 
-*Figure 19. Left: two distinct initial cloud shapes approach the
+*Figure 17. Left: two distinct initial cloud shapes approach the
 independently calculated coherent profile after mass normalization.
 Right: scalar norm leaves the central region during relaxation.
 This is a finite local envelope calculation, not the full evolving
@@ -5193,7 +3641,7 @@ keeps numerical discrepancies distinct from the weak-field, ambient
 and relativistic approximations. The original cloud and its energy
 are supplied, so this does not generate a primordial seed from nothing.
 
-### 10.30. The coherent core and its inherited environment
+### 14.2. The coherent core and its inherited environment
 
 <!-- nsc-claim:scalar-core-atlas-admission -->
 
@@ -5265,7 +3713,7 @@ sourced initial admission. It leaves cloud origin, coupling and
 relative-phase selection, nonlinear global evolution and observed
 abundance as further physical connections.
 
-### 10.31. Supplying a local core from the inherited parent
+### 14.3. Supplying a local core from the inherited parent
 
 <!-- nsc-claim:compensated-core-reservoir -->
 
@@ -5323,7 +3771,7 @@ mass does not imply identical internal geometry or proper energy integrals.
 
 ![A scalar core supplied by a compensated inherited reservoir](../docs/figures/nsc-atlas-core-reservoir.png)
 
-*Figure 20. Left: the core's positive geometric mass is supplied by ambient
+*Figure 18. Left: the core's positive geometric mass is supplied by ambient
 depletion, with the outward-current pulse included in the balance. Right:
 the pulse carries nonzero outward scalar energy while the total initial
 exterior mass offset vanishes. These are constrained initial data, not a
@@ -5337,7 +3785,7 @@ and [finite record](../results/summaries/nsc-atlas-core-reservoir-v1.json)
 give the full preparation and numerical comparison. The solved root fixes
 one compatibility datum; it does not select a primordial seed or abundance.
 
-### 10.32. A perturbed centre and the same evolving cosmology
+### 14.4. A perturbed centre and the same evolving cosmology
 
 <!-- nsc-claim:compensated-parent-domain -->
 
@@ -5401,11 +3849,11 @@ both contributions. The next task is to evolve this compensated preparation
 and calculate a local signal, preserving the source, outgoing field and
 same-action geometry throughout.
 
-### 10.33. Evolving the inherited field and its geometry together
+### 14.5. Evolving the inherited field and its geometry together
 
 <!-- nsc-claim:coupled-core-parent-evolution -->
 
-The compensated slice now supplies a full finite spherical evolution.
+The compensated slice supplies a full finite spherical evolution.
 The scalar, its ambient reservoir and radiation source the local metric
 throughout. The earlier envelope profile is an initial control; it does
 not replace the Einstein--Klein--Gordon evolution equation. The action,
@@ -5470,7 +3918,7 @@ step, so numerical damping of that oscillator is not interpreted as cooling.
 The new connection is the sourced inherited preparation and its observer,
 rather than a new generic scalar-gravity equation.
 
-### 10.34. A diffuse cloud develops a compact, breathing concentration
+### 14.6. A diffuse cloud develops a compact, breathing concentration
 
 <!-- nsc-claim:inherited-diffuse-concentration -->
 
@@ -5509,7 +3957,7 @@ is imposed or inferred.
 
 ![Inherited scalar concentration, conserved mass and a received clock](../docs/figures/nsc-atlas-core-evolution.png)
 
-*Figure 21. The diffuse preparation develops a compact concentration under
+*Figure 19. The diffuse preparation develops a compact concentration under
 its computed gravity. The fixed-geometry field control separates ordinary
 scalar propagation from that response. Refinement checks the independent
 mass-flux law. Clock departures use the stated central proper emission
@@ -5522,399 +3970,9 @@ arbitrary preparations or nonspherical stability. The
 [formation and refinement record](../results/summaries/nsc-atlas-core-evolution-v1.json)
 and [source owner](../docs/nsc-atlas-core-evolution.md) retain those limits.
 
-### 10.35. A signal from the concentration's evolving geometry
+### 14.7. Conservation selects a second local scale
 
-<!-- nsc-claim:formed-core-clock -->
-
-The central emitter is geodesic. The receiver is actively held at areal
-radius .6 and starts its proper clock on the initial slice. In the diffuse
-case the emission occurs at central proper age 4, after the contraction
-has developed. Reception time is determined by propagation, not chosen
-as an equal-coordinate-time comparison.
-
-An outgoing photon with frequency E measured by the slice normal obeys
-
-$$
-\frac{dR_\gamma}{dt}=\alpha(HR_\gamma+\sqrt{B}),\qquad
-\frac{d\log E}{dt}=\alpha K_r-\sqrt{B}\alpha_R.
-$$
-
-At reception, the held-radius observer's velocity relative to that normal
-adds a necessary Doppler factor:
-
-$$
-\frac{\nu_o}{\nu_e}=\frac{E_o}{E_e}
-\sqrt{\frac{\sqrt{B_o}+H_oR_o}{\sqrt{B_o}-H_oR_o}},
-\qquad
-\frac{d\tau_o}{dt}=\alpha_o
-\sqrt{1-\frac{H_o^2R_o^2}{B_o}}.
-$$
-
-An independent canonical null-geodesic calculation transports $p_R$ with
-Hamiltonian $\alpha(HR+\sqrt{B})p_R$. It is checked against this normal-frame
-formula. A separate unaveraged homogeneous integration gives the
-corresponding control signal analytically along its FLRW light cone.
-
-For the diffuse run emitted at central proper age 4, the fractional
-frequency departure from the homogeneous comparison is
-
-$$
-\frac{(\nu_o/\nu_e)}{(\nu_o/\nu_e)_{\rm hom}}-1
-=-0.0041375586\pm 1.1\times10^{-8}.
-$$
-
-This is approximately -0.413756 percent, with a finite numerical error
-estimate of .0000011 percentage points. The receiver's additional proper
-arrival time is .01703546, with numerical comparison error 2.2e-7 in atlas
-time units. Both the emitter's accumulated proper clock and propagation
-contribute to this delay. The independent canonical frequency differs by
-less than 4.7e-11 on the finest run.
-
-The coherent control, emitted at central age 0, has frequency departure
--.007456287 with numerical comparison error 2.1e-7 and proper arrival delay
-.000476466. These use different declared emission ages; they are not a
-same-epoch comparison of the two states. All errors here concern numerical
-resolution and event calculation, not physical preparation uncertainty.
-
-
-The frequency departures are dimensionless. Delays are in atlas time units;
-an independent physical length would convert them to seconds. These
-conditional observables do not import P003's earlier linear coefficients
-or select a primordial population. The
-[complete protocol](../docs/nsc-atlas-core-evolution.md) and
-[numerical comparisons](../results/summaries/nsc-atlas-core-evolution-v1.json)
-give the emission events, receiver motion, error estimates and model scope.
-
-The connection now runs from a declared inherited scalar preparation,
-through self-consistent local evolution, to a received signal. The parent
-vacuum remains $\Lambda_{\rm vac}a_0^2=12.3482523989285$. Selecting its
-observed scale, explaining the population of structures and testing their
-nonradial persistence remain further physical questions.
-
-### 10.36. The same concentration bends and focuses light
-
-<!-- nsc-claim:evolved-core-null-focusing -->
-
-The radial clock is followed by a nonradial optical test on the same
-evolved scalar geometry. The field stepper and its physical inputs remain
-unchanged; final-state hashes must reproduce the preceding source calculation
-at every retained resolution. The lens is not replaced by a fitted density
-profile or a static metric.
-
-Scalar lenses have published precedents in
-[Dabrowski and Schunck](https://arxiv.org/abs/astro-ph/9807039), and
-[Aimar et al.](https://arxiv.org/abs/2512.23800) study time-dependent
-real-scalar optical signatures. The contribution here is the connection
-to the computed inherited parent and its formation history. The exact
-lens-map approach follows
-[Frittelli and Newman](https://arxiv.org/html/gr-qc/9810017), with the
-observer-screen formulation made explicit below.
-
-The canonical bulk equation gives an exact null contraction:
-
-$$
-R_{ab}=\kappa(\nabla_a\phi\nabla_b\phi+Ug_{ab}),
-\qquad R_{ab}k^ak^b=\kappa(k\phi)^2.
-$$
-
-The potential, including the inherited vacuum, drops out of this direct
-focusing term. It still affects the field and spacetime through which the
-ray travels. Its absence from this contraction is not invariance of the
-whole optical experiment under a change of Lambda.
-
-For normal energy E, radial momentum $q=\sqrt{B}p_R$ and conserved angular
-momentum L, the two principal tidal eigenvalues are
-
-$$
-T_\perp=\frac{\kappa}{2}(E\Pi+q\sqrt{B}F)^2
-+\frac{3WL^2}{R^2},\qquad
-T_\parallel=\frac{\kappa}{2}(E\Pi+q\sqrt{B}F)^2
--\frac{3WL^2}{R^2},
-$$
-
-where
-
-$$
-W=\frac{m}{R^3}-\frac{\kappa}{6}
-\left(U+\frac{\Pi^2-BF^2}{2}\right).
-$$
-
-Ricci curvature focuses both directions. Weyl curvature changes them with
-opposite signs, producing optical shear. The spherical Einstein Hessians
-and warped-product Riemann tensor independently give these factors and
-signs. In the homogeneous parent W vanishes. At a pure vacuum extremum
-both tidal eigenvalues vanish, although expansion and distances still
-depend on the vacuum scale.
-
-The principal Jacobi scales obey
-
-$$
-\frac{d^2D_i}{d\lambda^2}=-T_iD_i,
-\qquad D_i(0)=0,\qquad D_i'(0)=1.
-$$
-
-This is the attributed optical transport framework of
-[Seitz, Schneider and Ehlers](https://arxiv.org/abs/astro-ph/9403056),
-applied to the current source. The
-[curvature derivation](../docs/nsc-atlas-core-optics.md) and
-[compact calculation](../results/summaries/nsc-atlas-core-optics-v1.json)
-separate the exact identities from finite numerical lensing evidence.
-
-### 10.37. A proper-clock lens map during contraction and breathing
-
-<!-- nsc-claim:evolved-core-lens-map -->
-
-Hold a source and a spherical family of receivers at areal radius .6.
-Their clocks start on the initial slice. The source emits transparent
-test light at proper ages 2.8 and 3.4, with inward rest-frame angle $\psi$.
-The primary declared angles are .02, .04 and .08 radians. Unit emitted
-energy fixes affine normalization; beam stress is neglected as in the
-previous clock calculation.
-
-The null Hamiltonian is
-
-$$
-\mathcal H=-p_t=\alpha(E+HRp_R),\qquad
-E=\sqrt{Bp_R^2+L^2/R^2}.
-$$
-
-Each ray is followed to its first outward recrossing of the receiving
-sphere. Proper emission time, the changing metric and the receiver's
-velocity relative to the slice normal are retained. A separate normal-frame
-frequency equation checks canonical photon transport.
-
-The full landing map gives an independent computation of both beam scales:
-
-$$
-D_\perp=\frac{R_s\sin\varphi_o}{\sin\psi},\qquad
-D_\parallel=-R_s\mu_o\frac{d\varphi_o}{d\psi}.
-$$
-
-Here $\mu_o$ is the measured outward radial cosine. The derivative includes
-the angle-dependent arrival event. These screen identities and the
-curvature equations calculate the same beam by different routes. Flat
-space gives both scales equal to the chord length; a separate closed-FLRW
-great-circle solution checks the evolving homogeneous control.
-
-For inward launch angle .02 rad, the same source gives the following
-finite-screen results. Errors are numerical comparison envelopes, not
-uncertainties in the physical preparation.
-
-| Source proper age | Landing-angle departure | Beam flux / homogeneous | Principal-axis ratio |
-| --- | ---: | ---: | ---: |
-| 2.8 | 0.01928843 rad | 1.648532 +/- 0.000021 | 2.19831 |
-| 3.4 | 0.00666950 rad | 1.381442 +/- 0.000018 | 1.03582 |
-
-The early landing-angle departure is about 1.105 degrees. The beam is
-focused and distorted by different amounts at the two epochs, with no
-change to the scalar action or initial preparation. The six source replays
-match the prior field-state hashes exactly.
-
-The independent rotation-Jacobi discrepancy at the primary probes falls
-from 1.35e-5 to 8.80e-7 to 5.16e-8 under refinement. The in-plane angular-map
-discrepancy falls to 1.82e-6. The independent homogeneous area distance
-agrees within 1.42e-8; its frequency check agrees within 2.05e-8.
-
-The early fan brackets a tangential caustic between source angles .006
-and .008 rad at all three resolutions. On the finest run the signed
-perpendicular scales at those endpoints are -.00118667 and .0802128;
-their independent rotation checks differ by less than 1.7e-6. No tangential
-sign change is found in the sampled late fan. This is finite numerical
-evidence for the optical caustic, not a certified interval root or a
-prediction of infinite physical brightness. The calculated metric remains
-regular; a light-bundle caustic is not a spacetime singularity.
-
-
-![Nonradial light bending and beam focusing from the evolved scalar](../docs/figures/nsc-atlas-core-optics.png)
-
-*Figure 22. Two proper emission ages probe the same evolving concentration.
-The landing-angle map and signed beam area change as the core breathes.
-The inset shows the sampled transverse-scale sign change near the early caustic.
-Curvature-based Jacobi scales converge toward their independent ray-map
-values. Relative received beam flux uses the fixed source luminosity,
-measured frequency and projected beam area.*
-
-For fixed isotropic emitted luminosity, the received bolometric beam flux
-is proportional to
-
-$$
-\frac{\nu_o^2}{|D_\perp D_\parallel|}.
-$$
-
-The absolute area enters flux; its sign retains parity relative to the
-homogeneous beam. Comparisons identify the same source proper age and
-launch angle on the two geometries, so receiving worldlines can differ.
-This finite-screen experiment is not yet a fixed-source/fixed-observer
-astronomical image fit. Optical caustics, when bracketed by the fan, do
-not establish infinite physical brightness; finite-source and wavelength
-effects would require a further calculation.
-
-The [observer protocol and limits](../docs/nsc-atlas-core-optics.md) and
-[numerical comparisons](../results/summaries/nsc-atlas-core-optics-v1.json)
-bind these optical numbers to the same source that produced concentration
-and the radial clock signal. The inherited law has not thereby selected
-a cloud population, a physical SI scale or an observed dark-matter fraction.
-
-### 10.38. Two paths, one receiving clock
-
-A lens map becomes an image prediction when the emitting and receiving
-worldlines are fixed. Keep the scalar-parent solution of the preceding
-sections. Hold both worldlines at areal radius $R_s=.6$, put the emitter at
-azimuth zero and the receiver at $\pi-b$, with $b=.0002$. A pulse leaves at
-emitter proper age $2.8$. If $\Phi(\psi,\tau_e)$ is the positive-orientation
-landing map, the two selected branches satisfy
-
-$$
-\Phi(\psi_+,\tau_e)=\pi-b,\qquad
-\Phi(\psi_-,\tau_e)=\pi+b.
-$$
-
-Reflection sends the second ray to $-(\pi+b)$, which is the same receiving
-worldline modulo $2\pi$. The images arrive at different proper times on
-that one observer's clock. This improves on a fixed-launch-angle comparison,
-where the landing observer itself can change. The two selected angular
-patches do not constitute a census of all possible images.
-
-A null geodesic's endpoint variation relates these image measurements.
-Normalize its emitted energy to one. The null action gives
-$p_a\delta x_o^a-p_a\delta x_e^a=0$. The emitter is spatially fixed;
-the held receiving sphere contributes the local energy and conserved
-angular momentum $L$. Hence
-
-$$
-d\tau_o=\frac{d\tau_e}{\nu_o}
-+\frac{L}{\nu_o}\,d\varphi_o.
-$$
-
-This equation does not assume a static lens or a conserved photon energy.
-It uses the actual evolving metric and endpoint observer tetrads. At a
-fixed receiving worldline, each image obeys $d\tau_i/d\tau_e=1/\nu_i$.
-For the relative delay $\Delta=\tau_--\tau_+$,
-
-$$
-\frac{d\Delta}{d\tau_e}=\frac{1}{\nu_-}-\frac{1}{\nu_+},\qquad
-\frac{d\Delta}{d\tau_+}=\frac{\nu_+}{\nu_-}-1.
-$$
-
-The second expression requires only the receiver's clock and the ratio
-of frequencies of matched source features. Image delays and frequency
-shifts are linked consequences of one geometry. The general endpoint and
-lens-map ideas are established mathematics; their evaluated connection
-to the forming source in this atlas is the present result.
-
-Conserved angular momentum also fixes the received image directions:
-$\sin|\xi_i|=\sin\psi_i/\nu_i$. Choose positive sky direction opposite
-increasing azimuth, so that $\xi_+>0$ and $\xi_-<0$. For a common,
-infinitesimal isotropic pulse, its observed bolometric fluence is
-
-$$
-\mathcal F_i=\frac{E_e}{4\pi}
-\frac{\nu_i}{|D_{\perp,i}D_{\parallel,i}|}.
-$$
-
-A continuous source instead gives a flux proportional to
-$\nu_i^2/|D_{\perp,i}D_{\parallel,i}|$, because reception rate adds a
-second frequency factor. The signed determinant retains image parity.
-These relations assume transparent geometric optics and a detector
-perpendicular to the arriving ray. Finite source size, duration and
-wavelength require separate modeling.
-
-The [fixed-worldline derivation](../docs/nsc-atlas-core-images.md) gives
-its endpoint proof, angular inverse and independent checks. Source ages
-$2.8\pm.0002$ and $2.8\pm.0001$ test the delay derivative; curvature
-and angular resampling test the two image inverses. All source evolution
-files remain unchanged.
-
-The completed pair is resolved at three grid spacings, with an additional
-optical-time comparison. Its conditional observables are:
-
-| Observable | Calculated value | Numerical comparison range |
-| --- | ---: | ---: |
-| Image separation | 0.682670 degrees | 0.000493 degrees |
-| Relative proper arrival delay | 1.44125317e-6 atlas units | 9.54e-10 atlas units |
-| Negative/positive frequency | 1.00000922695 | 8.52e-9 |
-| Negative/positive pulse fluence | 1.401958 | 0.006483 |
-
-The negative-parity image is brighter and arrives later. The rotation/Jacobi
-error decreases from $5.65\times10^{-4}$ to $3.35\times10^{-5}$ to
-$1.92\times10^{-6}$. The angular inverse and its curvature-based check
-agree to better than $1.31\times10^{-10}$ radians on the fine patches.
-All four field replays match the previously retained solutions exactly.
-The [compact evidence](../results/summaries/nsc-atlas-core-images-v1.json)
-records the fixed inputs, individual images and numerical comparisons.
-
-The directly differentiated delay agrees with the inverse-frequency
-identity to $1.55\times10^{-8}$ per source proper time, within its
-$1.67\times10^{-7}$ numerical comparison envelope. That small derivative
-residual is not monotone between the middle and fine grids. The result
-is a finite checked prediction with numerical ranges, not a rigorous
-interval enclosure or an asymptotic stability statement.
-
-![One receiving worldline sees two images from the evolved scalar concentration](../docs/figures/nsc-atlas-core-images.png)
-
-*Figure 23. The two angular roots reach one receiver after reflection of the
-negative branch. Their sky positions, pulse fluences and arrival times are
-computed from the unchanged scalar-parent evolution. Two independent
-calculations check the delay-frequency identity. The final panel links
-the resolved delay to the inherited parent vacuum through a scale-free
-product; it does not identify this benchmark with an observed lens.*
-
-### 10.39. A local image delay and the parent's vacuum must share one scale
-
-The local concentration belongs to the same sourced parent whose protected
-annulus retains the inherited vacuum. For this declared action and flux,
-the vacuum and reference radius in atlas units are
-
-$$
-\widehat\Lambda=\kappa U_{\rm vac}=9/32,\qquad
-\widehat L_{\rm ref}=6.62607707610.
-$$
-
-Thus the earlier conditional result
-$\Lambda L_{\rm ref}^2=12.34825239893$ still applies.
-
-Let $L_{\rm unit}$ be the physical length assigned to one atlas unit and
-let $\delta$ be the computed dimensionless image delay. Any consistent
-dimensional embedding must obey
-
-$$
-\Lambda_{\rm phys}=\frac{\widehat\Lambda}{L_{\rm unit}^2},\qquad
-\Delta t=\frac{L_{\rm unit}}{c}\,\delta,
-$$
-
-and therefore
-
-$$
-\Lambda_{\rm phys}(c\Delta t)^2=\widehat\Lambda\,\delta^2.
-$$
-
-For the computed pair,
-
-$$
-\Lambda_{\rm phys}(c\Delta t)^2
-=(5.8422\pm.0078)\times10^{-13}.
-$$
-
-The quoted range propagates the numerical delay envelope while holding
-the declared parent vacuum fixed. It does not include uncertainty in a
-physical interpretation or an unspecified preparation law.
-
-The free unit cancels. Calibrating a physical scale with an image delay
-leaves the vacuum value, angular image separation and frequency/fluence
-ratios as linked tests. Matching each by an independent scale choice
-would break this connection. This does not select the physical scale or
-prove that the inherited vacuum equals the value inferred from cosmology.
-It creates a precise joint requirement on that proposed identification.
-
-The cloud, emitting age and receiver position remain specified inputs.
-Population selection and nonspherical persistence remain necessary for an
-astronomical application. The atlas now provides the mathematical route
-from inherited vacuum, through formed structure, to a fixed observer's
-measurements without an independently fitted lens mass.
-
-### 10.40. Conservation selects a second local scale
-
-The image-delay connection leaves a physical question: can the inherited
+The image-delay relation in Section 15.6 raises a physical question: can the inherited
 field support a structure much smaller than its cosmological parent?
 Changing a unit rescales both. Changing the scalar frequency changes the
 physical model. The frequency family already constructed above holds
@@ -6043,7 +4101,7 @@ derived energy-floor bound. These are initial-constraint and causal-domain
 results; formation, persistence and the complete coupled wall future are
 separate calculations.
 
-### 10.41. A mass--reservoir--vacuum relation and a dimensional example
+### 14.8. A mass--reservoir--vacuum relation and a dimensional example
 
 The same construction produces a dimensionless correlation:
 
@@ -6069,7 +4127,7 @@ explicitly; this is not a universal constant selected by nesting.
 
 ![Different core and reservoir scales at fixed inherited vacuum](../docs/figures/nsc-atlas-scale-hierarchy.png)
 
-*Figure 24. The core shrinks faster than its energy-supply region while the
+*Figure 20. The core shrinks faster than its energy-supply region while the
 parent reference radius remains fixed. A reservoir constrained to twice
 the core cutoff becomes insufficient above its ideal supply ceiling.
 Solving for the reservoir radius restores the initial constraints and
@@ -6105,13 +4163,13 @@ checks for the supplied profile, not a bound on its uncomputed evolution.
 
 The following section evolves this two-scale preparation in a leading
 classical envelope with its reservoir retained. The image predictions of
-Section10.38 belong to the earlier evolved preparation;
+Section 15.5 belong to the earlier evolved preparation;
 they cannot be assigned to this new family by changing units.
 
-### 10.42. Evolving the core together with its reservoir
+### 14.9. Evolving the core together with its reservoir
 
 Initial compatibility does not establish persistence. The high-frequency
-member of Section10.41 has many fast carrier oscillations per binding
+member of Section 14.8 has many fast carrier oscillations per binding
 time, so a direct relativistic grid is costly. We instead derive its
 leading classical envelope, retain the solved reservoir and excited parent,
 and test the reduction against the unchanged full Einstein--Klein--Gordon
@@ -6183,7 +4241,7 @@ term, about $2\times10^{-19}$ for this member. This is an exact identity
 on the averaged background, not proof that it equals the full oscillating
 Einstein-scalar background at every instant.
 
-### 10.43. Conserved transport, finite persistence and a relativistic check
+### 14.10. Conserved transport, finite persistence and a relativistic check
 
 The envelope's geometric excess mass is
 
@@ -6245,7 +4303,7 @@ therefore does not establish asymptotic stability.
 
 ![Finite localization of the supplied core and reservoir in the expanding parent](../docs/figures/nsc-atlas-hierarchy-evolution.png)
 
-*Figure 25. The same supplied field disperses without self-gravity and
+*Figure 21. The same supplied field disperses without self-gravity and
 retains a localized core when self-gravity is included. Its physical size
 breathes while the parent expands; the dashed size reference is simply
 initial radius multiplied by the parent scale factor. Mass-current and
@@ -6290,10 +4348,10 @@ is from the conserved initial supply construction to finite radial
 localization in its expanding parent, with a stated approximation and
 independent transport checks.
 
-### 10.44. Testing the breathing core beyond spherical symmetry
+### 14.11. Testing the breathing core beyond spherical symmetry
 
 A changing radius does not by itself diagnose an instability. We now
-linearize the actual evolving envelope of Section10.43 and calculate its
+linearize the actual evolving envelope of Section 14.10 and calculate its
 radial and quadrupole response. The spherical field, reservoir and parent
 expansion are replayed unchanged. A stationary eigenproblem would answer
 a different question because this background is time dependent.
@@ -6367,7 +4425,7 @@ time-dependent background. It checks the transport but does not imply
 norm conservation or stability. A separate passive quadrupole, propagated
 without its own potential response, supplies the unitary control.
 
-### 10.45. A finite response theorem for every orientation in a declared span
+### 14.12. A finite response theorem for every orientation in a declared span
 
 Choose two compact radial profiles of widths $2$ and $4$ in the physical
 scaled radius $Ax$, together with their phase partners. They taper to zero
@@ -6459,14 +4517,14 @@ the density-derivative error from $2.18\times10^{-6}$ to $5.46\times10^{-7}$.
 
 ![Radial sensitivity and quadrupole response on the retained evolving source](../docs/figures/nsc-atlas-hierarchy-perturbations.png)
 
-*Figure 26. Field sensitivity and density deformation are distinct responses.
+*Figure 22. Field sensitivity and density deformation are distinct responses.
 The quadrupole field response remains modest for seeds at the initial and
 late events; the same radial matrices cover all five angular components
 in the declared span. Independent nonlinear radial differences converge to
 the tangent prediction. These finite sampled results do not establish
 universal or asymptotic stability.*
 
-### 10.46. The surrounding field must carry the tidal phase
+### 14.13. The surrounding field must carry the tidal phase
 
 A quadrupole has zero angular mean, so its first-order monopole mass change
 vanishes. It can nevertheless produce a nonzero external tidal potential.
@@ -6526,11 +4584,11 @@ the targeted tail calculation used about $615$ within its separate
 $800$-second budget. Both retain their completed evidence without enlarging
 their claims to all-profile, nonlinear or full-relativistic stability.
 
-### 10.47. A local concentration carries the signature of its surroundings
+### 14.14. A local concentration carries the signature of its surroundings
 
 <!-- nsc-claim:atlas-compensation-response -->
 
-Evidence: [spatial compensation and retained evolution](../results/summaries/nsc-atlas-compensation-response-v1.json)
+Derivation and calculation: [spatial compensation and retained evolution](../results/summaries/nsc-atlas-compensation-response-v1.json)
 and [derivation and source dictionary](../docs/nsc-atlas-compensation-response.md).
 
 The dense core and its depleted surroundings are one initial solution.
@@ -6626,14 +4684,14 @@ numbers, not an observed halo population or a fitted cosmological spectrum.
 
 ![Compensated mass profile, spatial response and projected deficit](../docs/figures/nsc-atlas-compensation-response.png)
 
-*Figure 27. One supplied core and its inherited reservoir, viewed through
+*Figure 23. One supplied core and its inherited reservoir, viewed through
 enclosed mass, spatial frequency and projected contrast. Including the
 reservoir suppresses long-wavelength response. The purple curve reuses
 the evolved field in the original mass/radius units. The projected deficit
 is a spatial statistic; a relativistic lens observation needs its own
 averaging and light-cone dictionary.*
 
-### 10.48. The age and population are part of the correlation
+### 14.15. The age and population are part of the correlation
 
 The inherited vacuum remains fixed while the surrounding field evolves.
 Postprocessing the five authenticated spherical evolution checkpoints,
@@ -6698,14 +4756,14 @@ been calculated by this single-profile construction.
 
 The next connection is consequently formation and age selection in the
 inherited parent, followed by the observation map for that population.
-The atlas now supplies a joint spatial relation to test when those inputs
+The atlas supplies a joint spatial relation to test when those inputs
 exist; it does not fix them by matching a desired sky spectrum.
 
-### 10.49. Does the inherited parent leave enough time to form a core?
+### 14.16. Does the inherited parent leave enough time to form a core?
 
 <!-- nsc-claim:atlas-formation-window -->
 
-Evidence: [formation budget and compact seed](../results/summaries/nsc-atlas-formation-window-v1.json)
+Derivation and calculation: [formation budget and compact seed](../results/summaries/nsc-atlas-formation-window-v1.json)
 and [all-wavelength comparison proof](../docs/nsc-atlas-formation-window.md).
 
 Persistence of an installed core does not explain its formation. The
@@ -6796,7 +4854,7 @@ initial current and equations. Earlier seeds, forcing or already nonlinear
 data are different possibilities. The bound also applies to spatial L2
 norm; a pointwise statement needs an appropriate Fourier norm.
 
-### 10.50. A compact earlier seed identifies the nonlinear continuation
+### 14.17. A compact earlier seed identifies the nonlinear continuation
 
 Construct a local compensated disturbance without the stationary core:
 
@@ -6843,7 +4901,7 @@ the preparation epoch is a physical part of the proposed formation route.
 
 ![Finite future growth and the compact earlier preparation](../docs/figures/nsc-atlas-formation-window.png)
 
-*Figure 28. Left: the late parent permits only modest ambient amplification;
+*Figure 24. Left: the late parent permits only modest ambient amplification;
 the small core-scale mode oscillates. Middle: changing the supplied epoch
 changes both growth and wave phase. Right: a compact 5% seed on the earlier
 continuation approaches a nonlinear regime. The curve beyond small contrast
@@ -6863,21 +4921,21 @@ declared earlier parent. Retained mass, concentration, reservoir and the
 spatial turnover would then be outputs, tested together. No new core profile
 or desired observed spectrum needs to be inserted to start that experiment.
 
-### 10.51. Nonlinear formation without installing the final core
+### 14.18. Nonlinear formation without installing the final core
 
 <!-- nsc-claim:atlas-seed-collapse -->
 
-Evidence: [nonlinear compact-seed comparison](../results/summaries/nsc-atlas-seed-collapse-v1.json)
+Derivation and calculation: [nonlinear compact-seed comparison](../results/summaries/nsc-atlas-seed-collapse-v1.json)
 and [initial constraints, boundary clock and balances](../docs/nsc-atlas-seed-collapse.md).
 
-The compact disturbance now has a finite-amplitude continuation. Keep the
+The compact disturbance has a finite-amplitude continuation. Keep the
 same action, inherited vacuum and excitation, comoving length and earlier
 epoch. The $5%$ seed is evolved to $A=16$. A separately declared $10%$
 preparation is tested through its first compression and rebound at $A=1.2$.
 This amplitude comparison is not a fit to an observed object or an inferred
 universal formation threshold. No stationary core is placed in either seed.
 
-The autocorrelation source from Section10.50 has an exact factored
+The autocorrelation source from Section 14.17 has an exact factored
 real-space polynomial. Its radial mass primitive is positive inside the
 support and vanishes at its edge. Normalize the total envelope by its
 homogeneous value and set
@@ -6946,7 +5004,7 @@ an independent time control and a larger domain test the $10%$ history.
 The $5%$ history has its own three resolutions, with no-gravity and
 small-amplitude controls completing eleven runs.
 
-### 10.52. Physical contraction separates formation from density contrast
+### 14.19. Physical contraction separates formation from density contrast
 
 Track a shell carrying a fixed amount of the oscillatory scalar source:
 
@@ -6978,7 +5036,7 @@ full relativistic or observational error budget.
 
 ![Nonlinear density, fixed-mass contraction and the first rebound](../docs/figures/nsc-atlas-seed-collapse.png)
 
-*Figure 29. Both supplied seeds develop large contrast, but the sampled
+*Figure 25. Both supplied seeds develop large contrast, but the sampled
 fixed-mass shells of the 5% case continue expanding through its interval.
 The 10% case turns around and contracts. Removing self-gravity removes that
 contraction. The right panel resolves the forming concentration's first
@@ -7018,11 +5076,516 @@ in the inherited parent. Its actual field can now supply an observer
 calculation. The old installed-core and different-frequency lens histories
 cannot be substituted for that next signal.
 
-### 10.53. The forming field supplies one connected observer map
+## V. The interior observer: motion, light and expansion
+
+An interior observer tests a geometry through clocks, trajectories and light. This part uses the sources already constructed to derive frequency relations, focusing, multiple images and motion-calibrated optical predictions. Endpoint identities connect measurements that belong to one geometry. The final cosmological comparison confronts a quiet limiting state with actual supernova data, identifying the expansion history that the full account must improve.
+
+### 15. One geometry, several measured consequences
+
+The following sections give the worked constructions and their attributed mathematical inputs.
+
+### 15.1. Three freely falling clocks and a withheld prediction
+
+<!-- nsc-claim:three-clock-parent-relation -->
+
+Let $L_{\rm ref}=a_0$ and initialize three ideal test emitters at
+proper separations $(.04,.08,.12)L_{\rm ref}$ from the parent pole.
+They initially rest relative to the slice normal, emit continuously
+at known rest frequencies, and freely fall without backreaction.
+The central free-fall receiver observes at fixed proper age
+2.251557477076, corresponding to background N=.8. All rays remain
+inside the protected parent domain.
+
+Observer terms are essential in relativistic measured quantities;
+see [Scaccabarozzi, Yoo and Biern](https://arxiv.org/html/1807.09796).
+Here the actual closed-parent metric supplies the calculation.
+Holding initial proper distance and receiver age fixed gives
+
+$$
+\delta\theta_s(0)=\int_0^s\Phi(0,\theta)d\theta,
+\qquad \delta t_o=-\int_0^{t_o}\Phi(t,0)dt.
+$$
+
+The source's outward peculiar velocity obeys
+
+$$
+\dot v_s+Hv_s=-\frac{\partial_\theta\Phi(t,s)}{a},
+\qquad \delta\dot\theta_s=v_s/a.
+$$
+
+Along the unperturbed incoming ray, $\theta=\eta_o-\eta(t)$. The perturbed
+null equation sets the emission-time correction,
+
+$$
+\delta t_e=a_e\left[\frac{\delta t_o}{a_o}
+ +2\int_{t_e}^{t_o}\frac{\Phi}{a}dt-\delta\theta_s(t_e)\right].
+$$
+
+The measured log-frequency departure from the background is
+
+$$
+y=\log\frac{(\nu_o/\nu_e)}{a_e/a_o}
+=H_e\delta t_e-H_o\delta t_o+\Phi_e-\Phi_o-v_e
+ +2\int_{t_e}^{t_o}\partial_t\Phi\,dt.
+$$
+
+The last derivative is partial at fixed position. Source motion,
+potential, propagation and clock contributions all enter; no
+instantaneous potential difference alone determines the measurement.
+
+Writing $y_i=R_{i1}\alpha+R_{i2}\beta$ for the two retained amplitudes,
+the computed response is:
+
+| Initial distance / $L_{\rm ref}$ | Background frequency ratio | Density column | Phase column |
+| --- | ---: | ---: | ---: |
+| .04 | .840672581087 | .017861103048 | -.000731094396 |
+| .08 | .721722111018 | .030644152339 | -.001671366286 |
+| .12 | .628648035135 | .038548233209 | -.002804913120 |
+
+The first two rows have nonzero determinant and condition number
+169.341 in this amplitude normalization. Eliminating both amplitudes
+gives the conditional prediction
+
+$$
+y_3=-2.88990465\,y_1+2.94232704\,y_2.
+$$
+
+This is [NSC-P003](../docs/prediction-register.md), registered
+retrospectively without astronomical data. In the synthetic check,
+amplitudes $(10^{-5},-4\times10^{-6})$ give departures
+$(1.81535408,3.13126989,3.96701985)\times10^{-7}$. Calibrating only
+the first two recovers the amplitudes and predicts the withheld third.
+
+![Operational three-clock protocol and synthetic test](../docs/figures/nsc-atlas-parent-clocks.png)
+
+*Figure 26. Left: three emitters on the central past radial light cone;
+their initial proper distances and the receiver's proper age are fixed.
+Right: a withheld synthetic frequency response agrees with the prediction
+from two state calibrations. No observational confirmation is inferred.*
+
+An independent check integrates timelike sources and radial photons
+in finite metric deformations, fixing the physical distances and
+proper age by direct integration. The null Hamilton equation is
+
+$$
+\frac{d\log(-p_t)}{dt}
+=\frac{\partial_tA}{2A}-\frac{\partial_tB}{2B},
+\qquad A=1+2\Phi,\quad B=a^2(1-2\Phi).
+$$
+
+Symmetric metric variations verify the linear clock response;
+the mixed-direction derivative differs by $5.23\times10^{-11}$
+at variation step .0005. The finite metrics validate the first
+variation, not a nonlinear Einstein-scalar solution. Refinement
+changes the null weights by $1.35\times10^{-9}$; the retained
+coefficient comparison tolerance is $10^{-7}$.
+
+For independent equal frequency-log errors $\sigma_y$, the null residual
+has uncertainty $4.243682044\sigma_y$. A full covariance must replace
+that example for correlated measurements. Unknown source velocities,
+an arbitrary spatial profile or extra fields would add parameters
+and need not obey the three-clock relation. The
+[derivation](../docs/nsc-atlas-parent-clocks.md) and
+[compact evidence](../results/summaries/nsc-atlas-parent-clocks-v1.json)
+keep those restrictions explicit. The advance is an operational test
+surviving the two unknown state amplitudes, while physical formation
+and an unrestricted primordial spectrum remain open.
+
+### 15.2. A signal from the concentration's evolving geometry
+
+<!-- nsc-claim:formed-core-clock -->
+
+The central emitter is geodesic. The receiver is actively held at areal
+radius .6 and starts its proper clock on the initial slice. In the diffuse
+case the emission occurs at central proper age 4, after the contraction
+has developed. Reception time is determined by propagation, not chosen
+as an equal-coordinate-time comparison.
+
+An outgoing photon with frequency E measured by the slice normal obeys
+
+$$
+\frac{dR_\gamma}{dt}=\alpha(HR_\gamma+\sqrt{B}),\qquad
+\frac{d\log E}{dt}=\alpha K_r-\sqrt{B}\alpha_R.
+$$
+
+At reception, the held-radius observer's velocity relative to that normal
+adds a necessary Doppler factor:
+
+$$
+\frac{\nu_o}{\nu_e}=\frac{E_o}{E_e}
+\sqrt{\frac{\sqrt{B_o}+H_oR_o}{\sqrt{B_o}-H_oR_o}},
+\qquad
+\frac{d\tau_o}{dt}=\alpha_o
+\sqrt{1-\frac{H_o^2R_o^2}{B_o}}.
+$$
+
+An independent canonical null-geodesic calculation transports $p_R$ with
+Hamiltonian $\alpha(HR+\sqrt{B})p_R$. It is checked against this normal-frame
+formula. A separate unaveraged homogeneous integration gives the
+corresponding control signal analytically along its FLRW light cone.
+
+For the diffuse run emitted at central proper age 4, the fractional
+frequency departure from the homogeneous comparison is
+
+$$
+\frac{(\nu_o/\nu_e)}{(\nu_o/\nu_e)_{\rm hom}}-1
+=-0.0041375586\pm 1.1\times10^{-8}.
+$$
+
+This is approximately -0.413756 percent, with a finite numerical error
+estimate of .0000011 percentage points. The receiver's additional proper
+arrival time is .01703546, with numerical comparison error 2.2e-7 in atlas
+time units. Both the emitter's accumulated proper clock and propagation
+contribute to this delay. The independent canonical frequency differs by
+less than 4.7e-11 on the finest run.
+
+The coherent control, emitted at central age 0, has frequency departure
+-.007456287 with numerical comparison error 2.1e-7 and proper arrival delay
+.000476466. These use different declared emission ages; they are not a
+same-epoch comparison of the two states. All errors here concern numerical
+resolution and event calculation, not physical preparation uncertainty.
+
+
+The frequency departures are dimensionless. Delays are in atlas time units;
+an independent physical length would convert them to seconds. These
+conditional observables do not import P003's earlier linear coefficients
+or select a primordial population. The
+[complete protocol](../docs/nsc-atlas-core-evolution.md) and
+[numerical comparisons](../results/summaries/nsc-atlas-core-evolution-v1.json)
+give the emission events, receiver motion, error estimates and model scope.
+
+The connection now runs from a declared inherited scalar preparation,
+through self-consistent local evolution, to a received signal. The parent
+vacuum remains $\Lambda_{\rm vac}a_0^2=12.3482523989285$. Selecting its
+observed scale, explaining the population of structures and testing their
+nonradial persistence remain further physical questions.
+
+### 15.3. The same concentration bends and focuses light
+
+<!-- nsc-claim:evolved-core-null-focusing -->
+
+The radial clock is followed by a nonradial optical test on the same
+evolved scalar geometry. The field stepper and its physical inputs remain
+unchanged; final-state hashes must reproduce the preceding source calculation
+at every retained resolution. The lens is not replaced by a fitted density
+profile or a static metric.
+
+Scalar lenses have published precedents in
+[Dabrowski and Schunck](https://arxiv.org/abs/astro-ph/9807039), and
+[Aimar et al.](https://arxiv.org/abs/2512.23800) study time-dependent
+real-scalar optical signatures. The contribution here is the connection
+to the computed inherited parent and its formation history. The exact
+lens-map approach follows
+[Frittelli and Newman](https://arxiv.org/html/gr-qc/9810017), with the
+observer-screen formulation made explicit below.
+
+The canonical bulk equation gives an exact null contraction:
+
+$$
+R_{ab}=\kappa(\nabla_a\phi\nabla_b\phi+Ug_{ab}),
+\qquad R_{ab}k^ak^b=\kappa(k\phi)^2.
+$$
+
+The potential, including the inherited vacuum, drops out of this direct
+focusing term. It still affects the field and spacetime through which the
+ray travels. Its absence from this contraction is not invariance of the
+whole optical experiment under a change of Lambda.
+
+For normal energy E, radial momentum $q=\sqrt{B}p_R$ and conserved angular
+momentum L, the two principal tidal eigenvalues are
+
+$$
+T_\perp=\frac{\kappa}{2}(E\Pi+q\sqrt{B}F)^2
++\frac{3WL^2}{R^2},\qquad
+T_\parallel=\frac{\kappa}{2}(E\Pi+q\sqrt{B}F)^2
+-\frac{3WL^2}{R^2},
+$$
+
+where
+
+$$
+W=\frac{m}{R^3}-\frac{\kappa}{6}
+\left(U+\frac{\Pi^2-BF^2}{2}\right).
+$$
+
+Ricci curvature focuses both directions. Weyl curvature changes them with
+opposite signs, producing optical shear. The spherical Einstein Hessians
+and warped-product Riemann tensor independently give these factors and
+signs. In the homogeneous parent W vanishes. At a pure vacuum extremum
+both tidal eigenvalues vanish, although expansion and distances still
+depend on the vacuum scale.
+
+The principal Jacobi scales obey
+
+$$
+\frac{d^2D_i}{d\lambda^2}=-T_iD_i,
+\qquad D_i(0)=0,\qquad D_i'(0)=1.
+$$
+
+This is the attributed optical transport framework of
+[Seitz, Schneider and Ehlers](https://arxiv.org/abs/astro-ph/9403056),
+applied to the current source. The
+[curvature derivation](../docs/nsc-atlas-core-optics.md) and
+[compact calculation](../results/summaries/nsc-atlas-core-optics-v1.json)
+separate the exact identities from finite numerical lensing evidence.
+
+### 15.4. A proper-clock lens map during contraction and breathing
+
+<!-- nsc-claim:evolved-core-lens-map -->
+
+Hold a source and a spherical family of receivers at areal radius .6.
+Their clocks start on the initial slice. The source emits transparent
+test light at proper ages 2.8 and 3.4, with inward rest-frame angle $\psi$.
+The primary declared angles are .02, .04 and .08 radians. Unit emitted
+energy fixes affine normalization; beam stress is neglected as in the
+previous clock calculation.
+
+The null Hamiltonian is
+
+$$
+\mathcal H=-p_t=\alpha(E+HRp_R),\qquad
+E=\sqrt{Bp_R^2+L^2/R^2}.
+$$
+
+Each ray is followed to its first outward recrossing of the receiving
+sphere. Proper emission time, the changing metric and the receiver's
+velocity relative to the slice normal are retained. A separate normal-frame
+frequency equation checks canonical photon transport.
+
+The full landing map gives an independent computation of both beam scales:
+
+$$
+D_\perp=\frac{R_s\sin\varphi_o}{\sin\psi},\qquad
+D_\parallel=-R_s\mu_o\frac{d\varphi_o}{d\psi}.
+$$
+
+Here $\mu_o$ is the measured outward radial cosine. The derivative includes
+the angle-dependent arrival event. These screen identities and the
+curvature equations calculate the same beam by different routes. Flat
+space gives both scales equal to the chord length; a separate closed-FLRW
+great-circle solution checks the evolving homogeneous control.
+
+For inward launch angle .02 rad, the same source gives the following
+finite-screen results. Errors are numerical comparison envelopes, not
+uncertainties in the physical preparation.
+
+| Source proper age | Landing-angle departure | Beam flux / homogeneous | Principal-axis ratio |
+| --- | ---: | ---: | ---: |
+| 2.8 | 0.01928843 rad | 1.648532 +/- 0.000021 | 2.19831 |
+| 3.4 | 0.00666950 rad | 1.381442 +/- 0.000018 | 1.03582 |
+
+The early landing-angle departure is about 1.105 degrees. The beam is
+focused and distorted by different amounts at the two epochs, with no
+change to the scalar action or initial preparation. The six source replays
+match the prior field-state hashes exactly.
+
+The independent rotation-Jacobi discrepancy at the primary probes falls
+from 1.35e-5 to 8.80e-7 to 5.16e-8 under refinement. The in-plane angular-map
+discrepancy falls to 1.82e-6. The independent homogeneous area distance
+agrees within 1.42e-8; its frequency check agrees within 2.05e-8.
+
+The early fan brackets a tangential caustic between source angles .006
+and .008 rad at all three resolutions. On the finest run the signed
+perpendicular scales at those endpoints are -.00118667 and .0802128;
+their independent rotation checks differ by less than 1.7e-6. No tangential
+sign change is found in the sampled late fan. This is finite numerical
+evidence for the optical caustic, not a certified interval root or a
+prediction of infinite physical brightness. The calculated metric remains
+regular; a light-bundle caustic is not a spacetime singularity.
+
+
+![Nonradial light bending and beam focusing from the evolved scalar](../docs/figures/nsc-atlas-core-optics.png)
+
+*Figure 27. Two proper emission ages probe the same evolving concentration.
+The landing-angle map and signed beam area change as the core breathes.
+The inset shows the sampled transverse-scale sign change near the early caustic.
+Curvature-based Jacobi scales converge toward their independent ray-map
+values. Relative received beam flux uses the fixed source luminosity,
+measured frequency and projected beam area.*
+
+For fixed isotropic emitted luminosity, the received bolometric beam flux
+is proportional to
+
+$$
+\frac{\nu_o^2}{|D_\perp D_\parallel|}.
+$$
+
+The absolute area enters flux; its sign retains parity relative to the
+homogeneous beam. Comparisons identify the same source proper age and
+launch angle on the two geometries, so receiving worldlines can differ.
+This finite-screen experiment is not yet a fixed-source/fixed-observer
+astronomical image fit. Optical caustics, when bracketed by the fan, do
+not establish infinite physical brightness; finite-source and wavelength
+effects would require a further calculation.
+
+The [observer protocol and limits](../docs/nsc-atlas-core-optics.md) and
+[numerical comparisons](../results/summaries/nsc-atlas-core-optics-v1.json)
+bind these optical numbers to the same source that produced concentration
+and the radial clock signal. The inherited law has not thereby selected
+a cloud population, a physical SI scale or an observed dark-matter fraction.
+
+### 15.5. Two paths, one receiving clock
+
+A lens map becomes an image prediction when the emitting and receiving
+worldlines are fixed. Keep the scalar-parent solution of the preceding
+sections. Hold both worldlines at areal radius $R_s=.6$, put the emitter at
+azimuth zero and the receiver at $\pi-b$, with $b=.0002$. A pulse leaves at
+emitter proper age $2.8$. If $\Phi(\psi,\tau_e)$ is the positive-orientation
+landing map, the two selected branches satisfy
+
+$$
+\Phi(\psi_+,\tau_e)=\pi-b,\qquad
+\Phi(\psi_-,\tau_e)=\pi+b.
+$$
+
+Reflection sends the second ray to $-(\pi+b)$, which is the same receiving
+worldline modulo $2\pi$. The images arrive at different proper times on
+that one observer's clock. This improves on a fixed-launch-angle comparison,
+where the landing observer itself can change. The two selected angular
+patches do not constitute a census of all possible images.
+
+A null geodesic's endpoint variation relates these image measurements.
+Normalize its emitted energy to one. The null action gives
+$p_a\delta x_o^a-p_a\delta x_e^a=0$. The emitter is spatially fixed;
+the held receiving sphere contributes the local energy and conserved
+angular momentum $L$. Hence
+
+$$
+d\tau_o=\frac{d\tau_e}{\nu_o}
++\frac{L}{\nu_o}\,d\varphi_o.
+$$
+
+This equation does not assume a static lens or a conserved photon energy.
+It uses the actual evolving metric and endpoint observer tetrads. At a
+fixed receiving worldline, each image obeys $d\tau_i/d\tau_e=1/\nu_i$.
+For the relative delay $\Delta=\tau_--\tau_+$,
+
+$$
+\frac{d\Delta}{d\tau_e}=\frac{1}{\nu_-}-\frac{1}{\nu_+},\qquad
+\frac{d\Delta}{d\tau_+}=\frac{\nu_+}{\nu_-}-1.
+$$
+
+The second expression requires only the receiver's clock and the ratio
+of frequencies of matched source features. Image delays and frequency
+shifts are linked consequences of one geometry. The general endpoint and
+lens-map ideas are established mathematics; their evaluated connection
+to the forming source in this atlas is the present result.
+
+Conserved angular momentum also fixes the received image directions:
+$\sin|\xi_i|=\sin\psi_i/\nu_i$. Choose positive sky direction opposite
+increasing azimuth, so that $\xi_+>0$ and $\xi_-<0$. For a common,
+infinitesimal isotropic pulse, its observed bolometric fluence is
+
+$$
+\mathcal F_i=\frac{E_e}{4\pi}
+\frac{\nu_i}{|D_{\perp,i}D_{\parallel,i}|}.
+$$
+
+A continuous source instead gives a flux proportional to
+$\nu_i^2/|D_{\perp,i}D_{\parallel,i}|$, because reception rate adds a
+second frequency factor. The signed determinant retains image parity.
+These relations assume transparent geometric optics and a detector
+perpendicular to the arriving ray. Finite source size, duration and
+wavelength require separate modeling.
+
+The [fixed-worldline derivation](../docs/nsc-atlas-core-images.md) gives
+its endpoint proof, angular inverse and independent checks. Source ages
+$2.8\pm.0002$ and $2.8\pm.0001$ test the delay derivative; curvature
+and angular resampling test the two image inverses. All source evolution
+files remain unchanged.
+
+The completed pair is resolved at three grid spacings, with an additional
+optical-time comparison. Its conditional observables are:
+
+| Observable | Calculated value | Numerical comparison range |
+| --- | ---: | ---: |
+| Image separation | 0.682670 degrees | 0.000493 degrees |
+| Relative proper arrival delay | 1.44125317e-6 atlas units | 9.54e-10 atlas units |
+| Negative/positive frequency | 1.00000922695 | 8.52e-9 |
+| Negative/positive pulse fluence | 1.401958 | 0.006483 |
+
+The negative-parity image is brighter and arrives later. The rotation/Jacobi
+error decreases from $5.65\times10^{-4}$ to $3.35\times10^{-5}$ to
+$1.92\times10^{-6}$. The angular inverse and its curvature-based check
+agree to better than $1.31\times10^{-10}$ radians on the fine patches.
+All four field replays match the previously retained solutions exactly.
+The [compact evidence](../results/summaries/nsc-atlas-core-images-v1.json)
+records the fixed inputs, individual images and numerical comparisons.
+
+The directly differentiated delay agrees with the inverse-frequency
+identity to $1.55\times10^{-8}$ per source proper time, within its
+$1.67\times10^{-7}$ numerical comparison envelope. That small derivative
+residual is not monotone between the middle and fine grids. The result
+is a finite checked prediction with numerical ranges, not a rigorous
+interval enclosure or an asymptotic stability statement.
+
+![One receiving worldline sees two images from the evolved scalar concentration](../docs/figures/nsc-atlas-core-images.png)
+
+*Figure 28. The two angular roots reach one receiver after reflection of the
+negative branch. Their sky positions, pulse fluences and arrival times are
+computed from the unchanged scalar-parent evolution. Two independent
+calculations check the delay-frequency identity. The final panel links
+the resolved delay to the inherited parent vacuum through a scale-free
+product; it does not identify this benchmark with an observed lens.*
+
+### 15.6. A local image delay and the parent's vacuum must share one scale
+
+The local concentration belongs to the same sourced parent whose protected
+annulus retains the inherited vacuum. For this declared action and flux,
+the vacuum and reference radius in atlas units are
+
+$$
+\widehat\Lambda=\kappa U_{\rm vac}=9/32,\qquad
+\widehat L_{\rm ref}=6.62607707610.
+$$
+
+Thus the earlier conditional result
+$\Lambda L_{\rm ref}^2=12.34825239893$ still applies.
+
+Let $L_{\rm unit}$ be the physical length assigned to one atlas unit and
+let $\delta$ be the computed dimensionless image delay. Any consistent
+dimensional embedding must obey
+
+$$
+\Lambda_{\rm phys}=\frac{\widehat\Lambda}{L_{\rm unit}^2},\qquad
+\Delta t=\frac{L_{\rm unit}}{c}\,\delta,
+$$
+
+and therefore
+
+$$
+\Lambda_{\rm phys}(c\Delta t)^2=\widehat\Lambda\,\delta^2.
+$$
+
+For the computed pair,
+
+$$
+\Lambda_{\rm phys}(c\Delta t)^2
+=(5.8422\pm.0078)\times10^{-13}.
+$$
+
+The quoted range propagates the numerical delay envelope while holding
+the declared parent vacuum fixed. It does not include uncertainty in a
+physical interpretation or an unspecified preparation law.
+
+The free unit cancels. Calibrating a physical scale with an image delay
+leaves the vacuum value, angular image separation and frequency/fluence
+ratios as linked tests. Matching each by an independent scale choice
+would break this connection. This does not select the physical scale or
+prove that the inherited vacuum equals the value inferred from cosmology.
+It creates a precise joint requirement on that proposed identification.
+
+The cloud, emitting age and receiver position remain specified inputs.
+Population selection and nonspherical persistence remain necessary for an
+astronomical application. The atlas provides the mathematical route
+from inherited vacuum, through formed structure, to a fixed observer's
+measurements without an independently fitted lens mass.
+
+### 15.7. The forming field supplies one connected observer map
 
 <!-- nsc-claim:atlas-formed-observer -->
 
-Evidence: [fixed-observer response](../results/summaries/nsc-atlas-formed-observer-v1.json)
+Derivation and calculation: [fixed-observer response](../results/summaries/nsc-atlas-formed-observer-v1.json)
 and [metric, mass-current and endpoint derivation](../docs/nsc-atlas-formed-observer.md).
 
 The finite concentration can now be used as a source for light. Start from
@@ -7099,7 +5662,7 @@ between nearly equal photon energies. An endpoint energy identity checks
 it independently. The receiver's proper flight time is also integrated;
 it differs from a coordinate Shapiro delay.
 
-### 10.54. Direction, delay and frequency are derivatives of one arrival map
+### 15.8. Direction, delay and frequency are derivatives of one arrival map
 
 Let $T(\tau_e,\Theta)=\tau_o$ be the arrival map. Null endpoint variation
 gives, for the specified worldlines,
@@ -7150,7 +5713,7 @@ the declared model. It does not determine the observed absolute vacuum.
 
 ![Three readouts of one forming source and fixed observer map](../docs/figures/nsc-atlas-formed-observer.png)
 
-*Figure 30. The actual forming source supplies direction, proper delay and
+*Figure 29. The actual forming source supplies direction, proper delay and
 frequency for specified receiver offsets. The middle offset has the full
 quoted source and integration controls; the other two illustrate the map.
 The cross freezes the comoving potential under the same clock protocol.
@@ -7178,11 +5741,11 @@ can exceed the small gravitational frequency contrast. The next link to
 observations is therefore physically prepared or measured kinematics and
 the assessment of omitted metric terms, using this same formed source.
 
-### 10.55. Motion calibrates a prediction before the new ray is evaluated
+### 15.9. Motion calibrates a prediction before the new ray is evaluated
 
 <!-- nsc-claim:atlas-dynamics-lensing -->
 
-Evidence: [frozen NSC-P004 forecast](../results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json),
+Derivation and calculation: [frozen NSC-P004 forecast](../results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json),
 [separate validation](../results/summaries/nsc-p004-dynamics-lensing-validation-v1.json)
 and [derivation and preparation](../docs/nsc-atlas-dynamics-lensing.md).
 
@@ -7264,7 +5827,7 @@ metric potentials remain a premise of this model. Combining dynamics and
 lensing is established practice, illustrated in a different statistical
 setting by [Reyes et al.,1003.2185](https://arxiv.org/abs/1003.2185).
 
-### 10.56. NSC-P004 passes its frozen synthetic cross-observable check
+### 15.10. NSC-P004 passes its frozen synthetic cross-observable check
 
 The forecast and comparison tolerance were committed and pushed in
 [e626f2f](https://github.com/kodareken/nested-space-cosmology/commit/e626f2f)
@@ -7294,7 +5857,7 @@ quadrature is performed before the optical target is evaluated.
 
 ![Precheck, timelike calibration and frozen optical prediction](../docs/figures/nsc-atlas-dynamics-lensing.png)
 
-*Figure 31. The force-timescale precheck selects finite free-fall calibration.
+*Figure 30. The force-timescale precheck selects finite free-fall calibration.
 The middle panel reconstructs the force from motion along the retarded
 chord. The right panel compares the committed forecast with the later
 null calculation; its bars represent the stated comparison ranges, not
@@ -7334,7 +5897,106 @@ there would pass the same test. The next outward comparison should ask
 whether the surrounding compensation and inherited scale relation break
 a specified same-core degeneracy.
 
-### 10.57. Flow geometry and a common boundary stress
+### 15.11. Two observer distances, on two metrics
+
+<!-- nsc-claim:atlas-supernova-distance -->
+
+Scalar volume averages do not by themselves give an observer a distance.
+On the exact zero-source quiet cap the luminosity shape is
+
+$$
+\frac{D_L}{c/H}=z(1+z).
+$$
+
+The comparison retains 596 released Pantheon+ light curves of 545 distinct
+supernovae, excluding calibrators and retaining correlated repeat light
+curves. The low band is $0.025\leq z_{\mathrm{HD}}<0.075$ (335 curves);
+the high band is $0.15\leq z_{\mathrm{HD}}\leq0.25$ (261 curves). Both
+lie inside the declared quiet-cap causal domain. For each curve define
+
+$$
+y_i=m_{b,i}^{\mathrm{corr}}
+-5\log_{10}[z_{\mathrm{HD},i}(1+z_{\mathrm{HEL},i})].
+$$
+
+Generalized least squares fits the two band intercepts jointly using the
+selected full statistical and systematic covariance. Their high-minus-low
+contrast cancels a common brightness and Hubble scale. The quiet prediction
+is zero; the measured contrast is
+
+$$
+\Delta=-0.1046180474751224\pm0.014373986469318333
+\ \mathrm{mag}.
+$$
+
+The estimator was frozen before this evaluation. The catalogue itself was
+already public, so the test is a retrospective comparison of one quiet
+state, not a blind test and not a falsification of a completed
+Nested-Space cosmology. No $\Lambda$CDM parameter was fitted, and no
+cosmological constant was supplied to improve the residual. The uncertainty
+is conditional on the released covariance and standardization, including
+its peculiar-velocity treatment. The
+[distance-contrast record](../results/summaries/nsc-atlas-distance-contrast-v1.json)
+stores the estimator specification, selected-row identity, zero prediction
+and this residual.
+
+<!-- nsc-claim:conformal-causal-distances -->
+
+The separate evolving metric also has an explicit null cone. Receiver,
+emitters and ideal reflectors sit on fixed-coordinate normal worldlines.
+Those worldlines may be accelerated. They are not introduced as
+cosmological comoving matter, and a slope of redshift against lookback is
+not a measurement of $H_0$. For transparent, photon-conserving geometric
+optics, with $N=rQ$, reception $(T_o,x_o)=(0.3,1)$ and past rays
+$T_e=T_o-\chi$, $x_e=x_o+\eta\chi$,
+
+$$
+1+z=\frac{N_o}{N_e},\qquad
+D_A=\frac{r_or_e}{N_o}\int_0^\chi Q(T_o-s,x_o+\eta s)^2\,ds,
+$$
+$$
+D_L=(1+z)^2D_A,\qquad
+D_{\mathrm{radar}}=\frac{1}{2}\int_{T_o-2\chi}^{T_o}N(T,x_o)\,dT.
+$$
+
+The lapse in these formulae is the full product $rQ$. The three
+predeclared lookbacks are $\chi=0.025$, $0.075$ and $0.125$, in both
+directions. The longest radar trip begins at $T=0.05$, inside the saved
+time interval. At $\chi=0.125$ both directions have the same radar distance
+$D_{\mathrm{radar}}/L_{\mathrm{ref}}=0.031382863175331$.
+
+| Side at $\chi=0.125$ | Redshift | $D_L/D_{\mathrm{radar}}$ |
+| --- | ---: | ---: |
+| Smaller $x$ | $0.0016677447278268254$ | $1.0000739824887968$ |
+| Larger $x$ | $-0.007306104080127329$ | $0.991108506097534$ |
+
+The ratios carry no unit. The largest 32/64-point difference is
+$3.34\times10^{-16}$. Across the four stored cases the largest deviations
+are $2.94\times10^{-10}$ in redshift and $4.84\times10^{-10}$ in the ratio.
+Those figures do not bound interpolation or the total model uncertainty.
+The method was frozen at `f0f639d` before the rays were evaluated, with no
+new gravitational or field solve. The
+[light-cone record](../results/summaries/nsc-conformal-lightcone-v1.json)
+contains all six rays. Figure 31 shows the three declared lengths; the lines
+only connect those samples. This is a finite observer map on one saved
+metric, not a full-sky prediction and not a match to the Pantheon+ residual.
+
+![Redshift and luminosity-to-radar ratio on the saved conformal null cone](../docs/figures/nsc-conformal-lightcone.png)
+
+*Figure 31. Three predeclared lookbacks in each radial direction, for the
+fixed-coordinate normal probes of the saved conformal metric. Markers are
+the declared rays. Lines connect samples and do not fill intermediate
+evolution.*
+
+## VI. Gravitational exchange, fluid motion and quantum state
+
+The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
+
+### 16. Responses across matter, gravity and quantum descriptions
+
+The following sections give the worked constructions and their attributed mathematical inputs.
+
+### 16.1. Flow geometry and a common boundary stress
 
 <!-- nsc-claim:atlas-flow-boundary-dictionary -->
 
@@ -7374,11 +6036,11 @@ budget and its light-cone observations remain calculations to construct.
 The next example supplies a finite gravitational response with an explicit
 material action, rather than assigning an arbitrary reflector to a horizon.
 
-### 10.58. Two stable material interfaces in one static geometry
+### 16.2. Two stable material interfaces in one static geometry
 
 <!-- nsc-claim:atlas-gravitational-background -->
 
-Evidence: [background, force and response record](../results/summaries/nsc-atlas-gravitational-response-v1.json).
+Derivation and calculation: [background, force and response record](../results/summaries/nsc-atlas-gravitational-response-v1.json).
 The [derivation](../docs/nsc-atlas-gravitational-response.md) distinguishes this
 candidate from the earlier formed scalar history. It reuses the
 [Visser--Wiltshire](https://arxiv.org/abs/gr-qc/0310107) shell dynamics and
@@ -7437,11 +6099,11 @@ $\Lambda_{\rm child}(.1M)^2=.132512869461$. The supplied radius/mass ratios
 and four-form sectors have not been selected by astronomical data or by an
 absolute vacuum-selection mechanism.
 
-### 10.59. The gravitational action now composes through the interfaces
+### 16.3. The gravitational action now composes through the interfaces
 
 <!-- nsc-claim:atlas-gravitational-composition -->
 
-Evidence: [common-clock wave and junction controls](../results/summaries/nsc-atlas-gravitational-response-v1.json).
+Derivation and calculation: [common-clock wave and junction controls](../results/summaries/nsc-atlas-gravitational-response-v1.json).
 For linear axial modes $\ell\geq2$, use the Fourier convention below
 and the common-time Regge--Wheeler variable
 
@@ -7496,11 +6158,11 @@ finite-energy exponentially growing axial modes. This covers a propagating
 gravitational sector across both material levels. It does not establish polar
 stability or the nonlinear formation of a rotating hierarchy.
 
-### 10.60. The same exterior mass permits different gravitational returns
+### 16.4. The same exterior mass permits different gravitational returns
 
 <!-- nsc-claim:atlas-gravitational-contrast -->
 
-Evidence: [two-frequency contrast and numerical controls](../results/summaries/nsc-atlas-gravitational-response-v1.json).
+Derivation and calculation: [two-frequency contrast and numerical controls](../results/summaries/nsc-atlas-gravitational-response-v1.json).
 Keep the outer wall, parent annulus and exterior fixed. Replace only the
 regular child and its inner interface by the same Kottler region extended
 to its horizon, with an ingoing state there. Drive the finite worldtube
@@ -7556,7 +6218,7 @@ a common gravitational evolution equation, Schur composition and a receiving
 clock. A direct retarded pulse, polar response and a specified rotating or
 dissipative state are the next physical connections.
 
-### 10.61. A published nonlinear vortex mechanism enters the atlas
+### 16.5. A published nonlinear vortex mechanism enters the atlas
 
 <!-- nsc-claim:atlas-openai-navier-stokes-source -->
 
@@ -7569,7 +6231,7 @@ Theorem 1.1 constructs a three-dimensional incompressible flow for every
 positive viscosity, starting from rest under a smooth compactly supported
 force. Its velocity becomes unbounded in finite time while kinetic energy
 stays bounded. OpenAI's theorem is incorporated as an attributed mathematical
-input; the independent atlas calculation follows in Sections 10.62--10.63.
+input; the independent atlas calculation follows in Sections 16.6--16.7.
 
 The relevant mechanism appears in Sections 2.2 and 3.2--3.3: zero-mean
 oscillatory velocities have nonzero quadratic momentum fluxes. The source
@@ -7602,11 +6264,11 @@ the momentum-transfer mechanism for an independent calculation. Its
 prepared initial velocity is nonzero, its initial mean is zero, and the
 force is zero after release. Those assumptions differ from Theorem 1.1.
 
-### 10.62. Fine motion produces an exact resolved circulation
+### 16.6. Fine motion produces an exact resolved circulation
 
 <!-- nsc-claim:atlas-vortex-initial-transfer -->
 
-Evidence: [initial rate, covariance and conservation checks](../results/summaries/nsc-atlas-vortex-transfer-v1.json).
+Derivation and calculation: [initial rate, covariance and conservation checks](../results/summaries/nsc-atlas-vortex-transfer-v1.json).
 In cylindrical coordinates choose the smooth bump
 
 $$
@@ -7685,11 +6347,11 @@ This composes the initial effects of prepared resolutions while retaining
 their covariance state. An infinite sequence additionally needs regularity
 and dissipation summability; it is not supplied by this finite identity.
 
-### 10.63. The correlations retain their energy and momentum budget
+### 16.7. The correlations retain their energy and momentum budget
 
 <!-- nsc-claim:atlas-vortex-resolution-budget -->
 
-Evidence: [quadrature controls and physical unit example](../results/summaries/nsc-atlas-vortex-transfer-v1.json).
+Derivation and calculation: [quadrature controls and physical unit example](../results/summaries/nsc-atlas-vortex-transfer-v1.json).
 With $I=\int\chi^2 dz=.983380812913$, the outward angular-momentum and
 axial-momentum fluxes through a cylinder are
 
@@ -7746,11 +6408,11 @@ Thus the source paper contributes a defined mathematical block, while the
 gravitational attachment and a sustained rotating hierarchy remain further
 connections to calculate.
 
-### 10.64. A material action now supplies the interaction vertex
+### 16.8. A material action now supplies the interaction vertex
 
 <!-- nsc-claim:atlas-geometric-cubic-vertex -->
 
-Evidence: [actual-mode normalization, vertices and controls](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
+Derivation and calculation: [actual-mode normalization, vertices and controls](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
 The [interaction owner](../docs/nsc-atlas-cosmohedron-interaction.md) turns
 the cosmohedra comparison into a finite calculation on the sourced body.
 [Arkani-Hamed, Figueiredo and Vazao](https://arxiv.org/html/2412.19881v1)
@@ -7795,11 +6457,11 @@ convention is fixed in the owner. Its opposite reverses both vertices,
 leaving their exchange product unchanged. This angular integral and the
 proper-clock normalization determine the vertex without a cubic fit.
 
-### 10.65. An actual gravitational mode carries the cosmohedron seed
+### 16.9. An actual gravitational mode carries the cosmohedron seed
 
 <!-- nsc-claim:atlas-physical-cosmohedron-exchange -->
 
-Evidence: [mode, selected exchange and numerical controls](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
+Derivation and calculation: [mode, selected exchange and numerical controls](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
 Retain the first regular axial ell=2 mode, with Dirichlet master at r=10M.
 This is an explicitly conditional quantum domain. It differs from the
 earlier open characteristic experiment at that radius and adds no physical
@@ -7874,11 +6536,11 @@ function. Mode frequencies replace plane-wave momentum magnitudes;
 the full momentum-polytope realization has not been identified with
 this geometry. The result is a calculated graph-kernel connection.
 
-### 10.66. Interior geometry changes the interaction and fixes its scale law
+### 16.10. Interior geometry changes the interaction and fixes its scale law
 
 <!-- nsc-claim:atlas-cosmohedron-interior-contrast -->
 
-Evidence: [two preparations and fixed-G scaling](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
+Derivation and calculation: [two preparations and fixed-G scaling](../results/summaries/nsc-atlas-cosmohedron-interaction-v1.json).
 Move the inner wall from .25M to .30M and re-solve its stiff junction.
 Its radial potential curvature stays positive. The parent parameters,
 outer wall and exterior are unchanged. These are separately prepared
@@ -7926,138 +6588,1709 @@ coefficient. Completing the constrained/pole-summed response and extending
 the state to a time-dependent parent remain further work. No black/white
 transition or observed Lambda value has been deduced from this graph kernel.
 
-## IV. What the observers can reach
+### 16.11. The actual cap--wall Dirac operator and the missing nested slip
 
-### 11. Complete one reference before assigning its causal arrows
-
-<!-- nsc-claim:atlas-causal-access -->
-
-Evidence: [isolated causal completion](../results/development/nsc-cosmological-atlas-v5/causal-map.json),
-[observer access](../results/development/nsc-cosmological-atlas-v5/observer-access.json),
-and [protected parent interval](../results/development/nsc-cosmological-atlas-v4/causal-window.json).
-
-The wall's isolated spherical completion is the flat-exterior limit of
-solution 13 in [Aguirre and Johnson, gr-qc/0508093v2,
-Figures 7 and 10](https://arxiv.org/html/gr-qc/0508093v2).
-Writing $x=R/\ell$, its expanding branch has
+The [cap--wall calculation](../docs/nsc-atlas-dirac-probe.md)
+adds a declared massless, minimally coupled probe with no direct surface
+spinor interaction to the original classical scalar candidate. It uses the
+known quiet reference; P001's unconverged endpoint supplies no controlled
+corrected background. In its static cap, let $A=1-H^2r^2$ and
+$z=\operatorname{atanh}(Hr)/H$. Rescaling the physical spinor by
+$\psi=A^{-1/4}r^{-1}u$ gives
 
 $$
-\dot R^2=\frac{25x^2}{16}-1+\frac{3}{10x}+\frac{1}{25x^4}>0.
+\mathsf{H}_k=-i\sigma_2\partial_z+\sigma_1 W,
+\qquad W=\frac{k\sqrt{A}}{r},
+\qquad V_\pm=W^2\pm\partial_zW,
+\qquad \partial_zW=-\frac{k\sqrt{A}}{r^2}.
 $$
 
-It starts at a finite proper-past $R=0$ boundary in the Schwarzschild
-white-hole sector, crosses $R=2M$ into the left exterior, and crosses the
-de Sitter horizon into an expanding interior chart. It reaches arbitrarily
-large radius at infinite wall proper time. Its Schwarzschild curvature
-$48M^2/R^6$ diverges at the past boundary. The regular cap on the
-chosen slice therefore does not imply a regular past formation.
-The retained reference also contains the usual future Schwarzschild
-black-hole singular boundary.
+At $r/\ell=.5$, the lowest angular channel has
+$W\ell=\sqrt3$ and squared potentials
+$V_+\ell^2=-.4641016151$, $V_-\ell^2=6.4641016151$.
+Flat space at the same radius gives $0$ and $8$ for those potentials.
+These are curvature effects. The smooth control continues the same cap
+and retains its identical bulk operator.
 
-Choose three clocks. $C$ is the cap center, with de Sitter flat proper
-time $t_C$. $W$ carries wall proper time $\tau_W$, set to zero at
-$R=1.5\ell$. $P$ is static in the right exterior at
-$R_P=1.6\ell$, with proper time
-$\tau_P=\sqrt{1-2M/R_P}\,t_{\mathrm{Schw}}$. Their origins coincide
-with a selected slice convention; this is not an equality of universe ages.
+Nesting changes the material domain. For the common cap-to-exterior normal,
+$[K]=-6/\ell$. Continuity of the spinor and its Dirac image gives
+$[\partial_n\psi]=-[K]\psi/2=3\psi/\ell$ in a common normal frame.
+The smooth-cap control has no jump. The
+[reference record](../results/summaries/nsc-atlas-dirac-probe-reference-v1.json)
+and ten independent controls verify these operator inputs. The exterior's
+usual static coordinate is spacelike at this cut, so it cannot supply a
+static joined spectral problem.
 
-For the flat de Sitter chart,
+No nested $\Psi/\Phi$ or slip difference has yet been calculated. The
+loop requires a Dirac two-point state on the joined causal domain,
+renormalized bulk/interface response, and a conserved metric source with
+its wall displacement and gauge-invariant observer readout. Those inputs
+are absent from the classical scalar preparation and the flat profile.
+For free fermions the retarded bilinear response already depends explicitly
+on its initial covariance through $-i\operatorname{Tr}(C[V(t),V(0)])$;
+geometry alone does not select it. The completed result here is the curved
+operator/domain connection, not a loop polarization or an NSC slip number.
+
+### 16.12. Local Dirac trace on the cap and material wall
+
+The free four-component Dirac determinant and general
+[heat-coefficient framework](https://arxiv.org/pdf/hep-th/0306138)
+are imported; the spin/statistics contractions and actual curvature are
+calculated. In the two quiet smooth regions, where $\Box R=0$,
 
 $$
-\eta=-\ell e^{-t_C/\ell},\qquad R=a r,\qquad a=e^{t_C/\ell}.
+\frac{\langle T^\mu{}_\mu\rangle}{\hbar c}
+=\frac{7R_{\alpha\beta\gamma\delta}R^{\alpha\beta\gamma\delta}
++8R_{\alpha\beta}R^{\alpha\beta}-5R^2}{360(4\pi)^2}.
 $$
 
-Radial null lines have constant $\eta-r$ or $\eta+r$.
-At $W_0$, $\eta=-\ell$ and $r=1.5\ell$.
-Its inward ray would reach $\eta=0.5\ell$, outside the chart's
-future $\eta<0$; hence it never reaches $C$.
-A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
+The [one-sided evaluation](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.json)
+therefore gives $-11H^4/(240\pi^2)$ in the cap and
+$7M^2/(120\pi^2r^6)$ outside. A flat reference has zero local curvature
+trace. These are actual-background terms of the declared quantum probe,
+distinct from the flat nonlocal polarization in Section 17.11.
 
-![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
+At the material wall, integrate a smooth normal curvature jet before
+taking a thin limit. The declared class smooths the kinked conformal factor
+while the conformal product curvature remains bounded. With one normal
+pointing from cap to exterior, put $t=K^\tau{}_\tau$, $b=K^\Omega{}_\Omega$,
+$A=R_{\tau\tau}/R$ and $B=(1+R_\tau^2)/R^2$. The Chern scalar is
+$\mathcal{B}_3=-8tb^2+8Bt+16Ab$. Direct Lorentz curvature contraction gives
+the Euler surface coefficient
 
-*Figure 35. The isolated reference in joined causal charts. Horizons are
-clipped to retained domains; the central cosmological horizon continues
-into the Schwarzschild chart along its appropriate constant null coordinate.
-The faint past $R=0$ line also shows uncut chart context, part of which is
-excised. Open wall endpoints at $R/\ell=0.02$ and $6$ mark finite
-plot samples, not physical beginnings or endings.*
+$$
+\mathcal{E}_\Sigma=-[\mathcal{B}_3]
+=4k_{\rm wall}(k_{\rm wall}^2+3H^2)=56/\ell^3.
+$$
 
-| Emission and destination | Result in this reference | Required distinction |
+The exterior mass and wall radius cancel through the signed junction
+equations. Pure-trace leading singular terms cancel in both Euler and
+Weyl curvature squares; no delta square is evaluated. The
+[Euler-wall reference](../results/summaries/nsc-atlas-dirac-euler-wall-v1.json)
+then gives
+
+$$
+\frac{\langle T^\mu{}_\mu\rangle_{\Sigma,E}}{\hbar c}
+=-\frac{77}{720\pi^2\ell^3}\delta_\Sigma.
+$$
+
+A smooth continuation of the cap has no such interface coefficient.
+The scheme-dependent total derivative, finite interface terms, traceless
+stress and quantum preparation remain separate inputs. This one Euler
+term is not the complete wall stress. Trace-only projections do not
+establish vacuum stress or replace the supplied cap $\Lambda_{0,-}\ell^2=3$.
+
+### 16.13. An actual wall radar chart and a finite clock prediction
+
+The [wall-clock construction](../results/summaries/nsc-atlas-dirac-radar-v1.json)
+uses the same $H\ell=1$, $k_{\rm wall}\ell=2$, $M/\ell=.4$ and
+$.45\le R_{\rm wall}/\ell\le.55$. In each static region take optical
+coordinates $u_i=t_i-r_i^*$, $v_i=t_i+r_i^*$. Their wall derivatives are
+
+$$
+\frac{du_i}{d\tau}=\frac{1}{\beta_i+\dot{R}},\qquad
+\frac{dv_i}{d\tau}=\frac{1}{\beta_i-\dot{R}}.
+$$
+
+Inside the exterior horizon the second derivative is negative. Label both
+null rays by their wall proper times $U,V$, preserving that orientation.
+Then
+
+$$
+T=(U+V)/2,\quad x=(V-U)/2,\quad
+ds_2^2=C_i(-dT^2+dx^2),\quad
+C_i=f_i(r)u_i'(U)v_i'(V)>0.
+$$
+
+The cap occupies $V\le U$ and exterior $V\ge U$. The proper-clock range
+$0\le U,V\le S$, $S/\ell=.1256873632901$, gives the finite causal diamond
+in Figure 35. An analytic conservative bound gives $N=\sqrt{C}\ge.3851891$
+throughout that domain. The material wall remains $x=0$, $T=\tau$,
+$C=1$; both Israel jumps are retained. This construction uses no spatial
+cutoff profile and has no reflecting timelike ends. The earlier wide
+coordinate chart's fold remains an unsuccessful construction, without
+changing the underlying quiet geometry.
+
+The actual Dirac half-density has constant characteristic speed:
+
+$$
+\xi=C^{1/4}r\psi,\qquad
+H_\kappa=-i\sigma_2\partial_x+\sigma_1W_\kappa,\qquad
+W_\kappa=\kappa\sqrt{C}/r.
+$$
+
+Both $W_\kappa$ and its first derivatives are continuous at the wall.
+The density spinor and its spatial derivative are continuous in this
+frame, while the physical parallel-normal jump remains $3k_{\rm wall}\psi/2$.
+
+For a finite clock protocol, emit a radial optical phase at wall
+$U=\tau(.475)$ and receive at
+$(U,V)=(\tau(.475),\tau(.525))$ on a fixed wall-radar-position observer.
+The signed radar position is $x/\ell=.0314673818165$ and
+$T/\ell=.0584746895099$. The null phase $-U$ and receiver proper clock give
+$\omega_{\rm rec}/\omega_{\rm wall}=1/N_{\rm rec}$.
+
+| Quiet geometry with the same radar protocol | $r_{\rm rec}/\ell$ | $N_{\rm rec}$ | $\omega_{\rm rec}/\omega_{\rm wall}$ | $W_1\ell$ |
+| --- | ---: | ---: | ---: | ---: |
+| Nested cap--wall--exterior | .5068911 | .8668323 | 1.153626 | 1.7101 |
+| Smooth cap continuation | .5364941 | .9253385 | 1.080686 | 1.7248 |
+
+For the independently supplied $\ell=10\,{\rm km}$, this radar range is
+$314.674$ m. The smooth continuation is a geometric control with the same
+observer worldline and clock labels; it is not another matched membrane
+solution. These are conditional quiet-background predictions, with no
+observed frequency used to tune the geometry. They are not a quantum slip
+or an astronomical identification. The optical-map comparison with independent
+quadrature differs by $2.11\times10^{-14}$ or less; finite mode propagation and the full
+quantum error account are not supplied by this geometry calculation.
+
+![Wall radar causal diamond, clock lapse and actual change in Dirac potential](figures/dirac-wall-radar.png)
+
+*Figure 35. The finite quiet wall-clock diamond. The material wall is the
+vertical line; null edges are causal limits. Left: proper-clock lapse,
+with the emitted/reflected radar ray and receiver. Right: the radial
+Dirac-potential difference from a smooth continuation of the same cap,
+using the same wall clock and probe angular sector. These colors describe
+the background geometry, not an evolved quantum state or a metric-loop
+response.*
+
+### 16.14. Stress vertices and the inherited quantum preparation
+
+The same canonical radial Dirac action supplies its gravitational
+sources. For a full magnetic multiplet let $d=2|\kappa|$,
+$f=d/(4\pi)$, $\xi=\sqrt{a}\,r\psi$,
+$q_A=-i(\xi^\dagger A\xi_y-\xi_y^\dagger A\xi)/2$ and
+$s_1=\xi^\dagger\sigma_1\xi$. Its real Hamiltonian density is
+$h=d[N(q_\alpha/a+\kappa s_1/r)-\beta q_I]$. Metric variation at fixed
+canonical half-density gives
+
+$$
+\rho=\frac{f}{ar^2}(q_\alpha/a+\kappa s_1/r),\qquad
+p_r=\frac{fq_\alpha}{a^2r^2},\qquad
+p_t=\frac{f\kappa s_1}{2ar^3},\qquad
+T^{\hat{0}\hat{1}}=\frac{fq_I}{a^2r^2}.
+$$
+
+The [stress and contact calculation](../docs/nsc-atlas-dirac-probe.md#dirac-stress-and-the-actual-gravitational-metric-vertices)
+checks the Hilbert energy/flux, complete angular normalization,
+four-dimensional covariant conservation and the first/second metric
+variations. Finite-mode stress has zero classical trace and transmits
+continuously; the anomaly in Section 16.12 is retained separately.
+Radial ports and first-order time-end variations remain in an integrated
+response. No scalar source or flat polarization is substituted.
+
+The radar characteristic equations define the transfer of prepared
+incoming data to the middle Cauchy segment. A parent covariance must
+include both incoming branches and their cross-correlations. Existing
+Gaussian boundary elimination can preserve those terms once the actual
+transfer is supplied. Neither the chart nor the common-law relation
+chooses a root state. Section 16.17 supplies one additional preparation
+axiom and establishes its local short-distance class; it is not inferred
+from a null-line frequency label alone.
+
+The characteristic transfer and a finite prepared-state mean response
+are evaluated next. A compatible baseline preparation, bulk/interface
+renormalization conditions and the complete mixed response to a physical
+source still separate them from a nested $\Psi/\Phi$ prediction.
+
+### 16.15. Prepared Dirac propagation, mean metric and clock
+
+The [actual transfer](../results/summaries/nsc-atlas-dirac-scattering-v1.json)
+propagates the canonical chiral field on the wall-clock diamond. With
+$P=\eta_+$ and $M=\eta_-$, the equations are
+$2P_V=-iW_\kappa M$ and $2M_U=-iW_\kappa P$.
+The characteristic cell map is a two-component Cayley unitary in positive
+null-flux weights. Direct metric variation gives the ordered matter
+response $-i[J_A,J_B]$ for the declared exterior source and later cap
+insertion. For one specified first-channel occupation difference its
+magnitude changes by about .3774% relative to the smooth-cap control.
+This is one matter-response component.
+
+The [mean-clock reference](../results/summaries/nsc-atlas-dirac-mean-clock-v1.json)
+then supplies the mean metric needed before a full mixed source/tadpole
+calculation. The incoming mode has $P(U,0)=0$ and
+$M(0,V)=A b(V)\exp(-12iV/S)$, where $b$ is the stated smooth peak-one
+bump centered at $.6S$ with half-width $.3S$: put
+$z=(V-.6S)/(.3S)$ and $b=\exp[1-1/(1-z^2)]$ for $|z|<1$,
+and zero otherwise. The constant $A$ normalizes its continuum null flux
+to one. For a compatible supplied parent
+covariance $C_H$, define $\Pi=I-|f\rangle\langle f|$,
+$C_{\mathrm{empty}}=\Pi C_H\Pi$ and
+$C_n=C_{\mathrm{empty}}+n_{\mathrm{occ}}|f\rangle\langle f|$,
+$0\leq n_{\mathrm{occ}}\leq1$. This declared preparation changes one mode's
+occupation and removes its cross terms; it selects no root vacuum.
+The parent must make the finite-rank modification smooth on this region;
+its global preparation remains an assumption.
+Both magnetic states of the $\kappa=1$ multiplet have the same radial data.
+Other inherited modes cancel between the two states.
+
+Analytically differentiated characteristic equations supply first
+derivatives of the propagated field. The same stress vertices then
+determine the nonvacuum Misner-Sharp mass one-form. In units $c=\hbar=1$,
+with $\kappa_g=8\pi G$ and the cap vacuum mass evaluated at the actual
+areal radius,
+
+$$
+m_{\rm total}=M_i+\Lambda_i r^3/6+m_i,\qquad
+(m_U,m_V)=\frac{\kappa_g r^2}{C}
+(t_{UV}r_U-t_{UU}r_V,\ t_{UV}r_V-t_{VV}r_U).
+$$
+
+The two wall masses drive the existing signed radius-response equation.
+In outgoing EF coordinates, the radial lapse follows from
+$\psi_V=\kappa_g r t_{VV}/(2r_V)$ and its proper-wall normalization.
+Analytic sensitivity of the ingoing null ray gives $s=\delta r$ and
+$z=s_V$, hence $q=\delta\ln C=\psi+z/r_V$. The specified radial phase
+and a receiver at fixed proper-wall radar position give
+$\delta\ln(\omega_{\mathrm{rec}}/\omega_{\mathrm{wall}})=-q/2$.
+No separate bulk metric grid is needed for this first-order supplied source.
+
+The proper-clock labels remain $U=\tau(.475)$ and $V=\tau(.525)$
+of the quiet reference. Define
+
+$$
+\varepsilon_q=\frac{8\pi\hbar G}{c^3\ell^2},\qquad
+\mathcal C_{\rm clock}
+=\frac{\delta\ln(\omega_{\rm rec}/\omega_{\rm wall})}
+{\varepsilon_q n_{\rm occ}}.
+$$
+
+| Geometry and observer protocol | $\mathcal C_{\mathrm{clock}}$, 128 cells | Absolute 64/128 spread |
 | --- | --- | --- |
-| New $C\to W$ or $W\to C$ emission at or after the anchor slice | No future reception | Earlier signals may arrive later |
-| Right parent $P\to W$ or $P\to C$ | No future causal route | Left and right exterior regions are different |
-| Early $W\to C$, while $R<\ell$ | Allowed | Reception time depends on the emission event |
-| Early $C\to W\to P$, crossing while $R<2M$ | Allowed | The limiting horizon ray has no finite parent reception |
-| These same arrows in a glued multi-body future | Unresolved | Initial-data gluing does not supply that global future |
+| Nested cap-wall-exterior | -.41780 | 1.12e-5 |
+| Smooth cap, shared observer motion | -.39929 | 9.95e-6 |
 
-For a wall event with interior time $t_W$, the central emission reaching
-it and the reception of its inward ray satisfy
+The smooth cap has no membrane. Its observer worldtube is explicitly
+driven along the computed nested wall's areal-radius history. The
+coefficient difference is $-.01851197$, about 4.63625% in magnitude,
+with a correlated numerical spread $1.23\times10^{-6}$.
+This compares the two geometries at common observer motion; it is not
+an independently evolving alternative wall model.
 
-$$
-t_e=t_W-\ell\ln(1+R/\ell),\qquad
-t_r=t_W-\ell\ln(1-R/\ell).
-$$
+The normalized nested mass-path discrepancy decreases from
+$1.15\times10^{-6}$ to $2.92\times10^{-7}$; the smooth control also
+improves. Orders 8/12 of the piecewise quadrature differ by less than
+$5.34\times10^{-15}$ in the clock coefficient. Exact charged-wall and
+nonzero-lapse fluid families independently check the reconstruction.
+These indicators support the finite calculation; they are not a
+rigorous continuum remainder or an observational confidence interval.
 
-The second relation requires $R<\ell$.
-At the early event $R=0.5\ell$, the recorded central emission is
-$-1.5242168241\ell$ and inward reception is
-$-0.4256045355\ell$. An outward early route through that event reaches
-$P$ at its own proper time $+2.5311656510\ell$.
-Thus exclusion of **new emissions** after a slice must never be rewritten
-as exclusion of all later receptions. Emissions approaching the central
-horizon from below can arrive arbitrarily late.
-
-The critical central emission for escape to the right parent is
-$t_C=-1.2312944525\ell$. Equality follows the parent horizon and has
-no finite parent reception. That horizon extends into the cap along
-$\eta-r=\eta_W(2M)-r_W(2M)$; it is not the surface $R=2M$
-everywhere. The central observer's de Sitter horizon $\eta+r=0$
-is a different boundary. Detailed clock domains and finite checks are
-retained in the [observer note](../docs/nsc-atlas-causal-observers.md).
-
-### 12. Different exteriors can be locally indistinguishable
-
-There is also a result that does not require the glued parent's full future.
-Retain the exact right Schwarzschild $K=0$ slice for
-$2M<R<R_{\mathrm{cut}}$, with $R_{\mathrm{cut}}=10M$.
-For a static observer at $R_{\mathrm{obs}}=4M$, the exterior cutoff
-cannot influence it within
+For the independently supplied $\ell=10\,\mathrm{km}$, the nominal
+prepared-state fractional frequency correction is
 
 $$
-0<t_{\mathrm{Schw}}<
-r_*(R_{\mathrm{cut}})-r_*(R_{\mathrm{obs}}),\qquad
-r_*(R)=R+2M\ln(R/(2M)-1).
+\delta\ln(\omega_{\rm rec}/\omega_{\rm wall})
+\simeq-2.7430\times10^{-77}n_{\rm occ}
+\left(\frac{10\ {\rm km}}{\ell}\right)^2.
 $$
 
-The observer's proper duration is the right side multiplied by
-$\sqrt{1-2M/R_{\mathrm{obs}}}$.
-For $M=0.4\ell$, the bound is
-$t_{\mathrm{Schw}}<3.5090354889\ell$, or
-$\tau_P<2.4812627896\ell$.
-The inner optical boundary is at negative infinity, so it introduces no
-finite inner cutoff.
+The nested resolution spread converts to $7.34\times10^{-82}$ at unit
+occupation and that scale. The
+[CODATA 2022](https://physics.nist.gov/cuu/Constants/Table/allascii.txt)
+uncertainty in $G$ is separate. The length and mode preparation are
+inputs, and no astronomical datum selects them.
 
-Shared smooth vacuum data give the same vacuum development in this domain.
-The [owning argument](../docs/nsc-atlas-causal-observers.md) uses standard
-Cauchy-development uniqueness, with [Sbierski
-(1309.7591v2)](https://arxiv.org/html/1309.7591v2) as a source.
-The bound ends a guaranteed interval; it does not predict that a signal
-actually arrives then. Matching additional fields and their states requires
-additional data.
+This finite state-difference result supplies the mean $h_q$ needed in
+the later mixed Einstein and source variations. It does not determine
+the baseline vacuum, full retarded $\Psi/\Phi$ or a cosmological
+$\Lambda$. The finite-amplitude scalar P001 remains unconverged;
+its original solver and grids were not changed by this calculation.
 
-This supplies one precise atlas of indistinguishable exteriors. Distinct
-larger assemblies can share a protected local geometry. The next useful
-question is which later measurement or extra state datum separates them.
-Failure to distinguish exteriors can be a result, rather than a reason to
-add unconstrained parameters until a preferred story appears.
+### 16.16. A conserved compact source and local gravitational tides
 
-## V. Fields, transfer and finite memory
+A central mass source can be supplied on the same finite annulus, with
+its body or inner horizon below the causal domain. The cap and exterior
+vacuum functions and dimensionless source mass are
 
-### 13. A first field that reaches the interior
+$$
+f_-=1-2b/r-H^2r^2,\qquad f_+=1-2M_p(b)/r,\qquad \hat b=b/\ell.
+$$
+
+Hold the initial physical wall radius and proper speed fixed, as well
+as H and tension. Both signed junction constraints then require
+$dM_p/db|_0=\beta_{+,0}/\beta_{-,0}=2755/8587$. Holding the parent mass
+fixed would change that speed. No regular body interior or formation
+history is supplied by this annular construction.
+
+The same continuum-normalized Dirac occupation difference is propagated
+on each member of the mass family. The mean Einstein reconstruction,
+stress, wall and observer vary together. Its two mass-flux laws and
+wall displacement have an exact triangular solution: since
+$d\ln v/d\tau=\mathrm{acc}/v$,
+
+$$
+\frac{\rho(\tau)}{v(\tau)}
+=\frac{\rho(\tau_0)}{v(\tau_0)}
++\int_{\tau_0}^{\tau}
+\frac{\beta_+(\mu-\nu)/(k_{\mathrm{wall}}R^2)+\mu/R}{v^2}\,d\tau'.
+$$
+
+Piecewise Gauss integration on the existing field-cell breakpoints
+evaluates these primitives. The prefactor v retains the acceleration
+term; no constraint residual is canceled. The independent exact
+charged and fluid families check this reconstruction.
+
+The [compact-source reference](../results/summaries/nsc-atlas-dirac-mass-response-v3.json)
+uses $b/\ell=0,5\times10^{-5},10^{-4}$, the same 64/128 field cells,
+and joint wall/bulk quadrature orders 8/12. Its receiver is inside
+the cap at $U=.8S,V=.7S$, at fixed proper-wall radar position.
+An inward phase -V is emitted at the earlier wall time V. The smooth
+SdS continuation shares the nested observer's classical and mean
+areal-radius history, without another material wall.
+
+Define
+
+$$
+\mathcal C_B=\left.\frac{\partial}{\partial\hat b}
+\frac{\delta\ln(\omega_{\mathrm{rec}}/\omega_{\mathrm{wall}})}
+{\varepsilon_q n_{\mathrm{occ}}}\right|_{\hat b=0}.
+$$
+
+This derivative uses a source present before the window, not a retarded
+mass-switching experiment. It includes the background Einstein variation
+that a matter-only insertion on fixed geometry would omit.
+
+A second readout uses actual orthonormal curvature. In the specified
+radar observer's frame put $A=R_{0r0r}-R_{0\theta0\theta}$ and
+$B=R_{r\theta r\theta}-R_{\theta\phi\theta\phi}$. Direct Ricci/Weyl
+decomposition gives
+
+$$
+w=\frac{b+m_q}{r^3}-\frac{\kappa_g}{6}(\rho_q-p_{rq}+p_{tq}),\qquad
+A=-3w-\frac{\kappa_g}{2}(p_{rq}-p_{tq}),\qquad
+B=-3w+\frac{\kappa_g}{2}(p_{rq}-p_{tq}).
+$$
+
+The fixed vacuum term cancels. At fixed radar labels its first-order
+Weyl variation also retains $-3b\,\delta r/r^4$. For nonzero b,
+$A_0=B_0=-3b/r^3$. Define the occupied-minus-empty local ratio response
+by $\delta(B/A)=\varepsilon_q n_{\mathrm{occ}}\mathcal C_{\mathrm{tid}}$.
+The 128-cell results are:
+
+| Geometry and observer | Clock derivative $C_B$ | Tidal coefficient at $b/\ell=10^{-4}$ |
+| --- | --- | --- |
+| Nested cap-wall-exterior | -.002329216 | -540762.871 |
+| Smooth SdS cap, shared motion | -.002329519 | -540765.571 |
+
+The clock-derivative difference is $+3.03553\times10^{-7}$, with a
+correlated grid spread $2.58\times10^{-9}$ and a source-step indicator
+$5.95\times10^{-10}$. The tidal-coefficient difference is +2.7001584,
+about 4.9932 parts per million of the prepared correction, with a
+correlated grid spread .0011855. Individual tidal-coefficient grid
+spreads are about 14.59. For the supplied $\ell=10\,\mathrm{km}$,
+the occupied-minus-empty changes in B/A are $-3.55031184\times10^{-71}$
+and $-3.55032957\times10^{-71}$. Their nominal nesting difference is
+$+1.77276\times10^{-76}$. The length, source and state are inputs.
+
+All prescribed reference checks pass. The maximum normalized nested
+mass-path gap falls from $8.08\times10^{-7}$ to $1.93\times10^{-8}$;
+joint quadrature changes the clock coefficient by less than
+$4.45\times10^{-15}$. These spreads are diagnostics, not rigorous
+remainder bounds or observational confidence intervals. Earlier failed
+precision/execution records remain in the scientific owner.
+
+The local ratio is a curvature observable in the stated frame. In a
+flat-FLRW Newtonian metric its comoving counterpart compares the radial
+trace-free Hessians of $\Psi$ and $\Phi$. Reconstructing those potentials
+also requires radial zero-mode and background-split data; below the
+exterior horizon one cap FLRW pair does not cover the joined spacetime.
+This finite prepared-state result therefore supplies no absolute empty
+vacuum ratio, full vacuum $\Psi/\Phi$ or cosmological $\Lambda$.
+
+### 16.17. A correlated continuum parent and local vacuum regularity
+
+Specify the parent before evaluating a baseline vacuum. One explicit
+alternative is the Dirac ground state on a static product of a radial
+line with a sphere of radius $R_0=.45\ell$. In its chiral canonical frame,
+
+$$
+\mathsf{H}_{\kappa}(p)=p\sigma_3+\mu\sigma_1,\qquad
+\mu=\frac{\kappa}{R_0},\qquad \omega=\sqrt{p^2+\mu^2}.
+$$
+
+Fill its negative band for every signed angular sector, including
+each magnetic multiplet once. The Fourier measure is $dp/(2\pi)$.
+On the two incoming null legs put $a=(\omega-p)/2$ and
+$b=(\omega+p)/2$. Their plane phases are $\exp(iaU)$ and $\exp(ibV)$.
+The same normalized spinor supplies both amplitudes, so the state has
+Hardy diagonal kernels and the cross-leg kernel
+
+$$
+C_{+-}(U,V)=-\frac{\mu}{2\pi}
+K_0\!\left(|\mu|\sqrt{UV}\right),\qquad U,V>0.
+$$
+
+Here $K_0$ is the modified Bessel function. Its normalization follows
+independently from the equal-time cylinder Fourier integral. Restricting
+the global projector to a finite diamond gives a generally mixed CAR
+covariance. Its exact finite compressions retain this cross term; filling
+the negative spectrum after truncating an energy matrix selects a
+different state.
+
+Use an explicit auxiliary preparation, with fixed physical duration $S$
+and a smooth switch $\chi(s)$ supported in $(.1S,S)$, equal to one on
+$[.2S,.9S]$. Define
+
+$$
+q=\frac{N}{r},\qquad
+q_{\mathrm{aux}}=\frac{1}{R_0}
++\chi(U)\chi(V)\left(q-\frac{1}{R_0}\right).
+$$
+
+The auxiliary product metric has $r_{\mathrm{aux}}=R_0$ and
+$N_{\mathrm{aux}}=a_{\mathrm{aux}}=R_0q_{\mathrm{aux}}$.
+Blending q directly preserves its continuous first wall jets. Where the
+switches are one this metric is conformal to the physical metric and
+the canonical massless spinor is unchanged. This neighborhood includes
+the cap detector of Section 16.16. The construction assigns a state;
+it is not a physical formation history or an Einstein source model.
+Stress and clocks still use the physical metric, including its anomaly.
+
+For every angular sector the auxiliary Hamiltonian differs from the
+cylinder by a bounded time-dependent potential on a common radial
+domain. Its convergent interaction series gives unitary evolution.
+The angular direct sum is unitary as well. Moreover,
+
+$$
+\{H_{\kappa},\sigma_1\}=2\kappa q_{\mathrm{aux}}
+$$
+
+gives a gap at least $|\kappa|q_{\min}$ when
+$q_{\mathrm{aux}}\ge q_{\min}>0$.
+The prescribed covariance is $C(T)=U(T)C_0U(T)^\dagger$.
+
+**Local regularity proposition.** On an admitted regular patch, this
+state is Hadamard on any relatively compact smooth interior neighborhood
+inside the matched operator region. Both geometries therefore have a
+smooth physical two-point difference on their common cap neighborhood.
+
+The [proof and calculated boundary symbols](../docs/nsc-atlas-dirac-probe.md#local-hadamard-property-for-the-declared-preparation)
+make the calculus input explicit. Fold the two sides onto a half-line.
+The transparent condition is the allowed space of a constant Hermitian
+involution that anticommutes with the normal matrix. It has maximal zero
+flux. At real spacelike frequency the decaying-root map is invertible,
+uniformly away from glancing, including both angular polarizations.
+This verifies the complementing condition for the standard finite-bundle
+first-order boundary parametrix. One-sided smoothness supplies its jets.
+
+Normal regularity follows by pairing the unitary field with smooth
+tangential tests and transferring tangential derivatives through its
+first-order equation. The resulting map from the initial Hilbert space
+to every one-sided normal Sobolev space gives smooth normal traces.
+Boundary elliptic regularity confines singularities to the compressed
+causal cone. Splitting its two orientations then makes the unwanted
+component satisfy a smooth inhomogeneous boundary problem with absent
+past data; energy uniqueness makes it smooth. Glancing remains inside
+the causal cone and does not join its opposite time orientations.
+The local CAR and the regular physical conformal map finish the argument.
+
+The existing Weyl projector and transport algebra now receives the actual
+radar metric jets through fourth order. Here local p is conjugate to
+radar x, with $\omega=\sqrt{p^2+W^2}$; it is not the incoming cylinder
+momentum label. In the canonical Pauli frame the first subleading term
+is $c_1=-pW_T\sigma_3/(4\omega^3)$.
+The first discontinuous wall coefficient enters $c_2$, through
+$[W_{xx}]=-6\kappa(M_p-b)/R^4$. This curvature contribution is retained.
+At a cap detector the two models share all local subtraction terms.
+For a single covariance the fourth-order remainder is qualitatively
+of order minus five; the two-state difference is smooth there.
+
+This establishes existence of the local relative stress for this stated
+preparation. It does not evaluate it or provide a numerical tail constant.
+The full vacuum $\Psi/\Phi$, wall renormalization and physical selection
+of the preparation remain separate work. No astronomical measurement
+sets this root radius, switch, state or resulting numerical coefficients.
+
+### 16.18. Inherited preparation and the cap's local late state
+
+Derive the state transport before choosing another parent benchmark. A
+complete ancestral covariance is inherited as $C_c=K C_aK^\dagger$, with
+$KK^\dagger=I_c$ for current-normalized restriction and evolution.
+Both incoming null branches, their cross-correlation and $I-C_a$ are
+transported. A change of null clock carries a square-root Jacobian on
+each kernel argument. Finite unitary transport does not select $C_a$.
+
+The actual quiet cap nevertheless selects a local asymptotic state.
+Keep $M_-=0$, $H\ell=1$, $M_+/\ell=.4$, $k_{\rm wall}\ell=2$, and the
+transparent massless Dirac probe. In $\ell$ units its signed wall obeys
+
+$$
+\beta_-=\frac{3R}{4}+\frac{1}{5R^2},\qquad
+v^2=\dot R^2=\frac{25R^2}{16}-1+\frac{3}{10R}+\frac{1}{25R^4}.
+$$
+
+This positive expanding root reaches $R>1$ in finite wall and central
+cap time. In the expanding flat cap chart its regular clock is
+$dt/d\tau=(1+v^2)/(\beta_-+Rv)$; at $R=1$ it equals $761/760$.
+After that crossing choose a Cauchy ball of physical radius
+$H^{-1}<R_B<R_w$. Its conformal future contains a neighborhood of the
+central endpoint at $\eta=0$, with a positive spatial margin. The future
+timelike wall remains outside that null domain.
+
+**Inherited-state proposition.** Suppose the inherited field state is
+Hadamard on a neighborhood of this closed ball. For Gaussian detector
+correlations take a gauge-invariant quasifree state. In each fixed
+translated central proper-time window, its full four-component two-point
+function approaches the conformal de Sitter one. Parent-dependent stress
+has a decaying amplitude, rather than a new freely chosen root state.
+
+**Proof.** Set the cut to $t=0$, $a=e^{Ht}$ and $\eta=-H^{-1}e^{-Ht}$.
+The conformal field $\psi_{\mathrm{flat}}=a^{3/2}\psi$ satisfies the flat
+massless Dirac equation. Subtract the conformal Minkowski two-point
+function as a proof reference. Its Cauchy-data difference is smooth.
+Cut off both arguments inside a smaller ball still larger than $H^{-1}$
+and evolve with the flat Dirac propagator. Finite propagation and the
+strict margin extend this smooth difference through a neighborhood of
+the virtual endpoint. No condition at a physical infinity is added.
+
+The physical two-point difference is $a^{-3/2}a'^{-3/2}F(\eta,\eta')$,
+with $F$ smooth and bounded there, so it decays as $e^{-3HT}$ under a
+common time translation $T$. The same-action tetrad stress difference is
+
+$$
+\Delta T_{\hat a\hat b}=e^{-4Ht}Q_{\hat a\hat b}(-H^{-1}e^{-Ht}),
+\qquad
+\left|\Delta T_{\hat a\hat b}-e^{-4Ht}Q_{\hat a\hat b}(0)\right|
+\leq \frac{M_1}{H}e^{-5Ht}.
+$$
+
+Here $M_1$ bounds the corresponding conformal-time derivative; anomaly
+and local curvature ambiguities cancel in the state difference.
+The amplitude $Q(0)$ and its bound are inherited data. This proves a
+local limit and a finite conditional error, without asserting equal
+finite-time states or loss of global unitary information. The
+[complete proof and calculator](../docs/nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
+give the wall positivity and domain argument.
+
+On the central geodesic the limiting Dirac kernel's scalar factor is
+$[H/(2\sinh(H(s-s'-i0)/2))]^3$. Its imaginary-time antiperiod is
+$2\pi/H$. A weak scalar-density detector coupled to $:\bar\psi\psi:$
+has a bosonic bilinear kernel with power six, giving, up to one positive
+detector constant,
+
+$$
+\mathcal R(x)=\frac{x(x^2+1)(x^2+4)}{e^{2\pi x}-1},\qquad
+x=\frac{E}{\hbar cH},\qquad
+\frac{\mathcal R(x)}{\mathcal R(-x)}=e^{-2\pi x}.
+$$
+
+The polynomial follows independently by shifting the Fourier contour
+to a nonsingular $\cosh^{-6}$ integral. Late-state translation precedes
+the long smooth observation limit; finite switching does not have the
+exact stationary ratio. Detector statistics and the conformal/no-hair
+mechanism have [prior literature](../docs/arxiv-studies.md#quiet-cap-inherited-state-and-detector-19-october-2026).
+The project result connects them to this sourced wall's causal future.
+
+Finally the existing cap trace, $A=-11\hbar cH^4/(240\pi^2)$, has a
+full asymptotic stress interpretation. Homogeneity, isotropy and
+conservation give $-\rho+3p=A$ and $d\rho/dt+4H\rho=-HA$.
+The radiation constant decays as $a^{-4}$, leaving, at fixed renormalized
+classical $\Lambda$ and $G$,
+
+$$
+\langle T_{\mu\nu}\rangle_{\rm late}
+=-\frac{11\hbar cH^4}{960\pi^2}g_{\mu\nu},\qquad
+\delta\Lambda\ell^2=\frac{11}{120\pi}\frac{\ell_P^2}{\ell^2}.
+$$
+
+For the supplied $\ell=10$ km ruler this is $7.62221759052\times10^{-80}$;
+the temperature is $3.64446440565\times10^{-8}$ K and the stress
+e-folding interval is $8.33910237995$ microseconds. At $x=1$ the
+detector ratio is $0.00186744273171$. These are conditional model
+scales, with no observational calibration. Seven new independent controls
+pass, including the separate detector integral and the FLRW Ward identity.
+
+The same smooth cap has the same late state and source: the late
+nesting-specific vacuum offset is zero at fixed $H$. This does not
+generate the supplied classical cap scale or solve quantum wall
+backreaction. Regularity of a fully transmitted inherited state on the
+later ball remains a hypothesis. The compact-source $b>0$ cap is not
+conformally flat; its finite-time state and $\Psi/\Phi$ require their
+own compatible source history and retarded response.
+
+## VII. Effective gravity, vacuum form and the physical scale
+
+A nonzero response is not automatically a cosmological constant. This part varies the relevant action or transported geometry to determine energy, pressure, memory and curvature together. The calculations decide which proposed reductions have vacuum form, which behave as other sources, and which require a different state or action. Those decisions delimit the routes by which the larger geometry can contribute to interior expansion.
+
+### 17. What the eliminated geometry contributes
+
+The following sections give the worked constructions and their attributed mathematical inputs.
+
+### 17.1. The current scalar's classical vacuum projection
+
+<!-- nsc-claim:atlas-classical-vacuum-trace -->
+
+The current cap-wall candidate allows a direct first calculation of this
+target. Its action fixes a real massless conformal scalar and independent
+regional vacuum terms. Contracting the complete improved scalar stress gives
+
+$$
+T^\phi{}^\mu{}_\mu
+=\phi(\Box-\mathcal R_J/6)\phi=0,
+\qquad \mathcal R_J=4\Lambda_0.
+$$
+
+Consequently its additional smooth classical trace projection is
+$\Delta\Lambda_{\mathrm{classical}}L_{\mathrm{ref}}^2=0$, including nonzero
+on-shell pulses. The scalar still carries stress, mass and flux. The cap
+baseline $\Lambda_{0,-}\ell^2=3(H\ell)^2=3$ is a supplied input, while
+$\Lambda_{0,+}=0$ outside. The scalar calculation does not derive that
+baseline. Distributional wall stress and geometric averaging are separate
+operations.
+
+The [exact calculation record](../results/summaries/nsc-atlas-effective-vacuum-v1.json)
+binds the symbolic expressions and their producer. The
+[calculation and frame check](../src/recursive_horizons/nsc_atlas_effective_vacuum.py)
+also recover the same Jordan curvature from the Einstein-frame potential.
+Independent [metric-jet checks](../tests/test_nsc_atlas_effective_vacuum.py)
+evaluate the implemented nonlinear equations at zero and nonzero amplitude.
+The [scientific owner](../docs/schur-memory.md) gives the complete derivation.
+
+### 17.2. A conditional quantum contribution and its physical scale
+
+<!-- nsc-claim:atlas-quantum-vacuum-trace -->
+
+As an explicit extension, import one quantized real four-dimensional
+massless conformal scalar with a Hadamard bulk state and locally covariant
+renormalization. This uses quantum field theory; it does not derive quantum
+statistics from the atlas. The local trace coefficient follows from the
+[scalar heat-kernel formula](https://arxiv.org/pdf/hep-th/0306138), equation
+(4.28), and [conformal anomaly](https://arxiv.org/pdf/hep-th/9308075),
+equations (15)-(16). Substituting $E=-\mathcal R/6$ cancels its
+$\mathcal R^2$ term. On either smooth quiet region,
+
+$$
+\langle T^\mu{}_{\mu}\rangle
+=\frac{\hbar}{2880\pi^2}
+(\mathcal R_{\mu\nu\rho\sigma}^2-\mathcal R_{\mu\nu}^2).
+$$
+
+The scheme-dependent $\Box\mathcal R$ term vanishes because the quiet
+scalar curvatures are constant. Finite volume and Newton counterterms
+remain supplied renormalized coefficients. Direct curvature contractions
+give $(\mathrm{Riemann}^2,\mathrm{Ricci}^2)=(24H^4,36H^4)$ in the cap
+and $(48M^2/R^6,0)$ outside.
+
+Set $h=H\ell$, $m=M/\ell$, $r=R/\ell$ and
+$\zeta=\kappa_4\hbar/\ell^2$. With
+$\Delta\Lambda_{\mathrm{tr}}=-\kappa_4\langle T^\mu{}_{\mu}\rangle/4$,
+
+$$
+\Delta\Lambda_{\mathrm{tr},-}\ell^2
+=\frac{\zeta h^4}{960\pi^2},\qquad
+\Delta\Lambda_{\mathrm{tr},+}\ell^2
+=-\frac{\zeta m^2}{240\pi^2r^6}.
+$$
+
+At the supplied $h=1$, $m=2/5$, $r=11/20$, the coefficients of
+$\zeta$ are $0.0001055428996274352$ and $-0.002440241780407079$.
+For the independently declared P001 fiducial $\ell=10000\,\mathrm m$,
+restoring SI units gives $\zeta=8\pi G\hbar/(c^3\ell^2)$ and
+
+| Quiet trace projection | $\Delta\Lambda_{\mathrm{tr}}\ell^2$ | Standard uncertainty from $G$ alone |
+| --- | ---: | ---: |
+| Cap | $6.92929\times10^{-81}$ | $1.5573\times10^{-85}$ |
+| Exterior at the reference wall radius | $-1.60211\times10^{-79}$ | $3.6006\times10^{-84}$ |
+
+These use [CODATA 2022 constants](https://physics.nist.gov/cuu/pdf/wall_2022.pdf).
+The length is a fiducial input; the quoted uncertainty is not a total
+theoretical or observational error band. The exterior term varies with
+radius. A constant cap trace alone does not establish a stress proportional
+to its metric, since the material wall need not preserve state symmetry.
+
+There is a necessary test of whether this term can generate the cap scale
+without supplying a volume term. Put $X=(H\ell)^2$ and
+$\lambda_0=\Lambda_0\ell^2$. The semiclassical constant-curvature trace
+equation requires
+
+$$
+3X=\lambda_0+\frac{\zeta X^2}{960\pi^2}.
+$$
+
+At $\lambda_0=0$ its roots are $X=0$ and $X=2880\pi^2/\zeta$.
+The nonzero root has $H^2\ell_P^2=360\pi$, outside the controlled
+small-curvature semiclassical regime. Thus this one-scalar contribution
+does not generate a nonzero small-curvature de Sitter cap by itself.
+The [same exact record](../results/summaries/nsc-atlas-effective-vacuum-v1.json)
+retains the coefficients, SI inputs and necessary trace condition. No
+cosmological observation selected these values.
+
+### 17.3. The quantum interface and the remaining exterior reduction
+
+<!-- nsc-claim:atlas-quantum-interface -->
+
+The wall contributes its own local operator data. The existing scalar
+matching $[\phi]=0$, $[n\phi]=k\phi$ identifies the transmittal coefficient
+$U_\Sigma=k$. In the inward-normal convention of the
+[transmittal heat-kernel theorem](https://arxiv.org/html/hep-th/0101105v1),
+$L^+=-K_+$ and $L^-=K_-$. Their sum is $kI$, so the second surface
+coefficient is proportional to $\operatorname{tr}(kI)/3-k=0$.
+
+Keeping every curvature term in the fourth coefficient gives the local
+surface polynomial
+
+$$
+a_4^\Sigma(1)=\int_\Sigma\sqrt{|\gamma|}\,q_\Sigma\,d^3y,
+\qquad q_\Sigma\ell^3
+=-\frac{b(b^2+3h^2)}{1440\pi^2}
+=-\frac{7}{720\pi^2},\quad b=k\ell=2,
+$$
+
+at $h=1$. This evaluates the imported Riemannian polynomial on the quiet
+wall's Lorentzian contractions. A joint Lorentzian quantum state and its
+interface stress have not been constructed. The
+[Gauss and Euler-boundary checks](../docs/schur-memory.md#quantum-interface-the-actual-transmission-law)
+agree with the [recorded coefficient](../results/summaries/nsc-atlas-effective-vacuum-v1.json).
+It is a surface invariant; obtaining its metric variation requires the
+full off-shell operators and their renormalized coefficients.
+
+The physical Schur connection must use the exterior conformal wave
+operator with this transmission law. For boundary field
+$\varphi=\phi|_\Sigma$, let $\mathcal N_\pm$ map it to the corresponding
+outward normal derivative. The homogeneous matching equation is
+$(\mathcal N_-+\mathcal N_++U_\Sigma)\varphi=0$; incoming initial data
+add a drive. In real time these are causal history operators. Their
+retarded response and the joint state's symmetric two-point function are
+needed for the effective stress. A coefficient multiplying a boundary
+field quadratic form alone does not supply a metric volume term.
+
+### 17.4. The exterior scalar response on the quiet wedge
+
+<!-- nsc-claim:atlas-exterior-schur-metric -->
+
+The physical exterior reduction begins with the quiet Schwarzschild wedge
+and the prepared source already fixed by the characteristic problem. The
+outward Robin response on the exterior side of the wall is
+
+$$
+B_+\phi=\mathcal N_+\phi+\frac{K_+}{3}\phi.
+$$
+
+For the original unit-amplitude source, zero bottom data and the prepared
+wall trace, the boundary pairing is
+
+$$
+\frac{1}{\varepsilon^2}\int\phi\,B_+\phi\,d\Sigma
+=0.3703318455512892.
+$$
+
+The response at the wall is therefore nonzero. A compact Weyl variation
+supported in the smooth cap, with the interface, exterior geometry and
+characteristic data held fixed, does not move that boundary integrand. The
+on-shell improved scalar trace remains zero, so this variation adds
+
+$$
+\Delta\Lambda_{\mathrm{Schur,cl,local}}L_{\mathrm{ref}}^2=0.
+$$
+
+The retarded map is causal. It is not in general equal to its adjoint, so
+the single-history pairing is not by itself a variational action for a
+metric stress. The [exterior response record](../results/summaries/nsc-atlas-exterior-schur-metric-v1.json)
+binds the pairing, the zero bulk variation and the quadrature diagnostics.
+The [Schur-memory owner](../docs/schur-memory.md) states the domain: a quiet
+finite wedge, not a whole-geometry reduction, a quantum state, or a
+cosmological value. The supplied cap input $\Lambda_{0,-}\ell^2=3$ is
+unchanged.
+
+### 17.5. Parent response, slice fit and a separate contracting geometry
+
+<!-- nsc-claim:atlas-parent-metric-response -->
+
+Eliminating the whole quiet body, as seen from its right Schwarzschild end,
+is a different operation from the cap-centre scalar map. On the static tube
+$R/\ell=4$, with $M/\ell=0.4$, proper boundary time and the outward normal,
+Minkowski subtraction gives, in geometrized units $G=c=1$,
+
+$$
+E=R\left(1-\sqrt{1-\frac{2M}{R}}\right),
+\qquad E/\ell=0.4222912360003365.
+$$
+
+The ADM mass is $M$, not this finite-radius energy. The accompanying surface
+pressure is a stress on the tube. It is not a bulk pressure and not a
+four-dimensional vacuum density. For dilute, slow, conserved bodies whose
+separations are large compared with their tubes, the leading parent action is
+
+$$
+S_{\mathrm{body}}=-\sum_i M_i\int d\tau_i.
+$$
+
+Its homogeneous metric variation has zero bulk pressure and density scaling
+as $a^{-3}$. A
+general on-shell energy $E(V)$ at fixed particle number and entropy obeys
+$\rho=E/V$ and $p=-dE/dV$. Vacuum form would require $E$ proportional to
+$V$ as a consequence of that action. Prescribing a growing population or a
+time-dependent mass by hand is exchange through the tube, not that
+variation. No parent population, source state or controlled interaction
+correction is supplied. The
+[gravitational reduction record](../results/summaries/nsc-atlas-gravitational-reduction-v1.json)
+contains the tube value and the dust-versus-extensive identities.
+
+<!-- nsc-claim:atlas-geometric-slice-average -->
+
+The isolated initial slice from the regular centre through the wall and
+bridge to $R_{\mathrm{cut}}/\ell=4$ can be averaged in the hypersurface-normal
+clock. Use the sign convention
+
+$$
+K_{ij}=-\frac{1}{2}\mathcal L_n h_{ij},\qquad
+\theta=-h^{ij}K_{ij}.
+$$
+
+The scalar fit absorbs the variance $Q$ and the mean three-curvature into
+
+$$
+\kappa_4\rho_g=-(Q+\langle{}^{(3)}R\rangle)/2,\qquad
+\kappa_4 p_g=-Q/2+\langle{}^{(3)}R\rangle/6.
+$$
+
+The trace projection and vacuum-form residual are
+
+$$
+\Lambda_{g,\mathrm{tr}}=\frac{Q-\langle{}^{(3)}R\rangle}{4},
+\qquad\Lambda_{g,\mathrm{tr}}\ell^2=0.030775890732,
+$$
+$$
+(3Q+\langle{}^{(3)}R\rangle)\ell^2=1.80095618027.
+$$
+
+The fit is therefore not vacuum. It is a scalar reduction of one slice, not
+the average of a four-dimensional stress tensor, and the domain is not the
+causal past of the cap centre. A $K=0$ connector added to repeated copies
+increases the vacuum volume and does not remove the defect inside the
+retained bodies. The
+[slice-average record](../results/summaries/nsc-atlas-geometric-average-v1.json)
+keeps the wall distribution, both bridge branches and the normal clock.
+The shared parent geometry and its observer domain remain absent.
+
+<!-- nsc-claim:atlas-nested-geometric-average -->
+
+The two-level initial geometry in Section 10.2 makes this test at an
+actual additional boundary, with the same outer mass and retention sphere.
+Both membranes obey $k\ell=2$; cap and host have the supplied $H\ell=1$.
+Including both wall curvature distributions gives
+
+$$
+\Lambda_{g,\mathrm{tr}}\ell^2=-0.0153506330754,\qquad
+(3Q+\langle{}^{(3)}R\rangle)\ell^2=2.11796240047.
+$$
+
+The geometric density and pressure again fail vacuum form. Gauss 64-minus-32
+differences in these quantities are $-1.28\times10^{-10}$ and
+$-3.91\times10^{-10}$; the integrated Hamiltonian residual is
+$-3.33\times10^{-16}$. These are numerical indicators, not total error
+bounds. Adding the level changes the physical state and its finite
+projection; this comparison is not solely a change of observational
+resolution of one fixed state. The
+[two-level record](../results/summaries/nsc-atlas-nested-slice-v1.json) and
+[average derivation](../docs/schur-memory.md#two-successive-sourced-levels)
+close this finite calculation. An evaluated parent and physical observer
+reduction remain necessary for the local cosmological target.
+
+<!-- nsc-claim:conformal-geometric-average -->
+
+A second, already evolved geometry supplies a different finite average. Its
+metric and action are not those of the cap-wall scalar. In the saved
+conformal gauge
+
+$$
+ds^2=r^2\left\{Q^2[-dT^2+dx^2]+d\Omega^2\right\},
+$$
+
+with $r,Q>0$, zero shift and periodic $S^1\times S^2$ topology. The action
+contains the Einstein term, a Weyl auxiliary and a Dirac source. The named
+clock is the normal worldline at $x=1$, $d\tau=rQ\,dT$. The reference length
+$L_{\mathrm{ref}}=4.80028044552352$ is that observer sphere's areal radius
+at $T=0.05$. Write $\nu=N/N_{\mathrm{observer}}$ and use the weighted
+moments $Q_\nu,\mathcal R_\nu$ defined in the
+[observer-clock derivation](../docs/schur-memory.md#observer-clocks-in-the-geometric-average).
+The clock term is
+
+$$
+P_\nu=\langle(\partial_{\tau_o}\nu)\theta\rangle
++\langle\nu\,D^2\nu\rangle.
+$$
+
+The geometric trace and vacuum defect at $T=0.3$ are
+
+$$
+\Lambda_{g,\mathrm{tr}}L_{\mathrm{ref}}^2=-0.5725162917234052,
+\qquad
+(3Q_\nu+\mathcal R_\nu+2P_\nu)L_{\mathrm{ref}}^2=2.177444644645245.
+$$
+
+The domain contracts. The largest four-case deviations,
+$4.65\times10^{-9}$ and $1.92\times10^{-8}$, compare stored resolutions.
+They are refinement indicators, not a continuum or total-error bound. The
+metric identity used for $E$ and $S$ reconstructs an Einstein source from
+the geometry. It does not independently verify the matter constraint: the
+primary Hamiltonian defect remains about $9\times10^{-6}$ in its source
+normalization. No new evolution was run. The negative trace is not a
+positive cosmological vacuum response, and the periodic shell is not the
+parent of the quiet cap. The
+[conformal average record](../results/summaries/nsc-conformal-geometric-average-v1.json)
+binds the clock, the reference length and these two numbers.
+
+### 17.6. The interface required by a common action
+
+<!-- nsc-claim:atlas-common-action-interface -->
+
+The two actions remain alternatives. Importing the literal quiet tension
+wall into the Weyl-squared chart is a compatibility question, not a
+derivation of either model from the other. With the $(-+++)$ convention,
+spacelike normal and $[K_{ab}]=-kh_{ab}$, every singular coefficient in the
+linear Weyl tensor cancels. Thus the Weyl-squared term has no squared-delta
+coefficient from this pure-trace jump at that algebraic level. The regular Weyl tensor still
+steps from the conformally flat cap, where it vanishes, to the Schwarzschild
+value. In the orthonormal wall frame, and after a radial boost,
+
+$$
+[C_{anbn}]=\frac{M}{R_w^3}\operatorname{diag}(-2,-1,-1).
+$$
+
+At $M/\ell=0.4$ and $R_w/\ell=1.5$,
+
+$$
+\ell^2[C_{anbn}]
+=\operatorname{diag}(-32/135,-16/135,-16/135).
+$$
+
+The components have dimension inverse length squared. In a thin-layer limit
+that keeps the metric, connection and Weyl curvature bounded and approaching
+these one-sided values, the leading Bach double-layer strength is the jump
+$[C_{\mu n\nu n}]$. Ordinary tension is a delta-order source and does not
+supply that derivative of a delta. The quiet scalar vanishes. A continuous
+scalar with bounded one-sided first derivatives does not supply it either.
+The Euler and Box-R ledger completes divergences on smooth periodic metrics
+and finite time caps. It is not an adjustable source on this timelike wall.
+
+Lower-order products of discontinuous curvature, and a complete junction,
+remain unproved. A smooth transition, or an effective interface between
+resolutions whose action is actually derived, is still required. The check
+is necessary under the stated thin-layer control. It is not a universal
+impossibility, and it does not remove the separate P001 Einstein model.
+[Reina, Senovilla and Vera](https://arxiv.org/html/1510.05515v1), Sections 3.1--3.2, discuss the hazards of formal quadratic cancellations. Their
+generic distributional class is not applied here as a theorem. The direct
+tensor calculation is in the
+[wall-connection note](../docs/schur-memory.md#the-wall-connection-between-the-two-action-choices),
+with the normal-Weyl components exposed by the
+[gravitational reduction](../src/recursive_horizons/nsc_atlas_gravitational_reduction.py)
+and checked in its
+[tests](../tests/test_nsc_atlas_gravitational_reduction.py).
+
+### 17.7. One state at two physical resolutions
+
+<!-- nsc-claim:conformal-physical-resolution -->
+
+The inherited law and a state's resolved structure are different mathematical
+objects. To calculate a resolution effect, hold the separate conformal
+candidate's full state fixed and choose a retained space from its physical
+radial Laplacian. On the reference slice $T=0.05$,
+
+$$
+\mathcal L=-\Delta_h=-\frac{1}{r^3Q}\partial_x\left(\frac{r}{Q}\partial_x\right),
+\qquad \mu L_{\mathrm{ref}}^2\leq1.
+$$
+
+The reference ruler remains $L_{\mathrm{ref}}=4.80028044552352$.
+The mass and stiffness integrals use the existing 511 geometry variables
+and their 2048-point quadrature. Orthonormalizing the selected eigenspace
+in the canonical coordinate measure gives a fixed symmetric projector $P$.
+Apply it to all six log-canonical variables $a=\log r$, $\pi_a=rp_r$,
+$b=\log Q$, $\pi_b=Qp_Q$, and $\chi,p_\chi$. The fermion columns and
+occupations remain fully retained. This rule keeps one geometric mode.
+The first omitted eigenvalue is $0.4795862384$, above the fixed cutoff
+$0.04339770651$. No observed target selects that cutoff or the ruler.
+
+At $T=0.3$, evaluate the same Hamiltonian and its vector field on the full
+and filtered states. The difference at fixed canonical environment is
+
+$$
+H_{\mathrm{corr}}(z_c;z_e)=H(z_c+z_e)-H(z_c),\qquad
+\delta F_c=P X_H(z)-P X_H(Pz).
+$$
+
+Here $P$ acts as the identity on the fermions. The exact change of canonical
+variables includes the momentum product rule. The four-dimensional vacuum
+volume supplies an independently derived comparison direction,
+
+$$
+H_\Lambda=8\pi A\Lambda\int r^4LQ\,dx,\qquad A=\frac{1}{16\pi G}.
+$$
+
+The owned action uses $R_E=-R_L$ and $-A R_L-2A\Lambda$; its existing
+$r^2$ potential is sphere curvature. The displayed $r^4$ weight follows
+from the physical volume. Varying before choosing $L=Q$ fixes the lapse
+constraint and both momentum forces. This potential changes no coordinate
+or fermion rate. Adjoint pullback precedes the nodal canonical change.
+
+The calculation gives $H_{\mathrm{full}}=-1.363\times10^{-11}$,
+$H_{\mathrm{coarse}}=1.015478298556$, and unit-volume generator
+$231.9284384454$. Their energy projection is
+
+$$
+\Lambda_E L_{\mathrm{ref}}^2=-0.100890404750047.
+$$
+
+Its force does not reproduce the correlation. Each row below uses that
+block's canonical units; the RMS values are not combined across blocks.
+
+| Log-momentum rate | Correlation RMS | Vacuum candidate RMS | Residual RMS |
+| --- | ---: | ---: | ---: |
+| $\pi_a$ | $0.21206304$ | $0.50773915$ | $0.29567611$ |
+| $\pi_b$ | $0.01318283$ | $0.25386957$ | $0.24068675$ |
+
+The residuals are 58.23% and 94.81% of the larger RMS in their respective
+rows. The retained $a_T$ and $\chi_T$ correlations are $0.00098884455$ and
+$0.67276495$ RMS per coordinate time, where a vacuum potential gives zero.
+The unchanged input fermions also acquire a rate difference. The $b_T$
+difference, $5.54\times10^{-18}$ RMS, is treated as roundoff.
+
+The original Hamiltonian-constraint maximum is $9.005\times10^{-6}$; the
+filtered state's is $25.5817$ in that density normalization. No constraint
+reset is performed, and the filtered metric with the retained fine matter
+is not a second physical solution. The missing correlation contains
+constraint, kinetic and matter response beyond a single volume term.
+Fifteen controls include the analytic spectrum under unit rescaling and
+independent energy differentiation. The relative eigen residual is
+$1.65\times10^{-15}$; replay of the archived prolonged rates differs by at
+most $8.72\times10^{-9}$ in a momentum component. These controls do not
+bound the continuum or physical model error. Rates use the same conformal
+coordinate generator; a matched proper clock, causal elimination, repeated
+scale composition and a fractal dimension remain open. The
+[fixed-state record](../results/summaries/nsc-conformal-resolution-v1.json)
+binds the original state and frozen method `cd00b35`. Its energy coefficient
+is a failed vacuum-volume representation of this instantaneous response,
+not a derived cosmological constant.
+
+### 17.8. A prepared-state change propagated to a photon measurement
+
+The same conformal episode carries an initial matter variation through
+the coupled geometry to two received frequencies. Before prolongation,
+apply $U_\epsilon(x)=\exp[i\epsilon f(x)\sigma_2]$ to every original spinor,
+with $f(x)=\cos(2\pi x/8)$ and unchanged occupations. This preserves the
+initial Gram matrix and paired current cancellation. The radius direction
+is obtained by differentiating the original projected constraint level.
+The original full constraint defect, $9.97845\times10^{-6}$, remains; a zero
+root is not assumed. Initially at $x=1$,
+$d\log N/d\epsilon=-0.27203771374589336$.
+
+Evolve the complete state and its derivative together,
+$z_T=X_H(z)$ and $u_T=DX_H(z)u$, at the same four RK4 stages. All six
+geometry fields and both complex column blocks evolve. The fixed spatial
+grid is $n_f=512,n_g=511,n_q=2048$, period 8. The two original time steps
+$0.001$ and $0.0005$ take 300 and 600 steps to $T=0.3$. Both baseline
+states reproduce their saved histories at $T=0.05$ and $0.3$ within the
+declared field-scaled $10^{-8}$ tolerance.
+
+Reception is fixed at $(T_o,x_o)=(0.3,1)$; emission occurs at
+$(T_e,x_e)=(0.175,0.875)$ or $(0.175,1.125)$. These are exact step and
+quadrature events. The normal observers measure $1+z=N_o/N_e$, $N=rQ$,
+so the propagated response is
+
+$$
+K=\frac{d\log(1+z)}{d\epsilon}
+=\frac{u_{r,o}}{r_o}+\frac{u_{Q,o}}{Q_o}
+-\frac{u_{r,e}}{r_e}-\frac{u_{Q,e}}{Q_e},
+\qquad \frac{dz}{d\epsilon}=(1+z)K.
+$$
+
+| Emitter $x_e$ | Fine $K$ | Fine $dz/d\epsilon$ | Absolute time-step change in $dz/d\epsilon$ |
+| --- | ---: | ---: | ---: |
+| 0.875 | $-0.0009129945410$ | $-0.0009145171829$ | $1.22\times10^{-13}$ |
+| 1.125 | $0.0027692088369$ | $0.0027489767089$ | $1.71\times10^{-13}$ |
+
+These differences are empirical temporal indicators. The inherited spatial
+and constraint errors, physical source mechanism and finite-$\epsilon$
+range are not bounded by them. At the fine endpoint, the full Hamiltonian
+constraint maximum is $8.91\times10^{-6}$ and the weighted constraint
+variation norm is $1.09\times10^{-6}$. The Gram and tangent-Gram errors
+are $1.63\times10^{-13}$ and $1.68\times10^{-14}$. The sampled Hamiltonian
+variation drifts by $8.59\times10^{-12}$, versus $2.76\times10^{-10}$ on the
+coarse time step; no uniform-in-time estimate is inferred.
+
+The [initial response](../results/summaries/nsc-conformal-preparation-tangent-v2.json)
+and [propagated response](../results/summaries/nsc-conformal-causal-response-v2.json)
+bind the original data, frozen method and reproduction command. A stopped
+central-difference preflight is preserved; the independent initial Fourier
+force check agrees to $6.35\times10^{-9}$ relative error without changing
+the force equations. The calculation uses 1736.1875 process-CPU seconds
+including that stopped attempt. One 477146-byte ignored checkpoint stores
+the final states and derivatives; the published summary stores its hash.
+This closes one finite prepared-direction observer calculation. The
+metric-dependent reduction still needs to retain the corresponding causal
+response and physical state before identifying an effective vacuum term.
+
+### 17.9. A constrained gravitational exterior and its validity test
+
+The same local auxiliary action supplies a linear vacuum exterior
+response. This reference has zero Maxwell flux and Dirac field, physical
+metric $ds^2=N^2dt^2-a^2dR^2-R^2d\Omega^2$, and flat $N=a=1$, $\chi=0$.
+It is not an attachment to the charged periodic episode. Write
+$N=1+\epsilon n$, $a=1+\epsilon b$, $\chi=\epsilon c$, and
+$k=4\pi A/\alpha$, $\alpha=-4\pi C_W/3$.
+Varying before imposing areal gauge retains both constraints. They fix
+$kRb+c_R+c/R=kM$, with constant mass perturbation $M$; the full radius
+equation then vanishes. Linear Schwarzschild has
+$n=-M/R$, $b=M/R$, $c=-12M/R$.
+
+For zero initial perturbation and $M=0$, set $\psi=c/R$. Independent
+variation of all five original fields and elimination of the constraints
+give
+
+$$
+\psi_{tt}-\psi_{RR}+(6/R^2+m^2)\psi=0,
+\qquad m^2=\frac{A}{2C_W},
+$$
+
+$$
+S_{2,\mathrm{bulk}}=K\int
+[\psi_t^2-\psi_R^2-(6/R^2+m^2)\psi^2]dt\,dR,
+\qquad K=-\frac{8\pi C_W^2}{3A}.
+$$
+
+The action weight $K$ is distinct from the normalization of the wave
+equation. Radial total derivatives are retained in deriving the face
+response; no boundary energy normalization is selected.
+
+On $R\ge R_0$, impose a compatible causal curvature history at $R_0$ and
+no incoming perturbation at infinity. For a Laplace parameter $s$ with real
+part greater than $\gamma=\sqrt{\mathrm{max}(0,-m^2)}$, the decaying branch
+$q=\sqrt{s^2+m^2}$, with positive real part, yields
+
+$$
+\frac{\widehat c_R(R_0)}{\widehat c(R_0)}
+=-\frac{z^3+2z^2+3z+3}{R_0(z^2+3z+3)},\qquad z=qR_0.
+$$
+
+The outward normal of this exterior points toward decreasing $R$. The
+lapse and radial metric histories obey the same constraints, so this is
+one compatible response column. It is not a choice of three independent
+boundary histories or a bulk vacuum density.
+
+The [scalar evaluation](../results/summaries/nsc-vacuum-gravitational-response-v1.json)
+keeps the saved $A,C_W$ and independent ruler
+$R_0=L_{\mathrm{ref}}=4.80028044552352$. Frozen method `6c68d00` uses one
+declared Laplace point, no archive, trajectory, root or fit, and 0.015625
+process-CPU seconds:
+
+| Reference quantity | Value |
+| --- | ---: |
+| $m^2L_{\mathrm{ref}}^2$ | $-614.4717961513472$ |
+| $\gamma L_{\mathrm{ref}}$ | $24.788541630183637$ |
+| Growth time divided by $L_{\mathrm{ref}}/c$ | $0.04034121954082023$ |
+| $K/L_{\mathrm{ref}}^2$ | $-5.754230595887687\times10^{-6}$ |
+
+For $m^2=-\gamma^2$, a compact sine beyond
+$\mathrm{max}(R_0,4/\gamma)$ with width $4\pi/\gamma$ has spatial quadratic-form
+quotient at most $-9\gamma^2/16$. Every finite inner radius therefore leaves
+growing modes in this infinite flat exterior. The retarded map exists in
+the stated half-plane, while a stable stationary reduction about this
+reference is unavailable. Nine controls include the exact radial solution,
+pre-gauge constraints, Schwarzschild mass mode, reduced action and
+physical-clock face response.
+
+This tests the local action used nonperturbatively. The
+[spherical action owner](../docs/nsc-spherical-action.md) retains a
+conditional curvature expansion and an incomplete full spectral/state
+contribution. An effective-theory reading needs its cutoff, order reduction
+or causal completion specified before promoting this additional mode to a
+physical exterior state. The comparison ruler is not a derived ultraviolet
+cutoff. The finite periodic computations retain their stated domain; the
+actual nested exterior geometry and its physical state remain necessary
+for a cosmological Lambda calculation. No coupling was changed to remove
+the reference instability.
+
+### 17.10. The inherited spectral profile and its gravitational response
+
+The local coefficients have an existing spectral owner. For the fixed
+warped compact interval, its matched profile is
+$H(u)=h_\Lambda(u)-E_1(u/\mu_B^2)$, where
+$\Lambda_{\mathrm{UV}}=\Omega/r_e$ and
+$\mu_B=\sqrt{|q|}/r_e$. They are distinct from the observer ruler.
+The coefficient account gives $Q_1=\int_0^\infty H(u)\,du$,
+$Q_0=H(0)$, $A=Q_1/[6(4\pi)^2]$ and $C_W=-Q_0/[40(4\pi)^2]$.
+Compact interval, warp and matching scales are fixed during this external
+metric variation.
+
+The flat Euclidean transverse-traceless heat response of
+[Alkofer--Saueressig--Zanusso, 1410.7999v2](https://arxiv.org/html/1410.7999v2),
+Section II, supplies the linear spectral-profile dependence. With the
+existing zero-volume-term normalization, exchanging its integrations gives
+
+$$
+\mathcal P_H(x)=x\left[1-\frac{x}{4Q_1}\int_0^1
+(1+2v)\sqrt{1-v}\,H(xv/4)\,dv\right],\qquad x=p^2\geq0.
+$$
+
+For the owned half-trace action, the quadratic density is
+$(A/4)h_{\mathrm{TT}}\mathcal P_H(-\partial^2)h_{\mathrm{TT}}$.
+Its first two terms are $x+(2C_W/A)x^2$, exactly matching the local
+coefficient account. The [derivation and controls](../docs/schur-memory.md#the-induced-spectral-profile-beyond-the-local-gravitational-polynomial)
+retain the spectral-calculus assumptions, unit scaling and an independently
+integrated finite proper-time check. The earlier exponential example is
+not substituted for this compact profile.
+
+The [single evaluation](../results/summaries/nsc-spectral-gravitational-response-v1.json)
+keeps the saved $A,C_W$, $\Lambda_{\mathrm{UV}}=3.973074368754331$,
+$\mu_B=2$ and $L_{\mathrm{ref}}=4.80028044552352$. Frozen method
+`9b68122` uses $p^2L_{\mathrm{ref}}^2=1$:
+
+| Finite reference quantity | Value |
+|---|---|
+| $p/\Lambda_{\mathrm{UV}}$ | $0.05243324000377066$ |
+| $\mathcal P_H(p^2)/p^2$ | $0.9983741797605584$ |
+| Local polynomial divided by $p^2$ | $0.9983725860059594$ |
+| Full-profile minus local ratio | $1.5937545990718505\times10^{-6}$ |
+| Extra local root divided by $\Lambda_{\mathrm{UV}}^2$ | $1.6893333026263349$ |
+
+Both fixed Jacobi rules, of orders 16 and 32, round to the same normalized
+response; their raw correction integrals differ by about $10^{-15}$.
+This is an integration indicator, not a zero total error or a bound on
+inherited compact spectral errors. Seven controls pass, and the profile's
+zero limit recovers $C_W$ within $5.42\times10^{-19}$ absolute. The scalar
+application takes 0.1875 process-CPU seconds and stores 4720 bytes without
+a raw cache, scale root, trajectory or fit.
+
+The local polynomial's additional root lies above the stored ultraviolet
+cutoff. It therefore cannot by itself diagnose the full spectral theory's
+stability. This calculation does not locate the full kernel's other poles
+or replace the constrained spherical causal map. Curved real-time metric
+dependence and the exterior's physical state remain necessary before
+identifying an effective cosmological volume term.
+
+### 17.11. Flat-reference curvature channels and the relation between motion and lensing
+
+The same fixed-profile functional has a covariant quadratic-curvature
+connection. Reusing [Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2),
+Section 5, and the owned Dirac Clifford traces gives Weyl and scalar
+functions $\mathcal F_C(-\nabla^2)$ and $\mathcal F_R(-\nabla^2)$ in the
+action $[C\mathcal F_C C+R\mathcal F_R R]/[2(4\pi)^2]$.
+The [complete derivation](../docs/schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)
+works to second order in curvatures with compact weak perturbations of
+Euclidean $\mathbb R^4$, fixed topology and fixed compact data. Euler and
+boundary terms are removed only within that domain; a material wall or
+strong-curvature attachment needs its own terms.
+
+This is an imported Dirac fixed-profile calculation about flat space. The
+numerical slip below is not a consequence of NSC's cap--wall nesting.
+
+The Weyl function recovers Section 17.10 through
+$a_2(x)=\mathcal P_H(x)/x=1+6x\mathcal F_C(x)/Q_1$. The scalar function is
+
+$$
+\mathcal F_R(x)=\frac{1}{72}\int_0^1
+\left(1-\frac{5v}{2}\right)\sqrt{1-v}\,[H(xv/4)-H(0)]\,dv.
+$$
+
+The constant subtraction changes nothing because its weight integrates to
+zero. Thus $\mathcal F_R(0)=0$, while a nonzero-momentum scalar response
+remains. Its trace factor is $a_0(x)=1-18x\mathcal F_R(x)/Q_1$.
+This correction adds no zero-momentum volume term; the previous vacuum
+normalization is still a premise.
+
+For a conserved weak static density perturbation $T_{00}=\rho$, $T_{ij}=0$,
+write the physical metric as
+$ds^2=(1+2\Phi)dt^2-(1-2\Psi)d\boldsymbol x^2$.
+Direct metric and source variation, with source action $+\int\rho\Phi$,
+gives the ratios to $\Phi_{\mathrm{GR}}=\Psi_{\mathrm{GR}}=-\rho/(4Ax)$:
+
+$$
+G_\Phi=\frac{4}{3a_2}-\frac{1}{3a_0},\qquad
+G_\Psi=\frac{2}{3a_2}+\frac{1}{3a_0}.
+$$
+
+Slow-motion acceleration measures $-\nabla\Phi$; the null optical index is
+$1-\Phi-\Psi$. Consequently the lensing ratio is
+$(G_\Phi+G_\Psi)/2=1/a_2$, and gravitational slip is
+$\Psi/\Phi=G_\Psi/G_\Phi$. The density normalization cancels from these
+relations. This is an external static probe, not a supplied astrophysical
+source or the earlier nested-body preparation.
+
+The [one application](../results/summaries/nsc-covariant-spectral-response-v1.json)
+keeps the old profile, couplings and reference scale, using frozen method
+`9796add` at $p^2L_{\mathrm{ref}}^2=1$:
+
+| Conditional weak-field quantity | Value |
+|---|---|
+| Scalar trace factor $a_0$ | $0.9999996814199501$ |
+| Motion-potential ratio $G_\Phi$ | $1.0021711842538266$ |
+| Spatial-potential ratio $G_\Psi$ | $1.0010857514169889$ |
+| Lensing-potential ratio | $1.0016284678354077$ |
+| Gravitational slip $\Psi/\Phi$ | $0.9989169187321566$ |
+
+Eight controls pass, including independent curvature contractions, pure
+gauge, the Einstein density and its flux, heat/profile integration and
+direct source variation. The fixed 16/32 rules round to the same response
+floats and recover the old TT factor. Their scalar kernels differ by
+$3.95\times10^{-16}$; these are integration indicators, not bounds on the
+inherited spectrum or physical model. The application takes 0.140625 CPU
+seconds and retains 5797 bytes without a trajectory or scale fit.
+
+A real-time response requires its state and closed-time-path variation.
+Putting a retarded kernel in an ordinary quadratic action instead produces
+its symmetric retarded--advanced average. The static relation therefore
+does not supply the actual curved causal exterior, physical length
+calibration or a cosmological Lambda. Those remain the connection needed
+between the larger geometry and its observer's effective volume response.
+
+### 17.12. Composition and conservation of a nested geometric response
+
+<!-- nsc-claim:atlas-compositional-gravity -->
+
+The next connection runs from a nested geometry to its effective scalar
+gravity and expansion test. On one common slice/clock, retain each
+region's volume and integrals of theta, theta squared, shear squared,
+intrinsic curvature, normal energy and spatial stress trace. Add these
+seven moments, with every material interface counted once. If f_i is
+its volume fraction and H_i its mean theta/3, the variance identity gives
+
+$$
+H_D=\sum_i f_iH_i,\qquad
+Q_D=\sum_i f_iQ_i+6\sum_i f_i(H_i-H_D)^2.
+$$
+
+Moment addition is associative. The same result therefore follows from
+direct integration or successive child-to-parent composition. With the
+surface relation C_surface=2*kappa*E_surface retained, summing the local
+Hamiltonian preserves the averaged scalar constraint at every level.
+Dropping the inter-region variance would violate it. This applies
+[established multidomain averaging](https://arxiv.org/html/1002.3912)
+to the actual signed atlas and its material walls; it is not a new
+spacetime gluing theorem.
+
+For the existing two-level slice, grouping its cap, Kottler host and
+Schwarzschild exterior gives
+
+$$
+Q_D\ell^2=0.280192255373+0.233947711669
+=0.514139967042.
+$$
+
+The required between-region term is 45.50% of the total for this grouping.
+Its 32/64 quadrature change is -5.02e-11; this is a numerical indicator,
+not a certified bound. All wall atoms remain explicit. The initial
+material-boundary fluxes in ell^2 units are -2.25902368244,
+6.03328027292 and -3.77425659048; they cancel globally. Reynolds transport
+adds these fluxes to the individual volume rates. Their contribution to
+the derivative of the H weights is .008489878632/ell^2; local H
+derivatives remain separate physical inputs. Mean local expansion cannot
+silently be used as the expansion of a moving material volume.
+
+For a regular history in the same clock, let R be its mean3-curvature,
+P its complete lapse acceleration, and E,S its correspondingly weighted
+explicit energy and spatial stress trace. The averaged Hamiltonian and
+Raychaudhuri equations give
+
+$$
+3H^2=\kappa E-(Q+R)/2,\qquad
+3(H_{,t}+H^2)=-\kappa(E+S)/2+Q+P.
+$$
+
+Set A=3Q+R+2P and Lambda_trace=(Q-R+2P)/4. Define the explicit-source
+balance J=E_dot+3HE+HS. Differentiation now proves
+
+$$
+Q_{,t}+R_{,t}+2HA=2\kappa J,\qquad
+\Lambda_{{\rm tr},t}=A_{,t}/4+HA-\kappa J.
+$$
+
+The corresponding source is
+
+$$
+\kappa\rho_g=\Lambda_{\rm tr}-A/4,\qquad
+\kappa p_g=-\Lambda_{\rm tr}-A/12.
+$$
+
+Pure constant vacuum requires A=0 and J=0 on an interval. A constant
+vacuum component plus radiation is also possible: for J=0, the trace
+is constant exactly when A_dot+4HA=0. A non-vacuum result at one instant
+does not distinguish those histories. Neither missing derivative is
+chosen to satisfy this equation.
+
+The same trace and vacuum condition follow independently from expansion:
+
+$$
+\Lambda_{\rm tr}=3H^2+\frac{3}{2}H_{,t}-\kappa(E-S)/4,\qquad
+A=6H_{,t}+\kappa(3E+S).
+$$
+
+On the declared instantaneous normal continuation, H*ell=.092609048739
+and H_dot*ell^2=.278302667627 recover the recorded trace -.0153506330754
+and vacuum condition 2.11796240047 in ell units. H here is domain volume
+expansion; its identification with sky-inferred expansion requires the
+missing light-cone calculation. The [full derivation and calculator](../docs/schur-memory.md#from-nested-geometry-to-a-conserved-mean-response)
+state the common-clock, source and infinite-resolution conditions.
+
+These proofs establish a composable scalar response and its required
+time balance. They do not supply a collective parent metric, a closed
+history or a generated cosmological constant. The existing quiet
+massless model still has no demonstrated nesting-induced bulk Lambda.
+The [compact proof calculation](../results/summaries/nsc-compositional-proofs-v1.json)
+binds the source hashes and the finite application; full fields need not
+be stored to reproduce it.
+
+## VIII. Physical inheritance and the completed cosmological account
+
+The preceding parts supply a connected set of mathematical constructions. This final part states what they establish collectively, how their physical parameters must be inherited, and the remaining closures needed for one tested cosmological account. Quantum probabilities, matter asymmetry and successive generations have explicit mathematical targets alongside the dark-sector and observer programme.
+
+### 18. Physical inheritance carries law, scale and state
+
+<!-- nsc-claim:target-constants -->
+
+Physical inheritance transports more than a picture. It specifies the
+fields, dimensionless couplings, state and clocks that constitute a region.
+The normalized operator theorem supplies one exact notion of a shared law.
+The scalar/four-form construction supplies a physical charge-sector map,
+and its three-region energy floor distinguishes laws that one interface
+cannot separate. These are complementary steps toward the same account.
+
+A single parameter table must therefore accompany the connected history:
+fundamental couplings, ancestral flux/state data, object properties,
+calibration quantities and predicted quantities. Local mass and spin can
+differ between objects. The fundamental source law is shared across the
+observations used to test the cosmology.
+
+The quantum interaction gives a concrete additional requirement. At fixed
+G, geometric rescaling preserves its shape while its normalized strength
+varies as G/M^2. A physical inheritance map carries that dimensionless
+strength and the state. Absolute frequency units, occupations and local
+environment are not determined by relabeling the same operator.
+
+The formation calculations likewise distinguish a frequency coupling from
+an arbitrary unit. The mass--reservoir relation and a light-travel-time
+relation can eliminate an overall ruler, but their preparation dependence
+still has to be constrained. A scale is calibrated once; the remaining
+measurements become joint predictions of that calibration and common law.
+
+The foundation's scalar-link construction retains the Dirac benchmark
+E^2=|p|^2+Phi^2 in its invariant sector. Extending this to observed fields
+requires their representations, interactions and detector observables.
+The next physical inheritance result should determine descendant data from
+one stated ancestral preparation and prove that those data admit the next
+transition. That is the composition needed by the proposed hierarchy.
+
+### 19. Geometric spectra, quantum observables and causal scales
+
+The atlas uses fields and geometry before assigning particle or wave
+language. A localized scalar concentration is a dynamical field profile;
+a transmitted pulse is a propagated field configuration; a detector
+couples to a stated operator and state. Those definitions specify what the
+words refer to in each calculation.
+
+The calculated quantum links import quantum theory openly. The Dirac
+analysis supplies physical propagation, stress vertices and a conditional
+late-state detector spectrum. The surface-probe analysis supplies positive
+mode frequencies and an action-derived current interaction whose exchange
+has the cosmohedron energy kernel. These are constructive connections
+between geometry and quantum observables.
+
+A derivation of quantum behaviour beneath the imported theory would need
+amplitudes and measurement probabilities, spin and charge representations,
+statistics, interference and entangled correlations in one dynamical model.
+Discrete cavity modes alone address only a spectral part of that problem.
+The selected four-point contribution also needs the remaining constrained
+terms and physical state before it becomes a complete observer prediction.
+
+The familiar combinations
+
+$$
+\ell_P=\sqrt{\frac{\hbar G}{c^3}},\qquad t_P=\frac{\ell_P}{c}
+$$
+
+set dimensional scales, as tabulated by [NIST CODATA](https://physics.nist.gov/cuu/Constants/).
+A minimum observable wavelength requires a probe and backreaction model.
+[Hossenfelder's review](https://arxiv.org/html/1203.6191v2) distinguishes the
+different possible resolution bounds. A horizon, a cutoff, an initial
+clock origin and a thermal state perform different operations in the model.
+
+The present atlas keeps the conventional local null cone. Its proper-clock
+conversions and memory delays are calculated without changing that causal
+law. A proposed change in regional constants would require operational
+dimensionless measurements, following the distinction developed by
+[Ellis and Uzan](https://arxiv.org/html/gr-qc/0305099v2).
+This gives a precise route from geometric intuition to a quantum or causal
+claim: define the state and detector, derive their response, and compare
+the dimensionless result.
+
+### 20. The connected dark-sector mechanism and its remaining physical inputs
+
+<!-- nsc-claim:target-dark-sector -->
+
+The dark-sector proposal is that interior gravitational observations can
+encode inherited fields and unresolved surrounding geometry. Its physical
+content is the effective stress and the measurements generated by that
+stress. The scalar/four-form branch supplies the clearest worked route:
+one potential contains a vacuum floor, while its excitation evolves,
+redistributes energy and forms local concentrations.
+
+For that action the minimum density is rho_v=rho_b+epsilon*q^2/2.
+The protected parent evolves the excitation under the same potential.
+The later local calculations retain both the ambient field and the
+concentration, including their interference, mass current and pressure
+work. The optical calculations then use that actual evolving source.
+The local mass--vacuum--turnover relation and vacuum--delay products make
+expansion and structure share a physical scale.
+
+These connections define a candidate mechanism. Their remaining physical
+inputs are concrete: ancestral flux and excitation, scalar frequency,
+seed spectrum and phase, formation epoch and population. The regular
+Euclidean preparation gives very little homogeneous child excitation;
+the more strongly excited Cauchy preparations are different states whose
+physical origin must be supplied. Deterministic transport carries a chosen
+state and does not select an arbitrary initial covariance.
+
+The source history must next generate both the measured expansion and
+the observed clustering from one parameter account. That means calculating
+past-light-cone distances, growth and the projection of the surrounding
+compensation for the same population. An arbitrary halo-by-halo depletion
+law would erase the predictive relation that the atlas has constructed.
+
+The quiet-cap supernova contrast already supplies a concrete test: that
+limiting history disagrees with the selected covariance-weighted distance
+statistic. The scalar cosmology has to be propagated to the same observable
+before agreement can be claimed. Early radiation and thermal evolution
+also have to be included before using a sound horizon inferred from
+early-universe observations. The density fractions are outputs of that
+completed history or parameters independently constrained within it; the
+number "95%" is not imposed as a geometric boundary condition.
+
+### 21. Charged matter and the asymmetry question
+
+<!-- nsc-claim:target-antimatter -->
+
+Matter asymmetry is another physical inheritance question. A parent--child
+transition could prepare correlated charge sectors, but its transformation
+must act on actual charged fields and conserved currents. The current
+real scalar has no particle--antiparticle charge degree of freedom.
+
+The atlas's [literature library](../docs/arxiv-studies.md) includes
+[Poplawski's torsion-based asymmetry mechanism](https://arxiv.org/abs/1101.4012)
+alongside CPT and black-mirror proposals. Each supplies a particular action
+or state assumption to examine. A radial orientation reversal alone is
+not the charge-conjugation operation of those field theories.
+
+The constructive next result would specify a charged matter sector, its
+parent and child state map, the interactions permitting an asymmetry and
+the relevant current balance. It would then calculate a matter--antimatter
+observable and its connection to the same thermal history used for
+cosmology. A baryon-to-photon ratio requires both the baryonic charge and
+the photon/entropy history. This is the route by which the matter chapter
+can join the inherited vacuum and scalar-structure chapters.
+
+### 22. Formation, continuation and successive generations
+
+<!-- nsc-claim:target-continuation -->
+
+The atlas establishes finite compositions and several controlled
+continuations. The quiet two-wall geometry has a shared history; the
+scalar/four-form slice has a protected evolving parent; local scalar
+concentrations form and produce measurable signals. The static material
+branch separately has radial and axial linear stability. These results
+specify domains in which the proposed architecture actually works.
+
+A continuing hierarchy also needs the transitions between those domains.
+A regular spatial centre is not a collapse formation history, and the
+quiet wormhole-side reference has a singular classical past and a finite
+throat lifetime. Its replacement requires compatible matter and
+conservation, using the existing regular-interior literature where its
+assumptions apply. The stable ordinary-interface branch provides another
+route; it is not identified with that wormhole-side history.
+
+Proper times belong to named worldlines and matching conventions. The
+thermodynamic arrow requires the state, entropy and exchange of those
+regions. A clock rescaling alone selects neither an entropy direction nor
+a matter asymmetry.
+
+<!-- nsc-claim:target-recursion -->
+
+Repeated spherical inheritance requires one transition's output to be
+admissible data for the next. A physical composition rule must carry
+energy, charges, state correlations and entropy. The unlimited-depth
+operator theorem proves its own inherited law; a spacetime realization
+needs this additional source and evolution statement.
+
+For a proposed offspring population, established branching mathematics
+can then be used. [Altenberg's finite-type treatment](https://arxiv.org/html/1302.1293v2)
+shows how a specified offspring law supplies a mean matrix and expected
+population evolution. The physics to derive is the transition law and
+its inherited parameters.
+
+[Penrose and Meissner's conformal continuation](https://arxiv.org/abs/2503.24263)
+offers a separate geometric comparison. Conformal aeons, black-hole
+offspring and communicating mouths have different matching assumptions.
+The atlas can contain all three and connect them where an explicit map
+and state law warrant the connection.
+
+### 23. The connected result and the route to a tested cosmology
+
+<!-- nsc-claim:target-measurement -->
+
+The book's connected result is a route from specified geometry and
+inherited state to a calculable interior world. Normalized inheritance,
+sourced attachments, scalar supply, structure formation and observer
+relations all have explicit realizations. The physical gravitational
+boundary action and quantum vertex extend the same method to further
+channels. Their common feature is that geometry and state determine a
+response that can be calculated and challenged.
+
+The central remaining work is concentrated in the following closures.
+
+| Physical closure | Concrete result needed | Connection it completes |
+| --- | --- | --- |
+| One compatible source history | State the ancestral preparation and common couplings, transport them through the required interacting boundaries, and retain the descendant energy budget | Parent, child and inherited matter belong to one history |
+| Cosmological evolution | Carry that history through the epochs used by the selected observations; calculate distances and growth on the observer's light cone | Vacuum and excitation become expansion and clustering predictions |
+| Structure population | Derive or independently constrain seed statistics, formation ages and abundance; project the resulting compensation and lensing | The single-source relation becomes a local-universe correlation |
+| Compact-object response | Prepare a causal wave/state, include the angular and rotation sectors needed by the observation, and calculate the received signal | The finite return contrast becomes an astrophysical test |
+| Quantum and charged matter | Complete the chosen quantum response and detector statistics; specify the charged-sector and entropy evolution required for asymmetry | The quantum and matter chapters share a physical interpretation with the geometry |
+| Joint observation | Calibrate declared inputs once, freeze the remaining cross-observable predictions, and evaluate independent data with their covariance | One mathematical account faces multiple tests without hidden retuning |
+
+The causal domain required by an observation sets the evolution to
+calculate. A protected parent domain can be used directly where it
+applies; a full remote future is not required just to label an already
+determined local measurement. Conversely, a claim about transmitted
+matter or a new generation requires the actual relevant transition.
+
+The strongest first observational route is the connection already built
+between the forming source, its surroundings and its interior observer.
+Motion constrains the force; light tests the metric; the compensation
+and inherited scale constrain the environment. Compare against a specified
+alternative with the same calibrated inner observables. The test is
+whether the outer relation remains distinguishable after source, age,
+kinematic and model uncertainties are propagated.
+
+The theory is complete at its advertised scope when every claimed
+connection has compatible geometry, sources, state and evolution; its
+observable numbers have controlled errors; shared parameters survive
+independent observations; and its main calculations can be reproduced.
+The manuscript and matching source/evidence release then present the same
+scientific version. A later withheld observation outside the declared
+error range rejects the tested claim even after publication.
+
+Three failure modes deserve direct attention. An incompatible source or
+boundary prevents the claimed common history. Unrestricted preparation
+can let different geometries reproduce the same measurements, defeating
+identification. Uncontrolled approximation error or disagreement between
+independent datasets can reject the proposed physical interpretation.
+Each is a mathematical or observational decision to resolve, rather than
+a reason to add an unrelated calculation.
+
+Spherical inheritance remains the organizing hypothesis of this atlas.
+The completed constructions show how that hypothesis can be made
+calculable: define a region, derive its admissible connection, carry its
+state, account for its energy and ask what the observer measures. The
+remaining closures carry that same argument to a tested account of our
+local universe.
+
+## Appendix A. Characteristic fields, finite-amplitude response and memory
+
+This appendix retains the detailed field-transfer and nonlinear-development calculations. They provide mathematical tools, boundary diagnostics and finite-domain results for the original conformal-scalar branch. Their source, gauge and error statements remain explicit. The main scalar/four-form history uses its own stated action and preparation; the appendix is not an additional mandatory calculation queue for that history.
+
+### A.1. A first field that reaches the interior
 
 <!-- nsc-claim:atlas-field-response -->
 
-Evidence: [field-transfer record](../results/development/nsc-cosmological-atlas-v6/field-transfer.json)
+Derivation and calculation: [field-transfer record](../results/development/nsc-cosmological-atlas-v6/field-transfer.json)
 and [field-transfer owner](../docs/nsc-atlas-field-transfer.md).
 
 On the fixed de Sitter/Schwarzschild wall, retain $H\ell=1$, $k\ell=2$,
@@ -8088,11 +8321,11 @@ through $t_C=0$, conditional on zero incoming data afterward and the
 proved no-return interval. These are field amplitudes, not energy fractions.
 The calibration does not generate its exterior input.
 
-### 13.1. Where the early signal can originate
+### A.2. Where the early signal can originate
 
 <!-- nsc-claim:atlas-field-preparation -->
 
-Evidence: [preparation record](../results/development/nsc-cosmological-atlas-v7/preparation-access.json)
+Derivation and calculation: [preparation record](../results/development/nsc-cosmological-atlas-v7/preparation-access.json)
 and [preparation owner](../docs/nsc-atlas-field-preparation.md).
 
 Independent data can instead be placed in retained white-hole sector IV.
@@ -8124,11 +8357,11 @@ window is $-0.581758951595344\leq T/\ell\leq-0.250230700560700$;
 the no-return null-label gap is $2.634591912177392\ell$. Remote physical
 generation and data beyond that window remain unspecified.
 
-### 13.2. A prepared pulse leaves a finite scattering tail
+### A.3. A prepared pulse leaves a finite scattering tail
 
 <!-- nsc-claim:atlas-prepared-response -->
 
-Evidence: [prepared-response record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json)
+Derivation and calculation: [prepared-response record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json)
 and [response owner](../docs/nsc-atlas-prepared-response.md).
 
 For this unchanged input, let $A$ denote the positive integral operator
@@ -8154,11 +8387,11 @@ within its ten-million/60-CPU-second limits. These numerical controls
 support the finite waveform; the sign follows from the analytic argument.
 No permanent memory, continuum enclosure or later decay law is established.
 
-### 13.3. What the signal determines when preparation is unknown
+### A.4. What the signal determines when preparation is unknown
 
 <!-- nsc-claim:atlas-observer-inverse -->
 
-Evidence: [inverse record](../results/development/nsc-atlas-observer-inference-v1/inference.json)
+Derivation and calculation: [inverse record](../results/development/nsc-atlas-observer-inference-v1/inference.json)
 and [inverse owner](../docs/nsc-atlas-observer-inference.md).
 
 In this fixed geometry, put $f=\chi/\varepsilon$,
@@ -8181,11 +8414,11 @@ An arbitrary fitted trace need not satisfy them. This analytic source
 inverse neither identifies geometry nor reconstructs a source numerically
 from sampled or intensity-only data.
 
-### 13.4. The transmitted probe and the wall's stress
+### A.5. The transmitted probe and the wall's stress
 
 <!-- nsc-claim:atlas-scalar-wall-consistency -->
 
-Evidence: [stress record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json)
+Derivation and calculation: [stress record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json)
 and [wall-stress owner](../docs/nsc-atlas-scalar-wall-consistency.md).
 
 Fix canonical kinetic normalization, $\kappa_4=8\pi G$ and
@@ -8206,17 +8439,17 @@ Thus no additional scalar surface source or tangential flux jump is
 required at quadratic order. The individual fluxes and smooth bulk
 gravitational source need not vanish.
 
-### 13.5. The prepared pulse requires gravitational initial data
+### A.6. The prepared pulse requires gravitational initial data
 
 <!-- nsc-claim:atlas-characteristic-initialization -->
 
-Evidence: [initialization record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json)
+Derivation and calculation: [initialization record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json)
 and [initial-data owner](../docs/nsc-atlas-characteristic-initialization.md).
 
 On the source leg, keep the reference lapse, radius $0.4\ell$, both corner
 expansions and affine normalization. Use the affine background radius
 $x=R_0(U_0,V)/\ell$, $V(x)=F(x)/U_0$ and
-$b(x)=B(4[V(x)-V_m]/(V_b-V_a))$; primes here and in section 13.6 mean
+$b(x)=B(4[V(x)-V_m]/(V_b-V_a))$; primes here and in section A.7 mean
 $d/dx$. With $p=b(x)/x$,
 $\phi=(\varepsilon/\ell)p+O(\varepsilon^3)$ and
 $\alpha=\kappa_4\varepsilon^2/\ell^2$, write
@@ -8234,11 +8467,11 @@ Einstein-frame equation agree. These are initial radius coefficients,
 not a mass shift or an evolved wall; no finite amplitude or perturbative
 remainder bound is selected.
 
-### 13.6. An invariant mass response on the same initial surface
+### A.7. An invariant mass response on the same initial surface
 
 <!-- nsc-claim:atlas-source-mass -->
 
-Evidence: [source-mass record](../results/development/nsc-atlas-source-mass-v1/mass.json)
+Derivation and calculation: [source-mass record](../results/development/nsc-atlas-source-mass-v1/mass.json)
 and [mass owner](../docs/nsc-atlas-source-mass.md).
 
 With $m=M/\ell=0.4$, the fixed transverse corner datum and scalar equation supply
@@ -8263,11 +8496,11 @@ during input is $4.265459834842238$. Independent mixed-radius and improved
 stress laws agree. This is a finite source-leg response relative to the
 reference mass, not a negative total mass, vacuum future or asymptotic energy.
 
-### 13.7. The scalar adds no normal-force jump
+### A.8. The scalar adds no normal-force jump
 
 <!-- nsc-claim:atlas-scalar-normal-force -->
 
-Evidence: [normal-force record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json)
+Derivation and calculation: [normal-force record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json)
 and [normal-force owner](../docs/nsc-atlas-scalar-normal-force.md).
 
 The Gauss jump $[G_{nn}]=-2k\bar K$ and complete scalar stress give
@@ -8283,11 +8516,11 @@ $\varepsilon^2$. This mean-curvature variation includes the bulk metric,
 induced metric and wall displacement. It does not require zero displacement
 or an unchanged trajectory.
 
-### 13.8. Exterior mass closes from the known wall field
+### A.9. Exterior mass closes from the known wall field
 
 <!-- nsc-claim:atlas-wall-mass-closure -->
 
-Evidence: [analytic closure record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json)
+Derivation and calculation: [analytic closure record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json)
 and [wall-mass owner](../docs/nsc-atlas-wall-mass-closure.md).
 
 On the smooth exterior wall limit in the same $0.45\leq R/\ell\leq0.55$
@@ -8305,18 +8538,18 @@ $$
 The original-frame improved stress independently gives
 $d\mu_J/ds=L+dQ/ds$. Neither expression divides by $\beta$.
 This analytic conditional functional is evaluated with the coupled
-quadratic geometry in Sections 13.10--13.12. The wall tail alone supplies
+quadratic geometry in Sections A.11--A.13. The wall tail alone supplies
 no late mass sign or plateau. Physical preparation selection, the next
 scalar amplitude, stability and a finite-amplitude validity bound remain
 open. Detailed scalar-chain
 derivations belong to their owners; historical supporting calculations
 are cited at [Zenodo](https://doi.org/10.5281/zenodo.23090015).
 
-### 13.9. Cap mass and a regular wall displacement functional
+### A.10. Cap mass and a regular wall displacement functional
 
 <!-- nsc-claim:atlas-cap-wall-response -->
 
-Evidence: [cap-wall record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json),
+Derivation and calculation: [cap-wall record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json),
 [model specification snapshot](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json)
 and [cap-wall owner](../docs/nsc-atlas-cap-wall-response.md).
 The common [model interface](../src/recursive_horizons/nsc_cosmological_atlas.py)
@@ -8335,7 +8568,7 @@ $$
 \frac{\mathfrak{m}_-}{\ell}=\frac{h^2r^3}{2}+\alpha\nu_-+O(\alpha^2).
 $$
 
-Here $\mu_+$ is the exterior coefficient $\mu_J$ of Section 13.8.
+Here $\mu_+$ is the exterior coefficient $\mu_J$ of Section A.9.
 The cap vacuum is evaluated at the actual radius: its total quadratic
 mass coefficient on the reference wall is
 $\nu_-+3h^2x^2\rho/2$. Holding that vacuum mass constant would omit a
@@ -8405,11 +8638,11 @@ the corrected arrival map and subsequent scalar response. A nonzero
 allowed amplitude, a controlled remainder, formation and stability remain
 separate questions.
 
-### 13.10. The prepared field drives a smooth exterior metric response
+### A.11. The prepared field drives a smooth exterior metric response
 
 <!-- nsc-claim:atlas-bulk-response -->
 
-Evidence: [metric refinement](../results/development/nsc-atlas-bulk-response-v1/metric/response.json),
+Derivation and calculation: [metric refinement](../results/development/nsc-atlas-bulk-response-v1/metric/response.json),
 [field refinement](../results/development/nsc-atlas-bulk-response-v1/field/response.json),
 [derivative-quadrature comparison](../results/development/nsc-atlas-bulk-response-v1/derivative/response.json)
 and [bulk-response owner](../docs/nsc-atlas-bulk-response.md), with separate
@@ -8418,7 +8651,7 @@ and [bulk-response owner](../docs/nsc-atlas-bulk-response.md), with separate
 and [time tolerance](../results/development/nsc-atlas-bulk-response-v1/time/response.json)
 comparisons.
 
-The gravitational data of Sections 13.5--13.6 determine a computed smooth
+The gravitational data of Sections A.6--A.7 determine a computed smooth
 exterior response at quadratic order on $[U_0,U_a]\times[V_a,V_b]$, whose two past null
 sides are specified. This rectangle lies inside the retained wedge. Its
 final transverse leg $U=U_a$ supplies data for a later extension toward
@@ -8439,7 +8672,7 @@ $$
 Integrating their right sides in $U$ gives a linear evolution in $V$.
 The quiet bottom has $y=z=0$. At $U=U_0$, let $x=r_0(U_0,V)$ and
 let $h_{\mathrm{init}}$ denote the original Jordan radius coefficient from
-Section 13.5. The source values in the unchanged coordinate gauge are
+Section A.6. The source values in the unchanged coordinate gauge are
 
 $$
 y_0=xh_{\mathrm{init}}-\frac{x^2p^2}{12},\qquad
@@ -8483,22 +8716,22 @@ between 17.16 and 21.91 process-CPU seconds within its 120-second budget.
 These are finite numerical comparisons, not rigorous error enclosures or
 a selected nonzero physical amplitude. They establish a sourced exterior
 metric response on the rectangle and provide its transverse radius/lapse
-data. Sections 13.11--13.12 continue to the moving wall and cap using the
+data. Sections A.12--A.13 continue to the moving wall and cap using the
 same source and material junction. The full finite-amplitude sourced
 configuration, corrected observer signal and finite-amplitude remainder
 have not yet been established.
 
-### 13.11. The same field displaces the wall and changes its exterior clock
+### A.12. The same field displaces the wall and changes its exterior clock
 
 <!-- nsc-claim:atlas-wall-evolution -->
 
-Evidence: [field refinement](../results/development/nsc-atlas-wall-evolution-v1/field/response.json),
+Derivation and calculation: [field refinement](../results/development/nsc-atlas-wall-evolution-v1/field/response.json),
 [radial quadrature](../results/development/nsc-atlas-wall-evolution-v1/radial/response.json),
 [clock integration](../results/development/nsc-atlas-wall-evolution-v1/time/response.json)
 and the [wall-evolution owner](../docs/nsc-atlas-wall-evolution.md).
 
-The leading field now supplies a computed response on the moving boundary,
-with the action, source and quiet corner of Sections 13.5--13.10 unchanged.
+The leading field supplies a computed response on the moving boundary,
+with the action, source and quiet corner of Sections A.6--A.11 unchanged.
 Extending its first-derivative evaluator to the retained wedge requires the
 correct lower endpoint: a column with $U>U_a$ begins where it meets the wall.
 At that event $\chi_U=0$, while $p_U=-p r_{0,U}/x$ is generally nonzero.
@@ -8517,7 +8750,7 @@ $$
 Their source constants are already fixed by the characteristic data.
 At the wall, frame conversion gives $\mu_+^{\mathrm{radial}}=\mu_{E,W}+Q_+$
 and $\zeta_{J,W}=\zeta_{E,W}+p^2/4$. The independent timelike mass
-functionals of Section 13.9 determine $\mu_+$ and $\nu_-$, and hence the
+functionals of Section A.10 determine $\mu_+$ and $\nu_-$, and hence the
 quiet-anchored displacement $\rho$. The radial and timelike mass values are
 compared, rather than equated by the numerical implementation.
 
@@ -8575,15 +8808,15 @@ that residual alone is not a total metric error estimate.
 These computations connect the sourced exterior and the two-sided mass
 functionals to an actual wall displacement and exterior null embedding at
 quadratic order. Their numerical differences are refinement diagnostics.
-Section 13.12 supplies the cap metric and central arrival correction.
+Section A.13 supplies the cap metric and central arrival correction.
 The next scalar waveform and finite-amplitude remainder remain to be
 calculated.
 
-### 13.12. The cap geometry changes the central arrival clock
+### A.13. The cap geometry changes the central arrival clock
 
 <!-- nsc-claim:atlas-cap-response -->
 
-Evidence: [field refinement](../results/development/nsc-atlas-cap-response-v1/field/response.json),
+Derivation and calculation: [field refinement](../results/development/nsc-atlas-cap-response-v1/field/response.json),
 [radial integration](../results/development/nsc-atlas-cap-response-v1/radial/response.json),
 [further radial refinement](../results/development/nsc-atlas-cap-response-v1/radial_fine/response.json),
 [ray integration](../results/development/nsc-atlas-cap-response-v1/ray/response.json),
@@ -8698,11 +8931,11 @@ perturbed wave equation and source continuation are specified in the next
 section. Propagating that correction and establishing finite-amplitude
 control remain the next physical connection.
 
-### 13.13. Geometry supplies an outgoing scalar boundary correction
+### A.14. Geometry supplies an outgoing scalar boundary correction
 
 <!-- nsc-claim:atlas-scalar-boundary -->
 
-Evidence: [field refinement](../results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json),
+Derivation and calculation: [field refinement](../results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json),
 [radial integration](../results/development/nsc-atlas-scalar-boundary-v1/radial/boundary.json),
 [ray integration](../results/development/nsc-atlas-scalar-boundary-v1/ray/boundary.json),
 [further radial refinement](../results/development/nsc-atlas-scalar-boundary-v1/radial_fine/boundary.json),
@@ -8762,11 +8995,11 @@ equation. The following calculation resolves its interpolation and
 propagates the exterior correction. No new physical preparation mechanism
 or nonzero finite-amplitude validity range is asserted.
 
-### 13.14. The exterior scalar correction propagates on the computed geometry
+### A.15. The exterior scalar correction propagates on the computed geometry
 
 <!-- nsc-claim:atlas-scalar-evolution -->
 
-Evidence: [mass-moment comparison](../results/development/nsc-atlas-profile-moment-v1/moment.json),
+Derivation and calculation: [mass-moment comparison](../results/development/nsc-atlas-profile-moment-v1/moment.json),
 [clock-resolved boundary](../results/development/nsc-atlas-lift-clock-v1/clock.json),
 [forcing cache](../results/development/nsc-atlas-forcing-cache-v1/cache.json),
 [scalar evolution](../results/development/nsc-atlas-scalar-evolution-v1/evolution.json)
@@ -8830,11 +9063,11 @@ preparation. Sampled refinement differences are not uniform bounds.
 The central readout additionally requires reflected cap forcing and the
 observer-clock pullback; no finite amplitude or remainder is fixed here.
 
-### 13.15. Reflected cap transport gives the central scalar correction
+### A.16. Reflected cap transport gives the central scalar correction
 
 <!-- nsc-claim:atlas-central-scalar -->
 
-Evidence: [central derivation](../docs/nsc-atlas-central-scalar-response.md),
+Derivation and calculation: [central derivation](../docs/nsc-atlas-central-scalar-response.md),
 [radial comparison](../results/development/nsc-atlas-central-scalar-v1/central.json)
 and [incoming-ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json).
 
@@ -8931,11 +9164,11 @@ the bulk, moving interface and regular centre, with a quantitative
 remainder for this observable, remains open. The following calculation tests
 the coupled equations on the original window without assuming that estimate.
 
-### 13.16. A nonlinear coupled window and its unresolved accuracy
+### A.17. A nonlinear coupled window and its unresolved accuracy
 
 <!-- nsc-claim:atlas-nonlinear-background -->
 
-Evidence: [six-case evolution](../results/development/nsc-atlas-background-evolution-v1/background.json),
+Derivation and calculation: [six-case evolution](../results/development/nsc-atlas-background-evolution-v1/background.json),
 [source and runtime manifest](../results/development/nsc-atlas-background-evolution-v1/manifest.json),
 [preceding transport comparison](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
 and [figure record](../docs/figures/nsc-atlas-background-evolution.manifest.json).
@@ -9031,11 +9264,11 @@ evolution. No continuum error enclosure, converged nonlinear spacetime,
 central-arrival waveform, formation mechanism or stability result follows
 from this window.
 
-### 13.17. Profile-knot phase and a finer temporal comparison
+### A.18. Profile-knot phase and a finer temporal comparison
 
 <!-- nsc-claim:atlas-ssprk3-refinement -->
 
-Evidence: [128/256-step histories](../results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json),
+Derivation and calculation: [128/256-step histories](../results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json),
 [512-step comparison](../results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json),
 [source-bound manifest](../results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json)
 and [figure record](../docs/figures/nsc-atlas-ssprk3-refinement.manifest.json).
@@ -9117,11 +9350,11 @@ Their manifest binds 86 inputs and producers. A separate authentication
 uses 1,418,330 points, reconstructs midpoint data and two final stages,
 and replays no source integration or trajectory.
 
-### 13.18. A common exterior derivative and a mixed accuracy result
+### A.19. A common exterior derivative and a mixed accuracy result
 
 <!-- nsc-claim:atlas-operator-comparison -->
 
-Evidence: [fixed-input spatial comparison](../results/development/nsc-atlas-spatial-refinement-v1/spatial.json),
+Derivation and calculation: [fixed-input spatial comparison](../results/development/nsc-atlas-spatial-refinement-v1/spatial.json),
 [same-grid operator comparison](../results/development/nsc-atlas-operator-comparison-v1/operator.json)
 and [source-bound manifest](../results/development/nsc-atlas-operator-comparison-v1/manifest.json).
 The [common-derivative construction](../docs/nsc-atlas-finite-amplitude.md#a-common-second-order-departure-derivative)
@@ -9185,11 +9418,11 @@ The manifest binds 104 files. Separate authentication uses 4,040,624 points
 and reconstructs saved fields, diagnostics and two final stages without
 source integration or trajectory replay.
 
-### 13.19. A finite-amplitude onset solution
+### A.20. A finite-amplitude onset solution
 
 <!-- nsc-claim:atlas-finite-onset-existence -->
 
-Evidence: [exact reference gauge](../results/summaries/nsc-atlas-reference-gauge-bound-v1.json),
+Derivation and calculation: [exact reference gauge](../results/summaries/nsc-atlas-reference-gauge-bound-v1.json),
 [quiet initial anchor](../results/summaries/nsc-atlas-reference-initial-bound-v1.json),
 [actual source bounds](../results/summaries/nsc-atlas-source-forcing-bound-v1.json),
 and [conditional tube receipt](../results/summaries/nsc-atlas-coupled-tube-bound-v1.json).
@@ -9274,11 +9507,11 @@ and coordinate identities. No new physical trajectory is used in this proof.
 These bounds do not certify the saved numerical histories, a perturbative
 remainder, central arrival, formation or observational agreement.
 
-### 13.20. Amplitude dependence on the onset cell
+### A.21. Amplitude dependence on the onset cell
 
 <!-- nsc-claim:atlas-onset-parameter-response -->
 
-Evidence: [source and comparison-chart regularity](../docs/nsc-atlas-finite-amplitude.md#source-data-and-regularity-in-the-fixed-comparison-charts),
+Derivation and calculation: [source and comparison-chart regularity](../docs/nsc-atlas-finite-amplitude.md#source-data-and-regularity-in-the-fixed-comparison-charts),
 [coupled linear inverse](../docs/nsc-atlas-finite-amplitude.md#coupled-linear-inverse-on-the-complete-comparison-domain),
 [first quotient with one coordinate derivative](../docs/nsc-atlas-finite-amplitude.md#convergence-of-the-first-quotients-with-one-coordinate-derivative),
 and [second quotient and Taylor estimate](../docs/nsc-atlas-finite-amplitude.md#second-amplitude-derivative-and-quadratic-onset-remainder).
@@ -9288,7 +9521,7 @@ retain the numerical input bounds; the linked derivation supplies the
 parameter theorem. Neither record evaluates its Taylor constant.
 
 **Amplitude result.** On exactly the source cell and coupling interval of
-Section 13.19, the normalized solution has a continuous first amplitude
+Section A.20, the normalized solution has a continuous first amplitude
 derivative into C1 comparison jets and a continuous second amplitude
 derivative into C0 comparison jets. At the interval endpoints, derivatives
 are one-sided. The wall radius and anchored central clock are included.
@@ -9350,7 +9583,7 @@ $$
 $$
 
 This is an analytic quadratic remainder on the onset domain. The general
-state constant is finite; Section 13.21 supplies explicit remainder bounds
+state constant is finite; Section A.22 supplies explicit remainder bounds
 for selected geometric outputs by a positive comparison. It also identifies
 their first coefficients by matching the source, gauge and quiet initial
 data. Errors in the older numerical histories require their own bounds.
@@ -9360,11 +9593,11 @@ $\alpha$ at zero. The quiet core, original source and coupling interval are
 unchanged. Continuation through central arrival and an error bound for the
 observer waveform remain separate steps.
 
-### 13.21. Uniform geometric remainders and signed endpoint response
+### A.22. Uniform geometric remainders and signed endpoint response
 
 <!-- nsc-claim:atlas-onset-geometric-signs -->
 
-Evidence: [first geometric coefficients](../results/summaries/nsc-atlas-onset-geometry-bound-v1.json),
+Derivation and calculation: [first geometric coefficients](../results/summaries/nsc-atlas-onset-geometry-bound-v1.json),
 [geometric](../results/summaries/nsc-atlas-geometric-departure-bound-v1.json),
 [canonical scalar](../results/summaries/nsc-atlas-scalar-departure-bound-v1.json)
 and [normalized cap](../results/summaries/nsc-atlas-cap-departure-bound-v1.json)
@@ -9375,7 +9608,7 @@ The [comparison and frame derivation](../docs/nsc-atlas-finite-amplitude.md#unif
 connects these compact certificates.
 
 Keep exactly the source cell, action, quiet data and coupling interval of
-Section 13.19. All quantities here are dimensionless. The outputs are the
+Section A.20. All quantities here are dimensionless. The outputs are the
 Einstein areal radius $R_E$, the material Jordan areal radius $R_J$, and
 the wall's centre-anchored polar-slice label $T_W$. Their first coefficients
 are the actual derivatives of the constructed solution at $\alpha=0$.
@@ -9407,7 +9640,7 @@ This uses one rational three-by-three solve and interval algebra, with no
 new field evolution or grid scan.
 
 **Material frame and event identification.** With the normalized canonical
-field $f=X/R_E$ of Section 13.19, the exact conversion is
+field $f=X/R_E$ of Section A.20, the exact conversion is
 
 $$
 R_J=R_E\cosh\!\left(\sqrt{\alpha/6}\,f\right),\qquad
@@ -9437,7 +9670,7 @@ $v$ is the reference proper-time radial velocity, and
 $\eta_{\mathrm{emb}}$ is the exterior embedding coefficient defined by
 $V_W=V_0(1+\alpha\eta_{\mathrm{emb}})+O(\alpha^2)$.
 Its interval includes both signs and is retained in the conversion;
-$\eta_{\mathrm{emb}}$ is distinct from the cap chart coordinate of Section 13.20.
+$\eta_{\mathrm{emb}}$ is distinct from the cap chart coordinate of Section A.21.
 
 **Endpoint result.** The following are outward-rounded bounds. The last
 column gives the shift from the vacuum reference at $x_R$ and
@@ -9477,7 +9710,7 @@ rerunning a field solution. Continuation to central arrival, numerical
 trajectory error, preparation selection and observational comparison
 retain their separate requirements.
 
-### 13.22. The completed full-label numerical trial
+### A.23. The completed full-label numerical trial
 
 <!-- nsc-claim:atlas-fixed-endpoint-trial -->
 
@@ -9567,11 +9800,11 @@ $7.11\times10^{-11}$; energy plus metric/input work closes to
 $1.75\times10^{-15}$. Its prescribed quiet geometry and manufactured
 forcing do not repair or certify the finite-amplitude P001 evolution.
 
-### 14. A separate finite model with geometric feedback
+### A.24. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
 
-Evidence: [focused companion snapshot](finite-regeneration/evidence/snapshot.json),
+Derivation and calculation: [focused companion snapshot](finite-regeneration/evidence/snapshot.json),
 [finite episode](../results/development/nsc-spherical-conformal-episode-v2.json),
 [local response](../results/development/nsc-conformal-local-response-v2.json),
 and [memory controls](../results/development/nsc-conformal-memory-control-v1.json).
@@ -9616,7 +9849,7 @@ inside and outside the spatial observation window. Consequently it is not
 the parent end of Section 10, and its Hamiltonian cannot be transferred to
 the wall model without a field-theoretic identification.
 
-### 15. Memory is a consequence of elimination, not an added reservoir
+### A.25. Memory is a consequence of elimination, not an added reservoir
 
 For a time-dependent Hermitian block Hamiltonian with retained block $A(t)$,
 coupling $B(t)$ and complementary block $D(t)$, let $U_E(t,s)$
@@ -9666,271 +9899,49 @@ information. The next bridge to the atlas would derive such a regional
 Hamiltonian and state from a particular matched spacetime and field, rather
 than labeling these finite modes as universes.
 
-## VI. What the map can ask next
+### A.26. The retained local incoming gate
 
-### 16. Constants, spectral scales and physical inheritance
+<!-- nsc-claim:local-source-insertion-majorant -->
 
-<!-- nsc-claim:target-constants -->
+Derivation and calculation: [majorant v7 record](../results/development/nsc-ks-source-operator-majorant-v7.json)
+and [gate budget v5 record](../results/development/nsc-ks-gate-budget-v5.json).
 
-**Open physical target.** A shared normalized operator can preserve
-dimensionless spectral relationships while regional clocks and absolute
-frequency units differ. To turn this into a statement about constants,
-the attachment must specify clocks, rods, fields and the transition of their
-dimensionless parameters. Useful comparisons include
-$\alpha$, mass ratios, and $Gm^2/(\hbar c)$.
-A numerical change caused solely by unit rescaling is not a changing law.
-
-Successive inheritance maps also need compatible output and input spaces:
-the first transition must supply data on which the next law is defined.
-Drawing another nested sphere does not establish this composition.
-
-The atlas wall parameters $H\ell$, $M/\ell$ and $\kappa\ell$
-are declared inputs, not values inherited from a parent calculation.
-Physical inheritance might preserve a law while changing states, select
-among admissible states, or alter an effective environment. These
-possibilities need different maps and should remain distinguishable.
-
-The foundation also contains a scalar-link construction whose invariant
-sector has the ordinary Dirac relation
-$E^2=|\mathbf p|^2+\Phi^2$. It is a useful benchmark relating a
-coupling to a gap. It does not derive the observed particle species,
-nuclear masses or their interactions. Particles are not assumed to be
-little universes. A particle interpretation requires the appropriate field
-representation, observables and dynamics, not resemblance between a spectral
-scale and a cosmological radius.
-
-### 17. Wavelength, preparation and the role of light speed
-
-The derived scales
+The [local incoming source-insertion majorant v7](../docs/nsc-ks-source-operator-majorant-v7.md)
+is a separate controlled application. For the fixed switched state law
+$C_\Sigma[g]=U_gC_{\mathrm{up}}U_g^\dagger$ on $I=S(1)+[.12,.18]$,
+family $(14,1)$ covers **1168/1168 signed rows**, with original weights
+counted once and no remaining row keys. Its continuous insertion bounds are
 
 $$
-\ell_P=\sqrt{\frac{\hbar G}{c^3}},\qquad t_P=\frac{\ell_P}{c}
+\epsilon_N\leq
+3646674054457366029024452496769420151764188105426118876609\,2^{-229}.
 $$
 
-are defined combinations of constants, as tabulated by
-[NIST CODATA](https://physics.nist.gov/cuu/Constants/).
-Dimensional construction alone does not establish a smallest physical
-wavelength or an indivisible spatial cell. A claimed minimum would need
-a model of probes, observables and gravitational backreaction.
-Minimal-length scenarios themselves distinguish limits on resolution,
-distance products and other quantities; see
-[Hossenfelder, 1203.6191v2, Sections 5.3–6](https://arxiv.org/html/1203.6191v2).
+$$
+\epsilon_\beta\leq
+5793343250846686183515013928067141454707331929528967339969\,2^{-230}.
+$$
 
-Absolute zero refers to thermodynamic temperature and the limiting thermal
-state, not to an endpoint of allowed wavelengths; see
-[NIST's temperature definition](https://www.nist.gov/si-redefinition/kelvin/kelvin-thermodynamic-temperature).
-A relation between a regional temperature and a spectral scale requires a
-specified state and Hamiltonian. Changing a temperature unit supplies neither.
+These are approximately $4.226958072607968\times10^{-12}$ and
+$3.357610065481873\times10^{-12}$ for this family's source-error
+insertion. The physical local gate remains **OPEN**:
+`physical_upstream_budget_component` is null. Source quadrature,
+numerical field error, value-assembly arithmetic and every other source
+family are excluded from these bounds. Complete row coverage in this
+family does not supply those missing errors.
 
-A horizon is not automatically a reflecting cavity wall or a prohibition
-on longer-wavelength modes. A particle-like exterior description likewise
-requires an additional quantum state and measurement model; exterior mass,
-spin and charge alone do not establish that description. Quantum observables
-can have continuous as well as discrete spectra. A detector event or a wave
-crest is not a general definition of a particle.
+The [v5 gate budget](../docs/nsc-ks-gate-budget-v5.md) names nine distinct
+components, with total error allocation $2\times10^{-11}$ and residual
+reserve $10^{-11}$ against the physical tolerance $3\times10^{-11}$.
+Its applicable component bounds remain null; 60 positive and 120 signed
+families are declared requirements rather than authenticated coverage.
+The gate is neither an existence nor a non-existence certificate and
+does not determine $\Lambda_{\mathrm{eff}}$. Its paused campaign does not
+invalidate the finite inheritance theorem or the scalar-chain results.
+Retired supporting records are cited at
+[Zenodo](https://doi.org/10.5281/zenodo.23090015).
 
-Separately, $T=0$ in an evolution record names a prepared state and a clock
-origin. It is not the short-wavelength endpoint of a spectrum.
-An ultraviolet cutoff, an initial time and a spatial boundary have different
-mathematical roles.
-
-A local freely falling observer's null-cone speed, coordinate propagation
-rate, group velocity, phase velocity and a reduced response delay are also
-different quantities. A varying coordinate speed near a horizon is not
-evidence that the local causal constant changes. Claims about different
-regional $c$'s require an operational, dimensionless comparison and a
-consistent theory. [Ellis and Uzan, gr-qc/0305099v2](https://arxiv.org/html/gr-qc/0305099v2)
-explain why the distinct roles often assigned the symbol $c$ should be
-separated. The present atlas uses conventional local null cones; its clock
-conversion and delayed response do not change that local law.
-
-### 18. Dark gravitational effects require a stress and an observable
-
-<!-- nsc-claim:target-dark-sector -->
-
-**Open physical target.** The unexplained gravitational and expansion
-phenomena motivating the project must be investigated after an exterior
-model supplies consequences. A prescribed fraction, including “95%,” is
-not inserted as an exterior abundance or a target that chooses the map.
-
-Clustering and lensing require a stress or effective gravitational response
-with the right spatial, temporal and scale dependence. Accelerated
-expansion requires a separate background and perturbation analysis.
-Antimatter and clock arrows require still other data.
-The calibration scalar pulse has no calculated energy flux or backreaction and
-leaves no persistent central field in its certified interval. It supplies
-none of these dark components.
-
-The foundation's Schur response and the library's shadow-matter and
-brane examples remain conditional starting points. A successful next
-connection would carry an actual source/state through the admitted geometry
-into a gauge-invariant gravitational observable. It would then either
-distinguish that exterior from alternatives or demonstrate a stated
-degeneracy. Fitting a freely chosen incident waveform cannot supply that
-discrimination.
-
-### 19. Matter, antimatter and orientation
-
-<!-- nsc-claim:target-antimatter -->
-
-**Open physical target.** “Inside” and “outside” are geometric labels.
-Charge conjugation transforms fields and their gauge representations.
-Changing radial orientation or the sign of a chart coordinate does not,
-by itself, convert matter into antimatter. A proposed boundary identification
-must say which field components and charges it matches and whether the
-source, state and conserved currents permit it.
-
-A real wave's sign change is not charge conjugation. CPT symmetry is also
-distinct from time reversal alone; neither supplies an entropy arrow.
-
-The library preserves distinct CPT, black-mirror and torsion-production
-proposals. They cannot be combined by assigning one side of every sphere
-to antimatter. A useful next test would choose one actual attachment,
-write its field transformation and determine whether it selects a charge
-asymmetry from the stated initial data. The current real scalar has no
-particle–antiparticle charge degree of freedom and cannot settle this.
-
-### 20. Time, recycling and the next generation
-
-<!-- nsc-claim:target-continuation -->
-
-**Open physical target.** A continuing child needs a domain beyond a
-single initial slice and a source whose evolution remains meaningful there.
-The present wall reference has a singular past; the gluing theorem supplies
-initial data only. Neither is a proof that an astrophysical collapsing
-black hole forms the mapped cap, or that the cap is stable under disturbances.
-Regular background curvature and perturbative stability are separate tests.
-
-Proper times can be compared along specified worldlines with a matching
-convention. Cross-universe ages cannot be read from unrelated coordinate
-times or unrecorded clock origins. Expansion, entropy increase, causal
-orientation and an observer's records may all participate in an arrow of
-time, but a clock conversion alone establishes none of those thermodynamic
-claims.
-
-<!-- nsc-claim:target-recursion -->
-
-**Open physical target.** Finite-depth inheritance and periodic regional
-transfer do not prove cosmic recycling or an eternal source. A new
-generation requires an identified transition, source/state transfer and
-entropy accounting. Multiple holes motivate multiple possible offspring;
-they do not require equal children or communication between siblings.
-
-Known branching mathematics should be borrowed. In the finite-type
-illustration used by [Altenberg, 1302.1293v2](https://arxiv.org/html/1302.1293v2),
-an offspring law determines a mean matrix $N_{ij}$; conditional expected
-populations evolve by $N^n$. Its long-time conclusions require the stated
-branching and spectral hypotheses. The unresolved physics is the transition
-law and its admissible parameter/state inheritance. Choosing that law to
-favor an intended cosmic population would assume the result.
-No infinite-generation computation is needed before one such transition
-has been established.
-
-Conformal cyclic cosmology remains a separate possible continuation, with
-its own conformal matching and matter assumptions. It is not identified
-with black-hole offspring or communicating mouths by a scale analogy.
-
-### 21. Measurements that could decide between maps
-
-<!-- nsc-claim:target-measurement -->
-
-**Open physical target.** A discriminating prediction must survive changes
-of units, chart labels and unspecified initial data. The protected vacuum
-interval proves a finite geometric degeneracy. The scalar inverse in
-Section 13.3 determines the preparation for a fixed geometry and supplies
-preparation-class exclusions. It does not establish equivalence between
-two physical exterior models. Both results identify what information the
-next observer comparison must supply.
-
-The next admissible calculations therefore have concrete decisions:
-
-| Missing connection | Finite decision | What it would unlock |
-| --- | --- | --- |
-| Onset existence to a controlled observer response | Can the finite-amplitude solution be extended through central arrival with a controlled perturbative remainder? | A finite-amplitude prediction for the interior observer |
-| Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
-| Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
-| Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
-| Stability or formation of an attachment | Do fixed-source disturbances or collapse data remain in the claimed domain? | A stronger cosmological interpretation |
-| Dimensionless inheritance | Which transition quantities are preserved or changed? | A meaningful comparison of constants across regions |
-
-These are candidates, not a compulsory queue. Each proposed calculation
-must state what is borrowed, what is missing, what it decides, what it
-unlocks, its finite domain and budget, and the outcome that stops or
-redirects it. The [existing admission owner](../docs/prior-art-and-open-claim.md)
-keeps that rule. A failed attachment remains visible, while another
-geometric route can proceed under its own assumptions.
-
-![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
-
-*Figure 38. Research dependencies, distinct from spacetime causal arrows.
-The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
-names prerequisites, decisions, budgets and stop conditions for eight themes.
-Each calculation retains its own domain; arrows do not declare questions solved.*
-
-The current result is a continuous mathematical story at a deliberately
-finite scale: an exterior can be attached on a sourced slice; an isolated
-completion determines observer access; a specified field state gives an
-interior waveform; independent finite exterior data now predict a pulse
-and a positive finite scattering tail; and finite regional reduction explains how unresolved
-degrees of freedom can retain memory in another fully stated model.
-The new inverse shows how a complete finite signal selects its preparation
-within a fixed geometry, and why physical source restrictions must accompany
-any comparison of maps.
-The quadratic stress check now connects that preparation to compatible local
-wall conditions. Its characteristic constraint requires a nonzero initial
-radius correction under the declared corner and null normalization;
-transverse constraint transport then supplies an invariant geometric mass coefficient
-on that same surface. The vanishing normal-stress jump adds a necessary
-condition on their later wall matching. Known field traces also determine
-an analytic exterior-side wall-mass functional without a new field solve.
-Subtracting the cap vacuum at the actual radius now supplies the other
-mass functional and the quiet-anchored wall displacement equation.
-The temporal and normal conditions agree with their common mass transport.
-The prepared field now drives an evolved exterior radius and lapse on a
-finite characteristic rectangle, with mass-transport and null-constraint
-checks. The retained-wedge evaluation now compares independent radial and
-timelike mass paths, computes the two-sided wall displacement and fixes its
-exterior clock correction. Radial cap reconstruction now also fixes the
-central proper clock and a corrected null-arrival map, with independent
-cap-mass transport and numerical controls. The formal exterior scalar
-correction is now propagated with independent numerical comparisons.
-Reflected cap transport now also reconstructs its central coefficient at
-five fixed proper times. A nonlinear cap, wall and exterior calculation
-now also completes the original pre-arrival window. Its six-case comparison
-substantially reduces leading cap transport error and resolves integrated
-geometry and clock changes within the tested refinements. Scalar time
-sensitivity and independent constraint and wall-slope defects prevent a
-converged-solution claim. With the source and spatial operators fixed,
-SSPRK3 temporal refinement reduces the paired scalar change to 1.68%
-of its fine peak; computational profile-knot phase prevents interpreting
-a single difference quotient as an observed order. Spatial constraints
-and the profile's support defect remain separate. A fixed-resolution change
-to a common quadratic exterior derivative reduces average constraint
-residuals and the final wall kinematic mismatch; its paired scalar change
-is 0.524% of the new peak. The slightly larger incoming-constraint maximum
-and worse, width-sensitive wall-curvature estimates keep local accuracy
-unresolved. Separately, Section 13.19 establishes a finite-amplitude onset
-solution and its certified departure bounds. Section 13.20 establishes
-its first and second amplitude derivatives. Section 13.21 identifies the
-first geometric coefficients, supplies uniform quadratic remainders and
-proves negative material-radius and anchored-clock corrections at the onset
-endpoint throughout the admitted positive-amplitude range. Errors in the
-older numerical histories, continuation through central arrival and the
-observer waveform remain separate open questions.
-The longer three-grid trial in Section 13.22 is complete and remains
-unconverged. Its mass residuals have not contracted. A separate full-mass, lapse
-and rate check on
-[one older saved stage](../results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json)
-reproduces a nonzero temporal mass residual there. That stage is not the
-maximum over the completed v4 trial. The qualified radius range is now in
-NSC-P001; the full endpoint closure remains open. Sections 6.1.4--6.1.8 record the
-observer calculations that use completed geometries instead. Sections
-10.1--10.3 now add two unequal sourced inputs, finite grandchild composition
-and an inner-wall flash with a specified central receiver.
-The remaining work is to connect those statements physically where their
-domains presently differ.
-
-## Appendix A. Evidence, attribution and preserved mathematics
+## Appendix B. Evidence, attribution and reproducible mathematics
 
 This living manuscript draws from source-bound atlas records without changing
 their historical bytes. Record residuals and refinement comparisons are
@@ -9947,6 +9958,7 @@ and renders their relationships without launching a new physics calculation.
 | Unequal sourced bodies and finite grandchild composition | [End assembly](../docs/nsc-atlas-connection-gluing.md); [unequal bodies](../results/summaries/nsc-atlas-unequal-children-v1.json) and [two-level geometry/observer](../results/summaries/nsc-atlas-nested-slice-v1.json) |
 | Fixed-state physical resolution | [Canonical split and vacuum-volume comparison](../docs/schur-memory.md#physical-resolution-of-one-fixed-geometry); [finite record](../results/summaries/nsc-conformal-resolution-v1.json) |
 | Full-label three-grid trial | [Observable and status](../docs/prediction-register.md); [comparison](../results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json) and [saved-cut split](../results/summaries/nsc-atlas-fixed-endpoint-gap-diagnostic-v1.json) |
+| Independent mass/lapse diagnosis on the older saved stage | [Full equations and scope](../docs/nsc-atlas-finite-amplitude.md); [independent saved-stage check](../results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json), distinct from the unsaved maximum of the later full-label trial |
 | Isolated causal completion and clocks | [Atlas v5](../docs/nsc-atlas-causal-classification.md); [manifest](../results/development/nsc-cosmological-atlas-v5/manifest.json) |
 | Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-atlas-field-transfer.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
 | Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |
@@ -9992,3 +10004,12 @@ for these finite records and for
 this synthesis used OpenAI Codex/ChatGPT and xAI Grok. The author's
 responsibility includes the interpretations and synthesis here; borrowed
 results retain their source attribution and are not presented as new laws.
+
+The following preserved dependency diagram records the original finite field-development programme. Its evidence remains useful within that domain; Part VIII states the current physical closures of the full atlas.
+
+![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
+
+*Figure 38. Research dependencies, distinct from spacetime causal arrows.
+The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
+names prerequisites, decisions, budgets and stop conditions for eight themes.
+Each calculation retains its own domain; arrows do not declare questions solved.*

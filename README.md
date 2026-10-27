@@ -1,459 +1,86 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
-The [geometry-derived cosmohedron interaction](docs/nsc-atlas-cosmohedron-interaction.md)
-now calculates an actual normalized gravitational mode and two scalar-current
-vertices on the sourced two-wall body. The zero-background probe extension
-and finite Dirichlet quantum domain are explicit. Its selected tree exchange
-has the cosmohedron seed denominator, checked by two perturbation methods.
-Changing the inner radius from .25M to .30M preserves the exterior/outer wall
-and changes this coefficient 64.84%. Geometry-normalized shape inherits;
-fixed-G quantum strength runs as G/M^2. This is one propagating-mode
-contribution, with full constraint/contact terms, other modes and quantum
-backreaction outside the calculation.
+**Douglas Ek**
 
-The [vortex-transfer entry](docs/nsc-atlas-vortex-transfer.md) now incorporates
-the official OpenAI forced Navier--Stokes blowup paper with a pinned source
-and reading boundary. An independently checked compact preparation proves
-nonzero initial mean circulation from zero-mean fine motion. The two rates
-are -6.49060654 and +2.33661836 in U^2/L units, independently of prepared
-angular mode and positive viscosity. Distinct modes compose through their
-amplitude-squared covariances; energy and initial viscous loss stay accounted
-for. Fourteen new controls pass. This is an exact initial-transfer result,
-not a reproduced blowup or a sustained cascade. Next: short evolution and
-a specified relativistic stress/geometry attachment.
+NSC develops a geometric atlas of the world seen from inside a region.
+Its central hypothesis is spherical inheritance through resolution:
+approximately spherical, sourced regions form a hierarchy in which a shared
+law is inherited while scale, state and resolved structure change.
 
-A [sourced two-level gravitational response](docs/nsc-atlas-gravitational-response.md)
-now joins a regular child, Kottler parent and Schwarzschild exterior under
-one Einstein/four-form/surface-scalar action. Both material interfaces pass
-radial linear stability and full junction/force checks. Actual axial gravity
-composes by Schur elimination and has a positive-energy stability proof.
-At the fixed higher frequency the regular child returns all canonical power;
-the same parent with an ingoing inner horizon absorbs 44.2778%. The first
-possible receiving-clock difference is 34.31868 GM/c^3. This is a finite
-conditional comparison, with no astronomical validation or absolute vacuum
-selection. Polar stability, a retarded pulse and a rotating state remain open.
+The book follows one mathematical argument:
 
-[NSC-P004](docs/nsc-atlas-dynamics-lensing.md) now predicts a new moving-observer
-image from finite freely falling motion. The19.43948 mas forecast and
-.18328 mas comparison tolerance were committed before evaluating the
-target ray; the independent result is19.43946 mas. No lens normalization
-or tolerance changed. This is a synthetic cross-observable check in the
-specified weak metric, with observer kinematics and approximation limits
-explicit. It does not identify nesting uniquely or constitute sky data.
+**Geometry -> inherited law and state -> physical boundaries -> expansion
+and structure -> interior measurements.**
 
-The [formed-source observer](docs/nsc-atlas-formed-observer.md) now connects
-the actual nonlinear concentration to image direction, proper delay and
-received frequency in a declared evolving weak metric. Fixed-clock and
-angular arrival-map identities independently link the three readouts.
-The primary shift is21.20 +/- .20 milliarcseconds; the supplied Lambda
-ruler converts its delay to27.5906 +/- .0120 days. No astronomical data
-were fitted. Held clocks, source preparation and metric approximation
-remain explicit; physical observer kinematics is the next connection.
+The dark-sector programme asks how inherited fields and unresolved
+surrounding geometry appear gravitationally inside a region. The central
+worked construction uses Einstein gravity, a scalar coupled to a four-form,
+and charged membranes. The same action supplies regional vacuum relations,
+a constrained three-region slice, an evolving protected parent, density
+growth, conserved energy supply and finite examples of structure formation.
+Its evolved sources then determine clocks, lensing and freely falling
+motion. Absolute scale, preparation and population are physical inputs to
+close and test within that connected account.
 
-The [nonlinear compact seed](docs/nsc-atlas-seed-collapse.md) now connects the
-formation window to a finite concentration without an installed core.
-A separately supplied 10% seed turns around and contracts a fixed-source
-mass shell to .109898 +/- .000950 of its largest sampled physical radius.
-The 5% case has high contrast but still-expanding sampled shells through
-A=16. Exact local initial constraints, a consistent boundary clock,
-three-grid flux/work contraction and physics controls accompany the
-envelope result. The earlier parent and seed statistics remain supplied.
+## Read the atlas
 
-The [formation window](docs/nsc-atlas-formation-window.md) proves a finite
-all-wavelength linear growth budget in the inherited expanding parent.
-Zero-current density gain from the retained late anchor is bounded by
-the positive comparison1.26934144. A compact compensated 5% seed without
-an installed core, placed on an explicitly earlier averaged-parent
-continuation, has central gain35.609032 +/- .000004. Its formal nonlinear
-threshold identifies the next evolution; no collapse is claimed from
-linear extrapolation and no primordial seed law is assumed.
+- [The Geometry of a Universe: illustrated PDF](paper/nested-space-cosmology.pdf)
+- [Full manuscript and primary-source links](paper/nested-space-cosmology.md)
+- [Atlas programme and scientific owners](docs/nsc-cosmological-atlas.md)
+- [Current calculations and their domains](docs/current-result.md)
+- [Prior mathematics and the arXiv library](docs/arxiv-studies.md)
 
-The [compensation signature](docs/nsc-atlas-compensation-response.md) connects
-the existing core and inherited reservoir to a spatial turnover. An exact
-positive-gradient remainder bounds the initial envelope mass-window error
-by3.32e-7 of the core. The computed vacuum/mass/turnover ratio is .2681493
-initially and .559473 +/- .000024 at the retained evolved endpoint. A
-projected deficit and conditional population formula expose the observation
-route; formation, age selection and the lensing dictionary remain open.
+| Part | Question carried through the book |
+| --- | --- |
+| I. Spherical geometry and inherited law | What selects a sphere, and what does a shared law preserve? |
+| II. Regions, interfaces and causal access | Which sourced geometries connect, and which observers can communicate? |
+| III. Parent vacuum and evolving matter | What does one scalar/four-form action transmit across regions? |
+| IV. Concentration and its reservoir | How does inherited energy supply, form and surround local structure? |
+| V. Interior observation | What do motion, light and clocks measure in that geometry? |
+| VI. Gravitational, fluid and quantum exchange | How do material interfaces and unresolved modes change the response? |
+| VII. Effective gravity and scale | Which reductions produce vacuum stress, and which produce other sources? |
+| VIII. The connected cosmological account | Which physical closures and independent tests complete the explanation? |
 
-The [radial and quadrupole response](docs/nsc-atlas-hierarchy-perturbations.md)
-now tests the retained evolving core beyond spherical symmetry. A real
-Gram-matrix bound covers every coefficient in a declared twenty-dimensional
-quadrupole family; the sampled field amplification is 1.08113 +/- .00025.
-Radial phase sensitivity is larger. A separate harmonic tidal-tail proof
-repairs an exterior boundary assumption, while the external amplitude remains
-unresolved under refinement and is not reported as a prediction.
+The sphere's surface-energy minimum is an established theorem for positive
+isotropic tension at fixed volume. The book states repeated spherical
+inheritance as NSC's physical hypothesis and develops its mathematical
+realizations. Published constructions retain attribution beside the
+equations used to connect them. Alternative actions and preparations occupy
+identified branches within this single atlas.
 
-The [core--reservoir evolution](docs/nsc-atlas-hierarchy-evolution.md)
-now tests finite localization in the expanding inherited parent. A classical
-real-scalar envelope retains the reservoir and self-gravity; independent mass
-transport and expansion-work checks accompany three resolutions. A short
-comparison against the full relativistic equations improves in the weaker
-field. Growing radial breathing and long-time model error remain explicit.
+## Calculated connections
 
-The [fixed-vacuum scale hierarchy](docs/nsc-atlas-scale-hierarchy.md)
-now connects local core size to the energy available in its inherited
-surroundings. An exact supply bound rules out arbitrarily shrinking a
-fixed-proportion reservoir. Solving its outer radius produces compatible
-initial data with widely separated core, reservoir and parent scales.
-The vacuum-radius-mass relation retains its explicit preparation dependence.
+The manuscript contains operator inheritance proofs, sourced geometric
+attachments, causal maps, scalar formation and conservation calculations,
+and joint observer relations. The motion-calibrated optical prediction
+NSC-P004 passes its frozen synthetic test. The separate quiet-cap
+supernova-distance prediction disagrees with the selected Pantheon+
+contrast. Both results constrain the next connected cosmological calculation.
 
-The [fixed-observer image calculation](docs/nsc-atlas-core-images.md)
-connects the same evolving lens to two paths from one emitted pulse to one
-receiving worldline. Image directions, proper delays and frequency/fluence
-ratios share an exact endpoint relation. The inherited parent vacuum and
-image delay also form a dimensionless product, linking local optics to the
-parent scale without an independently fitted lens mass.
+The [prediction register](docs/prediction-register.md) separates model
+forecasts, calibration and comparison. The [research index](docs/research-index.md)
+and [code map](docs/active-code-map.md) locate the derivations and implementation.
+The detailed characteristic-field development and computational evidence
+remain in the book's appendices and scientific owners.
 
-The [evolved concentration now has a lens map](docs/nsc-atlas-core-optics.md).
-Nonradial photons and curvature-based beam transport use the same frozen
-scalar evolution. Proper emission ages and receiving screens specify light
-bending, anisotropic focusing and relative beam flux without fitting a new
-lens mass. Preparation and population selection remain separate questions.
+## Reproduce the work
 
-The [coupled core evolution](docs/nsc-atlas-core-evolution.md) now follows
-the inherited scalar and gravity together. A supplied diffuse nonlinear
-cloud develops a compact, breathing concentration; an operational clock
-emitted after contraction tests the resulting geometry. Three resolutions,
-independent mass flux and canonical photon transport check the finite result.
-The cloud origin and asymptotic/nonradial stability remain open.
+There is one active package, `src/recursive_horizons`, with root scripts,
+tests and evidence. See [reproduction](docs/reproducing.md) for the isolated
+Windows runtime, dependencies, numerical producers and historical replay.
 
-The [compensated core and parent](docs/nsc-atlas-core-reservoir.md) now
-connect local structure to a definite ambient energy source. A solved
-18.5914% displacement depletion balances a core and outward-current pulse,
-leaving the original initial walls unchanged. A surrounding annulus with
-at least 86.6472% of initial parent volume retains the same homogeneous
-future and inherited vacuum. Full core formation remains open.
-
-The [self-gravitating scalar core](docs/nsc-atlas-scalar-core.md) now
-supplies a physical profile-selection candidate. Two distinct clouds shed
-radiation toward the independently solved nodeless shape in a controlled
-local envelope example. Its mass-selected coherent representative fits the
-atlas's initial constraints; relative phase with the inherited ambient
-field changes its geometric mass and the matching wall data. The example
-uses an explicitly different frequency member, not a reinterpretation of P003.
-
-The [three-clock prediction](docs/nsc-atlas-parent-clocks.md) now follows
-light from freely falling emitters through the evolving parent to a receiver
-at a fixed proper age. Two frequency measurements determine the remaining
-density/phase amplitudes; a third obeys a computed relation independent of
-those amplitudes. NSC-P003 records its fixed preparation family and synthetic
-test, with no observational confirmation.
-
-The [inherited parent perturbation](docs/nsc-atlas-parent-perturbations.md)
-now connects that scalar to gravitational structure: a constrained packet
-inside the actual parent gains 15.19% central density contrast in one
-e-fold. The unaveraged calculation retains curvature and scalar turning
-points. Its scale-dependent transfer and remaining scalar-phase freedom
-identify what a dark-matter interpretation must still establish.
-
-The [shared scalar atlas](docs/nsc-atlas-shared-scalar-slice.md) now joins
-three sourced regions on one compact initial slice and evolves a causally
-protected part of its parent. An exact energy-floor comparison distinguishes
-inherited laws that the first interface could not separate. The protected
-parent supplies a conditional vacuum/expansion calculation; clustering and
-the complete coupled wall future remain open.
-
-Start with regions, boundaries and fields; assemble possible nested geometries;
-specify inheritance and transmission; calculate what an interior observer measures.
-
-The [one-sided geometric observer](docs/nsc-atlas-geometric-observer.md)
-now links the charged wall's geometry to a local scalar reconstruction,
-an independent tidal test and the full mass/pressure-work balance.
-An exact pair of locally equivalent coupling choices shows why additional
-nested-region information is needed to identify the inherited parameters.
-The new shared slice supplies the third initial region; full dynamical
-composition remains open.
-
-The [finite parent scalar source](docs/nsc-atlas-parent-source.md) now solves
-source gravity and the charged wall's initial matching together. It derives
-the scalar-layer correction for second-order smooth matching, and computes
-proper source energy and the wall's initial response. This is a finite Cauchy
-preparation; its evolving transmission and child-matter consequences remain
-the next connection.
-
-A distinct excited-parent seed now gives a conditional inward energy-transfer
-coefficient and a linked wall-pressure response. Its initial constraints are
-exact; the retarded short-time limit assumes a causal weak coupled development.
-The full evolution and its finite-time error remain the next calculation.
-
-The [regular scalar preparation](docs/nsc-atlas-scalar-preparation.md)
-now solves a scalar transition layer, charged boundary and gravity
-together, then continues them into an expanding child geometry.
-Its physical boundary reduction reproduces the scalar action and fixes
-the child state. That regular state has very little homogeneous excitation;
-it does not realize the earlier assumed rapid-transfer matter component.
-
-The [charged vacuum transition](docs/nsc-atlas-flux-transition.md) now connects
-one explicit four-form/membrane action to two nested moving boundaries,
-a shared intermediate spacetime and an expanding cosmological parent.
-The benchmark's inherited vacuum values are 1.125, .5 and .125 in
-Lambda L_ref^2. A mass-independent tidal trace and an equal-charge
-second-difference law provide conditional observer tests. This attributed
-alternative is NSC-P002; parent flux and charge remain inputs, and the
-observed cosmological scale has not been selected.
-
-The [occupied-wall construction](docs/nsc-atlas-occupied-wall.md) now
-calculates a material pressure from a finite spherical Dirac state,
-supports a linearly radially stable horizonless room, and joins two
-unequal sourced rooms to one expanding parent. Changing occupation
-with the action fixed changes the received central clock signal.
-The new surface matter and supplied state are explicit; this does not
-stabilize the earlier wormhole branch or select the cosmic vacuum.
-
-The [surrounding-geometry atlas](docs/nsc-atlas-parent-observables.md) now
-attaches the retained exterior to an expanding dust parent, checks its
-mass compensation and predicts a received clock frequency. Its illustrated
-comparison credits Einstein--Straus, the brane-gravity projection and
-Garriga--Tanaka's shadow-matter lensing result. An exact check of the
-current wall shows that constant tension cannot supply the proposed stable
-equilibrium selecting Lambda. An inherited material/state law remains the
-next selection problem. These connections develop the paper as an
-explorable mathematical atlas, with each construction's assumptions visible.
-
-The [compact parent construction](docs/nsc-atlas-compact-parent.md) now joins
-two sourced interiors, including nested descendants, in one closed S3
-geometry. Its volume fractions and effective source evolve from the actual
-metric. Adding a remote descendant changes the global average while
-leaving the retained cap's clock signal unchanged. This establishes both
-a physical compact atlas connection and a precise limit on interpreting
-its average as locally measured Lambda. The next source problem is a
-regular continuation of the current quiet throat, with its necessary
-stress condition now derived.
-
-The [shared parent now has an evolved geometric average](docs/nsc-atlas-parent-evolution.md).
-Freely falling clocks transport the full quiet two-wall slice, including
-both throats and wall crossings. Its geometric trace changes from
-`-.0153506330754` to `-.0134681818918` in `Lambda*L_ref^2` units.
-Conservation is checked on that actual history. The result is non-vacuum,
-and its large-domain limit is zero for this isolated parent. The next
-connection is a cosmological parent with a physical volume law.
-
-The living research paper is [the manuscript](paper/nested-space-cosmology.md)
-and [its illustrated PDF](paper/nested-space-cosmology.pdf).
-The [overview map](paper/figures/geometry-overview.png) connects geometry,
-observer access and the calculated early scalar response. Manuscript revisions
-are independent of the software distribution, which remains version 0.27.0.
-
-The [shared two-wall history](docs/nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
-now continues the quiet two-level geometry in one host atlas fixed by its
-original slice. It locates both moving walls and their incoming source
-collars through `.04 ell` of each wall's proper time. Equal elapsed wall
-times do not define simultaneous endpoints. Neither segment can signal the
-other within the constructed host patch. The result supplies a domain for field transfer;
-the normal-clock successor supplies the evolving averaging foliation.
-
-Two [constructive proof connections](docs/current-result.md) now join the
-map's components. A scale-free transfer-response identity recovers the
-inherited length ratio and predicts a held-out coefficient. Associative
-composition preserves the nested slice's averaged Hamiltonian constraint,
-including the material walls, and an exact balance relates its geometric
-trace to expansion and source exchange over time. Neither result supplies
-the missing collective cosmological spacetime or an observed Lambda value.
-
-The actual atlas now also has a [radar and wall-clock inverse](docs/nsc-atlas-radar-clock.md).
-It cancels Doppler motion, reconstructs a declared quiet cap and its
-membrane combinations, then predicts a later received frequency. Two
-existing states recover the same tension; a changed material law fails
-the later clock test. The calculation supplies explicit conditional
-instrument bounds and preserves the remaining host/metric degeneracies.
-
-Spherical symmetry supplies a definite areal radius and tractable matching laws.
-It does not establish that every particle is a spherical interior or that our
-universe has a parent. The map distinguishes descent, geometric attachment,
-causal influence and correlation. Missing physical connections remain visible.
-
-The [Lambda mechanism audit](docs/schur-memory.md#remaining-lambda-mechanisms-and-the-matched-nesting-test)
-ranks the remaining physical routes of the original field candidate.
-Its evaluated reductions do not establish a nonzero nesting-induced bulk
-cosmological constant; the charged alternative above adds a different
-physical source. A fresh one-level/two-level
-comparison gives a nonzero geometric trace change, -0.0461265238074 in ell
-units, but its independent density/pressure test fails vacuum form. Their
-actual matched quiet exteriors have exactly zero Lambda difference.
-Generating a nonzero vacuum source or a changing cosmological effective
-source remains a hypothesis requiring a specified gravitational reduction.
-
-The [inheritance derivation](docs/nsc-atlas-dirac-probe.md#inheritance-and-the-late-local-cap-state-19-october-2026)
-now selects one local late Dirac state in the actual quiet expanding cap,
-conditional on regular inherited Cauchy data. It gives a detector spectrum
-and a full asymptotic one-loop vacuum source. The same smooth cap has the
-same limit; finite-time preparation, compact-source slip and the origin of
-the supplied cap scale remain open.
-
-The first [supernova distance comparison](docs/schur-memory.md#a-distance-observable-for-the-lambda-target)
-now calculates an observer statistic from 596 light curves and their full
-published covariance. The exact quiet-cap prediction does not match that
-statistic. This quantifies the cosmological evolution needed beyond the
-quiet limit; the full NSC cosmological forward model remains to be derived.
-
-The separate saved conformal geometry now also has an
-[explicit light-cone and radar-clock calculation](docs/schur-memory.md#causal-radial-distances-and-the-observers-clock).
-Normal probes give direction-dependent redshift and luminosity-to-radar
-distance ratios. These finite observer predictions and the quiet-cap
-comparison are connected in the living manuscript.
-
-A [finite-amplitude onset theorem](docs/nsc-atlas-finite-amplitude.md#finite-cell-continuation-assembly)
-now constructs a compatible sourced cap, material wall and exterior on the
-declared original source cell, uniformly for a nonzero amplitude range. It
-combines local evolution, clock construction and the certified departure
-bounds. The regular core stays quiet on this interval; central arrival and
-observational predictions remain subsequent work. The
-[uniform remainder and frame conversion](docs/nsc-atlas-finite-amplitude.md#certified-jordan-radius-endpoint-comparison)
-now prove negative sourced corrections to the material wall radius and
-centre-anchored clock at the original onset endpoint, throughout the
-admitted positive-amplitude range.
-
-The current geometric route reaches a sourced interior connection, a causal map,
-a calibration waveform and a [computed response to independent exterior data](docs/nsc-atlas-prepared-response.md).
-The eighth atlas resolves a central scalar waveform and a positive tail within
-its finite arrival window, supported by an analytic bound and numerical refinement.
-The [analytic inverse](docs/nsc-atlas-observer-inference.md) now determines
-the source from a complete compatible signed field history in that fixed
-geometry. It also excludes histories that violate a positive compact
-preparation. A [quadratic stress check](docs/nsc-atlas-scalar-wall-consistency.md)
-shows that the same conformal probe needs no additional singular surface
-stress or tangential flux imbalance at its fixed wall. The
-[characteristic constraint](docs/nsc-atlas-characteristic-initialization.md)
-now fixes the pulse's initial radius correction when the corner geometry and
-null normalization are held fixed. The radial correction and its affine slope
-are negative after the compact trace; this is not a mass shift or an evolved
-wall response. A [separate mass calculation](docs/nsc-atlas-source-mass.md)
-now supplies the transverse constraint and geometric mass on that same
-initial null leg. Its post-input quadratic coefficient is negative and
-constant; this is a finite initial-data response. The
-[normal-force check](docs/nsc-atlas-scalar-normal-force.md)
-also finds zero additional normal-stress jump at the fixed conformal wall.
-It constrains the later combined metric and wall response; it does not
-require zero wall displacement. The [wall-mass closure](docs/nsc-atlas-wall-mass-closure.md)
-now expresses the exterior geometric mass coefficient as an integral and a
-frame correction built from the existing wall trace. This is an analytic
-functional. Its [two-sided successor](docs/nsc-atlas-cap-wall-response.md)
-now derives the cap mass and a regular wall-displacement equation, with
-compatible angular, temporal and normal junction conditions. The common
-model specification records the action, state, parameters and clocks.
-The [smooth exterior calculation](docs/nsc-atlas-bulk-response.md) propagates
-radius and lapse on the initial characteristic rectangle. The
-[moving-wall calculation](docs/nsc-atlas-wall-evolution.md) now computes
-the formal wall displacement and exterior clock correction from the same
-field on the retained wedge. The [cap calculation](docs/nsc-atlas-cap-response.md)
-now reconstructs the interior metric with its regular centre, checks its
-mass against independent wall transport, and computes the central null-arrival
-correction. The [scalar response calculation](docs/nsc-atlas-scalar-metric-response.md)
-now evaluates the cap's outgoing backscatter and its displaced-wall boundary
-input, with separate field and quadrature refinements. A clock-resolved
-boundary and cached forcing now supply the [propagated exterior scalar
-correction](docs/nsc-atlas-scalar-evolution.md), with separate cache, grid
-and ODE controls. The [central reconstruction](docs/nsc-atlas-central-scalar-response.md)
-now evaluates the formal cubic scalar coefficient at five interior arrival
-cuts, with separate incoming radial/ray refinements and inherited exterior
-sensitivities. These are finite-domain perturbative coefficients. The
-[exact nonlinear equations](docs/nsc-atlas-finite-amplitude.md) specify the
-same model's source, smooth evolution and material interface. The
-[characteristic-background coupled window](docs/current-result.md#characteristic-background-coupled-evolution-16-october-2026)
-evolves the exterior, moving wall and regular cap together, preserving
-the exact vacuum and carrying the leading cap pulse analytically. An
-independent incoming-characteristic comparison reduces the 32-cell pulse
-discrepancy from about `0.38` to below `0.0009`. Paired spatial changes in
-wall geometry and clocks are below `0.063%` of their finite response peaks.
-The [higher-order time comparisons](docs/current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
-retain close agreement for geometry and clocks and reduce the paired scalar
-time difference to `1.68%` of its finer response peak. The
-[constraint-origin audit](docs/current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
-separates inherited source residuals and localizes the larger incoming
-constraint to wall-origin stencils. The [wall-curvature calculation](docs/current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
-finds that spatial-stencil sensitivity prevents a reliable wall-transport
-interpretation. The [fixed-input 32/64-cell comparison](docs/current-result.md#fixed-input-spatial-refinement-16-october-2026)
-now finds a paired wall-scalar spatial difference of `0.77%` of its finer
-response peak and geometry/clock differences below `0.072%`. Constraint
-residuals decrease under actual spatial refinement; wall curvature remains
-sensitive. The [same-grid quadratic-derivative comparison](docs/current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026)
-reduces final wall kinematic defects about 21--33 times with a `0.52%`
-paired wall-scalar method difference. Constraint RMS decreases, but the
-largest near-wall incoming residual rises slightly and independent wall
-curvature remains unresolved. A [three-cut saved-row audit](docs/current-result.md#saved-near-wall-row-audit-16-october-2026)
-localizes that sensitivity to the final exterior rows without identifying
-its cause. The [cap mass and actual wall-curve audit](docs/current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
-finds strong pulse-time derivative-width sensitivity. At the terminal cut,
-radial mass and lapse residuals are small but a temporal mass discrepancy
-remains; the incoming-field mismatch does not explain it. The
-[direct mass-functional check](docs/current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
-finds that this discrepancy also remains under the implemented instantaneous
-field rates. The [discrete ledger and independent transport check](docs/current-result.md#terminal-cap-transport-attribution-16-october-2026)
-now identify the numerical transport contribution. A mass-gradient reference
-recovers a checked weak mass law, including moving-radius terms. The
-[single-slice profile diagnosis](docs/current-result.md#fixed-profile-representation-diagnosis-16-october-2026)
-finds that sixteen global modes do not resolve the narrow supplied pulse;
-the retained-background extension now has an explicit derived mass remainder
-to control before evolution. Boundary accuracy, profile support and a complete error
-estimate remain questions. A controlled
-finite-amplitude solution through the central arrival remains open.
-Comparing geometries still needs an independently
-justified source restriction or a source-linked additional channel. Finite transfer,
-feedback and memory results supply reusable mathematics in their own domains.
-Periodic collars are not established child universes. Constants, antimatter,
-expansion and recycling remain research questions.
-
-## Read and reproduce
-
-- [Prediction register](docs/prediction-register.md): the closed perturbative cap–wall relation and its computed coefficients.
-- [Compact result storage](docs/nsc-storage.md#current-calculation-outputs-16-october-2026): summaries and hashes in Git, regenerable raw arrays locally.
-- [Atlas programme and calculation dependencies](docs/nsc-cosmological-atlas.md)
-- [Shared two-wall history and characteristic source collars](docs/nsc-atlas-connection-slice.md#a-shared-two-wall-history-and-its-characteristic-origins)
-- [Current prepared response and evidence](docs/nsc-atlas-prepared-response.md)
-- [Observer inverse and preparation restrictions](docs/nsc-atlas-observer-inference.md)
-- [Scalar stress and shell compatibility](docs/nsc-atlas-scalar-wall-consistency.md)
-- [Normal-force compatibility and the remaining wall condition](docs/nsc-atlas-scalar-normal-force.md)
-- [Gravitational initial data for the prepared pulse](docs/nsc-atlas-characteristic-initialization.md)
-- [Geometric mass response on the prepared null surface](docs/nsc-atlas-source-mass.md)
-- [Analytic exterior mass from the known wall field](docs/nsc-atlas-wall-mass-closure.md)
-- [Cap mass and shared wall displacement](docs/nsc-atlas-cap-wall-response.md)
-- [Smooth exterior metric on the initial rectangle](docs/nsc-atlas-bulk-response.md)
-- [Retained-wedge field, moving wall and exterior clock](docs/nsc-atlas-wall-evolution.md)
-- [Smooth cap and corrected central null clock](docs/nsc-atlas-cap-response.md)
-- [Scalar backscatter and moving-wall boundary input](docs/nsc-atlas-scalar-metric-response.md)
-- [Propagated exterior scalar correction](docs/nsc-atlas-scalar-evolution.md)
-- [Central scalar reconstruction](docs/nsc-atlas-central-scalar-response.md),
-  [radial comparison](results/development/nsc-atlas-central-scalar-v1/central.json)
-  and [incoming-ray comparison](results/development/nsc-atlas-central-ray-v1/ray.json)
-- [Exact nonlinear model and finite-amplitude gap](docs/nsc-atlas-finite-amplitude.md)
-- [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)
-- [Paper guide and historical editions](docs/papers.md)
-- [Scientific strands and owners](docs/research-index.md)
-- [Research inventory and reading boundaries](docs/research-inventory.md)
-- [Prior art and calculation admission](docs/prior-art-and-open-claim.md)
-- [arXiv mathematical library](docs/arxiv-studies.md)
-- [Commands and reproduction](docs/reproducing.md)
-- [Preservation and source pins](docs/repository-consolidation.md)
-
-There is one active package at `src/recursive_horizons`, with root `scripts`,
-`tests`, `docs` and `results`. Install with `python -m pip install -e '.[paper,dev]'`.
-Run from this root:
-
-```sh
+```text
+python -m pip install -e '.[paper,dev]'
 python scripts/check_publication.py
 python scripts/check_lab_snapshot.py
 python scripts/check_claim_bindings.py
+python scripts/check_prediction_register.py
 python -m pytest tests/
 python scripts/build_paper.py --check
 ```
 
-`make verify` runs current checks, the full retained test suite and the paper
-check. CI runs that suite on Linux and Windows with Matplotlib 3.11.2.
-The v2 [retained-file receipts](docs/lab-snapshot.json) authenticate current
-bytes; unchanged [source pins](archive/source-history/manifest.json) preserve
-original scientific contexts. Frozen records retain their exact hashes and
-declared source contexts. Deleted carriers are cited at
-[Zenodo](https://doi.org/10.5281/zenodo.23090015).
-
-Historical producers replay only in explicitly selected contexts under
-ignored `.build/replay`; they do not replace current-source checks. The
-[reproduction guide](docs/reproducing.md#preserved-editions-and-source-contexts)
-distinguishes authentication from scientific recomputation and records each
-original renderer requirement. The current renderer does not promise
-byte-identical historical PNGs. Historical replay is separate from `make verify`.
-New calculations require a named uncertainty and a finite budget.
-
-This is a research manuscript under development. No arXiv submission or
-submission-readiness claim is made. See [THEORY.md](THEORY.md) for claim language
-and [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance.
+Compact summaries and source hashes are retained in Git. Raw numerical
+histories are regenerated when needed. [Preservation and recovery](docs/repository-consolidation.md)
+describe the retained history and archive. The [paper guide](docs/papers.md)
+records editions of the one living manuscript; current author-review and
+submission metadata are in [the catalog](paper/catalog.json).

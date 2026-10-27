@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "2c57fe205ab4cfb4edb7d71acb13d10a35370609",
+  "current_receipt_commit_parent": "0201dd0fa42605c207364417fb4e33973cd10dad",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 30646,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 4612,
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "2ba6b4a215d1b47e68ddc10b3a970f2f3754a22d4553046bbdd641dd3eb72978"
+      "sha256": "b4134e31126170a7f61e8128fb53d4e4d46d79f9b3025417ccb22b2d43e53361"
     },
     {
       "bytes": 781931,
@@ -10282,12 +10282,12 @@
       "sha256": "fef0dd8b361696869eba18d74351e09008ee0c4ec29b49d3ca376fcedc2e56da"
     },
     {
-      "bytes": 141453,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 142444,
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "e2db1e2efd736e3dd8cf18d4b6a6e5e209c5c782d213e43e9b7f837bd362d11c"
+      "sha256": "f2b4ae815fa2abb111a398130f11dfcbc3aa5803af984073bb840258225d1aa5"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 464887,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 465417,
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3cb7aca86627ca3deeb1a08d6a4806443d979bab1bdf22da2688352cd5221a97"
+      "sha256": "4821235a6e8f53bd1cb02ac92e566dc98bdd3f7538dfc828169c569c999f9fb2"
     },
     {
       "bytes": 173938,
@@ -11016,15 +11016,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 118128,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 119710,
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "f26ea34f20c0f646a8dc897190ebff5478ee764101a617218942aded008a56c4"
+      "sha256": "6b9014fce6825cc2a496d95352af0c2342117f5953a4a9aeeb4beac92fdb4de1"
     },
     {
       "bytes": 30876,
@@ -11976,12 +11976,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 26813,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 27847,
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5405e17fc2f877ac56a3be616c0b33f271793ffe26ea6de06eaf55989cda6491"
+      "sha256": "f2ed1455c09f2a5bf17a55805c8cdda4185a396acf3a157a62bc41aab247385c"
     },
     {
       "bytes": 13971,
@@ -12089,27 +12089,27 @@
     },
     {
       "bytes": 34017,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "41541bf823d43848e8b6a28fcaae45f8948ccb96ea510ba30bf6dcda4f470d70"
+      "sha256": "46e959a787a6323f06a035fe1dce31b2572f3349429a19b8719deb02b36b179f"
     },
     {
       "bytes": 3206,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "481fc159f8e0bc9893edbedd5c9b41a47aa3daf9a5265ac724b966e9155458d4"
+      "sha256": "326ecece225c1e1cb3b73531a78794db00505075a371bdb1ea79c0fdd0a74f51"
     },
     {
-      "bytes": 45691,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 45756,
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "dfc226684107411e7590eca27bb4769030b6cd274805ebbe70e77cbe856e06e4"
+      "sha256": "341aa0758053b5255dbb0912612a61e60d06df42ca8c9b1f7bf32ec6a9ad3102"
     },
     {
       "bytes": 226492,
@@ -12121,27 +12121,27 @@
     },
     {
       "bytes": 396,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "8fc99f7caa082ef30db1cda1778ddbf9c14197e832930d59d4944de04183869e"
+      "sha256": "4f94020243b43e973250b236dbb1b922a533488f345f3ca2fbd58ff70c582b9b"
     },
     {
-      "bytes": 466584,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 470214,
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5a508c38c807db3375bfae7dedefba833799f11fd6bca7aead0e6d5aad6d9db2"
+      "sha256": "dc4d578d97aad4eb6f84fab921442afc802e1fa88056c2d2315bcf6ed22d939f"
     },
     {
-      "bytes": 13383653,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 13407265,
+      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
+      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1a5c43eb764502072a0eceb0d04b9483e8d9dc4e1251f32345dedede58b2604b"
+      "sha256": "fbcf37072413ab19079b788c4891a534bb3447414ae2fbc391de3507317c3c2b"
     },
     {
       "bytes": 3283,

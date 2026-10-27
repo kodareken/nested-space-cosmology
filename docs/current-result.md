@@ -1,5 +1,13 @@
 # What the calculations show
 
+The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
+one thesis-led book in revision 2026-10-27.4. Its central route is spherical
+geometry, inherited law/state, physical boundaries, vacuum and clustering,
+then interior observations. The original equations, claims and figure assets
+are preserved; the older characteristic-field development is in Appendix A.
+This changes the presentation and synthesis without changing the numerical
+results or closing the remaining physical preparation/population questions.
+
 The [geometry-derived cosmohedron interaction](nsc-atlas-cosmohedron-interaction.md)
 now calculates an actual normalized gravitational mode and two scalar-current
 vertices on the sourced two-wall body. The zero-background probe extension
