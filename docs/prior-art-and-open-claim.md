@@ -1,5 +1,19 @@
 # Prior art and admission of new research
 
+## Nonlinear vortex transfer, 27 October 2026
+
+The [preparation and proof](nsc-atlas-vortex-transfer.md) choose a finite
+nonlinear transport mechanism from OpenAI's 2026 Navier--Stokes paper.
+The full blowup argument and Lean build are attributed inputs with a
+declared reading boundary. A compact vector potential fixes profiles and
+angular modes before the calculation; a true unforced initial mean rate
+is obtained without defining a force as an arbitrary residual. Distinct
+angular modes give an exact finite covariance composition law. Direct
+advection, symbolic divergence, momentum budgets and curl/gradient loss
+check the result. The 60 CPU-second/500000-point allowance covers the
+finite quadrature checks; the retained production run uses 258944 points
+and .44 solver CPU seconds in four workers. No 3D time grid is run.
+
 ## A sourced gravitational boundary response, 27 October 2026
 
 The [preparation and result](nsc-atlas-gravitational-response.md) compare

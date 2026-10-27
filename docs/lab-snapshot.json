@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+  "current_receipt_commit_parent": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 29184,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 29918,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "1f466706ba402ab08d3687ef4466eb18cb7a146792d1250bb7290827297a28ce"
+      "sha256": "5aef06ec18df9d49596743b5f7b4e0201caea77ad3e6523e088130757b3fe703"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 286452,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 286975,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "34f92ad4007969b83c3b4e2fc475e0cd385f1b1b5c4f63148cf9231b932b4f34"
+      "sha256": "d624642f75c2ad9646f9dad3b6a81e4975a0d773416275a50829ae14770c6a85"
     },
     {
-      "bytes": 137278,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 139050,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "654d40e23cc64d10d4332581776325aa80a6dbb7c8bb8c3d24af81f964b0c290"
+      "sha256": "b8253ffb25ff27406561de10098fb08b4d532c5311ac47df3f71f2bbc2465e2e"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 463435,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 464164,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ffa5b4dedd125a05612e9c055bd8288051a0801ffb4c89911c0a738ae4b2194d"
+      "sha256": "9406ca01297754cce6424804fa970ee46f80c9decb05b1004ff1d9fab079a92d"
     },
     {
       "bytes": 173938,
@@ -10573,6 +10573,14 @@
       "sha256": "7ca990995b482208c4d4895e8c8c3044208fa145ee74ad8dc63d6042b097b523"
     },
     {
+      "bytes": 522280,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "path": "docs/figures/nsc-atlas-vortex-transfer.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3aa59165e80281825858c987f2621f4169ab1cfd054d6ff3d955cd998ebfff11"
+    },
+    {
       "bytes": 93778,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "f0f639d2f5647aecb1afadaeb68ae74df9cf3229",
@@ -10748,12 +10756,12 @@
       "sha256": "48bcd7f4e6bf1595dacf25e241d08de50e5e45e2c81ed93a8f975f16356d78dc"
     },
     {
-      "bytes": 17724,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 18429,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "docs/nsc-atlas-flow-dictionary.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "1c5359bfcd1276ea4fe65b61c921ee6821a3b4ea9858452544bf155aa9f910e3"
+      "sha256": "08b545a5f92608573457a41fb4ade1f0bbc14b0d8af5188e298bec55fe2f63b9"
     },
     {
       "bytes": 12252,
@@ -10941,6 +10949,14 @@
       "sha256": "bc059e375d82047269a6d29cabfb11384c548615df1d86580a8b6b1a79b66d0f"
     },
     {
+      "bytes": 14534,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "path": "docs/nsc-atlas-vortex-transfer.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "16e8cb10e0de9b305f762dc50dbac8cc43491a53efb1f79d1113afc9bd045331"
+    },
+    {
       "bytes": 9716,
       "path": "docs/nsc-atlas-wall-mass-closure.md",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
@@ -10976,15 +10992,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 116580,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 117301,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "e5047ad25719edf0d43a07f3cf6d3566c6ec277cbd146ec40300a7f6f221adf1"
+      "sha256": "5520e4a242a7f8f817f2e7020be00e143954a9bf0b97412cef777d6671c6b690"
     },
     {
       "bytes": 30876,
@@ -11936,12 +11952,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 26034,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 26376,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e6fd4980d0b5f7d619b5fa91a693bac92189e8509722dae54d04f6f90f870542"
+      "sha256": "fe2334031606f2cf62e2a83785e77cc33a23e0bdcc17818597c09735dc7941f6"
     },
     {
       "bytes": 13971,
@@ -11952,12 +11968,12 @@
       "sha256": "e4084dc669884d68ebedc282a2023de479a55bff74094247adbbe80616973a9c"
     },
     {
-      "bytes": 603090,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 603922,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9ea5f1911d6cb7fbd5dab129deaeeda228bdf98a98c19e1e34331b8e9cc2a563"
+      "sha256": "c48348af2e4459d333fa8df3dc5717bf9b457ed43c28fe6e938dfc173d8aa0f6"
     },
     {
       "bytes": 6705,
@@ -11966,20 +11982,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 230112,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 230887,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "bf25e31122cddbd186488e2547fb6b5bd4ed5adc2fbbb32b3f8e2ea61421d288"
+      "sha256": "7fc04fa8166ebe281c57370148e843c5d3a6e991c3c7d93cf9731ade0b9c31f2"
     },
     {
-      "bytes": 45808,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 46537,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "cf29835c99a6f80bf7a8f393ba29fd6dc05ab1d495f295a065a6c46fc67d2c53"
+      "sha256": "614a98e44166e2d5662b4a9817808bea236faadfc242c35babf480268a9d98ad"
     },
     {
       "bytes": 18356,
@@ -12048,28 +12064,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 33359,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 33680,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "446b870e05c5e1f4e8f41d937bf150db338e9ed6b5832a2223720c700276ee67"
+      "sha256": "9861bdbfc7024c9cf1a63ee16a56acc4525c4c5bd749285a1fda9c21ba124c2f"
     },
     {
       "bytes": 3206,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f6229d71cd3a5640115a59cc176acc3fdd51af7cb43fcace02ed9b16e8ccdc4d"
+      "sha256": "3b153abc29b8dcf3a2c8403fbd4b198bdf9256fa3a0de7fc449c79e55e5302ce"
     },
     {
-      "bytes": 44738,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 45205,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "dfacfc01a58f80c5dc79d3d612f8a2f58b4e5f0974d39a6391e15c821ac8586a"
+      "sha256": "fcb55058f4a43ea09f4e050aa3a98933917ccae34036ee669158bf5a529692e7"
     },
     {
       "bytes": 226492,
@@ -12081,27 +12097,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e6497e6fe88a62b2ef1b18aa46035b3428462093f289d0df340bdb5fdbc65f0a"
+      "sha256": "d9fba3fd36ca75ebc74b5d029b2fcbeff7ea7af295ec47163d97900b4d0b4b97"
     },
     {
-      "bytes": 449158,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 457721,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "442411696334feb74c834e6865367a6c8a91008283f8324a322d75328d680e72"
+      "sha256": "5977fe49b35d8f9ab4b90e0806b9ba2cfc607fe8265a31bb6b681bbe1d522f77"
     },
     {
-      "bytes": 12468865,
-      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
-      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "bytes": 13072302,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "93a5175249088cecaa8836563c70998072624df7b3b17b7ff231ddd0ad4c900b"
+      "sha256": "4389eea39b48e3f708a9edc2c61bce40f75fa1a8e0955e273aaa053bcfee5e48"
     },
     {
       "bytes": 3283,
@@ -31106,6 +31122,14 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "bytes": 9829,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "path": "results/summaries/nsc-atlas-vortex-transfer-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "959505c91d6ce96a87c86026ccc7ff6cc76b543a0929023bc6cbb5f3b802a592"
+    },
+    {
       "bytes": 2369,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "b2c5699e340bce7684a46303e4ef6b450d1330fb",
@@ -31722,6 +31746,14 @@
       "path": "scripts/check_nsc_atlas_two_wall_history.py",
       "retention_reason": "Current shared two-wall geometry, focused controls and authenticated figure.",
       "sha256": "4599c8b7e77533b62a27593d2862e4f43d9c218fd773823bb27ea14c7f84086f"
+    },
+    {
+      "bytes": 7082,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "path": "scripts/check_nsc_atlas_vortex_transfer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b73641c78348e73cae2771a6cac9b195ecaf56e7d20a9bab4e5c416f022ac3d4"
     },
     {
       "bytes": 2304,
@@ -34608,6 +34640,14 @@
       "sha256": "7bafdeafd4bb3f69eca914ef13eb6851c42832fa2df1568e6d39cfa8312a0eb0"
     },
     {
+      "bytes": 3047,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "path": "scripts/plot_nsc_atlas_vortex_transfer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "24769b4a1a583e69a76d808d6948c07126b1a8bc83b9ff99fa17d2bcd62b6eaf"
+    },
+    {
       "bytes": 2219,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "f0f639d2f5647aecb1afadaeb68ae74df9cf3229",
@@ -35931,6 +35971,14 @@
       "path": "src/recursive_horizons/nsc_atlas_transmission_bound.py",
       "retention_reason": "Current continuum transmission proof, implementation or independent controls.",
       "sha256": "53cf3ba8c92412e61ad0ea99eeced69a57d12f426580d8fd0b078872a0c3e37a"
+    },
+    {
+      "bytes": 6577,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "path": "src/recursive_horizons/nsc_atlas_vortex_transfer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "acaca8c4824075d4deeac9adc4f52063276d358f3ff82b4df23fc94e7696d9d1"
     },
     {
       "bytes": 24515,
@@ -40465,6 +40513,22 @@
       "path": "tests/test_nsc_atlas_two_wall_history.py",
       "retention_reason": "Current shared two-wall geometry, focused controls and authenticated figure.",
       "sha256": "fc6d7e91c844e3ea7dd8212e19af23fb20abae8723b9dad1ad06f3d3c1383fcf"
+    },
+    {
+      "bytes": 1957,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "path": "tests/test_nsc_atlas_vortex_composition.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1836d61e88db1b086cd3996c4f57c4958bfa7320dec7bfb9219a970230b2f60a"
+    },
+    {
+      "bytes": 5664,
+      "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
+      "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
+      "path": "tests/test_nsc_atlas_vortex_transfer.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a9afdfc48daa196ff24c485db79e64d80ff6b9a7f201bbba1049cdf3e78c2214"
     },
     {
       "bytes": 6758,

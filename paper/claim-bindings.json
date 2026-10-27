@@ -493,6 +493,21 @@
       "section": "10.60",
       "status": "measured",
       "owner": "docs/nsc-atlas-gravitational-response.md"
+    },
+    "atlas-openai-navier-stokes-source": {
+      "section": "10.61",
+      "status": "external_reference",
+      "owner": "docs/nsc-atlas-vortex-transfer.md"
+    },
+    "atlas-vortex-initial-transfer": {
+      "section": "10.62",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-vortex-transfer.md"
+    },
+    "atlas-vortex-resolution-budget": {
+      "section": "10.63",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-vortex-transfer.md"
     }
   },
   "findings": [

@@ -96,6 +96,13 @@ geometry fixed. Numerical controls and an observer-clock causal delay accompany
 this finite comparison; the rotating cascade and absolute vacuum selection
 remain separate questions.
 
+A cited OpenAI Navier--Stokes result supplies a nonlinear pulse-stress
+mechanism. A separate compact preparation now gives an exact nonzero
+initial resolved circulation from zero-mean fine motion. Its finite
+composition law retains momentum correlations and their energy/viscosity
+budget. This is an initial-transfer result, with a gravitational source
+identification and sustained cascade still to be constructed.
+
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
 by $-0.1046\pm0.0144$ magnitudes using their published covariance. That
@@ -7539,6 +7546,196 @@ a common gravitational evolution equation, Schur composition and a receiving
 clock. A direct retarded pulse, polar response and a specified rotating or
 dissipative state are the next physical connections.
 
+### 10.61. A published nonlinear vortex mechanism enters the atlas
+
+<!-- nsc-claim:atlas-openai-navier-stokes-source -->
+
+Reference and reading boundary:
+[source identity and finite calculation](../results/summaries/nsc-atlas-vortex-transfer-v1.json).
+OpenAI's [Finite time blowup for Navier--Stokes](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf)
+is linked from its [8 September 2026 announcement](https://openai.com/index/navier-stokes-solution/)
+and accompanied by a [Lean formalization](https://github.com/openai/NavierStokesAndEuler/tree/f9e8bc5b38b6e212696e8a30e3e91517af887bbd).
+Theorem 1.1 constructs a three-dimensional incompressible flow for every
+positive viscosity, starting from rest under a smooth compactly supported
+force. Its velocity becomes unbounded in finite time while kinetic energy
+stays bounded. OpenAI's theorem is incorporated as an attributed mathematical
+input; the independent atlas calculation follows in Sections 10.62--10.63.
+
+The relevant mechanism appears in Sections 2.2 and 3.2--3.3: zero-mean
+oscillatory velocities have nonzero quadratic momentum fluxes. The source
+uses those stresses to close a concentrating vortex's momentum balance.
+Its full profile construction and singularity argument have not been
+independently reproduced here. The formalization is version-pinned;
+it and its dependencies were not rebuilt in this task.
+
+For time remaining tau and $0<h<.01$, the source's core scales are
+
+$$
+\ell_r\sim\tau^{1/2},\quad \ell_z\sim\tau^{1/2-h},\quad
+U_{\rm core}\sim\tau^{-1/2-h}.
+$$
+
+Direct power counting gives
+
+$$
+E_{\rm core}\sim\tau^{1/2-3h},\qquad
+D_{\rm core}\sim\tau^{-1/2-3h},\qquad
+\|u\|_{L^3({\rm core})}\sim\tau^{-4h/3}.
+$$
+
+The shrinking volume permits small core energy and time-integrable loss
+alongside large pointwise velocity. These scaling checks illuminate the
+result; they do not replace its global proof or the force-regularity estimates.
+
+The [new finite atlas entry](../docs/nsc-atlas-vortex-transfer.md) extracts
+the momentum-transfer mechanism for an independent calculation. Its
+prepared initial velocity is nonzero, its initial mean is zero, and the
+force is zero after release. Those assumptions differ from Theorem 1.1.
+
+### 10.62. Fine motion produces an exact resolved circulation
+
+<!-- nsc-claim:atlas-vortex-initial-transfer -->
+
+Evidence: [initial rate, covariance and conservation checks](../results/summaries/nsc-atlas-vortex-transfer-v1.json).
+In cylindrical coordinates choose the smooth bump
+
+$$
+g(s)=\exp\left(1-\frac{1}{1-s^2}\right)\quad (|s|<1),\qquad
+g(s)=0\quad (|s|\geq1).
+$$
+
+Set
+$a(r)=g(2(r-1))$, $b=-a/2$ and $\chi(z)=g(z)$. For an integer angular
+mode m and kappa=-2, the vector potential and initial velocity are
+
+$$
+\phi=m\theta+\kappa m\log r,\qquad
+\mathbf A=\frac{\chi(z)\cos\phi}{m}(0,b,a),\qquad
+u_0=\nabla\times\mathbf A.
+$$
+
+The field is smooth and compact, with support away from the axis, and its
+divergence is zero exactly. Let U be its rotation-group mean. At the
+initial instant U=0, but the covariance is
+
+$$
+R_{ij}=\langle u_{0i}u_{0j}\rangle
+=\frac{1}{2}\operatorname{Re}(W_i\overline{W_j})
+=R^{(0)}_{ij}+\frac{R^{(2)}_{ij}}{m^2}.
+$$
+
+Here $u_0=\operatorname{Re}(W e^{i\phi})$; the owner gives each component.
+Both covariance terms are positive semidefinite. Their nonzero
+radial--tangential correlation transfers angular momentum.
+
+For the local classical unforced Navier--Stokes solution at any constant
+positive viscosity, the initial mean viscous term vanishes because the
+mean velocity is zero. Mean pressure has no tangential gradient. The
+actual initial equation is therefore
+
+$$
+\left.\partial_tU_\theta\right|_0
+=-\left(\partial_rR_{r\theta}+\frac{2R_{r\theta}}{r}
++\partial_zR_{z\theta}\right).
+$$
+
+The cylindrical factor two is necessary. At the symmetry plane z=0, the
+envelope derivative vanishes, and substitution proves
+
+$$
+\left.\partial_tU_\theta(r,0,t)\right|_{t=0}
+=-\frac{2a a'}{r^2}.
+$$
+
+For every prepared m and positive viscosity, the rates at r=.75 and 1.25 are
+
+$$
+-\frac{1024}{81}e^{-2/3}=-6.49060654184413,\qquad
+\frac{1024}{225}e^{-2/3}=2.33661835506389.
+$$
+
+These are rates in reference units U squared over L. Opposite resolved
+rotating bands begin to develop even though the initial mean velocity
+vanishes. Direct angular averaging of the original convection term,
+including its basis contribution, reproduces the stress result. This is
+an initial derivative of the unforced equation, not a chosen residual force.
+
+There is also a finite composition law. Around any admissible axisymmetric
+parent B, add distinct angular modes with amplitudes $\epsilon_j$. Cross
+covariances average to zero, as do the linear cross terms with B. Relative
+to the solution prepared from B alone,
+
+$$
+\delta\left(\partial_t U_\theta\right)_{t=0,z=0}
+=\left(\sum_j\epsilon_j^2\right)
+\left(-\frac{2aa'}{r^2}\right).
+$$
+
+This composes the initial effects of prepared resolutions while retaining
+their covariance state. An infinite sequence additionally needs regularity
+and dissipation summability; it is not supplied by this finite identity.
+
+### 10.63. The correlations retain their energy and momentum budget
+
+<!-- nsc-claim:atlas-vortex-resolution-budget -->
+
+Evidence: [quadrature controls and physical unit example](../results/summaries/nsc-atlas-vortex-transfer-v1.json).
+With $I=\int\chi^2 dz=.983380812913$, the outward angular-momentum and
+axial-momentum fluxes through a cylinder are
+
+$$
+\mathcal J_L=2\pi r^2\int R_{r\theta}dz=2\pi a^2I,\qquad
+\mathcal J_z=2\pi r\int R_{rz}dz=\frac{\pi a^2I}{r}.
+$$
+
+They vanish at the radial support edges, so the global initial momentum
+budgets cancel. The circulation comes from internal redistribution.
+The energy and initial dissipation have the exact form
+
+$$
+E_m=E_0+\frac{E_2}{m^2},\qquad
+D_m=\nu\left(D_2m^2+D_0+\frac{D_{-2}}{m^2}\right),\qquad E'(0)=-D_m.
+$$
+
+| Angular mode | Initial kinetic energy | Initial loss, viscosity .001 |
+| --- | --- | --- |
+| 4 | 5.476541766802 | 1.722601258802 |
+| 8 | 4.892129540839 | 4.237090234552 |
+| 16 | 4.746026484348 | 14.757095523724 |
+
+Energy approaches a positive 4.697325465517 while the viscous cost grows
+quadratically in mode number. For a finite sum the added energies and
+losses are their amplitude-squared weighted sums. A fixed energy budget
+therefore bounds the mean-force increment for this fixed envelope. Keeping the mean force at the
+initial instant does not establish a sustained cascade or uniform lifespan.
+
+![Prepared resolution, mean circulation and viscous cost](../docs/figures/nsc-atlas-vortex-transfer.png)
+
+*Figure 33. The upper panels show actual tangential-velocity patterns of the
+analytic initial data, not a simulated singularity or an image of the universe.
+Both patterns average to zero velocity. The lower left gives the exact common
+initial mean acceleration; the lower right shows the increasing fractional
+viscous loss. The preparation, transfer and budget share one velocity field.*
+
+In the supplied example L=1 m, U=.1 m/s, density 1000 kg/m³ and kinematic
+viscosity .0001 m²/s, the two initial accelerations are
+-.0649060654 and +.0233661836 m/s². These are conditional measurable
+rates for the stated preparation, not experimental observations. Independent
+64/128/256 quadratures, curl/gradient energy identities and direct convection
+checks accompany the exact formulas. Fourteen field/budget controls and
+an independent parent/composition check pass.
+
+This adds a nonlinear source to the atlas's boundary dictionary. A coarse
+description that retains only U loses a real momentum flux; retaining R
+keeps its force and energy cost. Coupling that tensor to gravity requires
+the selected relativistic stress and geometry. In Bredberg et al.'s map,
+a three-spatial-dimensional fluid has a five-dimensional gravitational lift;
+the earlier four-dimensional Rindler example used a two-dimensional fluid.
+The singular endpoint also leaves a fixed hydrodynamic expansion regime.
+Thus the source paper contributes a defined mathematical block, while the
+gravitational attachment and a sustained rotating hierarchy remain further
+connections to calculate.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -7588,7 +7785,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 33. The isolated reference in joined causal charts. Horizons are
+*Figure 34. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -8594,7 +8791,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 34. Saved finite-window comparisons. A: the previous and current
+*Figure 35. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -8690,7 +8887,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 35. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 36. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -9475,7 +9672,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 36. Research dependencies, distinct from spacetime causal arrows.
+*Figure 37. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

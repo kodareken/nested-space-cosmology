@@ -1,5 +1,16 @@
 # Nested-Space Cosmology: The Geometry of a Universe
 
+The [vortex-transfer entry](docs/nsc-atlas-vortex-transfer.md) now incorporates
+the official OpenAI forced Navier--Stokes blowup paper with a pinned source
+and reading boundary. An independently checked compact preparation proves
+nonzero initial mean circulation from zero-mean fine motion. The two rates
+are -6.49060654 and +2.33661836 in U^2/L units, independently of prepared
+angular mode and positive viscosity. Distinct modes compose through their
+amplitude-squared covariances; energy and initial viscous loss stay accounted
+for. Fourteen new controls pass. This is an exact initial-transfer result,
+not a reproduced blowup or a sustained cascade. Next: short evolution and
+a specified relativistic stress/geometry attachment.
+
 A [sourced two-level gravitational response](docs/nsc-atlas-gravitational-response.md)
 now joins a regular child, Kottler parent and Schwarzschild exterior under
 one Einstein/four-form/surface-scalar action. Both material interfaces pass

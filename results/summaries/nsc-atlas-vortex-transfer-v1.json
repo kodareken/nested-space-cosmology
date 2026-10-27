@@ -1,0 +1,310 @@
+{
+  "schema": "NSC-ATLAS-VORTEX-TRANSFER-v1",
+  "date": "2026-10-27",
+  "source": {
+    "author": "OpenAI",
+    "title": "Finite time blowup for Navier\u2013Stokes",
+    "release_date": "2026-09-08",
+    "announcement": "https://openai.com/index/navier-stokes-solution/",
+    "paper": "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf",
+    "public_pdf_pages": 166,
+    "formalization_repository": "https://github.com/openai/NavierStokesAndEuler",
+    "formalization_commit": "f9e8bc5b38b6e212696e8a30e3e91517af887bbd",
+    "supplied_text_bytes": 523447,
+    "supplied_text_sha256": "46c37997b150309499f6c4383ad0df2d7b0ac91fdd9ba9b52ceb4a3296af36fd",
+    "reading_boundary": "Theorem1.1, Sections2.1-2.2 and selected3.2-3.3; independent Grok selected7.5/AppendixC review; not full proof audit",
+    "theorem_scope": "3D incompressible NS, nu>0, zero initial velocity, smooth compact forcing, bounded energy and finite-time velocity blowup",
+    "lean_rebuilt": false,
+    "entire_theorem_independently_verified": false
+  },
+  "scope": "Exact initial rotational-mean acceleration of locally classical unforced Navier-Stokes flow from specified nonzero compact data",
+  "observational_validation": false,
+  "blowup_demonstrated": false,
+  "sustained_cascade_demonstrated": false,
+  "preparation": {
+    "radial_support": [
+      0.5,
+      1.5
+    ],
+    "height_support": [
+      -1.0,
+      1.0
+    ],
+    "radial_bump": "exp(1-1/(1-4(r-1)^2)) inside support",
+    "phase": "m theta-2m log r",
+    "potential": "(0,-a(r)chi(z)/(2m),a(r)chi(z)/m)*cos(phase)",
+    "viscosity": 0.001,
+    "modes": [
+      4,
+      8,
+      16
+    ],
+    "quadrature_orders": [
+      64,
+      128,
+      256
+    ],
+    "initial_rotational_mean": 0,
+    "full_initial_velocity": "nonzero prepared curl field"
+  },
+  "exact_rates": {
+    "inner": "-1024 exp(-2/3)/81",
+    "outer": "1024 exp(-2/3)/225"
+  },
+  "coefficients": [
+    {
+      "order": 64,
+      "Ichi": 0.983380812912743,
+      "Ichi_prime": 3.026461769435287,
+      "Ichi_second": 80.05497504993144,
+      "E0": 4.697325465517576,
+      "E2": 12.467460821105933,
+      "D2": 54.95212802908294,
+      "D0": 679.0829841423672,
+      "Dminus2": 2628.5464430118564
+    },
+    {
+      "order": 128,
+      "Ichi": 0.9833808129127202,
+      "Ichi_prime": 3.0264617692983142,
+      "Ichi_second": 80.05501264924769,
+      "E0": 4.6973254655173395,
+      "E2": 12.467460820550238,
+      "D2": 54.95212802907888,
+      "D0": 679.0829841425443,
+      "Dminus2": 2628.5476191136195
+    },
+    {
+      "order": 256,
+      "Ichi": 0.9833808129127269,
+      "Ichi_prime": 3.026461769298329,
+      "Ichi_second": 80.05501264926382,
+      "E0": 4.697325465517404,
+      "E2": 12.467460820550386,
+      "D2": 54.95212802907963,
+      "D0": 679.0829841425528,
+      "Dminus2": 2628.547619114142
+    }
+  ],
+  "adaptive_Ichi": 0.9833808129127264,
+  "adaptive_Ichi_error": 1.0972582090154917e-14,
+  "mode_results": [
+    {
+      "mode": 4,
+      "levels": [
+        {
+          "mode": 4,
+          "order": 64,
+          "energy": 5.476541766836695,
+          "curl_loss": 1.7226011852943715,
+          "gradient_loss": 1.7226011853037704,
+          "quadrature_points": 4096,
+          "separated_energy": 5.4765417668366965,
+          "separated_loss": 1.7226011852959353,
+          "cpu_seconds": 0.0
+        },
+        {
+          "mode": 4,
+          "order": 128,
+          "energy": 5.47654176680173,
+          "curl_loss": 1.7226012588024076,
+          "gradient_loss": 1.7226012588024076,
+          "quadrature_points": 16384,
+          "separated_energy": 5.47654176680173,
+          "separated_loss": 1.7226012588024076,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "mode": 4,
+          "order": 256,
+          "energy": 5.4765417668018035,
+          "curl_loss": 1.7226012588024608,
+          "gradient_loss": 1.7226012588024604,
+          "quadrature_points": 65536,
+          "separated_energy": 5.4765417668018035,
+          "separated_loss": 1.722601258802461,
+          "cpu_seconds": 0.125
+        }
+      ],
+      "indicators": {
+        "energy": 2e-13,
+        "curl_loss": 2e-13
+      },
+      "initial_rates": [
+        {
+          "radius": 0.75,
+          "rate": -6.4906065418441266,
+          "direct_advection_rate": -6.4906065418441266,
+          "exact_rate": -6.4906065418441266,
+          "comparison_tolerance": 5e-13
+        },
+        {
+          "radius": 1.25,
+          "rate": 2.3366183550638855,
+          "direct_advection_rate": 2.336618355063886,
+          "exact_rate": 2.3366183550638855,
+          "comparison_tolerance": 5e-13
+        }
+      ],
+      "energy_over_initial_loss": 3.179227774748669
+    },
+    {
+      "mode": 8,
+      "levels": [
+        {
+          "mode": 8,
+          "order": 64,
+          "energy": 4.892129540847356,
+          "curl_loss": 4.237090216174369,
+          "gradient_loss": 4.23709021618339,
+          "quadrature_points": 4096,
+          "separated_energy": 4.892129540847356,
+          "separated_loss": 4.237090216175736,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "mode": 8,
+          "order": 128,
+          "energy": 4.892129540838438,
+          "curl_loss": 4.237090234552243,
+          "gradient_loss": 4.237090234552243,
+          "quadrature_points": 16384,
+          "separated_energy": 4.892129540838437,
+          "separated_loss": 4.237090234552244,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "mode": 8,
+          "order": 256,
+          "energy": 4.8921295408385035,
+          "curl_loss": 4.237090234552308,
+          "gradient_loss": 4.237090234552308,
+          "quadrature_points": 65536,
+          "separated_energy": 4.892129540838504,
+          "separated_loss": 4.2370902345523085,
+          "cpu_seconds": 0.125
+        }
+      ],
+      "indicators": {
+        "energy": 2e-13,
+        "curl_loss": 2e-13
+      },
+      "initial_rates": [
+        {
+          "radius": 0.75,
+          "rate": -6.4906065418441266,
+          "direct_advection_rate": -6.4906065418441266,
+          "exact_rate": -6.4906065418441266,
+          "comparison_tolerance": 5e-13
+        },
+        {
+          "radius": 1.25,
+          "rate": 2.3366183550638855,
+          "direct_advection_rate": 2.3366183550638864,
+          "exact_rate": 2.3366183550638855,
+          "comparison_tolerance": 5e-13
+        }
+      ],
+      "energy_over_initial_loss": 1.1545964966581381
+    },
+    {
+      "mode": 16,
+      "levels": [
+        {
+          "mode": 16,
+          "order": 64,
+          "energy": 4.74602648435002,
+          "curl_loss": 14.757095519129297,
+          "gradient_loss": 14.757095519138224,
+          "quadrature_points": 4096,
+          "separated_energy": 4.746026484350021,
+          "separated_loss": 14.757095519130617,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "mode": 16,
+          "order": 128,
+          "energy": 4.746026484347614,
+          "curl_loss": 14.7570955237239,
+          "gradient_loss": 14.7570955237239,
+          "quadrature_points": 16384,
+          "separated_energy": 4.746026484347614,
+          "separated_loss": 14.7570955237239,
+          "cpu_seconds": 0.0
+        },
+        {
+          "mode": 16,
+          "order": 256,
+          "energy": 4.74602648434768,
+          "curl_loss": 14.757095523724104,
+          "gradient_loss": 14.7570955237241,
+          "quadrature_points": 65536,
+          "separated_energy": 4.746026484347679,
+          "separated_loss": 14.757095523724104,
+          "cpu_seconds": 0.125
+        }
+      ],
+      "indicators": {
+        "energy": 2e-13,
+        "curl_loss": 4.085620730620576e-13
+      },
+      "initial_rates": [
+        {
+          "radius": 0.75,
+          "rate": -6.4906065418441266,
+          "direct_advection_rate": -6.4906065418441266,
+          "exact_rate": -6.4906065418441266,
+          "comparison_tolerance": 5e-13
+        },
+        {
+          "radius": 1.25,
+          "rate": 2.3366183550638855,
+          "direct_advection_rate": 2.336618355063886,
+          "exact_rate": 2.3366183550638855,
+          "comparison_tolerance": 5e-13
+        }
+      ],
+      "energy_over_initial_loss": 0.32160979623109276
+    }
+  ],
+  "flux_at_unit_radius": {
+    "angular": 6.178763875055563,
+    "axial": 3.0893819375277816
+  },
+  "source_core_scalings": {
+    "velocity_exponent": "-1/2-h",
+    "volume_exponent": "3/2-h",
+    "energy_exponent": "1/2-3h",
+    "core_loss_exponent": "-1/2-3h",
+    "critical_L3_exponent": "-4h/3",
+    "h_domain": "0<h<1/100",
+    "note": "power counting checked; not the global blowup construction"
+  },
+  "physical_example": {
+    "length_m": 1.0,
+    "speed_m_s": 0.1,
+    "density_kg_m3": 1000.0,
+    "viscosity_m2_s": 0.0001,
+    "reference_time_s": 10.0,
+    "reference_energy_J": 10.0,
+    "inner_mean_acceleration_m_s2": -0.06490606541844128,
+    "outer_mean_acceleration_m_s2": 0.023366183550638856,
+    "angular_momentum_flux_Nm": 61.787638750555644,
+    "axial_momentum_flux_N": 30.893819375277822,
+    "note": "supplied finite fluid benchmark, not an astronomical identification"
+  },
+  "compute": {
+    "points": 258944,
+    "point_limit": 500000,
+    "solver_cpu_seconds": 0.4375,
+    "cpu_limit_seconds": 60,
+    "elapsed_seconds": 0.9438143000006676,
+    "workers": 4,
+    "note": "CPU excludes process imports/startup; tensor-product quadrature, no NS time grid"
+  },
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_vortex_transfer.py": "acaca8c4824075d4deeac9adc4f52063276d358f3ff82b4df23fc94e7696d9d1",
+    "scripts/check_nsc_atlas_vortex_transfer.py": "b73641c78348e73cae2771a6cac9b195ecaf56e7d20a9bab4e5c416f022ac3d4",
+    "tests/test_nsc_atlas_vortex_transfer.py": "a9afdfc48daa196ff24c485db79e64d80ff6b9a7f201bbba1049cdf3e78c2214"
+  }
+}

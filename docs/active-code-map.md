@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [vortex-transfer owner](nsc-atlas-vortex-transfer.md) uses
+[the compact solenoidal field and stress calculator](../src/recursive_horizons/nsc_atlas_vortex_transfer.py),
+[fourteen controls](../tests/test_nsc_atlas_vortex_transfer.py),
+[bounded producer](../scripts/check_nsc_atlas_vortex_transfer.py) and
+[plotter](../scripts/plot_nsc_atlas_vortex_transfer.py). The only time quantity
+calculated is the exact initial Navier--Stokes mean rate. There is no hidden
+time evolution, force fitting or gravity identification.
+
 The [gravitational-response owner](nsc-atlas-gravitational-response.md)
 uses [the regional/shell calculator](../src/recursive_horizons/nsc_atlas_gravitational_response.py),
 [thirteen controls](../tests/test_nsc_atlas_gravitational_response.py),

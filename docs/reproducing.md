@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Nonlinear initial transfer and its viscous budget
+
+    python scripts/run_python.py scripts/check_nsc_atlas_vortex_transfer.py
+    python scripts/run_python.py scripts/plot_nsc_atlas_vortex_transfer.py
+    python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_vortex_transfer.py tests/test_nsc_atlas_vortex_composition.py
+
+The [owner](nsc-atlas-vortex-transfer.md) specifies the compact initial field,
+zero mean versus nonzero full velocity, the unforced equation and the exact
+initial-rate theorem. The producer checks 64/128/256 quadratures in four
+workers and stores a 10kB summary. No raw field or time history is required.
+The source paper/Lean links and version pin are references, not a Lean
+build or a reproduction of the cited global singularity proof.
+
 ## Sourced nested geometry and axial gravitational response
 
     python scripts/run_python.py scripts/check_nsc_atlas_gravitational_response.py

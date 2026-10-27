@@ -1,10 +1,10 @@
 {
-  "bytes": 12468865,
+  "bytes": 13072302,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "e6497e6fe88a62b2ef1b18aa46035b3428462093f289d0df340bdb5fdbc65f0a",
+  "metadata_sha256": "d9fba3fd36ca75ebc74b5d029b2fcbeff7ea7af295ec47163d97900b4d0b4b97",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 154,
-  "pdf_sha256": "93a5175249088cecaa8836563c70998072624df7b3b17b7ff231ddd0ad4c900b",
+  "pages": 157,
+  "pdf_sha256": "4389eea39b48e3f708a9edc2c61bce40f75fa1a8e0955e273aaa053bcfee5e48",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -134,6 +134,10 @@
     {
       "path": "docs/figures/nsc-atlas-two-wall-history.png",
       "sha256": "8b6649344367a8eb025f5ca2fe3d7b24f60a8e57dd32a5c2a21c931c77a97d92"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-vortex-transfer.png",
+      "sha256": "3aa59165e80281825858c987f2621f4169ab1cfd054d6ff3d955cd998ebfff11"
     },
     {
       "path": "docs/figures/nsc-conformal-lightcone.png",
@@ -724,6 +728,10 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "path": "results/summaries/nsc-atlas-vortex-transfer-v1.json",
+      "sha256": "959505c91d6ce96a87c86026ccc7ff6cc76b543a0929023bc6cbb5f3b802a592"
+    },
+    {
       "path": "results/summaries/nsc-atlas-wall-boundary-lift-v1.json",
       "sha256": "06543ed63b06940ae7f14104fecd025a9a1e01789a22c7fdd15562cc1e6d8f0d"
     },
@@ -781,6 +789,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "442411696334feb74c834e6865367a6c8a91008283f8324a322d75328d680e72",
-  "version": "working-2026-10-27.1"
+  "source_sha256": "5977fe49b35d8f9ab4b90e0806b9ba2cfc607fe8265a31bb6b681bbe1d522f77",
+  "version": "working-2026-10-27.2"
 }

@@ -44,6 +44,9 @@ flowchart TD
     S[The declared scalar envelope] -->|amplitude and phase away from zeros| M[Madelung continuity and stress]
     M -.->|requires a background perturbation calculation| A
     B -->|axial regional response and Schur composition| Q[Nested gravitational response]
+    V0[Prepared compact Navier-Stokes modes] -->|quadratic rotational mean| VR[Retained momentum covariance]
+    VR -->|exact initial momentum equation| VF[Resolved circulation]
+    VR -.->|requires relativistic stress and chosen geometry| B
 ```
 
 The Madelung-to-acoustic arrow requires a separate perturbation calculation;
@@ -68,6 +71,14 @@ Chart coverage is a separate joint: a throat or a closed parent can require
 multiple areal-radius sheets, curved spatial slices or a nonconstant lapse.
 If one flat PG chart fails, first change the representation and examine the
 invariant matching data; that chart failure alone does not reject the geometry.
+
+
+The [nonlinear vortex-transfer entry](nsc-atlas-vortex-transfer.md) now adds
+the lower fluid branch: a smooth compact preparation with zero mean velocity
+has nonzero mean momentum stress and an exactly computed initial circulation.
+Its finite-mode composition retains the energy and viscous budget. The new
+OpenAI blowup paper is attributed as source material; its full proof and the
+gravitational attachment are not silently imported into this finite example.
 
 ## 1. A river gives an exact causal dictionary
 

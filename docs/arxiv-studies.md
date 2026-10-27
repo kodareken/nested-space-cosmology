@@ -1,5 +1,32 @@
 # Cited arXiv studies
 
+## OpenAI Navier--Stokes source and nonlinear transport, 27 October 2026
+
+OpenAI, [Finite time blowup for Navier--Stokes](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf),
+released through the [8 September 2026 official note](https://openai.com/index/navier-stokes-solution/),
+is the provided source. Its public PDF has 166 pages. Theorem 1.1 uses a
+smooth compact external force, zero full initial velocity and positive
+viscosity, with bounded kinetic energy and finite-time velocity blowup.
+The Lean repository is pinned at
+[f9e8bc5b38b6e212696e8a30e3e91517af887bbd](https://github.com/openai/NavierStokesAndEuler/tree/f9e8bc5b38b6e212696e8a30e3e91517af887bbd).
+The supplied text hash, author and reading boundary are retained in the
+[finite calculation](../results/summaries/nsc-atlas-vortex-transfer-v1.json).
+
+Theorem 1.1, Sections 2.1--2.2 and selected 3.2--3.3 were read directly.
+Grok additionally inspected selected covariance/cone statements in
+Proposition 7.5/Appendix C and the formalization metadata. The full
+construction, force regularity and Lean kernel/dependencies were not
+independently verified or rebuilt. The entry files import ComparatorSolution
+and PaperResults; that import inspection alone is not formal verification.
+
+The [atlas contribution](nsc-atlas-vortex-transfer.md) independently derives
+a finite compact solenoidal field, its exact unforced initial mean rate,
+finite-mode composition and energy/viscosity budget. It starts from
+nonzero prepared motion with zero angular mean. The source's concentrating
+core power counting is also checked independently. The 3D source fluid,
+the 2D fluid in the previous 4D Rindler limit and a relativistic bulk
+stress remain separately identified mathematical blocks.
+
 ## Two material levels and physical gravitational composition, 27 October 2026
 
 [Visser--Wiltshire,gr-qc/0310107v2](https://arxiv.org/html/gr-qc/0310107v2)

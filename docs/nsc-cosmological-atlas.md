@@ -18,6 +18,18 @@ starting a derivation.
 
 ## Current execution priority — 27 October 2026
 
+### Complete: nonlinear initial transfer from unresolved vortex motion
+
+The [vortex-transfer owner](nsc-atlas-vortex-transfer.md) incorporates the
+official OpenAI finite-time-blowup paper and proves a finite momentum
+mechanism independently. Compact zero-mean oscillations produce exact
+initial resolved circulation, including an incremental law around an
+axisymmetric parent and finite-mode covariance composition. Momentum and
+energy budgets remain explicit; finer modes pay increasing viscous cost.
+Next: a short unforced continuation of the prepared field, then a specified
+relativistic stress and geometry. The cited global singularity proof,
+3D fluid and previous 4D gravitational response keep their own domains.
+
 ### Complete: a physical gravitational response across two levels
 
 The [gravitational-response owner](nsc-atlas-gravitational-response.md)

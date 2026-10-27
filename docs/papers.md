@@ -1,5 +1,11 @@
 # Paper guide
 
+Revision 2026-10-27.2 adds Sections 10.61--10.63 and Figure 33:
+the official OpenAI Navier--Stokes paper, an independently derived finite
+nonlinear mean-circulation law and its momentum/viscous budget. Published
+blowup, the prepared unforced initial-rate result and future gravitational
+identification have distinct domains and attribution.
+
 Revision 2026-10-27.1 adds Sections 10.57--10.60 and Figure 32:
 the boundary-fluid dictionary, two sourced stiff-scalar interfaces, a
 physical axial gravitational Schur response and a same-exterior return
