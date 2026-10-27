@@ -1,5 +1,15 @@
 # What the calculations show
 
+The [flow dictionary](nsc-atlas-flow-dictionary.md) now connects river
+coordinates, acoustic horizons, material interfaces and the gravitational
+Navier--Stokes limit through explicit operations. The Brown--York stress
+jump equals the Israel interface stress. Direct contraction of the published
+Rindler perturbation metric recovers shear viscosity 1/(16piG), with boundary
+clock conversion explicit. Eight new controls and the 23 existing parent
+controls pass. These are checked uses of published mathematics; no new
+nesting-specific transport coefficient or vacuum scale is claimed. The current
+pure-tension wall remains one candidate within the larger atlas.
+
 [NSC-P004](nsc-atlas-dynamics-lensing.md) now predicts a new moving-observer
 image from finite freely falling motion. The19.43948 mas forecast and
 .18328 mas comparison tolerance were committed before evaluating the

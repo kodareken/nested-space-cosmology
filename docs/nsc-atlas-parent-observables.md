@@ -13,6 +13,12 @@ follow an observer. Published solutions are building blocks credited to
 their authors. The project contribution is their checked attachment or
 comparison with the owned atlas, and the resulting inference questions.
 
+The [flow and boundary-fluid dictionary](nsc-atlas-flow-dictionary.md)
+now connects river coordinates, acoustic horizons, the Israel stress jump
+and the near-horizon Navier--Stokes sector. Brown--York boundary stress is
+the common interface object; the pure-tension wall below is one constitutive
+candidate within this larger map.
+
 ![Calculated comparison of surrounding geometries and wall balance](figures/nsc-atlas-parent-observables.png)
 
 The four panels are calculated from the equations below. A and C use the

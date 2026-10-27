@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [flow and boundary-fluid dictionary](nsc-atlas-flow-dictionary.md)
+connects PG/FLRW rivers, a sourced acoustic sink, Israel--Brown--York matching
+and the horizon/Navier--Stokes limit. Its
+[eight independent controls](../tests/test_nsc_atlas_flow_dictionary.py)
+include a shear-viscosity extraction directly from the published perturbed
+Rindler metric. These are attributed mathematical blocks and interface laws;
+the next unknown is their regional gravitational response under nesting.
+
 [NSC-P004](nsc-atlas-dynamics-lensing.md) now predicts a new moving-observer
 image from finite freely falling motion. The19.43948 mas forecast and
 .18328 mas comparison tolerance were committed before evaluating the

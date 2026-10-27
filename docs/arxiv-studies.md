@@ -1,5 +1,46 @@
 # Cited arXiv studies
 
+## Flow, interface stress and horizon hydrodynamics, 27 October 2026
+
+The [flow dictionary](nsc-atlas-flow-dictionary.md) joins these attributed
+constructions through equations and declared regimes, keeping alternative
+interface actions available.
+
+- [Hamilton--Lisle,gr-qc/0411060v2](https://arxiv.org/html/gr-qc/0411060v2):
+  the spherical PG metric and river-frame discussion were inspected, with
+  the abstract's rotating-case distinction. Null directions and invariant
+  mass are contracted independently in the new checks.
+- [Visser,gr-qc/9712010v2](https://arxiv.org/html/gr-qc/9712010v2):
+  the fluid assumptions, wave-equation statement and normal-flow horizon
+  discussion were inspected. The new finite-annulus sink checks continuity
+  and forced Euler independently; its nonconstant acoustic conformal factor
+  is retained rather than discarded in the wave operator.
+- [Brown--York,gr-qc/9209012](https://arxiv.org/abs/gr-qc/9209012):
+  original abstract and bibliographic attribution checked; arXiv HTML was
+  unavailable. The sign convention is specified locally. The Israel stress
+  jump, static cutoff stress and horizon pressure limit are checked directly.
+- [Bredberg et al.,1101.2451v2](https://arxiv.org/html/1101.2451v2):
+  Sections 2--5 and 8 inspected, particularly equations 8--16, the no-incoming
+  radiation/future-regularity conditions and the distinction between
+  kinematic viscosity r_c and the dynamic shear coefficient. Contracting
+  the linear-velocity part of equation 14 independently gives 1/(16piG)
+  with proper boundary time and velocity used for normalization.
+- [Kovtun--Son--Starinets,hep-th/0405231](https://arxiv.org/abs/hep-th/0405231):
+  abstract inspected for the stated duality class and units of eta/s.
+  No general-fluid universality claim is imported.
+- [Weinfurtner et al.,1008.1911](https://arxiv.org/abs/1008.1911),
+  [Torres et al.,Nature Physics2017](https://www.nature.com/articles/nphys4151)
+  and [Steinhauer,1510.00621](https://arxiv.org/abs/1510.00621):
+  abstracts/bibliographic records checked to distinguish stimulated conversion,
+  rotational amplification and reported quantum correlations. No experimental
+  data are reused or treated as validation of the NSC nesting law.
+
+Madelung's original 1927 article is attributed by
+[DOI 10.1007/BF01400372](https://doi.org/10.1007/BF01400372);
+the original translated opening was located, while publisher full text was
+inaccessible. The current scalar amplitude/phase rewrite is reused from the
+owned envelope, not imported as a new quantum-mechanics derivation.
+
 ## Dynamics and lensing across probe channels, 26 October 2026
 
 [Reyes et al.,1003.2185](https://arxiv.org/abs/1003.2185) motivates combining

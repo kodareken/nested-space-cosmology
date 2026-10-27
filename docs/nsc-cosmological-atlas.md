@@ -16,7 +16,20 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 26 October 2026
+## Current execution priority — 27 October 2026
+
+### Connecting flow, interface and horizon-fluid constructions
+
+The [flow dictionary](nsc-atlas-flow-dictionary.md) puts PG rivers,
+acoustic metrics, Brown--York boundary stress, Israel interfaces and the
+Navier--Stokes horizon limit on one map through their actual transformations
+and domains. The current tension wall remains one candidate, rather than
+a requirement imposed on every construction. Its stress is exactly the jump
+of the two regional Brown--York stresses. A supplied acoustic sink also gives
+a constructive cone-level attachment, with its forcing and conformal factor
+kept explicit. Next: calculate a physical regional gravitational boundary
+response and its change under a declared parent/child termination. The completed
+inner observer evidence and the outward compensation question remain available.
 
 ### NSC-P004: motion predicts an unevaluated optical response
 
