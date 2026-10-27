@@ -2,6 +2,15 @@
 
 ## Flow, interface stress and horizon hydrodynamics, 27 October 2026
 
+[Adams--Chesler--Liu,1307.7267](https://arxiv.org/abs/1307.7267) and their
+[research page](https://www.mit.edu/~awa/Turbulence/1307.7267/1307.7267.html)
+were read at abstract/research-summary level for turbulent asymptotically AdS4
+black holes, inverse-cascade signatures and their argued horizon scaling.
+The [circulating-flow hypothesis](nsc-atlas-flow-dictionary.md#6-working-hypothesis-circulation-across-resolutions)
+uses this as a further gravity/turbulence block. No simulation, fractal-dimension
+argument, cosmological identification or black-hole recycling law is imported
+as a demonstrated NSC result.
+
 The [flow dictionary](nsc-atlas-flow-dictionary.md) joins these attributed
 constructions through equations and declared regimes, keeping alternative
 interface actions available.

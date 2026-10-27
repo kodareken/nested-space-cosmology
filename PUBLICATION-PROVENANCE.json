@@ -1496,9 +1496,9 @@
       "sha256": "50d32ecb16c7cf9192ec64c995afa33576cc1cf6cceb9939011bfa21af0f53d0"
     },
     {
-      "bytes": 134624,
+      "bytes": 135237,
       "path": "docs/arxiv-studies.md",
-      "sha256": "692c6d40b907ee613f0ec22baa9022459818c2384c8a53feba8b1c1df8336195"
+      "sha256": "024f272c85728fbba5bb24950bedcc0f6b947f7c8666f8bea8f6a92604aa2337"
     },
     {
       "bytes": 1458,
@@ -1708,7 +1708,7 @@
     {
       "bytes": 2533894,
       "path": "docs/lab-snapshot.json",
-      "sha256": "eaf13e400e34b00ea49ed1f5cb8e6ca9f836ea1449135656c62f2a6ed1595c0a"
+      "sha256": "f91a67c54c6249d712856a46a567db7df62e09653fe1a5cc35eb2ef5d63d4971"
     },
     {
       "bytes": 4997,
@@ -1826,9 +1826,9 @@
       "sha256": "48bcd7f4e6bf1595dacf25e241d08de50e5e45e2c81ed93a8f975f16356d78dc"
     },
     {
-      "bytes": 14748,
+      "bytes": 17538,
       "path": "docs/nsc-atlas-flow-dictionary.md",
-      "sha256": "b8b75c3b96e9e03d4e832d359ca280444129751ebeef54bdc0c59b89a3291533"
+      "sha256": "ae96337febada2be61e596010c270341d5f6935f1552caa11cc6e563bdf344c3"
     },
     {
       "bytes": 12252,
@@ -2016,9 +2016,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 115309,
+      "bytes": 115803,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "445b57a37a08cd021dd0b116260bf0ab2c4f871a8e0cdbbcab75148093042cdd"
+      "sha256": "38234dfed5f00e10663677427a4ddc8035da3ecddae569e1ec52430d5c522131"
     },
     {
       "bytes": 30876,
@@ -23371,7 +23371,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "eaf13e400e34b00ea49ed1f5cb8e6ca9f836ea1449135656c62f2a6ed1595c0a",
+  "lab_snapshot_sha256": "f91a67c54c6249d712856a46a567db7df62e09653fe1a5cc35eb2ef5d63d4971",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-26.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

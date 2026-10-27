@@ -937,6 +937,13 @@ different resolution, clocks, states and surrounding connections can produce
 different measured responses. The working hypothesis is that successive
 unresolved levels compound into the complex geometry an observer measures.
 
+The [circulating-flow extension](nsc-atlas-flow-dictionary.md#6-working-hypothesis-circulation-across-resolutions)
+now retains Douglas's proposed vortex hierarchy and return to a larger flow.
+Circulation, energy transfer across filtering scales and optical reconstruction
+are its calculable connections. Published holographic turbulence supplies a
+gravity/cascade block with its own background and state. A cosmological
+rotating parent and black-hole recycling remain candidate constructions.
+
 The existing [finite inheritance construction](nsc-nested-qualities.md)
 already distinguishes normalized scale covariance from changing the depth of
 the environment. Its exact nested Schur recurrence retains the response of

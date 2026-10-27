@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b63e37689f232f9d3c32948ee51d74ba1e4ac09d",
+  "current_receipt_commit_parent": "8d53675dfd2e7ecfcb6355e5ad1d19a476af3e31",
   "files": [
     {
       "bytes": 3120,
@@ -10282,12 +10282,12 @@
       "sha256": "50d32ecb16c7cf9192ec64c995afa33576cc1cf6cceb9939011bfa21af0f53d0"
     },
     {
-      "bytes": 134624,
-      "change": "Connect flow geometry, interface stress and the horizon-fluid limit in the atlas.",
-      "changed_from_commit": "b63e37689f232f9d3c32948ee51d74ba1e4ac09d",
+      "bytes": 135237,
+      "change": "Record the circulating-scale hypothesis and its holographic-turbulence reference.",
+      "changed_from_commit": "8d53675dfd2e7ecfcb6355e5ad1d19a476af3e31",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "692c6d40b907ee613f0ec22baa9022459818c2384c8a53feba8b1c1df8336195"
+      "sha256": "024f272c85728fbba5bb24950bedcc0f6b947f7c8666f8bea8f6a92604aa2337"
     },
     {
       "bytes": 9543,
@@ -10740,12 +10740,12 @@
       "sha256": "48bcd7f4e6bf1595dacf25e241d08de50e5e45e2c81ed93a8f975f16356d78dc"
     },
     {
-      "bytes": 14748,
-      "change": "Connect flow geometry, interface stress and the horizon-fluid limit in the atlas.",
-      "changed_from_commit": "b63e37689f232f9d3c32948ee51d74ba1e4ac09d",
+      "bytes": 17538,
+      "change": "Record the circulating-scale hypothesis and its holographic-turbulence reference.",
+      "changed_from_commit": "8d53675dfd2e7ecfcb6355e5ad1d19a476af3e31",
       "path": "docs/nsc-atlas-flow-dictionary.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "b8b75c3b96e9e03d4e832d359ca280444129751ebeef54bdc0c59b89a3291533"
+      "sha256": "ae96337febada2be61e596010c270341d5f6935f1552caa11cc6e563bdf344c3"
     },
     {
       "bytes": 12252,
@@ -10960,15 +10960,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 115309,
-      "change": "Connect flow geometry, interface stress and the horizon-fluid limit in the atlas.",
-      "changed_from_commit": "b63e37689f232f9d3c32948ee51d74ba1e4ac09d",
+      "bytes": 115803,
+      "change": "Record the circulating-scale hypothesis and its holographic-turbulence reference.",
+      "changed_from_commit": "8d53675dfd2e7ecfcb6355e5ad1d19a476af3e31",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "445b57a37a08cd021dd0b116260bf0ab2c4f871a8e0cdbbcab75148093042cdd"
+      "sha256": "38234dfed5f00e10663677427a4ddc8035da3ecddae569e1ec52430d5c522131"
     },
     {
       "bytes": 30876,

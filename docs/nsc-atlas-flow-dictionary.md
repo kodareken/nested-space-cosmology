@@ -281,7 +281,7 @@ identification and normalization; F10's boundary pressure alone does not select
 bulk Lambda. No frozen P004 forecast, source history or supplied vacuum scale
 is changed by adding these blocks to the map.
 
-Independent controls for F1--F10 and the retained interface are in
+Independent controls for F1--F11 and the retained interface are in
 [the flow-dictionary checks](../tests/test_nsc_atlas_flow_dictionary.py):
 
 ```powershell
@@ -291,3 +291,48 @@ python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_flow_dictionary.p
 Result on 27 October 2026: all eight new controls and 23 retained parent
 controls pass (31 total, 1.39 seconds pytest elapsed). No field evolution,
 fit, forecast tolerance or parameter was changed for this connection.
+
+## 6. Working hypothesis: circulation across resolutions
+
+Douglas proposes a larger circulating environment containing smaller
+circulating regions, with transfer toward smaller scales and a possible return
+to the surroundings. Our local region would be one resolved part of that
+dynamics. This is a candidate physical picture to construct, not a measured
+global rotation or an identification already supplied by the spherical runs.
+The tension-wall candidate does not decide which circulating constructions
+belong in this larger atlas.
+
+The useful variables are vorticity omega=curl(u), circulation
+Gamma(C)=integral_C u dot dl, and the energy flux Pi(ell) across a stated
+spatial filtering scale ell. A scale-transfer law makes the changing resolution
+dynamical: stretching, smaller structures, merging and dissipation must follow
+from that law and its boundary conditions. Observer resolution specifies which
+part of that evolution is retained in the measurement model. Numerical grid
+refinement remains a separate approximation to the chosen physical model.
+
+[Adams--Chesler--Liu, Holographic Turbulence](https://arxiv.org/abs/1307.7267)
+provides a particularly close attributed block. They numerically solve Einstein's
+equations for turbulent black holes in asymptotically AdS4 and find inverse
+cascade signatures in the dual fluid and bulk geometry. They also argue for
+approximately fractal horizon structure in a stated steady-state setting.
+This adds a concrete gravity/turbulence connection to the map. Its AdS
+background, holographic state and boundary conditions are inputs to that
+construction; it does not yet construct our cosmological parent or a hierarchy
+of black-hole offspring. Their abstract and authors' accompanying research
+page were read; no simulation or fractal-dimension argument is independently
+reproduced here.
+
+The optical part is a calculation in the same geometry: specify source and
+observer trajectories and propagate null rays, clocks and beams. The visible
+outline of a region can depend on propagation and viewing geometry. Whether
+it is a material interface, a caustic, or a causal horizon is determined by the
+corresponding equations. A coordinate-dependent river speed does not by itself
+establish observer-independent rotation; a causal horizon or a tidal measurement
+is not erased by changing that description.
+
+The next attachment question is therefore concrete: can a circulating parent
+and its smaller structures supply a compatible metric/source and regional
+boundary response, with an energy-transfer budget and a predicted optical
+signal? The proposed return to the parent must specify an allowed transport
+or transition mechanism. No previously frozen forecast or completed spherical
+result is changed by retaining this broader candidate.
