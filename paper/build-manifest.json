@@ -1,10 +1,10 @@
 {
-  "bytes": 12109180,
+  "bytes": 12468865,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "dd043809ac9e1d2cdbd3f11628c11741b213b4e73dd5e0494eb83b739229abbf",
+  "metadata_sha256": "e6497e6fe88a62b2ef1b18aa46035b3428462093f289d0df340bdb5fdbc65f0a",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 149,
-  "pdf_sha256": "6e4f24f3cbaf08addd96464c7ca91e853505a3ef9ad28c6aa98de3402d146163",
+  "pages": 154,
+  "pdf_sha256": "93a5175249088cecaa8836563c70998072624df7b3b17b7ff231ddd0ad4c900b",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -58,6 +58,10 @@
     {
       "path": "docs/figures/nsc-atlas-geometric-observer.png",
       "sha256": "e007d2cd3888c4fc99574bb09d98dec251350052de9612eeb9a104a1fd64a1d0"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-gravitational-response.png",
+      "sha256": "bc4d84ab77f8c18e322f4f8af7f01cfffc05c1679c49f8492bd1f4e1176c752b"
     },
     {
       "path": "docs/figures/nsc-atlas-hierarchy-evolution.png",
@@ -608,6 +612,10 @@
       "sha256": "4b875644a0876ef8c4283671bd114079a7b18bde280e86d34acbcd61e1945f0d"
     },
     {
+      "path": "results/summaries/nsc-atlas-gravitational-response-v1.json",
+      "sha256": "95ad33931220303509e948ba400babe2a8e765a3d827574e64a04d5ab7dd8307"
+    },
+    {
       "path": "results/summaries/nsc-atlas-hierarchy-evolution-v1.json",
       "sha256": "e41626e10540c5a9e39e8b1e4732be5fdcfe0a229d4e5380a922784cb1b0ffad"
     },
@@ -773,6 +781,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "cfdd9472b5382d950b3262476e53f06ab967c76c663ad69414add01df1c8a4ad",
-  "version": "working-2026-10-26.1"
+  "source_sha256": "442411696334feb74c834e6865367a6c8a91008283f8324a322d75328d680e72",
+  "version": "working-2026-10-27.1"
 }

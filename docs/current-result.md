@@ -1,5 +1,16 @@
 # What the calculations show
 
+A [sourced two-level gravitational response](nsc-atlas-gravitational-response.md)
+now joins a regular child, Kottler parent and Schwarzschild exterior under
+one Einstein/four-form/surface-scalar action. Both material interfaces pass
+radial linear stability and full junction/force checks. Actual axial gravity
+composes by Schur elimination and has a positive-energy stability proof.
+At the fixed higher frequency the regular child returns all canonical power;
+the same parent with an ingoing inner horizon absorbs 44.2778%. The first
+possible receiving-clock difference is 34.31868 GM/c^3. This is a finite
+conditional comparison, with no astronomical validation or absolute vacuum
+selection. Polar stability, a retarded pulse and a rotating state remain open.
+
 The [flow dictionary](nsc-atlas-flow-dictionary.md) now connects river
 coordinates, acoustic horizons, material interfaces and the gravitational
 Navier--Stokes limit through explicit operations. The Brown--York stress

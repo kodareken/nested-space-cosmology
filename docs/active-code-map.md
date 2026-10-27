@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [gravitational-response owner](nsc-atlas-gravitational-response.md)
+uses [the regional/shell calculator](../src/recursive_horizons/nsc_atlas_gravitational_response.py),
+[thirteen controls](../tests/test_nsc_atlas_gravitational_response.py),
+[bounded producer](../scripts/check_nsc_atlas_gravitational_response.py) and
+[plotter](../scripts/plot_nsc_atlas_gravitational_response.py). The common-time
+axial variable, derived material transfer and boundary action make this a
+physical gravitational Schur calculation. It is a separate static candidate
+from the earlier scalar formation history, with a sourced shared parent.
+
 The [dynamics--lensing owner](nsc-atlas-dynamics-lensing.md) uses
 nsc_atlas_dynamics_lensing.py for timelike calibration, the data-only
 Born prediction, moving null endpoints and Doppler/aberration.

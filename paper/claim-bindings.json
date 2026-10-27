@@ -473,6 +473,26 @@
       "section": "10.55",
       "status": "measured",
       "owner": "docs/nsc-atlas-dynamics-lensing.md"
+    },
+    "atlas-flow-boundary-dictionary": {
+      "section": "10.57",
+      "status": "external_reference",
+      "owner": "docs/nsc-atlas-flow-dictionary.md"
+    },
+    "atlas-gravitational-background": {
+      "section": "10.58",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-gravitational-response.md"
+    },
+    "atlas-gravitational-composition": {
+      "section": "10.59",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-gravitational-response.md"
+    },
+    "atlas-gravitational-contrast": {
+      "section": "10.60",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-gravitational-response.md"
     }
   },
   "findings": [

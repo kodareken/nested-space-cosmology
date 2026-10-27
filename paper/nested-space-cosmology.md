@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 26 October 2026
+Working research manuscript, 27 October 2026
 
 ## Abstract
 
@@ -85,6 +85,16 @@ The forming field supplies a joint clock/lensing map in an explicit weak
 metric. A prospectively frozen calibration from freely falling motion then
 predicts a withheld moving-observer image. Endpoint identities,
 Doppler/aberration and source controls accompany these conditional results.
+
+A separate material-interface candidate now joins two static levels under
+Einstein gravity, four-form vacuum states and canonical surface scalars.
+Both junctions and radial linear stability hold. Its actual axial gravitational
+boundary action composes by Schur elimination, with a positive-energy stability
+proof in that sector. Replacing its regular child by an ingoing termination
+changes the returned wave energy while leaving the exterior mass and outer
+geometry fixed. Numerical controls and an observer-clock causal delay accompany
+this finite comparison; the rotating cascade and absolute vacuum selection
+remain separate questions.
 
 Observer tests remain essential. The exact quiet-cap distance law differs
 from a brightness-scale-independent contrast of 596 Pantheon+ light curves
@@ -7307,6 +7317,228 @@ there would pass the same test. The next outward comparison should ask
 whether the surrounding compensation and inherited scale relation break
 a specified same-core degeneracy.
 
+### 10.57. Flow geometry and a common boundary stress
+
+<!-- nsc-claim:atlas-flow-boundary-dictionary -->
+
+The [flow dictionary](../docs/nsc-atlas-flow-dictionary.md) connects several
+published constructions through explicit operations. PG coordinates expose
+radial null directions as $dr/dt=v\pm1$. Linear potential disturbances in a
+prepared barotropic inviscid medium instead define an acoustic metric.
+Specified near-horizon gravitational perturbations have a fluid limit.
+Their source, state and domain determine which parts can be joined.
+[Hamilton--Lisle](https://arxiv.org/abs/gr-qc/0411060) supplies the river
+construction, [Visser](https://arxiv.org/abs/gr-qc/9712010) the acoustic
+dictionary, and [Bredberg et al.](https://arxiv.org/abs/1101.2451) the
+Einstein/Navier--Stokes limit. The dictionary checks the latter's shear
+coefficient directly from its perturbed Rindler metric, including the
+proper-clock conversion.
+
+One connector is the [Brown--York](https://arxiv.org/abs/gr-qc/9209012)
+boundary stress. With a common spacelike normal from minus to plus,
+
+$$
+t^{\rm BY}_{ab}=\frac{K h_{ab}-K_{ab}}{8\pi G},\qquad
+[t^{\rm BY}_{ab}]=S_{ab},\qquad
+D_a(t^{\rm BY})^a{}_b=-T_{\mu\nu}n^\mu h^\nu{}_b.
+$$
+
+The jump is precisely Israel's material-interface law. Different material
+actions can therefore occupy this mathematical interface. A horizon fluid
+uses an additional limit and constitutive response on an appropriate surface;
+the current pure-tension wall is one candidate in this larger map.
+
+Douglas's circulating-scale hypothesis asks whether nested vortical regions
+and transfer across scales can supply a physical continuation. Published
+[holographic turbulence](https://arxiv.org/abs/1307.7267) provides a gravity/cascade
+block in its own asymptotically AdS setting. The spherical river alone has no
+ordinary circulation. A rotating cosmological state, its energy-transfer
+budget and its light-cone observations remain calculations to construct.
+The next example supplies a finite gravitational response with an explicit
+material action, rather than assigning an arbitrary reflector to a horizon.
+
+### 10.58. Two stable material interfaces in one static geometry
+
+<!-- nsc-claim:atlas-gravitational-background -->
+
+Evidence: [background, force and response record](../results/summaries/nsc-atlas-gravitational-response-v1.json).
+The [derivation](../docs/nsc-atlas-gravitational-response.md) distinguishes this
+candidate from the earlier formed scalar history. It reuses the
+[Visser--Wiltshire](https://arxiv.org/abs/gr-qc/0310107) shell dynamics and
+[Pani et al.](https://arxiv.org/abs/0909.0287) gravitational junctions.
+[Jampolski--Rezzolla](https://arxiv.org/abs/2310.13946) supplies the explicit
+nested-gravastar antecedent; neither nesting nor gravastar perturbations are
+claimed as discoveries here.
+
+Use $G=c=M=1$ and one time normalized at infinity. The three regions have
+
+$$
+ds_i^2=-A_i^2 f_i dt^2+f_i^{-1}dr^2+r^2d\Omega^2,\qquad
+f_i=1-\frac{2m_i}{r}-H_i^2r^2.
+$$
+
+The exterior has $m=1,H=0,A=1$, the parent annulus has $m=.1$, and the
+central region has $m=0$. The radii are $R_o=2.5$ and $R_i=.25$.
+On each surface a canonical massless scalar has homogeneous stress
+$p=\sigma=s^2/2$, where s is its proper-time derivative. The bulk four-form action, with its
+fixed-flux boundary term, supplies the regional vacuum stress
+$\Lambda_i=4\pi G q_i^2=3H_i^2$; surface charges are the oriented flux jumps.
+The material law and geometric ratios are shared declared inputs.
+
+For ordinary increasing-radius normals, the two static Israel conditions are
+
+$$
+\sigma=\frac{\sqrt{f_-}-\sqrt{f_+}}{4\pi R},\qquad
+p=\frac{1}{8\pi}\left[\frac{f'}{2\sqrt{f}}+\frac{\sqrt{f}}{R}\right].
+$$
+
+Putting $p=\sigma$ solves the interior curvature at each interface and its
+matched clock. The full algebra is given in the owner; in this member,
+
+$$
+A_-^2=A_+^2\frac{f_+}{f_-},\qquad
+H_{\rm parent}^2=\frac{3(29-\sqrt{265})}{1000}.
+$$
+
+| Quantity in exterior M units | Parent / outer wall | Center / inner wall |
+| --- | --- | --- |
+| H squared | .0381635382117 | 4.41709564871 |
+| A | .541737767916 | .283041476224 |
+| sigma equals p | .0120417630513 | .129330203316 |
+| Radial potential second derivative | .442766777226 | 51.2125679208 |
+
+All retained lapse factors are positive. The central bulk is nonsingular;
+the two interfaces carry the specified thin material sources. Surface
+conservation gives $\sigma R^4=\mathrm{constant}$. The signed wall potentials
+obey $V=V'=0,V''>0$ with this law, and the normal force balance agrees
+independently. These are radial linear stability results. Polar and nonlinear
+stability are additional questions.
+
+The same construction returns the conditional curvature products
+$\Lambda_{\rm parent}M^2=.114490614635$ and
+$\Lambda_{\rm child}(.1M)^2=.132512869461$. The supplied radius/mass ratios
+and four-form sectors have not been selected by astronomical data or by an
+absolute vacuum-selection mechanism.
+
+### 10.59. The gravitational action now composes through the interfaces
+
+<!-- nsc-claim:atlas-gravitational-composition -->
+
+Evidence: [common-clock wave and junction controls](../results/summaries/nsc-atlas-gravitational-response-v1.json).
+For linear axial modes $\ell\geq2$, use the Fourier convention below
+and the common-time Regge--Wheeler variable
+
+$$
+\psi(t,r)=e^{-i\omega t}\psi(r),\qquad
+\psi(r)=\frac{Af h_1}{r},\qquad \frac{dx}{dr}=\frac{1}{Af},\qquad
+\psi_{xx}+\left[\omega^2-U(r)\right]\psi=0,
+$$
+
+$$
+U=A^2f\left(\frac{\ell(\ell+1)}{r^2}-\frac{6m}{r^3}\right),\qquad
+[\psi]=0,\quad [\psi_x]=q_s\psi,\quad
+q_s=4\pi\sigma\sqrt{F_s}>0.
+$$
+
+Here $F_s=A^2 f$ is the common wall lapse squared. The shell response is
+derived from Pani et al.'s general conditions $[h_0]=0$ and
+$[\sqrt{f} h_1]=0$. Applying the zero-density simplification from their
+special gravastar directly would give the wrong matching here. The
+remaining temporal Israel condition is also checked against the canonical
+surface-scalar stress. This is a coupled gravitational perturbation, not a
+test field assigned a spin-two potential.
+The standard Kottler bulk potential is also given by
+[Cardoso--Lemos, equation 11](https://arxiv.org/html/gr-qc/0301078v2).
+Their subsequent near-extremal approximation is not used here.
+
+Let $T$ propagate $(\psi,\psi_x)$ through a region. Its determinant is 1,
+and a shell adds $q_s\psi$ to the second component. Both preserve the
+Wronskian flux. If $Z=\psi_x/\psi$, the regional response composes as
+
+$$
+Z_{\rm out}=\frac{T_{21}+T_{22}Z_{\rm in}}
+{T_{11}+T_{12}Z_{\rm in}}.
+$$
+
+Away from a Dirichlet pole the boundary action has
+$K_{11}=T_{11}/T_{12}$, $K_{12}=K_{21}=-1/T_{12}$ and
+$K_{22}=T_{22}/T_{12}$. Adding adjacent actions and eliminating their shared
+boundary by a Schur complement gives exactly the propagated result.
+This supplies a physical gravitational realization of the atlas's composition
+method in this sector.
+
+The bulk potentials and shell strengths are nonnegative, so
+
+$$
+\int\left(|\psi_x|^2+U|\psi|^2\right)dx
++\sum_s q_s|\psi(x_s)|^2\geq0.
+$$
+
+With a regular center and radiative exterior, integration by parts excludes
+finite-energy exponentially growing axial modes. This covers a propagating
+gravitational sector across both material levels. It does not establish polar
+stability or the nonlinear formation of a rotating hierarchy.
+
+### 10.60. The same exterior mass permits different gravitational returns
+
+<!-- nsc-claim:atlas-gravitational-contrast -->
+
+Evidence: [two-frequency contrast and numerical controls](../results/summaries/nsc-atlas-gravitational-response-v1.json).
+Keep the outer wall, parent annulus and exterior fixed. Replace only the
+regular child and its inner interface by the same Kottler region extended
+to its horizon, with an ingoing state there. Drive the finite worldtube
+$r_o=10M$ in the $\ell=2$ channel. Define
+
+$$
+a_{\rm in}=\frac{1}{2}\left(\psi-\frac{\psi_x}{i\omega}\right),\qquad
+a_{\rm out}=\frac{1}{2}\left(\psi+\frac{\psi_x}{i\omega}\right),\qquad
+\mathcal R=\frac{a_{\rm out}}{a_{\rm in}}.
+$$
+
+These are the stated finite-boundary canonical energy channels. They have
+not been extrapolated into an astronomical waveform at infinity.
+
+| M omega | Absolute difference of complex returns | Horizon absorbed fraction |
+| --- | --- | --- |
+| .4 | .00000160391406 | .000000288534441 |
+| 2 | .258116878344 | .442777762923 |
+
+The regular child returns all incident power in this lossless sector. At the
+higher frequency the horizon control absorbs about 44.2778%. Its numerical
+indicator in absorbed fraction is $3.69\times10^{-9}$. Lower-frequency waves are strongly
+screened from the changed interior. Three numerical levels, an independent
+hypergeometric cap, another integrator and flux controls resolve both contrasts.
+The indicators are not physical confidence intervals or rigorous enclosures.
+
+![Common geometry, gravitational return and causal delay](../docs/figures/nsc-atlas-gravitational-response.png)
+
+*Figure 32. The matched clocks are continuous across both sourced interfaces.
+The same parent/exterior yields a different return when its inner termination
+changes. The lower panels compare the contrast to numerical indicators and
+show the principal-characteristic return times. The curves use 23 fixed
+plotting frequencies, not a fit or a search over object parameters.*
+
+For initially quiet perturbations, the first possible difference follows a
+round trip from the worldtube to the inner interface. On the receiving clock,
+
+$$
+\Delta\tau_{\rm first}/M=34.3186793341.
+$$
+
+A null round trip to the center is $36.0742605915M$. Neither is a fitted echo
+peak. With the independently supplied example mass of $10^6$ nominal solar
+masses, the first bound becomes 169.036344 seconds and the higher proper
+drive frequency .0722529542 Hz. The [IAU nominal mass parameter](https://arxiv.org/abs/1510.07674)
+sets the unit conversion.
+
+The [calculator and derivation](../docs/nsc-atlas-gravitational-response.md)
+retain the exact action, finite domain and thirteen new controls. The
+calculation uses 145106 RHS calls and about 1.6 solver CPU seconds in four
+workers, with no wave history stored. The result connects a nested source,
+a common gravitational evolution equation, Schur composition and a receiving
+clock. A direct retarded pulse, polar response and a specified rotating or
+dissipative state are the next physical connections.
+
 ## IV. What the observers can reach
 
 ### 11. Complete one reference before assigning its causal arrows
@@ -7356,7 +7588,7 @@ A central signal emitted at $t_C=0$ likewise cannot catch the future wall.
 
 ![Interior and exterior causal charts with named observers](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 
-*Figure 32. The isolated reference in joined causal charts. Horizons are
+*Figure 33. The isolated reference in joined causal charts. Horizons are
 clipped to retained domains; the central cosmological horizon continues
 into the Schwarzschild chart along its appropriate constant null coordinate.
 The faint past $R=0$ line also shows uncut chart context, part of which is
@@ -8362,7 +8594,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 33. Saved finite-window comparisons. A: the previous and current
+*Figure 34. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -8458,7 +8690,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 34. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 35. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -9243,7 +9475,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 35. Research dependencies, distinct from spacetime causal arrows.
+*Figure 36. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

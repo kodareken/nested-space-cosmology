@@ -1,5 +1,12 @@
 # Paper guide
 
+Revision 2026-10-27.1 adds Sections 10.57--10.60 and Figure 32:
+the boundary-fluid dictionary, two sourced stiff-scalar interfaces, a
+physical axial gravitational Schur response and a same-exterior return
+contrast. The radial and axial stability domains, causal front and physical
+unit example are explicit. No rotating cosmology or observed vacuum value
+is inferred from the static benchmark.
+
 Revision2026-10-26.1 adds Sections10.55--10.56 and Figure31: the
 stationarity precheck, finite timelike calibration and prospectively frozen
 NSC-P004 image forecast. The independently evaluated moving-observer

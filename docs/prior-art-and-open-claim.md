@@ -1,5 +1,20 @@
 # Prior art and admission of new research
 
+## A sourced gravitational boundary response, 27 October 2026
+
+The [preparation and result](nsc-atlas-gravitational-response.md) compare
+rotating-cosmology evolution, a freely loaded Rindler calculation and a
+finite sourced four-dimensional gravitational response. The latter is chosen
+to remove arbitrary reflectivity. A compact stiff trial fails radial
+stability; the analytic R=2.5M law and its actual two-shell composition pass.
+Both target frequencies, source worldtube and geometry ratios precede target
+evaluation. This is a conditional benchmark, not a registered astronomical
+prediction. The wave matching uses the general metric junctions, not the
+zero-density-shell simplification. The 180 CPU-second/500000-call allowance
+includes the finite controls and 23 plot frequencies. The retained result
+uses 145106 RHS calls and about 1.6 solver CPU seconds in four workers.
+No field grid, source history or old forecast is changed.
+
 ## Motion-to-light forecast, 26 October 2026
 
 The [owner](nsc-atlas-dynamics-lensing.md) records the execution preparation

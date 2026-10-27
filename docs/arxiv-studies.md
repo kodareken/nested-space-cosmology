@@ -1,5 +1,40 @@
 # Cited arXiv studies
 
+## Two material levels and physical gravitational composition, 27 October 2026
+
+[Visser--Wiltshire,gr-qc/0310107v2](https://arxiv.org/html/gr-qc/0310107v2)
+supplies the static shell equations, conservation and effective potential.
+The stiff-shell discussion was inspected directly and in Grok's independent
+review. Its factor-one-half potential convention is kept distinct from our
+dot(R)^2+V=0. A point where an engineered V=0 law is stiff does not imply
+stability for every perturbation with p=sigma held as its material law.
+
+[Pani et al.,0909.0287v2](https://arxiv.org/html/0909.0287v2), equation 43,
+the regional master definitions and Appendix A's general axial metric
+junctions were inspected. The special continuous-f, zero-surface-density
+case is not applied to our nonzero-density interfaces. The common-clock
+master, interface delta strength and remaining temporal Israel condition
+are derived and checked in the [owner](nsc-atlas-gravitational-response.md).
+
+[Cardoso--Lemos,gr-qc/0301078v2](https://arxiv.org/html/gr-qc/0301078v2),
+Section II equations 7--11, directly verifies the Kottler axial gravitational
+potential before the paper specializes to near extremality. That later
+approximation and spectrum are not used. The IAU2015 Resolution B3 HTML
+table was also inspected for GM_sun=1.3271244e20m^3/s^2 and its exact nominal
+conversion convention.
+
+[Jampolski--Rezzolla,2310.13946v2](https://arxiv.org/abs/2310.13946)
+was read at abstract/bibliographic level for published nested-gravastar
+solutions and recursive constructions. Their finite-thickness anisotropic
+models are not identified with these two canonical-scalar thin interfaces
+and massive Kottler annulus. The existing four-form action supplies bulk
+states/charge jumps; no new four-form mechanism is claimed.
+
+[IAU2015 Resolution B3,1510.07674](https://arxiv.org/abs/1510.07674)
+provides the nominal solar mass parameter for an explicitly supplied
+million-solar-mass example. The nominal conversion is not an inferred mass
+or an astrophysical identification.
+
 ## Flow, interface stress and horizon hydrodynamics, 27 October 2026
 
 [Adams--Chesler--Liu,1307.7267](https://arxiv.org/abs/1307.7267) and their

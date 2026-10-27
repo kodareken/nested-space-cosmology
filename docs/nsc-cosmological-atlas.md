@@ -18,6 +18,18 @@ starting a derivation.
 
 ## Current execution priority — 27 October 2026
 
+### Complete: a physical gravitational response across two levels
+
+The [gravitational-response owner](nsc-atlas-gravitational-response.md)
+now has a finite two-shell Einstein/four-form/surface-scalar solution,
+positive radial potential curvatures and a positive-energy axial stability
+proof. Its genuine gravitational boundary action composes by Schur
+elimination. The same parent/exterior with an inner horizon absorbs
+44.2778% at the declared higher frequency, while the regular child returns
+all power in the stated sector. A receiving-clock causal bound is
+34.31868 GM/c^3. Next: a retarded pulse check, then a specified rotating
+or dissipative state. The completed scalar/observer results stay closed.
+
 ### Connecting flow, interface and horizon-fluid constructions
 
 The [flow dictionary](nsc-atlas-flow-dictionary.md) puts PG rivers,
@@ -27,9 +39,10 @@ and domains. The current tension wall remains one candidate, rather than
 a requirement imposed on every construction. Its stress is exactly the jump
 of the two regional Brown--York stresses. A supplied acoustic sink also gives
 a constructive cone-level attachment, with its forcing and conformal factor
-kept explicit. Next: calculate a physical regional gravitational boundary
-response and its change under a declared parent/child termination. The completed
-inner observer evidence and the outward compensation question remain available.
+kept explicit. The new sourced axial calculation now supplies a physical
+regional gravitational action and its change under a declared child termination.
+The completed inner observer evidence and the outward compensation question
+remain available; full rotation and nonlinear scale transfer remain open.
 
 ### NSC-P004: motion predicts an unevaluated optical response
 

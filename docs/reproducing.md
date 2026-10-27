@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Sourced nested geometry and axial gravitational response
+
+    python scripts/run_python.py scripts/check_nsc_atlas_gravitational_response.py
+    python scripts/run_python.py scripts/plot_nsc_atlas_gravitational_response.py
+    python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_gravitational_response.py
+
+The [owner](nsc-atlas-gravitational-response.md) fixes the action, masses,
+radii and two drive frequencies. The compact output is regenerated without
+raw files or field grids. Four independent workers evaluate the declared
+controls/plot points; the producer sums their solver CPU/call counts and
+rejects a failed refinement or flux check. Numerical indicators do not
+include uncertainty in the chosen physical model or its supplied ratios.
+
 ## Prospective NSC-P004 motion-to-light check
 
     python scripts/run_python.py scripts/replay_nsc_p004_calibration.py

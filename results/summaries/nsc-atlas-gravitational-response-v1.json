@@ -1,0 +1,797 @@
+{
+  "schema": "NSC-ATLAS-GRAVITATIONAL-RESPONSE-v1",
+  "date": "2026-10-27",
+  "theory": "Einstein + regional four-form + canonical surface scalars; static finite candidate",
+  "domain": "linear axial ell>=2; radial linear background stability; no polar/nonlinear stability claim",
+  "observational_validation": false,
+  "preparation": {
+    "outer_mass": 1.0,
+    "outer_radius": 2.5,
+    "intermediate_mass": 0.1,
+    "inner_radius": 0.25,
+    "observer_radius": 10.0,
+    "ell": 2,
+    "fixed_frequencies": [
+      0.4,
+      2.0
+    ],
+    "matter_law": "p=sigma",
+    "controls": [
+      [
+        2e-08,
+        0.004,
+        0.0001
+      ],
+      [
+        5e-10,
+        0.002,
+        2e-05
+      ],
+      [
+        1e-11,
+        0.001,
+        4e-06
+      ]
+    ],
+    "comparison": "same outer wall/parent/exterior; regular child vs ingoing termination"
+  },
+  "regions": {
+    "core": {
+      "mass": 0.0,
+      "H2": 4.417095648706688,
+      "clock": 0.28304147622420095
+    },
+    "parent": {
+      "mass": 0.1,
+      "H2": 0.038163538211700876,
+      "clock": 0.541737767915889
+    },
+    "exterior": {
+      "mass": 1.0,
+      "H2": 0.0,
+      "clock": 1.0
+    }
+  },
+  "interfaces": [
+    {
+      "radius": 0.25,
+      "sigma": 0.12933020331605932,
+      "pressure": 0.12933020331605938,
+      "scalar_proper_rate": 0.5085866756336807,
+      "clock_lapse": 0.24082347807633334,
+      "f_minus": 0.723931521955832,
+      "f_plus": 0.19761477886176865,
+      "V": -1.1102230246251565e-16,
+      "Vprime": 2.220446049250313e-15,
+      "Vsecond": 51.21256792084361,
+      "radial_proper_frequency": 5.0602652065303655,
+      "q": 0.39138902980737866,
+      "induced_clock_gap": -6.938893903907228e-18,
+      "israel_gap": 0.0,
+      "stiff_gap": 5.551115123125783e-17,
+      "force_gap": 1.1102230246251565e-16
+    },
+    {
+      "radius": 2.5,
+      "sigma": 0.012041763051338956,
+      "pressure": 0.012041763051338953,
+      "scalar_proper_rate": 0.15518867904160377,
+      "clock_lapse": 0.44721359549995787,
+      "f_minus": 0.6814778861768696,
+      "f_plus": 0.19999999999999996,
+      "V": 2.220446049250313e-16,
+      "Vprime": -2.7755575615628914e-16,
+      "Vsecond": 0.44276677722557106,
+      "radial_proper_frequency": 0.4705139621868681,
+      "q": 0.06767292357659824,
+      "induced_clock_gap": 2.7755575615628914e-17,
+      "israel_gap": 1.734723475976807e-18,
+      "stiff_gap": -3.469446951953614e-18,
+      "force_gap": 0.0
+    }
+  ],
+  "vacuum_products": {
+    "Lambda_parent_M2": 0.11449061463510263,
+    "Lambda_child_intermediate_mass2": 0.13251286946120067,
+    "note": "conditional geometric/state relations; radius and mass ratios supplied, no absolute vacuum selection"
+  },
+  "targets": [
+    {
+      "omega": 0.4,
+      "comparison": {
+        "cap": {
+          "final": {
+            "omega": 0.4,
+            "observer_proper_frequency": 0.447213595499958,
+            "ell": 2,
+            "termination": "cap",
+            "reflection": {
+              "real": -0.9395293407974171,
+              "imag": -0.34246841866188305
+            },
+            "reflected_power": 1.0,
+            "absorbed_power": -0.0,
+            "energy_balance_gap": 0.0,
+            "flux_relative_gap": 0.0,
+            "impedance": {
+              "real": 2.265352639961003,
+              "imag": -0.0
+            },
+            "horizon_radius": null,
+            "rhs_calls": 2634,
+            "cpu_seconds": 0.03125
+          },
+          "levels": [
+            {
+              "omega": 0.4,
+              "observer_proper_frequency": 0.447213595499958,
+              "ell": 2,
+              "termination": "cap",
+              "reflection": {
+                "real": -0.9395293417681304,
+                "imag": -0.3424684159988241
+              },
+              "reflected_power": 1.0,
+              "absorbed_power": -0.0,
+              "energy_balance_gap": 0.0,
+              "flux_relative_gap": 0.0,
+              "impedance": {
+                "real": 2.2653526587103316,
+                "imag": -0.0
+              },
+              "horizon_radius": null,
+              "rhs_calls": 882,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "omega": 0.4,
+              "observer_proper_frequency": 0.447213595499958,
+              "ell": 2,
+              "termination": "cap",
+              "reflection": {
+                "real": -0.939529340814173,
+                "imag": -0.3424684186159147
+              },
+              "reflected_power": 1.0,
+              "absorbed_power": -0.0,
+              "energy_balance_gap": 0.0,
+              "flux_relative_gap": 0.0,
+              "impedance": {
+                "real": 2.2653526402846444,
+                "imag": -0.0
+              },
+              "horizon_radius": null,
+              "rhs_calls": 1470,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "omega": 0.4,
+              "observer_proper_frequency": 0.447213595499958,
+              "ell": 2,
+              "termination": "cap",
+              "reflection": {
+                "real": -0.9395293407974171,
+                "imag": -0.34246841866188305
+              },
+              "reflected_power": 1.0,
+              "absorbed_power": -0.0,
+              "energy_balance_gap": 0.0,
+              "flux_relative_gap": 0.0,
+              "impedance": {
+                "real": 2.265352639961003,
+                "imag": -0.0
+              },
+              "horizon_radius": null,
+              "rhs_calls": 2634,
+              "cpu_seconds": 0.03125
+            }
+          ],
+          "coarse_to_middle": 2.785533673737737e-09,
+          "middle_to_fine": 4.892698125069204e-11,
+          "other_integrator_gap": 5.730597340729682e-12,
+          "analytic_cap_gap": 2.2650998591337196e-15,
+          "complex_reflection_error_indicator": 9.785396250138408e-11,
+          "absorbed_power_error_indicator": 1.9570792501234355e-10
+        },
+        "horizon": {
+          "final": {
+            "omega": 0.4,
+            "observer_proper_frequency": 0.447213595499958,
+            "ell": 2,
+            "termination": "horizon",
+            "reflection": {
+              "real": -0.9395286581895652,
+              "imag": -0.34246987007045426
+            },
+            "reflected_power": 0.9999997114655587,
+            "absorbed_power": 2.885344413677737e-07,
+            "energy_balance_gap": -2.830175304793033e-17,
+            "flux_relative_gap": 3.2158004234758135e-10,
+            "impedance": {
+              "real": 2.265342073476996,
+              "imag": -9.542871747072678e-07
+            },
+            "horizon_radius": 0.20030671510093326,
+            "rhs_calls": 1782,
+            "cpu_seconds": 0.015625
+          },
+          "levels": [
+            {
+              "omega": 0.4,
+              "observer_proper_frequency": 0.447213595499958,
+              "ell": 2,
+              "termination": "horizon",
+              "reflection": {
+                "real": -0.9395286591607831,
+                "imag": -0.34246986740592444
+              },
+              "reflected_power": 0.9999997114654903,
+              "absorbed_power": 2.8853450552865887e-07,
+              "energy_balance_gap": 4.200551370156665e-15,
+              "flux_relative_gap": 1.4188687589273739e-08,
+              "impedance": {
+                "real": 2.2653420922364416,
+                "imag": -9.542874160320358e-07
+              },
+              "horizon_radius": 0.20030671510093326,
+              "rhs_calls": 702,
+              "cpu_seconds": 0.0
+            },
+            {
+              "omega": 0.4,
+              "observer_proper_frequency": 0.447213595499958,
+              "ell": 2,
+              "termination": "horizon",
+              "reflection": {
+                "real": -0.9395286582062938,
+                "imag": -0.342469870024562
+              },
+              "reflected_power": 0.9999997114655591,
+              "absorbed_power": 2.88534442074005e-07,
+              "energy_balance_gap": -1.1786222586049214e-15,
+              "flux_relative_gap": 4.614521753984099e-09,
+              "impedance": {
+                "real": 2.2653420738000993,
+                "imag": -9.5428717315922e-07
+              },
+              "horizon_radius": 0.20030671510093326,
+              "rhs_calls": 1086,
+              "cpu_seconds": 0.0
+            },
+            {
+              "omega": 0.4,
+              "observer_proper_frequency": 0.447213595499958,
+              "ell": 2,
+              "termination": "horizon",
+              "reflection": {
+                "real": -0.9395286581895652,
+                "imag": -0.34246987007045426
+              },
+              "reflected_power": 0.9999997114655587,
+              "absorbed_power": 2.885344413677737e-07,
+              "energy_balance_gap": -2.830175304793033e-17,
+              "flux_relative_gap": 3.2158004234758135e-10,
+              "impedance": {
+                "real": 2.265342073476996,
+                "imag": -9.542871747072678e-07
+              },
+              "horizon_radius": 0.20030671510093326,
+              "rhs_calls": 1782,
+              "cpu_seconds": 0.015625
+            }
+          ],
+          "coarse_to_middle": 2.7871692209594425e-09,
+          "middle_to_fine": 4.884617646372131e-11,
+          "other_integrator_gap": 5.746347591040388e-12,
+          "analytic_cap_gap": 0.0,
+          "complex_reflection_error_indicator": 9.769235292744262e-11,
+          "absorbed_power_error_indicator": 1.953847059785716e-10
+        }
+      },
+      "complex_response_difference": 1.6039140625650159e-06
+    },
+    {
+      "omega": 2.0,
+      "comparison": {
+        "cap": {
+          "final": {
+            "omega": 2.0,
+            "observer_proper_frequency": 2.23606797749979,
+            "ell": 2,
+            "termination": "cap",
+            "reflection": {
+              "real": 0.18025864313270612,
+              "imag": -0.9836192462411234
+            },
+            "reflected_power": 1.0,
+            "absorbed_power": -0.0,
+            "energy_balance_gap": 0.0,
+            "flux_relative_gap": 0.0,
+            "impedance": {
+              "real": 1.6667859235164728,
+              "imag": -0.0
+            },
+            "horizon_radius": null,
+            "rhs_calls": 4134,
+            "cpu_seconds": 0.0625
+          },
+          "levels": [
+            {
+              "omega": 2.0,
+              "observer_proper_frequency": 2.23606797749979,
+              "ell": 2,
+              "termination": "cap",
+              "reflection": {
+                "real": 0.18025858788154406,
+                "imag": -0.9836192563664824
+              },
+              "reflected_power": 1.0,
+              "absorbed_power": -0.0,
+              "energy_balance_gap": 0.0,
+              "flux_relative_gap": 0.0,
+              "impedance": {
+                "real": 1.6667860187011876,
+                "imag": -0.0
+              },
+              "horizon_radius": null,
+              "rhs_calls": 1410,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "omega": 2.0,
+              "observer_proper_frequency": 2.23606797749979,
+              "ell": 2,
+              "termination": "cap",
+              "reflection": {
+                "real": 0.1802586416991357,
+                "imag": -0.9836192465038402
+              },
+              "reflected_power": 0.9999999999999998,
+              "absorbed_power": -0.0,
+              "energy_balance_gap": 2.220446049250313e-16,
+              "flux_relative_gap": 0.0,
+              "impedance": {
+                "real": 1.6667859259861764,
+                "imag": -0.0
+              },
+              "horizon_radius": null,
+              "rhs_calls": 2334,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "omega": 2.0,
+              "observer_proper_frequency": 2.23606797749979,
+              "ell": 2,
+              "termination": "cap",
+              "reflection": {
+                "real": 0.18025864313270612,
+                "imag": -0.9836192462411234
+              },
+              "reflected_power": 1.0,
+              "absorbed_power": -0.0,
+              "energy_balance_gap": 0.0,
+              "flux_relative_gap": 0.0,
+              "impedance": {
+                "real": 1.6667859235164728,
+                "imag": -0.0
+              },
+              "horizon_radius": null,
+              "rhs_calls": 4134,
+              "cpu_seconds": 0.0625
+            }
+          ],
+          "coarse_to_middle": 5.471384540790164e-08,
+          "middle_to_fine": 1.4574444474368306e-09,
+          "other_integrator_gap": 3.316608017540746e-11,
+          "analytic_cap_gap": 1.914436678328182e-14,
+          "complex_reflection_error_indicator": 2.914888894873661e-09,
+          "absorbed_power_error_indicator": 5.8297777982439e-09
+        },
+        "horizon": {
+          "final": {
+            "omega": 2.0,
+            "observer_proper_frequency": 2.23606797749979,
+            "ell": 2,
+            "termination": "horizon",
+            "reflection": {
+              "real": 0.17551432428360686,
+              "imag": -0.7255459730709424
+            },
+            "reflected_power": 0.5572222370681917,
+            "absorbed_power": 0.44277776292337206,
+            "energy_balance_gap": 8.436196186067946e-12,
+            "flux_relative_gap": 1.9052569732300687e-11,
+            "impedance": {
+              "real": 1.5208607600448756,
+              "imag": -0.4640666133209973
+            },
+            "horizon_radius": 0.20030671510093326,
+            "rhs_calls": 3246,
+            "cpu_seconds": 0.046875
+          },
+          "levels": [
+            {
+              "omega": 2.0,
+              "observer_proper_frequency": 2.23606797749979,
+              "ell": 2,
+              "termination": "horizon",
+              "reflection": {
+                "real": 0.1755142792182993,
+                "imag": -0.7255459793001405
+              },
+              "reflected_power": 0.5572222302881191,
+              "absorbed_power": 0.4427777662106326,
+              "energy_balance_gap": 3.5012482912932796e-09,
+              "flux_relative_gap": 7.907462361390693e-09,
+              "impedance": {
+                "real": 1.5208608503393253,
+                "imag": -0.4640666439947224
+              },
+              "horizon_radius": 0.20030671510093326,
+              "rhs_calls": 1230,
+              "cpu_seconds": 0.015625
+            },
+            {
+              "omega": 2.0,
+              "observer_proper_frequency": 2.23606797749979,
+              "ell": 2,
+              "termination": "horizon",
+              "reflection": {
+                "real": 0.17551432311392443,
+                "imag": -0.7255459734544291
+              },
+              "reflected_power": 0.557222237214074,
+              "absorbed_power": 0.44277776254740486,
+              "energy_balance_gap": 2.3852109176658587e-10,
+              "flux_relative_gap": 5.386924939186739e-10,
+              "impedance": {
+                "real": 1.520860762596913,
+                "imag": -0.4640666137015328
+              },
+              "horizon_radius": 0.20030671510093326,
+              "rhs_calls": 1950,
+              "cpu_seconds": 0.03125
+            },
+            {
+              "omega": 2.0,
+              "observer_proper_frequency": 2.23606797749979,
+              "ell": 2,
+              "termination": "horizon",
+              "reflection": {
+                "real": 0.17551432428360686,
+                "imag": -0.7255459730709424
+              },
+              "reflected_power": 0.5572222370681917,
+              "absorbed_power": 0.44277776292337206,
+              "energy_balance_gap": 8.436196186067946e-12,
+              "flux_relative_gap": 1.9052569732300687e-11,
+              "impedance": {
+                "real": 1.5208607600448756,
+                "imag": -0.4640666133209973
+              },
+              "horizon_radius": 0.20030671510093326,
+              "rhs_calls": 3246,
+              "cpu_seconds": 0.046875
+            }
+          ],
+          "coarse_to_middle": 4.428315987556765e-08,
+          "middle_to_fine": 1.2309423365733619e-09,
+          "other_integrator_gap": 2.3997885683936743e-11,
+          "analytic_cap_gap": 0.0,
+          "complex_reflection_error_indicator": 2.4618846731467238e-09,
+          "absorbed_power_error_indicator": 3.683898058113836e-09
+        }
+      },
+      "complex_response_difference": 0.2581168783441191
+    }
+  ],
+  "curve": [
+    {
+      "omega": 0.2,
+      "cap": {
+        "real": 0.253942749665466,
+        "imag": -0.9672192512002347
+      },
+      "horizon": {
+        "real": 0.25394275214889495,
+        "imag": -0.9672192504342108
+      },
+      "absorbed": 2.2052856616245186e-10
+    },
+    {
+      "omega": 0.3,
+      "cap": {
+        "real": 0.9933753773800663,
+        "imag": 0.1149145752940445
+      },
+      "horizon": {
+        "real": 0.9933753698287199,
+        "imag": 0.1149146166856513
+      },
+      "absorbed": 5.489643751422014e-09
+    },
+    {
+      "omega": 0.4,
+      "cap": {
+        "real": -0.939529340814173,
+        "imag": -0.3424684186159147
+      },
+      "horizon": {
+        "real": -0.9395286582062938,
+        "imag": -0.342469870024562
+      },
+      "absorbed": 2.88534442074005e-07
+    },
+    {
+      "omega": 0.5,
+      "cap": {
+        "real": -0.19867403851550908,
+        "imag": 0.9800656235272911
+      },
+      "horizon": {
+        "real": -0.19868431205397208,
+        "imag": 0.9800622480565513
+      },
+      "absorbed": 2.53407797851862e-06
+    },
+    {
+      "omega": 0.6,
+      "cap": {
+        "real": 0.9856379912473374,
+        "imag": -0.16887199356291602
+      },
+      "horizon": {
+        "real": 0.9856385248043678,
+        "imag": -0.16884734404093343
+      },
+      "absorbed": 7.272831804116427e-06
+    },
+    {
+      "omega": 0.7,
+      "cap": {
+        "real": -0.8625976188570988,
+        "imag": -0.505890648205779
+      },
+      "horizon": {
+        "real": -0.8625550396615582,
+        "imag": -0.5059398928592355
+      },
+      "absorbed": 2.362836807558941e-05
+    },
+    {
+      "omega": 0.8,
+      "cap": {
+        "real": 0.3812737208326166,
+        "imag": 0.924462194901691
+      },
+      "horizon": {
+        "real": 0.3811223046418452,
+        "imag": 0.9244881288903389
+      },
+      "absorbed": 6.748844543482495e-05
+    },
+    {
+      "omega": 0.8999999999999999,
+      "cap": {
+        "real": 0.43600851480275093,
+        "imag": -0.8999425398432387
+      },
+      "horizon": {
+        "real": 0.43628119874220156,
+        "imag": -0.899704833680185
+      },
+      "absorbed": 0.00018992787712922513
+    },
+    {
+      "omega": 1.0,
+      "cap": {
+        "real": -0.9398987646081534,
+        "imag": 0.34145323587288984
+      },
+      "horizon": {
+        "real": -0.9399235360868414,
+        "imag": 0.34068821928584775
+      },
+      "absorbed": 0.00047528355112437114
+    },
+    {
+      "omega": 1.0999999999999999,
+      "cap": {
+        "real": 0.9212856249641973,
+        "imag": 0.38888661231048915
+      },
+      "horizon": {
+        "real": 0.9203033233149679,
+        "imag": 0.3898943573203293
+      },
+      "absorbed": 0.0010241832268479312
+    },
+    {
+      "omega": 1.2,
+      "cap": {
+        "real": -0.4311054109494073,
+        "imag": -0.9023015707900227
+      },
+      "horizon": {
+        "real": -0.4283030820346272,
+        "imag": -0.9023224687537114
+      },
+      "absorbed": 0.0023706323043325528
+    },
+    {
+      "omega": 1.2999999999999998,
+      "cap": {
+        "real": -0.27264228337398944,
+        "imag": 0.9621154740033118
+      },
+      "horizon": {
+        "real": -0.27660240890722576,
+        "imag": 0.9581280728806368
+      },
+      "absorbed": 0.005481703355736593
+    },
+    {
+      "omega": 1.4,
+      "cap": {
+        "real": 0.9024600687235929,
+        "imag": -0.4307735186375878
+      },
+      "horizon": {
+        "real": 0.9008089510580618,
+        "imag": -0.4200348466312747
+      },
+      "absorbed": 0.01211396132044496
+    },
+    {
+      "omega": 1.4999999999999998,
+      "cap": {
+        "real": -0.9149125871132356,
+        "imag": -0.4036520258115472
+      },
+      "horizon": {
+        "real": -0.8970942101575659,
+        "imag": -0.4124699515906806
+      },
+      "absorbed": 0.02509051714622813
+    },
+    {
+      "omega": 1.5999999999999999,
+      "cap": {
+        "real": 0.3343035148856492,
+        "imag": 0.9424654688290178
+      },
+      "horizon": {
+        "real": 0.3042251716794335,
+        "imag": 0.9272775007485046
+      },
+      "absorbed": 0.047603481527471285
+    },
+    {
+      "omega": 1.6999999999999997,
+      "cap": {
+        "real": 0.46877629329513143,
+        "imag": -0.8833169232186581
+      },
+      "horizon": {
+        "real": 0.47723850510347054,
+        "imag": -0.8247133408839337
+      },
+      "absorbed": 0.09209131460813437
+    },
+    {
+      "omega": 1.7999999999999998,
+      "cap": {
+        "real": -0.9780313601993922,
+        "imag": 0.20845780979979267
+      },
+      "horizon": {
+        "real": -0.8960358303704689,
+        "imag": 0.14068927860402639
+      },
+      "absorbed": 0.17732631753674152
+    },
+    {
+      "omega": 1.9,
+      "cap": {
+        "real": 0.7268885659648084,
+        "imag": 0.686755424201094
+      },
+      "horizon": {
+        "real": 0.5693801248429501,
+        "imag": 0.6133682557095911
+      },
+      "absorbed": 0.29958565619841127
+    },
+    {
+      "omega": 1.9999999999999998,
+      "cap": {
+        "real": 0.1802586416991397,
+        "imag": -0.9836192465038395
+      },
+      "horizon": {
+        "real": 0.1755143231139024,
+        "imag": -0.7255459734544335
+      },
+      "absorbed": 0.44277776254740786
+    },
+    {
+      "omega": 2.1,
+      "cap": {
+        "real": -0.9107456451179875,
+        "imag": 0.4129677589093621
+      },
+      "horizon": {
+        "real": -0.578842197698502,
+        "imag": 0.25839795795671033
+      },
+      "absorbed": 0.5981722051450616
+    },
+    {
+      "omega": 2.1999999999999997,
+      "cap": {
+        "real": 0.8232737923959632,
+        "imag": 0.5676444862358558
+      },
+      "horizon": {
+        "real": 0.4429079411244638,
+        "imag": 0.23957162156618367
+      },
+      "absorbed": 0.7464379933874086
+    },
+    {
+      "omega": 2.3,
+      "cap": {
+        "real": 0.16971652057314277,
+        "imag": -0.9854929236907519
+      },
+      "horizon": {
+        "real": -0.04140171259962493,
+        "imag": -0.37503331469181067
+      },
+      "absorbed": 0.8576359105313147
+    },
+    {
+      "omega": 2.4,
+      "cap": {
+        "real": -0.9667622075029557,
+        "imag": 0.2556772069309503
+      },
+      "horizon": {
+        "real": -0.21427398045534415,
+        "imag": 0.19814593492918292
+      },
+      "absorbed": 0.9148248491882369
+    }
+  ],
+  "causal_times": {
+    "first_possible_difference_proper_over_M": 34.31867933409635,
+    "center_null_roundtrip_proper_over_M": 36.074260591508576,
+    "note": "characteristic/front bounds, not fitted echo peaks"
+  },
+  "physical_example": {
+    "nominal_solar_masses": 1000000.0,
+    "nominal_GM_sun_m3_s2": 1.3271244e+20,
+    "M_seconds": 4.925490947641268,
+    "M_meters": 1476625038.050125,
+    "first_possible_difference_seconds": 169.03634439509503,
+    "center_null_roundtrip_seconds": 177.6834439863276,
+    "proper_frequencies_Hz": [
+      0.014450590834158936,
+      0.07225295417079468
+    ]
+  },
+  "compute": {
+    "rhs_calls": 145106,
+    "scientific_cpu_seconds": 1.625,
+    "elapsed_seconds": 1.1310519999969983,
+    "workers": 4,
+    "cpu_limit": 180.0,
+    "rhs_limit": 500000,
+    "cpu_note": "sum of solver process CPU, excludes worker import/startup; no field grids"
+  },
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_gravitational_response.py": "0dbc5f629762fe757c70c25ee3a098c80e7e3df2b6a927e5c7f4a3cf68b3453b",
+    "scripts/check_nsc_atlas_gravitational_response.py": "e1ca5fb2fc16ffeaf106e821644ffbd88323a1faa7c37ce783a8de70a5c9f244",
+    "tests/test_nsc_atlas_gravitational_response.py": "4b55cb1130bdce382233fb468646149b35c6f858baf630e670530a55ebbf2877"
+  }
+}

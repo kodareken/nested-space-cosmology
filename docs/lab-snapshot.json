@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "8d53675dfd2e7ecfcb6355e5ad1d19a476af3e31",
+  "current_receipt_commit_parent": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 28417,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 29184,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "8a90789a5400b78c7e71b24fa9c9a839e17611d57bf69e40c35783e5ad27db43"
+      "sha256": "1f466706ba402ab08d3687ef4466eb18cb7a146792d1250bb7290827297a28ce"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 285826,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 286452,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "50d32ecb16c7cf9192ec64c995afa33576cc1cf6cceb9939011bfa21af0f53d0"
+      "sha256": "34f92ad4007969b83c3b4e2fc475e0cd385f1b1b5c4f63148cf9231b932b4f34"
     },
     {
-      "bytes": 135237,
-      "change": "Record the circulating-scale hypothesis and its holographic-turbulence reference.",
-      "changed_from_commit": "8d53675dfd2e7ecfcb6355e5ad1d19a476af3e31",
+      "bytes": 137278,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "024f272c85728fbba5bb24950bedcc0f6b947f7c8666f8bea8f6a92604aa2337"
+      "sha256": "654d40e23cc64d10d4332581776325aa80a6dbb7c8bb8c3d24af81f964b0c290"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 462673,
-      "change": "Connect flow geometry, interface stress and the horizon-fluid limit in the atlas.",
-      "changed_from_commit": "b63e37689f232f9d3c32948ee51d74ba1e4ac09d",
+      "bytes": 463435,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "26924a5279ccd2f2bda7b9fe446b14a22a9f83d64d10bdc2c1b7c48504a8462e"
+      "sha256": "ffa5b4dedd125a05612e9c055bd8288051a0801ffb4c89911c0a738ae4b2194d"
     },
     {
       "bytes": 173938,
@@ -10427,6 +10427,14 @@
       "path": "docs/figures/nsc-atlas-geometric-observer.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "e007d2cd3888c4fc99574bb09d98dec251350052de9612eeb9a104a1fd64a1d0"
+    },
+    {
+      "bytes": 230244,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "path": "docs/figures/nsc-atlas-gravitational-response.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "bc4d84ab77f8c18e322f4f8af7f01cfffc05c1679c49f8492bd1f4e1176c752b"
     },
     {
       "bytes": 269452,
@@ -10740,12 +10748,12 @@
       "sha256": "48bcd7f4e6bf1595dacf25e241d08de50e5e45e2c81ed93a8f975f16356d78dc"
     },
     {
-      "bytes": 17538,
-      "change": "Record the circulating-scale hypothesis and its holographic-turbulence reference.",
-      "changed_from_commit": "8d53675dfd2e7ecfcb6355e5ad1d19a476af3e31",
+      "bytes": 17724,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "docs/nsc-atlas-flow-dictionary.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "ae96337febada2be61e596010c270341d5f6935f1552caa11cc6e563bdf344c3"
+      "sha256": "1c5359bfcd1276ea4fe65b61c921ee6821a3b4ea9858452544bf155aa9f910e3"
     },
     {
       "bytes": 12252,
@@ -10786,6 +10794,14 @@
       "path": "docs/nsc-atlas-geometric-observer.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "58fcb5128f13af52aad4277447556312a228a7a1635b01c871b21ea874a16bf3"
+    },
+    {
+      "bytes": 15905,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "path": "docs/nsc-atlas-gravitational-response.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9c8c2bf7918ec2074b361c892c8ccc7766ed5b8300e8762b1a9c9e867f8703a8"
     },
     {
       "bytes": 11370,
@@ -10960,15 +10976,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 115803,
-      "change": "Record the circulating-scale hypothesis and its holographic-turbulence reference.",
-      "changed_from_commit": "8d53675dfd2e7ecfcb6355e5ad1d19a476af3e31",
+      "bytes": 116580,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "38234dfed5f00e10663677427a4ddc8035da3ecddae569e1ec52430d5c522131"
+      "sha256": "e5047ad25719edf0d43a07f3cf6d3566c6ec277cbd146ec40300a7f6f221adf1"
     },
     {
       "bytes": 30876,
@@ -11920,12 +11936,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 25639,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 26034,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "cabdfca5e7c00f85602439a5f2e19f4e0863b007644dcf9c760e1605ae96c965"
+      "sha256": "e6fd4980d0b5f7d619b5fa91a693bac92189e8509722dae54d04f6f90f870542"
     },
     {
       "bytes": 13971,
@@ -11936,12 +11952,12 @@
       "sha256": "e4084dc669884d68ebedc282a2023de479a55bff74094247adbbe80616973a9c"
     },
     {
-      "bytes": 602151,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 603090,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "88b08c0c3c0fea5777774cafc5e504cd4ee5b1e66f644d13f559c4d3270436f3"
+      "sha256": "9ea5f1911d6cb7fbd5dab129deaeeda228bdf98a98c19e1e34331b8e9cc2a563"
     },
     {
       "bytes": 6705,
@@ -11950,20 +11966,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 229351,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 230112,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a3a26e3571bed13a393b1385c766540694ec4d352071bb18d7fab1934901eeb0"
+      "sha256": "bf25e31122cddbd186488e2547fb6b5bd4ed5adc2fbbb32b3f8e2ea61421d288"
     },
     {
-      "bytes": 45046,
-      "change": "Connect flow geometry, interface stress and the horizon-fluid limit in the atlas.",
-      "changed_from_commit": "b63e37689f232f9d3c32948ee51d74ba1e4ac09d",
+      "bytes": 45808,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "1a8034229a25c9f9b06819a4edf82d6957b097dd311ecb0c57d8e02a513150bb"
+      "sha256": "cf29835c99a6f80bf7a8f393ba29fd6dc05ab1d495f295a065a6c46fc67d2c53"
     },
     {
       "bytes": 18356,
@@ -12032,28 +12048,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 33024,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 33359,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "da55efc56f5761f17c9f184ce0a6b7e78f03a3d3f6357a3d395dbaa6be4199d8"
+      "sha256": "446b870e05c5e1f4e8f41d937bf150db338e9ed6b5832a2223720c700276ee67"
     },
     {
       "bytes": 3206,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "dc5ac2153bdb53da5c39d38cb8f40f2056da1e803bb649ceedae59134db1783f"
+      "sha256": "f6229d71cd3a5640115a59cc176acc3fdd51af7cb43fcace02ed9b16e8ccdc4d"
     },
     {
-      "bytes": 44102,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 44738,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "282f12bc23abf6dccfcf9d0fc7ac4325e81a3a85981f6ba1758615f030758d7e"
+      "sha256": "dfacfc01a58f80c5dc79d3d612f8a2f58b4e5f0974d39a6391e15c821ac8586a"
     },
     {
       "bytes": 226492,
@@ -12065,27 +12081,27 @@
     },
     {
       "bytes": 396,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "dd043809ac9e1d2cdbd3f11628c11741b213b4e73dd5e0494eb83b739229abbf"
+      "sha256": "e6497e6fe88a62b2ef1b18aa46035b3428462093f289d0df340bdb5fdbc65f0a"
     },
     {
-      "bytes": 438147,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 449158,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "cfdd9472b5382d950b3262476e53f06ab967c76c663ad69414add01df1c8a4ad"
+      "sha256": "442411696334feb74c834e6865367a6c8a91008283f8324a322d75328d680e72"
     },
     {
-      "bytes": 12109180,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 12468865,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "6e4f24f3cbaf08addd96464c7ca91e853505a3ef9ad28c6aa98de3402d146163"
+      "sha256": "93a5175249088cecaa8836563c70998072624df7b3b17b7ff231ddd0ad4c900b"
     },
     {
       "bytes": 3283,
@@ -30798,6 +30814,14 @@
       "sha256": "4b875644a0876ef8c4283671bd114079a7b18bde280e86d34acbcd61e1945f0d"
     },
     {
+      "bytes": 24132,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "path": "results/summaries/nsc-atlas-gravitational-response-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "95ad33931220303509e948ba400babe2a8e765a3d827574e64a04d5ab7dd8307"
+    },
+    {
       "bytes": 22452,
       "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
       "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
@@ -31453,6 +31477,14 @@
       "path": "scripts/check_nsc_atlas_geometric_remainder_bound.py",
       "retention_reason": "Finite-onset quadratic geometric remainder and independent derivative controls.",
       "sha256": "9e6c41b952191ea381df4d3efa2cd71282e378d2e19133c1e6bd4f5649c3b2b7"
+    },
+    {
+      "bytes": 8275,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "path": "scripts/check_nsc_atlas_gravitational_response.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e1ca5fb2fc16ffeaf106e821644ffbd88323a1faa7c37ce783a8de70a5c9f244"
     },
     {
       "bytes": 10440,
@@ -34448,6 +34480,14 @@
       "sha256": "64d3904f6d328d531252066db5765ab490fba35281ee2f1cd9d88d7f106e12d0"
     },
     {
+      "bytes": 4335,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "path": "scripts/plot_nsc_atlas_gravitational_response.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "95eace0738603c13cb199ea6df7e00f9638aebc33641aa319b580884df66916e"
+    },
+    {
       "bytes": 3436,
       "change": "Evolve the supplied core and reservoir with parent expansion and checked envelope conservation.",
       "changed_from_commit": "7fafa1adb5b86cd6e080be0d968f71d8eeddf0e6",
@@ -35621,6 +35661,14 @@
       "path": "src/recursive_horizons/nsc_atlas_gravitational_reduction.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "9814cda8ba1a3956c5bc92b756ea0c1ebc39b42525525373570f356381144c14"
+    },
+    {
+      "bytes": 13648,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "path": "src/recursive_horizons/nsc_atlas_gravitational_response.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0dbc5f629762fe757c70c25ee3a098c80e7e3df2b6a927e5c7f4a3cf68b3453b"
     },
     {
       "bytes": 11349,
@@ -40035,6 +40083,14 @@
       "path": "tests/test_nsc_atlas_gravitational_reduction.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "b39792080cb6d6c7fc7b7b9816160412c5acee39fac74a47064d9d137491c59c"
+    },
+    {
+      "bytes": 7331,
+      "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
+      "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
+      "path": "tests/test_nsc_atlas_gravitational_response.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4b55cb1130bdce382233fb468646149b35c6f858baf630e670530a55ebbf2877"
     },
     {
       "bytes": 3240,

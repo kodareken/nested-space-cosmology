@@ -17,9 +17,10 @@ constructions and makes the required source and state data visible.
 Completed here: the river/light-cone dictionary, an acoustic realization, the
 Israel--Brown--York stress connection and a near-horizon pressure limit. These
 are attributed applications of established mathematics, not new discoveries of
-river coordinates, acoustic gravity or horizon hydrodynamics. The active next
-connection is a regional gravitational boundary-response operator; the existing
-formed-source/observer evidence remains valid in its original domain.
+river coordinates, acoustic gravity or horizon hydrodynamics. The
+[gravitational-response entry](nsc-atlas-gravitational-response.md) now realizes
+a regional operator in the sourced axial sector. The existing formed-source
+and observer evidence remains valid in its original domain.
 
 The finite checks use symbolic contractions and the existing signed shell at
 three radii. The allowance is 30 CPU seconds for those checks, no field grids.
@@ -42,13 +43,14 @@ flowchart TD
     A -->|match principal null cones| R
     S[The declared scalar envelope] -->|amplitude and phase away from zeros| M[Madelung continuity and stress]
     M -.->|requires a background perturbation calculation| A
-    B -.->|regional retarded response and composition| Q[Nested boundary response]
+    B -->|axial regional response and Schur composition| Q[Nested gravitational response]
 ```
 
 The Madelung-to-acoustic arrow requires a separate perturbation calculation;
 the dispersive gradient stress need not have a nondispersive acoustic metric.
-The last arrow is the next calculation, not a completed response kernel.
-Dashed edges mark these remaining connections.
+The boundary-response arrow is now realized in the sourced axial sector of the
+[nested gravitational body](nsc-atlas-gravitational-response.md). A full tensor
+response, a rotating state and the remaining dashed connection remain separate.
 
 | Piece | What is shared | What its attachment must specify |
 | --- | --- | --- |
@@ -265,15 +267,15 @@ essential. Dissipative Navier--Stokes, circulation quantization, fermion
 statistics and a horizon for scalar excitations require their own specified
 connections. Spherical radial evolution does not yet construct a vortex.
 
-The next high-value joint is a regional retarded map delta h_ab -> delta tBY_ab:
-perturb the boundary metric, solve the region's gravitational response with
-its actual state and boundary conditions, and return its boundary traction.
-Check the isolated nonextremal horizon limit first, using the published fluid
-coefficient as a known limit. Then replace the remote termination by a declared
-parent/child interface and calculate the change in the response. Schur
-composition can organize regional response operators once their physical
-variables and constraints agree; the existing fermion operator is not already
-this gravitational kernel.
+The [first physical gravitational joint](nsc-atlas-gravitational-response.md)
+now supplies an axial regional action and its derived material-interface
+transfer. Its Schur elimination agrees with propagation through a sourced
+child and parent. A regular child and an ingoing termination give different
+returns while the outside geometry stays fixed. The Rindler viscosity check
+above and this spherical axial response retain their respective domains;
+neither substitutes the existing fermion operator for a gravitational kernel.
+The full tensor map delta h_ab -> delta tBY_ab and a rotating/dissipative
+material state remain further connections.
 
 That calculation can supply a viscosity, memory, transmission or resonant
 coefficient changed by nesting. A vacuum/trace term requires its own tensor
