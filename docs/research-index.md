@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [cosmohedra assessment](nsc-cosmohedra-assessment.md) now includes a
+direct formal Schrodinger reproduction of the simplest connected cubic
+wavefunction kernel and its normalized scaling. The
+[two symbolic controls](../tests/test_nsc_cosmohedra_seed.py) pass. The
+proposal is a quantum-composition pilot; its actual atlas-mode interaction,
+state and inherited physical map remain to be derived. The current fluid
+and gravitational results keep their existing domains and priority.
+
 The [vortex-transfer entry](nsc-atlas-vortex-transfer.md) now incorporates
 the official OpenAI forced Navier--Stokes blowup paper with a pinned source
 and reading boundary. An independently checked compact preparation proves

@@ -1,5 +1,26 @@
 # Cited arXiv studies
 
+## Cosmohedra relevance and the inherited-law question, 27 October 2026
+
+The [assessment and low-point seed](nsc-cosmohedra-assessment.md) compares
+Arkani-Hamed--Figueiredo--Vazao 2412.19881v1 and the 2603.03425v3
+combinatorial theorem with the actual quadratic gravitational boundary
+action and nonlinear fluid covariance. Read: the scalar action, Russian-doll
+and cut descriptions, facet factorization, selected wavefunction extraction
+and Appendix A's four-point example; plus the later paper's introduction,
+physical motivation and Matryoshka definition. The full polytope/fan proofs
+and loop construction were not independently reproduced.
+
+A separate symbolic Schrodinger calculation recovers the connected
+two-vertex denominator 1/(Et EL ER), matching equation 49 of the original
+paper. Its normalized homogeneity and a formal canonical Hamiltonian
+scaling are checked. This is a promising quantum-composition pilot, not an
+identification of fluid vortices or physical horizons with momentum polygons.
+The actual interaction vertex, state and transformation between regional
+modes remain the next physical inputs to derive. The two controls and
+the assessment preserve that boundary without changing the completed atlas
+calculations or the main PDF.
+
 ## OpenAI Navier--Stokes source and nonlinear transport, 27 October 2026
 
 OpenAI, [Finite time blowup for Navier--Stokes](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf),
