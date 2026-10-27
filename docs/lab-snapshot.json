@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+  "current_receipt_commit_parent": "2c57fe205ab4cfb4edb7d71acb13d10a35370609",
   "files": [
     {
       "bytes": 3120,
@@ -10718,12 +10718,12 @@
       "sha256": "90eb79c787ea25dac6aa95d9b0531c3e156d5a65fd84b964b84e70c132f341c0"
     },
     {
-      "bytes": 12490,
+      "bytes": 12551,
       "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "changed_from_commit": "2c57fe205ab4cfb4edb7d71acb13d10a35370609",
       "path": "docs/nsc-atlas-cosmohedron-interaction.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "25efd2f99302e3c59cc429758c9257623161a4829d17d755118ff87c60647983"
+      "sha256": "ce1b9943f1b96130d138a0b50d4af4a6154deff37bb095b2eed383bb51ce65cd"
     },
     {
       "bytes": 191654,

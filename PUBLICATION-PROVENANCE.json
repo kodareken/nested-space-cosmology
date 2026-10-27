@@ -1723,7 +1723,7 @@
     {
       "bytes": 2545016,
       "path": "docs/lab-snapshot.json",
-      "sha256": "87ba57a67e0eca30fe10efa9c04388137fcb12e94ccdcb7fd1549b1eeb09cb66"
+      "sha256": "34031ec9e747d5a0335dc441fc1a7565932c8bd13ba3c1edf8eea87e16bec837"
     },
     {
       "bytes": 4997,
@@ -1811,9 +1811,9 @@
       "sha256": "90eb79c787ea25dac6aa95d9b0531c3e156d5a65fd84b964b84e70c132f341c0"
     },
     {
-      "bytes": 12490,
+      "bytes": 12551,
       "path": "docs/nsc-atlas-cosmohedron-interaction.md",
-      "sha256": "25efd2f99302e3c59cc429758c9257623161a4829d17d755118ff87c60647983"
+      "sha256": "ce1b9943f1b96130d138a0b50d4af4a6154deff37bb095b2eed383bb51ce65cd"
     },
     {
       "bytes": 191654,
@@ -23496,7 +23496,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "87ba57a67e0eca30fe10efa9c04388137fcb12e94ccdcb7fd1549b1eeb09cb66",
+  "lab_snapshot_sha256": "34031ec9e747d5a0335dc441fc1a7565932c8bd13ba3c1edf8eea87e16bec837",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-27.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

@@ -261,7 +261,8 @@ pass. An [additional Fock-space check](../tests/test_nsc_cosmohedron_fock_exchan
 independently recovers the mixed moment and kernel. In that calculation,
 the vacuum-to-second-order path and the two first-order states combine to
 cancel the apparent extra internal-frequency denominators. Grok independently
-reviewed the action, mode normalization and coefficient algebra.
+reviewed the action and mode normalization; the coefficient algebra is checked
+by the two explicit quantum derivations above.
 
 Next: include the remaining constrained axial terms and/or a controlled pole
 sum before claiming a full cross-wall four-point prediction, then extend to
