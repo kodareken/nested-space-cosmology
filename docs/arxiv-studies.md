@@ -1,5 +1,21 @@
 # Cited arXiv studies
 
+## Physical normalization from internal volume — 28 October 2026
+
+[Bousso--Polchinski, Sections 2.1 and 2.5--2.6](https://arxiv.org/html/hep-th/0004134)
+supplies the fixed-flux boundary-term and dimensional charge-normalization
+precedents. It also states that flux energetics cannot be separated from
+modulus stabilization. The new [volume construction](nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum)
+independently reduces a D-form with completely wrapped membranes, rather
+than attributing its exponents or ancestor sheet to their examples.
+
+[Goldberger--Wise, equations (1)--(14)](https://arxiv.org/html/hep-ph/9907447v2)
+provides an action-based modulus-stabilization precedent with bulk and
+boundary scalar sources in a different warped geometry. Its coefficients,
+background and hierarchy are not imported as NSC predictions. Reading
+scope is the displayed reduction/selection argument, not a proof of a
+localized uplift or ultraviolet completion for the candidate developed here.
+
 ## Shared ruler, Planck compression and dimensional conversion — 28 October 2026
 
 [Chen--Huang--Wang, 1808.05724v1](https://arxiv.org/html/1808.05724v1),

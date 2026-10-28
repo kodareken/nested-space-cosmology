@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+`nsc_atlas_parent_scale_selector.py` owns the new physical-volume reduction,
+exact matching/stiffness conditions, finite homogeneous evolution and
+variable-frequency action ledger. `check_nsc_atlas_parent_scale_selector.py`
+produces its compact creation-only record; eight symbolic and numerical
+controls live in `test_nsc_atlas_parent_scale_selector.py`. The
+[scale owner](nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum)
+keeps its added ancestor source and unresolved UV/SI inputs explicit.
+
 `nsc_atlas_shared_ruler.py` profiles the common BAO scale and propagates
 the one-dimensional SN posterior. `measure_nsc_atlas_shared_ruler.py`
 authenticates the fixed 485b3b9 source and runs four independent model/order

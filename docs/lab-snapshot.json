@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a9b8c13320cee273ac5b981155233b41f23799d2",
+  "current_receipt_commit_parent": "10e00fcb651ae3d490f21df4e6fd271690819924",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 289645,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 290182,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "a4f75eea81096fa2037d708ace6953f6a82bbc4066741bd7d45bf0cce660f7b7"
+      "sha256": "9285c90c5f58926b3f2f46627d400d37612449fb497eb3897699dd1559ed45ad"
     },
     {
-      "bytes": 146243,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 147277,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "c6f453c5cb8efd02c111e429e36ee492724f230997bb1d76669194057cd9e37f"
+      "sha256": "893e54615e12eca4bd8e3125978317945b8ad73c2c11f735e4cb86d0db0fe195"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 469762,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "ca809ff5bd91c775bfc1168efa05220a2fc63e2f",
+      "bytes": 470526,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "581d8708f4e79cf04234af1e0909ee29649d218adf10c7ba303066d5222f9917"
+      "sha256": "b076a66023c2e478369ffd5f721c625d48d9a43b1372eb6b9a42840679f0bc8e"
     },
     {
       "bytes": 173938,
@@ -10531,6 +10531,14 @@
       "path": "docs/figures/nsc-atlas-parent-transport.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "eb1cdc8c254ff39485da02d940eca20bef6883ac753d7b039a4a014613793e34"
+    },
+    {
+      "bytes": 128906,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
+      "path": "docs/figures/nsc-atlas-parent-volume-selector.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "978ec70b0f0f4999e0e548a39b7bc036e45e5993d15a5bd9e195e00a07c2a12b"
     },
     {
       "bytes": 143929,
@@ -10981,12 +10989,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 13833,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a9b8c13320cee273ac5b981155233b41f23799d2",
+      "bytes": 23962,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "b6c9d2b4a77e1f98d3e2ea9ae9df08cbdb70ef9fe067456018ea6b59bf9f3d0a"
+      "sha256": "99097a7addbdeaf86b7efc36ceb015f4ab7731a1c00056401bc9700000263697"
     },
     {
       "bytes": 16908,
@@ -11072,15 +11080,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 124853,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a9b8c13320cee273ac5b981155233b41f23799d2",
+      "bytes": 125016,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "143901f2e28a685f30c204bb2101513f6a7c2c29bb81066a6ff21329725be807"
+      "sha256": "a6772b71542908c05ebc382a5b073107e02cf74d891e36d4781a0874053a0349"
     },
     {
       "bytes": 30876,
@@ -12062,20 +12070,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 235827,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 236520,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "776d4b7acf89ced45e7538caa24a3b9e8247f9cd966ca2531a6ae7b624fee0d5"
+      "sha256": "7672e3feaa583297a3a240b003731c2cd29ee4dc2d65416497a4f3cfd5a3a2dd"
     },
     {
-      "bytes": 49215,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 49710,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "45d09cd7a0ec04a82badb7f8924971e4c0557faf5e48e596751fd15da8d262e9"
+      "sha256": "d16901ad95776db2d9cad5f5b6d5aed1d376a70689f74b2e738afa566d7a4c19"
     },
     {
       "bytes": 18356,
@@ -12144,28 +12152,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 36699,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 37034,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1a2ab358ab406e802cb7a8c663c0e19b21087ab577a1d5dd28dc82993d058a39"
+      "sha256": "5de8fd0ca7632c259e879a5a91bf54641acdeb13a95ace205c434a0d078dc380"
     },
     {
       "bytes": 3206,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "94f8133c78ecbe739a9642483276bae728e99ebfbd338bf073d5e31fe501074a"
+      "sha256": "dce3e04e0aae5b9d12cf8b0e5859c84ab4a22b2e78bec70961faf33440c21d8c"
     },
     {
-      "bytes": 47345,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 47651,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2109598390190077721abbd36388ac87368f0f598d944900537b4e025d3cbd48"
+      "sha256": "9cf2ff8c6a8dfeb4a1e449eedff41a119a12e49017b033705594cfced491cf91"
     },
     {
       "bytes": 226492,
@@ -12177,27 +12185,27 @@
     },
     {
       "bytes": 396,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f113ac0172620ed1da7bc4465d6d4ddf5d07b85acdc6a9c9412e69cb955701d1"
+      "sha256": "aa93c1cef3ad0389ef6a6f8b779d10b4ff57bba0eceeb6693e8591e936ae9d2a"
     },
     {
-      "bytes": 501140,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 508624,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "a232e8530961fa0fb182bb9ee315e3f0171472a78c768ea2caeab99a250239da"
+      "sha256": "fea4bad2034efe5c544feab705bdd98301fa8d69680c8988408f3cac27e1057e"
     },
     {
-      "bytes": 14163465,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 14476767,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "9af02c523032ca6a2beaa40b3a8881c6f02cb84522d69e0a347e1948708c97f6"
+      "sha256": "413545952fef6d05a08bbfb3f48883ad4678dd9c216f243ac05eeb441ce92bc5"
     },
     {
       "bytes": 3283,
@@ -31142,6 +31150,14 @@
       "sha256": "7cf3245ec5c88695944c527943f62654f693daf16edb93ee719b5146e3d0039d"
     },
     {
+      "bytes": 7279,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
+      "path": "results/summaries/nsc-atlas-parent-volume-selector-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8f2b2624cc53fcb901fd7b34b3b55433578f9eed52a3554a388ac4da5d904d43"
+    },
+    {
       "bytes": 14948,
       "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
       "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
@@ -31853,6 +31869,14 @@
       "path": "scripts/check_nsc_atlas_parent_perturbations.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "1df91b944d2f370f4c29119e0d6743be037c1bfbedc1d12c24124acb529973b7"
+    },
+    {
+      "bytes": 1018,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
+      "path": "scripts/check_nsc_atlas_parent_scale_selector.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8374e7def92705e43389f0a6ac061d761a160278442d194898080133f1dc61f3"
     },
     {
       "bytes": 11038,
@@ -34888,6 +34912,14 @@
       "sha256": "5715d0ba55b6ffa2d1531c238a3d7cf1a40bc6ea2902731591d8ef13fcaeac25"
     },
     {
+      "bytes": 2263,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
+      "path": "scripts/plot_nsc_atlas_parent_scale_selector.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "662bee5ebaf3929cb3c819ba9a1ab6e103b71e4655c1f106c87806237e389d10"
+    },
+    {
       "bytes": 1698,
       "change": "Connect finite parent source gravity to wall compatibility and a conditional inward transfer law.",
       "changed_from_commit": "982d668e8198eb467e53fe2e4c56722924998594",
@@ -36206,6 +36238,14 @@
       "path": "src/recursive_horizons/nsc_atlas_parent_perturbations.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "9731a55f12bd3bf90e0fd9d6e8b4839fa67e48dec51912ee43b9c17a6f4e0877"
+    },
+    {
+      "bytes": 12563,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
+      "path": "src/recursive_horizons/nsc_atlas_parent_scale_selector.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408"
     },
     {
       "bytes": 16863,
@@ -40764,6 +40804,14 @@
       "path": "tests/test_nsc_atlas_parent_perturbations.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "b7a95d4991d632078c2624745a13dd91940c5474e727bf211ccfb365f9f59020"
+    },
+    {
+      "bytes": 5515,
+      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
+      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
+      "path": "tests/test_nsc_atlas_parent_scale_selector.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5ff9d6567c086b585d9db91d57f6f0f056c2c685a1acb036ff082b56901c6889"
     },
     {
       "bytes": 5596,

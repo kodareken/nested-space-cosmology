@@ -1,5 +1,16 @@
 # What the calculations show
 
+An explicit [physical volume connection](nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum)
+now co-scales the inherited charge, tension and scalar frequency in one
+higher-dimensional top-form reduction. Flux/curvature alone gives an
+unstable positive vacuum. A declared averaged ancestor-vacuum source
+supplies a conditional stable extension with the same initial parent
+density. Its finite evolution approaches Lambda_star*L_ref(0)^2=9.7022370,
+with a volume ratio .652 and exact energy/action identities. This is a
+new homogeneous candidate: the localized ancestor source, bulk offset,
+UV charge and absolute reference volume remain unselected. It does not
+derive Lambda_obs or inherit the old observational validation.
+
 The fixed source also has a [microscopic SI coupling relation](nsc-atlas-scale-selection.md#a-surviving-microscopic-si-relation-distinct-from-selecting-l_ref):
 e_phys/sigma_phys=2.0256752716e-34 m, derived from the inherited normalized
 ratios and G,hbar,c. It is independent of the free parent curvature scale.
@@ -67,7 +78,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-28.2. Its central route is spherical
+revision 2026-10-28.4. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

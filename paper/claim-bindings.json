@@ -578,6 +578,16 @@
       "section": "13.22",
       "status": "derived",
       "owner": "docs/nsc-atlas-scale-selection.md"
+    },
+    "parent-volume-source-normalization": {
+      "section": "13.23",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-scale-selection.md"
+    },
+    "parent-volume-evolving-vacuum": {
+      "section": "13.23",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-scale-selection.md"
     }
   },
   "findings": [

@@ -1,0 +1,175 @@
+{
+  "Lambda_obs_derived": false,
+  "SI_scale_selected": false,
+  "averaged_basin_entry": {
+    "barrier_energy_margin": 0.13354958202297948,
+    "expanding_branch_H_squared_floor": 0.07365336740553033,
+    "implication": "Conditional on this finite numerical entry, the exact averaged energy law confines s and ensures future approach to the positive minimum. Not a full-scalar or localized uplift theorem.",
+    "left_of_barrier": true,
+    "total_density": 0.22098709545447784
+  },
+  "averaged_evolution": {
+    "H": 0.2713940391500041,
+    "charge_tension_frequency_ratio": 1.2386400404957185,
+    "clock": "expansion",
+    "endpoint_N": 4.0,
+    "energy_ledger_residual": 1.2243539515566226e-12,
+    "internal_volume_ratio": 0.6517931171185491,
+    "matter_density": 2.853925289302779e-06,
+    "nfev": 818,
+    "s": -0.03566900603668981,
+    "v": 0.00016704727764534096,
+    "vacuum_density": 0.22098306952788382,
+    "volume_kinetic_density": 1.1720013046862244e-06
+  },
+  "candidate": {
+    "A": "7",
+    "B": "15/2",
+    "T": "25/32",
+    "ancestor_flux": "5/2",
+    "ancestor_steps": 2,
+    "d": 12,
+    "initial_stiffness": "3/2",
+    "kinetic": "84",
+    "matter": "3/8",
+    "required_UV_bare": "215/32",
+    "vacuum": "9/32"
+  },
+  "extra_stiffness": "S_d[W]=W_ss+2*(d+1)*W_s+d*(d+2)*W; a power p contributes (p-d)*(p-d-2)*W.",
+  "future_is_a_new_candidate": true,
+  "independent_proper_clock": {
+    "H": 0.2713940391499898,
+    "charge_tension_frequency_ratio": 1.238640040483601,
+    "clock": "proper",
+    "endpoint_N": 4.0,
+    "energy_ledger_residual": -2.245814645362998e-12,
+    "internal_volume_ratio": 0.6517931171313018,
+    "matter_density": 2.853925289274861e-06,
+    "nfev": 851,
+    "s": -0.03566900603505934,
+    "v": 0.00016704727651030662,
+    "vacuum_density": 0.2209830695278765,
+    "volume_kinetic_density": 1.1720012887594552e-06
+  },
+  "initial_vacuum_Lref0_squared": 12.348252398928544,
+  "late_vacuum_Lref0_squared": 9.702237009265096,
+  "minimal_vacuum": {
+    "mass_squared_over_H_vacuum_squared": -6,
+    "obstruction": "Bulk vacuum plus internal curvature cannot stabilize its matched positive vacuum."
+  },
+  "one_ancestor_initial_obstruction": "32*Vtot_ss/d=-2*d-62<0 for every d>0",
+  "reduction": {
+    "Planck_charge": "eta_4=eta_D/sqrt(v)",
+    "SI_scale_selected": false,
+    "UV_dimensionless_charge": "eta_D=e_D*kappa_D^(D/(2*(D-2)))",
+    "assumptions": [
+      "D=4+d Einstein gravity, canonical bulk scalar and a D-form",
+      "charged (D-2)-branes wrap the complete internal Einstein space",
+      "one homogeneous volume mode; no claim of shape or KK stability",
+      "ancestor 4D vacuum sheet is an additional averaged source"
+    ],
+    "canonical_charge": "e_D*sqrt(V0)*exp(-d*s/2)",
+    "gauge_rule": "Keep the topological charge and unrescaled A3 in the action; a dynamic canonical field redefinition carries derivative terms.",
+    "inherited_constant_s_invariants": [
+      "q/e",
+      "epsilon",
+      "sigma/e",
+      "omega/e"
+    ],
+    "kappa_4": "kappa_D/V0",
+    "kinetic": "d*(d+2)/(2*kappa_4)",
+    "metric": "ds_D^2=exp(-d*s) ds_4E^2+exp(2*s) gamma_ab dy^a dy^b",
+    "physical_internal_volume": "v=V0*exp(d*s)/kappa_D^(d/(D-2))",
+    "scalar_mass_and_mixing": "(m_D,mu_D)*exp(-d*s/2)",
+    "scalar_minimum": "-mu0*q0/omega0^2, independent of s",
+    "three_form_kinetic": "Z3=exp(d*s)/V0",
+    "wrapped_tension": "sigma_D*V0*exp(-d*s/2)"
+  },
+  "remaining_requirements": [
+    "derive UV charge eta_D and reference internal volume, not set them to one",
+    "derive required bulk offset A-rho and internal curvature, not confuse matching with selection",
+    "construct localized ancestor source and test other internal modes",
+    "solve the new volume junction and initial constraints, then establish the shared finite domain",
+    "new observer comparison: old P004/P005 and likelihoods do not validate this changed dynamics"
+  ],
+  "required_wall_volume_normal_derivative_jump": -0.014285714285714287,
+  "resolved_scalar_controls": [
+    {
+      "H": 0.4094526511371444,
+      "absolute_volume_field_difference_from_average": 1.4168565159642342e-07,
+      "action_ratio": 0.999468997037818,
+      "action_ratio_enclosure": [
+        0.9966892978533941,
+        1.0033312272807793
+      ],
+      "charge_tension_frequency_ratio": 1.000389916040637,
+      "clock": "expansion",
+      "corrected_action_ledger_relative": -6.092500014358095e-10,
+      "corrected_action_remainder_bound": 0.0002393480761477071,
+      "endpoint_N": 0.1,
+      "energy_ledger_residual": -1.891841683310247e-10,
+      "internal_volume_ratio": 0.9992206237852749,
+      "matter_density": 0.27776758032587395,
+      "nfev": 2426,
+      "omega0": 200.0,
+      "s": -6.497334052202146e-05,
+      "v": -0.00079468908259365,
+      "vacuum_density": 0.2811037847605775,
+      "volume_kinetic_density": 2.652429099572856e-05
+    },
+    {
+      "H": 0.4094537465168986,
+      "absolute_volume_field_difference_from_average": 3.680222177753021e-08,
+      "action_ratio": 0.9994789323453849,
+      "action_ratio_enclosure": [
+        0.9983422866326159,
+        1.0016628439839885
+      ],
+      "charge_tension_frequency_ratio": 1.0003905455867885,
+      "clock": "expansion",
+      "corrected_action_ledger_relative": -2.292443362414887e-09,
+      "corrected_action_remainder_bound": 0.00011947289364693549,
+      "endpoint_N": 0.1,
+      "energy_ledger_residual": -7.123307638190468e-10,
+      "internal_volume_ratio": 0.9992193661658323,
+      "matter_density": 0.27777051629949917,
+      "nfev": 4217,
+      "omega0": 400.0,
+      "s": -6.507822395184035e-05,
+      "v": -0.0007945562834854446,
+      "vacuum_density": 0.2811035486915334,
+      "volume_kinetic_density": 2.6515426880300493e-05
+    }
+  ],
+  "schema": "nsc-atlas-parent-volume-selector-v1",
+  "source_matching": "Same initial charge, flux, scalar state, tension and total Friedmann density as 485b3b9 in the 4D homogeneous sector; volume is a new evolving field.",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_parent_scale_selector.py": "8374e7def92705e43389f0a6ac061d761a160278442d194898080133f1dc61f3",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408"
+  },
+  "two_ancestor_initial_condition": "32*Vtot_ss/d=7*d-80; first positive integer d=12",
+  "vacuum_extrema": [
+    {
+      "canonical_mass_squared": -0.4446484483573343,
+      "charge_ratio": 0.697674086358558,
+      "kind": "maximum",
+      "mass_squared_over_H_vacuum_squared": -3.762503091536474,
+      "s": 0.0600005350418201,
+      "stiffness": -37.35046966201608,
+      "vacuum": 0.3545366774774573,
+      "volume_ratio": 2.0544464011784442
+    },
+    {
+      "canonical_mass_squared": 2.1837080100935475,
+      "charge_ratio": 1.2384748901257492,
+      "kind": "minimum",
+      "mass_squared_over_H_vacuum_squared": 29.64537232497022,
+      "s": -0.035646782552940987,
+      "stiffness": 183.431472847858,
+      "vacuum": 0.22098302421260696,
+      "volume_ratio": 0.6519669616630578
+    }
+  ],
+  "volume_field_clock_difference": 1.630466595070601e-12,
+  "wall_matching_obstruction": "K*[normal derivative s]=d(sigma)/ds=-d*sigma/2; a globally uniform s with zero momentum cannot satisfy this new junction."
+}

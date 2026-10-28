@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [physical-volume source connection](nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum)
+derives charge/tension/frequency co-scaling and a conditional stable moving
+vacuum from an explicitly extended parent action. Its numerical late
+coefficient is 9.7022370 in the original curvature ruler. The UV charge,
+bulk energy and localized ancestor construction remain required before
+an absolute SI prediction. The fixed source and its tests are unchanged.
+
 The [shared-ruler scoreboard](nsc-atlas-shared-ruler-scoreboard.md) now
 combines all 13 DESI entries with the full SN shape posterior. The fixed
 parent has Delta joint chi-square +12.047 against the flat control. A

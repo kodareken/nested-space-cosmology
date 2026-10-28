@@ -18,19 +18,21 @@ starting a derivation.
 
 ## Current execution priority — 28 October 2026
 
-### Proposal requested before further implementation
+### Executed: geometric normalization and evolving source
 
-Douglas requested the [physical scale-selection proposal](nsc-atlas-scale-selection.md#proposal-for-douglass-review-derive-and-select-the-physical-charge-unit)
-for review first. It isolates the free dimensionless coupling g_scale,
-equivalently the Planck-normalized membrane charge. The proposed next
-construction derives one genuine parent-geometric normalization mode and
-its selecting dynamics/state, including its vacuum stress and matching.
-The present action contains no such selection equation. No new model,
-potential or numerical campaign is authorized by this proposal entry.
-Complete: prior source/likelihood/route audit. Current: proposal review.
-After review: explicit parent/action derivation, then a one-mode solve only
-if that derivation supplies a physical selector. The fixed checkpoint and
-P004/P005 remain unchanged.
+Douglas approved the [physical scale construction](nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum).
+A higher-dimensional top-form reduction now makes charge, wall tension
+and scalar frequency inherit one physical volume factor. The minimal
+positive vacuum is unstable; an explicitly added ancestor-vacuum sheet
+supports a conditional stable reduced candidate with the actual initial
+matter. Its unchanged-coefficient evolution approaches a positive vacuum,
+Lambda_star*L_ref(0)^2=9.7022370093. This is a new homogeneous effective
+candidate, not a completed localized uplift or a changed 485b3b9 result.
+Complete: reduction, stiffness identity, finite evolution and energy/action
+checks. Next: derive its UV charge, reference volume, bulk energy and
+ancestor source together. Their absolute normalization remains free, so
+Lambda_obs is not yet derived. P004/P005 and the original data scores stay
+frozen; none tests the new candidate's later dynamics.
 
 ### Computed: shared DESI ruler, Planck-domain check and SI scale ladder
 

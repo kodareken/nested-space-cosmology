@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Physical volume and the inherited evolving source
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_scale_selector.py
+python scripts/run_python.py scripts/check_nsc_atlas_parent_scale_selector.py --output .build/parent-volume-reproduced.json
+```
+
+The producer refuses an existing output. Its compact record stores no
+waveform histories. The [owner](nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum)
+declares the homogeneous/source assumptions and the unresolved UV charge,
+bulk energy and absolute reference volume. It is a separate candidate;
+the original P004/P005 and observation records are not overwritten.
+
 ## Shared DESI ruler, conditional CMB geometry and SI route ladder
 
 The [scoreboard](nsc-atlas-shared-ruler-scoreboard.md) and

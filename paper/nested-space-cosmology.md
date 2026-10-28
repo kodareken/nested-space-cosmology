@@ -59,6 +59,13 @@ with the supernova shape posterior propagated, gives joint chi-square
 fitted dimension. Its inherited SI scale remains unselected; that
 realization's failed connections do not reject the nesting programme.
 
+A separate parent-volume extension derives a common geometric factor for
+the inherited charge, wall tension and scalar frequency. Its reduced
+action gives an exact stabilization condition and a conditional positive
+vacuum approached by the evolving matter source. This connects physical
+normalization to dynamics; the microscopic charge, required bulk energy
+and shared wall construction still prevent an absolute SI prediction.
+
 The resulting book connects geometry, inherited state, stress, structure and
 interior observation. Its completed results establish specified mathematical
 and physical constructions. Its cosmological completion requires one
@@ -4198,6 +4205,177 @@ or compatible global selector is therefore still needed. The target
 remains unresolved; the conditional constructions and their failures
 remain part of the atlas.
 
+
+### 13.23. A physical volume connects normalization and evolving matter
+
+<!-- nsc-claim:parent-volume-source-normalization -->
+
+Evidence: [derived volume sector and compact evolution](../results/summaries/nsc-atlas-parent-volume-selector-v1.json),
+[action, source and scope](../docs/nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum),
+and [independent symbolic and numerical controls](../tests/test_nsc_atlas_parent_scale_selector.py).
+
+The missing SI ruler is a physical normalization problem. Changing a unit
+in the old action cannot supply its selecting equation. A distinct parent
+construction now gives a genuine geometric mode that transports the source
+ratios. Consider Einstein gravity in $D=4+d$ dimensions, a canonical bulk
+scalar, a top-form $F_D$, and charged membranes wrapping the entire compact
+internal Einstein space. With reference volume $V_0$ and unit-integral
+internal volume form $\eta_d$, use
+
+$$
+ds_D^2=e^{-ds}ds_{4,E}^2+e^{2s}\gamma_{ab}dy^a dy^b,
+\qquad F_D=F_4\wedge\eta_d.
+$$
+
+Direct reduction gives $\kappa_4=\kappa_D/V_0$, positive volume kinetic
+coefficient $K=d(d+2)/(2\kappa_4)$ and three-form kinetic factor
+$Z_3=e^{ds}/V_0$. At constant $s$,
+
+$$
+e_{\rm can}=e_D\sqrt{V_0}e^{-ds/2},\quad
+\sigma_4=\sigma_DV_0e^{-ds/2},\quad
+(m_4,\mu_4)=(m_D,\mu_D)e^{-ds/2}.
+$$
+
+The flux has the charge factor. Thus $q/e$, $\epsilon$, $\sigma/e$ and
+$\omega/e$ inherit together, while the scalar minimum is independent of
+$s$. Keep the unrescaled gauge field and topological charge in the dynamic
+action; changing canonical normalization in time also changes derivative
+terms. This is a source-normalization connection, not the full dynamical
+inheritance theorem. The flux boundary term and compactification precedent
+come from [Bousso--Polchinski](https://arxiv.org/html/hep-th/0004134).
+[Goldberger--Wise](https://arxiv.org/html/hep-ph/9907447v2) provides a
+separate action-based stabilization precedent, without supplying this
+geometry or its coefficients.
+
+The reduced vacuum potential is
+
+$$
+V(s)=Ae^{-ds}-Be^{-(d+2)s}+W(s),\qquad
+B=\frac{R[\gamma]}{2\kappa_4}.
+$$
+
+Matching $V(0)=\rho=9/32$ and $V_s(0)=0$ yields the exact stiffness
+identity
+
+$$
+V_{ss}(0)=-d(d+2)\rho+\mathcal S_d[W](0),\qquad
+\mathcal S_d[W]=W_{ss}+2(d+1)W_s+d(d+2)W.
+$$
+
+The two existing powers lie in its kernel. Bulk vacuum and curvature alone
+therefore give $m_s^2/H_{\rm vac}^2=-6$, an unstable positive vacuum.
+Changing those two coefficients while preserving matching cannot cure it.
+
+An explicit additional four-dimensional vacuum sheet has induced volume
+factor $W=T e^{-2ds}$. Its homogeneous internal average is a new source
+assumption, not an exact localized higher-dimensional solution. Assigning
+$T=\epsilon q_A^2/2$ uses the existing vacuum law at a declared ancestor
+flux. It does not derive the sheet's location or coupling from nesting.
+
+The same inherited oscillator changes frequency with $s$. Its averaged
+energy is $E=(3/8)e^{-3N-ds/2}$, where $N=\log(a/a_0)$. Requiring initial
+equilibrium with that matter, rather than only with the vacuum, gives
+
+$$
+B=\frac{d}{2}\left(\rho+T+\frac{E_0}{2}\right),\quad
+A=B+\rho-T,\quad
+V_{{\rm total},ss}(0)=-d(d+2)\rho+d(d-2)T-\frac{d(3d+4)}{4}E_0.
+$$
+
+One ancestor with $q_A=2$ gives $32V_{{\rm total},ss}/d=-2d-62<0$.
+Two ancestors with $q_A=5/2$ give $7d-80$. The first stable integer in
+that specified family is $d=12$, with
+
+$$
+A=7,\quad B=\frac{15}{2},\quad T=\frac{25}{32},\quad
+K=84,\quad V_{{\rm total},ss}(0)=\frac32.
+$$
+
+This is a candidate dimension and ancestry. The required bulk vacuum
+$A-\rho=215/32$ is a matching requirement, not a microscopic prediction.
+No minimum is subtracted from the gravitational source.
+
+<!-- nsc-claim:parent-volume-evolving-vacuum -->
+
+Evidence: [two clocks, scalar controls and basin entry](../results/summaries/nsc-atlas-parent-volume-selector-v1.json)
+and [evolution and conservation checks](../tests/test_nsc_atlas_parent_scale_selector.py).
+
+Hold these coefficients fixed. The averaged source and volume obey
+
+$$
+\dot N=H,\quad \dot s=v,\quad
+K\dot v=-3HKv-V_s+\frac{d}{2}E,\quad
+H^2=\frac{Kv^2/2+V+E}{3}-C e^{-2N}.
+$$
+
+At $N=s=v=0$ the original parent density and $H$ are recovered. The new
+wall variation, however, requires
+
+$$
+K[\partial_n s]=\sigma_s=-\frac{d}{2}\sigma,
+\qquad [\partial_n s]_{s=0}=-\frac{1}{70}.
+$$
+
+A globally uniform zero-momentum volume field cannot satisfy that junction.
+A compatible wall collar and its gravitational gradient energy are still
+required. The present evolution belongs to a homogeneous sector; it is
+not yet a new shared three-region spacetime or its protected-domain proof.
+
+The total energy decreases exactly as
+$\dot\rho=-3H(Kv^2+E)$ in the average. For the full scalar, replace
+$E$ in this loss by $\Pi^2$. A corrected-action identity connects the
+new dynamics to the earlier matter calculation without assuming fixed
+frequency:
+
+$$
+D=\frac{a^3E}{\omega},\quad S=a^3\chi\Pi,\quad
+c=\frac{3H-dv/2}{2\omega},\quad I=D+cS,
+\qquad \dot D=-c\dot S,\quad\dot I=\dot cS,\quad |S|\leq D.
+$$
+
+This controls the action through the variation of $c$ when $|c|<1$.
+Resolved scalar controls at frequencies 200 and 400 to $N=.1$ reduce
+the volume-field difference from the average from $1.417\times10^{-7}$
+to $3.680\times10^{-8}$. They test the equations, without claiming the
+old P005 enclosure covers the new frequency evolution.
+
+![A positive vacuum and its evolving volume normalization in the declared homogeneous candidate.](../docs/figures/nsc-atlas-parent-volume-selector.png)
+
+At $N=4$ the averaged volume ratio is .6517931 and the common
+charge/tension/frequency ratio is 1.2386400. Proper and expansion clocks
+agree in $s$ within $1.64\times10^{-12}$; the total-energy ledger closes
+within $2.3\times10^{-12}$. The late minimum has
+
+$$
+s_*=-0.0356467826,\qquad V_*=0.2209830242,\qquad
+\frac{m_s^2}{H_{\rm vac}^2}=29.64537,\qquad
+\Lambda_*L_{\rm ref}(0)^2=9.7022370093.
+$$
+
+The computed energy lies below the escape barrier by .13354958.
+Conditional on that finite numerical entry, the exact averaged energy
+law confines the volume in the minimum's basin; a positive lower bound
+on $H^2$ lets matter dilute and damping drives it to the positive
+minimum. This implication is analytic. The entry is numerical, and
+neither full scalar stability nor higher-dimensional shape stability
+is claimed.
+
+The remaining absolute normalization is visible rather than hidden:
+
+$$
+\kappa_4 e_{\rm can}=\frac{\eta_D}{\sqrt{v_{\rm int}}},\qquad
+\eta_D=e_D\kappa_D^{D/[2(D-2)]},\quad
+v_{\rm int}=\frac{V_0e^{ds}}{\kappa_D^{d/(d+2)}}.
+$$
+
+The relative volume is calculated. The microscopic charge and reference
+volume are not selected, so no metre-valued ruler or observed SI vacuum
+follows yet. The new source also changes later expansion: the fixed
+P004/P005 forecasts and supernova/DESI scores remain records of their
+original candidate. The next physical connection is a common parent
+source/state that supplies this normalization, the bulk energy and the
+new wall junction together.
 
 ## IV. Concentration, conservation and the surrounding reservoir
 

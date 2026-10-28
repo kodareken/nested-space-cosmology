@@ -189,12 +189,11 @@ Proposed execution after review:
    compare the target and predict a second observable with calibration held
    fixed. No additional cosmological fit is needed to formulate the selector.
 
-Implementation ownership would remain here and in the atlas owner. The
-current scalar/flux modules are frozen matching references. A prospective
-new module `nsc_atlas_parent_scale_selector.py` would own only the derived
-physical scale sector and its checks; it is not created until the proposed
-construction is approved. No extra physics library or field-grid campaign
-is justified for this first derivation.
+Douglas approved this construction. Implementation ownership remains here
+and in the atlas owner. The current scalar/flux modules are frozen matching
+references. `nsc_atlas_parent_scale_selector.py` owns the new physical volume
+sector and its checks. No extra physics library or field-grid campaign is
+needed for this derivation.
 
 Goldberger--Wise's [bulk/boundary modulus stabilization](https://arxiv.org/html/hep-ph/9907447v2)
 is a method precedent in a different geometry. Bousso--Polchinski's
@@ -221,3 +220,226 @@ Failure forecast:
 - The derived state is unstable, gives the wrong scale or fails normalized
   matching/its second observable: record that candidate's failure and move
   to a separately specified mechanism without retuning it to the target.
+
+## Executed: a physical volume, inherited source and moving vacuum
+
+The approved first connection is now explicit. This is a new homogeneous
+effective-action candidate, not a modification of checkpoint 485b3b9 or a
+claimed SI solution. The [compact calculation](../results/summaries/nsc-atlas-parent-volume-selector-v1.json)
+contains its coefficients, two clocks, scalar controls and remaining inputs.
+
+### Dimensional reduction that preserves the source ratios
+
+Take D=4+d Einstein gravity, a canonical bulk scalar Phi, a top-form F_D,
+its scalar mixing, and charged (D-2)-branes wrapping the complete compact
+Einstein space. The positive-kinetic bulk action has R_D/(2*kappa_D),
+-(dPhi)^2/2, -m_D^2*Phi^2/2, -rho_D, -|F_D|^2/2 and the topological
+mu_D*Phi*F_D coupling. Here |F_D|^2 includes 1/D!. Use the fixed-displacement
+boundary term before eliminating the form, as in the cited four-form work.
+Define an internal reference metric gamma, volume V0 and normalized volume
+form eta_d with integral one. Set
+
+$$
+ds_D^2=e^{-ds}ds_{4,E}^2+e^{2s}\gamma_{ab}dy^a dy^b,
+\qquad F_D=F_4\wedge\eta_d,\qquad \phi=\sqrt{V_0}\Phi.
+$$
+
+Integration gives kappa_4=kappa_D/V0 and the physical kinetic coefficient
+K=d(d+2)/(2*kappa_4), with L_kin=-K*(ds)^2/2. Internal volume changes are
+not coordinate transformations. Direct metric contraction gives
+
+$$
+Z_3(s)=\frac{e^{ds}}{V_0},\quad
+e_{\rm can}=e_D\sqrt{V_0}e^{-ds/2},\quad
+\sigma_4=\sigma_D V_0e^{-ds/2},\quad
+(m_4,\mu_4)=(m_D,\mu_D)e^{-ds/2}.
+$$
+
+The displacement flux scales like e_can. Consequently q/e, epsilon,
+sigma/e and omega/e are invariant. The scalar minimum
+phi_star=-mu0*q0/omega0^2 is independent of s. The old dimensionless
+source hats stay fixed at each constant s using L_unit(s)=L0*exp(ds/2).
+This is a physical co-scaling law; it is not yet the full dynamical
+inheritance theorem. Keep A3 unrescaled and its topological charge fixed
+while s varies; a time-dependent canonical redefinition has derivative
+terms. Canonical instantaneous charges alone are not a new gauge action.
+
+The reduced potential is
+
+$$
+V(s,\phi)=e^{-ds}U_0(\phi,q_0)-B e^{-(d+2)s}+W(s),
+\qquad B=\frac{R[\gamma]}{2\kappa_4}.
+$$
+
+U0 contains the old scalar/four-form potential and the UV bulk vacuum.
+The bulk and wrapped-source reduction is homogeneous; W below adds an
+explicit averaged source. The mathematical reduction and inherited ratios
+are independently calculated here. Bousso--Polchinski supplies the
+flux/charge-normalization precedent; Goldberger--Wise supplies the
+different-geometry modulus-stabilization precedent. Neither source
+supplies these NSC coefficients or a selected internal dimension.
+
+### What stress can stabilize the positive vacuum
+
+Write the late scalar-vacuum potential as
+V=A*exp(-ds)-B*exp(-(d+2)s)+W. Matching V(0)=rho=9/32 and V_s(0)=0 gives
+
+$$
+A=B+\rho-W(0),\quad
+B=\frac{d\rho-dW(0)-W_s(0)}{2},
+$$
+
+$$
+V_{ss}(0)=-d(d+2)\rho+\mathcal S_d[W](0),\qquad
+\mathcal S_d[W]=W_{ss}+2(d+1)W_s+d(d+2)W.
+$$
+
+For a power exp(-ps), the added stiffness is (p-d)(p-d-2)*W(0).
+The original bulk and curvature powers lie in the kernel. Without an
+additional source, canonical m_s^2/H_vac^2=-6: the matched positive
+vacuum is unstable in every d>0. For d=1 a round internal circle has zero
+curvature and cannot even supply the required positive B. This retires
+that minimal stabilizer, not nesting.
+
+A localized four-dimensional vacuum sheet has induced volume exp(-2ds).
+Its homogeneous internal average therefore supplies W=T*exp(-2ds).
+This is a declared additional source, not a proved localized uplift.
+Assign T the existing vacuum law epsilon*q_A^2/2 with
+q_A=q_parent+j*e. Identifying that sheet with an ancestor's vacuum is
+an added coupling/state prescription; flux arithmetic alone does not
+construct its location or stress in the higher-dimensional geometry.
+
+The same coherent scalar carries an adiabatic action J=a^3*E/omega.
+Thus, in the averaged description, E(s,N)=(3/8)*exp(-3N-ds/2).
+Match the actual initial matter, not only the late vacuum. The result is
+
+$$
+B=\frac{d}{2}\left(\rho+T+\frac{E_0}{2}\right),\quad
+A=B+\rho-T,\quad
+V_{{\rm total},ss}(0)=-d(d+2)\rho+d(d-2)T-\frac{d(3d+4)}{4}E_0.
+$$
+
+For one ancestor, q_A=2, the last expression times 32/d is -2d-62;
+no dimension stabilizes the supplied initial matter state. For two
+ancestors, q_A=5/2, it is 7d-80. The first stable integer in this specified
+two-ancestor family is d=12, giving
+
+$$
+A=7,\quad B=\frac{15}{2},\quad T=\frac{25}{32},\quad
+K=84,\quad V_{{\rm total},ss}(0)=\frac32.
+$$
+
+d=12 is a candidate choice, not an inferred dimension of nature or a
+unique ancestry. The required UV bulk term A-rho=215/32 and internal
+curvature are matching conditions, not outputs of inherited microscopic
+physics. No vacuum minimum is subtracted by hand.
+
+### Coupled evolution, conservation and the oscillator connection
+
+Hold A,B,T fixed. In kappa_4=1 units the averaged equations are
+
+$$
+\dot N=H,\quad \dot s=v,\quad
+K\dot v=-3HKv-V_s+\frac{d}{2}E,\qquad
+H^2=\frac{Kv^2/2+V+E}{3}-C e^{-2N}.
+$$
+
+Use the old C=61720739711/2709842745600 and initial N=s=v=0.
+The initial Friedmann density and H are exactly the old parent's.
+This only matches its homogeneous initial sector: all walls must also
+couple to s before claiming a new shared three-region solution.
+The new wall variation already fixes a specific necessary datum. With the
+normal directed from minus to plus, its scalar junction is
+
+$$
+K[\partial_n s]=\frac{d\sigma_4}{ds}=-\frac{d}{2}\sigma_4,
+\qquad [\partial_n s]_{s=0}=-\frac{1}{70}.
+$$
+
+Thus a globally uniform initial s with zero momentum cannot simply be
+appended to the old atlas. A nonuniform collar or an additional inherited
+surface state must supply this jump; its gradient energy must enter the
+gravitational initial constraints. The calculation here evolves only the
+homogeneous sector, without claiming that missing common domain.
+
+The full oscillator instead has E=(Pi^2+omega(s)^2*chi^2)/2,
+omega(s)=omega0*exp(-ds/2), chi_dot=Pi and
+Pi_dot=-3H*Pi-omega(s)^2*chi. Its volume force is d*omega^2*chi^2/2.
+Both systems obey an exact total-energy ledger: rho_dot=-3H*(Kv^2+E)
+for the average, and -3H*(Kv^2+Pi^2) for the oscillator.
+Initial stationarity applies to the average. The actual coherent phase
+Pi=0 gives v_dot(0)=3/112 in the d=12 candidate, instead of zero. The
+resolved controls retain that phase; the exact initial force is not
+silently replaced by its average.
+
+The corrected-action connection extends the fixed-frequency construction:
+
+$$
+D=\frac{a^3 E}{\omega},\quad S=a^3\chi\Pi,\quad
+c=\frac{3H-dv/2}{2\omega},\quad I=D+cS,
+\qquad \dot D=-c\dot S,\quad \dot I=\dot c S,\quad |S|\leq D.
+$$
+
+This identity is exact at variable frequency. If |c|<1, the integral
+of |c_dot|/(1-|c|) controls I; endpoint c factors then bound D. The
+original P005 bound is not silently imported into the changed dynamics.
+Two short resolved controls at omega0=200 and 400, to N=.1, give absolute
+s differences from the average 1.417e-7 and 3.680e-8. Their corrected-action
+ledger relative residuals are below 2.3e-9. They check the new equations;
+they do not certify the complete omega0=1e9 trajectory or extra dimensions.
+
+At N=4, the averaged evolution gives s=-.0356690060, volume ratio
+.6517931, charge/tension/frequency ratio 1.2386400 and vacuum density
+.2209830695. Proper and expansion clocks differ in s by 1.64e-12;
+tighter tolerance changes it by less than 2e-10. The total energy ledger
+closes within 2.3e-12. These are numerical controls, not interval proofs.
+
+The late minimum is s_star=-.0356467826, V_star=.2209830242 and
+m_s^2/H_vac^2=29.64537. All positive extrema are found from the polynomial
+42-52.5*x+9.375*x^6=0, x=exp(-2s), with its one positive turning point;
+there is no field-grid scan. The other extremum is a barrier at
+s=.0600005350 with V=.3545366775.
+
+At the computed N=4 entry, total energy .2209870955 is below that barrier
+by .1335495820. Conditional on this finite entry, the exact averaged
+energy law traps the volume in the left compact sublevel component.
+H^2 remains at least .07365336 because curvature decays and V is bounded
+below by V_star there. Matter then decays, damping removes volume kinetic
+energy, and the only limiting stationary point in that component is the
+positive minimum. This establishes the averaged basin implication; finite
+entry is numerical, and the claim excludes the full scalar and localized
+higher-dimensional problem.
+
+### The resulting number and the remaining absolute scale
+
+With the original reference curvature radius L_ref(0)=C^(-1/2)*L_unit(0),
+the selected late vacuum has Lambda_star*L_ref(0)^2=9.7022370093, compared
+with the matched initial 12.3482523989. This new effective source evolves;
+the old supernova/DESI scores and P004/P005 do not validate it.
+
+Let eta_D=e_D*kappa_D^[D/(2(D-2))] and let
+v_internal=V0*exp(ds)/kappa_D^[d/(d+2)] be internal volume in parent
+Planck units. The exact reduced normalization is
+
+$$
+\kappa_4 e_{\rm can}=\frac{\eta_D}{\sqrt{v_{\rm internal}}}.
+$$
+
+The calculation determines a relative volume change, not either factor
+on the right absolutely. It therefore does not return L_ref in metres
+or Lambda_obs. The remaining useful physical work is a parent source/state
+construction that fixes eta_D, reference volume, required bulk energy and
+the ancestor sheet together. Assigning eta_D=1 or choosing the internal
+volume from the target would not complete that work.
+
+Calculation admission: reuse the published Einstein reduction/fixed-flux
+method; the missing connection is a physical geometric coupling mode.
+Fixed assumptions, coefficients and matching are above. Domain: the
+homogeneous averaged branch 0<=N<=4, plus two resolved scalar controls
+0<=N<=.1; no spatial or parameter grids. Budget: 180000 RHS calls per
+solve, actual largest 4217, and one tolerance/independent-clock comparison.
+Independent checks differentiate the action and conservation identities
+symbolically. Stop/redirection: retain this conditional connection and
+advance to the physical UV/source closure; do not repeat finished volume
+precision checks. No claim of SI closure, full localized uplift, other-mode
+stability or an unchanged observer likelihood is admitted.
