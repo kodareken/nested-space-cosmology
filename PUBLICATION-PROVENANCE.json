@@ -1731,9 +1731,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2557976,
+      "bytes": 2559860,
       "path": "docs/lab-snapshot.json",
-      "sha256": "baf930d1666d664eba910f53c711452d3b92543b5ae9cfcc388118c621b71916"
+      "sha256": "9e5f9025d298b7feed9539e026d4fd4d105e42e5ae88a5543cd6cb9610484972"
     },
     {
       "bytes": 4997,
@@ -2016,6 +2016,11 @@
       "sha256": "c8b4c1d70509075daac6de9b2b2103f2cda771dbe677a84ea649b92edc831825"
     },
     {
+      "bytes": 4152,
+      "path": "docs/nsc-atlas-shared-ruler.md",
+      "sha256": "fd0258743bbec0815c330dad7395c86b2d1870d6164f135c7745f2e3e78e5587"
+    },
+    {
       "bytes": 14560,
       "path": "docs/nsc-atlas-shared-scalar-slice.md",
       "sha256": "bc059e375d82047269a6d29cabfb11384c548615df1d86580a8b6b1a79b66d0f"
@@ -2071,9 +2076,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 122110,
+      "bytes": 122918,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "c22dddbcb357c3540a565404601cac5cc55e9891256b0f15cc91e217f3052c76"
+      "sha256": "9f8842823a4bdbf62bc18b755e82fcf5e551a89794e870b2e28a78a4518f009c"
     },
     {
       "bytes": 30876,
@@ -17531,6 +17536,11 @@
       "sha256": "3345ed33f144d2fda3a20bcd2cc62f19a9140e847ab63cdf90c73e0dab9f6162"
     },
     {
+      "bytes": 6652,
+      "path": "scripts/measure_nsc_atlas_shared_ruler.py",
+      "sha256": "d42c7cf902130b30f26cf750aaca45f2083e08b31ffd49cd4629cd5ad1c4b520"
+    },
+    {
       "bytes": 23631,
       "path": "scripts/measure_nsc_conformal_causal_resolution.py",
       "sha256": "70d49473850ee5e19cbb0233a4a92b8fada08ad1ed22c0b7794cd4568df20149"
@@ -18929,6 +18939,11 @@
       "bytes": 12928,
       "path": "src/recursive_horizons/nsc_atlas_seed_collapse.py",
       "sha256": "8c9093e542ed3c7323dd6e612228c480d5655575832c46001df39486445ad395"
+    },
+    {
+      "bytes": 9176,
+      "path": "src/recursive_horizons/nsc_atlas_shared_ruler.py",
+      "sha256": "3639da03dfcea9702576786f9c6cdf7326229da43ff6b7bcd88c441bad401e30"
     },
     {
       "bytes": 19736,
@@ -21711,6 +21726,11 @@
       "sha256": "aee8ee536a5668d4ad9be392f65849171858ef8dc658bb622d1c3eb97714f0a8"
     },
     {
+      "bytes": 2143,
+      "path": "tests/test_nsc_atlas_shared_ruler.py",
+      "sha256": "e9403fe365fc25d1085809ff3f5acffd8a510918465d0ad6cc233e9d9a820b99"
+    },
+    {
       "bytes": 6906,
       "path": "tests/test_nsc_atlas_shared_scalar_slice.py",
       "sha256": "5d0b93f3a318e7a54d1058551e945bfe37cbe1b0369a80429c0b14fd73a54f56"
@@ -23646,7 +23666,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "baf930d1666d664eba910f53c711452d3b92543b5ae9cfcc388118c621b71916",
+  "lab_snapshot_sha256": "9e5f9025d298b7feed9539e026d4fd4d105e42e5ae88a5543cd6cb9610484972",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-28.2",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

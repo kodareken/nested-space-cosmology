@@ -18,6 +18,19 @@ starting a derivation.
 
 ## Current execution priority — 28 October 2026
 
+### Active request: shared DESI ruler, Planck-domain check and SI scale ladder
+
+The [shared-ruler calculation](nsc-atlas-shared-ruler.md) keeps checkpoint
+485b3b9's source and frozen forecasts unchanged. Integrate the actual SN
+shape posterior, fit one common r_d h to all 13 DESI points, and report
+the joint likelihood/parameter account. The SI target is 1.0904e-52 m^-2;
+it is never used to select a free source coefficient or inheritance level.
+Audit the inherited scale candidates in parallel, including existing
+quantum/spectral alternatives with their actions identified. A failed
+candidate gets one line and the next candidate. Its failure is local to
+that construction, not evidence against nesting. CMB scores require an
+actual last-scattering/source/ruler dictionary; missing inputs are exposed.
+
 ### Complete finite connection: inherited parent, earlier light cone and data
 
 The [supernova comparison](nsc-atlas-parent-supernova.md) tests the inherited
