@@ -18,6 +18,20 @@ starting a derivation.
 
 ## Current execution priority — 28 October 2026
 
+### Proposal requested before further implementation
+
+Douglas requested the [physical scale-selection proposal](nsc-atlas-scale-selection.md#proposal-for-douglass-review-derive-and-select-the-physical-charge-unit)
+for review first. It isolates the free dimensionless coupling g_scale,
+equivalently the Planck-normalized membrane charge. The proposed next
+construction derives one genuine parent-geometric normalization mode and
+its selecting dynamics/state, including its vacuum stress and matching.
+The present action contains no such selection equation. No new model,
+potential or numerical campaign is authorized by this proposal entry.
+Complete: prior source/likelihood/route audit. Current: proposal review.
+After review: explicit parent/action derivation, then a one-mode solve only
+if that derivation supplies a physical selector. The fixed checkpoint and
+P004/P005 remain unchanged.
+
 ### Computed: shared DESI ruler, Planck-domain check and SI scale ladder
 
 The [shared-ruler calculation](nsc-atlas-shared-ruler.md) preserves

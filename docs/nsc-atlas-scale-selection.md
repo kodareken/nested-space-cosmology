@@ -135,3 +135,89 @@ completion; no quantum selector is supplied by the frozen classical tests.
 No audited route yet returns an inherited, uniquely SI-fixed cosmological
 scale. The target remains unresolved. This statement concerns the missing
 selector in the fixed realization; it is not a rejection of nesting.
+
+## Proposal for Douglas's review: derive and select the physical charge unit
+
+Status: proposal only. No new selection sector, potential or numerical
+campaign is implemented or admitted by this note. The existing source,
+likelihood results, P004/P005 and scalar/flux couplings remain unchanged.
+
+The unresolved quantity can be expressed as one dimensionless coupling,
+g_scale=kappa_nat/L_unit^2, or eta_e=kappa_nat*e_can=ehat*sqrt(g_scale).
+For this source Lambda=(9/32)*g_scale/kappa_nat. The target would require
+g_scale=2.5453818753e-120 and eta_e=7.9771264803e-61; these are diagnostics,
+not values supplied to a selector. The microscopic e/sigma length is
+already fixed while this charge magnitude remains free.
+
+The recommended research construction is one physical geometric modulus
+of an enclosing parent that controls the canonical charge normalization,
+together with its derived dynamics/state. This is new physical content:
+the present four-dimensional action treats e,m,sigma as parameters. A
+uniform change of units is not a modulus; varying L_unit at fixed hats
+changes the physical coupling family. A normalized Gaussian state exists
+for many couplings and does not by itself select one.
+
+The alternatives considered are a full-cycle winding/state rule (still
+missing its actual cycle, contour and inherited integer), an independently
+measured SI clock (a calibration rather than inheritance-alone), and more
+classical wall/shape work (retains the scale freedom). The geometric
+charge-normalization construction directly addresses the free coupling.
+Its credibility depends on deriving the missing sector rather than
+postulating a potential with the desired minimum.
+
+Proposed execution after review:
+
+1. Specify a physical parent geometry and one gauge-inequivalent modulus s.
+   Derive its kinetic coefficient and the three-form kinetic normalization
+   Z(s). Preserve gauge invariance by keeping the topological charge fixed;
+   the canonical charge would be e_can=e_UV/sqrt(Z(s)). Derive the Planck
+   normalization of e_UV too. Setting e_UV=1 would leave a supplied scale.
+2. Derive a selection action Gamma_sel[s] from that same parent and one
+   explicit inherited-state prescription. Every geometric, flux, boundary
+   and quantum term and every subtraction condition must have an owner.
+   If a controlled local potential exists, solve V_eff'(s*)=0 with positive
+   kinetic norm and V_eff''(s*)>0. A nonlocal causal action needs its actual
+   stability condition instead. Do not assume a minimum or tune coefficients
+   using Lambda_obs. State normalization alone is not a selecting equation.
+3. Match canonical charge, tension, scalar frequency and the total vacuum
+   stress back to the fixed normalized parent. Include the new sector's
+   gravitational stress and vacuum energy; do not subtract its minimum by
+   hand. A mismatch defines a separate candidate rather than an invisible
+   modification of 485b3b9.
+4. Only when these equations exist, solve the resulting one-mode problem,
+   compute g_scale, L_unit, L_ref and Lambda in SI with uncertainty, then
+   compare the target and predict a second observable with calibration held
+   fixed. No additional cosmological fit is needed to formulate the selector.
+
+Implementation ownership would remain here and in the atlas owner. The
+current scalar/flux modules are frozen matching references. A prospective
+new module `nsc_atlas_parent_scale_selector.py` would own only the derived
+physical scale sector and its checks; it is not created until the proposed
+construction is approved. No extra physics library or field-grid campaign
+is justified for this first derivation.
+
+Goldberger--Wise's [bulk/boundary modulus stabilization](https://arxiv.org/html/hep-ph/9907447v2)
+is a method precedent in a different geometry. Bousso--Polchinski's
+[charge normalization and compactification discussion](https://arxiv.org/html/hep-th/0004134#S2.SS5)
+identifies microscopic charge and geometry dependencies. Neither paper
+supplies this NSC sector or its numerical parameters.
+
+Completion criteria for the proposed selector: one physical scale degree
+with a derived selecting equation; no adjustable SI coupling, root integer,
+initial modulus value or finite vacuum offset fixing the answer; an isolated
+stable state/value with controlled approximation; and explicit matching to
+the frozen parent. A claimed prediction is compared with Lambda_obs only
+after it is computed. Its second-observable consequence can falsify that
+candidate. The existing dimensionless 3*Omega_Lambda/curvature tensions are
+separate: changing the overall scale cannot remove them.
+
+Failure forecast:
+
+- The proposed scale mode is gauge or absent from the parent action: the
+  construction needs an explicit geometric/theory extension, not a variation
+  of a unit choice.
+- Z(s), e_UV, a boundary state or a renormalized constant remains freely
+  selectable: the hierarchy has been renamed rather than derived.
+- The derived state is unstable, gives the wrong scale or fails normalized
+  matching/its second observable: record that candidate's failure and move
+  to a separately specified mechanism without retuning it to the target.

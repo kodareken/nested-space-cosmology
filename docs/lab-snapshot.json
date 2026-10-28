@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+  "current_receipt_commit_parent": "a9b8c13320cee273ac5b981155233b41f23799d2",
   "files": [
     {
       "bytes": 3120,
@@ -10981,12 +10981,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 8656,
+      "bytes": 13833,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "changed_from_commit": "a9b8c13320cee273ac5b981155233b41f23799d2",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "e72e24a5a8cb77cc8e5a1d5831cbd3723a44bcb918bf8cb3629e2b06f36e67e8"
+      "sha256": "b6c9d2b4a77e1f98d3e2ea9ae9df08cbdb70ef9fe067456018ea6b59bf9f3d0a"
     },
     {
       "bytes": 16908,
@@ -11072,15 +11072,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 123961,
+      "bytes": 124853,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "changed_from_commit": "a9b8c13320cee273ac5b981155233b41f23799d2",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "474c7f4a3398fed0ab46a4b5a875921ba70f68f8954c2f50703a5a0156592aff"
+      "sha256": "143901f2e28a685f30c204bb2101513f6a7c2c29bb81066a6ff21329725be807"
     },
     {
       "bytes": 30876,
