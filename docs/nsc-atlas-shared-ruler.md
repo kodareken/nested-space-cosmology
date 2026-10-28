@@ -45,6 +45,12 @@ Use a common flat beta prior for that joint posterior; these normalizations
 are not reported as a model Bayes factor. No BAO target retunes the inherited
 source or the older frozen results.
 
+The initial 24/48-order control found a 2.26e-4 difference in the marginal
+BAO deviance, despite agreeing on the joint optimum and fraction moments.
+The conditional ruler likelihood is narrower in shape than the SN posterior.
+The admitted comparison therefore uses 48/96 nodes per panel with the same
+1e-5 numerical threshold; no physical parameter or error threshold changes.
+
 ## Scale route ladder and CMB boundary
 
 Audit every scale-selection class identifiable in the current atlas: flux

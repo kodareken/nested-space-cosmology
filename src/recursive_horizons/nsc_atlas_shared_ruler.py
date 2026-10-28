@@ -71,9 +71,9 @@ def marginal_score(beta,log_weights,a,b,c):
 
 
 def posterior_calculation(model,z_hd,z_hel,magnitude,covariance,bao_z,bao_labels,
-                          bao_mean,bao_covariance,*,order=24):
+                          bao_mean,bao_covariance,*,order=48):
     started=time.process_time()
-    if model not in ('parent','flat_LCDM') or order not in (24,48):raise ValueError('declared model/order required')
+    if model not in ('parent','flat_LCDM') or order not in (48,96):raise ValueError('declared model/order required')
     z=np.asarray(z_hd,float);hel=np.asarray(z_hel,float);bz=np.asarray(bao_z,float)
     sn=SupernovaShapeLikelihood(magnitude,covariance);bao=SharedRuler(bao_mean,bao_covariance)
     lo_sn=max(0.,math.log((1+max(z))/3)) if model=='parent' else 0.

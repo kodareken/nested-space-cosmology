@@ -66,7 +66,7 @@ def main():
     if subprocess.check_output(['git','status','--porcelain','--',*SOURCES],cwd=ROOT,text=True).strip():
         raise ValueError('commit the method before evaluating the new data comparison')
     bindings,frozen=authenticate()
-    jobs=[(m,o) for m in ('parent','flat_LCDM') for o in (24,48)]
+    jobs=[(m,o) for m in ('parent','flat_LCDM') for o in (48,96)]
     with ProcessPoolExecutor(max_workers=4) as pool:rows=list(pool.map(worker,jobs))
     results={};controls={}
     prior=json.loads((ROOT/'results/summaries/nsc-atlas-parent-supernova-v2.json').read_text(encoding='utf-8'))

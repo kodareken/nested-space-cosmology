@@ -1733,7 +1733,7 @@
     {
       "bytes": 2559860,
       "path": "docs/lab-snapshot.json",
-      "sha256": "9e5f9025d298b7feed9539e026d4fd4d105e42e5ae88a5543cd6cb9610484972"
+      "sha256": "db5266c3ea2a48aa40e2b6ba00394572c10fed583a1b26a8fb190d94a0a7be20"
     },
     {
       "bytes": 4997,
@@ -2016,9 +2016,9 @@
       "sha256": "c8b4c1d70509075daac6de9b2b2103f2cda771dbe677a84ea649b92edc831825"
     },
     {
-      "bytes": 4152,
+      "bytes": 4530,
       "path": "docs/nsc-atlas-shared-ruler.md",
-      "sha256": "fd0258743bbec0815c330dad7395c86b2d1870d6164f135c7745f2e3e78e5587"
+      "sha256": "703a3471d6d25df3f0e42610b5baec83e7b60be979777016d60fba197690f524"
     },
     {
       "bytes": 14560,
@@ -17538,7 +17538,7 @@
     {
       "bytes": 6652,
       "path": "scripts/measure_nsc_atlas_shared_ruler.py",
-      "sha256": "d42c7cf902130b30f26cf750aaca45f2083e08b31ffd49cd4629cd5ad1c4b520"
+      "sha256": "4c0cb044129c00c5205d630d61ca725047a70b2bf97565a500cc4505ac5c04d3"
     },
     {
       "bytes": 23631,
@@ -18943,7 +18943,7 @@
     {
       "bytes": 9176,
       "path": "src/recursive_horizons/nsc_atlas_shared_ruler.py",
-      "sha256": "3639da03dfcea9702576786f9c6cdf7326229da43ff6b7bcd88c441bad401e30"
+      "sha256": "38863b0e05758500efd87b43d578f3f52700e6ce9e7ad4828900e54f8e774243"
     },
     {
       "bytes": 19736,
@@ -23666,7 +23666,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "9e5f9025d298b7feed9539e026d4fd4d105e42e5ae88a5543cd6cb9610484972",
+  "lab_snapshot_sha256": "db5266c3ea2a48aa40e2b6ba00394572c10fed583a1b26a8fb190d94a0a7be20",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-28.2",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
