@@ -69,6 +69,22 @@ def test_p003_binds_the_observable_and_preserves_synthetic_scope(tmp_path):
     with pytest.raises(ValueError):checker.check_p003(tmp_path,bad)
 
 
+def test_p005_preserves_its_frozen_interval_and_nonobservational_scope(tmp_path):
+    entry=json.loads((ROOT/checker.REGISTER).read_text(encoding='utf-8'))['entries'][4]
+    for name in ('forecast','validation','density_relation'):
+        if name not in entry:continue
+        path=entry[name]['path'];target=tmp_path/path
+        target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/path,target)
+    checker.check_p005(tmp_path,entry)
+    bad=copy.deepcopy(entry);bad['frequency_members'][0]['Lambda_DL_squared_interval'][0]='0'
+    with pytest.raises(ValueError):checker.check_p005(tmp_path,bad)
+    bad=copy.deepcopy(entry);bad['observational_validation']=True
+    with pytest.raises(ValueError):checker.check_p005(tmp_path,bad)
+    if 'density_relation_prediction' in entry:
+        bad=copy.deepcopy(entry);bad['density_relation_prediction']['coefficient_approximate']+=.001
+        with pytest.raises(ValueError):checker.check_p005(tmp_path,bad)
+
+
 @pytest.mark.parametrize("mutation", [
     lambda e:e["coefficients"]["rho"].update(value=-5.0),
     lambda e:e["coefficients"]["eta"].update(field_refinement_maximum_absolute_difference=0.),

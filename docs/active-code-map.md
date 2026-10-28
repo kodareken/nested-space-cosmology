@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The inherited-source background/light-cone calculator is
+`nsc_atlas_inherited_matter.py`. It reuses the original shared-parent source;
+`check_nsc_atlas_inherited_matter.py` keeps creation-only forecast/validation
+records, and `plot_nsc_atlas_inherited_matter.py` reads those records without
+an evolution. The [scientific owner](nsc-atlas-inherited-matter-bound.md)
+contains the exact comparison, source domain and reproduction route.
+
 The [actual-mode interaction owner](nsc-atlas-cosmohedron-interaction.md)
 uses [the phase/mode and vertex calculator](../src/recursive_horizons/nsc_atlas_cosmohedron_interaction.py),
 [eight field/mode controls](../tests/test_nsc_atlas_cosmohedron_interaction.py),

@@ -1,5 +1,19 @@
 # What the calculations show
 
+The [inherited-source theorem](nsc-atlas-inherited-matter-bound.md)
+now joins the same scalar/four-form preparation to a controlled matter
+background and an interior luminosity-distance prediction. Its uniform
+high-frequency density ceiling is 1.09608e-9 from A=1 onward, with
+E0=3/8 and rho_v=9/32 retained. NSC-P005 was committed before its
+unaveraged target. Proper and expansion clocks give Lambda_v*D_L^2
+.251699293480111 and .251699293482159 inside the frozen interval.
+The same state and geometry fix an epoch/ruler-independent vacuum-scalar-curvature
+correlation with coefficient .00806621506604026 and a controlled phase band.
+The proof controls the homogeneous background/light cone; the earlier
+formation epoch, perturbation/halo reduction and physical state selection
+retain their own requirements. The result is integrated into Sections
+13.15--13.17 of the single atlas.
+
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book in revision 2026-10-27.4. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,

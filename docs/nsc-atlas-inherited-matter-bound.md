@@ -52,7 +52,7 @@ Success closes this background approximation and its specified light-cone
 map; it does not select the ancestral flux, produce primordial seeds, or
 establish perturbation/halo averaging errors.
 
-## Exact connection to calculate
+## Exact source connection
 
 In the shared parent, A=a/a0 and
 
@@ -208,12 +208,83 @@ above is the bound itself. The vacuum length product remains the inherited
 Lambda_v*a0^2=12.3482523989285. This work controls the evolving component
 and the observer reduction without replacing that supplied vacuum source.
 
-The unaveraged proper-time, independent expansion-clock and short
-high-frequency checks are the next execution step. A successful comparison
-will be recorded separately, leaving the analytic forecast unchanged.
+## An epoch-independent density-fraction constraint
+
+The [derived relation](../results/summaries/nsc-atlas-inherited-density-relation-v1.json)
+adds no source, epoch or ruler. Set Omega_chi=kappa*E/(3H^2),
+Omega_v=kappa*rho_v/(3H^2), and Omega_k=-C/(A^2 H^2). Algebra gives
+
+$$
+\frac{(-\Omega_k)^3}{\Omega_\chi^2\Omega_v}
+=\frac{\mathcal C_\Omega}{(A^3E/E_0)^2},\qquad
+\mathcal C_\Omega=\frac{C^3}{(\kappa E_0/3)^2(\kappa\rho_v/3)}
+=.00806621506604026.
+$$
+
+The explicit epoch, Hubble rate and length unit cancel. The source theorem
+therefore puts this ratio in [C_Omega/U^2,C_Omega/L^2] at every future
+time. Frequency10^9 gives the outward-rounded exact interval
+[.008066215048357963,.008066215083722556]. The central coefficient is not
+an exact finite-frequency invariant: its phase correction is retained.
+
+Omega_chi means scalar excitation, not an observed total matter density.
+The standard density scaling/normalization identities are reused; the
+contribution is the source-geometry coefficient and its controlled
+finite-frequency interval on the actual inherited parent. In particular,
+the dust-comparison energy-equality point predicts
+Omega_chi=Omega_v approximately .555725 and Omega_k approximately -.111451.
+Those are benchmark model values, not a fit or an observational claim.
+An actual joint test must handle the model's observer inference and any
+additional matter/radiation consistently.
+
+## Independent unaveraged comparison
+
+The [validation](../results/summaries/nsc-atlas-inherited-matter-validation-v1.json)
+was evaluated after the forecast and NSC-P005 were committed in
+[70bdd5a](https://github.com/kodareken/nested-space-cosmology/commit/70bdd5a).
+The forecast bytes and all source couplings remain unchanged.
+
+| Frequency-20 target | Proper-time evolution | Constraint-eliminated expansion clock |
+| --- | --- | --- |
+| Lambda_v D_L^2 | .251699293480111 | .251699293482159 |
+| Energy-equality scale | 1.10363602735015 | 1.10363602734147 |
+| A^3 E/E0 at A=2 | 1.02390960047656 | 1.02390960043505 |
+
+The squared-distance difference is 2.05e-12, and the independent photon
+integrals agree within 1.28e-15 in conformal distance. Those are numerical
+comparison indicators, distinct from the proved analytic enclosure.
+The maximum frequency-20 proper-time Friedmann and work residuals are
+4.26e-11 and 4.30e-11. The constraint-eliminated clock checks the same
+source without evolving an independent H variable.
+
+A four-cycle frequency-2000 control also stays inside its all-future source
+bound. Together the three solves use 7086 RHS calls and about .078 solver
+process-CPU seconds, excluding process startup. No long frequency-10^9
+trajectory or previous wall grid was run. The high-frequency conclusion
+follows from the analytic comparison and rational input bounds.
+
+Independent checks cover the exact source/metric identities, original
+unsquared junction, ancestral normalization, a constant-H analytic solution,
+high-precision optical quadrature against the rational enclosure, and the
+two unaveraged clocks. Grok independently reviewed the supplied proof
+algebra and its domain without reading the manuscript.
+
+This closes the inherited homogeneous source-to-background-to-distance
+connection. The same scalar supplies rho_v and the matter-law normalization;
+its absolute vacuum and ancestral preparation remain supplied state data.
+The bound applies from A=1 onward. It does not certify the earlier A=.01
+formation background, the inhomogeneous envelope/halo reduction, primordial
+statistics, or an astronomical identification of this observer protocol.
+
+The next outward use is the shared cosmological forward model and population:
+propagate this controlled parent into distances and growth, constrain the
+remaining preparation, and test its compensation/optical relation on
+independent observations.
+
+The production commands are creation-only historical entries. Reproduce
+the equations and controls without overwriting their saved evidence:
 
 ```powershell
-python scripts/run_python.py scripts/check_nsc_atlas_inherited_matter.py
-python scripts/run_python.py scripts/check_nsc_atlas_inherited_matter.py --validate
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_inherited_matter.py
+python scripts/run_python.py -c "from recursive_horizons.nsc_atlas_inherited_matter import solve_parent; print(solve_parent()); print(solve_parent(clock='efolds')); print(solve_parent(omega=2000, short_cycles=4))"
 ```

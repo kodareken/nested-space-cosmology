@@ -1,5 +1,15 @@
 # Paper guide
 
+Revision 2026-10-28.1 adds Sections 13.15--13.17 and Figure 17:
+an epoch-independent density-fraction relation, a uniform inherited-scalar
+matter-background theorem, its rational
+luminosity-distance enclosure, and NSC-P005's independent unaveraged
+comparison. The original source normalization is retained and the
+high-frequency conclusion requires no long carrier evolution. Existing
+figure labels 17--38 advance to 18--39. The background proof's domain is
+A>=1; ancestral selection, early history and halo/perturbation accuracy
+remain separate. Author review and submission readiness are unchanged.
+
 Revision 2026-10-27.4 rewrites the atlas as one connected book. Eight
 parts carry spherical geometry and inheritance through physical sources,
 formation, observation, gravitational/quantum exchange and effective gravity.

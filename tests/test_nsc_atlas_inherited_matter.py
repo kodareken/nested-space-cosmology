@@ -80,3 +80,16 @@ def test_unaveraged_gravity_and_independent_clock_predict_the_same_lightcone():
     assert p['independent_photon_integral_gap']<1e-11
     assert max(p['maximum_Friedmann_residual'],e['maximum_Friedmann_residual'])<3e-9
     assert max(p['maximum_energy_work_residual'],e['maximum_energy_work_residual'])<3e-9
+
+
+def test_density_fraction_relation_cancels_epoch_Hubble_scale_and_length_units():
+    g=exact_initial_geometry();C,d,h2=g['curvature'],g['excitation']/3,g['vacuum']/3
+    coefficient=C**3/(d*d*h2)
+    b=uniform_bound(20)
+    for A,R in ((F(1),F(1)),(F(2),b['lower']),(F(5),b['upper'])):
+        H2=h2+d*R/A**3-C/A**2
+        Ochi=d*R/(A**3*H2);Ov=h2/H2;Ok=-C/(A*A*H2)
+        assert Ochi+Ov+Ok==1
+        assert (-Ok)**3/(Ochi**2*Ov)==coefficient/R**2
+    for length in (F(1,7),F(3),F(1000)):
+        assert (C/length**2)**3/((d/length**2)**2*(h2/length**2))==coefficient

@@ -411,7 +411,7 @@
       "registered_on": "2026-10-28",
       "registration": "prospective_unaveraged_background_lightcone_check",
       "observational_validation": false,
-      "status": "analytic_forecast_frozen_before_unaveraged_evaluation",
+      "status": "unaveraged_cross_check_passed",
       "forecast": {
         "path": "results/summaries/nsc-atlas-inherited-matter-forecast-v1.json",
         "bytes": 5073,
@@ -488,7 +488,50 @@
         }
       ],
       "limits": "Exact conditional homogeneous-background and declared light-cone bounds. Initial flux, mixing, scalar frequency and turning-point preparation remain fixed supplied inputs. No physical scale, primordial selection, halo/perturbation error bound or observational confirmation is inferred.",
-      "rejection": "A compatible exact unaveraged solution escaping the proved analytic source or luminosity-distance interval rejects this calculation; preserve the frozen bound and diagnose the equation/input mismatch. A later astronomical test requires independently constrained preparation, observer epoch and full model uncertainty."
+      "rejection": "A compatible exact unaveraged solution escaping the proved analytic source or luminosity-distance interval rejects this calculation; preserve the frozen bound and diagnose the equation/input mismatch. A later astronomical test requires independently constrained preparation, observer epoch and full model uncertainty.",
+      "validation": {
+        "path": "results/summaries/nsc-atlas-inherited-matter-validation-v1.json",
+        "bytes": 3429,
+        "sha256": "615e28dcf5d0920c8141bdb9f1c3dcbf945a5ea5a6c077bccbd081592d888f38"
+      },
+      "density_relation": {
+        "path": "results/summaries/nsc-atlas-inherited-density-relation-v1.json",
+        "bytes": 2651,
+        "sha256": "e026c2adf271079a2dad581153f56cb6726320dd323cbc3aae5ea5fca54b99cf"
+      },
+      "density_relation_prediction": {
+        "exact_identity": "(-Omega_curvature)^3/(Omega_chi^2*Omega_vacuum)=C_Omega/R^2",
+        "coefficient_approximate": 0.00806621506604026,
+        "frequency_members": [
+          {
+            "omega": 20,
+            "density_fraction_invariant_interval": [
+              "0.007206326602922193",
+              "0.009006475734120543"
+            ],
+            "relative_lower_gap": 0.10660371141581633,
+            "relative_upper_gap": 0.1165677657218556
+          },
+          {
+            "omega": 2000,
+            "density_fraction_invariant_interval": [
+              "0.008057376340802054",
+              "0.008075061497410768"
+            ],
+            "relative_lower_gap": 0.0010957710854272958,
+            "relative_upper_gap": 0.0010967264445690566
+          },
+          {
+            "omega": 1000000000,
+            "density_fraction_invariant_interval": [
+              "0.008066215048357963",
+              "0.008066215083722556"
+            ],
+            "relative_lower_gap": 2.1921428559414844e-09,
+            "relative_upper_gap": 2.192142859761367e-09
+          }
+        ]
+      }
     }
   ]
 }

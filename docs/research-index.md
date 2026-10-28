@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [uniform inherited-matter bound](nsc-atlas-inherited-matter-bound.md)
+closes a background approximation used by the structure programme and
+propagates its exact source normalization to a rational light-cone
+enclosure. NSC-P005 has an independently checked unaveraged target.
+The physical source, all-future domain and remaining population questions
+are stated in that owner and in the main book.
+
 The [geometry-derived cosmohedron interaction](nsc-atlas-cosmohedron-interaction.md)
 now calculates an actual normalized gravitational mode and two scalar-current
 vertices on the sourced two-wall body. The zero-background probe extension

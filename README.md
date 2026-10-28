@@ -19,7 +19,12 @@ and charged membranes. The same action supplies regional vacuum relations,
 a constrained three-region slice, an evolving protected parent, density
 growth, conserved energy supply and finite examples of structure formation.
 Its evolved sources then determine clocks, lensing and freely falling
-motion. Absolute scale, preparation and population are physical inputs to
+motion.
+An exact inherited-source comparison controls the matter-background
+normalization and propagates it to a luminosity-distance interval;
+NSC-P005 passes its independent unaveraged check. The same geometry
+constrains vacuum, scalar and curvature fractions independently of observer
+age and SI ruler. Absolute scale, preparation and population are physical inputs to
 close and test within that connected account.
 
 ## Read the atlas

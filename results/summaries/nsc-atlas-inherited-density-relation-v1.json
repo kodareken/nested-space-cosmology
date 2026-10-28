@@ -1,0 +1,71 @@
+{
+  "schema": "nsc-atlas-inherited-density-relation-v1",
+  "result": "An epoch- and length-unit-independent vacuum/scalar/curvature correlation fixed by the same inherited initial geometry and energy.",
+  "definitions": {
+    "Omega_chi": "kappa E/(3H^2)",
+    "Omega_vacuum": "kappa rho_v/(3H^2)",
+    "Omega_curvature": "-C/(A^2 H^2)",
+    "comoving_ratio": "R=A^3 E/E0"
+  },
+  "exact_identity": "(-Omega_curvature)^3/(Omega_chi^2*Omega_vacuum)=C_Omega/R^2",
+  "exact_residual": "0",
+  "coefficient_exact": "235122054022249106778964552482431/29148993932996081309737378176000000",
+  "coefficient_approximate": 0.00806621506604026,
+  "frequency_members": [
+    {
+      "omega": 20,
+      "density_fraction_invariant_interval": [
+        "0.007206326602922193",
+        "0.009006475734120543"
+      ],
+      "relative_lower_gap": 0.10660371141581633,
+      "relative_upper_gap": 0.1165677657218556
+    },
+    {
+      "omega": 2000,
+      "density_fraction_invariant_interval": [
+        "0.008057376340802054",
+        "0.008075061497410768"
+      ],
+      "relative_lower_gap": 0.0010957710854272958,
+      "relative_upper_gap": 0.0010967264445690566
+    },
+    {
+      "omega": 1000000000,
+      "density_fraction_invariant_interval": [
+        "0.008066215048357963",
+        "0.008066215083722556"
+      ],
+      "relative_lower_gap": 2.1921428559414844e-09,
+      "relative_upper_gap": 2.192142859761367e-09
+    }
+  ],
+  "dust_comparison_energy_equality": {
+    "excitation_over_vacuum": 1,
+    "Omega_vacuum": 0.5557254460129124,
+    "Omega_chi": 0.5557254460129124,
+    "Omega_curvature": -0.11145089202582474,
+    "role": "Approximate decimals for the dust-comparison curve at equal excitation/vacuum, not astronomical values or the finite-frequency unaveraged equality."
+  },
+  "fixed_source": "Same protected homogeneous scalar/four-form parent; turning-point preparation, from A=1 onward.",
+  "independent_of": [
+    "observer epoch A",
+    "Hubble normalization",
+    "physical SI length unit"
+  ],
+  "supplied_inputs_remain": [
+    "ancestral preparation",
+    "flux/mixing sector",
+    "initial boundary geometry",
+    "frequency member"
+  ],
+  "observations_used": false,
+  "background_bound": {
+    "path": "results/summaries/nsc-atlas-inherited-matter-forecast-v1.json",
+    "sha256": "f2909df91b5f538db1483f7c0cb284e16c835f77309a37c980b9f62c57b49e9d"
+  },
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+    "scripts/derive_nsc_inherited_density_relation.py": "d53783f81eaf78a694b95c973bdc9621d38f20723bdfccc99a458d6cfd8d9503"
+  }
+}

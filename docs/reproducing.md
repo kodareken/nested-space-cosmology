@@ -1,5 +1,22 @@
 # Reproducing the root project
 
+## Inherited source, matter background and light cone
+
+The [proof and numerical owner](nsc-atlas-inherited-matter-bound.md)
+gives the fixed source/clock data and the analytic interval. Forecast and
+first validation retain the source hashes committed at `70bdd5a`.
+The commands below reproduce the mathematical checks and all three
+unaveraged comparisons without replacing creation-only evidence:
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_inherited_matter.py tests/test_prediction_register.py
+python scripts/run_python.py -c "from recursive_horizons.nsc_atlas_inherited_matter import solve_parent; print(solve_parent()); print(solve_parent(clock='efolds')); print(solve_parent(omega=2000, short_cycles=4))"
+python scripts/run_python.py scripts/plot_nsc_atlas_inherited_matter.py
+```
+
+The frequency 10^9 bound is evaluated by exact rational comparison;
+these commands do not integrate a long frequency 10^9 trajectory.
+
 ## Actual geometric modes, derived vertices and selected quantum exchange
 
     python scripts/run_python.py scripts/check_nsc_atlas_cosmohedron_interaction.py

@@ -1,5 +1,22 @@
 # Cited arXiv studies
 
+## Oscillating scalar source and the controlled parent — 28 October 2026
+
+[Turner, Phys. Rev. D 28, 1243 (1983)](https://doi.org/10.1103/PhysRevD.28.1243),
+abstract and publication identity, supplies the established rapid-oscillation
+energy-scaling precedent. The full paywalled text was not used.
+[Hwang--Noh, 0902.4738](https://arxiv.org/html/0902.4738), equations (2)--(6),
+explicitly states temporal averaging and the discarded H/m orders.
+
+The [new atlas proof](nsc-atlas-inherited-matter-bound.md) retains the
+original nonaveraged Einstein-scalar equations on the closed protected
+parent. Corrected comoving energy and bounded total Hubble variation give
+exact rational all-future density comparisons. Its specified light cone
+has a further rational polynomial/tail enclosure. This is an application
+and controlled connection of the inherited source, not a priority claim
+for scalar-field dark matter or an extension of the cited perturbation
+theorem to every scale.
+
 ## Spherical energy and the book's geometric hypothesis — 27 October 2026
 
 [Neumayer, 1503.06705v2](https://arxiv.org/html/1503.06705v2), Section 1.1,

@@ -528,6 +528,26 @@
       "section": "2",
       "status": "proposal",
       "owner": "docs/nsc-cosmological-atlas.md"
+    },
+    "uniform-inherited-scalar-matter": {
+      "section": "13.15",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-inherited-matter-bound.md"
+    },
+    "inherited-parent-lightcone-bound": {
+      "section": "13.16",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-inherited-matter-bound.md"
+    },
+    "inherited-parent-unaveraged-validation": {
+      "section": "13.16",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-inherited-matter-bound.md"
+    },
+    "inherited-vacuum-matter-curvature-relation": {
+      "section": "13.17",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-inherited-matter-bound.md"
     }
   },
   "findings": [

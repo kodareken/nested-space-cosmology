@@ -1,10 +1,10 @@
 {
-  "bytes": 13407265,
+  "bytes": 13844834,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "4f94020243b43e973250b236dbb1b922a533488f345f3ca2fbd58ff70c582b9b",
+  "metadata_sha256": "1ab16dbd956986d13daef7dd957786897a916035484a3dae78c07bf2b8e9880e",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 161,
-  "pdf_sha256": "fbcf37072413ab19079b788c4891a534bb3447414ae2fbc391de3507317c3c2b",
+  "pages": 166,
+  "pdf_sha256": "8b4f4da37b8c8c4ad9698de4a627e7caea8952780baac931313806882787ff1d",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -74,6 +74,10 @@
     {
       "path": "docs/figures/nsc-atlas-hierarchy-perturbations.png",
       "sha256": "e1fcac38ab49e5d63e3a7708381e9e0570f4d6fb3a01474de4ab35f87267972d"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-inherited-matter.png",
+      "sha256": "b375bc893fab7a583f2874b74909b775e87edee570ee574a4c212e0fa285c774"
     },
     {
       "path": "docs/figures/nsc-atlas-nested-slice.png",
@@ -644,6 +648,18 @@
       "sha256": "e324ff4570c045af7225dcb04aaee0dc7828fb9fade73ff92f3cc751c0a52df6"
     },
     {
+      "path": "results/summaries/nsc-atlas-inherited-density-relation-v1.json",
+      "sha256": "e026c2adf271079a2dad581153f56cb6726320dd323cbc3aae5ea5fca54b99cf"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-inherited-matter-forecast-v1.json",
+      "sha256": "f2909df91b5f538db1483f7c0cb284e16c835f77309a37c980b9f62c57b49e9d"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-inherited-matter-validation-v1.json",
+      "sha256": "615e28dcf5d0920c8141bdb9f1c3dcbf945a5ea5a6c077bccbd081592d888f38"
+    },
+    {
       "path": "results/summaries/nsc-atlas-jordan-radius-bound-v1.json",
       "sha256": "2a4aa2c18664e175ea9bf94f21bf0a0c881e9c41bce14780f4fef06930d5be0b"
     },
@@ -797,6 +813,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "dc4d578d97aad4eb6f84fab921442afc802e1fa88056c2d2315bcf6ed22d939f",
-  "version": "working-2026-10-27.4"
+  "source_sha256": "66c4ff0fefd487081627aea94b3a0eb7ae5bc7568b9c266554fcae2d746bd6eb",
+  "version": "working-2026-10-28.1"
 }

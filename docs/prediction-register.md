@@ -268,14 +268,24 @@ target evaluation. A comoving receiver at A=2 observes an emitter at z=1/4
 
 The [creation-only forecast](../results/summaries/nsc-atlas-inherited-matter-forecast-v1.json)
 gives the exact rationally enclosed interval
-[.242823328986305,.261473628319700] for frequency20. The independent
-proper-time and expansion-clock calculation will test this interval.
-The existing frequency10^9 member instead has
+[.242823328986305,.261473628319700] for frequency 20. The [unaveraged validation](../results/summaries/nsc-atlas-inherited-matter-validation-v1.json)
+passes: proper and expansion clocks give .251699293480111 and
+.251699293482159, differing by 2.05e-12. The analytic forecast was committed
+in 70bdd5a before either target evaluation.
+The existing frequency 10^9 member instead has
 [.251803608594062,.251803608946144], with a uniform density-law departure
-below1.097e-9. No long frequency10^9 evolution is required for that theorem.
+below 1.097e-9. No long frequency 10^9 evolution is required for that theorem.
 
 These are conditional bounds on the inherited parent and its transparent
 test light cone. No observational calibration, ancestral-state selection,
 matter abundance or full halo/perturbation reduction is claimed. The
 prediction register authenticates the forecast and its frozen projections
 without rerunning a source calculation.
+
+The same source also fixes the [density-fraction correlation](../results/summaries/nsc-atlas-inherited-density-relation-v1.json).
+Its coefficient is C_Omega=.00806621506604026; the finite-frequency
+phase is retained by the source bound. At frequency 10^9,
+(-Omega_k)^3/(Omega_chi^2*Omega_v) lies in
+[.008066215048357963,.008066215083722556] at every future epoch of the
+protected parent. Omega_chi denotes the scalar excitation. No observed
+cosmic density fraction or physical age was used to select this relation.

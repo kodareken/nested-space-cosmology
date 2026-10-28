@@ -523,6 +523,13 @@ def check_p005(root, entry):
     exact(entry['observer'],forecast['observer'],'P005 observer projection')
     exact(entry['frequency_members'],forecast['frequency_members'],'P005 bound projections')
     require(bool(entry['rejection'].strip()),'P005 rejection criterion required')
+    if 'density_relation' in entry:
+        relation=read_json(bound_bytes(root,entry['density_relation'],'P005 density relation'))
+        exact(relation['background_bound']['sha256'],hashlib.sha256(raw).hexdigest(),'P005 relation source')
+        exact(relation['observations_used'],False,'P005 relation observation status')
+        exact(entry['density_relation_prediction'],
+              {k:relation[k] for k in ('exact_identity','coefficient_approximate','frequency_members')},
+              'P005 density relation projection')
     if 'validation' in entry:
         validation=read_json(bound_bytes(root,entry['validation'],'P005 validation'))
         exact(validation['forecast_sha256'],hashlib.sha256(raw).hexdigest(),'P005 frozen forecast unchanged')
@@ -548,7 +555,7 @@ def check_register(root, register):
             (["NSC-P001"], ["NSC-P001", "NSC-P002"], ["NSC-P001", "NSC-P002", "NSC-P003"],
              ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004"],
              ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004", "NSC-P005"]),
-            "registered P001 and optional unique P002/P003/P004/P005 in order required")
+            "one currently registered P001 and optional unique P002/P003/P004/P005 in order required")
     entry = entries[0]
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")
@@ -579,6 +586,7 @@ def check_register(root, register):
         check_p005(root,entries[4])
         result['predictions']+=1
         result['evidence_files']+=1+int('validation' in entries[4])
+        result['evidence_files']+=int('density_relation' in entries[4])
     return result
 
 

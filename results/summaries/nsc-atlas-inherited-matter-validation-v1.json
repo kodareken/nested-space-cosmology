@@ -1,0 +1,90 @@
+{
+  "schema": "nsc-atlas-inherited-matter-validation-v1",
+  "forecast_path": "results/summaries/nsc-atlas-inherited-matter-forecast-v1.json",
+  "forecast_sha256": "f2909df91b5f538db1483f7c0cb284e16c835f77309a37c980b9f62c57b49e9d",
+  "unaveraged_rows": [
+    {
+      "clock": "proper",
+      "omega": 20,
+      "short_cycles": null,
+      "rhs_calls": 2084,
+      "process_cpu_seconds": 0.015625,
+      "final_scale": 2.0,
+      "final_proper_time": 1.9170216168299858,
+      "final_comoving_energy_ratio": 1.0239096004765602,
+      "sampled_comoving_energy_extrema": [
+        0.9696503809994671,
+        1.0343233664991336
+      ],
+      "sampled_corrected_energy_extrema": [
+        0.9999974239864617,
+        1.0006785092212216
+      ],
+      "maximum_Friedmann_residual": 4.258798869116731e-11,
+      "maximum_energy_work_residual": 4.293260191801096e-11,
+      "Lambda_DL_squared": 0.25169929348011116,
+      "photon_conformal_distance": 0.057139256800822186,
+      "independent_photon_integral_gap": 1.3877787807814457e-17,
+      "energy_equality_scale": 1.103636027350148
+    },
+    {
+      "clock": "efolds",
+      "omega": 20,
+      "short_cycles": null,
+      "rhs_calls": 3497,
+      "process_cpu_seconds": 0.046875,
+      "final_scale": 2.0,
+      "final_proper_time": 1.917021616835415,
+      "final_comoving_energy_ratio": 1.0239096004350505,
+      "sampled_comoving_energy_extrema": [
+        0.969638050941323,
+        1.0343375055497752
+      ],
+      "sampled_corrected_energy_extrema": [
+        0.9999974025548009,
+        1.0006784812550478
+      ],
+      "maximum_Friedmann_residual": 2.220446049250313e-16,
+      "maximum_energy_work_residual": 2.6184610035784317e-13,
+      "Lambda_DL_squared": 0.2516992934821585,
+      "photon_conformal_distance": 0.05713925680105483,
+      "independent_photon_integral_gap": 1.27675647831893e-15,
+      "energy_equality_scale": 1.1036360273414725
+    },
+    {
+      "clock": "proper",
+      "omega": 2000,
+      "short_cycles": 4,
+      "rhs_calls": 1505,
+      "process_cpu_seconds": 0.015625,
+      "final_scale": 1.0055654930365612,
+      "final_proper_time": 0.012566370614359173,
+      "final_comoving_energy_ratio": 0.9999999994535833,
+      "sampled_comoving_energy_extrema": [
+        0.9996682873268713,
+        1.000332126711838
+      ],
+      "sampled_corrected_energy_extrema": [
+        0.9999999994299056,
+        1.0000000618643026
+      ],
+      "maximum_Friedmann_residual": 5.089290655568846e-10,
+      "maximum_energy_work_residual": 5.089293986237919e-10
+    }
+  ],
+  "independent_clock_gaps": {
+    "Lambda_DL_squared": 2.047362279711251e-12,
+    "energy_equality_scale": 8.675504759025898e-12,
+    "final_comoving_energy_ratio": 4.150968457850013e-11
+  },
+  "total_rhs_calls": 7086,
+  "total_solver_process_cpu_seconds": 0.078125,
+  "long_frequency_1e9_evolution_run": false,
+  "physical_observation_test": false,
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "scripts/check_nsc_atlas_inherited_matter.py": "cb31f95074b85fc07cc174e53e3ca394f9f7da514af18159e9dd8ae5b6d62f2e"
+  }
+}

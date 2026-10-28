@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 27 October 2026
+Working research manuscript, 28 October 2026
 
 ## Abstract
 
@@ -32,7 +32,13 @@ ties local concentration to an ambient reservoir; finite nonlinear examples
 form contracting structures. The same evolved sources determine clocks,
 lensing, image delays and freely falling motion. Scale-independent
 relations connect these local measurements to the parent vacuum, and a
-motion-calibrated optical forecast passes its withheld synthetic test.
+motion-calibrated optical forecast passes its withheld synthetic test. A uniform corrected-energy comparison fixes the matter-law
+normalization from the same inherited scalar and bounds its luminosity-distance
+approximation. The high-frequency member has relative background-density
+departure below $1.097\times10^{-9}$, with an analytic interior light-cone
+interval checked independently against the unaveraged source. The same
+geometry fixes a scalar/vacuum/curvature correlation in which the explicit
+epoch and length unit cancel.
 
 Further atlas branches connect stable material interfaces to gravitational
 scattering, unresolved fluid motion to resolved momentum flux, and a
@@ -114,7 +120,7 @@ subsequent chapters give the primary sources and the calculated connection.
 | Regular material interiors | Mazur and Mottola; Visser and Wiltshire; Jampolski and Rezzolla supply gravastar, stability and nested-interface precedents |
 | Vacuum transitions and scalar response | Brown--Teitelboim, Bousso--Polchinski, Hirano and Kaloper--Sorbo supply charged flux and scalar couplings |
 | Regular preparation and continuation | Coleman--De Luccia and Dong--Harlow supply the geometric preparation framework |
-| Scalar concentration and growth | Seidel--Suen, Moroz--Penrose--Tod, Hwang--Noh and the cited scalar-field literature supply cooling, profiles and perturbation methods |
+| Scalar concentration and growth | Seidel--Suen, Moroz--Penrose--Tod, Turner, Hwang--Noh and the cited scalar-field literature supply cooling, profiles and perturbation methods |
 | Light and gravitational waves | Frittelli--Newman, Perlick, Seitz--Schneider--Ehlers, Pani and collaborators, and Martel--Poisson supply observer and perturbation machinery |
 | Flow and quantum geometry | Hamilton--Lisle, Visser, Bredberg and collaborators, the cited OpenAI flow result, and Arkani-Hamed--Figueiredo--Vazao supply the separate flow and energy-kernel constructions |
 
@@ -3531,6 +3537,290 @@ a falsifiable observer relation within a declared preparation family.
 The [state-flow identities](../results/summaries/nsc-atlas-parent-clocks-v1.json)
 are retained with the observer calculation.
 
+### 13.15. The inherited scalar gives a controlled matter background
+
+<!-- nsc-claim:uniform-inherited-scalar-matter -->
+
+Derivation and calculation: [uniform source theorem and light-cone forecast](../results/summaries/nsc-atlas-inherited-matter-forecast-v1.json)
+and [proof and domain](../docs/nsc-atlas-inherited-matter-bound.md).
+
+The same inherited field must supply the normalization of its evolving
+component. The oscillating-scalar matter mechanism is established in
+[Turner](https://doi.org/10.1103/PhysRevD.28.1243) and
+[Hwang--Noh](https://arxiv.org/html/0902.4738).
+Here its background approximation is bounded on the actual closed,
+self-gravitating parent, using its original state and positive vacuum floor.
+
+Let $A=a/a_0$, and let $\chi$ be displacement from the parent minimum.
+The uniform initial field is at the grandchild minimum, with $\Pi_0=0$.
+Thus the same source law fixes
+
+$$
+E_0=\frac{1-\epsilon}{2}(q_p-q_g)^2=\frac{3}{8},\qquad
+\rho_v=\frac{\epsilon q_p^2}{2}=\frac{9}{32},\qquad
+\frac{E_0}{\rho_v}=\frac{4}{3}.
+$$
+
+This carries a stated ancestral preparation forward; it does not add an
+independently chosen dust density. With
+
+$$
+E=\frac{\Pi^2+\omega^2\chi^2}{2},\qquad
+p=\frac{\Pi^2-\omega^2\chi^2}{2},\qquad
+D=A^3E,\quad S=A^3\chi\Pi,
+$$
+
+define the corrected comoving energy
+
+$$
+\mathcal{I}=D+\frac{3}{2}HS.
+$$
+
+The scalar equation and its exact energy law give
+
+$$
+\dot S=2A^3p,\qquad
+\dot{\mathcal{I}}=\frac{3}{2}\dot H S,\qquad
+|S|\leq\frac{D}{\omega}.
+$$
+
+The pressure term cancels in the corrected energy's derivative.
+The parent geometry supplies a uniform variation bound. With $C=1/a_0^2$,
+the Einstein equation gives $H_{,t}=C/A^2-\kappa\Pi^2/2$. The positive
+expansion lower bound therefore yields
+
+$$
+\int_0^t|\dot H|\,dt\leq H_0-H(t)+2\int_0^t\frac{C}{A^2}\,dt
+\leq H_0-H_-+\frac{C}{H_-}.
+$$
+
+Exact rational evaluation of the original unsquared wall junction verifies
+$H_-=133/500$, $H_+=117/250$, $H_0<443/1000$ and $C<57/2500$ as conservative
+bounds. Set
+
+$$
+\delta=\frac{3H_+}{2\omega},\qquad
+V_H=\frac{443}{1000}-\frac{133}{500}+\frac{57/2500}{133/500},\qquad
+\Gamma=\frac{3V_H}{2\omega(1-\delta)}.
+$$
+
+**Uniform source theorem.** For $\delta<1$ and $\Gamma<1$, define
+
+$$
+L=\frac{1-\Gamma}{1+\delta},\qquad
+U=\frac{1}{(1-\Gamma)(1-\delta)}.
+$$
+
+Every future time in the protected parent satisfies
+
+$$
+L\leq\frac{A^3E}{E_0}\leq U,\qquad
+\frac{4}{3}LA^{-3}\leq\frac{E}{\rho_v}\leq\frac{4}{3}UA^{-3}.
+$$
+
+**Proof.** The bound on $S$ gives
+$(1-\delta)D\leq\mathcal{I}\leq(1+\delta)D$, so $\mathcal{I}$ is positive.
+Its logarithmic derivative is bounded by $3|H_{,t}|/[2\omega(1-\delta)]$.
+The inherited turning-point state has $\mathcal{I}_0=E_0$. Integrating
+and using $\exp(-\Gamma)\geq1-\Gamma$ and
+$\exp(\Gamma)\leq1/(1-\Gamma)$ gives the rational factors above.
+The argument is uniform in the future interval. Nonzero initial $\chi\Pi$ would retain
+its corresponding initial corrected-energy factor.
+
+| Frequency in the same atlas units | Uniform ceiling for the relative departure of A^3 E/E0 from one |
+| --- | --- |
+| 20 | .05798115 |
+| 2000 | .00054834 |
+| 10^9 | 1.09608e-9 |
+
+The last member therefore has a controlled matter-density background
+throughout its protected future. Instantaneous pressure still oscillates;
+this does not assert a small error in dot H or replace the perturbation
+and halo equations by pressureless matter. The theorem begins at A=1;
+the earlier A=.01 formation history retains its separately stated assumptions.
+
+The nontrivial excitation decreases strictly over every nonzero interval
+and tends to zero. Its unique energy-equality event E=rho_v obeys
+
+$$
+\left(\frac{4}{3}L\right)^{1/3}\leq A_{\rm eq}
+\leq\left(\frac{4}{3}U\right)^{1/3}.
+$$
+
+This gives a relative expansion epoch from the same inherited normalization.
+It is an equality of densities rather than a phase-independent acceleration
+criterion.
+
+### 13.16. The controlled background predicts an interior light cone
+
+<!-- nsc-claim:inherited-parent-lightcone-bound -->
+
+Derivation and calculation: [frozen NSC-P005 analytic interval](../results/summaries/nsc-atlas-inherited-matter-forecast-v1.json).
+The vacuum, excitation and curvature in the comparison all belong to the
+same protected parent:
+
+$$
+H_d^2=\frac{\kappa\rho_v}{3}+\frac{\kappa E_0}{3A^3}-\frac{C}{A^2}.
+$$
+
+Put $\epsilon_E$=max$(1-L,U-1)$ and $r=\kappa E_0\epsilon_E/(3H_0^2)$.
+The source theorem and the increasing denominator of $E_0/(A^3H_d^2)$
+give $1-r\leq H^2/H_d^2\leq1+r$. A comoving receiver at $A_o=2$ observes a
+comoving test emitter at $z=1/4$, hence $A_e=8/5$. The entire ray lies in the
+causally protected parent. The geometric-optics distance is
+
+$$
+\eta=\frac{1}{a_0}\int_{A_e}^{A_o}\frac{dA}{A^2H},\qquad
+D_L=a_0A_o(1+z)\sin\eta.
+$$
+
+Both ray angles lie below $\pi/2$. Integrating the Hubble comparison and
+using the increasing, concave sine proves
+
+$$
+\frac{1}{\sqrt{1+r}}\leq\frac{D_L}{D_{L,d}}\leq\frac{1}{\sqrt{1-r}},\qquad
+\frac{1}{1+r}\leq\frac{\Lambda_vD_L^2}{\Lambda_vD_{L,d}^2}
+\leq\frac{1}{1-r}.
+$$
+
+For u=1/A, the comparison Hubble rate squared is a positive cubic.
+Twelve binomial terms integrate exactly as rational polynomials, with a
+geometric-series bound on the entire tail. An alternating sinc series
+then encloses the closed-space distance. The following decimal endpoints
+are rounded outward from exact rational bounds:
+
+| Frequency | Analytic interval for Lambda_v D_L^2 |
+| --- | --- |
+| 20 | [.242823328986305, .261473628319700] |
+| 2000 | [.251715570867755, .251891708276777] |
+| 10^9 | [.251803608594062, .251803608946144] |
+
+The dimensionless comparison value itself is enclosed by
+[.251803608770102,.251803608770104]. No SI ruler or sky measurement fixes
+these numbers. The frequency-10^9 source induces a relative
+squared-distance departure below 6.99120e-10 for this protocol.
+Its result follows from the theorem without a long fast-oscillation solve.
+
+<!-- nsc-claim:inherited-parent-unaveraged-validation -->
+
+The [unaveraged validation](../results/summaries/nsc-atlas-inherited-matter-validation-v1.json)
+was run after the forecast and register were committed in
+[70bdd5a](https://github.com/kodareken/nested-space-cosmology/commit/70bdd5a).
+The original scalar equation, gravity and initial state are retained.
+Proper-time integration evolves H; an independent expansion-clock
+integration eliminates H using the gravitational constraint.
+
+| Frequency-20 readout | Proper-time evolution | Expansion-clock evolution |
+| --- | --- | --- |
+| Lambda_v D_L^2 | .251699293480111 | .251699293482159 |
+| Energy-equality scale | 1.10363602735015 | 1.10363602734147 |
+| A^3 E/E0 at A=2 | 1.02390960047656 | 1.02390960043505 |
+
+The optical results differ by 2.05e-12 and both lie inside the frozen
+analytic interval. Independent photon integrals also agree. Those
+differences are numerical checks, whereas the prediction interval comes
+from the source and geometric inequalities. A short frequency-2000
+control checks the same source bound. The three comparisons use 7086
+RHS evaluations; earlier wall grids and source preparations are unchanged.
+
+![Inherited source, uniform matter law and controlled interior light cone](../docs/figures/nsc-atlas-inherited-matter.png)
+
+*Figure 17. The source normalization, matter-law envelope and photon
+distance follow from the same stated inherited field. The energy-ratio
+band is the theorem's envelope rather than a sampled evolution. The two
+optical points are independent numerical formulations of one unaveraged
+frequency-20 model. The narrow high-frequency interval is an analytic
+prediction, not a computed fast trajectory or an astronomical measurement.
+The upper-right density-fraction curve is the comparison relation derived
+in Section 13.17.*
+
+This completes a controlled homogeneous connection from inherited state
+to expansion and luminosity distance. The absolute flux/vacuum sector,
+primordial preparation and structure population remain physical inputs to
+close. The background theorem supplies a quantified foundation for the
+next shared distance, growth and population calculation.
+
+### 13.17. An epoch-independent vacuum, scalar and curvature constraint
+
+<!-- nsc-claim:inherited-vacuum-matter-curvature-relation -->
+
+Derivation and calculation: [exact density relation and controlled intervals](../results/summaries/nsc-atlas-inherited-density-relation-v1.json).
+The same source theorem gives a joint cosmological relation without choosing
+an observer age or an SI ruler. Define the parent fractions by their actual
+stress and spatial curvature,
+
+$$
+\Omega_\chi=\frac{\kappa E}{3H^2},\qquad
+\Omega_v=\frac{\kappa\rho_v}{3H^2},\qquad
+\Omega_k=-\frac{C}{A^2H^2}.
+$$
+
+Here $\Omega_\chi$ denotes the scalar excitation, rather than measured total
+matter containing additional species. Within this stated three-component
+background, the Friedmann equation gives
+$\Omega_\chi+\Omega_v+\Omega_k=1$.
+All three fractions use the same parent comoving proper-time expansion.
+Set the comoving energy ratio $\mathcal{R}=A^3E/E_0$. Direct substitution gives
+
+$$
+\frac{(-\Omega_k)^3}{\Omega_\chi^2\Omega_v}
+=\frac{\mathcal{C}_\Omega}{\mathcal{R}^2},\qquad
+\mathcal{R}=\frac{A^3E}{E_0},\qquad
+\mathcal{C}_\Omega=
+\frac{C^3}{(\kappa E_0/3)^2(\kappa\rho_v/3)}.
+$$
+
+All explicit powers of the epoch and Hubble rate cancel. A common change
+of length unit cancels as well. The original sourced geometry and inherited
+energy determine the coefficient
+
+$$
+\mathcal{C}_\Omega=0.00806621506604026.
+$$
+
+This is a coefficient of the declared geometry and preparation. It is
+neither fitted to observed density fractions nor asserted to be universal
+across other initial atlases. The finite-frequency phase is retained by
+the uniform source bound:
+
+$$
+\frac{\mathcal{C}_\Omega}{U^2}
+\leq\frac{(-\Omega_k)^3}{\Omega_\chi^2\Omega_v}
+\leq\frac{\mathcal{C}_\Omega}{L^2}.
+$$
+
+For frequency 10^9, exact rational calculation and outward decimal rounding
+give the all-future interval
+
+$$
+0.008066215048357963
+\leq\frac{(-\Omega_k)^3}{\Omega_\chi^2\Omega_v}
+\leq0.008066215083722556.
+$$
+
+Thus the phase uncertainty in this correlation is bounded even when the
+observer epoch is unknown. In the pressureless comparison, writing
+$x=E/\rho_v$ and $b=(\mathcal{C}_\Omega x^2)^{1/3}$ makes the predicted curve explicit:
+
+$$
+\Omega_v=\frac{1}{1+x-b},\qquad
+\Omega_\chi=\frac{x}{1+x-b},\qquad
+\Omega_k=-\frac{b}{1+x-b}.
+$$
+
+At equal scalar and vacuum energy its comparison values are approximately
+$(\Omega_\chi,\Omega_v,\Omega_k)=(.555725,.555725,-.111451)$.
+These are model values, not astronomical measurements. The finite-frequency
+interval above, rather than the comparison curve alone, is the result.
+
+This provides a concrete test of the shared preparation and boundary
+geometry: its scalar, vacuum and curvature fractions cannot be assigned
+independently by shifting the observation epoch or changing units. A
+cosmological application must infer those quantities in the model's own
+observable dictionary and include any additional matter and radiation
+sectors. The relation therefore connects the inherited source to a joint
+observational question without inserting a desired dark fraction.
+
 ## IV. Concentration, conservation and the surrounding reservoir
 
 A dark-matter account needs a physical source that forms structure and accounts for its surroundings. We first calculate admissible scalar concentrations and their conserved supply, then their persistence and spatial compensation, and finally formation from compact disturbances. The route preserves the inherited parent instead of adding an independent halo mass. Different frequencies and preparations are explicit members of the family; they are not exchanged between examples by a change of units.
@@ -3625,7 +3915,7 @@ discrepancies near 80%. Residual oscillations remain.
 
 ![Gravitational cooling and selected core shape](../docs/figures/nsc-atlas-scalar-core.png)
 
-*Figure 17. Left: two distinct initial cloud shapes approach the
+*Figure 18. Left: two distinct initial cloud shapes approach the
 independently calculated coherent profile after mass normalization.
 Right: scalar norm leaves the central region during relaxation.
 This is a finite local envelope calculation, not the full evolving
@@ -3771,7 +4061,7 @@ mass does not imply identical internal geometry or proper energy integrals.
 
 ![A scalar core supplied by a compensated inherited reservoir](../docs/figures/nsc-atlas-core-reservoir.png)
 
-*Figure 18. Left: the core's positive geometric mass is supplied by ambient
+*Figure 19. Left: the core's positive geometric mass is supplied by ambient
 depletion, with the outward-current pulse included in the balance. Right:
 the pulse carries nonzero outward scalar energy while the total initial
 exterior mass offset vanishes. These are constrained initial data, not a
@@ -3957,7 +4247,7 @@ is imposed or inferred.
 
 ![Inherited scalar concentration, conserved mass and a received clock](../docs/figures/nsc-atlas-core-evolution.png)
 
-*Figure 19. The diffuse preparation develops a compact concentration under
+*Figure 20. The diffuse preparation develops a compact concentration under
 its computed gravity. The fixed-geometry field control separates ordinary
 scalar propagation from that response. Refinement checks the independent
 mass-flux law. Clock departures use the stated central proper emission
@@ -4127,7 +4417,7 @@ explicitly; this is not a universal constant selected by nesting.
 
 ![Different core and reservoir scales at fixed inherited vacuum](../docs/figures/nsc-atlas-scale-hierarchy.png)
 
-*Figure 20. The core shrinks faster than its energy-supply region while the
+*Figure 21. The core shrinks faster than its energy-supply region while the
 parent reference radius remains fixed. A reservoir constrained to twice
 the core cutoff becomes insufficient above its ideal supply ceiling.
 Solving for the reservoir radius restores the initial constraints and
@@ -4303,7 +4593,7 @@ therefore does not establish asymptotic stability.
 
 ![Finite localization of the supplied core and reservoir in the expanding parent](../docs/figures/nsc-atlas-hierarchy-evolution.png)
 
-*Figure 21. The same supplied field disperses without self-gravity and
+*Figure 22. The same supplied field disperses without self-gravity and
 retains a localized core when self-gravity is included. Its physical size
 breathes while the parent expands; the dashed size reference is simply
 initial radius multiplied by the parent scale factor. Mass-current and
@@ -4517,7 +4807,7 @@ the density-derivative error from $2.18\times10^{-6}$ to $5.46\times10^{-7}$.
 
 ![Radial sensitivity and quadrupole response on the retained evolving source](../docs/figures/nsc-atlas-hierarchy-perturbations.png)
 
-*Figure 22. Field sensitivity and density deformation are distinct responses.
+*Figure 23. Field sensitivity and density deformation are distinct responses.
 The quadrupole field response remains modest for seeds at the initial and
 late events; the same radial matrices cover all five angular components
 in the declared span. Independent nonlinear radial differences converge to
@@ -4684,7 +4974,7 @@ numbers, not an observed halo population or a fitted cosmological spectrum.
 
 ![Compensated mass profile, spatial response and projected deficit](../docs/figures/nsc-atlas-compensation-response.png)
 
-*Figure 23. One supplied core and its inherited reservoir, viewed through
+*Figure 24. One supplied core and its inherited reservoir, viewed through
 enclosed mass, spatial frequency and projected contrast. Including the
 reservoir suppresses long-wavelength response. The purple curve reuses
 the evolved field in the original mass/radius units. The projected deficit
@@ -4901,7 +5191,7 @@ the preparation epoch is a physical part of the proposed formation route.
 
 ![Finite future growth and the compact earlier preparation](../docs/figures/nsc-atlas-formation-window.png)
 
-*Figure 24. Left: the late parent permits only modest ambient amplification;
+*Figure 25. Left: the late parent permits only modest ambient amplification;
 the small core-scale mode oscillates. Middle: changing the supplied epoch
 changes both growth and wave phase. Right: a compact 5% seed on the earlier
 continuation approaches a nonlinear regime. The curve beyond small contrast
@@ -5036,7 +5326,7 @@ full relativistic or observational error budget.
 
 ![Nonlinear density, fixed-mass contraction and the first rebound](../docs/figures/nsc-atlas-seed-collapse.png)
 
-*Figure 25. Both supplied seeds develop large contrast, but the sampled
+*Figure 26. Both supplied seeds develop large contrast, but the sampled
 fixed-mass shells of the 5% case continue expanding through its interval.
 The 10% case turns around and contracts. Removing self-gravity removes that
 contraction. The right panel resolves the forming concentration's first
@@ -5158,7 +5448,7 @@ the first two recovers the amplitudes and predicts the withheld third.
 
 ![Operational three-clock protocol and synthetic test](../docs/figures/nsc-atlas-parent-clocks.png)
 
-*Figure 26. Left: three emitters on the central past radial light cone;
+*Figure 27. Left: three emitters on the central past radial light cone;
 their initial proper distances and the receiver's proper age are fixed.
 Right: a withheld synthetic frequency response agrees with the prediction
 from two state calibrations. No observational confirmation is inferred.*
@@ -5396,7 +5686,7 @@ regular; a light-bundle caustic is not a spacetime singularity.
 
 ![Nonradial light bending and beam focusing from the evolved scalar](../docs/figures/nsc-atlas-core-optics.png)
 
-*Figure 27. Two proper emission ages probe the same evolving concentration.
+*Figure 28. Two proper emission ages probe the same evolving concentration.
 The landing-angle map and signed beam area change as the core breathes.
 The inset shows the sampled transverse-scale sign change near the early caustic.
 Curvature-based Jacobi scales converge toward their independent ray-map
@@ -5521,7 +5811,7 @@ interval enclosure or an asymptotic stability statement.
 
 ![One receiving worldline sees two images from the evolved scalar concentration](../docs/figures/nsc-atlas-core-images.png)
 
-*Figure 28. The two angular roots reach one receiver after reflection of the
+*Figure 29. The two angular roots reach one receiver after reflection of the
 negative branch. Their sky positions, pulse fluences and arrival times are
 computed from the unchanged scalar-parent evolution. Two independent
 calculations check the delay-frequency identity. The final panel links
@@ -5713,7 +6003,7 @@ the declared model. It does not determine the observed absolute vacuum.
 
 ![Three readouts of one forming source and fixed observer map](../docs/figures/nsc-atlas-formed-observer.png)
 
-*Figure 29. The actual forming source supplies direction, proper delay and
+*Figure 30. The actual forming source supplies direction, proper delay and
 frequency for specified receiver offsets. The middle offset has the full
 quoted source and integration controls; the other two illustrate the map.
 The cross freezes the comoving potential under the same clock protocol.
@@ -5857,7 +6147,7 @@ quadrature is performed before the optical target is evaluated.
 
 ![Precheck, timelike calibration and frozen optical prediction](../docs/figures/nsc-atlas-dynamics-lensing.png)
 
-*Figure 30. The force-timescale precheck selects finite free-fall calibration.
+*Figure 31. The force-timescale precheck selects finite free-fall calibration.
 The middle panel reconstructs the force from motion along the retarded
 chord. The right panel compares the committed forecast with the later
 null calculation; its bars represent the stated comparison ranges, not
@@ -5977,13 +6267,13 @@ Those figures do not bound interpolation or the total model uncertainty.
 The method was frozen at `f0f639d` before the rays were evaluated, with no
 new gravitational or field solve. The
 [light-cone record](../results/summaries/nsc-conformal-lightcone-v1.json)
-contains all six rays. Figure 31 shows the three declared lengths; the lines
+contains all six rays. Figure 32 shows the three declared lengths; the lines
 only connect those samples. This is a finite observer map on one saved
 metric, not a full-sky prediction and not a match to the Pantheon+ residual.
 
 ![Redshift and luminosity-to-radar ratio on the saved conformal null cone](../docs/figures/nsc-conformal-lightcone.png)
 
-*Figure 31. Three predeclared lookbacks in each radial direction, for the
+*Figure 32. Three predeclared lookbacks in each radial direction, for the
 fixed-coordinate normal probes of the saved conformal metric. Markers are
 the declared rays. Lines connect samples and do not fill intermediate
 evolution.*
@@ -6191,7 +6481,7 @@ The indicators are not physical confidence intervals or rigorous enclosures.
 
 ![Common geometry, gravitational return and causal delay](../docs/figures/nsc-atlas-gravitational-response.png)
 
-*Figure 32. The matched clocks are continuous across both sourced interfaces.
+*Figure 33. The matched clocks are continuous across both sourced interfaces.
 The same parent/exterior yields a different return when its inner termination
 changes. The lower panels compare the contrast to numerical indicators and
 show the principal-characteristic return times. The curves use 23 fixed
@@ -6383,7 +6673,7 @@ initial instant does not establish a sustained cascade or uniform lifespan.
 
 ![Prepared resolution, mean circulation and viscous cost](../docs/figures/nsc-atlas-vortex-transfer.png)
 
-*Figure 33. The upper panels show actual tangential-velocity patterns of the
+*Figure 34. The upper panels show actual tangential-velocity patterns of the
 analytic initial data, not a simulated singularity or an image of the universe.
 Both patterns average to zero velocity. The lower left gives the exact common
 initial mean acceleration; the lower right shows the increasing fractional
@@ -6560,7 +6850,7 @@ independent mode/action checks; it is not an astronomical measurement.
 
 ![Derived interaction, interior contrast and quantum scaling](../docs/figures/nsc-atlas-cosmohedron-interaction.png)
 
-*Figure 34. The upper-left panel is the selected interaction graph, not a
+*Figure 35. The upper-left panel is the selected interaction graph, not a
 spacetime diagram. Its vertices are calculated from the same material action.
 The lower-left panel compares the two inner geometries. The scale control
 at fixed G preserves geometric shape while changing quantum strength.
@@ -6704,7 +6994,7 @@ $$
 
 The cap occupies $V\le U$ and exterior $V\ge U$. The proper-clock range
 $0\le U,V\le S$, $S/\ell=.1256873632901$, gives the finite causal diamond
-in Figure 35. An analytic conservative bound gives $N=\sqrt{C}\ge.3851891$
+in Figure 36. An analytic conservative bound gives $N=\sqrt{C}\ge.3851891$
 throughout that domain. The material wall remains $x=0$, $T=\tau$,
 $C=1$; both Israel jumps are retained. This construction uses no spatial
 cutoff profile and has no reflecting timelike ends. The earlier wide
@@ -6746,7 +7036,7 @@ quantum error account are not supplied by this geometry calculation.
 
 ![Wall radar causal diamond, clock lapse and actual change in Dirac potential](figures/dirac-wall-radar.png)
 
-*Figure 35. The finite quiet wall-clock diamond. The material wall is the
+*Figure 36. The finite quiet wall-clock diamond. The material wall is the
 vertical line; null edges are causal limits. Left: proper-clock lapse,
 with the emitted/reflected radar ray and receiver. Right: the radial
 Dirac-potential difference from a smooth continuation of the same cap,
@@ -8125,7 +8415,9 @@ one potential contains a vacuum floor, while its excitation evolves,
 redistributes energy and forms local concentrations.
 
 For that action the minimum density is rho_v=rho_b+epsilon*q^2/2.
-The protected parent evolves the excitation under the same potential.
+The protected parent evolves the excitation under the same potential. The uniform source theorem in Section 13.15 bounds its
+matter-law normalization, and Section 13.16 carries that bound to an actual
+interior luminosity-distance protocol.
 The later local calculations retain both the ambient field and the
 concentration, including their interference, mass current and pressure
 work. The optical calculations then use that actual evolving source.
@@ -8239,7 +8531,7 @@ The central remaining work is concentrated in the following closures.
 | Physical closure | Concrete result needed | Connection it completes |
 | --- | --- | --- |
 | One compatible source history | State the ancestral preparation and common couplings, transport them through the required interacting boundaries, and retain the descendant energy budget | Parent, child and inherited matter belong to one history |
-| Cosmological evolution | Carry that history through the epochs used by the selected observations; calculate distances and growth on the observer's light cone | Vacuum and excitation become expansion and clustering predictions |
+| Cosmological evolution | Extend the controlled inherited parent and light-cone bound through the epochs used by the selected observations; calculate joint distances and growth | Vacuum and excitation become expansion and clustering predictions |
 | Structure population | Derive or independently constrain seed statistics, formation ages and abundance; project the resulting compensation and lensing | The single-source relation becomes a local-universe correlation |
 | Compact-object response | Prepare a causal wave/state, include the angular and rotation sectors needed by the observation, and calculate the received signal | The finite return contrast becomes an astrophysical test |
 | Quantum and charged matter | Complete the chosen quantum response and detector statistics; specify the charged-sector and entropy evolution required for asymmetry | The quantum and matter chapters share a physical interpretation with the geometry |
@@ -9214,7 +9506,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 36. Saved finite-window comparisons. A: the previous and current
+*Figure 37. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -9310,7 +9602,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 37. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 38. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -10009,7 +10301,7 @@ The following preserved dependency diagram records the original finite field-dev
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 38. Research dependencies, distinct from spacetime causal arrows.
+*Figure 39. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

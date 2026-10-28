@@ -16,18 +16,23 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 27 October 2026
+## Current execution priority — 28 October 2026
 
-### Active: inherited matter normalization and a controlled parent light cone
+### Complete: inherited matter normalization and a controlled parent light cone
 
 The [new source bound](nsc-atlas-inherited-matter-bound.md) follows the
 same inherited scalar and protected parent into a uniform matter-background
 comparison. Exact corrected energy and rational comparison factors retain
 the original E0=3/8 and vacuum=9/32; no independently supplied dust density
-is added. The analytic luminosity-distance interval is frozen before the
-unaveraged target calculation. Next: its independent clock/field checks,
-then integrate the completed connection into the book. The full interacting
-wall future, ancestral-state selection and population remain separate tasks.
+is added. NSC-P005's analytic interval was committed before the
+unaveraged target, and both independent time formulations pass it. The
+high-frequency density ceiling is below 1.097e-9 uniformly from A=1 onward;
+the book contains the source and light-cone proof, together with the
+epoch-independent density-fraction relation from the same initial geometry.
+Next: the shared
+cosmological/population forward model and its independent observations.
+The full interacting wall future, ancestral-state selection and early
+formation/halo approximation retain their own requirements.
 
 ### Connected book and central physical closure
 
