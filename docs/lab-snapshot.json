@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b9011b59efc34d94d248c214caeaba9d32320391",
+  "current_receipt_commit_parent": "c57afbe2e258e7e9621f5f4f08317a4474d9c932",
   "files": [
     {
       "bytes": 3120,
@@ -30988,6 +30988,14 @@
       "path": "results/summaries/nsc-atlas-onset-geometry-bound-v1.json",
       "retention_reason": "Compact certified first geometric onset endpoint with source hashes and regeneration command.",
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
+    },
+    {
+      "bytes": 2081,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "c57afbe2e258e7e9621f5f4f08317a4474d9c932",
+      "path": "results/summaries/nsc-atlas-parent-bao-forecast-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f4d624dc9aa096f674e1dce08b70eede2ae481d441c50de7c758bc0b7f0d630c"
     },
     {
       "bytes": 13096,

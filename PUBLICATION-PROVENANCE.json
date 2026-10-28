@@ -1726,9 +1726,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2554434,
+      "bytes": 2554880,
       "path": "docs/lab-snapshot.json",
-      "sha256": "a1efac1fb5bb5487b1db664618fd846679035ba30727981301732dadcfc43d23"
+      "sha256": "051eb36974876c0060125b30898e5082bffc2b359708c84bd1b496de212d8ea4"
     },
     {
       "bytes": 4997,
@@ -15411,6 +15411,11 @@
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
     {
+      "bytes": 2081,
+      "path": "results/summaries/nsc-atlas-parent-bao-forecast-v1.json",
+      "sha256": "f4d624dc9aa096f674e1dce08b70eede2ae481d441c50de7c758bc0b7f0d630c"
+    },
+    {
       "bytes": 13096,
       "path": "results/summaries/nsc-atlas-parent-clocks-v1.json",
       "sha256": "b50e1c0f4430c2f7fc93147947b3eb337c792815091f1d9adcdc2af144d4457a"
@@ -23606,7 +23611,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "a1efac1fb5bb5487b1db664618fd846679035ba30727981301732dadcfc43d23",
+  "lab_snapshot_sha256": "051eb36974876c0060125b30898e5082bffc2b359708c84bd1b496de212d8ea4",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-28.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

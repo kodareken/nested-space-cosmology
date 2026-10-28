@@ -1,0 +1,59 @@
+{
+  "BAO_usage": "Not loaded by this freeze command; public data are retrospective, not newly collected blinded evidence.",
+  "SN_input": {
+    "path": "results/summaries/nsc-atlas-parent-supernova-v2.json",
+    "sha256": "e592da938f1283fb74e9d8ad3ffb5b29bde260ee22712d798fec04d461d0abf7"
+  },
+  "interpretation": "SN-calibrated geometric AP shapes; not a generated acoustic ruler or baryon mechanism. Conditional on frozen SN point estimates; no joint significance or selection of absolute scale.",
+  "method_commit": "c57afbe2e258e7e9621f5f4f08317a4474d9c932",
+  "models": {
+    "flat_LCDM": {
+      "parameters": {
+        "curvature": 0,
+        "matter": 0.3312216122318925
+      },
+      "predicted_AP": [
+        0.596893830619695,
+        0.8835150395830553,
+        1.2616566961719133,
+        2.0139714298093323,
+        2.3714749445791794,
+        4.5882540378930265
+      ]
+    },
+    "parent": {
+      "parameters": {
+        "H_squared": 0.12921140555269883,
+        "curvature": -0.0923394381968197,
+        "inverse_Ao": 0.7237699082128322,
+        "matter": 0.3667842939045141,
+        "vacuum": 0.7255551442923055
+      },
+      "predicted_AP": [
+        0.5933787417916038,
+        0.8777922664199296,
+        1.253153726465166,
+        1.9997057869025872,
+        2.354077396672844,
+        4.542907633728869
+      ],
+      "ray_angle_upper": 0.9567937367483146,
+      "scalar_relative_AP_error_bound": 3.532468863418625e-08
+    }
+  },
+  "redshifts": [
+    0.51,
+    0.706,
+    0.934,
+    1.321,
+    1.484,
+    2.33
+  ],
+  "schema": "nsc-atlas-parent-bao-forecast-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_parent_bao.py": "b9e98739f605660f9e2142b3e42c0c5126106f4b68d0f5654708f4b366e2ec0c",
+    "src/recursive_horizons/nsc_atlas_bao_shape.py": "a3dabd1bf935785ec27e2a8ea741d179b5223f609cc9914dac275175532d2121",
+    "src/recursive_horizons/nsc_atlas_parent_past.py": "c75adfe6d4b529b5b4dc06b9193d9054bcaba42f7c0620f5f3db591f73ead178",
+    "tests/test_nsc_atlas_bao_shape.py": "3ce5a1df4634d01e2f9a764cf33df12402c5c6cbb2c2e74ee61837ef06a4d5bf"
+  }
+}
