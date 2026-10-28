@@ -141,6 +141,14 @@ comoving-energy difference 5.56e-10 and proper-clock Friedmann residual
 5.40e-11, using 39544 RHS calls. Their finite numerical agreement checks
 the calculation; the high-frequency bound follows from the bootstrap.
 
+Grok independently checked the supplied equations and two-way domain argument
+without reading the paper. Its review distinguishes the backward variation
+budget from the future: the 19.7736 budget only covers 1/3<=A<=1. The
+implementation explicitly combines that result with the already-proved
+future `uniform_bound`, so the stated full A>=1/3 envelope uses both.
+The observational rays satisfy the conservative angle<1 check, inside the
+larger sine-monotonicity domain.
+
 ## Supernova result after the controlled continuation
 
 The [v2 comparison](../results/summaries/nsc-atlas-parent-supernova-v2.json)
@@ -189,3 +197,61 @@ forecast/method are saved before the numerical BAO comparison; no BAO
 retuning is allowed. Its finite compute allowance is 10 CPU seconds and
 zero field evolutions. A significant discrepancy redirects the inherited
 curvature/preparation law rather than the supplied acoustic ruler.
+
+The [forecast](../results/summaries/nsc-atlas-parent-bao-forecast-v1.json)
+was pushed in 18cfdf6 before the numerical DESI comparison. The
+[conditional external comparison](../results/summaries/nsc-atlas-parent-bao-validation-v1.json)
+gives chi-square 7.15813 for the inherited parent and 8.89401 for the
+SN-calibrated flat control, each for six contrasts and with no BAO fit.
+The scalar AP-relative envelope is 3.53247e-8. The small difference in
+statistics is not evidence of model preference; the supernova calibration
+uncertainty has not been marginalized. A common acoustic scale across
+redshifts, the full BAO likelihood and early acoustic physics are additional
+tests. The chosen AP projection deliberately profiles out a separate unknown
+amplitude in each pair; its numerical control verifies that equivalence.
+
+## What each of Douglas's five gaps now requires
+
+1. **SI scale.** The background family has a continuous dimensional freedom:
+   scaling (rho_v,E0,C,H^2) by lambda^2 leaves every fraction and the
+   epoch-independent correlation unchanged while distances scale as
+   lambda^-1. In the full classical scalar action this corresponds to
+   scaling the *supplied* masses, mixing and fluxes, with the matching
+   radii/masses/tensions scaled consistently; it is not a symmetry changing
+   fixed physical couplings. The inherited relation and scale-free data do
+   not choose those couplings in SI. A scale-sensitive preparation mechanism
+   or independently calibrated dimensional input is still needed. G and hbar
+   permit Planck units but do not by themselves select the dimensionless
+   flux/mass ratios. No absolute Lambda has been generated here.
+2. **Inherited wall state.** The stable gravitational-response branch uses
+   a massless surface scalar, sigma=p and sigma R^4=constant. Its shift
+   charge is Q=4pi R^2 theta_dot, so sigma=Q^2/(32pi^2 R^4). With no
+   bulk-to-surface coupling Q is independently conserved on each wall;
+   a zero initial Q stays zero. This derives that EOS but does not inherit
+   its state. The evolving parent instead has constant charged tension,
+   p=-sigma. Importing the stable branch's Q into it changes the action.
+   Derive a compatible surface action/preparation or evolve the existing
+   membrane; do not transfer the earlier stability label.
+3. **P001.** Grok's source audit confirms the unbisected active outer cell,
+   the growing strong incoming-sum mismatch and the closed mass reconstruction
+   identity. The new [matched-trace test](../results/summaries/nsc-atlas-matched-trace-v1.json)
+   checks adapter compatibility independently. The 3.35% production growth
+   remains; a trace-compatible update is required before any new grids.
+4. **Observed expansion.** The missing identical-data LambdaCDM control is
+   now present, and the sourced parent's controlled earlier continuation
+   fits the broad sample comparably with the same number of fitted parameters.
+   Its fixed supernova-calibrated geometry also passes the conditional DESI
+   AP consistency check. This advances the physical observer connection,
+   without establishing a unique theory or primordial selection.
+5. **Composition and asymmetry.** This action contains one real scalar
+   excitation and a four-form, not a baryon current or photon distribution.
+   Omega_chi is therefore neither a derived Omega_c/Omega_b split nor a
+   baryon-to-photon ratio. Eta_B is undefined in this sector, not calculated
+   to be zero. The next physical extension must identify the conserved/
+   violated current, production and entropy history before calculating it.
+
+The immediate outward test is a joint distance/growth/acoustic-scale account
+with the source preparation held fixed. The physical construction behind it
+must select that preparation, SI scale and surface state. Those source tasks
+have priority over more digits in the already controlled background or another
+P001 grid family with the same trace defect.

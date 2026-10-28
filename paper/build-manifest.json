@@ -1,10 +1,10 @@
 {
-  "bytes": 13844834,
+  "bytes": 14111328,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "1ab16dbd956986d13daef7dd957786897a916035484a3dae78c07bf2b8e9880e",
+  "metadata_sha256": "d5e3d516fb49c8a295c597fe4c972b989d64f4a688554aeea58a5ab6205bb0c4",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 166,
-  "pdf_sha256": "8b4f4da37b8c8c4ad9698de4a627e7caea8952780baac931313806882787ff1d",
+  "pages": 171,
+  "pdf_sha256": "a38112e1c6a593a63905829a57213753bb1a9c79fd02661291c34a948f3035b9",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -102,6 +102,10 @@
     {
       "path": "docs/figures/nsc-atlas-parent-source.png",
       "sha256": "ed4705ba29f1098a67893b855aba38feee849b3bf17f40e437188746c238e51e"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-parent-supernova.png",
+      "sha256": "ac1e4db5e6b72de4f606caf6eabad1c035ea3a0b3bf211217ce00d4688c59bb3"
     },
     {
       "path": "docs/figures/nsc-atlas-parent-transport.png",
@@ -664,6 +668,10 @@
       "sha256": "2a4aa2c18664e175ea9bf94f21bf0a0c881e9c41bce14780f4fef06930d5be0b"
     },
     {
+      "path": "results/summaries/nsc-atlas-matched-trace-v1.json",
+      "sha256": "a38fbc8e79a98beec03025b2f95db264967ce550639baf10ac83bff63750cd70"
+    },
+    {
       "path": "results/summaries/nsc-atlas-nested-slice-v1.json",
       "sha256": "adc7ddfb28c26379a0856b0c630410329d8bd6bd7e1d40f7697705995542908c"
     },
@@ -674,6 +682,14 @@
     {
       "path": "results/summaries/nsc-atlas-onset-geometry-bound-v1.json",
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-parent-bao-forecast-v1.json",
+      "sha256": "f4d624dc9aa096f674e1dce08b70eede2ae481d441c50de7c758bc0b7f0d630c"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-parent-bao-validation-v1.json",
+      "sha256": "5d9f4cffc0036b2efe7c130e8e06ec5e25856ac2179473358cfed2fb62ae0bb3"
     },
     {
       "path": "results/summaries/nsc-atlas-parent-clocks-v1.json",
@@ -688,12 +704,24 @@
       "sha256": "936469cad670eda71f267008bd194d8e7f31f36d9229ffde43ec90a8242083bf"
     },
     {
+      "path": "results/summaries/nsc-atlas-parent-past-v1.json",
+      "sha256": "3e207286d5f9a5e1e2c067ebd96f2c05848f39e425bfdff27089f8bdfe118323"
+    },
+    {
       "path": "results/summaries/nsc-atlas-parent-perturbations-v1.json",
       "sha256": "334304290b58701461dcb6be15d899e9184f696b1dec351be873fbac0d815ce8"
     },
     {
       "path": "results/summaries/nsc-atlas-parent-source-v1.json",
       "sha256": "06d2f9a5107ff9b12fe764ab633b89189a8a05d712ed4b5b9140272f4b19db5f"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-parent-supernova-v1.json",
+      "sha256": "7f397ed8fb1c5fef7f164f483017bc7d3460f0b5ef9e5a4cab972bc2d7eeb63d"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-parent-supernova-v2.json",
+      "sha256": "e592da938f1283fb74e9d8ad3ffb5b29bde260ee22712d798fec04d461d0abf7"
     },
     {
       "path": "results/summaries/nsc-atlas-parent-transport-v1.json",
@@ -813,6 +841,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "66c4ff0fefd487081627aea94b3a0eb7ae5bc7568b9c266554fcae2d746bd6eb",
-  "version": "working-2026-10-28.1"
+  "source_sha256": "d4c282ea8d6819642c2509b3fefd64ee183fa08f64689f293d0fdd3ffefa7033",
+  "version": "working-2026-10-28.2"
 }

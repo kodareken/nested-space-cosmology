@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "c57afbe2e258e7e9621f5f4f08317a4474d9c932",
+  "current_receipt_commit_parent": "18cfdf606608a5507d5b807f53fc957748c6498b",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 4909,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 5504,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "55ed979c888cf8fbcf369738aedca90bef1d6d97843dfd6ded87821b90541598"
+      "sha256": "341508f30eb68e686e0ba4731bbd25734e9a2ec926c63a281229e2c90dcd1adc"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 288036,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 288622,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "e98f9fa751bce0b9a60f9f7fdfc2046a7923cbc24700247ac6041962fae7a577"
+      "sha256": "0164bc58bf8316625598be7f6995064309274716563ba1e0a1b012630929a5c9"
     },
     {
-      "bytes": 143420,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 144726,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "81167864ac3979177742a3f1411a2c091535425edb446b7aa48f4e563e8f9354"
+      "sha256": "d6c922820943a7be4f8c6487b5aedd99d3788a8053aafc596c92b4228ca15499"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 466302,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 468068,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4171b62c076d2eb08c5b12775e06cab45ce155000818827c3c7503d4201e1732"
+      "sha256": "73494b2c66bbd6e263fd16380ba99719501c85b5cc887365795a6910c1bad680"
     },
     {
       "bytes": 173938,
@@ -10515,6 +10515,14 @@
       "path": "docs/figures/nsc-atlas-parent-source.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "ed4705ba29f1098a67893b855aba38feee849b3bf17f40e437188746c238e51e"
+    },
+    {
+      "bytes": 159404,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "path": "docs/figures/nsc-atlas-parent-supernova.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ac1e4db5e6b72de4f606caf6eabad1c035ea3a0b3bf211217ce00d4688c59bb3"
     },
     {
       "bytes": 136091,
@@ -10772,12 +10780,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 621098,
-      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "b2c5699e340bce7684a46303e4ef6b450d1330fb",
+      "bytes": 622026,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "48bcd7f4e6bf1595dacf25e241d08de50e5e45e2c81ed93a8f975f16356d78dc"
+      "sha256": "1bfbc855ee936ca86652da05670734de302bfebe8cefe8ed00e4479d58dd708d"
     },
     {
       "bytes": 18429,
@@ -10927,12 +10935,12 @@
       "sha256": "471f0b3ac716add79b9772f2351509164a42650ab5abf536a8d235f138cf8da8"
     },
     {
-      "bytes": 10876,
+      "bytes": 15293,
       "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "b9011b59efc34d94d248c214caeaba9d32320391",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/nsc-atlas-parent-supernova.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "a051f16f572b3e60c1d2b2ab54c114312e78194171dccaf806160ba034256f3a"
+      "sha256": "4e780cdee07a67f3e83c3f25a098c35894a1b8c21852ab33feee961610deed48"
     },
     {
       "bytes": 13275,
@@ -11040,15 +11048,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 121346,
+      "bytes": 122110,
       "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "2649f553749ef4db8c44fe0c35db21d84466dce0",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "c6b713bbe662878a45d13e07debb16c2c77461cc6b536e15fec52e8dbfdf0461"
+      "sha256": "c22dddbcb357c3540a565404601cac5cc55e9891256b0f15cc91e217f3052c76"
     },
     {
       "bytes": 30876,
@@ -12000,28 +12008,28 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 28449,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 28978,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "92e93b23e36cb44cc86dcc8100f0687f7f6e6bd56b8f09d7b50c0bbdc64e33fa"
+      "sha256": "b03b3bf64ac5bfa8fb27964103153ff3fd5b9d154f39b067cacd5c1fb84be5c1"
     },
     {
-      "bytes": 15929,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 16452,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e50110244b04e4b71b3e4ca7c0950a44ae94a09fd7db3fa33a34127eb8bb1972"
+      "sha256": "1bb4a2ea0c1a8b5e07c4fb153554f2113cf2cc4ff86347f8a68ada243214c63d"
     },
     {
-      "bytes": 605906,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
+      "bytes": 607267,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c3a668af5a1f74f28b9a882158f934953df1e497c41c2ffe992ee286cabb701d"
+      "sha256": "d740d6d5832b1717b025470a448767f64d8b07e9cd64e6d3db48ae4b04d60875"
     },
     {
       "bytes": 6705,
@@ -12030,20 +12038,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 232727,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 234297,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3942bb5123fc588b9448fc04be6c9db73c7abba430e0c65e2746dcd9a7ca007a"
+      "sha256": "433c9743f00c4ca417afde5c5761c0d5d797312539d24c204f9bd4bbab67d1e9"
     },
     {
-      "bytes": 48147,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 48659,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "3fc236beda9e57fde811ef06de93603da9e372d7d21ad8b3a5a1ebbeb5a19730"
+      "sha256": "066dde01dc02f64e3cf8ae2e056cfa756898f794028ac019fc4af716cfefd3f2"
     },
     {
       "bytes": 18356,
@@ -12112,28 +12120,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 34702,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 35855,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "105f633dffc70aa8068d46aec32bfcaec3d9c0bc0eac22c377f5620d1d0f6853"
+      "sha256": "e6689fd9ebe48b6a43a87ddcc2d8b488678abcdbe23521e03418d6037ec8f615"
     },
     {
       "bytes": 3206,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f4efe6c2b613578fd2fd10e07b7a526c6119de632c747c4cf5818d74d6f7d89f"
+      "sha256": "55144f645eed380746fa01dc41b7ce5302f3b2aa20b226c7fefa4cdc1b479452"
     },
     {
-      "bytes": 46412,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 46879,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d56ae6e89c0deffac490993da73a5788a826bc97d1b20b75c6415cb00dc2df42"
+      "sha256": "a483674bf35cd23eef39c63d301af3f52696068e968e8caa99acefb6d4b01d60"
     },
     {
       "bytes": 226492,
@@ -12145,27 +12153,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1ab16dbd956986d13daef7dd957786897a916035484a3dae78c07bf2b8e9880e"
+      "sha256": "d5e3d516fb49c8a295c597fe4c972b989d64f4a688554aeea58a5ab6205bb0c4"
     },
     {
-      "bytes": 482038,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 493710,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "66c4ff0fefd487081627aea94b3a0eb7ae5bc7568b9c266554fcae2d746bd6eb"
+      "sha256": "d4c282ea8d6819642c2509b3fefd64ee183fa08f64689f293d0fdd3ffefa7033"
     },
     {
-      "bytes": 13844834,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 14111328,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "8b4f4da37b8c8c4ad9698de4a627e7caea8952780baac931313806882787ff1d"
+      "sha256": "a38112e1c6a593a63905829a57213753bb1a9c79fd02661291c34a948f3035b9"
     },
     {
       "bytes": 3283,
@@ -30958,6 +30966,14 @@
       "sha256": "2a4aa2c18664e175ea9bf94f21bf0a0c881e9c41bce14780f4fef06930d5be0b"
     },
     {
+      "bytes": 1798,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "path": "results/summaries/nsc-atlas-matched-trace-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a38fbc8e79a98beec03025b2f95db264967ce550639baf10ac83bff63750cd70"
+    },
+    {
       "bytes": 11474,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "acc5a176ac074999ed23af770045003c4123cd57",
@@ -30996,6 +31012,14 @@
       "path": "results/summaries/nsc-atlas-parent-bao-forecast-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "f4d624dc9aa096f674e1dce08b70eede2ae481d441c50de7c758bc0b7f0d630c"
+    },
+    {
+      "bytes": 3679,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "path": "results/summaries/nsc-atlas-parent-bao-validation-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5d9f4cffc0036b2efe7c130e8e06ec5e25856ac2179473358cfed2fb62ae0bb3"
     },
     {
       "bytes": 13096,
@@ -31677,6 +31701,14 @@
       "path": "scripts/check_nsc_atlas_lambda_mechanisms.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "c2198a2b1a9b53fe8785bbb4eb69e2eda29dbacbd4fc715028033ce54dcba925"
+    },
+    {
+      "bytes": 4343,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "path": "scripts/check_nsc_atlas_matched_trace.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d6a1bd9a208311a9130221e3f58681185cfef3acdd840bc879a416f97172037f"
     },
     {
       "bytes": 6165,
@@ -34758,6 +34790,14 @@
       "path": "scripts/plot_nsc_atlas_parent_source.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "c1c38f57922cc15a072377e21238cadf687f6e1396e81fff0754ee3667747484"
+    },
+    {
+      "bytes": 3056,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "path": "scripts/plot_nsc_atlas_parent_supernova.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a89ef9bf0dcd249f109b7da974cb90b6f4a089932fca5a21cf7de5b4e65bcf2e"
     },
     {
       "bytes": 2111,
@@ -40456,6 +40496,14 @@
       "sha256": "a42be224ca8a5d33089e7c9b1593858d0a72283093575a6844b984055fd1529e"
     },
     {
+      "bytes": 430,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "path": "tests/test_nsc_atlas_matched_trace.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7363326c787a18fd32c9a261ceebd77103ba6194096cd4223da510044c51c4cf"
+    },
+    {
       "bytes": 6817,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
@@ -40604,6 +40652,14 @@
       "path": "tests/test_nsc_atlas_past_preparation.py",
       "retention_reason": "Exact same-action past-collar and Jordan Cauchy-data controls.",
       "sha256": "aa9d7a544ae6ea05717d41d5e56c5e5706fd9543f90abf087ce078b1e5ae3646"
+    },
+    {
+      "bytes": 1128,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "path": "tests/test_nsc_atlas_physical_closures.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2deafb37861197a09c324cda2b6ee209a7c9fb6e01ad3e6d343883b48d6da5ec"
     },
     {
       "bytes": 6632,

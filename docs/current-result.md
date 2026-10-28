@@ -1,5 +1,31 @@
 # What the calculations show
 
+The [shared-parent astronomical comparison](nsc-atlas-parent-supernova.md)
+now derives a finite backward Cauchy collar to A=1/3 with the original
+scalar, flux, excitation and curvature unchanged. The rational bootstrap
+controls the omega=10^9 density within 3.416041e-8, and a two-way causal
+bound keeps the rays inside the original parent cap's determined domain.
+This is earlier smooth evolution, not a formation or global wall theorem.
+
+On 1322 selected Pantheon+ light curves the epoch-calibrated parent has
+chi-square 1179.38727 versus 1178.20879 for flat LambdaCDM, with the same
+two fitted quantities including magnitude intercept. The failed future-only
+comparison (1636.49112) is retained. The original 596-row contrast is
+unchanged; fixed .30/.315 flat controls give residuals -1.517/-1.255 sigma.
+With the broader SN-calibrated epoch held fixed, six DESI DR2 AP null
+contrasts give chi-square 7.15813 versus 8.89401 for its fixed flat control,
+without a BAO fit or sound ruler. Those are conditional point-calibration
+comparisons, not model preference, primordial selection or derived baryon
+physics. Sections 13.18--13.21 carry the proof and its remaining closures.
+
+The [single matched-trace control](nsc-atlas-finite-amplitude.md#p001-active-region-and-incoming-coupling-diagnosis)
+preserves a compatible incoming sum through the hybrid adapter, without a
+time step. P001's independent evolved traces and its increasing mass gap
+remain unresolved. The absolute SI charge/flux scale, inherited wall state,
+Omega_c/Omega_b split and baryon-to-photon ratio are still open physical
+connections. The current action does not define a baryon current or photon
+distribution; it cannot yet produce their ratio.
+
 The [inherited-source theorem](nsc-atlas-inherited-matter-bound.md)
 now joins the same scalar/four-form preparation to a controlled matter
 background and an interior luminosity-distance prediction. Its uniform
@@ -15,7 +41,8 @@ retain their own requirements. The result is integrated into Sections
 13.15--13.17 of the single atlas.
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
-one thesis-led book in revision 2026-10-27.4. Its central route is spherical
+one thesis-led book, with the connected source/observation additions in
+revision 2026-10-28.2. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

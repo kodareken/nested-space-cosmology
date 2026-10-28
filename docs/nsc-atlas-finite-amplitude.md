@@ -25,6 +25,20 @@ is called `g_src`; `b` always denotes the wall parameter.
 
 ## P001 active-region and incoming-coupling diagnosis
 
+The [matched-characteristic control](../results/summaries/nsc-atlas-matched-trace-v1.json)
+now checks a single outer-cell bubble on the original coarse space. One
+direct radial solve supplies the strong incoming sum; the exterior first
+jet is then chosen by algebraic inversion of the same hybrid equation.
+The adapter preserves that incoming characteristic to 1.74e-18, with
+scalar channel identity residual 1.19e-19. The finite test has two radial
+solves and no time step, new mesh or original-history replay. It shows
+that the adapter can preserve compatible data; it does not establish
+compatibility of P001's independently evolved exterior/cap jets or repair
+their trajectory. The production mass envelope remains unconverged.
+The next repair must advance mutually compatible traces and resolve the
+active support, then undergo its own bounded evolution check. Subtracting
+the measured mass residual is not such a repair.
+
 The completed P001 endpoint trial remains unconverged. Its
 [active-region diagnosis](../results/summaries/nsc-atlas-endpoint-active-resolution-v1.json)
 finds the retained incoming layer inside a single outer quintic cell at

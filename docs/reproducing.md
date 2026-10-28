@@ -1,5 +1,27 @@
 # Reproducing the root project
 
+## Inherited parent, earlier light cone and observed distances
+
+The [scientific owner](nsc-atlas-parent-supernova.md) defines the fixed
+source, both retained observer domains and the calibration scope. Run the
+independent mathematical and numerical controls without overwriting evidence:
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_supernova.py tests/test_nsc_atlas_bao_shape.py tests/test_nsc_atlas_matched_trace.py tests/test_nsc_atlas_physical_closures.py
+python scripts/run_python.py scripts/measure_nsc_atlas_parent_supernova.py --fetch --past-collar --output .build/parent-supernova-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_parent_bao.py --output .build/parent-bao-forecast-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_parent_bao.py --validate .build/parent-bao-forecast-reproduced.json --output .build/parent-bao-check-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_matched_trace.py --output .build/matched-trace-reproduced.json
+python scripts/run_python.py scripts/plot_nsc_atlas_parent_supernova.py
+```
+
+Use new output names if these ignored reproduction files already exist.
+The observation producers require committed method sources. The backward
+proof can also be evaluated read-only through `past_bound` and `solve_past`
+in `nsc_atlas_parent_past`. Publisher raw files remain in ignored `.build`
+caches with pinned object/byte/hash verification. AP uncertainty is
+conditional on the retained supernova point estimates, not a full joint fit.
+
 ## Inherited source, matter background and light cone
 
 The [proof and numerical owner](nsc-atlas-inherited-matter-bound.md)

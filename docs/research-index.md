@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [same-parent astronomical comparison](nsc-atlas-parent-supernova.md)
+extends the actual inherited scalar back to A=1/3 by a finite bootstrap and
+two-way causal bound. The unchanged source then fits 1322 selected Pantheon+
+light curves comparably with an equal-dimension flat LambdaCDM control.
+With those calibrated shapes fixed, six DESI radial/transverse contrasts
+require no additional fit or sound ruler. The remaining scale, wall-state,
+P001 and composition/asymmetry gaps stay explicit in that owner.
+
 The [uniform inherited-matter bound](nsc-atlas-inherited-matter-bound.md)
 closes a background approximation used by the structure programme and
 propagates its exact source normalization to a rational light-cone

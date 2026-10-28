@@ -1,5 +1,14 @@
 # Paper guide
 
+Revision 2026-10-28.2 adds Sections 13.18--13.21 and Figure 18. A finite
+backward scalar/causal proof provides the earlier emitters required by
+Pantheon+, followed by an identical-covariance LambdaCDM control and a
+SN-fixed DESI radial/transverse comparison. Earlier failed domains remain
+visible. The source, flux and curvature are unchanged; the observer epoch
+is calibrated. The five remaining physical/numerical gaps are explicit.
+Later figure labels advance by one. Author review and submission readiness
+remain unchanged.
+
 Revision 2026-10-28.1 adds Sections 13.15--13.17 and Figure 17:
 an epoch-independent density-fraction relation, a uniform inherited-scalar
 matter-background theorem, its rational

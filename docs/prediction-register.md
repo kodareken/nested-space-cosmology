@@ -1,5 +1,13 @@
 # Prediction register
 
+The [inherited-parent supernova/AP comparison](nsc-atlas-parent-supernova.md)
+is a follow-up use of the P005 source theorem. It adds a proved earlier
+Cauchy domain and an identical-data LambdaCDM control. Its supernova epoch
+is calibrated, then held fixed in the DESI AP comparison. Those public-data
+benchmarks remain retrospective and conditional; they are not substituted
+for P005's frozen synthetic target or advertised as a new blind prediction.
+P001's unconverged endpoint and all existing entries remain unchanged.
+
 The [spatial compensation calculation](nsc-atlas-compensation-response.md)
 now supplies a conditional mass/vacuum/turnover relation and its age
 dependence. It remains a spatial kernel, not a new registered astronomical

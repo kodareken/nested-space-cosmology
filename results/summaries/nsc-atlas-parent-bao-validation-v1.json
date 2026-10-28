@@ -1,0 +1,101 @@
+{
+  "excluded_row": "Isotropic BGS DV/r_d has no ruler-free AP pair and is not used.",
+  "fitted_BAO_parameters": 0,
+  "forecast": {
+    "path": "results/summaries/nsc-atlas-parent-bao-forecast-v1.json",
+    "sha256": "f4d624dc9aa096f674e1dce08b70eede2ae481d441c50de7c758bc0b7f0d630c"
+  },
+  "interpretation": "Conditional six-null-contrast test with full published covariance. SN calibration uncertainty is not marginalized; no global significance or baryon-origin claim. No sound-ruler calibration or BAO retuning.",
+  "method_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+  "models": {
+    "flat_LCDM": {
+      "chi_squared": 8.894006581412015,
+      "degrees_of_freedom": 6,
+      "independent_chi_squared_difference": 0.0,
+      "linear_residuals": [
+        0.5377262400997651,
+        0.16159733913013596,
+        -0.6818702830369219,
+        -0.9492462700614084,
+        0.11670711905963671,
+        -0.6147503339128093
+      ],
+      "marginal_standard_uncertainties": [
+        0.36442084091207466,
+        0.40167814113576483,
+        0.34497560058699595,
+        0.6532932804727591,
+        1.7372426581711358,
+        0.8426408894954771
+      ],
+      "standardized_marginal_residuals": [
+        1.475563907799402,
+        0.40230553416028936,
+        -1.9765753922210154,
+        -1.4530170421689954,
+        0.06717951491157771,
+        -0.7295519854025657
+      ]
+    },
+    "parent": {
+      "chi_squared": 7.158134164853381,
+      "degrees_of_freedom": 6,
+      "independent_chi_squared_difference": 0.0,
+      "linear_residuals": [
+        0.6145764403565046,
+        0.2729358892966829,
+        -0.5318651885312526,
+        -0.7470162087907823,
+        0.33969148431201646,
+        -0.2233407751798424
+      ],
+      "marginal_standard_uncertainties": [
+        0.363047907084866,
+        0.39993749366550807,
+        0.3434411485281072,
+        0.6504434649260538,
+        1.7289183842836928,
+        0.8388778067065723
+      ],
+      "standardized_marginal_residuals": [
+        1.6928246337826742,
+        0.6824463662938182,
+        -1.548635598298801,
+        -1.148472156416711,
+        0.19647629836081235,
+        -0.266237553782328
+      ]
+    }
+  },
+  "redshifts": [
+    0.51,
+    0.706,
+    0.934,
+    1.321,
+    1.484,
+    2.33
+  ],
+  "schema": "nsc-atlas-parent-bao-validation-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_parent_bao.py": "b9e98739f605660f9e2142b3e42c0c5126106f4b68d0f5654708f4b366e2ec0c",
+    "src/recursive_horizons/nsc_atlas_bao_shape.py": "a3dabd1bf935785ec27e2a8ea741d179b5223f609cc9914dac275175532d2121",
+    "src/recursive_horizons/nsc_atlas_parent_past.py": "c75adfe6d4b529b5b4dc06b9193d9054bcaba42f7c0620f5f3db591f73ead178",
+    "tests/test_nsc_atlas_bao_shape.py": "3ce5a1df4634d01e2f9a764cf33df12402c5c6cbb2c2e74ee61837ef06a4d5bf"
+  },
+  "sources": {
+    "cov.txt": {
+      "bytes": 2547,
+      "git_blob": "fd8e5697ab61379b07b52efb781ea6713417a4d9",
+      "release_commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt"
+    },
+    "mean.txt": {
+      "bytes": 472,
+      "git_blob": "8aff444fdb42c0946342aa0011ab287eda097c4c",
+      "release_commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt"
+    }
+  }
+}

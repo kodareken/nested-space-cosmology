@@ -34,7 +34,7 @@ lensing, image delays and freely falling motion. Scale-independent
 relations connect these local measurements to the parent vacuum, and a
 motion-calibrated optical forecast passes its withheld synthetic test. A uniform corrected-energy comparison fixes the matter-law
 normalization from the same inherited scalar and bounds its luminosity-distance
-approximation. The high-frequency member has relative background-density
+approximation. From $A=1$ onward the high-frequency member has relative background-density
 departure below $1.097\times10^{-9}$, with an analytic interior light-cone
 interval checked independently against the unaveraged source. The same
 geometry fixes a scalar/vacuum/curvature correlation in which the explicit
@@ -47,6 +47,13 @@ Effective-gravity calculations determine when an eliminated or averaged
 source has vacuum form and when it does not. The quiet-cap distance law is
 tested against 596 Pantheon+ light curves and disagrees with their
 brightness-independent contrast by $-0.1046\pm0.0144$ magnitudes.
+The inherited source instead admits a controlled earlier continuation to
+$A=1/3$. On 1322 selected Pantheon+ light curves its epoch-calibrated
+distance shape gives chi-square 1179.39, versus 1178.21 for a flat LambdaCDM
+control with equal fitted dimension. With those shape parameters held fixed,
+six DESI radial/transverse null contrasts give chi-square 7.16 and 8.89,
+respectively. The sound-ruler scale cancels; these conditional comparisons
+do not derive its origin or determine the absolute vacuum scale.
 
 The resulting book connects geometry, inherited state, stress, structure and
 interior observation. Its completed results establish specified mathematical
@@ -3821,6 +3828,237 @@ observable dictionary and include any additional matter and radiation
 sectors. The relation therefore connects the inherited source to a joint
 observational question without inserting a desired dark fraction.
 
+### 13.18. Continuing the same inherited parent to the emitters
+
+<!-- nsc-claim:inherited-parent-past-collar -->
+
+Derivation, rational bounds and two independent scalar clocks:
+[finite backward Cauchy continuation](../results/summaries/nsc-atlas-parent-past-v1.json).
+The next connection is an observational past light cone. The initial slice
+at $A=1$ is a Cauchy surface, not the beginning of this cosmology. Extending
+its smooth scalar solution backward is a mathematical question which can
+be answered before prescribing a formation mechanism or the walls' future.
+
+Use the corrected energy $\mathcal I$ from Section 13.15, and bootstrap
+$1/2<A^3E/E_0<2$ on $1/3\leq A\leq1$. The unchanged Friedmann constraint gives
+
+$$
+\frac{\rho_v}{3}+\frac{E_0}{6A^3}-\frac{C}{A^2}
+\leq H^2\leq\frac{\rho_v}{3}+\frac{2E_0}{3A^3}.
+$$
+
+The lower comparison decreases toward $A=1$ and stays above $1/9$;
+the upper comparison stays below $9$. Thus $1/3<H<3$. Integrating the
+absolute Hubble-rate derivative with $\Pi^2\le4E_0/A^3$ gives
+
+$$
+\int |H_{,t}|\,dt\leq
+\frac{C_{\max}}{2H_-}(A_{\min}^{-2}-1)
++\frac{2E_0}{3H_-}(A_{\min}^{-3}-1)=19.7736,
+$$
+
+where the curvature upper bound is $.0228$, the past lower Hubble
+bound is $H_-=1/3$, and the minimum scale is $A=1/3$.
+The positive corrected-energy estimate works in either time direction.
+Taking $\delta=9/(2\omega)$ and $\Gamma=3(19.7736)/(2\omega(1-\delta))$
+gives the same $L,U$ formulas as before. Their strict improvement
+$1/2<L<1<U<2$ closes the bootstrap. Bounded field energy, positive scale
+and positive Hubble rate permit the smooth ODE to reach $A=1/3$ in finite
+proper time. At $\omega=10^9$, combining the past and future estimates gives
+
+$$
+\left|\frac{A^3E}{E_0}-1\right|<3.416041\times10^{-8},
+\qquad A\geq\frac{1}{3}.
+$$
+
+The light cone also needs a causal check. The original parent cap's
+pole-to-boundary angle exceeds $2.83$. Its entire future conformal angle
+is below $11/21$, and its backward angle to $A=1/3$ is below $.912$.
+A past emitter is at angle $\eta_o+\eta_p$ from the receiver's pole; its
+future domain to the initial slice adds another $\eta_p$. Therefore
+
+$$
+\eta_o+2\eta_p<\frac{11}{21}+2(.912)
+=2.347810<2.83.
+$$
+
+Every ray considered here remains in the domain fixed by the homogeneous
+initial cap. No signal from an unconstructed wall history is required.
+This is a finite past continuation, not a bounce, primordial state-selection
+rule or global completion. Two unaveraged $\omega=200$ formulations agree
+on the endpoint comoving energy within $5.56\times10^{-10}$; the high-frequency
+bound itself is analytic.
+
+### 13.19. The inherited geometry meets the supernova distance shape
+
+<!-- nsc-claim:inherited-parent-supernova-comparison -->
+
+Evidence: [future-only comparison](../results/summaries/nsc-atlas-parent-supernova-v1.json),
+[comparison with the proved earlier continuation](../results/summaries/nsc-atlas-parent-supernova-v2.json),
+and [method and scope](../docs/nsc-atlas-parent-supernova.md).
+The expanding source now produces an actual astronomical distance
+comparison. Retain $\rho_v=9/32$, $E_0=3/8$, and the original junction
+curvature. The controlled background is
+
+$$
+H_d^2(A)=\frac{\rho_v}{3}+\frac{E_0}{3A^3}-\frac{C}{A^2}.
+$$
+
+The closed-FLRW luminosity distance follows from the same geometry. With
+$z$ the release's Hubble-diagram redshift, $z_h$ its heliocentric redshift,
+and $A_e=A_o/(1+z)$,
+
+$$
+D_L=(1+z_h)\frac{A_o}{\sqrt{C}}
+\sin\left(\frac{\sqrt{C}}{A_o}\int_0^z\frac{dz'}{H_d(A_o/(1+z'))}\right).
+$$
+
+The source theorem bounds the unaveraged scalar's magnitude departure by
+$3.836\times10^{-8}$ up to a common offset on the checked ray branch.
+A single magnitude intercept removes that offset and the common SI
+distance scale. It is profiled with the full covariance, not assigned
+separately to redshift bands. Published standardization, light-curve
+correlations and redshift corrections follow
+[Brout et al., Pantheon+](https://arxiv.org/abs/2202.04077) and its
+[distance and covariance release](https://github.com/PantheonPlusSH0ES/DataRelease/tree/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR).
+
+The original 596-row contrast is unchanged. Flat LambdaCDM controls with
+$\Omega_m=.30$ and $.315$ give residuals $-1.517$ and $-1.255$ standard
+deviations, respectively, compared with $-7.278$ for the pure quiet cap.
+The wider selection uses 1322 non-calibrator light curves, representing
+1271 distinct supernova identifiers, with $.025\le z\le2.26137$.
+
+| History on the same wider sample | Fitted shape quantities | Minimum chi-square |
+| --- | ---: | ---: |
+| Quiet de Sitter | 0 | 1792.223 |
+| Inherited parent, emission restricted to $A\ge1$ | 1 epoch | 1636.491 |
+| Inherited parent, proved emission domain $A\ge1/3$ | 1 epoch | 1179.387 |
+| Flat LambdaCDM control | 1 matter fraction | 1178.209 |
+
+Every row also fits the same one magnitude intercept. The last two rows
+each have 1320 degrees of freedom. The future-only failure is retained:
+requiring the observer scale to exceed one plus the largest redshift
+leaves too little scalar matter. The direct
+repair was the earlier continuation of the same initial solution, rather
+than changing its charge, flux, curvature or excitation normalization.
+
+The resulting parent epoch is $A_o=1.381654568$, with earliest emitter
+$A_e=.4236424$. Its inferred comparison fractions are
+
+$$
+(\Omega_\chi,\Omega_v,\Omega_k)
+=(.3667843,.7255551,-.0923394).
+$$
+
+These fractions are linked by Section 13.17 and inferred after calibrating
+the epoch; they are not parameter-free cosmic abundances. The flat control
+calibrates $\Omega_m=.3312216$. The difference in minimum chi-square is
+$1.17848$ with equal fitted dimension. These retrospective data do not
+select a unique explanation or determine an absolute vacuum scale.
+
+### 13.20. One calibrated geometry, a second distance channel
+
+<!-- nsc-claim:inherited-parent-bao-ap-comparison -->
+
+Evidence: [fixed supernova-calibrated AP forecast](../results/summaries/nsc-atlas-parent-bao-forecast-v1.json)
+and [DESI comparison](../results/summaries/nsc-atlas-parent-bao-validation-v1.json).
+The supernova epoch fixes a radial/transverse relation without another
+geometric parameter:
+
+$$
+F(z)=\frac{D_M(z)H(z)}{c},\qquad
+\frac{D_M/r_d}{D_H/r_d}=F(z),\qquad D_H=\frac{c}{H}.
+$$
+
+The unknown sound-ruler length cancels. This does not derive the acoustic
+ruler or its baryon physics. It tests whether the published transverse and
+radial distance measurements have the shape predicted by this geometry.
+Use the six anisotropic pairs in [DESI DR2 II, Section III.3](https://arxiv.org/html/2503.14738v3)
+at $z=.51,.706,.934,1.321,1.484,2.33$, with their full covariance.
+The covariance product is pinned to the public Cobaya release; the DESI
+[provenance clarification](https://help.desi.lbl.gov/index.php?qa=182&qa_1=provenance-external-cobaya-likelihood-public-cosmology-chains)
+identifies it with the collaboration likelihood.
+
+Avoid replacing the observed ratio by a Gaussian. For fixed $F_i$, form
+six linear contrasts and their exact Gaussian covariance:
+
+$$
+r_i=y_{M,i}-F_i y_{H,i},\qquad
+V=W C_{\rm BAO}W^T,\qquad \chi^2_{\rm AP}=r^T V^{-1}r.
+$$
+
+This equals profiling over an arbitrary unknown radial amplitude in each
+pair, verified by an independent constrained-mean calculation. Cross-bin
+correlations remain. The isotropic BGS row has no such pair and is unused.
+All supernova-calibrated shape parameters were saved and pushed before
+evaluating this comparison; no BAO parameter is fitted.
+
+| Fixed supernova-calibrated geometry | AP chi-square | Contrasts |
+| --- | ---: | ---: |
+| Inherited parent | 7.15813 | 6 |
+| Flat LambdaCDM control | 8.89401 | 6 |
+
+The parent AP-relative scalar envelope is $3.533\times10^{-8}$.
+Both conditional shapes are consistent with this comparison. The small
+statistic difference is not a preference claim: supernova calibration
+uncertainty has not been marginalized into a joint model comparison.
+The full BAO likelihood, a common acoustic scale across redshifts and
+growth supply stronger remaining tests. No astronomical data used here
+were newly blinded.
+
+![Same-source supernova distances and fixed-geometry DESI AP comparison](../docs/figures/nsc-atlas-parent-supernova.png)
+
+*Figure 18. Left: the quiet cap and future-only parent fail the wider
+distance-shape comparison; the proved earlier scalar continuation reaches
+a chi-square within 1.18 of the calibrated flat control without changing
+the source. Right: that same supernova-calibrated parent is taken to six
+DESI radial/transverse contrasts without another fitted parameter. Points
+show marginal standardized residuals; the joint statistics retain the
+published correlations. These are conditional model comparisons, not
+primordial state selection or a claimed cosmological preference.*
+
+### 13.21. What this connection closes and what its source still must supply
+
+The connected calculation now runs from a shared inherited scalar through
+a controlled Cauchy history to two astronomical distance channels. The
+quiet-cap discrepancy is not hidden: its repair requires the actual evolving
+source and a proved earlier observer domain. The common comparison
+also supplies the previously missing LambdaCDM control.
+
+Four other physical gaps remain. First, the background family's
+$(\rho_v,E_0,C,H^2)\mapsto\lambda^2(\rho_v,E_0,C,H^2)$ leaves the fractions
+unchanged and sends distances to $\lambda^{-1}$ times their value. This
+corresponds to changing supplied dimensional source parameters together;
+it is not a transformation selecting their values at fixed couplings.
+Neither inheritance nor a magnitude-offset-free likelihood determines an
+SI charge or absolute Lambda. Quantum scale selection or an independently
+calibrated dimensional input must close that connection.
+
+Second, the radially stable surface-scalar body in Part VI has
+$p=\sigma$ and conserved surface shift charge
+$Q=4\pi R^2\theta_{,\tau}$, hence
+$\sigma=Q^2/(32\pi^2R^4)$. That law does not select $Q$ or inherit it
+between membranes. The evolving parent uses constant charged tension
+$p=-\sigma$. The two wall actions retain separate identities until a
+compatible preparation/coupling is derived.
+
+Third, P001's actual mass envelope still grows 3.35 percent in its
+non-nested three-grid family. The independent
+[matched-characteristic control](../results/summaries/nsc-atlas-matched-trace-v1.json)
+shows that the adapter preserves deliberately compatible strong traces;
+it does not repair independently evolved traces or their unresolved active
+cell. Its production endpoint remains an unconverged estimate.
+
+Fourth, this scalar/four-form action has no baryon current or photon
+distribution. It supplies one scalar excitation, not separate derived
+$\Omega_c$, $\Omega_b$ and $\eta_B=n_b/n_\gamma$. The latter is undefined
+in this sector, rather than calculated to vanish. Composition, production
+and entropy history must enter through an explicit compatible extension.
+Those source tasks, together with joint growth and acoustic-scale tests,
+are the next physical work. Further precision in a completed background
+cannot replace them.
+
+
 ## IV. Concentration, conservation and the surrounding reservoir
 
 A dark-matter account needs a physical source that forms structure and accounts for its surroundings. We first calculate admissible scalar concentrations and their conserved supply, then their persistence and spatial compensation, and finally formation from compact disturbances. The route preserves the inherited parent instead of adding an independent halo mass. Different frequencies and preparations are explicit members of the family; they are not exchanged between examples by a change of units.
@@ -3915,7 +4153,7 @@ discrepancies near 80%. Residual oscillations remain.
 
 ![Gravitational cooling and selected core shape](../docs/figures/nsc-atlas-scalar-core.png)
 
-*Figure 18. Left: two distinct initial cloud shapes approach the
+*Figure 19. Left: two distinct initial cloud shapes approach the
 independently calculated coherent profile after mass normalization.
 Right: scalar norm leaves the central region during relaxation.
 This is a finite local envelope calculation, not the full evolving
@@ -4061,7 +4299,7 @@ mass does not imply identical internal geometry or proper energy integrals.
 
 ![A scalar core supplied by a compensated inherited reservoir](../docs/figures/nsc-atlas-core-reservoir.png)
 
-*Figure 19. Left: the core's positive geometric mass is supplied by ambient
+*Figure 20. Left: the core's positive geometric mass is supplied by ambient
 depletion, with the outward-current pulse included in the balance. Right:
 the pulse carries nonzero outward scalar energy while the total initial
 exterior mass offset vanishes. These are constrained initial data, not a
@@ -4247,7 +4485,7 @@ is imposed or inferred.
 
 ![Inherited scalar concentration, conserved mass and a received clock](../docs/figures/nsc-atlas-core-evolution.png)
 
-*Figure 20. The diffuse preparation develops a compact concentration under
+*Figure 21. The diffuse preparation develops a compact concentration under
 its computed gravity. The fixed-geometry field control separates ordinary
 scalar propagation from that response. Refinement checks the independent
 mass-flux law. Clock departures use the stated central proper emission
@@ -4417,7 +4655,7 @@ explicitly; this is not a universal constant selected by nesting.
 
 ![Different core and reservoir scales at fixed inherited vacuum](../docs/figures/nsc-atlas-scale-hierarchy.png)
 
-*Figure 21. The core shrinks faster than its energy-supply region while the
+*Figure 22. The core shrinks faster than its energy-supply region while the
 parent reference radius remains fixed. A reservoir constrained to twice
 the core cutoff becomes insufficient above its ideal supply ceiling.
 Solving for the reservoir radius restores the initial constraints and
@@ -4593,7 +4831,7 @@ therefore does not establish asymptotic stability.
 
 ![Finite localization of the supplied core and reservoir in the expanding parent](../docs/figures/nsc-atlas-hierarchy-evolution.png)
 
-*Figure 22. The same supplied field disperses without self-gravity and
+*Figure 23. The same supplied field disperses without self-gravity and
 retains a localized core when self-gravity is included. Its physical size
 breathes while the parent expands; the dashed size reference is simply
 initial radius multiplied by the parent scale factor. Mass-current and
@@ -4807,7 +5045,7 @@ the density-derivative error from $2.18\times10^{-6}$ to $5.46\times10^{-7}$.
 
 ![Radial sensitivity and quadrupole response on the retained evolving source](../docs/figures/nsc-atlas-hierarchy-perturbations.png)
 
-*Figure 23. Field sensitivity and density deformation are distinct responses.
+*Figure 24. Field sensitivity and density deformation are distinct responses.
 The quadrupole field response remains modest for seeds at the initial and
 late events; the same radial matrices cover all five angular components
 in the declared span. Independent nonlinear radial differences converge to
@@ -4974,7 +5212,7 @@ numbers, not an observed halo population or a fitted cosmological spectrum.
 
 ![Compensated mass profile, spatial response and projected deficit](../docs/figures/nsc-atlas-compensation-response.png)
 
-*Figure 24. One supplied core and its inherited reservoir, viewed through
+*Figure 25. One supplied core and its inherited reservoir, viewed through
 enclosed mass, spatial frequency and projected contrast. Including the
 reservoir suppresses long-wavelength response. The purple curve reuses
 the evolved field in the original mass/radius units. The projected deficit
@@ -5191,7 +5429,7 @@ the preparation epoch is a physical part of the proposed formation route.
 
 ![Finite future growth and the compact earlier preparation](../docs/figures/nsc-atlas-formation-window.png)
 
-*Figure 25. Left: the late parent permits only modest ambient amplification;
+*Figure 26. Left: the late parent permits only modest ambient amplification;
 the small core-scale mode oscillates. Middle: changing the supplied epoch
 changes both growth and wave phase. Right: a compact 5% seed on the earlier
 continuation approaches a nonlinear regime. The curve beyond small contrast
@@ -5326,7 +5564,7 @@ full relativistic or observational error budget.
 
 ![Nonlinear density, fixed-mass contraction and the first rebound](../docs/figures/nsc-atlas-seed-collapse.png)
 
-*Figure 26. Both supplied seeds develop large contrast, but the sampled
+*Figure 27. Both supplied seeds develop large contrast, but the sampled
 fixed-mass shells of the 5% case continue expanding through its interval.
 The 10% case turns around and contracts. Removing self-gravity removes that
 contraction. The right panel resolves the forming concentration's first
@@ -5448,7 +5686,7 @@ the first two recovers the amplitudes and predicts the withheld third.
 
 ![Operational three-clock protocol and synthetic test](../docs/figures/nsc-atlas-parent-clocks.png)
 
-*Figure 27. Left: three emitters on the central past radial light cone;
+*Figure 28. Left: three emitters on the central past radial light cone;
 their initial proper distances and the receiver's proper age are fixed.
 Right: a withheld synthetic frequency response agrees with the prediction
 from two state calibrations. No observational confirmation is inferred.*
@@ -5686,7 +5924,7 @@ regular; a light-bundle caustic is not a spacetime singularity.
 
 ![Nonradial light bending and beam focusing from the evolved scalar](../docs/figures/nsc-atlas-core-optics.png)
 
-*Figure 28. Two proper emission ages probe the same evolving concentration.
+*Figure 29. Two proper emission ages probe the same evolving concentration.
 The landing-angle map and signed beam area change as the core breathes.
 The inset shows the sampled transverse-scale sign change near the early caustic.
 Curvature-based Jacobi scales converge toward their independent ray-map
@@ -5811,7 +6049,7 @@ interval enclosure or an asymptotic stability statement.
 
 ![One receiving worldline sees two images from the evolved scalar concentration](../docs/figures/nsc-atlas-core-images.png)
 
-*Figure 29. The two angular roots reach one receiver after reflection of the
+*Figure 30. The two angular roots reach one receiver after reflection of the
 negative branch. Their sky positions, pulse fluences and arrival times are
 computed from the unchanged scalar-parent evolution. Two independent
 calculations check the delay-frequency identity. The final panel links
@@ -6003,7 +6241,7 @@ the declared model. It does not determine the observed absolute vacuum.
 
 ![Three readouts of one forming source and fixed observer map](../docs/figures/nsc-atlas-formed-observer.png)
 
-*Figure 30. The actual forming source supplies direction, proper delay and
+*Figure 31. The actual forming source supplies direction, proper delay and
 frequency for specified receiver offsets. The middle offset has the full
 quoted source and integration controls; the other two illustrate the map.
 The cross freezes the comoving potential under the same clock protocol.
@@ -6147,7 +6385,7 @@ quadrature is performed before the optical target is evaluated.
 
 ![Precheck, timelike calibration and frozen optical prediction](../docs/figures/nsc-atlas-dynamics-lensing.png)
 
-*Figure 31. The force-timescale precheck selects finite free-fall calibration.
+*Figure 32. The force-timescale precheck selects finite free-fall calibration.
 The middle panel reconstructs the force from motion along the retarded
 chord. The right panel compares the committed forecast with the later
 null calculation; its bars represent the stated comparison ranges, not
@@ -6267,13 +6505,13 @@ Those figures do not bound interpolation or the total model uncertainty.
 The method was frozen at `f0f639d` before the rays were evaluated, with no
 new gravitational or field solve. The
 [light-cone record](../results/summaries/nsc-conformal-lightcone-v1.json)
-contains all six rays. Figure 32 shows the three declared lengths; the lines
+contains all six rays. Figure 33 shows the three declared lengths; the lines
 only connect those samples. This is a finite observer map on one saved
 metric, not a full-sky prediction and not a match to the Pantheon+ residual.
 
 ![Redshift and luminosity-to-radar ratio on the saved conformal null cone](../docs/figures/nsc-conformal-lightcone.png)
 
-*Figure 32. Three predeclared lookbacks in each radial direction, for the
+*Figure 33. Three predeclared lookbacks in each radial direction, for the
 fixed-coordinate normal probes of the saved conformal metric. Markers are
 the declared rays. Lines connect samples and do not fill intermediate
 evolution.*
@@ -6481,7 +6719,7 @@ The indicators are not physical confidence intervals or rigorous enclosures.
 
 ![Common geometry, gravitational return and causal delay](../docs/figures/nsc-atlas-gravitational-response.png)
 
-*Figure 33. The matched clocks are continuous across both sourced interfaces.
+*Figure 34. The matched clocks are continuous across both sourced interfaces.
 The same parent/exterior yields a different return when its inner termination
 changes. The lower panels compare the contrast to numerical indicators and
 show the principal-characteristic return times. The curves use 23 fixed
@@ -6673,7 +6911,7 @@ initial instant does not establish a sustained cascade or uniform lifespan.
 
 ![Prepared resolution, mean circulation and viscous cost](../docs/figures/nsc-atlas-vortex-transfer.png)
 
-*Figure 34. The upper panels show actual tangential-velocity patterns of the
+*Figure 35. The upper panels show actual tangential-velocity patterns of the
 analytic initial data, not a simulated singularity or an image of the universe.
 Both patterns average to zero velocity. The lower left gives the exact common
 initial mean acceleration; the lower right shows the increasing fractional
@@ -6850,7 +7088,7 @@ independent mode/action checks; it is not an astronomical measurement.
 
 ![Derived interaction, interior contrast and quantum scaling](../docs/figures/nsc-atlas-cosmohedron-interaction.png)
 
-*Figure 35. The upper-left panel is the selected interaction graph, not a
+*Figure 36. The upper-left panel is the selected interaction graph, not a
 spacetime diagram. Its vertices are calculated from the same material action.
 The lower-left panel compares the two inner geometries. The scale control
 at fixed G preserves geometric shape while changing quantum strength.
@@ -6994,7 +7232,7 @@ $$
 
 The cap occupies $V\le U$ and exterior $V\ge U$. The proper-clock range
 $0\le U,V\le S$, $S/\ell=.1256873632901$, gives the finite causal diamond
-in Figure 36. An analytic conservative bound gives $N=\sqrt{C}\ge.3851891$
+in Figure 37. An analytic conservative bound gives $N=\sqrt{C}\ge.3851891$
 throughout that domain. The material wall remains $x=0$, $T=\tau$,
 $C=1$; both Israel jumps are retained. This construction uses no spatial
 cutoff profile and has no reflecting timelike ends. The earlier wide
@@ -7036,7 +7274,7 @@ quantum error account are not supplied by this geometry calculation.
 
 ![Wall radar causal diamond, clock lapse and actual change in Dirac potential](figures/dirac-wall-radar.png)
 
-*Figure 36. The finite quiet wall-clock diamond. The material wall is the
+*Figure 37. The finite quiet wall-clock diamond. The material wall is the
 vertical line; null edges are causal limits. Left: proper-clock lapse,
 with the emitted/reflected radar ray and receiver. Right: the radial
 Dirac-potential difference from a smooth continuation of the same cap,
@@ -9506,7 +9744,7 @@ transport from an identity imposed by the cap primitive.
 
 ![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
 
-*Figure 37. Saved finite-window comparisons. A: the previous and current
+*Figure 38. Saved finite-window comparisons. A: the previous and current
 zero-case cap primitives, with an independent incoming characteristic
 pullback from the new wall trace. B and C: finite-minus-zero wall radius
 and scalar histories. D: absolute spatial and temporal changes of the
@@ -9602,7 +9840,7 @@ sign and size of a difference without a fixed observed convergence order.
 
 ![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
 
-*Figure 38. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+*Figure 39. A: finite-minus-zero wall scalar at 128, 256 and 512 time
 steps. B: signed changes between successive histories. C: the region
 containing their largest changes; dots mark fine finite-history saved
 intervals containing a profile knot. These endpoint brackets do not
@@ -10301,7 +10539,7 @@ The following preserved dependency diagram records the original finite field-dev
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 39. Research dependencies, distinct from spacetime causal arrows.
+*Figure 40. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*

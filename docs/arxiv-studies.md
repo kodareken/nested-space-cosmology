@@ -1,5 +1,27 @@
 # Cited arXiv studies
 
+## Parent geometry against released distances — 28 October 2026
+
+[Brout et al., 2202.04077v2](https://arxiv.org/abs/2202.04077v2), abstract,
+release definitions and the pinned public data/covariance, supply the
+Pantheon+ observer convention and statistical inputs. The atlas uses
+released m_b_corr with the heliocentric prefactor, a common fitted offset,
+the existing two bands and a separately declared zHD>=.025 selection.
+It does not reproduce every step of the collaboration's light-curve or
+early-universe inference.
+
+[DESI DR2 II, 2503.14738v3](https://arxiv.org/html/2503.14738v3), Section
+III.3 and its distance definitions, supplies the anisotropic BAO channel.
+The public Cobaya DR2 mean/covariance is pinned at
+bb0c1c9009dc76d1391300e169e8df38fd1096db; DESI's
+[provenance reply](https://help.desi.lbl.gov/index.php?qa=182&qa_1=provenance-external-cobaya-likelihood-public-cosmology-chains)
+identifies that data product with its cosmology likelihood. Only the six
+radial/transverse AP pairs are projected here. Neither the full DESI
+likelihood, sound-horizon formation nor the later full-shape results are
+claimed as reproduced. The [new connection](nsc-atlas-parent-supernova.md)
+is the comparison of those two data channels with one unchanged inherited
+source and its proved Cauchy history.
+
 ## Oscillating scalar source and the controlled parent — 28 October 2026
 
 [Turner, Phys. Rev. D 28, 1243 (1983)](https://doi.org/10.1103/PhysRevD.28.1243),

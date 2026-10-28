@@ -548,6 +548,21 @@
       "section": "13.17",
       "status": "derived",
       "owner": "docs/nsc-atlas-inherited-matter-bound.md"
+    },
+    "inherited-parent-past-collar": {
+      "section": "13.18",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parent-supernova.md"
+    },
+    "inherited-parent-supernova-comparison": {
+      "section": "13.19",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-parent-supernova.md"
+    },
+    "inherited-parent-bao-ap-comparison": {
+      "section": "13.20",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-parent-supernova.md"
     }
   },
   "findings": [

@@ -18,16 +18,29 @@ starting a derivation.
 
 ## Current execution priority — 28 October 2026
 
-### Active: inherited-parent distances and the missing physical closures
+### Complete finite connection: inherited parent, earlier light cone and data
 
-The [supernova comparison](nsc-atlas-parent-supernova.md) now takes priority:
-test the already-derived parent with unchanged source parameters, alongside
-an identical-covariance LambdaCDM control. Calibrate only the observer epoch
-and a common magnitude intercept, and keep every emitter after A=1. The
-596-row contrast is reused without changing its bands or weights; a broader
-sample tests the same future-domain restriction. No P001 grids are started.
-Absolute SI scale, inherited wall state, P001 convergence and the baryon/
-asymmetry sectors remain active physical gaps rather than completed results.
+The [supernova comparison](nsc-atlas-parent-supernova.md) tests the inherited
+parent with unchanged source parameters and an identical-covariance
+LambdaCDM control. The future-only observer domain fails the wider data;
+a proved backward Cauchy collar to A=1/3 supplies the missing emitters
+without changing the preparation. On 1322 selected light curves the
+calibrated parent/control give chi-square 1179.387/1178.209 with equal
+fitted dimension. The original 596-row contrast is preserved. The same
+SN-calibrated geometry gives DESI AP chi-square 7.158 for six null contrasts,
+with no fitted BAO parameter. This is conditional on the frozen SN point
+estimate and the published distance extraction, not a theory preference.
+
+### Active: source selection and joint physical interpretation
+
+The next outward test is the common acoustic scale and growth from the
+same preparation, with calibration uncertainty propagated. The required
+physical construction must own the absolute charge/flux scale, inherited
+surface state, matter composition and entropy/asymmetry history. The
+matched-characteristic control isolates P001's compatibility target; it
+does not repair the unconverged production evolution. No new P001 grids
+are started. Do not require finer precision in the completed background
+before the source/observer construction that actually resolves these gaps.
 
 ### Complete: inherited matter normalization and a controlled parent light cone
 

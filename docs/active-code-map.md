@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+The [parent supernova/AP owner](nsc-atlas-parent-supernova.md) uses
+`nsc_atlas_parent_past.py` for the backward bootstrap and two unaveraged
+clocks, `nsc_atlas_parent_supernova.py` for the common distance/likelihood
+map, and `nsc_atlas_bao_shape.py` for exact linear AP nulls. Producers are
+`derive_nsc_atlas_parent_past.py`, `measure_nsc_atlas_parent_supernova.py`
+and `check_nsc_atlas_parent_bao.py`; all refuse retained-output replacement.
+The plotter reads their summaries. `check_nsc_atlas_matched_trace.py`
+separately tests one manufactured P001 adapter event with no evolution.
+
 The inherited-source background/light-cone calculator is
 `nsc_atlas_inherited_matter.py`. It reuses the original shared-parent source;
 `check_nsc_atlas_inherited_matter.py` keeps creation-only forecast/validation

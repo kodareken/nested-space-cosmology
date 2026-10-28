@@ -1,0 +1,41 @@
+{
+  "conclusion": "The adapter preserves a deliberately matched strong incoming sum. Remaining velocity/metric-projection error is separate. Production P001 did not enforce this strong compatibility and remains unconverged.",
+  "direct": {
+    "incoming_discrepancy": 0.0,
+    "velocity_discrepancy": 1.3402148314745066e-13,
+    "weak_balance_defect": 1.5013658990082474e-19
+  },
+  "execution": {
+    "charged_values": 500236,
+    "new_meshes": 0,
+    "process_CPU_seconds": 0.203125,
+    "radial_solves": 2,
+    "time_steps": 0
+  },
+  "hybrid": {
+    "incoming_discrepancy": 1.734723475976807e-18,
+    "physical_mass_residual": -4.0153624370337785e-20,
+    "scalar_channel_identity_defect": -1.185177352721901e-19,
+    "scalar_incoming_channel": 9.714451470348137e-19,
+    "scalar_tangent": 3.420900715478403e-13,
+    "scalar_velocity_channel": 3.4208921862042856e-13,
+    "velocity_discrepancy": 1.3402148314745066e-13
+  },
+  "physical_input": {
+    "alpha": 0.00012983127142551443,
+    "cap_knots": [
+      "0",
+      "29667619379811591/562949953421312000",
+      "480027582116861191/562949953421312000"
+    ],
+    "departure": "One fixed outer-cell bubble in chi and canonical density, .002 and -.003.",
+    "wall_radius": 0.45
+  },
+  "schema": "nsc-atlas-matched-trace-v1",
+  "scope": "Manufactured instantaneous algebraic compatibility test, not a repair or replay of the P001 trajectory.",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_matched_trace.py": "d6a1bd9a208311a9130221e3f58681185cfef3acdd840bc879a416f97172037f",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py": "0cbebb418a5744ed70f175b8600c092b7e535c637a08109962eb0bfd8e60f0b6",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py": "2bb286115e8c96e48ce1836eb720f46e5a971909b089c4ec9abb03acf297bcb0"
+  }
+}

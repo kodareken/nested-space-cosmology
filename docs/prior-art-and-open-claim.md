@@ -1,5 +1,27 @@
 # Prior art and admission of new research
 
+## Same inherited parent to supernova and BAO geometry, 28 October 2026
+
+The [comparison owner](nsc-atlas-parent-supernova.md) records the choice
+between another wall repair, adding an adjustable component and testing
+the existing inherited source. The first common-likelihood comparison
+retains the future-only domain failure. A backward corrected-energy
+bootstrap and a two-way causal bound then extend that same parent to
+A=1/3 before reevaluating the broader sample. The source is unchanged;
+one observer epoch is calibrated. The second, SN-fixed DESI AP channel
+uses a linear covariance projection to eliminate acoustic amplitude, with
+zero BAO parameters fitted. Brout et al., DESI DR2 II and their publisher
+data provide observations and standard inference conventions. The new
+connection is their explicit comparison with the source-derived history.
+
+Each supernova comparison uses under one process-CPU second, no grid and
+four BLAS threads. Two backward field clocks use 39544 RHS calls and
+.391 solver CPU seconds. A separate manufactured P001 characteristic
+test has two radial solves, .203 CPU seconds and zero time steps; it
+preserves a compatible strong sum without claiming a production repair.
+The absolute scale, inherited wall charge, baryon current and photon state
+remain missing physical selections rather than numerical targets to scan.
+
 ## Inherited scalar to controlled matter background, 28 October 2026
 
 The [source and bound owner](nsc-atlas-inherited-matter-bound.md) compares
