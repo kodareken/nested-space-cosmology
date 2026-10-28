@@ -40,7 +40,7 @@ The conditional geometric R values are 1.55147562 and 1.75179174; the common com
 10. **Infinite hierarchy: ell_n=r^n ell_0.** An inherited ratio or infinite operator composition leaves ell_0 and observer level unselected. **No inherited SI selection.**
 11. **Legacy spectral fixed point: threshold 3*pi/2, alternative coefficient 18*pi, supplied length_anchor.** The legacy coefficient dictionary retains a length_anchor and has no solved physical fixed point; its action is not the fixed scalar/four-form parent. **No inherited SI selection.**
 
-**Surviving SI-fixed route: none in this evaluated ladder.** This does not exclude a future completed quantum/global preparation, and does not reject nesting.
+**Surviving cosmological SI-scale closure: none in this evaluated ladder.** A microscopic coupling relation does survive: e_phys/sigma_phys=2.0256752716e-34 m from the fixed normalized source and G,hbar,c. Its hierarchy to the parent curvature radius is unselected. This does not exclude a future completed quantum/global preparation, and does not reject nesting.
 
 The fixed nonzero coefficient is **Lambda*L_ref^2=12.348252398929**. Matching the target by inversion would require L_ref=3.3651918430e+26 m; that is a target-derived diagnostic, not a prediction. The compact-period illustration is 3.51070535e+121 times the target and leaves its winding unselected. The requested Lambda_obs derivation remains **unresolved**.
 

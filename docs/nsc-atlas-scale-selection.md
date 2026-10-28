@@ -25,10 +25,36 @@ The computed [route ladder](../results/summaries/nsc-atlas-SI-scale-ladder-v1.js
 and its tests keep target-dependent inverse diagnostics separate from
 target-independent conditional predictions.
 
+## A surviving microscopic SI relation, distinct from selecting L_ref
+
+The [coupling-ratio calculation](../results/summaries/nsc-atlas-inherited-microanchors-v1.json)
+makes an essential distinction: the free parent curvature scale does not
+make every SI coupling combination free. The inherited source has
+sigma_hat=kappa_nat*L_unit*sigma_phys and
+e_hat=sqrt(kappa_nat)*L_unit*e_phys. Therefore
+
+$$
+\frac{e_{\rm phys}}{\sigma_{\rm phys}}
+=\frac{\hat e}{\hat\sigma}\sqrt{\kappa_{\rm nat}}
+=2.0256752716\times10^{-34}\ {\rm m}.
+$$
+
+This microscopic canonical charge/tension length is fixed by the supplied
+ratios and G,hbar,c; it is not selected using Lambda_obs. Other fixed SI
+combinations are (omega_phys/c)/e_phys=1.6205402173e-25 m and
+sqrt[(omega_phys/c)/sigma_phys]=5.7294748842e-30 m. They all remain fixed
+in the explicit dimensional-completion witnesses while the parent Lambda
+changes. Thus they survive as conditional coupling relations, not as a
+cosmological-radius closure. The needed parent/microscopic hierarchy would
+be 1.6612691531e60 if the target were inserted. That hierarchy is unselected.
+In the ladder record, `inherited_SI_scale_selected` refers to the parent
+reference scale, not to these microscopic combinations. The target goal
+remains unachieved.
+
 ## Ranked route ladder
 
 1. **Flux/charge quantization:** q/e=3, screened vacuum levels (9/32,1/8,1/32,0), second difference 1/16; fundamental SI charge and L_ref remain free.
-2. **Inherited wall EOS/radius:** frozen stationary radii (1.846303,1.155844) give V=(-.078585,.694939) and V_second=(-1.28718,-11.32694); neither is a static stable radius, and no metres are selected.
+2. **Inherited wall EOS/radius:** e_phys/sigma_phys fixes 2.0256753e-34 m, but frozen stationary radii (1.846303,1.155844) give V_second=(-1.28718,-11.32694); no cosmological-radius hierarchy is selected.
 3. **Recursive fixed point/level:** vacuum-length ratios are 1.5 then 2 and the flux-map fixed-point residual is -1/2; no constant geometric ratio/root length or full M,sigma,ell closure is selected.
 4. **Scalar frequency/epoch:** Lambda*c^2/omega^2=2.8125e-19 and the calibrated equality redshift is .331586; an SI scalar frequency is absent.
 5. **Compact four-cycle period:** the formal added S4 premise gives Lambda*lP^2=1/n; n=1 gives 3.8280731e69 m^-2, while no inherited winding or admissible cycle/contour for the excited parent has been derived.

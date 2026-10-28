@@ -1,0 +1,37 @@
+{
+  "Lambda_obs_derived": false,
+  "SI_coupling_ratio_lengths": {
+    "charge_over_tension_metres": 2.0256752716174387e-34,
+    "inverse_length_frequency_over_charge_metres": 1.6205402172939512e-25,
+    "sqrt_inverse_length_frequency_over_tension_metres": 5.729474884170371e-30
+  },
+  "dimensional_completion_witnesses": [
+    {
+      "arbitrary_model_unit_metres": 0.001,
+      "charge_over_tension_metres": 2.025675271617439e-34,
+      "inverse_length_frequency_over_charge_metres": 1.6205402172939512e-25,
+      "parent_Lambda_m_inverse2": 281250.0,
+      "sqrt_inverse_length_frequency_over_tension_metres": 5.729474884170371e-30
+    },
+    {
+      "arbitrary_model_unit_metres": 100.0,
+      "charge_over_tension_metres": 2.025675271617439e-34,
+      "inverse_length_frequency_over_charge_metres": 1.6205402172939512e-25,
+      "parent_Lambda_m_inverse2": 2.8125e-05,
+      "sqrt_inverse_length_frequency_over_tension_metres": 5.729474884170371e-30
+    }
+  ],
+  "distinction": "The supplied normalized coupling ratios and G,hbar,c fix these microscopic SI combinations. They do not select the parent curvature length L_ref or its hierarchy above those combinations.",
+  "fixed_dimensionless_microanchor_ratio": 800000000.0,
+  "fixed_normalized_inputs": {
+    "charge": 0.5,
+    "omega": 1000000000.0,
+    "tension": 0.2
+  },
+  "inverse_target_hierarchy_not_a_prediction": 1.66126915310905e+60,
+  "schema": "nsc-atlas-inherited-microanchors-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_inherited_microanchors.py": "b819779184a88055053bf7d0dcdfcde0c30b9cdeef13e3a39ffb928b564c3acc",
+    "src/recursive_horizons/nsc_atlas_scale_selection.py": "4c15c86c09156a2201640165ef85178d661027d8b1581c0009dca6a63920c0f2"
+  }
+}

@@ -1,5 +1,11 @@
 # What the calculations show
 
+The fixed source also has a [microscopic SI coupling relation](nsc-atlas-scale-selection.md#a-surviving-microscopic-si-relation-distinct-from-selecting-l_ref):
+e_phys/sigma_phys=2.0256752716e-34 m, derived from the inherited normalized
+ratios and G,hbar,c. It is independent of the free parent curvature scale.
+The missing bridge is its hierarchy to L_ref, not the existence of any SI
+combination. This coupling anchor does not yet select Lambda_obs.
+
 The [shared-ruler scoreboard](nsc-atlas-shared-ruler-scoreboard.md) now
 propagates the full SN shape posterior into all 13 DESI DR2 distance entries
 and one common ruler. The joint parent/flat-control chi-squares are
