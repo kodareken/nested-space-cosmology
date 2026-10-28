@@ -140,3 +140,52 @@ retain exact fractions. Two omega=200 clocks reach A=1/3 with endpoint
 comoving-energy difference 5.56e-10 and proper-clock Friedmann residual
 5.40e-11, using 39544 RHS calls. Their finite numerical agreement checks
 the calculation; the high-frequency bound follows from the bootstrap.
+
+## Supernova result after the controlled continuation
+
+The [v2 comparison](../results/summaries/nsc-atlas-parent-supernova-v2.json)
+retains both failed v1 and all original source inputs. The full 1322-light-
+curve selection gives chi-square 1179.38727 for the inherited parent and
+1178.20879 for flat LambdaCDM. Each has 1320 degrees of freedom after
+one shape calibration and one magnitude intercept. The inherited epoch is
+A_o=1.3816545682; its earliest emitter has A=.4236424, safely above 1/3.
+The source fixes (Omega_chi,Omega_v,Omega_k)=(.3667843,.7255551,-.0923394)
+at that calibrated epoch. These are model fractions inferred within this
+comparison, not independently predicted cosmic abundances. The pure quiet
+cap remains discrepant; it has not been relabelled as the evolving source.
+
+Both scalar normalization and curvature remain their original values. The
+analytic per-distance magnitude envelope is 3.83533e-8 up to a common
+offset; the contrast envelope is 8.13220e-8 mag. The quadrature indicator
+is 1.21e-15 mag. The finite source/geometry model is conditional, and no
+observational uncertainty in the original preparation has been marginalized.
+
+The data and method follow [Brout et al., Pantheon+](https://arxiv.org/abs/2202.04077)
+and its [public distance/covariance release](https://github.com/PantheonPlusSH0ES/DataRelease/tree/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR).
+Only the explicitly selected low-redshift bands and the stated zHD>=.025
+sample are analyzed here, not the complete collaboration inference chain.
+
+## Next independent geometric channel: DESI AP shape
+
+Freeze the supernova-calibrated epoch and flat-control matter fraction before
+evaluating DESI. Use all six anisotropic pairs at z=.51,.706,.934,1.321,
+1.484,2.33 from [DESI DR2 II](https://arxiv.org/html/2503.14738v3), Section
+III.3, and the public Cobaya mean/covariance at commit
+bb0c1c9009dc76d1391300e169e8df38fd1096db. The
+[DESI source-provenance clarification](https://help.desi.lbl.gov/index.php?qa=182&qa_1=provenance-external-cobaya-likelihood-public-cosmology-chains)
+identifies those data with the collaboration likelihood. No new package,
+sound-horizon fit, SI ruler, early thermal history or additional shape
+parameter is introduced.
+
+For fixed F(z)=D_M(z)H(z)/c, take the six *linear* contrasts
+y_DM-F*y_DH and covariance W C W^T. This avoids assuming that an observed
+ratio is Gaussian, and retains cross-bin correlations. It equals profiling
+the Gaussian likelihood over an arbitrary unknown radial amplitude in each
+bin. The isotropic DV row has no AP pair and is excluded. This is a test
+conditional on the fixed supernova point estimate; its uncertainty is not
+silently omitted from a claimed joint significance. Public BAO data are a
+retrospective external comparison, not newly blinded measurements. The
+forecast/method are saved before the numerical BAO comparison; no BAO
+retuning is allowed. Its finite compute allowance is 10 CPU seconds and
+zero field evolutions. A significant discrepancy redirects the inherited
+curvature/preparation law rather than the supplied acoustic ruler.

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b9f5aba94cc8dd61933900f0b8af20f19c7c6923",
+  "current_receipt_commit_parent": "b9011b59efc34d94d248c214caeaba9d32320391",
   "files": [
     {
       "bytes": 3120,
@@ -10927,12 +10927,12 @@
       "sha256": "471f0b3ac716add79b9772f2351509164a42650ab5abf536a8d235f138cf8da8"
     },
     {
-      "bytes": 7733,
+      "bytes": 10876,
       "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "b9f5aba94cc8dd61933900f0b8af20f19c7c6923",
+      "changed_from_commit": "b9011b59efc34d94d248c214caeaba9d32320391",
       "path": "docs/nsc-atlas-parent-supernova.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "874234a513c750aaa72fe29dceca77e578f130a4c3c159d2c782b47198723a6c"
+      "sha256": "a051f16f572b3e60c1d2b2ab54c114312e78194171dccaf806160ba034256f3a"
     },
     {
       "bytes": 13275,
@@ -31046,6 +31046,14 @@
       "sha256": "7f397ed8fb1c5fef7f164f483017bc7d3460f0b5ef9e5a4cab972bc2d7eeb63d"
     },
     {
+      "bytes": 17262,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "b9011b59efc34d94d248c214caeaba9d32320391",
+      "path": "results/summaries/nsc-atlas-parent-supernova-v2.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e592da938f1283fb74e9d8ad3ffb5b29bde260ee22712d798fec04d461d0abf7"
+    },
+    {
       "bytes": 8537,
       "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
       "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
@@ -31685,6 +31693,14 @@
       "path": "scripts/check_nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "e6fb6f1804418b1271ac6834c9055a0a8e6f10f42ca9d60e976eaee6dd8df78f"
+    },
+    {
+      "bytes": 6001,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "b9011b59efc34d94d248c214caeaba9d32320391",
+      "path": "scripts/check_nsc_atlas_parent_bao.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b9e98739f605660f9e2142b3e42c0c5126106f4b68d0f5654708f4b366e2ec0c"
     },
     {
       "bytes": 10086,
@@ -35204,6 +35220,14 @@
       "path": "src/recursive_horizons/nsc_atlas_background_profile.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "4103e32423cde5eb95131fe4cd67ebb9e32c568d13e7bd74a76edced5199c427"
+    },
+    {
+      "bytes": 2060,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "b9011b59efc34d94d248c214caeaba9d32320391",
+      "path": "src/recursive_horizons/nsc_atlas_bao_shape.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a3dabd1bf935785ec27e2a8ea741d179b5223f609cc9914dac275175532d2121"
     },
     {
       "bytes": 7722,
@@ -39468,6 +39492,14 @@
       "original_sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719",
       "path": "tests/test_nsc_assembled_chebyshev_gn_stall.py",
       "sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719"
+    },
+    {
+      "bytes": 1658,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "b9011b59efc34d94d248c214caeaba9d32320391",
+      "path": "tests/test_nsc_atlas_bao_shape.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3ce5a1df4634d01e2f9a764cf33df12402c5c6cbb2c2e74ee61837ef06a4d5bf"
     },
     {
       "bytes": 2508,
