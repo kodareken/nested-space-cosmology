@@ -1,0 +1,209 @@
+{
+  "SI_conventions": {
+    "G": 6.6743e-11,
+    "G_standard_uncertainty": 1.5e-15,
+    "c": 299792458.0,
+    "conversion": "kappa_natural=(8*pi*G/c^4)*(hbar*c)=8*pi*lPlanck^2",
+    "h": 6.62607015e-34,
+    "kappa_natural_metres_squared": 6.565376489667817e-69,
+    "lPlanck_metres": 1.6162550244237053e-35
+  },
+  "conclusion": "No audited route selects an inherited SI length from the fixed inputs. This does not reject nesting or exclude a future state/quantum/global selection mechanism.",
+  "fixed_parent": {
+    "Lambda_Lref_squared": 12.348252398928544,
+    "Lambda_model_unit_squared": 0.28125,
+    "Lref_over_model_unit": 6.626077076099598
+  },
+  "inverse_target_diagnostic": {
+    "Lref_metres": 3.365191842953847e+26,
+    "Lref_over_lPlanck": 2.0820921154777203e+61,
+    "canonical_charge_inverse_metres_squared": 121502955.58633122,
+    "model_unit_metres": 5.078709173323935e+25,
+    "not_a_prediction": true,
+    "required_scalar_angular_frequency_s_inverse": 5.902926270609635e-09,
+    "required_scalar_period_years": 33.729394310249546
+  },
+  "prior_art": [
+    "https://arxiv.org/html/hep-th/0004134#S2.SS2",
+    "https://arxiv.org/html/1804.09985",
+    "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
+  ],
+  "route_ladder": [
+    {
+      "computed": {
+        "Lambda_Lref_squared": 12.348252398928544,
+        "electric_integer": 3.0,
+        "scalar_lattice_minimum": "0",
+        "scalar_second_difference": "1/16",
+        "scalar_vacuum_ladder": [
+          "9/32",
+          "1/8",
+          "1/32",
+          "0"
+        ]
+      },
+      "failure": "q/e=3 and the charge steps leave the fundamental SI charge and reference length free.",
+      "inherited_SI_scale_selected": false,
+      "rank": 1,
+      "route": "a_flux_charge_quantization",
+      "survives": false
+    },
+    {
+      "computed": {
+        "areal_speeds": [
+          1.2049161450767711,
+          0.8411089860731128
+        ],
+        "radii_in_model_units": [
+          1.0,
+          1.9
+        ]
+      },
+      "failure": "The fixed membranes are evolving initial data, not an inherited stable equilibrium selecting metres; the stable surface-scalar branch has a different action/state.",
+      "inherited_SI_scale_selected": false,
+      "rank": 2,
+      "route": "b_inherited_wall_EOS_radius",
+      "survives": false
+    },
+    {
+      "computed": {
+        "flux_fixed_point_residual": "-e=-1/2",
+        "last_vacuum": "0 at q=0",
+        "vacuum_length_ratios": [
+          1.5,
+          2.0
+        ]
+      },
+      "failure": "The supplied map fixes no root length, level or full M/sigma/ell fixed point; its nonzero charge shift has no flux fixed point.",
+      "inherited_SI_scale_selected": false,
+      "rank": 3,
+      "route": "c_recursive_fixed_point_and_level",
+      "survives": false
+    },
+    {
+      "computed": {
+        "Lambda_c_squared_over_omega_squared": 2.8125e-19,
+        "density_ratio_initial": 1.3333333333333333,
+        "equality_redshift_at_calibrated_observer": 0.3315862891349355,
+        "equality_scale": 1.100642416298209
+      },
+      "failure": "The epoch and omega/H ratios are dimensionless; no measured SI scalar clock is inherited.",
+      "inherited_SI_scale_selected": false,
+      "rank": 4,
+      "route": "d_scalar_clock_epoch",
+      "survives": false
+    },
+    {
+      "computed": {
+        "extra_premise": "A compact Euclidean S4 period with a real contour, admissible saddle and inherited winding; none is established for the excited parent.",
+        "formal_Lambda_lPlanck_squared_times_winding": 1.0,
+        "required_winding_if_target_inserted": 3.5107053510751406e+121,
+        "winding_1_Lambda_m_inverse2": 3.828073114812334e+69,
+        "winding_1_Lref_metres": 5.679533126079248e-35,
+        "winding_1_ratio_to_target": 3.5107053510751406e+121
+      },
+      "failure": "The formal period gives Lambda*lP^2=1/n, but neither an admissible parent cycle nor its winding is selected; n=1 gives a Planck-scale value.",
+      "inherited_SI_scale_selected": false,
+      "rank": 5,
+      "route": "e_compact_four_cycle_quantum_period",
+      "survives": false
+    },
+    {
+      "computed": {
+        "first_exponent_if_target_inserted": 2.7330215990380515e+119,
+        "physical_exponent": "S_hat*L_unit^2/kappa_natural",
+        "pure_flux_control_actions": [
+          0.6956583643045935,
+          3.168410381063264,
+          70.98720668088416
+        ]
+      },
+      "failure": "The action exponent, determinant/state and parent preparation are not a scale-selection equation; isolated vacuum bounces are not this interacting parent.",
+      "inherited_SI_scale_selected": false,
+      "rank": 6,
+      "route": "f_semiclassical_transition_probability",
+      "survives": false
+    },
+    {
+      "computed": {
+        "hypothetical_one_quantum_Lambda_m_inverse2": 9.177589915211949e+61,
+        "hypothetical_one_quantum_Lref_metres": 3.668076840659637e-31,
+        "parent_initial_volume_model_units": 5713.003430982637
+      },
+      "failure": "An inherited occupation/entropy count and its quantum state are absent; setting one quantum changes the prepared classical source.",
+      "inherited_SI_scale_selected": false,
+      "rank": 7,
+      "route": "g_quantum_occupation_or_entropy",
+      "survives": false
+    },
+    {
+      "computed": {
+        "existing_classical_added_vacuum_trace": 0,
+        "generic_quantum_stationary_scale": "L^2=-b*kappa_natural/(2*S_hat), only if b and the renormalized action/state are fixed"
+      },
+      "failure": "The compatible renormalized quantum action, state and subtraction conditions do not fix b or an absolute vacuum; old spectral closures are different actions.",
+      "inherited_SI_scale_selected": false,
+      "rank": 8,
+      "route": "h_anomaly_running_and_dimensional_transmutation",
+      "survives": false
+    },
+    {
+      "computed": {
+        "fixed_parent_Lambda_Lref_squared": 12.348252398928544,
+        "stable_gravitational_branch_Lambda_M_squared": 0.114490614635103
+      },
+      "failure": "Boundary state, compactification modulus or source mass in SI remains supplied; the prior branches do not select the fixed parent ruler.",
+      "inherited_SI_scale_selected": false,
+      "rank": 9,
+      "route": "i_induced_gravity_Casimir_compactification",
+      "survives": false
+    },
+    {
+      "computed": {
+        "reference_length_relation": "ell_n=r^n*ell_0"
+      },
+      "failure": "An inherited ratio or infinite operator composition leaves ell_0 and observer level unselected.",
+      "inherited_SI_scale_selected": false,
+      "rank": 10,
+      "route": "j_infinite_hierarchy_global_self_similarity",
+      "survives": false
+    },
+    {
+      "computed": {
+        "legacy_alternative_vacuum_coefficient": 56.548667764616276,
+        "legacy_gap_threshold": 4.71238898038469
+      },
+      "failure": "The legacy coefficient dictionary retains a length_anchor and has no solved physical fixed point; its action is not the fixed scalar/four-form parent.",
+      "inherited_SI_scale_selected": false,
+      "rank": 11,
+      "route": "k_s_one_spectral_fixed_point",
+      "survives": false
+    }
+  ],
+  "scale_nonidentifiability_witnesses": [
+    {
+      "Lambda_m_inverse2": 12.348252398928544,
+      "arbitrary_reference_metres": 1.0,
+      "electric_flux_integer": 3.0,
+      "interpretation": "Counterexample to unique SI identification, not an astronomical prediction.",
+      "recovered_dimensionless_charge": 0.5,
+      "recovered_dimensionless_flux": 1.5
+    },
+    {
+      "Lambda_m_inverse2": 3.087063099732136,
+      "arbitrary_reference_metres": 2.0,
+      "electric_flux_integer": 3.0,
+      "interpretation": "Counterexample to unique SI identification, not an astronomical prediction.",
+      "recovered_dimensionless_charge": 0.5,
+      "recovered_dimensionless_flux": 1.5
+    }
+  ],
+  "schema": "nsc-atlas-SI-scale-ladder-v1",
+  "scientific_goal_achieved": false,
+  "source_sha256": {
+    "scripts/check_nsc_atlas_scale_selection.py": "e7748ce8f26ea78b2b7e8175f2ea5f500d273d615326b62efaed845d9794a52c",
+    "src/recursive_horizons/nsc_atlas_scale_selection.py": "4c15c86c09156a2201640165ef85178d661027d8b1581c0009dca6a63920c0f2",
+    "tests/test_nsc_atlas_scale_selection.py": "910bd513e0f2d4ee847b4d6a65158cf5d5316b7d69d4b190d593c6dcf3f4824b"
+  },
+  "target_Lambda_m_inverse2": 1.0904e-52
+}

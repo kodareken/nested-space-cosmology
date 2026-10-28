@@ -1,5 +1,26 @@
 # Prior art and admission of new research
 
+## Fixed-parent shared ruler and inherited SI scale audit, 28 October 2026
+
+The [method owner](nsc-atlas-shared-ruler.md) fixes the 485b3b9 source and
+forecasts. Four workers use the original SN covariance and all 13 DESI
+entries. The shared BAO scale is quadratic and is eliminated analytically;
+only the shape posterior needs quadrature. The initial low-order control
+fails the marginal likelihood's narrow conditional peak and is replaced by
+a doubled 48/96 control at unchanged tolerance. No physical parameter,
+dataset selection or source normalization changes. This is a retrospective
+comparison, not a blinded claim or a model Bayes factor.
+
+The curvature trigger gets a conditional Planck distance diagnostic and a
+new finite high-redshift scalar/Cauchy bound. The missing acoustic/thermal
+sector is not silently imported. Chen et al. supply the compressed prior,
+not a source law for NSC. The [scale audit](nsc-atlas-scale-selection.md)
+reuses BT/Israel and existing spectral results, evaluates normalized outputs
+and candidate quantum scalings, and records each failed selector in one
+line. Correct SI conversion uses kappa_nat=8*pi*lP^2, not the dimensional
+Einstein stress coefficient 8*pi*G/c^4 by itself. No hierarchy integer,
+charge or counterterm is chosen from the target. P004/P005 remain unchanged.
+
 ## Same inherited parent to supernova and BAO geometry, 28 October 2026
 
 The [comparison owner](nsc-atlas-parent-supernova.md) records the choice

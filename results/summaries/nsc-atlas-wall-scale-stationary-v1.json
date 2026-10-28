@@ -1,0 +1,32 @@
+{
+  "result": "Neither stationary point satisfies V=0; both V_second are negative. No stable equilibrium radius selects an SI scale.",
+  "schema": "nsc-atlas-wall-scale-stationary-v1",
+  "scope": "Instantaneous frozen-field Kottler representation only; not the coupled scalar-wall future or a new EOS.",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_wall_scale_stationary.py": "93a6a7247edb354acbafc63866015ce536dc9660e4fada88030d9b767f59bc1f",
+    "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16"
+  },
+  "walls": [
+    {
+      "independent_stationary_identity": -1.2871775237053975,
+      "original_radius": 1.0,
+      "original_velocity": 1.2049161450767711,
+      "potential_at_stationary_radius": -0.07858544030537651,
+      "second_derivative": -1.2871775237053977,
+      "slope": 3.3306690738754696e-16,
+      "stationary_radius_model_units": 1.846303267610053,
+      "wall": 0
+    },
+    {
+      "independent_stationary_identity": -11.32693940906492,
+      "original_radius": 1.9,
+      "original_velocity": 0.8411089860731128,
+      "potential_at_stationary_radius": 0.6949390127237259,
+      "second_derivative": -11.326939409064924,
+      "slope": 2.220446049250313e-15,
+      "stationary_radius_model_units": 1.1558440057443806,
+      "wall": 1
+    }
+  ]
+}

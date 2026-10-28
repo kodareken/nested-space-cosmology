@@ -1,5 +1,78 @@
 # One shared DESI ruler and the inherited scale question
 
+## Computed result and scoreboard
+
+The [one-table scoreboard and route ladder](nsc-atlas-shared-ruler-scoreboard.md)
+is the reader entrypoint. The [shared-ruler record](../results/summaries/nsc-atlas-shared-ruler-v1.json)
+uses all 13 DESI entries and the full SN posterior, with no source retuning.
+The joint minimum chi-squares are 1203.22418 and 1191.17680 for the parent
+and flat control, respectively: Delta=12.04739, with three fitted quantities
+in each. The posterior-predictive BAO deviances are 27.24410 and 16.46889;
+their difference is 10.77521 and is not assigned a chi-square distribution.
+The 48/96-order marginal-deviance changes are below 1.8e-11. The original
+SN scores and six AP scores are preserved at checkpoint 485b3b9.
+
+The parent joint fractions are (.76310716,.32320464,-.08631180) in
+(Omega_Lambda,Omega_m,Omega_k) order. The posterior 3*Omega_Lambda is
+2.288667 +/- .021121, compared with the supplied 2.054 +/- .022: a
+standardized difference 7.695 including both widths. This comparison is
+not added again to the joint data likelihood.
+
+The [scale-selection owner](nsc-atlas-scale-selection.md) evaluates eleven
+identified route classes. None currently selects metres from the fixed
+source. That statement is local to this realization; it is not a rejection
+of nesting. The numerical target is never used to choose a free integer,
+charge, reference length or counterterm.
+
+## Conditional CMB geometry, with its missing acoustic sector explicit
+
+The fitted curvature triggers the requested check. A full physical Planck
+likelihood is undefined for this fixed source and the shape-only control:
+neither specifies photons, baryons, a recombination surface or r_s(z_star).
+The [computed diagnostic](../results/summaries/nsc-atlas-cmb-geometric-diagnostic-v1.json)
+therefore supplies z_star=1089.92 as an external probe label and profiles
+the unknown acoustic ratio. No such ratio is called inherited or predicted.
+
+The CMB geometry itself can be continued without a new source. Bootstrap
+1/2<A^3E/E0<2. For 0<A<=1, the reference polynomial
+E0/6-C*A+rho_v*A^3/3 has minimum
+E0/6-(2C/3)*sqrt(C/rho_v) greater than .24^2. Thus
+H>.24*A^(-3/2). The backward Hubble-variation bound is
+
+$$
+V_-\le\frac{2C}{.24}(A_{\min}^{-1/2}-1)
++\frac{4E_0}{3(.24)}(A_{\min}^{-3/2}-1).
+$$
+
+The corrected-energy comparison closes this bootstrap at the actual joint
+observer's probe A_min=.00134345355. The density envelope is 7.871e-5 and
+the H^2 envelope is 9.625e-5. A point-specific two-way causal estimate has
+margin .226636 radians inside the original cap. This is a geometry/source
+continuation, not a radiation-era or recombination model. No carrier grid,
+scalar-cycle evolution or wall history is computed.
+
+Using the same curvature-relaxed reconstruction of
+[Chen--Huang--Wang Table 1](https://arxiv.org/html/1808.05724v1) for both
+columns, the mean is (R,lA)=(1.7429,301.409), uncertainties (.0051,.091),
+and correlation .54. The two-dimensional covariance is marginalized over
+unpredicted baryon density and tilt; it is not a subblock of the precision
+matrix. These rounded table numbers are a reconstruction, not a new chain
+product. The compression's standard-CMB assumptions remain conditional.
+
+Profiling the unpredicted lA gives chi2_min=(R-1.7429)^2/.0051^2. The
+joint-shape geometric probes give R=1.55147562 and 1.75179174, hence
+conditional diagnostic scores 1408.82 and 3.04. The unaveraged scalar
+phase enclosure still gives an optimistic parent lower bound 1407.72.
+The fitted diagnostic sound ratios r_s(z_star)/r_d would be .841850 and
+.982668. They are additional nuisance calibrations, not calculated acoustic
+physics. These scores are not added to the primary SN+DESI total, and
+are not labelled a physical CMB prediction or a general test of nesting.
+
+The primary source explicitly includes radiation, baryon loading and a
+decoupling prescription. Those ingredients must be produced by a compatible
+extension before this geometry diagnostic becomes the requested full CMB
+likelihood. Borrowing its compression does not supply those sources.
+
 ## Fixed question and fastest calculation
 
 Continue checkpoint 485b3b9. The original charge, flux, curvature, scalar

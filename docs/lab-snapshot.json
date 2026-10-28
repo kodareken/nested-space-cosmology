@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4344c9f85bbfb80c2eacbccfd9d5b16b96443dca",
+  "current_receipt_commit_parent": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
   "files": [
     {
       "bytes": 3120,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 468068,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 469310,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "73494b2c66bbd6e263fd16380ba99719501c85b5cc887365795a6910c1bad680"
+      "sha256": "87da23213e969161bc04b94dbadcc8da3c9d585632f857aef344a3b37038b917"
     },
     {
       "bytes": 173938,
@@ -10981,6 +10981,14 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
+      "bytes": 7090,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "docs/nsc-atlas-scale-selection.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d3208d279dda20b5be84bf38bbbeb55391a35eb1fa8452c1f052c5c2f04e14cc"
+    },
+    {
       "bytes": 16908,
       "change": "Connect the actual forming field to a fixed-observer arrival map and its endpoint identities.",
       "changed_from_commit": "1425eff175d2859ecfa7b7bfd7fd28a4e8023ddc",
@@ -10989,12 +10997,20 @@
       "sha256": "c8b4c1d70509075daac6de9b2b2103f2cda771dbe677a84ea649b92edc831825"
     },
     {
-      "bytes": 4530,
+      "bytes": 6912,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "4344c9f85bbfb80c2eacbccfd9d5b16b96443dca",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "docs/nsc-atlas-shared-ruler-scoreboard.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f64f1c90debf83a88fc65cdd70664280dce584716c7313e2f2c70c5c57d8b086"
+    },
+    {
+      "bytes": 8602,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
       "path": "docs/nsc-atlas-shared-ruler.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "703a3471d6d25df3f0e42610b5baec83e7b60be979777016d60fba197690f524"
+      "sha256": "7992f7f1d1f9dacaa47da3262402780927520dbb00ca99d4e865a959c102359c"
     },
     {
       "bytes": 14560,
@@ -12032,12 +12048,12 @@
       "sha256": "1bb4a2ea0c1a8b5e07c4fb153554f2113cf2cc4ff86347f8a68ada243214c63d"
     },
     {
-      "bytes": 607267,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 608586,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d740d6d5832b1717b025470a448767f64d8b07e9cd64e6d3db48ae4b04d60875"
+      "sha256": "d3ee488c4f9c6e9696255be2d94bd12fcf66f6af9dc94212db8405e321847ad2"
     },
     {
       "bytes": 6705,
@@ -30233,6 +30249,14 @@
       "sha256": "3333db75d63d6305dd5605838354c7df0832740814109b5ab4c2b0b46328d75c"
     },
     {
+      "bytes": 8381,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "results/summaries/nsc-atlas-SI-scale-ladder-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "66f2214ce696ac0039c925d2f9c255cf012fe0b276b55de7ca4d34a1b290f296"
+    },
+    {
       "bytes": 6437,
       "change": "Record the certified canonical source-cell conversion and independent review.",
       "changed_from_commit": "d365a13ef7039fa767ddbb4945abb675d86c838e",
@@ -30301,6 +30325,14 @@
       "path": "results/summaries/nsc-atlas-cap-transport-balance-v1.json",
       "retention_reason": "Compact fixed-state cap transport attribution, hashes and regeneration command.",
       "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
+    },
+    {
+      "bytes": 3116,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "results/summaries/nsc-atlas-cmb-geometric-diagnostic-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "fbf1038d0b248e4e670844584817b3797bff34a3ad1bb6b365375b8d88008965"
     },
     {
       "bytes": 3298,
@@ -31214,6 +31246,14 @@
       "sha256": "f3e28b869a3cade85d49469824d47cdf801c965f918738cc411848e06e37c897"
     },
     {
+      "bytes": 9752,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "results/summaries/nsc-atlas-shared-ruler-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3a8c50e544e16ee0d95cfeec71d43c3e65e58da745788addb74a0e422ba1154a"
+    },
+    {
       "bytes": 15941,
       "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
       "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
@@ -31288,6 +31328,14 @@
       "path": "results/summaries/nsc-atlas-wall-pointwise-rhs-v1.json",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "318b0372094fe1904dab8a18acc615a1061485a02a4e33030fe5905d07ad81a8"
+    },
+    {
+      "bytes": 1476,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "results/summaries/nsc-atlas-wall-scale-stationary-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "c1fac11456314d39ae0ffbe3d2649cd64204523363541b264bf3ba3c413e42cb"
     },
     {
       "bytes": 6081,
@@ -31501,6 +31549,14 @@
       "path": "scripts/check_nsc_atlas_cap_profile_projection.py",
       "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
       "sha256": "6ea75e024593da8dfc24fac9f4c37870754a1c03e7b9a8d7ad47fef702f9637b"
+    },
+    {
+      "bytes": 2271,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "scripts/check_nsc_atlas_cmb_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d21f87c0da9c35f841d5a22d583fa63f9692a764790806cffbf71d65d14b3f5e"
     },
     {
       "bytes": 7369,
@@ -31879,6 +31935,14 @@
       "sha256": "1d38f2921edf8f735388a9c2b33b3ed9549f5bd8d0dfa4f2bc7dbedf601862e5"
     },
     {
+      "bytes": 1214,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "scripts/check_nsc_atlas_scale_selection.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e7748ce8f26ea78b2b7e8175f2ea5f500d273d615326b62efaed845d9794a52c"
+    },
+    {
       "bytes": 11324,
       "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
       "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
@@ -31930,6 +31994,14 @@
       "path": "scripts/check_nsc_atlas_vortex_transfer.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "b73641c78348e73cae2771a6cac9b195ecaf56e7d20a9bab4e5c416f022ac3d4"
+    },
+    {
+      "bytes": 2181,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "scripts/check_nsc_atlas_wall_scale_stationary.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "93a6a7247edb354acbafc63866015ce536dc9660e4fada88030d9b767f59bc1f"
     },
     {
       "bytes": 2304,
@@ -35550,6 +35622,14 @@
       "sha256": "b7883490e6bad9c7096bfa6c6616e0674ff319e08e0e0be7ababf6055d1d5c9c"
     },
     {
+      "bytes": 4710,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "src/recursive_horizons/nsc_atlas_cmb_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e7d9b11c7a9b8fdad208a789c7f26b4a607c679188fbd483a380b78ac9ac014a"
+    },
+    {
       "bytes": 13111,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "a5bf78bba5acd31ae7a37b538d0eb66042ba8f67",
@@ -36190,6 +36270,14 @@
       "path": "src/recursive_horizons/nsc_atlas_scale_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "78255e7f3b63cfde9b49e00a13fc66934bf528eaef305af2e7164f07cb582637"
+    },
+    {
+      "bytes": 9171,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "src/recursive_horizons/nsc_atlas_scale_selection.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4c15c86c09156a2201640165ef85178d661027d8b1581c0009dca6a63920c0f2"
     },
     {
       "bytes": 12928,
@@ -39908,6 +39996,14 @@
       "sha256": "0d5ed81c21b3c21e47517e4e1d76ec5d0801c86a2a2e12420cb401307e13464a"
     },
     {
+      "bytes": 1228,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "tests/test_nsc_atlas_cmb_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6ea6ab08f0a4d5c45f9ec97c5759287dc000ed340d875e09ec090444315f544b"
+    },
+    {
       "bytes": 5104,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "a5bf78bba5acd31ae7a37b538d0eb66042ba8f67",
@@ -40782,6 +40878,14 @@
       "sha256": "28ca9b7467d656ae3de6f5211ba203fcc7b5aea532beb54b3d163c705284b6e2"
     },
     {
+      "bytes": 1884,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "tests/test_nsc_atlas_scale_selection.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "910bd513e0f2d4ee847b4d6a65158cf5d5316b7d69d4b190d593c6dcf3f4824b"
+    },
+    {
       "bytes": 3588,
       "change": "Connect compact-seed initial gravity to converged finite nonlinear concentration.",
       "changed_from_commit": "50980689dfeef889d3267c26103b06bf1475ff84",
@@ -40881,6 +40985,14 @@
       "path": "tests/test_nsc_atlas_wall_mass_closure.py",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
       "sha256": "00121b899b140bf1b2d289cd62205099d7bd610a5c5fec140dffb8bad70dc108"
+    },
+    {
+      "bytes": 487,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "path": "tests/test_nsc_atlas_wall_scale_stationary.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f442777b29f2acacb46c09ad126805e8be5e7fd1225b4a3d00a2267538cf552a"
     },
     {
       "bytes": 14600,

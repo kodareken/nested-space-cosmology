@@ -1,0 +1,81 @@
+{
+  "Planck_compression": {
+    "common_compression_for_both_models": true,
+    "marginal_covariance": [
+      [
+        2.6010000000000003e-05,
+        0.000250614
+      ],
+      [
+        0.000250614,
+        0.008281
+      ]
+    ],
+    "mean": [
+      1.7429,
+      301.409
+    ],
+    "rounded_table_reconstruction": true,
+    "source": "https://arxiv.org/html/1808.05724v1",
+    "table": "Table 1, LambdaCDM+Omega_k"
+  },
+  "additional_fitted_diagnostic_parameters": 1,
+  "conditional_scope": "Geometry-only probe at supplied zstar, dust/scalar continuation, unknown acoustic ratio profiled. Optimistic conditional lower bound, NOT a full CMB likelihood or a fitted acoustic mechanism; not added to the primary SN+BAO score.",
+  "exact_CMB_likelihood_status": "undefined for the fixed parent and shape-only control: no predicted recombination surface, baryon/photon state or sound horizon",
+  "models": {
+    "flat_LCDM": {
+      "H0_DM_over_c": 3.1788248194621502,
+      "R": 1.7517917367033635,
+      "conditional_chi_squared_lower_bound": 3.0397147866952667,
+      "implied_rs_star_over_rd": 0.9826675646287418,
+      "numerical": {
+        "conformal_angle": 0.0,
+        "quad_error_indicator": 3.5292045058315095e-14,
+        "quadrature_difference": 1.3322676295501878e-15
+      },
+      "profiled_acoustic_parameters": 1,
+      "profiled_lA": 301.49467449835356,
+      "remaining_geometric_contrasts": 1
+    },
+    "parent": {
+      "H0_DM_over_c": 2.7290165116478375,
+      "R": 1.55147562022164,
+      "conditional_chi_squared_lower_bound": 1408.8155776059116,
+      "implied_rs_star_over_rd": 0.8418495218784894,
+      "numerical": {
+        "conformal_angle": 0.9302246161578894,
+        "quad_error_indicator": 3.643516682110491e-14,
+        "quadrature_difference": 1.7763568394002505e-15
+      },
+      "phase_optimistic_chi_squared_lower_bound": 1407.7167813581746,
+      "profiled_acoustic_parameters": 1,
+      "profiled_lA": 299.5645697995473,
+      "remaining_geometric_contrasts": 1,
+      "scalar_past_control": {
+        "H_upper": 10155,
+        "H_variation_upper": 42311.12758195717,
+        "causal_margin_lower": 0.22663635921309133,
+        "hubble_squared_relative_error": 9.62417976860841e-05,
+        "minimum_scale": 0.0013434535536822505,
+        "observer_angle_upper": 0.18024350271526177,
+        "past_angle_upper": 1.2115600690358235,
+        "source_density_relative_error": 7.87053854232056e-05
+      },
+      "unaveraged_R_enclosure": [
+        1.5514009663585506,
+        1.5515502848626992
+      ]
+    }
+  },
+  "new_source_couplings": 0,
+  "schema": "nsc-atlas-cmb-geometric-diagnostic-v1",
+  "shared_ruler": {
+    "path": "results/summaries/nsc-atlas-shared-ruler-v1.json",
+    "sha256": "3a8c50e544e16ee0d95cfeec71d43c3e65e58da745788addb74a0e422ba1154a"
+  },
+  "source_sha256": {
+    "scripts/check_nsc_atlas_cmb_geometry.py": "d21f87c0da9c35f841d5a22d583fa63f9692a764790806cffbf71d65d14b3f5e",
+    "src/recursive_horizons/nsc_atlas_cmb_geometry.py": "e7d9b11c7a9b8fdad208a789c7f26b4a607c679188fbd483a380b78ac9ac014a"
+  },
+  "supplemental_probe_redshift": 1089.92
+}

@@ -1,5 +1,24 @@
 # What the calculations show
 
+The [shared-ruler scoreboard](nsc-atlas-shared-ruler-scoreboard.md) now
+propagates the full SN shape posterior into all 13 DESI DR2 distance entries
+and one common ruler. The joint parent/flat-control chi-squares are
+1203.22418/1191.17680 (Delta=12.04739), with three fitted quantities each.
+Original checkpoint SN and AP scores remain fixed. The parent joint
+fractions are (Omega_Lambda,Omega_m,Omega_k)=(.763107,.323205,-.086312).
+Posterior 3*Omega_Lambda=2.288667 +/- .021121 differs from 2.054 +/- .022
+by 7.695 standardized units including both widths. This is one fixed
+realization's stronger observation test, not a rejection of nesting.
+
+A new source/Cauchy bound reaches the supplied z_star=1089.92 probe label
+without field cycles. The conditional, free-acoustic-ratio Planck geometry
+diagnostic is 1408.82 versus 3.04, with its missing photon/baryon/thermal
+sector explicit. A full physical CMB likelihood remains undefined. The
+[SI ladder](nsc-atlas-scale-selection.md) evaluates eleven route classes;
+none selects metres from the fixed parent. Its nonzero coefficient remains
+Lambda*L_ref^2=12.3482524. The target 1.0904e-52 m^-2 remains unresolved;
+inverse target lengths and hypothetical quantum windings are not predictions.
+
 The [shared-parent astronomical comparison](nsc-atlas-parent-supernova.md)
 now derives a finite backward Cauchy collar to A=1/3 with the original
 scalar, flux, excitation and curvature unchanged. The rational bootstrap
