@@ -1,5 +1,15 @@
 # Paper guide
 
+Revision 2026-10-28.3 adds Section 13.22: the full shared-ruler DESI
+comparison with propagated SN shape posterior, a high-redshift scalar/
+Cauchy bound and explicitly conditional Planck geometry diagnostic, and
+the computed SI route ladder. Fixed checkpoint source data and P004/P005
+are unchanged. The stronger joint score is 1203.22 versus 1191.18 with
+equal fitted dimension. A fixed microscopic coupling-ratio length is
+distinguished from the unselected parent-radius hierarchy; conditional
+quantum-period examples and target-inverted lengths retain those labels.
+Submission readiness and author review remain unchanged.
+
 Revision 2026-10-28.2 adds Sections 13.18--13.21 and Figure 18. A finite
 backward scalar/causal proof provides the earlier emitters required by
 Pantheon+, followed by an identical-covariance LambdaCDM control and a

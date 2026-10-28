@@ -56,13 +56,15 @@ identified branches within this single atlas.
 ## Calculated connections
 
 The [same-parent astronomical comparison](docs/nsc-atlas-parent-supernova.md)
-now carries that inherited source into a controlled earlier Cauchy domain
-and two measured distance channels. On 1322 selected Pantheon+ light curves,
-the epoch-calibrated parent gives chi-square 1179.39 versus 1178.21 for
-an equal-dimension flat LambdaCDM control. Holding those shape parameters
-fixed gives DESI radial/transverse chi-square 7.16 for six contrasts,
-with no BAO fit. This is a conditional observational comparison; the SI
-vacuum scale, physical preparation and baryon/asymmetry history remain open.
+carries the inherited source into a controlled earlier Cauchy domain and
+measured distance channels. The original SN and six AP comparisons are
+preserved. The stronger [full shared-ruler scoreboard](docs/nsc-atlas-shared-ruler-scoreboard.md)
+propagates the complete SN shape posterior through all 13 DESI entries:
+joint chi-square is 1203.22 versus 1191.18 for a flat control with equal
+fitted dimension. Its conditional Planck geometry diagnostic keeps the
+missing acoustic/thermal sector explicit. A microscopic SI coupling length
+is fixed by the supplied inherited ratios, but the hierarchy to the parent
+curvature radius and the SI cosmological constant remain unselected.
 
 The manuscript contains operator inheritance proofs, sourced geometric
 attachments, causal maps, scalar formation and conservation calculations,

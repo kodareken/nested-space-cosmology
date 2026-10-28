@@ -53,7 +53,11 @@ distance shape gives chi-square 1179.39, versus 1178.21 for a flat LambdaCDM
 control with equal fitted dimension. With those shape parameters held fixed,
 six DESI radial/transverse null contrasts give chi-square 7.16 and 8.89,
 respectively. The sound-ruler scale cancels; these conditional comparisons
-do not derive its origin or determine the absolute vacuum scale.
+do not derive its origin or determine the absolute vacuum scale. A stronger full-covariance shared-ruler comparison,
+with the supernova shape posterior propagated, gives joint chi-square
+1203.22 for the fixed parent versus 1191.18 for the flat control with equal
+fitted dimension. Its inherited SI scale remains unselected; that
+realization's failed connections do not reject the nesting programme.
 
 The resulting book connects geometry, inherited state, stress, structure and
 interior observation. Its completed results establish specified mathematical
@@ -4057,6 +4061,142 @@ and entropy history must enter through an explicit compatible extension.
 Those source tasks, together with joint growth and acoustic-scale tests,
 are the next physical work. Further precision in a completed background
 cannot replace them.
+
+
+### 13.22. One common ruler and the remaining SI selector
+
+<!-- nsc-claim:shared-ruler-posterior-comparison -->
+
+Evidence: [full-covariance shared-ruler calculation](../results/summaries/nsc-atlas-shared-ruler-v1.json)
+and [scoreboard](../docs/nsc-atlas-shared-ruler-scoreboard.md).
+The six AP contrasts left a separate radial amplitude free in each bin.
+The stronger next comparison uses all 13 DESI entries and one common
+acoustic ruler. Charge, flux, curvature, scalar normalization and frozen
+P004/P005 remain those of checkpoint 485b3b9.
+
+The full one-dimensional supernova shape posterior is propagated, including
+its tails. The stated priors are uniform in the parent's logarithmic
+observer scale and in the flat control's matter fraction. A common
+magnitude intercept belongs to the same covariance likelihood as before.
+At each shape, the BAO likelihood is quadratic in
+$\beta=c/(100r_{d}h)$, taking c in km/s and the ruler product in Mpc;
+the scale is eliminated analytically before the
+posterior integral. Four independent model/order workers and a 48/96-order
+control require no new field evolution. The marginal BAO deviance changes
+by less than $1.8\times10^{-11}$ under that control.
+
+| Comparison | Inherited parent | Flat LambdaCDM | Fitted quantities in each |
+| --- | ---: | ---: | --- |
+| Original SN calibration | 1179.38727 | 1178.20879 | Shape and magnitude intercept |
+| DESI shared-ruler chi-square at joint optimum | 18.84303 | 10.78167 | One ruler added |
+| SN contribution at joint optimum | 1184.38115 | 1180.39513 | Same three joint quantities |
+| Joint SN+DESI minimum chi-square | 1203.22418 | 1191.17680 | Three total |
+| Posterior-predictive BAO deviance | 27.24410 | 16.46889 | Shape integrated; one ruler optimized |
+
+Thus the joint difference is $\Delta\chi^2=12.04739$ with equal fitted
+dimension. The posterior-predictive deviance difference is $10.77521$;
+that marginal quantity is not assigned a chi-square distribution or
+reported as a model Bayes factor. The old calibration and six AP scores
+are preserved. The updated joint epoch is $A_o=1.46560035$ and gives
+
+$$
+(\Omega_\Lambda,\Omega_m,\Omega_k)
+=(.76310716,.32320464,-.08631180).
+$$
+
+Here the parent's matter entry denotes the scalar pressureless comparison,
+not a derived baryon/CDM split. Its common $r_{d}h$ is 101.91822 Mpc; the
+flat control gives 101.05339 Mpc and fractions (.69630912,.30369088,0).
+The parent's posterior $3\Omega_\Lambda=2.288667\pm.021121$ differs from
+the comparison $2.054\pm.022$ by 7.695 standardized units including both
+widths. That comparison is not added again to the joint likelihood.
+
+<!-- nsc-claim:conditional-high-redshift-geometric-diagnostic -->
+
+Evidence: [source bound and conditional Planck geometry](../results/summaries/nsc-atlas-cmb-geometric-diagnostic-v1.json).
+The large curvature triggers a further distance test. A new finite
+bootstrap continues the unchanged scalar to the supplied probe label
+$z_*=1089.92$. Using $H>.24A^{-3/2}$ bounds the backward Hubble variation
+and closes the source comparison at $A=.00134345$. The density envelope
+is $7.871\times10^{-5}$; the two-way initial-cap causal margin is .226636
+radians. The [owning derivation](../docs/nsc-atlas-shared-ruler.md) gives
+the comparison and its conditions. The source geometry reaches that
+redshift without simulating each scalar oscillation or assuming a wall history.
+
+It does not thereby produce recombination or an acoustic horizon. A full
+physical CMB likelihood remains undefined until photon, baryon, thermal and
+perturbation states are supplied compatibly. The conditional diagnostic
+uses the common curvature-relaxed compression in
+[Chen, Huang and Wang, Table 1](https://arxiv.org/html/1808.05724v1), and
+profiles an unknown acoustic ratio rather than assigning one to NSC.
+At the joint late-time shapes it gives $R=1.55147562$ and $1.75179174$.
+Against the compression mean 1.7429, the optimistic profiled diagnostic
+scores are 1408.82 and 3.04. The parent's finite scalar phase enclosure
+still gives a lower bound of 1407.72. These are conditional geometry
+diagnostics at an externally supplied probe label, not complete CMB
+predictions; they are not added to the primary SN+DESI score.
+
+<!-- nsc-claim:fixed-parent-si-scale-freedom -->
+
+Evidence: [computed inherited scale-route ladder](../results/summaries/nsc-atlas-SI-scale-ladder-v1.json),
+[stationary-wall control](../results/summaries/nsc-atlas-wall-scale-stationary-v1.json)
+and [scale-selection owner](../docs/nsc-atlas-scale-selection.md).
+Failure of a specified parent, state or connection is not a rejection of
+nesting. The next question is which inherited preparation selects the
+actual scale. Eleven route classes in the existing atlas were evaluated;
+their local failures are recorded one line each in the linked scoreboard.
+None currently selects the parent curvature radius in SI from these fixed inputs.
+
+The existing nonzero result remains
+
+$$
+\Lambda L_{\rm ref}^2=12.348252398928544.
+$$
+
+One [microscopic coupling relation](../results/summaries/nsc-atlas-inherited-microanchors-v1.json)
+does survive: the inherited normalized charge and tension, with the
+natural-unit coupling $\kappa=8\pi\ell_P^2$, give
+
+$$
+\frac{e_{\rm phys}}{\sigma_{\rm phys}}
+=\frac{\hat{e}}{\hat{\sigma}}\sqrt{\kappa_{\rm nat}}
+=2.0256752716\times10^{-34}\ {\rm m}.
+$$
+
+This fixes a microscopic SI combination, while its hierarchy to the parent
+curvature radius remains unselected. Inserting the target would require
+that hierarchy to be $1.6612691531\times10^{60}$; this is an inverse
+diagnostic, not an inherited result.
+
+Flux quantization gives $q/e=3$ and screened vacuum levels
+$(9/32,1/8,1/32,0)$, while leaving a fundamental SI charge free. The
+fixed-tension frozen-wall test has no static stable equilibrium. A
+recursion ratio leaves its root scale unselected, and the scalar frequency
+has no inherited SI clock. Quantum/spectral and boundary alternatives
+must retain their actual actions and missing state data.
+
+A formal added compact four-cycle period illustrates what a quantum global
+condition could change. If a compatible real Euclidean cycle and contour
+existed for the late source, the period relation would give
+
+$$
+\Lambda\ell_P^2=\frac{3\hat{e}}{n\hat{q}}=\frac{1}{n}.
+$$
+
+Neither that global saddle nor its winding is supplied by the excited
+parent. The illustrative $n=1$ yields $3.8280731\times10^{69}$ inverse
+square metres, not a selected cosmological value. Choosing a huge winding
+from the target would be a fit. This formal candidate does not close the
+physical connection.
+
+Assigning the target $1.0904\times10^{-52}$ inverse square metres would
+require $L_{\rm ref}=3.3651918430\times10^{26}$ metres by inversion.
+It is not a derived ruler. Two dimensional completions with reference
+lengths 1 and 2 metres preserve the same normalized inheritance while
+giving different SI vacua. A physical state, quantum action normalization
+or compatible global selector is therefore still needed. The target
+remains unresolved; the conditional constructions and their failures
+remain part of the atlas.
 
 
 ## IV. Concentration, conservation and the surrounding reservoir

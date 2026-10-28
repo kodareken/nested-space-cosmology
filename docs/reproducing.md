@@ -1,5 +1,27 @@
 # Reproducing the root project
 
+## Shared DESI ruler, conditional CMB geometry and SI route ladder
+
+The [scoreboard](nsc-atlas-shared-ruler-scoreboard.md) and
+[method owner](nsc-atlas-shared-ruler.md) define the priors, fixed source,
+input products and distinctions between calibration and scale selection.
+Use new ignored output names; retained records are creation-only.
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_shared_ruler.py tests/test_nsc_atlas_cmb_geometry.py tests/test_nsc_atlas_scale_selection.py tests/test_nsc_atlas_wall_scale_stationary.py
+python scripts/run_python.py scripts/measure_nsc_atlas_shared_ruler.py --output .build/shared-ruler-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_cmb_geometry.py --output .build/cmb-geometry-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_scale_selection.py --output .build/SI-scale-ladder-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_wall_scale_stationary.py --output .build/wall-stationary-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_inherited_microanchors.py --output .build/microanchors-reproduced.json
+```
+
+The shared-ruler producer requires committed method sources and the already
+authenticated publisher caches from the earlier reproduction section. Its
+checksum guard keeps checkpoint source files and P004/P005 unchanged.
+CMB scores are conditional geometry diagnostics, not full CMB predictions.
+The scale record explicitly marks the target derivation as unachieved.
+
 ## Inherited parent, earlier light cone and observed distances
 
 The [scientific owner](nsc-atlas-parent-supernova.md) defines the fixed

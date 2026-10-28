@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+  "current_receipt_commit_parent": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
   "files": [
     {
       "bytes": 3120,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 5504,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 5665,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "341508f30eb68e686e0ba4731bbd25734e9a2ec926c63a281229e2c90dcd1adc"
+      "sha256": "3527b988cd3cb95d9195b96918ae8737bbf1f67812d54f458683e8020219a224"
     },
     {
       "bytes": 781931,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 288622,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 289645,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "0164bc58bf8316625598be7f6995064309274716563ba1e0a1b012630929a5c9"
+      "sha256": "a4f75eea81096fa2037d708ace6953f6a82bbc4066741bd7d45bf0cce660f7b7"
     },
     {
-      "bytes": 144726,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 146243,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "d6c922820943a7be4f8c6487b5aedd99d3788a8053aafc596c92b4228ca15499"
+      "sha256": "c6f453c5cb8efd02c111e429e36ee492724f230997bb1d76669194057cd9e37f"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 469310,
+      "bytes": 469762,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "changed_from_commit": "ca809ff5bd91c775bfc1168efa05220a2fc63e2f",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "87da23213e969161bc04b94dbadcc8da3c9d585632f857aef344a3b37038b917"
+      "sha256": "581d8708f4e79cf04234af1e0909ee29649d218adf10c7ba303066d5222f9917"
     },
     {
       "bytes": 173938,
@@ -10981,12 +10981,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 7090,
+      "bytes": 8656,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "d3208d279dda20b5be84bf38bbbeb55391a35eb1fa8452c1f052c5c2f04e14cc"
+      "sha256": "e72e24a5a8cb77cc8e5a1d5831cbd3723a44bcb918bf8cb3629e2b06f36e67e8"
     },
     {
       "bytes": 16908,
@@ -10997,12 +10997,12 @@
       "sha256": "c8b4c1d70509075daac6de9b2b2103f2cda771dbe677a84ea649b92edc831825"
     },
     {
-      "bytes": 6912,
+      "bytes": 7139,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "docs/nsc-atlas-shared-ruler-scoreboard.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "f64f1c90debf83a88fc65cdd70664280dce584716c7313e2f2c70c5c57d8b086"
+      "sha256": "039adeb80464e0a5cbc205db0efd6cd5b7f5036ba4bba353d5d3e091542799a1"
     },
     {
       "bytes": 8602,
@@ -11072,15 +11072,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 122918,
+      "bytes": 123961,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "485b3b936cb414848bdf0113337cd6dc30f263de",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "9f8842823a4bdbf62bc18b755e82fcf5e551a89794e870b2e28a78a4518f009c"
+      "sha256": "474c7f4a3398fed0ab46a4b5a875921ba70f68f8954c2f50703a5a0156592aff"
     },
     {
       "bytes": 30876,
@@ -12032,12 +12032,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 28978,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 29605,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "b03b3bf64ac5bfa8fb27964103153ff3fd5b9d154f39b067cacd5c1fb84be5c1"
+      "sha256": "4861c7c288d3033d2fdfd6aae64ba1cff1983f44ecd163682b32acc87b09cbd5"
     },
     {
       "bytes": 16452,
@@ -12062,20 +12062,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 234297,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 235827,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "433c9743f00c4ca417afde5c5761c0d5d797312539d24c204f9bd4bbab67d1e9"
+      "sha256": "776d4b7acf89ced45e7538caa24a3b9e8247f9cd966ca2531a6ae7b624fee0d5"
     },
     {
-      "bytes": 48659,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 49215,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "066dde01dc02f64e3cf8ae2e056cfa756898f794028ac019fc4af716cfefd3f2"
+      "sha256": "45d09cd7a0ec04a82badb7f8924971e4c0557faf5e48e596751fd15da8d262e9"
     },
     {
       "bytes": 18356,
@@ -12144,28 +12144,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 35855,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 36699,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e6689fd9ebe48b6a43a87ddcc2d8b488678abcdbe23521e03418d6037ec8f615"
+      "sha256": "1a2ab358ab406e802cb7a8c663c0e19b21087ab577a1d5dd28dc82993d058a39"
     },
     {
       "bytes": 3206,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "55144f645eed380746fa01dc41b7ce5302f3b2aa20b226c7fefa4cdc1b479452"
+      "sha256": "94f8133c78ecbe739a9642483276bae728e99ebfbd338bf073d5e31fe501074a"
     },
     {
-      "bytes": 46879,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 47345,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "a483674bf35cd23eef39c63d301af3f52696068e968e8caa99acefb6d4b01d60"
+      "sha256": "2109598390190077721abbd36388ac87368f0f598d944900537b4e025d3cbd48"
     },
     {
       "bytes": 226492,
@@ -12177,27 +12177,27 @@
     },
     {
       "bytes": 396,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d5e3d516fb49c8a295c597fe4c972b989d64f4a688554aeea58a5ab6205bb0c4"
+      "sha256": "f113ac0172620ed1da7bc4465d6d4ddf5d07b85acdc6a9c9412e69cb955701d1"
     },
     {
-      "bytes": 493710,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 501140,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "d4c282ea8d6819642c2509b3fefd64ee183fa08f64689f293d0fdd3ffefa7033"
+      "sha256": "a232e8530961fa0fb182bb9ee315e3f0171472a78c768ea2caeab99a250239da"
     },
     {
-      "bytes": 14111328,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 14163465,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "a38112e1c6a593a63905829a57213753bb1a9c79fd02661291c34a948f3035b9"
+      "sha256": "9af02c523032ca6a2beaa40b3a8881c6f02cb84522d69e0a347e1948708c97f6"
     },
     {
       "bytes": 3283,
@@ -30998,6 +30998,14 @@
       "sha256": "615e28dcf5d0920c8141bdb9f1c3dcbf945a5ea5a6c077bccbd081592d888f38"
     },
     {
+      "bytes": 1728,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "ca809ff5bd91c775bfc1168efa05220a2fc63e2f",
+      "path": "results/summaries/nsc-atlas-inherited-microanchors-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4cf537c98c156e027976d6c2ef237244c9e26f389a536c73f3050eb8281cf700"
+    },
+    {
       "bytes": 21512,
       "change": "Certify the material-radius endpoint sign with the exact frame conversion and retained central clock.",
       "changed_from_commit": "d897d7969b7238d71c03948bdc83da5fa3f24779",
@@ -31749,6 +31757,14 @@
       "path": "scripts/check_nsc_atlas_inherited_matter.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "cb31f95074b85fc07cc174e53e3ca394f9f7da514af18159e9dd8ae5b6d62f2e"
+    },
+    {
+      "bytes": 2661,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "ca809ff5bd91c775bfc1168efa05220a2fc63e2f",
+      "path": "scripts/check_nsc_atlas_inherited_microanchors.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b819779184a88055053bf7d0dcdfcde0c30b9cdeef13e3a39ffb928b564c3acc"
     },
     {
       "bytes": 6167,
@@ -40579,6 +40595,14 @@
       "path": "tests/test_nsc_atlas_inherited_matter.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "1803f5300fb6eba32b49c151c1c13de4541f61094851f80b5876f436cf481706"
+    },
+    {
+      "bytes": 864,
+      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
+      "changed_from_commit": "ca809ff5bd91c775bfc1168efa05220a2fc63e2f",
+      "path": "tests/test_nsc_atlas_inherited_microanchors.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "dc59a41fcfdd5be078e67db95927bad0fefa0251cf7aa0bfc8bd112c4fe9ae67"
     },
     {
       "bytes": 3783,

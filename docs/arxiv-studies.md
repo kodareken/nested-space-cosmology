@@ -1,5 +1,30 @@
 # Cited arXiv studies
 
+## Shared ruler, Planck compression and dimensional conversion — 28 October 2026
+
+[Chen--Huang--Wang, 1808.05724v1](https://arxiv.org/html/1808.05724v1),
+equations (1)--(7), Table 1 and the appendix, supplies definitions and
+compressed Planck means/covariance. The new diagnostic reconstructs the
+rounded curvature-relaxed (R,lA) marginal covariance for both columns,
+and profiles an unknown acoustic ratio. It does not borrow a baryon/
+photon/recombination model or claim that the compression has been validated
+on the fixed NSC source. The primary source's dark-energy compression
+validation and thermal assumptions retain their stated scope.
+
+[Bousso--Polchinski, Section 2.2](https://arxiv.org/html/hep-th/0004134#S2.SS2)
+distinguishes four-cycle period and absolute-flux quantization. Their
+formal use in the [SI ladder](nsc-atlas-scale-selection.md) requires an
+admissible Euclidean parent cycle/contour and inherited winding which are
+not supplied. Hirano's existing isolated BT controls remain separate from
+the actual scalar parent. No instanton rate campaign is restarted.
+
+The [CODATA 2022 table](https://physics.nist.gov/cuu/Constants/Table/allascii.txt)
+supplies G,h,c for explicit SI conversion only. The code checks
+kappa_nat=(8*pi*G/c^4)*hbar*c=8*pi*lP^2. Fixed normalized charge/tension
+ratios give canonical microscopic SI lengths, while leaving the parent
+curvature hierarchy unselected. Neither the conversion constants nor a
+target-inverted ruler are labelled a new inheritance selection law.
+
 ## Parent geometry against released distances — 28 October 2026
 
 [Brout et al., 2202.04077v2](https://arxiv.org/abs/2202.04077v2), abstract,

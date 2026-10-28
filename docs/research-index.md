@@ -1,5 +1,14 @@
 # Scientific strand index
 
+The [shared-ruler scoreboard](nsc-atlas-shared-ruler-scoreboard.md) now
+combines all 13 DESI entries with the full SN shape posterior. The fixed
+parent has Delta joint chi-square +12.047 against the flat control. A
+conditional high-redshift geometry diagnostic exposes the CMB/thermal
+boundary; the [SI scale ladder](nsc-atlas-scale-selection.md) records
+eleven evaluated selector classes without promoting a target inversion.
+The nonzero inherited coefficient remains dimensionless; absolute scale,
+state and a compatible acoustic source are unresolved.
+
 The [same-parent astronomical comparison](nsc-atlas-parent-supernova.md)
 extends the actual inherited scalar back to A=1/3 by a finite bootstrap and
 two-way causal bound. The unchanged source then fits 1322 selected Pantheon+

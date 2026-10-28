@@ -40,8 +40,12 @@ $$
 $$
 
 This microscopic canonical charge/tension length is fixed by the supplied
-ratios and G,hbar,c; it is not selected using Lambda_obs. Other fixed SI
-combinations are (omega_phys/c)/e_phys=1.6205402173e-25 m and
+ratios and G,hbar,c; it is not selected using Lambda_obs.
+Canonical charge and tension here are expressed in inverse square and
+inverse cubic metres after the hbar=c=1 conversion; the ratio is a length
+in that convention. An unconverted SI surface energy must first acquire
+its hbar*c factor. These definitions are those of the declared action.
+Other fixed SI combinations are (omega_phys/c)/e_phys=1.6205402173e-25 m and
 sqrt[(omega_phys/c)/sigma_phys]=5.7294748842e-30 m. They all remain fixed
 in the explicit dimensional-completion witnesses while the parent Lambda
 changes. Thus they survive as conditional coupling relations, not as a

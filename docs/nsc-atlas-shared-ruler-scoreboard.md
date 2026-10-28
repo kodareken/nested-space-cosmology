@@ -29,7 +29,7 @@ The conditional geometric R values are 1.55147562 and 1.75179174; the common com
 ## Route ladder
 
 1. **Flux/charge quantization: q/e=3; screened vacuum levels 9/32, 1/8, 1/32, 0.** q/e=3 and the charge steps leave the fundamental SI charge and reference length free. **No inherited SI selection.**
-2. **Wall EOS: frozen stationary radii 1.846303 and 1.155844; V_second=-1.28718 and -11.32694.** The fixed membranes are evolving initial data, not an inherited stable equilibrium selecting metres; the stable surface-scalar branch has a different action/state. **No inherited SI selection.**
+2. **Wall EOS: the canonical e/sigma length is 2.0256753e-34 m; frozen stationary radii give V_second=-1.28718 and -11.32694.** The microscopic coupling anchor survives, but the parent-radius hierarchy is unselected; the stable surface-scalar branch has a different action/state. **No cosmological SI selection.**
 3. **Recursion: vacuum-length ratios 1.5 and 2; flux fixed-point residual -1/2.** The supplied map fixes no root length, level or full M/sigma/ell fixed point; its nonzero charge shift has no flux fixed point. **No inherited SI selection.**
 4. **Scalar clock: Lambda*c^2/omega^2=2.8125e-19; calibrated matter-vacuum equality redshift .331586.** The epoch and omega/H ratios are dimensionless; no measured SI scalar clock is inherited. **No inherited SI selection.**
 5. **Formal compact period: Lambda*lP^2=1/n; illustrative n=1 gives 3.8280731e69 m^-2 and L_ref=5.6795331e-35 m.** The formal period gives Lambda*lP^2=1/n, but neither an admissible parent cycle nor its winding is selected; n=1 gives a Planck-scale value. **No inherited SI selection.**

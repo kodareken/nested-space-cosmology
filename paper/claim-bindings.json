@@ -563,6 +563,21 @@
       "section": "13.20",
       "status": "measured",
       "owner": "docs/nsc-atlas-parent-supernova.md"
+    },
+    "shared-ruler-posterior-comparison": {
+      "section": "13.22",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-shared-ruler.md"
+    },
+    "conditional-high-redshift-geometric-diagnostic": {
+      "section": "13.22",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-shared-ruler.md"
+    },
+    "fixed-parent-si-scale-freedom": {
+      "section": "13.22",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-scale-selection.md"
     }
   },
   "findings": [

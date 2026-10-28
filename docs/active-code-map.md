@@ -1,5 +1,22 @@
 # Active code and evidence map
 
+`nsc_atlas_shared_ruler.py` profiles the common BAO scale and propagates
+the one-dimensional SN posterior. `measure_nsc_atlas_shared_ruler.py`
+authenticates the fixed 485b3b9 source and runs four independent model/order
+workers. `nsc_atlas_cmb_geometry.py` owns the conditional high-redshift
+geometry and scalar bound; it does not manufacture a sound horizon.
+`nsc_atlas_scale_selection.py` computes the SI ladder with target-dependent
+diagnostics isolated. `check_nsc_atlas_wall_scale_stationary.py` separately
+evaluates the fixed-tension stationary-radius test without time evolution.
+The [scoreboard](nsc-atlas-shared-ruler-scoreboard.md) links their compact
+records and the physical scope of each output.
+
+`check_nsc_atlas_inherited_microanchors.py` separates the fixed microscopic
+SI coupling-ratio lengths from the still-free parent curvature radius.
+Its witnesses preserve those lengths while changing the SI vacuum, so a
+Planck-scale coupling anchor is not mistaken for the requested cosmological
+scale selection.
+
 The [parent supernova/AP owner](nsc-atlas-parent-supernova.md) uses
 `nsc_atlas_parent_past.py` for the backward bootstrap and two unaveraged
 clocks, `nsc_atlas_parent_supernova.py` for the common distance/likelihood

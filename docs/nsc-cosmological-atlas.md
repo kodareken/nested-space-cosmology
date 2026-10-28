@@ -18,18 +18,35 @@ starting a derivation.
 
 ## Current execution priority — 28 October 2026
 
-### Active request: shared DESI ruler, Planck-domain check and SI scale ladder
+### Computed: shared DESI ruler, Planck-domain check and SI scale ladder
 
-The [shared-ruler calculation](nsc-atlas-shared-ruler.md) keeps checkpoint
-485b3b9's source and frozen forecasts unchanged. Integrate the actual SN
-shape posterior, fit one common r_d h to all 13 DESI points, and report
-the joint likelihood/parameter account. The SI target is 1.0904e-52 m^-2;
-it is never used to select a free source coefficient or inheritance level.
-Audit the inherited scale candidates in parallel, including existing
-quantum/spectral alternatives with their actions identified. A failed
-candidate gets one line and the next candidate. Its failure is local to
-that construction, not evidence against nesting. CMB scores require an
-actual last-scattering/source/ruler dictionary; missing inputs are exposed.
+The [shared-ruler calculation](nsc-atlas-shared-ruler.md) preserves
+485b3b9's source and forecasts. Its full SN-posterior/all-13-DESI joint
+chi-square is 1203.224 versus 1191.177, with three fitted quantities in
+each model. The curvature trigger gives a controlled high-redshift scalar
+geometry and a conditional Planck distance diagnostic; a full acoustic
+CMB likelihood remains undefined. The [scoreboard and route ladder](nsc-atlas-shared-ruler-scoreboard.md)
+record every evaluated candidate's output and missing selector. None yet
+selects metres from the fixed inputs. The target 1.0904e-52 m^-2 remains
+unresolved and is not used to choose a free source coefficient, integer
+or inheritance level. Candidate failures do not reject nesting.
+
+### Unresolved target: the inherited physical state and dimensional selector
+
+A [fixed microscopic coupling length](nsc-atlas-scale-selection.md#a-surviving-microscopic-si-relation-distinct-from-selecting-l_ref)
+has now been evaluated: the canonical e/sigma length is 2.0256753e-34 m,
+from the inherited source ratios and G,hbar,c. The next missing quantity
+is the parent/microscopic hierarchy, not an assertion that all SI
+combinations are free. No hierarchy value is chosen from the target.
+
+The next scale mechanism must actually break the demonstrated freedom in
+the normalized classical realization, through a compatible state, quantum
+normalization or global preparation. A compact-period algebraic family
+still needs an admissible parent cycle/contour and inherited winding; its
+Planck-scale n=1 example is not selected physics. The baryon/photon/
+recombination sector is also needed before a complete CMB score. Do not
+retune the fixed parent or rerun its finished quadrature as a substitute
+for that physical connection.
 
 ### Complete finite connection: inherited parent, earlier light cone and data
 
