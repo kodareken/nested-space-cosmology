@@ -17,7 +17,13 @@ Never select older code silently when a current-source check fails.
 The question is the nested mechanism. Structure that one region does not
 resolve can still leave a local response, and the same relations can recur
 across regional gradients. Familiar local laws are the equations a local
-observer already uses. Comparing or fitting LambdaCDM is not this task.
+observer already uses. Observational controls use the same data, covariance
+and nuisance treatment as the candidate being tested.
+
+The 28 October request adds an identical-data LambdaCDM control to the
+inherited-parent supernova comparison. Its fitted parameters belong to that
+explicit observational control, not to NSC's inherited source. See the
+[comparison owner](nsc-atlas-parent-supernova.md).
 
 The inheritance relation below is reused inside its stated domain. Further
 constructions stay finite. Readings in terms of time, antimatter, a dark

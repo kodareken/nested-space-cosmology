@@ -1721,14 +1721,14 @@
       "sha256": "227b3c1ed3bff2736c9ca4a3d2272aa5f3fcc69a65ab9f931f8c0daa539f8217"
     },
     {
-      "bytes": 18915,
+      "bytes": 19243,
       "path": "docs/instructions.md",
-      "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
+      "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2549215,
+      "bytes": 2550951,
       "path": "docs/lab-snapshot.json",
-      "sha256": "aaa5709d709c4c2058158c338e95acb8990e14cb8f463544c3187bebf39d0d56"
+      "sha256": "158b68dbdc4783af2e43386ed1f89a251047463f64d6df0af9b2c0722aa6428e"
     },
     {
       "bytes": 4997,
@@ -1941,6 +1941,11 @@
       "sha256": "471f0b3ac716add79b9772f2351509164a42650ab5abf536a8d235f138cf8da8"
     },
     {
+      "bytes": 3640,
+      "path": "docs/nsc-atlas-parent-supernova.md",
+      "sha256": "d1388ed1b856b77bfaeb9bf630a14c9c92da3efd399d0dd8ac7f5d6e98729587"
+    },
+    {
       "bytes": 13275,
       "path": "docs/nsc-atlas-parent-transport.md",
       "sha256": "29811b90a3f28a6cce48c706183886ad8f25c6b68b99e35deee7bfdbe6a46aba"
@@ -2061,9 +2066,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 120665,
+      "bytes": 121346,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "3476acf807b47d2218991e17de14398187f386878cf1cb2ff68903237ca58ad5"
+      "sha256": "c6b713bbe662878a45d13e07debb16c2c77461cc6b536e15fec52e8dbfdf0461"
     },
     {
       "bytes": 30876,
@@ -17471,6 +17476,11 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
+      "bytes": 9145,
+      "path": "scripts/measure_nsc_atlas_parent_supernova.py",
+      "sha256": "116774df605e658cbb1d592396284b7b970d2c23b73173be4ee05dbe415b418a"
+    },
+    {
       "bytes": 23631,
       "path": "scripts/measure_nsc_conformal_causal_resolution.py",
       "sha256": "70d49473850ee5e19cbb0233a4a92b8fada08ad1ed22c0b7794cd4568df20149"
@@ -18759,6 +18769,11 @@
       "bytes": 16863,
       "path": "src/recursive_horizons/nsc_atlas_parent_source.py",
       "sha256": "fb28612ba5d2a23100a124fbc2f209317b3c7e36c68c70495ef0e8347e6999d6"
+    },
+    {
+      "bytes": 6376,
+      "path": "src/recursive_horizons/nsc_atlas_parent_supernova.py",
+      "sha256": "e8ac62f95f7e54b163a6ad46a178e086d19d8e3e1666ffc72313fbe4490fc640"
     },
     {
       "bytes": 8506,
@@ -21461,6 +21476,11 @@
       "sha256": "3fc68263805b7869c30997804ec56c412a66f5c1cdff3447ab5e5bb8ddc1216b"
     },
     {
+      "bytes": 3595,
+      "path": "tests/test_nsc_atlas_parent_supernova.py",
+      "sha256": "e24192b0aa86f1c8304933fe05ed526e78e1440c1a8d3e9f9a68a92aaca738fb"
+    },
+    {
       "bytes": 4561,
       "path": "tests/test_nsc_atlas_parent_transport.py",
       "sha256": "1ff2bda4d91db7ff0443c25e650d73ac38039b457a72bca74d30616e3d4d0e15"
@@ -23546,7 +23566,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "aaa5709d709c4c2058158c338e95acb8990e14cb8f463544c3187bebf39d0d56",
+  "lab_snapshot_sha256": "158b68dbdc4783af2e43386ed1f89a251047463f64d6df0af9b2c0722aa6428e",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-28.1",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

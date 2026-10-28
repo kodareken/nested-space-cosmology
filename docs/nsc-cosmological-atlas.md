@@ -18,6 +18,17 @@ starting a derivation.
 
 ## Current execution priority — 28 October 2026
 
+### Active: inherited-parent distances and the missing physical closures
+
+The [supernova comparison](nsc-atlas-parent-supernova.md) now takes priority:
+test the already-derived parent with unchanged source parameters, alongside
+an identical-covariance LambdaCDM control. Calibrate only the observer epoch
+and a common magnitude intercept, and keep every emitter after A=1. The
+596-row contrast is reused without changing its bands or weights; a broader
+sample tests the same future-domain restriction. No P001 grids are started.
+Absolute SI scale, inherited wall state, P001 convergence and the baryon/
+asymmetry sectors remain active physical gaps rather than completed results.
+
 ### Complete: inherited matter normalization and a controlled parent light cone
 
 The [new source bound](nsc-atlas-inherited-matter-bound.md) follows the

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+  "current_receipt_commit_parent": "2649f553749ef4db8c44fe0c35db21d84466dce0",
   "files": [
     {
       "bytes": 3120,
@@ -10605,9 +10605,9 @@
       "sha256": "8120549f077f75072b759ce99385513deae697ad5417b26e629a7303383b90e0"
     },
     {
-      "bytes": 18915,
-      "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "bytes": 19243,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "2649f553749ef4db8c44fe0c35db21d84466dce0",
       "import_bytes": 2361,
       "import_sha256": "fd4043a700bfd862443c97011f41d8dfc26e987d1a2d59df05cdc36108b8be83",
       "migration_disposition": "folded_into_current_root_owner",
@@ -10615,7 +10615,7 @@
       "original_path": "lab/docs/instructions.md",
       "original_sha256": "9a82dcdfcb22e91c844845a8d8e9f1c79266c13aa3d5a9b299e92896886e556c",
       "path": "docs/instructions.md",
-      "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
+      "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
       "bytes": 11063,
@@ -10927,6 +10927,14 @@
       "sha256": "471f0b3ac716add79b9772f2351509164a42650ab5abf536a8d235f138cf8da8"
     },
     {
+      "bytes": 3640,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "2649f553749ef4db8c44fe0c35db21d84466dce0",
+      "path": "docs/nsc-atlas-parent-supernova.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d1388ed1b856b77bfaeb9bf630a14c9c92da3efd399d0dd8ac7f5d6e98729587"
+    },
+    {
       "bytes": 13275,
       "change": "Derive parent causal access, arrival and received energy on the prepared geometry.",
       "changed_from_commit": "a18e028f67414f16025a497c308eaedef3fd14d8",
@@ -11032,15 +11040,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 120665,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 121346,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "2649f553749ef4db8c44fe0c35db21d84466dce0",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "3476acf807b47d2218991e17de14398187f386878cf1cb2ff68903237ca58ad5"
+      "sha256": "c6b713bbe662878a45d13e07debb16c2c77461cc6b536e15fec52e8dbfdf0461"
     },
     {
       "bytes": 30876,
@@ -34440,6 +34448,14 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
+      "bytes": 9145,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "2649f553749ef4db8c44fe0c35db21d84466dce0",
+      "path": "scripts/measure_nsc_atlas_parent_supernova.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "116774df605e658cbb1d592396284b7b970d2c23b73173be4ee05dbe415b418a"
+    },
+    {
       "bytes": 23631,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "4d9a4edadbcf796fe14a4e051f058518eb2499b1",
@@ -35982,6 +35998,14 @@
       "path": "src/recursive_horizons/nsc_atlas_parent_source.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "fb28612ba5d2a23100a124fbc2f209317b3c7e36c68c70495ef0e8347e6999d6"
+    },
+    {
+      "bytes": 6376,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "2649f553749ef4db8c44fe0c35db21d84466dce0",
+      "path": "src/recursive_horizons/nsc_atlas_parent_supernova.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e8ac62f95f7e54b163a6ad46a178e086d19d8e3e1666ffc72313fbe4490fc640"
     },
     {
       "bytes": 8506,
@@ -40484,6 +40508,14 @@
       "path": "tests/test_nsc_atlas_parent_source.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "3fc68263805b7869c30997804ec56c412a66f5c1cdff3447ab5e5bb8ddc1216b"
+    },
+    {
+      "bytes": 3595,
+      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
+      "changed_from_commit": "2649f553749ef4db8c44fe0c35db21d84466dce0",
+      "path": "tests/test_nsc_atlas_parent_supernova.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e24192b0aa86f1c8304933fe05ed526e78e1440c1a8d3e9f9a68a92aaca738fb"
     },
     {
       "bytes": 4561,
