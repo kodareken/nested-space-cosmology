@@ -64,32 +64,40 @@ def parent_fractions(inverse_observer_scale):
                 curvature=-C*s*s/H2, H_squared=H2)
 
 
-def parent_distance(z_hd, z_hel, inverse_observer_scale, *, order=64):
+def parent_distance(z_hd, z_hel, inverse_observer_scale, *, order=64, minimum_scale=1.):
     z = np.asarray(z_hd, float)
     s = float(inverse_observer_scale)
-    if z.size == 0 or s*(1+float(np.max(z))) > 1+2e-14:
-        raise ValueError('emitter precedes the protected A=1 initial slice')
+    if minimum_scale not in (1.,1/3):
+        raise ValueError('only the proved future or A=1/3 continuation is available')
+    if z.size == 0 or s*(1+float(np.max(z))) > 1/minimum_scale+2e-14:
+        raise ValueError('emitter precedes the proved initial-scale boundary')
     fractions = parent_fractions(s)
     return flrw_distance(z_hd, z_hel, matter=fractions['matter'],
                          curvature=fractions['curvature'], order=order)
 
 
-def magnitude_error_bound(omega=10**9):
+def magnitude_error_bound(omega=10**9, *, minimum_scale=1.):
     """Bound on unnormalised physical D_L magnitudes, up to a common offset.
 
     The corrected-energy theorem holds on A>=1. Sine is increasing and
     concave on the verified short-ray branch. The normalising actual H_o
     differs only by a common magnitude offset, removed by the likelihood.
     """
-    bound = uniform_bound(omega)
+    if minimum_scale==1.:
+        bound=uniform_bound(omega)
+    elif minimum_scale==1/3:
+        from .nsc_atlas_parent_past import past_bound
+        bound=past_bound(omega)
+    else:
+        raise ValueError('unproved minimum scale')
     r = float(bound['hubble_squared_relative_error'])
     return 5/(2*math.log(10))*(-math.log1p(-r))
 
 
-def parent_ray_angle_upper(z_max, inverse_observer_scale, omega=10**9):
+def parent_ray_angle_upper(z_max, inverse_observer_scale, omega=10**9, *, minimum_scale=1.):
     """Conservative absolute angle using H>=H_- and A_e>=1."""
     s = float(inverse_observer_scale)
-    if z_max < 0 or s < 0 or s*(1+z_max) > 1+2e-14:
+    if z_max < 0 or s < 0 or s*(1+z_max) > 1/minimum_scale+2e-14:
         raise ValueError('future endpoints required')
     # uniform_bound verifies H_->0.266 for the same initial geometry.
     uniform_bound(omega)

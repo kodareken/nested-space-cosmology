@@ -1,0 +1,349 @@
+{
+  "comparisons": {
+    "all_noncalibrators_z_ge_0_025": {
+      "distinct_CIDs": 1271,
+      "light_curves": 1322,
+      "models": {
+        "flat_LCDM_calibrated": {
+          "chi_squared": 1178.2087941061484,
+          "chi_squared_survival_probability": 0.9978278626300608,
+          "degrees_of_freedom": 1320,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 1,
+          "magnitude_intercept": 23.80460161669744,
+          "objective_evaluations": 19,
+          "offset_score": -1.937205951207943e-11,
+          "original_contrast_prediction_magnitudes": -0.09062706217326812,
+          "original_contrast_standardized_residual": -0.9733545618481296,
+          "parameters": {
+            "Omega_k": 0,
+            "Omega_m": 0.3312216122318925,
+            "at_boundary": false
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15
+        },
+        "flat_LCDM_fixed_0.3": {
+          "chi_squared": 1181.0360100089588,
+          "chi_squared_survival_probability": 0.9975422214824992,
+          "degrees_of_freedom": 1321,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.79393956010774,
+          "offset_score": -4.916814733135766e-10,
+          "original_contrast_prediction_magnitudes": -0.0828076503427146,
+          "original_contrast_standardized_residual": -1.517352001058488,
+          "parameters": {
+            "Omega_k": 0,
+            "Omega_m": 0.3
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15
+        },
+        "flat_LCDM_fixed_0.315": {
+          "chi_squared": 1178.955418453658,
+          "chi_squared_survival_probability": 0.997856082406857,
+          "degrees_of_freedom": 1321,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.79909628853944,
+          "offset_score": -3.255633540533154e-10,
+          "original_contrast_prediction_magnitudes": -0.0865810275721686,
+          "original_contrast_standardized_residual": -1.2548376848311582,
+          "parameters": {
+            "Omega_k": 0,
+            "Omega_m": 0.315
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15
+        },
+        "flat_LCDM_fixed_0.334": {
+          "chi_squared": 1178.2301114193501,
+          "chi_squared_survival_probability": 0.9979567238346166,
+          "degrees_of_freedom": 1321,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.805537313308086,
+          "offset_score": -3.574580631493518e-10,
+          "original_contrast_prediction_magnitudes": -0.09131648614358816,
+          "original_contrast_standardized_residual": -0.9253912517537702,
+          "parameters": {
+            "Omega_k": 0,
+            "Omega_m": 0.334
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15
+        },
+        "parent_calibrated_epoch": {
+          "chi_squared": 1636.4911161484572,
+          "chi_squared_survival_probability": 4.754274410378165e-09,
+          "degrees_of_freedom": 1320,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 1,
+          "magnitude_intercept": 23.68447324312605,
+          "minimum_emission_scale": 1.0000000000000002,
+          "objective_evaluations": 39,
+          "offset_score": 1.9615598034761206e-10,
+          "original_contrast_prediction_magnitudes": -0.007519570236111182,
+          "original_contrast_scalar_model_error_bound": 1.6094634710819666e-09,
+          "original_contrast_standardized_residual": -6.755152959568354,
+          "parameters": {
+            "Ao": 3.2613700000000003,
+            "at_boundary": true,
+            "inverse_Ao": 0.30661961077706607
+          },
+          "parent_comparison_fractions": {
+            "H_squared": 0.09521203157670441,
+            "curvature": -0.022490290093860384,
+            "matter": 0.037845823974329854,
+            "vacuum": 0.9846444661195306
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15,
+          "ray_angle_upper": 0.39339916554394133,
+          "scalar_uniform_magnitude_error_up_to_common_offset": 7.59059547016921e-10
+        },
+        "quiet_de_sitter": {
+          "chi_squared": 1792.2226367826709,
+          "chi_squared_survival_probability": 6.549430368981627e-17,
+          "degrees_of_freedom": 1321,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.671148472553284,
+          "offset_score": -1.773940994098666e-10,
+          "original_contrast_prediction_magnitudes": 0.0,
+          "original_contrast_standardized_residual": -7.278290382311997,
+          "parameters": {},
+          "quadrature_32_vs_64_max_magnitude_difference": 4.821637332766436e-16
+        }
+      },
+      "parent_minimum_observer_scale": 3.26137,
+      "parent_scalar_fraction_future_upper_bound": 0.03784582401424167,
+      "selected_index_sha256": "f13275d10177bae6fddd9196f4bf9963a94b599c646429e8bfa5c6134e25b424",
+      "zHD_range": [
+        0.02509,
+        2.26137
+      ]
+    },
+    "original_two_bands": {
+      "distinct_CIDs": 545,
+      "light_curves": 596,
+      "models": {
+        "flat_LCDM_calibrated": {
+          "chi_squared": 604.2015103497183,
+          "chi_squared_survival_probability": 0.37690702787280617,
+          "degrees_of_freedom": 594,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 1,
+          "magnitude_intercept": 23.807626006556017,
+          "objective_evaluations": 15,
+          "offset_score": 2.292173117979246e-10,
+          "original_contrast_prediction_magnitudes": -0.10042488721511346,
+          "original_contrast_standardized_residual": -0.29171867310153393,
+          "parameters": {
+            "Omega_k": 0,
+            "Omega_m": 0.37110223927767466,
+            "at_boundary": false
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 9.643274665532873e-16
+        },
+        "flat_LCDM_fixed_0.3": {
+          "chi_squared": 605.8689573363941,
+          "chi_squared_survival_probability": 0.3697652957008943,
+          "degrees_of_freedom": 595,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.79450249515352,
+          "offset_score": 2.2729963744527737e-10,
+          "original_contrast_prediction_magnitudes": -0.0828076503427146,
+          "original_contrast_standardized_residual": -1.517352001058488,
+          "parameters": {
+            "Omega_k": 0,
+            "Omega_m": 0.3
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15
+        },
+        "flat_LCDM_fixed_0.315": {
+          "chi_squared": 605.2308027815762,
+          "chi_squared_survival_probability": 0.3766872696333793,
+          "degrees_of_freedom": 595,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.797301103477484,
+          "offset_score": -2.2255725040665197e-11,
+          "original_contrast_prediction_magnitudes": -0.0865810275721686,
+          "original_contrast_standardized_residual": -1.2548376848311582,
+          "parameters": {
+            "Omega_k": 0,
+            "Omega_m": 0.315
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15
+        },
+        "flat_LCDM_fixed_0.334": {
+          "chi_squared": 604.6468797476404,
+          "chi_squared_survival_probability": 0.38306028161996986,
+          "degrees_of_freedom": 595,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.800822680826464,
+          "offset_score": -1.3443524071732327e-11,
+          "original_contrast_prediction_magnitudes": -0.09131648614358816,
+          "original_contrast_standardized_residual": -0.9253912517537702,
+          "parameters": {
+            "Omega_k": 0,
+            "Omega_m": 0.334
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15
+        },
+        "parent_calibrated_epoch": {
+          "chi_squared": 604.2992720927376,
+          "chi_squared_survival_probability": 0.3758425632449062,
+          "degrees_of_freedom": 594,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 1,
+          "magnitude_intercept": 23.806979162398967,
+          "minimum_emission_scale": 1.024993921958369,
+          "objective_evaluations": 25,
+          "offset_score": 1.7107759653356425e-11,
+          "original_contrast_prediction_magnitudes": -0.10028450003894197,
+          "original_contrast_scalar_model_error_bound": 1.6094634710819666e-09,
+          "original_contrast_standardized_residual": -0.3014854261502547,
+          "parameters": {
+            "Ao": 1.281098903298887,
+            "at_boundary": false,
+            "inverse_Ao": 0.780579857983607
+          },
+          "parent_comparison_fractions": {
+            "H_squared": 0.13932355814012626,
+            "curvature": -0.09960867363196889,
+            "matter": 0.42671457552323516,
+            "vacuum": 0.6728940981087338
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 9.643274665532873e-16,
+          "ray_angle_upper": 0.11065625197982462,
+          "scalar_uniform_magnitude_error_up_to_common_offset": 7.59059547016921e-10
+        },
+        "parent_fixed_Ao_2": {
+          "chi_squared": 627.4532331491632,
+          "chi_squared_survival_probability": 0.17272966699180353,
+          "degrees_of_freedom": 595,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.75917126045962,
+          "minimum_emission_scale": 1.6001792200726481,
+          "offset_score": 2.0621815366439478e-10,
+          "original_contrast_prediction_magnitudes": -0.03480862726292652,
+          "original_contrast_scalar_model_error_bound": 1.6094634710819666e-09,
+          "original_contrast_standardized_residual": -4.856649918323354,
+          "parameters": {
+            "Ao": 2.0
+          },
+          "parent_comparison_fractions": {
+            "H_squared": 0.10368087440809835,
+            "curvature": -0.05491972964549857,
+            "matter": 0.15070281852078551,
+            "vacuum": 0.904216911124713
+          },
+          "quadrature_32_vs_64_max_magnitude_difference": 1.205409333191609e-15,
+          "ray_angle_upper": 0.07088080152725931,
+          "scalar_uniform_magnitude_error_up_to_common_offset": 7.59059547016921e-10
+        },
+        "quiet_de_sitter": {
+          "chi_squared": 658.8627580488481,
+          "chi_squared_survival_probability": 0.03529739917269058,
+          "degrees_of_freedom": 595,
+          "fitted_intercept_parameters": 1,
+          "fitted_shape_parameters": 0,
+          "magnitude_intercept": 23.734683761303547,
+          "offset_score": -8.471179313573884e-11,
+          "original_contrast_prediction_magnitudes": 0.0,
+          "original_contrast_standardized_residual": -7.278290382311997,
+          "parameters": {},
+          "quadrature_32_vs_64_max_magnitude_difference": 0.0
+        }
+      },
+      "parent_minimum_observer_scale": 1.24986,
+      "parent_scalar_fraction_future_upper_bound": 0.4471047970201152,
+      "selected_index_sha256": "774b2545b906405ac32b3f9b081deef86b308f5ef91e5a7b3e70da6f6325bc83",
+      "zHD_range": [
+        0.02509,
+        0.24986
+      ]
+    }
+  },
+  "computation": {
+    "BLAS_threads": 4,
+    "CPU_limit": 120,
+    "new_field_evolutions": 0,
+    "parameter_grids": 0,
+    "process_CPU_seconds": 0.859375
+  },
+  "method_commit": "b9f5aba94cc8dd61933900f0b8af20f19c7c6923",
+  "original_contrast": {
+    "band_light_curve_counts": [
+      335,
+      261
+    ],
+    "checks": {
+      "KKT_weight_maximum_difference": 8.066464163292153e-16,
+      "band_normalization_maximum_residual": 5.551115123125783e-16,
+      "common_zero_point_weight_sum": -8.881784197001252e-16,
+      "covariance_asymmetry": 0.0,
+      "variance_identity_difference": 0.0
+    },
+    "contrast_magnitudes": -0.1046180474751224,
+    "exponential_contrast": 0.9529637714530853,
+    "exponential_contrast_68_percent_interval": [
+      0.9466764929149757,
+      0.9592928064641945
+    ],
+    "quiet_cap_predicted_contrast_magnitudes": 0.0,
+    "quiet_cap_predicted_exponential_contrast": 1.0,
+    "quiet_cap_standardized_contrast": -7.278290382311997,
+    "quiet_cap_two_sided_Gaussian_p": 3.380770223477123e-13,
+    "selected_light_curves": 596,
+    "standard_uncertainty_magnitudes": 0.014373986469318333
+  },
+  "physical_inputs": {
+    "H02": 0.19597349763239338,
+    "curvature": 0.022776502367606612,
+    "excitation": 0.375,
+    "initial_density": 0.65625,
+    "omega": 1000000000,
+    "vacuum": 0.28125
+  },
+  "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+  "reproduce": "python scripts/run_python.py scripts/measure_nsc_atlas_parent_supernova.py --fetch --output .build/parent-supernova-reproduced.json",
+  "schema": "nsc-atlas-parent-supernova-v1",
+  "scope": {
+    "data_usage": "Retrospective calibration and model comparison, no withheld validation.",
+    "errors": "Quadrature difference is numerical indicator; scalar density/light-cone envelope is analytic. Neither covers missing matter/radiation/population physics.",
+    "history": "Every parent emitter A>=1 in protected homogeneous future; no pre-slice extrapolation.",
+    "likelihood": "Published standardized m_b_corr, joint STAT+SYS covariance, common intercept profiled.",
+    "matter": "Parent scalar excitation only; not a separately derived baryon/CDM mixture.",
+    "scale": "Magnitude intercept removes common SI distance/Hubble scale; Lambda SI is not inferred.",
+    "sigma": "Standardized residual of one fixed linear contrast; not a global-model sigma."
+  },
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_distance_contrast.py": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e",
+    "scripts/measure_nsc_atlas_parent_supernova.py": "116774df605e658cbb1d592396284b7b970d2c23b73173be4ee05dbe415b418a",
+    "src/recursive_horizons/nsc_atlas_cosmological_distance.py": "7c10176c12b24df7f9a28364f8a963282beb44dc5bcd9979ad767d6a7bd11ae4",
+    "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+    "src/recursive_horizons/nsc_atlas_parent_supernova.py": "e8ac62f95f7e54b163a6ad46a178e086d19d8e3e1666ffc72313fbe4490fc640",
+    "tests/test_nsc_atlas_parent_supernova.py": "e24192b0aa86f1c8304933fe05ed526e78e1440c1a8d3e9f9a68a92aaca738fb"
+  },
+  "sources": {
+    "distances.dat": {
+      "bytes": 579283,
+      "git_blob": "cce857db0c15e9ce7a0e0ce77452b6ff62af969a",
+      "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+      "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat"
+    },
+    "stat-plus-systematic.cov": {
+      "bytes": 33284960,
+      "git_blob": "d1a1498154e7ba826df14bdbef35ebcb7f5efba1",
+      "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+      "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES_STAT%2BSYS.cov"
+    }
+  },
+  "status": "retrospective_common_likelihood_comparison"
+}

@@ -28,13 +28,14 @@ SOURCES=(
     'src/recursive_horizons/nsc_atlas_parent_supernova.py',
     'src/recursive_horizons/nsc_atlas_inherited_matter.py',
     'src/recursive_horizons/nsc_atlas_cosmological_distance.py',
+    'src/recursive_horizons/nsc_atlas_parent_past.py',
     'scripts/measure_nsc_atlas_distance_contrast.py',
     'scripts/measure_nsc_atlas_parent_supernova.py',
     'tests/test_nsc_atlas_parent_supernova.py',
 )
 
 
-def measure(cache, fetch=False, threads=4):
+def measure(cache, fetch=False, threads=4, *, past_collar=False):
     started=time.process_time()
     bindings={name:cached_file(cache,name,fetch) for name in FILES}
     table=np.genfromtxt(cache/'distances.dat',names=True,dtype=None,encoding='utf-8')
@@ -44,6 +45,9 @@ def measure(cache, fetch=False, threads=4):
     if table.size!=1701 or dimension!=1701:
         raise ValueError('unexpected publisher dimensions')
     z,hel,mag,flags=(table[k] for k in ('zHD','zHEL','m_b_corr','IS_CALIBRATOR'))
+    minimum_scale=1/3 if past_collar else 1.
+    def parent(z,h,s,order=64):
+        return parent_distance(z,h,s,order=order,minimum_scale=minimum_scale)
     with threadpool_limits(limits=threads):
         primary,w,stat=distance_contrast(z,hel,mag,C,flags)
         extended=np.flatnonzero((flags==0)&(z>=.025))
@@ -51,7 +55,7 @@ def measure(cache, fetch=False, threads=4):
         for name,indices in (('original_two_bands',primary),('all_noncalibrators_z_ge_0_025',extended)):
             zz,hh=z[indices],hel[indices]
             likelihood=SupernovaShapeLikelihood(mag[indices],C[np.ix_(indices,indices)])
-            zmax=float(np.max(zz)); upper=1/(1+zmax)
+            zmax=float(np.max(zz)); upper=min(1.,1/(minimum_scale*(1+zmax)))
             rows={}
             def put(label,distance,parameters,fitted=0,parent_s=None):
                 predicted=distance(z[primary],hel[primary],64)
@@ -66,10 +70,10 @@ def measure(cache, fetch=False, threads=4):
                 dof=len(indices)-1-fitted
                 row.update(degrees_of_freedom=dof,chi_squared_survival_probability=float(chi2.sf(row['chi_squared'],dof)))
                 if parent_s is not None:
-                    angle=parent_ray_angle_upper(zmax,parent_s)
+                    angle=parent_ray_angle_upper(zmax,parent_s,minimum_scale=minimum_scale)
                     if angle>=1:
                         raise ValueError('parent ray-angle comparison not established')
-                    error=magnitude_error_bound()
+                    error=magnitude_error_bound(minimum_scale=minimum_scale)
                     row.update(parent_comparison_fractions=parent_fractions(parent_s),
                         minimum_emission_scale=(None if parent_s==0 else 1/(parent_s*(1+zmax))),
                         scalar_uniform_magnitude_error_up_to_common_offset=error,
@@ -86,28 +90,30 @@ def measure(cache, fetch=False, threads=4):
                 dict(Omega_m=m,Omega_k=0,at_boundary=lcdm['at_boundary']),1)
             rows['flat_LCDM_calibrated']['objective_evaluations']=lcdm['objective_evaluations']
             if .5<=upper:
-                put('parent_fixed_Ao_2',lambda z,h,o:parent_distance(z,h,.5,order=o),dict(Ao=2.),parent_s=.5)
-            parent=fit_shape(likelihood,lambda s:parent_distance(zz,hh,s),upper)
-            s=parent['parameter']
-            put('parent_calibrated_epoch',lambda z,h,o:parent_distance(z,h,s,order=o),
-                dict(inverse_Ao=s,Ao=None if s==0 else 1/s,at_boundary=parent['at_boundary']),1,parent_s=s)
-            rows['parent_calibrated_epoch']['objective_evaluations']=parent['objective_evaluations']
+                put('parent_fixed_Ao_2',lambda z,h,o:parent(z,h,.5,order=o),dict(Ao=2.),parent_s=.5)
+            fitted_parent=fit_shape(likelihood,lambda s:parent(zz,hh,s),upper)
+            s=fitted_parent['parameter']
+            put('parent_calibrated_epoch',lambda z,h,o:parent(z,h,s,order=o),
+                dict(inverse_Ao=s,Ao=None if s==0 else 1/s,at_boundary=fitted_parent['at_boundary']),1,parent_s=s)
+            rows['parent_calibrated_epoch']['objective_evaluations']=fitted_parent['objective_evaluations']
             d=exact_initial_geometry(); U=float(uniform_bound(10**9)['upper'])
             h2,matter,C0=map(float,(d['vacuum']/3,d['excitation']/3,d['curvature']))
             max_fraction=matter*U*upper**3/(h2+matter*U*upper**3-C0*upper**2)
             collections[name]=dict(light_curves=len(indices),distinct_CIDs=int(np.unique(table['CID'][indices]).size),
                 selected_index_sha256=hashlib.sha256(indices.astype('<i8').tobytes()).hexdigest(),
-                zHD_range=[float(np.min(zz)),zmax],parent_minimum_observer_scale=1+zmax,
+                zHD_range=[float(np.min(zz)),zmax],parent_minimum_observer_scale=max(1.,minimum_scale*(1+zmax)),
                 parent_scalar_fraction_future_upper_bound=max_fraction,models=rows)
             if time.process_time()-started>120:
                 raise RuntimeError('comparison exceeded 120 process CPU seconds')
-    return dict(schema='nsc-atlas-parent-supernova-v1',status='retrospective_common_likelihood_comparison',
+    return dict(schema='nsc-atlas-parent-supernova-v2' if past_collar else 'nsc-atlas-parent-supernova-v1',
+        status='retrospective_common_likelihood_comparison',minimum_emission_scale=minimum_scale,
         release_commit=RELEASE,sources=bindings,original_contrast=stat,comparisons=collections,
         physical_inputs=dict(omega=10**9,**{k:float(v) for k,v in exact_initial_geometry().items()}),
         scope=dict(data_usage='Retrospective calibration and model comparison, no withheld validation.',
             matter='Parent scalar excitation only; not a separately derived baryon/CDM mixture.',
             scale='Magnitude intercept removes common SI distance/Hubble scale; Lambda SI is not inferred.',
-            history='Every parent emitter A>=1 in protected homogeneous future; no pre-slice extrapolation.',
+            history=('Every emitter A>=1/3 in the proved backward Cauchy collar; observer A>=1.' if past_collar else
+                     'Every parent emitter A>=1 in protected homogeneous future; no pre-slice extrapolation.'),
             likelihood='Published standardized m_b_corr, joint STAT+SYS covariance, common intercept profiled.',
             errors='Quadrature difference is numerical indicator; scalar density/light-cone envelope is analytic. Neither covers missing matter/radiation/population physics.',
             sigma='Standardized residual of one fixed linear contrast; not a global-model sigma.'),
@@ -120,6 +126,7 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--fetch',action='store_true')
     parser.add_argument('--threads',type=int,default=4)
+    parser.add_argument('--past-collar',action='store_true')
     args=parser.parse_args()
     out=(ROOT/args.output).resolve()
     if not out.is_relative_to(ROOT) or out.exists() or not out.parent.is_dir() or not 1<=args.threads<=8:
@@ -128,10 +135,11 @@ def main():
         raise ValueError('commit method sources before comparing observations')
     cache=ROOT/'.build/data/pantheonplus-c447f0fea703'
     cache.mkdir(parents=True,exist_ok=True)
-    result=measure(cache,args.fetch,args.threads)
+    result=measure(cache,args.fetch,args.threads,past_collar=args.past_collar)
     result['method_commit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     result['source_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in SOURCES}
-    result['reproduce']='python scripts/run_python.py scripts/measure_nsc_atlas_parent_supernova.py --fetch --output .build/parent-supernova-reproduced.json'
+    result['reproduce']=('python scripts/run_python.py scripts/measure_nsc_atlas_parent_supernova.py --fetch '+
+                         ('--past-collar ' if args.past_collar else '')+'--output .build/parent-supernova-reproduced.json')
     with out.open('x',encoding='utf-8',newline='\n') as stream:
         stream.write(json.dumps(result,indent=2,sort_keys=True,allow_nan=False)+'\n')
     print(json.dumps(dict(output=out.relative_to(ROOT).as_posix(),**result['computation'],comparisons={

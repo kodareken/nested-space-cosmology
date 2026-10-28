@@ -74,3 +74,23 @@ def test_synthetic_shape_recovery_and_boundaries():
     assert result['chi_squared']<1e-10
     vacuum=SupernovaShapeLikelihood(5*np.log10((1+z)*z)+18,np.eye(50)*.02**2)
     assert fit_shape(vacuum,lambda m:flrw_distance(z,z,matter=m),1.)['parameter']==0
+
+
+def test_backward_bootstrap_and_two_way_causal_domain():
+    from recursive_horizons.nsc_atlas_parent_past import past_bound,solve_past
+    b=past_bound()
+    assert float(b['causal_margin_lower'])>.48
+    assert float(b['density_relative_error'])<3.5e-8
+    assert magnitude_error_bound(minimum_scale=1/3)<4e-8
+    z=np.array([.2,2.26137])
+    assert np.all(parent_distance(z,z,.7,minimum_scale=1/3)>0)
+    with pytest.raises(ValueError,match='precedes'):
+        parent_distance(z,z,.7)
+    # Two independent clocks on the original field equations, no averaging.
+    proper=solve_past(); expansion=solve_past(clock='efolds')
+    control=past_bound(200)
+    for row in (proper,expansion):
+        lo,hi=row['sampled_density_ratio_range']
+        assert float(control['lower'])<lo<=hi<float(control['upper'])
+    assert abs(proper['endpoint_density_ratio']-expansion['endpoint_density_ratio'])<2e-8
+    assert proper['maximum_Friedmann_residual']<2e-8

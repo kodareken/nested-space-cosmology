@@ -1,0 +1,74 @@
+{
+  "approximate_values": {
+    "Gamma": 2.96604001334718e-08,
+    "H_past_lower": 0.3333333333333333,
+    "H_past_upper": 3.0,
+    "H_variation_upper": 19.7736,
+    "causal_margin_lower": 0.48219047619047617,
+    "delta": 4.5e-09,
+    "density_relative_error": 3.416040116693297e-08,
+    "future_angle_upper": 0.5238095238095238,
+    "hubble_squared_relative_error": 3.532468738635266e-08,
+    "initial_angle_lower": 2.83,
+    "lower": 0.9999999658396,
+    "minimum_scale": 0.3333333333333333,
+    "omega": 1000000000.0,
+    "past_angle_upper": 0.912,
+    "two_way_angle_upper": 2.347809523809524,
+    "upper": 1.0000000341604012
+  },
+  "clock_endpoint_difference": 5.551841208983888e-10,
+  "rational_bounds": {
+    "Gamma": "6741/227272726250",
+    "H_past_lower": "1/3",
+    "H_past_upper": "3",
+    "H_variation_upper": "24717/1250",
+    "causal_margin_lower": "5063/10500",
+    "delta": "9/2000000000",
+    "density_relative_error": "85401/2499999914599",
+    "future_angle_upper": "11/21",
+    "hubble_squared_relative_error": "86783730118869600/2456744462299123603220911",
+    "initial_angle_lower": "283/100",
+    "lower": "363636351214400000/363636363636363629",
+    "minimum_scale": "1/3",
+    "omega": "1000000000",
+    "past_angle_upper": "114/125",
+    "two_way_angle_upper": "6163/2625",
+    "upper": "2500000000000/2499999914599"
+  },
+  "schema": "nsc-atlas-parent-past-v1",
+  "scope": "Finite homogeneous Cauchy continuation to A=1/3, not formation, global wall completion or initial-state selection.",
+  "source_sha256": {
+    "scripts/derive_nsc_atlas_parent_past.py": "62fea04ecd78b9dee906d44d498749bac90f3cb9e396d40d87427a9feb01bad5",
+    "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+    "src/recursive_horizons/nsc_atlas_parent_past.py": "c75adfe6d4b529b5b4dc06b9193d9054bcaba42f7c0620f5f3db591f73ead178"
+  },
+  "unaveraged_controls": [
+    {
+      "RHS_evaluations": 19937,
+      "clock": "proper",
+      "endpoint_density_ratio": 1.0047366706732495,
+      "maximum_Friedmann_residual": 5.397948754648496e-11,
+      "minimum_scale": 0.3333333333333333,
+      "omega": 200,
+      "process_CPU_seconds": 0.203125,
+      "sampled_density_ratio_range": [
+        0.9871321624364388,
+        1.0135163592895058
+      ]
+    },
+    {
+      "RHS_evaluations": 19607,
+      "clock": "efolds",
+      "endpoint_density_ratio": 1.0047366701180653,
+      "maximum_Friedmann_residual": 4.440892098500626e-16,
+      "minimum_scale": 0.3333333333333333,
+      "omega": 200,
+      "process_CPU_seconds": 0.1875,
+      "sampled_density_ratio_range": [
+        0.9869972007966313,
+        1.0135632933924639
+      ]
+    }
+  ]
+}
