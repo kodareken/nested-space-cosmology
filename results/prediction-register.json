@@ -403,6 +403,92 @@
         "bytes": 7456,
         "sha256": "41d18ce2453fbf5a7bb6c8902d319c528d46c00601121603b137f1ba64e25c14"
       }
+    },
+    {
+      "id": "NSC-P005",
+      "title": "One inherited scalar bounds its matter background and luminosity distance",
+      "model_id": "inherited-scalar-closed-parent-background",
+      "registered_on": "2026-10-28",
+      "registration": "prospective_unaveraged_background_lightcone_check",
+      "observational_validation": false,
+      "status": "analytic_forecast_frozen_before_unaveraged_evaluation",
+      "forecast": {
+        "path": "results/summaries/nsc-atlas-inherited-matter-forecast-v1.json",
+        "bytes": 5073,
+        "sha256": "f2909df91b5f538db1483f7c0cb284e16c835f77309a37c980b9f62c57b49e9d"
+      },
+      "observer": {
+        "observer_scale": 2,
+        "redshift": "1/4",
+        "emitter_scale": "8/5",
+        "motion": "comoving negligible test source and receiver at parent pole",
+        "observable": "Lambda_v D_L^2; dimensionless, c=1; no SI ruler",
+        "geometry": "closed FLRW D_L=a0 A_observer (1+z) sin(eta)"
+      },
+      "frequency_members": [
+        {
+          "omega": 20,
+          "comoving_energy_factors_exact": {
+            "delta": "351/10000",
+            "Gamma": "5517/270172",
+            "lower": "661637500/699137593",
+            "upper": "56000/52931"
+          },
+          "density_relative_error_ceiling": 0.05798114526458975,
+          "H_squared_relative_error_ceiling": 0.03698277188310855,
+          "Lambda_DL_squared_relative_error_ceiling": 0.0384030220886345,
+          "Lambda_DL_squared_interval": [
+            "0.242823328986305",
+            "0.261473628319700"
+          ],
+          "energy_equality_scale_interval_approximate": [
+            1.0806010815191203,
+            1.1215162094122433
+          ]
+        },
+        {
+          "omega": 2000,
+          "comoving_energy_factors_exact": {
+            "delta": "351/1000000",
+            "Gamma": "5517/27990172",
+            "lower": "6996163750000/6999999137593",
+            "upper": "5600000/5596931"
+          },
+          "density_relative_error_ceiling": 0.000548336222118872,
+          "H_squared_relative_error_ceiling": 0.0003497515153473964,
+          "Lambda_DL_squared_relative_error_ceiling": 0.00034987388426859986,
+          "Lambda_DL_squared_interval": [
+            "0.251715570867755",
+            "0.251891708276777"
+          ],
+          "energy_equality_scale_interval_approximate": [
+            1.1004413609645411,
+            1.1008435535738883
+          ]
+        },
+        {
+          "omega": 1000000000,
+          "comoving_energy_factors_exact": {
+            "delta": "351/500000000000",
+            "Gamma": "5517/13999999990172",
+            "lower": "1749999998081875000000000/1749999999999999999137593",
+            "upper": "2800000000000/2799999996931"
+          },
+          "density_relative_error_ceiling": 1.096071429772801e-09,
+          "H_squared_relative_error_ceiling": 6.991196788180061e-10,
+          "Lambda_DL_squared_relative_error_ceiling": 6.991196793067744e-10,
+          "Lambda_DL_squared_interval": [
+            "0.251803608594062",
+            "0.251803608946144"
+          ],
+          "energy_equality_scale_interval_approximate": [
+            1.1006424158960812,
+            1.1006424167003366
+          ]
+        }
+      ],
+      "limits": "Exact conditional homogeneous-background and declared light-cone bounds. Initial flux, mixing, scalar frequency and turning-point preparation remain fixed supplied inputs. No physical scale, primordial selection, halo/perturbation error bound or observational confirmation is inferred.",
+      "rejection": "A compatible exact unaveraged solution escaping the proved analytic source or luminosity-distance interval rejects this calculation; preserve the frozen bound and diagnose the equation/input mismatch. A later astronomical test requires independently constrained preparation, observer epoch and full model uncertainty."
     }
   ]
 }

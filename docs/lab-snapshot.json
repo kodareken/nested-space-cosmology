@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0201dd0fa42605c207364417fb4e33973cd10dad",
+  "current_receipt_commit_parent": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
   "files": [
     {
       "bytes": 3120,
@@ -10844,6 +10844,14 @@
       "sha256": "89cbbddbc4050fdb15cb350726cca33f4488c8b3cbee6beab419cd2b10cc3cba"
     },
     {
+      "bytes": 8813,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
+      "path": "docs/nsc-atlas-inherited-matter-bound.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "34cb609a5e96806262bc28d1eec30065b279d4a126a60c7ad5a0dba830edfed6"
+    },
+    {
       "bytes": 8895,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
@@ -11016,15 +11024,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 119710,
-      "change": "Rewrite the atlas around spherical inheritance, shared sources and interior observations; preserve mathematical evidence.",
-      "changed_from_commit": "0201dd0fa42605c207364417fb4e33973cd10dad",
+      "bytes": 120387,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "6b9014fce6825cc2a496d95352af0c2342117f5953a4a9aeeb4beac92fdb4de1"
+      "sha256": "a4db037c6f915df4eb1671011548198ed885295f78b092a22a9718d36caf3e8b"
     },
     {
       "bytes": 30876,
@@ -11984,20 +11992,20 @@
       "sha256": "f2ed1455c09f2a5bf17a55805c8cdda4185a396acf3a157a62bc41aab247385c"
     },
     {
-      "bytes": 13971,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 15215,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e4084dc669884d68ebedc282a2023de479a55bff74094247adbbe80616973a9c"
+      "sha256": "81dd207e20e8867e12c4034e9f0c3a8b75b13a4fd666c90d8e46c49e483e5a75"
     },
     {
-      "bytes": 605043,
-      "change": "Publish the geometry-derived cosmohedron interaction and its physical inheritance test.",
-      "changed_from_commit": "430568fe62189d08306842f571bd4ddfbf1b2b3e",
+      "bytes": 605906,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3176ef35b62744ebbd4312e738fac5c26a7395f0bd12bef232f3491cded328fb"
+      "sha256": "c3a668af5a1f74f28b9a882158f934953df1e497c41c2ffe992ee286cabb701d"
     },
     {
       "bytes": 6705,
@@ -30130,12 +30138,12 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 18108,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 21996,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
       "path": "results/prediction-register.json",
       "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
-      "sha256": "1d7a051738319788f6af75280e77f9c8b54a203e96b28b9b122498b14d577cb8"
+      "sha256": "7adbd4c14fd66d8e6934ef2cc9cbff9701b5d1766e66c19b8108ab764213597a"
     },
     {
       "bytes": 11412,
@@ -30902,6 +30910,14 @@
       "sha256": "e324ff4570c045af7225dcb04aaee0dc7828fb9fade73ff92f3cc751c0a52df6"
     },
     {
+      "bytes": 5073,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
+      "path": "results/summaries/nsc-atlas-inherited-matter-forecast-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f2909df91b5f538db1483f7c0cb284e16c835f77309a37c980b9f62c57b49e9d"
+    },
+    {
       "bytes": 21512,
       "change": "Certify the material-radius endpoint sign with the exact frame conversion and retained central clock.",
       "changed_from_commit": "d897d7969b7238d71c03948bdc83da5fa3f24779",
@@ -31575,6 +31591,14 @@
       "sha256": "80d32e9f2fde0f7b8f36bec95caf8116f0ca6e77273b13fab4c8da49c88da6c2"
     },
     {
+      "bytes": 6915,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
+      "path": "scripts/check_nsc_atlas_inherited_matter.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "cb31f95074b85fc07cc174e53e3ca394f9f7da514af18159e9dd8ae5b6d62f2e"
+    },
+    {
       "bytes": 6167,
       "change": "Convert the onset radius remainder to the material frame with a uniform half-Hessian bound.",
       "changed_from_commit": "420799117ca5d8e479f61450d2fe182bbdf2d73f",
@@ -32192,12 +32216,12 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 31525,
-      "change": "Validate the unchanged NSC-P004 motion-to-light forecast and publish its derivation.",
-      "changed_from_commit": "e626f2f696dd85fe2304f793338cea99fc6406c3",
+      "bytes": 33708,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
       "path": "scripts/check_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "9d02802b1528ca8395ed3a86b36d950c20f77c503b74fdca93c579b81189cf5a"
+      "sha256": "7414c948ae6f98057bf4a8fc1dd0e244f3b17a3c2003d1ce0763636183091e48"
     },
     {
       "bytes": 13188,
@@ -35789,6 +35813,14 @@
       "path": "src/recursive_horizons/nsc_atlas_hierarchy_tidal_tail.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "0bf8bf2f2d33eb9decfa844d3295328516e70c64effcd66a799d70068d0c46bd"
+    },
+    {
+      "bytes": 10624,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
+      "path": "src/recursive_horizons/nsc_atlas_inherited_matter.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c"
     },
     {
       "bytes": 4822,
@@ -40243,6 +40275,14 @@
       "path": "tests/test_nsc_atlas_hybrid_onset.py",
       "retention_reason": "Exact source-to-hybrid onset and incoming-cap mass controls.",
       "sha256": "d83fab140a6df98f0be70453914137c5fbe2355a40e19a9a5837be186adde4c4"
+    },
+    {
+      "bytes": 3666,
+      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
+      "changed_from_commit": "23fbe74848c23b1ed00517f0c9446ed0bf9959db",
+      "path": "tests/test_nsc_atlas_inherited_matter.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "c75fdd9836f9b18fd3157aad2a74c43761a62d3846767167719163dc9ca0d52c"
     },
     {
       "bytes": 3783,

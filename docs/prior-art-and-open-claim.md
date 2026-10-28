@@ -1,5 +1,19 @@
 # Prior art and admission of new research
 
+## Inherited scalar to controlled matter background, 28 October 2026
+
+The [source and bound owner](nsc-atlas-inherited-matter-bound.md) compares
+the interacting-wall future, a geometric source inverse and the presently
+uncontrolled background averaging link. The third supplies a uniform
+comparison on the actual protected parent and carries it to a specified
+interior light cone. Turner and Hwang--Noh supply the oscillating-scalar
+matter precedent; the corrected-energy identity and exact rational
+enclosures are derived for the existing inherited state and closed geometry.
+The finite allowance is 180 CPU seconds and 180000 RHS evaluations with
+three useful independent evolution workers. The source and observer inputs
+are fixed before evaluating the unaveraged target. No earlier PDE grid,
+coupling, source state, SI ruler or observational fit is changed.
+
 ## A mode-derived interaction and the cosmohedron seed, 27 October 2026
 
 The [preparation and proof](nsc-atlas-cosmohedron-interaction.md) derive a

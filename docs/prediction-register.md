@@ -257,3 +257,25 @@ comparison tolerance. The forecast was committed and pushed in e626f2f
 before the target ray was evaluated. Both channels are simulated in the
 same specified weak metric; this is not empirical confirmation, and the
 small closure residual does not replace the numerical/model uncertainty.
+
+## NSC-P005 — inherited matter background and a controlled light cone
+
+The [source theorem](nsc-atlas-inherited-matter-bound.md) derives a uniform
+background comparison from the same scalar/four-form preparation, with
+E0=3/8 and rho_v=9/32. The analytic forecast is fixed before the unaveraged
+target evaluation. A comoving receiver at A=2 observes an emitter at z=1/4
+(A_emitter=8/5). The observable is dimensionless Lambda_v*D_L^2.
+
+The [creation-only forecast](../results/summaries/nsc-atlas-inherited-matter-forecast-v1.json)
+gives the exact rationally enclosed interval
+[.242823328986305,.261473628319700] for frequency20. The independent
+proper-time and expansion-clock calculation will test this interval.
+The existing frequency10^9 member instead has
+[.251803608594062,.251803608946144], with a uniform density-law departure
+below1.097e-9. No long frequency10^9 evolution is required for that theorem.
+
+These are conditional bounds on the inherited parent and its transparent
+test light cone. No observational calibration, ancestral-state selection,
+matter abundance or full halo/perturbation reduction is claimed. The
+prediction register authenticates the forecast and its frozen projections
+without rerunning a source calculation.

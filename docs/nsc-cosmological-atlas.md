@@ -18,6 +18,17 @@ starting a derivation.
 
 ## Current execution priority — 27 October 2026
 
+### Active: inherited matter normalization and a controlled parent light cone
+
+The [new source bound](nsc-atlas-inherited-matter-bound.md) follows the
+same inherited scalar and protected parent into a uniform matter-background
+comparison. Exact corrected energy and rational comparison factors retain
+the original E0=3/8 and vacuum=9/32; no independently supplied dust density
+is added. The analytic luminosity-distance interval is frozen before the
+unaveraged target calculation. Next: its independent clock/field checks,
+then integrate the completed connection into the book. The full interacting
+wall future, ancestral-state selection and population remain separate tasks.
+
 ### Connected book and central physical closure
 
 The main manuscript now follows one argument across eight parts: spherical

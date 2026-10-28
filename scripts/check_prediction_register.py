@@ -15,6 +15,7 @@ import argparse
 import hashlib
 import json
 import math
+from fractions import Fraction
 from pathlib import Path, PurePosixPath
 import re
 
@@ -512,6 +513,31 @@ def check_p004(root, entry):
         exact(entry['status'],'forecast_frozen_before_optical_evaluation','P004 pending status')
 
 
+def check_p005(root, entry):
+    exact(entry['model_id'],'inherited-scalar-closed-parent-background','P005 model')
+    exact(entry['registration'],'prospective_unaveraged_background_lightcone_check','P005 registration')
+    exact(entry['observational_validation'],False,'P005 observational status')
+    raw=bound_bytes(root,entry['forecast'],'P005 analytic forecast')
+    forecast=read_json(raw)
+    exact(forecast['independent_unaveraged_target_evaluated'],False,'P005 forecast phase')
+    exact(entry['observer'],forecast['observer'],'P005 observer projection')
+    exact(entry['frequency_members'],forecast['frequency_members'],'P005 bound projections')
+    require(bool(entry['rejection'].strip()),'P005 rejection criterion required')
+    if 'validation' in entry:
+        validation=read_json(bound_bytes(root,entry['validation'],'P005 validation'))
+        exact(validation['forecast_sha256'],hashlib.sha256(raw).hexdigest(),'P005 frozen forecast unchanged')
+        exact(validation['physical_observation_test'],False,'P005 unaveraged numerical test')
+        interval=next(r['Lambda_DL_squared_interval'] for r in forecast['frequency_members'] if r['omega']==20)
+        tested=[r for r in validation['unaveraged_rows'] if r['short_cycles'] is None]
+        exact([r['clock'] for r in tested],['proper','efolds'],'P005 independent clocks')
+        require(all(Fraction(interval[0])<Fraction(str(r['Lambda_DL_squared']))<Fraction(interval[1]) for r in tested),
+                'P005 unaveraged observable outside analytic interval')
+        require(validation['total_rhs_calls']<=180000,'P005 finite computation allowance')
+        exact(entry['status'],'unaveraged_cross_check_passed','P005 completed status')
+    else:
+        exact(entry['status'],'analytic_forecast_frozen_before_unaveraged_evaluation','P005 forecast status')
+
+
 def check_register(root, register):
     root = Path(root).resolve()
     exact(register["schema"], SCHEMA, "register schema")
@@ -520,8 +546,9 @@ def check_register(root, register):
     entries = register["entries"]
     require(isinstance(entries, list) and [e["id"] for e in entries] in
             (["NSC-P001"], ["NSC-P001", "NSC-P002"], ["NSC-P001", "NSC-P002", "NSC-P003"],
-             ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004"]),
-            "one currently registered P001 and optional unique P002/P003/P004 in order required")
+             ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004"],
+             ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004", "NSC-P005"]),
+            "registered P001 and optional unique P002/P003/P004/P005 in order required")
     entry = entries[0]
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")
@@ -547,6 +574,11 @@ def check_register(root, register):
         check_p004(root,entries[3])
         result['predictions']+=1
         result['evidence_files']+=1+int('validation' in entries[3])
+    if len(entries)>4:
+        require('## NSC-P005' in document,'P005 missing from reader-facing register')
+        check_p005(root,entries[4])
+        result['predictions']+=1
+        result['evidence_files']+=1+int('validation' in entries[4])
     return result
 
 
