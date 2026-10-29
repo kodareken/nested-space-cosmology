@@ -1,5 +1,10 @@
 # Physical selection routes and the evolving-volume observation test
 
+The subsequent [lifetime and curvature calculation](nsc-atlas-lifetime-curvature.md)
+compares all five HM coefficients, proves four regular CDL exclusions and
+states the conditional survival theorem. The reference CDL question stays
+explicitly unresolved.
+
 ## What can be calculated from the current actions
 
 The five frontier values of Lambda_star*L_ref(0)^2 are 9.702237009265

@@ -1,0 +1,259 @@
+{
+  "HM_order": [
+    {
+      "d": 12,
+      "j": 2
+    },
+    {
+      "d": 6,
+      "j": 3
+    },
+    {
+      "d": 5,
+      "j": 4
+    },
+    {
+      "d": 4,
+      "j": 5
+    },
+    {
+      "d": 3,
+      "j": 7
+    }
+  ],
+  "conditional_survival_theorem": "For HM-only rates A_i(g) exp(-b_i/g), subexponential positive prefactors, common sufficiently small g, positive initial populations and no replenishment, conditioning on survival at late times selects (12,2).",
+  "reference_search": {
+    "domain": "s_left=top+width*l, 1e-5<=l<=20; s_right=false+width*r, 1e-6<=r<=1-1e-6",
+    "maximum_equator_constraint_residual": 7.081548680787364e-10,
+    "nonconstant_bounces_found": 0,
+    "residual_calls": 461,
+    "rows": [
+      {
+        "admitted_nonconstant_bounce": false,
+        "matching_residual": [
+          3.900295513466306e-06,
+          -1.284910376934581e-07
+        ],
+        "pole_coordinates": [
+          5.9248760135220914e-05,
+          0.999940877847896
+        ],
+        "seed": [
+          0.01,
+          0.95
+        ]
+      },
+      {
+        "admitted_nonconstant_bounce": false,
+        "matching_residual": [
+          5.774827043832543e-06,
+          -1.9073778254454478e-07
+        ],
+        "pole_coordinates": [
+          8.772431225189248e-05,
+          0.9999124628870879
+        ],
+        "seed": [
+          0.05,
+          0.7
+        ]
+      },
+      {
+        "admitted_nonconstant_bounce": false,
+        "matching_residual": [
+          3.5291667728720486e-06,
+          -1.1645297592603512e-07
+        ],
+        "pole_coordinates": [
+          5.361114526201201e-05,
+          0.9999465036927861
+        ],
+        "seed": [
+          0.1,
+          0.6
+        ]
+      },
+      {
+        "admitted_nonconstant_bounce": false,
+        "matching_residual": [
+          5.508649635146129e-06,
+          -1.8170369981095876e-07
+        ],
+        "pole_coordinates": [
+          8.368079472239595e-05,
+          0.9999164976362849
+        ],
+        "seed": [
+          0.3,
+          0.5
+        ]
+      },
+      {
+        "admitted_nonconstant_bounce": false,
+        "matching_residual": [
+          5.054335376524237e-06,
+          -1.6655476863215078e-07
+        ],
+        "pole_coordinates": [
+          7.677940129497839e-05,
+          0.9999233843103625
+        ],
+        "seed": [
+          0.5,
+          0.3
+        ]
+      },
+      {
+        "admitted_nonconstant_bounce": false,
+        "matching_residual": [
+          5.9270586810574076e-06,
+          -1.9581277107176124e-07
+        ],
+        "pole_coordinates": [
+          9.003682391409072e-05,
+          0.9999101552945728
+        ],
+        "seed": [
+          1.0,
+          0.1
+        ]
+      },
+      {
+        "admitted_nonconstant_bounce": false,
+        "matching_residual": [
+          4.438557494614214e-06,
+          -1.4622934357971804e-07
+        ],
+        "pole_coordinates": [
+          6.742532528628052e-05,
+          0.9999327185960669
+        ],
+        "seed": [
+          2.0,
+          0.05
+        ]
+      },
+      {
+        "admitted_nonconstant_bounce": false,
+        "matching_residual": [
+          4.313272319732989e-06,
+          -1.4211438403380753e-07
+        ],
+        "pole_coordinates": [
+          6.552216728935689e-05,
+          0.999934617741466
+        ],
+        "seed": [
+          5.0,
+          0.01
+        ]
+      }
+    ],
+    "status": "Eight bounded seeds approach HM; this is not an exhaustive root count. Reference CDL absence remains unresolved."
+  },
+  "remaining_lifetime_question": "A possible lower-action CDL or omitted channel in (12,2), prefactors and the population/measure assumptions prevent upgrading the HM ordering to unconditional selection.",
+  "rows": [
+    {
+      "CDL_exclusion": {
+        "criterion": "G=V_phiphi+13*V/10+13*V_phi/20",
+        "reduced_global_minimum": -0.018637434597946978,
+        "x_at_minimum": 0.9187122105918113
+      },
+      "CDL_exponent_times_g": null,
+      "CDL_status": "absence unresolved; bounded reference search below",
+      "HM_exponent_times_g": 403.7817410357339,
+      "Lambda_Lref0_squared": 9.702237009265096,
+      "d": 12,
+      "exact_exclusion_certificate": {
+        "lower_bound": "-1.9813625653",
+        "strictly_positive": false
+      },
+      "j": 2,
+      "regular_compact_CDL_excluded": false,
+      "top_negative_curvature_ratio": 3.762503091536478
+    },
+    {
+      "CDL_exclusion": {
+        "criterion": "G=V_phiphi+13*V/10+13*V_phi/20",
+        "reduced_global_minimum": 0.02689417321468479,
+        "x_at_minimum": 0.8491567282411733
+      },
+      "CDL_exponent_times_g": null,
+      "CDL_status": "excluded by global completed-square identity",
+      "HM_exponent_times_g": 369.0012868544397,
+      "Lambda_Lref0_squared": 9.991573647602356,
+      "d": 6,
+      "exact_exclusion_certificate": {
+        "lower_bound": "0.0268941732",
+        "strictly_positive": true
+      },
+      "j": 3,
+      "regular_compact_CDL_excluded": true,
+      "top_negative_curvature_ratio": 3.5839845563981396
+    },
+    {
+      "CDL_exclusion": {
+        "criterion": "G=V_phiphi+13*V/10+13*V_phi/20",
+        "reduced_global_minimum": 0.05554019721584069,
+        "x_at_minimum": 0.8037193881975818
+      },
+      "CDL_exponent_times_g": null,
+      "CDL_status": "excluded by global completed-square identity",
+      "HM_exponent_times_g": 326.04659381939314,
+      "Lambda_Lref0_squared": 10.635176064650121,
+      "d": 5,
+      "exact_exclusion_certificate": {
+        "lower_bound": "0.0555401972",
+        "strictly_positive": true
+      },
+      "j": 4,
+      "regular_compact_CDL_excluded": true,
+      "top_negative_curvature_ratio": 3.4961737147661336
+    },
+    {
+      "CDL_exclusion": {
+        "criterion": "G=V_phiphi+13*V/10+13*V_phi/20",
+        "reduced_global_minimum": 0.077752616475955,
+        "x_at_minimum": 0.7634338257922011
+      },
+      "CDL_exponent_times_g": null,
+      "CDL_status": "excluded by global completed-square identity",
+      "HM_exponent_times_g": 314.03638636728294,
+      "Lambda_Lref0_squared": 10.776179311559444,
+      "d": 4,
+      "exact_exclusion_certificate": {
+        "lower_bound": "0.0777526164",
+        "strictly_positive": true
+      },
+      "j": 5,
+      "regular_compact_CDL_excluded": true,
+      "top_negative_curvature_ratio": 3.406703292853903
+    },
+    {
+      "CDL_exclusion": {
+        "criterion": "G=V_phiphi+13*V/10+13*V_phi/20",
+        "reduced_global_minimum": 0.1037920904098586,
+        "x_at_minimum": 0.7185274039076618
+      },
+      "CDL_exponent_times_g": null,
+      "CDL_status": "excluded by global completed-square identity",
+      "HM_exponent_times_g": 305.5435593741843,
+      "Lambda_Lref0_squared": 10.727932243143604,
+      "d": 3,
+      "exact_exclusion_certificate": {
+        "lower_bound": "0.1037920904",
+        "strictly_positive": true
+      },
+      "j": 7,
+      "regular_compact_CDL_excluded": true,
+      "top_negative_curvature_ratio": 3.271861470472641
+    }
+  ],
+  "schema": "nsc-atlas-volume-lifetime-v1",
+  "scope": "Regular compact O(4) bounces of the declared Einstein/canonical-volume truncation. Singular instantons and omitted internal modes are not classified.",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_volume_lifetime.py": "489b1d21f868ae8c2f922a96c9c3b464acf5ab04608a041a3f78fea321cf0d3c",
+    "src/recursive_horizons/nsc_atlas_volume_lifetime.py": "009f444f1ed3f31c4ad01a5a2ef21d31fa00876e6bb337a799718c9ccbb576a4"
+  },
+  "unconditional_selection_derived": false
+}

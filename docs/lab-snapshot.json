@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
+  "current_receipt_commit_parent": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
   "files": [
     {
       "bytes": 3120,
@@ -10876,6 +10876,14 @@
       "sha256": "306a3c7e7a622c629757b0d5ea309304021b5a213e34633bfa923267ed31f626"
     },
     {
+      "bytes": 4987,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
+      "path": "docs/nsc-atlas-lifetime-curvature.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5375f71a0c4a7389f226c9af2c682435ea619b5f58937df2774a9b773ff86aa3"
+    },
+    {
       "bytes": 8895,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
@@ -11029,12 +11037,12 @@
       "sha256": "bc059e375d82047269a6d29cabfb11384c548615df1d86580a8b6b1a79b66d0f"
     },
     {
-      "bytes": 9596,
+      "bytes": 9853,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
-      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
+      "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
       "path": "docs/nsc-atlas-volume-selection-routes.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "77dc6488d0c483b195a9a297bc6f114548eb623f3716b5a62f3740d553acd4d4"
+      "sha256": "146f63ed8e16800eda35b440c3acd535dccffc838321fb8010ecb923343e8ada"
     },
     {
       "bytes": 14534,
@@ -31346,6 +31354,14 @@
       "sha256": "a491bf7e2241a58776b11d87fc55454f58e3885e5d287c287092534d9a15ac8f"
     },
     {
+      "bytes": 7537,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
+      "path": "results/summaries/nsc-atlas-volume-lifetime-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "61ba6a000991010f45832f7c2655e61386e277262f26b7718c6ef162dce49b9b"
+    },
+    {
       "bytes": 8460,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
       "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
@@ -32066,6 +32082,14 @@
       "path": "scripts/check_nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "0993e48dbf1db8f9ecdd561e9c7b131f6ec60a108dae7688eb43ba0f984b536d"
+    },
+    {
+      "bytes": 976,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
+      "path": "scripts/check_nsc_atlas_volume_lifetime.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "489b1d21f868ae8c2f922a96c9c3b464acf5ab04608a041a3f78fea321cf0d3c"
     },
     {
       "bytes": 1087,
@@ -36459,6 +36483,14 @@
       "path": "src/recursive_horizons/nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "71a89689d3466a55d0c6e06416ded3581339a9e65d71bf40c3c61246d45beebb"
+    },
+    {
+      "bytes": 6312,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
+      "path": "src/recursive_horizons/nsc_atlas_volume_lifetime.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "009f444f1ed3f31c4ad01a5a2ef21d31fa00876e6bb337a799718c9ccbb576a4"
     },
     {
       "bytes": 7248,
@@ -41113,6 +41145,14 @@
       "path": "tests/test_nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "6b1db51adab33c05c55b9b2c6e837b9d398f79c89696836daf1b57c5db943813"
+    },
+    {
+      "bytes": 2102,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
+      "path": "tests/test_nsc_atlas_volume_lifetime.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "06d81d3425db82d57a154812bbce8a4f9b4584db500b28206c2ea03c995bbc41"
     },
     {
       "bytes": 1993,
