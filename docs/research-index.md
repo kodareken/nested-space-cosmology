@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [nucleation radius and matter-reference test](nsc-atlas-parke-nucleation.md)
+derives R_c and zero seed masses for the stipulated vacuum wall, then
+checks the source assumptions before a cosmological fit. The fixed action
+does not supply the required vacua or matter-reference event. This is a
+specific source/reheating gap, not a failure of the Parke geometry or a
+general statement against nesting.
+
 The [wall-to-observer preparation map](nsc-atlas-wall-exit-preparation.md)
 connects the old exact C/E0 projection, the missing volume collar, the
 HM branch obstruction and the measured w_s(z) history. Initial-state

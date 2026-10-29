@@ -18,6 +18,17 @@ starting a derivation.
 
 ## Current execution priority — 29 October 2026
 
+### Nucleation removes the supplied geometry only in its admitted sector
+
+The [mass-free Parke calculation](nsc-atlas-parke-nucleation.md) gives
+R_c=1.212662645008 and zero seed mass in the stipulated vacuum-wall model.
+Its admission into the current scalar/volume action fails because the
+given densities are not stationary vacua. Empty post-wall classical matter
+also never reaches E=3/8. The next connection must establish compatible
+vacuum phases, a coupled wall profile and matter delivery in one action
+before another curvature or likelihood calculation. No radius, mass or
+matter density is reset to bypass that gate.
+
 ### Strategic connection: one physical preparation for both gaps
 
 The [wall/exit map](nsc-atlas-wall-exit-preparation.md) identifies the next

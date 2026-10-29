@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+`nsc_atlas_parke_nucleation.py` reuses the isolated-bubble solver for the
+constant-vacuum radius/mass result, independently checks the Parke action,
+and audits field stationarity, empty-state evolution and the energy budget.
+`check_nsc_atlas_parke_nucleation.py` has separate geometry/source stages;
+`test_nsc_atlas_parke_nucleation.py` checks exact junctions, the flat-gravity
+limit and reference-event invariance. The [owner](nsc-atlas-parke-nucleation.md)
+does not promote this control to a reheated (12,2) solution.
+
 `nsc_atlas_wall_exit.py` owns the unsquared wall projection and HM-state
 audit. `nsc_atlas_volume_preparation.py` owns named fixed-energy starts
 and the pressure/exchange equations. `measure_nsc_atlas_exit_preparations.py`

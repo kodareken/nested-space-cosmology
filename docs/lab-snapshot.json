@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+  "current_receipt_commit_parent": "ccc678a70683f62f0a0061ae580985d866e892f5",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 292378,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "bytes": 292899,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "f6af91d2a2b1bffe4b453b14c4be5a5f54f6abeb6c23e231206713b7c52e2107"
+      "sha256": "f065d4e1e13ebfba3246d6d2efac2278bfcbecebda042c5985e2a5743f4c1f93"
     },
     {
-      "bytes": 149466,
-      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
-      "changed_from_commit": "e16b99b864c9a76d0f067bfbffde073c4f5b36c5",
+      "bytes": 150322,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "931950a96138d49d5991522d05db1c24b41b814f35b8ee755d9de3e62a43fcce"
+      "sha256": "9988341accd0c1b43d4f30bc08fab0f8525084169ac72e4ba9c14fdbbfbaf6cc"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 474082,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "bytes": 474930,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "01f92bd7a16cf6f8b1143072cd7f8bbfa00ed144a36666c911267109b1049780"
+      "sha256": "9e34c759c30603b007849b76ed13762bc3b8471b5a68505e4bf60b1fc61133fd"
     },
     {
       "bytes": 173938,
@@ -10975,12 +10975,12 @@
       "sha256": "29811b90a3f28a6cce48c706183886ad8f25c6b68b99e35deee7bfdbe6a46aba"
     },
     {
-      "bytes": 8481,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+      "bytes": 8491,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "docs/nsc-atlas-parke-nucleation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "f52c70d6a88cec1917b901df9eaf7a11d6220411476d822a47e74f12beb75526"
+      "sha256": "71e9f0f2f2e13b4690a1e2468ec133a8c391052a2e3064d8a5040acb80e8b89e"
     },
     {
       "bytes": 9702,
@@ -11120,15 +11120,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 127458,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "bytes": 128084,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8c167b5ac178c597f10ca262e382738ea26b84936641b8168b76bc2c5175bd0f"
+      "sha256": "464cbfcf0b5f7fceb5cf155e74227d35ebd5b74e1aec65ec2297660664b88625"
     },
     {
       "bytes": 30876,
@@ -12118,12 +12118,12 @@
       "sha256": "e027a21cc2d6be7305aa1fb084b20f50815e0be906f8eab403db07201f6d7088"
     },
     {
-      "bytes": 51381,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "bytes": 51786,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "398f33ab32c40e998719406b325fc30282fa2b1973f4a7e037d43f12a4e8213b"
+      "sha256": "05e7e4a9ac6e6e2003cf2132612dbf40299d90cf0f7affffaf39a5659b3c1a07"
     },
     {
       "bytes": 18356,
@@ -12192,28 +12192,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 38535,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "bytes": 38872,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "899b21535ebd82ed0ec7e9bb00b702a053733608dc958a647d0d2f8c644a5cd9"
+      "sha256": "1a232072ebf315b724e267e8bb9b84247295341b553d9a52cd8201f17255378e"
     },
     {
       "bytes": 3206,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "30cd39ba93168f31ed6c4e7d723181def31e78c22d5fa4a7985e62cda0640f74"
+      "sha256": "1f2ce000145f4660dfb5c52d70d674c795ab2a7ce12de1ded9906de62a606060"
     },
     {
-      "bytes": 48893,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "bytes": 49191,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "b6c587d50b2c36acf3bebd412ca56c60e7e7635b687fa1b32b066f54bf17db61"
+      "sha256": "0924e88b6adc934f4e70687476edc70592294478fa2ba814486f99110cec6032"
     },
     {
       "bytes": 226492,
@@ -12225,27 +12225,27 @@
     },
     {
       "bytes": 396,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2afb7bfc4a3f65db20acd895372ef63b9f30f2d61817f5392aa8b7720f2b2ea9"
+      "sha256": "4b41d5315bf57a591afaec1981a6800666484030adf8b1cfa565ff836d806e50"
     },
     {
-      "bytes": 534060,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "bytes": 539890,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "9049b52549f3abf651780a9b409a14aa20077b124b0578d63fb839cd31ef9d70"
+      "sha256": "81dd1a41c0a452bb87c505660217f2daf9281d4b5b11fe9bf3de9a66ff24163b"
     },
     {
-      "bytes": 14931768,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "bytes": 15013145,
+      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
+      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "76fc9b0ad4fa71b2586a6529d3ce23f6cb19c2418d16b2ef0e19a00665cd6748"
+      "sha256": "0bbc575c74c74fc4cbbbbe459f114df9c438de3aad7511761ab894401d9ef03c"
     },
     {
       "bytes": 3283,

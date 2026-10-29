@@ -1,5 +1,18 @@
 # Cited arXiv studies
 
+## Mass-free nucleation radius — 29 October 2026
+
+[Parke, Gravity and the decay of the false vacuum (1983)](https://doi.org/10.1016/0370-2693%2883%2991376-X)
+provides the thin-wall gravitational radius for arbitrary vacuum energies.
+Equations (7)--(12) in the [public SLAC preprint](https://www.slac.stanford.edu/pubs/slacpubs/2750/slac-pub-2908.pdf)
+were read and visually inspected, including the wall and volume action.
+The new calculation independently checks that result against the unsquared
+Israel conditions and the existing isolated-vacuum bubble. Parke assumes
+actual false/true vacua and an admitted thin-wall source; his formula does
+not turn the present excited snapshot into those vacua or supply reheating.
+The [source-admission owner](nsc-atlas-parke-nucleation.md) states that
+boundary and preserves the original CDL/Parke attribution.
+
 ## Lifetime and curvature — 29 October 2026
 
 [Balek--Demetrian, gr-qc/0311040](https://arxiv.org/html/gr-qc/0311040)

@@ -53,7 +53,7 @@ $$
 
 The three terms are -.130030971151, +.138947380602 and -.008916409450.
 Zero seed offset is not zero total vacuum energy: the interior
-Misner--Sharp mass is U_i R_c^3/6=.065015485576. Nor does zero seed mass
+geometric Misner--Sharp mass is U_i R_c^3/6=.065015485576. Nor does zero seed mass
 by itself determine whether a homogeneous scalar is excited.
 
 The auxiliary wall has R(tau_wall)=R_c*cosh(tau_wall/R_c). Its vacuum

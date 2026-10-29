@@ -64,12 +64,12 @@ frequency. Its lowest stable-family vacuum has an extremal property and
 a conditional HM survival preference; four regular scalar CDL channels
 are excluded. An imposed flatness control leaves a joint data loss of
 16.69, while an energy bound explains why the existing preparation cannot
-supply both small curvature and substantial matter. A wall-to-observer
-map identifies the shared gap: the exact HM saddle supplies no rolling
-matter state, and specified HM-location or minimum-start controls do not
-improve the full distance history. Curvature and volume pressure must
-follow from one physical preparation. Full selection and SI normalization
-remain open.
+supply both small curvature and substantial matter. A mass-free Parke
+control fixes a critical bubble radius, but the stated densities fail
+the source's vacuum test and empty classical matter remains empty.
+The wall-to-observer map therefore requires compatible vacuum phases,
+field preparation and matter production in one action. Full selection
+and SI normalization remain open.
 
 The resulting book connects geometry, inherited state, stress, structure and
 interior observation. Its completed results establish specified mathematical
@@ -4914,6 +4914,138 @@ collar. Evolve that state to the reference event $E=3/8$, if it exists,
 and carry its volume, velocity and curvature forward without resetting
 them. The reference density must not be mistaken for a derived birth state.
 Every emitter must then lie in the constructed history before the next fit.
+
+### 13.28. A mass-free nucleation radius and the matter-reference gate
+
+<!-- nsc-claim:parke-mass-free-radius -->
+
+Evidence: [constant-vacuum bubble and mass balance](../results/summaries/nsc-atlas-parke-bubble-v1.json),
+[source scope and unit dictionary](../docs/nsc-atlas-parke-nucleation.md),
+and [independent junction and limit checks](../tests/test_nsc_atlas_parke_nucleation.py).
+
+The proposed replacement of the supplied radius and seed mass has a
+definite answer within a constant-vacuum thin-wall model. Reusing
+[Parke (1983)](https://doi.org/10.1016/0370-2693%2883%2991376-X),
+which extends [Coleman--De Luccia](https://doi.org/10.1103/PhysRevD.21.3305),
+take $U_i=7/32$, $U_o=21/32$, $\sigma=1/5$ and $\kappa=1$. The
+ordinary positive-cap branch gives
+
+$$
+R_c^{-2}=\left(\frac{U_o-U_i}{3\sigma}\right)^2
++\frac{\kappa(U_i+U_o)}{6}+\frac{(\kappa\sigma)^2}{16}
+=\frac{39169}{57600},
+$$
+
+$$
+R_c=\frac{240}{\sqrt{39169}}=1.212662645008\ L_{\rm unit}(0),
+\qquad M_i=M_o=0.
+$$
+
+Neither the old 1.9 nor the old .12 enters that calculation. The new
+radius is .63824350 times the supplied one. Both radii are in the
+original model unit. For historical comparison only, the old
+$L_{\rm ref}(0)=6.6260770761L_{\rm unit}(0)$ gives ratios .18301366
+and .28674583. That old curvature ruler was derived from the removed
+preparation and is not a new prediction. The independent false-vacuum
+ruler gives $R_c/\sqrt{3/(\kappa U_o)}=.56717102$.
+
+At the turning point the signed normal factors are
+$\beta_i=187/\sqrt{39169}$ and $\beta_o=163/\sqrt{39169}$.
+They satisfy the unsquared junction exactly. Regular homogeneous vacua
+have zero Schwarzschild seed offsets, and their mass balance is
+
+$$
+0=-\frac{(U_o-U_i)R_c^3}{6}
++\frac{\sigma R_c^2\beta_i}{2}
+-\frac{\sigma^2 R_c^3}{8}.
+$$
+
+The terms are -.130030971151, +.138947380602 and -.008916409450.
+The interior geometric Misner--Sharp mass is nevertheless .065015485576 because
+it contains vacuum energy. Zero seed mass alone does not determine the
+homogeneous scalar state or imply zero total energy.
+
+The auxiliary bubble has wall trajectory
+$R(\tau_w)=R_c\cosh(\tau_w/R_c)$. Its pure-vacuum open interior has
+$a(t)=\sinh(H_it)/H_i$, $H_i^2=7/96$, and
+$\Omega_k(t)=\mathrm{sech}^2(H_it)$, with birth limit +1. Wall proper
+time and interior cosmic time differ. A finite turning radius is not a
+matter-defined FRW reference scale.
+
+<!-- nsc-claim:parke-source-reheating-admission -->
+
+Evidence: [vacuum, reheating and energy-budget admission](../results/summaries/nsc-atlas-parke-reheating-admission-v1.json)
+and [exact matter-invariance checks](../tests/test_nsc_atlas_parke_nucleation.py).
+
+This geometric solution must still belong to the same action before it
+can replace the preparation. The stated densities were values of an
+excited scalar snapshot. At its supplied field, with $y=\omega\phi$,
+the middle and exterior derivatives are
+
+$$
+U_y=\frac{\sqrt{3}}{4},\qquad U_y=\frac{\sqrt{3}}{2}.
+$$
+
+They are nonzero. The relaxed scalar densities are instead 1/8 and 9/32.
+The volume adds another incompatibility: its well minimum
+$V_*=.220983024213$ exceeds the stipulated interior density .21875.
+The actual coupled wall also has $\sigma(s)=.2e^{-6s}$ and requires
+its volume-gradient profile. The closed-form radius does not supply
+that profile or an actual scalar turning point for these endpoints.
+
+For an empty retained matter field in the homogeneous post-wall region
+at fixed flux and without incoming sources, the supplied equations give
+
+$$
+\dot E+(3H+6\dot s)E=0,\qquad
+E=E_i\exp[-3(N-N_i)-6(s-s_i)].
+$$
+
+Thus $E_i=0$ remains zero for any roll of $s$. The exact classical
+$\chi=\Pi=0$ solution has the same invariance. This does not replace
+a CDL turning point by the HM top, and it is not a claim that all quantum
+reheating is impossible. It establishes that the present classical
+source does not create the requested reference event from that empty state.
+
+Counting volume oscillation energy as matter still requires an adequate
+budget. With any internal energy-conserving transfer to positive dust,
+an expanding homogeneous branch obeys
+
+$$
+\dot\rho_{\rm total}=-3H(K\dot s^2+E)\leq0.
+$$
+
+The literal thin-wall child density $7/32$ is below the matter target
+$3/8$ even before a vacuum is retained. A rest exit that can arrive at
+the well with the requested matter requires at least
+
+$$
+V_{\rm exit}\geq V_*+\frac38=0.595983024213.
+$$
+
+The excess available within the computed minimum-to-barrier interval is
+only .133553653265 before expansion losses. This bound applies to that
+interval; it does not assign a value to an unknown CDL exit. On the
+potential's rising left side the necessary energy would require
+$s\leq-.07885602698$, which is an energy threshold, not a derived
+turning point. The parent difference $U_o-V_*=.435266975787$ could
+cover the budget, but its delivery into the child has not been calculated.
+
+Ordinary on-shell reheating into the retained massive scalar is also
+closed near the minimum: $m_s=1.477737463$ while
+$2m_\chi=2.476949780\times10^9$ in the same inverse-length units.
+Nonperturbative and curved-background quantum production are not computed;
+no new phenomenological reheating rate is inserted.
+
+The result is consequently precise. The stipulated vacuum-wall model
+fixes its radius and zero seed masses. Its endpoints fail admission as
+vacua of the unchanged scalar/volume source, and its empty classical
+matter branch never reaches $E=3/8$. There is no admissible reference
+event from which to report a new $C/E_0$, present curvature, $w_s(z)$
+or SN+DESI likelihood. No reset state or fictitious fit replaces that
+missing event. A compatible vacuum transition and matter-transfer
+mechanism must be derived together before this geometry becomes the
+requested reheated cosmology. These route failures do not reject nesting.
 
 ## IV. Concentration, conservation and the surrounding reservoir
 

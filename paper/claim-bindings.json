@@ -628,6 +628,16 @@
       "section": "13.27",
       "status": "measured",
       "owner": "docs/nsc-atlas-wall-exit-preparation.md"
+    },
+    "parke-mass-free-radius": {
+      "section": "13.28",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parke-nucleation.md"
+    },
+    "parke-source-reheating-admission": {
+      "section": "13.28",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-parke-nucleation.md"
     }
   },
   "findings": [

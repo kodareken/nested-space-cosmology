@@ -1,5 +1,19 @@
 # What the calculations show
 
+The [Parke nucleation test](nsc-atlas-parke-nucleation.md) fixes an
+auxiliary constant-vacuum bubble at R_c=1.212662645008 model units and
+zero Schwarzschild seed offsets, independently of the old R=1.9,M=.12.
+Exact junction and mass-balance checks pass. In old reference-radius units
+the comparison is .1830136642 versus .2867458344, not 1.2127 versus 1.9.
+
+That bubble is not admitted as the fixed (12,2) field instanton: the
+specified densities are nonstationary scalar-snapshot values, and the
+child density is below the current volume-well minimum. Empty classical
+matter remains E=0 for any post-wall roll at fixed flux without incoming
+sources. The E=3/8 reference event is absent; no new observation fit is
+reported. The parent energy budget can in principle be sufficient, but
+its delivery and compatible reheating have not been derived.
+
 The [wall-to-observer preparation map](nsc-atlas-wall-exit-preparation.md)
 now derives the old junction ratio C/E0=.06073733965 and shows why fixed
 tension/vacua alone do not select it. The exact HM vacuum saddle has no
@@ -134,7 +148,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-29.4. Its central route is spherical
+revision 2026-10-29.5. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

@@ -1,10 +1,10 @@
 {
-  "bytes": 14931768,
+  "bytes": 15013145,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "2afb7bfc4a3f65db20acd895372ef63b9f30f2d61817f5392aa8b7720f2b2ea9",
+  "metadata_sha256": "4b41d5315bf57a591afaec1981a6800666484030adf8b1cfa565ff836d806e50",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 184,
-  "pdf_sha256": "76fc9b0ad4fa71b2586a6529d3ce23f6cb19c2418d16b2ef0e19a00665cd6748",
+  "pages": 185,
+  "pdf_sha256": "0bbc575c74c74fc4cbbbbe459f114df9c438de3aad7511761ab894401d9ef03c",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -764,6 +764,14 @@
       "sha256": "8f2b2624cc53fcb901fd7b34b3b55433578f9eed52a3554a388ac4da5d904d43"
     },
     {
+      "path": "results/summaries/nsc-atlas-parke-bubble-v1.json",
+      "sha256": "d4dbdea8776340a65393b77e2b78085c89d664065f4fd62b4db4ec8aec8bede2"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-parke-reheating-admission-v1.json",
+      "sha256": "3664f43b982b6184e36f88e3ecdcceed4db2e1b4ad905c80b39f22db166cdea7"
+    },
+    {
       "path": "results/summaries/nsc-atlas-radar-inverse-v1.json",
       "sha256": "a91459e69e5cfab2c273da1c7a2d6d979f06fac3809c2ef7f89f42cb4b05938f"
     },
@@ -905,6 +913,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "9049b52549f3abf651780a9b409a14aa20077b124b0578d63fb839cd31ef9d70",
-  "version": "working-2026-10-29.4"
+  "source_sha256": "81dd1a41c0a452bb87c505660217f2daf9281d4b5b11fe9bf3de9a66ff24163b",
+  "version": "working-2026-10-29.5"
 }
