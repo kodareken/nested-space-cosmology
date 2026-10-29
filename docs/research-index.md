@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [wall-to-observer preparation map](nsc-atlas-wall-exit-preparation.md)
+connects the old exact C/E0 projection, the missing volume collar, the
+HM branch obstruction and the measured w_s(z) history. Initial-state
+controls can reduce Omega_s today while worsening the full distance fit.
+The shared unresolved link is physical Lorentzian preparation, not a
+second independent fitted cosmological number.
+
 The [lifetime and curvature continuation](nsc-atlas-lifetime-curvature.md)
 adds five HM coefficients, a global fixed-flux scalar CDL exclusion for
 four members, and a conditional survival theorem. The reference CDL

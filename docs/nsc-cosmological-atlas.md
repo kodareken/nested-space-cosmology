@@ -18,6 +18,18 @@ starting a derivation.
 
 ## Current execution priority — 29 October 2026
 
+### Strategic connection: one physical preparation for both gaps
+
+The [wall/exit map](nsc-atlas-wall-exit-preparation.md) identifies the next
+common prerequisite. The old Israel projection needs supplied radius and
+mass, while the new volume needs its normal-gradient collar. The computed
+HM saddle supplies no selected rolling matter state. Fixed-energy controls
+at the HM location and at the minimum have now been evaluated against the
+same observations; neither improves the matched flat history. Next work
+must construct the Lorentzian preparation and its compatible full junction,
+then derive C/E0 and evolve forward into an actual observation domain.
+Do not tune another starting displacement to reduce one present fraction.
+
 ### Lifetime ordering and the physical curvature requirement
 
 The [new owner](nsc-atlas-lifetime-curvature.md) contains all five HM

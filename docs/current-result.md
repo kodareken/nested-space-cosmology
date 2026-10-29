@@ -1,5 +1,21 @@
 # What the calculations show
 
+The [wall-to-observer preparation map](nsc-atlas-wall-exit-preparation.md)
+now derives the old junction ratio C/E0=.06073733965 and shows why fixed
+tension/vacua alone do not select it. The exact HM vacuum saddle has no
+rolling matter state. Loading E_i=3/8 there instead forces the volume
+toward decompactification. The current matched flat source has
+w_s(0)=-.886736 but w_s(2)=+.627429, so its present fraction alone does
+not describe its observable history.
+
+Retained state controls confirm this: the HM location with assigned matter
+gives flat/reference-C joint chi-squares 1330.53101/1392.91214. Starting
+at the minimum reduces flat Omega_s to .012710 but gives chi-square
+1237.06508, worse than the matched flat 1207.86625. These are specified
+reference-slice continuations, not derived birth histories. The map joins
+the missing Lorentzian preparation, volume collar and wall data before
+the next physical curvature/observation calculation.
+
 The [lifetime/curvature follow-up](nsc-atlas-lifetime-curvature.md) computes
 all five HM coefficients: 403.78174,369.00129,326.04659,314.03639,305.54356.
 A global square-completion identity excludes regular compact scalar CDL
@@ -118,7 +134,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-29.3. Its central route is spherical
+revision 2026-10-29.4. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

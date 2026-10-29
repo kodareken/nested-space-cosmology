@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+`nsc_atlas_wall_exit.py` owns the unsquared wall projection and HM-state
+audit. `nsc_atlas_volume_preparation.py` owns named fixed-energy starts
+and the pressure/exchange equations. `measure_nsc_atlas_exit_preparations.py`
+uses six workers for the same-covariance preparation comparisons and
+records pre-reference-slice emitters explicitly. The
+[scientific owner and map](nsc-atlas-wall-exit-preparation.md) distinguish
+these controls from a derived Lorentzian exit; the plot producer is
+`plot_nsc_atlas_preparation_map.py`.
+
 `nsc_atlas_volume_lifetime.py` owns the five HM exponents, the exact
 completed-square CDL certificate and bounded reference pole matching.
 `nsc_atlas_curvature_mechanisms.py` owns the energy/curvature bound,

@@ -60,16 +60,16 @@ fitted dimension. Its inherited SI scale remains unselected; that
 realization's failed connections do not reject the nesting programme.
 
 A separate volume extension co-scales the inherited charge, tension and
-frequency. Its lowest stable-family vacuum has a definite extremal property,
-but attractor, entropy and tunnelling checks do not select it between the
-different parent actions. A same-action Hawking--Moss saddle exposes an
-escape channel. With the actual evolving volume stress retained, its
-conditional SN+DESI fit gives chi-square 1230.95 versus 1191.18 for the
-flat control. A subsequent lifetime comparison gives a conditional HM
-survival preference and excludes four regular CDL channels. An imposed
-flatness control lowers the joint loss to 16.69, while an energy bound
-identifies why the existing preparation cannot supply both small curvature
-and substantial matter. Physical selection and SI normalization remain open.
+frequency. Its lowest stable-family vacuum has an extremal property and
+a conditional HM survival preference; four regular scalar CDL channels
+are excluded. An imposed flatness control leaves a joint data loss of
+16.69, while an energy bound explains why the existing preparation cannot
+supply both small curvature and substantial matter. A wall-to-observer
+map identifies the shared gap: the exact HM saddle supplies no rolling
+matter state, and specified HM-location or minimum-start controls do not
+improve the full distance history. Curvature and volume pressure must
+follow from one physical preparation. Full selection and SI normalization
+remain open.
 
 The resulting book connects geometry, inherited state, stress, structure and
 interior observation. Its completed results establish specified mathematical
@@ -4744,6 +4744,176 @@ not remove its remaining distance-history mismatch. No inherited curvature
 value was derived for the requested physical refit; the imposed control
 does not replace that missing construction. These results restrict the
 declared source and selection arguments without rejecting nesting.
+
+### 13.27. The wall, the exit state and the actual pressure history
+
+<!-- nsc-claim:wall-exit-preparation-map -->
+
+Evidence: [wall projection and HM-state checks](../results/summaries/nsc-atlas-wall-exit-v1.json),
+[physical dependency map](../docs/nsc-atlas-wall-exit-preparation.md),
+and [independent identities](../tests/test_nsc_atlas_wall_exit_preparation.py).
+
+The next connection must supply curvature and the volume history together.
+The action fixes equations; a physical preparation must fix the state
+and the wall data from which those equations evolve. The computed HM
+saddle, a reference Cauchy slice and a material wall cannot be identified
+without that connection.
+
+First distinguish relaxed vacua from the actual initial stress. The
+displacement fluxes are $(3/2,1,1/2,0)$; their relaxed vacuum densities
+are $(9/32,1/8,1/32,0)$. The supplied uniform scalar is at the
+grandchild minimum with zero momentum, giving middle and parent total
+densities $U_i=7/32$, $U_o=21/32$. With $k=\sigma/2=1/10$, the old
+comoving Israel projection gives
+
+$$
+\beta_-=-\frac{M}{kR^2}+\frac{(U_o-U_i+3k^2)R}{6k},\qquad
+H_0^2=\frac{\beta_-^2-1+2M/R+U_iR^2/3}{R^2},\qquad
+C=\frac{U_o}{3}-H_0^2.
+$$
+
+At the supplied $R=1.9$, $M=.12$,
+
+$$
+\frac{C}{E_0}=0.06073733964695,\qquad
+\Omega_{k,\mathrm{initial}}=-0.116222359874.
+$$
+
+That reproduces the reference preparation, whose later fitted curvature
+is -.08120633. It does not select a new flattened value. At the same
+mass, tension and field state, $R=2$ instead gives $C/E_0=-.0800462963$
+and initial curvature fraction +.12066439. The zero occurs at
+$R=1.9412508781$; choosing it because flatness is desired would be an
+extra selection condition.
+
+The new volume wall also requires $K[\partial_n s]=\sigma_s$,
+including the collar's gradient stress. Its jump is -1/70 at $s=0$
+and -.00996677 at the HM location. A uniform volume field supplies neither
+collar. Furthermore, in a
+[CDL open interior](https://doi.org/10.1103/PhysRevD.21.3305), the wall
+need not comove with the cosmological slice. The equation $H=\dot R/R$
+cannot be transferred from the old projection without that assumption.
+The [open-inflation construction](https://arxiv.org/html/hep-ph/9411206)
+therefore still needs its actual exit state and reference epoch here.
+
+The computed vacuum HM saddle has $s_b=.06000053504182$, $V_s=0$,
+zero velocity and no matter excitation. Its exact classical continuation
+stays at the top. In a constant-H de Sitter patch a perturbation grows
+with $\lambda/H_b=.9520405974$, but its departure time depends on the
+seed; a decade changes the linear departure by 2.41858 e-folds. No
+physical seed or unique rolling e-fold count was calculated by finding
+the saddle.
+
+Loading the task's $E_i=3/8$ at that same point defines a different,
+finite-slice preparation. It gives
+
+$$
+\ddot s_i=\frac{6E_i}{84}=\frac{3}{112}>0.
+$$
+
+For $s\geq s_b$, the potential has $V_s\leq0$. At zero velocity its
+force is nonnegative, so this loaded state cannot turn into negative
+velocity and reach the minimum on the left. It rolls toward the
+decompactifying side. This is a branch obstruction in the stated source,
+not a general objection to a different inherited preparation.
+
+Holding actual starting energy fixed requires
+
+$$
+E(N,s)=E_i\exp[-3N-6(s-s_i)].
+$$
+
+Preserving the old adiabatic action or the
+old coherent field would instead give initial HM-location energies
+.26162778 or .18253092. Those prescriptions are not silently exchanged.
+
+<!-- nsc-claim:volume-preparation-pressure-controls -->
+
+Evidence: [retained preparation comparisons and pressure history](../results/summaries/nsc-atlas-exit-preparations-v1.json),
+[methods and limits](../docs/nsc-atlas-wall-exit-preparation.md),
+and [state and continuity checks](../tests/test_nsc_atlas_wall_exit_preparation.py).
+
+Writing $T=Kv^2/2$, the volume component relative to $V_*$ has
+
+$$
+\rho_s=T+V-V_*,\quad p_s=T-V+V_*,\quad
+w_s=\frac{p_s}{\rho_s},\qquad
+\dot\rho_s+3H(\rho_s+p_s)=6Ev.
+$$
+
+Matter loses the same source term. Thus the pressure ratio differs
+from the effective dilution parameter,
+$w_{s,\mathrm{eff}}=w_s-2Ev/(H\rho_s)$. At zero component density
+$w_s$ is undefined; the canonical kinetic norm remains positive.
+The combined volume-plus-vacuum pressure ratio is $(T-V)/(T+V)$.
+
+For the current matched flat fit, the actual pressure history is:
+
+| Redshift z | Volume w_s | Combined w_DE | Volume fraction |
+| ---: | ---: | ---: | ---: |
+| 0 | -.886736 | -.977471 | .143326 |
+| .25 | -.990120 | -.997903 | .122643 |
+| .5 | -.999998 | -1.000000 | .095024 |
+| 1 | -.896920 | -.976132 | .059570 |
+| 1.5 | -.024749 | -.600811 | .079416 |
+| 2 | +.627429 | +.165435 | .171422 |
+
+The present volume fraction therefore does not describe its entire
+observable history. To test preparation directly, the same likelihood
+is applied to the computed HM location and to the computed minimum,
+each with fixed actual $E_i=3/8$ and zero starting volume velocity.
+Neither start is fitted. Flatness and the recovered old C are controls;
+no new wall-compatible post-exit curvature is claimed.
+
+| Start | Curvature control | Joint chi-square | Delta vs flat LambdaCDM | Present volume fraction |
+| --- | --- | ---: | ---: | ---: |
+| Matched | Flat | 1207.86625 | +16.68945 | .143326 |
+| HM location + matter | Flat | 1330.53101 | +139.35422 | .303996 |
+| HM location + matter | Old C | 1392.91214 | +201.73534 | .326298 |
+| Minimum + matter | Flat | 1237.06508 | +45.88828 | .012710 |
+| Minimum + matter | Old C | 1277.82738 | +86.65058 | .015530 |
+
+All fits have three observational quantities and use the same shared
+ruler and full covariances. Flat LambdaCDM has chi-square 1191.17680.
+For the HM-location flat control,
+$(\Omega_\Lambda,\Omega_s,\Omega_m,\Omega_k)=(.495982,.303996,.200022,0)$;
+with old C the tuple is $(.532212,.326298,.204525,-.063035)$.
+The corresponding posterior sums $3(\Omega_\Lambda+\Omega_s)$ are
+$2.399845\pm.010551$ and $2.575431\pm.008741$, giving combined-width
+differences +14.17 and +22.03 from $2.054\pm.022$. On this runaway
+branch $V_*$ is a reference offset, not its future vacuum.
+
+The minimum-start flat control lowers the present volume fraction to
+.012710, but raises the constant-vacuum fraction to .745006 and reduces
+matter to .242284. Its posterior dark-energy sum is
+$2.273023\pm.014245$, or +8.36 combined-width units. With old C the
+tuple is $(.814085,.015530,.254214,-.083829)$ and the posterior sum is
+$2.488710\pm.011674$, or +17.45 units. Component covariance is included.
+At flatness the sum is exactly $1-\Omega_m$; reducing one component
+alone does not lower total dark energy.
+
+![One preparation must determine both the wall curvature and the volume pressure history.](../docs/figures/nsc-atlas-preparation-map.png)
+
+At $z=2$ the minimum-start flat source has volume fraction .226330,
+despite its small present fraction. Its earlier kinetic/pressure history
+helps explain why the full fit worsens. Numerical settings change joint
+chi-square by at most $5.6\times10^{-9}$.
+
+These are reference-slice continuations, including earlier emitters. The
+fitted $N=0$ slices lie near redshifts .59--.73 in the new controls;
+higher-redshift data use the backward continuation. They cannot be
+advertised as post-nucleation-only histories with that slice as birth.
+The requested genuine-exit refit therefore remains unfulfilled.
+
+Finally, rounding is explicit: the displayed six-decimal pair gives
+$3(.577259+.143326)=2.161755$. The unrounded best-fit sum is
+2.1617561739988 and the posterior mean 2.1616589757622. They are
+different reported quantities. The next physical calculation must supply
+a compatible parent/child transition and its Lorentzian profiles and wall
+collar. Evolve that state to the reference event $E=3/8$, if it exists,
+and carry its volume, velocity and curvature forward without resetting
+them. The reference density must not be mistaken for a derived birth state.
+Every emitter must then lie in the constructed history before the next fit.
 
 ## IV. Concentration, conservation and the surrounding reservoir
 

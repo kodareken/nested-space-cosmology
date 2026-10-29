@@ -618,6 +618,16 @@
       "section": "13.26",
       "status": "measured",
       "owner": "docs/nsc-atlas-lifetime-curvature.md"
+    },
+    "wall-exit-preparation-map": {
+      "section": "13.27",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-wall-exit-preparation.md"
+    },
+    "volume-preparation-pressure-controls": {
+      "section": "13.27",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-wall-exit-preparation.md"
     }
   },
   "findings": [
