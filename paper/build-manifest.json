@@ -1,10 +1,10 @@
 {
-  "bytes": 15013145,
+  "bytes": 15063871,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "4b41d5315bf57a591afaec1981a6800666484030adf8b1cfa565ff836d806e50",
+  "metadata_sha256": "b25a6587784ae880e54581a7efb6e5812a97b6c07de83bb7237b35be8a9b00ed",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 185,
-  "pdf_sha256": "0bbc575c74c74fc4cbbbbe459f114df9c438de3aad7511761ab894401d9ef03c",
+  "pages": 186,
+  "pdf_sha256": "a09bda61cd075544ef0c7b1b3c8d40daaffe846ab4ce496131527a18baee0bf5",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -812,6 +812,10 @@
       "sha256": "fcbd4d84edc386607e7f588beea4a679a22c83486393bba7bc3262da409ed608"
     },
     {
+      "path": "results/summaries/nsc-atlas-si-hierarchy-audit-v1.json",
+      "sha256": "5fc9ebdd4932263c2dce9dfcb61cb7bc81b593345706abd73b9c9d8637797bf2"
+    },
+    {
       "path": "results/summaries/nsc-atlas-source-forcing-bound-v1.json",
       "sha256": "2ccf4ad7326291b79500f4d78a0f858907a80901c74b771f8b22fd8cb735c611"
     },
@@ -913,6 +917,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "81dd1a41c0a452bb87c505660217f2daf9281d4b5b11fe9bf3de9a66ff24163b",
-  "version": "working-2026-10-29.5"
+  "source_sha256": "ec438f3ebeeab6685229ec87e04572357e0b8b0cbfb8137f2a4d1b20cd9862c4",
+  "version": "working-2026-10-29.6"
 }

@@ -1,13 +1,96 @@
 # Inherited SI scale: computed routes and remaining selector
 
-The next [selection-route and observation calculation](nsc-atlas-volume-selection-routes.md)
-tests actual attractors, entropy ordering and the defined same-action
-Hawking--Moss saddle. Cross-member selection still requires a common action.
+The active request is the SI hierarchy audit below. Earlier routes remain
+evidence, not active calculations. The Parke branch is logged and parked
+in the atlas owner. If g is not selected, stop at its missing numerical
+input; do not move to another route.
 
-The target is Lambda_obs=1.0904e-52 m^-2. Checkpoint 485b3b9, its couplings,
-regional state and P004/P005 remain unchanged. A failed candidate is not
-evidence against nesting. Each local failure below gets one line; the
-calculation continues to the next candidate.
+## Current audit: the geometric hierarchy and the tunnelling exponent
+
+The [retained audit](../results/summaries/nsc-atlas-si-hierarchy-audit-v1.json)
+uses b_HM=403.7817410357, V_star=.220983024212607 and the retained
+comparison ruler a0=L_ref(0)/L_unit(0)=6.6260770761. No field evolution
+or observation fit is needed. With ell_e_sigma=(5/2)*sqrt(kappa_nat),
+the same geometry gives
+
+$$
+\mathcal R\equiv\frac{L_{\rm ref}(0)}{\ell_{e\sigma}}
+=\frac{2.6504308304}{\sqrt g},\qquad
+\ln\mathcal R=0.9747222043-\frac{1}{2}\ln g,
+$$
+
+$$
+\Lambda_*\ell_{e\sigma}^2=1.3811439013g,\qquad
+\mathcal R^2\Lambda_*\ell_{e\sigma}^2=9.7022370093.
+$$
+
+The reduced action is S/hbar=S_hat/g. Variation with respect to its fields
+does not select an overall positive normalization. The record gives g=1
+and g=1/4 dimensional completions with the same normalized geometry and
+charge/tension data, but different SI rulers and quantum weights. These
+are different physical normalizations, not coordinate changes in one fixed
+quantum theory. The volume mode transports relative couplings without
+selecting their absolute Planck normalization.
+
+**g is not fixed by this geometry; the single missing numerical input is
+eta_e0=kappa_nat*e_can(0), the absolute canonical membrane charge in Planck
+units at the reference slice, with g=4*eta_e0^2.**
+
+The action supplies a rate per four-volume, Gamma_4=A_4 exp(-B), as in
+[Coleman--De Luccia](https://doi.org/10.1103/PhysRevD.21.3305) and the
+[HM application](https://link.aps.org/accepted/10.1103/PhysRevD.95.123502).
+Since A_4 has dimension length^(-4), a four-volume containing one expected
+event has volume 1/Gamma_4. Its volume-equivalent length is therefore
+A_4^(-1/4)*exp(B/4). A mean waiting time in a specified fixed three-volume
+V_3 is exp(B)/(A_4 V_3). Taking a square root changes the statistic and
+can introduce B/2, but supplies no geometric ruler. None has been
+identified with L_ref, nor its prefactor length with ell_e_sigma.
+**No hierarchy exponent is chosen.** B/4 is derived for an event-volume
+statistic; it is not a derived relation for the cosmological ruler.
+
+The requested inverse arithmetic, using the displayed logarithm 138.66:
+
+| Imposed hierarchy | Required B | Required g |
+| --- | ---: | ---: |
+| exp(B) | 138.66 | 2.9120275569 |
+| exp(B/2) | 277.32 | 1.4560137784 |
+| exp(B/4) | 554.64 | .7280068892 |
+
+Using the full target hierarchy instead gives ln(R)=138.6626874399 and
+g=(2.9119711185,1.4559855592,.7279927796). Substituting those same g
+values into the actual geometry gives:
+
+| Exponential divisor | Geometric R | Geometric ln(R) | Logarithm miss (%) | Model Lambda_star ell_e_sigma^2 |
+| ---: | ---: | ---: | ---: | ---: |
+| 1 | 1.55318413 | .44030710 | -99.68246 | 4.02185115 |
+| 2 | 2.19653405 | .78688069 | -99.43252 | 2.01092558 |
+| 4 | 3.10636825 | 1.13345428 | -99.18258 | 1.00546279 |
+
+The hierarchy-size misses round to -100%; the record retains the actual
+tiny ratios. The observed product is Lambda_obs*ell_e_sigma^2=4.4743e-120.
+The three conditional model products exceed it by factors 8.9888e119,
+4.4944e119 and 2.2472e119. These are consistency checks on target-inverted
+guesses, not physical predictions. No observed value selects g in the audit.
+
+There is also an anchoring distinction. Inverting the requested geometric
+hierarchy gives g=2.5453818757e-120 and B_HM=1.5863306991e122. The new
+late vacuum then gives Lambda_star*ell_e_sigma^2=3.51553865e-120,
+21.42826% below the observed product. This is not an independent prediction
+miss: the quoted hierarchy originally used the old vacuum 9/32 and
+Lambda*L_ref^2=12.3482524. The late (12,2) coefficient is 9.7022370,
+so the supplied pair of target numbers cannot both hold for it. Inverting
+Lambda_obs with the late coefficient instead gives g=3.2395640117e-120
+and R=1.4725606528e60, ln(R)=138.5421084. Neither inversion is a selector.
+
+Outcome: selected g, selected hierarchy exponent, predicted hierarchy,
+predicted SI vacuum and prediction miss remain undefined. The forward
+functions and requested inverse diagnostics are computed. Stop here until
+eta_e0 is independently derived or supplied; no next route is pursued.
+
+## Earlier source and route records
+
+Checkpoint 485b3b9 and P004/P005 remain preserved. The following sections
+describe earlier, explicitly conditional calculations.
 
 ## What is fixed before an SI ruler is supplied
 

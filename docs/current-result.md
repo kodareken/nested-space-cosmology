@@ -1,5 +1,16 @@
 # What the calculations show
 
+The [SI hierarchy audit](nsc-atlas-scale-selection.md#current-audit-the-geometric-hierarchy-and-the-tunnelling-exponent)
+finds g unselected. The single missing number is eta_e0, the absolute
+Planck-normalized canonical membrane charge, with g=4*eta_e0^2. The
+geometry fixes ln(L_ref/ell_e_sigma)=.9747222043-.5 ln(g) and
+Lambda_star*ell_e_sigma^2=1.3811439013g. The requested exponential
+inversions give order-one g, but then the geometric length ratio is only
+1.55--3.11. No tunnelling statistic has been identified with L_ref.
+The supplied hierarchy also uses the earlier 12.348 coefficient rather
+than the late 9.702 coefficient. Target inversions are diagnostics.
+Work stops at the normalization input; other routes are parked.
+
 The [Parke nucleation test](nsc-atlas-parke-nucleation.md) fixes an
 auxiliary constant-vacuum bubble at R_c=1.212662645008 model units and
 zero Schwarzschild seed offsets, independently of the old R=1.9,M=.12.
@@ -148,7 +159,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-29.5. Its central route is spherical
+revision 2026-10-29.6. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ccc678a70683f62f0a0061ae580985d866e892f5",
+  "current_receipt_commit_parent": "b1f69938de169c292861e90e3567ab66f834c696",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 292899,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 293319,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "f065d4e1e13ebfba3246d6d2efac2278bfcbecebda042c5985e2a5743f4c1f93"
+      "sha256": "4d9a7fe5ece94de8811ee56a984ff740ad6aab2415916347bc563f2afcd0fc49"
     },
     {
       "bytes": 150322,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 474930,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 475663,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9e34c759c30603b007849b76ed13762bc3b8471b5a68505e4bf60b1fc61133fd"
+      "sha256": "649c2c267e039f2b06d4ffc671f2c20dd3aee8652f7b045466ed73f269a3ad00"
     },
     {
       "bytes": 173938,
@@ -11013,12 +11013,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 31402,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "bytes": 35472,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "ee6cb54f68b56afb8f92d94c0ce9ad7fa51fcfd6bf73a93c3b09c8a477a78ff3"
+      "sha256": "02e9be60c565535a858cd1bd47dfbdd05856e540db41410bbe703c175af3b434"
     },
     {
       "bytes": 16908,
@@ -11120,15 +11120,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 128084,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 128623,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "464cbfcf0b5f7fceb5cf155e74227d35ebd5b74e1aec65ec2297660664b88625"
+      "sha256": "c83094b816141cadf914e186105ed86076a856c6c4a3c2fe07ec444e6a95ec42"
     },
     {
       "bytes": 30876,
@@ -12110,20 +12110,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 239724,
-      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+      "bytes": 240173,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e027a21cc2d6be7305aa1fb084b20f50815e0be906f8eab403db07201f6d7088"
+      "sha256": "de3e239b3088343c78d48d820786c2fc850885729376900e4833394b5aafb3c9"
     },
     {
-      "bytes": 51786,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 52190,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "05e7e4a9ac6e6e2003cf2132612dbf40299d90cf0f7affffaf39a5659b3c1a07"
+      "sha256": "f334ce499bbf8e5c052aaf8663a40e98c99efb60354023c4e3ee9a9a2eacbc29"
     },
     {
       "bytes": 18356,
@@ -12192,28 +12192,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 38872,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 39040,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1a232072ebf315b724e267e8bb9b84247295341b553d9a52cd8201f17255378e"
+      "sha256": "abb13f13e26095b51acd82c1d89e3a8bb808d08f894cc7a2175c06bd11b2101e"
     },
     {
       "bytes": 3206,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1f2ce000145f4660dfb5c52d70d674c795ab2a7ce12de1ded9906de62a606060"
+      "sha256": "b722e03ade57e311b152f378cdc3d175537be89a7cc09b5a442688f8db67858b"
     },
     {
-      "bytes": 49191,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 49344,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0924e88b6adc934f4e70687476edc70592294478fa2ba814486f99110cec6032"
+      "sha256": "f475b15ffab2167db27adc2bfd0538c6c32e7e2a5210c0d88fd1a575ed0747f4"
     },
     {
       "bytes": 226492,
@@ -12225,27 +12225,27 @@
     },
     {
       "bytes": 396,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4b41d5315bf57a591afaec1981a6800666484030adf8b1cfa565ff836d806e50"
+      "sha256": "b25a6587784ae880e54581a7efb6e5812a97b6c07de83bb7237b35be8a9b00ed"
     },
     {
-      "bytes": 539890,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 543413,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "81dd1a41c0a452bb87c505660217f2daf9281d4b5b11fe9bf3de9a66ff24163b"
+      "sha256": "ec438f3ebeeab6685229ec87e04572357e0b8b0cbfb8137f2a4d1b20cd9862c4"
     },
     {
-      "bytes": 15013145,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 15063871,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0bbc575c74c74fc4cbbbbe459f114df9c438de3aad7511761ab894401d9ef03c"
+      "sha256": "a09bda61cd075544ef0c7b1b3c8d40daaffe846ab4ce496131527a18baee0bf5"
     },
     {
       "bytes": 3283,
@@ -31366,6 +31366,14 @@
       "sha256": "fcbd4d84edc386607e7f588beea4a679a22c83486393bba7bc3262da409ed608"
     },
     {
+      "bytes": 8217,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "path": "results/summaries/nsc-atlas-si-hierarchy-audit-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5fc9ebdd4932263c2dce9dfcb61cb7bc81b593345706abd73b9c9d8637797bf2"
+    },
+    {
       "bytes": 13697,
       "change": "Preserve the source-cell certificate and include the actual final-knot value and first-jet owner.",
       "changed_from_commit": "ac98a98c426bc16daa03a3c49930b95f7414f842",
@@ -32133,6 +32141,14 @@
       "path": "scripts/check_nsc_atlas_shared_scalar_slice.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "17c9bb5ac6e9d52ced561edc845f044f11bff3af54b9f3c93e9736ee65bd251a"
+    },
+    {
+      "bytes": 1870,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "path": "scripts/check_nsc_atlas_si_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9c453ee202775d2034fd9f5bbb9a8a1dca540396e7b8994b7497315d964eb637"
     },
     {
       "bytes": 5510,
@@ -36574,6 +36590,14 @@
       "path": "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16"
+    },
+    {
+      "bytes": 5584,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "path": "src/recursive_horizons/nsc_atlas_si_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2f5b82d15b10d7dc2aa4d4effdce78751f3c0c7d52bc1117bfe8a9ecfc501aed"
     },
     {
       "bytes": 4099,
@@ -41260,6 +41284,14 @@
       "path": "tests/test_nsc_atlas_shared_scalar_slice.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "5d0b93f3a318e7a54d1058551e945bfe37cbe1b0369a80429c0b14fd73a54f56"
+    },
+    {
+      "bytes": 2961,
+      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
+      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "path": "tests/test_nsc_atlas_si_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6716022987de0a1b79813582613d71328f23d95ba47d9dc7a247980590e0695f"
     },
     {
       "bytes": 6166,

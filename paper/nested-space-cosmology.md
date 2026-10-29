@@ -68,8 +68,8 @@ supply both small curvature and substantial matter. A mass-free Parke
 control fixes a critical bubble radius, but the stated densities fail
 the source's vacuum test and empty classical matter remains empty.
 The wall-to-observer map therefore requires compatible vacuum phases,
-field preparation and matter production in one action. Full selection
-and SI normalization remain open.
+field preparation and matter production in one action. The SI hierarchy
+remains controlled by an unselected Planck-normalized membrane charge.
 
 The resulting book connects geometry, inherited state, stress, structure and
 interior observation. Its completed results establish specified mathematical
@@ -4378,9 +4378,83 @@ The relative volume is calculated. The microscopic charge and reference
 volume are not selected, so no metre-valued ruler or observed SI vacuum
 follows yet. The new source also changes later expansion: the fixed
 P004/P005 forecasts and supernova/DESI scores remain records of their
-original candidate. The next physical connection is a common parent
-source/state that supplies this normalization, the bulk energy and the
-new wall junction together.
+original candidate. A common parent source/state must still supply this
+normalization, the bulk energy and the new wall junction together.
+
+**Absolute normalization and tunnelling statistics**
+
+<!-- nsc-claim:si-hierarchy-normalization-audit -->
+
+Evidence: [retained SI hierarchy audit](../results/summaries/nsc-atlas-si-hierarchy-audit-v1.json),
+[definitions and stopping point](../docs/nsc-atlas-scale-selection.md#current-audit-the-geometric-hierarchy-and-the-tunnelling-exponent),
+and [independent identities and inverse controls](../tests/test_nsc_atlas_si_hierarchy.py).
+
+The current question isolates the absolute scale. With the retained
+reference $a_0=6.6260770761$ and
+$\ell_{e\sigma}=(5/2)\sqrt{\kappa_{\rm nat}}$, the geometry itself gives
+
+$$
+\mathcal{R}=\frac{L_{\rm ref}(0)}{\ell_{e\sigma}}
+=\frac{2.6504308304}{\sqrt{g}},\qquad
+\ln\mathcal{R}=0.9747222043-\frac{1}{2}\ln g,
+$$
+
+$$
+\Lambda_*\ell_{e\sigma}^2=1.3811439013g,\qquad
+\mathcal{R}^2\Lambda_*\ell_{e\sigma}^2=9.7022370093.
+$$
+
+The overall factor $1/g$ multiplying the dimensionless action cancels from
+classical field equations. Neither the fixed dimension nor ancestor label selects
+it. Dimensional completions with $g=1$ and $g=1/4$ preserve the supplied
+normalized source ratios while changing the SI ruler and quantum weight.
+The single missing numerical input is the absolute canonical membrane
+charge in Planck units at the reference slice:
+
+$$
+\eta_{e,0}=\kappa_{\rm nat}e_{\rm can}(0)
+=\frac{1}{2}\sqrt{g},\qquad g=4\eta_{e,0}^2.
+$$
+
+The [published tunnelling law](https://doi.org/10.1103/PhysRevD.21.3305)
+gives a rate per four-volume,
+$\Gamma_4=A_4e^{-B}$. A four-volume containing one expected event has
+volume $1/\Gamma_4$ and volume-equivalent length
+$A_4^{-1/4}e^{B/4}$. A mean wait in a fixed three-volume is
+$e^B/(A_4V_3)$. Taking a square root changes the statistic and does not
+itself define a length. No relation identifies one of these quantities
+with $L_{\rm ref}$ or the prefactor length with $\ell_{e\sigma}$.
+Thus no hierarchy exponent is selected by the current action.
+
+The requested inverse arithmetic is nevertheless checkable. Using the
+rounded logarithm 138.66 gives $g=2.91202756,1.45601378,.72800689$
+for the imposed choices $e^B,e^{B/2},e^{B/4}$. Using the full target
+logarithm 138.66268744 yields the following same-geometry check:
+
+| Imposed exponential | Inverse g | Actual geometric ln(R) | Logarithm miss (%) |
+| --- | ---: | ---: | ---: |
+| exp(B) | 2.91197112 | .44030710 | -99.68246 |
+| exp(B/2) | 1.45598556 | .78688069 | -99.43252 |
+| exp(B/4) | .72799278 | 1.13345428 | -99.18258 |
+
+Their geometric length ratios are only 1.55318, 2.19653 and 3.10637.
+The corresponding products $\Lambda_*\ell_{e\sigma}^2$ are 4.02185,
+2.01093 and 1.00546, whereas the observed benchmark is
+$4.4743\times10^{-120}$. These rows test target-inverted guesses; they
+are not independently selected predictions.
+
+Inverting the geometric hierarchy itself instead gives
+$g=2.5453818757\times10^{-120}$ and $B=1.5863306991\times10^{122}$.
+At that normalization the late vacuum is 21.42826% below the supplied
+Lambda benchmark. This is a consistency check: the quoted hierarchy
+was anchored to the old coefficient 12.3482524, while the late coefficient
+is 9.7022370. Inverting the observed Lambda with the latter would give
+$\mathcal{R}=1.4725606528\times10^{60}$, with logarithm 138.5421084.
+Neither target inversion is a scale-selection law.
+
+No value of $g$, hierarchy exponent, predicted SI hierarchy or prediction
+miss is selected. This audit stops at $\eta_{e,0}$; it does not resume a
+different route or the parked parent-to-child energy calculation.
 
 ### 13.24. An extremal member is not yet an inherited selection
 

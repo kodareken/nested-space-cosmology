@@ -18,6 +18,15 @@ starting a derivation.
 
 ## Current execution priority — 29 October 2026
 
+Active target: the SI hierarchy and the absolute action normalization g;
+stop at its single missing numerical input if it is not fixed. No other
+route is active under this instruction.
+
+ccc678a/b1f6993: Parke fixes R_c=1.212662645 L_unit(0) and zero seed mass from the fixed vacuum-wall inputs; the empty classical branch never reaches E=3/8; parent-to-child energy transfer is open and parked.
+
+The earlier execution entries below are retained context, not permission
+to resume their unfinished calculations during this hierarchy audit.
+
 ### Nucleation removes the supplied geometry only in its admitted sector
 
 The [mass-free Parke calculation](nsc-atlas-parke-nucleation.md) gives

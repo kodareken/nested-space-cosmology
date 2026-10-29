@@ -1,5 +1,16 @@
 # Reproducing the root project
 
+## SI hierarchy audit
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_si_hierarchy.py
+python scripts/run_python.py scripts/check_nsc_atlas_si_hierarchy.py --output .build/si-hierarchy-reproduced.json
+```
+
+This closed-form audit authenticates retained coefficients and distinguishes
+forward identities from target inversions. No new field evolution or data
+fit is performed; it stops at the unselected normalization g.
+
 ## Physical volume and the inherited evolving source
 
 Mass-free nucleation and reference-event admission:

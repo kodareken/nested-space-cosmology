@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_si_hierarchy.py` owns the forward SI identities and explicitly
+inverse exponential diagnostics. `check_nsc_atlas_si_hierarchy.py`
+authenticates retained geometry/HM coefficients and writes one compact
+record. Its tests check dimensional completions, invariant products,
+target isolation and distinct event-volume/time statistics. No g or
+hierarchy exponent is selected, and no new physical route is started.
+
 `nsc_atlas_parke_nucleation.py` reuses the isolated-bubble solver for the
 constant-vacuum radius/mass result, independently checks the Parke action,
 and audits field stationarity, empty-state evolution and the energy budget.

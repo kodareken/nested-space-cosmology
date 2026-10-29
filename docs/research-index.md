@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [active SI hierarchy audit](nsc-atlas-scale-selection.md#current-audit-the-geometric-hierarchy-and-the-tunnelling-exponent)
+isolates the absolute membrane-charge normalization eta_e0. The action
+does not select g=4*eta_e0^2 or identify a tunnelling statistic with the
+geometric ruler. The requested inverse exponent values and their geometric
+inconsistency are recorded; no further route is active.
+
 The [nucleation radius and matter-reference test](nsc-atlas-parke-nucleation.md)
 derives R_c and zero seed masses for the stipulated vacuum wall, then
 checks the source assumptions before a cosmological fit. The fixed action

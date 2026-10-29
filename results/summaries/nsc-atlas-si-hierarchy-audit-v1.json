@@ -1,0 +1,183 @@
+{
+  "dimensional_completions": [
+    {
+      "B_HM": 403.7817410357339,
+      "L_ref_m": 5.368912192354456e-34,
+      "L_unit_m": 8.102701086469756e-35,
+      "Lambda_star_ell_squared": 1.3811439013287936,
+      "Lambda_star_m_inverse2": 3.3658850267060295e+67,
+      "canonical_charge": 7.615709484244645e+67,
+      "canonical_tension": 3.7595904886392464e+101,
+      "eta_e0": 0.5,
+      "hierarchy": 2.6504308304398396,
+      "log_hierarchy": 0.9747222043083051,
+      "supplied_g": 1.0
+    },
+    {
+      "B_HM": 1615.1269641429355,
+      "L_ref_m": 1.0737824384708912e-33,
+      "L_unit_m": 1.6205402172939512e-34,
+      "Lambda_star_ell_squared": 0.3452859753321984,
+      "Lambda_star_m_inverse2": 8.414712566765074e+66,
+      "canonical_charge": 3.8078547421223225e+67,
+      "canonical_tension": 1.8797952443196232e+101,
+      "eta_e0": 0.25,
+      "hierarchy": 5.300861660879679,
+      "log_hierarchy": 1.6678693848682504,
+      "supplied_g": 0.25
+    }
+  ],
+  "exponential_inverse_diagnostics": [
+    {
+      "imposed_exponential": "exp(B/1)",
+      "p": 1,
+      "required_B_using_displayed_log": 138.66,
+      "required_B_using_full_target_log": 138.66268743989173,
+      "required_g_using_displayed_log": 2.9120275568710077,
+      "required_g_using_full_target_log": 2.9119711184796375,
+      "same_geometry": {
+        "B_HM": 138.66268743989173,
+        "L_ref_m": 3.146246675002395e-34,
+        "L_unit_m": 4.748279621362954e-35,
+        "Lambda_star_ell_squared": 4.021851151133737,
+        "Lambda_star_m_inverse2": 9.801359985891021e+67,
+        "canonical_charge": 1.2995826369322872e+68,
+        "canonical_tension": 6.415552656150118e+101,
+        "eta_e0": 0.8532249290895745,
+        "hierarchy": 1.5531841253559928,
+        "log_hierarchy": 0.4403070982179378,
+        "supplied_g": 2.9119711184796375
+      },
+      "same_geometry_Lambda_miss_percent": 8.988774748616123e+121,
+      "same_geometry_Lambda_over_observed": 8.988774748616123e+119,
+      "same_geometry_hierarchy_miss_percent": -100.0,
+      "same_geometry_hierarchy_over_target": 9.349382805014937e-61,
+      "same_geometry_log_miss_percent": -99.68246173044295,
+      "status": "Target-dependent inversion of an imposed exponential; not a selected coupling or prediction."
+    },
+    {
+      "imposed_exponential": "exp(B/2)",
+      "p": 2,
+      "required_B_using_displayed_log": 277.32,
+      "required_B_using_full_target_log": 277.32537487978345,
+      "required_g_using_displayed_log": 1.4560137784355038,
+      "required_g_using_full_target_log": 1.4559855592398188,
+      "same_geometry": {
+        "B_HM": 277.32537487978345,
+        "L_ref_m": 4.449464718359643e-34,
+        "L_unit_m": 6.715081438471274e-35,
+        "Lambda_star_ell_squared": 2.0109255755668687,
+        "Lambda_star_m_inverse2": 4.9006799929455104e+67,
+        "canonical_charge": 9.189436952871154e+67,
+        "canonical_tension": 4.536480788223116e+101,
+        "eta_e0": 0.6033211332366493,
+        "hierarchy": 2.1965340549410386,
+        "log_hierarchy": 0.7868806884979105,
+        "supplied_g": 1.4559855592398188
+      },
+      "same_geometry_Lambda_miss_percent": 4.4943873743080615e+121,
+      "same_geometry_Lambda_over_observed": 4.494387374308061e+119,
+      "same_geometry_hierarchy_miss_percent": -100.0,
+      "same_geometry_hierarchy_over_target": 1.3222023962669935e-60,
+      "same_geometry_log_miss_percent": -99.43252168047081,
+      "status": "Target-dependent inversion of an imposed exponential; not a selected coupling or prediction."
+    },
+    {
+      "imposed_exponential": "exp(B/4)",
+      "p": 4,
+      "required_B_using_displayed_log": 554.64,
+      "required_B_using_full_target_log": 554.6507497595669,
+      "required_g_using_displayed_log": 0.7280068892177519,
+      "required_g_using_full_target_log": 0.7279927796199094,
+      "same_geometry": {
+        "B_HM": 554.6507497595669,
+        "L_ref_m": 6.29249335000479e-34,
+        "L_unit_m": 9.496559242725908e-35,
+        "Lambda_star_ell_squared": 1.0054627877834343,
+        "Lambda_star_m_inverse2": 2.4503399964727552e+67,
+        "canonical_charge": 6.497913184661436e+67,
+        "canonical_tension": 3.207776328075059e+101,
+        "eta_e0": 0.42661246454478724,
+        "hierarchy": 3.1063682507119856,
+        "log_hierarchy": 1.133454278777883,
+        "supplied_g": 0.7279927796199094
+      },
+      "same_geometry_Lambda_miss_percent": 2.2471936871540308e+121,
+      "same_geometry_Lambda_over_observed": 2.2471936871540306e+119,
+      "same_geometry_hierarchy_miss_percent": -100.0,
+      "same_geometry_hierarchy_over_target": 1.8698765610029874e-60,
+      "same_geometry_log_miss_percent": -99.18258163049867,
+      "status": "Target-dependent inversion of an imposed exponential; not a selected coupling or prediction."
+    }
+  ],
+  "fixed": {
+    "HM_coefficient": 403.7817410357339,
+    "Vstar": 0.22098302421260696,
+    "a0": 6.626077076099598,
+    "charge_hat": 0.5,
+    "d": 12,
+    "j": 2,
+    "tension_hat": 0.2
+  },
+  "forward_identities": {
+    "Lambda_ell_squared": "Vstar*(e_hat/sigma_hat)^2*g",
+    "Lambda_ell_squared_coefficient": 1.3811439013287936,
+    "hierarchy_numerator": 2.6504308304398396,
+    "hierarchy_squared_times_Lambda_ell_squared": 9.702237009265097,
+    "log_hierarchy": "ln(a0*sigma_hat/e_hat)-0.5*ln(g)",
+    "log_hierarchy_intercept": 0.9747222043083051
+  },
+  "input_sha256": {
+    "results/summaries/nsc-atlas-SI-scale-ladder-v1.json": "66f2214ce696ac0039c925d2f9c255cf012fe0b276b55de7ca4d34a1b290f296",
+    "results/summaries/nsc-atlas-parent-volume-selector-v1.json": "8f2b2624cc53fcb901fd7b34b3b55433578f9eed52a3554a388ac4da5d904d43",
+    "results/summaries/nsc-atlas-volume-lifetime-v1.json": "61ba6a000991010f45832f7c2655e61386e277262f26b7718c6ef162dce49b9b"
+  },
+  "new_field_evolutions": 0,
+  "new_observation_fits": 0,
+  "predicted_Lambda_ell_squared": null,
+  "predicted_log_hierarchy": null,
+  "prediction_miss_percent": null,
+  "schema": "nsc-atlas-si-hierarchy-audit-v1",
+  "selected_g": null,
+  "selected_hierarchy_exponent": null,
+  "single_missing_numerical_input": {
+    "definition": "kappa_nat*e_can at the declared reference slice",
+    "name": "eta_e0",
+    "relation": "eta_e0=0.5*sqrt(g), so g=4*eta_e0^2",
+    "selected": false
+  },
+  "source_sha256": {
+    "scripts/check_nsc_atlas_si_hierarchy.py": "9c453ee202775d2034fd9f5bbb9a8a1dca540396e7b8994b7497315d964eb637",
+    "src/recursive_horizons/nsc_atlas_si_hierarchy.py": "2f5b82d15b10d7dc2aa4d4effdce78751f3c0c7d52bc1117bfe8a9ecfc501aed"
+  },
+  "stopping_outcome": "The geometry does not fix the absolute Planck-normalized membrane charge eta_e0. Stop here; do not continue to another route.",
+  "target_inverse_consistency": {
+    "B_if_hierarchy_is_inserted": 1.5863306991300476e+122,
+    "Lambda_ell_squared_if_hierarchy_is_inserted": 3.5155386541107805e-120,
+    "Lambda_miss_percent_if_hierarchy_is_inserted": -21.428258047424464,
+    "explanation": "The quoted hierarchy was anchored to the old 9/32 vacuum, whose Lambda Lref^2 was 12.3482524. The (12,2) late coefficient is 9.7022370; the two supplied target values cannot both be obtained with it.",
+    "g_if_Lambda_obs_is_inserted": 3.239564011689083e-120,
+    "g_if_hierarchy_is_inserted": 2.545381875652851e-120,
+    "hierarchy_if_Lambda_obs_is_inserted": 1.4725606528417974e+60,
+    "log_hierarchy_if_Lambda_obs_is_inserted": 138.54210840572296,
+    "target_pair_product": 12.348252397307407
+  },
+  "targets": {
+    "Lambda_obs_ell_squared": 4.474304077708618e-120,
+    "Lambda_obs_m_inverse2": 1.0904e-52,
+    "hierarchy": 1.661269153e+60,
+    "log_hierarchy": 138.66268743989173
+  },
+  "tunnelling_dictionary": {
+    "fixed_three_volume_wait": "tau=1/(Gamma4*V3)=exp(B)/(A4*V3)",
+    "geometric_ruler_identification_derived": false,
+    "half_exponent": "Taking an amplitude or square root changes the statistic; no length identification follows by itself.",
+    "prefactor_length_identified_with_microanchor": false,
+    "rate_per_four_volume": "Gamma4=A4*exp(-B), [A4]=length^-4",
+    "unit_expected_event_length": "Gamma4^(-1/4)=A4^(-1/4)*exp(B/4)"
+  },
+  "units": {
+    "ell_e_sigma_m": 2.025675271617439e-34,
+    "kappa_nat_m2": 6.565376489667816e-69
+  }
+}
