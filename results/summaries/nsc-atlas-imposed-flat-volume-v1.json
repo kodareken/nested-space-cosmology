@@ -1,0 +1,299 @@
+{
+  "controls": {
+    "closed": {
+      "Omega_Lambda": 3.2281195494476833e-09,
+      "Omega_m": 3.9209622215707896e-09,
+      "Omega_volume": 5.355349497193629e-11,
+      "chi_squared_total": 1.4328861652757041e-08,
+      "rd_h_Mpc": 3.5372032414215937e-07,
+      "three_total_posterior": 2.539035648396748e-11
+    },
+    "flat": {
+      "Omega_Lambda": 1.5495604799298235e-11,
+      "Omega_m": 1.665040327836209e-11,
+      "Omega_volume": 1.1545764344589315e-12,
+      "chi_squared_total": 4.3928594095632434e-10,
+      "rd_h_Mpc": 1.5188561519607902e-09,
+      "three_total_posterior": 3.815747717794693e-11
+    }
+  },
+  "data": {
+    "DESI_cov.txt": {
+      "bytes": 2547,
+      "git_blob": "fd8e5697ab61379b07b52efb781ea6713417a4d9",
+      "release": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "source_path": "desi_gaussian_bao_ALL_GCcomb_cov.txt"
+    },
+    "DESI_mean.txt": {
+      "bytes": 472,
+      "git_blob": "8aff444fdb42c0946342aa0011ab287eda097c4c",
+      "release": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "source_path": "desi_gaussian_bao_ALL_GCcomb_mean.txt"
+    },
+    "distances.dat": {
+      "bytes": 579283,
+      "git_blob": "cce857db0c15e9ce7a0e0ce77452b6ff62af969a",
+      "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+      "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat"
+    },
+    "stat-plus-systematic.cov": {
+      "bytes": 33284960,
+      "git_blob": "d1a1498154e7ba826df14bdbef35ebcb7f5efba1",
+      "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+      "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES_STAT%2BSYS.cov"
+    }
+  },
+  "flat_LCDM_control": {
+    "SN_only_best": {
+      "chi_squared": 1178.2087941061477,
+      "theta": 0.33122160652393506
+    },
+    "joint_best": {
+      "Omega_Lambda": 0.6963091153477179,
+      "Omega_k": 0.0,
+      "Omega_m": 0.30369088465228206,
+      "Omega_volume": 0.0,
+      "chi_squared_BAO": 10.78166569640329,
+      "chi_squared_SN": 1180.3951310453106,
+      "chi_squared_total": 1191.1767967417138,
+      "fitted_parameters": 3,
+      "rd_h_Mpc": 101.05339394018714,
+      "theta": 0.30369088465228206
+    },
+    "model": "flat_LCDM",
+    "numerical": {
+      "likelihood_calls": 1590,
+      "process_CPU_seconds": 10.390625,
+      "resolved_minima": 1
+    },
+    "order": 96,
+    "posterior": {
+      "moments": {
+        "Omega_Lambda": {
+          "mean": 0.6959444388223165,
+          "standard_deviation": 0.007997619168493862
+        },
+        "Omega_k": {
+          "mean": 0.0,
+          "standard_deviation": 0.0
+        },
+        "Omega_m": {
+          "mean": 0.3040555611776842,
+          "standard_deviation": 0.007997619168493864
+        },
+        "Omega_volume": {
+          "mean": 0.0,
+          "standard_deviation": 0.0
+        }
+      },
+      "nodes": 1440,
+      "prior": "uniform shape and common flat positive BAO beta"
+    },
+    "prior_bounds": [
+      0.0,
+      1.0
+    ],
+    "three_Omega_Lambda": {
+      "best_fit": 2.0889273460431537,
+      "comparison": 2.054,
+      "comparison_sigma": 0.022,
+      "posterior_mean": 2.0878333164669494,
+      "posterior_sigma": 0.023992857505481587,
+      "standardized_difference": 1.039350123610748
+    }
+  },
+  "frozen_checkpoints": {
+    "results/prediction-register.json": "327fd09230c372ab31b6563fb62e74cb3249d747da8070d810ae85bcfca32d84",
+    "results/summaries/nsc-atlas-parent-bao-validation-v1.json": "5d9f4cffc0036b2efe7c130e8e06ec5e25856ac2179473358cfed2fb62ae0bb3",
+    "results/summaries/nsc-atlas-parent-supernova-v2.json": "e592da938f1283fb74e9d8ad3ffb5b29bde260ee22712d798fec04d461d0abf7",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_parent_past.py": "c75adfe6d4b529b5b4dc06b9193d9054bcaba42f7c0620f5f3db591f73ead178",
+    "src/recursive_horizons/nsc_atlas_parent_supernova.py": "9f8ebf650b48ef91cd29fe9777ac355814eda902723038a61db4319298fc5575",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16"
+  },
+  "imposed_condition": "C=0 exactly, specified before fitting; not inferred from an inherited mechanism.",
+  "inherited_flatness_derived": false,
+  "method_commit": "e16b99b864c9a76d0f067bfbffde073c4f5b36c5",
+  "models": {
+    "closed": {
+      "SN_only_best": {
+        "chi_squared": 1179.2896386281438,
+        "theta": 0.3285532764618795
+      },
+      "delta_chi_squared_vs_flat_LCDM": 39.77234047806337,
+      "joint_best": {
+        "Omega_Lambda": 0.6321948772434725,
+        "Omega_dark_energy": 0.7861239487272765,
+        "Omega_k": -0.08120633329477887,
+        "Omega_kinetic": 0.010621622894593868,
+        "Omega_m": 0.29508238456750246,
+        "Omega_potential": 0.7755023258326826,
+        "Omega_volume": 0.15392907148380408,
+        "chi_squared_BAO": 36.97493149841428,
+        "chi_squared_SN": 1193.974205721363,
+        "chi_squared_total": 1230.9491372197772,
+        "fitted_parameters": 3,
+        "rd_h_Mpc": 103.96783201176336,
+        "theta": 0.43923013327691346
+      },
+      "model": "closed_volume_12_2",
+      "numerical": {
+        "likelihood_calls": 1495,
+        "process_CPU_seconds": 9.40625,
+        "resolved_minima": 1
+      },
+      "order": 96,
+      "posterior": {
+        "moments": {
+          "Omega_Lambda": {
+            "mean": 0.6321850316313588,
+            "standard_deviation": 0.0043887362641179695
+          },
+          "Omega_dark_energy": {
+            "mean": 0.786086980167455,
+            "standard_deviation": 0.004464031047743322
+          },
+          "Omega_k": {
+            "mean": -0.0812066039295095,
+            "standard_deviation": 0.0008693743476382053
+          },
+          "Omega_kinetic": {
+            "mean": 0.010633867504266516,
+            "standard_deviation": 0.000665843856844879
+          },
+          "Omega_m": {
+            "mean": 0.2951196237620526,
+            "standard_deviation": 0.005333359161636848
+          },
+          "Omega_potential": {
+            "mean": 0.7754531126631886,
+            "standard_deviation": 0.003798743505800215
+          },
+          "Omega_volume": {
+            "mean": 0.1539019485360963,
+            "standard_deviation": 8.425297956215066e-05
+          }
+        },
+        "nodes": 1344,
+        "prior": "uniform shape and common flat positive BAO beta"
+      },
+      "prior_bounds": [
+        0.0,
+        2.995732273553991
+      ],
+      "three_Omega_Lambda": {
+        "best_fit": 1.8965846317304174,
+        "comparison": 2.054,
+        "comparison_sigma": 0.022,
+        "posterior_mean": 1.8965550948940764,
+        "posterior_sigma": 0.013166208792353909,
+        "standardized_difference": -6.140879710547037
+      },
+      "three_total_dark_energy": {
+        "best_fit": 2.3583718461818295,
+        "comparison": 2.054,
+        "comparison_sigma": 0.022,
+        "covariance_included": true,
+        "posterior_mean": 2.3582609405023653,
+        "posterior_sigma": 0.013392093143229965,
+        "standardized_difference": 11.813414417174382
+      }
+    },
+    "flat": {
+      "SN_only_best": {
+        "chi_squared": 1178.1337801773032,
+        "theta": 0.3344609546631561
+      },
+      "delta_chi_squared_vs_flat_LCDM": 16.68944953574305,
+      "joint_best": {
+        "Omega_Lambda": 0.577258988515375,
+        "Omega_dark_energy": 0.7205853913329454,
+        "Omega_k": -0.0,
+        "Omega_kinetic": 0.008116894753957965,
+        "Omega_m": 0.279414608667055,
+        "Omega_potential": 0.7124684965789875,
+        "Omega_volume": 0.14332640281757036,
+        "chi_squared_BAO": 20.99420963272635,
+        "chi_squared_SN": 1186.8720366447305,
+        "chi_squared_total": 1207.8662462774569,
+        "fitted_parameters": 3,
+        "rd_h_Mpc": 102.80929063933486,
+        "theta": 0.4256503406128458
+      },
+      "model": "imposed_flat_volume_12_2",
+      "numerical": {
+        "likelihood_calls": 1496,
+        "process_CPU_seconds": 9.265625,
+        "resolved_minima": 1
+      },
+      "order": 96,
+      "posterior": {
+        "moments": {
+          "Omega_Lambda": {
+            "mean": 0.577253208352526,
+            "standard_deviation": 0.004906890941080017
+          },
+          "Omega_dark_energy": {
+            "mean": 0.7205529919207228,
+            "standard_deviation": 0.005270861553099942
+          },
+          "Omega_k": {
+            "mean": 0.0,
+            "standard_deviation": 0.0
+          },
+          "Omega_kinetic": {
+            "mean": 0.008130399084406352,
+            "standard_deviation": 0.0005888416849862927
+          },
+          "Omega_m": {
+            "mean": 0.27944700807927597,
+            "standard_deviation": 0.005270861553099931
+          },
+          "Omega_potential": {
+            "mean": 0.7124225928363164,
+            "standard_deviation": 0.004682580155002106
+          },
+          "Omega_volume": {
+            "mean": 0.14329978356819678,
+            "standard_deviation": 0.0003657222262373899
+          }
+        },
+        "nodes": 1344,
+        "prior": "uniform shape and common flat positive BAO beta"
+      },
+      "prior_bounds": [
+        0.0,
+        2.995732273553991
+      ],
+      "three_Omega_Lambda": {
+        "best_fit": 1.7317769655461253,
+        "comparison": 2.054,
+        "comparison_sigma": 0.022,
+        "posterior_mean": 1.731759625057578,
+        "posterior_sigma": 0.014720672823240053,
+        "standardized_difference": -12.173471705874121
+      },
+      "three_total_dark_energy": {
+        "best_fit": 2.1617561739988362,
+        "comparison": 2.054,
+        "comparison_sigma": 0.022,
+        "covariance_included": true,
+        "posterior_mean": 2.161658975762168,
+        "posterior_sigma": 0.015812584659299824,
+        "standardized_difference": 3.9736628977670603
+      }
+    }
+  },
+  "schema": "nsc-atlas-imposed-flat-volume-v1",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_flat_volume_control.py": "2431f2dba2e76d61a98505614bec71d2230a13ca3099badbb391dbb0cf646996",
+    "src/recursive_horizons/nsc_atlas_curvature_mechanisms.py": "08dd157071832af7367d59c19dfb16656aeb735427ee084d3846701789ef2f98",
+    "tests/test_nsc_atlas_curvature_mechanisms.py": "1730562d3d5dfbf50fd03b6296e65d3609361b9731d32fa0bde6f2c180aa3f0b"
+  }
+}

@@ -65,8 +65,11 @@ but attractor, entropy and tunnelling checks do not select it between the
 different parent actions. A same-action Hawking--Moss saddle exposes an
 escape channel. With the actual evolving volume stress retained, its
 conditional SN+DESI fit gives chi-square 1230.95 versus 1191.18 for the
-flat control. The common parent action, physical selection and absolute
-SI normalization remain unresolved.
+flat control. A subsequent lifetime comparison gives a conditional HM
+survival preference and excludes four regular CDL channels. An imposed
+flatness control lowers the joint loss to 16.69, while an energy bound
+identifies why the existing preparation cannot supply both small curvature
+and substantial matter. Physical selection and SI normalization remain open.
 
 The resulting book connects geometry, inherited state, stress, structure and
 interior observation. Its completed results establish specified mathematical
@@ -4590,6 +4593,157 @@ The two numerical settings change the joint chi-square by less than
 $1.44\times10^{-8}$. The original parent score remains its own result.
 This particular extension's actual evolving source worsens the shared-ruler
 comparison; its lower late vacuum alone does not repair the connection.
+
+### 13.26. Survival ranking and the curvature that must be inherited
+
+<!-- nsc-claim:volume-lifetime-ordering -->
+
+Evidence: [five lifetime coefficients and CDL checks](../results/summaries/nsc-atlas-volume-lifetime-v1.json),
+[proof, assumptions and source references](../docs/nsc-atlas-lifetime-curvature.md),
+and [symbolic and rational controls](../tests/test_nsc_atlas_volume_lifetime.py).
+
+At fixed flux, the common normalization $B_i=b_i/g$ permits a comparison of leading
+[Hawking--Moss](https://doi.org/10.1016/0370-2693%2882%2990946-7)
+escape exponents. The resulting values are:
+
+| Member (d,j) | Late vacuum coefficient | HM coefficient b | Regular compact CDL |
+| --- | ---: | ---: | --- |
+| (12,2) | 9.702237009265 | 403.781741036 | Absence unresolved |
+| (6,3) | 9.991573647602 | 369.001286854 | Excluded below |
+| (5,4) | 10.635176064650 | 326.046593819 | Excluded below |
+| (4,5) | 10.776179311559 | 314.036386367 | Excluded below |
+| (3,7) | 10.727932243144 | 305.543559374 | Excluded below |
+
+The top negative-curvature ratios are all below four. This alone does
+not exclude a distant CDL branch, as the
+[global necessary condition](https://arxiv.org/html/gr-qc/0311040)
+makes explicit. A stronger identity applies to four of these potentials.
+For canonical $\phi=\sqrt{K}s$, put $y=\phi'/a$, $h=a'/a$ and
+$Z=h/10+13\phi'/20$. The regular Euclidean equations imply
+
+$$
+0=\int a^5\left[(y'+Zy)^2+
+\left(G+\frac{39}{100}(h+3\phi'/2)^2\right)y^2\right]d\xi,
+$$
+
+$$
+G=V_{\phi\phi}+\frac{13}{10}V+\frac{13}{20}V_\phi.
+$$
+
+The boundary term vanishes as $a^4$ at each regular pole. Positive $G$
+everywhere therefore forces $\phi'=0$, excluding all nonconstant regular
+compact O(4) bounces, including thick and oscillating profiles. The
+square-completion constants are mathematical choices and add no physical
+parameter. For the exponential potentials, a convex one-variable expression
+gives the global sign; exact rational bounds certify positivity for
+$(6,3),(5,4),(4,5),(3,7)$. The retained heavy scalar is also forced to its
+minimum by its positive Euclidean mass identity. Flux-changing membranes,
+omitted internal modes and singular instantons are outside this scalar-bounce result.
+
+For $(12,2)$ this certificate is inconclusive. Independent regular-pole
+shots are matched at the equator. Eight bounded starting pairs approach
+the HM solution and produce no admitted nonconstant root. This finite
+search is not a proof of absence, so no reference CDL action is invented.
+
+A precise survival theorem can nevertheless be stated. Assume HM-only
+rates $\Gamma_i=A_i(g)e^{-b_i/g}$ with positive subexponential prefactors,
+positive initial populations and no replenishment. Conditional survivors
+then have weights
+
+$$
+p_i(t)=\frac{n_i(0)e^{-\Gamma_i t}}
+{\sum_k n_k(0)e^{-\Gamma_k t}}.
+$$
+
+For sufficiently small common $g$, the largest $b_i$ is the smallest
+rate, so its conditional survivor weight tends to one at late times.
+Under this survival rule the HM approximation selects $(12,2)$.
+Action ratios are independent of $g$, but actual lifetime ratios retain
+$\exp[(b_i-b_j)/g]$ and prefactors. The unresolved reference CDL channel
+prevents an unconditional full-decay selection theorem. If any such
+reference channel still had coefficient above 369.001286854, the
+reference would retain its leading lifetime advantage over these four.
+
+<!-- nsc-claim:curvature-matter-obstruction -->
+
+Evidence: [inherited curvature audit and exact energy bound](../results/summaries/nsc-atlas-curvature-mechanisms-v1.json),
+[derivation](../docs/nsc-atlas-lifetime-curvature.md),
+and [curvature controls](../tests/test_nsc_atlas_curvature_mechanisms.py).
+
+The three proposed flattening routes have different missing inputs.
+[Gott](https://doi.org/10.1038/295304a0) and
+[Bucher--Goldhaber--Turok](https://arxiv.org/html/hep-ph/9411206) supply
+an open-bubble geometry and post-nucleation inflation. An open origin
+starts with curvature domination; small observed curvature requires a
+specified subsequent expansion and exit history. That history has not
+been inherited by this source. The oscillating-scalar dust phase itself
+has $|\Omega_k|$ growing approximately as $a$ during matter domination.
+Pure nesting similarity $a\to ra$, $H\to H/r$ leaves $\Omega_k$ invariant.
+
+For the actual prepared volume model, there is a stronger restriction:
+
+$$
+\frac{|\Omega_k|}{\Omega_m}=\frac{3C}{E_0}e^{N+6s}.
+$$
+
+Total energy decreases from $21/32$. Rational exponential bounds give
+$V(-1/12)>21/32$, so $s>-1/12$ along this expanding preparation.
+Consequently, for $N\geq0$,
+
+$$
+\frac{|\Omega_k|}{\Omega_m}>0.11051717,
+\qquad |\Omega_k|\leq0.002\ \Longrightarrow\ \Omega_m<0.01809674.
+$$
+
+Late acceleration does dilute curvature, but it also removes the required
+matter. The first crossing $\Omega_k=-.002$ is at $N=2.52065449$,
+where $\Omega_m=.00109975$. At $N=6$ the curvature is
+$-1.8998373\times10^{-6}$ and matter fraction $3.2008896\times10^{-8}$.
+These are trajectory values, not a selected present epoch. None of these
+three routes derives near-flatness together with the needed matter in the
+current preparation. A changed dimensionless source ratio or a specified
+matter-producing process after dilution is required.
+
+<!-- nsc-claim:imposed-flat-volume-control -->
+
+Evidence: [fixed-flatness shared-ruler control](../results/summaries/nsc-atlas-imposed-flat-volume-v1.json)
+and [declared method and observer convention](../docs/nsc-atlas-lifetime-curvature.md).
+
+To isolate the role of curvature, impose $C=0$ before fitting and retain
+the same potential, excitation and initial $s=v=0$. This is a diagnostic
+initial condition, not an inherited flatness result. The homogeneous
+constraint determines the changed initial expansion and the source is
+evolved consistently. The old closed reference ruler does not become a
+finite curvature radius for the flat control.
+
+| Quantity | Closed volume | Imposed flat volume | Flat LambdaCDM |
+| --- | ---: | ---: | ---: |
+| Joint SN + DESI chi-square | 1230.94914 | 1207.86625 | 1191.17680 |
+| Difference from flat LambdaCDM | +39.77234 | +16.68945 | 0 |
+| Fitted quantities | 3 | 3 | 3 |
+| Constant vacuum fraction | .63219488 | .57725899 | .69630912 |
+| Additional volume fraction | .15392907 | .14332640 | 0 |
+| Matter fraction | .29508238 | .27941461 | .30369088 |
+| Curvature fraction | -.08120633 | 0 fixed | 0 fixed |
+
+The imposed-flat posterior gives
+
+$$
+3(\Omega_\Lambda+\Omega_s)=2.16165898\pm0.01581258,
+\qquad \mathrm{benchmark}=2.054\pm0.022.
+$$
+
+The combined-width standardized difference is +3.97366. The corresponding
+closed-source sum is $2.35826094\pm0.01339209$, or +11.81341 standardized
+units. Both include the component covariance. The flat control's SN and
+DESI contributions are 1186.87204 and 20.99421; the two numerical settings
+change their joint score by less than $4.4\times10^{-10}$.
+
+Flattening substantially improves this conditional comparison, but does
+not remove its remaining distance-history mismatch. No inherited curvature
+value was derived for the requested physical refit; the imposed control
+does not replace that missing construction. These results restrict the
+declared source and selection arguments without rejecting nesting.
 
 ## IV. Concentration, conservation and the surrounding reservoir
 

@@ -1,10 +1,10 @@
 {
-  "bytes": 14586679,
+  "bytes": 14659795,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "a1a622845e1b3221e55c27d01d41661cf8f47d8de4a7f5ed28bb345cb05def06",
+  "metadata_sha256": "1a137d7f769e9a7c592c6a6ea134dac2de537a9fc9935e08afa3268f3a5de82a",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 179,
-  "pdf_sha256": "24c6fa161644528efac8966da8b41b0e17ff1468973643899cd522b9aaeef29b",
+  "pages": 181,
+  "pdf_sha256": "33ec6abd36d1c463be79edc6b5578fb2f90e1e93e6860e58f2f69c04d1712769",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -556,6 +556,10 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "path": "results/summaries/nsc-atlas-curvature-mechanisms-v1.json",
+      "sha256": "3e4cce15710b0b918a0d74a0e09eda96655a48fa5f214ed61c41c9c1636c8b6e"
+    },
+    {
       "path": "results/summaries/nsc-atlas-dirac-bulk-trace-v1.json",
       "sha256": "b2448316f443ac6df9cc0a005ca47bfb73685d85a39f60a24db33372df54375f"
     },
@@ -658,6 +662,10 @@
     {
       "path": "results/summaries/nsc-atlas-hierarchy-tidal-tail-v1.json",
       "sha256": "8951d86ee7a86fa0ef1553717c264bcfa560bddd6d484d49f03c822079ea5efd"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-imposed-flat-volume-v1.json",
+      "sha256": "c12a4c1947a013c13c5e595144500ec0c9ada01499b68ea18df8d34bb2da8631"
     },
     {
       "path": "results/summaries/nsc-atlas-independent-cap-mass-lapse-v1.json",
@@ -808,6 +816,10 @@
       "sha256": "a491bf7e2241a58776b11d87fc55454f58e3885e5d287c287092534d9a15ac8f"
     },
     {
+      "path": "results/summaries/nsc-atlas-volume-lifetime-v1.json",
+      "sha256": "61ba6a000991010f45832f7c2655e61386e277262f26b7718c6ef162dce49b9b"
+    },
+    {
       "path": "results/summaries/nsc-atlas-volume-observations-v1.json",
       "sha256": "868ffdc57c980a769f963fe923bc732c2a7966d8c1bb2fbaebf448eba31a2a8d"
     },
@@ -881,6 +893,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "ab017d16f4694c9914785e08a7cf1d0e9777d9ae3ca2d17a4b235b7c880d7cda",
-  "version": "working-2026-10-29.2"
+  "source_sha256": "95e3948f6f58cbb79fa410e10d9311f0d67c355b6673875234e85588ed49d168",
+  "version": "working-2026-10-29.3"
 }

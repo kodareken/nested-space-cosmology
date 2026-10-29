@@ -603,6 +603,21 @@
       "section": "13.25",
       "status": "measured",
       "owner": "docs/nsc-atlas-volume-selection-routes.md"
+    },
+    "volume-lifetime-ordering": {
+      "section": "13.26",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-lifetime-curvature.md"
+    },
+    "curvature-matter-obstruction": {
+      "section": "13.26",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-lifetime-curvature.md"
+    },
+    "imposed-flat-volume-control": {
+      "section": "13.26",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-lifetime-curvature.md"
     }
   },
   "findings": [

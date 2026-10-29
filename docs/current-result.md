@@ -1,5 +1,21 @@
 # What the calculations show
 
+The [lifetime/curvature follow-up](nsc-atlas-lifetime-curvature.md) computes
+all five HM coefficients: 403.78174,369.00129,326.04659,314.03639,305.54356.
+A global square-completion identity excludes regular compact scalar CDL
+bounces for the four competitors. Reference (12,2) CDL absence remains
+unresolved after bounded two-pole shooting. HM-only conditional survival
+selects (12,2); an unconditional lifetime selection is not established.
+
+The fixed source obeys |Omega_k|/Omega_m>.11051717 for expanding N>=0.
+Its first -.002 curvature crossing has matter fraction only .00109975.
+The three tested inherited routes do not supply small curvature at an
+epoch with the required matter. An explicitly imposed C=0 control improves
+the joint SN+DESI score to 1207.86625, but still loses by +16.68945 to flat
+LambdaCDM. Its fractions (Lambda,s,m,k) are (.577259,.143326,.279415,0),
+and posterior 3*(Lambda+s)=2.161659 +/- .015813. This is a diagnostic
+control, not a derived-flatness prediction.
+
 The [three selection routes and actual volume-history refit](nsc-atlas-volume-selection-routes.md)
 are now evaluated. Five attractor runs approach five distinct minima;
 entropy ranks them without selecting a transition; cross-member BT/CDL
@@ -102,7 +118,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-29.2. Its central route is spherical
+revision 2026-10-29.3. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

@@ -18,6 +18,17 @@ starting a derivation.
 
 ## Current execution priority — 29 October 2026
 
+### Lifetime ordering and the physical curvature requirement
+
+The [new owner](nsc-atlas-lifetime-curvature.md) contains all five HM
+coefficients, four global compact-CDL exclusions and the conditional
+survival theorem. Reference CDL absence remains an identified open step.
+The curvature/matter inequality shows that late dilution of the existing
+source cannot give both near-flatness and substantial matter. Imposed
+C=0 reduces the shared-ruler loss to +16.68945 but is not inherited.
+Next physical work must supply a compatible change of C/E0 or matter
+production after dilution, rather than relabel the tested late epoch.
+
 ### Computed: selection routes and conditional evolving-volume data test
 
 The [route owner](nsc-atlas-volume-selection-routes.md) records all five

@@ -1,5 +1,15 @@
 # Active code and evidence map
 
+`nsc_atlas_volume_lifetime.py` owns the five HM exponents, the exact
+completed-square CDL certificate and bounded reference pole matching.
+`nsc_atlas_curvature_mechanisms.py` owns the energy/curvature bound,
+threshold witness and explicitly imposed flat-background control.
+Their `check_...` producers retain compact records.
+`measure_nsc_atlas_flat_volume_control.py` reuses the existing common-ruler
+fit with four model/order workers and propagates the dark-energy sum
+at each posterior node. The [owner](nsc-atlas-lifetime-curvature.md)
+states which results are derived and which are diagnostic controls.
+
 `nsc_atlas_volume_routes.py` evaluates the five actual finite flows, relative
 de Sitter entropies and the same-action Hawking--Moss saddle. Its producer
 is `check_nsc_atlas_volume_routes.py`. `nsc_atlas_volume_observations.py`

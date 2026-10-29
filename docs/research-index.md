@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [lifetime and curvature continuation](nsc-atlas-lifetime-curvature.md)
+adds five HM coefficients, a global fixed-flux scalar CDL exclusion for
+four members, and a conditional survival theorem. The reference CDL
+question remains open. An exact curvature/matter bound obstructs late
+flattening with substantial matter in the fixed preparation. Imposed
+C=0 improves the joint data score but leaves Delta chi-square +16.68945;
+it is explicitly a diagnostic rather than inherited flatness.
+
 The [physical selection routes and evolving-volume refit](nsc-atlas-volume-selection-routes.md)
 now give five distinct attractors, relative horizon entropies and a
 same-action HM coefficient 403.7817410/g. Cross-member selection remains

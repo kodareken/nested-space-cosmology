@@ -60,11 +60,11 @@ the five members are -.01863743, .02689417, .05554020, .07775262 and
 certify positivity in the last four cases. The first case fails this
 sufficient exclusion test; that is not evidence that a CDL bounce exists.
 
-The extra original scalar cannot evade this restriction in the retained
-truncation: its Euclidean equation is Laplacian(chi)=omega(s)^2*chi with
+The extra original scalar cannot evade this restriction at fixed flux in
+the retained truncation: its Euclidean equation is Laplacian(chi)=omega(s)^2*chi with
 positive omega(s)^2. Integration against chi on a regular compact manifold
-forces chi=0. Other internal modes and singular instantons are outside
-this calculation.
+forces chi=0. Flux-changing charged membranes, other internal modes and
+singular instantons are outside this scalar-bounce calculation.
 
 For (12,2), regular pole series are integrated independently to the first
 equator a'=0. Matching the two field values and opposite normal derivatives
@@ -94,6 +94,10 @@ Therefore the HM-only survival model selects (12,2), with late coefficient
 This theorem states the ensemble and rate assumptions rather than adding
 a fitted physical parameter. Common g alone does not specify prefactors,
 initial populations, production or a volume-weighted measure.
+
+Action ratios b_i/b_j are independent of common g. Actual lifetime ratios
+retain it: tau_12/tau_i=(A_i/A_12)*exp[(b_12-b_i)/g]. The ordering at
+leading semiclassical exponential order is the parameter-independent part.
 
 The four competing regular scalar CDL channels are excluded. A faster
 unresolved channel in (12,2) could still change the ranking; if its action
@@ -184,3 +188,46 @@ model/order jobs compare orders 48/96 and background tolerances, with
 Omega_m, Omega_k and the posterior of their requested dark-energy sum.
 That sum is evaluated at every posterior node, so its covariance is
 included; independent component errors are not added in quadrature.
+
+## Retained fixed-flatness control result
+
+The [retained control](../results/summaries/nsc-atlas-imposed-flat-volume-v1.json)
+uses committed method e16b99b. It confirms a substantial curvature effect,
+while showing a residual discrepancy after C is imposed to be exactly zero.
+
+| Quantity | Original closed volume | Imposed flat volume | Flat LambdaCDM |
+| --- | ---: | ---: | ---: |
+| SN chi-square at joint optimum | 1193.97421 | 1186.87204 | 1180.39513 |
+| DESI chi-square at joint optimum | 36.97493 | 20.99421 | 10.78167 |
+| Joint chi-square | 1230.94914 | 1207.86625 | 1191.17680 |
+| Delta chi-square versus flat LambdaCDM | +39.77234 | +16.68945 | 0 |
+| Fitted quantities | 3 | 3 | 3 |
+| Omega_Lambda | .63219488 | .57725899 | .69630912 |
+| Omega_s | .15392907 | .14332640 | 0 |
+| Omega_m | .29508238 | .27941461 | .30369088 |
+| Omega_k | -.08120633 | 0 fixed | 0 fixed |
+| Shared r_d h, Mpc | 103.96783 | 102.80929 | 101.05339 |
+
+The imposed-flat best-fit 3*(Omega_Lambda+Omega_s) is 2.16175617.
+Its posterior is 2.16165898 +/- .01581258; versus 2.054 +/- .022,
+the combined-width standardized difference is +3.97366. The closed
+source's corresponding posterior is 2.35826094 +/- .01339209,
+or +11.81341 standardized units. The component covariance is included.
+These are the requested total-dark-energy diagnostics, distinct from
+the earlier constant-floor-only comparison.
+
+The two numerical settings change the imposed-flat joint chi-square by
+4.4e-10 and the requested posterior mean by 3.9e-11. The original closed
+score is recovered. Flattening reduces the joint loss by 23.08289,
+but does not remove the remaining time-dependent source/observer mismatch.
+The comparison remains conditional on the homogeneous averaged action
+and Einstein-frame light/luminosity convention.
+
+No inherited observed curvature value satisfying the target was selected,
+so the requested derived-flatness refit remains unfulfilled. This imposed
+control is evidence about the effect of curvature, not a replacement for
+that derivation. The exact curvature/matter bound identifies the next
+physical requirement: change the dimensionless preparation C/E0 or
+repopulate matter after curvature dilution through a specified inherited
+process. A change of units, a later observer epoch or the integer labels
+alone cannot do that in the present source.

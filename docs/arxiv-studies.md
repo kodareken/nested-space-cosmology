@@ -1,5 +1,23 @@
 # Cited arXiv studies
 
+## Lifetime and curvature — 29 October 2026
+
+[Balek--Demetrian, gr-qc/0311040](https://arxiv.org/html/gr-qc/0311040)
+distinguishes sufficient top-of-barrier and necessary global curvature
+conditions for regular CDL bounces. The new square-completion identity
+is derived and checked directly for the atlas potentials; it is not
+attributed to the top-only criterion. The earlier CDL and HM sources
+retain their action and saddle conventions.
+
+[Gott (1982)](https://doi.org/10.1038/295304a0) and
+[Bucher--Goldhaber--Turok, hep-ph/9411206](https://arxiv.org/html/hep-ph/9411206)
+give the open bubble interior and post-nucleation inflationary framework.
+The latter's introduction also records that matter/radiation expansion
+drives relative curvature away from flatness. Applying those constructions
+to the current source requires an actual birth state, expansion duration
+and exit history. The atlas does not import those missing inputs or
+identify an HM sphere as a localized CDL bubble.
+
 ## Volume selection routes — 29 October 2026
 
 [Brown--Teitelboim](https://doi.org/10.1016/0370-2693%2887%2991190-7),
