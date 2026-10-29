@@ -101,3 +101,86 @@ remained above 369.001286854/g, the reference would still win at leading
 exponential order. No unconditional selection or absolute lifetime is
 claimed. The finite shooting allowance is 1600 residual calls or 120
 process-CPU seconds; no failed pole search is silently repeated.
+
+## Curvature mechanisms, evaluated second
+
+The [curvature audit](../results/summaries/nsc-atlas-curvature-mechanisms-v1.json)
+keeps the inherited source and its C=61720739711/2709842745600 fixed.
+
+| Route | Outcome |
+| --- | --- |
+| Open CDL interior | It fixes open sign, not the observed magnitude; compatible nucleation, post-bubble expansion and exit history are missing. |
+| Inherited oscillating matter | Dust domination increases relative curvature; late vacuum acceleration dilutes it only after the needed matter has diluted. |
+| Repeated similarity | a -> r*a and H -> H/r preserve Omega_k; a curvature/state transfer law and observer level are still needed. |
+
+[Gott (1982)](https://doi.org/10.1038/295304a0) and
+[Bucher--Goldhaber--Turok (1995)](https://arxiv.org/html/hep-ph/9411206)
+provide the open-bubble construction and its subsequent inflationary
+phase. Immediately after the open-bubble origin, a(t) is approximately t
+and Omega_k is approximately +1. Near-flatness requires additional expansion;
+its present value also depends on the exit and matter/radiation history.
+Their examples do not fix those inputs for the current parent. The HM
+sphere is not automatically a localized CDL child with that history.
+
+The exact geometric derivative is
+
+$$
+\frac{d\log|\Omega_k|}{dN}=-2-2\frac{\dot H}{H^2}=2q_{\rm dec}.
+$$
+
+Dust domination has H^2 proportional to a^(-3), so |Omega_k| grows
+proportionally to a. Acceleration can reverse this, but the present
+source supplies no early inflation-and-reheating stage that resets
+its dimensionless curvature/matter normalization.
+
+There is a quantitative obstruction independent of a preferred observer
+epoch. The inherited density is E=E0*exp(-3N-6s), hence
+
+$$
+\frac{|\Omega_k|}{\Omega_m}=\frac{3C}{E_0}e^{N+6s}.
+$$
+
+Along the expanding averaged solution total energy decreases from 21/32.
+Exact rational exponential bounds give V(-1/12)>21/32; since the potential
+decreases toward its unique minimum on that side, s>-1/12. For N>=0,
+
+$$
+\frac{|\Omega_k|}{\Omega_m}>
+\frac{3C}{E_0}e^{-1/2}>0.11051717.
+$$
+
+Thus |Omega_k|<=.002 implies Omega_m<.01809674 in this fixed preparation.
+Changing only the observer epoch cannot combine the requested near-flatness
+with a matter fraction near the fitted .3. This is a restriction on this
+source, not a general obstruction to nesting or inflation.
+
+The actual first future crossing Omega_k=-.002 occurs at N=2.52065449,
+where Omega_m=.00109975. At the previously declared N=6 endpoint,
+Omega_k=-1.8998373e-6 and Omega_m=3.2008896e-8. These are numbers from
+the trajectory. Neither endpoint is an inherited identification of our
+observation epoch. The infinite-future limit is flat and empty of matter.
+
+## Fixed-flatness diagnostic, declared before the retained fit
+
+Because no tested inheritance mechanism selected a small observed
+curvature, a physical refit with a newly derived value is not available.
+We instead test the user's causal diagnosis with an explicitly imposed
+initial C=0. It is fixed before fitting and is never labelled inherited.
+Keep d=12,j=2,A=7,B=15/2,T=25/32,E0=3/8 and s=v=0. The homogeneous
+constraint then determines the changed initial H; all subsequent source
+and volume evolution is recalculated consistently. This does not preserve
+the original shared-wall initial geometry.
+
+V_star=.2209830242 remains the potential minimum in the same source units.
+The earlier coefficient 9.7022370 used the original closed reference ruler;
+it is not a finite curvature-radius product for the flat control, whose
+intrinsic curvature radius is infinite. No SI scale is introduced.
+
+Use the same authenticated SN and DESI covariances, one epoch, one
+magnitude intercept and one shared ruler. The closed source is replayed
+as a control and must recover its existing joint score. Four independent
+model/order jobs compare orders 48/96 and background tolerances, with
+180 process-CPU seconds each. The report includes Omega_Lambda, Omega_s,
+Omega_m, Omega_k and the posterior of their requested dark-energy sum.
+That sum is evaluated at every posterior node, so its covariance is
+included; independent component errors are not added in quadrature.

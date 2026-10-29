@@ -2,6 +2,19 @@
 
 ## Physical volume and the inherited evolving source
 
+Lifetime and curvature follow-ups:
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_volume_lifetime.py tests/test_nsc_atlas_curvature_mechanisms.py
+python scripts/run_python.py scripts/check_nsc_atlas_volume_lifetime.py --output .build/lifetime-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_curvature_mechanisms.py --output .build/curvature-mechanisms-reproduced.json
+python scripts/run_python.py scripts/measure_nsc_atlas_flat_volume_control.py --output .build/flat-volume-control-reproduced.json
+```
+
+The last producer requires committed method files. Its C=0 is an imposed
+diagnostic, not a derived inherited curvature. The lifetime producer retains
+the reference's unresolved CDL search rather than certifying absence.
+
 The selection routes and the evolving-background shared-ruler test use:
 
 ```powershell

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
+  "current_receipt_commit_parent": "95c89d8366c5d8852c996ba12148a73df314b833",
   "files": [
     {
       "bytes": 3120,
@@ -10876,12 +10876,12 @@
       "sha256": "306a3c7e7a622c629757b0d5ea309304021b5a213e34633bfa923267ed31f626"
     },
     {
-      "bytes": 4987,
+      "bytes": 9148,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
-      "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
+      "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
       "path": "docs/nsc-atlas-lifetime-curvature.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "5375f71a0c4a7389f226c9af2c682435ea619b5f58937df2774a9b773ff86aa3"
+      "sha256": "0e5c39c491efdd5ca76f69b8dc98920dfce9f6f7cec4ab367fc0d53beabd1bf0"
     },
     {
       "bytes": 8895,
@@ -12086,12 +12086,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 237689,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "bytes": 238465,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d4adb8fcef63fc9b17cdcd0d4ce6fcd352472d29b8261bb471d35b5fc7b989f0"
+      "sha256": "5bfeff2b712030783e0440ec17f96a0322627faa28b7a45dbd36d4d3ada39142"
     },
     {
       "bytes": 50486,
@@ -30431,6 +30431,14 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "bytes": 2679,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
+      "path": "results/summaries/nsc-atlas-curvature-mechanisms-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3e4cce15710b0b918a0d74a0e09eda96655a48fa5f214ed61c41c9c1636c8b6e"
+    },
+    {
       "bytes": 3122,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "1401f3521dd226bf1a25000d8245098c309db161",
@@ -31701,6 +31709,14 @@
       "path": "scripts/check_nsc_atlas_coupled_tube_bound.py",
       "retention_reason": "Conditional coupled continuum bound, its independent controls and bounded reproduction.",
       "sha256": "7cf8ca7c811fa826e6fe4a8bba4e9117ea984df43374c5938889843ea4293c8d"
+    },
+    {
+      "bytes": 789,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
+      "path": "scripts/check_nsc_atlas_curvature_mechanisms.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0cbc26ed2e3a4645f513cf5a99ea8759c3b68a32d63dfc9cb7950a74f2d97bbd"
     },
     {
       "bytes": 1356,
@@ -34720,6 +34736,14 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
+      "bytes": 3743,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
+      "path": "scripts/measure_nsc_atlas_flat_volume_control.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2431f2dba2e76d61a98505614bec71d2230a13ca3099badbb391dbb0cf646996"
+    },
+    {
       "bytes": 9866,
       "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
       "changed_from_commit": "b9f5aba94cc8dd61933900f0b8af20f19c7c6923",
@@ -35866,6 +35890,14 @@
       "path": "src/recursive_horizons/nsc_atlas_coupled_tube_bound.py",
       "retention_reason": "Conditional coupled continuum bound, its independent controls and bounded reproduction.",
       "sha256": "8e3bfacdce7cce29ea2443f90ec106b4d41dfd8662c56aad0a5e38adfe320496"
+    },
+    {
+      "bytes": 5060,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
+      "path": "src/recursive_horizons/nsc_atlas_curvature_mechanisms.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "08dd157071832af7367d59c19dfb16656aeb735427ee084d3846701789ef2f98"
     },
     {
       "bytes": 13188,
@@ -40280,6 +40312,14 @@
       "path": "tests/test_nsc_atlas_coupled_tube_bound.py",
       "retention_reason": "Conditional coupled continuum bound, its independent controls and bounded reproduction.",
       "sha256": "49aa4d7bf60e86b56c2e382cc8e34da617421dc253fa197b1ed41c2087a5ba98"
+    },
+    {
+      "bytes": 1617,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
+      "path": "tests/test_nsc_atlas_curvature_mechanisms.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1730562d3d5dfbf50fd03b6296e65d3609361b9731d32fa0bde6f2c180aa3f0b"
     },
     {
       "bytes": 3302,

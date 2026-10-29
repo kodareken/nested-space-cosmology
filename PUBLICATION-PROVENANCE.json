@@ -1736,9 +1736,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2580701,
+      "bytes": 2583221,
       "path": "docs/lab-snapshot.json",
-      "sha256": "0a8bc4a005c1267cbac6b59db458d1d0a99047b367fe807db7952d9c1a81e614"
+      "sha256": "9061d5a6e7247fb5baf8cc2a4ed2801d59863d3a2a492847cd79c728607e9418"
     },
     {
       "bytes": 4997,
@@ -1911,9 +1911,9 @@
       "sha256": "306a3c7e7a622c629757b0d5ea309304021b5a213e34633bfa923267ed31f626"
     },
     {
-      "bytes": 4987,
+      "bytes": 9148,
       "path": "docs/nsc-atlas-lifetime-curvature.md",
-      "sha256": "5375f71a0c4a7389f226c9af2c682435ea619b5f58937df2774a9b773ff86aa3"
+      "sha256": "0e5c39c491efdd5ca76f69b8dc98920dfce9f6f7cec4ab367fc0d53beabd1bf0"
     },
     {
       "bytes": 8895,
@@ -2606,9 +2606,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 237689,
+      "bytes": 238465,
       "path": "docs/reproducing.md",
-      "sha256": "d4adb8fcef63fc9b17cdcd0d4ce6fcd352472d29b8261bb471d35b5fc7b989f0"
+      "sha256": "5bfeff2b712030783e0440ec17f96a0322627faa28b7a45dbd36d4d3ada39142"
     },
     {
       "bytes": 50486,
@@ -15061,6 +15061,11 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "bytes": 2679,
+      "path": "results/summaries/nsc-atlas-curvature-mechanisms-v1.json",
+      "sha256": "3e4cce15710b0b918a0d74a0e09eda96655a48fa5f214ed61c41c9c1636c8b6e"
+    },
+    {
       "bytes": 3122,
       "path": "results/summaries/nsc-atlas-dirac-bulk-trace-v1.json",
       "sha256": "b2448316f443ac6df9cc0a005ca47bfb73685d85a39f60a24db33372df54375f"
@@ -15944,6 +15949,11 @@
       "bytes": 4831,
       "path": "scripts/check_nsc_atlas_coupled_tube_bound.py",
       "sha256": "7cf8ca7c811fa826e6fe4a8bba4e9117ea984df43374c5938889843ea4293c8d"
+    },
+    {
+      "bytes": 789,
+      "path": "scripts/check_nsc_atlas_curvature_mechanisms.py",
+      "sha256": "0cbc26ed2e3a4645f513cf5a99ea8759c3b68a32d63dfc9cb7950a74f2d97bbd"
     },
     {
       "bytes": 1356,
@@ -17646,6 +17656,11 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
+      "bytes": 3743,
+      "path": "scripts/measure_nsc_atlas_flat_volume_control.py",
+      "sha256": "2431f2dba2e76d61a98505614bec71d2230a13ca3099badbb391dbb0cf646996"
+    },
+    {
       "bytes": 9866,
       "path": "scripts/measure_nsc_atlas_parent_supernova.py",
       "sha256": "3345ed33f144d2fda3a20bcd2cc62f19a9140e847ab63cdf90c73e0dab9f6162"
@@ -18644,6 +18659,11 @@
       "bytes": 9910,
       "path": "src/recursive_horizons/nsc_atlas_coupled_tube_bound.py",
       "sha256": "8e3bfacdce7cce29ea2443f90ec106b4d41dfd8662c56aad0a5e38adfe320496"
+    },
+    {
+      "bytes": 5060,
+      "path": "src/recursive_horizons/nsc_atlas_curvature_mechanisms.py",
+      "sha256": "08dd157071832af7367d59c19dfb16656aeb735427ee084d3846701789ef2f98"
     },
     {
       "bytes": 10017,
@@ -21281,6 +21301,11 @@
       "sha256": "49aa4d7bf60e86b56c2e382cc8e34da617421dc253fa197b1ed41c2087a5ba98"
     },
     {
+      "bytes": 1617,
+      "path": "tests/test_nsc_atlas_curvature_mechanisms.py",
+      "sha256": "1730562d3d5dfbf50fd03b6296e65d3609361b9731d32fa0bde6f2c180aa3f0b"
+    },
+    {
       "bytes": 8168,
       "path": "tests/test_nsc_atlas_departure_diagnostics.py",
       "sha256": "4caabec765a0782ec043da87783519899360877238e024c844df0cce8c0ef4ab"
@@ -23871,7 +23896,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "0a8bc4a005c1267cbac6b59db458d1d0a99047b367fe807db7952d9c1a81e614",
+  "lab_snapshot_sha256": "9061d5a6e7247fb5baf8cc2a4ed2801d59863d3a2a492847cd79c728607e9418",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-29.2",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

@@ -1,0 +1,54 @@
+{
+  "curvature_derivative": "d ln|Omega_k|/dN=-2-2*Hdot/H^2=2*q_deceleration",
+  "declared_N6_endpoint": {
+    "N": 6.0,
+    "Omega_Lambda": 1.000001857947213,
+    "Omega_k": -1.8998372529190026e-06,
+    "Omega_m": 3.2008895600119404e-08,
+    "Omega_volume": 9.88114424928877e-09,
+    "s": -0.035651002643268384
+  },
+  "energy_bound": {
+    "absolute_curvature_over_matter_lower_bound": 0.11192905823487208,
+    "implication": "For any expanding N>=0 in this fixed source, |Omega_k|/Omega_m=(3C/E0)*exp(N+6s) exceeds this bound. Small curvature together with substantial matter requires changed preparation or new physics.",
+    "initial_total_density": "21/32",
+    "matter_upper_if_curvature_below_0_002": 0.017868460894249618,
+    "volume_field_lower_bound": -0.08121761438452661
+  },
+  "exact_coarse_energy_obstruction": {
+    "curvature_over_matter_lower": 0.11051717605567242,
+    "curvature_over_matter_lower_exact": "3981728360236032/36028140623410955",
+    "field_lower_bound": "-1/12",
+    "matter_upper_at_curvature_0_002": 0.018096734565426383,
+    "potential_at_bound_lower": "15392626992481/21535633244160"
+  },
+  "flat_control": "C=0 is an explicitly imposed diagnostic initial condition, never labelled inherited or fitted.",
+  "inherited_observed_small_curvature_derived": false,
+  "reference_observer": {
+    "N": 0.43923013327691346,
+    "Omega_Lambda": 0.632194877225575,
+    "Omega_k": -0.08120633329247992,
+    "Omega_m": 0.2950823845524362,
+    "Omega_volume": 0.1539290715144689,
+    "s": -0.004484524878919354
+  },
+  "route_dispositions": [
+    "Open CDL: an open slicing fixes the sign k=-1, not the observed small magnitude; the compatible nucleation state, slow-roll duration and exit history are missing.",
+    "Inherited oscillatory matter: dust domination increases |Omega_k| approximately as a; late vacuum acceleration dilutes it but also removes the required matter fraction.",
+    "Nested similarity: a->r*a and H->H/r preserve Omega_k; a dimensionless curvature/state transfer rule and an observer level are not supplied."
+  ],
+  "schema": "nsc-atlas-curvature-mechanisms-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_curvature_mechanisms.py": "0cbc26ed2e3a4645f513cf5a99ea8759c3b68a32d63dfc9cb7950a74f2d97bbd",
+    "src/recursive_horizons/nsc_atlas_curvature_mechanisms.py": "08dd157071832af7367d59c19dfb16656aeb735427ee084d3846701789ef2f98"
+  },
+  "threshold_crossing": {
+    "N": 2.5206544903500214,
+    "Omega_Lambda": 1.0004451711016071,
+    "Omega_k": -0.0019999999999999957,
+    "Omega_m": 0.0010997539126748974,
+    "Omega_volume": 0.00045507498571823574,
+    "s": -0.03666823635518744
+  },
+  "threshold_is_selected": false
+}
