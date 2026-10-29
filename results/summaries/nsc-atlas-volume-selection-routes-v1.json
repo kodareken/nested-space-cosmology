@@ -1,0 +1,179 @@
+{
+  "absolute_SI_scale_selected": false,
+  "frontier": [
+    {
+      "Lambda_Lref0_squared": 9.702237009265096,
+      "bounce_status": "same sector; not a decay to itself",
+      "cross_candidate_bounce_to_12_2": null,
+      "d": 12,
+      "de_Sitter_entropy_times_g": 1071.8945786453369,
+      "endpoint": {
+        "H": 0.2714053632720964,
+        "charge_tension_frequency_ratio": 1.2385062493781915,
+        "clock": "expansion",
+        "endpoint_N": 6.0,
+        "energy_ledger_residual": 1.2232992396832287e-12,
+        "internal_volume_ratio": 0.6519339461854103,
+        "matter_density": 7.073409409398697e-09,
+        "nfev": 1052,
+        "s": -0.035651002643268384,
+        "v": -3.6189140694197907e-06,
+        "vacuum_density": 0.2209830258461134,
+        "volume_kinetic_density": 5.500546397574694e-10
+      },
+      "endpoint_distance_to_own_minimum": 4.220090327397563e-06,
+      "ends_in_same_discrete_sector": true,
+      "entropy_over_reference": 1.0,
+      "j": 2,
+      "s_minimum": -0.035646782552940987,
+      "vacuum_minimum": 0.22098302421260696
+    },
+    {
+      "Lambda_Lref0_squared": 9.991573647602356,
+      "bounce_status": "undefined: no common inter-sector action or interface",
+      "cross_candidate_bounce_to_12_2": null,
+      "d": 6,
+      "de_Sitter_entropy_times_g": 1040.8545858498478,
+      "endpoint": {
+        "H": 0.2754225186878825,
+        "charge_tension_frequency_ratio": 1.2148247863353137,
+        "clock": "expansion",
+        "endpoint_N": 6.0,
+        "energy_ledger_residual": -5.977995876094155e-13,
+        "internal_volume_ratio": 0.6775989296723413,
+        "matter_density": 6.93815883347312e-09,
+        "nfev": 1055,
+        "s": -0.06486661920530219,
+        "v": -1.1930858263168618e-05,
+        "vacuum_density": 0.2275731025858292,
+        "volume_kinetic_density": 1.7081445467498267e-09
+      },
+      "endpoint_distance_to_own_minimum": 8.53746480423967e-06,
+      "ends_in_same_discrete_sector": true,
+      "entropy_over_reference": 0.9710419350802972,
+      "j": 3,
+      "s_minimum": -0.06487515667010643,
+      "vacuum_minimum": 0.2275731008407309
+    },
+    {
+      "Lambda_Lref0_squared": 10.635176064650121,
+      "bounce_status": "undefined: no common inter-sector action or interface",
+      "cross_candidate_bounce_to_12_2": null,
+      "d": 5,
+      "de_Sitter_entropy_times_g": 977.8658282424531,
+      "endpoint": {
+        "H": 0.2841547120081879,
+        "charge_tension_frequency_ratio": 1.166830023619604,
+        "clock": "expansion",
+        "endpoint_N": 6.0,
+        "energy_ledger_residual": -1.4254153413162385e-12,
+        "internal_volume_ratio": 0.7344881767214291,
+        "matter_density": 6.664049109468419e-09,
+        "nfev": 1034,
+        "s": -0.061716276108285485,
+        "v": -5.222850083341019e-07,
+        "vacuum_density": 0.24223211423393431,
+        "volume_kinetic_density": 2.3868392618923376e-12
+      },
+      "endpoint_distance_to_own_minimum": 9.11811527344597e-06,
+      "ends_in_same_discrete_sector": true,
+      "entropy_over_reference": 0.9122779867757914,
+      "j": 4,
+      "s_minimum": -0.06172539422355893,
+      "vacuum_minimum": 0.24223211281641666
+    },
+    {
+      "Lambda_Lref0_squared": 10.776179311559444,
+      "bounce_status": "undefined: no common inter-sector action or interface",
+      "cross_candidate_bounce_to_12_2": null,
+      "d": 4,
+      "de_Sitter_entropy_times_g": 965.0707314982892,
+      "endpoint": {
+        "H": 0.2860322017512658,
+        "charge_tension_frequency_ratio": 1.1546403152362472,
+        "clock": "expansion",
+        "endpoint_N": 6.0,
+        "energy_ledger_residual": -1.6161516569468404e-12,
+        "internal_volume_ratio": 0.7500782382783022,
+        "matter_density": 6.594430730053747e-09,
+        "nfev": 995,
+        "s": -0.07189444004702282,
+        "v": 8.770940266703787e-06,
+        "vacuum_density": 0.24544367409102508,
+        "volume_kinetic_density": 4.615763589725154e-10
+      },
+      "endpoint_distance_to_own_minimum": 6.576004709046845e-06,
+      "ends_in_same_discrete_sector": true,
+      "entropy_over_reference": 0.9003410883166777,
+      "j": 5,
+      "s_minimum": -0.07190101605173187,
+      "vacuum_minimum": 0.24544367360348707
+    },
+    {
+      "Lambda_Lref0_squared": 10.727932243143604,
+      "bounce_status": "undefined: no common inter-sector action or interface",
+      "cross_candidate_bounce_to_12_2": null,
+      "d": 3,
+      "de_Sitter_entropy_times_g": 969.4109745715507,
+      "endpoint": {
+        "H": 0.2853911717785222,
+        "charge_tension_frequency_ratio": 1.1566249609285146,
+        "clock": "expansion",
+        "endpoint_N": 6.0,
+        "energy_ledger_residual": -3.0477842472009797e-12,
+        "internal_volume_ratio": 0.7475063374098889,
+        "matter_density": 6.605765522688876e-09,
+        "nfev": 1019,
+        "s": -0.09700416520430505,
+        "v": 2.0701835122159466e-05,
+        "vacuum_density": 0.24434477440546765,
+        "volume_kinetic_density": 1.607122415344032e-09
+      },
+      "endpoint_distance_to_own_minimum": 6.417093608671043e-06,
+      "ends_in_same_discrete_sector": true,
+      "entropy_over_reference": 0.9043902207217941,
+      "j": 7,
+      "s_minimum": -0.09699774811069638,
+      "vacuum_minimum": 0.2443447741354836
+    }
+  ],
+  "interpolation_nonidentifiability": "Adding lambda*z^4*(1-z)^4 to an interpolation leaves endpoint potential and its first two derivatives fixed but changes its barrier; endpoint data do not fix a bounce.",
+  "missing_common_action": [
+    "a common state space for d and the ancestor source",
+    "inter-sector kinetic terms, interpolating potential or charged interface",
+    "inherited initial state and measure; determinants for rates"
+  ],
+  "parameter_free_selection_obtained": false,
+  "physical_selection_derived": false,
+  "ranked_routes": [
+    {
+      "result": "All five fixed-action flows retain d,j and approach their own minimum; none supplies cross-member selection.",
+      "route": "c_attractor"
+    },
+    {
+      "result": "The reference maximizes late de Sitter entropy among the five under common units; entropy ordering supplies neither a transition nor a maximizing inheritance law.",
+      "route": "b_entropy"
+    },
+    {
+      "result": "Cross-member bounce actions are undefined without a common action and interface; the same reference action also has a lower-energy decompactification channel.",
+      "route": "a_BT_CDL"
+    }
+  ],
+  "same_action_Hawking_Moss": {
+    "barrier": 0.3545366774774573,
+    "exponent_times_g": 403.7817410357339,
+    "false_vacuum": 0.22098302421260696,
+    "first_nonconstant_scalar_eigenvalue_over_H_top_squared": 0.2374969084635259,
+    "g_definition": "kappa_nat/L_unit(0)^2",
+    "homogeneous_scalar_negative_modes": 1,
+    "interpretation": "A standard HM saddle in the homogeneous reduced action, not an absolute rate, a dominance proof or a localized higher-dimensional decay calculation.",
+    "negative_curvature_over_H_top_squared": 3.762503091536474,
+    "runaway_limit": "V(s)->0+ as s->+infinity"
+  },
+  "schema": "nsc-atlas-volume-selection-routes-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_volume_routes.py": "f83aa1fca15c3d4ed86bbb35678269449b21734d937c91429c3c7a13cc4ff814",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "src/recursive_horizons/nsc_atlas_volume_routes.py": "89bfddfd9b7404c7f0d883725c90db774a7781d82743b9a75c3366c9176542a1"
+  }
+}

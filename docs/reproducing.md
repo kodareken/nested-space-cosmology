@@ -2,6 +2,19 @@
 
 ## Physical volume and the inherited evolving source
 
+The selection routes and the evolving-background shared-ruler test use:
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_volume_routes.py tests/test_nsc_atlas_volume_observations.py
+python scripts/run_python.py scripts/check_nsc_atlas_volume_routes.py --output .build/volume-routes-reproduced.json
+python scripts/run_python.py scripts/measure_nsc_atlas_volume_observations.py --output .build/volume-observations-reproduced.json
+```
+
+The observation producer requires a committed method and authenticates the
+same cached publisher data as the original shared-ruler comparison. The
+[new owner](nsc-atlas-volume-selection-routes.md) states the observer convention,
+four-component density account, bounded numerical domain and route limits.
+
 The discrete-choice audit uses no field evolution:
 
 ```powershell

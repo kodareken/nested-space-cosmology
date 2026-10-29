@@ -1,5 +1,9 @@
 # Inherited SI scale: computed routes and remaining selector
 
+The next [selection-route and observation calculation](nsc-atlas-volume-selection-routes.md)
+tests actual attractors, entropy ordering and the defined same-action
+Hawking--Moss saddle. Cross-member selection still requires a common action.
+
 The target is Lambda_obs=1.0904e-52 m^-2. Checkpoint 485b3b9, its couplings,
 regional state and P004/P005 remain unchanged. A failed candidate is not
 evidence against nesting. Each local failure below gets one line; the

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+  "current_receipt_commit_parent": "56c3ace64573d37a044f0b108586f791a57970bf",
   "files": [
     {
       "bytes": 3120,
@@ -10989,12 +10989,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 31161,
+      "bytes": 31402,
       "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "fe620e9d908f8fb4262167a50384d988fee5617dd8b7d29add18a801599451d3"
+      "sha256": "ee6cb54f68b56afb8f92d94c0ce9ad7fa51fcfd6bf73a93c3b09c8a477a78ff3"
     },
     {
       "bytes": 16908,
@@ -11027,6 +11027,14 @@
       "path": "docs/nsc-atlas-shared-scalar-slice.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "bc059e375d82047269a6d29cabfb11384c548615df1d86580a8b6b1a79b66d0f"
+    },
+    {
+      "bytes": 7392,
+      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "path": "docs/nsc-atlas-volume-selection-routes.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "73c3a68ff72f22d32c99260af830d177946fb9eb5b7829314f76752b572ae0eb"
     },
     {
       "bytes": 14534,
@@ -12070,12 +12078,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 236922,
+      "bytes": 237689,
       "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "594b7343dd5f8988fe16dea958ebc32154878c0a614b076dde291fd18bdfa4b8"
+      "sha256": "d4adb8fcef63fc9b17cdcd0d4ce6fcd352472d29b8261bb471d35b5fc7b989f0"
     },
     {
       "bytes": 50115,
@@ -31338,6 +31346,14 @@
       "sha256": "a491bf7e2241a58776b11d87fc55454f58e3885e5d287c287092534d9a15ac8f"
     },
     {
+      "bytes": 7534,
+      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "path": "results/summaries/nsc-atlas-volume-selection-routes-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4e1286e103620978ffb6b54575056cc2e03fa48d3b905f95c16f91f064aa7012"
+    },
+    {
       "bytes": 9829,
       "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
       "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
@@ -32042,6 +32058,14 @@
       "path": "scripts/check_nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "0993e48dbf1db8f9ecdd561e9c7b131f6ec60a108dae7688eb43ba0f984b536d"
+    },
+    {
+      "bytes": 1087,
+      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "path": "scripts/check_nsc_atlas_volume_routes.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f83aa1fca15c3d4ed86bbb35678269449b21734d937c91429c3c7a13cc4ff814"
     },
     {
       "bytes": 7082,
@@ -34680,6 +34704,14 @@
       "sha256": "4c0cb044129c00c5205d630d61ca725047a70b2bf97565a500cc4505ac5c04d3"
     },
     {
+      "bytes": 3893,
+      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "path": "scripts/measure_nsc_atlas_volume_observations.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3beee44c1fb5e0f2f6feaccbb83d63501ee11e01e4528149ec23a0948727ab80"
+    },
+    {
       "bytes": 23631,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "4d9a4edadbcf796fe14a4e051f058518eb2499b1",
@@ -36419,6 +36451,22 @@
       "path": "src/recursive_horizons/nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "71a89689d3466a55d0c6e06416ded3581339a9e65d71bf40c3c61246d45beebb"
+    },
+    {
+      "bytes": 7248,
+      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "path": "src/recursive_horizons/nsc_atlas_volume_observations.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "151237f974d42d7bf8c8feb00d1837e5f6f1062ffdeae30f3c231f6293aa73ba"
+    },
+    {
+      "bytes": 3205,
+      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "path": "src/recursive_horizons/nsc_atlas_volume_routes.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "89bfddfd9b7404c7f0d883725c90db774a7781d82743b9a75c3366c9176542a1"
     },
     {
       "bytes": 6577,
@@ -41057,6 +41105,22 @@
       "path": "tests/test_nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "6b1db51adab33c05c55b9b2c6e837b9d398f79c89696836daf1b57c5db943813"
+    },
+    {
+      "bytes": 1993,
+      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "path": "tests/test_nsc_atlas_volume_observations.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d9edb2f75029535a129dc558c169b24671bc1d42b657c81c747b28b50076c969"
+    },
+    {
+      "bytes": 981,
+      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
+      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "path": "tests/test_nsc_atlas_volume_routes.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "747d442ef2ee06b6e911e4feea5fd448ed0bdee2f93f3c14164a18e6487bffae"
     },
     {
       "bytes": 1957,
