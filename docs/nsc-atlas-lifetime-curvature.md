@@ -209,6 +209,9 @@ while showing a residual discrepancy after C is imposed to be exactly zero.
 | Shared r_d h, Mpc | 103.96783 | 102.80929 | 101.05339 |
 
 The imposed-flat best-fit 3*(Omega_Lambda+Omega_s) is 2.16175617.
+This uses unrounded components. Multiplying the displayed six-decimal
+pair (.577259,.143326) gives 2.161755 instead; the posterior mean below
+is a third, separately defined quantity.
 Its posterior is 2.16165898 +/- .01581258; versus 2.054 +/- .022,
 the combined-width standardized difference is +3.97366. The closed
 source's corresponding posterior is 2.35826094 +/- .01339209,

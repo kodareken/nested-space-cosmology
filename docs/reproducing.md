@@ -2,6 +2,18 @@
 
 ## Physical volume and the inherited evolving source
 
+Wall/exit and equation-of-state preparation controls:
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_wall_exit_preparation.py
+python scripts/run_python.py scripts/check_nsc_atlas_wall_exit.py --output .build/wall-exit-reproduced.json
+python scripts/run_python.py scripts/measure_nsc_atlas_exit_preparations.py --output .build/exit-preparations-reproduced.json
+```
+
+The observation producer requires a committed method. Its named starting
+states are conditional reference-slice controls, not derived nucleation
+histories; see the [preparation map](nsc-atlas-wall-exit-preparation.md).
+
 Lifetime and curvature follow-ups:
 
 ```powershell

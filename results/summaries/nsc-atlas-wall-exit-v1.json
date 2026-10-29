@@ -1,0 +1,114 @@
+{
+  "HM": {
+    "V": 0.3545366774774573,
+    "averaged_acceleration_with_loaded_E0": 0.026785714285714284,
+    "branch_proof": "For s>=s_top, V_s<=0; on v=0 the source force is nonnegative, so a loaded zero-velocity state cannot cross into v<0 and reach the left minimum.",
+    "efold_change_per_decade_seed": 2.4185786815862866,
+    "energy_if_old_action_preserved": 0.2616277823844593,
+    "energy_if_old_coherent_field_preserved": 0.18253092404109328,
+    "exact_stationary_continuation": true,
+    "linear_growth_per_efold": 0.9520405974486787,
+    "loaded_branch": "rightward, toward decompactification; not the stable minimum on the left",
+    "s": 0.0600005350418201,
+    "unique_exit_efolds": null,
+    "vacuum_excitation": 0
+  },
+  "density_dictionary": {
+    "actual_initial_middle": "7/32",
+    "actual_initial_parent": "21/32",
+    "displacement_fluxes": [
+      "3/2",
+      "1",
+      "1/2",
+      "0"
+    ],
+    "ground_vacua": [
+      "9/32",
+      "1/8",
+      "1/32",
+      "0"
+    ],
+    "parent_excitation": "3/8"
+  },
+  "minimum_s": -0.035646782552940987,
+  "post_exit_C_over_E0_derived": false,
+  "post_exit_observer_curvature_derived": false,
+  "radius_for_C_zero": 1.941250878072135,
+  "radius_is_inherited": false,
+  "reference_projection": {
+    "C": 0.022776502367606612,
+    "C_exact": "61720739711/2709842745600",
+    "C_over_E0": 0.060737339646950966,
+    "C_over_E0_exact": "61720739711/1016191029600",
+    "H_squared": 0.19597349763239338,
+    "Omega_k_initial": -0.11622235987404134,
+    "beta_minus": 1.1480066943674976,
+    "beta_plus": 0.9580066943674977,
+    "mass": "3/25",
+    "radius": "19/10"
+  },
+  "route_dispositions": [
+    "Old Israel projection: reproduces C/E0 using supplied R and M; fixed tension and vacua alone do not select them.",
+    "Full volume junction: the required normal-volume jump is not supplied by a uniform initial state.",
+    "Open CDL child: no compatible (12,2) CDL exit was computed; the open geometry cannot be attached merely by choosing its sign.",
+    "Exact HM continuation: remains at the barrier without a specified perturbation/state; no unique rolling e-fold count follows.",
+    "HM location plus E0=3/8: is a distinct specified matter preparation and initially accelerates toward the runaway."
+  ],
+  "schema": "nsc-atlas-wall-exit-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_wall_exit.py": "38b4ffae1d08d02d9ea96b86e256c90976e96716e023d64c8640f32837d6b2d8",
+    "src/recursive_horizons/nsc_atlas_wall_exit.py": "a641ebff019f2b552534b1c74cf63225f5ce4ec9a0088bb8974517bd12e98903"
+  },
+  "volume_wall": {
+    "K": 84,
+    "jump_at_matched_start": "-1/70",
+    "missing": "A compatible nonuniform volume collar and its gradient stress; the old projection alone is not the full (12,2) junction.",
+    "normal_derivative_jump_at_HM_location": -0.009966772662265115,
+    "tension_at_HM_location": 0.1395348172717116
+  },
+  "witnesses": [
+    {
+      "C": 0.022776502367606612,
+      "C_exact": "61720739711/2709842745600",
+      "C_over_E0": 0.060737339646950966,
+      "C_over_E0_exact": "61720739711/1016191029600",
+      "H_squared": 0.19597349763239338,
+      "Omega_k_initial": -0.11622235987404134,
+      "beta_minus": 1.1480066943674976,
+      "beta_plus": 0.9580066943674977,
+      "independent_angular_residual": 5.551115123125783e-17,
+      "independent_velocity_squared_error": -1.2212453270876722e-15,
+      "mass": "3/25",
+      "radius": "19/10"
+    },
+    {
+      "C": -9.579249363396553e-19,
+      "C_exact": null,
+      "C_over_E0": -2.5544664969057477e-18,
+      "C_over_E0_exact": null,
+      "H_squared": 0.21875,
+      "Omega_k_initial": 4.379085423266996e-18,
+      "beta_minus": 1.1941250878072136,
+      "beta_plus": 1.0,
+      "independent_angular_residual": 0.0,
+      "independent_velocity_squared_error": -1.2212453270876722e-15,
+      "mass": "3/25",
+      "radius": "388250175614427/200000000000000",
+      "radius_is_numerical_zero_condition": true
+    },
+    {
+      "C": -0.030017361111111113,
+      "C_exact": "-1729/57600",
+      "C_over_E0": -0.0800462962962963,
+      "C_over_E0_exact": "-1729/21600",
+      "H_squared": 0.2487673611111111,
+      "Omega_k_initial": 0.12066438690766976,
+      "beta_minus": 1.2583333333333333,
+      "beta_plus": 1.0583333333333333,
+      "independent_angular_residual": -5.551115123125783e-17,
+      "independent_velocity_squared_error": -9.992007221626409e-16,
+      "mass": "3/25",
+      "radius": "2"
+    }
+  ]
+}

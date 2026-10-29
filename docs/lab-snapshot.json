@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e16b99b864c9a76d0f067bfbffde073c4f5b36c5",
+  "current_receipt_commit_parent": "97e19de103d871c685be57036b2272d4d8550499",
   "files": [
     {
       "bytes": 3120,
@@ -10876,12 +10876,12 @@
       "sha256": "306a3c7e7a622c629757b0d5ea309304021b5a213e34633bfa923267ed31f626"
     },
     {
-      "bytes": 11767,
+      "bytes": 11950,
       "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
-      "changed_from_commit": "e16b99b864c9a76d0f067bfbffde073c4f5b36c5",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
       "path": "docs/nsc-atlas-lifetime-curvature.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "b19181e64c16494b68103f6a5d2d373184ac5a755ef999c8b06e99ecdff17517"
+      "sha256": "4ba33255332df36266fc644d89efc5c41e216a8be7e4c0c567cee5853f50754a"
     },
     {
       "bytes": 8895,
@@ -11051,6 +11051,14 @@
       "path": "docs/nsc-atlas-vortex-transfer.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "16e8cb10e0de9b305f762dc50dbac8cc43491a53efb1f79d1113afc9bd045331"
+    },
+    {
+      "bytes": 8563,
+      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
+      "path": "docs/nsc-atlas-wall-exit-preparation.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f0bd4f9f6331d66f80c7ea31585482b78f71aa51c180dff2387eb60099d0b347"
     },
     {
       "bytes": 9716,
@@ -12086,12 +12094,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 238465,
-      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
-      "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
+      "bytes": 239081,
+      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5bfeff2b712030783e0440ec17f96a0322627faa28b7a45dbd36d4d3ada39142"
+      "sha256": "15b37f140f1ce5f7cc13d8a6b1dd0c387d6a8d95d1eaff4f6ddd72d2ab7df259"
     },
     {
       "bytes": 50976,
@@ -31410,6 +31418,14 @@
       "sha256": "06543ed63b06940ae7f14104fecd025a9a1e01789a22c7fdd15562cc1e6d8f0d"
     },
     {
+      "bytes": 4474,
+      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
+      "path": "results/summaries/nsc-atlas-wall-exit-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "c68ecd69d8b5a840bf86621117a09b085e70ee6935c277783a85e3b9d5a061f3"
+    },
+    {
       "bytes": 5531,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
@@ -32130,6 +32146,14 @@
       "path": "scripts/check_nsc_atlas_vortex_transfer.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "b73641c78348e73cae2771a6cac9b195ecaf56e7d20a9bab4e5c416f022ac3d4"
+    },
+    {
+      "bytes": 779,
+      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
+      "path": "scripts/check_nsc_atlas_wall_exit.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "38b4ffae1d08d02d9ea96b86e256c90976e96716e023d64c8640f32837d6b2d8"
     },
     {
       "bytes": 2181,
@@ -34744,6 +34768,14 @@
       "sha256": "f6e0e35084d46176148dcbd13c829074d43c587c62bd0f3631dd2bebf547c58e"
     },
     {
+      "bytes": 5271,
+      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
+      "path": "scripts/measure_nsc_atlas_exit_preparations.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6ba500bf3bdc92a3b49b1160f6dfb111aeab3db6d333c2631fb9348c3274bfdd"
+    },
+    {
       "bytes": 3743,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
       "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
@@ -36541,6 +36573,14 @@
       "sha256": "151237f974d42d7bf8c8feb00d1837e5f6f1062ffdeae30f3c231f6293aa73ba"
     },
     {
+      "bytes": 4068,
+      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
+      "path": "src/recursive_horizons/nsc_atlas_volume_preparation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e647977810b4dc678f008ecba0edeafab19fec1063615ba66f1a3b952bfb697a"
+    },
+    {
       "bytes": 3205,
       "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
       "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
@@ -36555,6 +36595,14 @@
       "path": "src/recursive_horizons/nsc_atlas_vortex_transfer.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "acaca8c4824075d4deeac9adc4f52063276d358f3ff82b4df23fc94e7696d9d1"
+    },
+    {
+      "bytes": 3796,
+      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
+      "path": "src/recursive_horizons/nsc_atlas_wall_exit.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a641ebff019f2b552534b1c74cf63225f5ce4ec9a0088bb8974517bd12e98903"
     },
     {
       "bytes": 24515,
@@ -41241,6 +41289,14 @@
       "path": "tests/test_nsc_atlas_wall_coefficient_pullback.py",
       "retention_reason": "Manufactured source-identity, event/frame pullback and wall-only interface controls; no physical evolution.",
       "sha256": "b9d6816cd6de42a615115f13705472123d1e10d72dfe4b0a27da902cbec387fc"
+    },
+    {
+      "bytes": 2532,
+      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
+      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
+      "path": "tests/test_nsc_atlas_wall_exit_preparation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "c21d93eed0ed09f91ca131be19a1aefcb68ea73991692e0ffb21cf50f790d5d4"
     },
     {
       "bytes": 15174,
