@@ -18,9 +18,13 @@ starting a derivation.
 
 ## Current execution priority — 29 October 2026
 
-Active target: the SI hierarchy and the absolute action normalization g;
-stop at its single missing numerical input if it is not fixed. No other
-route is active under this instruction.
+Active target: follow the membrane charge and gravity through the existing
+nesting map, and define a Parke-only wall ruler. The
+[charge transport calculation](nsc-atlas-scale-selection.md#charge-transport-and-a-parke-only-ruler)
+separates flux discharge, physical volume change and dimensional reduction.
+No new formation history or observation fit is active.
+
+e112798: hierarchy obeys g=4*eta_e0^2 and ln(L_ref/ell_e_sigma)=.9747222043-.5*ln(g); target 138.542 needs ln(g)=-275.13456 and ln(eta_e0)=-138.26042 (including -ln(2)); the HM exponent is not the ruler; that audit is parked.
 
 ccc678a/b1f6993: Parke fixes R_c=1.212662645 L_unit(0) and zero seed mass from the fixed vacuum-wall inputs; the empty classical branch never reaches E=3/8; parent-to-child energy transfer is open and parked.
 

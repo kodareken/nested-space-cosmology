@@ -1,5 +1,11 @@
 # Active code and evidence map
 
+`nsc_atlas_charge_inheritance.py` follows charge separately from flux,
+volume evolution and dimensional reduction, and defines a Parke wall ruler
+independently of the old R,M preparation. Its producer retains one compact
+record. Tests verify telescoping, unit/reduction identities, exact radius
+normalization and the absence of hidden historical-preparation calls.
+
 `nsc_atlas_si_hierarchy.py` owns the forward SI identities and explicitly
 inverse exponential diagnostics. `check_nsc_atlas_si_hierarchy.py`
 authenticates retained geometry/HM coefficients and writes one compact

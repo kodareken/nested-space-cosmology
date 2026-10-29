@@ -1,5 +1,15 @@
 # Reproducing the root project
 
+## Charge transport and Parke-only ruler
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_charge_inheritance.py
+python scripts/run_python.py scripts/check_nsc_atlas_charge_inheritance.py --output .build/charge-inheritance-reproduced.json
+```
+
+This evaluates the existing algebraic inheritance law and vacuum roots.
+It introduces no field evolution, nesting-depth fit or SI normalization.
+
 ## SI hierarchy audit
 
 ```powershell

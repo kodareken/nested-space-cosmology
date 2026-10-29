@@ -1,11 +1,119 @@
 # Inherited SI scale: computed routes and remaining selector
 
-The active request is the SI hierarchy audit below. Earlier routes remain
-evidence, not active calculations. The Parke branch is logged and parked
-in the atlas owner. If g is not selected, stop at its missing numerical
-input; do not move to another route.
+The active request is charge transport through the existing inheritance map
+and a Parke-only comparison ruler. Earlier routes remain evidence. The HM
+hierarchy audit and the Parke source-admission problem are parked.
+
+## Charge transport and a Parke-only ruler
+
+The [bounded calculation](../results/summaries/nsc-atlas-charge-inheritance-v1.json)
+traces the current action rather than postulating a suppression factor.
+There are three different maps:
+
+| Map | Exact charge relation | What is selected? |
+| --- | --- | --- |
+| Existing four-dimensional flux inheritance | q_child=q_parent-e; kappa and elementary e are unchanged; r=1 | Exact for this map, for any finite depth |
+| Different volume-field endpoints in the same Einstein action | eta_child/eta_parent=exp[-6(s_child-s_parent)] | No common per-generation volume increment is supplied |
+| One D=16 to 4 reduction | eta_4/eta_D=1/sqrt(v_internal) | Absolute internal volume and UV charge are unselected; this is not a demonstrated repeated spatial nesting rule |
+
+The first relation is implemented by `FluxLaw.inherit` and by the charge
+argument of `ScalarFlux.prepare`. It is the distinction between charge and
+flux in the [four-form action and membrane jump](https://arxiv.org/html/hep-th/0004134#S2.SS2).
+The one-line proof is
+
+$$
+\frac{\eta_{\rm child}}{\eta_{\rm parent}}
+=\frac{\kappa_{\rm child}}{\kappa_{\rm parent}}
+ \frac{e_{\rm child}}{e_{\rm parent}}=1.
+$$
+
+The volume extension has kappa_4=kappa_D/V0 and
+e_can(s)=e_D*sqrt(V0)*exp(-6s). Its finite-energy thin-wall trace has
+[s]=0: across a collar of thickness epsilon, Cauchy--Schwarz bounds the
+gradient energy below by K*(Delta s)^2/(2*epsilon). A finite nonzero field
+jump would diverge in the thin-wall limit. The normal derivative can jump,
+K*[normal derivative s]=-6*sigma. Thus r=1 also holds between the two
+one-sided wall traces. This does not require equilibrated interiors to
+have the same s; their profile and endpoint values must be solved first.
+
+For any chain within this one reduced action the volume factors telescope:
+
+$$
+\prod_{k=1}^{n}r_k=e^{-6(s_n-s_0)},\qquad
+\ln\eta_n=\ln\eta_0-6(s_n-s_0).
+$$
+
+An n-fold fixed suppression would require a physically derived equal
+increment of s at every step. Resetting s=0 at each level does not supply
+it. The already computed matched-start-to-minimum evolution instead gives
+exp(-6*s_star)=1.2384748901, an increase, not a nesting-step ratio.
+Likewise a change of numerical length unit multiplies numerical kappa and
+e by opposite squared factors and leaves their product unchanged.
+
+The dimensional reduction gives eta_D=e_D*kappa_D^(4/7) and
+v=V0*exp(12s)/kappa_D^(6/7). It therefore gives eta_4=eta_D/sqrt(v),
+without fixing v. Repeating a reduction that changes D=16 to D=4 is not
+the same operation as traversing nested four-dimensional regions.
+
+The label j=2 selects the ancestor flux 5/2 for the averaged sheet. The
+parent flux 3/2 discharges in three half-unit steps to zero; the selected
+ancestor flux would take five. Neither count changes e, identifies our
+location in a charge-suppression chain, or supplies a root charge.
+For the actual fixed-charge map, n*ln(r)=0 for every n. Its only remaining
+source of a small eta is the root normalization itself, written as
+eta_D/sqrt(v_root) in the reduction. No value is selected for that
+combination. A general regional volume ratio remains a separate unsolved
+state comparison, not an r=1 theorem about all interiors.
+
+**Parke-only radius ruler.** Define L_P=R_c using the requested constant
+vacuum-wall inputs, without the historical R=1.9, M=.12 or C:
+
+$$
+\frac{L_P^2}{L_{\rm unit}(0)^2}=\frac{57600}{39169},\qquad
+\Lambda_*L_P^2=0.3249667388661.
+$$
+
+The second number expresses the retained volume-well value
+Lambda_*L_unit(0)^2=.220983024212607 on that ruler. It does not establish
+a common solution of the volume source and the stipulated Parke vacua.
+The actual auxiliary Parke interior instead has
+Lambda_i*L_P^2=12600/39169=.3216829635681, and its exterior has
+37800/39169=.9650488907044. These inputs remain declared inputs.
+L_P is a wall areal radius; no matter-defined FRW slice or curvature C
+is thereby supplied. Source admission and matter delivery stay parked.
+
+On this wall ruler the exact forward relation becomes
+
+$$
+\ln\frac{L_P}{\ell_{e\sigma}}
+=-1.4166194374-\ln\eta_{e,0}
+=-0.7234722568-\frac{1}{2}\ln g.
+$$
+
+There are two arithmetic corrections to keep explicit. First, the old
+ruler target 138.542 requires ln(g)=-275.1345556 and
+ln(eta_e0)=-138.260425, or eta_e0=9.00037e-61; the earlier -137.56
+omitted the factor 1/2 in eta=sqrt(g)/2. Second, changing the ruler
+changes both the forward intercept and the target by
+ln(R_c/a0)=-1.6981944611. Using the observed Lambda only as an inverse
+benchmark now gives ln(L_P/ell_e_sigma)=136.8439139446 and
+L_P=5.4591689454e25 m. Neither is a prediction. The implied root charge
+is unchanged by this ruler conversion. The small difference from
+138.542-1.6981944611 comes from rounding the old target.
+
+Result: r=1 for the implemented flux map, selected n absent, predicted
+log hierarchy and percentage miss undefined without eta_root. The volume
+extension supplies an endpoint law, not a fixed suppressing r. No new
+mechanism, field evolution, fit or target-calibrated depth is added.
+Verification: symbolic reduction/telescoping/unit identities, exact Parke
+fractions, target isolation, and a test that forbids the old preparation
+function while evaluating L_P and its coefficient. This is a subsecond
+algebraic calculation; useful parallel work is independent review and
+publication validation rather than a numerical grid.
 
 ## Current audit: the geometric hierarchy and the tunnelling exponent
+
+Retained e112798 audit; its original ruler and targets are historical inputs.
 
 The [retained audit](../results/summaries/nsc-atlas-si-hierarchy-audit-v1.json)
 uses b_HM=403.7817410357, V_star=.220983024212607 and the retained

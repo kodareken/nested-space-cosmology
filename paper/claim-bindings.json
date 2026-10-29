@@ -643,6 +643,11 @@
       "section": "13.23",
       "status": "derived",
       "owner": "docs/nsc-atlas-scale-selection.md"
+    },
+    "charge-inheritance-and-parke-ruler": {
+      "section": "13.23",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-scale-selection.md"
     }
   },
   "findings": [

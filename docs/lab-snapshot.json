@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "b1f69938de169c292861e90e3567ab66f834c696",
+  "current_receipt_commit_parent": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 293319,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 293685,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "4d9a7fe5ece94de8811ee56a984ff740ad6aab2415916347bc563f2afcd0fc49"
+      "sha256": "49d4d5d4f6719159c411421be419126138699f81718d0814747cc140289db8da"
     },
     {
       "bytes": 150322,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 475663,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 476189,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "649c2c267e039f2b06d4ffc671f2c20dd3aee8652f7b045466ed73f269a3ad00"
+      "sha256": "c88ce459e5f631fba816bc86cd4be3614ebc7294a1dec27c2483444f826bd1ca"
     },
     {
       "bytes": 173938,
@@ -11013,12 +11013,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 35472,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 40928,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "02e9be60c565535a858cd1bd47dfbdd05856e540db41410bbe703c175af3b434"
+      "sha256": "3544ac82fdea1a78c75781f64dc07098cd17c1a5e6a86ac05414f0f8d5231fee"
     },
     {
       "bytes": 16908,
@@ -11120,15 +11120,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 128623,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 129025,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "c83094b816141cadf914e186105ed86076a856c6c4a3c2fe07ec444e6a95ec42"
+      "sha256": "e28c231e6926673a6d8534f788f3ea83e32a60062b2ac19df8bb3bc6be16c735"
     },
     {
       "bytes": 30876,
@@ -12110,20 +12110,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 240173,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 240591,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "de3e239b3088343c78d48d820786c2fc850885729376900e4833394b5aafb3c9"
+      "sha256": "d60c0cc80dfb6ecc7e7423d855fd5127450c049ea5979bb1052c7f5ca0eabc2c"
     },
     {
-      "bytes": 52190,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 52600,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "f334ce499bbf8e5c052aaf8663a40e98c99efb60354023c4e3ee9a9a2eacbc29"
+      "sha256": "2867a8e31f85154b20bcc3e6993779c5cb85310849b908aa6d7a9b9a70033bdd"
     },
     {
       "bytes": 18356,
@@ -12192,28 +12192,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 39040,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 39208,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "abb13f13e26095b51acd82c1d89e3a8bb808d08f894cc7a2175c06bd11b2101e"
+      "sha256": "cebc7bd5f07912f7b886b3df572e5cb38d7364d84de68becdc83e8dca6f5e637"
     },
     {
       "bytes": 3206,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "b722e03ade57e311b152f378cdc3d175537be89a7cc09b5a442688f8db67858b"
+      "sha256": "ec13587737355cd6092d1bcbc1c7874a3e04932d739e1c2814e6c762dc714a8a"
     },
     {
-      "bytes": 49344,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 49499,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f475b15ffab2167db27adc2bfd0538c6c32e7e2a5210c0d88fd1a575ed0747f4"
+      "sha256": "213432be444a25490b369be1dc9544da3d4e21b528298115277c947b8f8cb6e2"
     },
     {
       "bytes": 226492,
@@ -12225,27 +12225,27 @@
     },
     {
       "bytes": 396,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "b25a6587784ae880e54581a7efb6e5812a97b6c07de83bb7237b35be8a9b00ed"
+      "sha256": "9a96f0383620286c554c652117f2b1c8c05cffe7c3628bbc7b3b994e70d6f97a"
     },
     {
-      "bytes": 543413,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 546980,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ec438f3ebeeab6685229ec87e04572357e0b8b0cbfb8137f2a4d1b20cd9862c4"
+      "sha256": "001374f8c3ae79ccfb94b11eac741ce67c08aef0046dd20628d323b0bd1de4e6"
     },
     {
-      "bytes": 15063871,
-      "change": "Audit the absolute SI hierarchy, distinguish tunnelling statistics from the geometric ruler, and identify the unselected Planck-normalized membrane charge.",
-      "changed_from_commit": "b1f69938de169c292861e90e3567ab66f834c696",
+      "bytes": 15116918,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "a09bda61cd075544ef0c7b1b3c8d40daaffe846ab4ce496131527a18baee0bf5"
+      "sha256": "1170fefe9167c48ed477b03e8fb24061197472ff43c604ae1528827879894910"
     },
     {
       "bytes": 3283,
@@ -30375,6 +30375,14 @@
       "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
     },
     {
+      "bytes": 5998,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "path": "results/summaries/nsc-atlas-charge-inheritance-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4110f08b877a7ab616a0e44b948bdd15e9ec9f5ed934347ebc70102473870e43"
+    },
+    {
       "bytes": 3116,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
       "changed_from_commit": "217901f581f4cf7196c30d36ba7ec01ba00c037a",
@@ -31701,6 +31709,14 @@
       "path": "scripts/check_nsc_atlas_cap_profile_projection.py",
       "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
       "sha256": "6ea75e024593da8dfc24fac9f4c37870754a1c03e7b9a8d7ad47fef702f9637b"
+    },
+    {
+      "bytes": 1489,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "path": "scripts/check_nsc_atlas_charge_inheritance.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6eaf53c48e00e3e1352dc6d9da8528717a28318e9553299e41c4ef3d61983910"
     },
     {
       "bytes": 2271,
@@ -35884,6 +35900,14 @@
       "path": "src/recursive_horizons/nsc_atlas_characteristic_background.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "b7883490e6bad9c7096bfa6c6616e0674ff319e08e0e0be7ababf6055d1d5c9c"
+    },
+    {
+      "bytes": 6232,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "path": "src/recursive_horizons/nsc_atlas_charge_inheritance.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "fe00379032ef3ffd3cb8b8619d8bda76b95ef406177586fe690326cbddbfa076"
     },
     {
       "bytes": 4710,
@@ -40338,6 +40362,14 @@
       "path": "tests/test_nsc_atlas_characteristic_initialization.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "0d5ed81c21b3c21e47517e4e1d76ec5d0801c86a2a2e12420cb401307e13464a"
+    },
+    {
+      "bytes": 3290,
+      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
+      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "path": "tests/test_nsc_atlas_charge_inheritance.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d8da6f0d923bbdbd351a6c9d5ea9ec2c118c8663209fbcb055aabd36c550cf84"
     },
     {
       "bytes": 1228,

@@ -4456,6 +4456,81 @@ No value of $g$, hierarchy exponent, predicted SI hierarchy or prediction
 miss is selected. This audit stops at $\eta_{e,0}$; it does not resume a
 different route or the parked parent-to-child energy calculation.
 
+<!-- nsc-claim:charge-inheritance-and-parke-ruler -->
+
+**Charge transport and a Parke radius ruler.** Evidence:
+[charge map and ruler calculation](../results/summaries/nsc-atlas-charge-inheritance-v1.json),
+[action-level distinctions](../docs/nsc-atlas-scale-selection.md#charge-transport-and-a-parke-only-ruler),
+and [independent transport and unit controls](../tests/test_nsc_atlas_charge_inheritance.py).
+
+Does repeated nesting itself make the charge small? In the implemented
+four-dimensional inheritance step the flux changes by one membrane charge,
+while the charge and gravitational coupling remain fixed. The
+[published membrane law](https://arxiv.org/html/hep-th/0004134#S2.SS2)
+and the current action give
+
+$$
+q_{\rm child}=q_{\rm parent}-e,\qquad
+r=\frac{\eta_{\rm child}}{\eta_{\rm parent}}
+=\frac{\kappa_{\rm child}e_{\rm child}}
+{\kappa_{\rm parent}e_{\rm parent}}=1.
+$$
+
+The volume extension makes a different, state-dependent comparison.
+Its Einstein coupling is constant and its canonical charge is proportional
+to exp(-6s). At a finite-energy thin wall, s is continuous: a field jump
+across thickness epsilon costs at least K times the squared jump divided
+by twice epsilon. Its normal derivative can jump, as the wall condition
+requires. Thus the two one-sided wall charges agree, while equilibrated
+interiors can differ after a compatible profile and their states are solved.
+For any such endpoint chain within this reduced action,
+
+$$
+r_k=e^{-6(s_{k+1}-s_k)},\qquad
+\prod_{k=0}^{n-1}r_k=e^{-6(s_n-s_0)}.
+$$
+
+Depth alone supplies no suppression. A fixed factor per generation needs
+a derived volume increment per generation. The retained homogeneous
+matched-start-to-minimum evolution gives a charge ratio 1.2384748901;
+it is a time-evolution factor, not a nesting step. The single D=16 to 4
+reduction gives a different ratio, $\eta_4/\eta_D=1/\sqrt{v}$, but does not
+select the internal volume or construct a repeated dimensional reduction.
+
+Here $j=2$ labels the ancestor flux 5/2 assigned to one sheet. From flux
+3/2 there are three downward half-unit discharges to zero; from 5/2 there
+are five. These flux counts leave the elementary charge unchanged and
+do not select our depth. For the implemented map, $\ln\eta_n=\ln\eta_{\rm root}$
+at every depth. The remaining source of a small charge is the root
+normalization, $\eta_D/\sqrt{v_{\rm root}}$, which is not yet selected. No predicted
+hierarchy or percentage miss can be assigned without it.
+
+To remove the old R,M preparation from a length comparison, define a new
+wall ruler $L_P=R_c$ using the stipulated Parke vacuum and tension inputs:
+
+$$
+\frac{L_P}{L_{\rm unit}(0)}=\frac{240}{\sqrt{39169}},\qquad
+\Lambda_*L_P^2=0.3249667388661.
+$$
+
+This expresses the retained volume-well vacuum on the independent wall
+radius. It does not identify the wall radius with the old FRW curvature
+radius or solve the source-admission problem. The actual auxiliary Parke
+interior has $\Lambda_i L_P^2=12600/39169=.3216829635681$. Its vacuum
+densities and tension remain declared inputs. The new forward relation is
+
+$$
+\ln\frac{L_P}{\ell_{e\sigma}}
+=-1.4166194374-\ln\eta_{e,0}.
+$$
+
+The old-ruler target 138.542 requires $\ln\eta_{e,0}=-138.260425$ because
+$\eta=\sqrt{g}/2$; dropping the factor 1/2 would omit $\ln 2$. Re-expressing
+the observed Lambda benchmark on $L_P$ gives log hierarchy 136.8439139446.
+Both the target and the forward intercept shift by the same ruler factor,
+so the required physical charge is unchanged. Neither the ruler conversion
+nor a flux-depth count selects that charge.
+
 ### 13.24. An extremal member is not yet an inherited selection
 
 <!-- nsc-claim:parent-volume-discrete-selection-audit -->

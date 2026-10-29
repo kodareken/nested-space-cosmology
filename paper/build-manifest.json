@@ -1,10 +1,10 @@
 {
-  "bytes": 15063871,
+  "bytes": 15116918,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "b25a6587784ae880e54581a7efb6e5812a97b6c07de83bb7237b35be8a9b00ed",
+  "metadata_sha256": "9a96f0383620286c554c652117f2b1c8c05cffe7c3628bbc7b3b994e70d6f97a",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 186,
-  "pdf_sha256": "a09bda61cd075544ef0c7b1b3c8d40daaffe846ab4ce496131527a18baee0bf5",
+  "pages": 187,
+  "pdf_sha256": "1170fefe9167c48ed477b03e8fb24061197472ff43c604ae1528827879894910",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -520,6 +520,10 @@
       "sha256": "61190f1d3029ccda920c0a6783d9e9d682408e43a3078a816672a182502e44d2"
     },
     {
+      "path": "results/summaries/nsc-atlas-charge-inheritance-v1.json",
+      "sha256": "4110f08b877a7ab616a0e44b948bdd15e9ec9f5ed934347ebc70102473870e43"
+    },
+    {
       "path": "results/summaries/nsc-atlas-cmb-geometric-diagnostic-v1.json",
       "sha256": "fbf1038d0b248e4e670844584817b3797bff34a3ad1bb6b365375b8d88008965"
     },
@@ -917,6 +921,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "ec438f3ebeeab6685229ec87e04572357e0b8b0cbfb8137f2a4d1b20cd9862c4",
-  "version": "working-2026-10-29.6"
+  "source_sha256": "001374f8c3ae79ccfb94b11eac741ce67c08aef0046dd20628d323b0bd1de4e6",
+  "version": "working-2026-10-29.7"
 }

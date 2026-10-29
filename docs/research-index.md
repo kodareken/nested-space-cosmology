@@ -1,6 +1,12 @@
 # Scientific strand index
 
-The [active SI hierarchy audit](nsc-atlas-scale-selection.md#current-audit-the-geometric-hierarchy-and-the-tunnelling-exponent)
+The [charge transport and Parke-ruler result](nsc-atlas-scale-selection.md#charge-transport-and-a-parke-only-ruler)
+separates fixed elementary charge from changing flux and volume. The
+implemented flux step gives r=1; regional volume factors telescope without
+a selected depth law. The Parke wall ruler removes the old preparation
+from that normalization comparison, while leaving the SI charge unselected.
+
+The [retained SI hierarchy audit](nsc-atlas-scale-selection.md#current-audit-the-geometric-hierarchy-and-the-tunnelling-exponent)
 isolates the absolute membrane-charge normalization eta_e0. The action
 does not select g=4*eta_e0^2 or identify a tunnelling statistic with the
 geometric ruler. The requested inverse exponent values and their geometric

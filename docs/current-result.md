@@ -1,5 +1,13 @@
 # What the calculations show
 
+The [charge-inheritance calculation](nsc-atlas-scale-selection.md#charge-transport-and-a-parke-only-ruler)
+gives r=1 for the actual fixed-charge flux step. Volume-dependent canonical
+charges obey an endpoint law exp[-6(s_child-s_parent)], with no selected
+per-generation increment or depth. The root normalization remains free.
+Defining the independent Parke wall ruler L_P=R_c gives
+Lambda_star*L_P^2=.3249667388661 as a conversion of the retained volume
+well, not a newly matched source solution. No SI prediction follows.
+
 The [SI hierarchy audit](nsc-atlas-scale-selection.md#current-audit-the-geometric-hierarchy-and-the-tunnelling-exponent)
 finds g unselected. The single missing number is eta_e0, the absolute
 Planck-normalized canonical membrane charge, with g=4*eta_e0^2. The
@@ -159,7 +167,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-29.6. Its central route is spherical
+revision 2026-10-29.7. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.
