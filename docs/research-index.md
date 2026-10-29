@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [dimension/ancestor audit](nsc-atlas-scale-selection.md#selection-audit-inheritance-permits-a-family--29-october-2026)
+proves an infinite initially stable family and its exact ordering. Five
+frontier values with rational enclosures establish (12,2) as the unique
+lowest late vacuum in the matched family. Physical selection remains
+open because the parent action coefficients change between members.
+
 The [physical-volume source connection](nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum)
 derives charge/tension/frequency co-scaling and a conditional stable moving
 vacuum from an explicitly extended parent action. Its numerical late

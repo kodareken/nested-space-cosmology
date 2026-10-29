@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_volume_family.py` reuses the volume candidate's coefficients
+and potential to derive the general stability condition, stationary-root
+brackets and family envelope. Its creation-only producer is
+`check_nsc_atlas_volume_family.py`; symbolic and independent 70-digit root
+controls are in `test_nsc_atlas_volume_family.py`. It performs no new
+evolution and preserves the original one-member record and source.
+
 `nsc_atlas_parent_scale_selector.py` owns the new physical-volume reduction,
 exact matching/stiffness conditions, finite homogeneous evolution and
 variable-frequency action ledger. `check_nsc_atlas_parent_scale_selector.py`

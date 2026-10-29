@@ -2,6 +2,16 @@
 
 ## Physical volume and the inherited evolving source
 
+The discrete-choice audit uses no field evolution:
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_volume_family.py
+python scripts/run_python.py scripts/check_nsc_atlas_volume_family.py --output .build/volume-family-reproduced.json
+```
+
+It computes finite witnesses and proves the range by monotonicity. The
+chosen dimension and ancestor depth are explicitly unselected.
+
 ```powershell
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_scale_selector.py
 python scripts/run_python.py scripts/check_nsc_atlas_parent_scale_selector.py --output .build/parent-volume-reproduced.json

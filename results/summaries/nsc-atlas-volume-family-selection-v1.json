@@ -1,0 +1,422 @@
+{
+  "SI_scale_selected": false,
+  "ancestor_depth_selected": false,
+  "ancestor_meaning": "j is the depth of ONE assigned ancestor vacuum sheet, not a sum of j independent sheets.",
+  "common_action_warning": "Changing d changes the parent theory; changing j here also rematches A,B and bulk energy. This audit is a family of conditional actions, not transitions within one completed UV model.",
+  "conclusion": "Inheritance covariance and homogeneous stability do not select d=12 or j=2. 9.7022370093 is the computed late coefficient for that declared member.",
+  "conditional_inverse_example": {
+    "T": "25/32",
+    "d": "12",
+    "j": 2.0
+  },
+  "dimension_selected": false,
+  "family_energy_minimum": {
+    "coefficient": 9.702237009265096,
+    "d": 12,
+    "j": 2,
+    "limitation": "A minimum over rematched effective actions is not a derived transition or ground-state rule of one common parent theory.",
+    "physical_selection_derived": false,
+    "proof": "Strict coordinate monotonicity reduces all initially stable integer pairs to (12,2),(6,3),(5,4),(4,5),(3,7). Their minimum is (12,2).",
+    "unique": true
+  },
+  "inherited_source": {
+    "E0": "3/8",
+    "charge": "1/2",
+    "epsilon": "1/4",
+    "parent_flux": "3/2",
+    "rho": "9/32"
+  },
+  "inverse_warning": "The reference A=7 and B=15/2 were defined from (12,2). Inverting them does not independently select it.",
+  "minimum_stable_dimensions": [
+    {
+      "d_min": null,
+      "j": 1
+    },
+    {
+      "d_min": 12,
+      "j": 2
+    },
+    {
+      "d_min": 6,
+      "j": 3
+    },
+    {
+      "d_min": 5,
+      "j": 4
+    },
+    {
+      "d_min": 4,
+      "j": 5
+    },
+    {
+      "d_min": 4,
+      "j": 6
+    },
+    {
+      "d_min": 3,
+      "j": 7
+    }
+  ],
+  "missing_selection": "An independent common parent geometry/action/state must fix d and the ancestor-source coupling or provide a normalized branch-selection rule. No such equation is currently supplied.",
+  "monotonicity": {
+    "dV_dT": "exp(-u)*((d/2-1)-(d/2)*x+x^(d/2))>0 at the late minimum",
+    "dV_dd": "exp(-u)*S0/2*(1-(1+2*u/d)*exp(-2*u/d))>0 at the late minimum",
+    "justification": "Convexity of x^(d/2), exp(y)>=1+y, and stationarity eliminate the implicit minimum-location derivative.",
+    "variables": "u=d*s, x=exp(-2*u/d), S0=rho+T+E0/2"
+  },
+  "new_field_evolutions": 0,
+  "rectangle_10_to_30_and_2_to_4": {
+    "lower": 9.408135438191913,
+    "lower_has_stable_initial_point": false,
+    "lower_with_initial_stability": 9.702237009265096,
+    "method": "Analytic monotonicity in d and T_j reduces the rectangle extrema to corners; no dynamics or exhaustive parameter scan.",
+    "upper": 11.604269862414528
+  },
+  "reference_source_commit": "59ef213",
+  "schema": "nsc-atlas-volume-family-selection-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_volume_family.py": "0993e48dbf1db8f9ecdd561e9c7b131f6ec60a108dae7688eb43ba0f984b536d",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "src/recursive_horizons/nsc_atlas_volume_family.py": "71a89689d3466a55d0c6e06416ded3581339a9e65d71bf40c3c61246d45beebb"
+  },
+  "stability_condition": "d*((j+3)^2-18)>2*(j+3)^2+30",
+  "stable_integer_frontier": [
+    {
+      "coefficient": 9.702237009265096,
+      "d": 12,
+      "exact_outward_enclosure": [
+        "9.70223700",
+        "9.70223702"
+      ],
+      "j": 2
+    },
+    {
+      "coefficient": 9.991573647602356,
+      "d": 6,
+      "exact_outward_enclosure": [
+        "9.99157364",
+        "9.99157366"
+      ],
+      "j": 3
+    },
+    {
+      "coefficient": 10.635176064650121,
+      "d": 5,
+      "exact_outward_enclosure": [
+        "10.63517606",
+        "10.63517607"
+      ],
+      "j": 4
+    },
+    {
+      "coefficient": 10.776179311559444,
+      "d": 4,
+      "exact_outward_enclosure": [
+        "10.77617930",
+        "10.77617932"
+      ],
+      "j": 5
+    },
+    {
+      "coefficient": 10.727932243143604,
+      "d": 3,
+      "exact_outward_enclosure": [
+        "10.72793224",
+        "10.72793225"
+      ],
+      "j": 7
+    }
+  ],
+  "witnesses": [
+    {
+      "Lambda_Lref0_squared": 9.408135438191913,
+      "ancestor_depth": 2,
+      "ancestor_flux": "5/2",
+      "d": 10,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": false,
+      "initial_stiffness": "-25/8",
+      "required_A": "23/4",
+      "required_B": "25/4",
+      "required_UV_bare": "175/32",
+      "sheet_T": "25/32",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.06890961919107799,
+          "stiffness": -26.22918906423928,
+          "vacuum": 0.34984413896431305,
+          "x": 0.8712561671869491
+        },
+        {
+          "kind": "minimum",
+          "s": -0.04571244999794038,
+          "stiffness": 130.21717455404507,
+          "vacuum": 0.21428441908274176,
+          "x": 1.0957344839382295
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 9.702237009265096,
+      "ancestor_depth": 2,
+      "ancestor_flux": "5/2",
+      "d": 12,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "3/2",
+      "required_A": "7",
+      "required_B": "15/2",
+      "required_UV_bare": "215/32",
+      "sheet_T": "25/32",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.06000053504181991,
+          "stiffness": -37.350469662016124,
+          "vacuum": 0.3545366774774573,
+          "x": 0.8869194876386162
+        },
+        {
+          "kind": "minimum",
+          "s": -0.035646782552940987,
+          "stiffness": 183.431472847858,
+          "vacuum": 0.22098302421260696,
+          "x": 1.0738964381199976
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 10.005984373678723,
+      "ancestor_depth": 2,
+      "ancestor_flux": "5/2",
+      "d": 16,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "16",
+      "required_A": "19/2",
+      "required_B": "10",
+      "required_UV_bare": "295/32",
+      "sheet_T": "25/32",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.047467687501052756,
+          "stiffness": -65.61576181102251,
+          "vacuum": 0.36086784170179287,
+          "x": 0.9094317045911958
+        },
+        {
+          "kind": "minimum",
+          "s": -0.024691960766614996,
+          "stiffness": 320.01383789995793,
+          "vacuum": 0.22790132677732822,
+          "x": 1.0506236303562244
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 10.341756607577427,
+      "ancestor_depth": 2,
+      "ancestor_flux": "5/2",
+      "d": 30,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "975/8",
+      "required_A": "73/4",
+      "required_B": "75/4",
+      "required_UV_bare": "575/32",
+      "sheet_T": "25/32",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.027207665905497315,
+          "stiffness": -227.56852461609014,
+          "vacuum": 0.37065770669091824,
+          "x": 0.9470386895141608
+        },
+        {
+          "kind": "minimum",
+          "s": -0.011855390472319304,
+          "stiffness": 1110.4473719295102,
+          "vacuum": 0.2355490438576986,
+          "x": 1.0239941164480808
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 10.916832611538338,
+      "ancestor_depth": 3,
+      "ancestor_flux": "3",
+      "d": 12,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "171/4",
+      "required_A": "279/32",
+      "required_B": "153/16",
+      "required_UV_bare": "135/16",
+      "sheet_T": "9/8",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.07111309541086634,
+          "stiffness": -40.142344906914786,
+          "vacuum": 0.3847594384075259,
+          "x": 0.8674250307140277
+        },
+        {
+          "kind": "minimum",
+          "s": -0.022796080960321895,
+          "stiffness": 191.54021809315486,
+          "vacuum": 0.24864726382346802,
+          "x": 1.04664746120933
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 11.604269862414528,
+      "ancestor_depth": 4,
+      "ancestor_flux": "7/2",
+      "d": 30,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "6015/8",
+      "required_A": "115/4",
+      "required_B": "30",
+      "required_UV_bare": "911/32",
+      "sheet_T": "49/32",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.03553761066097823,
+          "stiffness": -288.9651248775026,
+          "vacuum": 0.45986983910947926,
+          "x": 0.931391828967869
+        },
+        {
+          "kind": "minimum",
+          "s": -0.005316704443020618,
+          "stiffness": 1515.8316597209441,
+          "vacuum": 0.26430467999563056,
+          "x": 1.01069014449764
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 9.991573647602356,
+      "ancestor_depth": 3,
+      "ancestor_flux": "3",
+      "d": 6,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "9/8",
+      "required_A": "63/16",
+      "required_B": "153/32",
+      "required_UV_bare": "117/32",
+      "sheet_T": "9/8",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.11473350513592234,
+          "stiffness": -10.108638124420352,
+          "vacuum": 0.35256283772116087,
+          "x": 0.7949571936269737
+        },
+        {
+          "kind": "minimum",
+          "s": -0.06487515667010643,
+          "stiffness": 47.88806949853608,
+          "vacuum": 0.2275731008407309,
+          "x": 1.138544068565797
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 10.635176064650121,
+      "ancestor_depth": 4,
+      "ancestor_flux": "7/2",
+      "d": 5,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "135/32",
+      "required_A": "15/4",
+      "required_B": "5",
+      "required_UV_bare": "111/32",
+      "sheet_T": "49/32",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.146497960184928,
+          "stiffness": -7.411286676417113,
+          "vacuum": 0.3633990731123547,
+          "x": 0.7460251841978429
+        },
+        {
+          "kind": "minimum",
+          "s": -0.06172539422355893,
+          "stiffness": 34.10204122737346,
+          "vacuum": 0.24223211281641666,
+          "x": 1.131394325500384
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 10.776179311559444,
+      "ancestor_depth": 5,
+      "ancestor_flux": "4",
+      "d": 4,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "13/4",
+      "required_A": "103/32",
+      "required_B": "79/16",
+      "required_UV_bare": "47/16",
+      "sheet_T": "2",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.18055165389672262,
+          "stiffness": -4.957941389922681,
+          "vacuum": 0.36383718831067147,
+          "x": 0.6969069988235896
+        },
+        {
+          "kind": "minimum",
+          "s": -0.07190101605173187,
+          "stiffness": 22.54935882175411,
+          "vacuum": 0.24544367360348707,
+          "x": 1.1546555011764104
+        }
+      ]
+    },
+    {
+      "Lambda_Lref0_squared": 10.727932243143604,
+      "ancestor_depth": 7,
+      "ancestor_flux": "5",
+      "d": 3,
+      "inherited_discrete_choice": false,
+      "initial_homogeneous_stable": true,
+      "initial_stiffness": "3/2",
+      "required_A": "163/64",
+      "required_B": "345/64",
+      "required_UV_bare": "145/64",
+      "sheet_T": "25/8",
+      "stationary_points": [
+        {
+          "kind": "maximum",
+          "s": 0.2247841953760129,
+          "stiffness": -2.9185326132445724,
+          "vacuum": 0.3568039343454198,
+          "x": 0.6379034172280994
+        },
+        {
+          "kind": "minimum",
+          "s": -0.09699774811069638,
+          "stiffness": 13.112233720694363,
+          "vacuum": 0.2443447741354836,
+          "x": 1.2140908149476801
+        }
+      ]
+    }
+  ]
+}

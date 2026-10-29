@@ -138,9 +138,9 @@ selector in the fixed realization; it is not a rejection of nesting.
 
 ## Proposal for Douglas's review: derive and select the physical charge unit
 
-Status: proposal only. No new selection sector, potential or numerical
-campaign is implemented or admitted by this note. The existing source,
-likelihood results, P004/P005 and scalar/flux couplings remain unchanged.
+Status: the approved conditional construction is implemented below. Its
+dimension and ancestral source are unselected, as the 29 October audit
+proves. The original source, likelihood results and P004/P005 remain fixed.
 
 The unresolved quantity can be expressed as one dimensionless coupling,
 g_scale=kappa_nat/L_unit^2, or eta_e=kappa_nat*e_can=ehat*sqrt(g_scale).
@@ -319,10 +319,10 @@ A=B+\rho-T,\quad
 V_{{\rm total},ss}(0)=-d(d+2)\rho+d(d-2)T-\frac{d(3d+4)}{4}E_0.
 $$
 
-For one ancestor, q_A=2, the last expression times 32/d is -2d-62;
-no dimension stabilizes the supplied initial matter state. For two
-ancestors, q_A=5/2, it is 7d-80. The first stable integer in this specified
-two-ancestor family is d=12, giving
+For an ancestor one step above, q_A=2, the last expression times 32/d is -2d-62;
+no dimension stabilizes the supplied initial matter state. For an ancestor
+two steps above, q_A=5/2, it is 7d-80. The first stable integer in this
+specified depth-two family is d=12, giving
 
 $$
 A=7,\quad B=\frac{15}{2},\quad T=\frac{25}{32},\quad
@@ -413,7 +413,8 @@ higher-dimensional problem.
 ### The resulting number and the remaining absolute scale
 
 With the original reference curvature radius L_ref(0)=C^(-1/2)*L_unit(0),
-the selected late vacuum has Lambda_star*L_ref(0)^2=9.7022370093, compared
+the late vacuum of the declared (d,j)=(12,2) member has
+Lambda_star*L_ref(0)^2=9.7022370093, compared
 with the matched initial 12.3482523989. This new effective source evolves;
 the old supernova/DESI scores and P004/P005 do not validate it.
 
@@ -443,3 +444,166 @@ symbolically. Stop/redirection: retain this conditional connection and
 advance to the physical UV/source closure; do not repeat finished volume
 precision checks. No claim of SI closure, full localized uplift, other-mode
 stability or an unchanged observer likelihood is admitted.
+
+## Selection audit: inheritance permits a family — 29 October 2026
+
+The [general calculation](../results/summaries/nsc-atlas-volume-family-selection-v1.json)
+confirms Douglas's independent check: 9.7022370093 is one member's
+coefficient. Neither d=12 nor j=2 follows from the current inherited law.
+Here j means the depth of the ONE ancestor assigned to the vacuum sheet,
+q_A=(3+j)/2. It does not mean that j separate sheet energies were summed.
+The physical coupling to that particular ancestor is itself a premise.
+
+With rho=9/32, E0=3/8 and T_j=(j+3)^2/32, differentiating the matched
+potential gives the exact general initial stability condition
+
+$$
+\frac{32}{d}V_{{\rm total},ss}(0)
+=d\left[(j+3)^2-18\right]-2(j+3)^2-30>0.
+$$
+
+There is no stable initial member at j=1. At j>=2,
+
+$$
+d>\frac{2(j+3)^2+30}{(j+3)^2-18}.
+$$
+
+The first stable dimensions for j=2,3,4,5,6,7 are respectively
+12,6,5,4,4,3. Every larger integer d at each of those depths also passes
+this initial homogeneous test. Hence stability admits infinitely many
+pairs; it cannot select (12,2). Minimizing j first and then d gives
+(12,2), while minimizing d first and then j gives (3,7). Neither
+optimization order is an inheritance equation or a thermodynamic law.
+
+The [normalized-pullback construction](nsc-nested-qualities.md#1-a-concrete-meaning-of-the-inheritance-transformation)
+fixes its operator data before proving covariance. Its block dimension is
+not identified with the present internal manifold dimension. The physical
+top-form reduction likewise preserves q/e, epsilon, sigma/e and omega/e
+for every admitted d. Iterating q -> q-e supplies fluxes at a specified
+depth; it supplies no preferred ancestral sheet. No equality in those
+constructions excludes the alternative pairs.
+
+### Exact family envelope without another evolution campaign
+
+For x=exp(-2s), the stationary equation is
+
+$$
+F(x)=dA-(d+2)Bx+2dT x^{d/2}=0.
+$$
+
+For d>2, A,B,T>0, F is strictly convex, with F(0)>0,
+F(1)=-dE0/2<0 and F tending to positive infinity. Thus it has exactly
+two positive zeros, one on either side of one. The larger zero gives
+the late local minimum s_star<0. These brackets permit direct root solves.
+They do not require a time evolution or a field grid.
+
+The range can also be proved rather than inferred from sampled cases.
+Write u=ds and S0=rho+T+E0/2. After matching,
+
+$$
+V=e^{-u}\left[\rho-T+\frac{d S_0}{2}(1-e^{-2u/d})+Te^{-u}\right].
+$$
+
+At its stationary minimum the implicit derivative through u_star vanishes.
+Putting x=exp(-2u/d), the remaining derivatives are
+
+$$
+\partial_T V=e^{-u}\left[\frac d2-1-\frac d2 x+x^{d/2}\right]>0,
+$$
+
+$$
+\partial_d V=\frac{e^{-u} S_0}{2}
+\left[1-(1+2u/d)e^{-2u/d}\right]>0.
+$$
+
+The first inequality follows from convexity of x^(d/2); the second from
+exp(y)>=1+y. Both are strict at u_star<0. Therefore the late minimum
+increases with d and with ancestor depth j. This is a relation between
+rematched family members, not evolution or minimization over dimensions.
+
+| Internal d | Ancestor depth j | Initial stiffness | Late Lambda_star L_ref(0)^2 |
+| ---: | ---: | ---: | ---: |
+| 10 | 2 | -25/8 | 9.4081354382 |
+| 12 | 2 | 3/2 | 9.7022370093 |
+| 16 | 2 | 16 | 10.0059843737 |
+| 30 | 2 | 975/8 | 10.3417566076 |
+| 12 | 3 | 171/4 | 10.9168326115 |
+| 30 | 4 | 6015/8 | 11.6042698624 |
+| 6 | 3 | 9/8 | 9.9915736476 |
+| 3 | 7 | 3/2 | 10.7279322431 |
+
+Thus the quoted rectangle 10<=d<=30, 2<=j<=4 has extrema
+9.4081354382 and 11.6042698624, certified as rectangle corners by
+monotonicity. The d=10,j=2 member has a late minimum but an unstable
+initial equilibrium. Imposing positive initial stiffness raises this
+rectangle's lower endpoint to 9.7022370093. That depends on the chosen
+rectangle and does not select a physical member. Eight stationary solutions
+are checked independently at 70-digit precision in the original s variable.
+
+### The precise missing connection
+
+There is a stronger mathematical property of the reference point. All
+initially stable integer pairs are coordinatewise above at least one of
+the five frontier pairs
+
+$$
+(12,2),\ (6,3),\ (5,4),\ (4,5),\ (3,7).
+$$
+
+This list follows directly from the exact minimum-dimension staircase:
+j=2 needs d>=12; j=3 needs d>=6; j=4 needs d>=5; j=5,6 need d>=4;
+all j>=7 permit d>=3. Strict monotonicity reduces the whole infinite
+family's minimum to these five points. Their late coefficients are
+9.7022370, 9.9915736, 10.6351761, 10.7761793 and 10.7279322.
+Consequently (12,2) uniquely minimizes the late vacuum among this entire
+initially stable, rematched family. This is an extremal theorem; it is
+stronger than being the first tested stable example.
+
+The ordering is also enclosed by exact rational arithmetic. With y=exp(-s),
+stationarity becomes the integer-power polynomial
+dA-(d+2)B*y^2+2dT*y^d=0, including for odd d. Rational bisection brackets
+its root above one; termwise interval bounds enclose V/C. The five
+outward-rounded intervals are disjoint and establish the strict smallest
+value without relying on floating-point equality.
+
+It is not yet a physical selection theorem. Nature minimizing this
+particular function over these different actions would be an additional
+premise. A common parent theory must first make the branches admissible,
+their energy normalization comparable, and their state/transition law
+available. Neither inheritance covariance nor the local s equation
+provides that global variational principle. No thermodynamic selection
+or tunnelling preference has been derived here.
+
+Each family member changes A, B, T and the required bulk energy. Across d,
+even the dimensionality of the parent action changes. These are competing
+conditional effective actions, not a transition already described by a
+single fixed ultraviolet theory. V_s=0 selects a volume within a chosen
+action; it is not a variation with respect to d or an ancestral label.
+
+Independent parent data could remove the ambiguity. For example, if A and
+B were independently inherited in the same s=0 normalization, matching
+would require
+
+$$
+T=B+\rho-A,\qquad
+j=\sqrt{32T}-3,\qquad
+d=\frac{2B}{\rho+T+E_0/2}.
+$$
+
+Their values would also need to yield admitted integers and a compatible
+parent source. Feeding A=7 and B=15/2 into these equations recovers
+(12,2), but those coefficients were originally built from (12,2).
+That inversion is circular and supplies no new evidence.
+
+The next physical requirement is a common parent action/geometry and
+inherited state that independently supplies the compact space and the
+ancestor-sheet coupling. An alternative would be a derived, normalized
+selection rule over those physical branches. No such rule is currently
+present. A proposed tunnelling weight would require its common action,
+state and prefactor before it could rank these different models.
+
+Decision: retain the verified dynamics as a conditional example and stop
+treating its numerical coefficient as selected. Complete: exact selection
+audit, analytic monotonicity and numerical witnesses. Next: the missing
+common parent/source rule, before pursuing an SI scale based on one pair.
+This audit uses no new evolution, target fit or additional physical state.

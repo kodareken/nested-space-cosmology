@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 28 October 2026
+Working research manuscript, 29 October 2026
 
 ## Abstract
 
@@ -63,7 +63,9 @@ A separate parent-volume extension derives a common geometric factor for
 the inherited charge, wall tension and scalar frequency. Its reduced
 action gives an exact stabilization condition and a conditional positive
 vacuum approached by the evolving matter source. This connects physical
-normalization to dynamics; the microscopic charge, required bulk energy
+normalization to dynamics. A family audit gives an extremal property to
+the chosen example but supplies no physical selection of its dimension or
+ancestor depth. Those choices, microscopic charge, required bulk energy
 and shared wall construction still prevent an absolute SI prediction.
 
 The resulting book connects geometry, inherited state, stress, structure and
@@ -4283,8 +4285,8 @@ A=B+\rho-T,\quad
 V_{{\rm total},ss}(0)=-d(d+2)\rho+d(d-2)T-\frac{d(3d+4)}{4}E_0.
 $$
 
-One ancestor with $q_A=2$ gives $32V_{{\rm total},ss}/d=-2d-62<0$.
-Two ancestors with $q_A=5/2$ give $7d-80$. The first stable integer in
+An ancestor one step above, with $q_A=2$, gives $32V_{{\rm total},ss}/d=-2d-62<0$.
+An ancestor two steps above, with $q_A=5/2$, gives $7d-80$. The first stable integer in
 that specified family is $d=12$, with
 
 $$
@@ -4376,6 +4378,102 @@ P004/P005 forecasts and supernova/DESI scores remain records of their
 original candidate. The next physical connection is a common parent
 source/state that supplies this normalization, the bulk energy and the
 new wall junction together.
+
+### 13.24. An extremal member is not yet an inherited selection
+
+<!-- nsc-claim:parent-volume-discrete-selection-audit -->
+
+Evidence: [general stability, family roots and frontier](../results/summaries/nsc-atlas-volume-family-selection-v1.json),
+[derivation and selection boundary](../docs/nsc-atlas-scale-selection.md#selection-audit-inheritance-permits-a-family--29-october-2026),
+and [symbolic and independent high-precision checks](../tests/test_nsc_atlas_volume_family.py).
+
+The preceding value 9.7022370093 is conditional on internal dimension
+$d=12$ and ancestor depth $j=2$. Here $j$ identifies the one ancestor
+assigned to the sheet; it does not count a sum of independent sheets.
+The general rule $T_j=(j+3)^2/32$ gives
+
+$$
+\frac{32}{d}V_{{\rm total},ss}(0)
+=d\left[(j+3)^2-18\right]-2(j+3)^2-30.
+$$
+
+Positive initial stiffness permits $d\geq12$ for $j=2$, $d\geq6$ for
+$j=3$, $d\geq5$ for $j=4$, $d\geq4$ for $j=5,6$, and $d\geq3$ for
+all $j\geq7$. It excludes $j=1$. Thus inheritance and this stability test
+admit infinitely many pairs. The normalized-pullback construction fixes
+its operator data before proving covariance; its block dimension is a
+different object from the internal manifold dimension here. The physical
+reduction's inherited ratios also hold for every admitted $d$.
+
+This family has an exact ordering. At $x=e^{-2s}$, the stationary equation
+is $F(x)=dA-(d+2)Bx+2dT x^{d/2}=0$. Strict convexity for $d>2$, together
+with $F(0)>0$, $F(1)=-dE_0/2<0$ and positive growth at infinity, gives
+exactly two roots. The larger root is the unique late local minimum,
+with $s_*<0$.
+
+Set $u=ds$ and $S_0=\rho+T+E_0/2$. The matched potential becomes
+
+$$
+V=e^{-u}\left[\rho-T+\frac{dS_0}{2}(1-e^{-2u/d})+Te^{-u}\right].
+$$
+
+Stationarity removes the derivative through the minimum's location.
+The two remaining derivatives, at fixed $u$, are
+
+$$
+\partial_T V=e^{-u}\left[\frac{d}{2}-1-\frac{d}{2}x+x^{d/2}\right]>0,
+$$
+
+$$
+\partial_d V=\frac{e^{-u}S_0}{2}
+\left[1-(1+2u/d)e^{-2u/d}\right]>0.
+$$
+
+Convexity of the power and exponential proves the signs. Hence the late
+minimum strictly increases with $d$ and $j$. The rectangle
+$10\leq d\leq30$, $2\leq j\leq4$ has coefficients from 9.4081354382
+to 11.6042698624, without running an evolution at every point. Its lowest
+member $(10,2)$ has a positive late minimum but negative initial stiffness.
+
+Every initially stable integer pair lies coordinatewise above one of five
+frontier points. Their independently checked values are:
+
+| Internal dimension d | Ancestor depth j | Late Lambda_star L_ref(0)^2 |
+| ---: | ---: | ---: |
+| 12 | 2 | 9.7022370093 |
+| 6 | 3 | 9.9915736476 |
+| 5 | 4 | 10.6351760647 |
+| 4 | 5 | 10.7761793116 |
+| 3 | 7 | 10.7279322431 |
+
+Rational bisection of the stationary polynomial in $y=e^{-s}$ and
+outward interval bounds on $V/C$ give disjoint enclosures for these five
+values. The strict ordering does not rely on floating-point equality.
+
+Strict monotonicity therefore proves that $(12,2)$ uniquely minimizes
+the late vacuum among this entire initially stable matched family.
+This gives the example a definite extremal property. It does not prove
+that inheritance selects the energy-minimizing member.
+
+Each pair requires different $A$, $B$ and bulk vacuum energy; changing
+$d$ also changes the parent theory. Local variation in $s$ does not vary
+those discrete choices. A common physical action and inherited state
+must make the branches admissible and derive their energy comparison or
+selection probabilities. Neither a thermodynamic minimization rule nor
+a tunnelling preference over these actions is presently supplied.
+
+For example, independently inherited matching coefficients would require
+
+$$
+T=B+\rho-A,\qquad j=\sqrt{32T}-3,\qquad
+d=\frac{2B}{\rho+T+E_0/2}.
+$$
+
+Using $A=7$, $B=15/2$ recovers $(12,2)$, but those numbers were originally
+defined from that pair. The inversion is circular. The new work establishes
+the family ordering and the conditional minimum; the missing physical
+selection remains a prerequisite to using 9.7022 as an inherited
+cosmological prediction or an absolute SI anchor.
 
 ## IV. Concentration, conservation and the surrounding reservoir
 

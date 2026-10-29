@@ -29,8 +29,12 @@ matter. Its unchanged-coefficient evolution approaches a positive vacuum,
 Lambda_star*L_ref(0)^2=9.7022370093. This is a new homogeneous effective
 candidate, not a completed localized uplift or a changed 485b3b9 result.
 Complete: reduction, stiffness identity, finite evolution and energy/action
-checks. Next: derive its UV charge, reference volume, bulk energy and
-ancestor source together. Their absolute normalization remains free, so
+checks. The [selection audit](nsc-atlas-scale-selection.md#selection-audit-inheritance-permits-a-family--29-october-2026)
+proves that stability and inheritance admit infinitely many (d,j) pairs;
+(12,2) uniquely minimizes the late vacuum in that rematched family but
+has no derived physical selection. Next: derive a common parent/source rule
+that selects the compact geometry and ancestor coupling, followed by its
+UV charge, reference volume and bulk energy. Their normalization is free, so
 Lambda_obs is not yet derived. P004/P005 and the original data scores stay
 frozen; none tests the new candidate's later dynamics.
 

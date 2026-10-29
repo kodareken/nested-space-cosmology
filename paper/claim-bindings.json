@@ -588,6 +588,11 @@
       "section": "13.23",
       "status": "measured",
       "owner": "docs/nsc-atlas-scale-selection.md"
+    },
+    "parent-volume-discrete-selection-audit": {
+      "section": "13.24",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-scale-selection.md"
     }
   },
   "findings": [

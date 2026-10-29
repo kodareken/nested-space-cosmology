@@ -10,6 +10,14 @@ with a volume ratio .652 and exact energy/action identities. This is a
 new homogeneous candidate: the localized ancestor source, bulk offset,
 UV charge and absolute reference volume remain unselected. It does not
 derive Lambda_obs or inherit the old observational validation.
+The dimension/ancestor audit now proves that the inherited equations admit
+infinitely many stable choices. The 9.7022370 value belongs to (12,2);
+neither integer is selected. The general stability inequality and an exact
+monotonicity proof explain the 9.4081--11.6043 family range without new
+evolution runs. They also prove (12,2) is the unique lowest late vacuum
+among the initially stable matched family. Exact rational enclosures
+verify the five frontier values. A common parent/source selection rule
+is required to turn that extremal property into physical selection.
 
 The fixed source also has a [microscopic SI coupling relation](nsc-atlas-scale-selection.md#a-surviving-microscopic-si-relation-distinct-from-selecting-l_ref):
 e_phys/sigma_phys=2.0256752716e-34 m, derived from the inherited normalized
@@ -78,7 +86,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-28.4. Its central route is spherical
+revision 2026-10-29.1. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.
