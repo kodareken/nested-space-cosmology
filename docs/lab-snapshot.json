@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "160f4f40975836623be08e0e40a7996a9c85a900",
+  "current_receipt_commit_parent": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
   "files": [
     {
       "bytes": 3120,
@@ -10975,6 +10975,14 @@
       "sha256": "29811b90a3f28a6cce48c706183886ad8f25c6b68b99e35deee7bfdbe6a46aba"
     },
     {
+      "bytes": 8481,
+      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
+      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+      "path": "docs/nsc-atlas-parke-nucleation.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f52c70d6a88cec1917b901df9eaf7a11d6220411476d822a47e74f12beb75526"
+    },
+    {
       "bytes": 9702,
       "path": "docs/nsc-atlas-radar-clock.md",
       "retention_reason": "Current shared two-wall geometry, focused controls and authenticated figure.",
@@ -11061,12 +11069,12 @@
       "sha256": "16e8cb10e0de9b305f762dc50dbac8cc43491a53efb1f79d1113afc9bd045331"
     },
     {
-      "bytes": 12907,
+      "bytes": 13122,
       "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
-      "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
+      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
       "path": "docs/nsc-atlas-wall-exit-preparation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "fa53ce3231d803211868d2fbe305b3cce588bae75f8ee7fd77f3f7ef053edc62"
+      "sha256": "3609f16578fe679cbb54bd8fc84733ba2f9e29da99f3af97432b00d09e4dec6d"
     },
     {
       "bytes": 9716,
@@ -12102,12 +12110,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 239081,
-      "change": "Report lifetime ordering, fixed-flux CDL exclusions, the inherited curvature-matter bound and the imposed-flatness observation control.",
-      "changed_from_commit": "97e19de103d871c685be57036b2272d4d8550499",
+      "bytes": 239724,
+      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
+      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "15b37f140f1ce5f7cc13d8a6b1dd0c387d6a8d95d1eaff4f6ddd72d2ab7df259"
+      "sha256": "e027a21cc2d6be7305aa1fb084b20f50815e0be906f8eab403db07201f6d7088"
     },
     {
       "bytes": 51381,
@@ -31214,6 +31222,22 @@
       "sha256": "8f2b2624cc53fcb901fd7b34b3b55433578f9eed52a3554a388ac4da5d904d43"
     },
     {
+      "bytes": 2402,
+      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
+      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+      "path": "results/summaries/nsc-atlas-parke-bubble-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d4dbdea8776340a65393b77e2b78085c89d664065f4fd62b4db4ec8aec8bede2"
+    },
+    {
+      "bytes": 3930,
+      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
+      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+      "path": "results/summaries/nsc-atlas-parke-reheating-admission-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3664f43b982b6184e36f88e3ecdcceed4db2e1b4ad905c80b39f22db166cdea7"
+    },
+    {
       "bytes": 14948,
       "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
       "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
@@ -31997,6 +32021,14 @@
       "path": "scripts/check_nsc_atlas_parent_transport.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "94d6212bd314328481dda31cc3ec1c5ecaa43d624c051c6bf4f3145ce9b3b752"
+    },
+    {
+      "bytes": 1014,
+      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
+      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+      "path": "scripts/check_nsc_atlas_parke_nucleation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "aab0cd158ee763d4bc89c66071170ed9ee15776affbc86b7a2941ecc9c9091b8"
     },
     {
       "bytes": 14645,
@@ -36446,6 +36478,14 @@
       "path": "src/recursive_horizons/nsc_atlas_parent_transport.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "c97f774c2fd95f9aa34bd8f6ae0a71d7c585aeb9e509ea7ace46d2b6929f0fb7"
+    },
+    {
+      "bytes": 7405,
+      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
+      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+      "path": "src/recursive_horizons/nsc_atlas_parke_nucleation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f6ef14402f91949ea921b63af65a630a099bc0c50c11d1c6c8628b6a74bccd35"
     },
     {
       "bytes": 23996,
@@ -41068,6 +41108,14 @@
       "path": "tests/test_nsc_atlas_parent_transport.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "1ff2bda4d91db7ff0443c25e650d73ac38039b457a72bca74d30616e3d4d0e15"
+    },
+    {
+      "bytes": 2930,
+      "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
+      "changed_from_commit": "5a4bbe4b99ac1ed3d74a8602b190ced8c7e9e552",
+      "path": "tests/test_nsc_atlas_parke_nucleation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0b87353d6c3ccb0e1cfdbcf92009b29dbe9f807159ced2a1bdc5138f5abb0c45"
     },
     {
       "bytes": 5358,

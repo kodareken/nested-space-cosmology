@@ -1,5 +1,9 @@
 # Wall preparation, exit state and the volume equation of state
 
+The subsequent [Parke nucleation test](nsc-atlas-parke-nucleation.md)
+removes the supplied radius and seed mass within a constant-vacuum wall
+control, then checks its source and reheating compatibility explicitly.
+
 The strategic dependency is one connected preparation problem:
 **fixed action -> physical exit/preparation -> wall and bulk initial data
 -> volume/matter evolution -> observer distances -> SN + DESI**.

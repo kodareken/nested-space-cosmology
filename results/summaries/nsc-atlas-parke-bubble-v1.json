@@ -1,0 +1,53 @@
+{
+  "R_expression": "240/sqrt(39169)",
+  "R_squared_exact": "57600/39169",
+  "action_control": {
+    "existing_coefficient": 1.9849994363961463,
+    "independent_Parke_coefficient": 1.9849994363961079,
+    "interpretation": "Auxiliary vacuum-bubble action, not a (12,2) nucleation rate."
+  },
+  "actual_volume_instanton_derived": false,
+  "bubble": {
+    "R_over_false_vacuum_radius": 0.5671710179197522,
+    "angular_residual": 8.326672684688674e-17,
+    "beta_inside": 0.9448663109018601,
+    "beta_outside": 0.8236000464010865,
+    "binding_term": -0.008916409450387497,
+    "inside_Schwarzschild_offset": 0.0,
+    "inside_constraint": -1.1102230246251565e-16,
+    "interior_Misner_Sharp_mass": 0.06501548557574215,
+    "inverse_radius_squared": 0.680017361111111,
+    "outside_Schwarzschild_offset": 0.0,
+    "outside_constraint": -2.220446049250313e-16,
+    "physical_scope": "Constant-vacuum, constant-tension, zero-seed-mass thin-wall branch; not a derived (12,2) field profile.",
+    "radius": 1.2126626450077351,
+    "redshifted_shell_term": 0.13894738060187178,
+    "vacuum_deficit_term": -0.1300309711514843
+  },
+  "energy_balance_residual": -5.204170427930421e-18,
+  "fixed_original_R_or_M_used_to_determine_radius": false,
+  "inputs": {
+    "Ui": "7/32",
+    "Uo": "21/32",
+    "kappa": 1,
+    "sigma": "1/5"
+  },
+  "inverse_curvature_formula": "R_c^-2=(DeltaU/(3sigma))^2+kappa*(Ui+Uo)/6+(kappa*sigma)^2/16",
+  "legacy_comparison": {
+    "R_ratio": 0.6382434973724922,
+    "new_R_over_old_Lref": 0.18301366420590476,
+    "old_Lref_over_Lunit": 6.626077076099598,
+    "old_R_over_old_Lref": 0.28674583440228013,
+    "original_R_in_model_units": 1.9,
+    "scope": "Historical conversion only: the old curvature ruler itself depended on the removed R,M. Neither 1.9 nor R_c was originally measured in L_ref units."
+  },
+  "open_birth_Omega_k_limit": 1.0,
+  "open_interior": "a(t)=sinh(H_i*t)/H_i, H_i^2=Ui/3; wall proper time and interior cosmic time differ",
+  "open_vacuum_Omega_k": "sech(H_i*t)^2",
+  "schema": "nsc-atlas-parke-bubble-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_parke_nucleation.py": "aab0cd158ee763d4bc89c66071170ed9ee15776affbc86b7a2941ecc9c9091b8",
+    "src/recursive_horizons/nsc_atlas_parke_nucleation.py": "f6ef14402f91949ea921b63af65a630a099bc0c50c11d1c6c8628b6a74bccd35"
+  },
+  "wall_trajectory": "R(tau_wall)=R_c*cosh(tau_wall/R_c), with Rdot(0)=0"
+}

@@ -1741,9 +1741,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2588543,
+      "bytes": 2591504,
       "path": "docs/lab-snapshot.json",
-      "sha256": "927750d8090cba5105e6ad93331796a09f68271d3c7b24afe4382bd3a851e7bd"
+      "sha256": "31bc63638843c220984071b043f1b68ceff7b770b66e0b23ad27905df6c7fb91"
     },
     {
       "bytes": 4997,
@@ -1971,6 +1971,11 @@
       "sha256": "29811b90a3f28a6cce48c706183886ad8f25c6b68b99e35deee7bfdbe6a46aba"
     },
     {
+      "bytes": 8481,
+      "path": "docs/nsc-atlas-parke-nucleation.md",
+      "sha256": "f52c70d6a88cec1917b901df9eaf7a11d6220411476d822a47e74f12beb75526"
+    },
+    {
       "bytes": 19229,
       "path": "docs/nsc-atlas-prepared-response.md",
       "sha256": "98aa67b468b6a040ff25b350ff24f32eb57137ee632f6ee473d7f661e4c3e894"
@@ -2071,9 +2076,9 @@
       "sha256": "c4f8cdf4188becda0a81235c94e65116bfc4094589525f555ecf414fc6beaee4"
     },
     {
-      "bytes": 12907,
+      "bytes": 13122,
       "path": "docs/nsc-atlas-wall-exit-preparation.md",
-      "sha256": "fa53ce3231d803211868d2fbe305b3cce588bae75f8ee7fd77f3f7ef053edc62"
+      "sha256": "3609f16578fe679cbb54bd8fc84733ba2f9e29da99f3af97432b00d09e4dec6d"
     },
     {
       "bytes": 9716,
@@ -2616,9 +2621,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 239081,
+      "bytes": 239724,
       "path": "docs/reproducing.md",
-      "sha256": "15b37f140f1ce5f7cc13d8a6b1dd0c387d6a8d95d1eaff4f6ddd72d2ab7df259"
+      "sha256": "e027a21cc2d6be7305aa1fb084b20f50815e0be906f8eab403db07201f6d7088"
     },
     {
       "bytes": 51381,
@@ -15551,6 +15556,16 @@
       "sha256": "8f2b2624cc53fcb901fd7b34b3b55433578f9eed52a3554a388ac4da5d904d43"
     },
     {
+      "bytes": 2402,
+      "path": "results/summaries/nsc-atlas-parke-bubble-v1.json",
+      "sha256": "d4dbdea8776340a65393b77e2b78085c89d664065f4fd62b4db4ec8aec8bede2"
+    },
+    {
+      "bytes": 3930,
+      "path": "results/summaries/nsc-atlas-parke-reheating-admission-v1.json",
+      "sha256": "3664f43b982b6184e36f88e3ecdcceed4db2e1b4ad905c80b39f22db166cdea7"
+    },
+    {
       "bytes": 14948,
       "path": "results/summaries/nsc-atlas-prepared-endpoint-connection-v1.json",
       "sha256": "66cad433395f2d5712b76976c3c35322eec7027b2707b84abcc37e11545a8138"
@@ -16129,6 +16144,11 @@
       "bytes": 7617,
       "path": "scripts/check_nsc_atlas_parent_transport.py",
       "sha256": "94d6212bd314328481dda31cc3ec1c5ecaa43d624c051c6bf4f3145ce9b3b752"
+    },
+    {
+      "bytes": 1014,
+      "path": "scripts/check_nsc_atlas_parke_nucleation.py",
+      "sha256": "aab0cd158ee763d4bc89c66071170ed9ee15776affbc86b7a2941ecc9c9091b8"
     },
     {
       "bytes": 14645,
@@ -19051,6 +19071,11 @@
       "sha256": "c97f774c2fd95f9aa34bd8f6ae0a71d7c585aeb9e509ea7ace46d2b6929f0fb7"
     },
     {
+      "bytes": 7405,
+      "path": "src/recursive_horizons/nsc_atlas_parke_nucleation.py",
+      "sha256": "f6ef14402f91949ea921b63af65a630a099bc0c50c11d1c6c8628b6a74bccd35"
+    },
+    {
       "bytes": 15528,
       "path": "src/recursive_horizons/nsc_atlas_polar_cap.py",
       "sha256": "17a9bece68716d2c80711bbdef3fc340d36f11edb6fa2f233806b39332603617"
@@ -21826,6 +21851,11 @@
       "sha256": "1ff2bda4d91db7ff0443c25e650d73ac38039b457a72bca74d30616e3d4d0e15"
     },
     {
+      "bytes": 2930,
+      "path": "tests/test_nsc_atlas_parke_nucleation.py",
+      "sha256": "0b87353d6c3ccb0e1cfdbcf92009b29dbe9f807159ced2a1bdc5138f5abb0c45"
+    },
+    {
       "bytes": 5358,
       "path": "tests/test_nsc_atlas_past_preparation.py",
       "sha256": "aa9d7a544ae6ea05717d41d5e56c5e5706fd9543f90abf087ce078b1e5ae3646"
@@ -23951,7 +23981,7 @@
       "sha256": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
     }
   ],
-  "lab_snapshot_sha256": "927750d8090cba5105e6ad93331796a09f68271d3c7b24afe4382bd3a851e7bd",
+  "lab_snapshot_sha256": "31bc63638843c220984071b043f1b68ceff7b770b66e0b23ad27905df6c7fb91",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-29.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

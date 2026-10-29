@@ -1,0 +1,69 @@
+{
+  "downstream": {
+    "C_over_E0_at_reference": null,
+    "Omega_k_observer": null,
+    "SN_DESI_refit": null,
+    "reason": "No compatible (12,2) CDL turning state or E=3/8 event was obtained. A data fit from a reset state would not answer the requested route.",
+    "w_s_redshift": null
+  },
+  "empty_start": {
+    "Schwarzschild_offset": 0,
+    "all_time_matter_energy": 0,
+    "classical_matter_energy": 0,
+    "identity": "E=E_i*exp[-3(N-N_i)-6(s-s_i)]; E_i=0 implies E=0 for every prescribed s(t).",
+    "initial_chi": 0,
+    "initial_chi_momentum": 0,
+    "reference_energy": 0.375,
+    "reference_event_reached": false,
+    "scope": "Homogeneous post-wall fixed-flux classical field/adiabatic matter system without incoming sources; not a claim that all quantum reheating is impossible.",
+    "zero_matter_is_an_explicit_branch_assumption_not_implied_by_zero_mass_offset": true
+  },
+  "energy_budget": {
+    "available_excess_from_computed_well_barrier": 0.13355365326485036,
+    "domain": "The barrier bound applies only to a zero-velocity exit between the computed minimum and barrier with no incoming energy. No unknown CDL exit is replaced by the HM top.",
+    "literal_Ui_excess": -0.00223302421260696,
+    "literal_child_total_density": 0.21875,
+    "matter_target_over_literal_child": 1.7142857142857142,
+    "minimum_required_rest_exit_density": 0.595983024212607,
+    "necessary_left_branch_s": -0.0788560269807803,
+    "necessary_s_is_a_CDL_turning_point": false,
+    "parent_Uo_excess": 0.43526697578739304,
+    "parent_energy_caveat": "Parent energy could in principle cover the budget, but its transfer into the homogeneous child has not been derived.",
+    "required_total_density_at_reference": 0.595983024212607,
+    "shortfall_even_at_full_conversion": 0.24144634673514964
+  },
+  "new_observation_fits": 0,
+  "perturbative_reheating": {
+    "pair_decay_open": false,
+    "pair_threshold": 2476949780.251498,
+    "retained_chi_mass": 1238474890.125749,
+    "scope": "Ordinary on-shell one-volume-quantum to two-chi decay near the minimum; nonperturbative and curved-background production are not computed.",
+    "volume_small_oscillation_mass": 1.477737463182668
+  },
+  "physical_goal_achieved": false,
+  "route_dispositions": [
+    "Parke radius: fixed for the stipulated vacuum-wall control, but its endpoints are not stationary vacua of the unchanged scalar/volume action.",
+    "Regular mass-free interior: M_offset=0 is compatible with wall energy balance; it does not mean zero vacuum or Misner-Sharp energy.",
+    "Classical reheating of the retained empty matter field: E=0 is invariant, so E=3/8 is never reached.",
+    "Volume energy counted as matter: rolling within the computed well supplies at most .1335536533 above Vstar before expansion losses, below 3/8.",
+    "Perturbative decay into the retained massive scalar: the one-to-two channel is below threshold; no alternative reheating law is supplied."
+  ],
+  "schema": "nsc-atlas-parke-reheating-admission-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_parke_nucleation.py": "aab0cd158ee763d4bc89c66071170ed9ee15776affbc86b7a2941ecc9c9091b8",
+    "src/recursive_horizons/nsc_atlas_parke_nucleation.py": "f6ef14402f91949ea921b63af65a630a099bc0c50c11d1c6c8628b6a74bccd35"
+  },
+  "vacuum_admission": {
+    "endpoints_are_vacua_of_fixed_source": false,
+    "fixed_volume_barrier": 0.3545366774774573,
+    "fixed_volume_minimum": 0.22098302421260696,
+    "interior_density_minus_minimum": -0.00223302421260696,
+    "middle_force_dU_d_omega_phi": 0.4330127018922193,
+    "outer_force_dU_d_omega_phi": 0.8660254037844386,
+    "prepared_middle_density": 0.21875,
+    "prepared_outer_density": 0.65625,
+    "relaxed_middle_density": 0.125,
+    "relaxed_outer_density": 0.28125,
+    "wall_condition": "sigma(s_wall)=.2*exp(-6s_wall); K[normal derivative s]=-6sigma. The constant reference tension alone does not solve this profile."
+  }
+}

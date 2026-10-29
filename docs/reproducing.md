@@ -2,6 +2,18 @@
 
 ## Physical volume and the inherited evolving source
 
+Mass-free nucleation and reference-event admission:
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parke_nucleation.py
+python scripts/run_python.py scripts/check_nsc_atlas_parke_nucleation.py --stage geometry --output .build/parke-bubble-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_parke_nucleation.py --stage source --output .build/parke-source-reproduced.json
+```
+
+Both outputs are creation-only. The first is an auxiliary constant-vacuum
+wall result; the second tests admission into the fixed field action and
+does not generate a new likelihood for an absent matter-reference event.
+
 Wall/exit and equation-of-state preparation controls:
 
 ```powershell
