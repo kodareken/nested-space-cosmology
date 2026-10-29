@@ -1,5 +1,21 @@
 # What the calculations show
 
+The [three selection routes and actual volume-history refit](nsc-atlas-volume-selection-routes.md)
+are now evaluated. Five attractor runs approach five distinct minima;
+entropy ranks them without selecting a transition; cross-member BT/CDL
+actions remain undefined. Within (12,2), the Hawking--Moss coefficient is
+B*g=403.7817410 for a barrier toward decompactification, so the lowest
+listed stable member is not established as a terminal state.
+
+The evolving (12,2) homogeneous background gives joint SN+DESI chi-square
+1230.94914 versus 1191.17680 for flat LambdaCDM: Delta=+39.77234 with
+three fitted quantities each. Its constant-vacuum/matter/curvature fractions
+are (.632195,.295082,-.081206), with additional volume fraction .153929.
+The posterior 3*Omega_Lambda is 1.896555 +/- .013166. This comparison
+uses an explicit Einstein-frame observer convention and numerical averaged
+continuation; a complete shared-wall/microphysical observer model remains
+absent. The source, early normalization and old P004/P005 records are intact.
+
 An explicit [physical volume connection](nsc-atlas-scale-selection.md#executed-a-physical-volume-inherited-source-and-moving-vacuum)
 now co-scales the inherited charge, tension and scalar frequency in one
 higher-dimensional top-form reduction. Flux/curvature alone gives an
@@ -86,7 +102,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-29.1. Its central route is spherical
+revision 2026-10-29.2. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

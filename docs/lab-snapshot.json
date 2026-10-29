@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "56c3ace64573d37a044f0b108586f791a57970bf",
+  "current_receipt_commit_parent": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 290600,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "bytes": 291243,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,15 +10279,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "b81799733b18e847ba32a6d5eca11637468cce9fcaa66bb6bb47fb16a74c4663"
+      "sha256": "fa89424297e6000ed1d14016573fc2dc4736e99452f093d3cafe634a78d114a0"
     },
     {
-      "bytes": 147277,
-      "change": "Derive a physical volume normalization, ancestor-source stiffness and evolving vacuum connection; keep UV/SI and wall closures explicit.",
-      "changed_from_commit": "10e00fcb651ae3d490f21df4e6fd271690819924",
+      "bytes": 148478,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "893e54615e12eca4bd8e3125978317945b8ad73c2c11f735e4cb86d0db0fe195"
+      "sha256": "133f1f464de7068de5020b6f8484217f7592391d8c156819305a4be35a101271"
     },
     {
       "bytes": 9543,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 471099,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "bytes": 472138,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e60d6a6b7111041b914752fe0452d2d7c2f95a90e1d9aed26a71e966da42a6d0"
+      "sha256": "ce1a416d51f9123b1f0a8f6a844b7774e04eec589259f3c8324d3c9d5c833519"
     },
     {
       "bytes": 173938,
@@ -11029,12 +11029,12 @@
       "sha256": "bc059e375d82047269a6d29cabfb11384c548615df1d86580a8b6b1a79b66d0f"
     },
     {
-      "bytes": 7392,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "56c3ace64573d37a044f0b108586f791a57970bf",
+      "bytes": 9596,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "docs/nsc-atlas-volume-selection-routes.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "73c3a68ff72f22d32c99260af830d177946fb9eb5b7829314f76752b572ae0eb"
+      "sha256": "77dc6488d0c483b195a9a297bc6f114548eb623f3716b5a62f3740d553acd4d4"
     },
     {
       "bytes": 14534,
@@ -11088,15 +11088,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 125366,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "bytes": 126100,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "0389ecc1f976a233a595ab0b43fdb183e781781e06a3e5d489d73aca1e27cb89"
+      "sha256": "88d3afc51cc96e0007a18012a96d2cf1bc49bf82120b8482e205ce50028b3b8a"
     },
     {
       "bytes": 30876,
@@ -12086,12 +12086,12 @@
       "sha256": "d4adb8fcef63fc9b17cdcd0d4ce6fcd352472d29b8261bb471d35b5fc7b989f0"
     },
     {
-      "bytes": 50115,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "bytes": 50486,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "dde138296214368e21eff55f95549bc440421cecb8e0f20f242ac43cbe90ae64"
+      "sha256": "e7427a35ed37e4c06cbf7569ef980972a9cfe9e9710b9a0d4a7547ae99b45027"
     },
     {
       "bytes": 18356,
@@ -12160,28 +12160,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 37207,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "bytes": 37549,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "21a1ad6b57d93d2d7bf130840fce3f21967712652620a89beb1ecb3eb0c733c1"
+      "sha256": "64dbf2687defe67ea909e780c839898e47321b9b6f3ddc932466e3bb13fcfc02"
     },
     {
       "bytes": 3206,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7df198cf2432865010fb990bc3777e14dc3a5e1f4c0b7c914db408dddbf3d735"
+      "sha256": "76c3426cf2462aadfe85fa7cd67a92c5189b2323a14f98d58e1d63c6fcda5187"
     },
     {
-      "bytes": 47810,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "bytes": 48125,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2dc5e75498c70ac40842f5b287f38716895595e244c6ecdbf8a983d67e271819"
+      "sha256": "c028b0aa71b64d186f24f333fd708cf2f447574fc772e6911f537bf83293d943"
     },
     {
       "bytes": 226492,
@@ -12193,27 +12193,27 @@
     },
     {
       "bytes": 396,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0a20d4c6e0eac4e2f9e12c834a01340712105c24c5163a9aab1b8ea992b60676"
+      "sha256": "a1a622845e1b3221e55c27d01d41661cf8f47d8de4a7f5ed28bb345cb05def06"
     },
     {
-      "bytes": 512905,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "bytes": 518668,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f6102f12844501eefea50111dc4e41ad890d89c30e7bb18436495c0201e65b41"
+      "sha256": "ab017d16f4694c9914785e08a7cf1d0e9777d9ae3ca2d17a4b235b7c880d7cda"
     },
     {
-      "bytes": 14533872,
-      "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
-      "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
+      "bytes": 14586679,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "8a71742d94c12a9040c9ded2d28ae613ae5eb4e107f3bd754f4d5ba2437ec4a9"
+      "sha256": "24c6fa161644528efac8966da8b41b0e17ff1468973643899cd522b9aaeef29b"
     },
     {
       "bytes": 3283,
@@ -31344,6 +31344,14 @@
       "path": "results/summaries/nsc-atlas-volume-family-selection-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "a491bf7e2241a58776b11d87fc55454f58e3885e5d287c287092534d9a15ac8f"
+    },
+    {
+      "bytes": 8460,
+      "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
+      "changed_from_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
+      "path": "results/summaries/nsc-atlas-volume-observations-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "868ffdc57c980a769f963fe923bc732c2a7966d8c1bb2fbaebf448eba31a2a8d"
     },
     {
       "bytes": 7534,

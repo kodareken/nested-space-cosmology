@@ -50,7 +50,8 @@ endpoints; it supplies neither their accessibility nor a transition law.
 
 [Coleman--De Luccia](https://doi.org/10.1103/PhysRevD.21.3305) computes
 vacuum decay from an interpolating scalar action including gravity.
-[Brown--Teitelboim as reviewed and evaluated by Hirano](https://arxiv.org/html/1804.09985)
+[Brown--Teitelboim](https://doi.org/10.1016/0370-2693%2887%2991190-7),
+[as evaluated by Hirano](https://arxiv.org/html/1804.09985),
 uses a specified charged membrane and flux sectors of one theory. Neither
 result identifies an interface between the different-dimensional parent
 actions here. The four cross-member exponents are therefore undefined,
@@ -63,7 +64,7 @@ V_b=.354536677477457. Beyond the barrier V(s) tends to zero from above
 as s tends to positive infinity: the internal volume decompactifies.
 Thus absence of a lower stable listed member does not establish a terminal
 state. Using the standard
-[Hawking--Moss saddle](https://doi.org/10.1016/0370-2693(82)90946-7),
+[Hawking--Moss saddle](https://doi.org/10.1016/0370-2693%2882%2990946-7),
 
 $$
 B_{\rm HM}=\frac{b_{\rm HM}}{g},\qquad
@@ -134,3 +135,45 @@ Failure forecast: missing common-action interfaces leave cross-member
 rates undefined; a proposed entropy rule may supply only an ordering;
 the actual evolved background may fail the shared-ruler test. Each is
 reported separately and redirects the next physical construction.
+
+## Retained SN + DESI result
+
+The [retained comparison](../results/summaries/nsc-atlas-volume-observations-v1.json)
+uses committed method 4c1b60a. It is a retrospective conditional model
+test, not a new withheld prediction or evidence for the selected ancestry.
+
+| Quantity | Evolving (12,2) | Flat LambdaCDM |
+| --- | ---: | ---: |
+| SN-only minimum chi-square | 1179.28964 | 1178.20879 |
+| SN chi-square at joint optimum | 1193.97421 | 1180.39513 |
+| DESI chi-square at joint optimum | 36.97493 | 10.78167 |
+| Joint chi-square | 1230.94914 | 1191.17680 |
+| Fitted quantities | 3 | 3 |
+| Constant late Omega_Lambda | .63219488 | .69630912 |
+| Omega_m | .29508238 | .30369088 |
+| Omega_k | -.08120633 | 0 |
+| Additional Omega_s | .15392907 | 0 |
+| Shared r_d h, Mpc | 103.96783 | 101.05339 |
+
+Delta chi-square is +39.77234. The volume model's observer is
+N_o=.43923013, a_o/a_0=1.55151230. Its instantaneous potential fraction
+is .77550233 and volume kinetic fraction .01062162. These are reported
+explicitly so that a time-dependent potential is not confused with the
+constant late floor. The requested three-Omega comparison gives
+1.89658463 at best fit, with posterior 1.89655509 +/- .01316621. Against
+2.054 +/- .022 its standardized difference is -6.14088 including both
+widths. The flat control gives posterior 2.08783332 +/- .02399286,
+or +1.03935 standardized units. This diagnostic is not added to chi-square.
+
+The two numerical settings change joint chi-square by 1.44e-8,
+r_d h by 3.54e-7 Mpc and posterior three-Omega by 2.06e-11. The flat
+control reproduces the retained original joint score. The original
+source's Delta chi-square +12.04739 is preserved; it belongs to a different
+background. Lowering the late vacuum in this volume extension has not
+improved the common-ruler observation test.
+
+The next needed connection remains one physical parent action/state with
+defined inter-sector geometry and source couplings. The three tested
+selection arguments do not supply it, and this particular conditional
+volume history does not pass the shared-ruler comparison. These results
+do not reject nesting; they delimit this declared construction.

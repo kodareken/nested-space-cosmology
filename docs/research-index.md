@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [physical selection routes and evolving-volume refit](nsc-atlas-volume-selection-routes.md)
+now give five distinct attractors, relative horizon entropies and a
+same-action HM coefficient 403.7817410/g. Cross-member selection remains
+undefined. The conditional (12,2) history gives joint SN+DESI Delta
+chi-square +39.77234 with its additional volume stress included.
+
 The [dimension/ancestor audit](nsc-atlas-scale-selection.md#selection-audit-inheritance-permits-a-family--29-october-2026)
 proves an infinite initially stable family and its exact ordering. Five
 frontier values with rational enclosures establish (12,2) as the unique

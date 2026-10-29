@@ -593,6 +593,16 @@
       "section": "13.24",
       "status": "derived",
       "owner": "docs/nsc-atlas-scale-selection.md"
+    },
+    "volume-selection-route-test": {
+      "section": "13.25",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-volume-selection-routes.md"
+    },
+    "evolving-volume-shared-ruler": {
+      "section": "13.25",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-volume-selection-routes.md"
     }
   },
   "findings": [

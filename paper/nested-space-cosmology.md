@@ -59,14 +59,14 @@ with the supernova shape posterior propagated, gives joint chi-square
 fitted dimension. Its inherited SI scale remains unselected; that
 realization's failed connections do not reject the nesting programme.
 
-A separate parent-volume extension derives a common geometric factor for
-the inherited charge, wall tension and scalar frequency. Its reduced
-action gives an exact stabilization condition and a conditional positive
-vacuum approached by the evolving matter source. This connects physical
-normalization to dynamics. A family audit gives an extremal property to
-the chosen example but supplies no physical selection of its dimension or
-ancestor depth. Those choices, microscopic charge, required bulk energy
-and shared wall construction still prevent an absolute SI prediction.
+A separate volume extension co-scales the inherited charge, tension and
+frequency. Its lowest stable-family vacuum has a definite extremal property,
+but attractor, entropy and tunnelling checks do not select it between the
+different parent actions. A same-action Hawking--Moss saddle exposes an
+escape channel. With the actual evolving volume stress retained, its
+conditional SN+DESI fit gives chi-square 1230.95 versus 1191.18 for the
+flat control. The common parent action, physical selection and absolute
+SI normalization remain unresolved.
 
 The resulting book connects geometry, inherited state, stress, structure and
 interior observation. Its completed results establish specified mathematical
@@ -4474,6 +4474,122 @@ defined from that pair. The inversion is circular. The new work establishes
 the family ordering and the conditional minimum; the missing physical
 selection remains a prerequisite to using 9.7022 as an inherited
 cosmological prediction or an absolute SI anchor.
+
+### 13.25. Selection mechanisms and the actual evolving-volume distance test
+
+<!-- nsc-claim:volume-selection-route-test -->
+
+Evidence: [five evolutions, entropy ratios and same-action saddle](../results/summaries/nsc-atlas-volume-selection-routes-v1.json),
+[physical scope and sources](../docs/nsc-atlas-volume-selection-routes.md),
+and [independent checks](../tests/test_nsc_atlas_volume_routes.py).
+
+The five values in Section 13.24 are minima of different parent actions.
+Three proposed routes are now tested against that fact. All five matched
+starts evolved to $N=6$ approach their own minima and retain their own
+$d,j$. The prescribed equations contain no inter-sector dynamics.
+
+[Gibbons--Hawking entropy](https://doi.org/10.1103/PhysRevD.15.2738)
+gives $S=3\pi/(G\Lambda)$ at each late de Sitter endpoint. Their relative
+entropies, in the preceding table's order, are
+$(1,.971042,.912278,.900341,.904390)$. Thus the lowest member has the
+highest entropy. The formula supplies no inheritance step that maximizes
+it and no accessibility rule between these different actions.
+
+[Brown--Teitelboim](https://doi.org/10.1016/0370-2693%2887%2991190-7) and
+[Coleman--De Luccia](https://doi.org/10.1103/PhysRevD.21.3305) use
+specified interfaces or interpolating field configurations in a common
+theory. Here the four bounce actions from other members to $(12,2)$ are
+undefined because that common theory and interface are missing. Endpoint
+potentials cannot fix them: a term proportional to $z^4(1-z)^4$ can
+change an interpolation's barrier while preserving its endpoint values
+and first two derivatives. Introducing that term would require new
+physical input, not a derivation from the present inheritance law.
+
+An actual saddle can be calculated within $(12,2)$. Its positive local
+minimum $V_f=.2209830242$ is separated from the direction $s\to\infty$
+by the maximum $V_b=.3545366775$. Along that direction $V\to0^+$ and
+the internal volume grows without bound. The standard
+[Hawking--Moss result](https://doi.org/10.1016/0370-2693%2882%2990946-7) gives
+
+$$
+B_{\rm HM}=\frac{403.7817410357}{g},\qquad
+g=\frac{\kappa_{\rm nat}}{L_{\rm unit}(0)^2}.
+$$
+
+The coefficient is $24\pi^2(1/V_f-1/V_b)$. Its canonical barrier
+curvature obeys $-V_{ss}/(KH_b^2)=3.76250309<4$, giving one negative
+scalar harmonic and a positive first nonconstant harmonic. This meets
+the standard homogeneous saddle's
+[negative-mode criterion](https://link.aps.org/accepted/10.1103/PhysRevD.95.123502).
+It neither selects another discrete member nor calculates an absolute
+rate: $g$, the determinant and the higher-dimensional completion remain
+unspecified. It does show why the lowest stable listed member cannot be
+declared terminal solely from that list.
+
+The route dispositions are therefore specific: attractors preserve the
+different sectors; entropy orders them without a selection law; and
+cross-member tunnelling lacks its common action. None is evidence against
+nesting. None presently supplies the requested parameter-free selection.
+
+<!-- nsc-claim:evolving-volume-shared-ruler -->
+
+Evidence: [committed-method full-covariance comparison](../results/summaries/nsc-atlas-volume-observations-v1.json),
+[observer convention and methods](../docs/nsc-atlas-volume-selection-routes.md),
+and [null-quadrature and synthetic-recovery checks](../tests/test_nsc_atlas_volume_observations.py).
+
+The unselected $(12,2)$ member is nevertheless carried forward as a
+conditional observation model. The volume and matter exchange energy;
+substituting only the smaller vacuum into the old dust formula would
+omit that dynamics. We integrate the homogeneous averaged equations and
+their null distance over the entire emitter range, using Einstein-frame
+metric redshift and fixed luminosity standards. This convention does not
+derive the varying-mass model's photon/detector microphysics or a common
+three-region causal domain.
+
+The constant late floor and the additional volume contribution are
+
+$$
+\Omega_\Lambda=\frac{V_*}{3H_o^2},\qquad
+\Omega_s=\frac{Kv_o^2/2+V(s_o)-V_*}{3H_o^2},\qquad
+\Omega_\Lambda+\Omega_m+\Omega_k+\Omega_s=1.
+$$
+
+The same 1322 supernova rows and all 13 DESI entries use their full
+covariances. Both models fit one shape, one magnitude intercept and one
+shared ruler. The whole shape posterior is propagated, with positive
+linear-ruler scale integrated analytically.
+
+| Quantity at joint optimum | Evolving (12,2) | Flat LambdaCDM |
+| --- | ---: | ---: |
+| Supernova chi-square | 1193.97421 | 1180.39513 |
+| DESI chi-square | 36.97493 | 10.78167 |
+| Joint chi-square | 1230.94914 | 1191.17680 |
+| Fitted quantities | 3 | 3 |
+| Constant late vacuum fraction | .63219488 | .69630912 |
+| Matter fraction | .29508238 | .30369088 |
+| Curvature fraction | -.08120633 | 0 |
+| Additional volume fraction | .15392907 | 0 |
+| Shared ruler, r_d h in Mpc | 103.96783 | 101.05339 |
+
+The joint difference is $\Delta\chi^2=+39.77234$. The volume model's
+observer scale is $a_o/a_0=1.55151230$. Its instantaneous potential
+fraction is .77550233, distinct from its constant late vacuum fraction;
+the remaining kinetic fraction is .01062162. The requested posterior
+comparison is
+
+$$
+3\Omega_\Lambda=1.89655509\pm0.01316621,
+\qquad \mathrm{benchmark}=2.054\pm0.022.
+$$
+
+The combined-width standardized difference is -6.14088. This is a
+conditional diagnostic, not an extra independent likelihood for a fully
+specified microphysical cosmology. The flat control gives
+$2.08783332\pm0.02399286$ and standardized difference +1.03935.
+The two numerical settings change the joint chi-square by less than
+$1.44\times10^{-8}$. The original parent score remains its own result.
+This particular extension's actual evolving source worsens the shared-ruler
+comparison; its lower late vacuum alone does not repair the connection.
 
 ## IV. Concentration, conservation and the surrounding reservoir
 

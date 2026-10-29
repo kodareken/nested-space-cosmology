@@ -1,0 +1,210 @@
+{
+  "Omega_definition": "Omega_Lambda is the constant late floor Vstar/(3H_o^2); Omega_volume includes volume kinetic energy and V(s)-Vstar. Four fractions sum to one.",
+  "data": {
+    "DESI_cov.txt": {
+      "bytes": 2547,
+      "git_blob": "fd8e5697ab61379b07b52efb781ea6713417a4d9",
+      "release": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "source_path": "desi_gaussian_bao_ALL_GCcomb_cov.txt"
+    },
+    "DESI_mean.txt": {
+      "bytes": 472,
+      "git_blob": "8aff444fdb42c0946342aa0011ab287eda097c4c",
+      "release": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "source_path": "desi_gaussian_bao_ALL_GCcomb_mean.txt"
+    },
+    "distances.dat": {
+      "bytes": 579283,
+      "git_blob": "cce857db0c15e9ce7a0e0ce77452b6ff62af969a",
+      "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+      "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat"
+    },
+    "stat-plus-systematic.cov": {
+      "bytes": 33284960,
+      "git_blob": "d1a1498154e7ba826df14bdbef35ebcb7f5efba1",
+      "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+      "release_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES_STAT%2BSYS.cov"
+    }
+  },
+  "delta_chi_squared": 39.77234047806337,
+  "frozen_checkpoints": {
+    "results/prediction-register.json": "327fd09230c372ab31b6563fb62e74cb3249d747da8070d810ae85bcfca32d84",
+    "results/summaries/nsc-atlas-parent-bao-validation-v1.json": "5d9f4cffc0036b2efe7c130e8e06ec5e25856ac2179473358cfed2fb62ae0bb3",
+    "results/summaries/nsc-atlas-parent-supernova-v2.json": "e592da938f1283fb74e9d8ad3ffb5b29bde260ee22712d798fec04d461d0abf7",
+    "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+    "src/recursive_horizons/nsc_atlas_parent_past.py": "c75adfe6d4b529b5b4dc06b9193d9054bcaba42f7c0620f5f3db591f73ead178",
+    "src/recursive_horizons/nsc_atlas_parent_supernova.py": "9f8ebf650b48ef91cd29fe9777ac355814eda902723038a61db4319298fc5575",
+    "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16"
+  },
+  "interpretation": "Retrospective conditional test of the unselected (12,2) averaged homogeneous candidate. No SI scale, ancestry selection or complete observer/microphysical source is derived.",
+  "method_commit": "4c1b60a5e37355c12195625fe1f8212ef63d68eb",
+  "models": {
+    "flat_LCDM": {
+      "SN_only_best": {
+        "chi_squared": 1178.2087941061477,
+        "theta": 0.33122160652393506
+      },
+      "joint_best": {
+        "Omega_Lambda": 0.6963091153477179,
+        "Omega_k": 0.0,
+        "Omega_m": 0.30369088465228206,
+        "Omega_volume": 0.0,
+        "chi_squared_BAO": 10.78166569640329,
+        "chi_squared_SN": 1180.3951310453106,
+        "chi_squared_total": 1191.1767967417138,
+        "fitted_parameters": 3,
+        "rd_h_Mpc": 101.05339394018714,
+        "theta": 0.30369088465228206
+      },
+      "model": "flat_LCDM",
+      "numerical": {
+        "likelihood_calls": 1590,
+        "process_CPU_seconds": 10.390625,
+        "resolved_minima": 1
+      },
+      "order": 96,
+      "posterior": {
+        "moments": {
+          "Omega_Lambda": {
+            "mean": 0.6959444388223165,
+            "standard_deviation": 0.007997619168493862
+          },
+          "Omega_k": {
+            "mean": 0.0,
+            "standard_deviation": 0.0
+          },
+          "Omega_m": {
+            "mean": 0.3040555611776842,
+            "standard_deviation": 0.007997619168493864
+          },
+          "Omega_volume": {
+            "mean": 0.0,
+            "standard_deviation": 0.0
+          }
+        },
+        "nodes": 1440,
+        "prior": "uniform shape and common flat positive BAO beta"
+      },
+      "prior_bounds": [
+        0.0,
+        1.0
+      ],
+      "three_Omega_Lambda": {
+        "best_fit": 2.0889273460431537,
+        "comparison": 2.054,
+        "comparison_sigma": 0.022,
+        "posterior_mean": 2.0878333164669494,
+        "posterior_sigma": 0.023992857505481587,
+        "standardized_difference": 1.039350123610748
+      }
+    },
+    "volume_12_2": {
+      "SN_only_best": {
+        "chi_squared": 1179.2896386281438,
+        "theta": 0.3285532764618795
+      },
+      "background_domain": {
+        "RHS_calls": 1501,
+        "maximum_N": 2.995732273553991,
+        "minimum_N": -1.2029723139923525,
+        "observer_convention": "Einstein-frame metric redshift and fixed luminosity standards",
+        "scope": "Averaged homogeneous ODE continuation; no shared-wall domain or full scalar observational error bound is claimed."
+      },
+      "joint_best": {
+        "Omega_Lambda": 0.6321948772434725,
+        "Omega_k": -0.08120633329477887,
+        "Omega_kinetic": 0.010621622894593868,
+        "Omega_m": 0.29508238456750246,
+        "Omega_potential": 0.7755023258326826,
+        "Omega_volume": 0.15392907148380408,
+        "chi_squared_BAO": 36.97493149841428,
+        "chi_squared_SN": 1193.974205721363,
+        "chi_squared_total": 1230.9491372197772,
+        "fitted_parameters": 3,
+        "rd_h_Mpc": 103.96783201176336,
+        "theta": 0.43923013327691346
+      },
+      "model": "volume_12_2",
+      "numerical": {
+        "likelihood_calls": 1495,
+        "process_CPU_seconds": 8.796875,
+        "resolved_minima": 1
+      },
+      "order": 96,
+      "posterior": {
+        "moments": {
+          "Omega_Lambda": {
+            "mean": 0.6321850316313588,
+            "standard_deviation": 0.0043887362641179695
+          },
+          "Omega_k": {
+            "mean": -0.0812066039295095,
+            "standard_deviation": 0.0008693743476382053
+          },
+          "Omega_kinetic": {
+            "mean": 0.010633867504266516,
+            "standard_deviation": 0.000665843856844879
+          },
+          "Omega_m": {
+            "mean": 0.2951196237620526,
+            "standard_deviation": 0.005333359161636848
+          },
+          "Omega_potential": {
+            "mean": 0.7754531126631886,
+            "standard_deviation": 0.003798743505800215
+          },
+          "Omega_volume": {
+            "mean": 0.1539019485360963,
+            "standard_deviation": 8.425297956215066e-05
+          }
+        },
+        "nodes": 1344,
+        "prior": "uniform shape and common flat positive BAO beta"
+      },
+      "prior_bounds": [
+        0.0,
+        2.995732273553991
+      ],
+      "three_Omega_Lambda": {
+        "best_fit": 1.8965846317304174,
+        "comparison": 2.054,
+        "comparison_sigma": 0.022,
+        "posterior_mean": 1.8965550948940764,
+        "posterior_sigma": 0.013166208792353909,
+        "standardized_difference": -6.140879710547037
+      }
+    }
+  },
+  "numerical_controls": {
+    "flat_LCDM": {
+      "Omega_Lambda": 0.0,
+      "Omega_k": 0.0,
+      "Omega_m": 0.0,
+      "Omega_volume": 0.0,
+      "chi_squared_total": 0.0,
+      "posterior_three_Omega": 4.440892098500626e-16,
+      "rd_h_Mpc": 0.0
+    },
+    "volume_12_2": {
+      "Omega_Lambda": 3.2281195494476833e-09,
+      "Omega_k": 6.392894269513505e-10,
+      "Omega_m": 3.9209622215707896e-09,
+      "Omega_volume": 5.355349497193629e-11,
+      "chi_squared_total": 1.4328861652757041e-08,
+      "posterior_three_Omega": 2.0514479004418718e-11,
+      "rd_h_Mpc": 3.5372032414215937e-07
+    }
+  },
+  "schema": "nsc-atlas-volume-observations-v1",
+  "source_sha256": {
+    "scripts/measure_nsc_atlas_volume_observations.py": "3beee44c1fb5e0f2f6feaccbb83d63501ee11e01e4528149ec23a0948727ab80",
+    "src/recursive_horizons/nsc_atlas_volume_observations.py": "151237f974d42d7bf8c8feb00d1837e5f6f1062ffdeae30f3c231f6293aa73ba",
+    "tests/test_nsc_atlas_volume_observations.py": "d9edb2f75029535a129dc558c169b24671bc1d42b657c81c747b28b50076c969"
+  }
+}

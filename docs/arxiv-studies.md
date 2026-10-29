@@ -1,5 +1,25 @@
 # Cited arXiv studies
 
+## Volume selection routes — 29 October 2026
+
+[Brown--Teitelboim](https://doi.org/10.1016/0370-2693%2887%2991190-7),
+[Hirano's explicit BT evaluation](https://arxiv.org/html/1804.09985), and
+[Coleman--De Luccia](https://doi.org/10.1103/PhysRevD.21.3305) require a
+specified theory and transition configuration. Endpoint energies of the
+different NSC parent actions do not supply those configurations.
+[Gibbons--Hawking](https://doi.org/10.1103/PhysRevD.15.2738) supplies the
+late de Sitter entropy formula, not a dimension-selecting inheritance step.
+
+The [Hawking--Moss proposal](https://doi.org/10.1016/0370-2693%2882%2990946-7)
+and [Hartle--Hertog equations (5.5)--(5.6)](https://link.aps.org/accepted/10.1103/PhysRevD.95.123502)
+supply the constant-saddle exponent and the one-scalar-negative-mode
+criterion. The new calculation applies them to the reference's existing
+homogeneous volume potential. It does not import Hartle--Hertog's broader
+wavefunction or measure proposal, compute a determinant, or establish a
+localized higher-dimensional decay. The boundary between a same-action
+saddle and missing cross-member transitions is in the
+[route owner](nsc-atlas-volume-selection-routes.md).
+
 ## Physical normalization from internal volume — 28 October 2026
 
 [Bousso--Polchinski, Sections 2.1 and 2.5--2.6](https://arxiv.org/html/hep-th/0004134)

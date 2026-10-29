@@ -1,10 +1,10 @@
 {
-  "bytes": 14533872,
+  "bytes": 14586679,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "0a20d4c6e0eac4e2f9e12c834a01340712105c24c5163a9aab1b8ea992b60676",
+  "metadata_sha256": "a1a622845e1b3221e55c27d01d41661cf8f47d8de4a7f5ed28bb345cb05def06",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 177,
-  "pdf_sha256": "8a71742d94c12a9040c9ded2d28ae613ae5eb4e107f3bd754f4d5ba2437ec4a9",
+  "pages": 179,
+  "pdf_sha256": "24c6fa161644528efac8966da8b41b0e17ff1468973643899cd522b9aaeef29b",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -808,6 +808,14 @@
       "sha256": "a491bf7e2241a58776b11d87fc55454f58e3885e5d287c287092534d9a15ac8f"
     },
     {
+      "path": "results/summaries/nsc-atlas-volume-observations-v1.json",
+      "sha256": "868ffdc57c980a769f963fe923bc732c2a7966d8c1bb2fbaebf448eba31a2a8d"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-volume-selection-routes-v1.json",
+      "sha256": "4e1286e103620978ffb6b54575056cc2e03fa48d3b905f95c16f91f064aa7012"
+    },
+    {
       "path": "results/summaries/nsc-atlas-vortex-transfer-v1.json",
       "sha256": "959505c91d6ce96a87c86026ccc7ff6cc76b543a0929023bc6cbb5f3b802a592"
     },
@@ -873,6 +881,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "f6102f12844501eefea50111dc4e41ad890d89c30e7bb18436495c0201e65b41",
-  "version": "working-2026-10-29.1"
+  "source_sha256": "ab017d16f4694c9914785e08a7cf1d0e9777d9ae3ca2d17a4b235b7c880d7cda",
+  "version": "working-2026-10-29.2"
 }

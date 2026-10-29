@@ -16,7 +16,20 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 28 October 2026
+## Current execution priority — 29 October 2026
+
+### Computed: selection routes and conditional evolving-volume data test
+
+The [route owner](nsc-atlas-volume-selection-routes.md) records all five
+attractors and entropy ratios, the undefined cross-member bounce actions,
+and the same-action Hawking--Moss coefficient 403.7817410/g. None of these
+routes derives a common parameter-free selection. The full evolving
+(12,2) source, with its extra volume stress included, gives Delta joint
+SN+DESI chi-square +39.77234 against the same flat control. The next
+physical work is a common parent/source/transition action and compatible
+observer model; the finished conditional runs are not reopened for more
+precision. This is a result about that construction, not about nesting
+as a whole.
 
 ### Executed: geometric normalization and evolving source
 

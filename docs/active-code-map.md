@@ -1,5 +1,15 @@
 # Active code and evidence map
 
+`nsc_atlas_volume_routes.py` evaluates the five actual finite flows, relative
+de Sitter entropies and the same-action Hawking--Moss saddle. Its producer
+is `check_nsc_atlas_volume_routes.py`. `nsc_atlas_volume_observations.py`
+integrates the time-dependent background/light cone and profiles the
+existing full-covariance SN and common-ruler BAO likelihoods. The retained
+four-worker producer is `measure_nsc_atlas_volume_observations.py`; its
+tests include direct null quadrature, the four-component density account
+and synthetic epoch/ruler recovery. Both are owned by the
+[selection/observation note](nsc-atlas-volume-selection-routes.md).
+
 `nsc_atlas_volume_family.py` reuses the volume candidate's coefficients
 and potential to derive the general stability condition, stationary-root
 brackets and family envelope. Its creation-only producer is
