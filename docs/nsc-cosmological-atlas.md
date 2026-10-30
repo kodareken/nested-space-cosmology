@@ -2083,3 +2083,19 @@ $T_0=\sum_{m\ge0}(\prod_{j=1}^m q_j)\Delta\widehat\tau_m$.
 Infinitely many rooms do not guarantee infinite proper or affine duration.
 The geometry's quantum source, physical clock transport and global extension
 remain unresolved.
+
+## Smooth horizon continuation and the offset, 30 October 2026
+
+The [horizon-only branch](nsc-atlas-smooth-horizon.md) implements Douglas's
+revision that the handoff is causal rather than a material shell. It proves
+regular crossing, states the source-free flux restriction and constructs
+phase-oriented charge as a separate two-component comparison. Current
+balance distinguishes transfer across the horizon from charge production.
+The [golden-vortex comparisons](nsc-atlas-golden-vortex.md) complete the
+previous finite geometry requests. Their open state/history identification
+feeds this new branch; the existing shell results remain historical models.
+
+The next connection is the inherited charge state and sourced horizon
+history. A later nonzero predicted charge must satisfy the integrated current
+law and its stress must satisfy the Einstein equations in the same geometry.
+No area fraction, phase residual or coordinate zero substitutes for that test.

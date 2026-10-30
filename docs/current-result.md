@@ -1,5 +1,22 @@
 # What the calculations show
 
+The [smooth-horizon branch](nsc-atlas-smooth-horizon.md) follows Douglas's
+revision from a material shell to a causal boundary. Fixed-contrast Parke
+Rc tends to zero with tension. The existing late-vacuum action instead
+admits a smooth de Sitter horizon at 3.684522144189 model units and a
+Kottler family with free mass. Horizon-crossing geodesics remain regular.
+Charge continuity separates transfer from creation; a two-component
+oscillator explicitly carries offset charge AB omega sin(delta), but its
+state and identification with baryons are not supplied by the neutral action.
+A sourced null-flux comparison connects shrinking black-hole and growing
+cosmological marginal radii; its traceless stress is not a new vacuum Lambda.
+
+The [golden-vortex follow-up](nsc-atlas-golden-vortex.md) completes source
+stability, inward-map, Kerr and BKL comparisons. Persistent area converges
+with pass count but depends on omega0. Golden full turns give drawn/undrawn
+.16698/.83302. The golden BKL fixed point is repelling. These finite checks
+select neither a nesting ratio nor the current observer event.
+
 The [constructed pen map](nsc-atlas-pen-geometry.md) now derives its preferred
 phase increment .360395008387 from the two late-vacuum linear modes of the
 (12,2) action, with the retained source coupling omega0=20. Its circle family

@@ -1,10 +1,10 @@
 {
-  "bytes": 15726406,
+  "bytes": 16104479,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "695b0f9b3b8a1b3be026ffce1b5a042e3f64def98c9ff347f0ea476f483844c3",
+  "metadata_sha256": "c0b432825d64a919ea3b24f043ecdfa88a81c5ee6b509d8b0748a0845517bd6e",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 195,
-  "pdf_sha256": "b1961f928f4a5aabc52e02b45d1027662c5abbeb635781c540255a034d3b292a",
+  "pages": 199,
+  "pdf_sha256": "c493449a1ae146444382bd65e49bdf21ad4ca653ed515291756b79021c0be92e",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -178,6 +178,10 @@
     {
       "path": "paper/figures/nsc-atlas-pen-geometry.png",
       "sha256": "ff20f11f64ff1d99612c7f4e35c460515abb506fa92f5373b4216ed542de31e3"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-smooth-horizon.png",
+      "sha256": "54cda2b164688043c23fe0218211bcc4006065d1b6be032c0d4f83e543a56aa9"
     },
     {
       "path": "paper/finite-regeneration-manifest.json",
@@ -668,6 +672,10 @@
       "sha256": "b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2"
     },
     {
+      "path": "results/summaries/nsc-atlas-golden-vortex-v1.json",
+      "sha256": "93aa89f40ebad06f42814938136585badc629dfcf0d08f0d3cbd8d3c66c4b76a"
+    },
+    {
       "path": "results/summaries/nsc-atlas-gravitational-reduction-v1.json",
       "sha256": "4b875644a0876ef8c4283671bd114079a7b18bde280e86d34acbcd61e1945f0d"
     },
@@ -836,6 +844,10 @@
       "sha256": "5fc9ebdd4932263c2dce9dfcb61cb7bc81b593345706abd73b9c9d8637797bf2"
     },
     {
+      "path": "results/summaries/nsc-atlas-smooth-horizon-v1.json",
+      "sha256": "7109b9d8e28580150706259d0b1e46ae79221296b12b623aff10705f0ea85253"
+    },
+    {
       "path": "results/summaries/nsc-atlas-source-forcing-bound-v1.json",
       "sha256": "2ccf4ad7326291b79500f4d78a0f858907a80901c74b771f8b22fd8cb735c611"
     },
@@ -941,6 +953,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "1bd7534990c9d82fe6ab5eab6ef6168e951ea2b0bda842b0e5b8bd71f9bddafc",
-  "version": "working-2026-10-30.4"
+  "source_sha256": "2b3b68c10dc9afdd9eadb5c56460053b9bb8455950f5b1e60eaaedf37c66b100",
+  "version": "working-2026-10-30.5"
 }

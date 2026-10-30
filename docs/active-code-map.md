@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_smooth_horizon.py` owns the shell-free continuation, Kottler roots,
+regular infall, regional-current constraints and conditional offset/drain
+readouts. Tests independently derive the four-dimensional Einstein tensor.
+`nsc_atlas_golden_vortex.py` owns golden inward maps, persistent-area source
+controls, Fibonacci coverage, Kerr orbit instability and BKL identities.
+Both use compact summaries and symbolic or small finite calculations.
+
 `nsc_atlas_pen_geometry.py` owns the explicit irrational circle history,
 stable spherical-band coverage, persistent area/probe integrals and exact
 finite-pass bounds. Its producer reads Omega and the Parke radius; its plot

@@ -5668,6 +5668,231 @@ auxiliary-wheel choice delta=2*pi*(sqrt(6)-2), with its different numerical
 readouts, is preserved as a comparison. It is superseded here by the
 normal-mode offset from the fixed source action.
 
+### 13.31. The inward drawing: golden turns and inherited clocks
+
+<!-- nsc-claim:golden-vortex-comparison -->
+
+The drawing can continue indefinitely while an observer occupies a finite
+depth. The [golden-vortex calculation](../docs/nsc-atlas-golden-vortex.md)
+constructs that continuation and compares it with the retained action clocks.
+For a point x in a unit ball, the same operation
+
+$$
+S(x,t)=(\sqrt{1-t^2}\,x,t),\qquad -1\leq t\leq1
+$$
+
+maps one ball onto the next-dimensional ball. Applied twice to a line segment,
+it fills a three-ball; its boundaries pass through circle and sphere. The two
+offsets are retained independent parameters. An inward history is
+
+$$
+F_n=R_c q^{-n}{\cal R}_z(n\delta)S(S(x,t_1),t_2).
+$$
+
+This gives nested copies for every q>1. Radius-normalized spherical Dirac
+operators inherit the same law for every such q, so that invariance supplies
+the construction but does not choose its scale ratio.
+
+The golden choice has phi=(1+sqrt(5))/2, delta=2pi/phi^2 and q=phi^4. Its
+planar logarithmic spiral shrinks by phi per quarter turn. On the sphere,
+
+$$
+\gamma(t)=R_c q^{-t}X(2\pi t,\delta t),\qquad
+\gamma(t+1)=q^{-1}{\cal R}_z(\delta)\gamma(t).
+$$
+
+Local radial gaps therefore shrink geometrically. Angular coverage remains
+a separate question: N points covering a unit sphere have angular covering
+radius at least acos(1-2/N). Integer samples of this particular continuous
+curve return to the pole; its full direction history has dense closure.
+It is the turns, not those isolated integer samples, that draw the curve.
+
+The golden angle is 2.399963229729 versus the action's .360395008387.
+The full-turn ratio 6.854101966250 exceeds Omega=3.973074368754 by 72.5138%.
+phi^3 differs by 6.6194%; ln(Omega)/ln(phi)=2.866804436955 is not an exact
+integer-power link. No physical sampling clock makes these choices equal.
+
+Reusing the stated persistent spherical-band footprint gives:
+
+| Construction | Drawn | Undrawn | Undrawn vs .685 | Drawn vs .315 |
+| --- | --- | --- | --- | --- |
+| Action, omega0=20 | .2967343240 | .7032656760 | +2.6665% | -5.7986% |
+| Action, omega0=2000 | .2490451897 | .7509548103 | +9.6284% | -20.9380% |
+| Action, omega0=10^9 | .2490451897 | .7509548103 | +9.6284% | -20.9380% |
+| Golden full turns | .1669757270 | .8330242730 | +21.6094% | -46.9918% |
+
+The n=50,100,200,1000 values converge at this precision; the enclosing
+intervals and geometric tail bounds are in the
+[record](../results/summaries/nsc-atlas-golden-vortex-v1.json).
+The limit depends on source frequency. omega0=20 remains a retained action
+input. The area fractions require the declared footprint and have not been
+identified with physical energy fractions.
+
+The supplied log hierarchy 136.84--138.26 corresponds to 71.091--71.829
+golden full turns, 284.365--287.316 quarter turns, 99.192--100.222 Omega
+frequency steps, or 198.385--200.444 curvature steps. These describe positions
+if the target hierarchy is supplied. A formation history must still select
+the current event; the drawing does not need a final stopping point.
+
+The black-hole comparisons also distinguish scale readouts. Schwarzschild
+has horizon radius 2m and circular photon-orbit radius 3m, ratio 1.5. Its
+critical photon-orbit offset grows by exp(2pi)=535.4916555 per revolution.
+This follows by expanding (du/dphi)^2=1/27-u^2+2u^3 at u=1/3. For Kerr,
+the corresponding equatorial instability exponent varies with spin; the
+prograde full-orbit factors at .5,.9,.99 are 119.71156,11.38191,2.32608.
+These are geodesic offsets, not child-radius ratios. The sources are
+[Teo's Kerr orbits](https://phyweb.physics.nus.edu.sg/~phyteoe/kerr/) and the
+[photon-ring analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC7080443/).
+
+The Kasner/BKL connection is exact in its own vacuum approximation:
+
+$$
+(p_1,p_2,p_3)=\frac{(-u,1+u,u(1+u))}{1+u+u^2},
+\qquad \sum p_i=\sum p_i^2=1.
+$$
+
+At u=phi the bounce cycles (-.3090169944,.5,.8090169944). Its derivative
+is -phi^2=-2.618033989: the golden orbit is repelling. The permutation of
+axis exponents is not itself a frame-dragging calculation. The Gauss-map
+typical denominator factor is exp[pi^2/(12ln2)]=3.275822919, 17.5494% below
+Omega; see [Damour--Lecian](https://arxiv.org/abs/1011.5797). A proper-time
+clock and transition data are needed before an era count becomes a hierarchy.
+
+[Frolov--Markov--Mukhanov](https://doi.org/10.1016/0370-2693%2889%2991114-3)
+provide a limiting-curvature core using a spacelike transition; the old Parke
+wall is timelike and cannot be substituted without matching its source.
+The [spin-torsion bounce](https://arxiv.org/abs/1110.5019) is another specified
+action, while [mass inflation](https://doi.org/10.1103/PhysRevD.41.1796)
+describes an internal mass parameter rather than necessarily spatial expansion.
+The next construction removes the material wall, following Douglas's revision.
+
+### 13.32. Through the horizon: smooth geometry, charge and an offset
+
+<!-- nsc-claim:smooth-horizon-and-offset -->
+
+A causal horizon is now the proposed handoff. The
+[smooth-horizon calculation](../docs/nsc-atlas-smooth-horizon.md) develops
+that branch without treating the old material wall as compulsory.
+At fixed Ui=7/32 and Uo=21/32, the Parke formula gives
+
+$$
+R_c^{-2}=\frac{(U_o-U_i)^2}{9\sigma^2}
++\frac{\kappa(U_i+U_o)}{6}+\frac{\kappa^2\sigma^2}{16}.
+$$
+
+Thus Rc tends to zero as tension tends to zero; 1.212662645 is not retained
+as a finite horizon. The flux equation also requires continuous q when the
+membrane current is removed. Keeping a charge jump while deleting only
+tension would still leave an interface source.
+
+The existing effective-action minimum has Lambda_star=.220983024213.
+Its constant fields admit a smooth Kottler metric:
+
+$$
+ds^2=-f\,dv^2+2dv\,dr+r^2d\Omega^2,\qquad
+f=1-\frac{2m}{r}-\frac{\Lambda_*r^2}{3}.
+$$
+
+The determinant is -r^4 sin(theta)^2. At a horizon f=0 it remains regular
+away from the ordinary angular-coordinate poles. An infaller has
+
+$$
+\frac{dr}{d\tau}=-\sqrt{E^2-f},\qquad
+\frac{dv}{d\tau}=\frac{1}{E+\sqrt{E^2-f}}.
+$$
+
+At the crossing these become -E and 1/(2E), and the norm stays -1. This
+proves that this zero marks the end of the static chart, with continuation
+in the same spacetime. It does not by itself create a new independent
+dimension or resolve the central r=0 singularity of the m>0 solution.
+
+At m=0 the same-action de Sitter horizon is **3.684522144189 model units**.
+Forcing a black-hole root to equal the old Rc would require m=.540652151655;
+that is an inversion diagnostic, not a derived mass. Smooth joining of two
+constant-vacuum Kottler pieces in one EF normalization gives
+[m]=-[Lambda]R^3/6 and [f']=-[Lambda]R, so equal first derivatives require
+equal vacuum and mass parameters. Null interfaces use the transverse-curvature
+conditions of [Barrabes--Israel](https://doi.org/10.1103/PhysRevD.43.1129)
+and [Poisson](https://arxiv.org/abs/gr-qc/0207101). A sourced smooth transition
+remains a separate field problem.
+
+![Smooth continuation, an oriented offset and two horizon responses](figures/nsc-atlas-smooth-horizon.png)
+
+Global zero charge can mean opposite charge in two regions. The continuity
+equation makes the distinction from no production calculable:
+
+$$
+Q(V_2)-Q(V_1)=-\int_{\partial V}J^\mu d\Sigma_\mu
++\int_{\mathcal V}S_B\,dV.
+$$
+
+A charge-symmetric state and dynamics on a moving neutral metric still have
+zero expected charge in a region preserved by internal charge conjugation.
+This does not exclude charge-separated states; it says their selection
+requires state or interaction data. A global CPT pairing can exchange regions
+and permits Q_minus(-t)=-Q_plus(t) without fixing its magnitude.
+[Boyle--Finn--Turok](https://arxiv.org/html/1803.08928v3) supply a specific
+pre-/post-bang CPT cosmology, not a general identification of black-hole
+horizons with antimatter. [Cohen--Kaplan--Nelson](https://arxiv.org/abs/hep-ph/9302210)
+combine moving walls with CP-violating interactions and transport. Motion
+alone is not that baryogenesis mechanism.
+
+Douglas's offset nevertheless has a precise charged realization. For the
+two-component harmonic comparison x=A cos(omega t), y=B cos(omega t-delta),
+
+$$
+Q=x\dot y-y\dot x=AB\omega\sin\delta,\qquad
+\frac{Q}{E/\omega}=\frac{2AB}{A^2+B^2}\sin\delta.
+$$
+
+The ellipse's orientation is its conserved charge. With equal amplitudes,
+the action phase gives .352643892877 and the golden angle .675490294262.
+These are charge per total oscillator quanta, not baryon/photon eta. The
+existing volume and scalar modes have unequal frequencies, so they do not
+already constitute this degenerate charged pair. The comparison constructs
+the missing object explicitly while retaining its additional field/state
+assumption. With common expansion damping, a^3 Q is conserved: density
+dilutes without generating an initial imbalance.
+
+The existing neutral quadratic field also has two calculable stress readouts:
+
+$$
+\rho=V_*+\frac{\dot\chi^2+\omega^2\chi^2}{2},\qquad
+p=-V_*+\frac{\dot\chi^2-\omega^2\chi^2}{2}.
+$$
+
+A uniform phase ensemble on a fixed de Sitter background gives
+rho_osc=A^2 omega^2/(2a^3) and p_osc=0; the baseline has w=-1. This connects
+baseline and oscillation to vacuum-like and matter-like gravity. Their
+fractions, charge state and baryon identity are not selected by this split.
+
+Finally, adding a specified null source permits m=m(v) in the same regular
+metric. Direct calculation gives
+
+$$
+T_{vv}^{\rm null}=\frac{2m'}{\kappa r^2},\qquad
+\frac{dR_h}{dv}=\frac{2m'}{1-\Lambda R_h^2},\qquad
+T^\mu{}_{\mu}=0.
+$$
+
+Decreasing m shrinks the black-hole marginal root and enlarges the
+cosmological one. This advanced-coordinate comparison requires negative
+ingoing energy for that sign, together with a physical source and exterior
+balance. It has not derived the drain rate. These are local marginal roots,
+not automatically global event horizons; see
+[Nielsen et al.](https://arxiv.org/abs/1007.2990). The traceless drain adds no
+vacuum Lambda in this construction. It can change a horizon without itself
+being dark energy.
+
+The [record](../results/summaries/nsc-atlas-smooth-horizon-v1.json) gives
+the exact identities, numerical controls and independent tests. The
+charge-symmetric control is zero (-100% against 6.1e-10), while physical
+baryon/photon eta remains unselected. The flat pure-vacuum control has
+Omega_Lambda=1 (+45.9854% against .685), not a matter-filled-universe fit.
+The next bridge is an inherited charge current and state whose stress
+produces a smooth, sourced horizon history. That makes the continuation
+and the offset testable in the same geometry.
+
 ## IV. Concentration, conservation and the surrounding reservoir
 
 A dark-matter account needs a physical source that forms structure and accounts for its surroundings. We first calculate admissible scalar concentrations and their conserved supply, then their persistence and spatial compensation, and finally formation from compact disturbances. The route preserves the inherited parent instead of adding an independent halo mass. Different frequencies and preparations are explicit members of the family; they are not exchanged between examples by a change of units.

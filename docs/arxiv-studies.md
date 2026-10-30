@@ -1681,3 +1681,22 @@ These are inputs to the [conditional calculation](schur-memory.md#step-7-conditi
 - **Reuse:** fixed-volume Euclidean boundary-energy minimization, with isotropic and anisotropic tensions distinguished.
 - **Assumptions:** sets of finite perimeter; positive convex homogeneous surface tension. No gravitational dynamics assumed.
 - **Use/gap:** motivates Section 2 of the living paper; applicability to a chosen spacetime source, rotational perturbations and dynamical stability remains unestablished. No new shape calculation or statistical ranking is claimed.
+
+## Horizon-only handoff and charge, 30 October 2026
+
+- Boyle--Finn--Turok, [1803.08928v3](https://arxiv.org/html/1803.08928v3):
+  inspected the CPT-paired pre/post-bang construction. It supplies a state
+  comparison, not a proof that a black-hole horizon creates an antiparticle.
+- Cohen--Kaplan--Nelson, [hep-ph/9302210](https://arxiv.org/pdf/hep-ph/9302210):
+  inspected the introduction and baryogenesis sections on CP violation and
+  wall transport. Moving geometry alone is not their complete mechanism.
+- Poisson, [gr-qc/0207101](https://arxiv.org/pdf/gr-qc/0207101): inspected
+  the transverse-curvature definition and null-shell stress construction.
+  Applied to a common EF spherical chart; independently checked the metric.
+- Nielsen et al., [1007.2990](https://arxiv.org/abs/1007.2990): abstract and
+  Vaidya construction used to distinguish local from global horizons.
+- Hayward, [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126): abstract-level
+  regular-core comparison only. Its effective source has not been imported.
+
+The [calculation owner](nsc-atlas-smooth-horizon.md) records assumptions,
+borrowed structures, equations checked here and the remaining source problem.

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+  "current_receipt_commit_parent": "f357b2faa59874211c32e679e4016212a07acacc",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 295005,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 295454,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,15 +10287,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "af71ed30ad3df95c81e8fafcb323e36643123c59acadba9d776c4f90b69c416a"
+      "sha256": "87cca4bedb6d86462ca0b5e33efd4e50916f92c617dc2331780694e419920dd5"
     },
     {
-      "bytes": 150322,
-      "change": "Record the mass-free Parke radius, source compatibility test and absent reheating reference event without resetting a cosmological state.",
-      "changed_from_commit": "ccc678a70683f62f0a0061ae580985d866e892f5",
+      "bytes": 151513,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "9988341accd0c1b43d4f30bc08fab0f8525084169ac72e4ba9c14fdbbfbaf6cc"
+      "sha256": "3e38ec1715e4c6a044ff506279ca8c0ad0c2448452537531ee8ecd5506f867b4"
     },
     {
       "bytes": 9543,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 478711,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 479812,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "67c090d119ae03fff5aa4501b8ead16ba4f4063b3db936e644b756367c66e94d"
+      "sha256": "6d78da1875463b402ccc73ce1561ec6b43b28b33283b9f2f5c4ac18425e981cb"
     },
     {
       "bytes": 173938,
@@ -10860,6 +10860,14 @@
       "sha256": "58fcb5128f13af52aad4277447556312a228a7a1635b01c871b21ea874a16bf3"
     },
     {
+      "bytes": 9268,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "docs/nsc-atlas-golden-vortex.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "85f633cce78e49e5edca42417554133e67dadae9127be966e13d46bd3a65f652"
+    },
+    {
       "bytes": 15905,
       "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
       "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
@@ -11069,6 +11077,14 @@
       "sha256": "bc059e375d82047269a6d29cabfb11384c548615df1d86580a8b6b1a79b66d0f"
     },
     {
+      "bytes": 11798,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "docs/nsc-atlas-smooth-horizon.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ffb798c5998ee65de91e0fe86f2616dcfb12980c45c04df9613eeb80b47de85f"
+    },
+    {
       "bytes": 9853,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
       "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
@@ -11136,15 +11152,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 134826,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 135789,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "b4d9b69a68e04290bc893e3e8d92d89763263793aaaf6cc1182896dde585d7f8"
+      "sha256": "5617b574f047857c91dcaa867bc2bc598e9c7f3bce2368e710ae674a1285033f"
     },
     {
       "bytes": 30876,
@@ -12126,20 +12142,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 242327,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 243205,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "8d7eaa9fc5400375ab16479aabddd5eaa2a29af4452308d5be510e349eec4d68"
+      "sha256": "4d23c66e09d60249b6ce4c8b877fd3bc770d8727d035b8f6d96835cf57ff84cd"
     },
     {
-      "bytes": 54234,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 54594,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "b84936cac6f3858bb4e13b0e1c202d707256f7ded32b3b3543fb05066e814af0"
+      "sha256": "c6f2bd70a661da3cf232d0128972233ace3de1c8dc10a3d07c4c1971446140d1"
     },
     {
       "bytes": 18356,
@@ -12208,28 +12224,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 40021,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 40504,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "dca97fd6fac72789927cc3aee07251c2e9cd238a1a5872b438970e560e8acb40"
+      "sha256": "bcdc7938322a16a6ec10150736348354d6ca459d1d68cdf1f017dfc61969e56d"
     },
     {
       "bytes": 3206,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "eb05977bb4b243623866dce5ea7f4bbd4254f3b815ba855e0faf08e2472ad60b"
+      "sha256": "df8c9bb6316b2dbc019224e6f9710df8e2fa7fbcf208e91b78c7ebc193d8ba66"
     },
     {
-      "bytes": 50090,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 50378,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0eaff7908e97558a49207c17021c6cb48ed2899bbb2b66cdd2058ede718a7510"
+      "sha256": "b8829c87ea392f8f29c79065b7772791563da78fbefdd456801e43022a5a0390"
     },
     {
       "bytes": 226492,
@@ -12248,28 +12264,36 @@
       "sha256": "ff20f11f64ff1d99612c7f4e35c460515abb506fa92f5373b4216ed542de31e3"
     },
     {
+      "bytes": 259954,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "paper/figures/nsc-atlas-smooth-horizon.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "54cda2b164688043c23fe0218211bcc4006065d1b6be032c0d4f83e543a56aa9"
+    },
+    {
       "bytes": 396,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "695b0f9b3b8a1b3be026ffce1b5a042e3f64def98c9ff347f0ea476f483844c3"
+      "sha256": "c0b432825d64a919ea3b24f043ecdfa88a81c5ee6b509d8b0748a0845517bd6e"
     },
     {
-      "bytes": 569296,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 579877,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1bd7534990c9d82fe6ab5eab6ef6168e951ea2b0bda842b0e5b8bd71f9bddafc"
+      "sha256": "2b3b68c10dc9afdd9eadb5c56460053b9bb8455950f5b1e60eaaedf37c66b100"
     },
     {
-      "bytes": 15726406,
-      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
-      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "bytes": 16104479,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "b1961f928f4a5aabc52e02b45d1027662c5abbeb635781c540255a034d3b292a"
+      "sha256": "c493449a1ae146444382bd65e49bdf21ad4ca653ed515291756b79021c0be92e"
     },
     {
       "bytes": 3283,
@@ -31038,6 +31062,14 @@
       "sha256": "b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2"
     },
     {
+      "bytes": 21491,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "results/summaries/nsc-atlas-golden-vortex-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "93aa89f40ebad06f42814938136585badc629dfcf0d08f0d3cbd8d3c66c4b76a"
+    },
+    {
       "bytes": 3178,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "a0018906e43d0e93be1e8cc7993188c22d3f53c8",
@@ -31428,6 +31460,14 @@
       "path": "results/summaries/nsc-atlas-si-hierarchy-audit-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "5fc9ebdd4932263c2dce9dfcb61cb7bc81b593345706abd73b9c9d8637797bf2"
+    },
+    {
+      "bytes": 9307,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "results/summaries/nsc-atlas-smooth-horizon-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7109b9d8e28580150706259d0b1e46ae79221296b12b623aff10705f0ea85253"
     },
     {
       "bytes": 13697,
@@ -31959,6 +31999,14 @@
       "sha256": "9e6c41b952191ea381df4d3efa2cd71282e378d2e19133c1e6bd4f5649c3b2b7"
     },
     {
+      "bytes": 1641,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "scripts/check_nsc_atlas_golden_vortex.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "81201d84cb3a2ce14f8fca95206de5557231792b3150c74e3d00653d19d93055"
+    },
+    {
       "bytes": 8275,
       "change": "Connect sourced nested geometry, gravitational Schur response and a causal observable.",
       "changed_from_commit": "18f38ee053f8a8e630374d48b39e010d3b342fc5",
@@ -32245,6 +32293,14 @@
       "path": "scripts/check_nsc_atlas_si_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "9c453ee202775d2034fd9f5bbb9a8a1dca540396e7b8994b7497315d964eb637"
+    },
+    {
+      "bytes": 1400,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "scripts/check_nsc_atlas_smooth_horizon.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b12223a83ce9884708da8f22871d31d997c2bec1028bd479ac4209b3571ead42"
     },
     {
       "bytes": 5510,
@@ -35320,6 +35376,14 @@
       "sha256": "6e35503e330d3dd0d73f277f067460b1c0aa5a334ffb6270f36870333b5e2fb5"
     },
     {
+      "bytes": 3441,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "scripts/plot_nsc_atlas_smooth_horizon.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9f75178e3452ca5aa3f1664581fe9a7ad2734f83a475c796621ed2120eb6f9c8"
+    },
+    {
       "bytes": 5846,
       "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
       "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
@@ -36439,6 +36503,14 @@
       "sha256": "99053a52f7cc96070bb08171e59e876133395e2731f8290c38a3eca977585c7c"
     },
     {
+      "bytes": 11790,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "src/recursive_horizons/nsc_atlas_golden_vortex.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5673891d75c610ad4c2ff667d4dba9dd7d45bf99f663d819e90da973f93f1389"
+    },
+    {
       "bytes": 16000,
       "change": "Keep independent quadrature comparisons and distinguish the geometric increment from the full source.",
       "changed_from_commit": "948e66bbe57ff87bd3154fe89e50b38a8edf006c",
@@ -36750,6 +36822,14 @@
       "path": "src/recursive_horizons/nsc_atlas_si_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "2f5b82d15b10d7dc2aa4d4effdce78751f3c0c7d52bc1117bfe8a9ecfc501aed"
+    },
+    {
+      "bytes": 10100,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "src/recursive_horizons/nsc_atlas_smooth_horizon.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d8a929a84082fb094dbef0aae33d1ffc858c66ef008162ee0f6c5f92c7f58530"
     },
     {
       "bytes": 4099,
@@ -41053,6 +41133,14 @@
       "sha256": "f1e9b4dd20d1d4f676206a433bf4a7834ea7f5c88dce4a307fbe169b78b3545f"
     },
     {
+      "bytes": 4635,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "tests/test_nsc_atlas_golden_vortex.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "80c4606330fe0d740a5ad657c414916fd942f4e66737c1bbdc60c401cb470b21"
+    },
+    {
       "bytes": 13824,
       "change": "Keep independent quadrature comparisons and distinguish the geometric increment from the full source.",
       "changed_from_commit": "948e66bbe57ff87bd3154fe89e50b38a8edf006c",
@@ -41484,6 +41572,14 @@
       "path": "tests/test_nsc_atlas_si_hierarchy.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "6716022987de0a1b79813582613d71328f23d95ba47d9dc7a247980590e0695f"
+    },
+    {
+      "bytes": 5342,
+      "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
+      "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
+      "path": "tests/test_nsc_atlas_smooth_horizon.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "542ed60acadaedbf1637d7fd832454ed87926a7e0aa064c3785093f77c742937"
     },
     {
       "bytes": 6166,

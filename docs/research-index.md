@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [smooth-horizon and offset calculation](nsc-atlas-smooth-horizon.md)
+connects shell removal, regular horizon crossing, conserved regional charge,
+phase-oriented charge and a sourced drain comparison. The
+[golden-vortex follow-up](nsc-atlas-golden-vortex.md) owns persistent-area
+source stability, geometric suspension, golden scaling and Kerr/BKL checks.
+
 The [pen geometry](nsc-atlas-pen-geometry.md) constructs the two-angle sphere
 and calculates finite-pass resolving power, persistent drawn area, a geometric
 dipole and a quadratic probe. Its preferred offset comes from the (12,2)

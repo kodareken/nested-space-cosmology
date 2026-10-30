@@ -1,0 +1,539 @@
+{
+  "bkl": {
+    "Gauss_density": "1/[ln(2)*(1+x)] on 0<x<1",
+    "Gauss_mean_log_derivative": 2.373138220831251,
+    "axis_cycle_miss_from_golden_angle_percent": -12.732200375003499,
+    "axis_label_cycle_angle": 2.0943951023931953,
+    "bounced_exponents": [
+      0.8090169943749476,
+      -0.3090169943749476,
+      0.5
+    ],
+    "continued_fraction_denominator_factor": 3.2758229187218113,
+    "denominator_factor_miss_from_Omega_percent": -17.549418543885132,
+    "era_count_to_wall_selected": false,
+    "era_derivative_at_fixed_point": -2.618033988749895,
+    "golden_Kretschmann": "2/tau^4",
+    "golden_denominator_factor": 1.618033988749895,
+    "golden_fixed_point": 1.618033988749895,
+    "golden_point_is_attractor": false,
+    "kasner_exponents": [
+      -0.30901699437494745,
+      0.5,
+      0.8090169943749475
+    ],
+    "missing": "An initial billiard state, a proper-time/scale map and a compatible curvature cutoff; exponent updates do not create child regions.",
+    "physical_scale_per_era_selected": false,
+    "volume_law": "volume proportional tau; the finite-time metric still has three spatial directions"
+  },
+  "black_holes": {
+    "Schwarzschild": {
+      "critical_impact_over_mass": 5.196152422706632,
+      "critical_orbit_log_radial_offset_ratio": 6.283185307179586,
+      "critical_orbit_radial_offset_ratio": 535.4916555247646,
+      "photon_horizon_miss_from_Omega_percent": -62.24586149716871,
+      "photon_horizon_miss_from_golden_full_percent": -78.11529493745269,
+      "photon_to_horizon_ratio": 1.5,
+      "radial_factor_miss_from_Omega_percent": 13378.01741986159
+    },
+    "entropy": "S_BH/kB=A/(4*lP^2); lP remains symbolic",
+    "kerr_controls": [
+      {
+        "equatorial_horizon_circumferential_radius_over_mass": 2.0,
+        "horizon_BL_radius_over_mass": 2.0,
+        "horizon_angular_speed_times_mass": 0.0,
+        "horizon_area_over_4pi_mass_squared": 4.0,
+        "horizon_areal_radius_over_mass": 2.0,
+        "photon_orbits": [
+          {
+            "BL_photon_over_horizon": 1.5,
+            "angular_radial_instability_exponent": 1.0,
+            "circumferential_photon_over_horizon": 1.5,
+            "log_radial_offset_factor_per_full_orbit": 6.283185307179586,
+            "orientation": "prograde",
+            "photon_radius_over_mass": 3.0,
+            "radial_offset_factor_per_full_orbit": 535.4916555247646
+          },
+          {
+            "BL_photon_over_horizon": 1.5,
+            "angular_radial_instability_exponent": 1.0,
+            "circumferential_photon_over_horizon": 1.5,
+            "log_radial_offset_factor_per_full_orbit": 6.283185307179586,
+            "orientation": "retrograde",
+            "photon_radius_over_mass": 3.0,
+            "radial_offset_factor_per_full_orbit": 535.4916555247646
+          }
+        ],
+        "spin": 0.0
+      },
+      {
+        "equatorial_horizon_circumferential_radius_over_mass": 2.0,
+        "horizon_BL_radius_over_mass": 1.8660254037844386,
+        "horizon_angular_speed_times_mass": 0.13397459621556135,
+        "horizon_area_over_4pi_mass_squared": 3.732050807568877,
+        "horizon_areal_radius_over_mass": 1.9318516525781366,
+        "photon_orbits": [
+          {
+            "BL_photon_over_horizon": 1.2579123256164513,
+            "angular_radial_instability_exponent": 0.7615699589143087,
+            "circumferential_photon_over_horizon": 1.2219667756984902,
+            "log_radial_offset_factor_per_full_orbit": 4.785085176239745,
+            "orientation": "prograde",
+            "photon_radius_over_mass": 2.3472963553338606,
+            "radial_offset_factor_per_full_orbit": 119.71155923008726
+          },
+          {
+            "BL_photon_over_horizon": 1.8928407293248077,
+            "angular_radial_instability_exponent": 1.166792870145309,
+            "circumferential_photon_over_horizon": 1.7935447577154757,
+            "log_radial_offset_factor_per_full_orbit": 7.331175818218904,
+            "orientation": "retrograde",
+            "photon_radius_over_mass": 3.532088886237956,
+            "radial_offset_factor_per_full_orbit": 1527.1763985393811
+          }
+        ],
+        "spin": 0.5
+      },
+      {
+        "equatorial_horizon_circumferential_radius_over_mass": 2.0,
+        "horizon_BL_radius_over_mass": 1.4358898943540672,
+        "horizon_angular_speed_times_mass": 0.3133945031366293,
+        "horizon_area_over_4pi_mass_squared": 2.8717797887081344,
+        "horizon_areal_radius_over_mass": 1.69463264122586,
+        "photon_orbits": [
+          {
+            "BL_photon_over_horizon": 1.084940170934333,
+            "angular_radial_instability_exponent": 0.38706883673844544,
+            "circumferential_photon_over_horizon": 1.0340216001136682,
+            "log_radial_offset_factor_per_full_orbit": 2.4320252278620944,
+            "orientation": "prograde",
+            "photon_radius_over_mass": 1.5578546274233829,
+            "radial_offset_factor_per_full_orbit": 11.381909714705076
+          },
+          {
+            "BL_photon_over_horizon": 2.723236617569528,
+            "angular_radial_instability_exponent": 1.274560185912068,
+            "circumferential_photon_over_horizon": 2.03190115507968,
+            "log_radial_offset_factor_per_full_orbit": 8.008297833238789,
+            "orientation": "retrograde",
+            "photon_radius_over_mass": 3.910267939103037,
+            "radial_offset_factor_per_full_orbit": 3005.7963892512385
+          }
+        ],
+        "spin": 0.9
+      },
+      {
+        "equatorial_horizon_circumferential_radius_over_mass": 2.0,
+        "horizon_BL_radius_over_mass": 1.141067359796659,
+        "horizon_angular_speed_times_mass": 0.4338043637390611,
+        "horizon_area_over_4pi_mass_squared": 2.282134719593318,
+        "horizon_areal_radius_over_mass": 1.5106735979665886,
+        "photon_orbits": [
+          {
+            "BL_photon_over_horizon": 1.0232891527679908,
+            "angular_radial_instability_exponent": 0.13435636786946817,
+            "circumferential_photon_over_horizon": 1.002778101792881,
+            "log_radial_offset_factor_per_full_orbit": 0.8441859565234578,
+            "orientation": "prograde",
+            "photon_radius_over_mass": 1.1676418518575313,
+            "radial_offset_factor_per_full_orbit": 2.326083510544274
+          },
+          {
+            "BL_photon_over_horizon": 3.49769260054956,
+            "angular_radial_instability_exponent": 1.2966283696252012,
+            "circumferential_photon_over_horizon": 2.0856740210556493,
+            "log_radial_offset_factor_per_full_orbit": 8.146956320901285,
+            "orientation": "retrograde",
+            "photon_radius_over_mass": 3.991102861089397,
+            "radial_offset_factor_per_full_orbit": 3452.8536770848427
+          }
+        ],
+        "spin": 0.99
+      }
+    ],
+    "scope": "Classical photon orbits and near-critical radial offsets, not brightness rings or an established child-universe handoff."
+  },
+  "construction": {
+    "exact_similarity": "gamma(t+1)=q^(-1)*R_z(delta)*gamma(t)",
+    "inward_map": "F_n=Rc*q^(-n)*R_z(n*delta)*S^2(x,t1,t2)",
+    "scale_covariance": "For round-sphere Dirac operators D_(n+1)=q U D_n U^dagger; normalized pullback is unchanged for every q.",
+    "scope": "A kinematic inward continuation inside Rc. The geometry defines it for every q>1; field equations must select q and the handoff.",
+    "suspension": "S(x,t)=(sqrt(1-t^2)*x,t); two independent stored offsets take B1->B2->B3 and boundaries S0->S1->S2",
+    "vortex": "gamma(t)=Rc*q^(-t)*X(2*pi*t,delta*t)"
+  },
+  "core_matching": {
+    "boundary_is_inside_black_hole": false,
+    "continuous_f_Schwarzschild_mass": 0.06501548557574215,
+    "deSitter_radius": 3.7032803990902057,
+    "horizon_over_wall_for_that_control": 0.1072276545227093,
+    "invariant_equality_Kasner_time": 1.9897168829869107,
+    "mass_inflation": "Internal gravitational mass and curvature can grow near an inner horizon while areal radius remains finite; this is not the scale-factor inflation of a child.",
+    "scope": "Continuous-f and curvature-equality controls only. FMM uses a limiting-curvature spacelike transition, not this timelike Parke turning wall.",
+    "torsion_comparison": "For rho_eff=C_r/a^4-alpha*C_n^2/a^6, flat Lambda0 gives a_min^2=alpha*C_n^2/C_r; spin density and state must be supplied. Microscopic spin is not macroscopic Kerr rotation."
+  },
+  "fibonacci_samples": [
+    {
+      "area_lower_bound": 0.283794109208328,
+      "cover_radius": 0.38628391889909575,
+      "log_angular_resolution": 0.951182638705785,
+      "points": 50,
+      "scope": "Finite equal-area Fibonacci sample; its heights depend on count, so successive sets are not a persistent prefix."
+    },
+    {
+      "area_lower_bound": 0.20033484232311968,
+      "cover_radius": 0.2729940878576116,
+      "log_angular_resolution": 1.2983051402309012,
+      "points": 100,
+      "scope": "Finite equal-area Fibonacci sample; its heights depend on count, so successive sets are not a persistent prefix."
+    },
+    {
+      "area_lower_bound": 0.1415394733244273,
+      "cover_radius": 0.19297441187576705,
+      "log_angular_resolution": 1.645197679821458,
+      "points": 200,
+      "scope": "Finite equal-area Fibonacci sample; its heights depend on count, so successive sets are not a persistent prefix."
+    },
+    {
+      "area_lower_bound": 0.06325609887514339,
+      "cover_radius": 0.0862770406526256,
+      "log_angular_resolution": 2.450191757393117,
+      "points": 1000,
+      "scope": "Finite equal-area Fibonacci sample; its heights depend on count, so successive sets are not a persistent prefix."
+    }
+  ],
+  "golden": {
+    "angle": 2.399963229728653,
+    "angle_miss_from_action_percent": 565.9257686363908,
+    "atlas_step_in_golden_full_turns": 0.7167011092387017,
+    "full_turn_ratio_miss_from_Omega_percent": 72.5138099642126,
+    "ln_Omega_over_ln_phi": 2.8668044369548067,
+    "local_radial_gap_ratio": 0.14589803375031543,
+    "now_is_position_not_stop": true,
+    "now_positions": [
+      {
+        "log_ratio_per_step": 1.9248473002384139,
+        "position_interval": [
+          71.09135357545028,
+          71.82907443248872
+        ],
+        "reading": "golden full turn"
+      },
+      {
+        "log_ratio_per_step": 0.48121182505960347,
+        "position_interval": [
+          284.36541430180114,
+          287.3162977299549
+        ],
+        "reading": "golden quarter turn"
+      },
+      {
+        "log_ratio_per_step": 0.7352262455376004,
+        "position_interval": [
+          186.11957996676526,
+          188.05095824470155
+        ],
+        "reading": "golden-angle sampling of planar spiral"
+      },
+      {
+        "log_ratio_per_step": 1.3795401951959914,
+        "position_interval": [
+          99.19247041624557,
+          100.22179888738754
+        ],
+        "reading": "atlas frequency step"
+      },
+      {
+        "log_ratio_per_step": 0.6897700975979957,
+        "position_interval": [
+          198.38494083249114,
+          200.44359777477507
+        ],
+        "reading": "atlas curvature reading"
+      }
+    ],
+    "per_full_turn_ratio": 6.854101966249686,
+    "per_golden_angle_sample_ratio": 2.085953876878432,
+    "per_quarter_ratio": 1.618033988749895,
+    "phi": 1.618033988749895,
+    "phi_cubed_miss_from_Omega_percent": 6.61939808662364,
+    "physical_observer_event_selected": false,
+    "pitch": 0.30634896253003313,
+    "same_full_turn_pitch": false
+  },
+  "golden_area": {
+    "curve_itself_area": 0,
+    "definition": "Radially project the circle fibers of the same scale-rotation map, retaining the previous geodesic-band footprint rule once per full turn.",
+    "measure": {
+      "area_enclosure": [
+        0.16686623363139497,
+        0.16708384454194938
+      ],
+      "area_fraction": 0.1669757269767708,
+      "omitted_area_bound": 2.318368270382892e-12,
+      "passes": 1000,
+      "percent_miss_dark_energy": 21.60938292309915,
+      "percent_miss_total_matter": -46.991832705787054,
+      "power_divisor": 1,
+      "quadrature_error_indicators": [
+        2.475168615345691e-07,
+        2.3978207346064817e-07
+      ],
+      "quadrature_mesh": 4096,
+      "quadrature_warnings": [],
+      "retained_bands": 13,
+      "rounding_allowance": 1e-08,
+      "undrawn_enclosure": [
+        0.8329161554580506,
+        0.833133766368605
+      ],
+      "undrawn_fraction": 0.8330242730232292,
+      "z_probe_enclosure": [
+        0.08124886734358241,
+        0.08149302797090077
+      ],
+      "z_probe_moment": 0.08137161121585111
+    },
+    "scope": "The smooth vortex, circle-fiber area readout and finite Fibonacci samples are explicit different readouts; neither curve area nor physical stress is inferred from the pen footprint."
+  },
+  "imbalance": {
+    "common_expansion_damping_difference": 0,
+    "counter_rotation_signed_count": 0,
+    "eta_control_if_photon_count_positive": 0,
+    "eta_control_percent_miss": -100.0,
+    "eta_target": 6.1e-10,
+    "identity": "Q_comoving proportional a^3*(|A_plus|^2-|A_minus|^2); common damping and conjugate real transmission preserve zero from symmetric data",
+    "missing": "A charge-selective wall/state mechanism and baryon/photon identification are not in the current real scalar/four-form model.",
+    "physical_baryon_photon_eta": null,
+    "real_charge_symmetric_wall_transfer_difference": 0
+  },
+  "input_sha256": {
+    "results/summaries/nsc-atlas-parke-bubble-v1.json": "d4dbdea8776340a65393b77e2b78085c89d664065f4fd62b4db4ec8aec8bede2",
+    "results/summaries/nsc-atlas-pen-geometry-v1.json": "6b32f1bd2f70f7275610c156ca2673c75fc79e0fe89c7df452120973927f2ba7"
+  },
+  "new_spacetime_evolutions": 0,
+  "no_imported_SI_constants": true,
+  "no_target_fit": true,
+  "resolution": {
+    "branching": "A depth law with N growing proportionally to q^(2n) can provide geometric angular refinement; that population rule is not selected here.",
+    "global_angular": "N spherical samples require h>=acos(1-2/N); a spiral alone does not replace the independent angular samples",
+    "local_radial": "Delta r_n=(1-1/q)*Rc*q^(-n), exactly geometric"
+  },
+  "schema": "nsc-atlas-golden-vortex-v1",
+  "source_selection": "omega0=20 is supplied in the retained parent input; d,j do not derive it. The other two source members are preserved controls.",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_golden_vortex.py": "81201d84cb3a2ce14f8fca95206de5557231792b3150c74e3d00653d19d93055",
+    "src/recursive_horizons/nsc_atlas_golden_vortex.py": "5673891d75c610ad4c2ff667d4dba9dd7d45bf99f663d819e90da973f93f1389",
+    "src/recursive_horizons/nsc_atlas_pen_geometry.py": "d234827c4ddb131a4adcaaa03a10572b0bf69627319005c9564bcc7e0080a743"
+  },
+  "source_stability": [
+    {
+      "contained_prefix": null,
+      "delta": 0.3603950083870508,
+      "limit": {
+        "area_enclosure": [
+          0.2966404586460124,
+          0.29683234198429936
+        ],
+        "area_fraction": 0.29673432402110383,
+        "omitted_area_bound": 5.527308808358008e-12,
+        "passes": 1000,
+        "power_divisor": 1,
+        "quadrature_error_indicators": [
+          2.608512779894952e-06,
+          1.1213966870371461e-07
+        ],
+        "quadrature_mesh": 4096,
+        "quadrature_warnings": [
+          "The occurrence of roundoff error is detected, which prevents \n  the requested tolerance from being achieved.  The error may be \n  underestimated."
+        ],
+        "retained_bands": 18,
+        "rounding_allowance": 1e-08,
+        "undrawn_enclosure": [
+          0.7031676580157007,
+          0.7033595413539876
+        ],
+        "undrawn_fraction": 0.7032656759788962,
+        "z_probe_enclosure": [
+          0.13376130462530056,
+          0.13400546525582785
+        ],
+        "z_probe_moment": 0.13388142875062337
+      },
+      "omega0": 20,
+      "pass_controls": [
+        {
+          "drawn": 0.29673432402110383,
+          "log_remaining_tail_bound": -70.0666063182199,
+          "passes": 50,
+          "undrawn": 0.7032656759788962
+        },
+        {
+          "drawn": 0.29673432402110383,
+          "log_remaining_tail_bound": -139.04361607801945,
+          "passes": 100,
+          "undrawn": 0.7032656759788962
+        },
+        {
+          "drawn": 0.29673432402110383,
+          "log_remaining_tail_bound": -276.9976355976186,
+          "passes": 200,
+          "undrawn": 0.7032656759788962
+        },
+        {
+          "drawn": 0.29673432402110383,
+          "log_remaining_tail_bound": -1380.6297917544116,
+          "passes": 1000,
+          "undrawn": 0.7032656759788962
+        }
+      ],
+      "percent_miss_dark_energy": 2.6665220407147583,
+      "percent_miss_total_matter": -5.7986272948876705
+    },
+    {
+      "contained_prefix": {
+        "area_limit_lower": 0.24904518973019235,
+        "contained_extra_bands": 68,
+        "log_additional_area_upper": -96.27787002694373,
+        "statement": "All these bands lie in the first; the remaining area is bounded by the geometric tail. No tiny correction is rounded into an exact equality."
+      },
+      "delta": 0.0036034633176249115,
+      "limit": {
+        "area_enclosure": [
+          0.24894493692825637,
+          0.24914997804208508
+        ],
+        "area_fraction": 0.24904518973412682,
+        "omitted_area_bound": 5.527308808358008e-12,
+        "passes": 1000,
+        "power_divisor": 1,
+        "quadrature_error_indicators": [
+          5.4854157605088716e-09,
+          6.395029394923313e-09
+        ],
+        "quadrature_mesh": 4096,
+        "quadrature_warnings": [],
+        "retained_bands": 18,
+        "rounding_allowance": 1e-08,
+        "undrawn_enclosure": [
+          0.750850021957915,
+          0.7510550630717436
+        ],
+        "undrawn_fraction": 0.7509548102658732,
+        "z_probe_enclosure": [
+          0.12182820886609592,
+          0.12207236949662323
+        ],
+        "z_probe_moment": 0.1219481522106007
+      },
+      "omega0": 2000,
+      "pass_controls": [
+        {
+          "drawn": 0.24904518973412682,
+          "log_remaining_tail_bound": -70.0666063182199,
+          "passes": 50,
+          "undrawn": 0.7509548102658732
+        },
+        {
+          "drawn": 0.24904518973412682,
+          "log_remaining_tail_bound": -139.04361607801945,
+          "passes": 100,
+          "undrawn": 0.7509548102658732
+        },
+        {
+          "drawn": 0.24904518973412682,
+          "log_remaining_tail_bound": -276.9976355976186,
+          "passes": 200,
+          "undrawn": 0.7509548102658732
+        },
+        {
+          "drawn": 0.24904518973412682,
+          "log_remaining_tail_bound": -1380.6297917544116,
+          "passes": 1000,
+          "undrawn": 0.7509548102658732
+        }
+      ],
+      "percent_miss_dark_energy": 9.628439454871994,
+      "percent_miss_total_matter": -20.9380350050391
+    },
+    {
+      "contained_prefix": {
+        "area_limit_lower": 0.24904518973019235,
+        "contained_extra_bands": 34923937,
+        "log_additional_area_upper": -48178977.33512926,
+        "statement": "All these bands lie in the first; the remaining area is bounded by the geometric tail. No tiny correction is rounded into an exact equality."
+      },
+      "delta": 7.206926537906564e-09,
+      "limit": {
+        "area_enclosure": [
+          0.24894493692825637,
+          0.24914997804208508
+        ],
+        "area_fraction": 0.24904518973412693,
+        "omitted_area_bound": 5.527308808358008e-12,
+        "passes": 1000,
+        "power_divisor": 1,
+        "quadrature_error_indicators": [
+          5.485415649486569e-09,
+          6.395029547578979e-09
+        ],
+        "quadrature_mesh": 4096,
+        "quadrature_warnings": [],
+        "retained_bands": 18,
+        "rounding_allowance": 1e-08,
+        "undrawn_enclosure": [
+          0.750850021957915,
+          0.7510550630717436
+        ],
+        "undrawn_fraction": 0.7509548102658731,
+        "z_probe_enclosure": [
+          0.12182820886609592,
+          0.12207236949662323
+        ],
+        "z_probe_moment": 0.12194815221060068
+      },
+      "omega0": 1000000000,
+      "pass_controls": [
+        {
+          "drawn": 0.24904518973412693,
+          "log_remaining_tail_bound": -70.0666063182199,
+          "passes": 50,
+          "undrawn": 0.7509548102658731
+        },
+        {
+          "drawn": 0.24904518973412693,
+          "log_remaining_tail_bound": -139.04361607801945,
+          "passes": 100,
+          "undrawn": 0.7509548102658731
+        },
+        {
+          "drawn": 0.24904518973412693,
+          "log_remaining_tail_bound": -276.9976355976186,
+          "passes": 200,
+          "undrawn": 0.7509548102658731
+        },
+        {
+          "drawn": 0.24904518973412693,
+          "log_remaining_tail_bound": -1380.6297917544116,
+          "passes": 1000,
+          "undrawn": 0.7509548102658731
+        }
+      ],
+      "percent_miss_dark_energy": 9.628439454871973,
+      "percent_miss_total_matter": -20.93803500503907
+    }
+  ],
+  "wall": {
+    "Rc": 1.2126626450077351,
+    "Ui": 0.21875,
+    "Uo": 0.65625,
+    "actual_trajectory": "R(tau)=Rc*cosh(tau/Rc)",
+    "geometry_selected_ratio": null,
+    "kinetic_at_Omega_inward_copy": -0.9366500011515125,
+    "kinetic_at_golden_inward_copy": -0.9787137637477918,
+    "lapse_inside": 0.8927723454772907,
+    "lapse_outside": 0.678317036431872,
+    "required_scale_law": "Ui,Uo ->q^2*(Ui,Uo), sigma->q*sigma gives Rc->Rc/q for any q; it does not select q.",
+    "sigma": 0.2,
+    "wall_is_black_hole_horizon": false
+  }
+}

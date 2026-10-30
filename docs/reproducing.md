@@ -1,5 +1,19 @@
 # Reproducing the root project
 
+## Smooth horizon and golden-vortex comparisons
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_smooth_horizon.py tests/test_nsc_atlas_golden_vortex.py tests/test_nsc_atlas_pen_geometry.py tests/test_nsc_atlas_parke_nucleation.py
+python scripts/run_python.py scripts/check_nsc_atlas_smooth_horizon.py --output .build/smooth-horizon-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_golden_vortex.py --output .build/golden-vortex-reproduced.json
+python scripts/run_python.py scripts/plot_nsc_atlas_smooth_horizon.py
+```
+
+Use fresh output paths; historical records are not overwritten. Tests check
+tensor equations and geodesics, charge/energy identities, independent radius
+responses, coverage bounds and BKL/Kerr reductions. This is not a cosmological
+fit or a selected source history. The generated figure labels its controls.
+
 ## Constructed pen geometry
 
 ```powershell

@@ -668,6 +668,16 @@
       "section": "13.30",
       "status": "derived",
       "owner": "docs/nsc-atlas-pen-geometry.md"
+    },
+    "golden-vortex-comparison": {
+      "section": "13.31",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-golden-vortex.md"
+    },
+    "smooth-horizon-and-offset": {
+      "section": "13.32",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-smooth-horizon.md"
     }
   },
   "findings": [
