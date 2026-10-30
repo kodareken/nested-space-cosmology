@@ -311,6 +311,106 @@ The next physical connection is state preparation/transfer or a collective
 source law; radial stability does not settle the known shape and
 fragmentation questions of localized fermion walls.
 
+## Energy, frequency, size and a possible cooling ceiling
+
+The [energy-frequency calculation](../results/summaries/nsc-atlas-energy-frequency-v1.json)
+tests Douglas's proposed link between a region's stored energy, oscillations,
+pressure and size. The occupied surface, the volume scalar and equilibrium
+radiation remain distinct sectors; their equations are not silently combined.
+
+In the equal-bulk-pressure, negligible-gravity limit of the surface action,
+
+$$
+E(R)=4\pi\sigma_0R^2+\frac{D}{R},\qquad D=\hbar c\mathcal A_q.
+$$
+
+The first term pulls inward and the occupied modes supply outward pressure.
+At fixed occupation, E_R=0 gives R^3=D/(8*pi*sigma0), and E_RR=24*pi*sigma0>0.
+The minimum energy is 12*pi*sigma0*R^2. Thus smaller occupied energy supports
+a smaller equilibrium sphere. This is the familiar Fermi-wall pressure
+balance, here evaluated with the exact finite sphere spectrum already cited.
+It is not the frozen gravitating core solution with gravity discarded unnoticed.
+
+There is a sharper spectral relation. With N_s species,
+A_q=N_s*q(q+1)(2q+1)/3 and highest occupied angular frequency omega_max=c*q/R,
+
+$$
+\omega_{\max}^3
+<\frac{12\pi\sigma_0c^2}{N_s\hbar},\qquad
+\frac{\omega_{\max}^3}{12\pi\sigma_0c^2/(N_s\hbar)}
+=\frac{2q^2}{(q+1)(2q+1)}<1.
+$$
+
+The last inequality follows because the denominator minus numerator is 3q+1.
+This is an occupation-independent upper bound within this equilibrium family.
+It bounds the highest occupied level, not the unbounded set of allowed modes,
+arbitrary excited states, or a thermal temperature. The filled state is not a
+hot blackbody. Hz frequency is omega/(2*pi). A stationary spectral projector
+commutes with its Hamiltonian, so its mean stress can stay static while its
+field phases oscillate; force cancellation does not mean zero stored energy.
+
+The already retained gravitating states supply a separate finite comparison.
+Going from q=1000 to q=999 decreases radius by .06593266%, surface mode energy
+by .23377199%, and the highest occupied frequency by .03408981%. Meanwhile
+the spacing of fixed individual mode labels rises by .06597616% as R falls.
+These are two stationary states. A physical depletion path needs a channel
+for the conserved surface particles to leave; the free closed-surface action
+does not supply that channel. No leakage history is inferred from the endpoints.
+
+**Cooling a shrinking region.** Import only the explicitly declared benchmark
+of homogeneous equilibrium radiation with fixed species: E=a_rad*T^4*V and
+p=E/(3V), as in [the thermal equations](https://www.damtp.cam.ac.uk/user/tong/cosmo/cosmohtml/S2.html).
+Energy conservation with outward and inward powers gives
+
+$$
+\dot E+p\dot V=P_{\rm in}-P_{\rm out},\qquad
+\frac{\dot T}{T}=-\frac{\dot R}{R}
+-\frac{P_{\rm out}-P_{\rm in}}{4E}.
+$$
+
+For Rdot<0, cooling requires P_out-P_in>4E*(-Rdot/R): energy loss must exceed
+compression heating. Equivalently, T*R/(T0*R0)=exp[-integral(P_out-P_in)/(4E)dt].
+If both radius and total radiation energy halve, T rises by sqrt(2); if radius
+halves and energy falls to 1/32, T falls by 1/sqrt(2). Thus losing total energy
+does not by itself prove cooling. A ceiling T<=T_initial follows on a homogeneous
+branch if the temperature derivative stays nonpositive. Later compression,
+reheating or local concentration can violate that condition. The initial hot
+state is not a universal ceiling derived by the present action. The fixed
+scalar/four-form candidate contains no thermal photon gas or thermalization law.
+
+The retained (12,2) scalar-volume evolution illustrates the distinction directly:
+at N=4 its matter density is 7.6104674e-6 of its initial value while its oscillator
+frequency is 1.2386400 times the initial frequency. Its exact averaged identity
+is rho/rho0=exp(-3N)*(omega/omega0). Dilution and exchange with the volume mode
+are present; temperature and leakage through an outer wall are not supplied.
+
+**Expansion inferred by a clock.** A conditional observation protocol uses
+transparent null photons and identical reference clocks with frequency
+nu_clock,E proportional to Omega=exp(-6s). Emission, propagation and calibration
+then give
+
+$$
+1+z=\frac{a_{E,o}\Omega_o}{a_{E,e}\Omega_e}
+=\frac{a_{J,o}}{a_{J,e}}.
+$$
+
+This is the operational distinction emphasized by
+[Chiba--Yamaguchi](https://arxiv.org/abs/1308.1142). Decreasing a_E alone can
+coexist with redshift if a_E*Omega increases. Contraction of that clock-calibrated
+scale gives blueshift in this protocol. A shrinking enclosing wall is a different
+quantity from the interior scale factor and requires its own junction/clock map.
+The scalar action has not supplied a microscopic photon/detector completion.
+Frozen likelihoods using fixed Einstein-frame standards are preserved, not
+silently reinterpreted. Applying the conditional clock law to the retained N=4
+endpoint gives 1+z=67.62745477, solely a protocol-dependent readout.
+
+This calculation adds algebraic identities and a diagnostic of retained data;
+it selects no thermal preparation, depletion rate, cosmic temperature maximum
+or new observable fit. Independent checks cover pressure balance, the spectral
+inequality, the radiation first law, static projectors and clock calibration.
+The key failure checks are treating occupation as frequency, energy loss as
+cooling, or a coordinate radius as an observer-calibrated expansion.
+
 ## Reproduction
 
 The [component](../src/recursive_horizons/nsc_atlas_occupied_wall.py) reuses

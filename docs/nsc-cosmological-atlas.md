@@ -18,12 +18,11 @@ starting a derivation.
 
 ## Current execution priority — 30 October 2026
 
-Active target: test the proposed energy-contrast control of the small and
-large gravitational lengths within the fixed action. The
-[contrast calculation](nsc-atlas-scale-selection.md#energy-contrast-and-the-planck-to-vacuum-length-ratio)
-derives the two frame-dependent lengths, their invariant ratio, and the
-fixed-coupling descendant vacuum sectors. A global evolving horizon and an
-SI normalization are not supplied by a frame conversion or a vacuum table.
+Active target: connect stored energy, frequency content, pressure, radius
+and observed expansion. The [energy-frequency calculation](nsc-atlas-occupied-wall.md#energy-frequency-size-and-a-possible-cooling-ceiling)
+derives the occupied sphere's size and spectral bound, the radiation
+cooling condition and a conditional clock-calibrated redshift. It reuses
+retained endpoints; no new evolution, leakage law or likelihood is added.
 
 e112798: hierarchy obeys g=4*eta_e0^2 and ln(L_ref/ell_e_sigma)=.9747222043-.5*ln(g); target 138.542 needs ln(g)=-275.13456 and ln(eta_e0)=-138.26042 (including -ln(2)); the HM exponent is not the ruler; that audit is parked.
 

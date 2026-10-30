@@ -2159,6 +2159,105 @@ and a collective source law remain physical questions. No cosmic
 density fraction or matter--antimatter asymmetry is inferred from
 this finite state-to-observer proof.
 
+### 10.14. Energy, frequencies and a moving radius
+
+<!-- nsc-claim:energy-frequency-radius -->
+
+Evidence: [identities and retained endpoint comparisons](../results/summaries/nsc-atlas-energy-frequency-v1.json),
+[assumptions and derivation](../docs/nsc-atlas-occupied-wall.md#energy-frequency-size-and-a-possible-cooling-ceiling),
+and [independent symbolic checks](../tests/test_nsc_atlas_energy_frequency.py).
+
+Douglas's frequency picture asks whether a region's stored energy, the
+oscillations it supports and its enclosing size are one connected problem.
+The occupied sphere supplies an exact conditional example. In the
+equal-bulk-pressure, negligible-gravity limit of its surface action,
+
+$$
+E(R)=4\pi\sigma_0R^2+\frac{\hbar c\mathcal A_q}{R},\qquad
+\mathcal A_q=\frac{N_s q(q+1)(2q+1)}{3}.
+$$
+
+The competing terms are membrane tension and occupied-mode energy. Setting
+the radius derivative to zero, with the occupation held fixed, gives
+
+$$
+R^3=\frac{\hbar c\mathcal A_q}{8\pi\sigma_0},\qquad
+E_{\min}=12\pi\sigma_0R^2,\qquad
+E_{RR}=24\pi\sigma_0>0.
+$$
+
+This pressure balance links stored energy to radius. It also bounds the
+highest occupied angular frequency, $\omega_{\max}=cq/R$:
+
+$$
+\omega_{\max}^3<\frac{12\pi\sigma_0c^2}{N_s\hbar},\qquad
+\frac{\omega_{\max}^3}{12\pi\sigma_0c^2/(N_s\hbar)}
+=\frac{2q^2}{(q+1)(2q+1)}<1.
+$$
+
+The inequality is exact because the denominator exceeds its numerator by
+3q+1. The bound applies to the highest occupied level in this equilibrium
+family. The allowed spectrum remains unbounded, arbitrary excitations are
+not constrained by it, and the filled state is not a thermal gas. Hz
+frequency is angular frequency divided by $2\pi$. A filled spectral
+projector commutes with the Hamiltonian: its mean density and pressure can
+remain static despite oscillating field phases.
+
+Gravitational binding changes this balance, so the flat bound is not applied
+to the retained gravitating spectrum. Those endpoints give a separate comparison. Reducing
+the filled level from 1000 to 999 reduces the radius by .06593266%, surface
+mode energy by .23377199%, and highest occupied frequency by .03408981%.
+The spacing of fixed individual modes increases as the radius shrinks.
+These are stationary endpoints; a depletion process needs a channel for
+the surface's conserved particles to leave. The closed free surface action
+does not supply that channel.
+
+For cooling, explicitly introduce the separate benchmark of homogeneous
+equilibrium radiation with fixed species, $E=a_{\rm rad}T^4V$ and
+$p=E/(3V)$. Its [thermal equation of state](https://www.damtp.cam.ac.uk/user/tong/cosmo/cosmohtml/S2.html)
+and the first law give
+
+$$
+\dot E+p\dot V=P_{\rm in}-P_{\rm out},\qquad
+\frac{\dot T}{T}=-\frac{\dot R}{R}
+-\frac{P_{\rm out}-P_{\rm in}}{4E}.
+$$
+
+A shrinking region cools only if outward loss exceeds compression heating:
+$P_{\rm out}-P_{\rm in}>4E|d(\ln R)/dt|$. Halving both radius and total
+radiation energy raises temperature by $\sqrt{2}$. Halving the radius while
+reducing energy to 1/32 lowers it by $1/\sqrt{2}$. An initial temperature
+is a ceiling on a homogeneous branch only with an appropriate energy-flow
+and compression bound throughout its history. Later concentration or heating
+can violate it. No photon thermalization or universal inflation-temperature
+ceiling has been derived from the fixed scalar/four-form action.
+
+The retained volume solution makes the distinction between frequency and
+energy especially clear. At N=4, matter density is 7.6104674e-6 of its
+initial value, but its scalar frequency is 1.2386400 times its initial
+value. The law is $\rho/\rho_0=e^{-3N}(\omega/\omega_0)$: dilution can
+lower density while frequency rises. The model supplies no temperature
+or loss through an exterior boundary from this identity alone.
+
+Finally, apparent expansion requires a specified clock. For transparent
+null photons and identical reference clocks scaling as
+$\Omega=e^{-6s}$, the emission, propagation and calibration factors yield
+
+$$
+1+z=\frac{a_{E,o}\Omega_o}{a_{E,e}\Omega_e}
+=\frac{a_{J,o}}{a_{J,e}}.
+$$
+
+This is a conditional protocol consistent with
+[frame-independent observation](https://arxiv.org/abs/1308.1142).
+A decreasing coordinate scale can coexist with redshift when the
+clock-calibrated size increases. Contraction of the latter gives blueshift
+under these assumptions. A shrinking outer wall and an expanding interior
+are different quantities; their connection needs the actual junction and
+clock map. The proposed energy-size picture therefore yields precise
+relations and tests, while its depletion, thermal preparation and
+large-scale observation mechanisms remain to be constructed.
+
 ### 11. Complete one reference before assigning its causal arrows
 
 <!-- nsc-claim:atlas-causal-access -->

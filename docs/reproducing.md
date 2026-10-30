@@ -1,5 +1,15 @@
 # Reproducing the root project
 
+## Energy, frequency and radius
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_energy_frequency.py
+python scripts/run_python.py scripts/check_nsc_atlas_energy_frequency.py --output .build/energy-frequency-reproduced.json
+```
+
+This combines symbolic identities and readouts from retained records, with
+separate scope for surface states, homogeneous volume matter and radiation.
+
 ## Energy contrast and gravitational lengths
 
 ```powershell

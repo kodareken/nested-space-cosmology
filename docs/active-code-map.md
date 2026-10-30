@@ -1,5 +1,10 @@
 # Active code and evidence map
 
+`nsc_atlas_energy_frequency.py` connects the exact occupied sphere spectrum
+to flat pressure balance, derives a conditional radiation cooling threshold,
+and separates photon propagation from reference-clock calibration. Its
+producer reads two retained records; no root search or evolution is launched.
+
 `nsc_atlas_contrast_hierarchy.py` owns the constant-volume frame identity,
 Parke contrast cancellation, comparable Planck/vacuum-length benchmark,
 and fixed-coupling descendant sector minima. Its producer retains a compact

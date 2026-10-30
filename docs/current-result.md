@@ -1,5 +1,14 @@
 # What the calculations show
 
+The [energy-frequency-size connection](nsc-atlas-occupied-wall.md#energy-frequency-size-and-a-possible-cooling-ceiling)
+derives R^3=hbar*c*A_q/(8*pi*sigma0) and an upper bound on the highest
+occupied angular frequency in the flat equal-pressure surface equilibrium
+family. It also gives the exact radiation cooling condition during
+contraction: outward power must exceed compression heating. A universal
+initial-temperature ceiling and a physical depletion trajectory remain
+unproved. Retained gravitating endpoints and the volume evolution are
+compared without introducing a thermal state or refitting observations.
+
 The [contrast-to-length calculation](nsc-atlas-scale-selection.md#energy-contrast-and-the-planck-to-vacuum-length-ratio)
 gives ln(L_H/l_P)=.5*ln(8*pi/lambda_hat)-.5*ln(g). In the external
 Jordan metric both lengths acquire exp(-6s); their ratio is unchanged by
@@ -177,7 +186,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-30.1. Its central route is spherical
+revision 2026-10-30.2. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

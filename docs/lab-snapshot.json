@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+  "current_receipt_commit_parent": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 294054,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 294357,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "9b1823804dfb16d0f34e245a957b42da99ce42b036830043d4d1d47a07fccd52"
+      "sha256": "2f9112969975327dd01b402490473560df90b62e0d0649f717e2a38bebc6809a"
     },
     {
       "bytes": 150322,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 476867,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 477485,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9fb9c3513b067153d49647fbc8090f3c4c5debdbfefd3e9bca59ad1e830faea4"
+      "sha256": "e71bd6808d873e66b3012d027715e1fcf2b8ae39df77261a33396c310f409b93"
     },
     {
       "bytes": 173938,
@@ -10911,12 +10911,12 @@
       "sha256": "aeb030a33bbdfaaf9c51c90b3c7bc5a78c211c4cb782d575b83f3b1c6189a64e"
     },
     {
-      "bytes": 13162,
-      "change": "Connect an occupied surface state, sourced rooms and their common-parent clocks.",
-      "changed_from_commit": "e1474f71a1a17bb37160a6953bc7b65ca768ba06",
+      "bytes": 18520,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "docs/nsc-atlas-occupied-wall.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "6814e8683a0ea4642b70e5b1a355bd8b43b7dceb0b32c4272a343e519c08d3d1"
+      "sha256": "c8a38f0b36a03feac3daf94b9346f58dfa93cca09340a5bc5d6f83d91a97f5c3"
     },
     {
       "bytes": 10962,
@@ -11120,15 +11120,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 129125,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 129095,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8e40d8cca65214a207dc2e63b3c81205b9e103248e931b7097a7634b2c2c750a"
+      "sha256": "7068bf493625728d517d6c2bb0f75f3d93bcd33b4aa4dd4a26eac57dfa3a0d1a"
     },
     {
       "bytes": 30876,
@@ -12110,20 +12110,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 241005,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 241414,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a2284fac9dff8b46588460cbddb0141490f59bea971b12ecdaa9d942fd3acf2a"
+      "sha256": "a351a717096f20b7f80c7dc8d81a94824dce0514fe5690bd6807b43192e190ef"
     },
     {
-      "bytes": 53031,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 53443,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "c755772ef40d74b0665df117a28ae130780487a8372327e8cb75dc8caee7eb44"
+      "sha256": "e3618ab48f599e80ed0a63a1185ccfe6e54e63a2078dd161b16cc778503907f6"
     },
     {
       "bytes": 18356,
@@ -12192,28 +12192,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 39376,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 39542,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "a601246ca47ff57e782fd5342bcd12f682d714970029fcaec11ed454979b1e32"
+      "sha256": "be52bf2d3c3db0167c257901fe75ea19922ec26e5c587db493b5956d2ea7089b"
     },
     {
       "bytes": 3206,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0c490f701121ee62382cc443633950c0b71b685dca6a7e21d287d46177d767cc"
+      "sha256": "a417764d0a22a8c54bf2c262369e7911ac44ffc289eec454b626192e86af7b49"
     },
     {
-      "bytes": 49661,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 49803,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4912563d8dffcf2f3ac4dd9ba32166de73099ff6898f9eb355f66df76bf382dc"
+      "sha256": "b40a090107d66659482cfb8d8f7acc123d61d11c0da3a6a8a564c1552ec60a4d"
     },
     {
       "bytes": 226492,
@@ -12225,27 +12225,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5c34aa257e5afec39f870c3c89ae9de408d04302057aaeda8b44572ad5006a33"
+      "sha256": "d0b26042e53a090b5c90daa9e69aa0798e5dc3f1770eda0dea517f16ecd7edf7"
     },
     {
-      "bytes": 551850,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 556513,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e7d4df86e5dca43f1a6a874d81f7187b4ee60e0638040488a7994cae16fc0338"
+      "sha256": "6e54f2ec22dff8c818141fb28579c8704a28dac6226bff3f24425d7501921574"
     },
     {
-      "bytes": 15168463,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 15232742,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "91d6b7d1ed9def8fa9328a80f411a248339eb9837376ec8f4c34248d971588d0"
+      "sha256": "b9acc8eb2cb1c200a6bf2099153e8583fd2165205d98bed010dbc108da57ca78"
     },
     {
       "bytes": 3283,
@@ -30663,6 +30663,14 @@
       "sha256": "ecbe9e41c05826983de8165444d7a1d643fec9fe3a09ca5a114196af29268ef7"
     },
     {
+      "bytes": 5145,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
+      "path": "results/summaries/nsc-atlas-energy-frequency-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3460da50530d1cbcb9ca10a5396fcfab518b79e95e9957d6eebdc6fd079ca05e"
+    },
+    {
       "bytes": 33774,
       "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
       "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
@@ -31837,6 +31845,14 @@
       "path": "scripts/check_nsc_atlas_dynamics_lensing.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "5027b054b9031aaa8811b7bce3b861b2651efc13c0bf2473202993fc61d72413"
+    },
+    {
+      "bytes": 1604,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
+      "path": "scripts/check_nsc_atlas_energy_frequency.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "df7ba695ae3afd459e274f9b5f06a5e1feef70b4a274e4ff7be2bfe8907fbc55"
     },
     {
       "bytes": 4953,
@@ -36242,6 +36258,14 @@
       "path": "src/recursive_horizons/nsc_atlas_endpoint_comparison.py",
       "retention_reason": "Full P001 fixed-grid endpoint evolution and physically scaled observable.",
       "sha256": "25380dd94a60c0c0970c4ab1922e9293b9a3e031ee3b1c81109eb86b807ec3f6"
+    },
+    {
+      "bytes": 5934,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
+      "path": "src/recursive_horizons/nsc_atlas_energy_frequency.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "587b70a5e3bfed0bc3cf2a25f3fcb828dd20610012ae929cf1d441ee59e52c59"
     },
     {
       "bytes": 17314,
@@ -40784,6 +40808,14 @@
       "path": "tests/test_nsc_atlas_endpoint_summary.py",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
       "sha256": "87b8ee1f06e4d29562230125d3d91ec9ab6657ab9c857f905a0b8b5ef3db4e3a"
+    },
+    {
+      "bytes": 2442,
+      "change": "Connect occupied-mode energy to pressure and radius, derive a conditional cooling threshold, and distinguish frequency, temperature and calibrated expansion.",
+      "changed_from_commit": "ddbc1678d9796ad4394089d2f7d7c446a6eae9b1",
+      "path": "tests/test_nsc_atlas_energy_frequency.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7a3283b6c6507b569277ed1f18b188d22c26450f2cbe7b31dc921a15209d8b0a"
     },
     {
       "bytes": 12354,

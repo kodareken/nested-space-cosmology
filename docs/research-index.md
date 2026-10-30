@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [energy, frequency and size result](nsc-atlas-occupied-wall.md#energy-frequency-size-and-a-possible-cooling-ceiling)
+proves a pressure-selected radius and a finite occupied-frequency bound in
+the declared surface equilibrium family. The separate radiation first law
+states exactly when shrinking can accompany cooling; a calibrated clock
+distinguishes observable expansion from a changing coordinate scale.
+
 The [energy-contrast and gravitational-length result](nsc-atlas-scale-selection.md#energy-contrast-and-the-planck-to-vacuum-length-ratio)
 derives a common volume factor for the local Planck and positive-vacuum
 lengths, their invariant ratio, and a fixed-coupling vacuum-sign threshold

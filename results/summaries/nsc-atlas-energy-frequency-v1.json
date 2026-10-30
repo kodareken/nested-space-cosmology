@@ -1,0 +1,98 @@
+{
+  "conclusion": "Radius, spectral state and energy are linked. A universal inflation-temperature ceiling, cooling by deflation alone and a complete shrinking-wall/expanding-interior history do not follow.",
+  "flat_surface_theorem": {
+    "A_q": "N_species*q*(q+1)*(2q+1)/3",
+    "bound_ratio_exact": "omega_max^3/bound=2*q^2/((q+1)*(2q+1)) < 1",
+    "equilibrium": "R^3=hbar*c*A_q/(8*pi*sigma0)",
+    "examples": [
+      {
+        "fixed_level_frequency_over_reference": 1.0010005004169586,
+        "highest_frequency_cubed_over_bound": 0.9985002501250625,
+        "highest_occupied_frequency_over_reference": 0.9999994999165417,
+        "level": 999,
+        "radius_over_reference": 0.9990004995836247,
+        "total_energy_over_reference": 0.9980019981683317
+      },
+      {
+        "fixed_level_frequency_over_reference": 1.0,
+        "highest_frequency_cubed_over_bound": 0.9985017481269355,
+        "highest_occupied_frequency_over_reference": 1.0,
+        "level": 1000,
+        "radius_over_reference": 1.0,
+        "total_energy_over_reference": 1.0
+      }
+    ],
+    "frequency_convention": "omega is angular frequency; nu_Hz=omega/(2*pi)",
+    "mode_energy": "hbar*c*A_q/R",
+    "omega_max_cubed_bound": "12*pi*sigma0*c^2/(N_species*hbar)",
+    "scope": "Filled positive Dirac levels, fixed tension, equal bulk pressures, negligible gravity. This bounds the highest occupied level of this family, not all allowed modes or a thermal temperature.",
+    "second_radius_derivative_at_fixed_occupation": "24*pi*sigma0 > 0",
+    "total_energy": "4*pi*sigma0*R^2+hbar*c*A_q/R",
+    "total_energy_at_equilibrium": "12*pi*sigma0*R^2"
+  },
+  "input_sha256": {
+    "results/summaries/nsc-atlas-occupied-wall-v1.json": "0e2270cafcce1d3c42d12b0a0a36cfe11a9b3661fff29848d4f38f5ba0324784",
+    "results/summaries/nsc-atlas-parent-volume-selector-v1.json": "8f2b2624cc53fcb901fd7b34b3b55433578f9eed52a3554a388ac4da5d904d43"
+  },
+  "new_evolutions": 0,
+  "new_fits": 0,
+  "new_grids": 0,
+  "observer_protocol": {
+    "clock_calibrated_contraction_gives_blueshift": true,
+    "enclosing_wall_radius_is_same_as_internal_scale_factor": false,
+    "microscopic_photon_detector_completion_derived": false,
+    "old_likelihoods_recomputed": false,
+    "premises": "Transparent null probe on homogeneous metric; identical emission/detection clocks with nu_clock,E proportional exp(-6s)",
+    "redshift": "1+z=exp(DeltaN-6*Delta_s)=(a_E*Omega)_o/(a_E*Omega)_e=a_J,o/a_J,e",
+    "retained_endpoint_one_plus_z_if_this_protocol_is_used": 67.62745476804507
+  },
+  "retained_gravitating_endpoint_comparison": {
+    "fixed_level_frequency_ratio": 1.000659761620735,
+    "geometric_mass_ratio": 0.9979279389843986,
+    "highest_frequency_percent_change": -0.03408981408856704,
+    "highest_occupied_frequency_ratio": 0.9996591018591143,
+    "levels": [
+      1000,
+      999
+    ],
+    "mode_energy_percent_change": -0.23377199430407725,
+    "radius_percent_change": -0.06593266223341443,
+    "radius_ratio": 0.9993406733776659,
+    "scope": "Two retained stationary states under one action. No leakage channel or physical trajectory between them has been constructed.",
+    "surface_mode_energy_ratio": 0.9976622800569592
+  },
+  "retained_volume_example": {
+    "N": 4.0,
+    "exterior_leakage_derived": false,
+    "frequency_ratio": 1.2386400404957185,
+    "identity": "rho/rho0=exp(-3N)*(omega/omega0)",
+    "internal_volume_ratio": 0.6517931171185491,
+    "matter_density_ratio": 7.610467438140745e-06,
+    "s": -0.03566900603668981,
+    "temperature_defined": false,
+    "total_homogeneous_energy_law": "d(rho_total)/dt=-3H*(K*sdot^2+E_matter)"
+  },
+  "schema": "nsc-atlas-energy-frequency-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_energy_frequency.py": "df7ba695ae3afd459e274f9b5f06a5e1feef70b4a274e4ff7be2bfe8907fbc55",
+    "src/recursive_horizons/nsc_atlas_energy_frequency.py": "587b70a5e3bfed0bc3cf2a25f3fcb828dd20610012ae929cf1d441ee59e52c59",
+    "src/recursive_horizons/nsc_atlas_occupied_wall.py": "4742e25a3b0ae7a1a09e88b0e42f2ac964f5a36f0ce4f7bb976817079ecba05a"
+  },
+  "static_pattern": {
+    "identity": "rho=exp(-i*H*t)*rho0*exp(i*H*t)=rho0 if [H,rho0]=0",
+    "scope": "The filled spectral projector has stationary mean stress; not a claim that every real standing wave has static local energy density."
+  },
+  "thermal_benchmark": {
+    "cooling_while_shrinking": "P_out-P_in > 4E*(-Rdot/R)",
+    "first_law": "dE/dt+p*dV/dt=P_in-P_out",
+    "half_radius_half_energy_T_ratio": 1.4142135623730951,
+    "half_radius_one_32_energy_T_ratio": 0.7071067811865476,
+    "imported_thermal_sector": true,
+    "initial_temperature_ceiling_condition": "The logarithmic temperature derivative must remain nonpositive for a monotonic global ceiling; compression or heating can violate it.",
+    "integrated_relation": "T*R/(T0*R0)=exp(-integral[(P_out-P_in)/(4E)]dt)",
+    "log_temperature_rate": "Tdot/T=-Rdot/R-(P_out-P_in)/(4E)",
+    "no_flux_adiabatic_half_radius_T_ratio": 2.0,
+    "premises": "Homogeneous equilibrium radiation, fixed species, E=a_rad*T^4*V and p=E/(3V)",
+    "thermal_sector_derived_from_volume_action": false
+  }
+}
