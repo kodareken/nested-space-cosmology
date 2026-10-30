@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Same-source horizon area and dynamical entropy
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_horizon_response.py --output .build/horizon-response-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_horizon_response.py
+python scripts/run_python.py scripts/plot_nsc_atlas_horizon_response.py
+```
+
+The [existing parent owner](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy)
+specifies the quadratic scope and bounded future condition. Rescaled modes
+avoid amplitude underflow, while an analytic oscillator-energy inequality
+bounds the uncomputed future. The producer takes about three seconds here.
+
 ## Smooth-parent circulation and regional energy transfer
 
 ```powershell

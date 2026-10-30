@@ -23,8 +23,12 @@ now carries the generated spatial geometry into the retained scalar action.
 It derives compensated circulation, admissible global initial data,
 phase-parametrized evolution, a differential light record and conserved
 energy flux through a smooth observer horizon. A new daughter has not been
-formed. The next physical link is concentration and null expansion under
-the same action; metric/state selection and the absolute scale remain open.
+formed. The [same-source null response](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy)
+now gives area growth, dynamical entropy, a monotone record and angular
+transfer directions. It also identifies the cosmological expansion signs.
+The next physical link is concentration of the transported source and a
+compatible child continuation; metric/state selection and the absolute
+scale remain open.
 
 Active target: evaluate the spectral band, conjugate-sector asymmetry and
 inside/outside component split from the existing atlas equations, with no

@@ -345,16 +345,198 @@ continues in the same parent geometry. It does not yet produce a daughter,
 closed recycling, or Lambda from depletion. The vacuum and the prepared
 field were inputs; the transfer and the differential light record follow.
 
+## 8. The same flux changes area and dynamical entropy
+
+The [new response record](../results/summaries/nsc-atlas-horizon-response-v1.json)
+continues the same source into the null Einstein equations. It does not
+extrapolate a quadratic perturbation into a nonlinear collapse claim.
+The immediate missing connection was the geometry's response to the
+already calculated transfer. A direct collapse scan would require an
+additional concentrated preparation and a controlled finite-amplitude
+evolution. The null response needs neither of those new physical inputs.
+
+**Borrowed mathematics.** [Gibbons--Hawking](https://doi.org/10.1103/PhysRevD.15.2738)
+supplies the cosmological-horizon first-law framework. [Zhao, 2503.16138v4](https://arxiv.org/html/2503.16138v4),
+sections 3--4.2, equations 3.2, 4.8 and 4.16--4.18, supplies the dynamical
+entropy and finite-cross-section physical-process law. We reuse those
+results and calculate their normalization, boundary term and directional
+source for this particular inherited scalar. Raychaudhuri's equation and
+the rescaled scalar energy are independently checked below. The future
+condition is bounded perturbative null expansion with the retained
+asymptotic de Sitter area; full nonlinear future stability of the coupled
+volume/scalar action is not proved here.
+
+Let u=Ht, A_vac=4 pi/H^2, and let E_K denote the earlier patch energy
+divided by epsilon^2. The horizon generator k has nonaffinity h=H tanh u.
+At leading quadratic order Raychaudhuri gives
+
+$$
+\dot\theta-h\theta=-\kappa T_{kk}.
+$$
+
+Shear and expansion themselves start at order epsilon^2; their squares
+enter at fourth order. A null horizon is hypersurface-orthogonal, so it
+has zero null-congruence twist even though the source has regional
+circulation. The homogeneous response grows as cosh u. Excluding that
+unbounded future perturbation selects the future-integral solution.
+
+With F(u)=integral T_kk dA / epsilon^2 from section 7, define
+
+$$
+P(u)=\int_u^\infty \tanh v\,F(v)dv,\qquad
+S(u)=\int_u^\infty \operatorname{sech}v\,F(v)dv.
+$$
+
+Then the ordinary area deficit D and normalized growth rate G are
+
+$$
+A=A_{\rm vac}(1-\varepsilon^2 D)+O(\varepsilon^4),\qquad
+D=\frac{\kappa}{4\pi}[P-\sinh u\,S],\qquad
+G=-D'=\frac{\kappa\cosh u}{4\pi}S\geq0.
+$$
+
+The affine parameter from the background bifurcation surface is
+v_aff=sinh(Ht)/H. Thus v_aff d/dv_aff=(tanh u/H)d/dt and Zhao's
+dynamical-area operator is
+
+$$
+A_{\rm dyn}=A-\frac{\tanh u}{H}\dot A.
+$$
+
+Our explicit source yields the comparison and physical-process laws
+
+$$
+H(A_{\rm vac}-A_{\rm dyn})=\kappa\varepsilon^2 E_K,
+\qquad H\Delta A_{\rm dyn}=\kappa\varepsilon^2 E_{\rm out}.
+$$
+
+Both equations are through order epsilon^2. With S_dyn=2 pi A_dyn/kappa
+and T_H=H/(2 pi), the latter is T_H Delta S_dyn=epsilon^2 E_out.
+Ordinary area and dynamical entropy differ during the transfer; omitting
+the finite-endpoint derivative would give the wrong energy comparison.
+
+### Exact normalization and a controlled future integral
+
+Set m^2=mu^2/H^2. Integrating the initial scalar's static-patch energy
+gives the exact normalized full-future area increase
+
+$$
+\frac{A_\infty-A(0)}{\varepsilon^2 A_{\rm vac}}
+=c_A=\frac{2(m^2+4)}{5(m^2+3)}
++\frac{12(2m^2+13)}{35(m^2+8)}
+=1.085638919782.
+$$
+
+The ordinary initial volume integrals reduce to (m^2+4)/5 and
+(2m^2+13)/35 after x=sin chi. They independently fix this coefficient;
+the future numerical integral is a check, not its definition.
+
+For the future tail put y_i=cosh(u)^{3/2} q_i. The exact scalar equations become
+
+$$
+y_i''+\left[\nu^2+b_i\operatorname{sech}^2u\right]y_i=0,
+\qquad \nu^2=m^2-\frac{9}{4}>0,\qquad b_i=\lambda_i+\frac{3}{4}.
+$$
+
+The rescaled energy
+E_yi=[y_i'^2+(nu^2+b_i sech^2u)y_i^2]/2 satisfies
+E_yi'=-b_i sech^2u tanh u y_i^2<=0. Consequently q_i decays at least
+as a bounded oscillator times cosh(u)^(-3/2). This proves the needed
+linear-field decay, without simulating indefinitely or assuming a final
+oscillation vanishes at a numerical cutoff.
+
+Let D_i=sqrt(2 E_yi(0))[1+5/(2 nu)]. Direct bounds on the null amplitudes
+give F<=B_F sech^5u, with B_F=(4 pi/3) sum C_i^2 D_i^2 and
+(C1,C2)=(sqrt2/pi,sqrt12/pi). For a numerical endpoint U,
+
+$$
+P_{\rm tail}\leq\frac{32B_F}{5}e^{-5U},\qquad
+S_{\rm tail}\leq\frac{64B_F}{6}e^{-6U}.
+$$
+
+At U=8 the uncomputed normalized area-deficit tail is below 8.04e-16.
+The coefficient's numerical integral differs from its exact expression by
+2.12e-12; a tighter source/response solve changes sampled area coefficients
+by at most 1.93e-12. An independent future quadrature differs by 1.12e-11.
+These are numerical controls and an analytic tail bound for the exact
+linear source; they do not bound omitted fourth-order gravitational terms.
+The complete producer takes about three seconds here, within 180 seconds.
+
+At the earlier 300-event endpoint u=1.184645324262 the same source gives
+
+| Leading coefficient, divided by epsilon^2 | Value |
+| --- | --- |
+| Ordinary area increase / A_vac | 1.058388132596 |
+| Dynamical area increase / A_vac | .960502822979 |
+| Finite-endpoint correction / A_vac | .097885309617 |
+
+The last two sum to the first. The dynamical increase divided by c_A is
+the earlier 88.4735067504% energy-loss fraction. This is a source-normalized
+depletion/geometry relation, with no membrane or added matter source.
+
+### A monotone record and an amplitude-free light relation
+
+Define Xi=Delta A_dyn/A_vac. Its derivative is
+
+$$
+\frac{d\Xi}{du}=\frac{\kappa\varepsilon^2}{4\pi}\tanh u\,F(u)\geq0.
+$$
+
+It supplies a monotone geometric record of the chosen expanding history,
+even though the scalar's internal charge is zero. The source's transfer
+rate can oscillate and fades away. Neither an ultimate origin of updates
+nor a continually accelerating time rate has been derived. The expanding
+branch and bounded-future condition define this record's orientation.
+
+At the two earlier light-return events, epsilon^2 cancels between the
+proper delay and the contemporaneous dynamical area growth:
+
+| Guide radius | (Delta tau/T_loop) / (Delta A_dyn/A_vac) |
+| --- | --- |
+| 1/8 | 2.717089416415e-5 |
+| 1/16 | 2.917459090100e-5 |
+
+The absolute time/length scale also cancels. These are retrospective
+cross-observable relations for the same declared preparation and apparatus,
+not a sky-data fit or a blinded forecast.
+
+### Directional transfer and the condition for a new region
+
+The positive angular matrix Q_ij=integral_0^infinity tanh u A_i A_j du
+gives dE_out/dOmega=epsilon^2 n.Q.n/H^3. Its nonzero eigenvalues are
+.009105112022 and .230802659674. The maximum-energy axis is
+n=(.598070810823,.801443263894,0), at 53.268145764 degrees in the n1/n2
+plane, with an equal antipodal maximum. The maximum intensity is
+2.886142346 times the spherical average. Two example 30-degree caps
+contain 33.81554946% of the energy on 13.39745962% of the area. Their
+angular size is a reporting aperture, not a selected offspring radius.
+
+The source therefore specifies directions and a supply budget for a later
+attachment; it does not establish two children. Indeed the background's
+future radial expansions at this cosmological horizon are theta_minus=0
+and theta_plus=4h>0. On the exact time-symmetric initial-data slice K_ij=0,
+the two future expansions of any two-sided surface are opposite, so no
+strictly future-trapped surface is initially present. A new compact child
+requires a later concentrated state with both future expansions negative,
+followed by an admissible interior continuation. The perturbative area
+formula is not extrapolated to that regime.
+
+![Source-fixed area, entropy, energy direction and light relations](../paper/figures/nsc-atlas-horizon-response.png)
+
 ## Reproduction and next connection
 
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_parent_circulation.py --output .build/parent-circulation-reproduced.json
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_circulation.py
 python scripts/run_python.py scripts/plot_nsc_atlas_parent_circulation.py
+python scripts/run_python.py scripts/check_nsc_atlas_horizon_response.py --output .build/horizon-response-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_horizon_response.py
+python scripts/run_python.py scripts/plot_nsc_atlas_horizon_response.py
 ```
 
-The next connection is a null-expansion and concentration calculation on
-this same smooth sourced parent. It must distinguish an existing horizon
-from a new trapped region and conserve energy during any child transition.
+The null response and distinction from a future-trapped region are now
+calculated. The next physical connection is a concentrated incoming state
+with its supply taken from the regional transfer, followed by finite
+gravitational evolution and an admissible child continuation.
 The explicit mode preparation remains conditional until inheritance selects
 it. No further grid scan is needed to establish the result above.

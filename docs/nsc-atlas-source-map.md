@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **319 distinct arXiv works**: 99 are cited in the main argument and 220 are retained in the reading library only.
+This navigation index contains **320 distinct arXiv works**: 100 are cited in the main argument and 220 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -194,6 +194,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [2503.03918](https://arxiv.org/abs/2503.03918) | Actual cap--wall Dirac evolution, 18 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [2503.14738](https://arxiv.org/abs/2503.14738v3) | Parent geometry against released distances — 28 October 2026 | DESI Collaboration: DR2 baryon-acoustic-oscillation measurements and cosmological constraints, not a DR2 full-shape analysis. | 13.20 |
 | [2503.14744](https://arxiv.org/abs/2503.14744) | Studies | DESI Collaboration: neutrino constraints from DR2 BAO and DR1 full shape, including the stated absence of a joint 2025 full-shape plus DR2 analysis. | Library only |
+| [2503.16138](https://arxiv.org/abs/2503.16138v4) | Dynamical cosmological horizon entropy, 30 October 2026 | dynamical cosmological-horizon entropy and physical-process first law between arbitrary cross-sections. Read sections 3--4.2, especially equations 3.2, 4.8 and 4.16--4.18, with section 2's equation 2.27 for the area operator. Full covariant-phase-space proofs and all gauge-existence details are not ... | 15.14 |
 | [2503.18515](https://arxiv.org/abs/2503.18515v3) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [2503.19441](https://arxiv.org/abs/2503.19441) | Studies | Wright et al.: KiDS-Legacy cosmological constraints from cosmic shear. | Library only |
 | [2503.24162](https://arxiv.org/abs/2503.24162v3) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |

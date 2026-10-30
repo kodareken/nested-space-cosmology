@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_horizon_response.py` evaluates the scalar-sourced null area
+response, dynamical entropy correction, controlled future tail and angular
+energy matrix. It reuses the parent/circulation interface without changing
+the frozen source. The new producer retains only compact coefficients;
+tests check the null geometry, exact normalization, manufactured response,
+independent volume comparison and cap integrals.
+
 `nsc_atlas_parent_circulation.py` evolves the existing scalar's two spatial
 harmonics on the smooth closed parent, with phase/proper controls, the
 quadratic conformal corrector, compensated vector response, guided null

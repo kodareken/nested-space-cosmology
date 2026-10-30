@@ -1,5 +1,22 @@
 # Prior art and admission of new research
 
+## Same-source area and dynamical entropy, 30 October 2026
+
+The [parent owner](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy)
+extends the frozen two-mode source into its null Einstein response. The
+choice is between uncontrolled extrapolation into collapse, a new full
+nonlinear simulation with an unselected concentrated state, and computing
+the geometric response of the already available flux. The third closes
+the immediate missing connection. Gibbons--Hawking and Zhao's dynamical
+cosmological-horizon law are borrowed inputs, not claimed new theorems.
+The contribution is the source-fixed coefficient, finite-endpoint term,
+future bound, angular matrix and linked light/area relation. The future
+boundary condition is explicit; numerical evolution ends at Ht=8 with
+an analytic tail, within 180 seconds. Independent initial volume,
+manufactured null response, quadrature and tighter evolution are the
+checks. The result closes this quadratic area response; concentrated
+formation and regular child continuation require their own physical data.
+
 ## Generated space, inherited field and smooth-horizon exchange, 30 October 2026
 
 The [new connection](nsc-atlas-parent-circulation.md) uses the existing

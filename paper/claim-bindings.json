@@ -14,6 +14,11 @@
     "unspecified": "Historical classification not yet assigned."
   },
   "claims": {
+    "scalar-horizon-area": {
+      "section": "15.14",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-parent-circulation.md"
+    },
     "offset-parent-field": {
       "section": "1.3",
       "status": "derived",

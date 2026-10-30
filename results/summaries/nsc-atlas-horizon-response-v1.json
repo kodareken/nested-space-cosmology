@@ -1,0 +1,153 @@
+{
+  "angular_transfer": {
+    "antipodal_energy_equal": true,
+    "axis_angle_from_n1_degrees": 53.26814576380154,
+    "axis_in_n_coordinates": [
+      0.5980708108230776,
+      0.8014432638942238,
+      0.0
+    ],
+    "eigenvalues": [
+      0.0,
+      0.009105112021549601,
+      0.23080265967424496
+    ],
+    "interpretation": "Directions of energy transfer on the same smooth horizon. These are not formed children or a physical cap-size selection.",
+    "largest_eigenvalue_fraction": 0.962047448662501,
+    "matrix": [
+      [
+        0.08840381847261884,
+        0.10626402922635757,
+        0.0
+      ],
+      [
+        0.10626402922635757,
+        0.15150395322317572,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "maximum_over_sphere_average": 2.886142345987503,
+    "spectral_norm_tail_bound": 1.7754806047145325e-16,
+    "total_energy_from_trace": 50.266244488699876,
+    "two_30_degree_caps_energy_fraction": 0.33815549456290567,
+    "two_caps_area_fraction": 0.1339745962155613
+  },
+  "area_history": [
+    {
+      "Ht": 0.0,
+      "comparison_first_law_absolute_residual": 2.1112001036271977e-12,
+      "dynamical_area_deficit_over_epsilon_squared": 1.085638919779558,
+      "dynamical_area_growth_over_epsilon_squared": 2.1156409957256983e-12,
+      "finite_endpoint_correction_over_epsilon_squared": 0.0,
+      "normalized_area_growth_rate_over_epsilon_squared": 1.9809638002047378,
+      "ordinary_area_deficit_over_epsilon_squared": 1.085638919779558,
+      "ordinary_area_growth_over_epsilon_squared": 2.1156409957256983e-12,
+      "other_future_background_expansion_over_H": 0.0,
+      "patch_Killing_energy_over_epsilon_squared": 50.26624448879761,
+      "proper_readout": 0.0
+    },
+    {
+      "Ht": 1.1846453242616595,
+      "comparison_first_law_absolute_residual": 9.268141809570807e-13,
+      "dynamical_area_deficit_over_epsilon_squared": 0.12513609680247847,
+      "dynamical_area_growth_over_epsilon_squared": 0.9605028229791951,
+      "finite_endpoint_correction_over_epsilon_squared": 0.097885309616653,
+      "normalized_area_growth_rate_over_epsilon_squared": 0.1180890787944207,
+      "ordinary_area_deficit_over_epsilon_squared": 0.027250787185825485,
+      "ordinary_area_growth_over_epsilon_squared": 1.0583881325958482,
+      "other_future_background_expansion_over_H": 3.3156430930267446,
+      "patch_Killing_energy_over_epsilon_squared": 5.79393527781669,
+      "proper_readout": 4.364851930251994
+    },
+    {
+      "Ht": 3.0,
+      "comparison_first_law_absolute_residual": 3.2538635143502387e-15,
+      "dynamical_area_deficit_over_epsilon_squared": 2.7520344181648176e-05,
+      "dynamical_area_growth_over_epsilon_squared": 1.0856113994374919,
+      "finite_endpoint_correction_over_epsilon_squared": 2.2998257837928883e-05,
+      "normalized_area_growth_rate_over_epsilon_squared": 2.3112555115906057e-05,
+      "ordinary_area_deficit_over_epsilon_squared": 4.5220863437192915e-06,
+      "ordinary_area_growth_over_epsilon_squared": 1.0856343976953298,
+      "other_future_background_expansion_over_H": 3.980219014746922,
+      "patch_Killing_energy_over_epsilon_squared": 0.0012742214045645558,
+      "proper_readout": 11.053566432566878
+    }
+  ],
+  "controls": {
+    "comparison_first_law_max_absolute_residual": 2.1112001036271977e-12,
+    "independent_future_integral_max_difference": 1.1144862810397171e-11,
+    "initial_area_coefficient_absolute_difference": 2.1156409957256983e-12,
+    "mode_rhs_evaluations": 55337,
+    "null_rhs_evaluations": 20714,
+    "original_proper_solution_max_state_difference": 1.3209655591595038e-11,
+    "quadrature_error_estimate": 9.796537662466388e-12,
+    "tighter_solve_area_coefficient_max_absolute_spread": 1.922684234045846e-12
+  },
+  "elapsed_seconds": 2.928431099979207,
+  "exact": {
+    "coefficient_formula": "2(m^2+4)/(5(m^2+3))+12(2m^2+13)/(35(m^2+8))",
+    "entropy_convention": "S_dyn=2*pi*A_dyn/kappa; T=H/(2*pi), hbar=c=kB=1",
+    "future_boundary": "Bounded null expansion and asymptotically retained de Sitter area",
+    "initial_normalized_area_deficit": 1.0856389197816736,
+    "perturbative_order": "epsilon^2 with higher-order backreaction not bounded",
+    "relation": "H*(A_vac-A_dyn)=kappa*epsilon^2*E_K; A_dyn=A-(tanh(Ht)/H)*A_dot",
+    "source_dependent_future_eigenvalues": [
+      3,
+      8
+    ]
+  },
+  "infinite_future_tail": {
+    "F_sech5_coefficient": 371.3352569598033,
+    "P_tail_upper_bound": 1.0096407801887846e-14,
+    "S_tail_upper_bound": 5.644945822661201e-18,
+    "angular_matrix_spectral_norm_tail_upper_bound": 1.7754806047145325e-16,
+    "endpoint_Ht": 8.0,
+    "energy_tail_upper_bound": 3.720043812281794e-14,
+    "normalized_area_deficit_tail_upper_bound": 8.034466045710141e-16
+  },
+  "inherited": {
+    "H": 0.2714056154003984,
+    "initial_energy_fraction": "epsilon^2",
+    "kappa": 1.0,
+    "m_squared": 8329.074464994037,
+    "mass_squared": 613.5280213887946,
+    "unique_preparation": false,
+    "vacuum": 0.22098302421260696
+  },
+  "light_area_relations": [
+    {
+      "Ht": 0.8813735870195429,
+      "dynamical_area_growth_over_epsilon_squared": 0.7457918417716269,
+      "fractional_light_delay_over_dynamical_area_growth": 2.717089416415141e-05,
+      "fractional_light_delay_over_ordinary_area_growth": 2.0417929233077334e-05,
+      "radius": 0.125
+    },
+    {
+      "Ht": 0.4031997191615115,
+      "dynamical_area_growth_over_epsilon_squared": 0.19121538208944344,
+      "fractional_light_delay_over_dynamical_area_growth": 2.9174590901003965e-05,
+      "fractional_light_delay_over_ordinary_area_growth": 8.693884462935559e-06,
+      "radius": 0.0625
+    }
+  ],
+  "no_observational_fit": true,
+  "schema": "nsc-atlas-horizon-response-v1",
+  "scope": [
+    "Explicit scalar-sourced area/entropy response using the published dynamical horizon first law",
+    "A monotone geometric record on the chosen expanding branch; not an ultimate origin of time",
+    "A cosmological horizon: its other background future expansion is positive for t>0",
+    "No SI Lambda, matter-antimatter imbalance, new trapped surface or daughter formation derived"
+  ],
+  "source_sha256": {
+    "results/summaries/nsc-atlas-parent-circulation-v1.json": "f3979a79389fc855c527a22b38fe4304b8cbdce1c42a250a5daa52a0334e263c",
+    "scripts/check_nsc_atlas_horizon_response.py": "9e6a644c98f1eae3d6cbd821c687a2930d91bdc6fc185bce45c43031cafb0395",
+    "src/recursive_horizons/nsc_atlas_horizon_response.py": "35ca8c2ae3040cac3404133cefad5c0a43a7e584b99d19db90717685337428f4",
+    "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408"
+  }
+}

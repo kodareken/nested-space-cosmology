@@ -1,5 +1,18 @@
 # What the calculations show
 
+The [same-source horizon response](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy)
+now calculates the area and dynamical entropy produced by the scalar's
+regional depletion. Its full-future normalized area increase is
+1.085638919782 epsilon^2, fixed by an exact initial volume integral.
+The finite-endpoint dynamical area change recovers the earlier energy-loss
+fraction and includes an explicit .097885309617 epsilon^2 derivative
+correction. The source determines antipodal maximum-transfer directions
+and an amplitude/scale-free light-to-area relation. Analytic decay bounds
+control the infinite future tail. The calculation is quadratic, with a
+bounded asymptotically de Sitter future; no strong-field child or SI vacuum
+scale is inferred. The null-expansion signs distinguish this existing
+observer horizon from a future-trapped region.
+
 The [smooth-parent field connection](nsc-atlas-parent-circulation.md) now
 puts the existing real scalar on the generated closed space. Two coherent
 harmonics produce a compensated vector metric response with zero total

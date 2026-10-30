@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [horizon area and entropy response](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy)
+uses the same scalar's flux, a published dynamical first law and an exact
+rescaled-oscillator bound to connect depletion, area growth, a monotone
+geometric record, angular transfer and the preceding light signal.
+
 The [smooth-parent circulation](nsc-atlas-parent-circulation.md) connects
 the completed spatial map to the existing scalar's stress, admissible
 initial data, a differential light record and conserved smooth-horizon
