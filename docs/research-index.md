@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [smooth-parent circulation](nsc-atlas-parent-circulation.md) connects
+the completed spatial map to the existing scalar's stress, admissible
+initial data, a differential light record and conserved smooth-horizon
+energy transfer. Its coherent mode preparation remains conditional.
+
 The [offset generator](nsc-atlas-offset-generator.md) formalizes one
 spatial seed plus repeated offset accumulation, proves its metric
 completions and connects the closed completion to parent initial geometry.

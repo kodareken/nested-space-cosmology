@@ -1,5 +1,18 @@
 # What the calculations show
 
+The [smooth-parent field connection](nsc-atlas-parent-circulation.md) now
+puts the existing real scalar on the generated closed space. Two coherent
+harmonics produce a compensated vector metric response with zero total
+rotation. The declared differential light experiment gives
+H Delta tau / epsilon^2 = 1.786000559262e-5. The same field transfers
+88.4735067504% of its initial observer-patch Killing energy across the
+smooth horizon during the finite interval, with a relative volume/flux
+balance residual below 8.7e-14. A symmetry-restricted exact small-amplitude
+constraint-data branch supports the perturbation. Preparation, higher-order
+error, an SI ruler and formation of a new child remain open. The duration
+readout can be parametrized by field phase; its synchronization with the
+drawing is an explicit rule, not an origin-of-time result.
+
 The [one-seed offset generator](nsc-atlas-offset-generator.md) now uses
 one irrational offset and its accumulated history to generate a dense
 direction family. With retained draws and the stated distance kernel, its
@@ -30,9 +43,9 @@ the retained compact mode on a declared periodic domain through t=.05.
 Opposite generated circulation bands survive three spatial resolutions and
 a time-step check; the energy-budget residual is at most 1.81e-9. The same
 state fixes nonzero boundary-energy and leading curvature coefficients in
-the published five-dimensional fluid/gravity expansion. A fourth-order
-boundary work balance remains to be completed before its decreasing kinetic
-energy is interpreted as a closed gravitational energy account.
+the published five-dimensional fluid/gravity expansion. The later averaged
+work identity and local scalar constraint are recorded above; a full bulk
+continuation and global parent attachment remain open.
 
 The [inherited internal-charge calculation](nsc-atlas-inherited-charge.md)
 restores first harmonics of the existing higher-dimensional real scalar on

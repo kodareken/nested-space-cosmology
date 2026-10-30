@@ -1768,3 +1768,8 @@ the source equation and metric were read and checked by the primary agent.
 The [owner](nsc-atlas-offset-generator.md) separately specifies the retained
 history, metric kernel and completion; no claim of physical dimensional
 selection or of deriving quantum statistics is borrowed from equidistribution.
+
+## Smooth-parent quadratic response and global constraints, 30 October 2026
+
+- [Losic--Unruh, gr-qc/0604122v2](https://arxiv.org/html/gr-qc/0604122v2) — compact de Sitter integral consistency of the leading matter backreaction. Read the abstract, section II through equation 7, and section III through equation 44. The source's massless quantum-state analysis and anomaly arguments are not reproduced or applied to the present massive coherent classical preparation. The atlas independently checks the spherical constraints, source symmetries and exact local initial-data branch.
+- [Bardeen, Phys. Rev. D 22, 1882](https://doi.org/10.1103/PhysRevD.22.1882) — gauge-invariant cosmological perturbation framework; publisher abstract and metadata inspected, full text access restricted. Used as context and attribution; the new vector constraint, current and observer projection are derived directly in the [owner](nsc-atlas-parent-circulation.md).

@@ -23,6 +23,15 @@ and controlled regional reduction. Their spacetime realization is developed
 through sourced interfaces and causal maps, with the contributions of earlier
 authors identified alongside the equations that enter the construction.
 
+A constructive offset history supplies a three-dimensional metric completion
+under explicit memory and distance rules. On its smooth closed-parent
+version, two harmonics of the inherited real scalar produce compensated
+circulation, a nonzero differential light record and conserved energy transfer
+through an observer horizon. The same preparation satisfies the global initial
+constraints on a local small-amplitude branch. This connects the spatial
+construction to field dynamics and observation while retaining the open
+selection of its metric, preparation, physical scale and daughter transition.
+
 The central worked family uses Einstein gravity, a scalar coupled to a
 four-form, and charged membranes. One action relates regional vacuum
 energies, supports a constrained three-region initial atlas and determines
@@ -328,6 +337,47 @@ tend to (1/4,1/4,1/2), while the metric area weight |sin Theta| gives
 physical duration still require a state and dynamical law. Further offset
 accumulators can also be constructed, so a physical selection of exactly
 three dimensions followed by nesting remains to be derived.
+
+### 1.3. The generated space supports a sourced physical readout
+
+<!-- nsc-claim:offset-parent-field -->
+
+The drawing update supplies history and a completed geometry. Its physical
+propagation law must also be specified. For the first three directions,
+writing a=2 pi alpha gives
+
+$$
+d_{12}^2-d_{01}^2=4\sin^2a\cos a(1-\cos a).
+$$
+
+This generally nonzero distance change proves that the drawing step is not
+automatically an isometry or the physical evolution of the inherited field.
+The [smooth-parent calculation](../docs/nsc-atlas-parent-circulation.md)
+instead uses the retained canonical scalar action on the generated closed
+space. The parent expands from its time-symmetric minimum-radius slice.
+Two normalized spatial harmonics have Laplacian eigenvalues 3 and 8;
+their quadratic cross stress generates a transverse metric response.
+
+The construction has three independent spatial directions. The four
+components used to embed the closed space obey a norm constraint. The
+earlier five-dimensional fluid/gravity lift remains a separate auxiliary
+construction. A child region and an extra independent coordinate are
+different mathematical operations.
+
+The global constraints matter. The scalar's energy requires a conformal
+correction of the initial metric; the explicit correction and a
+symmetry-restricted implicit-function argument give compatible initial
+data for sufficiently small amplitude. This source has zero total rotation
+yet develops regional circulation. Section 15.13 follows it to a nonzero
+light record and an energy flux across the smooth observer horizon.
+
+An unwrapped scalar phase can parametrize this evolution monotonically;
+proper duration is recovered as a readout. Synchronizing one event with
+the drawing offset remains a supplied identification. Neither this
+reparametrization nor the earlier metric-completion proof establishes the
+ultimate origin of time. The [evidence](../results/summaries/nsc-atlas-parent-circulation-v1.json)
+separates the geometric construction, canonical propagation, chosen state
+and measured response.
 
 ### 2. Why begin with the sphere? Energy, relaxation and inheritance
 
@@ -8695,6 +8745,189 @@ keeps that observation separate from these unfitted controls. A proposed
 nested gradient history must reproduce the same frequency and trajectory
 measurements within one declared observer geometry.
 
+### 15.13. Compensated circulation, a light offset and smooth-horizon exchange
+
+<!-- nsc-claim:smooth-parent-circulation -->
+
+The generated closed space now carries a source and an observer experiment
+from the same retained action. This branch uses smooth geometry throughout.
+The compact [evidence record](../results/summaries/nsc-atlas-parent-circulation-v1.json)
+and [derivation](../docs/nsc-atlas-parent-circulation.md) fix its preparation,
+constraints and finite domain. The result connects regional motion, metric
+response, light propagation and energy leaving one observer's region.
+
+**Geometry and source.** At the retained minimum,
+$\Lambda=.220983024213$ and $\mu^2=400\exp(-12s_*)=613.528021389$.
+With $\kappa=1$ and $H^2=\Lambda/3$, the background is
+
+$$
+ds^2=-dt^2+a^2\gamma_{S^3},\qquad a=\frac{\cosh(Ht)}{H}.
+$$
+
+Unit $S^3$ has volume $2\pi^2$. Two unit-norm harmonics have
+Laplacian eigenvalues 3 and 8:
+
+$$
+Y_1=\frac{\sqrt{2}}{\pi}X_1,\qquad
+Y_2=\frac{\sqrt{12}}{\pi}X_2X_4.
+$$
+
+For the existing real scalar $\chi=\varepsilon(q_1Y_1+q_2Y_2)$,
+
+$$
+\ddot q_i+3h\dot q_i+(\mu^2+\lambda_i/a^2)q_i=0,
+\qquad h=\dot a/a.
+$$
+
+The benchmark starts with zero velocities and equal mode energies:
+
+$$
+q_i(0)=\left[\frac{2\pi^2\Lambda}{\mu^2+\lambda_i H^2}\right]^{1/2}.
+$$
+
+Its mean density is $\varepsilon^2\Lambda$. Relative phase and mode sharing are explicit initial
+data. Their inheritance selection is open.
+
+**Metric response from the same stress.** Put $C=2\sqrt{6}/\pi^2$ and
+
+$$
+W=\frac{C}{3}(-4X_2X_4,2X_1X_4,0,2X_1X_2),
+\qquad J=\dot q_1q_2-q_1\dot q_2.
+$$
+
+$W$ is tangent, divergence-free and has rough Laplacian $-7W$. All six
+integrals against rotation Killing fields vanish. Direct scalar evolution
+and the transverse ADM constraint give
+
+$$
+\dot J+3hJ=\frac{5q_1q_2}{a^2},\qquad
+g_{ti}^{T}=\varepsilon^2a^2\beta W_i,\qquad
+\beta=\frac{\kappa J}{5}.
+$$
+
+The transverse spatial stress also yields
+$\partial_t\beta+3h\beta=\kappa q_1q_2/a^2$, so the response satisfies evolution
+compatibility. $J$ initially vanishes and then grows. Removing one mode,
+or using the equal-eigenvalue control, removes this source. Local
+circulation therefore does not require nonzero total angular momentum.
+It also does not create an internal scalar charge or a baryon number.
+
+**Admissible global initial data.** With $K_{ij}=0$ and zero field momenta,
+write $h_{ij}=a_0^2\Psi^4\gamma_{ij}$, $\Psi=1+\varepsilon^2u+O(\varepsilon^4)$.
+The scalar Hamiltonian constraint is
+
+$$
+(\Delta+3)u=-\frac{\kappa}{8}
+\left(|D\chi_1|^2+\mu^2a_0^2\chi_1^2\right).
+$$
+
+The owner gives its exact polynomial solution and mean $u=-1/4$. Paired
+coordinate flips and an $X_3$ reflection preserve the source but exclude
+every $l=1$ kernel coordinate. On that invariant function space the full
+nonlinear conformal constraint has an invertible derivative. The
+implicit-function theorem supplies positive initial data for sufficiently
+small $\varepsilon$. Its existence radius and full nonlinear evolution have
+not been numerically enclosed. Compact-background consistency is a real
+requirement; [Losic and Unruh](https://arxiv.org/html/gr-qc/0604122v2),
+section III through equation 44, give its integral form in a related
+massless calculation. Their quantum-state conclusion is not used here.
+
+**An offset parameter with a physical readout.** Unwrap the first mode's
+phase $\Theta=\operatorname{atan2}(-p_1,w_{\rm ref}q_1)$,
+$w_{\rm ref}^2=\mu^2+3H^2$. Its speed is
+
+$$
+\dot\Theta=
+\frac{w_{\rm ref}[p_1^2+3h q_1p_1+(\mu^2+3/a^2)q_1^2]}
+{w_{\rm ref}^2q_1^2+p_1^2}>0.
+$$
+
+The conservative positivity margin $\mu^2-9H^2/4$ is 613.362284121.
+Evolving $dy/d\Theta=(dy/dt)/(\partial_t\Theta)$ and
+$dt/d\Theta=1/(\partial_t\Theta)$ recovers
+the proper-duration solution within 1.6e-11 in the sampled states.
+One candidate event advances $\Theta$ by $2\pi\alpha$. The event labels depend
+on this synchronization rule; the light and flux coefficients below do
+not. This establishes a field-based evolution parameter, not a selected
+cosmic event count or an ultimate time-origin law.
+
+**A differential light observable.** Two negligible test guides trace
+equal-radius circles $X=(R\cos\phi,R\sin\phi,c_3,b)$.
+Choose $B>0$ with $B^2+R^2=1$.
+The two $(c_3,b)$ pairs are $(0,B)$ and
+$(B\sin\alpha_{\rm det},B\cos\alpha_{\rm det})$,
+with $\alpha_{\rm det}=\pi/6$. Observers held at those background labels average
+opposite-direction return proper-time differences over emission azimuth.
+For the background return time $\eta(T)=2\pi R$, their differential record is
+
+$$
+\frac{\mathcal D}{\varepsilon^2}=
+2a(T)CBR(1-\cos\alpha_{\rm det})\int_0^T\beta(t)dt.
+$$
+
+The evolving flight is essential: its first variation satisfies
+$d(\delta t/a)/d\xi=\pm a\beta W_\phi$. Along the background ray,
+$d\xi=dt/(aR)$, so the scale factor cancels inside the integral and
+$a(T)$ converts the receiving interval. Freezing the metric at arrival
+would overestimate this benchmark by 28.53 percent.
+
+Orientation-even lapse, scalar spatial and tensor terms cancel in this
+phase average. A gradient shift has zero azimuthal mean. A common rigid
+rotation cancels between equal-radius rings. Apparatus worldlines must
+transform with the metric when coordinates change. These guides are
+supplied test apparatus, not claimed free circular photon orbits.
+
+| Guide radius | H D / epsilon^2 | D/T per initial energy fraction |
+| --- | --- | --- |
+| 1/8 | 1.786000559262e-5 | 2.026383120126e-5 |
+| 1/16 | 2.249302269630e-6 | 5.578630546439e-6 |
+
+The larger loop returns at $T=\operatorname{asinh}(1)/H$. The two records can be compared
+causally by a midpoint observer: the remaining background conformal
+margin is .398270944430. Independent field integrators differ in the
+coefficient by 7.5e-14 relatively. Direct null integration of the vector
+metric, with amplitude and common-rotation controls, agrees within
+1.3e-8 relatively. This is a numerical control of the quadratic term,
+not a finite-amplitude error enclosure for all omitted metric sectors.
+
+**Energy crosses the same smooth horizon.** The north observer's future
+horizon has $\chi_H=\pi/2-\arctan(\sinh Ht)$ and areal radius $1/H$. Set
+$u=\tanh Ht$, $v=\operatorname{sech} Ht$.
+Its generator is $k=\partial_t-a^{-1}\partial_\chi$;
+the normalized static Killing vector equals $u k$ there. The angular
+integral of the scalar null stress is
+
+$$
+\frac{1}{\varepsilon^2}\int T_{kk}dA
+=\frac{4\pi}{3H^2}(A_1^2+A_2^2),
+$$
+
+$$
+A_1=\frac{\sqrt{2}}{\pi}v(p_1-Hu q_1),\qquad
+A_2=\frac{\sqrt{12}}{\pi}v[u p_2+H(1-2u^2)q_2].
+$$
+
+For $E_K=\int T(n,K)dV$, conservation gives
+$dE_K/dt=-u\int T_{kk}dA$. At the finite endpoint $t=4.364851930252$,
+the initial, retained and outward Killing energies, each divided by
+$\varepsilon^2$, are 50.266244488798, 5.793935277813 and 44.472309210980.
+Thus 88.4735067504 percent leaves this observer's static patch through
+its horizon. Independent volume and null-flux integrals balance to
+8.7e-14 relatively, with a flux quadrature estimate below 1.5e-12 of
+the initial energy. The horizon shift affects this quadratic matter
+flux only at higher order.
+
+![The scalar, smooth parent, regional exchange and light response](figures/nsc-atlas-parent-circulation.png)
+
+This is a concrete regional depletion and continuation calculation.
+The energy continues on the same parent geometry. No material membrane,
+daughter universe, closed recycling, SI ruler or nonzero particle
+asymmetry has been supplied by the calculation. Lambda remains the
+retained vacuum input; the energy transfer does not derive it. The next
+physical connection is a concentration and null-expansion calculation
+that distinguishes this existing observer horizon from a newly formed
+trapped region under the same source law.
+
 ## VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
@@ -12929,7 +13162,7 @@ Each calculation retains its own domain; arrows do not declare questions solved.
 <!-- nsc-source-catalog:start -->
 ## Appendix C. Complete arXiv source route index
 
-The index contains 318 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
+The index contains 319 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
 
 A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
 
@@ -13015,6 +13248,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Fixed-worldline images and proper arrival variation, 24 October 2026 | [2512.23800](https://arxiv.org/abs/2512.23800v2), [gr-qc/9810017](https://arxiv.org/abs/gr-qc/9810017) |
 | Exact lens maps and scalar lens precedent, 23 October 2026 | [astro-ph/9403056](https://arxiv.org/abs/astro-ph/9403056), [astro-ph/9807039](https://arxiv.org/abs/astro-ph/9807039), [gr-qc/0001037 †](https://arxiv.org/abs/gr-qc/0001037) |
 | Lifetime and curvature — 29 October 2026 | [gr-qc/0311040](https://arxiv.org/abs/gr-qc/0311040), [hep-ph/9411206](https://arxiv.org/abs/hep-ph/9411206) |
+| Smooth-parent quadratic response and global constraints, 30 October 2026 | [gr-qc/0604122](https://arxiv.org/abs/gr-qc/0604122v2) |
 | Conserved structure and a reference exterior, 23 October 2026 | [gr-qc/0610045](https://arxiv.org/abs/gr-qc/0610045) |
 | Scalar mass, vacuum and supply scales, 24 October 2026 | [gr-qc/9710089](https://arxiv.org/abs/gr-qc/9710089) |
 | Physical normalization from internal volume — 28 October 2026 | [hep-ph/9907447](https://arxiv.org/abs/hep-ph/9907447v2), [hep-th/0004134](https://arxiv.org/abs/hep-th/0004134) |

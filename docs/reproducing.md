@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Smooth-parent circulation and regional energy transfer
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_circulation.py --output .build/parent-circulation-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_circulation.py
+python scripts/run_python.py scripts/plot_nsc_atlas_parent_circulation.py
+```
+
+The [owner](nsc-atlas-parent-circulation.md) fixes the coherent benchmark,
+small-amplitude scope and observer protocol. Its producer takes about five
+seconds here; vectorized light propagation handles 32 rays together. The
+compact summary is retained and full trajectories regenerate on demand.
+
 ## One-seed offset generator
 
 ```powershell

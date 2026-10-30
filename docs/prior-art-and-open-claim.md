@@ -1,5 +1,23 @@
 # Prior art and admission of new research
 
+## Generated space, inherited field and smooth-horizon exchange, 30 October 2026
+
+The [new connection](nsc-atlas-parent-circulation.md) uses the existing
+canonical scalar on the generated closed parent. A nonisometry check
+prevents the drawing recurrence from being silently identified with
+physical propagation. Two normalized spatial harmonics, a declared coherent
+preparation and the ADM constraint yield a compensated vector response.
+An exact conformal corrector and a symmetry-restricted implicit-function
+argument address the compact initial-data obstruction. The same field
+gives both a differential guided-light record and observer-patch energy
+depletion balanced by null flux. Bardeen supplies perturbative context;
+Losic--Unruh section III motivates the integral check, with its massless
+quantum conclusion outside this classical candidate's scope. The finite
+producer budget is 180 seconds, with phase/proper, independent-integrator,
+null-ray and volume/flux checks. No preparation parameter is fitted. This
+closes the quadratic field-to-observer bridge; source selection, higher
+orders and formation of a daughter remain separate physical connections.
+
 ## Fixed-parent shared ruler and inherited SI scale audit, 28 October 2026
 
 The [method owner](nsc-atlas-shared-ruler.md) fixes the 485b3b9 source and

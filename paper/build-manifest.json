@@ -1,10 +1,10 @@
 {
-  "bytes": 17369180,
+  "bytes": 17720050,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "f43ea4274390d754c1d21f7eb0d679d4b4ce555e7cce960cf0b7e2e8656f68fd",
+  "metadata_sha256": "54388259f8d5b9d4b7701eebabb0d117ae1f8abdbd4d5844f2948dd39e2d7b2c",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 214,
-  "pdf_sha256": "982b397be82c392cf4bd9a5507cdb96ac0e342dc7db49d9e2bf369b58d8e624c",
+  "pages": 217,
+  "pdf_sha256": "01bd153f68212905b64a097dcb142a117004db38fd736d4063cd77ca03aaa02c",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -190,6 +190,10 @@
     {
       "path": "paper/figures/nsc-atlas-offset-generator.png",
       "sha256": "f004c5efc4b5edd8dbd1665972d48a1982c9c681eb87ccd42eda0a6b9def44c8"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-parent-circulation.png",
+      "sha256": "756ae62da97f2c2448635801f98fad5061a6c87c258f1c540f61eedd60176e7a"
     },
     {
       "path": "paper/figures/nsc-atlas-pen-geometry.png",
@@ -788,6 +792,10 @@
       "sha256": "5d9f4cffc0036b2efe7c130e8e06ec5e25856ac2179473358cfed2fb62ae0bb3"
     },
     {
+      "path": "results/summaries/nsc-atlas-parent-circulation-v1.json",
+      "sha256": "f3979a79389fc855c527a22b38fe4304b8cbdce1c42a250a5daa52a0334e263c"
+    },
+    {
       "path": "results/summaries/nsc-atlas-parent-clocks-v1.json",
       "sha256": "b50e1c0f4430c2f7fc93147947b3eb337c792815091f1d9adcdc2af144d4457a"
     },
@@ -993,6 +1001,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "fd40fd51f20eacb062dd97ac509ac12548eeb0a3aa44b002464161c70f8260d4",
-  "version": "working-2026-10-30.9"
+  "source_sha256": "012d99f79c820970e7010a4f016fd8d8e21881d73e52f03f9f6a82b7b91d73df",
+  "version": "working-2026-10-30.10"
 }

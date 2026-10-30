@@ -1,0 +1,170 @@
+{
+  "background": {
+    "H": 0.2714056154003984,
+    "SI_ruler_selected": false,
+    "finite_proper_endpoint": 4.364851930251994,
+    "kappa": 1.0,
+    "mass_squared": 613.5280213887946,
+    "offset": 0.057358647050444134,
+    "phase_passes": 300,
+    "spatial_geometry": "Smooth round S3; time-symmetric inherited late-vacuum slice",
+    "vacuum": 0.22098302421260696
+  },
+  "controls": {
+    "closed_parent_constraint_max_residual": 4.440892098500626e-15,
+    "energy_work_relative_residual": 8.56717456306605e-14,
+    "equal_eigenvalue_max_current": 0.0,
+    "independent_integrator_max_state_difference": 2.462878789799561e-10,
+    "min_phase_speed": 24.4342770282229,
+    "phase_monotonic_sufficient_margin": 613.3622841206352,
+    "phase_proper_max_state_difference": 1.5649925799721132e-11,
+    "phase_rhs_evaluations": 13652,
+    "proper_rhs_evaluations": 10628,
+    "radau_rhs_evaluations": 102963,
+    "wronskian_relative_residual": 3.033276923230613e-12
+  },
+  "direct_null_controls": [
+    {
+      "azimuths": 8,
+      "delay_over_epsilon_squared": 6.580558618018982e-05,
+      "epsilon": 0.1,
+      "frame_amplitude": 0.0,
+      "radius": 0.125,
+      "relative_difference_from_quadratic": 1.1982868031168437e-09,
+      "rhs_evaluations": 5078
+    },
+    {
+      "azimuths": 8,
+      "delay_over_epsilon_squared": 6.580558689073256e-05,
+      "epsilon": 0.05,
+      "frame_amplitude": 0.0,
+      "radius": 0.125,
+      "relative_difference_from_quadratic": 1.1995892057470314e-08,
+      "rhs_evaluations": 5078
+    },
+    {
+      "azimuths": 8,
+      "delay_over_epsilon_squared": 6.580558640223443e-05,
+      "epsilon": 0.05,
+      "frame_amplitude": 0.03,
+      "radius": 0.125,
+      "relative_difference_from_quadratic": 4.5725385700023935e-09,
+      "rhs_evaluations": 5078
+    }
+  ],
+  "elapsed_seconds": 4.932333999982802,
+  "exact_relations": {
+    "W_norm_squared": 0.5403796460924681,
+    "baryon_asymmetry_prediction": null,
+    "current": "J=p1*q2-q1*p2; Jdot+3hJ=5q1q2/a^2",
+    "scalar_internal_charge": 0,
+    "total_rotation_charges": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "vector_constraint_eigenvalue": -5,
+    "vector_eigenvalue": -7,
+    "vector_response": "beta=kappa*J/5"
+  },
+  "generator": {
+    "drawing_update_is_round_isometry": false,
+    "first_distance_square_defect": 0.029903212671756173,
+    "physical_phase_synchronization": "One candidate event advances the first mode phase by 2*pi*alpha.",
+    "physical_time_origin_proved": false
+  },
+  "horizon_exchange": {
+    "depleted_initial_patch_fraction": 0.8847350675042287,
+    "energy_balance_relative_residual": 8.679248752190545e-14,
+    "final_Killing_energy_over_epsilon_squared": 5.793935277812825,
+    "flux_quadrature_error_over_initial_energy": 1.4839166536218352e-12,
+    "horizon_areal_radius": 3.6845221441889593,
+    "horizon_shell_tension": 0,
+    "initial_Killing_energy_over_epsilon_squared": 50.26624448879761,
+    "minimum_sampled_null_flux": 0.0005285306623107071,
+    "outward_Killing_energy_over_epsilon_squared": 44.47230921098042,
+    "region_interpretation": "Energy leaves one observer static patch and continues on the same smooth parent. A new child is not constructed.",
+    "volume_quadrature_relative_spread": 8.658045375760111e-16
+  },
+  "initial_constraint": {
+    "absolute_u_upper_bound": 1.1244817310472845,
+    "basis": [
+      "1",
+      "X1^2",
+      "X2^2+X4^2",
+      "X2^2*X4^2",
+      "X1*X2*X4"
+    ],
+    "coefficients": [
+      -0.4284942987373659,
+      0.29985597824346844,
+      0.17139772813237408,
+      0.4279545626474823,
+      0.6118214100989701
+    ],
+    "mean_u": -0.24999999999999997,
+    "scope": "Quadratic corrector. Symmetry-restricted IFT gives an exact local data branch, without an amplitude bound."
+  },
+  "light_comparisons": [
+    {
+      "H_delay_over_epsilon_squared": 1.786000559261696e-05,
+      "common_comparison_conformal_margin": 0.3982709444302335,
+      "delay_over_epsilon_squared": 6.580558610133585e-05,
+      "fractional_delay_over_initial_energy_fraction": 2.026383120126443e-05,
+      "independent_integrator_relative_spread": 7.438494264988549e-14,
+      "integral_beta": 0.0007656282754925793,
+      "offset_passes_at_return": 223.20626611728076,
+      "radius": 0.125,
+      "return_phase_readout": 80.44242414937958,
+      "return_proper": 3.2474404986767604,
+      "separation": 0.5235987755982988
+    },
+    {
+      "H_delay_over_epsilon_squared": 2.2493022696299023e-06,
+      "common_comparison_conformal_margin": 0.8537570955005317,
+      "delay_over_epsilon_squared": 8.28760402142586e-06,
+      "fractional_delay_over_initial_energy_fraction": 5.578630546438673e-06,
+      "independent_integrator_relative_spread": 3.9745984281580604e-14,
+      "integral_beta": 0.00025048095737636316,
+      "offset_passes_at_return": 102.1182880722339,
+      "radius": 0.0625,
+      "return_phase_readout": 36.80292128626395,
+      "return_proper": 1.4855982937813585,
+      "separation": 0.5235987755982988
+    }
+  ],
+  "no_observational_fit": true,
+  "preparation": {
+    "field": "One existing real canonical scalar, two coherent spatial harmonics",
+    "harmonic_eigenvalues": [
+      3,
+      8
+    ],
+    "initial_mean_energy_over_vacuum": "epsilon^2",
+    "initial_q": [
+      0.08430414468210529,
+      0.08427886099633068
+    ],
+    "initial_velocities": [
+      0,
+      0
+    ],
+    "unique_inheritance_selection": false
+  },
+  "schema": "nsc-atlas-parent-circulation-v1",
+  "scope": [
+    "Leading epsilon^2 vector Einstein-scalar response on a smooth evolving closed parent",
+    "Symmetry-restricted exact small-amplitude constraint-data branch; explicit quadratic corrector",
+    "Phase-averaged differential test-guide proper-time record, in model units",
+    "Fourth-order metric response, finite-amplitude error bound, selected preparation and child formation remain open"
+  ],
+  "source_sha256": {
+    "scripts/check_nsc_atlas_parent_circulation.py": "d612b8a30d1fcf930df8154d039d58fb335739127d43f26fe2cc8ce1aa803dbd",
+    "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+    "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408"
+  }
+}

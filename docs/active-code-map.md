@@ -1,5 +1,11 @@
 # Active code and evidence map
 
+`nsc_atlas_parent_circulation.py` evolves the existing scalar's two spatial
+harmonics on the smooth closed parent, with phase/proper controls, the
+quadratic conformal corrector, compensated vector response, guided null
+comparisons and independent horizon volume/flux integrals. Its tests check
+the spherical identities, constraints, symmetries and observable controls.
+
 `nsc_atlas_offset_generator.py` evaluates the one-offset history at high
 precision, its Gram distance kernel, finite covering errors and metric
 measure. Tests check the recurrence, induced metric, rational comparison,

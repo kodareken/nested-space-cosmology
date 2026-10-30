@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **318 distinct arXiv works**: 98 are cited in the main argument and 220 are retained in the reading library only.
+This navigation index contains **319 distinct arXiv works**: 99 are cited in the main argument and 220 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -255,6 +255,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [gr-qc/0508093](https://arxiv.org/abs/gr-qc/0508093v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 11 |
 | [gr-qc/0511109](https://arxiv.org/abs/gr-qc/0511109) | Studies | Bronnikov and Fabris: regular phantom black holes, the fixed external two-room comparison, not a replacement for their source domain. | Library only |
 | [gr-qc/0603031](https://arxiv.org/abs/gr-qc/0603031v1) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
+| [gr-qc/0604122](https://arxiv.org/abs/gr-qc/0604122v2) | Smooth-parent quadratic response and global constraints, 30 October 2026 | compact de Sitter integral consistency of the leading matter backreaction. Read the abstract, section II through equation 7, and section III through equation 44. The source's massless quantum-state analysis and anomaly arguments are not reproduced or applied to the present massive coherent ... | 15.13 |
 | [gr-qc/0605031](https://arxiv.org/abs/gr-qc/0605031) | Studies | Dolan, Doran and Lasenby: section IV.2 and equation 72, the Schwarzschild Painlevé–Gullstrand connection and neutral flux control. | Library only |
 | [gr-qc/0606009](https://arxiv.org/abs/gr-qc/0606009v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [gr-qc/0607039](https://arxiv.org/abs/gr-qc/0607039) | Studies | Archived: Ashtekar, Pawlowski and Singh, improved dynamics for the quantum nature of the big bang. | Library only |

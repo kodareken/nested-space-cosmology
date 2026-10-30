@@ -18,6 +18,14 @@ starting a derivation.
 
 ## Current execution priority — 30 October 2026
 
+The [smooth-parent field and observer connection](nsc-atlas-parent-circulation.md)
+now carries the generated spatial geometry into the retained scalar action.
+It derives compensated circulation, admissible global initial data,
+phase-parametrized evolution, a differential light record and conserved
+energy flux through a smooth observer horizon. A new daughter has not been
+formed. The next physical link is concentration and null expansion under
+the same action; metric/state selection and the absolute scale remain open.
+
 Active target: evaluate the spectral band, conjugate-sector asymmetry and
 inside/outside component split from the existing atlas equations, with no
 SI anchor or target-selected parameters. Douglas's
