@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+## Finite circulation and gravitational interfaces
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_flow_evolution.py tests/test_nsc_atlas_flow_gravity.py
+python scripts/run_python.py scripts/check_nsc_atlas_flow_evolution.py --output .build/flow-evolution-reproduced.json
+```
+
+The producer runs exactly three spatial resolutions and one time-step
+control, with two processes and four FFT workers per process. It saves
+compact diagnostics, not field arrays. The domain and error scope are in
+[the owner](nsc-atlas-flow-gravity.md).
+
 ## Inherited harmonic charge and horizon state
 
 ```powershell

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "04acbeb808004f011d78dae595570709795478d1",
+  "current_receipt_commit_parent": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 295832,
-      "change": "Derive internal harmonic charge and conditional horizon-state inheritance; authenticate the earlier requested atlas prose successor without changing retained scientific evidence.",
-      "changed_from_commit": "04acbeb808004f011d78dae595570709795478d1",
+      "bytes": 296119,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "f127c9b248b4841269b1ffff80149d647250361041f22f7b21ff62e6e436cb85"
+      "sha256": "94fc718c3bfd8930b870cc50948d7c6a559049cf11d5c7c769cbb7de14753f05"
     },
     {
       "bytes": 152437,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 480513,
-      "change": "Derive internal harmonic charge and conditional horizon-state inheritance; authenticate the earlier requested atlas prose successor without changing retained scientific evidence.",
-      "changed_from_commit": "04acbeb808004f011d78dae595570709795478d1",
+      "bytes": 481094,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4b7c39941e1964fa8e23f2a09d452f77ec88f152596044eb94056bbbb1f838a6"
+      "sha256": "9a19bae8df0828acc29269db9e68e3d04343f7450c2cec9e1eec1656c506f9e9"
     },
     {
       "bytes": 173938,
@@ -10818,6 +10818,14 @@
       "path": "docs/nsc-atlas-flow-dictionary.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "08b545a5f92608573457a41fb4ade1f0bbc14b0d8af5188e298bec55fe2f63b9"
+    },
+    {
+      "bytes": 12162,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
+      "path": "docs/nsc-atlas-flow-gravity.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6894365c5ffc67a50cf8641dfd0b5fcb445c155f9ab1cd20e657ef9e7d9b4e94"
     },
     {
       "bytes": 12252,
@@ -12150,12 +12158,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 243620,
-      "change": "Derive internal harmonic charge and conditional horizon-state inheritance; authenticate the earlier requested atlas prose successor without changing retained scientific evidence.",
-      "changed_from_commit": "04acbeb808004f011d78dae595570709795478d1",
+      "bytes": 244182,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7377d51b21ffa1a092db182d5945e8d34b96580779a8c053702e351355974c38"
+      "sha256": "4b58bd862ca582a1d32e91599d8967e66f081f1f3b6a69336a9a144ac3014f52"
     },
     {
       "bytes": 54810,
@@ -30998,6 +31006,14 @@
       "sha256": "c9f24a5073d28ceac899f5d31d03c418d3ecfdd450ec8390dd1cc5dedbe5416c"
     },
     {
+      "bytes": 23405,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
+      "path": "results/summaries/nsc-atlas-flow-evolution-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "91f0e403be97a991a0708b55208ea25f659c6d942b5667ebf9a993def1d06fd2"
+    },
+    {
       "bytes": 8988,
       "change": "Test flux selection and scalar energy conversion; repair historical prediction-register fixtures.",
       "changed_from_commit": "69517ad3220fe8e60bf8aa421f557f749f3ff07d",
@@ -31957,6 +31973,14 @@
       "path": "scripts/check_nsc_atlas_fixed_history_endpoint.py",
       "retention_reason": "Exact scalar-boundary channel attribution and bounded endpoint diagnostics.",
       "sha256": "4057c89fa075d9dcf847f3c4987bcf0cddec8d6b97d5cc5bee2e68115649a10a"
+    },
+    {
+      "bytes": 3337,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
+      "path": "scripts/check_nsc_atlas_flow_evolution.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4f8176364a24e13356f3cc09bf0d9cbe3c553064a7240e4846cc0ffca29a6521"
     },
     {
       "bytes": 8258,
@@ -36461,6 +36485,22 @@
       "path": "src/recursive_horizons/nsc_atlas_fixed_cap_time.py",
       "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
       "sha256": "936c9cbeb68a11054e53c6766c0e121100a035f67bb9bbde7b7e67c671a9595b"
+    },
+    {
+      "bytes": 5729,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
+      "path": "src/recursive_horizons/nsc_atlas_flow_evolution.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4617e5fc522af345b9b3a6b6c459e9520f25a86a2ae84b772a4927fa1c05a8ec"
+    },
+    {
+      "bytes": 4953,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
+      "path": "src/recursive_horizons/nsc_atlas_flow_gravity.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1d89b1772aee2a397d35a79459127dc1dad44d663df5c1910765ad0711d2831b"
     },
     {
       "bytes": 8107,
@@ -41091,6 +41131,22 @@
       "path": "tests/test_nsc_atlas_flow_dictionary.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "fd81c7a0d9e7f95eb250deebe43338801955f809dccefe4be9476209b5a9be49"
+    },
+    {
+      "bytes": 1482,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
+      "path": "tests/test_nsc_atlas_flow_evolution.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ac3e308afe908140d7b3a09162a961afb26c2f38a455c3b872f98e8741fc61c1"
+    },
+    {
+      "bytes": 1812,
+      "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
+      "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
+      "path": "tests/test_nsc_atlas_flow_gravity.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0264ea3089383d6de335484ba98c6bc02cc4aa6835adce7df9b006e163caf838"
     },
     {
       "bytes": 4252,

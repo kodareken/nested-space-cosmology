@@ -1,5 +1,10 @@
 # Active code and evidence map
 
+`nsc_atlas_flow_evolution.py` continues the compact vortex on a specified
+periodic domain with a dealiased Fourier solver and finite budgets.
+`nsc_atlas_flow_gravity.py` calculates its leading boundary/curvature
+readouts and the separately scoped rotating-horizon scalar flux identity.
+
 `nsc_atlas_inherited_charge.py` derives the round internal-sphere spectrum,
 charged harmonic mass and conditional state readouts. Independent tests
 reduce the warped action and covariant horizon equation, check the proper

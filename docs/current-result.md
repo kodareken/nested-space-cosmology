@@ -1,5 +1,14 @@
 # What the calculations show
 
+The [finite vortex/gravity connection](nsc-atlas-flow-gravity.md) evolves
+the retained compact mode on a declared periodic domain through t=.05.
+Opposite generated circulation bands survive three spatial resolutions and
+a time-step check; the energy-budget residual is at most 1.81e-9. The same
+state fixes nonzero boundary-energy and leading curvature coefficients in
+the published five-dimensional fluid/gravity expansion. A fourth-order
+boundary work balance remains to be completed before its decreasing kinetic
+energy is interpreted as a closed gravitational energy account.
+
 The [inherited internal-charge calculation](nsc-atlas-inherited-charge.md)
 restores first harmonics of the existing higher-dimensional real scalar on
 an explicitly chosen round S12. The retained curvature fixes a0^2=44/5;

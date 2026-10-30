@@ -1,0 +1,733 @@
+{
+  "algorithm": "Strict 2/3-dealiased rotational Fourier Galerkin, orthogonal incompressible projection, SSPRK3; cubic periodic circle sampling.",
+  "budget": {
+    "CPU_seconds_per_case": 300,
+    "FFT_workers_each": 4,
+    "cases_fixed_before_run": [
+      [
+        64,
+        0.001,
+        0.05
+      ],
+      [
+        96,
+        0.001,
+        0.05
+      ],
+      [
+        128,
+        0.001,
+        0.05
+      ],
+      [
+        128,
+        0.0005,
+        0.05
+      ]
+    ],
+    "max_parallel_processes": 2,
+    "no_grid_arrays_stored": true
+  },
+  "cases": [
+    {
+      "FFT_workers": 4,
+      "cpu_seconds": 11.640625,
+      "dt": 0.001,
+      "endpoint": 0.05,
+      "energy_balance_residual": -1.7823586773157984e-09,
+      "exact_initial_mean_rate": [
+        -6.4906065418441266,
+        2.3366183550638855
+      ],
+      "final": {
+        "dissipation": 1.605113441706563,
+        "divergence_rms": 1.6643183365031154e-15,
+        "energy": 5.377353452503133,
+        "max_speed": 2.6250742135429554,
+        "mean_theta": [
+          -0.3297636919203771,
+          0.12439265443340738
+        ],
+        "t": 0.05
+      },
+      "generated_mean": [
+        -0.3449600958284411,
+        0.10598034284174132
+      ],
+      "grid_arrays_stored": false,
+      "history": [
+        {
+          "dissipation": 1.6481337065466997,
+          "divergence_rms": 1.7192135762157285e-16,
+          "energy": 5.458696386876526,
+          "max_speed": 2.64838713780271,
+          "mean_theta": [
+            0.015196403908064024,
+            0.018412311591666064
+          ],
+          "t": 0.0
+        },
+        {
+          "dissipation": 1.6397582808821713,
+          "divergence_rms": 5.998987605217323e-16,
+          "energy": 5.442256828558149,
+          "max_speed": 2.6468197718160456,
+          "mean_theta": [
+            -0.0548099655185519,
+            0.04015381437444074
+          ],
+          "t": 0.01
+        },
+        {
+          "dissipation": 1.6312658636023836,
+          "divergence_rms": 8.533133221178126e-16,
+          "energy": 5.425901610857782,
+          "max_speed": 2.6419394918934,
+          "mean_theta": [
+            -0.1244099116840936,
+            0.0616280743503795
+          ],
+          "t": 0.02
+        },
+        {
+          "dissipation": 1.6226587042146556,
+          "divergence_rms": 1.1124234805114678e-15,
+          "energy": 5.40963189327249,
+          "max_speed": 2.6345540857730185,
+          "mean_theta": [
+            -0.19350755860259689,
+            0.0828290496563176
+          ],
+          "t": 0.03
+        },
+        {
+          "dissipation": 1.6139399585369347,
+          "divergence_rms": 1.3845958326999027e-15,
+          "energy": 5.393448808080797,
+          "max_speed": 2.625447304187918,
+          "mean_theta": [
+            -0.26199859261549535,
+            0.10375187875849817
+          ],
+          "t": 0.04
+        },
+        {
+          "dissipation": 1.605113441706563,
+          "divergence_rms": 1.6643183365031154e-15,
+          "energy": 5.377353452503133,
+          "max_speed": 2.6250742135429554,
+          "mean_theta": [
+            -0.3297636919203771,
+            0.12439265443340738
+          ],
+          "t": 0.05
+        }
+      ],
+      "initial": {
+        "dissipation": 1.6481337065466997,
+        "divergence_rms": 1.7192135762157285e-16,
+        "energy": 5.458696386876526,
+        "max_speed": 2.64838713780271,
+        "mean_theta": [
+          0.015196403908064024,
+          0.018412311591666064
+        ]
+      },
+      "initial_energy_error": 0.01784537992520363,
+      "initial_loss_error": 0.07446755225570789,
+      "initial_mean_rate": [
+        -7.017837786779603,
+        2.1872665812145033
+      ],
+      "initial_rate_error": [
+        0.5272312449354768,
+        0.14935177384938214
+      ],
+      "integrated_viscous_loss": 0.08134293259103445,
+      "max_advective_step_number": 0.1512252006099188,
+      "n": 64,
+      "pressure_rms": 0.17022835386520718,
+      "steps": 50,
+      "wall_seconds": 11.784594199998537
+    },
+    {
+      "FFT_workers": 4,
+      "cpu_seconds": 39.53125,
+      "dt": 0.001,
+      "endpoint": 0.05,
+      "energy_balance_residual": -1.8106653260074879e-09,
+      "exact_initial_mean_rate": [
+        -6.4906065418441266,
+        2.3366183550638855
+      ],
+      "final": {
+        "dissipation": 1.646364354669399,
+        "divergence_rms": 1.568126353971866e-15,
+        "energy": 5.390039517204749,
+        "max_speed": 2.671731463455115,
+        "mean_theta": [
+          -0.3213243565831078,
+          0.11073385470425325
+        ],
+        "t": 0.05
+      },
+      "generated_mean": [
+        -0.3145250255486488,
+        0.11972763943334991
+      ],
+      "grid_arrays_stored": false,
+      "history": [
+        {
+          "dissipation": 1.6978883784497578,
+          "divergence_rms": 1.869887535831437e-16,
+          "energy": 5.473650812182893,
+          "max_speed": 2.6488958314693125,
+          "mean_theta": [
+            -0.006799331034459034,
+            -0.008993784729096664
+          ],
+          "t": 0.0
+        },
+        {
+          "dissipation": 1.687677560741283,
+          "divergence_rms": 6.176888976235358e-16,
+          "energy": 5.456722945925788,
+          "max_speed": 2.65331905515252,
+          "mean_theta": [
+            -0.06942047339590099,
+            0.014744867617681998
+          ],
+          "t": 0.01
+        },
+        {
+          "dissipation": 1.6774216012787062,
+          "divergence_rms": 8.809395847041282e-16,
+          "energy": 5.4398974110843765,
+          "max_speed": 2.661370528454936,
+          "mean_theta": [
+            -0.13224356610454924,
+            0.03865758822245721
+          ],
+          "t": 0.02
+        },
+        {
+          "dissipation": 1.6671181527871872,
+          "divergence_rms": 1.1548984666130375e-15,
+          "energy": 5.423174671733267,
+          "max_speed": 2.6669174786469605,
+          "mean_theta": [
+            -0.1952255849771431,
+            0.06267810437318272
+          ],
+          "t": 0.03
+        },
+        {
+          "dissipation": 1.6567659026388062,
+          "divergence_rms": 1.3594075408076693e-15,
+          "energy": 5.406555210077118,
+          "max_speed": 2.6705752799957585,
+          "mean_theta": [
+            -0.2582877567326867,
+            0.08673083418520683
+          ],
+          "t": 0.04
+        },
+        {
+          "dissipation": 1.646364354669399,
+          "divergence_rms": 1.568126353971866e-15,
+          "energy": 5.390039517204749,
+          "max_speed": 2.671731463455115,
+          "mean_theta": [
+            -0.3213243565831078,
+            0.11073385470425325
+          ],
+          "t": 0.05
+        }
+      ],
+      "initial": {
+        "dissipation": 1.6978883784497578,
+        "divergence_rms": 1.869887535831437e-16,
+        "energy": 5.473650812182893,
+        "max_speed": 2.6488958314693125,
+        "mean_theta": [
+          -0.006799331034459034,
+          -0.008993784729096664
+        ]
+      },
+      "initial_energy_error": 0.0028909546188371493,
+      "initial_loss_error": 0.024712880352649735,
+      "initial_mean_rate": [
+        -6.251636319699834,
+        2.3632249534186096
+      ],
+      "initial_rate_error": [
+        0.23897022214429242,
+        0.02660659835472412
+      ],
+      "integrated_viscous_loss": 0.08361129316747824,
+      "max_advective_step_number": 0.22533829458660412,
+      "n": 96,
+      "pressure_rms": 0.17045977597635462,
+      "steps": 50,
+      "wall_seconds": 39.75873590000265
+    },
+    {
+      "FFT_workers": 4,
+      "cpu_seconds": 93.84375,
+      "dt": 0.001,
+      "endpoint": 0.05,
+      "energy_balance_residual": -1.6047301820698578e-09,
+      "exact_initial_mean_rate": [
+        -6.4906065418441266,
+        2.3366183550638855
+      ],
+      "final": {
+        "dissipation": 1.6573316648592396,
+        "divergence_rms": 1.602903007316135e-15,
+        "energy": 5.3917376933731775,
+        "max_speed": 2.639554275551223,
+        "mean_theta": [
+          -0.32086629816754053,
+          0.11709233910569464
+        ],
+        "t": 0.05
+      },
+      "generated_mean": [
+        -0.3202724954907855,
+        0.11367326751132217
+      ],
+      "grid_arrays_stored": false,
+      "history": [
+        {
+          "dissipation": 1.7140616139562985,
+          "divergence_rms": 1.8469003352644335e-16,
+          "energy": 5.4760189485245965,
+          "max_speed": 2.6415756992483397,
+          "mean_theta": [
+            -0.0005938026767550357,
+            0.0034190715943724637
+          ],
+          "t": 0.0
+        },
+        {
+          "dissipation": 1.7026368323539842,
+          "divergence_rms": 6.745773686612998e-16,
+          "energy": 5.458935503225025,
+          "max_speed": 2.6363927745443214,
+          "mean_theta": [
+            -0.06524926247261031,
+            0.026395865070321087
+          ],
+          "t": 0.01
+        },
+        {
+          "dissipation": 1.6912621413998399,
+          "divergence_rms": 9.569611620503837e-16,
+          "energy": 5.441966044716677,
+          "max_speed": 2.6381289197948483,
+          "mean_theta": [
+            -0.12954821673271877,
+            0.049287629641860675
+          ],
+          "t": 0.02
+        },
+        {
+          "dissipation": 1.6799259216621085,
+          "divergence_rms": 1.1677796399285636e-15,
+          "energy": 5.425110131862507,
+          "max_speed": 2.6395831108259618,
+          "mean_theta": [
+            -0.19356741580416226,
+            0.07205614369461469
+          ],
+          "t": 0.03
+        },
+        {
+          "dissipation": 1.6686184458705493,
+          "divergence_rms": 1.4758600320255912e-15,
+          "energy": 5.4083674300310935,
+          "max_speed": 2.64034048932956,
+          "mean_theta": [
+            -0.2573491026358515,
+            0.09466621014521483
+          ],
+          "t": 0.04
+        },
+        {
+          "dissipation": 1.6573316648592396,
+          "divergence_rms": 1.602903007316135e-15,
+          "energy": 5.3917376933731775,
+          "max_speed": 2.639554275551223,
+          "mean_theta": [
+            -0.32086629816754053,
+            0.11709233910569464
+          ],
+          "t": 0.05
+        }
+      ],
+      "initial": {
+        "dissipation": 1.7140616139562985,
+        "divergence_rms": 1.8469003352644335e-16,
+        "energy": 5.4760189485245965,
+        "max_speed": 2.6415756992483397,
+        "mean_theta": [
+          -0.0005938026767550357,
+          0.0034190715943724637
+        ]
+      },
+      "initial_energy_error": 0.0005228182771332968,
+      "initial_loss_error": 0.008539644846109029,
+      "initial_mean_rate": [
+        -6.485853588076845,
+        2.3008204845136353
+      ],
+      "initial_rate_error": [
+        0.004752953767281909,
+        0.03579787055025019
+      ],
+      "integrated_viscous_loss": 0.08428125354668875,
+      "max_advective_step_number": 0.30171001775719264,
+      "n": 128,
+      "pressure_rms": 0.17049563953332988,
+      "steps": 50,
+      "wall_seconds": 94.60613169999851
+    },
+    {
+      "FFT_workers": 4,
+      "cpu_seconds": 165.171875,
+      "dt": 0.0005,
+      "endpoint": 0.05,
+      "energy_balance_residual": -2.0118244570266341e-10,
+      "exact_initial_mean_rate": [
+        -6.4906065418441266,
+        2.3366183550638855
+      ],
+      "final": {
+        "dissipation": 1.6573316678697152,
+        "divergence_rms": 2.917918368409955e-15,
+        "energy": 5.391737694582312,
+        "max_speed": 2.6395543542207474,
+        "mean_theta": [
+          -0.3208662863895204,
+          0.11709233976044472
+        ],
+        "t": 0.05
+      },
+      "generated_mean": [
+        -0.3202724837127654,
+        0.11367326816607226
+      ],
+      "grid_arrays_stored": false,
+      "history": [
+        {
+          "dissipation": 1.7140616139562985,
+          "divergence_rms": 1.8469003352644335e-16,
+          "energy": 5.4760189485245965,
+          "max_speed": 2.6415756992483397,
+          "mean_theta": [
+            -0.0005938026767550357,
+            0.0034190715943724637
+          ],
+          "t": 0.0
+        },
+        {
+          "dissipation": 1.7026368331592703,
+          "divergence_rms": 8.997693645718922e-16,
+          "energy": 5.458935503396427,
+          "max_speed": 2.6363927836151873,
+          "mean_theta": [
+            -0.0652492637463444,
+            0.02639586463731046
+          ],
+          "t": 0.01
+        },
+        {
+          "dissipation": 1.6912621428678967,
+          "divergence_rms": 1.4551168100918874e-15,
+          "energy": 5.441966045077089,
+          "max_speed": 2.6381289532093284,
+          "mean_theta": [
+            -0.1295482159682544,
+            0.049287629763185334
+          ],
+          "t": 0.02
+        },
+        {
+          "dissipation": 1.6799259236901503,
+          "divergence_rms": 1.8988135491284502e-15,
+          "energy": 5.425110132448624,
+          "max_speed": 2.6395830775638687,
+          "mean_theta": [
+            -0.1935674106565991,
+            0.07205614489454482
+          ],
+          "t": 0.03
+        },
+        {
+          "dissipation": 1.668618448403242,
+          "divergence_rms": 2.4448617417634032e-15,
+          "energy": 5.4083674308957,
+          "max_speed": 2.640340510981363,
+          "mean_theta": [
+            -0.25734909319065546,
+            0.09466621157253725
+          ],
+          "t": 0.04
+        },
+        {
+          "dissipation": 1.6573316678697152,
+          "divergence_rms": 2.917918368409955e-15,
+          "energy": 5.391737694582312,
+          "max_speed": 2.6395543542207474,
+          "mean_theta": [
+            -0.3208662863895204,
+            0.11709233976044472
+          ],
+          "t": 0.05
+        }
+      ],
+      "initial": {
+        "dissipation": 1.7140616139562985,
+        "divergence_rms": 1.8469003352644335e-16,
+        "energy": 5.4760189485245965,
+        "max_speed": 2.6415756992483397,
+        "mean_theta": [
+          -0.0005938026767550357,
+          0.0034190715943724637
+        ]
+      },
+      "initial_energy_error": 0.0005228182771332968,
+      "initial_loss_error": 0.008539644846109029,
+      "initial_mean_rate": [
+        -6.485853588076845,
+        2.3008204845136353
+      ],
+      "initial_rate_error": [
+        0.004752953767281909,
+        0.03579787055025019
+      ],
+      "integrated_viscous_loss": 0.08428125374110236,
+      "max_advective_step_number": 0.15085501011566518,
+      "n": 128,
+      "pressure_rms": 0.17049563953394814,
+      "steps": 100,
+      "wall_seconds": 166.48584809999738
+    }
+  ],
+  "domain": "Periodic cube [-2,2)^3, zero force, viscosity=.001, retained mode4 compact preparation, 0<=t<=.05.",
+  "energy_balance_max": 1.8106653260074879e-09,
+  "error_scope": "Refinement/time-step differences are empirical numerical indicators, not rigorous continuum enclosures or a finite-amplitude bound on the gravity expansion.",
+  "final_boundary": {
+    "boundary_energy_slow_time_derivative": -104818.85817588,
+    "integrated_Kretschmann_coefficient": -4971995003.609145,
+    "integrated_boundary_energy_coefficient": 341003.43322130805,
+    "scope": "Slow-coordinate integrals: boundary energy at order epsilon^2, Lorentzian Riemann-squared at leading order epsilon^4. Not a cosmological Lambda."
+  },
+  "gravity": {
+    "dimensional_handoff": {
+      "established": false,
+      "reduced_coordinate": "Areal radius or a generating curve is a reduced description; suppressed angular coordinates remain part of the geometry.",
+      "required": "A regular metric and field transition with conserved flux and declared topology; an actual dimension change needs a different rank/geometry construction."
+    },
+    "hydrodynamic_lift": {
+      "Kretschmann": "K=epsilon^4*(-3|curl_y u|^2/nu^2)+higher orders at finite bulk radius",
+      "averaged_metric_is_a_closed_vacuum_solution": false,
+      "boundary_excess": "rho_BY=epsilon^2*tr(R)/nu^(3/2) for zero mean; momentum density=epsilon*U_i/nu",
+      "bulk_spacetime_dimensions": 5,
+      "cutoff": 0.001,
+      "fluid_spatial_dimensions": 3,
+      "inherited_4D_parent_matched": false,
+      "initial": {
+        "boundary_energy_slow_time_derivative": -108946.86956177563,
+        "integrated_Kretschmann_coefficient": -5167803776.407222,
+        "integrated_boundary_energy_coefficient": 346366.9136827235,
+        "scope": "Slow-coordinate integrals: boundary energy at order epsilon^2, Lorentzian Riemann-squared at leading order epsilon^4. Not a cosmological Lambda."
+      },
+      "interpretation": "A computed gravitational boundary/curvature response to the same finite fluid state. Not an attachment of the 5D vacuum patch to the 4D positive-vacuum cap.",
+      "local_rows": [
+        {
+          "boundary_momentum_slow_time_rate": -6490.606541844127,
+          "covariance": [
+            [
+              0.45637077247341507,
+              0.9127415449468301,
+              0.45637077247341507
+            ],
+            [
+              0.9127415449468301,
+              2.0283145443262893,
+              1.0521881698692626
+            ],
+            [
+              0.45637077247341507,
+              1.0521881698692626,
+              0.5522403271075873
+            ]
+          ],
+          "offdiagonal_boundary_stress_coefficient": 28863.421970929336,
+          "proper_boundary_energy_coefficient": 96036.021193205,
+          "radius": 0.75
+        },
+        {
+          "boundary_momentum_slow_time_rate": -0.0,
+          "covariance": [
+            [
+              0.5,
+              1.0,
+              0.5
+            ],
+            [
+              1.0,
+              2.0,
+              1.0
+            ],
+            [
+              0.5,
+              1.0,
+              0.5078125
+            ]
+          ],
+          "offdiagonal_boundary_stress_coefficient": 31622.776601683792,
+          "proper_boundary_energy_coefficient": 95115.38274725204,
+          "radius": 1.0
+        },
+        {
+          "boundary_momentum_slow_time_rate": 2336.6183550638852,
+          "covariance": [
+            [
+              0.16429347809042946,
+              0.3285869561808589,
+              0.16429347809042946
+            ],
+            [
+              0.3285869561808589,
+              0.8600053667943468,
+              0.4071841447735026
+            ],
+            [
+              0.16429347809042946,
+              0.4071841447735026,
+              0.19474988867007892
+            ]
+          ],
+          "offdiagonal_boundary_stress_coefficient": 10390.831909534563,
+          "proper_boundary_energy_coefficient": 38549.705767770734,
+          "radius": 1.25
+        }
+      ],
+      "metric_covariance": "delta g_ij=(1-r_bulk/nu)*epsilon^2*R_ij/nu at fixed mean pressure",
+      "offset_tensor": "R_ij=<u_i u_j>-<u_i><u_j>",
+      "proper_boundary_clock": "t_hat=sqrt(nu)*tau",
+      "scaling": "v=epsilon*u(epsilon*x,epsilon^2*tau); P=epsilon^2*p",
+      "source": "Bredberg et al 1101.2451v2, equations 14-25",
+      "vacuum_error": "Einstein tensor vanishes through epsilon^3 for the published metric; higher orders are not bounded by this calculation."
+    },
+    "rotating_horizon": {
+      "child_spacetime_created": false,
+      "generator": "k=xi+Omega_H eta; psi=A exp[i(m phi-omega t)]",
+      "interpretation": "Mode-dependent transfer or rotational-energy extraction; not material escaping from inside the horizon and not a new-dimension theorem.",
+      "law": "F_E=N omega Delta_H; F_J=N m Delta_H; F_E-Omega_H F_J=N Delta_H^2 >=0",
+      "norm": "N=2 integral_horizon |A|^2 dA",
+      "normalized_controls": [
+        {
+          "angular_momentum": -0.5,
+          "corotating_energy": 0.25,
+          "energy": -0.25,
+          "null_stress_integral": 0.25,
+          "offset": -0.5,
+          "omega_over_Omega": 0.5
+        },
+        {
+          "angular_momentum": 0.0,
+          "corotating_energy": 0.0,
+          "energy": 0.0,
+          "null_stress_integral": 0.0,
+          "offset": 0.0,
+          "omega_over_Omega": 1.0
+        },
+        {
+          "angular_momentum": 0.5,
+          "corotating_energy": 0.25,
+          "energy": 0.75,
+          "null_stress_integral": 0.25,
+          "offset": 0.5,
+          "omega_over_Omega": 1.5
+        }
+      ],
+      "offset": "Delta_H=omega-m Omega_H",
+      "positive_frequency_antiparticle_internal_charge_flip": "Same omega,m and opposite internal charge have identical stress flux on this neutral rotating background.",
+      "scattering_amplification_computed": false,
+      "source": "Canonical scalar stress and Killing generator; superradiant/synchronization comparison to 1403.2757 and 1501.06570",
+      "spectrum_selected": false
+    },
+    "spherical_balance": {
+      "energy": "E_surface=gamma A at fixed enclosed volume, gamma>0 isotropic",
+      "pressure": "Delta p=2 gamma/R at stationary spherical balance",
+      "rotation": "For angular momentum J and moment of inertia I, E_rot>=J^2/(2I); compression at fixed J raises this lower bound when I decreases.",
+      "scope": "Isoperimetric minimizer and angular-momentum energy bound, not a count-of-forces rule or proof all compact geometries are spherical.",
+      "theorem": "A^3>=36*pi*V^2, equality only for a sphere (up to rigid motions)"
+    }
+  },
+  "physical_cosmology_or_baryon_fit": false,
+  "refinement": {
+    "dissipation": {
+      "coarse_change": 0.041250912962836006,
+      "empirical_error_indicator": 0.021934620379681302,
+      "fine_change": 0.010967310189840651,
+      "time_change": 3.010475646547661e-09,
+      "values": [
+        1.605113441706563,
+        1.646364354669399,
+        1.6573316648592396,
+        1.6573316678697152
+      ]
+    },
+    "energy": {
+      "coarse_change": 0.01268606470161604,
+      "empirical_error_indicator": 0.003396352336856978,
+      "fine_change": 0.001698176168428489,
+      "time_change": 1.2091341261566413e-09,
+      "values": [
+        5.377353452503133,
+        5.390039517204749,
+        5.3917376933731775,
+        5.391737694582312
+      ]
+    },
+    "generated_mean": [
+      {
+        "coarse_change": 0.03043507027979231,
+        "empirical_error_indicator": 0.011494939884273414,
+        "fine_change": 0.005747469942136707,
+        "time_change": 1.1778020114761034e-08,
+        "values": [
+          -0.3449600958284411,
+          -0.3145250255486488,
+          -0.3202724954907855,
+          -0.3202724837127654
+        ]
+      },
+      {
+        "coarse_change": 0.013747296591608588,
+        "empirical_error_indicator": 0.01210874384405547,
+        "fine_change": 0.006054371922027735,
+        "time_change": 6.547500874809487e-10,
+        "values": [
+          0.10598034284174132,
+          0.11972763943334991,
+          0.11367326751132217,
+          0.11367326816607226
+        ]
+      }
+    ]
+  },
+  "schema": "nsc-atlas-flow-evolution-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_flow_evolution.py": "4f8176364a24e13356f3cc09bf0d9cbe3c553064a7240e4846cc0ffca29a6521",
+    "src/recursive_horizons/nsc_atlas_flow_evolution.py": "4617e5fc522af345b9b3a6b6c459e9520f25a86a2ae84b772a4927fa1c05a8ec",
+    "src/recursive_horizons/nsc_atlas_flow_gravity.py": "1d89b1772aee2a397d35a79459127dc1dad44d663df5c1910765ad0711d2831b",
+    "src/recursive_horizons/nsc_atlas_vortex_transfer.py": "acaca8c4824075d4deeac9adc4f52063276d358f3ff82b4df23fc94e7696d9d1"
+  },
+  "total_cpu_seconds": 310.1875,
+  "wall_seconds": 206.73028069999418
+}
