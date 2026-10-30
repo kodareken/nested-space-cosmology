@@ -1,0 +1,462 @@
+{
+  "Schur_interaction": {
+    "complex_zero_gradient_quartic_hat": 149014.8148587616,
+    "dynamic_retarded_kernel_is_instantaneous_negative_quartic": false,
+    "energy": "Delta E=-1/2 <J,L_s^-1 J> <0 for nonzero source",
+    "full_gravitational_or_gauged_bound_state_proved": false,
+    "metastable_vacuum_does_not_prove_global_stability": true,
+    "physical_canonical_quartic_is_ggrav_times_hat": true,
+    "real_and_complex_normalizations_differ": true,
+    "real_zero_gradient_quartic_hat": 36937.49654480631,
+    "source": "J=d*mu^2*phi1^2/2 for the real scalar",
+    "static_operator": "L_s=-K Delta_physical+Vpp >0"
+  },
+  "action": {
+    "equation": "s2ddot+3h*s2dot-a^-2 Delta(s2)+Vpp*s2/K=d*mu^2*phi1^2/(2K)",
+    "gauge_invariance": "delta_xi s2=-xi^mu partial_mu s_star=0; metric corrections first affect this volume equation at epsilon^4",
+    "initial_data": "s2=normal_derivative(s2)=0 on the existing retained slice",
+    "kinetic": 84.0,
+    "source": "unchanged q1 Y1+q2 Y2, inherited on both sides of the same smooth horizon",
+    "volume_late_angular_rate_per_Ht": 5.234058876719884,
+    "volume_mass_over_H": 5.444756406394157,
+    "volume_mass_squared": 2.1837080100935475,
+    "volume_stiffness": 183.431472847858
+  },
+  "causal_memory": {
+    "coefficient_future_error_upper_bound": 0.00017305827832618534,
+    "homogeneous_volume_tail_power_in_a": -1.5,
+    "instantaneous_source_tail_power_in_a": -3.0,
+    "late_phase_average_is_not_an_ordinary_finite_time_window_average": true,
+    "phase_averaged_late_comoving_volume_energy_over_epsilon_fourth_estimate": 8.740015862809832,
+    "phase_averaged_volume_energy_over_initial_scalar_energy_over_epsilon_squared_estimate": 0.04005715067960453,
+    "rescaled_quadrature_and_tail": {
+      "A": [
+        -0.008157969209298628,
+        -0.009172059706182413,
+        -0.006874771674251755,
+        -0.010188762242710397,
+        0.02937476181218944
+      ],
+      "B": [
+        0.0006451545815097069,
+        0.009312731759987465,
+        0.006980122267523807,
+        0.05432929385763884,
+        0.05048618497901807
+      ],
+      "bound_scope": "Analytic future bound at exact endpoint data; numerical solve error is separate.",
+      "each_quadrature_future_error_upper_bound": [
+        9.48996347330156e-07,
+        1.9023835283265485e-06,
+        1.4267854850832966e-06,
+        9.333084300972993e-06,
+        1.144696596581929e-05
+      ],
+      "late_energy_future_error_upper_bound": 0.037759353126719984,
+      "phase_averaged_late_energy_estimate": 8.740015862809832
+    },
+    "selected_present_matter_fraction": false
+  },
+  "elapsed_seconds": 4.879326099995524,
+  "integrated_energy_balances": [
+    {
+      "absolute_residual": 2.0810020373573934e-12,
+      "endpoint_Ht": 1.1846453242616595,
+      "final_energy_over_epsilon_fourth": 4.057422625517442,
+      "integrated_pressure_work_over_epsilon_fourth": 6.679745723589426,
+      "integrated_source_work_over_epsilon_fourth": -2.6223230980699035,
+      "quadrature_error_estimate": 2.3437666359661522e-11
+    },
+    {
+      "absolute_residual": 2.1866952693017083e-12,
+      "endpoint_Ht": 8.0,
+      "final_energy_over_epsilon_fourth": 9.267695845498388,
+      "integrated_pressure_work_over_epsilon_fourth": 9.282383647005608,
+      "integrated_source_work_over_epsilon_fourth": -0.014687801505032964,
+      "quadrature_error_estimate": 2.7590287207615974e-11
+    }
+  ],
+  "numerical_control": {
+    "coefficient_maximum_absolute_gap": 2.9699437353869484e-12,
+    "formal_perturbation_error": "s=s_star+epsilon^2*s2+O(epsilon^4); no finite-amplitude remainder bound",
+    "methods": [
+      "DOP853",
+      "RK45"
+    ],
+    "nfev": [
+      27743,
+      26972
+    ],
+    "sample_count": 257
+  },
+  "samples": [
+    {
+      "Ht": 0.0,
+      "central_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -0.0,
+      "central_delta_log_gauge_coupling_over_epsilon_squared": -0.0,
+      "central_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -0.0,
+      "central_volume_shift_over_epsilon_squared": 0.0,
+      "dynamic_response_is_static_minimizer": false,
+      "energy_identity_absolute_residual": 0.0,
+      "horizon_mean_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -0.0,
+      "horizon_mean_delta_log_gauge_coupling_over_epsilon_squared": -0.0,
+      "horizon_mean_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -0.0,
+      "horizon_mean_volume_shift_over_epsilon_squared": 0.0,
+      "induced_volume_density_over_epsilon_fourth": 0.0,
+      "induced_volume_energy_over_epsilon_fourth": 0.0,
+      "induced_volume_pressure_over_epsilon_fourth": 0.0,
+      "pressure_work_rate_over_epsilon_fourth": -0.0,
+      "proper_derivative_coefficients_over_epsilon_squared": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "proper_readout": 0.0,
+      "source_work_rate_over_epsilon_fourth": 0.0,
+      "spatial_RMS_volume_shift_over_epsilon_squared": 0.0,
+      "spatial_mean_volume_shift_over_epsilon_squared": 0.0,
+      "static_relaxation_energy_contribution_over_epsilon_fourth": -30.446305863923705,
+      "volume_coefficients_over_epsilon_squared": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_gradient_local_relaxation_energy_over_epsilon_fourth": -36.38174159162064
+    },
+    {
+      "Ht": 0.25,
+      "central_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -0.0015330124614474881,
+      "central_delta_log_gauge_coupling_over_epsilon_squared": -0.005365543615066208,
+      "central_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -0.0007665062307237441,
+      "central_volume_shift_over_epsilon_squared": 0.0007665062307237441,
+      "dynamic_response_is_static_minimizer": false,
+      "energy_identity_absolute_residual": 0.0,
+      "horizon_mean_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -0.009449994722082355,
+      "horizon_mean_delta_log_gauge_coupling_over_epsilon_squared": -0.033074981527288244,
+      "horizon_mean_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -0.004724997361041178,
+      "horizon_mean_volume_shift_over_epsilon_squared": 0.004724997361041178,
+      "induced_volume_density_over_epsilon_fourth": 0.012375655577324729,
+      "induced_volume_energy_over_epsilon_fourth": 13.407240422047694,
+      "induced_volume_pressure_over_epsilon_fourth": 0.0012179348482588023,
+      "pressure_work_rate_over_epsilon_fourth": -0.2631220249425711,
+      "proper_derivative_coefficients_over_epsilon_squared": [
+        0.009692861854660026,
+        0.017632814747317156,
+        0.013216159523471235,
+        0.07918337403238036,
+        0.08625474077770143
+      ],
+      "proper_readout": 0.9211305360472398,
+      "source_work_rate_over_epsilon_fourth": 20.35631939891789,
+      "spatial_RMS_volume_shift_over_epsilon_squared": 0.007290466825829507,
+      "spatial_mean_volume_shift_over_epsilon_squared": 0.005461461144259278,
+      "static_relaxation_energy_contribution_over_epsilon_fourth": -5.7937757852102605,
+      "volume_coefficients_over_epsilon_squared": [
+        0.005461461144259278,
+        0.010471762840207984,
+        0.00784925550120249,
+        0.049399855532117,
+        0.05761576275921392
+      ],
+      "zero_gradient_local_relaxation_energy_over_epsilon_fourth": -6.8666917039595745
+    },
+    {
+      "Ht": 0.5,
+      "central_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -0.011461361023184083,
+      "central_delta_log_gauge_coupling_over_epsilon_squared": -0.04011476358114429,
+      "central_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -0.0057306805115920414,
+      "central_volume_shift_over_epsilon_squared": 0.0057306805115920414,
+      "dynamic_response_is_static_minimizer": false,
+      "energy_identity_absolute_residual": 2.831068712794149e-15,
+      "horizon_mean_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -0.025394292353282156,
+      "horizon_mean_delta_log_gauge_coupling_over_epsilon_squared": -0.08888002323648754,
+      "horizon_mean_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -0.012697146176641078,
+      "horizon_mean_volume_shift_over_epsilon_squared": 0.012697146176641078,
+      "induced_volume_density_over_epsilon_fourth": 0.02005591855767881,
+      "induced_volume_energy_over_epsilon_fourth": 28.392982459969428,
+      "induced_volume_pressure_over_epsilon_fourth": -0.01788012769657662,
+      "pressure_work_rate_over_epsilon_fourth": 9.524260156152407,
+      "proper_derivative_coefficients_over_epsilon_squared": [
+        0.0011833392181585058,
+        -0.0022288374919730734,
+        -0.0016785187854935037,
+        -0.02598156923206708,
+        -0.04884123272813345
+      ],
+      "proper_readout": 1.8422610720944796,
+      "source_work_rate_over_epsilon_fourth": -0.02939198159754569,
+      "spatial_RMS_volume_shift_over_epsilon_squared": 0.013835092177920442,
+      "spatial_mean_volume_shift_over_epsilon_squared": 0.01146084552603208,
+      "static_relaxation_energy_contribution_over_epsilon_fourth": -0.0013710100712248895,
+      "volume_coefficients_over_epsilon_squared": [
+        0.01146084552603208,
+        0.019133286354517554,
+        0.014341600930614361,
+        0.07946515576103826,
+        0.07792938135473115
+      ],
+      "zero_gradient_local_relaxation_energy_over_epsilon_fourth": -0.0016077788035535386
+    },
+    {
+      "Ht": 1.0,
+      "central_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -1.1383084304503492e-05,
+      "central_delta_log_gauge_coupling_over_epsilon_squared": -3.984079506576222e-05,
+      "central_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -5.691542152251746e-06,
+      "central_volume_shift_over_epsilon_squared": 5.691542152251746e-06,
+      "dynamic_response_is_static_minimizer": false,
+      "energy_identity_absolute_residual": 7.105427357601002e-15,
+      "horizon_mean_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": 0.0010073535829942407,
+      "horizon_mean_delta_log_gauge_coupling_over_epsilon_squared": 0.0035257375404798424,
+      "horizon_mean_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": 0.0005036767914971203,
+      "horizon_mean_volume_shift_over_epsilon_squared": -0.0005036767914971203,
+      "induced_volume_density_over_epsilon_fourth": 0.0015027744287113317,
+      "induced_volume_energy_over_epsilon_fourth": 5.451712107119015,
+      "induced_volume_pressure_over_epsilon_fourth": 0.0013050975432211261,
+      "pressure_work_rate_over_epsilon_fourth": -2.9359305352812743,
+      "proper_derivative_coefficients_over_epsilon_squared": [
+        -0.005616740302619313,
+        -0.004704206810023231,
+        -0.003521101128281834,
+        -0.0014400994260794677,
+        0.020751397152191937
+      ],
+      "proper_readout": 3.6845221441889593,
+      "source_work_rate_over_epsilon_fourth": -14.539265850848347,
+      "spatial_RMS_volume_shift_over_epsilon_squared": 0.0009826724084675553,
+      "spatial_mean_volume_shift_over_epsilon_squared": -0.00031141194681003135,
+      "static_relaxation_energy_contribution_over_epsilon_fourth": -8.52284902449371,
+      "volume_coefficients_over_epsilon_squared": [
+        -0.00031141194681003135,
+        -0.0022483128244917155,
+        -0.0016845091356294843,
+        -0.01053137169011013,
+        -0.005733886566279325
+      ],
+      "zero_gradient_local_relaxation_energy_over_epsilon_fourth": -9.330773899674256
+    },
+    {
+      "Ht": 1.1846453242616595,
+      "central_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": 0.007709189629464336,
+      "central_delta_log_gauge_coupling_over_epsilon_squared": 0.026982163703125176,
+      "central_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": 0.003854594814732168,
+      "central_volume_shift_over_epsilon_squared": -0.003854594814732168,
+      "dynamic_response_is_static_minimizer": false,
+      "energy_identity_absolute_residual": 2.7755575615628914e-16,
+      "horizon_mean_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": 0.0047174467160162135,
+      "horizon_mean_delta_log_gauge_coupling_over_epsilon_squared": 0.016511063506056748,
+      "horizon_mean_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": 0.0023587233580081067,
+      "horizon_mean_volume_shift_over_epsilon_squared": -0.0023587233580081067,
+      "induced_volume_density_over_epsilon_fourth": 0.0007192829486250376,
+      "induced_volume_energy_over_epsilon_fourth": 4.057422625517442,
+      "induced_volume_pressure_over_epsilon_fourth": -0.00021336932782113432,
+      "pressure_work_rate_over_epsilon_fourth": 0.8123259713839214,
+      "proper_derivative_coefficients_over_epsilon_squared": [
+        0.00020867450553886964,
+        0.004246765316314434,
+        0.0031795102283116955,
+        0.026520796665561435,
+        0.029112480308623206
+      ],
+      "proper_readout": 4.364851930251994,
+      "source_work_rate_over_epsilon_fourth": 0.4189534577900585,
+      "spatial_RMS_volume_shift_over_epsilon_squared": 0.00223986303070985,
+      "spatial_mean_volume_shift_over_epsilon_squared": -0.0021176422190809997,
+      "static_relaxation_energy_contribution_over_epsilon_fourth": -0.0242178726730263,
+      "volume_coefficients_over_epsilon_squared": [
+        -0.0021176422190809997,
+        -0.002061973781702701,
+        -0.0015450274444015208,
+        0.0003073529699387439,
+        0.014207350261210394
+      ],
+      "zero_gradient_local_relaxation_energy_over_epsilon_fourth": -0.02590656898859421
+    },
+    {
+      "Ht": 2.0,
+      "central_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -0.0025235560933915455,
+      "central_delta_log_gauge_coupling_over_epsilon_squared": -0.00883244632687041,
+      "central_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -0.0012617780466957728,
+      "central_volume_shift_over_epsilon_squared": 0.0012617780466957728,
+      "dynamic_response_is_static_minimizer": false,
+      "energy_identity_absolute_residual": 2.6645352591003757e-15,
+      "horizon_mean_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -0.0021775578204269513,
+      "horizon_mean_delta_log_gauge_coupling_over_epsilon_squared": -0.007621452371494329,
+      "horizon_mean_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -0.0010887789102134757,
+      "horizon_mean_volume_shift_over_epsilon_squared": 0.0010887789102134757,
+      "induced_volume_density_over_epsilon_fourth": 0.00019788296400040432,
+      "induced_volume_energy_over_epsilon_fourth": 10.404130859283182,
+      "induced_volume_pressure_over_epsilon_fourth": 9.708079436393028e-05,
+      "pressure_work_rate_over_epsilon_fourth": -4.00645494336345,
+      "proper_derivative_coefficients_over_epsilon_squared": [
+        -0.0017299227851316902,
+        -0.0025272734778685577,
+        -0.0018939390162394769,
+        -0.006397710540753558,
+        0.0009209094107876243
+      ],
+      "proper_readout": 7.369044288377919,
+      "source_work_rate_over_epsilon_fourth": -5.354265501042878,
+      "spatial_RMS_volume_shift_over_epsilon_squared": 0.0007381963996896488,
+      "spatial_mean_volume_shift_over_epsilon_squared": 0.0006249193103913376,
+      "static_relaxation_energy_contribution_over_epsilon_fourth": -0.5418744028180351,
+      "volume_coefficients_over_epsilon_squared": [
+        0.0006249193103913376,
+        -0.0001487402214447744,
+        -0.00011140852150977954,
+        -0.004112495612184333,
+        -0.006291628240302061
+      ],
+      "zero_gradient_local_relaxation_energy_over_epsilon_fourth": -0.5514593852871092
+    },
+    {
+      "Ht": 4.0,
+      "central_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -4.3274964332961336e-05,
+      "central_delta_log_gauge_coupling_over_epsilon_squared": -0.00015146237516536467,
+      "central_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -2.1637482166480668e-05,
+      "central_volume_shift_over_epsilon_squared": 2.1637482166480668e-05,
+      "dynamic_response_is_static_minimizer": false,
+      "energy_identity_absolute_residual": 7.91033905045424e-16,
+      "horizon_mean_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -4.347064015540248e-05,
+      "horizon_mean_delta_log_gauge_coupling_over_epsilon_squared": -0.00015214724054390868,
+      "horizon_mean_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -2.173532007770124e-05,
+      "horizon_mean_volume_shift_over_epsilon_squared": 2.173532007770124e-05,
+      "induced_volume_density_over_epsilon_fourth": 3.740264313507696e-07,
+      "induced_volume_energy_over_epsilon_fourth": 7.520666644972972,
+      "induced_volume_pressure_over_epsilon_fourth": -3.2147317761546466e-08,
+      "pressure_work_rate_over_epsilon_fourth": 0.525953673699967,
+      "proper_derivative_coefficients_over_epsilon_squared": [
+        5.4127043698560204e-05,
+        -2.7691891399892025e-06,
+        -2.074656459591108e-06,
+        -0.00032982713317439885,
+        -0.0005893155058575506
+      ],
+      "proper_readout": 14.738088576755837,
+      "source_work_rate_over_epsilon_fourth": 0.04468763601436031,
+      "spatial_RMS_volume_shift_over_epsilon_squared": 4.7051487872008574e-05,
+      "spatial_mean_volume_shift_over_epsilon_squared": 3.248546471415284e-05,
+      "static_relaxation_energy_contribution_over_epsilon_fourth": -0.0007920732986135539,
+      "volume_coefficients_over_epsilon_squared": [
+        3.248546471415284e-05,
+        8.915938577824896e-05,
+        6.682765938242251e-05,
+        0.0003699125853439065,
+        0.0002109308716254834
+      ],
+      "zero_gradient_local_relaxation_energy_over_epsilon_fourth": -0.0007923439596895042
+    },
+    {
+      "Ht": 8.0,
+      "central_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -3.235190751700472e-07,
+      "central_delta_log_gauge_coupling_over_epsilon_squared": -1.1323167630951653e-06,
+      "central_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -1.617595375850236e-07,
+      "central_volume_shift_over_epsilon_squared": 1.617595375850236e-07,
+      "dynamic_response_is_static_minimizer": false,
+      "energy_identity_absolute_residual": 2.4708967510944646e-16,
+      "horizon_mean_delta_log_KK_increment_over_base_mass_squared_over_epsilon_squared": -3.2351870297257766e-07,
+      "horizon_mean_delta_log_gauge_coupling_over_epsilon_squared": -1.132315460404022e-06,
+      "horizon_mean_delta_log_sqrt_KK_increment_over_base_mass_over_epsilon_squared": -1.6175935148628883e-07,
+      "horizon_mean_volume_shift_over_epsilon_squared": 1.6175935148628883e-07,
+      "induced_volume_density_over_epsilon_fourth": 2.834789353120389e-12,
+      "induced_volume_energy_over_epsilon_fourth": 9.267695845498388,
+      "induced_volume_pressure_over_epsilon_fourth": 1.2691560486560164e-12,
+      "pressure_work_rate_over_epsilon_fourth": -3.378360489074899,
+      "proper_derivative_coefficients_over_epsilon_squared": [
+        -2.0672384227147112e-07,
+        -2.8909937179548587e-07,
+        -2.166892621797054e-07,
+        -6.114500346045812e-07,
+        3.958086709083931e-07
+      ],
+      "proper_readout": 29.476177153511674,
+      "source_work_rate_over_epsilon_fourth": -9.059534609947857e-05,
+      "spatial_RMS_volume_shift_over_epsilon_squared": 9.238640709591073e-08,
+      "spatial_mean_volume_shift_over_epsilon_squared": 6.315050031170717e-08,
+      "static_relaxation_energy_contribution_over_epsilon_fourth": -1.9516085565937122e-10,
+      "volume_coefficients_over_epsilon_squared": [
+        6.315050031170717e-08,
+        -5.707433667255179e-08,
+        -4.277785142643956e-08,
+        -7.193959876542767e-07,
+        -1.0150020366566233e-06
+      ],
+      "zero_gradient_local_relaxation_energy_over_epsilon_fourth": -1.951608774527424e-10
+    }
+  ],
+  "scale_and_charge": {
+    "SI_scale_selected": false,
+    "coupling_to_sqrt_mass_increment_ratio_log_slope": 7.0,
+    "gauge_gap_identity_unchanged": "g_KK^2/(kappa_nat DeltaM_KK^2)=13/12",
+    "gauge_log_response": "delta ln g_KK=-7 epsilon^2 s2",
+    "mass_gap_ratio_log_response": "delta ln[(M1^2-mu^2)/mu^2]=-2 epsilon^2 s2",
+    "nonzero_mean_charge_generated": false
+  },
+  "schema": "nsc-atlas-volume-feedback-v1",
+  "shared_300_phase_pass_endpoint_Ht": 1.1846453242616595,
+  "source_sha256": {
+    "scripts/check_nsc_atlas_volume_feedback.py": "f0c5a2766baa7757ec92086e1292f3303ff336dc5ee5ef724a76f4780ad02a12",
+    "src/recursive_horizons/nsc_atlas_horizon_response.py": "35ca8c2ae3040cac3404133cefad5c0a43a7e584b99d19db90717685337428f4",
+    "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
+    "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "src/recursive_horizons/nsc_atlas_s3_polynomials.py": "a290ac75a8726761195bfa3def4630892a08d57e7c6ee6272130155d880ae208",
+    "src/recursive_horizons/nsc_atlas_volume_feedback.py": "a9eb86cc2e5fb994da36954c166ce7f2dd38cc4987d98ad7256953753b2830ea"
+  },
+  "spectral": {
+    "Gram": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0625,
+        -0.041666666666666664,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.041666666666666664,
+        0.08333333333333333,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.005208333333333333,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0016493055555555556
+      ]
+    ],
+    "basis": [
+      "1",
+      "X1^2-1/4",
+      "X2^2+X4^2-1/2",
+      "X1 X2 X4",
+      "X2^2 X4^2-(X2^2+X4^2)/8+1/48"
+    ],
+    "eigenvalues": [
+      0.0,
+      8.0,
+      8.0,
+      15.0,
+      24.0
+    ]
+  }
+}

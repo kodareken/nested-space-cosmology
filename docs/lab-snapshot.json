@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+  "current_receipt_commit_parent": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 298848,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 299218,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,15 +10287,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "16d139f09511414fd3f2463c8a42bd1da67331cf8c61831227bc5d59aed376a1"
+      "sha256": "a4d1c24d3c485cff5baeaab9c204da411cbd354a47072b2d46ee2449ca7ac1b1"
     },
     {
-      "bytes": 161629,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 162380,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "2056f7066da80908813c39aad32ad01ea08057fb2914cdb27d15dc74d2b91268"
+      "sha256": "ca79e9a664d30afe6802676e879c80944795a0f3e130011f62dd44a0a9d5467c"
     },
     {
       "bytes": 9543,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 486391,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 487249,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "80688d22baf95d05d57f5795675dcbaf32d6ac86b692ca9eab45f8195a467b41"
+      "sha256": "c7874eec5c25a052889990eed41ecde9fa1ef18ad7fce1063166c1062bfd25d4"
     },
     {
       "bytes": 173938,
@@ -10975,12 +10975,12 @@
       "sha256": "4f0732e624568c0b6993f55a8dc743baa12c842ac1c80ac94f282070be86a2e1"
     },
     {
-      "bytes": 18490,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 18783,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "docs/nsc-atlas-offset-thermodynamics.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "e8d1edfed75acd23ae144aea16f2143a389d0ab9a9d70539b67890bb45c3e7d4"
+      "sha256": "2522840f0425cd04f6cf80d0e77d23b434f8526269c4df9e180d45626f275d64"
     },
     {
       "bytes": 31756,
@@ -11141,12 +11141,20 @@
       "sha256": "a272dfc872c0125a518345f4cb54a50e09cfc4e42fce40fa3e17a888bf4f66c2"
     },
     {
-      "bytes": 68462,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 68890,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "docs/nsc-atlas-source-map.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "65068856338dca78e5de9d86f13b6d2bc4c91ab12582a9b18bd3492a9e82c518"
+      "sha256": "80babad2e378d282dbcc6281c768ff2922e1f793949b64f6eac4477ab1a353c1"
+    },
+    {
+      "bytes": 10445,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "path": "docs/nsc-atlas-volume-feedback.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "451eeaf409ab84850cee44444b137cc607e9a75c40fafc3e460a38ec0bbdef16"
     },
     {
       "bytes": 9853,
@@ -11216,15 +11224,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 141348,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 141838,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "c9177651437a36a7c2c428f846d62d5058b493141261bddf9d4f60520b7543d6"
+      "sha256": "1727c3af22e259960ef5a811f3b005559f5fdd6206173af94e770e00dd2af477"
     },
     {
       "bytes": 30876,
@@ -12192,12 +12200,12 @@
       "sha256": "1bb4a2ea0c1a8b5e07c4fb153554f2113cf2cc4ff86347f8a68ada243214c63d"
     },
     {
-      "bytes": 613279,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 614269,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "de6c5701762afe7e3f47e00e4d1722feacce532406d9b122c9f6cd624a9a1f2b"
+      "sha256": "7cb20f8f21c3be4f17e2d5d7b9a422ddbb19ddd0e2a8fa90b410d66231fd3e40"
     },
     {
       "bytes": 6705,
@@ -12206,20 +12214,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 248844,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 249520,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "89d3926020265fb548cc8fcf752ac05851428fc3f2e931c60a2dde7a7e62930b"
+      "sha256": "82d1fac7aebe79c34c68d64b9196e93f7c349f2537d56f520c2270fa76db70e6"
     },
     {
-      "bytes": 56872,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 57203,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "5b2942d87fde3667c0e59fda53aeecdc93308bd356759030ffb50bdf5bb4631d"
+      "sha256": "9d291251aef39c03073055a10990a343ceac26f40369da559dea4f5e9e7a2eb2"
     },
     {
       "bytes": 18356,
@@ -12233,12 +12241,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 140749,
-      "change": "Connect regular scalar-gravity preparation, physical boundary reduction and the continued child state.",
-      "changed_from_commit": "86ac8e3b2fdeb20648acca7ef0a973d1550a6dc4",
+      "bytes": 141244,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "67e442ca7e9a3d7793df22f5095d97b9ee9305ad9f126f4a5822a7c834fcf4f3"
+      "sha256": "4fa410eaaef7dd629eb3601873ac9719a420a02b32d9e2d0a251dbfa277976dc"
     },
     {
       "bytes": 537091,
@@ -12288,28 +12296,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 43420,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 43742,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "faf13a5a79f7a64aad18bd9da870aaac4ea4e37debce632bf084a9f7e404a1e9"
+      "sha256": "16ddf825a08edafb80d195c304c7499b26576211a22436d0d4a4ff9472815795"
     },
     {
       "bytes": 3207,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "bcfe235003318b55c7a205b1a7519dab29d4b4aac87e62d95b5d4e2bace5a775"
+      "sha256": "f7f3989847b7d8e99eb01c2ce0a0c175e741ce9f1858587d4c235e5ba97c2776"
     },
     {
-      "bytes": 52117,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 52264,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "c31c2839a79e236008874310372226b5e8cbcefe94e1567c0f363cef93dafd4e"
+      "sha256": "388d86fe08a2a8d2b14377f6a6ca98eacf90e679027cb7e1d8d9dcd5fbfa734d"
     },
     {
       "bytes": 226492,
@@ -12392,6 +12400,14 @@
       "sha256": "54cda2b164688043c23fe0218211bcc4006065d1b6be032c0d4f83e543a56aa9"
     },
     {
+      "bytes": 373830,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "path": "paper/figures/nsc-atlas-volume-feedback.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4b50bc18fae0a25e4d059933f6302f465ee59f514762b81a31cf0a43c376ec87"
+    },
+    {
       "bytes": 482790,
       "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
       "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
@@ -12401,27 +12417,27 @@
     },
     {
       "bytes": 398,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "60fa3c3f816f9546024861da9ee6821ce04dd0fb64a3313d18d83ee163fa1f3a"
+      "sha256": "0cf9b16888938ed0a37322e37687ba8327e489d53303577ec6662b4a6982fde5"
     },
     {
-      "bytes": 662585,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 668457,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "46c2162ca25dfa7186c6073fc5f4ff1a413cc92630ab125268e339add5c2c94c"
+      "sha256": "c0a4bdab993b6ec22d9c849b1114187081238e904d9a8d35f4e010c61e4a68b0"
     },
     {
-      "bytes": 18954017,
-      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
-      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "bytes": 19445017,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "3c1b63ecc7c5d3c72bc71ac8240ad5d0febb7ecf12039077a512d64b40c95d15"
+      "sha256": "1aa58ad9f3b987bed5c73d288823fb373dfec247e99508a7ee7daceb85abd2e1"
     },
     {
       "bytes": 3283,
@@ -31730,6 +31746,14 @@
       "sha256": "a491bf7e2241a58776b11d87fc55454f58e3885e5d287c287092534d9a15ac8f"
     },
     {
+      "bytes": 22156,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "path": "results/summaries/nsc-atlas-volume-feedback-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "eabd32c9590a12741247f1a3578ec05f64d064b916a9c740e6b33926d99d5e51"
+    },
+    {
       "bytes": 7537,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
       "changed_from_commit": "b3ba6cced5a915bceacb4dc487ecc8ca307ccb05",
@@ -32634,6 +32658,14 @@
       "path": "scripts/check_nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "0993e48dbf1db8f9ecdd561e9c7b131f6ec60a108dae7688eb43ba0f984b536d"
+    },
+    {
+      "bytes": 1473,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "path": "scripts/check_nsc_atlas_volume_feedback.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f0c5a2766baa7757ec92086e1292f3303ff336dc5ee5ef724a76f4780ad02a12"
     },
     {
       "bytes": 976,
@@ -35744,6 +35776,14 @@
       "sha256": "7bafdeafd4bb3f69eca914ef13eb6851c42832fa2df1568e6d39cfa8312a0eb0"
     },
     {
+      "bytes": 3064,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "path": "scripts/plot_nsc_atlas_volume_feedback.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2ec99934f6bb35370449b35cacf12e7f8dca639de19a9b8e4150515104194467"
+    },
+    {
       "bytes": 3047,
       "change": "Incorporate the OpenAI Navier-Stokes source and prove finite nonlinear vortex transfer.",
       "changed_from_commit": "c833809ba2704e6c48be40694f7db0b4f15d70fd",
@@ -37339,6 +37379,14 @@
       "path": "src/recursive_horizons/nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "71a89689d3466a55d0c6e06416ded3581339a9e65d71bf40c3c61246d45beebb"
+    },
+    {
+      "bytes": 12054,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "path": "src/recursive_horizons/nsc_atlas_volume_feedback.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a9eb86cc2e5fb994da36954c166ce7f2dd38cc4987d98ad7256953753b2830ea"
     },
     {
       "bytes": 6312,
@@ -42201,6 +42249,22 @@
       "path": "tests/test_nsc_atlas_volume_family.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "6b1db51adab33c05c55b9b2c6e837b9d398f79c89696836daf1b57c5db943813"
+    },
+    {
+      "bytes": 3858,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "path": "tests/test_nsc_atlas_volume_feedback.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1f698a597253bde5b24fdb9281349bfba02d45ddd7017473a77ce573ccc11127"
+    },
+    {
+      "bytes": 6404,
+      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
+      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "path": "tests/test_nsc_atlas_volume_feedback_algebra.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "21a2d52c8bd289c4afec11bbfabed73d8ce130394e5f0e5010606f15b7f3282b"
     },
     {
       "bytes": 2102,

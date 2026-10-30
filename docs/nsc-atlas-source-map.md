@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **325 distinct arXiv works**: 105 are cited in the main argument and 220 are retained in the reading library only.
+This navigation index contains **327 distinct arXiv works**: 107 are cited in the main argument and 220 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -54,6 +54,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1203.6191](https://arxiv.org/abs/1203.6191v2) | Main-manuscript references | See the linked reading route and manuscript section for the stated use and assumptions. | 19 |
 | [1205.5600](https://arxiv.org/abs/1205.5600) | Connected flow, horizon transfer and observer geometry, 30 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 15.12 |
 | [1210.2663](https://arxiv.org/abs/1210.2663) | Studies | Kurkov and Lizzi: Higgs-dilaton Lagrangian from spectral regularization, including the common local Weyl anomaly. | Library only |
+| [1210.2745](https://arxiv.org/abs/1210.2745v2) | Causal volume response and static comparison, 30 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 15.17 |
 | [1301.2430](https://arxiv.org/abs/1301.2430) | Studies | Archived: Olmo and Rubiera-Garcia, a further regular-core comparator, not evidence for the proposed phase transition. | Library only |
 | [1302.1293](https://arxiv.org/abs/1302.1293v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 22 |
 | [1305.3085](https://arxiv.org/abs/1305.3085) | Studies | Archived: Ziaie, Moniz, Ranjbar and Sepangi, Einstein–Cartan collapse of a homogeneous Weyssenhoff fluid. | Library only |
@@ -162,6 +163,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [2109.01920](https://arxiv.org/abs/2109.01920v2) | Finite radial and angular perturbations, 25 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 14.11 |
 | [2109.09814](https://arxiv.org/abs/2109.09814v1) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [2112.05819](https://arxiv.org/abs/2112.05819) | Studies | Archived: Murphy et al., ESPRESSO limit on variation of the fine-structure constant. | Library only |
+| [2112.14263](https://arxiv.org/abs/2112.14263v1) | Causal volume response and static comparison, 30 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 15.17 |
 | [2201.03839](https://arxiv.org/abs/2201.03839v1) | Atlas reuse library, 10 October 2026 | Bochniak and Sitarz: section 2, spectral interaction between universes, the prior geometric setting of a two-sheet field connection. | Library only |
 | [2201.07138](https://arxiv.org/abs/2201.07138v3) | Accumulated offset and metric completion, 30 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 1.2 |
 | [2202.04077](https://arxiv.org/abs/2202.04077v2) | Parent geometry against released distances — 28 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 13.19 |

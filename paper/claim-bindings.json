@@ -14,6 +14,11 @@
     "unspecified": "Historical classification not yet assigned."
   },
   "claims": {
+    "inherited-volume-feedback": {
+      "section": "15.17",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-volume-feedback.md"
+    },
     "offset-thermodynamic-zero": {
       "section": "15.16",
       "status": "measured",

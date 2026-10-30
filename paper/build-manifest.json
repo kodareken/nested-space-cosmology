@@ -1,10 +1,10 @@
 {
-  "bytes": 18954017,
+  "bytes": 19445017,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "60fa3c3f816f9546024861da9ee6821ce04dd0fb64a3313d18d83ee163fa1f3a",
+  "metadata_sha256": "0cf9b16888938ed0a37322e37687ba8327e489d53303577ec6662b4a6982fde5",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 227,
-  "pdf_sha256": "3c1b63ecc7c5d3c72bc71ac8240ad5d0febb7ecf12039077a512d64b40c95d15",
+  "pages": 229,
+  "pdf_sha256": "1aa58ad9f3b987bed5c73d288823fb373dfec247e99508a7ee7daceb85abd2e1",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -210,6 +210,10 @@
     {
       "path": "paper/figures/nsc-atlas-smooth-horizon.png",
       "sha256": "54cda2b164688043c23fe0218211bcc4006065d1b6be032c0d4f83e543a56aa9"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-volume-feedback.png",
+      "sha256": "4b50bc18fae0a25e4d059933f6302f465ee59f514762b81a31cf0a43c376ec87"
     },
     {
       "path": "paper/figures/nsc-atlas-zero-interface.png",
@@ -940,6 +944,10 @@
       "sha256": "a491bf7e2241a58776b11d87fc55454f58e3885e5d287c287092534d9a15ac8f"
     },
     {
+      "path": "results/summaries/nsc-atlas-volume-feedback-v1.json",
+      "sha256": "eabd32c9590a12741247f1a3578ec05f64d064b916a9c740e6b33926d99d5e51"
+    },
+    {
       "path": "results/summaries/nsc-atlas-volume-lifetime-v1.json",
       "sha256": "61ba6a000991010f45832f7c2655e61386e277262f26b7718c6ef162dce49b9b"
     },
@@ -1025,6 +1033,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "46c2162ca25dfa7186c6073fc5f4ff1a413cc92630ab125268e339add5c2c94c",
-  "version": "working-2026-10-30.13"
+  "source_sha256": "c0a4bdab993b6ec22d9c849b1114187081238e904d9a8d35f4e010c61e4a68b0",
+  "version": "working-2026-10-30.14"
 }

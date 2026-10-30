@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Same-source internal-volume feedback
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_volume_feedback.py --output .build/volume-feedback-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_volume_feedback.py tests/test_nsc_atlas_volume_feedback_algebra.py
+python scripts/run_python.py scripts/plot_nsc_atlas_volume_feedback.py
+```
+
+The [owner](nsc-atlas-volume-feedback.md) specifies the inherited data,
+finite domain, five-harmonic closure and distinction between actual causal
+memory and static interaction. Full histories regenerate; only summaries
+are retained. The unknown physical scale is not set to an observed value.
+
 ## Offset, zero line and thermodynamic/conformal tests
 
 ```powershell

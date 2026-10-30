@@ -1,5 +1,18 @@
 # Cited arXiv studies
 
+## Causal volume response and static comparison, 30 October 2026
+
+[Galley, 1210.2745v2](https://arxiv.org/html/1210.2745v2), equations1--4
+and21--26, distinguishes causal elimination with inherited initial data
+from the retarded-plus-advanced error in naive one-history variation.
+His coupled-oscillator response and exchanged-energy law are the method
+input; the expanding-parent five-mode source and response are calculated
+in the [new owner](nsc-atlas-volume-feedback.md).
+[Lennon, 2112.14263v1](https://arxiv.org/html/2112.14263v1), section2,
+equations2.5--2.11, minimizes fixed-charge energy with static neutral
+fields. It is a static comparator, with no imported Q-ball existence
+claim for the current real wave or metastable de Sitter vacuum.
+
 ## Mass-free nucleation radius — 29 October 2026
 
 [Parke, Gravity and the decay of the false vacuum (1983)](https://doi.org/10.1016/0370-2693%2883%2991376-X)

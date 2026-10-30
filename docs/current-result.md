@@ -1,5 +1,18 @@
 # What the calculations show
 
+The [same-source volume feedback](nsc-atlas-volume-feedback.md) now evolves
+the internal size from the inherited scalar, with zero initial volume
+displacement/velocity. Five exact harmonics suffice. At the prior observer
+event the central shift is -.003854594815 epsilon^2 and delta ln g_KK is
+.026982163703 epsilon^2. Its correlation with the dimensionless square-root
+KK increment/base-mass ratio has exact slope7. Two integrators agree to
+2.97e-12 and independent pressure/source-work integration to2.19e-12.
+Retained volume memory gives a phase-averaged energy diagnostic
+(.04005715 +/- .00017306) epsilon^2 times initial scalar energy; this is
+not a conversion efficiency or selected matter fraction. Static Schur
+relaxation supplies a negative interaction contribution. Full quartic
+gravity/matter, localization, charge bias and SI scale remain open.
+
 The [offset/thermodynamic zero calculation](nsc-atlas-offset-thermodynamics.md)
 now fixes the decaying wave, its phase spiral and late spectrum. The
 excitation-density and spatial-wavelength powers are -3 and +1, while the

@@ -1,5 +1,13 @@
 # Cosmological atlas: regions, boundaries and observer measurements
 
+The [inherited volume feedback](nsc-atlas-volume-feedback.md) now adds a
+causal geometric response to the same prepared wave. The volume, spectra
+and geometric coupling change together; an exact fractional-response
+correlation removes the unknown amplitude and absolute scale. Static
+Schur attraction and actual retarded energy exchange are calculated
+separately. The next common-parent closure is the cubic matter and
+quadratic metric response before nonlinear concentration is inferred.
+
 The programme asks how regions, their boundaries and their fields can form a
 nested geometry, and what an observer inside one region can infer about the
 rest. Spherical symmetry supplies the first tractable building block. The

@@ -1,5 +1,13 @@
 # Schur memory and the local effective Lambda target
 
+The [same-source internal-volume response](nsc-atlas-volume-feedback.md)
+now realizes a causal memory channel from an explicit geometric degree of
+freedom in the retained action. Its zero-data driven solution outlives
+the instantaneous source, shifts local spectra/coupling and has a checked
+pressure/source-work balance. Static elimination supplies a negative
+interaction contribution. These are controlled perturbative responses;
+they do not select a new cosmological vacuum or the SI ruler.
+
 The [compact-parent successor](nsc-atlas-compact-parent.md) removes the
 isolated AE cutoff by joining two sourced interiors through one explicit
 bridge. It derives finite evolving volume fractions and a nonzero global

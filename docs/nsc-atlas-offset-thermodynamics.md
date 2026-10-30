@@ -381,6 +381,11 @@ representation by itself is not evidence of a literal simulator.
 
 ## Reproduction and next connection
 
+The [volume-feedback successor](nsc-atlas-volume-feedback.md) now derives
+the neutral geometric response driven by this actual wave, including
+retained memory, pressure/source-work accounting and linked local spectral
+and coupling shifts. It does not introduce the still-missing charge bias.
+
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_zero_interface.py --output .build/zero-interface-reproduced.json
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_zero_interface.py tests/test_nsc_atlas_zero_numeric.py tests/test_nsc_atlas_s3_polynomials.py

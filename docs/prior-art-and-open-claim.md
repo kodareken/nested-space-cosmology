@@ -1,5 +1,21 @@
 # Prior art and admission of new research
 
+## Same-source internal-volume feedback, 30 October 2026
+
+The [owner](nsc-atlas-volume-feedback.md) compares algebraic relaxation,
+an additional charged preparation and the causal neutral geometric mode
+already in the fixed action. The last route adds no source parameter:
+the old scalar and zero volume displacement/velocity fix the history.
+Galley supplies initial-value elimination; Lennon supplies a static
+charged/neutral-field comparator, not a stable object for this source.
+Exact source harmonics and the full positive Gram matrix replace a grid.
+The 90-second calculation takes about five seconds, with two integrators,
+independent work quadrature and one analytic future bound. Failures would
+be a static/retarded substitution, discarded Gram cross terms or promoting
+a perturbative subsystem into full nonlinear closure. The next necessary
+calculation is the cubic matter/quadratic metric response on these same
+data; no finished field/horizon refinement campaign is restarted.
+
 ## Zero line, thermodynamics and conformal/charge tests, 30 October 2026
 
 The [owner](nsc-atlas-offset-thermodynamics.md) uses the already fixed

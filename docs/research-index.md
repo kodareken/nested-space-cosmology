@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [inherited volume response](nsc-atlas-volume-feedback.md) connects the
+same scalar history to a gauge-invariant geometric displacement, linked
+local mass/coupling modulation, controlled causal memory and a negative
+static interaction. It preserves preparation and distinguishes subsystem
+work from full gravitational closure.
+
 The [offset thermodynamics](nsc-atlas-offset-thermodynamics.md) connects
 signed-mode decay, a spiral/sphere representation, pressure work, late
 state memory, a conformal crossover benchmark, winding positivity and

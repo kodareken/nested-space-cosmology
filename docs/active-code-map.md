@@ -1,5 +1,11 @@
 # Active code and evidence map
 
+`nsc_atlas_volume_feedback.py` evolves five exact spatial harmonics of the
+internal-volume response sourced by the unchanged parent field. It retains
+the nonorthogonal Gram block, checks two integrators and independent work
+quadrature, bounds the future oscillator tail and exposes mass/coupling
+readouts. Its producer saves a compact summary and its plot regenerates.
+
 `nsc_atlas_zero_interface.py` reuses the fixed parent and charged sector
 for tail, thermodynamic, conformal and winding tests. `nsc_atlas_s3_polynomials.py`
 provides exact harmonic projection/moments and verifies the circulation's

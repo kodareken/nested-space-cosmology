@@ -9464,6 +9464,136 @@ shortest wavelength or absolute zero a geometric band endpoint. The
 thermodynamic organization is useful; completing it requires those state,
 scale and interaction laws as well as energy balance.
 
+### 15.17. The inherited wave changes geometry, spectra and coupling
+
+<!-- nsc-claim:inherited-volume-feedback -->
+
+The zero-line calculation acquires a dynamical geometric response without
+another prepared wave. Restore the internal volume already present in
+the action, with its inherited zero displacement and normal velocity.
+The [calculation](../results/summaries/nsc-atlas-volume-feedback-v1.json)
+and [owner](../docs/nsc-atlas-volume-feedback.md) retain the finite source,
+five-mode proof, causal evolution and independent energy check.
+
+**The pressure response is fixed by the same field.** With
+chi=epsilon phi1+O(epsilon^3) and
+s=s_star+epsilon^2 s2+O(epsilon^4), action variation gives
+
+$$
+\ddot s_2+3h\dot s_2-a^{-2}\Delta_\gamma s_2+m_s^2s_2
+=\frac{12\mu_*^2}{2K_s}\phi_1^2,
+\qquad s_2(0)=\dot s_2(0)=0.
+$$
+
+Here K_s=84, m_s^2=2.183708010094 and phi1 is the same signed two-mode
+parent field that supplied circulation, horizon flux and the receiving
+state. Its actual oscillations are resolved. Because the unperturbed
+volume is constant, this leading response is gauge invariant and its
+equation does not require the as-yet unsolved quadratic metric correction.
+Its stress first enters at fourth order, preserving the preceding
+quadratic horizon and light results.
+
+The squared source closes on five spatial harmonics with eigenvalues
+(0,8,8,15,24). Exact polynomial calculus supplies their source coefficients
+and positive Gram matrix; its degree-two cross term is retained. Two
+independent integrators on 0<=Ht<=8 agree to 2.97e-12 in the response
+coefficients. No spatial grid or parameter scan is used.
+
+**A scale-free spectral/coupling correlation follows.** Define
+
+$$
+R_M=\frac{\sqrt{M_1^2-\mu^2}}{\mu},\qquad
+\delta\ln R_M=-\epsilon^2s_2,
+$$
+
+$$
+\delta\ln g_{\rm KK}=-7\epsilon^2s_2
+=7\,\delta\ln R_M.
+$$
+
+The numerator of R_M is the square root of a mass-squared increment;
+it is not the direct frequency difference M1-mu. This relation follows
+from the two inherited volume exponents. Both the unknown absolute action
+normalization and the wave amplitude cancel in its slope. The local
+mass and coupling interpretation belongs to the retained internal
+geometry; no Standard Model interaction has been identified.
+
+At the preceding 300-phase-pass observation event Ht=1.184645324262:
+
+| Coefficient of epsilon^2 | Central observer | Horizon angular mean |
+| --- | --- | --- |
+| Internal-volume displacement s2 | -.003854594815 | -.002358723358 |
+| delta ln R_M | .003854594815 | .002358723358 |
+| delta ln g_KK | .026982163703 | .016511063506 |
+
+The displacement changes sign during the evolution. A positive initial
+source therefore does not imply monotone volume growth or mass fading.
+The current horizon trace is also well defined at this order: shifting
+the horizon acts trivially on constant s_star, and its action on epsilon^2
+s2 is fourth order. The exact 13/12 gauge-gap relation survives.
+
+![Same-source volume response and linked spectra and coupling](figures/nsc-atlas-volume-feedback.png)
+
+**The energy channel retains history.** The induced volume energy obeys
+
+$$
+\frac{dE_s}{dt}=-p_s\frac{d\mathcal V}{dt}
++\int a^3J\dot s_2\,d\Omega_3,
+\qquad J=6\mu_*^2\phi_1^2.
+$$
+
+Independent adaptive integration checks this balance to 2.19e-12. At the
+same observation event, its fourth-order coefficients are
+E_s=4.057422625517, integrated pressure work=6.679745723589 and integrated
+source work=-2.622323098070. The wave excites a quiet geometric degree of
+freedom, with pressure work and return transfer included. This is an
+open-subsystem balance; the full fourth-order matter/metric budget is
+not supplied by this equation alone.
+
+The source's instantaneous algebraic response decays as a^-3, whereas
+the actual volume retains an oscillatory a^-3/2 tail. Analytic future
+coefficient bounds give the asymptotic phase-average diagnostic
+
+$$
+\frac{\langle E_s\rangle_{\rm phase}}{E_\chi(0)}
+=\epsilon^2(0.04005715\ \pm\ 0.00017306).
+$$
+
+The error is the conservative future-tail contribution, with numerical
+solve error checked separately. This phase average is not a finite-time
+thermal average. The associated phase-averaged density has the a^-3
+matter-like scaling, while coherent pressure oscillates; no present-day
+matter fraction is selected.
+
+**Static relaxation supplies an attraction contribution.** On a fixed
+slice the positive volume operator is L_s=-K_s Delta_physical+V''_star.
+Eliminating its static displacement gives
+
+$$
+\Delta E_{\rm static}=-\frac12\langle J,L_s^{-1}J\rangle<0.
+$$
+
+This is a sourced Schur interaction from the declared action. Its local
+real-field quartic coefficient is -36937.4965448063 in classical hats;
+canonical physical normalization multiplies it by the still unselected
+g_grav. The finite-gradient kernel, rather than that local limit, is
+used for the static comparisons.
+
+[Galley, equations1--4 and21--26](https://arxiv.org/html/1210.2745v2)
+supplies causal initial-value elimination and its energy-accounting
+method. The zero-data retarded response here is not replaced by a
+static minimizer. [Lennon, section2](https://arxiv.org/html/2112.14263v1)
+supplies a static charged/neutral-field comparison, not a bound object
+for this source. The metastable vacuum, gauge constraints and full
+gravity remain relevant to any localization claim.
+
+This establishes the next connected chain: inherited wave, internal-volume
+response, linked local spectra/coupling, and controlled retained energy.
+It remains charge-even and selects neither a baryon asymmetry nor an SI
+scale. The next physical closure is its cubic matter and quadratic metric
+response on the same preparation, before a concentration or daughter
+continuation is inferred.
+
 ## VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
@@ -13699,7 +13829,7 @@ Each calculation retains its own domain; arrows do not declare questions solved.
 <!-- nsc-source-catalog:start -->
 ## Appendix C. Complete arXiv source route index
 
-The index contains 325 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
+The index contains 327 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
 
 A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
 
@@ -13767,6 +13897,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Local fluid/gravity completion, 30 October 2026 | [1103.3022](https://arxiv.org/abs/1103.3022v2) |
 | The owned gravitational spectral profile, 18 October 2026 | [1203.2034](https://arxiv.org/abs/1203.2034v2), [1410.7999](https://arxiv.org/abs/1410.7999v2) |
 | Connected flow, horizon transfer and observer geometry, 30 October 2026 | [1205.5600](https://arxiv.org/abs/1205.5600), [1403.2757](https://arxiv.org/abs/1403.2757v3), [1501.06570](https://arxiv.org/abs/1501.06570v8), [1807.09409](https://arxiv.org/abs/1807.09409) |
+| Causal volume response and static comparison, 30 October 2026 | [1210.2745](https://arxiv.org/abs/1210.2745v2), [2112.14263](https://arxiv.org/abs/2112.14263v1) |
 | Offset, conformal zero and charge-sensitive transport, 30 October 2026 | [1311.0700](https://arxiv.org/abs/1311.0700v2), [1407.8293 †](https://arxiv.org/abs/1407.8293v1), [1604.08032](https://arxiv.org/abs/1604.08032v2), [1911.12059](https://arxiv.org/abs/1911.12059v1), [hep-ph/9406345 †](https://arxiv.org/abs/hep-ph/9406345v1) |
 | Spherical energy and the book's geometric hypothesis — 27 October 2026 | [1503.06705](https://arxiv.org/abs/1503.06705v2) |
 | Compact-seed nonlinear continuation, 25 October 2026 | [1504.05968](https://arxiv.org/abs/1504.05968), [gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015) |
