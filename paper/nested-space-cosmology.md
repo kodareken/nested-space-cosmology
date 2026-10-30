@@ -5508,6 +5508,166 @@ rather than substitutes for those maps. At exponential boundaries, logarithms,
 dimensionless ratios and compatible regional charts preserve the calculation;
 a clamp or coordinate limit is not promoted to a physical endpoint.
 
+### 13.30. Constructing the pen: a phase history on the sphere
+
+<!-- nsc-claim:constructed-pen-geometry -->
+
+Evidence: [geometry and finite measurements](../results/summaries/nsc-atlas-pen-geometry-v1.json),
+[construction and proofs](../docs/nsc-atlas-pen-geometry.md),
+and [independent geometric and numerical checks](../tests/test_nsc_atlas_pen_geometry.py).
+
+The next step constructs a candidate from two clocks already present in the
+(12,2) action. Near its late vacuum, the volume displacement and canonical
+scalar displacement are independent linear modes. Removing their common
+Hubble damping by multiplying by $a^{3/2}$ gives
+
+$$
+\nu_s^2=\frac{V_{ss}}{84}-\frac{3V_*}{4},\qquad
+\nu_\chi^2=\omega_0^2e^{-12s_*}-\frac{3V_*}{4}.
+$$
+
+One pass is defined as a scalar-mode period, sampling the volume phase.
+For x=exp(-2s_star), stationarity gives the exact polynomial
+25x^6-140x+112=0. Reduction by that polynomial yields
+
+$$
+\delta=2\pi\frac{\nu_s}{\nu_\chi}
+=2\pi\sqrt{\frac{475x-468}{32\omega_0^2+75x-84}}
+=0.360395008387051
+$$
+
+for the retained parent coupling omega0=20. The polynomial is Eisenstein
+at7, and the squared frequency ratio is a nonconstant rational fractional-linear
+function of its irrational root; the rotation is therefore irrational.
+The offset is derived conditional on the supplied coupling, not fitted.
+Mapping the sampled phase to a spatial circle is the declared geometric
+step. It is a circle fiber of the phase map, not the continuous trajectory
+of a particle. Pass k draws
+
+$$
+X(u,v)=R(\sin u\cos v,\sin u\sin v,\cos u),\qquad
+v_k=k\delta.
+$$
+
+Circle orientations are read modulo pi. The independent curve parameter u
+and plane orientation v give |X|=R and
+area Jacobian $R^2|\sin u|$. The continuous family is the sphere; the
+irrational sequence has the same dense closure. Finite curves have zero
+area. A radial coordinate would be needed to fill a ball.
+
+![Constructed pen and its computed readouts](figures/nsc-atlas-pen-geometry.png)
+
+*The same clock-defined circle history supplies coverage, a signed phase moment
+and a quadratic probe. The orange region retains earlier ink. Assigned
+exponential refinement and achieved angular coverage are measured separately;
+no curve or parameter is fitted to the targets.*
+
+Give pass k the angular footprint $\epsilon_k=\Omega^{-(k+1)/p}$, with
+p=1 for the frequency-scale reading and p=2 for the requested square-root
+reading. Old ink persists. The Parke radius can set R, but it cancels from
+these angular fractions. The maximum distance to the first n circle planes is
+
+$$
+h_n=\frac{\max_i g_i}{2}\geq\frac{\pi}{2n},
+$$
+
+where the orientation gaps sum to pi. This is an optimistic resolution
+bound because each circle itself was drawn continuously. At 100 passes,
+log(1/h_n)=3.7411273; at 200, it is 3.9020327. Their logarithmic misses
+from 136.84--138.26 are about -97.29% and -97.18%, respectively, using
+the upper endpoint. The assigned refinement is 137.9540195 at n=100,p=1
+or n=200,p=2, but is not achieved by those finite drawings. Reaching that
+uniform angular resolution requires at least about $1.285\times10^{60}$
+independent circles. Irrational rotation also has no exact finite return.
+
+The missing history link is a stopping event or a rule that branches each
+pass into enough independently drawn circles. The present one-circle-per-pass
+map selects neither 100 nor 200 as a physical endpoint.
+
+The same late-vacuum action gives physical expansion of .0688557421
+e-folds per scalar cycle: 6.8855742 at100 cycles and13.7711484 at200.
+A phase cycle is therefore not automatically one Omega inheritance step.
+The existing alternative source members omega0=2000 and10^9 give different
+offsets, .00360346331762 and7.20692653791e-9; no member is substituted
+to improve a comparison. Formation and the physical stop event remain open.
+
+The bound is constructively sharp: M equally spaced meridians rotated
+by the accumulated phase have fill distance pi/(2M). Taking
+M=ceil(pi/(2*epsilon)) achieves the requested resolution. A branching
+refinement can therefore work geometrically, but its many-circle history
+and physical stopping event must be supplied by a transition law.
+
+For a precise offset readout, let $z_k=e^{ik\delta}$ mark an oriented
+equatorial point, and let a negative mark be displaced to the next pass.
+Their normalized vector moment telescopes:
+
+$$
+D_n=\frac{1}{2n}\sum_{k=0}^{n-1}(z_k-z_{k+1})
+=\frac{1-e^{in\delta}}{2n},\qquad
+|D_n|=\frac{|\sin(n\delta/2)|}{n}.
+$$
+
+It gives .00737800095 at 100 passes and .00498029284 at 200, exceeding
+6.1e-10 by about $1.210\times10^9$% and $8.164\times10^8$% if identified
+with that target. Each pass still has one positive and one negative scalar
+charge: net signed count is exactly zero. The irrationality gives a nonzero
+endpoint dipole, not charge production. The tiny offset for the separately
+supplied frequency10^9 member gives residual3.60346e-9 at100 cycles; its
+smallness inherits that large input frequency and still is not net charge.
+
+The missing asymmetry link is the physical charge-producing process and
+its baryon/photon observable.
+
+For the retained ink, union the open geodesic bands of widths epsilon_k.
+At $z=|\cos\theta|$, calculate their union longitude length L_n(z) on
+the orientation circle of length pi. The drawn fraction is
+
+$$
+f_n=\int_0^1\frac{L_n(z)}{\pi}\,dz.
+$$
+
+Monotone quadrature and a geometric tail bound give the following finite
+measurements and a deliberately explicit binary area assignment:
+
+| Drawing | Drawn fraction | Assigned (vacuum, clustering, baryon) fractions | % misses from (.685,.265,.049) |
+| --- | ---: | --- | --- |
+| 100, p=1 | .29673 | (.70327,0,.29673) | (+2.67,-100,+505.58) |
+| 200, p=2 | .62898 | (.37102,0,.62898) | (-45.84,-100,+1183.64) |
+
+The drawn-area enclosures are [.2966405,.2968324] and [.6289221,.6290423].
+At constant wall tension these are also fractions of the surface energy.
+Cosmological source identification remains additional physics. An outside
+clustering share chi would give ((1-f)(1-chi),(1-f)chi,f); chi is not selected
+and cannot repair the drawn/baryon fraction under this assignment.
+
+There is also an exact fine-scale result. For p=1 the infinite ink union
+is open and dense, yet its total area is at most $1/(\Omega-1)<1$.
+Its closed complement has empty interior and area at least .6636478352.
+Being arbitrarily close to a drawn line is therefore compatible with a
+positive-area unresolved complement. Re-resolving every line at the latest
+width instead gives area about $1.223\times10^{-58}$ at 100 passes.
+That small number and its logarithm are retained; its complement is kept
+as 1-f rather than rounded to one.
+
+Finally use the same persistent drawn set for one declared quadratic probe:
+
+$$
+E_n(\mathbf{u})=\frac{\gamma}{2}\int_{\mathcal{D}_n}(\mathbf{u}\cdot X/R)^2
+\frac{dA}{4\pi R^2},\qquad
+g_z(n)=\gamma\int_0^1z^2\frac{L_n(z)}{\pi}\,dz.
+$$
+
+For the p=1 history the resolved force is $F_z=-g_z(n)u_z$. The common bare gamma cancels,
+giving $g_z(2)/g_z(1)=1.048777$, enclosed by [1.04779,1.04980], and
+$g_z(100)/g_z(1)=1.097855$. Total resolved-plus-unresolved coupling remains
+gamma/3. Further growth between 100 and 200 passes is at most
+$3.08\times10^{-60}$ in relative terms. This constructs a depth-dependent
+effective response. Its identification with fundamental interactions,
+the footprint rule and a physical formation history remain open. The earlier
+auxiliary-wheel choice delta=2*pi*(sqrt(6)-2), with its different numerical
+readouts, is preserved as a comparison. It is superseded here by the
+normal-mode offset from the fixed source action.
+
 ## IV. Concentration, conservation and the surrounding reservoir
 
 A dark-matter account needs a physical source that forms structure and accounts for its surroundings. We first calculate admissible scalar concentrations and their conserved supply, then their persistence and spatial compensation, and finally formation from compact disturbances. The route preserves the inherited parent instead of adding an independent halo mass. Different frequencies and preparations are explicit members of the family; they are not exchanged between examples by a change of units.

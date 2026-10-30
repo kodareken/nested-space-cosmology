@@ -1,0 +1,497 @@
+{
+  "auxiliary_phase_control": {
+    "construction": {
+      "Parke_radius": 1.2126626450077351,
+      "clock": null,
+      "d": 12,
+      "delta": 2.8242273475831947,
+      "delta_exact": "2*pi*(sqrt(6)-2)",
+      "drawing": "Pass k draws the complete great circle at v=k*delta mod pi; independent u draws along that circle.",
+      "j": 2,
+      "offset_derived_from_fixed_action": false,
+      "omega": 3.973074368754331,
+      "persistence": "Previously drawn bands remain present. Re-resolving all curves at the latest width is a separate coverage diagnostic.",
+      "phase_rule": "Two auxiliary phase circles have radii sqrt(d),sqrt(j) and equal arc speeds.",
+      "phase_to_circle_embedding_is_declared": true,
+      "phase_turns_exact": "sqrt(6)-2",
+      "refinement": "Pass k has angular resolution footprint Omega^(-(k+1)/p), p=1 or2; initial angular unit is one radian.",
+      "sphere": "X(u,v)=R*(sin(u)*cos(v),sin(u)*sin(v),cos(u))"
+    },
+    "persistent_coverage": [
+      {
+        "area_enclosure": [
+          0.2896500929786351,
+          0.289841976208298
+        ],
+        "area_fraction": 0.2897437265619326,
+        "conditional_binary_to_three_assignment": {
+          "Omega_Lambda": 0.7102562734380674,
+          "Omega_b": 0.2897437265619326,
+          "Omega_c": 0.0,
+          "percent_miss": {
+            "Omega_Lambda": 3.687047217236117,
+            "Omega_b": 491.3137276774134,
+            "Omega_c": -100.0
+          },
+          "rule": "Unresolved area assigned to vacuum; resolved area to baryons; no distinct clustering category. This is a control assignment, not a stress derivation."
+        },
+        "general_three_way_family": "((1-f)*(1-chi), (1-f)*chi, f), with unselected outside clustering fraction chi",
+        "omitted_area_bound": 5.527308808358008e-12,
+        "passes": 100,
+        "power_divisor": 1,
+        "quadrature_error_indicators": [
+          2.7617265685364564e-07,
+          2.442392934018246e-07
+        ],
+        "quadrature_mesh": 4096,
+        "quadrature_warnings": [],
+        "retained_bands": 18,
+        "rounding_allowance": 1e-08,
+        "undrawn_enclosure": [
+          0.710158023791702,
+          0.7103499070213649
+        ],
+        "undrawn_fraction": 0.7102562734380674,
+        "z_probe_enclosure": [
+          0.13103206499053188,
+          0.13127622562105917
+        ],
+        "z_probe_moment": 0.13115196573414062
+      },
+      {
+        "area_enclosure": [
+          0.6068603141824939,
+          0.606986893985749
+        ],
+        "area_fraction": 0.6069233904865017,
+        "conditional_binary_to_three_assignment": {
+          "Omega_Lambda": 0.3930766095134983,
+          "Omega_b": 0.6069233904865017,
+          "Omega_c": 0.0,
+          "percent_miss": {
+            "Omega_Lambda": -42.616553355693675,
+            "Omega_b": 1138.6191642581666,
+            "Omega_c": -100.0
+          },
+          "rule": "Unresolved area assigned to vacuum; resolved area to baryons; no distinct clustering category. This is a control assignment, not a stress derivation."
+        },
+        "general_three_way_family": "((1-f)*(1-chi), (1-f)*chi, f), with unselected outside clustering fraction chi",
+        "omitted_area_bound": 8.300312079803207e-12,
+        "passes": 200,
+        "power_divisor": 2,
+        "quadrature_error_indicators": [
+          2.908201205595191e-07,
+          6.59135660774357e-08
+        ],
+        "quadrature_mesh": 4096,
+        "quadrature_warnings": [],
+        "retained_bands": 37,
+        "rounding_allowance": 1e-08,
+        "undrawn_enclosure": [
+          0.393013106014251,
+          0.39313968581750613
+        ],
+        "undrawn_fraction": 0.3930766095134983,
+        "z_probe_enclosure": [
+          0.24917668050077935,
+          0.24942084113407964
+        ],
+        "z_probe_moment": 0.2492988151912215
+      }
+    ],
+    "probe_ratio_2_over_1": 1.0301320495905393,
+    "target_comparisons": [
+      {
+        "achieved_fill_distance": 0.016030203238107887,
+        "achieved_log_miss_percent": [
+          -96.979479221111,
+          -97.01050149440785
+        ],
+        "achieved_log_uniform_resolution": 4.133280633831698,
+        "current_width_area": 1.222729995492206e-58,
+        "current_width_undrawn_expression": "1 - 1.222729995492e-58",
+        "dipole_miss_percent_if_identified_with_eta": 261666086.80308667,
+        "dipole_residual": 0.0015961637394988285,
+        "late_vacuum_log_expansion": null,
+        "log_current_width_area": -133.34884933361104,
+        "net_scalar_signed_count": 0,
+        "passes": 100,
+        "power_divisor": 1,
+        "prescribed_log_resolution": 137.95401951959914,
+        "required_log_circle_count_lower_bound": 138.4056022248886,
+        "residual_lower_bound": 4.082057734575215e-05
+      },
+      {
+        "achieved_fill_distance": 0.014410823860458777,
+        "achieved_log_miss_percent": [
+          -96.90165470785114,
+          -96.93347627818855
+        ],
+        "achieved_log_uniform_resolution": 4.239775697776504,
+        "current_width_area": 2.445459990984412e-58,
+        "current_width_undrawn_expression": "1 - 2.445459990984e-58",
+        "dipole_miss_percent_if_identified_with_eta": 258311295.7838817,
+        "dipole_residual": 0.0015756995142816783,
+        "late_vacuum_log_expansion": null,
+        "log_current_width_area": -132.6557021530511,
+        "net_scalar_signed_count": 0,
+        "passes": 200,
+        "power_divisor": 2,
+        "prescribed_log_resolution": 137.95401951959914,
+        "required_log_circle_count_lower_bound": 138.4056022248886,
+        "residual_lower_bound": 1.0205144336438038e-05
+      },
+      {
+        "achieved_fill_distance": 0.014410823860458777,
+        "achieved_log_miss_percent": [
+          -96.90165470785114,
+          -96.93347627818855
+        ],
+        "achieved_log_uniform_resolution": 4.239775697776504,
+        "current_width_area": 2.9901372837527406e-118,
+        "current_width_undrawn_expression": "1 - 2.990137283753e-118",
+        "dipole_miss_percent_if_identified_with_eta": 258311295.7838817,
+        "dipole_residual": 0.0015756995142816783,
+        "late_vacuum_log_expansion": null,
+        "log_current_width_area": -270.60972167265027,
+        "net_scalar_signed_count": 0,
+        "passes": 200,
+        "power_divisor": 1,
+        "prescribed_log_resolution": 275.9080390391983,
+        "required_log_circle_count_lower_bound": 276.35962174448775,
+        "residual_lower_bound": 1.0205144336438038e-05
+      }
+    ]
+  },
+  "construction": {
+    "Parke_radius": 1.2126626450077351,
+    "clock": {
+      "H_star": 0.2714056154003984,
+      "delta": 0.3603950083870508,
+      "formula": "delta=2*pi*sqrt((475*x-468)/(32*omega0^2+75*x-84)); 25*x^6-140*x+112=0 at the minimum",
+      "log_expansion_per_scalar_cycle": 0.06885574214497671,
+      "nu_scalar": 24.76615198452588,
+      "nu_volume": 1.4205529704780784,
+      "omega0": 20.0,
+      "phase_turns": 0.05735864705044421,
+      "regime": "Linear perturbations about the constant late vacuum; damping removed by a^(3/2). Not the nonlinear formation history.",
+      "s_star": -0.035646782552940987
+    },
+    "d": 12,
+    "delta": 0.3603950083870508,
+    "delta_exact": "2*pi*sqrt((475*x-468)/(32*omega0^2+75*x-84))",
+    "drawing": "Pass k draws the complete great circle at v=k*delta mod pi; independent u draws along that circle.",
+    "j": 2,
+    "offset_derived_from_fixed_action": true,
+    "omega": 3.973074368754331,
+    "persistence": "Previously drawn bands remain present. Re-resolving all curves at the latest width is a separate coverage diagnostic.",
+    "phase_rule": "Advance by the volume-mode phase during one scalar-mode period of the fixed late-vacuum action.",
+    "phase_to_circle_embedding_is_declared": true,
+    "phase_turns_exact": "sqrt((475*x-468)/(32*omega0^2+75*x-84))",
+    "refinement": "Pass k has angular resolution footprint Omega^(-(k+1)/p), p=1 or2; initial angular unit is one radian.",
+    "sphere": "X(u,v)=R*(sin(u)*cos(v),sin(u)*sin(v),cos(u))"
+  },
+  "exact_results": {
+    "asymmetry_bound": "Irrationality follows from the Eisenstein-7 minimum polynomial and its nonconstant rational frequency-square ratio.",
+    "charge": "Each pass has one positive and one negative scalar charge: total zero for every delta.",
+    "coverage_obstruction": "n*Omega^(-n/p)<=p/(e*ln(Omega))<pi/2, so epsilon_n<h_n at every positive n",
+    "dense_sphere_closure": true,
+    "exact_finite_return": false,
+    "exponentially_refining_one_circle_per_pass_covers_sphere": false,
+    "fill_distance": "h_n=max angular gap /2 >=pi/(2n)",
+    "finite_ideal_line_area": 0,
+    "paired_residual": "sum[z_k-z_(k+1)]/(2n)=(1-exp(i*n*delta))/(2n)",
+    "persistent_complement": "Closed, empty interior, but positive area for p=1: total band area <=sum Omega^-k=1/(Omega-1)<1.",
+    "persistent_ink_is_open_dense": true,
+    "persistent_undrawn_area_lower_bound_p1": 0.6636478352140974,
+    "rank": "|dX/du cross dX/dv|=R^2*abs(sin(u)); rank2 away from coordinate poles",
+    "sharp_constructive_refinement": "M=ceil(pi/(2*epsilon)) equally spaced meridians, rotated by n*delta, achieve h=pi/(2M)<=epsilon. This requires branching many circles per level and does not select the final level."
+  },
+  "input_sha256": {
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+    "results/summaries/nsc-atlas-inherited-matter-forecast-v1.json": "f2909df91b5f538db1483f7c0cb284e16c835f77309a37c980b9f62c57b49e9d",
+    "results/summaries/nsc-atlas-parent-source-v1.json": "06d2f9a5107ff9b12fe764ab633b89189a8a05d712ed4b5b9140272f4b19db5f",
+    "results/summaries/nsc-atlas-parent-volume-selector-v1.json": "8f2b2624cc53fcb901fd7b34b3b55433578f9eed52a3554a388ac4da5d904d43",
+    "results/summaries/nsc-atlas-parke-bubble-v1.json": "d4dbdea8776340a65393b77e2b78085c89d664065f4fd62b4db4ec8aec8bede2"
+  },
+  "missing_links": [
+    "History: transport the fixed-action linear clocks through formation and nesting; the source frequency is supplied and the phase-to-drawing map is declared.",
+    "History: derive a stopping event or branching circles-per-pass rule; irrational rotation alone selects no finite depth.",
+    "Asymmetry: identify a baryon/photon observable with a sourced charge-producing process; a dipole residual is not net charge.",
+    "Fractions: derive footprint/energy weights and the outside clustering partition; binary area alone supplies two measures.",
+    "Forces: derive the physical probe coupling to this geometric action before identifying fundamental interactions."
+  ],
+  "new_spacetime_evolutions": 0,
+  "no_imported_physical_constants": true,
+  "no_target_fit": true,
+  "persistent_coverage": [
+    {
+      "area_enclosure": [
+        0.2966404586460124,
+        0.29683234198429936
+      ],
+      "area_fraction": 0.29673432402110383,
+      "conditional_binary_to_three_assignment": {
+        "Omega_Lambda": 0.7032656759788962,
+        "Omega_b": 0.29673432402110383,
+        "Omega_c": 0.0,
+        "percent_miss": {
+          "Omega_Lambda": 2.6665220407147583,
+          "Omega_b": 505.5802531042935,
+          "Omega_c": -100.0
+        },
+        "rule": "Unresolved area assigned to vacuum; resolved area to baryons; no distinct clustering category. This is a control assignment, not a stress derivation."
+      },
+      "general_three_way_family": "((1-f)*(1-chi), (1-f)*chi, f), with unselected outside clustering fraction chi",
+      "omitted_area_bound": 5.527308808358008e-12,
+      "passes": 100,
+      "power_divisor": 1,
+      "quadrature_error_indicators": [
+        2.608512779894952e-06,
+        1.1213966870371461e-07
+      ],
+      "quadrature_mesh": 4096,
+      "quadrature_warnings": [
+        "The occurrence of roundoff error is detected, which prevents \n  the requested tolerance from being achieved.  The error may be \n  underestimated."
+      ],
+      "retained_bands": 18,
+      "rounding_allowance": 1e-08,
+      "undrawn_enclosure": [
+        0.7031676580157007,
+        0.7033595413539876
+      ],
+      "undrawn_fraction": 0.7032656759788962,
+      "z_probe_enclosure": [
+        0.13376130462530056,
+        0.13400546525582785
+      ],
+      "z_probe_moment": 0.13388142875062337
+    },
+    {
+      "area_enclosure": [
+        0.6289221160762111,
+        0.629042291972199
+      ],
+      "area_fraction": 0.6289828797581846,
+      "conditional_binary_to_three_assignment": {
+        "Omega_Lambda": 0.37101712024181543,
+        "Omega_b": 0.6289828797581846,
+        "Omega_c": 0.0,
+        "percent_miss": {
+          "Omega_Lambda": -45.83691675301965,
+          "Omega_b": 1183.638530118744,
+          "Omega_c": -100.0
+        },
+        "rule": "Unresolved area assigned to vacuum; resolved area to baryons; no distinct clustering category. This is a control assignment, not a stress derivation."
+      },
+      "general_three_way_family": "((1-f)*(1-chi), (1-f)*chi, f), with unselected outside clustering fraction chi",
+      "omitted_area_bound": 8.300312079803207e-12,
+      "passes": 200,
+      "power_divisor": 2,
+      "quadrature_error_indicators": [
+        5.508766247939176e-07,
+        2.0540089326614996e-07
+      ],
+      "quadrature_mesh": 4096,
+      "quadrature_warnings": [
+        "The occurrence of roundoff error is detected, which prevents \n  the requested tolerance from being achieved.  The error may be \n  underestimated."
+      ],
+      "retained_bands": 37,
+      "rounding_allowance": 1e-08,
+      "undrawn_enclosure": [
+        0.37095770802780104,
+        0.37107788392378893
+      ],
+      "undrawn_fraction": 0.37101712024181543,
+      "z_probe_enclosure": [
+        0.2545090689108544,
+        0.2547532295441547
+      ],
+      "z_probe_moment": 0.2546316564973694
+    }
+  ],
+  "probe": {
+    "action": "E_n(u)=gamma/2 * integral_drawn (u dot X/R)^2 dA/(4*pi*R^2)",
+    "coupling": "g_z(n)=gamma*integral_0^1 z^2*covered_longitude_fraction(z) dz",
+    "depth_1": {
+      "area_enclosure": [
+        0.24894493692825637,
+        0.24914997803655778
+      ],
+      "area_fraction": 0.24904518973412693,
+      "omitted_area_bound": 0.0,
+      "passes": 1,
+      "power_divisor": 1,
+      "quadrature_error_indicators": [
+        5.485415649486569e-09,
+        6.395029394923313e-09
+      ],
+      "quadrature_mesh": 4096,
+      "quadrature_warnings": [],
+      "retained_bands": 1,
+      "rounding_allowance": 1e-08,
+      "undrawn_enclosure": [
+        0.7508500219634422,
+        0.7510550630717436
+      ],
+      "undrawn_fraction": 0.7509548102658731,
+      "z_probe_enclosure": [
+        0.12182820886609592,
+        0.12207236949109591
+      ],
+      "z_probe_moment": 0.1219481522106007
+    },
+    "depth_100_over_1": 1.0978553289089508,
+    "depth_2": {
+      "area_enclosure": [
+        0.28021737146559644,
+        0.28041256641622053
+      ],
+      "area_fraction": 0.28031270875358366,
+      "omitted_area_bound": 0.0,
+      "passes": 2,
+      "power_divisor": 1,
+      "quadrature_error_indicators": [
+        1.4140714016397382e-08,
+        1.8217052702440562e-07
+      ],
+      "quadrature_mesh": 4096,
+      "quadrature_warnings": [],
+      "retained_bands": 2,
+      "rounding_allowance": 1e-08,
+      "undrawn_enclosure": [
+        0.7195874335837795,
+        0.7197826285344036
+      ],
+      "undrawn_fraction": 0.7196872912464163,
+      "z_probe_enclosure": [
+        0.12777645229127424,
+        0.12802061291627423
+      ],
+      "z_probe_moment": 0.12789640309749367
+    },
+    "depth_200_over_100_expression": "1 <= ratio <= 1 + bound",
+    "depth_200_over_100_increment_bound": 3.0746401740363884e-60,
+    "fundamental_force_identification_derived": false,
+    "ratio_depth_2_over_1": 1.0487768841368663,
+    "ratio_enclosure": [
+      1.0477932627859154,
+      1.0497954302692434
+    ],
+    "total_inside_plus_outside_z_coupling": "gamma/3 at every depth"
+  },
+  "retained_frequency_member_controls": [
+    {
+      "H_star": 0.2714056154003984,
+      "delta": 0.3603950083870508,
+      "formula": "delta=2*pi*sqrt((475*x-468)/(32*omega0^2+75*x-84)); 25*x^6-140*x+112=0 at the minimum",
+      "log_expansion_100": 6.885574214497671,
+      "log_expansion_per_scalar_cycle": 0.06885574214497671,
+      "nu_scalar": 24.76615198452588,
+      "nu_volume": 1.4205529704780784,
+      "omega0": 20,
+      "phase_turns": 0.05735864705044421,
+      "regime": "Linear perturbations about the constant late vacuum; damping removed by a^(3/2). Not the nonlinear formation history.",
+      "residual_100": 0.007378000952931324,
+      "residual_200": 0.0049802928419767625,
+      "s_star": -0.035646782552940987
+    },
+    {
+      "H_star": 0.2714056154003984,
+      "delta": 0.0036034633176249115,
+      "formula": "delta=2*pi*sqrt((475*x-468)/(32*omega0^2+75*x-84)); 25*x^6-140*x+112=0 at the minimum",
+      "log_expansion_100": 0.06884644216847546,
+      "log_expansion_per_scalar_cycle": 0.0006884644216847547,
+      "nu_scalar": 2476.949746795578,
+      "nu_volume": 1.4205529704780784,
+      "omega0": 2000,
+      "phase_turns": 0.0005735089992503252,
+      "regime": "Linear perturbations about the constant late vacuum; damping removed by a^(3/2). Not the nonlinear formation history.",
+      "residual_100": 0.0017919993890081407,
+      "residual_200": 0.0017629917146908842,
+      "s_star": -0.035646782552940987
+    },
+    {
+      "H_star": 0.2714056154003984,
+      "delta": 7.206926537906564e-09,
+      "formula": "delta=2*pi*sqrt((475*x-468)/(32*omega0^2+75*x-84)); 25*x^6-140*x+112=0 at the minimum",
+      "log_expansion_100": 1.3769288247714648e-07,
+      "log_expansion_per_scalar_cycle": 1.3769288247714648e-09,
+      "nu_scalar": 1238474890.1257493,
+      "nu_volume": 1.4205529704780784,
+      "omega0": 1000000000,
+      "phase_turns": 1.1470179830079895e-09,
+      "regime": "Linear perturbations about the constant late vacuum; damping removed by a^(3/2). Not the nonlinear formation history.",
+      "residual_100": 3.6034632689532044e-09,
+      "residual_200": 3.6034632689529703e-09,
+      "s_star": -0.035646782552940987
+    }
+  ],
+  "schema": "nsc-atlas-pen-geometry-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_pen_geometry.py": "bbfece84336af845eefc61b3197eed5036271642d9c799eba88747bd1c0f83ec",
+    "src/recursive_horizons/nsc_atlas_pen_geometry.py": "d234827c4ddb131a4adcaaa03a10572b0bf69627319005c9564bcc7e0080a743"
+  },
+  "target_comparisons": [
+    {
+      "achieved_fill_distance": 0.023727339593804686,
+      "achieved_log_miss_percent": [
+        -97.2660572008681,
+        -97.29413617363511
+      ],
+      "achieved_log_uniform_resolution": 3.741127326332086,
+      "current_width_area": 1.222729995492206e-58,
+      "current_width_undrawn_expression": "1 - 1.222729995492e-58",
+      "dipole_miss_percent_if_identified_with_eta": 1209508252.9395614,
+      "dipole_residual": 0.007378000952931324,
+      "late_vacuum_log_expansion": 6.885574214497671,
+      "log_current_width_area": -133.34884933361104,
+      "net_scalar_signed_count": 0,
+      "passes": 100,
+      "power_divisor": 1,
+      "prescribed_log_resolution": 137.95401951959914,
+      "required_log_circle_count_lower_bound": 138.4056022248886,
+      "residual_lower_bound": null
+    },
+    {
+      "achieved_fill_distance": 0.020200807834577006,
+      "achieved_log_miss_percent": [
+        -97.14847070771421,
+        -97.17775735312897
+      ],
+      "achieved_log_uniform_resolution": 3.902032683563886,
+      "current_width_area": 2.445459990984412e-58,
+      "current_width_undrawn_expression": "1 - 2.445459990984e-58",
+      "dipole_miss_percent_if_identified_with_eta": 816441349.5043874,
+      "dipole_residual": 0.0049802928419767625,
+      "late_vacuum_log_expansion": 13.771148428995343,
+      "log_current_width_area": -132.6557021530511,
+      "net_scalar_signed_count": 0,
+      "passes": 200,
+      "power_divisor": 2,
+      "prescribed_log_resolution": 137.95401951959914,
+      "required_log_circle_count_lower_bound": 138.4056022248886,
+      "residual_lower_bound": null
+    },
+    {
+      "achieved_fill_distance": 0.020200807834577006,
+      "achieved_log_miss_percent": [
+        -97.14847070771421,
+        -97.17775735312897
+      ],
+      "achieved_log_uniform_resolution": 3.902032683563886,
+      "current_width_area": 2.9901372837527406e-118,
+      "current_width_undrawn_expression": "1 - 2.990137283753e-118",
+      "dipole_miss_percent_if_identified_with_eta": 816441349.5043874,
+      "dipole_residual": 0.0049802928419767625,
+      "late_vacuum_log_expansion": 13.771148428995343,
+      "log_current_width_area": -270.60972167265027,
+      "net_scalar_signed_count": 0,
+      "passes": 200,
+      "power_divisor": 1,
+      "prescribed_log_resolution": 275.9080390391983,
+      "required_log_circle_count_lower_bound": 276.35962174448775,
+      "residual_lower_bound": null
+    }
+  ]
+}

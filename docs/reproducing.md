@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+## Constructed pen geometry
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_pen_geometry.py
+python scripts/run_python.py scripts/check_nsc_atlas_pen_geometry.py --output .build/pen-geometry-reproduced.json
+python scripts/run_python.py scripts/plot_nsc_atlas_pen_geometry.py
+```
+
+The fixed late-vacuum mode clocks drive a declared circle embedding and
+footprint rule. The auxiliary-wheel version remains a control. No target
+selects the source-frequency member or a geometric parameter.
+
 ## Three dimensionless targets
 
 ```powershell

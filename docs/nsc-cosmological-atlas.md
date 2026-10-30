@@ -24,6 +24,14 @@ SI anchor or target-selected parameters. Douglas's
 [organizing picture and exponential-boundary method](../THEORY.md#douglass-organizing-picture-30-october-2026)
 are saved as the research direction.
 
+The next [constructed pen geometry](nsc-atlas-pen-geometry.md) now supplies
+an explicit two-angle sphere map, an irrational phase increment derived
+from the fixed late-vacuum action's normal modes,
+finite coverage, a residual and one quadratic probe on the same drawn set.
+It computes both 100- and 200-pass cases without fitting. The mapping of
+phase clocks to the drawing, physical stopping history and identification of geometric measures with
+cosmological sources remain explicit links to derive.
+
 ### Three numerical targets from the existing equations
 
 The [retained calculation](../results/summaries/nsc-atlas-three-targets-v1.json)

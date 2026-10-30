@@ -1,10 +1,10 @@
 {
-  "bytes": 15271208,
+  "bytes": 15726406,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "2c1880e9998482bf6161d1df4f24f78e74e353bdd7129a7cd12f40dd7bca4103",
+  "metadata_sha256": "695b0f9b3b8a1b3be026ffce1b5a042e3f64def98c9ff347f0ea476f483844c3",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 192,
-  "pdf_sha256": "2da3e0ab92e25387724e8ca748f9184fcbeda43452435a7df36d549541856d1c",
+  "pages": 195,
+  "pdf_sha256": "b1961f928f4a5aabc52e02b45d1027662c5abbeb635781c540255a034d3b292a",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -174,6 +174,10 @@
     {
       "path": "paper/figures/geometry-overview.png",
       "sha256": "d533d0e5e9cb30025649bcb6b2c597d5b54ce42a421eb483ccf0a86f6730fa5e"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-pen-geometry.png",
+      "sha256": "ff20f11f64ff1d99612c7f4e35c460515abb506fa92f5373b4216ed542de31e3"
     },
     {
       "path": "paper/finite-regeneration-manifest.json",
@@ -784,6 +788,10 @@
       "sha256": "3664f43b982b6184e36f88e3ecdcceed4db2e1b4ad905c80b39f22db166cdea7"
     },
     {
+      "path": "results/summaries/nsc-atlas-pen-geometry-v1.json",
+      "sha256": "6b32f1bd2f70f7275610c156ca2673c75fc79e0fe89c7df452120973927f2ba7"
+    },
+    {
       "path": "results/summaries/nsc-atlas-radar-inverse-v1.json",
       "sha256": "a91459e69e5cfab2c273da1c7a2d6d979f06fac3809c2ef7f89f42cb4b05938f"
     },
@@ -933,6 +941,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "ec79344b309c2668feb47e913514bbe8bad492d379704b998bd57de894f8282c",
-  "version": "working-2026-10-30.3"
+  "source_sha256": "1bd7534990c9d82fe6ab5eab6ef6168e951ea2b0bda842b0e5b8bd71f9bddafc",
+  "version": "working-2026-10-30.4"
 }

@@ -663,6 +663,11 @@
       "section": "13.29",
       "status": "derived",
       "owner": "docs/nsc-cosmological-atlas.md"
+    },
+    "constructed-pen-geometry": {
+      "section": "13.30",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-pen-geometry.md"
     }
   },
   "findings": [

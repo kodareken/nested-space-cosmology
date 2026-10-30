@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [pen geometry](nsc-atlas-pen-geometry.md) constructs the two-angle sphere
+and calculates finite-pass resolving power, persistent drawn area, a geometric
+dipole and a quadratic probe. Its preferred offset comes from the (12,2)
+normal modes with retained source frequency 20; mapping those clocks to the
+pen is a declared geometric identification. The auxiliary-wheel alternative
+remains explicitly separate, and neither selects the full physical history.
+
 The [three dimensionless targets](nsc-cosmological-atlas.md#three-numerical-targets-from-the-existing-equations)
 connect Douglas's outside-first research picture to the actual spectral,
 population and source equations. The audit computes their conditional

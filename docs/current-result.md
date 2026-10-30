@@ -1,5 +1,15 @@
 # What the calculations show
 
+The [constructed pen map](nsc-atlas-pen-geometry.md) now derives its preferred
+phase increment .360395008387 from the two late-vacuum linear modes of the
+(12,2) action, with the retained source coupling omega0=20. Its circle family
+has dense spherical closure. At 100 passes its achieved log resolving ratio
+is 3.74113, not the assigned 137.95402. Persistent ink covers .29673 of the
+sphere and gives a resolved quadratic-probe ratio g_z(2)/g_z(1)=1.04878.
+The phase residual is .00737800, with scalar charge exactly zero. The prior
+auxiliary-wheel construction is retained as a control. Formation, the
+phase-to-geometry identification and cosmological source weights remain open.
+
 The [three-target calculation](nsc-cosmological-atlas.md#three-numerical-targets-from-the-existing-equations)
 uses only retained dimensionless atlas equations. A supplied 100-step pure
 frequency power gives log band 137.9540195196, but neither that depth nor
@@ -194,7 +204,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-30.3. Its central route is spherical
+revision 2026-10-30.4. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

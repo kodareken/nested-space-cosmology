@@ -1,5 +1,11 @@
 # Active code and evidence map
 
+`nsc_atlas_pen_geometry.py` owns the explicit irrational circle history,
+stable spherical-band coverage, persistent area/probe integrals and exact
+finite-pass bounds. Its producer reads Omega and the Parke radius; its plot
+shows the actual construction. Independent tests include latitude integration
+and the analytic single-band area and probe.
+
 `nsc_atlas_three_targets.py` audits the band, conjugate-state imbalance and
 inside/outside fraction equations without SI constants. Its producer reads
 four frozen inputs and separates conditional arithmetic from prediction.

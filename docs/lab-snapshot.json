@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+  "current_receipt_commit_parent": "07bd0356ad23483abfa04efe52d93144c130c4b7",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 294658,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 295005,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "5162f2e5aa0256893cba5994efc7721b1a806cb55ff9e6b852809671abf0e513"
+      "sha256": "af71ed30ad3df95c81e8fafcb323e36643123c59acadba9d776c4f90b69c416a"
     },
     {
       "bytes": 150322,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 478029,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 478711,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0a30ced6b0b247692755adb3b01f8bd7d96acfd9297fa0ece6c12102b7c5a07b"
+      "sha256": "67c090d119ae03fff5aa4501b8ead16ba4f4063b3db936e644b756367c66e94d"
     },
     {
       "bytes": 173938,
@@ -10991,6 +10991,14 @@
       "sha256": "71e9f0f2f2e13b4690a1e2468ec133a8c391052a2e3064d8a5040acb80e8b89e"
     },
     {
+      "bytes": 12104,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "path": "docs/nsc-atlas-pen-geometry.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7fe911731ee06d33410ee44ebb91f97e22621df01928044b795ddeaf7617c29a"
+    },
+    {
       "bytes": 9702,
       "path": "docs/nsc-atlas-radar-clock.md",
       "retention_reason": "Current shared two-wall geometry, focused controls and authenticated figure.",
@@ -11128,15 +11136,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 134324,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 134826,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "053b060678d6b1864bcc4ebd706b98c908c6318889de3c07bb448de4d8f51183"
+      "sha256": "b4d9b69a68e04290bc893e3e8d92d89763263793aaaf6cc1182896dde585d7f8"
     },
     {
       "bytes": 30876,
@@ -12118,20 +12126,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 241810,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 242327,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "abec3ca100127a46361b22223d34ccd63c606a36acc7122b2ed02eec3a893b10"
+      "sha256": "8d7eaa9fc5400375ab16479aabddd5eaa2a29af4452308d5be510e349eec4d68"
     },
     {
-      "bytes": 53775,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 54234,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "221991916202b69ef2c27c8f3af3d31a213f0d6e39001ae602f4cdc1d1584f35"
+      "sha256": "b84936cac6f3858bb4e13b0e1c202d707256f7ded32b3b3543fb05066e814af0"
     },
     {
       "bytes": 18356,
@@ -12200,28 +12208,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 39705,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 40021,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "9e20c810133abe39c56420e81689cee7ccdc0bf78f9d2b78277e64e0795034a9"
+      "sha256": "dca97fd6fac72789927cc3aee07251c2e9cd238a1a5872b438970e560e8acb40"
     },
     {
       "bytes": 3206,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "74b344390e443c6dcd53d7572d160d5f8b01154439b63bc892c579f60206eb52"
+      "sha256": "eb05977bb4b243623866dce5ea7f4bbd4254f3b815ba855e0faf08e2472ad60b"
     },
     {
-      "bytes": 49948,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 50090,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ba2b76933afc486015223754762996bbed2ee66de9cfeaf378677fd453830fd6"
+      "sha256": "0eaff7908e97558a49207c17021c6cb48ed2899bbb2b66cdd2058ede718a7510"
     },
     {
       "bytes": 226492,
@@ -12232,28 +12240,36 @@
       "sha256": "19862b80b646424a901018fdaff1d409b036570c0107882596c242a963c8ee19"
     },
     {
+      "bytes": 355339,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "path": "paper/figures/nsc-atlas-pen-geometry.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ff20f11f64ff1d99612c7f4e35c460515abb506fa92f5373b4216ed542de31e3"
+    },
+    {
       "bytes": 396,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2c1880e9998482bf6161d1df4f24f78e74e353bdd7129a7cd12f40dd7bca4103"
+      "sha256": "695b0f9b3b8a1b3be026ffce1b5a042e3f64def98c9ff347f0ea476f483844c3"
     },
     {
-      "bytes": 561691,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 569296,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ec79344b309c2668feb47e913514bbe8bad492d379704b998bd57de894f8282c"
+      "sha256": "1bd7534990c9d82fe6ab5eab6ef6168e951ea2b0bda842b0e5b8bd71f9bddafc"
     },
     {
-      "bytes": 15271208,
-      "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
-      "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "bytes": 15726406,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2da3e0ab92e25387724e8ca748f9184fcbeda43452435a7df36d549541856d1c"
+      "sha256": "b1961f928f4a5aabc52e02b45d1027662c5abbeb635781c540255a034d3b292a"
     },
     {
       "bytes": 3283,
@@ -31270,6 +31286,14 @@
       "sha256": "3664f43b982b6184e36f88e3ecdcceed4db2e1b4ad905c80b39f22db166cdea7"
     },
     {
+      "bytes": 20874,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "path": "results/summaries/nsc-atlas-pen-geometry-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6b32f1bd2f70f7275610c156ca2673c75fc79e0fe89c7df452120973927f2ba7"
+    },
+    {
       "bytes": 14948,
       "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
       "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
@@ -32101,6 +32125,14 @@
       "path": "scripts/check_nsc_atlas_parke_nucleation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "aab0cd158ee763d4bc89c66071170ed9ee15776affbc86b7a2941ecc9c9091b8"
+    },
+    {
+      "bytes": 2645,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "path": "scripts/check_nsc_atlas_pen_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "bbfece84336af845eefc61b3197eed5036271642d9c799eba88747bd1c0f83ec"
     },
     {
       "bytes": 14645,
@@ -35232,6 +35264,14 @@
       "sha256": "0eba7eb608d49fe4b9cbf7aaade5f6f1408e82da857edf024cbc205faa07f0f7"
     },
     {
+      "bytes": 3777,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "path": "scripts/plot_nsc_atlas_pen_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "340f51e21180d2660fdefdf3462ea1d9b53cc1198cd4f8a432270860b774bd2e"
+    },
+    {
       "bytes": 4004,
       "change": "Connect wall preparation, HM state limits, volume pressure history and named-state observation controls with an explicit dependency map.",
       "changed_from_commit": "160f4f40975836623be08e0e40a7996a9c85a900",
@@ -36606,6 +36646,14 @@
       "path": "src/recursive_horizons/nsc_atlas_parke_nucleation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "f6ef14402f91949ea921b63af65a630a099bc0c50c11d1c6c8628b6a74bccd35"
+    },
+    {
+      "bytes": 12308,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "path": "src/recursive_horizons/nsc_atlas_pen_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d234827c4ddb131a4adcaaa03a10572b0bf69627319005c9564bcc7e0080a743"
     },
     {
       "bytes": 23996,
@@ -41284,6 +41332,14 @@
       "path": "tests/test_nsc_atlas_past_preparation.py",
       "retention_reason": "Exact same-action past-collar and Jordan Cauchy-data controls.",
       "sha256": "aa9d7a544ae6ea05717d41d5e56c5e5706fd9543f90abf087ce078b1e5ae3646"
+    },
+    {
+      "bytes": 4666,
+      "change": "Construct an irrational circle history and compute its resolution bounds, persistent area, phase residual and quadratic probe without fitting.",
+      "changed_from_commit": "07bd0356ad23483abfa04efe52d93144c130c4b7",
+      "path": "tests/test_nsc_atlas_pen_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "05b39661d6e02ede6ee6527e33df62b8dc7df4c983c3829db7d9db03709cfa21"
     },
     {
       "bytes": 1128,
