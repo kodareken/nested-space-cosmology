@@ -1,10 +1,10 @@
 {
-  "bytes": 18022833,
+  "bytes": 18383528,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "5c397f91ebc6b3d6417aa08ee26273801cf5d2243bba005513fc175a95427ef5",
+  "metadata_sha256": "ac7101af5b0739294880ba456fa341497dc3873b5a5d6693daeafb7b0cff383a",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 220,
-  "pdf_sha256": "dc0025c8868bde7f6e2cb525c2d2576b09303d91fef967817a799bec75384fbd",
+  "pages": 223,
+  "pdf_sha256": "6cfc885ed5f44e947186714f24116605858a25f8f6ad9aa6edb931f81f9356b5",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -174,6 +174,10 @@
     {
       "path": "paper/figures/geometry-overview.png",
       "sha256": "d533d0e5e9cb30025649bcb6b2c597d5b54ce42a421eb483ccf0a86f6730fa5e"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-characteristic-handoff.png",
+      "sha256": "d398e17f4d821b133dcfe6f10f9142556f1fbf3ed55789f2806a3e600d2acdc5"
     },
     {
       "path": "paper/figures/nsc-atlas-connected-route.png",
@@ -554,6 +558,10 @@
     {
       "path": "results/summaries/nsc-atlas-cap-departure-bound-v1.json",
       "sha256": "61190f1d3029ccda920c0a6783d9e9d682408e43a3078a816672a182502e44d2"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-characteristic-handoff-v1.json",
+      "sha256": "72c59b5652aab8db64ac439922fdf8e7eef6b03c0d52795c0d9a15292b0b14d2"
     },
     {
       "path": "results/summaries/nsc-atlas-charge-inheritance-v1.json",
@@ -1009,6 +1017,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "dfbbd27403b70a21941da936226fa3e1777262d48dca644a87fc7221c2c488ea",
-  "version": "working-2026-10-30.11"
+  "source_sha256": "f9da3a5e5ac709d757b971cb5cb67a27d505d0a674bc2e7eff59bc1707e24b52",
+  "version": "working-2026-10-30.12"
 }

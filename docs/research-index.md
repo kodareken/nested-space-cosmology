@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [characteristic handoff](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
+derives both null data legs from one global parent state, continues its
+signed field outside the observer horizon, and checks physical flux,
+canonical phase transport, receiver density and composable handoffs.
+
 The [horizon area and entropy response](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy)
 uses the same scalar's flux, a published dynamical first law and an exact
 rescaled-oscillator bound to connect depletion, area growth, a monotone

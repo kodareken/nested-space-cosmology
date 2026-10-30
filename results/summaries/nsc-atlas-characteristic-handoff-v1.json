@@ -1,0 +1,311 @@
+{
+  "composition": {
+    "max_field_difference": 0.0,
+    "no_new_source_reset": true,
+    "other_incoming_leg": "Unchanged remainder of the same inherited transverse trace",
+    "shared_trace_is_first_region_output": true
+  },
+  "domain": {
+    "chi_receiver": 0.5936386617045529,
+    "conformal_future_margin": 0.46863866170455293,
+    "eta_corner": 0.9771576650903436,
+    "null_extent": 0.125,
+    "receiver_angular_axis": [
+      0.5980708108230776,
+      0.8014432638942238,
+      0.0
+    ],
+    "u0": 0.3835190033857907,
+    "v0": 1.5707963267948966,
+    "window_is_a_declared_finite_domain": true
+  },
+  "elapsed_seconds": 5.18945380000514,
+  "exact_relations": {
+    "constant_potential_dispersion": "cos(omega*h/2)=((1-c)/(1+c))*cos(k*h/2), c=V*h^2/16",
+    "equation": "4 Psi_uv+[(m^2-2)sec^2 eta+2csc^2 chi]Psi=0",
+    "horizon_potential": "V|v=pi/2=m^2 sec^2 eta",
+    "second_trace": "g1=f1(u0+v-v0)*sin^2chi/sin^2chiH; g2 adds coschi/coschiH",
+    "second_trace_is_global_state_correlation": true,
+    "spacelike_signal_created": false,
+    "two_trace_uniqueness": "Volterra iterates bounded by (M du dv/4)^n/(n!)^2"
+  },
+  "execution": {
+    "independent_grid_workers": 3,
+    "numba_nogil_kernel": true
+  },
+  "finite_resolution_indicator": {
+    "meaning": "Empirical discretization differences, not higher-order gravitational or observational uncertainties",
+    "receiver_density_fine_middle_difference": 0.0017908731221816243,
+    "receiver_field_fine_middle_difference": 0.00012875042947134863
+  },
+  "horizon_energy_connection": {
+    "finite_grid_horizon_flux_relative_difference": 0.0005755989001833273,
+    "parent_patch_energy_loss_over_epsilon_squared": 2.2197825872420776,
+    "proper_end": 4.797157936910654,
+    "proper_start": 4.364851930251994,
+    "quadrature_error": 3.1236793892952868e-12,
+    "relative_volume_flux_residual": 3.212960021933094e-12,
+    "same_horizon_flux_over_epsilon_squared": 2.2197825872349455
+  },
+  "model": {
+    "H": 0.2714056154003984,
+    "angular_momentum_l": 1,
+    "global_S3_eigenvalues": [
+      3,
+      8
+    ],
+    "mass_squared": 613.5280213887946,
+    "no_new_source_normalization": true,
+    "vacuum": 0.22098302421260696
+  },
+  "no_observational_fit": true,
+  "observed_orders": {
+    "horizon_normal_derivative_relative_RMS": [
+      1.9455592584471948,
+      1.9788657378921628
+    ],
+    "relative_RMS_field_error": [
+      2.0000188036853026,
+      2.000715176887997
+    ]
+  },
+  "one_trace_control": {
+    "horizon_trace_max_difference": 0.0,
+    "interior_relative_RMS_change": 0.011679068471268124,
+    "interpretation": "One null trace alone is not unique for the full KG solution space. The frozen two-mode global-state correlation supplies the second trace in the main calculation.",
+    "receiver_field_change_over_epsilon": 2.1093679188234973e-05,
+    "second_leg_change": "C-infinity bump, 5% reference amplitude, only on the transverse datum"
+  },
+  "resolutions": [
+    {
+      "cells_per_leg": 64,
+      "discrete_symplectic_flux": {
+        "absolute_residual": 2.596664203102783e-17,
+        "relative_residual": 1.2372412921145768e-14,
+        "signed_edges": [
+          -0.00047979188152754115,
+          0.0006501403528728091,
+          -0.0005695847516532189,
+          0.00039923628030792495
+        ]
+      },
+      "elapsed_seconds": 0.025028000003658235,
+      "exact_reference_noether_flux": {
+        "absolute_residual": 3.9265372016039635e-06,
+        "relative_residual": 4.150389181960482e-07,
+        "signed_edges": [
+          2.0756748212596987,
+          -2.510530871022695,
+          2.654651250734075,
+          -2.2197912744338772
+        ]
+      },
+      "horizon_normal_derivative_relative_RMS": 0.0069996337057173985,
+      "inherited_second_trace_max_error": 1.3877787807814457e-17,
+      "noether_flux": {
+        "absolute_residual": 0.014119741007756037,
+        "relative_residual": 0.0015003042897555477,
+        "signed_edges": [
+          2.10037022824228,
+          -2.512681545737255,
+          2.598195654699045,
+          -2.2000040782118258
+        ]
+      },
+      "receiver": {
+        "chi": 0.5936386617045529,
+        "density_over_epsilon_squared_vacuum": 0.29226768102456424,
+        "eta": 1.1021576650903437,
+        "field_over_epsilon": 0.0046328767242125694,
+        "inherited_first_mode_phase_mod_2pi": -1.2636050096985896,
+        "proper_derivative_over_epsilon": 0.34059285119616284,
+        "proper_readout": 5.2781900921983675
+      },
+      "receiver_wrapped_phase_error": -0.05744723309145927,
+      "reference_receiver": {
+        "chi": 0.5936386617045529,
+        "density_over_epsilon_squared_vacuum": 0.2825045787416209,
+        "eta": 1.1021576650903437,
+        "field_over_epsilon": 0.005325966643926794,
+        "inherited_first_mode_phase_mod_2pi": -1.2061577766071303,
+        "proper_derivative_over_epsilon": 0.327801273820713,
+        "proper_readout": 5.2781900921983675
+      },
+      "relative_RMS_field_error": 0.021547685863133326,
+      "relative_max_field_error": 0.0447556149832199,
+      "symplectic_flux": {
+        "absolute_residual": 6.0458674349447156e-09,
+        "relative_residual": 2.880134419669865e-06,
+        "signed_edges": [
+          -0.00047988276987654934,
+          0.0006503246613032963,
+          -0.000569701028463776,
+          0.0003992530911695941
+        ]
+      },
+      "transfer_factors_at_second_leg_end": [
+        1.4506489982556459,
+        1.3330852042698058
+      ]
+    },
+    {
+      "cells_per_leg": 128,
+      "discrete_symplectic_flux": {
+        "absolute_residual": 2.8893987896738693e-17,
+        "relative_residual": 1.3716888755590249e-14,
+        "signed_edges": [
+          -0.0004811539090760125,
+          0.0006528502201404911,
+          -0.0005720728251920881,
+          0.00040037651412763844
+        ]
+      },
+      "elapsed_seconds": 0.03596480001579039,
+      "exact_reference_noether_flux": {
+        "absolute_residual": 2.4113024998939636e-07,
+        "relative_residual": 2.548767328645428e-08,
+        "signed_edges": [
+          2.0756792322293536,
+          -2.5105475167814473,
+          2.654651650177965,
+          -2.2197831244956214
+        ]
+      },
+      "horizon_normal_derivative_relative_RMS": 0.0018172037260332753,
+      "inherited_second_trace_max_error": 2.7755575615628914e-17,
+      "noether_flux": {
+        "absolute_residual": 0.0036619983555299385,
+        "relative_residual": 0.00038759625914277856,
+        "signed_edges": [
+          2.0817820733579175,
+          -2.5110930421217774,
+          2.6403726073428366,
+          -2.2147236369345067
+        ]
+      },
+      "receiver": {
+        "chi": 0.5936386617045529,
+        "density_over_epsilon_squared_vacuum": 0.2848830005367507,
+        "eta": 1.1021576650903437,
+        "field_over_epsilon": 0.005154451683723694,
+        "inherited_first_mode_phase_mod_2pi": -1.2206620592210962,
+        "proper_derivative_over_epsilon": 0.33107055137329167,
+        "proper_readout": 5.2781900921983675
+      },
+      "receiver_wrapped_phase_error": -0.01450428261396586,
+      "reference_receiver": {
+        "chi": 0.5936386617045529,
+        "density_over_epsilon_squared_vacuum": 0.2825045787416209,
+        "eta": 1.1021576650903437,
+        "field_over_epsilon": 0.005325966643926794,
+        "inherited_first_mode_phase_mod_2pi": -1.2061577766071303,
+        "proper_derivative_over_epsilon": 0.327801273820713,
+        "proper_readout": 5.2781900921983675
+      },
+      "relative_RMS_field_error": 0.005386851254607023,
+      "relative_max_field_error": 0.011204011758001535,
+      "symplectic_flux": {
+        "absolute_residual": 1.7646467381955688e-10,
+        "relative_residual": 8.377097042644815e-08,
+        "signed_edges": [
+          -0.00048116654700668614,
+          0.0006528828165782272,
+          -0.0005720900772070556,
+          0.00040037398410018837
+        ]
+      },
+      "transfer_factors_at_second_leg_end": [
+        1.4506489982556459,
+        1.3330852042698058
+      ]
+    },
+    {
+      "cells_per_leg": 256,
+      "discrete_symplectic_flux": {
+        "absolute_residual": 7.947201924318748e-17,
+        "relative_residual": 3.769338349715797e-14,
+        "signed_edges": [
+          -0.0004814947908452328,
+          0.000653528699323375,
+          -0.0005726957841290537,
+          0.000400661875650832
+        ]
+      },
+      "elapsed_seconds": 0.08437340002274141,
+      "exact_reference_noether_flux": {
+        "absolute_residual": 1.5003960296411378e-08,
+        "relative_residual": 1.5859312749117774e-09,
+        "signed_edges": [
+          2.0756795038390483,
+          -2.5105485449310083,
+          2.654651676823642,
+          -2.2197826207277216
+        ]
+      },
+      "horizon_normal_derivative_relative_RMS": 0.00046100504077922847,
+      "inherited_second_trace_max_error": 2.7755575615628914e-17,
+      "noether_flux": {
+        "absolute_residual": 0.0009263634920997355,
+        "relative_residual": 9.795061167058031e-05,
+        "signed_edges": [
+          2.0772016911773283,
+          -2.510685747894853,
+          2.651062576044512,
+          -2.218504882819087
+        ]
+      },
+      "receiver": {
+        "chi": 0.5936386617045529,
+        "density_over_epsilon_squared_vacuum": 0.2830921274145691,
+        "eta": 1.1021576650903437,
+        "field_over_epsilon": 0.005283202113195043,
+        "inherited_first_mode_phase_mod_2pi": -1.2097906645647394,
+        "proper_derivative_over_epsilon": 0.3286209182243729,
+        "proper_readout": 5.2781900921983675
+      },
+      "receiver_wrapped_phase_error": -0.0036328879576090767,
+      "reference_receiver": {
+        "chi": 0.5936386617045529,
+        "density_over_epsilon_squared_vacuum": 0.2825045787416209,
+        "eta": 1.1021576650903437,
+        "field_over_epsilon": 0.005325966643926794,
+        "inherited_first_mode_phase_mod_2pi": -1.2061577766071303,
+        "proper_derivative_over_epsilon": 0.327801273820713,
+        "proper_readout": 5.2781900921983675
+      },
+      "relative_RMS_field_error": 0.001346045382790402,
+      "relative_max_field_error": 0.0028012686554152,
+      "symplectic_flux": {
+        "absolute_residual": 2.794105524207835e-10,
+        "relative_residual": 1.325231345060502e-07,
+        "signed_edges": [
+          -0.0004814965927964217,
+          0.0006535351110400532,
+          -0.0005726986480340204,
+          0.00040066040920094125
+        ]
+      },
+      "transfer_factors_at_second_leg_end": [
+        1.4506489982556459,
+        1.3330852042698058
+      ]
+    }
+  ],
+  "schema": "nsc-atlas-characteristic-handoff-v1",
+  "scope": [
+    "Leading inherited real scalar on the smooth frozen parent; no material wall",
+    "A finite exterior receiving region, not a daughter universe",
+    "Both traces derived conditionally from the same two-mode parent state; the primordial global preparation is not selected",
+    "North-Killing Noether charge can have either sign outside its patch; receiver density uses a timelike comoving observer",
+    "Scalar metric feedback, finite-amplitude collapse, regular child continuation and an SI ruler remain open"
+  ],
+  "source_sha256": {
+    "results/summaries/nsc-atlas-horizon-response-v1.json": "a183cdee8fccd82a51938103c98486f0a35def13bfba9af0b9985e7f8d394dd9",
+    "results/summaries/nsc-atlas-parent-circulation-v1.json": "f3979a79389fc855c527a22b38fe4304b8cbdce1c42a250a5daa52a0334e263c",
+    "scripts/check_nsc_atlas_characteristic_handoff.py": "7c2e79dcc6a502a3db5f365f8c6901b9efab51dfba2db12088ea9de0953ae331",
+    "src/recursive_horizons/nsc_atlas_characteristic_handoff.py": "a060817da4ae28f800a07032f41ee1406ab6531d12d72b3bcab23f4a7bd2ab00",
+    "src/recursive_horizons/nsc_atlas_horizon_response.py": "35ca8c2ae3040cac3404133cefad5c0a43a7e584b99d19db90717685337428f4",
+    "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408"
+  }
+}

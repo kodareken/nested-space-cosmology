@@ -373,6 +373,8 @@ yet develops regional circulation. Section 15.13 follows it to a nonzero
 light record and an energy flux across the smooth observer horizon.
 Section 15.14 calculates the resulting area response and a monotone
 geometric record of that transfer.
+Section 15.15 carries the signed field into an exterior receiving region,
+using two null traces inherited from the same global parent state.
 
 An unwrapped scalar phase can parametrize this evolution monotonically;
 proper duration is recovered as a readout. Synchronizing one event with
@@ -9092,6 +9094,136 @@ compatible interior source. The transferred field supplies a calculable
 budget and directions for that next problem; its quadratic area response
 is not extrapolated into a strong-field collapse claim.
 
+### 15.15. The field continues: two inherited traces and a receiving state
+
+<!-- nsc-claim:inherited-characteristic-state -->
+
+The same global parent now supplies the field on both incoming null
+surfaces of a finite exterior region. The handoff preserves its signed
+oscillation history and normalization; a second independently prepared
+pulse is not introduced. The [record](../results/summaries/nsc-atlas-characteristic-handoff-v1.json)
+and [derivation](../docs/nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
+give the exact state relation, null propagation, receiver readout and
+conservation checks. This is a continuation within the shared parent,
+conditional on its frozen global preparation.
+
+**One action on both sides.** In conformal coordinates,
+$a=1/(H\cos\eta)$ and the horizon is $v=\eta+\chi=\pi/2$.
+The two retained spatial modes both have $S^2$ angular momentum $l=1$.
+For their radial coefficients set $\Psi_j=a\sin\chi\,F_j$ and
+$u=\eta-\chi$. Direct reduction of the existing massive scalar gives
+
+$$
+4\Psi_{uv}+V\Psi=0,\qquad
+V=(m^2-2)\sec^2\eta+2\csc^2\chi,
+\qquad m^2=\mu^2/H^2.
+$$
+
+On the horizon the potential is simply $m^2\sec^2\eta$, finite throughout
+the declared domain. No material surface or new source occurs there.
+The characteristic-wave framework is borrowed from
+[Bar--Tagne Wafo](https://arxiv.org/html/1408.4995v2), section 4.2;
+the finite uniqueness proof below does not assume that reference's
+global past-compactness condition without checking it.
+
+Let $f(u)=\Psi(u,v_H)$ and $g(v)=\Psi(u_0,v)$, with equal corner values.
+The solution satisfies
+
+$$
+\Psi=f(u)+g(v)-f(u_0)
+-\frac14\int_{u_0}^u\int_{v_H}^vV\Psi\,dv'\,du'.
+$$
+
+For bounded $V$, the induced sup-operator norm of the n-th Volterra iterate is bounded by
+$(M\Delta u\Delta v/4)^n/(n!)^2$. This proves uniqueness for the
+two specified traces without requiring an infinitesimal box.
+
+**The receiving datum is inherited.** At equal conformal time define
+$u_H=u_0+v-v_H$, $\chi_s=(v-u_0)/2$ and
+$\chi_H=\pi/2-(u_0+v)/2$. The frozen radial eigenfunctions imply
+
+$$
+g_1(v)=f_1(u_H)\frac{\sin^2\chi_s}{\sin^2\chi_H},\qquad
+g_2(v)=f_2(u_H)\frac{\sin^2\chi_s\cos\chi_s}
+{\sin^2\chi_H\cos\chi_H}.
+$$
+
+The endpoint factors are 1.450648998256 and 1.333085204270. These
+multiply reduced radial components, not total energies. They come from
+the same mode profiles and clocks; no receiving phase or normalization
+is fitted. The paired equal-time points are spacelike separated. The
+relation is an inherited correlation in the specified global state,
+not a signal manufactured by the horizon. Outside that two-mode sector,
+one horizon trace alone would leave the second datum free.
+
+**A finite computed receiving region.** The past corner is the preceding
+300-event horizon point. Its coordinates are
+$u_0=.383519003386$, $v_H=\pi/2$. Both null extents are 1/8,
+a declared domain rather than a selected cosmic scale. The receiving
+worldline stays at $\chi=.593638661705$ and the previously derived
+maximum-transfer angular direction. It crosses the north observer's
+horizon at proper readout 4.364851930252 and is sampled at 5.278190092198.
+After crossing, its own readings lie outside the north observer's causal
+access. The atlas compares the global model's values; it does not send
+a message back through that horizon.
+
+The four-corner midpoint update has
+$c=V_c h_u h_v/16$ and obeys
+
+$$
+(1+c)\Psi_{11}=(1-c)(\Psi_{10}+\Psi_{01})-(1+c)\Psi_{00}.
+$$
+
+[Gundlach--Price--Pullin](https://arxiv.org/html/gr-qc/9307009v2),
+equations 26--27, supplies the established null-grid comparison.
+The present implicit variant is derived separately and tested on this
+time-dependent potential. Three fixed resolutions give
+
+| Cells per leg | Relative field RMS error | Horizon derivative error | Noether imbalance |
+| --- | --- | --- | --- |
+| 64 | .02154769 | .00699963 | .00150030 |
+| 128 | .00538685 | .00181720 | .00038760 |
+| 256 | .00134605 | .00046101 | .00009795 |
+
+The field converges at order 2.0000 and 2.0007. The inherited phase error
+at the receiver falls to .003633 radians. A discrete symplectic Green
+identity also holds cell by cell; the whole-box relative flux residual
+is below $3.8\times10^{-14}$. This preserves the canonical field
+transport; it is not a particle-number or baryon charge.
+
+The horizon leg carries $E/\varepsilon^2=2.219782587242$ from the
+parent patch's independent volume loss, versus 2.219782587235 from the
+null flux. Both incoming legs enter the four-edge balance. The north
+Killing vector becomes spacelike outside its patch, so that conserved
+Noether charge is distinguished from the receiver's positive proper
+energy density.
+
+At the receiving event, the finest field value is .00528320 per unit
+epsilon, with fine--middle spread .00012875; the independent direct
+parent restriction gives .00532597. The corresponding density is
+.28309213 times epsilon squared times the vacuum density, with spread
+.00179087; its direct reference is .28250458. These are numerical
+discretization indicators, not uncertainties for omitted metric feedback
+or comparisons with observations.
+
+![Inherited traces, horizon crossing and the receiving oscillation](figures/nsc-atlas-characteristic-handoff.png)
+
+**The handoff composes.** Splitting the box into two adjacent strips
+and using the first strip's output as the shared incoming trace gives
+the same stored field as the unsplit calculation: maximum difference
+zero. The remaining transverse input is the unchanged continuation
+of the same global datum. The field can therefore pass between these
+regions without a phase reset or a new source choice on their shared leg.
+
+A general exterior state is not selected by one horizon trace: a smooth
+five-percent perturbation of the other datum leaves that horizon trace
+unchanged while changing the exterior RMS field by 1.168 percent.
+The frozen global state supplies the needed relation for this calculation.
+Its primordial selection and a new daughter geometry remain open.
+The next physical connection is concentration and compatible strong-field
+evolution of the actual inherited data, rather than another freely
+chosen incident waveform.
+
 ## VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
@@ -13371,7 +13503,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | How to approach the work | [hep-ph/0212332](https://arxiv.org/abs/hep-ph/0212332), [hep-ph/9408387](https://arxiv.org/abs/hep-ph/9408387), [hep-th/0103019](https://arxiv.org/abs/hep-th/0103019), [hep-th/0212134](https://arxiv.org/abs/hep-th/0212134), [hep-th/9911055](https://arxiv.org/abs/hep-th/9911055v3) |
 | Atlas reuse library, 10 October 2026 | [0803.0268 †](https://arxiv.org/abs/0803.0268v2), [0909.1101](https://arxiv.org/abs/0909.1101v1), [0910.4930 †](https://arxiv.org/abs/0910.4930v1), [0911.4208 †](https://arxiv.org/abs/0911.4208v1), [1004.1355](https://arxiv.org/abs/1004.1355v1) |
 | Atlas reuse library, 10 October 2026 | [1106.4318 †](https://arxiv.org/abs/1106.4318v1), [1302.1293](https://arxiv.org/abs/1302.1293v2), [1305.6933 †](https://arxiv.org/abs/1305.6933v2), [1309.7591](https://arxiv.org/abs/1309.7591v2), [1401.1189 †](https://arxiv.org/abs/1401.1189v1) |
-| Atlas reuse library, 10 October 2026 | [1405.3386 †](https://arxiv.org/abs/1405.3386v4), [1408.4995 †](https://arxiv.org/abs/1408.4995v2), [1512.02120 †](https://arxiv.org/abs/1512.02120v2), [1610.02951 †](https://arxiv.org/abs/1610.02951v1), [1801.04539 †](https://arxiv.org/abs/1801.04539v1) |
+| Atlas reuse library, 10 October 2026 | [1405.3386 †](https://arxiv.org/abs/1405.3386v4), [1408.4995](https://arxiv.org/abs/1408.4995v2), [1512.02120 †](https://arxiv.org/abs/1512.02120v2), [1610.02951 †](https://arxiv.org/abs/1610.02951v1), [1801.04539 †](https://arxiv.org/abs/1801.04539v1) |
 | Atlas reuse library, 10 October 2026 | [1803.08928](https://arxiv.org/abs/1803.08928v3), [1807.04726 †](https://arxiv.org/abs/1807.04726v3), [1809.00935 †](https://arxiv.org/abs/1809.00935v1), [1901.07524 †](https://arxiv.org/abs/1901.07524v1), [1907.02619 †](https://arxiv.org/abs/1907.02619v1) |
 | Atlas reuse library, 10 October 2026 | [1910.07534 †](https://arxiv.org/abs/1910.07534v2), [2004.02900](https://arxiv.org/abs/2004.02900v2), [2005.04090 †](https://arxiv.org/abs/2005.04090v1), [2007.11556 †](https://arxiv.org/abs/2007.11556v2), [2012.07821](https://arxiv.org/abs/2012.07821v2) |
 | Atlas reuse library, 10 October 2026 | [2102.01841 †](https://arxiv.org/abs/2102.01841v3), [2109.09814 †](https://arxiv.org/abs/2109.09814v1), [2201.03839 †](https://arxiv.org/abs/2201.03839v1), [2205.13556 †](https://arxiv.org/abs/2205.13556v1), [2210.13960 †](https://arxiv.org/abs/2210.13960v1) |
@@ -13379,7 +13511,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Atlas reuse library, 10 October 2026 | [2503.24162 †](https://arxiv.org/abs/2503.24162v3), [2507.03581 †](https://arxiv.org/abs/2507.03581), [2508.00686 †](https://arxiv.org/abs/2508.00686v1), [2601.01861 †](https://arxiv.org/abs/2601.01861v1), [2604.27897 †](https://arxiv.org/abs/2604.27897v1) |
 | Atlas reuse library, 10 October 2026 | [gr-qc/0008008 †](https://arxiv.org/abs/gr-qc/0008008v1), [gr-qc/0201054 †](https://arxiv.org/abs/gr-qc/0201054v1), [gr-qc/0203053 †](https://arxiv.org/abs/gr-qc/0203053v3), [gr-qc/0301073 †](https://arxiv.org/abs/gr-qc/0301073v2), [gr-qc/0309078 †](https://arxiv.org/abs/gr-qc/0309078v1) |
 | Atlas reuse library, 10 October 2026 | [gr-qc/0403066 †](https://arxiv.org/abs/gr-qc/0403066v2), [gr-qc/0506126 †](https://arxiv.org/abs/gr-qc/0506126v2), [gr-qc/0507063 †](https://arxiv.org/abs/gr-qc/0507063v2), [gr-qc/0508093](https://arxiv.org/abs/gr-qc/0508093v2), [gr-qc/0603031 †](https://arxiv.org/abs/gr-qc/0603031v1) |
-| Atlas reuse library, 10 October 2026 | [gr-qc/0606009 †](https://arxiv.org/abs/gr-qc/0606009v2), [gr-qc/9307009 †](https://arxiv.org/abs/gr-qc/9307009v2), [gr-qc/9403003 †](https://arxiv.org/abs/gr-qc/9403003v1), [gr-qc/9404011 †](https://arxiv.org/abs/gr-qc/9404011v1), [gr-qc/9708008 †](https://arxiv.org/abs/gr-qc/9708008v2) |
+| Atlas reuse library, 10 October 2026 | [gr-qc/0606009 †](https://arxiv.org/abs/gr-qc/0606009v2), [gr-qc/9307009](https://arxiv.org/abs/gr-qc/9307009v2), [gr-qc/9403003 †](https://arxiv.org/abs/gr-qc/9403003v1), [gr-qc/9404011 †](https://arxiv.org/abs/gr-qc/9404011v1), [gr-qc/9708008 †](https://arxiv.org/abs/gr-qc/9708008v2) |
 | Atlas reuse library, 10 October 2026 | [hep-th/0110007 †](https://arxiv.org/abs/hep-th/0110007v2), [hep-th/0308108 †](https://arxiv.org/abs/hep-th/0308108v2), [hep-th/0602194 †](https://arxiv.org/abs/hep-th/0602194v2), [hep-th/9511136](https://arxiv.org/abs/hep-th/9511136v1), [math-ph/0212025 †](https://arxiv.org/abs/math-ph/0212025v1) |
 | Oscillating scalar source and the controlled parent — 28 October 2026 | [0902.4738](https://arxiv.org/abs/0902.4738) |
 | Two material levels and physical gravitational composition, 27 October 2026 | [0909.0287](https://arxiv.org/abs/0909.0287v2), [1510.07674](https://arxiv.org/abs/1510.07674), [2310.13946](https://arxiv.org/abs/2310.13946), [gr-qc/0301078](https://arxiv.org/abs/gr-qc/0301078v2), [gr-qc/0310107](https://arxiv.org/abs/gr-qc/0310107v2) |

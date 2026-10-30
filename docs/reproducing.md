@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Inherited characteristic continuation
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_characteristic_handoff.py --output .build/characteristic-handoff-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_characteristic_handoff.py tests/test_nsc_atlas_handoff_numerics.py
+python scripts/run_python.py scripts/plot_nsc_atlas_characteristic_handoff.py
+```
+
+The [same parent owner](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
+records the two-trace dependence, inherited spectral restriction and finite
+domain. There are three fixed grids, no additional incident pulse, and no
+new physical scale. Full field arrays regenerate; only summaries are saved.
+
 ## Same-source horizon area and dynamical entropy
 
 ```powershell

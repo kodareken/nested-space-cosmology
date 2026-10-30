@@ -18,6 +18,14 @@ starting a derivation.
 
 ## Current execution priority — 30 October 2026
 
+The [same-state characteristic handoff](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
+now carries the scalar through the smooth horizon into a finite exterior
+receiving region. Both null traces are fixed by the frozen global two-mode
+state, the shared field composes without reset, and the same parent loss
+supplies its horizon-edge flux. This closes a conditional regional field
+connection; selecting the global preparation, concentrating the received
+state and constructing a child metric remain separate physical steps.
+
 The [smooth-parent field and observer connection](nsc-atlas-parent-circulation.md)
 now carries the generated spatial geometry into the retained scalar action.
 It derives compensated circulation, admissible global initial data,

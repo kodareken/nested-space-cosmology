@@ -1777,3 +1777,14 @@ selection or of deriving quantum statistics is borrowed from equidistribution.
 ## Dynamical cosmological horizon entropy, 30 October 2026
 
 - [Zhao, 2503.16138v4](https://arxiv.org/html/2503.16138v4) — dynamical cosmological-horizon entropy and physical-process first law between arbitrary cross-sections. Read sections 3--4.2, especially equations 3.2, 4.8 and 4.16--4.18, with section 2's equation 2.27 for the area operator. Full covariant-phase-space proofs and all gauge-existence details are not independently reproduced. Reuse the area-derivative correction; derive the horizon-generator normalization, scalar coefficient, conservation law and future-tail control for the atlas state directly. The [parent owner](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy) distinguishes this cosmological response from formation of a trapped child.
+
+### Smooth-parent handoff reuse, 30 October 2026
+
+The [same-state handoff](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
+reuses the existing Bar--Tagne Wafo 1408.4995v2 and Gundlach--Price--Pullin
+gr-qc/9307009v2 cards above. The primary agent reread Theorem 23's stated
+past-compactness hypothesis and the latter's section III, equations 26--27;
+the independent review also inspected Example 24's nonuniqueness point.
+The current finite proof uses explicit Volterra iterates and its own
+implicit stencil. The prior material-wall potential and global tail claims
+are not transferred to this massive time-dependent problem.

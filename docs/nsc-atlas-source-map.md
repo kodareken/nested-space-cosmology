@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **320 distinct arXiv works**: 100 are cited in the main argument and 220 are retained in the reading library only.
+This navigation index contains **320 distinct arXiv works**: 102 are cited in the main argument and 218 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -76,7 +76,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1405.0397](https://arxiv.org/abs/1405.0397) | Studies | Castillo-Felisola, Corral, Kovalenko and Schmidt: equations 13 and 18–20, the higher-dimensional Einstein–Cartan contact reused on compact profiles. | Library only |
 | [1405.3386](https://arxiv.org/abs/1405.3386v4) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [1408.3203](https://arxiv.org/abs/1408.3203) | Studies | Archived: Engelhardt and Wall, quantum extremal surfaces; island and Page language is not an established parent-to-child process. | Library only |
-| [1408.4995](https://arxiv.org/abs/1408.4995v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
+| [1408.4995](https://arxiv.org/abs/1408.4995v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 15.15 |
 | [1408.6112](https://arxiv.org/abs/1408.6112) | Studies | Barvinsky: Euclidean-to-in-in rule, equations 2.25–2.29. | Library only |
 | [1409.2471](https://arxiv.org/abs/1409.2471) | Studies | Chamseddine, Connes and Mukhanov: equations 4–16, spectral volume quantization, not adopted as an NSC volume constraint. | Library only |
 | [1410.7999](https://arxiv.org/abs/1410.7999v2) | The owned gravitational spectral profile, 18 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 17.10 |
@@ -265,7 +265,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [gr-qc/9209012](https://arxiv.org/abs/gr-qc/9209012) | Flow, interface stress and horizon hydrodynamics, 27 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 16.1 |
 | [gr-qc/9211002](https://arxiv.org/abs/gr-qc/9211002) | Studies | Parker and Simon: perturbative order reduction of local curvature-squared terms in the Einstein equation. | Library only |
 | [gr-qc/9211017](https://arxiv.org/abs/gr-qc/9211017) | Studies | Archived: Bekenstein, relation between physical and gravitational geometry. | Library only |
-| [gr-qc/9307009](https://arxiv.org/abs/gr-qc/9307009v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
+| [gr-qc/9307009](https://arxiv.org/abs/gr-qc/9307009v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 15.15 |
 | [gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015) | Compact-seed nonlinear continuation, 25 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 14.1, 14.19 |
 | [gr-qc/9403003](https://arxiv.org/abs/gr-qc/9403003v1) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [gr-qc/9403008](https://arxiv.org/abs/gr-qc/9403008) | Studies | Archived: Garay, quantum gravity and minimum length. | Library only |

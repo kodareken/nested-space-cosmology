@@ -1,5 +1,17 @@
 # What the calculations show
 
+The [inherited characteristic handoff](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
+now computes the signed field outside the same observer horizon. Both
+incoming null traces follow from the frozen global two-mode parent state;
+no additional receiver waveform is chosen. Three fixed grids give field
+RMS errors .02155, .005387 and .001346, with contracting normal-derivative,
+phase and Noether gaps. A discrete symplectic identity is preserved and
+adjacent-strip composition reproduces the unsplit field without resetting
+the shared data. The horizon-edge supply matches the prior parent volume
+loss. This is a finite receiving region of the same parent, not a daughter
+or a derivation of the primordial global preparation. One horizon trace
+alone remains insufficient outside the declared spectral sector.
+
 The [same-source horizon response](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy)
 now calculates the area and dynamical entropy produced by the scalar's
 regional depletion. Its full-future normalized area increase is

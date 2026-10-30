@@ -1,5 +1,23 @@
 # Prior art and admission of new research
 
+## Inherited null traces and a receiving state, 30 October 2026
+
+The [existing parent owner](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
+closes a finite massive-field continuation outside its observer horizon.
+The earlier material-wall, conformal l=0 solver has a different physical
+operator and is not silently reused. A small l=1 double-null adapter uses
+the same parent modes, mass and action; their radial profiles fix both
+signed data traces. Bar--Tagne Wafo and Gundlach--Price--Pullin supply
+characteristic and method context; the finite Volterra proof and implicit
+cell relation are derived directly. The two traces are inherited global
+correlations, not signals between spacelike points. Three fixed grids
+64/128/256 use three workers and a Numba kernel within 180 seconds. The
+parent restriction, independent current identities, known zero-potential
+limit, receiver embedding gradient and composed-strip check verify the
+result. A second-leg perturbation records general nonuniqueness from one
+trace. No more grids are needed; nonlinear concentration and a sourced
+child continuation are the next physical dependencies.
+
 ## Same-source area and dynamical entropy, 30 October 2026
 
 The [parent owner](nsc-atlas-parent-circulation.md#8-the-same-flux-changes-area-and-dynamical-entropy)

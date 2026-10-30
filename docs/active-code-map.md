@@ -1,5 +1,11 @@
 # Active code and evidence map
 
+`nsc_atlas_characteristic_handoff.py` supplies the massive l=1 two-null
+adapter on the inherited smooth parent. Its second-leg relation reuses the
+same global mode functions; the Numba kernel releases the GIL for three
+independent grid controls. Symbolic and numerical tests separately verify
+the operator, physical/canonical flux, reference receiver and composition.
+
 `nsc_atlas_horizon_response.py` evaluates the scalar-sourced null area
 response, dynamical entropy correction, controlled future tail and angular
 energy matrix. It reuses the parent/circulation interface without changing

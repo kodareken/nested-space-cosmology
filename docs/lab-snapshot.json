@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+  "current_receipt_commit_parent": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 298037,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 298406,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,15 +10287,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "ceb38047cb038bff20323afa8deb39e2bc2e187c371ced885e4ca6793417a9ee"
+      "sha256": "724085cf068939c2fd1fdea4ea6ae8646270df021c659b0780bb9045e9ec72b6"
     },
     {
-      "bytes": 157270,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 157951,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "9aac1c98b887eafe5408e746230fdd00f630c034653e62510b77eb9d3aaa8d0e"
+      "sha256": "07465806fbd881fa89a8a9fa66ff17e7b7a40533051fe1f41cb25ff01e76f5f5"
     },
     {
       "bytes": 9543,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 484445,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 485311,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3f0ff0927c0d4f8b8d4fce6521e8e7ca5785f6143e68ad4b3f31e26a131222f4"
+      "sha256": "9f6dc8e382469571eada68e41b28bfbbe52b681c1ae1f90f5318557b38e3cfc0"
     },
     {
       "bytes": 173938,
@@ -10975,12 +10975,12 @@
       "sha256": "4f0732e624568c0b6993f55a8dc743baa12c842ac1c80ac94f282070be86a2e1"
     },
     {
-      "bytes": 23536,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 31756,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "docs/nsc-atlas-parent-circulation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "deba2771d0fbd1125b9477a642acc50bfead6cd45e04e873abc4d621049d9ae6"
+      "sha256": "bda1143f2a771eb40dd83eaa7a3630d8890cff78da5e4f031e3b596bb7ac5239"
     },
     {
       "bytes": 10962,
@@ -11133,12 +11133,12 @@
       "sha256": "a272dfc872c0125a518345f4cb54a50e09cfc4e42fce40fa3e17a888bf4f66c2"
     },
     {
-      "bytes": 66235,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 66221,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "docs/nsc-atlas-source-map.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "abb3b07a510bef16ddc45f69db41ce618334fd37e482c458d3bdc8bd2120f63e"
+      "sha256": "1f9af543c7bb52783dbeee9b7c37a291855090ade8c138382825d3442c29b529"
     },
     {
       "bytes": 9853,
@@ -11208,15 +11208,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 140126,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 140707,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "84834968f011850632ff64565604b7adcd801d34b64a97e9ea1043c157ee2865"
+      "sha256": "3cbf2eff8bd2dcaf05387d6f13d73051a47447c633b83e08052ac4bb76e5ca46"
     },
     {
       "bytes": 30876,
@@ -12184,12 +12184,12 @@
       "sha256": "1bb4a2ea0c1a8b5e07c4fb153554f2113cf2cc4ff86347f8a68ada243214c63d"
     },
     {
-      "bytes": 610840,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 612030,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4edbb3e76125d90def902efd8658b6e283350bc3a1462ef74afd7e3995daa352"
+      "sha256": "b88de69974a6f6944f23b79e158ebf4b07a550e5ca8a4dc0d6bbb8ad65435a9a"
     },
     {
       "bytes": 6705,
@@ -12198,20 +12198,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 247372,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 248129,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "38ca158f95cec4d56ca91d7b6f4dfbf5ed8e3173106d62678be147d46a620f69"
+      "sha256": "e68ea862ec6e446b06e82976fd06853947d1dadeec84eeab344c758f2f42ce80"
     },
     {
-      "bytes": 56178,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 56521,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "043482da6250efaf9e9bf4037841c8618828d14cabb4c4751f2b2de128092931"
+      "sha256": "03ab083e5469224d04bf4346592a2c135e7fda8a8ee27b987578548f36fc2fa2"
     },
     {
       "bytes": 18356,
@@ -12280,28 +12280,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 42764,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 43100,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f0297150b42d440ae4f97591bc14e92f25c92c6d027e92e0e218e409f476d1cd"
+      "sha256": "8a3c47db257428f3033d3750cdff6096b9c0ee739f1ffa104ae84740157902ee"
     },
     {
       "bytes": 3207,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "c20b0ef399d347cb392b19a3ce01a939ae551ea0edc45819f6154b1ec5941d22"
+      "sha256": "7cf5677d62fb500fde2281ae34f506d9b92da1f0a785957c33ccae4e4bc8f366"
     },
     {
-      "bytes": 51809,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 51964,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "923ad9c893c0a580d24112a249ef5ee4306082c3534dd032d10942639a988ee5"
+      "sha256": "e6f72d314ae6a0ec505289caf464d249d6f592920686a3228a2ee84c80badffe"
     },
     {
       "bytes": 226492,
@@ -12310,6 +12310,14 @@
       "path": "paper/figures/dirac-wall-radar.png",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "19862b80b646424a901018fdaff1d409b036570c0107882596c242a963c8ee19"
+    },
+    {
+      "bytes": 367103,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "path": "paper/figures/nsc-atlas-characteristic-handoff.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d398e17f4d821b133dcfe6f10f9142556f1fbf3ed55789f2806a3e600d2acdc5"
     },
     {
       "bytes": 128192,
@@ -12377,27 +12385,27 @@
     },
     {
       "bytes": 398,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "5c397f91ebc6b3d6417aa08ee26273801cf5d2243bba005513fc175a95427ef5"
+      "sha256": "ac7101af5b0739294880ba456fa341497dc3873b5a5d6693daeafb7b0cff383a"
     },
     {
-      "bytes": 644447,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 650777,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "dfbbd27403b70a21941da936226fa3e1777262d48dca644a87fc7221c2c488ea"
+      "sha256": "f9da3a5e5ac709d757b971cb5cb67a27d505d0a674bc2e7eff59bc1707e24b52"
     },
     {
-      "bytes": 18022833,
-      "change": "Connect the same inherited scalar flux to cosmological horizon area, dynamical entropy, a controlled future tail, angular energy transfer and an amplitude-free light relation.",
-      "changed_from_commit": "4bb7f40489a0d951934e352ee1d87cf87e1313c9",
+      "bytes": 18383528,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "dc0025c8868bde7f6e2cb525c2d2576b09303d91fef967817a799bec75384fbd"
+      "sha256": "6cfc885ed5f44e947186714f24116605858a25f8f6ad9aa6edb931f81f9356b5"
     },
     {
       "bytes": 3283,
@@ -30535,6 +30543,14 @@
       "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
     },
     {
+      "bytes": 12072,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "path": "results/summaries/nsc-atlas-characteristic-handoff-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "72c59b5652aab8db64ac439922fdf8e7eef6b03c0d52795c0d9a15292b0b14d2"
+    },
+    {
       "bytes": 5998,
       "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
       "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
@@ -31989,6 +32005,14 @@
       "path": "scripts/check_nsc_atlas_cap_profile_projection.py",
       "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
       "sha256": "6ea75e024593da8dfc24fac9f4c37870754a1c03e7b9a8d7ad47fef702f9637b"
+    },
+    {
+      "bytes": 1833,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "path": "scripts/check_nsc_atlas_characteristic_handoff.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7c2e79dcc6a502a3db5f365f8c6901b9efab51dfba2db12088ea9de0953ae331"
     },
     {
       "bytes": 1489,
@@ -35352,6 +35376,14 @@
       "sha256": "b295aad0f27c80edd1a5561e61e085021fbba16d4ca4d234b431b4f935d56cd0"
     },
     {
+      "bytes": 3819,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "path": "scripts/plot_nsc_atlas_characteristic_handoff.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9e697c21a5a0b9993230552a117dc098eb135d1a82ef5cfc470fb6d52c301a4d"
+    },
+    {
       "bytes": 3726,
       "change": "Construct compact shared parents and their checked geometry, causal response and continuation condition.",
       "changed_from_commit": "e1409519efe3d7b815661e3c8e02a25d2cbc88ed",
@@ -36356,6 +36388,14 @@
       "path": "src/recursive_horizons/nsc_atlas_characteristic_background.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "b7883490e6bad9c7096bfa6c6616e0674ff319e08e0e0be7ababf6055d1d5c9c"
+    },
+    {
+      "bytes": 15046,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "path": "src/recursive_horizons/nsc_atlas_characteristic_handoff.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a060817da4ae28f800a07032f41ee1406ab6531d12d72b3bcab23f4a7bd2ab00"
     },
     {
       "bytes": 6232,
@@ -40940,6 +40980,14 @@
       "sha256": "4f94f338c177fd4bc83104a7f37339dcfedc39adc77d9f5e3ca72e5ee2ee170c"
     },
     {
+      "bytes": 5853,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "path": "tests/test_nsc_atlas_characteristic_handoff.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f64535d507bac72f948b621f517900fe86bad4bb1089f777ced8464463d70c99"
+    },
+    {
       "bytes": 13583,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "69ac1279395903ee403da369b5db58a6ed850616",
@@ -41539,6 +41587,14 @@
       "path": "tests/test_nsc_atlas_gravitational_response.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "4b55cb1130bdce382233fb468646149b35c6f858baf630e670530a55ebbf2877"
+    },
+    {
+      "bytes": 4975,
+      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
+      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "path": "tests/test_nsc_atlas_handoff_numerics.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "663bf174ce6b087bbe0ff2067e029a1e8389c75c1e61670751a6bea416b80863"
     },
     {
       "bytes": 3240,
