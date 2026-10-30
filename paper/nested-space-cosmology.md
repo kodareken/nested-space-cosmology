@@ -9137,6 +9137,84 @@ the proposed valve a definite energy/angular-momentum interface. The
 transition to a new expanding interior still requires its compatible metric,
 field state and conserved source.
 
+### 16.7.4. The average work coefficient becomes a local Einstein constraint
+
+<!-- nsc-claim:local-work-and-bulk -->
+
+The [local continuation](../docs/nsc-atlas-local-work.md) connects the averaged
+work coefficient to the next-order fluid/gravity equations of
+[Compere, McFadden, Skenderis and Taylor](https://arxiv.org/html/1103.3022v2).
+Their reconstruction supplies metric coefficients through fourth order and
+beyond. The relevant local scalar equation, with
+v=epsilon u+epsilon^3 w and sigma_ij=partial_i u_j+partial_j u_i, is
+
+$$
+\nabla\cdot w=S,\qquad
+S=\frac{u\cdot\nabla p}{\nu}-u\cdot\Delta u
++\frac12\sigma_{ij}\sigma_{ij}.
+$$
+
+For the periodic leading field, independent integration by parts gives
+
+$$
+\langle S\rangle=\frac{2D}{V\nu}=3b_2'.
+$$
+
+Thus the previous average is precisely the zero mode of the local scalar
+constraint. The positive mean cannot be inverted by a periodic Poisson
+solve. A local affine completion is
+
+$$
+w=\beta y+\nabla\varphi+w_T,\qquad
+\beta=\frac{\langle S\rangle}{3},\qquad
+\Delta\varphi=S-\langle S\rangle,\qquad \nabla\cdot w_T=0.
+$$
+
+The potential has zero mean. Its gradient is the minimum-norm periodic
+correction; the transverse addition remains state/evolution freedom. The
+affine part carries the net boundary flux. It is valid on an open patch
+and is not an unchanged periodic vector field on the original torus.
+
+One fixed replay of the retained fine vortex gives:
+
+| State | Mean S | Required beta | Local scalar residual RMS |
+| --- | --- | --- | --- |
+| t=0 | 53.5644254361 | 17.8548084787 | 1.59e-13 |
+| t=.05 | 51.7916146209 | 17.2638715403 | 1.64e-13 |
+
+The independent curl-energy formula gives the same means. Final energy and
+dissipation match the saved run. Twice-sized padding resolves the cubic
+constraint source; no additional physical-grid refinement is used. The
+residuals measure the spectral constraint on retained band-limited data,
+not the complete continuum or gravitational error.
+
+![Local constraint, matching mean expansion and direct bulk check](figures/nsc-atlas-local-work.png)
+
+There is also an explicit bulk witness. For the exact decaying shear
+u=(exp(-nu t) sin(y+phase),0,0), the source is S=exp(-2nu t), so its
+required correction is w=exp(-2nu t)(x,y,z)/3. Inserting it into the
+published metric, we independently form the inverse metric, connection
+and Ricci series. Numerical controls at the cutoff, its midpoint and the
+background horizon give coefficients below 9e-15 through fourth order.
+Omitting the expansion correction leaves residuals of .4094--.4804.
+An exact symbolic shear-flow jet with the radial coordinate left arbitrary
+gives zero for all 125 component/order entries. Its precise scope and the
+separate vortex calculation are retained in the
+[record](../results/summaries/nsc-atlas-local-work-v1.json).
+
+The metric coefficients remain regular at the background Rindler horizon.
+This is a local finite-order bulk example, not a full finite-amplitude
+parent/child spacetime. The complete numerical vortex metric is not yet
+independently contracted, and the next vector equation enters at fifth order.
+
+Matching the earlier scale coefficient also does not identify two global
+metrics. Pulling flat space back by X=b(tau)x produces shift and lapse
+terms as well as b^2 dx^2. Dropping those terms gives a different boundary
+geometry. A compact quotient, observer congruence and parent attachment
+must therefore be specified rather than inferred from a shared coefficient.
+The new result supplies the local scalar data and a checked bulk witness
+for that next connection.
+
 ### 16.8. A material action now supplies the interaction vertex
 
 <!-- nsc-claim:atlas-geometric-cubic-vertex -->
@@ -12747,7 +12825,7 @@ Each calculation retains its own domain; arrows do not declare questions solved.
 <!-- nsc-source-catalog:start -->
 ## Appendix C. Complete arXiv source route index
 
-The index contains 316 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
+The index contains 317 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
 
 A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
 
@@ -12812,6 +12890,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Flow, interface stress and horizon hydrodynamics, 27 October 2026 | [1008.1911 †](https://arxiv.org/abs/1008.1911), [1101.2451](https://arxiv.org/abs/1101.2451v2), [1307.7267](https://arxiv.org/abs/1307.7267), [1510.00621 †](https://arxiv.org/abs/1510.00621), [gr-qc/0411060](https://arxiv.org/abs/gr-qc/0411060v2) |
 | Flow, interface stress and horizon hydrodynamics, 27 October 2026 | [gr-qc/9209012](https://arxiv.org/abs/gr-qc/9209012), [gr-qc/9712010](https://arxiv.org/abs/gr-qc/9712010v2), [hep-th/0405231 †](https://arxiv.org/abs/hep-th/0405231) |
 | Spacetime arrival maps and the forming source, 25 October 2026 | [1010.3416](https://arxiv.org/abs/1010.3416), [2011.04440](https://arxiv.org/abs/2011.04440v4) |
+| Local fluid/gravity completion, 30 October 2026 | [1103.3022](https://arxiv.org/abs/1103.3022v2) |
 | The owned gravitational spectral profile, 18 October 2026 | [1203.2034](https://arxiv.org/abs/1203.2034v2), [1410.7999](https://arxiv.org/abs/1410.7999v2) |
 | Connected flow, horizon transfer and observer geometry, 30 October 2026 | [1205.5600](https://arxiv.org/abs/1205.5600), [1403.2757](https://arxiv.org/abs/1403.2757v3), [1501.06570](https://arxiv.org/abs/1501.06570v8), [1807.09409](https://arxiv.org/abs/1807.09409) |
 | Spherical energy and the book's geometric hypothesis — 27 October 2026 | [1503.06705](https://arxiv.org/abs/1503.06705v2) |

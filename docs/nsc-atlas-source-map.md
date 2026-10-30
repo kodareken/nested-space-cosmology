@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **316 distinct arXiv works**: 96 are cited in the main argument and 220 are retained in the reading library only.
+This navigation index contains **317 distinct arXiv works**: 97 are cited in the main argument and 220 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -41,6 +41,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1101.1424](https://arxiv.org/abs/1101.1424) | Studies | Pfäffle and Stephan: torsionful spectral action, including Proposition 5.4, Theorem 5.7 and the Bochner and heat-kernel formulae. | Library only |
 | [1101.2451](https://arxiv.org/abs/1101.2451v2) | Flow, interface stress and horizon hydrodynamics, 27 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 16.1, 16.7.1 |
 | [1101.4012](https://arxiv.org/abs/1101.4012) | Studies | Popławski: matter–antimatter asymmetry and dark matter from torsion; the classical spin-torsion splitting between particles and antiparticles at the bounce, used as the starting estimate in the child and neck chain. | 21 |
+| [1103.3022](https://arxiv.org/abs/1103.3022v2) | Local fluid/gravity completion, 30 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 16.7.4 |
 | [1106.3263](https://arxiv.org/abs/1106.3263) | Studies | Andrianov, Kurkov and Lizzi: spectral action, Weyl anomaly and Higgs-dilaton potential, including the anomaly factorization and scale-versus-cutoff distinction. | Library only |
 | [1106.4318](https://arxiv.org/abs/1106.4318v1) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [1109.0011](https://arxiv.org/abs/1109.0011) | How to approach the work | See the linked reading route and manuscript section for the stated use and assumptions. | 13.3 |

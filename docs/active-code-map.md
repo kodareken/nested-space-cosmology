@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_local_work.py` evaluates the dealiased fourth-order scalar
+source and its affine/periodic completion. `nsc_atlas_rindler_bulk.py`
+constructs a published local metric for an analytic flow and independently
+contracts its formal Ricci series, including an exact radial check.
+`check_nsc_atlas_local_work.py` replays one fixed retained state and saves
+compact diagnostics; it does not launch a new refinement campaign.
+
 `nsc_atlas_boundary_work.py` derives the averaged fourth-order work
 coefficient from the saved flow, without rerunning a grid.
 `nsc_atlas_observer_geometry.py` owns exact anisotropic redshift, orbital

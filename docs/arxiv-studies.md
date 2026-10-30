@@ -1738,3 +1738,18 @@ imported quantization, conditional state selection and measured eta.
 The [flow/gravity owner](nsc-atlas-flow-gravity.md) and
 [observer owner](nsc-atlas-observer-geometry.md) state the common equations,
 domain differences and remaining source/transition questions.
+
+## Local fluid/gravity completion, 30 October 2026
+
+- Compere, McFadden, Skenderis and Taylor,
+  [1103.3022v2](https://arxiv.org/html/1103.3022v2): sections 3--6 read
+  directly, including the seed, radial integrability and regularity,
+  frame choice, scalar constraint (6.1), and metric (6.5)--(6.8).
+  The atlas independently derives the mean obstruction and local Poisson
+  completion and contracts a fourth-order metric witness. The entire
+  all-orders theorem and convergence of its series were not re-proved.
+
+The [owner](nsc-atlas-local-work.md) keeps local affine data, a fixed torus,
+and the previous shift-free boundary-scale ansatz distinct. A native Grok
+review checked the source/mean identity and global-domain limitations;
+the source equation and metric were read and checked by the primary agent.

@@ -1,5 +1,14 @@
 # What the calculations show
 
+The [local fourth-order continuation](nsc-atlas-local-work.md) derives
+div(w)=S and mean(S)=2D/(Vnu)=3b2_prime. A periodic Poisson correction plus
+the required affine expansion closes this scalar constraint on the retained
+initial and final vortex states, with RMS residuals about 1.6e-13. A
+separate exact shear-flow witness has an independently contracted regular
+bulk metric through fourth order; all 125 symbolic radial component/order
+entries vanish. This does not yet supply the full numerical vortex bulk,
+fifth-order vector evolution or a global parent/child attachment.
+
 The [averaged boundary-work closure](nsc-atlas-flow-gravity.md#the-next-order-averaged-work-relation)
 now gives b2=2(E0-E)/(3Vnu)=.877929728565 for the same finite flow. It
 closes the stated fourth-order average Ward identity, not the local bulk.

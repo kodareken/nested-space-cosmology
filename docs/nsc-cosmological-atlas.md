@@ -2135,3 +2135,14 @@ reset and an expanding daughter require a sourced continuation beyond these
 verified interfaces. The [complete source index](nsc-atlas-source-map.md)
 ties the existing library to the PDF argument without claiming all its
 different actions have already been joined.
+
+## From averaged work to local geometry, 30 October 2026
+
+The preceding goal turn produced and saved the connected atlas and work
+coefficient. This continuation advances the same objective through the
+[local Einstein constraint](nsc-atlas-local-work.md): its mean reproduces
+the earlier coefficient, its spatial modes are solved on the retained
+finite flow, and an analytic local bulk witness passes direct Ricci checks.
+The global region and next vector evolution remain the next dependencies.
+The infinite research objective remains active; this local result is not
+substituted for the full cosmological completion.

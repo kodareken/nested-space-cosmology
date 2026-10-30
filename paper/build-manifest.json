@@ -1,10 +1,10 @@
 {
-  "bytes": 16708445,
+  "bytes": 16873994,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "638692a55f05125523cfec46fea9514466e640d2ae72b36cbbf1aa6c6b8822a0",
+  "metadata_sha256": "eefb1ef89ea60b3c721559e47d81b6fad725380990d63e1a00b73bc6eb2ab443",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 210,
-  "pdf_sha256": "2ce597bec05f8035d939d04e995bf71dfc714f41da4c11b149d6473dfaddd1a6",
+  "pages": 212,
+  "pdf_sha256": "d34d84e78a3389d621e07c7d839d5b497b5bf67865fe5986ba2315c43265a7d4",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -182,6 +182,10 @@
     {
       "path": "paper/figures/nsc-atlas-flow-gravity.png",
       "sha256": "4e6d7ffad25198b9593c88cef11a3c569826720f85441120bca3b6d599c6777d"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-local-work.png",
+      "sha256": "d5b3389fa457d2bff401ecf830bc98bc4934ba4118bded0adfe6a0c26699b1bc"
     },
     {
       "path": "paper/figures/nsc-atlas-pen-geometry.png",
@@ -744,6 +748,10 @@
       "sha256": "2a4aa2c18664e175ea9bf94f21bf0a0c881e9c41bce14780f4fef06930d5be0b"
     },
     {
+      "path": "results/summaries/nsc-atlas-local-work-v1.json",
+      "sha256": "635cd2264fcc7c16cd34c92afd50e12cc14668608555482e3ec14cda08b73c4d"
+    },
+    {
       "path": "results/summaries/nsc-atlas-matched-trace-v1.json",
       "sha256": "a38fbc8e79a98beec03025b2f95db264967ce550639baf10ac83bff63750cd70"
     },
@@ -977,6 +985,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "7ecc892ec9def220cdb05e9c4c091e9a8728c5fa3308bd3d0d8bbbeca2109cbc",
-  "version": "working-2026-10-30.7"
+  "source_sha256": "43d1703e217e21dc5110caf897eaf32e6ebdd0e59897e2c519c0e51827be942e",
+  "version": "working-2026-10-30.8"
 }

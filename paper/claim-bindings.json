@@ -703,6 +703,11 @@
       "section": "15.12",
       "status": "derived",
       "owner": "docs/nsc-atlas-observer-geometry.md"
+    },
+    "local-work-and-bulk": {
+      "section": "16.7.4",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-local-work.md"
     }
   },
   "findings": [

@@ -296,3 +296,13 @@ the horizon contractions. Numerical controls test known exact flows, direct
 energy conservation and the fixed refinements. A later calculation that
 fails either the boundary momentum constraint or the horizon flux identity
 under these same assumptions would contradict the claimed connection.
+
+## Local fourth-order continuation
+
+The [local work entry](nsc-atlas-local-work.md) now identifies the earlier
+average coefficient as the zero mode of the published higher-order scalar
+constraint. It constructs its nonzero spatial modes on the retained vortex
+and independently checks a regular fourth-order bulk witness. The full
+numerical vortex metric and global attachment remain open. The affine-flow
+description and the earlier shift-free expanding boundary are not silently
+identified; their coordinate shift/lapse difference is explicit.

@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Local fourth-order constraint and bulk witness
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_local_work.py
+python scripts/run_python.py scripts/check_nsc_atlas_local_work.py --output .build/local-work-reproduced.json
+python scripts/run_python.py scripts/plot_nsc_atlas_local_work.py
+```
+
+The producer replays the saved fine flow once to recover unstored fields,
+uses eight FFT workers and twice-sized source padding, and retains only
+summaries and small slices. The symbolic/numerical metric controls are a
+separate analytic witness, with no claim of a global cosmic continuation.
+
 ## Boundary work and observer geometry
 
 ```powershell

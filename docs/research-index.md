@@ -1,5 +1,9 @@
 # Scientific strand index
 
+The [local work/bulk connection](nsc-atlas-local-work.md) supplies the
+fourth-order scalar completion of the retained flow, the mean expansion
+identity, and a direct independent bulk-tensor witness.
+
 The [flow/gravity connection](nsc-atlas-flow-gravity.md) now includes a
 finite fluid history and averaged geometric work closure. The
 [observer geometry](nsc-atlas-observer-geometry.md) gives exact optical
