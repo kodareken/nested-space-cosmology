@@ -192,8 +192,14 @@ that average must be derived from the branching law rather than imposed
 as every region's length ratio.
 The stronger foundational hypothesis is that temporal ordering and the
 observed matter imbalance are consequences of that geometric state. The
-evolution equations used in the present calculations already contain time;
-they do not yet derive its origin.
+present calculations evolve a supplied offset parameter; they do not yet
+derive why updates occur.
+
+The current parent is described by **three generated spatial directions
+with offset-parametrized evolution**. Covariant formulas package one offset
+argument and three spatial arguments. Proper duration is a readout along
+that history, rather than a fourth primitive spatial direction. Section
+1.2 gives the construction and its explicit completion assumptions.
 
 The atlas makes the mechanism calculable through defined objects:
 
@@ -210,7 +216,7 @@ The atlas makes the mechanism calculable through defined objects:
 ![The connected route and the physical attachments still required](figures/nsc-atlas-connected-route.png)
 
 *The arrows refer to equations and declared domains. The five-dimensional
-fluid/gravity construction and the four-dimensional inherited-field horizon
+fluid/gravity construction and the inherited-field horizon of the generated parent
 are distinct sectors until their matching is supplied. A one-coordinate
 generating description can organize a new three-dimensional region;
 its physical birth still needs a sourced transition.*
@@ -1850,7 +1856,7 @@ B: the attributed two-brane lensing discriminator. C: the existing
 constant-tension wall and its unstable critical comparison.
 D: a separate bulk geometry inducing positive local curvature.
 The curves are regenerated from the stated equations. Panels A and C
-belong to the current four-dimensional family; B and D have different
+belong to the current three-spatial-direction parent family; B and D have different
 five-dimensional backgrounds and have not been combined into one model.*
 
 ### 10.9. Two explicit ways surrounding geometry enters local gravity
@@ -6140,7 +6146,7 @@ Y_+=\frac{Y_1+iY_2}{\sqrt{2}},\qquad
 \qquad \psi=\frac{x+iy}{\sqrt{2}}.
 $$
 
-Thus one real higher-dimensional field supplies a complex four-dimensional
+Thus one real field in the declared compactification supplies a complex generated-parent
 mode carrying internal rotational charges +/-1. Six commuting planes
 organize the thirteen real harmonics as six complex pairs and one neutral
 component. This uses the attributed
@@ -9224,6 +9230,240 @@ The next physical connection is concentration and compatible strong-field
 evolution of the actual inherited data, rather than another freely
 chosen incident waveform.
 
+### 15.16. The zero line: thermodynamic decay, retained state and a crossover test
+
+<!-- nsc-claim:offset-thermodynamic-zero -->
+
+Douglas's zero-line picture supplies the next connected question: can
+one signed oscillation describe energy relaxation, a spiral state, and
+continuation into a further region? For the regional convention, plus
+labels the energy/source side, minus the counter side, and positive flux
+goes plus to minus. On the oscilloscope, zero is the amplitude baseline
+between the two lobes. The [calculation](../results/summaries/nsc-atlas-zero-interface-v1.json)
+and [owner](../docs/nsc-atlas-offset-thermodynamics.md) identify the precise
+objects and test their proposed connection. The current parent has three
+generated spatial directions with offset-parametrized evolution.
+
+**A thermodynamic mode, with a derived decay rate.** The same scalar obeys
+
+$$
+\ddot q_l+3h\dot q_l+
+\left(\mu^2+\frac{l(l+2)}{a^2}\right)q_l=0.
+$$
+
+For its spatially averaged stress, $E_\chi=V\rho_\chi$ and
+$V=2\pi^2a^3$ give $dE_\chi=-p_\chi dV$. This pressure-work identity
+agrees with the direct field work rate within $2.85\times10^{-14}$ in
+the sampled model units. The observer patch separately loses Killing
+energy through its horizon. Its boundary flux and clock factors remain
+part of that region's definition.
+
+The damping coefficient is the logarithmic rate of the three-dimensional
+spatial volume, d(ln V)/dt=3h. It is fixed by the generated spatial
+geometry in the declared action.
+
+At the retained late vacuum, the field equations give
+
+$$
+q_l\sim a^{-3/2}\cos(\nu Ht+\delta_l),\qquad
+\langle\rho_\chi\rangle\sim a^{-3},\qquad
+\lambda_l^{\rm spatial}=\frac{2\pi a}{\sqrt{l(l+2)}}\sim a,
+$$
+
+$$
+\nu=\sqrt{\mu^2/H^2-9/4}=91.251435413335.
+$$
+
+The massive carrier tends to frequency 24.766151984526 in proper model
+units. A massless probe's frequency instead decreases as $a^{-1}$.
+Signal amplitude can decay while a massive phase continues to oscillate;
+the frequency, amplitude and spatial wavelength should not be substituted
+for each other. The positive vacuum density remains .220983024213 as
+the usable excitation density tends to zero.
+
+The late mode quadratures form an inward logarithmic spiral. Its
+amplitude decreases by .901871154627 per carrier turn; its spatial
+wavelength increases by 1.071281657207. A constant phase offset alone
+does not attenuate a wave. The decay here comes from the geometrically
+derived damping term. A causal drive/response lag also has a calculated
+work channel: the late diagnostic susceptibility is
+
+$$
+\chi_R(\omega)=\frac{1}{\mu^2-\omega^2-3iH\omega},\qquad
+\langle P\rangle=\frac{F_0^2\omega}{2}\operatorname{Im}\chi_R\geq0.
+$$
+
+For oscillator-density energy, its phase lag is pi/2 at probe frequency mu, and the absorbed power
+equals the damping work. This is a readout of the retained late operator,
+not a newly fitted source. Stereographic projection puts the same phase
+curve on a unit sphere, as the figure shows. This is a state representation;
+the physical spatial metric is supplied by the earlier generator and
+Einstein constraints. Canonical damping coordinates alone do not prove
+microscopic irreversibility.
+
+![A signed wave, its inward spiral, sphere representation and spectral tail](figures/nsc-atlas-zero-interface.png)
+
+**Which zero is crossed?** A horizon can be defined by a signal-flow
+balance: in the expanding river chart, radial null rates are
+$dR/dt=HR\pm1$, and $z_H=1-HR$ crosses zero at $R=1/H$.
+This is a smooth causal interface with zero surface tension. A signed
+field value can also cross zero while its kinetic energy stays positive.
+The two conditions are not already the same equation.
+
+For the late conformal zero put $\Omega_c=\cos\eta=\operatorname{sech}(Ht)$.
+Then
+
+$$
+\bar g=\Omega_c^2g=H^{-2}(-d\eta^2+d\Omega_3^2),\qquad
+|d\Omega_c|_{\bar g}^2\longrightarrow-H^2.
+$$
+
+That future boundary is spacelike. The null observer horizon ends at one
+point on it; it is not the whole crossover surface. The spacelike
+construction is the relevant [Meissner--Penrose CCC comparison](https://arxiv.org/html/2503.24263v1).
+
+Reuse the [scale-factor duality](https://arxiv.org/html/1604.08032v2)
+with $a_+=L_\times^2/a_-$. A background fluid with density proportional
+to $a^{-n}$ maps to exponent $4-n$: vacuum maps to radiation, radiation
+to vacuum, and averaged dust to $w=-2/3$. With the explicitly declared
+comparison normalization $L_\times=1/H$, an expanding extension gives
+
+$$
+a_+(\tau)=\frac{\sin\tau}{H},\qquad
+T_+=\frac{1-\cos\tau}{H},\qquad
+\rho_+a_+^4=\frac{3}{\kappa H^2}=40.727110293056.
+$$
+
+Tau is a new conformal offset and $T_+$ its proper readout. The inherited
+unit is 3.684522144189. This is a nonzero matching benchmark, not a
+selected next-aeon matter history. It requires an orientation/extension
+rule. With no old radiation it creates no new vacuum term; the resulting
+closed radiation branch eventually recollapses. Its conformal geometry is
+smooth, while physical curvature-square invariants diverge at its bang.
+
+**Zero amplitude retains state.** The actual heavy scalar does not yet
+make that conformal matter handoff. Generically
+
+$$
+q/\Omega_c\sim\Omega_c^{1/2}
+\cos(\nu\ln\Omega_c+\delta),
+$$
+
+which reaches zero but is not C1. Its renormalized oscillator retains
+nonzero asymptotic phase data:
+
+| Mode | A_infinity estimate | B_infinity estimate |
+| --- | --- | --- |
+| First | .084295839777 | -.001732192417 |
+| Second | .084204156516 | -.004039508956 |
+
+The respective future bounds per coefficient are $7.80\times10^{-10}$
+and $1.82\times10^{-9}$. The faster node-specific decay along the single
+observer horizon does not establish regularity of the entire future field.
+
+With xi denoting curvature coupling, the weight-one cylinder operator contains the singular coefficient
+$\mu_{\rm bare}^2/H^2+12\xi-2$. A massless conformal scalar has a
+regular comparison operator at $\xi=1/6$; a minimal nonzero-mass
+comparison has $\mu^2=2H^2$, as in
+[Friedrich's construction](https://arxiv.org/html/1311.0700v2).
+The fixed source has $\mu^2/H^2=8329.074464994$. Thus mass fade alone
+is not a generic regularization of this minimal operator. Unit real
+conformal modes have crossover value/derivative pairs $(-1,0)$ and $(0,3)$
+for $l=1,2$; they do not automatically convert the massive parent state.
+The missing connection is an action-and-state crossover law transporting
+the surviving data into admissible next-region matter.
+
+**Opposite winding has positive energy.** For a locally normalized
+geometric oscillator $z=Ae^{\pm i\omega t}$,
+
+$$
+Q=-i(z^*\dot z-z\dot z^*),\qquad
+E=|\dot z|^2+\omega^2|z|^2,
+$$
+
+$$
+Q_\pm=\pm2\omega|A|^2,\qquad E_\pm=2\omega^2|A|^2>0.
+$$
+
+Both orientations belong to one field. A sign flip of amplitude preserves
+Q; conjugation reverses Q. Their standing sum has zero charge and
+positive energy even when its real signal crosses zero. Quantum action
+normalization is still needed to identify a single excitation with
+$E=\hbar\omega$.
+
+There is a precise minimum-energy circle here: $E\geq\omega|Q|$,
+with equality for constant-radius circular motion of the two field
+components. This selects the circle at fixed charge in that stationary
+mode comparison; it does not select a nonzero charge for the universe.
+
+A charge-even one-way cut cannot select a nonzero mean charge from the
+present invariant state: $[C,P_{\mathcal R}]=0$ and $CQ C^{-1}=-Q$ give
+$\langle Q_{\mathcal R}\rangle=0$. The existing circulation has zero
+helicity despite nonzero motion. The conditional internal asymmetry is
+zero; actual baryon/photon eta remains undefined until its currents and
+conversion are derived. A conditional identification would miss
+$6.1\times10^{-10}$ by 100 percent. No tail sampling time is chosen to
+turn an energy-density ratio into that different observable.
+
+**The omitted connection can be restored from geometry.** The mixed
+metric components provide a KK gauge connection for the existing internal
+winding pair. Within the declared round-S12 reduction, the same geometry
+that gave the charged-mode mass increment gives
+
+$$
+\frac{g_{\rm KK}^2}{\kappa_{\rm nat}\Delta M_{\rm KK}^2}
+=\frac{13}{12},\qquad
+\frac{g_{\rm KK}^2}{g_{\rm grav}}=2.433310295208,
+\quad g_{\rm grav}=\kappa_{\rm nat}/L_{\rm unit}^2.
+$$
+
+This [Kaluza--Klein construction](https://arxiv.org/html/hep-th/9410046)
+restores an interaction without fitting a new coupling. The overall
+gravitational scale remains unselected; arithmetic kappa=1 does not set
+it to one. Neither this gauge field nor its scalar charge has been
+identified with electromagnetism or baryon number. The present neutral
+connection has zero gauge-invariant horizon potential. An inherited
+orientation-sensitive connection/state could distinguish
+$\omega-q\Phi_K$, but its nonzero value has not been supplied by the
+external one-way flow.
+
+At fixed Einstein ruler and reference internal shape, both $g_{\rm KK}^2$
+and the KK mass increment squared scale as $e^{-14s}$. The existing
+reference-to-minimum comparison changes the gauge coupling by
+1.283418829588. This supplies a conditional force/mass scaling law;
+the volume history and charge-sensitive state still have to be inherited.
+In thermal language the connection supplies species potentials
+$\mu_q=q\Phi_K$; the work term conjugate to the net winding charge
+is $\Phi_K dQ$ in natural units.
+
+The vacuum counter-pressure is definite: positive density .220983024213,
+equal negative pressure and $w=-1$. It is present on both sides of the
+current smooth same-action horizon. Its late fraction tends to1, not a
+selected value for today's .685. That cross-epoch comparison is not a
+current-data fit. A flowing null stress is not already this vacuum stress.
+
+**Clocks and detectors remain quantitative tests.** In a supplied
+two-photon centre-of-momentum annihilation channel, conservation gives
+opposite momenta and equal energies $mc^2$. The electron reference gives
+510.99895069 keV and $1.2355899655\times10^{20}$ Hz; those are
+[comparison constants](https://physics.nist.gov/cuu/pdf/wall_2022.pdf),
+not a mass prediction of the atlas's scalar pair. PET registers calibrated
+electrical and timing signals; [J-PET](https://arxiv.org/html/1911.12059v1)
+even uses time-over-threshold as an energy-loss proxy. That is not direct
+counting of the carrier cycles. Likewise the
+[Lan mass--phase clock](https://doi.org/10.1126/science.1230767) uses
+interference, a comb and a servoed oscillator. A new interpretation must
+predict those joint readouts, including broadening and detector response.
+
+The mode spectrum also remains explicit. Compact S3 fixes the lowest
+positive wave number and an unbounded sequence of higher modes. The
+classical thermal mode count through L is
+$(L+1)(L+2)(2L+3)/6$, diverging as $L^3$. A physical cutoff or occupation
+law must therefore be derived before Planck length becomes a selected
+shortest wavelength or absolute zero a geometric band endpoint. The
+thermodynamic organization is useful; completing it requires those state,
+scale and interaction laws as well as energy balance.
+
 ## VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
@@ -9689,7 +9929,8 @@ epsilon and the integration coordinates are part of these statements.
 The negative contraction is allowed in Lorentzian geometry; it is not
 a Ricci scalar or cosmological constant. The metric satisfies the published
 Einstein equations through cubic order, with additional numerical fluid
-error here. No complete four-dimensional cosmological attachment follows.
+error here. A complete attachment of this auxiliary flow geometry to the
+evolving generated parent remains open.
 
 ### 16.7.2. Energy depletion determines an averaged geometric work term
 
@@ -13458,7 +13699,7 @@ Each calculation retains its own domain; arrows do not declare questions solved.
 <!-- nsc-source-catalog:start -->
 ## Appendix C. Complete arXiv source route index
 
-The index contains 320 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
+The index contains 325 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
 
 A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
 
@@ -13526,6 +13767,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Local fluid/gravity completion, 30 October 2026 | [1103.3022](https://arxiv.org/abs/1103.3022v2) |
 | The owned gravitational spectral profile, 18 October 2026 | [1203.2034](https://arxiv.org/abs/1203.2034v2), [1410.7999](https://arxiv.org/abs/1410.7999v2) |
 | Connected flow, horizon transfer and observer geometry, 30 October 2026 | [1205.5600](https://arxiv.org/abs/1205.5600), [1403.2757](https://arxiv.org/abs/1403.2757v3), [1501.06570](https://arxiv.org/abs/1501.06570v8), [1807.09409](https://arxiv.org/abs/1807.09409) |
+| Offset, conformal zero and charge-sensitive transport, 30 October 2026 | [1311.0700](https://arxiv.org/abs/1311.0700v2), [1407.8293 †](https://arxiv.org/abs/1407.8293v1), [1604.08032](https://arxiv.org/abs/1604.08032v2), [1911.12059](https://arxiv.org/abs/1911.12059v1), [hep-ph/9406345 †](https://arxiv.org/abs/hep-ph/9406345v1) |
 | Spherical energy and the book's geometric hypothesis — 27 October 2026 | [1503.06705](https://arxiv.org/abs/1503.06705v2) |
 | Compact-seed nonlinear continuation, 25 October 2026 | [1504.05968](https://arxiv.org/abs/1504.05968), [gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015) |
 | Common-action wall transfer, 17 October 2026 | [1510.05515](https://arxiv.org/abs/1510.05515) |

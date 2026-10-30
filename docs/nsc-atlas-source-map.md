@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **320 distinct arXiv works**: 102 are cited in the main argument and 218 are retained in the reading library only.
+This navigation index contains **325 distinct arXiv works**: 105 are cited in the main argument and 220 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -66,6 +66,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1308.4552](https://arxiv.org/abs/1308.4552) | Studies | Obukhov, Silenko and Teryaev: Dirac Hamiltonian, equations 2.14–2.16, used for the ADM source constraints. | Library only |
 | [1309.0820](https://arxiv.org/abs/1309.0820) | Studies | Adam, Naya, Sanchez-Guillen and Wereszczynski: BPS Skyrme model and nuclear binding energies. | Library only |
 | [1309.7591](https://arxiv.org/abs/1309.7591v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 12 |
+| [1311.0700](https://arxiv.org/abs/1311.0700v2) | Offset, conformal zero and charge-sensitive transport, 30 October 2026 | smooth nonzero-mass conformal comparison. Read the abstract, introduction and section3 equations3.3--3.5. The coupled nonlinear theorem has further potential/data assumptions and is not imported as a theorem for the atlas's fixed heavy scalar. Use the critical-mass exception to distinguish a ... | 15.16 |
 | [1311.4182](https://arxiv.org/abs/1311.4182) | Studies | Fischmann: conformal powers of the Dirac operator, used for the free compact-carrier identification. | Library only |
 | [1312.2235](https://arxiv.org/abs/1312.2235) | Studies | Kurkov, Lizzi and Vassilevich: high-energy bosons do not propagate, used for the spectral-cutoff propagation wall. | Library only |
 | [1312.2960](https://arxiv.org/abs/1312.2960) | Studies | Adam, Naya, Sanchez-Guillen and Wereszczynski: BPS Skyrme energy linear in topological charge, including the static-energy equations. | Library only |
@@ -75,6 +76,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1404.5635](https://arxiv.org/abs/1404.5635) | Studies | Archived: Bousso, Casini, Fisher and Maldacena, proof of a quantum Bousso bound. | Library only |
 | [1405.0397](https://arxiv.org/abs/1405.0397) | Studies | Castillo-Felisola, Corral, Kovalenko and Schmidt: equations 13 and 18–20, the higher-dimensional Einstein–Cartan contact reused on compact profiles. | Library only |
 | [1405.3386](https://arxiv.org/abs/1405.3386v4) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
+| [1407.8293](https://arxiv.org/abs/1407.8293v1) | Offset, conformal zero and charge-sensitive transport, 30 October 2026 | independent reviewer inspected sections3--4.1 for electrical-pulse event reconstruction. Its apparatus-specific resolutions are not adopted as universal PET constants. | Library only |
 | [1408.3203](https://arxiv.org/abs/1408.3203) | Studies | Archived: Engelhardt and Wall, quantum extremal surfaces; island and Page language is not an established parent-to-child process. | Library only |
 | [1408.4995](https://arxiv.org/abs/1408.4995v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 15.15 |
 | [1408.6112](https://arxiv.org/abs/1408.6112) | Studies | Barvinsky: Euclidean-to-in-in rule, equations 2.25–2.29. | Library only |
@@ -99,6 +101,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1512.06074](https://arxiv.org/abs/1512.06074) | Studies | Lucat and Prokopec: equation 9 at xi=1, the axial contact coefficient, and their microscopic in-in source. | Library only |
 | [1601.04744](https://arxiv.org/abs/1601.04744) | Studies | Archived: Donnelly and Freidel, local subsystems in gauge theory and gravity. | Library only |
 | [1601.06809](https://arxiv.org/abs/1601.06809) | Studies | Natário, Queimada and Vicente: conditional theorem that a null-energy-condition test field cannot destroy an extremal Kerr–Newman horizon. | Library only |
+| [1604.08032](https://arxiv.org/abs/1604.08032v2) | Offset, conformal zero and charge-sensitive transport, 30 October 2026 | scale-factor duality for curved FLRW backgrounds. Read equations2--5, section2.1 equations6--10, and sections4.4--4.5. Reuse the fluid-density/exponent transform and orientation alternatives. Its background duality is not automatically a fluctuation or massive-field symmetry; the latter warning is ... | 15.16 |
 | [1605.01603](https://arxiv.org/abs/1605.01603) | Studies | Krishnan and Raju: equations 4–5, the Dirichlet metric variation of the Einstein and Gibbons–Hawking–York terms. | Library only |
 | [1606.02728](https://arxiv.org/abs/1606.02728) | Studies | Fan, Chen and Lü: criticality in Einstein–Gauss–Bonnet gravity, where the ordinary bilinear graviton is absent on the coalesced vacuum. | Library only |
 | [1606.05831](https://arxiv.org/abs/1606.05831) | Studies | Archived: Kobayashi, generic instabilities of nonsingular cosmologies in Horndeski theory. | Library only |
@@ -140,6 +143,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1910.01648](https://arxiv.org/abs/1910.01648) | Studies | Montero, Van Riet and Venken: section 2, charged de Sitter geometry used before importing a near-extremal seed. | Library only |
 | [1910.07534](https://arxiv.org/abs/1910.07534v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [1910.13915](https://arxiv.org/abs/1910.13915v3) | Formation and metric regularity, 17 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
+| [1911.12059](https://arxiv.org/abs/1911.12059v1) | Offset, conformal zero and charge-sensitive transport, 30 October 2026 | J-PET timing and deposited-energy calibration. Read background and section2 through2.1, including the partial-Compton-energy qualification. Detector timestamps and time-over-threshold calibration do not directly count photon carrier cycles. | 15.16 |
 | [1912.04872](https://arxiv.org/abs/1912.04872v5) | Conserved profiles and spatial correlations, 25 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 14.15 |
 | [2003.08398](https://arxiv.org/abs/2003.08398) | Studies | Archived: Kovács and Reall, well-posed formulation of Lovelock and Horndeski theories. | Library only |
 | [2003.14108](https://arxiv.org/abs/2003.14108v2) | Curved scalar perturbations and their pressure scale | See the linked reading route and manuscript section for the stated use and assumptions. | 13.12 |
@@ -198,7 +202,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [2503.18515](https://arxiv.org/abs/2503.18515v3) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [2503.19441](https://arxiv.org/abs/2503.19441) | Studies | Wright et al.: KiDS-Legacy cosmological constraints from cosmic shear. | Library only |
 | [2503.24162](https://arxiv.org/abs/2503.24162v3) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
-| [2503.24263](https://arxiv.org/abs/2503.24263) | Studies | Archived: Meissner and Penrose, the physics of conformal cyclic cosmology. | 22 |
+| [2503.24263](https://arxiv.org/abs/2503.24263) | Studies | Archived: Meissner and Penrose, the physics of conformal cyclic cosmology. | 15.16, 22 |
 | [2504.05597](https://arxiv.org/abs/2504.05597) | Studies | Gimeno-Amo et al.: cosmological-parameter variations across the sky in Planck PR4. | Library only |
 | [2506.19907](https://arxiv.org/abs/2506.19907) | How to approach the work | Figueiredo and Vazão: the correlatron, a polytope for cosmological correlators, sandwiched between cosmohedron and associahedron facets. | Library only |
 | [2507.03581](https://arxiv.org/abs/2507.03581) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
@@ -287,6 +291,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [hep-ph/0105021](https://arxiv.org/abs/hep-ph/0105021) | Studies | Ponton and Poppitz: sections 2.1–2.2, the Einstein-frame radius and distinct local counterterms; their fitted coefficients are not imported. | Library only |
 | [hep-ph/0212332](https://arxiv.org/abs/hep-ph/0212332) | How to approach the work | See the linked reading route and manuscript section for the stated use and assumptions. | 10.12 |
 | [hep-ph/9302210](https://arxiv.org/abs/hep-ph/9302210) | Horizon-only handoff and charge, 30 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 13.32 |
+| [hep-ph/9406345](https://arxiv.org/abs/hep-ph/9406345v1) | Offset, conformal zero and charge-sensitive transport, 30 October 2026 | diffusion-enhanced spontaneous electroweak baryogenesis. Read introduction and the two-Higgs-doublet diffusion section. Reuse the example of a CP phase coupling to current, with anomalous charge-changing interactions. A phase wall/plasma is not the smooth null cut; entropy and photon normalizations ... | Library only |
 | [hep-ph/9408387](https://arxiv.org/abs/hep-ph/9408387) | How to approach the work | See the linked reading route and manuscript section for the stated use and assumptions. | 10.12 |
 | [hep-ph/9411206](https://arxiv.org/abs/hep-ph/9411206) | Lifetime and curvature — 29 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 13.26, 13.27 |
 | [hep-ph/9907447](https://arxiv.org/abs/hep-ph/9907447v2) | Physical normalization from internal volume — 28 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 13.23 |
@@ -310,7 +315,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [hep-th/0602146](https://arxiv.org/abs/hep-th/0602146) | Studies | Iso, Umetsu and Wilczek: equations 25–28, Hawking radiation from charged black holes and the free fermionic flux normalization. | Library only |
 | [hep-th/0602194](https://arxiv.org/abs/hep-th/0602194v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [hep-th/9308075](https://arxiv.org/abs/hep-th/9308075) | Step 7 scalar trace input, 17 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 17.2 |
-| [hep-th/9410046](https://arxiv.org/abs/hep-th/9410046) | Internal charge and horizon state, 30 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 13.33 |
+| [hep-th/9410046](https://arxiv.org/abs/hep-th/9410046) | Internal charge and horizon state, 30 October 2026 | reread equations8,16 and27--30 for the Killing-vector gauge origin and normalization. The atlas restores the sphere-averaged gauge term and derives its correlation with the previous scalar KK gap. This is leading reduction data, not a complete nonlinear finite Pauli truncation or an electromagnetic ... | 13.33, 15.16 |
 | [hep-th/9502109](https://arxiv.org/abs/hep-th/9502109) | Studies | Mottola: section III, a configuration-space measure built from metric deformations and divided by diffeomorphism orbits. | Library only |
 | [hep-th/9511136](https://arxiv.org/abs/hep-th/9511136v1) | Atlas reuse library, 10 October 2026 | Barrabès and Frolov: v1 introduction and sections 2–4 now read; multiple daughters inside one hole, null-shell matching and boundary interactions. Import the conditional geometry; production probability and microphysics remain open. See the atlas source card. | 4 |
 | [hep-th/9606001](https://arxiv.org/abs/hep-th/9606001) | Studies | Chamseddine and Connes: the spectral action principle, imported as the reduction of gravity and gauge fields from one Dirac operator. | Library only |

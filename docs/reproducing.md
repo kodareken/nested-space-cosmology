@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Offset, zero line and thermodynamic/conformal tests
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_zero_interface.py --output .build/zero-interface-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_zero_interface.py tests/test_nsc_atlas_zero_numeric.py tests/test_nsc_atlas_s3_polynomials.py
+python scripts/run_python.py scripts/plot_nsc_atlas_zero_interface.py
+```
+
+The [owner](nsc-atlas-offset-thermodynamics.md) separates the fixed-source
+tail from reciprocal/regular-operator comparisons and detector references.
+The numerical tail endpoints select no physical epoch. No new coupling
+or SI scale is fitted to eta, Omega_Lambda or the electron mass.
+
 ## Inherited characteristic continuation
 
 ```powershell
@@ -630,7 +643,7 @@ closed equations and small independent checks:
 
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_parent_observables.py
-python scripts/run_python.py scripts/plot_nsc_atlas_parent_observables.py
+python scripts/run_python.py scripts/plot_nsc_atlas_parent_observables_current.py
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_parent_observables.py -q
 ```
 

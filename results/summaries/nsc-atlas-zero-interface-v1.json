@@ -1,0 +1,439 @@
+{
+  "charge_and_winding": {
+    "inherited_KK_connection": {
+      "absolute_physical_gauge_coupling_selected": false,
+      "charge_resolved_cofrequency": "omega-q Phi_K; Phi_K is a horizon/reference potential difference or inherited holonomy",
+      "exact_gauge_gap_ratio": "(d+1)/d=13/12",
+      "full_nonlinear_finite_KK_truncation_proved": false,
+      "g_grav_times_gauge_kinetic_coefficient": 0.4109627949914406,
+      "gauge_coupling_over_sqrt_g_grav": 1.559907143136312,
+      "gauge_coupling_squared_over_g_grav": 2.433310295207691,
+      "gauge_coupling_squared_over_kappa_mass_increment": 1.0833333333333335,
+      "gauge_derivative": "D_mu z=(partial_mu-i q A_mu)z, q=+/-1; A_can=A/g_KK at fixed s",
+      "generator": "2*pi-period internal rotation in the selected (n1,n2) plane",
+      "geometry_alone_selects_nonzero_Phi_K": false,
+      "gravitational_scale_parameter": "g_grav=kappa_nat/L_unit^2 remains unselected; arithmetic kappa=1 is not g_grav=1",
+      "identified_as_electromagnetism_or_membrane_charge": false,
+      "kinetic_term": "-exp((d+2)s)<K^2> F^2/(8 kappa_nat); retain field-dependent coefficient if s varies",
+      "mean_Killing_norm_squared_exact": "88/65",
+      "mean_Killing_norm_squared_over_Lunit_squared": 1.353846153846154,
+      "neutral_preparation_gauge_invariant_horizon_potential": 0.0,
+      "ratios_select_the_volume_history": false,
+      "reference_s_zero_to_minimum_gauge_ratio": 1.2834188295878282,
+      "reference_s_zero_to_minimum_squared_quantity_ratio": 1.6471638921405907,
+      "retained_mean_internal_current": 0.0,
+      "volume_log_derivative_gauge_squared": -14,
+      "volume_log_derivative_mass_increment_squared": -14
+    },
+    "reversed_winding": {
+      "amplitude_sign_flip_preserves_charge": true,
+      "annihilation_or_photons_derived_from_this_free_pair": false,
+      "charge": "internal KK rotation, not identified as electric or baryon charge",
+      "comparison_scope": "Locally normalized stationary oscillator; expanding-volume charge and energy use their own factors",
+      "complex_conjugation_reverses_charge": true,
+      "conjugating_internal_phase_is_not_a_general_time_reversal_identification": true,
+      "convention": "Q=-i(z* zdot-z zdot*); E=|zdot|^2+omega^2|z|^2",
+      "each_positive_E_per_A_squared": 1231.5483079379726,
+      "energy_per_absolute_charge": 24.81479707692542,
+      "fixed_charge_energy_bound": "E>=omega*abs(Q); constant-radius circular motion saturates the bound in the stationary normalized mode",
+      "model_mass": 24.81479707692542,
+      "opposite_winding_Q_per_A_squared": [
+        49.62959415385084,
+        -49.62959415385084
+      ],
+      "quantum_action_normalization_imported_for_E_equals_hbar_omega": true,
+      "spin": "scalar",
+      "standing_wave_E_per_A_squared": 2463.096615875945,
+      "standing_wave_Q": 0.0
+    },
+    "state_charge": {
+      "charge_blind_positive_flow_selects_nonzero_mean": false,
+      "conditional_eta_if_identified_with_baryons_and_positive_photons": 0.0,
+      "conditional_miss_percent": -100.0,
+      "missing_selector": "A charge-sensitive inherited connection or non-C-invariant state; baryon/photon currents and conversion must also be specified.",
+      "neutral_pair_controls": [
+        {
+          "conserved_charge": 0.0,
+          "minus": 0.010033377809537924,
+          "plus": 0.010033377809537924,
+          "squeeze": 0.1
+        },
+        {
+          "conserved_charge": 0.0,
+          "minus": 1.3810978455418155,
+          "plus": 1.3810978455418155,
+          "squeeze": 1.0
+        }
+      ],
+      "neutral_state_expected_internal_charge": 0.0,
+      "physical_baryon_photon_eta": null,
+      "region_convention_is_charge_conjugation": false,
+      "same_real_circulation_helicity": "0",
+      "same_real_circulation_mean_norm_squared": "8/(3*pi**4)",
+      "symmetry": "[C,P_region]=0; C rho C^-1=rho; C Q C^-1=-Q implies <Q_region>=0",
+      "target_eta": 6.1e-10
+    },
+    "two_photon_kinematics": {
+      "annihilation_interaction_and_rate_derived": false,
+      "cos_opening_angle": -1.0,
+      "each_photon_energy_over_mass_c_squared": 1.0,
+      "electron_mass_spin_and_SI_scale_derived": false,
+      "supplied_channel": "particle+antiparticle at rest in their COM -> exactly two massless quanta"
+    }
+  },
+  "conformal_break": {
+    "actual_scalar": {
+      "conformal_singular_coefficient": 8327.074464994037,
+      "full_field_weight_one_regularity": "C0 zero generically, not C1",
+      "generic_mode_asymptotic": "q/Omega=Omega^(1/2)*[A cos(nu ln Omega)+B sin(nu ln Omega)]+subleading",
+      "horizon_restricted_extra_node": "Y1,Y2 carry an extra Omega along this horizon; its faster tail does not establish full-boundary regularity",
+      "m_squared_over_H_squared": 8329.074464994037,
+      "minimal_mass_fade_alone_makes_conformal_operator_regular": false,
+      "missing": "An action-and-state crossover rule, with a conformally regular operator and inherited state data; background reciprocity alone does not supply it."
+    },
+    "conformal_zero": {
+      "causal_type": "spacelike",
+      "equation": "Omega=cos eta=sech(Ht)=0",
+      "normal_norm": -0.07366100807086899,
+      "rescaled_metric": "gbar=Omega^2*g=H^-2*(-deta^2+dOmega3^2)",
+      "same_surface_as_observer_horizon": false
+    },
+    "fluid_duality": [
+      {
+        "new_density_exponent": 4.0,
+        "new_w": 0.33333333333333337,
+        "old_density_exponent": 0.0,
+        "old_w": -1.0
+      },
+      {
+        "new_density_exponent": 1.0,
+        "new_w": -0.6666666666666666,
+        "old_density_exponent": 3.0,
+        "old_w": 0.0
+      },
+      {
+        "new_density_exponent": 0.0,
+        "new_w": -1.0,
+        "old_density_exponent": 4.0,
+        "old_w": 0.3333333333333333
+      }
+    ],
+    "horizon_zero": {
+      "causal_type": "null",
+      "endpoint": "One north-pole point on the spacelike future conformal boundary",
+      "equation": "v=eta+chi=pi/2",
+      "normal_norm": 0.0,
+      "signal_flow_balance": "z_H=1-H*R; radial null rates in outgoing PG form are dR/dt=H*R+/-1",
+      "surface_tension": 0.0,
+      "zero_signal_balance_is_zero_energy_density": false
+    },
+    "reciprocal_comparison": {
+      "H_squared_a_old_a_new": 1.0,
+      "Lx": 3.6845221441889593,
+      "conformal_cylinder_regular": true,
+      "conformal_new_scale": "a_new(tau)=sin(tau)/H after a separately specified expanding extension",
+      "dimensionless_kappa_H_squared_rho_a_fourth": 3.0,
+      "new_evolution_Ricci_scalar": 0.0,
+      "new_maximum_scale": 3.6845221441889593,
+      "new_proper_age_at_maximum": 3.6845221441889593,
+      "new_proper_age_at_recollapse": 7.369044288377919,
+      "new_radiation_Kretschmann": "24/(H^4*a_new^8)",
+      "new_radiation_Ricci_squared": "12/(H^4*a_new^8)",
+      "new_vacuum_from_old_radiation_absent": 0.0,
+      "old_evolution_Ricci_scalar": 0.8839320968504278,
+      "physical_bang_regular": false,
+      "proper_new_scale": "T=(1-cos(tau))/H; a_new(T)=sqrt(2T/H-T^2)",
+      "radiation_density_times_a_fourth": 40.72711029305641,
+      "rule": "a_new=Lx^2/a_old; declared benchmark Lx=1/H, not an action-selected crossover normalization",
+      "same_action_matter_continuation": false
+    },
+    "regular_operator_comparisons": {
+      "actual_mass_squared_over_critical": 4164.5372324970185,
+      "comparisons_are_actual_massive_state_conversion": false,
+      "condition": "m_bare^2/H^2+12*xi-2=0 on the fixed de Sitter tail",
+      "massless_conformal_xi": 0.16666666666666666,
+      "minimal_critical_mass_squared": 0.14732201614173798,
+      "regular_real_unit_modes": [
+        {
+          "crossover_eta_derivative": 0.0,
+          "crossover_value": -1.0,
+          "frequency_in_eta": 2,
+          "l": 1
+        },
+        {
+          "crossover_eta_derivative": 3.0,
+          "crossover_value": 0.0,
+          "frequency_in_eta": 3,
+          "l": 2
+        }
+      ]
+    }
+  },
+  "convention": {
+    "coordinate_description": "A covariant representation can use three spatial coordinate arguments plus one offset argument; no fourth spatial axis is added",
+    "minus": "counter/receiving side; negative-pressure interpretation is a stress test",
+    "negative_sign_is_negative_energy": false,
+    "oscilloscope_baseline_is_already_a_geometric_horizon": false,
+    "oscilloscope_zero": "q=0 baseline of a signed oscillation; its two lobes can both carry positive energy",
+    "plus": "energy/source side",
+    "positive_flow": "plus -> minus",
+    "spatial_description": "Three generated spatial directions with offset-parametrized evolution; proper duration is a readout",
+    "zero": "smooth interface/horizon label; the causal and conformal zero sets are specified separately"
+  },
+  "counter_pressure": {
+    "active_gravitational_density": -0.4419660484252139,
+    "background_acceleration_over_scale": 0.07366100807086899,
+    "comparison_is_cross_epoch_not_a_current_data_fit": true,
+    "comparison_target_Omega_Lambda": 0.685,
+    "density": 0.22098302421260696,
+    "flowing_null_stress_is_pure_vacuum_stress": false,
+    "if_late_limit_misidentified_as_today_relative_difference_percent": 45.98540145985402,
+    "late_Omega_vacuum": 1.0,
+    "observed_today_epoch_and_share_derived": false,
+    "pressure": -0.22098302421260696,
+    "pressure_sign_derived_from_region_sign": false,
+    "source": "Existing positive vacuum minimum, present on both sides of the smooth same-action horizon",
+    "w": -1.0
+  },
+  "detector_comparison": {
+    "NSC_prediction": false,
+    "angular_frequency_rad_s": 7.763440716834523e+20,
+    "coincidence_relation": "x=-(c/2)*(t1-t2), detector 1 at +D and detector 2 at -D",
+    "exact_511_and_180_for_every_real_detector_hit": false,
+    "example_200ps_contains_reference_carrier_cycles": 24711799309.702034,
+    "measured_mass_referenced_phase_is_direct_carrier_cycle_count": false,
+    "photon_reference_energy_keV": 510.99895069,
+    "photon_reference_frequency_Hz": 1.2355899654851017e+20,
+    "photon_reference_wavelength_m": 2.426310235388641e-12,
+    "recorded_or_calibrated_observables": [
+      "electrical-pulse threshold timestamps",
+      "calibrated deposited-energy signal or time-over-threshold proxy",
+      "reconstructed hit position",
+      "coincidence arrival differences"
+    ],
+    "reference_only": true,
+    "reference_source": "https://physics.nist.gov/cuu/pdf/wall_2022.pdf",
+    "stored_time_release_is_a_measured_observable": false
+  },
+  "elapsed_seconds": 0.5912877999944612,
+  "next_connection": "Derive an inherited coupling between the spacetime flow orientation and internal winding charge, rather than identifying those signs by notation.",
+  "no_observational_fit": true,
+  "schema": "nsc-atlas-zero-interface-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_zero_interface.py": "9dedd1bc1e96f71ca0234ed62585d1d7aeeb2d41d333cc87b38b530d53d58194",
+    "src/recursive_horizons/nsc_atlas_horizon_response.py": "35ca8c2ae3040cac3404133cefad5c0a43a7e584b99d19db90717685337428f4",
+    "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
+    "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "src/recursive_horizons/nsc_atlas_s3_polynomials.py": "a290ac75a8726761195bfa3def4630892a08d57e7c6ee6272130155d880ae208",
+    "src/recursive_horizons/nsc_atlas_zero_interface.py": "8aad1b59973f3b8e6bc09846add2ddc9e03e5cf02e812afc153a5e266d6558f4"
+  },
+  "spectrum": {
+    "Planck_length_proved_as_hard_wavelength_cutoff": false,
+    "classical_energy_with_cutoff": "E=(kB*T)*(L+1)*(L+2)*(2L+3)/6",
+    "continuum_classical_mode_sum_converges_without_a_state_or_cutoff_rule": false,
+    "dispersion": "omega_l^2=mu^2+l(l+2)/a^2 for a local slowly varying background",
+    "highest_l_selected": false,
+    "interpretation": "Geometry fixes the mode spectrum; occupation, ultraviolet completion and physical ruler remain to be derived. A resolution representation does not establish a literal simulator.",
+    "lowest_varying_mode": "l=1: lambda_spatial=2*pi*a/sqrt(3); the uniform l=0 mode also exists",
+    "spatial_operator": "-Delta_S3 has eigenvalues l(l+2)/a^2 and degeneracy (l+1)^2",
+    "thermal_or_quantum_state_law_derived_from_generator": false,
+    "thermal_zero_selects_largest_wavelength": false
+  },
+  "tail": {
+    "H": 0.2714056154003984,
+    "averaged_excitation_density_exponent_in_a": -3.0,
+    "conditional_free_radiation_density_exponent_in_a": -4.0,
+    "density_estimate_definition": "Late adiabatic phase-average estimate using finite-u rescaled oscillator energy; finite-u corrections are not included",
+    "nonzero_rescaled_energy_lower_bounds": [
+      29.590156832640293,
+      29.572410705412526
+    ],
+    "proper_carrier_frequency_limit": 24.766151984525877,
+    "quantum_Gibbons_Hawking_temperature_if_Euclidean_state": 0.04319554527387125,
+    "rescaled_frequency_nu": 91.25143541333493,
+    "samples": [
+      {
+        "H_times_spatial_wavelengths": [
+          99.06331071265339,
+          60.66364086919685
+        ],
+        "Omega": 0.03661899347368653,
+        "amplitude_quadrature": [
+          0.08429585868316333,
+          0.08420427552812493
+        ],
+        "conformal_weight_one_mode_values": [
+          0.013302318832189259,
+          0.013045493632157764
+        ],
+        "density_estimate_is_baryon_photon_eta": false,
+        "each_quadrature_future_error_upper_bound": [
+          2.324163815502747e-06,
+          5.423049195649905e-06
+        ],
+        "energy_future_change_upper_bound": [
+          1.7877528220598865e-05,
+          4.17142370193375e-05
+        ],
+        "late_phase_average_density_estimate_over_epsilon_squared": 1.0848123043606308e-05,
+        "late_phase_average_density_estimate_over_epsilon_squared_vacuum": 4.909030040773344e-05,
+        "mode_derivative_with_respect_to_Omega": [
+          22.94919309808791,
+          23.841431130440935
+        ],
+        "offset_proper_readout_Ht": 4.0,
+        "phase_quadrature": [
+          -0.0017310428299486882,
+          -0.004036829827523299
+        ],
+        "rescaled_oscillator_energy": [
+          29.59682831777389,
+          29.58796583864443
+        ]
+      },
+      {
+        "H_times_spatial_wavelengths": [
+          731.7433851100226,
+          448.0994790441103
+        ],
+        "Omega": 0.004957473893560379,
+        "amplitude_quadrature": [
+          0.08429584024596809,
+          0.0842041589578447
+        ],
+        "conformal_weight_one_mode_values": [
+          0.003727080875820522,
+          0.0035986009027626476
+        ],
+        "density_estimate_is_baryon_photon_eta": false,
+        "each_quadrature_future_error_upper_bound": [
+          4.2582563682671353e-08,
+          9.935932062433781e-08
+        ],
+        "energy_future_change_upper_bound": [
+          3.276540482549842e-07,
+          7.645261951540644e-07
+        ],
+        "late_phase_average_density_estimate_over_epsilon_squared": 2.6916369961032378e-08,
+        "late_phase_average_density_estimate_over_epsilon_squared_vacuum": 1.218028853435196e-07,
+        "mode_derivative_with_respect_to_Omega": [
+          85.42871726224615,
+          87.24965071960571
+        ],
+        "offset_proper_readout_Ht": 6.0,
+        "phase_quadrature": [
+          -0.0017321717510752968,
+          -0.004039460782656497
+        ],
+        "rescaled_oscillator_energy": [
+          29.596819633584992,
+          29.587945586502315
+        ]
+      },
+      {
+        "H_times_spatial_wavelengths": [
+          5406.860310167102,
+          3311.012217603947
+        ],
+        "Omega": 0.0006709251803023413,
+        "amplitude_quadrature": [
+          0.0842958397774939,
+          0.08420415651578286
+        ],
+        "conformal_weight_one_mode_values": [
+          0.0008267868149102653,
+          0.0007710030651517724
+        ],
+        "density_estimate_is_baryon_photon_eta": false,
+        "each_quadrature_future_error_upper_bound": [
+          7.799315637936718e-10,
+          1.8198404137783747e-09
+        ],
+        "energy_future_change_upper_bound": [
+          6.001265623000835e-09,
+          1.400295463247621e-08
+        ],
+        "late_phase_average_density_estimate_over_epsilon_squared": 6.672021732108208e-11,
+        "late_phase_average_density_estimate_over_epsilon_squared_vacuum": 3.0192462773471143e-10,
+        "mode_derivative_with_respect_to_Omega": [
+          275.5378423439313,
+          278.43110233325115
+        ],
+        "offset_proper_readout_Ht": 8.0,
+        "phase_quadrature": [
+          -0.0017321924168744694,
+          -0.004039508955818057
+        ],
+        "rescaled_oscillator_energy": [
+          29.59681947456809,
+          29.58794521547369
+        ]
+      }
+    ],
+    "scalar_amplitude_exponent_in_a": -1.5,
+    "scalar_mass_squared": 613.5280213887946,
+    "spatial_wavelength_exponent_in_a": 1.0,
+    "tail_sample_offsets_select_a_physical_epoch": false,
+    "total_density_limit": 0.22098302421260696,
+    "usable_excitation_density_limit": 0.0,
+    "vacuum_density": 0.22098302421260696
+  },
+  "thermodynamics": {
+    "closed_parent_first_law": "dE_chi=-p_chi dV for spatial averages; E=V*rho, V=2*pi^2*a^3",
+    "envelope_rate_per_Ht": 1.5,
+    "fine_grained_irreversibility_proved_by_coordinate_damping": false,
+    "late_angular_rate_per_Ht": 91.25143541333493,
+    "late_retarded_response": {
+      "charge_conjugate_responses_differ_at_zero_internal_potential": false,
+      "drive_is_a_probe_not_a_refitted_source": true,
+      "isolated_constant_phase_shift_is_this_response_lag": false,
+      "lag_as_proper_duration_readout": 0.06341655932303177,
+      "mean_absorbed_power_over_F0_squared": 0.6140870240314932,
+      "mean_damping_work_over_F0_squared": 0.6140870240314933,
+      "operator": "qddot+3H qdot+mu^2 q=F0 cos(omega t), a weak diagnostic drive on the late operator",
+      "phase_lag_radians": 1.5707963267948966,
+      "power_balance_absolute_residual": 1.1102230246251565e-16,
+      "probe_frequency": 24.769497802514984,
+      "susceptibility": "chi_R(omega)=1/(mu^2-omega^2-3iH omega), Fourier convention exp(-iomega t)"
+    },
+    "late_spiral_inverse_amplitude_ratio_per_turn": 1.1088058364768434,
+    "late_spiral_radius_ratio_per_turn": 0.9018711546265243,
+    "phase_plane": "(q,(qdot+3h*q/2)/(H*nu)) asymptotically follows an inward logarithmic spiral",
+    "phase_shift_alone_is_amplitude_decay": false,
+    "retained_patch_first_law": "dE_K/dt=-F_K across the moving observer horizon; other region energy definitions require their work/flux terms",
+    "samples": [
+      {
+        "Ht": 1.0,
+        "averaged_spatial_density_over_epsilon_squared": 0.06039565948363587,
+        "averaged_spatial_pressure_over_epsilon_squared": -0.05635382909670038,
+        "direct_field_work_rate_over_epsilon_squared": 126.77284428616248,
+        "field_energy_over_epsilon_squared": 219.1012448266929,
+        "pressure_work_rate_over_epsilon_squared": 126.77284428616248,
+        "work_identity_absolute_residual": 0.0
+      },
+      {
+        "Ht": 4.0,
+        "averaged_spatial_density_over_epsilon_squared": 1.1016968362951162e-05,
+        "averaged_spatial_pressure_over_epsilon_squared": -3.4513519575717254e-06,
+        "direct_field_work_rate_over_epsilon_squared": 56.46664691533812,
+        "field_energy_over_epsilon_squared": 221.52163470572015,
+        "pressure_work_rate_over_epsilon_squared": 56.46664691533812,
+        "work_identity_absolute_residual": 0.0
+      },
+      {
+        "Ht": 8.0,
+        "averaged_spatial_density_over_epsilon_squared": 6.745344065270987e-11,
+        "averaged_spatial_pressure_over_epsilon_squared": 4.9572464229592914e-11,
+        "direct_field_work_rate_over_epsilon_squared": -131.95670829972647,
+        "field_energy_over_epsilon_squared": 220.52360645900265,
+        "pressure_work_rate_over_epsilon_squared": -131.9567082997265,
+        "work_identity_absolute_residual": 2.842170943040401e-14
+      }
+    ],
+    "signal_zero_is_zero_energy": false,
+    "spatial_wavelength_ratio_per_turn": 1.071281657206954,
+    "spiral_is_a_mode_state_representation_not_a_derived_horizon": true,
+    "stereographic_sphere": "(2r cosphi,2r sinphi,1-r^2)/(1+r^2)"
+  }
+}

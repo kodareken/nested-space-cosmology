@@ -1,5 +1,25 @@
 # Prior art and admission of new research
 
+## Zero line, thermodynamics and conformal/charge tests, 30 October 2026
+
+The [owner](nsc-atlas-offset-thermodynamics.md) uses the already fixed
+massive source, pressure/work law and internal charged mode. The local
+wave baseline, null horizon and spacelike conformal zero are given
+separate defining equations. Established scale-factor duality, conformal
+operators and KK reduction are inspected and reused; their physical
+state conditions stay attached. The contributions are the retained
+tail/phase numbers, exact work check, geometric gauge-gap correlation
+and current zero-bias result. PET and mass-clock facts are measured
+comparison references, not inputs to an NSC particle prediction. The
+90-second producer budget contains exact algebra and one bounded source
+solve; it takes about one second and launches no parameter scan.
+The main risks are conflating different zero sets/observables, silently
+selecting an absolute action normalization, and fitting a sampling time
+to a target. Independent normal-norm, symmetry, unit-restoration and
+reference-only tests check those. The next unresolved link is an
+inherited orientation-sensitive connection/state plus conformally
+admissible source conversion. No present-epoch data fit is repeated.
+
 ## Inherited null traces and a receiving state, 30 October 2026
 
 The [existing parent owner](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)

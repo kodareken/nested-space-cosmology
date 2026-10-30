@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+  "current_receipt_commit_parent": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 298406,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 298848,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,15 +10287,15 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "724085cf068939c2fd1fdea4ea6ae8646270df021c659b0780bb9045e9ec72b6"
+      "sha256": "16d139f09511414fd3f2463c8a42bd1da67331cf8c61831227bc5d59aed376a1"
     },
     {
-      "bytes": 157951,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 161629,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
-      "sha256": "07465806fbd881fa89a8a9fa66ff17e7b7a40533051fe1f41cb25ff01e76f5f5"
+      "sha256": "2056f7066da80908813c39aad32ad01ea08057fb2914cdb27d15dc74d2b91268"
     },
     {
       "bytes": 9543,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 485311,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 486391,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9f6dc8e382469571eada68e41b28bfbbe52b681c1ae1f90f5318557b38e3cfc0"
+      "sha256": "80688d22baf95d05d57f5795675dcbaf32d6ac86b692ca9eab45f8195a467b41"
     },
     {
       "bytes": 173938,
@@ -10501,12 +10501,12 @@
       "sha256": "797af0c0ecdb15496446c665d56a4bf96bd4712b3aad0a07b52c2bf119d8e6c8"
     },
     {
-      "bytes": 390889,
-      "change": "Connect the cosmological parent, surrounding gravity and wall-parameter closure.",
-      "changed_from_commit": "f28bb848b3d13f6d0f4dca573c30464e7c0cc2be",
+      "bytes": 388823,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/figures/nsc-atlas-parent-observables.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "4009b185b88dc9b577ceddc5d14b235046269f7190984ef4f7871836b3e9c328"
+      "sha256": "dd1738bea412726473c71e0018b3da71e82b7346d3ee5437982a532160447723"
     },
     {
       "bytes": 170965,
@@ -10820,12 +10820,12 @@
       "sha256": "08b545a5f92608573457a41fb4ade1f0bbc14b0d8af5188e298bec55fe2f63b9"
     },
     {
-      "bytes": 15231,
-      "change": "Connect the average work coefficient to a local fourth-order scalar constraint, replay the retained state once, and independently verify a regular bulk metric witness.",
-      "changed_from_commit": "71bb7b13bbf595307ab65688b1dec52bb743d7fd",
+      "bytes": 15223,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/nsc-atlas-flow-gravity.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "42f6fc816324890ca1dd6ed215c0a0273f2d6e0bb4f90f5d555ebaaf9cd82c53"
+      "sha256": "5b589947eb46e99e687337cb8827ea9b2b4db92918e3c57b5ac96b90e8818b9a"
     },
     {
       "bytes": 12252,
@@ -10901,11 +10901,11 @@
     },
     {
       "bytes": 9953,
-      "change": "Derive internal harmonic charge and conditional horizon-state inheritance; authenticate the earlier requested atlas prose successor without changing retained scientific evidence.",
-      "changed_from_commit": "04acbeb808004f011d78dae595570709795478d1",
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/nsc-atlas-inherited-charge.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "8c4019a2cb9a28a7765af262691a7db1795180a09d991d98e5f991514c5304b8"
+      "sha256": "66160706b035f948b31820462054d7acd6cb5d3d1573473110ec935433c66e4d"
     },
     {
       "bytes": 12622,
@@ -10924,12 +10924,12 @@
       "sha256": "4ba33255332df36266fc644d89efc5c41e216a8be7e4c0c567cee5853f50754a"
     },
     {
-      "bytes": 8476,
-      "change": "Connect the average work coefficient to a local fourth-order scalar constraint, replay the retained state once, and independently verify a regular bulk metric witness.",
-      "changed_from_commit": "71bb7b13bbf595307ab65688b1dec52bb743d7fd",
+      "bytes": 8469,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/nsc-atlas-local-work.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "698c02a99ab40aa40f7b5b1abf47763ee834cd83defb5ad5ba25ed1b2785a86d"
+      "sha256": "af0c70282c6599cfe77c807cfaa5411bc5757b56179e4e1660c00f8bb3da0487"
     },
     {
       "bytes": 8895,
@@ -10975,6 +10975,14 @@
       "sha256": "4f0732e624568c0b6993f55a8dc743baa12c842ac1c80ac94f282070be86a2e1"
     },
     {
+      "bytes": 18490,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "docs/nsc-atlas-offset-thermodynamics.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e8d1edfed75acd23ae144aea16f2143a389d0ab9a9d70539b67890bb45c3e7d4"
+    },
+    {
       "bytes": 31756,
       "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
       "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
@@ -10999,12 +11007,12 @@
       "sha256": "fd3e5790c281f6f86262f1ebcc930efe9560cc9ffdfe7f53170ccf52843016c1"
     },
     {
-      "bytes": 18706,
-      "change": "Connect flow geometry, interface stress and the horizon-fluid limit in the atlas.",
-      "changed_from_commit": "b63e37689f232f9d3c32948ee51d74ba1e4ac09d",
+      "bytes": 19004,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/nsc-atlas-parent-observables.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "f7b636f205c989df352873af8e68d3c032fb5515f366a2f3a01a0842c74e3f7e"
+      "sha256": "8289c243f88cdb7534a59709a74b03492e33d2789963da58d4c224615b329ead"
     },
     {
       "bytes": 13254,
@@ -11133,12 +11141,12 @@
       "sha256": "a272dfc872c0125a518345f4cb54a50e09cfc4e42fce40fa3e17a888bf4f66c2"
     },
     {
-      "bytes": 66221,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 68462,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/nsc-atlas-source-map.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "1f9af543c7bb52783dbeee9b7c37a291855090ade8c138382825d3442c29b529"
+      "sha256": "65068856338dca78e5de9d86f13b6d2bc4c91ab12582a9b18bd3492a9e82c518"
     },
     {
       "bytes": 9853,
@@ -11208,15 +11216,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 140707,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 141348,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "3cbf2eff8bd2dcaf05387d6f13d73051a47447c633b83e08052ac4bb76e5ca46"
+      "sha256": "c9177651437a36a7c2c428f846d62d5058b493141261bddf9d4f60520b7543d6"
     },
     {
       "bytes": 30876,
@@ -12184,12 +12192,12 @@
       "sha256": "1bb4a2ea0c1a8b5e07c4fb153554f2113cf2cc4ff86347f8a68ada243214c63d"
     },
     {
-      "bytes": 612030,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 613279,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b88de69974a6f6944f23b79e158ebf4b07a550e5ca8a4dc0d6bbb8ad65435a9a"
+      "sha256": "de6c5701762afe7e3f47e00e4d1722feacce532406d9b122c9f6cd624a9a1f2b"
     },
     {
       "bytes": 6705,
@@ -12198,20 +12206,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 248129,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 248844,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e68ea862ec6e446b06e82976fd06853947d1dadeec84eeab344c758f2f42ce80"
+      "sha256": "89d3926020265fb548cc8fcf752ac05851428fc3f2e931c60a2dde7a7e62930b"
     },
     {
-      "bytes": 56521,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 56872,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "03ab083e5469224d04bf4346592a2c135e7fda8a8ee27b987578548f36fc2fa2"
+      "sha256": "5b2942d87fde3667c0e59fda53aeecdc93308bd356759030ffb50bdf5bb4631d"
     },
     {
       "bytes": 18356,
@@ -12280,28 +12288,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 43100,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 43420,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "8a3c47db257428f3033d3750cdff6096b9c0ee739f1ffa104ae84740157902ee"
+      "sha256": "faf13a5a79f7a64aad18bd9da870aaac4ea4e37debce632bf084a9f7e404a1e9"
     },
     {
       "bytes": 3207,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "7cf5677d62fb500fde2281ae34f506d9b92da1f0a785957c33ccae4e4bc8f366"
+      "sha256": "bcfe235003318b55c7a205b1a7519dab29d4b4aac87e62d95b5d4e2bace5a775"
     },
     {
-      "bytes": 51964,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 52117,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "e6f72d314ae6a0ec505289caf464d249d6f592920686a3228a2ee84c80badffe"
+      "sha256": "c31c2839a79e236008874310372226b5e8cbcefe94e1567c0f363cef93dafd4e"
     },
     {
       "bytes": 226492,
@@ -12384,28 +12392,36 @@
       "sha256": "54cda2b164688043c23fe0218211bcc4006065d1b6be032c0d4f83e543a56aa9"
     },
     {
+      "bytes": 482790,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "paper/figures/nsc-atlas-zero-interface.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "88c9b3bd93d6a1247f0f95886549a5e2b43d812a81e9aa05966c5cac76fe97da"
+    },
+    {
       "bytes": 398,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ac7101af5b0739294880ba456fa341497dc3873b5a5d6693daeafb7b0cff383a"
+      "sha256": "60fa3c3f816f9546024861da9ee6821ce04dd0fb64a3313d18d83ee163fa1f3a"
     },
     {
-      "bytes": 650777,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 662585,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f9da3a5e5ac709d757b971cb5cb67a27d505d0a674bc2e7eff59bc1707e24b52"
+      "sha256": "46c2162ca25dfa7186c6073fc5f4ff1a413cc92630ab125268e339add5c2c94c"
     },
     {
-      "bytes": 18383528,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 18954017,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "6cfc885ed5f44e947186714f24116605858a25f8f6ad9aa6edb931f81f9356b5"
+      "sha256": "3c1b63ecc7c5d3c72bc71ac8240ad5d0febb7ecf12039077a512d64b40c95d15"
     },
     {
       "bytes": 3283,
@@ -31778,6 +31794,14 @@
       "sha256": "c1fac11456314d39ae0ffbe3d2649cd64204523363541b264bf3ba3c413e42cb"
     },
     {
+      "bytes": 20427,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "results/summaries/nsc-atlas-zero-interface-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "17a6bf2b5f5cdee849f671c483e239c7cf5e0d9b91f490c6b6b27483faebcbe8"
+    },
+    {
       "bytes": 6081,
       "change": "Derive compositional gravity, its time balance and a scale-free inherited response with a held-out coefficient.",
       "changed_from_commit": "01e64b92716d13b68ef7179fe2fdc8a4360e6d6d",
@@ -32650,6 +32674,14 @@
       "path": "scripts/check_nsc_atlas_wall_scale_stationary.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "93a6a7247edb354acbafc63866015ce536dc9660e4fada88030d9b767f59bc1f"
+    },
+    {
+      "bytes": 2553,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "scripts/check_nsc_atlas_zero_interface.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9dedd1bc1e96f71ca0234ed62585d1d7aeeb2d41d333cc87b38b530d53d58194"
     },
     {
       "bytes": 2304,
@@ -35592,6 +35624,14 @@
       "sha256": "0bf8332703a137e0c02568577e23051e5772626afe472340f0d2b52feab85163"
     },
     {
+      "bytes": 764,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "scripts/plot_nsc_atlas_parent_observables_current.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d7ae91b57a3f95273b7fc3e8be8c77d73d2f85852393ec50bd4e906a1ca09e5c"
+    },
+    {
       "bytes": 2336,
       "change": "Connect the inherited parent scalar to constrained gravitational structure, scale-dependent metric response and a joint vacuum/pressure-scale test.",
       "changed_from_commit": "adeee5ebdd54fe410e451e876dd40ba4687afb1c",
@@ -35710,6 +35750,14 @@
       "path": "scripts/plot_nsc_atlas_vortex_transfer.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "24769b4a1a583e69a76d808d6948c07126b1a8bc83b9ff99fa17d2bcd62b6eaf"
+    },
+    {
+      "bytes": 3202,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "scripts/plot_nsc_atlas_zero_interface.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "fe6a43d2a876e6154484e7d2408751300b99aae3f6112635c5add6deee4e199b"
     },
     {
       "bytes": 2219,
@@ -37152,6 +37200,14 @@
       "sha256": "0008c58d66b6e2bb22bbef5676bcac9d99ceb1086b073a29772e73bfcc1d3ba5"
     },
     {
+      "bytes": 6216,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "src/recursive_horizons/nsc_atlas_s3_polynomials.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a290ac75a8726761195bfa3def4630892a08d57e7c6ee6272130155d880ae208"
+    },
+    {
       "bytes": 18454,
       "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
       "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
@@ -37331,6 +37387,14 @@
       "path": "src/recursive_horizons/nsc_atlas_wall_exit.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "a641ebff019f2b552534b1c74cf63225f5ce4ec9a0088bb8974517bd12e98903"
+    },
+    {
+      "bytes": 17897,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "src/recursive_horizons/nsc_atlas_zero_interface.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8aad1b59973f3b8e6bc09846add2ddc9e03e5cf02e812afc153a5e266d6558f4"
     },
     {
       "bytes": 24515,
@@ -41982,6 +42046,14 @@
       "sha256": "6a0e36bd6cd942834d0a222041d8d3c8db4d45c4a5e49264980cf1f048d4be3b"
     },
     {
+      "bytes": 4217,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "tests/test_nsc_atlas_s3_polynomials.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9a271c358799548d0e76ca50aef94d264cbc064b3651be92b5ea37b3a7706750"
+    },
+    {
       "bytes": 4269,
       "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
       "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
@@ -42201,6 +42273,22 @@
       "path": "tests/test_nsc_atlas_wall_scale_stationary.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "f442777b29f2acacb46c09ad126805e8be5e7fd1225b4a3d00a2267538cf552a"
+    },
+    {
+      "bytes": 6010,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "tests/test_nsc_atlas_zero_interface.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "14d1782def2f45b26cf048541bcde9696866f0c1afc15781195a7bf7bbe29f5b"
+    },
+    {
+      "bytes": 6892,
+      "change": "Connect the inherited scalar's zero baseline, thermodynamic decay and phase response; test a conformal crossover and charge selection; restore the internal gauge/mass relation and clarify generated spatial counts.",
+      "changed_from_commit": "480d408152ff4e9fdedcbe4f47b3a7af36c8badd",
+      "path": "tests/test_nsc_atlas_zero_numeric.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "c365afd8930ca6793a75e80c0f0f6a5e38369aa4788fdfcfb3c065746170e132"
     },
     {
       "bytes": 14600,

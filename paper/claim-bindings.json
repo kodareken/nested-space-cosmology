@@ -14,6 +14,11 @@
     "unspecified": "Historical classification not yet assigned."
   },
   "claims": {
+    "offset-thermodynamic-zero": {
+      "section": "15.16",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-offset-thermodynamics.md"
+    },
     "inherited-characteristic-state": {
       "section": "15.15",
       "status": "measured",

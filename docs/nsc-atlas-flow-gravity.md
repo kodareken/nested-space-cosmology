@@ -168,7 +168,7 @@ must accompany these coefficients. They are not SI or cosmological numbers.
 
 The published metric solves the Einstein equation through cubic order;
 this work does not bound all higher orders. Its local Rindler horizon is
-not yet joined to the four-dimensional positive-vacuum parent. The
+not yet joined to the evolving positive-vacuum parent. The
 dimensional reduction, shared source and matching between those sectors
 remain explicit edges of the atlas, rather than being silently assumed.
 

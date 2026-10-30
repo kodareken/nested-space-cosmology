@@ -1,7 +1,7 @@
 # Surrounding geometry, an expanding parent and observable gravity
 
-This atlas entry connects the existing nested body to an expanding
-four-dimensional parent, then compares two published ways a surrounding
+This atlas entry connects the existing nested body to an expanding parent
+with three spatial directions and offset-parametrized evolution, then compares two published ways a surrounding
 five-dimensional geometry produces local gravity. A fourth calculation
 tests whether the existing wall can select the cap curvature by stable
 equilibrium. These are geometries with specified laws, not interchangeable
@@ -22,7 +22,7 @@ candidate within this larger map.
 ![Calculated comparison of surrounding geometries and wall balance](figures/nsc-atlas-parent-observables.png)
 
 The four panels are calculated from the equations below. A and C use the
-current four-dimensional family. B and D use distinct five-dimensional
+current three-spatial-direction parent family. B and D use distinct five-dimensional
 backgrounds; their successes have not been combined in one model.
 
 ## A. Replace the isolated end by a cosmological parent
@@ -440,9 +440,13 @@ parent density and the separate bulk detuning are all recorded inputs.
 
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_parent_observables.py
-python scripts/run_python.py scripts/plot_nsc_atlas_parent_observables.py
+python scripts/run_python.py scripts/plot_nsc_atlas_parent_observables_current.py
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_parent_observables.py -q
 ```
+
+The current presentation renderer reuses the pinned numerical producer and
+changes only the parent-count title. The original renderer remains available
+for historical replay; its source bindings and all equations are unchanged.
 
 The [calculator](../src/recursive_horizons/nsc_atlas_parent_observables.py),
 [23 checks](../tests/test_nsc_atlas_parent_observables.py) and

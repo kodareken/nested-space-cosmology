@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_zero_interface.py` reuses the fixed parent and charged sector
+for tail, thermodynamic, conformal and winding tests. `nsc_atlas_s3_polynomials.py`
+provides exact harmonic projection/moments and verifies the circulation's
+helicity. The zero-interface producer retains one compact summary. The
+current parent-observable presentation wrapper changes only its title
+while retaining the pinned numerical producer for historical replay.
+
 `nsc_atlas_characteristic_handoff.py` supplies the massive l=1 two-null
 adapter on the inherited smooth parent. Its second-leg relation reuses the
 same global mode functions; the Numba kernel releases the GIL for three

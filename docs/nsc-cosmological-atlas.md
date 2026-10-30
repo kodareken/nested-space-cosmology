@@ -18,6 +18,16 @@ starting a derivation.
 
 ## Current execution priority — 30 October 2026
 
+Douglas's [zero-line and thermodynamic convention](nsc-atlas-offset-thermodynamics.md)
+now organizes the signed wave, source/counter sides and plus-to-minus
+flow. The actual decay law, phase-state memory and conformal benchmark
+are calculated. The source's one-way charge-blind transport still selects
+no mean winding bias. Restoring the mixed internal connection supplies
+a geometry-fixed gauge/mass-increment correlation, with its physical
+state and absolute normalization left explicit. The next bridge is an
+inherited phase-to-current coupling and admissible crossover matter,
+rather than assigning charge or vacuum fraction by sign notation.
+
 The [same-state characteristic handoff](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
 now carries the scalar through the smooth horizon into a finite exterior
 receiving region. Both null traces are fixed by the frozen global two-mode
@@ -966,7 +976,7 @@ the observed baryon asymmetry.
 
 | Route | Physical data that must be owned | What would change the decision | Disposition |
 | --- | --- | --- | --- |
-| Actual four-dimensional parent reduction and causal metric response | One action, parent geometry, joint state/covariance and boundary data. Hamiltonians, vertices and stress factors must be derived from them. | A conserved full source and a relation between observer channels; the physical meaning of the inherited operator is established. | Main connection to pursue. Reuse the known zero/trace results; do not numerically retest them. |
+| Actual generated-parent reduction and causal metric response | One action, parent geometry, joint state/covariance and boundary data. Hamiltonians, vertices and stress factors must be derived from them. | A conserved full source and a relation between observer channels; the physical meaning of the inherited operator is established. | Main connection to pursue. Reuse the known zero/trace results; do not numerically retest them. |
 | Explicit vacuum-changing transition, such as a charged membrane coupled to a four-form | A new field sector, shared membrane charge/tension, a parent flux sector and bare vacuum normalization. Absolute flux quantization needs its own assumptions. | A child vacuum change follows from parent data and the shared action, with compatible junctions and a measurable consequence beyond relabelling a free H. | First bounded alternative to compare if the retained action cannot supply the required source. |
 | Five-dimensional bulk projection | Bulk action and state, curvature scale, brane tension and, for the shadow channel, interbrane/radion data. | A common bulk solution produces background and perturbation response together. | Keep as an attributed comparison until that common geometry is supplied; do not combine the separate existing examples by notation. |
 | Further occupied-wall preparation or refinement | Its existing surface action and initial occupation; a physical transfer adds a coupling or preparation law. | It supplies an input required by the selected cosmological mechanism or a distinct observational prediction. | Completed reference by default. No automatic thicker-wall, finer-clock or occupation campaign. |

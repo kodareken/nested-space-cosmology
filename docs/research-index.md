@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [offset thermodynamics](nsc-atlas-offset-thermodynamics.md) connects
+signed-mode decay, a spiral/sphere representation, pressure work, late
+state memory, a conformal crossover benchmark, winding positivity and
+the restored KK gauge/mass-gap correlation. It keeps charge selection,
+physical source conversion and detector identification explicit.
+
 The [characteristic handoff](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
 derives both null data legs from one global parent state, continues its
 signed field outside the observer horizon, and checks physical flux,

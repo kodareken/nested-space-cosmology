@@ -54,7 +54,7 @@ Y_+=\frac{Y_1+iY_2}{\sqrt{2}},\qquad
 $$
 
 The same real higher-dimensional field therefore contains a complex
-four-dimensional mode. Rotation in the (n1,n2) plane gives charges +/-1.
+generated-parent mode. Rotation in the (n1,n2) plane gives charges +/-1.
 Choosing six commuting rotation planes organizes the thirteen real modes
 as six complex pairs plus one neutral component. Under a single selected
 plane, only its pair is charged and the other eleven components are neutral.

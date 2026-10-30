@@ -167,7 +167,7 @@ a coordinate change from being presented as a new cosmic region.
 Extending this expansion further requires the fifth-order spatial Ward
 identity, which determines the transverse part of w and the corresponding
 pressure correction. The programme's next outward connection is its actual
-four-dimensional parent and global attachment; higher-order polishing is
+generated parent and global attachment; higher-order polishing is
 useful only when that connection requires it. This work closes the local
 scalar constraint and supplies an independently checked local bulk witness.
 The global region and finite-amplitude remainder still need their common

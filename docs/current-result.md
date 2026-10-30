@@ -1,5 +1,21 @@
 # What the calculations show
 
+The [offset/thermodynamic zero calculation](nsc-atlas-offset-thermodynamics.md)
+now fixes the decaying wave, its phase spiral and late spectrum. The
+excitation-density and spatial-wavelength powers are -3 and +1, while the
+massive carrier stays finite. Nonzero renormalized phase data survive the
+zero signal limit. A reciprocal conformal benchmark gives radiation
+normalization 40.727110293056 in model units; the actual massive field
+still needs an admissible crossover operator/state. The null observer
+horizon and spacelike conformal boundary are explicitly distinguished.
+Restoring the internal connection gives the exact conditional gauge/mass
+increment relation g_KK^2/(kappa_nat DeltaM_KK^2)=13/12; its overall
+gravitational normalization remains free. Current charge-blind flow has
+zero mean internal bias, not a derived baryon/photon eta. Counter-pressure
+has positive density and w=-1, with no selected present-day fraction.
+The detector numbers are reference-only. Current-parent prose and its
+comparison plate now use three spatial directions with offset evolution.
+
 The [inherited characteristic handoff](nsc-atlas-parent-circulation.md#9-two-inherited-null-traces-fix-a-receiving-field-outside-the-horizon)
 now computes the signed field outside the same observer horizon. Both
 incoming null traces follow from the frozen global two-mode parent state;
