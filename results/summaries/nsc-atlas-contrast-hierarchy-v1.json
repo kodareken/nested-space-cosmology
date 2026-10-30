@@ -1,0 +1,239 @@
+{
+  "auxiliary_Parke_snapshot_chain": [
+    {
+      "density": "21/32",
+      "flux": "3/2",
+      "log_miss_percent_if_g_is_set_to_one": -98.69746562481299,
+      "log_ratio_intercept": 1.8226924463027698,
+      "region": "parent",
+      "size_ratio_to_observed_if_g_is_set_to_one": 1.0444510264082005e-60
+    },
+    {
+      "density": "7/32",
+      "flux": "1",
+      "log_miss_percent_if_g_is_set_to_one": -98.30491989558267,
+      "log_ratio_intercept": 2.371998590636825,
+      "region": "child",
+      "size_ratio_to_observed_if_g_is_set_to_one": 1.8090422437564643e-60
+    },
+    {
+      "density": "1/32",
+      "flux": "1/2",
+      "log_miss_percent_if_g_is_set_to_one": -97.60962572642343,
+      "log_ratio_intercept": 3.344953665164481,
+      "region": "grandchild",
+      "size_ratio_to_observed_if_g_is_set_to_one": 4.786275888189848e-60
+    }
+  ],
+  "chain_scope": "Conditional homogeneous vacuum sectors with the same UV bare term and internal curvature. No localized ancestor sheet, wall profile or causal transition is constructed.",
+  "contrast": {
+    "Parke_R_over_L_unit": 1.2126626450077351,
+    "Ui": "7/32",
+    "Uo": "21/32",
+    "closed_identity": "Lambda_i=3*(R_c^-2-(DeltaU/(3sigma)+kappa*sigma/4)^2)=kappa*Ui",
+    "exterior_and_tension_select_radius_not_new_Newton_coupling": true,
+    "kappa_hat": 1,
+    "missing_relation": "A compatible sourced volume profile and its state are needed for Delta s(Ui,Uo,sigma); Parke constant-vacuum data contain no such roll.",
+    "recovered_child_Lambda_hat": "7/32",
+    "sigma": "1/5",
+    "volume_endpoint_difference_selected": false
+  },
+  "definitions": {
+    "L_H": "1/sqrt(Lambda); positive-vacuum curvature length",
+    "Planck_length_squared": "kappa_nat/(8*pi)",
+    "Planck_scope": "Gravitational scale from the Ricci coefficient, not a derived minimum length or a full scalar-mediated Cavendish measurement",
+    "de_Sitter_event_horizon": "sqrt(3)*L_H",
+    "g": "kappa_E/L_unit(0)^2",
+    "selected_g": null
+  },
+  "exact_threshold": {
+    "A_critical": "(5*B/6)*(B/(6*T))^(1/5)",
+    "identity_at_stationary_point": "V_min=x^7*(B/6-T*x^5)",
+    "positive_iff": "(6*A/(5*B))^5 > B/(6*T), for the right/minimum stationary root",
+    "x_critical": "(B/(6*T))^(1/5)"
+  },
+  "fixed_coupling_j2_sectors": [
+    {
+      "A": "7",
+      "B": "15/2",
+      "Jordan_Planck_factor": 1.2384748901257492,
+      "Lambda_hat_min": 0.22098302421260713,
+      "T": "25/32",
+      "UV_bare": "215/32",
+      "ancestor_flux": "5/2",
+      "critical_A": 6.8660033956632365,
+      "log_ratio_intercept": 2.3669204107307724,
+      "positive_vacuum_by_exact_comparison": true,
+      "q": "3/2",
+      "requested_positive_Lambda_length_exists": true,
+      "s_min": -0.035646782552940987,
+      "stiffness": 183.431472847858,
+      "x_min": 1.0738964381199976
+    },
+    {
+      "A": "219/32",
+      "B": "15/2",
+      "Jordan_Planck_factor": 2.0796761178479906,
+      "Lambda_hat_min": -2.452231934854091,
+      "T": "1/2",
+      "UV_bare": "215/32",
+      "ancestor_flux": "2",
+      "critical_A": 7.5070277123839455,
+      "log_ratio_intercept": null,
+      "positive_vacuum_by_exact_comparison": false,
+      "q": "1",
+      "requested_positive_Lambda_length_exists": false,
+      "s_min": -0.12203536150261396,
+      "stiffness": 1534.339845143918,
+      "x_min": 1.2764346005882612
+    },
+    {
+      "A": "27/4",
+      "B": "15/2",
+      "Jordan_Planck_factor": 3.3620661446937206,
+      "Lambda_hat_min": -14.768058238898874,
+      "T": "9/32",
+      "UV_bare": "215/32",
+      "ancestor_flux": "3/2",
+      "critical_A": 8.42254836891638,
+      "log_ratio_intercept": null,
+      "positive_vacuum_by_exact_comparison": false,
+      "q": "1/2",
+      "requested_positive_Lambda_length_exists": false,
+      "s_min": -0.20209261816713336,
+      "stiffness": 6793.232747599932,
+      "x_min": 1.498081420369009
+    }
+  ],
+  "fixed_original_sheet_control": [
+    {
+      "A": "7",
+      "B": "15/2",
+      "Jordan_Planck_factor": 1.2384748901257492,
+      "Lambda_hat_min": 0.22098302421260713,
+      "T": "25/32",
+      "UV_bare": "215/32",
+      "ancestor_flux": "5/2",
+      "critical_A": 6.8660033956632365,
+      "log_ratio_intercept": 2.3669204107307724,
+      "positive_vacuum_by_exact_comparison": true,
+      "q": "3/2",
+      "requested_positive_Lambda_length_exists": true,
+      "s_min": -0.035646782552940987,
+      "stiffness": 183.431472847858,
+      "x_min": 1.0738964381199976
+    },
+    {
+      "A": "219/32",
+      "B": "15/2",
+      "Jordan_Planck_factor": 1.3384704686678193,
+      "Lambda_hat_min": -0.0394922438410244,
+      "T": "25/32",
+      "UV_bare": "215/32",
+      "ancestor_flux": "5/2",
+      "critical_A": 6.8660033956632365,
+      "log_ratio_intercept": null,
+      "positive_vacuum_by_exact_comparison": false,
+      "q": "1",
+      "requested_positive_Lambda_length_exists": false,
+      "s_min": -0.048587920121647886,
+      "stiffness": 307.5237937907775,
+      "x_min": 1.102054142052831
+    },
+    {
+      "A": "27/4",
+      "B": "15/2",
+      "Jordan_Planck_factor": 1.3881282656831713,
+      "Lambda_hat_min": -0.213873093912559,
+      "T": "25/32",
+      "UV_bare": "215/32",
+      "ancestor_flux": "5/2",
+      "critical_A": 6.8660033956632365,
+      "log_ratio_intercept": null,
+      "positive_vacuum_by_exact_comparison": false,
+      "q": "1/2",
+      "requested_positive_Lambda_length_exists": false,
+      "s_min": -0.05465937804159884,
+      "stiffness": 384.0191728367679,
+      "x_min": 1.1155178717836731
+    }
+  ],
+  "frame_law": {
+    "L_H_J": "exp(-6s)*L_H_E",
+    "Lambda_J": "exp(12s)*Lambda_E",
+    "Planck_J": "exp(-6s)*Planck_E",
+    "g_J": "exp(-12s)*g_E",
+    "kappa_E": "kappa_D/V0",
+    "kappa_J": "exp(-12s)*kappa_E",
+    "log_ratio": "0.5*ln(8*pi/lambda_hat(s,q))-0.5*ln(g)",
+    "scope": "Constant-s vacua; rolling curvature has derivative terms and the global horizon needs the full metric."
+  },
+  "new_field_evolutions": 0,
+  "new_likelihood_fits": 0,
+  "observed_benchmark": {
+    "Lambda_m_inverse2": 1.0904e-52,
+    "Planck_length_m": 1.6162550244237053e-35,
+    "curvature_length_m": 9.576505856351146e+25,
+    "log_L_H_over_Planck": 139.93430661214543,
+    "log_de_Sitter_horizon_over_Planck": 140.4836127564795,
+    "previous_numbers": "138.2604 was minus ln(eta); 136.8439 was ln(L_P/ell_e_sigma). Neither is ln(L_H/l_P)."
+  },
+  "positive_sector_contrast_law": {
+    "L_H_child_over_parent_J": "exp(-6*Delta_s)*sqrt(Lambda_E_parent/Lambda_E_child)",
+    "Planck_child_over_parent_J": "exp(-6*Delta_s)",
+    "log_ratio_gain": "0.5*ln(Lambda_E_parent/Lambda_E_child)",
+    "scope": "Positive constant-s vacuum endpoints in the same Einstein action and common absolute normalization; not all endpoints are realized by a transition."
+  },
+  "prediction": {
+    "log_hierarchy": null,
+    "percent_miss": null,
+    "reason": "g and a compatible contrast-to-volume profile are not selected; the fixed-coupling j=2 relaxed child/grandchild minima are negative."
+  },
+  "relaxed_scalar_without_volume_chain": [
+    {
+      "flux": "3/2",
+      "log_ratio_intercept": 2.2463413764963716,
+      "vacuum": "9/32"
+    },
+    {
+      "flux": "1",
+      "log_ratio_intercept": 2.651806484604536,
+      "vacuum": "1/8"
+    },
+    {
+      "flux": "1/2",
+      "log_ratio_intercept": 3.344953665164481,
+      "vacuum": "1/32"
+    }
+  ],
+  "scalar_only_total_log_growth": 1.0986122886681098,
+  "schema": "nsc-atlas-contrast-hierarchy-v1",
+  "snapshot_growth": {
+    "child_to_grandchild": "sqrt(7)",
+    "parent_to_child": "sqrt(3)",
+    "scope": "These are density-scale ratios for the stipulated constant-vacuum controls. Actual parent/child scalar snapshots are not stationary vacua.",
+    "total_log_growth": 1.5222612188617115
+  },
+  "source_sha256": {
+    "scripts/check_nsc_atlas_contrast_hierarchy.py": "aaf738329d160bd888642c86f9e63303d72d498e0c7b7f634495969f0d9d1891",
+    "src/recursive_horizons/nsc_atlas_contrast_hierarchy.py": "c59129943458023fa3da682c6e161cc7d8e19a495ec160af43e5019a94712f05",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "src/recursive_horizons/nsc_atlas_parke_nucleation.py": "f6ef14402f91949ea921b63af65a630a099bc0c50c11d1c6c8628b6a74bccd35",
+    "src/recursive_horizons/nsc_atlas_scale_selection.py": "4c15c86c09156a2201640165ef85178d661027d8b1581c0009dca6a63920c0f2",
+    "src/recursive_horizons/nsc_atlas_si_hierarchy.py": "2f5b82d15b10d7dc2aa4d4effdce78751f3c0c7d52bc1117bfe8a9ecfc501aed"
+  },
+  "volume_parent_control": {
+    "data_if_g_is_set_to_one": {
+      "L_H_E": 2.127259851782632,
+      "L_H_J": 2.6345579112054125,
+      "Lambda_J": 0.1440736308750074,
+      "Planck_E": 0.19947114020071635,
+      "Planck_J": 0.2470399984433401,
+      "kappa_J_over_kappa_E": 1.5338200534719866,
+      "log_ratio": 2.3669204107307724,
+      "supplied_g": 1.0
+    },
+    "is_prediction": false,
+    "log_miss_percent_if_g_is_set_to_one": -98.3085488697985
+  }
+}

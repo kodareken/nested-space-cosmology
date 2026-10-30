@@ -16,13 +16,14 @@ solved equation when available; identify whether the missing ingredient is its
 source, state, domain, boundary data, or connection to another result before
 starting a derivation.
 
-## Current execution priority — 29 October 2026
+## Current execution priority — 30 October 2026
 
-Active target: follow the membrane charge and gravity through the existing
-nesting map, and define a Parke-only wall ruler. The
-[charge transport calculation](nsc-atlas-scale-selection.md#charge-transport-and-a-parke-only-ruler)
-separates flux discharge, physical volume change and dimensional reduction.
-No new formation history or observation fit is active.
+Active target: test the proposed energy-contrast control of the small and
+large gravitational lengths within the fixed action. The
+[contrast calculation](nsc-atlas-scale-selection.md#energy-contrast-and-the-planck-to-vacuum-length-ratio)
+derives the two frame-dependent lengths, their invariant ratio, and the
+fixed-coupling descendant vacuum sectors. A global evolving horizon and an
+SI normalization are not supplied by a frame conversion or a vacuum table.
 
 e112798: hierarchy obeys g=4*eta_e0^2 and ln(L_ref/ell_e_sigma)=.9747222043-.5*ln(g); target 138.542 needs ln(g)=-275.13456 and ln(eta_e0)=-138.26042 (including -ln(2)); the HM exponent is not the ruler; that audit is parked.
 

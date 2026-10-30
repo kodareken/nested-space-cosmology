@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+  "current_receipt_commit_parent": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
   "files": [
     {
       "bytes": 3120,
@@ -10269,9 +10269,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 293685,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 294054,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10279,7 +10279,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "49d4d5d4f6719159c411421be419126138699f81718d0814747cc140289db8da"
+      "sha256": "9b1823804dfb16d0f34e245a957b42da99ce42b036830043d4d1d47a07fccd52"
     },
     {
       "bytes": 150322,
@@ -10325,12 +10325,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 476189,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 476867,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c88ce459e5f631fba816bc86cd4be3614ebc7294a1dec27c2483444f826bd1ca"
+      "sha256": "9fb9c3513b067153d49647fbc8090f3c4c5debdbfefd3e9bca59ad1e830faea4"
     },
     {
       "bytes": 173938,
@@ -11013,12 +11013,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 40928,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 47542,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "3544ac82fdea1a78c75781f64dc07098cd17c1a5e6a86ac05414f0f8d5231fee"
+      "sha256": "37c66ef4a7a99bcf830a10ccb6f518487f0269e0dbfd472a7ea1f2813dcf4cd1"
     },
     {
       "bytes": 16908,
@@ -11120,15 +11120,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 129025,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 129125,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "e28c231e6926673a6d8534f788f3ea83e32a60062b2ac19df8bb3bc6be16c735"
+      "sha256": "8e40d8cca65214a207dc2e63b3c81205b9e103248e931b7097a7634b2c2c750a"
     },
     {
       "bytes": 30876,
@@ -12110,20 +12110,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 240591,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 241005,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d60c0cc80dfb6ecc7e7423d855fd5127450c049ea5979bb1052c7f5ca0eabc2c"
+      "sha256": "a2284fac9dff8b46588460cbddb0141490f59bea971b12ecdaa9d942fd3acf2a"
     },
     {
-      "bytes": 52600,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 53031,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "2867a8e31f85154b20bcc3e6993779c5cb85310849b908aa6d7a9b9a70033bdd"
+      "sha256": "c755772ef40d74b0665df117a28ae130780487a8372327e8cb75dc8caee7eb44"
     },
     {
       "bytes": 18356,
@@ -12192,28 +12192,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 39208,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 39376,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "cebc7bd5f07912f7b886b3df572e5cb38d7364d84de68becdc83e8dca6f5e637"
+      "sha256": "a601246ca47ff57e782fd5342bcd12f682d714970029fcaec11ed454979b1e32"
     },
     {
       "bytes": 3206,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "ec13587737355cd6092d1bcbc1c7874a3e04932d739e1c2814e6c762dc714a8a"
+      "sha256": "0c490f701121ee62382cc443633950c0b71b685dca6a7e21d287d46177d767cc"
     },
     {
-      "bytes": 49499,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 49661,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "213432be444a25490b369be1dc9544da3d4e21b528298115277c947b8f8cb6e2"
+      "sha256": "4912563d8dffcf2f3ac4dd9ba32166de73099ff6898f9eb355f66df76bf382dc"
     },
     {
       "bytes": 226492,
@@ -12225,27 +12225,27 @@
     },
     {
       "bytes": 396,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "9a96f0383620286c554c652117f2b1c8c05cffe7c3628bbc7b3b994e70d6f97a"
+      "sha256": "5c34aa257e5afec39f870c3c89ae9de408d04302057aaeda8b44572ad5006a33"
     },
     {
-      "bytes": 546980,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 551850,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "001374f8c3ae79ccfb94b11eac741ce67c08aef0046dd20628d323b0bd1de4e6"
+      "sha256": "e7d4df86e5dca43f1a6a874d81f7187b4ee60e0638040488a7994cae16fc0338"
     },
     {
-      "bytes": 15116918,
-      "change": "Derive fixed-charge inheritance and volume telescoping, isolate the free root normalization, and express the retained vacuum on an independent Parke wall ruler.",
-      "changed_from_commit": "e112798b66e08620098b7f0b2c3dcc64b41bcc2f",
+      "bytes": 15168463,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1170fefe9167c48ed477b03e8fb24061197472ff43c604ae1528827879894910"
+      "sha256": "91d6b7d1ed9def8fa9328a80f411a248339eb9837376ec8f4c34248d971588d0"
     },
     {
       "bytes": 3283,
@@ -30415,6 +30415,14 @@
       "sha256": "fc6e29a255a1226bb01786caa40ae3cd900a8b06eac024a8b5544c9d1b17263b"
     },
     {
+      "bytes": 9013,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "path": "results/summaries/nsc-atlas-contrast-hierarchy-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6e1e8820f556df2d5ebe820b53744027a662d0ddf79ce782fe38cd4ec5a66cf3"
+    },
+    {
       "bytes": 47280,
       "change": "Connect full finite Einstein-scalar evolution, diffuse concentration and operational clocks.",
       "changed_from_commit": "cc7eac49a876fceb8a5bc20290ff56d379b7545e",
@@ -31749,6 +31757,14 @@
       "path": "scripts/check_nsc_atlas_compositional_gravity.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "a70b55c05f5be698d5f22e6cd9ec0bc544c45b0a4a1c40f54c04ff89ec167e07"
+    },
+    {
+      "bytes": 1440,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "path": "scripts/check_nsc_atlas_contrast_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "aaf738329d160bd888642c86f9e63303d72d498e0c7b7f634495969f0d9d1891"
     },
     {
       "bytes": 12226,
@@ -35970,6 +35986,14 @@
       "original_path": "lab/src/recursive_horizons/nsc_atlas_connection_slice.py",
       "path": "src/recursive_horizons/nsc_atlas_connection_slice.py",
       "sha256": "df88bb205dd5d8ab785af57d3cfcd4eb6e83b68cf23aa8e6efa7533d3e4379b7"
+    },
+    {
+      "bytes": 7499,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "path": "src/recursive_horizons/nsc_atlas_contrast_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "c59129943458023fa3da682c6e161cc7d8e19a495ec160af43e5019a94712f05"
     },
     {
       "bytes": 18714,
@@ -40432,6 +40456,14 @@
       "original_path": "lab/tests/test_nsc_atlas_connection_slice.py",
       "path": "tests/test_nsc_atlas_connection_slice.py",
       "sha256": "66607ff4b641cfbddf5ee63aaa66946a64e7dbe378fe52b3d71662159ee4de1a"
+    },
+    {
+      "bytes": 3593,
+      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
+      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "path": "tests/test_nsc_atlas_contrast_hierarchy.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e74708416ad5786b9633f04f2a44300f8048306be885300e4d6fba3bb2429634"
     },
     {
       "bytes": 3254,

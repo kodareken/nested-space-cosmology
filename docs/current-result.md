@@ -1,5 +1,15 @@
 # What the calculations show
 
+The [contrast-to-length calculation](nsc-atlas-scale-selection.md#energy-contrast-and-the-planck-to-vacuum-length-ratio)
+gives ln(L_H/l_P)=.5*ln(8*pi/lambda_hat)-.5*ln(g). In the external
+Jordan metric both lengths acquire exp(-6s); their ratio is unchanged by
+that conversion. The Parke child gives 2.3719985906-.5*ln(g), with no
+selected g or roll profile. A same-definition observed benchmark is
+139.9343066121. Transporting the j=2 ancestor-flux label with the UV
+couplings held fixed gives negative child/grandchild vacuum minima,
+-2.452231934854 and -14.768058238899. This conditional sector sequence
+does not provide a positive-Lambda horizon chain or an SI prediction.
+
 The [charge-inheritance calculation](nsc-atlas-scale-selection.md#charge-transport-and-a-parke-only-ruler)
 gives r=1 for the actual fixed-charge flux step. Volume-dependent canonical
 charges obey an endpoint law exp[-6(s_child-s_parent)], with no selected
@@ -167,7 +177,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-29.7. Its central route is spherical
+revision 2026-10-30.1. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

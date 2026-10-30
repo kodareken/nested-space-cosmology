@@ -1,8 +1,149 @@
 # Inherited SI scale: computed routes and remaining selector
 
-The active request is charge transport through the existing inheritance map
-and a Parke-only comparison ruler. Earlier routes remain evidence. The HM
-hierarchy audit and the Parke source-admission problem are parked.
+The active question is Douglas's proposed connection between energy contrast,
+the local gravitational length and the child's large-scale boundary. The
+fixed action is the calculation owner: changing its representation does not
+silently add a new gravitational coupling law. Earlier routes remain evidence.
+
+## Energy contrast and the Planck-to-vacuum length ratio
+
+The [retained calculation](../results/summaries/nsc-atlas-contrast-hierarchy-v1.json)
+follows energy/state -> gravitational action -> lengths -> dimensionless
+comparison. It compares three distinct operations: the Einstein-frame action,
+its external Jordan metric, and the positive-vacuum sector sequence. No
+extra field, fitted scale, observation fit or numerical evolution is added.
+
+Define the gravitational Planck scale by l_P^2=kappa_nat/(8*pi) and use the
+requested L_H=1/sqrt(Lambda). The latter is a positive-vacuum curvature
+length; a four-dimensional de Sitter event horizon is sqrt(3)*L_H. The
+action does not prove that l_P is a minimum length or a horizon is an
+absolute-zero boundary. Scalar exchange would also have to be included
+before identifying a measured Cavendish coupling with the Ricci coefficient.
+
+For the d=12 reduction, kappa_E=kappa_D/V0 is constant. In the external
+metric g_J=exp(-12s)*g_E, the Ricci coefficient gives
+
+$$
+\kappa_J=e^{-12s}\kappa_E,\qquad
+\ell_{P,J}=e^{-6s}\ell_{P,E}.
+$$
+
+Thus a variable local gravitational length is present in this representation.
+At a constant-s vacuum, Lambda_J=exp(12s)*Lambda_E and L_H,J=exp(-6s)*L_H,E.
+Both lengths acquire the same factor. The direct action calculation agrees
+with the [Dicke frame relation](https://doi.org/10.1103/PhysRev.125.2163) and
+the [dimensionless formulation](https://arxiv.org/abs/1407.6874); no conclusion
+about a rolling global horizon is imported from that constant-field identity.
+
+Let lambda_hat(s,q)=Lambda_E*L_unit(0)^2 and g=kappa_E/L_unit(0)^2. The
+governing dimensionless relation obtained from this action is
+
+$$
+\frac{\ell_{P,J}}{L_0}=e^{-6s}\sqrt{\frac{g}{8\pi}},\qquad
+\frac{L_{H,J}}{L_0}=\frac{e^{-6s}}{\sqrt{\widehat\lambda(s,q)}},
+$$
+
+$$
+\ln\frac{L_H}{\ell_P}
+=\frac12\ln\frac{8\pi}{\widehat\lambda(s,q)}-\frac12\ln g.
+$$
+
+Here L0=L_unit(0). For two positive-vacuum endpoints of the same action,
+
+$$
+\frac{\ell_{P,c}^{J}}{\ell_{P,p}^{J}}=e^{-6\Delta s},\qquad
+\frac{L_{H,c}^{J}}{L_{H,p}^{J}}
+=e^{-6\Delta s}\sqrt{\frac{\Lambda_{E,p}}{\Lambda_{E,c}}},\qquad
+\ln\frac{(L_H/\ell_P)_c}{(L_H/\ell_P)_p}
+=\frac12\ln\frac{\Lambda_{E,p}}{\Lambda_{E,c}}.
+$$
+
+This is a quantitative contrast relation. It gives growth when the child
+vacuum is smaller and positive, but does not set the root normalization.
+The roll affects lambda_hat through the potential; the common conformal
+factor itself cancels from the ratio. No map Delta s(Ui,Uo,sigma) is fixed
+by the three thin-wall constants. The volume's initial state, sourced profile
+and normal-derivative junction are still required. Time-dependent curvature
+also has derivative terms, and a global horizon requires the full geometry.
+
+For the stipulated Parke constants the unsquared wall equation gives the
+exact cancellation
+
+$$
+\Lambda_i=3\left[R_c^{-2}
+-\left(\frac{U_o-U_i}{3\sigma}+\frac{\kappa\sigma}{4}\right)^2\right]
+=\kappa U_i.
+$$
+
+The exterior density and tension fix R_c, not a new Newton coupling. The
+child's curvature-length ratio is 2.3719985906-.5*ln(g). The retained
+(12,2) volume minimum gives 2.3669204107-.5*ln(g), as a separate source
+evaluation. The Parke endpoints are not that volume solution's vacua.
+
+**Comparable observations and finite controls.** Using Lambda_obs=1.0904e-52
+m^-2 and l_P=1.6162550244e-35 m gives ln(L_H/l_P)=139.9343066121; the
+actual de Sitter radius gives 140.4836127565. The previous 138.2604 was
+minus ln(eta_e0), while 136.8439 was ln(L_P/ell_e_sigma). They are different
+quantities and are not interchangeable targets. Setting g=1 only as a
+declared control yields the following numbers; g=1 is not inferred by
+writing arithmetic kappa=1 in the solver.
+
+| Stipulated vacuum-density control | Density in model units | Log-ratio intercept | Log miss at g=1 (%) |
+| --- | ---: | ---: | ---: |
+| Parent | 21/32 | 1.8226924463 | -98.69747 |
+| Child | 7/32 | 2.3719985906 | -98.30492 |
+| Grandchild | 1/32 | 3.3449536652 | -97.60963 |
+
+Every intercept still subtracts .5*ln(g). The parent and child entries are
+auxiliary constant-density interpretations of nonstationary scalar snapshots.
+Their ratios grow by sqrt(3), then sqrt(7), independent of g. Separately,
+the relaxed scalar-only sectors 9/32,1/8,1/32 give growth factors 3/2 and 2.
+These do not include the volume stabilizer and are not its descendant vacua.
+
+**Descendant vacua with couplings held fixed.** There is a useful additional
+test beyond these controls. Keep UV bare term 215/32, internal curvature
+B=15/2, d=12 and scalar screening epsilon=1/4 fixed. Discharge q by e=1/2
+and transport the declared j=2 ancestor label, q_A=q+1. Without rematching
+any coefficient to a fresh density or equilibrium, the sector potential is
+
+$$
+V_q(s)=\left(\frac{215}{32}+\frac{q^2}{8}\right)e^{-12s}
+-\frac{15}{2}e^{-14s}+\frac{(q+1)^2}{8}e^{-24s}.
+$$
+
+These are conditional homogeneous sectors of the same coupling prescription.
+The averaged ancestor sheets and transitions between sectors are not thereby
+constructed. Their stationary minima are:
+
+| Region label | q | q_A | s_min | Lambda_hat_min |
+| --- | ---: | ---: | ---: | ---: |
+| Parent | 3/2 | 5/2 | -.03564678255 | +.220983024213 |
+| Child | 1 | 2 | -.12203536150 | -2.452231934854 |
+| Grandchild | 1/2 | 3/2 | -.20209261817 | -14.768058238899 |
+
+Both descendant minima have positive second derivative but negative vacuum.
+The requested positive-Lambda length is undefined there. This chain does
+not produce an increasing sequence of de Sitter horizon/Planck ratios.
+Keeping the original ancestor sheet fixed instead gives child/grandchild
+minima -.039492243841 and -.213873093913, also negative. These are state
+prescriptions, not an assertion about every possible nesting construction.
+
+The signs have an exact check. With x=exp(-2s), V=x^6(A-Bx+Tx^6) and
+6A-7Bx+12Tx^6=0 at an extremum. At the minimum,
+
+$$
+V_{\min}=x^7\left(\frac{B}{6}-Tx^5\right),\qquad
+V_{\min}>0\ \Longleftrightarrow
+\left(\frac{6A}{5B}\right)^5>\frac{B}{6T}.
+$$
+
+The last comparison uses exact rational coefficients; high-precision roots
+independently check the displayed numbers. No absolute hierarchy or physical
+percentage miss is predicted without g and a compatible source/state. The
+three errors guarded against here are confusing frames with distinct
+physics, comparing different length ratios, and silently rematching the
+potential at every descendant. Those are the stopping boundaries of this
+calculation, not reasons to reject the general nesting programme.
 
 ## Charge transport and a Parke-only ruler
 

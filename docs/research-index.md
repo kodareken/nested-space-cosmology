@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [energy-contrast and gravitational-length result](nsc-atlas-scale-selection.md#energy-contrast-and-the-planck-to-vacuum-length-ratio)
+derives a common volume factor for the local Planck and positive-vacuum
+lengths, their invariant ratio, and a fixed-coupling vacuum-sign threshold
+along the conditional ancestor/flux sequence. Its observed benchmark uses
+the same two lengths; old ruler and charge logarithms remain distinct.
+
 The [charge transport and Parke-ruler result](nsc-atlas-scale-selection.md#charge-transport-and-a-parke-only-ruler)
 separates fixed elementary charge from changing flux and volume. The
 implemented flux step gives r=1; regional volume factors telescope without

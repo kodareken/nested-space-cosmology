@@ -1,5 +1,11 @@
 # Active code and evidence map
 
+`nsc_atlas_contrast_hierarchy.py` owns the constant-volume frame identity,
+Parke contrast cancellation, comparable Planck/vacuum-length benchmark,
+and fixed-coupling descendant sector minima. Its producer retains a compact
+record. Tests independently check symbolic transformations, exact vacuum
+signs, high-precision roots and separation of observations from inputs.
+
 `nsc_atlas_charge_inheritance.py` follows charge separately from flux,
 volume evolution and dimensional reduction, and defines a Parke wall ruler
 independently of the old R,M preparation. Its producer retains one compact

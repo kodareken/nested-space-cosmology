@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 29 October 2026
+Working research manuscript, 30 October 2026
 
 ## Abstract
 
@@ -4530,6 +4530,110 @@ the observed Lambda benchmark on $L_P$ gives log hierarchy 136.8439139446.
 Both the target and the forward intercept shift by the same ruler factor,
 so the required physical charge is unchanged. Neither the ruler conversion
 nor a flux-depth count selects that charge.
+
+<!-- nsc-claim:energy-contrast-and-gravitational-lengths -->
+
+**Energy contrast and the two gravitational lengths.** Evidence:
+[frame identities and descendant vacua](../results/summaries/nsc-atlas-contrast-hierarchy-v1.json),
+[contrast-to-length derivation](../docs/nsc-atlas-scale-selection.md#energy-contrast-and-the-planck-to-vacuum-length-ratio),
+and [symbolic signs and independent roots](../tests/test_nsc_atlas_contrast_hierarchy.py).
+
+Douglas's proposed organizing relation asks whether energy inside a region,
+relative to its surroundings, determines both its small gravitational scale
+and its large boundary scale. The fixed action gives a precise test of that
+idea. Define the Planck scale through the Ricci coefficient,
+$\ell_P^2=\kappa/(8\pi)$, and use $L_H=1/\sqrt{\Lambda}$ as the
+positive-vacuum length. The action does not establish a minimum possible
+length. A de Sitter event-horizon radius is $\sqrt{3}L_H$; a rolling
+spacetime's horizon requires its full metric.
+
+The existing reduction has constant Einstein coupling
+$\kappa_E=\kappa_D/V_0$. In its external Jordan metric,
+
+$$
+g_J=e^{-12s}g_E,\qquad
+\kappa_J=e^{-12s}\kappa_E,\qquad
+\ell_{P,J}=e^{-6s}\ell_{P,E}.
+$$
+
+The local gravitational length can therefore vary in this representation.
+At constant-s vacuum endpoints, however, $\Lambda_J=e^{12s}\Lambda_E$
+and $L_{H,J}=e^{-6s}L_{H,E}$: both lengths acquire the same factor.
+This direct calculation is the relevant instance of the
+[Dicke frame relation](https://doi.org/10.1103/PhysRev.125.2163).
+Writing $\lambda=\Lambda_E L_0^2$ and $g=\kappa_E/L_0^2$,
+
+$$
+\frac{\ell_{P,J}}{L_0}=e^{-6s}\sqrt{\frac{g}{8\pi}},\qquad
+\frac{L_{H,J}}{L_0}=\frac{e^{-6s}}{\sqrt{\lambda(s,q)}},
+$$
+
+$$
+\ln\frac{L_H}{\ell_P}
+=\frac{1}{2}\ln\frac{8\pi}{\lambda(s,q)}
+-\frac{1}{2}\ln g.
+$$
+
+For two positive vacuum endpoints with the same Einstein coupling, the
+logarithmic gain is half the logarithm of their vacuum-energy contrast.
+The common volume factor cancels, while the volume-dependent potential
+can still change the vacuum. Parke's constant-density wall determines
+the radius through the contrast and tension; its child curvature remains
+$\Lambda_i=\kappa U_i$. It supplies neither a new gravitational coupling
+nor the missing volume profile and initial state.
+
+For the requested Parke child, the ratio is
+$\ln(L_H/\ell_P)=2.3719985906-\ln(g)/2$. The retained (12,2) volume
+minimum separately gives $2.3669204107-\ln(g)/2$. The same-definition
+observed benchmark is 139.9343066121, using the stated observed Lambda
+and $\ell_P=1.6162550244\times10^{-35}$ m. The actual de Sitter horizon
+gives 140.4836127565. Earlier values 138.2604 and 136.8439 describe,
+respectively, minus the charge logarithm and the Parke-radius/microscopic
+charge-tension ratio; neither is this horizon/Planck ratio.
+
+| Stipulated constant-density sector | Density | Log-ratio intercept before subtracting ln(g)/2 |
+| --- | ---: | ---: |
+| Parent | 21/32 | 1.8226924463 |
+| Child | 7/32 | 2.3719985906 |
+| Grandchild | 1/32 | 3.3449536652 |
+
+These controls grow by factors $\sqrt{3}$ and $\sqrt{7}$. If g=1 is
+supplied solely as a control, the child's logarithm is 98.30492% below
+the same-definition target. That is not an inherited prediction. No
+absolute percentage miss follows while g remains unselected. The actual
+parent/child scalar snapshots are nonstationary, so their constant-density
+interpretation also remains conditional.
+
+There is a further fixed-action test. Keep the UV bare term 215/32 and
+internal-curvature coefficient 15/2 unchanged, discharge the regional
+flux by 1/2, and carry the declared j=2 ancestor label as $q_A=q+1$.
+The conditional relaxed-sector potential is then
+
+$$
+V_q(s)=\left(\frac{215}{32}+\frac{q^2}{8}\right)e^{-12s}
+-\frac{15}{2}e^{-14s}+\frac{(q+1)^2}{8}e^{-24s}.
+$$
+
+No density, UV coefficient or equilibrium condition is rematched along
+this sequence. Its minima are:
+
+| Regional flux | Ancestor flux | Volume minimum s | Vacuum at minimum |
+| ---: | ---: | ---: | ---: |
+| 3/2 | 5/2 | -.03564678255 | +.220983024213 |
+| 1 | 2 | -.12203536150 | -2.452231934854 |
+| 1/2 | 3/2 | -.20209261817 | -14.768058238899 |
+
+All three minima have positive second derivative. The two descendants
+have negative vacuum, so the requested positive-Lambda length is undefined
+there. Their signs follow from exact rational comparisons: for
+$V=x^6(A-Bx+Tx^6)$, its minimum has positive vacuum precisely when
+$(6A/(5B))^5>B/(6T)$. Independent high-precision roots check the numbers.
+Keeping the original ancestor sheet fixed instead also gives negative
+descendant minima. These are conditional sectors of specified source
+prescriptions; the sheets and transitions have not been constructed.
+The current action therefore supplies a contrast relation and a vacuum-sign
+boundary, while the SI hierarchy and a positive-vacuum descendant chain
+remain unselected.
 
 ### 13.24. An extremal member is not yet an inherited selection
 

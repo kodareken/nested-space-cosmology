@@ -1,5 +1,15 @@
 # Reproducing the root project
 
+## Energy contrast and gravitational lengths
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_contrast_hierarchy.py
+python scripts/run_python.py scripts/check_nsc_atlas_contrast_hierarchy.py --output .build/contrast-hierarchy-reproduced.json
+```
+
+This uses fixed coefficients and finite algebraic root brackets. No new
+time evolution, grid, parameter fit or physical g is introduced.
+
 ## Charge transport and Parke-only ruler
 
 ```powershell

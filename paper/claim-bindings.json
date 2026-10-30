@@ -648,6 +648,11 @@
       "section": "13.23",
       "status": "derived",
       "owner": "docs/nsc-atlas-scale-selection.md"
+    },
+    "energy-contrast-and-gravitational-lengths": {
+      "section": "13.23",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-scale-selection.md"
     }
   },
   "findings": [
