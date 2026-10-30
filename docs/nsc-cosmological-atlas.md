@@ -2146,3 +2146,15 @@ finite flow, and an analytic local bulk witness passes direct Ricci checks.
 The global region and next vector evolution remain the next dependencies.
 The infinite research objective remains active; this local result is not
 substituted for the full cosmological completion.
+
+## One spatial seed and time as the offset operation
+
+Douglas's clarified foundational proposal uses one spatial seed and repeated
+offset accumulation; temporal variables in effective spacetime models are
+downstream descriptions, not a derivation of the origin of the operation.
+The [new generator](nsc-atlas-offset-generator.md) realizes a conditional
+metric-completion theorem with one irrational offset and retained history.
+The closed completion supports the existing parent initial constraint.
+An action/state selection for the kernel, dimension, duration and branching
+remains needed. The five-dimensional fluid/gravity model remains an explicitly
+auxiliary sector, rather than a claim of extra primitive spatial directions.

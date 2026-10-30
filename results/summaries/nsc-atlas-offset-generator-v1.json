@@ -1,0 +1,275 @@
+{
+  "cases": [
+    {
+      "alpha": "0.057358647050444133470969877021136692357109004770616",
+      "angle": 0.3603950083870503,
+      "coverage": [
+        {
+          "S3_meridian_Hausdorff_distance_over_radius": 0.5014549111988389,
+          "area_weighted_direction_second_moment": [
+            0.3161824506099669,
+            0.34699520828292113,
+            0.3368223411071121
+          ],
+          "ball_Hausdorff_distance_over_radius": 0.35147195409889626,
+          "finite_phase_Fourier_moments": {
+            "0,1": 0.03766105247438452,
+            "1,0": 0.041166393795838814,
+            "1,1": 0.03676353115161896,
+            "2,-1": 0.059440781044488716
+          },
+          "line_direction_cover_radians": 0.35914290778369196,
+          "oriented_direction_cover_radians": 0.5014549111988389,
+          "passes": 100,
+          "raw_direction_second_moment": [
+            0.23279119952499758,
+            0.26107595386123156,
+            0.5061328466137707
+          ]
+        },
+        {
+          "S3_meridian_Hausdorff_distance_over_radius": 0.3744214184805109,
+          "area_weighted_direction_second_moment": [
+            0.32852757959728673,
+            0.3390310634487645,
+            0.33244135695394883
+          ],
+          "ball_Hausdorff_distance_over_radius": 0.2915104514753749,
+          "finite_phase_Fourier_moments": {
+            "0,1": 0.0405500904120442,
+            "1,0": 0.0277881092262466,
+            "1,1": 0.04879721194657794,
+            "2,-1": 0.04577735101980179
+          },
+          "line_direction_cover_radians": 0.2958054912497929,
+          "oriented_direction_cover_radians": 0.3744214184805109,
+          "passes": 200,
+          "raw_direction_second_moment": [
+            0.24614364687242357,
+            0.2549320381472087,
+            0.49892431498036754
+          ]
+        },
+        {
+          "S3_meridian_Hausdorff_distance_over_radius": 0.19978946690260962,
+          "area_weighted_direction_second_moment": [
+            0.3358528603260079,
+            0.33139222709945987,
+            0.33275491257453227
+          ],
+          "ball_Hausdorff_distance_over_radius": 0.16691159507695094,
+          "finite_phase_Fourier_moments": {
+            "0,1": 0.015416024772627825,
+            "1,0": 0.005038442027186821,
+            "1,1": 0.017169740844241537,
+            "2,-1": 0.014344002147061588
+          },
+          "line_direction_cover_radians": 0.1676964871830633,
+          "oriented_direction_cover_radians": 0.19978946690260962,
+          "passes": 1000,
+          "raw_direction_second_moment": [
+            0.251280285193127,
+            0.24906813049307888,
+            0.49965158431379403
+          ]
+        },
+        {
+          "S3_meridian_Hausdorff_distance_over_radius": 0.12788791193805182,
+          "area_weighted_direction_second_moment": [
+            0.3331721787714061,
+            0.3335848991706231,
+            0.3332429220579708
+          ],
+          "ball_Hausdorff_distance_over_radius": 0.08015005645827242,
+          "finite_phase_Fourier_moments": {
+            "0,1": 0.012052109223127183,
+            "1,0": 0.001365554115125968,
+            "1,1": 0.012354476963464448,
+            "2,-1": 0.011661330357793683
+          },
+          "line_direction_cover_radians": 0.08023611989980038,
+          "oriented_direction_cover_radians": 0.12788791193805182,
+          "passes": 4000,
+          "raw_direction_second_moment": [
+            0.24928689057265685,
+            0.25081464024789635,
+            0.49989846917944664
+          ]
+        }
+      ],
+      "offset": "action"
+    },
+    {
+      "alpha": "0.38196601125010515179541316563436188227969082019424",
+      "angle": 2.399963229728653,
+      "coverage": [
+        {
+          "S3_meridian_Hausdorff_distance_over_radius": 0.5701779177529575,
+          "area_weighted_direction_second_moment": [
+            0.35351876749312333,
+            0.3128364043801291,
+            0.33364482812674695
+          ],
+          "ball_Hausdorff_distance_over_radius": 0.39247395650461103,
+          "finite_phase_Fourier_moments": {
+            "0,1": 0.06867160280389012,
+            "1,0": 0.006213446080069794,
+            "1,1": 0.05375186934154014,
+            "2,-1": 0.08265129016280438
+          },
+          "line_direction_cover_radians": 0.4033198298190801,
+          "oriented_direction_cover_radians": 0.5701779177529575,
+          "passes": 100,
+          "raw_direction_second_moment": [
+            0.26405823647625265,
+            0.2331806911669968,
+            0.5027610723567508
+          ]
+        },
+        {
+          "S3_meridian_Hausdorff_distance_over_radius": 0.43198627675951673,
+          "area_weighted_direction_second_moment": [
+            0.334938737065019,
+            0.33181309709455936,
+            0.3332481658404212
+          ],
+          "ball_Hausdorff_distance_over_radius": 0.3219256790231742,
+          "finite_phase_Fourier_moments": {
+            "0,1": 0.06645889180783031,
+            "1,0": 0.0050654936209461226,
+            "1,1": 0.06482372366157832,
+            "2,-1": 0.066777675745971
+          },
+          "line_direction_cover_radians": 0.32776274266940947,
+          "oriented_direction_cover_radians": 0.43198627675951673,
+          "passes": 200,
+          "raw_direction_second_moment": [
+            0.25235313784058605,
+            0.24535132922584957,
+            0.5022955329335644
+          ]
+        },
+        {
+          "S3_meridian_Hausdorff_distance_over_radius": 0.22441513794992862,
+          "area_weighted_direction_second_moment": [
+            0.33485903248496157,
+            0.3317733417278451,
+            0.33336762578719314
+          ],
+          "ball_Hausdorff_distance_over_radius": 0.15218010350094635,
+          "finite_phase_Fourier_moments": {
+            "0,1": 0.03343229321855849,
+            "1,0": 0.00011434796651551128,
+            "1,1": 0.03355274926496195,
+            "2,-1": 0.033856625824310885
+          },
+          "line_direction_cover_radians": 0.15277369499090154,
+          "oriented_direction_cover_radians": 0.22441513794992862,
+          "passes": 1000,
+          "raw_direction_second_moment": [
+            0.25180215577700027,
+            0.24806233681326934,
+            0.5001355074097302
+          ]
+        },
+        {
+          "S3_meridian_Hausdorff_distance_over_radius": 0.13519848606013612,
+          "area_weighted_direction_second_moment": [
+            0.3326024786201059,
+            0.3340241475658294,
+            0.3333733738140645
+          ],
+          "ball_Hausdorff_distance_over_radius": 0.08859494159641995,
+          "finite_phase_Fourier_moments": {
+            "0,1": 0.01509026810783623,
+            "1,0": 0.00011111386843038924,
+            "1,1": 0.014986509107633083,
+            "2,-1": 0.01543479336593485
+          },
+          "line_direction_cover_radians": 0.08871125076938252,
+          "oriented_direction_cover_radians": 0.13519848606013612,
+          "passes": 4000,
+          "raw_direction_second_moment": [
+            0.2488289190979042,
+            0.25103242414380095,
+            0.5001386567582949
+          ]
+        }
+      ],
+      "offset": "golden"
+    }
+  ],
+  "cpu_seconds": 0.375,
+  "generator": {
+    "closed_form": "theta_n=n alpha mod1; phi_n=n(n-1)alpha/2 mod1",
+    "inverse": "theta_old=(theta_new-alpha) mod1; phi_old=(phi_new-theta_old) mod1",
+    "physical_duration_selected": false,
+    "proof": "Every nonzero integer character is a nonconstant polynomial in n with an irrational nonconstant coefficient; Weyl criterion gives joint equidistribution.",
+    "repeated_operation": "Delta theta=alpha; Delta phi=theta: the same discrete accumulation used twice.",
+    "reversible": true,
+    "rule": "theta[n+1]=(theta[n]+alpha) mod1; phi[n+1]=(phi[n]+theta[n]) mod1; theta0=phi0=0",
+    "seed": "One continuous spatial interval; n counts retained offset updates, not a supplied proper-time coordinate."
+  },
+  "inherited_parent": {
+    "Hamiltonian_residual": 0.0,
+    "Lambda": 0.22098302421260696,
+    "extrinsic_curvature": 0,
+    "first_scalar_Laplacian_eigenvalues": [
+      0.22098302421260696,
+      0.5892880645669519
+    ],
+    "law": "Under radius rescaling, R\u00b2(-Delta_S3_R) has the same dimensionless spectrum.",
+    "normalized_eigenvalues": [
+      3,
+      8
+    ],
+    "radius": 3.6845221441889593,
+    "scalar_curvature": 0.4419660484252139,
+    "scope": "The generated S3 can carry the existing constant-field, time-symmetric parent data. This is compatible initial geometry, not a selected formation history."
+  },
+  "measure": {
+    "area_weighted_limit_second_moment": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "ball_volume": "r\u00b2 abs(sinTheta) dr dTheta dPhi",
+    "closed_volume": "R\u00b2 sin\u00b2(r/R) abs(sinTheta) dr dTheta dPhi",
+    "physical_energy_measure_selected": false,
+    "raw_phase_limit_second_moment": [
+      0.25,
+      0.25,
+      0.5
+    ],
+    "sphere_area_weight": "abs(sinTheta)"
+  },
+  "metric_completion": {
+    "assumptions": [
+      "retain earlier drawing labels",
+      "use the stated cross-pass distance kernel",
+      "take the metric completion"
+    ],
+    "ball": "d\u00b2=r\u00b2+s\u00b2-2rs C_nm; quotient coincident labels and complete: the Euclidean 3-ball.",
+    "closed_parent": "d=R arccos[cos(r/R)cos(s/R)+sin(r/R)sin(s/R)C_nm], 0<=r,s<=piR; completion is round S3.",
+    "cosine_kernel": "C_nm=cosTheta_n cosTheta_m+sinTheta_n sinTheta_m cos(Phi_n-Phi_m)",
+    "disk": "Retain the seed interval rotated by Theta_n in one plane; its completion is the disk.",
+    "distinction": "S3 has three intrinsic spatial dimensions despite a four-component unit-vector embedding. It is not a five-dimensional spacetime.",
+    "finite_history_has_nonzero_volume": false,
+    "phase_angles": "Theta=2pi theta; Phi=2pi phi",
+    "travel_only_along_spokes_gives_same_completion": false,
+    "unique_three_dimension_selection": false
+  },
+  "no_observational_fit": true,
+  "physical_open": [
+    "Why the offset dynamics and metric kernel are selected",
+    "Why two accumulation levels followed by nesting are physically selected",
+    "Regional scale/energy transfer, a duration readout and an arrow",
+    "Birth of a daughter and observational abundances"
+  ],
+  "schema": "nsc-atlas-offset-generator-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_offset_generator.py": "8d410eedc649d10fcb19762787814d81e24a399ecccf643ee79f83aee5f02a4b",
+    "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408"
+  }
+}

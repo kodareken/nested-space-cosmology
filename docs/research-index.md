@@ -1,5 +1,9 @@
 # Scientific strand index
 
+The [offset generator](nsc-atlas-offset-generator.md) formalizes one
+spatial seed plus repeated offset accumulation, proves its metric
+completions and connects the closed completion to parent initial geometry.
+
 The [local work/bulk connection](nsc-atlas-local-work.md) supplies the
 fourth-order scalar completion of the retained flow, the mean expansion
 identity, and a direct independent bulk-tensor witness.

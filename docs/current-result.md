@@ -1,5 +1,14 @@
 # What the calculations show
 
+The [one-seed offset generator](nsc-atlas-offset-generator.md) now uses
+one irrational offset and its accumulated history to generate a dense
+direction family. With retained draws and the stated distance kernel, its
+metric completion is a three-dimensional ball; a closed variant gives the
+round parent space and satisfies its vacuum initial constraint at the
+retained radius. No separate second phase is supplied. The distance law,
+completion, physical duration and selection of exactly three remain distinct
+assumptions/questions; finite drawings are not already filled volumes.
+
 The [local fourth-order continuation](nsc-atlas-local-work.md) derives
 div(w)=S and mean(S)=2D/(Vnu)=3b2_prime. A periodic Poisson correction plus
 the required affine expansion closes this scalar constraint on the retained

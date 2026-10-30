@@ -1,5 +1,10 @@
 # Active code and evidence map
 
+`nsc_atlas_offset_generator.py` evaluates the one-offset history at high
+precision, its Gram distance kernel, finite covering errors and metric
+measure. Tests check the recurrence, induced metric, rational comparison,
+coverage geometry and the distinction between finite rank and completion.
+
 `nsc_atlas_local_work.py` evaluates the dealiased fourth-order scalar
 source and its affine/periodic completion. `nsc_atlas_rindler_bulk.py`
 constructs a published local metric for an analytic flow and independently

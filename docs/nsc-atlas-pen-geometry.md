@@ -250,3 +250,11 @@ probe. The figure samples the geometry for display, not for area inference.
     python scripts/run_python.py scripts/check_nsc_atlas_pen_geometry.py --output .build/pen-geometry-reproduced.json
     python scripts/run_python.py scripts/plot_nsc_atlas_pen_geometry.py
     python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_pen_geometry.py
+
+## One underlying offset instead of independent starting phases
+
+The [accumulated-offset construction](nsc-atlas-offset-generator.md)
+supplies both phase values from a single deterministic history. It proves
+the completed geometry under a stated cross-pass metric, rather than
+claiming that two freely independent phase coordinates were primitive.
+The earlier finite circle and footprint calculations retain their domains.

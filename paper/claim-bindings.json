@@ -708,6 +708,11 @@
       "section": "16.7.4",
       "status": "derived",
       "owner": "docs/nsc-atlas-local-work.md"
+    },
+    "offset-metric-completion": {
+      "section": "1.2",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-offset-generator.md"
     }
   },
   "findings": [

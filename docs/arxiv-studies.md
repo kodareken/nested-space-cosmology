@@ -1753,3 +1753,18 @@ The [owner](nsc-atlas-local-work.md) keeps local affine data, a fixed torus,
 and the previous shift-free boundary-scale ansatz distinct. A native Grok
 review checked the source/mean identity and global-domain limitations;
 the source equation and metric were read and checked by the primary agent.
+
+## Accumulated offset and metric completion, 30 October 2026
+
+- Weyl's polynomial equidistribution theorem, through
+  [Tao's author lecture notes](https://terrytao.wordpress.com/2010/03/28/254b-notes-1-equidistribution-of-polynomial-sequences-in-torii/):
+  the character criterion and differencing argument were read and applied
+  to the specific triangular phase recurrence. The special-case proof is
+  included in the atlas owner.
+- Yifrach, [2201.07138v3](https://arxiv.org/abs/2201.07138v3): abstract
+  read for the classical theorem statement and the distinction from its
+  later multivariable generalization. That further theorem is not needed.
+
+The [owner](nsc-atlas-offset-generator.md) separately specifies the retained
+history, metric kernel and completion; no claim of physical dimensional
+selection or of deriving quantum statistics is borrowed from equidistribution.

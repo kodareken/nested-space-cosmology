@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **317 distinct arXiv works**: 97 are cited in the main argument and 220 are retained in the reading library only.
+This navigation index contains **318 distinct arXiv works**: 98 are cited in the main argument and 220 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -159,6 +159,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [2109.09814](https://arxiv.org/abs/2109.09814v1) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [2112.05819](https://arxiv.org/abs/2112.05819) | Studies | Archived: Murphy et al., ESPRESSO limit on variation of the fine-structure constant. | Library only |
 | [2201.03839](https://arxiv.org/abs/2201.03839v1) | Atlas reuse library, 10 October 2026 | Bochniak and Sitarz: section 2, spectral interaction between universes, the prior geometric setting of a two-sheet field connection. | Library only |
+| [2201.07138](https://arxiv.org/abs/2201.07138v3) | Accumulated offset and metric completion, 30 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 1.2 |
 | [2202.04077](https://arxiv.org/abs/2202.04077v2) | Parent geometry against released distances — 28 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 13.19 |
 | [2205.13556](https://arxiv.org/abs/2205.13556v1) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [2206.00014](https://arxiv.org/abs/2206.00014) | Studies | Archived: fixing the dynamical evolution in scalar-Gauss–Bonnet gravity, cited at the action gate. | Library only |

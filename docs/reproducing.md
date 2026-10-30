@@ -1,5 +1,17 @@
 # Reproducing the root project
 
+## One-seed offset generator
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_offset_generator.py
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --output .build/offset-generator-reproduced.json
+python scripts/run_python.py scripts/plot_nsc_atlas_offset_generator.py
+```
+
+The fixed pass counts are finite resolution controls, not a cosmological
+stop rule. The operator and metric-completion assumptions are in
+[the owner](nsc-atlas-offset-generator.md).
+
 ## Local fourth-order constraint and bulk witness
 
 ```powershell

@@ -1,10 +1,10 @@
 {
-  "bytes": 16873994,
+  "bytes": 17369180,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "eefb1ef89ea60b3c721559e47d81b6fad725380990d63e1a00b73bc6eb2ab443",
+  "metadata_sha256": "f43ea4274390d754c1d21f7eb0d679d4b4ce555e7cce960cf0b7e2e8656f68fd",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 212,
-  "pdf_sha256": "d34d84e78a3389d621e07c7d839d5b497b5bf67865fe5986ba2315c43265a7d4",
+  "pages": 214,
+  "pdf_sha256": "982b397be82c392cf4bd9a5507cdb96ac0e342dc7db49d9e2bf369b58d8e624c",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -186,6 +186,10 @@
     {
       "path": "paper/figures/nsc-atlas-local-work.png",
       "sha256": "d5b3389fa457d2bff401ecf830bc98bc4934ba4118bded0adfe6a0c26699b1bc"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-offset-generator.png",
+      "sha256": "f004c5efc4b5edd8dbd1665972d48a1982c9c681eb87ccd42eda0a6b9def44c8"
     },
     {
       "path": "paper/figures/nsc-atlas-pen-geometry.png",
@@ -768,6 +772,10 @@
       "sha256": "0e2270cafcce1d3c42d12b0a0a36cfe11a9b3661fff29848d4f38f5ba0324784"
     },
     {
+      "path": "results/summaries/nsc-atlas-offset-generator-v1.json",
+      "sha256": "2a1dca66d2e0df0ec82a6b58e1163f9f2b7312c7d15ef42cdb0fae184ffb8fcd"
+    },
+    {
       "path": "results/summaries/nsc-atlas-onset-geometry-bound-v1.json",
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
@@ -985,6 +993,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "43d1703e217e21dc5110caf897eaf32e6ebdd0e59897e2c519c0e51827be942e",
-  "version": "working-2026-10-30.8"
+  "source_sha256": "fd40fd51f20eacb062dd97ac509ac12548eeb0a3aa44b002464161c70f8260d4",
+  "version": "working-2026-10-30.9"
 }
