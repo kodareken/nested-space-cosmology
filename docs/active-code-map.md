@@ -1,5 +1,10 @@
 # Active code and evidence map
 
+`nsc_atlas_three_targets.py` audits the band, conjugate-state imbalance and
+inside/outside fraction equations without SI constants. Its producer reads
+four frozen inputs and separates conditional arithmetic from prediction.
+Tests check scale notation, cutoff refinement, state and volume dependence.
+
 `nsc_atlas_energy_frequency.py` connects the exact occupied sphere spectrum
 to flat pressure balance, derives a conditional radiation cooling threshold,
 and separates photon propagation from reference-clock calibration. Its

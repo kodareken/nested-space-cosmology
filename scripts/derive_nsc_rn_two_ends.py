@@ -146,7 +146,7 @@ def main() -> int:
             "omega_zero": "N/r, the angular ground of the room",
             "omega_cutoff": "(N + |beta|)/spacing, the CFL resolution of the room",
             "room_quality": "omega_zero / omega_cutoff, dimensionless per-room number",
-            "scale_invariant_expression": "N^2 spacing / (r (N + |beta|))",
+            "scale_invariant_expression": "N spacing / (r (N + |beta|))",
         },
         "reading": (
             "The bottom and top ends of a room are both set by the local space. "

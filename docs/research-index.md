@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [three dimensionless targets](nsc-cosmological-atlas.md#three-numerical-targets-from-the-existing-equations)
+connect Douglas's outside-first research picture to the actual spectral,
+population and source equations. The audit computes their conditional
+values and identifies the missing maps without selecting inputs from data.
+
 The [energy, frequency and size result](nsc-atlas-occupied-wall.md#energy-frequency-size-and-a-possible-cooling-ceiling)
 proves a pressure-selected radius and a finite occupied-frequency bound in
 the declared surface equilibrium family. The separate radiation first law

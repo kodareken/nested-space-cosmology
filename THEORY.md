@@ -1,5 +1,63 @@
 # The theory in one story
 
+## Douglas's organizing picture: 30 October 2026
+
+Build the atlas from interacting inside and outside regions. Describe the
+geometry, field spectrum, pressure and energy exchange before attaching
+local names to them. Douglas's working interpretation connects:
+
+- confined field configurations with matter, and pressure-dependent phase
+  transitions with the proposed formation of particles;
+- a hot compressed region, its frequency band, and subsequent exchange with
+  enclosing regions and smaller embedded regions;
+- the two spectral ends with a proposed smallest resolving scale and a
+  largest coherent room scale;
+- conjugate oscillation orientations and their possible unequal populations
+  with the proposed matter-antimatter asymmetry, time and drain;
+- unresolved exterior response with the proposed smooth dark-energy part
+  and the clustering dark-matter part seen locally;
+- "force resolution": derive how one underlying geometry and action can
+  produce different effective interaction channels at different scales.
+
+The existing response kernel is a concrete place to test force resolution:
+its frequency and momentum dependence can change what a local probe measures.
+The proposed unification must calculate those channels and their strengths.
+[Scale-dependent interactions and electroweak unification](https://home.cern/science/physics/unified-forces/)
+provide a precedent; the strong, electromagnetic and weak channels are not
+identified with a horizon by this analogy. Molecular binding is primarily
+electromagnetic. The atlas's event horizons are causal boundaries: a stronger
+ordinary external pull does not give an interior event a future causal path
+to the exterior. A changed geometry requires a new causal map. Hawking
+evaporation is not weak-interaction decay. These distinctions keep the
+interaction-scale question separate from the horizon's access question.
+
+These identifications define the research direction. The calculation must
+supply the physical map and numerical normalization for each one. The
+current three targets are the logarithmic band ratio, the baryon/photon
+asymmetry and the local vacuum/clustering/baryon fractions. Targets are
+comparisons, not values used to select the missing state or depth.
+
+When a ruler or calculator approaches an exponential boundary, retain the
+equations and examine the coordinate chart, observer access and resolution.
+Use logarithms, dimensionless ratios and compatible inside/outside charts
+to carry the calculation where it remains defined. A numerical clamp,
+overflow or inaccessible signal is not by itself the end of the geometric
+map. The matching law and its domain determine the next calculable region.
+
+Douglas's visual motivation is a pen tracing a circle repeatedly, circles
+within circles, and increasing resolution revealing a spherical structure.
+Time or phase supplies an ordering of the construction. The mathematical
+task is to specify the generating map, its independent parameters and the
+observable structure it produces. Preserve this image as a source of ideas;
+do not substitute the existing internal-dimension or ancestor-flux labels
+for those parameters without an explicit map. Personal perceptual imagery
+can motivate a construction; the mathematical and observational checks stand
+on their own.
+
+The working expectation is active judgment: infer the strongest useful
+mathematical interpretation, distinguish a motivating image from its derived
+claims, and pursue the calculation that advances the connected atlas.
+
 This page explains the proposed interpretation and its existing mathematical
 building blocks. The latest user instruction directs the active task. An
 accepted conversation plan applies where it stays compatible with that

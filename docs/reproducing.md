@@ -1,5 +1,15 @@
 # Reproducing the root project
 
+## Three dimensionless targets
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_three_targets.py
+python scripts/run_python.py scripts/check_nsc_atlas_three_targets.py --output .build/three-targets-reproduced.json
+```
+
+No CODATA or SI scale is imported. Conditional depth and state controls do
+not select the missing cosmological inputs or become observational fits.
+
 ## Energy, frequency and radius
 
 ```powershell

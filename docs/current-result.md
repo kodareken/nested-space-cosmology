@@ -1,5 +1,13 @@
 # What the calculations show
 
+The [three-target calculation](nsc-cosmological-atlas.md#three-numerical-targets-from-the-existing-equations)
+uses only retained dimensionless atlas equations. A supplied 100-step pure
+frequency power gives log band 137.9540195196, but neither that depth nor
+the endpoint state is selected. Phase offsets do not fix conjugate
+populations or baryon/photon eta, and total outside energy does not supply
+local vacuum/clustering/baryon fractions. Physical predictions and misses
+remain undefined; the conditional controls are recorded separately.
+
 The [energy-frequency-size connection](nsc-atlas-occupied-wall.md#energy-frequency-size-and-a-possible-cooling-ceiling)
 derives R^3=hbar*c*A_q/(8*pi*sigma0) and an upper bound on the highest
 occupied angular frequency in the flat equal-pressure surface equilibrium
@@ -186,7 +194,7 @@ retain their own requirements. The result is integrated into Sections
 
 The [living atlas](../paper/nested-space-cosmology.md) is reorganized as
 one thesis-led book, with the connected source/observation additions in
-revision 2026-10-30.2. Its central route is spherical
+revision 2026-10-30.3. Its central route is spherical
 geometry, inherited law/state, physical boundaries, vacuum and clustering,
 then interior observations. The original equations, claims and figure assets
 are preserved; the older characteristic-field development is in Appendix A.

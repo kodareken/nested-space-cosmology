@@ -18,11 +18,123 @@ starting a derivation.
 
 ## Current execution priority — 30 October 2026
 
-Active target: connect stored energy, frequency content, pressure, radius
-and observed expansion. The [energy-frequency calculation](nsc-atlas-occupied-wall.md#energy-frequency-size-and-a-possible-cooling-ceiling)
-derives the occupied sphere's size and spectral bound, the radiation
-cooling condition and a conditional clock-calibrated redshift. It reuses
-retained endpoints; no new evolution, leakage law or likelihood is added.
+Active target: evaluate the spectral band, conjugate-sector asymmetry and
+inside/outside component split from the existing atlas equations, with no
+SI anchor or target-selected parameters. Douglas's
+[organizing picture and exponential-boundary method](../THEORY.md#douglass-organizing-picture-30-october-2026)
+are saved as the research direction.
+
+### Three numerical targets from the existing equations
+
+The [retained calculation](../results/summaries/nsc-atlas-three-targets-v1.json)
+uses the q=4 scale-binding record, the occupied-wall spectrum, the Parke
+radius and the (12,2) late vacuum. It imports no CODATA value and runs no
+new grid, evolution or fit. The three missing connections are physical
+maps and state laws, not necessarily one additional scalar per target.
+
+**Band.** The spherical spectrum gives omega_n=c*n/R. Therefore
+
+$$
+\ln\frac{\omega_{\max,\rm infl}}{\omega_{\min,\rm now}}
+=\ln q_{\max}+\ln\frac{R_{\rm now}}{R_{\rm infl}}
+$$
+
+for the same c and angular ground n=1. If local propagation speeds differ,
+the right side also contains ln(c_infl/c_now). The wall fixes a spectrum,
+but omega_max*R_infl/c=q_max depends on the occupied or retained modes.
+The untruncated n/R operator has no largest n. At one radius the band is
+q_max; the separately supplied occupied-wall reference q_max=1000 gives
+ln band=6.907755279. From the given wavelength formula, the ground mode
+has wavelength 2*pi*R, so 'size' needs a specified geometric convention.
+
+The RN/PG quantity is
+
+$$
+B_{\rm grid}=\frac{r}{\Delta r}\left(1+\frac{|\beta|}{N}\right).
+$$
+
+N is the lapse and Delta r is the stored numerical spacing. Halving that
+spacing doubles B_grid at the same metric: it is not a selected physical
+upper frequency. The historical producer's formula text contained an extra
+N; its future-output text is corrected to match omega_zero/omega_cutoff.
+The retained historical data are unchanged and the archived generator is
+not rerun by this audit.
+
+In THEORY, Lambda_n multiplies frequencies. It is distinct from a
+cosmological curvature Lambda. The existing `RecursiveScaleDilation`
+therefore gives frequency factor Omega, length factor 1/Omega at fixed c,
+and curvature factor zeta=Omega^2. Using the same Omega as a curvature
+factor would instead give 1/sqrt(Omega); that is a different identification.
+The retained candidate Omega=3.973074368754331 came from a particular q=4
+cutoff/radius binding and has not been identified with the Parke/volume
+cosmology's physical inheritance step.
+
+Even granting that identification and a unit endpoint factor, the result is
+ln band=n*ln(Omega), where ln(Omega)=1.379540195196:
+
+| Supplied depth, not selected by the model | Log band | Miss vs 136.84 (%) | Miss vs 138.26 (%) |
+| ---: | ---: | ---: | ---: |
+| 1 | 1.3795401952 | -98.99186 | -99.00221 |
+| 2 | 2.7590803904 | -97.98372 | -98.00443 |
+| 100 | 137.9540195196 | +.81410 | -.22131 |
+
+The last row is a conditional consistency check, not a prediction. The
+requested window would invert to n in [99.19247,100.22180] only after
+assigning that endpoint factor. No equation selects n=100; changing the
+mode factor changes the required depth. The alternative curvature reading
+doubles these inverse depths: 200 assigned steps give the same 137.9540195196.
+Neither count is selected. Neither the Parke radius nor the late vacuum
+selects the missing band endpoint or inflation/current radius history.
+
+**Asymmetry.** The existing conjugate-mode expansion gives populations
+n_plus and n_minus, whose orientation imbalance is
+
+$$
+\mathcal A=\frac{n_+-n_-}{n_++n_-}.
+$$
+
+A relative phase cancels from both number expectation values. Equal
+populations give A=0 for every relative phase; populations 3/4 and 1/4 give
+A=1/2 for the same specified operator. These are state controls, not
+different self-consistent cosmologies. The physical target is
+
+$$
+\eta_B=\frac{n_b-n_{\bar b}}{n_\gamma}
+=\mathcal A_b\frac{n_b+n_{\bar b}}{n_\gamma}.
+$$
+
+The permitted equations supply neither an inherited population-selection
+law, a baryonic identification nor a photon/entropy normalization. Hence
+eta_B and its miss from 6.1e-10 are not calculated by a phase offset alone.
+An amplitude offset would be another input unless its preparation is derived.
+
+**Inside/outside fractions.** The stipulated density ratio is Uo/Ui=3.
+Even an auxiliary total energy share needs a volume measure: for
+v=V_out/V_in, f_out=3v/(1+3v), giving .75 at v=1 and .5 at v=1/3.
+Neither is automatically a cosmological component fraction. Those require
+one observer's effective stress and expansion,
+
+$$
+\Omega_a=\frac{\kappa\rho_a}{3H^2},
+$$
+
+including the projection into vacuum pressure, clustering matter and baryons.
+The three supplied densities/scale relations do not define that projection.
+The vacuum-only Friedmann limit has (Omega_Lambda,Omega_c,Omega_b)=(1,0,0),
+with formal misses (+45.9854%,-100%,-100%) against the requested targets.
+That is a limiting control, not a prediction for today's populated universe.
+
+| Requested prediction | Target | Derived value | Physical % miss | Missing connection |
+| --- | --- | --- | --- | --- |
+| Log band | 136.84--138.26 | Unselected | Undefined | State-selected endpoints and the physical transition/depth map |
+| Baryon/photon eta | 6.1e-10 | Unselected | Undefined | Charged-state preparation and baryon/photon normalization |
+| Omega_Lambda, Omega_c, Omega_b | .685, .265, .049 | Unselected | Undefined | State-normalized exterior-to-observer stress projection and common expansion history |
+
+The equations, source inputs and three targets are retained separately.
+Independent checks cover the wavelength convention, frequency/curvature
+scaling, cutoff refinement, phase-independent number imbalance, volume
+dependence and target isolation. A future result must select the missing
+map rather than select a depth, phase or energy weight from these targets.
 
 e112798: hierarchy obeys g=4*eta_e0^2 and ln(L_ref/ell_e_sigma)=.9747222043-.5*ln(g); target 138.542 needs ln(g)=-275.13456 and ln(eta_e0)=-138.26042 (including -ln(2)); the HM exponent is not the ruler; that audit is parked.
 
@@ -1537,11 +1649,8 @@ scale relation. **Missing connection:** a physical transition that selects
 dimensionless parameters or an additional propagation coupling.
 **Next question:** which dimensionless observable could distinguish inherited
 laws, changed state and environmental dressing in a specified attachment?
-**Knowledge boundary:** the finite inheritance identity does not derive
-regional constants. Planck length is a derived scale; a shortest allowed
-wavelength requires another hypothesis. Absolute zero is a thermodynamic
-state limit, not the other end of a wavelength interval. Coordinate light
-delays alone do not change locally measured vacuum light speed .
+**Calculation:** follow both spectral endpoints, the regional propagation
+law and the thermal state through the same inside/outside geometry.
 
 <a id="question-charge"></a>
 

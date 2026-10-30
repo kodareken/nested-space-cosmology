@@ -5399,6 +5399,115 @@ missing event. A compatible vacuum transition and matter-transfer
 mechanism must be derived together before this geometry becomes the
 requested reheated cosmology. These route failures do not reject nesting.
 
+### 13.29. Three targets from the spectral and regional map
+
+<!-- nsc-claim:three-dimensionless-targets -->
+
+Evidence: [dimensionless calculation and controls](../results/summaries/nsc-atlas-three-targets-v1.json),
+[formula meanings and missing connections](../docs/nsc-cosmological-atlas.md#three-numerical-targets-from-the-existing-equations),
+and [independent algebra and scale checks](../tests/test_nsc_atlas_three_targets.py).
+
+Douglas's organizing picture asks whether the band of a confined region,
+an imbalance between conjugate oscillations, and the response from outside
+can yield three numerical predictions. Here the calculation uses only
+the existing atlas equations and retained dimensionless inputs. No Planck
+length in metres or other CODATA anchor is imported, and no target selects
+a depth, source state or energy weight.
+
+The related force-resolution proposal asks whether the frequency- and
+momentum-dependent response of one action produces the different interaction
+channels seen locally. It is a question about deriving couplings and their
+scale dependence. It does not identify strong or weak interactions with
+an event horizon, whose role in the atlas is causal access.
+
+For the occupied sphere spectrum, $\omega_n=cn/R$, the highest selected
+mode and the current lowest mode give
+
+$$
+\ln\frac{\omega_{\max,\rm infl}}{\omega_{\min,\rm now}}
+=\ln q_{\max}+\ln\frac{R_{\rm now}}{R_{\rm infl}}.
+$$
+
+This assumes common local propagation speed and the angular ground n=1.
+A varying speed would add its endpoint ratio. The product
+$\omega_{\max}R_{\rm infl}/c=q_{\max}$ belongs to the selected state or
+cutoff; the untruncated spectrum has no largest n. With the stated
+wavelength formula, the ground wavelength is $2\pi R$. Thus the size
+convention must also be explicit.
+
+The RN/PG diagnostic gives a different quantity:
+
+$$
+B_{\rm grid}=\frac{\omega_{\rm cutoff}}{\omega_{\rm zero}}
+=\frac{r}{\Delta r}\left(1+\frac{|\beta|}{N}\right).
+$$
+
+Here N is lapse and the cutoff uses numerical grid spacing. Refining the
+spacing by two doubles this band without changing the metric. The
+diagnostic alone therefore does not select a physical shortest wavelength.
+
+In the spectral inheritance equation, Lambda_n is a frequency scale.
+Frequency multiplication by Omega implies length division by Omega at
+fixed c. The associated curvature factor is zeta=Omega squared, as in
+the existing dilation implementation. Using the same Omega as a curvature
+factor would be a different physical identification. The q=4 binding
+candidate gives Omega=3.973074368754331 and ln(Omega)=1.379540195196.
+If its frequency map were the cosmological transition and its endpoint
+factor were one, the conditional calculation would be:
+
+| Assigned depth | Log band | Miss vs 136.84 (%) | Miss vs 138.26 (%) |
+| ---: | ---: | ---: | ---: |
+| 1 | 1.3795401952 | -98.99186 | -99.00221 |
+| 2 | 2.7590803904 | -97.98372 | -98.00443 |
+| 100 | 137.9540195196 | +.81410 | -.22131 |
+
+The last row is numerically inside the requested window, but neither
+100 levels nor the endpoint factor is selected. The window inverts to
+depths 99.19247--100.22180 only under those supplied assumptions. Under
+the proposed curvature-factor reading, 200 assigned steps give the same
+137.9540195196; that count is equally unselected. The
+Parke radius and the late volume vacuum do not supply the missing depth
+or band endpoints, and the q=4 spectral candidate has not been identified
+with that cosmological source.
+
+The conjugate-mode expansion likewise separates phase from population.
+For mode occupations,
+
+$$
+\mathcal A=\frac{n_+-n_-}{n_++n_-},\qquad
+\eta_B=\mathcal A_b\frac{n_b+n_{\bar b}}{n_\gamma}.
+$$
+
+A relative phase cancels from the number expectation values. Equal
+occupations give zero imbalance for every phase; occupations 3/4 and 1/4
+give 1/2 for the same operator. Neither choice is selected by the geometry.
+A baryon/photon prediction additionally needs the physical sector assignment
+and photon or entropy normalization. A freely supplied amplitude offset
+would not be a derivation of the target 6.1e-10.
+
+Finally, the stipulated Parke densities give Uo/Ui=3. Even an auxiliary
+outside energy fraction requires a volume ratio v=V_out/V_in:
+
+$$
+f_{\rm out}=\frac{3v}{1+3v},\qquad
+\Omega_a=\frac{\kappa\rho_a}{3H^2}.
+$$
+
+The first expression is .75 at v=1 and .5 at v=1/3; it is not a
+vacuum/clustering/baryon decomposition. The second needs one observer's
+effective stress and expansion. A vacuum-only Friedmann limit gives
+(1,0,0), formally missing (.685,.265,.049) by (+45.9854%,-100%,-100%).
+That is a limiting control, not a present-day abundance prediction.
+
+The actual outputs for all three requested predictions remain unselected,
+and their physical percentage misses are undefined. What is missing is a
+physical endpoint/transition map, a charged-state preparation and baryon/photon
+identification, and an exterior-to-observer stress projection. These are not
+necessarily one new scalar each. The numerical targets remain comparisons
+rather than substitutes for those maps. At exponential boundaries, logarithms,
+dimensionless ratios and compatible regional charts preserve the calculation;
+a clamp or coordinate limit is not promoted to a physical endpoint.
+
 ## IV. Concentration, conservation and the surrounding reservoir
 
 A dark-matter account needs a physical source that forms structure and accounts for its surroundings. We first calculate admissible scalar concentrations and their conserved supply, then their persistence and spatial compensation, and finally formation from compact disturbances. The route preserves the inherited parent instead of adding an independent halo mass. Different frequencies and preparations are explicit members of the family; they are not exchanged between examples by a change of units.
@@ -9967,7 +10076,6 @@ $$
 $$
 
 set dimensional scales, as tabulated by [NIST CODATA](https://physics.nist.gov/cuu/Constants/).
-A minimum observable wavelength requires a probe and backreaction model.
 [Hossenfelder's review](https://arxiv.org/html/1203.6191v2) distinguishes the
 different possible resolution bounds. A horizon, a cutoff, an initial
 clock origin and a thermal state perform different operations in the model.

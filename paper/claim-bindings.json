@@ -658,6 +658,11 @@
       "section": "10.14",
       "status": "derived",
       "owner": "docs/nsc-atlas-occupied-wall.md"
+    },
+    "three-dimensionless-targets": {
+      "section": "13.29",
+      "status": "derived",
+      "owner": "docs/nsc-cosmological-atlas.md"
     }
   },
   "findings": [

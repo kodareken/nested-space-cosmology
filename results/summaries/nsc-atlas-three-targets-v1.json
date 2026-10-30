@@ -1,0 +1,163 @@
+{
+  "asymmetry": {
+    "alternative_same_operator_population_value": 0.5,
+    "baryon_photon_eta": "eta_B=A_b*(n_b+n_antib)/n_gamma",
+    "missing": "Inherited charged-state preparation and its baryon/photon identification. A relative phase fixes neither the population difference nor photon normalization.",
+    "orientation_fraction": "A=(n_plus-n_minus)/(n_plus+n_minus)",
+    "percent_miss": null,
+    "phase_alone_changes_occupations": false,
+    "prediction": null,
+    "scope": "The two population examples are controls of the given conjugate-mode algebra, not baryogenesis solutions.",
+    "symmetric_orientation_value": 0.0,
+    "target": 6.1e-10
+  },
+  "band": {
+    "RN_PG": {
+      "Delta_r_meaning": "numerical spacing in the cited CFL diagnostic",
+      "N_meaning": "lapse, not an integer mode count",
+      "formula": "B=(r/Delta_r)*(1+abs(beta)/N)",
+      "physical_cutoff_selected": false,
+      "refinement_control": [
+        32.0,
+        64.0
+      ],
+      "refinement_log_change": 0.6931471805599453
+    },
+    "formula": "ln(B)=ln(q_max)+ln(R_now/R_infl), for common local c and n_min=1",
+    "ground_wavelength_over_radius": "2*pi from lambda=2*pi*c/omega_1 and omega_1=c/R",
+    "inheritance": {
+      "THEORY_Lambda_meaning": "frequency scale, not cosmological curvature",
+      "candidate_identified_with_Parke_volume_model": false,
+      "conditional_rows": [
+        {
+          "assumed_depth": 1,
+          "log_band_if_endpoint_factor_is_one": 1.3795401951959914,
+          "log_miss_percent": [
+            -98.99185896287929,
+            -99.00221308028642
+          ],
+          "selected_by_geometry": false,
+          "status": "Conditional arithmetic only; neither depth nor endpoint factor is selected."
+        },
+        {
+          "assumed_depth": 2,
+          "log_band_if_endpoint_factor_is_one": 2.7590803903919827,
+          "log_miss_percent": [
+            -97.98371792575857,
+            -98.00442616057285
+          ],
+          "selected_by_geometry": false,
+          "status": "Conditional arithmetic only; neither depth nor endpoint factor is selected."
+        },
+        {
+          "assumed_depth": 100,
+          "log_band_if_endpoint_factor_is_one": 137.95401951959914,
+          "log_miss_percent": [
+            0.8141037120718675,
+            -0.22130802864229748
+          ],
+          "selected_by_geometry": false,
+          "status": "Conditional arithmetic only; neither depth nor endpoint factor is selected."
+        }
+      ],
+      "curvature_interpretation_control": {
+        "assumed_depth": 200,
+        "log_band_if_endpoint_factor_is_one": 137.95401951959914,
+        "selected_by_geometry": false
+      },
+      "curvature_step_for_equivalent_units": 15.785319939652627,
+      "depth_selected": false,
+      "frequency_step": 3.973074368754331,
+      "inverse_depth_interval": [
+        99.19247041624557,
+        100.22179888738754
+      ],
+      "inverse_depth_interval_if_Omega_is_curvature": [
+        198.38494083249114,
+        200.44359777477507
+      ],
+      "length_step_at_fixed_c": 0.2516942566855419,
+      "requested_sqrt_length_step": 0.5016913958655679,
+      "sqrt_step_requires": "Reinterpreting Omega as a curvature factor; this is not the frequency-scale definition in THEORY."
+    },
+    "missing": "A state-selected physical endpoint/transition map. The current formulas leave q_max, the inflation/current radius ratio and any cosmological depth independent.",
+    "percent_miss": null,
+    "prediction": null,
+    "same_radius_occupied_reference_log_band": 6.907755278982137,
+    "target_log_interval": [
+      136.84,
+      138.26
+    ],
+    "varying_speed_formula": "B=q_max*(c_infl/c_now)*(R_now/R_infl)",
+    "wall_product": "omega_max*R_infl/c=q_max; the untruncated n/R spectrum has no largest n"
+  },
+  "input_sha256": {
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+    "results/summaries/nsc-atlas-occupied-wall-v1.json": "0e2270cafcce1d3c42d12b0a0a36cfe11a9b3661fff29848d4f38f5ba0324784",
+    "results/summaries/nsc-atlas-parent-volume-selector-v1.json": "8f2b2624cc53fcb901fd7b34b3b55433578f9eed52a3554a388ac4da5d904d43",
+    "results/summaries/nsc-atlas-parke-bubble-v1.json": "d4dbdea8776340a65393b77e2b78085c89d664065f4fd62b4db4ec8aec8bede2"
+  },
+  "inputs": {
+    "Parke_R_over_Lunit": 1.212662645007735,
+    "Parke_R_squared": "57600/39169",
+    "late_vacuum_L_Parke_squared": 0.32496673886609717,
+    "late_vacuum_Lunit_squared": 0.22098302421260696,
+    "occupied_wall_reference_level": 1000,
+    "omega": 3.973074368754331
+  },
+  "new_field_evolutions": 0,
+  "new_grids": 0,
+  "new_likelihood_fits": 0,
+  "no_CODATA_or_SI_inputs": true,
+  "physical_targets_used_for_selection": false,
+  "schema": "nsc-atlas-three-targets-v1",
+  "source_sha256": {
+    "THEORY.md": "9f41bccb2d1b004c9582e56964da1ea8bd693df1200f601b9d385130a23343a7",
+    "docs/rn-pg-wall.md": "4b14f965ab0cc0b211a5a2861bfb6f53fc0c84680e7ed9e7739e9e2bf790c4ca",
+    "scripts/check_nsc_atlas_three_targets.py": "b62984172f8bd248e5bd7d2c987a4995569037385d553dd90661bdef8b5f7d32",
+    "src/recursive_horizons/nsc_atlas_three_targets.py": "7c42912184d120fb74cc9aabeb74457fe5163d5ed0b9127f6b176e61bfa550cd",
+    "src/recursive_horizons/unified_action.py": "1cf0fc299545cf9388cc843600226e017559c5b4f4a23dcb582c859e0056a186"
+  },
+  "split": {
+    "auxiliary_outside_fraction": "f_out=3*v/(1+3*v), v=V_out/V_in for the stipulated densities",
+    "formula": "Omega_a=kappa*rho_a/(3*H^2), evaluated by one observer from one effective stress tensor",
+    "missing": "A state-normalized exterior-to-observer stress projection with vacuum, clustering and baryon sectors. A total outside energy share does not supply that decomposition or H.",
+    "percent_miss": {
+      "Omega_Lambda": null,
+      "Omega_b": null,
+      "Omega_c": null
+    },
+    "predictions": {
+      "Omega_Lambda": null,
+      "Omega_b": null,
+      "Omega_c": null
+    },
+    "pure_vacuum_limit_control": {
+      "Omega_Lambda": 1.0,
+      "Omega_b": 0.0,
+      "Omega_c": 0.0,
+      "percent_miss": {
+        "Omega_Lambda": 45.98540145985402,
+        "Omega_b": -100.0,
+        "Omega_c": -100.0
+      },
+      "status": "Late vacuum-only Friedmann control, not present-day abundance or a baryon-production calculation."
+    },
+    "targets": {
+      "Omega_Lambda": 0.685,
+      "Omega_b": 0.049,
+      "Omega_c": 0.265
+    },
+    "volume_controls": [
+      {
+        "outside_share": 0.75,
+        "volume_ratio": 1.0
+      },
+      {
+        "outside_share": 0.5,
+        "volume_ratio": 0.3333333333333333
+      }
+    ]
+  },
+  "stopping_result": "All three target predictions remain unselected by the permitted equations; conditional arithmetic is retained without promoting it to prediction."
+}

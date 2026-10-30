@@ -353,7 +353,7 @@ def programme_record():
         ("scales", "Regional scales and dimensionless laws", "question-regional-scales",
          ["docs/nsc-nested-qualities.md"], ["results/development/scale-binding.json"],
          "Unit rescaling, finite normalized inheritance and model-specific scale matching are available.",
-         "Planck length is a derived scale; minimum wavelength, temperature and changed laws are separate hypotheses.",
+         "Derive both spectral endpoints and their thermal interpretation from the same regional source.",
          "Find an inherited dimensionless observable that unit rescaling cannot reproduce."),
         ("charge", "Charge, orientation and antimatter", "question-charge",
          ["docs/prior-art-and-open-claim.md", "docs/arxiv-studies.md"],
