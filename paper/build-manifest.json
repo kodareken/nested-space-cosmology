@@ -1,10 +1,10 @@
 {
-  "bytes": 16104479,
+  "bytes": 16178120,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "c0b432825d64a919ea3b24f043ecdfa88a81c5ee6b509d8b0748a0845517bd6e",
+  "metadata_sha256": "ede2f87366c65b43452f296115abd66f48bc61424b220287c26a5505cd34727a",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 199,
-  "pdf_sha256": "c493449a1ae146444382bd65e49bdf21ad4ca653ed515291756b79021c0be92e",
+  "pages": 201,
+  "pdf_sha256": "795afec33b99671893745e1cf0913263af884e0ddff1ece67e30fee6d05e5ea6",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -704,6 +704,10 @@
       "sha256": "e324ff4570c045af7225dcb04aaee0dc7828fb9fade73ff92f3cc751c0a52df6"
     },
     {
+      "path": "results/summaries/nsc-atlas-inherited-charge-v1.json",
+      "sha256": "e673c9bf7b0399384160548954f6df6e9c22cf142720688ff952d204ee427b7c"
+    },
+    {
       "path": "results/summaries/nsc-atlas-inherited-density-relation-v1.json",
       "sha256": "e026c2adf271079a2dad581153f56cb6726320dd323cbc3aae5ea5fca54b99cf"
     },
@@ -953,6 +957,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "2b3b68c10dc9afdd9eadb5c56460053b9bb8455950f5b1e60eaaedf37c66b100",
-  "version": "working-2026-10-30.5"
+  "source_sha256": "200b14845da8ad2bd5d5d15a46a45898b29e09c15d49050f9c327ccfd24dc350",
+  "version": "working-2026-10-30.6"
 }

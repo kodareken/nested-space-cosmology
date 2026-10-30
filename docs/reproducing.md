@@ -1,5 +1,15 @@
 # Reproducing the root project
 
+## Inherited harmonic charge and horizon state
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_inherited_charge.py
+python scripts/run_python.py scripts/check_nsc_atlas_inherited_charge.py --output .build/inherited-charge-reproduced.json
+```
+
+This is a fixed-input quadratic reduction and state calculation. It adds
+no data fit and performs no field-grid or cosmological history scan.
+
 ## Smooth horizon and golden-vortex comparisons
 
 ```powershell

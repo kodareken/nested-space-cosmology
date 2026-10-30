@@ -26,6 +26,7 @@ RESOLVER_SOURCES = ("scripts/validation_source_successors.py",
                     "tests/test_nsc_atlas_validation.py",
                     "tests/control_budget.py", "tests/test_control_budget.py")
 REVIEWED_PACKAGE_PATHS = frozenset({
+    "src/recursive_horizons/nsc_cosmological_atlas.py",
     "src/recursive_horizons/nsc_atlas_characteristic_trace.py",
     "src/recursive_horizons/nsc_atlas_refined_cache.py",
     "src/recursive_horizons/nsc_atlas_forcing_cache.py",

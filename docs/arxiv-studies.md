@@ -1700,3 +1700,19 @@ These are inputs to the [conditional calculation](schur-memory.md#step-7-conditi
 
 The [calculation owner](nsc-atlas-smooth-horizon.md) records assumptions,
 borrowed structures, equations checked here and the remaining source problem.
+
+## Internal charge and horizon state, 30 October 2026
+
+- Duff, [hep-th/9410046](https://arxiv.org/pdf/hep-th/9410046), sections 2
+  and 4: inspected internal harmonics, charge conjugation and the isometry
+  origin of gauge fields. The S12 pair and normalization here are calculated
+  from the retained action. The older CERN review download was inaccessible.
+- Allen, [1985 state analysis](https://doi.org/10.1103/PhysRevD.32.3136):
+  abstract read; invariant states form a family, so invariance alone is not
+  promoted to the Euclidean preparation used here.
+- Gibbons--Hawking, [1977](https://doi.org/10.1103/PhysRevD.15.2738):
+  horizon temperature/KMS structure is attributed prior input. Its full PDF
+  was inaccessible in this pass; no claim of a new radiation derivation.
+
+The [owner](nsc-atlas-inherited-charge.md) separates classical reduction,
+imported quantization, conditional state selection and measured eta.

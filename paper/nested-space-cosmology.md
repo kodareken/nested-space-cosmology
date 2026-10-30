@@ -5893,6 +5893,118 @@ The next bridge is an inherited charge current and state whose stress
 produces a smooth, sourced horizon history. That makes the continuation
 and the offset testable in the same geometry.
 
+### 13.33. Deriving the charged pair from internal geometry
+
+<!-- nsc-claim:inherited-harmonic-charge -->
+
+The previous offset comparison needed two equal-mass components. The
+[inherited-charge calculation](../docs/nsc-atlas-inherited-charge.md) now
+derives a candidate pair from the real higher-dimensional scalar already
+used in the volume reduction. We explicitly complete its internal Einstein
+space as a round S12. The action fixes its scalar curvature, but does not
+select roundness among all possible internal geometries. This is a quadratic
+harmonic calculation on the effective late vacuum, not a full nonlinear
+sixteen-dimensional formation solution.
+
+The curvature term -15 exp(-14s)/2 gives R_gamma=15, hence
+
+$$
+a_0^2=\frac{12\cdot11}{15}=\frac{44}{5},\qquad
+\lambda_l=\frac{l(l+11)}{a_0^2},\qquad \lambda_1=\frac{15}{11}.
+$$
+
+The thirteen real l=1 harmonics are normalized embedding coordinates.
+For a rotation in one coordinate plane,
+
+$$
+Y_+=\frac{Y_1+iY_2}{\sqrt{2}},\qquad
+\delta\Phi=xY_1+yY_2=\psi Y_+^*+\psi^*Y_+,
+\qquad \psi=\frac{x+iy}{\sqrt{2}}.
+$$
+
+Thus one real higher-dimensional field supplies a complex four-dimensional
+mode carrying internal rotational charges +/-1. Six commuting planes
+organize the thirteen real harmonics as six complex pairs and one neutral
+component. This uses the attributed
+[Kaluza-Klein construction](https://arxiv.org/pdf/hep-th/9410046); no new
+elementary complex scalar was inserted. Mixed metric components supply
+gauge fields when these modes backreact. A finite-mode nonlinear truncation
+and identification of this charge with baryon number are not established.
+
+Canonical reduction fixes the pair's mass:
+
+$$
+M_1^2(s)=\omega_0^2e^{-12s}+\frac{15}{11}e^{-14s}.
+$$
+
+At s_star=-.035646782553 and the retained omega0=20, this is
+615.774153968986, so M1=24.814797076925 in model units. The internal gradient
+contributes 2.246132580192 to the mass squared. This degeneracy is geometric;
+it does not equate the previously unequal volume and matter frequencies.
+
+The round geometry also has a proper rotation flipping coordinates n2 and
+n13. Its determinant is +1; it conjugates the selected charge generator
+while preserving both the metric and oriented top-form flux. The supplied
+flux therefore does not select a sign of this charge. Neither does the
+ancestor count supply an internal rotational current.
+
+Both components cross a neutral smooth horizon with the same radial operator:
+
+$$
+f u''+(f'-2i\omega)u'
+-\left(\frac{f'}{r}+M_1^2+\frac{l(l+1)}{r^2}\right)u=0.
+$$
+
+At a simple horizon its powers are 0 and 2i omega/f'(r_h). The regular
+branch has an arbitrary complex amplitude. Regular crossing transports
+the field but does not select its phase or occupation.
+
+On the stationary de Sitter parent, the regular Euclidean Gaussian
+preparation has positive spectral coefficients H_star^2 L(L+3)+M1^2.
+Its two component covariances agree, with zero cross covariance and uniform
+phase. This is a specified invariant state-selection rule, not a claim that
+the action alone selects all initial data. [Allen's state analysis](https://doi.org/10.1103/PhysRevD.32.3136)
+distinguishes Euclidean regularity from de Sitter symmetry alone.
+The [Gibbons-Hawking](https://doi.org/10.1103/PhysRevD.15.2738) static-patch
+temperature is H_star/(2pi)=.043195545274.
+
+For a stationary mode, write z=exp(-2pi omega/H_star). The local charge
+difference of its two thermal populations obeys
+
+$$
+P(Q=k)=\frac{1-z}{1+z}z^{|k|},\qquad
+\langle Q\rangle=0,\qquad
+\operatorname{Var}(Q)=\frac{2z}{(1-z)^2}.
+$$
+
+This retains fluctuations rather than identifying zero mean with zero in
+every realization. At the illustrative detector gap omega=M1, ln(z) is
+-574.475838182 and the one-mode charge RMS is 2.539052865e-125. These are
+spectral controls, not a baryon-to-photon ratio or a selected regional
+population. A cosmological fluctuation needs mode weights and photon density.
+
+The neutral Bogoliubov pair map gives the exact operator identity
+
+$$
+N_{+,\rm out}-N_{-,\rm out}=N_{+,\rm in}-N_{-,\rm in},
+\qquad |\alpha|^2-|\beta|^2=1.
+$$
+
+More generally, an internal charge-exchange-equivariant transport channel
+preserves an invariant state at every nesting depth. Regional charge still
+obeys the boundary-current law; this does not assume that an open region
+conserves its charge separately. A biased inherited state can carry an
+imbalance, but neutral propagation cannot select that bias from this vacuum.
+
+The [record](../results/summaries/nsc-atlas-inherited-charge-v1.json) gives
+zero mean charge asymmetry. If this charge is identified with baryons and
+a positive photon density is supplied, eta=0, a -100% miss against 6.1e-10.
+The physical baryon/photon ratio remains unselected. The contribution is
+the geometric field pair, its explicit horizon equation, and a conditional
+state and charge distribution. The remaining connection is an inherited
+internal current or charge-asymmetric preparation, together with its
+baryon/photon interpretation; assigning a fitted phase would not close it.
+
 ## IV. Concentration, conservation and the surrounding reservoir
 
 A dark-matter account needs a physical source that forms structure and accounts for its surroundings. We first calculate admissible scalar concentrations and their conserved supply, then their persistence and spatial compensation, and finally formation from compact disturbances. The route preserves the inherited parent instead of adding an independent halo mass. Different frequencies and preparations are explicit members of the family; they are not exchanged between examples by a change of units.

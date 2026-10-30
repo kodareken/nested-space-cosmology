@@ -1,0 +1,142 @@
+{
+  "derivation": {
+    "action": "S_2=-integral sqrt(-g) [|D psi|^2+M_1^2 |psi|^2]",
+    "charge": "Internal rotational charges +/-1; j_mu=x D_mu y-y D_mu x",
+    "closure": "Quadratic test sector only; finite excitation generally sources additional metric and harmonic modes.",
+    "curvature": "V_curvature=-R_gamma exp[-(d+2)s]/(2 kappa4); B=15/2 implies R_gamma=15",
+    "eigenvalue": "-Delta_gamma Y_ell=ell(ell+d-1)/a0^2 Y_ell",
+    "field": "deltaPhi=x Y_1+y Y_2=psi Y_plus^*+psi^* Y_plus; psi=(x+i y)/sqrt(2)",
+    "mass": "M_ell^2=omega0^2 exp(-d s)+ell(ell+d-1)/a0^2 exp[-(d+2)s]",
+    "meaning": "Geometric Kaluza-Klein charge, not yet baryon number; gauge fields from mixed metric components are required when charged modes backreact.",
+    "metric": "ds_D^2=exp(-d s) ds_4E^2+exp(2s) gamma_ab dy^a dy^b",
+    "normalized_harmonics": "Y_i=sqrt((d+1)/V_gamma)*n_i, integral Y_i Y_j=delta_ij"
+  },
+  "dispositions": [
+    "Homogeneous neutral truncation: no internal rotation modes; it cannot identify the offset with a particle charge.",
+    "Round-sphere harmonic completion: derives a degenerate complex pair and quantized internal charges without fitting a coupling or mass.",
+    "Invariant Euclidean preparation: zero mean charge, not a tiny nonzero phase; neutral horizon transport preserves this result.",
+    "Biased or internally rotating preparation: can carry charge, but its amplitude/current and baryon conversion remain new state data."
+  ],
+  "euclidean_preparation": {
+    "chemical_potential": 0.0,
+    "coherent_phase_offset": null,
+    "condition": "Analytic continuation of the positive Gaussian operator on S4 at the late de Sitter vacuum, with internal-rotation invariant boundary preparation.",
+    "cross_covariance_xy": 0.0,
+    "de_Sitter_state_is_not_automatically_Kottler_state": true,
+    "eigenvalues": "H^2 L(L+3)+M1^2, L=0,1,...",
+    "equal_component_covariances": true,
+    "lowest_eigenvalue": 615.7741539689863,
+    "mean_charge": 0.0,
+    "phase_distribution": "Uniform on [0,2pi) for the isotropic complex Gaussian; no coherent ellipse offset.",
+    "selection_status": "Unique regular Euclidean Gaussian inverse under the stated preparation; horizon regularity alone does not select this state.",
+    "whole_universe_wavefunction_derived": false
+  },
+  "horizon": {
+    "charges_have_same_operator": true,
+    "mode_frequency_selected": false,
+    "radial_equation": "f u''+(f'-2i omega)u'-(f'/r+M^2+l(l+1)/r^2)u=0",
+    "regular_branch": "Ingoing branch has arbitrary complex amplitude; regularity supplies no internal phase bias.",
+    "scope": "Smooth neutral spherical horizon, constant stationary internal radius. A future collapse history was not specified.",
+    "simple_root_indices": "p=0 and p=2i omega/f_prime(rh)"
+  },
+  "imbalance": {
+    "conditional_miss_percent": -100.0,
+    "eta_if_identified_with_baryons_and_positive_photons": 0.0,
+    "fluctuation_scope": "Local charge fluctuations need region, mode weights and photon population before a stochastic baryon/photon ratio can be computed. Zero expectation is not identically zero in every local measurement.",
+    "invariant_state_charge_asymmetry": 0.0,
+    "missing": "An inherited charge-asymmetric preparation/interaction and a baryon/photon identification. The geometric charge pair alone provides neither.",
+    "no_target_used_in_field_or_state": true,
+    "physical_baryon_photon_eta": null,
+    "target": 6.1e-10
+  },
+  "inheritance": {
+    "arbitrary_depth": "A charge-conjugation-equivariant channel takes an invariant input state to an invariant state at every depth; regional <Q_n>=0 when the internal conjugation preserves the region.",
+    "charged_control": {
+      "conserved_charge": 1.0,
+      "minus": 6.524391382167262,
+      "plus": 7.524391382167263,
+      "squeeze": 1.0
+    },
+    "controls_are_observation_fits": false,
+    "identity": "N_plus_out-N_minus_out=(|alpha|^2-|beta|^2)(N_plus_in-N_minus_in)=Q_in",
+    "neutral_controls": [
+      {
+        "conserved_charge": 0.0,
+        "minus": 0.010033377809537924,
+        "plus": 0.010033377809537924,
+        "squeeze": 0.1
+      },
+      {
+        "conserved_charge": 0.0,
+        "minus": 1.3810978455418155,
+        "plus": 1.3810978455418155,
+        "squeeze": 1.0
+      },
+      {
+        "conserved_charge": 0.0,
+        "minus": 13.154116418008241,
+        "plus": 13.154116418008241,
+        "squeeze": 2.0
+      }
+    ],
+    "pair_map": "a_out=alpha a_in+beta* b_in^dagger; b_out=alpha b_in+beta* a_in^dagger",
+    "regional_flux": "Regional charge may change by current through the boundary; it is not set to zero merely because total charge is zero."
+  },
+  "nonuniqueness": {
+    "caveat": "Fixed-background test-field statement. Full gauge/mixed-metric constraints must be restored for backreacting charged solutions; equal external stress is not identical full higher-dimensional initial data.",
+    "construction": "Smooth coherent test-field states related by charge conjugation have equal external stress and opposite charge; convex mixtures vary mean charge while preserving that stress.",
+    "continuation": "Cauchy data and their inherited current, not a coordinate zero, select the nonsymmetric state.",
+    "mean_charge": "(2p-1)Q_coherent"
+  },
+  "orientation_symmetry": {
+    "charge_generator": "P J12 P^-1=-J12",
+    "consequence": "A proper internal rotation conjugates the charge while preserving the round metric, homogeneous scalar and oriented top-form background. Nonzero background flux does not by itself select a charge sign.",
+    "determinant": 1,
+    "flux_preserved": true,
+    "map": "P=diag(1,-1,1,...,1,-1) on R^13; flip n2 and n13"
+  },
+  "requested_nonzero_eta_derived": false,
+  "schema": "nsc-atlas-inherited-charge-v1",
+  "sector": {
+    "Cartan_complex_pairs": 6,
+    "Cartan_neutral_modes": 1,
+    "H": 0.2714056154003984,
+    "KK_mass_squared_increment": 2.2461325801917145,
+    "Lambda": 0.22098302421260696,
+    "ancestors": 2,
+    "charged_mass": 24.81479707692542,
+    "charged_mass_over_H": 91.43066933348716,
+    "charged_mass_squared": 615.7741539689863,
+    "d": 12,
+    "ell1_eigenvalue": 1.3636363636363635,
+    "ell1_eigenvalue_exact": "15/11",
+    "ell1_real_degeneracy": 13,
+    "internal_R_gamma": 15.0,
+    "internal_radius_squared": 8.8,
+    "internal_radius_squared_exact": "44/5",
+    "omega0": 20.0,
+    "s_star": -0.035646782552940987,
+    "scope": "Round internal sphere with curvature fixed by the retained B coefficient; linear harmonics on the effective late-vacuum background.",
+    "shape_selected_by_action": false,
+    "temperature": 0.04319554527387125,
+    "zero_mode_mass_squared": 613.5280213887946
+  },
+  "source_sha256": {
+    "scripts/check_nsc_atlas_inherited_charge.py": "3a2483799087218d86d3f974e5c56c9f1bd99d1e342ad2fab1a0cd6d265f8962",
+    "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408"
+  },
+  "thermal_control": {
+    "charge_variance_formula": "Var(Q_mode)=2 n(1+n), n=1/(exp(2pi omega/H)-1)",
+    "comparison_gap": 24.81479707692542,
+    "equal_for_both_charges": true,
+    "excitation_to_deexcitation_ratio": 3.2233947253720214e-250,
+    "local_charge_distribution": "P(Q=k)=(1-z)/(1+z)*z^abs(k), z=exp(-2pi omega/H)",
+    "log10_ratio": -249.4916865090845,
+    "log_charge_variance": -573.7826910012018,
+    "log_excitation_to_deexcitation_ratio": -574.4758381817617,
+    "nonzero_charge_probability": 6.446789450744043e-250,
+    "scope": "KMS detailed balance at the selected illustrative gap M1. This is neither total abundance nor baryon/photon eta; static frequencies form a continuum.",
+    "single_stationary_mode_charge_rms": 2.5390528648973987e-125
+  }
+}

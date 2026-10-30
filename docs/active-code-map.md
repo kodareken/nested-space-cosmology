@@ -1,5 +1,11 @@
 # Active code and evidence map
 
+`nsc_atlas_inherited_charge.py` derives the round internal-sphere spectrum,
+charged harmonic mass and conditional state readouts. Independent tests
+reduce the warped action and covariant horizon equation, check the proper
+charge-exchange rotation and prove number/variance identities. Its compact
+record keeps roundness, quantum preparation and baryon identification explicit.
+
 `nsc_atlas_smooth_horizon.py` owns the shell-free continuation, Kottler roots,
 regular infall, regional-current constraints and conditional offset/drain
 readouts. Tests independently derive the four-dimensional Einstein tensor.

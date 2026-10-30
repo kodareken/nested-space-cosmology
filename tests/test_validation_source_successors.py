@@ -1,5 +1,6 @@
 """Source-successor authentication controls; no scientific reconstruction."""
 import hashlib
+import ast
 import json
 from pathlib import Path
 import subprocess
@@ -7,6 +8,20 @@ import subprocess
 import pytest
 
 import validation_source_successors as tool
+
+
+def test_atlas_wording_successor_preserves_scientific_model_definition():
+    root=Path(__file__).resolve().parents[1]
+    name='src/recursive_horizons/nsc_cosmological_atlas.py'
+    registry=json.loads((root/tool.REGISTRY).read_bytes())
+    row=registry['successors'][name]
+    old=tool.verify_saved_source(name,row['original_sha256'],root)
+    before=ast.parse(old);after=ast.parse((root/name).read_bytes())
+    # The authorized wording edit belongs only to programme_record.
+    def scientific(tree):
+        return [ast.dump(node,include_attributes=False) for node in tree.body
+                if not isinstance(node,(ast.FunctionDef,ast.AsyncFunctionDef)) or node.name!='programme_record']
+    assert scientific(before)==scientific(after)
 
 
 def sha(raw):

@@ -1,5 +1,9 @@
 # Scientific strand index
 
+The [inherited harmonic charge](nsc-atlas-inherited-charge.md) derives a
+geometric complex pair, tests orientation-preserving charge exchange, and
+calculates its conditional Euclidean state and horizon inheritance.
+
 The [smooth-horizon and offset calculation](nsc-atlas-smooth-horizon.md)
 connects shell removal, regular horizon crossing, conserved regional charge,
 phase-oriented charge and a sourced drain comparison. The

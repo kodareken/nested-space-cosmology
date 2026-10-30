@@ -1,12 +1,12 @@
 {
   "origin_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
   "resolver_bindings": {
-    "scripts/validation_source_successors.py": "f3db71bfededfd344ae824f116438d4183432d9b84bea3f08259d2c83305d333",
+    "scripts/validation_source_successors.py": "6e330dc5debd77c1f1200f45b38cb6490348c81d101f048fafdc9a0807581340",
     "src/recursive_horizons/nsc_atlas_validation.py": "7142f8753c9cf4d6c2c6d5a389016d8c6a08e4505ddcfc5d9b8ab5f2f7d69e31",
     "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
     "tests/test_control_budget.py": "3cb6d2749fa98fe21eaea6e4d0cb201dcec84e1dff272ef043f1f3753c4a379d",
     "tests/test_nsc_atlas_validation.py": "9503c6082794cd564ae5ae9b2fcfb87bd115532b2c64017f463deac7e2c056d1",
-    "tests/test_validation_source_successors.py": "4994d95668e539461ef0e18d785a8df4eeefb31f5ec7804e810a8e49e154fa79"
+    "tests/test_validation_source_successors.py": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
   },
   "schema": "nsc-validation-source-successors-v1",
   "scope": "Reviewed current source successors. Original Git bytes are authenticated but never executed; implementation successors preserve historical provenance without asserting numerical equivalence. Result data, scientific documents and unregistered changes have no compatibility fallback.",
@@ -290,6 +290,13 @@
       "reason": "Private validation-only numerical reconstruction accepts conditioned floating replay differences; default cache creation, exact copied513 rows, keys and counters remain unchanged.",
       "successor_sha256": "6a5e01fbccbd5f333d5a327c4ef8952cb5a21adf8675a02c088d10e3429a7c4c"
     },
+    "src/recursive_horizons/nsc_cosmological_atlas.py": {
+      "classification": "implementation-successor",
+      "original_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
+      "original_sha256": "ea39fcdf55af21f909c73ad8fbc59b72a8f4b14bba6c14e8802f3c5ce87907c9",
+      "reason": "Douglas requested the programme wording change in 07bd035. Only a descriptive string in programme_record changed; model_specification and scientific functions remain AST-identical. Authenticate the original bytes without rewriting historical evidence.",
+      "successor_sha256": "d89a18ed228c9270c5fe01623fd9aca02016624285ee9183f75a596ede50e3f0"
+    },
     "tests/test_analyze_nsc_atlas_cap_consistency.py": {
       "classification": "test-only",
       "original_sha256": "f7a166b26f6c70dd702fee27a38477dbc249f6303f26ba65194e35a6d379c4fb",
@@ -332,17 +339,17 @@
       "reason": "Adds causal quiet-front control; retains historical test source authentication separately from the new control.",
       "successor_sha256": "2edef8994814304d37839b1f9ddb1f797412b9b795f9796945c6c8ffd5e0a97c"
     },
-    "tests/test_nsc_atlas_characteristic_trace.py": {
-      "classification": "test-only",
-      "original_sha256": "87dce18f63893154bd3659987126b11afec1145708442e214c152fe6985e37e1",
-      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
-      "successor_sha256": "e5bc0382466ba8f10145fbb9d7a3caf10bce9d31ad4459aa3076017a65dad96f"
-    },
     "tests/test_nsc_atlas_characteristic_initialization.py": {
       "classification": "test-only",
       "original_sha256": "6b2fec4d1ec741886c5401b0723c493e940f6587a8e6f41be20722bb738c21e9",
       "reason": "Isolated checks authenticate borrowed sources through the pinned Git objects and the reviewed registry. Tamper prefixes and retained scientific assertions are unchanged.",
       "successor_sha256": "0d5ed81c21b3c21e47517e4e1d76ec5d0801c86a2a2e12420cb401307e13464a"
+    },
+    "tests/test_nsc_atlas_characteristic_trace.py": {
+      "classification": "test-only",
+      "original_sha256": "87dce18f63893154bd3659987126b11afec1145708442e214c152fe6985e37e1",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "e5bc0382466ba8f10145fbb9d7a3caf10bce9d31ad4459aa3076017a65dad96f"
     },
     "tests/test_nsc_atlas_forcing_cache.py": {
       "classification": "test-only",

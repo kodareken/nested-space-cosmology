@@ -241,3 +241,11 @@ The next physical bridge is a selected inherited current and state on this
 regular horizon-crossing geometry. It must specify whether charge is carried
 in, separated, or generated, and provide the stress causing the drain.
 The central continuation and absolute SI scale remain separate requirements.
+
+## Inherited field follow-up
+
+The [internal harmonic calculation](nsc-atlas-inherited-charge.md) now
+supplies a geometric origin for the degenerate charge pair and computes
+an invariant parent-state distribution. Its charge expectation is zero.
+The open connection is the asymmetric inherited current/state and its
+baryon/photon interpretation, rather than the existence of a field pair.

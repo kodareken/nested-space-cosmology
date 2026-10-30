@@ -678,6 +678,11 @@
       "section": "13.32",
       "status": "derived",
       "owner": "docs/nsc-atlas-smooth-horizon.md"
+    },
+    "inherited-harmonic-charge": {
+      "section": "13.33",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-inherited-charge.md"
     }
   },
   "findings": [

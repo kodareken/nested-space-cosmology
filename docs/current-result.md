@@ -1,5 +1,16 @@
 # What the calculations show
 
+The [inherited internal-charge calculation](nsc-atlas-inherited-charge.md)
+restores first harmonics of the existing higher-dimensional real scalar on
+an explicitly chosen round S12. The retained curvature fixes a0^2=44/5;
+the degenerate charged pair has M1=24.814797076925 model units. A proper
+internal rotation preserves the flux and exchanges its charges. The
+conditional Euclidean parent state has zero mean charge, finite local
+fluctuations and identical horizon transport for both signs. This derives
+a field/current candidate, but neither a nonzero baryon asymmetry nor its
+conversion to photons. The conditional eta comparison is 0, -100% from
+6.1e-10; the physical ratio remains unselected.
+
 The [smooth-horizon branch](nsc-atlas-smooth-horizon.md) follows Douglas's
 revision from a material shell to a causal boundary. Fixed-contrast Parke
 Rc tends to zero with tension. The existing late-vacuum action instead

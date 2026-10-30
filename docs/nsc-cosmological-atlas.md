@@ -2099,3 +2099,15 @@ The next connection is the inherited charge state and sourced horizon
 history. A later nonzero predicted charge must satisfy the integrated current
 law and its stress must satisfy the Einstein equations in the same geometry.
 No area fraction, phase residual or coordinate zero substitutes for that test.
+
+## Internal harmonic charge and state inheritance, 30 October 2026
+
+The [harmonic completion](nsc-atlas-inherited-charge.md) advances the
+horizon-only branch by deriving a charged pair from the retained real
+higher-dimensional field on a declared round internal sphere. The curvature
+fixes its radius and mode mass. Its Euclidean Gaussian preparation is neutral,
+and charge-symmetric horizon transfer preserves that mean through any number
+of steps. Local fluctuations are retained explicitly. This closes the
+invariant-state route without deriving the requested baryon/photon eta.
+The required next source is an inherited internal current or an asymmetric
+preparation with its charge and photon interpretation supplied by the model.
