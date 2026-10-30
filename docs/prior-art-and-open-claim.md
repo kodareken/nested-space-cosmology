@@ -1,5 +1,22 @@
 # Prior art and admission of new research
 
+## Coupled parent response and excitation work, 31 October 2026
+
+The [owner](nsc-atlas-parent-backreaction.md) compares retaining a fixed
+metric, inferring collapse from volume response alone, and closing the
+next coupled perturbative orders on the existing data. The last route
+reuses the canonical action and normal-coordinate/ADM identities. Its
+exact finite metric/scalar maps and TT normalization are derived and
+independently checked. Subtracting the actual constant-vacuum stress
+removes the fourth-order metric from the fourth-order excitation budget;
+it does not solve the fourth-order Einstein equation. A180-second budget
+contains two concurrent integrations, all constraints and independent
+work quadrature; measured wall time is about71seconds. The main risks
+are missing stress sectors, measure/initial-energy terms and changing an
+observer protocol under a coordinate change. Exact maps, full work and
+transported/anchored clocks address them. Nonlinear concentration remains
+the next physical dependency. No old grid scan is reopened.
+
 ## Same-source internal-volume feedback, 30 October 2026
 
 The [owner](nsc-atlas-volume-feedback.md) compares algebraic relaxation,

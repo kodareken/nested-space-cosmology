@@ -9594,6 +9594,131 @@ scale. The next physical closure is its cubic matter and quadratic metric
 response on the same preparation, before a concentration or daughter
 continuation is inferred.
 
+### 15.18. Coupled parent feedback closes matter work and links two clocks
+
+<!-- nsc-claim:coupled-parent-backreaction -->
+
+The geometric response now acts back on the same inherited wave. The
+[finite calculation](../results/summaries/nsc-atlas-parent-backreaction-v1.json)
+and [derivation](../docs/nsc-atlas-parent-backreaction.md) retain all scalar,
+vector and transverse tensor parts of the quadratic spatial metric,
+the preceding volume response, and the full cubic scalar. They produce
+a proper-clock shift and a second-channel relation with the earlier
+light experiment.
+
+**The inherited state supplies every source.** Gaussian normal observers
+begin orthogonally from the same constraint-data slice. Write
+
+$$
+ds^2=-dt^2+a^2(\gamma+\epsilon^2 k)_{ij}dx^idx^j+O(\epsilon^4),
+$$
+
+$$
+\chi=\epsilon\phi_1+\epsilon^3\phi_3+O(\epsilon^5),\qquad
+s=s_*+\epsilon^2s_2+O(\epsilon^4).
+$$
+
+The original conformal corrector fixes initial $k$; its normal derivative
+vanishes. Initial $s_2$ and $\phi_3$ and their normal derivatives vanish. The same signed
+two-mode field supplies all subsequent forcing on $0\leq Ht\leq8$.
+No new incoming wave or physical scale is selected.
+
+Einstein's spatial equation becomes
+
+$$
+\ddot k+3h\dot k+h\gamma\,\mathrm{tr}\dot k
++2a^{-2}(\delta\mathrm{Ric}[k]-2k)
+=2\kappa a^{-2}D\phi_1D\phi_1+\kappa\mu_*^2\phi_1^2\gamma.
+$$
+
+Eleven exact spatial tensors suffice: five scalar metric modes, four
+scalar Hessians, the compensated circulation and one transverse
+trace-free tensor. The tensor's rough-Laplacian eigenvalue is $-6$;
+curvature gives $+8/a^2$ in its time equation. Exact tensor identities
+and the full positive Gram matrix fix its normalization. The cubic
+field obeys
+
+$$
+L_\chi\phi_3=a^{-2}\delta\Delta_k\phi_1
+-\frac12\mathrm{tr}(\dot k)\dot\phi_1+12\mu_*^2s_2\phi_1.
+$$
+
+Its eight polynomial coefficients reconstruct every source exactly.
+The initially occupied degrees one and two generate degrees three
+through six. This is a finite perturbative mode-generation result,
+not proof of an invariant ultraviolet cascade or a daughter universe.
+
+| Control over the finite history | Maximum absolute residual/gap |
+| --- | --- |
+| Hamiltonian constraints | 2.92e-11 |
+| Scalar momentum constraints | 1.92e-12 |
+| Vector momentum constraint | 1.12e-14 |
+| Metric between independent integrators | 1.64e-12 |
+| Cubic field between independent integrators | 9.81e-10 |
+
+**Fourth-order matter work closes before fourth-order gravity.** Subtract
+the constant vacuum stress with the actual metric. The remaining
+zeroth-order stress vanishes, so fourth-order metric terms cannot enter
+the fourth-order excitation-energy coefficient. The required metric,
+volume and scalar orders are now present. With their density and pressure
+coefficients,
+
+$$
+E_{\rm exc}=\epsilon^2E_2+\epsilon^4E_4+O(\epsilon^6),\qquad
+E_4=\int a^3\left(\rho_4+\frac12\mathrm{tr}k\,\rho_2\right)d\Omega_3.
+$$
+
+The work includes isotropic pressure, metric strain, the volume interaction
+and the changing spatial measure. Independent integration gives
+
+| Event | E4 | Work integrated from the inherited slice |
+| --- | --- | --- |
+| Initial | -238.437812932 | 0 |
+| Earlier observation event | -207.556503164 | 30.881309819 |
+| Ht=8 | -202.140807251 | 36.297006250 |
+
+The balance is $E_4(t)-E_4(0)=\int W_4dt$, with largest residual
+$2.39\times10^{-9}$ relative to $|E_4(0)|$. Negative fourth-order
+coefficients correct the positive leading excitation energy. They are
+not negative total energies. This closes matter work at the stated order;
+the fourth-order Einstein equation and a finite-amplitude error bound
+remain separate.
+
+**A new proper-clock readout uses the same source.** Follow the normal
+geodesic starting at the initial scalar maximum, and define its phase
+with $Z=\chi-i\,n(\chi)/\omega_{\rm ref}$. At the earlier 300-pass
+reference event, the shift of a fixed scalar phase is
+
+$$
+\frac{H\delta\tau_{\rm phase}}{\epsilon^2}=.099091427460.
+$$
+
+Metric and volume contributions are $-.000453327335$ and $+.099544754795$;
+the independent-integrator spread is $8.78\times10^{-11}$. This is a
+proper-duration comparison for the declared preparation and scalar clock.
+It has no selected SI amplitude or certified finite-amplitude remainder.
+
+The same metric recovers the earlier guided light result. Transport its
+held-guide worldlines between the vector and normal descriptions using
+$dC/dt=-\beta$, rather than holding different coordinate labels fixed.
+The recovered light coefficient is $1.786000559260\times10^{-5}$. Thus
+
+$$
+\frac{\delta\tau_{\rm phase}}{\Delta\tau_{\rm light}}=5548.23048.
+$$
+
+Amplitude and physical ruler cancel. Both protocols and their separately
+defined events remain fixed, as does the two-mode preparation. This is
+a conditional cross-observable relation, not a universal constant or
+an observational fit.
+
+![Same-source metric and scalar feedback, clock and matter work](figures/nsc-atlas-parent-backreaction.png)
+
+The chain now includes the geometry acting back on the wave and a
+complete excitation-work check. The next physical question is nonlinear
+concentration of this inherited state. These perturbative results do
+not select a charge imbalance, a regular child or the SI hierarchy.
+
 ## VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.

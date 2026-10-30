@@ -1,12 +1,20 @@
 # Cosmological atlas: regions, boundaries and observer measurements
 
+The [coupled parent response](nsc-atlas-parent-backreaction.md) now supplies
+the quadratic scalar/vector/tensor metric and cubic scalar on that same
+inherited preparation. Its complete fourth-order matter-excitation work
+and scalar/light clock relation close the next local dynamical connection.
+The common finite history has no formed daughter or selected SI ruler.
+Nonlinear concentration and compatible child continuation are the next
+physical requirements; these perturbative coefficients do not establish them.
+
 The [inherited volume feedback](nsc-atlas-volume-feedback.md) now adds a
 causal geometric response to the same prepared wave. The volume, spectra
 and geometric coupling change together; an exact fractional-response
 correlation removes the unknown amplitude and absolute scale. Static
 Schur attraction and actual retarded energy exchange are calculated
-separately. The next common-parent closure is the cubic matter and
-quadratic metric response before nonlinear concentration is inferred.
+separately. The common-parent cubic matter and quadratic metric successor
+above now supplies that feedback before nonlinear concentration is inferred.
 
 The programme asks how regions, their boundaries and their fields can form a
 nested geometry, and what an observer inside one region can infer about the

@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_parent_backreaction.py` evolves all eleven quadratic metric and
+eight cubic scalar coefficients, reusing the volume response and inherited
+source. `nsc_atlas_cubic_operators.py` constructs exact finite spatial maps.
+Concurrent independent integrations, constraint propagation, the complete
+fourth-order excitation work and transported observer protocols verify
+the connection. The producer retains only compact coefficients/results.
+
 `nsc_atlas_volume_feedback.py` evolves five exact spatial harmonics of the
 internal-volume response sourced by the unchanged parent field. It retains
 the nonorthogonal Gram block, checks two integrators and independent work

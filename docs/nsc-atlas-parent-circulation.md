@@ -1,5 +1,11 @@
 # From the generated space to compensated circulation and a light record
 
+The [coupled-parent successor](nsc-atlas-parent-backreaction.md) now adds
+all quadratic metric sectors, cubic scalar feedback and fourth-order
+matter-excitation work to this same history. It recovers the guide signal
+with transported worldlines and links it to a proper scalar phase clock.
+Its perturbative closure does not imply finite-amplitude concentration.
+
 The [offset generator](nsc-atlas-offset-generator.md) supplies a round closed
 three-dimensional completion compatible with the retained parent vacuum.
 This calculation puts the existing canonical real scalar on that space,

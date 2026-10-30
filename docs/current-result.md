@@ -1,5 +1,16 @@
 # What the calculations show
 
+The [coupled parent response](nsc-atlas-parent-backreaction.md) now includes
+all quadratic scalar/vector/tensor metric sectors, the inherited volume,
+and the cubic scalar on the same finite history. Gravitational constraints
+remain below2.92e-11. After constant-vacuum subtraction, the full fourth-order
+matter-excitation work coefficient closes to2.39e-9 relative to its initial
+coefficient, including changing spatial measure. A scalar phase event has
+H delta tau/epsilon^2=.099091427460; its ratio to the original guided light
+delay is5548.23048, independent of amplitude and SI ruler. The preparation
+and protocols remain supplied. Finer harmonics are generated, but nonlinear
+concentration, fourth-order Einstein gravity and daughter formation remain open.
+
 The [same-source volume feedback](nsc-atlas-volume-feedback.md) now evolves
 the internal size from the inherited scalar, with zero initial volume
 displacement/velocity. Five exact harmonics suffice. At the prior observer
@@ -10,8 +21,8 @@ KK increment/base-mass ratio has exact slope7. Two integrators agree to
 Retained volume memory gives a phase-averaged energy diagnostic
 (.04005715 +/- .00017306) epsilon^2 times initial scalar energy; this is
 not a conversion efficiency or selected matter fraction. Static Schur
-relaxation supplies a negative interaction contribution. Full quartic
-gravity/matter, localization, charge bias and SI scale remain open.
+relaxation supplies a negative interaction contribution. Fourth-order
+Einstein gravity, localization, charge bias and SI scale remain open.
 
 The [offset/thermodynamic zero calculation](nsc-atlas-offset-thermodynamics.md)
 now fixes the decaying wave, its phase spiral and late spectrum. The

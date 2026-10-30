@@ -1,0 +1,163 @@
+{
+  "SI_scale_selected": false,
+  "charge_asymmetry_selected": false,
+  "complete_finite_amplitude_concentration_or_child_formation": false,
+  "cross_observable": {
+    "H_guided_differential_light_delay_over_epsilon_squared": 1.786000559260415e-05,
+    "H_scalar_phase_event_shift_over_epsilon_squared": 0.09909142746011147,
+    "amplitude_and_SI_ruler_cancel": true,
+    "guide_protocol": "Existing radius1/8, separationpi/6, phase-averaged opposite directions; transport the held-guide worldlines under x_old=x_normal+epsilon\u00b2*C*W",
+    "same_event_required": false,
+    "scalar_clock_shift_over_guided_light_delay": 5548.230483261738,
+    "scope": "Conditional two-protocol relation for the same fixed two-mode preparation; not a universal source-independent constant or observed sky comparison."
+  },
+  "elapsed_seconds": 70.48169429998961,
+  "energy_balances": [
+    {
+      "Ht": 1.1846453242616595,
+      "conservation_absolute_residual": 5.070044295507614e-08,
+      "final_excitation_energy_coefficient": -207.55650316369466,
+      "independent_integrated_work": 30.88130981884897,
+      "initial_excitation_energy_coefficient": -238.43781293184318,
+      "integrated_work_from_evolution": 30.881309818127416,
+      "parts": {
+        "perturbed_spatial_measure_energy": -474.146437756169,
+        "scalar_cross_and_interaction_energy": 262.5325119669569,
+        "volume_mode_energy": 4.057422625517442
+      },
+      "quadrature_error_estimate": 2.6917416179451545e-11
+    },
+    {
+      "Ht": 8.0,
+      "conservation_absolute_residual": 5.691329079127172e-07,
+      "final_excitation_energy_coefficient": -202.14080725125208,
+      "independent_integrated_work": 36.29700624972401,
+      "initial_excitation_energy_coefficient": -238.43781293184318,
+      "integrated_work_from_evolution": 36.29700625045123,
+      "parts": {
+        "perturbed_spatial_measure_energy": -604.5041654077686,
+        "scalar_cross_and_interaction_energy": 393.0956623110181,
+        "volume_mode_energy": 9.267695845498388
+      },
+      "quadrature_error_estimate": 4.473380558942037e-09
+    }
+  ],
+  "equations": {
+    "finite_amplitude_remainder_bound": false,
+    "fourth_order_Einstein_solution": false,
+    "matter_energy_order": "All excitation-stress and spatial-measure terms at epsilon^4, subtracting constant vacuum V_star",
+    "metric_orders": "All scalar, compensated vector and TT metric sectors at epsilon^2",
+    "scalar_order": "Complete phi3 at epsilon^3, separated by metric/volume drive",
+    "volume_order": "Existing sourced s2 at epsilon^2"
+  },
+  "gauge": "Gaussian normal to the retained initial slice; three spatial directions with offset evolution",
+  "harmonic_generation": [
+    {
+      "Ht": 1.1846453242616595,
+      "cubic_field_L2_squared_by_degree": {
+        "1": 0.027942680228660678,
+        "2": 0.033930911419944546,
+        "3": 0.0022107753025504104,
+        "4": 0.0025887543452513856,
+        "5": 0.0033302170998548864,
+        "6": 0.0008741164945249425
+      },
+      "scope": "Order-epsilon^6 squared-field coefficient; not a separately conserved mode energy."
+    },
+    {
+      "Ht": 2.0,
+      "cubic_field_L2_squared_by_degree": {
+        "1": 0.0007038513910146815,
+        "2": 0.0009880695115552294,
+        "3": 7.941229980141319e-05,
+        "4": 0.0001006183894029598,
+        "5": 0.00015878207279096144,
+        "6": 5.063109487673004e-05
+      },
+      "scope": "Order-epsilon^6 squared-field coefficient; not a separately conserved mode energy."
+    },
+    {
+      "Ht": 4.0,
+      "cubic_field_L2_squared_by_degree": {
+        "1": 4.498066344479101e-06,
+        "2": 6.014734972191755e-06,
+        "3": 4.604291317277899e-07,
+        "4": 5.657156557840833e-07,
+        "5": 8.431293969577249e-07,
+        "6": 2.549526208670128e-07
+      },
+      "scope": "Order-epsilon^6 squared-field coefficient; not a separately conserved mode energy."
+    },
+    {
+      "Ht": 8.0,
+      "cubic_field_L2_squared_by_degree": {
+        "1": 5.66421763650721e-11,
+        "2": 7.182183642992077e-11,
+        "3": 5.2362476037014174e-12,
+        "4": 6.199293642563554e-12,
+        "5": 8.543387932868656e-12,
+        "6": 2.3734510897391815e-12
+      },
+      "scope": "Order-epsilon^6 squared-field coefficient; not a separately conserved mode energy."
+    }
+  ],
+  "inherited_data": {
+    "metric_initial": "k=4u gamma from the existing nonlinear constraint-data branch; normal derivative zero",
+    "new_source_or_fit": false,
+    "scalar_initial": "phi3=normal_derivative(phi3)=0",
+    "volume_initial": "s2=sdot2=0"
+  },
+  "numerical_controls": {
+    "Hamiltonian_max_absolute_residual": 2.913047580932471e-11,
+    "cubic_two_integrator_max_gap": 9.801759404126642e-10,
+    "independent_integrations_run_concurrently": true,
+    "methods": [
+      "DOP853",
+      "RK45"
+    ],
+    "metric_two_integrator_max_gap": 1.638689184346731e-12,
+    "nfev": [
+      51803,
+      144980
+    ],
+    "scalar_momentum_max_absolute_residual": 1.9123383432351204e-12,
+    "vector_momentum_max_absolute_residual": 1.1166631855297204e-14
+  },
+  "observer": {
+    "Ht": 1.1846453242616595,
+    "anchor_initial_embedding": [
+      0.40837076508409503,
+      0.6454584875205496,
+      0.0,
+      0.6454584875205496
+    ],
+    "interpretation": "Normal geodesic through the initial scalar maximum, proper duration, and supplied scalar quadrature clock; conditional comparison to the unchanged leading wave.",
+    "metric_feedback": {
+      "H_phase_event_proper_shift_over_epsilon_squared": -0.0004533273349144588,
+      "field_over_epsilon_cubed": 0.005452155502163908,
+      "proper_derivative_over_epsilon_cubed": -0.6218298116264105,
+      "relative_phase_over_epsilon_squared": 0.041108967315315686
+    },
+    "phase_speed_over_H": 90.68274544501666,
+    "proper_readout": 4.364851930251994,
+    "total_H_phase_event_proper_shift_over_epsilon_squared": 0.09909142746011147,
+    "two_integrator_absolute_H_phase_shift_gap": 8.775273563355057e-11,
+    "volume_feedback": {
+      "H_phase_event_proper_shift_over_epsilon_squared": 0.09954475479502593,
+      "field_over_epsilon_cubed": 0.20096679715504057,
+      "proper_derivative_over_epsilon_cubed": 1.0702319531289217,
+      "relative_phase_over_epsilon_squared": -9.02699165946394
+    }
+  },
+  "schema": "nsc-atlas-parent-backreaction-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_parent_backreaction.py": "18b2e80db453c99ca160f292b4eede309d8bc61eebf482cc50aabd67351241b3",
+    "src/recursive_horizons/nsc_atlas_cubic_operators.py": "be4e78e168381f5673e24c28dc4e567c98546c5b20d7391c516f60200e20c2db",
+    "src/recursive_horizons/nsc_atlas_horizon_response.py": "35ca8c2ae3040cac3404133cefad5c0a43a7e584b99d19db90717685337428f4",
+    "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+    "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "src/recursive_horizons/nsc_atlas_s3_polynomials.py": "a290ac75a8726761195bfa3def4630892a08d57e7c6ee6272130155d880ae208",
+    "src/recursive_horizons/nsc_atlas_volume_feedback.py": "a9eb86cc2e5fb994da36954c166ce7f2dd38cc4987d98ad7256953753b2830ea"
+  }
+}

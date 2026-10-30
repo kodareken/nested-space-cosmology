@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+  "current_receipt_commit_parent": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 299218,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 299663,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "a4d1c24d3c485cff5baeaab9c204da411cbd354a47072b2d46ee2449ca7ac1b1"
+      "sha256": "df2655d0d91b5276c8be7240fb8f39387d459a9f196840b8c6f5c62adfd588e1"
     },
     {
       "bytes": 162380,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 487249,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 488014,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c7874eec5c25a052889990eed41ecde9fa1ef18ad7fce1063166c1062bfd25d4"
+      "sha256": "ccb91f7a72d23aab625fab8274129571b9455ecc3d811a27911a0fd0aa3f3c00"
     },
     {
       "bytes": 173938,
@@ -10983,12 +10983,20 @@
       "sha256": "2522840f0425cd04f6cf80d0e77d23b434f8526269c4df9e180d45626f275d64"
     },
     {
-      "bytes": 31756,
-      "change": "Derive two null traces from the same frozen parent state and continue its signed scalar field into an exterior receiving region, with contracting errors, physical flux, canonical transport and composable shared data.",
-      "changed_from_commit": "21ca0e303e4a5eedad4c76b729cf7210b3967dc6",
+      "bytes": 11065,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "docs/nsc-atlas-parent-backreaction.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0cc5bdf4e1c87dbfd91d52805d43d59cc0fdc63a7d9cf4a5ec545f8255a01986"
+    },
+    {
+      "bytes": 32119,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "docs/nsc-atlas-parent-circulation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "bda1143f2a771eb40dd83eaa7a3630d8890cff78da5e4f031e3b596bb7ac5239"
+      "sha256": "c5411431eedfdbe161295fe111a5550041f0e8eae39d3839d77f543e51647d4f"
     },
     {
       "bytes": 10962,
@@ -11149,12 +11157,12 @@
       "sha256": "80babad2e378d282dbcc6281c768ff2922e1f793949b64f6eac4477ab1a353c1"
     },
     {
-      "bytes": 10445,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 10730,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "docs/nsc-atlas-volume-feedback.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "451eeaf409ab84850cee44444b137cc607e9a75c40fafc3e460a38ec0bbdef16"
+      "sha256": "049022a27f7785d29c0edc70f7f1ec264efee604c237faef780105ddc1583d4c"
     },
     {
       "bytes": 9853,
@@ -11224,15 +11232,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 141838,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 142369,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "1727c3af22e259960ef5a811f3b005559f5fdd6206173af94e770e00dd2af477"
+      "sha256": "55859def81122c585f86fb1e4a3e6501157e12f8cffc62e2aedb78af8b0135df"
     },
     {
       "bytes": 30876,
@@ -12200,12 +12208,12 @@
       "sha256": "1bb4a2ea0c1a8b5e07c4fb153554f2113cf2cc4ff86347f8a68ada243214c63d"
     },
     {
-      "bytes": 614269,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 615321,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7cb20f8f21c3be4f17e2d5d7b9a422ddbb19ddd0e2a8fa90b410d66231fd3e40"
+      "sha256": "900c59d0a4384ee5564ed9f5bc29857c03308ab5d844822c2402b3543d9b8813"
     },
     {
       "bytes": 6705,
@@ -12214,20 +12222,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 249520,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 250259,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "82d1fac7aebe79c34c68d64b9196e93f7c349f2537d56f520c2270fa76db70e6"
+      "sha256": "28f619f1d0896b242118567665cbda62731197d950b69c7a82113db2776cedca"
     },
     {
-      "bytes": 57203,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 57544,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "9d291251aef39c03073055a10990a343ceac26f40369da559dea4f5e9e7a2eb2"
+      "sha256": "d017c84c5e4bc128d21069f6d3d91bd314b4ff65ec8ee177563f122c9d8ff529"
     },
     {
       "bytes": 18356,
@@ -12241,12 +12249,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 141244,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 141612,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "4fa410eaaef7dd629eb3601873ac9719a420a02b32d9e2d0a251dbfa277976dc"
+      "sha256": "c5a52cf8b853f6c5a673c4130dcc482b01b60eef34b553385a408536dd1f8837"
     },
     {
       "bytes": 537091,
@@ -12296,28 +12304,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 43742,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 44072,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "16ddf825a08edafb80d195c304c7499b26576211a22436d0d4a4ff9472815795"
+      "sha256": "484b54b234185665905a63c64b57ccbbce501936d8cd32b18093dbd0dfe1fb8b"
     },
     {
       "bytes": 3207,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f7f3989847b7d8e99eb01c2ce0a0c175e741ce9f1858587d4c235e5ba97c2776"
+      "sha256": "78a8f34dabf4747b275219f9b18ecd09e567f7512d4490b5392f26ef1d3f0390"
     },
     {
-      "bytes": 52264,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 52417,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "388d86fe08a2a8d2b14377f6a6ca98eacf90e679027cb7e1d8d9dcd5fbfa734d"
+      "sha256": "5d39a5e8b39019fc6e9636e224887128b5fa33e12e1a9724b76feb4e021412ce"
     },
     {
       "bytes": 226492,
@@ -12376,6 +12384,14 @@
       "sha256": "f004c5efc4b5edd8dbd1665972d48a1982c9c681eb87ccd42eda0a6b9def44c8"
     },
     {
+      "bytes": 441118,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "paper/figures/nsc-atlas-parent-backreaction.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7e312bc0e6302cae00ef639889e910cd3b53a3dedf348157056ac9044786e447"
+    },
+    {
       "bytes": 215971,
       "change": "Connect the generated smooth closed parent to the existing scalar's compensated circulation, admissible initial data, a differential light record and conserved horizon energy transfer.",
       "changed_from_commit": "099d83644f546836a35b60099946a128f22802c6",
@@ -12417,27 +12433,27 @@
     },
     {
       "bytes": 398,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "0cf9b16888938ed0a37322e37687ba8327e489d53303577ec6662b4a6982fde5"
+      "sha256": "948fdc4bb73a3c791e5e13eeed10a9cd91b7d00a1bcb2ae44efd7256722ebd8a"
     },
     {
-      "bytes": 668457,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 673683,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "c0a4bdab993b6ec22d9c849b1114187081238e904d9a8d35f4e010c61e4a68b0"
+      "sha256": "f1ab4f0a16b279b4399d100fc9d79aba822863962c4dd79bfa9def4009d426e2"
     },
     {
-      "bytes": 19445017,
-      "change": "Derive the same-source causal internal-volume response, exact local spectral/coupling correlation, pressure/source-work balance, controlled retained memory and static Schur interaction.",
-      "changed_from_commit": "0a4b78f251037a9a13a045f48ddb609f5a5f9625",
+      "bytes": 20073887,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1aa58ad9f3b987bed5c73d288823fb373dfec247e99508a7ee7daceb85abd2e1"
+      "sha256": "3b2e60ac4ffb52b1704a53c231abc77b653aec8a6dd9fb4d07acfb581f8d79c4"
     },
     {
       "bytes": 3283,
@@ -31414,6 +31430,14 @@
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
     {
+      "bytes": 7383,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "results/summaries/nsc-atlas-parent-backreaction-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1e0f4d43916680a23dc1cf39eeec34a446ed4caa39eb094fb08de0948ebaf163"
+    },
+    {
       "bytes": 2081,
       "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
       "changed_from_commit": "c57afbe2e258e7e9621f5f4f08317a4474d9c932",
@@ -32405,6 +32429,14 @@
       "path": "scripts/check_nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "e6fb6f1804418b1271ac6834c9055a0a8e6f10f42ca9d60e976eaee6dd8df78f"
+    },
+    {
+      "bytes": 1545,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "scripts/check_nsc_atlas_parent_backreaction.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "18b2e80db453c99ca160f292b4eede309d8bc61eebf482cc50aabd67351241b3"
     },
     {
       "bytes": 6001,
@@ -35632,6 +35664,14 @@
       "sha256": "9ff863b9728f6ff876222375177032a6dd1efab2c6779de317554a9aa6166ac9"
     },
     {
+      "bytes": 3315,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "scripts/plot_nsc_atlas_parent_backreaction.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4525398b1b91903dffeeca0eb64de073440856bcc2102698247009d65747f0f8"
+    },
+    {
       "bytes": 2644,
       "change": "Connect the generated smooth closed parent to the existing scalar's compensated circulation, admissible initial data, a differential light record and conserved horizon energy transfer.",
       "changed_from_commit": "099d83644f546836a35b60099946a128f22802c6",
@@ -36620,6 +36660,14 @@
       "sha256": "8e3bfacdce7cce29ea2443f90ec106b4d41dfd8662c56aad0a5e38adfe320496"
     },
     {
+      "bytes": 5369,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "src/recursive_horizons/nsc_atlas_cubic_operators.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "be4e78e168381f5673e24c28dc4e567c98546c5b20d7391c516f60200e20c2db"
+    },
+    {
       "bytes": 5060,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
       "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
@@ -37099,6 +37147,14 @@
       "path": "src/recursive_horizons/nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "502191913f4e851a665949bffa8ba97a80ceba796ac4bd6df1e5801394c9efc4"
+    },
+    {
+      "bytes": 14092,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "src/recursive_horizons/nsc_atlas_parent_backreaction.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523"
     },
     {
       "bytes": 15066,
@@ -41242,6 +41298,14 @@
       "sha256": "49aa4d7bf60e86b56c2e382cc8e34da617421dc253fa197b1ed41c2087a5ba98"
     },
     {
+      "bytes": 5350,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "tests/test_nsc_atlas_cubic_operators.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8b9b67c903170ddfdf559342d83ebd0a1625b805a775f1233e9c679d9d10440e"
+    },
+    {
       "bytes": 1617,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
       "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
@@ -41921,6 +41985,22 @@
       "path": "tests/test_nsc_atlas_onset_geometry_bound.py",
       "retention_reason": "Bounded onset geometric coefficients, independent controls and reproducible producer.",
       "sha256": "dda2a08e7908086d32cfa1aa72fd761c722acc042747f3d3c4a2d01e4c047a07"
+    },
+    {
+      "bytes": 5422,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "tests/test_nsc_atlas_parent_backreaction.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6a62859b25598d9f519d792bc07761204ede3de4f3527ca81283100f898397f3"
+    },
+    {
+      "bytes": 7679,
+      "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
+      "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
+      "path": "tests/test_nsc_atlas_parent_backreaction_algebra.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d1d70f7ca30af617c8b80f925ce0f5983be40a2afffc3651600e7eef0a0126b1"
     },
     {
       "bytes": 8056,

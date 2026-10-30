@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Coupled parent metric, cubic scalar and matter work
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_backreaction.py --output .build/parent-backreaction-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_backreaction.py tests/test_nsc_atlas_parent_backreaction_algebra.py tests/test_nsc_atlas_cubic_operators.py
+python scripts/run_python.py scripts/plot_nsc_atlas_parent_backreaction.py
+```
+
+The [owner](nsc-atlas-parent-backreaction.md) defines all perturbative
+orders, inherited data, constraint sectors and observer protocols. Two
+independent integrations run concurrently. The compact record replaces
+stored trajectories; reproduction selects no new physical parameter.
+
 ## Same-source internal-volume feedback
 
 ```powershell

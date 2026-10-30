@@ -1,5 +1,11 @@
 # Schur memory and the local effective Lambda target
 
+The [coupled-parent closure](nsc-atlas-parent-backreaction.md) now retains
+the metric and cubic matter terms required to balance the volume channel's
+fourth-order excitation work. It also links scalar and light readouts on
+the same preparation. This supplies a concrete dynamical response and
+observable relation; the missing SI vacuum scale is not thereby selected.
+
 The [same-source internal-volume response](nsc-atlas-volume-feedback.md)
 now realizes a causal memory channel from an explicit geometric degree of
 freedom in the retained action. Its zero-data driven solution outlives

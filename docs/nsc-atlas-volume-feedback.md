@@ -1,5 +1,10 @@
 # Inherited waves change internal volume, spectra and coupling
 
+The [coupled-parent successor](nsc-atlas-parent-backreaction.md) now supplies
+the quadratic metric/cubic matter response and complete fourth-order
+matter-excitation work on these same data. Full fourth-order Einstein
+gravity and finite-amplitude concentration remain separate requirements.
+
 The [thermodynamic wave](nsc-atlas-offset-thermodynamics.md) now has a
 calculated geometric response in the same action. Its actual two-mode
 history drives the previously frozen internal size. That response changes
@@ -230,7 +235,7 @@ Only a compact summary is retained. Failure risks are treating static
 minimization as causal evolution, discarding the nonorthogonal Gram block,
 and calling a perturbative subsystem a closed finite-amplitude solution.
 Retarded initial data, exact polynomial controls and independent energy
-quadrature address those separately. The next substantive connection is
+quadrature address those separately. The successor above now supplies
 the cubic matter response and quadratic metric on this same prepared
-history, followed by a concentration/continuation test. A different
-frequency or initial cloud would be a separately declared preparation.
+history; a concentration/continuation test remains. A different frequency
+or initial cloud would be a separately declared preparation.

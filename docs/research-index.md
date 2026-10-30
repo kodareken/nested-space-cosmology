@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [coupled parent feedback](nsc-atlas-parent-backreaction.md) completes
+quadratic metric and cubic matter response on the same source. Exact finite
+operators, all constraint sectors, fourth-order excitation work and an
+anchored scalar clock connect it to the earlier light measurement without
+selecting a new amplitude or physical ruler.
+
 The [inherited volume response](nsc-atlas-volume-feedback.md) connects the
 same scalar history to a gauge-invariant geometric displacement, linked
 local mass/coupling modulation, controlled causal memory and a negative
