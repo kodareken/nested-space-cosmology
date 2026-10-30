@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_boundary_work.py` derives the averaged fourth-order work
+coefficient from the saved flow, without rerunning a grid.
+`nsc_atlas_observer_geometry.py` owns exact anisotropic redshift, orbital
+and wave-scaling controls. Their tests independently verify the Ward and
+Einstein identities. `build_nsc_atlas_source_map.py` creates the complete
+research-source navigation index and the manuscript appendix.
+
 `nsc_atlas_flow_evolution.py` continues the compact vortex on a specified
 periodic domain with a dealiased Fourier solver and finite budgets.
 `nsc_atlas_flow_gravity.py` calculates its leading boundary/curvature

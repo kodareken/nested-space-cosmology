@@ -1,5 +1,11 @@
 # Golden inward drawing, inherited clocks and black-hole comparisons
 
+Douglas later clarified that the proposed golden ratio may be a statistical
+outcome of branching among regions, each with three spatial dimensions.
+The comparisons below test specified individual maps and turns; they do not
+settle that distinct branching-statistics hypothesis. Its source and clock
+law are part of the [connected route](nsc-atlas-flow-gravity.md).
+
 This follow-up completes the finite comparisons requested after the
 [pen construction](nsc-atlas-pen-geometry.md). The drawing never finishes:
 depth labels a position in its history, not a final resolution. The

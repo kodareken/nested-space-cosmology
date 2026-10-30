@@ -1,10 +1,10 @@
 {
-  "bytes": 16178120,
+  "bytes": 16708445,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "ede2f87366c65b43452f296115abd66f48bc61424b220287c26a5505cd34727a",
+  "metadata_sha256": "638692a55f05125523cfec46fea9514466e640d2ae72b36cbbf1aa6c6b8822a0",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 201,
-  "pdf_sha256": "795afec33b99671893745e1cf0913263af884e0ddff1ece67e30fee6d05e5ea6",
+  "pages": 210,
+  "pdf_sha256": "2ce597bec05f8035d939d04e995bf71dfc714f41da4c11b149d6473dfaddd1a6",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -174,6 +174,14 @@
     {
       "path": "paper/figures/geometry-overview.png",
       "sha256": "d533d0e5e9cb30025649bcb6b2c597d5b54ce42a421eb483ccf0a86f6730fa5e"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-connected-route.png",
+      "sha256": "b760ccaa7307717eb0dc8733d4c738074a58b306b421a795a7aaa3a468158540"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-flow-gravity.png",
+      "sha256": "4e6d7ffad25198b9593c88cef11a3c569826720f85441120bca3b6d599c6777d"
     },
     {
       "path": "paper/figures/nsc-atlas-pen-geometry.png",
@@ -524,6 +532,10 @@
       "sha256": "66f2214ce696ac0039c925d2f9c255cf012fe0b276b55de7ca4d34a1b290f296"
     },
     {
+      "path": "results/summaries/nsc-atlas-boundary-work-v1.json",
+      "sha256": "57c71d6c6d12c959d5b5ffff0fa9e143efcb4e8080379548b15d1c048fcd9a7d"
+    },
+    {
       "path": "results/summaries/nsc-atlas-cap-departure-bound-v1.json",
       "sha256": "61190f1d3029ccda920c0a6783d9e9d682408e43a3078a816672a182502e44d2"
     },
@@ -640,6 +652,10 @@
       "sha256": "e1c65bb9b3dc289899206abd39fdf09dc2277b3cec9132a83a3ee303e86133cc"
     },
     {
+      "path": "results/summaries/nsc-atlas-flow-evolution-v1.json",
+      "sha256": "91f0e403be97a991a0708b55208ea25f659c6d942b5667ebf9a993def1d06fd2"
+    },
+    {
       "path": "results/summaries/nsc-atlas-flux-conversion-v1.json",
       "sha256": "b9e3343d04c0574878395c99164a451277446860d9413595dc135116182430ef"
     },
@@ -734,6 +750,10 @@
     {
       "path": "results/summaries/nsc-atlas-nested-slice-v1.json",
       "sha256": "adc7ddfb28c26379a0856b0c630410329d8bd6bd7e1d40f7697705995542908c"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-observer-geometry-v1.json",
+      "sha256": "cc01f7565fa8bdcab2bad9c7fe848a0d0db70856dcc458eb76132c2f689eeb66"
     },
     {
       "path": "results/summaries/nsc-atlas-occupied-wall-v1.json",
@@ -957,6 +977,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "200b14845da8ad2bd5d5d15a46a45898b29e09c15d49050f9c327ccfd24dc350",
-  "version": "working-2026-10-30.6"
+  "source_sha256": "7ecc892ec9def220cdb05e9c4c091e9a8728c5fa3308bd3d0d8bbbeca2109cbc",
+  "version": "working-2026-10-30.7"
 }

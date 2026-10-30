@@ -1,0 +1,103 @@
+{
+  "anisotropic": {
+    "H": 0.2714056154003984,
+    "Kasner_exponents": [
+      -0.30901699437494745,
+      0.5,
+      0.8090169943749475
+    ],
+    "Lambda": 0.22098302421260696,
+    "metric": "ds^2=-dt^2+sum_i a_i(t)^2 dx_i^2",
+    "observer_epoch_selected": false,
+    "optical_law": "1+z(n)=sqrt(sum_i n_i^2 [a_i(receive)/a_i(emit)]^2)",
+    "past": "The generic Kasner-de Sitter past still has a singularity; no birth/reset or origin-of-time proof.",
+    "rates": "H_i/H=coth(u)+3(p_i-1/3)csch(u)",
+    "rows": [
+      {
+        "axis_redshifts": [
+          -0.19016856371329233,
+          0.41598022756234576,
+          0.7528551874547063
+        ],
+        "directional_ratio_max_over_min": 2.164469183231529,
+        "late_shear_fraction": 0.9610429829661166,
+        "u_emit": 0.1,
+        "u_receive": 0.2
+      },
+      {
+        "axis_redshifts": [
+          0.05625266690328852,
+          0.5823460133260654,
+          0.8465001233849987
+        ],
+        "directional_ratio_max_over_min": 1.748161383391864,
+        "late_shear_fraction": 0.07065082485316447,
+        "u_emit": 1.0,
+        "u_receive": 2.0
+      },
+      {
+        "axis_redshifts": [
+          0.375137423201045,
+          0.40114522317755935,
+          0.4112086402723575
+        ],
+        "directional_ratio_max_over_min": 1.0262309907815221,
+        "late_shear_fraction": 0.00018158323094380667,
+        "u_emit": 4.0,
+        "u_receive": 5.0
+      },
+      {
+        "axis_redshifts": [
+          0.39523232322216983,
+          0.3957111217000414,
+          0.3958940498079321
+        ],
+        "directional_ratio_max_over_min": 1.0004742769893935,
+        "late_shear_fraction": 6.091991712323229e-08,
+        "u_emit": 8.0,
+        "u_receive": 9.0
+      }
+    ],
+    "shape_conclusion": "Directional expansion isotropizes; this does not select a spherical boundary or finite topology.",
+    "shear": "sigma^2=3H^2 csch(u)^2; sigma^2/(3 Hmean^2)=sech(u)^2",
+    "solution": "a_i=A_i sinh(u)^(1/3) tanh(u/2)^(p_i-1/3), u=3Ht",
+    "state": "The golden Kasner exponents are a declared comparison inherited from the earlier BKL motif, not selected by the late-vacuum action."
+  },
+  "galactic_centre": {
+    "model_fit_performed": false,
+    "observation": "S2 near 2018 pericentre: combined gravitational and transverse-Doppler shift about 200 km/s divided by c, in addition to line-of-sight motion.",
+    "source": "https://arxiv.org/abs/1807.09409"
+  },
+  "invariant": "1+z=(-k_mu u_emit^mu)/(-k_mu u_receive^mu)",
+  "orbital": {
+    "E_squared": 0.9142857142857143,
+    "L_squared_over_mass_squared": 14.285714285714286,
+    "angular_frequency_times_mass": 0.03162277660168379,
+    "external_balancing_masses": 0,
+    "radial_potential_second_derivative": 0.001142857142857143,
+    "radial_velocity": 0.0,
+    "radius_over_mass": 10.0,
+    "scope": "Exact test-particle geodesic in the isolated Schwarzschild metric; excludes self-force, radiation and other bodies, so it is not a perpetual-motion claim for the real Galaxy.",
+    "spacetime_Kretschmann_times_mass4": 4.8e-05,
+    "stable": true
+  },
+  "physical_cosmology_fit": false,
+  "schema": "nsc-atlas-observer-geometry-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_observer_geometry.py": "4b71ba3136e9effd08e9fb81412c4c3c3c9e1f0eaf6174d2066db125d0c291bd",
+    "src/recursive_horizons/nsc_atlas_golden_vortex.py": "5673891d75c610ad4c2ff667d4dba9dd7d45bf99f663d819e90da973f93f1389",
+    "src/recursive_horizons/nsc_atlas_observer_geometry.py": "afb3ff73f7a07ccf7abffefde6f95b219f9605a33da5b3dc653bf94953f066a0",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408"
+  },
+  "wave": {
+    "model": "Massless geometric-optics probe on isotropic FLRW; local orthonormal speed c.",
+    "relation": "f proportional to 1/a, wavelength proportional to a, f*wavelength=c; dr/dt=c/a for a radial comoving coordinate.",
+    "scope": "Radiation-density ratio assumes conserved photon number in comoving volume and no absorption/emission. A change in the photon operator or medium can change propagation and must be specified separately.",
+    "twofold_expansion": {
+      "frequency_ratio": 0.5,
+      "local_speed_ratio": 1.0,
+      "radiation_energy_density_ratio": 0.0625,
+      "wavelength_ratio": 2.0
+    }
+  }
+}

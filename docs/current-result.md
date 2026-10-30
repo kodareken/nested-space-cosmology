@@ -1,5 +1,12 @@
 # What the calculations show
 
+The [averaged boundary-work closure](nsc-atlas-flow-gravity.md#the-next-order-averaged-work-relation)
+now gives b2=2(E0-E)/(3Vnu)=.877929728565 for the same finite flow. It
+closes the stated fourth-order average Ward identity, not the local bulk.
+The [observer controls](nsc-atlas-observer-geometry.md) independently verify
+anisotropic-to-isotropic expansion in the retained vacuum, directional
+redshift, a stable one-mass orbit and the frequency/wavelength relation.
+
 The [finite vortex/gravity connection](nsc-atlas-flow-gravity.md) evolves
 the retained compact mode on a declared periodic domain through t=.05.
 Opposite generated circulation bands survive three spatial resolutions and

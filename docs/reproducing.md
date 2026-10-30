@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Boundary work and observer geometry
+
+```powershell
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_boundary_work.py tests/test_nsc_atlas_observer_geometry.py
+python scripts/run_python.py scripts/check_nsc_atlas_boundary_work.py --output .build/boundary-work-reproduced.json
+python scripts/run_python.py scripts/check_nsc_atlas_observer_geometry.py --output .build/observer-geometry-reproduced.json
+python scripts/run_python.py scripts/build_nsc_atlas_source_map.py --check
+python scripts/run_python.py scripts/plot_nsc_atlas_connected_route.py
+```
+
+These controls use the saved finite history or exact formulas. They do not
+rerun a cosmological fit, select an epoch, or claim a completed new interior.
+
 ## Finite circulation and gravitational interfaces
 
 ```powershell

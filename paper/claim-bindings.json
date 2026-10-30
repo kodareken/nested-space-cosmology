@@ -683,6 +683,26 @@
       "section": "13.33",
       "status": "derived",
       "owner": "docs/nsc-atlas-inherited-charge.md"
+    },
+    "finite-flow-gravity": {
+      "section": "16.7.1",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-flow-gravity.md"
+    },
+    "boundary-work-closure": {
+      "section": "16.7.2",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-flow-gravity.md"
+    },
+    "rotating-horizon-offset": {
+      "section": "16.7.3",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-flow-gravity.md"
+    },
+    "observer-geometry-controls": {
+      "section": "15.12",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-observer-geometry.md"
     }
   },
   "findings": [

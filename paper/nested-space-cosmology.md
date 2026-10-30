@@ -166,6 +166,65 @@ show the regional hypothesis; their spacing does not specify a global
 embedding or scale. The [figure record](figures/geometry-overview.json)
 identifies the evidence for each connection.*
 
+### 1.1. The proposed generator: contrast, circulation and continuation
+
+Douglas's proposed picture starts with a region and its surroundings.
+Their contrast supports structure; compression concentrates it; circulation
+redistributes energy and angular momentum; and a transition may supply a
+new interior that inherits the same law. The term **offset** names the
+proposed underlying difference before any particle interpretation is assigned.
+Each proposed child has three spatial dimensions. Here a new "dimension"
+means a new regional spacetime, not an extra spatial coordinate. The local
+light law may be shared while regional geometry changes travel-time and
+proper-time relations. Increasing branching is proposed to change the
+exchange rate, with the golden ratio as a possible statistical outcome;
+that average must be derived from the branching law rather than imposed
+as every region's length ratio.
+The stronger foundational hypothesis is that temporal ordering and the
+observed matter imbalance are consequences of that geometric state. The
+evolution equations used in the present calculations already contain time;
+they do not yet derive its origin.
+
+The atlas makes the mechanism calculable through defined objects:
+
+| Geometric question | Mathematical object | Connection tested |
+| --- | --- | --- |
+| Why a sphere? | Area at fixed volume, isotropic surface energy | Exact spherical minimizer |
+| How can unresolved motion matter? | Covariance R_ij of the fine velocity | Finite resolved circulation and momentum flux |
+| How does it enter geometry? | Boundary stress and a specified fluid/gravity lift | Nonzero energy and curvature coefficients |
+| Can depletion accompany expansion? | Boundary pressure work | Derived averaged scale coefficient from the same energy history |
+| What does a rotating horizon transmit? | Relative frequency Delta_H | Signed energy/angular-momentum flux |
+| Does a child emerge? | Regular interior and transition data | The remaining sourced continuation |
+| What would observers see? | Null paths, observer velocities and regional fields | Frequencies, tides, orbital drift and directional redshift |
+
+![The connected route and the physical attachments still required](figures/nsc-atlas-connected-route.png)
+
+*The arrows refer to equations and declared domains. The five-dimensional
+fluid/gravity construction and the four-dimensional inherited-field horizon
+are distinct sectors until their matching is supplied. A one-coordinate
+generating description can organize a new three-dimensional region;
+its physical birth still needs a sourced transition.*
+
+The new calculations in Sections 16.7.1--16.7.3 advance this route beyond
+an initial derivative. The finite circulation develops with a checked
+energy account. The boundary-work relation then gives
+
+$$
+b_2(t)=\frac{2[E(0)-E(t)]}{3V\nu},\qquad b=1+\epsilon^2b_2,
+$$
+
+under the stated homogeneous-strain completion of the averaged boundary
+constraint. At the computed endpoint b2=.877929728565, with a .01396
+empirical spatial/time refinement indicator. This is a positive connection
+between energy depletion and increasing geometric scale. It is not yet a
+complete cosmological solution or an origin-of-time derivation.
+
+The research sources are organized by their actual role in Appendix C and
+the [source map](../docs/nsc-atlas-source-map.md). Every arXiv work recorded
+in the library or cited in the main argument is indexed. An indexed source
+is not automatically a compatible piece of the same action; its recorded
+reading boundary and the required mathematical connection remain visible.
+
 ### 2. Why begin with the sphere? Energy, relaxation and inheritance
 
 The sphere is the starting geometry because isotropic surface energy has
@@ -8462,6 +8521,76 @@ fixed-coordinate normal probes of the saved conformal metric. Markers are
 the declared rays. Lines connect samples and do not fill intermediate
 evolution.*
 
+### 15.12. A stretched region, an orbit and a received frequency
+
+<!-- nsc-claim:observer-geometry-controls -->
+
+The [observer calculation](../docs/nsc-atlas-observer-geometry.md) converts
+the questions about a stretched interior and a drain into measurable
+relations. The same late-vacuum action admits the Kasner--de Sitter metric
+
+$$
+ds^2=-dt^2+\sum_i a_i^2dx_i^2,\qquad
+a_i=A_i[\sinh u]^{1/3}[\tanh(u/2)]^{p_i-1/3},\quad u=3Ht,
+$$
+
+with H=sqrt(Lambda_star/3) and sum p_i=sum p_i^2=1. The independent Ricci
+components are checked directly. The expansion shear obeys
+
+$$
+\frac{\sigma^2}{3\bar H^2}=\operatorname{sech}^2u,
+\qquad
+1+z(n)=\sqrt{\sum_i n_i^2\left[\frac{a_i(t_o)}{a_i(t_e)}\right]^2}.
+$$
+
+For the declared golden Kasner state, the directional redshifts from u=1
+to u=2 are .05625267,.58234601,.84650012. From u=8 to u=9 they are
+.39523232,.39571112,.39589405. Anisotropic expansion can therefore approach
+isotropic expansion in the same positive-vacuum geometry. A round material
+boundary and a regular birth are not implied. Our present epoch and initial
+shear remain unselected. [Minamitsuji](https://arxiv.org/pdf/1205.5600)
+supplies a related anisotropic-background reference; its scalar spectra
+are not imported as an NSC observational fit.
+
+The orbital distinction is also mathematical. In the isolated Schwarzschild
+test-particle metric,
+
+$$
+\dot r^2=E^2-\left(1-\frac{2M}{r}\right)
+\left(1+\frac{\ell^2}{r^2}\right).
+$$
+
+At r=10M a circular geodesic has ell^2/M^2=100/7, E^2=32/35 and positive
+radial-potential second derivative. Its radius stays fixed although its
+spacetime curvature is nonzero. No external balancing mass is required
+for this ideal solution. A real inspiral requires its actual source and
+energy/angular-momentum transfer; the calculation does not assert that
+real Galactic orbits are eternal.
+
+All received frequencies use
+
+$$
+1+z=\frac{(-k_\mu u^\mu)_{\rm emit}}
+{(-k_\mu u^\mu)_{\rm receive}}.
+$$
+
+In isotropic FLRW, a is a geometric scale ratio. A massless probe has
+physical wavelength proportional to a and frequency proportional to 1/a;
+their product is its local propagation speed. A twofold expansion halves
+frequency, doubles wavelength and reduces radiation density to 1/16 under
+the stated conserved-number assumptions. Fading is not itself a speed
+measurement. A changed locally measured propagation law requires a
+specified probe operator relative to the matter clocks and rulers; it is
+an available model question rather than a change inferred from notation.
+
+At the Galactic centre, the [S2 measurement](https://arxiv.org/abs/1807.09409)
+includes gravitational and transverse Doppler shift of about 200 km/s
+divided by c near the 2018 passage, in addition to line-of-sight motion.
+The [record](../results/summaries/nsc-atlas-observer-geometry-v1.json)
+keeps that observation separate from these unfitted controls. A proposed
+nested gradient history must reproduce the same frequency and trajectory
+measurements within one declared observer geometry.
+
 ## VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
@@ -8881,6 +9010,132 @@ The singular endpoint also leaves a fixed hydrodynamic expansion regime.
 Thus the source paper contributes a defined mathematical block, while the
 gravitational attachment and a sustained rotating hierarchy remain further
 connections to calculate.
+
+### 16.7.1. Finite circulation now carries a gravitational readout
+
+<!-- nsc-claim:finite-flow-gravity -->
+
+The [new continuation](../docs/nsc-atlas-flow-gravity.md) evolves the retained
+compact mode on a declared periodic cube [-2,2)^3, at viscosity .001 and
+without forcing, through t=.05. A dealiased Fourier Galerkin method and
+SSPRK3 are checked against exact Beltrami decay and Taylor--Green pressure.
+Three spatial resolutions and one half-time-step control give:
+
+| Grid, step | Generated inner circulation velocity | Generated outer circulation velocity | Final energy |
+| --- | --- | --- | --- |
+| 64, .001 | -.34496010 | .10598034 | 5.37735345 |
+| 96, .001 | -.31452503 | .11972764 | 5.39003952 |
+| 128, .001 | -.32027250 | .11367327 | 5.39173769 |
+| 128, .0005 | -.32027248 | .11367327 | 5.39173769 |
+
+The last spatial differences contract, with empirical twice-difference
+indicators .01149 and .01211 for the two generated means. The fine initial
+projection/readout offsets are -.00059380 and .00341907 and are subtracted.
+The maximum energy-account residual is 1.81e-9. These are finite numerical
+controls, not certified continuum error bounds. The
+[record](../results/summaries/nsc-atlas-flow-evolution-v1.json) retains all
+initial errors, time comparisons and the compact history. No further grid
+scan or singularity claim follows from this run.
+
+Apply [Bredberg et al.](https://arxiv.org/html/1101.2451v2), equations 14--25,
+to the same fluid state. Three fluid spatial dimensions lift to five
+spacetime dimensions, with cutoff r_c=nu and 16pi G5=1. In slow coordinates
+y=epsilon x, t=epsilon^2 tau, the proper boundary density and leading
+Lorentzian Riemann-squared coefficient obey
+
+$$
+\int\frac{\rho_{\rm BY}}{\epsilon^2}\,d^3y
+=\frac{2E}{\nu^{3/2}},\qquad
+\mathcal K=\epsilon^4\mathcal K_4+\cdots,\qquad
+\int\mathcal K_4\,d^3y=-\frac{3D}{\nu^3}.
+$$
+
+The continuum initial coefficients are 346366.913683 and -5.167803776e9;
+the fine endpoint gives 341003.433221 and -4.971995004e9. The powers of
+epsilon and the integration coordinates are part of these statements.
+The negative contraction is allowed in Lorentzian geometry; it is not
+a Ricci scalar or cosmological constant. The metric satisfies the published
+Einstein equations through cubic order, with additional numerical fluid
+error here. No complete four-dimensional cosmological attachment follows.
+
+### 16.7.2. Energy depletion determines an averaged geometric work term
+
+<!-- nsc-claim:boundary-work-closure -->
+
+The gravitational energy account exposes a further requirement. On a closed
+flat cutoff, exact vacuum Codazzi conservation conserves integrated
+Brown--York energy. The changing kinetic coefficient enters at fourth
+order, beyond the preceding metric's checked cubic order. It cannot simply
+be called an established loss of gravitational energy.
+
+Allow a homogeneous boundary scale b=1+epsilon^2 b2(t), b2(0)=0. Its
+background pressure is p0=1/sqrt(nu). Proper boundary time is
+sqrt(nu) tau, and the averaged fourth-order Ward identity gives
+
+$$
+\frac{d\bar\rho}{d\hat t}+3H_b p_0=0,
+\qquad
+\frac{db_2}{dt}=\frac{2D}{3V\nu},
+\qquad
+b_2(t)=\frac{2[E(0)-E(t)]}{3V\nu}.
+$$
+
+For V=64 the same finite flow yields b2(.05)=.877929728565, with an
+empirical refinement indicator .0139575. Integrated dissipation independently
+gives .877929726470 on the fine half-step run. This closes the averaged
+constraint with the specified strain and no added bulk flux; the local
+fourth-order bulk equations and horizon regularity remain unsolved.
+The [work record](../results/summaries/nsc-atlas-boundary-work-v1.json)
+retains that distinction.
+
+This is a concrete relation between decreasing kinetic energy and increasing
+boundary scale. It supplies neither an SI expansion rate nor a new dimension.
+Positive dissipation orders states monotonically along this branch; the
+existence of time is still assumed by its evolution law. The actual size
+change is epsilon^2 b2 and stays within the stated expansion regime.
+
+![Finite circulation, gravitational response, boundary work and horizon flux](figures/nsc-atlas-flow-gravity.png)
+
+### 16.7.3. A rotating horizon supplies an energy-transfer threshold
+
+<!-- nsc-claim:rotating-horizon-offset -->
+
+The [flux record](../results/summaries/nsc-atlas-flow-evolution-v1.json)
+retains the exact contractions, normalized controls and their scope.
+
+The inherited complex harmonic field can be tested on a regular stationary
+axisymmetric horizon. For generator k=xi+Omega_H eta and mode
+psi=A exp[i(m phi-omega t)], define
+
+$$
+\Delta_H=\omega-m\Omega_H,\qquad
+\mathcal N=2\int_H|A|^2dA.
+$$
+
+Direct stress contractions give the fluxes into the horizon:
+
+$$
+\mathcal F_E=\mathcal N\omega\Delta_H,\qquad
+\mathcal F_J=\mathcal N m\Delta_H,\qquad
+\mathcal F_E-\Omega_H\mathcal F_J=\mathcal N\Delta_H^2\geq0.
+$$
+
+For m=1 and omega/Omega_H=.5,1,1.5, the normalized energy fluxes are
+-.25,0,.75. The zero is synchronization; the negative channel extracts
+rotational Killing energy. These are supplied-mode controls, not a selected
+spectrum or a computed scattering gain. Internal charge reversal at the
+same positive frequency and external winding leaves the stress flux unchanged.
+The same time normalization must define the frequency, angular velocity
+and Killing energy.
+
+[Herdeiro--Radu](https://arxiv.org/html/1403.2757v3) connect this threshold
+to scalar clouds and asymptotically flat rotating hairy black holes;
+[Brito--Cardoso--Pani](https://arxiv.org/abs/1501.06570) develop the wider
+superradiance connection. Their complete solutions are not silently
+substituted for the atlas's positive-vacuum child. This calculation makes
+the proposed valve a definite energy/angular-momentum interface. The
+transition to a new expanding interior still requires its compatible metric,
+field state and conserved source.
 
 ### 16.8. A material action now supplies the interaction vertex
 
@@ -12488,3 +12743,98 @@ The following preserved dependency diagram records the original finite field-dev
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*
+
+<!-- nsc-source-catalog:start -->
+## Appendix C. Complete arXiv source route index
+
+The index contains 316 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
+
+A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
+
+| Recorded reading route | Source identifiers |
+| --- | --- |
+| Coupled finite scalar evolution, 23 October 2026 | [0710.4131](https://arxiv.org/abs/0710.4131), [gr-qc/0401113](https://arxiv.org/abs/gr-qc/0401113) |
+| Studies | [0711.1088 †](https://arxiv.org/abs/0711.1088), [0711.1178 †](https://arxiv.org/abs/0711.1178), [0805.2909 †](https://arxiv.org/abs/0805.2909), [0806.2683 †](https://arxiv.org/abs/0806.2683), [0901.0944 †](https://arxiv.org/abs/0901.0944) |
+| Studies | [0904.0612 †](https://arxiv.org/abs/0904.0612), [0907.5424 †](https://arxiv.org/abs/0907.5424), [0911.5074 †](https://arxiv.org/abs/0911.5074), [1001.2036 †](https://arxiv.org/abs/1001.2036), [1008.3630 †](https://arxiv.org/abs/1008.3630) |
+| Studies | [1008.3980 †](https://arxiv.org/abs/1008.3980), [1009.5179 †](https://arxiv.org/abs/1009.5179), [1101.1424 †](https://arxiv.org/abs/1101.1424), [1101.4012](https://arxiv.org/abs/1101.4012), [1106.3263 †](https://arxiv.org/abs/1106.3263) |
+| Studies | [1109.2524 †](https://arxiv.org/abs/1109.2524), [1109.6234 †](https://arxiv.org/abs/1109.6234), [1110.5019](https://arxiv.org/abs/1110.5019), [1111.3328 †](https://arxiv.org/abs/1111.3328), [1112.0475 †](https://arxiv.org/abs/1112.0475) |
+| Studies | [1210.2663 †](https://arxiv.org/abs/1210.2663), [1301.2430 †](https://arxiv.org/abs/1301.2430), [1305.3085 †](https://arxiv.org/abs/1305.3085), [1305.5178 †](https://arxiv.org/abs/1305.5178), [1307.3823 †](https://arxiv.org/abs/1307.3823) |
+| Studies | [1308.4552 †](https://arxiv.org/abs/1308.4552), [1309.0820 †](https://arxiv.org/abs/1309.0820), [1311.4182 †](https://arxiv.org/abs/1311.4182), [1312.2235 †](https://arxiv.org/abs/1312.2235), [1312.2960 †](https://arxiv.org/abs/1312.2960) |
+| Studies | [1404.0602 †](https://arxiv.org/abs/1404.0602), [1404.5635 †](https://arxiv.org/abs/1404.5635), [1405.0397 †](https://arxiv.org/abs/1405.0397), [1408.3203 †](https://arxiv.org/abs/1408.3203), [1408.6112 †](https://arxiv.org/abs/1408.6112) |
+| Studies | [1409.2471 †](https://arxiv.org/abs/1409.2471), [1503.03095 †](https://arxiv.org/abs/1503.03095), [1504.00351 †](https://arxiv.org/abs/1504.00351), [1506.02882 †](https://arxiv.org/abs/1506.02882), [1508.03272 †](https://arxiv.org/abs/1508.03272) |
+| Studies | [1509.02878 †](https://arxiv.org/abs/1509.02878), [1510.06930 †](https://arxiv.org/abs/1510.06930), [1512.00761 †](https://arxiv.org/abs/1512.00761), [1512.06074 †](https://arxiv.org/abs/1512.06074), [1601.04744 †](https://arxiv.org/abs/1601.04744) |
+| Studies | [1601.06809 †](https://arxiv.org/abs/1601.06809), [1605.01603 †](https://arxiv.org/abs/1605.01603), [1606.02728 †](https://arxiv.org/abs/1606.02728), [1606.05831 †](https://arxiv.org/abs/1606.05831), [1607.07791 †](https://arxiv.org/abs/1607.07791) |
+| Studies | [1609.01731 †](https://arxiv.org/abs/1609.01731), [1612.07281 †](https://arxiv.org/abs/1612.07281), [1704.03143 †](https://arxiv.org/abs/1704.03143), [1704.04807 †](https://arxiv.org/abs/1704.04807), [1708.02951 †](https://arxiv.org/abs/1708.02951) |
+| Studies | [1710.05834 †](https://arxiv.org/abs/1710.05834), [1710.10155 †](https://arxiv.org/abs/1710.10155), [1711.02080 †](https://arxiv.org/abs/1711.02080), [1712.03876 †](https://arxiv.org/abs/1712.03876), [1803.08827 †](https://arxiv.org/abs/1803.08827) |
+| Studies | [1803.08930 †](https://arxiv.org/abs/1803.08930), [1805.05107 †](https://arxiv.org/abs/1805.05107), [1807.06209 †](https://arxiv.org/abs/1807.06209), [1807.06211 †](https://arxiv.org/abs/1807.06211), [1807.08361 †](https://arxiv.org/abs/1807.08361) |
+| Studies | [1812.05590 †](https://arxiv.org/abs/1812.05590), [1902.02222 †](https://arxiv.org/abs/1902.02222), [1903.07543 †](https://arxiv.org/abs/1903.07543), [1905.08255 †](https://arxiv.org/abs/1905.08255), [1906.02552 †](https://arxiv.org/abs/1906.02552) |
+| Studies | [1908.08050 †](https://arxiv.org/abs/1908.08050), [1910.01648 †](https://arxiv.org/abs/1910.01648), [2003.08398 †](https://arxiv.org/abs/2003.08398), [2008.02136 †](https://arxiv.org/abs/2008.02136), [2008.10995 †](https://arxiv.org/abs/2008.10995) |
+| Studies | [2011.03547 †](https://arxiv.org/abs/2011.03547), [2012.06401 †](https://arxiv.org/abs/2012.06401), [2112.05819 †](https://arxiv.org/abs/2112.05819), [2206.00014 †](https://arxiv.org/abs/2206.00014), [2211.08477 †](https://arxiv.org/abs/2211.08477) |
+| Studies | [2306.01695 †](https://arxiv.org/abs/2306.01695), [2306.03780 †](https://arxiv.org/abs/2306.03780), [2306.14880 †](https://arxiv.org/abs/2306.14880), [2307.12190 †](https://arxiv.org/abs/2307.12190), [2307.12677 †](https://arxiv.org/abs/2307.12677) |
+| Studies | [2309.00873 †](https://arxiv.org/abs/2309.00873), [2309.10034 †](https://arxiv.org/abs/2309.10034), [2403.08705 †](https://arxiv.org/abs/2403.08705), [2405.14056 †](https://arxiv.org/abs/2405.14056), [2406.19108 †](https://arxiv.org/abs/2406.19108) |
+| Studies | [2407.06790 †](https://arxiv.org/abs/2407.06790), [2409.11398 †](https://arxiv.org/abs/2409.11398), [2410.16264 †](https://arxiv.org/abs/2410.16264), [2503.14744 †](https://arxiv.org/abs/2503.14744), [2503.19441 †](https://arxiv.org/abs/2503.19441) |
+| Studies | [2503.24263](https://arxiv.org/abs/2503.24263), [2504.05597 †](https://arxiv.org/abs/2504.05597), [2510.23823 †](https://arxiv.org/abs/2510.23823), [2601.14559 †](https://arxiv.org/abs/2601.14559), [2602.18761 †](https://arxiv.org/abs/2602.18761) |
+| Studies | [2608.23861 †](https://arxiv.org/abs/2608.23861), [astro-ph/0305457 †](https://arxiv.org/abs/astro-ph/0305457), [astro-ph/0607657 †](https://arxiv.org/abs/astro-ph/0607657), [astro-ph/0608407 †](https://arxiv.org/abs/astro-ph/0608407), [astro-ph/9805201 †](https://arxiv.org/abs/astro-ph/9805201) |
+| Studies | [astro-ph/9811018 †](https://arxiv.org/abs/astro-ph/9811018), [astro-ph/9812133 †](https://arxiv.org/abs/astro-ph/9812133), [cond-mat/0209642 †](https://arxiv.org/abs/cond-mat/0209642), [cond-mat/9404027 †](https://arxiv.org/abs/cond-mat/9404027), [gr-qc/0001069 †](https://arxiv.org/abs/gr-qc/0001069) |
+| Studies | [gr-qc/0007036 †](https://arxiv.org/abs/gr-qc/0007036), [gr-qc/0207080 †](https://arxiv.org/abs/gr-qc/0207080), [gr-qc/0212028 †](https://arxiv.org/abs/gr-qc/0212028), [gr-qc/0304007 †](https://arxiv.org/abs/gr-qc/0304007), [gr-qc/0404074 †](https://arxiv.org/abs/gr-qc/0404074) |
+| Studies | [gr-qc/0505065 †](https://arxiv.org/abs/gr-qc/0505065), [gr-qc/0506037 †](https://arxiv.org/abs/gr-qc/0506037), [gr-qc/0511109 †](https://arxiv.org/abs/gr-qc/0511109), [gr-qc/0605031 †](https://arxiv.org/abs/gr-qc/0605031), [gr-qc/0607039 †](https://arxiv.org/abs/gr-qc/0607039) |
+| Studies | [gr-qc/0611022 †](https://arxiv.org/abs/gr-qc/0611022), [gr-qc/9211002 †](https://arxiv.org/abs/gr-qc/9211002), [gr-qc/9211017 †](https://arxiv.org/abs/gr-qc/9211017), [gr-qc/9403008 †](https://arxiv.org/abs/gr-qc/9403008), [gr-qc/9406053 †](https://arxiv.org/abs/gr-qc/9406053) |
+| Studies | [gr-qc/9504004 †](https://arxiv.org/abs/gr-qc/9504004), [gr-qc/9505009 †](https://arxiv.org/abs/gr-qc/9505009), [gr-qc/9612057 †](https://arxiv.org/abs/gr-qc/9612057), [gr-qc/9801079 †](https://arxiv.org/abs/gr-qc/9801079), [gr-qc/9810032 †](https://arxiv.org/abs/gr-qc/9810032) |
+| Studies | [gr-qc/9901069 †](https://arxiv.org/abs/gr-qc/9901069), [gr-qc/9904021 †](https://arxiv.org/abs/gr-qc/9904021), [gr-qc/9906015 †](https://arxiv.org/abs/gr-qc/9906015), [hep-ph/0105021 †](https://arxiv.org/abs/hep-ph/0105021), [hep-ph/9912408 †](https://arxiv.org/abs/hep-ph/9912408) |
+| Studies | [hep-th/0011232 †](https://arxiv.org/abs/hep-th/0011232), [hep-th/0103138 †](https://arxiv.org/abs/hep-th/0103138), [hep-th/0103186 †](https://arxiv.org/abs/hep-th/0103186), [hep-th/0204253 †](https://arxiv.org/abs/hep-th/0204253), [hep-th/0206054 †](https://arxiv.org/abs/hep-th/0206054) |
+| Studies | [hep-th/0207060 †](https://arxiv.org/abs/hep-th/0207060), [hep-th/0306138](https://arxiv.org/abs/hep-th/0306138), [hep-th/0507253 †](https://arxiv.org/abs/hep-th/0507253), [hep-th/0602146 †](https://arxiv.org/abs/hep-th/0602146), [hep-th/9502109 †](https://arxiv.org/abs/hep-th/9502109) |
+| Studies | [hep-th/9606001 †](https://arxiv.org/abs/hep-th/9606001), [hep-th/9807038 †](https://arxiv.org/abs/hep-th/9807038), [hep-th/9905177 †](https://arxiv.org/abs/hep-th/9905177), [math-ph/0201055 †](https://arxiv.org/abs/math-ph/0201055), [math-ph/0403050 †](https://arxiv.org/abs/math-ph/0403050) |
+| Studies | [math/0304347 †](https://arxiv.org/abs/math/0304347), [physics/0503066 †](https://arxiv.org/abs/physics/0503066), [quant-ph/0102125 †](https://arxiv.org/abs/quant-ph/0102125), [quant-ph/9609002 †](https://arxiv.org/abs/quant-ph/9609002) |
+| How to approach the work | [0711.2198](https://arxiv.org/abs/0711.2198v1), [0811.1989](https://arxiv.org/abs/0811.1989), [1004.3962](https://arxiv.org/abs/1004.3962), [1010.5367 †](https://arxiv.org/abs/1010.5367), [1109.0011](https://arxiv.org/abs/1109.0011) |
+| How to approach the work | [1307.4371](https://arxiv.org/abs/1307.4371), [1503.06311](https://arxiv.org/abs/1503.06311), [1608.01002 †](https://arxiv.org/abs/1608.01002), [1903.02841 †](https://arxiv.org/abs/1903.02841), [2302.07878](https://arxiv.org/abs/2302.07878) |
+| How to approach the work | [2306.08199](https://arxiv.org/abs/2306.08199), [2306.09412](https://arxiv.org/abs/2306.09412), [2312.16282 †](https://arxiv.org/abs/2312.16282), [2401.05483 †](https://arxiv.org/abs/2401.05483), [2506.19907 †](https://arxiv.org/abs/2506.19907) |
+| How to approach the work | [2603.03425](https://arxiv.org/abs/2603.03425), [astro-ph/0003365 †](https://arxiv.org/abs/astro-ph/0003365), [gr-qc/0109035](https://arxiv.org/abs/gr-qc/0109035), [gr-qc/0507031](https://arxiv.org/abs/gr-qc/0507031v2), [gr-qc/9910076](https://arxiv.org/abs/gr-qc/9910076v3) |
+| How to approach the work | [hep-ph/0212332](https://arxiv.org/abs/hep-ph/0212332), [hep-ph/9408387](https://arxiv.org/abs/hep-ph/9408387), [hep-th/0103019](https://arxiv.org/abs/hep-th/0103019), [hep-th/0212134](https://arxiv.org/abs/hep-th/0212134), [hep-th/9911055](https://arxiv.org/abs/hep-th/9911055v3) |
+| Atlas reuse library, 10 October 2026 | [0803.0268 †](https://arxiv.org/abs/0803.0268v2), [0909.1101](https://arxiv.org/abs/0909.1101v1), [0910.4930 †](https://arxiv.org/abs/0910.4930v1), [0911.4208 †](https://arxiv.org/abs/0911.4208v1), [1004.1355](https://arxiv.org/abs/1004.1355v1) |
+| Atlas reuse library, 10 October 2026 | [1106.4318 †](https://arxiv.org/abs/1106.4318v1), [1302.1293](https://arxiv.org/abs/1302.1293v2), [1305.6933 †](https://arxiv.org/abs/1305.6933v2), [1309.7591](https://arxiv.org/abs/1309.7591v2), [1401.1189 †](https://arxiv.org/abs/1401.1189v1) |
+| Atlas reuse library, 10 October 2026 | [1405.3386 †](https://arxiv.org/abs/1405.3386v4), [1408.4995 †](https://arxiv.org/abs/1408.4995v2), [1512.02120 †](https://arxiv.org/abs/1512.02120v2), [1610.02951 †](https://arxiv.org/abs/1610.02951v1), [1801.04539 †](https://arxiv.org/abs/1801.04539v1) |
+| Atlas reuse library, 10 October 2026 | [1803.08928](https://arxiv.org/abs/1803.08928v3), [1807.04726 †](https://arxiv.org/abs/1807.04726v3), [1809.00935 †](https://arxiv.org/abs/1809.00935v1), [1901.07524 †](https://arxiv.org/abs/1901.07524v1), [1907.02619 †](https://arxiv.org/abs/1907.02619v1) |
+| Atlas reuse library, 10 October 2026 | [1910.07534 †](https://arxiv.org/abs/1910.07534v2), [2004.02900](https://arxiv.org/abs/2004.02900v2), [2005.04090 †](https://arxiv.org/abs/2005.04090v1), [2007.11556 †](https://arxiv.org/abs/2007.11556v2), [2012.07821](https://arxiv.org/abs/2012.07821v2) |
+| Atlas reuse library, 10 October 2026 | [2102.01841 †](https://arxiv.org/abs/2102.01841v3), [2109.09814 †](https://arxiv.org/abs/2109.09814v1), [2201.03839 †](https://arxiv.org/abs/2201.03839v1), [2205.13556 †](https://arxiv.org/abs/2205.13556v1), [2210.13960 †](https://arxiv.org/abs/2210.13960v1) |
+| Atlas reuse library, 10 October 2026 | [2303.03562 †](https://arxiv.org/abs/2303.03562), [2308.10906 †](https://arxiv.org/abs/2308.10906v1), [2406.14982 †](https://arxiv.org/abs/2406.14982v2), [2412.09558 †](https://arxiv.org/abs/2412.09558v1), [2503.18515 †](https://arxiv.org/abs/2503.18515v3) |
+| Atlas reuse library, 10 October 2026 | [2503.24162 †](https://arxiv.org/abs/2503.24162v3), [2507.03581 †](https://arxiv.org/abs/2507.03581), [2508.00686 †](https://arxiv.org/abs/2508.00686v1), [2601.01861 †](https://arxiv.org/abs/2601.01861v1), [2604.27897 †](https://arxiv.org/abs/2604.27897v1) |
+| Atlas reuse library, 10 October 2026 | [gr-qc/0008008 †](https://arxiv.org/abs/gr-qc/0008008v1), [gr-qc/0201054 †](https://arxiv.org/abs/gr-qc/0201054v1), [gr-qc/0203053 †](https://arxiv.org/abs/gr-qc/0203053v3), [gr-qc/0301073 †](https://arxiv.org/abs/gr-qc/0301073v2), [gr-qc/0309078 †](https://arxiv.org/abs/gr-qc/0309078v1) |
+| Atlas reuse library, 10 October 2026 | [gr-qc/0403066 †](https://arxiv.org/abs/gr-qc/0403066v2), [gr-qc/0506126 †](https://arxiv.org/abs/gr-qc/0506126v2), [gr-qc/0507063 †](https://arxiv.org/abs/gr-qc/0507063v2), [gr-qc/0508093](https://arxiv.org/abs/gr-qc/0508093v2), [gr-qc/0603031 †](https://arxiv.org/abs/gr-qc/0603031v1) |
+| Atlas reuse library, 10 October 2026 | [gr-qc/0606009 †](https://arxiv.org/abs/gr-qc/0606009v2), [gr-qc/9307009 †](https://arxiv.org/abs/gr-qc/9307009v2), [gr-qc/9403003 †](https://arxiv.org/abs/gr-qc/9403003v1), [gr-qc/9404011 †](https://arxiv.org/abs/gr-qc/9404011v1), [gr-qc/9708008 †](https://arxiv.org/abs/gr-qc/9708008v2) |
+| Atlas reuse library, 10 October 2026 | [hep-th/0110007 †](https://arxiv.org/abs/hep-th/0110007v2), [hep-th/0308108 †](https://arxiv.org/abs/hep-th/0308108v2), [hep-th/0602194 †](https://arxiv.org/abs/hep-th/0602194v2), [hep-th/9511136](https://arxiv.org/abs/hep-th/9511136v1), [math-ph/0212025 †](https://arxiv.org/abs/math-ph/0212025v1) |
+| Oscillating scalar source and the controlled parent — 28 October 2026 | [0902.4738](https://arxiv.org/abs/0902.4738) |
+| Two material levels and physical gravitational composition, 27 October 2026 | [0909.0287](https://arxiv.org/abs/0909.0287v2), [1510.07674](https://arxiv.org/abs/1510.07674), [2310.13946](https://arxiv.org/abs/2310.13946), [gr-qc/0301078](https://arxiv.org/abs/gr-qc/0301078v2), [gr-qc/0310107](https://arxiv.org/abs/gr-qc/0310107v2) |
+| Main-manuscript references | [1002.3912](https://arxiv.org/abs/1002.3912), [1005.3493](https://arxiv.org/abs/1005.3493), [1011.5797](https://arxiv.org/abs/1011.5797), [1203.6191](https://arxiv.org/abs/1203.6191v2), [1308.1142](https://arxiv.org/abs/1308.1142) |
+| Main-manuscript references | [astro-ph/9811257](https://arxiv.org/abs/astro-ph/9811257), [gr-qc/0305099](https://arxiv.org/abs/gr-qc/0305099v2) |
+| Dynamics and lensing across probe channels, 26 October 2026 | [1003.2185](https://arxiv.org/abs/1003.2185), [2601.13912](https://arxiv.org/abs/2601.13912v2) |
+| Evolving real-scalar envelopes and the parent clock, 25 October 2026 | [1007.0388](https://arxiv.org/abs/1007.0388) |
+| Horizon-only handoff and charge, 30 October 2026 | [1007.2990](https://arxiv.org/abs/1007.2990), [gr-qc/0207101](https://arxiv.org/abs/gr-qc/0207101), [hep-ph/9302210](https://arxiv.org/abs/hep-ph/9302210) |
+| Flow, interface stress and horizon hydrodynamics, 27 October 2026 | [1008.1911 †](https://arxiv.org/abs/1008.1911), [1101.2451](https://arxiv.org/abs/1101.2451v2), [1307.7267](https://arxiv.org/abs/1307.7267), [1510.00621 †](https://arxiv.org/abs/1510.00621), [gr-qc/0411060](https://arxiv.org/abs/gr-qc/0411060v2) |
+| Flow, interface stress and horizon hydrodynamics, 27 October 2026 | [gr-qc/9209012](https://arxiv.org/abs/gr-qc/9209012), [gr-qc/9712010](https://arxiv.org/abs/gr-qc/9712010v2), [hep-th/0405231 †](https://arxiv.org/abs/hep-th/0405231) |
+| Spacetime arrival maps and the forming source, 25 October 2026 | [1010.3416](https://arxiv.org/abs/1010.3416), [2011.04440](https://arxiv.org/abs/2011.04440v4) |
+| The owned gravitational spectral profile, 18 October 2026 | [1203.2034](https://arxiv.org/abs/1203.2034v2), [1410.7999](https://arxiv.org/abs/1410.7999v2) |
+| Connected flow, horizon transfer and observer geometry, 30 October 2026 | [1205.5600](https://arxiv.org/abs/1205.5600), [1403.2757](https://arxiv.org/abs/1403.2757v3), [1501.06570](https://arxiv.org/abs/1501.06570v8), [1807.09409](https://arxiv.org/abs/1807.09409) |
+| Spherical energy and the book's geometric hypothesis — 27 October 2026 | [1503.06705](https://arxiv.org/abs/1503.06705v2) |
+| Compact-seed nonlinear continuation, 25 October 2026 | [1504.05968](https://arxiv.org/abs/1504.05968), [gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015) |
+| Common-action wall transfer, 17 October 2026 | [1510.05515](https://arxiv.org/abs/1510.05515) |
+| Conserved profiles and spatial correlations, 25 October 2026 | [1511.02231](https://arxiv.org/abs/1511.02231v2), [1912.04872](https://arxiv.org/abs/1912.04872v5) |
+| Volume selection routes — 29 October 2026 | [1804.09985](https://arxiv.org/abs/1804.09985) |
+| Receiver lapse and observable frequency | [1807.09796](https://arxiv.org/abs/1807.09796) |
+| Shared ruler, Planck compression and dimensional conversion — 28 October 2026 | [1808.05724](https://arxiv.org/abs/1808.05724v1) |
+| Formation and metric regularity, 17 October 2026 | [1910.13915 †](https://arxiv.org/abs/1910.13915v3), [2501.18450 †](https://arxiv.org/abs/2501.18450v3) |
+| Curved scalar perturbations and their pressure scale | [2003.14108](https://arxiv.org/abs/2003.14108v2), [astro-ph/0103244](https://arxiv.org/abs/astro-ph/0103244) |
+| Actual cap--wall Dirac evolution, 18 October 2026 | [2108.11630 †](https://arxiv.org/abs/2108.11630v3), [2109.01375 †](https://arxiv.org/abs/2109.01375), [2503.03918 †](https://arxiv.org/abs/2503.03918), [2609.13358 †](https://arxiv.org/abs/2609.13358v1) |
+| Finite radial and angular perturbations, 25 October 2026 | [2109.01920](https://arxiv.org/abs/2109.01920v2), [math-ph/0208045](https://arxiv.org/abs/math-ph/0208045) |
+| Parent geometry against released distances — 28 October 2026 | [2202.04077](https://arxiv.org/abs/2202.04077v2), [2503.14738](https://arxiv.org/abs/2503.14738v3) |
+| Step 7 scalar trace input, 17 October 2026 | [2209.00577 †](https://arxiv.org/abs/2209.00577v2), [hep-th/0101105](https://arxiv.org/abs/hep-th/0101105v1), [hep-th/0208205 †](https://arxiv.org/abs/hep-th/0208205v3), [hep-th/9308075](https://arxiv.org/abs/hep-th/9308075) |
+| A physical mode vertex for the cosmohedron seed, 27 October 2026 | [2412.19881](https://arxiv.org/abs/2412.19881v1), [gr-qc/0502028](https://arxiv.org/abs/gr-qc/0502028) |
+| Fixed-worldline images and proper arrival variation, 24 October 2026 | [2512.23800](https://arxiv.org/abs/2512.23800v2), [gr-qc/9810017](https://arxiv.org/abs/gr-qc/9810017) |
+| Exact lens maps and scalar lens precedent, 23 October 2026 | [astro-ph/9403056](https://arxiv.org/abs/astro-ph/9403056), [astro-ph/9807039](https://arxiv.org/abs/astro-ph/9807039), [gr-qc/0001037 †](https://arxiv.org/abs/gr-qc/0001037) |
+| Lifetime and curvature — 29 October 2026 | [gr-qc/0311040](https://arxiv.org/abs/gr-qc/0311040), [hep-ph/9411206](https://arxiv.org/abs/hep-ph/9411206) |
+| Conserved structure and a reference exterior, 23 October 2026 | [gr-qc/0610045](https://arxiv.org/abs/gr-qc/0610045) |
+| Scalar mass, vacuum and supply scales, 24 October 2026 | [gr-qc/9710089](https://arxiv.org/abs/gr-qc/9710089) |
+| Physical normalization from internal volume — 28 October 2026 | [hep-ph/9907447](https://arxiv.org/abs/hep-ph/9907447v2), [hep-th/0004134](https://arxiv.org/abs/hep-th/0004134) |
+| Internal charge and horizon state, 30 October 2026 | [hep-th/9410046](https://arxiv.org/abs/hep-th/9410046) |
+| Self-gravitating scalar profiles and cooling | [math-ph/0208046](https://arxiv.org/abs/math-ph/0208046) |
+
+<!-- nsc-source-catalog:end -->

@@ -1,0 +1,320 @@
+{
+  "alternatives": "A source flux, nonhomogeneous work, or an additional allowed energy sector would alter this relation; the Ward identity alone does not select the strain ansatz.",
+  "assumptions": [
+    "same finite periodic fluid state and zero force",
+    "vacuum bulk flux through the cutoff, with Brown-York convention 16piG5=1",
+    "background boundary pressure p0=1/sqrt(nu), rho0=0",
+    "homogeneous boundary strain b=1+epsilon^2 b2(t), b2(0)=0",
+    "no additional order-epsilon^2 averaged energy mode or imposed source"
+  ],
+  "cases": [
+    {
+      "b2": 0.8473222330561784,
+      "b2_from_integrated_loss": 0.8473222144899422,
+      "db2_dslowtime": 16.719931684443363,
+      "dt": 0.001,
+      "endpoint": 0.05,
+      "flat_boundary_Ward_residual_over_epsilon4": -50159.79505333009,
+      "history": [
+        {
+          "b2": 0.0,
+          "db2_dslowtime": 17.16805944319479,
+          "flat_boundary_Ward_residual_over_epsilon4": -51504.17832958436,
+          "maximum_energy_budget_b2": 56.86142069663048,
+          "proper_H_over_epsilon4": 542.9017084565766,
+          "t": 0.0,
+          "work_term_over_epsilon4": 51504.17832958436
+        },
+        {
+          "b2": 0.17124539914976458,
+          "db2_dslowtime": 17.080815425855953,
+          "flat_boundary_Ward_residual_over_epsilon4": -51242.446277567855,
+          "maximum_energy_budget_b2": 56.86142069663048,
+          "proper_H_over_epsilon4": 540.1428103864371,
+          "t": 0.01,
+          "work_term_over_epsilon4": 51242.446277567855
+        },
+        {
+          "b2": 0.3416122501952538,
+          "db2_dslowtime": 16.992352745858163,
+          "flat_boundary_Ward_residual_over_epsilon4": -50977.058237574485,
+          "maximum_energy_budget_b2": 56.86142069663048,
+          "proper_H_over_epsilon4": 537.3453748192808,
+          "t": 0.02,
+          "work_term_over_epsilon4": 50977.058237574485
+        },
+        {
+          "b2": 0.5110884750420449,
+          "db2_dslowtime": 16.902694835569328,
+          "flat_boundary_Ward_residual_over_epsilon4": -50708.08450670799,
+          "maximum_energy_budget_b2": 56.86142069663048,
+          "proper_H_over_epsilon4": 534.5101427516432,
+          "t": 0.03,
+          "work_term_over_epsilon4": 50708.08450670799
+        },
+        {
+          "b2": 0.6796622791221766,
+          "db2_dslowtime": 16.81187456809307,
+          "flat_boundary_Ward_residual_over_epsilon4": -50435.62370427921,
+          "maximum_energy_budget_b2": 56.86142069663048,
+          "proper_H_over_epsilon4": 531.6381537223363,
+          "t": 0.04,
+          "work_term_over_epsilon4": 50435.62370427921
+        },
+        {
+          "b2": 0.8473222330561784,
+          "db2_dslowtime": 16.719931684443363,
+          "flat_boundary_Ward_residual_over_epsilon4": -50159.79505333009,
+          "maximum_energy_budget_b2": 56.86142069663048,
+          "proper_H_over_epsilon4": 528.730664452567,
+          "t": 0.05,
+          "work_term_over_epsilon4": 50159.79505333009
+        }
+      ],
+      "maximum_energy_budget_b2": 56.86142069663048,
+      "n": 64,
+      "proper_H_over_epsilon4": 528.730664452567,
+      "work_term_over_epsilon4": 50159.79505333009
+    },
+    {
+      "b2": 0.8709509893556622,
+      "b2_from_integrated_loss": 0.870950970494565,
+      "db2_dslowtime": 17.149628694472906,
+      "dt": 0.001,
+      "endpoint": 0.05,
+      "flat_boundary_Ward_residual_over_epsilon4": -51448.886083418714,
+      "history": [
+        {
+          "b2": 0.0,
+          "db2_dslowtime": 17.68633727551831,
+          "flat_boundary_Ward_residual_over_epsilon4": -53059.01182655493,
+          "maximum_energy_budget_b2": 57.01719596023846,
+          "proper_H_over_epsilon4": 559.2910925657483,
+          "t": 0.0,
+          "work_term_over_epsilon4": 53059.01182655493
+        },
+        {
+          "b2": 0.17633194017816858,
+          "db2_dslowtime": 17.57997459105503,
+          "flat_boundary_Ward_residual_over_epsilon4": -52739.9237731651,
+          "maximum_energy_budget_b2": 57.01719596023846,
+          "proper_H_over_epsilon4": 555.9276091562106,
+          "t": 0.01,
+          "work_term_over_epsilon4": 52739.9237731651
+        },
+        {
+          "b2": 0.3515979281095427,
+          "db2_dslowtime": 17.473141679986522,
+          "flat_boundary_Ward_residual_over_epsilon4": -52419.42503995957,
+          "maximum_energy_budget_b2": 57.01719596023846,
+          "proper_H_over_epsilon4": 552.5492558757836,
+          "t": 0.02,
+          "work_term_over_epsilon4": 52419.42503995957
+        },
+        {
+          "b2": 0.525793129683603,
+          "db2_dslowtime": 17.3658140915332,
+          "flat_boundary_Ward_residual_over_epsilon4": -52097.442274599605,
+          "maximum_energy_budget_b2": 57.01719596023846,
+          "proper_H_over_epsilon4": 549.1552595229267,
+          "t": 0.03,
+          "work_term_over_epsilon4": 52097.442274599605
+        },
+        {
+          "b2": 0.6989125219351485,
+          "db2_dslowtime": 17.257978152487564,
+          "flat_boundary_Ward_residual_over_epsilon4": -51773.934457462696,
+          "maximum_energy_budget_b2": 57.01719596023846,
+          "proper_H_over_epsilon4": 545.7451877128537,
+          "t": 0.04,
+          "work_term_over_epsilon4": 51773.934457462696
+        },
+        {
+          "b2": 0.8709509893556622,
+          "db2_dslowtime": 17.149628694472906,
+          "flat_boundary_Ward_residual_over_epsilon4": -51448.886083418714,
+          "maximum_energy_budget_b2": 57.01719596023846,
+          "proper_H_over_epsilon4": 542.3188770071426,
+          "t": 0.05,
+          "work_term_over_epsilon4": 51448.886083418714
+        }
+      ],
+      "maximum_energy_budget_b2": 57.01719596023846,
+      "n": 96,
+      "proper_H_over_epsilon4": 542.3188770071426,
+      "work_term_over_epsilon4": 51448.886083418714
+    },
+    {
+      "b2": 0.8779297411606138,
+      "b2_from_integrated_loss": 0.8779297244446744,
+      "db2_dslowtime": 17.263871508950412,
+      "dt": 0.001,
+      "endpoint": 0.05,
+      "flat_boundary_Ward_residual_over_epsilon4": -51791.61452685124,
+      "history": [
+        {
+          "b2": 0.0,
+          "db2_dslowtime": 17.854808478711444,
+          "flat_boundary_Ward_residual_over_epsilon4": -53564.425436134334,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 564.6186197881416,
+          "t": 0.0,
+          "work_term_over_epsilon4": 53564.425436134334
+        },
+        {
+          "b2": 0.17795255520387335,
+          "db2_dslowtime": 17.73580033702067,
+          "flat_boundary_Ward_residual_over_epsilon4": -53207.40101106201,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 560.8552519096727,
+          "t": 0.01,
+          "work_term_over_epsilon4": 53207.40101106201
+        },
+        {
+          "b2": 0.35471774799915773,
+          "db2_dslowtime": 17.617313972915,
+          "flat_boundary_Ward_residual_over_epsilon4": -52851.941918745,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 557.1083840872133,
+          "t": 0.02,
+          "work_term_over_epsilon4": 52851.941918745
+        },
+        {
+          "b2": 0.5303001735634342,
+          "db2_dslowtime": 17.499228350646963,
+          "flat_boundary_Ward_residual_over_epsilon4": -52497.68505194089,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 553.3741888343604,
+          "t": 0.03,
+          "work_term_over_epsilon4": 52497.68505194089
+        },
+        {
+          "b2": 0.7047033176406555,
+          "db2_dslowtime": 17.38144214448489,
+          "flat_boundary_Ward_residual_over_epsilon4": -52144.32643345467,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 549.6494619501373,
+          "t": 0.04,
+          "work_term_over_epsilon4": 52144.32643345467
+        },
+        {
+          "b2": 0.8779297411606138,
+          "db2_dslowtime": 17.263871508950412,
+          "flat_boundary_Ward_residual_over_epsilon4": -51791.61452685124,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 545.9315520077125,
+          "t": 0.05,
+          "work_term_over_epsilon4": 51791.61452685124
+        }
+      ],
+      "maximum_energy_budget_b2": 57.04186404713121,
+      "n": 128,
+      "proper_H_over_epsilon4": 545.9315520077125,
+      "work_term_over_epsilon4": 51791.61452685124
+    },
+    {
+      "b2": 0.8779297285654667,
+      "b2_from_integrated_loss": 0.8779297264698163,
+      "db2_dslowtime": 17.263871540309534,
+      "dt": 0.0005,
+      "endpoint": 0.05,
+      "flat_boundary_Ward_residual_over_epsilon4": -51791.6146209286,
+      "history": [
+        {
+          "b2": 0.0,
+          "db2_dslowtime": 17.854808478711444,
+          "flat_boundary_Ward_residual_over_epsilon4": -53564.425436134334,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 564.6186197881416,
+          "t": 0.0,
+          "work_term_over_epsilon4": 53564.425436134334
+        },
+        {
+          "b2": 0.1779525534184312,
+          "db2_dslowtime": 17.735800345409064,
+          "flat_boundary_Ward_residual_over_epsilon4": -53207.4010362272,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 560.855252174937,
+          "t": 0.01,
+          "work_term_over_epsilon4": 53207.4010362272
+        },
+        {
+          "b2": 0.35471774424487384,
+          "db2_dslowtime": 17.617313988207258,
+          "flat_boundary_Ward_residual_over_epsilon4": -52851.94196462177,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 557.1083845707969,
+          "t": 0.02,
+          "work_term_over_epsilon4": 52851.94196462177
+        },
+        {
+          "b2": 0.5303001674580495,
+          "db2_dslowtime": 17.499228371772396,
+          "flat_boundary_Ward_residual_over_epsilon4": -52497.685115317196,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 553.3741895024053,
+          "t": 0.03,
+          "work_term_over_epsilon4": 52497.685115317196
+        },
+        {
+          "b2": 0.7047033086343413,
+          "db2_dslowtime": 17.381442170867103,
+          "flat_boundary_Ward_residual_over_epsilon4": -52144.326512601314,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 549.6494627844162,
+          "t": 0.04,
+          "work_term_over_epsilon4": 52144.326512601314
+        },
+        {
+          "b2": 0.8779297285654667,
+          "db2_dslowtime": 17.263871540309534,
+          "flat_boundary_Ward_residual_over_epsilon4": -51791.6146209286,
+          "maximum_energy_budget_b2": 57.04186404713121,
+          "proper_H_over_epsilon4": 545.931552999375,
+          "t": 0.05,
+          "work_term_over_epsilon4": 51791.6146209286
+        }
+      ],
+      "maximum_energy_budget_b2": 57.04186404713121,
+      "n": 128,
+      "proper_H_over_epsilon4": 545.931552999375,
+      "work_term_over_epsilon4": 51791.6146209286
+    }
+  ],
+  "identities": {
+    "Poincare": "D>=2nu(2pi/L)^2 E; finite smooth interval E(t)<=E0 exp[-2nu(2pi/L)^2 t]",
+    "clocks": "t=epsilon^2 tau; t_hat=sqrt(nu) tau",
+    "energy": "rho_bar=2 epsilon^2 E/(V nu^(3/2)); E_prime=-D",
+    "exact_boundary_law": "d rho_bar/d t_hat + 3 H_b*(rho_bar+p_bar)=0 at the retained averaged order",
+    "integrated": "b2(t)=2(E(0)-E(t))/(3Vnu)",
+    "orientation": "D>=0 makes b2 nondecreasing; with zero mean periodic flow D=0 only for u=0.",
+    "residual": "Flat cutoff residual/epsilon^4=-2D/(Vnu^2)",
+    "selected_rate": "b2_prime=2D/(3Vnu)",
+    "work": "H_b/epsilon^4=b2_prime/sqrt(nu); 3H_b p0/epsilon^4=3b2_prime/nu"
+  },
+  "input_sha256": {
+    "results/summaries/nsc-atlas-flow-evolution-v1.json": "91f0e403be97a991a0708b55208ea25f659c6d942b5667ebf9a993def1d06fd2"
+  },
+  "lower_growth_coefficient": 0.014072779580160594,
+  "refinement": {
+    "empirical_indicator": 0.013957503609903332,
+    "half_step_change": 1.2595147147465013e-08,
+    "last_spatial_change": 0.006978751804951666,
+    "not_a_certified_bound": true
+  },
+  "schema": "nsc-atlas-boundary-work-v1",
+  "scope": {
+    "SI_scale_selected": false,
+    "accelerated_cosmology_predicted": false,
+    "average_Ward_identity_closed": true,
+    "horizon_regular_extension_solved": false,
+    "interpretation": "A conditional energy-versus-boundary-scale law and a dissipative ordering of states. It does not derive the existence of time or cosmological dark energy.",
+    "local_bulk_Einstein_order4_solved": false,
+    "new_dimension_created": false,
+    "time_origin_derived": false
+  },
+  "source_sha256": {
+    "scripts/check_nsc_atlas_boundary_work.py": "7b2584e69f24bc69a64f00c1a4c240eddf091706ddbf49eac700c763b26248e4",
+    "src/recursive_horizons/nsc_atlas_boundary_work.py": "5b3844bd95cc527f86718ab005037a5a44262ecf473f90e8f5329d00ca83d410"
+  }
+}

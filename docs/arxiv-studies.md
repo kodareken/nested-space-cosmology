@@ -1716,3 +1716,25 @@ borrowed structures, equations checked here and the remaining source problem.
 
 The [owner](nsc-atlas-inherited-charge.md) separates classical reduction,
 imported quantization, conditional state selection and measured eta.
+
+## Connected flow, horizon transfer and observer geometry, 30 October 2026
+
+- Bredberg et al., [1101.2451v2](https://arxiv.org/html/1101.2451v2),
+  equations 14--25 read directly: fluid/gravity metric, cutoff stress,
+  expansion order and leading curvature. The new finite state and the
+  fourth-order averaged boundary-work requirement are calculated separately.
+- Herdeiro--Radu, [1403.2757v3](https://arxiv.org/html/1403.2757v3), action,
+  horizon threshold and scalar cloud construction read directly; their full
+  asymptotically flat numerical solutions are not reproduced or reclassified.
+- Brito--Cardoso--Pani, [1501.06570v8](https://arxiv.org/abs/1501.06570v8),
+  abstract-level superradiance map; local scalar flux contractions are
+  independently derived in the atlas rather than quoted as a numeric gain.
+- Minamitsuji, [1205.5600](https://arxiv.org/pdf/1205.5600), anisotropic
+  background sections read as a comparison. The general Kasner--de Sitter
+  Ricci equations and directional redshifts are independently verified.
+- GRAVITY collaboration, [1807.09409](https://arxiv.org/abs/1807.09409):
+  S2 redshift result read at abstract/result level; no raw data are refitted.
+
+The [flow/gravity owner](nsc-atlas-flow-gravity.md) and
+[observer owner](nsc-atlas-observer-geometry.md) state the common equations,
+domain differences and remaining source/transition questions.

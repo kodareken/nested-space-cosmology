@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [flow/gravity connection](nsc-atlas-flow-gravity.md) now includes a
+finite fluid history and averaged geometric work closure. The
+[observer geometry](nsc-atlas-observer-geometry.md) gives exact optical
+and orbital tests. The [source map](nsc-atlas-source-map.md) indexes all
+recorded arXiv works and their places in the argument.
+
 The [inherited harmonic charge](nsc-atlas-inherited-charge.md) derives a
 geometric complex pair, tests orientation-preserving charge exchange, and
 calculates its conditional Euclidean state and horizon inheritance.

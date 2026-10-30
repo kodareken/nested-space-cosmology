@@ -2111,3 +2111,27 @@ of steps. Local fluctuations are retained explicitly. This closes the
 invariant-state route without deriving the requested baryon/photon eta.
 The required next source is an inherited internal current or an asymmetric
 preparation with its charge and photon interpretation supplied by the model.
+
+## Connected circulation, work and observation, 30 October 2026
+
+The current interpretation uses nested regions with three spatial dimensions
+each. Different regional metrics can give different travel/clock relations
+under a shared local light law. The golden-ratio proposal now also includes
+a possible statistical average of branching, to be selected by a physical
+branching and energy-transfer law rather than assigned to every local turn.
+
+The [finite circulation/gravity route](nsc-atlas-flow-gravity.md) now carries
+the earlier covariance source through finite evolution, a scoped curvature
+readout and an averaged boundary-work closure. The same state's depletion
+fixes a positive boundary scale coefficient. The independently derived
+rotating-horizon flux law gives a physical meaning to a frequency offset.
+The [observer calculations](nsc-atlas-observer-geometry.md) test stretching,
+radial drift and redshift without assigning those effects by name.
+
+The foundational proposal remains that regional contrast and inherited
+structure may underlie temporal ordering and observed matter asymmetry.
+Existing time-dependent equations do not prove that origin. A dimensional
+reset and an expanding daughter require a sourced continuation beyond these
+verified interfaces. The [complete source index](nsc-atlas-source-map.md)
+ties the existing library to the PDF argument without claiming all its
+different actions have already been joined.

@@ -180,6 +180,49 @@ a completed gravitational energy loss. A work term or a further state/
 geometry correction must close that next-order balance. Its calculation
 is the immediate continuation of this finite result.
 
+### The next-order averaged work relation
+
+The [boundary-work calculation](../results/summaries/nsc-atlas-boundary-work-v1.json)
+now supplies that average balance under a homogeneous boundary-strain ansatz.
+Let its spatial metric be b(t)^2 delta_ij, with b=1+epsilon^2 b2 and b2(0)=0.
+The mean density is 2epsilon^2 E/(Vnu^(3/2)), V=64; the background boundary
+pressure is p0=1/sqrt(nu). Vacuum Codazzi conservation gives, at fourth order,
+
+$$
+\frac{d\bar\rho}{d\hat t}+3H_b p_0=0,\qquad
+H_b=\frac{\epsilon^4}{\sqrt\nu}\frac{db_2}{dt}+\cdots.
+$$
+
+Terms H_b times the perturbed density/pressure enter at sixth order. Keeping
+the fourth-order terms and the same energy history gives
+
+$$
+\frac{db_2}{dt}=\frac{2D}{3V\nu},\qquad
+b_2(t)=\frac{2[E(0)-E(t)]}{3V\nu}.
+$$
+
+This is a calculated relation between energy depletion and increasing
+boundary scale. At the fine endpoint it gives **b2=.877929728565**. The
+96-to-128 difference is .00697875 and the half-step difference is 1.26e-8;
+twice their maximum is an empirical .0139575 indicator. Direct integrated
+dissipation agrees to 2.10e-9 in b2 for the half-step run.
+
+The actual scale correction is epsilon^2 b2; epsilon remains the formal
+hydrodynamic parameter, not a selected cosmological scale. This closes
+the averaged Ward identity with the declared homogeneous strain and no
+extra bulk source. It does not solve the local fourth-order Einstein
+equations or select this strain ansatz over other possible source/work
+completions. The positive work term comes from geometric boundary pressure;
+the incompressible fluid pressure itself does no net work on its periodic
+kinetic energy.
+
+For zero-mean periodic flow, D>=2nu(2pi/L)^2 E and D=0 only at rest. Energy
+therefore provides a monotone ordering of this dissipative branch, and b2
+increases with the energy transferred. This gives an arrow along an already
+specified evolution; it does not derive the existence of time. The run's
+loss decreases slightly, so this is not a late-time accelerating-cosmology
+prediction. It is a finite, source-linked energy/geometry relation.
+
 ## 4. The rotating horizon has a calculable transfer threshold
 
 The complex harmonic field already derived from the internal geometry has
@@ -235,11 +278,18 @@ horizon mode -> signed energy and angular-momentum transfer. Both use
 explicit tensors and conservation equations. The remaining edge joins
 their geometry, source and state to an evolving parent and child.
 
-Douglas's one-coordinate reset can be used as a reduced generating
-description. It is not yet a physical rank change of the spacetime metric.
-A new expanding region requires a regular interior solution and compatible
-transition data; a new physical dimension would require a further defined
-geometric construction. Neither follows from a horizon flux alone.
+Douglas's clarified one-coordinate reset is a reduced generating
+description for another region with three spatial dimensions. It does not
+require a change in the number of spatial coordinates. A new expanding
+region still requires a regular interior solution and compatible transition
+data; a horizon flux supplies part of that data, not the complete birth.
+
+The later golden-ratio proposal concerns a statistical outcome of branching.
+That is different from identifying every geodesic spiral or every radius
+ratio with phi. A branching mechanism, energy allocation and relative clock
+map must determine that average. The present finite work relation gives one
+geometric response to depletion; it does not yet select a branching law or
+show that the rate accelerates through a region's full history.
 
 Independent source reviews by Grok check the boundary normalizations and
 the horizon contractions. Numerical controls test known exact flows, direct
