@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "2ed1aea000a3bbf799b49d3188875a5e4ff08fe7",
+  "current_receipt_commit_parent": "771c5a7879cd23a6f80fa927c827e77717ff3fbc",
   "files": [
     {
       "bytes": 3120,
@@ -10650,12 +10650,12 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 3732,
+      "bytes": 4569,
       "change": "Add passive resolved parent history and canonical bosonic fluctuation transport, keeping inherited covariance explicit and physical evolution unchanged.",
-      "changed_from_commit": "2ed1aea000a3bbf799b49d3188875a5e4ff08fe7",
+      "changed_from_commit": "771c5a7879cd23a6f80fa927c827e77717ff3fbc",
       "path": "docs/nsc-atlas-boson-transport.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "6fe9d50805bd543a0ff60f840913e256749b66c088c0b781a09072c001647bb0"
+      "sha256": "28b5d1450849991706d6c5f898511cc715ddbd97b399243cba1c6d8671746c68"
     },
     {
       "bytes": 11063,
@@ -31310,6 +31310,14 @@
       "sha256": "3ba2c409a11249408396cbd4a8342d3016a99b21522558f9fcf95cfd78372595"
     },
     {
+      "bytes": 13498,
+      "change": "Add passive resolved parent history and canonical bosonic fluctuation transport, keeping inherited covariance explicit and physical evolution unchanged.",
+      "changed_from_commit": "771c5a7879cd23a6f80fa927c827e77717ff3fbc",
+      "path": "results/summaries/nsc-atlas-gh-history-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9e833ee8d57e1f895dcc0fcedb159667513de68c3ddd9976f11bc97276107cd8"
+    },
+    {
       "bytes": 21491,
       "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
       "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
@@ -35998,6 +36006,14 @@
       "sha256": "8892a722325da7d8a0bf3b6271972c995fe99cfaa124d4f23e576b6900c7afa6"
     },
     {
+      "bytes": 10211,
+      "change": "Add passive resolved parent history and canonical bosonic fluctuation transport, keeping inherited covariance explicit and physical evolution unchanged.",
+      "changed_from_commit": "771c5a7879cd23a6f80fa927c827e77717ff3fbc",
+      "path": "scripts/propagate_nsc_atlas_boson_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9a00bac61fdb94f6b09b7d9c677685b50c6fa24ba3216f57484ee203f79f6969"
+    },
+    {
       "bytes": 15988,
       "path": "scripts/rebind_nsc_prepared_history_receipts.py",
       "retention_reason": "Authorized prepared-history receipt metadata verification",
@@ -36396,6 +36412,14 @@
       "path": "src/recursive_horizons/nsc_atlas_boson_hamiltonian.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "1ca80b1e8f7945125fe34b9311d519479bbcd7175007ffe83b5770ee967c3f8f"
+    },
+    {
+      "bytes": 8579,
+      "change": "Add passive resolved parent history and canonical bosonic fluctuation transport, keeping inherited covariance explicit and physical evolution unchanged.",
+      "changed_from_commit": "771c5a7879cd23a6f80fa927c827e77717ff3fbc",
+      "path": "src/recursive_horizons/nsc_atlas_boson_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9bdc3cf1fdb89ec58b11243d2b5d54937664a772320149e684d74e842b17cd4a"
     },
     {
       "bytes": 11110,
@@ -41070,12 +41094,20 @@
       "sha256": "da3309c94929bfff47b1fbcfe7f8a63d68e3ac70e2879fb3eb8142a9041df69a"
     },
     {
-      "bytes": 6086,
+      "bytes": 6071,
       "change": "Add passive resolved parent history and canonical bosonic fluctuation transport, keeping inherited covariance explicit and physical evolution unchanged.",
-      "changed_from_commit": "2ed1aea000a3bbf799b49d3188875a5e4ff08fe7",
+      "changed_from_commit": "771c5a7879cd23a6f80fa927c827e77717ff3fbc",
+      "path": "tests/test_nsc_atlas_boson_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "77c1087417ddb5e29f5f1911a8a7fa00868f0900c62c197a1ec31723e7d0b9d5"
+    },
+    {
+      "bytes": 6780,
+      "change": "Add passive resolved parent history and canonical bosonic fluctuation transport, keeping inherited covariance explicit and physical evolution unchanged.",
+      "changed_from_commit": "771c5a7879cd23a6f80fa927c827e77717ff3fbc",
       "path": "tests/test_nsc_atlas_boson_transport.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "4efd990dbb7f10de85acec02413cf034b5bf8ef27c7ef6db67578a1455bacf73"
+      "sha256": "d531f95a4b8b1847c3033e2f73215c6a9d0c712872cd1313b34a238c9b5abfc2"
     },
     {
       "bytes": 1183,

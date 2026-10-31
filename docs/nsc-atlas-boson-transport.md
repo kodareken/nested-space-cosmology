@@ -61,10 +61,29 @@ $$
 
 The retarded response is state independent. Noise and reduced entropy
 depend on the incoming covariance and its cross correlations. The full
-symplectic spectrum and Gaussian entropy are preserved. An invertible M
+retained-sector symplectic spectrum and Gaussian entropy are preserved. An invertible M
 cannot map two distinct full incoming covariances to the same finite-time
 state; coarse local limits remain a separate question. No instantaneous
 vacuum reset or fitted fluctuation width is introduced.
+
+There is an exact onset connection. For an initial chi-momentum kick f,
+with both field displacements and S momentum zero, successive canonical
+equations give q_S(0)=q_S'(0)=q_S''(0)=0 and
+
+$$
+q_S(t)=-\frac{(t-t_0)^3}{6}A_S(t_0)K_{S\chi}(t_0)A_\chi(t_0)f
++O((t-t_0)^4).
+$$
+
+The kinetic and shift matrices are field diagonal, so their time
+derivatives cannot create an earlier cross-field term. Nonzero inherited
+mixing gives a covariance-independent response. The observer's induced
+delta log(g_KK) is -7 delta S/sqrt(84), evaluated on the fixed background
+geodesic. This excludes metric/observer-displacement perturbations.
+
+The finite harmonic projection is retarded in time; it does not establish
+the exact spatial light-cone support of a continuum field. The prescribed
+source harmonics have global spatial support.
 
 ## Implementation and stopping conditions
 

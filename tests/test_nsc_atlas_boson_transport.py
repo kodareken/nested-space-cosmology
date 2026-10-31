@@ -19,6 +19,23 @@ def oscillator(omega,t):
     return np.array([[c,s/omega],[-omega*s,c]])
 
 
+def test_cubic_cross_response_from_time_dependent_canonical_equations():
+    import sympy as s
+    J=s.Matrix([[0,0,1,0],[0,0,0,1],[-1,0,0,0],[0,-1,0,0]])
+    coefficients=[];generators=[]
+    for order in range(3):
+        a,b,ks,kc,mix,bs,bc=s.symbols('a%d b%d ks%d kc%d mix%d bs%d bc%d'%((order,)*7))
+        coefficients.append((a,b,mix))
+        G=s.Matrix([[ks,mix,bs,0],[mix,kc,0,bc],[bs,0,a,0],[0,bc,0,b]])
+        generators.append(J*G)
+    D,D1,D2=generators;v=s.Matrix([0,0,0,1])
+    first=D*v;second=(D1+D*D)*v
+    third=(D2+2*D1*D+D*D1+D**3)*v
+    a,b,mix=coefficients[0]
+    assert s.simplify(first[0])==0 and s.simplify(second[0])==0
+    assert s.simplify(third[0]+a*mix*b)==0
+
+
 def test_constant_oscillator_exact_map_and_retarded_normalization():
     omega=3.7
     result=propagate(lambda t:np.diag([omega**2,1.]),[0.,.37,1.3],max_step=.23,checkpoints=[.4,.9])

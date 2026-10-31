@@ -1741,9 +1741,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2688123,
+      "bytes": 2690150,
       "path": "docs/lab-snapshot.json",
-      "sha256": "a6714877c6fb9c0238760b850ff18a75275af1cec266cd650c16631b1564d3bb"
+      "sha256": "8dc4a622d43829069d3cf419f17e2bac33dcac3f6d5e6be2f873320bf8791a71"
     },
     {
       "bytes": 4997,
@@ -1751,9 +1751,9 @@
       "sha256": "60be356cb4abdd49a7f8915796b9a4682ffea1bde97f1cc952baa5aa7a7dcc99"
     },
     {
-      "bytes": 3732,
+      "bytes": 4569,
       "path": "docs/nsc-atlas-boson-transport.md",
-      "sha256": "6fe9d50805bd543a0ff60f840913e256749b66c088c0b781a09072c001647bb0"
+      "sha256": "28b5d1450849991706d6c5f898511cc715ddbd97b399243cba1c6d8671746c68"
     },
     {
       "bytes": 12471,
@@ -15606,6 +15606,11 @@
       "sha256": "3ba2c409a11249408396cbd4a8342d3016a99b21522558f9fcf95cfd78372595"
     },
     {
+      "bytes": 13498,
+      "path": "results/summaries/nsc-atlas-gh-history-v1.json",
+      "sha256": "9e833ee8d57e1f895dcc0fcedb159667513de68c3ddd9976f11bc97276107cd8"
+    },
+    {
       "bytes": 21491,
       "path": "results/summaries/nsc-atlas-golden-vortex-v1.json",
       "sha256": "93aa89f40ebad06f42814938136585badc629dfcf0d08f0d3cbd8d3c66c4b76a"
@@ -18441,6 +18446,11 @@
       "sha256": "8892a722325da7d8a0bf3b6271972c995fe99cfaa124d4f23e576b6900c7afa6"
     },
     {
+      "bytes": 10211,
+      "path": "scripts/propagate_nsc_atlas_boson_parent.py",
+      "sha256": "9a00bac61fdb94f6b09b7d9c677685b50c6fa24ba3216f57484ee203f79f6969"
+    },
+    {
       "bytes": 15988,
       "path": "scripts/rebind_nsc_prepared_history_receipts.py",
       "sha256": "3ba886fe408e5758c3b66beff06e83fb4d67cc07cf377a3f97fcf732d88aefaa"
@@ -18919,6 +18929,11 @@
       "bytes": 7839,
       "path": "src/recursive_horizons/nsc_atlas_boson_hamiltonian.py",
       "sha256": "1ca80b1e8f7945125fe34b9311d519479bbcd7175007ffe83b5770ee967c3f8f"
+    },
+    {
+      "bytes": 8579,
+      "path": "src/recursive_horizons/nsc_atlas_boson_parent.py",
+      "sha256": "9bdc3cf1fdb89ec58b11243d2b5d54937664a772320149e684d74e842b17cd4a"
     },
     {
       "bytes": 11110,
@@ -21691,9 +21706,14 @@
       "sha256": "da3309c94929bfff47b1fbcfe7f8a63d68e3ac70e2879fb3eb8142a9041df69a"
     },
     {
-      "bytes": 6086,
+      "bytes": 6071,
+      "path": "tests/test_nsc_atlas_boson_parent.py",
+      "sha256": "77c1087417ddb5e29f5f1911a8a7fa00868f0900c62c197a1ec31723e7d0b9d5"
+    },
+    {
+      "bytes": 6780,
       "path": "tests/test_nsc_atlas_boson_transport.py",
-      "sha256": "4efd990dbb7f10de85acec02413cf034b5bf8ef27c7ef6db67578a1455bacf73"
+      "sha256": "d531f95a4b8b1847c3033e2f73215c6a9d0c712872cd1313b34a238c9b5abfc2"
     },
     {
       "bytes": 1183,
@@ -24871,7 +24891,7 @@
       "sha256": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
     }
   ],
-  "lab_snapshot_sha256": "a6714877c6fb9c0238760b850ff18a75275af1cec266cd650c16631b1564d3bb",
+  "lab_snapshot_sha256": "8dc4a622d43829069d3cf419f17e2bac33dcac3f6d5e6be2f873320bf8791a71",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-31.03",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
