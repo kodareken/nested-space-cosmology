@@ -1,11 +1,15 @@
 """Analytic focusing and regular caustic continuation in the compact frame."""
 import math
+import hashlib
+import json
+from pathlib import Path
+import subprocess
 
 import numpy as np
 import pytest
 
 from recursive_horizons.nsc_atlas_null_transport import (
-    STATE_SIZE,pack_null_state,transport_null_bundle,unpack_null_state,
+    STATE_SIZE,DenseNullBundle,pack_null_state,transport_null_bundle,unpack_null_state,
 )
 
 
@@ -214,3 +218,83 @@ def test_passive_dense_archive_records_every_step_without_steering_bundle(tmp_pa
     expected=math.sin(radius-r*t)/math.sin(radius)
     np.testing.assert_allclose(state['D'],expected*np.eye(2)[None,:,:],atol=2e-11,rtol=2e-11)
     np.testing.assert_allclose(state['affine_lambda'],t,atol=2e-13)
+
+
+def dense_reader_fixture(tmp_path,*,metadata_changes=None,focus=False):
+    """Synthetic archive-format fixture; no physical trajectory claim."""
+    from recursive_horizons.nsc_atlas_gh_history import DenseGHHistory
+    root=Path(__file__).resolve().parents[1]
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
+    name='src/recursive_horizons/nsc_atlas_null_transport.py'
+    blob=subprocess.check_output(['git','show',commit+':'+name],cwd=root)
+    sources={name:hashlib.sha256(blob).hexdigest()}
+    parent=dict(producer_commit='a'*40,cache_sha256='b'*64,record_sha256='c'*64)
+    metadata=dict(schema='nsc-null-ray-dense-v1',producer_commit=commit,source_sha256=sources,
+        parent_history=parent,rays=3,angular_rays=2,protected_probe_rays=1,angular_order=[1,2],
+        coordinate_interval=[0.,1.],seed='reader_fixture')
+    metadata.update(metadata_changes or {})
+    base=np.zeros((3,STATE_SIZE));base[:,3]=1.;base[:,4]=1.
+    base[:,16:20]=np.eye(2).ravel();velocity=np.zeros_like(base)
+    velocity[:,24]=np.arange(1,4);velocity[:,25]=np.arange(3)
+    velocity[:,16]=-.5 if focus else .02
+    velocity[:,19]=-2. if focus else .01
+    history=DenseGHHistory()
+    for left,right in ((0.,.5),(.5,1.)):
+        class Polynomial:pass
+        dense=Polynomial();dense.t_old=left;dense.t=right
+        dense.y_old=(base+left*velocity).ravel();dense.F=np.zeros((7,3*STATE_SIZE));dense.F[0]=(right-left)*velocity.ravel()
+        history.record(left,right,dense)
+    cache=tmp_path/'ray.npz';history.save(cache,metadata)
+    record=dict(schema='nsc-atlas-valve-null-sheet-v1',producer_commit=commit,source_sha256=sources,
+        source_bound_to_commit=True,source_unchanged_during_run=True,parent_history=parent,
+        angular_order=[1,2],angular_rays=2,protected_probe_rays=1,seed='reader_fixture',
+        transport=dict(rays=3,effective_interval=[0.,1.]),
+        ray_dense_cache=dict(path=str(cache),schema='nsc-null-ray-dense-v1',intervals=2,
+            sha256=hashlib.sha256(cache.read_bytes()).hexdigest()))
+    path=tmp_path/'sheet.json';path.write_text(json.dumps(record),encoding='utf-8')
+    return path,record,history
+
+
+def test_dense_reader_events_match_actual_polynomials_per_ray_and_omit_probes(tmp_path):
+    path,_,history=dense_reader_fixture(tmp_path);reader=DenseNullBundle.from_sheet_record(path)
+    assert reader.angular_rays==2 and reader.rays==3 and reader.order==(1,2)
+    assert reader.start==0 and reader.end==1
+    times=np.array([.13,.78,.5]);out=reader.events(times)
+    for field,value in out.items():
+        expected=np.stack([unpack_null_state(history.evaluate(float(t)).reshape(3,STATE_SIZE))[field][ray]
+            for ray,t in enumerate(times)])
+        np.testing.assert_allclose(value,expected,atol=2e-15,rtol=2e-15)
+    # Default angular-only requests omit the trailing protected probe.
+    assert reader.events([.1,.9])['X'].shape==(2,4)
+    out=reader.events([.8,.2],ray_indices=[2,0])
+    np.testing.assert_allclose(out['affine_lambda'],[2.4,.2],atol=2e-15)
+    for times,indices in (([-.001],None),([1.001],None),([float('nan')],None),([.2],[3]),([.2],[True])):
+        with pytest.raises(ValueError):reader.events(times,ray_indices=indices)
+
+
+@pytest.mark.parametrize('bad', ['cache_sha','source_sha','schema','parent','bounds','order'])
+def test_dense_reader_refuses_broken_pins_and_metadata(tmp_path,bad):
+    changes={}
+    if bad=='schema':changes['schema']='unknown'
+    if bad=='parent':changes['parent_history']=dict(producer_commit='d'*40,cache_sha256='b'*64,record_sha256='c'*64)
+    if bad=='bounds':changes['coordinate_interval']=[0.,1.1]
+    if bad=='order':changes['angular_order']=[1,3]
+    path,record,_=dense_reader_fixture(tmp_path,metadata_changes=changes)
+    if bad=='cache_sha':record['ray_dense_cache']['sha256']='0'*64
+    if bad=='source_sha':record['source_sha256'][next(iter(record['source_sha256']))]='0'*64
+    path.write_text(json.dumps(record),encoding='utf-8')
+    with pytest.raises(ValueError):DenseNullBundle.from_sheet_record(path)
+
+
+def test_stored_polynomial_noncaustic_bound_is_cautious_and_padded(tmp_path):
+    path,_,_=dense_reader_fixture(tmp_path);reader=DenseNullBundle.from_sheet_record(path)
+    bound=reader.stored_polynomial_noncaustic_bound()
+    assert bound['all_sampled_rays_certified']
+    assert .6<bound['min_lower_bound']<1/math.sqrt(2)
+    assert bound['min_roundoff_padding']>0 and bound['checked_rays']==3
+    assert reader.stored_polynomial_noncaustic_bound(ray_indices=[0,1])['checked_rays']==2
+    directory=tmp_path/'focus';directory.mkdir()
+    path,_,_=dense_reader_fixture(directory,focus=True)
+    bound=DenseNullBundle.from_sheet_record(path).stored_polynomial_noncaustic_bound()
+    assert not bound['all_sampled_rays_certified'] and bound['min_lower_bound']<0
+    assert 'inconclusive' in bound['interpretation']

@@ -6,14 +6,161 @@ affine derivative P are evolved directly; no Riccati expansion enters
 the adaptive state or stops integration at a focal point.
 """
 from dataclasses import dataclass
+import hashlib
+import json
 import math
+from pathlib import Path
+import re
+import subprocess
 import time
 
 import numpy as np
 from scipy.integrate import DOP853
 
+from .nsc_atlas_gh_history import DenseGHHistory
+
 
 STATE_SIZE=27
+
+
+class DenseNullBundle:
+    """Pinned actual DOP853 polynomials, sampled at a different time per ray.
+
+    The factory authenticates historical producer sources against their Git
+    objects. It intentionally does not require current reader code to equal
+    that producer. The declared27-component archive schema remains strict.
+    """
+    def __init__(self):raise TypeError('use DenseNullBundle.from_sheet_record(path)')
+
+    @classmethod
+    def from_sheet_record(cls,path):
+        root=Path(__file__).resolve().parents[2];path=Path(path)
+        if not path.is_absolute():path=root/path
+        record=json.loads(path.read_bytes());commit=record.get('producer_commit','')
+        unchanged=record.get('source_unchanged_during_run',record.get('producer_source_unchanged_during_run',False))
+        if record.get('schema')!='nsc-atlas-valve-null-sheet-v1' or not record.get('source_bound_to_commit') or not unchanged:
+            raise ValueError('verified unchanged source-bound null-sheet record required')
+        if not re.fullmatch('[0-9a-f]{40}',str(commit)):raise ValueError('null producer commit is invalid')
+        sources=record.get('source_sha256')
+        required='src/recursive_horizons/nsc_atlas_null_transport.py'
+        if not isinstance(sources,dict) or required not in sources:raise ValueError('null record lacks transport source pin')
+        for name,expected in sources.items():
+            relative=Path(name)
+            if relative.is_absolute() or '..' in relative.parts or not re.fullmatch('[0-9a-f]{64}',str(expected)):
+                raise ValueError('invalid null producer source pin')
+            stored=subprocess.run(['git','show',commit+':'+relative.as_posix()],cwd=root,capture_output=True)
+            if stored.returncode or hashlib.sha256(stored.stdout).hexdigest()!=expected:
+                raise ValueError('historical null producer source pin failed: '+name)
+        cache=record.get('ray_dense_cache',{})
+        if cache.get('schema')!='nsc-null-ray-dense-v1' or not re.fullmatch('[0-9a-f]{64}',str(cache.get('sha256',''))):
+            raise ValueError('recognized pinned null dense cache required')
+        cache_path=Path(cache.get('path',''))
+        if not cache_path.is_absolute():cache_path=root/cache_path
+        if not cache_path.is_file() or hashlib.sha256(cache_path.read_bytes()).hexdigest()!=cache['sha256']:
+            raise ValueError('null dense cache SHA256 pin failed')
+        history=DenseGHHistory.load(cache_path);metadata=history.metadata
+        if metadata.get('schema')!='nsc-null-ray-dense-v1':raise ValueError('null dense metadata schema mismatch')
+        if metadata.get('producer_commit')!=commit or metadata.get('source_sha256')!=sources:
+            raise ValueError('null dense metadata source mismatch')
+        parent=metadata.get('parent_history')
+        if not isinstance(parent,dict) or parent!=record.get('parent_history'):
+            raise ValueError('null dense metadata parent mismatch')
+        if not re.fullmatch('[0-9a-f]{40}',str(parent.get('producer_commit',''))) or not re.fullmatch('[0-9a-f]{64}',str(parent.get('cache_sha256',''))) or not re.fullmatch('[0-9a-f]{64}',str(parent.get('record_sha256',''))):
+            raise ValueError('null dense metadata lacks parent identity pins')
+        rays=metadata.get('rays');angular=metadata.get('angular_rays');protected=metadata.get('protected_probe_rays',0)
+        if any(isinstance(v,bool) or not isinstance(v,int) for v in (rays,angular,protected)) or not 0<angular<=rays or protected<0 or rays!=angular+protected:
+            raise ValueError('null dense metadata ray counts are invalid')
+        order=metadata.get('angular_order')
+        if not isinstance(order,(tuple,list)) or len(order)!=2 or any(isinstance(v,bool) or not isinstance(v,int) or v<1 for v in order) or math.prod(order)!=angular:
+            raise ValueError('null dense metadata angular order is invalid')
+        if record.get('angular_rays')!=angular or record.get('protected_probe_rays',0)!=protected or list(record.get('angular_order',[]))!=list(order):
+            raise ValueError('null dense metadata ray/order mismatch')
+        if metadata.get('seed')!=record.get('seed'):raise ValueError('null dense metadata seed mismatch')
+        interval=np.asarray(metadata.get('coordinate_interval'),dtype=float)
+        if interval.shape!=(2,) or not np.all(np.isfinite(interval)) or interval[1]<=interval[0]:
+            raise ValueError('null dense metadata coordinate bounds are invalid')
+        actual=np.array([history.bounds[0][0],history.bounds[-1][1]])
+        transport=record.get('transport',{})
+        admitted=np.asarray(transport.get('effective_interval'),dtype=float)
+        if admitted.shape!=(2,) or not np.all(np.isfinite(admitted)) or not np.allclose(interval,actual,rtol=0,atol=2e-12) or not np.allclose(interval,admitted,rtol=0,atol=2e-12):
+            raise ValueError('null dense coordinate bounds differ from stored/producer domain')
+        if transport.get('rays')!=rays or cache.get('intervals',len(history.bounds))!=len(history.bounds):
+            raise ValueError('null dense metadata state count mismatch')
+        if any(len(old)!=STATE_SIZE*rays for old in history.old):raise ValueError('null dense packed-state schema mismatch')
+        self=object.__new__(cls);self.history=history;self.metadata=json.loads(json.dumps(metadata))
+        self.rays=rays;self.angular_rays=angular;self.protected_probe_rays=protected;self.order=tuple(order)
+        self.start=float(max(interval[0],actual[0],admitted[0]));self.end=float(min(interval[1],actual[1],admitted[1]))
+        if self.end<=self.start:raise ValueError('null dense admitted coordinate domains do not overlap')
+        self._ends=np.asarray(history.bounds)[:,1]
+        self.provenance=dict(producer_commit=commit,record_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+            cache_sha256=cache['sha256'],producer_source_sha256=sources,
+            source_binding='Historical producer Git objects and dense cache authenticated; current reader source need not match.')
+        return self
+
+    def _indices(self,count,ray_indices):
+        indices=np.arange(count,dtype=int) if ray_indices is None else np.asarray(ray_indices)
+        if indices.shape!=(count,) or indices.dtype.kind not in 'iu' or np.any(indices<0) or np.any(indices>=self.rays):
+            raise ValueError('one valid integer ray index per event time required')
+        return indices.astype(int,copy=False)
+
+    def events(self,times,ray_indices=None):
+        """Read only each selected ray's27-vector at its own admitted time."""
+        value=np.asarray(times)
+        if value.dtype.kind not in 'iuf' or value.ndim!=1 or not np.all(np.isfinite(value)):
+            raise ValueError('finite one-dimensional event times required')
+        value=np.asarray(value,dtype=float);indices=self._indices(len(value),ray_indices)
+        if np.any(value<self.start) or np.any(value>self.end):raise ValueError('null event extrapolation is forbidden')
+        intervals=np.minimum(np.searchsorted(self._ends,value,side='left'),len(self._ends)-1)
+        result=np.empty((len(value),STATE_SIZE))
+        for interval in np.unique(intervals):
+            rows=np.flatnonzero(intervals==interval);selected=indices[rows]
+            start,end=self.history.bounds[interval];x=((value[rows]-start)/(end-start))[:,None]
+            old=self.history.old[interval].reshape(self.rays,STATE_SIZE)
+            coefficients=self.history.coefficients[interval].reshape(7,self.rays,STATE_SIZE)
+            y=np.zeros((len(rows),STATE_SIZE))
+            for k,F in enumerate(coefficients[::-1]):
+                y+=F[selected];y*=x if k%2==0 else 1-x
+            result[rows]=y+old[selected]
+        return unpack_null_state(result)
+
+    def stored_polynomial_noncaustic_bound(self,ray_indices=None):
+        """Conservative bound only for stored D polynomials on sampled rays.
+
+        sigma_min(D_old)>=|det(D_old)|/||D_old||F. Every DOP853 dense
+        basis factor is a product of x and(1-x), hence bounded by1 on an
+        accepted interval. Subtracting sum_i||F_i,D||F bounds perturbations.
+        Floating-point padding is subtracted. Failure to obtain positivity
+        is not a detected caustic, and no angular/continuum error is covered.
+        """
+        indices=np.arange(self.rays) if ray_indices is None else np.asarray(ray_indices)
+        indices=self._indices(len(indices),indices)
+        if not len(indices):raise ValueError('nonempty ray selection required')
+        eps=np.finfo(float).eps;tiny=np.finfo(float).tiny;bounds=[];paddings=[]
+        for old,F in zip(self.history.old,self.history.coefficients):
+            D=old.reshape(self.rays,STATE_SIZE)[indices,16:20].reshape(-1,2,2)
+            coefficients=F.reshape(7,self.rays,STATE_SIZE)[:,indices,16:20].reshape(7,-1,2,2)
+            scale=np.max(abs(D),axis=(1,2));normalized=np.divide(D,scale[:,None,None],out=np.zeros_like(D),where=scale[:,None,None]>0)
+            first=normalized[:,0,0]*normalized[:,1,1];second=normalized[:,0,1]*normalized[:,1,0]
+            determinant_lower=np.maximum(0.,abs(first-second)-8*eps*(abs(first)+abs(second))-16*tiny)
+            frobenius_upper=np.sqrt(np.sum(normalized*normalized,axis=(1,2)))*(1+16*eps)+16*tiny
+            sigma_lower=scale*determinant_lower/frobenius_upper
+            fscale=np.max(abs(coefficients),axis=(2,3))
+            fnormal=np.divide(coefficients,fscale[:,:,None,None],out=np.zeros_like(coefficients),where=fscale[:,:,None,None]>0)
+            fnorm=fscale*np.sqrt(np.sum(fnormal*fnormal,axis=(2,3)))
+            perturbation=np.sum(fnorm*(1+16*eps)+16*tiny,axis=0)*(1+16*eps)
+            padding=64*eps*(abs(sigma_lower)+perturbation)+64*tiny
+            lower=np.nextafter(sigma_lower-perturbation-padding,-np.inf)
+            bounds.append(lower);paddings.append(padding)
+        lower=np.asarray(bounds);padding=np.asarray(paddings);finite=np.isfinite(lower)
+        minimum=float(np.min(lower)) if np.all(finite) else None
+        certified=bool(np.all(finite)&np.all(lower>0))
+        return dict(all_sampled_rays_certified=certified,min_lower_bound=minimum,
+            checked_rays=len(indices),angular_rays=self.angular_rays,intervals=len(bounds),
+            min_roundoff_padding=float(np.min(padding)),max_roundoff_padding=float(np.max(padding)),
+            ray_indices=indices.tolist(),
+            method='|det D_old|/upper_frobenius(D_old) minus sum_i upper_frobenius(F_i,D), with floating-point padding.',
+            scope='Conditional numerical bound for the actual stored polynomials on selected sampled generators over the full stored interval only. No true continuum/angular-error, global injectivity, physical caustic exclusion or child claim.',
+            interpretation='Positive bounds certify only stored-polynomial nonsingularity; nonpositive bounds are inconclusive, not detected caustics.')
 
 
 def _real(value,name,shape):
