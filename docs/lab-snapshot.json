@@ -3,15 +3,15 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+  "current_receipt_commit_parent": "7d158ae139af009300f45af4947376f4134babe9",
   "files": [
     {
-      "bytes": 3120,
-      "change": "Carry the inherited history clock origin and allow active PDF checks to finish.",
-      "changed_from_commit": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
+      "bytes": 3197,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": ".github/workflows/paper-pdf.yml",
       "retention_reason": "Living manuscript PDF verification workflow.",
-      "sha256": "4fc30c752d6f84b187aacf8d59cb6cb848b4659f26b1ec74bdeb6a2220f535b3"
+      "sha256": "9421e1b640a89d8e719e54bb64b7f29c344b1bec864163c2d8648241b0772872"
     },
     {
       "bytes": 2338,
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 6019,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "bytes": 6301,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "82a2acc14c67f585cbeb5f56504a2626f1bf62b144c99872bd529a8ff239bbc7"
+      "sha256": "04aa0188cc066bd66f1b86fcd977384dabd9d7b2fb06fe20ab8c3de68f8531e5"
     },
     {
       "bytes": 30221,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 301621,
-      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
-      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "bytes": 302318,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "6f52a719eab5ff48f17af3ada726be0a6e0c0f66b18afbcee33c8314fa270309"
+      "sha256": "c91df4d738720a7b8bf8206d5254b2f1f93ebb3cebb1637ed324410af9be3c23"
     },
     {
       "bytes": 164712,
@@ -10298,12 +10298,12 @@
       "sha256": "3c0d20f67aa7f25bd4d48a77ae88da29a929bca2ef8ca0e8d86c834c20a0ccd2"
     },
     {
-      "bytes": 17059,
-      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
-      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "bytes": 19834,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "7ab7f5c7383cfcf656e34066cefd461b5317e7fe4214c5ad9d6e08ef4b86d7fc"
+      "sha256": "78ae83a4453330e18d9f43d6f4b802567b93b9db36e77e2d1333a1223e85b92f"
     },
     {
       "bytes": 9543,
@@ -10341,12 +10341,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 492617,
-      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
-      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "bytes": 493632,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "111c0d0e1c9fed9ed09a348f724b9c2edc891583c3889db73cd0be4f527f8b00"
+      "sha256": "d76d96aaa4fee304695aba395ed194fc1f11194adeb7c9a737efdf3a35b2d88b"
     },
     {
       "bytes": 173938,
@@ -10999,12 +10999,12 @@
       "sha256": "c8a38f0b36a03feac3daf94b9346f58dfa93cca09340a5bc5d6f83d91a97f5c3"
     },
     {
-      "bytes": 9683,
-      "change": "Construct one spatial seed with one accumulated offset, prove its stated metric completions, and separate generated spatial geometry from auxiliary spacetime models.",
-      "changed_from_commit": "bddd58e4e26b246966a910a5ca17484beff608b6",
+      "bytes": 11265,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "docs/nsc-atlas-offset-generator.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "4f0732e624568c0b6993f55a8dc743baa12c842ac1c80ac94f282070be86a2e1"
+      "sha256": "e1fd1998eb9e8da9feb22896cde31c47cbd29a0b45e1a1550b3b9bb125d41084"
     },
     {
       "bytes": 32054,
@@ -11197,12 +11197,12 @@
       "sha256": "a84285ca23bdb6055024652f4ae3a0a0c03379b6b9c28eb841341430f7dee76b"
     },
     {
-      "bytes": 21687,
-      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
-      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "bytes": 38962,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "84a67b79b1f58096a5be21f4b3206f9151d11375b387f8e35b790d09544a7b9a"
+      "sha256": "e827a5b2c519e1a45042d097b946dc9aa0b1ccb8690336564285222f50cbc6ab"
     },
     {
       "bytes": 10730,
@@ -11280,15 +11280,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 145553,
-      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
-      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "bytes": 146147,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "ce360ff9b24eab1b72c82fa647c6affbb7f1310cacb06cf2241bfe1592e9449f"
+      "sha256": "3c4484a6ef468f0b686fcf6e105285fb3f08dc3be338193b0e0849b8fefcb51a"
     },
     {
       "bytes": 30876,
@@ -12256,12 +12256,12 @@
       "sha256": "dfcab5f190b8baab77f3b865c24b3a23e5bab40d750847925d6ea8319da91315"
     },
     {
-      "bytes": 616259,
-      "change": "Prove finite-amplitude positive initial geometry for the inherited source, solve the nonlinear constraints with full-residual convergence and derive compatible covariant GH starting data.",
-      "changed_from_commit": "6561d8cfa305cca6fece3f38bef058262965c8ef",
+      "bytes": 617641,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "26ade86677b5043f354c36a5c70f4a1cae467edfaffc2a96740a7a1041247502"
+      "sha256": "70b026c5fdbf3a4abdc4891d90b222de9bae2f9a746716e1a05d6ababe11ba4d"
     },
     {
       "bytes": 6705,
@@ -12270,20 +12270,20 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 251268,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 252186,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9a2e7b2cd5f2744dc7e7ee72729af6099f810072b6068c5c23055b82dc4a9dbd"
+      "sha256": "1260587ccc5808ca746e748fc2703fbd15110025455234b22351e35f60dbef96"
     },
     {
-      "bytes": 59970,
-      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
-      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "bytes": 60027,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "f1891e159cbe170ace0f474607774948aacb61b26ea7ab95ff970988669764fd"
+      "sha256": "c35f1bbae76d97dea4dc0c551642e5b9bb33affc83051e695726ccc8f1047e1f"
     },
     {
       "bytes": 18356,
@@ -12352,28 +12352,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 46021,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "bytes": 46671,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "3c0443682362c055e1a04ecbc22f60d6180b98755764c1d794162da5a0bf2c31"
+      "sha256": "a81485035ea2210491a823e5a5d6ac012f6bac6a152ff50bab94e9ab558338bc"
     },
     {
       "bytes": 3207,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "fd28610d4d9d80e6b9177de343d76bed097e5dbb37077514f0f84c8583bfe6b1"
+      "sha256": "ae3ae6fd6b49d33021f9aaa54ad533f154b0d1a07c9d8332380b7d1e799ac71c"
     },
     {
-      "bytes": 53523,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "bytes": 53955,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "a59e231ebdc6df11d810ccf0ac28095fe1fbdeb097b01de8ef1f043ef79a8f03"
+      "sha256": "1147d54dfd013c38bc28eee22751d5388c14ceb865c6c1cc87b1e9394b42dfc1"
     },
     {
       "bytes": 226492,
@@ -12505,27 +12505,27 @@
     },
     {
       "bytes": 398,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "f8e300eb3615d21deb79d680fc29c3690e55e605ede7d0bb497d0eb27b9f7cce"
+      "sha256": "987395a5fa8d8ad10f961878d79d233d089323b83cec7766032f54316bc6e361"
     },
     {
-      "bytes": 712320,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "bytes": 716041,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "6d71f75defbef3e805cf77e4cef3191be6a4aa769773a97a44a7f6f2565a25aa"
+      "sha256": "79b758092066b459b08e6b2b1df6cb0c4871f57e12b86b79fe8349f74904903c"
     },
     {
-      "bytes": 21470233,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "bytes": 21502661,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "82adcadfcf314bf352f35108697f114069478b76380a6fcd5b48032b11d3f476"
+      "sha256": "ca5deb2a8ed1828db6aa2d64bf3dac2044e121df6ce56da365aa35f7c1580c54"
     },
     {
       "bytes": 3283,
@@ -31914,6 +31914,14 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "bytes": 29313,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "results/summaries/nsc-atlas-valve-conformal-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3b816958d6e7ea2badb36fe903ba4326ae8bb1747b6750aa1b02bd4b1fa4d8bf"
+    },
+    {
       "bytes": 100310,
       "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
       "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
@@ -31930,12 +31938,68 @@
       "sha256": "2b7786cc4657106aff354653beb261a95dcc73d87d3452dece1b1810443fbd7e"
     },
     {
+      "bytes": 6487,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "results/summaries/nsc-atlas-valve-horizon-classification-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7345f3ac2291426b954d1670e1e6c2fcaf9dd981a38f3ffd862d0e176d046513"
+    },
+    {
+      "bytes": 38777,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "results/summaries/nsc-atlas-valve-neck-continuation-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "bfb31e9f0d98736c781b28f3ec8511a66e8c97ebd407e9948b04a6cbfcc19c68"
+    },
+    {
+      "bytes": 44150,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "results/summaries/nsc-atlas-valve-neck-gh-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1ee75de9c0304e576ebfb1f60848aea5be91a5e72996c41b38f9c7be2872da06"
+    },
+    {
+      "bytes": 10723,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "results/summaries/nsc-atlas-valve-neck-late-probe-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "cfc345d5b6b36ae4272108c89fb71c35fa938f89d7449ba05a1435375b26b53e"
+    },
+    {
+      "bytes": 67933,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "results/summaries/nsc-atlas-valve-neck.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "116804f9b7d567d93fe1accc0d642d2c3928575278d2033c816e855a4c4108c6"
+    },
+    {
+      "bytes": 34931,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "results/summaries/nsc-atlas-valve-null-search-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b5499be98b596c0adb30d7f9f9f5ac09220ae12b80ab9ee5322ee6c7070d3fdf"
+    },
+    {
       "bytes": 19450,
       "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
       "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
       "path": "results/summaries/nsc-atlas-valve-onset-events-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "6dc7569c59992222aec7f6a2deadd3d8e9ccceb19aa7ff01e92e7482ac3959ac"
+    },
+    {
+      "bytes": 38398,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "results/summaries/nsc-atlas-valve-spherical-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ec64c2aa5a8a9858341383f6708655e39f9830731a640edef87299348f82047e"
     },
     {
       "bytes": 122424,
@@ -32908,12 +32972,60 @@
       "sha256": "4599c8b7e77533b62a27593d2862e4f43d9c218fd773823bb27ea14c7f84086f"
     },
     {
+      "bytes": 11489,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "scripts/check_nsc_atlas_valve_conformal.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "93049d724e7307b52aff8edb89e3bbe2c9058e09c20c40654d70dfa233dff129"
+    },
+    {
       "bytes": 26438,
       "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
       "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
       "path": "scripts/check_nsc_atlas_valve_formation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "fb6c38a76a30c54a5a46b390277d1a9e12dcce6e2c4c0c8aa0cd13de7e0cc511"
+    },
+    {
+      "bytes": 4050,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "scripts/check_nsc_atlas_valve_neck.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "cf59e7af5b5737fca46ae6958d6878a5de2bb267483cf49b0bfbaca5a540b408"
+    },
+    {
+      "bytes": 5549,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "scripts/check_nsc_atlas_valve_neck_continuation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9fa510c996df0758ed0a7fc769a3ddad64ad41c909fa04956ee6305fc659fa42"
+    },
+    {
+      "bytes": 10790,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "scripts/check_nsc_atlas_valve_neck_gh.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "aeccc34536d21944ac6dd7eb87565cea6a161b9e3ba1eb13e4a380345d588872"
+    },
+    {
+      "bytes": 12890,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "scripts/check_nsc_atlas_valve_null_sheet.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1432eedee162d5330056f3be0689bc2dd2e774111538ead9b827257f6ee4ad63"
+    },
+    {
+      "bytes": 6418,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "scripts/check_nsc_atlas_valve_spherical.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a81424cf6ea000a50656b3c8cae2993dca4eb804ee1ddadd11125a0958b6d7d2"
     },
     {
       "bytes": 13917,
@@ -36404,6 +36516,14 @@
       "sha256": "d79fcb2608e44b7ecf2cb4ba59741b7c370376de6f694756ae17abc94a10c2d8"
     },
     {
+      "bytes": 11292,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "scripts/search_nsc_atlas_valve_null_cut.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "50219acc1db04965dca341f6ce9353b7c3e84e6d1349463fa897ff02333a6328"
+    },
+    {
       "bytes": 17170,
       "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
       "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
@@ -37549,6 +37669,38 @@
       "sha256": "36e414a4fa632e5ee83e95663ab4f553a8fbab59756cbd2c7c9ea097260f6159"
     },
     {
+      "bytes": 25204,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "src/recursive_horizons/nsc_atlas_null_cuts.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8650f33e0d517382acec25e8638624352de75f3dbd703db4e55e3a8f309f7d57"
+    },
+    {
+      "bytes": 7442,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "src/recursive_horizons/nsc_atlas_null_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "27c589f94142d4b45e9afadf1d275585f7ec4ca4d97534c7b760ce133e34d32a"
+    },
+    {
+      "bytes": 11300,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "src/recursive_horizons/nsc_atlas_null_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9"
+    },
+    {
+      "bytes": 28675,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "src/recursive_horizons/nsc_atlas_null_transport.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "75549040e06a7a28f70510b7fb30e2d29eddb7f5a08fa525d89c941bbc025abb"
+    },
+    {
       "bytes": 4140,
       "change": "Connect energy depletion to averaged boundary work, add exact observer controls, and integrate the clarified regional geometry programme and complete source index into the atlas PDF.",
       "changed_from_commit": "23a2f501b774f77aefec27d9bf5a153e4bc8b6e7",
@@ -37923,6 +38075,22 @@
       "path": "src/recursive_horizons/nsc_atlas_trapped_surfaces.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+    },
+    {
+      "bytes": 9773,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "src/recursive_horizons/nsc_atlas_valve_neck.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e"
+    },
+    {
+      "bytes": 27955,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "src/recursive_horizons/nsc_atlas_valve_spherical.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1699002cc26f9565d23747b1b83cd130b4f46bb1418e9f8e697bb8db5a991a97"
     },
     {
       "bytes": 7005,
@@ -42587,12 +42755,44 @@
       "sha256": "aa1cf17179a1881b370bf773cc56e5e17f1e45720eb9561a146662d788c0403a"
     },
     {
+      "bytes": 14983,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "tests/test_nsc_atlas_null_cuts.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "34d6c683febf84735796b24942933c95464ff8e0f79c322f40f6ad20eb246e21"
+    },
+    {
+      "bytes": 6294,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "tests/test_nsc_atlas_null_geometry.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e4a48f41aa66f8af09d29a4ab1bc6dc2bbfe7d958c14c771568fe43c6edfb2c0"
+    },
+    {
       "bytes": 4233,
       "change": "Derive and check the full null-stress normalization, endpoint term and affine scaling for the prescribed source.",
       "changed_from_commit": "668d870cc0b28987c4145747434d08c3d05f2054",
       "path": "tests/test_nsc_atlas_null_normalization.py",
       "retention_reason": "Exact same-action null-source normalization controls.",
       "sha256": "74f04164054cf35302c75a8ed98568e313dca68e81fad578e989a13e351c794f"
+    },
+    {
+      "bytes": 5267,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "tests/test_nsc_atlas_null_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "53d7031f4b89801cc8583dcf7f9fb34fdf9083200ad7c4f3742a9c863ec1bd6f"
+    },
+    {
+      "bytes": 17311,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "tests/test_nsc_atlas_null_transport.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "64e936c4e1d4473ebf35a3823bcffe0b090119894af23ac95c769f23d66485a8"
     },
     {
       "bytes": 1805,
@@ -43027,12 +43227,36 @@
       "sha256": "fc6d7e91c844e3ea7dd8212e19af23fb20abae8723b9dad1ad06f3d3c1383fcf"
     },
     {
+      "bytes": 5171,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "tests/test_nsc_atlas_valve_conformal.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5d267694c9b24fa0cbbc29dbc8937f216bdf2591607d7779dc7b317e1a214e94"
+    },
+    {
       "bytes": 3417,
       "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
       "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
       "path": "tests/test_nsc_atlas_valve_formation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "8a487c91d1b519b0a6d25b5bfc439f8d10e675de16aae3f9e5dcfe5992c4d300"
+    },
+    {
+      "bytes": 4028,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "tests/test_nsc_atlas_valve_neck.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "fc6fb7cc198d42c32a1fccd83eebbf11dce00ef2e22cdfbb7c3504693caf354b"
+    },
+    {
+      "bytes": 4810,
+      "change": "Record same-action neck formation, independent causal frames, receiving-region energy and the reviewed working atlas.",
+      "changed_from_commit": "7d158ae139af009300f45af4947376f4134babe9",
+      "path": "tests/test_nsc_atlas_valve_spherical.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f331c8b0474264fedb02c77c19dd30d3e29861d9b24a33322b5b770be18ae58f"
     },
     {
       "bytes": 3754,

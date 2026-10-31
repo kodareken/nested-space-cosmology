@@ -14,6 +14,10 @@ The same owner also covers the declared one-mode occupation:
 ledger. `check_nsc_atlas_valve_neck_gh.py` independently uses the unchanged
 full GH engine on the same state. Resolved trapping and a regular fed
 child are separate gates; source occupation remains supplied.
+`ConformalValve` in the same spherical module continues an in-memory
+trusted Cauchy state on a shrinking causal diamond. Its producer
+`check_nsc_atlas_valve_conformal.py` records source pins, overlap, proper
+clock alignment, three-grid refinement and exact-background controls.
 
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
 uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation

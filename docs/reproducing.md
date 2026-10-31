@@ -6,6 +6,7 @@
 python scripts/run_python.py scripts/check_nsc_atlas_valve_neck.py
 python scripts/run_python.py scripts/check_nsc_atlas_valve_spherical.py
 python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_gh.py --degree 24 --threads 4 --budget 180
+python scripts/run_python.py scripts/check_nsc_atlas_valve_conformal.py
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_neck.py tests/test_nsc_atlas_valve_spherical.py
 ```
 

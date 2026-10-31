@@ -201,6 +201,96 @@ surrounding marginal boundaries. The positive material influx above is
 real. The next physical question is whether this receiving trapped band
 admits a regular expanding-child continuation.
 
+### Same-state continuation in a local null frame
+
+The [conformal continuation](../results/summaries/nsc-atlas-valve-conformal-v1.json)
+changes the numerical frame at the later global loss of accuracy. It
+inherits the actual80-mode proper2 Cauchy state. Proper radial distance X
+on that slice gives a=0, a_T=-ka, R_T=-kbR and phi_T=Pi for phi=(S,chi).
+There is no resetting of fields, energy, occupation or source normalization.
+Use ds²=exp(2a)(-dT²+dX²)+R²dOmega². The same Einstein--scalar equations are
+
+$$
+R_{TT}-R_{XX}=-\frac{R_T^2-R_X^2}{R}
+-\frac{e^{2a}}R+\kappa WRe^{2a},
+$$
+$$
+a_{TT}-a_{XX}=\frac{R_T^2-R_X^2+e^{2a}}{R^2}
+-\frac\kappa2\sum_A(\phi_{A,T}^2-\phi_{A,X}^2),
+$$
+$$
+\phi_{A,TT}-\phi_{A,XX}
+=-\frac{2(R_T\phi_{A,T}-R_X\phi_{A,X})}{R}-e^{2a}W_{,A}.
+$$
+
+A shrinking characteristic stencil stays inside the Cauchy domain of
+dependence, discarding one point at each side per step. Its initial
+proper-radial half-width is3.45839; the common conformal endpoint is1.14819.
+No exterior values or new incoming state are inserted at the patch edge.
+All three calculations use the same inherited state and domain.
+
+| Initial points | Center proper time | Radius | Both theta_pm/H | Hamiltonian RMS/H² |
+| --- | --- | --- | --- | --- |
+| 2001 | 3.945529 | .65495433 | -11.85692 | .0379729 |
+| 4001 | 3.945509 | .65496885 | -11.85045 | .0094763 |
+| 8001 | 3.945504 | .65497252 | -11.84883 | .0023727 |
+
+Successive radius differences shrink by3.97; full fine-minus-middle spread
+is3.66e-6. This is an empirical refinement indicator, not a certified error.
+The finest constraint residual is about2e-5 of the local curvature scale;
+the reference-H normalization alone obscures the growing physical curvature.
+Exact de Sitter identities check the PDE factors to1.56e-15, and its field
+errors converge at second order. Tiny finite-difference vacuum constraint
+noise is nonmonotone and is not sold as an enclosure. Proper-time-aligned
+overlap at2.2 differs from the previous frame by1.22e-8 in radius and
+1.79e-7 in theta/H; full-vs-decimated actual-history clock indicators are
+reported separately. The entire retained local patch is future trapped,
+but it does not include the whole receiver's moving outer boundary.
+No global child volume, cosmological epoch or new vacuum follows from it.
+
+### What an actual zero radius would mean in both frames
+
+At the reflection center, R_l=s_l=0. The sphere's spacetime sectional
+curvature is K_Omega=(1+R_tau²)/R²>=1/R². Reflection eliminates the
+odd-time mixed components in the spherical Riemann contraction, giving
+
+$$
+\mathrm{Kretsch}_4\geq4K_\Omega^2\geq4R^{-4}.
+$$
+
+Thus a genuine zero of this reflection sphere cannot be a regular center
+or a removable coordinate zero. This statement does not assume zero is
+reached by the finite computed history.
+
+The [declared internal reconstruction](nsc-atlas-inherited-charge.md)
+is ds16²=exp(-12s)g4+exp(2s)gamma12, with R[gamma]=15. Put x=exp(2s),
+so the external areal radius is x^(-3)R. Its gradient is timelike or zero
+at reflection, hence K_ext,16>=x^6/R². In12 dimensions positive scalar
+curvature15 guarantees at least one internal sectional plane with
+K_gamma>=15/(12*11)=k=5/44. The internal radius gradient is likewise
+timelike or zero there, so K_int,16>=k/x. Consequently, for every volume roll,
+
+$$
+\max(K_{\rm ext,16},K_{\rm int,16})
+\geq k^{6/7}R^{-2/7},\qquad
+\mathrm{Kretsch}_{16}\geq4k^{12/7}R^{-4/7}.
+$$
+
+The bound follows by minimizing max(x^6/R²,k/x) over x>0. Odd-time mixed
+curvature components also vanish in this reflection-symmetric warped
+ansatz, so their Lorentz signs cannot cancel the positive square. Roundness
+of gamma is unnecessary for this obstruction; its fixed positive scalar
+curvature suffices. A volume/conformal redistribution cannot regularize
+both factors if R actually tends to zero within this ansatz.
+
+If the spatial minimum, radial stretching and canonical null-energy signs
+persist, R_tautau<=0 and the endpoint values conditionally imply no more
+than .622 further proper units before zero. Persistence has not been proved.
+The next physical test is a neck-type/receiving-geometry transition before
+that limit; neither coordinate failure nor a curvature blow-up is renamed
+as a child. This is a scoped constraint on the current candidate, not on
+all nested geometries or other published regular-interior mechanisms.
+
 ### Scope and next connection
 
 The conditional source has a resolved future-trapped development and a
@@ -232,7 +322,8 @@ python scripts/run_python.py scripts/check_nsc_atlas_valve_neck.py
 python scripts/run_python.py scripts/check_nsc_atlas_valve_spherical.py
 python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_gh.py --degree 24 --threads 4 --budget 180
 python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_continuation.py 80
-python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_neck.py tests/test_nsc_atlas_valve_spherical.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_conformal.py
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_neck.py tests/test_nsc_atlas_valve_spherical.py tests/test_nsc_atlas_valve_conformal.py
 ```
 
 ## Calculation and stopping rules

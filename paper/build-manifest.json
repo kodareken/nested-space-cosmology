@@ -1,10 +1,10 @@
 {
-  "bytes": 21501801,
+  "bytes": 21502661,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "c04ea93f4af66c918d808e9a536f5addd17211db66c27cdd51797022f8883c96",
+  "metadata_sha256": "987395a5fa8d8ad10f961878d79d233d089323b83cec7766032f54316bc6e361",
   "output": "paper/nested-space-cosmology.pdf",
   "pages": 248,
-  "pdf_sha256": "b8630972c5f6b53b5dfb15ab1a2e6687c8b126b30014d3af7143faabaeddb517",
+  "pdf_sha256": "ca5deb2a8ed1828db6aa2d64bf3dac2044e121df6ce56da365aa35f7c1580c54",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -996,16 +996,20 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "path": "results/summaries/nsc-atlas-valve-conformal-v1.json",
+      "sha256": "3b816958d6e7ea2badb36fe903ba4326ae8bb1747b6750aa1b02bd4b1fa4d8bf"
+    },
+    {
       "path": "results/summaries/nsc-atlas-valve-neck-gh-v1.json",
-      "sha256": "6a5f0cf1fef73241af6635245d4a2ba9efe490a95114bc8b702b5811300ae792"
+      "sha256": "1ee75de9c0304e576ebfb1f60848aea5be91a5e72996c41b38f9c7be2872da06"
     },
     {
       "path": "results/summaries/nsc-atlas-valve-neck.json",
-      "sha256": "84309c7962318ec9159324f80f09a8c639585a071c033616dfa8f611d5db2830"
+      "sha256": "116804f9b7d567d93fe1accc0d642d2c3928575278d2033c816e855a4c4108c6"
     },
     {
       "path": "results/summaries/nsc-atlas-valve-spherical-v1.json",
-      "sha256": "f11b5bd624aa4432f14dd8e30b014760a496a80ae1cd358225ac67cc3c7441c3"
+      "sha256": "ec64c2aa5a8a9858341383f6708655e39f9830731a640edef87299348f82047e"
     },
     {
       "path": "results/summaries/nsc-atlas-volume-family-selection-v1.json",
@@ -1101,6 +1105,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "c2b7e9be00fe07adc302822ec1538ae3ae6fa74eb73e37d63bfd092635fab030",
-  "version": "working-2026-10-31.06"
+  "source_sha256": "79b758092066b459b08e6b2b1df6cb0c4871f57e12b86b79fe8349f74904903c",
+  "version": "working-2026-10-31.07"
 }

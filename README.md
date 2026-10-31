@@ -29,8 +29,8 @@ close and test within that connected account.
 
 ## Read the atlas
 
-The main argument now follows the offset-to-horizon-to-vacuum test in seven
-pages. The full technical atlas is preserved in Appendix A. The latest
+The main argument follows the offset-to-horizon-to-vacuum test in a short
+opening. The full technical atlas is preserved in Appendix A. The latest
 [registered flow comparison](docs/prediction-register.md) calculates the
 receiving stress; it does not yet identify today's vacuum fraction.
 The chapter route below describes the preserved technical atlas.

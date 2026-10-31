@@ -7,6 +7,11 @@ has a numerical neck-trapping threshold epsilon=.8339066143. Three
 spherical resolutions and an independent full-metric GH check give a
 closed future-trapped sphere at proper .02, both expansions/H=-.00707954.
 Its continuation to proper .3 has a checked moving-region energy ledger.
+The same state then continues in a local conformal/null frame to center
+proper3.9455 with second-order refinement, past the old global numerical
+break. It remains contracting. A conditional curvature bound excludes a
+regular zero-radius limit in the present metric and inherited internal
+warped reconstruction; reaching that limit has not been proved.
 The source occupation remains supplied. Reflection forces zero transfer
 through the central symmetry plane, while positive material influx through
 the enclosing marginal boundaries feeds the trapped band. A regular receiving child

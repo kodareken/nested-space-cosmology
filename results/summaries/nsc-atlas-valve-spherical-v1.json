@@ -822,5 +822,8 @@
     "old_8847_percent_applies": false,
     "next": "Follow the actual receiving trapped band and its horizons into a regular continuation. Zero center flux does not exclude symmetric horizon influx. Retain inherited state; do not repeat this finite threshold calculation."
   },
-  "reproduction": "python scripts/run_python.py scripts/check_nsc_atlas_valve_spherical.py --output results/summaries/nsc-atlas-valve-spherical-v1.json"
+  "reproduction": "python scripts/run_python.py scripts/check_nsc_atlas_valve_spherical.py --output results/summaries/nsc-atlas-valve-spherical-v1.json",
+  "source_commit": "8dbe971d8e76d8bcbaad7be0005153edb1b23bdc",
+  "source_bound_to_archived_commit": true,
+  "source_scope": "Frozen finite spherical calculation; later conformal helpers extend the current module. Reproduce the recorded source from this archived commit or use the current verified-equivalent spherical API."
 }

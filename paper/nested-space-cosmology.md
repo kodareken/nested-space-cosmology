@@ -378,6 +378,22 @@ equations, source change, independent checks and attribution to the
 Misner--Sharp/Hayward spherical energy framework. A receiving continuation
 with an inherited incoming state is now the physical dependency.
 
+<!-- nsc-claim:same-state-conformal-continuation -->
+
+The [same-state conformal continuation](../results/summaries/nsc-atlas-valve-conformal-v1.json)
+then changes vantage point after the global synchronous calculation loses
+accuracy. Trusted proper2 data supply a local null-coordinate diamond;
+no new incoming boundary state is supplied. Three grids continue the
+center to proper3.9455, with radius .654973 and empirical adjacent-grid
+spread .00000366. Both expansions/H are about-11.8488, with spread .00162.
+The constraint residual decreases fourfold per refinement and is about
+2e-5 of the local curvature scale. The interior is still contracting;
+no bounce or regular expanding child is established. This controlled
+continuation crosses a numerical break without identifying it as a
+physical endpoint. Its overlap and exact-background checks, and the
+conditional curvature obstruction at an actual zero radius, are given
+in the [formation derivation](../docs/nsc-atlas-valve-formation.md).
+
 ## 7. Selection and the charge-resolved question
 
 | Quantity | Derived or supplied? |
@@ -416,7 +432,7 @@ and detector/thermal normalization are the required physical connection.
 | Omega_Lambda_today | Unselected | P006 prediction-completeness condition fails; no empirical rejection |
 | Receiving w | .7212244363 at the specified event; late averaged limit 0 | Does not have vacuum form; not a present-day cosmological w test |
 | Future-trapped neck | epsilon_crit=.8339066 in a new one-mode state | Finite convergence and independent full-metric check; preparation supplied |
-| Regular receiving child | Not established | The symmetric neck has zero material transfer |
+| Regular receiving child | Not established | A regular expanding continuation of the fed trapped region is still needed |
 | Charge-resolved crossing | 0 in the real sector | Baryon/photon eta remains uncalculated |
 
 The present mathematical contribution is a connected route from a

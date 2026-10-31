@@ -793,6 +793,11 @@
       "section": "6",
       "status": "measured",
       "owner": "docs/nsc-atlas-valve-formation.md"
+    },
+    "same-state-conformal-continuation": {
+      "section": "6",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-valve-formation.md"
     }
   },
   "findings": [
