@@ -545,6 +545,33 @@ def check_p005(root, entry):
         exact(entry['status'],'analytic_forecast_frozen_before_unaveraged_evaluation','P005 forecast status')
 
 
+def check_p006(root, entry):
+    forecast = read_json(bound_bytes(root, entry['forecast'], 'P006 frozen protocol'))
+    exact(forecast['prediction_id'], 'NSC-P006', 'P006 identity')
+    exact(forecast['comparison_evaluated'], False, 'P006 preregistration')
+    exact(forecast['single_output'], 'Omega_Lambda_today', 'P006 single output')
+    exact(entry['observational_validation'], False, 'P006 observational status')
+    require(forecast['target']['absolute_acceptance_tolerance'] > 0, 'P006 tolerance')
+    if 'evaluation' not in entry:
+        exact(entry['status'], 'protocol_frozen_before_evaluation', 'P006 frozen status')
+        return
+    result = read_json(bound_bytes(root, entry['evaluation'], 'P006 evaluation'))
+    exact(result['forecast_sha256'], entry['forecast']['sha256'], 'P006 protocol unchanged')
+    exact(result['prediction_id'], 'NSC-P006', 'P006 result identity')
+    value = result['Omega_Lambda_today']
+    if value is None:
+        exact(result['comparison_pass'], False, 'P006 completeness failed')
+        exact(result['empirical_rejection'], False, 'P006 no fabricated rejection')
+        require(bool(result['missing_closure']), 'P006 diagnosis required')
+        exact(entry['status'], 'prediction_not_identified', 'P006 unselected output')
+    else:
+        value = number(value, 'P006 output')
+        target = forecast['target']
+        passes = abs(value-target['mean']) <= target['absolute_acceptance_tolerance']
+        exact(result['comparison_pass'], passes, 'P006 comparison decision')
+        exact(entry['status'], 'comparison_passed' if passes else 'comparison_failed', 'P006 status')
+
+
 def check_register(root, register):
     root = Path(root).resolve()
     exact(register["schema"], SCHEMA, "register schema")
@@ -554,8 +581,9 @@ def check_register(root, register):
     require(isinstance(entries, list) and [e["id"] for e in entries] in
             (["NSC-P001"], ["NSC-P001", "NSC-P002"], ["NSC-P001", "NSC-P002", "NSC-P003"],
              ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004"],
-             ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004", "NSC-P005"]),
-            "one currently registered P001 and optional unique P002/P003/P004/P005 in order required")
+             ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004", "NSC-P005"],
+             ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004", "NSC-P005", "NSC-P006"]),
+            "unique consecutive P001--P006 entries in order required")
     entry = entries[0]
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")
@@ -587,6 +615,11 @@ def check_register(root, register):
         result['predictions']+=1
         result['evidence_files']+=1+int('validation' in entries[4])
         result['evidence_files']+=int('density_relation' in entries[4])
+    if len(entries) > 5:
+        require('## NSC-P006' in document, 'P006 missing from reader-facing register')
+        check_p006(root, entries[5])
+        result['predictions'] += 1
+        result['evidence_files'] += 1 + int('evaluation' in entries[5])
     return result
 
 

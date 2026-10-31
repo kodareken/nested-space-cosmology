@@ -20,6 +20,21 @@ agreement could be rejected. Each entry distinguishes derived consequences,
 numerical sensitivity and observations. The [machine-readable register](../results/prediction-register.json)
 binds the evidence bytes and the exact locations of reported values.
 
+## NSC-P006 -- Directed horizon flow and the present vacuum fraction
+
+Protocol frozen on 31 October 2026 before the new calculation. The public
+comparison target was already supplied; this is not a blind observational
+forecast. The [frozen protocol](../results/summaries/nsc-atlas-flow-omega-forecast-v1.json)
+registers one output, Omega_Lambda_today = kappa rho_vac_minus / (3 H_today^2),
+and an absolute tolerance .007 around .685. The receiving vacuum stress,
+current epoch and expansion rate must follow from the action and history;
+the supplied .22098302421260696 vacuum is excluded as the answer.
+The benchmark is the rounded base-LambdaCDM inference from
+[Planck 2018 VI](https://arxiv.org/abs/1807.06209), not a direct
+model-independent measurement. If any required quantity remains unselected,
+the prediction-completeness gate fails and the output is null. That outcome
+is distinct from an empirical rejection of nesting. No result is entered yet.
+
 ## NSC-P003 â€” Three freely falling clocks in the inherited parent
 
 Registered retrospectively on 21 October 2026, with a synthetic check and

@@ -1,0 +1,33 @@
+{
+  "schema": "nsc-flow-omega-forecast-v1",
+  "prediction_id": "NSC-P006",
+  "registered_date": "2026-10-31",
+  "source_commit": "b69dda73",
+  "registration": "prospective_calculation_protocol_with_public_target_already_known",
+  "comparison_evaluated": false,
+  "single_output": "Omega_Lambda_today",
+  "formula": "Omega_Lambda_today = kappa * rho_vac_minus(event_today) / (3 * H_today^2)",
+  "vacuum_identification": "The inherited receiving stress must determine a persistent isotropic term -rho_vac_minus*g_mu_nu; a flux fraction, area increment or trace of non-vacuum matter is not substituted for that term.",
+  "epoch_rule": "Use an event selected by the existing action and offset history alone. Do not choose n, a phase, a source amplitude or a duration using the target.",
+  "exclusions": [
+    "No supplied V_star=0.22098302421260696 as the predicted vacuum density",
+    "No resetting the parent state or selecting a new source history",
+    "No identifying the crossed Killing-energy fraction with a density fraction",
+    "No new GH/horizon/boson refinement unless this calculation requires it"
+  ],
+  "target": {
+    "mean": 0.685,
+    "reported_one_sigma": 0.007,
+    "absolute_acceptance_tolerance": 0.007,
+    "source": "https://arxiv.org/abs/1807.06209",
+    "interpretation": "Douglas's rounded Planck base-LambdaCDM benchmark; not a model-independent direct density measurement"
+  },
+  "decision_rule": "Pass only if the single output is finite, selected without the excluded inputs and within the absolute tolerance. If the action does not select the stress, event or H_today, fail the prediction-completeness gate; record null, never substitute zero or count it as empirical rejection of nesting.",
+  "secondary_diagnostics": [
+    "Receiving-field pressure and late decay after subtracting the retained vacuum",
+    "Finite-amplitude theorem scope and future-trapping criterion",
+    "Charge-resolved asymmetry only after completing the vacuum comparison"
+  ],
+  "compute_budget": "Reuse saved results and analytic identities; at most 180 seconds for short independent algebra/receiving-stress calculations. No new evolution campaign.",
+  "observational_blinding": false
+}
