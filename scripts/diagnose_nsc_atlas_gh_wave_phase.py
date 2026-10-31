@@ -38,7 +38,7 @@ def main():
                 amplitude_fraction_of_defined_quadrature_gradient=float(weights@amplitude/usable) if usable else None,
                 undefined_gradient_weight_fraction=1-usable/integral if integral else 0.,
                 weighted_reference_phase_wavenumber_over_r=(float(weights@phase/power)**.5/system.r) if power else None,
-                defined_identity_RMS=float(np.sqrt(weights@(diag['identity_residual'][:N]**2)/sum(weights)))))
+                masked_identity_RMS=float(np.sqrt(weights@(diag['identity_residual'][:N]**2)/sum(weights)))))
     r=dict(schema='nsc-atlas-gh-wave-phase-diagnosis-v1',degree=meta['degree'],epsilon=meta['epsilon'],
         scope='Diagnosis of supplied resolved numerical states; not validation of their Einstein constraints, conserved energy fractions, or baryon charge.',
         source_run_hashes=meta['source_sha256'],snapshots=rows)

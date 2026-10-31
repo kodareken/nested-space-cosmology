@@ -46,6 +46,7 @@ velocity field or a particle interpretation.
 | Independent physical ADM constraints | [gh_constraints](../src/recursive_horizons/nsc_atlas_gh_constraints.py) |
 | Nonlinear driver and geodesic observer | [parent_gh](../src/recursive_horizons/nsc_atlas_parent_gh.py) |
 | Phase/amplitude-gradient diagnostics | [gh_wave_diagnostics](../src/recursive_horizons/nsc_atlas_gh_wave_diagnostics.py) |
+| Normalized local observer stress/phase | [gh_observer](../src/recursive_horizons/nsc_atlas_gh_observer.py) |
 
 The ADM calculator derives physical spatial connection and curvature
 directly from Koszul/Riemann formulas, independently of the GH kernel.
@@ -58,6 +59,10 @@ An observer begins at the original scalar maximum, initially normal to
 the inherited slice. Its geodesic, proper duration and field derivative
 are evolved with the geometry. Phase is read from the resolved field's
 Z=chi-i u(chi)/omega_ref; it does not drive the PDE time-step controller.
+The same normalized timelike u is used for its proper derivative, phase
+and measured T(u,u). Slice-normal density is reported separately at that
+position. Bulk density/volume are diagnostics of the chosen GH slice;
+fixing one observer's proper age does not make them local measurements.
 The current sampled unwrapping flag is a heuristic, not a certified
 winding count. A wrapped increment cannot exclude an extra full turn;
 accepted physical comparisons must use directly reconstructed phase or
@@ -86,6 +91,26 @@ t=integral (a_init/a)^3 d tau, removing that imposed proper-time ceiling.
 For de Sitter, N=cosh(H tau)^3 and the finite target proper time remains
 reachable. These are coordinate statements, not a change of action or
 a conclusion about the finite source's fate.
+
+### Metric-dependent lapse control
+
+The default coordinate source now includes a lapse feedback:
+
+$$
+\mathcal H_0=3H\tanh(Ht)+H(N^2-N^{-2}),\qquad \mathcal H_i=0.
+$$
+
+It depends on the metric, not its derivatives, preserving the GH wave
+principal part. Its full time and spatial chain derivatives are retained.
+Independent direct physical-Ricci tests check the reduced equation at
+nonuniform lapse. No physical stress or physical-mode damping is added.
+
+For a regular static geometry, y=N^2 satisfies
+dy/d(Ht)=2[1-y^2-3tanh(Ht)y]. The interval
+[(sqrt(13)-3)/2,1] is invariant, so the lapse stays positive and bounded
+and proper time has no imposed finite ceiling. Vacuum de Sitter with
+N=1 still satisfies the source exactly. This homogeneous coordinate
+control is not a proof of constraint convergence in the finite 3D run.
 
 ## Qualification and current limits
 

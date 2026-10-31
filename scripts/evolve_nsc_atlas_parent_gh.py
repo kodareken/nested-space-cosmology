@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 import numpy as np
 
@@ -15,26 +16,38 @@ def main():
     p.add_argument('--degree',type=int,default=6);p.add_argument('--epsilon',type=float,default=.025)
     p.add_argument('--proper-endpoint',type=float);p.add_argument('--threads',type=int,default=8)
     p.add_argument('--budget-seconds',type=float,default=600);p.add_argument('--output',type=Path,required=True)
-    p.add_argument('--gauge',choices=('harmonic','vacuum_reference'),default='harmonic')
+    p.add_argument('--gauge',choices=('harmonic','vacuum_reference','lapse_controlled'),default='lapse_controlled')
     p.add_argument('--backend',choices=('hopf','dense'),default='hopf')
     p.add_argument('--state-cache',type=Path)
+    p.add_argument('--quadrature-radial',type=int);p.add_argument('--quadrature-angles',type=int)
     a=p.parse_args();out=(ROOT/a.output).resolve()
     if not out.is_relative_to(ROOT) or out.exists():raise ValueError('fresh repository output required')
     names=['src/recursive_horizons/nsc_atlas_parent_gh.py','src/recursive_horizons/nsc_atlas_s3_frame.py',
         'src/recursive_horizons/nsc_atlas_gh_pointwise.py','src/recursive_horizons/nsc_atlas_gh_constraints.py',
         'src/recursive_horizons/nsc_atlas_finite_parent_data.py','src/recursive_horizons/nsc_atlas_s3_hopf.py',
+        'src/recursive_horizons/nsc_atlas_gh_observer.py','src/recursive_horizons/nsc_atlas_parent_circulation.py',
+        'src/recursive_horizons/nsc_atlas_parent_scale_selector.py','src/recursive_horizons/nsc_atlas_parent_backreaction.py',
+        'src/recursive_horizons/nsc_atlas_s3_spectral.py',
         'scripts/evolve_nsc_atlas_parent_gh.py']
     before={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    bound=True
+    for name in names:
+        stored=subprocess.run(['git','show',commit+':'+name],cwd=ROOT,capture_output=True)
+        bound=bound and stored.returncode==0 and hashlib.sha256(stored.stdout).hexdigest()==before[name]
     saved=[]
     if a.state_cache:
         cache=(ROOT/a.state_cache).resolve()
         if not cache.is_relative_to(ROOT/'.build') or cache.exists():raise ValueError('fresh state cache under .build required')
     def sink(t,y):saved.append((t,y.copy()))
+    if (a.quadrature_radial is None)!=(a.quadrature_angles is None):raise ValueError('both quadrature orders are required')
+    order=None if a.quadrature_radial is None else (a.quadrature_radial,a.quadrature_angles)
     r=evolve_parent(degree=a.degree,epsilon=a.epsilon,proper_endpoint=a.proper_endpoint,
         threads=a.threads,budget_seconds=a.budget_seconds,progress=True,gauge=a.gauge,
-        state_sink=sink if a.state_cache else None,backend=a.backend)
+        state_sink=sink if a.state_cache else None,backend=a.backend,quadrature_order=order)
     after={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}
     r['source_sha256']=before;r['producer_source_unchanged_during_run']=before==after
+    r['producer_commit']=commit;r['source_bound_to_commit']=bound
     if a.state_cache:
         metadata=dict(degree=a.degree,epsilon=a.epsilon,gauge=a.gauge,backend=a.backend,source_sha256=r['source_sha256'])
         np.savez_compressed(cache,times=np.array([v[0] for v in saved]),states=np.array([v[1] for v in saved]),metadata=json.dumps(metadata))

@@ -57,6 +57,39 @@ def test_homogeneous_flat_lapse_gauge_exact_acceleration():
     np.testing.assert_allclose(aq,0.,atol=2e-13)
 
 
+def test_lapse_feedback_preserves_exact_de_sitter_normal_coordinates():
+    star,H=parameters();t=1.3;jets=data()
+    jets[0][0,1:,1:]=math.cosh(H*t)**2*np.eye(3)
+    jets[1][0,1:,1:]=H*math.sinh(2*H*t)*np.eye(3)
+    result=rhs_nodes(*jets,r=H,Hsource0=3*H*math.tanh(H*t),
+                     HsourceDot0=3*H**2/math.cosh(H*t)**2,
+                     sstar=star,gamma0=H,lapse_feedback=H)
+    accg,accq,C,valid=result
+    expected=np.zeros((4,4));expected[1:,1:]=2*H**2*math.cosh(2*H*t)*np.eye(3)
+    assert valid[0]
+    np.testing.assert_allclose(accg[0],expected,atol=3e-13,rtol=3e-13)
+    np.testing.assert_allclose(C,0.,atol=5e-15)
+    np.testing.assert_allclose(accq,0.,atol=2e-13)
+
+
+@pytest.mark.parametrize('N,Nd,Ndd',[(1.3,.17,-.11),(.7,-.12,.09)])
+def test_lapse_feedback_full_time_chain_in_flat_reparametrization(N,Nd,Ndd):
+    # An arbitrary regular t-reparametrization of Minkowski space. Adjusting
+    # the prescribed base source makes total H=-Ndot/N, including its full
+    # coordinate-time derivative; feedback must leave the geometry unchanged.
+    star,_=parameters();jets=data();mu=.37
+    jets[0][0,0,0]=-N*N;jets[1][0,0,0]=-2*N*Nd
+    baseH=-Nd/N-mu*(N*N-N**-2)
+    baseHdot=-Ndd/N+(Nd/N)**2-mu*(2*N+2*N**-3)*Nd
+    accg,accq,C,valid=rhs_nodes(*jets,r=0,Hsource0=baseH,HsourceDot0=baseHdot,
+                              sstar=star,kappa=0,gamma0=.2,lapse_feedback=mu)
+    expected=np.zeros((4,4));expected[0,0]=-2*(Nd*Nd+N*Ndd)
+    assert valid[0]
+    np.testing.assert_allclose(accg[0],expected,atol=2e-14)
+    np.testing.assert_allclose(C,0.,atol=5e-16)
+    np.testing.assert_allclose(accq,0.,atol=2e-13)
+
+
 def test_static_flat_metric_in_nonlinear_harmonic_spatial_coordinates():
     # x'=x+alpha(y²-z²) is harmonic in flat space. Its nonconstant metric
     # exercises both spatial second derivatives and the quadratic GH terms.

@@ -96,7 +96,7 @@ def _potential(q,sstar):
 
 
 @njit(cache=True,nogil=True)
-def _node(g,v,dg,d2g,dv,q,p,dq,d2q,dp,connection,r,H0,Hdot,sstar,kappa,gamma0):
+def _node(g,v,dg,d2g,dv,q,p,dq,d2q,dp,connection,r,H0,Hdot,sstar,kappa,gamma0,lapse_feedback):
     accg=np.full((4,4),np.nan);accq=np.full(2,np.nan);Ccov=np.full(4,np.nan)
     inv,normal,valid=_adm_inverse(g)
     if not valid:return accg,accq,Ccov,False
@@ -110,6 +110,21 @@ def _node(g,v,dg,d2g,dv,q,p,dq,d2q,dp,connection,r,H0,Hdot,sstar,kappa,gamma0):
 
     Dg=np.empty((4,4,4));Dg[0]=v
     for i in range(3):Dg[i+1]=dg[i]-_slot_action(g,connection[i])
+    H_effective=H0
+    Hpartial=np.zeros(4);Hpartial[0]=Hdot
+    if lapse_feedback!=0.:
+        lapse=1/normal[0]
+        lapse2=lapse*lapse
+        inverse_lapse2=normal[0]*normal[0]
+        H_effective+=lapse_feedback*(lapse2-inverse_lapse2)
+        for a in range(4):
+            normal_metric_derivative=0.
+            for b in range(4):
+                for c in range(4):
+                    normal_metric_derivative+=normal[b]*Dg[a,b,c]*normal[c]
+            # E_a N=-N n^b(Dbar_a g_bc)n^c/2. Combining the chain
+            # rule avoids separately forming N^3 and N^-3.
+            Hpartial[a]-=lapse_feedback*(lapse2+inverse_lapse2)*normal_metric_derivative
     DD=np.zeros((4,4,4,4))
     for i in range(3):
         mixed=dv[i]-_slot_action(v,connection[i])
@@ -132,7 +147,7 @@ def _node(g,v,dg,d2g,dv,q,p,dq,d2q,dp,connection,r,H0,Hdot,sstar,kappa,gamma0):
         for b in range(4):
             for c in range(4):delta[a]+=inv[b,c]*upper[a,b,c]
     for a in range(4):
-        Ccov[a]=H0 if a==0 else 0.
+        Ccov[a]=H_effective if a==0 else 0.
         for b in range(4):Ccov[a]+=g[a,b]*delta[b]
     normalC=0.
     for a in range(4):normalC+=normal[a]*Ccov[a]
@@ -143,8 +158,9 @@ def _node(g,v,dg,d2g,dv,q,p,dq,d2q,dp,connection,r,H0,Hdot,sstar,kappa,gamma0):
     trace_inverse_spatial=inv[1,1]+inv[2,2]+inv[3,3]
     for a in range(4):
         for b in range(a,4):
-            rhs=2*H0*upper[0,a,b]
-            if a==0 and b==0:rhs-=2*Hdot
+            rhs=2*H_effective*upper[0,a,b]
+            if a==0 and b==0:rhs-=2*Hpartial[0]
+            elif a==0:rhs-=Hpartial[b]
             # -2 g^cd Rbar^e_cd(a g_b)e with the stated S3 convention.
             for e in range(1,4):
                 if a>0:
@@ -191,24 +207,27 @@ def _node(g,v,dg,d2g,dv,q,p,dq,d2q,dp,connection,r,H0,Hdot,sstar,kappa,gamma0):
 
 
 @njit(cache=True,nogil=True,parallel=True)
-def _rhs_batch(g,v,dg,d2g,dv,q,p,dq,d2q,dp,r,H0,Hdot,sstar,kappa,gamma0):
+def _rhs_batch(g,v,dg,d2g,dv,q,p,dq,d2q,dp,r,H0,Hdot,sstar,kappa,gamma0,lapse_feedback):
     N=g.shape[0]
     accg=np.empty((N,4,4));accq=np.empty((N,2));Ccov=np.empty((N,4));valid=np.empty(N,dtype=np.bool_)
     connection=_reference_connection(r)
     for node in prange(N):
         ag,aq,C,ok=_node(g[node],v[node],dg[node],d2g[node],dv[node],q[node],p[node],dq[node],d2q[node],dp[node],
-                         connection,r,H0,Hdot,sstar,kappa,gamma0)
+                         connection,r,H0,Hdot,sstar,kappa,gamma0,lapse_feedback)
         accg[node]=ag;accq[node]=aq;Ccov[node]=C;valid[node]=ok
     return accg,accq,Ccov,valid
 
 
-def rhs_nodes(g,v,dg,d2g,dv,q,p,dq,d2q,dp,*,r,Hsource0,HsourceDot0,sstar,kappa=1.,gamma0=0.):
+def rhs_nodes(g,v,dg,d2g,dv,q,p,dq,d2q,dp,*,r,Hsource0,HsourceDot0,sstar,kappa=1.,gamma0=0.,lapse_feedback=0.):
     """Return (accg,accq,Ccov,valid) for regular-frame raw component jets.
 
     Shapes: g,v (N,4,4), dg,dv (N,3,4,4), d2g (N,3,3,4,4),
     q,p (N,2), dq,dp (N,3,2), d2q (N,3,3,2). Metric component slots
     must be symmetric. The first scalar is canonical S=sqrt(84)(s-sstar).
-    H_a=(Hsource0(t),0,0,0); HsourceDot0 is its coordinate-time derivative.
+    H_a=(Hsource0(t)+mu*(N^2-N^-2),0,0,0), mu=lapse_feedback.
+    HsourceDot0 differentiates the prescribed base source only. The lapse
+    feedback is a coordinate choice; its full metric-dependent chain rule
+    is included. The default mu=0 preserves the prescribed-source equation.
     This wrapper checks array structure; per-node validity is arithmetic
     and metric admissibility, not an Einstein-constraint certificate.
     Numba parallelism respects the caller's configured thread count.
@@ -219,7 +238,7 @@ def rhs_nodes(g,v,dg,d2g,dv,q,p,dq,d2q,dp,*,r,Hsource0,HsourceDot0,sstar,kappa=1
     tails=[(4,4),(4,4),(3,4,4),(3,3,4,4),(3,4,4),(2,),(2,),(3,2),(3,3,2),(3,2)]
     for value,tail in zip(arrays,tails):
         if value.shape!=(N,)+tail:raise ValueError('incompatible raw jet shape')
-    parameters=np.array([r,Hsource0,HsourceDot0,sstar,kappa,gamma0],dtype=np.float64)
+    parameters=np.array([r,Hsource0,HsourceDot0,sstar,kappa,gamma0,lapse_feedback],dtype=np.float64)
     if not np.isfinite(parameters).all():raise ValueError('finite scalar parameters required')
     if r<0 or kappa<0:raise ValueError('nonnegative inverse radius and gravitational coupling required')
-    return _rhs_batch(*arrays,float(r),float(Hsource0),float(HsourceDot0),float(sstar),float(kappa),float(gamma0))
+    return _rhs_batch(*arrays,float(r),float(Hsource0),float(HsourceDot0),float(sstar),float(kappa),float(gamma0),float(lapse_feedback))

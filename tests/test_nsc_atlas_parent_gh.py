@@ -42,7 +42,7 @@ def test_exact_vacuum_reaches_full_reference_proper_endpoint():
     H=Parent.retained().H
     for point in result['snapshots']:
         exact=math.cosh(H*point['observer_proper_duration'])**3
-        assert abs(point['proper_volume_over_initial_round_reference']/exact-1)<1e-9
+        assert abs(point['slice_proper_volume_over_initial_round_reference']/exact-1)<1e-9
         assert point['ADM_H_RMS_over_H_squared']<1e-10
         assert point['ADM_M_RMS_over_H_squared']<1e-10
         assert point['GH_C_RMS_over_H']<1e-10
@@ -110,3 +110,21 @@ def test_fast_hopf_and_dense_rhs_agree_for_one_resolved_state():
         assert fast.dof==dense.dof and fast.basis.labels==dense.basis.labels
         expected=dense.rhs(0.,state);actual=fast.rhs(0.,state)
     np.testing.assert_allclose(actual,expected,atol=2e-10,rtol=0)
+
+
+def test_lapse_control_preserves_vacuum_and_static_gauge_barriers():
+    result=evolve_parent(degree=2,epsilon=0,threads=1,budget_seconds=90,
+        gauge='lapse_controlled')
+    for point in result['snapshots']:
+        assert point['ADM_H_RMS_over_H_squared']<1e-9
+        assert point['GH_C_RMS_over_H']<1e-9
+        assert abs(point['minimum_lapse']-1)<1e-9
+    import sympy as s
+    y=s.symbols('y',positive=True);z=(s.sqrt(13)-3)/2
+    assert s.simplify(1-z*z-3*z)==0
+    assert s.sqrt(z)>0
+    # dy/du=2(1-y²-3*tanh(u)*y): y=1 points down,
+    # y=z points up for every0<=tanh(u)<=1, so neither lapse extreme is hit.
+    x=s.symbols('x',nonnegative=True)
+    assert s.simplify(2*(1-z*z-3*x*z)-6*z*(1-x))==0
+    assert s.simplify(2*(1-1-3*x))==-6*x
