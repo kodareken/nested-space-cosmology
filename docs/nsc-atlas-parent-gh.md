@@ -47,6 +47,8 @@ velocity field or a particle interpretation.
 | Nonlinear driver and geodesic observer | [parent_gh](../src/recursive_horizons/nsc_atlas_parent_gh.py) |
 | Phase/amplitude-gradient diagnostics | [gh_wave_diagnostics](../src/recursive_horizons/nsc_atlas_gh_wave_diagnostics.py) |
 | Normalized local observer stress/phase | [gh_observer](../src/recursive_horizons/nsc_atlas_gh_observer.py) |
+| Full matter excitation work | [gh_matter_work](../src/recursive_horizons/nsc_atlas_gh_matter_work.py) |
+| Passive stage quadrature | [passive_dop853](../src/recursive_horizons/nsc_atlas_passive_dop853.py) |
 
 The ADM calculator derives physical spatial connection and curvature
 directly from Koszul/Riemann formulas, independently of the GH kernel.
@@ -114,6 +116,11 @@ control is not a proof of constraint convergence in the finite 3D run.
 
 ## Qualification and current limits
 
+The compact-source attempts are preserved in the
+[campaign record](../results/summaries/nsc-atlas-gh-campaign-v1.json), with
+source-commit verification and no admission of single-resolution physical
+predictions. Failed or unresolved comparisons remain explicit.
+
 The local kernel has independent de Sitter, nonlinear flat-coordinate,
 anisotropic and matter controls. Frame commutators, orthonormality,
 Laplacian spectrum, fast-transform normalization and derivative ordering
@@ -137,6 +144,37 @@ The phase and amplitude both contribute in the coarse diagnostic. A
 carrier-only or homogeneous replacement is therefore not silently used
 to obtain a more convenient finite result. The active target remains
 nonlinear evolution of the original nonspherical finite preparation.
+
+### Matter-work and constraint controls
+
+For normal density rho, spatial stress S and momentum j, the compact
+matter-energy balance is
+
+$$
+\partial_t E=\int\sqrt h\left(NK_{ij}S^{ij}-j^iD_iN\right)dV_{\rm ref}.
+$$
+
+The global shift flux integrates to zero on S3. Subtracting constant V_star
+from density adds N V_star trK to the work integrand. This isolates the
+excitation balance instead of letting vacuum expansion dominate its error.
+A passive DOP853 stage ledger integrates that work without adding an
+adaptive state variable or extra RHS evaluations. The accepted field
+steps remain bitwise identical with or without the ledger. Its own
+time-quadrature error still needs a temporal control.
+
+A separate exact homogeneous constraint calculation gives, on the vacuum
+background,
+
+$$
+\ddot C_0+(3h+2\gamma)\dot C_0
++[6\gamma h-3(h^2+H^2)]C_0=0.
+$$
+
+At the currently used gamma=H, the late rates are0 and-5H. Gamma=2H
+would make both late rates negative; early transient growth is still
+possible. This is off-constraint stabilization, not a physical term.
+The current spatial campaign keeps gamma fixed; no convergence claim
+is inferred from this background calculation.
 
 ## Running and preserving work
 

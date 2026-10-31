@@ -20,6 +20,8 @@ def main():
     p.add_argument('--backend',choices=('hopf','dense'),default='hopf')
     p.add_argument('--state-cache',type=Path)
     p.add_argument('--quadrature-radial',type=int);p.add_argument('--quadrature-angles',type=int)
+    p.add_argument('--rtol',type=float,default=3e-8);p.add_argument('--atol',type=float,default=3e-10)
+    p.add_argument('--max-step',type=float,default=.05)
     a=p.parse_args();out=(ROOT/a.output).resolve()
     if not out.is_relative_to(ROOT) or out.exists():raise ValueError('fresh repository output required')
     names=['src/recursive_horizons/nsc_atlas_parent_gh.py','src/recursive_horizons/nsc_atlas_s3_frame.py',
@@ -28,6 +30,7 @@ def main():
         'src/recursive_horizons/nsc_atlas_gh_observer.py','src/recursive_horizons/nsc_atlas_parent_circulation.py',
         'src/recursive_horizons/nsc_atlas_parent_scale_selector.py','src/recursive_horizons/nsc_atlas_parent_backreaction.py',
         'src/recursive_horizons/nsc_atlas_s3_spectral.py',
+        'src/recursive_horizons/nsc_atlas_gh_matter_work.py','src/recursive_horizons/nsc_atlas_passive_dop853.py',
         'scripts/evolve_nsc_atlas_parent_gh.py']
     before={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
@@ -44,7 +47,8 @@ def main():
     order=None if a.quadrature_radial is None else (a.quadrature_radial,a.quadrature_angles)
     r=evolve_parent(degree=a.degree,epsilon=a.epsilon,proper_endpoint=a.proper_endpoint,
         threads=a.threads,budget_seconds=a.budget_seconds,progress=True,gauge=a.gauge,
-        state_sink=sink if a.state_cache else None,backend=a.backend,quadrature_order=order)
+        state_sink=sink if a.state_cache else None,backend=a.backend,quadrature_order=order,
+        rtol=a.rtol,atol=a.atol,max_step=a.max_step)
     after={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}
     r['source_sha256']=before;r['producer_source_unchanged_during_run']=before==after
     r['producer_commit']=commit;r['source_bound_to_commit']=bound

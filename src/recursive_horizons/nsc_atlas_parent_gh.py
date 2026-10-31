@@ -18,6 +18,8 @@ from .nsc_atlas_finite_parent_data import solve_initial_data,source_profile
 from .nsc_atlas_gh_constraints import adm_constraints
 from .nsc_atlas_gh_pointwise import rhs_nodes
 from .nsc_atlas_gh_observer import observer_readout
+from .nsc_atlas_gh_matter_work import matter_work
+from .nsc_atlas_passive_dop853 import PassiveDOP853Quadrature
 from .nsc_atlas_parent_backreaction import anchor_point
 from .nsc_atlas_parent_circulation import Parent
 from .nsc_atlas_parent_scale_selector import VolumeParent
@@ -101,6 +103,7 @@ class ParentGH:
         self.offsets=np.r_[0,np.cumsum([len(i) for i in self.indices])]
         self.dof=int(self.offsets[-1]);self.started=time.perf_counter();self.budget=math.inf
         self.invalid_stages=0
+        self.passive_work=None;self.work_valid=True
 
     def pack(self,C):return np.concatenate([C[i,idx] for i,idx in enumerate(self.indices)])
 
@@ -249,6 +252,7 @@ class ParentGH:
             raise TimeoutError('nonlinear GH compute budget exceeded')
         if not np.all(np.isfinite(y)):
             self.invalid_stages+=1
+            if self.passive_work is not None:self.passive_work.record(0.)
             return np.full_like(y,np.nan)
         J=self.jets(y);H0,Hdot=self.gauge_source(t)
         accg,accq,C,valid=rhs_nodes(J.g,J.v,J.dg,J.d2g,J.dv,J.q,J.p,J.dq,J.d2q,J.dp,
@@ -259,11 +263,23 @@ class ParentGH:
             # A rejected intermediate RK stage is not an accepted physical
             # state. Let the adaptive integrator reduce its step first.
             self.invalid_stages+=1
+            if self.passive_work is not None:self.passive_work.record(0.)
             return np.full_like(y,np.nan)
         vals=np.empty((self.N+1,24))
         for k,(a,b) in enumerate(PAIRS):vals[:,k]=J.v[:,a,b];vals[:,k+10]=accg[:,a,b]
         vals[:,20:22]=J.p;vals[:,22:24]=accq
-        return np.r_[self.pack(self.project(vals,self.chars)),self.observer_rhs(y,J)]
+        derivative=np.r_[self.pack(self.project(vals,self.chars)),self.observer_rhs(y,J)]
+        if self.passive_work is not None:
+            try:
+                work=matter_work(J.g,J.v,J.dg,J.q,J.p,J.dq,r=self.r,potential=self.potential(J.q))
+                integrand=work['volume_weight']*(work['work_integrand']
+                    +work['lapse']*self.parent.vacuum*work['extrinsic_trace'])
+                value=float(self.basis.weights@integrand[:self.N])/(self.parent.vacuum*2*math.pi**2)
+                if not math.isfinite(value):raise ValueError('nonfinite passive work')
+            except ValueError:
+                self.work_valid=False;value=0.
+            self.passive_work.record(value)
+        return derivative
 
     def diagnostic(self,t,y):
         J=self.jets(y);W=self.potential(J.q)
@@ -307,6 +323,7 @@ class ParentGH:
             scalar_acceleration_unresolved_fraction=rhs_fractions[1],
             volume_acceleration_unresolved_fraction=rhs_fractions[0],
             slice_proper_volume_over_initial_round_reference=V/(2*math.pi**2),
+            excitation_normal_energy_over_initial_round_vacuum_energy=float(measure@(rho-self.parent.vacuum))/(self.parent.vacuum*2*math.pi**2),
             slice_mean_normal_total_density_over_initial_vacuum=float(measure@rho/V/self.parent.vacuum),
             slice_max_sampled_normal_total_density_over_initial_vacuum=float(max(rho)/self.parent.vacuum),
             maximum_to_mean_slice_normal_density_ratio=float(max(rho)/(measure@rho/V)),
@@ -319,7 +336,7 @@ class ParentGH:
 
 
 def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_seconds=600,
-                  rtol=3e-8,atol=3e-10,max_step=.05,progress=False,gauge='lapse_controlled',state_sink=None,backend='hopf',quadrature_order=None):
+                  rtol=3e-8,atol=3e-10,max_step=.05,progress=False,gauge='lapse_controlled',state_sink=None,backend='hopf',quadrature_order=None,measure_work=True):
     set_num_threads(threads)
     from scipy.fft import set_workers
     with threadpool_limits(limits=threads),set_workers(threads):
@@ -328,8 +345,14 @@ def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_
         if endpoint<=0:raise ValueError('positive proper endpoint required')
         system.started=time.perf_counter();system.budget=budget_seconds
         snapshots=[system.diagnostic(0.,y0)];targets=list(np.linspace(0,endpoint,5)[1:])
+        initial_energy=snapshots[0]['excitation_normal_energy_over_initial_round_vacuum_energy']
+        if measure_work:
+            system.passive_work=PassiveDOP853Quadrature()
+            snapshots[0]['integrated_excitation_work_normalized']=0.
+            snapshots[0]['excitation_work_balance_residual']=0.
         if state_sink is not None:state_sink(0.,y0)
         solver=DOP853(system.rhs,0.,y0,t_bound=8/system.r,rtol=rtol,atol=atol,max_step=max_step)
+        if measure_work:system.passive_work.initialize(solver)
         steps=0;norm_drift=0.
         failure=None
         angle_prev=system.observer_angle(y0);phase=0.;clock_valid=True
@@ -338,6 +361,7 @@ def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_
                 message=solver.step();steps+=1
                 if solver.status=='failed':
                     failure=message or 'GH time integrator failed';break
+                if measure_work:system.passive_work.accepted_step(solver)
                 x=solver.y[system.dof:system.dof+4];norm_drift=max(norm_drift,abs(np.linalg.norm(x)-1))
                 angle=system.observer_angle(solver.y)
                 before_phase=phase;before_angle=angle_prev
@@ -357,6 +381,10 @@ def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_
                             partial=math.atan2(math.sin(a-before_angle),math.cos(a-before_angle))
                         state[-1]=before_phase+partial
                         point=system.diagnostic(t,state);point['scalar_clock_sampling_check_passed']=clock_valid
+                        if measure_work:
+                            integral=system.passive_work.dense_value(solver,t)
+                            point['integrated_excitation_work_normalized']=integral
+                            point['excitation_work_balance_residual']=point['excitation_normal_energy_over_initial_round_vacuum_energy']-initial_energy-integral
                         if not clock_valid:point['observer_sampled_unwrapped_phase']=None
                         snapshots.append(point)
                         if state_sink is not None:state_sink(t,state)
@@ -368,6 +396,10 @@ def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_
             if solver.t>snapshots[-1]['coordinate_t']:
                 last=solver.y.copy();last[-1]=phase
                 point=system.diagnostic(solver.t,last);point['scalar_clock_sampling_check_passed']=clock_valid
+                if measure_work:
+                    integral=system.passive_work.value
+                    point['integrated_excitation_work_normalized']=integral
+                    point['excitation_work_balance_residual']=point['excitation_normal_energy_over_initial_round_vacuum_energy']-initial_energy-integral
                 if not clock_valid:point['observer_sampled_unwrapped_phase']=None
                 snapshots.append(point)
                 if state_sink is not None:state_sink(solver.t,last)
@@ -390,4 +422,6 @@ def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_
             observable_quaternion_max_norm_drift=norm_drift,
             elapsed_seconds=time.perf_counter()-system.started,threads=threads,
             temporal_tolerances=dict(rtol=rtol,atol=atol,max_step=max_step),
+            passive_matter_work=dict(enabled=measure_work,valid=system.work_valid,
+                scope='Vacuum-subtracted normal excitation energy and geometric work; passive DOP853 stage quadrature never controls the PDE step size.'),
             SI_scale_selected=False,child_formation_proved=False)

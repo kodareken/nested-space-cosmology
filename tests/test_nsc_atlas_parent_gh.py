@@ -128,3 +128,15 @@ def test_lapse_control_preserves_vacuum_and_static_gauge_barriers():
     x=s.symbols('x',nonnegative=True)
     assert s.simplify(2*(1-z*z-3*x*z)-6*z*(1-x))==0
     assert s.simplify(2*(1-1-3*x))==-6*x
+
+
+def test_passive_matter_work_does_not_change_the_evolved_state():
+    states=[];runs=[]
+    for enabled in (False,True):
+        captured=[]
+        result=evolve_parent(degree=2,epsilon=0,threads=1,proper_endpoint=.5,
+            budget_seconds=90,measure_work=enabled,state_sink=lambda t,y:captured.append(y.copy()))
+        states.append(captured);runs.append(result)
+    assert runs[0]['steps']==runs[1]['steps'] and runs[0]['rhs_calls']==runs[1]['rhs_calls']
+    for a,b in zip(states[0],states[1]):np.testing.assert_array_equal(a,b)
+    for point in runs[1]['snapshots']:assert abs(point['excitation_work_balance_residual'])<1e-10

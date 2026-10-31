@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The [nonlinear parent implementation](nsc-atlas-parent-gh.md) now contains
+global regular-frame evolution, fast circle-fiber transforms, independent
+constraints, geodesic readouts and passive matter work. Finite-amplitude
+outcomes remain qualified by the campaign's spatial/temporal controls.
+
 The [finite parent initial data](nsc-atlas-finite-parent-data.md) combine
 a positive-solution existence proof on a finite amplitude interval,
 nonlinear nonspherical constraint solves, full-residual convergence,

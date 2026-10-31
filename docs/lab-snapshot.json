@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "17098b3cc5c9a11598c405029dbca161d426ab4e",
+  "current_receipt_commit_parent": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
   "files": [
     {
       "bytes": 3120,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 489266,
-      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
-      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "bytes": 489541,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "56940fb8ab5840241fa4d9ad0c1a0bbae37c5a889e918070961a0da6c0a3de8e"
+      "sha256": "e50272093936125e7f09e8f380220d46bb1da99bdc25f9be417924c543849d37"
     },
     {
       "bytes": 173938,
@@ -11023,12 +11023,12 @@
       "sha256": "fd3e5790c281f6f86262f1ebcc930efe9560cc9ffdfe7f53170ccf52843016c1"
     },
     {
-      "bytes": 7931,
-      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
-      "changed_from_commit": "17098b3cc5c9a11598c405029dbca161d426ab4e",
+      "bytes": 9577,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
       "path": "docs/nsc-atlas-parent-gh.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "eb7884aba0a2fc46fccea56ce0721f2f514ab726499c57c27543e6de216b2154"
+      "sha256": "4ec12c252fb1b4a4a7f4070973bdb60a8c961c867f43bd9d1c6db3cf49316e62"
     },
     {
       "bytes": 19004,
@@ -12246,12 +12246,12 @@
       "sha256": "453b21829a9efcab7b7f2ec7d829a7e39fd1b199c24305ddd4e1a68cb1d91f49"
     },
     {
-      "bytes": 57889,
-      "change": "Prove finite-amplitude positive initial geometry for the inherited source, solve the nonlinear constraints with full-residual convergence and derive compatible covariant GH starting data.",
-      "changed_from_commit": "6561d8cfa305cca6fece3f38bef058262965c8ef",
+      "bytes": 58183,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "4df07e093917d0d4716199dbb1edb51f306cf76c871cc7ffa26950d54a34c82f"
+      "sha256": "a00d3b9b4da7b80196432f6f91bdb7380f43ff300c32d7aead74771b393572f4"
     },
     {
       "bytes": 18356,
@@ -31278,6 +31278,14 @@
       "sha256": "b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2"
     },
     {
+      "bytes": 52325,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "path": "results/summaries/nsc-atlas-gh-campaign-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5697a5e9e5fe10efb50c03aea4717122a0bdcf137272d37a95f6d6d7c68c5646"
+    },
+    {
       "bytes": 21491,
       "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
       "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
@@ -35285,6 +35293,14 @@
       "sha256": "a00d59c16a42cbc69d1435dd3020a0484f7f22548244f3bacc51244aaa841de1"
     },
     {
+      "bytes": 6649,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "path": "scripts/diagnose_nsc_atlas_gh_reflection.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "941b484f89a726da231aba3defef91afaba73dacde2dd9a85febe6139e3fa73c"
+    },
+    {
       "bytes": 2857,
       "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
       "changed_from_commit": "17098b3cc5c9a11598c405029dbca161d426ab4e",
@@ -35301,12 +35317,12 @@
       "sha256": "b4c4289ca2487ee0c7a9612a07e7d7b465115a4004fc94330f962ff7491a5b39"
     },
     {
-      "bytes": 3872,
-      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
-      "changed_from_commit": "17098b3cc5c9a11598c405029dbca161d426ab4e",
+      "bytes": 4199,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
       "path": "scripts/evolve_nsc_atlas_parent_gh.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "c99b529d0d3e3662a53d010c20cfc801ed206dac953df0530adfc1cc762434c6"
+      "sha256": "580569ff7a5272645dd271663030af71e08cabc57b54d821fda82ee079e7c2ed"
     },
     {
       "bytes": 4707,
@@ -35994,6 +36010,14 @@
       "path": "scripts/record_nsc_atlas_geometric_average.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "9a23b864484fee6b23faf56714ea4949b03badd84978d3050a0bda7b196f7861"
+    },
+    {
+      "bytes": 2382,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "path": "scripts/record_nsc_atlas_gh_campaign.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0e2a23c0dbded7f1c73fdb64f427f4b99df7fbd328a1a72c22948de68a03485c"
     },
     {
       "bytes": 4978,
@@ -37071,6 +37095,14 @@
       "sha256": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7"
     },
     {
+      "bytes": 6668,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "path": "src/recursive_horizons/nsc_atlas_gh_matter_work.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893"
+    },
+    {
       "bytes": 4253,
       "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
       "changed_from_commit": "17098b3cc5c9a11598c405029dbca161d426ab4e",
@@ -37293,12 +37325,12 @@
       "sha256": "fb0034ccb16dd83a4f6e6650d9b94bdef2dbc9c75c5361c7dcd2aae56edb4f55"
     },
     {
-      "bytes": 21875,
-      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
-      "changed_from_commit": "17098b3cc5c9a11598c405029dbca161d426ab4e",
+      "bytes": 24369,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
       "path": "src/recursive_horizons/nsc_atlas_parent_gh.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "9e007d310c313842bd253ba33b454138805b356578909e1d43c0a83f60014a06"
+      "sha256": "351b9396c17f295b4229f8adad87683eb507f96581e5a0b9ca800de71b4de487"
     },
     {
       "bytes": 11824,
@@ -37374,6 +37406,14 @@
       "path": "src/recursive_horizons/nsc_atlas_parke_nucleation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "f6ef14402f91949ea921b63af65a630a099bc0c50c11d1c6c8628b6a74bccd35"
+    },
+    {
+      "bytes": 6908,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "path": "src/recursive_horizons/nsc_atlas_passive_dop853.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591"
     },
     {
       "bytes": 12308,
@@ -41901,12 +41941,28 @@
       "sha256": "f1e9b4dd20d1d4f676206a433bf4a7834ea7f5c88dce4a307fbe169b78b3545f"
     },
     {
+      "bytes": 3821,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "path": "tests/test_nsc_atlas_gh_constraint_propagation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "dae572fefe3bb81d677bfa927498e91214c59e76cfa374578a52a9c01c95bb8a"
+    },
+    {
       "bytes": 7521,
       "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
       "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
       "path": "tests/test_nsc_atlas_gh_constraints.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "4f8cb308572d5931695eb271423a3a3a6a9d2e3195b273a606766814813bea8a"
+    },
+    {
+      "bytes": 7355,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "path": "tests/test_nsc_atlas_gh_matter_work.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "75c6c8af0c96c525d4adca3645064285cc4a569e0b88a9b924c6f022320efcfe"
     },
     {
       "bytes": 5258,
@@ -42227,12 +42283,12 @@
       "sha256": "a120bddba36d7073ea01458a3ca7e3e3f169264c4960b7770bff1b0f2a3906f8"
     },
     {
-      "bytes": 5997,
-      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
-      "changed_from_commit": "17098b3cc5c9a11598c405029dbca161d426ab4e",
+      "bytes": 6636,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
       "path": "tests/test_nsc_atlas_parent_gh.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "1231d703bda3de44faaf798161e344e719b29103164d7cc3cbf38fbdb3d1d987"
+      "sha256": "4343123f76762ae33f935add6cea95b0cb3c777be8cd6fd1fdd005befa7fc7a8"
     },
     {
       "bytes": 7216,
@@ -42300,6 +42356,14 @@
       "path": "tests/test_nsc_atlas_parke_nucleation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "0b87353d6c3ccb0e1cfdbcf92009b29dbe9f807159ced2a1bdc5138f5abb0c45"
+    },
+    {
+      "bytes": 5470,
+      "change": "Add passive nonlinear matter-work verification, preserve source-bound unresolved GH attempts and test constraint propagation without changing the physical evolution.",
+      "changed_from_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "path": "tests/test_nsc_atlas_passive_dop853.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "310e3c612c3e479c7324fd3ef405ba331459d17992dc1f1fbd21a05ffd018a86"
     },
     {
       "bytes": 5358,

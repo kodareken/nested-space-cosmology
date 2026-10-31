@@ -3,9 +3,13 @@
 The [nonlinear nonspherical evolution implementation](nsc-atlas-parent-gh.md)
 now connects exact regular-frame derivatives, fast Hopf transforms, full
 covariant GH/two-scalar equations and independent ADM constraints. Vacuum
-and local operator controls pass. The finite-amplitude coarse trajectory
-is underresolved and is not admitted as a physical prediction. A higher
-resolution run and phase/amplitude diagnosis are active. The existing
+and local operator controls pass. The full-amplitude trajectories at degrees8
+and12 reach the same proper endpoint but remain underresolved and are not
+admitted as physical predictions. An additional epsilon=.25 control has
+decreasing constraint and spectral errors at those two degrees; its finer
+resolution and temporal checks remain open. A passive ledger now checks
+excitation energy against geometric work without controlling the evolved
+state. The existing
 finite initial-data and perturbative results below retain their domains.
 
 The [finite-amplitude parent data](nsc-atlas-finite-parent-data.md) now solve
@@ -16,8 +20,9 @@ Three resolutions reduce the full conformal residual by factors14.84 and
 17.32. The finite benchmark has volume ratio.309002226021 and actual mean
 excitation/vacuum density1.228530389054. It initially has positive trace
 expansion acceleration; no future collapse is inferred. Initial covariant
-GH gauge data are derived, but the full nonlinear evolution is still to
-be implemented. Earlier perturbative clocks retain their small-amplitude domain.
+GH gauge data and the nonlinear evolution are implemented; finite numerical
+predictions still require convergence. Earlier perturbative clocks retain
+their small-amplitude domain.
 
 The [coupled parent response](nsc-atlas-parent-backreaction.md) now includes
 all quadratic scalar/vector/tensor metric sectors, the inherited volume,
