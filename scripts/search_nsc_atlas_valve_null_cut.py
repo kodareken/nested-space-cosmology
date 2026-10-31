@@ -32,6 +32,7 @@ def main():
     parser.add_argument('--sheet',type=Path,required=True)
     parser.add_argument('--parent-record',type=Path)
     parser.add_argument('--time-degree',type=int,default=2)
+    parser.add_argument('--time-parameterization',choices=('harmonic','logit'),default='harmonic')
     parser.add_argument('--cut-degree',type=int,default=8)
     parser.add_argument('--initial-coordinate-time',type=float,default=.3018)
     parser.add_argument('--budget-seconds',type=float,default=300.)
@@ -64,7 +65,9 @@ def main():
     tlo=ray.start+1e-8;thi=ray.end-1e-8
     if not tlo<args.initial_coordinate_time<thi:raise ValueError('initial numerical cut must lie within the recorded sheet')
     fraction=(args.initial_coordinate_time-tlo)/(thi-tlo)
-    coeff=np.zeros((args.time_degree+1)**2);coeff[0]=math.sqrt(4*math.pi)*math.log(fraction/(1-fraction))
+    coeff=np.zeros((args.time_degree+1)**2)
+    coeff[0]=math.sqrt(4*math.pi)*(args.initial_coordinate_time if args.time_parameterization=='harmonic'
+        else math.log(fraction/(1-fraction)))
     cache={};best=None;rejected=[];evaluations=0
 
     def evaluate(coefficients):
@@ -72,7 +75,12 @@ def main():
         if time.perf_counter()-started>args.budget_seconds:raise TimeoutError('time-tilted cut search budget exhausted')
         key=np.asarray(coefficients,dtype=float).tobytes()
         if key in cache:return cache[key]
-        times=tlo+(thi-tlo)*expit(Y@coefficients)
+        times=(Y@coefficients if args.time_parameterization=='harmonic' else tlo+(thi-tlo)*expit(Y@coefficients))
+        if np.min(times)<tlo or np.max(times)>thi:
+            theta=np.full(2*len(times),1e3)
+            row=dict(rejected_reason='time profile leaves the recorded ray domain',time_coefficients=list(map(float,coefficients)))
+            evaluations+=1;cache[key]=(theta,row)
+            return theta,row
         state=ray.events(times)
         try:
             cut=evaluate_spacetime_cut(times,state['X'],
@@ -103,18 +111,24 @@ def main():
     with threadpool_limits(limits=args.threads):
         first,initial=evaluate(coeff)
         variables=np.r_[coeff,float(first.max())+.01]
-        limits=[(-30.,30.)]+[(-12.,12.)]*(len(coeff)-1)+[(-1000.,1000.)]
+        limits=([(tlo*math.sqrt(4*math.pi),thi*math.sqrt(4*math.pi))]+[(-2*(thi-tlo),2*(thi-tlo))]*(len(coeff)-1)+[(-1000.,1000.)]
+            if args.time_parameterization=='harmonic' else [(-30.,30.)]+[(-12.,12.)]*(len(coeff)-1)+[(-1000.,1000.)])
         def constraints(x):return x[-1]-evaluate(x[:-1])[0]
+        conditions=[{'type':'ineq','fun':constraints}]
+        if args.time_parameterization=='harmonic':
+            conditions.extend([{'type':'ineq','fun':lambda x:Y@x[:-1]-tlo},
+                               {'type':'ineq','fun':lambda x:thi-Y@x[:-1]}])
         try:
             optimum=minimize(lambda x:x[-1],variables,jac=lambda x:np.r_[np.zeros(len(coeff)),1.],
-                method='SLSQP',bounds=limits,constraints={'type':'ineq','fun':constraints},
+                method='SLSQP',bounds=limits,constraints=conditions,
                 options={'maxiter':args.maxiter,'ftol':1e-8,'disp':False})
             evaluate(optimum.x[:-1])
         except TimeoutError as error:status='budget_exhausted';reason=str(error)
         validations=[]
         if best is not None:
             for degree in sorted(set([max(args.time_degree,args.cut_degree-2),args.cut_degree])):
-                times=tlo+(thi-tlo)*expit(Y@np.asarray(best['time_coefficients']))
+                times=(Y@np.asarray(best['time_coefficients']) if args.time_parameterization=='harmonic'
+                    else tlo+(thi-tlo)*expit(Y@np.asarray(best['time_coefficients'])))
                 state=ray.events(times)
                 try:
                     cut=evaluate_spacetime_cut(times,state['X'],lambda t,X:sampler.event_slice(t,X,chunk=256),
@@ -126,6 +140,7 @@ def main():
         sheet_path=sheet_path.relative_to(ROOT).as_posix(),sheet_sha256=sha(sheet_path),
         parent_history=sampler.provenance,ray_dense_cache=sheet['ray_dense_cache'],
         numerical_time_degree=args.time_degree,cut_degree=args.cut_degree,angular_order=list(order),
+        time_parameterization=args.time_parameterization,
         source_sha256=before,source_bound_to_commit=source_bound,
         source_unchanged_during_run=before=={name:sha(ROOT/name) for name in source_names},
         producer_commit=commit,
