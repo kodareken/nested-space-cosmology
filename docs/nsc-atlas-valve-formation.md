@@ -9,6 +9,14 @@ occupation below remain explicitly distinct states.
 
 ## Current result: a same-action trapped neck
 
+The latest [small-radius continuation](../results/summaries/nsc-atlas-valve-restart-v1.json)
+and [receiver-source calculation](../results/summaries/nsc-atlas-valve-source-gate-v1.json)
+continue the declared state to controlled R approximately .15. No turn is
+observed. The current dependency is a physical source/state calculation;
+another deeper grid on this completed window is not the next step. The
+new spinor work below is explicitly a candidate extension and a probe,
+not fermions silently added to the classical scalar solution.
+
 The old two-mode finite searches below found no admitted trap; their
 occupation was supplied rather than selected. Continuing that optimizer,
 adding an external pressure term, and changing the occupation are materially
@@ -326,7 +334,103 @@ python scripts/run_python.py scripts/check_nsc_atlas_valve_conformal.py
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_neck.py tests/test_nsc_atlas_valve_spherical.py tests/test_nsc_atlas_valve_conformal.py
 ```
 
-## Calculation and stopping rules
+## Receiver source gate after the controlled small-radius stop
+
+The [restart record](../results/summaries/nsc-atlas-valve-restart-v1.json)
+rescales the actual inherited Cauchy profile by
+T'=c(T-T0), X'=cX, a'=a-log(c), with c equal to the previous central lapse.
+Fields, proper momenta and geometry are retained. A C2 interpolation on
+the restricted causal patch supplies no new incoming boundary values.
+
+At the finest actual cut, R=.14953267 and proper time4.27291177; radius
+rate is-2.84970628 and both expansions/H=-140.43494. Direct metric/source
+Ricci RMS discrepancy is .557%, below the declared2% guard. Temporal
+metric derivatives come from the actual three time levels. Using the
+source wave equation to reconstruct them would partly impose the check;
+initial Cauchy accelerations, which necessarily use initialization, are
+separately labelled. The dS actual-jet control and a deliberately changed
+temporal-metric jet verify that this test can detect a source disagreement.
+
+The fixed-R=.15 events on4k/8k/16k restart grids have successive proper-time
+spread1.57e-7 and radius-rate spread1.35e-4, with difference ratios near4.
+The two coarse target cuts fail the chosen source guard and remain
+diagnostic only. The finest actual cut passes. These conditional grid
+spreads do not enclose the uncertainty in the inherited parent profile.
+No bounce, observed neck-type change, physical singularity or all-future
+exclusion is inferred from this finite computation.
+
+For the same reflection-center observer, the radial Einstein equation gives
+
+$$
+R_{\tau\tau}=-\frac{1+R_\tau^2+\kappa R^2p_r}{2R}.
+$$
+
+Positive acceleration therefore requires -kappa R²pr>1+R_tau². A
+turning-point bounce separately requires pr<-1/(kappa R²) once R_tau=0.
+The [actual source gate](../results/summaries/nsc-atlas-valve-source-gate-v1.json)
+evaluates both rather than treating them as the same condition:
+
+| Actual radius | Current pr | Pressure capacity -kappa R²pr | Required for positive acceleration |
+| --- | --- | --- | --- |
+| .65497252 | -.21016368 | .09015790 | 2.10911020 |
+| .14953267 | +.23346054 | -.00522018 | 9.12082587 |
+
+At the latter point, positive acceleration would require total pr below
+-407.90776 in these units. This is a present-state force requirement,
+not a selected replacement fluid. A new source must satisfy the gravitational
+constraints and evolve the geometry as well as change stress. Positive
+vacuum has zero direct radial-null contraction; it can change a cap only
+with its compatible geometry and transition law.
+
+For the persisting minimum-neck route, the equivalent null gate is
+
+$$
+\delta\mathcal N<-mathcal N_{\rm class}
+-\frac{2\operatorname{Hess}_{ss}R}{\kappa R},\qquad
+\mathcal N=\rho+p_r.
+$$
+
+The latter bound is about-408.14945 at the controlled cut. Include the
+entire added sector, especially free kinetic stress, in delta N. A compact
+canonical geometry can alternatively change into a belly before it turns;
+the exact closed-dS control does this with zero NEC. Thus the numerical
+outcome is not a general no-go for canonical compact cosmologies.
+
+### Published sources and the compatibility decision
+
+Known regular metrics are inputs only after their source and state match.
+
+| Route | Current connection and unresolved input |
+| --- | --- |
+| Same canonical action, neck to belly | No extra operator; no change observed by R approximately .15. A different future continuation is not excluded. |
+| Einstein--Cartan spin source | Fixed contact operator once spinors exist. The present two real scalars have no spin current. A fermion field, its actual state and complete stress are required. |
+| MMP negative quantum stress | Requires magnetic Maxwell sector, sufficiently light charged fermions and a return state. The new untwisted KK spinor fails its massless-field gate below; the current source-free S3 also has no magnetic flux through a separating S2. |
+| Nonminimal scalar/EC black universe | [Bronnikov--Galiakhmetov](https://arxiv.org/abs/1607.07791) supplies a different action with xi>1/2, Maxwell charge and a reconstructed potential. These are not the current minimal W. |
+| Action-level limiting curvature | [Frolov--Zelnikov](https://arxiv.org/abs/2111.12846) supplies control stress and switching through added curvature constraints and cutoff parameters. Those new laws/scales are not fixed here. |
+
+The earlier [scalar preparation](nsc-atlas-scalar-preparation.md) already
+contains cap/DtN/junction/open-FRW machinery. Its independent vacuum-cap
+state and tiny excitation cannot replace the actual receiving-band traces.
+A flux-changing event is absent from the fixed-sector smooth evolution;
+the original membrane action would have to supply its actual nucleation,
+radion derivative jump and backreaction before a cap can be attached.
+
+The [inherited-charge owner](nsc-atlas-inherited-charge.md#6-an-added-spinor-candidate-and-its-actual-parent-modes)
+now derives the candidate field, its actual spatial modes and a
+correlation-sensitive interaction kernel on this parent. This supplies
+the next precise source observable,
+
+$$
+\mathcal N_{\rm new}(\tau)
+=k^\mu k^\nu\langle T_{\mu\nu}^{\rm complete}\rangle_{\omega,\rm ren},
+$$
+
+with the inherited covariance and connected four-point function. The
+source field/state is not selected by the classical offset map. The
+current route is to calculate that inheritance, rather than insert a
+negative density or extend the same shrinking-radius scan.
+
+## Historical finite-window admission
 
 1. Derive a dimensionless geodesic focusing ratio from the actual stress;
    distinguish it from the sufficient conditions for a trapped surface.

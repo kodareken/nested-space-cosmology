@@ -7,10 +7,10 @@
   "goal_status": "active",
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
-  "current_calculation": "Receiving interior after resolved formation; transition before the reflection-zero curvature limit",
-  "completed": "New one-mode same-action threshold, closed future trap, future-outer horizon classification, receiving-band ledger and three-grid same-state conformal continuation are calculated. Independent full GH and exact de Sitter controls pass. No regular expanding child.",
-  "active": "Test an inherited receiving-geometry/neck-type transition before the shrinking reflection sphere reaches zero. The local conformal frame continues through the old numerical break. A conditional curvature lower bound excludes renaming an actual zero as a regular child in the present 4D or inherited internal warped metric.",
-  "continuation": "Read this record, current_owner and latest compact conformal result. All scientific producers and the 248-page PDF rebuild are terminal. No completed threshold/null-window reruns. The goal remains active: a regular expanding receiving child is not established.",
+  "current_calculation": "Actual-parent Dirac source and conditional state response",
+  "completed": "Controlled canonical continuation reaches R=.149533 without a turn; trapped sign also survives the complete uplift, and its external radius still contracts. Geometric spinor ratios, full bare ground vertex, actual-parent modes and conditional initial response are calculated. No regular expanding child.",
+  "active": "Evaluate the complete signed Gaussian source, kinetic stress and radion exchange with g symbolic, using all required internal/spatial signs and explicit subtraction. Stop at its leading coefficient, cancellation or a named initial-state/UV datum before further collapse evolution.",
+  "continuation": "Source-stage agents and producers are complete. The250-page working-2026-10-31.08 manuscript integrates the new mode/vertex/onset calculations; its new pages were visually inspected.135 focused tests and retained evidence checks pass. Use git log for the saved checkpoint. Next is the complete signed source with g symbolic, not another scalar-collapse grid. Overall16/50 work gates; regular expanding child and empirical closure remain open.",
   "items": [
     {
       "id": "dimensions_inputs",
@@ -419,7 +419,11 @@
     "results/summaries/nsc-atlas-valve-neck-continuation-v1.json",
     "results/summaries/nsc-atlas-valve-neck-late-probe-v1.json",
     "results/summaries/nsc-atlas-valve-horizon-classification-v1.json",
-    "results/summaries/nsc-atlas-valve-conformal-v1.json"
+    "results/summaries/nsc-atlas-valve-conformal-v1.json",
+    "results/summaries/nsc-atlas-valve-restart-v1.json",
+    "results/summaries/nsc-atlas-valve-source-gate-v1.json",
+    "results/summaries/nsc-atlas-valve-dirac-modes-v1.json",
+    "results/summaries/nsc-atlas-valve-dirac-onset-v1.json"
   ],
   "intermediate_results": {
     "internal_release_critical_loading": 0.3750793338270073,
@@ -441,14 +445,17 @@
     "Hayward_surface_gravity_at_proper_point2": 0.084323809,
     "band_material_influx_at_proper_point2": 0.08561978764006349,
     "central_zero_is_not_no_accretion": true,
-    "largest_resolved_proper_endpoint": 3.9455040983085437,
+    "largest_resolved_proper_endpoint": 4.272911773570098,
     "later_global_synchronous_constraint_loss_near": 2.9,
     "global_synchronous_resolved_proper_endpoint": 2.0,
     "conformal_common_endpoint": 1.1481865519931276,
     "conformal_neck_radius": 0.654972516115722,
     "conformal_radius_adjacent_spread": 3.661256130715884e-06,
     "conformal_theta_pm_over_H": -11.84882923159729,
-    "regular_expanding_child_proved": false
+    "regular_expanding_child_proved": false,
+    "controlled_radius": 0.14953267378463386,
+    "actual_metric_source_RMS": 0.005570023953877889,
+    "spinor_rest_gap_over_H": 9.564438787837755
   },
   "execution_state": {
     "early_degrees": [
@@ -463,7 +470,7 @@
       24
     ],
     "pending_local_producers": [],
-    "next_step": "Test an inherited receiving-geometry/neck-type transition before the shrinking reflection sphere reaches zero. The local conformal frame continues through the old numerical break. A conditional curvature lower bound excludes renaming an actual zero as a regular child in the present 4D or inherited internal warped metric.",
+    "next_step": "Evaluate the complete signed Gaussian source, kinetic stress and radion exchange with g symbolic, using all required internal/spatial signs and explicit subtraction. Stop at its leading coefficient, cancellation or a named initial-state/UV datum before further collapse evolution.",
     "completed_outputs": [
       "results/summaries/nsc-atlas-valve-formation-early-v1.json",
       "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
@@ -476,7 +483,11 @@
       "results/summaries/nsc-atlas-valve-neck-continuation-v1.json",
       "results/summaries/nsc-atlas-valve-neck-late-probe-v1.json",
       "results/summaries/nsc-atlas-valve-horizon-classification-v1.json",
-      "results/summaries/nsc-atlas-valve-conformal-v1.json"
+      "results/summaries/nsc-atlas-valve-conformal-v1.json",
+      "results/summaries/nsc-atlas-valve-restart-v1.json",
+      "results/summaries/nsc-atlas-valve-source-gate-v1.json",
+      "results/summaries/nsc-atlas-valve-dirac-modes-v1.json",
+      "results/summaries/nsc-atlas-valve-dirac-onset-v1.json"
     ],
     "one_mode_spherical_degrees": [
       24,
@@ -499,8 +510,21 @@
       4001,
       8001
     ],
-    "publication_pages": 248,
-    "paper_revision": "working-2026-10-31.07"
+    "publication_pages": 250,
+    "paper_revision": "working-2026-10-31.08",
+    "source_stage_focused_checks": {
+      "passed": 135,
+      "test_files": 18
+    },
+    "publication_pages_before": 248,
+    "source_stage_visual_pages": [
+      9,
+      10,
+      11,
+      242,
+      243,
+      244
+    ]
   },
   "publication_finish_requirements": {
     "reviewed_manuscript": false,

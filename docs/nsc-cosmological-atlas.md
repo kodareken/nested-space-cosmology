@@ -19,6 +19,16 @@ remain separate requirements. A real-data fit is not a successful withheld
 registered prediction. The overall current gate score is32%, with the
 physical child and all downstream empirical closure gates still open.
 
+The [source-stage connection](nsc-atlas-inherited-charge.md) now uses the
+actual constrained parent for candidate Dirac modes and their initial
+response. The controlled scalar interior reaches R=.149533 without a
+turn. Its explicit pressure gate guides the new source calculation;
+geometry fixes spinor mass and coupling relations and the complete bare
+ground contact tensor. A nonzero conditional low-mode response does not
+select the full quantum state or establish the required radial stress.
+The field extension and preparation remain explicit. The work score is
+unchanged until a physical closure gate is satisfied.
+
 The [new one-mode formation calculation](nsc-atlas-valve-formation.md#current-result-a-same-action-trapped-neck)
 retains the action and explicitly changes occupation. It supplies a
 resolved future-trapped neck at epsilon=1, a numerical threshold .8339066,

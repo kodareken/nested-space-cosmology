@@ -19,6 +19,19 @@ trusted Cauchy state on a shrinking causal diamond. Its producer
 `check_nsc_atlas_valve_conformal.py` records source pins, overlap, proper
 clock alignment, three-grid refinement and exact-background controls.
 
+`ConformalRestart` reuses that engine with a constant coordinate rescaling;
+`check_nsc_atlas_valve_restart.py` retains independent three-time-level
+metric-source checks and distinguishes admitted from diagnostic cuts.
+`nsc_atlas_valve_source_gate.py` computes the radial pressure requirement,
+geometric spinor relations and complete bare contact tensor. The existing
+[inherited-field owner](nsc-atlas-inherited-charge.md) covers the candidate
+Dirac extension. `nsc_atlas_valve_dirac_modes.py` supplies all-sector
+spatial modes, normalized contact overlaps and the initial metric/radion
+pump. Its two producers `check_nsc_atlas_valve_dirac_modes.py` and
+`check_nsc_atlas_valve_dirac_onset.py` bind finite residuals, independent
+finite-parent checks and the conditional initial state. A bare interaction
+or response coefficient is not a computed receiving stress.
+
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
 uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
 records. The horizon/GH/boson chain below is frozen. It supplies existing

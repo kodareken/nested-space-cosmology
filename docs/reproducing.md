@@ -17,6 +17,23 @@ threads. Historical control results identify their pre-promotion initializer;
 the production initializer is checked bitwise identical. No child, SI ruler
 or cosmological fraction is inferred from a trapped neck alone.
 
+The source-stage records regenerate in dependency order:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_valve_restart.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_dirac_modes.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_dirac_onset.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_source_gate.py
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_restart.py tests/test_nsc_atlas_valve_dirac_modes.py tests/test_nsc_atlas_valve_dirac_onset.py tests/test_nsc_atlas_valve_source_gate.py tests/test_nsc_atlas_valve_vertex.py
+```
+
+The restart authenticates its historical input caches against their
+original Git source versions. Full causal diamonds and mode vectors stay
+in `.build`; summaries retain hashes and numerical controls. The mode,
+onset and source records take seconds after the existing input is present.
+The [source owner](nsc-atlas-inherited-charge.md) distinguishes new field
+and low-mode preparation assumptions from quantities fixed by geometry.
+
 The [canonical parent response](nsc-atlas-boson-transport.md#reproduction)
 records resolved-history, response, Schur and plot commands. Full history
 and matrix arrays are regenerated locally; the committed summaries bind

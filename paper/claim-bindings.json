@@ -798,6 +798,26 @@
       "section": "6",
       "status": "measured",
       "owner": "docs/nsc-atlas-valve-formation.md"
+    },
+    "receiver-state-source-link": {
+      "section": "6",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-valve-formation.md"
+    },
+    "ground-spinor-source-relations": {
+      "section": "A.197",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-inherited-charge.md"
+    },
+    "parent-dirac-interaction-onset": {
+      "section": "A.198",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-inherited-charge.md"
+    },
+    "killing-contact-projection": {
+      "section": "A.198",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-inherited-charge.md"
     }
   },
   "findings": [

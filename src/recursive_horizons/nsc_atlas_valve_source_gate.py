@@ -127,6 +127,52 @@ def mmp_massless_field_gate(spinor=None,magnetic_integer=1):
         scope='Additional operator/domain gate even if an external magnetic RN sector were provided. Not a no-go for other massive or twisted-bundle sources.')
 
 
+def killing_ground_contact_block(r,signs,*,internal_dimension=12):
+    """Exact ordered-index bare EC flavor tensor in Killing trivialization.
+
+    eta_plus(v,n)=v/sqrt(Vgamma), eta_minus=Gamma(n)v/sqrt(Vgamma).
+    Cq sums ALL ordered ambient Clifford q-indices. Signs name the left
+    and right fields of two bilinears. Chiral mass rotations are separate.
+    """
+    if (isinstance(r,bool) or not isinstance(r,int) or not 0<=r<=3 or
+            isinstance(internal_dimension,bool) or not isinstance(internal_dimension,int) or
+            internal_dimension<2 or internal_dimension%2):
+        raise ValueError('r in [0,3] and positive even internal dimension>=2 required')
+    if len(signs)!=4 or any(v not in (-1,1) or isinstance(v,bool) for v in signs):
+        raise ValueError('four Killing signs +/-1 required')
+    a,b,c,d=signs;N=internal_dimension+1
+    diagonal1=a==b;diagonal2=c==d
+    if diagonal1!=diagonal2:rank=0;coefficient=Fraction(0)
+    elif diagonal1:
+        rank=(0,2,2,4)[r]
+        coefficient=(Fraction(1),Fraction(-a*c,N),Fraction(N-2,N),Fraction(-a*c,N))[r]
+    else:
+        rank=(1,1,3,3)[r]
+        coefficient=(Fraction(1,N),Fraction(-a*c*(N-1),N),Fraction(1,N),Fraction(-a*c*(N-3),N))[r]
+    if rank>N:coefficient=Fraction(0)
+    return dict(r=r,Killing_signs=list(signs),ambient_Clifford_rank=rank,
+                ordered_tensor_coefficient=str(coefficient),coefficient=float(coefficient),
+                external_three_form_weight=math.comb(3,r)*(-1)**r)
+
+
+def complete_ground_contact_vertex():
+    """All bare ground-sign couplings; not an occupied or conserved truncation."""
+    return dict(added_action='Minimal 16D Einstein-Cartan plus complex massless Dirac on the declared round internal sphere',
+        universal_contact='L16=-kappa16*J_ABC*J^ABC/32; J=barPsi Gamma_[ABC] Psi',
+        normalization='Psi16=exp(3s)*sum psi4*eta; quartic/volume warps cancel, kappa16/Vgamma=kappa4',
+        ambient_tensor='Cq[v,w;x,z]=sum_(I1...Iq ordered) Gamma_[I1...Iq][v,w]*Gamma_[I1...Iq][x,z]',
+        bare_bilinear='B_r=(barpsi_(a,v) gamma_[mu1...mu(3-r)] gamma5^r psi_(b,w))',
+        reduced_action='L4=-kappa4/32*sum_r choose(3,r)(-1)^r*B_r^(av,bw)*B_r^(cx,dz)*K_r^(ab,cd)[vw;xz]',
+        blocks=[killing_ground_contact_block(r,signs) for r in range(4) for signs in itertools.product((1,-1),repeat=4)],
+        positive_mass_rotation='psi_a=exp(-i*a*pi*gamma5/4)*chi_a; transform every bilinear with its own left/right signs',
+        one_sign_positive_mass_action='-kappa4/32*[6A²-(3/13)sum_IJ T_IJ,munu T_IJ^munu+(33/13)sum_IJ V_IJ,mu V_IJ^mu-(1/13)sum_IJKL S_IJKL²]',
+        all_internal_sums_ordered=True,
+        ground_vertex_projection_derived=True,independent_contact_parameter_added=False,
+        nonlinear_KK_truncation_proved=False,occupied_state_selected=False,
+        radial_stress_computed=False,regular_child_proved=False,
+        scope='Bare tree-level matrix-element projection of the added action, both Killing signs. Higher modes, state transport, composite renormalization and backreaction remain separate.')
+
+
 def dirac_clifford_control():
     """Literal four-component Clifford/Wick normalization in mostly-plus units."""
     zero=np.zeros((2,2),complex);I=np.eye(2,dtype=complex)
@@ -168,9 +214,37 @@ def neutral_thermal_ec_benchmark(spinor=None):
         quantum_gravitational_normalization='g=kappa_nat/Lunit² remains free; arithmetic kappa=1 is not a choice g=1',
         g_selected=False,temperature_selected=False,
         C_even_contact_selects_eta=False,current_scalar_parent_fermionic_contact=0.,
-        full_16d_contact_reduction_performed=False,
+        benchmark_is_not_the_full_16d_contact=True,
         required_next_source='N(τ)=k^mu*k^nu <T_Dirac+interaction_mu_nu>_(inherited state,ren), including kinetic stress and backreaction.',
         missing_state_data='Actual inherited covariance and connected four-point function, with renormalization and all retained torsion channels.')
+
+
+def parent_mode_axial_kernel(*,mass,spatial_eigenvalue,density_overlap):
+    """Bare external-axial contact difference on an actual k=0 parent mode.
+
+    The mode field is sqrt(rho(x))*(Q_tau tensor U_spin(x))*psi_rest,
+    Q=[[A,-B],[B,A]], A²=(E+m)/(2E). The singlet/triplet states both
+    have N=2 and identical quadratic covariance. Their local quartic
+    difference is [8+4(m/E)²]*rho². This is one torsion channel, not a
+    total 16D interaction, pressure or claimed inherited occupation.
+    """
+    if any(not math.isfinite(float(v)) for v in (mass,spatial_eigenvalue,density_overlap)) or mass<0 or density_overlap<=0:
+        raise ValueError('finite mass/eigenvalue/overlap with mass>=0 and overlap>0 required')
+    energy=math.hypot(mass,spatial_eigenvalue)
+    if energy==0:raise ValueError('positive mode energy required')
+    fraction=(mass/energy)**2;quartic=8+4*fraction
+    return dict(mass=mass,spatial_eigenvalue=spatial_eigenvalue,energy=energy,
+        density_overlap=density_overlap,effective_volume=1/density_overlap,
+        mass_squared_over_energy_squared=fraction,
+        local_quartic_gap_over_density_squared=quartic,
+        integrated_quartic_gap=quartic*density_overlap,
+        triplet_minus_singlet_energy_hat_over_g=3*quartic*density_overlap/16,
+        singlet_contact_energy_hat_over_g=3*(-8-2*fraction)*density_overlap/16,
+        isotropic_triplet_contact_energy_hat_over_g=3*(2*fraction)*density_overlap/16,
+        normalization='Delta(E*Lunit)=g*(3/4)*(2+m_hat²/E_hat²)*I4_hat; g=kappa_nat/Lunit² remains free.',
+        source_state_selected=False,full_torsion_channels_matched=False,
+        physical_pressure_or_NEC_derived=False,
+        scope='One explicit initial-parent angular doublet and one external axial contact channel; finite-mode state comparison, not the total interacting ground state.')
 
 
 def axial_pair_correlation_witness():

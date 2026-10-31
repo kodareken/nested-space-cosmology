@@ -10,6 +10,7 @@ from recursive_horizons.nsc_atlas_valve_source_gate import (
     radial_source_gate,geometric_spinor_candidate,mmp_massless_field_gate,
     dirac_clifford_control,neutral_thermal_ec_benchmark,
     axial_pair_correlation_witness,
+    parent_mode_axial_kernel,
 )
 
 
@@ -105,3 +106,16 @@ def test_equal_free_covariance_does_not_select_connected_torsion_source():
     assert b['full_vacuum_Wick_AA_times_V_squared']=='2'
     assert row['triplet_minus_singlet_AA_times_V_squared']=='12'
     assert row['triplet_minus_singlet_contact_H_times_V_over_kappa']=='9/4'
+
+
+def test_parent_kinetic_mode_kernel_differs_from_rest_projection():
+    # Independent exact Fock/Dirac audit at m/E=3/5, lambda/E=4/5 gives
+    # raw AA singlet=-36/25, triplet=8; their common-subtraction gap=236/25.
+    row=parent_mode_axial_kernel(mass=3.,spatial_eigenvalue=4.,density_overlap=.2)
+    assert row['energy']==5.
+    assert row['local_quartic_gap_over_density_squared']==pytest.approx(236/25)
+    assert row['triplet_minus_singlet_energy_hat_over_g']==pytest.approx((3/16)*(236/25)*.2)
+    rest=parent_mode_axial_kernel(mass=3.,spatial_eigenvalue=0.,density_overlap=.2)
+    assert rest['local_quartic_gap_over_density_squared']==12.
+    assert rest['triplet_minus_singlet_energy_hat_over_g']==pytest.approx(9*.2/4)
+    assert row['source_state_selected'] is False and row['physical_pressure_or_NEC_derived'] is False

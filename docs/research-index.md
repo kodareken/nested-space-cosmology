@@ -8,6 +8,14 @@ has no admitted trap. A regular receiving child and its inherited source
 remain open. [Progress and compaction recovery](atlas-progress.json)
 keep the shared programme in view.
 
+The [receiving-source connection](nsc-atlas-inherited-charge.md) now binds
+the controlled small-radius pressure gate to a candidate Dirac extension,
+its geometry-fixed mass/coupling ratios, full bare compactification vertex
+and actual-parent spatial modes. The inherited metric and volume drive
+a nonzero conditional low-mode response. Selecting the full state and
+computing its conserved renormalized stress remain the next source work;
+no formed regular child or new empirical result is claimed.
+
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
 uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
 records. The horizon/GH/boson chain below is frozen. It supplies existing

@@ -1,5 +1,20 @@
 # Cited arXiv studies
 
+## Receiver source, compact spinors and pressure, 31 October 2026
+
+- [Shaposhnikov--Shkerin--Timiryasov--Zell, 2008.11686v2](https://arxiv.org/html/2008.11686v2) — read the EC setup and equation2 for the minimal axial contact, with metric and adjoint conventions converted together. Its dark-matter production history, Standard Model bath and abundance are not imported. The atlas uses the coefficient to check a specified four-dimensional thermal benchmark, separately from its complete16D projection.
+- [Diakonov--Tumanov--Vladimirov, 1104.2432v2](https://arxiv.org/html/1104.2432v2) — read sectionsVI--VII, equations64--76 and the medium-variation discussion. The paper's half-diagram normalization is kept distinct from the literal local Wick operator. Temperature, chemical potential and subtraction must be specified before an interaction stress is inferred. The atlas's neutral benchmark does not select the actual evolving parent state.
+- [Frolov--Zelnikov, 2111.12846v1](https://arxiv.org/html/2111.12846v1) — abstract, section map and limiting-curvature action/constraint structure inspected as a separate continuation candidate. It adds curvature inequalities and control fields; its critical curvature is additional physical input. Its regular interior is not a continuation theorem for the present canonical action. No full independent reproduction is claimed.
+- [Kamenshchik--Khalatnikov--Toporensky, gr-qc/9801064v1](https://arxiv.org/html/gr-qc/9801064v1) — abstract and model/equation section inspected for closed scalar cosmology and bounce trajectories. This is a comparison illustrating why compact topology cannot be replaced by an asymptotically flat singularity premise. It does not establish a bounce for the atlas's inhomogeneous trapped band; the exact closed-de-Sitter control is checked independently.
+
+The existing [Camporesi--Higuchi spectrum](https://arxiv.org/abs/gr-qc/9505009)
+and [higher-dimensional EC contact](https://arxiv.org/abs/1405.0397)
+are reused with their original attribution. The
+[inherited-field owner](nsc-atlas-inherited-charge.md) derives the new
+compactification ratios, full bare ground tensor and actual-parent
+mode/pump connections. Added fermionic fields, statistics and the
+conditional low-mode preparation are not supplied by these citations.
+
 ## Massive coupled-parent covariance and memory, 31 October 2026
 
 - [Weedbrook et al., 1110.3234v1](https://arxiv.org/html/1110.3234v1) — read I.4, II.1.1--II.1.2 and II.3.1, including covariance, canonical transport and equations44--49 for Gaussian entropy. Convert their hbar=2 convention to hbar=1 here. The atlas computes the spectrum using the Hermitian Cholesky form i L^T J L. Other information protocols in the review were not rechecked.

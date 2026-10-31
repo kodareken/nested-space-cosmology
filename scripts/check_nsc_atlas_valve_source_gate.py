@@ -11,6 +11,8 @@ from recursive_horizons.nsc_atlas_valve_source_gate import (
     radial_source_gate,geometric_spinor_candidate,mmp_massless_field_gate,
     dirac_clifford_control,neutral_thermal_ec_benchmark,
     axial_pair_correlation_witness,
+    parent_mode_axial_kernel,
+    complete_ground_contact_vertex,
 )
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -22,7 +24,9 @@ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def calculation():
     start=time.perf_counter();H=Parent.retained().H
     paths=('results/summaries/nsc-atlas-valve-conformal-v1.json',
-           'results/summaries/nsc-atlas-valve-restart-v1.json')
+           'results/summaries/nsc-atlas-valve-restart-v1.json',
+           'results/summaries/nsc-atlas-valve-dirac-modes-v1.json',
+           'results/summaries/nsc-atlas-valve-dirac-onset-v1.json')
     records=[json.loads((ROOT/p).read_text(encoding='utf-8')) for p in paths]
     snapshots=[('old_frame_endpoint',records[0]['levels'][-1]['endpoint']),
                ('new_controlled_cut',records[1]['levels'][-1]['last_actual_cut'])]
@@ -36,6 +40,13 @@ def calculation():
             actual_acceleration=s['center_Rproper_acc'])
         gates.append(dict(name=name,proper_time=s['center_proper_time'],gate=gate))
     spinor=geometric_spinor_candidate()
+    kernels=[]
+    for level in records[2]['levels']:
+        mode=next(v for v in level['lowest_by_sign'] if v['sign']>0)
+        kernels.append(dict(degree=level['degree'],kernel=parent_mode_axial_kernel(
+            mass=spinor['lowest_mass'],spatial_eigenvalue=mode['eigenvalue'],
+            density_overlap=mode['invariant_ground_projector_I4']),
+            full_physical_spatial_residual=mode['full_PDE_residual_physical']))
     sources=('src/recursive_horizons/nsc_atlas_valve_source_gate.py',
              'src/recursive_horizons/nsc_atlas_inherited_charge.py',
              'src/recursive_horizons/nsc_atlas_parent_circulation.py',
@@ -56,6 +67,13 @@ def calculation():
             warning='The finite 4D axial benchmark is not a matched full16D torsion truncation. All transformed vertices and KK signs must agree; no generic GH-state or bare composite zero is claimed.'),
         MMP_field_gate=mmp_massless_field_gate(spinor),
         non_Gaussian_pair_correlation_witness=axial_pair_correlation_witness(),
+        actual_parent_axial_contact_kernels=kernels,
+        complete_bare_ground_contact_vertex=complete_ground_contact_vertex(),
+        parent_driven_conditional_state_component=dict(
+            analytic_pump=records[3]['initial_pump_quadrature'][-1],
+            definitions=records[3]['definitions'],
+            caveat='Conditional quadratic-probe low-mode initial vacuum. A state-response component is not the full occupied state, physical particle count, pressure or renormalized radial NEC.'),
+        kernel_adjacent_gap_spreads=[abs(kernels[i+1]['kernel']['triplet_minus_singlet_energy_hat_over_g']-kernels[i]['kernel']['triplet_minus_singlet_energy_hat_over_g']) for i in (0,1)],
         sources=[dict(reference='Camporesi-Higuchi gr-qc/9505009,3.1 and5.2',url='https://arxiv.org/abs/gr-qc/9505009'),
                  dict(reference='Corrected minimalEC sign,2008.11686v2',url='https://arxiv.org/html/2008.11686v2'),
                  dict(reference='Diakonov-Tumanov-Vladimirov1104.2432v2,64-76',url='https://arxiv.org/html/1104.2432v2'),

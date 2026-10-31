@@ -1,5 +1,23 @@
 # Prior art and admission of new research
 
+## Receiver field and actual-parent state response, 31 October 2026
+
+The [source owner](nsc-atlas-inherited-charge.md) joins the controlled
+small-radius pressure gate to a declared complex massless16D Dirac
+extension. Camporesi--Higuchi supplies the round internal spectrum;
+minimal EC supplies the bare three-form contact. The new work derives
+the common mass/coupling ratios, all-sign ground projection, actual-parent
+spatial modes and initial metric/radion pump. It does not import a thermal
+or massless wormhole source when the candidate fails its assumptions.
+Fixed action parameters, the existing one-mode parent and cutoffs8/16/24
+are retained; no observation selects an input. Radial symmetry reduces
+this to subsecond/second-scale kernels, with a60second producer budget.
+Controls check full physical mode residuals, compact-inverse isolation,
+exact Clifford contractions, projector conventions and finite evolution
+of the same scalar parent. The result redirects work toward the full
+state and conserved stress, not a deeper scalar grid. The new field,
+initial low-mode vacuum and imported statistics are explicit hypotheses.
+
 ## One-mode formation and receiving-region ledger, 31 October 2026
 
 The [formation owner](nsc-atlas-valve-formation.md) records the change of

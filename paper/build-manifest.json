@@ -1,10 +1,10 @@
 {
-  "bytes": 21502661,
+  "bytes": 21608460,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "987395a5fa8d8ad10f961878d79d233d089323b83cec7766032f54316bc6e361",
+  "metadata_sha256": "f012789038a68dc670951c09b4fef5b3f8d550fa8c9a0c1471746d5c505bb5c1",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 248,
-  "pdf_sha256": "ca5deb2a8ed1828db6aa2d64bf3dac2044e121df6ce56da365aa35f7c1580c54",
+  "pages": 250,
+  "pdf_sha256": "228742ae4b55ae0653f935166c043e3b91b5bc34158b0bae3455b15d0692b775",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -1000,12 +1000,28 @@
       "sha256": "3b816958d6e7ea2badb36fe903ba4326ae8bb1747b6750aa1b02bd4b1fa4d8bf"
     },
     {
+      "path": "results/summaries/nsc-atlas-valve-dirac-modes-v1.json",
+      "sha256": "2b56f377d4d9b9f79e6ab8e84df727fa12afe08a46c7666a817ae9544b658015"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-valve-dirac-onset-v1.json",
+      "sha256": "663bac9d1591d426e6141309894b430ff82efe89d9a1c9e11e8af526fad73921"
+    },
+    {
       "path": "results/summaries/nsc-atlas-valve-neck-gh-v1.json",
       "sha256": "1ee75de9c0304e576ebfb1f60848aea5be91a5e72996c41b38f9c7be2872da06"
     },
     {
       "path": "results/summaries/nsc-atlas-valve-neck.json",
       "sha256": "116804f9b7d567d93fe1accc0d642d2c3928575278d2033c816e855a4c4108c6"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-valve-restart-v1.json",
+      "sha256": "ccc1e49ca23ad76228aa3f5cf704a2af6be78be41a3ec6f0337e72be598a1132"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-valve-source-gate-v1.json",
+      "sha256": "bfd34b49217018efc9991ec4e00f7f2dacf84f9faf24d746c533771af79f4194"
     },
     {
       "path": "results/summaries/nsc-atlas-valve-spherical-v1.json",
@@ -1105,6 +1121,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "79b758092066b459b08e6b2b1df6cb0c4871f57e12b86b79fe8349f74904903c",
-  "version": "working-2026-10-31.07"
+  "source_sha256": "0d1339386117c576f37568c606a718ebbc6a332b83a4af765cb196fcb75f9912",
+  "version": "working-2026-10-31.08"
 }

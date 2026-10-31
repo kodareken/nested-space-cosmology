@@ -7,9 +7,13 @@ has a numerical neck-trapping threshold epsilon=.8339066143. Three
 spherical resolutions and an independent full-metric GH check give a
 closed future-trapped sphere at proper .02, both expansions/H=-.00707954.
 Its continuation to proper .3 has a checked moving-region energy ledger.
-The same state then continues in a local conformal/null frame to center
-proper3.9455 with second-order refinement, past the old global numerical
-break. It remains contracting. A conditional curvature bound excludes a
+The same state then continues in a local conformal/null frame past the
+old global numerical break. A constant-coordinate restart reaches
+proper4.27291, R=.149533, with actual-metric/source residual .557%.
+It remains contracting. At that cut positive radial acceleration needs
+pr<-407.908, while the canonical source has pr=.233461. This is a source
+requirement on the current geometry, not a prescription for inserting a
+negative fluid. A conditional curvature bound excludes a
 regular zero-radius limit in the present metric and inherited internal
 warped reconstruction; reaching that limit has not been proved.
 The source occupation remains supplied. Reflection forces zero transfer
@@ -18,6 +22,19 @@ the enclosing marginal boundaries feeds the trapped band. A regular receiving ch
 remains open. The overall work-gate score is32%, not a fraction of reality
 explained. The completed neck window is frozen; the horizons and a compatible
 receiving continuation, with inherited state retained, are next.
+
+The [inherited-field owner](nsc-atlas-inherited-charge.md) now computes a
+candidate complex massless16D Dirac field on the same internal geometry.
+This is an added field, with imported fermionic statistics. Geometry fixes
+m_F0²=3 Delta M_B1² and e_min²/(kappa m_F0²)=13/144, without fixing an SI
+scale or occupation. Its actual parent spatial doublet has
+lambda=.679256139175 and energy2.68324181601. The complete bare ground
+contact tensor and normalized overlap are calculated. A conditional
+initial low-mode vacuum has a nonzero parent-driven Hessian
+M_pn=.112898160745; fixed-initial and instantaneous-final projectors are
+kept distinct. No full occupied state, renormalized radial stress or
+regular expanding child follows yet. These conditional calculations do
+not close another programme gate.
 
 The earlier unchanged two-mode parent's closed-surface and null-sheet
 searches found no admitted future trap. Internal stabilization loss has
