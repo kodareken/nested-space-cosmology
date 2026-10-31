@@ -190,3 +190,27 @@ def test_input_copies_ray_order_and_rejects_bad_initial_null_or_screen_data():
     bad=dict(initial,screen=initial['screen']*2)
     with pytest.raises(ValueError,match='normalization'):
         transport_null_bundle(static_sphere(.7),bad,coordinate_interval=(0,.1),frame_scale=.7)
+
+
+def test_passive_dense_archive_records_every_step_without_steering_bundle(tmp_path):
+    from recursive_horizons.nsc_atlas_gh_history import DenseGHHistory
+    r=.5;radius=.6;initial=round_bundle([radius],r);history=DenseGHHistory()
+    options=dict(coordinate_interval=(0.,.3),frame_scale=r,checkpoints=[.1,.2],
+        rtol=2e-11,atol=2e-13,max_step=.025)
+    plain=transport_null_bundle(static_sphere(r),initial,**options)
+    recorded=transport_null_bundle(static_sphere(r),initial,dense_sink=history.record,**options)
+    assert plain.status==recorded.status=='endpoint_reached'
+    assert len(history.bounds)==recorded.steps==plain.steps
+    assert recorded.rhs_calls>plain.rhs_calls
+    np.testing.assert_array_equal(recorded.times,plain.times)
+    np.testing.assert_allclose(recorded.packed_states,plain.packed_states,atol=2e-14,rtol=2e-14)
+    path=tmp_path/'null-dense.npz';history.save(path,{'rays':1,'state_size':STATE_SIZE})
+    restored=DenseGHHistory.load(path)
+    for t,state in zip(recorded.times,recorded.packed_states):
+        np.testing.assert_allclose(restored.evaluate(float(t)).reshape(1,STATE_SIZE),state,atol=2e-14,rtol=2e-14)
+    # This time was never a stored checkpoint. The actual dense polynomial
+    # still follows the analytic Jacobi and affine solution.
+    t=.173;state=unpack_null_state(restored.evaluate(t).reshape(1,STATE_SIZE))
+    expected=math.sin(radius-r*t)/math.sin(radius)
+    np.testing.assert_allclose(state['D'],expected*np.eye(2)[None,:,:],atol=2e-11,rtol=2e-11)
+    np.testing.assert_allclose(state['affine_lambda'],t,atol=2e-13)

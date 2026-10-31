@@ -132,6 +132,62 @@ class GHNullHistorySampler:
         self.calls+=1;self.points_evaluated+=len(X);self.elapsed_seconds+=time.perf_counter()-started
         return data
 
+    def event_slice(self,times,points,*,chunk=32):
+        """First metric jets at paired events (times[i], points[i]).
+
+        Only the packed ten-component metric prefix and its actual dense
+        polynomial derivative are evaluated. Sparse harmonic derivatives
+        act on the point-value rows, avoiding a full field-state unpack or
+        second-jet preparation for every distinct event time. Memory is
+        bounded by ``chunk`` point times. No history extrapolation is used.
+        """
+        started=time.perf_counter();raw_t=np.asarray(times);raw_X=np.asarray(points)
+        if raw_t.dtype.kind not in 'iuf' or raw_t.ndim!=1 or not len(raw_t) or not np.all(np.isfinite(raw_t)):
+            raise ValueError('nonempty finite one-dimensional event times required')
+        if raw_X.dtype.kind not in 'iuf' or raw_X.shape!=(len(raw_t),4) or not np.all(np.isfinite(raw_X)):
+            raise ValueError('event points need finite shape (number_of_times,4)')
+        if isinstance(chunk,(bool,np.bool_)) or not isinstance(chunk,(int,np.integer)) or chunk<1:
+            raise ValueError('positive integer event chunk required')
+        times=np.asarray(raw_t,dtype=float);X=np.asarray(raw_X,dtype=float)
+        if np.any(times<self.data_start) or np.any(times>self.data_end):
+            raise ValueError('event outside the declared physical history')
+        norms=np.linalg.norm(X,axis=1)
+        if min(norms)<=0 or max(abs(norms-1))>1e-6:
+            raise ValueError('point norm drift exceeds the declared sampling domain')
+        X=X/norms[:,None]
+        bounds=np.asarray(self.history.bounds);ends=bounds[:,1]
+        metric_size=int(self.system.offsets[10]);parts={}
+        for lo in range(0,len(times),chunk):
+            hi=min(lo+chunk,len(times));tc=times[lo:hi];count=hi-lo
+            interval=np.minimum(np.searchsorted(ends,tc,side='left'),len(ends)-1)
+            start=bounds[interval,0];step=bounds[interval,1]-start;x=(tc-start)/step
+            value=np.zeros((count,metric_size));derivative=np.zeros_like(value)
+            for order in range(7):
+                coefficient=np.stack([self.history.coefficients[j][6-order,:metric_size] for j in interval])
+                before=value+coefficient
+                factor=(x if order%2==0 else 1-x)[:,None];sign=1. if order%2==0 else -1.
+                derivative=derivative*factor+sign*before
+                value=before*factor
+            value+=np.stack([self.history.old[j][:metric_size] for j in interval])
+            derivative/=step[:,None]
+            Y=arbitrary_points_values(X[lo:hi],self.system.basis.labels)
+            Y_i=[self.r*(D.T@Y.T).T for D in self.system.basis.generators]
+            g=np.empty((count,4,4));v=np.empty_like(g);dg=np.empty((count,3,4,4))
+            for j,(a,b) in enumerate(PAIRS):
+                lower,upper=self.system.offsets[j:j+2];idx=self.system.indices[j]
+                coefficients=value[:,lower:upper];rates=derivative[:,lower:upper]
+                g[:,a,b]=g[:,b,a]=np.einsum('ni,ni->n',Y[:,idx],coefficients)
+                v[:,a,b]=v[:,b,a]=np.einsum('ni,ni->n',Y[:,idx],rates)
+                for i in range(3):
+                    dg[:,i,a,b]=dg[:,i,b,a]=np.einsum('ni,ni->n',Y_i[i][:,idx],coefficients)
+            data=_first_geometry(g,v,dg,self.r)
+            data.update(first_connection(g,v,dg,frame_scale=self.r))
+            data.update(g=g,v=v,dg=dg,point_norm_error=norms[lo:hi]-1)
+            for key,array in data.items():parts.setdefault(key,[]).append(array)
+        result={key:np.concatenate(arrays,axis=0) for key,arrays in parts.items()}
+        self.calls+=1;self.points_evaluated+=len(X);self.elapsed_seconds+=time.perf_counter()-started
+        return result
+
     def __call__(self,t,points):return self.sample(t,points,curvature=True)
 
     def slice(self,t,points):return self.sample(t,points,curvature=False)

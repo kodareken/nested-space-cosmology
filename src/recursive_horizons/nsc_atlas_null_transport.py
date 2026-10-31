@@ -186,8 +186,14 @@ class NullBundleResult:
 
 def transport_null_bundle(sampler,initial,*,coordinate_interval,frame_scale,checkpoints=(),
         rtol=2e-9,atol=2e-11,max_step=.03,budget_seconds=300.,data_end=None,
-        caustic_tolerance=1e-9,initial_constraint_tolerance=2e-7,progress=False):
-    """Evolve a future bundle through caustics within a declared data domain."""
+        caustic_tolerance=1e-9,initial_constraint_tolerance=2e-7,progress=False,dense_sink=None):
+    """Evolve a future bundle through caustics within a declared data domain.
+
+    Optional dense_sink(t_old,t,dense) receives the actual DOP853 dense
+    polynomial once per accepted step. Its extra dense-stage RHS calls do
+    not enter adaptive state/error control. Checkpoints reuse that same
+    dense output; no sparse-state interpolation is introduced.
+    """
     r=float(frame_scale);t0,requested_end=map(float,coordinate_interval)
     for value in (r,rtol,atol,max_step,budget_seconds,caustic_tolerance,initial_constraint_tolerance):
         if not math.isfinite(float(value)) or value<=0:raise ValueError('positive finite transport controls required')
@@ -248,8 +254,12 @@ def transport_null_bundle(sampler,initial,*,coordinate_interval,frame_scale,chec
             singular=np.linalg.svd(D,compute_uv=False)[:,-1];determinant=np.linalg.det(D)
             caustic|=(singular<=caustic_tolerance*Dscale)|(previous_det*determinant<0)
             previous_det=determinant
-            if targets and solver.t>=targets[0]:
+            dense=None
+            if dense_sink is not None:
                 dense=solver.dense_output()
+                dense_sink(solver.t_old,solver.t,dense)
+            if targets and solver.t>=targets[0]:
+                if dense is None:dense=solver.dense_output()
                 while targets and solver.t>=targets[0]:
                     t=targets.pop(0);snapshot=dense(t).reshape(rays,STATE_SIZE)
                     geometry=_geometry(sampler,t,snapshot[:,:4])

@@ -17,6 +17,7 @@ from scipy.optimize import brentq
 from threadpoolctl import threadpool_limits
 
 from recursive_horizons.nsc_atlas_null_parent import GHNullHistorySampler
+from recursive_horizons.nsc_atlas_gh_history import DenseGHHistory
 from recursive_horizons.nsc_atlas_null_cuts import initial_null_bundle,evaluate_parametric_cut
 from recursive_horizons.nsc_atlas_null_transport import transport_null_bundle
 from recursive_horizons.nsc_atlas_trapped_surfaces import StarShapedSurface,round_surface,_unit_frame
@@ -89,6 +90,7 @@ def main():
     parser.add_argument('--rtol',type=float,default=3e-8)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--ray-cache',type=Path)
+    parser.add_argument('--ray-dense-cache',type=Path)
     args=parser.parse_args();output=(ROOT/args.output).resolve()
     if not output.is_relative_to(ROOT) or output.exists():raise ValueError('fresh repository output required')
     if args.angular_order<3 or max(args.cut_degrees)>=args.angular_order:
@@ -112,9 +114,11 @@ def main():
         proper_points=[p for p in (.075,.15,.225,.3,.6,.9,1.2) if coordinate_at_proper(sampler,p)>t0+1e-10]
         checkpoints=[coordinate_at_proper(sampler,p) for p in proper_points]
         print('Tracing',len(initial['X']),'rays from t=',t0,'to',sampler.data_end,flush=True)
+        ray_history=DenseGHHistory() if args.ray_dense_cache else None
         transport=transport_null_bundle(sampler,initial,coordinate_interval=(t0,sampler.data_end),
             frame_scale=sampler.r,checkpoints=checkpoints,rtol=args.rtol,atol=args.rtol/100,
-            max_step=args.max_step,budget_seconds=args.budget_seconds,progress=True,data_end=sampler.data_end)
+            max_step=args.max_step,budget_seconds=args.budget_seconds,progress=True,data_end=sampler.data_end,
+            dense_sink=None if ray_history is None else ray_history.record)
         result=dict(schema='nsc-atlas-valve-null-sheet-v1',seed=args.seed,
             metric_degree=sampler.system.basis.degree,epsilon=sampler.system.epsilon,
             producer_commit=commit,source_sha256=before,source_bound_to_commit=bound,
@@ -170,6 +174,17 @@ def main():
             if not cache.is_relative_to(ROOT/'.build') or cache.exists():raise ValueError('fresh local ray cache required')
             np.savez_compressed(cache,times=transport.times,states=transport.packed_states)
             result['ray_cache']=dict(path=cache.relative_to(ROOT).as_posix(),sha256=sha(cache))
+        if ray_history is not None:
+            cache=(ROOT/args.ray_dense_cache).resolve()
+            if not cache.is_relative_to(ROOT/'.build') or cache.exists():raise ValueError('fresh local dense ray cache required')
+            ray_history.save(cache,dict(schema='nsc-null-ray-dense-v1',seed=args.seed,
+                rays=len(initial['X']),angular_rays=angular_rays,protected_probe_rays=probes,
+                angular_order=list(order),source_sha256=before,producer_commit=commit,
+                parent_history=sampler.provenance,coordinate_interval=transport.effective_interval,
+                initial_area_weights=bundle['area_weights'].tolist(),
+                initial_area=bundle['area']))
+            result['ray_dense_cache']=dict(path=cache.relative_to(ROOT).as_posix(),sha256=sha(cache),
+                intervals=len(ray_history.bounds),schema='nsc-null-ray-dense-v1')
         result.update(elapsed_seconds=time.perf_counter()-started,sampler_calls=sampler.calls,
             source_unchanged_during_run=before=={name:sha(ROOT/name) for name in names},
             sampler_points=sampler.points_evaluated,sampler_elapsed_seconds=sampler.elapsed_seconds)

@@ -4,7 +4,9 @@ import math
 import numpy as np
 import pytest
 
-from recursive_horizons.nsc_atlas_null_cuts import evaluate_parametric_cut,initial_null_bundle,_normalize_jets
+from recursive_horizons.nsc_atlas_null_cuts import (
+    evaluate_parametric_cut,evaluate_spacetime_cut,initial_null_bundle,_normalize_jets,_spacetime_surface,
+)
 from recursive_horizons.nsc_atlas_trapped_surfaces import (
     StarShapedSurface,_angular_basis,evaluate_surface,round_surface,
 )
@@ -143,3 +145,125 @@ def test_summary_does_not_promote_a_sampled_cut_to_a_child():
     assert summary['continuum_expansion_signs_certified'] is False
     assert summary['child_formation_proved'] is False
     assert 'common coordinate-time cut' in summary['scope']
+
+
+def round_event_geometry(scale,rate,r):
+    """Independent physical product/FLRW frame connection, Gamma[a,b,c]."""
+    def provider(times,points):
+        a=np.asarray(scale(times))*np.ones(len(points))
+        hubble=np.asarray(rate(times))*np.ones(len(points))
+        g=np.zeros((len(points),4,4));g[:,0,0]=-1
+        Gamma=np.zeros((len(points),4,4,4))
+        for i in range(3):
+            g[:,i+1,i+1]=(a*r)**2
+            Gamma[:,0,i+1,i+1]=hubble*(a*r)**2
+            Gamma[:,i+1,0,i+1]=Gamma[:,i+1,i+1,0]=hubble
+        for i,j,k in ((0,1,2),(1,2,0),(2,0,1)):
+            Gamma[:,k+1,i+1,j+1]=r;Gamma[:,k+1,j+1,i+1]=-r
+        return dict(g=g,Gamma=Gamma)
+    return provider
+
+
+def test_untilted_spacetime_cut_reduces_to_both_existing_slice_expansions():
+    H=.31;t=.7;r=.27;a=math.cosh(H*t)/H;h=H*math.tanh(H*t)
+    shape=round_surface([.2,-.1,.4,.8],1.1)
+    provider=round_geometry(a,h,r);order=(12,25)
+    bundle=initial_null_bundle(shape,provider,frame_scale=r,order=order)
+    old=evaluate_parametric_cut(bundle['X'],provider,frame_scale=r,angular_degree=1,order=order,
+                                outgoing_k=bundle['outgoing']['k'])
+    events=round_event_geometry(lambda times:np.cosh(H*times)/H,lambda times:H*np.tanh(H*times),r)
+    cut=evaluate_spacetime_cut(np.full(len(bundle['X']),t),bundle['X'],events,frame_scale=r,
+        angular_degree=1,order=order,outgoing_k=bundle['outgoing']['k'])
+    np.testing.assert_allclose(cut.theta_plus,old.theta_plus,atol=5.e-15,rtol=0)
+    np.testing.assert_allclose(cut.theta_minus,old.theta_minus,atol=5.e-15,rtol=0)
+    np.testing.assert_allclose(cut.normal_energy,1.,atol=5.e-16,rtol=0)
+    np.testing.assert_array_equal(cut.times,np.full(len(bundle['X']),t))
+    assert cut.area==pytest.approx(old.area,rel=2.e-15)
+
+
+def _flat_null_plane_patch(a,b):
+    """Analytic Cartesian graph u=t-z=0, v=(t+z)/2=F(x,y).
+
+    This is a LOCAL patch test. A whole spacelike closed S2 cannot lie in
+    this null hyperplane; the public S2 reconstructor is not used here.
+    """
+    r=.43;L=2.;xy=np.array([[0.,0.],[.2,-.3],[-.1,.4]])
+    F=.4+.5*(a*xy[:,0]**2+b*xy[:,1]**2)
+    gradient=xy*np.array([a,b]);Hessian=np.broadcast_to(np.diag([a,b]),(len(xy),2,2))
+    y=np.c_[xy,F];denominator=L*L+np.sum(y*y,axis=1)
+    X=np.c_[2*L*y/denominator[:,None],2*L*L/denominator-1]
+    J=np.empty((len(y),4,3));HessX=np.empty((len(y),4,3,3))
+    for p in range(3):
+        for j in range(3):
+            J[:,p,j]=2*L*(p==j)/denominator-4*L*y[:,p]*y[:,j]/denominator**2
+            for k in range(3):
+                HessX[:,p,j,k]=(-4*L*((p==j)*y[:,k]+(p==k)*y[:,j]+(j==k)*y[:,p])/denominator**2
+                                  +16*L*y[:,p]*y[:,j]*y[:,k]/denominator**3)
+    for j in range(3):
+        J[:,3,j]=-4*L*L*y[:,j]/denominator**2
+        for k in range(3):
+            HessX[:,3,j,k]=-4*L*L*(j==k)/denominator**2+16*L*L*y[:,j]*y[:,k]/denominator**3
+    dy=np.zeros((len(y),2,3));dy[:,0,0]=dy[:,1,1]=1.;dy[:,:,2]=gradient
+    ddy=np.zeros((len(y),2,2,3));ddy[:,:,:,2]=Hessian
+    dX=np.einsum('nij,nAj->nAi',J,dy)
+    ddX=np.einsum('nijk,nAj,nBk->nABi',HessX,dy,dy)+np.einsum('nij,nABj->nABi',J,ddy)
+    A=np.array([[[0,0,0,1],[0,0,1,0],[0,-1,0,0],[-1,0,0,0]],
+                [[0,0,-1,0],[0,0,0,1],[1,0,0,0],[0,-1,0,0]],
+                [[0,1,0,0],[-1,0,0,0],[0,0,0,1],[0,0,-1,0]]],dtype=float)
+    frame=np.einsum('iab,nb->nia',A,X)
+    Cartesian_frame=L*r*(frame[:,:,:3].swapaxes(1,2)/(1+X[:,3,None,None])
+        -X[:,:3,None]*frame[:,:,3][:,None,:]/(1+X[:,3,None,None])**2)
+    k=np.c_[np.ones(len(y)),np.linalg.solve(Cartesian_frame,np.broadcast_to([0.,0.,1.],(len(y),3))[:,:,None])[:,:,0]]
+    def events(times,points):
+        count=len(points);g=np.zeros((count,4,4));g[:,0,0]=-1
+        factor=(L*r/(1+points[:,3]))**2
+        g[:,1:,1:]=factor[:,None,None]*np.eye(3)
+        Gamma=np.zeros((count,4,4,4));gradient_log=r*points[:,:3]/(1+points[:,3,None])
+        for i in range(3):
+            for j in range(3):
+                for kindex in range(3):
+                    sign=(1 if (i,j,kindex) in ((0,1,2),(1,2,0),(2,0,1)) else
+                         -1 if (i,j,kindex) in ((1,0,2),(2,1,0),(0,2,1)) else 0)
+                    Gamma[:,kindex+1,i+1,j+1]=(r*sign+(kindex==j)*gradient_log[:,i]
+                        +(kindex==i)*gradient_log[:,j]-(i==j)*gradient_log[:,kindex])
+        return dict(g=g,Gamma=Gamma)
+    angular=dict(theta=np.full(len(y),math.pi/2),weights=np.ones(len(y)))
+    return _spacetime_surface(F,gradient,Hessian,X,dX,ddX,angular,events,r,k),gradient
+
+
+@pytest.mark.parametrize('a,b',[(.4,.2),(-.3,-.7)])
+def test_tilted_flat_null_plane_has_zero_outgoing_and_positive_twice_laplacian_sign(a,b):
+    result,gradient=_flat_null_plane_patch(a,b)
+    factor=1/np.sqrt(1+np.sum(gradient**2,axis=1))
+    np.testing.assert_allclose(result['theta_plus'],0.,atol=2.e-15,rtol=0)
+    np.testing.assert_allclose(result['theta_minus'],2*(a+b)*factor,atol=2.e-15,rtol=0)
+    np.testing.assert_allclose(result['normal_energy'],factor,atol=5.e-16,rtol=0)
+    # The fixed reciprocal null pair (kout.kin=-2) gives exactly +2 Delta F.
+    np.testing.assert_allclose(result['theta_minus']/result['normal_energy'],2*(a+b),atol=2.e-15,rtol=0)
+    assert result['outgoing_normality_max_relative']<2.e-15
+
+
+def test_time_tilted_static_s3_cut_has_laplacian_shift_at_its_time_minimum():
+    a=1.8;r=.4;rho=.95;kappa=.12;order=(12,25)
+    bundle=initial_null_bundle(round_surface(NORTH,rho),round_geometry(a,r=r),frame_scale=r,order=order)
+    angular=_angular_basis(1,order);direction=angular['directions'][71]
+    times=.3+kappa*(1-angular['directions']@direction)
+    provider=round_event_geometry(lambda t:a,lambda t:0.,r)
+    cut=evaluate_spacetime_cut(times,bundle['X'],provider,frame_scale=r,angular_degree=1,order=order,
+                               outgoing_k=bundle['outgoing']['k'])
+    shift=2*kappa/(a*math.sin(rho))**2
+    mean=2/(a*math.tan(rho))
+    assert cut.theta_plus[71]==pytest.approx(shift+mean,abs=4.e-14)
+    assert cut.theta_minus[71]==pytest.approx(shift-mean,abs=4.e-14)
+    assert cut.normal_energy[71]==pytest.approx(1.,abs=5.e-16)
+    assert cut.diagnostics['time_interpolation_max']<5.e-16
+    assert cut.summary()['child_formation_proved'] is False
+
+
+def test_nonspacelike_time_tilt_is_rejected():
+    order=(12,25);bundle=initial_null_bundle(round_surface(NORTH,1.),round_geometry(1.),frame_scale=1.,order=order)
+    angular=_angular_basis(1,order);times=4*angular['directions'][:,2]
+    provider=round_event_geometry(lambda t:1.,lambda t:0.,1.)
+    with pytest.raises(ValueError,match='spacelike'):
+        evaluate_spacetime_cut(times,bundle['X'],provider,frame_scale=1.,angular_degree=1,order=order,
+                               outgoing_k=bundle['outgoing']['k'])
