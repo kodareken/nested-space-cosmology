@@ -1,5 +1,18 @@
 # Cited arXiv studies
 
+## Finite compact-parent data and nonlinear continuation, 31 October 2026
+
+[Lindblom--Szilagyi--Taylor, 1312.0701v2](https://arxiv.org/html/1312.0701v2),
+sectionsIII--VI, supplies covariant GH equations with static reference
+connection/curvature and compactS3 scalar tests. The current owner reuses
+that formulation, not its Einstein-static background or physical-mode
+suppression. Its matter potential and initial gauge specialization differ.
+The [finite-data owner](nsc-atlas-finite-parent-data.md) also adapts
+[Hebey--Vaugon, Theorem2 and its proof](https://scispace.com/pdf/from-the-yamabe-problem-to-the-equivariant-yamabe-problem-31pty46vb7.pdf):
+the borrowed result is the strict orbit-threshold compactness mechanism;
+the variable-weight source inequalities and finite-amplitude conclusion
+are derived explicitly for this action/preparation.
+
 ## Causal volume response and static comparison, 30 October 2026
 
 [Galley, 1210.2745v2](https://arxiv.org/html/1210.2745v2), equations1--4

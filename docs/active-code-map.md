@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`nsc_atlas_finite_parent_data.py` solves the full nonlinear initial
+Hamiltonian constraint with the unchanged two-harmonic field. Its
+weighted variational certificate, physical measures and initial GH
+gauge map are separate from numerical continuation. `nsc_atlas_s3_spectral.py`
+provides orthonormal source-symmetry harmonics and independent high-order
+quadrature. Three processes check full residuals, not just retained projections.
+
 `nsc_atlas_parent_backreaction.py` evolves all eleven quadratic metric and
 eight cubic scalar coefficients, reusing the volume response and inherited
 source. `nsc_atlas_cubic_operators.py` constructs exact finite spatial maps.

@@ -1,5 +1,18 @@
 # Reproducing the root project
 
+## Finite-amplitude nonspherical initial data
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_finite_parent_data.py --output .build/finite-parent-data-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_finite_parent_data.py tests/test_nsc_atlas_finite_parent_algebra.py tests/test_nsc_atlas_s3_spectral.py
+python scripts/run_python.py scripts/plot_nsc_atlas_finite_parent_data.py
+```
+
+The [owner](nsc-atlas-finite-parent-data.md) separates exact variational
+existence from the numerical branch, full-residual convergence and physical
+volume/energy measures. Three workers use two BLAS threads each. The
+benchmark amplitude is declared, not selected by observational calibration.
+
 ## Coupled parent metric, cubic scalar and matter work
 
 ```powershell

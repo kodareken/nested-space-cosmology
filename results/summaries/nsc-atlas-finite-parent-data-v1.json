@@ -1,0 +1,269 @@
+{
+  "compute": {
+    "BLAS_threads_per_process": 2,
+    "elapsed_seconds": 29.276866600004723,
+    "independent_resolutions": 3,
+    "processes": 3,
+    "saved_arrays": false
+  },
+  "convergence": {
+    "fine_middle_mean_density_spread": 6.902405891295871e-08,
+    "fine_middle_volume_spread": 1.0086963098121515e-08,
+    "full_residual_ratios": [
+      14.843070931425611,
+      17.32242683386894
+    ]
+  },
+  "covariant_GH_handoff": {
+    "Phi": "Phi_ijk=4 p_i Psi^4 delta_jk; other initial components zero",
+    "Pi": "Pi00=Piij=0, Pi0i=2 p_i",
+    "constraint": "g^bc DeltaGamma^a_bc=0; allPi=0 would fail when p is nonzero",
+    "initial_gauge_source": "H_a=0",
+    "metric": "g00=-1,g0i=0,gij=Psi^4 deltaij",
+    "numerical_gradient_evaluator_and_nonlinear_GH_evolution_implemented": false,
+    "p": "p_i=Dbar_i lnPsi",
+    "reference": "Static product -dt^2+a0^2 gamma, expressed in its orthonormal frame"
+  },
+  "finite_amplitude_existence": {
+    "constant_trial_over_bubbling_threshold": 0.8590576158391067,
+    "mass_squared_over_H_squared": 8329.074464994037,
+    "maximum_B_at_epsilon1": 30.480687337879342,
+    "mean_A_at_epsilon1": 5.996041129180931,
+    "mean_B_at_epsilon1": 11.99604112918093,
+    "minimum_orbit_size": 2,
+    "normalized_a_squared": 0.0014402175653153609,
+    "normalized_b_squared": 0.008636122935247346,
+    "strict_numerator_polynomial": "49(z+3)^2(z+8)-z(7z+26)^2=322z^2+2117z+3528>0",
+    "symmetry_group_order": 8,
+    "theorem": "For m^2>33 and every 0<=epsilon<=1 the symmetry-invariant weighted Yamabe quotient attains below the minimum two-point-orbit concentration threshold. Rescaling its positive minimizer solves the full initial constraint.",
+    "uniform_amplitude_interval": [
+      0.0,
+      1.0
+    ],
+    "uniform_trial_threshold_ratio_cubed_upper_bound": "61/88",
+    "universal_coercivity_lower_bound": "38/11",
+    "unproved": [
+      "Uniqueness",
+      "Identification of every exact minimizer with the numerical continuation branch",
+      "Nonlinear future concentration or daughter formation"
+    ]
+  },
+  "formation": {
+    "comparison_between_preparations_is_not_time_evolution": true,
+    "initial_trace_acceleration": "theta_dot=kappa[V_star+mu^2 eps^2 f^2/2]>0; gradients do not enter R_nn for canonical scalar at zero normal velocities",
+    "initial_trace_expansion": 0.0,
+    "nonlinear_evolution_solved": false
+  },
+  "levels": [
+    {
+      "analytic_positivity_lower_bound": 0.6049699509922625,
+      "basis_modes": 45,
+      "continuation": [
+        {
+          "Krylov_iterations": 25,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.6657384219485528,
+          "epsilon": 0.25,
+          "mean_excitation_density_over_vacuum": 0.06402872616899508,
+          "projected_residual_norm": 1.740419054137879e-13,
+          "proper_volume_over_reference_round_volume": 0.9114374039602218,
+          "volume_equivalent_length_over_reference_length": 0.9695620667971924
+        },
+        {
+          "Krylov_iterations": 35,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.7370948273814687,
+          "epsilon": 0.5,
+          "mean_excitation_density_over_vacuum": 0.271711615763061,
+          "projected_residual_norm": 2.792782233866249e-13,
+          "proper_volume_over_reference_round_volume": 0.7003555067408412,
+          "volume_equivalent_length_over_reference_length": 0.8880542886168249
+        },
+        {
+          "Krylov_iterations": 41,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.8002355436546055,
+          "epsilon": 0.75,
+          "mean_excitation_density_over_vacuum": 0.6535302225459617,
+          "projected_residual_norm": 4.01861270368324e-12,
+          "proper_volume_over_reference_round_volume": 0.477166418251788,
+          "volume_equivalent_length_over_reference_length": 0.7814297785147342
+        },
+        {
+          "Krylov_iterations": 52,
+          "Newton_steps": 5,
+          "computed_quotient_over_concentration_threshold": 0.844127867996124,
+          "epsilon": 1.0,
+          "mean_excitation_density_over_vacuum": 1.2285088628319547,
+          "projected_residual_norm": 1.159160849351809e-13,
+          "proper_volume_over_reference_round_volume": 0.30900542927095,
+          "volume_equivalent_length_over_reference_length": 0.6760653897209163
+        }
+      ],
+      "degree": 8,
+      "elapsed_seconds": 1.3645402000111062,
+      "epsilon": 1.0,
+      "excitation_energy_over_reference_round_vacuum_energy": 0.3796159085225539,
+      "full_conformal_PDE_RMS_residual": 0.040187231221774304,
+      "full_conformal_PDE_sample_max_residual": 0.3096180434499125,
+      "geometry_scope": "Numerically solved time-symmetric finite initial slice; no evolved concentration, horizon radius, or daughter claimed.",
+      "independent_validation_points": 180225,
+      "initial_normal_expansion_derivative_over_H_squared_at_anchor": 15.24034366893967,
+      "mean_excitation_density_over_vacuum": 1.2285088628319527,
+      "physical_Hamiltonian_RMS_over_H_squared": 0.10107995849971291,
+      "proper_volume_over_reference_round_volume": 0.3090054292709498,
+      "quadrature_scope": "Conformal residual-square polynomial exactly integrated by the rule before floating-point error; physical rational-weight residual is a numerical estimate.",
+      "sampled_Psi_max": 0.9173273544978383,
+      "sampled_Psi_min": 0.7565154620562062,
+      "scalar_maximum_anchor_density_over_vacuum": 4.080114556313223,
+      "solve_quadrature_points": 38637,
+      "volume_equivalent_length_over_reference_length": 0.6760653897209162
+    },
+    {
+      "analytic_positivity_lower_bound": 0.6040619246700739,
+      "basis_modes": 119,
+      "continuation": [
+        {
+          "Krylov_iterations": 25,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.665738421948085,
+          "epsilon": 0.25,
+          "mean_excitation_density_over_vacuum": 0.06402872618276947,
+          "projected_residual_norm": 1.8975708094999703e-13,
+          "proper_volume_over_reference_round_volume": 0.9114374039474618,
+          "volume_equivalent_length_over_reference_length": 0.9695620667926678
+        },
+        {
+          "Krylov_iterations": 36,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.7370948263265801,
+          "epsilon": 0.5,
+          "mean_excitation_density_over_vacuum": 0.27171165094703437,
+          "projected_residual_norm": 3.589411523786125e-13,
+          "proper_volume_over_reference_round_volume": 0.7003554858583872,
+          "volume_equivalent_length_over_reference_length": 0.8880542797904728
+        },
+        {
+          "Krylov_iterations": 42,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.8002354957100334,
+          "epsilon": 0.75,
+          "mean_excitation_density_over_vacuum": 0.6535322154932658,
+          "projected_residual_norm": 3.940823398686109e-12,
+          "proper_volume_over_reference_round_volume": 0.47716580013344273,
+          "volume_equivalent_length_over_reference_length": 0.7814294410948657
+        },
+        {
+          "Krylov_iterations": 54,
+          "Newton_steps": 5,
+          "computed_quotient_over_concentration_threshold": 0.8441274728851722,
+          "epsilon": 1.0,
+          "mean_excitation_density_over_vacuum": 1.2285303200301028,
+          "projected_residual_norm": 3.447942535008482e-13,
+          "proper_volume_over_reference_round_volume": 0.30900223610753835,
+          "volume_equivalent_length_over_reference_length": 0.6760630609649594
+        }
+      ],
+      "degree": 12,
+      "elapsed_seconds": 9.575337799993576,
+      "epsilon": 1.0,
+      "excitation_energy_over_reference_round_vacuum_energy": 0.3796186160152109,
+      "full_conformal_PDE_RMS_residual": 0.0027074741748144768,
+      "full_conformal_PDE_sample_max_residual": 0.02400641932547032,
+      "geometry_scope": "Numerically solved time-symmetric finite initial slice; no evolved concentration, horizon radius, or daughter claimed.",
+      "independent_validation_points": 545025,
+      "initial_normal_expansion_derivative_over_H_squared_at_anchor": 15.24034366893967,
+      "mean_excitation_density_over_vacuum": 1.2285303200301014,
+      "physical_Hamiltonian_RMS_over_H_squared": 0.006763175870051235,
+      "proper_volume_over_reference_round_volume": 0.3090022361075383,
+      "quadrature_scope": "Conformal residual-square polynomial exactly integrated by the rule before floating-point error; physical rational-weight residual is a numerical estimate.",
+      "sampled_Psi_max": 0.9176695889123527,
+      "sampled_Psi_min": 0.7564860337659585,
+      "scalar_maximum_anchor_density_over_vacuum": 4.080114556313223,
+      "solve_quadrature_points": 117117,
+      "volume_equivalent_length_over_reference_length": 0.6760630609649593
+    },
+    {
+      "analytic_positivity_lower_bound": 0.604021706970027,
+      "basis_modes": 249,
+      "continuation": [
+        {
+          "Krylov_iterations": 25,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.6657384219480845,
+          "epsilon": 0.25,
+          "mean_excitation_density_over_vacuum": 0.0640287261827698,
+          "projected_residual_norm": 3.9378341384605107e-13,
+          "proper_volume_over_reference_round_volume": 0.911437403947456,
+          "volume_equivalent_length_over_reference_length": 0.9695620667926657
+        },
+        {
+          "Krylov_iterations": 36,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.7370948263262511,
+          "epsilon": 0.5,
+          "mean_excitation_density_over_vacuum": 0.27171165096179384,
+          "projected_residual_norm": 2.6137228885416624e-13,
+          "proper_volume_over_reference_round_volume": 0.7003554858497837,
+          "volume_equivalent_length_over_reference_length": 0.8880542797868364
+        },
+        {
+          "Krylov_iterations": 42,
+          "Newton_steps": 4,
+          "computed_quotient_over_concentration_threshold": 0.800235495655416,
+          "epsilon": 0.75,
+          "mean_excitation_density_over_vacuum": 0.653532218561067,
+          "projected_residual_norm": 4.536894999923465e-12,
+          "proper_volume_over_reference_round_volume": 0.4771657991991303,
+          "volume_equivalent_length_over_reference_length": 0.7814294405848409
+        },
+        {
+          "Krylov_iterations": 55,
+          "Newton_steps": 5,
+          "computed_quotient_over_concentration_threshold": 0.8441274719507572,
+          "epsilon": 1.0,
+          "mean_excitation_density_over_vacuum": 1.228530389054164,
+          "projected_residual_norm": 2.3535128133488985e-13,
+          "proper_volume_over_reference_round_volume": 0.3090022260205754,
+          "volume_equivalent_length_over_reference_length": 0.6760630536085691
+        }
+      ],
+      "degree": 16,
+      "elapsed_seconds": 28.491611200006446,
+      "epsilon": 1.0,
+      "excitation_energy_over_reference_round_vacuum_energy": 0.3796186249516588,
+      "full_conformal_PDE_RMS_residual": 0.00015629877965602388,
+      "full_conformal_PDE_sample_max_residual": 0.0014974345937677214,
+      "geometry_scope": "Numerically solved time-symmetric finite initial slice; no evolved concentration, horizon radius, or daughter claimed.",
+      "independent_validation_points": 1221025,
+      "initial_normal_expansion_derivative_over_H_squared_at_anchor": 15.24034366893967,
+      "mean_excitation_density_over_vacuum": 1.2285303890541603,
+      "physical_Hamiltonian_RMS_over_H_squared": 0.00039041344795667554,
+      "proper_volume_over_reference_round_volume": 0.3090022260205752,
+      "quadrature_scope": "Conformal residual-square polynomial exactly integrated by the rule before floating-point error; physical rational-weight residual is a numerical estimate.",
+      "sampled_Psi_max": 0.9177827477601062,
+      "sampled_Psi_min": 0.7564824496111916,
+      "scalar_maximum_anchor_density_over_vacuum": 4.080114556313223,
+      "solve_quadrature_points": 262701,
+      "volume_equivalent_length_over_reference_length": 0.676063053608569
+    }
+  ],
+  "model": {
+    "SI_scale_selected": false,
+    "amplitude": 1.0,
+    "amplitude_status": "Declared equal-reference-energy benchmark, not an inherited amplitude-selection theorem or an observational fit",
+    "conformal_constraint": "-8 DeltaPsi+6Psi-6Psi^5-kappa eps^2[|Df|^2 Psi+(mu^2/H^2)f^2 Psi^5]=0",
+    "momentum_constraint_exactly_zero": true,
+    "principal_bound_does_not_prove_nonlinear_uniqueness": true,
+    "principal_linear_operator_lower_bound": 5.989923659499437,
+    "source": "Unchanged q1 Y1+q2 Y2, fixed action, s=s_star, all normal velocities and extrinsic curvature zero"
+  },
+  "schema": "nsc-atlas-finite-parent-data-v1",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_finite_parent_data.py": "94b34af5fa515916c7e4aa77ea77fa6fecd68f20a4c077700a1d0a7dd0c5506b",
+    "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+    "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+  }
+}

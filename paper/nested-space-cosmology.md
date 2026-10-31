@@ -9719,6 +9719,139 @@ complete excitation-work check. The next physical question is nonlinear
 concentration of this inherited state. These perturbative results do
 not select a charge imbalance, a regular child or the SI hierarchy.
 
+### 15.19. Finite-amplitude geometry exists for the inherited preparation
+
+<!-- nsc-claim:finite-parent-existence -->
+
+The next connection removes an extrapolation: finite-amplitude initial
+geometry is obtained from the full constraint, retaining the same
+nonspherical field. The [proof](../docs/nsc-atlas-finite-parent-data.md)
+and [calculation record](../results/summaries/nsc-atlas-finite-parent-data-v1.json)
+separate an existence theorem from a convergent numerical continuation.
+The amplitude remains a supplied preparation, with no observational fit.
+
+On the time-symmetric initial slice take
+$h_{ij}=a_0^2\Psi^4\gamma_{ij}$, $a_0=1/H$, $K_{ij}=0$, $s=s_*$,
+and $\chi=\epsilon f$, with both scalar normal momenta zero. The source
+is the unchanged $f=aX_1+bX_2X_4$. The full Hamiltonian equation is
+
+$$
+-8\Delta\Psi+6\Psi-6\Psi^5
+-\kappa\epsilon^2\left(|Df|^2\Psi+zf^2\Psi^5\right)=0,
+\qquad z=\mu^2/H^2.
+$$
+
+**Finite-amplitude existence.** For this normalized source family, if
+$z>33$, a smooth positive invariant solution exists for every
+$0\leq\epsilon\leq1$. The retained value is $z=8329.074464994$.
+This does not assert uniqueness or select one dynamical history.
+
+The proof uses the source's eight-element flip symmetry, whose smallest
+orbit has two points. Set $A=6-\kappa\epsilon^2|Df|^2$ and
+$B=6+\kappa\epsilon^2zf^2$. The invariant quotient is
+
+$$
+\mathcal Q(w)=\frac{\int(8|Dw|^2+Aw^2)}{(\int B|w|^6)^{1/3}}.
+$$
+
+The exact source normalization gives
+$\kappa a^2=12/(z+3)$ and $\kappa b^2=72/(z+8)$. It follows that
+$A>38/11>0$ and the constant trial satisfies
+
+$$
+\left(\frac{\mathcal Q(1)}{T}\right)^3<\frac{61}{88}<1,
+\qquad T=\frac{2^{2/3}Y(S^3)}{B_{\max}^{1/3}}.
+$$
+
+Here $Y(S^3)=6(2\pi^2)^{2/3}$. Invariant concentration must occur in
+orbits of at least two points and therefore costs at least $T$ per
+unit critical mass. Coercivity and this strict bound exclude lost
+mass or a split minimizing sequence. A positive invariant minimizer
+is attained; averaging variations over the group gives the full
+equation, and rescaling supplies $\Psi$.
+
+The compactness mechanism comes from
+[Hebey--Vaugon, Theorem2 and proof](https://scispace.com/pdf/from-the-yamabe-problem-to-the-equivariant-yamabe-problem-31pty46vb7.pdf).
+The variable-weight adaptation and rational source certificate are derived
+in the owner. At $\epsilon=1$ the actual trial-to-threshold ratio is
+$.859057615839$. Variational attainment establishes admissibility, not
+a law selecting this preparation or minimizer in nature.
+
+<!-- nsc-claim:finite-parent-data -->
+
+**The full residual contracts under resolution.** The
+[finite computation](../results/summaries/nsc-atlas-finite-parent-data-v1.json)
+continues a positive numerical branch to $\epsilon=1$, the existing
+equal-reference-energy normalization. The nonlinear equation uses exact
+source symmetries rather than a spherical average. Independent higher
+quadrature measures the residual outside the retained harmonic space.
+
+| Maximum degree | Full conformal RMS | Proper-volume ratio |
+| --- | --- | --- |
+| 8 | .04018723122 | .309005429271 |
+| 12 | .002707474175 | .309002236108 |
+| 16 | .000156298780 | .309002226021 |
+
+The residual falls by factors $14.84$ and $17.32$. Small projected Newton
+residuals are not substituted for this full-PDE measure. The finest
+finite expansion has an addition-theorem positivity lower bound
+$.604021706970$, independently of its sampled minimum.
+
+The solved proper volume is $.309002226021$ of the reference volume,
+with fine--middle spread $1.01\times10^{-8}$. Its volume-equivalent
+length ratio is $.676063053609$. With the actual metric measure, the
+mean excitation density is $1.228530389054$ times the vacuum density;
+the initial vacuum share of total field energy is $.448726212087$.
+These are initial volume, length and energy quantities. Today's
+cosmological density parameters require their evolution and observer
+inference. The volume-equivalent length is not a calculated horizon.
+
+At this time-symmetric event the canonical equations give
+
+$$
+\theta=0,\qquad n(\theta)=\kappa\left(V_*+\frac12\mu^2\epsilon^2f^2\right)>0.
+$$
+
+The dense preparation initially accelerates in trace expansion. Different
+prepared initial volumes do not describe time evolution. Collapse or
+daughter formation must be calculated, rather than inferred from this
+initial contraction relative to the vacuum reference.
+
+![Finite nonspherical initial geometry and full-constraint convergence](figures/nsc-atlas-finite-parent-data.png)
+
+**The nonlinear continuation has a published route.**
+[Lindblom--Szilagyi--Taylor](https://arxiv.org/html/1312.0701v2) supplies a
+covariant first-order hyperbolic Einstein system and compact-$S^3$
+scalar tests. Use the canonical pair
+
+$$
+S=\sqrt{K_s}(s-s_*),\quad\chi,\qquad
+W(S,\chi)=V(s)+\mu^2(s)\chi^2/2.
+$$
+
+Their wave principal parts match that formulation, with this potential
+supplying their own stress and source. Its reference
+connection and curvature terms are retained; the publication's
+test-mode suppression is not imported.
+
+For a static reference product and initial gauge source $H_a=0$, the
+conformal data give an explicit gauge-compatible start. In a reference
+orthonormal frame let $p_i$ be the gradient of $\ln\Psi$. Write $\Pi$ for
+minus the reference time derivative of the metric and $\Phi$ for its
+reference spatial derivative. Then
+
+$$
+\Pi_{0i}=2p_i,\qquad\Pi_{00}=\Pi_{ij}=0,\qquad
+\Phi_{ijk}=4p_i\Psi^4\delta_{jk}.
+$$
+
+Other initial $\Phi$ components vanish. Direct contraction of the
+connection difference verifies the gauge constraint. Zero extrinsic
+curvature does not set the mixed $\Pi$ data to zero. The exact smooth
+constraint data admit a local hyperbolic development, but the full
+nonlinear numerical evolution and its lifetime remain to be calculated.
+The existing spherical solvers cannot carry this same nonspherical state.
+
 ## VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
@@ -13954,7 +14087,7 @@ Each calculation retains its own domain; arrows do not declare questions solved.
 <!-- nsc-source-catalog:start -->
 ## Appendix C. Complete arXiv source route index
 
-The index contains 327 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
+The index contains 328 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
 
 A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
 
@@ -14024,6 +14157,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Connected flow, horizon transfer and observer geometry, 30 October 2026 | [1205.5600](https://arxiv.org/abs/1205.5600), [1403.2757](https://arxiv.org/abs/1403.2757v3), [1501.06570](https://arxiv.org/abs/1501.06570v8), [1807.09409](https://arxiv.org/abs/1807.09409) |
 | Causal volume response and static comparison, 30 October 2026 | [1210.2745](https://arxiv.org/abs/1210.2745v2), [2112.14263](https://arxiv.org/abs/2112.14263v1) |
 | Offset, conformal zero and charge-sensitive transport, 30 October 2026 | [1311.0700](https://arxiv.org/abs/1311.0700v2), [1407.8293 †](https://arxiv.org/abs/1407.8293v1), [1604.08032](https://arxiv.org/abs/1604.08032v2), [1911.12059](https://arxiv.org/abs/1911.12059v1), [hep-ph/9406345 †](https://arxiv.org/abs/hep-ph/9406345v1) |
+| Finite compact-parent data and nonlinear continuation, 31 October 2026 | [1312.0701](https://arxiv.org/abs/1312.0701v2) |
 | Spherical energy and the book's geometric hypothesis — 27 October 2026 | [1503.06705](https://arxiv.org/abs/1503.06705v2) |
 | Compact-seed nonlinear continuation, 25 October 2026 | [1504.05968](https://arxiv.org/abs/1504.05968), [gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015) |
 | Common-action wall transfer, 17 October 2026 | [1510.05515](https://arxiv.org/abs/1510.05515) |

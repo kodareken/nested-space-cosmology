@@ -1,5 +1,15 @@
 # Cosmological atlas: regions, boundaries and observer measurements
 
+The [finite-amplitude initial-data successor](nsc-atlas-finite-parent-data.md)
+now retains the actual nonspherical source in the full Hamiltonian
+constraint. A weighted equivariant existence proof covers0<=epsilon<=1;
+the finite benchmark is resolved at three harmonic degrees. Proper
+volume/energy and covariant GH starting data are supplied. Next is the
+nonlinear Einstein--two-scalar evolution, using a regular compact-space
+formulation and retaining physical modes. The old spherical campaigns
+do not implement this state. The earlier perturbative clock formulas
+are not extrapolated to the finite benchmark.
+
 The [coupled parent response](nsc-atlas-parent-backreaction.md) now supplies
 the quadratic scalar/vector/tensor metric and cubic scalar on that same
 inherited preparation. Its complete fourth-order matter-excitation work

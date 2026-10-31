@@ -1,5 +1,20 @@
 # Prior art and admission of new research
 
+## Finite-amplitude initial geometry, 31 October 2026
+
+The [owner](nsc-atlas-finite-parent-data.md) rejects scaling a perturbative
+metric or spherical averaging as substitutes for the same finite source.
+It solves the full conformal initial constraint. Hebey--Vaugon supplies
+the orbit-threshold compactness mechanism; the weighted source adaptation
+and rational finite-amplitude certificate are derived. Published covariant
+GH on compactS3 supplies the continuation method and an explicit initial
+gauge specialization is checked. Three fixed resolutions8/12/16, independent
+full-residual quadrature and proper-volume measures run within240seconds,
+measured about29seconds on six compute threads. Risks are unresolved high
+modes, reference/physical-measure confusion and incorrect GH data. The
+full-residual, known-limit and connection checks address those. There is no
+further initial grid campaign; actual nonlinear evolution is next.
+
 ## Coupled parent response and excitation work, 31 October 2026
 
 The [owner](nsc-atlas-parent-backreaction.md) compares retaining a fixed

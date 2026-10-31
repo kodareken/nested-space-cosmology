@@ -1,5 +1,11 @@
 # From the generated space to compensated circulation and a light record
 
+The [finite-amplitude successor](nsc-atlas-finite-parent-data.md) now
+extends initial admissibility beyond the local implicit-function result:
+positive constrained geometry exists throughout0<=epsilon<=1 in its
+stated sufficient mass regime, with a three-resolution finite calculation.
+Its full nonlinear future is not inferred from these initial data.
+
 The [coupled-parent successor](nsc-atlas-parent-backreaction.md) now adds
 all quadratic metric sectors, cubic scalar feedback and fourth-order
 matter-excitation work to this same history. It recovers the guide signal

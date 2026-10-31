@@ -14,6 +14,16 @@
     "unspecified": "Historical classification not yet assigned."
   },
   "claims": {
+    "finite-parent-existence": {
+      "section": "15.19",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-finite-parent-data.md"
+    },
+    "finite-parent-data": {
+      "section": "15.19",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-finite-parent-data.md"
+    },
     "coupled-parent-backreaction": {
       "section": "15.18",
       "status": "measured",

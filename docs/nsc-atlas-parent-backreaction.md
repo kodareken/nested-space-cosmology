@@ -1,5 +1,11 @@
 # The inherited geometry acts back on its scalar wave
 
+The [finite-data successor](nsc-atlas-finite-parent-data.md) now supplies
+positive nonlinear initial geometry for the same field over a finite
+amplitude interval and calculates an epsilon=1 benchmark. The coefficients
+below retain their perturbative domain; a nonlinear evolution is needed
+before applying a clock prediction at that benchmark.
+
 The [volume response](nsc-atlas-volume-feedback.md) is now connected to the
 complete quadratic spatial metric and cubic scalar response on the same
 prepared parent. All scalar, compensated vector and transverse tensor

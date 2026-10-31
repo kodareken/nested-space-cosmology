@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [finite parent initial data](nsc-atlas-finite-parent-data.md) combine
+a positive-solution existence proof on a finite amplitude interval,
+nonlinear nonspherical constraint solves, full-residual convergence,
+proper volume/energy and compatible covariant GH starting data. The
+future evolution and concentration remain separate calculations.
+
 The [coupled parent feedback](nsc-atlas-parent-backreaction.md) completes
 quadratic metric and cubic matter response on the same source. Exact finite
 operators, all constraint sectors, fourth-order excitation work and an

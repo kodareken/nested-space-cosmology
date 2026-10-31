@@ -1,5 +1,16 @@
 # What the calculations show
 
+The [finite-amplitude parent data](nsc-atlas-finite-parent-data.md) now solve
+the full initial Hamiltonian constraint for the unchanged nonspherical
+field. A weighted equivariant argument proves positive data exist for
+every0<=epsilon<=1 when mu^2/H^2>33, with strict rational margin61/88.
+Three resolutions reduce the full conformal residual by factors14.84 and
+17.32. The finite benchmark has volume ratio.309002226021 and actual mean
+excitation/vacuum density1.228530389054. It initially has positive trace
+expansion acceleration; no future collapse is inferred. Initial covariant
+GH gauge data are derived, but the full nonlinear evolution is still to
+be implemented. Earlier perturbative clocks retain their small-amplitude domain.
+
 The [coupled parent response](nsc-atlas-parent-backreaction.md) now includes
 all quadratic scalar/vector/tensor metric sectors, the inherited volume,
 and the cubic scalar on the same finite history. Gravitational constraints

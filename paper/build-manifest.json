@@ -1,10 +1,10 @@
 {
-  "bytes": 20073887,
+  "bytes": 20607925,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "948fdc4bb73a3c791e5e13eeed10a9cd91b7d00a1bcb2ae44efd7256722ebd8a",
+  "metadata_sha256": "7a5664f2eee31bb52c8dfa23c3d87b6b48e5f7d2c4aa6468ef19b1f1f2422074",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 232,
-  "pdf_sha256": "3b2e60ac4ffb52b1704a53c231abc77b653aec8a6dd9fb4d07acfb581f8d79c4",
+  "pages": 234,
+  "pdf_sha256": "fb683380ec4e01de719feaf6e5c82692834b201983d143fe738abd5cebeac7ad",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -182,6 +182,10 @@
     {
       "path": "paper/figures/nsc-atlas-connected-route.png",
       "sha256": "b760ccaa7307717eb0dc8733d4c738074a58b306b421a795a7aaa3a468158540"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-finite-parent-data.png",
+      "sha256": "c460dbd2d2e79b14f3ae4d7868c97f8e747cafe29864be2caafb0f60461ec302"
     },
     {
       "path": "paper/figures/nsc-atlas-flow-gravity.png",
@@ -680,6 +684,10 @@
       "sha256": "ee5de983da1bf3803a16750e43b509f48707b4c5f50d0ea56526d76ee61b2e15"
     },
     {
+      "path": "results/summaries/nsc-atlas-finite-parent-data-v1.json",
+      "sha256": "1f0ad490fe5790b910b976e31dd0ad4061bb46c42178be85be29683f1ca52a6d"
+    },
+    {
       "path": "results/summaries/nsc-atlas-fixed-endpoint-comparison-v1.json",
       "sha256": "fed19ae5b870c16ad2b290f5b077d5d8a888e633773b97f7ff6335ed0f102b1b"
     },
@@ -1041,6 +1049,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "f1ab4f0a16b279b4399d100fc9d79aba822863962c4dd79bfa9def4009d426e2",
-  "version": "working-2026-10-31.01"
+  "source_sha256": "755a0270e4d7c1a2e0fe4a12b04e457ad44d92dc2bc5ecf48734a829439121df",
+  "version": "working-2026-10-31.02"
 }

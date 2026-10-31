@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **327 distinct arXiv works**: 107 are cited in the main argument and 220 are retained in the reading library only.
+This navigation index contains **328 distinct arXiv works**: 108 are cited in the main argument and 220 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -69,6 +69,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1309.7591](https://arxiv.org/abs/1309.7591v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 12 |
 | [1311.0700](https://arxiv.org/abs/1311.0700v2) | Offset, conformal zero and charge-sensitive transport, 30 October 2026 | smooth nonzero-mass conformal comparison. Read the abstract, introduction and section3 equations3.3--3.5. The coupled nonlinear theorem has further potential/data assumptions and is not imported as a theorem for the atlas's fixed heavy scalar. Use the critical-mass exception to distinguish a ... | 15.16 |
 | [1311.4182](https://arxiv.org/abs/1311.4182) | Studies | Fischmann: conformal powers of the Dirac operator, used for the free compact-carrier identification. | Library only |
+| [1312.0701](https://arxiv.org/abs/1312.0701v2) | Finite compact-parent data and nonlinear continuation, 31 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 15.19 |
 | [1312.2235](https://arxiv.org/abs/1312.2235) | Studies | Kurkov, Lizzi and Vassilevich: high-energy bosons do not propagate, used for the spectral-cutoff propagation wall. | Library only |
 | [1312.2960](https://arxiv.org/abs/1312.2960) | Studies | Adam, Naya, Sanchez-Guillen and Wereszczynski: BPS Skyrme energy linear in topological charge, including the static-energy equations. | Library only |
 | [1401.1189](https://arxiv.org/abs/1401.1189v1) | Atlas reuse library, 10 October 2026 | Faraoni and Vitagliano: geometric mass under conformal transformations; v1 equation (7) is imported for the source-leg mass comparison. | Library only |
