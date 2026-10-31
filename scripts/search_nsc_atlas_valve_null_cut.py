@@ -35,6 +35,7 @@ def main():
     parser.add_argument('--time-parameterization',choices=('harmonic','logit'),default='harmonic')
     parser.add_argument('--cut-degree',type=int,default=8)
     parser.add_argument('--initial-coordinate-time',type=float,default=.3018)
+    parser.add_argument('--warm-start',type=Path)
     parser.add_argument('--budget-seconds',type=float,default=300.)
     parser.add_argument('--maxiter',type=int,default=30)
     parser.add_argument('--threads',type=int,default=2)
@@ -62,12 +63,24 @@ def main():
     bound=ray.stored_polynomial_noncaustic_bound()
     if not bound['all_sampled_rays_certified']:
         raise ValueError('stored ray polynomial noncaustic bound is unresolved; diagnose before searching cuts')
-    tlo=ray.start+1e-8;thi=ray.end-1e-8
+    buffer=1e-6*(ray.end-ray.start)
+    tlo=ray.start+buffer;thi=ray.end-buffer
     if not tlo<args.initial_coordinate_time<thi:raise ValueError('initial numerical cut must lie within the recorded sheet')
     fraction=(args.initial_coordinate_time-tlo)/(thi-tlo)
     coeff=np.zeros((args.time_degree+1)**2)
     coeff[0]=math.sqrt(4*math.pi)*(args.initial_coordinate_time if args.time_parameterization=='harmonic'
         else math.log(fraction/(1-fraction)))
+    warm_binding=None
+    if args.warm_start:
+        warm_path=(ROOT/args.warm_start).resolve();warm=json.loads(warm_path.read_bytes())
+        if warm['sheet_sha256']!=sha(sheet_path) or warm['numerical_time_degree']!=args.time_degree or warm['time_parameterization']!=args.time_parameterization:
+            raise ValueError('warm cut belongs to a different sheet or time family')
+        coeff=np.asarray(warm['best_cut']['time_coefficients'],dtype=float)
+        if args.time_parameterization=='harmonic':
+            nodes=Y@coeff
+            shift=max(0.,tlo+buffer-float(nodes.min()))+min(0.,thi-buffer-float(nodes.max()))
+            coeff=coeff.copy();coeff[0]+=math.sqrt(4*math.pi)*shift
+        warm_binding=dict(path=warm_path.relative_to(ROOT).as_posix(),sha256=sha(warm_path))
     cache={};best=None;rejected=[];evaluations=0
 
     def evaluate(coefficients):
@@ -76,9 +89,13 @@ def main():
         key=np.asarray(coefficients,dtype=float).tobytes()
         if key in cache:return cache[key]
         times=(Y@coefficients if args.time_parameterization=='harmonic' else tlo+(thi-tlo)*expit(Y@coefficients))
-        if np.min(times)<tlo or np.max(times)>thi:
+        # Search constraints use an interior buffer. Finite-difference
+        # trials may leave that search buffer while still lying in the
+        # ACTUAL recorded domain; those are valid geometry evaluations.
+        if np.min(times)<ray.start or np.max(times)>ray.end:
             theta=np.full(2*len(times),1e3)
             row=dict(rejected_reason='time profile leaves the recorded ray domain',time_coefficients=list(map(float,coefficients)))
+            if len(rejected)<12:rejected.append(row)
             evaluations+=1;cache[key]=(theta,row)
             return theta,row
         state=ray.events(times)
@@ -141,6 +158,7 @@ def main():
         parent_history=sampler.provenance,ray_dense_cache=sheet['ray_dense_cache'],
         numerical_time_degree=args.time_degree,cut_degree=args.cut_degree,angular_order=list(order),
         time_parameterization=args.time_parameterization,
+        warm_start=warm_binding,search_time_buffer=buffer,
         source_sha256=before,source_bound_to_commit=source_bound,
         source_unchanged_during_run=before=={name:sha(ROOT/name) for name in source_names},
         producer_commit=commit,
