@@ -1,0 +1,660 @@
+{
+  "schema": "nsc-atlas-valve-conformal-v1",
+  "provenance": {
+    "role": "Current working-tree source pins; not the archived prior Git version.",
+    "source_sha256_before": {
+      "src/recursive_horizons/nsc_atlas_valve_spherical.py": "1699002cc26f9565d23747b1b83cd130b4f46bb1418e9f8e697bb8db5a991a97",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "scripts/check_nsc_atlas_valve_conformal.py": "93049d724e7307b52aff8edb89e3bbe2c9058e09c20c40654d70dfa233dff129"
+    },
+    "source_sha256_after": {
+      "src/recursive_horizons/nsc_atlas_valve_spherical.py": "1699002cc26f9565d23747b1b83cd130b4f46bb1418e9f8e697bb8db5a991a97",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "scripts/check_nsc_atlas_valve_conformal.py": "93049d724e7307b52aff8edb89e3bbe2c9058e09c20c40654d70dfa233dff129"
+    },
+    "source_unchanged": true,
+    "git_parent_commit": "8dbe971d8e76d8bcbaad7be0005153edb1b23bdc",
+    "archived_prior_parent_commit": "8dbe971d",
+    "archived_prior_module_sha256": "1735df14b638530ba96c0f325491dd6ed26865eae69aa4947063f25bbe339d94"
+  },
+  "handoff": {
+    "proper_time": 2.0,
+    "modes": 80,
+    "initial_constraint_degree": 40,
+    "epsilon": 1.0,
+    "diagnostic": {
+      "proper_time": 2.0,
+      "modes": 80,
+      "epsilon": 1.0,
+      "theta_plus_over_H": -0.9837410886187389,
+      "theta_minus_over_H": -0.9837410886189839,
+      "closed_neck_future_trapped": true,
+      "neck_radius": 1.586812768248,
+      "neck_radial_scale": 3.0884810240316436,
+      "neck_rho": 0.22606599640134484,
+      "neck_radial_pressure": -0.22343529361830095,
+      "neck_tangential_pressure": -0.2234472035339764,
+      "neck_timelike_energy_flux": -2.1084620609802048e-16,
+      "neck_radius_gradient_norm_squared": -0.04487357412102183,
+      "neck_geometric_mass": 0.8290093643100802,
+      "volume": 234.06984819439418,
+      "half_volume": 117.03492409719709,
+      "energy": 143.76001631360427,
+      "half_energy": 71.88000815680213,
+      "mean_density": 0.6141757147388419,
+      "mean_isotropic_pressure": -0.218718000120117,
+      "mean_w": -0.3561163277403758,
+      "pressure_work_rate": 0.6961524349610688,
+      "half_pressure_work_rate": 0.3480762174805344,
+      "Hamiltonian_RMS_over_H_squared": 8.799749889651637e-11,
+      "momentum_RMS_over_H_squared": 4.14850423550557e-11,
+      "min_radial_scale": 3.0478778804639646,
+      "min_angular_scale": 1.586812768248,
+      "initial_constraint_degree": 40,
+      "validation_order": 247,
+      "scope": "Numerical finite continuation of explicitly supplied one-mode occupation; no regular child or inherited preparation selection."
+    },
+    "raw_cache": {
+      "path": ".build\\valve-conformal-v1\\handoff.npz",
+      "sha256": "d1973ef4879d4f90feb1e8782f15b81bc001b38df3e156788aa04544e3f2f300"
+    },
+    "initial_radial_half_width": 3.4583932288948076,
+    "initial_u_max": 0.9,
+    "rule": "a=0,a_T=-K_rad,R_T=-K_tan R,phi_T=Pi; X is proper radial distance. Fields and momenta are retained."
+  },
+  "equations": {
+    "metric": "e^(2a)(-dT\u00b2+dX\u00b2)+R\u00b2dOmega\u00b2",
+    "R_wave": "R_TT-R_XX=-(R_T\u00b2-R_X\u00b2)/R-e^(2a)/R+kappa*W*R*e^(2a)",
+    "a_wave": "a_TT-a_XX=(R_T\u00b2-R_X\u00b2)/R\u00b2+e^(2a)/R\u00b2-kappa*sum(phi_T\u00b2-phi_X\u00b2)/2",
+    "field_wave": "phi_TT-phi_XX=-2*(R_T phi_T-R_X phi_X)/R-e^(2a)*W_phi",
+    "boundary": "Shrinking characteristic Cauchy diamond; no new boundary state.",
+    "Hessian": "Hess_ss R=R_ll+K_rad R_proper; R_ll alone depends on slicing."
+  },
+  "common_conformal_endpoint": 1.1481865519931276,
+  "levels": [
+    {
+      "points": 2001,
+      "step": 0.0034583932288949626,
+      "status": "requested_endpoint",
+      "initial": {
+        "conformal_time": 0.0,
+        "center_proper_time": 2.0,
+        "remaining_points": 2001,
+        "remaining_half_width": 3.4583932288949626,
+        "center_radius": 1.586812768248,
+        "center_a": 0.0,
+        "center_lapse": 1.0,
+        "center_S": 0.06253037304431697,
+        "center_chi": 7.55980319883144e-17,
+        "center_Pi_S": 0.051174142566030874,
+        "center_Pi_chi": -1.2888688241289098e-16,
+        "center_Rproper": -0.2118338361098666,
+        "center_Rproper_acc": -0.15196157782829153,
+        "center_Rll_over_R_H2": 0.3853999704681509,
+        "center_K_rad": -0.49485207134462883,
+        "center_spacetime_Hess_ss_over_R_H2": 1.2822242949237992,
+        "center_theta_plus_over_H": -0.9837410886187391,
+        "center_theta_minus_over_H": -0.9837410886189839,
+        "center_theta_product_over_H2": 0.9677465294370227,
+        "center_R_gradient_norm_squared": -0.04487357412102183,
+        "center_energy_flux": -2.108462060980205e-16,
+        "Hamiltonian_RMS_over_H2": 5.3578278210618846e-11,
+        "Hamiltonian_relative_RMS_term_budget": 1.501831535575703e-12,
+        "Hamiltonian_relative_RMS_Riemann_scale": 3.283553979490142e-12,
+        "central_half_Hamiltonian_RMS_over_H2": 3.911834668838297e-11,
+        "momentum_RMS_over_H2": 2.5106131863018083e-05,
+        "max_abs_Ricci_over_H2": 46.189076146406734,
+        "max_abs_source_inferred_Kretschmann_over_H4": 682.2236761464642,
+        "min_radius": 1.2484445320759021,
+        "min_lapse": 1.0,
+        "maximum_metric_log": 0.0,
+        "center_rho": 0.22606599640134284,
+        "center_radial_pressure": -0.22343529361829895,
+        "center_tangential_pressure": -0.2234472035339744,
+        "patch_max_theta_plus_over_H": 1.4902282498264865,
+        "patch_max_theta_minus_over_H": 1.4902282498264852,
+        "full_current_patch_future_trapped": false,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames."
+      },
+      "endpoint": {
+        "conformal_time": 1.1481865519931276,
+        "center_proper_time": 3.945528868199236,
+        "remaining_points": 1335,
+        "remaining_half_width": 2.30674828367294,
+        "center_radius": 0.6549543282756393,
+        "center_a": 1.4221090520557425,
+        "center_lapse": 4.145855050256651,
+        "center_S": 0.0025532367079019,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.14727147781614297,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -1.0538326589597575,
+        "center_Rproper_acc": -1.5412558337316913,
+        "center_Rll_over_R_H2": 0.6417639551022832,
+        "center_K_rad": -1.4285975900428936,
+        "center_spacetime_Hess_ss_over_R_H2": 31.84738945126753,
+        "center_theta_plus_over_H": -11.856917652348553,
+        "center_theta_minus_over_H": -11.856917652348553,
+        "center_theta_product_over_H2": 140.5864962145747,
+        "center_R_gradient_norm_squared": -1.1105632730901926,
+        "center_energy_flux": 0.0,
+        "Hamiltonian_RMS_over_H2": 0.037972912752663304,
+        "Hamiltonian_relative_RMS_term_budget": 0.0002632098238666771,
+        "Hamiltonian_relative_RMS_Riemann_scale": 0.0003149043443139507,
+        "central_half_Hamiltonian_RMS_over_H2": 0.052958167569363106,
+        "momentum_RMS_over_H2": 0.003755170005132856,
+        "max_abs_Ricci_over_H2": 27.310981730372802,
+        "max_abs_source_inferred_Kretschmann_over_H4": 51891.98122412437,
+        "min_radius": 0.6549543282756393,
+        "min_lapse": 1.9229532241208496,
+        "maximum_metric_log": 1.4221090520557425,
+        "center_rho": 0.23183733513109947,
+        "center_radial_pressure": -0.2101428765871586,
+        "center_tangential_pressure": -0.2101484469529488,
+        "patch_max_theta_plus_over_H": -4.059746290658618,
+        "patch_max_theta_minus_over_H": -4.059746290658618,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames."
+      },
+      "events": [],
+      "raw_cache": {
+        "path": ".build\\valve-conformal-v1\\points-2001.npz",
+        "sha256": "10f6ea2207c073630b09e73c1075c1b63e711427bdf8166be8b4f6ef747b081b"
+      },
+      "maximum_implicit_iterations": 6,
+      "elapsed_seconds": 0.38479650000226684
+    },
+    {
+      "points": 4001,
+      "step": 0.0017291966144474813,
+      "status": "requested_endpoint",
+      "initial": {
+        "conformal_time": 0.0,
+        "center_proper_time": 2.0,
+        "remaining_points": 4001,
+        "remaining_half_width": 3.4583932288949626,
+        "center_radius": 1.586812768248,
+        "center_a": 0.0,
+        "center_lapse": 1.0,
+        "center_S": 0.06253037304431697,
+        "center_chi": 7.55980319883144e-17,
+        "center_Pi_S": 0.051174142566030874,
+        "center_Pi_chi": -1.2888688241289098e-16,
+        "center_Rproper": -0.2118338361098666,
+        "center_Rproper_acc": -0.15196157782829153,
+        "center_Rll_over_R_H2": 0.3853999704681509,
+        "center_K_rad": -0.49485207134462883,
+        "center_spacetime_Hess_ss_over_R_H2": 1.2822242949237992,
+        "center_theta_plus_over_H": -0.9837410886187391,
+        "center_theta_minus_over_H": -0.9837410886189839,
+        "center_theta_product_over_H2": 0.9677465294370227,
+        "center_R_gradient_norm_squared": -0.04487357412102183,
+        "center_energy_flux": -2.108462060980205e-16,
+        "Hamiltonian_RMS_over_H2": 5.358275765229122e-11,
+        "Hamiltonian_relative_RMS_term_budget": 1.5022920819467693e-12,
+        "Hamiltonian_relative_RMS_Riemann_scale": 3.2842422001978616e-12,
+        "central_half_Hamiltonian_RMS_over_H2": 3.9108549961117766e-11,
+        "momentum_RMS_over_H2": 6.276881766998419e-06,
+        "max_abs_Ricci_over_H2": 46.189076146406734,
+        "max_abs_source_inferred_Kretschmann_over_H4": 682.2236761464642,
+        "min_radius": 1.2484445320759021,
+        "min_lapse": 1.0,
+        "maximum_metric_log": 0.0,
+        "center_rho": 0.22606599640134284,
+        "center_radial_pressure": -0.22343529361829895,
+        "center_tangential_pressure": -0.2234472035339744,
+        "patch_max_theta_plus_over_H": 1.4902282498264865,
+        "patch_max_theta_minus_over_H": 1.4902282498264852,
+        "full_current_patch_future_trapped": false,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames."
+      },
+      "endpoint": {
+        "conformal_time": 1.1481865519931276,
+        "center_proper_time": 3.9455090549728498,
+        "remaining_points": 2671,
+        "remaining_half_width": 2.3084774802873875,
+        "center_radius": 0.6549688548595913,
+        "center_a": 1.4221003268359154,
+        "center_lapse": 4.145818876917777,
+        "center_S": 0.002560200917912107,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.14716247561466309,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -1.0532808483048457,
+        "center_Rproper_acc": -1.5411935680491355,
+        "center_Rll_over_R_H2": 0.6422691420752458,
+        "center_K_rad": -1.4276249847893572,
+        "center_spacetime_Hess_ss_over_R_H2": 31.809629372926633,
+        "center_theta_plus_over_H": -11.850446264231262,
+        "center_theta_minus_over_H": -11.850446264231262,
+        "center_theta_product_over_H2": 140.4330766614327,
+        "center_R_gradient_norm_squared": -1.1094005454057754,
+        "center_energy_flux": 0.0,
+        "Hamiltonian_RMS_over_H2": 0.009476336107854347,
+        "Hamiltonian_relative_RMS_term_budget": 6.575872499932535e-05,
+        "Hamiltonian_relative_RMS_Riemann_scale": 7.866607323010061e-05,
+        "central_half_Hamiltonian_RMS_over_H2": 0.013210398320140513,
+        "momentum_RMS_over_H2": 0.0009456443104655885,
+        "max_abs_Ricci_over_H2": 27.300790227217043,
+        "max_abs_source_inferred_Kretschmann_over_H4": 51829.37717277794,
+        "min_radius": 0.6549688548595913,
+        "min_lapse": 1.9210662410904904,
+        "maximum_metric_log": 1.4221003268359154,
+        "center_rho": 0.2318207705295678,
+        "center_radial_pressure": -0.21015951835977936,
+        "center_tangential_pressure": -0.21016397630053146,
+        "patch_max_theta_plus_over_H": -4.052262208148244,
+        "patch_max_theta_minus_over_H": -4.052262208148244,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames."
+      },
+      "events": [],
+      "raw_cache": {
+        "path": ".build\\valve-conformal-v1\\points-4001.npz",
+        "sha256": "2572cb61d4d6262dbdda10797fbbadddc8f5f00a24aec1c75c507cd9f2d638b5"
+      },
+      "maximum_implicit_iterations": 5,
+      "elapsed_seconds": 1.0837928999972064
+    },
+    {
+      "points": 8001,
+      "step": 0.0008645983072237406,
+      "status": "requested_endpoint",
+      "initial": {
+        "conformal_time": 0.0,
+        "center_proper_time": 2.0,
+        "remaining_points": 8001,
+        "remaining_half_width": 3.4583932288949626,
+        "center_radius": 1.586812768248,
+        "center_a": 0.0,
+        "center_lapse": 1.0,
+        "center_S": 0.06253037304431697,
+        "center_chi": 7.55980319883144e-17,
+        "center_Pi_S": 0.051174142566030874,
+        "center_Pi_chi": -1.2888688241289098e-16,
+        "center_Rproper": -0.2118338361098666,
+        "center_Rproper_acc": -0.15196157782829153,
+        "center_Rll_over_R_H2": 0.3853999704681509,
+        "center_K_rad": -0.49485207134462883,
+        "center_spacetime_Hess_ss_over_R_H2": 1.2822242949237992,
+        "center_theta_plus_over_H": -0.9837410886187391,
+        "center_theta_minus_over_H": -0.9837410886189839,
+        "center_theta_product_over_H2": 0.9677465294370227,
+        "center_R_gradient_norm_squared": -0.04487357412102183,
+        "center_energy_flux": -2.108462060980205e-16,
+        "Hamiltonian_RMS_over_H2": 5.358519827860303e-11,
+        "Hamiltonian_relative_RMS_term_budget": 1.5025281021698557e-12,
+        "Hamiltonian_relative_RMS_Riemann_scale": 3.2845982290057354e-12,
+        "central_half_Hamiltonian_RMS_over_H2": 3.910404999963477e-11,
+        "momentum_RMS_over_H2": 1.5692615073037818e-06,
+        "max_abs_Ricci_over_H2": 46.189076146406734,
+        "max_abs_source_inferred_Kretschmann_over_H4": 682.2236761464642,
+        "min_radius": 1.2484445320759021,
+        "min_lapse": 1.0,
+        "maximum_metric_log": 0.0,
+        "center_rho": 0.22606599640134284,
+        "center_radial_pressure": -0.22343529361829895,
+        "center_tangential_pressure": -0.2234472035339744,
+        "patch_max_theta_plus_over_H": 1.4902282498264865,
+        "patch_max_theta_minus_over_H": 1.4902282498264852,
+        "full_current_patch_future_trapped": false,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames."
+      },
+      "endpoint": {
+        "conformal_time": 1.1481865519931276,
+        "center_proper_time": 3.9455040983085437,
+        "remaining_points": 5343,
+        "remaining_half_width": 2.3093420785946113,
+        "center_radius": 0.654972516115722,
+        "center_a": 1.4220981192391784,
+        "center_lapse": 4.145809724631654,
+        "center_S": 0.002561962869662261,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.14713520694087345,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -1.0531430116500329,
+        "center_Rproper_acc": -1.5411777827459328,
+        "center_Rll_over_R_H2": 0.6423944362441159,
+        "center_K_rad": -1.4273821290814819,
+        "center_spacetime_Hess_ss_over_R_H2": 31.800200568532805,
+        "center_theta_plus_over_H": -11.84882923159729,
+        "center_theta_minus_over_H": -11.84882923159729,
+        "center_theta_product_over_H2": 140.39475415955442,
+        "center_R_gradient_norm_squared": -1.1091102029873012,
+        "center_energy_flux": 0.0,
+        "Hamiltonian_RMS_over_H2": 0.002372701414432112,
+        "Hamiltonian_relative_RMS_term_budget": 1.6469859653348307e-05,
+        "Hamiltonian_relative_RMS_Riemann_scale": 1.970227904313657e-05,
+        "central_half_Hamiltonian_RMS_over_H2": 0.0033006993887786237,
+        "momentum_RMS_over_H2": 0.00023691107565758032,
+        "max_abs_Ricci_over_H2": 27.29737693178816,
+        "max_abs_source_inferred_Kretschmann_over_H4": 51813.74037530101,
+        "min_radius": 0.654972516115722,
+        "min_lapse": 1.9202582923865796,
+        "maximum_metric_log": 1.4220981192391784,
+        "center_rho": 0.23181663226998822,
+        "center_radial_pressure": -0.2101636761767835,
+        "center_tangential_pressure": -0.21016786314845456,
+        "patch_max_theta_plus_over_H": -4.049718720545206,
+        "patch_max_theta_minus_over_H": -4.049718720545206,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames."
+      },
+      "events": [],
+      "raw_cache": {
+        "path": ".build\\valve-conformal-v1\\points-8001.npz",
+        "sha256": "7f3b39c7f109cad79e1202913b029b808ed84b0a00b87062240b23d72c35dd17"
+      },
+      "maximum_implicit_iterations": 4,
+      "elapsed_seconds": 3.1734782999847084
+    }
+  ],
+  "refinement": {
+    "center_proper_time": {
+      "values": [
+        3.945528868199236,
+        3.9455090549728498,
+        3.9455040983085437
+      ],
+      "adjacent_differences": [
+        1.9813226386222738e-05,
+        4.956664306110525e-06
+      ],
+      "difference_ratio": 3.997290347421187,
+      "empirical_fine_grid_error_indicator": 4.956664306110525e-06,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "center_radius": {
+      "values": [
+        0.6549543282756393,
+        0.6549688548595913,
+        0.654972516115722
+      ],
+      "adjacent_differences": [
+        1.4526583952068073e-05,
+        3.661256130715884e-06
+      ],
+      "difference_ratio": 3.9676502908928404,
+      "empirical_fine_grid_error_indicator": 3.661256130715884e-06,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "center_Rproper": {
+      "values": [
+        -1.0538326589597575,
+        -1.0532808483048457,
+        -1.0531430116500329
+      ],
+      "adjacent_differences": [
+        0.0005518106549118329,
+        0.00013783665481281737
+      ],
+      "difference_ratio": 4.003366562117991,
+      "empirical_fine_grid_error_indicator": 0.00013783665481281737,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "center_Rproper_acc": {
+      "values": [
+        -1.5412558337316913,
+        -1.5411935680491355,
+        -1.5411777827459328
+      ],
+      "adjacent_differences": [
+        6.226568255573994e-05,
+        1.5785303202786594e-05
+      ],
+      "difference_ratio": 3.9445351005198384,
+      "empirical_fine_grid_error_indicator": 1.5785303202786594e-05,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "center_theta_plus_over_H": {
+      "values": [
+        -11.856917652348553,
+        -11.850446264231262,
+        -11.84882923159729
+      ],
+      "adjacent_differences": [
+        0.006471388117290644,
+        0.001617032633973281
+      ],
+      "difference_ratio": 4.002014542767461,
+      "empirical_fine_grid_error_indicator": 0.001617032633973281,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "center_theta_product_over_H2": {
+      "values": [
+        140.5864962145747,
+        140.4330766614327,
+        140.39475415955442
+      ],
+      "adjacent_differences": [
+        0.15341955314201527,
+        0.03832250187826958
+      ],
+      "difference_ratio": 4.003380406356257,
+      "empirical_fine_grid_error_indicator": 0.03832250187826958,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "center_R_gradient_norm_squared": {
+      "values": [
+        -1.1105632730901926,
+        -1.1094005454057754,
+        -1.1091102029873012
+      ],
+      "adjacent_differences": [
+        0.0011627276844172751,
+        0.0002903424184741432
+      ],
+      "difference_ratio": 4.004677272194119,
+      "empirical_fine_grid_error_indicator": 0.0002903424184741432,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "center_spacetime_Hess_ss_over_R_H2": {
+      "values": [
+        31.84738945126753,
+        31.809629372926633,
+        31.800200568532805
+      ],
+      "adjacent_differences": [
+        0.03776007834089867,
+        0.009428804393827761
+      ],
+      "difference_ratio": 4.00475784242772,
+      "empirical_fine_grid_error_indicator": 0.009428804393827761,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "center_Rll_over_R_H2": {
+      "values": [
+        0.6417639551022832,
+        0.6422691420752458,
+        0.6423944362441159
+      ],
+      "adjacent_differences": [
+        0.0005051869729625347,
+        0.0001252941688700826
+      ],
+      "difference_ratio": 4.032007056021598,
+      "empirical_fine_grid_error_indicator": 0.0001252941688700826,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    },
+    "Hamiltonian_RMS_over_H2": {
+      "values": [
+        0.037972912752663304,
+        0.009476336107854347,
+        0.002372701414432112
+      ],
+      "adjacent_differences": [
+        0.02849657664480896,
+        0.007103634693422236
+      ],
+      "difference_ratio": 4.011548717615783,
+      "empirical_fine_grid_error_indicator": 0.007103634693422236,
+      "meaning": "Full successive-grid difference, not a certified continuum bound."
+    }
+  },
+  "overlap": {
+    "proper_time": 2.2,
+    "synchronous_diagnostic": {
+      "proper_time": 2.2,
+      "modes": 80,
+      "epsilon": 1.0,
+      "theta_plus_over_H": -1.1665617587016115,
+      "theta_minus_over_H": -1.166561758701842,
+      "closed_neck_future_trapped": true,
+      "neck_radius": 1.5412909020896886,
+      "neck_radial_scale": 3.421223706235849,
+      "neck_rho": 0.22674081745665395,
+      "neck_radial_pressure": -0.22496702000123206,
+      "neck_tangential_pressure": -0.22510530185767244,
+      "neck_timelike_energy_flux": -1.9062928113513047e-16,
+      "neck_radius_gradient_norm_squared": -0.05953363050269361,
+      "neck_geometric_mass": 0.8165247725759297,
+      "volume": 232.98890252690583,
+      "half_volume": 116.49445126345292,
+      "energy": 143.57070207860153,
+      "half_energy": 71.78535103930076,
+      "mean_density": 0.6162126200925893,
+      "mean_isotropic_pressure": -0.23212866229834928,
+      "mean_w": -0.37670222051517005,
+      "pressure_work_rate": -3.8168902688251114,
+      "half_pressure_work_rate": -1.9084451344125557,
+      "Hamiltonian_RMS_over_H_squared": 9.743935308160685e-10,
+      "momentum_RMS_over_H_squared": 2.3406322145408433e-09,
+      "min_radial_scale": 3.1478960519116153,
+      "min_angular_scale": 1.541290902089688,
+      "initial_constraint_degree": 40,
+      "validation_order": 247,
+      "scope": "Numerical finite continuation of explicitly supplied one-mode occupation; no regular child or inherited preparation selection."
+    },
+    "observables": {
+      "center_radius": {
+        "synchronous_value": 1.5412909020896886,
+        "conformal_values": [
+          1.5412910979175451,
+          1.5412909510086166,
+          1.5412909143147817
+        ],
+        "interpolation_indicators": [
+          6.733280599746649e-12,
+          2.0672352718520415e-13,
+          5.1514348342607263e-14
+        ],
+        "finest_difference": 1.222509316001208e-08
+      },
+      "center_S": {
+        "synchronous_value": 0.07175893766665098,
+        "conformal_values": [
+          0.07175897729120671,
+          0.07175894755878023,
+          0.07175894013804006
+        ],
+        "interpolation_indicators": [
+          6.867241497676702e-11,
+          4.144087850654898e-12,
+          1.0344503031944896e-12
+        ],
+        "finest_difference": 2.4713890794947346e-09
+      },
+      "center_Pi_S": {
+        "synchronous_value": 0.04044150836679447,
+        "conformal_values": [
+          0.04044128115776622,
+          0.04044145166057733,
+          0.04044149419967958
+        ],
+        "interpolation_indicators": [
+          1.484913025873169e-10,
+          4.654041041440848e-12,
+          1.1617443118616677e-12
+        ],
+        "finest_difference": -1.416711489093947e-08
+      },
+      "center_theta_plus_over_H": {
+        "synchronous_value": -1.1665617587017267,
+        "conformal_values": [
+          -1.166564618751053,
+          -1.1665624736852938,
+          -1.1665619374437535
+        ],
+        "interpolation_indicators": [
+          8.551663821521061e-10,
+          5.8408833325529486e-12,
+          1.3991030556326223e-12
+        ],
+        "finest_difference": -1.7874202673517914e-07
+      }
+    },
+    "clock": "Center proper time integral; same reflection-center geodesic.",
+    "interpolation": "Actual-step PCHIP; full-vs-decimated history change reported as an empirical indicator."
+  },
+  "exact_de_sitter": {
+    "levels": [
+      {
+        "points": 501,
+        "conformal_time": 0.5000000000000004,
+        "status": "requested_endpoint",
+        "max_radius_error": 2.6352070303659048e-08,
+        "max_metric_log_error": 3.8168828601220506e-09,
+        "Hamiltonian_RMS_over_H2": 1.1190955569915067e-07,
+        "momentum_RMS_over_H2": 5.975697260789878e-08,
+        "exact": "a=-log cos(H T), R=cos(H X)/(H cos(H T)), S=chi=0",
+        "scope": "Field convergence control; small constraint residuals are reported including nonmonotone finite-difference noise."
+      },
+      {
+        "points": 1001,
+        "conformal_time": 0.5000000000000004,
+        "status": "requested_endpoint",
+        "max_radius_error": 6.631626359165921e-09,
+        "max_metric_log_error": 9.602464587366022e-10,
+        "Hamiltonian_RMS_over_H2": 1.1524502096224804e-06,
+        "momentum_RMS_over_H2": 1.5793747879568665e-08,
+        "exact": "a=-log cos(H T), R=cos(H X)/(H cos(H T)), S=chi=0",
+        "scope": "Field convergence control; small constraint residuals are reported including nonmonotone finite-difference noise."
+      },
+      {
+        "points": 2001,
+        "conformal_time": 0.5000000000000004,
+        "status": "requested_endpoint",
+        "max_radius_error": 1.6633148192113367e-09,
+        "max_metric_log_error": 2.4082435177985584e-10,
+        "Hamiltonian_RMS_over_H2": 3.006181692029435e-06,
+        "momentum_RMS_over_H2": 2.833149220931186e-08,
+        "exact": "a=-log cos(H T), R=cos(H X)/(H cos(H T)), S=chi=0",
+        "scope": "Field convergence control; small constraint residuals are reported including nonmonotone finite-difference noise."
+      }
+    ],
+    "analytic_PDE_identity_max_abs_residual": 1.5608562025034702e-15,
+    "radius_difference_ratios": [
+      3.973696477521907,
+      3.9869940931027816
+    ],
+    "metric_difference_ratios": [
+      3.9748991786378776,
+      3.9873312297520056
+    ],
+    "constraint_noise": "Small finite-difference constraint controls are reported honestly, including nonmonotone noise; field convergence is the analytic-control comparison."
+  },
+  "numerical": {
+    "method": "Second-order implicit-centered characteristic diamond; CFL1; initial Cauchy Taylor order2",
+    "proper_clock": "Trapezoidal lapse integral",
+    "BLAS_threads": 1,
+    "requested_conformal_endpoint": 1.1481865519931276,
+    "elapsed_seconds": 8.984751399984816,
+    "full_arrays_committed": false
+  },
+  "verdict": {
+    "same_state_continues_beyond_old_global_numerical_break": true,
+    "angular_contraction_persists": true,
+    "temporal_bounce_observed": false,
+    "all_retained_patch_spheres_future_trapped": true,
+    "regular_child_proved": false,
+    "physical_curvature_singularity_proved": false,
+    "source_state_selected_by_inheritance": false,
+    "scope": "Finite empirical numerical errors, not a continuum enclosure. The local causal edge is not the full receiving-band marginal boundary; late whole-band influx is not inferred. Zero center flux permits symmetric feeding.",
+    "next": "Keep the finite continuation fixed; derive the next interior connection in the same action."
+  },
+  "reproduction": "python scripts/run_python.py scripts/check_nsc_atlas_valve_conformal.py --output results/summaries/nsc-atlas-valve-conformal-v1.json"
+}
