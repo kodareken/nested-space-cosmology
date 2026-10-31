@@ -10,7 +10,7 @@ import time
 
 import numpy as np
 from scipy.integrate import solve_ivp, quad, cumulative_simpson
-from scipy.interpolate import PchipInterpolator
+from scipy.interpolate import PchipInterpolator, CubicSpline
 from scipy.optimize import brentq
 from scipy.special import eval_gegenbauer
 
@@ -42,8 +42,8 @@ def gegenbauer_jets(u, modes):
 class SphericalValve:
     """Exact SO(3) reduction of Einstein gravity and the two canonical fields.
 
-    h=q² dchi²+b² sin²chi dOmega², u=cos(chi), q=b+(1-u²)c.
-    K_rad=K_tan+(1-u²)d enforces regular metric/curvature poles.
+    h=qÂ² dchiÂ²+bÂ² sinÂ²chi dOmegaÂ², u=cos(chi), q=b+(1-uÂ²)c.
+    K_rad=K_tan+(1-uÂ²)d enforces regular metric/curvature poles.
     State rows are b,c,K_tan,d,S,chi,Pi_S,Pi_chi. No shell is present.
     """
     def __init__(self,modes=32,*,epsilon=1.,initial_degree=40,budget_seconds=60.):
@@ -212,7 +212,7 @@ class SphericalValve:
 
 
 def conformal_forcing(y,yt,yx,sstar,kappa):
-    """Wave-equation sources for e^(2a)(-dT²+dX²)+R²dOmega².
+    """Wave-equation sources for e^(2a)(-dTÂ²+dXÂ²)+RÂ²dOmegaÂ².
 
     Rows are R,a,S,chi. Null coordinates are (T-X)/sqrt(2) and
     (T+X)/sqrt(2); no membrane or incoming boundary state is added.
@@ -305,7 +305,10 @@ def _conformal_points(points):
     return int(points)
 
 
-def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=.05,budget_seconds=60.):
+def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=.05,budget_seconds=60.,
+                      validity_mode='legacy_absolute',relative_geometry_limit=1e-3,
+                      relative_source_limit=.02,diagnostic_continue_after_guard=False,
+                      radius_floor=.15):
     """Centered characteristic diamonds on a shrinking Cauchy domain.
 
     Every accepted level discards one point at either end. Spatial and
@@ -313,6 +316,13 @@ def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=
     reflecting, vacuum, or independently specified boundary values exist.
     """
     started=time.perf_counter()
+    relative=validity_mode=='relative_metric_source'
+    if validity_mode not in ('legacy_absolute','relative_metric_source'):
+        raise ValueError('unknown conformal validity mode')
+    if not all(math.isfinite(v) and v>0 for v in (relative_geometry_limit,relative_source_limit,radius_floor)):
+        raise ValueError('positive finite validity limits and radius floor required')
+    diagnostic=conformal_metric_diagnostics if relative else conformal_diagnostics
+    columns=CONFORMAL_CENTER_COLUMNS+(('center_Rproper_acc',) if relative else ())
     endpoint=float(endpoint);budget_seconds=float(budget_seconds);sample_every=float(sample_every)
     if not math.isfinite(endpoint) or not 0<endpoint<initial['half_width']:
         raise ValueError('positive endpoint strictly inside the initial causal half-width required')
@@ -324,15 +334,16 @@ def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=
         raise ValueError('finite four-field uniform Cauchy jets required')
     if np.min(y0[0])<=0:raise ValueError('strictly positive areal radius on the patch required')
     if endpoint<h:raise ValueError('endpoint must include at least one actual diamond step')
-    first=conformal_diagnostics(0.,proper_time,y0,v0,x0,xx0,h,H,kappa,sstar)
-    rows=[first];history=[[first[k] for k in CONFORMAL_CENTER_COLUMNS]]
+    first=diagnostic(0.,proper_time,y0,v0,x0,xx0,h,H,kappa,sstar)
+    rows=[first];history=[[first[k] for k in columns]]
     acceleration=xx0+conformal_forcing(y0,v0,x0,sstar,kappa)
     prev=y0.copy();cur=(y0+h*v0+.5*h*h*acceleration)[:,1:-1]
-    tau=proper_time+h*(1+math.exp(float(cur[1,len(cur[0])//2])))/2
+    tau=proper_time+h*(math.exp(float(y0[1,n//2]))+math.exp(float(cur[1,len(cur[0])//2])))/2
     prior_a=float(cur[1,len(cur[0])//2]);check=sample_every;step=1
     parity=np.array([1,1,1,-1])[:,None]
-    events=[];neck_minimum=True;prior_Rproper=float(v0[0,n//2])
+    events=[];neck_minimum=True;prior_Rproper=math.exp(-float(y0[1,n//2]))*float(v0[0,n//2])
     status='running';message=None;max_iterations=0;profile=None
+    first_failure=None
     try:
         while cur.shape[1]>=25:
             T=step*h
@@ -341,21 +352,27 @@ def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=
             E,W,S=cur[:,2:],cur[:,:-2],prev[:,2:-2];C=cur[:,1:-1]
             dx=(E-W)/(2*h);dxx=(E-2*C+W)/(h*h)
             guess=E+W-S+h*h*conformal_forcing(C,(C-S)/h,dx,sstar,kappa)
-            for it in range(16):
+            for it in range(24 if relative else 16):
                 updated=E+W-S+h*h*conformal_forcing((guess+E+W+S)/4,(guess-S)/(2*h),dx,sstar,kappa)
                 error=float(np.max(abs(updated-guess)/(1+abs(updated))))
                 guess=updated
-                if error<3e-13:break
+                if error<(2e-13 if relative else 3e-13):break
             else:raise RuntimeError('implicit diamond iteration did not converge')
             max_iterations=max(max_iterations,it+1)
             # The supplied one-mode state has this exact reflection symmetry.
             guess=.5*(guess+parity*guess[:,::-1]);dt=(guess-S)/(2*h)
+            dtt=(guess-2*C+S)/(h*h) if relative else None
             center=len(C[0])//2;em=math.exp(-float(C[1,center]))
             Rproper=em*float(dt[0,center]);Rll=em*em*float(dxx[0,center])
-            history.append([T,tau,float(C[0,center]),float(C[2,center]),em*float(dt[2,center]),
-                            2*Rproper/(float(C[0,center])*H),Rproper])
+            center_values=[T,tau,float(C[0,center]),float(C[2,center]),em*float(dt[2,center]),
+                           2*Rproper/(float(C[0,center])*H),Rproper]
+            if relative:
+                center_values.append(em*em*(float(dtt[0,center])-float(dt[1,center])*float(dt[0,center])-
+                                            float(dx[1,center])*float(dx[0,center])))
+            history.append(center_values)
             profile=dict(T=T,center_proper_time=tau,x=h*np.arange(-center,center+1),
                          y=C.copy(),yt=dt.copy(),yx=dx.copy(),yxx=dxx.copy())
+            if relative:profile['ytt']=dtt.copy()
             if neck_minimum and Rll<=0:
                 events.append(dict(kind='spatial_neck_type_change_on_conformal_slices',conformal_time=T,proper_time=tau))
                 neck_minimum=False
@@ -364,12 +381,30 @@ def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=
                 status='temporal_bounce'
             prior_Rproper=Rproper
             final=T+h>endpoint+32*np.finfo(float).eps*max(1.,endpoint)
-            if T>=check or final or status!='running':
-                row=conformal_diagnostics(T,tau,C,dt,dx,dxx,h,H,kappa,sstar)
-                rows.append(row);check+=sample_every
-                if row['central_half_Hamiltonian_RMS_over_H2']>.1:
-                    status='numerical_validity_stop';message='central half-patch Hamiltonian RMS/H²>.1; not a physical endpoint'
-                if row['min_radius']<.15:
+            monitor=relative and float(C[0,center])<.25 and step%10==0
+            target=relative and float(C[0,center])<=radius_floor
+            if T>=check or final or monitor or target or status!='running':
+                row=(diagnostic(T,tau,C,dt,dx,dxx,h,H,kappa,sstar,ytt=dtt) if relative else
+                     diagnostic(T,tau,C,dt,dx,dxx,h,H,kappa,sstar))
+                rows.append(row)
+                if T>=check:check+=sample_every
+                failure=None
+                if relative:
+                    if (row['Hamiltonian_relative_RMS_term_budget']>relative_geometry_limit or
+                            row['Hamiltonian_relative_actual_metric_Riemann_scale']>relative_geometry_limit):
+                        failure='relative geometric constraint limit exceeded'
+                    if row['metric_Einstein_residual_over_source_RMS']>relative_source_limit:
+                        failure='direct metric Einstein/source residual limit exceeded'
+                elif row['central_half_Hamiltonian_RMS_over_H2']>.1:
+                    failure='central half-patch Hamiltonian RMS/HÂ²>.1; not a physical endpoint'
+                if failure:
+                    if first_failure is None:
+                        first_failure=dict(conformal_time=T,proper_time=tau,radius=float(C[0,center]),reason=failure)
+                    if not diagnostic_continue_after_guard:
+                        status='numerical_validity_stop';message=failure
+                if target:
+                    if status=='running':status='controlled_radius_target' if first_failure is None else 'diagnostic_radius_target'
+                elif row['min_radius']<radius_floor:
                     status='radius_safety_stop';message='sampled areal radius<.15; no continuation past this guard'
             if status!='running':break
             prev,cur=cur,guess;step+=1
@@ -382,9 +417,13 @@ def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=
         status='numerical_failure';message=str(exc)
     return dict(points=n,step=h,initial_half_width=float(initial['half_width']),
                 requested_endpoint=endpoint,status=status,message=message,rows=rows,
-                center_history=np.asarray(history),center_columns=CONFORMAL_CENTER_COLUMNS,
+                center_history=np.asarray(history),center_columns=columns,
                 end_profile=profile,events=events,maximum_implicit_iterations=max_iterations,
                 elapsed_seconds=time.perf_counter()-started,
+                validity_mode=validity_mode,first_validity_failure=first_failure,
+                final_cut_admitted=first_failure is None,
+                diagnostic_continuation_requested=bool(diagnostic_continue_after_guard),
+                validity_limits=dict(relative_geometry=relative_geometry_limit,relative_source=relative_source_limit,radius_floor=radius_floor),
                 boundary='Shrinking characteristic Cauchy diamond; no supplied boundary data.',
                 scope='Finite numerical continuation with empirical errors, not a continuum enclosure, physical singularity, or regular-child proof.')
 
@@ -471,3 +510,141 @@ def align_conformal_center(result,proper_time):
         values[key]=full;indicators[key]=abs(full-coarse)
     return dict(values=values,interpolation_indicator=indicators,
                 meaning='Full-vs-every-other actual-step PCHIP difference; empirical, not certified.')
+
+
+def conformal_metric_diagnostics(T,tau,y,yt,yx,yxx,h,H,kappa,sstar,*,ytt=None):
+    """Actual warped-metric curvature and canonical-source residuals.
+
+    Supply actual three-time-level or analytic ytt for an independent
+    metric/source comparison. With no temporal jet (the initial Cauchy
+    slice), the PDE-initialized fallback is explicitly labelled and must
+    not be presented as an independent temporal-curvature measurement.
+    """
+    out=conformal_diagnostics(T,tau,y,yt,yx,yxx,h,H,kappa,sstar)
+    R,a,S,chi=y;RT,aT,ST,CT=yt;RX,aX,SX,CX=yx
+    em=np.exp(-a);em2=em*em
+    independent=ytt is not None
+    if independent:
+        ytt=np.asarray(ytt,dtype=float)
+        if ytt.shape!=y.shape or np.any(~np.isfinite(ytt)):raise ValueError('finite temporal second jets matching the fields required')
+    else:
+        ytt=yxx+conformal_forcing(y,yt,yx,sstar,kappa)
+    Rtt=ytt[0]
+    HessNN=em2*(Rtt-aT*RT-aX*RX)
+    HessSS=em2*(yxx[0]-aT*RT-aX*RX)
+    A=-em2*(ytt[1]-yxx[1]);B=-HessNN/R;C=-HessSS/R
+    D=(1+em2*(RT*RT-RX*RX))/(R*R)
+    Rtx=(RT[2:]-RT[:-2])/(2*h)
+    HessNS=em2[1:-1]*(Rtx-aX[1:-1]*RT[1:-1]-aT[1:-1]*RX[1:-1])
+    E=-HessNS/R[1:-1]
+    riemann=4*(A[1:-1]**2+2*B[1:-1]**2+2*C[1:-1]**2+D[1:-1]**2-4*E*E)
+    R00=A+2*B;R11=-A+2*C;R22=-B+C+D;R01=2*E
+    Ricci=-R00+R11+2*R22
+    W,_,_=canonical_potential(S,chi,sstar)
+    pi2=em2*(ST*ST+CT*CT);grad2=em2*(SX*SX+CX*CX)
+    source00=kappa*(pi2-W);source11=kappa*(grad2+W);source22=kappa*W
+    source01=kappa*em2[1:-1]*(ST[1:-1]*SX[1:-1]+CT[1:-1]*CX[1:-1])
+    d00=R00-source00;d11=R11-source11;d22=R22-source22;d01=R01-source01
+    residual2=d00[1:-1]**2+d11[1:-1]**2+2*d22[1:-1]**2+2*d01*d01
+    scale=kappa*(pi2+grad2+2*abs(W));weight=np.exp(a)*R*R
+    relative=math.sqrt(float(np.sum(weight[1:-1]*residual2)/np.sum(weight[1:-1]*scale[1:-1]**2)))
+    center=len(R)//2;ei=center-1
+    source_Ricci=kappa*(-pi2+grad2+4*W)
+    actualK=float(riemann[ei])
+    actual_hamiltonian=2*(2*C+D-kappa*(.5*(pi2+grad2)+W))
+    relative_actual_geometry=math.sqrt(float(np.sum(weight[1:-1]*actual_hamiltonian[1:-1]**2)/
+                                             np.sum(weight[1:-1]*abs(riemann))))
+    out.update(metric_Einstein_residual_over_source_RMS=relative,
+               center_Rproper_acc=float(HessNN[center]),
+               Hamiltonian_relative_actual_metric_Riemann_scale=relative_actual_geometry,
+               center_metric_Einstein_residual_over_source=math.sqrt(float(residual2[ei]))/float(scale[center]),
+               center_metric_Ricci_over_H2=float(Ricci[center]/H**2),
+               center_source_Ricci_over_H2=float(source_Ricci[center]/H**2),
+               center_metric_Kretschmann_over_H4=actualK/H**4,
+               sampled_metric_max_abs_Kretschmann_over_H4=float(np.max(abs(riemann))/H**4),
+               independent_temporal_metric_jet=independent,
+               temporal_metric_jet_role=('Supplied actual three-level or analytic temporal metric jet; no PDE-source substitution.' if independent else
+                                         'PDE-initialized temporal jet at the Cauchy slice; not an independent temporal-curvature check.'),
+               actual_metric_curvature_scope='Warped-metric tetrad Riemann; temporal-jet provenance is explicit. Source comparison is independent only when an actual or analytic temporal metric jet is supplied.',
+               center_NEC_source=float(pi2[center]+grad2[center]),
+               coordinate_scale_regular=bool(np.min(np.exp(a))>0 and np.all(np.isfinite(a))))
+    return out
+
+
+class ConformalRestart:
+    """Local Cauchy restart by a constant conformal coordinate rescaling.
+
+    T'=c(T-T0), X'=cX, a'=a-log(c). Fields and physical momenta are
+    retained. C2 interpolation represents the actual supplied profile;
+    it neither selects a state nor supplies an outer boundary condition.
+    Authentication and storage remain the producer's responsibility.
+    """
+    def __init__(self,profile,*,H,kappa,sstar,half_width=.8,coordinate_scale=None):
+        x=np.asarray(profile['x'],dtype=float)
+        y=np.asarray(profile['y'],dtype=float);yt=np.asarray(profile['yt'],dtype=float)
+        if (x.ndim!=1 or len(x)<33 or len(x)%2!=1 or np.any(~np.isfinite(x)) or
+                np.any(np.diff(x)<=0) or abs(x[len(x)//2])>1e-12 or
+                any(v.shape!=(4,len(x)) or np.any(~np.isfinite(v)) for v in (y,yt))):
+            raise ValueError('finite centered uniform reflection Cauchy profile required')
+        parity=np.array([1,1,1,-1])[:,None]
+        if max(np.max(abs(y-parity*y[:,::-1])),np.max(abs(yt-parity*yt[:,::-1])))>1e-9*(1+max(np.max(abs(y)),np.max(abs(yt)))):
+            raise ValueError('reflection-symmetric Cauchy profile required')
+        if np.min(y[0])<=0:raise ValueError('positive areal radius required')
+        c=math.exp(float(y[1,len(x)//2])) if coordinate_scale is None else float(coordinate_scale)
+        half_width=float(half_width)
+        if not math.isfinite(c) or c<=0 or not math.isfinite(half_width) or not 0<half_width<c*min(abs(x[0]),x[-1]):
+            raise ValueError('positive coordinate scale and patch strictly inside the trusted profile required')
+        if not all(math.isfinite(v) for v in (H,kappa,sstar)) or H<=0 or kappa<=0:
+            raise ValueError('finite positive H,kappa and finite sstar required')
+        self.H=float(H);self.kappa=float(kappa);self.sstar=float(sstar)
+        self.scale=c;self.half_width=half_width
+        self.initial_proper_time=float(profile['center_proper_time'])
+        if not math.isfinite(self.initial_proper_time):raise ValueError('finite initial proper time required')
+        self._field=CubicSpline(x,y.copy(),axis=1)
+        self._velocity=CubicSpline(x,yt.copy(),axis=1)
+        mask=abs(x)<=half_width/c
+        self.representation_gaps={}
+        for key,derivative in (('yx',1),('yxx',2)):
+            if key in profile:
+                reference=np.asarray(profile[key],dtype=float)
+                if reference.shape!=y.shape or np.any(~np.isfinite(reference)):
+                    raise ValueError('finite stored reference jets required')
+                self.representation_gaps[key]=np.max(abs(self._field(x[mask],derivative)-reference[:,mask]),axis=1).tolist()
+
+    def initial_grid(self,points):
+        points=_conformal_points(points);x=np.linspace(-self.half_width,self.half_width,points)
+        original=x/self.scale;y=self._field(original);y[1]-=math.log(self.scale)
+        return dict(x=x,y=y,yt=self._velocity(original)/self.scale,
+                    yx=self._field(original,1)/self.scale,yxx=self._field(original,2)/self.scale**2,
+                    step=float(x[1]-x[0]),half_width=self.half_width)
+
+    def evolve(self,points,*,endpoint=.3,sample_every=.01,budget_seconds=60.,
+               relative_geometry_limit=1e-3,relative_source_limit=.02,
+               diagnostic_continue_after_guard=False,radius_floor=.15):
+        result=_conformal_evolve(self.initial_grid(points),H=self.H,kappa=self.kappa,sstar=self.sstar,
+                                 proper_time=self.initial_proper_time,endpoint=endpoint,
+                                 sample_every=sample_every,budget_seconds=budget_seconds,
+                                 validity_mode='relative_metric_source',
+                                 relative_geometry_limit=relative_geometry_limit,relative_source_limit=relative_source_limit,
+                                 diagnostic_continue_after_guard=diagnostic_continue_after_guard,radius_floor=radius_floor)
+        result['coordinate_scale']=self.scale
+        result['representation_gaps_old_coordinates']=self.representation_gaps
+        return result
+
+
+def align_conformal_radius(result,radius):
+    """First monotone contraction event, with empirical interpolation change."""
+    trace=np.asarray(result['center_history']);columns=tuple(result['center_columns'])
+    index=columns.index('center_radius');r=trace[:,index];radius=float(radius)
+    if len(r)<4 or np.any(np.diff(r)>=0):raise ValueError('a strictly contracting stored radius history is required')
+    if not math.isfinite(radius) or not r[-1]<=radius<=r[0]:raise ValueError('radius outside the actual history')
+    ordered=trace[::-1];r=ordered[:,index]
+    keep=np.unique(np.r_[np.arange(0,len(r),2),len(r)-1])
+    values={};changes={}
+    for i,key in enumerate(columns):
+        full=float(PchipInterpolator(r,ordered[:,i])(radius))
+        coarse=float(PchipInterpolator(r[keep],ordered[keep,i])(radius))
+        values[key]=full;changes[key]=abs(full-coarse)
+    return dict(values=values,interpolation_indicator=changes,
+                admitted=bool(result['final_cut_admitted']),
+                meaning='Actual monotone stored history; full-vs-decimated PCHIP change is empirical, not a certified bound. Admission is conservatively inherited from the run.')

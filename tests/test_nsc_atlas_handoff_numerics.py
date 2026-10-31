@@ -13,6 +13,14 @@ from recursive_horizons.nsc_atlas_characteristic_handoff import (
 from recursive_horizons.nsc_atlas_horizon_response import solve_source
 
 
+# Numerical comparison budget matches solve_source's DOP853 tolerances.
+# The independent charts round-trip eta/Ht and reconstruct from dense output;
+# their agreement need not be sub-ULP in the reconstructed field. Quadratic
+# density comparisons receive twice this budget, not a physical error bar.
+FIELD_RTOL=2e-12
+FIELD_ATOL=2e-14
+
+
 @pytest.fixture(scope='module')
 def result():return calculation()
 
@@ -50,7 +58,7 @@ def test_parent_horizon_trace_fixes_second_leg_in_the_declared_sector():
     source=solve_source(endpoint_u=2.);domain=Diamond.inherited(source.parent)
     _,v=domain.axes(64);g,ratio=inherited_second_leg(source,domain,v)
     direct=inherited_reference(source,np.full_like(v,domain.u0),v)[0]
-    np.testing.assert_allclose(g,direct,atol=2e-16,rtol=2e-14)
+    np.testing.assert_allclose(g,direct,atol=FIELD_ATOL,rtol=FIELD_RTOL)
     np.testing.assert_allclose(ratio[0],[1,1],atol=2e-15)
     assert domain.eta_corner+domain.width<math.pi/2
 
@@ -69,8 +77,9 @@ def test_receiver_density_agrees_with_independent_embedding_gradient(result):
     grad=ambient-X*np.dot(X,ambient)
     rho=(pi*pi+np.dot(grad,grad)/float(a*a)+source.parent.mass_squared*field*field)/2
     record=receiver_record(source,domain,psi,du,dv,n)
-    assert record['field_over_epsilon']==pytest.approx(field,abs=2e-16)
-    assert record['density_over_epsilon_squared_vacuum']==pytest.approx(rho/source.parent.vacuum,rel=2e-13)
+    assert record['field_over_epsilon']==pytest.approx(field,rel=FIELD_RTOL,abs=FIELD_ATOL)
+    assert record['density_over_epsilon_squared_vacuum']==pytest.approx(
+        rho/source.parent.vacuum,rel=2*FIELD_RTOL,abs=2*FIELD_ATOL)
 
 
 def test_refinement_contracts_field_phase_normal_jet_and_noether_errors(result):

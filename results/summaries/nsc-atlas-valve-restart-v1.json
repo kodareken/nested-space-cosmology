@@ -1,0 +1,634 @@
+{
+  "schema": "nsc-atlas-valve-restart-v1",
+  "historical_input": {
+    "git_commit": "226d30e7",
+    "archived_summary_sha256": "3b816958d6e7ea2badb36fe903ba4326ae8bb1747b6750aa1b02bd4b1fa4d8bf",
+    "source_sha256": {
+      "src/recursive_horizons/nsc_atlas_valve_spherical.py": "1699002cc26f9565d23747b1b83cd130b4f46bb1418e9f8e697bb8db5a991a97",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "scripts/check_nsc_atlas_valve_conformal.py": "93049d724e7307b52aff8edb89e3bbe2c9058e09c20c40654d70dfa233dff129"
+    },
+    "parent_points": 8001,
+    "raw_cache": {
+      "path": ".build\\valve-conformal-v1\\points-8001.npz",
+      "sha256": "7f3b39c7f109cad79e1202913b029b808ed84b0a00b87062240b23d72c35dd17"
+    },
+    "rule": "Authenticate archived input with historical Git bytes; current analysis sources have separate pins."
+  },
+  "current_analysis": {
+    "source_sha256_before": {
+      "src/recursive_horizons/nsc_atlas_valve_spherical.py": "e20d2b4833e146761b21d490bfd71260078c3448219fafd216195c12fb1bca0a",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "scripts/check_nsc_atlas_valve_restart.py": "8dcbe222ebbad28f6459a4b0409aaed1cd3fcbe4dbd5ede3d22ae2aefc45de70"
+    },
+    "source_sha256_after": {
+      "src/recursive_horizons/nsc_atlas_valve_spherical.py": "e20d2b4833e146761b21d490bfd71260078c3448219fafd216195c12fb1bca0a",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "scripts/check_nsc_atlas_valve_restart.py": "8dcbe222ebbad28f6459a4b0409aaed1cd3fcbe4dbd5ede3d22ae2aefc45de70"
+    },
+    "source_unchanged": true,
+    "git_parent_commit": "226d30e71b33c65224ae01609d72d1bfffa03490",
+    "role": "New working-tree analysis pins; not authenticated as the historical226d30e7 implementation."
+  },
+  "restart": {
+    "coordinate_scale": 4.145809724631654,
+    "half_width": 0.8,
+    "initial_proper_time": 3.9455040983085437,
+    "rule": "T'=c(T-T0),X'=cX,a'=a-log(c); coordinate derivatives scale by1/c or1/c\u00b2; fields and physical momenta retained.",
+    "representation": "C2 cubic interpolation of the actual Cauchy values/velocities; no incoming state or constraint-source replacement.",
+    "stored_jet_representation_gaps": {
+      "yx": [
+        5.634695544876056e-08,
+        8.372061224837246e-08,
+        5.0490337466513324e-09,
+        5.12120933264526e-08
+      ],
+      "yxx": [
+        8.813768541782174e-06,
+        8.572457498523534e-06,
+        3.8896635261298496e-06,
+        1.2691043706977712e-06
+      ]
+    }
+  },
+  "levels": [
+    {
+      "points": 4001,
+      "status": "diagnostic_radius_target",
+      "final_cut_admitted": false,
+      "first_validity_failure": {
+        "conformal_time": 0.235999999999974,
+        "proper_time": 4.2634553424517705,
+        "radius": 0.17525913290800751,
+        "reason": "direct metric Einstein/source residual limit exceeded"
+      },
+      "validity_limits": {
+        "relative_geometry": 0.001,
+        "relative_source": 0.02,
+        "radius_floor": 0.15
+      },
+      "initial": {
+        "conformal_time": 0.0,
+        "center_proper_time": 3.9455040983085437,
+        "remaining_points": 4001,
+        "remaining_half_width": 0.7999999999999119,
+        "center_radius": 0.654972516115722,
+        "center_a": 0.0,
+        "center_lapse": 1.0,
+        "center_S": 0.002561962869662261,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.14713520694087345,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -1.0531430116500329,
+        "center_Rproper_acc": -1.541178228753406,
+        "center_Rll_over_R_H2": 0.642385191787232,
+        "center_K_rad": -1.427382129081482,
+        "center_spacetime_Hess_ss_over_R_H2": 31.80019132407592,
+        "center_theta_plus_over_H": -11.84882923159729,
+        "center_theta_minus_over_H": -11.84882923159729,
+        "center_theta_product_over_H2": 140.39475415955442,
+        "center_R_gradient_norm_squared": -1.1091102029873012,
+        "center_energy_flux": 2.9113581528158075e-22,
+        "Hamiltonian_RMS_over_H2": 0.005748405673648491,
+        "Hamiltonian_relative_RMS_term_budget": 2.2060652786040435e-05,
+        "Hamiltonian_relative_RMS_Riemann_scale": 2.5633576144431446e-05,
+        "central_half_Hamiltonian_RMS_over_H2": 0.0059152238068626226,
+        "momentum_RMS_over_H2": 0.00010297078672814845,
+        "max_abs_Ricci_over_H2": 11.761785935980999,
+        "max_abs_source_inferred_Kretschmann_over_H4": 51813.740375117915,
+        "min_radius": 0.654972516115722,
+        "min_lapse": 0.9869079142514342,
+        "maximum_metric_log": 0.01317854253200923,
+        "center_rho": 0.2318166322447324,
+        "center_radial_pressure": -0.21016367620203932,
+        "center_tangential_pressure": -0.21016786312319874,
+        "patch_max_theta_plus_over_H": -11.249230393867942,
+        "patch_max_theta_minus_over_H": -11.249230393867945,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames.",
+        "metric_Einstein_residual_over_source_RMS": 0.0006443149346994081,
+        "Hamiltonian_relative_actual_metric_Riemann_scale": 2.5634055406254097e-05,
+        "center_metric_Einstein_residual_over_source": 0.0006650631933526773,
+        "center_metric_Ricci_over_H2": 11.706546750806586,
+        "center_source_Ricci_over_H2": 11.706546750806588,
+        "center_metric_Kretschmann_over_H4": 51813.73692980159,
+        "sampled_metric_max_abs_Kretschmann_over_H4": 51813.73692980159,
+        "independent_temporal_metric_jet": false,
+        "temporal_metric_jet_role": "PDE-initialized temporal jet at the Cauchy slice; not an independent temporal-curvature check.",
+        "actual_metric_curvature_scope": "Warped-metric tetrad Riemann; temporal-jet provenance is explicit. Source comparison is independent only when an actual or analytic temporal metric jet is supplied.",
+        "center_NEC_source": 0.02165295604269306,
+        "coordinate_scale_regular": true
+      },
+      "last_actual_cut": {
+        "conformal_time": 0.23999999999997357,
+        "center_proper_time": 4.273719634248921,
+        "remaining_points": 2799,
+        "remaining_half_width": 0.5595999999999384,
+        "center_radius": 0.1472228676357091,
+        "center_a": 0.9940523498682279,
+        "center_lapse": 2.7021624229938577,
+        "center_S": -0.09188878438092696,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.9869266711764411,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -2.8754556419014397,
+        "center_Rproper_acc": -31.494430825211797,
+        "center_Rll_over_R_H2": 2.8717359400354296,
+        "center_K_rad": -10.921276940601528,
+        "center_spacetime_Hess_ss_over_R_H2": 2898.662386820058,
+        "center_theta_plus_over_H": -143.92709716040306,
+        "center_theta_minus_over_H": -143.92709716040306,
+        "center_theta_product_over_H2": 20715.0092970201,
+        "center_R_gradient_norm_squared": -8.268245148542821,
+        "center_energy_flux": -0.0,
+        "Hamiltonian_RMS_over_H2": 2.726467619290503,
+        "Hamiltonian_relative_RMS_term_budget": 0.00014289848152218912,
+        "Hamiltonian_relative_RMS_Riemann_scale": 0.00016504145480038683,
+        "central_half_Hamiltonian_RMS_over_H2": 3.5102816649691415,
+        "momentum_RMS_over_H2": 0.04384933636336432,
+        "max_abs_Ricci_over_H2": 4.976085779097622,
+        "max_abs_source_inferred_Kretschmann_over_H4": 403936540.76011467,
+        "min_radius": 0.1472228676357091,
+        "min_lapse": 2.419740558150801,
+        "maximum_metric_log": 0.9940523498682279,
+        "center_rho": 0.7190694213625027,
+        "center_radial_pressure": 0.25496465594347517,
+        "center_tangential_pressure": 0.25495483291690846,
+        "patch_max_theta_plus_over_H": -104.27778237165991,
+        "patch_max_theta_minus_over_H": -104.27778237165991,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames.",
+        "metric_Einstein_residual_over_source_RMS": 0.08914509091417885,
+        "Hamiltonian_relative_actual_metric_Riemann_scale": 0.00016504485530454297,
+        "center_metric_Einstein_residual_over_source": 0.11535124482002919,
+        "center_metric_Ricci_over_H2": -0.9324151620803343,
+        "center_source_Ricci_over_H2": -0.6218337437185304,
+        "center_metric_Kretschmann_over_H4": 404051774.52913445,
+        "sampled_metric_max_abs_Kretschmann_over_H4": 404051774.52913445,
+        "independent_temporal_metric_jet": true,
+        "temporal_metric_jet_role": "Supplied actual three-level or analytic temporal metric jet; no PDE-source substitution.",
+        "actual_metric_curvature_scope": "Warped-metric tetrad Riemann; temporal-jet provenance is explicit. Source comparison is independent only when an actual or analytic temporal metric jet is supplied.",
+        "center_NEC_source": 0.9740340773059779,
+        "coordinate_scale_regular": true
+      },
+      "events": [],
+      "radius_0p15": {
+        "values": {
+          "conformal_time": 0.23963869963510281,
+          "center_proper_time": 4.272748419739946,
+          "center_radius": 0.15,
+          "center_S": -0.09094363150741802,
+          "center_Pi_S": -0.9609304798997838,
+          "center_theta_plus_over_H": -139.78524321908532,
+          "center_Rproper": -2.8453860261750883,
+          "center_Rproper_acc": -30.336895790529695
+        },
+        "interpolation_indicator": {
+          "conformal_time": 4.529498934258136e-08,
+          "center_proper_time": 9.793744304431584e-08,
+          "center_radius": 0.0,
+          "center_S": 3.3462433825237614e-07,
+          "center_Pi_S": 3.5888414829154947e-05,
+          "center_theta_plus_over_H": 0.005751201847658649,
+          "center_Rproper": 1.9558763710403326e-05,
+          "center_Rproper_acc": 0.0020969678491660204
+        },
+        "admitted": false,
+        "meaning": "Actual monotone stored history; full-vs-decimated PCHIP change is empirical, not a certified bound. Admission is conservatively inherited from the run."
+      },
+      "raw_cache": {
+        "path": ".build\\valve-restart-v1\\points-4001.npz",
+        "sha256": "7c0302a89a6ac60f84699303d17fec56ea2fe9cb0f5adcf859dfcdaf85129bad"
+      },
+      "elapsed_seconds": 0.7653059999865945
+    },
+    {
+      "points": 8001,
+      "status": "diagnostic_radius_target",
+      "final_cut_admitted": false,
+      "first_validity_failure": {
+        "conformal_time": 0.2397999999999736,
+        "proper_time": 4.273180178004904,
+        "radius": 0.14876717256562574,
+        "reason": "direct metric Einstein/source residual limit exceeded"
+      },
+      "validity_limits": {
+        "relative_geometry": 0.001,
+        "relative_source": 0.02,
+        "radius_floor": 0.15
+      },
+      "initial": {
+        "conformal_time": 0.0,
+        "center_proper_time": 3.9455040983085437,
+        "remaining_points": 8001,
+        "remaining_half_width": 0.7999999999999119,
+        "center_radius": 0.654972516115722,
+        "center_a": 0.0,
+        "center_lapse": 1.0,
+        "center_S": 0.002561962869662261,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.14713520694087345,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -1.0531430116500329,
+        "center_Rproper_acc": -1.541178228753406,
+        "center_Rll_over_R_H2": 0.642385191787232,
+        "center_K_rad": -1.427382129081482,
+        "center_spacetime_Hess_ss_over_R_H2": 31.80019132407592,
+        "center_theta_plus_over_H": -11.84882923159729,
+        "center_theta_minus_over_H": -11.84882923159729,
+        "center_theta_product_over_H2": 140.39475415955442,
+        "center_R_gradient_norm_squared": -1.1091102029873012,
+        "center_energy_flux": 2.9113581528158075e-22,
+        "Hamiltonian_RMS_over_H2": 0.005748454065631938,
+        "Hamiltonian_relative_RMS_term_budget": 2.2060759484165535e-05,
+        "Hamiltonian_relative_RMS_Riemann_scale": 2.5633698258450565e-05,
+        "central_half_Hamiltonian_RMS_over_H2": 0.005915257123073416,
+        "momentum_RMS_over_H2": 0.00010299928893234784,
+        "max_abs_Ricci_over_H2": 11.761785935980999,
+        "max_abs_source_inferred_Kretschmann_over_H4": 51813.740375117915,
+        "min_radius": 0.654972516115722,
+        "min_lapse": 0.9869079142514342,
+        "maximum_metric_log": 0.01317854253200923,
+        "center_rho": 0.2318166322447324,
+        "center_radial_pressure": -0.21016367620203932,
+        "center_tangential_pressure": -0.21016786312319874,
+        "patch_max_theta_plus_over_H": -11.249230393867942,
+        "patch_max_theta_minus_over_H": -11.249230393867945,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames.",
+        "metric_Einstein_residual_over_source_RMS": 0.0006443093954242879,
+        "Hamiltonian_relative_actual_metric_Riemann_scale": 2.563393832910098e-05,
+        "center_metric_Einstein_residual_over_source": 0.0006650631933526773,
+        "center_metric_Ricci_over_H2": 11.706546750806586,
+        "center_source_Ricci_over_H2": 11.706546750806588,
+        "center_metric_Kretschmann_over_H4": 51813.73692980159,
+        "sampled_metric_max_abs_Kretschmann_over_H4": 51813.73692980159,
+        "independent_temporal_metric_jet": false,
+        "temporal_metric_jet_role": "PDE-initialized temporal jet at the Cauchy slice; not an independent temporal-curvature check.",
+        "actual_metric_curvature_scope": "Warped-metric tetrad Riemann; temporal-jet provenance is explicit. Source comparison is independent only when an actual or analytic temporal metric jet is supplied.",
+        "center_NEC_source": 0.02165295604269306,
+        "coordinate_scale_regular": true
+      },
+      "last_actual_cut": {
+        "conformal_time": 0.2397999999999736,
+        "center_proper_time": 4.273180178004904,
+        "remaining_points": 5601,
+        "remaining_half_width": 0.5599999999999383,
+        "center_radius": 0.14876717256562574,
+        "center_a": 0.9882224839081417,
+        "center_lapse": 2.686455008812789,
+        "center_S": -0.09136117436434714,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.9718741955904535,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -2.858074476400908,
+        "center_Rproper_acc": -30.83277956452692,
+        "center_Rll_over_R_H2": 2.842336457995073,
+        "center_K_rad": -10.75348986301523,
+        "center_spacetime_Hess_ss_over_R_H2": 2807.4893170121236,
+        "center_theta_plus_over_H": -141.57207556519262,
+        "center_theta_minus_over_H": -141.57207556519262,
+        "center_theta_product_over_H2": 20042.65257983661,
+        "center_R_gradient_norm_squared": -8.168589712654324,
+        "center_energy_flux": -0.0,
+        "Hamiltonian_RMS_over_H2": 0.6468289357004389,
+        "Hamiltonian_relative_RMS_term_budget": 3.487569593247261e-05,
+        "Hamiltonian_relative_RMS_Riemann_scale": 4.027546794170168e-05,
+        "central_half_Hamiltonian_RMS_over_H2": 0.8283838603105077,
+        "momentum_RMS_over_H2": 0.010270983257626095,
+        "max_abs_Ricci_over_H2": 5.119945844966928,
+        "max_abs_source_inferred_Kretschmann_over_H4": 379132116.8934688,
+        "min_radius": 0.14876717256562574,
+        "min_lapse": 2.4098654963518764,
+        "maximum_metric_log": 0.9882224839081417,
+        "center_rho": 0.7041887881335217,
+        "center_radial_pressure": 0.24036044817437607,
+        "center_tangential_pressure": 0.24035066392106952,
+        "patch_max_theta_plus_over_H": -103.10118206053288,
+        "patch_max_theta_minus_over_H": -103.10118206053288,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames.",
+        "metric_Einstein_residual_over_source_RMS": 0.02146484902748815,
+        "Hamiltonian_relative_actual_metric_Riemann_scale": 4.0277034324066105e-05,
+        "center_metric_Einstein_residual_over_source": 0.027687767959849015,
+        "center_metric_Ricci_over_H2": -0.301880120263929,
+        "center_source_Ricci_over_H2": -0.2290626794946923,
+        "center_metric_Kretschmann_over_H4": 379158033.5083321,
+        "sampled_metric_max_abs_Kretschmann_over_H4": 379158033.5083321,
+        "independent_temporal_metric_jet": true,
+        "temporal_metric_jet_role": "Supplied actual three-level or analytic temporal metric jet; no PDE-source substitution.",
+        "actual_metric_curvature_scope": "Warped-metric tetrad Riemann; temporal-jet provenance is explicit. Source comparison is independent only when an actual or analytic temporal metric jet is supplied.",
+        "center_NEC_source": 0.9445492363078978,
+        "coordinate_scale_regular": true
+      },
+      "events": [],
+      "radius_0p15": {
+        "values": {
+          "conformal_time": 0.2396386779667914,
+          "center_proper_time": 4.272747792404826,
+          "center_radius": 0.15,
+          "center_S": -0.09094348760220619,
+          "center_Pi_S": -0.9605042692068869,
+          "center_theta_plus_over_H": -139.75872990843047,
+          "center_Rproper": -2.8448473217245818,
+          "center_Rproper_acc": -30.327435093798453
+        },
+        "interpolation_indicator": {
+          "conformal_time": 4.151161941967629e-09,
+          "center_proper_time": 1.0852758691726194e-08,
+          "center_radius": 0.0,
+          "center_S": 4.226945628238443e-08,
+          "center_Pi_S": 4.71106509680741e-06,
+          "center_theta_plus_over_H": 0.0007598853846673137,
+          "center_Rproper": 2.4864865095786115e-06,
+          "center_Rproper_acc": 0.00026944027016995165
+        },
+        "admitted": false,
+        "meaning": "Actual monotone stored history; full-vs-decimated PCHIP change is empirical, not a certified bound. Admission is conservatively inherited from the run."
+      },
+      "raw_cache": {
+        "path": ".build\\valve-restart-v1\\points-8001.npz",
+        "sha256": "1e509f7fdb13e2a31eba8539ede5f7840a4244180ffc5040c9924879c4bbe6b9"
+      },
+      "elapsed_seconds": 2.2521080000151414
+    },
+    {
+      "points": 16001,
+      "status": "controlled_radius_target",
+      "final_cut_admitted": true,
+      "first_validity_failure": null,
+      "validity_limits": {
+        "relative_geometry": 0.001,
+        "relative_source": 0.02,
+        "radius_floor": 0.15
+      },
+      "initial": {
+        "conformal_time": 0.0,
+        "center_proper_time": 3.9455040983085437,
+        "remaining_points": 16001,
+        "remaining_half_width": 0.7999999999999119,
+        "center_radius": 0.654972516115722,
+        "center_a": 0.0,
+        "center_lapse": 1.0,
+        "center_S": 0.002561962869662261,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.14713520694087345,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -1.0531430116500329,
+        "center_Rproper_acc": -1.541178228753406,
+        "center_Rll_over_R_H2": 0.642385191787232,
+        "center_K_rad": -1.427382129081482,
+        "center_spacetime_Hess_ss_over_R_H2": 31.80019132407592,
+        "center_theta_plus_over_H": -11.84882923159729,
+        "center_theta_minus_over_H": -11.84882923159729,
+        "center_theta_product_over_H2": 140.39475415955442,
+        "center_R_gradient_norm_squared": -1.1091102029873012,
+        "center_energy_flux": 2.9113581528158075e-22,
+        "Hamiltonian_RMS_over_H2": 0.005748478071616974,
+        "Hamiltonian_relative_RMS_term_budget": 2.2060812103492285e-05,
+        "Hamiltonian_relative_RMS_Riemann_scale": 2.563375846752984e-05,
+        "central_half_Hamiltonian_RMS_over_H2": 0.005915273694668335,
+        "momentum_RMS_over_H2": 0.00010300907371600246,
+        "max_abs_Ricci_over_H2": 11.761785935980999,
+        "max_abs_source_inferred_Kretschmann_over_H4": 51813.740375117915,
+        "min_radius": 0.654972516115722,
+        "min_lapse": 0.9869079142514342,
+        "maximum_metric_log": 0.01317854253200923,
+        "center_rho": 0.2318166322447324,
+        "center_radial_pressure": -0.21016367620203932,
+        "center_tangential_pressure": -0.21016786312319874,
+        "patch_max_theta_plus_over_H": -11.249230393867942,
+        "patch_max_theta_minus_over_H": -11.249230393867945,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames.",
+        "metric_Einstein_residual_over_source_RMS": 0.0006443065685511095,
+        "Hamiltonian_relative_actual_metric_Riemann_scale": 2.5633878942065306e-05,
+        "center_metric_Einstein_residual_over_source": 0.0006650631933526774,
+        "center_metric_Ricci_over_H2": 11.706546750806586,
+        "center_source_Ricci_over_H2": 11.706546750806588,
+        "center_metric_Kretschmann_over_H4": 51813.73692980159,
+        "sampled_metric_max_abs_Kretschmann_over_H4": 51813.73692980159,
+        "independent_temporal_metric_jet": false,
+        "temporal_metric_jet_role": "PDE-initialized temporal jet at the Cauchy slice; not an independent temporal-curvature check.",
+        "actual_metric_curvature_scope": "Warped-metric tetrad Riemann; temporal-jet provenance is explicit. Source comparison is independent only when an actual or analytic temporal metric jet is supplied.",
+        "center_NEC_source": 0.02165295604269306,
+        "coordinate_scale_regular": true
+      },
+      "last_actual_cut": {
+        "conformal_time": 0.2396999999999736,
+        "center_proper_time": 4.272911773570098,
+        "remaining_points": 11205,
+        "remaining_half_width": 0.5601999999999383,
+        "center_radius": 0.14953267378463386,
+        "center_a": 0.9853506423302199,
+        "center_lapse": 2.6787510032578803,
+        "center_S": -0.09110143338510131,
+        "center_chi": 0.0,
+        "center_Pi_S": -0.964678351372246,
+        "center_Pi_chi": 0.0,
+        "center_Rproper": -2.8497062777019804,
+        "center_Rproper_acc": -30.51515138496377,
+        "center_Rll_over_R_H2": 2.8236863160229775,
+        "center_K_rad": -10.673085519087765,
+        "center_spacetime_Hess_ss_over_R_H2": 2764.1410981542595,
+        "center_theta_plus_over_H": -140.4349379821791,
+        "center_theta_minus_over_H": -140.4349379821791,
+        "center_theta_product_over_H2": 19721.97180605849,
+        "center_R_gradient_norm_squared": -8.120825869174077,
+        "center_energy_flux": -0.0,
+        "Hamiltonian_RMS_over_H2": 0.167326113335124,
+        "Hamiltonian_relative_RMS_term_budget": 9.147730319306348e-06,
+        "Hamiltonian_relative_RMS_Riemann_scale": 1.0563778189430132e-05,
+        "central_half_Hamiltonian_RMS_over_H2": 0.21192453525603386,
+        "momentum_RMS_over_H2": 0.0024758468872965495,
+        "max_abs_Ricci_over_H2": 5.189049813087562,
+        "max_abs_source_inferred_Kretschmann_over_H4": 367565869.40824926,
+        "min_radius": 0.14953267378463386,
+        "min_lapse": 2.404993001861663,
+        "maximum_metric_log": 0.9853506423302199,
+        "center_rho": 0.6971535401422637,
+        "center_radial_pressure": 0.23346054467888805,
+        "center_tangential_pressure": 0.23345078146401071,
+        "patch_max_theta_plus_over_H": -102.52671265766443,
+        "patch_max_theta_minus_over_H": -102.52671265766443,
+        "full_current_patch_future_trapped": true,
+        "scope": "Causal shrinking patch; source-inferred curvature conditional on constraints; Rll belongs to conformal slicing; center proper-time invariants can be compared across frames.",
+        "metric_Einstein_residual_over_source_RMS": 0.005570023953877889,
+        "Hamiltonian_relative_actual_metric_Riemann_scale": 1.0563984612070175e-05,
+        "center_metric_Einstein_residual_over_source": 0.006671270609398774,
+        "center_metric_Ricci_over_H2": -0.06119788660206184,
+        "center_source_Ricci_over_H2": -0.043558560338446024,
+        "center_metric_Kretschmann_over_H4": 367572022.4225496,
+        "sampled_metric_max_abs_Kretschmann_over_H4": 367572022.4225496,
+        "independent_temporal_metric_jet": true,
+        "temporal_metric_jet_role": "Supplied actual three-level or analytic temporal metric jet; no PDE-source substitution.",
+        "actual_metric_curvature_scope": "Warped-metric tetrad Riemann; temporal-jet provenance is explicit. Source comparison is independent only when an actual or analytic temporal metric jet is supplied.",
+        "center_NEC_source": 0.9306140848211518,
+        "coordinate_scale_regular": true
+      },
+      "events": [],
+      "radius_0p15": {
+        "values": {
+          "conformal_time": 0.23963867234847558,
+          "center_proper_time": 4.272747635360078,
+          "center_radius": 0.15,
+          "center_S": -0.09094345159798488,
+          "center_Pi_S": -0.9603978015646759,
+          "center_theta_plus_over_H": -139.75210181760374,
+          "center_Rproper": -2.844712737519328,
+          "center_Rproper_acc": -30.32503629344474
+        },
+        "interpolation_indicator": {
+          "conformal_time": 2.0182130966439615e-10,
+          "center_proper_time": 9.705134473847465e-10,
+          "center_radius": 0.0,
+          "center_S": 4.786069499052026e-09,
+          "center_Pi_S": 5.677449671503965e-07,
+          "center_theta_plus_over_H": 9.17698000080236e-05,
+          "center_Rproper": 2.8906564164543624e-07,
+          "center_Rproper_acc": 0.00010106537403231641
+        },
+        "admitted": true,
+        "meaning": "Actual monotone stored history; full-vs-decimated PCHIP change is empirical, not a certified bound. Admission is conservatively inherited from the run."
+      },
+      "raw_cache": {
+        "path": ".build\\valve-restart-v1\\points-16001.npz",
+        "sha256": "61813c4cb1f7485dc4112701c48103cadc62004c37f113533390d9200dd069a4"
+      },
+      "elapsed_seconds": 11.878211799979908
+    }
+  ],
+  "radius_0p15_comparison": {
+    "center_proper_time": {
+      "values": [
+        4.272748419739946,
+        4.272747792404826,
+        4.272747635360078
+      ],
+      "adjacent_spreads": [
+        6.273351198515797e-07,
+        1.5704474787270328e-07
+      ],
+      "spread_ratio": 3.9946265529368903,
+      "finest_spread_indicator": 1.5704474787270328e-07,
+      "meaning": "Conditional empirical successive-grid difference, not a continuum or propagated-parent-error bound."
+    },
+    "center_Rproper": {
+      "values": [
+        -2.8453860261750883,
+        -2.8448473217245818,
+        -2.844712737519328
+      ],
+      "adjacent_spreads": [
+        0.0005387044505065219,
+        0.00013458420525358505
+      ],
+      "spread_ratio": 4.002731594628724,
+      "finest_spread_indicator": 0.00013458420525358505,
+      "meaning": "Conditional empirical successive-grid difference, not a continuum or propagated-parent-error bound."
+    },
+    "center_Rproper_acc": {
+      "values": [
+        -30.336895790529695,
+        -30.327435093798453,
+        -30.32503629344474
+      ],
+      "adjacent_spreads": [
+        0.00946069673124228,
+        0.002398800353713426
+      ],
+      "spread_ratio": 3.94392835426958,
+      "finest_spread_indicator": 0.002398800353713426,
+      "meaning": "Conditional empirical successive-grid difference, not a continuum or propagated-parent-error bound."
+    },
+    "center_S": {
+      "values": [
+        -0.09094363150741802,
+        -0.09094348760220619,
+        -0.09094345159798488
+      ],
+      "adjacent_spreads": [
+        1.4390521183016425e-07,
+        3.600422131266878e-08
+      ],
+      "spread_ratio": 3.996898324239786,
+      "finest_spread_indicator": 3.600422131266878e-08,
+      "meaning": "Conditional empirical successive-grid difference, not a continuum or propagated-parent-error bound."
+    },
+    "center_Pi_S": {
+      "values": [
+        -0.9609304798997838,
+        -0.9605042692068869,
+        -0.9603978015646759
+      ],
+      "adjacent_spreads": [
+        0.00042621069289683344,
+        0.00010646764221100558
+      ],
+      "spread_ratio": 4.003194623697377,
+      "finest_spread_indicator": 0.00010646764221100558,
+      "meaning": "Conditional empirical successive-grid difference, not a continuum or propagated-parent-error bound."
+    },
+    "center_theta_plus_over_H": {
+      "values": [
+        -139.78524321908532,
+        -139.75872990843047,
+        -139.75210181760374
+      ],
+      "adjacent_spreads": [
+        0.026513310654848965,
+        0.00662809082672311
+      ],
+      "spread_ratio": 4.0001429292357775,
+      "finest_spread_indicator": 0.00662809082672311,
+      "meaning": "Conditional empirical successive-grid difference, not a continuum or propagated-parent-error bound."
+    }
+  },
+  "direct_de_sitter_control": {
+    "result": {
+      "center_metric_Ricci_over_H2": 12.0,
+      "center_metric_Kretschmann_over_H4": 24.0,
+      "center_metric_Einstein_residual_over_source": 0.0,
+      "metric_Einstein_residual_over_source_RMS": 1.0099867331743387e-10
+    },
+    "exact_Ricci_over_H2": 12.0,
+    "exact_Kretschmann_over_H4": 24.0
+  },
+  "invariant_relations": {
+    "null_product": "theta_plus*theta_minus=-4 grad(R)^2/R\u00b2",
+    "Hessian": "Hess_ss(R)=R_ll+K_rad R_proper",
+    "canonical_NEC": "rho+p_r=sum(Pi\u00b2+phi_l\u00b2)>=0",
+    "turning_point": "At R_proper=0 and strict R_ll>0, R_proper_proper=-R_ll-kappa*R*(rho+p_r)/2<0."
+  },
+  "numerical": {
+    "endpoint_radius": 0.15,
+    "new_points": [
+      4001,
+      8001,
+      16001
+    ],
+    "BLAS_threads": 1,
+    "temporal_metric_jet": "Actual three-time-level differences at evolved cuts. Initial Cauchy temporal jets are PDE-initialized and explicitly not independent.",
+    "elapsed_seconds": 15.299597500008531,
+    "full_arrays_committed": false,
+    "scope": "Existing characteristic engine and equations; new bounded domain only."
+  },
+  "verdict": {
+    "finest_cut_admitted": true,
+    "coarse_radius_events": "Diagnostic refinement only: the4k/8k cuts fail the declared source residual guard and are not admitted physical cuts.",
+    "finite_errors": "Successive new-grid differences are conditional on the trusted numerical parent profile. Its prior finite uncertainty is retained; full propagation of that input uncertainty is not certified.",
+    "bounce_observed": false,
+    "neck_type_change_observed": false,
+    "regular_child_proved": false,
+    "physical_singularity_proved": false,
+    "outcome": "The same branch continues regular angular contraction to controlledR\u2248.15; actual metric curvature grows strongly but remains finite at the stop.",
+    "receiver_scope": "The local causal boundary is not the whole receiving-band marginal boundary. Zero center flux still permits symmetric feeding; no new late whole-band influx is inferred."
+  },
+  "reproduction": "python scripts/run_python.py scripts/check_nsc_atlas_valve_restart.py --output results/summaries/nsc-atlas-valve-restart-v1.json"
+}

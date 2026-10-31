@@ -1,0 +1,318 @@
+{
+  "schema": "nsc-atlas-valve-source-gate-v1",
+  "producer_parent_commit": "226d30e71b33c65224ae01609d72d1bfffa03490",
+  "source_sha256": {
+    "src/recursive_horizons/nsc_atlas_valve_source_gate.py": "47dfde766d37929bf3e1618b8d7261209ed4144d78f3ca0665c295a0da3d457e",
+    "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
+    "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+    "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "scripts/check_nsc_atlas_valve_source_gate.py": "358f0be8152e2791c1e1aeddcb434bd974664a6b67929d23b4d31dace4be0e43"
+  },
+  "input_sha256": {
+    "results/summaries/nsc-atlas-valve-conformal-v1.json": "3b816958d6e7ea2badb36fe903ba4326ae8bb1747b6750aa1b02bd4b1fa4d8bf",
+    "results/summaries/nsc-atlas-valve-restart-v1.json": "ccc1e49ca23ad76228aa3f5cf704a2af6be78be41a3ec6f0337e72be598a1132"
+  },
+  "actual_receiver_gates": [
+    {
+      "name": "old_frame_endpoint",
+      "proper_time": 3.9455040983085437,
+      "gate": {
+        "radius": 0.654972516115722,
+        "radius_rate": -1.0531430116500329,
+        "density": 0.23181663226998822,
+        "radial_pressure": -0.2101636761767835,
+        "pressure_capacity": 0.09015790462095093,
+        "required_for_positive_acceleration": 2.109110202987301,
+        "capacity_over_required": 0.04274689131618305,
+        "positive_acceleration_supported": false,
+        "acceleration_from_radial_Einstein_equation": -1.541249631617853,
+        "pressure_for_positive_acceleration_must_be_less_than": -4.916466898663578,
+        "pressure_at_turning_point_must_be_less_than": -2.331062118849927,
+        "extra_pressure_at_present_point_must_be_less_than": -4.7063032224867944,
+        "classical_radial_NEC": 0.021652956093204723,
+        "extra_total_NEC_at_fixed_geometry_must_be_less_than": -4.706522617561101,
+        "null_source_includes_free_and_interaction_stress": true,
+        "assumptions": "Reflection sphere; actual state/constraints retained. A later geometry change can alter the gate. Values are in retained action units.",
+        "actual_acceleration": -1.5411777827459328,
+        "radial_equation_residual": 7.18488719202437e-05
+      }
+    },
+    {
+      "name": "new_controlled_cut",
+      "proper_time": 4.272911773570098,
+      "gate": {
+        "radius": 0.14953267378463386,
+        "radius_rate": -2.8497062777019804,
+        "density": 0.6971535401422637,
+        "radial_pressure": 0.23346054467888805,
+        "pressure_capacity": -0.005220182571773885,
+        "required_for_positive_acceleration": 9.120825869174077,
+        "capacity_over_required": -0.0005723366114703154,
+        "positive_acceleration_supported": false,
+        "acceleration_from_radial_Einstein_equation": -30.515223933231283,
+        "pressure_for_positive_acceleration_must_be_less_than": -407.90775917538286,
+        "pressure_at_turning_point_must_be_less_than": -44.72267808050154,
+        "extra_pressure_at_present_point_must_be_less_than": -408.14121972006177,
+        "classical_radial_NEC": 0.9306140848211517,
+        "extra_total_NEC_at_fixed_geometry_must_be_less_than": -408.1494535651443,
+        "null_source_includes_free_and_interaction_stress": true,
+        "assumptions": "Reflection sphere; actual state/constraints retained. A later geometry change can alter the gate. Values are in retained action units.",
+        "actual_acceleration": -30.51515138496377,
+        "radial_equation_residual": 7.254826751434962e-05
+      }
+    }
+  ],
+  "geometric_spinor_candidate": {
+    "candidate": "Added complex massless bulk Dirac probe; round internal sphere",
+    "existing_scalar_field_turned_into_fermions": false,
+    "added_field_postulate": true,
+    "round_shape_already_declared": true,
+    "round_shape_selected_by_inheritance": false,
+    "bulk_Dirac_mass_postulated_zero": true,
+    "fermion_statistics_imported": true,
+    "d": 12,
+    "s_star": -0.035646782552940987,
+    "internal_scalar_curvature": 15.0,
+    "internal_radius_squared": 8.8,
+    "internal_radius_squared_exact": "44/5",
+    "spinor_canonical_factor": "Psi16=exp(3s)*sum(psi_n tensor eta_n)",
+    "graded_operator": "D16=exp(6s)(D4-3 slash(ds)) tensor1 + exp(-s)Gamma4,* tensorD_gamma",
+    "mass_law": "m_n=abs(lambda_n)*exp(-7s)",
+    "modes": [
+      {
+        "n": 0,
+        "internal_absolute_eigenvalue": 2.0225995873897262,
+        "mass_squared": 6.738397740575143,
+        "multiplicity_per_internal_Dirac_sign": 64
+      },
+      {
+        "n": 1,
+        "internal_absolute_eigenvalue": 2.359699518621347,
+        "mass_squared": 9.171708035782833,
+        "multiplicity_per_internal_Dirac_sign": 768
+      },
+      {
+        "n": 2,
+        "internal_absolute_eigenvalue": 2.696799449852968,
+        "mass_squared": 11.979373761022478,
+        "multiplicity_per_internal_Dirac_sign": 4992
+      }
+    ],
+    "lowest_mass_squared": 6.738397740575143,
+    "lowest_mass": 2.5958423951725464,
+    "lowest_mass_over_H": 9.564438787837755,
+    "logarithmic_mass_radion_derivative": -0.7637626158259734,
+    "mass_radion_derivative": -1.9826073780089442,
+    "Dirac_to_scalar_KK_increment_squared_ratio": 3.0,
+    "Dirac_to_scalar_KK_increment_squared_ratio_exact": "3",
+    "direct_scalar_gap_crosscheck": 3.0,
+    "gauge_squared_over_g_grav": 2.433310295207691,
+    "gauge_squared_over_kappa_Dirac_mass_squared": 0.3611111111111111,
+    "gauge_squared_over_kappa_Dirac_mass_squared_exact": "13/36",
+    "minimal_charge_squared_over_kappa_Dirac_mass_squared": 0.09027777777777778,
+    "minimal_charge_squared_over_kappa_Dirac_mass_squared_exact": "13/144",
+    "minimal_charge_coupling_squared_over_g_grav": 0.6083275738019227,
+    "KK_gauge_charge_is_not_membrane_four_form_charge": true,
+    "internal_U1_identified_as_electromagnetism_or_baryons": false,
+    "ground_charge_multiplicities_per_Dirac_sign": {
+      "minus_half": 32,
+      "plus_half": 32
+    },
+    "lowest_four_dimensional_Dirac_fields_both_internal_signs": 128,
+    "no_untwisted_massless_mode": true,
+    "Friedrich_internal_eigenvalue_squared_lower_bound": 4.090909090909091,
+    "symmetry": "Proper rotation flipping internal n2,n13 exchanges charge weights and preserves round geometry and oriented flux.",
+    "invariant_state_charge_mean": 0.0,
+    "physical_baryon_photon_eta": null,
+    "g_grav_selected": false,
+    "SI_mass_selected": false,
+    "nonlinear_KK_and_torsion_truncation_proved": false,
+    "source_population_selected": false,
+    "regular_child_proved": false
+  },
+  "Clifford_control": {
+    "metric": "-+++",
+    "Clifford_relation": "{gamma^a,gamma^b}=-2 eta^ab",
+    "Clifford_defect": 0.0,
+    "axial_pair_trace": 16.0,
+    "imaginary_trace_residual": 0.0,
+    "literal_Wick_A_squared_over_m_squared_sigma_squared": -1.0
+  },
+  "four_dimensional_minimal_EC_thermal_benchmark": {
+    "state": "Local free unpolarized C-neutral Gaussian, mu=0; vacuum Wick thermal-difference prescription",
+    "state_selected_by_parent": false,
+    "background": "Local thermal/adiabatic benchmark, not the evolving neck state",
+    "action": "L_contact=-(3*kappa_nat/16)*A_mu*A^mu in the declared -+++ Clifford convention",
+    "literal_contraction": "A\u00b2_TT=-m\u00b2 sigma_T\u00b2, sigma_T=-T\u00b2/6 at T>>m",
+    "contact_pressure_hat_over_g_squared_T_hat_fourth": 0.03509582156549554,
+    "contact_density_hat_over_g_squared_T_hat_fourth": 0.10528746469648662,
+    "contact_NEC_hat_over_g_squared_T_hat_fourth": 0.14038328626198215,
+    "free_NEC_hat_over_g_T_hat_fourth": 1.5352717957250113,
+    "contact_to_free_NEC_ratio_over_g": 0.0914387189635618,
+    "reference_half_Wick_ratio_over_g": 0.0457193594817809,
+    "contact_NEC_sign": "positive",
+    "total_NEC_sign_in_controlled_regime": "positive",
+    "supports_minimum_neck_turnaround": false,
+    "controlled_regime": "m_hat << T_hat and g*T_hat\u00b2 <<1; hence g*m_hat\u00b2 <<1",
+    "quantum_gravitational_normalization": "g=kappa_nat/Lunit\u00b2 remains free; arithmetic kappa=1 is not a choice g=1",
+    "g_selected": false,
+    "temperature_selected": false,
+    "C_even_contact_selects_eta": false,
+    "current_scalar_parent_fermionic_contact": 0.0,
+    "full_16d_contact_reduction_performed": false,
+    "required_next_source": "N(\u03c4)=k^mu*k^nu <T_Dirac+interaction_mu_nu>_(inherited state,ren), including kinetic stress and backreaction.",
+    "missing_state_data": "Actual inherited covariance and connected four-point function, with renormalization and all retained torsion channels."
+  },
+  "full_sixteen_dimensional_thermal_contact": {
+    "added_field": "Full complex massless16D Dirac, both internal signs and vertices retained",
+    "benchmark": "Free unpolarized nonrotating homogeneous rest-frame mu=0 Fermi state, identical +/- internal occupations, fixed vacuum-Wick subtraction",
+    "coincident_projectors": "P_n,plus(y,y)=P_n,minus(y,y)=d_n/(64 V_gamma) I64",
+    "coincident_thermal_covariance_difference": 0.0,
+    "fully_vacuum_Wick_ordered_contact": 0.0,
+    "full_renormalized_actual_neck_source": null,
+    "warning": "The finite 4D axial benchmark is not a matched full16D torsion truncation. All transformed vertices and KK signs must agree; no generic GH-state or bare composite zero is claimed."
+  },
+  "MMP_field_gate": {
+    "magnetic_integer": 1,
+    "lowest_mass_times_extremal_radius_squared": 1.3846153846153846,
+    "lowest_mass_times_extremal_radius": 1.1766968108291043,
+    "exact_squared_relation": "m0\u00b2*r_e\u00b2=(18/13)*Q\u00b2",
+    "parametric_massless_support_limit_available": false,
+    "original_MMP_massless_field_assumption_satisfied": false,
+    "scalar_only_S3_parent_Maxwell_flux_through_separating_sphere": 0.0,
+    "missing_current_ingredients": [
+      "Maxwell field and magnetic topology/source",
+      "massless charged spinor sector",
+      "physical return state/loop"
+    ],
+    "scope": "Additional operator/domain gate even if an external magnetic RN sector were provided. Not a no-go for other massive or twisted-bundle sources."
+  },
+  "non_Gaussian_pair_correlation_witness": {
+    "schema": "nsc-ec-two-body-connected-correlation-witness-v1",
+    "CAR_exact": true,
+    "CAR_modes": [
+      "a_up",
+      "a_down",
+      "b_up",
+      "b_down"
+    ],
+    "Hilbert_dimension": 16,
+    "field": "psi=(a_up,a_down,-b_down^dagger,b_up^dagger)/sqrt(V)",
+    "metric": "-+++; Clifford {gamma,gamma}=-2*eta; gamma5^2=1",
+    "minimal_EC": "L_contact=-3*kappa*A_a*A^a/16; H_contact=+3*kappa*integral A_a*A^a dV/16",
+    "full_normal_order_identity": ":A_a A^a:=A_a A^a+(2-4N)/V^2",
+    "full_normal_order_identity_exact": true,
+    "exact_fixed_N2_Q0_spectrum": {
+      "singlet": -4,
+      "triplet_eigenvalue": 8,
+      "triplet_multiplicity": 3
+    },
+    "current_identity": "A_i=2 J_i/V; A0=-sqrt(2)*(S_pair^dagger+S_pair)/V",
+    "states": {
+      "singlet": {
+        "trace": "1",
+        "N": "2",
+        "Q": "0",
+        "spin_squared": "0",
+        "one_body_covariance": "diag(1/2,1/2,1/2,1/2)",
+        "anomalous_covariance": "zero",
+        "raw_AA_times_V_squared": "-4",
+        "full_vacuum_Wick_AA_times_V_squared": "-10",
+        "raw_contact_H_times_V_over_kappa": "-3/4",
+        "normal_contact_H_times_V_over_kappa": "-15/8",
+        "normal_contact_density_times_V_squared_over_kappa": "-15/8",
+        "free_vacuum_subtracted_energy_over_m": "2",
+        "rotation_invariant": true,
+        "C_invariant": true,
+        "charge_commuting": true
+      },
+      "isotropic_triplet": {
+        "trace": "1",
+        "N": "2",
+        "Q": "0",
+        "spin_squared": "2",
+        "one_body_covariance": "diag(1/2,1/2,1/2,1/2)",
+        "anomalous_covariance": "zero",
+        "raw_AA_times_V_squared": "8",
+        "full_vacuum_Wick_AA_times_V_squared": "2",
+        "raw_contact_H_times_V_over_kappa": "3/2",
+        "normal_contact_H_times_V_over_kappa": "3/8",
+        "normal_contact_density_times_V_squared_over_kappa": "3/8",
+        "free_vacuum_subtracted_energy_over_m": "2",
+        "rotation_invariant": true,
+        "C_invariant": true,
+        "charge_commuting": true
+      },
+      "matching_gaussian": {
+        "trace": "1",
+        "N": "2",
+        "Q": "0",
+        "spin_squared": "3/4",
+        "one_body_covariance": "diag(1/2,1/2,1/2,1/2)",
+        "anomalous_covariance": "zero",
+        "raw_AA_times_V_squared": "2",
+        "full_vacuum_Wick_AA_times_V_squared": "-4",
+        "raw_contact_H_times_V_over_kappa": "3/8",
+        "normal_contact_H_times_V_over_kappa": "-3/4",
+        "normal_contact_density_times_V_squared_over_kappa": "-3/4",
+        "free_vacuum_subtracted_energy_over_m": "2",
+        "rotation_invariant": true,
+        "C_invariant": true,
+        "charge_commuting": true
+      }
+    },
+    "triplet_minus_singlet_AA_times_V_squared": "12",
+    "triplet_minus_singlet_contact_H_times_V_over_kappa": "9/4",
+    "connected_quartic_departures_from_matching_Gaussian": {
+      "singlet": "-6",
+      "isotropic_triplet": "6"
+    },
+    "common_lower_order_subtraction_cancels": "Both states have identical expectations of every constant and quadratic polynomial; their quartic difference survives any common such subtraction.",
+    "scope": [
+      "Finite four-mode single-orbital rest-frame algebra; not an actual S3 Dirac mode or Hadamard continuum state.",
+      "New 4D fermion extension; not derived from existing bosonic fields or a full 16D torsion projection.",
+      "Singlet minimizes contact energy in this fixed-N=2,Q=0 sector; no pressure, NEC, continuum ground state or bounce is asserted.",
+      "Both states have exactly zero charge; no matter-antimatter asymmetry is generated."
+    ],
+    "elapsed_seconds": 0.4284202999842819
+  },
+  "sources": [
+    {
+      "reference": "Camporesi-Higuchi gr-qc/9505009,3.1 and5.2",
+      "url": "https://arxiv.org/abs/gr-qc/9505009"
+    },
+    {
+      "reference": "Corrected minimalEC sign,2008.11686v2",
+      "url": "https://arxiv.org/html/2008.11686v2"
+    },
+    {
+      "reference": "Diakonov-Tumanov-Vladimirov1104.2432v2,64-76",
+      "url": "https://arxiv.org/html/1104.2432v2"
+    },
+    {
+      "reference": "Maldacena-Milekhin-Popov1807.04726v3,2.3 and5.2",
+      "url": "https://arxiv.org/html/1807.04726v3"
+    }
+  ],
+  "route_status": [
+    "Current canonical preparation: no turnaround by the controlled small-radius cut; no all-future exclusion.",
+    "Positive vacuum alone has zero direct radial-null stress; changing a cap also requires changed geometry/junction and inherited state.",
+    "Existing scalar fields supply no EC spin current. Added neutral free thermal4D fermions give positive NEC; the full balanced16D thermal-Wick contact cancels.",
+    "Untwisted positive-curvature KK fermions do not meet the imported MMP massless-field assumption; magnetic topology and return state are also missing.",
+    "Non-Gaussian/nonequilibrium inherited stress, or a separately specified geometric transition, remains to be calculated. No negative fluid is inserted."
+  ],
+  "verdict": {
+    "regular_expanding_child_proved": false,
+    "new_field_selected_by_old_action": false,
+    "inherited_spinor_population_selected": false,
+    "SI_scale_selected": false,
+    "physical_baryon_photon_eta": null,
+    "geometry_derived_mass_and_coupling_relations": true
+  },
+  "numerical": {
+    "elapsed_seconds": 0.8414629999897443,
+    "observation_fits": 0,
+    "raw_arrays_committed": false
+  },
+  "reproduction": "python scripts/run_python.py scripts/check_nsc_atlas_valve_source_gate.py"
+}

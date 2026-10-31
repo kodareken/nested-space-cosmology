@@ -493,7 +493,7 @@ def test_scale_event_and_uncertainty_cannot_be_promoted(tmp_path):
            "finite-amplitude event")
     reject(lambda item: item["observational_test"].update(SI_scale_selected=False), "observational status")
     reject(lambda item: item["observational_test"].update(status="confirmed"), "observational status")
-    reject(lambda item: item.update(id="NSC-P002"), "optional unique P002")
+    reject(lambda item: item.update(id="NSC-P002"), "one currently registered P001")
     reject(lambda item: item["finite_amplitude"].update(id="NSC-P002"), "finite-amplitude fields")
 
 

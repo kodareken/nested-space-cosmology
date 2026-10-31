@@ -41,7 +41,11 @@ def schwarzschild_pg(mass=1., chart_length=2., r=1.):
 
 def test_analytic_s2_harmonic_jets_and_normalization():
     angular=_angular_basis(3,(12,25));Y=angular['values']
-    np.testing.assert_allclose(Y.T@(angular['weights'][:,None]*Y),np.eye(16),atol=3.e-15,rtol=0)
+    # This 300-node degree-three rule is polynomial-exact. Allow 64 eps for
+    # harmonic/weight evaluation and platform-dependent weighted-dot reduction;
+    # this is a floating-point budget, not numerical/physical model uncertainty.
+    gram_roundoff=64*np.finfo(float).eps
+    np.testing.assert_allclose(Y.T@(angular['weights'][:,None]*Y),np.eye(16),atol=gram_roundoff,rtol=0)
     theta,phi=angular['theta'],angular['phi']
     j=angular['labels'].index((1,1,'sin'))
     norm=-math.sqrt(3/(4*math.pi))
