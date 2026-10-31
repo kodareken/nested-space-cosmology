@@ -26,6 +26,8 @@ def main():
     p.add_argument('--quadrature-radial',type=int);p.add_argument('--quadrature-angles',type=int)
     p.add_argument('--rtol',type=float,default=3e-8);p.add_argument('--atol',type=float,default=3e-10)
     p.add_argument('--max-step',type=float,default=.05)
+    p.add_argument('--no-work',action='store_true',
+                   help='Omit passive work quadrature for the formation-only campaign; physical equations are unchanged.')
     a=p.parse_args();out=(ROOT/a.output).resolve()
     if not out.is_relative_to(ROOT) or out.exists():raise ValueError('fresh repository output required')
     names=['src/recursive_horizons/nsc_atlas_parent_gh.py','src/recursive_horizons/nsc_atlas_s3_frame.py',
@@ -60,7 +62,7 @@ def main():
         threads=a.threads,budget_seconds=a.budget_seconds,progress=True,gauge=a.gauge,
         state_sink=sink if a.state_cache else None,backend=a.backend,quadrature_order=order,
         rtol=a.rtol,atol=a.atol,max_step=a.max_step,dense_sink=None if history is None else history.record,
-        kick_amplitude=a.kick_amplitude,kick_source=a.kick_source)
+        kick_amplitude=a.kick_amplitude,kick_source=a.kick_source,measure_work=not a.no_work)
     after={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}
     r['source_sha256']=before;r['producer_source_unchanged_during_run']=before==after
     r['producer_commit']=commit;r['source_bound_to_commit']=bound
