@@ -126,6 +126,13 @@ def grid_diagnostic(system,state,t,index,producer_point,budget):
         observer_internal_volume_over_initial=math.exp(12*(s[-1]-system.sstar)),
         adiabatic_loading_over_critical_range=[float(loading_ratio[:-1].min()),float(loading_ratio[:-1].max())],
         adiabatic_loading_over_critical_at_observer=float(loading_ratio[-1]))
+    normal_s=geo['Pi'][:,0]/math.sqrt(system.K)
+    external_expansion=np.exp(6*s)*(theta-18*normal_s)
+    row.update(observer_normal_volume_roll=float(normal_s[-1]),
+        observer_Einstein_three_expansion_over_H=float(theta[-1]/r),
+        observer_external_Jordan_three_expansion_over_H=float(external_expansion[-1]/r),
+        external_Jordan_three_expansion_over_H_range=[float(external_expansion[:-1].min()/r),float(external_expansion[:-1].max()/r)],
+        frame_scope='Declared block-diagonal d12 breathing-mode uplift. Internal-volume growth is not a newly formed regional child.')
     if F is not None:
         row.update(F_range=[float(F[:-1].min()),float(F[:-1].max())],F_observer=float(F[-1]),
             kinetic_over_W_max=float(Fkin[:-1].max()),
@@ -145,10 +152,23 @@ def surface_diagnostic(evaluation,provider):
     momentum=-np.einsum('na,nia->ni',data['Pi'],data['dq'])
     flux=np.einsum('ni,ni->n',momentum,evaluation.outward_normal)
     weights=evaluation.area_weights/evaluation.area
+    system=provider.provider.system
+    s=system.sstar+data['q'][:,0]/math.sqrt(system.K)
+    ns=data['Pi'][:,0]/math.sqrt(system.K)
+    vs=np.einsum('ni,ni->n',data['dq'][:,:,0],evaluation.outward_normal)/math.sqrt(system.K)
+    factor=np.exp(6*s)
+    wrapped_plus=factor*evaluation.theta_plus;wrapped_minus=factor*evaluation.theta_minus
+    external_plus=factor*(evaluation.theta_plus-12*(ns+vs))
+    external_minus=factor*(evaluation.theta_minus-12*(ns-vs))
     return dict(normal_flux_range=[float(flux.min()),float(flux.max())],
         outward_normal_energy_flux_area_average=float(weights@flux),
         rho_area_average=float(weights@rho),isotropic_pressure_area_average=float(weights@pressure),
         W_area_average=float(weights@data['W']),
+        wrapped_16_theta_plus_range=[float(wrapped_plus.min()),float(wrapped_plus.max())],
+        wrapped_16_theta_minus_range=[float(wrapped_minus.min()),float(wrapped_minus.max())],
+        external_Jordan_only_theta_plus_range=[float(external_plus.min()),float(external_plus.max())],
+        external_Jordan_only_theta_minus_range=[float(external_minus.min()),float(external_minus.max())],
+        wrapped_null_signs_equal_Einstein=True,
         scope='Instantaneous field stress on a sampled surface; flux positive outward. No child energy, thermal state or vacuum fraction is identified.')
 
 

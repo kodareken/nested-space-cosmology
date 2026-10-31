@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The active [valve/formation calculation](nsc-atlas-valve-formation.md)
+derives an internal stabilization-loss threshold in the same action,
+constructs full-metric closed-surface diagnostics and tests new finite
+parent evolutions. Release, local contraction, trapping and a formed
+receiving child are tracked separately. [Progress and compaction recovery](atlas-progress.json)
+keep the shared programme in view.
+
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
 uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
 records. The horizon/GH/boson chain below is frozen. It supplies existing

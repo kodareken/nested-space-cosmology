@@ -1,0 +1,505 @@
+{
+  "budget_seconds": 180.0,
+  "cohorts": [
+    {
+      "H_reference": 0.2714056154003984,
+      "alpha": 0.057358647050444134,
+      "degree": 16,
+      "elapsed_seconds": 4.284162899974035,
+      "final_search_reading": {
+        "F": 5.666637286067011,
+        "canonical_normal_momenta": [
+          0.03754729082241282,
+          -1.2882209140867682
+        ],
+        "chi": -0.015360572980809579,
+        "coordinate_duration": 0.07498499679048394,
+        "coordinate_t": 0.07498499679048394,
+        "external_Jordan_normal_theta_over_H": -0.31563630811102505,
+        "geodesic_chi_rate": -1.288220914087026,
+        "geodesic_input_unit_norm_error": 1.4832579608992091e-13,
+        "geodesic_s_rate": 0.004096745293670778,
+        "normal_chi_rate": -1.2882209140867682,
+        "normal_s_rate": 0.004096745293672083,
+        "normal_s_rate_over_H": 0.01509454875363669,
+        "observer_angle": 1.8580288517489167,
+        "observer_proper_duration": 0.07499999955310312,
+        "observer_raw_point_norm_error": 0.0,
+        "oscillator_action_loading": 0.7292653892792232,
+        "physical_K_eigenvalues": [
+          0.00785034890527104,
+          0.010729989331322255,
+          0.013627281457727711
+        ],
+        "potential_W": 0.29316952932073004,
+        "protocol_pass_count": 5.155534367871892,
+        "s": -0.03541806510867518,
+        "slice_normal_theta_over_H": -0.11866968797534219
+      },
+      "first_F_equals_one": {
+        "bracket_coordinate_t": [
+          0.02608173801408137,
+          0.029341955265841543
+        ],
+        "bracket_values": [
+          0.8241750502949592,
+          1.1027761446939375
+        ],
+        "found": true,
+        "reading": {
+          "F": 1.0000000376368983,
+          "canonical_normal_momenta": [
+            0.02836599400926304,
+            -0.8647003894899146
+          ],
+          "chi": 0.04148603392842891,
+          "coordinate_duration": 0.028220983730894354,
+          "coordinate_t": 0.028220983730894354,
+          "external_Jordan_normal_theta_over_H": -0.10516590981038604,
+          "geodesic_chi_rate": -0.8647003894899155,
+          "geodesic_input_unit_norm_error": 7.034373084024992e-13,
+          "geodesic_s_rate": 0.0030949836835740896,
+          "normal_chi_rate": -0.8647003894899146,
+          "normal_s_rate": 0.00309498368357409,
+          "normal_s_rate_over_H": 0.011403535918032249,
+          "observer_angle": 0.6994413226483248,
+          "observer_proper_duration": 0.028223864338776765,
+          "observer_raw_point_norm_error": 0.0,
+          "oscillator_action_loading": 0.7281362043109182,
+          "physical_K_eigenvalues": [
+            -0.007874428955241836,
+            -0.006791661455623644,
+            -0.005704343162648618
+          ],
+          "potential_W": 0.7486520378508192,
+          "protocol_pass_count": 1.940763069329617,
+          "s": -0.03559942203621151,
+          "slice_normal_theta_over_H": 0.07505531358834293
+        }
+      },
+      "first_normal_expansion_positive_to_negative": {
+        "bracket_coordinate_t": [
+          0.05216347602816274,
+          0.055423693279922914
+        ],
+        "bracket_values": [
+          0.008580392803353236,
+          -0.008635990247688722
+        ],
+        "found": true,
+        "reading": {
+          "F": 6.2987873753963,
+          "canonical_normal_momenta": [
+            0.0370842678820276,
+            -1.3051521074008698
+          ],
+          "chi": 0.012735684724915212,
+          "coordinate_duration": 0.05381667011024497,
+          "coordinate_t": 0.05381667011024497,
+          "external_Jordan_normal_theta_over_H": -0.21686437550832052,
+          "geodesic_chi_rate": -1.3051521074009163,
+          "geodesic_input_unit_norm_error": 1.4432899320127035e-14,
+          "geodesic_s_rate": 0.00404622534908111,
+          "normal_chi_rate": -1.3051521074008698,
+          "normal_s_rate": 0.0040462253490812184,
+          "normal_s_rate_over_H": 0.01490840689906845,
+          "observer_angle": 1.3336025273481908,
+          "observer_proper_duration": 0.05382926899981404,
+          "observer_raw_point_norm_error": 0.0,
+          "oscillator_action_loading": 0.7284395401402987,
+          "physical_K_eigenvalues": [
+            -0.0020696844221280647,
+            -4.117605472420774e-06,
+            0.002073802008927348
+          ],
+          "potential_W": 0.2706561992077643,
+          "protocol_pass_count": 3.7003912271613744,
+          "s": -0.03550414540027168,
+          "slice_normal_theta_over_H": 6.88015877182791e-11
+        }
+      },
+      "history": ".build/valve-e1-L16-extended-v1-history.npz",
+      "history_load_count": 1,
+      "history_sha256": "02d664949fa466510b27acb322a758dc6e80e04f4d76452efc23abe247e48e62",
+      "initial_reading": {
+        "F": 0.0,
+        "canonical_normal_momenta": [
+          0.0,
+          0.0
+        ],
+        "chi": 0.0542142471364314,
+        "coordinate_duration": 0.0,
+        "coordinate_t": 0.0,
+        "external_Jordan_normal_theta_over_H": -0.0,
+        "geodesic_chi_rate": 0.0,
+        "geodesic_input_unit_norm_error": 0.0,
+        "geodesic_s_rate": 0.0,
+        "normal_chi_rate": 0.0,
+        "normal_s_rate": 0.0,
+        "normal_s_rate_over_H": 0.0,
+        "observer_angle": -0.0,
+        "observer_proper_duration": 0.0,
+        "observer_raw_point_norm_error": 0.0,
+        "oscillator_action_loading": 0.7280212630685001,
+        "physical_K_eigenvalues": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "potential_W": 1.122619078000577,
+        "protocol_pass_count": -0.0,
+        "s": -0.035646782552940987,
+        "slice_normal_theta_over_H": -0.0
+      },
+      "initial_sample_count": 24,
+      "physical_history_endpoint": 1.3036423687651855,
+      "point_geometry_queries": 32,
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "producer_record": ".build/valve-e1-L16-extended-v1.json",
+      "producer_record_sha256": "426f4756573a6865e5fcc7b39046831bbcf9188c0781516b242506104acd0d1d",
+      "search_proper_interval": [
+        0.0,
+        0.075
+      ],
+      "source_pin_count": 17,
+      "strict_source_binding": "strict_producer_and_current_source_identity"
+    },
+    {
+      "H_reference": 0.2714056154003984,
+      "alpha": 0.057358647050444134,
+      "degree": 20,
+      "elapsed_seconds": 5.477259100007359,
+      "final_search_reading": {
+        "F": 5.666636105456966,
+        "canonical_normal_momenta": [
+          0.03754728566221574,
+          -1.2882206946962222
+        ],
+        "chi": -0.015360566596414263,
+        "coordinate_duration": 0.07498499676133365,
+        "coordinate_t": 0.07498499676133365,
+        "external_Jordan_normal_theta_over_H": -0.3156193126203134,
+        "geodesic_chi_rate": -1.2882206946964805,
+        "geodesic_input_unit_norm_error": 1.4521717162097048e-13,
+        "geodesic_s_rate": 0.004096744730647116,
+        "normal_chi_rate": -1.2882206946962222,
+        "normal_s_rate": 0.004096744730648422,
+        "normal_s_rate_over_H": 0.015094546679163545,
+        "observer_angle": 1.8580287850944408,
+        "observer_proper_duration": 0.07499999955297355,
+        "observer_raw_point_norm_error": 0.0,
+        "oscillator_action_loading": 0.7292651122020931,
+        "physical_K_eigenvalues": [
+          0.007848408000657791,
+          0.010727861167080846,
+          0.013625655825093739
+        ],
+        "potential_W": 0.29316946932844873,
+        "protocol_pass_count": 5.155534182923504,
+        "s": -0.035418065121102925,
+        "slice_normal_theta_over_H": -0.11864870572160276
+      },
+      "first_F_equals_one": {
+        "bracket_coordinate_t": [
+          0.02608173800394214,
+          0.029341955254434907
+        ],
+        "bracket_values": [
+          0.8241750259571236,
+          1.1027760894065421
+        ],
+        "found": true,
+        "reading": {
+          "F": 1.0000000376368308,
+          "canonical_normal_momenta": [
+            0.02836599383022382,
+            -0.8647003610187621
+          ],
+          "chi": 0.0414860338990323,
+          "coordinate_duration": 0.028220984204247374,
+          "coordinate_t": 0.028220984204247374,
+          "external_Jordan_normal_theta_over_H": -0.10515533670686802,
+          "geodesic_chi_rate": -0.8647003610187629,
+          "geodesic_input_unit_norm_error": 9.243716903029053e-13,
+          "geodesic_s_rate": 0.0030949836640393087,
+          "normal_chi_rate": -0.8647003610187621,
+          "normal_s_rate": 0.0030949836640393096,
+          "normal_s_rate_over_H": 0.011403535846055917,
+          "observer_angle": 0.6994413067770593,
+          "observer_proper_duration": 0.028223864815085334,
+          "observer_raw_point_norm_error": 0.0,
+          "oscillator_action_loading": 0.728136183821343,
+          "physical_K_eigenvalues": [
+            -0.007875625362395219,
+            -0.00679293113022635,
+            -0.005705429647059888
+          ],
+          "potential_W": 0.7486520370907102,
+          "protocol_pass_count": 1.9407630252910895,
+          "s": -0.03559942203426543,
+          "slice_normal_theta_over_H": 0.07506840309705526
+        }
+      },
+      "first_normal_expansion_positive_to_negative": {
+        "bracket_coordinate_t": [
+          0.05216347600788428,
+          0.055423693258377045
+        ],
+        "bracket_values": [
+          0.008599026980957155,
+          -0.00861695954898927
+        ],
+        "found": true,
+        "reading": {
+          "F": 6.299898753932259,
+          "canonical_normal_momenta": [
+            0.0370844806558758,
+            -1.3051798019697045
+          ],
+          "chi": 0.012731035245232246,
+          "coordinate_duration": 0.0538202331183004,
+          "coordinate_t": 0.0538202331183004,
+          "external_Jordan_normal_theta_over_H": -0.21686563854510502,
+          "geodesic_chi_rate": -1.305179801969751,
+          "geodesic_input_unit_norm_error": 3.1086244689504383e-15,
+          "geodesic_s_rate": 0.004046248564611234,
+          "normal_chi_rate": -1.3051798019697045,
+          "normal_s_rate": 0.004046248564611344,
+          "normal_s_rate_over_H": 0.014908492437203288,
+          "observer_angle": 1.3336907557896063,
+          "observer_proper_duration": 0.05383283334323759,
+          "observer_raw_point_norm_error": 2.220446049250313e-16,
+          "oscillator_action_loading": 0.7284395033792408,
+          "physical_K_eigenvalues": [
+            -0.0020698486610845755,
+            -4.282251123788708e-06,
+            0.0020741308935467986
+          ],
+          "potential_W": 0.27061993010948415,
+          "protocol_pass_count": 3.700636037548206,
+          "s": -0.03550413098223228,
+          "slice_normal_theta_over_H": 6.875895236996681e-11
+        }
+      },
+      "history": ".build/valve-e1-L20-extended-v1-history.npz",
+      "history_load_count": 1,
+      "history_sha256": "24f5eaa7ed069cf2c333d80b1729df56583a5ace79d57d304f10ba78bfd62645",
+      "initial_reading": {
+        "F": 0.0,
+        "canonical_normal_momenta": [
+          0.0,
+          0.0
+        ],
+        "chi": 0.05421424713643151,
+        "coordinate_duration": 0.0,
+        "coordinate_t": 0.0,
+        "external_Jordan_normal_theta_over_H": -0.0,
+        "geodesic_chi_rate": 0.0,
+        "geodesic_input_unit_norm_error": 0.0,
+        "geodesic_s_rate": 0.0,
+        "normal_chi_rate": 0.0,
+        "normal_s_rate": 0.0,
+        "normal_s_rate_over_H": 0.0,
+        "observer_angle": -0.0,
+        "observer_proper_duration": 0.0,
+        "observer_raw_point_norm_error": 0.0,
+        "oscillator_action_loading": 0.7280212630685031,
+        "physical_K_eigenvalues": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "potential_W": 1.1226190780005805,
+        "protocol_pass_count": -0.0,
+        "s": -0.035646782552940987,
+        "slice_normal_theta_over_H": -0.0
+      },
+      "initial_sample_count": 24,
+      "physical_history_endpoint": 1.3036563278839346,
+      "point_geometry_queries": 32,
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "producer_record": ".build/valve-e1-L20-extended-v1.json",
+      "producer_record_sha256": "f25e973f4916fd15aee640a945063613ba46a79b98bf1f4cb127190d114822ea",
+      "search_proper_interval": [
+        0.0,
+        0.075
+      ],
+      "source_pin_count": 17,
+      "strict_source_binding": "strict_producer_and_current_source_identity"
+    },
+    {
+      "H_reference": 0.2714056154003984,
+      "alpha": 0.057358647050444134,
+      "degree": 24,
+      "elapsed_seconds": 7.3233488999831025,
+      "final_search_reading": {
+        "F": 5.666635856269494,
+        "canonical_normal_momenta": [
+          0.037547284524059026,
+          -1.288220654696693
+        ],
+        "chi": -0.015360565567419321,
+        "coordinate_duration": 0.0749849967549691,
+        "coordinate_t": 0.0749849967549691,
+        "external_Jordan_normal_theta_over_H": -0.31561596978673756,
+        "geodesic_chi_rate": -1.2882206546969515,
+        "geodesic_input_unit_norm_error": 2.824407374646398e-13,
+        "geodesic_s_rate": 0.004096744606464036,
+        "normal_chi_rate": -1.288220654696693,
+        "normal_s_rate": 0.004096744606465344,
+        "normal_s_rate_over_H": 0.015094546221608244,
+        "observer_angle": 1.8580287753300246,
+        "observer_proper_duration": 0.07499999955290694,
+        "observer_raw_point_norm_error": 0.0,
+        "oscillator_action_loading": 0.72926506270904,
+        "physical_K_eigenvalues": [
+          0.007848079440303085,
+          0.010727512547847729,
+          0.013625213159225057
+        ],
+        "potential_W": 0.2931694596599643,
+        "protocol_pass_count": 5.155534155829854,
+        "s": -0.03541806512392175,
+        "slice_normal_theta_over_H": -0.11864457962622023
+      },
+      "first_F_equals_one": {
+        "bracket_coordinate_t": [
+          0.02608173800172838,
+          0.02934195525194443
+        ],
+        "bracket_values": [
+          0.8241750243294349,
+          1.1027760851004842
+        ],
+        "found": true,
+        "reading": {
+          "F": 1.000000037636836,
+          "canonical_normal_momenta": [
+            0.02836599374639627,
+            -0.8647003566358653
+          ],
+          "chi": 0.041486033871821926,
+          "coordinate_duration": 0.028220984239132937,
+          "coordinate_t": 0.028220984239132937,
+          "external_Jordan_normal_theta_over_H": -0.10515380511565799,
+          "geodesic_chi_rate": -0.8647003566358661,
+          "geodesic_input_unit_norm_error": 1.1155520951433573e-12,
+          "geodesic_s_rate": 0.0030949836548929736,
+          "normal_chi_rate": -0.8647003566358653,
+          "normal_s_rate": 0.003094983654892974,
+          "normal_s_rate_over_H": 0.011403535812356043,
+          "observer_angle": 0.6994413046031853,
+          "observer_proper_duration": 0.028223864851803268,
+          "observer_raw_point_norm_error": 0.0,
+          "oscillator_action_loading": 0.7281361802007803,
+          "physical_K_eigenvalues": [
+            -0.007875778811869287,
+            -0.006793092541260318,
+            -0.005705629288073452
+          ],
+          "potential_W": 0.7486520363942598,
+          "protocol_pass_count": 1.9407630192591692,
+          "s": -0.03559942203359168,
+          "slice_normal_theta_over_H": 0.07507029878930481
+        }
+      },
+      "first_normal_expansion_positive_to_negative": {
+        "bracket_coordinate_t": [
+          0.05216347600345676,
+          0.05542369325367281
+        ],
+        "bracket_values": [
+          0.008602184165281523,
+          -0.008613654607221303
+        ],
+        "found": true,
+        "reading": {
+          "F": 6.300089468317044,
+          "canonical_normal_momenta": [
+            0.037084517050108255,
+            -1.3051845541569134
+          ],
+          "chi": 0.012730237360452687,
+          "coordinate_duration": 0.05382084448703525,
+          "coordinate_t": 0.05382084448703525,
+          "external_Jordan_normal_theta_over_H": -0.21686585459296864,
+          "geodesic_chi_rate": -1.3051845541569598,
+          "geodesic_input_unit_norm_error": 1.745270594710746e-13,
+          "geodesic_s_rate": 0.004046252535547545,
+          "normal_chi_rate": -1.3051845541569134,
+          "normal_s_rate": 0.004046252535547656,
+          "normal_s_rate_over_H": 0.014908507068206062,
+          "observer_angle": 1.3337058963678088,
+          "observer_proper_duration": 0.05383344494181901,
+          "observer_raw_point_norm_error": 2.220446049250313e-16,
+          "oscillator_action_loading": 0.7284394977816556,
+          "physical_K_eigenvalues": [
+            -0.0020698388529923613,
+            -4.263784765867874e-06,
+            0.0020741026190981412
+          ],
+          "potential_W": 0.2706137073991083,
+          "protocol_pass_count": 3.7006780486134265,
+          "s": -0.03550412850857548,
+          "slice_normal_theta_over_H": 6.875350670371061e-11
+        }
+      },
+      "history": ".build/valve-e1-L24-extended-v1-history.npz",
+      "history_load_count": 1,
+      "history_sha256": "8f31ccf42ee0d1833e0ddeabcccc730dc99f3d94c88941b47f2de358a4bbcec3",
+      "initial_reading": {
+        "F": 0.0,
+        "canonical_normal_momenta": [
+          0.0,
+          0.0
+        ],
+        "chi": 0.05421424713643152,
+        "coordinate_duration": 0.0,
+        "coordinate_t": 0.0,
+        "external_Jordan_normal_theta_over_H": -0.0,
+        "geodesic_chi_rate": 0.0,
+        "geodesic_input_unit_norm_error": 0.0,
+        "geodesic_s_rate": 0.0,
+        "normal_chi_rate": 0.0,
+        "normal_s_rate": 0.0,
+        "normal_s_rate_over_H": 0.0,
+        "observer_angle": -0.0,
+        "observer_proper_duration": 0.0,
+        "observer_raw_point_norm_error": 0.0,
+        "oscillator_action_loading": 0.7280212630685033,
+        "physical_K_eigenvalues": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "potential_W": 1.122619078000581,
+        "protocol_pass_count": -0.0,
+        "s": -0.035646782552940987,
+        "slice_normal_theta_over_H": -0.0
+      },
+      "initial_sample_count": 24,
+      "physical_history_endpoint": 1.3036630987720565,
+      "point_geometry_queries": 32,
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "producer_record": ".build/valve-e1-L24-extended-v1.json",
+      "producer_record_sha256": "34422e6fefaf7bf284e3bd6b758671388cdf4ab3dad2a9b804e19108dfc3b05f",
+      "search_proper_interval": [
+        0.0,
+        0.075
+      ],
+      "source_pin_count": 17,
+      "strict_source_binding": "strict_producer_and_current_source_identity"
+    }
+  ],
+  "elapsed_seconds": 9.041093999985605,
+  "numerical_time_root_tolerance": 1e-08,
+  "schema": "nsc-atlas-valve-onset-events-v1",
+  "scope": {
+    "F": "Geodesic-relaunch focusing proxy at the tracked observer position; not a trapped-surface threshold. F=(sum Pi^2+sum K_eigenvalues^2/kappa)/W.",
+    "pass_count": "Early positive observer_angle/(2*pi*alpha); a synchronization protocol count, not nesting depth.",
+    "precision": "Resolution spreads are empirical indicators; no continuum enclosure or formation theorem.",
+    "state": "Passive evaluation of authenticated actual DOP853 dense polynomials; no PDE restart or sparse interpolation.",
+    "theta": "Actual slice-normal expansion -trK at the tracked observer position; not the full geodesic-bundle expansion."
+  },
+  "script_sha256": "d9927b7ff65e16b43707cedf23ae543019bdf71f0e4da00b1460d5720ba00e8f"
+}

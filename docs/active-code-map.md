@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+The [valve formation owner](nsc-atlas-valve-formation.md) connects
+`nsc_atlas_trapped_surfaces.py` (closed deformed surface/null expansions),
+`nsc_atlas_trapped_parent.py` (full saved-parent metric/field adapter) and
+`scripts/check_nsc_atlas_valve_formation.py` (source-bound finite comparison).
+The physical GH evolution is unchanged; its CLI can omit passive work
+quadrature for these formation-only runs. The goal/frontier is retained
+in [the progress record](atlas-progress.json).
+
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
 uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
 records. The horizon/GH/boson chain below is frozen. It supplies existing

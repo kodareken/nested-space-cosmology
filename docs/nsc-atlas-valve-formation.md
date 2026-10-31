@@ -196,3 +196,144 @@ The expansion equation and elliptic-surface approach are published inputs:
 [AHFinderDirect](https://einsteintoolkit.org/thornguide/EinsteinAnalysis/AHFinderDirect/documentation.html).
 The regular-frame S3 implementation, physical-metric adapter and this
 specific parent comparison are the atlas's calculations.
+
+## Computed initial window
+
+The [source-bound three-grid calculation](../results/summaries/nsc-atlas-valve-formation-early-v1.json)
+reaches proper.3 with epsilon=1. These are new finite-window runs, not
+the earlier under-resolved long histories. At proper.075 the fixed scalar
+maximum has F=5.66663596 on the finest metric: intrinsic scalar kinetic
+stress develops enough local focusing. Negative slice-normal expansion
+also develops, so the initially expanding state does not stay everywhere
+expanding. This does not yet establish a trapped closed surface.
+
+| Metric degree | Final Hamiltonian RMS/H_reference² |
+| --- | --- |
+| 12 | .0338456813 |
+| 16 | .00262947587 |
+| 20 | .000175834904 |
+
+The surface search at proper.225 uses both the scalar maximum and a
+scalar node as centers, three round starts and deformed shape degrees4
+and8. No sampled future-trapped or future-MOTS candidate is found in
+this search. The finest maximum-centered candidate has full outgoing
+RMS7.85824e-5 and ingoing expansion range[-.0891827,+.0786602] in model
+units. The node-centered candidate likewise has mixed ingoing signs.
+Neither reaches the prescribed max-residual tolerance or qualifies as a
+future horizon. No additional precision is pursued on these nonfuture
+candidates.
+
+The same maximum-centered graph is evaluated on all three metrics. Its
+adjacent outgoing-expansion RMS gaps/H_reference shrink
+.000295633 -> .0000227065, and ingoing gaps shrink
+.000293449 -> .0000241497. The corresponding node-centered gaps contract
+as well. This checks physical metric/field resolution separately from
+surface fitting; it is not a continuum no-trapping proof.
+
+The [passive dense-history onset calculation](../results/summaries/nsc-atlas-valve-onset-events-v1.json)
+locates the first two local events without another evolution. The
+geodesic-relaunch focusing score reaches1 at proper duration.02822386;
+the slice-normal trace at the tracked observer subsequently reverses
+from expansion to contraction. Its three-resolution values are:
+
+| Metric degree | First normal contraction, proper duration |
+| --- | --- |
+| 16 | .0538292690 |
+| 20 | .0538328333 |
+| 24 | .0538334449 |
+
+The adjacent contraction-time differences decrease3.56434e-6 ->6.11599e-7.
+Differences in the earlier F=1 event lie below the declared1e-8 root
+tolerance and are not treated as resolved extra digits. The early
+observer-phase readout gives1.94076 and3.70068 protocol passes at the
+two finest events, respectively. These are synchronization counts, not
+an inherited nesting depth or a formed-child threshold. The measured
+trace is that of slice normals at the geodesic observer's position, not
+the expansion of a separately evolved geodesic bundle.
+
+Independent new histories extend to proper1.2, with dense polynomial
+outputs, at degrees12,16,20,24. The degree12/16 late constraints become
+large; the finer runs are used to identify the interval where the geometry
+is reliable. Repeating the proper.3 checkpoint with maximum step.025
+instead of.01 supplies the time-step comparison without another physical
+preparation. A later unresolved leaf is not admitted merely because its
+integrator reached the endpoint.
+
+## Circulation and the inward-channel question
+
+The existing current obeys dot J+3hJ=5q1q2/a² and sources a regional
+vector metric response. Its prepared coexact angular source is orthogonal
+to the six reference rotation Killing fields: local circulation is
+compensated globally. This permits local counter-rotation but does not
+select a unique inward axial valve. A future collapsing channel must be
+tested with its actual inward flux and null expansions, not inferred from
+the presence of a nonzero circulation coefficient.
+
+[The 2026 forced-fluid construction](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf),
+Theorem1.1 and its early construction, supplies radial inflow with axial
+stretching/outflow in an incompressible constant-density fluid and smooth
+forcing. Those inspected passages do not construct the present source,
+a relativistic horizon or a child beyond the singular limit. The broader
+proof is not used as an NSC formation theorem.
+[Bredberg and collaborators](https://arxiv.org/abs/1101.2451) supply a
+fluid/gravity map with specified boundary and expansion assumptions;
+those assumptions do not automatically hold in the strong-field limit
+tested here. The useful shared question is concentration and transfer;
+their mathematical source and regime remain explicit.
+
+Published [massive-scalar collapse](https://arxiv.org/abs/gr-qc/9709014)
+and [rotating scalar collapse](https://arxiv.org/abs/gr-qc/0405101)
+show how preparation, pulse scale and angular data affect thresholds.
+Their isolated/spherical or complex-field assumptions are not silently
+substituted for this nonspherical compact two-real-field state.
+
+## The break question in the declared internal frame
+
+The breathing-mode reconstruction provides a concrete second vantage
+point for the same fields. For a deformed surface Sigma2 wrapped over the
+fixed internal compact geometry M12, its full area density is
+
+$$
+dA_{14}=e^{-12s}dA_E\,e^{12s}dV_{\rm int,0}
+=dA_E\,dV_{\rm int,0}.
+$$
+
+With the null normals normalized as n plus/minus the unit surface normal,
+k_16=exp(6s) k_E. Consequently
+
+$$
+\theta_{16,\pm}=e^{6s}\theta_{E,\pm}.
+$$
+
+The wrapped trapping signs are exactly preserved, even with nonuniform s
+on the surface. Looking only at external Jordan-frame two-area would
+instead give
+
+$$
+\theta_{J,\pm}=e^{6s}[\theta_{E,\pm}-12k_{E,\pm}(s)].
+$$
+
+Its timelike three-volume trace is
+vartheta_J=exp(6s)[vartheta_E-18n_E(s)]. Internal expansion and external
+three-volume contraction can therefore coexist. The full area identity
+prevents this reallocation of volume from being misidentified as a new
+wrapped trapped surface. These are exact kinematic identities of the
+block-diagonal ansatz; localization, omitted internal modes and a new
+regional child still require their own dynamical solution.
+
+At the degree24 F=1 event, the same state gives
+vartheta_E/H_reference=.07507030 and
+vartheta_J/H_reference=-.10515381, with n(s)=.00309498365 in model units.
+At the subsequent normal-contraction onset, vartheta_E=0 while
+vartheta_J/H_reference=-.21686585. These are a calculated example of
+internal-volume growth coexisting with external three-volume contraction
+in the declared reconstruction. The wrapped null signs remain governed
+by the full area identity, so neither number establishes a hidden child.
+
+No child has been admitted in the completed window. Received child
+energy, volume, pressure and w remain undefined. The already computed
+88.47% is a regional Killing-energy crossing in the earlier prepared
+background, and E0=3/8 is a separate reference coefficient. Neither is
+reported as the energy of an unconstructed child. This finite search
+also establishes no universal prohibition for all amplitudes, surfaces
+or future times, so there is no justified one-line universal blocker.

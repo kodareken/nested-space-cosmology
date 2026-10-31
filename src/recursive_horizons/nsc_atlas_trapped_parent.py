@@ -173,7 +173,7 @@ class GHSurfaceGeometry:
                 cache_pin_origin='producer_record' if 'state_cache_sha256' in record else 'explicit_caller_admission',snapshot=int(snapshot)))
 
     @classmethod
-    def from_history(cls,path,producer_record,*,coordinate_t,chunk=1024):
+    def from_history(cls,path,producer_record,*,coordinate_t,chunk=1024,retain_history=False):
         record=_record(producer_record);commit=_verify_record(record);path=Path(path)
         expected=record.get('dense_history',{}).get('sha256')
         if expected is None or _sha(path)!=expected:raise ValueError('dense history SHA256 pin failed')
@@ -186,9 +186,14 @@ class GHSurfaceGeometry:
             raise ValueError('dense history physical endpoint differs from producer record')
         if not math.isfinite(t) or not history.bounds[0][0]<=t<=endpoint:
             raise ValueError('surface event lies outside the declared physical history')
-        return cls(system,history.evaluate(t),coordinate_t=t,chunk=chunk,
+        provider=cls(system,history.evaluate(t),coordinate_t=t,chunk=chunk,
             provenance=dict(source_binding='strict_producer_and_current_source_identity',producer_commit=commit,
                 producer_status=record.get('status'),cache_sha256=expected,cache_pin_origin='producer_record'))
+        if retain_history:
+            # Passive event searches own this same authenticated archive;
+            # no loader patch, repeated decompression or new evolution.
+            provider.retained_history=history
+        return provider
 
     def _jets(self,points,*,second=False):
         Y=arbitrary_points_values(points,self.system.basis.labels)

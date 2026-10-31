@@ -22,7 +22,7 @@ in that leading-field domain. Total Lambda and Omega_Lambda_today remain
 unidentified without a selected receiving stress/expansion history and
 epoch. P006 fails prediction completeness, without an empirical rejection.
 The finite-amplitude theorem establishes initial admissibility, not a
-future child threshold. All epsilon=1 nonlinear runs are **under-resolved,
+future child threshold. The earlier long epsilon=1 nonlinear runs are **under-resolved,
 not used for claims**. Earlier controls below retain their finite domains.
 
 

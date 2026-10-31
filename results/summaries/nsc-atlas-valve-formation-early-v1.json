@@ -1,0 +1,2795 @@
+{
+  "admission_scope": "Absent a producer cache pin, the explicitly supplied expected SHA is post-production caller admission, not preregistration or independent tamper-proof authentication.",
+  "budget_seconds": 600.0,
+  "common_surface_comparisons": [
+    {
+      "adjacent_expansion_and_field_gaps": [
+        {
+          "F_RMS_gap": 3.5529697327345766e-06,
+          "W_RMS_gap": 1.7754639000763656e-06,
+          "canonical_field_RMS_gap_times_sqrt_kappa": [
+            1.947027586964378e-08,
+            7.670626629343472e-08
+          ],
+          "from_metric_degree": 12,
+          "normal_momentum_RMS_gap_times_sqrt_kappa_over_H": [
+            1.2407068519300746e-06,
+            6.082839797089338e-06
+          ],
+          "theta_minus_RMS_gap_over_H_reference": 0.0002934486190041759,
+          "theta_minus_max_abs_gap_over_H_reference": 0.0012464546425378776,
+          "theta_plus_RMS_gap_over_H_reference": 0.0002956330676304391,
+          "theta_plus_max_abs_gap_over_H_reference": 0.0014623430465500373,
+          "to_metric_degree": 16
+        },
+        {
+          "F_RMS_gap": 1.8468656115917325e-07,
+          "W_RMS_gap": 1.4114307216285887e-07,
+          "canonical_field_RMS_gap_times_sqrt_kappa": [
+            1.158827528587387e-09,
+            5.959936411124594e-09
+          ],
+          "from_metric_degree": 16,
+          "normal_momentum_RMS_gap_times_sqrt_kappa_over_H": [
+            6.239301325047184e-08,
+            3.8458896423734396e-07
+          ],
+          "theta_minus_RMS_gap_over_H_reference": 2.4149685009923007e-05,
+          "theta_minus_max_abs_gap_over_H_reference": 0.00013504150225593782,
+          "theta_plus_RMS_gap_over_H_reference": 2.27064660579749e-05,
+          "theta_plus_max_abs_gap_over_H_reference": 0.00015233332022596217,
+          "to_metric_degree": 20
+        }
+      ],
+      "center_name": "scalar_anchor",
+      "common_points": 3403,
+      "metrics": [
+        {
+          "area": 78.23450238050977,
+          "classification": "not_converged",
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "metric_degree": 12,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            1.2584767983314882,
+            1.9050459701449944
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.08952670320088568,
+            0.07865667777294297
+          ],
+          "theta_minus_rms": 0.04857233791740285,
+          "theta_plus_max_abs": 0.0005739702013259421,
+          "theta_plus_range": [
+            -0.0005739702013259421,
+            0.0004462391978566106
+          ],
+          "theta_plus_rms": 0.00013304594217793993
+        },
+        {
+          "area": 78.2350190245761,
+          "classification": "not_converged",
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "metric_degree": 16,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            1.2584767983314882,
+            1.9050459701449944
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.08921374851812902,
+            0.07866036543479857
+          ],
+          "theta_minus_rms": 0.048565185066853624,
+          "theta_plus_max_abs": 0.0003152377660424893,
+          "theta_plus_range": [
+            -0.00020756304880749712,
+            0.0003152377660424893
+          ],
+          "theta_plus_rms": 8.135531756638386e-05
+        },
+        {
+          "area": 78.23504318838698,
+          "classification": "not_converged",
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "metric_degree": 20,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            1.2584767983314882,
+            1.9050459701449944
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.08918272914013774,
+            0.07866016839090686
+          ],
+          "theta_minus_rms": 0.048563795848440276,
+          "theta_plus_max_abs": 0.00030336516077296427,
+          "theta_plus_range": [
+            -0.00020273086093928333,
+            0.00030336516077296427
+          ],
+          "theta_plus_rms": 7.858239428033577e-05
+        }
+      ],
+      "physical_geometry_gaps": {
+        "comparisons": [
+          {
+            "extrinsic_curvature_RMS_over_reference_scale": 7.542458805336332e-05,
+            "extrinsic_curvature_physical_RMS": 2.047065673694461e-05,
+            "extrinsic_curvature_relative_RMS": 0.0006719392054189315,
+            "from_provider": 0,
+            "future_tangential_capacity_max_abs_gap": 8.565112854368173e-05,
+            "metric_reference_covariant_gradient_RMS_over_reference_scale": 0.0008829543103692709,
+            "metric_relative_strain_RMS": 6.954135225533057e-05,
+            "metric_relative_strain_max": 0.00043534715230276804,
+            "to_provider": 1
+          },
+          {
+            "extrinsic_curvature_RMS_over_reference_scale": 4.502015891772777e-06,
+            "extrinsic_curvature_physical_RMS": 1.2218723936489643e-06,
+            "extrinsic_curvature_relative_RMS": 4.010769731955426e-05,
+            "from_provider": 1,
+            "future_tangential_capacity_max_abs_gap": 8.649869190996418e-06,
+            "metric_reference_covariant_gradient_RMS_over_reference_scale": 5.1349382310900933e-05,
+            "metric_relative_strain_RMS": 3.0349916891851656e-06,
+            "metric_relative_strain_max": 2.2613027443215535e-05,
+            "to_provider": 2
+          }
+        ],
+        "points": 3403,
+        "scope": "Weighted finite samples in a common declared surface neighborhood. Same-event/protocol identification is owned by the caller; no certified global bound or horizon classification follows."
+      },
+      "quadrature_order": [
+        41,
+        83
+      ],
+      "scope": "The same finest-metric graph and points on matched observer-proper checkpoints and reference frames. Finite physical tensor/field samples, not a continuum or outermost-horizon bound."
+    },
+    {
+      "adjacent_expansion_and_field_gaps": [
+        {
+          "F_RMS_gap": 1.0205759622524236e-05,
+          "W_RMS_gap": 2.4310392736777375e-06,
+          "canonical_field_RMS_gap_times_sqrt_kappa": [
+            2.5311361250229027e-08,
+            1.1549069636769423e-07
+          ],
+          "from_metric_degree": 12,
+          "normal_momentum_RMS_gap_times_sqrt_kappa_over_H": [
+            1.5418342709231094e-06,
+            8.686379316286868e-06
+          ],
+          "theta_minus_RMS_gap_over_H_reference": 0.0002467771103590981,
+          "theta_minus_max_abs_gap_over_H_reference": 0.000661046075248578,
+          "theta_plus_RMS_gap_over_H_reference": 0.00013911892486146807,
+          "theta_plus_max_abs_gap_over_H_reference": 0.00043537883014225316,
+          "to_metric_degree": 16
+        },
+        {
+          "F_RMS_gap": 7.021876129898285e-07,
+          "W_RMS_gap": 1.9862009580580567e-07,
+          "canonical_field_RMS_gap_times_sqrt_kappa": [
+            1.927201608146941e-09,
+            9.433946769668423e-09
+          ],
+          "from_metric_degree": 16,
+          "normal_momentum_RMS_gap_times_sqrt_kappa_over_H": [
+            1.0662820865808337e-07,
+            6.75429512446392e-07
+          ],
+          "theta_minus_RMS_gap_over_H_reference": 1.811172467438074e-05,
+          "theta_minus_max_abs_gap_over_H_reference": 5.679671632164551e-05,
+          "theta_plus_RMS_gap_over_H_reference": 1.0821959054562586e-05,
+          "theta_plus_max_abs_gap_over_H_reference": 3.6560619237667344e-05,
+          "to_metric_degree": 20
+        }
+      ],
+      "center_name": "scalar_node",
+      "common_points": 3403,
+      "metrics": [
+        {
+          "area": 87.8155681925789,
+          "classification": "not_converged",
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "metric_degree": 12,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            1.5601670668958358,
+            1.5934945363836814
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.10586078224935361,
+            0.10923108531022152
+          ],
+          "theta_minus_rms": 0.06639230248294502,
+          "theta_plus_max_abs": 0.00018732578411985445,
+          "theta_plus_range": [
+            -0.00010978319950013041,
+            0.00018732578411985445
+          ],
+          "theta_plus_rms": 4.7040198963787425e-05
+        },
+        {
+          "area": 87.81567017170708,
+          "classification": "not_converged",
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "metric_degree": 16,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            1.5601670668958358,
+            1.5934945363836814
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.10568589049676635,
+            0.10915624042505517
+          ],
+          "theta_minus_rms": 0.06638425486140331,
+          "theta_plus_max_abs": 0.00016940313555460773,
+          "theta_plus_range": [
+            -0.00012156289919304508,
+            0.00016940313555460773
+          ],
+          "theta_plus_rms": 5.6104821586690774e-05
+        },
+        {
+          "area": 87.81567252571003,
+          "classification": "not_converged",
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "metric_degree": 20,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            1.5601670668958358,
+            1.5934945363836814
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.10567118305787834,
+            0.10916073892109984
+          ],
+          "theta_minus_rms": 0.06638398868641773,
+          "theta_plus_max_abs": 0.00017123155222269204,
+          "theta_plus_range": [
+            -0.000125277783890914,
+            0.00017123155222269204
+          ],
+          "theta_plus_rms": 5.599016669084461e-05
+        }
+      ],
+      "physical_geometry_gaps": {
+        "comparisons": [
+          {
+            "extrinsic_curvature_RMS_over_reference_scale": 0.00016635618737999067,
+            "extrinsic_curvature_physical_RMS": 4.515000341153036e-05,
+            "extrinsic_curvature_relative_RMS": 0.001323386507294071,
+            "from_provider": 0,
+            "future_tangential_capacity_max_abs_gap": 0.00010167347850670999,
+            "metric_reference_covariant_gradient_RMS_over_reference_scale": 0.0021146071257101603,
+            "metric_relative_strain_RMS": 0.00011643163684431144,
+            "metric_relative_strain_max": 0.0004426640559990352,
+            "to_provider": 1
+          },
+          {
+            "extrinsic_curvature_RMS_over_reference_scale": 1.228253734705258e-05,
+            "extrinsic_curvature_physical_RMS": 3.3335496073551825e-06,
+            "extrinsic_curvature_relative_RMS": 9.770952314140271e-05,
+            "from_provider": 1,
+            "future_tangential_capacity_max_abs_gap": 9.076611823149658e-06,
+            "metric_reference_covariant_gradient_RMS_over_reference_scale": 0.00014381559143699372,
+            "metric_relative_strain_RMS": 6.066230654303501e-06,
+            "metric_relative_strain_max": 2.3339624417070846e-05,
+            "to_provider": 2
+          }
+        ],
+        "points": 3403,
+        "scope": "Weighted finite samples in a common declared surface neighborhood. Same-event/protocol identification is owned by the caller; no certified global bound or horizon classification follows."
+      },
+      "quadrature_order": [
+        41,
+        83
+      ],
+      "scope": "The same finest-metric graph and points on matched observer-proper checkpoints and reference frames. Finite physical tensor/field samples, not a continuum or outermost-horizon bound."
+    }
+  ],
+  "common_validation_order": [
+    41,
+    83
+  ],
+  "elapsed_seconds": 398.1175349999976,
+  "evolution_runs": [
+    {
+      "cache_pin_origin": "post_production_caller_admission",
+      "degree": 12,
+      "epsilon": 1.0,
+      "gauge_constraint_damping": 0.2714056154003984,
+      "lapse_feedback_coefficient": 0.2714056154003984,
+      "model_inputs": {
+        "H_reference": 0.2714056154003984,
+        "reference_proper_endpoint_origin": "Previously specified 300-phase-pass reference event",
+        "scalar_mass_squared": 613.5280213887946,
+        "sstar": -0.035646782552940987,
+        "vacuum": 0.22098302421260696,
+        "volume_kinetic": 84.0
+      },
+      "prescribed_GH_gauge": "lapse_controlled",
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "record_path": ".build/valve-e1-L12-early-v1.json",
+      "record_sha256": "fc5ecd2b54086a593f36476cd72b74e9bc639bf900a411b6502f7b82d74a0639",
+      "requested_observer_proper_endpoint": 0.3,
+      "selected_coordinate_t": 0.22569112883304446,
+      "selected_proper_duration": 0.22499999999999998,
+      "snapshot_constraints": [
+        {
+          "ADM_H_RMS_over_H_squared": 0.03267222949137855,
+          "ADM_M_RMS_over_H_squared": 0.0,
+          "GH_C_RMS_over_H": 0.0003732585784138844,
+          "coordinate_t": 0.0,
+          "metric_valid": true,
+          "observer_proper_duration": 0.0
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.032799874643129855,
+          "ADM_M_RMS_over_H_squared": 0.0005091761141331334,
+          "GH_C_RMS_over_H": 0.00038353118839251393,
+          "coordinate_t": 0.07498499720113706,
+          "metric_valid": true,
+          "observer_proper_duration": 0.075
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.032932109567028967,
+          "ADM_M_RMS_over_H_squared": 0.0010984939866507848,
+          "GH_C_RMS_over_H": 0.00040746673893774096,
+          "coordinate_t": 0.15017881188332965,
+          "metric_valid": true,
+          "observer_proper_duration": 0.15000000000005723
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.033296409280947833,
+          "ADM_M_RMS_over_H_squared": 0.0013576077561152876,
+          "GH_C_RMS_over_H": 0.00044808766054797505,
+          "coordinate_t": 0.22569112883304446,
+          "metric_valid": true,
+          "observer_proper_duration": 0.22499999999999998
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.033845681252175346,
+          "ADM_M_RMS_over_H_squared": 0.0018803958404041774,
+          "GH_C_RMS_over_H": 0.0004948131709486413,
+          "coordinate_t": 0.3017641806309712,
+          "metric_valid": true,
+          "observer_proper_duration": 0.29999999999999993
+        }
+      ],
+      "source_sha256": {
+        "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+        "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+        "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+        "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+        "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+        "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+        "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+        "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+        "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+        "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+        "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+        "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+        "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+        "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+        "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+        "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+        "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+      },
+      "state_cache_path": ".build/valve-e1-L12-early-v1.npz",
+      "state_cache_sha256": "5c9e1bbc0201923584ab4a1bb18a6af0e88dcbaed1b1eb29b8779a422f1df6c1",
+      "status": "endpoint_reached",
+      "stop_reason": null,
+      "temporal_tolerances": {
+        "atol": 3e-11,
+        "max_step": 0.01,
+        "rtol": 3e-09
+      }
+    },
+    {
+      "cache_pin_origin": "post_production_caller_admission",
+      "degree": 16,
+      "epsilon": 1.0,
+      "gauge_constraint_damping": 0.2714056154003984,
+      "lapse_feedback_coefficient": 0.2714056154003984,
+      "model_inputs": {
+        "H_reference": 0.2714056154003984,
+        "reference_proper_endpoint_origin": "Previously specified 300-phase-pass reference event",
+        "scalar_mass_squared": 613.5280213887946,
+        "sstar": -0.035646782552940987,
+        "vacuum": 0.22098302421260696,
+        "volume_kinetic": 84.0
+      },
+      "prescribed_GH_gauge": "lapse_controlled",
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "record_path": ".build/valve-e1-L16-early-v1.json",
+      "record_sha256": "81a68cf1566ce633fc378f53d0915a2ca43cb2754dbf1d31ba603db96f71259c",
+      "requested_observer_proper_endpoint": 0.3,
+      "selected_coordinate_t": 0.22569113591703055,
+      "selected_proper_duration": 0.22499999999999998,
+      "snapshot_constraints": [
+        {
+          "ADM_H_RMS_over_H_squared": 0.002548536326131603,
+          "ADM_M_RMS_over_H_squared": 0.0,
+          "GH_C_RMS_over_H": 2.3483224523253493e-05,
+          "coordinate_t": 0.0,
+          "metric_valid": true,
+          "observer_proper_duration": 0.0
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.0025571325504548706,
+          "ADM_M_RMS_over_H_squared": 5.258320421156381e-05,
+          "GH_C_RMS_over_H": 2.428232756220846e-05,
+          "coordinate_t": 0.07498499723731693,
+          "metric_valid": true,
+          "observer_proper_duration": 0.075
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.002562612331586784,
+          "ADM_M_RMS_over_H_squared": 9.998960327077132e-05,
+          "GH_C_RMS_over_H": 2.596741599397716e-05,
+          "coordinate_t": 0.15017881225617263,
+          "metric_valid": true,
+          "observer_proper_duration": 0.15000000000005723
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.002587682911788286,
+          "ADM_M_RMS_over_H_squared": 0.00012198331943065918,
+          "GH_C_RMS_over_H": 2.8228447161568954e-05,
+          "coordinate_t": 0.22569113591703055,
+          "metric_valid": true,
+          "observer_proper_duration": 0.22499999999999998
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.002629475874387942,
+          "ADM_M_RMS_over_H_squared": 0.0001435688487675044,
+          "GH_C_RMS_over_H": 3.039790060544686e-05,
+          "coordinate_t": 0.3017642159256114,
+          "metric_valid": true,
+          "observer_proper_duration": 0.3
+        }
+      ],
+      "source_sha256": {
+        "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+        "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+        "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+        "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+        "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+        "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+        "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+        "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+        "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+        "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+        "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+        "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+        "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+        "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+        "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+        "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+        "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+      },
+      "state_cache_path": ".build/valve-e1-L16-early-v1.npz",
+      "state_cache_sha256": "e7ef9047f5a12238e3f88ff17ad1dcdaf62a43a7a1803f1bbcce438407f9e6c3",
+      "status": "endpoint_reached",
+      "stop_reason": null,
+      "temporal_tolerances": {
+        "atol": 3e-11,
+        "max_step": 0.01,
+        "rtol": 3e-09
+      }
+    },
+    {
+      "cache_pin_origin": "post_production_caller_admission",
+      "degree": 20,
+      "epsilon": 1.0,
+      "gauge_constraint_damping": 0.2714056154003984,
+      "lapse_feedback_coefficient": 0.2714056154003984,
+      "model_inputs": {
+        "H_reference": 0.2714056154003984,
+        "reference_proper_endpoint_origin": "Previously specified 300-phase-pass reference event",
+        "scalar_mass_squared": 613.5280213887946,
+        "sstar": -0.035646782552940987,
+        "vacuum": 0.22098302421260696,
+        "volume_kinetic": 84.0
+      },
+      "prescribed_GH_gauge": "lapse_controlled",
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "record_path": ".build/valve-e1-L20-early-v1.json",
+      "record_sha256": "3c8386857978d1cd79299c900f68d47ef975ec8913b8736beccb13953520918d",
+      "requested_observer_proper_endpoint": 0.3,
+      "selected_coordinate_t": 0.22569113443937205,
+      "selected_proper_duration": 0.22499999999999998,
+      "snapshot_constraints": [
+        {
+          "ADM_H_RMS_over_H_squared": 0.00017092400122034333,
+          "ADM_M_RMS_over_H_squared": 0.0,
+          "GH_C_RMS_over_H": 1.3115855451836211e-06,
+          "coordinate_t": 0.0,
+          "metric_valid": true,
+          "observer_proper_duration": 0.0
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.00017132912945214368,
+          "ADM_M_RMS_over_H_squared": 4.394691166667693e-06,
+          "GH_C_RMS_over_H": 1.3668763883677805e-06,
+          "coordinate_t": 0.07498499720854217,
+          "metric_valid": true,
+          "observer_proper_duration": 0.075
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.00017128554293154222,
+          "ADM_M_RMS_over_H_squared": 7.623478621489662e-06,
+          "GH_C_RMS_over_H": 1.4689141307040847e-06,
+          "coordinate_t": 0.1501788118671201,
+          "metric_valid": true,
+          "observer_proper_duration": 0.15000000000005723
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.0001728197357614294,
+          "ADM_M_RMS_over_H_squared": 8.569288842153736e-06,
+          "GH_C_RMS_over_H": 1.5692111215142544e-06,
+          "coordinate_t": 0.22569113443937205,
+          "metric_valid": true,
+          "observer_proper_duration": 0.22499999999999998
+        },
+        {
+          "ADM_H_RMS_over_H_squared": 0.00017583490383036516,
+          "ADM_M_RMS_over_H_squared": 8.526486057092062e-06,
+          "GH_C_RMS_over_H": 1.6333171914459185e-06,
+          "coordinate_t": 0.30176421282643195,
+          "metric_valid": true,
+          "observer_proper_duration": 0.3
+        }
+      ],
+      "source_sha256": {
+        "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+        "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+        "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+        "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+        "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+        "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+        "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+        "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+        "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+        "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+        "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+        "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+        "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+        "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+        "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+        "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+        "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+      },
+      "state_cache_path": ".build/valve-e1-L20-early-v1.npz",
+      "state_cache_sha256": "ed02b04bcd052f9cae2f12541941c5957411570b59b8e67dff67d2e711973650",
+      "status": "endpoint_reached",
+      "stop_reason": null,
+      "temporal_tolerances": {
+        "atol": 3e-11,
+        "max_step": 0.01,
+        "rtol": 3e-09
+      }
+    }
+  ],
+  "failure": null,
+  "focusing_scope": "F=(Pi_S^2+Pi_chi^2+K_ijK^ij/kappa)/W at saved slices. It omits the normal acceleration-divergence term and is not itself a trapped-surface test.",
+  "future_trapping_candidates": [],
+  "grid_diagnostics": [
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 0.0,
+      "F_observer": 0.0,
+      "F_range": [
+        0.0,
+        0.0
+      ],
+      "W_range": [
+        0.22098307061520608,
+        1.1115965406185275
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9409794073172784,
+      "adiabatic_loading_over_critical_range": [
+        9.989228908100451e-08,
+        1.9172508552201553
+      ],
+      "coordinate_t": 0.0,
+      "future_tangential_capacity_over_H_reference_range": [
+        0.0,
+        0.0
+      ],
+      "grid_points": 15884,
+      "kinetic_over_W_max": 0.0,
+      "max_F_point": [
+        -0.0,
+        -0.9945422711343286,
+        0.0,
+        0.10433441870721048
+      ],
+      "metric_degree": 12,
+      "observer_internal_radius_over_initial": 1.0,
+      "observer_internal_volume_over_initial": 1.0,
+      "observer_proper_duration": 0.0,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.03267222949137855,
+        "ADM_M_RMS_over_H_squared": 0.0,
+        "GH_C_RMS_over_H": 0.0003732585784138844,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.0,
+      "proper_volume_times_H_reference_cubed": 6.099459660184981,
+      "snapshot": 0,
+      "theta_over_H_reference_range": [
+        -0.0,
+        -0.0
+      ],
+      "volume_mode_range": [
+        -0.035646782552940987,
+        -0.035646782552940987
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 5.666647668389945,
+      "F_observer": 5.666647875892979,
+      "F_range": [
+        0.000500921200498133,
+        5.614516306178645
+      ],
+      "W_range": [
+        0.22098302438771147,
+        0.2922606652166355
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9443039186393116,
+      "adiabatic_loading_over_critical_range": [
+        1.6483617492127346e-07,
+        1.920382569708242
+      ],
+      "coordinate_t": 0.07498499720113706,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.03206747153564698,
+        0.08906546664985929
+      ],
+      "grid_points": 15884,
+      "kinetic_over_W_max": 5.6133096649940555,
+      "max_F_point": [
+        -0.4893589520656377,
+        0.6287283944672718,
+        7.401046539756313e-17,
+        -0.6043413125244935
+      ],
+      "metric_degree": 12,
+      "observer_internal_radius_over_initial": 1.0002287437357724,
+      "observer_internal_volume_over_initial": 1.0027483808277216,
+      "observer_proper_duration": 0.075,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.032799874643129855,
+        "ADM_M_RMS_over_H_squared": 0.0005091761141331334,
+        "GH_C_RMS_over_H": 0.00038353118839251393,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.6342438909150135,
+      "proper_volume_times_H_reference_cubed": 6.102777799175402,
+      "snapshot": 1,
+      "theta_over_H_reference_range": [
+        -0.11663718558737698,
+        0.061248030875503144
+      ],
+      "volume_mode_range": [
+        -0.035646747583247484,
+        -0.03542084370981562
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 0.6198273876593122,
+      "F_observer": 0.6198267456971688,
+      "F_range": [
+        0.001832745694373586,
+        0.6177327315498444
+      ],
+      "W_range": [
+        0.22098312528654587,
+        0.850812108136598
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.943398577846008,
+      "adiabatic_loading_over_critical_range": [
+        1.1633512093500701e-06,
+        1.9195542869665598
+      ],
+      "coordinate_t": 0.15017881188332965,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.0647753228651589,
+        0.04589603130172957
+      ],
+      "grid_points": 15884,
+      "kinetic_over_W_max": 0.6176105974753844,
+      "max_F_point": [
+        0.48935895206563723,
+        -0.6287283944672721,
+        7.401046539756313e-17,
+        -0.6043413125244935
+      ],
+      "metric_degree": 12,
+      "observer_internal_radius_over_initial": 1.0007342712525313,
+      "observer_internal_volume_over_initial": 1.008846926451212,
+      "observer_proper_duration": 0.15000000000005723,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.032932109567028967,
+        "ADM_M_RMS_over_H_squared": 0.0010984939866507848,
+        "GH_C_RMS_over_H": 0.00040746673893774096,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.0,
+      "proper_volume_times_H_reference_cubed": 6.105903974146465,
+      "snapshot": 2,
+      "theta_over_H_reference_range": [
+        -0.03502409043905326,
+        0.12206042738716966
+      ],
+      "volume_mode_range": [
+        -0.035646379351685076,
+        -0.03492159786455724
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 1.1229558380162952,
+      "F_observer": 1.1229589767607655,
+      "F_range": [
+        0.00409254520522909,
+        1.117383314635461
+      ],
+      "W_range": [
+        0.2209830485293461,
+        0.717955600945622
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9589805357224965,
+      "adiabatic_loading_over_critical_range": [
+        1.6634183456439678e-06,
+        1.9346428397551587
+      ],
+      "coordinate_t": 0.22569112883304446,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.09664541736474931,
+        0.22547022741703318
+      ],
+      "grid_points": 15884,
+      "kinetic_over_W_max": 1.1143246876889612,
+      "max_F_point": [
+        -0.4893589520656376,
+        -0.6287283944672719,
+        0.0,
+        0.6043413125244935
+      ],
+      "metric_degree": 12,
+      "observer_internal_radius_over_initial": 1.001628962075163,
+      "observer_internal_volume_over_initial": 1.0197236314930633,
+      "observer_proper_duration": 0.22499999999999998,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.033296409280947833,
+        "ADM_M_RMS_over_H_squared": 0.0013576077561152876,
+        "GH_C_RMS_over_H": 0.00044808766054797505,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.0592478049774375,
+      "proper_volume_times_H_reference_cubed": 6.11350152169442,
+      "snapshot": 3,
+      "theta_over_H_reference_range": [
+        -0.28766476901095234,
+        0.18280888838051285
+      ],
+      "volume_mode_range": [
+        -0.03564494469178437,
+        -0.03403833819948534
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 3.6679349862004917,
+      "F_observer": 3.6679138261695847,
+      "F_range": [
+        0.007251758333302613,
+        3.6497786468764026
+      ],
+      "W_range": [
+        0.22098307798148148,
+        0.39663497706434575
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9573139878210353,
+      "adiabatic_loading_over_critical_range": [
+        2.4407923208318546e-06,
+        1.932950841585874
+      ],
+      "coordinate_t": 0.3017641806309712,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.12973162547603462,
+        0.15898239661502195
+      ],
+      "grid_points": 15884,
+      "kinetic_over_W_max": 3.647235995628825,
+      "max_F_point": [
+        0.48935895206563723,
+        -0.6287283944672721,
+        7.401046539756313e-17,
+        -0.6043413125244935
+      ],
+      "metric_degree": 12,
+      "observer_internal_radius_over_initial": 1.0028703829344872,
+      "observer_internal_volume_over_initial": 1.0349936123119237,
+      "observer_proper_duration": 0.29999999999999993,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.033845681252175346,
+        "ADM_M_RMS_over_H_squared": 0.0018803958404041774,
+        "GH_C_RMS_over_H": 0.0004948131709486413,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.6064154762251553,
+      "proper_volume_times_H_reference_cubed": 6.124684036400069,
+      "snapshot": 4,
+      "theta_over_H_reference_range": [
+        -0.17153893574496457,
+        0.24343337627206055
+      ],
+      "volume_mode_range": [
+        -0.035641184717389356,
+        -0.03281337588621965
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 0.0,
+      "F_observer": 0.0,
+      "F_range": [
+        0.0,
+        0.0
+      ],
+      "W_range": [
+        0.22098312256990454,
+        1.1184192919514575
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9409794073172675,
+      "adiabatic_loading_over_critical_range": [
+        2.1173675159744138e-07,
+        1.931938399914966
+      ],
+      "coordinate_t": 0.0,
+      "future_tangential_capacity_over_H_reference_range": [
+        0.0,
+        0.0
+      ],
+      "grid_points": 35000,
+      "kinetic_over_W_max": 0.0,
+      "max_F_point": [
+        -0.0,
+        -0.9965650527428734,
+        0.0,
+        0.08281361996431376
+      ],
+      "metric_degree": 16,
+      "observer_internal_radius_over_initial": 1.0,
+      "observer_internal_volume_over_initial": 1.0,
+      "observer_proper_duration": 0.0,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.002548536326131603,
+        "ADM_M_RMS_over_H_squared": 0.0,
+        "GH_C_RMS_over_H": 2.3483224523253493e-05,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.0,
+      "proper_volume_times_H_reference_cubed": 6.0994594597619605,
+      "snapshot": 0,
+      "theta_over_H_reference_range": [
+        -0.0,
+        -0.0
+      ],
+      "volume_mode_range": [
+        -0.035646782552940987,
+        -0.035646782552940987
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 5.666636935528276,
+      "F_observer": 5.666637142417315,
+      "F_range": [
+        0.0004691310037904868,
+        5.646323350110013
+      ],
+      "W_range": [
+        0.2209830244244046,
+        0.2928548098365302
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9442963758593168,
+      "adiabatic_loading_over_critical_range": [
+        2.9035410179903255e-07,
+        1.9352912833518017
+      ],
+      "coordinate_t": 0.07498499723731693,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.032427937215150186,
+        0.08913054072858995
+      ],
+      "grid_points": 35000,
+      "kinetic_over_W_max": 5.6451035248470545,
+      "max_F_point": [
+        0.35858381756601654,
+        -0.6522615427368484,
+        8.178335149261717e-17,
+        -0.6678117441662195
+      ],
+      "metric_degree": 16,
+      "observer_internal_radius_over_initial": 1.0002287436039417,
+      "observer_internal_volume_over_initial": 1.0027483792417675,
+      "observer_proper_duration": 0.075,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.0025571325504548706,
+        "ADM_M_RMS_over_H_squared": 5.258320421156381e-05,
+        "GH_C_RMS_over_H": 2.428232756220846e-05,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.6339449155030513,
+      "proper_volume_times_H_reference_cubed": 6.102777598648885,
+      "snapshot": 1,
+      "theta_over_H_reference_range": [
+        -0.11784849923444,
+        0.061091087529543134
+      ],
+      "volume_mode_range": [
+        -0.03564674956161233,
+        -0.03541914363772041
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 0.6198250602922365,
+      "F_observer": 0.6198244168123519,
+      "F_range": [
+        0.0018071577854206944,
+        0.6193930129966911
+      ],
+      "W_range": [
+        0.22098307192629418,
+        0.8554947253220546
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9433853956089988,
+      "adiabatic_loading_over_critical_range": [
+        3.5592887264541933e-07,
+        1.934264951845373
+      ],
+      "coordinate_t": 0.15017881225617263,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.06531543701660121,
+        0.04524405977106114
+      ],
+      "grid_points": 35000,
+      "kinetic_over_W_max": 0.6192813088200946,
+      "max_F_point": [
+        -0.3585838175660159,
+        0.6522615427368488,
+        8.178335149261717e-17,
+        -0.6678117441662195
+      ],
+      "metric_degree": 16,
+      "observer_internal_radius_over_initial": 1.0007342687144585,
+      "observer_internal_volume_over_initial": 1.0088468957474346,
+      "observer_proper_duration": 0.15000000000005723,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.002562612331586784,
+        "ADM_M_RMS_over_H_squared": 9.998960327077132e-05,
+        "GH_C_RMS_over_H": 2.596741599397716e-05,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.0,
+      "proper_volume_times_H_reference_cubed": 6.105903773165563,
+      "snapshot": 2,
+      "theta_over_H_reference_range": [
+        -0.035666503982226636,
+        0.1220478092390737
+      ],
+      "volume_mode_range": [
+        -0.03564639545050754,
+        -0.03491631044697645
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 1.122937663703304,
+      "F_observer": 1.1229408030747434,
+      "F_range": [
+        0.004046170621450738,
+        1.1200104061464478
+      ],
+      "W_range": [
+        0.22098303648317488,
+        0.7217712209788556
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9589360568141994,
+      "adiabatic_loading_over_critical_range": [
+        4.873686661629573e-07,
+        1.9495531415738436
+      ],
+      "coordinate_t": 0.22569113591703055,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.09766606723508237,
+        0.22516360990478934
+      ],
+      "grid_points": 35000,
+      "kinetic_over_W_max": 1.1169424238095418,
+      "max_F_point": [
+        0.35858381756601654,
+        -0.6522615427368484,
+        8.178335149261717e-17,
+        -0.6678117441662195
+      ],
+      "metric_degree": 16,
+      "observer_internal_radius_over_initial": 1.001628948117877,
+      "observer_internal_volume_over_initial": 1.0197234609799453,
+      "observer_proper_duration": 0.22499999999999998,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.002587682911788286,
+        "ADM_M_RMS_over_H_squared": 0.00012198331943065918,
+        "GH_C_RMS_over_H": 2.8228447161568954e-05,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.05877942976919089,
+      "proper_volume_times_H_reference_cubed": 6.113501320321335,
+      "snapshot": 3,
+      "theta_over_H_reference_range": [
+        -0.2904386343255906,
+        0.1829094132767478
+      ],
+      "volume_mode_range": [
+        -0.035645011297109584,
+        -0.03402728612504972
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 3.667912622251509,
+      "F_observer": 3.667891198562289,
+      "F_range": [
+        0.007164974233532578,
+        3.663933792379762
+      ],
+      "W_range": [
+        0.22098304333294141,
+        0.3980632375747805
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.957262763083302,
+      "adiabatic_loading_over_critical_range": [
+        7.893390409553887e-07,
+        1.9478024172204598
+      ],
+      "coordinate_t": 0.3017642159256114,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.1308874784842333,
+        0.15721069216077824
+      ],
+      "grid_points": 35000,
+      "kinetic_over_W_max": 3.6614588410659006,
+      "max_F_point": [
+        -0.3585838175660159,
+        0.6522615427368488,
+        8.178335149261717e-17,
+        -0.6678117441662195
+      ],
+      "metric_degree": 16,
+      "observer_internal_radius_over_initial": 1.0028703342801315,
+      "observer_internal_volume_over_initial": 1.034993009758278,
+      "observer_proper_duration": 0.3,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.002629475874387942,
+        "ADM_M_RMS_over_H_squared": 0.0001435688487675044,
+        "GH_C_RMS_over_H": 3.039790060544686e-05,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.610499715530225,
+      "proper_volume_times_H_reference_cubed": 6.1246838400496095,
+      "snapshot": 4,
+      "theta_over_H_reference_range": [
+        -0.17306451295033146,
+        0.2435664235155552
+      ],
+      "volume_mode_range": [
+        -0.03564137718414159,
+        -0.032795512145972594
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 0.0,
+      "F_observer": 0.0,
+      "F_range": [
+        0.0,
+        0.0
+      ],
+      "W_range": [
+        0.22098302431053657,
+        1.1210325882268366
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9409794073172753,
+      "adiabatic_loading_over_critical_range": [
+        2.1081607718603399e-10,
+        1.937564122438394
+      ],
+      "coordinate_t": 0.0,
+      "future_tangential_capacity_over_H_reference_range": [
+        0.0,
+        0.0
+      ],
+      "grid_points": 65348,
+      "kinetic_over_W_max": 0.0,
+      "max_F_point": [
+        -0.0,
+        -0.997641086592372,
+        0.0,
+        0.06864592007389309
+      ],
+      "metric_degree": 20,
+      "observer_internal_radius_over_initial": 1.0,
+      "observer_internal_volume_over_initial": 1.0,
+      "observer_proper_duration": 0.0,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.00017092400122034333,
+        "ADM_M_RMS_over_H_squared": 0.0,
+        "GH_C_RMS_over_H": 1.3115855451836211e-06,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.0,
+      "proper_volume_times_H_reference_cubed": 6.099459459252483,
+      "snapshot": 0,
+      "theta_over_H_reference_range": [
+        -0.0,
+        -0.0
+      ],
+      "volume_mode_range": [
+        -0.035646782552940987,
+        -0.035646782552940987
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 5.666635751864788,
+      "F_observer": 5.666635958657721,
+      "F_range": [
+        0.00045720834872673484,
+        5.659264549978119
+      ],
+      "W_range": [
+        0.22098302506620618,
+        0.2930312159230183
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9442956362858652,
+      "adiabatic_loading_over_critical_range": [
+        7.812052792215892e-09,
+        1.9408269853179942
+      ],
+      "coordinate_t": 0.07498499720854217,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.03260507861943575,
+        0.08968297981381726
+      ],
+      "grid_points": 65348,
+      "kinetic_over_W_max": 5.658032666838368,
+      "max_F_point": [
+        -0.43851751244044157,
+        -0.6300353022100992,
+        0.0,
+        0.6409039781839991
+      ],
+      "metric_degree": 20,
+      "observer_internal_radius_over_initial": 1.0002287435916406,
+      "observer_internal_volume_over_initial": 1.002748379093782,
+      "observer_proper_duration": 0.075,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.00017132912945214368,
+        "ADM_M_RMS_over_H_squared": 4.394691166667693e-06,
+        "GH_C_RMS_over_H": 1.3668763883677805e-06,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.6360543748119243,
+      "proper_volume_times_H_reference_cubed": 6.102777598138682,
+      "snapshot": 1,
+      "theta_over_H_reference_range": [
+        -0.11832015625822705,
+        0.061086797832126075
+      ],
+      "volume_mode_range": [
+        -0.03564675044647791,
+        -0.035418460505180153
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 0.6198247491095641,
+      "F_observer": 0.61982410554726,
+      "F_range": [
+        0.0017949075547051387,
+        0.6194520970783846
+      ],
+      "W_range": [
+        0.2209830244948027,
+        0.8575059487985023
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.943384079276975,
+      "adiabatic_loading_over_critical_range": [
+        3.469781895006742e-08,
+        1.9399592561352805
+      ],
+      "coordinate_t": 0.1501788118671201,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.06555897232674,
+        0.045637175241525926
+      ],
+      "grid_points": 65348,
+      "kinetic_over_W_max": 0.6193404407718862,
+      "max_F_point": [
+        -0.3725280065796786,
+        -0.6711668757184719,
+        0.0,
+        0.6409039781839991
+      ],
+      "metric_degree": 20,
+      "observer_internal_radius_over_initial": 1.0007342684942744,
+      "observer_internal_volume_over_initial": 1.0088468930838046,
+      "observer_proper_duration": 0.15000000000005723,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.00017128554293154222,
+        "ADM_M_RMS_over_H_squared": 7.623478621489662e-06,
+        "GH_C_RMS_over_H": 1.4689141307040847e-06,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.0,
+      "proper_volume_times_H_reference_cubed": 6.105903772606029,
+      "snapshot": 2,
+      "theta_over_H_reference_range": [
+        -0.03613791315968467,
+        0.12205376110473125
+      ],
+      "volume_mode_range": [
+        -0.03564640336826041,
+        -0.034914014109842954
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 1.1229363839824968,
+      "F_observer": 1.122939522228188,
+      "F_range": [
+        0.004022814981535922,
+        1.122323291073836
+      ],
+      "W_range": [
+        0.22098303711660428,
+        0.7230004949440124
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.958932054233354,
+      "adiabatic_loading_over_critical_range": [
+        5.1132014430354903e-08,
+        1.955451451038873
+      ],
+      "coordinate_t": 0.22569113443937205,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.09816446798951156,
+        0.22689268900103718
+      ],
+      "grid_points": 65348,
+      "kinetic_over_W_max": 1.119216930462733,
+      "max_F_point": [
+        -0.43851751244044157,
+        0.6300353022100992,
+        7.848810054438397e-17,
+        -0.6409039781839991
+      ],
+      "metric_degree": 20,
+      "observer_internal_radius_over_initial": 1.0016289471456503,
+      "observer_internal_volume_over_initial": 1.0197234491024638,
+      "observer_proper_duration": 0.22499999999999998,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.0001728197357614294,
+        "ADM_M_RMS_over_H_squared": 8.569288842153736e-06,
+        "GH_C_RMS_over_H": 1.5692111215142544e-06,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.05881549929137895,
+      "proper_volume_times_H_reference_cubed": 6.113501319707473,
+      "snapshot": 3,
+      "theta_over_H_reference_range": [
+        -0.2920287171671338,
+        0.18292483882074392
+      ],
+      "volume_mode_range": [
+        -0.03564504495985337,
+        -0.03402173822179097
+      ]
+    },
+    {
+      "F_defined": true,
+      "F_fixed_scalar_anchor": 3.6679041031782678,
+      "F_observer": 3.667882664276035,
+      "F_range": [
+        0.007122884497856896,
+        3.664644768315304
+      ],
+      "W_range": [
+        0.22098303755040818,
+        0.3990148747648933
+      ],
+      "adiabatic_loading_over_critical_at_observer": 1.9572578963839644,
+      "adiabatic_loading_over_critical_range": [
+        1.1867191522956366e-07,
+        1.9537873752758201
+      ],
+      "coordinate_t": 0.30176421282643195,
+      "future_tangential_capacity_over_H_reference_range": [
+        -0.13143834016755612,
+        0.15920120788901385
+      ],
+      "grid_points": 65348,
+      "kinetic_over_W_max": 3.6621010363950393,
+      "max_F_point": [
+        -0.43851751244044157,
+        0.6300353022100992,
+        7.848810054438397e-17,
+        -0.6409039781839991
+      ],
+      "metric_degree": 20,
+      "observer_internal_radius_over_initial": 1.0028703315901104,
+      "observer_internal_volume_over_initial": 1.0349929764440644,
+      "observer_proper_duration": 0.3,
+      "producer_constraints": {
+        "ADM_H_RMS_over_H_squared": 0.00017583490383036516,
+        "ADM_M_RMS_over_H_squared": 8.526486057092062e-06,
+        "GH_C_RMS_over_H": 1.6333171914459185e-06,
+        "metric_valid": true
+      },
+      "proper_volume_fraction_F_gt_one": 0.6108533571668356,
+      "proper_volume_times_H_reference_cubed": 6.124683838934809,
+      "snapshot": 4,
+      "theta_over_H_reference_range": [
+        -0.17479265348604456,
+        0.24359884458631106
+      ],
+      "volume_mode_range": [
+        -0.035641475631736474,
+        -0.03278474710402062
+      ]
+    }
+  ],
+  "initial_radii": [
+    0.7,
+    1.4,
+    2.0
+  ],
+  "physical_formation_admitted": false,
+  "producer_commit": "481737fa16f21ab07ea71e892d376649fdaebf1d",
+  "producer_source_unchanged_during_run": true,
+  "residual_tolerance_over_H": 1e-06,
+  "schema": "nsc-atlas-valve-formation-v1",
+  "search_scope": "Finite star-shaped charts and starts on the finest supplied metric; both null signs and independent denser samples retained. Misses exclude no other surfaces, states or later times.",
+  "selected_snapshot": 3,
+  "shape_degrees": [
+    4,
+    8
+  ],
+  "source_bound_to_commit": true,
+  "source_sha256": {
+    "scripts/check_nsc_atlas_valve_formation.py": "44ebdb26259ff2e4444544c6473d9f968f8976dda966da93186b7bd9ee5fd59a",
+    "src/recursive_horizons/nsc_atlas_trapped_parent.py": "c93dd9d0ab47b2c8d36e913fdf5cb0fcb31576981a65ef7818ff64e4060eec39",
+    "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+  },
+  "stabilization_threshold": {
+    "E0_reference": 0.375,
+    "E0_relative_below_critical_percent": 0.021151212517589446,
+    "critical_adiabatic_loading": 0.3750793338270073,
+    "critical_epsilon_at_scalar_maximum": 0.7177769969325256,
+    "derivation": "Veff=V+M*exp(-6s); fold225x^6-560x+336=0,x=exp(-2s). M(s)=-14x^3+17.5x^4-3.125x^9.",
+    "epsilon1_loading_over_critical": 1.9409794073172795,
+    "fold_s": 0.0006367709431766714,
+    "fold_x": 0.9987272687239629,
+    "instantaneous_absolute_chi_critical": 0.030963127232006924,
+    "instantaneous_chi_squared_critical": 0.0009587152479854489,
+    "instantaneous_critical_epsilon_at_scalar_maximum": 0.5711252828815903,
+    "maximum_initial_adiabatic_loading_at_epsilon1": 0.7280212630685047,
+    "maximum_initial_field_at_epsilon1": 0.05421424713643157,
+    "scope": "Fixed local oscillator action and fixed external volume, neglecting spatial transport. Conditional adiabatic approximation, not dynamical escape, a trapped surface or received child energy."
+  },
+  "status": "completed_finite_diagnostic",
+  "surface_searches": [
+    {
+      "attempts": [
+        {
+          "area": 71.92557523783546,
+          "center": [
+            0.40837076508409503,
+            0.6454584875205496,
+            0.0,
+            0.6454584875205496
+          ],
+          "classification": "not_converged",
+          "collocation_rms": 0.06506069100346569,
+          "converged": false,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 0.7,
+          "message": "The maximum number of function evaluations is exceeded.",
+          "nfev": 40,
+          "optimizer_success": false,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_bounds": [
+            0.0001,
+            3.141492653589793
+          ],
+          "radius_range": [
+            0.806271554593403,
+            2.5617500431088205
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "shape_coefficients": [
+            0.11591231965531651,
+            2.013682167116752,
+            -1.889901559738054,
+            0.19506768224866997,
+            0.14569536003655859,
+            -0.2556370971934768,
+            -0.05757847066639586,
+            0.22270947381520567,
+            -0.10424664312949686,
+            0.010980138551441941,
+            0.07106311778732223,
+            -0.0071984539395025075,
+            -0.0688656943506491,
+            0.015685151460766995,
+            0.024716055031516568,
+            -0.010832853923721426,
+            0.012455387127325315,
+            0.01582399416136683,
+            0.004145955967440414,
+            -0.03770189932127608,
+            0.0008372718236391542,
+            0.030099919782293694,
+            -0.013016029886001866,
+            -0.011577182522396064,
+            0.00820340486281274
+          ],
+          "shape_degree": 4,
+          "theta_minus_range": [
+            -0.22033423374837274,
+            0.15808164644715034
+          ],
+          "theta_minus_rms": 0.08398247052826452,
+          "theta_plus_max_abs": 0.1394273978432542,
+          "theta_plus_range": [
+            -0.1353158738744131,
+            0.1394273978432542
+          ],
+          "theta_plus_rms": 0.0703216097782777
+        },
+        {
+          "area": 78.22093913480111,
+          "center": [
+            0.40837076508409503,
+            0.6454584875205496,
+            0.0,
+            0.6454584875205496
+          ],
+          "classification": "not_converged",
+          "collocation_rms": 0.0031892229293246214,
+          "converged": false,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 1.4,
+          "message": "`ftol` termination condition is satisfied.",
+          "nfev": 10,
+          "optimizer_success": true,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_bounds": [
+            0.0001,
+            3.141492653589793
+          ],
+          "radius_range": [
+            1.2798604972489114,
+            1.8893851874953704
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "shape_coefficients": [
+            0.14207905165926446,
+            -0.5893088900990284,
+            0.5893089027809623,
+            -1.6514247244471629e-09,
+            -0.02501890890945095,
+            0.01448996535938955,
+            0.028546300384224243,
+            -0.043334019841838364,
+            0.028546300599522408,
+            0.005140925874768867,
+            -0.008710766058797462,
+            -0.010915646152755478,
+            0.015000488417887568,
+            3.2554193103699607e-10,
+            -0.013250145994539405,
+            0.00845522341887735,
+            0.0005556910628207893,
+            -0.0009637376181758228,
+            -0.003081762565117798,
+            0.0010439391798659791,
+            -0.0008063820778378045,
+            -0.002549810842542163,
+            -0.002026855610016063,
+            0.001258789932192549,
+            -0.0035993280776226056
+          ],
+          "shape_degree": 4,
+          "theta_minus_range": [
+            -0.08590519810757026,
+            0.07863111288076763
+          ],
+          "theta_minus_rms": 0.04840043707492669,
+          "theta_plus_max_abs": 0.0093493706093789,
+          "theta_plus_range": [
+            -0.0093493706093789,
+            0.007614334073001758
+          ],
+          "theta_plus_rms": 0.003321359328197851
+        },
+        {
+          "area": 78.2209391386914,
+          "center": [
+            0.40837076508409503,
+            0.6454584875205496,
+            0.0,
+            0.6454584875205496
+          ],
+          "classification": "not_converged",
+          "collocation_rms": 0.0031892229293245975,
+          "converged": false,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 2.0,
+          "message": "`ftol` termination condition is satisfied.",
+          "nfev": 10,
+          "optimizer_success": true,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_bounds": [
+            0.0001,
+            3.141492653589793
+          ],
+          "radius_range": [
+            1.279860491867335,
+            1.8893851911099204
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "shape_coefficients": [
+            0.1420790451187381,
+            -0.5893088951214895,
+            0.5893089158016167,
+            -4.185854628429852e-09,
+            -0.02501890949579692,
+            0.014489964275593658,
+            0.02854630095799558,
+            -0.04333401914138167,
+            0.02854630060628651,
+            0.005140925865294135,
+            -0.008710766279017281,
+            -0.01091564623468663,
+            0.01500048874134804,
+            4.1363614032353045e-10,
+            -0.013250146295203309,
+            0.008455223680444157,
+            0.0005556910884854274,
+            -0.000963737642755763,
+            -0.003081762613444902,
+            0.0010439391807414702,
+            -0.0008063820685387924,
+            -0.002549810859931346,
+            -0.002026855624561854,
+            0.0012587899421556492,
+            -0.003599328097552034
+          ],
+          "shape_degree": 4,
+          "theta_minus_range": [
+            -0.08590519835098553,
+            0.07863111310787188
+          ],
+          "theta_minus_rms": 0.04840043711586294,
+          "theta_plus_max_abs": 0.009349370904792143,
+          "theta_plus_range": [
+            -0.009349370904792143,
+            0.007614334640154201
+          ],
+          "theta_plus_rms": 0.0033213593035289544
+        },
+        {
+          "area": 78.23504318838698,
+          "center": [
+            0.40837076508409503,
+            0.6454584875205496,
+            0.0,
+            0.6454584875205496
+          ],
+          "classification": "not_converged",
+          "collocation_rms": 7.435199909246584e-05,
+          "converged": false,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "message": "`xtol` termination condition is satisfied.",
+          "nfev": 8,
+          "optimizer_success": true,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_bounds": [
+            0.0001,
+            3.141492653589793
+          ],
+          "radius_range": [
+            1.2584767983314882,
+            1.9050459701449944
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "shape_coefficients": [
+            0.11575177407398222,
+            -0.6255216349478395,
+            0.625521634982236,
+            -1.2429177272260074e-11,
+            -0.02371867181629714,
+            0.008904484510476733,
+            0.02897396517396103,
+            -0.041081944666306706,
+            0.028973965170684405,
+            0.005304290544541448,
+            -0.00965109749350031,
+            -0.01152493922274985,
+            0.016316465788550942,
+            3.345639377521726e-13,
+            -0.014185163770375828,
+            0.0089271795360997,
+            0.0006899480873497497,
+            -0.0010258163337062652,
+            -0.003302425538410702,
+            0.0010589448404421194,
+            -0.0007361638089531761,
+            -0.0027140549095514893,
+            -0.002035191743633367,
+            0.0013835996185703131,
+            -0.0038086851688606733,
+            7.547542324780653e-05,
+            0.00014946389752609442,
+            0.00040996661526919215,
+            -0.00036215157791962455,
+            -0.00043258032281413475,
+            0.0007413186937647337,
+            0.00018977766634385157,
+            -0.0007428905682685036,
+            0.0002497503658323239,
+            0.00034182428071029026,
+            -0.00042435576263317407,
+            4.413171099539054e-05,
+            4.9133335381871464e-05,
+            0.00019096944684299344,
+            -2.636016838414898e-05,
+            -0.00011900734544221834,
+            0.00014845448107008208,
+            0.00012479842718319514,
+            -0.00019376451268673237,
+            -6.0457110922562646e-05,
+            0.00020964485819167572,
+            -0.0001078088769039575,
+            -3.9098448180668275e-05,
+            0.00021412361024165022,
+            2.566827328930567e-06,
+            1.1165284277427208e-05,
+            1.1906874948678805e-05,
+            1.0619218095811714e-05,
+            1.847899902778971e-05,
+            -1.943985224432084e-06,
+            -1.5339826663538112e-05,
+            4.023367019080313e-05,
+            1.5758943318586947e-05,
+            -3.575035689465237e-05,
+            8.770573520511822e-06,
+            1.1945652640152182e-05,
+            -2.008878989361561e-05,
+            -2.177779968378855e-05,
+            -3.858891484095981e-06,
+            -8.616244403427721e-06,
+            1.433013522021617e-06,
+            -9.9353609994201e-06,
+            -4.829720582549954e-06,
+            1.3847517270101482e-05,
+            -3.2121152425458155e-06,
+            -1.5820534099477262e-05,
+            1.3421763404936875e-05,
+            1.577576578341775e-05,
+            -1.7326252445526217e-05,
+            -9.74347758295033e-06,
+            2.714681169927649e-05,
+            -5.109551101492411e-06,
+            -1.1112596135855508e-05,
+            1.833202432233318e-05,
+            -1.9953593516439437e-06,
+            -1.7699241093713425e-05
+          ],
+          "shape_degree": 8,
+          "theta_minus_range": [
+            -0.08918272914013774,
+            0.07866016839090686
+          ],
+          "theta_minus_rms": 0.048563795848440276,
+          "theta_plus_max_abs": 0.00030336516077296427,
+          "theta_plus_range": [
+            -0.00020273086093928333,
+            0.00030336516077296427
+          ],
+          "theta_plus_rms": 7.858239428033577e-05,
+          "warm_start_shape_degree": 4
+        }
+      ],
+      "best_completed_candidate": {
+        "area": 78.23504318838698,
+        "classification": "not_converged",
+        "expansion_tolerance": 2.714056154003984e-07,
+        "future_mots_sampled": false,
+        "future_trapped_sampled": false,
+        "origin": "optimized",
+        "quadrature_order": [
+          41,
+          83
+        ],
+        "radius_bounds": [
+          0.0001,
+          3.141492653589793
+        ],
+        "radius_range": [
+          1.2584767983314882,
+          1.9050459701449944
+        ],
+        "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+        "shape_coefficients": [
+          0.11575177407398222,
+          -0.6255216349478395,
+          0.625521634982236,
+          -1.2429177272260074e-11,
+          -0.02371867181629714,
+          0.008904484510476733,
+          0.02897396517396103,
+          -0.041081944666306706,
+          0.028973965170684405,
+          0.005304290544541448,
+          -0.00965109749350031,
+          -0.01152493922274985,
+          0.016316465788550942,
+          3.345639377521726e-13,
+          -0.014185163770375828,
+          0.0089271795360997,
+          0.0006899480873497497,
+          -0.0010258163337062652,
+          -0.003302425538410702,
+          0.0010589448404421194,
+          -0.0007361638089531761,
+          -0.0027140549095514893,
+          -0.002035191743633367,
+          0.0013835996185703131,
+          -0.0038086851688606733,
+          7.547542324780653e-05,
+          0.00014946389752609442,
+          0.00040996661526919215,
+          -0.00036215157791962455,
+          -0.00043258032281413475,
+          0.0007413186937647337,
+          0.00018977766634385157,
+          -0.0007428905682685036,
+          0.0002497503658323239,
+          0.00034182428071029026,
+          -0.00042435576263317407,
+          4.413171099539054e-05,
+          4.9133335381871464e-05,
+          0.00019096944684299344,
+          -2.636016838414898e-05,
+          -0.00011900734544221834,
+          0.00014845448107008208,
+          0.00012479842718319514,
+          -0.00019376451268673237,
+          -6.0457110922562646e-05,
+          0.00020964485819167572,
+          -0.0001078088769039575,
+          -3.9098448180668275e-05,
+          0.00021412361024165022,
+          2.566827328930567e-06,
+          1.1165284277427208e-05,
+          1.1906874948678805e-05,
+          1.0619218095811714e-05,
+          1.847899902778971e-05,
+          -1.943985224432084e-06,
+          -1.5339826663538112e-05,
+          4.023367019080313e-05,
+          1.5758943318586947e-05,
+          -3.575035689465237e-05,
+          8.770573520511822e-06,
+          1.1945652640152182e-05,
+          -2.008878989361561e-05,
+          -2.177779968378855e-05,
+          -3.858891484095981e-06,
+          -8.616244403427721e-06,
+          1.433013522021617e-06,
+          -9.9353609994201e-06,
+          -4.829720582549954e-06,
+          1.3847517270101482e-05,
+          -3.2121152425458155e-06,
+          -1.5820534099477262e-05,
+          1.3421763404936875e-05,
+          1.577576578341775e-05,
+          -1.7326252445526217e-05,
+          -9.74347758295033e-06,
+          2.714681169927649e-05,
+          -5.109551101492411e-06,
+          -1.1112596135855508e-05,
+          1.833202432233318e-05,
+          -1.9953593516439437e-06,
+          -1.7699241093713425e-05
+        ],
+        "shape_degree": 8,
+        "theta_minus_range": [
+          -0.08918272914013774,
+          0.07866016839090686
+        ],
+        "theta_minus_rms": 0.048563795848440276,
+        "theta_plus_max_abs": 0.00030336516077296427,
+        "theta_plus_range": [
+          -0.00020273086093928333,
+          0.00030336516077296427
+        ],
+        "theta_plus_rms": 7.858239428033577e-05
+      },
+      "center": [
+        0.40837076508409503,
+        0.6454584875205496,
+        0.0,
+        0.6454584875205496
+      ],
+      "center_name": "scalar_anchor",
+      "metric_degree": 20,
+      "seeds": [
+        {
+          "area": 33.808470943718895,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 0.7,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            0.7000000000000001,
+            0.7000000000000001
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.7970572806341485,
+            -0.6470907111143317
+          ],
+          "theta_minus_rms": 0.7061966021127488,
+          "theta_plus_max_abs": 0.7792926533809388,
+          "theta_plus_range": [
+            0.6161976480030482,
+            0.7792926533809388
+          ],
+          "theta_plus_rms": 0.6817394231029967
+        },
+        {
+          "area": 71.23010012045745,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 1.4,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            1.4,
+            1.4
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.44727805680924954,
+            -0.06853039146127474
+          ],
+          "theta_minus_rms": 0.24684161998573254,
+          "theta_plus_max_abs": 0.4010660366921515,
+          "theta_plus_range": [
+            0.11241006691862532,
+            0.4010660366921515
+          ],
+          "theta_plus_rms": 0.2569801932082912
+        },
+        {
+          "area": 67.16755656439402,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 2.0,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            2.0,
+            2.0
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.16788625213304417,
+            0.49089859436301275
+          ],
+          "theta_minus_rms": 0.37868124648648105,
+          "theta_plus_max_abs": 0.5493219251544844,
+          "theta_plus_range": [
+            -0.5493219251544844,
+            -0.24051600231695852
+          ],
+          "theta_plus_rms": 0.36233375688006914
+        }
+      ],
+      "selected_candidate": {
+        "area": 78.23504318838698,
+        "classification": "not_converged",
+        "expansion_tolerance": 2.714056154003984e-07,
+        "future_mots_sampled": false,
+        "future_trapped_sampled": false,
+        "origin": "optimized",
+        "quadrature_order": [
+          41,
+          83
+        ],
+        "radius_bounds": [
+          0.0001,
+          3.141492653589793
+        ],
+        "radius_range": [
+          1.2584767983314882,
+          1.9050459701449944
+        ],
+        "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+        "shape_coefficients": [
+          0.11575177407398222,
+          -0.6255216349478395,
+          0.625521634982236,
+          -1.2429177272260074e-11,
+          -0.02371867181629714,
+          0.008904484510476733,
+          0.02897396517396103,
+          -0.041081944666306706,
+          0.028973965170684405,
+          0.005304290544541448,
+          -0.00965109749350031,
+          -0.01152493922274985,
+          0.016316465788550942,
+          3.345639377521726e-13,
+          -0.014185163770375828,
+          0.0089271795360997,
+          0.0006899480873497497,
+          -0.0010258163337062652,
+          -0.003302425538410702,
+          0.0010589448404421194,
+          -0.0007361638089531761,
+          -0.0027140549095514893,
+          -0.002035191743633367,
+          0.0013835996185703131,
+          -0.0038086851688606733,
+          7.547542324780653e-05,
+          0.00014946389752609442,
+          0.00040996661526919215,
+          -0.00036215157791962455,
+          -0.00043258032281413475,
+          0.0007413186937647337,
+          0.00018977766634385157,
+          -0.0007428905682685036,
+          0.0002497503658323239,
+          0.00034182428071029026,
+          -0.00042435576263317407,
+          4.413171099539054e-05,
+          4.9133335381871464e-05,
+          0.00019096944684299344,
+          -2.636016838414898e-05,
+          -0.00011900734544221834,
+          0.00014845448107008208,
+          0.00012479842718319514,
+          -0.00019376451268673237,
+          -6.0457110922562646e-05,
+          0.00020964485819167572,
+          -0.0001078088769039575,
+          -3.9098448180668275e-05,
+          0.00021412361024165022,
+          2.566827328930567e-06,
+          1.1165284277427208e-05,
+          1.1906874948678805e-05,
+          1.0619218095811714e-05,
+          1.847899902778971e-05,
+          -1.943985224432084e-06,
+          -1.5339826663538112e-05,
+          4.023367019080313e-05,
+          1.5758943318586947e-05,
+          -3.575035689465237e-05,
+          8.770573520511822e-06,
+          1.1945652640152182e-05,
+          -2.008878989361561e-05,
+          -2.177779968378855e-05,
+          -3.858891484095981e-06,
+          -8.616244403427721e-06,
+          1.433013522021617e-06,
+          -9.9353609994201e-06,
+          -4.829720582549954e-06,
+          1.3847517270101482e-05,
+          -3.2121152425458155e-06,
+          -1.5820534099477262e-05,
+          1.3421763404936875e-05,
+          1.577576578341775e-05,
+          -1.7326252445526217e-05,
+          -9.74347758295033e-06,
+          2.714681169927649e-05,
+          -5.109551101492411e-06,
+          -1.1112596135855508e-05,
+          1.833202432233318e-05,
+          -1.9953593516439437e-06,
+          -1.7699241093713425e-05
+        ],
+        "shape_degree": 8,
+        "stress_diagnostic": {
+          "W_area_average": 0.4071182381480592,
+          "isotropic_pressure_area_average": -0.2671479869690861,
+          "normal_flux_range": [
+            -0.0019536085744148923,
+            0.0018948795933224445
+          ],
+          "outward_normal_energy_flux_area_average": -0.0001254592205450426,
+          "rho_area_average": 0.54723442314089,
+          "scope": "Instantaneous field stress on a sampled surface; flux positive outward. No child energy, thermal state or vacuum fraction is identified."
+        },
+        "theta_minus_range": [
+          -0.08918272914013774,
+          0.07866016839090686
+        ],
+        "theta_minus_rms": 0.048563795848440276,
+        "theta_plus_max_abs": 0.00030336516077296427,
+        "theta_plus_range": [
+          -0.00020273086093928333,
+          0.00030336516077296427
+        ],
+        "theta_plus_rms": 7.858239428033577e-05
+      }
+    },
+    {
+      "attempts": [
+        {
+          "area": 87.81580668763715,
+          "center": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "classification": "not_converged",
+          "collocation_rms": 0.0015530688396194,
+          "converged": false,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 0.7,
+          "message": "`gtol` termination condition is satisfied.",
+          "nfev": 6,
+          "optimizer_success": true,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_bounds": [
+            0.0001,
+            3.141492653589793
+          ],
+          "radius_range": [
+            1.5601639098514184,
+            1.59354144319064
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "shape_coefficients": [
+            0.014270993190233668,
+            1.1607154763213436e-10,
+            1.3492774184626065e-10,
+            -6.683496866854173e-11,
+            -0.003346655317099333,
+            -9.630054763813724e-11,
+            3.4879061081436326e-11,
+            -0.00579664654771895,
+            -2.3074227926002686e-11,
+            -2.1383307468468936e-13,
+            7.853679811813576e-12,
+            -8.89293396482095e-12,
+            4.45058315150994e-12,
+            0.03810115462472597,
+            -2.126601979587995e-12,
+            -1.0137445577149994e-11,
+            -0.010069480573089644,
+            -1.8407167718258806e-12,
+            1.134600134187324e-12,
+            0.009322338018838625,
+            -1.0638602883554017e-12,
+            -1.7094815826403145e-12,
+            1.1743945158244187e-12,
+            -0.0014632309697630889,
+            -3.118822537108368e-14
+          ],
+          "shape_degree": 4,
+          "theta_minus_range": [
+            -0.10543046633487818,
+            0.1079726768353437
+          ],
+          "theta_minus_rms": 0.06638555138073969,
+          "theta_plus_max_abs": 0.0036218355165385796,
+          "theta_plus_range": [
+            -0.0033238654688594743,
+            0.0036218355165385796
+          ],
+          "theta_plus_rms": 0.0015748578441684138
+        },
+        {
+          "area": 87.81580668773577,
+          "center": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "classification": "not_converged",
+          "collocation_rms": 0.0015530688396194073,
+          "converged": false,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 1.4,
+          "message": "`xtol` termination condition is satisfied.",
+          "nfev": 11,
+          "optimizer_success": true,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_bounds": [
+            0.0001,
+            3.141492653589793
+          ],
+          "radius_range": [
+            1.5601639098684277,
+            1.593541443145189
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "shape_coefficients": [
+            0.014270992856910443,
+            -1.3123356424095868e-10,
+            -2.6690893112378964e-10,
+            -1.4226487026118322e-10,
+            -0.003346655688898205,
+            -6.578373394215409e-11,
+            -5.3231581315920963e-11,
+            -0.0057966472279674325,
+            -3.7844413357981283e-11,
+            8.203625637066655e-12,
+            -4.776932389992226e-12,
+            -6.345730153403704e-12,
+            -1.4516485751834384e-12,
+            0.03810115458570197,
+            2.1328935410235764e-12,
+            -1.5255917069001206e-11,
+            -0.010069480536131627,
+            -1.4339894705779653e-12,
+            -2.4044358680246398e-12,
+            0.009322337981094865,
+            5.968887879448753e-13,
+            -4.180104641243215e-12,
+            4.220621023288362e-12,
+            -0.0014632309655841227,
+            -6.060320653480547e-13
+          ],
+          "shape_degree": 4,
+          "theta_minus_range": [
+            -0.10543046619233784,
+            0.10797267691742654
+          ],
+          "theta_minus_rms": 0.06638555133242943,
+          "theta_plus_max_abs": 0.0036218358416748725,
+          "theta_plus_range": [
+            -0.003323865121177577,
+            0.0036218358416748725
+          ],
+          "theta_plus_rms": 0.0015748578599386613
+        },
+        {
+          "area": 87.8158066876358,
+          "center": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "classification": "not_converged",
+          "collocation_rms": 0.0015530688396193982,
+          "converged": false,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 2.0,
+          "message": "`gtol` termination condition is satisfied.",
+          "nfev": 5,
+          "optimizer_success": true,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_bounds": [
+            0.0001,
+            3.141492653589793
+          ],
+          "radius_range": [
+            1.5601639099074818,
+            1.5935414432712083
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "shape_coefficients": [
+            0.014270993195753982,
+            2.222702691067135e-11,
+            -1.9816959190834996e-10,
+            -2.3806815958052023e-10,
+            -0.0033466553166386554,
+            -1.1811664791599716e-11,
+            3.438639342857099e-11,
+            -0.005796646542705878,
+            2.7658070003128632e-11,
+            -5.889602359389063e-12,
+            -2.957650609860829e-12,
+            -1.2653781353008641e-12,
+            -1.9935811640447743e-12,
+            0.03810115462609327,
+            -1.170560339619874e-11,
+            5.515232430053685e-12,
+            -0.010069480573465005,
+            -1.318374123673309e-12,
+            -1.7328406206304637e-12,
+            0.009322338017587277,
+            -2.579313001699495e-13,
+            -3.105893171551852e-12,
+            4.060574122516736e-12,
+            -0.0014632309694201466,
+            -8.569660993389568e-13
+          ],
+          "shape_degree": 4,
+          "theta_minus_range": [
+            -0.10543046629882358,
+            0.10797267685967349
+          ],
+          "theta_minus_rms": 0.0663855513811067,
+          "theta_plus_max_abs": 0.003621835623558091,
+          "theta_plus_range": [
+            -0.0033238654700404047,
+            0.003621835623558091
+          ],
+          "theta_plus_rms": 0.001574857844144979
+        },
+        {
+          "area": 87.81567252571003,
+          "center": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "classification": "not_converged",
+          "collocation_rms": 5.4315183032023576e-05,
+          "converged": false,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "message": "`gtol` termination condition is satisfied.",
+          "nfev": 3,
+          "optimizer_success": true,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_bounds": [
+            0.0001,
+            3.141492653589793
+          ],
+          "radius_range": [
+            1.5601670668958358,
+            1.5934945363836814
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "shape_coefficients": [
+            0.014342987262952727,
+            1.4029188872806913e-12,
+            -2.5011758844962464e-12,
+            -3.1600715176055905e-12,
+            -0.0030299177765904374,
+            4.134592221220166e-13,
+            -9.617610659142614e-15,
+            -0.005247971528386454,
+            7.136850269968028e-13,
+            -1.9917129106497508e-14,
+            -1.122261368608429e-13,
+            8.613306758683019e-14,
+            1.7046405942805566e-13,
+            0.03805559579467152,
+            1.845889458961177e-14,
+            -1.1085349849203952e-13,
+            -0.010081754968916768,
+            5.015714082869742e-14,
+            -1.1497626710947587e-14,
+            0.009407093237956477,
+            -1.0091137162704785e-14,
+            -2.6338619079691733e-14,
+            1.9618292902280373e-14,
+            -0.0014095440295967842,
+            2.6478636030181664e-14,
+            9.447891842862216e-16,
+            -1.883143308048256e-14,
+            -1.0318028172898673e-14,
+            -5.050736892674175e-15,
+            0.00032297855146475453,
+            3.4298470728932216e-15,
+            1.867766115431162e-14,
+            2.2037672409235885e-15,
+            0.0005594152614767487,
+            7.089978485708111e-16,
+            7.170217018424107e-15,
+            -6.084560345116898e-05,
+            -5.960742535417781e-15,
+            2.46952271497267e-15,
+            -8.0645906512969e-06,
+            1.2511111889759166e-14,
+            5.850649140061204e-16,
+            2.509981301314658e-15,
+            0.00013742416631633175,
+            2.0729274604349314e-15,
+            -2.2769075531334886e-15,
+            7.34249377817828e-15,
+            -1.1961719061379271e-05,
+            -2.148221143358273e-15,
+            -5.674820888409118e-15,
+            -2.4034172867467404e-15,
+            -3.062411549176503e-15,
+            2.0118088586790446e-16,
+            5.506778660295643e-05,
+            4.515829356574555e-15,
+            -3.5186977373539647e-15,
+            7.021995527705737e-16,
+            -4.915965533139518e-05,
+            1.0825656112527653e-15,
+            7.205407391146168e-16,
+            -3.4524396750622993e-15,
+            1.2090992450658213e-05,
+            2.3939883725699096e-15,
+            -1.3909413925031032e-15,
+            -2.098741389403071e-05,
+            -1.4813001959197808e-15,
+            -5.2285143878594774e-18,
+            2.2177906727497797e-05,
+            -6.250833988919041e-16,
+            -1.962944277873236e-15,
+            1.335225095572782e-15,
+            -9.90495024649735e-06,
+            -6.691950471627608e-16,
+            -2.4040645897141387e-15,
+            -3.529160185665815e-16,
+            4.6507014182344994e-06,
+            -1.4486782461757909e-15,
+            -2.853134349410955e-15,
+            -1.5370135403210382e-16,
+            -5.55495021393882e-07,
+            -2.646432844676669e-16
+          ],
+          "shape_degree": 8,
+          "theta_minus_range": [
+            -0.10567118305787834,
+            0.10916073892109984
+          ],
+          "theta_minus_rms": 0.06638398868641773,
+          "theta_plus_max_abs": 0.00017123155222269204,
+          "theta_plus_range": [
+            -0.000125277783890914,
+            0.00017123155222269204
+          ],
+          "theta_plus_rms": 5.599016669084461e-05,
+          "warm_start_shape_degree": 4
+        }
+      ],
+      "best_completed_candidate": {
+        "area": 87.81567252571003,
+        "classification": "not_converged",
+        "expansion_tolerance": 2.714056154003984e-07,
+        "future_mots_sampled": false,
+        "future_trapped_sampled": false,
+        "origin": "optimized",
+        "quadrature_order": [
+          41,
+          83
+        ],
+        "radius_bounds": [
+          0.0001,
+          3.141492653589793
+        ],
+        "radius_range": [
+          1.5601670668958358,
+          1.5934945363836814
+        ],
+        "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+        "shape_coefficients": [
+          0.014342987262952727,
+          1.4029188872806913e-12,
+          -2.5011758844962464e-12,
+          -3.1600715176055905e-12,
+          -0.0030299177765904374,
+          4.134592221220166e-13,
+          -9.617610659142614e-15,
+          -0.005247971528386454,
+          7.136850269968028e-13,
+          -1.9917129106497508e-14,
+          -1.122261368608429e-13,
+          8.613306758683019e-14,
+          1.7046405942805566e-13,
+          0.03805559579467152,
+          1.845889458961177e-14,
+          -1.1085349849203952e-13,
+          -0.010081754968916768,
+          5.015714082869742e-14,
+          -1.1497626710947587e-14,
+          0.009407093237956477,
+          -1.0091137162704785e-14,
+          -2.6338619079691733e-14,
+          1.9618292902280373e-14,
+          -0.0014095440295967842,
+          2.6478636030181664e-14,
+          9.447891842862216e-16,
+          -1.883143308048256e-14,
+          -1.0318028172898673e-14,
+          -5.050736892674175e-15,
+          0.00032297855146475453,
+          3.4298470728932216e-15,
+          1.867766115431162e-14,
+          2.2037672409235885e-15,
+          0.0005594152614767487,
+          7.089978485708111e-16,
+          7.170217018424107e-15,
+          -6.084560345116898e-05,
+          -5.960742535417781e-15,
+          2.46952271497267e-15,
+          -8.0645906512969e-06,
+          1.2511111889759166e-14,
+          5.850649140061204e-16,
+          2.509981301314658e-15,
+          0.00013742416631633175,
+          2.0729274604349314e-15,
+          -2.2769075531334886e-15,
+          7.34249377817828e-15,
+          -1.1961719061379271e-05,
+          -2.148221143358273e-15,
+          -5.674820888409118e-15,
+          -2.4034172867467404e-15,
+          -3.062411549176503e-15,
+          2.0118088586790446e-16,
+          5.506778660295643e-05,
+          4.515829356574555e-15,
+          -3.5186977373539647e-15,
+          7.021995527705737e-16,
+          -4.915965533139518e-05,
+          1.0825656112527653e-15,
+          7.205407391146168e-16,
+          -3.4524396750622993e-15,
+          1.2090992450658213e-05,
+          2.3939883725699096e-15,
+          -1.3909413925031032e-15,
+          -2.098741389403071e-05,
+          -1.4813001959197808e-15,
+          -5.2285143878594774e-18,
+          2.2177906727497797e-05,
+          -6.250833988919041e-16,
+          -1.962944277873236e-15,
+          1.335225095572782e-15,
+          -9.90495024649735e-06,
+          -6.691950471627608e-16,
+          -2.4040645897141387e-15,
+          -3.529160185665815e-16,
+          4.6507014182344994e-06,
+          -1.4486782461757909e-15,
+          -2.853134349410955e-15,
+          -1.5370135403210382e-16,
+          -5.55495021393882e-07,
+          -2.646432844676669e-16
+        ],
+        "shape_degree": 8,
+        "theta_minus_range": [
+          -0.10567118305787834,
+          0.10916073892109984
+        ],
+        "theta_minus_rms": 0.06638398868641773,
+        "theta_plus_max_abs": 0.00017123155222269204,
+        "theta_plus_range": [
+          -0.000125277783890914,
+          0.00017123155222269204
+        ],
+        "theta_plus_rms": 5.599016669084461e-05
+      },
+      "center": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "center_name": "scalar_node",
+      "metric_degree": 20,
+      "seeds": [
+        {
+          "area": 27.09110979493072,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 0.7,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            0.7000000000000001,
+            0.7000000000000001
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.2970003647965613,
+            -1.118772239365508
+          ],
+          "theta_minus_rms": 1.1948872780122681,
+          "theta_plus_max_abs": 1.2950714329372435,
+          "theta_plus_range": [
+            1.21334333120544,
+            1.2950714329372435
+          ],
+          "theta_plus_rms": 1.2486696715157832
+        },
+        {
+          "area": 83.7526140799138,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 1.4,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            1.4,
+            1.4
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.3021060960549544,
+            -0.12207182683396224
+          ],
+          "theta_minus_rms": 0.2015252406922167,
+          "theta_plus_max_abs": 0.23809035433427433,
+          "theta_plus_range": [
+            0.20094957708272382,
+            0.23809035433427433
+          ],
+          "theta_plus_rms": 0.21762918028668152
+        },
+        {
+          "area": 65.64424048052435,
+          "expansion_tolerance": 2.714056154003984e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "initial_radius": 2.0,
+          "quadrature_order": [
+            41,
+            83
+          ],
+          "radius_range": [
+            2.0,
+            2.0
+          ],
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.5095692593723592,
+            0.581508627067501
+          ],
+          "theta_minus_rms": 0.5401369406380137,
+          "theta_plus_max_abs": 0.6512785190136954,
+          "theta_plus_range": [
+            -0.6512785190136954,
+            -0.40804417780344737
+          ],
+          "theta_plus_rms": 0.5108795757972651
+        }
+      ],
+      "selected_candidate": {
+        "area": 87.81567252571003,
+        "classification": "not_converged",
+        "expansion_tolerance": 2.714056154003984e-07,
+        "future_mots_sampled": false,
+        "future_trapped_sampled": false,
+        "origin": "optimized",
+        "quadrature_order": [
+          41,
+          83
+        ],
+        "radius_bounds": [
+          0.0001,
+          3.141492653589793
+        ],
+        "radius_range": [
+          1.5601670668958358,
+          1.5934945363836814
+        ],
+        "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+        "shape_coefficients": [
+          0.014342987262952727,
+          1.4029188872806913e-12,
+          -2.5011758844962464e-12,
+          -3.1600715176055905e-12,
+          -0.0030299177765904374,
+          4.134592221220166e-13,
+          -9.617610659142614e-15,
+          -0.005247971528386454,
+          7.136850269968028e-13,
+          -1.9917129106497508e-14,
+          -1.122261368608429e-13,
+          8.613306758683019e-14,
+          1.7046405942805566e-13,
+          0.03805559579467152,
+          1.845889458961177e-14,
+          -1.1085349849203952e-13,
+          -0.010081754968916768,
+          5.015714082869742e-14,
+          -1.1497626710947587e-14,
+          0.009407093237956477,
+          -1.0091137162704785e-14,
+          -2.6338619079691733e-14,
+          1.9618292902280373e-14,
+          -0.0014095440295967842,
+          2.6478636030181664e-14,
+          9.447891842862216e-16,
+          -1.883143308048256e-14,
+          -1.0318028172898673e-14,
+          -5.050736892674175e-15,
+          0.00032297855146475453,
+          3.4298470728932216e-15,
+          1.867766115431162e-14,
+          2.2037672409235885e-15,
+          0.0005594152614767487,
+          7.089978485708111e-16,
+          7.170217018424107e-15,
+          -6.084560345116898e-05,
+          -5.960742535417781e-15,
+          2.46952271497267e-15,
+          -8.0645906512969e-06,
+          1.2511111889759166e-14,
+          5.850649140061204e-16,
+          2.509981301314658e-15,
+          0.00013742416631633175,
+          2.0729274604349314e-15,
+          -2.2769075531334886e-15,
+          7.34249377817828e-15,
+          -1.1961719061379271e-05,
+          -2.148221143358273e-15,
+          -5.674820888409118e-15,
+          -2.4034172867467404e-15,
+          -3.062411549176503e-15,
+          2.0118088586790446e-16,
+          5.506778660295643e-05,
+          4.515829356574555e-15,
+          -3.5186977373539647e-15,
+          7.021995527705737e-16,
+          -4.915965533139518e-05,
+          1.0825656112527653e-15,
+          7.205407391146168e-16,
+          -3.4524396750622993e-15,
+          1.2090992450658213e-05,
+          2.3939883725699096e-15,
+          -1.3909413925031032e-15,
+          -2.098741389403071e-05,
+          -1.4813001959197808e-15,
+          -5.2285143878594774e-18,
+          2.2177906727497797e-05,
+          -6.250833988919041e-16,
+          -1.962944277873236e-15,
+          1.335225095572782e-15,
+          -9.90495024649735e-06,
+          -6.691950471627608e-16,
+          -2.4040645897141387e-15,
+          -3.529160185665815e-16,
+          4.6507014182344994e-06,
+          -1.4486782461757909e-15,
+          -2.853134349410955e-15,
+          -1.5370135403210382e-16,
+          -5.55495021393882e-07,
+          -2.646432844676669e-16
+        ],
+        "shape_degree": 8,
+        "stress_diagnostic": {
+          "W_area_average": 0.42742403520205596,
+          "isotropic_pressure_area_average": -0.2712165034893691,
+          "normal_flux_range": [
+            -1.8157280981044295e-05,
+            0.0007135854375099802
+          ],
+          "outward_normal_energy_flux_area_average": 0.00032994526047215236,
+          "rho_area_average": 0.583900241279027,
+          "scope": "Instantaneous field stress on a sampled surface; flux positive outward. No child energy, thermal state or vacuum fraction is identified."
+        },
+        "theta_minus_range": [
+          -0.10567118305787834,
+          0.10916073892109984
+        ],
+        "theta_minus_rms": 0.06638398868641773,
+        "theta_plus_max_abs": 0.00017123155222269204,
+        "theta_plus_range": [
+          -0.000125277783890914,
+          0.00017123155222269204
+        ],
+        "theta_plus_rms": 5.599016669084461e-05
+      }
+    }
+  ],
+  "threads": 1,
+  "universal_nonexistence_claim": false
+}

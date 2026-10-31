@@ -8,8 +8,8 @@
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
   "current_calculation": "Closed-surface future-trapping test of the unchanged finite-amplitude compact parent",
-  "completed": "Initial-window epsilon1 three-grid evolution reaches proper.3; local focusing/contraction exists; no child admitted.",
-  "active": "Extended epsilon1 L12/L16/L20 history to proper1.2, and full-metric surface search. Eta and downstream cosmology remain parked.",
+  "completed": "New epsilon1 early three-grid evolution reaches proper.3 with contracting constraints and local contraction. Full-metric deformed surface search at proper.225 finds no admissible future trap; no universal nonexistence is claimed.",
+  "active": "Extended epsilon1 degrees16/20/24 reach proper1.2; late convergence and surface search are being evaluated. Derive local onset events and compare internal/external volume frames. Eta and downstream cosmology remain parked.",
   "continuation": "Read this file, current_owner, latest compact formation summary and .build/valve-e1-L*-extended-v1.json status before launching further work. Never restart an already live producer.",
   "items": [
     {
@@ -405,5 +405,29 @@
   ],
   "verified_gates": 15,
   "required_gates": 50,
-  "overall_gate_completion_percent": 30.0
+  "overall_gate_completion_percent": 30.0,
+  "latest_compact_evidence": "results/summaries/nsc-atlas-valve-formation-early-v1.json",
+  "intermediate_results": {
+    "internal_release_critical_loading": 0.3750793338270073,
+    "conditional_critical_amplitude": 0.7177769969325256,
+    "epsilon1_loading_over_critical": 1.9409794073172795,
+    "release_is_not_a_child": true,
+    "future_child_admitted": false,
+    "current_gate_percent": 40
+  },
+  "execution_state": {
+    "early_degrees": [
+      12,
+      16,
+      20
+    ],
+    "extended_degrees_completed": [
+      12,
+      16,
+      20,
+      24
+    ],
+    "pending_local_producers": [],
+    "next_step": "Analyze extended resolved leaf and direct closed-surface trapping before spending precision on nonfuture marginal roots. If necessary derive the next physical preparation from the existing source; do not relabel a coordinate or compactification transition as a three-dimensional child."
+  }
 }

@@ -42,3 +42,18 @@ def test_instantaneous_barrier_and_source_maximum_are_independent_conditions():
     assert math.isclose(float(X@X),1,rel_tol=0,abs_tol=2e-16)
     assert math.isclose(f,row['maximum_initial_field_at_epsilon1'],rel_tol=2e-15)
     assert row['instantaneous_critical_epsilon_at_scalar_maximum']<row['critical_epsilon_at_scalar_maximum']
+
+
+def test_full_wrapped_area_cancels_radion_and_preserves_null_signs():
+    field,a,b,c=s.symbols('s a b c',real=True)
+    induced=s.Matrix([[a,b],[b,c]])
+    external=s.exp(-12*field)*induced
+    internal=s.exp(2*field)*s.eye(12)
+    assert s.simplify(external.det()*internal.det()-induced.det())==0
+    t=s.symbols('t',real=True);roll=s.Function('s')(t);area=s.Function('A',positive=True)(t)
+    wrapped=area*s.exp(-12*roll)*s.exp(12*roll)
+    theta16=s.exp(6*roll)*s.diff(wrapped,t)/wrapped
+    assert s.simplify(theta16-s.exp(6*roll)*s.diff(area,t)/area)==0
+    external_area=area*s.exp(-12*roll)
+    thetaJ=s.exp(6*roll)*s.diff(external_area,t)/external_area
+    assert s.simplify(thetaJ-s.exp(6*roll)*(s.diff(area,t)/area-12*s.diff(roll,t)))==0
