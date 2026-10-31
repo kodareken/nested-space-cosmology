@@ -57,3 +57,16 @@ def test_full_wrapped_area_cancels_radion_and_preserves_null_signs():
     external_area=area*s.exp(-12*roll)
     thetaJ=s.exp(6*roll)*s.diff(external_area,t)/external_area
     assert s.simplify(thetaJ-s.exp(6*roll)*(s.diff(area,t)/area-12*s.diff(roll,t)))==0
+
+
+def test_two_mode_phase_map_and_actual_momentum_curl():
+    x,y=s.symbols('x y',real=True)
+    q1,q2,p1,p2=s.symbols('q1 q2 p1 p2',real=True)
+    mu=s.symbols('mu',positive=True)
+    chi=q1*x+q2*y;Pi=p1*x+p2*y
+    jacobian=s.Matrix([[s.diff(chi,x),s.diff(chi,y)],
+                       [s.diff(Pi/mu,x),s.diff(Pi/mu,y)]])
+    D=q1*p2-q2*p1
+    assert s.expand(jacobian.det()-D/mu)==0
+    jx=-Pi*s.diff(chi,x);jy=-Pi*s.diff(chi,y)
+    assert s.expand(s.diff(jy,x)-s.diff(jx,y)-D)==0
