@@ -539,10 +539,115 @@ eta cannot be constructed;0 is the charge numerator, not a derived
 cosmological eta to compare with6.1e-10. Moving a charge-blind boundary
 does not change this identity.
 
+### Damped-offset asymmetry test within P006
+
+This is the requested supporting test of item6, not a new cosmological
+prediction or a new evolution chain. The
+[compact calculation](../results/summaries/nsc-atlas-p006-damped-offset-v1.json)
+uses the same retained parent and the existing
+[P006 producer](../scripts/check_nsc_atlas_flow_cosmology.py).
+No phase, damping or source is fitted to the quoted eta.
+
+**1. Damping and frequency from the existing field equation.**
+The crossing fraction 88.47%, handoff energy 2.21978 and quadratic light
+delay 1.786e-5 are integrated response quantities, not independent local
+damping/frequency measurements. The operator that produced them supplies
+the coefficients. Put q=cosh(Ht)^(-3/2)y in the retained scalar equation:
+
+$$
+\ddot y+\left[\mu^2-\frac{9H^2}{4}
++\left(l(l+2)+\frac34\right)H^2\operatorname{sech}^2(Ht)\right]y=0.
+$$
+
+The exact envelope rate is gamma(t)=3H tanh(Ht)/2. In the late limit,
+
+$$
+\gamma=\frac{3H}{2}=.407108423101,\qquad
+\omega=\sqrt{\mu^2-9H^2/4}=24.766151984526,
+$$
+
+$$
+T=\frac{2\pi}{\omega}=.253700506688,\qquad
+\gamma T=.103283613217.
+$$
+
+Rates and periods are in the existing model's proper-readout units.
+The amplitude loss per cycle is .0981288453735. The coefficient3H in
+the differential equation is twice the late amplitude damping rate; the
+two must not be interchanged. The exponential sine is a late benchmark,
+not the exact full 300-event source history. Its phase-zero starting event
+is an assumption of the requested sine test, not selected by the parent.
+
+**2. The one-way horizon does not select the first lobe.**
+The full retained action is even under chi -> -chi. Both T_kk and the
+quadratic light/area response are unchanged by this transformation,
+including the sign of outward energy flow. The signed wave integral
+reverses. Thus the same 88.47%, 2.21978 and light delay admit opposite
+first field lobes: geometry does not choose the positive first lobe.
+The benchmark's positive initial field is a preparation convention.
+For an arbitrary sine phase,
+
+$$
+I(\varphi)=\int_0^\infty e^{-\gamma t}\sin(\omega t+\varphi)dt
+=\frac{\omega\cos\varphi+\gamma\sin\varphi}{\gamma^2+\omega^2}.
+$$
+
+In particular I(phi+pi)=-I(phi). A direction of positive energy transfer
+does not determine the sign of a linear field amplitude.
+
+**3. Exact normalized residue and numerical comparison.**
+For the requested positive-first sine let P be its total positive area
+and N the magnitude of its total negative area. With q=exp(-pi gamma/omega),
+
+$$
+P=\frac{\omega}{(\gamma^2+\omega^2)(1-q)},\qquad N=qP,
+\qquad \mathcal R=\frac{P-N}{P+N}
+=\tanh\left(\frac{\gamma T}{4}\right).
+$$
+
+This specifies the denominator missing from a bare signed integral.
+P=.802025768545, N=.761658986391 and I=P-N=.040366782154, giving
+R=.025815166405, or 2.5815166405%. The positive/negative shares are
+.512907583202/.487092416798. This residue is 4.23199449e7 times the
+quoted 6.1e-10: **the conditional amplitude proxy fails the numerical
+comparison**. It is not an empirical baryogenesis test. Equality would
+require gamma T=4 atanh(6.1e-10)=2.44e-9 and amplitude loss per cycle
+2.439999997e-9, which the retained coefficients do not give. These inverse
+target values are diagnostics, not substituted inputs.
+
+A sign-labelled tally of f² instead gives tanh(gamma T/2)=.051595948093;
+it is a partition of a positive quadratic quantity, not signed particle
+charge. For general starting phase the normalized linear residue ranges
+between -R and R. To see the bound on0<=phi<=pi, set r=gamma/omega,
+A=gamma sin(phi)+omega cos(phi) and
+B=2omega exp[-r(pi-phi)]/(1-q). The signed/absolute ratio is A/(A+B),
+whose derivative has the sign of A'-rA=-(gamma²+omega²)sin(phi)/omega.
+It decreases from R to -R. No starting phase gives a larger magnitude
+at this damping.
+
+**4. Charge conversion.** No baryon-number production/transport term or
+photon normalization exists in this real-scalar flow; its charge flux
+remains 0, and an amplitude residue does not define baryon/photon eta.
+
+**5. Splits (smaller/larger).**
+
+| Pair | gamma/omega |
+| --- | --- |
+| .487092416798 / .512907583202 | .016438097584 |
+| .373 / .627 | .165320007480 |
+| .381966011250 / .618033988750 | .153174481265 |
+
+| Comparison | Value |
+| --- | --- |
+| .373 versus .381966011250 | -2.34733222% |
+| .627 versus .618033988750 | +1.45073109% |
+| (.627/.373) versus golden ratio | +3.88935950% |
+
 Reproduce the short outward calculation (no evolution campaign):
 
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_flow_cosmology.py --output .build/flow-omega-check.json
+python scripts/run_python.py scripts/check_nsc_atlas_flow_cosmology.py --damped-offset-only --output .build/p006-damped-offset.json
 python scripts/run_python.py scripts/check_prediction_register.py
 ```
 

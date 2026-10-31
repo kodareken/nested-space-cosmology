@@ -128,17 +128,97 @@ def calculation():
             'results/summaries/nsc-atlas-finite-parent-data-v1.json'])
 
 
+def sine_lobes(gamma, omega):
+    """Infinite signed-area tally for a unit sine starting at a positive zero.
+
+    P and N are amplitude-time areas, not energy or particle counts.
+    expm1 keeps the small-damping limit away from cancellation at 1-q.
+    """
+    if not (math.isfinite(gamma) and math.isfinite(omega) and gamma > 0 and omega > 0):
+        raise ValueError('positive finite damping and angular frequency required')
+    half_loss=math.pi*gamma/omega
+    net=omega/(gamma*gamma+omega*omega)
+    positive=net/(-math.expm1(-half_loss))
+    negative=math.exp(-half_loss)*positive
+    residue=math.tanh(half_loss/2)
+    return dict(positive_area=positive,negative_magnitude_area=negative,
+        signed_area=net,absolute_area=positive+negative,
+        normalized_signed_residue=residue,
+        positive_fraction=(1+residue)/2,negative_fraction=(1-residue)/2)
+
+
+def damped_offset_test():
+    """P006 charge diagnostic only; no new history, source or horizon grid."""
+    import hashlib
+    from recursive_horizons.nsc_atlas_parent_circulation import Parent
+    parent=Parent.retained()
+    gamma=1.5*parent.H
+    omega=math.sqrt(parent.mass_squared-gamma*gamma)
+    period=2*math.pi/omega
+    lobes=sine_lobes(gamma,omega)
+    target=6.1e-10
+    phi=(1+math.sqrt(5))/2
+    required_ratio=math.log(.627/.373)/math.pi
+    golden_ratio=math.log(phi)/math.pi
+    return dict(schema='nsc-p006-damped-offset-v1',prediction_id='NSC-P006',
+        scope='Conditional phase-zero exponential late-time sine, not the entire finite horizon history or a baryon prediction.',
+        inherited_parent_commit='64f9fe84',
+        calculation_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        coefficient_origin='Existing scalar equation qddot+3h qdot+(mu^2+l(l+2)/a^2)q=0; gamma=3H/2, omega^2=mu^2-9H^2/4.',
+        H=parent.H,mass_squared=parent.mass_squared,gamma=gamma,omega=omega,
+        gamma_over_omega=gamma/omega,period=period,gamma_times_period=gamma*period,
+        amplitude_loss_per_cycle=-math.expm1(-gamma*period),
+        exact_finite_envelope='cosh(Ht)^(-3/2)',
+        finite_gamma='3H*tanh(Ht)/2',
+        rescaled_frequency_squared='mu^2-9H^2/4+(l(l+2)+3/4)*H^2*sech(Ht)^2',
+        amplitude_lobes=lobes,
+        phase_integral='I(phi)=(omega*cos(phi)+gamma*sin(phi))/(gamma^2+omega^2)',
+        first_lobe_sign_selected_by_horizon=False,
+        sign_counterexample='chi -> -chi preserves the action, Tkk, area, energy handoff and quadratic light delay, while reversing the signed amplitude integral.',
+        phase_zero_is_supplied_not_selected=True,
+        eta_comparison=dict(target=target,proxy_residue=lobes['normalized_signed_residue'],
+            proxy_over_target=lobes['normalized_signed_residue']/target,
+            proxy_relative_miss_percent=100*(lobes['normalized_signed_residue']/target-1),
+            target_gamma_times_period=4*math.atanh(target),
+            target_amplitude_loss_per_cycle=-math.expm1(-4*math.atanh(target)),
+            proxy_matches_quoted_target=abs(lobes['normalized_signed_residue']-target)<=.05e-10,
+            comparison_band_role='Rounding interval of the quoted 6.1e-10, not an observational or theoretical error model.',
+            physical_baryon_photon_eta=None,empirical_rejection=False),
+        charge_conversion='No baryon-number current, charge-biased production/transport law or photon normalization exists in this real-scalar flow; signed charge flux remains zero.',
+        sign_partition_of_squared_wave=dict(residue=math.tanh(math.pi*gamma/omega),
+            role='Sign-labelled partition of positive f^2, not particle charge.'),
+        split_comparison=dict(
+            model_low_high=[lobes['negative_fraction'],lobes['positive_fraction']],
+            proposed_low_high=[.373,.627],
+            proposed_required_gamma_over_omega=required_ratio,
+            proposed_required_gamma_times_period=2*math.pi*required_ratio,
+            proposed_positive_first_order=[.627,.373],
+            proposed_negative_first_order=[.373,.627],
+            golden_low_high=[1/phi**2,1/phi],
+            golden_required_gamma_over_omega=golden_ratio,
+            proposed_vs_golden_percent=[100*(.373*phi**2-1),100*(.627*phi-1)],
+            proposed_ratio_vs_phi_percent=100*((.627/.373)/phi-1),
+            ratios_inferred_from_requested_splits_are_not_model_predictions=True),
+        no_new_evolution_campaign=True)
+
+
 def main():
     import argparse
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--damped-offset-only',action='store_true',
+                        help='Evaluate the bounded P006 damped-sine diagnostic without replaying the receiver.')
     args=parser.parse_args()
-    result=calculation()
+    result=damped_offset_test() if args.damped_offset_only else calculation()
     raw=json.dumps(result,indent=2,sort_keys=True)+'\n'
     if args.output:
         args.output.parent.mkdir(parents=True,exist_ok=True)
         args.output.write_text(raw,encoding='utf-8',newline='\n')
-        print('P006: prediction not identified; conditional receiving w =',result['receiving_pressure'][1]['w_trace'])
+        if args.damped_offset_only:
+            print('P006 damped sine: gamma*T =',result['gamma_times_period'],
+                  '; conditional residue =',result['amplitude_lobes']['normalized_signed_residue'])
+        else:
+            print('P006: prediction not identified; conditional receiving w =',result['receiving_pressure'][1]['w_trace'])
     else:print(raw)
 
 

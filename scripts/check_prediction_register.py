@@ -558,6 +558,20 @@ def check_p006(root, entry):
     result = read_json(bound_bytes(root, entry['evaluation'], 'P006 evaluation'))
     exact(result['forecast_sha256'], entry['forecast']['sha256'], 'P006 protocol unchanged')
     exact(result['prediction_id'], 'NSC-P006', 'P006 result identity')
+    if 'damped_offset_test' in entry:
+        damped = read_json(bound_bytes(root, entry['damped_offset_test'], 'P006 damped-offset test'))
+        exact(damped['prediction_id'], 'NSC-P006', 'P006 damping parent')
+        gamma = number(damped['gamma'], 'P006 damping rate')
+        omega = number(damped['omega'], 'P006 frequency')
+        require(gamma > 0 and omega > 0, 'P006 positive damping and frequency')
+        residue = math.tanh(math.pi*gamma/(2*omega))
+        agree_float(damped['amplitude_lobes']['normalized_signed_residue'], residue,
+                    'P006 signed amplitude residue', 0)
+        comparison = damped['eta_comparison']
+        exact(comparison['physical_baryon_photon_eta'], None, 'P006 no invented baryon eta')
+        exact(comparison['empirical_rejection'], False, 'P006 amplitude is not baryon rejection')
+        exact(comparison['proxy_matches_quoted_target'],
+              abs(residue-comparison['target']) <= .05e-10, 'P006 damped proxy decision')
     value = result['Omega_Lambda_today']
     if value is None:
         exact(result['comparison_pass'], False, 'P006 completeness failed')
@@ -620,6 +634,7 @@ def check_register(root, register):
         check_p006(root, entries[5])
         result['predictions'] += 1
         result['evidence_files'] += 1 + int('evaluation' in entries[5])
+        result['evidence_files'] += int('damped_offset_test' in entries[5])
     return result
 
 

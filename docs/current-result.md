@@ -1,5 +1,12 @@
 # What the calculations show
 
+Within P006, the [damped-offset test](nsc-atlas-offset-thermodynamics.md)
+now uses the retained late scalar coefficients: gamma T=.103283613217,
+with conditional positive-first amplitude residue .025815166405. It does
+not match 6.1e-10, and the horizon does not select the first-lobe sign.
+The scalar's charge flux remains 0; this amplitude ratio is not a physical
+baryon/photon eta. The existing vacuum outcome and frozen chain remain.
+
 The outward [P006 calculation](nsc-atlas-offset-thermodynamics.md) freezes
 the horizon/GH/boson refinement chain and tests directed flow as a source
 of today's vacuum fraction. The continued field has receiver w=.7212244363

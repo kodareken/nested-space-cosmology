@@ -548,6 +548,11 @@
         "path": "results/summaries/nsc-atlas-flow-omega-evaluation-v1.json",
         "bytes": 4486,
         "sha256": "957ddb3dc9fb1b6b6dd566c724053483b8ad3c9de8eed92d7aff95c5ae609946"
+      },
+      "damped_offset_test": {
+        "path": "results/summaries/nsc-atlas-p006-damped-offset-v1.json",
+        "bytes": 3324,
+        "sha256": "e81ece652f107822126a47ae27ad06ce65396ab087392a02c93accecee10a74f"
       }
     }
   ]

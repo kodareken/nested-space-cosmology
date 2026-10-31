@@ -1521,9 +1521,9 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 491380,
+      "bytes": 491818,
       "path": "docs/current-result.md",
-      "sha256": "bdc93bc8a4b28ad88b36d63e2fc0e85bde8f85730129bde372e3855cb8877072"
+      "sha256": "84f30c7c3ad916bf501bcc6596ad0c8150e07e6984aca53cdf98172600fef2b8"
     },
     {
       "bytes": 2481,
@@ -1741,9 +1741,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2700425,
+      "bytes": 2700729,
       "path": "docs/lab-snapshot.json",
-      "sha256": "6410ab3cde0ac80c7aca96dfcf2061eff7766b79f4e1e04df8f2f5b256d7c88f"
+      "sha256": "74900aa485bb1af707603509cd30855f0a113a323ad39b185d203f7cae6db3c9"
     },
     {
       "bytes": 4997,
@@ -1981,9 +1981,9 @@
       "sha256": "4f0732e624568c0b6993f55a8dc743baa12c842ac1c80ac94f282070be86a2e1"
     },
     {
-      "bytes": 27511,
+      "bytes": 32054,
       "path": "docs/nsc-atlas-offset-thermodynamics.md",
-      "sha256": "a7a9b5eef17c3ed688b5b36059d02c5ee684728d14a094512730165645635eed"
+      "sha256": "6ad4a2c8c45ba1db2262ac8e880319d8a394cb93540cb50e40ba6ea170c67839"
     },
     {
       "bytes": 11410,
@@ -2686,9 +2686,9 @@
       "sha256": "2768f28027d0e083b8384eefaba0cdd9ce3b24222e2d38ed9021f38eb60e6f04"
     },
     {
-      "bytes": 18037,
+      "bytes": 18705,
       "path": "docs/prediction-register.md",
-      "sha256": "1c2bb094c18b8a38a241d2a4596aae39c4f6c0550063a73bf2c27319251bc6f3"
+      "sha256": "dfcab5f190b8baab77f3b865c24b3a23e5bab40d750847925d6ea8319da91315"
     },
     {
       "bytes": 616259,
@@ -15101,9 +15101,9 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 24280,
+      "bytes": 24501,
       "path": "results/prediction-register.json",
-      "sha256": "d282a03ba7e56536770399a56d0e52ff3ff8fab0fdd770045f053d8535673632"
+      "sha256": "e352419c11b7fa6110d5d83ee0df9ebfe35d63219d366b7ca9e8eb988adcf909"
     },
     {
       "bytes": 170273,
@@ -15761,6 +15761,11 @@
       "sha256": "a8f84fd4ede226068134a3e7b05379524d0c5f683e116318a6cc3c35e101df6c"
     },
     {
+      "bytes": 3324,
+      "path": "results/summaries/nsc-atlas-p006-damped-offset-v1.json",
+      "sha256": "e81ece652f107822126a47ae27ad06ce65396ab087392a02c93accecee10a74f"
+    },
+    {
       "bytes": 7383,
       "path": "results/summaries/nsc-atlas-parent-backreaction-v1.json",
       "sha256": "1e0f4d43916680a23dc1cf39eeec34a446ed4caa39eb094fb08de0948ebaf163"
@@ -16356,9 +16361,9 @@
       "sha256": "4057c89fa075d9dcf847f3c4987bcf0cddec8d6b97d5cc5bee2e68115649a10a"
     },
     {
-      "bytes": 7694,
+      "bytes": 12582,
       "path": "scripts/check_nsc_atlas_flow_cosmology.py",
-      "sha256": "494931eee0fb62182ba2bef1bfc0f537f12575084ad8ab466f4a144735161ad2"
+      "sha256": "af039bbdffa94ddcb1fb92cdbb9e8e4036cf0ad5cb71b729f886ea0f33ffc3dd"
     },
     {
       "bytes": 3337,
@@ -16886,9 +16891,9 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 36307,
+      "bytes": 37374,
       "path": "scripts/check_prediction_register.py",
-      "sha256": "78ec5575daf0f762c0d32e038f775f00f8f6519216e7a8c75574b6bafd847e00"
+      "sha256": "d1127e0d1ef435ee5525b953f00f72eee0d676536a90f6f33658a0fccb66917a"
     },
     {
       "bytes": 56847,
@@ -23131,9 +23136,9 @@
       "sha256": "285cd9e5c59e5db579e74ca2d8f6adfb989c8b9dc9e7f53c109aa36251321e54"
     },
     {
-      "bytes": 6010,
+      "bytes": 7698,
       "path": "tests/test_nsc_atlas_zero_interface.py",
-      "sha256": "14d1782def2f45b26cf048541bcde9696866f0c1afc15781195a7bf7bbe29f5b"
+      "sha256": "8b5423dd12789efd3371a98bab5ef4e2e711bc2a483f251e01bdb6e66be33147"
     },
     {
       "bytes": 6892,
@@ -24796,9 +24801,9 @@
       "sha256": "07fe9ff8a8b9bc1b8beb9c3406038e46ed048bc437eb81a0ef3f8c13fa5f4146"
     },
     {
-      "bytes": 10597,
+      "bytes": 10656,
       "path": "tests/test_prediction_register.py",
-      "sha256": "4f2b49db67fef71093c2691639cdc2a6e2be5c96ab313e7d6ee6e9579ff7a7af"
+      "sha256": "891509cce70617fed860a5919515ecb07b25317cb30cd2c541efdf70abcd3f13"
     },
     {
       "bytes": 1420,
@@ -24996,7 +25001,7 @@
       "sha256": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
     }
   ],
-  "lab_snapshot_sha256": "6410ab3cde0ac80c7aca96dfcf2061eff7766b79f4e1e04df8f2f5b256d7c88f",
+  "lab_snapshot_sha256": "74900aa485bb1af707603509cd30855f0a113a323ad39b185d203f7cae6db3c9",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-31.05",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

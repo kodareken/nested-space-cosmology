@@ -71,7 +71,8 @@ def test_p003_binds_the_observable_and_preserves_synthetic_scope(tmp_path):
 
 def test_p006_missing_prediction_cannot_be_promoted_to_empirical_rejection(tmp_path):
     entry=copy.deepcopy(json.loads((ROOT/checker.REGISTER).read_bytes())['entries'][5])
-    for name in ('forecast','evaluation'):
+    for name in ('forecast','evaluation','damped_offset_test'):
+        if name not in entry:continue
         path=tmp_path/entry[name]['path'];path.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(ROOT/entry[name]['path'],path)
     checker.check_p006(tmp_path,entry)

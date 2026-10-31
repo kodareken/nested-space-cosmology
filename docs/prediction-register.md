@@ -43,6 +43,16 @@ receiving stress, expansion history and event. A future child threshold
 and baryon/photon eta remain unestablished. No empirical Planck rejection
 is recorded. See the [derivation](nsc-atlas-offset-thermodynamics.md).
 
+The requested [damped-offset supporting test](../results/summaries/nsc-atlas-p006-damped-offset-v1.json)
+keeps the P006 forecast/evaluation frozen. The retained late scalar gives
+gamma T=.103283613217 and a positive-first sine amplitude residue
+.025815166405, exceeding 6.1e-10 by 4.23199449e7. This conditional amplitude
+proxy fails that numerical comparison; it is not a baryon/photon eta.
+The real-field sign reversal preserves all crossing/metric responses and
+reverses the residue, so the horizon does not select its sign. Charge
+conversion remains absent. No new prediction identity or cosmology chain
+is opened; details remain in the same thermodynamic owner.
+
 ## NSC-P003 â€” Three freely falling clocks in the inherited parent
 
 Registered retrospectively on 21 October 2026, with a synthetic check and

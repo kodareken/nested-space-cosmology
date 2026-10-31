@@ -1,0 +1,81 @@
+{
+  "H": 0.2714056154003984,
+  "amplitude_lobes": {
+    "absolute_area": 1.5636847549361992,
+    "negative_fraction": 0.4870924167975152,
+    "negative_magnitude_area": 0.7616589863913036,
+    "normalized_signed_residue": 0.02581516640496962,
+    "positive_area": 0.8020257685448957,
+    "positive_fraction": 0.5129075832024849,
+    "signed_area": 0.04036678215359212
+  },
+  "amplitude_loss_per_cycle": 0.0981288453734756,
+  "calculation_source_sha256": "af039bbdffa94ddcb1fb92cdbb9e8e4036cf0ad5cb71b729f886ea0f33ffc3dd",
+  "charge_conversion": "No baryon-number current, charge-biased production/transport law or photon normalization exists in this real-scalar flow; signed charge flux remains zero.",
+  "coefficient_origin": "Existing scalar equation qddot+3h qdot+(mu^2+l(l+2)/a^2)q=0; gamma=3H/2, omega^2=mu^2-9H^2/4.",
+  "eta_comparison": {
+    "comparison_band_role": "Rounding interval of the quoted 6.1e-10, not an observational or theoretical error model.",
+    "empirical_rejection": false,
+    "physical_baryon_photon_eta": null,
+    "proxy_matches_quoted_target": false,
+    "proxy_over_target": 42319944.92617971,
+    "proxy_relative_miss_percent": 4231994392.6179705,
+    "proxy_residue": 0.02581516640496962,
+    "target": 6.1e-10,
+    "target_amplitude_loss_per_cycle": 2.4399999970232e-09,
+    "target_gamma_times_period": 2.4400000000000003e-09
+  },
+  "exact_finite_envelope": "cosh(Ht)^(-3/2)",
+  "finite_gamma": "3H*tanh(Ht)/2",
+  "first_lobe_sign_selected_by_horizon": false,
+  "gamma": 0.40710842310059764,
+  "gamma_over_omega": 0.01643809758395098,
+  "gamma_times_period": 0.10328361321746506,
+  "inherited_parent_commit": "64f9fe84",
+  "mass_squared": 613.5280213887946,
+  "no_new_evolution_campaign": true,
+  "omega": 24.76615198452588,
+  "period": 0.25370050668773164,
+  "phase_integral": "I(phi)=(omega*cos(phi)+gamma*sin(phi))/(gamma^2+omega^2)",
+  "phase_zero_is_supplied_not_selected": true,
+  "prediction_id": "NSC-P006",
+  "rescaled_frequency_squared": "mu^2-9H^2/4+(l(l+2)+3/4)*H^2*sech(Ht)^2",
+  "schema": "nsc-p006-damped-offset-v1",
+  "scope": "Conditional phase-zero exponential late-time sine, not the entire finite horizon history or a baryon prediction.",
+  "sign_counterexample": "chi -> -chi preserves the action, Tkk, area, energy handoff and quadratic light delay, while reversing the signed amplitude integral.",
+  "sign_partition_of_squared_wave": {
+    "residue": 0.05159594809289035,
+    "role": "Sign-labelled partition of positive f^2, not particle charge."
+  },
+  "split_comparison": {
+    "golden_low_high": [
+      0.38196601125010515,
+      0.6180339887498948
+    ],
+    "golden_required_gamma_over_omega": 0.15317448126501657,
+    "model_low_high": [
+      0.4870924167975152,
+      0.5129075832024849
+    ],
+    "proposed_low_high": [
+      0.373,
+      0.627
+    ],
+    "proposed_negative_first_order": [
+      0.373,
+      0.627
+    ],
+    "proposed_positive_first_order": [
+      0.627,
+      0.373
+    ],
+    "proposed_ratio_vs_phi_percent": 3.889359502998402,
+    "proposed_required_gamma_over_omega": 0.16532000747953127,
+    "proposed_required_gamma_times_period": 1.0387362419782102,
+    "proposed_vs_golden_percent": [
+      -2.347332219628917,
+      1.4507310946184182
+    ],
+    "ratios_inferred_from_requested_splits_are_not_model_predictions": true
+  }
+}

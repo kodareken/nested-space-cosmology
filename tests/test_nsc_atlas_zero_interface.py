@@ -7,6 +7,41 @@ and oscillator damping alone is not a microscopic entropy-production theorem.
 import sympy as s
 
 
+def test_damped_offset_lobes_against_segmented_quadrature():
+    import importlib.util
+    import math
+    from pathlib import Path
+    from scipy.integrate import quad
+    path=Path(__file__).resolve().parents[1]/'scripts/check_nsc_atlas_flow_cosmology.py'
+    spec=importlib.util.spec_from_file_location('flow_damping_check',path)
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    result=module.damped_offset_test()
+    gamma,omega=result['gamma'],result['omega']
+    half=math.pi/omega;areas=[0.,0.]
+    # A finite quadrature with an independent absolute remainder bound.
+    for j in range(512):
+        value=quad(lambda t:abs(math.exp(-gamma*t)*math.sin(omega*t)),
+                   j*half,(j+1)*half,epsabs=1e-15)[0]
+        areas[j%2]+=value
+    tail=math.exp(-gamma*512*half)/gamma
+    assert abs(areas[0]-result['amplitude_lobes']['positive_area'])<=tail+1e-13
+    assert abs(areas[1]-result['amplitude_lobes']['negative_magnitude_area'])<=tail+1e-13
+    residue=(areas[0]-areas[1])/sum(areas)
+    assert abs(residue-result['amplitude_lobes']['normalized_signed_residue'])<2*tail/sum(areas)
+
+
+def test_field_equation_selects_amplitude_damping_not_friction_coefficient():
+    t,H,mu,lam=s.symbols('t H mu lam',positive=True)
+    y=s.Function('y')(t)
+    a=s.cosh(H*t)/H;h=H*s.tanh(H*t)
+    envelope=s.cosh(H*t)**(-s.Rational(3,2));q=envelope*y
+    equation=s.diff(q,t,2)+3*h*s.diff(q,t)+(mu**2+lam/a**2)*q
+    expected=s.diff(y,t,2)+(mu**2-s.Rational(9,4)*H**2+
+        (lam+s.Rational(3,4))*H**2/s.cosh(H*t)**2)*y
+    assert s.simplify(s.expand(equation/envelope-expected))==0
+    assert s.limit(-s.diff(envelope,t)/envelope,t,s.oo)==3*H/2
+
+
 def test_weight_one_klein_gordon_operator_on_the_conformal_cylinder():
     eta,lam,m2,xi=s.symbols('eta lam m2 xi',real=True)
     Q=s.Function('Q')(eta)
