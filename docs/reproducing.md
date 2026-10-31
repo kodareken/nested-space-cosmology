@@ -1,5 +1,10 @@
 # Reproducing the root project
 
+The [canonical parent response](nsc-atlas-boson-transport.md#reproduction)
+records resolved-history, response, Schur and plot commands. Full history
+and matrix arrays are regenerated locally; the committed summaries bind
+their producers and retain all finite comparison outcomes.
+
 ## Finite-amplitude nonspherical initial data
 
 ```powershell

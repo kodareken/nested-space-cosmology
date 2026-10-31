@@ -1,0 +1,37 @@
+{
+  "background_degree": 16,
+  "background_history_sha256": "c9ab5071ddb451a47673b2a2f912181fa5e37ff48d9885a74954ecb9e8d70326",
+  "background_producer_commit": "771c5a7879cd23a6f80fa927c827e77717ff3fbc",
+  "derivation": "Initially deltaS=normal(deltaS)=deltachi=0 and normal(deltachi)=f/sqrt(h). The differentiated field equation gives deltaS=-W_Schi*f*tau^3/(6sqrt(h))+O(tau^4). No projected Hamiltonian or chosen covariance is used.",
+  "epsilon": 0.25,
+  "initial_lapse": 1.0,
+  "initial_mixing_mass_squared": -10.887532031378178,
+  "initial_volume_weight": 0.9767201381542958,
+  "observer_quaternion": [
+    0.40837076508409503,
+    0.6454584875205496,
+    0.0,
+    0.6454584875205496
+  ],
+  "response": [
+    {
+      "local_log_g_KK_coordinate_cubic_coefficient": -0.03688199991948825,
+      "local_log_g_KK_proper_cubic_coefficient": -0.03688199991948825,
+      "local_volume_proper_cubic_coefficient": 0.04828987326068859,
+      "physical_reference_harmonic_at_observer": 0.02599249759084079,
+      "source_harmonic": 1
+    },
+    {
+      "local_log_g_KK_coordinate_cubic_coefficient": -0.09216628361189663,
+      "local_log_g_KK_proper_cubic_coefficient": -0.09216628361189663,
+      "local_volume_proper_cubic_coefficient": 0.12067399176408121,
+      "physical_reference_harmonic_at_observer": 0.06495395884085811,
+      "source_harmonic": 2
+    }
+  ],
+  "schema": "nsc-atlas-boson-onset-v1",
+  "scope": "Local proper-age onset for a global unit canonical momentum impulse and fixed background geodesic. Background discretization remains; no primordial state, entropy, charge bias or SI scale is selected.",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_boson_onset.py": "7b49e33c18e8d94c08b057c626086a1c70715a2416388c6306ea97533fc3bb77"
+  }
+}

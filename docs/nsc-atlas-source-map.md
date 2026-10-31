@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **328 distinct arXiv works**: 109 are cited in the main argument and 219 are retained in the reading library only.
+This navigation index contains **330 distinct arXiv works**: 111 are cited in the main argument and 219 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -47,6 +47,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1109.0011](https://arxiv.org/abs/1109.0011) | How to approach the work | See the linked reading route and manuscript section for the stated use and assumptions. | 13.3 |
 | [1109.2524](https://arxiv.org/abs/1109.2524) | Studies | Chung et al.: gravitational Dirac production in inflation, cited as different from the anisotropic radius-pulse benchmark. | Library only |
 | [1109.6234](https://arxiv.org/abs/1109.6234) | Studies | Clemson et al.: primary analysis that different momentum-transfer completions can alter growth. | Library only |
+| [1110.3234](https://arxiv.org/abs/1110.3234v1) | Massive coupled-parent covariance and memory, 31 October 2026 | read I.4, II.1.1--II.1.2 and II.3.1, including covariance, canonical transport and equations44--49 for Gaussian entropy. Convert their hbar=2 convention to hbar=1 here. The atlas computes the spectrum using the Hermitian Cholesky form i L^T J L. Other information protocols in the review were not ... | 15.21 |
 | [1110.5019](https://arxiv.org/abs/1110.5019) | Studies | Popławski: mass of the universe in a black hole; the closed spin-torsion bounce (equations 1–4), its density and its scaling with the parent mass, used for the child energy floor in the child and neck chain and checked for self-consistency in its collapse note. | 13.31 |
 | [1111.3328](https://arxiv.org/abs/1111.3328) | Studies | Pusey, Barrett and Rudolph: on the reality of the quantum state. | Library only |
 | [1112.0475](https://arxiv.org/abs/1112.0475) | Studies | Archived: Olmo and Rubiera-Garcia, a regular-core comparator for Ricci-based gravity, not evidence for the proposed phase transition. | Library only |
@@ -274,6 +275,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [gr-qc/9211017](https://arxiv.org/abs/gr-qc/9211017) | Studies | Archived: Bekenstein, relation between physical and gravitational geometry. | Library only |
 | [gr-qc/9307009](https://arxiv.org/abs/gr-qc/9307009v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 15.15 |
 | [gr-qc/9309015](https://arxiv.org/abs/gr-qc/9309015) | Compact-seed nonlinear continuation, 25 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | 14.1, 14.19 |
+| [gr-qc/9312035](https://arxiv.org/abs/gr-qc/9312035) | Massive coupled-parent covariance and memory, 31 October 2026 | read section2, equations2.1--2.28: parametric-oscillator environments, reduced evolution, state-independent dissipation and state-dependent noise. Their factorized initial-state example is not imposed here; the inherited cross covariance is retained. Later applications and appendices were not read ... | 15.21 |
 | [gr-qc/9403003](https://arxiv.org/abs/gr-qc/9403003v1) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [gr-qc/9403008](https://arxiv.org/abs/gr-qc/9403008) | Studies | Archived: Garay, quantum gravity and minimum length. | Library only |
 | [gr-qc/9404011](https://arxiv.org/abs/gr-qc/9404011v1) | Atlas reuse library, 10 October 2026 | Smolin: the fate of black-hole singularities and Standard Model parameters, cited as a prior natural-selection proposal. | Library only |

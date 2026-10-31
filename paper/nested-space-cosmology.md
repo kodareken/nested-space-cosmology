@@ -9943,6 +9943,151 @@ The finite work identity does not supply a microscopic entropy law,
 charge bias, SI ruler or regular daughter. The full-amplitude source
 remains underresolved; it is not replaced by the smaller control.
 
+### 15.21. The inherited interaction supplies a nonzero canonical response
+
+<!-- nsc-claim:canonical-parent-onset -->
+
+The next connection uses the same evolving geometry to determine how the
+scalar and internal volume respond to one another. It needs no new
+fluctuation width. The [derivation](../docs/nsc-atlas-boson-transport.md)
+separates a state-independent response from the inherited covariance
+needed for noise and entropy. The canonical matter probes hold the
+classical metric fixed; metric fluctuations and quantum backreaction
+remain outside this calculation.
+
+The second variation of the existing potential gives
+
+$$
+W_{SS}=\frac{V''+72\mu^2\chi^2}{84},\qquad
+W_{S\chi}=-\frac{12\mu^2\chi}{\sqrt{84}},\qquad W_{\chi\chi}=\mu^2.
+$$
+
+For canonical field coefficients q and momentum-density coefficients p,
+the lapse, shift and spatial metric determine
+
+$$
+H_2=\frac{1}{2}q^TKq+p^TBq+\frac{1}{2}p^TAp,\qquad
+\dot{z}=JG(t)z,\qquad \dot{M}=JG(t)M.
+$$
+
+Here z=(q,p), G is the symmetric Hessian of H2, and J is the canonical
+antisymmetric form. A directly projects N/sqrt(det h). This is not the
+inverse of a truncated Lagrangian mass matrix. Shift transport is retained.
+The impulses use the parent's Y1/Y2 shapes, normalized in the physical
+reference volume.
+
+**A local connection follows before a state is chosen.** Initially set
+both field displacements and S momentum to zero, and apply a unit
+chi-momentum-density kick f. The normal derivative of the chi perturbation is then
+f/sqrt(det h). Differentiating the coupled field equation gives, along
+the initially normal background observer,
+
+$$
+\delta S(\tau,X_0)=-\frac{W_{S\chi}(0,X_0)f(X_0)}{6\sqrt{\det h(0,X_0)}}\tau^3
++O(\tau^4).
+$$
+
+The first two orders vanish. Spatial and expansion terms act on those
+zero initial S data; the third derivative contains the inherited mixing
+force. Lapse factors cancel in the proper parameter. The corresponding
+local coefficient is delta ln(g_KK)=-7 delta S/sqrt(84), using the same
+internal action coefficient as the preceding section.
+
+The [independent initial-slice calculation](../results/summaries/nsc-atlas-boson-onset-v1.json)
+gives W_Schi=-10.8875320314 and sqrt(det h)=.976720138154 at the
+prescribed observer. For Y1 and Y2 the local delta-ln(g_KK) cubic
+coefficients are respectively **-.0368819999195** and **-.0921662836119**.
+These are per unit canonical impulse in model units, on the supplied
+epsilon=.25 geometry. No covariance, SI coupling or fitted amplitude
+enters them. The onset expression is an asymptotic statement; the full
+history contains oscillatory response.
+
+<!-- nsc-claim:coupled-parent-memory -->
+
+**Eliminating the unresolved volume produces actual memory.** Retain
+x=(q_chi,p_chi), eliminate y=(q_S,p_S), and partition D=JG. Variation
+of constants gives
+
+$$
+\dot{x}(t)=D_{xx}(t)x(t)+\int_{t_0}^t\mathcal{K}(t,s)x(s)\,ds+L(t)y_0,
+$$
+
+$$
+\mathcal{K}(t,s)=D_{xy}(t)U_y(t,s)D_{yx}(s),\qquad
+L(t)=D_{xy}(t)U_y(t,t_0).
+$$
+
+U_y propagates the uncoupled eliminated operator. The vertices and
+operator now come from the same nonlinear parent, rather than supplied
+finite matrices. This is the physical input required by the earlier
+Schur construction. The [finite response record](../results/summaries/nsc-atlas-boson-response-v1.json)
+preserves the cutoff and time controls. Removing only the fluctuation
+mixing gives exactly zero cross-field response in the matched control.
+
+At the fixed final/midpoint pair of the existing proper interval, the
+degree8 source-projected p_chi-from-q_chi memory, divided by mu_star cubed,
+is
+
+| Return mode / source mode | Y1 | Y2 |
+| --- | --- | --- |
+| Y1 | -6.46382e-6 | 9.60336e-5 |
+| Y2 | 6.78526e-5 | 3.96355e-5 |
+
+This is a chart-time memory coefficient in a finite harmonic sector.
+It is not vacuum stress or a cosmological constant. Probe refinement
+remains necessary for late pointwise readouts; canonical conservation
+alone cannot certify spatial convergence.
+
+For the two unit kicks, define the dimensionless reference response ratio
+
+$$
+\mathcal{R}_f=
+\frac{\sqrt{p_S^Tp_S+m_{S,*}^2q_S^Tq_S}}
+{\sqrt{p_\chi^Tp_\chi+\mu_*^2q_\chi^Tq_\chi}}.
+$$
+
+The masses are those of the retained vacuum. This norm omits gradients,
+current metric weights and interaction energy; its ratio is not an
+energy-conversion fraction. At the common proper endpoint:
+
+| Probe cutoff | R for Y1 | R for Y2 |
+| --- | --- | --- |
+| 6 | .0034403801 | .0033244963 |
+| 8 | .0031865558 | .0030892087 |
+| 10 | .0031684672 | .0030235003 |
+
+The final adjacent spreads are1.81e-5 and6.57e-5. They are empirical
+indicators, not certified bounds. The half-step control is at degree6,
+not degree10. Background discretization is also retained. Late pointwise
+coupling readouts remain more sensitive and are not admitted as converged.
+The [shell record](../results/summaries/nsc-atlas-boson-shells-v1.json)
+preserves the omitted-mode diagnosis. Canonical-form defects stay below
+2.3e-13 through the stored checkpoints.
+
+![Same-parent onset, finite response controls and unresolved-volume memory](figures/nsc-atlas-boson-response.png)
+
+For an inherited covariance Gamma0, the same map gives
+
+$$
+\Gamma(t)=M(t)\Gamma_0M(t)^T,\qquad M(t)^TJM(t)=J.
+$$
+
+The unresolved force covariance is L(t) Gamma_yy L(s)^T and its
+correlation with the initial retained field is L(t) Gamma_yx. Both must
+be carried. The full retained-sector entropy is preserved; reduced
+entropy can change when volume is unobserved. Invertible transport
+cannot select one full finite incoming covariance from several.
+
+[Gaussian-state methods](https://arxiv.org/html/1110.3234v1) supply the
+covariance and entropy machinery, with its Planck-constant convention
+converted explicitly. [Hu--Matacz](https://arxiv.org/abs/gr-qc/9312035)
+supplies the parametric-environment context for noise and dissipation.
+The Hamiltonian, onset and displayed memory are derived and calculated
+for the atlas geometry. Quantization is imported; a continuum Hadamard
+state, entropy/area normalization and primordial preparation are not
+selected. Finite harmonic projection preserves time ordering without
+proving exact continuum light-cone support.
+
 ## VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
@@ -14178,7 +14323,7 @@ Each calculation retains its own domain; arrows do not declare questions solved.
 <!-- nsc-source-catalog:start -->
 ## Appendix C. Complete arXiv source route index
 
-The index contains 328 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
+The index contains 330 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
 
 A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
 
@@ -14244,6 +14389,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Flow, interface stress and horizon hydrodynamics, 27 October 2026 | [gr-qc/9209012](https://arxiv.org/abs/gr-qc/9209012), [gr-qc/9712010](https://arxiv.org/abs/gr-qc/9712010v2), [hep-th/0405231 †](https://arxiv.org/abs/hep-th/0405231) |
 | Spacetime arrival maps and the forming source, 25 October 2026 | [1010.3416](https://arxiv.org/abs/1010.3416), [2011.04440](https://arxiv.org/abs/2011.04440v4) |
 | Local fluid/gravity completion, 30 October 2026 | [1103.3022](https://arxiv.org/abs/1103.3022v2) |
+| Massive coupled-parent covariance and memory, 31 October 2026 | [1110.3234](https://arxiv.org/abs/1110.3234v1), [gr-qc/9312035](https://arxiv.org/abs/gr-qc/9312035) |
 | The owned gravitational spectral profile, 18 October 2026 | [1203.2034](https://arxiv.org/abs/1203.2034v2), [1410.7999](https://arxiv.org/abs/1410.7999v2) |
 | Connected flow, horizon transfer and observer geometry, 30 October 2026 | [1205.5600](https://arxiv.org/abs/1205.5600), [1403.2757](https://arxiv.org/abs/1403.2757v3), [1501.06570](https://arxiv.org/abs/1501.06570v8), [1807.09409](https://arxiv.org/abs/1807.09409) |
 | Causal volume response and static comparison, 30 October 2026 | [1210.2745](https://arxiv.org/abs/1210.2745v2), [2112.14263](https://arxiv.org/abs/2112.14263v1) |

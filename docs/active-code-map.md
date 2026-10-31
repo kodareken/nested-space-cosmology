@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+The [bosonic transport owner](nsc-atlas-boson-transport.md) connects
+`nsc_atlas_gh_history.py`, `nsc_atlas_boson_hamiltonian.py`,
+`nsc_atlas_boson_parent.py` and `nsc_atlas_boson_transport.py`. The same
+resolved parent supplies canonical response and Schur memory. Independent
+local onset and shell/time diagnostics distinguish exact identities from
+finite-cutoff results; no incoming covariance or SI ruler is selected.
+
 The [nonlinear GH owner](nsc-atlas-parent-gh.md) maps `nsc_atlas_parent_gh.py`,
 `nsc_atlas_s3_frame.py`, `nsc_atlas_s3_hopf.py`, `nsc_atlas_gh_pointwise.py`
 and independent ADM/wave diagnostics. It evolves the same nonspherical

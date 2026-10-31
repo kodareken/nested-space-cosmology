@@ -1,10 +1,10 @@
 {
-  "bytes": 20915463,
+  "bytes": 21270520,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "db210f9ada7a7fd13922b9c06039f7e10699bcfc316c4e738bf01d70319f419e",
+  "metadata_sha256": "cdadbaf6f38d86ca9a863dcb538c84a2178b897586ea1008d0759a07253f9d3d",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 236,
-  "pdf_sha256": "acafa6126ed66fb839755513dff28a2127ac2652137919ff9e248528bc2f1ee1",
+  "pages": 239,
+  "pdf_sha256": "cbbef0e8317fa00aa56488d5c5e10da7acead89dc5b558c9cc46ac5acc0c0ae9",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -174,6 +174,10 @@
     {
       "path": "paper/figures/geometry-overview.png",
       "sha256": "d533d0e5e9cb30025649bcb6b2c597d5b54ce42a421eb483ccf0a86f6730fa5e"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-boson-response.png",
+      "sha256": "52ce8ecd71b5589e868ba8f316cc3fef22e138ef2479c578cedd912fa0a5b08f"
     },
     {
       "path": "paper/figures/nsc-atlas-characteristic-handoff.png",
@@ -570,6 +574,18 @@
     {
       "path": "results/summaries/nsc-atlas-SI-scale-ladder-v1.json",
       "sha256": "66f2214ce696ac0039c925d2f9c255cf012fe0b276b55de7ca4d34a1b290f296"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-boson-onset-v1.json",
+      "sha256": "9fe4107c0d16bafe4792058687834076af1c194ee7a2d9bd75aba440f13bfe55"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-boson-response-v1.json",
+      "sha256": "4a78244754508aa70ea12ed4a5069cddb2ffa0634c6be3de6a7c8631e7fbd36e"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-boson-shells-v1.json",
+      "sha256": "aa41429f18dec1d005f43ddfae4a7407764653fba49c9fbd0102486b4041898d"
     },
     {
       "path": "results/summaries/nsc-atlas-boundary-work-v1.json",
@@ -1061,6 +1077,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "d5559fee442169fc9935560d46c8099e1adb227b901cf0f7f40b82b79e873754",
-  "version": "working-2026-10-31.03"
+  "source_sha256": "20475b9d5008b11e690e305b97fadca73d4a34f184ca374f6cbb9ecc75c4e0b2",
+  "version": "working-2026-10-31.04"
 }

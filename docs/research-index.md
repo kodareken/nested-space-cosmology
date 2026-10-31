@@ -2,9 +2,10 @@
 
 The [bosonic inheritance calculation](nsc-atlas-boson-transport.md) now
 derives the massive volume--matter fluctuation operator and canonical
-transport. A resolved passive history of the actual nonlinear parent is
-the next input. Retarded response is separated from the still-inherited
-covariance that determines noise and reduced entropy.
+transport. The resolved passive history reproduces the checked nonlinear
+parent. Local onset, finite response controls and volume-mediated Schur
+memory are calculated. Retarded response is separated from the incoming
+covariance still needed for noise and reduced entropy.
 
 The [nonlinear parent implementation](nsc-atlas-parent-gh.md) now contains
 global regular-frame evolution, fast circle-fiber transforms, independent

@@ -1,5 +1,17 @@
 # Cited arXiv studies
 
+## Massive coupled-parent covariance and memory, 31 October 2026
+
+- [Weedbrook et al., 1110.3234v1](https://arxiv.org/html/1110.3234v1) — read I.4, II.1.1--II.1.2 and II.3.1, including covariance, canonical transport and equations44--49 for Gaussian entropy. Convert their hbar=2 convention to hbar=1 here. The atlas computes the spectrum using the Hermitian Cholesky form i L^T J L. Other information protocols in the review were not rechecked.
+- [Hu--Matacz, gr-qc/9312035v1](https://arxiv.org/pdf/gr-qc/9312035) — read section2, equations2.1--2.28: parametric-oscillator environments, reduced evolution, state-independent dissipation and state-dependent noise. Their factorized initial-state example is not imposed here; the inherited cross covariance is retained. Later applications and appendices were not read in full.
+
+The [actual-parent calculation](nsc-atlas-boson-transport.md) derives its
+Hamiltonian and memory vertices from the fixed scalar/volume action and
+resolved nonspherical metric. [Blanes--Moan](https://doi.org/10.1016/j.apnum.2005.11.004)
+supplies the commutator-free Magnus method family; publisher metadata and
+abstract were inspected, and the implemented fourth-order coefficient
+ordering is independently checked against a noncommuting reference solve.
+
 ## Finite compact-parent data and nonlinear continuation, 31 October 2026
 
 [Lindblom--Szilagyi--Taylor, 1312.0701v2](https://arxiv.org/html/1312.0701v2),

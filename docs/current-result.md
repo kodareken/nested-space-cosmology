@@ -1,5 +1,17 @@
 # What the calculations show
 
+The [canonical parent response](nsc-atlas-boson-transport.md) now connects
+the same nonlinear metric and inherited potential to massive fluctuation
+transport. A direct local onset proof gives log-coupling cubic coefficients
+-.0368819999195 and-.0921662836119 per unit reference momentum kick.
+Finite symplectic maps supply nonzero volume-mediated memory. Endpoint
+reference response ratios settle toward .00316847 and .00302350 under
+probe refinement, with final adjacent spreads1.81e-5 and6.57e-5. These are
+empirical reference-norm diagnostics, not energy fractions or certified
+physical errors. The late pointwise response and the actual incoming
+covariance/noise remain open; the scalar/volume matter probe omits metric
+fluctuations and quantum backreaction.
+
 The [nonlinear nonspherical evolution implementation](nsc-atlas-parent-gh.md)
 now connects exact regular-frame derivatives, fast Hopf transforms, full
 covariant GH/two-scalar equations and independent ADM constraints. Vacuum

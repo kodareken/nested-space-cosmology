@@ -1,18 +1,25 @@
 # Cosmological atlas: regions, boundaries and observer measurements
 
+The [canonical volume--matter successor](nsc-atlas-boson-transport.md)
+now derives a state-independent response and Schur memory on the actual
+evolving nonspherical parent. Its local onset has a direct field-equation
+proof. Incoming covariance enters noise and reduced entropy explicitly;
+the calculation does not install a new local vacuum or select an SI ruler.
+
 The [nonlinear covariant GH implementation](nsc-atlas-parent-gh.md) now
 retains the nonspherical source, internal volume and all metric components.
 It includes exact regular-frame derivatives, fast circle-fiber transforms
-and independent physical constraints. A coarse finite run is not yet
-resolved; higher-resolution evolution remains an active requirement before
-physical concentration or a daughter is inferred.
+and independent physical constraints. The epsilon=.25 control has three
+spatial resolutions, linked local readouts and independent matter work.
+The original full-amplitude run remains unresolved; physical concentration
+or a daughter has not been inferred from the smaller control.
 
 The [finite-amplitude initial-data successor](nsc-atlas-finite-parent-data.md)
 now retains the actual nonspherical source in the full Hamiltonian
 constraint. A weighted equivariant existence proof covers0<=epsilon<=1;
 the finite benchmark is resolved at three harmonic degrees. Proper
-volume/energy and covariant GH starting data are supplied. Next is the
-nonlinear Einstein--two-scalar evolution, using a regular compact-space
+volume/energy and covariant GH starting data feed the nonlinear
+Einstein--two-scalar implementation, using a regular compact-space
 formulation and retaining physical modes. The old spherical campaigns
 do not implement this state. The earlier perturbative clock formulas
 are not extrapolated to the finite benchmark.

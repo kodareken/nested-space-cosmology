@@ -1,0 +1,998 @@
+{
+  "cases": [
+    {
+      "coordinate_endpoint": 4.467323828718838,
+      "decoupled_control": false,
+      "matrix": ".build\\boson-P2-h02.npz",
+      "matrix_binding_verified": true,
+      "matrix_sha256": "d6b8f6bcfbf1da6af2d9b553ce5e8108d129e8361ce08ec56039991fed3fa6df",
+      "max_step": 0.02,
+      "mode_counts": {
+        "S": 5,
+        "chi": 3,
+        "total": 8
+      },
+      "observer_proper_endpoint": 4.364851930252217,
+      "probe_degree": 2,
+      "record": ".build\\boson-P2-h02.json",
+      "record_sha256": "ae5d2cc420ab0bfabd5ad83639bf616ed03747c391d4a16a91055276a15a44dc",
+      "responses": [
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.984372980778961,
+          "last_degree_power_fraction": 0.9689901652876567,
+          "last_two_degrees_norm_fraction": 0.984372980778961,
+          "last_two_degrees_power_fraction": 0.9689901652876567,
+          "power_by_degree": {
+            "0": 7.778857606588098e-06,
+            "1": 1.460366422144237e-30,
+            "2": 0.00024307245065568266
+          },
+          "power_fraction_by_degree": {
+            "0": 0.03100983471234332,
+            "1": 5.821641642057496e-27,
+            "2": 0.9689901652876567
+          },
+          "reference_norm": 0.015838286152935574,
+          "reference_norm_squared": 0.00025085130826227076,
+          "source_harmonic": 1
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.2577804808129456,
+          "last_degree_power_fraction": 0.06645077628815341,
+          "last_two_degrees_norm_fraction": 1.0,
+          "last_two_degrees_power_fraction": 1.0,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 3.5251855178410922,
+            "2": 0.2509255090898149
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.9335492237118467,
+            "2": 0.06645077628815341
+          },
+          "reference_norm": 1.9432218161936397,
+          "reference_norm_squared": 3.776111026930907,
+          "source_harmonic": 1
+        },
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.9903645363361121,
+          "last_degree_power_fraction": 0.9808219148322423,
+          "last_two_degrees_norm_fraction": 0.9903645363361121,
+          "last_two_degrees_power_fraction": 0.9808219148322423,
+          "power_by_degree": {
+            "0": 5.593687387868704e-06,
+            "1": 9.539708990165791e-35,
+            "2": 0.00028607710971928285
+          },
+          "power_fraction_by_degree": {
+            "0": 0.019178085167757614,
+            "1": 3.270711049848838e-31,
+            "2": 0.9808219148322423
+          },
+          "reference_norm": 0.017078372203086323,
+          "reference_norm_squared": 0.00029167079710715156,
+          "source_harmonic": 2
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.9553546823944719,
+          "last_degree_power_fraction": 0.9127025691730422,
+          "last_two_degrees_norm_fraction": 1.0,
+          "last_two_degrees_power_fraction": 1.0,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.2839384762351285,
+            "2": 2.968602561289279
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.0872974308269578,
+            "2": 0.9127025691730422
+          },
+          "reference_norm": 1.8034802570375998,
+          "reference_norm_squared": 3.2525410375244075,
+          "source_harmonic": 2
+        }
+      ],
+      "source_binding_verified": true
+    },
+    {
+      "coordinate_endpoint": 4.467323828718838,
+      "decoupled_control": false,
+      "matrix": ".build\\boson-P4-h02.npz",
+      "matrix_binding_verified": true,
+      "matrix_sha256": "14c081fcf482beeee33c3fe8ffd67677616523542943a48ca56e20ea5c234104",
+      "max_step": 0.02,
+      "mode_counts": {
+        "S": 16,
+        "chi": 13,
+        "total": 29
+      },
+      "observer_proper_endpoint": 4.364851930252217,
+      "probe_degree": 4,
+      "record": ".build\\boson-P4-h02.json",
+      "record_sha256": "2ad4b4c4f3789d386500b8e65fab0a96376481d44584713d524718b330e5227c",
+      "responses": [
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.3898455915100667,
+          "last_degree_power_fraction": 0.1519795852198338,
+          "last_two_degrees_norm_fraction": 0.517720712196048,
+          "last_two_degrees_power_fraction": 0.2680347358367831,
+          "power_by_degree": {
+            "0": 1.9622621553175823e-05,
+            "1": 1.6782694096104572e-30,
+            "2": 1.5248407193883765e-05,
+            "3": 5.5288996507702595e-06,
+            "4": 7.240349705973574e-06
+          },
+          "power_fraction_by_degree": {
+            "0": 0.41189141487419706,
+            "1": 3.5227951565557093e-26,
+            "2": 0.3200738492890198,
+            "3": 0.11605515061694932,
+            "4": 0.1519795852198338
+          },
+          "reference_norm": 0.006902193716768853,
+          "reference_norm_squared": 4.7640278103803425e-05,
+          "source_harmonic": 1
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.3449872152638279,
+          "last_degree_power_fraction": 0.11901617869549075,
+          "last_two_degrees_norm_fraction": 0.4016953289220227,
+          "last_two_degrees_power_fraction": 0.161359137277772,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 2.4365749142551887,
+            "2": 0.21560238726989417,
+            "3": 0.13390837320615867,
+            "4": 0.37638519857693004
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.770465566914884,
+            "2": 0.06817529580734402,
+            "3": 0.04234295858228124,
+            "4": 0.11901617869549075
+          },
+          "reference_norm": 1.7783337350756667,
+          "reference_norm_squared": 3.1624708733081714,
+          "source_harmonic": 1
+        },
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.8206598583398715,
+          "last_degree_power_fraction": 0.673482603090418,
+          "last_two_degrees_norm_fraction": 0.9676346840352597,
+          "last_two_degrees_power_fraction": 0.9363168817480169,
+          "power_by_degree": {
+            "0": 1.1577770790133933e-05,
+            "1": 1.8395173532559353e-34,
+            "2": 6.662936697224914e-06,
+            "3": 7.528342402572196e-05,
+            "4": 0.00019290511359994198
+          },
+          "power_fraction_by_degree": {
+            "0": 0.040421049832273355,
+            "1": 6.422239993440878e-31,
+            "2": 0.02326206841970962,
+            "3": 0.26283427865759895,
+            "4": 0.673482603090418
+          },
+          "reference_norm": 0.01692422066486439,
+          "reference_norm_squared": 0.0002864292451130228,
+          "source_harmonic": 2
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.220679420479709,
+          "last_degree_power_fraction": 0.04869940662326021,
+          "last_two_degrees_norm_fraction": 0.4151897744211916,
+          "last_two_degrees_power_fraction": 0.17238254878391995,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.23830987050467414,
+            "2": 2.1584405932997175,
+            "3": 0.3581819449345441,
+            "4": 0.14103173542291994
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.08229033877546345,
+            "2": 0.7453271124406167,
+            "3": 0.12368314216065973,
+            "4": 0.04869940662326021
+          },
+          "reference_norm": 1.7017532559574715,
+          "reference_norm_squared": 2.8959641441618555,
+          "source_harmonic": 2
+        }
+      ],
+      "source_binding_verified": true
+    },
+    {
+      "coordinate_endpoint": 4.467323828718838,
+      "decoupled_control": false,
+      "matrix": ".build\\boson-P6-h02.npz",
+      "matrix_binding_verified": true,
+      "matrix_sha256": "d07087263111bafcd682648a38e4ca509692c3049d6e0041c8b17ebd84c97a4e",
+      "max_step": 0.02,
+      "mode_counts": {
+        "S": 38,
+        "chi": 34,
+        "total": 72
+      },
+      "observer_proper_endpoint": 4.364851930252217,
+      "probe_degree": 6,
+      "record": ".build\\boson-P6-h02.json",
+      "record_sha256": "34e0639c7e7fbc7b3adfb2fcdeb8fbbf95e12fd6d89e289d067cbdd3f6556947",
+      "responses": [
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.16179676463429282,
+          "last_degree_power_fraction": 0.026178193046124745,
+          "last_two_degrees_norm_fraction": 0.2674190441133245,
+          "last_two_degrees_power_fraction": 0.0715129451544842,
+          "power_by_degree": {
+            "0": 1.7294201422750218e-05,
+            "1": 1.6055869270588987e-30,
+            "2": 1.1667859511008985e-05,
+            "3": 6.412729250394013e-06,
+            "4": 1.3444799693865986e-06,
+            "5": 1.792872610687695e-06,
+            "6": 1.0352800694158374e-06
+          },
+          "power_fraction_by_degree": {
+            "0": 0.43730286788847045,
+            "1": 4.059902800273022e-26,
+            "2": 0.29503463626669074,
+            "3": 0.16215289874562058,
+            "4": 0.03399665194473399,
+            "5": 0.04533475210835944,
+            "6": 0.026178193046124745
+          },
+          "reference_norm": 0.006288674171368982,
+          "reference_norm_squared": 3.954742283364335e-05,
+          "source_harmonic": 1
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.08639966371126716,
+          "last_degree_power_fraction": 0.007464901889420056,
+          "last_two_degrees_norm_fraction": 0.21599516891497936,
+          "last_two_degrees_power_fraction": 0.04665391299461046,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 2.4332009061056348,
+            "2": 0.23997255819813162,
+            "3": 0.13542980650754705,
+            "4": 0.37673770229426434,
+            "5": 0.13093918826578957,
+            "6": 0.024941894840387092
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.7282368143063124,
+            "2": 0.07182179279344582,
+            "3": 0.04053301583346306,
+            "4": 0.11275446407216823,
+            "5": 0.03918901110519041,
+            "6": 0.007464901889420056
+          },
+          "reference_norm": 1.8279009973769789,
+          "reference_norm_squared": 3.3412220562117545,
+          "source_harmonic": 1
+        },
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.12152193433105393,
+          "last_degree_power_fraction": 0.014767580523560985,
+          "last_two_degrees_norm_fraction": 0.2750152536945486,
+          "last_two_degrees_power_fraction": 0.07563338976467691,
+          "power_by_degree": {
+            "0": 1.798151070459685e-05,
+            "1": 6.316298179493127e-33,
+            "2": 7.885326473508377e-06,
+            "3": 5.009009869716599e-06,
+            "4": 2.0055605090202984e-06,
+            "5": 2.165107932040774e-06,
+            "6": 5.253097942385384e-07
+          },
+          "power_fraction_by_degree": {
+            "0": 0.5054986794036949,
+            "1": 1.7756463519149696e-28,
+            "2": 0.22167337241617185,
+            "3": 0.14081396807302257,
+            "4": 0.056380590342433784,
+            "5": 0.06086580924111592,
+            "6": 0.014767580523560985
+          },
+          "reference_norm": 0.005964212042099228,
+          "reference_norm_squared": 3.557182528312144e-05,
+          "source_harmonic": 2
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.2682219170069727,
+          "last_degree_power_fraction": 0.07194299676289534,
+          "last_two_degrees_norm_fraction": 0.4728890420271213,
+          "last_two_degrees_power_fraction": 0.22362404606932848,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.24893461084476284,
+            "2": 1.7114842471171792,
+            "3": 0.3482760176028628,
+            "4": 0.1900765455938467,
+            "5": 0.48818651481845965,
+            "6": 0.2315490367179574
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.07734474803275428,
+            "2": 0.5317634113074611,
+            "3": 0.10821042817602732,
+            "4": 0.05905736641442882,
+            "5": 0.15168104930643317,
+            "6": 0.07194299676289534
+          },
+          "reference_norm": 1.7940197804637128,
+          "reference_norm_squared": 3.2185069726950686,
+          "source_harmonic": 2
+        }
+      ],
+      "source_binding_verified": true
+    },
+    {
+      "coordinate_endpoint": 4.467323828718838,
+      "decoupled_control": false,
+      "matrix": ".build\\boson-P6-h01.npz",
+      "matrix_binding_verified": true,
+      "matrix_sha256": "c2d9e911cc583e767c75eeebc6dc00d8640ac5c418e989d3d393d343a8da8ad2",
+      "max_step": 0.01,
+      "mode_counts": {
+        "S": 38,
+        "chi": 34,
+        "total": 72
+      },
+      "observer_proper_endpoint": 4.364851930252217,
+      "probe_degree": 6,
+      "record": ".build\\boson-P6-h01.json",
+      "record_sha256": "2527c123d6e4b951ba11f096d37814bdc4f593f9ece698c29d66d0a5db4d6ba7",
+      "responses": [
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.16178263082177824,
+          "last_degree_power_fraction": 0.02617361963561579,
+          "last_two_degrees_norm_fraction": 0.26740480301288916,
+          "last_two_degrees_power_fraction": 0.07150532867436205,
+          "power_by_degree": {
+            "0": 1.7292167854146682e-05,
+            "1": 1.5469742680577325e-30,
+            "2": 1.1665058838762827e-05,
+            "3": 6.409955858663443e-06,
+            "4": 1.3441067024634218e-06,
+            "5": 1.7923479092510295e-06,
+            "6": 1.0348657358435456e-06
+          },
+          "power_fraction_by_degree": {
+            "0": 0.43735009133405406,
+            "1": 3.9125767407135053e-26,
+            "2": 0.2950303623918756,
+            "3": 0.16211933656204097,
+            "4": 0.03399488103766734,
+            "5": 0.045331709038746254,
+            "6": 0.02617361963561579
+          },
+          "reference_norm": 0.006287964925087524,
+          "reference_norm_squared": 3.953850289913095e-05,
+          "source_harmonic": 1
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.08639976452968194,
+          "last_degree_power_fraction": 0.007464919310784485,
+          "last_two_degrees_norm_fraction": 0.2159954040519801,
+          "last_two_degrees_power_fraction": 0.04665401457157814,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 2.4331911665992245,
+            "2": 0.23997277791447919,
+            "3": 0.13543023117800485,
+            "4": 0.3767381281493805,
+            "5": 0.1309391270331039,
+            "6": 0.024941887824201966
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.7282358037370388,
+            "2": 0.07182204637205358,
+            "3": 0.04053324893088931,
+            "4": 0.11275488638844013,
+            "5": 0.03918909526079365,
+            "6": 0.007464919310784485
+          },
+          "reference_norm": 1.827898607335318,
+          "reference_norm_squared": 3.341213318698395,
+          "source_harmonic": 1
+        },
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.1215055845042906,
+          "last_degree_power_fraction": 0.014763607065729304,
+          "last_two_degrees_norm_fraction": 0.27499270882375026,
+          "last_two_degrees_power_fraction": 0.07562098990622389,
+          "power_by_degree": {
+            "0": 1.7979268643466574e-05,
+            "1": 9.099399730030398e-34,
+            "2": 7.883073132897893e-06,
+            "3": 5.006347618580247e-06,
+            "4": 2.0050572948566806e-06,
+            "5": 2.164274789731246e-06,
+            "6": 5.250390517384326e-07
+          },
+          "power_fraction_by_degree": {
+            "0": 0.5055602182398549,
+            "1": 2.5586660973762855e-29,
+            "2": 0.22166464345683073,
+            "3": 0.14077381259630617,
+            "4": 0.05638033580078427,
+            "5": 0.06085738284049458,
+            "6": 0.014763607065729304
+          },
+          "reference_norm": 0.005963477218139689,
+          "reference_norm_squared": 3.5563060531271074e-05,
+          "source_harmonic": 2
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.268222168907524,
+          "last_degree_power_fraction": 0.07194313189345632,
+          "last_two_degrees_norm_fraction": 0.4728896167978541,
+          "last_two_degrees_power_fraction": 0.22362458967522128,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.24893488903316735,
+            "2": 1.7114768558488163,
+            "3": 0.34827638300911057,
+            "4": 0.19007688537640122,
+            "5": 0.488186919402731,
+            "6": 0.2315490399741735
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.07734497865589778,
+            "2": 0.5317621061467708,
+            "3": 0.10821074343903588,
+            "4": 0.05905758208307433,
+            "5": 0.15168145778176498,
+            "6": 0.07194313189345632
+          },
+          "reference_norm": 1.794018108226447,
+          "reference_norm_squared": 3.2185009726444,
+          "source_harmonic": 2
+        }
+      ],
+      "source_binding_verified": true
+    },
+    {
+      "coordinate_endpoint": 4.467323828718838,
+      "decoupled_control": false,
+      "matrix": ".build\\boson-P8-h02.npz",
+      "matrix_binding_verified": true,
+      "matrix_sha256": "a4d15a2168e21730de772a67dd166a9a11f74c2e84afdafb3ed8be1d3e834a7a",
+      "max_step": 0.02,
+      "mode_counts": {
+        "S": 75,
+        "chi": 70,
+        "total": 145
+      },
+      "observer_proper_endpoint": 4.364851930252217,
+      "probe_degree": 8,
+      "record": ".build\\boson-P8-h02.json",
+      "record_sha256": "b11b98e4b23f2e3500a83d000e630c80719f32b2bbb2b31fa7816cbbfc2a9b10",
+      "responses": [
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.05033433864557436,
+          "last_degree_power_fraction": 0.00253354564688736,
+          "last_two_degrees_norm_fraction": 0.07632727744937462,
+          "last_two_degrees_power_fraction": 0.005825853282833812,
+          "power_by_degree": {
+            "0": 1.676844415959606e-05,
+            "1": 1.6464457641416192e-30,
+            "2": 9.709393880528721e-06,
+            "3": 4.477126731715353e-06,
+            "4": 1.0678391135883528e-06,
+            "5": 1.2807974616617473e-06,
+            "6": 5.007730905011317e-07,
+            "7": 1.119465844658877e-07,
+            "8": 8.614680434500896e-08
+          },
+          "power_fraction_by_degree": {
+            "0": 0.4931537394640423,
+            "1": 4.8421360842026465e-26,
+            "2": 0.28554968216129195,
+            "3": 0.1316706409244493,
+            "4": 0.0314047532973238,
+            "5": 0.03766777953296768,
+            "6": 0.014727551337091218,
+            "7": 0.0032923076359464513,
+            "8": 0.00253354564688736
+          },
+          "reference_norm": 0.0058311635053737145,
+          "reference_norm_squared": 3.400246782640226e-05,
+          "source_harmonic": 1
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.05101281887906475,
+          "last_degree_power_fraction": 0.002602307689988265,
+          "last_two_degrees_norm_fraction": 0.09971660657062517,
+          "last_two_degrees_power_fraction": 0.009943401625960848,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 2.4465516184933485,
+            "2": 0.23777631257385495,
+            "3": 0.13247840323180615,
+            "4": 0.35624838355266175,
+            "5": 0.11969820340943713,
+            "6": 0.02258199515976079,
+            "7": 0.024582619913473422,
+            "8": 0.008714170040437617
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.7306123315489892,
+            "2": 0.0710070062710094,
+            "3": 0.03956195092449474,
+            "4": 0.10638625408535456,
+            "5": 0.03574540705135414,
+            "6": 0.006743648492837093,
+            "7": 0.007341093935972583,
+            "8": 0.002602307689988265
+          },
+          "reference_norm": 1.8299266942625816,
+          "reference_norm_squared": 3.34863170637478,
+          "source_harmonic": 1
+        },
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.11962269391395328,
+          "last_degree_power_fraction": 0.014309588899231354,
+          "last_two_degrees_norm_fraction": 0.18048605792135167,
+          "last_two_degrees_power_fraction": 0.03257521710398951,
+          "power_by_degree": {
+            "0": 1.7246465030194847e-05,
+            "1": 1.468093239463835e-33,
+            "2": 6.649626850582111e-06,
+            "3": 3.275835571184209e-06,
+            "4": 1.036991898487613e-06,
+            "5": 1.2432680333080883e-06,
+            "6": 3.245436197207367e-07,
+            "7": 5.62204635728337e-07,
+            "8": 4.404402150493207e-07
+          },
+          "power_fraction_by_degree": {
+            "0": 0.5603253656558639,
+            "1": 4.769730375350904e-29,
+            "2": 0.21604164041756543,
+            "3": 0.10642956461156841,
+            "4": 0.033691128221635086,
+            "5": 0.04039289292918544,
+            "6": 0.010544191060192288,
+            "7": 0.018265628204758154,
+            "8": 0.014309588899231354
+          },
+          "reference_norm": 0.005547916352492642,
+          "reference_norm_squared": 3.077937585425526e-05,
+          "source_harmonic": 2
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.07903198056908066,
+          "last_degree_power_fraction": 0.006246053952671542,
+          "last_two_degrees_norm_fraction": 0.12560347119047408,
+          "last_two_degrees_power_fraction": 0.015776231975096252,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.24812036023635411,
+            "2": 1.7279942898739646,
+            "3": 0.34156997745006923,
+            "4": 0.1796155535003699,
+            "5": 0.458325468197765,
+            "6": 0.2187562105755072,
+            "7": 0.030737343699881552,
+            "8": 0.020145175321963464
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.07693023922720156,
+            "2": 0.5357682617283456,
+            "3": 0.10590448947048402,
+            "4": 0.05569017990521646,
+            "5": 0.142104774790695,
+            "6": 0.06782582290296103,
+            "7": 0.009530178022424712,
+            "8": 0.006246053952671542
+          },
+          "reference_norm": 1.7959021072585988,
+          "reference_norm_squared": 3.2252643788558752,
+          "source_harmonic": 2
+        }
+      ],
+      "source_binding_verified": true
+    },
+    {
+      "coordinate_endpoint": 4.467323828718838,
+      "decoupled_control": true,
+      "matrix": ".build\\boson-P8-control.npz",
+      "matrix_binding_verified": true,
+      "matrix_sha256": "f983f91579a78f0bc2e6f3508bdefd12bdb29b9537eec22fe553ad371770099d",
+      "max_step": 0.02,
+      "mode_counts": {
+        "S": 75,
+        "chi": 70,
+        "total": 145
+      },
+      "observer_proper_endpoint": 4.364851930252217,
+      "probe_degree": 8,
+      "record": ".build\\boson-P8-control.json",
+      "record_sha256": "757b8ea7f4a13c9221febacaeec639e0bf7789b94ee29c9ffd2a75343bcee97f",
+      "responses": [
+        {
+          "field": "S",
+          "last_degree_norm_fraction": null,
+          "last_degree_power_fraction": null,
+          "last_two_degrees_norm_fraction": null,
+          "last_two_degrees_power_fraction": null,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          },
+          "power_fraction_by_degree": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          },
+          "reference_norm": 0.0,
+          "reference_norm_squared": 0.0,
+          "source_harmonic": 1
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.05126413747367364,
+          "last_degree_power_fraction": 0.0026280117909197103,
+          "last_two_degrees_norm_fraction": 0.09993012333907696,
+          "last_two_degrees_power_fraction": 0.009986029550563134,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 2.438756705700629,
+            "2": 0.23864248653484033,
+            "3": 0.13259896871479968,
+            "4": 0.355915256685572,
+            "5": 0.11928821953448253,
+            "6": 0.02249907649468003,
+            "7": 0.024583613283440376,
+            "8": 0.008780357384652819
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.7299339989244849,
+            "2": 0.07142707761806631,
+            "3": 0.03968763889444645,
+            "4": 0.10652749656554929,
+            "5": 0.035703654614604806,
+            "6": 0.006734103832285134,
+            "7": 0.007358017759643423,
+            "8": 0.0026280117909197103
+          },
+          "reference_norm": 1.8278579497141174,
+          "reference_norm_squared": 3.341064684333097,
+          "source_harmonic": 1
+        },
+        {
+          "field": "S",
+          "last_degree_norm_fraction": null,
+          "last_degree_power_fraction": null,
+          "last_two_degrees_norm_fraction": null,
+          "last_two_degrees_power_fraction": null,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          },
+          "power_fraction_by_degree": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null
+          },
+          "reference_norm": 0.0,
+          "reference_norm_squared": 0.0,
+          "source_harmonic": 2
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.07805077361560595,
+          "last_degree_power_fraction": 0.006091923261994569,
+          "last_two_degrees_norm_fraction": 0.12443636665458134,
+          "last_two_degrees_power_fraction": 0.015484409346193403,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.24784997311473062,
+            "2": 1.7254556104619705,
+            "3": 0.3403275715084344,
+            "4": 0.17798394203224632,
+            "5": 0.4556819825818856,
+            "6": 0.21739356170689836,
+            "7": 0.030191834316645245,
+            "8": 0.01958228483354157
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.07710453757245675,
+            "2": 0.5367781778410217,
+            "3": 0.10587372552252844,
+            "4": 0.055369663241265334,
+            "5": 0.14175974322503718,
+            "6": 0.0676297432514973,
+            "7": 0.009392486084198834,
+            "8": 0.006091923261994569
+          },
+          "reference_norm": 1.7928934046831542,
+          "reference_norm_squared": 3.2144667605563524,
+          "source_harmonic": 2
+        }
+      ],
+      "source_binding_verified": true
+    },
+    {
+      "coordinate_endpoint": 4.467323828718838,
+      "decoupled_control": false,
+      "matrix": ".build\\boson-P10-h02.npz",
+      "matrix_binding_verified": true,
+      "matrix_sha256": "d3a52958a66d9492ab26015fda6b5edf2a699afefa0ef5b2881f0345bfa20467",
+      "max_step": 0.02,
+      "mode_counts": {
+        "S": 131,
+        "chi": 125,
+        "total": 256
+      },
+      "observer_proper_endpoint": 4.364851930252217,
+      "probe_degree": 10,
+      "record": ".build\\boson-P10-h02.json",
+      "record_sha256": "f8f893d70b0dda60cdfd761edb6452842a4f5596a39f77f10aeba735ae91d0fa",
+      "responses": [
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.05216452716983373,
+          "last_degree_power_fraction": 0.0027211378948523214,
+          "last_two_degrees_norm_fraction": 0.07540874319569636,
+          "last_two_degrees_power_fraction": 0.005686478550354483,
+          "power_by_degree": {
+            "0": 1.6611634344113445e-05,
+            "1": 1.6394276828651816e-30,
+            "10": 9.136470384386911e-08,
+            "2": 9.604449701807198e-06,
+            "3": 4.275246160372742e-06,
+            "4": 1.0255967233267483e-06,
+            "5": 1.1988469466015942e-06,
+            "6": 4.5763399206206044e-07,
+            "7": 1.302253823322259e-07,
+            "8": 8.135638443947023e-08,
+            "9": 9.956403580232497e-08
+          },
+          "power_fraction_by_degree": {
+            "0": 0.49474847296000546,
+            "1": 4.8827485954946655e-26,
+            "10": 0.0027211378948523214,
+            "2": 0.2860517348959195,
+            "3": 0.12733072890700126,
+            "4": 0.030545604497880265,
+            "5": 0.0357055593602135,
+            "6": 0.013629827990256022,
+            "7": 0.003878535231082356,
+            "8": 0.002423057607287058,
+            "9": 0.002965340655502162
+          },
+          "reference_norm": 0.005794473088616572,
+          "reference_norm_squared": 3.357591837470168e-05,
+          "source_harmonic": 1
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.007873630625308459,
+          "last_degree_power_fraction": 6.199405922379528e-05,
+          "last_two_degrees_norm_fraction": 0.015462633444497708,
+          "last_two_degrees_power_fraction": 0.00023909303303889902,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 2.4466566767405804,
+            "10": 0.00020733829953880134,
+            "2": 0.23743947019882775,
+            "3": 0.13248095621779676,
+            "4": 0.3562401149949279,
+            "5": 0.1178966051344425,
+            "6": 0.021414814287483926,
+            "7": 0.02351122809060288,
+            "8": 0.008047077750321385,
+            "9": 0.0005923051424707523
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.7315492567245859,
+            "10": 6.199405922379528e-05,
+            "2": 0.07099429584555855,
+            "3": 0.03961174690860302,
+            "4": 0.10651563573161384,
+            "5": 0.035251032429834545,
+            "6": 0.006403019934850049,
+            "7": 0.007029846728342761,
+            "8": 0.002406072663572464,
+            "9": 0.00017709897381510374
+          },
+          "reference_norm": 1.8287937518640514,
+          "reference_norm_squared": 3.344486586856993,
+          "source_harmonic": 1
+        },
+        {
+          "field": "S",
+          "last_degree_norm_fraction": 0.0956814624249764,
+          "last_degree_power_fraction": 0.00915494225178217,
+          "last_two_degrees_norm_fraction": 0.12825159400464328,
+          "last_two_degrees_power_fraction": 0.016448471364731855,
+          "power_by_degree": {
+            "0": 1.7006054034050112e-05,
+            "1": 4.066115526774178e-34,
+            "10": 2.691445830579193e-07,
+            "2": 6.3767314501397924e-06,
+            "3": 2.786357179961227e-06,
+            "4": 7.351996900388563e-07,
+            "5": 1.0656420447822178e-06,
+            "6": 2.3265931340433347e-07,
+            "7": 3.582241982853683e-07,
+            "8": 3.543954312763182e-07,
+            "9": 2.1442121622815304e-07
+          },
+          "power_fraction_by_degree": {
+            "0": 0.578460249296238,
+            "1": 1.383087573740308e-29,
+            "10": 0.00915494225178217,
+            "2": 0.21690426579601654,
+            "3": 0.09477782827936088,
+            "4": 0.025007788116565764,
+            "5": 0.03624777162597707,
+            "6": 0.007913897260557516,
+            "7": 0.012184981808784042,
+            "8": 0.01205474645176837,
+            "9": 0.007293529112949686
+          },
+          "reference_norm": 0.005422068714173982,
+          "reference_norm_squared": 2.93988291412243e-05,
+          "source_harmonic": 2
+        },
+        {
+          "field": "chi",
+          "last_degree_norm_fraction": 0.035955962127657046,
+          "last_degree_power_fraction": 0.0012928312125255075,
+          "last_two_degrees_norm_fraction": 0.08351332411974655,
+          "last_two_degrees_power_fraction": 0.006974475305529841,
+          "power_by_degree": {
+            "0": 0.0,
+            "1": 0.24751173337237461,
+            "10": 0.004157687373306031,
+            "2": 1.7359619435074616,
+            "3": 0.340988535388763,
+            "4": 0.17807397795610247,
+            "5": 0.4452136555740115,
+            "6": 0.2023629112647598,
+            "7": 0.02671207549654414,
+            "8": 0.016700853849983894,
+            "9": 0.018271913360567046
+          },
+          "power_fraction_by_degree": {
+            "0": 0.0,
+            "1": 0.07696367370585944,
+            "10": 0.0012928312125255075,
+            "2": 0.5397966664670854,
+            "3": 0.1060302476069556,
+            "4": 0.05537203165354079,
+            "5": 0.13843900670939077,
+            "6": 0.0629246656735954,
+            "7": 0.008306109106469398,
+            "8": 0.005193123771573363,
+            "9": 0.005681644093004333
+          },
+          "reference_norm": 1.7933084751776183,
+          "reference_norm_squared": 3.215955287143874,
+          "source_harmonic": 2
+        }
+      ],
+      "source_binding_verified": true
+    }
+  ],
+  "definition": "Per-field reference phase-space norm squared=sum_l(m_f^2*q_l^2+p_l^2), using fixed vacuum masses. Harmonic power fractions use this squared norm; norm fractions are their square roots. Neither is physical energy or a conversion fraction.",
+  "physical_prediction_admitted": false,
+  "reference_action": {
+    "masses_squared": [
+      2.1837080100935475,
+      613.5280213887946
+    ],
+    "source_sha256": {
+      "src/recursive_horizons/nsc_atlas_boson_hamiltonian.py": "1ca80b1e8f7945125fe34b9311d519479bbcd7175007ffe83b5770ee967c3f8f",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+      "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa"
+    },
+    "sstar": -0.035646782552940987
+  },
+  "schema": "nsc-atlas-boson-shells-v1",
+  "source_sha256": {
+    "scripts/diagnose_nsc_atlas_boson_shells.py": "a6fba3f7ae89c194c8ff87ebb4cfd4a0c5c250ddae129a1754fe96c30e096027"
+  },
+  "spatial_convergence_decided": false,
+  "temporal_changes": [
+    {
+      "decoupled_control": false,
+      "from_max_step": 0.02,
+      "probe_degree": 6,
+      "responses": [
+        {
+          "absolute_reference_norm_gap": 9.032731570821064e-07,
+          "field": "S",
+          "gap_over_tighter_reference_norm": 0.0001436511125369443,
+          "source_harmonic": 1
+        },
+        {
+          "absolute_reference_norm_gap": 4.006992099799784e-06,
+          "field": "chi",
+          "gap_over_tighter_reference_norm": 2.19213039701426e-06,
+          "source_harmonic": 1
+        },
+        {
+          "absolute_reference_norm_gap": 1.401692988219737e-06,
+          "field": "S",
+          "gap_over_tighter_reference_norm": 0.00023504625522104302,
+          "source_harmonic": 2
+        },
+        {
+          "absolute_reference_norm_gap": 3.951379905907682e-06,
+          "field": "chi",
+          "gap_over_tighter_reference_norm": 2.20253067000198e-06,
+          "source_harmonic": 2
+        }
+      ],
+      "to_max_step": 0.01
+    }
+  ]
+}
