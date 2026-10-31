@@ -336,7 +336,7 @@ class ParentGH:
 
 
 def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_seconds=600,
-                  rtol=3e-8,atol=3e-10,max_step=.05,progress=False,gauge='lapse_controlled',state_sink=None,backend='hopf',quadrature_order=None,measure_work=True):
+                  rtol=3e-8,atol=3e-10,max_step=.05,progress=False,gauge='lapse_controlled',state_sink=None,backend='hopf',quadrature_order=None,measure_work=True,dense_sink=None):
     set_num_threads(threads)
     from scipy.fft import set_workers
     with threadpool_limits(limits=threads),set_workers(threads):
@@ -371,8 +371,12 @@ def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_
                     phase+=increment
                 elif epsilon:clock_valid=False
                 angle_prev=angle
-                if solver.y[system.dof+8]>=targets[0]:
+                dense=None
+                if dense_sink is not None:
                     dense=solver.dense_output()
+                    dense_sink(solver.t_old,solver.t,dense)
+                if solver.y[system.dof+8]>=targets[0]:
+                    if dense is None:dense=solver.dense_output()
                     while targets and solver.y[system.dof+8]>=targets[0]:
                         target=targets.pop(0)
                         t=brentq(lambda v:dense(v)[system.dof+8]-target,solver.t_old,solver.t,xtol=2e-12)

@@ -1,5 +1,11 @@
 # Scientific strand index
 
+The [bosonic inheritance calculation](nsc-atlas-boson-transport.md) now
+derives the massive volume--matter fluctuation operator and canonical
+transport. A resolved passive history of the actual nonlinear parent is
+the next input. Retarded response is separated from the still-inherited
+covariance that determines noise and reduced entropy.
+
 The [nonlinear parent implementation](nsc-atlas-parent-gh.md) now contains
 global regular-frame evolution, fast circle-fiber transforms, independent
 constraints, geodesic readouts and passive matter work. Finite-amplitude
