@@ -42,7 +42,8 @@ class ParentBosonProbe:
             raise ValueError('this adapter requires a Hopf background to preserve its exact quadrature')
         self.system=ParentGH(self.metadata['degree'],self.metadata['epsilon'],
             gauge=self.metadata['gauge'],backend=self.metadata['backend'],
-            quadrature_order=self.metadata.get('quadrature_order'))
+            quadrature_order=self.metadata.get('quadrature_order'),
+            kick_amplitude=self.metadata.get('kick_amplitude',0.),kick_source=self.metadata.get('kick_source',1))
         self.initial_time=float(history.bounds[0][0])
         self.coordinate_endpoint=float(self.metadata['physical_coordinate_endpoint'])
         if not math.isfinite(self.coordinate_endpoint) or not self.initial_time<self.coordinate_endpoint<=history.bounds[-1][1]:

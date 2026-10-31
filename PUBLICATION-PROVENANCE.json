@@ -1741,9 +1741,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2695540,
+      "bytes": 2699505,
       "path": "docs/lab-snapshot.json",
-      "sha256": "ac3217b821a261e0dbbff13495ba3e769ce8969863541692b9cb49d394d33f41"
+      "sha256": "6c8068f0849fd67501d486db6fa01e015a95a40d23e7cb16d8a92f582a4d7512"
     },
     {
       "bytes": 4997,
@@ -1914,6 +1914,11 @@
       "bytes": 9634,
       "path": "docs/nsc-atlas-golden-vortex.md",
       "sha256": "25968c3c3a3a2be0db3b269cfb7ad9794a0f533ca3e50d877fedbd5edb292fdc"
+    },
+    {
+      "bytes": 4980,
+      "path": "docs/nsc-atlas-gravitating-kick.md",
+      "sha256": "7428f454266eadd8a3b634c70e4efcc3c97005f761cf17eea4d6e9fe50958ae4"
     },
     {
       "bytes": 15905,
@@ -2706,9 +2711,9 @@
       "sha256": "9a2e7b2cd5f2744dc7e7ee72729af6099f810072b6068c5c23055b82dc4a9dbd"
     },
     {
-      "bytes": 58818,
+      "bytes": 59244,
       "path": "docs/research-index.md",
-      "sha256": "37edec45433f21cbebaa4f971be84b5442764e9a8f1ca681edbb9b4a8ae6853f"
+      "sha256": "fd435ab4216401d76078b6790f3ff8a050fca3ce82a651d9043ca4b747d8ea33"
     },
     {
       "bytes": 18356,
@@ -16386,6 +16391,11 @@
       "sha256": "81201d84cb3a2ce14f8fca95206de5557231792b3150c74e3d00653d19d93055"
     },
     {
+      "bytes": 3991,
+      "path": "scripts/check_nsc_atlas_gravitating_kick.py",
+      "sha256": "d45a7b27d7c4ff48fd3b8bb5467284d46d8945c64d9292854478ba3d15b70299"
+    },
+    {
       "bytes": 8275,
       "path": "scripts/check_nsc_atlas_gravitational_response.py",
       "sha256": "e1ca5fb2fc16ffeaf106e821644ffbd88323a1faa7c37ce783a8de70a5c9f244"
@@ -18046,9 +18056,9 @@
       "sha256": "b4c4289ca2487ee0c7a9612a07e7d7b465115a4004fc94330f962ff7491a5b39"
     },
     {
-      "bytes": 5456,
+      "bytes": 5907,
       "path": "scripts/evolve_nsc_atlas_parent_gh.py",
-      "sha256": "850ea8c66516689ba8bccd7c11d177e05c66810c15d3f1065475ecf2cf770148"
+      "sha256": "7c55f9900fa4a605d9bc345f526f1c98385b71d66cf253f1636cffeec3908692"
     },
     {
       "bytes": 25859,
@@ -18971,9 +18981,9 @@
       "sha256": "1ca80b1e8f7945125fe34b9311d519479bbcd7175007ffe83b5770ee967c3f8f"
     },
     {
-      "bytes": 8579,
+      "bytes": 8693,
       "path": "src/recursive_horizons/nsc_atlas_boson_parent.py",
-      "sha256": "9bdc3cf1fdb89ec58b11243d2b5d54937664a772320149e684d74e842b17cd4a"
+      "sha256": "e2a1b14dbe50c2dbee16c8edd07cc1a7d2ced8eb09ba08895664c653d127a356"
     },
     {
       "bytes": 11110,
@@ -19551,6 +19561,11 @@
       "sha256": "f007f4842d3b6f2490559e6035d6b5859d8848e477d39b8e77731a0e136d445d"
     },
     {
+      "bytes": 9706,
+      "path": "src/recursive_horizons/nsc_atlas_gravitating_kick.py",
+      "sha256": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12"
+    },
+    {
       "bytes": 16000,
       "path": "src/recursive_horizons/nsc_atlas_gravitational_reduction.py",
       "sha256": "9814cda8ba1a3956c5bc92b756ea0c1ebc39b42525525373570f356381144c14"
@@ -19599,6 +19614,16 @@
       "bytes": 13914,
       "path": "src/recursive_horizons/nsc_atlas_junction_sources.py",
       "sha256": "4fc6a312977c75b5d981346dada8018fdfa7cf935fbeef312117d313bc42a2ae"
+    },
+    {
+      "bytes": 5816,
+      "path": "src/recursive_horizons/nsc_atlas_kick_relation.py",
+      "sha256": "048f849972725b89f7df0511596b9531e8b1ce75dcd87ab2c380af580e6469be"
+    },
+    {
+      "bytes": 11132,
+      "path": "src/recursive_horizons/nsc_atlas_kick_york.py",
+      "sha256": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0"
     },
     {
       "bytes": 3411,
@@ -19686,9 +19711,9 @@
       "sha256": "fb0034ccb16dd83a4f6e6650d9b94bdef2dbc9c75c5361c7dcd2aae56edb4f55"
     },
     {
-      "bytes": 24580,
+      "bytes": 25518,
       "path": "src/recursive_horizons/nsc_atlas_parent_gh.py",
-      "sha256": "a7a6a894e0aed3f429dcb9cc553dcc6d646e213fddd45035aa6c00c5619af5b4"
+      "sha256": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a"
     },
     {
       "bytes": 11824,
@@ -22506,6 +22531,11 @@
       "sha256": "4249b32980f375cd589de390a3456815c9362942f6c235ffdc3a07baa496ee13"
     },
     {
+      "bytes": 3031,
+      "path": "tests/test_nsc_atlas_gravitating_kick.py",
+      "sha256": "91fb00a986928221c4ee6befa022601b5af54c96782b2323dfd7e1772f5521f1"
+    },
+    {
       "bytes": 13824,
       "path": "tests/test_nsc_atlas_gravitational_reduction.py",
       "sha256": "b39792080cb6d6c7fc7b7b9816160412c5acee39fac74a47064d9d137491c59c"
@@ -22589,6 +22619,16 @@
       "bytes": 5871,
       "path": "tests/test_nsc_atlas_junction_sources.py",
       "sha256": "a42be224ca8a5d33089e7c9b1593858d0a72283093575a6844b984055fd1529e"
+    },
+    {
+      "bytes": 4400,
+      "path": "tests/test_nsc_atlas_kick_relation.py",
+      "sha256": "6d01e4bbe12e6a21f9d8e6cb2f8c409d67c7956b813a72b2a433e55ecc834b4e"
+    },
+    {
+      "bytes": 5045,
+      "path": "tests/test_nsc_atlas_kick_york.py",
+      "sha256": "19b443e6ed9cda5b14fc7ba7789fd93e63d4a51cc448e8d6fed5699a1c49149b"
     },
     {
       "bytes": 3653,
@@ -24941,7 +24981,7 @@
       "sha256": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
     }
   ],
-  "lab_snapshot_sha256": "ac3217b821a261e0dbbff13495ba3e769ce8969863541692b9cb49d394d33f41",
+  "lab_snapshot_sha256": "6c8068f0849fd67501d486db6fa01e015a95a40d23e7cb16d8a92f582a4d7512",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-31.04",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

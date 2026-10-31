@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The [gravitating-kick completion](nsc-atlas-gravitating-kick.md) supplies
+an exact polynomial York source, positive numerical conformal data and
+GH-compatible initial derivatives for the canonical probes. It preserves
+the proper coupling-jerk identity and derives a shear/spectral-coupling
+relation independent of kick amplitude and initial conformal size. A
+fixed-grid paired evolution carries the completed source forward.
+
 The [bosonic inheritance calculation](nsc-atlas-boson-transport.md) now
 derives the massive volume--matter fluctuation operator and canonical
 transport. The resolved passive history reproduces the checked nonlinear

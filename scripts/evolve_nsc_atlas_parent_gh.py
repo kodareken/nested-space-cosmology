@@ -21,6 +21,8 @@ def main():
     p.add_argument('--backend',choices=('hopf','dense'),default='hopf')
     p.add_argument('--state-cache',type=Path)
     p.add_argument('--dense-cache',type=Path)
+    p.add_argument('--kick-amplitude',type=float,default=0.)
+    p.add_argument('--kick-source',type=int,choices=(1,2),default=1)
     p.add_argument('--quadrature-radial',type=int);p.add_argument('--quadrature-angles',type=int)
     p.add_argument('--rtol',type=float,default=3e-8);p.add_argument('--atol',type=float,default=3e-10)
     p.add_argument('--max-step',type=float,default=.05)
@@ -34,6 +36,7 @@ def main():
         'src/recursive_horizons/nsc_atlas_s3_spectral.py',
         'src/recursive_horizons/nsc_atlas_gh_matter_work.py','src/recursive_horizons/nsc_atlas_passive_dop853.py',
         'src/recursive_horizons/nsc_atlas_gh_history.py',
+        'src/recursive_horizons/nsc_atlas_kick_york.py','src/recursive_horizons/nsc_atlas_gravitating_kick.py',
         'scripts/evolve_nsc_atlas_parent_gh.py']
     before={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
@@ -56,12 +59,14 @@ def main():
     r=evolve_parent(degree=a.degree,epsilon=a.epsilon,proper_endpoint=a.proper_endpoint,
         threads=a.threads,budget_seconds=a.budget_seconds,progress=True,gauge=a.gauge,
         state_sink=sink if a.state_cache else None,backend=a.backend,quadrature_order=order,
-        rtol=a.rtol,atol=a.atol,max_step=a.max_step,dense_sink=None if history is None else history.record)
+        rtol=a.rtol,atol=a.atol,max_step=a.max_step,dense_sink=None if history is None else history.record,
+        kick_amplitude=a.kick_amplitude,kick_source=a.kick_source)
     after={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in names}
     r['source_sha256']=before;r['producer_source_unchanged_during_run']=before==after
     r['producer_commit']=commit;r['source_bound_to_commit']=bound
     if history is not None:
         metadata=dict(degree=a.degree,epsilon=a.epsilon,gauge=a.gauge,backend=a.backend,
+            kick_amplitude=a.kick_amplitude,kick_source=a.kick_source,
             quadrature_order=order,temporal_tolerances=r['temporal_tolerances'],
             source_sha256=before,producer_commit=commit,
             physical_coordinate_endpoint=r['snapshots'][-1]['coordinate_t'],
@@ -71,7 +76,8 @@ def main():
             state_size=len(history.old[0]),sha256=hashlib.sha256(dense_cache.read_bytes()).hexdigest(),
             scope='Local regenerable dense polynomials; no sparse-snapshot interpolation or changed adaptive state.')
     if a.state_cache:
-        metadata=dict(degree=a.degree,epsilon=a.epsilon,gauge=a.gauge,backend=a.backend,source_sha256=r['source_sha256'])
+        metadata=dict(degree=a.degree,epsilon=a.epsilon,gauge=a.gauge,backend=a.backend,
+            kick_amplitude=a.kick_amplitude,kick_source=a.kick_source,source_sha256=r['source_sha256'])
         np.savez_compressed(cache,times=np.array([v[0] for v in saved]),states=np.array([v[1] for v in saved]),metadata=json.dumps(metadata))
     out.write_text(json.dumps(r,sort_keys=True,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(dict(status=r['status'],stop_reason=r['stop_reason'],degree=r['degree'],epsilon=r['epsilon'],final=r['snapshots'][-1],

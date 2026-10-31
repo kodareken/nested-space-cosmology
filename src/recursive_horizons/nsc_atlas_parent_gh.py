@@ -72,10 +72,13 @@ class Jets:
 
 
 class ParentGH:
-    def __init__(self,degree,epsilon,*,quadrature_order=None,gauge='lapse_controlled',backend='hopf'):
+    def __init__(self,degree,epsilon,*,quadrature_order=None,gauge='lapse_controlled',backend='hopf',kick_amplitude=0.,kick_source=1):
         if degree<2 or degree>32 or not 0<=epsilon<=1:
             raise ValueError('2<=degree<=32 and 0<=epsilon<=1 required')
         self.parent=Parent.retained();self.epsilon=epsilon
+        self.kick_amplitude=float(kick_amplitude);self.kick_source=kick_source;self.initial_kick_metadata=None
+        if not math.isfinite(self.kick_amplitude) or abs(self.kick_amplitude)>1 or isinstance(kick_source,bool) or kick_source not in (1,2):
+            raise ValueError('finite |kick_amplitude|<=1 and kick_source1 or2 required')
         if gauge not in ('harmonic','vacuum_reference','lapse_controlled'):raise ValueError('unknown prescribed GH gauge')
         self.gauge=gauge
         model=VolumeParent();self.minimum=next(v for v in model.vacuum_roots() if v['kind']=='minimum')
@@ -140,6 +143,9 @@ class ParentGH:
     def initial(self):
         self.X0=anchor_point(self.parent)
         self.update_point(self.X0)
+        if self.kick_amplitude:
+            from .nsc_atlas_gravitating_kick import build_kicked_gh_state
+            return build_kicked_gh_state(self)
         C=np.zeros((24,len(self.basis.labels)))
         C[0,0]=-math.sqrt(2*math.pi**2)
         if not self.epsilon:
@@ -336,11 +342,12 @@ class ParentGH:
 
 
 def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_seconds=600,
-                  rtol=3e-8,atol=3e-10,max_step=.05,progress=False,gauge='lapse_controlled',state_sink=None,backend='hopf',quadrature_order=None,measure_work=True,dense_sink=None):
+                  rtol=3e-8,atol=3e-10,max_step=.05,progress=False,gauge='lapse_controlled',state_sink=None,backend='hopf',quadrature_order=None,measure_work=True,dense_sink=None,kick_amplitude=0.,kick_source=1):
     set_num_threads(threads)
     from scipy.fft import set_workers
     with threadpool_limits(limits=threads),set_workers(threads):
-        system=ParentGH(degree,epsilon,gauge=gauge,backend=backend,quadrature_order=quadrature_order);y0=system.initial()
+        system=ParentGH(degree,epsilon,gauge=gauge,backend=backend,quadrature_order=quadrature_order,
+            kick_amplitude=kick_amplitude,kick_source=kick_source);y0=system.initial()
         endpoint=4.364851930251994 if proper_endpoint is None else proper_endpoint
         if endpoint<=0:raise ValueError('positive proper endpoint required')
         system.started=time.perf_counter();system.budget=budget_seconds
@@ -407,18 +414,20 @@ def evolve_parent(*,degree=6,epsilon=.025,proper_endpoint=None,threads=8,budget_
                 if not clock_valid:point['observer_sampled_unwrapped_phase']=None
                 snapshots.append(point)
                 if state_sink is not None:state_sink(solver.t,last)
-        return dict(schema='nsc-atlas-parent-gh-v2',degree=degree,epsilon=epsilon,
+        return dict(schema='nsc-atlas-parent-gh-v3' if kick_amplitude else 'nsc-atlas-parent-gh-v2',degree=degree,epsilon=epsilon,
             spatial_transform=backend,spatial_quadrature_points=system.N,
             status='incomplete' if targets else 'endpoint_reached',stop_reason=failure,
             requested_observer_proper_endpoint=endpoint,invalid_RK_stages=system.invalid_stages,
-            source='Unchanged inherited nonspherical two-mode field, finite nonlinear constrained initial geometry',
+            source='Inherited two-mode field plus constrained canonical momentum kick' if kick_amplitude else 'Unchanged inherited nonspherical two-mode field, finite nonlinear constrained initial geometry',
+            initial_kick=system.initial_kick_metadata,
             formulation='Second-order covariant GH, static round reference, canonical volume and real scalar',
             prescribed_GH_gauge=gauge,
             lapse_feedback_coefficient=system.r if gauge=='lapse_controlled' else 0.,
             gauge_scope='Metric-dependent coordinate source; no added physical stress or physical-mode suppression.',
             model_inputs=dict(vacuum=system.parent.vacuum,H_reference=system.r,
                 scalar_mass_squared=system.parent.mass_squared,volume_kinetic=system.K,sstar=system.sstar,
-                reference_proper_endpoint_origin='Previously specified 300-phase-pass reference event'),
+                reference_proper_endpoint_origin='Previously specified 300-phase-pass reference event',
+                **(dict(kick_amplitude=float(kick_amplitude),kick_source=int(kick_source)) if kick_amplitude else {})),
             gauge_constraint_damping=system.r,physical_mode_suppression=False,
             symmetry='Exact proper paired-flip characters; no spherical average',
             scalar_phase_scope='Along the initially normal geodesic, at fixed proper duration; no finite-amplitude phase-event shift is inferred by linearization.',
