@@ -64,6 +64,13 @@ def test_round_s3_mean_curvature_and_area_about_arbitrary_center(center,r):
     np.testing.assert_allclose(result.theta_plus,-result.theta_minus,atol=0,rtol=0)
     assert result.area==pytest.approx(4*math.pi*(a*math.sin(rho))**2,rel=2.e-14)
     np.testing.assert_allclose(np.sum(result.points**2,axis=1),1.,atol=5.e-16,rtol=0)
+    np.testing.assert_allclose((a*r)**2*np.sum(result.normal**2,axis=1),1.,atol=8.e-16,rtol=0)
+    c=np.asarray(center)/np.linalg.norm(center)
+    radial=(math.cos(rho)*result.points-c)/math.sin(rho)
+    x,y,z,w=result.points.T
+    frame=np.stack((np.c_[w,z,-y,-x],np.c_[-z,w,x,-y],np.c_[y,-x,w,-z]),axis=1)
+    radial_components=np.einsum('nik,nk->ni',frame,radial)/r
+    assert np.min(np.sum(result.normal*radial_components,axis=1))>0
 
 
 def test_time_symmetric_deformed_surface_cannot_be_future_trapped():
@@ -154,6 +161,13 @@ def test_newton_finder_solves_a_deformed_closed_surface_not_only_round_radii():
     assert summary['theta_plus_max_abs']<2.e-7
     assert summary['quadrature_order'][0]>14
     assert 'no continuum sign bound' in summary['scope']
+    # Reuse every nonconstant shape coefficient on another physical chart
+    # scale, rather than discarding it and repeating a coarse round search.
+    continued=find_mots(schwarzschild_pg(r=.63),frame_scale=.63,initial_surface=result.surface,
+                         expansion_tolerance=2.e-7,max_nfev=4)
+    assert continued.converged and continued.future_mots
+    assert np.ptp(continued.evaluation.radius)>.13
+    assert continued.evaluation.area==pytest.approx(16*math.pi,rel=2.e-9)
 
 
 def test_shape_chart_and_geometry_failures_are_explicit():
@@ -167,3 +181,7 @@ def test_shape_chart_and_geometry_failures_are_explicit():
         return -np.broadcast_to(np.eye(3),(len(points),3,3)),np.zeros((len(points),3,3,3)),np.zeros((len(points),3,3))
     with pytest.raises(ValueError,match='positive definite'):
         evaluate_surface(round_surface(NORTH,1.),invalid,frame_scale=1.)
+    seed=round_surface(NORTH,1.,degree=2)
+    for conflict in (dict(degree=3),dict(center=[1.,0,0,0]),dict(initial_radius=1.1),dict(radius_bounds=(.1,3.))):
+        with pytest.raises(ValueError,match='conflict|combined'):
+            find_mots(round_geometry(1.),initial_surface=seed,frame_scale=1.,**conflict)

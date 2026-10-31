@@ -1,5 +1,12 @@
 # What the calculations show
 
+Active frontier: [valve formation](nsc-atlas-valve-formation.md), with the
+[goal progress record](atlas-progress.json) owning compaction recovery.
+Eta is parked. The unchanged epsilon1 parent now reaches proper.3 at
+three resolutions; constraints contract and genuine local focusing and
+contraction develop. A formed child is not yet admitted. The surface
+finder and extended histories are active; downstream cosmology waits.
+
 Within P006, the [damped-offset test](nsc-atlas-offset-thermodynamics.md)
 now uses the retained late scalar coefficients: gamma T=.103283613217,
 with conditional positive-first amplitude residue .025815166405. It does

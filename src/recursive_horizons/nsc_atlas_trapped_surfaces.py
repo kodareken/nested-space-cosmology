@@ -210,6 +210,12 @@ class SurfaceEvaluation:
     area_weights: np.ndarray
     quadrature_order: tuple
     expansion_tolerance: float
+    normal: np.ndarray | None = None
+
+    @property
+    def outward_normal(self):
+        """Physical unit spatial normal, contravariant in the supplied E frame."""
+        return self.normal
 
     @property
     def area(self): return float(np.sum(self.area_weights))
@@ -273,7 +279,7 @@ def evaluate_surface(surface, provider, *, frame_scale, quadrature_order=None, e
     plus,minus=H+transverse,-H+transverse
     if not all(np.all(np.isfinite(a)) for a in (area_weights,plus,minus)) or np.min(area_weights)<=0:
         raise ValueError('surface is not a regular finite positive-area graph')
-    return SurfaceEvaluation(X,rho,plus,minus,H,area_weights,order,tolerance)
+    return SurfaceEvaluation(X,rho,plus,minus,H,area_weights,order,tolerance,normal=normal)
 
 
 @dataclass(frozen=True)
@@ -298,17 +304,37 @@ class MOTSResult:
                     center=self.surface.center.tolist(),radius_bounds=list(self.surface.radius_bounds))
 
 
-def find_mots(provider, *, center, initial_radius, frame_scale, degree=4,
-              radius_bounds=DEFAULT_RADIUS_BOUNDS,quadrature_order=None,validation_order=None,
-              max_nfev=100,expansion_tolerance=1.e-7):
+def find_mots(provider, *, center=None, initial_radius=None, frame_scale, degree=None,
+              radius_bounds=None,quadrature_order=None,validation_order=None,
+              max_nfev=100,expansion_tolerance=1.e-7,initial_surface=None):
     """Solve theta_plus=0 in a deformed shape span, then independently resample.
 
     ``converged`` refers to the denser sampled expansion residual. ``future_mots``
     additionally requires theta_minus < -tolerance everywhere sampled. A
     cosmological marginal sphere can solve theta_plus=0 while failing the latter.
     Failure to find a root excludes no surfaces outside this chart/span/start.
+    ``initial_surface`` warm-starts its complete deformed graph on another
+    metric. Omit initial_radius; explicitly supplied center/degree/bounds
+    must agree. Without it, the old round seed defaults remain degree4 and
+    DEFAULT_RADIUS_BOUNDS.
     """
-    initial=round_surface(center,initial_radius,degree,radius_bounds=radius_bounds)
+    if initial_surface is None:
+        if center is None or initial_radius is None:
+            raise ValueError('center and initial_radius are required without initial_surface')
+        initial=round_surface(center,initial_radius,4 if degree is None else degree,
+                              radius_bounds=DEFAULT_RADIUS_BOUNDS if radius_bounds is None else radius_bounds)
+    else:
+        if not isinstance(initial_surface,StarShapedSurface):
+            raise ValueError('initial_surface must be a StarShapedSurface')
+        if initial_radius is not None:
+            raise ValueError('initial_radius cannot be combined with initial_surface')
+        if center is not None and not np.allclose(_center(center),initial_surface.center,rtol=0,atol=2.e-14):
+            raise ValueError('center conflicts with initial_surface')
+        if degree is not None and _degree(degree)!=initial_surface.degree:
+            raise ValueError('degree conflicts with initial_surface')
+        if radius_bounds is not None and tuple(map(float,radius_bounds))!=initial_surface.radius_bounds:
+            raise ValueError('radius bounds conflict with initial_surface')
+        initial=initial_surface
     order=_order(initial.degree,quadrature_order)
     vorder=_order(initial.degree,validation_order,validation=validation_order is None)
     if vorder[0]<=order[0] or vorder[1]<=order[1]:

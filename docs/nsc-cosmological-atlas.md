@@ -1,5 +1,33 @@
 # Cosmological atlas: regions, boundaries and observer measurements
 
+## Active frontier and compaction recovery -- 31 October 2026
+
+The active frontier is the [valve/formation calculation](nsc-atlas-valve-formation.md).
+Eta is parked at dfda6e5a. Downstream vacuum fractions, cycle, dark matter
+and cosmology wait for an admissible formed child receiving energy.
+The horizon/GH/boson chain is frozen except for the resolved evolution and
+closed-surface diagnostics directly required by formation. Earlier next-step
+language below records historical routes and does not override this frontier.
+
+The [progress record](atlas-progress.json) preserves Douglas's estimates
+separately from a reproducible work-gate score. Each item has five named
+criteria and evidence paths; its percentage is verified gates divided by
+five. The score tracks completed work within stated domains, not how much
+of reality is explained or the probability the theory is right. A source
+law, numerical convergence, inherited selection and observational success
+remain separate requirements. A real-data fit is not a successful withheld
+registered prediction. The overall current gate score is30%, with the
+physical child and all downstream empirical closure gates still open.
+
+After compaction, read that record and the formation owner before starting
+a calculation. Inspect existing live processes and saved outputs first.
+The current initial-window three-grid records are under
+`.build/valve-e1-L{12,16,20}-early-v1`; the continuing dense histories use
+`.build/valve-e1-L{12,16,20}-extended-v1`. Full arrays stay local and
+regenerate from their source-bound producers; compact conclusions and
+hashes are retained in Git. The main paper and previous scientific results
+retain their explicit finite domains.
+
 The [canonical volume--matter successor](nsc-atlas-boson-transport.md)
 now derives a state-independent response and Schur memory on the actual
 evolving nonspherical parent. Its local onset has a direct field-equation

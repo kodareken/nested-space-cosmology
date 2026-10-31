@@ -1,0 +1,409 @@
+{
+  "schema": "nsc-atlas-progress-v1",
+  "updated_date": "2026-10-31",
+  "scientific_owner": "docs/nsc-cosmological-atlas.md",
+  "score_definition": "100 times verified declared work gates / required gates. Equal gate weights; not a probability, time estimate, fraction of physical truth or experimental confirmation. Conditional results count only for explicitly domain-limited gates; empirical closure gates remain open.",
+  "rule": "All five gates in every item must be verified before that item reaches100; no candidate may inherit an incompatible success from another action. User planning estimates are preserved separately.",
+  "goal_status": "active",
+  "active_frontier": "valve_child",
+  "current_owner": "docs/nsc-atlas-valve-formation.md",
+  "current_calculation": "Closed-surface future-trapping test of the unchanged finite-amplitude compact parent",
+  "completed": "Initial-window epsilon1 three-grid evolution reaches proper.3; local focusing/contraction exists; no child admitted.",
+  "active": "Extended epsilon1 L12/L16/L20 history to proper1.2, and full-metric surface search. Eta and downstream cosmology remain parked.",
+  "continuation": "Read this file, current_owner, latest compact formation summary and .build/valve-e1-L*-extended-v1.json status before launching further work. Never restart an already live producer.",
+  "items": [
+    {
+      "id": "dimensions_inputs",
+      "user_planning_estimate_percent": 40,
+      "verified_gates": 1,
+      "required_gates": 5,
+      "gate_completion_percent": 20.0,
+      "gates": [
+        {
+          "id": "metric_completion",
+          "criterion": "A 3D completion is constructed under explicit rules",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-offset-generator.md"
+        },
+        {
+          "id": "dimension_selection",
+          "criterion": "The construction rules select exactly three spatial directions",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "offset_charge_selection",
+          "criterion": "Fundamental offset and charge are selected by inheritance",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "frequency_selection",
+          "criterion": "Physical source frequency is inherited rather than supplied",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "epoch_depth_selection",
+          "criterion": "The physical level count and present epoch are selected",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "wall_thermodynamics",
+      "user_planning_estimate_percent": 60,
+      "verified_gates": 3,
+      "required_gates": 5,
+      "gate_completion_percent": 60.0,
+      "gates": [
+        {
+          "id": "source_conservation",
+          "criterion": "Finite regional field flux and conservation are calculated",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-parent-circulation.md"
+        },
+        {
+          "id": "area_first_law",
+          "criterion": "Source-induced area and dynamical first law are calculated",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-parent-circulation.md"
+        },
+        {
+          "id": "temperature_entropy",
+          "criterion": "Borrowed horizon temperature/entropy are identified and normalized",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-parent-circulation.md"
+        },
+        {
+          "id": "nonlinear_birth_law",
+          "criterion": "The same laws hold for a formed nonlinear child",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "entropy_inheritance",
+          "criterion": "A physical inherited entropy/state law closes the next transition",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "valve_child",
+      "user_planning_estimate_percent": 25,
+      "verified_gates": 2,
+      "required_gates": 5,
+      "gate_completion_percent": 40.0,
+      "gates": [
+        {
+          "id": "admissible_parent",
+          "criterion": "Finite sourced parent data satisfy the stated admissibility theorem",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-finite-parent-data.md"
+        },
+        {
+          "id": "surface_finder",
+          "criterion": "A full-metric deformed closed-surface finder passes independent controls",
+          "verified_in_stated_domain": true,
+          "evidence": "tests/test_nsc_atlas_trapped_surfaces.py"
+        },
+        {
+          "id": "inherited_trigger",
+          "criterion": "A physical preparation/compression law selects a formation threshold",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "resolved_trap",
+          "criterion": "A resolved evolution forms a future-trapped region",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "receiving_child",
+          "criterion": "An admissible receiving child with measured transferred energy is constructed",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "dark_energy",
+      "user_planning_estimate_percent": 20,
+      "verified_gates": 1,
+      "required_gates": 5,
+      "gate_completion_percent": 20.0,
+      "gates": [
+        {
+          "id": "vacuum_identification",
+          "criterion": "Vacuum-form and non-vacuum source contributions are distinguished",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-offset-thermodynamics.md"
+        },
+        {
+          "id": "inherited_vacuum",
+          "criterion": "A nonzero effective vacuum is generated by the shared inherited construction",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "SI_scale",
+          "criterion": "Inheritance fixes its absolute physical scale",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "physical_eos",
+          "criterion": "The formed receiving region yields its equation of state",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "omega_test",
+          "criterion": "A selected present vacuum fraction passes independent observation",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "thermodynamic_ledger",
+      "user_planning_estimate_percent": 25,
+      "verified_gates": 1,
+      "required_gates": 5,
+      "gate_completion_percent": 20.0,
+      "gates": [
+        {
+          "id": "local_balance",
+          "criterion": "Finite local pressure/work/flux balances close",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-parent-backreaction.md"
+        },
+        {
+          "id": "child_exchange",
+          "criterion": "Parent and formed child have a common energy-transfer account",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "thermal_sectors",
+          "criterion": "Matter/radiation production and thermal populations are specified",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "global_balance",
+          "criterion": "The complete connected system has conserved energy/entropy accounting",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "component_split",
+          "criterion": "The shared construction predicts the tested cosmological energy split",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "cosmology",
+      "user_planning_estimate_percent": 30,
+      "verified_gates": 2,
+      "required_gates": 5,
+      "gate_completion_percent": 40.0,
+      "gates": [
+        {
+          "id": "forward_observations",
+          "criterion": "A candidate background produces observer light-cone quantities",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-parent-supernova.md"
+        },
+        {
+          "id": "joint_controls",
+          "criterion": "SN and shared-ruler DESI comparisons include a common LCDM control",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-shared-ruler-scoreboard.md"
+        },
+        {
+          "id": "thermal_cmb",
+          "criterion": "A compatible thermal/acoustic/recombination history closes the CMB calculation",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "ruler_epoch",
+          "criterion": "Physical ruler and observer epoch are inherited",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "withheld_success",
+          "criterion": "One frozen model succeeds across independent withheld observations",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "prediction_register",
+      "user_planning_estimate_percent": 30,
+      "verified_gates": 3,
+      "required_gates": 5,
+      "gate_completion_percent": 60.0,
+      "gates": [
+        {
+          "id": "versioned_register",
+          "criterion": "Predictions have versioned, authenticated records",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/prediction-register.md"
+        },
+        {
+          "id": "frozen_protocols",
+          "criterion": "Inputs/formulas/domains/tolerances are frozen before selected calculations",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/prediction-register.md"
+        },
+        {
+          "id": "independent_synthetic",
+          "criterion": "Registered forecasts have independent numerical/synthetic checks",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/prediction-register.md"
+        },
+        {
+          "id": "physical_forecast",
+          "criterion": "A selected astronomical target has physical scale, epoch and full uncertainty",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "astronomical_success",
+          "criterion": "A registered forecast succeeds on withheld astronomical data",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "cycle",
+      "user_planning_estimate_percent": 15,
+      "verified_gates": 1,
+      "required_gates": 5,
+      "gate_completion_percent": 20.0,
+      "gates": [
+        {
+          "id": "continuation_inputs",
+          "criterion": "A finite compatible state continuation/composition is constructed",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-parent-circulation.md"
+        },
+        {
+          "id": "first_child",
+          "criterion": "The first physical child forms with an inherited state",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "grandchild",
+          "criterion": "That child forms a grandchild under the same transition law",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "fixed_point",
+          "criterion": "A physical transition fixed point or justified unlimited composition exists",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "end_beginning",
+          "criterion": "The late-state to new-beginning transition has a complete source/entropy law",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "antimatter_eta",
+      "user_planning_estimate_percent": "0-20",
+      "verified_gates": 1,
+      "required_gates": 5,
+      "gate_completion_percent": 20.0,
+      "gates": [
+        {
+          "id": "neutral_audit",
+          "criterion": "The neutral flow and damping residue are explicitly tested for charge bias",
+          "verified_in_stated_domain": true,
+          "evidence": "docs/nsc-atlas-offset-thermodynamics.md"
+        },
+        {
+          "id": "charge_sector",
+          "criterion": "The same forming parent/child model supplies charged matter and a baryon current",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "charge_bias",
+          "criterion": "A derived production/transport law selects a nonzero imbalance",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "photon_population",
+          "criterion": "The thermal photon normalization is calculated",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "eta_prediction",
+          "criterion": "The frozen construction predicts and tests the observed baryon/photon ratio",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "dark_matter",
+      "user_planning_estimate_percent": 10,
+      "verified_gates": 0,
+      "required_gates": 5,
+      "gate_completion_percent": 0.0,
+      "gates": [
+        {
+          "id": "physical_component",
+          "criterion": "A dark-matter component is identified in the same inherited model",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "population",
+          "criterion": "The child/level population and physical mass scale are predicted",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "abundance",
+          "criterion": "The cosmological abundance is predicted",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "growth_lensing",
+          "criterion": "The same population supplies growth and lensing observables",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        },
+        {
+          "id": "joint_test",
+          "criterion": "Those observables pass independent tests without hidden retuning",
+          "verified_in_stated_domain": false,
+          "evidence": null
+        }
+      ]
+    }
+  ],
+  "verified_gates": 15,
+  "required_gates": 50,
+  "overall_gate_completion_percent": 30.0
+}
