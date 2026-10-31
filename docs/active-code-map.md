@@ -8,6 +8,13 @@ The physical GH evolution is unchanged; its CLI can omit passive work
 quadrature for these formation-only runs. The goal/frontier is retained
 in [the progress record](atlas-progress.json).
 
+The same owner also covers the declared one-mode occupation:
+`nsc_atlas_valve_neck.py` solves its initial constraint and threshold;
+`nsc_atlas_valve_spherical.py` evolves the exact SO(3) reduction and regional
+ledger. `check_nsc_atlas_valve_neck_gh.py` independently uses the unchanged
+full GH engine on the same state. Resolved trapping and a regular fed
+child are separate gates; source occupation remains supplied.
+
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
 uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
 records. The horizon/GH/boson chain below is frozen. It supplies existing

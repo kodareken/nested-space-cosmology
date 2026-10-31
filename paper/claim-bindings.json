@@ -783,6 +783,16 @@
       "section": "5",
       "status": "measured",
       "owner": "docs/nsc-atlas-offset-thermodynamics.md"
+    },
+    "one-mode-trapped-neck": {
+      "section": "6",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-valve-formation.md"
+    },
+    "one-mode-regional-ledger": {
+      "section": "6",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-valve-formation.md"
     }
   },
   "findings": [

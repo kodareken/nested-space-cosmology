@@ -1,0 +1,986 @@
+{
+  "schema": "nsc-atlas-valve-null-search-summary-v1",
+  "sheets": [
+    {
+      "raw_record": ".build/valve-null-L16-reflection-v1.json",
+      "raw_record_sha256": "730cefbeccbd848982125b7c75ff3287012981fb6e309c5f9c1421b5af918a87",
+      "producer_commit": "696f6e25f86c69e214d63dbdcfe29bb80dc5da92",
+      "source_bound_to_commit": true,
+      "source_unchanged": true,
+      "source_sha256": {
+        "scripts/check_nsc_atlas_valve_null_sheet.py": "1432eedee162d5330056f3be0689bc2dd2e774111538ead9b827257f6ee4ad63",
+        "src/recursive_horizons/nsc_atlas_null_cuts.py": "8650f33e0d517382acec25e8638624352de75f3dbd703db4e55e3a8f309f7d57",
+        "src/recursive_horizons/nsc_atlas_null_geometry.py": "27c589f94142d4b45e9afadf1d275585f7ec4ca4d97534c7b760ce133e34d32a",
+        "src/recursive_horizons/nsc_atlas_null_parent.py": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9",
+        "src/recursive_horizons/nsc_atlas_null_transport.py": "75549040e06a7a28f70510b7fb30e2d29eddb7f5a08fa525d89c941bbc025abb",
+        "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+      },
+      "metric_degree": 16,
+      "seed": "reflection",
+      "angular_order": [
+        10,
+        21
+      ],
+      "angular_rays": 210,
+      "parent_history": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "producer_record",
+        "cache_sha256": "02d664949fa466510b27acb322a758dc6e80e04f4d76452efc23abe247e48e62",
+        "history_path": "C:/Users/swedi/Projects/science/nested-space-cosmology/.build/valve-e1-L16-extended-v1-history.npz",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "record_path": "C:/Users/swedi/Projects/science/nested-space-cosmology/.build/valve-e1-L16-extended-v1.json",
+        "record_sha256": "426f4756573a6865e5fcc7b39046831bbcf9188c0781516b242506104acd0d1d",
+        "sampler_sha256": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9",
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "3932786dff9ebfc2e5bfc4f7c31c4613e121e05e0ae5dae1679cc5ed95076a86"
+      },
+      "ray_cache": {
+        "path": ".build/valve-null-L16-reflection-v1.npz",
+        "sha256": "a8f2c0d27503d72713bef3744debc83a95f49660c57badb26a70fc1b18a098a6"
+      },
+      "ray_dense_cache": null,
+      "cuts": [
+        {
+          "coordinate_t": 0.0,
+          "theta_plus_range": [
+            -3.6317120516193473e-16,
+            2.404293347967577e-17
+          ],
+          "theta_minus_range": [
+            -2.404293347967577e-17,
+            3.6317120516193473e-16
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": null,
+          "max_abs_null_Ricci_source_gap": 0.00024185865052998162
+        },
+        {
+          "coordinate_t": 0.07498499723750368,
+          "theta_plus_range": [
+            -0.07689438402782106,
+            -2.25540010597167e-05
+          ],
+          "theta_minus_range": [
+            0.03370843722881972,
+            0.03676529513522144
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 2.1764571250041845e-05,
+          "max_abs_null_Ricci_source_gap": 0.0002729290261406503
+        },
+        {
+          "coordinate_t": 0.1501788122399232,
+          "theta_plus_range": [
+            -0.11823273993078254,
+            -6.241921349132463e-05
+          ],
+          "theta_minus_range": [
+            0.06991466842311396,
+            0.10591689871052393
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 5.516952081193918e-05,
+          "max_abs_null_Ricci_source_gap": 0.00022294376048598297
+        },
+        {
+          "coordinate_t": 0.22569113591772277,
+          "theta_plus_range": [
+            -0.22063724330400558,
+            -0.0001777856069214781
+          ],
+          "theta_minus_range": [
+            0.10329914000106516,
+            0.11816739211274205
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.00014061221630149573,
+          "max_abs_null_Ricci_source_gap": 0.0002304380367783576
+        },
+        {
+          "coordinate_t": 0.30176421593808817,
+          "theta_plus_range": [
+            -0.2577900789829011,
+            -0.00035145497420435365
+          ],
+          "theta_minus_range": [
+            0.13770542434267344,
+            0.19826501419710524
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.0003225917119000254,
+          "max_abs_null_Ricci_source_gap": 0.00022400080486717489
+        },
+        {
+          "coordinate_t": 0.6141150781873023,
+          "theta_plus_range": [
+            -0.5801118742093204,
+            -0.002681153026152669
+          ],
+          "theta_minus_range": [
+            0.2605150504202145,
+            0.39626109989853914
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.003095286135097895,
+          "max_abs_null_Ricci_source_gap": 0.00022192200595338996
+        },
+        {
+          "coordinate_t": 0.9458871121881129,
+          "theta_plus_range": [
+            -0.9184748344353381,
+            -0.009703876520684482
+          ],
+          "theta_minus_range": [
+            0.3604042660705435,
+            0.7235990142254702
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.014084036635175717,
+          "max_abs_null_Ricci_source_gap": 0.005056372179190589
+        },
+        {
+          "coordinate_t": 1.3036423687651855,
+          "theta_plus_range": [
+            -1.336566667325523,
+            -0.01905937551329903
+          ],
+          "theta_minus_range": [
+            0.4368539855308479,
+            1.2451887949765994
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.04966096222177345,
+          "max_abs_null_Ricci_source_gap": 0.08320673194466133
+        }
+      ],
+      "transport": {
+        "caustic_detection_scope": "Near-singular accepted/checkpoint Jacobi matrices and determinant sign changes only; no certificate excluding caustics between samples.",
+        "effective_interval": [
+          0.0,
+          1.3036423687651855
+        ],
+        "elapsed_seconds": 46.550100499996915,
+        "invalid_trials": 0,
+        "rays": 214,
+        "reason": null,
+        "requested_interval": [
+          0.0,
+          1.3036423687651855
+        ],
+        "rhs_calls": 635,
+        "sampled_caustic_rays": 0,
+        "scope": "Coordinate-time null and Jacobi transport on supplied data. A caustic or data endpoint is not a spacetime singularity or child continuation.",
+        "status": "endpoint_reached",
+        "steps": 46
+      },
+      "physical_child_admitted": false
+    },
+    {
+      "raw_record": ".build/valve-null-L20-reflection-v1.json",
+      "raw_record_sha256": "109880cde8765624ac7588304366e49713d7ac473b8950202170855365e2fdeb",
+      "producer_commit": "520b4df52d2d9de389e38e4d4377fbbf35e1e2a5",
+      "source_bound_to_commit": true,
+      "source_unchanged": true,
+      "source_sha256": {
+        "scripts/check_nsc_atlas_valve_null_sheet.py": "7ba12cf0f48d43e8fcb640931843304bdee349a61154ad2a4aa65b7a2f9e0336",
+        "src/recursive_horizons/nsc_atlas_null_cuts.py": "9824b3f7f1a245de488728d07ab2f8d4c84cf4fbb03ba59da6154cb0d2b30369",
+        "src/recursive_horizons/nsc_atlas_null_geometry.py": "27c589f94142d4b45e9afadf1d275585f7ec4ca4d97534c7b760ce133e34d32a",
+        "src/recursive_horizons/nsc_atlas_null_parent.py": "bda55b35d6e572f610287172e53c45aa0ba9bb1015d65c1313e00899ef1ce7f2",
+        "src/recursive_horizons/nsc_atlas_null_transport.py": "84ce1937809537c9ddfca8809d4f9dfea63259d9e630c4f073607bf1eaa52a0b",
+        "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+      },
+      "metric_degree": 20,
+      "seed": "reflection",
+      "angular_order": [
+        10,
+        21
+      ],
+      "angular_rays": 210,
+      "parent_history": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "producer_record",
+        "cache_sha256": "24f5eaa7ed069cf2c333d80b1729df56583a5ace79d57d304f10ba78bfd62645",
+        "history_path": "C:/Users/swedi/Projects/science/nested-space-cosmology/.build/valve-e1-L20-extended-v1-history.npz",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "record_path": "C:/Users/swedi/Projects/science/nested-space-cosmology/.build/valve-e1-L20-extended-v1.json",
+        "record_sha256": "f25e973f4916fd15aee640a945063613ba46a79b98bf1f4cb127190d114822ea",
+        "sampler_sha256": "bda55b35d6e572f610287172e53c45aa0ba9bb1015d65c1313e00899ef1ce7f2",
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "9ae514fc74ba4cbddd913bcdebcf27999c263328aebf44c28039457335595b4b"
+      },
+      "ray_cache": {
+        "path": ".build/valve-null-L20-reflection-v1.npz",
+        "sha256": "95d80ddd172808117a767f8a8395710e80f61806146bbb2e0ff8bdc862a9c5b8"
+      },
+      "ray_dense_cache": null,
+      "cuts": [
+        {
+          "coordinate_t": 0.0,
+          "theta_plus_range": [
+            -4.453430528372878e-16,
+            2.852728040989807e-17
+          ],
+          "theta_minus_range": [
+            -2.852728040989807e-17,
+            4.453430528372878e-16
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": null,
+          "max_abs_null_Ricci_source_gap": 1.7341073758947445e-05
+        },
+        {
+          "coordinate_t": 0.07498499720848298,
+          "theta_plus_range": [
+            -0.07689680640865651,
+            -2.1479806536148227e-05
+          ],
+          "theta_minus_range": [
+            0.03370817582008927,
+            0.03676873646528796
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 5.551116155201503e-06,
+          "max_abs_null_Ricci_source_gap": 1.825801262189588e-05
+        },
+        {
+          "coordinate_t": 0.15017881188897192,
+          "theta_plus_range": [
+            -0.11823766619264375,
+            -7.002178786643873e-05
+          ],
+          "theta_minus_range": [
+            0.06991540598809252,
+            0.10593379456682858
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 3.9662643835310885e-05,
+          "max_abs_null_Ricci_source_gap": 3.541133076545577e-05
+        },
+        {
+          "coordinate_t": 0.22569113445789982,
+          "theta_plus_range": [
+            -0.22064739433705144,
+            -0.00018735048239823873
+          ],
+          "theta_minus_range": [
+            0.10329939299173117,
+            0.1181867474375364
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.00013292418824755456,
+          "max_abs_null_Ricci_source_gap": 1.898680656997609e-05
+        },
+        {
+          "coordinate_t": 0.30176421282682864,
+          "theta_plus_range": [
+            -0.25780463598985304,
+            -0.0003606603701458398
+          ],
+          "theta_minus_range": [
+            0.1377070558103415,
+            0.19828871870177367
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.00032142218956248314,
+          "max_abs_null_Ricci_source_gap": 1.4634878099606397e-05
+        },
+        {
+          "coordinate_t": 0.6141152013590837,
+          "theta_plus_range": [
+            -0.580133601115367,
+            -0.0026844651432684843
+          ],
+          "theta_minus_range": [
+            0.260519424651949,
+            0.39628751548193797
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.0031112515962966186,
+          "max_abs_null_Ricci_source_gap": 9.138214199566619e-06
+        },
+        {
+          "coordinate_t": 0.9458893890796648,
+          "theta_plus_range": [
+            -0.9183978061820119,
+            -0.009679770348958242
+          ],
+          "theta_minus_range": [
+            0.3604192105612938,
+            0.7237108994493622
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.014117017653653426,
+          "max_abs_null_Ricci_source_gap": 0.0018314344195465644
+        },
+        {
+          "coordinate_t": 1.3036563278839346,
+          "theta_plus_range": [
+            -1.336606605776629,
+            -0.019083209661482164
+          ],
+          "theta_minus_range": [
+            0.4369165091550685,
+            1.2450665392928455
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.04961095715028194,
+          "max_abs_null_Ricci_source_gap": 0.026084278306031744
+        }
+      ],
+      "transport": {
+        "caustic_detection_scope": "Near-singular accepted/checkpoint Jacobi matrices and determinant sign changes only; no certificate excluding caustics between samples.",
+        "effective_interval": [
+          0.0,
+          1.3036563278839346
+        ],
+        "elapsed_seconds": 74.41841680000653,
+        "invalid_trials": 0,
+        "rays": 214,
+        "reason": null,
+        "requested_interval": [
+          0.0,
+          1.3036563278839346
+        ],
+        "rhs_calls": 659,
+        "sampled_caustic_rays": 0,
+        "scope": "Coordinate-time null and Jacobi transport on supplied data. A caustic or data endpoint is not a spacetime singularity or child continuation.",
+        "status": "endpoint_reached",
+        "steps": 47
+      },
+      "physical_child_admitted": false
+    },
+    {
+      "raw_record": ".build/valve-null-L24-reflection-v1.json",
+      "raw_record_sha256": "36d91d66a5cc6709a3ece86a9d9d755a01e86a05c7f73ea84501e3fcad0a3f8b",
+      "producer_commit": "696f6e25f86c69e214d63dbdcfe29bb80dc5da92",
+      "source_bound_to_commit": true,
+      "source_unchanged": true,
+      "source_sha256": {
+        "scripts/check_nsc_atlas_valve_null_sheet.py": "1432eedee162d5330056f3be0689bc2dd2e774111538ead9b827257f6ee4ad63",
+        "src/recursive_horizons/nsc_atlas_null_cuts.py": "8650f33e0d517382acec25e8638624352de75f3dbd703db4e55e3a8f309f7d57",
+        "src/recursive_horizons/nsc_atlas_null_geometry.py": "27c589f94142d4b45e9afadf1d275585f7ec4ca4d97534c7b760ce133e34d32a",
+        "src/recursive_horizons/nsc_atlas_null_parent.py": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9",
+        "src/recursive_horizons/nsc_atlas_null_transport.py": "75549040e06a7a28f70510b7fb30e2d29eddb7f5a08fa525d89c941bbc025abb",
+        "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+      },
+      "metric_degree": 24,
+      "seed": "reflection",
+      "angular_order": [
+        10,
+        21
+      ],
+      "angular_rays": 210,
+      "parent_history": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "producer_record",
+        "cache_sha256": "8f31ccf42ee0d1833e0ddeabcccc730dc99f3d94c88941b47f2de358a4bbcec3",
+        "history_path": "C:/Users/swedi/Projects/science/nested-space-cosmology/.build/valve-e1-L24-extended-v1-history.npz",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "record_path": "C:/Users/swedi/Projects/science/nested-space-cosmology/.build/valve-e1-L24-extended-v1.json",
+        "record_sha256": "34422e6fefaf7bf284e3bd6b758671388cdf4ab3dad2a9b804e19108dfc3b05f",
+        "sampler_sha256": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9",
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "53e7498ef8aca8e84584fdc8ccf1cb34b46955f2ff29f05226da9aa2a1dafb17"
+      },
+      "ray_cache": {
+        "path": ".build/valve-null-L24-reflection-v1.npz",
+        "sha256": "c6eef6110df7bf455ede980193cd455174a40593631144fcf096d7b301c87745"
+      },
+      "ray_dense_cache": null,
+      "cuts": [
+        {
+          "coordinate_t": 0.0,
+          "theta_plus_range": [
+            -4.619151597781858e-16,
+            3.718167208423832e-17
+          ],
+          "theta_minus_range": [
+            -3.718167208423832e-17,
+            4.619151597781858e-16
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": null,
+          "max_abs_null_Ricci_source_gap": 7.474452014766278e-06
+        },
+        {
+          "coordinate_t": 0.07498499720218506,
+          "theta_plus_range": [
+            -0.0768965904588865,
+            -2.1446856620584848e-05
+          ],
+          "theta_minus_range": [
+            0.033708155193192174,
+            0.036768769484399506
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 5.224452223735279e-06,
+          "max_abs_null_Ricci_source_gap": 6.200290913138673e-06
+        },
+        {
+          "coordinate_t": 0.15017881179720374,
+          "theta_plus_range": [
+            -0.11823747306064554,
+            -7.01723088994393e-05
+          ],
+          "theta_minus_range": [
+            0.06991539530407392,
+            0.10593499678800788
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 3.8729635544239396e-05,
+          "max_abs_null_Ricci_source_gap": 4.9358055954629165e-06
+        },
+        {
+          "coordinate_t": 0.22569113408939578,
+          "theta_plus_range": [
+            -0.2206474921927233,
+            -0.00018747672559940587
+          ],
+          "theta_minus_range": [
+            0.10329937003264757,
+            0.11818820426606506
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.0001324575973960252,
+          "max_abs_null_Ricci_source_gap": 8.038676342581041e-06
+        },
+        {
+          "coordinate_t": 0.3017642119669859,
+          "theta_plus_range": [
+            -0.25780513080710343,
+            -0.00036072378672610816
+          ],
+          "theta_minus_range": [
+            0.13770703818960994,
+            0.19829018262176062
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.0003209639127763672,
+          "max_abs_null_Ricci_source_gap": 6.406731071550986e-06
+        },
+        {
+          "coordinate_t": 0.6141152002946904,
+          "theta_plus_range": [
+            -0.5801344427403332,
+            -0.0026843154201021194
+          ],
+          "theta_minus_range": [
+            0.2605193696684943,
+            0.396287860702081
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.0031108653028850642,
+          "max_abs_null_Ricci_source_gap": 3.466701745558076e-06
+        },
+        {
+          "coordinate_t": 0.9458895428621026,
+          "theta_plus_range": [
+            -0.9183843074429295,
+            -0.009681923756011124
+          ],
+          "theta_minus_range": [
+            0.36041822139757,
+            0.7237317654925732
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.014117237668272045,
+          "max_abs_null_Ricci_source_gap": 0.0002289648845358594
+        },
+        {
+          "coordinate_t": 1.3036630987720565,
+          "theta_plus_range": [
+            -1.3365668245919107,
+            -0.0190285728932596
+          ],
+          "theta_minus_range": [
+            0.436966322428209,
+            1.245238162969379
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.04961306249505945,
+          "max_abs_null_Ricci_source_gap": 0.009403416930559454
+        }
+      ],
+      "transport": {
+        "caustic_detection_scope": "Near-singular accepted/checkpoint Jacobi matrices and determinant sign changes only; no certificate excluding caustics between samples.",
+        "effective_interval": [
+          0.0,
+          1.3036630987720565
+        ],
+        "elapsed_seconds": 116.81175059999805,
+        "invalid_trials": 0,
+        "rays": 214,
+        "reason": null,
+        "requested_interval": [
+          0.0,
+          1.3036630987720565
+        ],
+        "rhs_calls": 635,
+        "sampled_caustic_rays": 0,
+        "scope": "Coordinate-time null and Jacobi transport on supplied data. A caustic or data endpoint is not a spacetime singularity or child continuation.",
+        "status": "endpoint_reached",
+        "steps": 46
+      },
+      "physical_child_admitted": false
+    },
+    {
+      "raw_record": ".build/valve-null-L24-anchor-dense-v1.json",
+      "raw_record_sha256": "0c4d5f91539237390ad6ea10743183f9535fa3c5dcaf78daaf22b5b3fd72a04d",
+      "producer_commit": "7c68b1f4bd7da79eee6719092d49a913668f4dac",
+      "source_bound_to_commit": true,
+      "source_unchanged": true,
+      "source_sha256": {
+        "scripts/check_nsc_atlas_valve_null_sheet.py": "1432eedee162d5330056f3be0689bc2dd2e774111538ead9b827257f6ee4ad63",
+        "src/recursive_horizons/nsc_atlas_null_cuts.py": "8650f33e0d517382acec25e8638624352de75f3dbd703db4e55e3a8f309f7d57",
+        "src/recursive_horizons/nsc_atlas_null_geometry.py": "27c589f94142d4b45e9afadf1d275585f7ec4ca4d97534c7b760ce133e34d32a",
+        "src/recursive_horizons/nsc_atlas_null_parent.py": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9",
+        "src/recursive_horizons/nsc_atlas_null_transport.py": "374a41accfd55b1b1e76758e5a744721c866410e3130f3fb9e151e1e9ee54d13",
+        "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+      },
+      "metric_degree": 24,
+      "seed": "marginal_anchor",
+      "angular_order": [
+        10,
+        21
+      ],
+      "angular_rays": 210,
+      "parent_history": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "producer_record",
+        "cache_sha256": "8f31ccf42ee0d1833e0ddeabcccc730dc99f3d94c88941b47f2de358a4bbcec3",
+        "history_path": "C:/Users/swedi/Projects/science/nested-space-cosmology/.build/valve-e1-L24-extended-v1-history.npz",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "record_path": "C:/Users/swedi/Projects/science/nested-space-cosmology/.build/valve-e1-L24-extended-v1.json",
+        "record_sha256": "34422e6fefaf7bf284e3bd6b758671388cdf4ab3dad2a9b804e19108dfc3b05f",
+        "sampler_sha256": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9",
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "53e7498ef8aca8e84584fdc8ccf1cb34b46955f2ff29f05226da9aa2a1dafb17"
+      },
+      "ray_cache": null,
+      "ray_dense_cache": {
+        "intervals": 38,
+        "path": ".build/valve-null-L24-anchor-dense-v1.npz",
+        "schema": "nsc-null-ray-dense-v1",
+        "sha256": "a9dec042d6566c99d0f0e890e1403a3ee58172d1c4d17e9bc4cb034d8a528861"
+      },
+      "cuts": [
+        {
+          "coordinate_t": 0.22569113408939578,
+          "theta_plus_range": [
+            -0.0001804701610164522,
+            0.00028962825635715436
+          ],
+          "theta_minus_range": [
+            -0.08479460820229906,
+            0.07852152938183452
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": null,
+          "max_abs_null_Ricci_source_gap": 8.587198723541967e-06
+        },
+        {
+          "coordinate_t": 0.3017642119669859,
+          "theta_plus_range": [
+            -0.03482374818242524,
+            -5.123380715462214e-05
+          ],
+          "theta_minus_range": [
+            -0.035249155205877215,
+            0.11020285843222444
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 4.3025575408567625e-05,
+          "max_abs_null_Ricci_source_gap": 4.323145702089803e-06
+        },
+        {
+          "coordinate_t": 0.6141152002946904,
+          "theta_plus_range": [
+            -0.33232581055604493,
+            -0.0005986238951403849
+          ],
+          "theta_minus_range": [
+            0.02798222708497538,
+            0.24505320528267382
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.0004408571357585298,
+          "max_abs_null_Ricci_source_gap": 3.838993826388304e-06
+        },
+        {
+          "coordinate_t": 0.9458895428621026,
+          "theta_plus_range": [
+            -0.6079617162608574,
+            -0.0020920778947147514
+          ],
+          "theta_minus_range": [
+            0.14860206149409755,
+            0.4722926964730393
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.0017202541505869364,
+          "max_abs_null_Ricci_source_gap": 0.00041659169426810916
+        },
+        {
+          "coordinate_t": 1.3036630987720565,
+          "theta_plus_range": [
+            -0.9197108472777383,
+            -0.006507682020863215
+          ],
+          "theta_minus_range": [
+            0.18651564942138277,
+            0.8488010879789867
+          ],
+          "Sachs_geometric_theta_RMS_gap_over_H": 0.006006613150071737,
+          "max_abs_null_Ricci_source_gap": 0.039927367826165905
+        }
+      ],
+      "transport": {
+        "caustic_detection_scope": "Near-singular accepted/checkpoint Jacobi matrices and determinant sign changes only; no certificate excluding caustics between samples.",
+        "effective_interval": [
+          0.22569113408939578,
+          1.3036630987720565
+        ],
+        "elapsed_seconds": 95.35118870000588,
+        "invalid_trials": 0,
+        "rays": 210,
+        "reason": null,
+        "requested_interval": [
+          0.22569113408939578,
+          1.3036630987720565
+        ],
+        "rhs_calls": 608,
+        "sampled_caustic_rays": 0,
+        "scope": "Coordinate-time null and Jacobi transport on supplied data. A caustic or data endpoint is not a spacetime singularity or child continuation.",
+        "status": "endpoint_reached",
+        "steps": 38
+      },
+      "physical_child_admitted": false
+    }
+  ],
+  "time_tilted_search": {
+    "raw_record": ".build/valve-timecut-L24-degree4-v2.json",
+    "raw_record_sha256": "394803b138b59267395dcc9d3c669a2d7858be65d2a1cda93cc3a31ac9f71625",
+    "status": "completed_finite_search",
+    "producer_commit": "e08b075fc0a5115ec8948f09f454a1795a36c961",
+    "source_sha256": {
+      "scripts/search_nsc_atlas_valve_null_cut.py": "50219acc1db04965dca341f6ce9353b7c3e84e6d1349463fa897ff02333a6328",
+      "src/recursive_horizons/nsc_atlas_null_cuts.py": "8650f33e0d517382acec25e8638624352de75f3dbd703db4e55e3a8f309f7d57",
+      "src/recursive_horizons/nsc_atlas_null_parent.py": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9",
+      "src/recursive_horizons/nsc_atlas_null_transport.py": "75549040e06a7a28f70510b7fb30e2d29eddb7f5a08fa525d89c941bbc025abb"
+    },
+    "source_bound_to_commit": true,
+    "source_unchanged_during_run": true,
+    "optimizer": {
+      "iterations": 3,
+      "message": "Optimization terminated successfully",
+      "reported_maximum_expansion": 0.1567064679546334,
+      "success": true
+    },
+    "best_cut": {
+      "Sachs_geometric_theta_RMS_gap_over_H": 0.00026763618679486096,
+      "Sachs_geometric_theta_max_gap_over_H": 0.0008069436138424195,
+      "actual_time_node_range": [
+        0.2256922120613583,
+        0.2841738496204978
+      ],
+      "angular_degree": 8,
+      "area": 78.2324940653451,
+      "child_formation_proved": false,
+      "continuum_expansion_signs_certified": false,
+      "embedding_interpolation_RMS": 3.1663114776484737e-06,
+      "embedding_interpolation_max": 7.038204980740879e-06,
+      "expansion_tolerance": 2.714056154003984e-07,
+      "fitted_embedding_norm_range": [
+        0.9999921436390887,
+        1.0000058139376322
+      ],
+      "future_mots_sampled": false,
+      "future_trapped_sampled": false,
+      "global_injectivity_certified": false,
+      "immersion_min_gramdet": 1.3944995772048172,
+      "immersion_min_scaled_density_squared": 0.11943575928911847,
+      "immersion_threshold": 1e-18,
+      "integrated_Ricci_source_gap_range": [
+        -1.0539774809788542e-07,
+        1.0654101449160402e-07
+      ],
+      "known_upstream_caustic": false,
+      "lapse_range": [
+        0.9889686603160851,
+        0.999978014464374
+      ],
+      "maximum_expansion_over_H_reference": 0.15670646795465185,
+      "normal_energy_range": [
+        0.9987015990921851,
+        1.000339661721613
+      ],
+      "order": [
+        10,
+        21
+      ],
+      "outgoing_alignment_range": [
+        0.9999981007163018,
+        1.0000011126554718
+      ],
+      "outgoing_normality_max_relative": 5.724089034239654e-05,
+      "outgoing_null_defect_max_relative": 3.796518951674564e-06,
+      "physical_child_admitted": false,
+      "ray_area_determinant_min": 0.9999014422923211,
+      "sampled_nonlocal_event_coincidences": 0,
+      "scope": "One closed spacetime cut, finite event/harmonic reconstruction and angular samples. Normals are projected-Eulerian u +/- v; no global injectivity or child admission.",
+      "theta_minus_range": [
+        -0.03026932285932598,
+        0.0425310153724551
+      ],
+      "theta_minus_rms": 0.03363099988677123,
+      "theta_plus_range": [
+        -0.006631402590089079,
+        0.0002489474498259467
+      ],
+      "theta_plus_rms": 0.0027734589826284616,
+      "time_coefficients": [
+        0.9049821371049914,
+        0.008839875508714002,
+        -0.00378834320406749,
+        -0.002490551435119272,
+        -0.00048512042082977686,
+        0.04413056268138115,
+        -0.016115362820746007,
+        -0.001483390743180163,
+        -0.01638518218232251,
+        -0.007922131203387243,
+        0.003240911543837284,
+        0.013239688181277659,
+        -0.010693110457915007,
+        0.00014553393138177714,
+        0.012830486574767732,
+        -0.009947354486776378,
+        3.117372627123246e-05,
+        0.0003180719347926665,
+        0.0016859512656953195,
+        -0.00027830030996283463,
+        0.0012868472243371743,
+        0.0009261375198778322,
+        0.0021359803819082255,
+        -0.0002767910792001845,
+        0.002374254432110766
+      ],
+      "time_interpolation_RMS": 4.210424146904217e-16,
+      "time_interpolation_max": 1.1657341758564144e-15,
+      "time_range": [
+        0.2256922120613581,
+        0.28417384962049835
+      ]
+    },
+    "noncaustic_bound": {
+      "all_sampled_rays_certified": true,
+      "angular_rays": 210,
+      "checked_rays": 210,
+      "interpretation": "Positive bounds certify only stored-polynomial nonsingularity; nonpositive bounds are inconclusive, not detected caustics.",
+      "intervals": 38,
+      "max_roundoff_padding": 1.009750766466692e-14,
+      "method": "|det D_old|/upper_frobenius(D_old) minus sum_i upper_frobenius(F_i,D), with floating-point padding.",
+      "min_lower_bound": 0.561157897293329,
+      "min_roundoff_padding": 8.077423577017617e-15,
+      "ray_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "scope": "Conditional numerical bound for the actual stored polynomials on selected sampled generators over the full stored interval only. No true continuum/angular-error, global injectivity, physical caustic exclusion or child claim."
+    },
+    "sheet_path": ".build/valve-null-L24-anchor-dense-v1.json",
+    "sheet_sha256": "0c4d5f91539237390ad6ea10743183f9535fa3c5dcaf78daaf22b5b3fd72a04d",
+    "scope": "Numerical surface/time parameters vary on one fixed inherited null sheet. No action/state retuning; finite search misses prove no universal nonexistence. Sampled negative expansions would still require independent metric/angular validation and receiving-region construction."
+  },
+  "result": "No admitted future trap in these finite sheets and cut families; local optimizer is not a global nonexistence theorem. Freeze and change the explicitly supplied preparation.",
+  "units": "Expansion ranges in retained action inverse-length units; divide by H_reference=.2714056154003984 for displayed normalized ranges.",
+  "reproduction": "Use scripts/check_nsc_atlas_valve_null_sheet.py and scripts/search_nsc_atlas_valve_null_cut.py with the recorded source-bound parent histories; raw dense rays regenerate locally."
+}

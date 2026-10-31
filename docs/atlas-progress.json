@@ -7,10 +7,10 @@
   "goal_status": "active",
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
-  "current_calculation": "Closed-surface future-trapping test of the unchanged finite-amplitude compact parent",
-  "completed": "Source-bound formation windows, onset roots, deformed closed-surface diagnostics and vortex-core checks completed. Local contraction, a conditional release threshold and phase winding/current are calculated; no receiving child is admitted.",
-  "active": "Formation remains the frontier: reconstruct resolved null-generator focusing and incoming-expansion histories, then test a closed receiving region. Completed finite searches have no admitted child; do not spend extra precision on their nonfuture fits.",
-  "continuation": "Read this file, current_owner, latest compact formation summary and .build/valve-e1-L*-extended-v1.json status before launching further work. Never restart an already live producer.",
+  "current_calculation": "Inherited incoming state and receiving continuation after resolved same-action neck trapping",
+  "completed": "Old two-mode null-sheet/cut searches frozen. New one-mode constraint threshold epsilon=.8339066143 and convergent future-trapped development verified, with independent GH check and regional ledger.",
+  "active": "Follow the actual fed trapped band and its horizons into a regular child continuation, retaining the supplied parent state. Zero center flux does not exclude symmetric horizon accretion. A later global synchronous validity break requires a characteristic/local frame, not an invented child or more threshold refinement.",
+  "continuation": "Read this record and the formation owner first. New neck and old null searches are terminal. No live producers remain. Preserve separate preparations; do not rerun completed windows or deepen their decimals.",
   "items": [
     {
       "id": "dimensions_inputs",
@@ -93,9 +93,9 @@
     {
       "id": "valve_child",
       "user_planning_estimate_percent": 25,
-      "verified_gates": 2,
+      "verified_gates": 3,
       "required_gates": 5,
-      "gate_completion_percent": 40.0,
+      "gate_completion_percent": 60.0,
       "gates": [
         {
           "id": "admissible_parent",
@@ -118,8 +118,9 @@
         {
           "id": "resolved_trap",
           "criterion": "A resolved evolution forms a future-trapped region",
-          "verified_in_stated_domain": false,
-          "evidence": null
+          "verified_in_stated_domain": true,
+          "evidence": "results/summaries/nsc-atlas-valve-spherical-v1.json",
+          "domain": "Declared new one-mode epsilon1 occupation, proper0..0.3, three spherical resolutions and independent full-GH control at proper .02. No regular receiving child."
         },
         {
           "id": "receiving_child",
@@ -403,14 +404,21 @@
       ]
     }
   ],
-  "verified_gates": 15,
+  "verified_gates": 16,
   "required_gates": 50,
-  "overall_gate_completion_percent": 30.0,
+  "overall_gate_completion_percent": 32.0,
   "latest_compact_evidence": [
     "results/summaries/nsc-atlas-valve-formation-early-v1.json",
     "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
     "results/summaries/nsc-atlas-valve-onset-events-v1.json",
-    "results/summaries/nsc-atlas-valve-vortex-v1.json"
+    "results/summaries/nsc-atlas-valve-vortex-v1.json",
+    "results/summaries/nsc-atlas-valve-null-search-v1.json",
+    "results/summaries/nsc-atlas-valve-neck.json",
+    "results/summaries/nsc-atlas-valve-spherical-v1.json",
+    "results/summaries/nsc-atlas-valve-neck-gh-v1.json",
+    "results/summaries/nsc-atlas-valve-neck-continuation-v1.json",
+    "results/summaries/nsc-atlas-valve-neck-late-probe-v1.json",
+    "results/summaries/nsc-atlas-valve-horizon-classification-v1.json"
   ],
   "intermediate_results": {
     "internal_release_critical_loading": 0.3750793338270073,
@@ -418,11 +426,22 @@
     "epsilon1_loading_over_critical": 1.9409794073172795,
     "release_is_not_a_child": true,
     "future_child_admitted": false,
-    "current_gate_percent": 40,
+    "current_gate_percent": 60,
     "first_F_one_proper": 0.028223864851803268,
     "first_normal_contraction_proper": 0.05383344494181901,
     "phase_vortex_winding": -1,
-    "volume_field_axial_current_magnitude": 0.00019282388283654118
+    "volume_field_axial_current_magnitude": 0.00019282388283654118,
+    "one_mode_numerical_neck_threshold": 0.8339066143243942,
+    "resolved_future_trapped_neck": true,
+    "neck_theta_pm_over_H_at_proper_point02": -0.007079540316760445,
+    "independent_GH_relative_discrepancy_percent": 0.004281,
+    "neck_material_transfer": 0.0,
+    "future_outer_horizons": true,
+    "Hayward_surface_gravity_at_proper_point2": 0.084323809,
+    "band_material_influx_at_proper_point2": 0.08561978764006349,
+    "central_zero_is_not_no_accretion": true,
+    "largest_resolved_proper_endpoint": 2.0,
+    "later_global_synchronous_constraint_loss_near": 2.9
   },
   "execution_state": {
     "early_degrees": [
@@ -436,14 +455,39 @@
       20,
       24
     ],
-    "pending_local_producers": [],
-    "next_step": "Use existing source-bound dense histories for null-generator focusing/boost/null-shear and opposite-expansion control before another global grid campaign. If a different incoming preparation is required, derive it explicitly from the parent instead of resetting the state.",
+    "pending_local_producers": [
+      "Bounded local conformal continuation prototype delegated to /root/york_kick; inspect live agent state before relaunch."
+    ],
+    "next_step": "Local conformal/double-null continuation from trusted proper2 Cauchy data. Track the actual horizon/band; no new exterior boundary state, no old threshold/grid reruns.",
     "completed_outputs": [
       "results/summaries/nsc-atlas-valve-formation-early-v1.json",
       "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
       "results/summaries/nsc-atlas-valve-onset-events-v1.json",
-      "results/summaries/nsc-atlas-valve-vortex-v1.json"
-    ]
+      "results/summaries/nsc-atlas-valve-vortex-v1.json",
+      "results/summaries/nsc-atlas-valve-null-search-v1.json",
+      "results/summaries/nsc-atlas-valve-neck.json",
+      "results/summaries/nsc-atlas-valve-spherical-v1.json",
+      "results/summaries/nsc-atlas-valve-neck-gh-v1.json",
+      "results/summaries/nsc-atlas-valve-neck-continuation-v1.json",
+      "results/summaries/nsc-atlas-valve-neck-late-probe-v1.json",
+      "results/summaries/nsc-atlas-valve-horizon-classification-v1.json"
+    ],
+    "one_mode_spherical_degrees": [
+      24,
+      32,
+      48
+    ],
+    "one_mode_GH_degrees": [
+      12,
+      16,
+      24
+    ],
+    "one_mode_extended_modes": [
+      48,
+      64,
+      80
+    ],
+    "one_mode_extended_proper_endpoint": 2.0
   },
   "publication_finish_requirements": {
     "reviewed_manuscript": false,

@@ -3,8 +3,237 @@
 This owner covers only roadmap step4: compression sources, circulation,
 future trapping and a compatible receiving geometry. Eta is parked at
 `dfda6e5a`; horizon/GH/boson refinement and downstream cosmology are frozen
-except for the finite evolution needed to test formation. The existing
-compact-parent action and constrained nonspherical source are retained.
+except for the finite evolution needed to test formation. The compact-parent
+action is retained. The earlier two-mode preparation and the new one-mode
+occupation below remain explicitly distinct states.
+
+## Current result: a same-action trapped neck
+
+The old two-mode finite searches below found no admitted trap; their
+occupation was supplied rather than selected. Continuing that optimizer,
+adding an external pressure term, and changing the occupation are materially
+different routes. The last route retains the action, introduces no coupling,
+and supplies a directly calculable formation threshold. It is a declared
+new state, not a spherical average of the nonspherical field.
+
+Set chi=epsilon A X1 with kappa A²=24/(z+3), all normal field momenta and
+Kij zero, and s=sstar. Its round-reference excitation energy equals the
+old two-mode normalization. Its solved proper energy is recalculated.
+The [initial calculation](../results/summaries/nsc-atlas-valve-neck.json),
+[finite continuation](../results/summaries/nsc-atlas-valve-spherical-v1.json)
+and [independent full-GH control](../results/summaries/nsc-atlas-valve-neck-gh-v1.json) supply numerical evidence of a
+closed future-trapped region. No regular receiving child is admitted.
+
+### Geometric threshold and local-development statement
+
+With u=X1=cos(chi), the reflection-even conformal factor solves
+
+$$
+-8\Delta_0\Psi+6\Psi
+-\kappa\epsilon^2A^2(1-u^2)\Psi
+-[6+\kappa\epsilon^2A^2zu^2]\Psi^5=0.
+$$
+
+The fixed set u=0 is a totally geodesic closed S2. Both initial null
+expansions vanish. Write its proper areal radius R=H^(-1)Psi² sin(chi).
+
+Existence is not inferred from Newton convergence alone. Reuse the weighted
+equivariant compactness proof in [finite parent data](nsc-atlas-finite-parent-data.md)
+with antipodal symmetry, whose minimum orbit size is2. Put
+a=kappa epsilon² A²=24epsilon²/(z+3). The elliptic weights are
+A_w=6-a(1-u²), B_w=6+azu². For z>1 and epsilon<=1, A_w>0, while
+
+$$
+\frac{B_{\max}}{\langle B\rangle}
+=\frac{6+az}{6+az/4}<\frac52,
+\qquad
+\left(\frac{\mathcal Q(1)}{T}\right)^3
+=\left(\frac{\langle A_w\rangle}{6}\right)^3
+\frac{B_{\max}}{4\langle B\rangle}<\frac58<1.
+$$
+
+The inherited Hebey--Vaugon concentration argument therefore supplies at
+least one smooth positive antipodally even solution for every0<=epsilon<=1
+in this one-mode family. It does not prove uniqueness or enclose the
+numerically continued solution. The SO(3)-invariant calculation and the
+strict negative slope below retain that distinction.
+
+Independent ADM evolution and radial warped curvature give
+
+$$
+\dot\theta_\pm={\rm Ric}_h(\nu,\nu)-\kappa(\nu\chi)^2,
+\quad
+\frac{{\rm Ric}_h(\nu,\nu)}{H^2}
+=\Psi^{-4}(2-4\Psi_{uu}/\Psi),
+$$
+
+and the constraint at u=0 reduces this to
+
+$$
+\frac{\dot\theta_\pm}{H^2}
+=3-\left(1+\frac{\kappa\epsilon^2A^2}{2}\right)\Psi(0)^{-4}.
+$$
+
+For an exact nearby smooth constraint solution retaining the strict negative
+sign, local Einstein--scalar development and reflection symmetry imply
+both expansions are negative on the same sphere for sufficiently small
+positive proper time. The residual/refinement calculations below support
+that nearby solution; they are not an interval-certified continuum enclosure.
+
+| Initial degree | Numerical epsilon_crit | Independent full conformal RMS |
+| --- | --- | --- |
+| 16 | .8339066729 | 8.44e-5 |
+| 24 | .8339066144 | 1.57e-7 |
+| 32 | .8339066143 | 2.52e-10 |
+
+At epsilon=1 the finest neck has Psi=.69449811, versus the sign threshold
+.76010912, and dot(theta_pm)/H²=-1.30467886. The overall trace initially
+grows at3H²: radial stretching accompanies tangential compression. This
+is an internal prepared-field/geometry threshold, not an external minus-side
+pressure or a selected offset count n. No physical membrane is introduced.
+
+### Finite continuation and independent full-metric check
+
+The exact SO(3) reduction uses proper synchronous time,
+
+$$
+ds^2=-dt^2+q^2d\chi^2+b^2\sin^2\chi\,d\Omega^2,
+\qquad q=b+(1-u^2)c,\quad k_a=k_b+(1-u^2)d.
+$$
+
+These variables enforce regular poles. Both scalars and their backreaction
+are evolved; no homogeneous average replaces the physical fields. The
+expansions are theta_pm=-2kb plus/minus2R_chi/(qR). At proper .02:
+
+| Spherical modes | Both theta_pm/H | Independent Hamiltonian RMS/H² |
+| --- | --- | --- |
+| 24 | -.00707953272 | 8.21e-5 |
+| 32 | -.00707954029 | 3.76e-7 |
+| 48 | -.00707954032 | 8.86e-11 |
+
+Independent quadrature evaluates constraints outside the retained spatial
+nodes. At proper .3 both expansions/H=-.10672195 and the finest Hamiltonian
+RMS/H²=7.85e-11. The radius is1.77330393 and radial scale1.80256812.
+The source begins on a bi-marginal slice; an inherited earlier preparation
+or collapse history has not been derived.
+
+The existing full nonspherical GH engine, supplied the same one-mode
+initial data, gives theta_pm/H approximately-.0074003, -.0071164 and
+-.0070798434 at degrees12,16,24 and matched neck proper .02. Its finest
+discrepancy from the spherical result is3.03e-7, or .0043% of the magnitude;
+initial Hamiltonian RMS/H² falls .2644 ->.02763 ->.0002085. All sampled
+points of the full reflection S2 have negative expansions. This checks
+the symmetry reduction and lapse/proper-time handling without changing
+the older saved-parent engine or its source pins.
+
+### The other side: interior time and an actual regional ledger
+
+The areal invariant
+
+$$
+1-\frac{2m}{R}=\nabla R\cdot\nabla R
+=-\frac{R^2\theta_+\theta_-}{4}
+$$
+
+makes grad(R) timelike inside the strict trap. Decreasing R is a local
+future time there, while the synchronous metric remains regular through
+the marginal boundary. At proper .3 its neck norm is-.0006595557 and
+m_geo=.88723676. This is the break-question continuation; it does not
+create a new spatial coordinate or prove a new child. At the initial
+bi-marginal neck grad(R)=0, so areal time alone is degenerate there.
+
+Reuse [Hayward, Section II, (2.2) and (2.7)--(2.9)](https://arxiv.org/html/gr-qc/9710089v2)
+for spherical geometric mass and supply/work. In the present conventions
+j=-sum(Pi phi_l) and k_a,k_b are mixed extrinsic-curvature eigenvalues.
+The full proper-energy density satisfies
+
+$$
+\partial_t(4\pi qR^2\rho)+\partial_\chi(4\pi R^2j)
+=4\pi qR^2(k_ap_r+2k_bp_t).
+$$
+
+For moving marginal boundaries, retain the boundary term
+[4piR²(rho q chi_dot-j)]_left^right. At proper .2 the connected trapped
+band has volume16.77650134, energy3.77629301 and mean pressure-.21738048,
+so w=-.96573118. Subtracting the supplied reference vacuum gives
+excitation energy.06897101 and excitation w=.87628261. Near-vacuum total
+stress here does not derive a new Lambda.
+
+| Energy-rate contribution | Action units |
+| --- | --- |
+| Pressure work | .1584497891 |
+| Physical material influx across both band boundaries | .0856197876 |
+| Boundary sweeping existing energy | 24.1826846267 |
+| Direct derivative | 24.4267542203 |
+| Absolute ledger residual | 1.69e-8 |
+
+The marginal boundary moves at1.30618 relative to normal observers; it is
+a spacelike marginal tube, not matter moving faster than light. Reflection
+makes the total material flux through the central timelike neck exactly0.
+The two hemispheres' energy changes close with pressure work, not a supply
+from one hemisphere into the other. A band receiving energy is not yet a
+regular expanding child. Neither its proper energy nor geometric mass is
+identified with Parke E=3/8 or the different88.47% reference transfer.
+
+The [independent horizon classification](../results/summaries/nsc-atlas-valve-horizon-classification-v1.json)
+checks that the surrounding marginal tubes are future outer, not inner
+cosmological boundaries. With reciprocal null normals of inner product-2,
+Hayward surface gravity is kappa_H=m/R²-kappa R(rho-pr)/4 and
+L_in(theta_out)=-4kappa_H/R at marginality. At proper .02,.2,.3 the
+computed kappa_H is+.0849121,+.0843238,+.0804675, and cross expansion is
+negative at both boundaries. Independent directional and finite-difference
+calculations agree within1.6e-12 and9.2e-10. The material-current component
+changes sign over the carrier oscillation; full horizon crossing includes
+its motion through the matter. An outward current relative to a spatial
+slice is not proof of causal escape from the trapped region.
+
+The [bounded continuation to proper2](../results/summaries/nsc-atlas-valve-neck-continuation-v1.json)
+tests what the pinch becomes. Modes48/64/80 reach the endpoint in under
+three seconds each. Finest Hamiltonian RMS/H²=8.80e-11. Neck radius
+falls10.71% to1.58681277 while its radial scale grows73.79% to3.08848102;
+both expansions/H=-.98374109. Its areal radius remains a spatial minimum,
+and neither a bounce nor metric degeneration is observed in this window.
+The hemisphere volume grows .57435% and its energy .22352%, with exact
+zero central transfer. This is a calculated instance of radial stretching
+coexisting with angular compression, not an isotropically inflating child.
+Zero central flux does not exclude symmetric accretion through the two
+surrounding marginal boundaries. The positive material influx above is
+real. The next physical question is whether this receiving trapped band
+admits a regular expanding-child continuation.
+
+### Scope and next connection
+
+The conditional source has a resolved future-trapped development and a
+checked local receiving-band budget. Its inherited occupation, nonzero
+directional supply history, regular child continuation and rotational formation
+mechanism remain open. The completed threshold and this finite window
+are frozen. The next calculation must follow the actual receiving band
+and its horizons, retaining the parent-supplied state. A directional asymmetry,
+if required, must be inherited rather than inserted to force a result.
+
+A [later bounded probe](../results/summaries/nsc-atlas-valve-neck-late-probe-v1.json)
+loses global synchronous constraint accuracy near proper2.9 before any
+trustworthy bounce or neck-type change. Subsequent numerical metric
+degeneration is not a physical endpoint. The next vantage point is a local
+conformal/double-null characteristic development from trusted proper2
+Cauchy data, with no new incoming boundary history. Its causal patch must
+remain inside the inherited data domain. No further global resolution scan
+is admitted by this diagnostic.
+
+At a reflection neck the exact spherical Einstein equations also give
+R_tt+R_ll+ka R_t=-kappa R(rho+pr)/2. If R_t=0 and the neck remains a
+strict spatial minimum R_ll>0, canonical rho+pr>=0 implies R_tt<0.
+A temporal bounce retaining that neck type is excluded under this action.
+Changing coordinate names cannot remove this invariant sign condition;
+a continuation must change neck type or its source assumptions.
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_valve_neck.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_spherical.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_gh.py --degree 24 --threads 4 --budget 180
+python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_continuation.py 80
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_neck.py tests/test_nsc_atlas_valve_spherical.py
+```
 
 ## Calculation and stopping rules
 
@@ -439,3 +668,35 @@ admitted raw-cache SHA256 values. The compact records retain the original
 paths, source commits, parameters, checkpoints, numerical tolerances and
 cache hashes; full fields regenerate locally. The goal/frontier and all
 other open programme items remain in [the progress record](atlas-progress.json).
+
+## Completed null-sheet searches of the older occupation
+
+The [compact causal record](../results/summaries/nsc-atlas-valve-null-search-v1.json)
+preserves actual geometric-null transport on the source-bound dense parent
+histories, both expansions of each common cut, and the time-tilted search.
+Its curvature comes from metric jets; it is not replaced by the canonical
+source to force focusing. Direct Ricci/source disagreement is reported
+independently. Contracting outgoing rays coexist with positive or mixed
+opposite expansion. The best degree4 time-profile search still has maximum
+expansion/H=+.156706, not a future trap. This is a finite local search,
+not a nonexistence theorem for the parent or all preparations. Raw rays and
+dense arrays regenerate locally; the old searches are frozen.
+
+A useful conditional geometric obstruction avoids further blind fitting.
+Let a smooth caustic-free null sheet have cuts with reciprocal null normals
+L,Lbar, g(L,Lbar)=-2 and angular metric q. A graph cut lambda=F(x) has, at
+a critical point of F,
+
+$$
+\bar\theta_F=\bar\theta_{\rm base}(F,x)+2\Delta_qF.
+$$
+
+At the global minimum of F, Delta_q F>=0. Uniform nonnegative base incoming
+expansion across a sheet window therefore rules out a strictly future-trapped
+closed graph cut in that window. A connected closed spacelike cut of an
+embedded S2 times interval sheet is a graph: its angular projection is a
+local diffeomorphism, hence a covering of simply connected S2. In coordinate
+time with L=N(n+v), the normalized shift is2N Delta_q F, with N>0.
+The flat-null-plane and static-S3 controls check the sign independently.
+Finite sampled positive expansions do not establish the uniform hypothesis;
+this lemma is not promoted to an all-sheet physical no-go theorem.

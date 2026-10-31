@@ -186,10 +186,18 @@ class SphericalValve:
         i=int(idx[0]);root=brentq(edge,float(samples[i-1]),float(samples[i]),xtol=2e-13)
         def integrands(u):
             z=self.pieces(state,[u]);measure=4*np.pi*z['q'][0]*z['b'][0]**2*math.sqrt(1-u*u)
-            return measure,measure*z['rho'][0],measure*(z['ka'][0]*z['pr'][0]+2*z['kb'][0]*z['pt'][0])
-        values=[2*quad(lambda u:integrands(u)[i],0,root,epsabs=2e-11,epsrel=2e-11)[0] for i in range(3)]
+            return (measure,measure*z['rho'][0],measure*(z['ka'][0]*z['pr'][0]+2*z['kb'][0]*z['pt'][0]),
+                    measure*(z['pr'][0]+2*z['pt'][0])/3)
+        values=[2*quad(lambda u:integrands(u)[i],0,root,epsabs=2e-11,epsrel=2e-11)[0] for i in range(4)]
         z=self.pieces(state,[root]);a,b=self.expansions(state,[root]);radius=float(z['radius'][0])
+        excitation=values[1]-self.parent.vacuum*values[0]
+        excitation_pressure=values[3]+self.parent.vacuum*values[0]
         return dict(u_edge=root,volume=values[0],energy=values[1],pressure_work_rate=values[2],
+                    mean_density=values[1]/values[0],mean_isotropic_pressure=values[3]/values[0],
+                    mean_w=values[3]/values[1],
+                    reference_vacuum_energy=self.parent.vacuum*values[0],
+                    excitation_energy_above_reference_vacuum=excitation,
+                    excitation_w=excitation_pressure/excitation if abs(excitation)>1e-14 else None,
                     marginal_expansion=float(max(a[0],b[0])),other_expansion=float(min(a[0],b[0])),
                     boundary_radius=radius,boundary_rho=float(z['rho'][0]),
                     # At +u the outward direction opposes increasing chi.

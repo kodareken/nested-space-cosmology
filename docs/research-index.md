@@ -1,10 +1,11 @@
 # Scientific strand index
 
 The active [valve/formation calculation](nsc-atlas-valve-formation.md)
-derives an internal stabilization-loss threshold in the same action,
-constructs full-metric closed-surface diagnostics and tests new finite
-parent evolutions. Release, local contraction, trapping and a formed
-receiving child are tracked separately. [Progress and compaction recovery](atlas-progress.json)
+derives stabilization-loss and one-mode neck-trapping thresholds in the
+same action. The new occupation has converged future-trapped development
+and an independent full-metric control; the earlier two-mode finite search
+has no admitted trap. A regular receiving child and its inherited source
+remain open. [Progress and compaction recovery](atlas-progress.json)
 keep the shared programme in view.
 
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)

@@ -79,3 +79,26 @@ def test_preparation_below_neck_threshold_does_not_form_initial_neck_trap():
     assert r['theta_plus_over_H']>0 and r['theta_minus_over_H']>0
     assert not r['closed_neck_future_trapped']
     assert r['Hamiltonian_RMS_over_H_squared']<1e-8
+
+
+def test_future_outer_horizons_and_symmetric_receiving_flux():
+    s=SphericalValve(48);sol=s.evolve(.3);t=.2
+    def state(at):return sol.sol(at).reshape(8,s.modes)
+    band=s.trapped_band(state(t));influx=0.
+    for sign in (1.,-1.):
+        u=sign*band['u_edge'];z=s.pieces(state(t),[u]);R=float(z['radius'][0])
+        q=float(z['q'][0]);U=-float(z['kb'][0])*R;radial=float(z['rr'][0])/q
+        mass=R/2*(1+U*U-radial*radial)
+        kappa_H=mass/R**2-s.kappa*R*(float(z['rho'][0])-float(z['pr'][0]))/4
+        sigma=-sign
+        def theta_out(at,coord):
+            return float(s.expansions(state(at),[coord])[0 if sigma>0 else 1][0])
+        h=1e-5
+        cross=(theta_out(t+h,u)-theta_out(t-h,u))/(2*h)
+        cross+=sigma*math.sqrt(1-u*u)/q*(theta_out(t,u+h)-theta_out(t,u-h))/(2*h)
+        assert kappa_H>0 and cross<0
+        np.testing.assert_allclose(cross,-4*kappa_H/R,atol=2e-9,rtol=0)
+        influx-=4*math.pi*R*R*sigma*float(z['j'][0])
+    assert influx>0
+    np.testing.assert_allclose(influx,.08561978764,rtol=1e-8)
+    assert abs(float(s.pieces(state(t),[0.])['j'][0]))<1e-14

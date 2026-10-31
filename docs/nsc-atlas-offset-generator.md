@@ -209,3 +209,36 @@ the offset law, two accumulation levels followed by nesting, and a duration
 or irreversible arrow. Further accumulation levels can be constructed, so
 exactly three is not selected by irrationality alone. A coherent physical
 theory must also supply regional stress, formation and observable predictions.
+
+## A conditional dimension-selection lemma
+
+A more restrictive candidate can select three local directions. Let a
+nontrivial real inner-product space V, dim(V)>=2, have a bilinear
+antisymmetric bracket satisfying Jacobi and ad-invariance, with one c>0:
+
+$$
+\langle[x,u],v\rangle=-\langle u,[x,v]\rangle,
+\qquad |[x,y]|^2=c^2(|x|^2|y|^2-\langle x,y\rangle^2).
+$$
+
+Then dim(V)=3. Ad-invariance and polarization give
+ad_x²=-c²(|x|² Id-x tensor x). For orthonormal x,y define z=[x,y]/c.
+The three vectors are orthonormal and satisfy [x,y]=cz,[y,z]=cx,[z,x]=cy.
+Their orthogonal complement W is invariant under these adjoint maps.
+On W put I=ad_x/c,J=ad_y/c,K=ad_z/c. The squared identity implies
+I²=J²=K²=-Id and IJ+JI=0. Jacobi gives [I,J]=K, so K=2IJ and
+K²=-4Id, contradicting K²=-Id unless W=0. This proves the claim.
+Dimensions0 and1 are excluded because their zero brackets satisfy the
+norm equation vacuously.
+
+The quaternionic reference frame realizes this algebra with c=2r.
+[Baez, Section4.1](https://arxiv.org/html/math/0105155v4) supplies the
+related quaternion/octonion cross-product context; the seven-dimensional
+norm-compatible cross product fails Jacobi. The short argument above
+does not require a classification theorem.
+
+These are candidate composition/isotropy postulates. The existing single
+inheritance identity and offset generator do not derive them, and the
+physical sourced metric need not be isotropic. The lemma selects neither
+global topology nor radius, internal d=12 or an SI scale. The physical
+dimension-selection gate therefore remains open.

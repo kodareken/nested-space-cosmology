@@ -1,0 +1,865 @@
+{
+  "historical_runs": [
+    {
+      "original_record_path": ".build/valve-one-mode-gh-L12-v1.json",
+      "original_record_sha256": "f4cebc35944fc8d039b3c33f2da6499fdf8bd80236026bb6bb6613bf474a2106",
+      "record": {
+        "SI_scale_selected": false,
+        "budget_seconds": 180.0,
+        "coordinate_endpoint": 0.019999999875205267,
+        "core_source_bound_to_commit": true,
+        "core_source_sha256": {
+          "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+          "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+          "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+          "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+          "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+          "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+          "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+          "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+          "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+          "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+          "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+          "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf",
+          "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+          "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+        },
+        "core_source_unchanged_during_run": true,
+        "degree": 12,
+        "elapsed_seconds": 20.461784000013722,
+        "final": {
+          "ADM_H_RMS_over_H_squared": 0.26401509434211246,
+          "ADM_M_RMS_over_H_squared": 0.004462486388961033,
+          "GH_C_RMS_over_H": 0.0026116156336330326,
+          "coordinate_t": 0.019999999875205267,
+          "excitation_normal_energy_over_initial_round_vacuum_energy": 0.4217442729815762,
+          "geodesic_observer_total_density_over_initial_vacuum": 1.0015961211479294,
+          "maximum_lapse": 1.000151754366945,
+          "maximum_to_mean_slice_normal_density_ratio": 1.7669757787926832,
+          "metric_valid": true,
+          "minimum_lapse": 1.000000018372435,
+          "neck_lapse": 1.000000018387918,
+          "neck_normal_K_eigenvalues": [
+            -0.006231861789045044,
+            0.001004161639560317,
+            0.0010041616395603235
+          ],
+          "neck_surface": {
+            "area": 39.70015189774039,
+            "area_radius": 1.7774244591577546,
+            "exact_reflection_surface": "X1=0 fixed set, not a numerically searched radial zero",
+            "expansion_tolerance": 1e-07,
+            "future_mots_sampled": false,
+            "future_trapped_sampled": true,
+            "mean_curvature_max_abs_over_H": 7.074120785236677e-16,
+            "quadrature_order": [
+              12,
+              25
+            ],
+            "radius_range": [
+              1.5707963267948968,
+              1.5707963267948968
+            ],
+            "same_surface_expansion_difference_max_over_H": 1.4157453940737393e-15,
+            "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+            "theta_minus_over_H_range": [
+              -0.007400684302736957,
+              -0.007399947594990506
+            ],
+            "theta_minus_range": [
+              -0.0020085872775683924,
+              -0.0020083873309490966
+            ],
+            "theta_minus_rms": 0.0020085696064771103,
+            "theta_plus_max_abs": 0.0020085872775683373,
+            "theta_plus_over_H_range": [
+              -0.007400684302736754,
+              -0.007399947594990409
+            ],
+            "theta_plus_range": [
+              -0.0020085872775683373,
+              -0.00200838733094907
+            ],
+            "theta_plus_rms": 0.0020085696064770795
+          },
+          "observer_chi": 0.0,
+          "observer_chi_proper_derivative": 0.0,
+          "observer_phase_winding_certified": false,
+          "observer_phase_wrapped": null,
+          "observer_proper_duration": 0.01999999999417608,
+          "observer_sampled_unwrapped_phase": null,
+          "observer_unit_norm_error": 0.0,
+          "observer_volume_mode": -0.03564678202728393,
+          "scalar_acceleration_unresolved_fraction": 2.744113660591388e-06,
+          "scalar_last_two_shell_power_fraction": 1.4530221589978985e-15,
+          "slice_max_sampled_normal_total_density_over_initial_vacuum": 4.928127622933365,
+          "slice_mean_normal_total_density_over_initial_vacuum": 2.7890182095764744,
+          "slice_normal_density_at_observer_position_over_initial_vacuum": 1.0015961211479294,
+          "slice_proper_volume_over_initial_round_reference": 0.2357406261848066,
+          "volume_acceleration_unresolved_fraction": 9.030080021200681e-07,
+          "volume_last_two_shell_power_fraction": 3.5876294891079086e-13,
+          "volume_mode_max": -0.0356229658737461,
+          "volume_mode_min": -0.0356467820272838
+        },
+        "initial": {
+          "ADM_H_RMS_over_H_squared": 0.264364973551659,
+          "ADM_M_RMS_over_H_squared": 0.0,
+          "GH_C_RMS_over_H": 0.0025780953852852983,
+          "coordinate_t": 0.0,
+          "excitation_normal_energy_over_initial_round_vacuum_energy": 0.42169621443982575,
+          "geodesic_observer_total_density_over_initial_vacuum": 1.0020628999382362,
+          "maximum_lapse": 1.0,
+          "maximum_to_mean_slice_normal_density_ratio": 1.766954713137222,
+          "metric_valid": true,
+          "minimum_lapse": 1.0,
+          "neck_lapse": 1.0,
+          "neck_normal_K_eigenvalues": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "neck_surface": {
+            "area": 39.70094933886608,
+            "area_radius": 1.7774423102764054,
+            "exact_reflection_surface": "X1=0 fixed set, not a numerically searched radial zero",
+            "expansion_tolerance": 1e-07,
+            "future_mots_sampled": false,
+            "future_trapped_sampled": false,
+            "mean_curvature_max_abs_over_H": 5.536267732094066e-16,
+            "quadrature_order": [
+              12,
+              25
+            ],
+            "radius_range": [
+              1.5707963267948968,
+              1.5707963267948968
+            ],
+            "same_surface_expansion_difference_max_over_H": 1.1072535464188132e-15,
+            "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+            "theta_minus_over_H_range": [
+              -5.536267732094066e-16,
+              4.140996696408177e-16
+            ],
+            "theta_minus_range": [
+              -1.5025741508503583e-16,
+              1.123889756759678e-16
+            ],
+            "theta_minus_rms": 4.6035362793353546e-17,
+            "theta_plus_max_abs": 1.5025741508503583e-16,
+            "theta_plus_over_H_range": [
+              -4.140996696408177e-16,
+              5.536267732094066e-16
+            ],
+            "theta_plus_range": [
+              -1.123889756759678e-16,
+              1.5025741508503583e-16
+            ],
+            "theta_plus_rms": 4.6035362793353546e-17
+          },
+          "observer_chi": 0.0,
+          "observer_chi_proper_derivative": 0.0,
+          "observer_phase_winding_certified": false,
+          "observer_phase_wrapped": null,
+          "observer_proper_duration": 0.0,
+          "observer_sampled_unwrapped_phase": null,
+          "observer_unit_norm_error": 0.0,
+          "observer_volume_mode": -0.035646782552940987,
+          "scalar_acceleration_unresolved_fraction": 9.233636890924225e-07,
+          "scalar_last_two_shell_power_fraction": 0.0,
+          "slice_max_sampled_normal_total_density_over_initial_vacuum": 4.9280684792418326,
+          "slice_mean_normal_total_density_over_initial_vacuum": 2.7890179881815214,
+          "slice_normal_density_at_observer_position_over_initial_vacuum": 1.0020628999382362,
+          "slice_proper_volume_over_initial_round_reference": 0.23571379227352923,
+          "volume_acceleration_unresolved_fraction": 1.0363884830872698e-15,
+          "volume_last_two_shell_power_fraction": 0.0,
+          "volume_mode_max": -0.035646782552940987,
+          "volume_mode_min": -0.035646782552940987
+        },
+        "initial_preparation": {
+          "A": 0.05366968539716552,
+          "metric_projection": "Full psi40^4 projected, then exact finite-basis derivatives used for gauge velocity.",
+          "minimum_projected_F": 0.23271730871358992,
+          "observer_clock": "Initially normal geodesic on reflection neck; no scalar-phase clock.",
+          "observer_initial_X": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "projected_metric_degree": 12,
+          "reference_initial_degree": 40,
+          "reference_initial_row": {
+            "Newton_steps": 7,
+            "candidate_root_formula": -6.249315696657275,
+            "degree": 40,
+            "direct_constraint_gap": 8.296097142590497e-11,
+            "dot_theta_pm_over_H_squared_constraint": -1.304678885146802,
+            "dot_theta_pm_over_H_squared_direct": -1.304678885063841,
+            "epsilon": 1.0,
+            "even_gegenbauer_normalized_coefficients": [
+              3.383832604063391,
+              0.34725992635897557,
+              0.058088298474483095,
+              0.010867970502056568,
+              0.0021409127115081545,
+              0.000434438475214058,
+              8.986999002220098e-05,
+              1.8843308716125616e-05,
+              3.990512502116145e-06,
+              8.515874275538143e-07,
+              1.828389567365118e-07,
+              3.945036643137226e-08,
+              8.546881213044942e-09,
+              1.8580503773808726e-09,
+              4.0511765249581786e-10,
+              8.855321690329368e-11,
+              1.9399303657562065e-11,
+              4.258054115976673e-12,
+              9.362312827640809e-13,
+              2.061589621892593e-13,
+              4.542913751586221e-14
+            ],
+            "full_conformal_RMS": 3.4220634342634085e-11,
+            "full_conformal_max": 1.847688224643207e-09,
+            "kappa_A_squared": 0.0028804351306307217,
+            "kappa_eps_A_squared": 0.0028804351306307217,
+            "minimum_psi": 0.6944981082955182,
+            "neck_second_derivative_over_psi": 0.575159994087469,
+            "physical_excitation_over_reference_round_vacuum": 0.4216962216140383,
+            "projected_residual_norm": 1.3369094596076254e-14,
+            "proper_volume_over_reference": 0.23571378994158176,
+            "psi_neck": 0.6944981082955183,
+            "psi_uu_neck": 0.3994475278610087,
+            "solve_nodes": 205,
+            "validation_nodes": 329
+          },
+          "source": "chi=A*X1; kappa*A^2=24/(z+3); all normal field momenta and K initially zero",
+          "startup_quadrature_shape": [
+            45,
+            174,
+            174
+          ]
+        },
+        "initial_to_final_observer_coordinate_displacement": 2.9710901723012135e-23,
+        "initializer": {
+          "one_mode_solver_sha256": "ffbac2cfaf765c99717a832927f9f17a90677db14d1fe3ede551f9b8f5cf9355",
+          "script_sha256": "14b1bf724779058db82da1859059ff4b6662e2013de96b1030103ce46c28f20c"
+        },
+        "initializer_bound_to_commit": false,
+        "initializer_unchanged_during_run": true,
+        "neck_observer_X": [
+          0.0,
+          1.0,
+          -2.9710901723012135e-23,
+          0.0
+        ],
+        "physical_mode_suppression": false,
+        "preparation_scope": "New one-mode initial state, same existing action/normalization. Not the unchanged two-mode campaign.",
+        "producer_commit": "e08b075fc0a5115ec8948f09f454a1795a36c961",
+        "proper_duration": 0.01999999999417608,
+        "regular_child_proved": false,
+        "requested_neck_proper_duration": 0.02,
+        "rhs_calls": 64,
+        "schema": "nsc-one-mode-neck-full-gh-control-v1",
+        "status": "endpoint_reached",
+        "steps": 5,
+        "threads": 4
+      }
+    },
+    {
+      "original_record_path": ".build/valve-one-mode-gh-L16-v1.json",
+      "original_record_sha256": "e81c23b5acebf7ffed569c806f8270d7022c2c195d65b0e405961cc6670ef8a9",
+      "record": {
+        "SI_scale_selected": false,
+        "budget_seconds": 180.0,
+        "coordinate_endpoint": 0.019999999979935082,
+        "core_source_bound_to_commit": true,
+        "core_source_sha256": {
+          "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+          "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+          "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+          "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+          "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+          "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+          "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+          "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+          "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+          "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+          "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+          "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf",
+          "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+          "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+        },
+        "core_source_unchanged_during_run": true,
+        "degree": 16,
+        "elapsed_seconds": 41.16941930001485,
+        "final": {
+          "ADM_H_RMS_over_H_squared": 0.02756146471590601,
+          "ADM_M_RMS_over_H_squared": 0.000635295104717861,
+          "GH_C_RMS_over_H": 0.00021770963431129716,
+          "coordinate_t": 0.019999999979935082,
+          "excitation_normal_energy_over_initial_round_vacuum_energy": 0.42174428057026525,
+          "geodesic_observer_total_density_over_initial_vacuum": 1.0015966163190113,
+          "maximum_lapse": 1.000152875806868,
+          "maximum_to_mean_slice_normal_density_ratio": 1.7768052359069193,
+          "metric_valid": true,
+          "minimum_lapse": 1.0000000036246202,
+          "neck_lapse": 1.000000003624714,
+          "neck_normal_K_eigenvalues": [
+            -0.006329852290020283,
+            0.0009657169143911465,
+            0.0009657169143913112
+          ],
+          "neck_surface": {
+            "area": 39.687833450150805,
+            "area_radius": 1.7771486817651712,
+            "exact_reflection_surface": "X1=0 fixed set, not a numerically searched radial zero",
+            "expansion_tolerance": 1e-07,
+            "future_mots_sampled": false,
+            "future_trapped_sampled": true,
+            "mean_curvature_max_abs_over_H": 7.427165667764579e-16,
+            "quadrature_order": [
+              12,
+              25
+            ],
+            "radius_range": [
+              1.5707963267948968,
+              1.5707963267948968
+            ],
+            "same_surface_expansion_difference_max_over_H": 1.4860532917478302e-15,
+            "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+            "theta_minus_over_H_range": [
+              -0.007116417243490372,
+              -0.007116412713579505
+            ],
+            "theta_minus_range": [
+              -0.0019314356014155114,
+              -0.001931434371972265
+            ],
+            "theta_minus_rms": 0.0019314355066404152,
+            "theta_plus_max_abs": 0.001931435601415458,
+            "theta_plus_over_H_range": [
+              -0.007116417243490175,
+              -0.007116412713579076
+            ],
+            "theta_plus_range": [
+              -0.001931435601415458,
+              -0.0019314343719721485
+            ],
+            "theta_plus_rms": 0.0019314355066403733
+          },
+          "observer_chi": 0.0,
+          "observer_chi_proper_derivative": 0.0,
+          "observer_phase_winding_certified": false,
+          "observer_phase_wrapped": null,
+          "observer_proper_duration": 0.019999999998350088,
+          "observer_sampled_unwrapped_phase": null,
+          "observer_unit_norm_error": 0.0,
+          "observer_volume_mode": -0.035646782028536446,
+          "scalar_acceleration_unresolved_fraction": 2.676979883331622e-07,
+          "scalar_last_two_shell_power_fraction": 7.277673435267536e-17,
+          "slice_max_sampled_normal_total_density_over_initial_vacuum": 4.955542246343542,
+          "slice_mean_normal_total_density_over_initial_vacuum": 2.789018259400912,
+          "slice_normal_density_at_observer_position_over_initial_vacuum": 1.0015966163190113,
+          "slice_proper_volume_over_initial_round_reference": 0.2357406238612155,
+          "volume_acceleration_unresolved_fraction": 9.254298939557275e-08,
+          "volume_last_two_shell_power_fraction": 4.1464308673391695e-15,
+          "volume_mode_max": -0.035622799626616485,
+          "volume_mode_min": -0.035646782028536446
+        },
+        "initial": {
+          "ADM_H_RMS_over_H_squared": 0.02763094571561018,
+          "ADM_M_RMS_over_H_squared": 0.0,
+          "GH_C_RMS_over_H": 0.00021312604722913508,
+          "coordinate_t": 0.0,
+          "excitation_normal_energy_over_initial_round_vacuum_energy": 0.42169622159884246,
+          "geodesic_observer_total_density_over_initial_vacuum": 1.002063541814706,
+          "maximum_lapse": 1.0,
+          "maximum_to_mean_slice_normal_density_ratio": 1.7767846145111033,
+          "metric_valid": true,
+          "minimum_lapse": 1.0,
+          "neck_lapse": 1.0,
+          "neck_normal_K_eigenvalues": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "neck_surface": {
+            "area": 39.688600131775864,
+            "area_radius": 1.7771658469835865,
+            "exact_reflection_surface": "X1=0 fixed set, not a numerically searched radial zero",
+            "expansion_tolerance": 1e-07,
+            "future_mots_sampled": false,
+            "future_trapped_sampled": false,
+            "mean_curvature_max_abs_over_H": 6.443959528332711e-16,
+            "quadrature_order": [
+              12,
+              25
+            ],
+            "radius_range": [
+              1.5707963267948968,
+              1.5707963267948968
+            ],
+            "same_surface_expansion_difference_max_over_H": 1.2887919056665421e-15,
+            "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+            "theta_minus_over_H_range": [
+              -6.179140081482102e-16,
+              6.443959528332711e-16
+            ],
+            "theta_minus_range": [
+              -1.677053316459918e-16,
+              1.7489268014024005e-16
+            ],
+            "theta_minus_rms": 5.2449481188836626e-17,
+            "theta_plus_max_abs": 1.7489268014024005e-16,
+            "theta_plus_over_H_range": [
+              -6.443959528332711e-16,
+              6.179140081482102e-16
+            ],
+            "theta_plus_range": [
+              -1.7489268014024005e-16,
+              1.677053316459918e-16
+            ],
+            "theta_plus_rms": 5.2449481188836626e-17
+          },
+          "observer_chi": 0.0,
+          "observer_chi_proper_derivative": 0.0,
+          "observer_phase_winding_certified": false,
+          "observer_phase_wrapped": null,
+          "observer_proper_duration": 0.0,
+          "observer_sampled_unwrapped_phase": null,
+          "observer_unit_norm_error": 0.0,
+          "observer_volume_mode": -0.035646782552940987,
+          "scalar_acceleration_unresolved_fraction": 7.661957612807923e-08,
+          "scalar_last_two_shell_power_fraction": 0.0,
+          "slice_max_sampled_normal_total_density_over_initial_vacuum": 4.955484336248075,
+          "slice_mean_normal_total_density_over_initial_vacuum": 2.7890180361628225,
+          "slice_normal_density_at_observer_position_over_initial_vacuum": 1.002063541814706,
+          "slice_proper_volume_over_initial_round_reference": 0.23571378995335235,
+          "volume_acceleration_unresolved_fraction": 1.2303397582362372e-15,
+          "volume_last_two_shell_power_fraction": 0.0,
+          "volume_mode_max": -0.035646782552940987,
+          "volume_mode_min": -0.035646782552940987
+        },
+        "initial_preparation": {
+          "A": 0.05366968539716552,
+          "metric_projection": "Full psi40^4 projected, then exact finite-basis derivatives used for gauge velocity.",
+          "minimum_projected_F": 0.23264492066528947,
+          "observer_clock": "Initially normal geodesic on reflection neck; no scalar-phase clock.",
+          "observer_initial_X": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "projected_metric_degree": 16,
+          "reference_initial_degree": 40,
+          "reference_initial_row": {
+            "Newton_steps": 7,
+            "candidate_root_formula": -6.249315696657275,
+            "degree": 40,
+            "direct_constraint_gap": 8.296097142590497e-11,
+            "dot_theta_pm_over_H_squared_constraint": -1.304678885146802,
+            "dot_theta_pm_over_H_squared_direct": -1.304678885063841,
+            "epsilon": 1.0,
+            "even_gegenbauer_normalized_coefficients": [
+              3.383832604063391,
+              0.34725992635897557,
+              0.058088298474483095,
+              0.010867970502056568,
+              0.0021409127115081545,
+              0.000434438475214058,
+              8.986999002220098e-05,
+              1.8843308716125616e-05,
+              3.990512502116145e-06,
+              8.515874275538143e-07,
+              1.828389567365118e-07,
+              3.945036643137226e-08,
+              8.546881213044942e-09,
+              1.8580503773808726e-09,
+              4.0511765249581786e-10,
+              8.855321690329368e-11,
+              1.9399303657562065e-11,
+              4.258054115976673e-12,
+              9.362312827640809e-13,
+              2.061589621892593e-13,
+              4.542913751586221e-14
+            ],
+            "full_conformal_RMS": 3.4220634342634085e-11,
+            "full_conformal_max": 1.847688224643207e-09,
+            "kappa_A_squared": 0.0028804351306307217,
+            "kappa_eps_A_squared": 0.0028804351306307217,
+            "minimum_psi": 0.6944981082955182,
+            "neck_second_derivative_over_psi": 0.575159994087469,
+            "physical_excitation_over_reference_round_vacuum": 0.4216962216140383,
+            "projected_residual_norm": 1.3369094596076254e-14,
+            "proper_volume_over_reference": 0.23571378994158176,
+            "psi_neck": 0.6944981082955183,
+            "psi_uu_neck": 0.3994475278610087,
+            "solve_nodes": 205,
+            "validation_nodes": 329
+          },
+          "source": "chi=A*X1; kappa*A^2=24/(z+3); all normal field momenta and K initially zero",
+          "startup_quadrature_shape": [
+            46,
+            178,
+            178
+          ]
+        },
+        "initial_to_final_observer_coordinate_displacement": 6.077034310348197e-24,
+        "initializer": {
+          "one_mode_solver_sha256": "ffbac2cfaf765c99717a832927f9f17a90677db14d1fe3ede551f9b8f5cf9355",
+          "script_sha256": "14b1bf724779058db82da1859059ff4b6662e2013de96b1030103ce46c28f20c"
+        },
+        "initializer_bound_to_commit": false,
+        "initializer_unchanged_during_run": true,
+        "neck_observer_X": [
+          0.0,
+          1.0,
+          -6.077034310348197e-24,
+          0.0
+        ],
+        "physical_mode_suppression": false,
+        "preparation_scope": "New one-mode initial state, same existing action/normalization. Not the unchanged two-mode campaign.",
+        "producer_commit": "e08b075fc0a5115ec8948f09f454a1795a36c961",
+        "proper_duration": 0.019999999998350088,
+        "regular_child_proved": false,
+        "requested_neck_proper_duration": 0.02,
+        "rhs_calls": 64,
+        "schema": "nsc-one-mode-neck-full-gh-control-v1",
+        "status": "endpoint_reached",
+        "steps": 5,
+        "threads": 4
+      }
+    },
+    {
+      "original_record_path": ".build/valve-one-mode-gh-L24-v1.json",
+      "original_record_sha256": "c337fbc27608aced85480fdd045f715ac52fb8b445fde93df61722a6e95551ee",
+      "record": {
+        "SI_scale_selected": false,
+        "budget_seconds": 180.0,
+        "coordinate_endpoint": 0.019999999989083292,
+        "core_source_bound_to_commit": true,
+        "core_source_sha256": {
+          "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+          "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+          "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+          "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+          "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+          "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+          "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+          "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+          "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+          "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+          "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+          "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf",
+          "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+          "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+        },
+        "core_source_unchanged_during_run": true,
+        "degree": 24,
+        "elapsed_seconds": 124.5716940999846,
+        "final": {
+          "ADM_H_RMS_over_H_squared": 0.00020723794244897618,
+          "ADM_M_RMS_over_H_squared": 7.360369330744445e-06,
+          "GH_C_RMS_over_H": 1.1815319472251416e-06,
+          "coordinate_t": 0.019999999989083292,
+          "excitation_normal_energy_over_initial_round_vacuum_energy": 0.4217442805886086,
+          "geodesic_observer_total_density_over_initial_vacuum": 1.0015966501874614,
+          "maximum_lapse": 1.0001537407008922,
+          "maximum_to_mean_slice_normal_density_ratio": 1.7847508981257239,
+          "metric_valid": true,
+          "minimum_lapse": 1.0000000023454358,
+          "neck_lapse": 1.0000000023454358,
+          "neck_normal_K_eigenvalues": [
+            -0.006341405891044088,
+            0.0009607546284109873,
+            0.0009607546284110791
+          ],
+          "neck_surface": {
+            "area": 39.68699007153167,
+            "area_radius": 1.777129799187898,
+            "exact_reflection_surface": "X1=0 fixed set, not a numerically searched radial zero",
+            "expansion_tolerance": 1e-07,
+            "future_mots_sampled": false,
+            "future_trapped_sampled": true,
+            "mean_curvature_max_abs_over_H": 6.356302464006289e-16,
+            "quadrature_order": [
+              12,
+              25
+            ],
+            "radius_range": [
+              1.5707963267948968,
+              1.5707963267948968
+            ],
+            "same_surface_expansion_difference_max_over_H": 1.271933785194917e-15,
+            "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+            "theta_minus_over_H_range": [
+              -0.007079843403017396,
+              -0.007079843401917166
+            ],
+            "theta_minus_range": [
+              -0.0019215092557343873,
+              -0.0019215092554357787
+            ],
+            "theta_minus_rms": 0.0019215092556707633,
+            "theta_plus_max_abs": 0.001921509255734349,
+            "theta_plus_over_H_range": [
+              -0.007079843403017255,
+              -0.0070798434019172345
+            ],
+            "theta_plus_range": [
+              -0.001921509255734349,
+              -0.0019215092554357974
+            ],
+            "theta_plus_rms": 0.00192150925567071
+          },
+          "observer_chi": 0.0,
+          "observer_chi_proper_derivative": 0.0,
+          "observer_phase_winding_certified": false,
+          "observer_phase_wrapped": null,
+          "observer_proper_duration": 0.019999999998704936,
+          "observer_sampled_unwrapped_phase": null,
+          "observer_unit_norm_error": 0.0,
+          "observer_volume_mode": -0.03564678202868649,
+          "scalar_acceleration_unresolved_fraction": 1.8641473750480195e-09,
+          "scalar_last_two_shell_power_fraction": 1.0126034782525535e-20,
+          "slice_max_sampled_normal_total_density_over_initial_vacuum": 4.9777028436521045,
+          "slice_mean_normal_total_density_over_initial_vacuum": 2.789018259567481,
+          "slice_normal_density_at_observer_position_over_initial_vacuum": 1.0015966501874614,
+          "slice_proper_volume_over_initial_round_reference": 0.23574062384948463,
+          "volume_acceleration_unresolved_fraction": 6.898564227860774e-10,
+          "volume_last_two_shell_power_fraction": 2.5293194770161286e-19,
+          "volume_mode_max": -0.035622665230746385,
+          "volume_mode_min": -0.03564678202868649
+        },
+        "initial": {
+          "ADM_H_RMS_over_H_squared": 0.0002084760544770652,
+          "ADM_M_RMS_over_H_squared": 0.0,
+          "GH_C_RMS_over_H": 1.130497872903962e-06,
+          "coordinate_t": 0.0,
+          "excitation_normal_energy_over_initial_round_vacuum_energy": 0.4216962216140386,
+          "geodesic_observer_total_density_over_initial_vacuum": 1.002063585871477,
+          "maximum_lapse": 1.0,
+          "maximum_to_mean_slice_normal_density_ratio": 1.7847306920265316,
+          "metric_valid": true,
+          "minimum_lapse": 1.0,
+          "neck_lapse": 1.0,
+          "neck_normal_K_eigenvalues": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "neck_surface": {
+            "area": 39.68775279529384,
+            "area_radius": 1.7771468759756748,
+            "exact_reflection_surface": "X1=0 fixed set, not a numerically searched radial zero",
+            "expansion_tolerance": 1e-07,
+            "future_mots_sampled": false,
+            "future_trapped_sampled": false,
+            "mean_curvature_max_abs_over_H": 5.943453039451424e-16,
+            "quadrature_order": [
+              12,
+              25
+            ],
+            "radius_range": [
+              1.5707963267948968,
+              1.5707963267948968
+            ],
+            "same_surface_expansion_difference_max_over_H": 1.1886906078902849e-15,
+            "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+            "theta_minus_over_H_range": [
+              -5.943453039451424e-16,
+              4.780152636358584e-16
+            ],
+            "theta_minus_range": [
+              -1.6130865297756823e-16,
+              1.2973602679787385e-16
+            ],
+            "theta_minus_rms": 5.0951712645515576e-17,
+            "theta_plus_max_abs": 1.6130865297756823e-16,
+            "theta_plus_over_H_range": [
+              -4.780152636358584e-16,
+              5.943453039451424e-16
+            ],
+            "theta_plus_range": [
+              -1.2973602679787385e-16,
+              1.6130865297756823e-16
+            ],
+            "theta_plus_rms": 5.0951712645515576e-17
+          },
+          "observer_chi": 0.0,
+          "observer_chi_proper_derivative": 0.0,
+          "observer_phase_winding_certified": false,
+          "observer_phase_wrapped": null,
+          "observer_proper_duration": 0.0,
+          "observer_sampled_unwrapped_phase": null,
+          "observer_unit_norm_error": 0.0,
+          "observer_volume_mode": -0.035646782552940987,
+          "scalar_acceleration_unresolved_fraction": 4.0916358482886234e-10,
+          "scalar_last_two_shell_power_fraction": 0.0,
+          "slice_max_sampled_normal_total_density_over_initial_vacuum": 4.977646090029184,
+          "slice_mean_normal_total_density_over_initial_vacuum": 2.789018036316253,
+          "slice_normal_density_at_observer_position_over_initial_vacuum": 1.002063585871477,
+          "slice_proper_volume_over_initial_round_reference": 0.23571378994161352,
+          "volume_acceleration_unresolved_fraction": 1.1202843956273946e-14,
+          "volume_last_two_shell_power_fraction": 0.0,
+          "volume_mode_max": -0.035646782552940987,
+          "volume_mode_min": -0.035646782552940987
+        },
+        "initial_preparation": {
+          "A": 0.05366968539716552,
+          "metric_projection": "Full psi40^4 projected, then exact finite-basis derivatives used for gauge velocity.",
+          "minimum_projected_F": 0.23263995378491648,
+          "observer_clock": "Initially normal geodesic on reflection neck; no scalar-phase clock.",
+          "observer_initial_X": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "projected_metric_degree": 24,
+          "reference_initial_degree": 40,
+          "reference_initial_row": {
+            "Newton_steps": 7,
+            "candidate_root_formula": -6.249315696657275,
+            "degree": 40,
+            "direct_constraint_gap": 8.296097142590497e-11,
+            "dot_theta_pm_over_H_squared_constraint": -1.304678885146802,
+            "dot_theta_pm_over_H_squared_direct": -1.304678885063841,
+            "epsilon": 1.0,
+            "even_gegenbauer_normalized_coefficients": [
+              3.383832604063391,
+              0.34725992635897557,
+              0.058088298474483095,
+              0.010867970502056568,
+              0.0021409127115081545,
+              0.000434438475214058,
+              8.986999002220098e-05,
+              1.8843308716125616e-05,
+              3.990512502116145e-06,
+              8.515874275538143e-07,
+              1.828389567365118e-07,
+              3.945036643137226e-08,
+              8.546881213044942e-09,
+              1.8580503773808726e-09,
+              4.0511765249581786e-10,
+              8.855321690329368e-11,
+              1.9399303657562065e-11,
+              4.258054115976673e-12,
+              9.362312827640809e-13,
+              2.061589621892593e-13,
+              4.542913751586221e-14
+            ],
+            "full_conformal_RMS": 3.4220634342634085e-11,
+            "full_conformal_max": 1.847688224643207e-09,
+            "kappa_A_squared": 0.0028804351306307217,
+            "kappa_eps_A_squared": 0.0028804351306307217,
+            "minimum_psi": 0.6944981082955182,
+            "neck_second_derivative_over_psi": 0.575159994087469,
+            "physical_excitation_over_reference_round_vacuum": 0.4216962216140383,
+            "projected_residual_norm": 1.3369094596076254e-14,
+            "proper_volume_over_reference": 0.23571378994158176,
+            "psi_neck": 0.6944981082955183,
+            "psi_uu_neck": 0.3994475278610087,
+            "solve_nodes": 205,
+            "validation_nodes": 329
+          },
+          "source": "chi=A*X1; kappa*A^2=24/(z+3); all normal field momenta and K initially zero",
+          "startup_quadrature_shape": [
+            48,
+            186,
+            186
+          ]
+        },
+        "initial_to_final_observer_coordinate_displacement": 2.7985328184773015e-23,
+        "initializer": {
+          "one_mode_solver_sha256": "ffbac2cfaf765c99717a832927f9f17a90677db14d1fe3ede551f9b8f5cf9355",
+          "script_sha256": "14b1bf724779058db82da1859059ff4b6662e2013de96b1030103ce46c28f20c"
+        },
+        "initializer_bound_to_commit": false,
+        "initializer_unchanged_during_run": true,
+        "neck_observer_X": [
+          0.0,
+          1.0,
+          -2.7985328184773015e-23,
+          0.0
+        ],
+        "physical_mode_suppression": false,
+        "preparation_scope": "New one-mode initial state, same existing action/normalization. Not the unchanged two-mode campaign.",
+        "producer_commit": "e08b075fc0a5115ec8948f09f454a1795a36c961",
+        "proper_duration": 0.019999999998704936,
+        "regular_child_proved": false,
+        "requested_neck_proper_duration": 0.02,
+        "rhs_calls": 64,
+        "schema": "nsc-one-mode-neck-full-gh-control-v1",
+        "status": "endpoint_reached",
+        "steps": 5,
+        "threads": 4
+      }
+    }
+  ],
+  "initial_state_compatibility": {
+    "conformal_coefficient_max_abs_gap": 0.0,
+    "conformal_coefficients_bitwise_equal": true,
+    "degree": 12,
+    "evolution_rerun": false,
+    "gauge_velocity_coefficient_max_abs_gap": 0.0,
+    "initial_constraint_degree": 40,
+    "method": "Executed frozen prototype initial_state and promoted production initial_state on separate L12 ParentGH systems under the same four-thread scopes; compared full arrays, without calling rhs or advancing either system.",
+    "metric_coefficients_bitwise_equal": true,
+    "metric_startup_sample_max_abs_gap": 0.0,
+    "minimum_projected_F_new": 0.23271730871358992,
+    "minimum_projected_F_old": 0.23271730871358992,
+    "packed_state_bitwise_equal": true,
+    "packed_state_max_abs_gap": 0.0,
+    "rhs_calls_new": 0,
+    "rhs_calls_old": 0,
+    "startup_quadrature_equal": true,
+    "threads": 4
+  },
+  "numerical_scope": {
+    "SI_scale_selected": false,
+    "angular_sampling": "12 Gauss theta nodes by25 periodic azimuth nodes; reflection mean-curvature and expansion differences are reported in each original record.",
+    "discretization_errors_certified": false,
+    "final_event": "Proper duration0.02 on the initially normal geodesic situated on that neck; no scalar-phase clock.",
+    "initial_surface": "Doubly marginal X1=0 reflection neck in the declared new one-mode preparation.",
+    "prehistory_from_strictly_untrapped_data_proved": false,
+    "received_child_energy_calculated": false,
+    "regular_child_proved": false,
+    "result": "Both null expansions are negative at all sampled neck points; full GH constraints and agreement with the independent synchronous reduction improve with resolution."
+  },
+  "provenance": {
+    "historical_core_producer_commit": "e08b075fc0a5115ec8948f09f454a1795a36c961",
+    "historical_evolution_rerun_after_promotion": false,
+    "original_initializer_sha256": "14b1bf724779058db82da1859059ff4b6662e2013de96b1030103ce46c28f20c",
+    "original_one_mode_solver_sha256": "ffbac2cfaf765c99717a832927f9f17a90677db14d1fe3ede551f9b8f5cf9355",
+    "production_neck_owner": "src/recursive_horizons/nsc_atlas_valve_neck.py",
+    "production_neck_owner_sha256": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+    "promoted_script": "scripts/check_nsc_atlas_valve_neck_gh.py",
+    "promoted_script_byte_identical_to_historical_initializer": false,
+    "promoted_script_sha256": "aeccc34536d21944ac6dd7eb87565cea6a161b9e3ba1eb13e4a380345d588872",
+    "reading_boundary": "The three embedded records are the original pre-promotion measurements, preserved without numerical edits. The promoted producer uses the production constraint owner and explicit source pins; it was not used to rerun these evolutions. Only its initial-state equivalence was checked."
+  },
+  "reproduction": [
+    "python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_gh.py --degree 12 --threads 4 --budget 180 --proper .02 --output .build/valve-neck-gh-L12-reproduced.json",
+    "python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_gh.py --degree 16 --threads 4 --budget 180 --proper .02 --output .build/valve-neck-gh-L16-reproduced.json",
+    "python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_gh.py --degree 24 --threads 4 --budget 180 --proper .02 --output .build/valve-neck-gh-L24-reproduced.json"
+  ],
+  "schema": "nsc-atlas-valve-neck-gh-v1"
+}

@@ -34,8 +34,11 @@ persistent vacuum term vanishes in the leading-field domain. The existing
 equations do not select the receiving vacuum/expansion history and present
 event needed for Omega_Lambda_today. The protocol therefore fails its
 prediction-completeness gate, without an empirical rejection of nesting.
-Future child formation, a threshold amplitude and baryon/photon asymmetry
-remain unresolved. The main argument follows this outward connection;
+A separate one-mode occupation of the same action now supplies a numerical
+neck-trapping threshold epsilon=.8339066 and a converged future-trapped
+development, checked independently in the full metric equations. A regular
+receiving child, inherited preparation and baryon/photon asymmetry remain
+unresolved. The main argument follows this outward connection;
 the technical record preserves its mathematics, numerical results and
 attribution without promoting them to cosmological observations.
 
@@ -320,12 +323,60 @@ established child. Future trapping requires the evolved expansions to
 become negative on the same closed surface, followed by an admissible
 interior continuation. A change of coordinates cannot replace that test.
 
-The existing epsilon=1 nonlinear runs are **under-resolved, not used for
-claims**. They supply no converged threshold or child-formation result.
-The future answer is **not established**, rather than a claim that a
-child can never form. No amplitude, child vacuum or child-to-grandchild
-fixed point is reported. Horizon/GH/boson refinement remains frozen; an
-initial existence theorem is not extrapolated into a collapse theorem.
+The earlier long epsilon=1 nonlinear runs are **under-resolved, not used
+for claims**. The subsequent finite searches of the equal two-mode
+preparation find no admitted future trap. That finite search is not a
+prohibition for other states of the same action.
+
+<!-- nsc-claim:one-mode-trapped-neck -->
+
+The next preparation puts the same round-reference excitation into the
+lowest odd mode: chi=epsilon A X1, with kappa A²=24/(z+3). Its occupation
+is explicitly changed; it has not been selected by inheritance. On its
+reflection-fixed sphere X1=0, both initial expansions vanish. Direct ADM
+evolution and an independent warped-metric calculation give
+
+$$
+\frac{\dot\theta_\pm}{H^2}
+=3-\left(1+\frac{\kappa\epsilon^2A^2}{2}\right)\Psi(0)^{-4}.
+$$
+
+The [calculated threshold](../results/summaries/nsc-atlas-valve-neck.json)
+is epsilon_crit=.8339066143. At epsilon=1 the slope is -1.30468.
+Both expansions become negative on a closed sphere: at proper .02,
+theta_plus/H=theta_minus/H=-.00707954. Three spherical resolutions
+converge, and the [independent nonspherical GH implementation](../results/summaries/nsc-atlas-valve-neck-gh-v1.json) agrees
+within .0043% at its finest degree. The
+[finite continuation and ledger](../results/summaries/nsc-atlas-valve-spherical-v1.json)
+extend the trap to proper .3 without a shell or a coordinate singularity.
+This is development from a supplied bi-marginal slice, not a derived
+preparation history or a global black-hole event horizon.
+
+<!-- nsc-claim:one-mode-regional-ledger -->
+
+Inside the strict trap, the areal-radius gradient is timelike; decreasing
+radius supplies a local interior time coordinate. At proper .2 the
+connected trapped band has volume16.7765, energy3.77629 and mean stress
+ratio w=-.96573 in action units. Most of its energy is the already
+supplied vacuum; subtracting that vacuum gives excitation w=.87628.
+Its instantaneous energy increase separates as
+
+$$
+\dot E= .15845_{\rm work}+.08562_{\rm material\ influx}
++24.18268_{\rm boundary\ sweep}=24.42675.
+$$
+
+The [independent moving-region ledger](../results/summaries/nsc-atlas-valve-spherical-v1.json)
+closes to1.69e-8. Reflection makes
+the material transfer through the central neck exactly zero. These
+numbers measure an evolving trapped region; they do not supply a regular
+child, a new vacuum or the earlier88.47% transfer fraction.
+Zero central transfer does not exclude symmetric feeding through the
+surrounding horizons; the positive material influx above is real.
+The [formation owner](../docs/nsc-atlas-valve-formation.md) gives the
+equations, source change, independent checks and attribution to the
+Misner--Sharp/Hayward spherical energy framework. A receiving continuation
+with an inherited incoming state is now the physical dependency.
 
 ## 7. Selection and the charge-resolved question
 
@@ -364,7 +415,8 @@ and detector/thermal normalization are the required physical connection.
 | Additional persistent scalar vacuum term | 0 in the leading late-field domain | Does not supply the proposed vacuum reservoir |
 | Omega_Lambda_today | Unselected | P006 prediction-completeness condition fails; no empirical rejection |
 | Receiving w | .7212244363 at the specified event; late averaged limit 0 | Does not have vacuum form; not a present-day cosmological w test |
-| Future child and amplitude | Not established | Initial admissibility does not decide formation |
+| Future-trapped neck | epsilon_crit=.8339066 in a new one-mode state | Finite convergence and independent full-metric check; preparation supplied |
+| Regular receiving child | Not established | The symmetric neck has zero material transfer |
 | Charge-resolved crossing | 0 in the real sector | Baryon/photon eta remains uncalculated |
 
 The present mathematical contribution is a connected route from a

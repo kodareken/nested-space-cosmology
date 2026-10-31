@@ -1,5 +1,21 @@
 # Reproducing the root project
 
+## Current formation frontier
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_valve_neck.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_spherical.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_neck_gh.py --degree 24 --threads 4 --budget 180
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_neck.py tests/test_nsc_atlas_valve_spherical.py
+```
+
+The [formation owner](nsc-atlas-valve-formation.md) distinguishes the new
+one-mode occupation from the older two-mode state. The reduction takes
+seconds; the independent full-GH check takes about125seconds on four
+threads. Historical control results identify their pre-promotion initializer;
+the production initializer is checked bitwise identical. No child, SI ruler
+or cosmological fraction is inferred from a trapped neck alone.
+
 The [canonical parent response](nsc-atlas-boson-transport.md#reproduction)
 records resolved-history, response, Schur and plot commands. Full history
 and matrix arrays are regenerated locally; the committed summaries bind

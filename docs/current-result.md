@@ -2,14 +2,25 @@
 
 Active frontier: [valve formation](nsc-atlas-valve-formation.md), with the
 [goal progress record](atlas-progress.json) owning compaction recovery.
-Eta is parked. The unchanged epsilon1 parent now reaches proper.3 at
-three resolutions; constraints contract and genuine local focusing and
-contraction develop. A formed child is not yet admitted. The closed-surface diagnostic and extended histories are now completed.
-No future trap or child is admitted. Internal stabilization loss has the
-conditional threshold epsilon=.717777, and the first normal contraction
-occurs near proper.0538334. Phase vortices carry finite volume-field
-current but do not establish a drain into another region. Null-generator
-history and a compatible receiving child remain next; downstream cosmology waits.
+Eta is parked. A new one-mode occupation of the retained action now
+has a numerical neck-trapping threshold epsilon=.8339066143. Three
+spherical resolutions and an independent full-metric GH check give a
+closed future-trapped sphere at proper .02, both expansions/H=-.00707954.
+Its continuation to proper .3 has a checked moving-region energy ledger.
+The source occupation remains supplied. Reflection forces zero transfer
+through the central symmetry plane, while positive material influx through
+the enclosing marginal boundaries feeds the trapped band. A regular receiving child
+remains open. The overall work-gate score is32%, not a fraction of reality
+explained. The completed neck window is frozen; the horizons and a compatible
+receiving continuation, with inherited state retained, are next.
+
+The earlier unchanged two-mode parent's closed-surface and null-sheet
+searches found no admitted future trap. Internal stabilization loss has
+the conditional threshold epsilon=.717777, and the first normal contraction
+occurs near proper .0538334. Its phase vortices carry finite volume-field
+current but do not establish a drain into another region. Those finite
+source-specific conclusions do not exclude other preparations; downstream
+cosmology still waits for the physical receiving construction.
 
 Within P006, the [damped-offset test](nsc-atlas-offset-thermodynamics.md)
 now uses the retained late scalar coefficients: gamma T=.103283613217,

@@ -35,6 +35,11 @@ pages. The full technical atlas is preserved in Appendix A. The latest
 receiving stress; it does not yet identify today's vacuum fraction.
 The chapter route below describes the preserved technical atlas.
 
+The current [formation calculation](docs/nsc-atlas-valve-formation.md) now
+has a converged future-trapped neck and a threshold epsilon=.8339066 for
+a declared one-mode state of the same action. A regular child receiving
+energy and the physical selection of that state remain open.
+
 - [The Geometry of a Universe: illustrated PDF](paper/nested-space-cosmology.pdf)
 - [Full manuscript and primary-source links](paper/nested-space-cosmology.md)
 - [Atlas programme and scientific owners](docs/nsc-cosmological-atlas.md)

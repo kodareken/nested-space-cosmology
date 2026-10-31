@@ -16,8 +16,17 @@ five. The score tracks completed work within stated domains, not how much
 of reality is explained or the probability the theory is right. A source
 law, numerical convergence, inherited selection and observational success
 remain separate requirements. A real-data fit is not a successful withheld
-registered prediction. The overall current gate score is30%, with the
+registered prediction. The overall current gate score is32%, with the
 physical child and all downstream empirical closure gates still open.
+
+The [new one-mode formation calculation](nsc-atlas-valve-formation.md#current-result-a-same-action-trapped-neck)
+retains the action and explicitly changes occupation. It supplies a
+resolved future-trapped neck at epsilon=1, a numerical threshold .8339066,
+and a checked finite regional ledger. The older equal two-mode search
+remains negative within its finite domain. The new symmetric center carries
+zero net transfer, while the surrounding horizons admit positive influx.
+Following that fed trapped band into a regular receiving child is the
+next connection, not more threshold refinement.
 
 After compaction, read that record and the formation owner before starting
 a calculation. Inspect existing live processes and saved outputs first.

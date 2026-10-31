@@ -1,5 +1,26 @@
 # Prior art and admission of new research
 
+## One-mode formation and receiving-region ledger, 31 October 2026
+
+The [formation owner](nsc-atlas-valve-formation.md) records the change of
+route: finite null-sheet and tilted-cut searches on the older equal-mode
+state did not produce a trap. Testing another occupation retains the
+action and avoids adding an unprovided exterior pressure. The new source
+chi=epsilon A X1 has the same round-reference energy normalization; its
+occupation and initial bi-marginal slice remain supplied. Borrow ADM and
+spherical warped-curvature identities, the existing equivariant constraint
+method, and [Hayward II](https://arxiv.org/html/gr-qc/9710089v2) for spherical
+mass/supply/work. The computed source-dependent threshold, independent
+full-metric comparison and moving-band budget are the new connections.
+Budgets:60seconds for each reduced finite evolution,180seconds for each
+GH control; measured reduced work takes seconds, GH20/41/125seconds.
+Full-PDE quadrature, exact de Sitter recovery, regular poles, independent
+GH gauge/proper-time synchronization and regional work test different risks.
+Likely failures are an unresolved metric projection, identifying boundary
+sweep as material supply, and calling a trapped neck a regular child.
+All remain explicitly separated. Freeze the completed threshold/window;
+continue with inherited incoming state and an admissible fed continuation.
+
 ## Finite-amplitude initial geometry, 31 October 2026
 
 The [owner](nsc-atlas-finite-parent-data.md) rejects scaling a perturbative
