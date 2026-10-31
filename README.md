@@ -29,6 +29,12 @@ close and test within that connected account.
 
 ## Read the atlas
 
+The main argument now follows the offset-to-horizon-to-vacuum test in seven
+pages. The full technical atlas is preserved in Appendix A. The latest
+[registered flow comparison](docs/prediction-register.md) calculates the
+receiving stress; it does not yet identify today's vacuum fraction.
+The chapter route below describes the preserved technical atlas.
+
 - [The Geometry of a Universe: illustrated PDF](paper/nested-space-cosmology.pdf)
 - [Full manuscript and primary-source links](paper/nested-space-cosmology.md)
 - [Atlas programme and scientific owners](docs/nsc-cosmological-atlas.md)

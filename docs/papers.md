@@ -1,5 +1,210 @@
 # Paper guide
 
+Revision 2026-10-31.05 puts the outward chain in a compact main argument:
+offset geometry, smooth-zero convention, inherited crossing, finite initial
+admissibility, P006 vacuum/pressure comparison and child/charge status.
+The main argument (excluding cover/contents) changes from 207 pages to7;
+the full preserved PDF changes from239 to247 pages. The longer total
+retains all prior technical chapters rather than deleting their content.
+All634 prior displayed equations, every prior table and all152 earlier
+claim markers remain. Two scoped P006 claims are added. Scientific
+values and frozen P001--P005 evidence are unchanged.
+
+The moved topics have one-paragraph summaries with commits in Appendix A:
+GH engine(A.1), conditioning(A.2), observer readouts(A.3), boson transport(A.4),
+dense history(A.5), Schur memory(A.6), kick/shear(A.7), epsilon=.25 controls(A.8)
+and matter-work ledgers(A.9). The epsilon=1 nonlinear runs are explicitly
+**under-resolved, not used for claims**. Original main parts I--VIII and
+the earlier characteristic appendix follow those summaries. The complete
+section move list below lets earlier references be traced without changing
+mathematical or numerical values. Appendices B and C remain in place.
+Author review remains pending and submission_ready remains false.
+
+<details>
+<summary>Every moved section: prior identifier to current Appendix A identifier</summary>
+
+| Prior section | Current section | Title |
+| --- | --- | --- |
+| 1 | A.12 | The central geometric proposal and the route through the atlas |
+| 1.1 | A.13 | The proposed generator: contrast, circulation and continuation |
+| 1.2 | A.14 | One spatial seed and an accumulated offset generate a space |
+| 1.3 | A.15 | The generated space supports a sourced physical readout |
+| 2 | A.16 | Why begin with the sphere? Energy, relaxation and inheritance |
+| 3 | A.17 | The same argument across operator, spacetime and observer descriptions |
+| 4 | A.18 | Four arrows that must not be confused |
+| 5 | A.19 | A precise finite inheritance construction |
+| 5.1 | A.20 | An infinite inherited law with a controlled local response |
+| 5.2 | A.21 | Physical measure, pressure and a measurable nesting ratio |
+| 5.3 | A.22 | A response shape that recovers the nesting ratio |
+| 6 | A.23 | What an unresolved surrounding region can leave locally |
+| 6.1 | A.24 | The local effective Lambda target |
+| 7 | A.26 | Start with two holes, without manufacturing two children |
+| 8 | A.27 | A failed attachment can sharpen the map |
+| 9 | A.28 | A distinct fixed-source wall that does connect |
+| 10 | A.29 | A sourced initial slice and a conditional common parent |
+| 10.1 | A.30 | Two unequal sourced children in the same theory |
+| 10.2 | A.31 | A retained grandchild and an explicit second boundary |
+| 10.3 | A.32 | A central proper-clock and frequency observation |
+| 10.4 | A.33 | Radar and a wall clock recover a physical junction |
+| 10.5 | A.34 | Both walls in one host history |
+| 10.6 | A.35 | The shared parent evolves into a calculable effective source |
+| 10.7 | A.36 | A compact parent and the limits of its global average |
+| 10.8 | A.37 | The nested body in an expanding parent |
+| 10.9 | A.38 | Two explicit ways surrounding geometry enters local gravity |
+| 10.10 | A.39 | Can the enclosing wall select the cap curvature? |
+| 10.11 | A.40 | The source law behind a growing mass |
+| 10.12 | A.41 | Sourced rooms from an occupied wall spectrum |
+| 10.13 | A.42 | Two physical interiors, one parent, and a central beacon |
+| 10.14 | A.43 | Energy, frequencies and a moving radius |
+| 11 | A.44 | Complete one reference before assigning its causal arrows |
+| 12 | A.45 | Different exteriors can be locally indistinguishable |
+| 13 | A.47 | The shared source and its cosmological domain |
+| 13.1 | A.48 | A field law that changes the inherited vacuum |
+| 13.2 | A.49 | Three vacuum regions in one evolving cosmology |
+| 13.3 | A.50 | Preparing the scalar, membrane and geometry together |
+| 13.4 | A.51 | Physical boundary reduction and the prepared child |
+| 13.5 | A.52 | Real parent sources and received energy |
+| 13.6 | A.53 | A finite parent source with its gravitational response |
+| 13.7 | A.54 | A conditional inward pulse from the excited parent |
+| 13.8 | A.55 | A one-sided geometric observer and the full mass balance |
+| 13.9 | A.56 | What an additional inherited region can identify |
+| 13.10 | A.57 | Three sourced regions on one compact initial slice |
+| 13.11 | A.58 | Cosmology in the protected parent domain |
+| 13.12 | A.59 | A constrained parent perturbation that grows |
+| 13.13 | A.60 | Inheritance must also supply the structure scale |
+| 13.14 | A.61 | What the inherited law leaves to the state |
+| 13.15 | A.62 | The inherited scalar gives a controlled matter background |
+| 13.16 | A.63 | The controlled background predicts an interior light cone |
+| 13.17 | A.64 | An epoch-independent vacuum, scalar and curvature constraint |
+| 13.18 | A.65 | Continuing the same inherited parent to the emitters |
+| 13.19 | A.66 | The inherited geometry meets the supernova distance shape |
+| 13.20 | A.67 | One calibrated geometry, a second distance channel |
+| 13.21 | A.68 | What this connection closes and what its source still must supply |
+| 13.22 | A.69 | One common ruler and the remaining SI selector |
+| 13.23 | A.70 | A physical volume connects normalization and evolving matter |
+| 13.24 | A.71 | An extremal member is not yet an inherited selection |
+| 13.25 | A.72 | Selection mechanisms and the actual evolving-volume distance test |
+| 13.26 | A.73 | Survival ranking and the curvature that must be inherited |
+| 13.27 | A.74 | The wall, the exit state and the actual pressure history |
+| 13.28 | A.75 | A mass-free nucleation radius and the matter-reference gate |
+| 13.29 | A.76 | Three targets from the spectral and regional map |
+| 13.30 | A.77 | Constructing the pen: a phase history on the sphere |
+| 13.31 | A.78 | The inward drawing: golden turns and inherited clocks |
+| 13.32 | A.79 | Through the horizon: smooth geometry, charge and an offset |
+| 13.33 | A.80 | Deriving the charged pair from internal geometry |
+| 14 | A.82 | The energy supply and formation of structure |
+| 14.1 | A.83 | A profile selected by scalar self-gravity |
+| 14.2 | A.84 | The coherent core and its inherited environment |
+| 14.3 | A.85 | Supplying a local core from the inherited parent |
+| 14.4 | A.86 | A perturbed centre and the same evolving cosmology |
+| 14.5 | A.87 | Evolving the inherited field and its geometry together |
+| 14.6 | A.88 | A diffuse cloud develops a compact, breathing concentration |
+| 14.7 | A.89 | Conservation selects a second local scale |
+| 14.8 | A.90 | A mass--reservoir--vacuum relation and a dimensional example |
+| 14.9 | A.91 | Evolving the core together with its reservoir |
+| 14.10 | A.92 | Conserved transport, finite persistence and a relativistic check |
+| 14.11 | A.93 | Testing the breathing core beyond spherical symmetry |
+| 14.12 | A.94 | A finite response theorem for every orientation in a declared span |
+| 14.13 | A.95 | The surrounding field must carry the tidal phase |
+| 14.14 | A.96 | A local concentration carries the signature of its surroundings |
+| 14.15 | A.97 | The age and population are part of the correlation |
+| 14.16 | A.98 | Does the inherited parent leave enough time to form a core? |
+| 14.17 | A.99 | A compact earlier seed identifies the nonlinear continuation |
+| 14.18 | A.100 | Nonlinear formation without installing the final core |
+| 14.19 | A.101 | Physical contraction separates formation from density contrast |
+| 15 | A.103 | One geometry, several measured consequences |
+| 15.1 | A.104 | Three freely falling clocks and a withheld prediction |
+| 15.2 | A.105 | A signal from the concentration's evolving geometry |
+| 15.3 | A.106 | The same concentration bends and focuses light |
+| 15.4 | A.107 | A proper-clock lens map during contraction and breathing |
+| 15.5 | A.108 | Two paths, one receiving clock |
+| 15.6 | A.109 | A local image delay and the parent's vacuum must share one scale |
+| 15.7 | A.110 | The forming field supplies one connected observer map |
+| 15.8 | A.111 | Direction, delay and frequency are derivatives of one arrival map |
+| 15.9 | A.112 | Motion calibrates a prediction before the new ray is evaluated |
+| 15.10 | A.113 | NSC-P004 passes its frozen synthetic cross-observable check |
+| 15.11 | A.114 | Two observer distances, on two metrics |
+| 15.12 | A.115 | A stretched region, an orbit and a received frequency |
+| 15.13 | A.116 | Compensated circulation, a light offset and smooth-horizon exchange |
+| 15.14 | A.117 | Depletion changes area: the inherited source and a dynamical first law |
+| 15.15 | A.118 | The field continues: two inherited traces and a receiving state |
+| 15.16 | A.119 | The zero line: thermodynamic decay, retained state and a crossover test |
+| 15.17 | A.120 | The inherited wave changes geometry, spectra and coupling |
+| 15.18 | A.121 | Coupled parent feedback closes matter work and links two clocks |
+| 15.19 | A.122 | Finite-amplitude geometry exists for the inherited preparation |
+| 15.20 | A.123 | Evolving geometry connects pressure work to local readouts |
+| 15.21 | A.124 | The inherited interaction supplies a nonzero canonical response |
+| 16 | A.126 | Responses across matter, gravity and quantum descriptions |
+| 16.1 | A.127 | Flow geometry and a common boundary stress |
+| 16.2 | A.128 | Two stable material interfaces in one static geometry |
+| 16.3 | A.129 | The gravitational action now composes through the interfaces |
+| 16.4 | A.130 | The same exterior mass permits different gravitational returns |
+| 16.5 | A.131 | A published nonlinear vortex mechanism enters the atlas |
+| 16.6 | A.132 | Fine motion produces an exact resolved circulation |
+| 16.7 | A.133 | The correlations retain their energy and momentum budget |
+| 16.7.1 | A.134 | Finite circulation now carries a gravitational readout |
+| 16.7.2 | A.135 | Energy depletion determines an averaged geometric work term |
+| 16.7.3 | A.136 | A rotating horizon supplies an energy-transfer threshold |
+| 16.7.4 | A.137 | The average work coefficient becomes a local Einstein constraint |
+| 16.8 | A.138 | A material action now supplies the interaction vertex |
+| 16.9 | A.139 | An actual gravitational mode carries the cosmohedron seed |
+| 16.10 | A.140 | Interior geometry changes the interaction and fixes its scale law |
+| 16.11 | A.141 | The actual cap--wall Dirac operator and the missing nested slip |
+| 16.12 | A.142 | Local Dirac trace on the cap and material wall |
+| 16.13 | A.143 | An actual wall radar chart and a finite clock prediction |
+| 16.14 | A.144 | Stress vertices and the inherited quantum preparation |
+| 16.15 | A.145 | Prepared Dirac propagation, mean metric and clock |
+| 16.16 | A.146 | A conserved compact source and local gravitational tides |
+| 16.17 | A.147 | A correlated continuum parent and local vacuum regularity |
+| 16.18 | A.148 | Inherited preparation and the cap's local late state |
+| 17 | A.150 | What the eliminated geometry contributes |
+| 17.1 | A.151 | The current scalar's classical vacuum projection |
+| 17.2 | A.152 | A conditional quantum contribution and its physical scale |
+| 17.3 | A.153 | The quantum interface and the remaining exterior reduction |
+| 17.4 | A.154 | The exterior scalar response on the quiet wedge |
+| 17.5 | A.155 | Parent response, slice fit and a separate contracting geometry |
+| 17.6 | A.156 | The interface required by a common action |
+| 17.7 | A.157 | One state at two physical resolutions |
+| 17.8 | A.158 | A prepared-state change propagated to a photon measurement |
+| 17.9 | A.159 | A constrained gravitational exterior and its validity test |
+| 17.10 | A.160 | The inherited spectral profile and its gravitational response |
+| 17.11 | A.161 | Flat-reference curvature channels and the relation between motion and lensing |
+| 17.12 | A.162 | Composition and conservation of a nested geometric response |
+| 18 | A.164 | Physical inheritance carries law, scale and state |
+| 19 | A.165 | Geometric spectra, quantum observables and causal scales |
+| 20 | A.166 | The connected dark-sector mechanism and its remaining physical inputs |
+| 21 | A.167 | Charged matter and the asymmetry question |
+| 22 | A.168 | Formation, continuation and successive generations |
+| 23 | A.169 | The connected result and the route to a tested cosmology |
+| A.1 | A.171 | A first field that reaches the interior |
+| A.2 | A.172 | Where the early signal can originate |
+| A.3 | A.173 | A prepared pulse leaves a finite scattering tail |
+| A.4 | A.174 | What the signal determines when preparation is unknown |
+| A.5 | A.175 | The transmitted probe and the wall's stress |
+| A.6 | A.176 | The prepared pulse requires gravitational initial data |
+| A.7 | A.177 | An invariant mass response on the same initial surface |
+| A.8 | A.178 | The scalar adds no normal-force jump |
+| A.9 | A.179 | Exterior mass closes from the known wall field |
+| A.10 | A.180 | Cap mass and a regular wall displacement functional |
+| A.11 | A.181 | The prepared field drives a smooth exterior metric response |
+| A.12 | A.182 | The same field displaces the wall and changes its exterior clock |
+| A.13 | A.183 | The cap geometry changes the central arrival clock |
+| A.14 | A.184 | Geometry supplies an outgoing scalar boundary correction |
+| A.15 | A.185 | The exterior scalar correction propagates on the computed geometry |
+| A.16 | A.186 | Reflected cap transport gives the central scalar correction |
+| A.17 | A.187 | A nonlinear coupled window and its unresolved accuracy |
+| A.18 | A.188 | Profile-knot phase and a finer temporal comparison |
+| A.19 | A.189 | A common exterior derivative and a mixed accuracy result |
+| A.20 | A.190 | A finite-amplitude onset solution |
+| A.21 | A.191 | Amplitude dependence on the onset cell |
+| A.22 | A.192 | Uniform geometric remainders and signed endpoint response |
+| A.23 | A.193 | The completed full-label numerical trial |
+| A.24 | A.194 | A separate finite model with geometric feedback |
+| A.25 | A.195 | Memory is a consequence of elimination, not an added reservoir |
+| A.26 | A.196 | The retained local incoming gate |
+
+</details>
+
 Revision 2026-10-28.3 adds Section 13.22: the full shared-ruler DESI
 comparison with propagated SN shape posterior, a high-redshift scalar/
 Cauchy bound and explicitly conditional Planck geometry diagnostic, and

@@ -1,5 +1,10 @@
 # Active code and evidence map
 
+The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
+uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
+records. The horizon/GH/boson chain below is frozen. It supplies existing
+inputs and controls, not a selected present-day vacuum or child threshold.
+
 The [bosonic transport owner](nsc-atlas-boson-transport.md) connects
 `nsc_atlas_gh_history.py`, `nsc_atlas_boson_hamiltonian.py`,
 `nsc_atlas_boson_parent.py` and `nsc_atlas_boson_transport.py`. The same

@@ -69,6 +69,20 @@ def test_p003_binds_the_observable_and_preserves_synthetic_scope(tmp_path):
     with pytest.raises(ValueError):checker.check_p003(tmp_path,bad)
 
 
+def test_p006_missing_prediction_cannot_be_promoted_to_empirical_rejection(tmp_path):
+    entry=copy.deepcopy(json.loads((ROOT/checker.REGISTER).read_bytes())['entries'][5])
+    for name in ('forecast','evaluation'):
+        path=tmp_path/entry[name]['path'];path.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(ROOT/entry[name]['path'],path)
+    checker.check_p006(tmp_path,entry)
+    result_path=tmp_path/entry['evaluation']['path']
+    result=json.loads(result_path.read_bytes());result['empirical_rejection']=True
+    raw=(json.dumps(result)+'\n').encode();result_path.write_bytes(raw)
+    entry['evaluation'].update(bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest())
+    with pytest.raises(ValueError,match='fabricated rejection'):
+        checker.check_p006(tmp_path,entry)
+
+
 def test_p005_preserves_its_frozen_interval_and_nonobservational_scope(tmp_path):
     entry=json.loads((ROOT/checker.REGISTER).read_text(encoding='utf-8'))['entries'][4]
     for name in ('forecast','validation','density_relation'):

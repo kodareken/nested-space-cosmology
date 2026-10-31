@@ -1,5 +1,10 @@
 # Scientific strand index
 
+The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
+uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
+records. The horizon/GH/boson chain below is frozen. It supplies existing
+inputs and controls, not a selected present-day vacuum or child threshold.
+
 The [gravitating-kick completion](nsc-atlas-gravitating-kick.md) supplies
 an exact polynomial York source, positive numerical conformal data and
 GH-compatible initial derivatives for the canonical probes. It preserves

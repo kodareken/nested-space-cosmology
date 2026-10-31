@@ -3,9 +3,479 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 30 October 2026
+Working research manuscript, 31 October 2026
 
 ## Abstract
+
+NSC investigates whether one inherited geometric law can connect nested
+regions, their exchange of energy and the quantities measured inside them.
+The construction starts with one spatial interval and an accumulated
+offset. Retained history and an explicit distance kernel have a
+three-dimensional metric completion. A smooth closed-parent realization
+then supports inherited scalar fields, a horizon and calculable transfer
+to its other side. The regional signs are + for the source, 0 for the
+smooth horizon and - for the receiving side; they do not assign negative
+energy to the receiving field.
+
+The same source produces 88.4735067504% scalar patch-energy crossing,
+normalized full-future area growth 1.085638919782 epsilon squared, and
+short-leg transfer 2.219782587242 epsilon squared in its model units.
+A finite-amplitude theorem supplies constrained initial geometry for
+0<=epsilon<=1. These results connect the drawing, a physical field and
+its regional continuation. Their full derivations and earlier atlas
+branches are retained in Appendix A.
+
+The outward test asks whether this flow also selects a persistent vacuum
+stress and today's Omega_Lambda, without returning the supplied parent
+vacuum as the answer. Protocol NSC-P006 was frozen before its calculation.
+The continued scalar has isotropic stress ratio w=.7212244363 at the
+declared receiver event and late phase-averaged w=0. Its additional
+persistent vacuum term vanishes in the leading-field domain. The existing
+equations do not select the receiving vacuum/expansion history and present
+event needed for Omega_Lambda_today. The protocol therefore fails its
+prediction-completeness gate, without an empirical rejection of nesting.
+Future child formation, a threshold amplitude and baryon/photon asymmetry
+remain unresolved. The main argument follows this outward connection;
+the technical record preserves its mathematics, numerical results and
+attribution without promoting them to cosmological observations.
+
+## 1. One spatial seed, offset history and a generated geometry
+
+Douglas's proposal is that contrast and exchange organize approximately
+spherical regions, and that the construction can repeat within them.
+Time names the offset operation in this generating picture. A physical
+duration is a readout along the resulting history. The generated space
+has three spatial directions; a child is another region, not a fourth
+primitive spatial direction.
+
+The circle and sphere separate an inside from an outside. Isotropic
+positive surface energy at fixed volume selects a sphere by the
+isoperimetric inequality. Whether a particular gravitational region is
+selected by that variational problem must follow from its action. The
+present smooth horizon has no material tension. A material-shell branch
+is therefore retained separately in the technical atlas.
+
+The explicit generator is
+
+$$
+\theta_{n+1}=\theta_n+\alpha,\qquad
+\phi_{n+1}=\phi_n+\theta_n,
+$$
+
+with phases taken modulo one and zero initial phases. Hence theta_n=n alpha and
+phi_n=n(n-1)alpha/2 modulo one. One accumulator feeds the second; no
+independent second phase is supplied. For irrational alpha, Weyl's
+criterion proves the joint phase history is dense on the two-phase torus.
+This uses the classical polynomial equidistribution framework, attributed
+in the [generator proof](../docs/nsc-atlas-offset-generator.md).
+
+Set Theta=2pi theta, Phi=2pi phi and
+
+$$
+v_n=(\sin\Theta_n\cos\Phi_n,\sin\Theta_n\sin\Phi_n,
+\cos\Theta_n),\qquad C_{nm}=v_n\cdot v_m.
+$$
+
+For a retained interval, the declared distance kernel
+
+$$
+d^2[(r,n),(s,m)]=r^2+s^2-2rsC_{nm}
+$$
+
+has the closed three-dimensional ball as its metric completion. The
+positive-curvature version
+
+$$
+d=R\arccos\left[\cos(r/R)\cos(s/R)
++\sin(r/R)\sin(s/R)C_{nm}\right]
+$$
+
+generates the closed spatial parent. Memory, the distance law and
+completion are explicit assumptions. Finite drawings have zero volume
+before completion. The theorem constructs the proposed geometry under
+those rules; it does not select exactly two accumulators or a cosmic age.
+The [record](../results/summaries/nsc-atlas-offset-generator-v1.json)
+retains the proof and finite coverage controls (commit `099d8364`).
+
+![One seed and its offset history generate circular and spherical completions](figures/nsc-atlas-offset-generator.png)
+
+The inherited-law target is
+
+$$
+\mathcal{T}^*\mathbb{D}=\mathbb{D}.
+$$
+
+The same declared law survives the parent-to-child transformation. Spatial
+generation, a field continuing across an observer horizon and a newly
+formed child are distinct steps that this atlas seeks to connect.
+
+## 2. The smooth zero interface and its inherited source
+
+Use the convention **+ source/energy, 0 smooth horizon, - receiving/drain**.
+The sign of transfer fixes an orientation. It does not identify a
+negative-pressure vacuum, opposite particle charge or negative energy.
+A field zero, a null horizon and a conformal future boundary are defined
+by different equations and must be matched before being identified.
+
+The worked parent uses the existing Einstein/two-scalar action,
+
+$$
+\mathcal L=\frac{R}{2\kappa}
+-\frac{(\nabla S)^2}{2}-\frac{(\nabla\chi)^2}{2}-W,
+\qquad W=V(s)+\frac{\mu^2(s)\chi^2}{2},
+$$
+
+with $S=\sqrt{84}(s-s_*)$,
+
+$$
+V(s)=7e^{-12s}-7.5e^{-14s}+\frac{25}{32}e^{-24s},
+\qquad \mu^2(s)=400e^{-12s}.
+$$
+
+Its prepared real scalar contains the same two spatial harmonics, with
+eigenvalues 3 and 8, equal reference energy and zero initial velocity.
+The reference frequency 20, state amplitude epsilon and the background
+curvature remain declared inputs. The potential's minimum provides the
+historical background vacuum; returning it as a consequence of horizon
+transfer would leave the new outward question unanswered.
+
+The horizon is regular. In conformal null variables u=eta-chi and
+v=eta+chi it is v=pi/2. The inherited radial fields satisfy
+
+$$
+4\Psi_{uv}+\left[(m^2-2)\sec^2\eta+2\csc^2\chi\right]\Psi=0,
+\qquad m^2=\mu^2/H^2.
+$$
+
+There is no horizon denominator and no membrane stress. Two intersecting
+null traces inherited from the same global preparation fix the receiving
+field. The existing characteristic calculation continues across 0 without
+resetting the state (commit `480d4081`). That receiving region remains
+part of the same parent; a new child requires its own dynamical formation.
+
+## 3. One source, three connected crossing numbers
+
+The source's null stress gives a positive regional Killing-energy flux:
+
+$$
+\frac{dE_K}{dt}=-\epsilon^2\tanh(Ht)F_H(t),\qquad F_H\geq0.
+$$
+
+The history is the frozen two-mode state starting at the time-symmetric
+parent slice. The original comparison ends at the chosen 300-event
+readout t=4.364851930252. This event is not selected as today's age.
+
+| Existing result | Value | Meaning |
+| --- | --- | --- |
+| Crossed fraction | 88.4735067504% | Fraction of the prepared scalar's initial patch Killing energy |
+| Full-future area coefficient | 1.085638919782 epsilon squared | Normalized ordinary horizon-area growth |
+| Short-leg transfer | 2.219782587242 epsilon squared | Killing energy over the existing handoff leg, in model units |
+
+The area follows the null Einstein response about the supplied parent
+curvature. With the bounded-future condition, its physical-process law is
+
+$$
+H\Delta A_{\rm dyn}=\kappa E_{\rm out}.
+$$
+
+The 88.47% and area coefficient therefore encode the same conserved
+source. The short-leg 2.21978 is an energy, not an additional efficiency
+or a cosmological fraction. Its interval is t=4.364851930252 to
+4.797157936911. Gibbons--Hawking and
+[Zhao](https://arxiv.org/abs/2503.16138) supply the physical-process
+framework; the source normalization and finite-section correction are
+the atlas's calculation. The complete
+[flux/area/handoff derivation](../docs/nsc-atlas-parent-circulation.md)
+retains commits `4bb7f404`, `21ca0e30` and `480d4081` and their error domains.
+
+![The inherited source, horizon response and conserved transfer](figures/nsc-atlas-horizon-response.png)
+
+## 4. Pre-registered test: does the flow select today's vacuum fraction?
+
+<!-- nsc-claim:flow-vacuum-identifiability -->
+
+NSC-P006 freezes a single requested output before its calculation:
+
+$$
+\Omega_{\Lambda,0}=\frac{\kappa\rho_{\mathrm{vac},-}(e_0)}{3H_0^2},
+\qquad |\Omega_{\Lambda,0}-.685|\leq .007.
+$$
+
+The [protocol](../results/summaries/nsc-atlas-flow-omega-forecast-v1.json)
+was pushed as `057ecd9e`; its target was already public and supplied by
+Douglas. The benchmark is the rounded
+[Planck base-LambdaCDM inference](https://arxiv.org/abs/1807.06209),
+not a measurement independent of a background model. The new calculation
+excludes the supplied parent vacuum as the answer and forbids selecting
+a source, amplitude or epoch from that target.
+
+For every null k and constant c,
+
+$$
+(-c g_{\mu\nu})k^\mu k^\nu=0.
+$$
+
+Thus the null balance does not determine an additive vacuum term. Its
+area law contains the supplied curvature H. Changing the total vacuum
+requires a new Einstein solution; it cannot be inferred by relabelling
+the same source flux. Even a homogeneous receiving-fluid completion needs
+
+$$
+\dot\rho_-+3H_-(\rho_-+p_-)=q_-.
+$$
+
+An injection rate alone leaves the receiving pressure, volume evolution
+and initial density unselected. The conserved Killing flux must also be
+converted to proper injection per receiving volume. A vacuum equation of
+state cannot be inserted to make that conversion determine the answer.
+
+Nor does phi_n=n(n-1)alpha/2 select the missing history. The map is
+invertible; distinct increasing duration readouts t(n) leave its phases
+and completed geometry unchanged. It supplies no source occupation law,
+receiving vacuum dynamics or present cosmic event. The
+[evaluation](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json)
+therefore returns **Omega_Lambda_today unselected**, not zero.
+P006 fails its prediction-completeness condition. No empirical Planck
+pass or rejection is assigned. The [proof and short reproducible check](../docs/nsc-atlas-offset-thermodynamics.md)
+make the missing connection explicit: an action-selected receiving
+stress/expansion history, including the observer event.
+
+## 5. What actually continues across zero: pressure and the late tail
+
+<!-- nsc-claim:receiving-field-pressure -->
+
+The receiving field already exists beyond the smooth horizon. At the
+declared event t=5.278190092198, on the inherited maximum-transfer axis,
+its comoving tetrad gives
+
+$$
+\rho=\frac{\Pi^2+|D\chi|^2+\mu^2\chi^2}{2},\qquad
+p=\frac{\Pi^2-|D\chi|^2/3-\mu^2\chi^2}{2}.
+$$
+
+Here p is the isotropic trace part of the spatial stress, with directional
+stress and flux retained. The
+[calculated receiver](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json)
+has rho/epsilon²=.0624287161642, p/epsilon²=.0450251156252 and
+
+$$
+w_{-,\rm receiver}=.7212244363,\qquad w_- -(-1)=1.7212244363.
+$$
+
+The independent ambient-sphere gradient checks the null-coordinate
+conversion. A tighter source solve changes w by 2.42e-11. This is a
+conditional stress result at the existing apparatus event, not an
+observational value for today's cosmic w.
+
+The break question at the vanishing tail has a regular continuation.
+Use y=a^(3/2)chi rather than stopping at chi approaching zero. With
+nu_phys²+(3H/2)²=mu², the late phase average gives
+<Pi²>=mu²<chi²>. The consequences are
+
+$$
+\langle\rho_\chi\rangle\propto a^{-3},\qquad
+\langle p_\chi\rangle/\langle\rho_\chi\rangle\longrightarrow0,
+\qquad \langle|D\chi|^2\rangle\propto a^{-5}.
+$$
+
+The rescaled phase survives while local excitation density diminishes.
+The late averaged w differs from -1 by 1; instantaneous pressure still
+oscillates. The additional persistent vacuum term of this leading field
+is **Delta Lambda L_ref²=0**. This is background-subtracted and
+asymptotic. Total Lambda_eff L_ref² and Omega_Lambda_today remain
+unselected. A different inherited source could change that result, but
+would need its own derivation. A conformal continuation of the surviving
+state is distinct from proving a physical child across the future boundary.
+
+## 6. Finite amplitude: admissibility and the child criterion
+
+The inherited nonspherical initial state has h=a0² Psi^4 gamma, K_ij=0,
+s=s_star and zero scalar normal momenta. Its full constraint is
+
+$$
+-8\Delta\Psi+6\Psi-6\Psi^5
+-\kappa\epsilon^2\left(|Df|^2\Psi+zf^2\Psi^5\right)=0,
+\qquad z=\mu^2/H^2.
+$$
+
+The [finite-amplitude theorem](../docs/nsc-atlas-finite-parent-data.md)
+proves a smooth positive invariant solution exists for every
+0<=epsilon<=1 when z>33. The retained z=8329.074464994 satisfies that
+condition. The weighted equivariant argument adapts the
+Hebey--Vaugon compactness mechanism; its strict rational comparison is
+61/88<1. The [record](../results/summaries/nsc-atlas-finite-parent-data-v1.json)
+retains the proof, numerical construction and attribution (`f9d0d7d8`).
+The theorem does not assert uniqueness or future collapse.
+
+For any two-sided initial surface, the future null expansions obey
+
+$$
+\theta_+=H_{\rm surface},\qquad\theta_-=-H_{\rm surface},\qquad
+\theta_+\theta_-=-H_{\rm surface}^2\leq0.
+$$
+
+There is no initially strictly future-trapped surface at any amplitude
+in that interval. A minimal surface is bi-marginal. It is not an
+established child. Future trapping requires the evolved expansions to
+become negative on the same closed surface, followed by an admissible
+interior continuation. A change of coordinates cannot replace that test.
+
+The existing epsilon=1 nonlinear runs are **under-resolved, not used for
+claims**. They supply no converged threshold or child-formation result.
+The future answer is **not established**, rather than a claim that a
+child can never form. No amplitude, child vacuum or child-to-grandchild
+fixed point is reported. Horizon/GH/boson refinement remains frozen; an
+initial existence theorem is not extrapolated into a collapse theorem.
+
+## 7. Selection and the charge-resolved question
+
+| Quantity | Derived or supplied? |
+| --- | --- |
+| alpha=.0573586470504441 | Derived mode ratio within the supplied action and frequency normalization; its generator identification remains assumed |
+| n=100 | Chosen reporting count; not a selected present epoch |
+| omega0=20 | Supplied reference frequency |
+| Three spatial directions | Proved completion under the declared metric kernel and two accumulators; those rules are not uniquely selected |
+
+These freedoms are part of the construction's physical interpretation.
+None is adjusted to pass P006. The single receiving history still needed
+must connect the offset generator to conserved stress and an event that
+observers can identify without consulting the target fraction.
+
+Only after the vacuum evaluation do we ask about charge. The real
+two-scalar horizon sector has no charge-resolved bias. On the real sector
+of a complexified field,
+
+$$
+j_\mu=i(\chi^*\partial_\mu\chi-\chi\partial_\mu\chi^*)=0.
+$$
+
+Its signed charge flux is exactly0 on both sides. The characteristic
+symplectic Green current is not baryon number. With no baryon current or
+photon density, the model does not calculate a baryon/photon eta to test
+against 6.1e-10. The zero charge numerator does not become an observational
+eta by renaming the horizon. Charge-resolved fields, their inherited state
+and detector/thermal normalization are the required physical connection.
+
+## 8. The outward status and the preserved technical atlas
+
+| Requested quantity | Result | Test status |
+| --- | --- | --- |
+| Total Lambda_eff L_ref² | Unselected by the flow balance | No numerical comparison possible |
+| Additional persistent scalar vacuum term | 0 in the leading late-field domain | Does not supply the proposed vacuum reservoir |
+| Omega_Lambda_today | Unselected | P006 prediction-completeness condition fails; no empirical rejection |
+| Receiving w | .7212244363 at the specified event; late averaged limit 0 | Does not have vacuum form; not a present-day cosmological w test |
+| Future child and amplitude | Not established | Initial admissibility does not decide formation |
+| Charge-resolved crossing | 0 in the real sector | Baryon/photon eta remains uncalculated |
+
+The present mathematical contribution is a connected route from a
+specified generator through an admissible geometry to inherited field
+continuation and stress. The next cosmological connection is sharply
+defined by the failed P006 identification: derive the receiving stress
+and expansion history from that generator/action. The atlas's earlier
+cosmological fits, other actions, interfaces, force-scale constructions,
+observer predictions and numerical controls are preserved in Appendix A,
+with their original numbers and domains. They are evidence to build on,
+not substitutes for the missing vacuum identification.
+
+Appendix A also holds the frozen GH engine, conditioning, observer
+readouts, boson transport, dense history, Schur memory, kick/shear,
+epsilon=.25 controls and matter-work ledgers. Its opening summaries give
+the relevant commits. Appendix B retains evidence and reproduction;
+Appendix C indexes attributed arXiv sources. No code, test or result is
+removed by this manuscript reorganization.
+
+
+## Appendix A. Technical atlas and preserved mathematical record
+
+The main argument follows only the outward chain. This appendix preserves
+the full earlier technical chapters, their equations, tables, evidence and
+claim markers. Section identifiers are remapped; scientific values are
+unchanged. The following one-paragraph summaries locate the frozen engines
+and controls. Their underlying records remain available in full below and
+in the linked owners. No numerical campaign is resumed by this move.
+
+### A.1. GH evolution engine
+
+The compact nonspherical Einstein/two-scalar GH implementation, exact frame
+derivatives, constraint diagnostics and local operator controls remain
+as implemented in `17098b3c`. It evolves the declared action; its existence
+does not select a cosmic preparation or prove a child. The full technical
+development and [owner](../docs/nsc-atlas-parent-gh.md) are retained below.
+
+### A.2. Conditioning
+
+Metric-dependent lapse feedback and the proper-duration comparisons in
+`487a0b1f` control coordinate conditioning without adding physical stress.
+They remove an imposed coordinate-time ceiling, not an invariant
+singularity or a missing vacuum law. The original equations and evidence
+are retained in the [GH owner](../docs/nsc-atlas-parent-gh.md).
+
+### A.3. Observer readouts
+
+The proper-clock, phase and local stress readouts in `487a0b1f` and
+`2ed1aea0` distinguish lapse/shift coordinates from receiver measurements.
+Their finite apparatus protocols and supplied initial state are preserved.
+They do not identify the receiver event with today's cosmological epoch;
+the [comparison](../results/summaries/nsc-atlas-gh-comparison-v1.json)
+retains the numerical values and limitations.
+
+### A.4. Boson transport
+
+The canonical projection and symplectic matter-probe transport in
+`771c5a78`, `292eb146` and `61124309` propagate perturbations on the supplied
+parent geometry. Reference response norms are not energy fractions;
+incoming covariance and omitted metric fluctuations remain explicit.
+The [boson owner](../docs/nsc-atlas-boson-transport.md) and full original
+section retain the finite projections, state assumptions and records.
+
+### A.5. Dense history
+
+The retained DOP853 dense-polynomial history in `771c5a78` supplies
+source-compatible metric/field samples for probe evolution without
+replacing the nonlinear solution by sparse interpolation or extrapolation.
+The [history record](../results/summaries/nsc-atlas-gh-history-v1.json)
+keeps its producer and regeneration route. This computational representation
+does not add a new source history or a physical epoch-selection rule.
+
+### A.6. Schur memory
+
+The retarded finite-sector reduction in `61124309` derives the memory
+kernel from the same canonical block evolution. Its noise requires an
+incoming covariance, and initial cross-correlations remain physical data.
+A memory kernel alone is not a vacuum stress. The [owner](../docs/nsc-atlas-boson-transport.md)
+and retained equations below preserve that distinction and the original
+numbers; no additional orders or precision are requested here.
+
+### A.7. Kick and shear
+
+The York-constrained momentum preparations and amplitude-independent
+shear/internal-coupling relation in `b69dda73` remain finite conditional
+results. Their source profiles, zero freely supplied transverse-traceless
+datum and vacuum-reference curvature are explicit assumptions. The
+[kick owner](../docs/nsc-atlas-gravitating-kick.md) preserves the full
+derivation and tests. They do not select a present vacuum fraction or
+replace the missing receiving stress history.
+
+### A.8. Epsilon=.25 controls
+
+The three-resolution control in `2ed1aea0` preserves the original
+nonspherical preparation and fixed proper endpoint, with decreasing
+constraint and adjacent readout differences. Its spreads are empirical
+indicators, not certified physical errors. The [saved comparison](../results/summaries/nsc-atlas-gh-comparison-v1.json)
+is retained below unchanged. The separate epsilon=1 nonlinear runs are
+**under-resolved, not used for claims**; they establish no trapped threshold.
+
+### A.9. Matter-work ledgers
+
+The perturbative balance in `6561d8cf`, passive nonlinear ledger in
+`e6f34eb7`, and finite controls in `2ed1aea0` retain pressure, geometry,
+measure and boundary contributions rather than identifying energy loss
+with vacuum production. Their residuals remain numerical controls in
+the [coupled-response](../docs/nsc-atlas-parent-backreaction.md) and
+[GH](../docs/nsc-atlas-parent-gh.md) owners. All original numbers and
+limitations are preserved in the technical sections that follow.
+
+### A.10. Earlier full technical abstract
 
 NSC proposes a geometric account of the world seen from inside a region.
 Its organizing hypothesis is that approximately spherical, sourced regions
@@ -89,11 +559,11 @@ joint observational tests. The absolute vacuum scale, early thermal history,
 matter asymmetry and a geometry-based derivation of quantum probabilities
 remain explicit parts of that programme.
 
-## I. Spherical geometry and inherited law
+### A.11. I. Spherical geometry and inherited law
 
 Geometry is the organizing object. This part states the spherical hypothesis, proves the declared operator forms of inheritance, and determines what survives when unresolved regions are eliminated. The physical measure and state enter alongside the operator: they fix the energy and pressure that a local response can represent.
 
-### 1. The central geometric proposal and the route through the atlas
+### A.12. The central geometric proposal and the route through the atlas
 
 The central proposal of this book is that the physical world accessible
 inside a region can be the local expression of a larger nested geometry.
@@ -176,7 +646,7 @@ show the regional hypothesis; their spacing does not specify a global
 embedding or scale. The [figure record](figures/geometry-overview.json)
 identifies the evidence for each connection.*
 
-### 1.1. The proposed generator: contrast, circulation and continuation
+### A.13. The proposed generator: contrast, circulation and continuation
 
 Douglas's proposed picture starts with a region and its surroundings.
 Their contrast supports structure; compression concentrates it; circulation
@@ -198,8 +668,7 @@ derive why updates occur.
 The current parent is described by **three generated spatial directions
 with offset-parametrized evolution**. Covariant formulas package one offset
 argument and three spatial arguments. Proper duration is a readout along
-that history, rather than a fourth primitive spatial direction. Section
-1.2 gives the construction and its explicit completion assumptions.
+that history, rather than a fourth primitive spatial direction. Section A.14 gives the construction and its explicit completion assumptions.
 
 The atlas makes the mechanism calculable through defined objects:
 
@@ -221,7 +690,7 @@ are distinct sectors until their matching is supplied. A one-coordinate
 generating description can organize a new three-dimensional region;
 its physical birth still needs a sourced transition.*
 
-The new calculations in Sections 16.7.1--16.7.3 advance this route beyond
+The new calculations in Sections A.134--A.136 advance this route beyond
 an initial derivative. The finite circulation develops with a checked
 energy account. The boundary-work relation then gives
 
@@ -241,7 +710,7 @@ in the library or cited in the main argument is indexed. An indexed source
 is not automatically a compatible piece of the same action; its recorded
 reading boundary and the required mathematical connection remain visible.
 
-### 1.2. One spatial seed and an accumulated offset generate a space
+### A.14. One spatial seed and an accumulated offset generate a space
 
 <!-- nsc-claim:offset-metric-completion -->
 
@@ -345,7 +814,7 @@ physical duration still require a state and dynamical law. Further offset
 accumulators can also be constructed, so a physical selection of exactly
 three dimensions followed by nesting remains to be derived.
 
-### 1.3. The generated space supports a sourced physical readout
+### A.15. The generated space supports a sourced physical readout
 
 <!-- nsc-claim:offset-parent-field -->
 
@@ -375,11 +844,11 @@ The global constraints matter. The scalar's energy requires a conformal
 correction of the initial metric; the explicit correction and a
 symmetry-restricted implicit-function argument give compatible initial
 data for sufficiently small amplitude. This source has zero total rotation
-yet develops regional circulation. Section 15.13 follows it to a nonzero
+yet develops regional circulation. Section A.116 follows it to a nonzero
 light record and an energy flux across the smooth observer horizon.
-Section 15.14 calculates the resulting area response and a monotone
+Section A.117 calculates the resulting area response and a monotone
 geometric record of that transfer.
-Section 15.15 carries the signed field into an exterior receiving region,
+Section A.118 carries the signed field into an exterior receiving region,
 using two null traces inherited from the same global parent state.
 
 An unwrapped scalar phase can parametrize this evolution monotonically;
@@ -390,7 +859,7 @@ ultimate origin of time. The [evidence](../results/summaries/nsc-atlas-parent-ci
 separates the geometric construction, canonical propagation, chosen state
 and measured response.
 
-### 2. Why begin with the sphere? Energy, relaxation and inheritance
+### A.16. Why begin with the sphere? Energy, relaxation and inheritance
 
 The sphere is the starting geometry because isotropic surface energy has
 an exact minimizer. In Euclidean three-space, area $A$ and enclosed volume $V$
@@ -403,7 +872,7 @@ $$
 Equality selects a ball, up to its position and size. For constant positive
 surface tension $\gamma$, the energy $E_{\rm surface}=\gamma A$ is minimized
 by a sphere at fixed $V$. The isotropic case and its anisotropic Wulff
-generalization are stated in [Neumayer, Section 1.1](https://arxiv.org/html/1503.06705v2).
+generalization are stated in [Neumayer, Section A.13](https://arxiv.org/html/1503.06705v2).
 This is the precise energetic basis for the spherical organizing idea.
 
 A simple relaxation model also displays the direction of change. Let $h$ be
@@ -465,7 +934,7 @@ regions in one parent generally require a nonspherical parent even when
 each local interface has a spherical approximation. The next constructions
 specify which geometry is used at each level.
 
-### 3. The same argument across operator, spacetime and observer descriptions
+### A.17. The same argument across operator, spacetime and observer descriptions
 
 The inherited relation, the physical geometry and the interior response
 are three stages of one programme. The first supplies a precise law to
@@ -491,7 +960,7 @@ interior observer can measure. The source of expansion, the supply of
 localized structure and the meaning of a quantum mode are all pursued
 through that same sequence.
 
-### 4. Four arrows that must not be confused
+### A.18. Four arrows that must not be confused
 
 Each region in the atlas carries a geometry, source or state, clock
 convention, dimensionless parameters and validity domain. Each connection
@@ -520,7 +989,7 @@ entries. A state's coupling distribution is not itself a signal exchanged
 between its branches. Their source cards and unresolved connections are
 recorded in the [mathematical library](../docs/arxiv-studies.md).
 
-### 5. A precise finite inheritance construction
+### A.19. A precise finite inheritance construction
 
 <!-- nsc-claim:finite-normalized-inheritance -->
 
@@ -588,7 +1057,7 @@ scaling relation. Its spacetime geometry, physical scale ratios and
 observer resolution remain calculation targets in the
 [atlas programme](../docs/nsc-cosmological-atlas.md#working-geometric-hypothesis-inheritance-through-resolution).
 
-### 5.1. An infinite inherited law with a controlled local response
+### A.20. An infinite inherited law with a controlled local response
 
 Take a rooted tree with $b\geq2$ children per vertex, an inherited
 positive Hermitian $d\times d$ matrix $H$, link $B$, and $\Omega>1$.
@@ -697,7 +1166,7 @@ They support the calculator; the infinite result follows from the proof.
 A metric-dependent action and physical source identification remain
 needed to connect this response to cosmological Lambda.
 
-### 5.2. Physical measure, pressure and a measurable nesting ratio
+### A.21. Physical measure, pressure and a measurable nesting ratio
 
 An inherited canonical operator does not alone specify the physical measure.
 For an explicit three-dimensional lift, give each depth-$n$ edge length
@@ -711,7 +1180,7 @@ H=\frac{A(b+q^{-1})}{Lm_0},\quad
 B=-\frac{A}{Lm_0q^{3/2}},\quad\Omega=q^{-2}.
 $$
 
-The positive margin is $A(\sqrt{b}-q^{-1/2})^2/(Lm_0)$, so Section 5.1
+The positive margin is $A(\sqrt{b}-q^{-1/2})^2/(Lm_0)$, so Section A.20
 applies for $bq\ne1$. Its physical static root compliance is
 
 $$
@@ -794,7 +1263,7 @@ predictions of the stated geometric action, with no observational
 calibration. A compatible cap--wall/parent metric and its gravitational
 source remain necessary for a cosmological Lambda prediction.
 
-### 5.3. A response shape that recovers the nesting ratio
+### A.22. A response shape that recovers the nesting ratio
 
 <!-- nsc-claim:scale-free-inherited-response -->
 
@@ -857,7 +1326,7 @@ still to be established. The [compact calculation and source hashes](../results/
 retain these exact model examples alongside the separately scoped atlas
 composition below.
 
-### 6. What an unresolved surrounding region can leave locally
+### A.23. What an unresolved surrounding region can leave locally
 
 Split a specified operator into retained and complementary blocks $A,D$
 with link $B$. For an admissible complex spectral parameter $z$, elimination
@@ -879,11 +1348,11 @@ $$
 The factor $1/\Omega$ is essential. This is borrowed finite linear
 algebra applied to the declared family, not an additional force law.
 To interpret $\Sigma$ as a cosmological exterior response requires a
-physical operator, field state and boundary map. Sections A.24–A.25 give a separate
+physical operator, field state and boundary map. Sections A.194–A.25 give a separate
 finite Hilbert-space realization of this reduction, without identifying its
 complementary modes with a cosmological exterior.
 
-### 6.1. The local effective Lambda target
+### A.24. The local effective Lambda target
 
 <!-- nsc-claim:target-local-effective-lambda -->
 
@@ -899,11 +1368,11 @@ the reduction; it does not yet provide a measured cosmological value.
 The [Schur-memory owner](../docs/schur-memory.md) keeps this target and
 its retained spectral and geometric dictionary.
 
-## II. Physical regions, interfaces and causal access
+### A.25. II. Physical regions, interfaces and causal access
 
 A nested drawing becomes a spacetime through its sources and junctions. The constructions in this part assemble regular centres, material interfaces, shared parents and named observers. They show both successful attachments and precise exclusions. Causal access is established before a boundary or remote region is used as a source for an observer.
 
-### 7. Start with two holes, without manufacturing two children
+### A.26. Start with two holes, without manufacturing two children
 
 The explicit parent benchmark uses time-symmetric Brill–Lindquist vacuum
 initial data,
@@ -940,7 +1409,7 @@ allows appropriate non-time-symmetric ends. These establish separate
 families, not a modification that leaves the displayed Brill–Lindquist
 data unchanged. No explicit sufficient separation is certified here.
 
-### 8. A failed attachment can sharpen the map
+### A.27. A failed attachment can sharpen the map
 
 <!-- nsc-claim:atlas-junction-screen -->
 
@@ -976,7 +1445,7 @@ This is a compatibility application of an established conservation law.
 Allowing a different surface source, exterior state or flux would define
 a different candidate requiring its own test.
 
-### 9. A distinct fixed-source wall that does connect
+### A.28. A distinct fixed-source wall that does connect
 
 For the next branch, take de Sitter inside and Schwarzschild outside,
 
@@ -1012,9 +1481,9 @@ $0.3718706103\ell$. Direct unsquared and pressure checks, including a
 separate Christoffel-based calculation, agree within the recorded numerical
 residuals. The wall's areal-radius rate is not a local three-speed.
 This published wall family is classified more fully in
-Section 11; the source has not been retuned to make the segment work.
+Section A.44; the source has not been retuned to make the segment work.
 
-### 10. A sourced initial slice and a conditional common parent
+### A.29. A sourced initial slice and a conditional common parent
 
 <!-- nsc-claim:atlas-sourced-slice -->
 
@@ -1101,7 +1570,7 @@ explicit multi-body development has been calculated. The achievement is a
 compatible sourced initial connection, not a regular formation history,
 a general Einstein–shell evolution theorem or a stable cosmological future.
 
-### 10.1. Two unequal sourced children in the same theory
+### A.30. Two unequal sourced children in the same theory
 
 <!-- nsc-claim:atlas-unequal-sourced-inputs -->
 
@@ -1134,7 +1603,7 @@ separation threshold, uniform evolution interval, evaluated connector or
 general uniqueness theorem for matter shells. Their observer clocks and
 the cosmological reduction still need that geometry.
 
-### 10.2. A retained grandchild and an explicit second boundary
+### A.31. A retained grandchild and an explicit second boundary
 
 <!-- nsc-claim:atlas-nested-slice -->
 
@@ -1200,7 +1669,7 @@ Independent warped-curvature algebra gives $R_{\mu\nu}=3H^2g_{\mu\nu}$;
 the radial determinant is $-1$. Finite local charts do not identify
 different cosmological regions or remove the $R=0$ singularity.
 The single Killing time has $T_l=V/f$ and future normal
-$N^T=R'/f$, negative on the left static branch. Section 10.5 now matches
+$N^T=R'/f$, negative on the left static branch. Section A.34 now matches
 both finite worldtube segments to this same initial slice using regular
 overlapping coordinates; a static time alone does not cover the host.
 
@@ -1212,7 +1681,7 @@ giving a conditional initial-data family with two unequal sourced children
 and a retained grandchild. This establishes finite initial-data composition,
 not unlimited generations, formation, stability or inherited detector states.
 
-### 10.3. A central proper-clock and frequency observation
+### A.32. A central proper-clock and frequency observation
 
 <!-- nsc-claim:atlas-nested-flash -->
 
@@ -1250,7 +1719,7 @@ scale are explicit inputs. The result supplies a conditional measurable
 relation, not an observation of this emitter or an outer-wall signal
 through the host bridge.
 
-### 10.4. Radar and a wall clock recover a physical junction
+### A.33. Radar and a wall clock recover a physical junction
 
 <!-- nsc-claim:atlas-radar-clock-inverse -->
 
@@ -1352,11 +1821,11 @@ bind the source bytes and independent controls. The next section supplies
 a finite two-wall host history. A collective parent and the physical
 origin of the cap scale remain separate work.
 
-### 10.5. Both walls in one host history
+### A.34. Both walls in one host history
 
 <!-- nsc-claim:atlas-two-wall-history -->
 
-Continue the two walls of Section 10.2 through $0\leq\tau_i/\ell\leq.04$,
+Continue the two walls of Section A.31 through $0\leq\tau_i/\ell\leq.04$,
 retaining all three regional metrics, the common tension and the original
 slicing functions. Each $\tau_i=0$ is its own intersection with that
 initial slice. Equal elapsed wall proper times do not define simultaneous
@@ -1372,7 +1841,7 @@ p_l=\frac{1}{R'-V},\qquad q_l=-\frac{1}{R'+V}.
 $$
 
 The second expression stays regular through the right cosmological
-horizon. At the host black-hole root $r_b$, the Lake chart of Section 10.2
+horizon. At the host black-hole root $r_b$, the Lake chart of Section A.31
 uses $q=-\log(|u|/\ell)/\kappa_b$ and
 $R=r_b+\kappa_buw$, where $\kappa_b=f'(r_b)/2$.
 Signed bridge coordinate $R=r_b+y^2$ gives leading terms $u=a y$ and
@@ -1446,11 +1915,11 @@ The [shared-history derivation](../docs/nsc-atlas-connection-slice.md#a-shared-t
 and [compact calculation](../results/summaries/nsc-atlas-two-wall-history-v1.json)
 retain the common chart convention, signed normalization and finite
 comparison indicators. The history locates the next field-transfer
-problem. Section 10.6 supplies a transported averaging foliation and its
+problem. Section A.35 supplies a transported averaging foliation and its
 moving-wall crossings. Neither connection supplies a new field state,
 formation mechanism or origin of the regional vacuum values.
 
-### 10.6. The shared parent evolves into a calculable effective source
+### A.35. The shared parent evolves into a calculable effective source
 
 <!-- nsc-claim:atlas-parent-normal-evolution -->
 
@@ -1463,7 +1932,7 @@ walls and both bridge minima. Its outer boundary follows the original
 $R=4\ell$ normal ray. This is a declared averaging clock on the same
 quiet spacetime, with unchanged masses, regional curvatures and membrane
 law. It provides the previously missing physical history for the
-composition and source-balance equations in Section 17.12.
+composition and source-balance equations in Section A.162.
 
 In a smooth regional chart write
 $ds^2=-dt^2+A^2dx^2+R^2d\Omega^2$, with $x$ the initial proper-distance
@@ -1595,7 +2064,7 @@ a physically determined nonzero regional volume fraction and compatible
 connector/history, followed by its observer light cone. The cap curvature
 has not been derived by recovering its supplied value.
 
-### 10.7. A compact parent and the limits of its global average
+### A.36. A compact parent and the limits of its global average
 
 <!-- nsc-claim:atlas-compact-parent -->
 
@@ -1648,13 +2117,13 @@ right-side descendant. Dashed lines are physical membranes. The radius
 is plotted against proper distance, so these are intrinsic profiles rather
 than Euclidean embeddings or causal diagrams.*
 
-The normal evolution of Section 10.6 commutes with reflection. Its
+The normal evolution of Section A.35 commutes with reflection. Its
 positive Jacobi scale and radius bounds apply to each half through
 $0\leq t/\ell\leq.01$. Each half contributes its seven moments and
 its physical wall atoms once. The common throat has no surface source.
 For the symmetric double, extensive moments double and all means stay
 unchanged. Different halves require the between-region expansion
-variance from Section 17.12.
+variance from Section A.162.
 
 Thus the proper-volume fraction $f_H$ of regions with $H\ell=1$ follows
 from the geometry and its evolution. At $t/\ell=.01$,
@@ -1758,7 +2227,7 @@ are complete on the stated finite domain. A source-derived regular
 continuation, cosmological observer history and the origin of the
 regional vacuum values remain the next physical questions.
 
-### 10.8. The nested body in an expanding parent
+### A.37. The nested body in an expanding parent
 
 <!-- nsc-claim:atlas-cosmological-parent -->
 
@@ -1771,7 +2240,7 @@ isolated and compact constructions above supply two completions of the
 same nested body. A third now attaches its right Schwarzschild exterior
 to an expanding dust universe. The new join has no material membrane.
 Its geometry is borrowed from Einstein and Straus; the matching formulas
-are presented in [Mars, Mena and Vera, Section 2](https://arxiv.org/html/1307.4371#S2).
+are presented in [Mars, Mena and Vera, Section A.16](https://arxiv.org/html/1307.4371#S2).
 The connection here is to the already sourced NSC interior and its
 observer map.
 
@@ -1859,7 +2328,7 @@ The curves are regenerated from the stated equations. Panels A and C
 belong to the current three-spatial-direction parent family; B and D have different
 five-dimensional backgrounds and have not been combined into one model.*
 
-### 10.9. Two explicit ways surrounding geometry enters local gravity
+### A.38. Two explicit ways surrounding geometry enters local gravity
 
 <!-- nsc-claim:surrounding-bulk-reference -->
 
@@ -1967,7 +2436,7 @@ density fraction. A stabilized radion or a different background
 requires a new response calculation. In particular, these flat-brane
 perturbations have not been grafted onto the detuned de Sitter example.
 
-### 10.10. Can the enclosing wall select the cap curvature?
+### A.39. Can the enclosing wall select the cap curvature?
 
 <!-- nsc-claim:wall-equilibrium-closure -->
 
@@ -2065,13 +2534,13 @@ new material law for us.
 
 The classic [Morris--Thorne construction](https://doi.org/10.1119/1.15620)
 already relates traversable throats to negative radial null stress.
-Section 10.7 applies a related Einstein-equation condition at the
+Section A.36 applies a related Einstein-equation condition at the
 specified dynamical turn; it makes no priority claim for that
 requirement. [Easson and Brandenberger](https://arxiv.org/abs/hep-th/0103019)
 likewise belongs in the black-hole-interior cosmology family. Each
 construction contributes its established mechanism with its premises.
 
-### 10.11. The source law behind a growing mass
+### A.40. The source law behind a growing mass
 
 <!-- nsc-claim:population-source-balance -->
 
@@ -2115,7 +2584,7 @@ connection, an observable clock relation, useful external mechanisms
 and a decided equilibrium question. It does not yet predict the
 cosmological density fractions or matter--antimatter asymmetry.
 
-### 10.12. Sourced rooms from an occupied wall spectrum
+### A.41. Sourced rooms from an occupied wall spectrum
 
 <!-- nsc-claim:occupied-wall-source -->
 
@@ -2123,7 +2592,7 @@ Derivation and calculation: [state, stress and signed geometry](../docs/nsc-atla
 [finite calculation](../results/summaries/nsc-atlas-occupied-wall-v1.json)
 and [independent controls](../tests/test_nsc_atlas_occupied_wall.py).
 
-The equilibrium question in Section 10.10 asks for a material law.
+The equilibrium question in Section A.39 asks for a material law.
 A finite occupied field supplies one: its energy changes when the
 surface changes, and that derivative determines pressure. This connects
 the geometric spectrum to a gravitational source before a wall potential
@@ -2291,7 +2760,7 @@ The last column also compares the radial mode to the adjacent surface
 level spacing $c/R$. A detector interaction and selection rules are
 needed before identifying that spacing with an observed spectral line.
 
-### 10.13. Two physical interiors, one parent, and a central beacon
+### A.42. Two physical interiors, one parent, and a central beacon
 
 <!-- nsc-claim:occupied-wall-parent-clocks -->
 
@@ -2383,7 +2852,7 @@ and a collective source law remain physical questions. No cosmic
 density fraction or matter--antimatter asymmetry is inferred from
 this finite state-to-observer proof.
 
-### 10.14. Energy, frequencies and a moving radius
+### A.43. Energy, frequencies and a moving radius
 
 <!-- nsc-claim:energy-frequency-radius -->
 
@@ -2482,7 +2951,7 @@ clock map. The proposed energy-size picture therefore yields precise
 relations and tests, while its depletion, thermal preparation and
 large-scale observation mechanisms remain to be constructed.
 
-### 11. Complete one reference before assigning its causal arrows
+### A.44. Complete one reference before assigning its causal arrows
 
 <!-- nsc-claim:atlas-causal-access -->
 
@@ -2569,7 +3038,7 @@ everywhere. The central observer's de Sitter horizon $\eta+r=0$
 is a different boundary. Detailed clock domains and finite checks are
 retained in the [observer note](../docs/nsc-atlas-causal-observers.md).
 
-### 12. Different exteriors can be locally indistinguishable
+### A.45. Different exteriors can be locally indistinguishable
 
 There is also a result that does not require the glued parent's full future.
 Retain the exact right Schwarzschild $K=0$ slice for
@@ -2605,15 +3074,15 @@ question is which later measurement or extra state datum separates them.
 Failure to distinguish exteriors can be a result, rather than a reason to
 add unconstrained parameters until a preferred story appears.
 
-## III. One field law from parent vacuum to evolving matter
+### A.46. III. One field law from parent vacuum to evolving matter
 
 This is the central source history of the atlas. A charged membrane changes four-form flux; a coupled scalar carries the resulting vacuum floor and excitation. The calculation follows that action through regular preparation, real parent sources, a three-region constrained slice and a protected evolving cosmology. Density growth and the remaining state freedom emerge from the same equations. The conditional initial data are stated once in each construction and carried through its consequences.
 
-### 13. The shared source and its cosmological domain
+### A.47. The shared source and its cosmological domain
 
 The following sections give the worked constructions and their attributed mathematical inputs.
 
-### 13.1. A field law that changes the inherited vacuum
+### A.48. A field law that changes the inherited vacuum
 
 <!-- nsc-claim:charged-vacuum-inheritance -->
 
@@ -2699,7 +3168,7 @@ The signs are retained after using this potential. Given the inner mass
 and initial radius/speed, the unsquared equation fixes the outer mass.
 That same mass becomes the next wall's inner mass.
 
-### 13.2. Three vacuum regions in one evolving cosmology
+### A.49. Three vacuum regions in one evolving cosmology
 
 <!-- nsc-claim:charged-shared-parent -->
 
@@ -2791,7 +3260,7 @@ nucleation. Selecting a formation history and flux sector, with reheating
 and observable consequences, is next; refining these trajectories would
 not select the cosmological scale.
 
-### 13.3. Preparing the scalar, membrane and geometry together
+### A.50. Preparing the scalar, membrane and geometry together
 
 <!-- nsc-claim:scalar-gravity-preparation -->
 
@@ -2837,7 +3306,7 @@ regular gravitational preparation in the
 with the continuation described by
 [Dong--Harlow, Sections 2.1--2.2](https://arxiv.org/html/1109.0011).
 Combined scalar, membrane and gravity preparations also appear in
-[Bandos, Blanco-Pillado, Sousa and Urkiola, Section 5](https://arxiv.org/html/2306.09412).
+[Bandos, Blanco-Pillado, Sousa and Urkiola, Section A.19](https://arxiv.org/html/2306.09412).
 Their field-dependent membrane coupling gives a scalar derivative jump;
 our constant-tension example retains a continuous normal derivative.
 Each cap has a pole-to-wall coordinate $\xi_j$,
@@ -2899,7 +3368,7 @@ together with the membrane. Both field value and common-normal derivative
 are continuous. The right panel shows the continued timelike boundary.
 Lengths and field values use the declared normalized variables.*
 
-### 13.4. Physical boundary reduction and the prepared child
+### A.51. Physical boundary reduction and the prepared child
 
 <!-- nsc-claim:scalar-preparation-schur -->
 
@@ -2980,7 +3449,7 @@ preparation is needed if substantial child matter is claimed. Absolute
 vacuum scale, black-hole collapse formation and infinite physical nesting
 remain separate questions.
 
-### 13.5. Real parent sources and received energy
+### A.52. Real parent sources and received energy
 
 <!-- nsc-claim:prepared-parent-transport -->
 
@@ -3072,7 +3541,7 @@ Direct integration of the child trajectory agrees with the closed
 inverse within $7\times10^{-14}L_{\rm ref}/c$. Two background
 tolerances change the primary arrival by $1.06\times10^{-11}$ and
 its energy ratio by $8.74\times10^{-13}$. These are numerical checks,
-not observational errors. Section 13.4's two de Sitter comparison
+not observational errors. Section A.51's two de Sitter comparison
 metrics bracket the residual homogeneous-background correction; they
 do not bound backreaction from a new material population.
 
@@ -3103,7 +3572,7 @@ interface equations. Population normalization and the physical ruler
 remain inputs to be supplied. The present result makes the geometric
 part of that future source-to-observer calculation explicit.
 
-### 13.6. A finite parent source with its gravitational response
+### A.53. A finite parent source with its gravitational response
 
 <!-- nsc-claim:finite-parent-scalar-source -->
 
@@ -3111,7 +3580,7 @@ Derivation and calculation: [source, constraint and matching derivation](../docs
 [finite preparations and independent checks](../results/summaries/nsc-atlas-parent-source-v1.json).
 
 The next preparation includes the source's gravity. Retain the action,
-charges and tension of Section 13.3, and prescribe a finite compact
+charges and tension of Section A.50, and prescribe a finite compact
 scalar displacement in the parent. On the initial slice, the spatial
 extrinsic curvature and scalar momentum vanish. This is a time-symmetric
 packet, not a purely incoming wave. Its prior formation history is supplied
@@ -3121,7 +3590,7 @@ Let $h_0$ and $\phi_0$ denote the regular reference data. Solve
 $h=\Psi^4h_0$ with $\phi=\phi_0+f+g$, where $f$ is the specified
 parent packet and $g$ is a small wall-layer correction. The scalar
 Hamiltonian constraint and conformal curvature identity, as in
-[Choquet-Bruhat, Isenberg and Pollack, Section 2](https://arxiv.org/html/gr-qc/0610045), give
+[Choquet-Bruhat, Isenberg and Pollack, Section A.16](https://arxiv.org/html/gr-qc/0610045), give
 
 $$
 \Delta_0\Psi=
@@ -3230,7 +3699,7 @@ open. The bulk vacuum values are unchanged. The next connected problem
 is the evolution of these data and the energy delivered through their
 moving boundary, followed by the stress required for clustering.
 
-### 13.7. A conditional inward pulse from the excited parent
+### A.54. A conditional inward pulse from the excited parent
 
 <!-- nsc-claim:parent-inward-transfer-limit -->
 
@@ -3318,10 +3787,10 @@ before proper time $2.07981585635L_{\rm ref}/c$, obtained from its
 de Sitter domain of dependence. This is a causal front time, not a
 detector threshold or received waveform. The next step is a coupled
 causal development that tests the nonzero transfer and pressure relation
-at finite times. The smooth source of Section 13.6 remains a distinct
+at finite times. The smooth source of Section A.53 remains a distinct
 preparation control, not a compulsory gate on this weak-corner route.
 
-### 13.8. A one-sided geometric observer and the full mass balance
+### A.55. A one-sided geometric observer and the full mass balance
 
 <!-- nsc-claim:geometric-wall-observer -->
 
@@ -3430,7 +3899,7 @@ Rainich theorem, a globally reconstructed parent or an empirically selected
 cosmology. They supply finite-time diagnostics for the coupled evolution
 that remains to be constructed.
 
-### 13.9. What an additional inherited region can identify
+### A.56. What an additional inherited region can identify
 
 <!-- nsc-claim:one-wall-inheritance-ambiguity -->
 
@@ -3504,12 +3973,12 @@ third region exists, or that these regions can all be observed in a
 common normalization. The following construction supplies the third
 initial region and a protected evolving parent domain.
 
-### 13.10. Three sourced regions on one compact initial slice
+### A.57. Three sourced regions on one compact initial slice
 
 <!-- nsc-claim:shared-scalar-initial-atlas -->
 
 The previous ambiguity can now be tested on a physical third initial
-region. Keep the scalar/four-form action of Section 13.3, with
+region. Keep the scalar/four-form action of Section A.50, with
 $\kappa=1$, $\epsilon=1/4$, $\omega=20$, $e=1/2$, $\sigma=1/5$
 and zero bare density. Inside outward, use fluxes $(1/2,1,3/2)$ and
 one uniform initial field $\phi_0=-\sqrt{3}/80$, at the grandchild
@@ -3556,7 +4025,7 @@ $-4[\beta]/R=2\kappa\sigma$, and the continuous $L_\theta$ gives
 zero surface momentum. Both caps close at regular poles, producing
 a compact S3 slice of proper length 20.393422999807. This uses the
 standard Einstein-scalar constraints of Choquet-Bruhat, Isenberg and
-Pollack (Section 2), together with the material Israel conditions;
+Pollack (Section A.16), together with the material Israel conditions;
 their smooth theorem is not a shell-evolution theorem.
 
 The temporal jump is also retained. The pressure relation fixes
@@ -3574,7 +4043,7 @@ proof are in the [shared-slice owner](../docs/nsc-atlas-shared-scalar-slice.md).
 
 The one-sided observer formula at each wall recovers the common field.
 After subtracting the excitation, the three ground values are those
-of candidate A. More strongly, candidate B from Section 13.9 obeys,
+of candidate A. More strongly, candidate B from Section A.56 obeys,
 for every integer sector and every real canonical scalar state,
 
 $$
@@ -3597,7 +4066,7 @@ composition is now explicit; a full weak future remains open. The
 [constraint and sector record](../results/summaries/nsc-atlas-shared-scalar-slice-v1.json)
 contains the independent checks and exact parameters.
 
-### 13.11. Cosmology in the protected parent domain
+### A.58. Cosmology in the protected parent domain
 
 <!-- nsc-claim:protected-parent-cosmology -->
 
@@ -3682,7 +4151,7 @@ The following calculation tests scalar and metric perturbation growth
 on this evolving domain. Its observer transfer and physical scale
 remain further connections, while the full wall problem stays explicit.
 
-### 13.12. A constrained parent perturbation that grows
+### A.59. A constrained parent perturbation that grows
 
 <!-- nsc-claim:inherited-parent-structure -->
 
@@ -3787,7 +4256,7 @@ from a uniform error bound or physical state uncertainty. The
 [compact evidence](../results/summaries/nsc-atlas-parent-perturbations-v1.json)
 retains the constraints, state, comparisons and producer hashes.
 
-### 13.13. Inheritance must also supply the structure scale
+### A.60. Inheritance must also supply the structure scale
 
 <!-- nsc-claim:inherited-structure-scale -->
 
@@ -3853,7 +4322,7 @@ does not uniquely demonstrate nesting. The next physical connection
 is a prepared perturbation state and frequency/scale, followed by
 the linked density and metric response seen by observers.
 
-### 13.14. What the inherited law leaves to the state
+### A.61. What the inherited law leaves to the state
 
 <!-- nsc-claim:finite-parent-state-observability -->
 
@@ -3883,7 +4352,7 @@ a falsifiable observer relation within a declared preparation family.
 The [state-flow identities](../results/summaries/nsc-atlas-parent-clocks-v1.json)
 are retained with the observer calculation.
 
-### 13.15. The inherited scalar gives a controlled matter background
+### A.62. The inherited scalar gives a controlled matter background
 
 <!-- nsc-claim:uniform-inherited-scalar-matter -->
 
@@ -3997,7 +4466,7 @@ This gives a relative expansion epoch from the same inherited normalization.
 It is an equality of densities rather than a phase-independent acceleration
 criterion.
 
-### 13.16. The controlled background predicts an interior light cone
+### A.63. The controlled background predicts an interior light cone
 
 <!-- nsc-claim:inherited-parent-lightcone-bound -->
 
@@ -4078,7 +4547,7 @@ optical points are independent numerical formulations of one unaveraged
 frequency-20 model. The narrow high-frequency interval is an analytic
 prediction, not a computed fast trajectory or an astronomical measurement.
 The upper-right density-fraction curve is the comparison relation derived
-in Section 13.17.*
+in Section A.64.*
 
 This completes a controlled homogeneous connection from inherited state
 to expansion and luminosity distance. The absolute flux/vacuum sector,
@@ -4086,7 +4555,7 @@ primordial preparation and structure population remain physical inputs to
 close. The background theorem supplies a quantified foundation for the
 next shared distance, growth and population calculation.
 
-### 13.17. An epoch-independent vacuum, scalar and curvature constraint
+### A.64. An epoch-independent vacuum, scalar and curvature constraint
 
 <!-- nsc-claim:inherited-vacuum-matter-curvature-relation -->
 
@@ -4167,7 +4636,7 @@ observable dictionary and include any additional matter and radiation
 sectors. The relation therefore connects the inherited source to a joint
 observational question without inserting a desired dark fraction.
 
-### 13.18. Continuing the same inherited parent to the emitters
+### A.65. Continuing the same inherited parent to the emitters
 
 <!-- nsc-claim:inherited-parent-past-collar -->
 
@@ -4178,7 +4647,7 @@ at $A=1$ is a Cauchy surface, not the beginning of this cosmology. Extending
 its smooth scalar solution backward is a mathematical question which can
 be answered before prescribing a formation mechanism or the walls' future.
 
-Use the corrected energy $\mathcal I$ from Section 13.15, and bootstrap
+Use the corrected energy $\mathcal I$ from Section A.62, and bootstrap
 $1/2<A^3E/E_0<2$ on $1/3\leq A\leq1$. The unchanged Friedmann constraint gives
 
 $$
@@ -4228,7 +4697,7 @@ rule or global completion. Two unaveraged $\omega=200$ formulations agree
 on the endpoint comoving energy within $5.56\times10^{-10}$; the high-frequency
 bound itself is analytic.
 
-### 13.19. The inherited geometry meets the supernova distance shape
+### A.66. The inherited geometry meets the supernova distance shape
 
 <!-- nsc-claim:inherited-parent-supernova-comparison -->
 
@@ -4289,13 +4758,13 @@ $$
 =(.3667843,.7255551,-.0923394).
 $$
 
-These fractions are linked by Section 13.17 and inferred after calibrating
+These fractions are linked by Section A.64 and inferred after calibrating
 the epoch; they are not parameter-free cosmic abundances. The flat control
 calibrates $\Omega_m=.3312216$. The difference in minimum chi-square is
 $1.17848$ with equal fitted dimension. These retrospective data do not
 select a unique explanation or determine an absolute vacuum scale.
 
-### 13.20. One calibrated geometry, a second distance channel
+### A.67. One calibrated geometry, a second distance channel
 
 <!-- nsc-claim:inherited-parent-bao-ap-comparison -->
 
@@ -4356,7 +4825,7 @@ show marginal standardized residuals; the joint statistics retain the
 published correlations. These are conditional model comparisons, not
 primordial state selection or a claimed cosmological preference.*
 
-### 13.21. What this connection closes and what its source still must supply
+### A.68. What this connection closes and what its source still must supply
 
 The connected calculation now runs from a shared inherited scalar through
 a controlled Cauchy history to two astronomical distance channels. The
@@ -4398,7 +4867,7 @@ are the next physical work. Further precision in a completed background
 cannot replace them.
 
 
-### 13.22. One common ruler and the remaining SI selector
+### A.69. One common ruler and the remaining SI selector
 
 <!-- nsc-claim:shared-ruler-posterior-comparison -->
 
@@ -4534,7 +5003,7 @@ remains unresolved; the conditional constructions and their failures
 remain part of the atlas.
 
 
-### 13.23. A physical volume connects normalization and evolving matter
+### A.70. A physical volume connects normalization and evolving matter
 
 <!-- nsc-claim:parent-volume-source-normalization -->
 
@@ -4958,7 +5427,7 @@ The current action therefore supplies a contrast relation and a vacuum-sign
 boundary, while the SI hierarchy and a positive-vacuum descendant chain
 remain unselected.
 
-### 13.24. An extremal member is not yet an inherited selection
+### A.71. An extremal member is not yet an inherited selection
 
 <!-- nsc-claim:parent-volume-discrete-selection-audit -->
 
@@ -5054,7 +5523,7 @@ the family ordering and the conditional minimum; the missing physical
 selection remains a prerequisite to using 9.7022 as an inherited
 cosmological prediction or an absolute SI anchor.
 
-### 13.25. Selection mechanisms and the actual evolving-volume distance test
+### A.72. Selection mechanisms and the actual evolving-volume distance test
 
 <!-- nsc-claim:volume-selection-route-test -->
 
@@ -5062,7 +5531,7 @@ Evidence: [five evolutions, entropy ratios and same-action saddle](../results/su
 [physical scope and sources](../docs/nsc-atlas-volume-selection-routes.md),
 and [independent checks](../tests/test_nsc_atlas_volume_routes.py).
 
-The five values in Section 13.24 are minima of different parent actions.
+The five values in Section A.71 are minima of different parent actions.
 Three proposed routes are now tested against that fact. All five matched
 starts evolved to $N=6$ approach their own minima and retain their own
 $d,j$. The prescribed equations contain no inter-sector dynamics.
@@ -5170,7 +5639,7 @@ $1.44\times10^{-8}$. The original parent score remains its own result.
 This particular extension's actual evolving source worsens the shared-ruler
 comparison; its lower late vacuum alone does not repair the connection.
 
-### 13.26. Survival ranking and the curvature that must be inherited
+### A.73. Survival ranking and the curvature that must be inherited
 
 <!-- nsc-claim:volume-lifetime-ordering -->
 
@@ -5321,7 +5790,7 @@ value was derived for the requested physical refit; the imposed control
 does not replace that missing construction. These results restrict the
 declared source and selection arguments without rejecting nesting.
 
-### 13.27. The wall, the exit state and the actual pressure history
+### A.74. The wall, the exit state and the actual pressure history
 
 <!-- nsc-claim:wall-exit-preparation-map -->
 
@@ -5491,7 +5960,7 @@ and carry its volume, velocity and curvature forward without resetting
 them. The reference density must not be mistaken for a derived birth state.
 Every emitter must then lie in the constructed history before the next fit.
 
-### 13.28. A mass-free nucleation radius and the matter-reference gate
+### A.75. A mass-free nucleation radius and the matter-reference gate
 
 <!-- nsc-claim:parke-mass-free-radius -->
 
@@ -5623,7 +6092,7 @@ missing event. A compatible vacuum transition and matter-transfer
 mechanism must be derived together before this geometry becomes the
 requested reheated cosmology. These route failures do not reject nesting.
 
-### 13.29. Three targets from the spectral and regional map
+### A.76. Three targets from the spectral and regional map
 
 <!-- nsc-claim:three-dimensionless-targets -->
 
@@ -5732,7 +6201,7 @@ rather than substitutes for those maps. At exponential boundaries, logarithms,
 dimensionless ratios and compatible regional charts preserve the calculation;
 a clamp or coordinate limit is not promoted to a physical endpoint.
 
-### 13.30. Constructing the pen: a phase history on the sphere
+### A.77. Constructing the pen: a phase history on the sphere
 
 <!-- nsc-claim:constructed-pen-geometry -->
 
@@ -5892,7 +6361,7 @@ auxiliary-wheel choice delta=2*pi*(sqrt(6)-2), with its different numerical
 readouts, is preserved as a comparison. It is superseded here by the
 normal-mode offset from the fixed source action.
 
-### 13.31. The inward drawing: golden turns and inherited clocks
+### A.78. The inward drawing: golden turns and inherited clocks
 
 <!-- nsc-claim:golden-vortex-comparison -->
 
@@ -5990,7 +6459,7 @@ action, while [mass inflation](https://doi.org/10.1103/PhysRevD.41.1796)
 describes an internal mass parameter rather than necessarily spatial expansion.
 The next construction removes the material wall, following Douglas's revision.
 
-### 13.32. Through the horizon: smooth geometry, charge and an offset
+### A.79. Through the horizon: smooth geometry, charge and an offset
 
 <!-- nsc-claim:smooth-horizon-and-offset -->
 
@@ -6117,7 +6586,7 @@ The next bridge is an inherited charge current and state whose stress
 produces a smooth, sourced horizon history. That makes the continuation
 and the offset testable in the same geometry.
 
-### 13.33. Deriving the charged pair from internal geometry
+### A.80. Deriving the charged pair from internal geometry
 
 <!-- nsc-claim:inherited-harmonic-charge -->
 
@@ -6229,19 +6698,19 @@ state and charge distribution. The remaining connection is an inherited
 internal current or charge-asymmetric preparation, together with its
 baryon/photon interpretation; assigning a fitted phase would not close it.
 
-## IV. Concentration, conservation and the surrounding reservoir
+### A.81. IV. Concentration, conservation and the surrounding reservoir
 
 A dark-matter account needs a physical source that forms structure and accounts for its surroundings. We first calculate admissible scalar concentrations and their conserved supply, then their persistence and spatial compensation, and finally formation from compact disturbances. The route preserves the inherited parent instead of adding an independent halo mass. Different frequencies and preparations are explicit members of the family; they are not exchanged between examples by a change of units.
 
-### 14. The energy supply and formation of structure
+### A.82. The energy supply and formation of structure
 
 The following sections give the worked constructions and their attributed mathematical inputs.
 
-### 14.1. A profile selected by scalar self-gravity
+### A.83. A profile selected by scalar self-gravity
 
 <!-- nsc-claim:scalar-core-profile-selection -->
 
-The operational clock family in Section 15.1 uses a specified profile.
+The operational clock family in Section A.104 uses a specified profile.
 Here a physical selection mechanism is calculated: a real massive scalar can
 concentrate through its own gravity and shed radiation, leaving a
 coherent core. Gravitational cooling is established prior work of
@@ -6339,7 +6808,7 @@ keeps numerical discrepancies distinct from the weak-field, ambient
 and relativistic approximations. The original cloud and its energy
 are supplied, so this does not generate a primordial seed from nothing.
 
-### 14.2. The coherent core and its inherited environment
+### A.84. The coherent core and its inherited environment
 
 <!-- nsc-claim:scalar-core-atlas-admission -->
 
@@ -6411,7 +6880,7 @@ sourced initial admission. It leaves cloud origin, coupling and
 relative-phase selection, nonlinear global evolution and observed
 abundance as further physical connections.
 
-### 14.3. Supplying a local core from the inherited parent
+### A.85. Supplying a local core from the inherited parent
 
 <!-- nsc-claim:compensated-core-reservoir -->
 
@@ -6483,7 +6952,7 @@ and [finite record](../results/summaries/nsc-atlas-core-reservoir-v1.json)
 give the full preparation and numerical comparison. The solved root fixes
 one compatibility datum; it does not select a primordial seed or abundance.
 
-### 14.4. A perturbed centre and the same evolving cosmology
+### A.86. A perturbed centre and the same evolving cosmology
 
 <!-- nsc-claim:compensated-parent-domain -->
 
@@ -6547,7 +7016,7 @@ both contributions. The next task is to evolve this compensated preparation
 and calculate a local signal, preserving the source, outgoing field and
 same-action geometry throughout.
 
-### 14.5. Evolving the inherited field and its geometry together
+### A.87. Evolving the inherited field and its geometry together
 
 <!-- nsc-claim:coupled-core-parent-evolution -->
 
@@ -6616,7 +7085,7 @@ step, so numerical damping of that oscillator is not interpreted as cooling.
 The new connection is the sourced inherited preparation and its observer,
 rather than a new generic scalar-gravity equation.
 
-### 14.6. A diffuse cloud develops a compact, breathing concentration
+### A.88. A diffuse cloud develops a compact, breathing concentration
 
 <!-- nsc-claim:inherited-diffuse-concentration -->
 
@@ -6668,9 +7137,9 @@ arbitrary preparations or nonspherical stability. The
 [formation and refinement record](../results/summaries/nsc-atlas-core-evolution-v1.json)
 and [source owner](../docs/nsc-atlas-core-evolution.md) retain those limits.
 
-### 14.7. Conservation selects a second local scale
+### A.89. Conservation selects a second local scale
 
-The image-delay relation in Section 15.6 raises a physical question: can the inherited
+The image-delay relation in Section A.109 raises a physical question: can the inherited
 field support a structure much smaller than its cosmological parent?
 Changing a unit rescales both. Changing the scalar frequency changes the
 physical model. The frequency family already constructed above holds
@@ -6799,7 +7268,7 @@ derived energy-floor bound. These are initial-constraint and causal-domain
 results; formation, persistence and the complete coupled wall future are
 separate calculations.
 
-### 14.8. A mass--reservoir--vacuum relation and a dimensional example
+### A.90. A mass--reservoir--vacuum relation and a dimensional example
 
 The same construction produces a dimensionless correlation:
 
@@ -6861,13 +7330,13 @@ checks for the supplied profile, not a bound on its uncomputed evolution.
 
 The following section evolves this two-scale preparation in a leading
 classical envelope with its reservoir retained. The image predictions of
-Section 15.5 belong to the earlier evolved preparation;
+Section A.108 belong to the earlier evolved preparation;
 they cannot be assigned to this new family by changing units.
 
-### 14.9. Evolving the core together with its reservoir
+### A.91. Evolving the core together with its reservoir
 
 Initial compatibility does not establish persistence. The high-frequency
-member of Section 14.8 has many fast carrier oscillations per binding
+member of Section A.90 has many fast carrier oscillations per binding
 time, so a direct relativistic grid is costly. We instead derive its
 leading classical envelope, retain the solved reservoir and excited parent,
 and test the reduction against the unchanged full Einstein--Klein--Gordon
@@ -6939,7 +7408,7 @@ term, about $2\times10^{-19}$ for this member. This is an exact identity
 on the averaged background, not proof that it equals the full oscillating
 Einstein-scalar background at every instant.
 
-### 14.10. Conserved transport, finite persistence and a relativistic check
+### A.92. Conserved transport, finite persistence and a relativistic check
 
 The envelope's geometric excess mass is
 
@@ -7046,10 +7515,10 @@ is from the conserved initial supply construction to finite radial
 localization in its expanding parent, with a stated approximation and
 independent transport checks.
 
-### 14.11. Testing the breathing core beyond spherical symmetry
+### A.93. Testing the breathing core beyond spherical symmetry
 
 A changing radius does not by itself diagnose an instability. We now
-linearize the actual evolving envelope of Section 14.10 and calculate its
+linearize the actual evolving envelope of Section A.92 and calculate its
 radial and quadrupole response. The spherical field, reservoir and parent
 expansion are replayed unchanged. A stationary eigenproblem would answer
 a different question because this background is time dependent.
@@ -7123,7 +7592,7 @@ time-dependent background. It checks the transport but does not imply
 norm conservation or stability. A separate passive quadrupole, propagated
 without its own potential response, supplies the unitary control.
 
-### 14.12. A finite response theorem for every orientation in a declared span
+### A.94. A finite response theorem for every orientation in a declared span
 
 Choose two compact radial profiles of widths $2$ and $4$ in the physical
 scaled radius $Ax$, together with their phase partners. They taper to zero
@@ -7222,7 +7691,7 @@ in the declared span. Independent nonlinear radial differences converge to
 the tangent prediction. These finite sampled results do not establish
 universal or asymptotic stability.*
 
-### 14.13. The surrounding field must carry the tidal phase
+### A.95. The surrounding field must carry the tidal phase
 
 A quadrupole has zero angular mean, so its first-order monopole mass change
 vanishes. It can nevertheless produce a nonzero external tidal potential.
@@ -7282,7 +7751,7 @@ the targeted tail calculation used about $615$ within its separate
 $800$-second budget. Both retain their completed evidence without enlarging
 their claims to all-profile, nonlinear or full-relativistic stability.
 
-### 14.14. A local concentration carries the signature of its surroundings
+### A.96. A local concentration carries the signature of its surroundings
 
 <!-- nsc-claim:atlas-compensation-response -->
 
@@ -7389,7 +7858,7 @@ the evolved field in the original mass/radius units. The projected deficit
 is a spatial statistic; a relativistic lens observation needs its own
 averaging and light-cone dictionary.*
 
-### 14.15. The age and population are part of the correlation
+### A.97. The age and population are part of the correlation
 
 The inherited vacuum remains fixed while the surrounding field evolves.
 Postprocessing the five authenticated spherical evolution checkpoints,
@@ -7457,7 +7926,7 @@ inherited parent, followed by the observation map for that population.
 The atlas supplies a joint spatial relation to test when those inputs
 exist; it does not fix them by matching a desired sky spectrum.
 
-### 14.16. Does the inherited parent leave enough time to form a core?
+### A.98. Does the inherited parent leave enough time to form a core?
 
 <!-- nsc-claim:atlas-formation-window -->
 
@@ -7552,7 +8021,7 @@ initial current and equations. Earlier seeds, forcing or already nonlinear
 data are different possibilities. The bound also applies to spatial L2
 norm; a pointwise statement needs an appropriate Fourier norm.
 
-### 14.17. A compact earlier seed identifies the nonlinear continuation
+### A.99. A compact earlier seed identifies the nonlinear continuation
 
 Construct a local compensated disturbance without the stationary core:
 
@@ -7619,7 +8088,7 @@ declared earlier parent. Retained mass, concentration, reservoir and the
 spatial turnover would then be outputs, tested together. No new core profile
 or desired observed spectrum needs to be inserted to start that experiment.
 
-### 14.18. Nonlinear formation without installing the final core
+### A.100. Nonlinear formation without installing the final core
 
 <!-- nsc-claim:atlas-seed-collapse -->
 
@@ -7633,7 +8102,7 @@ preparation is tested through its first compression and rebound at $A=1.2$.
 This amplitude comparison is not a fit to an observed object or an inferred
 universal formation threshold. No stationary core is placed in either seed.
 
-The autocorrelation source from Section 14.17 has an exact factored
+The autocorrelation source from Section A.99 has an exact factored
 real-space polynomial. Its radial mass primitive is positive inside the
 support and vanishes at its edge. Normalize the total envelope by its
 homogeneous value and set
@@ -7702,7 +8171,7 @@ an independent time control and a larger domain test the $10%$ history.
 The $5%$ history has its own three resolutions, with no-gravity and
 small-amplitude controls completing eleven runs.
 
-### 14.19. Physical contraction separates formation from density contrast
+### A.101. Physical contraction separates formation from density contrast
 
 Track a shell carrying a fixed amount of the oscillatory scalar source:
 
@@ -7774,15 +8243,15 @@ in the inherited parent. Its actual field can now supply an observer
 calculation. The old installed-core and different-frequency lens histories
 cannot be substituted for that next signal.
 
-## V. The interior observer: motion, light and expansion
+### A.102. V. The interior observer: motion, light and expansion
 
 An interior observer tests a geometry through clocks, trajectories and light. This part uses the sources already constructed to derive frequency relations, focusing, multiple images and motion-calibrated optical predictions. Endpoint identities connect measurements that belong to one geometry. The final cosmological comparison confronts a quiet limiting state with actual supernova data, identifying the expansion history that the full account must improve.
 
-### 15. One geometry, several measured consequences
+### A.103. One geometry, several measured consequences
 
 The following sections give the worked constructions and their attributed mathematical inputs.
 
-### 15.1. Three freely falling clocks and a withheld prediction
+### A.104. Three freely falling clocks and a withheld prediction
 
 <!-- nsc-claim:three-clock-parent-relation -->
 
@@ -7889,7 +8358,7 @@ keep those restrictions explicit. The advance is an operational test
 surviving the two unknown state amplitudes, while physical formation
 and an unrestricted primordial spectrum remain open.
 
-### 15.2. A signal from the concentration's evolving geometry
+### A.105. A signal from the concentration's evolving geometry
 
 <!-- nsc-claim:formed-core-clock -->
 
@@ -7958,7 +8427,7 @@ vacuum remains $\Lambda_{\rm vac}a_0^2=12.3482523989285$. Selecting its
 observed scale, explaining the population of structures and testing their
 nonradial persistence remain further physical questions.
 
-### 15.3. The same concentration bends and focuses light
+### A.106. The same concentration bends and focuses light
 
 <!-- nsc-claim:evolved-core-null-focusing -->
 
@@ -8027,7 +8496,7 @@ applied to the current source. The
 [compact calculation](../results/summaries/nsc-atlas-core-optics-v1.json)
 separate the exact identities from finite numerical lensing evidence.
 
-### 15.4. A proper-clock lens map during contraction and breathing
+### A.107. A proper-clock lens map during contraction and breathing
 
 <!-- nsc-claim:evolved-core-lens-map -->
 
@@ -8122,7 +8591,7 @@ bind these optical numbers to the same source that produced concentration
 and the radial clock signal. The inherited law has not thereby selected
 a cloud population, a physical SI scale or an observed dark-matter fraction.
 
-### 15.5. Two paths, one receiving clock
+### A.108. Two paths, one receiving clock
 
 A lens map becomes an image prediction when the emitting and receiving
 worldlines are fixed. Keep the scalar-parent solution of the preceding
@@ -8226,7 +8695,7 @@ calculations check the delay-frequency identity. The final panel links
 the resolved delay to the inherited parent vacuum through a scale-free
 product; it does not identify this benchmark with an observed lens.*
 
-### 15.6. A local image delay and the parent's vacuum must share one scale
+### A.109. A local image delay and the parent's vacuum must share one scale
 
 The local concentration belongs to the same sourced parent whose protected
 annulus retains the inherited vacuum. For this declared action and flux,
@@ -8279,7 +8748,7 @@ astronomical application. The atlas provides the mathematical route
 from inherited vacuum, through formed structure, to a fixed observer's
 measurements without an independently fitted lens mass.
 
-### 15.7. The forming field supplies one connected observer map
+### A.110. The forming field supplies one connected observer map
 
 <!-- nsc-claim:atlas-formed-observer -->
 
@@ -8360,7 +8829,7 @@ between nearly equal photon energies. An endpoint energy identity checks
 it independently. The receiver's proper flight time is also integrated;
 it differs from a coordinate Shapiro delay.
 
-### 15.8. Direction, delay and frequency are derivatives of one arrival map
+### A.111. Direction, delay and frequency are derivatives of one arrival map
 
 Let $T(\tau_e,\Theta)=\tau_o$ be the arrival map. Null endpoint variation
 gives, for the specified worldlines,
@@ -8439,7 +8908,7 @@ can exceed the small gravitational frequency contrast. The next link to
 observations is therefore physically prepared or measured kinematics and
 the assessment of omitted metric terms, using this same formed source.
 
-### 15.9. Motion calibrates a prediction before the new ray is evaluated
+### A.112. Motion calibrates a prediction before the new ray is evaluated
 
 <!-- nsc-claim:atlas-dynamics-lensing -->
 
@@ -8525,7 +8994,7 @@ metric potentials remain a premise of this model. Combining dynamics and
 lensing is established practice, illustrated in a different statistical
 setting by [Reyes et al.,1003.2185](https://arxiv.org/abs/1003.2185).
 
-### 15.10. NSC-P004 passes its frozen synthetic cross-observable check
+### A.113. NSC-P004 passes its frozen synthetic cross-observable check
 
 The forecast and comparison tolerance were committed and pushed in
 [e626f2f](https://github.com/kodareken/nested-space-cosmology/commit/e626f2f)
@@ -8595,7 +9064,7 @@ there would pass the same test. The next outward comparison should ask
 whether the surrounding compensation and inherited scale relation break
 a specified same-core degeneracy.
 
-### 15.11. Two observer distances, on two metrics
+### A.114. Two observer distances, on two metrics
 
 <!-- nsc-claim:atlas-supernova-distance -->
 
@@ -8686,7 +9155,7 @@ fixed-coordinate normal probes of the saved conformal metric. Markers are
 the declared rays. Lines connect samples and do not fill intermediate
 evolution.*
 
-### 15.12. A stretched region, an orbit and a received frequency
+### A.115. A stretched region, an orbit and a received frequency
 
 <!-- nsc-claim:observer-geometry-controls -->
 
@@ -8756,7 +9225,7 @@ keeps that observation separate from these unfitted controls. A proposed
 nested gradient history must reproduce the same frequency and trajectory
 measurements within one declared observer geometry.
 
-### 15.13. Compensated circulation, a light offset and smooth-horizon exchange
+### A.116. Compensated circulation, a light offset and smooth-horizon exchange
 
 <!-- nsc-claim:smooth-parent-circulation -->
 
@@ -8938,7 +9407,7 @@ retained vacuum input; the energy transfer does not derive it. The next
 subsection computes the sourced null response and distinguishes this
 existing observer horizon from a newly formed trapped region.
 
-### 15.14. Depletion changes area: the inherited source and a dynamical first law
+### A.117. Depletion changes area: the inherited source and a dynamical first law
 
 <!-- nsc-claim:scalar-horizon-area -->
 
@@ -9100,7 +9569,7 @@ compatible interior source. The transferred field supplies a calculable
 budget and directions for that next problem; its quadratic area response
 is not extrapolated into a strong-field collapse claim.
 
-### 15.15. The field continues: two inherited traces and a receiving state
+### A.118. The field continues: two inherited traces and a receiving state
 
 <!-- nsc-claim:inherited-characteristic-state -->
 
@@ -9230,7 +9699,7 @@ The next physical connection is concentration and compatible strong-field
 evolution of the actual inherited data, rather than another freely
 chosen incident waveform.
 
-### 15.16. The zero line: thermodynamic decay, retained state and a crossover test
+### A.119. The zero line: thermodynamic decay, retained state and a crossover test
 
 <!-- nsc-claim:offset-thermodynamic-zero -->
 
@@ -9464,7 +9933,7 @@ shortest wavelength or absolute zero a geometric band endpoint. The
 thermodynamic organization is useful; completing it requires those state,
 scale and interaction laws as well as energy balance.
 
-### 15.17. The inherited wave changes geometry, spectra and coupling
+### A.120. The inherited wave changes geometry, spectra and coupling
 
 <!-- nsc-claim:inherited-volume-feedback -->
 
@@ -9582,7 +10051,7 @@ used for the static comparisons.
 [Galley, equations1--4 and21--26](https://arxiv.org/html/1210.2745v2)
 supplies causal initial-value elimination and its energy-accounting
 method. The zero-data retarded response here is not replaced by a
-static minimizer. [Lennon, section2](https://arxiv.org/html/2112.14263v1)
+static minimizer. [Lennon, section A.16](https://arxiv.org/html/2112.14263v1)
 supplies a static charged/neutral-field comparison, not a bound object
 for this source. The metastable vacuum, gauge constraints and full
 gravity remain relevant to any localization claim.
@@ -9594,7 +10063,7 @@ scale. The next physical closure is its cubic matter and quadratic metric
 response on the same preparation, before a concentration or daughter
 continuation is inferred.
 
-### 15.18. Coupled parent feedback closes matter work and links two clocks
+### A.121. Coupled parent feedback closes matter work and links two clocks
 
 <!-- nsc-claim:coupled-parent-backreaction -->
 
@@ -9719,7 +10188,7 @@ complete excitation-work check. The next physical question is nonlinear
 concentration of this inherited state. These perturbative results do
 not select a charge imbalance, a regular child or the SI hierarchy.
 
-### 15.19. Finite-amplitude geometry exists for the inherited preparation
+### A.122. Finite-amplitude geometry exists for the inherited preparation
 
 <!-- nsc-claim:finite-parent-existence -->
 
@@ -9853,7 +10322,9 @@ nonlinear numerical development still needs its own convergence checks.
 The following continuation implements that development without replacing
 the nonspherical state by a spherical average.
 
-### 15.20. Evolving geometry connects pressure work to local readouts
+### A.123. Evolving geometry connects pressure work to local readouts
+
+**Epsilon=1 nonlinear runs: under-resolved, not used for claims.**
 
 <!-- nsc-claim:nonlinear-parent-work-control -->
 
@@ -9880,7 +10351,7 @@ $$
 $$
 
 The complete compact parent has no boundary flux. A restricted observer
-region also has the boundary term calculated in Section15. Homogeneous
+region also has the boundary term calculated in Section A.103. Homogeneous
 proper slicing gives dE_exc=-p_exc dV, with p_exc=p+V_star. Directional stress and
 spatial lapse gradients are retained in the nonspherical evolution.
 Energy is independently evaluated from the ADM stress and work from a
@@ -9943,7 +10414,7 @@ The finite work identity does not supply a microscopic entropy law,
 charge bias, SI ruler or regular daughter. The full-amplitude source
 remains underresolved; it is not replaced by the smaller control.
 
-### 15.21. The inherited interaction supplies a nonzero canonical response
+### A.124. The inherited interaction supplies a nonzero canonical response
 
 <!-- nsc-claim:canonical-parent-onset -->
 
@@ -10088,15 +10559,15 @@ state, entropy/area normalization and primordial preparation are not
 selected. Finite harmonic projection preserves time ordering without
 proving exact continuum light-cone support.
 
-## VI. Gravitational exchange, fluid motion and quantum state
+### A.125. VI. Gravitational exchange, fluid motion and quantum state
 
 The same geometric question extends to gravitational waves, unresolved motion and quantum fields: which boundary and state determine the measured response? A separately specified stable material geometry gives an actual gravitational Schur action and return contrast. Fluid correlations provide a conserved stress mechanism in their own domain. Physical Dirac propagation and the geometry-derived cosmohedron exchange then connect explicit quantum states to sourced geometry. Each mathematical bridge retains its field content and approximation.
 
-### 16. Responses across matter, gravity and quantum descriptions
+### A.126. Responses across matter, gravity and quantum descriptions
 
 The following sections give the worked constructions and their attributed mathematical inputs.
 
-### 16.1. Flow geometry and a common boundary stress
+### A.127. Flow geometry and a common boundary stress
 
 <!-- nsc-claim:atlas-flow-boundary-dictionary -->
 
@@ -10136,7 +10607,7 @@ budget and its light-cone observations remain calculations to construct.
 The next example supplies a finite gravitational response with an explicit
 material action, rather than assigning an arbitrary reflector to a horizon.
 
-### 16.2. Two stable material interfaces in one static geometry
+### A.128. Two stable material interfaces in one static geometry
 
 <!-- nsc-claim:atlas-gravitational-background -->
 
@@ -10199,7 +10670,7 @@ $\Lambda_{\rm child}(.1M)^2=.132512869461$. The supplied radius/mass ratios
 and four-form sectors have not been selected by astronomical data or by an
 absolute vacuum-selection mechanism.
 
-### 16.3. The gravitational action now composes through the interfaces
+### A.129. The gravitational action now composes through the interfaces
 
 <!-- nsc-claim:atlas-gravitational-composition -->
 
@@ -10258,7 +10729,7 @@ finite-energy exponentially growing axial modes. This covers a propagating
 gravitational sector across both material levels. It does not establish polar
 stability or the nonlinear formation of a rotating hierarchy.
 
-### 16.4. The same exterior mass permits different gravitational returns
+### A.130. The same exterior mass permits different gravitational returns
 
 <!-- nsc-claim:atlas-gravitational-contrast -->
 
@@ -10318,7 +10789,7 @@ a common gravitational evolution equation, Schur composition and a receiving
 clock. A direct retarded pulse, polar response and a specified rotating or
 dissipative state are the next physical connections.
 
-### 16.5. A published nonlinear vortex mechanism enters the atlas
+### A.131. A published nonlinear vortex mechanism enters the atlas
 
 <!-- nsc-claim:atlas-openai-navier-stokes-source -->
 
@@ -10331,7 +10802,7 @@ Theorem 1.1 constructs a three-dimensional incompressible flow for every
 positive viscosity, starting from rest under a smooth compactly supported
 force. Its velocity becomes unbounded in finite time while kinetic energy
 stays bounded. OpenAI's theorem is incorporated as an attributed mathematical
-input; the independent atlas calculation follows in Sections 16.6--16.7.
+input; the independent atlas calculation follows in Sections A.132--A.133.
 
 The relevant mechanism appears in Sections 2.2 and 3.2--3.3: zero-mean
 oscillatory velocities have nonzero quadratic momentum fluxes. The source
@@ -10364,7 +10835,7 @@ the momentum-transfer mechanism for an independent calculation. Its
 prepared initial velocity is nonzero, its initial mean is zero, and the
 force is zero after release. Those assumptions differ from Theorem 1.1.
 
-### 16.6. Fine motion produces an exact resolved circulation
+### A.132. Fine motion produces an exact resolved circulation
 
 <!-- nsc-claim:atlas-vortex-initial-transfer -->
 
@@ -10447,7 +10918,7 @@ This composes the initial effects of prepared resolutions while retaining
 their covariance state. An infinite sequence additionally needs regularity
 and dissipation summability; it is not supplied by this finite identity.
 
-### 16.7. The correlations retain their energy and momentum budget
+### A.133. The correlations retain their energy and momentum budget
 
 <!-- nsc-claim:atlas-vortex-resolution-budget -->
 
@@ -10508,7 +10979,7 @@ Thus the source paper contributes a defined mathematical block, while the
 gravitational attachment and a sustained rotating hierarchy remain further
 connections to calculate.
 
-### 16.7.1. Finite circulation now carries a gravitational readout
+### A.134. Finite circulation now carries a gravitational readout
 
 <!-- nsc-claim:finite-flow-gravity -->
 
@@ -10556,7 +11027,7 @@ Einstein equations through cubic order, with additional numerical fluid
 error here. A complete attachment of this auxiliary flow geometry to the
 evolving generated parent remains open.
 
-### 16.7.2. Energy depletion determines an averaged geometric work term
+### A.135. Energy depletion determines an averaged geometric work term
 
 <!-- nsc-claim:boundary-work-closure -->
 
@@ -10594,7 +11065,7 @@ change is epsilon^2 b2 and stays within the stated expansion regime.
 
 ![Finite circulation, gravitational response, boundary work and horizon flux](figures/nsc-atlas-flow-gravity.png)
 
-### 16.7.3. A rotating horizon supplies an energy-transfer threshold
+### A.136. A rotating horizon supplies an energy-transfer threshold
 
 <!-- nsc-claim:rotating-horizon-offset -->
 
@@ -10635,7 +11106,7 @@ the proposed valve a definite energy/angular-momentum interface. The
 transition to a new expanding interior still requires its compatible metric,
 field state and conserved source.
 
-### 16.7.4. The average work coefficient becomes a local Einstein constraint
+### A.137. The average work coefficient becomes a local Einstein constraint
 
 <!-- nsc-claim:local-work-and-bulk -->
 
@@ -10713,7 +11184,7 @@ must therefore be specified rather than inferred from a shared coefficient.
 The new result supplies the local scalar data and a checked bulk witness
 for that next connection.
 
-### 16.8. A material action now supplies the interaction vertex
+### A.138. A material action now supplies the interaction vertex
 
 <!-- nsc-claim:atlas-geometric-cubic-vertex -->
 
@@ -10762,7 +11233,7 @@ convention is fixed in the owner. Its opposite reverses both vertices,
 leaving their exchange product unchanged. This angular integral and the
 proper-clock normalization determine the vertex without a cubic fit.
 
-### 16.9. An actual gravitational mode carries the cosmohedron seed
+### A.139. An actual gravitational mode carries the cosmohedron seed
 
 <!-- nsc-claim:atlas-physical-cosmohedron-exchange -->
 
@@ -10841,7 +11312,7 @@ function. Mode frequencies replace plane-wave momentum magnitudes;
 the full momentum-polytope realization has not been identified with
 this geometry. The result is a calculated graph-kernel connection.
 
-### 16.10. Interior geometry changes the interaction and fixes its scale law
+### A.140. Interior geometry changes the interaction and fixes its scale law
 
 <!-- nsc-claim:atlas-cosmohedron-interior-contrast -->
 
@@ -10893,7 +11364,7 @@ coefficient. Completing the constrained/pole-summed response and extending
 the state to a time-dependent parent remain further work. No black/white
 transition or observed Lambda value has been deduced from this graph kernel.
 
-### 16.11. The actual cap--wall Dirac operator and the missing nested slip
+### A.141. The actual cap--wall Dirac operator and the missing nested slip
 
 The [cap--wall calculation](../docs/nsc-atlas-dirac-probe.md)
 adds a declared massless, minimally coupled probe with no direct surface
@@ -10936,7 +11407,7 @@ on its initial covariance through $-i\operatorname{Tr}(C[V(t),V(0)])$;
 geometry alone does not select it. The completed result here is the curved
 operator/domain connection, not a loop polarization or an NSC slip number.
 
-### 16.12. Local Dirac trace on the cap and material wall
+### A.142. Local Dirac trace on the cap and material wall
 
 The free four-component Dirac determinant and general
 [heat-coefficient framework](https://arxiv.org/pdf/hep-th/0306138)
@@ -10953,7 +11424,7 @@ The [one-sided evaluation](../results/summaries/nsc-atlas-dirac-bulk-trace-v1.js
 therefore gives $-11H^4/(240\pi^2)$ in the cap and
 $7M^2/(120\pi^2r^6)$ outside. A flat reference has zero local curvature
 trace. These are actual-background terms of the declared quantum probe,
-distinct from the flat nonlocal polarization in Section 17.11.
+distinct from the flat nonlocal polarization in Section A.161.
 
 At the material wall, integrate a smooth normal curvature jet before
 taking a thin limit. The declared class smooths the kinked conformal factor
@@ -10985,7 +11456,7 @@ stress and quantum preparation remain separate inputs. This one Euler
 term is not the complete wall stress. Trace-only projections do not
 establish vacuum stress or replace the supplied cap $\Lambda_{0,-}\ell^2=3$.
 
-### 16.13. An actual wall radar chart and a finite clock prediction
+### A.143. An actual wall radar chart and a finite clock prediction
 
 The [wall-clock construction](../results/summaries/nsc-atlas-dirac-radar-v1.json)
 uses the same $H\ell=1$, $k_{\rm wall}\ell=2$, $M/\ell=.4$ and
@@ -11059,7 +11530,7 @@ using the same wall clock and probe angular sector. These colors describe
 the background geometry, not an evolved quantum state or a metric-loop
 response.*
 
-### 16.14. Stress vertices and the inherited quantum preparation
+### A.144. Stress vertices and the inherited quantum preparation
 
 The same canonical radial Dirac action supplies its gravitational
 sources. For a full magnetic multiplet let $d=2|\kappa|$,
@@ -11080,7 +11551,7 @@ The [stress and contact calculation](../docs/nsc-atlas-dirac-probe.md#dirac-stre
 checks the Hilbert energy/flux, complete angular normalization,
 four-dimensional covariant conservation and the first/second metric
 variations. Finite-mode stress has zero classical trace and transmits
-continuously; the anomaly in Section 16.12 is retained separately.
+continuously; the anomaly in Section A.142 is retained separately.
 Radial ports and first-order time-end variations remain in an integrated
 response. No scalar source or flat polarization is substituted.
 
@@ -11089,7 +11560,7 @@ incoming data to the middle Cauchy segment. A parent covariance must
 include both incoming branches and their cross-correlations. Existing
 Gaussian boundary elimination can preserve those terms once the actual
 transfer is supplied. Neither the chart nor the common-law relation
-chooses a root state. Section 16.17 supplies one additional preparation
+chooses a root state. Section A.147 supplies one additional preparation
 axiom and establishes its local short-distance class; it is not inferred
 from a null-line frequency label alone.
 
@@ -11098,7 +11569,7 @@ are evaluated next. A compatible baseline preparation, bulk/interface
 renormalization conditions and the complete mixed response to a physical
 source still separate them from a nested $\Psi/\Phi$ prediction.
 
-### 16.15. Prepared Dirac propagation, mean metric and clock
+### A.145. Prepared Dirac propagation, mean metric and clock
 
 The [actual transfer](../results/summaries/nsc-atlas-dirac-scattering-v1.json)
 propagates the canonical chiral field on the wall-clock diamond. With
@@ -11201,7 +11672,7 @@ the baseline vacuum, full retarded $\Psi/\Phi$ or a cosmological
 $\Lambda$. The finite-amplitude scalar P001 remains unconverged;
 its original solver and grids were not changed by this calculation.
 
-### 16.16. A conserved compact source and local gravitational tides
+### A.146. A conserved compact source and local gravitational tides
 
 A central mass source can be supplied on the same finite annulus, with
 its body or inner horizon below the causal domain. The cap and exterior
@@ -11302,7 +11773,7 @@ exterior horizon one cap FLRW pair does not cover the joined spacetime.
 This finite prepared-state result therefore supplies no absolute empty
 vacuum ratio, full vacuum $\Psi/\Phi$ or cosmological $\Lambda$.
 
-### 16.17. A correlated continuum parent and local vacuum regularity
+### A.147. A correlated continuum parent and local vacuum regularity
 
 Specify the parent before evaluating a baseline vacuum. One explicit
 alternative is the Dirac ground state on a static product of a radial
@@ -11347,7 +11818,7 @@ $N_{\mathrm{aux}}=a_{\mathrm{aux}}=R_0q_{\mathrm{aux}}$.
 Blending q directly preserves its continuous first wall jets. Where the
 switches are one this metric is conformal to the physical metric and
 the canonical massless spinor is unchanged. This neighborhood includes
-the cap detector of Section 16.16. The construction assigns a state;
+the cap detector of Section A.146. The construction assigns a state;
 it is not a physical formation history or an Einstein source model.
 Stress and clocks still use the physical metric, including its anomaly.
 
@@ -11406,7 +11877,7 @@ The full vacuum $\Psi/\Phi$, wall renormalization and physical selection
 of the preparation remain separate work. No astronomical measurement
 sets this root radius, switch, state or resulting numerical coefficients.
 
-### 16.18. Inherited preparation and the cap's local late state
+### A.148. Inherited preparation and the cap's local late state
 
 Derive the state transport before choosing another parent benchmark. A
 complete ancestral covariance is inherited as $C_c=K C_aK^\dagger$, with
@@ -11513,15 +11984,15 @@ later ball remains a hypothesis. The compact-source $b>0$ cap is not
 conformally flat; its finite-time state and $\Psi/\Phi$ require their
 own compatible source history and retarded response.
 
-## VII. Effective gravity, vacuum form and the physical scale
+### A.149. VII. Effective gravity, vacuum form and the physical scale
 
 A nonzero response is not automatically a cosmological constant. This part varies the relevant action or transported geometry to determine energy, pressure, memory and curvature together. The calculations decide which proposed reductions have vacuum form, which behave as other sources, and which require a different state or action. Those decisions delimit the routes by which the larger geometry can contribute to interior expansion.
 
-### 17. What the eliminated geometry contributes
+### A.150. What the eliminated geometry contributes
 
 The following sections give the worked constructions and their attributed mathematical inputs.
 
-### 17.1. The current scalar's classical vacuum projection
+### A.151. The current scalar's classical vacuum projection
 
 <!-- nsc-claim:atlas-classical-vacuum-trace -->
 
@@ -11551,7 +12022,7 @@ Independent [metric-jet checks](../tests/test_nsc_atlas_effective_vacuum.py)
 evaluate the implemented nonlinear equations at zero and nonzero amplitude.
 The [scientific owner](../docs/schur-memory.md) gives the complete derivation.
 
-### 17.2. A conditional quantum contribution and its physical scale
+### A.152. A conditional quantum contribution and its physical scale
 
 <!-- nsc-claim:atlas-quantum-vacuum-trace -->
 
@@ -11620,7 +12091,7 @@ The [same exact record](../results/summaries/nsc-atlas-effective-vacuum-v1.json)
 retains the coefficients, SI inputs and necessary trace condition. No
 cosmological observation selected these values.
 
-### 17.3. The quantum interface and the remaining exterior reduction
+### A.153. The quantum interface and the remaining exterior reduction
 
 <!-- nsc-claim:atlas-quantum-interface -->
 
@@ -11659,7 +12130,7 @@ retarded response and the joint state's symmetric two-point function are
 needed for the effective stress. A coefficient multiplying a boundary
 field quadratic form alone does not supply a metric volume term.
 
-### 17.4. The exterior scalar response on the quiet wedge
+### A.154. The exterior scalar response on the quiet wedge
 
 <!-- nsc-claim:atlas-exterior-schur-metric -->
 
@@ -11697,7 +12168,7 @@ finite wedge, not a whole-geometry reduction, a quantum state, or a
 cosmological value. The supplied cap input $\Lambda_{0,-}\ell^2=3$ is
 unchanged.
 
-### 17.5. Parent response, slice fit and a separate contracting geometry
+### A.155. Parent response, slice fit and a separate contracting geometry
 
 <!-- nsc-claim:atlas-parent-metric-response -->
 
@@ -11770,7 +12241,7 @@ The shared parent geometry and its observer domain remain absent.
 
 <!-- nsc-claim:atlas-nested-geometric-average -->
 
-The two-level initial geometry in Section 10.2 makes this test at an
+The two-level initial geometry in Section A.31 makes this test at an
 actual additional boundary, with the same outer mass and retention sphere.
 Both membranes obey $k\ell=2$; cap and host have the supplied $H\ell=1$.
 Including both wall curvature distributions gives
@@ -11836,7 +12307,7 @@ parent of the quiet cap. The
 [conformal average record](../results/summaries/nsc-conformal-geometric-average-v1.json)
 binds the clock, the reference length and these two numbers.
 
-### 17.6. The interface required by a common action
+### A.156. The interface required by a common action
 
 <!-- nsc-claim:atlas-common-action-interface -->
 
@@ -11883,7 +12354,7 @@ with the normal-Weyl components exposed by the
 and checked in its
 [tests](../tests/test_nsc_atlas_gravitational_reduction.py).
 
-### 17.7. One state at two physical resolutions
+### A.157. One state at two physical resolutions
 
 <!-- nsc-claim:conformal-physical-resolution -->
 
@@ -11968,7 +12439,7 @@ binds the original state and frozen method `cd00b35`. Its energy coefficient
 is a failed vacuum-volume representation of this instantaneous response,
 not a derived cosmological constant.
 
-### 17.8. A prepared-state change propagated to a photon measurement
+### A.158. A prepared-state change propagated to a photon measurement
 
 The same conformal episode carries an initial matter variation through
 the coupled geometry to two received frequencies. Before prolongation,
@@ -12026,7 +12497,7 @@ This closes one finite prepared-direction observer calculation. The
 metric-dependent reduction still needs to retain the corresponding causal
 response and physical state before identifying an effective vacuum term.
 
-### 17.9. A constrained gravitational exterior and its validity test
+### A.159. A constrained gravitational exterior and its validity test
 
 The same local auxiliary action supplies a linear vacuum exterior
 response. This reference has zero Maxwell flux and Dirac field, physical
@@ -12106,7 +12577,7 @@ actual nested exterior geometry and its physical state remain necessary
 for a cosmological Lambda calculation. No coupling was changed to remove
 the reference instability.
 
-### 17.10. The inherited spectral profile and its gravitational response
+### A.160. The inherited spectral profile and its gravitational response
 
 The local coefficients have an existing spectral owner. For the fixed
 warped compact interval, its matched profile is
@@ -12164,11 +12635,11 @@ or replace the constrained spherical causal map. Curved real-time metric
 dependence and the exterior's physical state remain necessary before
 identifying an effective cosmological volume term.
 
-### 17.11. Flat-reference curvature channels and the relation between motion and lensing
+### A.161. Flat-reference curvature channels and the relation between motion and lensing
 
 The same fixed-profile functional has a covariant quadratic-curvature
 connection. Reusing [Codello--Zanusso, 1203.2034v2](https://arxiv.org/html/1203.2034v2),
-Section 5, and the owned Dirac Clifford traces gives Weyl and scalar
+Section A.19, and the owned Dirac Clifford traces gives Weyl and scalar
 functions $\mathcal F_C(-\nabla^2)$ and $\mathcal F_R(-\nabla^2)$ in the
 action $[C\mathcal F_C C+R\mathcal F_R R]/[2(4\pi)^2]$.
 The [complete derivation](../docs/schur-memory.md#covariant-curvature-channels-and-a-static-gravitational-observable)
@@ -12180,7 +12651,7 @@ strong-curvature attachment needs its own terms.
 This is an imported Dirac fixed-profile calculation about flat space. The
 numerical slip below is not a consequence of NSC's cap--wall nesting.
 
-The Weyl function recovers Section 17.10 through
+The Weyl function recovers Section A.160 through
 $a_2(x)=\mathcal P_H(x)/x=1+6x\mathcal F_C(x)/Q_1$. The scalar function is
 
 $$
@@ -12239,7 +12710,7 @@ does not supply the actual curved causal exterior, physical length
 calibration or a cosmological Lambda. Those remain the connection needed
 between the larger geometry and its observer's effective volume response.
 
-### 17.12. Composition and conservation of a nested geometric response
+### A.162. Composition and conservation of a nested geometric response
 
 <!-- nsc-claim:atlas-compositional-gravity -->
 
@@ -12335,11 +12806,11 @@ The [compact proof calculation](../results/summaries/nsc-compositional-proofs-v1
 binds the source hashes and the finite application; full fields need not
 be stored to reproduce it.
 
-## VIII. Physical inheritance and the completed cosmological account
+### A.163. VIII. Physical inheritance and the completed cosmological account
 
 The preceding parts supply a connected set of mathematical constructions. This final part states what they establish collectively, how their physical parameters must be inherited, and the remaining closures needed for one tested cosmological account. Quantum probabilities, matter asymmetry and successive generations have explicit mathematical targets alongside the dark-sector and observer programme.
 
-### 18. Physical inheritance carries law, scale and state
+### A.164. Physical inheritance carries law, scale and state
 
 <!-- nsc-claim:target-constants -->
 
@@ -12375,7 +12846,7 @@ The next physical inheritance result should determine descendant data from
 one stated ancestral preparation and prove that those data admit the next
 transition. That is the composition needed by the proposed hierarchy.
 
-### 19. Geometric spectra, quantum observables and causal scales
+### A.165. Geometric spectra, quantum observables and causal scales
 
 The atlas uses fields and geometry before assigning particle or wave
 language. A localized scalar concentration is a dynamical field profile;
@@ -12417,7 +12888,7 @@ This gives a precise route from geometric intuition to a quantum or causal
 claim: define the state and detector, derive their response, and compare
 the dimensionless result.
 
-### 20. The connected dark-sector mechanism and its remaining physical inputs
+### A.166. The connected dark-sector mechanism and its remaining physical inputs
 
 <!-- nsc-claim:target-dark-sector -->
 
@@ -12429,8 +12900,8 @@ one potential contains a vacuum floor, while its excitation evolves,
 redistributes energy and forms local concentrations.
 
 For that action the minimum density is rho_v=rho_b+epsilon*q^2/2.
-The protected parent evolves the excitation under the same potential. The uniform source theorem in Section 13.15 bounds its
-matter-law normalization, and Section 13.16 carries that bound to an actual
+The protected parent evolves the excitation under the same potential. The uniform source theorem in Section A.62 bounds its
+matter-law normalization, and Section A.63 carries that bound to an actual
 interior luminosity-distance protocol.
 The later local calculations retain both the ambient field and the
 concentration, including their interference, mass current and pressure
@@ -12461,7 +12932,7 @@ early-universe observations. The density fractions are outputs of that
 completed history or parameters independently constrained within it; the
 number "95%" is not imposed as a geometric boundary condition.
 
-### 21. Charged matter and the asymmetry question
+### A.167. Charged matter and the asymmetry question
 
 <!-- nsc-claim:target-antimatter -->
 
@@ -12484,7 +12955,7 @@ cosmology. A baryon-to-photon ratio requires both the baryonic charge and
 the photon/entropy history. This is the route by which the matter chapter
 can join the inherited vacuum and scalar-structure chapters.
 
-### 22. Formation, continuation and successive generations
+### A.168. Formation, continuation and successive generations
 
 <!-- nsc-claim:target-continuation -->
 
@@ -12528,7 +12999,7 @@ offspring and communicating mouths have different matching assumptions.
 The atlas can contain all three and connect them where an explicit map
 and state law warrant the connection.
 
-### 23. The connected result and the route to a tested cosmology
+### A.169. The connected result and the route to a tested cosmology
 
 <!-- nsc-claim:target-measurement -->
 
@@ -12588,11 +13059,11 @@ state, account for its energy and ask what the observer measures. The
 remaining closures carry that same argument to a tested account of our
 local universe.
 
-## Appendix A. Characteristic fields, finite-amplitude response and memory
+### A.170. Earlier characteristic-field appendix
 
 This appendix retains the detailed field-transfer and nonlinear-development calculations. They provide mathematical tools, boundary diagnostics and finite-domain results for the original conformal-scalar branch. Their source, gauge and error statements remain explicit. The main scalar/four-form history uses its own stated action and preparation; the appendix is not an additional mandatory calculation queue for that history.
 
-### A.1. A first field that reaches the interior
+### A.171. A first field that reaches the interior
 
 <!-- nsc-claim:atlas-field-response -->
 
@@ -12627,7 +13098,7 @@ through $t_C=0$, conditional on zero incoming data afterward and the
 proved no-return interval. These are field amplitudes, not energy fractions.
 The calibration does not generate its exterior input.
 
-### A.2. Where the early signal can originate
+### A.172. Where the early signal can originate
 
 <!-- nsc-claim:atlas-field-preparation -->
 
@@ -12663,7 +13134,7 @@ window is $-0.581758951595344\leq T/\ell\leq-0.250230700560700$;
 the no-return null-label gap is $2.634591912177392\ell$. Remote physical
 generation and data beyond that window remain unspecified.
 
-### A.3. A prepared pulse leaves a finite scattering tail
+### A.173. A prepared pulse leaves a finite scattering tail
 
 <!-- nsc-claim:atlas-prepared-response -->
 
@@ -12693,7 +13164,7 @@ within its ten-million/60-CPU-second limits. These numerical controls
 support the finite waveform; the sign follows from the analytic argument.
 No permanent memory, continuum enclosure or later decay law is established.
 
-### A.4. What the signal determines when preparation is unknown
+### A.174. What the signal determines when preparation is unknown
 
 <!-- nsc-claim:atlas-observer-inverse -->
 
@@ -12720,7 +13191,7 @@ An arbitrary fitted trace need not satisfy them. This analytic source
 inverse neither identifies geometry nor reconstructs a source numerically
 from sampled or intensity-only data.
 
-### A.5. The transmitted probe and the wall's stress
+### A.175. The transmitted probe and the wall's stress
 
 <!-- nsc-claim:atlas-scalar-wall-consistency -->
 
@@ -12745,7 +13216,7 @@ Thus no additional scalar surface source or tangential flux jump is
 required at quadratic order. The individual fluxes and smooth bulk
 gravitational source need not vanish.
 
-### A.6. The prepared pulse requires gravitational initial data
+### A.176. The prepared pulse requires gravitational initial data
 
 <!-- nsc-claim:atlas-characteristic-initialization -->
 
@@ -12755,7 +13226,7 @@ and [initial-data owner](../docs/nsc-atlas-characteristic-initialization.md).
 On the source leg, keep the reference lapse, radius $0.4\ell$, both corner
 expansions and affine normalization. Use the affine background radius
 $x=R_0(U_0,V)/\ell$, $V(x)=F(x)/U_0$ and
-$b(x)=B(4[V(x)-V_m]/(V_b-V_a))$; primes here and in section A.7 mean
+$b(x)=B(4[V(x)-V_m]/(V_b-V_a))$; primes here and in section A.177 mean
 $d/dx$. With $p=b(x)/x$,
 $\phi=(\varepsilon/\ell)p+O(\varepsilon^3)$ and
 $\alpha=\kappa_4\varepsilon^2/\ell^2$, write
@@ -12773,7 +13244,7 @@ Einstein-frame equation agree. These are initial radius coefficients,
 not a mass shift or an evolved wall; no finite amplitude or perturbative
 remainder bound is selected.
 
-### A.7. An invariant mass response on the same initial surface
+### A.177. An invariant mass response on the same initial surface
 
 <!-- nsc-claim:atlas-source-mass -->
 
@@ -12802,7 +13273,7 @@ during input is $4.265459834842238$. Independent mixed-radius and improved
 stress laws agree. This is a finite source-leg response relative to the
 reference mass, not a negative total mass, vacuum future or asymptotic energy.
 
-### A.8. The scalar adds no normal-force jump
+### A.178. The scalar adds no normal-force jump
 
 <!-- nsc-claim:atlas-scalar-normal-force -->
 
@@ -12822,7 +13293,7 @@ $\varepsilon^2$. This mean-curvature variation includes the bulk metric,
 induced metric and wall displacement. It does not require zero displacement
 or an unchanged trajectory.
 
-### A.9. Exterior mass closes from the known wall field
+### A.179. Exterior mass closes from the known wall field
 
 <!-- nsc-claim:atlas-wall-mass-closure -->
 
@@ -12844,14 +13315,14 @@ $$
 The original-frame improved stress independently gives
 $d\mu_J/ds=L+dQ/ds$. Neither expression divides by $\beta$.
 This analytic conditional functional is evaluated with the coupled
-quadratic geometry in Sections A.11--A.13. The wall tail alone supplies
+quadratic geometry in Sections A.181--A.183. The wall tail alone supplies
 no late mass sign or plateau. Physical preparation selection, the next
 scalar amplitude, stability and a finite-amplitude validity bound remain
 open. Detailed scalar-chain
 derivations belong to their owners; historical supporting calculations
 are cited at [Zenodo](https://doi.org/10.5281/zenodo.23090015).
 
-### A.10. Cap mass and a regular wall displacement functional
+### A.180. Cap mass and a regular wall displacement functional
 
 <!-- nsc-claim:atlas-cap-wall-response -->
 
@@ -12874,7 +13345,7 @@ $$
 \frac{\mathfrak{m}_-}{\ell}=\frac{h^2r^3}{2}+\alpha\nu_-+O(\alpha^2).
 $$
 
-Here $\mu_+$ is the exterior coefficient $\mu_J$ of Section A.9.
+Here $\mu_+$ is the exterior coefficient $\mu_J$ of Section A.179.
 The cap vacuum is evaluated at the actual radius: its total quadratic
 mass coefficient on the reference wall is
 $\nu_-+3h^2x^2\rho/2$. Holding that vacuum mass constant would omit a
@@ -12944,7 +13415,7 @@ the corrected arrival map and subsequent scalar response. A nonzero
 allowed amplitude, a controlled remainder, formation and stability remain
 separate questions.
 
-### A.11. The prepared field drives a smooth exterior metric response
+### A.181. The prepared field drives a smooth exterior metric response
 
 <!-- nsc-claim:atlas-bulk-response -->
 
@@ -12957,7 +13428,7 @@ and [bulk-response owner](../docs/nsc-atlas-bulk-response.md), with separate
 and [time tolerance](../results/development/nsc-atlas-bulk-response-v1/time/response.json)
 comparisons.
 
-The gravitational data of Sections A.6--A.7 determine a computed smooth
+The gravitational data of Sections A.176--A.177 determine a computed smooth
 exterior response at quadratic order on $[U_0,U_a]\times[V_a,V_b]$, whose two past null
 sides are specified. This rectangle lies inside the retained wedge. Its
 final transverse leg $U=U_a$ supplies data for a later extension toward
@@ -12978,7 +13449,7 @@ $$
 Integrating their right sides in $U$ gives a linear evolution in $V$.
 The quiet bottom has $y=z=0$. At $U=U_0$, let $x=r_0(U_0,V)$ and
 let $h_{\mathrm{init}}$ denote the original Jordan radius coefficient from
-Section A.6. The source values in the unchanged coordinate gauge are
+Section A.176. The source values in the unchanged coordinate gauge are
 
 $$
 y_0=xh_{\mathrm{init}}-\frac{x^2p^2}{12},\qquad
@@ -13022,12 +13493,12 @@ between 17.16 and 21.91 process-CPU seconds within its 120-second budget.
 These are finite numerical comparisons, not rigorous error enclosures or
 a selected nonzero physical amplitude. They establish a sourced exterior
 metric response on the rectangle and provide its transverse radius/lapse
-data. Sections A.12--A.13 continue to the moving wall and cap using the
+data. Sections A.182--A.183 continue to the moving wall and cap using the
 same source and material junction. The full finite-amplitude sourced
 configuration, corrected observer signal and finite-amplitude remainder
 have not yet been established.
 
-### A.12. The same field displaces the wall and changes its exterior clock
+### A.182. The same field displaces the wall and changes its exterior clock
 
 <!-- nsc-claim:atlas-wall-evolution -->
 
@@ -13037,7 +13508,7 @@ Derivation and calculation: [field refinement](../results/development/nsc-atlas-
 and the [wall-evolution owner](../docs/nsc-atlas-wall-evolution.md).
 
 The leading field supplies a computed response on the moving boundary,
-with the action, source and quiet corner of Sections A.6--A.11 unchanged.
+with the action, source and quiet corner of Sections A.176--A.181 unchanged.
 Extending its first-derivative evaluator to the retained wedge requires the
 correct lower endpoint: a column with $U>U_a$ begins where it meets the wall.
 At that event $\chi_U=0$, while $p_U=-p r_{0,U}/x$ is generally nonzero.
@@ -13056,7 +13527,7 @@ $$
 Their source constants are already fixed by the characteristic data.
 At the wall, frame conversion gives $\mu_+^{\mathrm{radial}}=\mu_{E,W}+Q_+$
 and $\zeta_{J,W}=\zeta_{E,W}+p^2/4$. The independent timelike mass
-functionals of Section A.10 determine $\mu_+$ and $\nu_-$, and hence the
+functionals of Section A.180 determine $\mu_+$ and $\nu_-$, and hence the
 quiet-anchored displacement $\rho$. The radial and timelike mass values are
 compared, rather than equated by the numerical implementation.
 
@@ -13114,11 +13585,11 @@ that residual alone is not a total metric error estimate.
 These computations connect the sourced exterior and the two-sided mass
 functionals to an actual wall displacement and exterior null embedding at
 quadratic order. Their numerical differences are refinement diagnostics.
-Section A.13 supplies the cap metric and central arrival correction.
+Section A.183 supplies the cap metric and central arrival correction.
 The next scalar waveform and finite-amplitude remainder remain to be
 calculated.
 
-### A.13. The cap geometry changes the central arrival clock
+### A.183. The cap geometry changes the central arrival clock
 
 <!-- nsc-claim:atlas-cap-response -->
 
@@ -13237,7 +13708,7 @@ perturbed wave equation and source continuation are specified in the next
 section. Propagating that correction and establishing finite-amplitude
 control remain the next physical connection.
 
-### A.14. Geometry supplies an outgoing scalar boundary correction
+### A.184. Geometry supplies an outgoing scalar boundary correction
 
 <!-- nsc-claim:atlas-scalar-boundary -->
 
@@ -13301,7 +13772,7 @@ equation. The following calculation resolves its interpolation and
 propagates the exterior correction. No new physical preparation mechanism
 or nonzero finite-amplitude validity range is asserted.
 
-### A.15. The exterior scalar correction propagates on the computed geometry
+### A.185. The exterior scalar correction propagates on the computed geometry
 
 <!-- nsc-claim:atlas-scalar-evolution -->
 
@@ -13369,7 +13840,7 @@ preparation. Sampled refinement differences are not uniform bounds.
 The central readout additionally requires reflected cap forcing and the
 observer-clock pullback; no finite amplitude or remainder is fixed here.
 
-### A.16. Reflected cap transport gives the central scalar correction
+### A.186. Reflected cap transport gives the central scalar correction
 
 <!-- nsc-claim:atlas-central-scalar -->
 
@@ -13470,7 +13941,7 @@ the bulk, moving interface and regular centre, with a quantitative
 remainder for this observable, remains open. The following calculation tests
 the coupled equations on the original window without assuming that estimate.
 
-### A.17. A nonlinear coupled window and its unresolved accuracy
+### A.187. A nonlinear coupled window and its unresolved accuracy
 
 <!-- nsc-claim:atlas-nonlinear-background -->
 
@@ -13570,7 +14041,7 @@ evolution. No continuum error enclosure, converged nonlinear spacetime,
 central-arrival waveform, formation mechanism or stability result follows
 from this window.
 
-### A.18. Profile-knot phase and a finer temporal comparison
+### A.188. Profile-knot phase and a finer temporal comparison
 
 <!-- nsc-claim:atlas-ssprk3-refinement -->
 
@@ -13656,7 +14127,7 @@ Their manifest binds 86 inputs and producers. A separate authentication
 uses 1,418,330 points, reconstructs midpoint data and two final stages,
 and replays no source integration or trajectory.
 
-### A.19. A common exterior derivative and a mixed accuracy result
+### A.189. A common exterior derivative and a mixed accuracy result
 
 <!-- nsc-claim:atlas-operator-comparison -->
 
@@ -13724,7 +14195,7 @@ The manifest binds 104 files. Separate authentication uses 4,040,624 points
 and reconstructs saved fields, diagnostics and two final stages without
 source integration or trajectory replay.
 
-### A.20. A finite-amplitude onset solution
+### A.190. A finite-amplitude onset solution
 
 <!-- nsc-claim:atlas-finite-onset-existence -->
 
@@ -13813,7 +14284,7 @@ and coordinate identities. No new physical trajectory is used in this proof.
 These bounds do not certify the saved numerical histories, a perturbative
 remainder, central arrival, formation or observational agreement.
 
-### A.21. Amplitude dependence on the onset cell
+### A.191. Amplitude dependence on the onset cell
 
 <!-- nsc-claim:atlas-onset-parameter-response -->
 
@@ -13827,7 +14298,7 @@ retain the numerical input bounds; the linked derivation supplies the
 parameter theorem. Neither record evaluates its Taylor constant.
 
 **Amplitude result.** On exactly the source cell and coupling interval of
-Section A.20, the normalized solution has a continuous first amplitude
+Section A.190, the normalized solution has a continuous first amplitude
 derivative into C1 comparison jets and a continuous second amplitude
 derivative into C0 comparison jets. At the interval endpoints, derivatives
 are one-sided. The wall radius and anchored central clock are included.
@@ -13889,7 +14360,7 @@ $$
 $$
 
 This is an analytic quadratic remainder on the onset domain. The general
-state constant is finite; Section A.22 supplies explicit remainder bounds
+state constant is finite; Section A.192 supplies explicit remainder bounds
 for selected geometric outputs by a positive comparison. It also identifies
 their first coefficients by matching the source, gauge and quiet initial
 data. Errors in the older numerical histories require their own bounds.
@@ -13899,7 +14370,7 @@ $\alpha$ at zero. The quiet core, original source and coupling interval are
 unchanged. Continuation through central arrival and an error bound for the
 observer waveform remain separate steps.
 
-### A.22. Uniform geometric remainders and signed endpoint response
+### A.192. Uniform geometric remainders and signed endpoint response
 
 <!-- nsc-claim:atlas-onset-geometric-signs -->
 
@@ -13914,7 +14385,7 @@ The [comparison and frame derivation](../docs/nsc-atlas-finite-amplitude.md#unif
 connects these compact certificates.
 
 Keep exactly the source cell, action, quiet data and coupling interval of
-Section A.20. All quantities here are dimensionless. The outputs are the
+Section A.190. All quantities here are dimensionless. The outputs are the
 Einstein areal radius $R_E$, the material Jordan areal radius $R_J$, and
 the wall's centre-anchored polar-slice label $T_W$. Their first coefficients
 are the actual derivatives of the constructed solution at $\alpha=0$.
@@ -13946,7 +14417,7 @@ This uses one rational three-by-three solve and interval algebra, with no
 new field evolution or grid scan.
 
 **Material frame and event identification.** With the normalized canonical
-field $f=X/R_E$ of Section A.20, the exact conversion is
+field $f=X/R_E$ of Section A.190, the exact conversion is
 
 $$
 R_J=R_E\cosh\!\left(\sqrt{\alpha/6}\,f\right),\qquad
@@ -13976,7 +14447,7 @@ $v$ is the reference proper-time radial velocity, and
 $\eta_{\mathrm{emb}}$ is the exterior embedding coefficient defined by
 $V_W=V_0(1+\alpha\eta_{\mathrm{emb}})+O(\alpha^2)$.
 Its interval includes both signs and is retained in the conversion;
-$\eta_{\mathrm{emb}}$ is distinct from the cap chart coordinate of Section A.21.
+$\eta_{\mathrm{emb}}$ is distinct from the cap chart coordinate of Section A.191.
 
 **Endpoint result.** The following are outward-rounded bounds. The last
 column gives the shift from the vacuum reference at $x_R$ and
@@ -14016,7 +14487,7 @@ rerunning a field solution. Continuation to central arrival, numerical
 trajectory error, preparation selection and observational comparison
 retain their separate requirements.
 
-### A.23. The completed full-label numerical trial
+### A.193. The completed full-label numerical trial
 
 <!-- nsc-claim:atlas-fixed-endpoint-trial -->
 
@@ -14106,7 +14577,7 @@ $7.11\times10^{-11}$; energy plus metric/input work closes to
 $1.75\times10^{-15}$. Its prescribed quiet geometry and manufactured
 forcing do not repair or certify the finite-amplitude P001 evolution.
 
-### A.24. A separate finite model with geometric feedback
+### A.194. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
 
@@ -14152,10 +14623,10 @@ regions of one evolving model.
 Its local reduction keeps the original first two mode columns and eliminates
 their Hilbert-space complement. That complement includes modes with support
 inside and outside the spatial observation window. Consequently it is not
-the parent end of Section 10, and its Hamiltonian cannot be transferred to
+the parent end of Section A.29, and its Hamiltonian cannot be transferred to
 the wall model without a field-theoretic identification.
 
-### A.25. Memory is a consequence of elimination, not an added reservoir
+### A.195. Memory is a consequence of elimination, not an added reservoir
 
 For a time-dependent Hermitian block Hamiltonian with retained block $A(t)$,
 coupling $B(t)$ and complementary block $D(t)$, let $U_E(t,s)$
@@ -14205,7 +14676,7 @@ information. The next bridge to the atlas would derive such a regional
 Hamiltonian and state from a particular matched spacetime and field, rather
 than labeling these finite modes as universes.
 
-### A.26. The retained local incoming gate
+### A.196. The retained local incoming gate
 
 <!-- nsc-claim:local-source-insertion-majorant -->
 
@@ -14246,6 +14717,7 @@ does not determine $\Lambda_{\mathrm{eff}}$. Its paused campaign does not
 invalidate the finite inheritance theorem or the scalar-chain results.
 Retired supporting records are cited at
 [Zenodo](https://doi.org/10.5281/zenodo.23090015).
+
 
 ## Appendix B. Evidence, attribution and reproducible mathematics
 
@@ -14325,7 +14797,7 @@ Each calculation retains its own domain; arrows do not declare questions solved.
 
 The index contains 330 distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.
 
-A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
+A dagger marks a work retained in the reading library but not cited in the manuscript before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.
 
 | Recorded reading route | Source identifiers |
 | --- | --- |
@@ -14342,7 +14814,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Studies | [1601.06809 †](https://arxiv.org/abs/1601.06809), [1605.01603 †](https://arxiv.org/abs/1605.01603), [1606.02728 †](https://arxiv.org/abs/1606.02728), [1606.05831 †](https://arxiv.org/abs/1606.05831), [1607.07791 †](https://arxiv.org/abs/1607.07791) |
 | Studies | [1609.01731 †](https://arxiv.org/abs/1609.01731), [1612.07281 †](https://arxiv.org/abs/1612.07281), [1704.03143 †](https://arxiv.org/abs/1704.03143), [1704.04807 †](https://arxiv.org/abs/1704.04807), [1708.02951 †](https://arxiv.org/abs/1708.02951) |
 | Studies | [1710.05834 †](https://arxiv.org/abs/1710.05834), [1710.10155 †](https://arxiv.org/abs/1710.10155), [1711.02080 †](https://arxiv.org/abs/1711.02080), [1712.03876 †](https://arxiv.org/abs/1712.03876), [1803.08827 †](https://arxiv.org/abs/1803.08827) |
-| Studies | [1803.08930 †](https://arxiv.org/abs/1803.08930), [1805.05107 †](https://arxiv.org/abs/1805.05107), [1807.06209 †](https://arxiv.org/abs/1807.06209), [1807.06211 †](https://arxiv.org/abs/1807.06211), [1807.08361 †](https://arxiv.org/abs/1807.08361) |
+| Studies | [1803.08930 †](https://arxiv.org/abs/1803.08930), [1805.05107 †](https://arxiv.org/abs/1805.05107), [1807.06209](https://arxiv.org/abs/1807.06209), [1807.06211 †](https://arxiv.org/abs/1807.06211), [1807.08361 †](https://arxiv.org/abs/1807.08361) |
 | Studies | [1812.05590 †](https://arxiv.org/abs/1812.05590), [1902.02222 †](https://arxiv.org/abs/1902.02222), [1903.07543 †](https://arxiv.org/abs/1903.07543), [1905.08255 †](https://arxiv.org/abs/1905.08255), [1906.02552 †](https://arxiv.org/abs/1906.02552) |
 | Studies | [1908.08050 †](https://arxiv.org/abs/1908.08050), [1910.01648 †](https://arxiv.org/abs/1910.01648), [2003.08398 †](https://arxiv.org/abs/2003.08398), [2008.02136 †](https://arxiv.org/abs/2008.02136), [2008.10995 †](https://arxiv.org/abs/2008.10995) |
 | Studies | [2011.03547 †](https://arxiv.org/abs/2011.03547), [2012.06401 †](https://arxiv.org/abs/2012.06401), [2112.05819 †](https://arxiv.org/abs/2112.05819), [2206.00014 †](https://arxiv.org/abs/2206.00014), [2211.08477 †](https://arxiv.org/abs/2211.08477) |

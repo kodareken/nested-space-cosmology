@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+  "current_receipt_commit_parent": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
   "files": [
     {
       "bytes": 3120,
@@ -29,7 +29,7 @@
     {
       "bytes": 10355,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "import_bytes": 2562,
       "import_sha256": "752e072c68cbfc15953e7c1e1384b78378d71148ffdb4a731f8c308cc700104d",
       "migration_disposition": "folded_into_current_root_owner",
@@ -59,9 +59,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 5665,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 6019,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -69,7 +69,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "3527b988cd3cb95d9195b96918ae8737bbf1f67812d54f458683e8020219a224"
+      "sha256": "82a2acc14c67f585cbeb5f56504a2626f1bf62b144c99872bd529a8ff239bbc7"
     },
     {
       "bytes": 30221,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 300821,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 301135,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "9447e1fbcd6f212a473d3e4b0c0c6bb4dd29f5e063908c95a7a74e92f87440be"
+      "sha256": "2b064ac92b16fefdedfe521073ef596baf827606a33eac6a503f227142436716"
     },
     {
       "bytes": 164712,
@@ -10335,7 +10335,7 @@
     {
       "bytes": 491380,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
       "sha256": "bdc93bc8a4b28ad88b36d63e2fc0e85bde8f85730129bde372e3855cb8877072"
@@ -11001,7 +11001,7 @@
     {
       "bytes": 27511,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "docs/nsc-atlas-offset-thermodynamics.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "a7a9b5eef17c3ed688b5b36059d02c5ee684728d14a094512730165645635eed"
@@ -11181,12 +11181,12 @@
       "sha256": "a272dfc872c0125a518345f4cb54a50e09cfc4e42fce40fa3e17a888bf4f66c2"
     },
     {
-      "bytes": 70158,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 70232,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "docs/nsc-atlas-source-map.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "5f853a92e54fe16e7c4a17318bd792e876cf0cf80989d64a7bb346d23efcd975"
+      "sha256": "a84285ca23bdb6055024652f4ae3a0a0c03379b6b9c28eb841341430f7dee76b"
     },
     {
       "bytes": 10730,
@@ -12224,17 +12224,17 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 29605,
-      "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
-      "changed_from_commit": "a8cf9b602bba2ed21aa211f2dacc2ef088bea642",
+      "bytes": 43856,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "docs/papers.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "4861c7c288d3033d2fdfd6aae64ba1cff1983f44ecd163682b32acc87b09cbd5"
+      "sha256": "2768f28027d0e083b8384eefaba0cdd9ce3b24222e2d38ed9021f38eb60e6f04"
     },
     {
       "bytes": 18037,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
       "sha256": "1c2bb094c18b8a38a241d2a4596aae39c4f6c0550063a73bf2c27319251bc6f3"
@@ -12262,12 +12262,12 @@
       "sha256": "9a2e7b2cd5f2744dc7e7ee72729af6099f810072b6068c5c23055b82dc4a9dbd"
     },
     {
-      "bytes": 59244,
-      "change": "Complete inherited scalar momentum kicks with York/Einstein initial constraints and an exact amplitude-independent shear/internal-coupling relation.",
-      "changed_from_commit": "6112430909f557abe72df6aa4c05959517c219de",
+      "bytes": 59558,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "fd435ab4216401d76078b6790f3ff8a050fca3ce82a651d9043ca4b747d8ea33"
+      "sha256": "08547482d373addd5d496c724cd260c13b33e0d98bc17cfb95a6653670c79826"
     },
     {
       "bytes": 18356,
@@ -12336,28 +12336,28 @@
       "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
-      "bytes": 45521,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 46021,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "paper/build-manifest.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "9a2d2fe850ada1cd722a0546cf79e50403d3a6ef9f5029b9f53fb42e344e03b3"
+      "sha256": "3c0443682362c055e1a04ecbc22f60d6180b98755764c1d794162da5a0bf2c31"
     },
     {
       "bytes": 3207,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "paper/catalog.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "2dde5191467b68d2bfc193840c4f71a501f2a20aa28e4cd4f6f4e797774c5119"
+      "sha256": "fd28610d4d9d80e6b9177de343d76bed097e5dbb37077514f0f84c8583bfe6b1"
     },
     {
-      "bytes": 53138,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 53523,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "paper/claim-bindings.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "956515ee6af7e932e3962ccf4dd2e08efab4e10f696c1a8613e31250c934b05c"
+      "sha256": "a59e231ebdc6df11d810ccf0ac28095fe1fbdeb097b01de8ef1f043ef79a8f03"
     },
     {
       "bytes": 226492,
@@ -12489,27 +12489,27 @@
     },
     {
       "bytes": 398,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "paper/metadata.json",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "cdadbaf6f38d86ca9a863dcb538c84a2178b897586ea1008d0759a07253f9d3d"
+      "sha256": "f8e300eb3615d21deb79d680fc29c3690e55e605ede7d0bb497d0eb27b9f7cce"
     },
     {
-      "bytes": 690310,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 712320,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "paper/nested-space-cosmology.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "20475b9d5008b11e690e305b97fadca73d4a34f184ca374f6cbb9ecc75c4e0b2"
+      "sha256": "6d71f75defbef3e805cf77e4cef3191be6a4aa769773a97a44a7f6f2565a25aa"
     },
     {
-      "bytes": 21270520,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 21470233,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "paper/nested-space-cosmology.pdf",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "cbbef0e8317fa00aa56488d5c5e10da7acead89dc5b558c9cc46ac5acc0c0ae9"
+      "sha256": "82adcadfcf314bf352f35108697f114069478b76380a6fcd5b48032b11d3f476"
     },
     {
       "bytes": 3283,
@@ -30500,7 +30500,7 @@
     {
       "bytes": 24280,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "results/prediction-register.json",
       "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
       "sha256": "d282a03ba7e56536770399a56d0e52ff3ff8fab0fdd770045f053d8535673632"
@@ -31264,7 +31264,7 @@
     {
       "bytes": 4486,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "results/summaries/nsc-atlas-flow-omega-evaluation-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "957ddb3dc9fb1b6b6dd566c724053483b8ad3c9de8eed92d7aff95c5ae609946"
@@ -31272,7 +31272,7 @@
     {
       "bytes": 2197,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "results/summaries/nsc-atlas-flow-omega-forecast-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "dbae954737d5b557e46c93214fda9e761cf6b0d4c975a61d80cd0e319c7e7bea"
@@ -32098,12 +32098,12 @@
       "sha256": "a2079027fee2f894cc087fb016c333b8b0a821fc386a0ee6661b21d207c559c3"
     },
     {
-      "bytes": 5221,
-      "change": "Connect energy depletion to averaged boundary work, add exact observer controls, and integrate the clarified regional geometry programme and complete source index into the atlas PDF.",
-      "changed_from_commit": "23a2f501b774f77aefec27d9bf5a153e4bc8b6e7",
+      "bytes": 5242,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "scripts/build_nsc_atlas_source_map.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "ee183c96e22cf9ec81a4cf0395d0d8f483aa872e76eb4cb62b4f7904c6442de8"
+      "sha256": "5ec61e40e7d62729f77bbbfa75340bfcae920961b1a0f9bb70cf5c5a05ca7ada"
     },
     {
       "bytes": 64797,
@@ -32369,7 +32369,7 @@
     {
       "bytes": 7694,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "scripts/check_nsc_atlas_flow_cosmology.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "494931eee0fb62182ba2bef1bfc0f537f12575084ad8ab466f4a144735161ad2"
@@ -33304,12 +33304,12 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 36273,
+      "bytes": 36307,
       "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "scripts/check_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "7315b289a52af11c809cd255480f1e3a818a386a57f2c0aef47278e158a54a9f"
+      "sha256": "78ec5575daf0f762c0d32e038f775f00f8f6519216e7a8c75574b6bafd847e00"
     },
     {
       "bytes": 8662,
@@ -46450,12 +46450,12 @@
       "sha256": "1d4d86c5cb2d92758a511419414b490815a77c0eca535ec12d5c9edf20cf261d"
     },
     {
-      "bytes": 9794,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 10597,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
       "path": "tests/test_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "d59df641f754747cfb9122ca09a70f763046d12977e6ca9035c060620c0f2fd5"
+      "sha256": "4f2b49db67fef71093c2691639cdc2a6e2be5c96ab313e7d6ee6e9579ff7a7af"
     },
     {
       "bytes": 1420,

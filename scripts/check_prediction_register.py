@@ -583,7 +583,7 @@ def check_register(root, register):
              ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004"],
              ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004", "NSC-P005"],
              ["NSC-P001", "NSC-P002", "NSC-P003", "NSC-P004", "NSC-P005", "NSC-P006"]),
-            "unique consecutive P001--P006 entries in order required")
+            "one currently registered P001 and unique consecutive optional P002--P006 entries required")
     entry = entries[0]
     exact(entry["id"], "NSC-P001", "prediction identity")
     require("## NSC-P001" in document, "prediction missing from reader-facing register")

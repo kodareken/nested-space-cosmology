@@ -37,7 +37,7 @@ def outputs():
     lib=extract((ROOT/'docs/arxiv-studies.md').read_text(encoding='utf-8'),'library')
     main=extract(base,'paper');ids=sorted(set(lib)|set(main));groups=defaultdict(list)
     doc=['# Atlas source connections','',
-         f'This navigation index contains **{len(ids)} distinct arXiv works**: {len(main)} are cited in the main argument and {len(set(lib)-set(main))} are retained in the reading library only.',
+         f'This navigation index contains **{len(ids)} distinct arXiv works**: {len(main)} are cited in the main argument or technical appendices and {len(set(lib)-set(main))} are retained in the reading library only.',
          '', 'The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.',
          '', '| arXiv work | Recorded reading route | Recorded mathematical role | Main manuscript locations |','| --- | --- | --- | --- |']
     for ident in ids:
@@ -49,7 +49,7 @@ def outputs():
         doc.append(f'| {link} | {group.replace("|","/")} | {role} | {locations} |')
     appendix=[START,'## Appendix C. Complete arXiv source route index','',
         f'The index contains {len(ids)} distinct arXiv works recorded in the research library or cited above. It is a map of sources and reading routes, not a claim that all actions or domains have already been matched.',
-        '', 'A dagger marks a work retained in the reading library but not cited in the main argument before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.',
+        '', 'A dagger marks a work retained in the reading library but not cited in the manuscript before this appendix. The [detailed index](../docs/nsc-atlas-source-map.md) gives manuscript locations; the [reading library](../docs/arxiv-studies.md) retains versions, inspected passages and unread boundaries.',
         '', '| Recorded reading route | Source identifiers |','| --- | --- |']
     emitted=[]
     for group,items in groups.items():
