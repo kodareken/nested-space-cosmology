@@ -1,0 +1,3301 @@
+{
+  "analysis_sources_unchanged": true,
+  "analytic": {
+    "fixed_point_symmetry": "Both chi and slice-normal Pi have proper-flip character(--), so they vanish at the fixed cores at all nonlinear orders; this does not alone select unit winding.",
+    "index": "For positive mu and the declared positive normal-coordinate loops at the two selected cores, the nondegenerate two-mode index is sign(D). Nonlinear index is checked from actual fields.",
+    "momentum_curl": "j=-Pi_chi dchi-Pi_S dS, hence dj=dchi wedge dPi_chi+dS wedge dPi_S.",
+    "two_mode_curl": "dj_chi=D dY1 wedge dY2.",
+    "two_mode_zero_condition": "If D=q1*p2-q2*p1!=0, Z=chi+iPi/mu=0 iff Y1=Y2=0.",
+    "zero_circles": [
+      "X1=X2=0",
+      "X1=X4=0"
+    ]
+  },
+  "budget_seconds": 180.0,
+  "cases": [
+    {
+      "angular_refinement": [],
+      "caller_admitted_sparse_cache_sha256": "2e946e192367d9787b0310022e6007dfea8fa692fcd33d201ff8fb23ebdc6161",
+      "coordinate_t": 0.9458871122012036,
+      "core_surface_scope": "Direct sampled round S2 surfaces about the phase cores; finite radii and angular sampling do not prove absence of other trapped surfaces.",
+      "core_surface_search": [
+        {
+          "area": 2.6004646744600652,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "reference_radius": 0.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -4.399109474226579,
+            -4.164785835748889
+          ],
+          "theta_minus_rms": 4.250069230206904,
+          "theta_plus_max_abs": 4.505916043512623,
+          "theta_plus_range": [
+            4.445389992651974,
+            4.505916043512623
+          ],
+          "theta_plus_rms": 4.474111115515347
+        },
+        {
+          "area": 10.367087539097003,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.4,
+            0.4
+          ],
+          "reference_radius": 0.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -2.2238280881245305,
+            -1.8835866713444926
+          ],
+          "theta_minus_rms": 2.017043384737072,
+          "theta_plus_max_abs": 2.251024818234844,
+          "theta_plus_range": [
+            2.2166887917545135,
+            2.251024818234844
+          ],
+          "theta_plus_rms": 2.2281976341382657
+        },
+        {
+          "area": 22.996250575732354,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.6000000000000001,
+            0.6000000000000001
+          ],
+          "reference_radius": 0.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.4801592216413535,
+            -1.0646625997803503
+          ],
+          "theta_minus_rms": 1.2380179331408474,
+          "theta_plus_max_abs": 1.4713009849109895,
+          "theta_plus_range": [
+            1.3956892883728278,
+            1.4713009849109895
+          ],
+          "theta_plus_rms": 1.4279573539045216
+        },
+        {
+          "area": 39.3057063449535,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.8000000000000002,
+            0.8000000000000002
+          ],
+          "reference_radius": 0.8,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.0477095946511001,
+            -0.6096013852426023
+          ],
+          "theta_minus_rms": 0.8098122434793931,
+          "theta_plus_max_abs": 1.0626549210333114,
+          "theta_plus_range": [
+            0.8537757098103033,
+            1.0626549210333114
+          ],
+          "theta_plus_rms": 0.9707738572532206
+        },
+        {
+          "area": 56.550724506118456,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.0,
+            1.0
+          ],
+          "reference_radius": 1.0,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.691669508044199,
+            -0.29979708755531387
+          ],
+          "theta_minus_rms": 0.5123954611962307,
+          "theta_plus_max_abs": 0.8075160856198899,
+          "theta_plus_range": [
+            0.3971070705822465,
+            0.8075160856198899
+          ],
+          "theta_plus_rms": 0.6513104069721289
+        },
+        {
+          "area": 70.90815068857536,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.2,
+            1.2
+          ],
+          "reference_radius": 1.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.5653306008422802,
+            -0.06272121541236605
+          ],
+          "theta_minus_rms": 0.2914392397429175,
+          "theta_plus_max_abs": 0.6244476795495693,
+          "theta_plus_range": [
+            0.031824419062615766,
+            0.6244476795495693
+          ],
+          "theta_plus_rms": 0.4249939069724994
+        },
+        {
+          "area": 79.5778948928803,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.4,
+            1.4
+          ],
+          "reference_radius": 1.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.46158296239414237,
+            0.13380965905174044
+          ],
+          "theta_minus_rms": 0.1746291407145721,
+          "theta_plus_max_abs": 0.4557954045783449,
+          "theta_plus_range": [
+            -0.21879284606990224,
+            0.4557954045783449
+          ],
+          "theta_plus_rms": 0.27569694726449
+        },
+        {
+          "area": 81.83228867307955,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.6,
+            1.6
+          ],
+          "reference_radius": 1.5999999999999999,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.3390309787534966,
+            0.3232483844180226
+          ],
+          "theta_minus_rms": 0.20477860311564397,
+          "theta_plus_max_abs": 0.37858268289109215,
+          "theta_plus_range": [
+            -0.37858268289109215,
+            0.2622534029985251
+          ],
+          "theta_plus_rms": 0.18438434986340266
+        },
+        {
+          "area": 77.70765140622936,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.7999999999999998,
+            1.7999999999999998
+          ],
+          "reference_radius": 1.7999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.1582923214703722,
+            0.506633632885301
+          ],
+          "theta_minus_rms": 0.3126945436789197,
+          "theta_plus_max_abs": 0.49279611504586923,
+          "theta_plus_range": [
+            -0.49279611504586923,
+            0.07933611248173289
+          ],
+          "theta_plus_rms": 0.19360810939837045
+        },
+        {
+          "area": 67.22042018896371,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.9999999999999993,
+            1.9999999999999993
+          ],
+          "reference_radius": 1.9999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.12701275454460192,
+            0.6742229747345818
+          ],
+          "theta_minus_rms": 0.48227879338641866,
+          "theta_plus_max_abs": 0.5981915743790965,
+          "theta_plus_range": [
+            -0.5981915743790965,
+            -0.12670530089997678
+          ],
+          "theta_plus_rms": 0.3478238221872462
+        },
+        {
+          "area": 51.64093813454268,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.1999999999999997,
+            2.1999999999999997
+          ],
+          "reference_radius": 2.1999999999999997,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.5224704703864212,
+            0.8717231986838718
+          ],
+          "theta_minus_rms": 0.7341930976451353,
+          "theta_plus_max_abs": 0.7828351581953117,
+          "theta_plus_range": [
+            -0.7828351581953117,
+            -0.3806972652897026
+          ],
+          "theta_plus_rms": 0.5907134470771342
+        },
+        {
+          "area": 34.291079093096855,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.4,
+            2.4
+          ],
+          "reference_radius": 2.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.0013039652505582,
+            1.1614163261614643
+          ],
+          "theta_minus_rms": 1.0858599929172832,
+          "theta_plus_max_abs": 1.1628746306285214,
+          "theta_plus_range": [
+            -1.1628746306285214,
+            -0.7222333446867919
+          ],
+          "theta_plus_rms": 0.9162108355770567
+        },
+        {
+          "area": 18.849742895378963,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.6,
+            2.6
+          ],
+          "reference_radius": 2.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.5859063809238734,
+            1.6423205804835717
+          ],
+          "theta_minus_rms": 1.608179575897816,
+          "theta_plus_max_abs": 1.6448930683098246,
+          "theta_plus_range": [
+            -1.6448930683098246,
+            -1.2481900041275353
+          ],
+          "theta_plus_rms": 1.4110521933892728
+        },
+        {
+          "area": 2.600464674879497,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "reference_radius": 0.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -4.399173468703043,
+            -4.165055521377568
+          ],
+          "theta_minus_rms": 4.250069226112838,
+          "theta_plus_max_abs": 4.505871113001476,
+          "theta_plus_range": [
+            4.4452530997261865,
+            4.505871113001476
+          ],
+          "theta_plus_rms": 4.474111114084299
+        },
+        {
+          "area": 10.367087537916277,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.4,
+            0.4
+          ],
+          "reference_radius": 0.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -2.2229157309374754,
+            -1.8837436164374843
+          ],
+          "theta_minus_rms": 2.0170433879817016,
+          "theta_plus_max_abs": 2.2510704601774516,
+          "theta_plus_range": [
+            2.2166997788335183,
+            2.2510704601774516
+          ],
+          "theta_plus_rms": 2.228197633669761
+        },
+        {
+          "area": 22.996250578481884,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.6000000000000001,
+            0.6000000000000001
+          ],
+          "reference_radius": 0.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.4819809205965335,
+            -1.0647846516601747
+          ],
+          "theta_minus_rms": 1.23801793037914,
+          "theta_plus_max_abs": 1.4713078918662463,
+          "theta_plus_range": [
+            1.396255097277268,
+            1.4713078918662463
+          ],
+          "theta_plus_rms": 1.4279573546883073
+        },
+        {
+          "area": 39.30570634061108,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.8000000000000002,
+            0.8000000000000002
+          ],
+          "reference_radius": 0.8,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.0461341482079491,
+            -0.6095156485506458
+          ],
+          "theta_minus_rms": 0.8098122452568386,
+          "theta_plus_max_abs": 1.0620051061503781,
+          "theta_plus_range": [
+            0.8532061668104222,
+            1.0620051061503781
+          ],
+          "theta_plus_rms": 0.9707738573322262
+        },
+        {
+          "area": 56.5507245106365,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.0,
+            1.0
+          ],
+          "reference_radius": 1.0,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.6891502926849251,
+            -0.2993491318589814
+          ],
+          "theta_minus_rms": 0.5123954596577864,
+          "theta_plus_max_abs": 0.8073314381596672,
+          "theta_plus_range": [
+            0.40029922585125843,
+            0.8073314381596672
+          ],
+          "theta_plus_rms": 0.6513104065971959
+        },
+        {
+          "area": 70.90815068537833,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.2,
+            1.2
+          ],
+          "reference_radius": 1.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.5619764220957737,
+            -0.061834446488771955
+          ],
+          "theta_minus_rms": 0.2914392399816792,
+          "theta_plus_max_abs": 0.6242673272958033,
+          "theta_plus_range": [
+            0.038812754312261666,
+            0.6242673272958033
+          ],
+          "theta_plus_rms": 0.4249939083551396
+        },
+        {
+          "area": 79.57789489487661,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.4,
+            1.4
+          ],
+          "reference_radius": 1.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.4611128710441581,
+            0.13479907087278975
+          ],
+          "theta_minus_rms": 0.17462914260368384,
+          "theta_plus_max_abs": 0.4554507251706456,
+          "theta_plus_range": [
+            -0.2207320117442102,
+            0.4554507251706456
+          ],
+          "theta_plus_rms": 0.2756969460219234
+        },
+        {
+          "area": 81.83228867192176,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.6,
+            1.6
+          ],
+          "reference_radius": 1.5999999999999999,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.342608571839905,
+            0.32351904020027356
+          ],
+          "theta_minus_rms": 0.20477860393956376,
+          "theta_plus_max_abs": 0.3862891325772123,
+          "theta_plus_range": [
+            -0.3862891325772123,
+            0.2638249182178192
+          ],
+          "theta_plus_rms": 0.184384352834422
+        },
+        {
+          "area": 77.70765140666595,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.7999999999999998,
+            1.7999999999999998
+          ],
+          "reference_radius": 1.7999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.16230120489931774,
+            0.5058592477905853
+          ],
+          "theta_minus_rms": 0.31269454428000043,
+          "theta_plus_max_abs": 0.49421158286061917,
+          "theta_plus_range": [
+            -0.49421158286061917,
+            0.07807823204726376
+          ],
+          "theta_plus_rms": 0.19360810594202246
+        },
+        {
+          "area": 67.22042018957586,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.9999999999999993,
+            1.9999999999999993
+          ],
+          "reference_radius": 1.9999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.1284808778673675,
+            0.6731368595943203
+          ],
+          "theta_minus_rms": 0.4822787929250559,
+          "theta_plus_max_abs": 0.5982102258480733,
+          "theta_plus_range": [
+            -0.5982102258480733,
+            -0.12874089660554855
+          ],
+          "theta_plus_rms": 0.34782382452126787
+        },
+        {
+          "area": 51.64093813210508,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.1999999999999997,
+            2.1999999999999997
+          ],
+          "reference_radius": 2.1999999999999997,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.5231039687352638,
+            0.8709393704822752
+          ],
+          "theta_minus_rms": 0.734193097642442,
+          "theta_plus_max_abs": 0.7835560194110213,
+          "theta_plus_range": [
+            -0.7835560194110213,
+            -0.3832503304411533
+          ],
+          "theta_plus_rms": 0.5907134462482776
+        },
+        {
+          "area": 34.29107909644415,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.4,
+            2.4
+          ],
+          "reference_radius": 2.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.0006097868202406,
+            1.1610238931083876
+          ],
+          "theta_minus_rms": 1.0858599930737598,
+          "theta_plus_max_abs": 1.161506712938726,
+          "theta_plus_range": [
+            -1.161506712938726,
+            -0.7250609884478374
+          ],
+          "theta_plus_rms": 0.9162108359280122
+        },
+        {
+          "area": 18.84974289270854,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.6,
+            2.6
+          ],
+          "reference_radius": 2.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.585950881569352,
+            1.6426105077241688
+          ],
+          "theta_minus_rms": 1.608179574676597,
+          "theta_plus_max_abs": 1.6434837042254933,
+          "theta_plus_range": [
+            -1.6434837042254933,
+            -1.249926767364263
+          ],
+          "theta_plus_rms": 1.4110521943762353
+        }
+      ],
+      "cores": [
+        {
+          "K_eigenvalues": [
+            -0.1373035557364779,
+            -0.019576671296440893,
+            -0.014500031076896307
+          ],
+          "Pi_S": 0.036785193793250175,
+          "Pi_chi": 0.0,
+          "canonical_S": 0.010467831073984146,
+          "chi": 0.0,
+          "chi_sector_curl_per_proper_transverse_area": -0.00019748534800565417,
+          "chi_sector_j_covector": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "core": [
+            0.0,
+            0.0,
+            0.7071067811865475,
+            0.7071067811865475
+          ],
+          "declared_axial_tangent": [
+            0.0,
+            0.0,
+            -0.7071067811865475,
+            0.7071067811865475
+          ],
+          "future_tangential_capacity": -0.0340767023733372,
+          "interpretation": "A regular scalar-phase core. Momentum curl is not a fluid velocity or a proof of axial drainage or trapping.",
+          "matter_j_axial_component": -0.00019290290544105143,
+          "matter_j_covector": [
+            0.0,
+            0.0,
+            0.00011920187914164564
+          ],
+          "matter_j_norm": 0.00019290290544105143,
+          "normal_coordinates": [
+            "X1",
+            "X2"
+          ],
+          "normal_field_derivative_consistency_max": 4.163336342344337e-17,
+          "normal_theta": 0.17138025810981516,
+          "predicted_local_winding": -1,
+          "total_curl_per_proper_transverse_area": -0.0001974853480056542,
+          "transverse_Z_gradient_matrix": [
+            [
+              -0.006760057152437026,
+              -0.01063190911206915
+            ],
+            [
+              0.031936788886018565,
+              0.05632716176490415
+            ]
+          ],
+          "transverse_Z_gradient_singular_values": [
+            0.06596251125123855,
+            0.0006249882731239095
+          ],
+          "transverse_chi_Pi_jacobian": -0.0010211422633751364,
+          "volume_sector_j_covector": [
+            -0.0,
+            -0.0,
+            0.00011920187914164564
+          ]
+        },
+        {
+          "K_eigenvalues": [
+            -0.13730340460858642,
+            -0.019576879413164675,
+            -0.014499987151098152
+          ],
+          "Pi_S": 0.0367851937586377,
+          "Pi_chi": 0.0,
+          "canonical_S": 0.010467830974821403,
+          "chi": 0.0,
+          "chi_sector_curl_per_proper_transverse_area": -0.00019748590193608562,
+          "chi_sector_j_covector": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "core": [
+            0.0,
+            0.7071067811865475,
+            0.7071067811865475,
+            0.0
+          ],
+          "declared_axial_tangent": [
+            0.0,
+            -0.7071067811865475,
+            0.7071067811865475,
+            0.0
+          ],
+          "future_tangential_capacity": -0.03407686656426283,
+          "interpretation": "A regular scalar-phase core. Momentum curl is not a fluid velocity or a proof of axial drainage or trapping.",
+          "matter_j_axial_component": 0.0001929028339928098,
+          "matter_j_covector": [
+            -0.00011920183890057157,
+            0.0,
+            0.0
+          ],
+          "matter_j_norm": 0.0001929028339928098,
+          "normal_coordinates": [
+            "X1",
+            "X4"
+          ],
+          "normal_field_derivative_consistency_max": 4.85722573273506e-17,
+          "normal_theta": 0.17138027117284932,
+          "predicted_local_winding": -1,
+          "total_curl_per_proper_transverse_area": -0.00019748590193608534,
+          "transverse_Z_gradient_matrix": [
+            [
+              -0.006760056412133396,
+              -0.010631905099565967
+            ],
+            [
+              0.03193678828759959,
+              0.05632716494891214
+            ]
+          ],
+          "transverse_Z_gradient_singular_values": [
+            0.06596251294153514,
+            0.0006249899904213736
+          ],
+          "transverse_chi_Pi_jacobian": -0.0010211450953627782,
+          "volume_sector_j_covector": [
+            -0.00011920183890057157,
+            -0.0,
+            -0.0
+          ]
+        }
+      ],
+      "degree": 16,
+      "dense_provenance": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "producer_record",
+        "cache_sha256": "02d664949fa466510b27acb322a758dc6e80e04f4d76452efc23abe247e48e62",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "76ee5fd41555ad400f99d2ce5ee9c0a1d036ca24031fd0814ef5a67c0b59fb67"
+      },
+      "dense_sparse_physical_state_max_gap": 0.0,
+      "epsilon": 1.0,
+      "loops": [
+        {
+          "chi_momentum_circulation": -3.208477835222581e-07,
+          "circulation_minus_polygon": -1.2883543136269636e-10,
+          "circulation_over_reference_angular_disk_area": -0.0010212987253472568,
+          "core_number": 1,
+          "dense": {
+            "max_abs_Z": 0.0006594451528274159,
+            "max_argument_step": 2.4001242210389204,
+            "min_abs_Z": 1.5982955906905762e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999999,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -3.207189480908954e-07,
+          "reference_angular_disk_area": 0.00031415664737382794,
+          "reference_angular_radius": 0.01,
+          "relative_gap_to_core_transverse_curl": 0.00015322250163585238,
+          "sparse": {
+            "max_abs_Z": 0.0006594451528274159,
+            "max_argument_step": 2.4001242210389204,
+            "min_abs_Z": 1.5982955906905762e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999999,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -1.2839510259462142e-06,
+          "circulation_minus_polygon": -5.155674147313328e-10,
+          "circulation_over_reference_angular_disk_area": -0.0010217698208761642,
+          "core_number": 1,
+          "dense": {
+            "max_abs_Z": 0.0013187970121659226,
+            "max_argument_step": 2.4001756844166917,
+            "min_abs_Z": 3.1877773724019885e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -1.2834354585314828e-06,
+          "reference_angular_disk_area": 0.0012565951740923708,
+          "reference_angular_radius": 0.02,
+          "relative_gap_to_core_transverse_curl": 0.0006145642223773784,
+          "sparse": {
+            "max_abs_Z": 0.0013187970121659226,
+            "max_argument_step": 2.4001756844166917,
+            "min_abs_Z": 3.1877773724019885e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -3.208486687584856e-07,
+          "circulation_minus_polygon": -1.2883578683044883e-10,
+          "circulation_over_reference_angular_disk_area": -0.0010213015431651668,
+          "core_number": 2,
+          "dense": {
+            "max_abs_Z": 0.0006594451692326789,
+            "max_argument_step": 2.4001225100408345,
+            "min_abs_Z": 1.5982979860696468e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000004,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -3.2071983297165516e-07,
+          "reference_angular_disk_area": 0.00031415664737382794,
+          "reference_angular_radius": 0.01,
+          "relative_gap_to_core_transverse_curl": 0.0001532082003812274,
+          "sparse": {
+            "max_abs_Z": 0.0006594451692326789,
+            "max_argument_step": 2.4001225100408345,
+            "min_abs_Z": 1.5982979860696468e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000004,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -1.2839545136323543e-06,
+          "circulation_minus_polygon": -5.155688151717739e-10,
+          "circulation_over_reference_angular_disk_area": -0.0010217725963811257,
+          "core_number": 2,
+          "dense": {
+            "max_abs_Z": 0.0013187970444867082,
+            "max_argument_step": 2.4001739814510215,
+            "min_abs_Z": 3.187782135837303e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999997,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -1.2834389448171825e-06,
+          "reference_angular_disk_area": 0.0012565951740923708,
+          "reference_angular_radius": 0.02,
+          "relative_gap_to_core_transverse_curl": 0.000614507204898862,
+          "sparse": {
+            "max_abs_Z": 0.0013187970444867082,
+            "max_argument_step": 2.4001739814510215,
+            "min_abs_Z": 3.187782135837303e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999997,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        }
+      ],
+      "mu_reference": 24.769497802514984,
+      "observer_proper_duration": 0.8999999999999999,
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "producer_pinned_dense_history_sha256": "02d664949fa466510b27acb322a758dc6e80e04f4d76452efc23abe247e48e62",
+      "producer_source_sha256": {
+        "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+        "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+        "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+        "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+        "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+        "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+        "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+        "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+        "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+        "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+        "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+        "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+        "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+        "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+        "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+        "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+        "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+      },
+      "record_sha256": "426f4756573a6865e5fcc7b39046831bbcf9188c0781516b242506104acd0d1d",
+      "sparse_provenance": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "explicit_caller_admission",
+        "cache_sha256": "2e946e192367d9787b0310022e6007dfea8fa692fcd33d201ff8fb23ebdc6161",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "snapshot": 3,
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "3afe24066d4871886b23d90dac73806ac563fe2f9ec9234305690f246f0ac2be"
+      }
+    },
+    {
+      "angular_refinement": [],
+      "caller_admitted_sparse_cache_sha256": "58af54103eb671ff7252e21dc817c28a7573420dc08280aa1839a6188e80cb48",
+      "coordinate_t": 0.9458893890928269,
+      "core_surface_scope": "Direct sampled round S2 surfaces about the phase cores; finite radii and angular sampling do not prove absence of other trapped surfaces.",
+      "core_surface_search": [
+        {
+          "area": 2.600464418237296,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "reference_radius": 0.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -4.399126143663264,
+            -4.1648001686830725
+          ],
+          "theta_minus_rms": 4.2500752564423605,
+          "theta_plus_max_abs": 4.505916047072097,
+          "theta_plus_range": [
+            4.445352221609781,
+            4.505916047072097
+          ],
+          "theta_plus_rms": 4.4741064502935135
+        },
+        {
+          "area": 10.367088646367765,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.4,
+            0.4
+          ],
+          "reference_radius": 0.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -2.2238749700924587,
+            -1.8837539373714134
+          ],
+          "theta_minus_rms": 2.017038476043799,
+          "theta_plus_max_abs": 2.2510229483690747,
+          "theta_plus_range": [
+            2.2166136810851023,
+            2.2510229483690747
+          ],
+          "theta_plus_rms": 2.228201091084327
+        },
+        {
+          "area": 22.99625211611964,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.6000000000000001,
+            0.6000000000000001
+          ],
+          "reference_radius": 0.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.4800771066316887,
+            -1.0649374871338149
+          ],
+          "theta_minus_rms": 1.2380202891287753,
+          "theta_plus_max_abs": 1.471306130153475,
+          "theta_plus_range": [
+            1.395836837779964,
+            1.471306130153475
+          ],
+          "theta_plus_rms": 1.4279561011584492
+        },
+        {
+          "area": 39.30571030211235,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.8000000000000002,
+            0.8000000000000002
+          ],
+          "reference_radius": 0.8,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.0479242923416265,
+            -0.6098932268507575
+          ],
+          "theta_minus_rms": 0.8098110505519354,
+          "theta_plus_max_abs": 1.062650936703592,
+          "theta_plus_range": [
+            0.8536982726219026,
+            1.062650936703592
+          ],
+          "theta_plus_rms": 0.9707743366558308
+        },
+        {
+          "area": 56.55073147087096,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.0,
+            1.0
+          ],
+          "reference_radius": 1.0,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.6916631420117331,
+            -0.30009357757887567
+          ],
+          "theta_minus_rms": 0.512394288100905,
+          "theta_plus_max_abs": 0.8075277836894257,
+          "theta_plus_range": [
+            0.39769921461064756,
+            0.8075277836894257
+          ],
+          "theta_plus_rms": 0.6513112528720185
+        },
+        {
+          "area": 70.9081590958854,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.2,
+            1.2
+          ],
+          "reference_radius": 1.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.5653282510939646,
+            -0.06295079646032442
+          ],
+          "theta_minus_rms": 0.29144092620636763,
+          "theta_plus_max_abs": 0.6244526090464786,
+          "theta_plus_range": [
+            0.03169810592534664,
+            0.6244526090464786
+          ],
+          "theta_plus_rms": 0.4249942740978741
+        },
+        {
+          "area": 79.57790486476114,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.4,
+            1.4
+          ],
+          "reference_radius": 1.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.4615941673158708,
+            0.13377562550423877
+          ],
+          "theta_minus_rms": 0.17462747134904086,
+          "theta_plus_max_abs": 0.4557826087353091,
+          "theta_plus_range": [
+            -0.21900949401170638,
+            0.4557826087353091
+          ],
+          "theta_plus_rms": 0.27569587135393137
+        },
+        {
+          "area": 81.83229834555146,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.6,
+            1.6
+          ],
+          "reference_radius": 1.5999999999999999,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.33906702152134177,
+            0.3233773756679759
+          ],
+          "theta_minus_rms": 0.20477910827430618,
+          "theta_plus_max_abs": 0.37859800614860917,
+          "theta_plus_range": [
+            -0.37859800614860917,
+            0.26238176466755075
+          ],
+          "theta_plus_rms": 0.18438616269731828
+        },
+        {
+          "area": 77.70766048828153,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.7999999999999998,
+            1.7999999999999998
+          ],
+          "reference_radius": 1.7999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.15865643356846593,
+            0.5066218161981291
+          ],
+          "theta_minus_rms": 0.31269484713953943,
+          "theta_plus_max_abs": 0.4928005836604012,
+          "theta_plus_range": [
+            -0.4928005836604012,
+            0.07923101471786806
+          ],
+          "theta_plus_rms": 0.19360685639183484
+        },
+        {
+          "area": 67.22042974192681,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.9999999999999993,
+            1.9999999999999993
+          ],
+          "reference_radius": 1.9999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.12714560103552625,
+            0.6742297291349755
+          ],
+          "theta_minus_rms": 0.4822788277520149,
+          "theta_plus_max_abs": 0.5981872344094299,
+          "theta_plus_range": [
+            -0.5981872344094299,
+            -0.12696898234126594
+          ],
+          "theta_plus_rms": 0.34782348976871386
+        },
+        {
+          "area": 51.64094198413808,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.1999999999999997,
+            2.1999999999999997
+          ],
+          "reference_radius": 2.1999999999999997,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.5228821677148568,
+            0.871731321687647
+          ],
+          "theta_minus_rms": 0.7341930219684749,
+          "theta_plus_max_abs": 0.782812699013609,
+          "theta_plus_range": [
+            -0.782812699013609,
+            -0.38099319879926585
+          ],
+          "theta_plus_rms": 0.5907148662691682
+        },
+        {
+          "area": 34.29108464139857,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.4,
+            2.4
+          ],
+          "reference_radius": 2.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.001252588942266,
+            1.1614159354830895
+          ],
+          "theta_minus_rms": 1.085862255707137,
+          "theta_plus_max_abs": 1.1629448454090565,
+          "theta_plus_range": [
+            -1.1629448454090565,
+            -0.7225227513242314
+          ],
+          "theta_plus_rms": 0.9162069912043908
+        },
+        {
+          "area": 18.849742458632203,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.6,
+            2.6
+          ],
+          "reference_radius": 2.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.5858504477186965,
+            1.6423243081960313
+          ],
+          "theta_minus_rms": 1.6081769078502963,
+          "theta_plus_max_abs": 1.6449242153296528,
+          "theta_plus_range": [
+            -1.6449242153296528,
+            -1.248441529767831
+          ],
+          "theta_plus_rms": 1.4110559592289005
+        },
+        {
+          "area": 2.6004644182324137,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "reference_radius": 0.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -4.399196250111402,
+            -4.165066266525826
+          ],
+          "theta_minus_rms": 4.250075256558378,
+          "theta_plus_max_abs": 4.5058704483179985,
+          "theta_plus_range": [
+            4.4452136457917435,
+            4.5058704483179985
+          ],
+          "theta_plus_rms": 4.4741064504234105
+        },
+        {
+          "area": 10.367088646359722,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.4,
+            0.4
+          ],
+          "reference_radius": 0.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -2.2229993457203747,
+            -1.8838944914560107
+          ],
+          "theta_minus_rms": 2.017038476160347,
+          "theta_plus_max_abs": 2.251066625937946,
+          "theta_plus_range": [
+            2.2166687373843597,
+            2.251066625937946
+          ],
+          "theta_plus_rms": 2.228201090889188
+        },
+        {
+          "area": 22.996252116160964,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.6000000000000001,
+            0.6000000000000001
+          ],
+          "reference_radius": 0.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.4819283492161326,
+            -1.06503142224031
+          ],
+          "theta_minus_rms": 1.238020289135286,
+          "theta_plus_max_abs": 1.4713107449798613,
+          "theta_plus_range": [
+            1.3963619176866993,
+            1.4713107449798613
+          ],
+          "theta_plus_rms": 1.4279561012204396
+        },
+        {
+          "area": 39.30571030202314,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.8000000000000002,
+            0.8000000000000002
+          ],
+          "reference_radius": 0.8,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.0463065434500705,
+            -0.6097757248360558
+          ],
+          "theta_minus_rms": 0.8098110504974276,
+          "theta_plus_max_abs": 1.0620035685474074,
+          "theta_plus_range": [
+            0.8531885872099279,
+            1.0620035685474074
+          ],
+          "theta_plus_rms": 0.9707743366982693
+        },
+        {
+          "area": 56.55073147099602,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.0,
+            1.0
+          ],
+          "reference_radius": 1.0,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.6891423921292117,
+            -0.29959704492882455
+          ],
+          "theta_minus_rms": 0.512394289074397,
+          "theta_plus_max_abs": 0.8073327596199653,
+          "theta_plus_range": [
+            0.40058043860352766,
+            0.8073327596199653
+          ],
+          "theta_plus_rms": 0.6513112534312586
+        },
+        {
+          "area": 70.90815909580564,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.2,
+            1.2
+          ],
+          "reference_radius": 1.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.5619689111450035,
+            -0.06201633533396897
+          ],
+          "theta_minus_rms": 0.2914409286365373,
+          "theta_plus_max_abs": 0.6242666073352223,
+          "theta_plus_range": [
+            0.03907336323195107,
+            0.6242666073352223
+          ],
+          "theta_plus_rms": 0.42499427581717664
+        },
+        {
+          "area": 79.57790486479337,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.4,
+            1.4
+          ],
+          "reference_radius": 1.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.4610969434506923,
+            0.13474891369501024
+          ],
+          "theta_minus_rms": 0.1746274736248598,
+          "theta_plus_max_abs": 0.4554539784768489,
+          "theta_plus_range": [
+            -0.2207497919217736,
+            0.4554539784768489
+          ],
+          "theta_plus_rms": 0.27569587281130475
+        },
+        {
+          "area": 81.83229834560143,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.6,
+            1.6
+          ],
+          "reference_radius": 1.5999999999999999,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.34264631530972045,
+            0.323607820823868
+          ],
+          "theta_minus_rms": 0.20477910852451636,
+          "theta_plus_max_abs": 0.3863103079748655,
+          "theta_plus_range": [
+            -0.3863103079748655,
+            0.2640534989266862
+          ],
+          "theta_plus_rms": 0.1843861634334044
+        },
+        {
+          "area": 77.7076604881957,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.7999999999999998,
+            1.7999999999999998
+          ],
+          "reference_radius": 1.7999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.16264775665838674,
+            0.5058515969835023
+          ],
+          "theta_minus_rms": 0.31269484866736924,
+          "theta_plus_max_abs": 0.4942066025665948,
+          "theta_plus_range": [
+            -0.4942066025665948,
+            0.07812322731409403
+          ],
+          "theta_plus_rms": 0.19360685823350685
+        },
+        {
+          "area": 67.22042974204282,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.9999999999999993,
+            1.9999999999999993
+          ],
+          "reference_radius": 1.9999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.1284373036304389,
+            0.6731380422298716
+          ],
+          "theta_minus_rms": 0.48227882891877455,
+          "theta_plus_max_abs": 0.5982088696490708,
+          "theta_plus_range": [
+            -0.5982088696490708,
+            -0.12886297973282884
+          ],
+          "theta_plus_rms": 0.347823491645995
+        },
+        {
+          "area": 51.64094198407544,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.1999999999999997,
+            2.1999999999999997
+          ],
+          "reference_radius": 2.1999999999999997,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.5235312429103829,
+            0.870938824057951
+          ],
+          "theta_minus_rms": 0.7341930222167152,
+          "theta_plus_max_abs": 0.7835822771651784,
+          "theta_plus_range": [
+            -0.7835822771651784,
+            -0.38340984791976784
+          ],
+          "theta_plus_rms": 0.590714866592266
+        },
+        {
+          "area": 34.29108464141258,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.4,
+            2.4
+          ],
+          "reference_radius": 2.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.000546580212428,
+            1.1610230984904881
+          ],
+          "theta_minus_rms": 1.0858622557707667,
+          "theta_plus_max_abs": 1.1615669152058052,
+          "theta_plus_range": [
+            -1.1615669152058052,
+            -0.7252543569510065
+          ],
+          "theta_plus_rms": 0.916206991209371
+        },
+        {
+          "area": 18.849742458648322,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.6,
+            2.6
+          ],
+          "reference_radius": 2.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.5860039196002824,
+            1.6426123768644911
+          ],
+          "theta_minus_rms": 1.608176907740578,
+          "theta_plus_max_abs": 1.6434836438274907,
+          "theta_plus_range": [
+            -1.6434836438274907,
+            -1.2502273090123883
+          ],
+          "theta_plus_rms": 1.4110559593217558
+        }
+      ],
+      "cores": [
+        {
+          "K_eigenvalues": [
+            -0.13732341054561129,
+            -0.019591762602486334,
+            -0.014515886113521706
+          ],
+          "Pi_S": 0.03678596598493038,
+          "Pi_chi": 0.0,
+          "canonical_S": 0.010467220802158134,
+          "chi": 0.0,
+          "chi_sector_curl_per_proper_transverse_area": -0.0001879635403805535,
+          "chi_sector_j_covector": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "core": [
+            0.0,
+            0.0,
+            0.7071067811865475,
+            0.7071067811865475
+          ],
+          "declared_axial_tangent": [
+            0.0,
+            0.0,
+            -0.7071067811865475,
+            0.7071067811865475
+          ],
+          "future_tangential_capacity": -0.03410764871600804,
+          "interpretation": "A regular scalar-phase core. Momentum curl is not a fluid velocity or a proof of axial drainage or trapping.",
+          "matter_j_axial_component": -0.00019281528889553425,
+          "matter_j_covector": [
+            0.0,
+            0.0,
+            0.00011914771739800774
+          ],
+          "matter_j_norm": 0.00019281528889553425,
+          "normal_coordinates": [
+            "X1",
+            "X2"
+          ],
+          "normal_field_derivative_consistency_max": 7.914675859144182e-18,
+          "normal_theta": 0.17143105926161936,
+          "predicted_local_winding": -1,
+          "total_curl_per_proper_transverse_area": -0.00018796354038055365,
+          "transverse_Z_gradient_matrix": [
+            [
+              -0.00672542587387592,
+              -0.010631618306573401
+            ],
+            [
+              0.03191970938893616,
+              0.056293270223335516
+            ]
+          ],
+          "transverse_Z_gradient_singular_values": [
+            0.06592198794575048,
+            0.0005952194499577775
+          ],
+          "transverse_chi_Pi_jacobian": -0.0009719067785169016,
+          "volume_sector_j_covector": [
+            -0.0,
+            -0.0,
+            0.00011914771739800774
+          ]
+        },
+        {
+          "K_eigenvalues": [
+            -0.1373234149077946,
+            -0.019591752941244597,
+            -0.01451588448908728
+          ],
+          "Pi_S": 0.036785965785277944,
+          "Pi_chi": 0.0,
+          "canonical_S": 0.01046722081515589,
+          "chi": 0.0,
+          "chi_sector_curl_per_proper_transverse_area": -0.00018796351942955094,
+          "chi_sector_j_covector": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "core": [
+            0.0,
+            0.7071067811865475,
+            0.7071067811865475,
+            0.0
+          ],
+          "declared_axial_tangent": [
+            0.0,
+            -0.7071067811865475,
+            0.7071067811865475,
+            0.0
+          ],
+          "future_tangential_capacity": -0.03410763743033188,
+          "interpretation": "A regular scalar-phase core. Momentum curl is not a fluid velocity or a proof of axial drainage or trapping.",
+          "matter_j_axial_component": 0.00019281529093631027,
+          "matter_j_covector": [
+            -0.0001191477178437594,
+            0.0,
+            0.0
+          ],
+          "matter_j_norm": 0.0001928152909363103,
+          "normal_coordinates": [
+            "X1",
+            "X4"
+          ],
+          "normal_field_derivative_consistency_max": 5.898059818321144e-17,
+          "normal_theta": 0.17143105233812647,
+          "predicted_local_winding": -1,
+          "total_curl_per_proper_transverse_area": -0.0001879635194295512,
+          "transverse_Z_gradient_matrix": [
+            [
+              -0.006725425911473361,
+              -0.010631618517430212
+            ],
+            [
+              0.03191970943038969,
+              0.05629327036435438
+            ]
+          ],
+          "transverse_Z_gradient_singular_values": [
+            0.0659219881246626,
+            0.0005952193860518958
+          ],
+          "transverse_chi_Pi_jacobian": -0.0009719066768056309,
+          "volume_sector_j_covector": [
+            -0.0001191477178437594,
+            -0.0,
+            -0.0
+          ]
+        }
+      ],
+      "degree": 20,
+      "dense_provenance": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "producer_record",
+        "cache_sha256": "24f5eaa7ed069cf2c333d80b1729df56583a5ace79d57d304f10ba78bfd62645",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "6b3f4dd203e2a9b043f8c1c1ae703b617e834d4ea8057cb5c531fbc5831318d8"
+      },
+      "dense_sparse_physical_state_max_gap": 0.0,
+      "epsilon": 1.0,
+      "loops": [
+        {
+          "chi_momentum_circulation": -3.0543660305785497e-07,
+          "circulation_minus_polygon": -1.2264712088965113e-10,
+          "circulation_over_reference_angular_disk_area": -0.0009722430055551343,
+          "core_number": 1,
+          "dense": {
+            "max_abs_Z": 0.0006590413220986716,
+            "max_argument_step": 2.4321552673693136,
+            "min_abs_Z": 1.5897284652149766e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -3.053139559369653e-07,
+          "reference_angular_disk_area": 0.00031415664737382794,
+          "reference_angular_radius": 0.01,
+          "relative_gap_to_core_transverse_curl": 0.0003459457693522072,
+          "sparse": {
+            "max_abs_Z": 0.0006590413220986716,
+            "max_argument_step": 2.4321552673693136,
+            "min_abs_Z": 1.5897284652149766e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -1.222982235981074e-06,
+          "circulation_minus_polygon": -4.910856220556941e-10,
+          "circulation_over_reference_angular_disk_area": -0.0009732507821100179,
+          "core_number": 1,
+          "dense": {
+            "max_abs_Z": 0.0013180023448480368,
+            "max_argument_step": 2.431819808113199,
+            "min_abs_Z": 3.170853054141696e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -1.2224911503590183e-06,
+          "reference_angular_disk_area": 0.0012565951740923708,
+          "reference_angular_radius": 0.02,
+          "relative_gap_to_core_transverse_curl": 0.0013828523710548435,
+          "sparse": {
+            "max_abs_Z": 0.0013180023448480368,
+            "max_argument_step": 2.431819808113199,
+            "min_abs_Z": 3.170853054141696e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -3.0543657132005713e-07,
+          "circulation_minus_polygon": -1.2264710814699335e-10,
+          "circulation_over_reference_angular_disk_area": -0.0009722429045297443,
+          "core_number": 2,
+          "dense": {
+            "max_abs_Z": 0.0006590413238645515,
+            "max_argument_step": 2.4321553414799517,
+            "min_abs_Z": 1.5897284868725238e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -3.0531392421191014e-07,
+          "reference_angular_disk_area": 0.00031415664737382794,
+          "reference_angular_radius": 0.01,
+          "relative_gap_to_core_transverse_curl": 0.00034594651126229614,
+          "sparse": {
+            "max_abs_Z": 0.0006590413238645515,
+            "max_argument_step": 2.4321553414799517,
+            "min_abs_Z": 1.5897284868725238e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -1.2229821115953562e-06,
+          "circulation_minus_polygon": -4.910855721084905e-10,
+          "circulation_over_reference_angular_disk_area": -0.0009732506831237091,
+          "core_number": 2,
+          "dense": {
+            "max_abs_Z": 0.0013180023483044384,
+            "max_argument_step": 2.43181988131786,
+            "min_abs_Z": 3.170853096771811e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -1.2224910260232477e-06,
+          "reference_angular_disk_area": 0.0012565951740923708,
+          "reference_angular_radius": 0.02,
+          "relative_gap_to_core_transverse_curl": 0.0013828553195001092,
+          "sparse": {
+            "max_abs_Z": 0.0013180023483044384,
+            "max_argument_step": 2.43181988131786,
+            "min_abs_Z": 3.170853096771811e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        }
+      ],
+      "mu_reference": 24.769497802514984,
+      "observer_proper_duration": 0.8999999999999999,
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "producer_pinned_dense_history_sha256": "24f5eaa7ed069cf2c333d80b1729df56583a5ace79d57d304f10ba78bfd62645",
+      "producer_source_sha256": {
+        "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+        "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+        "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+        "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+        "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+        "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+        "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+        "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+        "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+        "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+        "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+        "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+        "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+        "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+        "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+        "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+        "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+      },
+      "record_sha256": "f25e973f4916fd15aee640a945063613ba46a79b98bf1f4cb127190d114822ea",
+      "sparse_provenance": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "explicit_caller_admission",
+        "cache_sha256": "58af54103eb671ff7252e21dc817c28a7573420dc08280aa1839a6188e80cb48",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "snapshot": 3,
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "57a44e064d6aac166703c3a31e1cd72021531ea984c676d9832ddf719fadf392"
+      }
+    },
+    {
+      "angular_refinement": [
+        {
+          "core_number": 1,
+          "points": 256,
+          "reference_angular_radius": 0.01,
+          "result": {
+            "max_abs_Z": 0.0006592414272107114,
+            "max_argument_step": 1.4219517115270852,
+            "min_abs_Z": 6.138228390863446e-06,
+            "nearest_integer": -1,
+            "phase_sampling_check": true,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000004,
+            "scope": "256 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "core_number": 1,
+          "points": 256,
+          "reference_angular_radius": 0.02,
+          "result": {
+            "max_abs_Z": 0.0013183991239883181,
+            "max_argument_step": 1.4278768899293777,
+            "min_abs_Z": 1.2295786377997421e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": true,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0,
+            "scope": "256 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "core_number": 2,
+          "points": 256,
+          "reference_angular_radius": 0.01,
+          "result": {
+            "max_abs_Z": 0.0006592414269150149,
+            "max_argument_step": 1.4219517127363415,
+            "min_abs_Z": 6.138228478914896e-06,
+            "nearest_integer": -1,
+            "phase_sampling_check": true,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0,
+            "scope": "256 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "core_number": 2,
+          "points": 256,
+          "reference_angular_radius": 0.02,
+          "result": {
+            "max_abs_Z": 0.0013183991234122056,
+            "max_argument_step": 1.427876890950581,
+            "min_abs_Z": 1.2295786552535943e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": true,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999997,
+            "scope": "256 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "core_number": 1,
+          "points": 512,
+          "reference_angular_radius": 0.01,
+          "result": {
+            "max_abs_Z": 0.0006592414272107114,
+            "max_argument_step": 1.0755432831743312,
+            "min_abs_Z": 6.138228390863446e-06,
+            "nearest_integer": -1,
+            "phase_sampling_check": true,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0,
+            "scope": "512 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "core_number": 1,
+          "points": 512,
+          "reference_angular_radius": 0.02,
+          "result": {
+            "max_abs_Z": 0.0013183991239883181,
+            "max_argument_step": 1.0791998939635241,
+            "min_abs_Z": 1.2295786377997421e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": true,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "512 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "core_number": 2,
+          "points": 512,
+          "reference_angular_radius": 0.01,
+          "result": {
+            "max_abs_Z": 0.0006592414269150149,
+            "max_argument_step": 1.075543279135065,
+            "min_abs_Z": 6.138228478914896e-06,
+            "nearest_integer": -1,
+            "phase_sampling_check": true,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "512 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "core_number": 2,
+          "points": 512,
+          "reference_angular_radius": 0.02,
+          "result": {
+            "max_abs_Z": 0.0013183991234122056,
+            "max_argument_step": 1.0791998897899666,
+            "min_abs_Z": 1.2295786552535943e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": true,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000007,
+            "scope": "512 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        }
+      ],
+      "caller_admitted_sparse_cache_sha256": "25f8219eef656d3f3c12b7623fe6f1fc6af93a5e17ed0a2f04b87541500fa45d",
+      "coordinate_t": 0.9458895428751409,
+      "core_surface_scope": "Direct sampled round S2 surfaces about the phase cores; finite radii and angular sampling do not prove absence of other trapped surfaces.",
+      "core_surface_search": [
+        {
+          "area": 2.600464393235006,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "reference_radius": 0.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -4.399130434581982,
+            -4.164788403258023
+          ],
+          "theta_minus_rms": 4.250074928426667,
+          "theta_plus_max_abs": 4.50591509677888,
+          "theta_plus_range": [
+            4.4453514822078395,
+            4.50591509677888
+          ],
+          "theta_plus_rms": 4.474106854692499
+        },
+        {
+          "area": 10.367088736731342,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.4,
+            0.4
+          ],
+          "reference_radius": 0.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -2.223874230876647,
+            -1.883735767712558
+          ],
+          "theta_minus_rms": 2.0170382400742213,
+          "theta_plus_max_abs": 2.251023456328186,
+          "theta_plus_range": [
+            2.216624049705312,
+            2.251023456328186
+          ],
+          "theta_plus_rms": 2.228201144629905
+        },
+        {
+          "area": 22.996252290743403,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.6000000000000001,
+            0.6000000000000001
+          ],
+          "reference_radius": 0.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.4800687146927156,
+            -1.0649203983710236
+          ],
+          "theta_minus_rms": 1.2380204138450448,
+          "theta_plus_max_abs": 1.4713049673747989,
+          "theta_plus_range": [
+            1.3958457117186351,
+            1.4713049673747989
+          ],
+          "theta_plus_rms": 1.42795601013629
+        },
+        {
+          "area": 39.30571052853576,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.8000000000000002,
+            0.8000000000000002
+          ],
+          "reference_radius": 0.8,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.0479541556937109,
+            -0.6098764353754078
+          ],
+          "theta_minus_rms": 0.8098111980271744,
+          "theta_plus_max_abs": 1.0626515928213223,
+          "theta_plus_range": [
+            0.8536905714139322,
+            1.0626515928213223
+          ],
+          "theta_plus_rms": 0.9707743379248919
+        },
+        {
+          "area": 56.5507317546631,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.0,
+            1.0
+          ],
+          "reference_radius": 1.0,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.6916632473131938,
+            -0.30007568042411337
+          ],
+          "theta_minus_rms": 0.5123941324790418,
+          "theta_plus_max_abs": 0.8075275182080759,
+          "theta_plus_range": [
+            0.3977334233780872,
+            0.8075275182080759
+          ],
+          "theta_plus_rms": 0.6513112763879103
+        },
+        {
+          "area": 70.90815977374665,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.2,
+            1.2
+          ],
+          "reference_radius": 1.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.5653303867565566,
+            -0.0629347239484214
+          ],
+          "theta_minus_rms": 0.29144094139862614,
+          "theta_plus_max_abs": 0.6244499696649597,
+          "theta_plus_range": [
+            0.03169162903344838,
+            0.6244499696649597
+          ],
+          "theta_plus_rms": 0.42499416728296063
+        },
+        {
+          "area": 79.57790578623073,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.4,
+            1.4
+          ],
+          "reference_radius": 1.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.4615935427458792,
+            0.13377754033190345
+          ],
+          "theta_minus_rms": 0.1746273041568218,
+          "theta_plus_max_abs": 0.4557804401189741,
+          "theta_plus_range": [
+            -0.21902399142728557,
+            0.4557804401189741
+          ],
+          "theta_plus_rms": 0.27569611503960245
+        },
+        {
+          "area": 81.8322987039173,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.6,
+            1.6
+          ],
+          "reference_radius": 1.5999999999999999,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.3390705227927471,
+            0.32338170610127365
+          ],
+          "theta_minus_rms": 0.20477882343544568,
+          "theta_plus_max_abs": 0.3785948410407573,
+          "theta_plus_range": [
+            -0.3785948410407573,
+            0.26238782417369694
+          ],
+          "theta_plus_rms": 0.18438637834967622
+        },
+        {
+          "area": 77.70766100459156,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.7999999999999998,
+            1.7999999999999998
+          ],
+          "reference_radius": 1.7999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.15868014791317198,
+            0.5066209630149812
+          ],
+          "theta_minus_rms": 0.31269506609723907,
+          "theta_plus_max_abs": 0.4927994686025926,
+          "theta_plus_range": [
+            -0.4927994686025926,
+            0.07924112330371699
+          ],
+          "theta_plus_rms": 0.19360661385989963
+        },
+        {
+          "area": 67.22043053173246,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.9999999999999993,
+            1.9999999999999993
+          ],
+          "reference_radius": 1.9999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.12713842580343176,
+            0.6742260412470457
+          ],
+          "theta_minus_rms": 0.48227889879697033,
+          "theta_plus_max_abs": 0.5981898439431945,
+          "theta_plus_range": [
+            -0.5981898439431945,
+            -0.12695151455641923
+          ],
+          "theta_plus_rms": 0.3478235555652733
+        },
+        {
+          "area": 51.64094237046311,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.1999999999999997,
+            2.1999999999999997
+          ],
+          "reference_radius": 2.1999999999999997,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.5229224584446911,
+            0.8717302219800548
+          ],
+          "theta_minus_rms": 0.7341930263101566,
+          "theta_plus_max_abs": 0.7828221292090802,
+          "theta_plus_range": [
+            -0.7828221292090802,
+            -0.38097516629812095
+          ],
+          "theta_plus_rms": 0.5907146789353818
+        },
+        {
+          "area": 34.29108479316554,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.4,
+            2.4
+          ],
+          "reference_radius": 2.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.0012521760751976,
+            1.1614158285066278
+          ],
+          "theta_minus_rms": 1.08586235103511,
+          "theta_plus_max_abs": 1.1629600038527887,
+          "theta_plus_range": [
+            -1.1629600038527887,
+            -0.7225057538565803
+          ],
+          "theta_plus_rms": 0.9162068604222178
+        },
+        {
+          "area": 18.849742500335935,
+          "core_number": 1,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.6,
+            2.6
+          ],
+          "reference_radius": 2.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.5858418969705663,
+            1.6423234014109258
+          ],
+          "theta_minus_rms": 1.608176826202456,
+          "theta_plus_max_abs": 1.644930877089377,
+          "theta_plus_range": [
+            -1.644930877089377,
+            -1.2484237375306115
+          ],
+          "theta_plus_rms": 1.4110561926270502
+        },
+        {
+          "area": 2.600464393234346,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "reference_radius": 0.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -4.399199803658225,
+            -4.165055433648771
+          ],
+          "theta_minus_rms": 4.250074928448304,
+          "theta_plus_max_abs": 4.505869780161117,
+          "theta_plus_range": [
+            4.445212538836692,
+            4.505869780161117
+          ],
+          "theta_plus_rms": 4.474106854665437
+        },
+        {
+          "area": 10.367088736735056,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.4,
+            0.4
+          ],
+          "reference_radius": 0.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -2.222995631067972,
+            -1.8838772906820709
+          ],
+          "theta_minus_rms": 2.0170382400782905,
+          "theta_plus_max_abs": 2.2510674819090886,
+          "theta_plus_range": [
+            2.216679141121011,
+            2.2510674819090886
+          ],
+          "theta_plus_rms": 2.2282011446249226
+        },
+        {
+          "area": 22.99625229074273,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.6000000000000001,
+            0.6000000000000001
+          ],
+          "reference_radius": 0.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.4819186942920313,
+            -1.0650165286863233
+          ],
+          "theta_minus_rms": 1.2380204138386786,
+          "theta_plus_max_abs": 1.471309833377975,
+          "theta_plus_range": [
+            1.3963755383868692,
+            1.471309833377975
+          ],
+          "theta_plus_rms": 1.4279560101437059
+        },
+        {
+          "area": 39.305710528525466,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            0.8000000000000002,
+            0.8000000000000002
+          ],
+          "reference_radius": 0.8,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -1.046334360998369,
+            -0.6097625571835439
+          ],
+          "theta_minus_rms": 0.8098111980275282,
+          "theta_plus_max_abs": 1.0620043569804527,
+          "theta_plus_range": [
+            0.8531851496959191,
+            1.0620043569804527
+          ],
+          "theta_plus_rms": 0.9707743379396614
+        },
+        {
+          "area": 56.5507317546657,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.0,
+            1.0
+          ],
+          "reference_radius": 1.0,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.6891426595450618,
+            -0.2995835417207897
+          ],
+          "theta_minus_rms": 0.5123941342087655,
+          "theta_plus_max_abs": 0.8073325807182118,
+          "theta_plus_range": [
+            0.4006052699038595,
+            0.8073325807182118
+          ],
+          "theta_plus_rms": 0.6513112775665715
+        },
+        {
+          "area": 70.90815977375794,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.2,
+            1.2
+          ],
+          "reference_radius": 1.2,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.5619702149796647,
+            -0.06200235841809529
+          ],
+          "theta_minus_rms": 0.29144094795598524,
+          "theta_plus_max_abs": 0.6242649728660787,
+          "theta_plus_range": [
+            0.03909650188536627,
+            0.6242649728660787
+          ],
+          "theta_plus_rms": 0.42499417157618125
+        },
+        {
+          "area": 79.57790578623637,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.4,
+            1.4
+          ],
+          "reference_radius": 1.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.46109677524581333,
+            0.13475911988056402
+          ],
+          "theta_minus_rms": 0.17462730833608603,
+          "theta_plus_max_abs": 0.45544709835061953,
+          "theta_plus_range": [
+            -0.2207529789169237,
+            0.45544709835061953
+          ],
+          "theta_plus_rms": 0.2756961187861522
+        },
+        {
+          "area": 81.83229870392994,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.6,
+            1.6
+          ],
+          "reference_radius": 1.5999999999999999,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.3426484559850013,
+            0.323594034233368
+          ],
+          "theta_minus_rms": 0.20477882370000297,
+          "theta_plus_max_abs": 0.38630909408229863,
+          "theta_plus_range": [
+            -0.38630909408229863,
+            0.26404985860787894
+          ],
+          "theta_plus_rms": 0.18438637860822252
+        },
+        {
+          "area": 77.70766100463668,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.7999999999999998,
+            1.7999999999999998
+          ],
+          "reference_radius": 1.7999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            -0.1626725119919793,
+            0.5058514523295491
+          ],
+          "theta_minus_rms": 0.3126950699416134,
+          "theta_plus_max_abs": 0.4942071505091544,
+          "theta_plus_range": [
+            -0.4942071505091544,
+            0.07811301645766862
+          ],
+          "theta_plus_rms": 0.1936066184938838
+        },
+        {
+          "area": 67.22043053174107,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            1.9999999999999993,
+            1.9999999999999993
+          ],
+          "reference_radius": 1.9999999999999998,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.12842327147967078,
+            0.6731372175248622
+          ],
+          "theta_minus_rms": 0.48227890184125255,
+          "theta_plus_max_abs": 0.5982095154436089,
+          "theta_plus_range": [
+            -0.5982095154436089,
+            -0.12885977819228742
+          ],
+          "theta_plus_rms": 0.3478235602597501
+        },
+        {
+          "area": 51.64094237044908,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.1999999999999997,
+            2.1999999999999997
+          ],
+          "reference_radius": 2.1999999999999997,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            0.5235629853077874,
+            0.8709382181131287
+          ],
+          "theta_minus_rms": 0.7341930267795795,
+          "theta_plus_max_abs": 0.783581845086211,
+          "theta_plus_range": [
+            -0.783581845086211,
+            -0.3834054283035696
+          ],
+          "theta_plus_rms": 0.5907146796075488
+        },
+        {
+          "area": 34.291084793165,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.4,
+            2.4
+          ],
+          "reference_radius": 2.4,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.0005435236780738,
+            1.1610241077291406
+          ],
+          "theta_minus_rms": 1.085862351040662,
+          "theta_plus_max_abs": 1.1615808821254388,
+          "theta_plus_range": [
+            -1.1615808821254388,
+            -0.7252476719984184
+          ],
+          "theta_plus_rms": 0.916206860416165
+        },
+        {
+          "area": 18.849742500341897,
+          "core_number": 2,
+          "expansion_tolerance": 1e-07,
+          "future_mots_sampled": false,
+          "future_trapped_sampled": false,
+          "quadrature_order": [
+            16,
+            33
+          ],
+          "radius_range": [
+            2.6,
+            2.6
+          ],
+          "reference_radius": 2.6,
+          "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem.",
+          "theta_minus_range": [
+            1.5859933515173545,
+            1.6426112515679046
+          ],
+          "theta_minus_rms": 1.6081768261969915,
+          "theta_plus_max_abs": 1.6434845959124187,
+          "theta_plus_range": [
+            -1.6434845959124187,
+            -1.2502062174575603
+          ],
+          "theta_plus_rms": 1.4110561926322065
+        }
+      ],
+      "cores": [
+        {
+          "K_eigenvalues": [
+            -0.13732219041073968,
+            -0.019590888221355025,
+            -0.0145149275969939
+          ],
+          "Pi_S": 0.03678643415460049,
+          "Pi_chi": 0.0,
+          "canonical_S": 0.010467272404608603,
+          "chi": 0.0,
+          "chi_sector_curl_per_proper_transverse_area": -0.0001884984908123378,
+          "chi_sector_j_covector": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "core": [
+            0.0,
+            0.0,
+            0.7071067811865475,
+            0.7071067811865475
+          ],
+          "declared_axial_tangent": [
+            0.0,
+            0.0,
+            -0.7071067811865475,
+            0.7071067811865475
+          ],
+          "future_tangential_capacity": -0.03410581581834893,
+          "interpretation": "A regular scalar-phase core. Momentum curl is not a fluid velocity or a proof of axial drainage or trapping.",
+          "matter_j_axial_component": -0.00019282388283654118,
+          "matter_j_covector": [
+            0.0,
+            0.0,
+            0.00011915303175363366
+          ],
+          "matter_j_norm": 0.00019282388283654116,
+          "normal_coordinates": [
+            "X1",
+            "X2"
+          ],
+          "normal_field_derivative_consistency_max": 4.163336342344337e-17,
+          "normal_theta": 0.1714280062290886,
+          "predicted_local_winding": -1,
+          "total_curl_per_proper_transverse_area": -0.00018849849081233806,
+          "transverse_Z_gradient_matrix": [
+            [
+              -0.006727125367029737,
+              -0.01063141769515532
+            ],
+            [
+              0.03192099497163094,
+              0.05629672943694762
+            ]
+          ],
+          "transverse_Z_gradient_singular_values": [
+            0.06592569042078955,
+            0.0005968799968051666
+          ],
+          "transverse_chi_Pi_jacobian": -0.0009746729489059167,
+          "volume_sector_j_covector": [
+            -0.0,
+            -0.0,
+            0.00011915303175363366
+          ]
+        },
+        {
+          "K_eigenvalues": [
+            -0.13732218523778017,
+            -0.01959088774453397,
+            -0.014514933436367788
+          ],
+          "Pi_S": 0.036786434168528705,
+          "Pi_chi": 0.0,
+          "canonical_S": 0.010467272403485524,
+          "chi": 0.0,
+          "chi_sector_curl_per_proper_transverse_area": -0.000188498493289985,
+          "chi_sector_j_covector": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "core": [
+            0.0,
+            0.7071067811865475,
+            0.7071067811865475,
+            0.0
+          ],
+          "declared_axial_tangent": [
+            0.0,
+            -0.7071067811865475,
+            0.7071067811865475,
+            0.0
+          ],
+          "future_tangential_capacity": -0.03410582118090176,
+          "interpretation": "A regular scalar-phase core. Momentum curl is not a fluid velocity or a proof of axial drainage or trapping.",
+          "matter_j_axial_component": 0.00019282388234547295,
+          "matter_j_covector": [
+            -0.00011915303156351054,
+            0.0,
+            0.0
+          ],
+          "matter_j_norm": 0.00019282388234547295,
+          "normal_coordinates": [
+            "X1",
+            "X4"
+          ],
+          "normal_field_derivative_consistency_max": 2.6020852139652106e-17,
+          "normal_theta": 0.1714280064186819,
+          "predicted_local_winding": -1,
+          "total_curl_per_proper_transverse_area": -0.00018849849328998516,
+          "transverse_Z_gradient_matrix": [
+            [
+              -0.006727125364346321,
+              -0.010631417672909371
+            ],
+            [
+              0.03192099496299828,
+              0.056296729411532166
+            ]
+          ],
+          "transverse_Z_gradient_singular_values": [
+            0.06592569039097669,
+            0.0005968800043537163
+          ],
+          "transverse_chi_Pi_jacobian": -0.0009746729607915526,
+          "volume_sector_j_covector": [
+            -0.00011915303156351054,
+            -0.0,
+            -0.0
+          ]
+        }
+      ],
+      "degree": 24,
+      "dense_provenance": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "producer_record",
+        "cache_sha256": "8f31ccf42ee0d1833e0ddeabcccc730dc99f3d94c88941b47f2de358a4bbcec3",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "11f16b58ddcb918d304a34c91fe341f2e6933af456ebaa5c9d794101cc7a43d8"
+      },
+      "dense_sparse_physical_state_max_gap": 0.0,
+      "epsilon": 1.0,
+      "loops": [
+        {
+          "chi_momentum_circulation": -3.063001326079655e-07,
+          "circulation_minus_polygon": -1.2299386853417214e-10,
+          "circulation_over_reference_angular_disk_area": -0.0009749917283892018,
+          "core_number": 1,
+          "dense": {
+            "max_abs_Z": 0.0006590780948081362,
+            "max_argument_step": 2.4304078063304537,
+            "min_abs_Z": 1.5906816590330274e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -3.0617713873943133e-07,
+          "reference_angular_disk_area": 0.00031415664737382794,
+          "reference_angular_radius": 0.01,
+          "relative_gap_to_core_transverse_curl": 0.00032706302523632935,
+          "sparse": {
+            "max_abs_Z": 0.0006590780948081362,
+            "max_argument_step": 2.4304078063304537,
+            "min_abs_Z": 1.5906816590330274e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0000000000000002,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -1.2263709976440478e-06,
+          "circulation_minus_polygon": -4.924463732441735e-10,
+          "circulation_over_reference_angular_disk_area": -0.0009759475628496236,
+          "core_number": 1,
+          "dense": {
+            "max_abs_Z": 0.0013180748172850624,
+            "max_argument_step": 2.4301070367445976,
+            "min_abs_Z": 3.172712670402529e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999997,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -1.2258785512708036e-06,
+          "reference_angular_disk_area": 0.0012565951740923708,
+          "reference_angular_radius": 0.02,
+          "relative_gap_to_core_transverse_curl": 0.0013077350152557177,
+          "sparse": {
+            "max_abs_Z": 0.0013180748172850624,
+            "max_argument_step": 2.4301070367445976,
+            "min_abs_Z": 3.172712670402529e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999997,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -3.063001363100195e-07,
+          "circulation_minus_polygon": -1.2299387002722653e-10,
+          "circulation_over_reference_angular_disk_area": -0.0009749917401733039,
+          "core_number": 2,
+          "dense": {
+            "max_abs_Z": 0.0006590780945140711,
+            "max_argument_step": 2.4304077974186367,
+            "min_abs_Z": 1.590681655251588e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -3.061771424399923e-07,
+          "reference_angular_disk_area": 0.00031415664737382794,
+          "reference_angular_radius": 0.01,
+          "relative_gap_to_core_transverse_curl": 0.0003270629170755157,
+          "sparse": {
+            "max_abs_Z": 0.0006590780945140711,
+            "max_argument_step": 2.4304077974186367,
+            "min_abs_Z": 1.590681655251588e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -1.0,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        },
+        {
+          "chi_momentum_circulation": -1.226371012073517e-06,
+          "circulation_minus_polygon": -4.924463790590546e-10,
+          "circulation_over_reference_angular_disk_area": -0.0009759475743326132,
+          "core_number": 2,
+          "dense": {
+            "max_abs_Z": 0.0013180748167119945,
+            "max_argument_step": 2.430107027921876,
+            "min_abs_Z": 3.1727126630131006e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999996,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          },
+          "dense_sparse_max_abs_Z_gap": 0.0,
+          "phase_plane_identity": "integral j_chi = 1/2 integral(chi dPi-Pi dchi); finite polygon area is a separate sampled quadrature.",
+          "points": 128,
+          "quadrature_plane_polygon_area": -1.225878565694458e-06,
+          "reference_angular_disk_area": 0.0012565951740923708,
+          "reference_angular_radius": 0.02,
+          "relative_gap_to_core_transverse_curl": 0.0013077345861993717,
+          "sparse": {
+            "max_abs_Z": 0.0013180748167119945,
+            "max_argument_step": 2.430107027921876,
+            "min_abs_Z": 3.1727126630131006e-05,
+            "nearest_integer": -1,
+            "phase_sampling_check": false,
+            "sampled_nonzero_margin": true,
+            "sampled_winding": -0.9999999999999996,
+            "scope": "128 sampled phase increments, not a certified continuous-loop nonvanishing bound."
+          }
+        }
+      ],
+      "mu_reference": 24.769497802514984,
+      "observer_proper_duration": 0.8999999999999999,
+      "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+      "producer_pinned_dense_history_sha256": "8f31ccf42ee0d1833e0ddeabcccc730dc99f3d94c88941b47f2de358a4bbcec3",
+      "producer_source_sha256": {
+        "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+        "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+        "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+        "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+        "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+        "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+        "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+        "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+        "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+        "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+        "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+        "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+        "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+        "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+        "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+        "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+        "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+      },
+      "record_sha256": "34422e6fefaf7bf284e3bd6b758671388cdf4ab3dad2a9b804e19108dfc3b05f",
+      "sparse_provenance": {
+        "adapter_sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+        "cache_pin_origin": "explicit_caller_admission",
+        "cache_sha256": "25f8219eef656d3f3c12b7623fe6f1fc6af93a5e17ed0a2f04b87541500fa45d",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "producer_status": "endpoint_reached",
+        "snapshot": 3,
+        "source_binding": "strict_producer_and_current_source_identity",
+        "state_sha256": "444b64f0d3255d9b3cdc2b72f3357f4d7714458f7559e638de386e0169e17090"
+      }
+    }
+  ],
+  "current_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+  "elapsed_seconds": 27.996939800010296,
+  "failure": null,
+  "schema": "nsc-valve-vortex-check-v1",
+  "scope": "Resolved-field sampled phase-vortex/momentum-curl check on fixed proper-age GH slices. No PDE, fluid velocity, new horizon, child formation or net global rotation is inferred.",
+  "source_sha256": {
+    "scripts/check_nsc_atlas_valve_vortex.py": "cfd3920127ff489078b65f716f39b35e890a8c59a91fd9fa51ec3c168988645a",
+    "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+    "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+    "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13",
+    "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+  },
+  "status": "complete"
+}

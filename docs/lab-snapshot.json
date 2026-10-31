@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "64f9fe8415794676ea520347bdede248d011c266",
+  "current_receipt_commit_parent": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 301135,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "bytes": 301621,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "2b064ac92b16fefdedfe521073ef596baf827606a33eac6a503f227142436716"
+      "sha256": "6f52a719eab5ff48f17af3ada726be0a6e0c0f66b18afbcee33c8314fa270309"
     },
     {
       "bytes": 164712,
@@ -10296,6 +10296,14 @@
       "path": "docs/arxiv-studies.md",
       "retention_reason": "Primary-source reading library, including scoped formation and metric-regularity references.",
       "sha256": "3c0d20f67aa7f25bd4d48a77ae88da29a929bca2ef8ca0e8d86c834c20a0ccd2"
+    },
+    {
+      "bytes": 17059,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "docs/atlas-progress.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7ab7f5c7383cfcf656e34066cefd461b5317e7fe4214c5ad9d6e08ef4b86d7fc"
     },
     {
       "bytes": 9543,
@@ -10333,12 +10341,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 491818,
-      "change": "Record the bounded P006 damped-offset calculation, its charge/sign distinction and independent lobe checks.",
-      "changed_from_commit": "64f9fe8415794676ea520347bdede248d011c266",
+      "bytes": 492617,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "84f30c7c3ad916bf501bcc6596ad0c8150e07e6984aca53cdf98172600fef2b8"
+      "sha256": "111c0d0e1c9fed9ed09a348f724b9c2edc891583c3889db73cd0be4f527f8b00"
     },
     {
       "bytes": 173938,
@@ -11189,6 +11197,14 @@
       "sha256": "a84285ca23bdb6055024652f4ae3a0a0c03379b6b9c28eb841341430f7dee76b"
     },
     {
+      "bytes": 21687,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "docs/nsc-atlas-valve-formation.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "84a67b79b1f58096a5be21f4b3206f9151d11375b387f8e35b790d09544a7b9a"
+    },
+    {
       "bytes": 10730,
       "change": "Close all quadratic metric sectors and cubic scalar feedback on the inherited parent, verify fourth-order matter-excitation work and derive an amplitude/ruler-free scalar-light clock relation.",
       "changed_from_commit": "4378efd5fddde1b7a96a3a8b8226a8f00a8e19fb",
@@ -11264,15 +11280,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 143840,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 145553,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "5cd054a0cedd42370326be92aa1b45ab48b6deb40f88e7d1d9c30e124e0de3ef"
+      "sha256": "ce360ff9b24eab1b72c82fa647c6affbb7f1310cacb06cf2241bfe1592e9449f"
     },
     {
       "bytes": 30876,
@@ -12262,12 +12278,12 @@
       "sha256": "9a2e7b2cd5f2744dc7e7ee72729af6099f810072b6068c5c23055b82dc4a9dbd"
     },
     {
-      "bytes": 59558,
-      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
-      "changed_from_commit": "b514a3c0a2a8d43f3fb71d5fa254a191838dfd3f",
+      "bytes": 59970,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "08547482d373addd5d496c724cd260c13b33e0d98bc17cfb95a6653670c79826"
+      "sha256": "f1891e159cbe170ace0f474607774948aacb61b26ea7ab95ff970988669764fd"
     },
     {
       "bytes": 18356,
@@ -31898,6 +31914,38 @@
       "sha256": "6082c261d29981351045fee0710d2b53a2bebc48589ec6caa6e55d7c9fc5eac9"
     },
     {
+      "bytes": 100310,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "results/summaries/nsc-atlas-valve-formation-early-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d258900ab099054c46fb989100c201fefb00da2360a5bcbeae91ae5a48fd48ab"
+    },
+    {
+      "bytes": 91547,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2b7786cc4657106aff354653beb261a95dcc73d87d3452dece1b1810443fbd7e"
+    },
+    {
+      "bytes": 19450,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "results/summaries/nsc-atlas-valve-onset-events-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6dc7569c59992222aec7f6a2deadd3d8e9ccceb19aa7ff01e92e7482ac3959ac"
+    },
+    {
+      "bytes": 122424,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "results/summaries/nsc-atlas-valve-vortex-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "edb393a196605ea9bbf689fc86af9a44cff5823afe1693ea0f8ac2f54b944712"
+    },
+    {
       "bytes": 12267,
       "change": "Prove the volume family's monotonic ordering and unique stable-family minimum while exposing the missing physical dimension/ancestor selection.",
       "changed_from_commit": "59ef213ab9ccd3d671f65ac8e93b1b71834871ff",
@@ -32104,6 +32152,14 @@
       "path": "scripts/analyze_nsc_atlas_fixed_endpoint.py",
       "retention_reason": "P001 endpoint comparison and its reproducible controls.",
       "sha256": "a2079027fee2f894cc087fb016c333b8b0a821fc386a0ee6661b21d207c559c3"
+    },
+    {
+      "bytes": 7786,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "scripts/analyze_nsc_atlas_valve_onset.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d9927b7ff65e16b43707cedf23ae543019bdf71f0e4da00b1460d5720ba00e8f"
     },
     {
       "bytes": 5242,
@@ -32850,6 +32906,22 @@
       "path": "scripts/check_nsc_atlas_two_wall_history.py",
       "retention_reason": "Current shared two-wall geometry, focused controls and authenticated figure.",
       "sha256": "4599c8b7e77533b62a27593d2862e4f43d9c218fd773823bb27ea14c7f84086f"
+    },
+    {
+      "bytes": 26438,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "scripts/check_nsc_atlas_valve_formation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "fb6c38a76a30c54a5a46b390277d1a9e12dcce6e2c4c0c8aa0cd13de7e0cc511"
+    },
+    {
+      "bytes": 13917,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "scripts/check_nsc_atlas_valve_vortex.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "cfd3920127ff489078b65f716f39b35e890a8c59a91fd9fa51ec3c168988645a"
     },
     {
       "bytes": 1150,
@@ -35453,12 +35525,12 @@
       "sha256": "b4c4289ca2487ee0c7a9612a07e7d7b465115a4004fc94330f962ff7491a5b39"
     },
     {
-      "bytes": 5907,
-      "change": "Complete inherited scalar momentum kicks with York/Einstein initial constraints and an exact amplitude-independent shear/internal-coupling relation.",
-      "changed_from_commit": "6112430909f557abe72df6aa4c05959517c219de",
+      "bytes": 6109,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
       "path": "scripts/evolve_nsc_atlas_parent_gh.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "7c55f9900fa4a605d9bc345f526f1c98385b71d66cf253f1636cffeec3908692"
+      "sha256": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a"
     },
     {
       "bytes": 4707,
@@ -37835,6 +37907,22 @@
       "path": "src/recursive_horizons/nsc_atlas_transmission_bound.py",
       "retention_reason": "Current continuum transmission proof, implementation or independent controls.",
       "sha256": "53cf3ba8c92412e61ad0ea99eeced69a57d12f426580d8fd0b078872a0c3e37a"
+    },
+    {
+      "bytes": 20437,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "src/recursive_horizons/nsc_atlas_trapped_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13"
+    },
+    {
+      "bytes": 17232,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "src/recursive_horizons/nsc_atlas_trapped_surfaces.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
     },
     {
       "bytes": 7005,
@@ -42917,10 +43005,34 @@
       "sha256": "0821db1adc57f050ef042316c193a78835ab1bd9571dd139446eb45109eeb22e"
     },
     {
+      "bytes": 9497,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "tests/test_nsc_atlas_trapped_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "45dc1c67897ed4401ee13b7547f33ab31ac55a32544ce2a5bd819ca798ae99b4"
+    },
+    {
+      "bytes": 9911,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "tests/test_nsc_atlas_trapped_surfaces.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "95a6ef4e4daae3d06a0858b87468f452fdd24860985ca292b2ca15df0b4510bb"
+    },
+    {
       "bytes": 6561,
       "path": "tests/test_nsc_atlas_two_wall_history.py",
       "retention_reason": "Current shared two-wall geometry, focused controls and authenticated figure.",
       "sha256": "fc6d7e91c844e3ea7dd8212e19af23fb20abae8723b9dad1ad06f3d3c1383fcf"
+    },
+    {
+      "bytes": 3417,
+      "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
+      "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
+      "path": "tests/test_nsc_atlas_valve_formation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "8a487c91d1b519b0a6d25b5bfc439f8d10e675de16aae3f9e5dcfe5992c4d300"
     },
     {
       "bytes": 3754,

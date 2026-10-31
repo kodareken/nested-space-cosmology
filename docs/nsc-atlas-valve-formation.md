@@ -217,7 +217,7 @@ The surface search at proper.225 uses both the scalar maximum and a
 scalar node as centers, three round starts and deformed shape degrees4
 and8. No sampled future-trapped or future-MOTS candidate is found in
 this search. The finest maximum-centered candidate has full outgoing
-RMS7.85824e-5 and ingoing expansion range[-.0891827,+.0786602] in model
+RMS 7.85824e-5 and ingoing expansion range [-.0891827,+.0786602] in model
 units. The node-centered candidate likewise has mixed ingoing signs.
 Neither reaches the prescribed max-residual tolerance or qualifies as a
 future horizon. No additional precision is pursued on these nonfuture
@@ -232,7 +232,7 @@ surface fitting; it is not a continuum no-trapping proof.
 
 The [passive dense-history onset calculation](../results/summaries/nsc-atlas-valve-onset-events-v1.json)
 locates the first two local events without another evolution. The
-geodesic-relaunch focusing score reaches1 at proper duration.02822386;
+geodesic-relaunch focusing score reaches 1 at proper duration .02822386;
 the slice-normal trace at the tracked observer subsequently reverses
 from expansion to contraction. Its three-resolution values are:
 
@@ -242,10 +242,10 @@ from expansion to contraction. Its three-resolution values are:
 | 20 | .0538328333 |
 | 24 | .0538334449 |
 
-The adjacent contraction-time differences decrease3.56434e-6 ->6.11599e-7.
-Differences in the earlier F=1 event lie below the declared1e-8 root
+The adjacent contraction-time differences decrease 3.56434e-6 -> 6.11599e-7.
+Differences in the earlier F=1 event lie below the declared 1e-8 root
 tolerance and are not treated as resolved extra digits. The early
-observer-phase readout gives1.94076 and3.70068 protocol passes at the
+observer-phase readout gives 1.94076 and 3.70068 protocol passes at the
 two finest events, respectively. These are synchronization counts, not
 an inherited nesting depth or a formed-child threshold. The measured
 trace is that of slice normals at the geodesic observer's position, not
@@ -268,6 +268,42 @@ compensated globally. This permits local counter-rotation but does not
 select a unique inward axial valve. A future collapsing channel must be
 tested with its actual inward flux and null expansions, not inferred from
 the presence of a nonzero circulation coefficient.
+
+The [same-state vortex calculation](../results/summaries/nsc-atlas-valve-vortex-v1.json)
+now makes a more specific connection. Use the canonical quadrature map
+Z=chi+i Pi_chi/mu_reference, with positive constant mu_reference. In the
+two-mode comparison, D=q1p2-q2p1 is its transverse orientation determinant.
+For D nonzero, its zeros are the two S3 circles X1=X2=0 and X1=X4=0.
+Their fixed-point source symmetries force chi=Pi_chi=0 there in the full
+nonlinear evolution too, though the nonlinear winding must be checked.
+The geometric eigenvalue gap generates
+dot D+3hD=-5q1q2/a² from initially zero D.
+
+This phase geometry is tied to the actual momentum density:
+
+$$
+j_\chi=-\Pi_\chi\,d\chi,\qquad
+dj_\chi=d\chi\wedge d\Pi_\chi,
+\qquad \oint j_\chi=\frac12\oint(\chi\,d\Pi_\chi-\Pi_\chi\,d\chi).
+$$
+
+Both sampled cores and both transverse radii have winding -1 at metric
+degrees 16,20,24 at proper .9. Finest 256/512-point loops confirm the sampled
+index with a nonzero boundary margin; this is not a certified continuum
+nonvanishing bound. The phase winding is not itself a quantized material
+circulation. For example chi=x,Pi=y gives a phase vortex while j=-y dx
+is a shear flow. Circular fluid streamlines and an inward drain require
+additional measurements.
+
+At the two selected cores, the chi current vanishes but the volume field
+has opposite axial momentum densities of magnitude 1.92824e-4 in model
+units. Thus the quadrature zero is not an endpoint of the full stress:
+the other field carries a finite current there. The cores' normal
+expansion is about +.171428. A direct three-resolution round-surface search
+about these source-derived centers finds no sampled future trap among
+the thirteen radii .2 to 2.6. This does not rule out other deformed surfaces,
+other centers or later events. It also does not identify a child merely
+because the phase coordinate is undefined at its core.
 
 [The 2026 forced-fluid construction](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf),
 Theorem1.1 and its early construction, supplies radial inflow with axial
@@ -337,3 +373,69 @@ background, and E0=3/8 is a separate reference coefficient. Neither is
 reported as the energy of an unconstructed child. This finite search
 also establishes no universal prohibition for all amplitudes, surfaces
 or future times, so there is no justified one-line universal blocker.
+
+## Extended search, current limit and next connection
+
+The [extended finite diagnostic](../results/summaries/nsc-atlas-valve-formation-extended-v1.json)
+uses metric degrees 16,20,24 at matched proper .9. Hamiltonian residuals
+there decrease .00680 ->.00169 ->.000221 in reference H² units. Its
+maximum-centered candidate has outgoing expansion range [-.0277647,.0233364]
+and ingoing range [-.215176,.293958]. The node-centered candidate also has
+mixed signs. No prescribed seed, finite deformed fit or sampled core
+surface supplies an admitted future trap. The shape4 fits remain
+nonconverged; neither optimizer success nor a small average is a horizon.
+The proper1.2 leaf has larger residuals and remains a diagnostic rather
+than a new formation claim.
+
+The results are: a local source-driven focusing threshold, actual local
+contraction, an internal stabilization-loss threshold, and phase vortices
+with finite longitudinal volume-field current. A child receiving energy
+has not been constructed. The current sources are a broad standing
+preparation; no independently specified external compression or inward
+characteristic history is selected by the offset map. The finite search
+cannot establish that no admissible state ever forms a trap, so it cannot
+justify a universal blocking assumption or a necessary action change.
+A localized inward preparation within the same action is a possible next
+candidate, provided its constraints and parent inheritance are derived.
+
+Before another global resolution campaign, the next formation connection
+is the null-generator history on the existing resolved region. With
+l_plus/minus=n plus/minus the unit surface normal,
+
+$$
+R_{ll}=\kappa\sum_A(\Pi_A\mathbin{\pm}v^iD_i\phi_A)^2.
+$$
+
+The potential cancels from this null projection, while still affecting
+the field and opposite-expansion evolution. Integrated Raychaudhuri
+requires the actual null shear, affine or boost weight and a common
+closed cut with negative opposite expansion. Timelike K shear and the
+old 88.47% Killing-energy fraction do not supply these data.
+[Massless spherical positive-Lambda formation](https://arxiv.org/abs/2005.03434),
+[anisotropic vacuum short pulses](https://arxiv.org/abs/1302.5951) and
+[nonsymmetric massless-scalar formation](https://arxiv.org/abs/2304.01695)
+provide criteria to reuse when their source, characteristic and norm
+hypotheses hold. Those inspected theorem/setup sections do not certify
+this massive compact standing state. In particular its old modes have
+mu/k about 52.69 and 32.27, outside a massless short-pulse scale limit.
+
+Reproduction uses the source-bound evolution command already admitted
+above, saving sparse and dense caches under .build; then:
+
+```powershell
+foreach ($valveDegree in 12,16,20) {
+  python scripts/run_python.py scripts/evolve_nsc_atlas_parent_gh.py --degree $valveDegree --epsilon 1 --proper-endpoint 0.3 --threads 4 --budget-seconds 900 --rtol 3e-9 --atol 3e-11 --max-step 0.01 --no-work --state-cache ".build/valve-e1-L$valveDegree-early-v1.npz" --output ".build/valve-e1-L$valveDegree-early-v1.json"
+}
+foreach ($valveDegree in 16,20,24) {
+  python scripts/run_python.py scripts/evolve_nsc_atlas_parent_gh.py --degree $valveDegree --epsilon 1 --proper-endpoint 1.2 --threads 4 --budget-seconds 2400 --rtol 3e-9 --atol 3e-11 --max-step 0.025 --no-work --state-cache ".build/valve-e1-L$valveDegree-extended-v1.npz" --dense-cache ".build/valve-e1-L$valveDegree-extended-v1-history.npz" --output ".build/valve-e1-L$valveDegree-extended-v1.json"
+}
+python scripts/run_python.py scripts/analyze_nsc_atlas_valve_onset.py --output .build/reproduced-valve-onset.json
+python scripts/run_python.py scripts/check_nsc_atlas_valve_vortex.py --core-surfaces --output .build/reproduced-valve-vortex.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_formation.py tests/test_nsc_atlas_trapped_surfaces.py tests/test_nsc_atlas_trapped_parent.py
+```
+
+The surface producer takes explicit record paths and independently
+admitted raw-cache SHA256 values. The compact records retain the original
+paths, source commits, parameters, checkpoints, numerical tolerances and
+cache hashes; full fields regenerate locally. The goal/frontier and all
+other open programme items remain in [the progress record](atlas-progress.json).

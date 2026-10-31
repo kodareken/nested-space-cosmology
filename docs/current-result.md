@@ -4,8 +4,12 @@ Active frontier: [valve formation](nsc-atlas-valve-formation.md), with the
 [goal progress record](atlas-progress.json) owning compaction recovery.
 Eta is parked. The unchanged epsilon1 parent now reaches proper.3 at
 three resolutions; constraints contract and genuine local focusing and
-contraction develop. A formed child is not yet admitted. The surface
-finder and extended histories are active; downstream cosmology waits.
+contraction develop. A formed child is not yet admitted. The closed-surface diagnostic and extended histories are now completed.
+No future trap or child is admitted. Internal stabilization loss has the
+conditional threshold epsilon=.717777, and the first normal contraction
+occurs near proper.0538334. Phase vortices carry finite volume-field
+current but do not establish a drain into another region. Null-generator
+history and a compatible receiving child remain next; downstream cosmology waits.
 
 Within P006, the [damped-offset test](nsc-atlas-offset-thermodynamics.md)
 now uses the retained late scalar coefficients: gamma T=.103283613217,
