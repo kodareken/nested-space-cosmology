@@ -386,6 +386,12 @@ the neutral geometric response driven by this actual wave, including
 retained memory, pressure/source-work accounting and linked local spectral
 and coupling shifts. It does not introduce the still-missing charge bias.
 
+The [nonlinear parent continuation](nsc-atlas-parent-gh.md#matter-work-and-constraint-controls)
+now implements the same energy/work balance with the evolving nonspherical
+metric and both canonical fields. Its passive stage ledger leaves the
+adaptive physical state unchanged. It extends the first-law calculation;
+entropy production and a selected thermal state remain separate closures.
+
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_zero_interface.py --output .build/zero-interface-reproduced.json
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_zero_interface.py tests/test_nsc_atlas_zero_numeric.py tests/test_nsc_atlas_s3_polynomials.py

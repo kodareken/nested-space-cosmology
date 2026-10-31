@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **328 distinct arXiv works**: 108 are cited in the main argument and 220 are retained in the reading library only.
+This navigation index contains **328 distinct arXiv works**: 109 are cited in the main argument and 219 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -278,7 +278,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [gr-qc/9403008](https://arxiv.org/abs/gr-qc/9403008) | Studies | Archived: Garay, quantum gravity and minimum length. | Library only |
 | [gr-qc/9404011](https://arxiv.org/abs/gr-qc/9404011v1) | Atlas reuse library, 10 October 2026 | Smolin: the fate of black-hole singularities and Standard Model parameters, cited as a prior natural-selection proposal. | Library only |
 | [gr-qc/9406053](https://arxiv.org/abs/gr-qc/9406053) | Studies | Archived: Borde, topology change in classical general relativity. | Library only |
-| [gr-qc/9504004](https://arxiv.org/abs/gr-qc/9504004) | Studies | Archived: Jacobson, thermodynamics of spacetime and the Einstein equation of state. | Library only |
+| [gr-qc/9504004](https://arxiv.org/abs/gr-qc/9504004v2) | Studies | Jacobson: full argument and equations1--6 read, 31 October2026. Local horizon equilibrium, area entropy and Unruh temperature give the Einstein equation of state; entropy normalization and Lambda remain inputs. Used in Section15.20 beside the finite matter-work calculation. | 15.20 |
 | [gr-qc/9505009](https://arxiv.org/abs/gr-qc/9505009) | Studies | Camporesi and Higuchi: equations 3.51–3.54, the Dirac spectrum on spheres and real hyperbolic spaces. | Library only |
 | [gr-qc/9612057](https://arxiv.org/abs/gr-qc/9612057) | Studies | Archived: Borde, regular black holes and topology change. | Library only |
 | [gr-qc/9708008](https://arxiv.org/abs/gr-qc/9708008v2) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |

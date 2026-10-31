@@ -4,6 +4,9 @@ The [nonlinear parent implementation](nsc-atlas-parent-gh.md) now contains
 global regular-frame evolution, fast circle-fiber transforms, independent
 constraints, geodesic readouts and passive matter work. Finite-amplitude
 outcomes remain qualified by the campaign's spatial/temporal controls.
+The supplied epsilon=.25 control has three spatial resolutions, one middle
+time refinement, linked local phase/density/coupling readouts and an
+independent excitation-work balance. The full-amplitude case is unresolved.
 
 The [finite parent initial data](nsc-atlas-finite-parent-data.md) combine
 a positive-solution existence proof on a finite amplitude interval,

@@ -1651,7 +1651,7 @@ numerical mass values and coupled cap/wall geometry remain uncomputed.
 - [gr-qc/9403008](https://arxiv.org/abs/gr-qc/9403008) — Archived: Garay, quantum gravity and minimum length.
 - [gr-qc/9404011](https://arxiv.org/abs/gr-qc/9404011) — Smolin: the fate of black-hole singularities and Standard Model parameters, cited as a prior natural-selection proposal.
 - [gr-qc/9406053](https://arxiv.org/abs/gr-qc/9406053) — Archived: Borde, topology change in classical general relativity.
-- [gr-qc/9504004](https://arxiv.org/abs/gr-qc/9504004) — Archived: Jacobson, thermodynamics of spacetime and the Einstein equation of state.
+- [gr-qc/9504004v2](https://arxiv.org/html/gr-qc/9504004v2) — Jacobson: full argument and equations1--6 read, 31 October2026. Local horizon equilibrium, area entropy and Unruh temperature give the Einstein equation of state; entropy normalization and Lambda remain inputs. Used in Section15.20 beside the finite matter-work calculation.
 - [gr-qc/9505009](https://arxiv.org/abs/gr-qc/9505009) — Camporesi and Higuchi: equations 3.51–3.54, the Dirac spectrum on spheres and real hyperbolic spaces.
 - [gr-qc/9612057](https://arxiv.org/abs/gr-qc/9612057) — Archived: Borde, regular black holes and topology change.
 - [gr-qc/9710089](https://arxiv.org/abs/gr-qc/9710089) — Hayward, the unified first law of black-hole dynamics: v2 local mass transport and mixed-radius identities are imported in the [source-leg mass library](#source-leg-mass-library); later thermodynamic claims remain outside the reading.

@@ -1,0 +1,340 @@
+{
+  "cases": [
+    {
+      "degree": 8,
+      "epsilon": 0.25,
+      "final": {
+        "g_KK_fractional_change_from_initial_local_value": 0.00023490752722804,
+        "g_KK_over_initial_local_value": 1.000234907527228,
+        "geodesic_observer_total_density_over_initial_vacuum": 1.0745357826401465,
+        "observer_phase_wrapped": 0.8079240822420467,
+        "observer_volume_mode": -0.03568033683019455,
+        "slice_proper_volume_over_initial_round_reference": 5.240137863945225
+      },
+      "final_errors": {
+        "ADM_H_RMS_over_H_squared": 0.010274996064102994,
+        "ADM_M_RMS_over_H_squared": 0.001374131451087716,
+        "GH_C_RMS_over_H": 0.0006910731650500948,
+        "scalar_acceleration_unresolved_fraction": 0.004194776067387658,
+        "scalar_last_two_shell_power_fraction": 0.015501266753883773,
+        "volume_acceleration_unresolved_fraction": 0.1517091744279633,
+        "volume_last_two_shell_power_fraction": 0.0022923185402503763
+      },
+      "initial_errors": {
+        "ADM_H_RMS_over_H_squared": 0.0002012850564815643,
+        "ADM_M_RMS_over_H_squared": 0.0,
+        "GH_C_RMS_over_H": 4.0447141959649394e-06,
+        "scalar_acceleration_unresolved_fraction": 1.2939398437959279e-08,
+        "scalar_last_two_shell_power_fraction": 9.970392100019037e-32,
+        "volume_acceleration_unresolved_fraction": 1.7104279689470346e-15,
+        "volume_last_two_shell_power_fraction": 0.0
+      },
+      "input_sha256": "8487edd43b89d877644ee0f248ca2bca488eff23186f075b99a99a35698c073c",
+      "observer_phase_winding_certified": false,
+      "producer_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "proper_endpoint": 4.364851930252011,
+      "source_binding_verified": true,
+      "temporal_tolerances": {
+        "atol": 3e-10,
+        "max_step": 0.05,
+        "rtol": 3e-08
+      },
+      "work": {
+        "enabled": false,
+        "final_excitation_normalized": null,
+        "initial_excitation_normalized": null,
+        "integrated_work_normalized": null,
+        "residual_normalized": null,
+        "residual_over_initial_excitation": null,
+        "valid": null
+      }
+    },
+    {
+      "degree": 12,
+      "epsilon": 0.25,
+      "final": {
+        "g_KK_fractional_change_from_initial_local_value": 0.0003902077068657668,
+        "g_KK_over_initial_local_value": 1.0003902077068658,
+        "geodesic_observer_total_density_over_initial_vacuum": 1.056068235960729,
+        "observer_phase_wrapped": 0.7093936884446298,
+        "observer_volume_mode": -0.035702515638032034,
+        "slice_proper_volume_over_initial_round_reference": 5.238209524526853
+      },
+      "final_errors": {
+        "ADM_H_RMS_over_H_squared": 0.0008972484789508836,
+        "ADM_M_RMS_over_H_squared": 0.00018368582921608246,
+        "GH_C_RMS_over_H": 5.102939209633313e-05,
+        "scalar_acceleration_unresolved_fraction": 0.0004957131382447818,
+        "scalar_last_two_shell_power_fraction": 0.0004336779843268296,
+        "volume_acceleration_unresolved_fraction": 0.040182379545588856,
+        "volume_last_two_shell_power_fraction": 1.2648808575989745e-05
+      },
+      "initial_errors": {
+        "ADM_H_RMS_over_H_squared": 1.94686597725896e-06,
+        "ADM_M_RMS_over_H_squared": 0.0,
+        "GH_C_RMS_over_H": 3.044579148940239e-08,
+        "scalar_acceleration_unresolved_fraction": 3.373316087389036e-12,
+        "scalar_last_two_shell_power_fraction": 4.266015615987593e-32,
+        "volume_acceleration_unresolved_fraction": 8.7925129758195555e-16,
+        "volume_last_two_shell_power_fraction": 0.0
+      },
+      "input_sha256": "c0955a2df0083ac57626b8636466a61dff9113784873b8b27445441c253179fb",
+      "observer_phase_winding_certified": false,
+      "producer_commit": "e6f34eb7036373306e3d7473b48e37268a8c4785",
+      "proper_endpoint": 4.364851930251841,
+      "source_binding_verified": true,
+      "temporal_tolerances": {
+        "atol": 3e-11,
+        "max_step": 0.025,
+        "rtol": 3e-09
+      },
+      "work": {
+        "enabled": true,
+        "final_excitation_normalized": 0.058218898134697675,
+        "initial_excitation_normalized": 0.05835817597008761,
+        "integrated_work_normalized": -0.00013926530600168942,
+        "residual_normalized": -1.252938824851499e-08,
+        "residual_over_initial_excitation": -2.1469807855093215e-07,
+        "valid": true
+      }
+    },
+    {
+      "degree": 12,
+      "epsilon": 0.25,
+      "final": {
+        "g_KK_fractional_change_from_initial_local_value": 0.00039021003725897585,
+        "g_KK_over_initial_local_value": 1.000390210037259,
+        "geodesic_observer_total_density_over_initial_vacuum": 1.0560681882325773,
+        "observer_phase_wrapped": 0.7093917734113675,
+        "observer_volume_mode": -0.035702515970815495,
+        "slice_proper_volume_over_initial_round_reference": 5.238209159384526
+      },
+      "final_errors": {
+        "ADM_H_RMS_over_H_squared": 0.0008972453282791456,
+        "ADM_M_RMS_over_H_squared": 0.00018368498351977396,
+        "GH_C_RMS_over_H": 5.102952397652759e-05,
+        "scalar_acceleration_unresolved_fraction": 0.0004957115520764077,
+        "scalar_last_two_shell_power_fraction": 0.000433675832151517,
+        "volume_acceleration_unresolved_fraction": 0.040182180706642645,
+        "volume_last_two_shell_power_fraction": 1.2648695557042859e-05
+      },
+      "initial_errors": {
+        "ADM_H_RMS_over_H_squared": 1.94686597725896e-06,
+        "ADM_M_RMS_over_H_squared": 0.0,
+        "GH_C_RMS_over_H": 3.044579148940239e-08,
+        "scalar_acceleration_unresolved_fraction": 3.373316087389036e-12,
+        "scalar_last_two_shell_power_fraction": 4.266015615987593e-32,
+        "volume_acceleration_unresolved_fraction": 8.7925129758195555e-16,
+        "volume_last_two_shell_power_fraction": 0.0
+      },
+      "input_sha256": "b78b3bb14191bfc585ea9231a3ac823bd4663fda32b69c48d01a6bd17264e694",
+      "observer_phase_winding_certified": false,
+      "producer_commit": "487a0b1fcd533bb9fe75a69b2b229329d32cdc55",
+      "proper_endpoint": 4.364851930251976,
+      "source_binding_verified": true,
+      "temporal_tolerances": {
+        "atol": 3e-10,
+        "max_step": 0.05,
+        "rtol": 3e-08
+      },
+      "work": {
+        "enabled": false,
+        "final_excitation_normalized": null,
+        "initial_excitation_normalized": null,
+        "integrated_work_normalized": null,
+        "residual_normalized": null,
+        "residual_over_initial_excitation": null,
+        "valid": null
+      }
+    },
+    {
+      "degree": 16,
+      "epsilon": 0.25,
+      "final": {
+        "g_KK_fractional_change_from_initial_local_value": 0.0004063705467414374,
+        "g_KK_over_initial_local_value": 1.0004063705467414,
+        "geodesic_observer_total_density_over_initial_vacuum": 1.0541328607135159,
+        "observer_phase_wrapped": 0.7268236070178251,
+        "observer_volume_mode": -0.035704823695882834,
+        "slice_proper_volume_over_initial_round_reference": 5.238122970182157
+      },
+      "final_errors": {
+        "ADM_H_RMS_over_H_squared": 8.402749619354005e-05,
+        "ADM_M_RMS_over_H_squared": 5.744176666878324e-05,
+        "GH_C_RMS_over_H": 2.8240099646059065e-06,
+        "scalar_acceleration_unresolved_fraction": 7.926255611878568e-05,
+        "scalar_last_two_shell_power_fraction": 7.411153125966291e-06,
+        "volume_acceleration_unresolved_fraction": 0.0076356490550635705,
+        "volume_last_two_shell_power_fraction": 3.6794655591932224e-07
+      },
+      "initial_errors": {
+        "ADM_H_RMS_over_H_squared": 1.517975722328241e-08,
+        "ADM_M_RMS_over_H_squared": 0.0,
+        "GH_C_RMS_over_H": 1.9203150785786434e-10,
+        "scalar_acceleration_unresolved_fraction": 2.3261341529479904e-14,
+        "scalar_last_two_shell_power_fraction": 1.9948663676095073e-30,
+        "volume_acceleration_unresolved_fraction": 1.1822612621000712e-15,
+        "volume_last_two_shell_power_fraction": 0.0
+      },
+      "input_sha256": "92087998e4c8d4aa11c23cd141a700fa8862b3f56b9cc952468aa63b8f83697e",
+      "observer_phase_winding_certified": false,
+      "producer_commit": "e6f34eb7036373306e3d7473b48e37268a8c4785",
+      "proper_endpoint": 4.364851930252216,
+      "source_binding_verified": true,
+      "temporal_tolerances": {
+        "atol": 3e-10,
+        "max_step": 0.05,
+        "rtol": 3e-08
+      },
+      "work": {
+        "enabled": true,
+        "final_excitation_normalized": 0.05821925058653364,
+        "initial_excitation_normalized": 0.058358175970088695,
+        "integrated_work_normalized": -0.0001388456334752652,
+        "residual_normalized": -7.975007978864223e-08,
+        "residual_over_initial_excitation": -1.3665622419302121e-06,
+        "valid": true
+      }
+    }
+  ],
+  "coupling_scope": "For d=12, the retained internal action coefficient gives g_KK(s)/g_KK(s_initial)=exp[-7(s-s_initial)]; no Standard Model identification or absolute coupling is selected.",
+  "epsilon": 0.25,
+  "model_inputs": {
+    "H_reference": 0.2714056154003984,
+    "reference_proper_endpoint_origin": "Previously specified 300-phase-pass reference event",
+    "scalar_mass_squared": 613.5280213887946,
+    "sstar": -0.035646782552940987,
+    "vacuum": 0.22098302421260696,
+    "volume_kinetic": 84.0
+  },
+  "phase_scope": "Direct phase is circular. Principal endpoint differences do not certify accumulated winding.",
+  "physical_prediction_admitted": false,
+  "qualification": "Adjacent spatial changes are empirical indicators, not certified bounds. A time control at one degree does not certify another degree. Constraint and observable convergence are both required.",
+  "requested_proper_endpoint": 4.364851930251994,
+  "schema": "nsc-atlas-gh-comparison-v1",
+  "slice_scope": "Slice volume and normal integrated energy are slicing diagnostics, distinct from local geodesic density.",
+  "source_sha256": {
+    "scripts/compare_nsc_atlas_gh_evolution.py": "b12c549876f1174d4836f24d28b812fb620820b7d6d57728307a20a789ba48df"
+  },
+  "spatial_changes": [
+    {
+      "absolute_change": {
+        "g_KK_fractional_change_from_initial_local_value": 0.00015530251003093585,
+        "g_KK_over_initial_local_value": 0.0001553025100309302,
+        "geodesic_observer_total_density_over_initial_vacuum": 0.018467594407569177,
+        "observer_phase_principal_difference": 0.09853230883067922,
+        "observer_volume_mode": 2.2179140620942617e-05,
+        "slice_proper_volume_over_initial_round_reference": 0.001928704560699046
+      },
+      "final_error_ratios": {
+        "ADM_H_RMS_over_H_squared": 0.08732317975417882,
+        "ADM_M_RMS_over_H_squared": 0.133673516732606,
+        "GH_C_RMS_over_H": 0.07384098610286588,
+        "scalar_acceleration_unresolved_fraction": 0.11817354350100444,
+        "scalar_last_two_shell_power_fraction": 0.027976799511747093,
+        "volume_acceleration_unresolved_fraction": 0.2648632217409008,
+        "volume_last_two_shell_power_fraction": 0.005517861211235205
+      },
+      "from_degree": 8,
+      "from_temporal_tolerances": {
+        "atol": 3e-10,
+        "max_step": 0.05,
+        "rtol": 3e-08
+      },
+      "signed_change": {
+        "g_KK_fractional_change_from_initial_local_value": 0.00015530251003093585,
+        "g_KK_over_initial_local_value": 0.0001553025100309302,
+        "geodesic_observer_total_density_over_initial_vacuum": -0.018467594407569177,
+        "observer_phase_principal_difference": -0.09853230883067922,
+        "observer_volume_mode": -2.2179140620942617e-05,
+        "slice_proper_volume_over_initial_round_reference": -0.001928704560699046
+      },
+      "to_degree": 12,
+      "to_temporal_tolerances": {
+        "atol": 3e-10,
+        "max_step": 0.05,
+        "rtol": 3e-08
+      }
+    },
+    {
+      "absolute_change": {
+        "g_KK_fractional_change_from_initial_local_value": 1.616050948246157e-05,
+        "g_KK_over_initial_local_value": 1.6160509482388008e-05,
+        "geodesic_observer_total_density_over_initial_vacuum": 0.0019353275190614472,
+        "observer_phase_principal_difference": 0.017431833606457614,
+        "observer_volume_mode": 2.3077250673395056e-06,
+        "slice_proper_volume_over_initial_round_reference": 8.618920236980188e-05
+      },
+      "final_error_ratios": {
+        "ADM_H_RMS_over_H_squared": 0.09365052516316687,
+        "ADM_M_RMS_over_H_squared": 0.3127189036800036,
+        "GH_C_RMS_over_H": 0.05534070758537521,
+        "scalar_acceleration_unresolved_fraction": 0.1598965281054583,
+        "scalar_last_two_shell_power_fraction": 0.017089154102036735,
+        "volume_acceleration_unresolved_fraction": 0.19002575073784625,
+        "volume_last_two_shell_power_fraction": 0.029089683933016138
+      },
+      "from_degree": 12,
+      "from_temporal_tolerances": {
+        "atol": 3e-10,
+        "max_step": 0.05,
+        "rtol": 3e-08
+      },
+      "signed_change": {
+        "g_KK_fractional_change_from_initial_local_value": 1.616050948246157e-05,
+        "g_KK_over_initial_local_value": 1.6160509482388008e-05,
+        "geodesic_observer_total_density_over_initial_vacuum": -0.0019353275190614472,
+        "observer_phase_principal_difference": 0.017431833606457614,
+        "observer_volume_mode": -2.3077250673395056e-06,
+        "slice_proper_volume_over_initial_round_reference": -8.618920236980188e-05
+      },
+      "to_degree": 16,
+      "to_temporal_tolerances": {
+        "atol": 3e-10,
+        "max_step": 0.05,
+        "rtol": 3e-08
+      }
+    }
+  ],
+  "temporal_changes": [
+    {
+      "absolute_change": {
+        "g_KK_fractional_change_from_initial_local_value": 2.3303932090252763e-09,
+        "g_KK_over_initial_local_value": 2.3303932117357817e-09,
+        "geodesic_observer_total_density_over_initial_vacuum": 4.772815165310362e-08,
+        "observer_phase_principal_difference": 1.9150332623008026e-06,
+        "observer_volume_mode": 3.3278346051046626e-10,
+        "slice_proper_volume_over_initial_round_reference": 3.651423270412124e-07
+      },
+      "final_error_ratios": {
+        "ADM_H_RMS_over_H_squared": 1.0000035114941686,
+        "ADM_M_RMS_over_H_squared": 1.000004604057949,
+        "GH_C_RMS_over_H": 0.9999974156099415,
+        "scalar_acceleration_unresolved_fraction": 1.000003199780936,
+        "scalar_last_two_shell_power_fraction": 1.000004962636036,
+        "volume_acceleration_unresolved_fraction": 1.0000049484359164,
+        "volume_last_two_shell_power_fraction": 1.0000089352254844
+      },
+      "from_degree": 12,
+      "from_temporal_tolerances": {
+        "atol": 3e-10,
+        "max_step": 0.05,
+        "rtol": 3e-08
+      },
+      "signed_change": {
+        "g_KK_fractional_change_from_initial_local_value": -2.3303932090252763e-09,
+        "g_KK_over_initial_local_value": -2.3303932117357817e-09,
+        "geodesic_observer_total_density_over_initial_vacuum": 4.772815165310362e-08,
+        "observer_phase_principal_difference": 1.9150332623008026e-06,
+        "observer_volume_mode": 3.3278346051046626e-10,
+        "slice_proper_volume_over_initial_round_reference": 3.651423270412124e-07
+      },
+      "to_degree": 12,
+      "to_temporal_tolerances": {
+        "atol": 3e-11,
+        "max_step": 0.025,
+        "rtol": 3e-09
+      }
+    }
+  ]
+}

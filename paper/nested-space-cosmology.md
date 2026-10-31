@@ -9849,8 +9849,99 @@ Other initial $\Phi$ components vanish. Direct contraction of the
 connection difference verifies the gauge constraint. Zero extrinsic
 curvature does not set the mixed $\Pi$ data to zero. The exact smooth
 constraint data admit a local hyperbolic development, but the full
-nonlinear numerical evolution and its lifetime remain to be calculated.
-The existing spherical solvers cannot carry this same nonspherical state.
+nonlinear numerical development still needs its own convergence checks.
+The following continuation implements that development without replacing
+the nonspherical state by a spherical average.
+
+### 15.20. Evolving geometry connects pressure work to local readouts
+
+<!-- nsc-claim:nonlinear-parent-work-control -->
+
+The [nonlinear continuation](../docs/nsc-atlas-parent-gh.md) evolves the
+same canonical pair and full metric on the compact generated space. Its
+three spatial directions and offset evolution retain the regular global
+frame. Covariant GH equations use a static reference connection; a
+metric-dependent coordinate source controls the lapse without changing
+the physical stress. Direct physical Ricci and independent ADM calculations
+check the implementation. These are numerical controls of this action,
+not a newly selected preparation or cosmological fit.
+
+The thermodynamic connection is an explicit work equation. With normal
+density rho, spatial stress S, momentum j, lapse N and
+$K_{ij}=-\mathcal L_nh_{ij}/2$, subtract the constant vacuum density:
+
+$$
+E_{\rm exc}=\int\sqrt{h}\,(\rho-V_*)\,dV_{\rm ref},
+$$
+
+$$
+\frac{dE_{\rm exc}}{dt}
+=\int\sqrt{h}\left[NK_{ij}S^{ij}-j^iD_iN+NV_*\operatorname{tr}K\right]dV_{\rm ref}.
+$$
+
+The complete compact parent has no boundary flux. A restricted observer
+region also has the boundary term calculated in Section15. Homogeneous
+proper slicing gives dE_exc=-p_exc dV, with p_exc=p+V_star. Directional stress and
+spatial lapse gradients are retained in the nonspherical evolution.
+Energy is independently evaluated from the ADM stress and work from a
+separate first-derivative kernel. Passive Runge--Kutta quadrature records
+the work without changing adaptive field steps.
+
+For the supplied finite control epsilon=.25, tightening the degree12
+time integration changes the endpoint phase by1.92e-6 radians and the
+measured density by4.77e-8 V_star. The full energy/work residual is
+2.15e-7 of the initial excitation energy. Spatial convergence is separately
+required; a good energy balance alone does not establish an Einstein
+solution or an observer prediction.
+
+The [preserved campaign](../results/summaries/nsc-atlas-gh-campaign-v1.json)
+and [same-endpoint comparison](../results/summaries/nsc-atlas-gh-comparison-v1.json)
+now include degrees8,12 and16 at this amplitude. At proper duration
+4.364851930252, the Hamiltonian RMS/H squared falls from .010275 to
+.000897 to .0000840. Endpoint phase differences shrink from .098532
+to .017432 radians; density differences from .018468 to .001935 V_star.
+The phase changes direction under refinement, so monotonic values are
+not assumed. The fine values and fine--middle spreads are:
+
+| Conditional local readout | Degree16 value | Fine--middle absolute spread |
+| --- | --- | --- |
+| Direct scalar phase, radians | .726824 | .017432 |
+| Geodesic density / V_star | 1.054133 | .001935 |
+| Geometric coupling fractional change | .000406371 | .000016161 |
+
+These spreads are empirical indicators, not certified error bars.
+Time refinement was performed at degree12, not degree16. The fine
+energy/work mismatch is1.37e-6 of initial excitation energy, larger than
+the tighter-time middle run's2.15e-7; monotonic work-error convergence is
+not claimed. Both constraint and observer changes improve spatially.
+
+![Finite nonlinear observer comparison and independent energy/work balance](figures/nsc-atlas-gh-evolution.png)
+
+The same evolving internal size s fixes local action coefficients:
+
+$$
+\frac{g_{\rm KK}(s)}{g_{\rm KK}(s_*)}=e^{-7(s-s_*)},
+\qquad \Delta\ln g_{\rm KK}=7\Delta\ln R_M.
+$$
+
+Thus the field history links local density, scalar phase and a geometric
+coupling change. These are conditional readouts of one preparation; the
+coupling has not been identified with a Standard Model interaction.
+
+[Jacobson's horizon construction](https://arxiv.org/html/gr-qc/9504004v2)
+provides a related thermodynamic route to Einstein's equation: local
+equilibrium, Unruh temperature, area entropy and delta Q=T dS. It supplies
+an equation of state, while leaving eta_A and Lambda unselected. For
+our canonical action, null contraction removes the potential:
+
+$$
+T_{ab}k^ak^b=(k^a\partial_a S)^2+(k^a\partial_a\chi)^2.
+$$
+
+Consequently null heat data cannot determine an added vacuum constant.
+The finite work identity does not supply a microscopic entropy law,
+charge bias, SI ruler or regular daughter. The full-amplitude source
+remains underresolved; it is not replaced by the smaller control.
 
 ## VI. Gravitational exchange, fluid motion and quantum state
 
@@ -14119,7 +14210,7 @@ A dagger marks a work retained in the reading library but not cited in the main 
 | Studies | [gr-qc/0007036 †](https://arxiv.org/abs/gr-qc/0007036), [gr-qc/0207080 †](https://arxiv.org/abs/gr-qc/0207080), [gr-qc/0212028 †](https://arxiv.org/abs/gr-qc/0212028), [gr-qc/0304007 †](https://arxiv.org/abs/gr-qc/0304007), [gr-qc/0404074 †](https://arxiv.org/abs/gr-qc/0404074) |
 | Studies | [gr-qc/0505065 †](https://arxiv.org/abs/gr-qc/0505065), [gr-qc/0506037 †](https://arxiv.org/abs/gr-qc/0506037), [gr-qc/0511109 †](https://arxiv.org/abs/gr-qc/0511109), [gr-qc/0605031 †](https://arxiv.org/abs/gr-qc/0605031), [gr-qc/0607039 †](https://arxiv.org/abs/gr-qc/0607039) |
 | Studies | [gr-qc/0611022 †](https://arxiv.org/abs/gr-qc/0611022), [gr-qc/9211002 †](https://arxiv.org/abs/gr-qc/9211002), [gr-qc/9211017 †](https://arxiv.org/abs/gr-qc/9211017), [gr-qc/9403008 †](https://arxiv.org/abs/gr-qc/9403008), [gr-qc/9406053 †](https://arxiv.org/abs/gr-qc/9406053) |
-| Studies | [gr-qc/9504004 †](https://arxiv.org/abs/gr-qc/9504004), [gr-qc/9505009 †](https://arxiv.org/abs/gr-qc/9505009), [gr-qc/9612057 †](https://arxiv.org/abs/gr-qc/9612057), [gr-qc/9801079 †](https://arxiv.org/abs/gr-qc/9801079), [gr-qc/9810032 †](https://arxiv.org/abs/gr-qc/9810032) |
+| Studies | [gr-qc/9504004](https://arxiv.org/abs/gr-qc/9504004v2), [gr-qc/9505009 †](https://arxiv.org/abs/gr-qc/9505009), [gr-qc/9612057 †](https://arxiv.org/abs/gr-qc/9612057), [gr-qc/9801079 †](https://arxiv.org/abs/gr-qc/9801079), [gr-qc/9810032 †](https://arxiv.org/abs/gr-qc/9810032) |
 | Studies | [gr-qc/9901069 †](https://arxiv.org/abs/gr-qc/9901069), [gr-qc/9904021 †](https://arxiv.org/abs/gr-qc/9904021), [gr-qc/9906015 †](https://arxiv.org/abs/gr-qc/9906015), [hep-ph/0105021 †](https://arxiv.org/abs/hep-ph/0105021), [hep-ph/9912408 †](https://arxiv.org/abs/hep-ph/9912408) |
 | Studies | [hep-th/0011232 †](https://arxiv.org/abs/hep-th/0011232), [hep-th/0103138 †](https://arxiv.org/abs/hep-th/0103138), [hep-th/0103186 †](https://arxiv.org/abs/hep-th/0103186), [hep-th/0204253 †](https://arxiv.org/abs/hep-th/0204253), [hep-th/0206054 †](https://arxiv.org/abs/hep-th/0206054) |
 | Studies | [hep-th/0207060 †](https://arxiv.org/abs/hep-th/0207060), [hep-th/0306138](https://arxiv.org/abs/hep-th/0306138), [hep-th/0507253 †](https://arxiv.org/abs/hep-th/0507253), [hep-th/0602146 †](https://arxiv.org/abs/hep-th/0602146), [hep-th/9502109 †](https://arxiv.org/abs/hep-th/9502109) |

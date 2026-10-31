@@ -140,6 +140,39 @@ contributions where Z is nonzero. It reports undefined nodes and their
 excluded contribution separately. Those are quadrature-gradient powers,
 not conserved matter-energy fractions or baryon charge.
 
+### Finite epsilon=.25 control
+
+The [source-bound comparison](../results/summaries/nsc-atlas-gh-comparison-v1.json)
+contains three spatial resolutions with the same preparation, coordinate
+source, damping and proper endpoint4.364851930252. It also contains a
+degree12 time control with tenfold tighter tolerances and half the maximum
+step. No source or physical parameter is fitted.
+
+| Degree | Hamiltonian RMS/H^2 | Momentum RMS/H^2 | GH RMS/H | Direct endpoint phase | Local T(u,u)/V_star |
+| --- | --- | --- | --- | --- | --- |
+| 8 | .0102749961 | .00137413 | .000691073 | .8079240822 | 1.0745357826 |
+| 12 | .0008972453 | .000183685 | .0000510295 | .7093917734 | 1.0560681882 |
+| 16 | .0000840275 | .0000574418 | .00000282401 | .7268236070 | 1.0541328607 |
+
+Adjacent phase changes contract .0985323 -> .0174318 radians and density
+changes .0184676 -> .00193533 V_star. The phase sequence is not monotone.
+The local d=12 coefficient g_KK/g_KK(initial)=exp[-7(s-s_initial)] is
+1.000406370547 at the fine endpoint, with fine--middle spread .00001616051.
+This is the existing internal action coefficient, not an identified
+Standard Model coupling. Time refinement at degree12 changes phase by
+1.915e-6 radians, density by4.773e-8 V_star and g_KK ratio by2.330e-9.
+
+These are empirical convergence indicators, not rigorous error bounds.
+The finest volume acceleration still has unresolved fraction .007636.
+No fine-degree time control is inferred from the middle-degree test.
+The work mismatches/initial excitation are2.147e-7 for the tight degree12
+run and1.367e-6 for degree16 at default tolerance. Their nonmonotone size
+does not establish spatial convergence of the passive quadrature itself.
+The stronger epsilon=1 campaign remains unresolved and has not been
+replaced by this supplied finite benchmark. P001--P005 are unchanged.
+
+![Same-proper-endpoint observer comparison and independent work](../paper/figures/nsc-atlas-gh-evolution.png)
+
 The phase and amplitude both contribute in the coarse diagnostic. A
 carrier-only or homogeneous replacement is therefore not silently used
 to obtain a more convenient finite result. The active target remains
@@ -151,7 +184,7 @@ For normal density rho, spatial stress S and momentum j, the compact
 matter-energy balance is
 
 $$
-\partial_t E=\int\sqrt h\left(NK_{ij}S^{ij}-j^iD_iN\right)dV_{\rm ref}.
+\partial_t E=\int\sqrt{h}\left(NK_{ij}S^{ij}-j^iD_iN\right)dV_{\rm ref}.
 $$
 
 The global shift flux integrates to zero on S3. Subtracting constant V_star
@@ -161,6 +194,38 @@ A passive DOP853 stage ledger integrates that work without adding an
 adaptive state variable or extra RHS evaluations. The accepted field
 steps remain bitwise identical with or without the ledger. Its own
 time-quadrature error still needs a temporal control.
+
+For a homogeneous proper slice, K_ij=-h h_ij and the lapse gradient
+vanishes. The full energy obeys dE=-p dV; after vacuum subtraction,
+dE_exc=-p_exc dV with p_exc=p+V_star. The nonlinear calculation
+retains directional stress and lapse-gradient work rather than imposing
+that homogeneous reduction. On the complete compact parent there is no
+external boundary flux; energy change there is not automatically a loss
+into a child. A finite observer region has the additional boundary flux.
+The canonical action supplies reversible evolution. A temperature,
+entropy current or explicit coarse-graining rule is still required to
+calculate irreversible entropy production. This is the connection to the
+[thermodynamic organizing picture](nsc-atlas-offset-thermodynamics.md).
+
+### Horizon equation of state
+
+[Jacobson, equations1--6](https://arxiv.org/html/gr-qc/9504004v2)
+derives Einstein gravity from local horizon equilibrium, Unruh temperature
+and entropy S=eta_A A. It leaves eta_A and Lambda unselected. Its heat
+definition uses a causal boundary, without material surface tension.
+
+For the present canonical fields, direct null contraction gives
+
+$$
+T_{ab}k^ak^b=(k^a\partial_a S)^2+(k^a\partial_a\chi)^2,
+\qquad k^ak_a=0.
+$$
+
+Adding a constant to W leaves this expression unchanged. Local null
+heat/focusing data therefore cannot fix the additive vacuum constant.
+The inherited state must supply the missing entropy normalization and
+vacuum information; the existing charge/SI gap remains open. The running
+compact-parent work ledger is a different, finite-volume balance.
 
 A separate exact homogeneous constraint calculation gives, on the vacuum
 background,
@@ -181,6 +246,18 @@ is inferred from this background calculation.
 ```powershell
 python scripts/run_python.py scripts/evolve_nsc_atlas_parent_gh.py --degree 12 --epsilon 1 --threads 8 --budget-seconds 1500 --state-cache .build/gh-L12-state.npz --output .build/gh-L12-summary.json
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_s3_frame.py tests/test_nsc_atlas_s3_hopf.py tests/test_nsc_atlas_gh_pointwise.py tests/test_nsc_atlas_gh_constraints.py tests/test_nsc_atlas_parent_gh.py tests/test_nsc_atlas_gh_wave_diagnostics.py
+```
+
+Regenerate the finite control with epsilon=.25 at degrees8,12,16, keeping
+the default tolerances. Repeat degree12 with
+`--rtol 3e-9 --atol 3e-11 --max-step 0.025`. Give each
+run a fresh output path. `scripts/compare_nsc_atlas_gh_evolution.py` accepts
+all four files as repeated --input arguments and a fresh --output path. The stored records
+also reproduce the figure directly, without retaining raw arrays:
+
+```powershell
+python scripts/run_python.py scripts/plot_nsc_atlas_gh_evolution.py
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_gh_comparison.py tests/test_nsc_atlas_gh_matter_work.py tests/test_nsc_atlas_passive_dop853.py
 ```
 
 Small checkpoints stay under .build for diagnosis; compact source-bound

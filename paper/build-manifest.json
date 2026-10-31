@@ -1,10 +1,10 @@
 {
-  "bytes": 20607925,
+  "bytes": 20915463,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "7a5664f2eee31bb52c8dfa23c3d87b6b48e5f7d2c4aa6468ef19b1f1f2422074",
+  "metadata_sha256": "db210f9ada7a7fd13922b9c06039f7e10699bcfc316c4e738bf01d70319f419e",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 234,
-  "pdf_sha256": "fb683380ec4e01de719feaf6e5c82692834b201983d143fe738abd5cebeac7ad",
+  "pages": 236,
+  "pdf_sha256": "acafa6126ed66fb839755513dff28a2127ac2652137919ff9e248528bc2f1ee1",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -190,6 +190,10 @@
     {
       "path": "paper/figures/nsc-atlas-flow-gravity.png",
       "sha256": "4e6d7ffad25198b9593c88cef11a3c569826720f85441120bca3b6d599c6777d"
+    },
+    {
+      "path": "paper/figures/nsc-atlas-gh-evolution.png",
+      "sha256": "c55e5fab52847d2fc72da6797a9d104c9204718824114e8723c583e1e5cef624"
     },
     {
       "path": "paper/figures/nsc-atlas-horizon-response.png",
@@ -732,6 +736,14 @@
       "sha256": "b7416d98046cd73b4b76d984de4ea634726e28700f8375b835d6afc62ffe86b2"
     },
     {
+      "path": "results/summaries/nsc-atlas-gh-campaign-v1.json",
+      "sha256": "445399ef48eac04465bff0806dbe7f2026e439167e6eefab8f3d64c14ef92428"
+    },
+    {
+      "path": "results/summaries/nsc-atlas-gh-comparison-v1.json",
+      "sha256": "3ba2c409a11249408396cbd4a8342d3016a99b21522558f9fcf95cfd78372595"
+    },
+    {
       "path": "results/summaries/nsc-atlas-golden-vortex-v1.json",
       "sha256": "93aa89f40ebad06f42814938136585badc629dfcf0d08f0d3cbd8d3c66c4b76a"
     },
@@ -1049,6 +1061,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "755a0270e4d7c1a2e0fe4a12b04e457ad44d92dc2bc5ecf48734a829439121df",
-  "version": "working-2026-10-31.02"
+  "source_sha256": "d5559fee442169fc9935560d46c8099e1adb227b901cf0f7f40b82b79e873754",
+  "version": "working-2026-10-31.03"
 }

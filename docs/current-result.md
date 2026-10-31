@@ -5,11 +5,15 @@ now connects exact regular-frame derivatives, fast Hopf transforms, full
 covariant GH/two-scalar equations and independent ADM constraints. Vacuum
 and local operator controls pass. The full-amplitude trajectories at degrees8
 and12 reach the same proper endpoint but remain underresolved and are not
-admitted as physical predictions. An additional epsilon=.25 control has
-decreasing constraint and spectral errors at those two degrees; its finer
-resolution and temporal checks remain open. A passive ledger now checks
-excitation energy against geometric work without controlling the evolved
-state. The existing
+admitted as physical predictions. An additional epsilon=.25 control now
+reaches the same endpoint at degrees8,12,16, with decreasing constraints,
+spectral tails and adjacent observer changes. Its fine local density is
+1.054133 V_star, with fine--middle spread .001935 V_star; its geometric
+coupling increases by .000406371, with spread .000016161. These are
+empirical finite controls, not certified errors or a selected cosmology.
+A tighter degree12 time control changes the phase by1.92e-6 radians.
+Passive excitation energy/work closes to1.37e-6 of initial energy in the
+fine run; its temporal control is still at the middle degree. The existing
 finite initial-data and perturbative results below retain their domains.
 
 The [finite-amplitude parent data](nsc-atlas-finite-parent-data.md) now solve
