@@ -1,5 +1,13 @@
 # What the calculations show
 
+The [nonlinear nonspherical evolution implementation](nsc-atlas-parent-gh.md)
+now connects exact regular-frame derivatives, fast Hopf transforms, full
+covariant GH/two-scalar equations and independent ADM constraints. Vacuum
+and local operator controls pass. The finite-amplitude coarse trajectory
+is underresolved and is not admitted as a physical prediction. A higher
+resolution run and phase/amplitude diagnosis are active. The existing
+finite initial-data and perturbative results below retain their domains.
+
 The [finite-amplitude parent data](nsc-atlas-finite-parent-data.md) now solve
 the full initial Hamiltonian constraint for the unchanged nonspherical
 field. A weighted equivariant argument proves positive data exist for

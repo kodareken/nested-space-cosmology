@@ -1,5 +1,10 @@
 # Active code and evidence map
 
+The [nonlinear GH owner](nsc-atlas-parent-gh.md) maps `nsc_atlas_parent_gh.py`,
+`nsc_atlas_s3_frame.py`, `nsc_atlas_s3_hopf.py`, `nsc_atlas_gh_pointwise.py`
+and independent ADM/wave diagnostics. It evolves the same nonspherical
+field and volume; finite physical outcomes remain under qualification.
+
 `nsc_atlas_finite_parent_data.py` solves the full nonlinear initial
 Hamiltonian constraint with the unchanged two-harmonic field. Its
 weighted variational certificate, physical measures and initial GH

@@ -1,5 +1,12 @@
 # Cosmological atlas: regions, boundaries and observer measurements
 
+The [nonlinear covariant GH implementation](nsc-atlas-parent-gh.md) now
+retains the nonspherical source, internal volume and all metric components.
+It includes exact regular-frame derivatives, fast circle-fiber transforms
+and independent physical constraints. A coarse finite run is not yet
+resolved; higher-resolution evolution remains an active requirement before
+physical concentration or a daughter is inferred.
+
 The [finite-amplitude initial-data successor](nsc-atlas-finite-parent-data.md)
 now retains the actual nonspherical source in the full Hamiltonian
 constraint. A weighted equivariant existence proof covers0<=epsilon<=1;

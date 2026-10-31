@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "6561d8cfa305cca6fece3f38bef058262965c8ef",
+  "current_receipt_commit_parent": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
   "files": [
     {
       "bytes": 3120,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 300099,
-      "change": "Prove finite-amplitude positive initial geometry for the inherited source, solve the nonlinear constraints with full-residual convergence and derive compatible covariant GH starting data.",
-      "changed_from_commit": "6561d8cfa305cca6fece3f38bef058262965c8ef",
+      "bytes": 300399,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "6c68475d815ec4d0840d1d790c629a5ee4ebff6242f39ef337c90557a99637d7"
+      "sha256": "bdda2f2b27cfe4fc0792645df0a56ba8d07dd57b8ce10e016a36ee1d5d32e9e8"
     },
     {
       "bytes": 163231,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 488752,
-      "change": "Prove finite-amplitude positive initial geometry for the inherited source, solve the nonlinear constraints with full-residual convergence and derive compatible covariant GH starting data.",
-      "changed_from_commit": "6561d8cfa305cca6fece3f38bef058262965c8ef",
+      "bytes": 489266,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "1a217a06d9e906e5c86496408fbe4536b7103f83f0c7781e0e0a95aa8109bfe7"
+      "sha256": "56940fb8ab5840241fa4d9ad0c1a0bbae37c5a889e918070961a0da6c0a3de8e"
     },
     {
       "bytes": 173938,
@@ -10812,12 +10812,12 @@
       "sha256": "1bfbc855ee936ca86652da05670734de302bfebe8cefe8ed00e4479d58dd708d"
     },
     {
-      "bytes": 11854,
-      "change": "Prove finite-amplitude positive initial geometry for the inherited source, solve the nonlinear constraints with full-residual convergence and derive compatible covariant GH starting data.",
-      "changed_from_commit": "6561d8cfa305cca6fece3f38bef058262965c8ef",
+      "bytes": 11950,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
       "path": "docs/nsc-atlas-finite-parent-data.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "62e3a5aa4cc5a0560ef40d491011aad3b4597decc77bde6590b89a8a44e9a68f"
+      "sha256": "470e2049d9ca0e04fcc2eb4de318312c3970e6e892adabd00da02eba3be7e3ad"
     },
     {
       "bytes": 18429,
@@ -11021,6 +11021,14 @@
       "path": "docs/nsc-atlas-parent-evolution.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "fd3e5790c281f6f86262f1ebcc930efe9560cc9ffdfe7f53170ccf52843016c1"
+    },
+    {
+      "bytes": 6707,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "docs/nsc-atlas-parent-gh.md",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "91588f899d0aa1c4b0e7df40c7cd598a0637a1f6da940d93266553b6c3789bf2"
     },
     {
       "bytes": 19004,
@@ -11240,15 +11248,15 @@
       "sha256": "0f164b2eab889f4e84ebc6b20f1183b286ce4dd22d9f8e444f3cd0510b72ba1e"
     },
     {
-      "bytes": 142983,
-      "change": "Prove finite-amplitude positive initial geometry for the inherited source, solve the nonlinear constraints with full-residual convergence and derive compatible covariant GH starting data.",
-      "changed_from_commit": "6561d8cfa305cca6fece3f38bef058262965c8ef",
+      "bytes": 143400,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "63c73cc78fc5af5dd72c35bd5abaa7a3920c62cc4437181672c0ff5610dae3e4"
+      "sha256": "db26323a8f2b897840262bb68faa11c6ba6bb0117d90254b70b93360525a7e26"
     },
     {
       "bytes": 30876,
@@ -35269,12 +35277,28 @@
       "sha256": "d8559c58fbe83825d7f9f240015849cf36c571163b05066871815b296c6b4364"
     },
     {
+      "bytes": 2858,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "scripts/diagnose_nsc_atlas_gh_wave_phase.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d0467438922fdd62bcc4a70d29a0fafffda665f916653f27c1bf67357f508eae"
+    },
+    {
       "bytes": 16828,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
       "changed_from_commit": "c09df810838cf84056b2dac08a0bfc4dafbf5198",
       "path": "scripts/diagnose_nsc_atlas_wall_rhs.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "b4c4289ca2487ee0c7a9612a07e7d7b465115a4004fc94330f962ff7491a5b39"
+    },
+    {
+      "bytes": 2797,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "scripts/evolve_nsc_atlas_parent_gh.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5d6ef3337e15c8c6ce7c608d72fe3c53fcb0037c600bcb7b23543effd2718134"
     },
     {
       "bytes": 4707,
@@ -37031,6 +37055,30 @@
       "sha256": "99053a52f7cc96070bb08171e59e876133395e2731f8290c38a3eca977585c7c"
     },
     {
+      "bytes": 9050,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "src/recursive_horizons/nsc_atlas_gh_constraints.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7"
+    },
+    {
+      "bytes": 9425,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "src/recursive_horizons/nsc_atlas_gh_pointwise.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "1fd0aae91b1487ef34600c56b87f1a7de2d97286621509944da5356ef1b5e0fb"
+    },
+    {
+      "bytes": 5485,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "src/recursive_horizons/nsc_atlas_gh_wave_diagnostics.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ba8c603f121812a884a1d2e1bcfb53b30074ac75bb58b0ef6632c319236b906e"
+    },
+    {
       "bytes": 11790,
       "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
       "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
@@ -37229,6 +37277,14 @@
       "sha256": "fb0034ccb16dd83a4f6e6650d9b94bdef2dbc9c75c5361c7dcd2aae56edb4f55"
     },
     {
+      "bytes": 20195,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "src/recursive_horizons/nsc_atlas_parent_gh.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "837299b3d746ee114cdfadbeac2e9da5d59f2005d4e4cec6139adb827a605a67"
+    },
+    {
       "bytes": 11824,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
@@ -37342,6 +37398,22 @@
       "path": "src/recursive_horizons/nsc_atlas_rindler_bulk.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "0008c58d66b6e2bb22bbef5676bcac9d99ceb1086b073a29772e73bfcc1d3ba5"
+    },
+    {
+      "bytes": 10189,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "src/recursive_horizons/nsc_atlas_s3_frame.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51"
+    },
+    {
+      "bytes": 8594,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "src/recursive_horizons/nsc_atlas_s3_hopf.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa"
     },
     {
       "bytes": 6216,
@@ -41813,6 +41885,30 @@
       "sha256": "f1e9b4dd20d1d4f676206a433bf4a7834ea7f5c88dce4a307fbe169b78b3545f"
     },
     {
+      "bytes": 7521,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "tests/test_nsc_atlas_gh_constraints.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4f8cb308572d5931695eb271423a3a3a6a9d2e3195b273a606766814813bea8a"
+    },
+    {
+      "bytes": 9396,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "tests/test_nsc_atlas_gh_pointwise.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "878fd9b4de9315670802e12285aa5877d19ad0b413925f364af62b529ec8c7d2"
+    },
+    {
+      "bytes": 7019,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "tests/test_nsc_atlas_gh_wave_diagnostics.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0d8f415046425aaa97dde85aa54ae6f11374b003d9ef0da26cac0ce9f4d37026"
+    },
+    {
       "bytes": 4635,
       "change": "Connect smooth horizon continuation and conserved charge to the offset picture; complete golden-vortex, source-stability and black-hole comparisons without fitting.",
       "changed_from_commit": "f357b2faa59874211c32e679e4016212a07acacc",
@@ -42099,6 +42195,14 @@
       "sha256": "a120bddba36d7073ea01458a3ca7e3e3f169264c4960b7770bff1b0f2a3906f8"
     },
     {
+      "bytes": 5232,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "tests/test_nsc_atlas_parent_gh.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "18295df8a7d8af4a2e3a0d46eff30bb2771545d9b40fe94f856333c8603ffc9e"
+    },
+    {
       "bytes": 7216,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
@@ -42244,6 +42348,22 @@
       "path": "tests/test_nsc_atlas_retained_onset.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "6a0e36bd6cd942834d0a222041d8d3c8db4d45c4a5e49264980cf1f048d4be3b"
+    },
+    {
+      "bytes": 5566,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "tests/test_nsc_atlas_s3_frame.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "3b8300264fb27de507aca91280fa7db24d742e0a16f2b4374cae3067f22bfde0"
+    },
+    {
+      "bytes": 3794,
+      "change": "Implement nonlinear covariant GH evolution with regular-frame and fast Hopf transforms, independent ADM/wave diagnostics and explicit unresolved finite-run status.",
+      "changed_from_commit": "f9d0d7d8a56afd7e5cec108d1b28fbae5575c06a",
+      "path": "tests/test_nsc_atlas_s3_hopf.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7df19dd3dce414cde72bac99695337bfee1511eb14bed53f3020f55c7126929b"
     },
     {
       "bytes": 4217,

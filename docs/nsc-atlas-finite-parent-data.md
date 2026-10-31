@@ -237,8 +237,9 @@ difference gives g^bc DeltaGamma^a_bc=0. The mixed Pi terms cancel the
 spatial conformal connection; zero extrinsic curvature does not set them
 to zero. The unit-S3 derivative must be divided by a0 in this frame.
 This algebra is implemented and independently checked for arbitrary
-positive Psi and reference gradient. Its spatial-gradient evaluator,
-future gauge and nonlinear evolution operator remain to be implemented.
+positive Psi and reference gradient. The [nonlinear successor](nsc-atlas-parent-gh.md)
+now implements regular-frame gradients, gauge and evolution operators.
+Its finite physical results still require constraint/resolution qualification.
 
 The variational theorem gives smooth exact constrained data, and the
 canonical system has the standard local hyperbolic Cauchy formulation.
