@@ -537,13 +537,18 @@
       "id": "NSC-P006",
       "model_id": "smooth-parent-directed-horizon-transfer",
       "registration": "prospective_calculation_protocol_with_public_target_already_known",
-      "status": "protocol_frozen_before_evaluation",
+      "status": "prediction_not_identified",
       "forecast": {
         "path": "results/summaries/nsc-atlas-flow-omega-forecast-v1.json",
         "bytes": 2197,
         "sha256": "dbae954737d5b557e46c93214fda9e761cf6b0d4c975a61d80cd0e319c7e7bea"
       },
-      "observational_validation": false
+      "observational_validation": false,
+      "evaluation": {
+        "path": "results/summaries/nsc-atlas-flow-omega-evaluation-v1.json",
+        "bytes": 4486,
+        "sha256": "957ddb3dc9fb1b6b6dd566c724053483b8ad3c9de8eed92d7aff95c5ae609946"
+      }
     }
   ]
 }

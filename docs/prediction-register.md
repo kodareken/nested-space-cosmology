@@ -33,7 +33,15 @@ The benchmark is the rounded base-LambdaCDM inference from
 [Planck 2018 VI](https://arxiv.org/abs/1807.06209), not a direct
 model-independent measurement. If any required quantity remains unselected,
 the prediction-completeness gate fails and the output is null. That outcome
-is distinct from an empirical rejection of nesting. No result is entered yet.
+is distinct from an empirical rejection of nesting. The [evaluation](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json)
+now fails that completeness gate: Omega_Lambda_today is null, not zero.
+The continued scalar has receiver w=.7212244363 and a late phase-averaged
+w limit0; its additional persistent vacuum term is0 in the leading-field
+domain. These are conditional stress diagnostics, not a present-day
+cosmological fraction. The action/offset does not select the required
+receiving stress, expansion history and event. A future child threshold
+and baryon/photon eta remain unestablished. No empirical Planck rejection
+is recorded. See the [derivation](nsc-atlas-offset-thermodynamics.md).
 
 ## NSC-P003 â€” Three freely falling clocks in the inherited parent
 

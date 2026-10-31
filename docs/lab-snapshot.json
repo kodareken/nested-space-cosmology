@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "6112430909f557abe72df6aa4c05959517c219de",
+  "current_receipt_commit_parent": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
   "files": [
     {
       "bytes": 3120,
@@ -27,9 +27,9 @@
       "sha256": "c0acba22000a0bae97fc5dcc2e936bbb65e4b88a43abc9e66ff9db2ca11fd09c"
     },
     {
-      "bytes": 9781,
-      "change": "Preserve the externally added focus instruction exactly; no agent edit to AGENTS.md.",
-      "changed_from_commit": "41ec07f76b310a7091d49b25a9e517a7b5eb5be8",
+      "bytes": 10355,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
       "import_bytes": 2562,
       "import_sha256": "752e072c68cbfc15953e7c1e1384b78378d71148ffdb4a731f8c308cc700104d",
       "migration_disposition": "folded_into_current_root_owner",
@@ -37,7 +37,7 @@
       "original_path": "lab/AGENTS.md",
       "original_sha256": "0be50e63bb581d7870f5d5e62d7b0ab4423232be97c9d0430d6435e4cd7146f9",
       "path": "AGENTS.md",
-      "sha256": "23b7bcc05d3715ec21abbe531b200aa27a6635d4db802055517e17a7886775e3"
+      "sha256": "3e24fb739bc7176130e4b8be9034607b5f0ee0a4a517bbde964987db8db9c8ca"
     },
     {
       "bytes": 1266,
@@ -10333,12 +10333,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 490642,
-      "change": "Connect exact proper-age onset, controlled finite bosonic response and actual-parent Schur memory, with inherited covariance and unresolved pointwise accuracy stated explicitly.",
-      "changed_from_commit": "292eb146cbf3add0dcedecf2d557b8981bc8552d",
+      "bytes": 491380,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0a3d9ad48df3108dfb16f21718ad92597bee89c1abd76a2fe61ac1f9a2d1ab78"
+      "sha256": "bdc93bc8a4b28ad88b36d63e2fc0e85bde8f85730129bde372e3855cb8877072"
     },
     {
       "bytes": 173938,
@@ -10999,12 +10999,12 @@
       "sha256": "4f0732e624568c0b6993f55a8dc743baa12c842ac1c80ac94f282070be86a2e1"
     },
     {
-      "bytes": 19172,
-      "change": "Connect finite nonlinear matter work, three spatial controls and local readouts; preserve the unresolved strong preparation and add the attributed horizon-thermodynamic bridge.",
-      "changed_from_commit": "e6f34eb7036373306e3d7473b48e37268a8c4785",
+      "bytes": 27511,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
       "path": "docs/nsc-atlas-offset-thermodynamics.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "0f683cf2274869fa4ad91985a8cf6d5f3a0e03400541d4a6af02663d12d67a6a"
+      "sha256": "a7a9b5eef17c3ed688b5b36059d02c5ee684728d14a094512730165645635eed"
     },
     {
       "bytes": 11410,
@@ -12232,12 +12232,12 @@
       "sha256": "4861c7c288d3033d2fdfd6aae64ba1cff1983f44ecd163682b32acc87b09cbd5"
     },
     {
-      "bytes": 16452,
-      "change": "Compare the inherited parent and LambdaCDM with one pinned supernova likelihood.",
-      "changed_from_commit": "18cfdf606608a5507d5b807f53fc957748c6498b",
+      "bytes": 18037,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
       "path": "docs/prediction-register.md",
       "retention_reason": "Current living manuscript and publication record, bound with the finite onset result.",
-      "sha256": "1bb4a2ea0c1a8b5e07c4fb153554f2113cf2cc4ff86347f8a68ada243214c63d"
+      "sha256": "1c2bb094c18b8a38a241d2a4596aae39c4f6c0550063a73bf2c27319251bc6f3"
     },
     {
       "bytes": 616259,
@@ -30498,12 +30498,12 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 23578,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 24280,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
       "path": "results/prediction-register.json",
       "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
-      "sha256": "327fd09230c372ab31b6563fb62e74cb3249d747da8070d810ae85bcfca32d84"
+      "sha256": "d282a03ba7e56536770399a56d0e52ff3ff8fab0fdd770045f053d8535673632"
     },
     {
       "bytes": 11412,
@@ -31260,6 +31260,22 @@
       "path": "results/summaries/nsc-atlas-flow-evolution-v1.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "91f0e403be97a991a0708b55208ea25f659c6d942b5667ebf9a993def1d06fd2"
+    },
+    {
+      "bytes": 4486,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "path": "results/summaries/nsc-atlas-flow-omega-evaluation-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "957ddb3dc9fb1b6b6dd566c724053483b8ad3c9de8eed92d7aff95c5ae609946"
+    },
+    {
+      "bytes": 2197,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "path": "results/summaries/nsc-atlas-flow-omega-forecast-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "dbae954737d5b557e46c93214fda9e761cf6b0d4c975a61d80cd0e319c7e7bea"
     },
     {
       "bytes": 8988,
@@ -32351,6 +32367,14 @@
       "sha256": "4057c89fa075d9dcf847f3c4987bcf0cddec8d6b97d5cc5bee2e68115649a10a"
     },
     {
+      "bytes": 7694,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+      "path": "scripts/check_nsc_atlas_flow_cosmology.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "494931eee0fb62182ba2bef1bfc0f537f12575084ad8ab466f4a144735161ad2"
+    },
+    {
       "bytes": 3337,
       "change": "Continue the prepared vortex through a finite evolution and compute its scoped fluid/gravity and rotating-horizon interfaces; retain the next-order boundary work question.",
       "changed_from_commit": "128e891a6e6cdf9931ce8dd37ac7993522deea93",
@@ -33280,12 +33304,12 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 34328,
-      "change": "Derive a uniform inherited-scalar matter background and its light-cone bound.",
-      "changed_from_commit": "70bdd5ab05b955dc9e91f278bc586677cb752a11",
+      "bytes": 36273,
+      "change": "Freeze directed-flow vacuum comparison and reorganize the outward manuscript without changing retained calculations.",
+      "changed_from_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
       "path": "scripts/check_prediction_register.py",
       "retention_reason": "P001 endpoint diagnostics, compact evidence or saved-result registration.",
-      "sha256": "3b3f34b0b4e13b7b443522fd31c46c4892a22583317e4b3ec85e678542851020"
+      "sha256": "7315b289a52af11c809cd255480f1e3a818a386a57f2c0aef47278e158a54a9f"
     },
     {
       "bytes": 8662,

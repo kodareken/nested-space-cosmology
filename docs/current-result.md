@@ -1,5 +1,17 @@
 # What the calculations show
 
+The outward [P006 calculation](nsc-atlas-offset-thermodynamics.md) freezes
+the horizon/GH/boson refinement chain and tests directed flow as a source
+of today's vacuum fraction. The continued field has receiver w=.7212244363
+and late phase-averaged w=0; it supplies no additional persistent vacuum
+in that leading-field domain. Total Lambda and Omega_Lambda_today remain
+unidentified without a selected receiving stress/expansion history and
+epoch. P006 fails prediction completeness, without an empirical rejection.
+The finite-amplitude theorem establishes initial admissibility, not a
+future child threshold. All epsilon=1 nonlinear runs are **under-resolved,
+not used for claims**. Earlier controls below retain their finite domains.
+
+
 The [canonical parent response](nsc-atlas-boson-transport.md) now connects
 the same nonlinear metric and inherited potential to massive fluctuation
 transport. A direct local onset proof gives log-coupling cubic coefficients

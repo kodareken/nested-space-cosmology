@@ -379,6 +379,173 @@ sets a thermal occupation limit, not a universal wavelength; Planck length
 has not been derived here as a hard shortest wavelength. A resolution
 representation by itself is not evidence of a literal simulator.
 
+## 6. Directed flow, pressure and the present vacuum test (NSC-P006)
+
+The outward target is now step7 to step8: obtain today's vacuum density
+fraction from the same parent, with no supplied vacuum density as the
+answer. Horizon/GH/boson refinement is frozen. The
+[protocol](../results/summaries/nsc-atlas-flow-omega-forecast-v1.json)
+was committed and pushed as `057ecd9e` before this calculation. The public
+target was already known, so this is a prospective calculation protocol,
+not a blind observation. Its sole output and acceptance condition are
+
+$$
+\Omega_{\Lambda,0}=\frac{\kappa\rho_{\mathrm{vac},-}(e_0)}{3H_0^2},
+\qquad |\Omega_{\Lambda,0}-.685|\leq .007.
+$$
+
+The benchmark is Douglas's rounded
+[Planck base-LambdaCDM inference](https://arxiv.org/abs/1807.06209),
+not a direct measurement independent of a background model. A persistent
+isotropic vacuum term, the expansion rate and the event e0 must be selected
+by the model. No flux fraction, area fraction or arbitrary trace projection
+may stand in for that term. Missing identification fails the prediction
+completeness gate; it is not assigned a fictitious numerical discrepancy.
+
+### The three supplied crossing numbers do not supply three vacuum equations
+
+The 88.4735067504% is loss of the prepared scalar's **patch Killing
+energy**, over the chosen 300-event history ending at
+t=4.364851930252. The coefficient1.085638919782 is the full-future
+normalized horizon-area increase, computed about the already specified
+curvature H. The2.219782587242 is **energy divided by epsilon squared**
+over the shorter horizon leg t=4.364851930252 to4.797157936911.
+It is not a dimensionless handoff efficiency. All three are consequences
+of the same prepared source; none specifies the receiving volume,
+isotropic pressure, persistent vacuum density or a present cosmic epoch.
+
+There is an exact reason the null balance cannot close that gap. For a
+null generator k and any constant c,
+
+$$
+(-c g_{\mu\nu})k^\mu k^\nu=0.
+$$
+
+Thus the measured source term T_kk in Raychaudhuri is insensitive to an
+additive vacuum term. The physical-process law
+H Delta A_dyn = kappa E_out is a response law about a supplied H, not an
+equation selecting H. Holding that geometry fixed, changing the split
+between an attributed vacuum and a counterterm leaves T_kk unchanged;
+changing the total vacuum would instead require a different Einstein
+solution. The identity is not permission to keep an unchanged metric
+after changing its total source.
+
+Even an ideal homogeneous receiving-fluid completion would require
+
+$$
+\dot\rho_-+3H_-(\rho_-+p_-)=q_-,\qquad
+\rho_w(t)=a_-^{-3(1+w)}\left[C+
+\int^t q_-(u)a_-(u)^{3(1+w)}du\right].
+$$
+
+For a given injection history this has distinct solutions for different
+receiving equations of state, volume histories and initial density C.
+The actual null Killing flux is not yet the proper injection q_- per
+receiving volume. Identifying those quantities or setting w=-1 would add
+a physical closure, rather than derive it.
+
+### Continue across zero and calculate the stress on the other side
+
+The horizon is a smooth null surface without a material layer. The
+previous two-trace continuation supplies the field on the receiving side;
+there is no need for another grid or coordinate singularity. Its already
+declared event is t=5.278190092198, Ht=1.432530430173, on the stored
+maximum-transfer axis. This is a finite apparatus event, not today's age.
+
+For that same canonical real field and the receiver's comoving tetrad,
+
+$$
+\rho=\frac{\Pi^2+|D\chi|^2+\mu^2\chi^2}{2},\qquad
+p=\frac{\Pi^2-|D\chi|^2/3-\mu^2\chi^2}{2}.
+$$
+
+Here p is one third of the spatial stress trace. It does not erase the
+anisotropic stress or energy flux. The
+[short calculation](../scripts/check_nsc_atlas_flow_cosmology.py) and
+[evaluation](../results/summaries/nsc-atlas-flow-omega-evaluation-v1.json)
+give rho/epsilon²=.0624287161642 and p/epsilon²=.0450251156252 in the
+historical model units. Therefore
+
+$$
+w_{-,\mathrm{receiver}}=.7212244363,\qquad w_- -(-1)=1.7212244363.
+$$
+
+The direct ambient-S3 gradient independently checks the null-coordinate
+conversion. Tightening the source solve changes w by2.42e-11. These are
+numerical controls for a conditional field diagnostic, not uncertainty
+on today's cosmic equation of state. The historical vacuum only fixes
+this diagnostic's already chosen background; it is not returned as the
+new vacuum prediction.
+
+The tail can be continued in rescaled variables instead of terminating
+at a vanishing amplitude. Write chi=a^(-3/2)(A cos(nu_phys t)+B sin(nu_phys t)),
+beta=3H/2 and nu_phys²+beta²=mu². Phase averaging at fixed slow envelope
+then gives <Pi²>=mu²<chi²>. The leading averaged density decays as a^-3,
+gradient stress as a^-5, and the averaged w tends to0, differing from -1
+by1. Instantaneous pressure continues to oscillate. The surviving rescaled
+phase is a state continuation; it does not supply a nondecaying vacuum.
+Consequently the **additional persistent vacuum contribution from this
+leading inherited scalar is Delta Lambda L_ref²=0**. This is an
+asymptotic, background-subtracted result, not a value for total Lambda
+or today's Omega_Lambda. It does not exclude other nested sources.
+
+### Does the offset select the missing epoch or source?
+
+The exact map is theta_n=n alpha, phi_n=n(n-1)alpha/2 modulo one.
+It is invertible. Assigning any increasing duration readout t(n) leaves
+the map and its metric completion unchanged, while changing the duration
+and physical frequency assigned to each update. No stress or occupation
+evolution appears in those update equations. Hence the quadratic phase
+does not itself select an expanding source, an irreversible vacuum
+reservoir, H0 or n_today. The map can continue indefinitely without
+resolving that missing constitutive history.
+
+- alpha=.0573586470504441 (angular increment about.360395): a derived
+  mode ratio within the supplied action/normalization; identifying it as
+  the fundamental generator offset remains an assumption.
+- n=100: a chosen reporting count, not a selected present epoch.
+- omega0=20: a supplied reference frequency, not fixed by inheritance.
+- Three spatial directions: proved completion for the declared metric
+  kernel and two accumulators; nature's selection of those rules is open.
+
+**Registered outcome:** total Lambda_eff L_ref² and Omega_Lambda_today
+remain unidentified. P006 fails its prediction-completeness condition;
+there is no empirical Planck pass or rejection. The single missing model
+connection is a receiving stress/expansion history selected by the action
+and offset, including an observer event. None of the numbers above is
+retuned to the public target.
+
+### Finite amplitude and the charge question
+
+The theorem `f9d0d7d` admits initial data throughout0<=epsilon<=1;
+it is not a theorem of future collapse. For any two-sided initial surface,
+K_ij=0 gives theta_plus=H_surface and theta_minus=-H_surface, so their
+product is -H_surface²<=0. There is **no initially strictly future-trapped
+surface at any amplitude in that interval**. A minimal surface is
+bi-marginal, not an established child. The existing epsilon=1 nonlinear
+runs are **under-resolved, not used for claims** and contain no converged
+trapped-surface search. A future threshold, child vacuum and grandchild
+fixed point cannot be read from them. The existing smooth horizon's
+continued field is not evidence of a new regional birth. No coordinate
+change alters the invariant expansion-sign criterion.
+
+Only after the vacuum evaluation, the charge diagnostic is considered.
+The retained real scalar sector has no charge-resolved bias or baryon
+and photon densities. Complexifying it without adding a state gives
+j_mu=i(chi* partial_mu chi-chi partial_mu chi*)=0 on the real sector.
+Thus its signed charge flux is0 on both sides of the horizon. Its
+symplectic Green current is not baryon number. A normalized baryon/photon
+eta cannot be constructed;0 is the charge numerator, not a derived
+cosmological eta to compare with6.1e-10. Moving a charge-blind boundary
+does not change this identity.
+
+Reproduce the short outward calculation (no evolution campaign):
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_flow_cosmology.py --output .build/flow-omega-check.json
+python scripts/run_python.py scripts/check_prediction_register.py
+```
+
 ## Reproduction and next connection
 
 The [volume-feedback successor](nsc-atlas-volume-feedback.md) now derives

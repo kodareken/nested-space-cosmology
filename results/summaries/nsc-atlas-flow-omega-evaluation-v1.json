@@ -1,0 +1,98 @@
+{
+  "Lambda_eff_Lref_squared": null,
+  "Omega_Lambda_today": null,
+  "added_vacuum_Lambda_Lref_squared_late_leading_field": 0,
+  "analysis_parent_commit": "057ecd9e71ce6744db2f18f4c108111eab7ddc63",
+  "charge": {
+    "baryon_photon_eta": null,
+    "reason": "The real two-scalar horizon sector has no baryon current, charge-biased term or photon density; crossing is charge blind. A symplectic Green current is not particle charge.",
+    "requested_eta_target": 6.1e-10,
+    "signed_charge_resolved_flux": 0
+  },
+  "child": {
+    "amplitude_interval": [
+      0,
+      1
+    ],
+    "child_Lambda_Lref_squared": null,
+    "child_grandchild_fixed_point": null,
+    "criterion": "theta_plus*theta_minus=-H_surface^2 <= 0 at Kij=0; a future child requires a later trapped surface and an admissible interior continuation.",
+    "epsilon_one_nonlinear_status": "under-resolved, not used for claims",
+    "future_child_formation": null,
+    "initial_strict_future_trapping": false,
+    "threshold_amplitude": null
+  },
+  "comparison_pass": false,
+  "empirical_rejection": false,
+  "evidence_sources": [
+    "results/summaries/nsc-atlas-parent-circulation-v1.json",
+    "results/summaries/nsc-atlas-horizon-response-v1.json",
+    "results/summaries/nsc-atlas-characteristic-handoff-v1.json",
+    "results/summaries/nsc-atlas-finite-parent-data-v1.json"
+  ],
+  "forecast_sha256": "dbae954737d5b557e46c93214fda9e761cf6b0d4c975a61d80cd0e319c7e7bea",
+  "late_field": {
+    "beta": "3H/2",
+    "density_scale": "a^-3",
+    "frequency_relation": "nu_phys^2+beta^2=mu^2",
+    "gradient_stress_scale": "a^-5",
+    "mean_kinetic_coefficient": "(A**2 + B**2)*(beta**2 + nu**2)/2",
+    "mean_mass_coefficient": "mu**2*(A**2 + B**2)/2",
+    "phase_averaged_leading_pressure_residual": "0",
+    "phase_averaged_w_limit": 0,
+    "scope": "Late massive scalar on the supplied asymptotically de Sitter background. Instantaneous pressure oscillates; this is not a generated vacuum floor."
+  },
+  "late_limit_is_not_today": true,
+  "missing_closure": "No constitutive receiving-vacuum/expansion history selecting rho_vac_minus, H_today and event_today. The offset map fixes phases, not that history.",
+  "no_new_evolution_campaign": true,
+  "no_supplied_vacuum_as_answer": true,
+  "null_projection_vacuum_shift": "0",
+  "parameters": {
+    "action_alpha": 0.05735864705044415,
+    "alpha_status": "Derived mode ratio within the supplied action/frequency normalization; identification as the generator offset is assumed.",
+    "n100_status": "Chosen reporting count, not a selected epoch.",
+    "omega0_20_status": "Supplied reference scalar frequency.",
+    "spatial_dimension_status": "3D completion is proved for the specified kernel and two accumulators; selection of those construction rules is not derived."
+  },
+  "phase_averaged_late_w_minus_vacuum_value": 1,
+  "prediction_id": "NSC-P006",
+  "protocol_commit": "057ecd9e",
+  "receiving_pressure": [
+    {
+      "Ht": 1.4325304301733837,
+      "Pi_over_epsilon": 0.327801273820713,
+      "atol": 2e-14,
+      "direct_embedding_Pi_gap": -1.1102230246251565e-16,
+      "direct_embedding_gradient_gap": -4.0234064994579266e-21,
+      "field_over_epsilon": 0.005325966643926794,
+      "gradient_squared_over_epsilon_squared": 4.70012812088617e-07,
+      "pressure_over_epsilon_squared": 0.04502511562518749,
+      "pressure_over_epsilon_squared_Vstar": 0.20374920555829207,
+      "proper_event": 5.2781900921983675,
+      "rho_over_epsilon_squared": 0.06242871616423194,
+      "rho_over_epsilon_squared_Vstar": 0.2825045787416209,
+      "rtol": 2e-12,
+      "w_trace": 0.7212244363113186
+    },
+    {
+      "Ht": 1.4325304301733837,
+      "Pi_over_epsilon": 0.32780127381844637,
+      "atol": 3e-15,
+      "direct_embedding_Pi_gap": 0.0,
+      "direct_embedding_gradient_gap": -4.923379005915621e-21,
+      "field_over_epsilon": 0.005325966644158556,
+      "gradient_squared_over_epsilon_squared": 4.700128121291502e-07,
+      "pressure_over_epsilon_squared": 0.04502511562368716,
+      "pressure_over_epsilon_squared_Vstar": 0.20374920555150275,
+      "proper_event": 5.2781900921983675,
+      "rho_over_epsilon_squared": 0.062428716164246265,
+      "rho_over_epsilon_squared_Vstar": 0.2825045787416857,
+      "rtol": 3e-13,
+      "w_trace": 0.7212244362871205
+    }
+  ],
+  "receiving_w_minus_vacuum_value": 1.7212244362871205,
+  "schema": "nsc-flow-omega-evaluation-v1",
+  "status": "prediction_not_identified",
+  "tighter_w_gap": -2.4198087977822524e-11
+}
