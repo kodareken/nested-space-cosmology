@@ -138,7 +138,8 @@ def run(args):
             physical_history_prefix=dict(path=data['provenance']['dense_cache'], until_coordinate_t=t0),
             snapshots=[], events=[], child_formation_proved=False, escape_proved=False)
         meta = dict(degree=args.degree, epsilon=system.epsilon, gauge=system.gauge, backend=system.backend,
-            quadrature_order=list(data['history'].metadata['quadrature_order']),
+            quadrature_order=list(system.basis.quadrature_shape[:2]),
+            original_requested_quadrature_order=data['history'].metadata.get('quadrature_order'),
             source_sha256=pins, producer_commit=commit, phase_dummy=float(state0[-1]))
         history, saved = DenseGHHistory(), []
         solver = None; last_state, last_t = state0, t0
