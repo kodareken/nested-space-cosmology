@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
+  "current_receipt_commit_parent": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
   "files": [
     {
       "bytes": 3197,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 21772,
-      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
-      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
+      "bytes": 21833,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "49bee357c2421b2dc542d71d29e08060fdfe048a1b17bb508059df5b3d986256"
+      "sha256": "d02633677d0b9ea8f7f71d1b75b1dbf8da152856744de7ce762ea13c5222452d"
     },
     {
       "bytes": 9543,
@@ -10403,6 +10403,22 @@
       "path": "docs/figures/nsc-atlas-cosmohedron-interaction.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "bf108fe13638d7057f1cb455244b47fc989143e5f35eef2cc24c0d251c12c1f8"
+    },
+    {
+      "bytes": 2917,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "docs/figures/nsc-atlas-directional-connection.manifest.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9c487f2df35ddfcb9a9b04ba7d19bf2b5ca7d295967417085a62d6f86dc41b62"
+    },
+    {
+      "bytes": 189867,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "docs/figures/nsc-atlas-directional-connection.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "21815ea79abfca9fe0563fcf2fdd4003a3ac901ae7cba44034b065712e10fc95"
     },
     {
       "bytes": 117856,
@@ -11197,12 +11213,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 55066,
-      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
-      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
+      "bytes": 62625,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "3c4d7cb46cad152940d8886317fe7baec86d4b3ed6d9707a618992d01cca3f68"
+      "sha256": "f81b3442baca4b5e015cc096de79a64cace392292850d77fbd2a1a4b6d2d82c2"
     },
     {
       "bytes": 10730,
@@ -31994,6 +32010,30 @@
       "sha256": "670e998379b0f8e3d78446ec667d7670056d761395c852bf97c84d4fa5738e21"
     },
     {
+      "bytes": 25010,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "results/summaries/nsc-atlas-valve-directional-conformal-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7ae92b162f63a2d46c1cbe0172b113eddfb59efc4760d3c84e0f04c75d064b82"
+    },
+    {
+      "bytes": 35011,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "results/summaries/nsc-atlas-valve-directional-evolution-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "260c76b7c7087f6d3f1efe34e65dc1f56e79dff55816a9d4f1517bf512ab7ed8"
+    },
+    {
+      "bytes": 38426,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "results/summaries/nsc-atlas-valve-directional-evolution-v2.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b4428494849aebf5969a91e698e8874a108ea8b050e632e06d63735d3ac4cb93"
+    },
+    {
       "bytes": 12381,
       "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
       "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
@@ -33686,6 +33726,14 @@
       "path": "scripts/compare_nsc_atlas_gh_evolution.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "b12c549876f1174d4836f24d28b812fb620820b7d6d57728307a20a789ba48df"
+    },
+    {
+      "bytes": 14189,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "scripts/continue_nsc_atlas_valve_directional.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "87310c6750073bda19ae27d5a3d166fcf931e6ea8681f8a6a5747e2e26a22ede"
     },
     {
       "bytes": 13188,
@@ -35829,6 +35877,14 @@
       "sha256": "7858730cab1ac816d1f168e5cdba7090448bd2b775163c3d46c27b9ba33f77bb"
     },
     {
+      "bytes": 24465,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "scripts/evolve_nsc_atlas_valve_directional.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "e95980acc34816a4f5eef753a66e8458f7bdcca4bb6e469f5bf19d1e26c7c18c"
+    },
+    {
       "bytes": 4707,
       "import_bytes": 4847,
       "import_sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c",
@@ -36134,6 +36190,14 @@
       "path": "scripts/plot_nsc_atlas_cosmohedron_interaction.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "5ad9d9fa59fe3efa7bd62f27bb7b13a332476c704f30da0d8b280d78d2a82f6d"
+    },
+    {
+      "bytes": 12572,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "scripts/plot_nsc_atlas_directional_connection.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4a8937501c2d2de028021d4537a5ee1fdff065a746dc4be3897bcf463d7039bf"
     },
     {
       "bytes": 2325,
@@ -36730,6 +36794,14 @@
       "path": "scripts/summarize_nsc_atlas_valve_counterrotation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "932e687189cb06a15256e096defca0ad63972228443b1efbd5b1e0456f829a17"
+    },
+    {
+      "bytes": 18910,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "scripts/summarize_nsc_atlas_valve_directional.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4710e200b4837e3b3fc7425d0772d06740dba6b6427c1e57e291274ad9dba646"
     },
     {
       "bytes": 11865,
@@ -38317,12 +38389,12 @@
       "sha256": "46e2a35db716f4170dddf7745a160b9edcadf5253cb863346a1d8fa8aeb579b7"
     },
     {
-      "bytes": 39661,
-      "change": "Record the receiver pressure gate, geometric Dirac relations, actual-parent modes and conditional source response.",
-      "changed_from_commit": "59f187090884a05aeef4bd90fe773726ea00bf00",
+      "bytes": 41587,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
       "path": "src/recursive_horizons/nsc_atlas_valve_spherical.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "e20d2b4833e146761b21d490bfd71260078c3448219fafd216195c12fb1bca0a"
+      "sha256": "4550d87092a13e6dd085cbad57ffba51e709c4eda0a81edca9c85732114cd08a"
     },
     {
       "bytes": 7005,
@@ -41660,6 +41732,30 @@
       "sha256": "1213225194466b3bf84796bc42d6514075c2544bb25d7034a581ccae486f3df5"
     },
     {
+      "bytes": 4630,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "tests/test_directional_conformal_unprojected.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4056d9c75e131f7fd2b708fb03d048510771916b118073e4b986758ce14143d2"
+    },
+    {
+      "bytes": 4800,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "tests/test_directional_evolution_driver.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "639187f2bd542216683b8501abbf8201adc4db968259e70413305e0111238f6b"
+    },
+    {
+      "bytes": 7416,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "tests/test_directional_evolution_resume.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f11e0c7445981331357a1e8ed3c0a192be647993c212468ff59fa42c7ed9ffa4"
+    },
+    {
       "bytes": 49204,
       "import_bytes": 45809,
       "import_sha256": "e628fede5c1415c3077d7447c5f60335f745e67350c1b5717fb4e438247d8623",
@@ -43569,6 +43665,14 @@
       "path": "tests/test_nsc_atlas_valve_spherical.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "f331c8b0474264fedb02c77c19dd30d3e29861d9b24a33322b5b770be18ae58f"
+    },
+    {
+      "bytes": 2985,
+      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
+      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "path": "tests/test_nsc_atlas_valve_unprojected.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "dbc72ba16428127952612e7a7a0c31912965c1001f06dd3fdf8887a0e333f7bb"
     },
     {
       "bytes": 6970,

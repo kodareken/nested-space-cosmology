@@ -1,0 +1,85 @@
+{
+  "dimension_reference": {
+    "bytes": 12563,
+    "method": "Read declared default by AST; no model evolution.",
+    "path": "src/recursive_horizons/nsc_atlas_parent_scale_selector.py",
+    "sha256": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+    "symbol": "VolumeParent.d",
+    "value": 12
+  },
+  "inputs": {
+    "conformal": {
+      "bytes": 25010,
+      "path": "results/summaries/nsc-atlas-valve-directional-conformal-v1.json",
+      "sha256": "7ae92b162f63a2d46c1cbe0172b113eddfb59efc4760d3c84e0f04c75d064b82"
+    },
+    "initial": {
+      "bytes": 12381,
+      "path": "results/summaries/nsc-atlas-valve-directional-v1.json",
+      "sha256": "851b087c2332e754e4db826532b31bf7cbfb659a06fcb4b6db1d45abc3fb7f53"
+    },
+    "synchronous_continued": {
+      "bytes": 38426,
+      "path": "results/summaries/nsc-atlas-valve-directional-evolution-v2.json",
+      "sha256": "b4428494849aebf5969a91e698e8874a108ea8b050e632e06d63735d3ac4cb93"
+    },
+    "synchronous_initial": {
+      "bytes": 35011,
+      "path": "results/summaries/nsc-atlas-valve-directional-evolution-v1.json",
+      "sha256": "260c76b7c7087f6d3f1efe34e65dc1f56e79dff55816a9d4f1517bf512ab7ed8"
+    }
+  },
+  "output": {
+    "bytes": 189867,
+    "path": "docs/figures/nsc-atlas-directional-connection.png",
+    "sha256": "21815ea79abfca9fe0563fcf2fdd4003a3ac901ae7cba44034b065712e10fc95"
+  },
+  "physical_sources_or_PDE_recomputed": false,
+  "plotted": {
+    "bare_barrier_log_ratio": 1.147767811137133,
+    "bare_barrier_s": 0.0600005350418201,
+    "final_cap_energy_change": 0.767468365684536,
+    "final_cumulative_material_received": 0.16633344852527734,
+    "fixed_cap_energy_baseline": 71.37490039657311,
+    "log_volume_epochs": [
+      0.0,
+      2.0,
+      2.8
+    ],
+    "observer_elapsed_domain": [
+      0.0,
+      0.45880498907675626
+    ],
+    "observer_radius_end": 1.171093459918659,
+    "observer_samples": 9,
+    "record_inferred_sstar": -0.035646782552940987,
+    "sampled_max_log_volume_ratios": [
+      0.0,
+      1.2148461668665118,
+      2.9522702323901706
+    ],
+    "synchronous_domain": [
+      0.0,
+      2.8000000000000003
+    ],
+    "synchronous_points": 29
+  },
+  "pressure_work_curve_inferred": false,
+  "producer": {
+    "bytes": 12572,
+    "path": "scripts/plot_nsc_atlas_directional_connection.py",
+    "sha256": "4a8937501c2d2de028021d4537a5ee1fdff065a746dc4be3897bcf463d7039bf"
+  },
+  "raw_fields_read": false,
+  "render": {
+    "dpi": 125,
+    "matplotlib_version": "3.11.2",
+    "size_pixels": [
+      1600,
+      1000
+    ]
+  },
+  "reproduction": "python scripts/run_python.py scripts/plot_nsc_atlas_directional_connection.py",
+  "schema": "nsc-atlas-directional-connection-figure-v1",
+  "scope": "Published summary values and their recorded historical provenance; no current decoder rebinding, raw field loading, PDE, independent work curve, formed-child or complete uplift claim."
+}

@@ -1506,9 +1506,9 @@
       "sha256": "3db8971c9cadd0350ac60e5d165e2cab37678f88d8fdead475815abdb0464943"
     },
     {
-      "bytes": 21772,
+      "bytes": 21833,
       "path": "docs/atlas-progress.json",
-      "sha256": "49bee357c2421b2dc542d71d29e08060fdfe048a1b17bb508059df5b3d986256"
+      "sha256": "d02633677d0b9ea8f7f71d1b75b1dbf8da152856744de7ce762ea13c5222452d"
     },
     {
       "bytes": 9543,
@@ -1574,6 +1574,16 @@
       "bytes": 190471,
       "path": "docs/figures/nsc-atlas-cosmohedron-interaction.png",
       "sha256": "bf108fe13638d7057f1cb455244b47fc989143e5f35eef2cc24c0d251c12c1f8"
+    },
+    {
+      "bytes": 2917,
+      "path": "docs/figures/nsc-atlas-directional-connection.manifest.json",
+      "sha256": "9c487f2df35ddfcb9a9b04ba7d19bf2b5ca7d295967417085a62d6f86dc41b62"
+    },
+    {
+      "bytes": 189867,
+      "path": "docs/figures/nsc-atlas-directional-connection.png",
+      "sha256": "21815ea79abfca9fe0563fcf2fdd4003a3ac901ae7cba44034b065712e10fc95"
     },
     {
       "bytes": 117856,
@@ -1746,9 +1756,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2739437,
+      "bytes": 2745594,
       "path": "docs/lab-snapshot.json",
-      "sha256": "ff9f24e9c5b2ebd12fe0818d616f496ced358e6bd0da687554847368e656b267"
+      "sha256": "d5c15a9059bd421036b7ef6dd85881038bdbc16d160277b1d0f38f2d952e13e6"
     },
     {
       "bytes": 4997,
@@ -2146,9 +2156,9 @@
       "sha256": "577f15e685033c0e19a612e3d1492cca2a8b5e2c54fafc52ad47e8a7ae370b12"
     },
     {
-      "bytes": 55066,
+      "bytes": 62625,
       "path": "docs/nsc-atlas-valve-formation.md",
-      "sha256": "3c4d7cb46cad152940d8886317fe7baec86d4b3ed6d9707a618992d01cca3f68"
+      "sha256": "f81b3442baca4b5e015cc096de79a64cace392292850d77fbd2a1a4b6d2d82c2"
     },
     {
       "bytes": 10730,
@@ -16036,6 +16046,21 @@
       "sha256": "670e998379b0f8e3d78446ec667d7670056d761395c852bf97c84d4fa5738e21"
     },
     {
+      "bytes": 25010,
+      "path": "results/summaries/nsc-atlas-valve-directional-conformal-v1.json",
+      "sha256": "7ae92b162f63a2d46c1cbe0172b113eddfb59efc4760d3c84e0f04c75d064b82"
+    },
+    {
+      "bytes": 35011,
+      "path": "results/summaries/nsc-atlas-valve-directional-evolution-v1.json",
+      "sha256": "260c76b7c7087f6d3f1efe34e65dc1f56e79dff55816a9d4f1517bf512ab7ed8"
+    },
+    {
+      "bytes": 38426,
+      "path": "results/summaries/nsc-atlas-valve-directional-evolution-v2.json",
+      "sha256": "b4428494849aebf5969a91e698e8874a108ea8b050e632e06d63735d3ac4cb93"
+    },
+    {
       "bytes": 12381,
       "path": "results/summaries/nsc-atlas-valve-directional-v1.json",
       "sha256": "851b087c2332e754e4db826532b31bf7cbfb659a06fcb4b6db1d45abc3fb7f53"
@@ -17134,6 +17159,11 @@
       "bytes": 8662,
       "path": "scripts/compare_nsc_atlas_gh_evolution.py",
       "sha256": "b12c549876f1174d4836f24d28b812fb620820b7d6d57728307a20a789ba48df"
+    },
+    {
+      "bytes": 14189,
+      "path": "scripts/continue_nsc_atlas_valve_directional.py",
+      "sha256": "87310c6750073bda19ae27d5a3d166fcf931e6ea8681f8a6a5747e2e26a22ede"
     },
     {
       "bytes": 13188,
@@ -18311,6 +18341,11 @@
       "sha256": "7858730cab1ac816d1f168e5cdba7090448bd2b775163c3d46c27b9ba33f77bb"
     },
     {
+      "bytes": 24465,
+      "path": "scripts/evolve_nsc_atlas_valve_directional.py",
+      "sha256": "e95980acc34816a4f5eef753a66e8458f7bdcca4bb6e469f5bf19d1e26c7c18c"
+    },
+    {
       "bytes": 25859,
       "path": "scripts/finite_regeneration.py",
       "sha256": "c95c13e91824d2c0afc01dfb91f6862bfa4a6202e9497d46572fb74cbf8f3e3c"
@@ -18524,6 +18559,11 @@
       "bytes": 3667,
       "path": "scripts/plot_nsc_atlas_cosmohedron_interaction.py",
       "sha256": "5ad9d9fa59fe3efa7bd62f27bb7b13a332476c704f30da0d8b280d78d2a82f6d"
+    },
+    {
+      "bytes": 12572,
+      "path": "scripts/plot_nsc_atlas_directional_connection.py",
+      "sha256": "4a8937501c2d2de028021d4537a5ee1fdff065a746dc4be3897bcf463d7039bf"
     },
     {
       "bytes": 2325,
@@ -19094,6 +19134,11 @@
       "bytes": 8670,
       "path": "scripts/summarize_nsc_atlas_valve_counterrotation.py",
       "sha256": "932e687189cb06a15256e096defca0ad63972228443b1efbd5b1e0456f829a17"
+    },
+    {
+      "bytes": 18910,
+      "path": "scripts/summarize_nsc_atlas_valve_directional.py",
+      "sha256": "4710e200b4837e3b3fc7425d0772d06740dba6b6427c1e57e291274ad9dba646"
     },
     {
       "bytes": 11865,
@@ -20276,9 +20321,9 @@
       "sha256": "46e2a35db716f4170dddf7745a160b9edcadf5253cb863346a1d8fa8aeb579b7"
     },
     {
-      "bytes": 39661,
+      "bytes": 41587,
       "path": "src/recursive_horizons/nsc_atlas_valve_spherical.py",
-      "sha256": "e20d2b4833e146761b21d490bfd71260078c3448219fafd216195c12fb1bca0a"
+      "sha256": "4550d87092a13e6dd085cbad57ffba51e709c4eda0a81edca9c85732114cd08a"
     },
     {
       "bytes": 7005,
@@ -22026,6 +22071,21 @@
       "sha256": "4f33590540faf7836afc9704db516226ae9c8c6a031dbeb77ddc9d7f26b663c6"
     },
     {
+      "bytes": 4630,
+      "path": "tests/test_directional_conformal_unprojected.py",
+      "sha256": "4056d9c75e131f7fd2b708fb03d048510771916b118073e4b986758ce14143d2"
+    },
+    {
+      "bytes": 4800,
+      "path": "tests/test_directional_evolution_driver.py",
+      "sha256": "639187f2bd542216683b8501abbf8201adc4db968259e70413305e0111238f6b"
+    },
+    {
+      "bytes": 7416,
+      "path": "tests/test_directional_evolution_resume.py",
+      "sha256": "f11e0c7445981331357a1e8ed3c0a192be647993c212468ff59fa42c7ed9ffa4"
+    },
+    {
       "bytes": 49204,
       "path": "tests/test_evidence_io.py",
       "sha256": "7b7fdd8dbb15e1de088b8dc27f1dce39e941dbafa3d1b095779d2e526ef3f27c"
@@ -23469,6 +23529,11 @@
       "bytes": 4810,
       "path": "tests/test_nsc_atlas_valve_spherical.py",
       "sha256": "f331c8b0474264fedb02c77c19dd30d3e29861d9b24a33322b5b770be18ae58f"
+    },
+    {
+      "bytes": 2985,
+      "path": "tests/test_nsc_atlas_valve_unprojected.py",
+      "sha256": "dbc72ba16428127952612e7a7a0c31912965c1001f06dd3fdf8887a0e333f7bb"
     },
     {
       "bytes": 6970,
@@ -25411,7 +25476,7 @@
       "sha256": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
     }
   ],
-  "lab_snapshot_sha256": "ff9f24e9c5b2ebd12fe0818d616f496ced358e6bd0da687554847368e656b267",
+  "lab_snapshot_sha256": "d5c15a9059bd421036b7ef6dd85881038bdbc16d160277b1d0f38f2d952e13e6",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-11-01.01",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

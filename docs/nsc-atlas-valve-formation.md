@@ -7,7 +7,128 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
-## Current result: a trapped neck; the receiving child remains open
+## Current result: energy transfer and a controlled change of chart
+
+The directional preparation now has a [coupled evolution through proper2](../results/summaries/nsc-atlas-valve-directional-evolution-v1.json)
+and an [unchanged-state continuation through2.8](../results/summaries/nsc-atlas-valve-directional-evolution-v2.json).
+The receiving fixed cap gains .1493154490 model energy by material flow
+at2 and .1663334485 at2.8. Its independently accumulated pressure work at2.8
+is .6011349170; the energy ledger residual is1.41e-10. The64/96-mode
+material-transfer spread at2.8 is3.90e-9, an empirical comparison rather
+than a total uncertainty bound. The receiving cap is contracting there:
+volume111.21380378, volume rate-14.31834143, mean pressure-.19699793,
+mean density .64868179 and w=-.30368963. It is not a proved expanding child.
+
+The attempted extension toward4 encounters a nonpositive metric variable
+in a Runge--Kutta stage near2.894. Only the admitted2.8 slice is used for
+the next handoff; the uncached accepted tail supplies no new claim.
+Concentration is polar: peak sampled electric curvature is about568.5H²,
+whereas the positive-radius patch |u|<=.9 remains below18.9H² and has
+positive radial scale above3.23. The stage exception establishes neither
+a physical singularity nor a coordinate caustic.
+
+The [asymmetric conformal continuation](../results/summaries/nsc-atlas-valve-directional-conformal-v1.json)
+inherits that same2.8 Cauchy slice, its fields and normal derivatives.
+The radial coordinate is proper distance on the handoff slice; the lapse
+starts at1 and a_T=-K_rad. Its initial causal half-width is4.5039432.
+Characteristic diamonds shrink the supplied domain without introducing
+an incoming boundary state. Reflection projection is disabled.
+
+The2049/4097-point runs both reach the declared local window. At the common
+centerline proper reading3.258805, the fine radius is1.17109346; the
+observed radius spread over nine aligned events is6.02e-7. The finest
+endpoint is proper3.261813, radius1.16955022 and normal radius rate-.51369339.
+The endpoint direct metric/source residual is2.25e-4 and relative
+Hamiltonian/metric-curvature control4.79e-5. The1025-point trial stops its
+declared validity test early and is not extended as a physical solution.
+These clocks belong to the new constant-X observer, generally accelerated;
+they are not silently equated to the previous synchronous geodesic.
+This proves finite local continuation, not global polar regularity or a child.
+
+### The volume transition already present in the action
+
+At2.8 the maximum sampled volume modulus is s=.21037574, beyond the bare
+potential maximum s=.060000535. The existing geometric identification gives
+log(V_internal/V_internal,star)=12(s-s_star), reaching2.95227023.
+The two resolutions place about10.8--10.9% of the proper slice volume above
+that bare barrier. This is not a dark-energy fraction. The field's gradients,
+kinetic energy and coupling to chi remain in the evolution; crossing the
+bare barrier alone is not a runaway theorem. The ancestor sheet remains an
+averaged source, so a localized higher-dimensional completion is still needed.
+
+![Directional supply, the contracting minimum, the independent causal continuation and the driven volume](figures/nsc-atlas-directional-connection.png)
+
+The [figure producer](../scripts/plot_nsc_atlas_directional_connection.py)
+uses the committed compact records, with the two observer paths separated.
+The maximum internal-volume ratio is exp(2.95227023)=19.14938 under the
+existing reduction; no SI length or present cosmological fraction is inferred.
+
+### What a receiving-neck turn would require
+
+The [published spherical Einstein identities](https://arxiv.org/html/gr-qc/9710089v2)
+separate geometric mass, supply and work. Applied at a hypothetical regular
+turn of a persisting spatial minimum, R_t=R_l=0 and R_ll>0, they give
+
+$$
+\kappa\rho R^2=1-2RR_{ll},\qquad
+R_{tt}=-\frac{1+\kappa p_rR^2}{2R}.
+$$
+
+The canonical fields have rho+p_r=Pi_S²+Pi_chi²+(D_lS)²+(D_lchi)²>=0.
+Consequently R_tt<=-R_ll<0. Following the migrating minimum only subtracts
+R_tu²/R_uu, so it cannot turn that event into a bounce. This is a condition
+on a persisting nondegenerate spherical minimum, not a prohibition on all
+compact continuations, nonspherical geometries, neck-type changes or other
+physical sources. The present run keeps R_ll positive through2.8.
+The marginal boundaries of its trapped component are not automatically
+future-outer black-hole boundaries; at2 the opposite-null derivatives are
+positive (.08582413,.21447025), the future-inner sign.
+
+The next physical connection is therefore to complete the volume source
+and resolve its shape sector before interpreting the transition as a child.
+An explicit smooth flux completion must reproduce the existing e^(-24s)
+term, then retain the shape modes that the volume-only truncation omits.
+[Product-space flux spectra](https://arxiv.org/abs/1310.6360) and
+[warped compactification branches](https://arxiv.org/abs/0710.0707) supply
+methods and comparison geometries; their stability results require their
+specified flux ranks and backgrounds. They are not imported as stability
+proofs for this candidate. More precision on the completed finite window
+cannot select that missing physical connection.
+
+A concrete completion to inspect is Einstein gravity with a smooth internal
+six-form on a product of four three-spheres. Pair-cycle flux could supply
+the existing volume exponent while allowing the relative sphere radii to
+respond. This is a proposed new higher-dimensional completion, not a topology
+selected by the current action or a transfer of the old internal Dirac
+spectrum. Its tensor equations, reduction coefficients and shape stability
+must be established before using the resulting geometry or calling a growing
+three-sphere a child. The current potential coefficients and SI charge remain
+inputs to be explained.
+The manuscript/PDF remains252pages; its expansion stays frozen.
+
+### Reproducing the continued window
+
+The raw source commits are15137b9b for0--2,9f0554b9 for2--2.8 and
+e07c2f46 for the conformal continuation. Historical trajectory producers
+retain their original source checks; rerun them at their recorded revision
+in an isolated checkout rather than replacing their source metadata.
+Compact historical projections authenticate archived Git bytes and raw
+cache hashes; current unrelated package changes do not rewrite old results.
+With those raw caches present, the current coordinate-only preparer verifies
+the unchanged spherical physical symbols against the archived source.
+
+```powershell
+python scripts/run_python.py scripts/continue_nsc_atlas_valve_directional.py --prepare-run .build/valve-directional-evolution-N96-v2/run.json --points 4097 --output .build/directional-cauchy-fresh
+python scripts/run_python.py scripts/continue_nsc_atlas_valve_directional.py --initial .build/directional-cauchy-fresh/record.json --endpoint .4 --budget 60 --output .build/directional-conformal-fresh
+python scripts/run_python.py scripts/continue_nsc_atlas_valve_directional.py --compare-records .build/valve-directional-conformal-evolution-P2049-v1/record.json .build/valve-directional-conformal-evolution-P4097-v1/record.json --output .build/directional-comparison-fresh.json
+```
+
+Use fresh destinations. Cauchy preparation and evolution must each use a
+committed source revision because the next stage authenticates that source.
+No boundary waveform, reselected scalar phase, new matter or fitted
+parameter is supplied at this handoff.
+
+## Earlier counterrotation result: a trapped neck
 
 The [completed counterrotation records](../results/summaries/nsc-atlas-valve-counterrotation-evolution-v2.json)
 continue the same finite initial state through admitted proper duration1.8.

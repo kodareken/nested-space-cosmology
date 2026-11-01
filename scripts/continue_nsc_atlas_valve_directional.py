@@ -15,7 +15,7 @@ import time
 
 import numpy as np
 from scipy.integrate import cumulative_simpson
-from scipy.interpolate import PchipInterpolator
+from scipy.interpolate import PchipInterpolator,CubicSpline
 from threadpoolctl import threadpool_limits
 
 from recursive_horizons.nsc_atlas_valve_spherical import SphericalValve,_conformal_evolve
@@ -131,13 +131,74 @@ def evolve(initial_path,folder,endpoint,budget):
     return result
 
 
+def compare(paths):
+    runs=[];histories=[];initial_grids=[]
+    for path in paths:
+        path=(ROOT/path).resolve();record=json.loads(path.read_bytes())
+        if record['schema']!='nsc-atlas-directional-conformal-evolution-v1' or not record['source_unchanged']:
+            raise ValueError('unchanged terminal conformal result required')
+        for name,digest in record['source_sha256'].items():
+            old=subprocess.check_output(['git','show',record['producer_commit']+':'+name],cwd=ROOT)
+            if hashlib.sha256(old).hexdigest()!=digest:raise ValueError('archived conformal producer mismatch')
+        cache=ROOT/record['raw_cache'];initial=ROOT/record['initial']
+        if sha(cache)!=record['raw_cache_sha256'] or sha(initial)!=record['initial_sha256']:
+            raise ValueError('conformal initial/history identity failed')
+        prepared=json.loads(initial.read_bytes());initial_cache=ROOT/prepared['cache']
+        if sha(initial_cache)!=prepared['cache_sha256']:raise ValueError('Cauchy jets changed')
+        with np.load(cache,allow_pickle=False) as raw:history=raw['center_history'].copy()
+        with np.load(initial_cache,allow_pickle=False) as raw:initial_grid={key:raw[key].copy() for key in ('y','yt','yx','yxx')}
+        if (record['status']!='requested_endpoint' or not record['final_cut_admitted'] or
+            record['first_validity_failure'] is not None or np.any(np.diff(history[:,1])<=0)):
+            raise ValueError('two controlled completed conformal windows required')
+        if len(histories) and prepared['origin']!=runs[0]['initial_origin']:
+            raise ValueError('same admitted source event required')
+        histories.append(history);initial_grids.append(initial_grid)
+        rows=record['rows']
+        runs.append(dict(record=path.relative_to(ROOT).as_posix(),record_sha256=sha(path),
+            producer_commit=record['producer_commit'],source_sha256=record['source_sha256'],
+            initial_record=record['initial'],initial_sha256=record['initial_sha256'],initial_origin=prepared['origin'],
+            cache=dict(path=record['raw_cache'],sha256=record['raw_cache_sha256']),points=record['points'],step=record['step'],
+            status=record['status'],reflection_symmetry=record['reflection_symmetry'],
+            center_clock_role=record['center_clock_role'],center_Rproper_acc_role=record['center_Rproper_acc_role'],
+            initial=rows[0],endpoint=rows[-1],limits=record['validity_limits'],
+            maximum_sampled_controls={key:max(row[key] for row in rows) for key in
+                ('Hamiltonian_relative_RMS_term_budget','Hamiltonian_relative_actual_metric_Riemann_scale',
+                 'metric_Einstein_residual_over_source_RMS')},
+            compute_seconds=record['elapsed_seconds']))
+    a,b=histories;end=min(a[-1,1],b[-1,1]);times=np.linspace(max(a[0,1],b[0,1]),end,9)
+    columns=['radius','S','Pi_S','theta_plus_over_H','normal_R_rate','HessNN_R']
+    values=[CubicSpline(history[:,1],history[:,2:],axis=0)(times) for history in histories]
+    spreads=np.max(abs(values[1]-values[0]),axis=0)
+    ratio=(initial_grids[1]['y'].shape[1]-1)//(initial_grids[0]['y'].shape[1]-1)
+    if ratio!=2:raise ValueError('nested two-to-one conformal grids required')
+    initial_spreads={key:float(np.max(abs(initial_grids[0][key]-initial_grids[1][key][:,::2]))) for key in initial_grids[0]}
+    return dict(schema='nsc-atlas-directional-conformal-comparison-v1',
+        scientific_owner='docs/nsc-atlas-valve-formation.md',runs=runs,
+        handoff_nested_grid_maximum_jet_spreads=initial_spreads,
+        aligned_center_proper_time=dict(times=times.tolist(),columns=columns,
+            coarse=values[0].tolist(),fine=values[1].tolist(),
+            maximum_empirical_absolute_spreads=dict(zip(columns,map(float,spreads))),
+            scope='Cubic interpolation of retained centerline histories; empirical numerical differences, not total uncertainties or continuum bounds.'),
+        verdict=dict(same_Cauchy_fields_continued=True,incoming_boundary_data_supplied=False,
+            requested_local_window_completed=True,regular_expanding_child_proved=False,
+            scope='Continuation of a protected positive-radius patch. Polar/global completion and a new child are not established.'),
+        projection_producer=dict(path=Path(__file__).relative_to(ROOT).as_posix(),sha256=sha(__file__)))
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     mode=parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--prepare-run',type=Path);mode.add_argument('--initial',type=Path)
+    mode.add_argument('--compare-records',type=Path,nargs=2)
     parser.add_argument('--points',type=int,default=2049);parser.add_argument('--endpoint',type=float,default=.4)
     parser.add_argument('--budget',type=float,default=60.);parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args();folder=(ROOT/args.output).resolve()
+    if args.compare_records:
+        if not folder.is_relative_to(ROOT) or folder.exists():raise ValueError('fresh comparison output file required')
+        result=compare(args.compare_records);folder.parent.mkdir(parents=True,exist_ok=True)
+        folder.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
+        print(json.dumps(dict(output=str(folder),spreads=result['aligned_center_proper_time']['maximum_empirical_absolute_spreads']),indent=2))
+        return
     if not folder.is_relative_to(ROOT/'.build') or folder.exists():raise ValueError('fresh output directory under .build required')
     if args.points<33 or args.points%2!=1:raise ValueError('odd point count>=33 required')
     folder.mkdir(parents=True)

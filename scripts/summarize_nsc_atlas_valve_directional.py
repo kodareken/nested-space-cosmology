@@ -1,8 +1,9 @@
 """Authenticate and compactly project terminal directional finite windows.
 
 No evolution driver is imported, and no field/grid calculation is performed.
-Historic runner bytes are checked in Git; current physical-package bytes
-must match the run. Later runner-only resume changes do not rewrite history.
+Historic source bytes are checked in Git. Current package/runner differences
+are metadata only: this historical projection imports no physics and does
+not authorize continuation with a changed right-hand side.
 """
 import argparse
 import hashlib
@@ -46,15 +47,16 @@ def authenticate(path,seen=None):
     seen.add(path)
     if not record['source_bound_to_commit'] or not record['source_unchanged']:
         raise ValueError('run lacks unchanged commit-bound source')
-    commit=record['producer_commit'];current_runner={}
+    commit=record['producer_commit'];current_runner={};package_differences={}
     for name,digest in record['source_sha256'].items():
         key=(commit,name)
         if key not in GIT_HASHES:
             blob=subprocess.check_output(['git','show',commit+':'+name],cwd=ROOT)
             GIT_HASHES[key]=hashlib.sha256(blob).hexdigest()
         if GIT_HASHES[key]!=digest:raise ValueError('historical producer/source SHA mismatch: '+name)
-        current=sha(ROOT/name)
-        if name.startswith('src/') and current!=digest:raise ValueError('current physical package differs: '+name)
+        current=sha(ROOT/name) if (ROOT/name).is_file() else None
+        if name.startswith('src/') and current!=digest:
+            package_differences[name]=dict(archived_sha256=digest,current_sha256=current)
         if name.startswith('scripts/'):current_runner[name]=current==digest
     cache=ROOT/record['state_cache']
     if sha(cache)!=record['state_cache_sha256']:raise ValueError('sparse state cache SHA mismatch')
@@ -80,7 +82,10 @@ def authenticate(path,seen=None):
     elif not record.get('stop_reason'):
         raise ValueError('terminal incomplete run requires a stated stop reason')
     authentication=dict(run_record=relative(path),run_record_sha256=sha(path),producer_commit=commit,
-        source_sha256=record['source_sha256'],historical_Git_source_verified=True,current_physical_package_matches=True,
+        source_sha256=record['source_sha256'],historical_Git_source_verified=True,
+        current_package_matches=not package_differences,current_physical_package_matches=not package_differences,
+        current_package_differences=package_differences,
+        current_package_check_role='Informational for a historical data-only projection; not permission to resume a changed RHS.',
         current_runner_matches_historical=current_runner,
         sparse_cache=dict(path=record['state_cache'],sha256=record['state_cache_sha256']),
         initial_record=dict(path=record['initial_record'],sha256=record['initial_record_sha256'],raw_cache=initial_record['raw_cache']))
@@ -119,7 +124,9 @@ def authenticate(path,seen=None):
         if (not np.allclose(baselines,resume['cap_energy_baselines'],rtol=0,atol=3e-11) or
                 not np.allclose(baselines,record['cap_energy_baselines'],rtol=0,atol=3e-11)):
             raise ValueError('resume changed the original fixed-cap energy baselines')
-        authentication['resume']=dict(**resume,parent_Git_and_package_sources_verified=True,
+        authentication['resume']=dict(**resume,parent_archived_Git_sources_verified=True,
+            parent_current_package_matches=pauth['current_package_matches'],
+            parent_current_package_differences=pauth['current_package_differences'],
             selected_parent_state_SHA_verified=True,child_initial_state_bitwise_equal=True,
             cumulative_ledgers_preserved=True,original_cap_baselines_preserved=True)
     return record,authentication
