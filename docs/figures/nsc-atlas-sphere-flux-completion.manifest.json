@@ -1,0 +1,106 @@
+{
+  "PDE_evolution_performed": false,
+  "data_reading_boundary": "Public v2 summary and its recorded historical source identity; no raw cache or current physical decoder read.",
+  "historical_source_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+  "input": {
+    "bytes": 51428,
+    "path": "results/summaries/nsc-atlas-sphere-flux-completion-v2.json",
+    "sha256": "550a1b647aa64566928c500a8e5461a5f28320b2a28d99a430da7523d2b80543"
+  },
+  "new_source_calculation": false,
+  "output": {
+    "bytes": 172715,
+    "path": "docs/figures/nsc-atlas-sphere-flux-completion.png",
+    "sha256": "785df141e7e3c81c12203011a81aff3345bb829a5dcca3750636ec0c0ce9de0f"
+  },
+  "plotted": {
+    "common_T": "25/32",
+    "common_effective_unit_norm": "1/4",
+    "frozen_slices": 29,
+    "initial_relative_radius_accelerations": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.8379718409631312,
+        1.8379718409631312,
+        -1.8379718409631312,
+        -1.8379718409631312
+      ]
+    ],
+    "minimum_local_mass_squared": -0.3583754424310075,
+    "minimum_retained_eigenvalue": 0.133933258414675,
+    "pair_order_1_based": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "period_unit_squared": [
+      "1/96",
+      "1/16"
+    ],
+    "period_vectors": [
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "proper_domain": [
+      0.0,
+      2.8
+    ]
+  },
+  "producer": {
+    "bytes": 9919,
+    "path": "scripts/plot_nsc_atlas_sphere_flux_completion.py",
+    "sha256": "0674e373eb43c8b253411dd0a83253f22b0a203a201fe1af139b45ace5d5ee8f"
+  },
+  "raw_fields_read": false,
+  "render": {
+    "dpi": 125,
+    "matplotlib_version": "3.11.2",
+    "size_pixels": [
+      1600,
+      1000
+    ]
+  },
+  "reproduction": "python scripts/run_python.py scripts/plot_nsc_atlas_sphere_flux_completion.py",
+  "schema": "nsc-atlas-sphere-flux-completion-figure-v1",
+  "scope": "Two conditional different microscopic charge lattices with equal reduced scalar data. Only diagonal-background frozen slices are plotted; initial single-pair forcing is not its subsequent history. No full-continuum stability, SI selection or child claim."
+}

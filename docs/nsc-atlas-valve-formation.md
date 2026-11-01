@@ -54,7 +54,9 @@ The two resolutions place about10.8--10.9% of the proper slice volume above
 that bare barrier. This is not a dark-energy fraction. The field's gradients,
 kinetic energy and coupling to chi remain in the evolution; crossing the
 bare barrier alone is not a runaway theorem. The ancestor sheet remains an
-averaged source, so a localized higher-dimensional completion is still needed.
+averaged source in the old interpretation. The smooth flux completion
+described below now reproduces its scalar potential, with a distinct
+microscopic field identification; it does not derive the ancestor coupling.
 
 ![Directional supply, the contracting minimum, the independent causal continuation and the driven volume](figures/nsc-atlas-directional-connection.png)
 
@@ -84,26 +86,40 @@ The marginal boundaries of its trapped component are not automatically
 future-outer black-hole boundaries; at2 the opposite-null derivatives are
 positive (.08582413,.21447025), the future-inner sign.
 
-The next physical connection is therefore to complete the volume source
-and resolve its shape sector before interpreting the transition as a child.
-An explicit smooth flux completion must reproduce the existing e^(-24s)
-term, then retain the shape modes that the volume-only truncation omits.
+The [smooth pair-flux completion](nsc-atlas-scale-selection.md#smooth-pair-flux-completion-and-its-shape-operator)
+now reproduces the existing scalar action with a six-form on four compact
+three-spheres. Mixed and internal tracefree Einstein equations and Maxwell
+remain consistent for the varying volume field. The15 focused tests and
+the actual spatial-operator calculation are preserved in its linked record.
 [Product-space flux spectra](https://arxiv.org/abs/1310.6360) and
 [warped compactification branches](https://arxiv.org/abs/0710.0707) supply
 methods and comparison geometries; their stability results require their
 specified flux ranks and backgrounds. They are not imported as stability
-proofs for this candidate. More precision on the completed finite window
-cannot select that missing physical connection.
+proofs for this candidate.
 
-A concrete completion to inspect is Einstein gravity with a smooth internal
-six-form on a product of four three-spheres. Pair-cycle flux could supply
-the existing volume exponent while allowing the relative sphere radii to
-respond. This is a proposed new higher-dimensional completion, not a topology
-selected by the current action or a transfer of the old internal Dirac
-spectrum. Its tensor equations, reduction coefficients and shape stability
-must be established before using the resulting geometry or calling a growing
-three-sphere a child. The current potential coefficients and SI charge remain
-inputs to be explained.
+Its three relative-radius fields have local mass squared below zero in
+parts of the driven geometry, but the lowest retained spatial eigenvalue
+stays positive: .13393326 at2.8, with degree difference4.29e-9. A local
+coefficient crossing is therefore not advertised as a global instability.
+There is no selected physical shape seed or nonlinear child.
+
+The calculation also gives a concrete inheritance ambiguity. Equal cycle
+flux and a single-pair cycle can match the same T=25/32 and effective
+charge unit1/4, yet give zero versus(+1.838,+1.838,-1.838,-1.838) initial
+relative-radius accelerations. They are different microscopic charge
+embeddings. The current history belongs only to the equal-flux completion.
+The missing physical map is the charge coupling and its transport, keeping
+the stabilizer separate from the original charged top-form sector. Closed
+six-form periods are conserved through a smooth horizon;
+the horizon cannot by itself add a charge unit. The dual six-form sector
+also has a different volume-dependent canonical normalization from the old
+top-form sector. Those identities must be connected explicitly.
+
+Topology and matching coefficients remain inputs; the old round-S12
+Dirac spectrum is not transferred to this product geometry. The next
+work joins the existing scalar/top-form handoff to the smooth stabilizer
+in one parent action, then derives its transition and driven shapes,
+not deeper precision on the completed finite evolution windows.
 The manuscript/PDF remains252pages; its expansion stays frozen.
 
 ### Reproducing the continued window

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+  "current_receipt_commit_parent": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
   "files": [
     {
       "bytes": 3197,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 303753,
-      "change": "Record signed Gaussian state inheritance, the complete proper-chart Dirac source operator and the reviewed working atlas.",
-      "changed_from_commit": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff",
+      "bytes": 304361,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "680cbe25b639ffa6f8fc5c76410c407e6e2e536b3a523e50e4dcac2fd37a1e4f"
+      "sha256": "e1d7345fed3eecaebea73786ee17dd75baf4082b4f2cbe9aa95ba2e19954098d"
     },
     {
       "bytes": 168348,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 21833,
-      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
-      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "bytes": 22013,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "d02633677d0b9ea8f7f71d1b75b1dbf8da152856744de7ce762ea13c5222452d"
+      "sha256": "719baeda15b871a34f81eef102d30688757fd604630b0621b866d992a5c3e4b7"
     },
     {
       "bytes": 9543,
@@ -10619,6 +10619,22 @@
       "path": "docs/figures/nsc-atlas-shared-scalar-slice.png",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "6c4767221b8599234e9b4f4bbb39e3637a77df8298d34b1775755a4fcb64daad"
+    },
+    {
+      "bytes": 2467,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "docs/figures/nsc-atlas-sphere-flux-completion.manifest.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f42d51bd2e47e4615821920fb10094f5bb9b2aee3fd80ab9575b12db2df62e5c"
+    },
+    {
+      "bytes": 172715,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "docs/figures/nsc-atlas-sphere-flux-completion.png",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "785df141e7e3c81c12203011a81aff3345bb829a5dcca3750636ec0c0ce9de0f"
     },
     {
       "bytes": 919,
@@ -11157,12 +11173,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 47542,
-      "change": "Derive the contrast-to-length relation, distinguish constant-volume frame scaling from hierarchy selection, and check the signs of fixed-coupling descendant vacua.",
-      "changed_from_commit": "c7af00a971126ad11ddcd1e470a1b3a9306bb20c",
+      "bytes": 57657,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "37c66ef4a7a99bcf830a10ccb6f518487f0269e0dbfd472a7ea1f2813dcf4cd1"
+      "sha256": "43c00c82e8a5ca3deca65a1004a169ec69310de855b12ad10085b7d3f111ac48"
     },
     {
       "bytes": 16908,
@@ -11213,12 +11229,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 62625,
-      "change": "Connect finite directional energy transfer to a controlled causal continuation and the driven volume transition.",
-      "changed_from_commit": "e07c2f4676de80ede2aa18459d1bae57bf9c5e13",
+      "bytes": 63635,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "f81b3442baca4b5e015cc096de79a64cace392292850d77fbd2a1a4b6d2d82c2"
+      "sha256": "cc5bca22343f0c0ad8c3dbfbff1477cef499aadb386dad58d3351042eef2b531"
     },
     {
       "bytes": 10730,
@@ -12272,12 +12288,12 @@
       "sha256": "dfcab5f190b8baab77f3b865c24b3a23e5bab40d750847925d6ea8319da91315"
     },
     {
-      "bytes": 620781,
-      "change": "Record signed Gaussian state inheritance, the complete proper-chart Dirac source operator and the reviewed working atlas.",
-      "changed_from_commit": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff",
+      "bytes": 622546,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fd3cdb41697838aa7a86d6138d9afa52b744baf2fa833ab377b261abf10c84ea"
+      "sha256": "a03373004b648dfb03eb39f921f9961be94662814a6c67b16d17e7b276a551f9"
     },
     {
       "bytes": 6705,
@@ -12294,12 +12310,12 @@
       "sha256": "fac81a4b929c7b906d87cb35fb98ef50033f9f9227781f42a8740a5584ecac18"
     },
     {
-      "bytes": 60922,
-      "change": "Record signed Gaussian state inheritance, the complete proper-chart Dirac source operator and the reviewed working atlas.",
-      "changed_from_commit": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff",
+      "bytes": 61443,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
       "path": "docs/research-index.md",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
-      "sha256": "a61121bb7cf9de47b64519a31c949004011c16d1e88383d33c386787c3a97baf"
+      "sha256": "388bde5db1b749c1bb11a5ef2ced9d68d171bf38e1f19bc142794f2c404c7228"
     },
     {
       "bytes": 18356,
@@ -31932,6 +31948,22 @@
       "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
+      "bytes": 49485,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "results/summaries/nsc-atlas-sphere-flux-completion-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "b9042f36218e899685d601a0d911792b5ae9595dea144889d7b3f41aa09c2e3f"
+    },
+    {
+      "bytes": 51428,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "results/summaries/nsc-atlas-sphere-flux-completion-v2.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "550a1b647aa64566928c500a8e5461a5f28320b2a28d99a430da7523d2b80543"
+    },
+    {
       "bytes": 6819,
       "change": "Save the outside-first research picture, apply requested prose removals, and audit three dimensionless targets without SI input or selected fits.",
       "changed_from_commit": "f60d04f9ffdbb520c9a46d760dd7abc4aefe9abd",
@@ -33108,6 +33140,14 @@
       "path": "scripts/check_nsc_atlas_source_remainder_bound.py",
       "retention_reason": "Exact rational quadratic source remainder and independent controls.",
       "sha256": "6a91d1d6756fb1fa184192934df7f3e892dbc2e99d483b809581e93faaddf28f"
+    },
+    {
+      "bytes": 10132,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "scripts/check_nsc_atlas_sphere_flux_completion.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "ec5ef4dc8eeacc1cea085bb7bb2bc8f58a83ccab9fce3c7cf5a0d5040a9bde5e"
     },
     {
       "bytes": 1941,
@@ -36480,6 +36520,14 @@
       "sha256": "9f75178e3452ca5aa3f1664581fe9a7ad2734f83a475c796621ed2120eb6f9c8"
     },
     {
+      "bytes": 9919,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "scripts/plot_nsc_atlas_sphere_flux_completion.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0674e373eb43c8b253411dd0a83253f22b0a203a201fe1af139b45ace5d5ee8f"
+    },
+    {
       "bytes": 5846,
       "change": "Shared two-wall history, synchronized manuscript and preserved field-proof/radar ownership.",
       "changed_from_commit": "f4a8a9a81fb49c7dfbe121991385ba65e2883a51",
@@ -38323,6 +38371,14 @@
       "path": "src/recursive_horizons/nsc_atlas_source_remainder_bound.py",
       "retention_reason": "Exact rational quadratic source remainder and independent controls.",
       "sha256": "89aae310406ce97a88c3f4f7ef9a3cfa504450381891dc1b2399cf5ec0b65dbf"
+    },
+    {
+      "bytes": 6550,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "src/recursive_horizons/nsc_atlas_sphere_flux_completion.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "6d010aa448e0319d80d5b8132372ff77fd014f84abdb206734bf6912300116db"
     },
     {
       "bytes": 6081,
@@ -43470,6 +43526,14 @@
       "sha256": "aee8ee536a5668d4ad9be392f65849171858ef8dc658bb622d1c3eb97714f0a8"
     },
     {
+      "bytes": 4546,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "tests/test_nsc_atlas_shape_operator.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "94fba503880e79881b9b9b8c249e404e1007bfaf86208bf325253dc76d7e4971"
+    },
+    {
       "bytes": 2143,
       "change": "Propagate the fixed-source supernova posterior into one shared DESI ruler and audit inherited SI scale selection.",
       "changed_from_commit": "485b3b936cb414848bdf0113337cd6dc30f263de",
@@ -43531,6 +43595,14 @@
       "path": "tests/test_nsc_atlas_source_remainder_bound.py",
       "retention_reason": "Exact rational quadratic source remainder and independent controls.",
       "sha256": "8079a9fb51f9a7cb2b6dc52b0faead9d05700a3099355f702854c4baddce96cc"
+    },
+    {
+      "bytes": 7117,
+      "change": "Complete the smooth sphere-flux source and its actual shape operator; retain the charge-cycle transport and forcing comparison.",
+      "changed_from_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+      "path": "tests/test_nsc_atlas_sphere_flux_completion.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "f17e9400e4d5ef4eb6ad2750f0173e57cb9d8a5ee1e90eee3dac71db199ee980"
     },
     {
       "bytes": 2724,

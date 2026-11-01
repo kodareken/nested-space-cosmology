@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [smooth sphere/flux completion](nsc-atlas-scale-selection.md#smooth-pair-flux-completion-and-its-shape-operator)
+replaces the averaged scalar stabilizer in one explicit higher-dimensional
+candidate. Exact flux stress, a consistent breathing reduction and the
+actual spatial shape operator are calculated. Two charge-cycle embeddings
+with the same reduced energy give different shape forces; deriving the
+geometric charge handoff remains the formation frontier. No child or SI
+scale is inferred from that completion.
+
 The active [valve/formation calculation](nsc-atlas-valve-formation.md)
 derives stabilization-loss and one-mode neck-trapping thresholds in the
 same action. The new occupation has converged future-trapped development

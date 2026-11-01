@@ -1,5 +1,13 @@
 # Active code and evidence map
 
+`nsc_atlas_sphere_flux_completion.py` defines the explicit product-sphere
+six-form completion, its full shape potential and charge-cycle embeddings.
+`check_nsc_atlas_sphere_flux_completion.py` evaluates the frozen spatial
+shape operator on authenticated directional histories; its source and
+operator tests are separate from physical evolution. The [scale/source owner](nsc-atlas-scale-selection.md#smooth-pair-flux-completion-and-its-shape-operator)
+states the matching assumptions, period-transport law and remaining charge
+coupling. `plot_nsc_atlas_sphere_flux_completion.py` renders the compact record.
+
 The [valve formation owner](nsc-atlas-valve-formation.md) connects
 `nsc_atlas_trapped_surfaces.py` (closed deformed surface/null expansions),
 `nsc_atlas_trapped_parent.py` (full saved-parent metric/field adapter) and

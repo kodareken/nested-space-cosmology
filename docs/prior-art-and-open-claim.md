@@ -1,5 +1,33 @@
 # Prior art and admission of new research
 
+## Smooth sphere-flux source and actual shape operator, 1 November 2026
+
+The [source completion](nsc-atlas-scale-selection.md#smooth-pair-flux-completion-and-its-shape-operator)
+replaces the averaged scalar stabilizer with an explicit magnetic six-form
+on four compact three-spheres. Product-flux dimensional reduction and
+stability methods are borrowed from [Brown--Dahlen1310.6360](https://arxiv.org/html/1310.6360);
+their individual-factor flux rank differs, so no stability conclusion is
+imported. The new connection is the exact retained potential, varying-volume
+Maxwell/Einstein consistency, and its actual shape operator on the previously
+admitted directional geometry.
+
+The old4D trajectory and coefficients are fixed. New microscopic field,
+topology and period choices are explicit; no SI ruler or target observation
+is supplied. The frozen-slice calculation uses both cap parities, degrees32/48
+and independent401/601 quadratures at29 retained events0..2.8. Its60second
+wall budget uses four threads and measured5.59seconds. Raw trial vectors
+stay under.build; the compact record contains source/data hashes and results.
+Independent checks cover full tensor contractions, general metric scaling,
+canonical Hessians, exact round eigenvalues, the warped Laplacian and
+charge-cycle forces. No new evolution is performed.
+
+Stop after the spatial sign and embedding comparison. A negative local
+mass does not imply a global mode; positive Ritz minima do not prove full
+stability; exact symmetric shapes do not acquire a seed. Two microscopic
+embeddings give identical reduced energy and effective charge-step norm
+but different shape forces. The next required physical object is the
+geometric charge coupling/transport, not a deeper scan of the same slices.
+
 ## Signed source and complete radial operator, 1 November 2026
 
 The [inherited-field owner](nsc-atlas-inherited-charge.md) replaces an

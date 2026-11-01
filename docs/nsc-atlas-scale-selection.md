@@ -640,6 +640,9 @@ that minimal stabilizer, not nesting.
 A localized four-dimensional vacuum sheet has induced volume exp(-2ds).
 Its homogeneous internal average therefore supplies W=T*exp(-2ds).
 This is a declared additional source, not a proved localized uplift.
+The [smooth pair-flux completion below](#smooth-pair-flux-completion-and-its-shape-operator)
+now supplies that same exponent in a different explicit higher-dimensional
+scalar-sector completion. It does not derive the inherited charge coupling.
 Assign T the existing vacuum law epsilon*q_A^2/2 with
 q_A=q_parent+j*e. Identifying that sheet with an ancestor's vacuum is
 an added coupling/state prescription; flux arithmetic alone does not
@@ -943,3 +946,216 @@ treating its numerical coefficient as selected. Complete: exact selection
 audit, analytic monotonicity and numerical witnesses. Next: the missing
 common parent/source rule, before pursuing an SI scale based on one pair.
 This audit uses no new evolution, target fit or additional physical state.
+
+## Smooth pair-flux completion and its shape operator
+
+The [computed completion](../results/summaries/nsc-atlas-sphere-flux-completion-v2.json)
+replaces the averaged stabilizer in one explicit candidate. It retains the
+existing two-scalar action; it does not complete the original charged
+four-form/membrane theory or select its coefficients. The construction is
+implemented in `nsc_atlas_sphere_flux_completion.py`.
+
+Take a classical parent action
+
+$$
+I_{16}=\int\sqrt{-G}\left[
+\frac{R_{16}-2\Lambda_{16}}{2\kappa_{16}}
+-\frac12(\partial\Phi)^2-\frac12m_{16}^2\Phi^2
+-\frac{F_6^2}{2\,6!}\right].
+$$
+
+The matter terms are outside the gravitational prefactor. Choose
+gamma=(S3_r)^4, r²=8/5, V0=(2pi²r³)^4, kappa16=V0, Lambda16=7 and m16=20
+in the retained classical units. The common quantum action normalization
+1/g remains unspecified; this kappa4=1 convention does not determine
+kappa_nat/L_unit² or an SI length. With Phi=chi/sqrt(V0), set
+
+$$
+ds_{16}^2=e^{-12s(x)}ds_{4,E}^2+e^{2s(x)}\gamma,
+\qquad F_6=q\sum_{i<j}\omega_i\wedge\omega_j,
+\qquad q=\frac{5/2}{\sqrt{24V_0}}.
+$$
+
+Each omega_i is the fixed-reference volume form of its three-sphere,
+with pointwise norm1. Its integral is the sphere volume. It is not an
+evolving orthonormal form held constant by hand. Exact contractions give
+
+$$
+|F_6|_\gamma^2=6q^2,\qquad
+\langle\iota_aF_6,\iota_bF_6\rangle=3q^2\delta_{ab}.
+$$
+
+Consequently the common-radius internal flux stress vanishes, while its
+external stress is -3q² exp(-12s)G_munu. Physical flux amplitudes dilute as
+q exp(-6s). Bianchi and Maxwell hold for varying s(x): the reference forms
+are closed and parallel, and
+
+$$
+*_{16}F_6=\pm e^{-24s}\,\mathrm{vol}_{4,E}\wedge *_\gamma F_6.
+$$
+
+The external derivative has degree5 on the four-coordinate base; the
+internal derivative vanishes. A5 is patchwise because the flux periods
+are nonzero. Mixed and internal tracefree Einstein components are unsourced
+on this common-radius ansatz: Ric_gamma=(5/4)gamma and all remaining source
+terms are isotropic internally. The retained equations are therefore a
+consistent classical sector, not merely an extremum of an averaged action.
+
+Dimensional reduction gives K=84, mu²=400 exp(-12s), and
+
+$$
+V(s)=7e^{-12s}-\frac{15}{2}e^{-14s}+\frac{25}{32}e^{-24s}.
+$$
+
+In particular, R_gamma/2=15/2 and the flux energy is3V0q²=25/32. The old
+T term is replaced, not counted twice. A separate constant-vacuum check
+of the internal Einstein equation gives
+(5/4)exp(-2s)=1+(25/112)exp(-12s), exactly equivalent to V_s=0.
+Topology, flux periods, bulk couplings and scale normalization are supplied.
+No dimension selection, charge inheritance, SI prediction or round-S12
+Dirac spectrum follows from this replacement.
+
+### The omitted relative radii
+
+Write the four radii as r exp(s+beta_i), sum beta_i=0. Their kinetic term
+is -3 sum_i(partial beta_i)²/2 at kappa4=1. Their full potential is
+
+$$
+V(s,\beta)=7e^{-12s}
+-\frac{15}{8}e^{-14s}\sum_i e^{-2\beta_i}
++\frac{25}{192}e^{-24s}\sum_{i<j}e^{-6(\beta_i+\beta_j)}.
+$$
+
+The three canonically normalized traceless shapes have equal local masses
+
+$$
+m_\beta^2(s)=-\frac52e^{-14s}+\frac{25}{8}e^{-24s},
+\qquad s_{\rm shape}=\frac{\ln(5/4)}{10}=.02231435513.
+$$
+
+The mass is3.23397763 at the retained volume minimum and-.11142207 at the
+actual driven maximum s=.21037574. That negative local coefficient is not
+by itself an instability of the spatially extended parent.
+
+For the admitted directional history, h=q²dchi²+b²sin²chi dOmega² and
+u=coschi. The actual frozen-slice shape operator is
+
+$$
+\mathcal A=-w^{-1}\partial_u(p\partial_u)+m_\beta^2(s),
+\quad w=4\pi\sqrt{1-u^2}\,qb^2,\quad p=w(1-u^2)/q^2.
+$$
+
+Smooth scalar functions at both poles are used, with both cap parities.
+Angular sectors add the nonnegative term ell(ell+1)/(b²(1-u²)); the ground
+can be sought in the radial sector. Degrees32/48 and independent401/601
+quadratures on29 saved slices give:
+
+| Proper time | Lowest retained eigenvalue |
+| --- | ---: |
+| 0 | 3.23397763 |
+| 1 | 1.74201332 |
+| 2 | .39298896 |
+| 2.8 | .13393326 |
+
+The largest degree difference is4.29e-9; the largest quadrature difference
+is5.86e-14. These are empirical differences, not continuum error bounds.
+Positive Ritz minima cannot exclude unrepresented negative directions;
+the sampled positive supersolutions are not whole-interval certificates.
+No negative retained direction was found, so the local mass crossing is
+not advertised as a global instability. Time-dependent amplification and
+physical state selection remain different questions. Exact beta=0 data
+stay zero under this equal-flux source.
+
+### What charge inheritance must additionally specify
+
+A compact charge-lattice identification requires the wrapped six-cycle.
+Let Nij be integer pair-cycle periods and E² the squared elementary period.
+At equal radii,
+
+$$
+T=\frac{E^2}{2}\sum_{i<j}N_{ij}^2,\qquad
+\ddot\beta_i=E^2e^{-24s}\left[d_i-\frac12\sum_{k<l}N_{kl}^2\right],
+\quad d_i=\sum_{j\ne i}N_{ij}^2,
+$$
+
+for initially resting equal shapes. Two microscopic charge embeddings give
+the same retained T and the same effective inherited unit norm1/4:
+
+| Wrapped class | E² | Integer periods | T | Shape acceleration coefficient, before exp(-24s) |
+| --- | ---: | --- | ---: | --- |
+| Diagonal combination of all six cycles | 1/96 | (5,5,5,5,5,5) | 25/32 | (0,0,0,0) |
+| One pair cycle | 1/16 | (5,0,0,0,0,0) | 25/32 | (25/32,25/32,-25/32,-25/32) |
+
+These are different microscopic period identifications, not two states of
+an already fixed primitive charge lattice. The effective step vectors have
+squared norm(1/96)*6=(1/16)*1=1/16. Thus the scalar inherited charge and
+vacuum energy alone do not select the source's shape forcing. The single-pair
+initial relative accelerations would be(+1.83797184,+1.83797184,-1.83797184,
+-1.83797184) at s_star. Its subsequent history must be recomputed with
+the shapes; the equal-flux trajectory is not reused as that solution.
+
+If the same positive reference charge inner product is inherited, equality
+in the triangle inequality for the linear3->4->5 unit-norm ladder requires
+collinear initial and step vectors. It does not choose which wrapped
+homology class that direction represents. Transporting the charge metric
+when shapes change is itself part of the missing inheritance map.
+
+There is an exact transport constraint on that map. For a smoothly
+transported closed cycle Sigma6 and dF6=0, Cartan's identity gives
+
+$$
+\frac{d}{dt}\int_{\Sigma_6(t)}F_6
+=\int_{\Sigma_6(t)}\left[d(\iota_vF_6)+\iota_vdF_6\right]=0.
+$$
+
+Thus the period continues unchanged through a smooth horizon on the same
+transported homology class. This is a composable conservation law, not a
+mechanism that increments its integer. A different effective ancestral
+flux must arise from a specified different cycle/resolution, a charged
+source, or a justified topology transition. The horizon alone supplies none
+of those changes.
+
+The field identity also matters. Reducing the dual ten-form gives a
+four-form kinetic coefficient proportional to exp(24s), hence canonical
+flux proportional to exp(-12s). The earlier D-form sector instead has
+canonical flux proportional to exp(-6s), like the scalar mass. Matching
+the same stabilizing potential therefore does not establish interchangeability
+of those fields or the old dynamic charge/mass inheritance relation.
+The dual comparison uses the fixed-displacement boundary term described
+above: V=P²/(2Z)>0 and L_eff=-V. Substituting the Lorentzian four-form
+solution directly into its bulk action would give the wrong action sign.
+
+The next action-level join is to retain the earlier scalar/top-form sector
+and its membrane wrapped over the complete internal space together with
+this stabilizer. Its charge is not automatically the six-form charge.
+`ScalarFlux` already supplies the shifted minimum, continuous-field handoff
+and excitation identities; the conditional E0=3/8 preparation is reused,
+not re-derived or promoted to a selected ancestral state. The combined
+action must then supply regional vacua and actual transition data. The
+six-cycle choice remains an input of the stabilizer completion; it must
+not be mistaken for the already specified top-form wrapping.
+Neither a small spatial mass nor a convenient flux pattern substitutes
+for that physical connection. This construction uses the product-flux
+methods of [Brown and Dahlen](https://arxiv.org/html/1310.6360); their flux
+wraps individual factors and their stability conclusions are not imported
+for this pair-cycle model.
+
+For the next formation geometry, compare the explicit compactification
+regions and nucleation constructions of [Carroll, Johnson and Randall](https://arxiv.org/abs/0904.3115)
+and [Blanco-Pillado, Schwartz-Perlov and Vilenkin](https://arxiv.org/abs/0912.4082).
+Their backgrounds and flux ranks are comparison inputs, not a completed
+transition for the product-space candidate here. The full source and
+regularity hypotheses must be matched before borrowing a formation result.
+
+![Smooth-source completion, local versus spatial modes, and charge-cycle ambiguity](figures/nsc-atlas-sphere-flux-completion.png)
+
+Reproduce the bounded operator calculation with fresh destinations:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_sphere_flux_completion.py --run .build/valve-directional-evolution-N96-v1/run.json --run .build/valve-directional-evolution-N96-v2/run.json --raw-directory .build/sphere-flux-operator-fresh --output .build/sphere-flux-completion-fresh.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_sphere_flux_completion.py tests/test_nsc_atlas_shape_operator.py
+```
+
+The15 focused tests include full antisymmetric flux contractions, independent
+metric scaling and canonical Hessians, the round spectrum including odd
+modes, a direct warped-Laplacian integration, and the charge-embedding force.

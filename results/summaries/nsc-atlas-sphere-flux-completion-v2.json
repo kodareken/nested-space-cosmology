@@ -1,0 +1,1633 @@
+{
+  "schema": "nsc-atlas-sphere-flux-completion-v1",
+  "scientific_owner": "docs/nsc-atlas-valve-formation.md",
+  "action": {
+    "dimensions": 16,
+    "internal_dimensions": 12,
+    "topology": "(S3_r)^4",
+    "radius_squared": "8/5",
+    "reference_volume": 2547058.1500690486,
+    "kappa16": 2547058.1500690486,
+    "Lambda16": "7",
+    "mass16": "20",
+    "q": 0.0003197532429052149,
+    "q_squared_times_reference_volume": "25/96",
+    "A": "7",
+    "B": "15/2",
+    "T": "25/32",
+    "K": "84",
+    "scalar_mass_squared_prefactor": "400",
+    "shape_kinetic_metric_prefactor": "3",
+    "action": "(R16-2Lambda16)/(2kappa16) - (dPhi)^2/2 - m16^2 Phi^2/2 - F6^2/(2*6!)",
+    "metric": "ds16^2=exp(-12s) ds4E^2+exp(2s) gamma12; kappa4=kappa16/V0=1",
+    "scalar_normalization": "Phi=chi/sqrt(V0), internal-constant neutral scalar",
+    "form_normalization": "F6=q sum_(i<j) omega_i wedge omega_j; omega_i fixed-reference norm-one volume forms",
+    "Maxwell_identity": "*16F6=+/-exp(-24s) vol4 wedge *gammaF6; dF6=d*16F6=0 for smooth s(x)",
+    "assumptions": [
+      "Einstein gravity and canonical neutral scalar/form, matter outside the gravity prefactor",
+      "Fixed product topology and equal-magnitude constant pair-cycle flux periods; patchwise A5",
+      "Common breathing field; no extra charged sources or form couplings",
+      "Supplied couplings and units; kappa16=V0 and q refer to Lunit=1"
+    ],
+    "scope": "New higher-dimensional completion of the retained scalar sector; replaces the old T term. No inheritance/dimension/SI selection, round-S12 spectrum transfer, full-mode stability or child claim.",
+    "overall_normalization": "The common quantum action factor1/g remains unspecified. kappa4=1 is the retained classical geometrized normalization, not a selection of kappa_nat/Lunit^2 or metres."
+  },
+  "exact_unit_flux": {
+    "norm_squared": "6",
+    "internal_contraction_diagonal": "3",
+    "internal_stress_zero": true,
+    "external_metric_coefficient": "-3"
+  },
+  "shape": {
+    "canonical_kinetic_prefactor": 3,
+    "local_mass_squared": "-5exp(-14s)/2+25exp(-24s)/8",
+    "threshold_s": 0.022314355131420976,
+    "linear_channels": 3,
+    "spatial_operator": "A=-w^-1 d_u[p d_u]+m\u00b2(s); w=4pi sqrt(1-u\u00b2)q b\u00b2,p=w(1-u\u00b2)/q\u00b2",
+    "scope": "Full radial parity; smooth poles. Higher external angular sectors add a nonnegative term. Frozen-slice operator, not physical seed/state selection or nonlinear growth."
+  },
+  "inheritance_embedding_comparison": {
+    "examples": [
+      {
+        "period_unit_squared": "1/96",
+        "integer_periods": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "squared_integer_norm": 150,
+        "reduced_flux_energy": "25/32",
+        "weighted_vertex_degrees": [
+          75,
+          75,
+          75,
+          75
+        ],
+        "equal_radius_shape_acceleration_coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "name": "diagonal_six_cycle",
+        "inherited_step_norm_squared": "1/16",
+        "initial_shape_accelerations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "period_unit_squared": "1/16",
+        "integer_periods": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "squared_integer_norm": 25,
+        "reduced_flux_energy": "25/32",
+        "weighted_vertex_degrees": [
+          25,
+          25,
+          0,
+          0
+        ],
+        "equal_radius_shape_acceleration_coefficients": [
+          "25/32",
+          "25/32",
+          "-25/32",
+          "-25/32"
+        ],
+        "name": "single_pair_cycle",
+        "inherited_step_norm_squared": "1/16",
+        "initial_shape_accelerations": [
+          1.8379718409631312,
+          1.8379718409631312,
+          -1.8379718409631312,
+          -1.8379718409631312
+        ]
+      }
+    ],
+    "equal_reduced_T": true,
+    "equal_inherited_step_norm": true,
+    "missing_geometric_datum": "Which internal six-cycle or combination is wrapped by the inherited unit charge.",
+    "scope": "Two conditional microscopic embeddings of the same effective flux unit and energy, with different initial shape forces. The actual trajectory probed here belongs only to the diagonal equal-flux completion; it is not reused as a single-pair history."
+  },
+  "origins": [
+    {
+      "path": ".build/valve-directional-evolution-N96-v1/run.json",
+      "sha256": "4bd0ddf1d11344e21afab71f09cdf4f6c3f2475e01796ca5137c51f625f5ca51",
+      "state_cache": ".build/valve-directional-evolution-N96-v1/sparse.npz",
+      "state_cache_sha256": "95d910474c18780506baa4d3c346efaff5663e1ec36aa5e1425688e1c54f4d3d",
+      "snapshot_index": 20,
+      "proper_time": 2.0,
+      "scope": "Last sampled-admitted state only; no uncached tail is used."
+    },
+    {
+      "path": ".build/valve-directional-evolution-N96-v2/run.json",
+      "sha256": "b41151913b55908295c66c3ff212aa0cda5c67cc5168fe824a20ec2eb30ffe71",
+      "state_cache": ".build/valve-directional-evolution-N96-v2/sparse.npz",
+      "state_cache_sha256": "b13c48d51c78991e1bf61c2e193ab57d76ed0f2df022553d6535974ae84c2dc0",
+      "snapshot_index": 8,
+      "proper_time": 2.8000000000000003,
+      "scope": "Last sampled-admitted state only; no uncached tail is used."
+    }
+  ],
+  "slices": [
+    {
+      "proper_time": 0.0,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        3.2339776335010466,
+        3.5189698897347017,
+        4.225546251989462,
+        5.1362974383117255
+      ],
+      "first_four_eigenvalues_degree32": [
+        3.233977633501058,
+        3.5189698897346435,
+        4.225546251989478,
+        5.1362974383117574
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        3.2339776335010484,
+        3.518969889734681,
+        4.225546251989405,
+        5.13629743831175
+      ],
+      "ground_eigenvalue_over_H2": 43.90352125495823,
+      "degree_ground_difference": 1.1546319456101628e-14,
+      "quadrature_ground_difference": 1.7763568394002505e-15,
+      "independent_trial_Rayleigh": 3.233977633501049,
+      "sampled_mass_range": [
+        3.2339776335010484,
+        3.2339776335010484
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 3.2339776335010466,
+      "Gram_condition": 13.526504616547557,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.06583899655655044,
+        "sampled_Aphi_over_phi_range": [
+          3.233977633501044,
+          3.233977633501054
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.1,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        3.216052248053823,
+        3.4912939919866472,
+        4.2028825783800325,
+        5.110703110422285
+      ],
+      "first_four_eigenvalues_degree32": [
+        3.2160522480538605,
+        3.491293991986589,
+        4.202882578380081,
+        5.110703110422273
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        3.216052248053882,
+        3.491293991986585,
+        4.2028825783800405,
+        5.11070311042216
+      ],
+      "ground_eigenvalue_over_H2": 43.66017153824003,
+      "degree_ground_difference": 3.730349362740526e-14,
+      "quadrature_ground_difference": 5.861977570020827e-14,
+      "independent_trial_Rayleigh": 3.2160522480538654,
+      "sampled_mass_range": [
+        3.1926716298743676,
+        3.233497478922253
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 3.2162113930285146,
+      "Gram_condition": 13.504621302242928,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.06475598702191314,
+        "sampled_Aphi_over_phi_range": [
+          3.2160522480538583,
+          3.216052248053871
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.2,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        3.1632849780763026,
+        3.4120759637343645,
+        4.1395862913395565,
+        5.0382651379996215
+      ],
+      "first_four_eigenvalues_degree32": [
+        3.163284978076323,
+        3.412075963734364,
+        4.139586291339576,
+        5.038265137999599
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        3.1632849780763346,
+        3.412075963734414,
+        4.139586291339583,
+        5.038265137999643
+      ],
+      "ground_eigenvalue_over_H2": 42.94381873016071,
+      "degree_ground_difference": 2.042810365310288e-14,
+      "quadrature_ground_difference": 3.197442310920451e-14,
+      "independent_trial_Rayleigh": 3.1632849780763026,
+      "sampled_mass_range": [
+        3.079207341407823,
+        3.2312859230026874
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 3.165515988022791,
+      "Gram_condition": 13.42774268697335,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.061734915032993457,
+        "sampled_Aphi_over_phi_range": [
+          3.163284978076288,
+          3.1632849780763097
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.3,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        3.0771022221070377,
+        3.289012777360366,
+        4.045630902421561,
+        4.927707373813426
+      ],
+      "first_four_eigenvalues_degree32": [
+        3.0771022221070745,
+        3.2890127773603717,
+        4.045630902421557,
+        4.927707373813343
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        3.0771022221070528,
+        3.289012777360458,
+        4.045630902421599,
+        4.927707373813356
+      ],
+      "ground_eigenvalue_over_H2": 41.773827194254096,
+      "degree_ground_difference": 3.68594044175552e-14,
+      "quadrature_ground_difference": 1.509903313490213e-14,
+      "independent_trial_Rayleigh": 3.077102222107084,
+      "sampled_mass_range": [
+        2.9067208701677063,
+        3.227026891614228
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 3.0872082105194174,
+      "Gram_condition": 13.281945266537734,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.057019505322937654,
+        "sampled_Aphi_over_phi_range": [
+          3.077102222107064,
+          3.0771022221070963
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.4,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        2.9566525077035495,
+        3.127481879462353,
+        3.929479513498544,
+        4.785044546814066
+      ],
+      "first_four_eigenvalues_degree32": [
+        2.95665250770353,
+        3.1274818794623007,
+        3.9294795134985714,
+        4.785044546814095
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        2.956652507703537,
+        3.1274818794621666,
+        3.929479513498552,
+        4.785044546814007
+      ],
+      "ground_eigenvalue_over_H2": 40.13863759316143,
+      "degree_ground_difference": 1.9539925233402755e-14,
+      "quadrature_ground_difference": 1.2434497875801753e-14,
+      "independent_trial_Rayleigh": 2.956652507703519,
+      "sampled_mass_range": [
+        2.6850054135743755,
+        3.2200594952628094
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 2.985240013729521,
+      "Gram_condition": 13.072064687280953,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.0509137178336559,
+        "sampled_Aphi_over_phi_range": [
+          2.956652507703496,
+          2.9566525077035464
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.5,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        2.8000654631898056,
+        2.930935241526316,
+        3.797285174613475,
+        4.613721304612961
+      ],
+      "first_four_eigenvalues_degree32": [
+        2.8000654631898056,
+        2.9309352415262335,
+        3.7972851746135046,
+        4.613721304612987
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        2.8000654631898385,
+        2.930935241526206,
+        3.797285174613478,
+        4.613721304613049
+      ],
+      "ground_eigenvalue_over_H2": 38.0128583157031,
+      "degree_ground_difference": 0.0,
+      "quadrature_ground_difference": 3.2862601528904634e-14,
+      "independent_trial_Rayleigh": 2.8000654631898096,
+      "sampled_mass_range": [
+        2.4215833451566975,
+        3.209561933713121
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 2.862308076445706,
+      "Gram_condition": 12.816473864362758,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.04385496854820063,
+        "sampled_Aphi_over_phi_range": [
+          2.8000654631897235,
+          2.8000654631898576
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.6,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        2.6113600858926134,
+        2.708066263712408,
+        3.6566390483913764,
+        4.421621806610911
+      ],
+      "first_four_eigenvalues_degree32": [
+        2.6113600858925876,
+        2.7080662637123964,
+        3.656639048391365,
+        4.421621806610924
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        2.6113600858926143,
+        2.7080662637124138,
+        3.6566390483913502,
+        4.421621806611052
+      ],
+      "ground_eigenvalue_over_H2": 35.45105007767791,
+      "degree_ground_difference": 2.5757174171303632e-14,
+      "quadrature_ground_difference": 8.881784197001252e-16,
+      "independent_trial_Rayleigh": 2.6113600858925903,
+      "sampled_mass_range": [
+        2.1314849701805527,
+        3.1945549109492752
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 2.7238743315999074,
+      "Gram_condition": 12.516757542294254,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.03668923529239208,
+        "sampled_Aphi_over_phi_range": [
+          2.6113600858924593,
+          2.6113600858926587
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.7,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        2.4030273638482256,
+        2.473702034072283,
+        3.5153886883638767,
+        4.22160213409253
+      ],
+      "first_four_eigenvalues_degree32": [
+        2.403027363848222,
+        2.473702034072216,
+        3.515388688363846,
+        4.221602134092457
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        2.403027363848174,
+        2.4737020340721942,
+        3.515388688363835,
+        4.221602134092501
+      ],
+      "ground_eigenvalue_over_H2": 32.62278682822643,
+      "degree_ground_difference": 3.552713678800501e-15,
+      "quadrature_ground_difference": 5.1514348342607263e-14,
+      "independent_trial_Rayleigh": 2.403027363848225,
+      "sampled_mass_range": [
+        1.8354110061102742,
+        3.1739404421287043
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 2.578508739709341,
+      "Gram_condition": 12.153639336300179,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.03034745052394892,
+        "sampled_Aphi_over_phi_range": [
+          2.403027363847979,
+          2.403027363848337
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.8,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        2.1855680192646467,
+        2.237587219295567,
+        3.375774406600473,
+        4.020969552523583
+      ],
+      "first_four_eigenvalues_degree32": [
+        2.1855680192646467,
+        2.237587219295566,
+        3.375774406600489,
+        4.020969552523501
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        2.1855680192646156,
+        2.2375872192954733,
+        3.375774406600444,
+        4.02096955252358
+      ],
+      "ground_eigenvalue_over_H2": 29.670623257856036,
+      "degree_ground_difference": 0.0,
+      "quadrature_ground_difference": 3.108624468950438e-14,
+      "independent_trial_Rayleigh": 2.18556801926464,
+      "sampled_mass_range": [
+        1.543343010898611,
+        3.1468209598202757
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 2.431835609256375,
+      "Gram_condition": 11.73271913750077,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.02508095725684784,
+        "sampled_Aphi_over_phi_range": [
+          2.1855680192643416,
+          2.1855680192648324
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 0.9,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        1.9622972783140988,
+        2.0009881366736346,
+        3.235520386248997,
+        3.819256981327631
+      ],
+      "first_four_eigenvalues_degree32": [
+        1.962297278314089,
+        2.000988136673609,
+        3.235520386249002,
+        3.819256981327589
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        1.9622972783141175,
+        2.0009881366735907,
+        3.235520386248988,
+        3.8192569813275843
+      ],
+      "ground_eigenvalue_over_H2": 26.639565893887575,
+      "degree_ground_difference": 9.769962616701378e-15,
+      "quadrature_ground_difference": 1.865174681370263e-14,
+      "independent_trial_Rayleigh": 1.962297278314095,
+      "sampled_mass_range": [
+        1.2563188896125355,
+        3.1126268521564224
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 2.284618514173027,
+      "Gram_condition": 11.286540202835518,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.02070653728594353,
+        "sampled_Aphi_over_phi_range": [
+          1.96229727831375,
+          1.9622972783144046
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.0,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        1.7420133212931295,
+        1.7709049983786151,
+        3.096389226011687,
+        3.621540291350773
+      ],
+      "first_four_eigenvalues_degree32": [
+        1.7420133212931703,
+        1.7709049983786538,
+        3.096389226011703,
+        3.6215402913507946
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        1.7420133212931872,
+        1.770904998378649,
+        3.0963892260117243,
+        3.621540291350783
+      ],
+      "ground_eigenvalue_over_H2": 23.6490562227596,
+      "degree_ground_difference": 4.085620730620576e-14,
+      "quadrature_ground_difference": 5.773159728050814e-14,
+      "independent_trial_Rayleigh": 1.7420133212931652,
+      "sampled_mass_range": [
+        0.9861589198404435,
+        3.071230771397648
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 2.1399668524833118,
+      "Gram_condition": 10.803145290643785,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.017371867263469717,
+        "sampled_Aphi_over_phi_range": [
+          1.7420133212926572,
+          1.7420133212936426
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.1,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        1.5363010608020486,
+        1.5581832660985466,
+        2.962603843306084,
+        3.4362067677752064
+      ],
+      "first_four_eigenvalues_degree32": [
+        1.5363010608020762,
+        1.5581832660985784,
+        2.962603843306102,
+        3.4362067677752552
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        1.5363010608020944,
+        1.558183266098681,
+        2.962603843306112,
+        3.436206767775309
+      ],
+      "ground_eigenvalue_over_H2": 20.8563675822082,
+      "degree_ground_difference": 2.7533531010703882e-14,
+      "quadrature_ground_difference": 4.574118861455645e-14,
+      "independent_trial_Rayleigh": 1.5363010608020857,
+      "sampled_mass_range": [
+        0.742197571396567,
+        3.0228304955101253
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 2.003640464748811,
+      "Gram_condition": 10.26570506198654,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.014969376759894815,
+        "sampled_Aphi_over_phi_range": [
+          1.536301060801279,
+          1.5363010608028176
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.2,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        1.343422776630917,
+        1.3603858232538368,
+        2.832943852160664,
+        3.260868515721893
+      ],
+      "first_four_eigenvalues_degree32": [
+        1.3434227766308857,
+        1.3603858232538153,
+        2.832943852160678,
+        3.260868515721854
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        1.3434227766308955,
+        1.3603858232538237,
+        2.832943852160666,
+        3.2608685157219286
+      ],
+      "ground_eigenvalue_over_H2": 18.23790919801715,
+      "degree_ground_difference": 3.1308289294429414e-14,
+      "quadrature_ground_difference": 2.1538326677728037e-14,
+      "independent_trial_Rayleigh": 1.3434227766308942,
+      "sampled_mass_range": [
+        0.5175909322291963,
+        2.9679557403875476
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 1.8755873101302971,
+      "Gram_condition": 9.722128787228359,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.012994344352416089,
+        "sampled_Aphi_over_phi_range": [
+          1.3434227766298532,
+          1.343422776631921
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.3,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        1.1646928968914714,
+        1.177771783233264,
+        2.7086495377915387,
+        3.0962296575873367
+      ],
+      "first_four_eigenvalues_degree32": [
+        1.1646928968914716,
+        1.1777717832331733,
+        2.708649537791512,
+        3.0962296575873065
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        1.1646928968914922,
+        1.1777717832331982,
+        2.7086495377915494,
+        3.096229657587269
+      ],
+      "ground_eigenvalue_over_H2": 15.811525356412778,
+      "degree_ground_difference": 2.220446049250313e-16,
+      "quadrature_ground_difference": 2.0872192862952943e-14,
+      "independent_trial_Rayleigh": 1.1646928968914745,
+      "sampled_mass_range": [
+        0.31789437441987944,
+        2.9075822064343537
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 1.75500193981101,
+      "Gram_condition": 9.1531266110017,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.011535793718355607,
+        "sampled_Aphi_over_phi_range": [
+          1.164692896889928,
+          1.1646928968929895
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.4,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        1.0069629174156354,
+        1.0173586015538651,
+        2.5925233719601657,
+        2.946050756079349
+      ],
+      "first_four_eigenvalues_degree32": [
+        1.0069629174156365,
+        1.0173586015538505,
+        2.5925233719601364,
+        2.9460507560793285
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        1.0069629174156174,
+        1.017358601553817,
+        2.5925233719601133,
+        2.946050756079356
+      ],
+      "ground_eigenvalue_over_H2": 13.670229932868146,
+      "degree_ground_difference": 1.1102230246251565e-15,
+      "quadrature_ground_difference": 1.7985612998927536e-14,
+      "independent_trial_Rayleigh": 1.006962917415634,
+      "sampled_mass_range": [
+        0.14830958956554596,
+        2.8430561520310786
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 1.64505289078367,
+      "Gram_condition": 8.550971313887624,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.010418994398084302,
+        "sampled_Aphi_over_phi_range": [
+          1.006962917413416,
+          1.006962917417839
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.5,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.8645081690457235,
+        0.8729963301544994,
+        2.4823605608880666,
+        2.8059383468722245
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.8645081690457173,
+        0.8729963301545247,
+        2.482360560888083,
+        2.8059383468721957
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.8645081690456864,
+        0.8729963301545651,
+        2.4823605608880746,
+        2.805938346872221
+      ],
+      "ground_eigenvalue_over_H2": 11.736306516657812,
+      "degree_ground_difference": 6.217248937900877e-15,
+      "quadrature_ground_difference": 3.708144902248023e-14,
+      "independent_trial_Rayleigh": 0.8645081690457069,
+      "sampled_mass_range": [
+        0.0013803100341513996,
+        2.775922190498596
+      ],
+      "proper_volume_fraction_negative_mass": 0.0,
+      "constant_trial_Rayleigh": 1.5445547230186651,
+      "Gram_condition": 7.966189959400447,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.009381033467398363,
+        "sampled_Aphi_over_phi_range": [
+          0.8645081690425939,
+          0.8645081690488193
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.6,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.7398198444091217,
+        0.7471398985112944,
+        2.3824250874631216,
+        2.6807959035656115
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.7398198444091098,
+        0.7471398985112458,
+        2.3824250874631483,
+        2.680795903565601
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.7398198444091054,
+        0.7471398985112813,
+        2.3824250874631447,
+        2.6807959035655564
+      ],
+      "ground_eigenvalue_over_H2": 10.043574800080712,
+      "degree_ground_difference": 1.199040866595169e-14,
+      "quadrature_ground_difference": 1.63202784619898e-14,
+      "independent_trial_Rayleigh": 0.7398198444091054,
+      "sampled_mass_range": [
+        -0.11558620260578012,
+        2.707692611632845
+      ],
+      "proper_volume_fraction_negative_mass": 0.033252817524253075,
+      "constant_trial_Rayleigh": 1.4535204669683401,
+      "Gram_condition": 7.3406515888306245,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.00838665967153434,
+        "sampled_Aphi_over_phi_range": [
+          0.7398198444045702,
+          0.73981984441355
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.7,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.6320588080412961,
+        0.638501968547565,
+        2.288990985819994,
+        2.564047722763679
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.6320588080412692,
+        0.6385019685475745,
+        2.2889909858200106,
+        2.5640477227637346
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.6320588080412934,
+        0.6385019685475954,
+        2.2889909858200266,
+        2.564047722763774
+      ],
+      "ground_eigenvalue_over_H2": 8.58064292893188,
+      "degree_ground_difference": 2.6867397195928788e-14,
+      "quadrature_ground_difference": 2.6645352591003757e-15,
+      "independent_trial_Rayleigh": 0.6320588080412795,
+      "sampled_mass_range": [
+        -0.20984517790871582,
+        2.6398489750099214
+      ],
+      "proper_volume_fraction_negative_mass": 0.07348417791458603,
+      "constant_trial_Rayleigh": 1.3722591856790953,
+      "Gram_condition": 6.743935405352428,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.0075216857022304155,
+        "sampled_Aphi_over_phi_range": [
+          0.6320588080167925,
+          0.6320588080706677
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.8,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.5385489348736711,
+        0.5443909746454557,
+        2.204455009755856,
+        2.459482239389166
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.5385489348736918,
+        0.5443909746454327,
+        2.2044550097558657,
+        2.459482239389172
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.5385489348736793,
+        0.5443909746454455,
+        2.2044550097558893,
+        2.459482239389172
+      ],
+      "ground_eigenvalue_over_H2": 7.311180622936019,
+      "degree_ground_difference": 2.0761170560490427e-14,
+      "quadrature_ground_difference": 8.215650382226158e-15,
+      "independent_trial_Rayleigh": 0.5385489348736917,
+      "sampled_mass_range": [
+        -0.27801061479003186,
+        2.5739085223511387
+      ],
+      "proper_volume_fraction_negative_mass": 0.1092394178293364,
+      "constant_trial_Rayleigh": 1.2996720857360646,
+      "Gram_condition": 6.1146246187649425,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.006691893752015955,
+        "sampled_Aphi_over_phi_range": [
+          0.5385489346688176,
+          0.5385489350849499
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 1.9,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.459876944631082,
+        0.46502928614964467,
+        2.1274924694224717,
+        2.363521203439852
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.45987694463106155,
+        0.4650292861496279,
+        2.127492469422453,
+        2.363521203439795
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.45987694463108186,
+        0.4650292861495905,
+        2.1274924694224486,
+        2.3635212034398005
+      ],
+      "ground_eigenvalue_over_H2": 6.243153015074625,
+      "degree_ground_difference": 2.042810365310288e-14,
+      "quadrature_ground_difference": 1.1102230246251565e-16,
+      "independent_trial_Rayleigh": 0.4598769446310639,
+      "sampled_mass_range": [
+        -0.32511985224023265,
+        2.5113094698525478
+      ],
+      "proper_volume_fraction_negative_mass": 0.13723802898213228,
+      "constant_trial_Rayleigh": 1.2361809023206298,
+      "Gram_condition": 5.5211278537437725,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.006083632148767596,
+        "sampled_Aphi_over_phi_range": [
+          0.45987694188800127,
+          0.45987694741248675
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.0,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.3929889584136574,
+        0.39741258270844165,
+        2.0579253267088395,
+        2.276238692851079
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.3929889584136851,
+        0.39741258270842517,
+        2.0579253267088573,
+        2.276238692851128
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.39298895841366593,
+        0.39741258270841273,
+        2.0579253267088307,
+        2.276238692851088
+      ],
+      "ground_eigenvalue_over_H2": 5.335101551088795,
+      "degree_ground_difference": 2.7700064464397656e-14,
+      "quadrature_ground_difference": 8.548717289613705e-15,
+      "independent_trial_Rayleigh": 0.3929889584136679,
+      "sampled_mass_range": [
+        -0.35058252641389287,
+        2.453225578228594
+      ],
+      "proper_volume_fraction_negative_mass": 0.16132141089884172,
+      "constant_trial_Rayleigh": 1.1808348598327307,
+      "Gram_condition": 4.894974369732826,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.005597793212547994,
+        "sampled_Aphi_over_phi_range": [
+          0.3929889277488209,
+          0.39298897213808226
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.1,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.3373771188324417,
+        0.34090066482200665,
+        1.9947103065218728,
+        2.1953787007594627
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.33737711883257626,
+        0.34090066482209136,
+        1.9947103065220546,
+        2.1953787007598864
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.33737711883246135,
+        0.3409006648219679,
+        1.9947103065218728,
+        2.1953787007594547
+      ],
+      "ground_eigenvalue_over_H2": 4.580131709680818,
+      "degree_ground_difference": 1.3455903058456897e-13,
+      "quadrature_ground_difference": 1.965094753586527e-14,
+      "independent_trial_Rayleigh": 0.3373771188324482,
+      "sampled_mass_range": [
+        -0.35837543338353506,
+        2.4005950339904514
+      ],
+      "proper_volume_fraction_negative_mass": 0.18203696439319572,
+      "constant_trial_Rayleigh": 1.1335828627803433,
+      "Gram_condition": 4.318126913800081,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.005333868759561666,
+        "sampled_Aphi_over_phi_range": [
+          0.3373769988073251,
+          0.33737717280448143
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.2,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.2911023494557087,
+        0.2937430817477197,
+        1.938424252569274,
+        2.122121653708004
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.2911023494569923,
+        0.29374308174914143,
+        1.9384242525718696,
+        2.1221216537124885
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.2911023494557181,
+        0.2937430817477442,
+        1.9384242525692796,
+        2.122121653708004
+      ],
+      "ground_eigenvalue_over_H2": 3.9519191642834994,
+      "degree_ground_difference": 1.283639861071606e-12,
+      "quadrature_ground_difference": 9.43689570931383e-15,
+      "independent_trial_Rayleigh": 0.29110234945570274,
+      "sampled_mass_range": [
+        -0.3583754424310075,
+        2.3542981424779477
+      ],
+      "proper_volume_fraction_negative_mass": 0.19723020648435702,
+      "constant_trial_Rayleigh": 1.0939226999132579,
+      "Gram_condition": 3.711567189857114,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.005199528848612922,
+        "sampled_Aphi_over_phi_range": [
+          0.29110170541677444,
+          0.2911026239455236
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.3,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.2524002362735483,
+        0.2544399979632435,
+        1.8863223647340162,
+        2.05199258842251
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.2524002362807889,
+        0.2544399979773173,
+        1.8863223647571148,
+        2.0519925884581953
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.25240023627356595,
+        0.25443999796322286,
+        1.8863223647340086,
+        2.0519925884225323
+      ],
+      "ground_eigenvalue_over_H2": 3.4265107535687664,
+      "degree_ground_difference": 7.240597010849115e-12,
+      "quadrature_ground_difference": 1.765254609153999e-14,
+      "independent_trial_Rayleigh": 0.2524002362735511,
+      "sampled_mass_range": [
+        -0.35837430116410174,
+        2.3151229632874504
+      ],
+      "proper_volume_fraction_negative_mass": 0.20857115380729774,
+      "constant_trial_Rayleigh": 1.061514061368216,
+      "Gram_condition": 3.14103336899819,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.004927864348308172,
+        "sampled_Aphi_over_phi_range": [
+          0.2523979085715737,
+          0.2524008464176969
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.4,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.22018239517524157,
+        0.2224721772540742,
+        1.8402936498319624,
+        1.9881901887273763
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.220182395214607,
+        0.22247217736015715,
+        1.8402936500159384,
+        1.9881901890195706
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.22018239517524613,
+        0.22247217725414697,
+        1.8402936498319828,
+        1.9881901887273576
+      ],
+      "ground_eigenvalue_over_H2": 2.9891308976304654,
+      "degree_ground_difference": 3.9365427584314716e-11,
+      "quadrature_ground_difference": 4.551914400963142e-15,
+      "independent_trial_Rayleigh": 0.2201823951752526,
+      "sampled_mass_range": [
+        -0.35837536228580924,
+        2.2836368460286867
+      ],
+      "proper_volume_fraction_negative_mass": 0.22154517147879596,
+      "constant_trial_Rayleigh": 1.0362967412256954,
+      "Gram_condition": 2.6268568179858014,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.0038251895563618005,
+        "sampled_Aphi_over_phi_range": [
+          0.22017196685803664,
+          0.2201846544804171
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.5,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.19289543121364355,
+        0.1961873400377958,
+        1.7979020080798613,
+        1.927359795657806
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.19289543144013202,
+        0.19618734056754702,
+        1.7979020092851639,
+        1.9273597977416679
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.19289543121365454,
+        0.19618734003777727,
+        1.7979020080798707,
+        1.927359795657717
+      ],
+      "ground_eigenvalue_over_H2": 2.6186911673549127,
+      "degree_ground_difference": 2.264884668701228e-10,
+      "quadrature_ground_difference": 1.099120794378905e-14,
+      "independent_trial_Rayleigh": 0.19289543121362152,
+      "sampled_mass_range": [
+        -0.35837516910873723,
+        2.2602413953434395
+      ],
+      "proper_volume_fraction_negative_mass": 0.23051581403429602,
+      "constant_trial_Rayleigh": 1.0178330641115487,
+      "Gram_condition": 2.2839560024245635,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.0025706135185475745,
+        "sampled_Aphi_over_phi_range": [
+          0.19289088204276497,
+          0.19290565779531538
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.6,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.16984987238005708,
+        0.17442091737454327,
+        1.7586178840939486,
+        1.8692484286461493
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.16984987332193696,
+        0.17442091923316672,
+        1.7586178898984988,
+        1.8692484400919556
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.16984987238004665,
+        0.17442091737451906,
+        1.7586178840939566,
+        1.8692484286461855
+      ],
+      "ground_eigenvalue_over_H2": 2.305831495228047,
+      "degree_ground_difference": 9.418798796456684e-10,
+      "quadrature_ground_difference": 1.0436096431476471e-14,
+      "independent_trial_Rayleigh": 0.16984987238007296,
+      "sampled_mass_range": [
+        -0.3583750151720122,
+        2.245356619716424
+      ],
+      "proper_volume_fraction_negative_mass": 0.2354183689732588,
+      "constant_trial_Rayleigh": 1.0060125434124427,
+      "Gram_condition": 2.0363616057080725,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.0017101801857000033,
+        "sampled_Aphi_over_phi_range": [
+          0.16981351329584504,
+          0.16988604263610751
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.7,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.15046450758842694,
+        0.15636520016177965,
+        1.7234241505675763,
+        1.8158687490025025
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.1504645100693708,
+        0.15636520437515275,
+        1.7234241678979547,
+        1.8158687879710183
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.15046450758840038,
+        0.15636520016179903,
+        1.7234241505675651,
+        1.81586874900248
+      ],
+      "ground_eigenvalue_over_H2": 2.0426615319147627,
+      "degree_ground_difference": 2.480943867011476e-09,
+      "quadrature_ground_difference": 2.656208586415687e-14,
+      "independent_trial_Rayleigh": 0.15046450758841645,
+      "sampled_mass_range": [
+        -0.35837532902552016,
+        2.239413052268689
+      ],
+      "proper_volume_fraction_negative_mass": 0.24214954648453077,
+      "constant_trial_Rayleigh": 1.000908343273907,
+      "Gram_condition": 2.039485006556495,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.0011421186443513016,
+        "sampled_Aphi_over_phi_range": [
+          0.14966093799034408,
+          0.15077129213807394
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    },
+    {
+      "proper_time": 2.8,
+      "background_modes": 96,
+      "degrees": [
+        32,
+        48
+      ],
+      "quadrature_orders": [
+        401,
+        601
+      ],
+      "first_four_eigenvalues": [
+        0.133933258414675,
+        0.14112677241305743,
+        1.691600124619184,
+        1.7669451381335182
+      ],
+      "first_four_eigenvalues_degree32": [
+        0.13393326270045589,
+        0.14112677852293604,
+        1.6916001604008348,
+        1.7669452262452872
+      ],
+      "first_four_eigenvalues_quadrature401": [
+        0.1339332584146811,
+        0.14112677241305338,
+        1.6916001246191787,
+        1.7669451381336483
+      ],
+      "ground_eigenvalue_over_H2": 1.8182381957876315,
+      "degree_ground_difference": 4.2857808968399524e-09,
+      "quadrature_ground_difference": 6.106226635438361e-15,
+      "independent_trial_Rayleigh": 0.13393325841472536,
+      "sampled_mass_range": [
+        -0.35837401082479386,
+        2.242721240076405
+      ],
+      "proper_volume_fraction_negative_mass": 0.24452331828786916,
+      "constant_trial_Rayleigh": 1.002466724654623,
+      "Gram_condition": 4.069221635081558,
+      "positive_trial_samples": {
+        "sampled_trial_positive": true,
+        "sampled_trial_minimum": 0.0007543802870975864,
+        "sampled_Aphi_over_phi_range": [
+          0.1312697418631578,
+          0.14929253386603583
+        ],
+        "scope": "Point samples including the smooth poles, not a whole-interval Barta certificate."
+      }
+    }
+  ],
+  "verdict": {
+    "minimum_retained_ground_eigenvalue": 0.133933258414675,
+    "at_proper_time": 2.8,
+    "negative_trial_times": [],
+    "full_continuum_stability_proved": false,
+    "physical_shape_seed_selected": false,
+    "child_proved": false,
+    "SI_scale_selected": false,
+    "scope": "Positive Ritz minima alone cannot exclude omitted negative directions; sampled positive trials are not certified Barta bounds. Exact zero shapes remain zero."
+  },
+  "provenance": {
+    "source_sha256": {
+      "scripts/check_nsc_atlas_sphere_flux_completion.py": "ec5ef4dc8eeacc1cea085bb7bb2bc8f58a83ccab9fce3c7cf5a0d5040a9bde5e",
+      "scripts/continue_nsc_atlas_valve_directional.py": "87310c6750073bda19ae27d5a3d166fcf931e6ea8681f8a6a5747e2e26a22ede",
+      "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+      "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+      "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+      "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+      "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+      "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+      "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+      "src/recursive_horizons/nsc_atlas_sphere_flux_completion.py": "6d010aa448e0319d80d5b8132372ff77fd014f84abdb206734bf6912300116db",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+      "src/recursive_horizons/nsc_atlas_valve_spherical.py": "4550d87092a13e6dd085cbad57ffba51e709c4eda0a81edca9c85732114cd08a"
+    },
+    "source_unchanged": true,
+    "producer_commit": "f2f65b6d3d2e4ef02ae948a505e04de4a50fe0ee",
+    "raw_cache": ".build/sphere-flux-shape-operator-v2/ground-trials.npz",
+    "raw_cache_sha256": "271db2217f32fb52e156d87c95da93bc833c2885eb408ee46da7a90f6365cf35"
+  },
+  "compute": {
+    "threads": 4,
+    "budget_seconds": 60,
+    "elapsed_seconds": 5.589637800003402
+  }
+}
