@@ -22,8 +22,8 @@ from scipy.optimize import brentq
 from scipy.special import roots_jacobi
 from threadpoolctl import threadpool_limits
 
-from recursive_horizons.nsc_atlas_valve_neck import solve_pocket_data
-from recursive_horizons.nsc_atlas_valve_spherical import SphericalValve, gegenbauer_jets
+from recursive_horizons.nsc_atlas_closed_pocket import solve_pocket_data,PocketValve
+from recursive_horizons.nsc_atlas_valve_spherical import gegenbauer_jets
 from recursive_horizons.nsc_atlas_passive_dop853 import PassiveDOP853Quadrature
 from recursive_horizons.nsc_atlas_sphere_flux_completion import combined_record
 from recursive_horizons.nsc_atlas_shape_transition import flat_horizon_pp_record
@@ -67,7 +67,7 @@ def git_source_check(commit, sources):
     return mismatches
 
 
-class CachedSpherical(SphericalValve):
+class CachedSpherical(PocketValve):
     """Cache evaluation rules only; the package physical RHS is unchanged."""
     def __init__(self, modes, initial_data):
         super().__init__(modes, initial_data=initial_data, reflection_symmetry=False,
@@ -429,6 +429,45 @@ def calculation(raw_directory, workers=5):
             scope='Measured process wall/CPU; worker allowances include fresh constraint initialization and output.'))
 
 
+def exact_json(value):
+    if isinstance(value, Fraction):
+        return str(value)
+    raise TypeError(type(value).__name__)
+
+
+def write_summary(result, output):
+    """Export every numerical result compactly with shared source references.
+
+    Main archives the unmodified coordinator result before this projection,
+    so an export failure cannot require a new physical calculation.
+    """
+    compact = json.loads(json.dumps(result, allow_nan=False, default=exact_json))
+    shared = compact.get('provenance', {}).get('source_sha256', {})
+    for run in compact.get('runs', ()):
+        sources = run.get('source_sha256')
+        if sources is None:
+            continue
+        # Inconsistent maps remain as evidence. Only verified duplicate
+        # hashes become references; no physical numbers are rounded/dropped.
+        if all(shared.get(name) == digest for name, digest in sources.items()):
+            run.pop('source_sha256')
+            encoded = json.dumps(sources, sort_keys=True, separators=(',', ':')).encode()
+            run['source_sha256_digest'] = hashlib.sha256(encoded).hexdigest()
+            run['source_sha256_reference'] = 'provenance.source_sha256'
+            if set(sources) != set(shared):
+                run['source_sha256_paths'] = sorted(sources)
+    content = json.dumps(compact, allow_nan=False, separators=(',', ':'))+'\n'
+    size = len(content.encode('utf-8'))
+    if size >= 100_000:
+        raise RuntimeError('Compact scientific summary exceeded100KB; full coordinator result is retained')
+    output = Path(output)
+    if output.exists():
+        raise ValueError('Fresh summary output required')
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(content, encoding='utf-8', newline='\n')
+    return size
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--raw-directory', type=Path, required=True)
@@ -446,14 +485,13 @@ def main():
         'python', 'scripts/run_python.py', Path(__file__).relative_to(ROOT).as_posix(),
         '--raw-directory', raw.relative_to(ROOT).as_posix(),
         '--output', output.relative_to(ROOT).as_posix(), '--workers', str(args.workers)])
-    def exact(value):
-        if isinstance(value,Fraction):return str(value)
-        raise TypeError(type(value).__name__)
-    content = json.dumps(result, indent=2, allow_nan=False,default=exact)+'\n'
-    if len(content.encode()) >= 100_000:
-        raise RuntimeError('Compact scientific summary exceeded100KB')
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(content, encoding='utf-8', newline='\n')
+    # Full coordinator metadata, including measured CPU/wall time, survives
+    # any subsequent public projection/size/filesystem failure. Arrays stay
+    # in their original per-worker NPZs.
+    (raw/'coordinator.json').write_text(
+        json.dumps(result, allow_nan=False, default=exact_json, separators=(',', ':'))+'\n',
+        encoding='utf-8', newline='\n')
+    write_summary(result, output)
     print(json.dumps(dict(output=str(output), verdict=result['verdict'], compute=result['compute']), indent=2))
     return 0 if result['verdict']['finite_history_numerically_admitted'] else 2
 

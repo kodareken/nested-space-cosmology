@@ -8,8 +8,7 @@ import sympy as sp
 from threadpoolctl import threadpool_limits
 
 from recursive_horizons.nsc_atlas_sphere_flux_completion import conditional_volume_barrier
-from recursive_horizons.nsc_atlas_valve_neck import solve_pocket_data
-from recursive_horizons.nsc_atlas_valve_spherical import SphericalValve
+from recursive_horizons.nsc_atlas_closed_pocket import solve_pocket_data,PocketValve
 from recursive_horizons.nsc_atlas_shape_transition import flat_horizon_pp_record
 
 
@@ -116,8 +115,9 @@ def test_directed_carrier_refuses_old_reflection_mask(preparations):
     Pi=data.state_values(np.linspace(-.9,.9,21))[7]
     np.testing.assert_allclose(Pi,Pi[::-1],rtol=2e-13,atol=3e-15)
     assert np.max(abs(Pi))>0
-    with pytest.raises(ValueError,match='both reflection parities'):SphericalValve(64,initial_data=data)
-    system=SphericalValve(64,initial_data=data,reflection_symmetry=False)
+    with pytest.raises(ValueError,match='both reflection parities'):
+        PocketValve(64,initial_data=data,reflection_symmetry=True)
+    system=PocketValve(64,initial_data=data,reflection_symmetry=False)
     np.testing.assert_array_equal(system.initial,data.state_values(system.u))
     assert system.calls==0
 
