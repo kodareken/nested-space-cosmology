@@ -384,7 +384,7 @@ def symmetric_radius_branches(q=1.5):
 def rolling_parent_limit(q=2):
     """Exact large-volume limit of the existing relaxed equal-radius sector.
 
-    Expanding flat Einstein-base data have a local asymptotic attractor;
+    Expanding flat Einstein-base data have an asymptotic attractor;
     this does not select finite Cauchy data, a nucleation epoch, or a child.
     The full internal frame stays nonempty while Einstein-frame rho tends
     to zero. No quantum state or SI normalization is inserted.
@@ -401,12 +401,13 @@ def rolling_parent_limit(q=2):
         density_times_Einstein_time_squared=F(49,12),Einstein_w=F(-3,7),
         ds_dN=F(1,7),fixed_point_eigenvalues=(F(-2,7),F(-15,7)),
         bulk_H_squared=H2,bulk_H=math.sqrt(float(H2)),bulk_Ricci_scalar=240*H2,
+        bulk_Kretschmann_scalar=480*H2*H2,
         massive_scalar_decay_rate_squared=gamma2,
         massive_scalar_frequency_squared=frequency2,
         wrapped_tension_log_bulk_rate=-6*math.sqrt(float(H2)),
         finite_bulk_trace='R16=16*A/7+(25/56)*exp(-12s), for phi=phi_star(q)',
         scope='Expanding flat-base, equal internal radii, relaxed massive scalar, fixed q. '
-            'Local attractor at infinite internal size, not a unique finite history, '
+            'Attractor on the decompactifying branch, not a unique finite history, '
             'selected topology/dimension, quantum state, SI ruler or formed child.')
 
 
@@ -431,11 +432,17 @@ def rolling_parent_state(s,v,q=2.):
     Hext_dot=h*h*(-6*v_N+(1-6*v)*log_h_N)
     total=3*Hext+12*Hint
     Ricci=2*(3*Hext_dot+12*Hint_dot)+total*total+3*Hext**2+12*Hint**2+15*x
+    # Orthonormal Riemann components:12 within-factor internal pairs,
+    #54 between internal factors,36 external/internal and3 external pairs.
+    sectional_internal=Hint*Hint+(5/8)*x
+    Kretschmann=4*(3*(Hext_dot+Hext*Hext)**2+12*(Hint_dot+Hint*Hint)**2
+        +3*Hext**4+12*sectional_internal**2+54*Hint**4+36*Hext*Hext*Hint*Hint)
     trace=16*A/7+(25/56)*x**6
     return dict(s=s,v=v,x=x,W=W,D=D,H_scaled=h,v_N=v_N,
         log_H_scaled_N=log_h_N,bulk_internal_H=Hint,bulk_external_H=Hext,
         bulk_internal_H_dot=Hint_dot,bulk_external_H_dot=Hext_dot,
         bulk_Ricci_metric=Ricci,bulk_Ricci_source=trace,
+        bulk_Kretschmann_metric=Kretschmann,
         Einstein_w=K*v*v/3-1,log_Einstein_H=math.log(h)-6*s,
         log_Einstein_density=math.log(3*h*h)-12*s,
         KK_mass_squared_over_H_squared=(15/8)*x/(h*h),
