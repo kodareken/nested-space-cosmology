@@ -23,8 +23,10 @@ from threadpoolctl import threadpool_limits
 from recursive_horizons.nsc_atlas_passive_dop853 import PassiveDOP853Quadrature
 from recursive_horizons.nsc_atlas_valve_neck import NeckInitialData
 from recursive_horizons.nsc_atlas_valve_spherical import SphericalValve,gegenbauer_jets
+from recursive_horizons.nsc_atlas_parent_scale_selector import VolumeParent
 
 ROOT=Path(__file__).resolve().parents[1]
+RUNNER='scripts/evolve_nsc_atlas_valve_directional.py'
 
 
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -80,12 +82,82 @@ def load_initial(system,path):
     return record
 
 
+def load_resume(system,path,*,initial_record,baseline_caps):
+    """Authenticate one same-N terminal checkpoint; never initialize its state."""
+    path=(ROOT/path).resolve();raw=path.read_bytes();record=json.loads(raw)
+    allowed=(record.get('status')=='endpoint_reached' or
+        (record.get('status')=='incomplete' and record.get('stop_reason') in
+         ('declared directional evolution budget exhausted','bounded spherical evolution compute budget exceeded')))
+    if not path.is_relative_to(ROOT/'.build') or not allowed:
+        raise ValueError('terminal endpoint/budget resume required; live/admission-failed runs are not resumable')
+    if (record.get('schema')!='nsc-atlas-valve-directional-evolution-v1' or record.get('modes')!=system.modes or
+        record.get('source_bound_to_commit') is not True or record.get('source_unchanged') is not True or
+        record.get('reflection_projection') is not False):
+        raise ValueError('same-N unchanged source-bound directional record required')
+    commit=record['producer_commit'];pins=record['source_sha256']
+    required={RUNNER,'src/recursive_horizons/nsc_atlas_valve_spherical.py',
+        'src/recursive_horizons/nsc_atlas_valve_neck.py','src/recursive_horizons/nsc_atlas_passive_dop853.py'}
+    if not required.issubset(pins):raise ValueError('parent physical RHS/basis source pins required')
+    for name,digest in pins.items():
+        member=(ROOT/name).resolve()
+        if not member.is_relative_to(ROOT):raise ValueError('resume source leaves repository')
+        old=subprocess.run(['git','show',commit+':'+name],cwd=ROOT,capture_output=True)
+        if old.returncode or hashlib.sha256(old.stdout).hexdigest()!=digest:
+            raise ValueError('historical resume source identity failed: '+name)
+        if name!=RUNNER and sha(member)!=digest:
+            raise ValueError('current physical package/source changed: '+name)
+    initial_path=(ROOT/initial_record).resolve()
+    if initial_path!=(ROOT/record['initial_record']).resolve() or sha(initial_path)!=record['initial_record_sha256']:
+        raise ValueError('resume must retain the original initial record')
+    cache=(ROOT/record['state_cache']).resolve()
+    if not cache.is_relative_to(ROOT/'.build') or sha(cache)!=record['state_cache_sha256']:
+        raise ValueError('resume sparse cache identity failed')
+    with np.load(cache,allow_pickle=False) as data:times=data['times'].copy();states=data['states'].copy()
+    snapshots=record['snapshots']
+    if (times.ndim!=1 or not len(times) or states.shape!=(len(times),8,system.modes) or len(times)!=len(snapshots) or
+        np.any(~np.isfinite(times)) or np.any(~np.isfinite(states)) or np.any(np.diff(times)<=0)):
+        raise ValueError('aligned finite directional sparse states required')
+    if any(not math.isclose(float(t),row['proper_time'],rel_tol=0,abs_tol=2e-12) for t,row in zip(times,snapshots)):
+        raise ValueError('resume proper times differ from saved diagnostics')
+    admitted=[i for i,row in enumerate(snapshots) if row.get('sampled_admitted') is True]
+    if not admitted:raise ValueError('no admitted directional checkpoint')
+    index=admitted[-1];last=snapshots[index];t0=float(times[index])
+    if index!=len(snapshots)-1 or not math.isclose(t0,record['last_admitted_proper'],rel_tol=0,abs_tol=2e-12):
+        raise ValueError('later unadmitted data cannot be resumed on the same N')
+    first=snapshots[0];cap_names=('fixed_receiving_cap','fixed_donor_cap')
+    baselines=record.get('cap_energy_baselines',[first[name]['energy']-
+        first[name]['integrated_material_received']-first[name]['integrated_pressure_work']-
+        first[name]['energy_ledger_residual'] for name in cap_names])
+    if len(baselines)!=2 or any(not math.isclose(float(value),cap['energy'],rel_tol=3e-12,abs_tol=3e-11)
+        for value,cap in zip(baselines,baseline_caps)):
+        raise ValueError('original fixed-cap energy baselines changed')
+    receiving=last[cap_names[0]];donor=last[cap_names[1]]
+    integrals=np.array([receiving['integrated_material_received'],receiving['integrated_pressure_work'],donor['integrated_pressure_work']],float)
+    if (np.any(~np.isfinite(integrals)) or not math.isclose(integrals[0],-donor['integrated_material_received'],rel_tol=2e-12,abs_tol=2e-12)):
+        raise ValueError('three cumulative passive integrals must be finite and share the signed material transfer')
+    anchor=last.get('minimum_anchor_u')
+    if anchor is None:anchor=next((row['minimum']['u'] for row in reversed(snapshots[:index+1]) if row.get('minimum')),0.)
+    if not math.isfinite(anchor) or abs(anchor)>=1:raise ValueError('finite retained minimum anchor required')
+    if sha(path)!=hashlib.sha256(raw).hexdigest():raise ValueError('parent terminal record changed during load')
+    state=states[index].copy()
+    return dict(state=state,proper_time=t0,integrals=integrals,baselines=list(map(float,baselines)),previous_minimum_u=float(anchor),
+        provenance=dict(parent_run=path.relative_to(ROOT).as_posix(),parent_record_sha256=hashlib.sha256(raw).hexdigest(),
+            parent_producer_commit=commit,parent_status=record['status'],parent_stop_reason=record.get('stop_reason'),
+            state_cache=record['state_cache'],state_cache_sha256=record['state_cache_sha256'],snapshot_index=index,
+            state_array_sha256=hashlib.sha256(state.tobytes()).hexdigest(),handoff_proper=t0,
+            cap_energy_baselines=list(map(float,baselines)),cumulative_integrals=integrals.tolist(),
+            previous_minimum_u=float(anchor),parent_actual_last_accepted_proper=record.get('actual_last_accepted_proper')))
+
+
 class Measurements:
     def __init__(self,system):
         self.system=system;n=2*system.modes+7
+        volume=VolumeParent();self.internal_dimension=volume.d;self.volume_kinetic=volume.K
+        self.bare_volume_barrier=next(row['s'] for row in volume.vacuum_roots() if row['kind']=='maximum')
         x,w=roots_jacobi(n,.5,0.);self.cap_u=(x+1)/2;self.cap_w=w*np.sqrt(3+x)/4
         self.cap_points=system.retain_rule(np.r_[self.cap_u,-self.cap_u])
         self.zero=system.retain_rule(np.array([0.]))
+        self.poles=system.retain_rule(np.array([-1.,1.]))
         angles=np.arange(1,3*system.modes+8)*math.pi/(3*system.modes+8)
         self.global_u=system.retain_rule(np.cos(angles))
         self.global_w=4*math.pi**2/(3*system.modes+8)*np.sin(angles)**2
@@ -122,11 +194,22 @@ class Measurements:
         # Independent electric curvature components from the actual ADM evolution.
         Er=z['Rr']+2*z['ka']*z['kb']-s.kappa*(z['grad2']+z['W'])
         Et=z['Rt']+z['ka']*z['kb']+z['kb']**2-s.kappa*z['W']
+        spoles=s.jets(state,self.poles)[0]
+        internal_s=s.sstar+np.r_[z['y'][4],spoles[4]]/math.sqrt(self.volume_kinetic)
+        internal_rate=np.r_[z['y'][6],spoles[6]]/math.sqrt(self.volume_kinetic)
+        local_s=s.sstar+z['y'][4]/math.sqrt(self.volume_kinetic)
         return dict(global_max_relative_constraints=limits,
             Hamiltonian_RMS_over_H2=float(np.sqrt(weights@(Ham*Ham)/V)/s.H**2),
             momentum_RMS_over_H2=float(np.sqrt(weights@(M*M)/V)/s.H**2),
             min_radial_scale=float(min(z['q'])),min_angular_scale=float(min(z['b'])),
             sampled_max_tidal_over_H2=float(max(np.max(abs(Er)),np.max(abs(Et)))/s.H**2),
+            volume_modulus=dict(sampled_s_range=[float(min(internal_s)),float(max(internal_s))],
+                sampled_normal_s_rate_range=[float(min(internal_rate)),float(max(internal_rate))],
+                bare_potential_barrier_s=self.bare_volume_barrier,
+                sampled_proper_volume_fraction_above_bare_barrier=float(weights@(local_s>self.bare_volume_barrier)/V),
+                log_internal_volume_ratio_range=[float(self.internal_dimension*(min(internal_s)-s.sstar)),
+                    float(self.internal_dimension*(max(internal_s)-s.sstar))],
+                scope='Existing volume-mode identification log(Vint/Vint_star)=d(s-sstar). Crossing the bare V(s) barrier is not alone a new spacetime, runaway theorem or localized higher-dimensional solution.'),
             sampled_admitted=max(limits.values())<=.02,
             admission_scope='Independent finite spatial samples and ADM-term2% scale; not a continuum error bound.')
 
@@ -139,12 +222,21 @@ class Measurements:
         if not roots:return None
         coord=min(roots,key=lambda x:abs(x-previous));z=s.pieces(state,[coord])
         R=float(z['radius'][0]);rate=-float(z['kb'][0])*R
+        Rll=-.5*float(z['Rr'][0])*R
         plus,minus=s.expansions(state,[coord])
-        return dict(u=coord,radius=R,normal_radius_rate=rate,
+        return dict(u=coord,radius=R,normal_radius_rate=rate,R_ll=Rll,R_ll_over_R_H2=Rll/(R*s.H**2),
+            radial_second_derivative_source='Actual metric spatial second jets: R_ll=-R*Rr/2, not an Einstein-source reconstruction.',
             theta_plus_over_H=float(plus[0]/s.H),theta_minus_over_H=float(minus[0]/s.H),
             rho=float(z['rho'][0]),radial_pressure=float(z['pr'][0]),
             NEC=float(z['rho'][0]+z['pr'][0]),candidate_minimum_count=len(roots),
             scope='Migrating area minimum; its coordinate motion is not an observer worldline.')
+
+    def tracked_geometry(self,state,previous,t):
+        minimum=self.minimum(state,previous)
+        anchor=float(minimum['u']) if minimum else float(previous)
+        band=self.trapped(state,anchor) if t>1e-10 else None
+        if band:band.update(anchor_u=anchor,anchor_is_current_minimum=minimum is not None)
+        return minimum,anchor,band
 
     def trapped(self,state,anchor):
         s=self.system
@@ -167,7 +259,7 @@ class Measurements:
             mean_density=E/V,mean_isotropic_pressure=pressure/V,w=pressure/E,
             material_influx=influx,pressure_work_rate=float(measure@(z['ka']*z['pr']+2*z['kb']*z['pt'])),
             marginal_expansions=[[float(exp[k][j]) for k in range(2)] for j in range(2)],
-            scope='Connected sampled future-trapped band about the tracked minimum; boundary sweep is not included as material supply and no child is identified.')
+            scope='Connected sampled future-trapped band about the retained minimum anchor, which may cease to be a current minimum; boundary sweep is not material supply and no child is identified.')
 
 
 def source_pins():
@@ -187,6 +279,11 @@ def run(args):
     with threadpool_limits(limits=args.threads):
         s=DirectionalEvolution(args.modes,budget_seconds=args.budget)
         initial=load_initial(s,args.initial_record);measure=Measurements(s)
+        baseline_caps=measure.caps(s.initial)
+        resume=load_resume(s,args.resume_run,initial_record=args.initial_record,baseline_caps=baseline_caps) if args.resume_run is not None else None
+        t0=resume['proper_time'] if resume else 0.
+        if args.endpoint<=t0:raise ValueError('resume endpoint must be later than its admitted proper time')
+        if resume:s.initial=resume['state'].copy()
         pins=source_pins();commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
         bound=all(subprocess.run(['git','show',commit+':'+name],cwd=ROOT,capture_output=True).stdout==
             (ROOT/name).read_bytes() for name in pins)
@@ -197,7 +294,11 @@ def run(args):
             temporal_tolerances=dict(rtol=3e-11,atol=1e-13,max_step=.002),threads=args.threads,
             budget_seconds=args.budget,snapshots=[],regular_receiving_child_proved=False,
             scope='Same scalar action; declared directional initial state, not inherited state selection or an SI/observational prediction.')
-        baselines=measure.caps(s.initial);saved=[];previous_min=0.
+        baselines=resume['baselines'] if resume else [cap['energy'] for cap in baseline_caps]
+        integrals0=resume['integrals'].copy() if resume else np.zeros(3)
+        record['cap_energy_baselines']=baselines
+        if resume:record['resume']=resume['provenance']
+        saved=[];previous_min=resume['previous_minimum_u'] if resume else 0.
         def save():
             record['elapsed_seconds']=time.perf_counter()-started
             tmp=folder/'record.tmp';tmp.write_text(json.dumps(record,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n');tmp.replace(folder/'run.json')
@@ -207,31 +308,29 @@ def run(args):
             for i,cap in enumerate(caps):
                 material=float(integrals[0])*(1 if i==0 else -1);work=float(integrals[i+1])
                 cap.update(integrated_material_received=material,integrated_pressure_work=work,
-                    energy_ledger_residual=cap['energy']-baselines[i]['energy']-material-work)
-            minimum=measure.minimum(state,previous_min)
-            if minimum:previous_min=minimum['u']
-            band=measure.trapped(state,previous_min) if minimum and t>1e-10 else None
+                    energy_ledger_residual=cap['energy']-baselines[i]-material-work)
+            minimum,previous_min,band=measure.tracked_geometry(state,previous_min,t)
             center=s.pieces(state,measure.zero);ep,em=s.expansions(state,measure.zero)
             diag.update(proper_time=float(t),fixed_receiving_cap=caps[0],fixed_donor_cap=caps[1],
                 fixed_interface=dict(radius=float(center['radius'][0]),
                     theta_plus_over_H=float(ep[0]/s.H),theta_minus_over_H=float(em[0]/s.H),
-                    material_influx=measure.cap_rates(state)[0]),minimum=minimum,trapped_band=band)
+                    material_influx=measure.cap_rates(state)[0]),minimum=minimum,minimum_anchor_u=previous_min,trapped_band=band)
             record['snapshots'].append(diag);saved.append((float(t),state.copy()))
             save();print(json.dumps(dict(event='checkpoint',modes=args.modes,proper=t,
                 admitted=diag['sampled_admitted'],minimum=minimum,
                 cap_net_received=caps[0]['integrated_material_received'],cap_energy_residual=caps[0]['energy_ledger_residual'])),flush=True)
             return diag['sampled_admitted']
-        if not snapshot(0.,s.initial.ravel(),np.zeros(3)):raise ValueError('initial state not numerically admitted')
-        ledgers=[PassiveDOP853Quadrature() for _ in range(3)]
+        if not snapshot(t0,s.initial.ravel(),integrals0):raise ValueError('initial state not numerically admitted')
+        ledgers=[PassiveDOP853Quadrature(initial=float(value)) for value in integrals0]
         def rhs(t,y):
             derivative=s.rhs(t,y)
             for ledger,rate in zip(ledgers,measure.cap_rates(y.reshape(8,s.modes))):ledger.record(rate)
             return derivative
         s.started=started
-        solver=DOP853(rhs,0.,s.initial.ravel(),args.endpoint,rtol=3e-11,atol=1e-13,max_step=.002,first_step=.0002)
+        solver=DOP853(rhs,t0,s.initial.ravel(),args.endpoint,rtol=3e-11,atol=1e-13,max_step=.002,first_step=.0002)
         for ledger in ledgers:ledger.initialize(solver)
-        targets=list(np.arange(.1,args.endpoint-1e-10,.1))+[args.endpoint]
-        reason=None;last_admitted=0.;heartbeat=time.perf_counter()
+        targets=[float(t) for t in list(np.arange(.1,args.endpoint-1e-10,.1))+[args.endpoint] if t>t0+1e-10]
+        reason=None;last_admitted=t0;heartbeat=time.perf_counter()
         try:
             while solver.status=='running' and targets:
                 if time.perf_counter()-started>args.budget:raise TimeoutError('declared directional evolution budget exhausted')
@@ -261,8 +360,9 @@ def main():
     parser.add_argument('--threads',type=int,default=1);parser.add_argument('--budget',type=float,default=120.)
     parser.add_argument('--initial-record',type=Path,default=Path('results/summaries/nsc-atlas-valve-directional-v1.json'))
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--resume-run',type=Path,help='Source-bound terminal endpoint/budget run at the same N; retain exact state and cumulative ledgers.')
     args=parser.parse_args()
-    if not 0<args.endpoint<=2 or not 1<=args.threads<=8 or args.budget<=0:raise ValueError('finite endpoint<=2,threads1..8 and positive budget required')
+    if not 0<args.endpoint<=4 or not 1<=args.threads<=8 or args.budget<=0:raise ValueError('finite endpoint<=4,threads1..8 and positive budget required')
     run(args)
 
 
