@@ -1,0 +1,214 @@
+"""Regular two-radius Euclidean saddle and its open Lorentzian continuation.
+
+This is the fixed-q, source-free subsector u=(a,b,b,b) of the combined
+parent action. The massive scalar is exactly at phi_star(q). No membrane,
+charge jump, incoming pulse or independently chosen exit state is inserted.
+Existence of a profile does not prove its full physical fluctuation index.
+"""
+from dataclasses import dataclass
+import math
+import time
+
+import numpy as np
+from scipy.integrate import solve_bvp,solve_ivp,simpson,quad
+from scipy.linalg import eigh
+
+from .nsc_atlas_sphere_flux_completion import (
+    log_radius_potential,log_radius_gradient,log_radius_hessian,
+    log_radius_kinetic_metric,symmetric_radius_branches,action_reduction_record,
+)
+
+EMBED=np.array([[1.,0.],[0.,1.],[0.,1.],[0.,1.]])
+METRIC=EMBED.T@log_radius_kinetic_metric()@EMBED
+INVERSE=np.linalg.inv(METRIC)
+
+
+def expand(fields):return np.asarray(fields,dtype=float)@EMBED.T
+def potential(fields):return log_radius_potential(expand(fields))
+def gradient(fields):return log_radius_gradient(expand(fields))@EMBED
+def hessian(fields):return np.einsum('ai,...ab,bj->...ij',EMBED,log_radius_hessian(expand(fields)),EMBED)
+
+
+def reference_points():
+    rows=symmetric_radius_branches()['branches']
+    saddle=next(row for row in rows if row['branch']=='1+3' and row['homogeneous_negative_count']==1)
+    false=next(row for row in rows if row['branch']=='isotropic' and row['V']>0 and row['homogeneous_negative_count']==0)
+    ads=next(row for row in rows if row['branch']=='1+3' and row['V']<0 and row['homogeneous_negative_count']==0)
+    return false,saddle,ads
+
+
+def euclidean_rhs(x,y,length):
+    fields=y[:2].T;vel=y[2:4].T;R=y[4];P=y[5]
+    value=potential(fields);force=gradient(fields)@INVERSE
+    kin=np.einsum('ni,ij,nj->n',vel,METRIC,vel)
+    return length*np.vstack([vel.T,(force-3*P[:,None]/R[:,None]*vel).T,P,-R*(kin+value)/3])
+
+
+def pole_boundaries(left,right,length,cutoff):
+    d=length*cutoff;vl=potential(left[:2]);vr=potential(right[:2])
+    fl=INVERSE@gradient(left[:2]);fr=INVERSE@gradient(right[:2])
+    return np.r_[left[4]-d+vl*d**3/18,left[5]-1+vl*d*d/6,
+        left[2:4]-d*fl/4,right[4]-d+vr*d**3/18,right[2:4]+d*fr/4]
+
+
+@dataclass
+class BounceSolution:
+    solution: object
+    cutoff: float
+    attempts: list
+
+    @property
+    def length(self):return float(self.solution.p[0])
+
+    def pole_fields(self):
+        delta=self.length*self.cutoff
+        return tuple(point-INVERSE@gradient(point)*delta**2/8
+            for point in (self.solution.y[:2,0],self.solution.y[:2,-1]))
+
+
+def solve_bounce(*,tolerance=2e-6,cutoff=1e-4,mesh=161,previous=None,budget_seconds=60.):
+    if not (0<tolerance<.01 and 0<cutoff<.001 and mesh>=65 and budget_seconds>0):
+        raise ValueError('positive bounded tolerance/cutoff/budget and mesh>=65 required')
+    started=time.perf_counter();false,saddle,_=reference_points()
+    center=np.asarray(saddle['log_radii'])[[0,1]]
+    masses,vectors=eigh(hessian(center),METRIC);direction=vectors[:,0]
+    if direction[0]>0:direction=-direction
+    length=math.pi*math.sqrt(3/saddle['V'])
+    x=np.linspace(cutoff,1-cutoff,mesh);attempts=[]
+    for seed in ((None,) if previous is not None else (.4,.8)):
+        if previous is not None:
+            length=previous.length;guess=previous.solution.sol(x)
+        else:
+            fields=center[:,None]+seed*direction[:,None]*np.cos(math.pi*x)
+            vel=-seed*direction[:,None]*math.pi*np.sin(math.pi*x)/length
+            guess=np.vstack([fields,vel,np.sin(math.pi*x)*length/math.pi,np.cos(math.pi*x)])
+        def rhs(at,values,p):
+            if time.perf_counter()-started>budget_seconds:raise TimeoutError('bounded coupled bounce allowance exhausted')
+            if np.max(abs(values[:2]))>5 or p[0]<=0:raise FloatingPointError('uncontrolled Newton trial; no profile admitted')
+            return euclidean_rhs(at,values,p[0])
+        try:
+            with np.errstate(over='raise',invalid='raise',divide='raise'):
+                sol=solve_bvp(rhs,lambda a,b,p:pole_boundaries(a,b,p[0],cutoff),
+                    x,guess,p=[length],tol=tolerance,max_nodes=5000)
+            field_span=np.ptp(sol.y[:2],axis=1)
+            admitted=bool(sol.success and max(field_span)>.03 and min(sol.y[4])>0 and sol.p[0]>0)
+            attempts.append(dict(seed_amplitude=seed,status=int(sol.status),message=sol.message,
+                maximum_field_span=float(max(field_span)),nonconstant_profile=admitted,nodes=len(sol.x)))
+            if admitted:return BounceSolution(sol,cutoff,attempts)
+        except (ValueError,FloatingPointError) as exc:attempts.append(dict(seed_amplitude=seed,error=str(exc)))
+    raise RuntimeError('No nonconstant profile admitted in bounded seeds: '+str(attempts))
+
+
+def bounce_diagnostics(bounce):
+    sol=bounce.solution;L=bounce.length;cut=bounce.cutoff
+    x=np.linspace(cut,1-cut,4001);y=sol.sol(x);dy=sol.sol(x,1)
+    fields=y[:2].T;vel=y[2:4].T;R,P=y[4:];V=potential(fields)
+    kin=np.einsum('ni,ij,nj->n',vel,METRIC,vel)
+    C=P*P-1-R*R*(kin/2-V)/3
+    residual=dy-euclidean_rhs(x,y,L)
+    actual_Rpp=dy[5]/L
+    R3=-4*actual_Rpp/R+2*(1-P*P)/R**2
+    ham=R3-kin-2*V
+    pole_n,pole_s=bounce.pole_fields();delta=L*cut;vn=potential(pole_n);vs=potential(pole_s)
+    trace=-2*math.pi**2*(L*simpson(R**3*V,x=x)+(vn+vs)*delta**4/4)
+    full=2*math.pi**2*(L*simpson(R**3*(kin/2+V)-3*R*(P*P+1),x=x)
+        -6*delta**2+7*(vn+vs)*delta**4/12)
+    false,saddle,_=reference_points();false_action=-24*math.pi**2/false['V']
+    common_scale=false['V']/3+abs(R3)+abs(kin+2*V)
+    Q=1-R*R*kin/6
+    transverse=np.array([0.,1.,-1.,0.])/math.sqrt(2)
+    H=log_radius_hessian(expand(fields));m_trans=np.einsum('i,nij,j->n',transverse,H,transverse)/3
+    direction=np.asarray(saddle['negative_mode'])[[0,1]]
+    projection=(fields-np.asarray(saddle['log_radii'])[[0,1]])@METRIC@direction
+    crossings=int(np.sum(projection[:-1]*projection[1:]<0))
+    equator=int(np.argmin(abs(P)))
+    return dict(length=L,cutoff=cut,mesh_nodes=len(sol.x),attempts=bounce.attempts,
+        pole_fields=[pole_n.tolist(),pole_s.tolist()],pole_potentials=[float(vn),float(vs)],
+        max_Euclidean_constraint=float(max(abs(C))),max_common_Cauchy_Hamiltonian=float(max(abs(ham))),
+        max_common_Cauchy_relative_Hamiltonian=float(max(abs(ham)/common_scale)),
+        common_Cauchy_Hamiltonian_RMS=float(np.sqrt(simpson(R*R*ham*ham,x=x)/simpson(R*R,x=x))),
+        max_scaled_ODE_residual=float(np.max(abs(residual)/(1+abs(euclidean_rhs(x,y,L))))),
+        right_pole_slope_defect=float(y[5,-1]+1-vs*delta**2/6),
+        action_trace=trace,action_full=full,action_identity_difference=full-trace,
+        action_difference_times_g=trace-false_action,minimum_Q=float(min(Q)),
+        sampled_transverse_shape_mass_squared_minimum=float(min(m_trans)),
+        projected_barrier_crossings=crossings,maximum_radius=float(max(R)),
+        equator_x=float(x[equator]),
+        full_physical_negative_mode_count_proved=False,
+        scope='Regular nonconstant profile in the1+3 invariant scalar sector. Scalar-metric fluctuation index, internal KK modes and decay-rate interpretation are not certified.')
+
+
+def lorentzian_rhs(t,y):
+    fields=y[:2];vel=y[2:4];a,P=y[4:]
+    V=potential(fields);kin=vel@METRIC@vel
+    return np.r_[vel,-3*P/a*vel-INVERSE@gradient(fields),P,-a*(kin-V)/3]
+
+
+def continue_pole(bounce,*,pole_index=0,maximum_time=30.,tolerance=2e-11,budget_seconds=30.):
+    if pole_index not in (0,1) or maximum_time<=0:raise ValueError('one regular pole and positive time allowance required')
+    started=time.perf_counter();pole=bounce.pole_fields()[pole_index];force=INVERSE@gradient(pole)
+    V0=potential(pole);t0=1e-5
+    initial=np.r_[pole-force*t0*t0/8,-force*t0/4,t0+V0*t0**3/18,1+V0*t0*t0/6]
+    def rhs(t,y):
+        if time.perf_counter()-started>budget_seconds:raise TimeoutError('bounded Lorentzian allowance exhausted')
+        return lorentzian_rhs(t,y)
+    def turning(t,y):return y[5]
+    turning.terminal=True;turning.direction=-1
+    def acceleration_zero(t,y):return potential(y[:2])-y[2:4]@METRIC@y[2:4]
+    acceleration_zero.direction=0
+    sol=solve_ivp(rhs,(t0,maximum_time),initial,method='DOP853',rtol=tolerance,atol=tolerance/100,
+        max_step=.01,events=(turning,acceleration_zero),dense_output=True)
+    if not sol.success:raise RuntimeError(sol.message)
+    times=np.linspace(t0,sol.t[-1],501);y=sol.sol(times);fields=y[:2].T;vel=y[2:4].T
+    kin=np.einsum('ni,ij,nj->n',vel,METRIC,vel);V=potential(fields);rho=kin/2+V;p=kin/2-V;a,P=y[4:]
+    constraint=P*P-1-a*a*rho/3
+    loss=quad(lambda t:3*sol.sol(t)[5]/sol.sol(t)[4]*(sol.sol(t)[2:4]@METRIC@sol.sol(t)[2:4]),
+        t0,sol.t[-1],epsabs=1e-10)[0]
+    candidates=np.r_[t0,sol.t[-1],sol.t_events[1]]
+    Pmax=float(max(sol.sol(candidates)[5]));mean_log=(fields[:,0]+3*fields[:,1])/4
+    bulk_scale=a*np.exp(-6*mean_log)
+    false,_,ads=reference_points()
+    false_delta=fields[-1]-np.asarray(false['log_radii'])[[0,1]]
+    ads_delta=fields[-1]-np.asarray(ads['log_radii'])[[0,1]]
+    return sol,dict(pole_index=pole_index,exit_fields=pole.tolist(),exit_density=float(V0),
+        exit_excitation_above_known_AdS_minimum=float(V0-ads['V']),
+        initial_Ricci_scalar_limit=float(4*V0),initial_Kretschmann_limit=float(8*V0*V0/3),
+        proper_endpoint=float(sol.t[-1]),endpoint_reason='first_scale_factor_turn' if len(sol.t_events[0]) else 'declared_time_allowance',
+        scale_at_endpoint=float(a[-1]),density_at_endpoint=float(rho[-1]),pressure_at_endpoint=float(p[-1]),
+        maximum_Friedmann_constraint=float(max(abs(constraint))),density_work_balance_residual=float(rho[-1]-rho[0]+loss),
+        minimum_curvature_fraction=1/Pmax**2,maximum_bulk_ruler_scale_sampled=float(max(bulk_scale)),
+        log_radii_at_endpoint=fields[-1].tolist(),incoming_material_flux=0.,
+        endpoint_field_distance_to_false_minimum=float(np.sqrt(false_delta@METRIC@false_delta)),
+        endpoint_field_distance_to_known_AdS_minimum=float(np.sqrt(ads_delta@METRIC@ads_delta)),
+        scope='Open-FRW region from the regular pole, no independent exit/matter state. Finite curvature at a=0 is checked by the regular series. Initial geometric excitation/work is not measured incoming parent material energy.')
+
+
+def connecting_geometry(bounce):
+    """The same profile in the connecting chart and its common Cauchy cut.
+
+    ds4²=dξ²+R_E(ξ)²[-dT²+cosh²(T)dOmega2²]. At T=0, K=Pi=0.
+    Its contracting/expanding cuts are not a separately prepared false-vacuum
+    past or a proof of black-hole nucleation. Material normal flux is zero.
+    """
+    from scipy.optimize import brentq
+    sol=bounce.solution;cut=bounce.cutoff;L=bounce.length
+    equator=brentq(lambda x:float(sol.sol(x)[5]),cut,1-cut,xtol=2e-13)
+    y=sol.sol(equator);R=float(y[4]);u=expand(y[:2]);s=float(np.mean(u))
+    Rpp=float(sol.sol(equator,1)[5]/L)
+    V0=action_reduction_record().reference_volume
+    area4=4*math.pi*R**2
+    area16=(4*math.pi*R**2*math.exp(-12*s))*(V0*math.exp(3*sum(u)))
+    x=np.linspace(cut,1-cut,4001);values=sol.sol(x);vel=values[2:4].T
+    kin=np.einsum('ni,ij,nj->n',vel,METRIC,vel);rho=kin/2+potential(values[:2].T)
+    energy=4*math.pi*L*simpson(values[4]**2*rho,x=x)
+    volume=4*math.pi*L*simpson(values[4]**2,x=x)
+    return dict(metric='ds4²=dξ²+R_E(ξ)²[-dT²+cosh²T dOmega2²]',
+        equator_x=equator,equator_radius=R,equator_spatial_second_derivative=Rpp,
+        T0_common_Cauchy_volume=volume,T0_common_Cauchy_normal_energy=energy,
+        T0_Kij=0.,T0_normal_field_momenta=0.,normal_material_flux=0.,
+        equator_null_expansions={str(T):[2*math.tanh(T)/R]*2 for T in (-1.,0.,1.)},
+        equator_geodesic_radius_second_proper_derivative=1/R,
+        dimensional_screen_area_ratio=area16/(V0*area4),
+        area_identity='A14=4piR_E² exp(-12s)*V0 exp(12s)=V0 A2; kappa16=V0 kappa4.',
+        null_expansion_identity='theta16=exp(6s) theta4 for the screen S2 x M12; signs agree.',
+        scope='One inherited source profile and regular overlapping charts. The turning equator is a spatial maximum, not a persisting neck minimum. Area/entropy covariance is not a measured incoming energy supply.')
