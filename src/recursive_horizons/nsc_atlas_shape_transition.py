@@ -16,6 +16,7 @@ from scipy.linalg import eigh
 from .nsc_atlas_sphere_flux_completion import (
     log_radius_potential,log_radius_gradient,log_radius_hessian,
     log_radius_kinetic_metric,symmetric_radius_branches,action_reduction_record,
+    rolling_parent_state,
 )
 
 EMBED=np.array([[1.,0.],[0.,1.],[0.,1.],[0.,1.]])
@@ -212,3 +213,22 @@ def connecting_geometry(bounce):
         area_identity='A14=4piR_E² exp(-12s)*V0 exp(12s)=V0 A2; kappa16=V0 kappa4.',
         null_expansion_identity='theta16=exp(6s) theta4 for the screen S2 x M12; signs agree.',
         scope='One inherited source profile and regular overlapping charts. The turning equator is a spatial maximum, not a persisting neck minimum. Area/entropy covariance is not a measured incoming energy supply.')
+
+
+def evolve_rolling_parent(*,initial_s,initial_v,efolds=40.,q=2.,tolerance=2e-10,budget_seconds=20.):
+    """A declared member of the parent family; no finite state is selected.
+
+    y=(s,ds/dN,bulk proper duration). Einstein a_E/a_E0=exp(N).
+    Integrates exact full-potential equations, not the asymptotic power law.
+    """
+    if not (0<efolds<=60 and 0<tolerance<.001 and budget_seconds>0):
+        raise ValueError('bounded e-fold/tolerance/compute domain required')
+    rolling_parent_state(initial_s,initial_v,q);started=time.perf_counter()
+    def rhs(N,y):
+        if time.perf_counter()-started>budget_seconds:raise TimeoutError('rolling-parent allowance exhausted')
+        row=rolling_parent_state(y[0],y[1],q)
+        return np.array([y[1],row['v_N'],1/row['H_scaled']])
+    sol=solve_ivp(rhs,(0,efolds),[initial_s,initial_v,0.],method='DOP853',
+        rtol=tolerance,atol=tolerance/100,max_step=.1,dense_output=True)
+    if not sol.success:raise RuntimeError(sol.message)
+    return sol

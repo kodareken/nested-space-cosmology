@@ -19,9 +19,11 @@ from threadpoolctl import threadpool_limits
 from recursive_horizons.nsc_atlas_sphere_flux_completion import (
     combined_record,all_volume_extrema,volume_thresholds,half_integer_classification,
     wrapped_brane_couplings,symmetric_radius_branches,log_radius_potential,
+    rolling_parent_limit,rolling_parent_state,wall_energy_jump,
 )
 from recursive_horizons.nsc_atlas_shape_transition import (
     solve_bounce,bounce_diagnostics,continue_pole,connecting_geometry,
+    evolve_rolling_parent,
 )
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -115,14 +117,92 @@ def calculation(folder):
         compute=dict(threads=4,elapsed_seconds=time.perf_counter()-started))
 
 
+def rolling_calculation(folder):
+    """The parent at the break: full-potential histories and independent uplift."""
+    import math
+    from scipy.integrate import solve_ivp,quad
+
+    started=time.perf_counter();source=pins();raw_payload={};rows=[]
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    bound=all(hashlib.sha256(subprocess.check_output(['git','show',commit+':'+name],cwd=ROOT)).hexdigest()==digest
+        for name,digest in source.items())
+    limit=rolling_parent_limit();A=float(limit['A']);T=25/32
+    # Independent sixteen-dimensional directional Einstein equations in
+    # bulk proper time. These do not call the reduced radion RHS.
+    def bulk_rhs(t,y):
+        if time.perf_counter()-started>60:raise TimeoutError('60s combined parent allowance exhausted')
+        s,hx,hi,N=y;theta=3*hx+12*hi;flux=T*math.exp(-12*s)
+        return [hi,(A-5*flux)/7-theta*hx,
+            (A+2*flux)/7-theta*hi-1.25*math.exp(-2*s),hx+6*hi]
+
+    with threadpool_limits(limits=1):
+        for index,(s0,v0) in enumerate(((0.,0.),(1.,.1))):
+            sol=evolve_rolling_parent(initial_s=s0,initial_v=v0)
+            initial=rolling_parent_state(s0,v0);end=rolling_parent_state(*sol.y[:2,-1])
+            def target(t,y):return y[3]-40
+            target.terminal=True;target.direction=1
+            bulk=solve_ivp(bulk_rhs,(0.,100.),[s0,initial['bulk_external_H'],initial['bulk_internal_H'],0.],
+                method='DOP853',rtol=2e-11,atol=2e-13,max_step=.1,events=target,dense_output=True)
+            if not bulk.success or not len(bulk.t_events[0]):raise RuntimeError('independent bulk history did not reach the declared40efolds')
+            sample=np.linspace(0,40,401);Y=sol.sol(sample)
+            states=[rolling_parent_state(*y) for y in Y[:2].T]
+            direct=bulk.sol(Y[2]);hx=np.array([r['bulk_external_H'] for r in states]);hi=np.array([r['bulk_internal_H'] for r in states])
+            direct_H_difference=float(max(np.max(abs(direct[1]-hx)),np.max(abs(direct[2]-hi))))
+            trace_difference=max(abs(r['bulk_Ricci_metric']-r['bulk_Ricci_source']) for r in states)
+            theta=3*bulk.y[1]+12*bulk.y[2]
+            constraint=(theta**2-3*bulk.y[1]**2-12*bulk.y[2]**2+15*np.exp(-2*bulk.y[0]))/2-A-T*np.exp(-12*bulk.y[0])
+            def density_work(N):
+                s,v,_=sol.sol(N);state=rolling_parent_state(s,v)
+                return 84*v*v*math.exp(state['log_Einstein_density'])
+            work=quad(density_work,0,40,epsabs=2e-10,epsrel=2e-10)[0]
+            balance=math.exp(end['log_Einstein_density'])-math.exp(initial['log_Einstein_density'])+work
+            if direct_H_difference>1e-8 or trace_difference>1e-9 or max(abs(constraint))>1e-8 or abs(balance)>1e-8:
+                raise RuntimeError('rolling-parent independent Einstein/trace/work control failed')
+            raw_payload[f'parent{index}_N']=sample;raw_payload[f'parent{index}_states']=Y
+            raw_payload[f'parent{index}_bulk_times']=bulk.t;raw_payload[f'parent{index}_bulk_states']=bulk.y
+            rows.append(dict(initial_s=s0,initial_v=v0,efolds=40.,endpoint=end,
+                bulk_proper_duration=float(Y[2,-1]),
+                independent_bulk_H_difference=direct_H_difference,
+                independent_bulk_Hamiltonian_max=float(max(abs(constraint))),
+                bulk_Ricci_metric_source_max_difference=float(trace_difference),
+                Einstein_density_work_balance=float(balance),
+                sample_table=dict(columns=['N','s','v','bulk_proper_duration'],rows=np.column_stack([sample,Y.T])[::40].tolist()),
+                scope='Declared verification initial data, not a selected ancestral state or physical transition epoch.'))
+    if source!=pins():raise RuntimeError('rolling-parent sources changed during calculation')
+    raw=folder/'rolling-parent.npz';np.savez_compressed(raw,**raw_payload)
+    return dict(schema='nsc-atlas-rolling-parent-v1',scientific_owner='docs/nsc-atlas-valve-formation.md',
+        action=asdict(combined_record()),asymptotic_limit=limit,
+        parent_stationary_radius_families=symmetric_radius_branches(2.),histories=rows,
+        wall_conservation=dict(normal='child to parent',
+            identity='[T(n,U)]=dot(sigma)=sigma_s*U(s)=-6sigma*U(s)',
+            surface_first_law='dot(E_surface)-sigma*dot(area)=area*(F_child-F_parent)',
+            F_definition='F=-T(n,U); only its jump is fixed, not either side flux.',
+            zero_tangent_control=wall_energy_jump(0.,0.),
+            side_fluxes_selected=False,source_inserted=False,
+            cap_normal_force='[V]=sigma*K_mean+sigma_s*mean(n(s))',
+            cap_necessary_balance='Sum integral(R^3 V_s dxi)=6sigma Rwall^3; q2 common-radius integrand is negative.'),
+        conditional_scalar_handoff=dict(**combined_record().scalar_sector.prepare(parent_flux=2.,charge=.5),
+            scope='Existing instantaneous continuous-field identity only; it does not provide a membrane trajectory or a formed child.'),
+        verdict=dict(nonempty_regular_parent_asymptotic=True,
+            parent_limit_fixed_in_supplied_action=True,finite_parent_history_selected=False,
+            individual_receiver_material_flux_derived=False,formed_lasting_child=False,
+            quantum_state_selected=False,SI_scale_selected=False,full_goal_achieved=False),
+        provenance=dict(source_sha256=source,source_unchanged=True,producer_commit=commit,
+            source_bound_to_commit=bound,raw_cache=raw.relative_to(ROOT).as_posix(),raw_cache_sha256=sha(raw)),
+        compute=dict(threads=1,elapsed_seconds=time.perf_counter()-started,
+            allowance='Each reduced history20s; complete calculation60s; two reduced and two independent bulk histories, bounded40Einstein e-folds.'))
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--raw-directory',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--rolling-parent',action='store_true',help='Evaluate the derived q2 parent limit and declared histories, not the frozen shape bounce')
     args=parser.parse_args();folder=(ROOT/args.raw_directory).resolve();out=(ROOT/args.output).resolve()
     if not folder.is_relative_to(ROOT/'.build') or folder.exists() or not out.is_relative_to(ROOT) or out.exists():
         raise ValueError('fresh raw directory under .build and fresh in-repository summary required')
-    folder.mkdir(parents=True);result=calculation(folder);out.parent.mkdir(parents=True,exist_ok=True)
+    folder.mkdir(parents=True);result=rolling_calculation(folder) if args.rolling_parent else calculation(folder)
+    out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(result,indent=2,allow_nan=False,default=plain)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(dict(output=str(out),verdict=result['verdict'],compute=result['compute']),indent=2))
 

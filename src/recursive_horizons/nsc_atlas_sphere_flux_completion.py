@@ -311,8 +311,8 @@ def log_radius_kinetic_metric():
 
 
 @cache
-def symmetric_radius_branches():
-    """Exact positive-ratio isolation in fixed1+3/2+2 families at q=3/2.
+def symmetric_radius_branches(q=1.5):
+    """Exact positive-ratio isolation in fixed1+3/2+2 families at supplied q.
 
     The two isotropic extrema and permutation-inequivalent family members
     are included. This is not an enumeration of all critical points, a KK
@@ -322,10 +322,12 @@ def symmetric_radius_branches():
     import sympy as sp
     from scipy.linalg import eigh
 
-    model=combined_record();q=1.5
-    if model.scalar_sector.vacuum(q)!=7 or model.B!=F(15,2) or model.T!=F(25,32):
+    if isinstance(q,(bool,np.bool_)) or not math.isfinite(float(q)):
+        raise ValueError('finite supplied charge sector required')
+    exact_q=F(str(q));q=float(exact_q);model=combined_record()
+    if model.B!=F(15,2) or model.T!=F(25,32):
         raise ValueError('symmetric branch polynomials require the fixed reference coefficients')
-    t=sp.symbols('t');A=sp.Integer(7);a=sp.Rational(5,4);S=t*t+t+1
+    t=sp.symbols('t');A=sp.Rational(F(215,32)+exact_q*exact_q/8);a=sp.Rational(5,4);S=t*t+t+1
     P13=t**3+28*t*t+28*t+15
     P22=5*t**6+14*t**5+14*t**4+6*t**3+14*t*t+14*t+5
     polynomials={'1+3':sp.Poly(5*4**5*A**5*S**6-12*a**5*P13**5,t),
@@ -374,6 +376,91 @@ def symmetric_radius_branches():
             x=np.array([ratio*scale,scale,scale,scale] if family=='1+3' else [ratio*scale,ratio*scale,scale,scale])
             branches.append(point_record(family,-.5*np.log(x),ratio=ratio,
                 ratio_interval=(lo,hi),ratio_polynomial_degree=polynomial.degree()))
-    return dict(q_reference=F(3,2),isolations=tuple(isolations),branches=tuple(branches),
+    return dict(q_reference=exact_q,isolations=tuple(isolations),branches=tuple(branches),
         S4_scalar_index_rule='Sum degeneracy(l)=(l+1)(l+2)(2l+3)/6 where l(l+3)<-3m²/V, only for V>0.',
         scope='Only isotropic,1+3 and2+2 radius families modulo factor permutations; numerical canonical masses and retained-scalar S4 indices, not all critical points, full KK indices or decay dominance.')
+
+
+def rolling_parent_limit(q=2):
+    """Exact large-volume limit of the existing relaxed equal-radius sector.
+
+    Expanding flat Einstein-base data have a local asymptotic attractor;
+    this does not select finite Cauchy data, a nucleation epoch, or a child.
+    The full internal frame stays nonempty while Einstein-frame rho tends
+    to zero. No quantum state or SI normalization is inserted.
+    """
+    if isinstance(q,(bool,np.bool_)) or not math.isfinite(float(q)):
+        raise ValueError('finite supplied charge sector required')
+    charge=F(str(q));A=F(215,32)+charge*charge/8
+    p=F(7,6);C2=F(35,12)/A;H2=A/105
+    gamma2=F(225,4)*H2;frequency2=F(400)-gamma2
+    return dict(q=charge,A=A,K=F(84),Einstein_power=p,
+        s_log_time_coefficient=F(1,6),bulk_log_time_coefficient_squared=C2,
+        potential_times_Einstein_time_squared=F(35,12),
+        kinetic_times_Einstein_time_squared=F(7,6),
+        density_times_Einstein_time_squared=F(49,12),Einstein_w=F(-3,7),
+        ds_dN=F(1,7),fixed_point_eigenvalues=(F(-2,7),F(-15,7)),
+        bulk_H_squared=H2,bulk_H=math.sqrt(float(H2)),bulk_Ricci_scalar=240*H2,
+        massive_scalar_decay_rate_squared=gamma2,
+        massive_scalar_frequency_squared=frequency2,
+        wrapped_tension_log_bulk_rate=-6*math.sqrt(float(H2)),
+        finite_bulk_trace='R16=16*A/7+(25/56)*exp(-12s), for phi=phi_star(q)',
+        scope='Expanding flat-base, equal internal radii, relaxed massive scalar, fixed q. '
+            'Local attractor at infinite internal size, not a unique finite history, '
+            'selected topology/dimension, quantum state, SI ruler or formed child.')
+
+
+def rolling_parent_state(s,v,q=2.):
+    """Full finite-volume parent and uplift diagnostics, v=ds/dN.
+
+    Scaled H=exp(6s)*H_E avoids exponentially small clock/energy variables.
+    Phi=phi_star(q) exactly, with no added matter; kappa4=1. Bulk Ricci is
+    evaluated from the metric rates and independently from the16D trace.
+    """
+    if not all(math.isfinite(float(z)) for z in (s,v,q)):
+        raise ValueError('finite parent state required')
+    model=combined_record();K=float(model.K);A=model.scalar_sector.vacuum(float(q))
+    x=math.exp(-2*s);W=A-7.5*x+(25/32)*x**6;Ws=15*x-(75/8)*x**6
+    D=3-K*v*v/2
+    if W<=0 or D<=0:raise ValueError('positive potential and expanding flat constraint branch required')
+    h=math.sqrt(W/D);Vs_over_V=-12+Ws/W
+    v_N=-D*(v+Vs_over_V/K)
+    log_h_N=(Ws/W*v+K*v*v_N/D)/2
+    Hint=v*h;Hext=(1-6*v)*h
+    Hint_dot=h*h*(v_N+v*log_h_N)
+    Hext_dot=h*h*(-6*v_N+(1-6*v)*log_h_N)
+    total=3*Hext+12*Hint
+    Ricci=2*(3*Hext_dot+12*Hint_dot)+total*total+3*Hext**2+12*Hint**2+15*x
+    trace=16*A/7+(25/56)*x**6
+    return dict(s=s,v=v,x=x,W=W,D=D,H_scaled=h,v_N=v_N,
+        log_H_scaled_N=log_h_N,bulk_internal_H=Hint,bulk_external_H=Hext,
+        bulk_internal_H_dot=Hint_dot,bulk_external_H_dot=Hext_dot,
+        bulk_Ricci_metric=Ricci,bulk_Ricci_source=trace,
+        Einstein_w=K*v*v/3-1,log_Einstein_H=math.log(h)-6*s,
+        log_Einstein_density=math.log(3*h*h)-12*s,
+        KK_mass_squared_over_H_squared=(15/8)*x/(h*h),
+        material_mass_squared_over_H_squared=400/(h*h),
+        wrapped_tension=.2*math.exp(-6*s),
+        wrapped_tension_log_bulk_rate=-6*Hint)
+
+
+def wall_energy_jump(s,s_tangent):
+    """Exact material-wall Ward identity, not a chosen receiver flux.
+
+    Normal points child->parent; s_tangent is ds/dtau along the wall in
+    Einstein proper units, not an independently identified parent clock.
+    [T(n,U)]=84[s_n]*s_tangent=-6sigma*s_tangent=dot(sigma).
+    No scalar direct membrane coupling. This determines a flux DIFFERENCE;
+    it determines neither side's individual material flux or its sign.
+    """
+    if not all(math.isfinite(float(z)) for z in (s,s_tangent)):
+        raise ValueError('finite wall field and proper tangent derivative required')
+    row=wrapped_brane_couplings(s);sigma=row['sigma']
+    jump=float(combined_record().K)*row['radion_normal_jump']*s_tangent
+    return dict(sigma=sigma,sigma_tangent=-6*sigma*s_tangent,
+        T_nU_parent_minus_child=jump,
+        F_child_minus_parent=jump,ward_residual=jump+6*sigma*s_tangent,
+        side_fluxes_selected=False,
+        surface_first_law='dot(E_surface)-sigma*dot(area)=area*(F_child-F_parent)',
+        scope='Material charged membrane only; not a surface stress at smooth horizon0. '
+            'The two material fluxes need the actual bulk solution and wall trajectory.')
