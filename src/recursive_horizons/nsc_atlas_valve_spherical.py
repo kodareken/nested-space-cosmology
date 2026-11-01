@@ -318,13 +318,16 @@ def _conformal_points(points):
 def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=.05,budget_seconds=60.,
                       validity_mode='legacy_absolute',relative_geometry_limit=1e-3,
                       relative_source_limit=.02,diagnostic_continue_after_guard=False,
-                      radius_floor=.15):
+                      radius_floor=.15,reflection_symmetry=True):
     """Centered characteristic diamonds on a shrinking Cauchy domain.
 
     Every accepted level discards one point at either end. Spatial and
     temporal centered jets use an extra surrounding diamond; no ghost,
     reflecting, vacuum, or independently specified boundary values exist.
     """
+    if not isinstance(reflection_symmetry,(bool,np.bool_)):
+        raise ValueError('boolean reflection_symmetry required')
+    reflection_symmetry=bool(reflection_symmetry)
     started=time.perf_counter()
     relative=validity_mode=='relative_metric_source'
     if validity_mode not in ('legacy_absolute','relative_metric_source'):
@@ -369,13 +372,16 @@ def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=
                 if error<(2e-13 if relative else 3e-13):break
             else:raise RuntimeError('implicit diamond iteration did not converge')
             max_iterations=max(max_iterations,it+1)
-            # The supplied one-mode state has this exact reflection symmetry.
-            guess=.5*(guess+parity*guess[:,::-1]);dt=(guess-S)/(2*h)
+            # Project only when the caller declares the old cap reflection.
+            if reflection_symmetry:guess=.5*(guess+parity*guess[:,::-1])
+            dt=(guess-S)/(2*h)
             dtt=(guess-2*C+S)/(h*h) if relative else None
             center=len(C[0])//2;em=math.exp(-float(C[1,center]))
             Rproper=em*float(dt[0,center]);Rll=em*em*float(dxx[0,center])
+            center_theta=(2*Rproper/(float(C[0,center])*H) if reflection_symmetry else
+                          2*em*(float(dt[0,center])+float(dx[0,center]))/(float(C[0,center])*H))
             center_values=[T,tau,float(C[0,center]),float(C[2,center]),em*float(dt[2,center]),
-                           2*Rproper/(float(C[0,center])*H),Rproper]
+                           center_theta,Rproper]
             if relative:
                 center_values.append(em*em*(float(dtt[0,center])-float(dt[1,center])*float(dt[0,center])-
                                             float(dx[1,center])*float(dx[0,center])))
@@ -383,12 +389,13 @@ def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=
             profile=dict(T=T,center_proper_time=tau,x=h*np.arange(-center,center+1),
                          y=C.copy(),yt=dt.copy(),yx=dx.copy(),yxx=dxx.copy())
             if relative:profile['ytt']=dtt.copy()
-            if neck_minimum and Rll<=0:
+            if reflection_symmetry and neck_minimum and Rll<=0:
                 events.append(dict(kind='spatial_neck_type_change_on_conformal_slices',conformal_time=T,proper_time=tau))
                 neck_minimum=False
             if prior_Rproper<0 and Rproper>=0:
-                events.append(dict(kind='center_proper_time_bounce',conformal_time=T,proper_time=tau))
-                status='temporal_bounce'
+                events.append(dict(kind=('center_proper_time_bounce' if reflection_symmetry else
+                                         'constant_X_observer_radius_turn'),conformal_time=T,proper_time=tau))
+                status='temporal_bounce' if reflection_symmetry else 'observer_radius_turn'
             prior_Rproper=Rproper
             final=T+h>endpoint+32*np.finfo(float).eps*max(1.,endpoint)
             monitor=relative and float(C[0,center])<.25 and step%10==0
@@ -431,6 +438,12 @@ def _conformal_evolve(initial,*,H,kappa,sstar,proper_time,endpoint,sample_every=
                 end_profile=profile,events=events,maximum_implicit_iterations=max_iterations,
                 elapsed_seconds=time.perf_counter()-started,
                 validity_mode=validity_mode,first_validity_failure=first_failure,
+                reflection_symmetry=reflection_symmetry,
+                center_clock_role=('Reflection-center proper clock.' if reflection_symmetry else
+                    'Proper clock along constant X; this observer is generally accelerated when a_X is nonzero.'),
+                center_Rproper_acc_role=('Covariant Hessian n^a n^b nabla_a nabla_b R; on the reflection center it equals d2R/dtau2.'
+                    if reflection_symmetry else
+                    'Covariant Hessian n^a n^b nabla_a nabla_b R, not d2R/dtau2 along the generally accelerated constant-X observer.'),
                 final_cut_admitted=first_failure is None,
                 diagnostic_continuation_requested=bool(diagnostic_continue_after_guard),
                 validity_limits=dict(relative_geometry=relative_geometry_limit,relative_source=relative_source_limit,radius_floor=radius_floor),
