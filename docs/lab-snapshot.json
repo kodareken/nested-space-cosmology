@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
+  "current_receipt_commit_parent": "9e9a57d6a50105e913fa9c80c035318447f0cbfb",
   "files": [
     {
       "bytes": 3197,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 21385,
-      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
-      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
+      "bytes": 21583,
+      "change": "Preserve the controlled fine counterrotation continuation, its numerical boundary, and the fixed-interface energy-supply gate.",
+      "changed_from_commit": "9e9a57d6a50105e913fa9c80c035318447f0cbfb",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "a0a37d641a8f7fbea2251182277be51984766f5ace1871b303bb1728ad363634"
+      "sha256": "14db3be6eb7bcb382976e99c4b0a16fd1ccc638c0f09db3960f874ecd3edbeb8"
     },
     {
       "bytes": 9543,
@@ -11197,12 +11197,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 49152,
-      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
-      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
+      "bytes": 52797,
+      "change": "Preserve the controlled fine counterrotation continuation, its numerical boundary, and the fixed-interface energy-supply gate.",
+      "changed_from_commit": "9e9a57d6a50105e913fa9c80c035318447f0cbfb",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "cabe7ec497cd047a3bbea10917084af886ada2fcafb7589c370362a5e62067ed"
+      "sha256": "e45af2e349e172db8d6e8c393bb890d673cab310b187bbe910a9f7d063fd8026"
     },
     {
       "bytes": 10730,
@@ -31946,6 +31946,14 @@
       "sha256": "a43b12fc15674382a0073d7b6e57c4421850f041c9f5efda91f4739faecc5924"
     },
     {
+      "bytes": 87558,
+      "change": "Preserve the controlled fine counterrotation continuation, its numerical boundary, and the fixed-interface energy-supply gate.",
+      "changed_from_commit": "9e9a57d6a50105e913fa9c80c035318447f0cbfb",
+      "path": "results/summaries/nsc-atlas-valve-counterrotation-evolution-v2.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "7b7eed410ce8da74a2be3d15277d198ec6197798e1f12c8cf74eaced17df93a3"
+    },
+    {
       "bytes": 15580,
       "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
       "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
@@ -36684,12 +36692,12 @@
       "sha256": "20d0f17f9fb92f35259f042c636ed07152509dfaf5bb26185f080ec83a0d8a42"
     },
     {
-      "bytes": 5901,
-      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
-      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
+      "bytes": 8670,
+      "change": "Preserve the controlled fine counterrotation continuation, its numerical boundary, and the fixed-interface energy-supply gate.",
+      "changed_from_commit": "9e9a57d6a50105e913fa9c80c035318447f0cbfb",
       "path": "scripts/summarize_nsc_atlas_valve_counterrotation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "03259b2ff1d60594048fe80afaa7e8a70f51941d32232954ec4996208c481b33"
+      "sha256": "932e687189cb06a15256e096defca0ad63972228443b1efbd5b1e0456f829a17"
     },
     {
       "bytes": 11865,

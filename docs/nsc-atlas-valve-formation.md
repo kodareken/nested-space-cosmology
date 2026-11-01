@@ -7,12 +7,30 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
-## Current result: a same-action trapped neck
+## Current result: a trapped neck; the receiving child remains open
 
-The latest [small-radius continuation](../results/summaries/nsc-atlas-valve-restart-v1.json)
+The [completed counterrotation records](../results/summaries/nsc-atlas-valve-counterrotation-evolution-v2.json)
+continue the same finite initial state through admitted proper duration1.8.
+The degree24/32 interface-radius spread through their common admitted
+duration1.7 is at most3.30e-5 in model length units. At1.8 the fine interface
+has area radius1.70419147, both sampled null expansions remain negative,
+and the global excitation-work residual is1.0922e-4 in model energy units.
+This does not establish a regular expanding receiving child.
+
+The target duration2 was not reached under the declared controls. At1.9
+the fine momentum-constraint maximum is2.5914%, exceeding the2% admission
+limit; its Hamiltonian maximum is1.4510%. The lapse remains positive
+(.6624 minimum) and the observer normalization error is7.76e-13.
+This is a numerical admission boundary, not an inferred physical
+singularity or child. All three execution handles are now terminal.
+The next continuation must address this specific loss of control;
+restarting the same invalid grid or extending its claimed domain would
+not resolve it. The manuscript/PDF remains frozen at252pages.
+
+The earlier spherical [small-radius continuation](../results/summaries/nsc-atlas-valve-restart-v1.json)
 and [receiver-source calculation](../results/summaries/nsc-atlas-valve-source-gate-v1.json)
 continue the declared state to controlled R approximately .15. No turn is
-observed. The current dependency is a physical source/state calculation;
+observed. That route's dependency is a physical source/state calculation;
 another deeper grid on this completed window is not the next step. The
 new spinor work below is explicitly a candidate extension and a probe,
 not fermions silently added to the classical scalar solution.
@@ -82,8 +100,64 @@ The same-grid continuation reads the terminal fine record via
 preserves original coordinate time and cumulative work, and clips the
 inherited physical history at that handoff. It rejects a same-grid
 restart of the coarser admission failure. The unused raw parent tail is
-preserved without promoting its validity. This completes the same
-proper2 formation test; it does not change the action or preparation.
+preserved without promoting its validity. This continues the same
+intended proper2 formation test; it does not change the action or
+preparation. The final fine admission stop above leaves its target unmet.
+
+### The fixed-interface energy-supply gate
+
+The paired flip g1:(X1,X2,X3,X4)->(-X1,-X2,X3,X4) exchanges the two
+hemispheres. Both chi and Pi_chi change sign; their stress tensor, the
+lapse and the interface area measure are invariant under the map.
+The outward normal of the fixed X1=0 interface reverses. Consequently
+its material-flux integrand is odd and
+
+$$
+\int_{X_1=0} N j_s\,dA=0.
+$$
+
+This holds for every smooth evolution preserving that declared symmetry.
+It explains the numerical cancellation despite nonzero local counterflow:
+at the last admitted fine event the incoming and outgoing rates are each
+.05531980 in model energy/time units, with net-2.65e-17. It excludes net
+material supply through this particular fixed interface, not work on the
+geometry, transport through other boundaries, or child formation in all
+preparations. The lobes already present initially must not be counted as
+new children merely because they expand or an observer enters them.
+
+A minimal compatible directional preparation can be written analytically
+within the same action. Put u=X1, keep chi=A u and the previous B
+normalization, and use
+
+$$
+f_{\rm dir}=B\sqrt{3/5}(u^2-1/6),\qquad
+\Pi_\chi=\lambda f_{\rm dir}\psi^{-6}.
+$$
+
+Its unit-lambda conformal momentum source is
+jbar=-(kappa A B sqrt(3/5)/3) gradbar(u^3-u/2). The polynomial
+u^3-u/2 is a pure degree3 spherical harmonic, so it is orthogonal to all
+ten conformal-Killing compatibility charges. The existing York operator
+obeys Q jbar=-16 H^2 jbar and gives W=-jbar/(16 H^2).
+The reference powers agree exactly:
+(3/5)mean[(u^2-1/6)^2]=1/24=mean[X2^2 X4^2]. This does not equate the
+solved physical kinetic energies. For a positive radial conformal factor,
+the initial influx into the positive hemisphere is
+
+$$
+\Phi_{\rm in,+}
+=\frac{4\pi\lambda A B}{6H}\sqrt{3/5}\,\psi(0)^{-4}>0
+\quad(\lambda A B>0).
+$$
+
+This removes the exact cancellation at the constraint-source level.
+Its direction and preparation remain supplied; a positive finite
+Hamiltonian branch and subsequent receiving evolution have not yet been
+calculated. It is radial transport, not a proved vortex. The current GH
+character masks and spherical reflection projection would discard its
+required opposite field/momentum parities, so neither existing evolution
+can be reused blindly. No new evolution or physical success is imported
+from this analytic candidate.
 
 The old two-mode finite searches below found no admitted trap; their
 occupation was supplied rather than selected. Continuing that optimizer,

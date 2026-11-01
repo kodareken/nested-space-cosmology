@@ -1506,9 +1506,9 @@
       "sha256": "3db8971c9cadd0350ac60e5d165e2cab37678f88d8fdead475815abdb0464943"
     },
     {
-      "bytes": 21385,
+      "bytes": 21583,
       "path": "docs/atlas-progress.json",
-      "sha256": "a0a37d641a8f7fbea2251182277be51984766f5ace1871b303bb1728ad363634"
+      "sha256": "14db3be6eb7bcb382976e99c4b0a16fd1ccc638c0f09db3960f874ecd3edbeb8"
     },
     {
       "bytes": 9543,
@@ -1746,9 +1746,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2736541,
+      "bytes": 2737073,
       "path": "docs/lab-snapshot.json",
-      "sha256": "ed479eae316b1144068d2836d390051f5802ba2f19577ce0e9fe36fe9c7a1e05"
+      "sha256": "4c3f2d8be8e0f37e6a0f56c3bfb15f83f2b1d485bc4a8cbc7604d5b3690b185c"
     },
     {
       "bytes": 4997,
@@ -2146,9 +2146,9 @@
       "sha256": "577f15e685033c0e19a612e3d1492cca2a8b5e2c54fafc52ad47e8a7ae370b12"
     },
     {
-      "bytes": 49152,
+      "bytes": 52797,
       "path": "docs/nsc-atlas-valve-formation.md",
-      "sha256": "cabe7ec497cd047a3bbea10917084af886ada2fcafb7589c370362a5e62067ed"
+      "sha256": "e45af2e349e172db8d6e8c393bb890d673cab310b187bbe910a9f7d063fd8026"
     },
     {
       "bytes": 10730,
@@ -16006,6 +16006,11 @@
       "sha256": "a43b12fc15674382a0073d7b6e57c4421850f041c9f5efda91f4739faecc5924"
     },
     {
+      "bytes": 87558,
+      "path": "results/summaries/nsc-atlas-valve-counterrotation-evolution-v2.json",
+      "sha256": "7b7eed410ce8da74a2be3d15277d198ec6197798e1f12c8cf74eaced17df93a3"
+    },
+    {
       "bytes": 15580,
       "path": "results/summaries/nsc-atlas-valve-counterrotation-v1.json",
       "sha256": "9c91ca58afd6f23cd16e8387aa8fccc06a24092c7e1a46d889b861f6540592ee"
@@ -19066,9 +19071,9 @@
       "sha256": "20d0f17f9fb92f35259f042c636ed07152509dfaf5bb26185f080ec83a0d8a42"
     },
     {
-      "bytes": 5901,
+      "bytes": 8670,
       "path": "scripts/summarize_nsc_atlas_valve_counterrotation.py",
-      "sha256": "03259b2ff1d60594048fe80afaa7e8a70f51941d32232954ec4996208c481b33"
+      "sha256": "932e687189cb06a15256e096defca0ad63972228443b1efbd5b1e0456f829a17"
     },
     {
       "bytes": 11865,
@@ -25381,7 +25386,7 @@
       "sha256": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
     }
   ],
-  "lab_snapshot_sha256": "ed479eae316b1144068d2836d390051f5802ba2f19577ce0e9fe36fe9c7a1e05",
+  "lab_snapshot_sha256": "4c3f2d8be8e0f37e6a0f56c3bfb15f83f2b1d485bc4a8cbc7604d5b3690b185c",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-11-01.01",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
