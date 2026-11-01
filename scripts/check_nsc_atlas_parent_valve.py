@@ -117,13 +117,38 @@ def load_original_parent(degree):
         if states.shape != (len(times), system.dof+10) or len(times) != len(record['snapshots']):
             raise ValueError('Original sparse cache shape differs')
         gaps = []
+        physical_gaps, observer_gaps, clock_gaps, phase_rows = [], [], [], []
+        dense_phase_initial = float(history.old[0][-1])
         for t, state, row in zip(times, states, record['snapshots']):
             if (abs(t-row['coordinate_t']) > 2e-12
                     or abs(state[system.dof+8]-row['observer_proper_duration']) > 2e-10):
                 raise ValueError('Original event alignment failed')
-            gap = float(np.max(abs(history.evaluate(t)-state)))
-            if gap > 2e-10*(1+float(np.max(abs(state)))):
-                raise ValueError('Actual dense/sparse states disagree')
+            dense_state = history.evaluate(t)
+            delta = abs(dense_state-state)
+            # The original producer leaves the final ODE component at its
+            # initial value (observer_rhs returns0), then writes the sampled
+            # unwrapped PHASE into a sparse-copy state before state_sink.
+            # It is neither a field nor observer proper time, and work is a
+            # separate passive quadrature. Keep every physical/clock guard.
+            gap = float(np.max(delta[:-1]))
+            if gap > 2e-10*(1+float(np.max(abs(state[:-1])))):
+                raise ValueError('Actual dense/sparse physical or observer states disagree')
+            physical_gaps.append(float(np.max(delta[:system.dof])))
+            observer_gaps.append(float(np.max(delta[system.dof:system.dof+8])))
+            clock_gaps.append(float(delta[system.dof+8]))
+            if clock_gaps[-1] > 2e-10:
+                raise ValueError('Actual dense/sparse reference proper clocks disagree')
+            if abs(float(dense_state[-1])-dense_phase_initial) > 2e-12:
+                raise ValueError('Dense auxiliary phase is not the producer dummy component')
+            reported_phase = row.get('observer_sampled_unwrapped_phase')
+            phase_report_gap = (abs(float(state[-1])-reported_phase)
+                                if reported_phase is not None else None)
+            if phase_report_gap is not None and phase_report_gap > 2e-12:
+                raise ValueError('Sparse sampled phase differs from its producer diagnostic')
+            phase_rows.append(dict(coordinate_t=float(t),
+                reference_observer_proper_duration=float(state[system.dof+8]),
+                dense_dummy=float(dense_state[-1]), sparse_sampled_phase=float(state[-1]),
+                dense_sparse_auxiliary_gap=float(delta[-1]), sparse_phase_report_gap=phase_report_gap))
             gaps.append(gap)
     endpoint = record['snapshots'][3]
     if not math.isclose(endpoint['observer_proper_duration'], .9, abs_tol=1e-12):
@@ -135,6 +160,14 @@ def load_original_parent(degree):
                     dense_sha256=file_sha256(dense_path), producer_commit=record['producer_commit'],
                     published_record_pin=published_row is not None,
                     published_summary_sha256=file_sha256(published_path), dense_sparse_maximum_gap=max(gaps),
+                    dense_sparse_compared_components='All physical coefficients and reference-observer point, four-velocity and proper clock: state[:-1]',
+                    dense_sparse_physical_maximum_gap=max(physical_gaps),
+                    dense_sparse_observer_point_velocity_maximum_gap=max(observer_gaps),
+                    dense_sparse_reference_clock_maximum_gap=max(clock_gaps),
+                    auxiliary_phase=dict(index=system.dof+9,
+                        role='Producer-owned sampled unwrapped observer phase; NOT physical field, proper clock or work ledger',
+                        producer='nsc_atlas_parent_gh.observer_rhs returns0; evolve_parent assigns state[-1]=before_phase+partial only to the sparse-copy state before state_sink',
+                        used_by_readout=False, values=phase_rows),
                     source_sha256=record['source_sha256']),
                 reference_observer_initial_point=history.evaluate(0.)[system.dof:system.dof+4].tolist(),
                 reference_observer_initial_velocity=history.evaluate(0.)[system.dof+4:system.dof+8].tolist())
