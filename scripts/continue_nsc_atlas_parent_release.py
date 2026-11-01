@@ -34,6 +34,13 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def json_scalar(value):
+    """Preserve numeric types; never stringify unsupported scientific data."""
+    if isinstance(value, np.generic):
+        return value.item()
+    raise TypeError('unsupported JSON value: '+type(value).__name__)
+
+
 class Budget:
     def __init__(self, function, started, seconds):
         self.function, self.started, self.seconds, self.enabled = function, started, seconds, True
@@ -141,13 +148,14 @@ def run(args):
             quadrature_order=list(system.basis.quadrature_shape[:2]),
             original_requested_quadrature_order=data['history'].metadata.get('quadrature_order'),
             source_sha256=pins, producer_commit=commit, phase_dummy=float(state0[-1]))
+        raw_metadata = json.dumps(meta, allow_nan=False, sort_keys=True, default=json_scalar)
         history, saved = DenseGHHistory(), []
         solver = None; last_state, last_t = state0, t0
 
         def save_record():
             result['elapsed_seconds'] = time.perf_counter()-started
             temp = folder/'run.tmp'
-            temp.write_text(json.dumps(result, allow_nan=False, indent=2)+'\n', encoding='utf-8', newline='\n')
+            temp.write_text(json.dumps(result, allow_nan=False, indent=2, default=json_scalar)+'\n', encoding='utf-8', newline='\n')
             temp.replace(folder/'run.json')
 
         def checkpoint(t, state, sampled_phase, event):
@@ -155,7 +163,7 @@ def run(args):
             row['event'] = event
             # Reject a nonfinite diagnostic before it can poison the terminal
             # JSON; the exact accepted state is still preserved by finally.
-            json.dumps(row, allow_nan=False)
+            json.dumps(row, allow_nan=False, default=json_scalar)
             result['snapshots'].append(row); saved.append((float(t), state.copy()))
             save_record()
             print(json.dumps(dict(degree=args.degree, proper=row['observer_proper_duration'], event=event,
@@ -214,11 +222,12 @@ def run(args):
                 while targets and solver.y[system.dof+8] >= targets[0]:
                     target = targets.pop(0)
                     root = brentq(lambda t: dense(t)[system.dof+8]-target, solver.t_old, solver.t, xtol=2e-12)
-                    candidates.append((root, 'proper_endpoint' if target == args.proper_endpoint else 'proper_checkpoint', target == args.proper_endpoint))
+                    terminal = bool(target == args.proper_endpoint)
+                    candidates.append((root, 'proper_endpoint' if terminal else 'proper_checkpoint', terminal))
                 for t, event, terminal in sorted(candidates):
                     point = dense(t)
                     result['events'].append(dict(event=event, coordinate_t=float(t),
-                        proper=float(point[system.dof+8]), terminal=terminal,
+                        proper=float(point[system.dof+8]), terminal=bool(terminal),
                         accepted_coordinate_bracket=[float(solver.t_old), float(solver.t)]))
                     checkpoint(t, point, phase_at(t), event)
                     if terminal:
@@ -229,28 +238,36 @@ def run(args):
                     break
             if status == 'incomplete':
                 reason = 'coordinate allowance ended before requested proper endpoint'
-        except (TimeoutError, RuntimeError, ValueError, FloatingPointError) as exc:
+        except (TimeoutError, RuntimeError, ValueError, TypeError, FloatingPointError) as exc:
             reason = str(exc)
-            status = 'budget_stop' if isinstance(exc, TimeoutError) else 'numerical_stop'
+            status = ('budget_stop' if isinstance(exc, TimeoutError) else
+                      'export_stop' if isinstance(exc, TypeError) else 'numerical_stop')
         finally:
             if solver is not None:
                 last_t, last_state = float(solver.t), solver.y.copy()
-            if status != 'event_reached' and (not saved or last_t > saved[-1][0]+2e-12):
-                try:
-                    checkpoint(last_t, last_state, phase, 'accepted_endpoint_diagnostic')
-                except (RuntimeError, ValueError, FloatingPointError) as exc:
-                    result['accepted_endpoint_diagnostic_failure'] = str(exc)
-            controlled = [row['coordinate_t'] for row in result['snapshots'] if row['numerical_guard_passed']]
-            result.setdefault('physical_stop_coordinate_t', max(controlled) if controlled else t0)
+            # RAW FIRST: no diagnostic or public JSON call may prevent this.
             cache = folder/'states.npz'
             np.savez_compressed(cache, times=np.array([p[0] for p in saved]),
                 states=np.array([p[1] for p in saved]), accepted_endpoint=last_state,
-                accepted_endpoint_coordinate_t=last_t, metadata=json.dumps(meta, sort_keys=True))
+                accepted_endpoint_coordinate_t=last_t, metadata=raw_metadata)
             if history.bounds:
                 path = folder/'history.npz'; history.save(path, meta)
                 result['dense_history'] = dict(path=path.relative_to(ROOT).as_posix(), sha256=sha(path),
-                    coordinate_bounds=[history.bounds[0][0], history.bounds[-1][1]],
-                    unpromoted_tail_after=result.get('physical_stop_coordinate_t'))
+                    coordinate_bounds=[history.bounds[0][0], history.bounds[-1][1]])
+            if status != 'event_reached' and (not saved or last_t > saved[-1][0]+2e-12):
+                try:
+                    endpoint = snapshot(system, last_t, last_state, phase)
+                    json.dumps(endpoint, allow_nan=False, default=json_scalar)
+                    result['accepted_endpoint_diagnostic'] = endpoint
+                except (RuntimeError, ValueError, TypeError, FloatingPointError) as exc:
+                    result['accepted_endpoint_diagnostic_failure'] = str(exc)
+            controlled = [row['coordinate_t'] for row in result['snapshots'] if row['numerical_guard_passed']]
+            endpoint = result.get('accepted_endpoint_diagnostic')
+            if endpoint and endpoint['numerical_guard_passed']:
+                controlled.append(endpoint['coordinate_t'])
+            result.setdefault('physical_stop_coordinate_t', max(controlled) if controlled else t0)
+            if 'dense_history' in result:
+                result['dense_history']['unpromoted_tail_after'] = result['physical_stop_coordinate_t']
             result.update(status=status, stop_reason=reason, state_cache=cache.relative_to(ROOT).as_posix(),
                 state_cache_sha256=sha(cache), actual_last_accepted_coordinate_t=last_t,
                 actual_last_accepted_proper=float(last_state[system.dof+8]),
@@ -260,7 +277,19 @@ def run(args):
                 producer_source_unchanged_during_run=all(sha(ROOT/name)==digest for name, digest in pins.items()),
                 history_scope='Original prefix only through proper.9, new dense history thereafter through physical_stop; any later accepted tail is preserved but not promoted.',
                 event_scope='Finite event bracketing with five probes per accepted interval, not a theorem excluding missed substep double crossings. Bare-top crossing alone is not escape or a child.')
-            save_record()
+            try:
+                save_record()
+            except (TypeError, ValueError) as exc:
+                # A minimal terminal record names already-flushed raw bytes.
+                fallback = dict(schema='nsc-atlas-parent-release-export-error-v1', status='export_failure',
+                    export_error=str(exc), producer_commit=commit, source_sha256=pins,
+                    original_parent=data['provenance'], state_cache=result['state_cache'],
+                    state_cache_sha256=result['state_cache_sha256'], dense_history=result.get('dense_history'),
+                    actual_last_accepted_coordinate_t=last_t,
+                    actual_last_accepted_proper=float(last_state[system.dof+8]))
+                (folder/'run.json').write_text(json.dumps(fallback, allow_nan=False, default=json_scalar)+'\n',
+                    encoding='utf-8', newline='\n')
+                result['status'], result['export_error'] = 'export_failure', str(exc)
         print(json.dumps(dict(status=status, reason=reason, output=str(folder/'run.json'))), flush=True)
         return result
 
