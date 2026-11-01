@@ -1,0 +1,292 @@
+{
+  "schema": "nsc-atlas-valve-counterrotation-v1",
+  "repository_root_relative_to_record": "../..",
+  "provenance": {
+    "source_sha256_before": {
+      "scripts/check_nsc_atlas_valve_counterrotation.py": "2a429ad6d3f8ff89712651343755e32ad2fc0d1aed02eed9c0015345e1e2e3d8",
+      "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+      "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+      "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+      "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+      "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+      "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+      "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+      "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+      "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf",
+      "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+      "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+      "src/recursive_horizons/nsc_atlas_valve_counterrotation.py": "a7d105f2e6ee96af9b04a587d270dafcfa1793338fceeb173120f8a747591eff",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e"
+    },
+    "source_sha256_after": {
+      "scripts/check_nsc_atlas_valve_counterrotation.py": "2a429ad6d3f8ff89712651343755e32ad2fc0d1aed02eed9c0015345e1e2e3d8",
+      "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+      "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+      "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+      "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+      "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+      "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+      "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+      "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+      "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf",
+      "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+      "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+      "src/recursive_horizons/nsc_atlas_valve_counterrotation.py": "a7d105f2e6ee96af9b04a587d270dafcfa1793338fceeb173120f8a747591eff",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e"
+    },
+    "source_unchanged": true,
+    "git_parent_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+    "role": "Captured current working-tree solver sources; numeric state independently SHA-bound. No old source preset or historical result overwritten."
+  },
+  "raw_cache": {
+    "path": ".build/valve-counterrotation-v1/initial-data.npz",
+    "sha256": "238897350c1905790331ed3f13c91e07113bf7d2f063ad80f3ccc3198d32630b"
+  },
+  "preparation": {
+    "id": "one-mode-counterrotation-v1",
+    "A": 0.05366968539716552,
+    "A_squared": 0.0028804351306307217,
+    "kick_amplitude": 1.0,
+    "chi": "A*X1",
+    "momentum": "Pi_chi=lambda*f*psi^-6; f=H^1.5 sqrt12/pi X2X4",
+    "S": 0.0,
+    "Pi_S": 0.0,
+    "trace_K": 0.0,
+    "freely_specified_conformal_TT": 0.0,
+    "K_reference": "lambda*psi^-2*Abar; tensor(X) returns unit-lambda Abar in the original right frame.",
+    "status": "Declared same-action benchmark preparation, not selected by inheritance or fitted to observations."
+  },
+  "metadata": {
+    "preparation_id": "one-mode-counterrotation-v1",
+    "radial_degree": 40,
+    "angular_max_j": 8,
+    "mode_count": 275,
+    "quadrature_orders": [
+      141,
+      25,
+      49
+    ],
+    "solve_quadrature_points": 172725,
+    "lambda_path": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "stages": [
+      {
+        "lambda_value": 0.0,
+        "Newton_steps": 0,
+        "Krylov_iterations": 0,
+        "projected_residual_norm": 7.789162813687118e-12,
+        "analytic_finite_polynomial_psi_lower_bound": 0.43889261186771,
+        "sampled_psi_min": 0.6944981082955183,
+        "sampled_psi_max": 1.0839753463006794,
+        "accounting": {
+          "proper_volume": 232.73314848108703,
+          "total_proper_matter_energy": 143.43940674471418,
+          "normal_Pi_energy": 0.0,
+          "spatial_gradient_energy": 0.04272718316100837,
+          "scalar_mass_energy": 91.96660457568088,
+          "vacuum_energy": 51.4300749858723,
+          "normal_Pi_sample_max": 0.0,
+          "normal_Pi_volume_RMS": 0.0,
+          "integrated_KijKij": 0.0,
+          "shear_constraint_energy": 0.0,
+          "shear_volume_RMS": 0.0,
+          "shear_sample_max": 0.0
+        },
+        "elapsed_seconds": 0.1341893000062555
+      },
+      {
+        "lambda_value": 0.25,
+        "Newton_steps": 3,
+        "Krylov_iterations": 11,
+        "projected_residual_norm": 4.0136780211277966e-13,
+        "analytic_finite_polynomial_psi_lower_bound": 0.44201753677420597,
+        "sampled_psi_min": 0.6949879716899656,
+        "sampled_psi_max": 1.081607381210697,
+        "accounting": {
+          "proper_volume": 232.74362424962143,
+          "total_proper_matter_energy": 143.32655986533828,
+          "normal_Pi_energy": 0.22615483200426173,
+          "spatial_gradient_energy": 0.042788112680247466,
+          "scalar_mass_energy": 91.62522696776979,
+          "vacuum_energy": 51.43238995288399,
+          "normal_Pi_sample_max": 0.1711621031131715,
+          "normal_Pi_volume_RMS": 0.044083801386444126,
+          "integrated_KijKij": 0.0002910588266427719,
+          "shear_constraint_energy": 0.00014552941332138594,
+          "shear_volume_RMS": 0.0011182824022308961,
+          "shear_sample_max": 0.002834656404467375
+        },
+        "elapsed_seconds": 0.8514909999794327
+      },
+      {
+        "lambda_value": 0.5,
+        "Newton_steps": 3,
+        "Krylov_iterations": 14,
+        "projected_residual_norm": 4.890825901672188e-13,
+        "analytic_finite_polynomial_psi_lower_bound": 0.45090212270221863,
+        "sampled_psi_min": 0.6963579251081204,
+        "sampled_psi_max": 1.0748195267323117,
+        "accounting": {
+          "proper_volume": 232.74573995475077,
+          "total_proper_matter_energy": 143.00096625998822,
+          "normal_Pi_energy": 0.8871844813320815,
+          "spatial_gradient_energy": 0.042959655841855744,
+          "scalar_mass_energy": 90.63796463501247,
+          "vacuum_energy": 51.43285748780181,
+          "normal_Pi_sample_max": 0.3329244819595275,
+          "normal_Pi_volume_RMS": 0.08731343934610823,
+          "integrated_KijKij": 0.00114922517621515,
+          "shear_constraint_energy": 0.000574612588107575,
+          "shear_volume_RMS": 0.0022220902585134436,
+          "shear_sample_max": 0.0055570411214401726
+        },
+        "elapsed_seconds": 1.0608585999871138
+      },
+      {
+        "lambda_value": 0.75,
+        "Newton_steps": 3,
+        "Krylov_iterations": 15,
+        "projected_residual_norm": 6.434367584387002e-13,
+        "analytic_finite_polynomial_psi_lower_bound": 0.4643168815572066,
+        "sampled_psi_min": 0.6983578486855425,
+        "sampled_psi_max": 1.0644025813956415,
+        "accounting": {
+          "proper_volume": 232.66425401213132,
+          "total_proper_matter_energy": 142.49481251440096,
+          "normal_Pi_energy": 1.9388842712585848,
+          "spatial_gradient_energy": 0.043213510040916905,
+          "scalar_mass_energy": 89.09786425533049,
+          "vacuum_energy": 51.414850477770955,
+          "normal_Pi_sample_max": 0.4788096966106016,
+          "normal_Pi_volume_RMS": 0.12909996050040512,
+          "integrated_KijKij": 0.002537125517509635,
+          "shear_constraint_energy": 0.0012685627587548174,
+          "shear_volume_RMS": 0.0033022210724890123,
+          "shear_sample_max": 0.008089131621165153
+        },
+        "elapsed_seconds": 1.016137600003276
+      },
+      {
+        "lambda_value": 1.0,
+        "Newton_steps": 3,
+        "Krylov_iterations": 18,
+        "projected_residual_norm": 3.454005356471999e-12,
+        "analytic_finite_polynomial_psi_lower_bound": 0.48079165360799736,
+        "sampled_psi_min": 0.7006879548111645,
+        "sampled_psi_max": 1.0512957698696157,
+        "accounting": {
+          "proper_volume": 232.40433699929758,
+          "total_proper_matter_energy": 141.84568589860385,
+          "normal_Pi_energy": 3.3274473424364444,
+          "spatial_gradient_energy": 0.043515574883021706,
+          "scalar_mass_energy": 87.11730975105374,
+          "vacuum_energy": 51.35741323023065,
+          "normal_Pi_sample_max": 0.6062151445355604,
+          "normal_Pi_volume_RMS": 0.16921874871918588,
+          "integrated_KijKij": 0.004411330813672757,
+          "shear_constraint_energy": 0.0022056654068363787,
+          "shear_volume_RMS": 0.0043567505990901294,
+          "shear_sample_max": 0.010398872776713381
+        },
+        "elapsed_seconds": 1.1138837000180501
+      }
+    ],
+    "branch_completed": true,
+    "initial_radial_block_Jacobian_minimum_absolute_eigenvalue": 14.015363676874175,
+    "York": {
+      "kernel_dimension": 10,
+      "source_coefficient_norm": 0.0019265493955618464,
+      "CKV_charge_norm": 3.7436114472125417e-19,
+      "CKV_charge_over_source_norm": 1.9431691997291247e-16,
+      "divergence_residual_coefficient_norm": 4.708635028728083e-18,
+      "trace_coefficient_norm": 2.71068875072059e-19,
+      "tensor_reference_L2_norm_squared": 0.0008431273663617,
+      "vector_reference_L2_norm_squared": 0.0010745944111645099,
+      "integration_by_parts_residual": 0.0,
+      "minimum_nonzero_absolute_eigenvalue": 0.36830504035434425,
+      "TT_choice": "Zero freely specified conformal TT datum; Abar has minimal round-reference L2 norm among tracefree tensors with this divergence. No physical radiation-state selection is claimed.",
+      "source_projection_L2_residual": 1.445955150916568e-17,
+      "closed_inverse_relative_difference": 1.360590144427399e-15,
+      "source_annihilator_roundoff": 1.9134481882714205e-11,
+      "source": "chi=A X1,f=H^1.5 sqrt12/pi X2 X4",
+      "maximum_source_polynomial_degree": 3,
+      "maximum_Q_polynomial_degree": 6
+    },
+    "coefficient_change_from_neck": 0.04042703462401013,
+    "source_symmetry": "psi even under all four coordinate sign flips; l,j,m all even and cosine modes.",
+    "exact_CKV_compatibility": "All six integrals X2X4*(Xa delta_b1-Xb delta_a1) and four integrals X2X4*(delta_a1-XaX1) vanish by odd sphere moments.",
+    "constraint": "-8Delta_gamma psi+[6-a(1-X1\u00b2)]psi-[6+a*z*X1\u00b2]psi5-lambda\u00b2Q psi^-7=0; Q=(|Abar|\u00b2+kappa f\u00b2)/H\u00b2.",
+    "scope": "Declared finite initial preparation, not evolution or inherited state selection; residuals are numerical estimates, not a continuum existence certificate.",
+    "independent_validation": {
+      "orders": [
+        221,
+        43,
+        89
+      ],
+      "quadrature_points": 845767,
+      "full_conformal_residual_RMS": 1.633248613696265e-05,
+      "full_conformal_residual_sample_max": 0.00011572186162500664,
+      "physical_Hamiltonian_RMS_over_H_squared": 6.657766842625503e-05,
+      "physical_momentum_RMS_over_H_squared": 1.5060046618136044e-16,
+      "sampled_psi_min": 0.7006879548111645,
+      "sampled_psi_max": 1.0514892584429778,
+      "accounting": {
+        "proper_volume": 232.40433699929545,
+        "total_proper_matter_energy": 141.84568589860146,
+        "normal_Pi_energy": 3.3274473424364657,
+        "spatial_gradient_energy": 0.04351557488302178,
+        "scalar_mass_energy": 87.11730975105183,
+        "vacuum_energy": 51.3574132302302,
+        "integrated_KijKij": 0.004411330813672763,
+        "shear_constraint_energy": 0.0022056654068363813
+      },
+      "momentum_source": "Independently evaluated divbarA+kappa*f*H*A*(X4,-X3,X2), not subtraction of projected source coefficients.",
+      "scope": "Independent full rational constraint residuals, including omitted angular harmonics; numerical estimates, not interval-certified."
+    },
+    "elapsed_seconds": 7.898407500004396
+  },
+  "prototype_comparison": {
+    "available": true,
+    "required_for_reproduction": false,
+    "record_sha256": "293ea80ffc8861fa99e0b54b973190ab3a92900e295f19687c1a150a6d4b7cbc",
+    "raw_cache_sha256": "cb581dc99811a1e6e69f35e3e41b1db3961ab709ccaa0438c1b90218714e42c8",
+    "coefficient_L2_difference": 0.0,
+    "tensor_L2_difference": 0.0,
+    "full_Hamiltonian_RMS_difference": 8.538092108323347e-19,
+    "total_proper_matter_energy_difference": 0.0,
+    "passed": true
+  },
+  "verdict": {
+    "finite_amplitude_branch_completed": true,
+    "positive_finite_polynomial_bound": true,
+    "physical_constraints_are": "Independent full residual estimates in metadata, not the tiny projected Newton residual.",
+    "evolution_computed": false,
+    "horizon_or_child_proved": false,
+    "SI_scale_selected": false,
+    "next": "Use this explicit source/data API in a coupled formation test; legacy mixed-source initializers must not replacechi."
+  },
+  "compute": {
+    "elapsed_seconds": 8.344030099979136,
+    "BLAS_threads": 6,
+    "raw_arrays_committed": false
+  },
+  "reproduction": "python scripts/run_python.py scripts/check_nsc_atlas_valve_counterrotation.py --output results/summaries/nsc-atlas-valve-counterrotation-v1.json",
+  "production_roundtrip_check": {
+    "authenticated_load": true,
+    "psi_max_difference": 0.0,
+    "tensor_max_difference": 0.0,
+    "f_max_difference": 0.0,
+    "chi_max_difference": 0.0
+  }
+}

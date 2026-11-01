@@ -7,10 +7,10 @@
   "goal_status": "active",
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
-  "current_calculation": "Canonical counterrotation after the completed signed-source checkpoint",
-  "completed": "Balanced chiral-invariant Gaussian contact cancels; a local coherent Gaussian control is nonzero without being selected. Exact stress/radion Ward and chirality-inheritance laws are derived. The proper-chart Dirac operator recovers the old diagonal and finds71.579% unequal-mode squared coefficient norm.169 focused tests pass. No regular expanding child.",
-  "active": "Test chi=A X1 with conformal scalar momentum proportional to existing Y2=X2 X4. First derive all ten compact-parent conformal-Killing charges and local countercirculation; then complete York and finite Hamiltonian constraints before any new evolution. Same scalar action, explicitly changed initial preparation; no fitted state or quantum parameter.",
-  "continuation": "The signed Gaussian/operator checkpoint is complete:252-page working-2026-11-01.01,169 focused tests, retained and current publication checks. Use git log for the saved checkpoint. Quantum source remains conditional on full state/UV/renormalization and physicalg. Next is the canonical counterrotation constraint test in the existing action, not deeper spherical grids or extra pump orders. Full goal active16/50 work gates; regular child and empirical closures remain open.",
+  "current_calculation": "Coupled finite-amplitude canonical counterrotation formation test",
+  "completed": "Exact compact-parent momentum compatibility and York completion pass. The declaredlambda1 positive initial branch is solved; full physical Hamiltonian residual6.6578e-5H² and momentum1.51e-16H². GH24/32 initial controls preserve the actual one-mode field and counterflow. Eight source-data tests and three driver controls pass. No evolution/child result yet.",
+  "active": "Run the same lambda1 data at GHdegrees24/32,4threads each, target inflow-lobe geodesic proper2 with3600s budgets. Save actual dense states; monitor local/global constraints,gauge,energy work and closed-surface expansions. A numerical admission stop is not a physical endpoint. No further completed-algebra or PDF expansion before the formation result.",
+  "continuation": "The previous signed-source checkpoint is saved atcb9bb051. Userclarification: rethinking reviews assumptions/choices, notautomaticdirection changes. Currentcounterrotation data and runner are ready for commit and paired coupled evolution. Inspect liveexec handles/processes before restarting; .build run directories own live status. Overall16/50 work gates remains unchanged until a physical gate is met.",
   "items": [
     {
       "id": "dimensions_inputs",
@@ -425,7 +425,8 @@
     "results/summaries/nsc-atlas-valve-dirac-modes-v1.json",
     "results/summaries/nsc-atlas-valve-dirac-onset-v1.json",
     "results/summaries/nsc-atlas-valve-gaussian-source-v1.json",
-    "results/summaries/nsc-atlas-valve-dirac-source-v1.json"
+    "results/summaries/nsc-atlas-valve-dirac-source-v1.json",
+    "results/summaries/nsc-atlas-valve-counterrotation-v1.json"
   ],
   "intermediate_results": {
     "internal_release_critical_loading": 0.3750793338270073,
@@ -471,8 +472,10 @@
       20,
       24
     ],
-    "pending_local_producers": [],
-    "next_step": "Test chi=A X1 with conformal scalar momentum proportional to existing Y2=X2 X4. First derive all ten compact-parent conformal-Killing charges and local countercirculation; then complete York and finite Hamiltonian constraints before any new evolution. Same scalar action, explicitly changed initial preparation; no fitted state or quantum parameter.",
+    "pending_local_producers": [
+      "Paired GH24/32 formation runs, source-bound to the upcoming code checkpoint."
+    ],
+    "next_step": "Run the same lambda1 data at GHdegrees24/32,4threads each, target inflow-lobe geodesic proper2 with3600s budgets. Save actual dense states; monitor local/global constraints,gauge,energy work and closed-surface expansions. A numerical admission stop is not a physical endpoint. No further completed-algebra or PDF expansion before the formation result.",
     "completed_outputs": [
       "results/summaries/nsc-atlas-valve-formation-early-v1.json",
       "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
@@ -491,7 +494,8 @@
       "results/summaries/nsc-atlas-valve-dirac-modes-v1.json",
       "results/summaries/nsc-atlas-valve-dirac-onset-v1.json",
       "results/summaries/nsc-atlas-valve-gaussian-source-v1.json",
-      "results/summaries/nsc-atlas-valve-dirac-source-v1.json"
+      "results/summaries/nsc-atlas-valve-dirac-source-v1.json",
+      "results/summaries/nsc-atlas-valve-counterrotation-v1.json"
     ],
     "one_mode_spherical_degrees": [
       24,

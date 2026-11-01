@@ -47,6 +47,24 @@ and the physical energy accounting are checked. This relaxes the exact
 SO3/reflection assumptions of the completed contracting neck; it does
 not assume rotation guarantees a child.
 
+The [finite counterrotation data](../results/summaries/nsc-atlas-valve-counterrotation-v1.json)
+now reaches the declared lambda1 preparation on one positive continuation
+branch. Independent full constraints give Hamiltonian RMS/H²=6.6578e-5
+and momentum RMS/H²=1.51e-16; the finite-polynomial positive lower bound
+is .48079. Total proper matter energy is141.84569, including3.32745
+normal-momentum energy. Shear is accounted for separately. These are
+finite numerical initial data, not a future-formation result.
+
+The coupled test uses the explicit adapter in
+`scripts/evolve_nsc_atlas_valve_counterrotation.py`, the unchanged GH
+equations at degrees24/32 and four threads per run. Target proper duration2
+belongs to the declared initially normal inflow-lobe geodesic, with3600s
+per-run budgets. Actual dense states, local/global constraints, gauge,
+normal-energy work and surface expansions are retained under `.build`.
+The two resolutions supply an empirical comparison, not a certified
+convergence order. The finished algebra and manuscript/PDF expansion
+remain frozen before this formation test produces its result.
+
 The old two-mode finite searches below found no admitted trap; their
 occupation was supplied rather than selected. Continuing that optimizer,
 adding an external pressure term, and changing the occupation are materially

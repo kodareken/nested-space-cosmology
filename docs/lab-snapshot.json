@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff",
+  "current_receipt_commit_parent": "cb9bb051227c567ed50691ab1e3537ab84f92867",
   "files": [
     {
       "bytes": 3197,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 21278,
-      "change": "Record signed Gaussian state inheritance, the complete proper-chart Dirac source operator and the reviewed working atlas.",
-      "changed_from_commit": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff",
+      "bytes": 21435,
+      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
+      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "c509e8c4884aa3d0b8e53456f7521ce2e85ae80056d87c136e767879e71c830c"
+      "sha256": "a9d26fb533650147eda2e031eec93015478bb95be69592e25d0d1f22e0c83b10"
     },
     {
       "bytes": 9543,
@@ -11197,12 +11197,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 46765,
-      "change": "Record signed Gaussian state inheritance, the complete proper-chart Dirac source operator and the reviewed working atlas.",
-      "changed_from_commit": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff",
+      "bytes": 47888,
+      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
+      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "4ff77a79fb1c2caf796dcd1e8c0bd50719f6f6a259e0e681e53fdff7d79b8b67"
+      "sha256": "ea5c19b951ed704ab2e9b4580eb7829f32d6478b5747118c752d72bf939cd78b"
     },
     {
       "bytes": 10730,
@@ -31938,6 +31938,14 @@
       "sha256": "3b816958d6e7ea2badb36fe903ba4326ae8bb1747b6750aa1b02bd4b1fa4d8bf"
     },
     {
+      "bytes": 15580,
+      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
+      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "path": "results/summaries/nsc-atlas-valve-counterrotation-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "9c91ca58afd6f23cd16e8387aa8fccc06a24092c7e1a46d889b861f6540592ee"
+    },
+    {
       "bytes": 26101,
       "change": "Record signed Gaussian state inheritance, the complete proper-chart Dirac source operator and the reviewed working atlas.",
       "changed_from_commit": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff",
@@ -33042,6 +33050,14 @@
       "path": "scripts/check_nsc_atlas_valve_conformal.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "93049d724e7307b52aff8edb89e3bbe2c9058e09c20c40654d70dfa233dff129"
+    },
+    {
+      "bytes": 7652,
+      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
+      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "path": "scripts/check_nsc_atlas_valve_counterrotation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2a429ad6d3f8ff89712651343755e32ad2fc0d1aed02eed9c0015345e1e2e3d8"
     },
     {
       "bytes": 8169,
@@ -35757,6 +35773,14 @@
       "sha256": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a"
     },
     {
+      "bytes": 20241,
+      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
+      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "path": "scripts/evolve_nsc_atlas_valve_counterrotation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "63ae638fab15ced123dfa725b42e876c2d8714b735ae938d88ca55a84c8ec3c2"
+    },
+    {
       "bytes": 4707,
       "import_bytes": 4847,
       "import_sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c",
@@ -38195,6 +38219,14 @@
       "path": "src/recursive_horizons/nsc_atlas_trapped_surfaces.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841"
+    },
+    {
+      "bytes": 18347,
+      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
+      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "path": "src/recursive_horizons/nsc_atlas_valve_counterrotation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a7d105f2e6ee96af9b04a587d270dafcfa1793338fceeb173120f8a747591eff"
     },
     {
       "bytes": 19811,
@@ -41532,6 +41564,14 @@
       "sha256": "b05666668b3330df4f129f328cff212cd620c7697dd23176061387394a6ba58b"
     },
     {
+      "bytes": 3587,
+      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
+      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "path": "tests/test_counterrotation_gh_driver.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "4790c35d93edcfeb485c6bd1d57032f3284733322641d74b1147288b3688eea7"
+    },
+    {
       "bytes": 12253,
       "change": "Bounded terminal transport recorder with compact output and explicit numerical gates.",
       "changed_from_commit": "ee09c74f442ebe6663f414154f92764733513bcd",
@@ -43369,6 +43409,14 @@
       "path": "tests/test_nsc_atlas_valve_conformal.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "5d267694c9b24fa0cbbc29dbc8937f216bdf2591607d7779dc7b317e1a214e94"
+    },
+    {
+      "bytes": 9325,
+      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
+      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "path": "tests/test_nsc_atlas_valve_counterrotation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a00d8788bf74406bdcea93e1f44a3e934cec0b035ec482e6589e2b82900825b2"
     },
     {
       "bytes": 4587,
