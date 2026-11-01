@@ -131,3 +131,29 @@ def shape_mass_squared(s):
 
 
 def shape_threshold():return math.log(5/4)/10
+
+
+@dataclass(frozen=True,slots=True)
+class IntegerFluxEmbedding:
+    period_unit_squared: F
+    integer_periods: tuple
+    squared_integer_norm: int
+    reduced_flux_energy: F
+    weighted_vertex_degrees: tuple
+    equal_radius_shape_acceleration_coefficients: tuple
+
+
+def integer_flux_embedding(period_unit_squared,integer_periods):
+    """Conditional compact charge lattice; the wrapping vector is input.
+
+    Eflux=unit²*sum(Nij²)/2. At beta=beta_dot=0, the constrained shape
+    equation gives beta_i''=unit²(degree_i-sum(N²)/2)*exp(-24s).
+    This is initial forcing, not a nonlinear history or a selected embedding.
+    """
+    unit=F(period_unit_squared);periods=tuple(integer_periods)
+    if unit<=0 or len(periods)!=6 or any(isinstance(v,bool) or not isinstance(v,int) for v in periods):
+        raise ValueError('positive squared period unit and six integer pair periods required')
+    norm=sum(v*v for v in periods);degrees=[0]*4
+    for (i,j),v in zip(PAIRS,periods):degrees[i]+=v*v;degrees[j]+=v*v
+    force=tuple(unit*(F(v)-F(norm,2)) for v in degrees)
+    return IntegerFluxEmbedding(unit,periods,norm,unit*norm/2,tuple(degrees),force)

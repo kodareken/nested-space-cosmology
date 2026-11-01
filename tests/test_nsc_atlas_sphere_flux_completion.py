@@ -10,7 +10,7 @@ import pytest
 from recursive_horizons.nsc_atlas_parent_scale_selector import VolumeParent
 from recursive_horizons.nsc_atlas_sphere_flux_completion import (
     action_reduction_record,flux_components,flux_stress_check,
-    shape_potential,scalar_mass_squared,shape_mass_squared,shape_threshold,
+    shape_potential,scalar_mass_squared,shape_mass_squared,shape_threshold,integer_flux_embedding,
 )
 
 
@@ -116,3 +116,25 @@ def test_shape_threshold_and_trace_condition_are_not_fitted_or_projected():
     with pytest.raises(ValueError,match=r'sum\(beta\)=0'):shape_potential(0.,[.01,0.,0.,0.])
     with pytest.raises(ValueError,match='four finite'):shape_potential(0.,[0.,0.,0.])
     with pytest.raises(ValueError,match='finite breathing'):shape_mass_squared(float('nan'))
+
+
+def test_same_effective_charge_and_energy_do_not_select_the_wrapping_vector():
+    diagonal=integer_flux_embedding(F(1,96),(5,)*6)
+    pair=integer_flux_embedding(F(1,16),(5,0,0,0,0,0))
+    assert diagonal.reduced_flux_energy==pair.reduced_flux_energy==F(25,32)
+    assert F(1,96)*6==F(1,16)
+    assert diagonal.equal_radius_shape_acceleration_coefficients==(F(0),)*4
+    assert pair.equal_radius_shape_acceleration_coefficients==(F(25,32),F(25,32),F(-25,32),F(-25,32))
+    assert sum(pair.equal_radius_shape_acceleration_coefficients)==0
+    # A primitive-cycle unit of1/4 cannot give an exactly isotropic25-norm
+    # lattice vector: each degree is integer but isotropy would require25/2.
+    assert F(pair.squared_integer_norm,2).denominator==2
+
+
+def test_pair_shape_force_matches_independent_constrained_flux_gradient():
+    h=1e-5;basis=np.array([[1,1,1],[1,-1,-1],[-1,1,-1],[-1,-1,1]],float)/2
+    source=lambda z:float(F(25,32))*np.exp(-6*sum((basis@z)[:2]))
+    gradient=np.array([(source(h*np.eye(3)[i])-source(-h*np.eye(3)[i]))/(2*h) for i in range(3)])
+    force=-basis@gradient/3
+    expected=integer_flux_embedding(F(1,16),(5,0,0,0,0,0)).equal_radius_shape_acceleration_coefficients
+    np.testing.assert_allclose(force,list(map(float,expected)),rtol=7e-10,atol=2e-11)

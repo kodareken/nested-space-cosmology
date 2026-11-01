@@ -25,7 +25,7 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from continue_nsc_atlas_valve_directional import authentic_run
 from recursive_horizons.nsc_atlas_valve_spherical import SphericalValve,gegenbauer_jets
 from recursive_horizons.nsc_atlas_sphere_flux_completion import (
-    action_reduction_record,flux_stress_check,shape_mass_squared,shape_threshold,
+    action_reduction_record,flux_stress_check,shape_mass_squared,shape_threshold,integer_flux_embedding,
 )
 
 
@@ -119,6 +119,15 @@ def calculation(args):
     stress=flux_stress_check();action=asdict(action_reduction_record())
     action=json.loads(json.dumps(action,default=lambda v:str(v) if isinstance(v,Fraction) else v))
     minimum=min(rows,key=lambda r:r['first_four_eigenvalues'][0])
+    embeddings=[]
+    for name,unit,vector,step in (
+        ('diagonal_six_cycle',Fraction(1,96),(5,)*6,(1,)*6),
+        ('single_pair_cycle',Fraction(1,16),(5,0,0,0,0,0),(1,0,0,0,0,0))):
+        embedding=integer_flux_embedding(unit,vector)
+        payload=json.loads(json.dumps(asdict(embedding),default=str))
+        payload.update(name=name,inherited_step_norm_squared=str(unit*sum(v*v for v in step)),
+            initial_shape_accelerations=[float(v)*math.exp(-24*system.sstar) for v in embedding.equal_radius_shape_acceleration_coefficients])
+        embeddings.append(payload)
     return dict(schema='nsc-atlas-sphere-flux-completion-v1',
         scientific_owner='docs/nsc-atlas-valve-formation.md',
         action=action,exact_unit_flux=dict(norm_squared=str(stress.norm_squared),
@@ -129,6 +138,11 @@ def calculation(args):
             threshold_s=shape_threshold(),linear_channels=3,
             spatial_operator='A=-w^-1 d_u[p d_u]+m²(s); w=4pi sqrt(1-u²)q b²,p=w(1-u²)/q²',
             scope='Full radial parity; smooth poles. Higher external angular sectors add a nonnegative term. Frozen-slice operator, not physical seed/state selection or nonlinear growth.'),
+        inheritance_embedding_comparison=dict(examples=embeddings,
+            equal_reduced_T=all(x['reduced_flux_energy']=='25/32' for x in embeddings),
+            equal_inherited_step_norm=all(x['inherited_step_norm_squared']=='1/16' for x in embeddings),
+            missing_geometric_datum='Which internal six-cycle or combination is wrapped by the inherited unit charge.',
+            scope='Two conditional microscopic embeddings of the same effective flux unit and energy, with different initial shape forces. The actual trajectory probed here belongs only to the diagonal equal-flux completion; it is not reused as a single-pair history.'),
         origins=origins,slices=rows,
         verdict=dict(minimum_retained_ground_eigenvalue=minimum['first_four_eigenvalues'][0],
             at_proper_time=minimum['proper_time'],negative_trial_times=[r['proper_time'] for r in rows if r['independent_trial_Rayleigh']<0],
