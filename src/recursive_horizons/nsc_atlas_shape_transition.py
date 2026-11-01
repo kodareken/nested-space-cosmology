@@ -6,6 +6,7 @@ charge jump, incoming pulse or independently chosen exit state is inserted.
 Existence of a profile does not prove its full physical fluctuation index.
 """
 from dataclasses import dataclass
+from fractions import Fraction
 import math
 import time
 
@@ -232,3 +233,37 @@ def evolve_rolling_parent(*,initial_s,initial_v,efolds=40.,q=2.,tolerance=2e-10,
         rtol=tolerance,atol=tolerance/100,max_step=.1,dense_output=True)
     if not sol.success:raise RuntimeError(sol.message)
     return sol
+
+
+def flat_horizon_pp_record():
+    """Test the flat Nariai idea in the ACTUAL source, in an affine frame.
+
+    For ds16=-dT²+A(T)²dx³+b(T)²gamma12, an external affine null ray
+    has dT/dlambda=P/A. The internal unit screen is parallel transported,
+    and R(k,e_a,k,e_a)=-b''(lambda)/b. Finite scalar curvature does not
+    establish a C² extension. No numerical horizon fitting is performed.
+    """
+    from .nsc_atlas_sphere_flux_completion import all_volume_extrema,volume_thresholds
+    top=next(row for row in all_volume_extrema(1.5) if row['kind']=='maximum')
+    alpha=-3*top['canonical_mass_squared']/top['vacuum']
+    p=2*alpha/(math.sqrt(9+4*alpha)+3)
+    p1_threshold=Fraction(175,22)**5*Fraction(28,55)
+    reference_A5=Fraction(7)**5;merger_A5=volume_thresholds()['critical_A_fifth']
+    assert p1_threshold<reference_A5<merger_A5
+    product=p*(p-1);external_H2=math.exp(12*top['s'])*top['vacuum']/3
+    internal_section=(5/8)*math.exp(-2*top['s'])
+    return dict(q=1.5,barrier_s=top['s'],barrier_V=top['vacuum'],
+        minus_mass_squared_over_H_squared=alpha,departure_exponent=p,
+        exact_reference_A_fifth=reference_A5,exact_p1_threshold_A_fifth=p1_threshold,
+        exact_merger_A_fifth=merger_A5,certified_range='0<p<1',
+        affine_relation='d(lambda)=exp(-12s)*a_E*dt_E/P; s-stop=C_lambda*lambda^p+... ',
+        internal_pp_coefficient_per_C=-product,external_pp_coefficient_per_C=6*product,
+        pp_power=p-2,leading_null_Ricci_trace=12*(-product)+2*(6*product),
+        full_Ricci_limit=16+(25/56)*math.exp(-12*top['s']),
+        full_Kretschmann_limit=24*external_H2**2+48*internal_section**2,
+        departing_horizon_is_C2=False,finite_double_tidal_integral=True,
+        divergent_single_tidal_integral=True,
+        scope='Nonconstant, exactly homogeneous common-radius flat-patch departure only. '
+            'A finite-distortion pp null singularity is not a smooth classical horizon. '
+            'The exact static top is regular but has no transition; closed Cauchy '
+            'preparations are different solutions, not coordinate repairs of this one.')

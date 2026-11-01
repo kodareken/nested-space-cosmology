@@ -15,7 +15,7 @@ from scipy.optimize import brentq
 from scipy.special import eval_gegenbauer
 
 from .nsc_atlas_parent_scale_selector import VolumeParent
-from .nsc_atlas_valve_neck import solve_necks
+from .nsc_atlas_valve_neck import solve_necks,PocketInitialData
 
 
 def canonical_potential(S,chi,sstar):
@@ -48,16 +48,20 @@ class SphericalValve:
     Reflection projection is optional; spherical symmetry alone does not
     require equality of the two caps or their matter momenta.
     """
-    def __init__(self,modes=32,*,epsilon=1.,initial_degree=40,budget_seconds=60.,reflection_symmetry=True):
+    def __init__(self,modes=32,*,epsilon=1.,initial_degree=40,budget_seconds=60.,reflection_symmetry=True,initial_data=None):
         if isinstance(modes,bool) or not isinstance(modes,int) or not 12<=modes<=128:
             raise ValueError('integer modes in [12,128] required')
         if not isinstance(reflection_symmetry,(bool,np.bool_)):
             raise ValueError('boolean reflection_symmetry required')
         self.modes=modes
         self.reflection_symmetry=bool(reflection_symmetry)
-        self.initial_data=solve_necks(initial_degree,(epsilon,))[0]
+        if initial_data is not None and not isinstance(initial_data,PocketInitialData):
+            raise ValueError('supplied initial data must be a jointly constrained pocket preparation')
+        if initial_data is not None and initial_data.carrier_scale and reflection_symmetry:
+            raise ValueError('directed carrier momentum requires both reflection parities')
+        self.initial_data=solve_necks(initial_degree,(epsilon,))[0] if initial_data is None else initial_data
         self.parent=self.initial_data.parent;self.H=self.parent.H
-        self.kappa=self.parent.kappa;self.epsilon=float(epsilon)
+        self.kappa=self.parent.kappa;self.epsilon=float(epsilon if initial_data is None else initial_data.epsilon)
         self.sstar=next(x['s'] for x in VolumeParent().vacuum_roots() if x['kind']=='minimum')
         self.budget_seconds=float(budget_seconds)
         if not math.isfinite(self.budget_seconds) or self.budget_seconds<=0:
@@ -68,9 +72,11 @@ class SphericalValve:
         self.inverse=np.linalg.inv(Y);self.D=Yu@self.inverse;self.D2=Yuu@self.inverse
         self.weights=4*np.pi**2/(modes+1)*np.sin(angles)**2
         psi=self.initial_data.values(self.u)
-        self.initial=np.zeros((8,modes));self.initial[0]=psi**2/self.H
-        z=self.parent.mass_squared/self.H**2
-        self.initial[5]=self.epsilon*math.sqrt(24/(self.kappa*(z+3)))*self.u
+        if initial_data is None:
+            self.initial=np.zeros((8,modes));self.initial[0]=psi**2/self.H
+            z=self.parent.mass_squared/self.H**2
+            self.initial[5]=self.epsilon*math.sqrt(24/(self.kappa*(z+3)))*self.u
+        else:self.initial=initial_data.state_values(self.u)
         self.calls=0;self.started=None
 
     def potential(self,S,chi):

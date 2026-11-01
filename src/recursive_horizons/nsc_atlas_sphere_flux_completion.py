@@ -471,3 +471,21 @@ def wall_energy_jump(s,s_tangent):
         surface_first_law='dot(E_surface)-sigma*dot(area)=area*(F_child-F_parent)',
         scope='Material charged membrane only; not a surface stress at smooth horizon0. '
             'The two material fluxes need the actual bulk solution and wall trajectory.')
+
+
+def conditional_volume_barrier(chi):
+    """Instantaneous V_s=0 top at actual reference-sector massive field chi.
+
+    This is a force condition, not an evolved/prepared state. At the fold
+    there is no smooth static branch to reuse; dynamics must replace it.
+    Returns s and ds/dchi without differentiating stored samples.
+    """
+    values=np.asarray(chi,dtype=float)
+    if not np.all(np.isfinite(values)):raise ValueError('finite massive field required')
+    A=7+200*values*values;Ac=volume_thresholds()['critical_A']
+    if np.any(A>=Ac):raise ValueError('conditional equilibrium branch reaches its fold; a dynamical preparation is required')
+    turn=float(F(14,15))**.2
+    roots=np.array([brentq(lambda x:6*a-52.5*x+9.375*x**6,0,turn,xtol=5e-15)
+        for a in A.ravel()]).reshape(A.shape)
+    derivative=-52.5+56.25*roots**5
+    return _value(-.5*np.log(roots)),_value(1200*values/(roots*derivative))
