@@ -267,3 +267,120 @@ def flat_horizon_pp_record():
             'A finite-distortion pp null singularity is not a smooth classical horizon. '
             'The exact static top is regular but has no transition; closed Cauchy '
             'preparations are different solutions, not coordinate repairs of this one.')
+
+
+def critical_parent_response(carrier_scale=.25,budget_seconds=30.):
+    """Recompute the conditioned linear critical history and its weak CK root.
+
+    This uses the fixed global-de Sitter barrier background, not a nonlinear
+    critical solution or a natural/quantum state-selection rule. It inserts
+    no balanced perturbation, solves no Hamiltonian constraint and evolves
+    no GR Cauchy data. All returned coefficients multiply unnormalized U_l.
+    """
+    from scipy.special import eval_gegenbauer,roots_jacobi
+    from .nsc_atlas_parent_circulation import Parent
+    from .nsc_atlas_sphere_flux_completion import all_volume_extrema,combined_record
+
+    if (isinstance(carrier_scale,(bool,np.bool_)) or not math.isfinite(float(carrier_scale)) or
+        carrier_scale<0 or not math.isfinite(float(budget_seconds)) or budget_seconds<=0):
+        raise ValueError('finite nonnegative carrier scale and positive allowance required')
+    started=time.perf_counter();scale=float(carrier_scale)
+    model=combined_record();K=float(model.K);extrema=all_volume_extrema(1.5)
+    top=next(r for r in extrema if r['kind']=='maximum');low=next(r for r in extrema if r['kind']=='minimum')
+    H2=top['vacuum']/3;H=math.sqrt(H2);mu2=400*math.exp(-12*top['s'])
+    alpha=-top['canonical_mass_squared']/H2;p=(-3+math.sqrt(9+4*alpha))/2
+    retained=Parent.retained()
+    A=scale*math.sqrt(24/(retained.mass_squared/retained.H**2+3))
+    B=scale*retained.H**1.5*math.sqrt(12)/math.pi
+    initial=np.array([0.,A/2,0.,-B*math.sqrt(.6)/(12*H),0.,-B*math.sqrt(.6)/(4*H)])
+    def guard():
+        if time.perf_counter()-started>budget_seconds:raise TimeoutError('critical-parent linear-response allowance exhausted')
+    def carrier_rhs(T,y):
+        guard();return np.r_[y[3:],-3*np.tanh(T)*y[3:]-(mu2/H2+np.array([0,3,8])/np.cosh(T)**2)*y[:3]]
+    carrier=solve_ivp(carrier_rhs,(0.,12.),initial,method='DOP853',rtol=2e-11,atol=2e-13,max_step=.02,dense_output=True)
+    def unit_rhs(T,y):
+        guard();return [y[1],-3*math.tanh(T)*y[1]-mu2/H2*y[0]]
+    unit=solve_ivp(unit_rhs,(0.,12.),[0.,1/H],method='DOP853',rtol=2e-11,atol=2e-13,max_step=.02,dense_output=True)
+    if not carrier.success or not unit.success:raise RuntimeError('massive linear source history failed')
+    prefactor=6*mu2/(math.sqrt(K)*H2)
+    def source(T,index):
+        if index==2:return prefactor*unit.sol(T)[0:1]**2
+        q=carrier.sol(T)[:3]
+        if index==1:return 2*prefactor*unit.sol(T)[0]*q
+        a,b,c=q
+        return prefactor*np.array([a*a+b*b+c*c,2*b*(a+c),b*b+2*a*c+c*c,2*b*c,c*c])
+    audit_T=np.array([0.,.031,.113,.37,1.,2.,5.,10.,12.])
+    def response(channels,source_index,cutoff=12.,audit=False):
+        labels=np.array(channels);n=len(labels);eigen=labels*(labels+2)
+        def rhs(T,y):
+            guard();return np.vstack([y[n:],-3*np.tanh(T)*y[n:]-(eigen[:,None]/np.cosh(T)**2-alpha)*y[:n]+source(T,source_index)])
+        def jac(T,y):
+            out=np.zeros((2*n,2*n,len(T)))
+            for i in range(n):out[i,n+i]=1.;out[n+i,i]=alpha-eigen[i]/np.cosh(T)**2;out[n+i,n+i]=-3*np.tanh(T)
+            return out
+        def bc(a,b):return np.r_[[a[n+i] if l%2==0 else a[i] for i,l in enumerate(labels)],b[n:]+(3+p)*b[:n]]
+        def bcjac(a,b):
+            da=np.zeros((2*n,2*n));db=da.copy()
+            for i,l in enumerate(labels):da[i,n+i if l%2==0 else i]=1.;db[n+i,i]=3+p;db[n+i,n+i]=1.
+            return da,db
+        mesh=np.linspace(0.,cutoff,int(cutoff*60)+1)
+        sol=solve_bvp(rhs,bc,mesh,np.zeros((2*n,len(mesh))),fun_jac=jac,bc_jac=bcjac,tol=2e-9,max_nodes=30000)
+        if not sol.success:raise RuntimeError('critical response: '+sol.message)
+        check=np.linspace(0.,cutoff,4001);value=sol.sol(check);residual=sol.sol(check,1)-rhs(check,value)
+        info=dict(channels=labels.tolist(),cutoff=cutoff,nodes=len(sol.x),
+            max_scaled_ODE_residual=float(np.max(abs(residual)/(1+abs(rhs(check,value))))),
+            boundary_max=float(np.max(abs(bc(sol.sol(0.),sol.sol(cutoff))))),
+            maximum_tail_source=float(np.max(abs(source(np.array([cutoff]),source_index)))))
+        if audit:
+            value=sol.sol(audit_T);derivative=sol.sol(audit_T,1)
+            info['audit']=dict(z=value[:n].T.tolist(),z_T=value[n:].T.tolist(),
+                z_T_from_polynomial=derivative[:n].T.tolist(),z_TT=derivative[n:].T.tolist())
+        return sol.sol(0.),info
+    base,base_info=response(range(5),0,audit=True)
+    shorter,short_info=response(range(5),0,cutoff=10.)
+    first,first_info=response((0,1,2),1,audit=True)
+    second,second_info=response((0,),2,audit=True)
+    Sbar=math.sqrt(K)*(top['s']-low['s'])
+    S0=base[:5].copy();S0[0]+=Sbar;Pi0=H*base[5:]
+    S1=np.zeros(5);Pi1=np.zeros(5);S2=np.zeros(5)
+    S1[:3]=first[:3];Pi1[:3]=H*first[3:];S2[0]=second[0]
+    S0[[1,3]]=0.;S1[[1,3,4]]=0.;Pi0[[0,2,4]]=0.;Pi1[[0,2,3,4]]=0.
+    u,w=roots_jacobi(24,1.5,1.5);w/=sum(w)
+    Y=np.array([eval_gegenbauer(l,1,u) for l in range(5)])
+    DY=np.array([np.zeros_like(u) if l==0 else 2*eval_gegenbauer(l-1,2,u) for l in range(5)])
+    mean=lambda x:float(w@x)
+    C0=mean((Pi0@Y)*(S0@DY))
+    C1=mean((Pi1@Y)*(S0@DY)+(Pi0@Y)*(S1@DY));C2=mean((Pi1@Y)*(S1@DY))
+    linear=A+C1;discriminant=linear**2-4*C2*C0;d2=C1*C1-4*C2*C0;d1=2*A*C1
+    candidates=[0.,1.]
+    if d2>0 and 0<-d1/(2*d2)<1:candidates.append(-d1/(2*d2))
+    minimum_discriminant=min(A*A+d1*x+d2*x*x for x in candidates)
+    result=dict(model=dict(q=1.5,carrier_scale=scale,K=K,s_top=top['s'],sstar=low['s'],
+            V_top=top['vacuum'],mu2=mu2,alpha=alpha,p=p,canonical_S_bar=Sbar,source_prefactor=prefactor),
+        H=H,H2=H2,carrier_A=A,carrier_B=B,
+        normalization='Unnormalized U_l=C_l^1; canonical S=sqrt84(s-sstar), properPiS=H*z_T. Delta is constant proper/conformal initialPiChi; h0_T(0)=1/H.',
+        response_basis=dict(S0_U=S0.tolist(),Pi0_U=Pi0.tolist(),S1_U=S1.tolist(),Pi1_U=Pi1.tolist(),S2_U=S2.tolist()),
+        CK_coefficients=dict(C0=C0,C1=C1,C2=C2,A=A,linear=linear,discriminant=discriminant,
+            minimum_reduced_discriminant_along_carrier_scaling=minimum_discriminant),
+        controls=dict(full_source_interval=[-12.,12.],carrier_IVP_rtol=2e-11,carrier_IVP_atol=2e-13,
+            carrier_max_step=.02,BVP_tolerance=2e-9,BVP_max_nodes=30000,base=base_info,
+            shorter_base=short_info,first_response=first_info,second_response=second_info,
+            cutoff_initial_S_max_spread=float(np.max(abs(base[:5]-shorter[:5]))),
+            cutoff_initial_PiS_max_spread=float(H*np.max(abs(base[5:]-shorter[5:])))),
+        audit=dict(T=audit_T.tolist(),carrier_q=carrier.sol(audit_T)[:3].T.tolist(),
+            unit_q0=unit.sol(audit_T)[0].tolist(),carrier_initial=initial.tolist()),
+        root_selection='Weak branchdelta(lambda)=-2lambda^3C0/[A+lambda²C1+sqrt((A+lambda²C1)²-4lambda^4C2C0)], delta~-lambda³C0/A.',
+        scope='Bounded two-sided linear reference conditioning and source/CK closure, not natural/quantum state selection, exact nonlinear criticality, a joint Hamiltonian solve or a formed child.')
+    if scale and (discriminant<0 or minimum_discriminant<=0):
+        result.update(admitted=False,reason='No real continuous weak source/CK branch.')
+    else:
+        delta=-2*C0/(linear+math.sqrt(discriminant)) if scale and C0 else 0.
+        S=S0+delta*S1+delta**2*S2;Pi=Pi0+delta*Pi1
+        PiChi=np.array([-B*math.sqrt(.6)/12,0.,-B*math.sqrt(.6)/4]);PiChi[0]+=delta
+        result.update(admitted=True,delta_PiChi=delta,
+            other_root=(-linear-math.sqrt(discriminant))/(2*C2) if C2 else None,
+            canonical_S_critical_U=S.tolist(),canonical_PiS_critical_U=Pi.tolist(),updated_PiChi_conformal_U=PiChi.tolist(),
+            CK_polynomial_residual=C2*delta**2+linear*delta+C0,
+            CK_direct_weighted_residual=mean((Pi@Y)*(S@DY))+A*mean(PiChi@Y[:3]))
+    guard();result['elapsed_seconds']=time.perf_counter()-started;result['budget_seconds']=float(budget_seconds)
+    return result

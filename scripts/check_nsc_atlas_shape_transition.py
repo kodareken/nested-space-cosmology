@@ -24,6 +24,7 @@ from recursive_horizons.nsc_atlas_sphere_flux_completion import (
 from recursive_horizons.nsc_atlas_shape_transition import (
     solve_bounce,bounce_diagnostics,continue_pole,connecting_geometry,
     evolve_rolling_parent,
+    critical_parent_response,
 )
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -193,15 +194,58 @@ def rolling_calculation(folder):
             allowance='Each reduced history20s; complete calculation60s; two reduced and two independent bulk histories, bounded40Einstein e-folds.'))
 
 
+def critical_calculation(folder):
+    """One reference-history closure and its derived constrained Cauchy data."""
+    from recursive_horizons.nsc_atlas_closed_pocket import solve_critical_pocket_data
+    from recursive_horizons.nsc_atlas_parent_circulation import Parent
+    from threadpoolctl import threadpool_limits
+    Parent.retained()  # Hydrate the same immutable normalization dependencies.
+    started=time.perf_counter();source=pins()
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    with threadpool_limits(limits=1):
+        response=critical_parent_response(carrier_scale=.25,budget_seconds=30.)
+        data=solve_critical_pocket_data(40,carrier_scale=.25,compression=.01,
+            critical_record=response,budget_seconds=10.)
+    after=pins()
+    if any(after.get(name)!=digest for name,digest in source.items()):
+        raise RuntimeError('critical preparation sources changed during calculation')
+    bound=all(hashlib.sha256(subprocess.check_output(['git','show',commit+':'+name],cwd=ROOT)).hexdigest()==digest
+        for name,digest in after.items())
+    raw=folder/'reference-coefficients.npz'
+    np.savez_compressed(raw,canonical_S_U=np.asarray(response['canonical_S_critical_U']),
+        canonical_PiS_U=np.asarray(response['canonical_PiS_critical_U']),
+        PiChi_U=np.asarray(response['updated_PiChi_conformal_U']),
+        conformal_coefficients=data.coefficients,conformal_labels=data.labels,
+        S_coefficients=data.S_coefficients,S_labels=data.S_labels,
+        PiS_coefficients=data.momentum_S_coefficients,PiS_labels=data.momentum_S_labels,
+        York_coefficients=data.York_primitive_coefficients,York_labels=data.York_primitive_labels)
+    return dict(schema='nsc-atlas-critical-parent-v1',scientific_owner='docs/nsc-atlas-valve-formation.md',
+        response=response,joint_Cauchy=dict(positive_psi_lower_bound=data.positivity_lower_bound,
+            continuation=data.continuation,compression=.01,balanced_mode='PiS contribution=-sqrt84*.01*U2/3',
+            carrier_scale=.25,carrier_correction_reapplied=False,
+            scope='Full nonlinear initial constraints on the conditioned reference coefficients; no GR history is calculated here.'),
+        verdict=dict(reference_history_CK_closure_admitted=bool(response['admitted']),
+            positive_joint_Cauchy_data_constructed=True,phase_fixed_within_reference_closure=True,
+            nonlinear_criticality_proved=False,natural_preparation_selected=False,
+            formed_child_proved=False,SI_scale_selected=False,full_goal_achieved=False),
+        provenance=dict(producer_commit=commit,source_sha256=after,source_unchanged=True,
+            source_bound_to_commit=bound,raw_cache=raw.relative_to(ROOT).as_posix(),raw_cache_sha256=sha(raw)),
+        compute=dict(threads=1,elapsed_seconds=time.perf_counter()-started,
+            allowance='30s reference response plus10s joint constraint solve; no nonlinear GR evolution.'))
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--raw-directory',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
-    parser.add_argument('--rolling-parent',action='store_true',help='Evaluate the derived q2 parent limit and declared histories, not the frozen shape bounce')
+    mode=parser.add_mutually_exclusive_group()
+    mode.add_argument('--rolling-parent',action='store_true',help='Evaluate the derived q2 parent limit and declared histories, not the frozen shape bounce')
+    mode.add_argument('--critical-parent',action='store_true',help='Recompute bounded carrier history, weak CK phase and joint initial constraints only')
     args=parser.parse_args();folder=(ROOT/args.raw_directory).resolve();out=(ROOT/args.output).resolve()
     if not folder.is_relative_to(ROOT/'.build') or folder.exists() or not out.is_relative_to(ROOT) or out.exists():
         raise ValueError('fresh raw directory under .build and fresh in-repository summary required')
-    folder.mkdir(parents=True);result=rolling_calculation(folder) if args.rolling_parent else calculation(folder)
+    folder.mkdir(parents=True)
+    result=critical_calculation(folder) if args.critical_parent else (rolling_calculation(folder) if args.rolling_parent else calculation(folder))
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(result,indent=2,allow_nan=False,default=plain)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(dict(output=str(out),verdict=result['verdict'],compute=result['compute']),indent=2))
