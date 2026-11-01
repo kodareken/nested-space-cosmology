@@ -10,6 +10,7 @@ import math
 from pathlib import Path, PurePosixPath
 import re
 import subprocess
+import sys
 
 import numpy as np
 
@@ -146,16 +147,70 @@ def common_checkpoints(first, second):
     return out
 
 
+def fixed_surface_check(runs):
+    """Check only the predeclared measurement boundary at common proper1.2.
+
+    This is a readout of authenticated states, not a new horizon search.
+    """
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0,str(ROOT))
+    from scripts.parent_release_region import source_region
+    from recursive_horizons.nsc_atlas_parent_gh import ParentGH
+    from recursive_horizons.nsc_atlas_trapped_parent import GHSurfaceGeometry
+    from recursive_horizons.nsc_atlas_trapped_surfaces import round_surface,evaluate_surface
+    from threadpoolctl import threadpool_limits
+    rows=[]
+    with threadpool_limits(limits=4):
+        for run in runs:
+            with np.load(ROOT/run['state_cache']['path'],allow_pickle=False) as raw:
+                meta=strict_json(str(raw['metadata'])); times=raw['times']; states=raw['states']
+            candidates=[i for i,row in enumerate(run['scalar_rows'])
+                if row['numerical_guard_passed'] and abs(row['observer_proper_duration']-1.2)<2e-10]
+            if len(candidates)!=1:
+                raise ValueError('One guard-passing proper1.2 state is required')
+            index=candidates[0]
+            system=ParentGH(run['degree'],meta['epsilon'],gauge=meta['gauge'],
+                            backend=meta['backend'],quadrature_order=meta['quadrature_order'])
+            definition=source_region(system.parent)
+            surface=round_surface(definition['sampler_arguments']['anchor'],definition['sampler_arguments']['radius'])
+            provider=GHSurfaceGeometry(system,states[index],coordinate_t=float(times[index]),
+                provenance=dict(source_binding='SHA-authenticated terminal continuation state',
+                    state_cache_sha256=run['state_cache']['sha256']))
+            low=evaluate_surface(surface,provider,frame_scale=system.r,quadrature_order=(32,64))
+            high=evaluate_surface(surface,provider,frame_scale=system.r,quadrature_order=(40,80))
+            rows.append(dict(degree=run['degree'],proper=run['scalar_rows'][index]['observer_proper_duration'],
+                coordinate_t=float(times[index]),state_cache=run['state_cache'],
+                state_sha256=hashlib.sha256(states[index].tobytes()).hexdigest(),
+                region_definition=definition,nominal=low.summary(),higher_angular_order=high.summary(),
+                area_difference=abs(low.area-high.area),
+                scope='One fixed source-derived boundary only; no optimization, alternative surface search or all-surface nonexistence theorem.'))
+    paths=['scripts/summarize_nsc_atlas_parent_release.py','scripts/parent_release_region.py',
+        'src/recursive_horizons/nsc_atlas_trapped_surfaces.py','src/recursive_horizons/nsc_atlas_trapped_parent.py']
+    return dict(schema='nsc-atlas-parent-release-surface-v1',runs=rows,
+        source_sha256={name:sha(ROOT/name) for name in paths},
+        physical_child=dict(formation_proved=False,volume=None,energy=None,w=None))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--records', nargs=2, type=Path, default=[ROOT/f'.build/parent-release-continuation-L{n}-v3/run.json' for n in (20, 24)])
     parser.add_argument('--output', type=Path, default=ROOT/'results/summaries/nsc-atlas-parent-release-continuation-v1.json')
+    parser.add_argument('--surface-output',type=Path,help='Optional separate fixed-boundary check; does not rewrite the terminal summary')
     args = parser.parse_args(); output = (ROOT/args.output).resolve()
+    if args.surface_output:
+        output=(ROOT/args.surface_output).resolve()
     if output.exists() or not output.is_relative_to(ROOT/'results/summaries'):
         raise ValueError('fresh summary output under results/summaries required')
     runs = [read_terminal(path) for path in args.records]
     if [r['degree'] for r in runs] != [20, 24]:
         raise ValueError('explicit degree20 then degree24 terminal records required')
+    if args.surface_output:
+        result=fixed_surface_check(runs)
+        output.parent.mkdir(parents=True,exist_ok=True)
+        with output.open('x',encoding='utf-8',newline='\n') as stream:
+            stream.write(json.dumps(result,indent=2,allow_nan=False,default=json_scalar)+'\n')
+        print(json.dumps(dict(output=str(output),fixed_boundary_only=True)))
+        return
     result = dict(schema='nsc-atlas-parent-release-continuation-summary-v1', runs=runs,
         shared_proper_checkpoints=common_checkpoints(*runs),
         comparison_scope='Empirical same-proper checkpoint differences only; no off-clock event comparison or error enclosure.',
