@@ -10,6 +10,7 @@ import math
 import multiprocessing
 from pathlib import Path
 import subprocess
+import sys
 import time
 
 import numpy as np
@@ -19,6 +20,10 @@ from scipy.optimize import brentq
 from scipy.fft import set_workers
 from threadpoolctl import threadpool_limits
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0,str(ROOT))
+
 from scripts.check_nsc_atlas_parent_valve import load_original_parent
 from recursive_horizons.nsc_atlas_null_geometry import first_connection
 from recursive_horizons.nsc_atlas_null_parent import dense_history_jet
@@ -26,9 +31,6 @@ from recursive_horizons.nsc_atlas_parent_gh import PAIRS
 from recursive_horizons.nsc_atlas_parent_scale_selector import VolumeParent
 from recursive_horizons.nsc_atlas_s3_frame import arbitrary_points_values
 from recursive_horizons.nsc_atlas_trapped_parent import _first_geometry
-
-ROOT = Path(__file__).resolve().parents[1]
-
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
