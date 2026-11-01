@@ -562,5 +562,23 @@
     "arxiv_public_version": false,
     "owner": "paper/catalog.json",
     "note": "The work-gate score alone does not complete the programme or authorize publication."
+  },
+  "proposed_next_calculation": {
+    "status": "proposal_only_not_launched",
+    "owner": "docs/nsc-atlas-valve-formation.md#proposed-next-connection-parent-driven-release-before-collapse",
+    "decision": "Use actual parent-driven concentration and internal-size release before another nonlinear formation attempt; static fold and one-mode epsilon threshold are not original-parent trigger criteria.",
+    "reuse": [
+      "Original20/24 dense histories",
+      "Existing retarded volume feedback and scalar/metric response",
+      "Full matter-work and surface-expansion interfaces"
+    ],
+    "first_output": "Finite-time concentration gain, dynamical release margin, and whether inherited forcing outlasts escape time; no inferred physical seed.",
+    "compute_limits": {
+      "passive_seconds": 300,
+      "conditional_continuation_seconds_per_resolution": 1800,
+      "physical_cores_total": 8
+    },
+    "no_new_fields_or_supplied_states": true,
+    "child_not_promised": true
   }
 }

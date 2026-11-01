@@ -7,6 +7,70 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
+## Proposed next connection: parent-driven release before collapse
+
+This is the proposal requested after `6c4c7491`, not a launched campaign.
+The previous trap threshold belongs to different one-mode initial data;
+matching that amplitude is not the original parent's formation criterion.
+Comparing more supplied states does not select the parent's history.
+
+Three routes were compared: more old-neck conformal continuation, direct
+longer parent evolution, and a same-action concentration/release test.
+The third has the clearest early discriminator. The existing interaction
+mu(s)^2 chi^2/2 already forces the internal-size field. Local adiabatic
+loading is .7280212631 versus .3750793338 at the fold, but gradients,
+oscillation and dilution can prevent an actual escape. Reuse the completed
+retarded-volume and scalar/metric calculations; do not repeat their orders.
+
+1. Freeze the original two-mode Cauchy state and existing 20/24 histories.
+   Derive a finite-time concentration/release criterion from the coupled
+   equations, including metric response, gradients, expansion and transport.
+   A static Hessian, Jeans estimate or threshold crossing is not sufficient.
+2. First use the saved 0..0.9 anchor-clock window. Track the original source
+   extrema and predeclared surrounding regions, actual s/normal momentum,
+   external principal expansions and finite-time density concentration.
+   Separate material influx from geometric work. A region is an analysis
+   domain, not an assumed receiver; global compensated flux does not rule
+   out local accumulation. Limit this passive compute pass to300seconds.
+3. Identify whether the wave's actual forcing lasts long enough for release.
+   Any response/growth probes are mathematical controls, not supplied
+   physical seeds. A nonlinear trigger forecast requires the existing state's
+   actual projection onto the amplified sector. Report a gain, release
+   margin and available-versus-required duration; keep unresolved entries
+   explicit rather than inferring a collapse time from an eigenvalue alone.
+4. Only a resolved driver justifies continuing the SAME complete Cauchy
+   state, initially at two resolutions with at most1800seconds per run and
+   at most8 physical cores total. Add one third-resolution event check if
+   needed. Stop at the first physical discriminator or numerical admission
+   loss; no amplitude/frequency scan, extra field or tailored incoming pulse.
+
+A positive formation claim needs a common regular geometry with distinct
+regional evolution, actual parent supply and causal access. Internal volume
+growth alone is insufficient; a black-hole-child claim additionally needs
+an enclosing future-trapped surface. A persisting minimum-radius neck
+would face the existing obstruction again; track any neck-to-belly change
+before a pinch rather than assuming a new frame repairs that obstruction.
+The first deliverable is the release/growth decision, not a promised child.
+
+Implementation reuses `load_original_parent` in
+`scripts/check_nsc_atlas_parent_valve.py`, `ParentGH.jets/potential`,
+`matter_work` and `evaluate_surface`. Retarded-volume `solve_feedback` and
+the older `ParentModes` supply controls, not substitute background states.
+The current GH CLI initializes a new run; any later same-state continuation
+needs an explicit full-cache restart adapter before it is executable.
+No new physical parameter is introduced. A frozen diagnostic region and
+normalized response columns do not become a receiver or a physical seed.
+
+Failure forecast: (1) oscillatory or coordinate growth masquerades as physical
+concentration; use matched clocks, complete stress and cycle comparisons;
+(2) local loading exceeds its static fold but gradients/dilution prevent
+release; report that finite-window mechanism limit without supplying a new
+state; (3) release produces an obstructed collapse rather than a regular
+receiver, or resolution fails; distinguish those outcomes and retain the
+existing continuation constraints. A later converged same-state evolution
+that contradicts the forecast would falsify that forecast. No PDF changes
+or numerical evolution are authorized merely by recording this proposal.
+
 ## Current result: unchanged parent, conformal endpoint and loading threshold
 
 Douglas's latest instruction restricts the active calculation to these three

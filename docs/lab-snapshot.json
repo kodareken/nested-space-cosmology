@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "5b26bb6bb4a7536cfa1051d7a678321f9c4bb7df",
+  "current_receipt_commit_parent": "6c4c74919876a67d4507e067b7670f84de393061",
   "files": [
     {
       "bytes": 3197,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 22975,
-      "change": "Read the unchanged parent drive, split actual old-neck Weyl/Ricci curvature and explain the calibrated loading threshold; no new fields, states, GR runs or PDF growth.",
-      "changed_from_commit": "5b26bb6bb4a7536cfa1051d7a678321f9c4bb7df",
+      "bytes": 23965,
+      "change": "Record the proposed same-parent concentration and volume-release calculation, its prerequisites, limits and falsification test; no numerical campaign launched.",
+      "changed_from_commit": "6c4c74919876a67d4507e067b7670f84de393061",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "507c25d343f86b71b1ed3cc7cda1a8798410b569130c2382a51422e3fdaef3a1"
+      "sha256": "56547350179823b755c271126827094d5984cf8a1ba75f852d221a6a4e008e6e"
     },
     {
       "bytes": 9543,
@@ -11261,12 +11261,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 101027,
-      "change": "Read the unchanged parent drive, split actual old-neck Weyl/Ricci curvature and explain the calibrated loading threshold; no new fields, states, GR runs or PDF growth.",
-      "changed_from_commit": "5b26bb6bb4a7536cfa1051d7a678321f9c4bb7df",
+      "bytes": 105209,
+      "change": "Record the proposed same-parent concentration and volume-release calculation, its prerequisites, limits and falsification test; no numerical campaign launched.",
+      "changed_from_commit": "6c4c74919876a67d4507e067b7670f84de393061",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "291c6540dba580a95adb5db34ab9b9c3a505124b9d986f9c9745061f15dd7e3e"
+      "sha256": "284d0ed10b89ad80ee0c9b36e0a157c5b73cbdd9bb84361cb43500c6a99121c0"
     },
     {
       "bytes": 10730,

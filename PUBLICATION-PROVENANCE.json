@@ -1506,9 +1506,9 @@
       "sha256": "3db8971c9cadd0350ac60e5d165e2cab37678f88d8fdead475815abdb0464943"
     },
     {
-      "bytes": 22975,
+      "bytes": 23965,
       "path": "docs/atlas-progress.json",
-      "sha256": "507c25d343f86b71b1ed3cc7cda1a8798410b569130c2382a51422e3fdaef3a1"
+      "sha256": "56547350179823b755c271126827094d5984cf8a1ba75f852d221a6a4e008e6e"
     },
     {
       "bytes": 9543,
@@ -1786,9 +1786,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2763867,
+      "bytes": 2763851,
       "path": "docs/lab-snapshot.json",
-      "sha256": "8f66cc3ee91883e4cde6adf8a0e55014d5c44a29a1630ddd809a6dbfd5187c7f"
+      "sha256": "81cefe2954375ab5ae9b9c8cf7a505cff61493dd88af4e2e16db599a21fb631a"
     },
     {
       "bytes": 4997,
@@ -2186,9 +2186,9 @@
       "sha256": "577f15e685033c0e19a612e3d1492cca2a8b5e2c54fafc52ad47e8a7ae370b12"
     },
     {
-      "bytes": 101027,
+      "bytes": 105209,
       "path": "docs/nsc-atlas-valve-formation.md",
-      "sha256": "291c6540dba580a95adb5db34ab9b9c3a505124b9d986f9c9745061f15dd7e3e"
+      "sha256": "284d0ed10b89ad80ee0c9b36e0a157c5b73cbdd9bb84361cb43500c6a99121c0"
     },
     {
       "bytes": 10730,
@@ -25646,7 +25646,7 @@
       "sha256": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
     }
   ],
-  "lab_snapshot_sha256": "8f66cc3ee91883e4cde6adf8a0e55014d5c44a29a1630ddd809a6dbfd5187c7f",
+  "lab_snapshot_sha256": "81cefe2954375ab5ae9b9c8cf7a505cff61493dd88af4e2e16db599a21fb631a",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-11-01.01",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
