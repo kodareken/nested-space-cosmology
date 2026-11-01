@@ -1,12 +1,22 @@
 # Scientific strand index
 
+The [charged-parent join and regular shape transition](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
+now give one nonconstant profile, common Cauchy data and two Lorentzian
+continuations in the same smooth action. The derived interior expands
+finitely before recollapse, with zero incoming material flux and excessive
+curvature. It is an atlas construction, not yet a physical decay rate or
+lasting fed child. Its full negative-mode index and parent supply remain
+open; the completed finite evolution windows stay frozen.
+
 The [smooth sphere/flux completion](nsc-atlas-scale-selection.md#smooth-pair-flux-completion-and-its-shape-operator)
 replaces the averaged scalar stabilizer in one explicit higher-dimensional
 candidate. Exact flux stress, a consistent breathing reduction and the
 actual spatial shape operator are calculated. Two charge-cycle embeddings
 with the same reduced energy give different shape forces; deriving the
-geometric charge handoff remains the formation frontier. No child or SI
-scale is inferred from that completion.
+geometric charge handoff remains part of the formation frontier. The
+original scalar/top-form charge is now joined explicitly to that action;
+no selected charge transition, SI scale or stable child follows merely
+from matching the potentials.
 
 The active [valve/formation calculation](nsc-atlas-valve-formation.md)
 derives stabilization-loss and one-mode neck-trapping thresholds in the

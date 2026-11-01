@@ -7,7 +7,25 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
-## Current result: energy transfer and a controlled change of chart
+## Current result: a connected shape transition and its finite interior
+
+The [charged-parent join](nsc-atlas-scale-selection.md#executed-charged-parent-join-and-shape-transition)
+now restores the original scalar/top-form sector alongside the smooth
+six-form stabilizer. Its fixed-q=3/2 equations admit a regular, nonconstant
+profile when the internal radii vary independently. The same profile gives
+the connecting geometry and both Lorentzian pole states. The expanding
+interior starts with density .07054648474 and reaches scale3.86983365 at
+proper4.67265289 before its first turn toward recollapse. It remains strongly
+curved, min Omega_k=.97483298, so this branch fails the requested .002
+near-flatness bound. Incoming parent material flux is0. The finite
+construction is established numerically; a physical decay-state index,
+black-hole trigger and energy-fed lasting child remain open.
+
+This result and the directional material-transfer history below are
+different states. Their energies are not combined. Completed evolution
+windows remain frozen; there is no deeper horizon/GH or eta campaign.
+
+## Directional energy transfer and a controlled change of chart
 
 The directional preparation now has a [coupled evolution through proper2](../results/summaries/nsc-atlas-valve-directional-evolution-v1.json)
 and an [unchanged-state continuation through2.8](../results/summaries/nsc-atlas-valve-directional-evolution-v2.json).
@@ -101,7 +119,9 @@ Its three relative-radius fields have local mass squared below zero in
 parts of the driven geometry, but the lowest retained spatial eigenvalue
 stays positive: .13393326 at2.8, with degree difference4.29e-9. A local
 coefficient crossing is therefore not advertised as a global instability.
-There is no selected physical shape seed or nonlinear child.
+That driven history has no selected physical shape seed or nonlinear child.
+The separate regular boundary-value construction below derives its own
+state rather than transplanting a seed into this history.
 
 The calculation also gives a concrete inheritance ambiguity. Equal cycle
 flux and a single-pair cycle can match the same T=25/32 and effective
@@ -116,11 +136,131 @@ also has a different volume-dependent canonical normalization from the old
 top-form sector. Those identities must be connected explicitly.
 
 Topology and matching coefficients remain inputs; the old round-S12
-Dirac spectrum is not transferred to this product geometry. The next
-work joins the existing scalar/top-form handoff to the smooth stabilizer
-in one parent action, then derives its transition and driven shapes,
-not deeper precision on the completed finite evolution windows.
+Dirac spectrum is not transferred to this product geometry. The charged
+join and regular shape transition below advance that action-level connection;
+a sourced child receiving parent material remains the next formation target.
 The manuscript/PDF remains252pages; its expansion stays frozen.
+
+## Regular shape transition and derived exit
+
+The [source-bound calculation](../results/summaries/nsc-atlas-shape-transition-v1.json)
+uses the [existing source completion](../src/recursive_horizons/nsc_atlas_sphere_flux_completion.py)
+and [coupled transition solver](../src/recursive_horizons/nsc_atlas_shape_transition.py),
+committed at292c742a. The method borrows the Euclidean gravitational field
+equations and analytic continuation of [Coleman--De Luccia](https://doi.org/10.1103/PhysRevD.21.3305).
+[Dynamical compactification](https://arxiv.org/abs/0904.3115) supplies a
+related geometric precedent, not a source/state or stability theorem for
+this different product-flux action.
+
+At fixed q=3/2 the massive scalar is exactly phi_star and chi=0. In the
+invariant sector u=(a,b,b,b), write y=(a,b) and
+G=[[7.5,13.5],[13.5,49.5]]. The potential is the full four-radius potential
+restricted to these fields; no new coefficient is added. For Euclidean
+metric dxi²+R_E(xi)²dOmega3² the coupled equations are
+
+$$
+y''+3\frac{R_E'}{R_E}y'=G^{-1}\nabla V,\quad
+R_E''=-\frac{R_E}{3}(y'^TGy'+V),\quad
+R_E'^2=1+\frac{R_E^2}{3}\left(\frac12 y'^TGy'-V\right).
+$$
+
+Both poles are regular, R_E=0 and y'=0, with opposite unit radius slopes.
+The interval length and both pole fields are solved, not supplied exits.
+The numerical starting guess that converges to a constant Hawking--Moss
+profile is rejected; a second guess converges to a nonconstant profile.
+Those guesses are numerical solver settings, not fitted physical inputs.
+
+| Derived quantity, model units | Value |
+| --- | ---: |
+| Pole-to-pole length | 9.527744309 |
+| Interior pole (a,b) | (-.5113670617,.2725121203) |
+| Other pole (a,b) | (-.03678920523,-.03243210376) |
+| Interior exit density V | .07054648474 |
+| Compact on-shell action difference B*g | 291.4501763 |
+| Largest-radius equator | 3.398196836 |
+
+The coarse/fine pole-field spread is5.47e-10, length spread3.79e-9 and
+action spread5.00e-7. These are empirical refinement indicators, not
+certified total errors. The finest Euclidean constraint maximum is2.56e-10.
+On the common Cauchy cut, the unweighted Hamiltonian maximum is4.27e-4
+near the pole cutoff, relative maximum4.45e-4 and proper-volume RMS7.40e-9;
+the unweighted defect is retained rather than hidden by averaging.
+Two independent compact action formulas agree to3.66e-8. Sampled positive
+transverse masses and Q_min=.770536 do not prove the full scalar/metric
+negative-mode index or internal Kaluza--Klein stability. Accordingly the
+number B*g is not yet a decay-rate prediction or a lifetime selection.
+
+### Continuing through the coordinate zero
+
+Continuing a Euclidean angle gives the shared connecting chart
+
+$$
+ds_E^2=d\xi^2+R_E(\xi)^2[-dT^2+\cosh^2T\,d\Omega_2^2].
+$$
+
+Its T=0 Cauchy data have h=dxi²+R_E²dOmega2², K=0 and Pi=0. The constraint
+R3=y'^TGy'+2V follows from the same Euclidean equations; a new exterior
+or junction source is not inserted. At its equator R_E''=-.48831845<0:
+this is a spatial maximum, so the earlier NEC obstruction at a persistent
+spatial minimum does not apply. There
+
+$$
+\theta_+=\theta_-=\frac{2\tanh T}{R_{E,\mathrm{eq}}}.
+$$
+
+At T=-1,0,+1 the two expansions are respectively -.44823428,0,+.44823428.
+The marginal cut is regular. This is a connected contracting/expanding
+geometry, not a proved classical collapse history from the earlier parent.
+The wrapped screen has A14=V0*A2 and theta16=exp(6s)*theta_E, so area
+normalization and trapping signs agree in the complete internal frame.
+That identity does not create a new generation or an incoming energy flux.
+
+At either pole the open-region continuation has
+
+$$
+a(t)=t+V_0t^3/18+\cdots,\quad
+y(t)=y_0-G^{-1}\nabla V_0\,t^2/8+\cdots,\quad
+\rho=\tfrac12\dot y^TG\dot y+V,\quad p=\tfrac12\dot y^TG\dot y-V.
+$$
+
+Here V_0 denotes the potential at that pole, not the internal reference
+volume. The apparent a=0 endpoint is a regular Milne-type coordinate zero:
+Ricci tends to4V_0 and Kretschmann to8V_0²/3. Both are finite, as are the
+internal radii. This explicitly implements the break question by changing
+chart, with inherited fields and derivatives.
+
+The interior expands to a=3.86983365 at proper4.67265289, where rho=-.20032570
+and p=.53714178. Negative rho there must not be interpreted as NEC violation;
+rho+p=dot y^T G dot y>=0. The other pole approaches the original positive
+minimum over the declared proper0..10 window. The interior Friedmann
+constraint is below5.44e-15 and its integrated density/work balance below
+7.78e-16. Its smallest curvature fraction is .97483298: **this transient
+AdS-bound branch fails the .002 near-flatness target**. No cosmology fit is
+performed on it.
+
+Background fields depend only on xi in the connecting chart and are
+homogeneous in each open chart. Consequently their normal material flux
+is exactly0. The exit's .60519116 excitation above the known AdS minimum
+is geometric field energy, not old E0=3/8 massive-scalar matter, not the
+directional cap's .16633345 influx, and not the earlier88.47% crossing.
+Those other values remain attributed to their own states. The next useful
+connection is a physical parent transition/preparation that yields a lasting
+receiving state with actual incoming energy; no further decimals on this
+completed finite branch are needed.
+
+![One regular profile, internal radii, finite open-region expansion and regular marginal screen](figures/nsc-atlas-shape-transition.png)
+
+Reproduce in a fresh destination (about5.13seconds in the recorded run):
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_shape_transition.py --raw-directory .build/shape-transition-fresh --output .build/shape-transition-fresh.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_sphere_flux_completion.py tests/test_nsc_atlas_shape_operator.py tests/test_nsc_atlas_charged_parent_completion.py tests/test_nsc_atlas_log_radius_potential.py tests/test_nsc_atlas_symmetric_shape_branches.py tests/test_nsc_atlas_shape_transition.py
+```
+
+The41 focused tests cover the action join, independent derivatives, stationary
+branches, coupled equations, regular poles, refinement, common Cauchy data
+and Lorentzian constraints. Full arrays stay under.build; the compact record
+retains their hashes. No manuscript pages or historical runs are changed.
 
 ### Reproducing the continued window
 

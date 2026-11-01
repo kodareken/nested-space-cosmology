@@ -1,5 +1,15 @@
 # Active code and evidence map
 
+`nsc_atlas_shape_transition.py` uses the four-radius action and analytic
+derivatives in `nsc_atlas_sphere_flux_completion.py` to solve one regular
+fixed-charge profile in the invariant1+3 sector. `solve_bounce` supplies
+pole states; `continue_pole` evolves their open regions, and
+`connecting_geometry` checks their common Cauchy cut and null screens.
+`check_nsc_atlas_shape_transition.py` binds the coarse/fine calculation
+and zero-flux/recollapse verdict; `plot_nsc_atlas_shape_transition.py`
+renders its authenticated saved profile. The [formation owner](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
+separates this construction from a physical decay index or a fed child.
+
 `nsc_atlas_sphere_flux_completion.py` defines the explicit product-sphere
 six-form completion, its full shape potential and charge-cycle embeddings.
 `check_nsc_atlas_sphere_flux_completion.py` evaluates the frozen spatial

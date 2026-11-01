@@ -1,0 +1,1868 @@
+{
+  "schema": "nsc-atlas-shape-transition-v1",
+  "scientific_owner": "docs/nsc-atlas-valve-formation.md",
+  "charged_parent": {
+    "scalar_sector": {
+      "epsilon": 0.25,
+      "omega": 20.0,
+      "bare_density": 6.71875,
+      "kappa": 1.0
+    },
+    "bare_mass_squared": "100",
+    "mixing_squared": "300",
+    "LambdaBare": "215/32",
+    "q_reference": "3/2",
+    "phi_star_reference": -0.06495190528383289,
+    "B": "15/2",
+    "T": "25/32",
+    "K": "84",
+    "reference_volume": 2547058.1500690486,
+    "kappa16": 2547058.1500690486,
+    "scalar_normalization": "Phi=phi/sqrt(V0); chi=phi-phi_star(3/2) only in the reference sector",
+    "top_form_normalization": "qD=q/sqrt(V0); fixed-displacement Routhian gives (qD+sqrt(300)*Phi)^2/2",
+    "action": "Gravity (R16-2LambdaBare)/(2kappa16); canonical scalar bare mass\u00b2100 and F16 mixing\u00b2300, plus the same canonical F6. Matter/forms outside gravity prefactor.",
+    "scope": "Supplied charged parent completion, not a new preparation: replaces neutral Lambda7/mass20. F6 replaces the old T term once; no inherited state, SI, wrapping selection or child is derived.",
+    "overall_normalization": "The common quantum action factor1/g remains unspecified. kappa4=1 is the retained classical geometrized normalization, not a selection of kappa_nat/Lunit^2 or metres."
+  },
+  "volume_sector_boundaries": {
+    "minkowski_A_fifth": "1953125/128",
+    "critical_A_fifth": "229783203125/11943936",
+    "minkowski_A_exact": "(25/4)*(8/5)^(1/5)",
+    "critical_A_exact": "(175/24)*(14/15)^(1/5)",
+    "minkowski_A": 6.8660033956632365,
+    "critical_A": 7.19174304959709,
+    "turn_x_fifth": "14/15",
+    "minkowski_x_fifth": "8/5",
+    "positive_minimum_abs_q_interval": [
+      1.0853695984805782,
+      1.945236334427444
+    ]
+  },
+  "charge_lattice_classification": {
+    "step": "1/2",
+    "positive_vacuum_minimum_sectors": [
+      "-3/2",
+      "3/2"
+    ],
+    "negative_vacuum_minimum_abs_q_at_most": "1",
+    "no_volume_extrema_abs_q_at_least": "2",
+    "minkowski_fifth_power_bracket": [
+      "503756397099/33554432",
+      "1953125/128",
+      "16807"
+    ],
+    "merger_fifth_power_bracket": [
+      "16807",
+      "229783203125/11943936",
+      "657748550151/33554432"
+    ],
+    "scope": "Scalar-relaxed, common-radius volume sectors only; supplied couplings and q=n/2 lattice. Not a classification of all unequal-radius vacua or a selection of the inputs."
+  },
+  "stationary_volume_sectors": [
+    {
+      "q": 0.0,
+      "extrema": [
+        {
+          "q": 0.0,
+          "A": 6.71875,
+          "x": 0.8235828827041548,
+          "s": 0.09704554377542568,
+          "phi_star": -0.0,
+          "vacuum": 0.24518208525149549,
+          "vacuum_sign": "positive",
+          "stiffness": -32.060837562650356,
+          "canonical_mass_squared": -0.38167663765059945,
+          "kind": "maximum",
+          "polynomial_residual": 2.3092638912203256e-14
+        },
+        {
+          "q": 0.0,
+          "A": 6.71875,
+          "x": 1.119632922036336,
+          "s": -0.056500441701993274,
+          "phi_star": -0.0,
+          "vacuum": -0.27476366621158355,
+          "vacuum_sign": "negative",
+          "stiffness": 409.9741204459035,
+          "canonical_mass_squared": 4.88064429102266,
+          "kind": "minimum",
+          "polynomial_residual": -3.552713678800501e-15
+        }
+      ]
+    },
+    {
+      "q": 0.5,
+      "extrema": [
+        {
+          "q": 0.5,
+          "A": 6.75,
+          "x": 0.8296728440084545,
+          "s": 0.09336190986985826,
+          "phi_star": -0.021650635094610963,
+          "vacuum": 0.25515215438507344,
+          "vacuum_sign": "positive",
+          "stiffness": -32.89191978891477,
+          "canonical_mass_squared": -0.39157047367755676,
+          "kind": "maximum",
+          "polynomial_residual": -3.1086244689504383e-15
+        },
+        {
+          "q": 0.5,
+          "A": 6.75,
+          "x": 1.1155178717836731,
+          "s": -0.05465937804159884,
+          "phi_star": -0.021650635094610963,
+          "vacuum": -0.213873093912559,
+          "vacuum_sign": "negative",
+          "stiffness": 384.019172836768,
+          "canonical_mass_squared": 4.571656819485334,
+          "kind": "minimum",
+          "polynomial_residual": -7.105427357601002e-15
+        }
+      ]
+    },
+    {
+      "q": 1.0,
+      "extrema": [
+        {
+          "q": 1.0,
+          "A": 6.84375,
+          "x": 0.8490322035376668,
+          "s": 0.08182908112519237,
+          "phi_star": -0.043301270189221926,
+          "vacuum": 0.28792093994189855,
+          "vacuum_sign": "positive",
+          "stiffness": -35.216615006531896,
+          "canonical_mass_squared": -0.41924541674442733,
+          "kind": "maximum",
+          "polynomial_residual": 3.9968028886505635e-15
+        },
+        {
+          "q": 1.0,
+          "A": 6.84375,
+          "x": 1.102054142052831,
+          "s": -0.048587920121647886,
+          "phi_star": -0.043301270189221926,
+          "vacuum": -0.0394922438410244,
+          "vacuum_sign": "negative",
+          "stiffness": 307.5237937907779,
+          "canonical_mass_squared": 3.6609975451283083,
+          "kind": "minimum",
+          "polynomial_residual": -7.105427357601002e-15
+        }
+      ]
+    },
+    {
+      "q": 1.5,
+      "extrema": [
+        {
+          "q": 1.5,
+          "A": 7.0,
+          "x": 0.8869194876386158,
+          "s": 0.0600005350418201,
+          "phi_star": -0.06495190528383289,
+          "vacuum": 0.35453667747745765,
+          "vacuum_sign": "positive",
+          "stiffness": -37.350469662015975,
+          "canonical_mass_squared": -0.444648448357333,
+          "kind": "maximum",
+          "polynomial_residual": -2.6645352591003757e-15
+        },
+        {
+          "q": 1.5,
+          "A": 7.0,
+          "x": 1.0738964381199976,
+          "s": -0.035646782552940987,
+          "phi_star": -0.06495190528383289,
+          "vacuum": 0.22098302421260713,
+          "vacuum_sign": "positive",
+          "stiffness": 183.43147284785775,
+          "canonical_mass_squared": 2.1837080100935444,
+          "kind": "minimum",
+          "polynomial_residual": 3.552713678800501e-15
+        }
+      ]
+    },
+    {
+      "q": 2.0,
+      "extrema": []
+    },
+    {
+      "q": 2.5,
+      "extrema": []
+    }
+  ],
+  "wrapped_material_source": {
+    "sigma": 0.2,
+    "e_can": 0.5,
+    "omega": 20.0,
+    "q_out_minus_in": "1/2",
+    "radion_normal_jump": -0.014285714285714287,
+    "phi_direct_normal_jump": 0.0,
+    "shape_direct_source": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "radion_jump_variable": "s; multiply by sqrt(84) for canonical S",
+    "displacement_jump_variable": "Reference top-form q; instantaneous canonical charge is e_can(s)",
+    "scope": "Full-wrap material charge source; scalar has no direct brane coupling and traceless shapes preserve wrapped volume."
+  },
+  "conditional_charged_handoff": {
+    "reference_s": 0.0,
+    "parent_flux": 2.0,
+    "charge": 0.5,
+    "child_flux": 1.5,
+    "inherited_phi": -0.08660254037844385,
+    "child_minimum": -0.06495190528383289,
+    "displacement": -0.02165063509461096,
+    "inherited_velocity": 0.0,
+    "parent_vacuum": 7.21875,
+    "parent_displacement": 0.0,
+    "parent_total_energy": 7.21875,
+    "child_vacuum": 7.0,
+    "oscillation_energy": 0.09374999999999994,
+    "released_to_transition": 0.125,
+    "actual_wall_pressure": 0.12500000000000022,
+    "required_external_work": 0.0,
+    "energy_balance_residual": 5.551115123125783e-17,
+    "interpretation": "Conditional rapid transfer with continuous phi and velocity; boundary work and parent excitation are explicit. No nucleation or homogeneous wall passage is derived.",
+    "scope": "Reused ScalarFlux rapid-transfer identity, NOT the source-free saddle below; no rolling-parent nucleation radius inferred."
+  },
+  "symmetric_shape_branches": {
+    "q_reference": "3/2",
+    "isolations": [
+      {
+        "branch": "1+3",
+        "degree": 15,
+        "integer_polynomial_coefficients": [
+          -1875,
+          -262500,
+          -14962500,
+          3964713583,
+          19407475248,
+          35291848368,
+          10284291650,
+          -73712996280,
+          -166384044792,
+          -183604037922,
+          -114172059792,
+          -20895371280,
+          27983101025,
+          29621375868,
+          13146062748,
+          2982026083
+        ],
+        "positive_root_intervals": [
+          {
+            "interval": [
+              "25589834/41873719",
+              "26726135/43733096"
+            ],
+            "multiplicity": 1
+          },
+          {
+            "interval": [
+              "29407611/17121512",
+              "35419406/20621661"
+            ],
+            "multiplicity": 1
+          },
+          {
+            "interval": [
+              "1335928201/15940552",
+              "1190601594/14206487"
+            ],
+            "multiplicity": 1
+          }
+        ],
+        "representative_rule": "All positive roots"
+      },
+      {
+        "branch": "2+2",
+        "degree": 30,
+        "integer_polynomial_coefficients": [
+          62982097,
+          331017582,
+          904264662,
+          1614966182,
+          2079369222,
+          2229599694,
+          2054439357,
+          552677832,
+          -3855076008,
+          -10737182648,
+          -17995057416,
+          -26152030968,
+          -36715378318,
+          -46389497868,
+          -50561734188,
+          -50949560796,
+          -50561734188,
+          -46389497868,
+          -36715378318,
+          -26152030968,
+          -17995057416,
+          -10737182648,
+          -3855076008,
+          552677832,
+          2054439357,
+          2229599694,
+          2079369222,
+          1614966182,
+          904264662,
+          331017582,
+          62982097
+        ],
+        "positive_root_intervals": [
+          {
+            "interval": [
+              "13489995/20167444",
+              "18433474/27557909"
+            ],
+            "multiplicity": 1
+          },
+          {
+            "interval": [
+              "27557909/18433474",
+              "20167444/13489995"
+            ],
+            "multiplicity": 1
+          }
+        ],
+        "representative_rule": "Keep t<1; t>1 is its S4 factor-permutation copy"
+      }
+    ],
+    "branches": [
+      {
+        "branch": "isotropic",
+        "q": 1.5,
+        "log_radii": [
+          0.0600005350418201,
+          0.0600005350418201,
+          0.0600005350418201,
+          0.0600005350418201
+        ],
+        "s": 0.0600005350418201,
+        "beta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "V": 0.3545366774774578,
+        "max_gradient": 8.646401475265163e-16,
+        "canonical_mass_squared": [
+          -0.44464844835733225,
+          -0.3388784857183002,
+          -0.3388784857183001,
+          -0.3388784857182998
+        ],
+        "canonical_mass_modes": [
+          [
+            0.1091089451179965,
+            0.4892319159539318,
+            0.0897599569512972,
+            -0.05094391563421439
+          ],
+          [
+            0.10910894511799593,
+            -0.10692279965427513,
+            -0.07138777789874191,
+            0.4831886795867341
+          ],
+          [
+            0.10910894511799608,
+            -0.1223328665963748,
+            -0.4091932770532926,
+            -0.2599914070978133
+          ],
+          [
+            0.10910894511799617,
+            -0.2599762497032822,
+            0.3908210980007372,
+            -0.1722533568547063
+          ]
+        ],
+        "homogeneous_negative_count": 4,
+        "S4_scalar_harmonic_negative_count": 4,
+        "S4_negative_harmonics": [
+          {
+            "ell": [
+              0
+            ],
+            "degeneracy": [
+              1
+            ]
+          },
+          {
+            "ell": [
+              0
+            ],
+            "degeneracy": [
+              1
+            ]
+          },
+          {
+            "ell": [
+              0
+            ],
+            "degeneracy": [
+              1
+            ]
+          },
+          {
+            "ell": [
+              0
+            ],
+            "degeneracy": [
+              1
+            ]
+          }
+        ],
+        "negative_mode": [
+          0.1091089451179965,
+          0.10910894511799593,
+          0.10910894511799608,
+          0.10910894511799617
+        ],
+        "retained_radius_local_minimum": false,
+        "volume_kind": "maximum",
+        "ratio": 1.0,
+        "ratio_interval": [
+          "1",
+          "1"
+        ],
+        "ratio_polynomial_degree": null
+      },
+      {
+        "branch": "isotropic",
+        "q": 1.5,
+        "log_radii": [
+          -0.035646782552940987,
+          -0.035646782552940987,
+          -0.035646782552940987,
+          -0.035646782552940987
+        ],
+        "s": -0.035646782552940987,
+        "beta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "V": 0.22098302421260857,
+        "max_gradient": 4.768070549189887e-15,
+        "canonical_mass_squared": [
+          2.183708010093547,
+          3.2339776335010457,
+          3.233977633501046,
+          3.2339776335010466
+        ],
+        "canonical_mass_modes": [
+          [
+            0.10910894511799611,
+            -0.4345536069146848,
+            0.24731187338548372,
+            2.0269806481627057e-17
+          ],
+          [
+            0.10910894511799629,
+            0.3446536752335185,
+            0.2686371805216131,
+            0.2429977559349601
+          ],
+          [
+            0.1091089451179962,
+            0.14903968997476458,
+            -0.07507766702495408,
+            -0.47132845736950374
+          ],
+          [
+            0.10910894511799614,
+            -0.05913975829359838,
+            -0.4408713868821428,
+            0.2283307014345436
+          ]
+        ],
+        "homogeneous_negative_count": 0,
+        "S4_scalar_harmonic_negative_count": 0,
+        "S4_negative_harmonics": [
+          {
+            "ell": [],
+            "degeneracy": []
+          },
+          {
+            "ell": [],
+            "degeneracy": []
+          },
+          {
+            "ell": [],
+            "degeneracy": []
+          },
+          {
+            "ell": [],
+            "degeneracy": []
+          }
+        ],
+        "negative_mode": null,
+        "retained_radius_local_minimum": true,
+        "volume_kind": "minimum",
+        "ratio": 1.0,
+        "ratio_interval": [
+          "1",
+          "1"
+        ],
+        "ratio_polynomial_degree": null
+      },
+      {
+        "branch": "1+3",
+        "q": 1.5,
+        "log_radii": [
+          0.2272257714771045,
+          -0.019005846218310436,
+          -0.019005846218310436,
+          -0.019005846218310436
+        ],
+        "s": 0.04255205820554329,
+        "beta": [
+          0.1846737132715612,
+          -0.061557904423853727,
+          -0.061557904423853727,
+          -0.061557904423853727
+        ],
+        "V": 0.34177514925438307,
+        "max_gradient": 5.330141370867618e-16,
+        "canonical_mass_squared": [
+          -0.46959434051891846,
+          -0.1116938225533948,
+          -0.11169382255339477,
+          0.6455731391796398
+        ],
+        "canonical_mass_modes": [
+          [
+            -0.35364286536131323,
+            -4.0539612963254114e-17,
+            0.0,
+            0.36992091814846306
+          ],
+          [
+            -0.006290770571938553,
+            0.4219625316306092,
+            0.21016622973758026,
+            -0.1991054140101441
+          ],
+          [
+            -0.006290770571938549,
+            -0.02897197184496345,
+            -0.4705133867060924,
+            -0.19910541401014423
+          ],
+          [
+            -0.006290770571938546,
+            -0.3929905597856457,
+            0.26034715696851213,
+            -0.19910541401014425
+          ]
+        ],
+        "homogeneous_negative_count": 3,
+        "S4_scalar_harmonic_negative_count": 8,
+        "S4_negative_harmonics": [
+          {
+            "ell": [
+              0,
+              1
+            ],
+            "degeneracy": [
+              1,
+              5
+            ]
+          },
+          {
+            "ell": [
+              0
+            ],
+            "degeneracy": [
+              1
+            ]
+          },
+          {
+            "ell": [
+              0
+            ],
+            "degeneracy": [
+              1
+            ]
+          },
+          {
+            "ell": [],
+            "degeneracy": []
+          }
+        ],
+        "negative_mode": [
+          -0.35364286536131323,
+          -0.006290770571938553,
+          -0.006290770571938549,
+          -0.006290770571938546
+        ],
+        "retained_radius_local_minimum": false,
+        "ratio": 0.6111192082078979,
+        "ratio_interval": [
+          "25589834/41873719",
+          "26726135/43733096"
+        ],
+        "ratio_polynomial_degree": 15
+      },
+      {
+        "branch": "1+3",
+        "q": 1.5,
+        "log_radii": [
+          -0.18452793557591943,
+          0.08593098133499258,
+          0.08593098133499258,
+          0.08593098133499258
+        ],
+        "s": 0.018316252107264577,
+        "beta": [
+          -0.20284418768318402,
+          0.067614729227728,
+          0.067614729227728,
+          0.067614729227728
+        ],
+        "V": 0.3181544236032724,
+        "max_gradient": 5.346944959344929e-16,
+        "canonical_mass_squared": [
+          -0.7748861391075704,
+          1.023521947852922,
+          1.023521947852923,
+          1.2217072822799948
+        ],
+        "canonical_mass_modes": [
+          [
+            -0.29960771829833005,
+            2.0269806481627057e-17,
+            -8.107922592650823e-17,
+            -0.4148975500540229
+          ],
+          [
+            0.19694146431010764,
+            -0.19058057790423555,
+            0.4311626903477502,
+            0.029943268324121145
+          ],
+          [
+            0.19694146431010753,
+            -0.27810755405307735,
+            -0.38062896710686234,
+            0.029943268324121294
+          ],
+          [
+            0.19694146431010756,
+            0.4686881319573129,
+            -0.05053372324088779,
+            0.029943268324121232
+          ]
+        ],
+        "homogeneous_negative_count": 1,
+        "S4_scalar_harmonic_negative_count": 6,
+        "S4_negative_harmonics": [
+          {
+            "ell": [
+              0,
+              1
+            ],
+            "degeneracy": [
+              1,
+              5
+            ]
+          },
+          {
+            "ell": [],
+            "degeneracy": []
+          },
+          {
+            "ell": [],
+            "degeneracy": []
+          },
+          {
+            "ell": [],
+            "degeneracy": []
+          }
+        ],
+        "negative_mode": [
+          -0.29960771829833005,
+          0.19694146431010764,
+          0.19694146431010753,
+          0.19694146431010756
+        ],
+        "retained_radius_local_minimum": false,
+        "ratio": 1.7175825943409686,
+        "ratio_interval": [
+          "29407611/17121512",
+          "35419406/20621661"
+        ],
+        "ratio_polynomial_degree": 15
+      },
+      {
+        "branch": "1+3",
+        "q": 1.5,
+        "log_radii": [
+          -1.414901240884464,
+          0.7993564132463021,
+          0.7993564132463021,
+          0.7993564132463021
+        ],
+        "s": 0.24579199971361063,
+        "beta": [
+          -1.6606932405980745,
+          0.5535644135326915,
+          0.5535644135326915,
+          0.5535644135326915
+        ],
+        "V": -0.5346446771177906,
+        "max_gradient": 3.1626841307671025e-15,
+        "canonical_mass_squared": [
+          0.10977772251833917,
+          3.2607928000321897,
+          3.260792800032191,
+          3.750701736227505
+        ],
+        "canonical_mass_modes": [
+          [
+            -0.3125438471031953,
+            -2.0269806481627057e-17,
+            0.0,
+            -0.40524203328714126
+          ],
+          [
+            0.19778785480487987,
+            0.2874831218167178,
+            -0.37359828277541157,
+            0.023717170451456836
+          ],
+          [
+            0.19778785480487981,
+            -0.46728716460210745,
+            -0.06216854526482832,
+            0.02371717045145688
+          ],
+          [
+            0.19778785480487993,
+            0.1798040427853896,
+            0.43576682804023986,
+            0.023717170451456812
+          ]
+        ],
+        "homogeneous_negative_count": 0,
+        "S4_scalar_harmonic_negative_count": null,
+        "S4_negative_harmonics": [],
+        "negative_mode": null,
+        "retained_radius_local_minimum": true,
+        "ratio": 83.80689708863282,
+        "ratio_interval": [
+          "1335928201/15940552",
+          "1190601594/14206487"
+        ],
+        "ratio_polynomial_degree": 15
+      },
+      {
+        "branch": "2+2",
+        "q": 1.5,
+        "log_radii": [
+          0.14534853391335073,
+          0.14534853391335073,
+          -0.05571212683949902,
+          -0.05571212683949902
+        ],
+        "s": 0.04481820353692585,
+        "beta": [
+          0.10053033037642488,
+          0.10053033037642488,
+          -0.10053033037642486,
+          -0.10053033037642486
+        ],
+        "V": 0.3416420059201244,
+        "max_gradient": 1.1671082878988477e-15,
+        "canonical_mass_squared": [
+          -0.5662709258209891,
+          -0.4516894630673694,
+          -0.025866265764359832,
+          0.8314315107241532
+        ],
+        "canonical_mass_modes": [
+          [
+            3.040470972244058e-17,
+            0.22598034465594724,
+            -0.40824829046386285,
+            0.2101689298332997
+          ],
+          [
+            -5.067451620406764e-17,
+            0.22598034465594727,
+            0.40824829046386285,
+            0.21016892983329974
+          ],
+          [
+            -0.408248290463863,
+            -0.030471578079086722,
+            -6.241144042653704e-17,
+            -0.3070986456620498
+          ],
+          [
+            0.40824829046386296,
+            -0.030471578079086688,
+            2.8408737346949874e-17,
+            -0.3070986456620499
+          ]
+        ],
+        "homogeneous_negative_count": 3,
+        "S4_scalar_harmonic_negative_count": 8,
+        "S4_negative_harmonics": [
+          {
+            "ell": [
+              0,
+              1
+            ],
+            "degeneracy": [
+              1,
+              5
+            ]
+          },
+          {
+            "ell": [
+              0
+            ],
+            "degeneracy": [
+              1
+            ]
+          },
+          {
+            "ell": [
+              0
+            ],
+            "degeneracy": [
+              1
+            ]
+          },
+          {
+            "ell": [],
+            "degeneracy": []
+          }
+        ],
+        "negative_mode": [
+          3.040470972244058e-17,
+          -5.067451620406764e-17,
+          -0.408248290463863,
+          0.40824829046386296
+        ],
+        "retained_radius_local_minimum": false,
+        "ratio": 0.6688995888621294,
+        "ratio_interval": [
+          "13489995/20167444",
+          "18433474/27557909"
+        ],
+        "ratio_polynomial_degree": 30
+      }
+    ],
+    "S4_scalar_index_rule": "Sum degeneracy(l)=(l+1)(l+2)(2l+3)/6 where l(l+3)<-3m\u00b2/V, only for V>0.",
+    "scope": "Only isotropic,1+3 and2+2 radius families modulo factor permutations; numerical canonical masses and retained-scalar S4 indices, not all critical points, full KK indices or decay dominance."
+  },
+  "source_free_transition": {
+    "q": 1.5,
+    "membrane_inserted": false,
+    "charge_jump": 0.0,
+    "massive_scalar": "phi=phi_star(3/2) exactly; chi=0, no massive-scalar matter energy is supplied.",
+    "coarse": {
+      "length": 9.527744312773436,
+      "cutoff": 0.0001,
+      "mesh_nodes": 165,
+      "attempts": [
+        {
+          "seed_amplitude": 0.4,
+          "status": 0,
+          "message": "The algorithm converged to the desired accuracy.",
+          "maximum_field_span": 7.183142969324763e-14,
+          "nonconstant_profile": false,
+          "nodes": 203
+        },
+        {
+          "seed_amplitude": 0.8,
+          "status": 0,
+          "message": "The algorithm converged to the desired accuracy.",
+          "maximum_field_span": 0.47457783900539874,
+          "nonconstant_profile": true,
+          "nodes": 165
+        }
+      ],
+      "pole_fields": [
+        [
+          -0.5113670622322452,
+          0.272512120610645
+        ],
+        [
+          -0.036789205345208756,
+          -0.03243210368383071
+        ]
+      ],
+      "pole_potentials": [
+        0.07054648413728205,
+        0.22144525075892033
+      ],
+      "max_Euclidean_constraint": 9.800485312183582e-09,
+      "max_common_Cauchy_Hamiltonian": 0.002077777685181914,
+      "max_common_Cauchy_relative_Hamiltonian": 0.0021703105361821403,
+      "common_Cauchy_Hamiltonian_RMS": 2.875416258949064e-07,
+      "max_scaled_ODE_residual": 2.736155991471129e-06,
+      "right_pole_slope_defect": -4.7154095539391e-10,
+      "action_trace": -780.4444028606839,
+      "action_full": -780.4444027704027,
+      "action_identity_difference": 9.028121894516516e-08,
+      "action_difference_times_g": 291.450175784645,
+      "minimum_Q": 0.7705362447327175,
+      "sampled_transverse_shape_mass_squared_minimum": 1.164669803562197,
+      "projected_barrier_crossings": 1,
+      "maximum_radius": 3.3981967935900252,
+      "equator_x": 0.48675265000000006,
+      "full_physical_negative_mode_count_proved": false,
+      "scope": "Regular nonconstant profile in the1+3 invariant scalar sector. Scalar-metric fluctuation index, internal KK modes and decay-rate interpretation are not certified."
+    },
+    "fine": {
+      "length": 9.527744308980296,
+      "cutoff": 5e-05,
+      "mesh_nodes": 503,
+      "attempts": [
+        {
+          "seed_amplitude": null,
+          "status": 0,
+          "message": "The algorithm converged to the desired accuracy.",
+          "maximum_field_span": 0.4745778519827095,
+          "nonconstant_profile": true,
+          "nodes": 503
+        }
+      ],
+      "pole_fields": [
+        [
+          -0.5113670616852963,
+          0.27251212032103206
+        ],
+        [
+          -0.036789205232177394,
+          -0.03243210375897194
+        ]
+      ],
+      "pole_potentials": [
+        0.07054648473933378,
+        0.22144525074316004
+      ],
+      "max_Euclidean_constraint": 2.5587371110802337e-10,
+      "max_common_Cauchy_Hamiltonian": 0.00042691880406264815,
+      "max_common_Cauchy_relative_Hamiltonian": 0.0004451638012718373,
+      "common_Cauchy_Hamiltonian_RMS": 7.402383348478007e-09,
+      "max_scaled_ODE_residual": 6.781192901466888e-08,
+      "right_pole_slope_defect": -2.4221737955435803e-11,
+      "action_trace": -780.4444023606262,
+      "action_full": -780.4444023240109,
+      "action_identity_difference": 3.661534719867632e-08,
+      "action_difference_times_g": 291.4501762847027,
+      "minimum_Q": 0.7705362360631203,
+      "sampled_transverse_shape_mass_squared_minimum": 1.1646697953274396,
+      "projected_barrier_crossings": 1,
+      "maximum_radius": 3.398196799335645,
+      "equator_x": 0.48675132499999996,
+      "full_physical_negative_mode_count_proved": false,
+      "scope": "Regular nonconstant profile in the1+3 invariant scalar sector. Scalar-metric fluctuation index, internal KK modes and decay-rate interpretation are not certified."
+    },
+    "refinement": {
+      "pole_field_spread": 5.469488195686267e-10,
+      "proper_length_spread": 3.793140024299646e-09,
+      "Euclidean_action_difference_spread": 5.000576948077651e-07,
+      "scope": "Observed changes under one collocation/pole-cutoff refinement, not rigorous error bounds."
+    },
+    "connecting_chart": {
+      "metric": "ds4\u00b2=d\u03be\u00b2+R_E(\u03be)\u00b2[-dT\u00b2+cosh\u00b2T dOmega2\u00b2]",
+      "equator_x": 0.48671062309313917,
+      "equator_radius": 3.3981968360533132,
+      "equator_spatial_second_derivative": -0.48831844650038037,
+      "T0_common_Cauchy_volume": 648.5919771117946,
+      "T0_common_Cauchy_normal_energy": 190.8141366314837,
+      "T0_Kij": 0.0,
+      "T0_normal_field_momenta": 0.0,
+      "normal_material_flux": 0.0,
+      "equator_null_expansions": {
+        "-1.0": [
+          -0.4482342799425857,
+          -0.4482342799425857
+        ],
+        "0.0": [
+          0.0,
+          0.0
+        ],
+        "1.0": [
+          0.4482342799425857,
+          0.4482342799425857
+        ]
+      },
+      "equator_geodesic_radius_second_proper_derivative": 0.2942737128675001,
+      "dimensional_screen_area_ratio": 0.9999999999999999,
+      "area_identity": "A14=4piR_E\u00b2 exp(-12s)*V0 exp(12s)=V0 A2; kappa16=V0 kappa4.",
+      "null_expansion_identity": "theta16=exp(6s) theta4 for the screen S2 x M12; signs agree.",
+      "scope": "One inherited source profile and regular overlapping charts. The turning equator is a spatial maximum, not a persisting neck minimum. Area/entropy covariance is not a measured incoming energy supply."
+    },
+    "interior": {
+      "pole_index": 0,
+      "exit_fields": [
+        -0.5113670616852963,
+        0.27251212032103206
+      ],
+      "exit_density": 0.07054648473933378,
+      "exit_excitation_above_known_AdS_minimum": 0.6051911618571244,
+      "initial_Ricci_scalar_limit": 0.2821859389573351,
+      "initial_Kretschmann_limit": 0.013271484024205478,
+      "proper_endpoint": 4.672652889054966,
+      "endpoint_reason": "first_scale_factor_turn",
+      "scale_at_endpoint": 3.8698336477840027,
+      "density_at_endpoint": -0.20032569670911796,
+      "pressure_at_endpoint": 0.5371417779653406,
+      "maximum_Friedmann_constraint": 5.440092820663267e-15,
+      "density_work_balance_residual": 7.771561172376096e-16,
+      "minimum_curvature_fraction": 0.974832982748481,
+      "maximum_bulk_ruler_scale_sampled": 1.743386031705308,
+      "log_radii_at_endpoint": [
+        -0.9470778171726503,
+        0.5108422351539892
+      ],
+      "incoming_material_flux": 0.0,
+      "endpoint_field_distance_to_false_minimum": 2.7504791964182367,
+      "endpoint_field_distance_to_known_AdS_minimum": 1.4551812103831225,
+      "scope": "Open-FRW region from the regular pole, no independent exit/matter state. Finite curvature at a=0 is checked by the regular series. Initial geometric excitation/work is not measured incoming parent material energy."
+    },
+    "exterior": {
+      "pole_index": 1,
+      "exit_fields": [
+        -0.036789205232177394,
+        -0.03243210375897194
+      ],
+      "exit_density": 0.22144525074316004,
+      "exit_excitation_above_known_AdS_minimum": 0.7560899278609506,
+      "initial_Ricci_scalar_limit": 0.8857810029726402,
+      "initial_Kretschmann_limit": 0.1307679975378694,
+      "proper_endpoint": 10.0,
+      "endpoint_reason": "declared_time_allowance",
+      "scale_at_endpoint": 27.679145198314895,
+      "density_at_endpoint": 0.22098303939552194,
+      "pressure_at_endpoint": -0.22098303282419263,
+      "maximum_Friedmann_constraint": 6.394884621840902e-13,
+      "density_work_balance_residual": -9.377264589827128e-16,
+      "minimum_curvature_fraction": 0.0174112027459383,
+      "maximum_bulk_ruler_scale_sampled": 34.2777010372366,
+      "log_radii_at_endpoint": [
+        -0.03562255087131298,
+        -0.03564043382374905
+      ],
+      "incoming_material_flux": 0.0,
+      "endpoint_field_distance_to_false_minimum": 0.0001027261567344939,
+      "endpoint_field_distance_to_known_AdS_minimum": 4.205321509633923,
+      "scope": "Open-FRW region from the regular pole, no independent exit/matter state. Finite curvature at a=0 is checked by the regular series. Initial geometric excitation/work is not measured incoming parent material energy."
+    },
+    "interior_table": {
+      "columns": [
+        "proper_time",
+        "u_single",
+        "u_other",
+        "velocity_single",
+        "velocity_other",
+        "scale",
+        "scale_rate"
+      ],
+      "rows": [
+        [
+          1e-05,
+          -0.5113670616871988,
+          0.27251212032206196,
+          -3.8048717577467337e-07,
+          2.0597493427089057e-07,
+          1.0000000000003921e-05,
+          1.0000000000011757
+        ],
+        [
+          0.11682607222637416,
+          -0.5116267276213466,
+          0.27265268457264275,
+          -0.004445602087015691,
+          0.0024064456429927234,
+          0.11683230985278564,
+          1.000159979649876
+        ],
+        [
+          0.23364214445274833,
+          -0.5124058183455756,
+          0.2730743716786006,
+          -0.008893932274662685,
+          0.004813411826406139,
+          0.23369176203383094,
+          1.000633934468189
+        ],
+        [
+          0.3504582166791225,
+          -0.5137048763489429,
+          0.2737773085728792,
+          -0.013348429284527067,
+          0.007221822638071645,
+          0.3506241096592234,
+          1.0014040572985583
+        ],
+        [
+          0.46727428890549666,
+          -0.5155247960226935,
+          0.2747617052023957,
+          -0.0178120515360079,
+          0.009632379999511288,
+          0.4676623291605229,
+          1.0024406025007397
+        ],
+        [
+          0.5840903611318707,
+          -0.5178668091289335,
+          0.2760278522231006,
+          -0.022287608625348867,
+          0.012045762763409362,
+          0.5848352202865507,
+          1.0037017877647667
+        ],
+        [
+          0.700906433358245,
+          -0.5207324646053506,
+          0.27757611797193427,
+          -0.026777713430001467,
+          0.014462621290448166,
+          0.7021659926804725,
+          1.0051336634190577
+        ],
+        [
+          0.8177225055846191,
+          -0.5241236028607654,
+          0.2794069449132987,
+          -0.031284735758506224,
+          0.01688357395393453,
+          0.819670835610002,
+          1.0066699559672236
+        ],
+        [
+          0.9345385778109933,
+          -0.528042324770077,
+          0.281520845812494,
+          -0.03581075803714703,
+          0.019309206037305814,
+          0.9373574683246053,
+          1.0082318944537672
+        ],
+        [
+          1.0513546500373676,
+          -0.5324909556389748,
+          0.28391839994238094,
+          -0.04035753360396032,
+          0.02174007148086995,
+          1.0552236696246524,
+          1.009728030069831
+        ],
+        [
+          1.1681707222637416,
+          -0.5374720044813004,
+          0.28660024968238107,
+          -0.044926448285924146,
+          0.024176697926544886,
+          1.173255786545588,
+          1.0110540611389502
+        ],
+        [
+          1.2849867944901159,
+          -0.5429881190385679,
+          0.28956709792104995,
+          -0.04951848607253381,
+          0.026619595504990427,
+          1.291427223573813,
+          1.0120926772345094
+        ],
+        [
+          1.4018028667164901,
+          -0.5490420370760757,
+          0.29281970672538865,
+          -0.05413419987628277,
+          0.02906926981115668,
+          1.4096969155039019,
+          1.0127134376307674
+        ],
+        [
+          1.5186189389428641,
+          -0.5556365346184524,
+          0.29635889779271113,
+          -0.0587736885972297,
+          0.03152623952557323,
+          1.5280077888970427,
+          1.0127727005218878
+        ],
+        [
+          1.6354350111692384,
+          -0.5627743719457953,
+          0.3001855552556368,
+          -0.0634365819959671,
+          0.033991059164369376,
+          1.6462852190788104,
+          1.0121136203898904
+        ],
+        [
+          1.7522510833956124,
+          -0.5704582383675503,
+          0.30430063146965347,
+          -0.06812203523963332,
+          0.036464347486954235,
+          1.764435491682556,
+          1.0105662314799726
+        ],
+        [
+          1.8690671556219867,
+          -0.5786906970343244,
+          0.3087051564784692,
+          -0.07282873543319998,
+          0.038946822163814,
+          1.882344279854028,
+          1.0079476354519505
+        ],
+        [
+          1.985883227848361,
+          -0.5874741313489782,
+          0.313400251928771,
+          -0.07755492299811996,
+          0.04143934141695909,
+          1.9998751503222902,
+          1.0040623108046138
+        ],
+        [
+          2.102699300074735,
+          -0.5968106949104411,
+          0.3183871502979249,
+          -0.08229843142785179,
+          0.04394295350309555,
+          2.1168681135359306,
+          0.9987025604832093
+        ],
+        [
+          2.219515372301109,
+          -0.6067022673813594,
+          0.32366722041187374,
+          -0.08705674974957935,
+          0.04645895512788699,
+          2.2331382348699367,
+          0.9916491120292985
+        ],
+        [
+          2.336331444527483,
+          -0.6171504192301709,
+          0.32924200037404033,
+          -0.09182711296699957,
+          0.04898896017498962,
+          2.3484743254169307,
+          0.98267188155101
+        ],
+        [
+          2.4531475167538574,
+          -0.6281563889772058,
+          0.3351132392095412,
+          -0.09660662686153017,
+          0.05153498052602545,
+          2.4626377319559247,
+          0.9715309085006869
+        ],
+        [
+          2.5699635889802317,
+          -0.6397210773918082,
+          0.3412829487652482,
+          -0.10139243479724687,
+          0.05409952126267529,
+          2.5753612461902526,
+          0.9579774625574006
+        ],
+        [
+          2.686779661206606,
+          -0.6518450640629766,
+          0.34775346771132704,
+          -0.10618193561498471,
+          0.056685693212219695,
+          2.686348153089012,
+          0.9417553166314296
+        ],
+        [
+          2.80359573343298,
+          -0.6645286529201512,
+          0.35452753988434343,
+          -0.11097306332084267,
+          0.05929734666603285,
+          2.7952714369565124,
+          0.9226021709468605
+        ],
+        [
+          2.920411805659354,
+          -0.6777719546352737,
+          0.3616084097221914,
+          -0.11576464108842308,
+          0.06193923122454501,
+          2.9017731614729114,
+          0.9002512021339963
+        ],
+        [
+          3.0372278778857282,
+          -0.6915750154164967,
+          0.3689999382012638,
+          -0.1205568241361475,
+          0.06461718818175351,
+          3.005464036156711,
+          0.8744326980968025
+        ],
+        [
+          3.1540439501121025,
+          -0.7059380035383019,
+          0.3767067435417956,
+          -0.12535164838425963,
+          0.06733838376971839,
+          3.1059231762350556,
+          0.8448757239219947
+        ],
+        [
+          3.2708600223384767,
+          -0.7208614670851533,
+          0.38473437205932676,
+          -0.13015370458750403,
+          0.07011159409954267,
+          3.202698055484902,
+          0.8113097460219844
+        ],
+        [
+          3.387676094564851,
+          -0.7363466788828765,
+          0.3930895059926568,
+          -0.1349709611519849,
+          0.0729475559943881,
+          3.2953046419059624,
+          0.7734661206724628
+        ],
+        [
+          3.5044921667912248,
+          -0.7523960875634761,
+          0.4017802170488419,
+          -0.13981576355759898,
+          0.07585940245777079,
+          3.383227693724114,
+          0.7310793284474425
+        ],
+        [
+          3.621308239017599,
+          -0.7690138973383442,
+          0.4108162769406767,
+          -0.14470604502524118,
+          0.07886320777277873,
+          3.4659211777143555,
+          0.6838878065621646
+        ],
+        [
+          3.7381243112439733,
+          -0.7862068036463702,
+          0.4202095395931965,
+          -0.14966679309723638,
+          0.08197867596418246,
+          3.5428087524971383,
+          0.6316341946645601
+        ],
+        [
+          3.8549403834703475,
+          -0.8039849178960607,
+          0.42997441431776684,
+          -0.1547318322128096,
+          0.0852300187660247,
+          3.613284235289311,
+          0.5740647624784703
+        ],
+        [
+          3.9717564556967218,
+          -0.8223629228388539,
+          0.44012845562414843,
+          -0.15994600640067017,
+          0.08864708716382405,
+          3.6767119400041035,
+          0.5109277237192519
+        ],
+        [
+          4.088572527923096,
+          -0.8413615119754047,
+          0.45069310426289944,
+          -0.1653678839303777,
+          0.09226684691388227,
+          3.7324267350823797,
+          0.441970049752234
+        ],
+        [
+          4.20538860014947,
+          -0.8610091838332028,
+          0.4616946267928406,
+          -0.1710731650795651,
+          0.096135327796951,
+          3.7797336169681173,
+          0.3669322621511215
+        ],
+        [
+          4.322204672375844,
+          -0.8813444881628496,
+          0.47316531937467765,
+          -0.17715906767953793,
+          0.100310236250273,
+          3.817906523223979,
+          0.2855404791003278
+        ],
+        [
+          4.439020744602217,
+          -0.9024188611741896,
+          0.48514506866766643,
+          -0.18375011331197816,
+          0.10486451394000894,
+          3.8461860074283623,
+          0.19749467308455237
+        ],
+        [
+          4.555836816828592,
+          -0.9243002490960188,
+          0.4976834036429355,
+          -0.19100597438274308,
+          0.10989127211876078,
+          3.8637752491097204,
+          0.10245159414514468
+        ],
+        [
+          4.672652889054966,
+          -0.9470778171726503,
+          0.5108422351539892,
+          -0.19913242863307928,
+          0.1155107707197471,
+          3.8698336477840027,
+          -1.5525775109992423e-16
+        ]
+      ]
+    },
+    "exterior_table": {
+      "columns": [
+        "proper_time",
+        "u_single",
+        "u_other",
+        "velocity_single",
+        "velocity_other",
+        "scale",
+        "scale_rate"
+      ],
+      "rows": [
+        [
+          1e-05,
+          -0.03678920523211001,
+          -0.03243210375906688,
+          1.3477331531128908e-08,
+          -1.8989164719857046e-08,
+          1.0000000000012303e-05,
+          1.0000000000036908
+        ],
+        [
+          0.25000975000000003,
+          -0.036747488482783475,
+          -0.032491074021527906,
+          0.00033050838844036123,
+          -0.00046874848021038654,
+          0.2502020376642131,
+          1.0023076695139814
+        ],
+        [
+          0.5000095,
+          -0.036627106021620906,
+          -0.032663521833763136,
+          0.0006232974398194213,
+          -0.0009021103498299615,
+          0.5015486350942036,
+          1.0092395928252331
+        ],
+        [
+          0.7500092500000001,
+          -0.03644177235974777,
+          -0.0329364748372348,
+          0.0008451899523718109,
+          -0.0012678270546467622,
+          0.7552089874989076,
+          1.0208240926084748
+        ],
+        [
+          1.0000090000000001,
+          -0.03621249973338195,
+          -0.033289584710449946,
+          0.0009716254635818847,
+          -0.0015396310651986315,
+          1.0123518770171391,
+          1.0371098032933628
+        ],
+        [
+          1.2500087500000001,
+          -0.03596500808199796,
+          -0.03369695779878684,
+          0.000989954903611331,
+          -0.0016998048363631622,
+          1.274160958591964,
+          1.0581673644267902
+        ],
+        [
+          1.5000085000000003,
+          -0.03572646916906438,
+          -0.03412954432596819,
+          0.0009014047798419283,
+          -0.0017410574109019224,
+          1.5418404703871549,
+          1.084091041063591
+        ],
+        [
+          1.7500082500000003,
+          -0.03552197304228277,
+          -0.0345578801428312,
+          0.0007212661457455372,
+          -0.0016674141601552422,
+          1.8166212934870645,
+          1.1149998405315973
+        ],
+        [
+          2.0000080000000002,
+          -0.03537120312519215,
+          -0.034954896607971055,
+          0.00047700875641402545,
+          -0.0014938332063801198,
+          2.099767203447094,
+          1.1510379216375113
+        ],
+        [
+          2.2500077500000004,
+          -0.03528584382836336,
+          -0.03529845889261185,
+          0.00020434617881460939,
+          -0.0012444124122530152,
+          2.392581143672466,
+          1.1923744037357127
+        ],
+        [
+          2.5000075,
+          -0.035268183431955286,
+          -0.03557328919370048,
+          -5.8272104110311125e-05,
+          -0.0009493065876288207,
+          2.6964114132109915,
+          1.2392029503312563
+        ],
+        [
+          2.7500072500000003,
+          -0.03531119796078437,
+          -0.0357719986756542,
+          -0.0002758152531574216,
+          -0.0006407733360843634,
+          3.012657772304489,
+          1.2917416041978769
+        ],
+        [
+          3.0000070000000005,
+          -0.03540013000780591,
+          -0.03589508894864355,
+          -0.00042226715287812936,
+          -0.00034900618208372306,
+          3.342777578959827,
+          1.3502332434171922
+        ],
+        [
+          3.2500067500000003,
+          -0.035515272027904644,
+          -0.03594996304093225,
+          -0.00048449266253880463,
+          -9.849753328040392e-05,
+          3.688292132115375,
+          1.4149467731647143
+        ],
+        [
+          3.5000065000000005,
+          -0.03563541146866169,
+          -0.035949161010339674,
+          -0.00046358051185339637,
+          9.444250014441849e-05,
+          4.050793391190045,
+          1.4861789024964274
+        ],
+        [
+          3.75000625,
+          -0.035741270418807,
+          -0.035908159202460085,
+          -0.0003734827778804779,
+          0.00022266722725272498,
+          4.431951182129865,
+          1.5642562058269465
+        ],
+        [
+          4.000006,
+          -0.03581830972335015,
+          -0.03584311476300749,
+          -0.0002374156797127457,
+          0.00028767922007793384,
+          4.8335209234497,
+          1.6495371823005534
+        ],
+        [
+          4.25000575,
+          -0.03585844778382837,
+          -0.035768895949381346,
+          -8.295636283331466e-05,
+          0.00029792877191174496,
+          5.257351849008442,
+          1.742414158459589
+        ],
+        [
+          4.5000055,
+          -0.035860506365476816,
+          -0.035697636451189264,
+          6.305499986870864e-05,
+          0.00026641146470902043,
+          5.705395686046624,
+          1.8433150403646512
+        ],
+        [
+          4.75000525,
+          -0.03582946339569631,
+          -0.03563792325787303,
+          0.00017881931123295256,
+          0.00020808480161529545,
+          6.179715764191086,
+          1.9527050344572938
+        ],
+        [
+          5.000005,
+          -0.03577480239511598,
+          -0.03559460602114653,
+          0.0002504231270562423,
+          0.0001375415153594841,
+          6.682496567048661,
+          2.0710884924677915
+        ],
+        [
+          5.25000475,
+          -0.03570836534021138,
+          -0.035569123868292106,
+          0.0002729540889341881,
+          6.723201062900376e-05,
+          7.216053774367959,
+          2.199011007796349
+        ],
+        [
+          5.5000045,
+          -0.03564213654718317,
+          -0.03556019234541908,
+          0.0002499776923030035,
+          6.371110975691129e-06,
+          7.782844867520105,
+          2.3370618317795597
+        ],
+        [
+          5.75000425,
+          -0.035586327535415734,
+          -0.03556467699005648,
+          0.0001917267484251629,
+          -3.947119775186313e-05,
+          8.385480380489911,
+          2.4858766188765467
+        ],
+        [
+          6.000004000000001,
+          -0.03554802462412886,
+          -0.03557849323221391,
+          0.00011249862865534258,
+          -6.81936482788429e-05,
+          9.026735875220572,
+          2.646140468913972
+        ],
+        [
+          6.25000375,
+          -0.03553053054506872,
+          -0.03559740513630699,
+          2.7793036657945576e-05,
+          -8.05597658384569e-05,
+          9.709564709693579,
+          2.8185912188015667
+        ],
+        [
+          6.5000035,
+          -0.03553340241421918,
+          -0.03561763853449995,
+          -4.8322839567892566e-05,
+          -7.934750871582143e-05,
+          10.437111655754508,
+          3.004022943779603
+        ],
+        [
+          6.75000325,
+          -0.0355530789319813,
+          -0.0356362693338109,
+          -0.00010524106517132925,
+          -6.842865695444943e-05,
+          11.212727416481641,
+          3.2032896524294316
+        ],
+        [
+          7.000003,
+          -0.035583912019095165,
+          -0.03565138876090914,
+          -0.0001369957291343522,
+          -5.192642850852118e-05,
+          12.039984092791286,
+          3.417309190623226
+        ],
+        [
+          7.25000275,
+          -0.035619379278979034,
+          -0.03566207927314879,
+          -0.0001425280882119003,
+          -3.355661523102e-05,
+          12.922691656335058,
+          3.6470673966365665
+        ],
+        [
+          7.5000025,
+          -0.035653255184774434,
+          -0.035668254919156414,
+          -0.00012511684461337312,
+          -1.620684690388991e-05,
+          13.864915498418135,
+          3.893622563946357
+        ],
+        [
+          7.7500022500000005,
+          -0.035680556311080754,
+          -0.0356704272734482,
+          -9.118345378046404e-05,
+          -1.758987895181113e-06,
+          14.870995138852582,
+          4.158110265950573
+        ],
+        [
+          8.000002,
+          -0.035698139356780775,
+          -0.03566945398426558,
+          -4.8760607681074224e-05,
+          8.88096866690635e-06,
+          15.945564190451504,
+          4.441748581072357
+        ],
+        [
+          8.250001750000001,
+          -0.035704906369267764,
+          -0.03566631446290322,
+          -5.930931899999992e-06,
+          1.560724778477823e-05,
+          17.093571681924253,
+          4.74584373637165
+        ],
+        [
+          8.5000015,
+          -0.035701644618292325,
+          -0.03566194028170819,
+          3.0495563709517218e-05,
+          1.886408115582442e-05,
+          18.320304844446238,
+          5.07179617339213
+        ],
+        [
+          8.75000125,
+          -0.03569058615546847,
+          -0.03565711047576227,
+          5.587870005764065e-05,
+          1.93864917091855e-05,
+          19.63141346761258,
+          5.421107038349982
+        ],
+        [
+          9.000001000000001,
+          -0.03567480598167663,
+          -0.03565240744031842,
+          6.8137130479741e-05,
+          1.798120255210381e-05,
+          21.032935932178876,
+          5.7953851098449585
+        ],
+        [
+          9.25000075,
+          -0.035657585444097625,
+          -0.035648219480729874,
+          6.764834491333036e-05,
+          1.5375253470293997e-05,
+          22.531327032428536,
+          6.196354194751916
+        ],
+        [
+          9.5000005,
+          -0.0356418519335925,
+          -0.03564477188308695,
+          5.676018092313857e-05,
+          1.2138702988640878e-05,
+          24.133487710716494,
+          6.6258610383299565
+        ],
+        [
+          9.750000250000001,
+          -0.035629773963731085,
+          -0.03564216899679035,
+          3.9063390249946685e-05,
+          8.671041335829276e-06,
+          25.846796839357182,
+          7.085883801874118
+        ],
+        [
+          10.0,
+          -0.03562255087131298,
+          -0.03564043382374905,
+          1.8588777490639773e-05,
+          5.230852825173411e-06,
+          27.679145198314895,
+          7.57854115963681
+        ]
+      ]
+    },
+    "scope": "One regular nonconstant numerical Euclidean saddle and its Lorentzian charts in the1+3 invariant sector. Not an exhaustive saddle search or a full physical decay-index calculation."
+  },
+  "verdict": {
+    "combined_scalar_charged_sector_matches_reference": true,
+    "nonconstant_profile_numerically_admitted": true,
+    "derived_exit_state": true,
+    "initial_open_region_regular": true,
+    "finite_interior_expansion": true,
+    "full_quantum_transition_admitted": false,
+    "black_hole_valve_trigger_proved": false,
+    "incoming_parent_material_transfer_measured": false,
+    "lasting_observed_cosmology": false,
+    "minimum_interior_Omega_k": 0.974832982748481,
+    "meets_requested_nearflat_002_bound": false,
+    "SI_scale_selected": false,
+    "full_goal_achieved": false
+  },
+  "provenance": {
+    "source_sha256": {
+      "scripts/check_nsc_atlas_shape_transition.py": "478811369be4e5a5cd3b732ba0f809acfba1cadd8bb3110c490909433bcf9fff",
+      "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+      "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+      "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+      "src/recursive_horizons/nsc_atlas_shape_transition.py": "3a4e11ff1d8cba7e5b9d3766a6325b951ddce8307bd133bcec49543294b4cc32",
+      "src/recursive_horizons/nsc_atlas_sphere_flux_completion.py": "3367084466d789232eb5614af4cd43e471f1a24e2474197cf1f7e91c9d197b9a"
+    },
+    "source_unchanged": true,
+    "producer_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+    "source_bound_to_commit": true,
+    "raw_cache": ".build/shape-transition-v1/profiles.npz",
+    "raw_cache_sha256": "7748b1634ac8acc739e5f5d4d74bb9415b02c5b8cef0bc75aadccab957ec2b28"
+  },
+  "compute": {
+    "threads": 4,
+    "elapsed_seconds": 5.134499499981757
+  }
+}

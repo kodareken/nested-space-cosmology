@@ -4508,3 +4508,18 @@ The [paper guide](papers.md) routes archived and supporting editions. Spherical
 symmetry, specified states and fixed parameters are assumptions of individual
 tests. No new constants, propagation or recurrence campaign was admitted during
 repository reassembly. New calculations use the [existing admission rule](prior-art-and-open-claim.md).
+## Regular fixed-charge shape transition
+
+The [formation owner](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
+records the combined action and the numerical construction at292c742a.
+The producer needs no earlier evolution cache; use fresh destinations:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_shape_transition.py --raw-directory .build/shape-transition-fresh --output .build/shape-transition-fresh.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_charged_parent_completion.py tests/test_nsc_atlas_log_radius_potential.py tests/test_nsc_atlas_symmetric_shape_branches.py tests/test_nsc_atlas_shape_transition.py
+```
+
+The recorded producer takes5.13seconds. Raw polynomial profiles remain
+local; the compact summary and rendered figure authenticate them. Its
+exit state and finite recollapse are derived, but a physical decay-rate
+index, incoming parent material, lasting child and SI ruler remain open.

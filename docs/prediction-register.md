@@ -20,6 +20,14 @@ agreement could be rejected. Each entry distinguishes derived consequences,
 numerical sensitivity and observations. The [machine-readable register](../results/prediction-register.json)
 binds the evidence bytes and the exact locations of reported values.
 
+The [regular shape-transition branch](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
+adds a retrospective viability check, not a new preregistered observation:
+its minimum open-region Omega_k=.97483298 fails the requested .002
+near-flatness bound, and it turns toward recollapse. No present epoch or
+SI ruler is selected, so no Omega_Lambda_today or new survey fit is assigned.
+P001--P006 and their machine-readable evidence remain frozen. This finite
+branch result neither closes P006 nor rejects other nested constructions.
+
 ## NSC-P006 -- Directed horizon flow and the present vacuum fraction
 
 Protocol frozen on 31 October 2026 before the new calculation. The public

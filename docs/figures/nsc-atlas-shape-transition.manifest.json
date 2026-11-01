@@ -1,0 +1,68 @@
+{
+  "current_physical_decoder_used": false,
+  "historical_source_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+  "inputs": {
+    "raw_profile": {
+      "bytes": 236480,
+      "path": ".build/shape-transition-v1/profiles.npz",
+      "sha256": "7748b1634ac8acc739e5f5d4d74bb9415b02c5b8cef0bc75aadccab957ec2b28"
+    },
+    "scientific_record": {
+      "bytes": 53488,
+      "path": "results/summaries/nsc-atlas-shape-transition-v1.json",
+      "sha256": "608051e35e8ce249abdb4f2fbd910d808564129c0860b4e5c53602c97458e7b0"
+    }
+  },
+  "output": {
+    "bytes": 209881,
+    "path": "docs/figures/nsc-atlas-shape-transition.png",
+    "sha256": "0aebb1ac0952a61b13bb63c2a79f919a9525d84c9be30ec77f1d030a805b4cac"
+  },
+  "physical_source_or_PDE_recomputed": false,
+  "plotted": {
+    "Euclidean_length": 9.527744308980296,
+    "PPoly_keys": [
+      "fine_knots",
+      "fine_coefficients",
+      "fine_length",
+      "fine_cutoff"
+    ],
+    "equator_T_domain": [
+      -1.0,
+      1.0
+    ],
+    "equator_formula": "theta_plus=theta_minus=2*tanh(T)/R_equator",
+    "equator_radius": 3.3981968360533132,
+    "exit_density": 0.07054648473933378,
+    "interior_first_turn": 4.672652889054966,
+    "interior_points": 42,
+    "minimum_interior_Omega_k": 0.974832982748481,
+    "pole_fields": [
+      [
+        -0.5113670616852963,
+        0.27251212032103206
+      ],
+      [
+        -0.036789205232177394,
+        -0.03243210375897194
+      ]
+    ],
+    "profile_endpoint_rule": "Saved regular pole limits explicitly appended; PPoly is not extrapolated outside its knots."
+  },
+  "producer": {
+    "bytes": 11892,
+    "path": "scripts/plot_nsc_atlas_shape_transition.py",
+    "sha256": "1dd766bbeee096eb6ea2ac521966889d3501b5ed4b0ba8b731c1446c3ebf43c2"
+  },
+  "render": {
+    "dpi": 125,
+    "matplotlib_version": "3.11.2",
+    "size_pixels": [
+      1600,
+      1000
+    ]
+  },
+  "reproduction": "python scripts/run_python.py scripts/plot_nsc_atlas_shape_transition.py",
+  "schema": "nsc-atlas-shape-transition-figure-v1",
+  "scope": "One numerically admitted source-free fixed-charge saddle, its derived fields and chart continuations. No physical negative-index, incoming material flow, black-hole trigger, SI or observed-cosmology claim."
+}

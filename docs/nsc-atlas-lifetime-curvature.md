@@ -1,6 +1,16 @@
 # Lifetime selection and inherited curvature
 
-## Lifetime coefficients, computed first
+## Historical lifetime coefficients in the volume-only restriction
+
+The table below retains the one-field, common-volume calculation. It is
+not a ranking of all physical decay channels of the later smooth
+(S3)^4 source. That completion restores three relative-radius fields:
+at the (12,2) isotropic barrier, the volume mass squared is -.44464845
+and the three shape masses squared are -.33887849 each. Thus this top
+has four negative homogeneous scalar directions. Its old HM action
+difference remains a valid restricted calculation, but its interpretation
+as a one-negative-mode decay saddle does not extend to the full source.
+The fixed-charge shape calculation below is the subsequent connection.
 
 The [lifetime record](../results/summaries/nsc-atlas-volume-lifetime-v1.json)
 uses the same g=kappa_nat/L_unit(0)^2 for all five candidates.
@@ -18,11 +28,12 @@ explains why a top ratio below four alone does not exclude CDL.
 | (4,5) | 10.776179311559 | 314.036386367 | Excluded by the global identity below |
 | (3,7) | 10.727932243144 | 305.543559374 | Excluded by the global identity below |
 
-The HM coefficients use 24*pi^2*(1/V_false-1/V_top). All five have one
-negative homogeneous scalar harmonic: their barrier ratios are 3.76250,
-3.58398, 3.49617, 3.40670 and 3.27186. No thin-wall approximation is
-introduced for these broad barriers. No finite CDL action is reported
-for an absent or unresolved saddle.
+The HM coefficients use 24*pi^2*(1/V_false-1/V_top). Within the one-field
+restriction, all five have one negative homogeneous scalar harmonic:
+their barrier ratios are 3.76250, 3.58398, 3.49617, 3.40670 and 3.27186.
+No thin-wall approximation is introduced for these broad barriers. No
+finite CDL action was reported for an absent or unresolved saddle in
+that volume-only search.
 
 ### A global exclusion, including thick profiles
 
@@ -48,7 +59,8 @@ $$
 
 The extra boundary term a^5*Z*y^2 vanishes at each regular pole.
 Consequently G>0 for every field value rules out every nonconstant
-regular compact O(4) solution, including oscillating and thick profiles.
+regular compact O(4) solution of this one-field system, including
+oscillating and thick profiles.
 The constants 1/10 and 13/20 choose a mathematical square completion;
 they add no parameter to the physical action.
 
@@ -72,10 +84,12 @@ would give a CDL solution; the Friedmann constraint then fixes the same
 equatorial radius. Eight bounded starting pairs approach the HM corner.
 The search found no admitted nonconstant root and checked the independent
 equator constraint. Its finite domain and residuals are retained. It is
-not an exhaustive root count, so a reference CDL action remains unresolved.
-This unresolved step prevents a complete escape-channel lifetime ranking.
+not an exhaustive root count, so the volume-restricted reference CDL
+action remains unresolved. This does not exclude a path through the
+additional shape fields. The old search alone does not give a complete
+escape-channel lifetime ranking.
 
-### Conditional survival theorem
+### Conditional survival theorem in the volume-only model
 
 Under the proposed survival rule, let independent prepared populations
 have rates Gamma_i=A_i(g)*exp(-b_i/g), with positive subexponential
@@ -89,8 +103,11 @@ $$
 
 For sufficiently small common g, the largest leading action is the
 smallest rate; at late t its conditional survivor weight tends to one.
-Therefore the HM-only survival model selects (12,2), with late coefficient
-9.702237009265. The gap to the next HM coefficient is 34.7804541813.
+Therefore this volume-restricted HM-only survival model selects (12,2),
+with late coefficient 9.702237009265. The gap to the next HM coefficient
+is 34.7804541813. This is not a physical selection theorem for the full
+four-radius source, whose isotropic top has the extra negative directions
+identified above.
 This theorem states the ensemble and rate assumptions rather than adding
 a fitted physical parameter. Common g alone does not specify prefactors,
 initial populations, production or a volume-weighted measure.
@@ -99,17 +116,60 @@ Action ratios b_i/b_j are independent of common g. Actual lifetime ratios
 retain it: tau_12/tau_i=(A_i/A_12)*exp[(b_12-b_i)/g]. The ordering at
 leading semiclassical exponential order is the parameter-independent part.
 
-The four competing regular scalar CDL channels are excluded. A faster
-unresolved channel in (12,2) could still change the ranking; if its action
-remained above 369.001286854/g, the reference would still win at leading
+The four competing regular scalar CDL channels are excluded within that
+one-field restriction. A faster unresolved channel in (12,2) could still
+change the ranking; if its action remained above 369.001286854/g,
+the reference would still win at leading
 exponential order. No unconditional selection or absolute lifetime is
 claimed. The finite shooting allowance is 1600 residual calls or 120
 process-CPU seconds; no failed pole search is silently repeated.
 
+## Full four-radius source: a fixed-charge numerical transition
+
+Checkpoint 292c742a extends the (12,2) calculation to the smooth source's
+unequal radii. The [coupled implementation](../src/recursive_horizons/nsc_atlas_shape_transition.py)
+and [source-bound record](../results/summaries/nsc-atlas-shape-transition-v1.json)
+give a regular nonconstant Euclidean profile in the invariant
+u=(a,b,b,b) sector, using the gravitational scalar-bounce construction of
+[Coleman--De Luccia (1980)](https://doi.org/10.1103/PhysRevD.21.3305).
+The charge remains q=3/2, the massive scalar remains at phi_star(q), and
+no membrane or charge jump is inserted. The constant HM first seed is
+rejected before the nonconstant profile is admitted.
+
+Its numerical action difference is
+
+$$
+B g=291.450176284703.
+$$
+
+One collocation/pole-cutoff refinement changes this coefficient by
+5.00e-7 and the pole fields by at most 5.47e-10. These are empirical
+differences, not certified error bounds. The scalar--metric fluctuation
+index and internal KK modes have not been established. This is a
+numerical transition candidate, not yet an admitted physical decay rate;
+neither its action nor the old HM-only table establishes the complete
+lifetime ordering.
+
+The profile determines the true-side exit density
+rho_exit=.0705464847393 in the declared model units. Its regular open
+Lorentzian continuation starts with a(t) approximately t and finite
+curvature. It reaches its first expansion maximum at proper time
+4.6726528891 with a=3.8698336478. At that turn, rho=-.2003256967 and
+p=.5371417780 give a''=-a*(rho+3p)/6<0: the interior begins to recollapse.
+Its minimum curvature fraction is .9748329827, far above .002.
+Incoming material flux is zero. The exit excitation is stored geometric
+field energy, not a measured parent-to-child material supply. The
+connecting chart has a time-symmetric common Cauchy cut and a spatial
+maximum of areal radius; it does not establish a persistent neck or a
+black-hole valve trigger. No lasting observed cosmology or SI scale is
+selected by this finite continuation.
+
 ## Curvature mechanisms, evaluated second
 
 The [curvature audit](../results/summaries/nsc-atlas-curvature-mechanisms-v1.json)
-keeps the inherited source and its C=61720739711/2709842745600 fixed.
+keeps the original inherited preparation and its
+C=61720739711/2709842745600 fixed. The new fixed-charge shape exit above
+does not replace that preparation or its observer history.
 
 | Route | Outcome |
 | --- | --- |

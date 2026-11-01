@@ -1,5 +1,23 @@
 # What the calculations show
 
+## Connected shape transition, 1 November 2026
+
+The [formation owner](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
+now connects the original charged scalar/top-form sector and smooth
+product-sphere stabilizer in one action. Allowing unequal internal radii
+gives a regular nonconstant fixed-charge profile and derives both its
+Lorentzian pole states. The interior exit density is .07054648474; it
+expands to scale3.86983365 at proper4.67265289, then begins recollapse.
+Its minimum Omega_k=.97483298 fails the .002 near-flatness target.
+Incoming material flux is0, distinct from the earlier directional transfer.
+The numerical action difference B*g=291.4501763 is not a decay-rate claim:
+the full scalar/metric and internal fluctuation index is unresolved.
+The [compact record](../results/summaries/nsc-atlas-shape-transition-v1.json)
+and [figure](figures/nsc-atlas-shape-transition.png) preserve the calculation;
+41 focused tests pass. The PDF remains252pages, and the full goal remains
+active at16/50 declared work gates. The next formation connection is an
+energy-fed lasting child, not a deeper calculation of this finite branch.
+
 Active frontier: [valve formation](nsc-atlas-valve-formation.md), with the
 [goal progress record](atlas-progress.json) owning compaction recovery.
 Eta is parked. A new one-mode occupation of the retained action now

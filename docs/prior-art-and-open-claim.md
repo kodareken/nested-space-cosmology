@@ -1,5 +1,33 @@
 # Prior art and admission of new research
 
+## Charged-parent join and regular shape transition, 1 November 2026
+
+The [new connection](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
+uses [CDL's gravitational scalar equations and continuation](https://doi.org/10.1103/PhysRevD.21.3305)
+and compares the [dynamical compactification construction](https://arxiv.org/abs/0904.3115).
+The missing object was a shared profile in the actual combined source,
+not another volume-only barrier calculation. The source remains Einstein
+gravity, the existing massive scalar/top-form mixing and the smooth pair
+six-form on (S3)^4. Bare parameters and normalization are explicit in the
+scale-selection owner. No observation, exit pulse or old R/M is fitted.
+
+Exact action/derivative and restricted stationary-branch checks precede
+the bounded coupled solve. The invariant1+3 profile is solved at two
+collocation/pole cutoffs, then each derived pole is continued only to
+the first interior expansion turn or the declared parent-side proper10.
+Each Euclidean allowance is60seconds and each Lorentzian allowance30;
+the complete recorded calculation takes5.13seconds on four threads.
+Independent constraints, two on-shell action formulas, common Cauchy data,
+finite pole curvature and density/work balance are tested. Full arrays
+stay local; the compact record and figure bind their hashes to292c742a.
+
+Outcome: a regular numerical transition and finite expanding interior,
+but zero incoming material flux, excessive curvature and recollapse.
+Stop refining this branch. The full decay fluctuation index is unproved;
+the next formation problem is a sourced transition with a lasting receiving
+state. Historical volume-only HM selection and old directional transfer
+are not imported as full-source lifetime or child-feeding results.
+
 ## Smooth sphere-flux source and actual shape operator, 1 November 2026
 
 The [source completion](nsc-atlas-scale-selection.md#smooth-pair-flux-completion-and-its-shape-operator)

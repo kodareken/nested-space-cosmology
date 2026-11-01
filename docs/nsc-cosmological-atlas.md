@@ -1,6 +1,6 @@
 # Cosmological atlas: regions, boundaries and observer measurements
 
-## Active frontier and compaction recovery -- 31 October 2026
+## Active frontier and compaction recovery -- 1 November 2026
 
 The active frontier is the [valve/formation calculation](nsc-atlas-valve-formation.md).
 Eta is parked at dfda6e5a. Downstream vacuum fractions, cycle, dark matter
@@ -18,6 +18,16 @@ law, numerical convergence, inherited selection and observational success
 remain separate requirements. A real-data fit is not a successful withheld
 registered prediction. The overall current gate score is32%, with the
 physical child and all downstream empirical closure gates still open.
+
+The [new charged-parent/shape connection](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
+restores the original scalar/top-form sector in the smooth product-sphere
+source and derives a nonconstant regular profile. Its connected charts
+produce a finite expanding interior, not an independently supplied exit.
+That branch then recollapses, has min Omega_k=.97483298 and no incoming
+material flux. It is retained as a conditional atlas configuration; the
+physical decay index, parent supply and lasting child remain open.
+The old directional influx belongs to a different state and is not added
+to this branch's ledger. The PDF remains252pages.
 
 The [source-stage connection](nsc-atlas-inherited-charge.md) now uses the
 actual constrained parent for candidate Dirac modes and their initial

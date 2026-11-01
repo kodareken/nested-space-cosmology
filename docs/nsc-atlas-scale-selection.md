@@ -1125,15 +1125,13 @@ The dual comparison uses the fixed-displacement boundary term described
 above: V=P²/(2Z)>0 and L_eff=-V. Substituting the Lorentzian four-form
 solution directly into its bulk action would give the wrong action sign.
 
-The next action-level join is to retain the earlier scalar/top-form sector
-and its membrane wrapped over the complete internal space together with
-this stabilizer. Its charge is not automatically the six-form charge.
-`ScalarFlux` already supplies the shifted minimum, continuous-field handoff
-and excitation identities; the conditional E0=3/8 preparation is reused,
-not re-derived or promoted to a selected ancestral state. The combined
-action must then supply regional vacua and actual transition data. The
-six-cycle choice remains an input of the stabilizer completion; it must
-not be mistaken for the already specified top-form wrapping.
+The action-level join below now retains the earlier scalar/top-form sector
+and its membrane wrapped over the complete internal space alongside this
+stabilizer. Its charge is not the six-form charge. `ScalarFlux` supplies the
+existing shifted-minimum and continuous-field handoff identities; the
+conditional E0=3/8 preparation remains conditional, not a selected ancestral
+state. The six-cycle choice remains an input of the stabilizer completion,
+distinct from the complete internal wrapping of the top-form source.
 Neither a small spatial mass nor a convenient flux pattern substitutes
 for that physical connection. This construction uses the product-flux
 methods of [Brown and Dahlen](https://arxiv.org/html/1310.6360); their flux
@@ -1159,3 +1157,68 @@ python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_sphere_flux_compl
 The15 focused tests include full antisymmetric flux contractions, independent
 metric scaling and canonical Hessians, the round spectrum including odd
 modes, a direct warped-Laplacian integration, and the charge-embedding force.
+
+## Executed charged-parent join and shape transition
+
+The [combined action record](../results/summaries/nsc-atlas-shape-transition-v1.json)
+joins the existing scalar/top-form mixing to this smooth six-form source.
+The bare scalar mass squared is100, mixing squared300 and bare cosmological
+coefficient215/32. These replace the neutral completion's mass20 and
+coefficient7; adding both versions would double-count the retained sector.
+With Phi=phi/sqrt(V0), q_D=q/sqrt(V0), kappa16=V0*kappa4 and kappa4=1, the
+fixed-displacement reduction gives
+
+$$
+V(s,\phi,q,\beta)=e^{-12s}\left[\frac{215}{32}+50\phi^2+
+\frac{(q+\sqrt{300}\phi)^2}{2}\right]
+-\frac{15}{8}e^{-14s}\sum_i e^{-2\beta_i}
++\frac{25}{192}e^{-24s}\sum_{i<j}e^{-6(\beta_i+\beta_j)}.
+$$
+
+Here sum beta_i=0. The massive field relaxes to
+phi_star(q)=-sqrt(300)*q/400. At q=3/2, chi=phi-phi_star gives exactly the
+retained potential plus200 exp(-12s)chi². The old preparation is reused
+through `ScalarFlux.prepare`, not reconstructed from a newly selected
+waveform. In particular q=2 ->3/2 at fixed s gives relaxed vacuum drop
+7/32, initial excitation3/32 and immediate release1/8, all times exp(-12s).
+This identity is separate from the source-free profile below.
+
+The fully internally wrapped membrane has sigma=(1/5)exp(-6s), canonical
+charge=(1/2)exp(-6s), [n partial s]=-sigma/14 and [n partial phi]=0. It
+has no direct traceless-shape source. This is a material charged source;
+the smooth horizon convention0 continues to have no surface stress.
+The six-form's magnetic periods and this membrane's top-form charge are
+different physical data.
+
+For scalar-relaxed, equal-radius states A(q)=215/32+q²/8. The exact
+Minkowski and merger thresholds are
+
+$$
+A_M=\frac{25}{4}(8/5)^{1/5},\qquad
+A_c=\frac{175}{24}(14/15)^{1/5}.
+$$
+
+A positive equal-radius local minimum requires
+1.08536959848<|q|<1.94523633443. On the supplied half-integer lattice this
+leaves q=+/-3/2; |q|<=1 has an AdS minimum, and |q|>=2 has no equal-radius
+volume extremum. This classifies that restriction, not all unequal-radius
+vacua or the origin of the chosen coefficients/lattice.
+
+Allowing the four radii to vary uncovers an additional transition in this
+same action. With u_i=s+beta_i their kinetic metric is
+G_ij=3 delta_ij+9/2, and
+
+$$
+V(u;q)=e^{-3\sum_i u_i}\left[A(q)-\frac{15}{8}\sum_i e^{-2u_i}
++\frac{25}{192}\sum_{i<j}e^{-6(u_i+u_j)}\right].
+$$
+
+The regular fixed-q=3/2 profile in the exact u=(a,b,b,b) sector supplies
+both pole states and a connected Lorentzian geometry. Its exit density is
+.07054648474, action difference B*g=291.4501763, and interior maximum scale
+3.86983365 before recollapse. The [formation owner](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
+contains the equations, refinement, chart continuation and zero incoming
+material-flux result. This is a finite numerical construction, not yet an
+admitted decay rate or an energy-fed black-hole child. The quantum factor
+g, physical SI ruler, topology and source selection remain open; the
+exponent is not a derived length scale.
