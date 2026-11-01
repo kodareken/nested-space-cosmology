@@ -65,6 +65,26 @@ The two resolutions supply an empirical comparison, not a certified
 convergence order. The finished algebra and manuscript/PDF expansion
 remain frozen before this formation test produces its result.
 
+The [first coupled records](../results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json)
+now show a sampled future-trapped interface at both resolutions. Through
+their shared admitted proper duration1.2 the area-radius spread is at most
+2.83e-8. This is an empirical comparison, not a total error bar. Degree24
+remains admitted through1.7, then exceeds the declared2% normalized
+constraint limit at1.8 (Hamiltonian maximum3.51%). Lapse stays positive
+and observer normalization remains accurate; this is spatial resolution
+loss, not a physical endpoint. Degree32 remains admitted through1.2 and
+ends solely on its3600s compute budget. Its last cumulative work residual
+is-3.63e-7 in the retained energy units. No regular expanding child is
+established by these prefixes.
+
+The same-grid continuation reads the terminal fine record via
+`--resume-run`, uses its exact last admitted full Cauchy/observer state,
+preserves original coordinate time and cumulative work, and clips the
+inherited physical history at that handoff. It rejects a same-grid
+restart of the coarser admission failure. The unused raw parent tail is
+preserved without promoting its validity. This completes the same
+proper2 formation test; it does not change the action or preparation.
+
 The old two-mode finite searches below found no admitted trap; their
 occupation was supplied rather than selected. Continuing that optimizer,
 adding an external pressure term, and changing the occupation are materially

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+  "current_receipt_commit_parent": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
   "files": [
     {
       "bytes": 3197,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 21435,
-      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
-      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "bytes": 21385,
+      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
+      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "a9d26fb533650147eda2e031eec93015478bb95be69592e25d0d1f22e0c83b10"
+      "sha256": "a0a37d641a8f7fbea2251182277be51984766f5ace1871b303bb1728ad363634"
     },
     {
       "bytes": 9543,
@@ -11197,12 +11197,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 47888,
-      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
-      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "bytes": 49152,
+      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
+      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "ea5c19b951ed704ab2e9b4580eb7829f32d6478b5747118c752d72bf939cd78b"
+      "sha256": "cabe7ec497cd047a3bbea10917084af886ada2fcafb7589c370362a5e62067ed"
     },
     {
       "bytes": 10730,
@@ -31938,6 +31938,14 @@
       "sha256": "3b816958d6e7ea2badb36fe903ba4326ae8bb1747b6750aa1b02bd4b1fa4d8bf"
     },
     {
+      "bytes": 54502,
+      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
+      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
+      "path": "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "a43b12fc15674382a0073d7b6e57c4421850f041c9f5efda91f4739faecc5924"
+    },
+    {
       "bytes": 15580,
       "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
       "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
@@ -35773,12 +35781,12 @@
       "sha256": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a"
     },
     {
-      "bytes": 20241,
-      "change": "Save the finite counterrotating scalar preparation, constrained data and coupled formation runner.",
-      "changed_from_commit": "cb9bb051227c567ed50691ab1e3537ab84f92867",
+      "bytes": 22089,
+      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
+      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
       "path": "scripts/evolve_nsc_atlas_valve_counterrotation.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "63ae638fab15ced123dfa725b42e876c2d8714b735ae938d88ca55a84c8ec3c2"
+      "sha256": "7858730cab1ac816d1f168e5cdba7090448bd2b775163c3d46c27b9ba33f77bb"
     },
     {
       "bytes": 4707,
@@ -36676,6 +36684,14 @@
       "sha256": "20d0f17f9fb92f35259f042c636ed07152509dfaf5bb26185f080ec83a0d8a42"
     },
     {
+      "bytes": 5901,
+      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
+      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
+      "path": "scripts/summarize_nsc_atlas_valve_counterrotation.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "03259b2ff1d60594048fe80afaa7e8a70f51941d32232954ec4996208c481b33"
+    },
+    {
       "bytes": 11865,
       "change": "Authenticate compact summaries against their explicitly pinned original producers without scientific replay.",
       "changed_from_commit": "2551c9f52703fb418bec5a5ebf3d0bde136cfcc5",
@@ -37274,6 +37290,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cosmological_distance.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "7c10176c12b24df7f9a28364f8a963282beb44dc5bcd9979ad767d6a7bd11ae4"
+    },
+    {
+      "bytes": 8549,
+      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
+      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
+      "path": "src/recursive_horizons/nsc_atlas_counterrotation_resume.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "533f14a96103d32da4dcadad969461fb38fe48e58e976ef5f681cc09e22ef351"
     },
     {
       "bytes": 9910,
@@ -42168,6 +42192,14 @@
       "path": "tests/test_nsc_atlas_cosmological_distance.py",
       "retention_reason": "Current atlas mathematics, effective response, manuscript or compact reproduction evidence.",
       "sha256": "d48814a67c8d2d380bc1bce802d2d617e9e51a0ee692718efd656d8a8038f56a"
+    },
+    {
+      "bytes": 7668,
+      "change": "Preserve coupled counterrotation prefixes and continue the admitted fine Cauchy state with its clock and work ledger.",
+      "changed_from_commit": "ff89f170b8bd7b7ed5f762111a07036100fd647c",
+      "path": "tests/test_nsc_atlas_counterrotation_resume.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "0d5027ab359d7f8a24bcdcc77b0a8c4286734c5dbe2705fa72807f4f156bc8f8"
     },
     {
       "bytes": 4924,

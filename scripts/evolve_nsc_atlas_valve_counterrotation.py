@@ -22,6 +22,9 @@ from threadpoolctl import threadpool_limits
 from recursive_horizons.nsc_atlas_parent_gh import ParentGH,PAIRS
 from recursive_horizons.nsc_atlas_s3_hopf import build_hopf_frame_basis
 from recursive_horizons.nsc_atlas_valve_counterrotation import CounterrotatingData
+from recursive_horizons.nsc_atlas_counterrotation_resume import (
+    load_resume_checkpoint,validate_resumed_system,remaining_proper_targets,
+)
 from recursive_horizons.nsc_atlas_gh_constraints import adm_constraints
 from recursive_horizons.nsc_atlas_gh_observer import observer_readout
 from recursive_horizons.nsc_atlas_gh_history import DenseGHHistory
@@ -178,11 +181,16 @@ def run(args):
     if not folder.is_relative_to(ROOT/'.build') or folder.exists():raise ValueError('fresh output directory under .build required')
     folder.mkdir(parents=True)
     started=time.perf_counter();set_num_threads(args.threads)
-    input_path=(ROOT/args.initial_record).resolve();input_sha=sha(input_path)
+    resume=(load_resume_checkpoint(args.resume_run,repository_root=ROOT,degree=args.degree)
+            if args.resume_run is not None else None)
+    input_path=(ROOT/(resume.record['initial_record'] if resume else args.initial_record)).resolve()
+    if resume and (ROOT/args.initial_record).resolve()!=input_path:
+        raise ValueError('resume must preserve the original --initial-record')
+    input_sha=sha(input_path)
     result=dict(schema='nsc-atlas-parent-gh-v3',degree=args.degree,epsilon=1.,
         prescribed_GH_gauge='lapse_controlled',spatial_transform='hopf',
         requested_proper_endpoint=args.proper_endpoint,threads=args.threads,budget_seconds=args.budget,
-        initial_record=args.initial_record.as_posix(),initial_record_sha256=input_sha,
+        initial_record=input_path.relative_to(ROOT).as_posix(),initial_record_sha256=input_sha,
         snapshots=[],dense_history_chunks=[],regular_child_proved=False,status='initializing',
         temporal_tolerances=dict(rtol=args.rtol,atol=args.atol,max_step=args.max_step))
     saved=[];history=DenseGHHistory();chunk=0
@@ -191,9 +199,22 @@ def run(args):
         tmp=folder/'live.tmp';tmp.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
         tmp.replace(folder/'run.json')
     with threadpool_limits(limits=args.threads),set_workers(args.threads):
-        data=CounterrotatingData.from_record(input_path)
-        system=ParentGH(args.degree,1.,gauge='lapse_controlled',backend='hopf',kick_amplitude=data.kick_amplitude,kick_source=2)
-        state,prep=project_initial_state(system,data)
+        if resume:
+            decoder=resume.metadata
+            system=ParentGH(args.degree,decoder['epsilon'],gauge=decoder['gauge'],backend=decoder['backend'],
+                quadrature_order=decoder['quadrature_order'],kick_amplitude=decoder['kick_amplitude'],kick_source=decoder['kick_source'])
+            validate_resumed_system(resume,system)
+            state=resume.state.copy();t0=resume.coordinate_t
+            if t0>=8/system.r:raise ValueError('original coordinate allowance already ended')
+            prep=resume.record['initial_preparation']
+            system.initial_kick_metadata=prep
+            system.X0=state[system.dof:system.dof+4].copy();system.update_point(system.X0)
+            result['resume']=resume.provenance
+            result['physical_history_prefix']=resume.provenance['physical_history_prefix']
+        else:
+            data=CounterrotatingData.from_record(input_path)
+            system=ParentGH(args.degree,1.,gauge='lapse_controlled',backend='hopf',kick_amplitude=data.kick_amplitude,kick_source=2)
+            state,prep=project_initial_state(system,data);t0=0.
         pins=source_pins();commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
         bound=True
         for name,digest in pins.items():
@@ -201,9 +222,9 @@ def run(args):
             bound=bound and old.returncode==0 and hashlib.sha256(old.stdout).hexdigest()==digest
         result.update(initial_preparation=prep,source_sha256=pins,producer_commit=commit,source_bound_to_commit=bool(bound),
             model_inputs=dict(H_reference=system.r,vacuum=system.parent.vacuum,scalar_mass_squared=system.parent.mass_squared,
-                volume_kinetic=system.K,sstar=system.sstar,kick_amplitude=data.kick_amplitude,kick_source=2))
+                volume_kinetic=system.K,sstar=system.sstar,kick_amplitude=system.kick_amplitude,kick_source=2))
         meta=dict(degree=args.degree,epsilon=1.,gauge=system.gauge,backend='hopf',
-            quadrature_order=list(system.basis.quadrature_shape[:2]),kick_amplitude=data.kick_amplitude,kick_source=2,
+            quadrature_order=list(system.basis.quadrature_shape[:2]),kick_amplitude=system.kick_amplitude,kick_source=2,
             source_sha256=pins,producer_commit=commit,preparation_id='one-mode-counterrotation-v1')
         def flush():
             nonlocal history,chunk
@@ -212,20 +233,27 @@ def run(args):
             result['dense_history_chunks'].append(dict(path=path.relative_to(ROOT).as_posix(),sha256=sha(path),
                 coordinate_bounds=[history.bounds[0][0],history.bounds[-1][1]],intervals=len(history.bounds)))
             history=DenseGHHistory();chunk+=1
-        initial=diagnostic(system,0.,state);initial['integrated_excitation_work']=0.;initial['excitation_work_residual']=0.
-        result['snapshots'].append(initial);saved.append((0.,state.copy()));save_record()
-        print(json.dumps(dict(event='initial',degree=args.degree,H_res=initial['Hamiltonian_RMS_over_H2'],
+        initial=diagnostic(system,t0,state)
+        origin_energy=resume.baseline_excitation_energy if resume else initial['normal_energy_minus_fixed_vacuum']
+        work0=resume.cumulative_work if resume else 0.
+        initial['integrated_excitation_work']=work0
+        initial['excitation_work_residual']=initial['normal_energy_minus_fixed_vacuum']-origin_energy-work0
+        result['excitation_work_origin_energy']=origin_energy
+        result['snapshots'].append(initial);saved.append((t0,state.copy()));save_record()
+        print(json.dumps(dict(event='resume' if resume else 'initial',degree=args.degree,H_res=initial['Hamiltonian_RMS_over_H2'],
             M_res=initial['momentum_RMS_over_H2'],admitted=initial['sampled_admitted'],elapsed=time.perf_counter()-started)),flush=True)
         if args.initial_only or not initial['sampled_admitted']:
             result['status']='initial_only' if args.initial_only else 'initial_not_admitted'
         else:
+            result['status']='running'
             system.started=started;system.budget=args.budget
-            ledger=PassiveDOP853Quadrature();system.passive_work=ledger
-            solver=DOP853(system.rhs,0.,state,t_bound=8/system.r,rtol=args.rtol,atol=args.atol,
+            normalization=system.parent.vacuum*V3/system.r**3
+            ledger=PassiveDOP853Quadrature(initial=work0/normalization);system.passive_work=ledger
+            solver=DOP853(system.rhs,t0,state,t_bound=8/system.r,rtol=args.rtol,atol=args.atol,
                           first_step=.002,max_step=args.max_step)
-            ledger.initialize(solver);normalization=system.parent.vacuum*V3/system.r**3
-            targets=sorted(set([.02]+[i/10 for i in range(1,math.ceil(10*args.proper_endpoint)+1)]+[args.proper_endpoint]))
-            targets=[v for v in targets if v<=args.proper_endpoint];steps=0;last_admitted=0.;status='incomplete';reason=None
+            ledger.initialize(solver)
+            targets=remaining_proper_targets(args.proper_endpoint,float(state[system.dof+8]))
+            steps=0;last_admitted=t0;status='incomplete';reason=None
             heartbeat=time.perf_counter()
             try:
                 while solver.status=='running' and targets:
@@ -247,7 +275,7 @@ def run(args):
                         point=dense(t);diag=diagnostic(system,t,point)
                         work=float(ledger.dense_value(solver,t))*normalization
                         diag['integrated_excitation_work']=work
-                        diag['excitation_work_residual']=diag['normal_energy_minus_fixed_vacuum']-initial['normal_energy_minus_fixed_vacuum']-work
+                        diag['excitation_work_residual']=diag['normal_energy_minus_fixed_vacuum']-origin_energy-work
                         result['snapshots'].append(diag);saved.append((t,point.copy()))
                         if diag['sampled_admitted']:last_admitted=t
                         result.update(steps=steps,rhs_calls=system.calls,last_admitted_coordinate_t=last_admitted)
@@ -287,6 +315,8 @@ def main():
     p.add_argument('--max-step',type=float,default=.025);p.add_argument('--initial-only',action='store_true')
     p.add_argument('--initial-record',type=Path,default=Path('results/summaries/nsc-atlas-valve-counterrotation-v1.json'))
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--resume-run',type=Path,
+        help='Terminal same-grid budget/completed run; continue its last admitted full sparse state at original coordinate time.')
     args=p.parse_args()
     if args.threads<1 or args.threads>8 or args.proper_endpoint<=0 or args.budget<=0:raise ValueError('positive endpoint/budget and threads1..8 required')
     run(args)
