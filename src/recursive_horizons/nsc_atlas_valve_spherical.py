@@ -45,11 +45,16 @@ class SphericalValve:
     h=qÂ² dchiÂ²+bÂ² sinÂ²chi dOmegaÂ², u=cos(chi), q=b+(1-uÂ²)c.
     K_rad=K_tan+(1-uÂ²)d enforces regular metric/curvature poles.
     State rows are b,c,K_tan,d,S,chi,Pi_S,Pi_chi. No shell is present.
+    Reflection projection is optional; spherical symmetry alone does not
+    require equality of the two caps or their matter momenta.
     """
-    def __init__(self,modes=32,*,epsilon=1.,initial_degree=40,budget_seconds=60.):
+    def __init__(self,modes=32,*,epsilon=1.,initial_degree=40,budget_seconds=60.,reflection_symmetry=True):
         if isinstance(modes,bool) or not isinstance(modes,int) or not 12<=modes<=128:
             raise ValueError('integer modes in [12,128] required')
+        if not isinstance(reflection_symmetry,(bool,np.bool_)):
+            raise ValueError('boolean reflection_symmetry required')
         self.modes=modes
+        self.reflection_symmetry=bool(reflection_symmetry)
         self.initial_data=solve_necks(initial_degree,(epsilon,))[0]
         self.parent=self.initial_data.parent;self.H=self.parent.H
         self.kappa=self.parent.kappa;self.epsilon=float(epsilon)
@@ -122,6 +127,7 @@ class SphericalValve:
         out=np.array([-kb*b,-kb*c-d*z['q'],z['Rt']+z['K']*kb-self.kappa*z['W'],
                       z['Rdiff']+z['K']*d-self.kappa*(Su*Su+chi_u*chi_u)/z['q']**2,
                       PS,PC,z['K']*PS+z['lapS']-z['WS'],z['K']*PC+z['lapC']-z['WC']])
+        if not self.reflection_symmetry:return out.ravel()
         # Exact reflection parity; this projects roundoff only, not a physical mode.
         parity=np.array([1,1,1,1,1,-1,1,-1])[:,None]
         return (.5*(out+parity*out[:,::-1])).ravel()
@@ -142,6 +148,8 @@ class SphericalValve:
         return -2*z['kb']+curvature,-2*z['kb']-curvature
 
     def diagnostic(self,t,state,*,validation_order=None):
+        if not self.reflection_symmetry:
+            raise ValueError('diagnostic requires reflection_symmetry=True; directional diagnostics must retain both caps independently')
         order=validation_order or 3*self.modes+7
         angles=np.pi*np.arange(1,order+1)/(order+1)
         u=np.cos(angles);w=4*np.pi**2/(order+1)*np.sin(angles)**2
@@ -181,6 +189,8 @@ class SphericalValve:
         event horizon or a new universe. A root is accepted only after both
         expansions are checked in the band and marginality is re-evaluated.
         """
+        if not self.reflection_symmetry:
+            raise ValueError('trapped_band requires reflection_symmetry=True; directional boundaries must be found independently')
         tp,tm=self.expansions(state,[0.])
         if tp[0]>=0 or tm[0]>=0:return None
         def edge(u):
