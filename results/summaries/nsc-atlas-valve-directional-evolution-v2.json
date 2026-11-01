@@ -1,0 +1,881 @@
+{
+  "schema": "nsc-atlas-valve-directional-evolution-v1",
+  "projection_producer": {
+    "path": "scripts/summarize_nsc_atlas_valve_directional.py",
+    "sha256": "fe40d67a7e5ff1bc76702c871865910ee746291a22881e262a34c424253cba94",
+    "role": "Passive projection of authenticated historical terminal trajectories; no current runner imported."
+  },
+  "runs": [
+    {
+      "modes": 64,
+      "authentication": {
+        "run_record": ".build/valve-directional-evolution-N64-v2/run.json",
+        "run_record_sha256": "03be20eb6dee82702b55b9be44dd520566045611f7b9d1feee61a60369e93806",
+        "producer_commit": "9f0554b9b528ddb6c4c6cd6e5e9c1fb68ea586a4",
+        "source_sha256": {
+          "scripts/evolve_nsc_atlas_valve_directional.py": "e95980acc34816a4f5eef753a66e8458f7bdcca4bb6e469f5bf19d1e26c7c18c",
+          "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+          "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+          "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+          "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+          "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+          "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+          "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+          "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+          "src/recursive_horizons/nsc_atlas_valve_spherical.py": "0e4224af37899197654d876545fc7be71bf6623d07c578888bfeda8f448f5ad0"
+        },
+        "historical_Git_source_verified": true,
+        "current_physical_package_matches": true,
+        "current_runner_matches_historical": {
+          "scripts/evolve_nsc_atlas_valve_directional.py": true
+        },
+        "sparse_cache": {
+          "path": ".build/valve-directional-evolution-N64-v2/sparse.npz",
+          "sha256": "b4283d78986f754fda5059b0c6ca84cb09b77932b0833223af8c6282f27fc6b8"
+        },
+        "initial_record": {
+          "path": "results/summaries/nsc-atlas-valve-directional-v1.json",
+          "sha256": "851b087c2332e754e4db826532b31bf7cbfb659a06fcb4b6db1d45abc3fb7f53",
+          "raw_cache": {
+            "path": ".build/valve-directional-release-v1/initial-data.npz",
+            "sha256": "d20d98c42c4b97fe29bb85d5deb3d52994a01ea3dc85390f545667a198e53363"
+          }
+        },
+        "resume": {
+          "parent_run": ".build/valve-directional-evolution-N64-v1/run.json",
+          "parent_record_sha256": "b5d4617fc62e3b88b7f516ef3371dd0dc348fdde08fdc26a0a992def0c766538",
+          "parent_producer_commit": "15137b9b1155400f4b20692acd0b08155e37b5e7",
+          "parent_status": "endpoint_reached",
+          "parent_stop_reason": null,
+          "state_cache": ".build/valve-directional-evolution-N64-v1/sparse.npz",
+          "state_cache_sha256": "8b5ddffae7dd5e00d41b040fcf55ca13212fce0e7fc39f0ba89063c6829b95dc",
+          "snapshot_index": 20,
+          "state_array_sha256": "389e80462b235dfeaf2580ce10129fb0009d9ab85a419fadabdf71a62b0aa188",
+          "handoff_proper": 2.0,
+          "cap_energy_baselines": [
+            71.37490039657213,
+            71.37490039657231
+          ],
+          "cumulative_integrals": [
+            0.14931544902069402,
+            0.2007472319552649,
+            0.012981144123175511
+          ],
+          "previous_minimum_u": -0.030302637900160724,
+          "parent_actual_last_accepted_proper": 2.0,
+          "parent_Git_and_package_sources_verified": true,
+          "selected_parent_state_SHA_verified": true,
+          "child_initial_state_bitwise_equal": true,
+          "cumulative_ledgers_preserved": true,
+          "original_cap_baselines_preserved": true
+        }
+      },
+      "domain": {
+        "proper_time": [
+          2.0,
+          2.8000000000000003
+        ],
+        "requested_endpoint": 4.0,
+        "last_admitted": 2.8000000000000003,
+        "status": "incomplete",
+        "stop_reason": "positive spatial metric ended; change foliation before continuing",
+        "actual_last_accepted_proper": 2.895737577114457,
+        "last_cached_snapshot_proper": 2.8000000000000003,
+        "accepted_tail_not_cached": true,
+        "all_recorded_snapshots_sampled_admitted": true,
+        "admission": "Finite spatial samples at the recorded times, ADM-term2% scale; not a continuum error bound."
+      },
+      "temporal_tolerances": {
+        "rtol": 3e-11,
+        "atol": 1e-13,
+        "max_step": 0.002
+      },
+      "reflection_projection": false,
+      "controls": {
+        "sampled_max_relative_H": 0.00027253547346293576,
+        "sampled_max_relative_M": 0.0001587513790381546,
+        "max_Hamiltonian_RMS_over_H2": 0.0039746589732641046,
+        "max_momentum_RMS_over_H2": 0.005326679257622197,
+        "minimum_sampled_radial_scale": 1.5183042302450838,
+        "minimum_sampled_angular_scale": 1.3698676814094344,
+        "max_abs_receiving_cap_energy_ledger_residual": 8.069973378432849e-08,
+        "max_abs_donor_cap_energy_ledger_residual": 7.343603769527363e-08
+      },
+      "initial": {
+        "global_max_relative_constraints": {
+          "H": 4.559713995190988e-10,
+          "M": 1.3943934166451148e-09
+        },
+        "Hamiltonian_RMS_over_H2": 1.624687598643417e-09,
+        "momentum_RMS_over_H2": 3.790989140238137e-09,
+        "min_radial_scale": 3.020401103306387,
+        "min_angular_scale": 1.5934160066371086,
+        "sampled_max_tidal_over_H2": 8.937135900878344,
+        "volume_modulus": {
+          "sampled_s_range": [
+            -0.028354175569560117,
+            0.06559039801744165
+          ],
+          "sampled_normal_s_rate_range": [
+            0.005788796588628991,
+            0.10635651286429287
+          ],
+          "bare_potential_barrier_s": 0.0600005350418201,
+          "sampled_proper_volume_fraction_above_bare_barrier": 0.00512899988244298,
+          "log_internal_volume_ratio_range": [
+            0.08751128380057044,
+            1.2148461668445916
+          ],
+          "scope": "Existing volume-mode identification log(Vint/Vint_star)=d(s-sstar). Crossing the bare V(s) barrier is not alone a new spacetime, runaway theorem or localized higher-dimensional solution."
+        },
+        "sampled_admitted": true,
+        "admission_scope": "Independent finite spatial samples and ADM-term2% scale; not a continuum error bound.",
+        "proper_time": 2.0,
+        "fixed_receiving_cap": {
+          "volume": 116.31830590131112,
+          "energy": 71.72496307754817,
+          "mean_density": 0.6166266136854018,
+          "mean_isotropic_pressure": -0.2208498795240617,
+          "w": -0.35815820242351337,
+          "bulk_volume_rate": -1.5238974425712932,
+          "integrated_material_received": 0.14931544902069402,
+          "integrated_pressure_work": 0.2007472319552649,
+          "energy_ledger_residual": 7.874256802153923e-14
+        },
+        "fixed_donor_cap": {
+          "volume": 115.17864755923523,
+          "energy": 71.23856609167498,
+          "mean_density": 0.6185049712016951,
+          "mean_isotropic_pressure": -0.22189958199325283,
+          "w": -0.3587676612560178,
+          "bulk_volume_rate": -2.4153882001888936,
+          "integrated_material_received": -0.14931544902069402,
+          "integrated_pressure_work": 0.012981144123175511,
+          "energy_ledger_residual": 1.8650359034921848e-13
+        },
+        "fixed_interface": {
+          "radius": 1.5934160066371086,
+          "theta_plus_over_H": -0.9810296096282883,
+          "theta_minus_over_H": -0.9494174065010235,
+          "material_influx": 0.0025631964782961555
+        },
+        "minimum": {
+          "u": -0.030302637900160724,
+          "radius": 1.5932582678945408,
+          "normal_radius_rate": -0.20881228374064795,
+          "R_ll": 0.036478492267840244,
+          "R_ll_over_R_H2": 0.3108229234506573,
+          "radial_second_derivative_source": "Actual metric spatial second jets: R_ll=-R*Rr/2, not an Einstein-source reconstruction.",
+          "theta_plus_over_H": -0.9657862744849239,
+          "theta_minus_over_H": -0.9657862744849235,
+          "rho": 0.23813157155013154,
+          "radial_pressure": -0.22962695836497377,
+          "NEC": 0.008504613185157772,
+          "candidate_minimum_count": 1,
+          "scope": "Migrating area minimum; its coordinate motion is not an observer worldline."
+        },
+        "minimum_anchor_u": -0.030302637900160724,
+        "trapped_band": {
+          "u_left": -0.7727348094248088,
+          "u_right": 0.7610971700444844,
+          "volume": 171.41791930506366,
+          "energy": 70.39033326288269,
+          "mean_density": 0.4106357932020668,
+          "mean_isotropic_pressure": -0.2176100705345177,
+          "w": -0.5299344921630724,
+          "material_influx": 0.37735448532970234,
+          "pressure_work_rate": 4.396311683517832,
+          "marginal_expansions": [
+            [
+              -0.6139759456338689,
+              -3.885780586188048e-16
+            ],
+            [
+              -7.549516567451064e-15,
+              -0.5599025459030833
+            ]
+          ],
+          "scope": "Connected sampled future-trapped band about the retained minimum anchor, which may cease to be a current minimum; boundary sweep is not material supply and no child is identified.",
+          "anchor_u": -0.030302637900160724,
+          "anchor_is_current_minimum": true
+        }
+      },
+      "endpoint": {
+        "global_max_relative_constraints": {
+          "H": 0.00022885950727776882,
+          "M": 0.0001587513790381546
+        },
+        "Hamiltonian_RMS_over_H2": 0.0039746589732641046,
+        "momentum_RMS_over_H2": 0.005326679257622197,
+        "min_radial_scale": 1.5183042302450838,
+        "min_angular_scale": 1.3698676814094344,
+        "sampled_max_tidal_over_H2": 563.4886989463592,
+        "volume_modulus": {
+          "sampled_s_range": [
+            -0.02608886580029105,
+            0.210376576776909
+          ],
+          "sampled_normal_s_rate_range": [
+            -0.0008853647205555795,
+            0.3748887504520545
+          ],
+          "bare_potential_barrier_s": 0.0600005350418201,
+          "sampled_proper_volume_fraction_above_bare_barrier": 0.10760933018775073,
+          "log_internal_volume_ratio_range": [
+            0.11469500103179922,
+            2.9522803119581997
+          ],
+          "scope": "Existing volume-mode identification log(Vint/Vint_star)=d(s-sstar). Crossing the bare V(s) barrier is not alone a new spacetime, runaway theorem or localized higher-dimensional solution."
+        },
+        "sampled_admitted": true,
+        "admission_scope": "Independent finite spatial samples and ADM-term2% scale; not a continuum error bound.",
+        "proper_time": 2.8000000000000003,
+        "fixed_receiving_cap": {
+          "volume": 111.21380377929987,
+          "energy": 72.14236866690791,
+          "mean_density": 0.6486817842331162,
+          "mean_isotropic_pressure": -0.19699792919514078,
+          "w": -0.3036896271536828,
+          "bulk_volume_rate": -14.31834187341492,
+          "integrated_material_received": 0.1663334446282686,
+          "integrated_pressure_work": 0.6011349064072483,
+          "energy_ledger_residual": -8.069973378432849e-08
+        },
+        "fixed_donor_cap": {
+          "volume": 108.97097552358557,
+          "energy": 72.45620700070134,
+          "mean_density": 0.6649128967834099,
+          "mean_isotropic_pressure": -0.1845849888451187,
+          "w": -0.2776077734964521,
+          "bulk_volume_rate": -16.331620347531345,
+          "integrated_material_received": -0.1663334446282686,
+          "integrated_pressure_work": 1.2476399753212566,
+          "energy_ledger_residual": 7.343603769527363e-08
+        },
+        "fixed_interface": {
+          "radius": 1.3699226678753134,
+          "theta_plus_over_H": -1.978544567634365,
+          "theta_minus_over_H": -1.9369453122318583,
+          "material_influx": 0.0008324854493548756
+        },
+        "minimum": {
+          "u": -0.0352211479034966,
+          "radius": 1.3696000478630606,
+          "normal_radius_rate": -0.36415655198872354,
+          "R_ll": 0.022722155104401644,
+          "R_ll_over_R_H2": 0.22522577995836135,
+          "radial_second_derivative_source": "Actual metric spatial second jets: R_ll=-R*Rr/2, not an Einstein-source reconstruction.",
+          "theta_plus_over_H": -1.9593207255613407,
+          "theta_minus_over_H": -1.9593207255613423,
+          "rho": 0.2377483248478088,
+          "radial_pressure": -0.2334187791636145,
+          "NEC": 0.0043295456841943025,
+          "candidate_minimum_count": 1,
+          "scope": "Migrating area minimum; its coordinate motion is not an observer worldline."
+        },
+        "minimum_anchor_u": -0.0352211479034966,
+        "trapped_band": {
+          "u_left": -0.9481172094669752,
+          "u_right": 0.8966152537136519,
+          "volume": 214.4139251608312,
+          "energy": 118.05981750415232,
+          "mean_density": 0.5506163716540147,
+          "mean_isotropic_pressure": -0.2268018578377003,
+          "w": -0.4119054018615588,
+          "material_influx": 1.0451271987232136,
+          "pressure_work_rate": -8.328152009056556,
+          "marginal_expansions": [
+            [
+              -5.106472447338392,
+              1.3322676295501878e-15
+            ],
+            [
+              1.5543122344752192e-15,
+              -2.5795350094009155
+            ]
+          ],
+          "scope": "Connected sampled future-trapped band about the retained minimum anchor, which may cease to be a current minimum; boundary sweep is not material supply and no child is identified.",
+          "anchor_u": -0.0352211479034966,
+          "anchor_is_current_minimum": true
+        }
+      },
+      "window_increments": {
+        "receiving_cap_energy": 0.4174055893597455,
+        "receiving_cap_volume": -5.1045021220112545,
+        "net_material_received": 0.017017995607574582,
+        "receiving_cap_pressure_work": 0.4003876744519834
+      },
+      "compute": {
+        "threads": 4,
+        "elapsed_seconds": 6.336926699994365,
+        "rhs_calls": 6993
+      }
+    },
+    {
+      "modes": 96,
+      "authentication": {
+        "run_record": ".build/valve-directional-evolution-N96-v2/run.json",
+        "run_record_sha256": "b41151913b55908295c66c3ff212aa0cda5c67cc5168fe824a20ec2eb30ffe71",
+        "producer_commit": "9f0554b9b528ddb6c4c6cd6e5e9c1fb68ea586a4",
+        "source_sha256": {
+          "scripts/evolve_nsc_atlas_valve_directional.py": "e95980acc34816a4f5eef753a66e8458f7bdcca4bb6e469f5bf19d1e26c7c18c",
+          "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+          "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+          "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+          "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+          "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+          "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+          "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+          "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+          "src/recursive_horizons/nsc_atlas_valve_spherical.py": "0e4224af37899197654d876545fc7be71bf6623d07c578888bfeda8f448f5ad0"
+        },
+        "historical_Git_source_verified": true,
+        "current_physical_package_matches": true,
+        "current_runner_matches_historical": {
+          "scripts/evolve_nsc_atlas_valve_directional.py": true
+        },
+        "sparse_cache": {
+          "path": ".build/valve-directional-evolution-N96-v2/sparse.npz",
+          "sha256": "b13c48d51c78991e1bf61c2e193ab57d76ed0f2df022553d6535974ae84c2dc0"
+        },
+        "initial_record": {
+          "path": "results/summaries/nsc-atlas-valve-directional-v1.json",
+          "sha256": "851b087c2332e754e4db826532b31bf7cbfb659a06fcb4b6db1d45abc3fb7f53",
+          "raw_cache": {
+            "path": ".build/valve-directional-release-v1/initial-data.npz",
+            "sha256": "d20d98c42c4b97fe29bb85d5deb3d52994a01ea3dc85390f545667a198e53363"
+          }
+        },
+        "resume": {
+          "parent_run": ".build/valve-directional-evolution-N96-v1/run.json",
+          "parent_record_sha256": "4bd0ddf1d11344e21afab71f09cdf4f6c3f2475e01796ca5137c51f625f5ca51",
+          "parent_producer_commit": "15137b9b1155400f4b20692acd0b08155e37b5e7",
+          "parent_status": "endpoint_reached",
+          "parent_stop_reason": null,
+          "state_cache": ".build/valve-directional-evolution-N96-v1/sparse.npz",
+          "state_cache_sha256": "95d910474c18780506baa4d3c346efaff5663e1ec36aa5e1425688e1c54f4d3d",
+          "snapshot_index": 20,
+          "state_array_sha256": "d3d7d628cdcb4596f866f33a5e42ea176d0aed73231105ab75c371d6e3af0edd",
+          "handoff_proper": 2.0,
+          "cap_energy_baselines": [
+            71.3749003965741,
+            71.37490039657445
+          ],
+          "cumulative_integrals": [
+            0.14931544902071114,
+            0.20074723195324143,
+            0.012981144121960803
+          ],
+          "previous_minimum_u": -0.030302637899207,
+          "parent_actual_last_accepted_proper": 2.0,
+          "parent_Git_and_package_sources_verified": true,
+          "selected_parent_state_SHA_verified": true,
+          "child_initial_state_bitwise_equal": true,
+          "cumulative_ledgers_preserved": true,
+          "original_cap_baselines_preserved": true
+        }
+      },
+      "domain": {
+        "proper_time": [
+          2.0,
+          2.8000000000000003
+        ],
+        "requested_endpoint": 4.0,
+        "last_admitted": 2.8000000000000003,
+        "status": "incomplete",
+        "stop_reason": "positive spatial metric ended; change foliation before continuing",
+        "actual_last_accepted_proper": 2.894058182903808,
+        "last_cached_snapshot_proper": 2.8000000000000003,
+        "accepted_tail_not_cached": true,
+        "all_recorded_snapshots_sampled_admitted": true,
+        "admission": "Finite spatial samples at the recorded times, ADM-term2% scale; not a continuum error bound."
+      },
+      "temporal_tolerances": {
+        "rtol": 3e-11,
+        "atol": 1e-13,
+        "max_step": 0.002
+      },
+      "reflection_projection": false,
+      "controls": {
+        "sampled_max_relative_H": 8.989766793801432e-07,
+        "sampled_max_relative_M": 8.985205921200985e-07,
+        "max_Hamiltonian_RMS_over_H2": 7.3454403779603205e-06,
+        "max_momentum_RMS_over_H2": 2.2066637646522892e-05,
+        "minimum_sampled_radial_scale": 1.51472490228574,
+        "minimum_sampled_angular_scale": 1.3698343151530081,
+        "max_abs_receiving_cap_energy_ledger_residual": 1.4055123731537833e-10,
+        "max_abs_donor_cap_energy_ledger_residual": 1.4016587890353094e-10
+      },
+      "initial": {
+        "global_max_relative_constraints": {
+          "H": 2.874365073865691e-10,
+          "M": 1.11854784492055e-11
+        },
+        "Hamiltonian_RMS_over_H2": 3.544472591154203e-10,
+        "momentum_RMS_over_H2": 4.244117113695645e-11,
+        "min_radial_scale": 3.0204020494060675,
+        "min_angular_scale": 1.593414458052678,
+        "sampled_max_tidal_over_H2": 8.947745849973241,
+        "volume_modulus": {
+          "sampled_s_range": [
+            -0.028354175569558257,
+            0.06559039801926833
+          ],
+          "sampled_normal_s_rate_range": [
+            0.0057882751138675324,
+            0.10635651295892777
+          ],
+          "bare_potential_barrier_s": 0.0600005350418201,
+          "sampled_proper_volume_fraction_above_bare_barrier": 0.005440328286557194,
+          "log_internal_volume_ratio_range": [
+            0.08751128380059275,
+            1.2148461668665118
+          ],
+          "scope": "Existing volume-mode identification log(Vint/Vint_star)=d(s-sstar). Crossing the bare V(s) barrier is not alone a new spacetime, runaway theorem or localized higher-dimensional solution."
+        },
+        "sampled_admitted": true,
+        "admission_scope": "Independent finite spatial samples and ADM-term2% scale; not a continuum error bound.",
+        "proper_time": 2.0,
+        "fixed_receiving_cap": {
+          "volume": 116.31830590130232,
+          "energy": 71.7249630775481,
+          "mean_density": 0.6166266136854478,
+          "mean_isotropic_pressure": -0.22084987952405535,
+          "w": -0.35815820242347635,
+          "bulk_volume_rate": -1.523897442583048,
+          "integrated_material_received": 0.14931544902071114,
+          "integrated_pressure_work": 0.20074723195324143,
+          "energy_ledger_residual": 3.8719027983802334e-14
+        },
+        "fixed_donor_cap": {
+          "volume": 115.17864755923337,
+          "energy": 71.23856609167582,
+          "mean_density": 0.6185049712017124,
+          "mean_isotropic_pressure": -0.2218995819932468,
+          "w": -0.35876766125599807,
+          "bulk_volume_rate": -2.4153882001926217,
+          "integrated_material_received": -0.14931544902071114,
+          "integrated_pressure_work": 0.012981144121960803,
+          "energy_ledger_residual": 1.2514989045087077e-13
+        },
+        "fixed_interface": {
+          "radius": 1.5934160066370846,
+          "theta_plus_over_H": -0.9810296096596625,
+          "theta_minus_over_H": -0.9494174065318978,
+          "material_influx": 0.0025631964792358158
+        },
+        "minimum": {
+          "u": -0.030302637899207,
+          "radius": 1.593258267894517,
+          "normal_radius_rate": -0.2088122837379988,
+          "R_ll": 0.03647849227073125,
+          "R_ll_over_R_H2": 0.3108229234752954,
+          "radial_second_derivative_source": "Actual metric spatial second jets: R_ll=-R*Rr/2, not an Einstein-source reconstruction.",
+          "theta_plus_over_H": -0.9657862744726855,
+          "theta_minus_over_H": -0.9657862744726851,
+          "rho": 0.23813157154988857,
+          "radial_pressure": -0.22962695836524505,
+          "NEC": 0.008504613184643517,
+          "candidate_minimum_count": 1,
+          "scope": "Migrating area minimum; its coordinate motion is not an observer worldline."
+        },
+        "minimum_anchor_u": -0.030302637899207,
+        "trapped_band": {
+          "u_left": -0.7727348094306364,
+          "u_right": 0.761097170046715,
+          "volume": 171.41791930617455,
+          "energy": 70.39033326378706,
+          "mean_density": 0.4106357932046814,
+          "mean_isotropic_pressure": -0.21761007053460651,
+          "w": -0.5299344921599145,
+          "material_influx": 0.3773544854713573,
+          "pressure_work_rate": 4.396311683453187,
+          "marginal_expansions": [
+            [
+              -0.6139759456675298,
+              2.7755575615628914e-16
+            ],
+            [
+              -7.494005416219807e-15,
+              -0.5599025459133751
+            ]
+          ],
+          "scope": "Connected sampled future-trapped band about the retained minimum anchor, which may cease to be a current minimum; boundary sweep is not material supply and no child is identified.",
+          "anchor_u": -0.030302637899207,
+          "anchor_is_current_minimum": true
+        }
+      },
+      "endpoint": {
+        "global_max_relative_constraints": {
+          "H": 5.744615176020063e-07,
+          "M": 8.985205921200985e-07
+        },
+        "Hamiltonian_RMS_over_H2": 7.3454403779603205e-06,
+        "momentum_RMS_over_H2": 2.2066637646522892e-05,
+        "min_radial_scale": 1.51472490228574,
+        "min_angular_scale": 1.3698343151530081,
+        "sampled_max_tidal_over_H2": 568.5402924254375,
+        "volume_modulus": {
+          "sampled_s_range": [
+            -0.02608886228674198,
+            0.21037573681290658
+          ],
+          "sampled_normal_s_rate_range": [
+            -0.0008854084062711095,
+            0.3749873742345519
+          ],
+          "bare_potential_barrier_s": 0.0600005350418201,
+          "sampled_proper_volume_fraction_above_bare_barrier": 0.1093216697122887,
+          "log_internal_volume_ratio_range": [
+            0.11469504319438806,
+            2.9522702323901706
+          ],
+          "scope": "Existing volume-mode identification log(Vint/Vint_star)=d(s-sstar). Crossing the bare V(s) barrier is not alone a new spacetime, runaway theorem or localized higher-dimensional solution."
+        },
+        "sampled_admitted": true,
+        "admission_scope": "Independent finite spatial samples and ADM-term2% scale; not a continuum error bound.",
+        "proper_time": 2.8000000000000003,
+        "fixed_receiving_cap": {
+          "volume": 111.21380377966553,
+          "energy": 72.14236876225765,
+          "mean_density": 0.6486817850883385,
+          "mean_isotropic_pressure": -0.19699792824138668,
+          "w": -0.3036896252830025,
+          "bulk_volume_rate": -14.31834143398387,
+          "integrated_material_received": 0.16633344852527734,
+          "integrated_pressure_work": 0.6011349170177127,
+          "energy_ledger_residual": 1.4055123731537833e-10
+        },
+        "fixed_donor_cap": {
+          "volume": 108.9709755231464,
+          "energy": 72.45620704337567,
+          "mean_density": 0.6649128971777015,
+          "mean_isotropic_pressure": -0.1845849873227913,
+          "w": -0.2776077710423174,
+          "bulk_volume_rate": -16.331620797353853,
+          "integrated_material_received": -0.16633344852527734,
+          "integrated_pressure_work": 1.247640095466667,
+          "energy_ledger_residual": -1.4016587890353094e-10
+        },
+        "fixed_interface": {
+          "radius": 1.3699227257159474,
+          "theta_plus_over_H": -1.9785522226482042,
+          "theta_minus_over_H": -1.9369529848673648,
+          "material_influx": 0.0008326015371339072
+        },
+        "minimum": {
+          "u": -0.03522669110549245,
+          "radius": 1.3696000096020928,
+          "normal_radius_rate": -0.3641555910439224,
+          "R_ll": 0.02272910098380733,
+          "R_ll_over_R_H2": 0.22529463496389165,
+          "radial_second_derivative_source": "Actual metric spatial second jets: R_ll=-R*Rr/2, not an Einstein-source reconstruction.",
+          "theta_plus_over_H": -1.9593156099953053,
+          "theta_minus_over_H": -1.9593156099953069,
+          "rho": 0.2377486136402515,
+          "radial_pressure": -0.23341880135261742,
+          "NEC": 0.004329812287634072,
+          "candidate_minimum_count": 1,
+          "scope": "Migrating area minimum; its coordinate motion is not an observer worldline."
+        },
+        "minimum_anchor_u": -0.03522669110549245,
+        "trapped_band": {
+          "u_left": -0.9481116984194128,
+          "u_right": 0.8966249882126922,
+          "volume": 214.4144847742387,
+          "energy": 118.06036024191812,
+          "mean_density": 0.550617465821986,
+          "mean_isotropic_pressure": -0.22680218103716274,
+          "w": -0.4119051703138084,
+          "material_influx": 1.0513368779268257,
+          "pressure_work_rate": -8.32917010230606,
+          "marginal_expansions": [
+            [
+              -5.105971822711046,
+              -4.440892098500626e-15
+            ],
+            [
+              1.7763568394002505e-15,
+              -2.579818509749436
+            ]
+          ],
+          "scope": "Connected sampled future-trapped band about the retained minimum anchor, which may cease to be a current minimum; boundary sweep is not material supply and no child is identified.",
+          "anchor_u": -0.03522669110549245,
+          "anchor_is_current_minimum": true
+        }
+      },
+      "window_increments": {
+        "receiving_cap_energy": 0.41740568470955,
+        "receiving_cap_volume": -5.1045021216367985,
+        "net_material_received": 0.0170179995045662,
+        "receiving_cap_pressure_work": 0.4003876850644713
+      },
+      "compute": {
+        "threads": 4,
+        "elapsed_seconds": 7.279567799996585,
+        "rhs_calls": 7149
+      }
+    }
+  ],
+  "comparison": {
+    "run_order": [
+      64,
+      96
+    ],
+    "common_admitted_recorded_domain": [
+      2.0,
+      2.8000000000000003
+    ],
+    "matched_times": {
+      "columns": [
+        "proper_time",
+        "minimum_radius_N64",
+        "minimum_radius_N96",
+        "empirical_abs_spread_minimum_radius",
+        "fixed_cap_energy_N64",
+        "fixed_cap_energy_N96",
+        "empirical_abs_spread_fixed_cap_energy",
+        "fixed_cap_volume_N64",
+        "fixed_cap_volume_N96",
+        "empirical_abs_spread_fixed_cap_volume",
+        "net_material_received_N64",
+        "net_material_received_N96",
+        "empirical_abs_spread_net_material_received",
+        "band_left_N64",
+        "band_left_N96",
+        "empirical_abs_spread_band_left",
+        "band_right_N64",
+        "band_right_N96",
+        "empirical_abs_spread_band_right"
+      ],
+      "rows": [
+        [
+          2.0,
+          1.5932582678945408,
+          1.593258267894517,
+          2.375877272697835e-14,
+          71.72496307754817,
+          71.7249630775481,
+          7.105427357601002e-14,
+          116.31830590131112,
+          116.31830590130232,
+          8.79651906871004e-12,
+          0.14931544902069402,
+          0.14931544902071114,
+          1.712519015484304e-14,
+          -0.7727348094248088,
+          -0.7727348094306364,
+          5.827671678559909e-12,
+          0.7610971700444844,
+          0.761097170046715,
+          2.230549078774402e-12
+        ],
+        [
+          2.1,
+          1.571599515117949,
+          1.571599515118165,
+          2.1604940059205546e-13,
+          71.83113020021017,
+          71.83113020021153,
+          1.3642420526593924e-12,
+          116.11959477853148,
+          116.11959477852149,
+          9.990230864787009e-12,
+          0.15318656657434143,
+          0.15318656657454915,
+          2.077227279073668e-13,
+          -0.7986426559181161,
+          -0.7986426559441725,
+          2.605637927644011e-11,
+          0.7865219022171694,
+          0.7865219022160488,
+          1.120659121056633e-12
+        ],
+        [
+          2.2,
+          1.5483700623883268,
+          1.5483700623942664,
+          5.9396931817445875e-12,
+          71.6486293222411,
+          71.64862932225194,
+          1.0828671292983927e-11,
+          115.84329777892825,
+          115.84329777891665,
+          1.1596057447604835e-11,
+          0.15560752349485388,
+          0.15560752349876852,
+          3.914646384828302e-12,
+          -0.797300262374556,
+          -0.7973002602320924,
+          2.1424635399114322e-09,
+          0.7843480791039146,
+          0.7843480788869108,
+          2.1700374830402325e-10
+        ],
+        [
+          2.3000000000000003,
+          1.5234656219853489,
+          1.5234656220282838,
+          4.2934988897513904e-11,
+          71.63512392111431,
+          71.63512392118963,
+          7.531752999057062e-11,
+          115.4784728699114,
+          115.47847286989646,
+          1.4935608305677306e-11,
+          0.15731332324237085,
+          0.15731332325292413,
+          1.0553280471725657e-11,
+          -0.824532382623021,
+          -0.8245323920530552,
+          9.43003419795474e-09,
+          0.8109278229970248,
+          0.8109278221291434,
+          8.678814333862306e-10
+        ],
+        [
+          2.4000000000000004,
+          1.496777612181198,
+          1.4967776125197276,
+          3.385296487579126e-10,
+          71.66131054835472,
+          71.66131054853032,
+          1.7560353171575116e-10,
+          114.98293633724602,
+          114.98293633721687,
+          2.914646302087931e-11,
+          0.15970981443167642,
+          0.15970981444715904,
+          1.548261518991012e-11,
+          -0.8239868900101947,
+          -0.8239869770483554,
+          8.703816078980964e-08,
+          0.8097192218641089,
+          0.8097192156455371,
+          6.21857187965702e-09
+        ],
+        [
+          2.5000000000000004,
+          1.4681956950395267,
+          1.4681956971867793,
+          2.1472525979504553e-09,
+          71.46567849569738,
+          71.46567849599057,
+          2.9319835448404774e-10,
+          114.34761687062775,
+          114.34761687053923,
+          8.851941402099328e-11,
+          0.16220596684114516,
+          0.16220596681591087,
+          2.52342868822808e-11,
+          -0.8512694792451851,
+          -0.8512690406262075,
+          4.3861897769392755e-07,
+          0.8375763776651352,
+          0.837576387347549,
+          9.682413870670814e-09
+        ],
+        [
+          2.6,
+          1.4375851535831603,
+          1.4375851622070233,
+          8.623862957080064e-09,
+          71.48980132566328,
+          71.4898013218308,
+          3.832482775578683e-09,
+          113.53802596628171,
+          113.53802596601957,
+          2.6213342607661616e-10,
+          0.16371366462311895,
+          0.16371366330973056,
+          1.3133883980387395e-09,
+          -0.880215305436126,
+          -0.8802176507578706,
+          2.345321744590123e-06,
+          0.8564863350068749,
+          0.8564842126134906,
+          2.1223933842628995e-06
+        ],
+        [
+          2.7,
+          1.4047801490743836,
+          1.4047801583860167,
+          9.311633020203658e-09,
+          71.78653405416438,
+          71.7865340603728,
+          6.208423997122736e-09,
+          112.50515014728182,
+          112.50515014705184,
+          2.2998847271082923e-10,
+          0.16480287078226818,
+          0.16480287300701052,
+          2.2247423347998563e-09,
+          -0.9100346629040089,
+          -0.9100411276952808,
+          6.464791271865167e-06,
+          0.865114529188842,
+          0.8651166676813664,
+          2.1384925243950192e-06
+        ],
+        [
+          2.8000000000000003,
+          1.3696000478630606,
+          1.3696000096020928,
+          3.826096772741039e-08,
+          72.14236866690791,
+          72.14236876225765,
+          9.534973344216269e-08,
+          111.21380377929987,
+          111.21380377966553,
+          3.6565950267686276e-10,
+          0.1663334446282686,
+          0.16633344852527734,
+          3.8970087434808676e-09,
+          -0.9481172094669752,
+          -0.9481116984194128,
+          5.5110475624120525e-06,
+          0.8966152537136519,
+          0.8966249882126922,
+          9.734499040292555e-06
+        ]
+      ]
+    },
+    "maximum_observed_absolute_spreads": {
+      "minimum_radius": 3.826096772741039e-08,
+      "fixed_cap_energy": 9.534973344216269e-08,
+      "fixed_cap_volume": 3.6565950267686276e-10,
+      "net_material_received": 3.8970087434808676e-09,
+      "band_left": 6.464791271865167e-06,
+      "band_right": 9.734499040292555e-06
+    },
+    "scope": "Empirical differences between these two finite runs, not error bars or a continuum/exact-Cauchy-data certificate."
+  },
+  "interpretation": {
+    "net_material": "Signed accumulated material supply through the fixedu=0 interface; not gross crossings or energy creation.",
+    "energy_ledger": "Fixed-cap normal matter-energy change=net material supplied+integrated pressure work; no moving-boundary sweep is mixed into supply.",
+    "cumulative_origin": "Resumed material/work values remain cumulative from originaltau0; window increments subtract the authenticated handoff values.",
+    "migrating_minimum": "An area minimum on each slice; its coordinate motion is not a material observer worldline.",
+    "trapped_band": "Recorded marginal roots delimit a sampled future-trapped band; no new horizon classification is performed here."
+  },
+  "verdict": {
+    "defined_directional_preparation": true,
+    "inherited_selection_proved": false,
+    "requested_finite_endpoint_completed": false,
+    "regular_receiving_child_proved": false,
+    "endpoint_receiving_cap_expanding": false,
+    "endpoint_receiving_cap_volume_rate": -14.31834143398387,
+    "endpoint_receiving_cap_w": -0.3036896252830025,
+    "new_horizon_classification_or_NEC_gate_computed": false,
+    "scope": "Common admitted recorded window2\u20132.8 only; requested endpoints and stop causes remain in per-run metadata. No physical singularity, child or cosmological claim."
+  },
+  "projection_elapsed_seconds": 0.9547849999798927,
+  "reproduction": "python scripts/run_python.py scripts/summarize_nsc_atlas_valve_directional.py --coarse-record .build/valve-directional-evolution-N64-v2/run.json --fine-record .build/valve-directional-evolution-N96-v2/run.json --output results/summaries/nsc-atlas-valve-directional-evolution-v2.json"
+}
