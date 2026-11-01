@@ -1,5 +1,14 @@
 # Active code and evidence map
 
+`critical_parent_response` in `nsc_atlas_shape_transition.py` derives the
+bounded reference response and its source/CK weak root from the declared
+carrier. `solve_critical_pocket_data` in `nsc_atlas_closed_pocket.py` uses
+those coefficients without a second correction, adds the balanced mode
+and solves all initial constraints. The producer's `--critical-parent`
+mode saves the source-bound coefficients; `test_nsc_atlas_critical_parent.py`
+independently checks forcing, units, closure and physical Cauchy data.
+This interface selects no natural or nonlinear critical history.
+
 `nsc_atlas_closed_pocket.py` owns the new constrained state and `PocketValve`
 adapter; it reuses the authenticated spherical physical RHS unchanged.
 `solve_pocket_data` solves the conditional potential-force profile,

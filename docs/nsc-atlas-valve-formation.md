@@ -7,7 +7,23 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
-## Current result: a finite contracting-to-compact history with carrier feeding
+## Active connection: a conditioned parent with spatially balanced compression
+
+The [critical-history calculation](#reference-history-and-global-momentum-close-one-phase)
+now determines the carrier's monopole momentum correction from its full
+reference history and the global momentum constraint. It gives
+delta Pi_chi=-.0063847845374 on the continuous weak-source branch, with
+positive jointly constrained Cauchy data. The carrier amplitude and balanced
+compression remain supplied; this is not natural or nonlinear critical-state
+selection. The previous whole-S3 compactification window remains frozen.
+
+The next formation calculation uses this conditioned state to keep a
+compactifying region distinct from a persisting parent and establish their
+causal handoff. Localized black-hole offspring and all downstream empirical
+closures remain open. A numerical bandwidth/CFL stop is not treated as a
+physical endpoint or repaired by a new field state.
+
+## Completed finite contracting-to-compact history with carrier feeding
 
 The [new closed preparation](#closed-compression-and-scalar-feeding) evolves
 one constrained state through proper-25..+25. A larger-internal-volume,
@@ -174,6 +190,96 @@ Dirac spectrum is not transferred to this product geometry. The charged
 join and regular shape transition below advance that action-level connection;
 a sourced child receiving parent material remains the next formation target.
 The manuscript/PDF remains252pages; its expansion stays frozen.
+
+## Reference history and global momentum close one phase
+
+The [source-bound record](../results/summaries/nsc-atlas-critical-parent-v1.json)
+derives one preparation coefficient using the existing action and
+quarter-carrier normalization. It does not import a saved waveform or
+fit an observational target. Pointwise V_s=0 was insufficient for a
+spatially varying, oscillating source: the spatial Laplacian and the
+time dependence of the inherited carrier also act on the radion.
+
+On the declared global-de-Sitter barrier reference, T=H_top*t and
+a=cosh(T)/H_top. Write chi=sum q_l(T)U_l(u), with the prescribed initial
+position in l=1 and momentum in l=0,2. The actual massive source obeys
+
+$$
+q_l''+3\tanh T\,q_l'+
+[\mu^2/H_{\rm top}^2+l(l+2)\operatorname{sech}^2T]q_l=0.
+$$
+
+No oscillation average replaces q_l in this calculation. The canonical
+radion response z_L obeys
+
+$$
+z_L''+3\tanh T\,z_L'+
+[L(L+2)\operatorname{sech}^2T-\alpha]z_L
+=\frac{6\mu^2}{\sqrt{84}H_{\rm top}^2}(\chi^2)_L,
+\quad \alpha=3.76250309154.
+$$
+
+The product identity U_m U_n=sum_(k=0..min(m,n)) U_(m+n-2k) closes this
+source through L=4. Two-sided bounded Green conditions select a critical
+reference response. In the finite calculation, parity conditions at0
+and the decaying Robin condition at12 represent the interval-12..12;
+a cutoff10 control measures the initial-coefficient change. These are
+conditioning assumptions defining a mathematical threshold reference,
+not a causal or naturally selected initial-state law.
+
+### Closing the source rather than changing it afterwards
+
+A constant correction delta to the carrier's initial momentum changes its
+l=0 history. Recomputing that effect gives
+
+$$
+S=S_0+\delta S_1+\delta^2 S_2,\qquad
+\Pi_S=\Pi_0+\delta\Pi_1.
+$$
+
+At the initial cut S_2 is purely monopole, so its spatial derivative is0.
+The only nontrivial radial conformal-Killing condition is
+mean(PiS*S_u+PiChi*chi_u)=0 with weight(1-u²)^(3/2). Hence
+
+$$
+C_2\delta^2+(A_\chi+C_1)\delta+C_0=0,
+$$
+
+where C0=8.21579442e-5, C1=-.0005452418413, C2=.0006904972365 and
+A_chi=.0134174213493. The discriminant is positive. Scaling the original
+carrier by lambda gives C0~lambda^4, C1~lambda^3 and C2~lambda²; only one
+root tends continuously to0, as delta~-lambda³*C0/A_chi. It gives
+
+$$
+\delta\Pi_\chi=-.0063847845374.
+$$
+
+The other root, -18.6355, is excluded by that continuity condition, not by
+which subsequent geometry it produces. The direct weighted constraint
+and polynomial agree. No second carrier correction is applied after
+computing this critical reference history.
+
+The resulting positions and momenta enter the full nonlinear initial
+Hamiltonian/York solve. The balanced perturbation is
+PiS_bal=-sqrt84*(.01)*U2/3; its source-sphere mean is0. The full initial
+metric has analytic positive conformal lower bound about.9837547, and
+all reflection parities are retained. Independent dense tests verify the
+physical constraints and the variable-momentum York tensor.
+
+This closes one reference phase coefficient, not the quarter-carrier
+amplitude, balanced-compression amplitude, physical origin of time,
+fundamental charge, quantum state, SI scale or nonlinear formation
+threshold. After solving the metric, actual momenta are psi^-6 times
+the reference conformal data; the coupled evolution must be tested
+separately rather than called the same global-de-Sitter source history.
+
+Reproduce with a fresh output; the recorded response plus constraint solve
+takes11.73seconds in the isolated runtime:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_shape_transition.py --critical-parent --raw-directory .build/critical-parent-fresh --output .build/critical-parent-fresh.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_critical_parent.py
+```
 
 ## Closed compression and scalar feeding
 

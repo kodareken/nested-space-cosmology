@@ -1,5 +1,18 @@
 # What the calculations show
 
+## Conditioned carrier history and compatible phase, 1 November 2026
+
+The [new reference response](nsc-atlas-valve-formation.md#reference-history-and-global-momentum-close-one-phase)
+computes the radion's forced history, including spatial gradients, then
+closes its feedback into the carrier with the global momentum constraint.
+The continuous weak-source branch fixes deltaPiChi=-.0063847845374;
+the other root is excluded by its nonzero-source-limit behaviour. The
+full initial constraints admit positive data, with no second phase
+adjustment. 28 targeted checks pass. This is a reference conditioning
+result; the amplitudes, natural preparation and nonlinear child formation
+are not selected. The existing receiving-cosmology and older windows stay
+frozen, and the full programme remains active.
+
 ## Contracting-to-compact continuation with carrier feeding, 1 November 2026
 
 The [joint closed preparation](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)

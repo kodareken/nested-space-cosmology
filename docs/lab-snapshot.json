@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "fe5c0644fa045ff6685ba9b61ae104adb073bc52",
+  "current_receipt_commit_parent": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
   "files": [
     {
       "bytes": 3197,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 306341,
-      "change": "Construct the jointly constrained closed compression/carrier history, preserve the old authenticated physical engine and record finite transport with actual null geometry; causal offspring remains open.",
-      "changed_from_commit": "fe5c0644fa045ff6685ba9b61ae104adb073bc52",
+      "bytes": 306920,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "0554a76700a70f16a5db2cbd68e4492273b457adeaae01d515deb49ada15ed72"
+      "sha256": "9a13784be9eff5dfa6127f122e3551fd4860fdb6beb7d36f2eb4481628793a92"
     },
     {
       "bytes": 168348,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 22599,
-      "change": "Construct the jointly constrained closed compression/carrier history, preserve the old authenticated physical engine and record finite transport with actual null geometry; causal offspring remains open.",
-      "changed_from_commit": "fe5c0644fa045ff6685ba9b61ae104adb073bc52",
+      "bytes": 22448,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "83b56ebb63ea73fc8bfc2fbdf2b2fb90e17304ef7aa5f4061a16ae33dfe11421"
+      "sha256": "6e8d35c8df6760a6f6b8c77022ecbe1eba2e449e406ab72e82037b6397a6ea93"
     },
     {
       "bytes": 9543,
@@ -10341,12 +10341,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 498826,
-      "change": "Construct the jointly constrained closed compression/carrier history, preserve the old authenticated physical engine and record finite transport with actual null geometry; causal offspring remains open.",
-      "changed_from_commit": "fe5c0644fa045ff6685ba9b61ae104adb073bc52",
+      "bytes": 499626,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2584678dada930ae9ea15d7c373d301ce86107e8b47316484a8e76a3ed0b1a3f"
+      "sha256": "35539f2c31648cd80efe2929d86cfcd697ef383dc392d74617218e8dd7e2bf3b"
     },
     {
       "bytes": 3421,
@@ -11261,12 +11261,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 87626,
-      "change": "Construct the jointly constrained closed compression/carrier history, preserve the old authenticated physical engine and record finite transport with actual null geometry; causal offspring remains open.",
-      "changed_from_commit": "fe5c0644fa045ff6685ba9b61ae104adb073bc52",
+      "bytes": 92343,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "1d855d3bc700a09ef788e5e6ff31c0bf7ae2a8baec7c5557be27d2fc5467dbab"
+      "sha256": "37543c18cf4a9e9fa5dbb3fcf9de5a509ce7bd3683ec886ec93d0dd1d3dacef0"
     },
     {
       "bytes": 10730,
@@ -12320,12 +12320,12 @@
       "sha256": "ce5d4444677cd35fa5d905b720b064b470da936b21bad52240d5ebcd9e070ef1"
     },
     {
-      "bytes": 627047,
-      "change": "Construct the jointly constrained closed compression/carrier history, preserve the old authenticated physical engine and record finite transport with actual null geometry; causal offspring remains open.",
-      "changed_from_commit": "fe5c0644fa045ff6685ba9b61ae104adb073bc52",
+      "bytes": 628059,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "8056057697d6d0731f4ef1dd5749fc4dbb4eeb306c4cfbc558454a1b05319dc0"
+      "sha256": "a824d38c213fc5fc353d2d028a152b701eff8ed674307f42cbb91c14f2af2cfa"
     },
     {
       "bytes": 6705,
@@ -30887,6 +30887,14 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "bytes": 25083,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
+      "path": "results/summaries/nsc-atlas-critical-parent-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "180be5a28fc1cd47cf201dd2a169a7432f2633055a2f3dd3fa4271f82c1667f9"
+    },
+    {
       "bytes": 2679,
       "change": "Record the actual evolving-volume shared-ruler refit and the limits of attractor, entropy and tunnelling selection; preserve the frozen source.",
       "changed_from_commit": "95c89d8366c5d8852c996ba12148a73df314b833",
@@ -33167,12 +33175,12 @@
       "sha256": "a61d296c8171b29191be2e58911a931efb745719f7aa17d0503f3e4ae0ac2426"
     },
     {
-      "bytes": 13375,
-      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
-      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
+      "bytes": 16659,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
       "path": "scripts/check_nsc_atlas_shape_transition.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "a71b25f3860bf2af70b8fb32f29def5f8aee96d3704ddf828e96a77a2a8c690a"
+      "sha256": "5c5f33854974022fb80aaec9d10244f197f2bb0a15aadab70d53bd66d175ff33"
     },
     {
       "bytes": 6371,
@@ -37430,12 +37438,12 @@
       "sha256": "fe00379032ef3ffd3cb8b8619d8bda76b95ef406177586fe690326cbddbfa076"
     },
     {
-      "bytes": 8054,
-      "change": "Construct the jointly constrained closed compression/carrier history, preserve the old authenticated physical engine and record finite transport with actual null geometry; causal offspring remains open.",
-      "changed_from_commit": "fe5c0644fa045ff6685ba9b61ae104adb073bc52",
+      "bytes": 14609,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
       "path": "src/recursive_horizons/nsc_atlas_closed_pocket.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "da1ae8fc66c4b30d3deb4b1c88eab3c00169b7a132fbbb99bbed85b31e9d3b11"
+      "sha256": "c249d6cbf79e5a7cba3d6b42c70d3ae04faf47cffe53120f6c937b4c762d9edf"
     },
     {
       "bytes": 4710,
@@ -38416,12 +38424,12 @@
       "sha256": "8c9093e542ed3c7323dd6e612228c480d5655575832c46001df39486445ad395"
     },
     {
-      "bytes": 15378,
-      "change": "Construct the jointly constrained closed compression/carrier history, preserve the old authenticated physical engine and record finite transport with actual null geometry; causal offspring remains open.",
-      "changed_from_commit": "fe5c0644fa045ff6685ba9b61ae104adb073bc52",
+      "bytes": 23356,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
       "path": "src/recursive_horizons/nsc_atlas_shape_transition.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "a9a7b88dc822c1e800f76279e8624a3cc9715eeb037b1ea9f1cf84d59f555348"
+      "sha256": "3e55fdf92f328d86c91985ad8d644635754b4eb9d5a9e80ab49870945866399d"
     },
     {
       "bytes": 9176,
@@ -42520,6 +42528,14 @@
       "path": "tests/test_nsc_atlas_coupled_tube_bound.py",
       "retention_reason": "Conditional coupled continuum bound, its independent controls and bounded reproduction.",
       "sha256": "49aa4d7bf60e86b56c2e382cc8e34da617421dc253fa197b1ed41c2087a5ba98"
+    },
+    {
+      "bytes": 7667,
+      "change": "Close the forced critical reference and carrier phase, admit joint Cauchy data and preserve the distinction from natural selection or nonlinear offspring.",
+      "changed_from_commit": "50ccaab8b7c63bdf72ad91e74e6251aa9af95544",
+      "path": "tests/test_nsc_atlas_critical_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "bb96cefd0b5e5bcce171f06f1711d28d43f4dbca36cd783e18a9f32aa9e3315a"
     },
     {
       "bytes": 5350,

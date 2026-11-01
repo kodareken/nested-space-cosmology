@@ -1,5 +1,21 @@
 # Prior art and admission of new research
 
+## Forced critical parent and phase closure, 1 November 2026
+
+The [new response](nsc-atlas-valve-formation.md#reference-history-and-global-momentum-close-one-phase)
+uses the established spherical Klein--Gordon spectrum, bounded Green
+response and conformal-Killing momentum condition. The missing link was
+the sourced history and its gradients, not another static potential root.
+The carrier amplitude, action and background are fixed; both the source
+response and the constraint correction are recomputed together.
+No observed value or desired late fate chooses the quadratic root.
+The source interval is-12..12 with one cutoff control and a30second
+response allowance; the joint constraint allowance is10seconds. The
+recorded total is11.73seconds. Independent tests check unaveraged forcing,
+actual response derivatives, units, direct global constraint and fresh
+physical initial data. Stop after the conditional preparation; nonlinear
+regional evolution and causal descendant identification remain separate.
+
 ## Closed compression and scalar carrier, 1 November 2026
 
 The [new finite history](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
