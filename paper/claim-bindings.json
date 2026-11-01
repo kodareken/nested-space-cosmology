@@ -818,6 +818,26 @@
       "section": "A.198",
       "status": "derived",
       "owner": "docs/nsc-atlas-inherited-charge.md"
+    },
+    "signed-gaussian-source": {
+      "section": "A.199",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-inherited-charge.md"
+    },
+    "chiral-state-inheritance": {
+      "section": "A.199",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-inherited-charge.md"
+    },
+    "dirac-source-ward": {
+      "section": "A.199",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-inherited-charge.md"
+    },
+    "parent-dirac-intermode-source": {
+      "section": "A.200",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-inherited-charge.md"
     }
   },
   "findings": [

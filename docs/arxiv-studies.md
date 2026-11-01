@@ -1,5 +1,25 @@
 # Cited arXiv studies
 
+## Dirac source, stress and inherited state -- 1 November 2026
+
+[Dappiaggi--Hack--Pinamonti, 0904.0612v1](https://arxiv.org/html/0904.0612v1),
+sections4.1--4.3 including the conserved point-splitting construction and
+finite local-curvature freedom, was inspected for the source/renormalization
+distinction. It treats free Dirac fields with constant mass. It supplies a
+method for a conserved quantum stress, not the interacting, variable-mass
+stress on the current parent. The bare source/Ward calculation and its
+counterterm radion variation are kept explicit in the
+[inherited-field owner](nsc-atlas-inherited-charge.md).
+
+[The same authors, 1009.5179v1](https://arxiv.org/html/1009.5179v1),
+sections2.1,3.2,4.2 and Theorem4.2, gives bulk-to-boundary Dirac states and
+their Hadamard property. The hypotheses include spatially flat FRW geometry
+with a suitable asymptotic past and boundary-state data. Its thermal family
+does not select its temperature. These hypotheses are not established by
+the finite compact inhomogeneous valve history. This is a concrete state
+construction to adapt if its parent boundary can be supplied, rather than
+an already selected state for the current geometry.
+
 ## Receiver source, compact spinors and pressure, 31 October 2026
 
 - [Shaposhnikov--Shkerin--Timiryasov--Zell, 2008.11686v2](https://arxiv.org/html/2008.11686v2) — read the EC setup and equation2 for the minimal axial contact, with metric and adjoint conventions converted together. Its dark-matter production history, Standard Model bath and abundance are not imported. The atlas uses the coefficient to check a specified four-dimensional thermal benchmark, separately from its complete16D projection.
@@ -1540,14 +1560,14 @@ numerical mass values and coupled cap/wall geometry remain uncomputed.
 - [0805.2909](https://arxiv.org/abs/0805.2909) — Codello, Percacci and Rahmede: Appendix A trace and Mellin identities used in source matching.
 - [0806.2683](https://arxiv.org/abs/0806.2683) — Dabrowski, Garecki and Blaschke: five-dimensional conformal-curvature transformation reviewed for the warp term.
 - [0901.0944](https://arxiv.org/abs/0901.0944) — Boonserm and Visser: analytic bounds on transmission probabilities, applied to omitted potential tails.
-- [0904.0612](https://arxiv.org/abs/0904.0612) — Dappiaggi, Hack and Pinamonti: Definition 4.1 and Theorem 4.1, plus the covariant Dirac stress, trace anomaly and renormalization.
+- [0904.0612](https://arxiv.org/abs/0904.0612) — Dappiaggi, Hack and Pinamonti: free Dirac stress, point splitting and renormalization; sections4.1--4.3 reading and current-source limitations are recorded above.
 - [0907.5424](https://arxiv.org/abs/0907.5424) — Archived: Baumann, TASI lectures on inflation.
 - [0910.4930](https://arxiv.org/abs/0910.4930) — Bronnikov and Donskoy: brane-world black universes, effective brane equations and the projected bulk-Weyl stress.
 - [0911.5074](https://arxiv.org/abs/0911.5074) — Imported candidate for a Standard Model spectral action with skew-symmetric torsion, a different torsion class from the operator used here.
 - [1001.2036](https://arxiv.org/abs/1001.2036) — Andrianov and Lizzi: bosonic spectral action induced by cancelling the scale anomaly of the regularized fermionic action.
 - [1008.3630](https://arxiv.org/abs/1008.3630) — Iochum, Levy and Vassilevich: bulk and boundary spectral-action terms with skew torsion and chiral bag conditions, including the connection-convention conversion.
 - [1008.3980](https://arxiv.org/abs/1008.3980) — Chamseddine and Connes: spectral action on a space with boundary, used for the extrinsic-curvature coefficient required by the gravitational Hamiltonian.
-- [1009.5179](https://arxiv.org/abs/1009.5179) — Dappiaggi, Hack and Pinamonti: spinor boundary construction for the child state.
+- [1009.5179](https://arxiv.org/abs/1009.5179) — Dappiaggi, Hack and Pinamonti: a bulk-to-boundary Dirac state construction on specified flat FRW asymptotic histories, a method candidate rather than a selected child state here.
 - [1101.1424](https://arxiv.org/abs/1101.1424) — Pfäffle and Stephan: torsionful spectral action, including Proposition 5.4, Theorem 5.7 and the Bochner and heat-kernel formulae.
 - [1101.4012](https://arxiv.org/abs/1101.4012) — Popławski: matter–antimatter asymmetry and dark matter from torsion; the classical spin-torsion splitting between particles and antiparticles at the bounce, used as the starting estimate in the [child and neck chain](child-neck/child-and-neck-status-note.md).
 - [1106.3263](https://arxiv.org/abs/1106.3263) — Andrianov, Kurkov and Lizzi: spectral action, Weyl anomaly and Higgs-dilaton potential, including the anomaly factorization and scale-versus-cutoff distinction.

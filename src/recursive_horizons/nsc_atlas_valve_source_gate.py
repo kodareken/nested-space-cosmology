@@ -173,6 +173,160 @@ def complete_ground_contact_vertex():
         scope='Bare tree-level matrix-element projection of the added action, both Killing signs. Higher modes, state transport, composite renormalization and backreaction remain separate.')
 
 
+def signed_gaussian_coincidence(covariance,*,density=1.):
+    """Complete a declared paired Gaussian equal-time covariance difference.
+
+    Input C is traceless Hermitian2x2 Delta<psi psi^dagger> in the positive
+    mass tau basis, after its actual initial energy rotation. The opposite
+    spatial branch is tau3*C*tau3, with equal local mode density. Both
+    complete internal Killing-sign populations are IDENTICAL in this
+    positive-mass convention. This restricted preparation is not selected
+    by C/P symmetry or by the geometry alone.
+
+    The result is the vacuum-Wick coincidence difference, not kinetic
+    stress, a full renormalized source, or a positive covariance by itself.
+    """
+    C=np.asarray(covariance,dtype=complex)
+    if (C.shape!=(2,2) or np.any(~np.isfinite(C)) or
+            not math.isfinite(density) or density<0):
+        raise ValueError('finite2x2 covariance difference and nonnegative density required')
+    scale=max(1.,float(np.linalg.norm(C)))
+    if np.max(abs(C-C.conj().T))>64*np.finfo(float).eps*scale or abs(np.trace(C))>64*np.finfo(float).eps*scale:
+        raise ValueError('Hermitian traceless covariance difference required')
+    tau3=np.diag([1.,-1.]);eye=np.eye(4,dtype=complex)
+    gamma5=np.kron(np.array([[0.,1.],[1.,0.]]),np.eye(2))
+    external=density*np.kron(C@tau3+tau3@C,np.eye(2))
+    rotations=[(eye-1j*a*gamma5)/math.sqrt(2) for a in (-1,1)]
+    complete=sum(R@external@R for R in rotations)
+    return dict(external_normal_covariance=external,complete_normal_covariance=complete,
+                external_norm=float(np.linalg.norm(external)),complete_norm=float(np.linalg.norm(complete)),
+                scalar_coefficient=float((2*density*C[0,0]).real),
+                scope='Identically prepared complete internal signs and paired spatial branch; fixed-reference Gaussian difference only.')
+
+
+def scalar_coherent_gaussian_control(c=.1,*,D=16,density=1.):
+    """Local finite-CAR counterexample, not a selected global parent state.
+
+    K_ref=I/2 and K=I/2+c*gamma0 are valid mixed Gaussian covariances
+    for |c|<=1/2. Their relative coincidence is c*density*I, outside the
+    identical-positive-mass internal populations in the previous function.
+    The local scalar Clifford component is C/P even, but chiral coherence
+    is nonzero. No global C/P/Hadamard preparation follows from this
+    local matrix; the half-filled reference is not a vacuum. Density is
+    only a profile normalization in this algebraic control, not a ruler.
+    """
+    if (isinstance(D,bool) or not isinstance(D,int) or D<4 or D>16 or D%2 or
+            not math.isfinite(c) or abs(c)>.5 or not math.isfinite(density) or density<0):
+        raise ValueError('evenD in[4,16], |c|<=1/2 and nonnegative finite density required')
+    ns=2**(D//2);eye=np.eye(ns);half=np.eye(ns//2)
+    gamma0=np.kron(np.diag([1.,-1.]),half)
+    grading=np.kron(np.array([[0.,1.],[1.,0.]]),half)
+    reference=.5*eye;covariance=reference+c*gamma0
+    normal=c*density*eye
+    xi=covariance@grading-grading@covariance
+    rank3_trace=ns*D*(D-1)*(D-2)
+    wick=-rank3_trace*(c*density)**2
+    return dict(covariance=covariance,reference_covariance=reference,
+                gamma0=gamma0,chirality=grading,normal_covariance=normal,chiral_commutator=xi,
+                covariance_eigenvalues=np.repeat([.5-c,.5+c],ns//2),
+                chiral_commutator_norm=float(np.linalg.norm(xi)),
+                Clifford_dimension=D,spinor_dimension=ns,
+                rank3_trace_coefficient=rank3_trace,literal_Wick_three_form=wick,
+                contact_lagrangian_over_kappa=-wick/32,
+                contact_coefficient_per_squared_scalar_coincidence=rank3_trace/32,
+                reference_is_vacuum=False,global_parent_state_selected=False,UV_completion_selected=False,
+                radial_NEC_computed=False,
+                scope='Local normalized finite-CAR scalar/chiral-coherence witness, not a global C/P invariant Hadamard state or an inherited occupation.')
+
+
+def parent_dirac_source_operator(initial,degree,*,mass,k=0,quadrature_order=None):
+    """Full initial radial Dirac Hamiltonian Hessian in a fixed proper chart.
+
+    No same-mode closure or time-dependent isotropic-chart shift is used.
+    Return a compact diagnostic and in-memory matrices. This is a finite
+    initial operator, not a selected occupied state or renormalized stress.
+    All spatial modes within the specified k/cutoff block are retained.
+    """
+    from scipy.linalg import eigh
+    from scipy.special import roots_jacobi,eval_gegenbauer
+    from .nsc_atlas_s3_spectral import _radial_normalization
+    from .nsc_atlas_valve_dirac_modes import (
+        radial_operator_blocks,_initial_parent_geometry_accelerations,initial_parent_mode_pump)
+    if (isinstance(degree,(bool,np.bool_)) or not isinstance(degree,(int,np.integer)) or
+            not 2<=degree<=32 or isinstance(k,(bool,np.bool_)) or
+            not isinstance(k,(int,np.integer)) or not 0<=k<degree or
+            not math.isfinite(mass) or mass<0):
+        raise ValueError('degree2..32, integer0<=k<degree and finite nonnegative mass required')
+    order=2*degree+2*initial.degree+35 if quadrature_order is None else quadrature_order
+    if isinstance(order,(bool,np.bool_)) or not isinstance(order,(int,np.integer)) or order<2*degree+5:
+        raise ValueError('integer quadrature order>=2degree+5 required')
+    u,w=roots_jacobi(order,.5,.5);v=1-u*u;t=np.sqrt(v)
+    psi=initial.values(u);q=psi*psi/initial.parent.H
+    qu=2*psi*initial.values(u,1)/initial.parent.H
+    A,M,*_=radial_operator_blocks(degree,k,u,w,q)
+    labels=(list(range(k,degree+1)),list(range(k+1,degree+1)))
+    n0=len(labels[0]);n=len(A)
+    F=np.zeros((len(u),n));G=np.zeros_like(F);Fu=np.zeros_like(F);Gu=np.zeros_like(F)
+    for branch,(j,ls,values,deriv) in enumerate(((k,labels[0],F,Fu),(k+1,labels[1],G,Gu))):
+        offset=0 if branch==0 else n0
+        for h,l in enumerate(ls):
+            factor=_radial_normalization(l,j);C=eval_gegenbauer(l-j,j+1,u)
+            values[:,offset+h]=factor*v**(j/2)*C
+            deriv[:,offset+h]=factor*((-j*u*v**(j/2-1)*C if j else 0)+
+                (2*(j+1)*v**(j/2)*eval_gegenbauer(l-j-1,j+2,u) if l>j else 0))
+    # The polar radial basis is O=[[c,-s],[-s,-c]], a reflection.
+    # The old right-frame convention F-i G sigma.n is unchanged.
+    c=np.sqrt((1+u)/2);s=np.sqrt((1-u)/2)
+    P0=c[:,None]*F-s[:,None]*G;P1=-s[:,None]*F-c[:,None]*G
+    dP0=-.5*s[:,None]*F-.5*c[:,None]*G-t[:,None]*(c[:,None]*Fu-s[:,None]*Gu)
+    dP1=-.5*c[:,None]*F+.5*s[:,None]*G+t[:,None]*(s[:,None]*Fu+c[:,None]*Gu)
+    scale=np.sqrt(q)*t;logder=-t*qu/(2*q)+u/t
+    g0=scale[:,None]*P0;g1=scale[:,None]*P1
+    dg0=scale[:,None]*dP0+logder[:,None]*g0;dg1=scale[:,None]*dP1+logder[:,None]*g1
+    wc=w/v
+    gram=g0.T@(wc[:,None]*g0)+g1.T@(wc[:,None]*g1)
+    def radial(B):
+        weighted=(wc*B)[:,None]
+        return .5*(-g0.T@(weighted*dg1)+g1.T@(weighted*dg0)+
+                   dg0.T@(weighted*g1)-dg1.T@(weighted*g0))
+    def angular(B):
+        weighted=(wc*B)[:,None]
+        return g0.T@(weighted*g1)+g1.T@(weighted*g0)
+    original=radial(1/q)+angular(-(k+1)/(q*t))
+    jets=_initial_parent_geometry_accelerations(initial,u)
+    ka_dot=jets['kb_dot']+v*jets['d_dot']
+    Ddd=radial(ka_dot/q)+angular(-(k+1)*jets['kb_dot']/(q*t))
+    md=-.5*initial.parent.kappa*mass*initial.parent.mass_squared*jets['amplitude_squared']*u*u
+    Mdd=g0.T@((wc*md)[:,None]*g0)+g1.T@((wc*md)[:,None]*g1)
+    lam,C=eigh(A,M);Dp=C.T@Ddd@C;Mp=C.T@Mdd@C
+    energy=np.hypot(mass,lam)
+    aa=np.sqrt((energy+mass)/(2*energy));bb=lam/np.sqrt(2*energy*(energy+mass))
+    pair=(aa[:,None]*aa[None,:]-bb[:,None]*bb[None,:])*Dp-(aa[:,None]*bb[None,:]+bb[:,None]*aa[None,:])*Mp
+    choices=np.flatnonzero(lam>0);index=int(choices[np.argmin(lam[choices])])
+    mode=dict(degree=int(degree),k=int(k),sign=1,eigenvalue=float(lam[index]),coefficients=C[:,index])
+    independent=initial_parent_mode_pump(initial,mode,mass)
+    column=float(np.sum(pair[:,index]**2));diagonal=float(pair[index,index]**2)
+    strong=sorted([dict(spatial_eigenvalue=float(lam[j]),pair_Hessian=float(pair[j,index]))
+                   for j in range(len(lam)) if j!=index],key=lambda r:abs(r['pair_Hessian']),reverse=True)[:5]
+    summary=dict(degree=int(degree),k=int(k),angular_multiplicity=2*k+2,quadrature_order=int(order),
+        spatial_block_dimension=n,ground_spatial_eigenvalue=float(lam[index]),
+        Gram_identity_error=float(np.max(abs(gram-M))),
+        original_Dirac_projection_error=float(np.max(abs(original-A))),
+        Hessian_hermiticity_error=float(np.max(abs(Ddd-Ddd.T))),
+        same_mode_pair_Hessian=float(pair[index,index]),
+        same_mode_independent_isotropic_HF_value=independent['total_pair_Hessian'],
+        same_mode_independent_difference=abs(float(pair[index,index])-independent['total_pair_Hessian']),
+        ground_column_squared_coefficient_norm=column,
+        same_mode_squared_coefficient_fraction=diagonal/column if column else None,
+        other_mode_squared_coefficient_fraction=1-diagonal/column if column else None,
+        strongest_other_mode_coefficients=strong,
+        scope='Finite initial k-block Hamiltonian Hessian in the fixed proper chart; fractions are reference-amplitude coefficient norms, not energy fractions, physical particle counts or renormalized NEC.',
+        whole_field_state_selected=False,renormalized_stress_computed=False,child_formed=False)
+    matrices=dict(spatial_eigenvalues=lam,mass_hessian=Mp,spatial_Dirac_hessian=Dp,
+                  positive_negative_pair_hessian=pair,spatial_eigenvectors=C,ground_index=index)
+    return summary,matrices
+
+
 def dirac_clifford_control():
     """Literal four-component Clifford/Wick normalization in mostly-plus units."""
     zero=np.zeros((2,2),complex);I=np.eye(2,dtype=complex)

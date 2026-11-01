@@ -1491,14 +1491,14 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 303181,
+      "bytes": 303753,
       "path": "docs/active-code-map.md",
-      "sha256": "46a5e0e214a9936fcf432f2f8f31a7f2666666107699b4a1855b1d5fef03da0b"
+      "sha256": "680cbe25b639ffa6f8fc5c76410c407e6e2e536b3a523e50e4dcac2fd37a1e4f"
     },
     {
-      "bytes": 167023,
+      "bytes": 168348,
       "path": "docs/arxiv-studies.md",
-      "sha256": "972f8fed285b1e5e673410ef518f6c466f050371c9c99359eea028d3aa97ead9"
+      "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
       "bytes": 1458,
@@ -1506,9 +1506,9 @@
       "sha256": "3db8971c9cadd0350ac60e5d165e2cab37678f88d8fdead475815abdb0464943"
     },
     {
-      "bytes": 20796,
+      "bytes": 21278,
       "path": "docs/atlas-progress.json",
-      "sha256": "c621d0eb6168711af4e09f2a5b549ca793a6dc8c40ff1fc02b7b5b152e1c2e4b"
+      "sha256": "c509e8c4884aa3d0b8e53456f7521ce2e85ae80056d87c136e767879e71c830c"
     },
     {
       "bytes": 9543,
@@ -1526,9 +1526,9 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 494699,
+      "bytes": 495750,
       "path": "docs/current-result.md",
-      "sha256": "49d03aaac88c0057020f6503e46ce751e07913498acffc5075c55dac1f21a974"
+      "sha256": "c57ab3c7cfd2d350a4fe6348c5e62bc7b8af359784b3b571faec55acca42f8e6"
     },
     {
       "bytes": 2481,
@@ -1746,9 +1746,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2727368,
+      "bytes": 2731842,
       "path": "docs/lab-snapshot.json",
-      "sha256": "b0940333dae5d10a6b33ac3d954f9524f75b1f9a290402c2861aed8cc680e060"
+      "sha256": "65067a3c7cf5c55fe9457808e1e8cc6a91bbf59ea3bfaab146f08db5db01e9d1"
     },
     {
       "bytes": 4997,
@@ -1941,9 +1941,9 @@
       "sha256": "89cbbddbc4050fdb15cb350726cca33f4488c8b3cbee6beab419cd2b10cc3cba"
     },
     {
-      "bytes": 27144,
+      "bytes": 34899,
       "path": "docs/nsc-atlas-inherited-charge.md",
-      "sha256": "591cfa7f263dc19d7ae623ca56100520fff4cbfbb706844fca8718101956b2aa"
+      "sha256": "267802310c29b312c5cc4f33448a7888c791790b91ff39b5fdf27b5eae9a0483"
     },
     {
       "bytes": 12622,
@@ -2136,9 +2136,9 @@
       "sha256": "a272dfc872c0125a518345f4cb54a50e09cfc4e42fce40fa3e17a888bf4f66c2"
     },
     {
-      "bytes": 72050,
+      "bytes": 72281,
       "path": "docs/nsc-atlas-source-map.md",
-      "sha256": "47abf4c8a218568d39e8e437c163566aca91d11e9adb04d7a83e36322aef5bb2"
+      "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
       "bytes": 9181,
@@ -2146,9 +2146,9 @@
       "sha256": "577f15e685033c0e19a612e3d1492cca2a8b5e2c54fafc52ad47e8a7ae370b12"
     },
     {
-      "bytes": 44959,
+      "bytes": 46765,
       "path": "docs/nsc-atlas-valve-formation.md",
-      "sha256": "711b171a5b111d8b71ed0b2ac70ffe77e1cca957147bc66907844075e634c965"
+      "sha256": "4ff77a79fb1c2caf796dcd1e8c0bd50719f6f6a259e0e681e53fdff7d79b8b67"
     },
     {
       "bytes": 10730,
@@ -2211,9 +2211,9 @@
       "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 146769,
+      "bytes": 147215,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8a7f6fed9ec7cfc2717b5caa7896204feab9c73f1431249d35cde08e6b59f6f4"
+      "sha256": "55b860867022fb9c41624eb5b45abca5179214c450771117803336c8d79a5399"
     },
     {
       "bytes": 30876,
@@ -2701,9 +2701,9 @@
       "sha256": "dfcab5f190b8baab77f3b865c24b3a23e5bab40d750847925d6ea8319da91315"
     },
     {
-      "bytes": 618778,
+      "bytes": 620781,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "163bba392593b3de20cd85c7df621837abe59272bb7aa8345192ec525cce3e3f"
+      "sha256": "fd3cdb41697838aa7a86d6138d9afa52b744baf2fa833ab377b261abf10c84ea"
     },
     {
       "bytes": 6705,
@@ -2716,14 +2716,14 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 253232,
+      "bytes": 254048,
       "path": "docs/reproducing.md",
-      "sha256": "b5cac0c04778bedff82856b4799b63820326a7e2d3e8fa403fde0b16819af9eb"
+      "sha256": "fac81a4b929c7b906d87cb35fb98ef50033f9f9227781f42a8740a5584ecac18"
     },
     {
-      "bytes": 60526,
+      "bytes": 60922,
       "path": "docs/research-index.md",
-      "sha256": "babd8d38ca5470edbc789b69aa36476ddae42a8072d6080e9922dce7789ccd3e"
+      "sha256": "a61121bb7cf9de47b64519a31c949004011c16d1e88383d33c386787c3a97baf"
     },
     {
       "bytes": 18356,
@@ -2816,19 +2816,19 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 47335,
+      "bytes": 47992,
       "path": "paper/build-manifest.json",
-      "sha256": "6b6c123f54428806514a7d8c6ead3dbd61b152aa10654e13ea87d37fc54307aa"
+      "sha256": "5ac4ea26f47f58f32c641ed1f9f022f2dbaeaac4baf3a9a7960573e5efce6797"
     },
     {
       "bytes": 3207,
       "path": "paper/catalog.json",
-      "sha256": "36de6f2b5c57c7524998f4d2127ddbdfcd84c5352e3b2ef18326f303532473ff"
+      "sha256": "62c74e1d7447599f3da897381bc86891c3d688b436b020e2d679716b9bb67278"
     },
     {
-      "bytes": 54552,
+      "bytes": 55134,
       "path": "paper/claim-bindings.json",
-      "sha256": "40fcbe3fddda3fd2e7c284881c703e3c7ee4486165300be1629468efe25c7afd"
+      "sha256": "1df4f59252332fbb281532c05d2479172b4ff17000bbb2639ee4b02f49977a97"
     },
     {
       "bytes": 1094,
@@ -2879,6 +2879,16 @@
       "bytes": 128192,
       "path": "paper/figures/nsc-atlas-connected-route.png",
       "sha256": "b760ccaa7307717eb0dc8733d4c738074a58b306b421a795a7aaa3a468158540"
+    },
+    {
+      "bytes": 1696,
+      "path": "paper/figures/nsc-atlas-dirac-source.manifest.json",
+      "sha256": "581d5b87d78ebd293defd273591a51d12144aef1230a54d5614a7a1debb86955"
+    },
+    {
+      "bytes": 238360,
+      "path": "paper/figures/nsc-atlas-dirac-source.png",
+      "sha256": "b70ca555ce1095fd976bc5516ce5870b3e48759a96ccbccc3727d6239f1fb183"
     },
     {
       "bytes": 508425,
@@ -3088,7 +3098,7 @@
     {
       "bytes": 398,
       "path": "paper/metadata.json",
-      "sha256": "f012789038a68dc670951c09b4fef5b3f8d550fa8c9a0c1471746d5c505bb5c1"
+      "sha256": "69a8b4270256c091042feda14296b44e80b3681242fb2dbd776f8e425ebd591e"
     },
     {
       "bytes": 7619,
@@ -3131,14 +3141,14 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 723977,
+      "bytes": 730691,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "0d1339386117c576f37568c606a718ebbc6a332b83a4af765cb196fcb75f9912"
+      "sha256": "968547658519932273a356438f6b09677f8410e04bd3a15cadd6bdfeafdad493"
     },
     {
-      "bytes": 21608460,
+      "bytes": 21919201,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "228742ae4b55ae0653f935166c043e3b91b5bc34158b0bae3455b15d0692b775"
+      "sha256": "c63d9f54de22ec56f04d55833ac47c3fe3186290e9fa007adeb7a96ee34f46fb"
     },
     {
       "bytes": 1521,
@@ -15993,12 +16003,17 @@
     {
       "bytes": 26101,
       "path": "results/summaries/nsc-atlas-valve-dirac-modes-v1.json",
-      "sha256": "2b56f377d4d9b9f79e6ab8e84df727fa12afe08a46c7666a817ae9544b658015"
+      "sha256": "6eac201182c6628925a9ca65bc72cf288ab747c3493796d3f21b0b6cf255319e"
     },
     {
       "bytes": 16419,
       "path": "results/summaries/nsc-atlas-valve-dirac-onset-v1.json",
-      "sha256": "663bac9d1591d426e6141309894b430ff82efe89d9a1c9e11e8af526fad73921"
+      "sha256": "b42afc32b1147fb7086f547445079fd91271841edd8711c912ebfbc34d4fd9b5"
+    },
+    {
+      "bytes": 17007,
+      "path": "results/summaries/nsc-atlas-valve-dirac-source-v1.json",
+      "sha256": "670e998379b0f8e3d78446ec667d7670056d761395c852bf97c84d4fa5738e21"
     },
     {
       "bytes": 100310,
@@ -16009,6 +16024,11 @@
       "bytes": 91547,
       "path": "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
       "sha256": "2b7786cc4657106aff354653beb261a95dcc73d87d3452dece1b1810443fbd7e"
+    },
+    {
+      "bytes": 11429,
+      "path": "results/summaries/nsc-atlas-valve-gaussian-source-v1.json",
+      "sha256": "a9236393e3ec96547572e100b6d62ff20ede15cc9e4bf17ec09e7a9fb83b6500"
     },
     {
       "bytes": 6487,
@@ -16053,7 +16073,7 @@
     {
       "bytes": 41660,
       "path": "results/summaries/nsc-atlas-valve-source-gate-v1.json",
-      "sha256": "bfd34b49217018efc9991ec4e00f7f2dacf84f9faf24d746c533771af79f4194"
+      "sha256": "2fc2a32833a9109b4ce7e4b8e5450ebe3b0d4a1a9b0d3398dbd84458cfc68b0b"
     },
     {
       "bytes": 38398,
@@ -16771,9 +16791,19 @@
       "sha256": "d098119a74aaf549c2d39e78a89f29ed2a2b899edbc0ae8623f19aba384f6a98"
     },
     {
+      "bytes": 10861,
+      "path": "scripts/check_nsc_atlas_valve_dirac_source.py",
+      "sha256": "056bdea75971d9e9aa7d429ef27a25abeda3460566b147837dc4844c993861a9"
+    },
+    {
       "bytes": 26438,
       "path": "scripts/check_nsc_atlas_valve_formation.py",
       "sha256": "fb6c38a76a30c54a5a46b390277d1a9e12dcce6e2c4c0c8aa0cd13de7e0cc511"
+    },
+    {
+      "bytes": 15984,
+      "path": "scripts/check_nsc_atlas_valve_gaussian_source.py",
+      "sha256": "9106ef870c02575ca2e2a826aeae7a4cad8fcaf93b652ba8d0dc10083f924302"
     },
     {
       "bytes": 4050,
@@ -18636,6 +18666,11 @@
       "sha256": "7bafdeafd4bb3f69eca914ef13eb6851c42832fa2df1568e6d39cfa8312a0eb0"
     },
     {
+      "bytes": 9828,
+      "path": "scripts/plot_nsc_atlas_valve_dirac_source.py",
+      "sha256": "0ee28be39052b7bd0f9a8a409328d563f9d22f39062dce6e9f8cbf375b8b6228"
+    },
+    {
       "bytes": 3064,
       "path": "scripts/plot_nsc_atlas_volume_feedback.py",
       "sha256": "2ec99934f6bb35370449b35cacf12e7f8dca639de19a9b8e4150515104194467"
@@ -20176,9 +20211,9 @@
       "sha256": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e"
     },
     {
-      "bytes": 23922,
+      "bytes": 33612,
       "path": "src/recursive_horizons/nsc_atlas_valve_source_gate.py",
-      "sha256": "68cc9781b3692316be3e5989ba59dd98080e3b52335d0db0a9cbcf41132ca904"
+      "sha256": "46e2a35db716f4170dddf7745a160b9edcadf5253cb863346a1d8fa8aeb579b7"
     },
     {
       "bytes": 39661,
@@ -23321,9 +23356,19 @@
       "sha256": "a496b5bfb3a027ea0deb83110115c024d3bc9cbef6401865a9ad5dbfb89812be"
     },
     {
+      "bytes": 7934,
+      "path": "tests/test_nsc_atlas_valve_dirac_source_operator.py",
+      "sha256": "face8c2f09486f5713afa5b4b861d9b101ee375054526bb9418fd556ee022fc1"
+    },
+    {
       "bytes": 3417,
       "path": "tests/test_nsc_atlas_valve_formation.py",
       "sha256": "8a487c91d1b519b0a6d25b5bfc439f8d10e675de16aae3f9e5dcfe5992c4d300"
+    },
+    {
+      "bytes": 7982,
+      "path": "tests/test_nsc_atlas_valve_gaussian_state.py",
+      "sha256": "8a909ff818f2bd65a541e6bd54b03dd92dc29faad3aef76203d7845f4e60c510"
     },
     {
       "bytes": 4028,
@@ -25286,9 +25331,9 @@
       "sha256": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
     }
   ],
-  "lab_snapshot_sha256": "b0940333dae5d10a6b33ac3d954f9524f75b1f9a290402c2861aed8cc680e060",
+  "lab_snapshot_sha256": "65067a3c7cf5c55fe9457808e1e8cc6a91bbf59ea3bfaab146f08db5db01e9d1",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
-  "manuscript_revision": "2026-10-31.08",
+  "manuscript_revision": "2026-11-01.01",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

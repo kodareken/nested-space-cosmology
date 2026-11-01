@@ -1,5 +1,39 @@
 # Prior art and admission of new research
 
+## Signed source and complete radial operator, 1 November 2026
+
+The [inherited-field owner](nsc-atlas-inherited-charge.md) replaces an
+isolated contact energy with action-varied stress and radion exchange.
+The current balanced Gaussian benchmark is completed with all its signs;
+an admissible local coherent Gaussian control prevents an all-state
+zero inference. Free spinor inheritance transports rather than selects
+that coherence. The independent proper-polar Dirac operator supplies
+unequal-mode pair Hessians and recovers the old isotropic diagonal.
+Borrow the prior round spectrum/EC coefficient and conserved Hadamard
+point-splitting method; no published boundary state is imported without
+its actual asymptotic geometry and initial data.
+
+Fixed inputs are the existing Psi40 parent, geometric candidate mass and
+recorded8/16/24 source cutoffs. Each producer has a15second compute
+budget in the admission plan; actual matrix work takes seconds and no
+R/time history is extended. Stop after the cancellation and the full
+initial operator comparison. The next calculation needs the actual full
+parent covariance/UV prescription, withg and counterterm conditions
+visible. No occupation or subtraction may be selected to pass the valve.
+
+Failure forecast: mistaking a negative contact energy for negativeNEC is
+exposed by the Ward identity; hiding an internal-state choice is exposed
+by the coherent Gaussian control; closing on one mode is exposed by the
+71.58% unequal-mode squared-coefficient fraction. None of those controls
+is an observational match or a formed-child proof.
+
+Decision after this source checkpoint: retain the quantum branch as
+conditional and test canonical counterrotation next. It uses the existing
+scalar action, second-harmonic momentum and York conformal weights;
+the first required result is compact-parent momentum compatibility,
+followed by the positive Hamiltonian branch. No additional field,
+temperature or renormalization value is selected for that classical test.
+
 ## Receiver field and actual-parent state response, 31 October 2026
 
 The [source owner](nsc-atlas-inherited-charge.md) joins the controlled

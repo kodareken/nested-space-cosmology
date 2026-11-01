@@ -8,7 +8,7 @@
       "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
       "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
       "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
-      "src/recursive_horizons/nsc_atlas_valve_source_gate.py": "68cc9781b3692316be3e5989ba59dd98080e3b52335d0db0a9cbcf41132ca904",
+      "src/recursive_horizons/nsc_atlas_valve_source_gate.py": "46e2a35db716f4170dddf7745a160b9edcadf5253cb863346a1d8fa8aeb579b7",
       "scripts/check_nsc_atlas_valve_dirac_modes.py": "37b9f51d1691ca67e3a41958cb772b20393f660d3cabd3a3085f669cc26e13a3"
     },
     "source_sha256_after": {
@@ -18,11 +18,11 @@
       "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
       "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
       "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
-      "src/recursive_horizons/nsc_atlas_valve_source_gate.py": "68cc9781b3692316be3e5989ba59dd98080e3b52335d0db0a9cbcf41132ca904",
+      "src/recursive_horizons/nsc_atlas_valve_source_gate.py": "46e2a35db716f4170dddf7745a160b9edcadf5253cb863346a1d8fa8aeb579b7",
       "scripts/check_nsc_atlas_valve_dirac_modes.py": "37b9f51d1691ca67e3a41958cb772b20393f660d3cabd3a3085f669cc26e13a3"
     },
     "source_unchanged": true,
-    "git_parent_commit": "59f187090884a05aeef4bd90fe773726ea00bf00",
+    "git_parent_commit": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff",
     "role": "Current analysis source pins; raw coefficients are separately hashed, with no quantum state selected."
   },
   "defined_geometry": {
@@ -30,7 +30,7 @@
     "isometry": "Left quaternion multiplication Z=(-X4,X3,-X2,X1),Z4=oldX1; right frame preserved, not geometry averaging.",
     "raw_cache": {
       "path": ".build\\valve-dirac-modes-v1\\defined-metric.npz",
-      "sha256": "1e8f6194c643fb5166e37c08e2a2b9ac8f1d8f56e88a8823a732363c0b6a3ae5"
+      "sha256": "e8a69038105272042b48ba0749596ab1f21274365fd86d72594202fde12c656f"
     },
     "Omega_bounds": {
       "psi_lower": 0.43889261186767914,
@@ -143,7 +143,7 @@
           "lambda_over_energy": 0.2531498475852568,
           "raw_mode_cache": {
             "path": ".build\\valve-dirac-modes-v1\\degree-8-sign--1.npz",
-            "sha256": "c5d690a0638e16da553e354e1c86a84a9b8d8a38e66772c48195bf923704c547"
+            "sha256": "54d06901d934566216228ea2a1ffed629a951ea34e2cf70be7a278c2538ad619"
           }
         },
         {
@@ -170,7 +170,7 @@
           "lambda_over_energy": 0.25314770343236925,
           "raw_mode_cache": {
             "path": ".build\\valve-dirac-modes-v1\\degree-8-sign-1.npz",
-            "sha256": "9dd36262cf8856b8cfe4b71dcb65c33ba578e129d88b6ace91159fd3ba551bfe"
+            "sha256": "8c2f5226573dd12681b2336634bd701693212e5b9274386c6d47d5ef2a449d30"
           }
         }
       ],
@@ -291,7 +291,7 @@
           "lambda_over_energy": 0.2531475676896145,
           "raw_mode_cache": {
             "path": ".build\\valve-dirac-modes-v1\\degree-16-sign--1.npz",
-            "sha256": "c259bb84445478b3fab1d83b5faa939900cfd519436a78edd2118ca4684594bf"
+            "sha256": "22ba585e8b72fe3c22021cf2250e2a9a1cdce0e84ee77b84e3525aa11c3c4d66"
           }
         },
         {
@@ -318,7 +318,7 @@
           "lambda_over_energy": 0.25314756766454566,
           "raw_mode_cache": {
             "path": ".build\\valve-dirac-modes-v1\\degree-16-sign-1.npz",
-            "sha256": "af56219669d2e6f05c0f1388aa1599facc1473e8626d3ffd9806ff34a88dbb93"
+            "sha256": "bb660040a5e75ff32e80166edf2130259f36ad69f2a308d0fd36fe1546dd9179"
           }
         }
       ],
@@ -439,7 +439,7 @@
           "lambda_over_energy": 0.2531475676630693,
           "raw_mode_cache": {
             "path": ".build\\valve-dirac-modes-v1\\degree-24-sign--1.npz",
-            "sha256": "d4632d67a0f7529a5f8804a6dc9a7a0e0874fd84720e81739ed31332e4ad08a8"
+            "sha256": "d38754573562834bb82060e9719d79b868c3fddac8901c114044735e9197047e"
           }
         },
         {
@@ -466,7 +466,7 @@
           "lambda_over_energy": 0.253147567663069,
           "raw_mode_cache": {
             "path": ".build\\valve-dirac-modes-v1\\degree-24-sign-1.npz",
-            "sha256": "a28aaa86798fb29e7c87fe60de9bcb15ffe1312ffa3b24b10c2db9ff4e03c2f0"
+            "sha256": "193c5796bb9ef11c026799538962cf74d9b5459631f895fa03b3f7cf76ecb647"
           }
         }
       ],
@@ -582,7 +582,7 @@
       24
     ],
     "BLAS_threads": 6,
-    "elapsed_seconds": 0.11626520002027974,
+    "elapsed_seconds": 0.12023599998792633,
     "physical_mass_integrals": "One-dimensional exact-polynomial Gauss-U rules; nonpolynomial residual/I4 independently checked at twice the radial order.",
     "full_arrays_committed": false
   },

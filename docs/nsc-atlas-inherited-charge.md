@@ -579,3 +579,166 @@ The right side is -2.73411450537. Equivalently, the contraction rate
 19.05741538 exceeds the largest allowed roll correction .773020166144.
 Changing to the physical uplift therefore does not supply an expanding
 receiving sphere at this cut. No additional evolution or grid is used.
+
+## 10. The action determines stress and radion exchange together
+
+Write the complete matched bare fermion action as
+$\mathcal L_D=\mathcal K-\sum_a m_a(S)B_a+\mathcal C_4$, with
+$B_a=\bar\psi_a\psi_a$ and $\mathcal C_4$ the full quartic vertex of Section7.
+Here $\mathcal K=(i/2)\sum_a\bar\psi_a\gamma^\mu
+\overleftrightarrow\nabla_\mu\psi_a$.
+Vary before using the nonlinear Dirac equation. In the stated Clifford
+convention the kinetic tensor and full stress are
+
+$$
+K_{\mu\nu}=-\frac i4\sum_a\bar\psi_a
+\left(\gamma_\mu\overleftrightarrow\nabla_\nu+
+\gamma_\nu\overleftrightarrow\nabla_\mu\right)\psi_a,
+\qquad T^D_{\mu\nu}=K_{\mu\nu}+g_{\mu\nu}\mathcal L_D.
+$$
+
+At fixed canonical spinors the algebraic contact varies through the volume:
+$T^{\rm direct}_{\mu\nu}=g_{\mu\nu}\mathcal C_4$, hence
+$T^{\rm direct}_{kk}=0$. A negative direct contact energy does not specify
+negative radial NEC. Quartic homogeneity and the interacting Dirac equation give
+
+$$
+\mathcal K=\sum_a m_aB_a-2\mathcal C_4,\qquad
+\mathcal L_{D,\rm on}=-\mathcal C_4,\qquad
+T^D_{\mu\nu}=K_{\mu\nu}-g_{\mu\nu}\mathcal C_4.
+$$
+
+Thus $T^D_{kk}=K_{kk}$ contains the **interacting** kinetic response. Substituting
+free probe derivatives into this on-shell expression omits that response.
+The bare reduction has $\partial_S\mathcal C_4=0$: its warp factors cancel.
+With $m_{a,S}=-7m_a/\sqrt{84}$ in the retained units, the bare local Ward
+identity and radion equation are
+
+$$
+\nabla^\mu T^D_{\mu\nu}
+=-\sum_a m_{a,S}B_a\,\partial_\nu S,
+\qquad
+\Box S-W_{,S}=\sum_a m_{a,S}B_a.
+$$
+
+The bosonic stress carries the opposite exchange. A renormalized source
+must vary its counterterms too: define
+J_S=sum m_a,S<B_a>_ren-(1/sqrt(-g))delta S_ct/delta S, including any
+derivative terms. Then div<T_D+T_ct>_ren=-J_S dS and
+Box S-W_,S=J_S. A subtraction of a number from the energy is not this
+matched procedure. The free-field conserved point-splitting construction
+in [Dappiaggi--Hack--Pinamonti, section4](https://arxiv.org/html/0904.0612v1)
+is a method input, not a computed interacting source on this parent.
+At first contact order,
+the direct quartic expectation and the retarded correction to quadratic
+stress must both be retained. In the current units free fermion backreaction
+starts at order $g_{\rm grav}$; these two interaction contributions start
+together at order $g_{\rm grav}^2$. Its physical value remains unselected.
+
+An exact homogeneous sanity check is $n=N/a^3$,
+$\rho=m(S)n-cn^2$, $p=-cn^2$ for constant $c$. Direct differentiation gives
+$\dot\rho+3H(\rho+p)=m_{,S}n\dot S$, closing the opposite radion work.
+This checks the exchange algebra; it supplies no spin-fluid replacement,
+occupation rule or turnaround stress for the actual parent.
+
+## 11. Gaussian coherence is a state input carried by inheritance
+
+The [Gaussian-source record](../results/summaries/nsc-atlas-valve-gaussian-source-v1.json)
+separates two questions. The balanced charge-conjugation, parity and chirality
+benchmark has zero coincident covariance difference and its specified
+fully vacuum-Wick-ordered contact cancels. Derivative stress can still be
+nonzero. This cancellation does **not** classify every Gaussian state.
+
+For a finite CAR covariance $0\leq K\leq I$, let $\Gamma_*$ denote the full
+sixteen-dimensional chirality grading. Hermitian $A$ with $A^2=I$ and
+$\{A,\Gamma_*\}=0$ gives the admissible Gaussian family
+
+$$
+K_\epsilon=\frac12(I+\epsilon A),\qquad |\epsilon|\leq1,\qquad
+[K_\epsilon,\Gamma_*]=\epsilon A\Gamma_*.
+$$
+
+It can carry cross-chirality coherence and a nonzero Wick contact while
+remaining Gaussian. An independent connected four-point function is therefore
+one possible additional datum, not the only way to leave the cancelling
+benchmark. Choosing the Gaussian coherence is itself a state choice.
+
+For the free massless bulk field, the complete graded one-particle evolution
+intertwines chirality. More generally an admitted spinor handoff satisfies
+$\Gamma_*^{\rm out}U=\varepsilon U\Gamma_*^{\rm in}$, where
+$\varepsilon=1$, or $-1$ for an orientation-reversing spin lift. Consequently
+
+$$
+K_{\rm out}=UK_{\rm in}U^\dagger,\qquad
+\Xi_{\rm out}=\varepsilon U\Xi_{\rm in}U^\dagger,
+\qquad \Xi=[K,\Gamma_*].
+$$
+
+Zero coherence is preserved by this full free transport; a nonzero coherence
+is carried rather than selected. A chirality-preserving projection also
+preserves zero. A projection that mixes gradings or an open channel can
+change reduced data, but needs its actual state, projection and discarded
+correlations. The operator inheritance law
+$\mathcal T^*\mathbb D=\mathbb D$ does not choose those data or $K_{\rm in}$.
+The known vertex and pump now constrain a source calculation; a conserved
+renormalized radial source and its backreaction remain to be obtained.
+
+## 12. The source operator couples different spatial modes
+
+The [full initial operator record](../results/summaries/nsc-atlas-valve-dirac-source-v1.json)
+removes the earlier same-mode closure. Retain the actual proper-time chart
+and write the spatial metric as a² dchi²+R² dOmega2². A polar half-density
+spinor has the ordinary dchi inner product. In each total-angular-momentum
+block J=k+1/2, with multiplicity2k+2, its self-adjoint spatial operator is
+
+$$
+D_\Sigma=\epsilon\left(A\partial_\chi+\frac12\partial_\chi A\right)
+-\frac{k+1}{R}\sigma_1,\qquad A=1/a,\qquad \epsilon=-i\sigma_2.
+$$
+
+The polar radial map is O=[[cos(chi/2),-sin(chi/2)],
+[-sin(chi/2),-cos(chi/2)]], multiplied by sqrt(q)sin(chi) on the initial
+slice q=Psi40²/H. It is a basis reflection. The existing right-frame
+F-iG sigma.n convention and prior spectral/onset values are unchanged.
+No time-dependent isotropic-coordinate shift is omitted, because this
+calculation stays in the proper chart. With zero initial extrinsic curvature,
+
+$$
+\ddot A=\frac{\dot K_a}{q},\qquad
+\frac{d^2}{d\tau^2}\left(\frac1R\right)=\frac{\dot K_b}{R},\qquad
+\ddot m=-\frac{\kappa}{2}m\mu_\chi^2\epsilon_0^2 A_\chi^2 u^2.
+$$
+
+Here epsilon0 A_chi is the already declared scalar amplitude, not the
+radial matrix epsilon. The parent ADM equations supply K_a,dot and K_b,dot.
+Projection gives all entries of H_ddot=tau1 tensor D_ddot+tau3 tensor m_ddot,
+including unequal modes. For initial spatial eigenvalue lambda_i set
+E_i=sqrt(m²+lambda_i²), U_i=sqrt((E_i+m)/(2E_i)),
+V_i=lambda_i/sqrt(2E_i(E_i+m)). The positive/negative energy-pair Hessian is
+
+$$
+\mathcal M_{ij}=(U_iU_j-V_iV_j)\ddot D_{ij}
+-(U_iV_j+V_iU_j)\ddot m_{ij}.
+$$
+
+At k=0 the existing cutoffs8/16/24 give the finest diagonal
+M_00=.112898160745309, agreeing with the old independent isotropic
+Hellmann--Feynman calculation to1.2e-15. The squared ground-column norm is
+.0448473832573;71.5791786% lies in other modes. This is a squared
+initial-reference amplitude-coefficient fraction, not an energy fraction
+or an observed particle count. Its final adjacent spread is3.9e-11.
+The strongest other spatial eigenvalue is1.31422697688, with
+|M_i0|=.154109235008. No observation selected these numbers.
+
+The independent polar reconstruction recovers the full original round
+Dirac projection to3.62e-12, the metric Gram matrix to1.78e-15, and its
+Hermitian Hessian to8.88e-16. Round de Sitter controls recover the complete
+analytic diagonal and no unequal-mode mixing. A hypothetical four-dimensional
+m=0 control has zero same-mode coefficient yet nonzero unequal-mode
+couplings on the inhomogeneous parent; it is not a physical massless
+sector of the declared internal compactification.
+
+This fixes a genuine missing part of the initial generator. A whole-field
+occupied state still needs its full covariance/UV completion, stress
+renormalization and actual transport. The finite matrix does not establish
+a negative NEC, a regular child, a chosen g or a cosmological observable.

@@ -1,0 +1,215 @@
+{
+  "schema": "nsc-atlas-valve-gaussian-source-v1",
+  "provenance": {
+    "source_sha256_before": {
+      "src/recursive_horizons/nsc_atlas_valve_dirac_modes.py": "3ebdd19bd254f204acb7ee285ebbc5976681ae29c2a1d6b36760cb262cb3e62b",
+      "src/recursive_horizons/nsc_atlas_valve_source_gate.py": "46e2a35db716f4170dddf7745a160b9edcadf5253cb863346a1d8fa8aeb579b7",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
+      "scripts/check_nsc_atlas_valve_gaussian_source.py": "9106ef870c02575ca2e2a826aeae7a4cad8fcaf93b652ba8d0dc10083f924302"
+    },
+    "source_sha256_after": {
+      "src/recursive_horizons/nsc_atlas_valve_dirac_modes.py": "3ebdd19bd254f204acb7ee285ebbc5976681ae29c2a1d6b36760cb262cb3e62b",
+      "src/recursive_horizons/nsc_atlas_valve_source_gate.py": "46e2a35db716f4170dddf7745a160b9edcadf5253cb863346a1d8fa8aeb579b7",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
+      "scripts/check_nsc_atlas_valve_gaussian_source.py": "9106ef870c02575ca2e2a826aeae7a4cad8fcaf93b652ba8d0dc10083f924302"
+    },
+    "source_unchanged": true,
+    "input_record_sha256": {
+      "results/summaries/nsc-atlas-valve-dirac-modes-v1.json": "6eac201182c6628925a9ca65bc72cf288ab747c3493796d3f21b0b6cf255319e",
+      "results/summaries/nsc-atlas-valve-dirac-onset-v1.json": "b42afc32b1147fb7086f547445079fd91271841edd8711c912ebfbc34d4fd9b5"
+    },
+    "defined_metric_cache": {
+      "path": ".build\\valve-dirac-modes-v1\\defined-metric.npz",
+      "sha256": "e8a69038105272042b48ba0749596ab1f21274365fd86d72594202fde12c656f"
+    },
+    "git_parent_commit": "6aa02a69e0fba5d0ca37c76dbcf6ceb7c93d4dff"
+  },
+  "conventions": {
+    "C4": "Here C_4 is a four-component coincident matrix, not a connected four-point cumulant.",
+    "covariance": "C>=<psi psi^dagger>; DeltaS4=DeltaC> gamma0. Fixed initial canonical low-mode vacuum P+=(I+tau3)/2 tensorIspin.",
+    "Clifford": "gamma0=tau3 tensorI2,gamma5=tau1 tensorI2.",
+    "mass_rotation": "Q_lambda=[[A,-B],[B,A]],A=sqrt((E+m)/(2E)),B=lambda/sqrt(2E(E+m)).",
+    "internal_rotation": "R_a=(I-i*a*gamma5)/sqrt2,psi_a=R_a chi_a,barpsi_a=barchi_a R_a.",
+    "complete_signs": "Both spatial Dirac signs and both internal Killing signs; all64 internal labels per sign and both angular spin labels.",
+    "internal_coincidence": "Each complete internal projector isI64/Vgamma; DeltaS16=e6s/Vgamma sum_a R_a DeltaS4 R_a tensorI64.",
+    "normal_order": "Complete relative vacuum Wick ordering for the declared finite Gaussian benchmark, not an absolute renormalization prescription."
+  },
+  "actual_parent_channels": [
+    {
+      "sign": -1,
+      "spatial_eigenvalue": -0.6792561391746229,
+      "mass": 2.5958423951725464,
+      "energy": 2.683241816009425,
+      "pair_Hessian": -0.11289816074531293,
+      "matrix_tau3_identity_error": 1.7836712928180094e-19,
+      "matrix_tau4_identity_error": 8.673617379884035e-19,
+      "input_mode_cache": {
+        "path": ".build\\valve-dirac-modes-v1\\degree-24-sign--1.npz",
+        "sha256": "d38754573562834bb82060e9719d79b868c3fddac8901c114044735e9197047e"
+      }
+    },
+    {
+      "sign": 1,
+      "spatial_eigenvalue": 0.679256139174622,
+      "mass": 2.5958423951725464,
+      "energy": 2.6832418160094247,
+      "pair_Hessian": 0.11289816074530754,
+      "matrix_tau3_identity_error": 3.469446951953614e-18,
+      "matrix_tau4_identity_error": 1.734723475976807e-18,
+      "input_mode_cache": {
+        "path": ".build\\valve-dirac-modes-v1\\degree-24-sign-1.npz",
+        "sha256": "193c5796bb9ef11c026799538962cf74d9b5459631f895fa03b3f7cf76ecb647"
+      }
+    }
+  ],
+  "matrix_coefficients": {
+    "energy_basis": "DeltaC_E=-(M/6)tau2*tau\u00b3+(E*M/12)tau1*tau4+...",
+    "per_spatial_sign": "DeltaS_sigma=-i*rho_sigma*M_sigma*gamma5*tau\u00b3/6-rho_sigma*M_sigma*(lambda_sigma I+m gamma0 gamma5)*tau4/12+...",
+    "explanation": "The individual tau4 covariance is nonscalar; cancellation is checked after actual sign completion."
+  },
+  "independent_partner_comparison": {
+    "sampled_max_density_difference": 4.985584644776053e-10,
+    "eigenvalue_sum": -8.881784197001252e-16,
+    "pair_Hessian_sum": -5.398459457239824e-15
+  },
+  "raw_matrix_norms": {
+    "spatial_tau3_max_norm": 1.876210696001709e-11,
+    "spatial_tau4_nonscalar_max_norm": 2.4351736352770138e-11,
+    "spatial_tau4_scalar_equator": -7.430277654888468e-05,
+    "spatial_tau4_scalar_sampled_max_abs": 7.430277654888468e-05,
+    "internal_complete_single_spatial_sign_tau4_max_norm": 0.0005679103582230033,
+    "all_signs_tau3_max_norm": 5.421387329516929e-20,
+    "all_signs_tau4_max_norm": 4.870347270554027e-11,
+    "full256_tau3_max_Frobenius": 6.369897919447905e-26,
+    "full256_tau4_max_Frobenius": 5.722449450675059e-17
+  },
+  "exact_generality_controls": [
+    {
+      "input": "tau1",
+      "external_norm": 0.0,
+      "complete_norm": 0.0,
+      "scalar_coefficient": 0.0
+    },
+    {
+      "input": "tau2",
+      "external_norm": 0.0,
+      "complete_norm": 0.0,
+      "scalar_coefficient": 0.0
+    },
+    {
+      "input": "tau3",
+      "external_norm": 4.0,
+      "complete_norm": 0.0,
+      "scalar_coefficient": 2.0
+    },
+    {
+      "input": "combination",
+      "external_norm": 1.24,
+      "complete_norm": 0.0,
+      "scalar_coefficient": 0.62
+    }
+  ],
+  "conditional_identity": {
+    "hypotheses": [
+      "Identical positive-mass preparation of the complete internal signs and common symmetry-preserving relative subtraction.",
+      "Spatial partner covariance C_-=tau3 C_+ tau3, unpolarized spin, equal exact partner densities and tracelessDeltaC.",
+      "The symmetrically completed vacuum is chiral invariant; the geometry alone has not selected this complete initial state."
+    ],
+    "spatial_sum": "rho{DeltaC,tau3}=2rho*c3 I4",
+    "internal_sum": "R+ I R+ +R- I R-=0",
+    "result": "Exact coincident covariance/contact cancellation for this balanced same-mode Gaussian benchmark.",
+    "caveat": "The independent L24 modes have finite residuals, so their small raw cancellation error is retained, not promoted to a physical source."
+  },
+  "bare_contact": {
+    "functional": "sum_ABC[tr(GammaABC DeltaS16)tr(Gamma^ABC DeltaS16)-tr(GammaABC DeltaS16 Gamma^ABC DeltaS16)]",
+    "physical_U1_anomalous_field_pairing_zero": true,
+    "tau6_bare_contact_energy_EL_coefficient_over_g": 0.0,
+    "balanced_closed_sector_bare_contact_energy_EL_over_g": 0.0,
+    "energy_units": "Dimensionless contact energyE*L scales asg=kappa_nat/L\u00b2.",
+    "Einstein_source_units": "Einstein-normalized contact and induced kinetic response scale together asg\u00b2; free fermion stress starts asg.",
+    "total_kinetic_stress_or_renormalized_source_computed": false
+  },
+  "local_chiral_coherent_Gaussian_counterexample": {
+    "Clifford_dimension": 16,
+    "spinor_dimension": 256,
+    "chiral_commutator_norm": 3.1999999999999997,
+    "rank3_trace_coefficient": 860160,
+    "literal_Wick_three_form": -8601.600000000002,
+    "contact_lagrangian_over_kappa": 268.80000000000007,
+    "contact_coefficient_per_squared_scalar_coincidence": 26880.0,
+    "reference_is_vacuum": false,
+    "global_parent_state_selected": false,
+    "UV_completion_selected": false,
+    "radial_NEC_computed": false,
+    "scope": "Local normalized finite-CAR scalar/chiral-coherence witness, not a global C/P invariant Hadamard state or an inherited occupation.",
+    "covariance_eigenvalue_range": [
+      0.4,
+      0.6
+    ],
+    "illustrative_local_control_c": 0.1,
+    "illustrative_profile_density": 1.0,
+    "not_used_to_fit_or_prepare_the_actual_parent": true
+  },
+  "chiral_inheritance_control": {
+    "formula": "Xi_out=orientation*U Xi_in Udagger when Gamma_out U=orientation U Gamma_in.",
+    "unitary_is_an_algebraic_control_not_the_actual_parent_propagator": true,
+    "unitary_error": 2.220446049250313e-16,
+    "initial_Xi_norm": 3.1999999999999997,
+    "orientation_controls": [
+      {
+        "orientation": 1,
+        "Xi_transport_error": 0.0
+      },
+      {
+        "orientation": -1,
+        "Xi_transport_error": 0.0
+      }
+    ],
+    "state_selected_by_operator_inheritance": false,
+    "scope": "Finite graded-unitary matrix identity; neither an actual horizon channel nor initial-state selection."
+  },
+  "homogeneous_Ward_control": {
+    "full_residual": "0",
+    "direct_contact_only_missing_term": "6*H*c*n**2",
+    "assumptions": "Homogeneous algebra sanity: n=N/a^3,rho=m(S)n-c n^2,p=-c n^2,c constant.",
+    "actual_parent_equation_of_state_derived": false
+  },
+  "bare_action_Ward": {
+    "action": "L_D=K-sum_a m_a(S) B_a+C4, with the full matched quartic vertex.",
+    "off_shell_stress": "T_D,mu nu=Bkin_mu nu+g_mu nu L_D; vary before using field equations.",
+    "direct_contact": "T_contact,direct_mu nu=g_mu nu C4, hence directT_kk=0.",
+    "on_shell": "K=sum mB-2C4,L_D,on=-C4,T_D,kk=Bkin_kk evaluated with the interacting equation.",
+    "radion_exchange": "nabla^mu T_D,mu nu=(-sum m_a,S B_a+partial_S C4)partial_nu S; barepartial_S C4=0.",
+    "normalization": "m_S=-7m/sqrt84 in the retainedkappa=1 normalization; scalar stress has opposite exchange.",
+    "counterterm_scope": "The displayed identities are bare. A renormalized source must also vary its counterterms: J_S=sum m_S<B>ren-(delta Sct/delta S)/sqrt(-g), with div<T_D+T_ct>=-J_S*dS and the opposite radion source. No counterterm value is selected here.",
+    "perturbative_order": "Contact Wick term and induced kinetic/radion response must be retained at the same order.",
+    "physical_stress_result_claimed": false
+  },
+  "verdict": {
+    "balanced_Gaussian_contact_cancelled": true,
+    "all_Gaussian_states_contact_zero": false,
+    "nonGaussianity_required_for_every_possible_source": false,
+    "chiral_coherent_Gaussian_preparation_selected": false,
+    "connected_four_point_computed": false,
+    "intermode_and_UV_Hadamard_completion_selected": false,
+    "g_selected": false,
+    "radial_NEC_computed": false,
+    "turnaround_decided": false,
+    "baryon_photon_eta": null,
+    "scope": "Finite balanced same-mode Gaussian benchmark, not the full kinetic stress, whole quantum state or source no-go."
+  },
+  "numerical": {
+    "existing_spatial_degree": 24,
+    "diagnostic_profile_samples": 1001,
+    "new_spectral_or_geometry_evolution_grids": 0,
+    "elapsed_seconds": 0.8384931000182405,
+    "raw_arrays_committed": false
+  },
+  "reproduction": "python scripts/run_python.py scripts/check_nsc_atlas_valve_gaussian_source.py --output results/summaries/nsc-atlas-valve-gaussian-source-v1.json"
+}

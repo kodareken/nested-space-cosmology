@@ -17,6 +17,36 @@ another deeper grid on this completed window is not the next step. The
 new spinor work below is explicitly a candidate extension and a probe,
 not fermions silently added to the classical scalar solution.
 
+The [state/source successor](nsc-atlas-inherited-charge.md) now computes
+the complete signed Gaussian benchmark and the full initial radial Dirac
+operator. Balanced contact cancels under its declared chirality conditions;
+coherent Gaussian alternatives are explicit state data. Unequal-mode
+couplings carry71.58% of the squared ground-column reference coefficient
+norm, so the old same-mode pump is not a closed source model. The bare
+stress/radion Ward identity fixes what must be calculated together.
+The occupied state, UV/renormalization conditions and physicalg remain
+unselected. No receiving child is inferred from these finite coefficients.
+
+### Next formation route: canonical counterrotation
+
+The bounded quantum source/operator calculation above is complete at its
+declared scope. A new physical fermion state, UV prescription andg are
+not selected by the existing scalar action. The next formation test
+therefore returns to that action with momentum-carrying data, using the
+existing [York completion](nsc-atlas-gravitating-kick.md). This changes
+the preparation explicitly; it imports no spinor-source success.
+
+Keep chi=A X1 and test a conformal momentum profile proportional to the
+already used second harmonic X2 X4, Pi_chi=lambda f psi^-6. The first
+check is exact orthogonality to all ten round conformal-Killing charges
+and a nonzero local momentum curl with opposite circulation sectors.
+Then derive its York inverse and finite positive Hamiltonian branch.
+The amplitude is a declared initial-data family, not an inherited value
+or observational fit. No new evolution is admitted until those constraints
+and the physical energy accounting are checked. This relaxes the exact
+SO3/reflection assumptions of the completed contracting neck; it does
+not assume rotation guarantees a child.
+
 The old two-mode finite searches below found no admitted trap; their
 occupation was supplied rather than selected. Continuing that optimizer,
 adding an external pressure term, and changing the occupation are materially

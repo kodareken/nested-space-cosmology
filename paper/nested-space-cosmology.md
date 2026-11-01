@@ -410,7 +410,17 @@ quantum preparation, complete stress and backreaction remain explicit
 dependencies. These calculations connect geometry to a candidate source;
 they establish neither an expanding child nor today's vacuum fraction.
 
+The [complete radial source operator](../results/summaries/nsc-atlas-valve-dirac-source-v1.json)
+now retains unequal spatial modes on that same initial geometry. It
+recovers the previous diagonal coefficient independently, while other
+mode pairs carry 71.58% of the squared ground-column mixing-coefficient
+norm. This is a reference-amplitude diagnostic. It identifies the field
+couplings needed for the source calculation, with the occupied state,
+renormalized stress and backreaction still to be supplied.
+
 ## 7. Selection and the charge-resolved question
+
+The physical state must be selected alongside the generator's remaining inputs.
 
 | Quantity | Derived or supplied? |
 | --- | --- |
@@ -14946,6 +14956,135 @@ No temperature, damping or observed number selects this response.
 The full initial state, UV completion, total renormalized stress and
 backreaction remain to be computed; a regular expanding child is open.
 
+### A.199. Signed Gaussian source and inherited state coherence
+
+<!-- nsc-claim:signed-gaussian-source -->
+
+The [signed source calculation](../results/summaries/nsc-atlas-valve-gaussian-source-v1.json)
+completes the actual pump with both spatial Dirac signs and both complete
+internal Killing multiplets. It does not assume that a single mode's
+coincident covariance is scalar. Its cubic coefficient is pseudoscalar;
+its fourth-order coefficient also contains an axial component. Completing
+the balanced spatial partners makes their sum scalar, and the two
+internal chiral mass rotations cancel it. In the stated closed Gaussian
+benchmark the complete relative-Wick contact energy coefficient is zero.
+The raw mode residual is reported separately from this exact identity.
+Free kinetic stress is not determined by a coincidence value alone.
+
+A chiral-coherent Gaussian preparation is a different possibility.
+The local finite-CAR family K=I/2+c gamma0 has eigenvalues 1/2+/-c and
+is positive for |c|<=1/2. Against its half-filled reference, its scalar
+coincidence is c I. The complete16D Clifford contraction gives
+
+$$
+\langle J_{ABC}J^{ABC}\rangle_{\rm Wick}=-860160c^2,
+\qquad \mathcal{C}_4/\kappa_{16}=26880c^2.
+$$
+
+These are local normalized algebraic controls, without a physical density
+or cell size selected. They are not a global Hadamard state on the parent.
+Thus cancellation of the balanced benchmark does not exclude all Gaussian
+sources or select a non-Gaussian state. The initial coherence is physical
+preparation data.
+
+<!-- nsc-claim:chiral-state-inheritance -->
+
+The [state-inheritance derivation](../docs/nsc-atlas-inherited-charge.md)
+and [matrix controls](../results/summaries/nsc-atlas-valve-gaussian-source-v1.json)
+defines Xi=[K,Gamma_star]. If the full spinor transport U intertwines the
+chirality grading, including an orientation sign epsilon_h=+/-1, then
+
+$$
+K_{\rm out}=UK_{\rm in}U^\dagger,\qquad
+\Xi_{\rm out}=\epsilon_h U\Xi_{\rm in}U^\dagger.
+$$
+
+It carries an initial coherence and preserves a zero one; it does not
+choose the initial covariance. A reduced channel needs its projection
+and discarded correlations. The operator law $\mathcal{T}^*\mathbb{D}=\mathbb{D}$ supplies a common
+field law; this calculation specifies which additional state data its
+physical inheritance must carry.
+
+<!-- nsc-claim:dirac-source-ward -->
+
+The [action-level source identity](../docs/nsc-atlas-inherited-charge.md)
+and [Ward control](../results/summaries/nsc-atlas-valve-gaussian-source-v1.json)
+also separates an interaction energy from its complete stress. For the
+matched algebraic quartic C4, direct metric variation gives
+
+$$
+T^{\rm direct}_{\mu\nu}=g_{\mu\nu}\mathcal{C}_4,
+\qquad T^{\rm direct}_{kk}=0.
+$$
+
+Any changed null stress must include the interaction-modified kinetic
+equation and state. Because the bare vertex has no explicit radion
+dependence, its source exchanges energy through the geometric masses:
+
+$$
+\nabla^\mu T^D_{\mu\nu}=-\sum_a m_{a,S}B_a\,\partial_\nu S,
+\qquad \nabla^\mu\nabla_\mu S-W_{,S}=\sum_a m_{a,S}B_a.
+$$
+
+The bosonic and fermionic exchanges cancel. Renormalization requires the
+counterterm stress and its radion variation in these equations too.
+[Dappiaggi--Hack--Pinamonti, section4](https://arxiv.org/html/0904.0612v1)
+provides the free-field conserved point-splitting construction; its
+interacting implementation here remains open. Contact and induced kinetic
+response enter the Einstein-normalized source at the same order g².
+An isolated negative contact energy supplies no turnaround result.
+
+### A.200. The complete initial radial Dirac source operator
+
+<!-- nsc-claim:parent-dirac-intermode-source -->
+
+The [operator record](../results/summaries/nsc-atlas-valve-dirac-source-v1.json)
+uses the actual proper chart h=a² dchi²+R² dOmega2². A polar half-density
+spinor has the ordinary dchi norm. Each angular block J=k+1/2 has
+
+$$
+D_\Sigma=\epsilon\left(A\partial_\chi+\frac{1}{2}\partial_\chi A\right)
+-\frac{k+1}{R}\sigma_1,\qquad A=1/a,\qquad \epsilon=-i\sigma_2.
+$$
+
+The frame conversion preserves the old right-frame convention. It changes
+no field, initial geometry or earlier spectral number. At the initial
+time-symmetric slice a=q, the parent ADM equations supply
+A_ddot=K_a,dot/q and (1/R)_ddot=K_b,dot/R. Together with the already
+derived mass roll they give every matrix entry of
+H_ddot=tau1 tensor D_ddot+tau3 tensor m_ddot. There is no omitted
+time-dependent isotropic-coordinate shift in this proper-chart calculation.
+
+For the initial energy spinors let U_i=sqrt((E_i+m)/(2E_i)) and
+V_i=lambda_i/sqrt(2E_i(E_i+m)). Their full pair Hessian is
+
+$$
+\mathcal{M}_{ij}=(U_iU_j-V_iV_j)\ddot{D}_{ij}
+-(U_iV_j+V_iU_j)\ddot{m}_{ij}.
+$$
+
+The k=0 cutoffs8/16/24 give M_00=.112898160745309, with independent
+same-mode difference1.2e-15. The squared ground-column coefficient norm
+is .0448473832573; the other-mode fraction is .715791785965, with final
+adjacent spread3.9e-11. These finite-cutoff indicators are not certified
+errors of a whole-field source. The dimensionless plotted coefficients
+are L_unit cubed times the physical pair Hessian; no SI ruler is selected.
+The strongest other spatial eigenvalue
+is1.31422697688 and |M_i0|=.154109235008. The values are fixed by the
+declared parent and field candidate, without observational fitting.
+
+![Initial Dirac pair coupling and the resolved ground-column coefficient weights](figures/nsc-atlas-dirac-source.png)
+
+The [figure manifest](figures/nsc-atlas-dirac-source.manifest.json) binds
+the saved matrix and producer. Coefficients describe initial-reference
+amplitudes; the plotted fractions are neither energy fractions nor
+physical particle probabilities. Round de Sitter controls recover the
+complete analytic diagonal and vanishing intermode entries. Independent
+metric Gram and original-Dirac reconstruction errors are1.78e-15 and
+3.62e-12. The required occupied covariance, UV completion, conserved
+renormalized stress and backreaction are still separate physical inputs
+and calculations. No regular expanding child is established here.
+
 ## Appendix B. Evidence, attribution and reproducible mathematics
 
 This living manuscript draws from source-bound atlas records without changing
@@ -15030,36 +15169,35 @@ A dagger marks a work retained in the reading library but not cited in the manus
 | --- | --- |
 | Coupled finite scalar evolution, 23 October 2026 | [0710.4131](https://arxiv.org/abs/0710.4131), [gr-qc/0401113](https://arxiv.org/abs/gr-qc/0401113) |
 | Studies | [0711.1088 †](https://arxiv.org/abs/0711.1088), [0711.1178 †](https://arxiv.org/abs/0711.1178), [0805.2909 †](https://arxiv.org/abs/0805.2909), [0806.2683 †](https://arxiv.org/abs/0806.2683), [0901.0944 †](https://arxiv.org/abs/0901.0944) |
-| Studies | [0904.0612 †](https://arxiv.org/abs/0904.0612), [0907.5424 †](https://arxiv.org/abs/0907.5424), [0911.5074 †](https://arxiv.org/abs/0911.5074), [1001.2036 †](https://arxiv.org/abs/1001.2036), [1008.3630 †](https://arxiv.org/abs/1008.3630) |
-| Studies | [1008.3980 †](https://arxiv.org/abs/1008.3980), [1009.5179 †](https://arxiv.org/abs/1009.5179), [1101.1424 †](https://arxiv.org/abs/1101.1424), [1101.4012](https://arxiv.org/abs/1101.4012), [1106.3263 †](https://arxiv.org/abs/1106.3263) |
-| Studies | [1109.2524 †](https://arxiv.org/abs/1109.2524), [1109.6234 †](https://arxiv.org/abs/1109.6234), [1110.5019](https://arxiv.org/abs/1110.5019), [1111.3328 †](https://arxiv.org/abs/1111.3328), [1112.0475 †](https://arxiv.org/abs/1112.0475) |
-| Studies | [1210.2663 †](https://arxiv.org/abs/1210.2663), [1301.2430 †](https://arxiv.org/abs/1301.2430), [1305.3085 †](https://arxiv.org/abs/1305.3085), [1305.5178 †](https://arxiv.org/abs/1305.5178), [1307.3823 †](https://arxiv.org/abs/1307.3823) |
-| Studies | [1308.4552 †](https://arxiv.org/abs/1308.4552), [1309.0820 †](https://arxiv.org/abs/1309.0820), [1311.4182 †](https://arxiv.org/abs/1311.4182), [1312.2235 †](https://arxiv.org/abs/1312.2235), [1312.2960 †](https://arxiv.org/abs/1312.2960) |
-| Studies | [1404.0602 †](https://arxiv.org/abs/1404.0602), [1404.5635 †](https://arxiv.org/abs/1404.5635), [1408.3203 †](https://arxiv.org/abs/1408.3203), [1408.6112 †](https://arxiv.org/abs/1408.6112), [1409.2471 †](https://arxiv.org/abs/1409.2471) |
-| Studies | [1503.03095 †](https://arxiv.org/abs/1503.03095), [1504.00351 †](https://arxiv.org/abs/1504.00351), [1506.02882 †](https://arxiv.org/abs/1506.02882), [1508.03272 †](https://arxiv.org/abs/1508.03272), [1509.02878 †](https://arxiv.org/abs/1509.02878) |
-| Studies | [1510.06930 †](https://arxiv.org/abs/1510.06930), [1512.00761 †](https://arxiv.org/abs/1512.00761), [1512.06074 †](https://arxiv.org/abs/1512.06074), [1601.04744 †](https://arxiv.org/abs/1601.04744), [1601.06809 †](https://arxiv.org/abs/1601.06809) |
-| Studies | [1605.01603 †](https://arxiv.org/abs/1605.01603), [1606.02728 †](https://arxiv.org/abs/1606.02728), [1606.05831 †](https://arxiv.org/abs/1606.05831), [1607.07791 †](https://arxiv.org/abs/1607.07791), [1609.01731 †](https://arxiv.org/abs/1609.01731) |
-| Studies | [1612.07281 †](https://arxiv.org/abs/1612.07281), [1704.03143 †](https://arxiv.org/abs/1704.03143), [1704.04807 †](https://arxiv.org/abs/1704.04807), [1708.02951 †](https://arxiv.org/abs/1708.02951), [1710.05834 †](https://arxiv.org/abs/1710.05834) |
-| Studies | [1710.10155 †](https://arxiv.org/abs/1710.10155), [1711.02080 †](https://arxiv.org/abs/1711.02080), [1712.03876 †](https://arxiv.org/abs/1712.03876), [1803.08827 †](https://arxiv.org/abs/1803.08827), [1803.08930 †](https://arxiv.org/abs/1803.08930) |
-| Studies | [1805.05107 †](https://arxiv.org/abs/1805.05107), [1807.06209](https://arxiv.org/abs/1807.06209), [1807.06211 †](https://arxiv.org/abs/1807.06211), [1807.08361 †](https://arxiv.org/abs/1807.08361), [1812.05590 †](https://arxiv.org/abs/1812.05590) |
-| Studies | [1902.02222 †](https://arxiv.org/abs/1902.02222), [1903.07543 †](https://arxiv.org/abs/1903.07543), [1905.08255 †](https://arxiv.org/abs/1905.08255), [1906.02552 †](https://arxiv.org/abs/1906.02552), [1908.08050 †](https://arxiv.org/abs/1908.08050) |
-| Studies | [1910.01648 †](https://arxiv.org/abs/1910.01648), [2003.08398 †](https://arxiv.org/abs/2003.08398), [2008.02136 †](https://arxiv.org/abs/2008.02136), [2008.10995 †](https://arxiv.org/abs/2008.10995), [2011.03547 †](https://arxiv.org/abs/2011.03547) |
-| Studies | [2012.06401 †](https://arxiv.org/abs/2012.06401), [2112.05819 †](https://arxiv.org/abs/2112.05819), [2206.00014 †](https://arxiv.org/abs/2206.00014), [2211.08477 †](https://arxiv.org/abs/2211.08477), [2306.01695 †](https://arxiv.org/abs/2306.01695) |
-| Studies | [2306.03780 †](https://arxiv.org/abs/2306.03780), [2306.14880 †](https://arxiv.org/abs/2306.14880), [2307.12190 †](https://arxiv.org/abs/2307.12190), [2307.12677 †](https://arxiv.org/abs/2307.12677), [2309.00873 †](https://arxiv.org/abs/2309.00873) |
-| Studies | [2309.10034 †](https://arxiv.org/abs/2309.10034), [2403.08705 †](https://arxiv.org/abs/2403.08705), [2405.14056 †](https://arxiv.org/abs/2405.14056), [2406.19108 †](https://arxiv.org/abs/2406.19108), [2407.06790 †](https://arxiv.org/abs/2407.06790) |
-| Studies | [2409.11398 †](https://arxiv.org/abs/2409.11398), [2410.16264 †](https://arxiv.org/abs/2410.16264), [2503.14744 †](https://arxiv.org/abs/2503.14744), [2503.19441 †](https://arxiv.org/abs/2503.19441), [2503.24263](https://arxiv.org/abs/2503.24263) |
-| Studies | [2504.05597 †](https://arxiv.org/abs/2504.05597), [2510.23823 †](https://arxiv.org/abs/2510.23823), [2601.14559 †](https://arxiv.org/abs/2601.14559), [2602.18761 †](https://arxiv.org/abs/2602.18761), [2608.23861 †](https://arxiv.org/abs/2608.23861) |
-| Studies | [astro-ph/0305457 †](https://arxiv.org/abs/astro-ph/0305457), [astro-ph/0607657 †](https://arxiv.org/abs/astro-ph/0607657), [astro-ph/0608407 †](https://arxiv.org/abs/astro-ph/0608407), [astro-ph/9805201 †](https://arxiv.org/abs/astro-ph/9805201), [astro-ph/9811018 †](https://arxiv.org/abs/astro-ph/9811018) |
-| Studies | [astro-ph/9812133 †](https://arxiv.org/abs/astro-ph/9812133), [cond-mat/0209642 †](https://arxiv.org/abs/cond-mat/0209642), [cond-mat/9404027 †](https://arxiv.org/abs/cond-mat/9404027), [gr-qc/0001069 †](https://arxiv.org/abs/gr-qc/0001069), [gr-qc/0007036 †](https://arxiv.org/abs/gr-qc/0007036) |
-| Studies | [gr-qc/0207080 †](https://arxiv.org/abs/gr-qc/0207080), [gr-qc/0212028 †](https://arxiv.org/abs/gr-qc/0212028), [gr-qc/0304007 †](https://arxiv.org/abs/gr-qc/0304007), [gr-qc/0404074 †](https://arxiv.org/abs/gr-qc/0404074), [gr-qc/0505065 †](https://arxiv.org/abs/gr-qc/0505065) |
-| Studies | [gr-qc/0506037 †](https://arxiv.org/abs/gr-qc/0506037), [gr-qc/0511109 †](https://arxiv.org/abs/gr-qc/0511109), [gr-qc/0605031 †](https://arxiv.org/abs/gr-qc/0605031), [gr-qc/0607039 †](https://arxiv.org/abs/gr-qc/0607039), [gr-qc/0611022 †](https://arxiv.org/abs/gr-qc/0611022) |
-| Studies | [gr-qc/9211002 †](https://arxiv.org/abs/gr-qc/9211002), [gr-qc/9211017 †](https://arxiv.org/abs/gr-qc/9211017), [gr-qc/9403008 †](https://arxiv.org/abs/gr-qc/9403008), [gr-qc/9406053 †](https://arxiv.org/abs/gr-qc/9406053), [gr-qc/9504004](https://arxiv.org/abs/gr-qc/9504004v2) |
-| Studies | [gr-qc/9612057 †](https://arxiv.org/abs/gr-qc/9612057), [gr-qc/9801079 †](https://arxiv.org/abs/gr-qc/9801079), [gr-qc/9810032 †](https://arxiv.org/abs/gr-qc/9810032), [gr-qc/9901069 †](https://arxiv.org/abs/gr-qc/9901069), [gr-qc/9904021 †](https://arxiv.org/abs/gr-qc/9904021) |
-| Studies | [gr-qc/9906015 †](https://arxiv.org/abs/gr-qc/9906015), [hep-ph/0105021 †](https://arxiv.org/abs/hep-ph/0105021), [hep-ph/9912408 †](https://arxiv.org/abs/hep-ph/9912408), [hep-th/0011232 †](https://arxiv.org/abs/hep-th/0011232), [hep-th/0103138 †](https://arxiv.org/abs/hep-th/0103138) |
-| Studies | [hep-th/0103186 †](https://arxiv.org/abs/hep-th/0103186), [hep-th/0204253 †](https://arxiv.org/abs/hep-th/0204253), [hep-th/0206054 †](https://arxiv.org/abs/hep-th/0206054), [hep-th/0207060 †](https://arxiv.org/abs/hep-th/0207060), [hep-th/0306138](https://arxiv.org/abs/hep-th/0306138) |
-| Studies | [hep-th/0507253 †](https://arxiv.org/abs/hep-th/0507253), [hep-th/0602146 †](https://arxiv.org/abs/hep-th/0602146), [hep-th/9502109 †](https://arxiv.org/abs/hep-th/9502109), [hep-th/9606001 †](https://arxiv.org/abs/hep-th/9606001), [hep-th/9807038 †](https://arxiv.org/abs/hep-th/9807038) |
-| Studies | [hep-th/9905177 †](https://arxiv.org/abs/hep-th/9905177), [math-ph/0201055 †](https://arxiv.org/abs/math-ph/0201055), [math-ph/0403050 †](https://arxiv.org/abs/math-ph/0403050), [math/0304347 †](https://arxiv.org/abs/math/0304347), [physics/0503066 †](https://arxiv.org/abs/physics/0503066) |
-| Studies | [quant-ph/0102125 †](https://arxiv.org/abs/quant-ph/0102125), [quant-ph/9609002 †](https://arxiv.org/abs/quant-ph/9609002) |
+| Studies | [0907.5424 †](https://arxiv.org/abs/0907.5424), [0911.5074 †](https://arxiv.org/abs/0911.5074), [1001.2036 †](https://arxiv.org/abs/1001.2036), [1008.3630 †](https://arxiv.org/abs/1008.3630), [1008.3980 †](https://arxiv.org/abs/1008.3980) |
+| Studies | [1101.1424 †](https://arxiv.org/abs/1101.1424), [1101.4012](https://arxiv.org/abs/1101.4012), [1106.3263 †](https://arxiv.org/abs/1106.3263), [1109.2524 †](https://arxiv.org/abs/1109.2524), [1109.6234 †](https://arxiv.org/abs/1109.6234) |
+| Studies | [1110.5019](https://arxiv.org/abs/1110.5019), [1111.3328 †](https://arxiv.org/abs/1111.3328), [1112.0475 †](https://arxiv.org/abs/1112.0475), [1210.2663 †](https://arxiv.org/abs/1210.2663), [1301.2430 †](https://arxiv.org/abs/1301.2430) |
+| Studies | [1305.3085 †](https://arxiv.org/abs/1305.3085), [1305.5178 †](https://arxiv.org/abs/1305.5178), [1307.3823 †](https://arxiv.org/abs/1307.3823), [1308.4552 †](https://arxiv.org/abs/1308.4552), [1309.0820 †](https://arxiv.org/abs/1309.0820) |
+| Studies | [1311.4182 †](https://arxiv.org/abs/1311.4182), [1312.2235 †](https://arxiv.org/abs/1312.2235), [1312.2960 †](https://arxiv.org/abs/1312.2960), [1404.0602 †](https://arxiv.org/abs/1404.0602), [1404.5635 †](https://arxiv.org/abs/1404.5635) |
+| Studies | [1408.3203 †](https://arxiv.org/abs/1408.3203), [1408.6112 †](https://arxiv.org/abs/1408.6112), [1409.2471 †](https://arxiv.org/abs/1409.2471), [1503.03095 †](https://arxiv.org/abs/1503.03095), [1504.00351 †](https://arxiv.org/abs/1504.00351) |
+| Studies | [1506.02882 †](https://arxiv.org/abs/1506.02882), [1508.03272 †](https://arxiv.org/abs/1508.03272), [1509.02878 †](https://arxiv.org/abs/1509.02878), [1510.06930 †](https://arxiv.org/abs/1510.06930), [1512.00761 †](https://arxiv.org/abs/1512.00761) |
+| Studies | [1512.06074 †](https://arxiv.org/abs/1512.06074), [1601.04744 †](https://arxiv.org/abs/1601.04744), [1601.06809 †](https://arxiv.org/abs/1601.06809), [1605.01603 †](https://arxiv.org/abs/1605.01603), [1606.02728 †](https://arxiv.org/abs/1606.02728) |
+| Studies | [1606.05831 †](https://arxiv.org/abs/1606.05831), [1607.07791 †](https://arxiv.org/abs/1607.07791), [1609.01731 †](https://arxiv.org/abs/1609.01731), [1612.07281 †](https://arxiv.org/abs/1612.07281), [1704.03143 †](https://arxiv.org/abs/1704.03143) |
+| Studies | [1704.04807 †](https://arxiv.org/abs/1704.04807), [1708.02951 †](https://arxiv.org/abs/1708.02951), [1710.05834 †](https://arxiv.org/abs/1710.05834), [1710.10155 †](https://arxiv.org/abs/1710.10155), [1711.02080 †](https://arxiv.org/abs/1711.02080) |
+| Studies | [1712.03876 †](https://arxiv.org/abs/1712.03876), [1803.08827 †](https://arxiv.org/abs/1803.08827), [1803.08930 †](https://arxiv.org/abs/1803.08930), [1805.05107 †](https://arxiv.org/abs/1805.05107), [1807.06209](https://arxiv.org/abs/1807.06209) |
+| Studies | [1807.06211 †](https://arxiv.org/abs/1807.06211), [1807.08361 †](https://arxiv.org/abs/1807.08361), [1812.05590 †](https://arxiv.org/abs/1812.05590), [1902.02222 †](https://arxiv.org/abs/1902.02222), [1903.07543 †](https://arxiv.org/abs/1903.07543) |
+| Studies | [1905.08255 †](https://arxiv.org/abs/1905.08255), [1906.02552 †](https://arxiv.org/abs/1906.02552), [1908.08050 †](https://arxiv.org/abs/1908.08050), [1910.01648 †](https://arxiv.org/abs/1910.01648), [2003.08398 †](https://arxiv.org/abs/2003.08398) |
+| Studies | [2008.02136 †](https://arxiv.org/abs/2008.02136), [2008.10995 †](https://arxiv.org/abs/2008.10995), [2011.03547 †](https://arxiv.org/abs/2011.03547), [2012.06401 †](https://arxiv.org/abs/2012.06401), [2112.05819 †](https://arxiv.org/abs/2112.05819) |
+| Studies | [2206.00014 †](https://arxiv.org/abs/2206.00014), [2211.08477 †](https://arxiv.org/abs/2211.08477), [2306.01695 †](https://arxiv.org/abs/2306.01695), [2306.03780 †](https://arxiv.org/abs/2306.03780), [2306.14880 †](https://arxiv.org/abs/2306.14880) |
+| Studies | [2307.12190 †](https://arxiv.org/abs/2307.12190), [2307.12677 †](https://arxiv.org/abs/2307.12677), [2309.00873 †](https://arxiv.org/abs/2309.00873), [2309.10034 †](https://arxiv.org/abs/2309.10034), [2403.08705 †](https://arxiv.org/abs/2403.08705) |
+| Studies | [2405.14056 †](https://arxiv.org/abs/2405.14056), [2406.19108 †](https://arxiv.org/abs/2406.19108), [2407.06790 †](https://arxiv.org/abs/2407.06790), [2409.11398 †](https://arxiv.org/abs/2409.11398), [2410.16264 †](https://arxiv.org/abs/2410.16264) |
+| Studies | [2503.14744 †](https://arxiv.org/abs/2503.14744), [2503.19441 †](https://arxiv.org/abs/2503.19441), [2503.24263](https://arxiv.org/abs/2503.24263), [2504.05597 †](https://arxiv.org/abs/2504.05597), [2510.23823 †](https://arxiv.org/abs/2510.23823) |
+| Studies | [2601.14559 †](https://arxiv.org/abs/2601.14559), [2602.18761 †](https://arxiv.org/abs/2602.18761), [2608.23861 †](https://arxiv.org/abs/2608.23861), [astro-ph/0305457 †](https://arxiv.org/abs/astro-ph/0305457), [astro-ph/0607657 †](https://arxiv.org/abs/astro-ph/0607657) |
+| Studies | [astro-ph/0608407 †](https://arxiv.org/abs/astro-ph/0608407), [astro-ph/9805201 †](https://arxiv.org/abs/astro-ph/9805201), [astro-ph/9811018 †](https://arxiv.org/abs/astro-ph/9811018), [astro-ph/9812133 †](https://arxiv.org/abs/astro-ph/9812133), [cond-mat/0209642 †](https://arxiv.org/abs/cond-mat/0209642) |
+| Studies | [cond-mat/9404027 †](https://arxiv.org/abs/cond-mat/9404027), [gr-qc/0001069 †](https://arxiv.org/abs/gr-qc/0001069), [gr-qc/0007036 †](https://arxiv.org/abs/gr-qc/0007036), [gr-qc/0207080 †](https://arxiv.org/abs/gr-qc/0207080), [gr-qc/0212028 †](https://arxiv.org/abs/gr-qc/0212028) |
+| Studies | [gr-qc/0304007 †](https://arxiv.org/abs/gr-qc/0304007), [gr-qc/0404074 †](https://arxiv.org/abs/gr-qc/0404074), [gr-qc/0505065 †](https://arxiv.org/abs/gr-qc/0505065), [gr-qc/0506037 †](https://arxiv.org/abs/gr-qc/0506037), [gr-qc/0511109 †](https://arxiv.org/abs/gr-qc/0511109) |
+| Studies | [gr-qc/0605031 †](https://arxiv.org/abs/gr-qc/0605031), [gr-qc/0607039 †](https://arxiv.org/abs/gr-qc/0607039), [gr-qc/0611022 †](https://arxiv.org/abs/gr-qc/0611022), [gr-qc/9211002 †](https://arxiv.org/abs/gr-qc/9211002), [gr-qc/9211017 †](https://arxiv.org/abs/gr-qc/9211017) |
+| Studies | [gr-qc/9403008 †](https://arxiv.org/abs/gr-qc/9403008), [gr-qc/9406053 †](https://arxiv.org/abs/gr-qc/9406053), [gr-qc/9504004](https://arxiv.org/abs/gr-qc/9504004v2), [gr-qc/9612057 †](https://arxiv.org/abs/gr-qc/9612057), [gr-qc/9801079 †](https://arxiv.org/abs/gr-qc/9801079) |
+| Studies | [gr-qc/9810032 †](https://arxiv.org/abs/gr-qc/9810032), [gr-qc/9901069 †](https://arxiv.org/abs/gr-qc/9901069), [gr-qc/9904021 †](https://arxiv.org/abs/gr-qc/9904021), [gr-qc/9906015 †](https://arxiv.org/abs/gr-qc/9906015), [hep-ph/0105021 †](https://arxiv.org/abs/hep-ph/0105021) |
+| Studies | [hep-ph/9912408 †](https://arxiv.org/abs/hep-ph/9912408), [hep-th/0011232 †](https://arxiv.org/abs/hep-th/0011232), [hep-th/0103138 †](https://arxiv.org/abs/hep-th/0103138), [hep-th/0103186 †](https://arxiv.org/abs/hep-th/0103186), [hep-th/0204253 †](https://arxiv.org/abs/hep-th/0204253) |
+| Studies | [hep-th/0206054 †](https://arxiv.org/abs/hep-th/0206054), [hep-th/0207060 †](https://arxiv.org/abs/hep-th/0207060), [hep-th/0306138](https://arxiv.org/abs/hep-th/0306138), [hep-th/0507253 †](https://arxiv.org/abs/hep-th/0507253), [hep-th/0602146 †](https://arxiv.org/abs/hep-th/0602146) |
+| Studies | [hep-th/9502109 †](https://arxiv.org/abs/hep-th/9502109), [hep-th/9606001 †](https://arxiv.org/abs/hep-th/9606001), [hep-th/9807038 †](https://arxiv.org/abs/hep-th/9807038), [hep-th/9905177 †](https://arxiv.org/abs/hep-th/9905177), [math-ph/0201055 †](https://arxiv.org/abs/math-ph/0201055) |
+| Studies | [math-ph/0403050 †](https://arxiv.org/abs/math-ph/0403050), [math/0304347 †](https://arxiv.org/abs/math/0304347), [physics/0503066 †](https://arxiv.org/abs/physics/0503066), [quant-ph/0102125 †](https://arxiv.org/abs/quant-ph/0102125), [quant-ph/9609002 †](https://arxiv.org/abs/quant-ph/9609002) |
 | How to approach the work | [0711.2198](https://arxiv.org/abs/0711.2198v1), [0811.1989](https://arxiv.org/abs/0811.1989), [1004.3962](https://arxiv.org/abs/1004.3962), [1010.5367 †](https://arxiv.org/abs/1010.5367), [1109.0011](https://arxiv.org/abs/1109.0011) |
 | How to approach the work | [1307.4371](https://arxiv.org/abs/1307.4371), [1503.06311](https://arxiv.org/abs/1503.06311), [1608.01002 †](https://arxiv.org/abs/1608.01002), [1903.02841 †](https://arxiv.org/abs/1903.02841), [2302.07878](https://arxiv.org/abs/2302.07878) |
 | How to approach the work | [2306.08199](https://arxiv.org/abs/2306.08199), [2306.09412](https://arxiv.org/abs/2306.09412), [2312.16282 †](https://arxiv.org/abs/2312.16282), [2401.05483 †](https://arxiv.org/abs/2401.05483), [2506.19907 †](https://arxiv.org/abs/2506.19907) |
@@ -15078,6 +15216,7 @@ A dagger marks a work retained in the reading library but not cited in the manus
 | Atlas reuse library, 10 October 2026 | [gr-qc/0606009 †](https://arxiv.org/abs/gr-qc/0606009v2), [gr-qc/9307009](https://arxiv.org/abs/gr-qc/9307009v2), [gr-qc/9403003 †](https://arxiv.org/abs/gr-qc/9403003v1), [gr-qc/9404011 †](https://arxiv.org/abs/gr-qc/9404011v1), [gr-qc/9708008 †](https://arxiv.org/abs/gr-qc/9708008v2) |
 | Atlas reuse library, 10 October 2026 | [hep-th/0110007 †](https://arxiv.org/abs/hep-th/0110007v2), [hep-th/0308108 †](https://arxiv.org/abs/hep-th/0308108v2), [hep-th/0602194 †](https://arxiv.org/abs/hep-th/0602194v2), [hep-th/9511136](https://arxiv.org/abs/hep-th/9511136v1), [math-ph/0212025 †](https://arxiv.org/abs/math-ph/0212025v1) |
 | Oscillating scalar source and the controlled parent — 28 October 2026 | [0902.4738](https://arxiv.org/abs/0902.4738) |
+| Dirac source, stress and inherited state -- 1 November 2026 | [0904.0612](https://arxiv.org/abs/0904.0612v1), [1009.5179 †](https://arxiv.org/abs/1009.5179v1) |
 | Two material levels and physical gravitational composition, 27 October 2026 | [0909.0287](https://arxiv.org/abs/0909.0287v2), [1510.07674](https://arxiv.org/abs/1510.07674), [2310.13946](https://arxiv.org/abs/2310.13946), [gr-qc/0301078](https://arxiv.org/abs/gr-qc/0301078v2), [gr-qc/0310107](https://arxiv.org/abs/gr-qc/0310107v2) |
 | Main-manuscript references | [1002.3912](https://arxiv.org/abs/1002.3912), [1005.3493](https://arxiv.org/abs/1005.3493), [1011.5797](https://arxiv.org/abs/1011.5797), [1203.6191](https://arxiv.org/abs/1203.6191v2), [1308.1142](https://arxiv.org/abs/1308.1142) |
 | Main-manuscript references | [astro-ph/9811257](https://arxiv.org/abs/astro-ph/9811257), [gr-qc/0305099](https://arxiv.org/abs/gr-qc/0305099v2) |

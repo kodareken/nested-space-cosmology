@@ -1,16 +1,16 @@
 {
   "schema": "nsc-atlas-progress-v1",
-  "updated_date": "2026-10-31",
+  "updated_date": "2026-11-01",
   "scientific_owner": "docs/nsc-cosmological-atlas.md",
   "score_definition": "100 times verified declared work gates / required gates. Equal gate weights; not a probability, time estimate, fraction of physical truth or experimental confirmation. Conditional results count only for explicitly domain-limited gates; empirical closure gates remain open.",
   "rule": "All five gates in every item must be verified before that item reaches100; no candidate may inherit an incompatible success from another action. User planning estimates are preserved separately.",
   "goal_status": "active",
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
-  "current_calculation": "Actual-parent Dirac source and conditional state response",
-  "completed": "Controlled canonical continuation reaches R=.149533 without a turn; trapped sign also survives the complete uplift, and its external radius still contracts. Geometric spinor ratios, full bare ground vertex, actual-parent modes and conditional initial response are calculated. No regular expanding child.",
-  "active": "Evaluate the complete signed Gaussian source, kinetic stress and radion exchange with g symbolic, using all required internal/spatial signs and explicit subtraction. Stop at its leading coefficient, cancellation or a named initial-state/UV datum before further collapse evolution.",
-  "continuation": "Source-stage agents and producers are complete. The250-page working-2026-10-31.08 manuscript integrates the new mode/vertex/onset calculations; its new pages were visually inspected.135 focused tests and retained evidence checks pass. Use git log for the saved checkpoint. Next is the complete signed source with g symbolic, not another scalar-collapse grid. Overall16/50 work gates; regular expanding child and empirical closure remain open.",
+  "current_calculation": "Canonical counterrotation after the completed signed-source checkpoint",
+  "completed": "Balanced chiral-invariant Gaussian contact cancels; a local coherent Gaussian control is nonzero without being selected. Exact stress/radion Ward and chirality-inheritance laws are derived. The proper-chart Dirac operator recovers the old diagonal and finds71.579% unequal-mode squared coefficient norm.169 focused tests pass. No regular expanding child.",
+  "active": "Test chi=A X1 with conformal scalar momentum proportional to existing Y2=X2 X4. First derive all ten compact-parent conformal-Killing charges and local countercirculation; then complete York and finite Hamiltonian constraints before any new evolution. Same scalar action, explicitly changed initial preparation; no fitted state or quantum parameter.",
+  "continuation": "The signed Gaussian/operator checkpoint is complete:252-page working-2026-11-01.01,169 focused tests, retained and current publication checks. Use git log for the saved checkpoint. Quantum source remains conditional on full state/UV/renormalization and physicalg. Next is the canonical counterrotation constraint test in the existing action, not deeper spherical grids or extra pump orders. Full goal active16/50 work gates; regular child and empirical closures remain open.",
   "items": [
     {
       "id": "dimensions_inputs",
@@ -423,7 +423,9 @@
     "results/summaries/nsc-atlas-valve-restart-v1.json",
     "results/summaries/nsc-atlas-valve-source-gate-v1.json",
     "results/summaries/nsc-atlas-valve-dirac-modes-v1.json",
-    "results/summaries/nsc-atlas-valve-dirac-onset-v1.json"
+    "results/summaries/nsc-atlas-valve-dirac-onset-v1.json",
+    "results/summaries/nsc-atlas-valve-gaussian-source-v1.json",
+    "results/summaries/nsc-atlas-valve-dirac-source-v1.json"
   ],
   "intermediate_results": {
     "internal_release_critical_loading": 0.3750793338270073,
@@ -470,7 +472,7 @@
       24
     ],
     "pending_local_producers": [],
-    "next_step": "Evaluate the complete signed Gaussian source, kinetic stress and radion exchange with g symbolic, using all required internal/spatial signs and explicit subtraction. Stop at its leading coefficient, cancellation or a named initial-state/UV datum before further collapse evolution.",
+    "next_step": "Test chi=A X1 with conformal scalar momentum proportional to existing Y2=X2 X4. First derive all ten compact-parent conformal-Killing charges and local countercirculation; then complete York and finite Hamiltonian constraints before any new evolution. Same scalar action, explicitly changed initial preparation; no fitted state or quantum parameter.",
     "completed_outputs": [
       "results/summaries/nsc-atlas-valve-formation-early-v1.json",
       "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
@@ -487,7 +489,9 @@
       "results/summaries/nsc-atlas-valve-restart-v1.json",
       "results/summaries/nsc-atlas-valve-source-gate-v1.json",
       "results/summaries/nsc-atlas-valve-dirac-modes-v1.json",
-      "results/summaries/nsc-atlas-valve-dirac-onset-v1.json"
+      "results/summaries/nsc-atlas-valve-dirac-onset-v1.json",
+      "results/summaries/nsc-atlas-valve-gaussian-source-v1.json",
+      "results/summaries/nsc-atlas-valve-dirac-source-v1.json"
     ],
     "one_mode_spherical_degrees": [
       24,
@@ -510,20 +514,19 @@
       4001,
       8001
     ],
-    "publication_pages": 250,
-    "paper_revision": "working-2026-10-31.08",
+    "publication_pages": 252,
+    "paper_revision": "working-2026-11-01.01",
     "source_stage_focused_checks": {
-      "passed": 135,
-      "test_files": 18
+      "passed": 169,
+      "test_files": 20
     },
-    "publication_pages_before": 248,
+    "publication_pages_before": 250,
     "source_stage_visual_pages": [
       9,
       10,
-      11,
-      242,
-      243,
-      244
+      244,
+      245,
+      246
     ]
   },
   "publication_finish_requirements": {

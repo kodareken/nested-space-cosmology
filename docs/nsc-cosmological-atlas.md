@@ -29,6 +29,14 @@ select the full quantum state or establish the required radial stress.
 The field extension and preparation remain explicit. The work score is
 unchanged until a physical closure gate is satisfied.
 
+The signed source successor separates operator inheritance from the
+initial covariance it transports. Its balanced Gaussian contact is zero;
+a coherent local Gaussian control is nonzero without being a selected
+parent state. The proper-chart radial Dirac operator also contains
+substantial unequal-mode coupling. These results identify source/state
+requirements for the valve. They do not supply a child, SI scale or
+late cosmological fraction.
+
 The [new one-mode formation calculation](nsc-atlas-valve-formation.md#current-result-a-same-action-trapped-neck)
 retains the action and explicitly changes occupation. It supplies a
 resolved future-trapped neck at epsilon=1, a numerical threshold .8339066,

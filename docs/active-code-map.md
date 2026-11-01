@@ -32,6 +32,16 @@ pump. Its two producers `check_nsc_atlas_valve_dirac_modes.py` and
 finite-parent checks and the conditional initial state. A bare interaction
 or response coefficient is not a computed receiving stress.
 
+The same `nsc_atlas_valve_source_gate.py` now supplies
+`signed_gaussian_coincidence`, a local coherent-state control, and
+`parent_dirac_source_operator`. The latter projects the full initial
+proper-chart Dirac Hessian in each angular block, with no same-mode
+closure. `check_nsc_atlas_valve_gaussian_source.py` and
+`check_nsc_atlas_valve_dirac_source.py` bind the two compact results;
+`plot_nsc_atlas_valve_dirac_source.py` reads the authenticated saved matrix
+without launching a calculation. Complete initial state and renormalized
+stress remain separate requirements.
+
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
 uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
 records. The horizon/GH/boson chain below is frozen. It supplies existing

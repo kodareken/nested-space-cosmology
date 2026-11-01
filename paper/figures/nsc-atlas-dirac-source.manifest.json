@@ -1,0 +1,48 @@
+{
+  "data": {
+    "degree": 24,
+    "ground_column_index": 24,
+    "ground_column_squared_coefficient_norm": 0.04484738325728177,
+    "k": 0,
+    "other_mode_squared_coefficient_fraction": 0.7157917859654835,
+    "same_mode_squared_coefficient_fraction": 0.28420821403451646,
+    "spatial_labels": 49
+  },
+  "inputs": {
+    "raw_matrices": {
+      "bytes": 72488,
+      "path": ".build/valve-dirac-source-v1/degree-24-k-0.npz",
+      "sha256": "52a82c9c6e734908d232a04eef3283efcf3c6eb53f83e8b5adecd6c45b12cc9f"
+    },
+    "scientific_record": {
+      "bytes": 17007,
+      "path": "results/summaries/nsc-atlas-valve-dirac-source-v1.json",
+      "sha256": "670e998379b0f8e3d78446ec667d7670056d761395c852bf97c84d4fa5738e21"
+    }
+  },
+  "outputs": {
+    "paper/figures/nsc-atlas-dirac-source.png": {
+      "bytes": 238360,
+      "path": "paper/figures/nsc-atlas-dirac-source.png",
+      "sha256": "b70ca555ce1095fd976bc5516ce5870b3e48759a96ccbccc3727d6239f1fb183"
+    }
+  },
+  "producer": {
+    "bytes": 9828,
+    "path": "scripts/plot_nsc_atlas_valve_dirac_source.py",
+    "sha256": "0ee28be39052b7bd0f9a8a409328d563f9d22f39062dce6e9f8cbf375b8b6228"
+  },
+  "render": {
+    "dpi": 220,
+    "figsize_inches": [
+      11.8,
+      6.6
+    ],
+    "heatmap_floor_relative_to_maximum": 1e-08,
+    "matplotlib_version": "3.11.2",
+    "quantity": "Squared magnitudes; arbitrary eigenvector phases do not change the figure."
+  },
+  "schema": "nsc-atlas-dirac-source-figure-v1",
+  "scientific_scope": "Reference-amplitude coefficient norms of the saved initial Hamiltonian Hessian; not energy fractions, probabilities, occupation or a renormalized source.",
+  "scientific_sources_or_PDE_recomputed": false
+}

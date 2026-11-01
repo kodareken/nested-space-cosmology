@@ -34,6 +34,20 @@ onset and source records take seconds after the existing input is present.
 The [source owner](nsc-atlas-inherited-charge.md) distinguishes new field
 and low-mode preparation assumptions from quantities fixed by geometry.
 
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_valve_gaussian_source.py
+python scripts/run_python.py scripts/check_nsc_atlas_valve_dirac_source.py
+python scripts/run_python.py scripts/plot_nsc_atlas_valve_dirac_source.py
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_gaussian_state.py tests/test_nsc_atlas_valve_dirac_source_operator.py
+```
+
+These follow the existing mode/onset producers above. The source-operator
+matrix is regenerated under `.build` and hash-checked by the plot producer;
+the committed result contains compact coefficients and comparisons only.
+The balanced Gaussian result and local coherent counterexample are
+preparation-dependent. Neither record supplies the full renormalized
+radial stress or selects a quantum state/physical gravitational scale.
+
 The [canonical parent response](nsc-atlas-boson-transport.md#reproduction)
 records resolved-history, response, Schur and plot commands. Full history
 and matrix arrays are regenerated locally; the committed summaries bind

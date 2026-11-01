@@ -16,6 +16,13 @@ a nonzero conditional low-mode response. Selecting the full state and
 computing its conserved renormalized stress remain the next source work;
 no formed regular child or new empirical result is claimed.
 
+The same owner now derives signed Gaussian cancellation, a coherent
+Gaussian counterexample and chiral-state inheritance. The full initial
+radial Dirac operator exposes substantial unequal-mode coupling, with
+an independent same-mode recovery and Ward-consistent source equations.
+It does not replace the missing occupied state or stress calculation by
+a contact-energy or coefficient fraction.
+
 The outward [P006 vacuum/pressure calculation](nsc-atlas-offset-thermodynamics.md)
 uses `scripts/check_nsc_atlas_flow_cosmology.py` and compact protocol/evaluation
 records. The horizon/GH/boson chain below is frozen. It supplies existing

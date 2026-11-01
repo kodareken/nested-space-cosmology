@@ -1,6 +1,6 @@
 # Atlas source connections
 
-This navigation index contains **334 distinct arXiv works**: 117 are cited in the main argument or technical appendices and 217 are retained in the reading library only.
+This navigation index contains **334 distinct arXiv works**: 118 are cited in the main argument or technical appendices and 216 are retained in the reading library only.
 
 The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.
 
@@ -16,7 +16,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [0811.1989](https://arxiv.org/abs/0811.1989) | How to approach the work | See the linked reading route and manuscript section for the stated use and assumptions. | A.50 |
 | [0901.0944](https://arxiv.org/abs/0901.0944) | Studies | Boonserm and Visser: analytic bounds on transmission probabilities, applied to omitted potential tails. | Library only |
 | [0902.4738](https://arxiv.org/abs/0902.4738) | Oscillating scalar source and the controlled parent — 28 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | A.60, A.62, A.98 |
-| [0904.0612](https://arxiv.org/abs/0904.0612) | Studies | Dappiaggi, Hack and Pinamonti: Definition 4.1 and Theorem 4.1, plus the covariant Dirac stress, trace anomaly and renormalization. | Library only |
+| [0904.0612](https://arxiv.org/abs/0904.0612v1) | Dirac source, stress and inherited state -- 1 November 2026 | Dappiaggi, Hack and Pinamonti: free Dirac stress, point splitting and renormalization; sections4.1--4.3 reading and current-source limitations are recorded above. | A.199 |
 | [0907.5424](https://arxiv.org/abs/0907.5424) | Studies | Archived: Baumann, TASI lectures on inflation. | Library only |
 | [0909.0287](https://arxiv.org/abs/0909.0287v2) | Two material levels and physical gravitational composition, 27 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | A.128 |
 | [0909.1101](https://arxiv.org/abs/0909.1101v1) | Atlas reuse library, 10 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | A.26 |
@@ -34,7 +34,7 @@ The entries locate existing readings and mathematical use. They do not claim tha
 | [1008.1911](https://arxiv.org/abs/1008.1911) | Flow, interface stress and horizon hydrodynamics, 27 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [1008.3630](https://arxiv.org/abs/1008.3630) | Studies | Iochum, Levy and Vassilevich: bulk and boundary spectral-action terms with skew torsion and chiral bag conditions, including the connection-convention conversion. | Library only |
 | [1008.3980](https://arxiv.org/abs/1008.3980) | Studies | Chamseddine and Connes: spectral action on a space with boundary, used for the extrinsic-curvature coefficient required by the gravitational Hamiltonian. | Library only |
-| [1009.5179](https://arxiv.org/abs/1009.5179) | Studies | Dappiaggi, Hack and Pinamonti: spinor boundary construction for the child state. | Library only |
+| [1009.5179](https://arxiv.org/abs/1009.5179v1) | Dirac source, stress and inherited state -- 1 November 2026 | Dappiaggi, Hack and Pinamonti: a bulk-to-boundary Dirac state construction on specified flat FRW asymptotic histories, a method candidate rather than a selected child state here. | Library only |
 | [1010.3416](https://arxiv.org/abs/1010.3416) | Spacetime arrival maps and the forming source, 25 October 2026 | See the linked reading route and manuscript section for the stated use and assumptions. | A.111 |
 | [1010.5367](https://arxiv.org/abs/1010.5367) | How to approach the work | See the linked reading route and manuscript section for the stated use and assumptions. | Library only |
 | [1011.5797](https://arxiv.org/abs/1011.5797) | Main-manuscript references | See the linked reading route and manuscript section for the stated use and assumptions. | A.78 |

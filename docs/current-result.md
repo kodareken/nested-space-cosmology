@@ -36,6 +36,23 @@ kept distinct. No full occupied state, renormalized radial stress or
 regular expanding child follows yet. These conditional calculations do
 not close another programme gate.
 
+The [signed Gaussian source](../results/summaries/nsc-atlas-valve-gaussian-source-v1.json)
+now completes that conditional pump's spatial and internal signs. Its
+balanced chiral-invariant relative-Wick contact cancels. A local coherent
+Gaussian counterexample keeps this from being misread as an all-state
+zero theorem. Free inheritance transports the full chiral covariance;
+it does not select it. The action-varied stress/radion Ward identity
+separates direct contact from the nonlinear kinetic response.
+
+The [full initial radial source operator](../results/summaries/nsc-atlas-valve-dirac-source-v1.json)
+also removes a substantive closure assumption:71.579% of the squared
+ground-column mixing-coefficient norm is in other spatial modes. It
+reproduces the earlier same-mode coefficient independently. The complete
+occupied covariance/UV state, matched stress renormalization and physicalg
+remain missing inputs to a quantitative receiving-source calculation.
+No negative radial NEC or formed regular child is inferred from the
+coefficient split.
+
 The earlier unchanged two-mode parent's closed-surface and null-sheet
 searches found no admitted future trap. Internal stabilization loss has
 the conditional threshold epsilon=.717777, and the first normal contraction
