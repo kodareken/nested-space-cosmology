@@ -7,10 +7,10 @@
   "goal_status": "active",
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
-  "current_calculation": "Unchanged parent X1 drive, old-neck conformal test and exact loading relation",
-  "completed": "Read-only original parent drive reaches physical X1 quadrature .7851012011 at anchor proper .37353704, below the different one-mode reference .8339066143. Both incoming and outgoing traces are derived without filtering. Actual neck curvature is Weyl-dominated; finite-area conformal obstruction is conditional on persistent signs. A stronger blow-up is an unphysical diagnostic, not a child. Mcrit near E0 follows from imposed M(0)=E0 and a nearby fold, not an exact Parke identity. Eleven algebra tests pass.",
-  "active": "The latest requested three-item readout is complete. Inherited trigger and same-action receiving geometry remain open. Do not resume supplied-state, Dirac, horizon/GH/transport or eta pursuits automatically; no new fields or supplied states were authorized by this calculation. Full atlas goal remains incomplete.",
-  "continuation": "No GR/PDE process is running. Current source 5b26bb6b; compact result results/summaries/nsc-atlas-parent-valve-test-v1.json; original parent producer 65ceed0b. Actual raw readout .build/parent-valve-test-v2/readout-record.json. The first v1 readout stopped at the passive sampled-phase cache guard; physical fields, observer and clock were identical. The loader now checks phase separately without loosening physical guards. Original parent window0..0.9 is one reference geodesic clock, not global proper time. R=0 and persistence in the conditional conformal theorem are unproved. Physical other-side volume/energy/w/expansion are null. All older prototype/private continuation instructions are superseded by the latest three-item scope. PDF252pages unchanged; AGENTS unchanged.",
+  "current_calculation": "Parent-driven internal-volume release from unchanged Cauchy data",
+  "completed": "Two passive same-parent resolutions, actual covariant force/work identity, source-derived diagnostic ball and corrected tube-observer flux. Internal volume +29.436%; no barrier exit through anchor.9. Twenty-five portable math controls pass.",
+  "active": "Accepted bounded SAME-state continuation20/24 from exact admitted.9 endpoint toward first bare-top crossing, velocity reversal, proper1.6 or numerical/budget guard. No new fields or supplied states. No extra halo/eta/Lambda/old-neck campaign.",
+  "continuation": "Current source d37fb5ab; two same-Cauchy PDE jobs nowrunning in .build/parent-release-continuation-L{20,24}-v3/run.json,4Numba threads each,1500seconds allowance each. Physicalrestart is exactoriginalanchor.9 state; zero field/gauge/clock resets. Source40ca9bdc v2jobs terminated onNumPybooleanJSONencoding atfirstproper1.0 checkpoint, BEFORE rawflush; those computed tails are not retained and support no claim. Saver fixed raw-first and6synthetic interruption/export tests pass. Bothpassivereadouts total64.13s; currentrecord nsc-atlas-parent-release-v2.json source d03c5743. PDF252unchanged; noAGENTSchanges.",
   "items": [
     {
       "id": "dimensions_inputs",
@@ -432,7 +432,9 @@
     "results/summaries/nsc-atlas-valve-dirac-source-v1.json",
     "results/summaries/nsc-atlas-valve-counterrotation-v1.json",
     "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json",
-    "results/summaries/nsc-atlas-parent-valve-test-v1.json"
+    "results/summaries/nsc-atlas-parent-valve-test-v1.json",
+    "results/summaries/nsc-atlas-parent-release-v1.json",
+    "results/summaries/nsc-atlas-parent-release-v2.json"
   ],
   "intermediate_results": {
     "internal_release_critical_loading": 0.3750793338270073,
@@ -478,8 +480,10 @@
       20,
       24
     ],
-    "pending_local_producers": [],
-    "next_step": "No queued run. Preserve these three results and report their boundaries; do not resume older supplied-state or new-field plans without a new scoped instruction.",
+    "pending_local_producers": [
+      "Same-Cauchy parent-release continuation20/24 v3, at most1500sec each,4Numba each"
+    ],
+    "next_step": "Inspect first stop and matched-clock resolution comparison; do not resume other prepared states or lengthen endpoints automatically.",
     "completed_outputs": [
       "results/summaries/nsc-atlas-valve-formation-early-v1.json",
       "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
@@ -501,7 +505,9 @@
       "results/summaries/nsc-atlas-valve-dirac-source-v1.json",
       "results/summaries/nsc-atlas-valve-counterrotation-v1.json",
       "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json",
-      "results/summaries/nsc-atlas-parent-valve-test-v1.json"
+      "results/summaries/nsc-atlas-parent-valve-test-v1.json",
+      "results/summaries/nsc-atlas-parent-release-v1.json",
+      "results/summaries/nsc-atlas-parent-release-v2.json"
     ],
     "one_mode_spherical_degrees": [
       24,
@@ -549,9 +555,8 @@
       "Eta and downstream cosmology"
     ],
     "current_readout_checks": {
-      "passed": 11,
-      "test_files": 1,
-      "GR_or_PDE_runs": 0,
+      "passed": 31,
+      "test_files": 2,
       "new_fields": 0,
       "new_prepared_states": 0
     }
@@ -564,7 +569,7 @@
     "note": "The work-gate score alone does not complete the programme or authorize publication."
   },
   "proposed_next_calculation": {
-    "status": "proposal_only_not_launched",
+    "status": "accepted_readout_complete_same_state_continuation_running",
     "owner": "docs/nsc-atlas-valve-formation.md#proposed-next-connection-parent-driven-release-before-collapse",
     "decision": "Use actual parent-driven concentration and internal-size release before another nonlinear formation attempt; static fold and one-mode epsilon threshold are not original-parent trigger criteria.",
     "reuse": [

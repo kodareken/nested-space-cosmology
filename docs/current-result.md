@@ -1,5 +1,22 @@
 # What the calculations show
 
+## Parent-driven internal-volume motion, 1 November 2026
+
+The [accepted release test](nsc-atlas-valve-formation.md#parent-driven-release-executed-readout-and-same-state-continuation)
+now measures the unchanged parent's actual wave-to-volume driving.
+Through source-anchor proper .9 the internal volume grows29.436%, with
+carrier mechanical work+.11014858 and opposing spatial-gradient work
+-.02810105. Bare mechanical energy remains below its barrier; no exit
+or receiving child is claimed. The original-state histories and complete
+force decomposition are retained in the
+[corrected readout](../results/summaries/nsc-atlas-parent-release-v2.json).
+The source-derived measurement ball's Einstein-frame mean density falls
+1.914%, while boundary observers measure net inward scalar flux. The
+Eulerian ledger and boundary-frame flux are explicitly distinguished.
+Twenty-five independent mathematical controls pass. A bounded, source-bound
+continuation now preserves the exact complete Cauchy state and absolute
+clock rather than choosing another preparation. The PDF remains unchanged.
+
 ## Unchanged parent and conditional conformal endpoint, 1 November 2026
 
 The [three-item readout](nsc-atlas-valve-formation.md#current-result-unchanged-parent-conformal-endpoint-and-loading-threshold)

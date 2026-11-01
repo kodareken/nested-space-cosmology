@@ -2,6 +2,23 @@
 
 ## Current formation readout
 
+The accepted [parent-driven release](nsc-atlas-valve-formation.md#parent-driven-release-executed-readout-and-same-state-continuation)
+reads the original pinned caches, with no new preparation:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_release.py --raw-directory .build/parent-release-reproduction --output .build/parent-release-reproduction.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_release.py
+```
+
+Its separate continuation CLI preserves the original full .9 Cauchy state:
+
+```powershell
+python scripts/run_python.py scripts/continue_nsc_atlas_parent_release.py --degree 24 --output .build/parent-release-continuation-reproduction --budget 1800 --threads 4 --max-step .01 --proper-endpoint 1.6
+```
+
+This is a bounded finite-event test, not a guarantee of escape or a child.
+The original-parent/conformal comparison remains reproducible below.
+
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_parent_valve.py --raw-directory .build/parent-valve-reproduction --output .build/parent-valve-reproduction.json
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_valve.py

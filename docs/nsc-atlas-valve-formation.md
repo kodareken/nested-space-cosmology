@@ -7,9 +7,135 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
-## Proposed next connection: parent-driven release before collapse
+## Parent-driven release: executed readout and same-state continuation
 
-This is the proposal requested after `6c4c7491`, not a launched campaign.
+Douglas accepted this calculation after `befb4300`. The passive readout is
+complete; a bounded continuation now tests the same complete Cauchy state.
+The old supplied-state, Dirac and conformal-neck campaigns stay paused.
+This work uses the existing two fields and the fixed original preparation.
+
+### The wave actually drives the internal geometry
+
+For K_s=84, mu squared=400 exp(-12s), the same action gives
+
+$$
+K_s\Box s-V_s+6\mu^2\chi^2=0.
+$$
+
+Along the tracked geodesic u, put e_s=K_s[u(s)] squared/2+V(s) and
+P_u contravariant=g inverse+u tensor u. Then
+
+$$
+\frac{de_s}{d\tau}
+=6\mu^2\chi^2u(s)+K_su(s)P_u^{ab}\nabla_a\nabla_bs.
+$$
+
+This is a local mechanical-energy identity, not a regional energy flux or
+an escape theorem. The second term includes spatial transport and the
+observer's geometric environment. The saved solution supplies every term;
+no incoming waveform or independent perturbation amplitude is inserted.
+Normal-lapse acceleration and the conversion to the geodesic are retained
+separately, so no normal clock is silently substituted for geodesic time.
+
+The [corrected readout](../results/summaries/nsc-atlas-parent-release-v2.json)
+uses the admitted original degree20/24 histories over anchor proper0..0.9.
+Both passive passes together took64.13seconds, below the300-second allowance;
+the second adds actual boundary-observer flux to distinguish it from the
+Eulerian ledger. Full time series stay under.build and have public hashes.
+
+| Quantity, degree24 | Initial | At anchor proper .9 |
+| --- | ---: | ---: |
+| Internal log size s | -.03564678255 | -.01414520052 |
+| Canonical geodesic rate u(S) | 0 | .3496326933 |
+| Internal volume / initial volume | 1 | 1.294363391 |
+| Local mechanical radion energy | .2209830242 | .3106505378 |
+| Bare barrier energy minus mechanical energy | .1335536533 | .04388613964 |
+
+The wave delivers +.1101485794 local mechanical work; the spatial-Laplacian
+term contributes -.0281010515 and the slice-expansion term +.0076436342.
+The observed mechanical-energy gain is .08966751363. The finite-sampling
+work residual is below3.45e-5; the129/65-sample indicator for carrier work
+is8.88e-5. These are empirical controls, not a certified total error bar.
+The degree20/24 difference in s remains below1.97e-7 and in u(S) below7.23e-5.
+Direct scalar-KG residuals decrease under refinement; their finite values
+are preserved in the readout rather than repaired using the field equation.
+The smallest mechanical barrier margin anywhere in the sampled history is
+.04374572809, distinct from the final margin in the table.
+
+No upward bare-barrier crossing, reference-fold-coordinate crossing or
+geodesic velocity reversal occurs in this window. The loading comparison
+remains above its adiabatic fold throughout the observed interval. This
+does not determine how long it remains above the fold afterward. A release
+time and eventual escape are not inferred from the local Hessian or from
+the already matched static fold.
+
+### Local driving is distinct from regional accretion
+
+The measurement ball is fixed by the initial source f=aX1+bX2X4. Its centre
+is the original positive maximum. With q=a/b, its largest reference-round
+radius before the nearest node is
+
+$$
+\rho_0=\arccos\left(\frac{1+q^2}{\sqrt2}-q^2\right)
+=.8522887164834.
+$$
+
+A global Cauchy--Schwarz bound and explicit feasible contacts establish
+this radius; it was not selected by a favourable later flux. It is a
+measurement region, not an assumed receiver or a material wall.
+Einstein-frame regional energy rises25.47945279 to26.15981361 while its
+volume rises40.62096007 to42.51957633. Mean density therefore falls1.9143%.
+The normal-energy change separates into +.11524608 geometric work,
++.57154880 shift transport and -.00643139 Eulerian material transport.
+This accounting closes to2.0e-5, with a5.81e-5 time-quadrature indicator.
+
+The actual tube observers have a different flux. If v=beta_normal/N and
+gamma=(1-v squared)^(-1/2), then
+
+$$
+j_B=\gamma^2[(1+v^2)j_n-v(\rho+p_n)]
+=-\sum_A(U_B\phi_A)(n_B\phi_A).
+$$
+
+The readout measures both sides directly and reports the local tube lapse
+N/gamma. Its integrated outward GH-weighted tube flux is -.2353336494,
+so these boundary observers measure net incoming scalar energy. The
+Eulerian material-column sign therefore cannot establish absence of tube
+inflow. The boost identity residual is below4.9e-17. Neither this tube flux
+nor the coordinate shift is identified
+with energy delivered to a child. Einstein-frame energy is not divided
+by the separately reconstructed external volume to manufacture a density.
+Point principal rates in the raw record are Einstein-frame rates; the
+regional `external_*` fields use exp(-12s)g_E and are labelled accordingly.
+
+### Continuation justified by the measured driver
+
+The local work and volume motion justify a bounded continuation of the
+unchanged state, not a new preparation or a claim of regional collapse.
+`continue_nsc_atlas_parent_release.py` starts at the actual admitted .9
+state, preserves every field, momentum, observer component and absolute
+clock, and carries sampled phase only as passive metadata. It uses the
+unchanged GH physical RHS. Two resolutions use four Numba threads each,
+with1800seconds per run and no frequency/amplitude scan.
+
+The first upward bare-top crossing, actual geodesic velocity reversal,
+proper1.6 endpoint or numerical/budget limit ends the test. Crossing the
+fixed reference-fold field value is recorded without ending the run or
+calling it a physical transition. Accepted dense polynomials determine
+event roots; data beyond a refined stop are preserved but unpromoted.
+The sampled .1 normalized constraint guards are numerical stop rules,
+not proof of accuracy or regular child formation. A third resolution is
+reserved for a candidate physical event if the comparison requires it.
+
+The first CLI-only attempt stopped on sibling import resolution before any
+readout; the first continuation attempts stopped on default-quadrature
+metadata before any RHS evolution. Their fixes changed no physical data.
+The successful passive records bind their exact committed sources.
+No new PDF pages or cosmological/charge claims are added by this result.
+
+## Accepted roadmap: parent-driven release before collapse
+
+This is the roadmap requested after `6c4c7491` and subsequently accepted.
 The previous trap threshold belongs to different one-mode initial data;
 matching that amplitude is not the original parent's formation criterion.
 Comparing more supplied states does not select the parent's history.

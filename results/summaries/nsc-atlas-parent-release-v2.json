@@ -1,0 +1,1154 @@
+{
+  "schema": "nsc-atlas-parent-release-v1",
+  "scientific_owner": "docs/nsc-atlas-valve-formation.md",
+  "runs": [
+    {
+      "degree": 20,
+      "raw_path": ".build/parent-release-v2/degree-20.json",
+      "raw_sha256": "c834331245172c97d807c3e959b1ee9a511381c66fc3b3c4dc30dd6dbc47f7ae",
+      "elapsed_seconds": 21.15520999999717,
+      "provenance": {
+        "record": ".build/valve-e1-L20-extended-v1.json",
+        "record_sha256": "f25e973f4916fd15aee640a945063613ba46a79b98bf1f4cb127190d114822ea",
+        "sparse_cache": ".build/valve-e1-L20-extended-v1.npz",
+        "sparse_sha256": "58af54103eb671ff7252e21dc817c28a7573420dc08280aa1839a6188e80cb48",
+        "dense_cache": ".build/valve-e1-L20-extended-v1-history.npz",
+        "dense_sha256": "24f5eaa7ed069cf2c333d80b1729df56583a5ace79d57d304f10ba78bfd62645",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "published_record_pin": true,
+        "published_summary_sha256": "2b7786cc4657106aff354653beb261a95dcc73d87d3452dece1b1810443fbd7e",
+        "dense_sparse_maximum_gap": 0.0,
+        "dense_sparse_compared_components": "All physical coefficients and reference-observer point, four-velocity and proper clock: state[:-1]",
+        "dense_sparse_physical_maximum_gap": 0.0,
+        "dense_sparse_observer_point_velocity_maximum_gap": 0.0,
+        "dense_sparse_reference_clock_maximum_gap": 0.0,
+        "auxiliary_phase": {
+          "index": 19919,
+          "role": "Producer-owned sampled unwrapped observer phase; NOT physical field, proper clock or work ledger",
+          "producer": "nsc_atlas_parent_gh.observer_rhs returns0; evolve_parent assigns state[-1]=before_phase+partial only to the sparse-copy state before state_sink",
+          "used_by_readout": false,
+          "values": [
+            {
+              "coordinate_t": 0.0,
+              "reference_observer_proper_duration": 0.0,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 0.0,
+              "dense_sparse_auxiliary_gap": 0.0,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.30176421282556815,
+              "reference_observer_proper_duration": 0.3,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 7.384881695708822,
+              "dense_sparse_auxiliary_gap": 7.384881695708822,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.614115201359084,
+              "reference_observer_proper_duration": 0.6000000000000003,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 14.572572043168062,
+              "dense_sparse_auxiliary_gap": 14.572572043168062,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.9458893890928269,
+              "reference_observer_proper_duration": 0.8999999999999999,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 21.3683692916596,
+              "dense_sparse_auxiliary_gap": 21.3683692916596,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 1.3036563278839346,
+              "reference_observer_proper_duration": 1.2,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 27.70287215349815,
+              "dense_sparse_auxiliary_gap": 27.70287215349815,
+              "sparse_phase_report_gap": 0.0
+            }
+          ]
+        },
+        "source_sha256": {
+          "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+          "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+          "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+          "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+          "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+          "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+          "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+          "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+          "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+          "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+          "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+          "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+        }
+      },
+      "interval": {
+        "coordinate_t": [
+          0.0,
+          0.9458893890928269
+        ],
+        "anchor_tau": [
+          0.0,
+          0.9
+        ]
+      },
+      "region_definition": {
+        "sampler_arguments": {
+          "anchor": [
+            0.40837076508409503,
+            0.6454584875205496,
+            0.0,
+            0.6454584875205496
+          ],
+          "radius": 0.8522887164833749
+        },
+        "carrier_a": 0.03795019848848436,
+        "carrier_b": 0.0929307426810275,
+        "q": 0.40837076508409503,
+        "closest_node_points": [
+          [
+            0.16915270937450938,
+            0.9830819297902824,
+            0.0,
+            -0.07026578278989619
+          ],
+          [
+            0.16915270937450938,
+            -0.07026578278989619,
+            0.0,
+            0.9830819297902824
+          ]
+        ],
+        "maximum_anchor_dot_on_node": 0.6582619509705208,
+        "defining_source": "f=aX1+bX2X4 at the original prepared slice",
+        "derivation": "Global Cauchy--Schwarz upper bound with an explicitly feasible equality point; rho=acos(max anchor.X on f=0).",
+        "boundary_role": "Fixed INITIAL reference-coordinate ball; not a material surface, horizon or newly prepared receiver.",
+        "independent_nodal_control": {
+          "stationary_root": 0.16915270937450927,
+          "feasible_interval": [
+            -0.6717989816572998,
+            0.6717989816572998
+          ],
+          "root_error": 1.1102230246251565e-16,
+          "maximum_dot_error": 1.1102230246251565e-16,
+          "nodal_residual": 1.734723475976807e-18,
+          "unit_sphere_residual": 1.1102230246251565e-16,
+          "global_bound_reason": "The reduced objective has strictlynegative second derivative throughout its feasible interval."
+        },
+        "analytic_geometry_controls": {
+          "round_volume_error": 4.405364961712621e-13,
+          "round_area_error": 2.842170943040401e-14,
+          "flat_volume_error": 4.440892098500626e-16,
+          "flat_area_error": 1.2434497875801753e-14,
+          "round_exact_volume": 112.12311273818815,
+          "round_exact_area": 96.67600103042028
+        }
+      },
+      "local": {
+        "initial_s": -0.035646782552940987,
+        "maximum_s": -0.014145003791702731,
+        "final_s": -0.014145003791702731,
+        "maximum_s_anchor_tau": 0.8999999999999999,
+        "initial_uS": 0.0,
+        "final_uS": 0.34968107466897247,
+        "internal_volume_ratio_at_end": 1.2943664467557368,
+        "initial_point_density": 1.1226190780005805,
+        "final_point_density": 1.2170271012469405,
+        "initial_external_principal_expansions": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "final_external_principal_expansions": [
+          -0.04247550165782328,
+          -0.07901372292839164,
+          -0.1013135156338931
+        ]
+      },
+      "region": {
+        "initial": {
+          "reference_observer_proper_duration": 0.0,
+          "energy": 25.479452848313233,
+          "excitation_energy": 16.502910190578834,
+          "volume": 40.62096031909718,
+          "rho_mean": 0.6272489042149638,
+          "pressure_mean": -0.6270616903389324,
+          "w": -0.99970153176072,
+          "volume_coordinate_rate": 0.0,
+          "normal_expansion_mean": 0.0,
+          "s_mean": -0.03564678255294094,
+          "s_min": -0.035646782552940987,
+          "s_max": -0.035646782552940987,
+          "normal_s_rate_mean": 0.0,
+          "normal_s_rate_min": 0.0,
+          "normal_s_rate_max": 0.0,
+          "gradient_energy_mean_radion": 0.0,
+          "gradient_energy_mean_carrier": 0.00028082081404726497,
+          "normal_kinetic_energy_mean_radion": 0.0,
+          "normal_kinetic_energy_mean_carrier": 0.0,
+          "oscillator_loading_mean": 0.327810488872397,
+          "oscillator_loading_min": 3.0571878082893773e-06,
+          "oscillator_loading_max": 0.7280212630685029,
+          "work": 0.0,
+          "excitation_work": 0.0,
+          "outward_GH_flux": 0.0,
+          "outward_excitation_GH_flux": 0.0,
+          "outward_material_flux": 0.0,
+          "shift_flux": 0.0,
+          "inward_material_flux_positive": 0.0,
+          "outward_material_flux_positive": 0.0,
+          "tube_outward_area_flux": 0.0,
+          "tube_outward_area_positive": 0.0,
+          "tube_outward_area_negative": 0.0,
+          "tube_outward_GH_weighted_flux": 0.0,
+          "tube_outward_GH_weighted_positive": 0.0,
+          "tube_outward_GH_weighted_negative": 0.0,
+          "tube_flux_boost_identity_max": 0.0,
+          "boundary_normal_speed_min": 0.0,
+          "boundary_normal_speed_max": 0.0,
+          "tube_flux_role": "Outward jB=-sum(Uphi*nBphi); area integral is localtube-proper-unit flux, GHweighted usesN/gamma. Neither is the Eulerian normal-energy ledger or a child-feeding claim.",
+          "instantaneous_energy_coordinate_rate_from_balance": 0.0,
+          "area": 42.623860403141876,
+          "area_radius": 1.841710899791134,
+          "area_coordinate_rate": 0.0,
+          "area_radius_coordinate_rate": 0.0,
+          "external_volume": 77.16347963349068,
+          "external_volume_coordinate_rate": 0.0,
+          "external_normal_expansion_mean": 0.0,
+          "external_area": 65.37733184272963,
+          "external_area_radius": 2.2809127042622204,
+          "external_area_coordinate_rate": 0.0,
+          "minimum_tube_normal_squared": 0.12795610868715115,
+          "energy_flux_formula_error": 0.0,
+          "rates_role": "Eulerian energy/volume/work and GHweighted flux rates use GH time; unweighted tube-area flux has its separate role. No anchor-clock energy derivative.",
+          "geometry_role": "Full actual first jets and physical measure in a frozen reference ball; external=exp(-12s)Einstein metric, not a new state or child."
+        },
+        "final": {
+          "reference_observer_proper_duration": 0.8999999999999999,
+          "energy": 26.159805636783446,
+          "excitation_energy": 16.763701519998968,
+          "volume": 42.519574298813666,
+          "rho_mean": 0.6152414756775523,
+          "pressure_mean": -0.44207895206918135,
+          "w": -0.7185454322342772,
+          "volume_coordinate_rate": 4.105517980551045,
+          "normal_expansion_mean": 0.028184878084709736,
+          "s_mean": -0.02592117847884003,
+          "s_min": -0.03405869680680732,
+          "s_max": -0.014132564941577188,
+          "normal_s_rate_mean": 0.01761286294491309,
+          "normal_s_rate_min": 0.00553104999715717,
+          "normal_s_rate_max": 0.03829971747579802,
+          "gradient_energy_mean_radion": 0.003403865724362904,
+          "gradient_energy_mean_carrier": 0.00047935426879271213,
+          "normal_kinetic_energy_mean_radion": 0.015775476736418485,
+          "normal_kinetic_energy_mean_carrier": 0.06951137840338184,
+          "oscillator_loading_mean": 0.3190699375562916,
+          "oscillator_loading_min": 1.462082558370626e-05,
+          "oscillator_loading_max": 0.832584486751385,
+          "work": -0.24834481846473822,
+          "excitation_work": -0.5220575376712984,
+          "outward_GH_flux": -1.224948974943446,
+          "outward_excitation_GH_flux": -0.5914119148462147,
+          "outward_material_flux": -0.13477475559180443,
+          "shift_flux": -1.0901742193516415,
+          "inward_material_flux_positive": 0.14290145314893207,
+          "outward_material_flux_positive": 0.008126697557127612,
+          "tube_outward_area_flux": -0.6309665072359867,
+          "tube_outward_area_positive": 0.0002619006758151297,
+          "tube_outward_area_negative": -0.6312284079118018,
+          "tube_outward_GH_weighted_flux": -0.6086235866372136,
+          "tube_outward_GH_weighted_positive": 0.0002570723975386062,
+          "tube_outward_GH_weighted_negative": -0.6088806590347522,
+          "tube_flux_boost_identity_max": 2.0816681711721685e-17,
+          "boundary_normal_speed_min": 0.006057406992490602,
+          "boundary_normal_speed_max": 0.11852746107319548,
+          "tube_flux_role": "Outward jB=-sum(Uphi*nBphi); area integral is localtube-proper-unit flux, GHweighted usesN/gamma. Neither is the Eulerian normal-energy ledger or a child-feeding claim.",
+          "instantaneous_energy_coordinate_rate_from_balance": 0.9766041564787077,
+          "area": 43.48738844987463,
+          "area_radius": 1.8602732103047315,
+          "area_coordinate_rate": 1.9139948534315783,
+          "area_radius_coordinate_rate": 0.040937769286881164,
+          "external_volume": 68.06069234110186,
+          "external_volume_coordinate_rate": -11.75604773022778,
+          "external_normal_expansion_mean": -0.23501786314523926,
+          "external_area": 63.30866345031456,
+          "external_area_radius": 2.244536336157066,
+          "external_area_coordinate_rate": -3.402294531128459,
+          "minimum_tube_normal_squared": 0.12295435354967447,
+          "energy_flux_formula_error": 2.7755575615628914e-17,
+          "rates_role": "Eulerian energy/volume/work and GHweighted flux rates use GH time; unweighted tube-area flux has its separate role. No anchor-clock energy derivative.",
+          "geometry_role": "Full actual first jets and physical measure in a frozen reference ball; external=exp(-12s)Einstein metric, not a new state or child."
+        },
+        "energy_ratio": 1.0267020172105168,
+        "excitation_energy_ratio": 1.0158027479037615,
+        "volume_ratio": 1.0467397610692106,
+        "mean_density_ratio": 0.9808569955934168,
+        "maximum_mean_density_ratio": 1.0000892015006206,
+        "cumulative_geometric_work": 0.11524591738412394,
+        "cumulative_outward_GH_flux": -0.5651179455526895,
+        "cumulative_outward_material_flux": 0.006430576107209478,
+        "cumulative_shift_flux": -0.571548521659899,
+        "cumulative_tube_outward_GH_weighted_flux": -0.23533442859953452,
+        "maximum_tube_flux_boost_identity_error": 4.85722573273506e-17,
+        "tube_flux_scope": "Sum of local tube-observer fluxes with their GH lapse N/gamma, not a conserved total/anchor-clock energy or an attached-child supply.",
+        "maximum_abs_energy_ledger_residual": 1.9702563652310504e-05,
+        "final_energy_ledger_residual": -1.1074466600646815e-05,
+        "maximum_abs_excitation_ledger_residual": 1.8054407258763158e-05,
+        "final_excitation_ledger_residual": -1.0925043852305638e-05,
+        "temporal_quadrature": {
+          "full_net_work_minus_flux": 0.6803638629368134,
+          "half_sample_net_work_minus_flux": 0.6804219707433363,
+          "indicator": 5.810780652293346e-05
+        },
+        "spatial_quadrature": {
+          "energy": 2.0442634252049174e-09,
+          "excitation_energy": 2.0439436809738254e-09,
+          "volume": 1.4352963262354024e-12,
+          "work": 2.2454774234459407e-08,
+          "outward_GH_flux": 4.3161771934308035e-09,
+          "external_volume": 1.5774048733874224e-12,
+          "tube_outward_area_flux": 1.144229200278346e-08,
+          "tube_outward_GH_weighted_flux": 9.603776662814312e-09
+        }
+      },
+      "response": {
+        "proper_interval": [
+          0.0,
+          0.8999999999999999
+        ],
+        "sample_count": 129,
+        "maximum_proper_step": 0.0073928195767373125,
+        "maximum_abs_kg_normal_residual": 0.002719936576050741,
+        "maximum_abs_kg_observer_residual": 0.002719936576050741,
+        "maximum_abs_S_reconstruction_error": 5.525042092086041e-06,
+        "maximum_abs_uS_reconstruction_error": 0.00013321749651720727,
+        "maximum_abs_mechanical_work_residual": 3.3629957987807435e-05,
+        "final_work": {
+          "spatial_laplacian": {
+            "net": -0.028101618304144704,
+            "positive": 0.0,
+            "negative": -0.028101618304144704
+          },
+          "slice_expansion": {
+            "net": 0.007643553402493925,
+            "positive": 0.007644068687945023,
+            "negative": -5.152854510983813e-07
+          },
+          "lapse_acceleration": {
+            "net": -4.7082491233318015e-07,
+            "positive": 2.2464770799392772e-14,
+            "negative": -4.7082493479795097e-07
+          },
+          "observer_conversion": {
+            "net": 1.2352175903982875e-06,
+            "positive": 1.2352180037106638e-06,
+            "negative": -4.1331237636634535e-13
+          },
+          "bare_potential": {
+            "net": -0.02854617031096668,
+            "positive": 0.0,
+            "negative": -0.02854617031096668
+          },
+          "carrier_force": {
+            "net": 0.11014487772236294,
+            "positive": 0.11014487772236294,
+            "negative": 0.0
+          }
+        },
+        "duration_loading_above_adiabatic_fold": 0.8999999999999999,
+        "first_loading_above_adiabatic_fold": 0.0,
+        "observed_upward_bare_top_crossings": [],
+        "observed_upward_adiabatic_fold_s_crossings": [],
+        "duration_from_first_overloading_to_bare_top": null,
+        "duration_from_first_overloading_to_fold_s": null,
+        "minimum_bare_top_distance": 0.07414553883352283,
+        "minimum_bare_mechanical_margin": 0.0437491507775391,
+        "minimum_existing_fixed_chi_potential_margin": -0.024026169110671625,
+        "minimum_existing_fixed_chi_top_distance": 0.029764194981414735,
+        "minimum_existing_fixed_action_top_distance": null,
+        "observed_uS_turns": [],
+        "carrier_cycles": {
+          "positive_maxima": [
+            {
+              "tau": 0.0,
+              "left_index": 0,
+              "right_index": 1,
+              "direction": -1
+            },
+            {
+              "tau": 0.25472094443164706,
+              "left_index": 34,
+              "right_index": 35,
+              "direction": -1
+            },
+            {
+              "tau": 0.5156756269714492,
+              "left_index": 71,
+              "right_index": 72,
+              "direction": -1
+            },
+            {
+              "tau": 0.7888560503590477,
+              "left_index": 110,
+              "right_index": 111,
+              "direction": -1
+            }
+          ],
+          "complete_cycles": [
+            {
+              "tau_start": 0.0,
+              "tau_end": 0.25472094443164706,
+              "mean_observer_oscillator_energy": 0.9006234532515405,
+              "mean_observer_quadrature_amplitude": 0.054416754401241496
+            },
+            {
+              "tau_start": 0.25472094443164706,
+              "tau_end": 0.5156756269714492,
+              "mean_observer_oscillator_energy": 0.893772207447675,
+              "mean_observer_quadrature_amplitude": 0.05554178713523658
+            },
+            {
+              "tau_start": 0.5156756269714492,
+              "tau_end": 0.7888560503590477,
+              "mean_observer_oscillator_energy": 0.8882808156015791,
+              "mean_observer_quadrature_amplitude": 0.05797988439857812
+            }
+          ],
+          "first_to_last_complete_cycle_change": {
+            "mean_observer_oscillator_energy": -0.012342637649961352,
+            "mean_observer_quadrature_amplitude": 0.0035631299973366212
+          },
+          "scope": "Actual local-field maxima and observer quadratures; no fitted decay law, no conserved mode action."
+        },
+        "release_time_prediction": null,
+        "escape_proved": false,
+        "child_formation_proved": false
+      },
+      "response_scope": "Actual-history local identity and finite-sampling work/reconstruction diagnostics only. Retarded integrals are exact for linearly interpolated measured forces; compare time refinements. Observer conversion is Hess_uu-Hess_nn-a.DS, converting n(nS) to the geodesic derivative. The two KG residuals share this measured conversion and are not independent equations. Mechanical radion energy omits spatial gradient energy and is not a cap energy or physical flux. Conditional equilibria omit transport/expansion and do not select a preparation, release time, escape or child.",
+      "time_refinement": {
+        "coarse_response": {
+          "proper_interval": [
+            0.0,
+            0.8999999999999999
+          ],
+          "sample_count": 65,
+          "maximum_proper_step": 0.014785142917655598,
+          "maximum_abs_kg_normal_residual": 0.002719936576050741,
+          "maximum_abs_kg_observer_residual": 0.002719936576050741,
+          "maximum_abs_S_reconstruction_error": 2.1636713083222903e-05,
+          "maximum_abs_uS_reconstruction_error": 0.0005365323503992367,
+          "maximum_abs_mechanical_work_residual": 0.00013706319315673343,
+          "final_work": {
+            "spatial_laplacian": {
+              "net": -0.0281029318704453,
+              "positive": 0.0,
+              "negative": -0.0281029318704453
+            },
+            "slice_expansion": {
+              "net": 0.007644720807544455,
+              "positive": 0.007645199026310127,
+              "negative": -4.782187656719276e-07
+            },
+            "lapse_acceleration": {
+              "net": -4.7125056887529704e-07,
+              "positive": 2.1943604418293375e-14,
+              "negative": -4.7125059081890146e-07
+            },
+            "observer_conversion": {
+              "net": 1.2362657302833119e-06,
+              "positive": 1.236266134021825e-06,
+              "negative": -4.0373851298122606e-13
+            },
+            "bare_potential": {
+              "net": -0.02854541787022454,
+              "positive": 0.0,
+              "negative": -0.02854541787022454
+            },
+            "carrier_force": {
+              "net": 0.11023364812269447,
+              "positive": 0.11023364812269447,
+              "negative": 0.0
+            }
+          },
+          "duration_loading_above_adiabatic_fold": 0.8999999999999999,
+          "first_loading_above_adiabatic_fold": 0.0,
+          "observed_upward_bare_top_crossings": [],
+          "observed_upward_adiabatic_fold_s_crossings": [],
+          "duration_from_first_overloading_to_bare_top": null,
+          "duration_from_first_overloading_to_fold_s": null,
+          "minimum_bare_top_distance": 0.07414553883352283,
+          "minimum_bare_mechanical_margin": 0.04382950929605273,
+          "minimum_existing_fixed_chi_potential_margin": -0.011377032787303731,
+          "minimum_existing_fixed_chi_top_distance": 0.029764194981414735,
+          "minimum_existing_fixed_action_top_distance": null,
+          "observed_uS_turns": [],
+          "carrier_cycles": {
+            "positive_maxima": [
+              {
+                "tau": 0.0,
+                "left_index": 0,
+                "right_index": 1,
+                "direction": -1
+              },
+              {
+                "tau": 0.2547508032587629,
+                "left_index": 17,
+                "right_index": 18,
+                "direction": -1
+              },
+              {
+                "tau": 0.515680012185638,
+                "left_index": 35,
+                "right_index": 36,
+                "direction": -1
+              },
+              {
+                "tau": 0.7888601992893706,
+                "left_index": 55,
+                "right_index": 56,
+                "direction": -1
+              }
+            ],
+            "complete_cycles": [
+              {
+                "tau_start": 0.0,
+                "tau_end": 0.2547508032587629,
+                "mean_observer_oscillator_energy": 0.9006143778804008,
+                "mean_observer_quadrature_amplitude": 0.054416801521873455
+              },
+              {
+                "tau_start": 0.2547508032587629,
+                "tau_end": 0.515680012185638,
+                "mean_observer_oscillator_energy": 0.8937660728435589,
+                "mean_observer_quadrature_amplitude": 0.055541933893047506
+              },
+              {
+                "tau_start": 0.515680012185638,
+                "tau_end": 0.7888601992893706,
+                "mean_observer_oscillator_energy": 0.888278691620761,
+                "mean_observer_quadrature_amplitude": 0.057979995671279226
+              }
+            ],
+            "first_to_last_complete_cycle_change": {
+              "mean_observer_oscillator_energy": -0.012335686259639767,
+              "mean_observer_quadrature_amplitude": 0.003563194149405771
+            },
+            "scope": "Actual local-field maxima and observer quadratures; no fitted decay law, no conserved mode action."
+          },
+          "release_time_prediction": null,
+          "escape_proved": false,
+          "child_formation_proved": false
+        }
+      },
+      "point_checks": {
+        "maximum_abs_scalar_KG_residual": 0.007084188801634639,
+        "maximum_observer_unit_error": 2.1043833342559992e-11,
+        "maximum_observer_geodesic_residual": 6.145316144845481e-09,
+        "maximum_scalar_Hessian_symmetry_error": 5.551115123125783e-17,
+        "maximum_metric_velocity_consistency": 2.282211599424766e-07,
+        "maximum_field_velocity_consistency": 3.754930152366498e-07
+      }
+    },
+    {
+      "degree": 24,
+      "raw_path": ".build/parent-release-v2/degree-24.json",
+      "raw_sha256": "7897428d63b19a84a5d62a4243a4acad5a7cbbaafdb715fea125a225e68d2b97",
+      "elapsed_seconds": 30.420051800028887,
+      "provenance": {
+        "record": ".build/valve-e1-L24-extended-v1.json",
+        "record_sha256": "34422e6fefaf7bf284e3bd6b758671388cdf4ab3dad2a9b804e19108dfc3b05f",
+        "sparse_cache": ".build/valve-e1-L24-extended-v1.npz",
+        "sparse_sha256": "25f8219eef656d3f3c12b7623fe6f1fc6af93a5e17ed0a2f04b87541500fa45d",
+        "dense_cache": ".build/valve-e1-L24-extended-v1-history.npz",
+        "dense_sha256": "8f31ccf42ee0d1833e0ddeabcccc730dc99f3d94c88941b47f2de358a4bbcec3",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "published_record_pin": true,
+        "published_summary_sha256": "2b7786cc4657106aff354653beb261a95dcc73d87d3452dece1b1810443fbd7e",
+        "dense_sparse_maximum_gap": 0.0,
+        "dense_sparse_compared_components": "All physical coefficients and reference-observer point, four-velocity and proper clock: state[:-1]",
+        "dense_sparse_physical_maximum_gap": 0.0,
+        "dense_sparse_observer_point_velocity_maximum_gap": 0.0,
+        "dense_sparse_reference_clock_maximum_gap": 0.0,
+        "auxiliary_phase": {
+          "index": 33211,
+          "role": "Producer-owned sampled unwrapped observer phase; NOT physical field, proper clock or work ledger",
+          "producer": "nsc_atlas_parent_gh.observer_rhs returns0; evolve_parent assigns state[-1]=before_phase+partial only to the sparse-copy state before state_sink",
+          "used_by_readout": false,
+          "values": [
+            {
+              "coordinate_t": 0.0,
+              "reference_observer_proper_duration": 0.0,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 0.0,
+              "dense_sparse_auxiliary_gap": 0.0,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.30176421196572517,
+              "reference_observer_proper_duration": 0.30000000000000004,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 7.3848816410171505,
+              "dense_sparse_auxiliary_gap": 7.3848816410171505,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.6141152002946904,
+              "reference_observer_proper_duration": 0.5999999999999999,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 14.572571402297843,
+              "dense_sparse_auxiliary_gap": 14.572571402297843,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.9458895428751409,
+              "reference_observer_proper_duration": 0.8999999999999999,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 21.368302475996355,
+              "dense_sparse_auxiliary_gap": 21.368302475996355,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 1.3036630987720565,
+              "reference_observer_proper_duration": 1.2,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 27.706214632159636,
+              "dense_sparse_auxiliary_gap": 27.706214632159636,
+              "sparse_phase_report_gap": 0.0
+            }
+          ]
+        },
+        "source_sha256": {
+          "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+          "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+          "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+          "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+          "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+          "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+          "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+          "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+          "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+          "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+          "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+          "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+        }
+      },
+      "interval": {
+        "coordinate_t": [
+          0.0,
+          0.9458895428751409
+        ],
+        "anchor_tau": [
+          0.0,
+          0.9
+        ]
+      },
+      "region_definition": {
+        "sampler_arguments": {
+          "anchor": [
+            0.40837076508409503,
+            0.6454584875205496,
+            0.0,
+            0.6454584875205496
+          ],
+          "radius": 0.8522887164833749
+        },
+        "carrier_a": 0.03795019848848436,
+        "carrier_b": 0.0929307426810275,
+        "q": 0.40837076508409503,
+        "closest_node_points": [
+          [
+            0.16915270937450938,
+            0.9830819297902824,
+            0.0,
+            -0.07026578278989619
+          ],
+          [
+            0.16915270937450938,
+            -0.07026578278989619,
+            0.0,
+            0.9830819297902824
+          ]
+        ],
+        "maximum_anchor_dot_on_node": 0.6582619509705208,
+        "defining_source": "f=aX1+bX2X4 at the original prepared slice",
+        "derivation": "Global Cauchy--Schwarz upper bound with an explicitly feasible equality point; rho=acos(max anchor.X on f=0).",
+        "boundary_role": "Fixed INITIAL reference-coordinate ball; not a material surface, horizon or newly prepared receiver.",
+        "independent_nodal_control": {
+          "stationary_root": 0.16915270937450927,
+          "feasible_interval": [
+            -0.6717989816572998,
+            0.6717989816572998
+          ],
+          "root_error": 1.1102230246251565e-16,
+          "maximum_dot_error": 1.1102230246251565e-16,
+          "nodal_residual": 1.734723475976807e-18,
+          "unit_sphere_residual": 1.1102230246251565e-16,
+          "global_bound_reason": "The reduced objective has strictlynegative second derivative throughout its feasible interval."
+        },
+        "analytic_geometry_controls": {
+          "round_volume_error": 4.405364961712621e-13,
+          "round_area_error": 2.842170943040401e-14,
+          "flat_volume_error": 4.440892098500626e-16,
+          "flat_area_error": 1.2434497875801753e-14,
+          "round_exact_volume": 112.12311273818815,
+          "round_exact_area": 96.67600103042028
+        }
+      },
+      "local": {
+        "initial_s": -0.035646782552940987,
+        "maximum_s": -0.014145200524250785,
+        "final_s": -0.014145200524250785,
+        "maximum_s_anchor_tau": 0.8999999999999999,
+        "initial_uS": 0.0,
+        "final_uS": 0.34963269330481506,
+        "internal_volume_ratio_at_end": 1.2943633910312333,
+        "initial_point_density": 1.122619078000581,
+        "final_point_density": 1.2174881930086527,
+        "initial_external_principal_expansions": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "final_external_principal_expansions": [
+          -0.04247468421004474,
+          -0.07901319025053904,
+          -0.10130643815775972
+        ]
+      },
+      "region": {
+        "initial": {
+          "reference_observer_proper_duration": 0.0,
+          "energy": 25.479452785759253,
+          "excitation_energy": 16.50291018345014,
+          "volume": 40.620960068284774,
+          "rho_mean": 0.6272489065479423,
+          "pressure_mean": -0.6270616926717008,
+          "w": -0.999701531761495,
+          "volume_coordinate_rate": 0.0,
+          "normal_expansion_mean": 0.0,
+          "s_mean": -0.035646782552940945,
+          "s_min": -0.035646782552940987,
+          "s_max": -0.035646782552940987,
+          "normal_s_rate_mean": 0.0,
+          "normal_s_rate_min": 0.0,
+          "normal_s_rate_max": 0.0,
+          "gradient_energy_mean_radion": 0.0,
+          "gradient_energy_mean_carrier": 0.00028082081436264767,
+          "normal_kinetic_energy_mean_radion": 0.0,
+          "normal_kinetic_energy_mean_carrier": 0.0,
+          "oscillator_loading_mean": 0.32781049075589347,
+          "oscillator_loading_min": 3.057187808278988e-06,
+          "oscillator_loading_max": 0.7280212630685029,
+          "work": 0.0,
+          "excitation_work": 0.0,
+          "outward_GH_flux": 0.0,
+          "outward_excitation_GH_flux": 0.0,
+          "outward_material_flux": 0.0,
+          "shift_flux": 0.0,
+          "inward_material_flux_positive": 0.0,
+          "outward_material_flux_positive": 0.0,
+          "tube_outward_area_flux": 0.0,
+          "tube_outward_area_positive": 0.0,
+          "tube_outward_area_negative": 0.0,
+          "tube_outward_GH_weighted_flux": 0.0,
+          "tube_outward_GH_weighted_positive": 0.0,
+          "tube_outward_GH_weighted_negative": 0.0,
+          "tube_flux_boost_identity_max": 0.0,
+          "boundary_normal_speed_min": 0.0,
+          "boundary_normal_speed_max": 0.0,
+          "tube_flux_role": "Outward jB=-sum(Uphi*nBphi); area integral is localtube-proper-unit flux, GHweighted usesN/gamma. Neither is the Eulerian normal-energy ledger or a child-feeding claim.",
+          "instantaneous_energy_coordinate_rate_from_balance": 0.0,
+          "area": 42.623860789090216,
+          "area_radius": 1.8417109081292484,
+          "area_coordinate_rate": 0.0,
+          "area_radius_coordinate_rate": 0.0,
+          "external_volume": 77.1634791570482,
+          "external_volume_coordinate_rate": 0.0,
+          "external_normal_expansion_mean": 0.0,
+          "external_area": 65.37733243470481,
+          "external_area_radius": 2.280912714588764,
+          "external_area_coordinate_rate": 0.0,
+          "minimum_tube_normal_squared": 0.12795610833579146,
+          "energy_flux_formula_error": 0.0,
+          "rates_role": "Eulerian energy/volume/work and GHweighted flux rates use GH time; unweighted tube-area flux has its separate role. No anchor-clock energy derivative.",
+          "geometry_role": "Full actual first jets and physical measure in a frozen reference ball; external=exp(-12s)Einstein metric, not a new state or child."
+        },
+        "final": {
+          "reference_observer_proper_duration": 0.8999999999999999,
+          "energy": 26.159813608575355,
+          "excitation_energy": 16.763709042256895,
+          "volume": 42.51957633306033,
+          "rho_mean": 0.6152416337280215,
+          "pressure_mean": -0.44207816795309435,
+          "w": -0.7185439731611577,
+          "volume_coordinate_rate": 4.105515361883978,
+          "normal_expansion_mean": 0.028184657160572477,
+          "s_mean": -0.025921175168880088,
+          "s_min": -0.03405875423289167,
+          "s_max": -0.014132740363914455,
+          "normal_s_rate_mean": 0.01761288361414555,
+          "normal_s_rate_min": 0.005530074465231172,
+          "normal_s_rate_max": 0.03829485907199022,
+          "gradient_energy_mean_radion": 0.0034038651803020986,
+          "gradient_energy_mean_carrier": 0.00047935577176746156,
+          "normal_kinetic_energy_mean_radion": 0.015775492691874993,
+          "normal_kinetic_energy_mean_carrier": 0.0695118332115654,
+          "oscillator_loading_mean": 0.3190700522503163,
+          "oscillator_loading_min": 1.4805278134443472e-05,
+          "oscillator_loading_max": 0.8330227119628311,
+          "work": -0.24835098102628705,
+          "excitation_work": -0.5220616085486408,
+          "outward_GH_flux": -1.2249356876436786,
+          "outward_excitation_GH_flux": -0.591397114539184,
+          "outward_material_flux": -0.13476045251042498,
+          "shift_flux": -1.0901752351332537,
+          "inward_material_flux_positive": 0.1428967810684592,
+          "outward_material_flux_positive": 0.008136328558034204,
+          "tube_outward_area_flux": -0.6309535881120265,
+          "tube_outward_area_positive": 0.0002656679502105081,
+          "tube_outward_area_negative": -0.6312192560622369,
+          "tube_outward_GH_weighted_flux": -0.6086107406850914,
+          "tube_outward_GH_weighted_positive": 0.00026079615876303634,
+          "tube_outward_GH_weighted_negative": -0.6088715368438543,
+          "tube_flux_boost_identity_max": 2.0816681711721685e-17,
+          "boundary_normal_speed_min": 0.0060578727656641,
+          "boundary_normal_speed_max": 0.11852746724023198,
+          "tube_flux_role": "Outward jB=-sum(Uphi*nBphi); area integral is localtube-proper-unit flux, GHweighted usesN/gamma. Neither is the Eulerian normal-energy ledger or a child-feeding claim.",
+          "instantaneous_energy_coordinate_rate_from_balance": 0.9765847066173915,
+          "area": 43.487384087895826,
+          "area_radius": 1.8602731170078837,
+          "area_coordinate_rate": 1.9139402415486146,
+          "area_radius_coordinate_rate": 0.04093660326539934,
+          "external_volume": 68.06069143943411,
+          "external_volume_coordinate_rate": -11.756081560893033,
+          "external_normal_expansion_mean": -0.23501843227621189,
+          "external_area": 63.308660143469474,
+          "external_area_radius": 2.2445362775368576,
+          "external_area_coordinate_rate": -3.4022653082321277,
+          "minimum_tube_normal_squared": 0.1229543516946828,
+          "energy_flux_formula_error": 2.7755575615628914e-17,
+          "rates_role": "Eulerian energy/volume/work and GHweighted flux rates use GH time; unweighted tube-area flux has its separate role. No anchor-clock energy derivative.",
+          "geometry_role": "Full actual first jets and physical measure in a frozen reference ball; external=exp(-12s)Einstein metric, not a new state or child."
+        },
+        "energy_ratio": 1.0267023326025417,
+        "excitation_energy_ratio": 1.0158032041565794,
+        "volume_ratio": 1.0467398176110052,
+        "mean_density_ratio": 0.9808572439193196,
+        "maximum_mean_density_ratio": 1.0000891994605923,
+        "cumulative_geometric_work": 0.11524607728366809,
+        "cumulative_outward_GH_flux": -0.5651174076726374,
+        "cumulative_outward_material_flux": 0.006431392107921255,
+        "cumulative_shift_flux": -0.5715487997805586,
+        "cumulative_tube_outward_GH_weighted_flux": -0.23533364936947535,
+        "maximum_tube_flux_boost_identity_error": 4.163336342344337e-17,
+        "tube_flux_scope": "Sum of local tube-observer fluxes with their GH lapse N/gamma, not a conserved total/anchor-clock energy or an attached-child supply.",
+        "maximum_abs_energy_ledger_residual": 1.981344479692719e-05,
+        "final_energy_ledger_residual": -2.662140203724128e-06,
+        "maximum_abs_excitation_ledger_residual": 1.8165597381233564e-05,
+        "final_excitation_ledger_residual": -2.5125248951374246e-06,
+        "temporal_quadrature": {
+          "full_net_work_minus_flux": 0.6803634849563055,
+          "half_sample_net_work_minus_flux": 0.6804215910507369,
+          "indicator": 5.810609443135384e-05
+        },
+        "spatial_quadrature": {
+          "energy": 6.545519681822043e-11,
+          "excitation_energy": 6.445688427447749e-11,
+          "volume": 4.519051799434237e-12,
+          "work": 3.257203284867671e-08,
+          "outward_GH_flux": 1.3218341976539705e-09,
+          "external_volume": 4.646949491871055e-12,
+          "tube_outward_area_flux": 7.487446884724136e-09,
+          "tube_outward_GH_weighted_flux": 5.681809023272422e-09
+        }
+      },
+      "response": {
+        "proper_interval": [
+          0.0,
+          0.8999999999999999
+        ],
+        "sample_count": 129,
+        "maximum_proper_step": 0.007392820789020253,
+        "maximum_abs_kg_normal_residual": 0.0006268975804908025,
+        "maximum_abs_kg_observer_residual": 0.0006268975804908025,
+        "maximum_abs_S_reconstruction_error": 5.515732348901348e-06,
+        "maximum_abs_uS_reconstruction_error": 0.00013322141265616205,
+        "maximum_abs_mechanical_work_residual": 3.447597112575529e-05,
+        "final_work": {
+          "spatial_laplacian": {
+            "net": -0.02810105149090577,
+            "positive": 0.0,
+            "negative": -0.02810105149090577
+          },
+          "slice_expansion": {
+            "net": 0.007643634166945906,
+            "positive": 0.007644149477066642,
+            "negative": -5.153101207363065e-07
+          },
+          "lapse_acceleration": {
+            "net": -4.7071602523842247e-07,
+            "positive": 2.2491193013504387e-14,
+            "negative": -4.7071604772961547e-07
+          },
+          "observer_conversion": {
+            "net": 1.2355222548815825e-06,
+            "positive": 1.2355226686793979e-06,
+            "negative": -4.137978153758454e-13
+          },
+          "bare_potential": {
+            "net": -0.028545754659553734,
+            "positive": 0.0,
+            "negative": -0.028545754659553734
+          },
+          "carrier_force": {
+            "net": 0.11014857943319091,
+            "positive": 0.11014857943319091,
+            "negative": 0.0
+          }
+        },
+        "duration_loading_above_adiabatic_fold": 0.8999999999999999,
+        "first_loading_above_adiabatic_fold": 0.0,
+        "observed_upward_bare_top_crossings": [],
+        "observed_upward_adiabatic_fold_s_crossings": [],
+        "duration_from_first_overloading_to_bare_top": null,
+        "duration_from_first_overloading_to_fold_s": null,
+        "minimum_bare_top_distance": 0.07414573556607088,
+        "minimum_bare_mechanical_margin": 0.04374572809441746,
+        "minimum_existing_fixed_chi_potential_margin": -0.02402646077693693,
+        "minimum_existing_fixed_chi_top_distance": 0.029736857718867485,
+        "minimum_existing_fixed_action_top_distance": null,
+        "observed_uS_turns": [],
+        "carrier_cycles": {
+          "positive_maxima": [
+            {
+              "tau": 0.0,
+              "left_index": 0,
+              "right_index": 1,
+              "direction": -1
+            },
+            {
+              "tau": 0.25472094400862777,
+              "left_index": 34,
+              "right_index": 35,
+              "direction": -1
+            },
+            {
+              "tau": 0.5156756403782863,
+              "left_index": 71,
+              "right_index": 72,
+              "direction": -1
+            },
+            {
+              "tau": 0.7888574110453641,
+              "left_index": 110,
+              "right_index": 111,
+              "direction": -1
+            }
+          ],
+          "complete_cycles": [
+            {
+              "tau_start": 0.0,
+              "tau_end": 0.25472094400862777,
+              "mean_observer_oscillator_energy": 0.900623307075469,
+              "mean_observer_quadrature_amplitude": 0.05441674994979699
+            },
+            {
+              "tau_start": 0.25472094400862777,
+              "tau_end": 0.5156756403782863,
+              "mean_observer_oscillator_energy": 0.8937718210693879,
+              "mean_observer_quadrature_amplitude": 0.055541774936129586
+            },
+            {
+              "tau_start": 0.5156756403782863,
+              "tau_end": 0.7888574110453641,
+              "mean_observer_oscillator_energy": 0.8882950321026979,
+              "mean_observer_quadrature_amplitude": 0.05798036376604685
+            }
+          ],
+          "first_to_last_complete_cycle_change": {
+            "mean_observer_oscillator_energy": -0.012328274972771114,
+            "mean_observer_quadrature_amplitude": 0.0035636138162498596
+          },
+          "scope": "Actual local-field maxima and observer quadratures; no fitted decay law, no conserved mode action."
+        },
+        "release_time_prediction": null,
+        "escape_proved": false,
+        "child_formation_proved": false
+      },
+      "response_scope": "Actual-history local identity and finite-sampling work/reconstruction diagnostics only. Retarded integrals are exact for linearly interpolated measured forces; compare time refinements. Observer conversion is Hess_uu-Hess_nn-a.DS, converting n(nS) to the geodesic derivative. The two KG residuals share this measured conversion and are not independent equations. Mechanical radion energy omits spatial gradient energy and is not a cap energy or physical flux. Conditional equilibria omit transport/expansion and do not select a preparation, release time, escape or child.",
+      "time_refinement": {
+        "coarse_response": {
+          "proper_interval": [
+            0.0,
+            0.8999999999999999
+          ],
+          "sample_count": 65,
+          "maximum_proper_step": 0.014785145325928652,
+          "maximum_abs_kg_normal_residual": 0.0006268975804908025,
+          "maximum_abs_kg_observer_residual": 0.0006268975804908025,
+          "maximum_abs_S_reconstruction_error": 2.1662078464129708e-05,
+          "maximum_abs_uS_reconstruction_error": 0.0005365364402396509,
+          "maximum_abs_mechanical_work_residual": 0.00013894229586920714,
+          "final_work": {
+            "spatial_laplacian": {
+              "net": -0.028102364056599785,
+              "positive": 0.0,
+              "negative": -0.028102364056599785
+            },
+            "slice_expansion": {
+              "net": 0.007644796168493817,
+              "positive": 0.007645274410979058,
+              "negative": -4.782424852414115e-07
+            },
+            "lapse_acceleration": {
+              "net": -4.7114029187448086e-07,
+              "positive": 2.1969635356088155e-14,
+              "negative": -4.7114031384411624e-07
+            },
+            "observer_conversion": {
+              "net": 1.2365568468605858e-06,
+              "positive": 1.2365572510753364e-06,
+              "negative": -4.0421475054469153e-13
+            },
+            "bare_potential": {
+              "net": -0.028545009837503407,
+              "positive": 0.0,
+              "negative": -0.028545009837503407
+            },
+            "carrier_force": {
+              "net": 0.11023739795732955,
+              "positive": 0.11023739795732955,
+              "negative": 0.0
+            }
+          },
+          "duration_loading_above_adiabatic_fold": 0.8999999999999999,
+          "first_loading_above_adiabatic_fold": 0.0,
+          "observed_upward_bare_top_crossings": [],
+          "observed_upward_adiabatic_fold_s_crossings": [],
+          "duration_from_first_overloading_to_bare_top": null,
+          "duration_from_first_overloading_to_fold_s": null,
+          "minimum_bare_top_distance": 0.07414573556607088,
+          "minimum_bare_mechanical_margin": 0.043822366651302846,
+          "minimum_existing_fixed_chi_potential_margin": -0.01137774747167053,
+          "minimum_existing_fixed_chi_top_distance": 0.029736857718867485,
+          "minimum_existing_fixed_action_top_distance": null,
+          "observed_uS_turns": [],
+          "carrier_cycles": {
+            "positive_maxima": [
+              {
+                "tau": 0.0,
+                "left_index": 0,
+                "right_index": 1,
+                "direction": -1
+              },
+              {
+                "tau": 0.25475080062599575,
+                "left_index": 17,
+                "right_index": 18,
+                "direction": -1
+              },
+              {
+                "tau": 0.5156800322058767,
+                "left_index": 35,
+                "right_index": 36,
+                "direction": -1
+              },
+              {
+                "tau": 0.7888615162169067,
+                "left_index": 55,
+                "right_index": 56,
+                "direction": -1
+              }
+            ],
+            "complete_cycles": [
+              {
+                "tau_start": 0.0,
+                "tau_end": 0.25475080062599575,
+                "mean_observer_oscillator_energy": 0.9006142377052601,
+                "mean_observer_quadrature_amplitude": 0.05441679724874605
+              },
+              {
+                "tau_start": 0.25475080062599575,
+                "tau_end": 0.5156800322058767,
+                "mean_observer_oscillator_energy": 0.8937656646257143,
+                "mean_observer_quadrature_amplitude": 0.05554192104250174
+              },
+              {
+                "tau_start": 0.5156800322058767,
+                "tau_end": 0.7888615162169067,
+                "mean_observer_oscillator_energy": 0.8882929151936444,
+                "mean_observer_quadrature_amplitude": 0.05798047509055095
+              }
+            ],
+            "first_to_last_complete_cycle_change": {
+              "mean_observer_oscillator_energy": -0.012321322511615662,
+              "mean_observer_quadrature_amplitude": 0.0035636778418049048
+            },
+            "scope": "Actual local-field maxima and observer quadratures; no fitted decay law, no conserved mode action."
+          },
+          "release_time_prediction": null,
+          "escape_proved": false,
+          "child_formation_proved": false
+        }
+      },
+      "point_checks": {
+        "maximum_abs_scalar_KG_residual": 0.0008964781357008178,
+        "maximum_observer_unit_error": 2.2562618440247206e-11,
+        "maximum_observer_geodesic_residual": 5.126256141796404e-09,
+        "maximum_scalar_Hessian_symmetry_error": 6.245004513516506e-17,
+        "maximum_metric_velocity_consistency": 2.502981447383146e-07,
+        "maximum_field_velocity_consistency": 2.541588494109348e-07
+      }
+    }
+  ],
+  "readout_commit": "d03c57436beaca552e5f9f5047d6dea6d4338480",
+  "readout_source_sha256": {
+    "scripts/check_nsc_atlas_parent_release.py": "20877dc430edca7e1397b25770c8d557433437fecbd366f0a41bf2a550a45d20",
+    "scripts/parent_release_region.py": "9292d8ac812bb245f557fccd1db3ede4a044a227d816a941a9514aef2c088cf5",
+    "scripts/parent_release_response.py": "baf55ff9116ee3bf51e785d312cddd88b3822c7a645aeb0ae040f6c149287c5d",
+    "scripts/check_nsc_atlas_parent_valve.py": "92d8f277071b48260c0fdc781fccc9dd837c19e48ec82979fd2608a301c31dd1",
+    "src/recursive_horizons/nsc_atlas_null_geometry.py": "27c589f94142d4b45e9afadf1d275585f7ec4ca4d97534c7b760ce133e34d32a",
+    "src/recursive_horizons/nsc_atlas_null_parent.py": "20fbafc5273415f00e8ac154f4b96eabb83b35e9f6efd80424924af63e90e0a9",
+    "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893"
+  },
+  "scope": {
+    "no_new_physical_states": true,
+    "no_GR_evolution": true,
+    "physical_child_claim": false
+  },
+  "elapsed_seconds": 32.04005630000029,
+  "resolution_comparison": {
+    "degrees": [
+      20,
+      24
+    ],
+    "maximum_anchor_tau_misalignment": 9.654238530831805e-08,
+    "point_maximum_absolute_differences": {
+      "s": 1.9673254805438467e-07,
+      "uS": 7.226943664317975e-05,
+      "normal_total_density": 0.0004610917617122734
+    },
+    "region_maximum_absolute_differences": {
+      "energy": 7.971791909255899e-06,
+      "volume": 2.034246662674377e-06,
+      "work": 6.162561548839207e-06,
+      "outward_GH_flux": 1.3287299767350547e-05,
+      "external_volume": 2.5419493283607153e-06
+    },
+    "scope": "Empirical paired-GH-leaf resolution differences; the anchor-clock mismatch is reported, not treated as a global clock."
+  }
+}

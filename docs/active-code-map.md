@@ -1,5 +1,15 @@
 # Active code and evidence map
 
+`scripts/check_nsc_atlas_parent_release.py` reads actual same-parent
+concentration and internal-size driving. `parent_release_region.py`
+derives the fixed diagnostic ball and separates Eulerian energy/work
+from boundary-observer flux; `parent_release_response.py` calculates
+actual geodesic force/work and conditional barrier margins.
+`continue_nsc_atlas_parent_release.py` continues the unchanged complete
+cached Cauchy state with absolute clocks and bounded event/constraint
+stops. `tests/test_nsc_atlas_parent_release.py` supplies independent
+curved-metric, nodal geometry and Lorentz-flux controls.
+
 `scripts/check_nsc_atlas_parent_valve.py` owns the current read-only
 parent-mode, interface-trace, Weyl/conformal and exact-loading comparisons.
 It authenticates original histories without initializing or evolving a
