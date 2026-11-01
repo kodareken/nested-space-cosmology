@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "9e9a57d6a50105e913fa9c80c035318447f0cbfb",
+  "current_receipt_commit_parent": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
   "files": [
     {
       "bytes": 3197,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 21583,
-      "change": "Preserve the controlled fine counterrotation continuation, its numerical boundary, and the fixed-interface energy-supply gate.",
-      "changed_from_commit": "9e9a57d6a50105e913fa9c80c035318447f0cbfb",
+      "bytes": 21772,
+      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
+      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "14db3be6eb7bcb382976e99c4b0a16fd1ccc638c0f09db3960f874ecd3edbeb8"
+      "sha256": "49bee357c2421b2dc542d71d29e08060fdfe048a1b17bb508059df5b3d986256"
     },
     {
       "bytes": 9543,
@@ -11197,12 +11197,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 52797,
-      "change": "Preserve the controlled fine counterrotation continuation, its numerical boundary, and the fixed-interface energy-supply gate.",
-      "changed_from_commit": "9e9a57d6a50105e913fa9c80c035318447f0cbfb",
+      "bytes": 55066,
+      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
+      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "e45af2e349e172db8d6e8c393bb890d673cab310b187bbe910a9f7d063fd8026"
+      "sha256": "3c4d7cb46cad152940d8886317fe7baec86d4b3ed6d9707a618992d01cca3f68"
     },
     {
       "bytes": 10730,
@@ -30799,6 +30799,14 @@
       "sha256": "6985239af01c04c1f15aecb287d5bbd3941f2c176642680bd9634f11d2f06005"
     },
     {
+      "bytes": 10151,
+      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
+      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
+      "path": "results/summaries/nsc-atlas-counterrotation-quadrature-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "79fef2ac01d2c6e88106ba6baf7ae94459200e3d6f46fc9ab70dab5ceb3e53c5"
+    },
+    {
       "bytes": 29878,
       "change": "Record strict coupled tube improvement and reviewed conditional derivative closure.",
       "changed_from_commit": "706fe56157ca2c9102e53b8468a3d38e9e49da39",
@@ -31986,6 +31994,14 @@
       "sha256": "670e998379b0f8e3d78446ec667d7670056d761395c852bf97c84d4fa5738e21"
     },
     {
+      "bytes": 12381,
+      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
+      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
+      "path": "results/summaries/nsc-atlas-valve-directional-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "851b087c2332e754e4db826532b31bf7cbfb659a06fcb4b6db1d45abc3fb7f53"
+    },
+    {
       "bytes": 100310,
       "change": "Record finite formation windows, stabilization and contraction thresholds, phase-current diagnostics and the goal recovery frontier.",
       "changed_from_commit": "2984eb1045f2dd6a7ea869e3b521671a241208e6",
@@ -32525,6 +32541,14 @@
       "path": "scripts/check_nsc_atlas_cosmohedron_interaction.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "0326ed5b1dd3a699eb462b673edc5c3db363d53a493999aaf2187ec85d669263"
+    },
+    {
+      "bytes": 9471,
+      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
+      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
+      "path": "scripts/check_nsc_atlas_counterrotation_quadrature.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "754a7eac90a79297ef56addecc734edbc412e7b4494313a4d60085e714a78118"
     },
     {
       "bytes": 4831,
@@ -33098,6 +33122,14 @@
       "path": "scripts/check_nsc_atlas_valve_dirac_source.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "056bdea75971d9e9aa7d429ef27a25abeda3460566b147837dc4844c993861a9"
+    },
+    {
+      "bytes": 12891,
+      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
+      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
+      "path": "scripts/check_nsc_atlas_valve_directional.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "247ebd37a9c995fcee6065438ba467213a6462afc037620d2aacaf032b77dbdf"
     },
     {
       "bytes": 26438,
@@ -43481,6 +43513,14 @@
       "path": "tests/test_nsc_atlas_valve_dirac_source_operator.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
       "sha256": "face8c2f09486f5713afa5b4b861d9b101ee375054526bb9418fd556ee022fc1"
+    },
+    {
+      "bytes": 2583,
+      "change": "Solve the directional initial energy-supply connection and retain the bounded counterrotation quadrature diagnosis.",
+      "changed_from_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6",
+      "path": "tests/test_nsc_atlas_valve_directional.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "00cc9a177c7d8638dc67467a937d6830610418f7257e10f6298597691b701013"
     },
     {
       "bytes": 3417,

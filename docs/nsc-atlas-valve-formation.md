@@ -27,6 +27,16 @@ The next continuation must address this specific loss of control;
 restarting the same invalid grid or extending its claimed domain would
 not resolve it. The manuscript/PDF remains frozen at252pages.
 
+The [single frozen-state quadrature check](../results/summaries/nsc-atlas-counterrotation-quadrature-v1.json)
+keeps every admitted1.8 coefficient, observer component and ordered frame
+derivative operator fixed. Increasing quadrature from26x98x98 to34x130x130
+changes the nonlinear metric-velocity, volume-momentum and scalar-momentum
+RHS blocks by3.42e-7,1.67e-7 and2.24e-9 in relative coefficient L2 norm.
+The observer derivatives are identical. This gives no support for
+quadrature alone repairing the accumulated defect; it does not separate
+historical aliasing, omitted modes, time error and constraint amplification.
+No further time step or higher-resolution evolution was taken.
+
 The earlier spherical [small-radius continuation](../results/summaries/nsc-atlas-valve-restart-v1.json)
 and [receiver-source calculation](../results/summaries/nsc-atlas-valve-source-gate-v1.json)
 continue the declared state to controlled R approximately .15. No turn is
@@ -150,14 +160,39 @@ $$
 \quad(\lambda A B>0).
 $$
 
-This removes the exact cancellation at the constraint-source level.
-Its direction and preparation remain supplied; a positive finite
-Hamiltonian branch and subsequent receiving evolution have not yet been
-calculated. It is radial transport, not a proved vortex. The current GH
-character masks and spherical reflection projection would discard its
-required opposite field/momentum parities, so neither existing evolution
-can be reused blindly. No new evolution or physical success is imported
-from this analytic candidate.
+The [finite directional data](../results/summaries/nsc-atlas-valve-directional-v1.json)
+now reaches lambda1 on the declared positive degree40 branch. Its finite
+polynomial lower estimate for psi is .44639454. Independent higher
+quadrature gives physical Hamiltonian RMS/H²=6.39e-11 and radial momentum
+RMS/H²=6.96e-18. The actual initial receiving-cap material influx is
+.214001290635206 in model energy per initial normal-time unit. Separate
+pressure work is6.80094e-5; boundary sweep is zero. The receiving cap's
+initial energy is71.37490040 and its total initial energy derivative is
+.214069300059588. The donor has the opposite rates. These are initial
+rates, not an integrated transferred energy or a formed-child result.
+Coordinate cap signs are separate from Douglas's donor(+)->drain(-)
+convention.
+
+The test controls independently recover the physical momentum identity
+under a change of length scale, reverse the current without changing its
+positive energy, and integrate the local Klein-Gordon energy derivative
+against the surface-flux-plus-work ledger. All three pass. The actual
+solved state's additional volume/surface comparison differs by4.53e-15.
+The source amplitude, direction and preparation remain supplied. The
+finite numerical branch does not certify continuum existence/uniqueness,
+inheritance selection, a horizon, rotation or a child. It is a radial
+transport seed. The current GH character masks and spherical reflection
+projection would discard its required opposite field/momentum parities,
+so neither existing evolution can be reused blindly. Its correctly
+unprojected coupled evolution is now the formation connection to test.
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_valve_directional.py --output-directory .build/valve-directional-fresh --summary results/summaries/nsc-atlas-valve-directional-reproduced.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_valve_directional.py
+```
+
+Use fresh output destinations. Full initial coefficients remain under
+`.build`; the committed record carries their hash and source identities.
 
 The old two-mode finite searches below found no admitted trap; their
 occupation was supplied rather than selected. Continuing that optimizer,

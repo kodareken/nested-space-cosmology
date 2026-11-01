@@ -1506,9 +1506,9 @@
       "sha256": "3db8971c9cadd0350ac60e5d165e2cab37678f88d8fdead475815abdb0464943"
     },
     {
-      "bytes": 21583,
+      "bytes": 21772,
       "path": "docs/atlas-progress.json",
-      "sha256": "14db3be6eb7bcb382976e99c4b0a16fd1ccc638c0f09db3960f874ecd3edbeb8"
+      "sha256": "49bee357c2421b2dc542d71d29e08060fdfe048a1b17bb508059df5b3d986256"
     },
     {
       "bytes": 9543,
@@ -1746,9 +1746,9 @@
       "sha256": "68d604b8c7e6af0ab482619e60bfc6c03abba4e643b7946a3d41c378d322518a"
     },
     {
-      "bytes": 2737073,
+      "bytes": 2739437,
       "path": "docs/lab-snapshot.json",
-      "sha256": "4c3f2d8be8e0f37e6a0f56c3bfb15f83f2b1d485bc4a8cbc7604d5b3690b185c"
+      "sha256": "ff9f24e9c5b2ebd12fe0818d616f496ced358e6bd0da687554847368e656b267"
     },
     {
       "bytes": 4997,
@@ -2146,9 +2146,9 @@
       "sha256": "577f15e685033c0e19a612e3d1492cca2a8b5e2c54fafc52ad47e8a7ae370b12"
     },
     {
-      "bytes": 52797,
+      "bytes": 55066,
       "path": "docs/nsc-atlas-valve-formation.md",
-      "sha256": "e45af2e349e172db8d6e8c393bb890d673cab310b187bbe910a9f7d063fd8026"
+      "sha256": "3c4d7cb46cad152940d8886317fe7baec86d4b3ed6d9707a618992d01cca3f68"
     },
     {
       "bytes": 10730,
@@ -15286,6 +15286,11 @@
       "sha256": "6985239af01c04c1f15aecb287d5bbd3941f2c176642680bd9634f11d2f06005"
     },
     {
+      "bytes": 10151,
+      "path": "results/summaries/nsc-atlas-counterrotation-quadrature-v1.json",
+      "sha256": "79fef2ac01d2c6e88106ba6baf7ae94459200e3d6f46fc9ab70dab5ceb3e53c5"
+    },
+    {
       "bytes": 29878,
       "path": "results/summaries/nsc-atlas-coupled-tube-bound-v1.json",
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
@@ -16031,6 +16036,11 @@
       "sha256": "670e998379b0f8e3d78446ec667d7670056d761395c852bf97c84d4fa5738e21"
     },
     {
+      "bytes": 12381,
+      "path": "results/summaries/nsc-atlas-valve-directional-v1.json",
+      "sha256": "851b087c2332e754e4db826532b31bf7cbfb659a06fcb4b6db1d45abc3fb7f53"
+    },
+    {
       "bytes": 100310,
       "path": "results/summaries/nsc-atlas-valve-formation-early-v1.json",
       "sha256": "d258900ab099054c46fb989100c201fefb00da2360a5bcbeae91ae5a48fd48ab"
@@ -16456,6 +16466,11 @@
       "sha256": "0326ed5b1dd3a699eb462b673edc5c3db363d53a493999aaf2187ec85d669263"
     },
     {
+      "bytes": 9471,
+      "path": "scripts/check_nsc_atlas_counterrotation_quadrature.py",
+      "sha256": "754a7eac90a79297ef56addecc734edbc412e7b4494313a4d60085e714a78118"
+    },
+    {
       "bytes": 4831,
       "path": "scripts/check_nsc_atlas_coupled_tube_bound.py",
       "sha256": "7cf8ca7c811fa826e6fe4a8bba4e9117ea984df43374c5938889843ea4293c8d"
@@ -16814,6 +16829,11 @@
       "bytes": 10861,
       "path": "scripts/check_nsc_atlas_valve_dirac_source.py",
       "sha256": "056bdea75971d9e9aa7d429ef27a25abeda3460566b147837dc4844c993861a9"
+    },
+    {
+      "bytes": 12891,
+      "path": "scripts/check_nsc_atlas_valve_directional.py",
+      "sha256": "247ebd37a9c995fcee6065438ba467213a6462afc037620d2aacaf032b77dbdf"
     },
     {
       "bytes": 26438,
@@ -23416,6 +23436,11 @@
       "sha256": "face8c2f09486f5713afa5b4b861d9b101ee375054526bb9418fd556ee022fc1"
     },
     {
+      "bytes": 2583,
+      "path": "tests/test_nsc_atlas_valve_directional.py",
+      "sha256": "00cc9a177c7d8638dc67467a937d6830610418f7257e10f6298597691b701013"
+    },
+    {
       "bytes": 3417,
       "path": "tests/test_nsc_atlas_valve_formation.py",
       "sha256": "8a487c91d1b519b0a6d25b5bfc439f8d10e675de16aae3f9e5dcfe5992c4d300"
@@ -25386,7 +25411,7 @@
       "sha256": "11e10f6f233fd180a77ed04851b7a3d1b21b79a0747ea6882fe9195f75f50246"
     }
   ],
-  "lab_snapshot_sha256": "4c3f2d8be8e0f37e6a0f56c3bfb15f83f2b1d485bc4a8cbc7604d5b3690b185c",
+  "lab_snapshot_sha256": "ff9f24e9c5b2ebd12fe0818d616f496ced358e6bd0da687554847368e656b267",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-11-01.01",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

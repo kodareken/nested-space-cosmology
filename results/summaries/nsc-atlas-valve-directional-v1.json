@@ -1,0 +1,249 @@
+{
+  "schema": "nsc-atlas-valve-directional-initial-v1",
+  "provenance": {
+    "source_sha256_before": {
+      "scripts/check_nsc_atlas_valve_directional.py": "247ebd37a9c995fcee6065438ba467213a6462afc037620d2aacaf032b77dbdf",
+      "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+      "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+      "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+      "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+      "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+      "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+      "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e"
+    },
+    "source_sha256_after": {
+      "scripts/check_nsc_atlas_valve_directional.py": "247ebd37a9c995fcee6065438ba467213a6462afc037620d2aacaf032b77dbdf",
+      "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+      "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+      "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+      "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+      "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+      "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+      "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+      "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+      "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+      "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+      "src/recursive_horizons/nsc_atlas_valve_neck.py": "6b665bc460f47b2f02a812b41de630dba8d3201c096bb1eef16fe50e7d8e4b7e"
+    },
+    "source_unchanged": true,
+    "initial_neck_coefficients_sha256": "530465e526bd7e6ccbb632fd6b12d362ca19900b25e769d2291bfd1c2f41a572",
+    "git_parent_commit": "9496df795dc68b87d874d95cdf1a426d6d3c89b6"
+  },
+  "model_inputs": {
+    "H_reference": 0.2714056154003984,
+    "vacuum": 0.22098302421260696,
+    "scalar_mass_squared": 613.5280213887946,
+    "kappa": 1.0,
+    "offset": 0.057358647050444134
+  },
+  "units": "Retained action units; material and work rates are model energy per initial unit-lapse normal time, not SI predictions.",
+  "preparation": {
+    "A": 0.05366968539716552,
+    "B": 0.15590821303030808,
+    "York_C": 0.006481472288563856,
+    "kick_amplitude": 1.0,
+    "chi": "A*u,u=X1",
+    "momentum": "Pi=lambda*B*sqrt(3/5)*(u\u00b2-1/6)*psi^-6",
+    "York": "Ar=C*u*(1-u\u00b2)/6,At=-Ar/2,Kphysical=lambda*psi^-6*Abar",
+    "same_action": true,
+    "S": 0.0,
+    "Pi_S": 0.0,
+    "traceK": 0.0,
+    "conformal_TT": 0.0,
+    "direction_supplied": true,
+    "amplitude_supplied": true,
+    "no_old_reflection_parity_applied": true
+  },
+  "exact_controls": {
+    "normalized_sphere_f_squared_over_B_squared": "1/24",
+    "old_profile_value": "1/24",
+    "pure_source": "jbar=-(kappa*A*B*sqrt(3/5)/3)gradbar(u\u00b3-u/2),purel3",
+    "York_inverse": "Qj=-16H\u00b2j,W=-j/(16H\u00b2)",
+    "CKV_compatibility": "All6Killing and4gradient-l1 charges vanish by harmonic orthogonality."
+  },
+  "radial_degree": 40,
+  "lambda_path": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "stages": [
+    {
+      "kick_amplitude": 0.0,
+      "Newton_steps": 0,
+      "projected_residual_norm": 1.3369094596076254e-14,
+      "finite_polynomial_psi_lower_bound": 0.43889261186767914,
+      "accounting": {
+        "proper_volume": 232.73314848108726,
+        "normal_Pi_energy": 0.0,
+        "spatial_gradient_energy": 0.04272718316100836,
+        "scalar_mass_energy": 91.96660457568119,
+        "vacuum_energy": 51.43007498587236,
+        "total_proper_matter_energy": 143.43940674471455,
+        "integrated_KijKij": 0.0,
+        "shear_constraint_energy": 0.0,
+        "normal_Pi_sample_max": 0.0,
+        "normal_Pi_volume_RMS": 0.0,
+        "shear_sample_max": 0.0,
+        "full_pressure_work_rate": 0.0
+      }
+    },
+    {
+      "kick_amplitude": 0.25,
+      "Newton_steps": 3,
+      "projected_residual_norm": 1.3107756251974576e-14,
+      "finite_polynomial_psi_lower_bound": 0.4393829732968067,
+      "accounting": {
+        "proper_volume": 232.61090817664328,
+        "normal_Pi_energy": 0.08528570585160164,
+        "spatial_gradient_energy": 0.04272873416110229,
+        "scalar_mass_energy": 91.86564739970197,
+        "vacuum_energy": 51.40306195371566,
+        "total_proper_matter_energy": 143.39672379343034,
+        "integrated_KijKij": 4.450840517267654e-05,
+        "shear_constraint_energy": 2.225420258633827e-05,
+        "normal_Pi_sample_max": 0.044822078012630384,
+        "normal_Pi_volume_RMS": 0.027079340517899727,
+        "shear_sample_max": 0.0007404147954044712,
+        "full_pressure_work_rate": -1.6668091833158327e-19
+      }
+    },
+    {
+      "kick_amplitude": 0.5,
+      "Newton_steps": 3,
+      "projected_residual_norm": 1.0950211196828708e-14,
+      "finite_polynomial_psi_lower_bound": 0.44083618854983764,
+      "accounting": {
+        "proper_volume": 232.2399413494426,
+        "normal_Pi_energy": 0.34154975033582297,
+        "spatial_gradient_energy": 0.04273280321762822,
+        "scalar_mass_energy": 91.56300090060404,
+        "vacuum_energy": 51.321084582358296,
+        "total_proper_matter_energy": 143.26836803651577,
+        "integrated_KijKij": 0.00017801409430414988,
+        "shear_constraint_energy": 8.900704715207494e-05,
+        "normal_Pi_sample_max": 0.0895155729792068,
+        "normal_Pi_volume_RMS": 0.05423423609422769,
+        "shear_sample_max": 0.0014801306278121066,
+        "full_pressure_work_rate": 1.1100332080547193e-18
+      }
+    },
+    {
+      "kick_amplitude": 0.75,
+      "Newton_steps": 3,
+      "projected_residual_norm": 2.911473750533829e-14,
+      "finite_polynomial_psi_lower_bound": 0.44320038980073495,
+      "accounting": {
+        "proper_volume": 231.60753845004888,
+        "normal_Pi_energy": 0.7700944726334564,
+        "spatial_gradient_energy": 0.042737669381081464,
+        "scalar_mass_energy": 91.05918440362845,
+        "vacuum_energy": 51.18133427712945,
+        "total_proper_matter_energy": 143.05335082277244,
+        "integrated_KijKij": 0.0004005125591082365,
+        "shear_constraint_energy": 0.00020025627955411825,
+        "normal_Pi_sample_max": 0.13397426430871573,
+        "normal_Pi_volume_RMS": 0.08154750076947354,
+        "shear_sample_max": 0.00221877193795965,
+        "full_pressure_work_rate": -5.930653014570817e-19
+      }
+    },
+    {
+      "kick_amplitude": 1.0,
+      "Newton_steps": 3,
+      "projected_residual_norm": 1.9475744937371505e-14,
+      "finite_polynomial_psi_lower_bound": 0.4463945434945631,
+      "accounting": {
+        "proper_volume": 230.69256270957789,
+        "normal_Pi_energy": 1.3733589720195982,
+        "spatial_gradient_energy": 0.042740557240083965,
+        "scalar_mass_energy": 90.3545610929665,
+        "vacuum_energy": 50.979140170919,
+        "total_proper_matter_energy": 142.7498007931452,
+        "integrated_KijKij": 0.0007121715981066946,
+        "shear_constraint_energy": 0.0003560857990533473,
+        "normal_Pi_sample_max": 0.17813439278258747,
+        "normal_Pi_volume_RMS": 0.10911645186097729,
+        "shear_sample_max": 0.002956584987153401,
+        "full_pressure_work_rate": -1.8653997445506912e-18
+      }
+    }
+  ],
+  "independent_validation": {
+    "radial_order": 401,
+    "solve_radial_order": 205,
+    "physical_Hamiltonian_RMS_over_H2": 6.388636296667815e-11,
+    "physical_Hamiltonian_sample_max_over_H2": 8.323152446688607e-10,
+    "physical_radial_momentum_RMS_over_H2": 6.960662288707627e-18,
+    "physical_radial_momentum_sample_max_over_H2": 3.532513716703081e-17,
+    "reference_f_L2_squared": 1.0000000000000002,
+    "finite_polynomial_psi_lower_bound": 0.4463945434945631,
+    "sampled_psi_min": 0.6953032592477905,
+    "sampled_psi_max": 1.076299387902388,
+    "accounting": {
+      "proper_volume": 230.69256270957789,
+      "normal_Pi_energy": 1.3733589720195982,
+      "spatial_gradient_energy": 0.04274055724008397,
+      "scalar_mass_energy": 90.35456109296652,
+      "vacuum_energy": 50.979140170919,
+      "total_proper_matter_energy": 142.7498007931452,
+      "integrated_KijKij": 0.0007121715981066948,
+      "shear_constraint_energy": 0.0003560857990533474,
+      "normal_Pi_sample_max": 0.17813439278258747,
+      "normal_Pi_volume_RMS": 0.10911645186097729,
+      "shear_sample_max": 0.0029566958484980818,
+      "full_pressure_work_rate": 1.264066307603667e-18
+    },
+    "scope": "Independent higher fixed quadrature; curvature from actual psi derivatives, not source-reconstructed; radial momentum from physicalKr,Kt,psi derivatives andj."
+  },
+  "initial_cap_ledger": {
+    "positive_cap": "u>=0; outward normal points toward increasingchi/decreasingu.",
+    "initial_lapse": 1.0,
+    "initial_shift": 0.0,
+    "fixed_interface_u": 0.0,
+    "boundary_sweep_rate": 0.0,
+    "plus_cap_proper_matter_energy": 71.37490039657311,
+    "plus_cap_material_influx": 0.214001290635206,
+    "minus_cap_material_influx": -0.214001290635206,
+    "plus_cap_pressure_work_rate": 6.800942438203507e-05,
+    "minus_cap_pressure_work_rate": -6.800942438203507e-05,
+    "plus_cap_energy_derivative_from_initial_ledger": 0.21406930005958805,
+    "minus_cap_energy_derivative_from_initial_ledger": -0.21406930005958805,
+    "formula": "Phi_in,+ =4pi*lambda*A*B*sqrt(3/5)*psi(0)^(-4)/(6H); work=integral_(u>0)Kr*(pr-pt)dV.",
+    "cap_quadrature_order": 240,
+    "scope": "Initial unit-lapse normal-time fixed-cap ledger; actual material influx, shear pressure work and sweep are distinct. The interface is not identified as a horizon/child.",
+    "quadrature_refinement": {
+      "orders": [
+        240,
+        320
+      ],
+      "half_energy_spread": 1.6058265828178264e-12,
+      "pressure_work_spread": 2.7511630126819675e-18
+    }
+  },
+  "raw_cache": {
+    "path": ".build/valve-directional-release-v1/initial-data.npz",
+    "sha256": "d20d98c42c4b97fe29bb85d5deb3d52994a01ea3dc85390f545667a198e53363"
+  },
+  "numerical": {
+    "threads": 4,
+    "elapsed_seconds": 0.3243435000185855,
+    "scope": "One positive initial-data continuation and fixed higher quadrature; finite numerical estimates, not a continuum existence certificate."
+  },
+  "verdict": {
+    "positive_initial_branch_completed": true,
+    "nonzero_fixed_plus_cap_material_influx": true,
+    "evolution_computed": false,
+    "inheritance_selection_proved": false,
+    "horizon_or_child_proved": false,
+    "public_summary_written": true,
+    "warning": "chi odd andPi even: the old reflection-projected RHS cannot be silently used for any later evolution."
+  },
+  "reproduction": "python scripts/run_python.py scripts/check_nsc_atlas_valve_directional.py --output-directory .build/valve-directional-release-v1 --summary results/summaries/nsc-atlas-valve-directional-v1.json"
+}
