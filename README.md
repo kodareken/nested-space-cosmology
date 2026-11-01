@@ -39,6 +39,9 @@ The current [formation calculation](docs/nsc-atlas-valve-formation.md) now
 has a converged future-trapped neck and a threshold epsilon=.8339066 for
 a declared one-mode state of the same action. A regular child receiving
 energy and the physical selection of that state remain open.
+The latest [unchanged-parent and conformal-endpoint readout](docs/nsc-atlas-valve-formation.md#current-result-unchanged-parent-conformal-endpoint-and-loading-threshold)
+finds no inherited trigger in the admitted parent history and no compatible
+conformal child; it identifies the precise scope of both obstructions.
 
 - [The Geometry of a Universe: illustrated PDF](paper/nested-space-cosmology.pdf)
 - [Full manuscript and primary-source links](paper/nested-space-cosmology.md)

@@ -1,6 +1,20 @@
 # Reproducing the root project
 
-## Current formation frontier
+## Current formation readout
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_valve.py --raw-directory .build/parent-valve-reproduction --output .build/parent-valve-reproduction.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_valve.py
+```
+
+This reads the pinned original parent and old-neck caches; it creates no
+initial state and runs no GR evolution. Use fresh output paths. The 64-second
+readout and portable algebra checks are described by the
+[formation owner](nsc-atlas-valve-formation.md#current-result-unchanged-parent-conformal-endpoint-and-loading-threshold).
+The supplied-state and Dirac producers below remain reproducible history,
+paused by the latest user instruction; they are not the active next steps.
+
+## Historical formation and supplied-state producers
 
 ```powershell
 python scripts/run_python.py scripts/check_nsc_atlas_valve_neck.py

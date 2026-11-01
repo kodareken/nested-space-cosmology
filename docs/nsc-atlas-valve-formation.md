@@ -7,7 +7,182 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
-## Active connection: a conditioned parent with spatially balanced compression
+## Current result: unchanged parent, conformal endpoint and loading threshold
+
+Douglas's latest instruction restricts the active calculation to these three
+questions. All supplied-state preparations, the Dirac branch and their older
+"next" instructions below are historical and paused. No new fields, states or
+GR evolutions were used for this readout; the manuscript and 252-page PDF are
+unchanged. The horizon/GH/transport and eta chains remain frozen.
+The [source-bound readout](../results/summaries/nsc-atlas-parent-valve-test-v1.json)
+was produced by `5b26bb6b` from the original saved histories in 64 seconds.
+
+### 1. What the unchanged parent actually drives
+
+Use the original epsilon=1 two-mode parent, chi containing both X1 and
+X2X4, with no kick or new preparation. Its admitted degree20/24 interval is
+0..0.9 in the elapsed proper clock of the tracked source-anchor geodesic.
+That clock labels a GH coordinate-time leaf; it is not a global proper time
+or the clock of every interface observer. The saved 1.2 leaf stays diagnostic.
+
+With A the original one-mode neck normalization, define
+
+$$
+a_X=\frac{\int\chi X_1\,dV_h}{\int X_1^2\,dV_h},\qquad
+p_X=\frac{\int(n\chi)X_1\,dV_h}{\int X_1^2\,dV_h},\qquad
+\epsilon_X=\frac{\sqrt{a_X^2+p_X^2/\omega_X^2}}{A},
+$$
+
+where n is the actual unit slice normal, including the saved lapse/shift,
+and omega_X squared is the instantaneous Rayleigh quotient of X1 for
+the actual scalar mass and spatial metric. This is a stated projection
+convention, not a conserved nonlinear amplitude or a new eigenmode claim.
+
+| Projection, degree24 | Maximum | Anchor proper duration |
+| --- | ---: | ---: |
+| Reference-measure instantaneous X1 | .7071067812 | 0 |
+| Reference-measure quadrature | .7071068462 | .00497125 |
+| Physical-measure instantaneous X1 | .7850323694 | .38017276 |
+| Physical-measure quadrature | .7851012011 | .37353704 |
+| Physical two-template quadrature, retaining X2X4 | .7075053238 | .24417778 |
+
+All are below the recorded one-mode epsilon_crit=.8339066143. The largest
+listed value is 5.8526% below it; its degree20/24 spread is 4.19e-10.
+These are empirical resolution comparisons and numerical extrema of the
+saved dense solution, not certified continuum-in-time bounds. Retaining
+both templates matters: about half the reference field power remains in
+even modes. The threshold itself belongs to different, time-symmetric
+SO3 data with zero normal momenta and Kij, s=sstar and its own constrained
+metric. A projected amplitude cannot admit the two-mode parent as that state.
+
+The inward preparation data can nevertheless be extracted without choosing
+a waveform. On the actual timelike tube F=X1=0, take its unit normal nB
+toward increasing X1 and future unit tangent U orthogonal to its sphere cuts.
+For each of the two existing canonical fields,
+
+$$
+w_{\rm in}=\tfrac12(U\phi-n_B\phi),\quad
+w_{\rm out}=\tfrac12(U\phi+n_B\phi),\quad
+j_B=w_{\rm in}^2-w_{\rm out}^2=-(U\phi)(n_B\phi).
+$$
+
+The actual j_total>0 support defines the localized incoming portion; no
+outgoing field or other mode is deleted. At anchor duration .0538334449,
+the carrier's incoming and outgoing RMS are both .3069698832. The standing
+critical reference has |w_in|=|w_out|=.01051425628, so the incoming content
+is 29.20 times that reference, but so is the outgoing content. The positive
+and negative area-integrated total fluxes are +.1394603866 and -.1394603866.
+Their cancellation follows from the parent's proper paired-flip symmetry;
+it does not imply that local flux or local accumulation vanishes. The readout
+also preserves the separate GH-coordinate power integral with tube lapse.
+Neither integral is silently treated as an anchor-clock energy derivative.
+
+**Blocker:** the saved parent stays below the X1 reference threshold and its
+derived, compensated boundary traces do not select the pure one-mode Cauchy
+state. No inherited trigger is established in this finite interval; this is
+not a proof against a later trigger or every localized formation mechanism.
+
+### 2. What can continue at the conditional R=0 break
+
+The old reflection-symmetric neck is a separate, supplied one-mode history.
+At its finest admitted saved cut, R=.1495326738 and nR=-2.849706278. Direct
+metric jets, without replacing curvature by the source, give
+
+$$
+K=1994425.2501,\qquad
+C_{abcd}C^{abcd}=1994423.9803,\qquad
+R_{ab}R^{ab}=.63489368,\qquad \mathcal R=-.00450790.
+$$
+
+Thus the large curvature is Weyl-dominated. In the convention
+g_tilde=Omega squared times g, its Weyl norm transforms as
+C_tilde squared=Omega to the minus fourth times C squared. Omega tending
+to zero amplifies this curvature. The mixed-index Weyl tensor's conformal
+invariance is not invariance of this scalar norm.
+
+There is also a conditional obstruction stronger than the old K>=4/R^4
+bound. Write D=(1+(nR)^2)/R^2=2m/R^3 and
+C_rad=Krad Ktan-R_ll/R. The canonical Einstein equations at reflection give
+
+$$
+\mathcal E=\frac{D-C_{\rm rad}}3+
+ \frac{\kappa}{6}\sum_A(\partial_\ell\phi_A)^2.
+$$
+
+If the current minimum, radial-stretch and angular-collapse signs persist,
+C_rad<=0. If p_r>=0 and nR<0 persist, reflection mass balance gives
+dm/dtau=-kappa p_r R squared (dR/dtau)/2>=0. Consequently, if R really
+approaches zero,
+
+$$
+C_{abcd}C^{abcd}\ge\frac{64m_{\rm cut}^2}{3R^6},\qquad
+\widetilde C_{abcd}\widetilde C^{abcd}
+\ge\frac{64m_{\rm cut}^2}{3(\Omega R)^4R^2}.
+$$
+
+A finite nonzero crossover radius Omega R therefore leaves divergent
+Weyl norm under these hypotheses. Their persistence and the R=0 endpoint
+have **not** been proved by the finite run. This does not rule out every
+continuation, changed neck shape or gluing law.
+
+Applying the break question with Omega=R^(-3/2) gives a different metric
+representative: at the same saved cut its radius is 2.586020424, positive
+normal-time radius rate 1.424853139, Weyl norm 22.29636581 and local volume
+expansion 3.372069543. Its effective Einstein stress has rho=2.955387103,
+p_r=-1.135434287, p_t=-6.820764521 and mean w=-1.666669804. The angular null
+combination rho+p_t=-3.865377418 cannot be supplied by the unchanged positive
+canonical scalar action. Under the additional finite-mass, vacuum-dominated
+asymptotic, this representative has finite curvature but infinite normal
+proper duration to R=0 and infinite sphere size. It is not a finite CCC
+crossover or a physical child. No child's volume, energy, w or expansion
+has been determined by this transformation.
+
+[Meissner--Penrose](https://arxiv.org/abs/2503.24263) supplies the conformal
+continuation programme, not a theorem gluing this collapsing neck.
+[Markwell--Stevens](https://arxiv.org/abs/2212.06914) explicitly treats
+conformal-factor selection and the future-side field equations. Finite
+curvature alone does not supply that matching. The earlier shape-transition
+exit has density .07054648474 and w=-1; w=-2.681342368 is from its later
+negative-density turning event, not that exit. No match to either is derived.
+
+### 3. Why the loading threshold is near 3/8
+
+Mcrit=.375079333827 is an adiabatic **density-loading coefficient**, not
+Schwarzschild mass or total child energy. E0=3/8 is the original prepared
+scalar excitation density; the Parke comparison imports it as a target.
+For the already matched potential,
+
+$$
+\mathcal M(s)=-14e^{-6s}+\frac{35}{2}e^{-8s}-\frac{25}{8}e^{-18s}.
+$$
+
+At its fold, x=exp(-2s) solves 225x^6-560x+336=0, with
+x=.998727268724 and s=.0006367709432. Exactly
+Mcrit=x cubed times (175x-168)/18. Equality to 3/8 would also require
+700x^4-672x^3-27=0; the two polynomials have gcd1. It is **not an identity**.
+
+The reason for the near-match is calculable: the original coefficient
+matching imposes M(0)=E0 exactly, while M'(0)=1/4 and M''(0)=-793/2 place
+the fold very nearby. Mcrit is .0211556872% above E0; the actual density
+at the fold is .3736490302. This is a parameter-dependent stability margin,
+not an independent prediction of the Parke energy.
+
+Reproduce this readout from the original pinned caches with a fresh raw
+directory and output path:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_parent_valve.py --raw-directory .build/parent-valve-reproduction --output .build/parent-valve-reproduction.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_parent_valve.py
+```
+
+The 11 portable tests independently check tensor contractions, conformal
+metric differentiation, source incompatibility and exact fold elimination.
+No new initial data or evolution is invoked by them. The three results
+above complete this scoped readout; the physical inherited trigger and
+action-matched receiving space remain open. They do not reopen the paused
+preparations below automatically.
+
+## Historical connection: a conditioned parent with spatially balanced compression
 
 The [critical-history calculation](#reference-history-and-global-momentum-close-one-phase)
 now determines the carrier's monopole momentum correction from its full

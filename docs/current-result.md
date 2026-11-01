@@ -1,5 +1,28 @@
 # What the calculations show
 
+## Unchanged parent and conditional conformal endpoint, 1 November 2026
+
+The [three-item readout](nsc-atlas-valve-formation.md#current-result-unchanged-parent-conformal-endpoint-and-loading-threshold)
+returns to the unchanged two-mode parent. Over its resolved anchor-clock
+window 0..0.9, the largest physical-measure X1 quadrature is .7851012011,
+below the different one-mode family's .8339066143 threshold. Its actual
+localized incoming boundary traces are derived and retained alongside
+the compensating outgoing traces; no new initial state is selected.
+
+The old collapsing neck's actual metric curvature is Weyl-dominated.
+Under explicitly stated persistent-sign assumptions, a finite nonzero
+conformal crossover radius leaves divergent Weyl norm. A stronger metric
+blow-up gives a finite-curvature diagnostic, but its angular stress is
+incompatible with the unchanged canonical action and no physical child
+is attached. The .375079334 loading threshold's proximity to 3/8 follows
+from the original matching M(0)=E0 and a nearby fold, not an exact identity
+or independent Parke prediction. Eleven independent algebra tests pass.
+
+All supplied-state and Dirac pursuits below are historical and paused by
+Douglas's latest scope. No new fields, states or GR runs were used. The
+252-page PDF is unchanged. The full atlas goal remains incomplete; its
+inherited trigger and compatible receiving region are still open.
+
 ## Conditioned carrier history and compatible phase, 1 November 2026
 
 The [new reference response](nsc-atlas-valve-formation.md#reference-history-and-global-momentum-close-one-phase)

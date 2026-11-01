@@ -7,10 +7,10 @@
   "goal_status": "active",
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
-  "current_calculation": "Conditioned critical carrier history and balanced regional compression",
-  "completed": "Source-bound critical reference response plus global CK closes deltaPiChi=-.0063847845374 without a fate/observation fit. Full joint initial constraints admit positive psi~.9837547;28 targeted tests pass. Previouswhole-S3carrierfeedingwindowstaysfrozen. Privatehistory-closedtrialhascompactcaps/growingcentrethroughcommontrustedwindow, withlateGaussianstopsdiagnosedascarrierbandwidth; no publicchildclaim.",
-  "active": "Continue the same trusted regional state in a bounded asymmetric conformal chart, then identify distinct parent/receiving tubes and trace actual causal/material access. The current Green reference and weak branch close one preparation coefficient only. Natural state/amplitude selection, localized black-hole offspring, SI hierarchy and all original downstream gaps remain open.",
-  "continuation": "No numerical PDE is running. Committedphasefunction/source50ccaab8; record results/summaries/nsc-atlas-critical-parent-v1.json. PrivateGRauthority .build/critical_pocket_york_closed_trial.json and SHA-authenticatedN64/N96Cauchy caches; actualt10strongcontrolsarethecoordinatehandoff. Ancillaryforced-critical-CK-closure.json byteschangedafterthetrialbutembeddedS/Pi/delta valuesmatch; it isNOTthecontinuationauthority. Same-sourceFDprototype .build/critical_pocket_york_conformal_trial.json +compare.json reachescentreproper13.2967fine; coarse stopsimplicitmassCFL, notphysicalendpoint. BothFDgridsuseidenticalN96t10data;centrecomparisononlyoncommonT. Nextproperframeclock/CFLrestartneededforlongerwindow. PDF252pages unchanged; fullgoalactive16/50.",
+  "current_calculation": "Unchanged parent X1 drive, old-neck conformal test and exact loading relation",
+  "completed": "Read-only original parent drive reaches physical X1 quadrature .7851012011 at anchor proper .37353704, below the different one-mode reference .8339066143. Both incoming and outgoing traces are derived without filtering. Actual neck curvature is Weyl-dominated; finite-area conformal obstruction is conditional on persistent signs. A stronger blow-up is an unphysical diagnostic, not a child. Mcrit near E0 follows from imposed M(0)=E0 and a nearby fold, not an exact Parke identity. Eleven algebra tests pass.",
+  "active": "The latest requested three-item readout is complete. Inherited trigger and same-action receiving geometry remain open. Do not resume supplied-state, Dirac, horizon/GH/transport or eta pursuits automatically; no new fields or supplied states were authorized by this calculation. Full atlas goal remains incomplete.",
+  "continuation": "No GR/PDE process is running. Current source 5b26bb6b; compact result results/summaries/nsc-atlas-parent-valve-test-v1.json; original parent producer 65ceed0b. Actual raw readout .build/parent-valve-test-v2/readout-record.json. The first v1 readout stopped at the passive sampled-phase cache guard; physical fields, observer and clock were identical. The loader now checks phase separately without loosening physical guards. Original parent window0..0.9 is one reference geodesic clock, not global proper time. R=0 and persistence in the conditional conformal theorem are unproved. Physical other-side volume/energy/w/expansion are null. All older prototype/private continuation instructions are superseded by the latest three-item scope. PDF252pages unchanged; AGENTS unchanged.",
   "items": [
     {
       "id": "dimensions_inputs",
@@ -431,7 +431,8 @@
     "results/summaries/nsc-atlas-valve-gaussian-source-v1.json",
     "results/summaries/nsc-atlas-valve-dirac-source-v1.json",
     "results/summaries/nsc-atlas-valve-counterrotation-v1.json",
-    "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json"
+    "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json",
+    "results/summaries/nsc-atlas-parent-valve-test-v1.json"
   ],
   "intermediate_results": {
     "internal_release_critical_loading": 0.3750793338270073,
@@ -477,10 +478,8 @@
       20,
       24
     ],
-    "pending_local_producers": [
-      "GH32v2 continuation toproper2 fromitsadmittedv1handoff; requiresnewsource-boundlaunch."
-    ],
-    "next_step": "Continue the SAME admitted GH32 solution fromcoordinate1.219899413276162/proper1.2 toproper2,8threads,3600s allowance; preservefullstate,observer,gaugeclock,cumulativeenergywork. Do not repeat the invalidcoarsegrid orchangephysicalroute. NoPDFexpansionbeforeformationoutcome.",
+    "pending_local_producers": [],
+    "next_step": "No queued run. Preserve these three results and report their boundaries; do not resume older supplied-state or new-field plans without a new scoped instruction.",
     "completed_outputs": [
       "results/summaries/nsc-atlas-valve-formation-early-v1.json",
       "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
@@ -501,7 +500,8 @@
       "results/summaries/nsc-atlas-valve-gaussian-source-v1.json",
       "results/summaries/nsc-atlas-valve-dirac-source-v1.json",
       "results/summaries/nsc-atlas-valve-counterrotation-v1.json",
-      "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json"
+      "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json",
+      "results/summaries/nsc-atlas-parent-valve-test-v1.json"
     ],
     "one_mode_spherical_degrees": [
       24,
@@ -537,7 +537,24 @@
       244,
       245,
       246
-    ]
+    ],
+    "latest_user_scope": [
+      "Unchanged parent drive and inherited incoming trace",
+      "Actual old-neck Weyl/Ricci and conditional conformal continuation",
+      "Exact Mcrit versus supplied E0 relation"
+    ],
+    "frozen_pursuits": [
+      "Supplied critical/pocket/Dirac preparations",
+      "Horizon/GH/transport deepening",
+      "Eta and downstream cosmology"
+    ],
+    "current_readout_checks": {
+      "passed": 11,
+      "test_files": 1,
+      "GR_or_PDE_runs": 0,
+      "new_fields": 0,
+      "new_prepared_states": 0
+    }
   },
   "publication_finish_requirements": {
     "reviewed_manuscript": false,

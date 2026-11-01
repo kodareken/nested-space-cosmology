@@ -1,5 +1,12 @@
 # Scientific strand index
 
+The current [three-item formation readout](nsc-atlas-valve-formation.md#current-result-unchanged-parent-conformal-endpoint-and-loading-threshold)
+tests the unchanged parent's actual X1 history, separates Weyl/Ricci at
+the old neck, and explains the near-critical loading calibration. No
+physical child or inherited trigger is established. The supplied-state
+and Dirac pursuits indexed below are historical and paused; their older
+next-step statements do not authorize further runs.
+
 The [closed compression/carrier continuation](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
 now carries one shared constrained history from a contracting, larger
 internal volume to compact expansion, with measured carrier transfer and

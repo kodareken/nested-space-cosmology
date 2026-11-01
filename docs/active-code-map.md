@@ -1,5 +1,12 @@
 # Active code and evidence map
 
+`scripts/check_nsc_atlas_parent_valve.py` owns the current read-only
+parent-mode, interface-trace, Weyl/conformal and exact-loading comparisons.
+It authenticates original histories without initializing or evolving a
+state. `tests/test_nsc_atlas_parent_valve.py` supplies independent curvature,
+conformal and fold-algebra controls. The supplied-state and new-field
+producers below remain historical and paused under the latest scope.
+
 `critical_parent_response` in `nsc_atlas_shape_transition.py` derives the
 bounded reference response and its source/CK weak root from the declared
 carrier. `solve_critical_pocket_data` in `nsc_atlas_closed_pocket.py` uses
