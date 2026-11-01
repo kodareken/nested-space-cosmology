@@ -1,5 +1,13 @@
 # Scientific strand index
 
+The [closed compression/carrier continuation](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
+now carries one shared constrained history from a contracting, larger
+internal volume to compact expansion, with measured carrier transfer and
+separate pressure work. The failed smooth flat-horizon comparison is
+diagnosed in a parallel-transported frame. Distinct localized offspring
+and a selected inherited preparation remain open; this is not a survey
+prediction or a new Lambda derivation.
+
 The [charged-parent join and regular shape transition](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
 now give one nonconstant profile, common Cauchy data and two Lorentzian
 continuations in the same smooth action. The derived interior expands

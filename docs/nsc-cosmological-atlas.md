@@ -19,6 +19,15 @@ remain separate requirements. A real-data fit is not a successful withheld
 registered prediction. The overall current gate score is32%, with the
 physical child and all downstream empirical closure gates still open.
 
+The [new closed Cauchy connection](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
+now combines contraction, compact expansion and actual material carrier
+feeding in one finite history. Its trapped cuts are cosmological; its
+control caps are not derived child boundaries. Because the entire S3
+compacts, localized offspring within a persisting parent and their causal
+handoff remain the next connection. State amplitudes and compression
+remain supplied, so no child/trigger or cosmological gate is closed by
+renaming this phase transition.
+
 The [new charged-parent/shape connection](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
 restores the original scalar/top-form sector in the smooth product-sphere
 source and derives a nonconstant regular profile. Its connected charts

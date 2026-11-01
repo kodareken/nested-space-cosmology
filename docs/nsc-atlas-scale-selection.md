@@ -1232,3 +1232,10 @@ observed dark-energy result. This conditional parent attractor does not
 select a finite transition event, quantum state or SI ruler. The exact
 material-wall energy jump fixes only a flux difference; individual child
 supply still needs the coupled transition geometry and inherited state.
+
+The [subsequent fixed-q=3/2 closed history](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
+now measures carrier delivery into a compact future on the same metric.
+Its local Einstein-frame massive-field scale is still mu(s)=20 exp(-6s):
+the south-pole endpoint change gives a factor18.87388849. This is a finite
+state-dependent normalization, not a derived SI hierarchy. The old q=2
+parent, physical root charge and observational calibration remain distinct.

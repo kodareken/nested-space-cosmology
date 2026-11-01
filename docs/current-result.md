@@ -1,5 +1,19 @@
 # What the calculations show
 
+## Contracting-to-compact continuation with carrier feeding, 1 November 2026
+
+The [joint closed preparation](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
+now evolves one constrained state through proper-25..+25. The south cap
+receives net massive-scalar carrier energy .015194550124, separately from
+radion transfer and pressure work. A central spatial maximum goes from
+two negative null expansions (-.17149513) to two positive ones (+.54280983).
+Both resolutions and a time-step control retain the finite compact future.
+The original PDE and historical decoder are preserved; 22 focused checks
+pass. This is a cosmological continuation with regional feeding, not yet
+a localized offspring: the whole S3 compacts. The supplied compression
+and carrier state, distinct descendant geometry, causal handoff and all
+downstream empirical closures remain open. The PDF stays252pages.
+
 ## Regular rolling parent and wall energy constraint, 1 November 2026
 
 The [full-source continuation](nsc-atlas-valve-formation.md#the-rolling-parent-at-the-break)

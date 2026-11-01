@@ -7,7 +7,22 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
-## Current result: the rolling parent continues in the full source frame
+## Current result: a finite contracting-to-compact history with carrier feeding
+
+The [new closed preparation](#closed-compression-and-scalar-feeding) evolves
+one constrained state through proper-25..+25. A larger-internal-volume,
+contracting past continues into an expanding compact future. The south
+control cap receives net massive-scalar carrier energy .015194550124;
+radion transfer and pressure work are measured separately. Both spatial
+resolutions and a time-step control are retained. A central spatial maximum
+is future-trapped in the past and anti-trapped in the future, with no
+membrane inserted. This is a finite cosmological continuation and regional
+feeding result, not yet a localized black-hole offspring or distinct causal
+child. The source amplitudes and incoming compression remain supplied state
+data. The next connection is the actual parent/descendant region and its
+causal handoff; the completed windows stay frozen.
+
+## Completed rolling-parent continuation in the full source frame
 
 The parent q=2 need not be an absent constant-radius vacuum. Its expanding
 equal-radius sector has a derived decompactifying attractor. In the full
@@ -159,6 +174,173 @@ Dirac spectrum is not transferred to this product geometry. The charged
 join and regular shape transition below advance that action-level connection;
 a sourced child receiving parent material remains the next formation target.
 The manuscript/PDF remains252pages; its expansion stays frozen.
+
+## Closed compression and scalar feeding
+
+The [joint calculation](../results/summaries/nsc-atlas-closed-pocket-v1.json)
+uses the same canonical scalar, top-form and pair-six-form action, with
+q=3/2 throughout. The new preparation is in
+[one state adapter](../src/recursive_horizons/nsc_atlas_closed_pocket.py);
+the original spherical physical evolution and historical neck sources are
+unchanged. No old trajectory or received-energy number is transplanted.
+The earlier q=2 parent and charged-membrane trials remain different states.
+
+### The flat-horizon construction is not silently imported
+
+[Carroll, Johnson and Randall's flat Nariai construction](https://arxiv.org/abs/0904.3115)
+is a useful comparison. For this action's common-radius top its departure
+has s-s_top=C_lambda*lambda^p, where lambda is external null affine distance,
+
+$$
+p=\frac{\sqrt{9+4\alpha}-3}{2}=.952040597449,
+\qquad \alpha=-3m_s^2/V_{\rm top}=3.76250309154.
+$$
+
+In the full-source metric, the parallel-transported internal screen has
+R(k,e_a,k,e_a)=-b''(lambda)/b, with b=r exp(s). Consequently
+
+$$
+R_{\rm pp,int}=-C_\lambda p(p-1)\lambda^{p-2}+\cdots
+=.04565929826\,C_\lambda\lambda^{-1.04795940255}+\cdots.
+$$
+
+The two external and twelve internal leading terms cancel in the null
+Ricci trace, not in the individual tidal components. Scalar curvature and
+Kretschmann stay finite. The exponent inequality is certified without a
+near-zero numerical sign test:
+(175/22)^5*(28/55)<7^5<A_c^5 implies0<p<1 on this barrier branch.
+The double integrated tide is finite while the single integral diverges.
+Thus a nonconstant exactly homogeneous flat departure does not provide the
+claimed smooth C2 horizon for these couplings. This does not exclude every
+continuation. The closed Cauchy solution below is a different geometry,
+not a coordinate repair or an imported regularity claim.
+
+### One state, solved and evolved together
+
+Use u=cos(chi) on the initial round-reference S3. The massive field and its
+conformal normal momentum retain the reference harmonic normalization:
+
+$$
+\chi=A_\chi u,\quad
+\bar\Pi_\chi=-B_\chi\sqrt{3/5}(u^2-1/6),\quad
+\bar\Pi_S=-\sqrt{84}(.01).
+$$
+
+Here A_chi=.0134174213493 and B_chi=.0389770532576 are one quarter of the
+recorded reference carrier normalization. They are benchmark state data,
+not derived fundamental constants. S=sqrt(84)(s-s_star). Its initial value
+is the potential-force top at the actual chi, determined by V_s=0 with
+A_eff=7+200chi²; no extra Y2 radion displacement is supplied. This fixes a
+local potential-force condition, not a full equilibrium with gradients.
+The negative normal radion momentum is an incoming compression datum;
+its sign and magnitude are not selected by the action alone.
+
+Trace K and conformal TT data vanish. The scalar and carrier York sources
+are solved jointly. If S=sum S_l U_l/sqrt(2pi²), the radial tracefree
+curvature contains
+
+$$
+\bar A_{r,S}=\bar\Pi_S(1-u^2)
+\sum_{l\ne1}\frac{S_l U_l''}{[l(l+2)-3]\sqrt{2\pi^2}}.
+$$
+
+Adding the carrier York tensor produces an odd cross term in A_ij A^ij.
+The conformal Hamiltonian therefore uses all degrees0..40, not an even
+projection. Physical momenta and tracefree curvature scale as psi^-6.
+The solved conformal factor has analytic whole-sphere lower bound .9880055;
+all fields, radii and normal momenta enter the same Hamiltonian and
+momentum constraints. The normalization radius comes from V_top and the
+constraint; neither R=1.9 nor M=.12 is used.
+
+The two time directions start from bitwise identical Cauchy arrays.
+The unchanged canonical equations then give:
+
+| Reading | Proper-25 | Proper+25 |
+| --- | ---: | ---: |
+| South-pole s | .45398266455 | -.03564723638 |
+| Central spatial-maximum radius | 281.18798098 | 1621.33397314 |
+| Both null expansions there | -.17149513438 | +.54280983198 |
+| Spatial second radius derivative | -.00376664816 | -.00058159073 |
+
+These are cosmological trapped and anti-trapped cuts in a closed S3.
+The turning sphere is a spatial maximum, so the earlier NEC obstruction
+at a persistent spatial minimum does not apply. The existing wrapped-area
+identity preserves the signs in the full source frame. This is not an
+event-horizon identification or a localized collapse threshold.
+
+The same field law transports its Einstein-frame massive scale
+mu(s)=20 exp(-6s): between these south-pole endpoints it changes by
+18.87388849. This is a state-dependent normalization on one computed
+geometry, not an SI hierarchy or particle-production calculation.
+
+### A measured transfer, separate from pressure work
+
+The control caps are fixed worldtubes u>=.5 and u<=-.5, defined on the
+initial source sphere and propagated with its synchronous observers.
+They are not material walls or derived child boundaries. The carrier
+and radion energy currents are evaluated separately on those tubes.
+The physical-25→+25 interval uses future signed ledger minus backward
+signed ledger, without a state or clock reset. On the finer history:
+
+| South-cap contribution | Model energy |
+| --- | ---: |
+| Massive carrier material input | +.015194550124 |
+| Radion material input | +71.740154886 |
+| Total material input | +71.755349436 |
+| Pressure work | +3765233954.56 |
+
+The carrier's64/96 full-interval spread is1.73e-13. Carrier transfer also
+remains positive in the already compact proper20..25 interval in both
+caps. The north cap's full-interval carrier input is negative; no
+universal sign or charge asymmetry is inferred. Component transfer is
+not the same as energy retained in that component: the varying mass
+exchanges energy with the radion. The total cap account is
+Delta E=carrier input+radion input+pressure work. Work dominates the
+energy growth and is not renamed parent material supply.
+
+The past maximum is3.1e-8 in relative Hamiltonian residual and the finest
+future maximum5.9e-8; momentum and relative local-ledger controls are
+smaller. These are numerical finite-domain controls. The independent
+time-step/spatial comparisons are empirical differences, not rigorous
+global error bars. The trace of expansion and cap volume rates are saved
+alongside pressure and w; the future compactness is measured on the same
+solution as the received carrier, not attached as a separate success.
+
+All five histories completed in five separate one-thread workers. The
+first summary exporter exceeded its size guard after saving the arrays.
+The compact record was recovered by exact selected-event re-evaluation
+and bitwise initial-data checks, without repeating evolution. Original
+transient CPU/wall telemetry was not recovered; the fixed exporter now
+saves coordinator metadata before writing the summary.
+
+![One closed history: compactification, cosmological null signs, actual carrier delivery and distinct volume changes](figures/nsc-atlas-closed-pocket.png)
+
+The [figure producer](../scripts/plot_nsc_atlas_closed_pocket.py) reads only
+authenticated saved diagnostics and ledgers; it does not rerun evolution
+or decode the state with current physical equations.
+
+### What this does and does not connect
+
+The calculation supplies an energy-bearing finite continuation from a
+contracting, larger-internal-volume state to a compact expanding state.
+It gives an actual material carrier account, not a charge-blind amplitude
+residue or a vacuum-work identification. But the entire connected S3
+eventually compacts. It has not demonstrated a localized daughter within
+a distinct persisting parent, inherited source selection, or causal
+separation. Those child/offspring gates remain open, as do the SI scale,
+Omega_Lambda_today, thermal sectors, eta and the cycle. The late vacuum
+still belongs to the supplied action; its agreement with a minimum is
+not a new nesting contribution to Lambda.
+
+The next formation object is a geometrically defined descendant region
+and parent region, with the inherited state and causal carrier tube
+retained through their handoff. No further refinement of this completed
+finite window is required unless that connection needs it.
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_closed_pocket.py --raw-directory .build/closed-pocket-fresh --output .build/closed-pocket-fresh.json --workers 5
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_pocket_preparation.py tests/test_nsc_atlas_valve_neck.py tests/test_nsc_atlas_valve_spherical.py tests/test_nsc_atlas_valve_directional.py
+```
 
 ## The rolling parent at the break
 

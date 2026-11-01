@@ -1,5 +1,15 @@
 # Active code and evidence map
 
+`nsc_atlas_closed_pocket.py` owns the new constrained state and `PocketValve`
+adapter; it reuses the authenticated spherical physical RHS unchanged.
+`solve_pocket_data` solves the conditional potential-force profile,
+both York sources and the full-parity Hamiltonian together. The new
+`check_nsc_atlas_closed_pocket.py` producer runs the signed past/future
+histories, separate carrier/radion/work ledgers and actual null geometry.
+`test_nsc_atlas_pocket_preparation.py` supplies independent force, dense
+constraint, shear and pp-tidal controls. The [formation owner](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
+keeps this finite cosmological continuation separate from a causal child.
+
 `nsc_atlas_shape_transition.py` uses the four-radius action and analytic
 derivatives in `nsc_atlas_sphere_flux_completion.py` to solve one regular
 fixed-charge profile in the invariant1+3 sector. `solve_bounce` supplies

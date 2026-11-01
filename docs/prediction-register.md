@@ -28,6 +28,12 @@ SI ruler is selected, so no Omega_Lambda_today or new survey fit is assigned.
 P001--P006 and their machine-readable evidence remain frozen. This finite
 branch result neither closes P006 nor rejects other nested constructions.
 
+The [closed carrier/compression result](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
+is another conditional finite construction, not a new blind observation.
+It supplies measured regional transport during cosmological compactification;
+the state amplitudes, actual descendant boundary and present epoch are not
+selected. No P007, Omega_Lambda_today or observational pass is assigned.
+
 ## NSC-P006 -- Directed horizon flow and the present vacuum fraction
 
 Protocol frozen on 31 October 2026 before the new calculation. The public

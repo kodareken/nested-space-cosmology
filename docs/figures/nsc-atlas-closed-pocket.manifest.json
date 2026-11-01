@@ -1,0 +1,100 @@
+{
+  "current_physical_decoder_used": false,
+  "historical_source_commit": "2c96587c4d21b0902ef76a9df222f249b5d27f03",
+  "inputs": {
+    "compact_reference": {
+      "bytes": 53488,
+      "path": "results/summaries/nsc-atlas-shape-transition-v1.json",
+      "sha256": "608051e35e8ce249abdb4f2fbd910d808564129c0860b4e5c53602c97458e7b0"
+    },
+    "raw_archives": {
+      "N64_future": {
+        "bytes": 485048,
+        "path": ".build/closed-pocket-v1/N64_future.npz",
+        "sha256": "4b0c388fc21985fe6925869095fb1b2601704891418a7b8889efa767bb9ec00e"
+      },
+      "N64_future_time_control": {
+        "bytes": 484863,
+        "path": ".build/closed-pocket-v1/N64_future_time_control.npz",
+        "sha256": "91da59cfe732e49df9a5fc08b55c0e4c0eae18c4d039c41c9cfe77cb69857cc8"
+      },
+      "N64_past": {
+        "bytes": 487801,
+        "path": ".build/closed-pocket-v1/N64_past.npz",
+        "sha256": "1df26bb078bd07693b18c390849d68f910427f4f156a61c741d88c6f2581f046"
+      },
+      "N96_future": {
+        "bytes": 676628,
+        "path": ".build/closed-pocket-v1/N96_future.npz",
+        "sha256": "179cddf47c3c967c4d76b26f0adee0f9584e90fec1efe52b1f7d8b6683f2f291"
+      },
+      "N96_past": {
+        "bytes": 680154,
+        "path": ".build/closed-pocket-v1/N96_past.npz",
+        "sha256": "61d931725733a185c0d931946fc528b66fcbf9cc828a878539651cb71b26cf0a"
+      }
+    },
+    "scientific_record": {
+      "bytes": 66199,
+      "path": "results/summaries/nsc-atlas-closed-pocket-v1.json",
+      "sha256": "778ceadb4deecaf887ba5510a9c1a84b80edb9df3f64ca74c4b493a0d428129e"
+    }
+  },
+  "original_source_unchanged_telemetry": null,
+  "output": {
+    "bytes": 211251,
+    "path": "docs/figures/nsc-atlas-closed-pocket.png",
+    "sha256": "07708104b051d2f9ec48993316ed07ffbbf1b00ee0923e8292624ee322324bba"
+  },
+  "physical_source_or_PDE_recomputed": false,
+  "plotted": {
+    "Einstein_cap_volume_rule": "V3_south(t)/V3_south(0)",
+    "barrier_reference_chi": 0.0,
+    "barrier_s": 0.0600005350418201,
+    "carrier_ledger_index": 2,
+    "carrier_ledger_stitch": "L_raw2(t)-L_raw2(-25); future time-control usesN64past baseline.",
+    "compact_minimum_s": -0.035646782552940987,
+    "history_points": 201,
+    "internal_volume_rule": "exp(12*(s_south(t)-s_south(0)))",
+    "physical_south_carrier_net_N64": 0.015194550124159932,
+    "physical_south_carrier_net_N96": 0.015194550123987826,
+    "primary_modes": 96,
+    "proper_domain": [
+      -25.0,
+      25.0
+    ],
+    "selected_null_events": [
+      -25.0,
+      -20.0,
+      -10.0,
+      0.0,
+      10.0,
+      20.0,
+      25.0
+    ],
+    "south_initial_s": 0.05415345454149033
+  },
+  "producer": {
+    "bytes": 13792,
+    "path": "scripts/plot_nsc_atlas_closed_pocket.py",
+    "sha256": "5b3145cbbb571919fc0d5a0890779feee08ddf9a83ac7916369ac7c8f0bfc625"
+  },
+  "raw_arrays_used": [
+    "times",
+    "ledgers",
+    "diagnostics_json"
+  ],
+  "recovery_physics_replayed": false,
+  "render": {
+    "dpi": 125,
+    "matplotlib_version": "3.11.2",
+    "size_pixels": [
+      1600,
+      1000
+    ]
+  },
+  "reproduction": "python scripts/run_python.py scripts/plot_nsc_atlas_closed_pocket.py",
+  "schema": "nsc-atlas-closed-pocket-figure-v1",
+  "scope": "Authenticated original diagnostics and signed ledgers with published recovery checks. One declared closed benchmark, no localized-black-hole/causal-offspring or selected-state claim.",
+  "states_decoded": false
+}

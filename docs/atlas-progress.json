@@ -7,10 +7,10 @@
   "goal_status": "active",
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
-  "current_calculation": "Regular q2 rolling-parent continuation and exact wall-energy constraint",
-  "completed": "The combined q2 equal-radius parent has a derived expanding attractor: H16^2=11/160, Ricci33/2, Kretschmann363/160, while Einstein density tends to0 with w=-3/7. Two declared finite histories independently match full-source proper-time evolution within1.91e-11. The exact membrane Ward identity fixes [T(n,U)]=dot(sigma), not either individual receiving flux. 50 focused tests pass. Previous fixed-q shape-transition and directional-transfer windows remain frozen and separate.",
-  "active": "Construct the actual inherited parent/transition state and trajectory that send energy to a lasting child. The rolling asymptote fixes its limit but not a finite state or epoch. Do not infer child influx from decreasing tension, mix old cap energy into the recollapsing shape branch, or treat a smooth horizon as a material source. All original downstream gaps remain.",
-  "continuation": "No physical PDE is running. Latest source-bound parent record: results/summaries/nsc-atlas-rolling-parent-v2.json, sourcecd7c56db. Scope: flat expanding base, exactly relaxed massive scalar, common internal radii; no all-mode/quantum-state/SI selection. q2 symmetric stationary families supply only an AdS minimum, not a stationary positive parent. Bounded common-radius and1+3 charged two-cap attempts are terminal with no admitted fixed-source root (branch loss/turning or unresolved solve), not absence theorems. Do not repeat those trials as a state prescription. Next is the actual rolling-parent transition state and individual receiving fluxes. Manuscript/PDF252pages unchanged; full goal active16/50.",
+  "current_calculation": "Closed shared history with incoming compression and measured massive-carrier feeding",
+  "completed": "One fresh jointly constrained fixed-q1.5 state evolves\u221225..+25 at64/96 modes plus one time-step control. Larger-internal-volume contracting past to compact expanding future; south net carrier input .015194550124, radion/work separate. Central spatial maximum null signs change\u2212.17149513\u2192+.54280983. 22 focused checks pass, physical PDE/history decoder preserved. Flat homogeneous Nariai departure fails the full-source pp-tidal smoothness check despite finite scalar invariants. Original windows remain frozen.",
+  "active": "Identify a geometrically distinct descendant within a persisting parent and carry its inherited state and causal carrier tube through the handoff. Whole-S3 compactification plus regional transport is not yet localized offspring. Compression .01 and quarter-carrier amplitudes remain supplied benchmarks; do not promote them to inherited selection, an event horizon, an SI scale or a vacuum prediction.",
+  "continuation": "No numerical PDE is running. Latest compact record results/summaries/nsc-atlas-closed-pocket-v1.json: actual calculation source2c96587c; current reproducer/adapterfe5c0644 preserves every saved selected event and raw initial state exactly. Five raw NPZ histories under.build/closed-pocket-v1. Summary export exceeded100KB after completion; recovered without simulation replay, original transient timing/source telemetry left null with explicit recovery provenance. Current exporter now persists coordinator metadata first. Newprep owner src/recursive_horizons/nsc_atlas_closed_pocket.py; oldneck/spherical sources restored byte-for-byte to2b9e12d4 and olddirectional2.8 decoder still authenticates. PDF252pages unchanged; full goal active16/50.",
   "items": [
     {
       "id": "dimensions_inputs",
@@ -126,7 +126,9 @@
           "id": "receiving_child",
           "criterion": "An admissible receiving child with measured transferred energy is constructed",
           "verified_in_stated_domain": false,
-          "evidence": null
+          "evidence": null,
+          "partial_evidence": "results/summaries/nsc-atlas-closed-pocket-v1.json",
+          "remaining": "Conditional cosmological compactification and control-cap feeding do not establish distinct parent/descendant regions or their causal handoff."
         }
       ]
     },
@@ -186,7 +188,9 @@
           "id": "child_exchange",
           "criterion": "Parent and formed child have a common energy-transfer account",
           "verified_in_stated_domain": false,
-          "evidence": null
+          "evidence": null,
+          "partial_evidence": "results/summaries/nsc-atlas-closed-pocket-v1.json",
+          "remaining": "Conditional cosmological compactification and control-cap feeding do not establish distinct parent/descendant regions or their causal handoff."
         },
         {
           "id": "thermal_sectors",

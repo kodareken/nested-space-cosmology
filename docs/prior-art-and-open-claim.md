@@ -1,5 +1,29 @@
 # Prior art and admission of new research
 
+## Closed compression and scalar carrier, 1 November 2026
+
+The [new finite history](nsc-atlas-valve-formation.md#closed-compression-and-scalar-feeding)
+holds the action fixed and changes the preparation explicitly. The
+[Nariai/compactification construction](https://arxiv.org/abs/0904.3115)
+supplies a comparison, not automatic horizon regularity: the actual source
+has a divergent parallel-transported tidal component on its flat departure.
+The chosen closed Cauchy geometry instead combines the existing conformal
+constraint and York decomposition with the unchanged spherical evolution.
+Carrier normalization and inward radion momentum are declared benchmark
+data; no measurement or old waveform history is fitted or transplanted.
+
+The bound is proper-25..+25,64/96 modes and one64-mode time-step control,
+with five BLAS1 workers,45seconds per worker and120seconds coordinator
+allowance. Independent dense ADM constraints, analytic initial positivity,
+actual metric null expansions and separate material/work ledgers are
+checked. Raw curves remain under.build. An oversized summary export was
+recovered from the completed raw histories with exact decoder/initial-data
+checks; no evolution was repeated and missing runtime counters remain null.
+Stop after the finite continuation and feeding result. The next object is
+a distinct parent/descendant causal connection, not more precision on a
+whole-S3 phase transition. The state-selection and observational gates
+remain open.
+
 ## Rolling parent in the full source frame, 1 November 2026
 
 The [parent continuation](nsc-atlas-valve-formation.md#the-rolling-parent-at-the-break)
