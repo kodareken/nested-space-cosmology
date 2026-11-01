@@ -1,5 +1,6 @@
 """Independent local KG/energy controls; no parent caches or evolution."""
 import math
+from types import SimpleNamespace
 
 import numpy as np
 import pytest
@@ -8,6 +9,10 @@ import sympy as sp
 from recursive_horizons.nsc_atlas_null_geometry import first_connection
 from scripts.parent_release_response import (
     causal_release_response, instantaneous_release, potential_hessian,
+)
+from scripts.parent_release_region import (
+    analytic_geometry_controls, nodal_radius_control, region_quadrature,
+    source_region, normal_boost_flux,
 )
 
 
@@ -164,3 +169,81 @@ def test_conditional_barriers_are_stationary_points_of_the_declared_comparisons(
         _, Vs, _ = _potential(s, chi)
         assert Vs-6*adiabatic['loading']*math.exp(-6*s) == pytest.approx(0., abs=2e-12)
     assert row['scope'].startswith('Conditional')
+
+
+@pytest.mark.parametrize('z', [0., 7., 1.e6])
+def test_source_region_radius_has_feasible_nodal_contact_and_global_support_bound(z):
+    # Analytic source-geometry control, not new physical initial data.
+    parent = SimpleNamespace(H=1., mass_squared=z, kappa=1.)
+    result = source_region(parent)
+    anchor = np.array(result['sampler_arguments']['anchor'])
+    contact = np.array(result['closest_node_points'])
+    a, b, q = result['carrier_a'], result['carrier_b'], result['q']
+    radius = result['sampler_arguments']['radius']
+    assert contact@anchor == pytest.approx(math.cos(radius), abs=1e-14)
+    assert np.sum(contact*contact, axis=1) == pytest.approx(1., abs=1e-14)
+    assert a*contact[:, 0]+b*contact[:, 1]*contact[:, 3] == pytest.approx(0., abs=1e-14)
+    # Independently parameterize the complete reduced nodal interval.
+    # Nonzero X3 only reduces the support function since anchor.X3=0.
+    xmax = math.sqrt(1+q*q)-q
+    x = np.linspace(-xmax, xmax, 1001)
+    p = np.sqrt(np.maximum(0., (1-x*x-2*q*x)/2))
+    m = np.sqrt(np.maximum(0., (1-x*x+2*q*x)/2))
+    nodes = np.column_stack([x, (p+m)/math.sqrt(2), np.zeros_like(x), (p-m)/math.sqrt(2)])
+    assert np.max(nodes@anchor) <= math.cos(radius)+1e-14
+    check = nodal_radius_control(parent)
+    assert check['root_error'] < 1e-12
+    assert check['maximum_dot_error'] < 1e-12
+
+
+def test_nodal_contact_formula_remains_feasible_at_both_geometric_limits():
+    for q in (0., .25, .75, .999999, 1.):
+        c = math.sqrt((1-q*q)/2)
+        x = (math.sqrt(2)-1)*q
+        m = math.sqrt(c*c+2*q*x)
+        contact = np.array([x, (c+m)/math.sqrt(2), 0., (c-m)/math.sqrt(2)])
+        anchor = np.array([q, c, 0., c])
+        assert contact@contact == pytest.approx(1., abs=1e-14)
+        assert q*contact[0]+contact[1]*contact[3] == pytest.approx(0., abs=1e-14)
+        assert anchor@contact == pytest.approx((1+q*q)/math.sqrt(2)-q*q, abs=1e-14)
+
+
+def test_round_ball_quadrature_and_boundary_geometry_are_anchor_independent():
+    radius, scale = .8522887164833749, .2714056154003984
+    for anchor in ([1., 0., 0., 0.], [.5, .5, .5, .5]):
+        rule = region_quadrature(anchor, radius, order=8)
+        assert np.sum(rule['volume_points']**2, axis=1) == pytest.approx(1., abs=1e-14)
+        assert rule['boundary_points']@np.asarray(anchor) == pytest.approx(math.cos(radius), abs=1e-14)
+        assert sum(rule['volume_weights']) == pytest.approx(
+            2*math.pi*(radius-math.sin(2*radius)/2), abs=1e-13)
+        controls = analytic_geometry_controls(anchor, radius, frame_scale=scale, order=8)
+        for key in ('round_volume_error', 'round_area_error', 'flat_volume_error', 'flat_area_error'):
+            assert controls[key] < 2e-11
+
+
+@pytest.mark.parametrize('speed', [-.7, 0., .6])
+def test_tube_boost_flux_matches_direct_scalar_current_contractions(speed):
+    pi = np.array([.4, -.2])
+    normal_derivative = np.array([-.3, .5])
+    W = .73
+    rho = .5*(pi@pi+normal_derivative@normal_derivative)+W
+    pr = .5*(pi@pi+normal_derivative@normal_derivative)-W
+    j = -float(pi@normal_derivative)
+    gamma = 1/math.sqrt(1-speed**2)
+    Uphi = gamma*(pi+speed*normal_derivative)
+    nBphi = gamma*(normal_derivative+speed*pi)
+    direct = -float(Uphi@nBphi)
+    assert normal_boost_flux(rho, pr, j, speed) == pytest.approx(direct, abs=2e-15)
+
+
+@pytest.mark.parametrize('speed', [-.8, .5])
+def test_pure_vacuum_has_no_tube_material_flux_despite_shift_energy_transport(speed):
+    W, lapse = .23, 1.3
+    actual_tube = normal_boost_flux(W, -W, 0., speed)
+    coordinate_shift_transport = -lapse*speed*W
+    assert actual_tube == pytest.approx(0., abs=1e-15)
+    assert abs(coordinate_shift_transport) > .1
+    # In contrast, kinetic stress with zero Eulerian j has nonzero
+    # observer-boosted flux. The two flux definitions are not interchangeable.
+    assert normal_boost_flux(.5, .5, 0., speed) == pytest.approx(
+        -speed/(1-speed**2), abs=2e-15)

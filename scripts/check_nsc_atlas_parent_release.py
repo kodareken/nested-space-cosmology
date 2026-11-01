@@ -180,7 +180,8 @@ def compact_results(runs):
             half_sample_net_work_minus_flux=float(simpson((work-flux)[::2],x=t[::2])),
             indicator=float(abs((W[-1]-F[-1])-simpson((work-flux)[::2],x=t[::2]))))
         checks={}
-        for key in ('energy','excitation_energy','volume','work','outward_GH_flux','external_volume'):
+        for key in ('energy','excitation_energy','volume','work','outward_GH_flux','external_volume',
+                    'tube_outward_area_flux','tube_outward_GH_weighted_flux'):
             checks[key]=max(abs(row['higher'][key]-row['lower'][key]) for row in data['region_quadrature_checks'])
         s=np.array([x['s'] for x in p]); uS=np.array([x['uS'] for x in p])
         point_checks=dict(maximum_abs_scalar_KG_residual=float(np.max(abs(np.array([x['scalar_KG_residual'] for x in p])))),
@@ -203,6 +204,9 @@ def compact_results(runs):
                 cumulative_geometric_work=float(W[-1]),cumulative_outward_GH_flux=float(F[-1]),
                 cumulative_outward_material_flux=float(simpson(col('outward_material_flux'),x=t)),
                 cumulative_shift_flux=float(simpson(col('shift_flux'),x=t)),
+                cumulative_tube_outward_GH_weighted_flux=float(simpson(col('tube_outward_GH_weighted_flux'),x=t)),
+                maximum_tube_flux_boost_identity_error=float(max(col('tube_flux_boost_identity_max'))),
+                tube_flux_scope='Sum of local tube-observer fluxes with their GH lapse N/gamma, not a conserved total/anchor-clock energy or an attached-child supply.',
                 maximum_abs_energy_ledger_residual=float(max(abs(residue))),
                 final_energy_ledger_residual=float(residue[-1]),
                 maximum_abs_excitation_ledger_residual=float(max(abs(ex_residue))),
@@ -228,7 +232,10 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--raw-directory',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--budget-seconds',type=float,default=300.)
     args=parser.parse_args(); raw=(ROOT/args.raw_directory).resolve(); out=(ROOT/args.output).resolve()
+    if not math.isfinite(args.budget_seconds) or args.budget_seconds<=0:
+        raise ValueError('Positive finite compute allowance required')
     if not raw.is_relative_to(ROOT/'.build') or raw.exists() or not out.is_relative_to(ROOT) or out.exists():
         raise ValueError('Fresh raw directory under.build and fresh repository output required')
     names=['scripts/check_nsc_atlas_parent_release.py','scripts/parent_release_region.py','scripts/parent_release_response.py',
@@ -239,7 +246,7 @@ def main():
     for name,digest in pins.items():
         if hashlib.sha256(subprocess.check_output(['git','show',commit+':'+name],cwd=ROOT)).hexdigest()!=digest:
             raise ValueError('Commit the calculation source before running')
-    raw.mkdir(parents=True); began=time.perf_counter(); deadline=time.time()+300
+    raw.mkdir(parents=True); began=time.perf_counter(); deadline=time.time()+args.budget_seconds
     with ProcessPoolExecutor(max_workers=2,mp_context=multiprocessing.get_context('spawn')) as pool:
         runs=list(pool.map(worker,[(degree,str(raw),deadline) for degree in (20,24)]))
     result=dict(schema='nsc-atlas-parent-release-v1',scientific_owner='docs/nsc-atlas-valve-formation.md',
@@ -251,7 +258,8 @@ def main():
     result['runs'],result['resolution_comparison']=compact_results(runs)
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
-    print(json.dumps(result,ensure_ascii=True,indent=2))
+    print(json.dumps(dict(output=str(out),elapsed_seconds=result['elapsed_seconds'],
+        readout_commit=commit,scope=result['scope']),ensure_ascii=True,indent=2))
 
 
 if __name__=='__main__':main()

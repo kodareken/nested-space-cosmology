@@ -3,8 +3,9 @@
 No field, metric, incoming waveform, radius or receiving state is selected
 by the evolution. The region is a frozen reference-coordinate measurement
 window derived from the ORIGINAL initial carrier's nearest nodal surface.
-All rates below use GH coordinate time; the reference geodesic clock only
-labels the sampled leaf. No initial-data or evolution function is called.
+Coordinate energy-ledger rates use GH time; the reference geodesic clock only
+labels the sampled leaf. Tube-proper-unit area flux is reported separately.
+No initial-data or evolution function is called.
 """
 import math
 
@@ -123,6 +124,14 @@ def analytic_geometry_controls(anchor, radius, frame_scale=1., order=12):
                 round_exact_volume=exact_volume, round_exact_area=exact_area)
 
 
+def normal_boost_flux(rho, normal_pressure, outward_flux, relative_speed):
+    """Outward stress flux measured by a tube moving at v relative to n."""
+    v = np.asarray(relative_speed, dtype=float)
+    if np.any(~np.isfinite(v)) or np.any(abs(v) >= 1):
+        raise ValueError('Timelike relative normal speed required')
+    return ((1+v*v)*outward_flux-v*(rho+normal_pressure))/(1-v*v)
+
+
 class RegionSampler:
     """Cached fixed-node first-jet readout; never evaluates a physical RHS."""
     def __init__(self, system, anchor, radius, order=12):
@@ -195,6 +204,23 @@ class RegionSampler:
             raise ValueError('Frozen diagnostic tube is no longer timelike; not a physical singularity')
         material = N[boundary]*np.einsum('ni,ni->n', jup[boundary], unit_cov)
         shift = -budget['rho'][boundary]*np.einsum('ni,ni->n', beta[boundary], unit_cov)
+        speed = np.einsum('ni,ni->n', beta[boundary], unit_cov)/N[boundary]
+        if np.any(abs(speed) >= 1):
+            raise ValueError('Frozen tube normal speed is not timelike; no flux classification')
+        gamma = 1/np.sqrt(1-speed*speed)
+        spatial_unit = vb/spatial_norm[:, None]
+        normal4 = np.column_stack([1/N[boundary], -beta[boundary]/N[boundary, None]])
+        spatial4 = np.column_stack([np.zeros(self.nb), spatial_unit])
+        U = gamma[:, None]*(normal4+speed[:, None]*spatial4)
+        nB = gamma[:, None]*(spatial4+speed[:, None]*normal4)
+        derivatives = np.concatenate([J['p'][boundary, None, :], J['dq'][boundary]], axis=1)
+        Uphi = np.einsum('ni,nia->na', U, derivatives)
+        nBphi = np.einsum('ni,nia->na', nB, derivatives)
+        tube_flux = -np.sum(Uphi*nBphi, axis=1)
+        normal_gradient = np.einsum('ni,nia->na', spatial_unit, J['dq'][boundary])
+        normal_pressure = np.sum(Pi[boundary]**2+normal_gradient**2, axis=1)-budget['rho'][boundary]
+        boosted = normal_boost_flux(budget['rho'][boundary], normal_pressure, material/N[boundary], speed)
+        tube_weighted = N[boundary]/gamma*tube_flux
         supplied = np.einsum('ni,ni->n', budget['energy_flux'][boundary]/budget['volume_weight'][boundary, None], unit_cov)
         outside = float(area_weight@(material+shift))
         vacuum = s.parent.vacuum
@@ -226,6 +252,15 @@ class RegionSampler:
             outward_material_flux=float(area_weight@material), shift_flux=float(area_weight@shift),
             inward_material_flux_positive=float(area_weight@np.maximum(-material, 0)),
             outward_material_flux_positive=float(area_weight@np.maximum(material, 0)),
+            tube_outward_area_flux=float(area_weight@tube_flux),
+            tube_outward_area_positive=float(area_weight@np.maximum(tube_flux, 0)),
+            tube_outward_area_negative=float(area_weight@np.minimum(tube_flux, 0)),
+            tube_outward_GH_weighted_flux=float(area_weight@tube_weighted),
+            tube_outward_GH_weighted_positive=float(area_weight@np.maximum(tube_weighted, 0)),
+            tube_outward_GH_weighted_negative=float(area_weight@np.minimum(tube_weighted, 0)),
+            tube_flux_boost_identity_max=float(max(abs(tube_flux-boosted))),
+            boundary_normal_speed_min=float(min(speed)), boundary_normal_speed_max=float(max(speed)),
+            tube_flux_role='Outward jB=-sum(Uphi*nBphi); area integral is localtube-proper-unit flux, GHweighted usesN/gamma. Neither is the Eulerian normal-energy ledger or a child-feeding claim.',
             instantaneous_energy_coordinate_rate_from_balance=-outside+work,
             area=area, area_radius=area_radius, area_coordinate_rate=area_rate,
             area_radius_coordinate_rate=area_rate/(8*math.pi*area_radius),
@@ -236,5 +271,5 @@ class RegionSampler:
             external_area_coordinate_rate=external_area_rate,
             minimum_tube_normal_squared=float(min(tube_norm)),
             energy_flux_formula_error=float(max(abs(supplied-material-shift))),
-            rates_role='GH coordinate-time rates; normal expansion means are local congruence readouts, not anchor-clock derivatives.',
+            rates_role='Eulerian energy/volume/work and GHweighted flux rates use GH time; unweighted tube-area flux has its separate role. No anchor-clock energy derivative.',
             geometry_role='Full actual first jets and physical measure in a frozen reference ball; external=exp(-12s)Einstein metric, not a new state or child.')
