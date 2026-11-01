@@ -1,5 +1,24 @@
 # Prior art and admission of new research
 
+## Rolling parent in the full source frame, 1 November 2026
+
+The [parent continuation](nsc-atlas-valve-formation.md#the-rolling-parent-at-the-break)
+uses the exact existing reduction, full-source Einstein equations and
+[junction conservation](https://doi.org/10.1007/BF02710419). The
+[dynamical compactification literature](https://arxiv.org/abs/0904.3115)
+supplies the higher-dimensional continuation viewpoint. The new connection
+is the actual pair-flux parent's attractor and finite curvature, rather
+than assuming a missing constant-radius vacuum means no parent exists.
+The action, q=2 and its normalization are held fixed; two declared flat,
+scalar-relaxed verification states are not fitted or claimed selected.
+The bound is40 Einstein e-folds,20seconds per reduced history and60seconds
+total, checked independently in source proper time; the recorded producer
+takes1.23seconds. Raw arrays remain local. Exact limits, canonical spectra,
+independent Riemann sections and the wall stress/area-work identity have
+focused tests. Stop after the parent and flux-difference connection;
+finite state/epoch, individual receiver supply and physical nucleation
+remain the next formation problem. The old finite windows are not rerun.
+
 ## Charged-parent join and regular shape transition, 1 November 2026
 
 The [new connection](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)

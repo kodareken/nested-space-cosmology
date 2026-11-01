@@ -10,6 +10,15 @@ and zero-flux/recollapse verdict; `plot_nsc_atlas_shape_transition.py`
 renders its authenticated saved profile. The [formation owner](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)
 separates this construction from a physical decay index or a fed child.
 
+The same module's `evolve_rolling_parent` integrates the full-potential
+q=2 parent in Einstein e-folds. `rolling_parent_limit` and
+`rolling_parent_state` in the source completion supply exact full-frame
+limits and finite Riemann invariants; `wall_energy_jump` gives the separate
+material-wall Ward identity. The producer's `--rolling-parent` mode checks
+two histories against independent full-source proper-time equations.
+`test_nsc_atlas_rolling_parent.py` independently reconstructs curvature
+and stress/area work without selecting a finite history or child flux.
+
 `nsc_atlas_sphere_flux_completion.py` defines the explicit product-sphere
 six-form completion, its full shape potential and charge-cycle embeddings.
 `check_nsc_atlas_sphere_flux_completion.py` evaluates the frozen spatial

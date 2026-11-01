@@ -1,0 +1,486 @@
+{
+  "schema": "nsc-atlas-rolling-parent-v1",
+  "scientific_owner": "docs/nsc-atlas-valve-formation.md",
+  "action": {
+    "scalar_sector": {
+      "epsilon": 0.25,
+      "omega": 20.0,
+      "bare_density": 6.71875,
+      "kappa": 1.0
+    },
+    "bare_mass_squared": "100",
+    "mixing_squared": "300",
+    "LambdaBare": "215/32",
+    "q_reference": "3/2",
+    "phi_star_reference": -0.06495190528383289,
+    "B": "15/2",
+    "T": "25/32",
+    "K": "84",
+    "reference_volume": 2547058.1500690486,
+    "kappa16": 2547058.1500690486,
+    "scalar_normalization": "Phi=phi/sqrt(V0); chi=phi-phi_star(3/2) only in the reference sector",
+    "top_form_normalization": "qD=q/sqrt(V0); fixed-displacement Routhian gives (qD+sqrt(300)*Phi)^2/2",
+    "action": "Gravity (R16-2LambdaBare)/(2kappa16); canonical scalar bare mass\u00b2100 and F16 mixing\u00b2300, plus the same canonical F6. Matter/forms outside gravity prefactor.",
+    "scope": "Supplied charged parent completion, not a new preparation: replaces neutral Lambda7/mass20. F6 replaces the old T term once; no inherited state, SI, wrapping selection or child is derived.",
+    "overall_normalization": "The common quantum action factor1/g remains unspecified. kappa4=1 is the retained classical geometrized normalization, not a selection of kappa_nat/Lunit^2 or metres."
+  },
+  "asymptotic_limit": {
+    "q": "2",
+    "A": "231/32",
+    "K": "84",
+    "Einstein_power": "7/6",
+    "s_log_time_coefficient": "1/6",
+    "bulk_log_time_coefficient_squared": "40/99",
+    "potential_times_Einstein_time_squared": "35/12",
+    "kinetic_times_Einstein_time_squared": "7/6",
+    "density_times_Einstein_time_squared": "49/12",
+    "Einstein_w": "-3/7",
+    "ds_dN": "1/7",
+    "fixed_point_eigenvalues": [
+      "-2/7",
+      "-15/7"
+    ],
+    "bulk_H_squared": "11/160",
+    "bulk_H": 0.2622022120425379,
+    "bulk_Ricci_scalar": "33/2",
+    "massive_scalar_decay_rate_squared": "495/128",
+    "massive_scalar_frequency_squared": "50705/128",
+    "wrapped_tension_log_bulk_rate": -1.5732132722552274,
+    "finite_bulk_trace": "R16=16*A/7+(25/56)*exp(-12s), for phi=phi_star(q)",
+    "scope": "Expanding flat-base, equal internal radii, relaxed massive scalar, fixed q. Local attractor at infinite internal size, not a unique finite history, selected topology/dimension, quantum state, SI ruler or formed child."
+  },
+  "parent_stationary_radius_families": {
+    "q_reference": "2",
+    "isolations": [
+      {
+        "branch": "1+3",
+        "degree": 15,
+        "integer_polynomial_coefficients": [
+          -80000,
+          -11200000,
+          -638400000,
+          200427516717,
+          1015650700302,
+          2162380011057,
+          2002116635850,
+          -331111495470,
+          -3159485693658,
+          -3425209342903,
+          -931774333658,
+          1922440504530,
+          2757265835850,
+          1920439851057,
+          748497100302,
+          158499516717
+        ],
+        "positive_root_intervals": [
+          {
+            "interval": [
+              "1197151775/13133703",
+              "916437217/10054042"
+            ],
+            "multiplicity": 1
+          }
+        ],
+        "representative_rule": "All positive roots"
+      },
+      {
+        "branch": "2+2",
+        "degree": 30,
+        "integer_polynomial_coefficients": [
+          203249516717,
+          1091497100302,
+          3125839851057,
+          6160852936152,
+          9617631106342,
+          13967427332684,
+          19867469222952,
+          25146580238052,
+          25773367308437,
+          22770162050522,
+          21117105983099,
+          17884370143752,
+          7017571856027,
+          -4547682103398,
+          -6091751537543,
+          -3680205901956,
+          -6091751537543,
+          -4547682103398,
+          7017571856027,
+          17884370143752,
+          21117105983099,
+          22770162050522,
+          25773367308437,
+          25146580238052,
+          19867469222952,
+          13967427332684,
+          9617631106342,
+          6160852936152,
+          3125839851057,
+          1091497100302,
+          203249516717
+        ],
+        "positive_root_intervals": [],
+        "representative_rule": "Keep t<1; t>1 is its S4 factor-permutation copy"
+      }
+    ],
+    "branches": [
+      {
+        "branch": "1+3",
+        "q": 2.0,
+        "log_radii": [
+          -1.4401995100632172,
+          0.816059899551435,
+          0.816059899551435,
+          0.816059899551435
+        ],
+        "s": 0.25199504714777193,
+        "beta": [
+          -1.692194557210989,
+          0.5640648524036631,
+          0.5640648524036631,
+          0.5640648524036631
+        ],
+        "V": -0.5236104449501537,
+        "max_gradient": 4.144677548208833e-15,
+        "canonical_mass_squared": [
+          0.10940083852642593,
+          3.1891775791082533,
+          3.189177579108256,
+          3.6680108507736313
+        ],
+        "canonical_mass_modes": [
+          [
+            -0.3125438665892594,
+            -8.107922592650823e-17,
+            2.0269806481627057e-17,
+            -0.4052420182584688
+          ],
+          [
+            0.19778785594531975,
+            -0.4256047445301062,
+            -0.20268898257104423,
+            0.023717160940827136
+          ],
+          [
+            0.19778785594531978,
+            0.38833618023879884,
+            -0.26724002944873615,
+            0.023717160940827143
+          ],
+          [
+            0.19778785594531983,
+            0.03726856429130751,
+            0.4699290120197804,
+            0.023717160940827143
+          ]
+        ],
+        "homogeneous_negative_count": 0,
+        "S4_scalar_harmonic_negative_count": null,
+        "S4_negative_harmonics": [],
+        "negative_mode": null,
+        "retained_radius_local_minimum": true,
+        "ratio": 91.1511228021526,
+        "ratio_interval": [
+          "1197151775/13133703",
+          "916437217/10054042"
+        ],
+        "ratio_polynomial_degree": 15
+      }
+    ],
+    "S4_scalar_index_rule": "Sum degeneracy(l)=(l+1)(l+2)(2l+3)/6 where l(l+3)<-3m\u00b2/V, only for V>0.",
+    "scope": "Only isotropic,1+3 and2+2 radius families modulo factor permutations; numerical canonical masses and retained-scalar S4 indices, not all critical points, full KK indices or decay dominance."
+  },
+  "histories": [
+    {
+      "initial_s": 0.0,
+      "initial_v": 0.0,
+      "efolds": 40.0,
+      "endpoint": {
+        "s": 4.619424945772976,
+        "v": 0.14285436848049515,
+        "x": 9.718930420984765e-05,
+        "W": 7.218021080218426,
+        "D": 2.1428904350536344,
+        "H_scaled": 1.8353085586423792,
+        "v_N": 7.927532124481675e-07,
+        "log_H_scaled_N": 1.6645936605363163e-05,
+        "bulk_internal_H": 0.2621818451117049,
+        "bulk_external_H": 0.2622174879721499,
+        "bulk_internal_H_dot": 1.0680044318073152e-05,
+        "bulk_external_H_dot": -8.01080040891905e-06,
+        "bulk_Ricci_metric": 16.5,
+        "bulk_Ricci_source": 16.5,
+        "Einstein_w": -0.42859362336908957,
+        "log_Einstein_H": -27.10933705541855,
+        "log_Einstein_density": -53.12006182216899,
+        "KK_mass_squared_over_H_squared": 5.410053567648821e-05,
+        "material_mass_squared_over_H_squared": 118.75224032949419,
+        "wrapped_tension": 1.836053850031396e-13,
+        "wrapped_tension_log_bulk_rate": -1.5730910706702295
+      },
+      "bulk_proper_duration": 34.480873810709035,
+      "independent_bulk_H_difference": 1.5532575226018253e-12,
+      "independent_bulk_Hamiltonian_max": 1.0323408794477018e-12,
+      "bulk_Ricci_metric_source_max_difference": 1.0658141036401503e-14,
+      "Einstein_density_work_balance": 1.1379786002407855e-14,
+      "sample_table": {
+        "columns": [
+          "N",
+          "s",
+          "v",
+          "bulk_proper_duration"
+        ],
+        "rows": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            4.0,
+            0.031124770874710637,
+            0.012680512250332591,
+            9.086511993168676
+          ],
+          [
+            8.0,
+            0.1945061331949732,
+            0.08435943723649444,
+            15.572539990316352
+          ],
+          [
+            12.0,
+            0.6530623164078713,
+            0.13170290116098954,
+            18.857625033302504
+          ],
+          [
+            16.0,
+            1.2005051307745607,
+            0.1399675046494049,
+            21.295867777219463
+          ],
+          [
+            20.0,
+            1.7652583569089395,
+            0.14199170342702133,
+            23.550248474231893
+          ],
+          [
+            24.0,
+            2.334643943384491,
+            0.14258649113350105,
+            25.752837672021816
+          ],
+          [
+            28.0,
+            2.905429320111984,
+            0.14277136238520888,
+            27.93952701037626
+          ],
+          [
+            32.0,
+            3.476653606771035,
+            0.14282984066331725,
+            30.121206104791792
+          ],
+          [
+            36.0,
+            4.048017114886865,
+            0.14284844146453685,
+            32.30129345902872
+          ],
+          [
+            40.0,
+            4.619424945772976,
+            0.14285436848049515,
+            34.480873810709035
+          ]
+        ]
+      },
+      "scope": "Declared verification initial data, not a selected ancestral state or physical transition epoch."
+    },
+    {
+      "initial_s": 1.0,
+      "initial_v": 0.1,
+      "efolds": 40.0,
+      "endpoint": {
+        "s": 6.682956208386893,
+        "v": 0.14285709811089115,
+        "x": 1.5676820720391639e-06,
+        "W": 7.218738242384459,
+        "D": 2.1428576798120793,
+        "H_scaled": 1.8354137596129183,
+        "v_N": 1.2784662665603182e-08,
+        "log_H_scaled_N": 2.684774262847087e-07,
+        "bulk_internal_H": 0.26220188353110224,
+        "bulk_external_H": 0.26220245842630485,
+        "bulk_internal_H_dot": 1.7227272952478148e-07,
+        "bulk_external_H_dot": -1.2920474708899098e-07,
+        "bulk_Ricci_metric": 16.5,
+        "bulk_Ricci_source": 16.5,
+        "Einstein_w": -0.42857178654138617,
+        "log_Einstein_H": -39.4904673121542,
+        "log_Einstein_density": -77.8823223356403,
+        "KK_mass_squared_over_H_squared": 8.725519582101515e-07,
+        "material_mass_squared_over_H_squared": 118.73862760283498,
+        "wrapped_tension": 7.705555822990642e-19,
+        "wrapped_tension_log_bulk_rate": -1.5732113011866136
+      },
+      "bulk_proper_duration": 21.988810237752908,
+      "independent_bulk_H_difference": 1.9026114017606233e-11,
+      "independent_bulk_Hamiltonian_max": 1.3317399659764184e-11,
+      "bulk_Ricci_metric_source_max_difference": 1.4210854715202004e-14,
+      "Einstein_density_work_balance": -3.452235242465407e-16,
+      "sample_table": {
+        "columns": [
+          "N",
+          "s",
+          "v",
+          "bulk_proper_duration"
+        ],
+        "rows": [
+          [
+            0.0,
+            1.0,
+            0.1,
+            0.0
+          ],
+          [
+            4.0,
+            1.5447957334674893,
+            0.14148028469683396,
+            2.3213618569481067
+          ],
+          [
+            8.0,
+            2.113001803116474,
+            0.14243291111001433,
+            4.537233971634861
+          ],
+          [
+            12.0,
+            2.6834239572125984,
+            0.14272315407944963,
+            6.728060565000356
+          ],
+          [
+            16.0,
+            3.254533612484629,
+            0.14281454392930995,
+            8.91104935216836
+          ],
+          [
+            20.0,
+            3.8258606850696077,
+            0.142843571055883,
+            11.09155339606448
+          ],
+          [
+            24.0,
+            4.397256908712738,
+            0.1428528160695113,
+            13.271266533374678
+          ],
+          [
+            28.0,
+            4.968675166340442,
+            0.1428557631533223,
+            15.450727597065997
+          ],
+          [
+            32.0,
+            5.5401004488458465,
+            0.1428567028744919,
+            17.630108288243488
+          ],
+          [
+            36.0,
+            6.111527971437171,
+            0.1428570025452085,
+            19.80946334966682
+          ],
+          [
+            40.0,
+            6.682956208386893,
+            0.14285709811089115,
+            21.988810237752908
+          ]
+        ]
+      },
+      "scope": "Declared verification initial data, not a selected ancestral state or physical transition epoch."
+    }
+  ],
+  "wall_conservation": {
+    "normal": "child to parent",
+    "identity": "[T(n,U)]=dot(sigma)=sigma_s*U(s)=-6sigma*U(s)",
+    "surface_first_law": "dot(E_surface)-sigma*dot(area)=area*(F_child-F_parent)",
+    "F_definition": "F=-T(n,U); only its jump is fixed, not either side flux.",
+    "zero_tangent_control": {
+      "sigma": 0.2,
+      "sigma_tangent": -0.0,
+      "T_nU_parent_minus_child": -0.0,
+      "F_child_minus_parent": -0.0,
+      "ward_residual": 0.0,
+      "side_fluxes_selected": false,
+      "surface_first_law": "dot(E_surface)-sigma*dot(area)=area*(F_child-F_parent)",
+      "scope": "Material charged membrane only; not a surface stress at smooth horizon0. The two material fluxes need the actual bulk solution and wall trajectory."
+    },
+    "side_fluxes_selected": false,
+    "source_inserted": false,
+    "cap_normal_force": "[V]=sigma*K_mean+sigma_s*mean(n(s))",
+    "cap_necessary_balance": "Sum integral(R^3 V_s dxi)=6sigma Rwall^3; q2 common-radius integrand is negative."
+  },
+  "conditional_scalar_handoff": {
+    "parent_flux": 2.0,
+    "charge": 0.5,
+    "child_flux": 1.5,
+    "inherited_phi": -0.08660254037844385,
+    "child_minimum": -0.06495190528383289,
+    "displacement": -0.02165063509461096,
+    "inherited_velocity": 0.0,
+    "parent_vacuum": 7.21875,
+    "parent_displacement": 0.0,
+    "parent_total_energy": 7.21875,
+    "child_vacuum": 7.0,
+    "oscillation_energy": 0.09374999999999994,
+    "released_to_transition": 0.125,
+    "actual_wall_pressure": 0.12500000000000022,
+    "required_external_work": 0.0,
+    "energy_balance_residual": 5.551115123125783e-17,
+    "interpretation": "Conditional rapid transfer with continuous phi and velocity; boundary work and parent excitation are explicit. No nucleation or homogeneous wall passage is derived.",
+    "scope": "Existing instantaneous continuous-field identity only; it does not provide a membrane trajectory or a formed child."
+  },
+  "verdict": {
+    "nonempty_regular_parent_asymptotic": true,
+    "parent_limit_fixed_in_supplied_action": true,
+    "finite_parent_history_selected": false,
+    "individual_receiver_material_flux_derived": false,
+    "formed_lasting_child": false,
+    "quantum_state_selected": false,
+    "SI_scale_selected": false,
+    "full_goal_achieved": false
+  },
+  "provenance": {
+    "source_sha256": {
+      "scripts/check_nsc_atlas_shape_transition.py": "a71b25f3860bf2af70b8fb32f29def5f8aee96d3704ddf828e96a77a2a8c690a",
+      "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+      "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+      "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+      "src/recursive_horizons/nsc_atlas_shape_transition.py": "fe5ddd1f776394e41d81b7283410aef7107f2d639ce8efc875b296d3d7ddedf5",
+      "src/recursive_horizons/nsc_atlas_sphere_flux_completion.py": "b22393e38bbda23c74d479a739deefe698774e0bb6d6da8d7fd9a6dcb24bf2d8"
+    },
+    "source_unchanged": true,
+    "producer_commit": "6f5b886356285ed503d466ea2922d1ce4cf88cd4",
+    "source_bound_to_commit": true,
+    "raw_cache": ".build/rolling-parent-v1/rolling-parent.npz",
+    "raw_cache_sha256": "11bb77b4fcfc382f49100644b01672b7a2970aae369f213817ffbf46ab34aae6"
+  },
+  "compute": {
+    "threads": 1,
+    "elapsed_seconds": 1.2058495999663137,
+    "allowance": "Each reduced history20s; complete calculation60s; two reduced and two independent bulk histories, bounded40Einstein e-folds."
+  }
+}

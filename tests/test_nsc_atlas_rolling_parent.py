@@ -23,6 +23,8 @@ def test_exact_q2_limit_from_canonical_exponential_and_16D_trace():
     assert row['Einstein_w']==w==F(-3,7)
     assert row['bulk_H_squared']==A/105==F(11,160)
     assert row['bulk_Ricci_scalar']==16*15*row['bulk_H_squared']==F(33,2)
+    section_count=15+math.comb(15,2)
+    assert row['bulk_Kretschmann_scalar']==4*section_count*row['bulk_H_squared']**2==F(363,160)
     assert row['ds_dN']==F(1,7)
     assert row['kinetic_times_Einstein_time_squared']==F(84,2)/36
     assert row['density_times_Einstein_time_squared']==3*power*power
@@ -63,6 +65,24 @@ def test_finite_source_and_metric_Ricci_from_independent_scale_differentiation(s
     assert R==pytest.approx(source,rel=3e-13,abs=4e-13)
     assert row['bulk_Ricci_metric']==pytest.approx(R,rel=3e-13,abs=4e-13)
     assert row['bulk_Ricci_source']==pytest.approx(source,rel=3e-15)
+    # Enumerate the15 actual directions rather than reuse grouped curvature
+    # multiplicities from the source. Only planes within one S3 have k/a².
+    directions=[('external',None,He,Hed) for _ in range(3)]+[
+        ('internal',factor,Hi,Hid) for factor in range(4) for _ in range(3)]
+    sections=[(rate_dot+rate*rate)**2 for _,_,rate,rate_dot in directions]
+    counts=dict(external_pair=0,external_internal=0,same_sphere=0,different_spheres=0)
+    for i,left in enumerate(directions):
+        for right in directions[i+1:]:
+            value=left[2]*right[2]
+            if left[0]==right[0]=='external':kind='external_pair'
+            elif left[0]!=right[0]:kind='external_internal'
+            elif left[1]==right[1]:
+                kind='same_sphere';value+=5/8*math.exp(-2*s)
+            else:kind='different_spheres'
+            counts[kind]+=1;sections.append(value*value)
+    assert counts==dict(external_pair=3,external_internal=36,same_sphere=12,different_spheres=54)
+    assert len(sections)==15+math.comb(15,2)
+    assert row['bulk_Kretschmann_metric']==pytest.approx(4*math.fsum(sections),rel=5e-13,abs=5e-13)
 
 
 def test_both_physical_scale_rates_approach_the_same_bulk_H():
@@ -72,6 +92,7 @@ def test_both_physical_scale_rates_approach_the_same_bulk_H():
         assert row['bulk_external_H']==pytest.approx(row['bulk_internal_H'],rel=3e-15)
         errors.append(max(abs(row['bulk_external_H']-target),abs(row['bulk_internal_H']-target)))
     assert errors[1]<errors[0]/1000 and errors[1]<1e-6
+    assert row['bulk_Kretschmann_metric']==pytest.approx(float(F(363,160)),rel=2e-6)
 
 
 def test_q2_restricted_stationary_parent_and_reference_default_are_preserved():

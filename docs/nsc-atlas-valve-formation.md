@@ -7,7 +7,26 @@ except for the finite evolution needed to test formation. The compact-parent
 action is retained. The earlier two-mode preparation and the new one-mode
 occupation below remain explicitly distinct states.
 
-## Current result: a connected shape transition and its finite interior
+## Current result: the rolling parent continues in the full source frame
+
+The parent q=2 need not be an absent constant-radius vacuum. Its expanding
+equal-radius sector has a derived decompactifying attractor. In the full
+source frame both external and internal expansion approach
+H16=sqrt(11/160)=.2622022120, with Ricci33/2 and Kretschmann363/160.
+These are finite model-unit values from the supplied action, not a fitted
+SI scale. The Einstein-frame energy tends to0 while that full geometry
+remains nonempty. The [derivation below](#the-rolling-parent-at-the-break)
+states its domain and keeps the finite history/state freedom explicit.
+
+The exact material-wall Ward identity also closes a necessary accounting
+link: [T(n,U)]=dot(sigma)=-6sigma U(s). It fixes a difference of regional
+fluxes, not either individual influx. The next physical object is the
+actual parent/transition state and wall trajectory that send energy to a
+lasting child. The old shape-transition and directional-transfer states
+remain separate; the finite source-free child is not retrofitted with
+the earlier cap's energy. No further horizon/GH or eta refinement is opened.
+
+## Completed shape transition and its finite interior
 
 The [charged-parent join](nsc-atlas-scale-selection.md#executed-charged-parent-join-and-shape-transition)
 now restores the original scalar/top-form sector alongside the smooth
@@ -140,6 +159,139 @@ Dirac spectrum is not transferred to this product geometry. The charged
 join and regular shape transition below advance that action-level connection;
 a sourced child receiving parent material remains the next formation target.
 The manuscript/PDF remains252pages; its expansion stays frozen.
+
+## The rolling parent at the break
+
+The [source-bound parent record](../results/summaries/nsc-atlas-rolling-parent-v2.json)
+uses the same scalar/top-form plus smooth pair-six-form action. The full
+four-radius stationary check at q=2 finds one1+3 AdS minimum,
+V=-.52361044495, in the isotropic/1+3/2+2 families and no positive minimum
+there. Its retained radius masses are positive. This is not an exclusion
+of every other critical family or a classification of internal KK modes.
+A positive parent therefore cannot simply be declared the equal-radius
+stationary vacuum used by a constant-vacuum Parke calculation.
+
+### A nonempty continuation of the runaway size
+
+At phi=phi_star(2), equal internal radii and supplied q=2, the exact potential
+is V=e^-12s W, with
+
+$$
+W=A-Bx+Tx^6,\quad x=e^{-2s},\quad
+A=\frac{231}{32},\quad B=\frac{15}{2},\quad T=\frac{25}{32},\quad K=84.
+$$
+
+Here A>A_c and A>A_M from the exact sector thresholds, so V_s<0 and V>0
+for every finite s. Set v=ds/dN and D=3-42v² on the expanding flat
+Einstein-base branch. The full equations are
+
+$$
+\frac{dx}{dN}=-2xv,\qquad
+\frac{dv}{dN}=-D\left[v+\frac{-12+W_s/W}{84}\right],\qquad
+H_E=e^{-6s}\sqrt{W/D}.
+$$
+
+For finite s and0<=v<1/sqrt(14), v=0 points into positive roll. If s
+stayed bounded, its strictly positive force would prevent v tending to0;
+thus s grows without bound. Once s is large the velocity equation drives
+v toward1/7, away from the kinetic boundary. The limiting fixed point
+(x,v)=(0,1/7) has eigenvalues -2/7 and -15/7. The expanding monotone
+common-radius family therefore approaches this limit. This does not
+select its finite initial data or prove stability to every omitted mode.
+
+The leading proper-time solution is
+
+$$
+a_E\propto t_E^{7/6},\qquad
+s=\frac{\ln t_E}{6}+\frac1{12}\ln\frac{12A}{35}+o(1),\qquad
+Vt_E^2\longrightarrow\frac{35}{12},\quad
+\rho_Et_E^2\longrightarrow\frac{49}{12},\quad w_E\longrightarrow-\frac37.
+$$
+
+This is an asymptotic solution of the full potential, not an exact
+finite-time replacement for it. Under the existing metric reduction,
+d tau16=e^-6s d t_E and a_external,16=e^-6s a_E. Consequently
+
+$$
+\tau_{16}\sim\sqrt{40/99}\ln t_E,\qquad
+H_{\rm int},H_{\rm ext}\longrightarrow\sqrt{A/105}
+=\sqrt{11/160}.
+$$
+
+All15 spatial source directions expand at that same limiting rate. The
+orthonormal curvature components have finite limits:
+
+$$
+R_{16}=\frac{16A}{7}+\frac{25}{56}e^{-12s}\longrightarrow\frac{33}{2},
+\qquad R_{ABCD}R^{ABCD}\longrightarrow480(11/160)^2=\frac{363}{160}.
+$$
+
+Thus the zero-density tail of the Einstein description is not a vanished
+parent or a curvature singularity in the full source. Its lowest internal
+KK mass obeys m_KK²/H_E²=(15/8)e^-2s/(W/D)->0; the isolated lower-dimensional
+effective description loses scale separation. This changes the useful
+frame, not the conserved charge or the number of physical generations.
+It does not identify heat death with a new child or establish a cycle.
+
+The construction uses the dimensional-reduction/continuation viewpoint
+of [Carroll, Johnson and Randall](https://arxiv.org/abs/0904.3115). Their
+single-sphere flux solutions supply the method and comparison, not this
+product-pair-flux parent, its selected state or its transition amplitude.
+Neither the input internal dimension nor the geometry of the offset
+generator is selected by this source calculation.
+
+### Finite verification and what remains free
+
+Two declared verification histories, (s,v)=(0,0) and(1,.1), are integrated
+with the full potential to40 Einstein e-folds. At the endpoint:
+
+| Initial state | H_internal | H_external | Bulk proper duration |
+| --- | ---: | ---: | ---: |
+| (0,0) | .2621818451 | .2622174880 | 34.48087381 |
+| (1,.1) | .2622018835 | .2622024584 | 21.98881024 |
+
+Independent full-source Einstein evolution in bulk proper time agrees
+within1.91e-11 in expansion rate; its Hamiltonian defect is below1.34e-11.
+The two finite histories remain different despite their common future
+limit. Their Einstein-frame energy balances close within1.14e-14 through
+expansion work. That work is not parent-to-child material transfer.
+No physical transition epoch, finite inherited state, SI scale or present
+cosmological fraction follows from convergence to the same attractor.
+
+### The actual material-wall energy constraint
+
+For a material charged membrane, normal n points child->parent and U is
+its proper tangent. The existing source gives84[s_n]=-6sigma and
+[phi_n]=0. Continuity of tangential fields then proves
+
+$$
+[T(n,U)]=84[s_n]U(s)=-6\sigma U(s)=\dot\sigma,\qquad
+\dot E_\Sigma-\sigma\dot{\mathcal A}
+=\mathcal A(\mathcal F_c-\mathcal F_p),\quad \mathcal F=-T(n,U).
+$$
+
+This follows from the [junction conservation laws](https://doi.org/10.1007/BF02710419)
+with the action's varying tension. The same jump holds for local field
+jets whose two individual fluxes have either sign. A decreasing tension
+or one-way causal horizon cannot replace their calculation. U(s) belongs
+to the moving wall; it is not automatically the comoving parent clock.
+The smooth horizon0 still has no surface stress; it is not this membrane.
+
+For two Euclidean regular caps the additional necessary balance is
+sum integral(R³ V_s dxi)=6sigma Rwall³. The q=2 common-radius cap contributes
+negatively, including any off-minimum massive scalar, so the child must
+supply all of the positive balance. Bounded common-radius and1+3 charged regular-cap continuation
+admitted no fixed-source target root; this is not an absence theorem or an inherited
+rolling-parent state. That assumption is parked rather than refined.
+The next formation calculation must use the rolling parent and its actual
+charged handoff, with individual fluxes and trajectory retained.
+
+Reproduce the new parent calculation in fresh destinations:
+
+```powershell
+python scripts/run_python.py scripts/check_nsc_atlas_shape_transition.py --rolling-parent --raw-directory .build/rolling-parent-fresh --output .build/rolling-parent-fresh.json
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_rolling_parent.py
+```
 
 ## Regular shape transition and derived exit
 

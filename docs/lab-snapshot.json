@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+  "current_receipt_commit_parent": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
   "files": [
     {
       "bytes": 3197,
@@ -10277,9 +10277,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 305064,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 305631,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10287,7 +10287,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "41c76f0ed61dfc9f7251bdf6c02b88757e17d6f271d365d7fbe3424525add31e"
+      "sha256": "78c739524db3c5cba51fcf1015333f8f7f545a1530955decaaab412651322cf6"
     },
     {
       "bytes": 168348,
@@ -10298,12 +10298,12 @@
       "sha256": "d81a4e7d7f0d92425f71b965c875d2ded3b65b55bf10061e1838c92b3fb9bf9a"
     },
     {
-      "bytes": 22005,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 21965,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "path": "docs/atlas-progress.json",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "91c8cfc4948eb87f09bacc1d7d08bea883e11d31a4634e8d7a8f9d27eec57af1"
+      "sha256": "9edda11192724739613d9a1253f09239da19484813b3de33e2a491b37ae8faf4"
     },
     {
       "bytes": 9543,
@@ -10341,12 +10341,12 @@
       "sha256": "f86c11bc9d61a332f4835c0a0471e1ca74342ff7078fc343bf0e433678f1a00a"
     },
     {
-      "bytes": 496910,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 497924,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5838f7ed16dffc67b7e87076fe225fa345a28c923626b380f80e72442d82cae3"
+      "sha256": "2a513443285e585845b2cc3ca7e58441a7fbfcd998fd83cb05bbf5942c787cf9"
     },
     {
       "bytes": 173938,
@@ -11189,12 +11189,12 @@
       "sha256": "fdfdc16b7c126febc2139161767413904fc1a88cf2933cf5d172a1fc2072ef84"
     },
     {
-      "bytes": 60600,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 61269,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "path": "docs/nsc-atlas-scale-selection.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "75ffde415f6851a937aea16da8a01b29cd1910ff316efaf0829a40c4ff103aec"
+      "sha256": "4339797690b883ed66ee3e2ef134c5c34d291957f850f24730f4ccff21a54e02"
     },
     {
       "bytes": 16908,
@@ -11245,12 +11245,12 @@
       "sha256": "31c7852e6d5d38ebe1afa90dd33c465d52f7b9fe9ff10cb761094790b66fac69"
     },
     {
-      "bytes": 71133,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 78313,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "path": "docs/nsc-atlas-valve-formation.md",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "ad66b066302e4545fb064a98e623a91cfda80264e2a4bd4af21616a1edadeeb3"
+      "sha256": "78561071cf7a64f182190f7deb8256f49b76efbb872584ac3d4375ecc5ec491e"
     },
     {
       "bytes": 10730,
@@ -12304,12 +12304,12 @@
       "sha256": "5ebac65da8049b0355149fab9ba1aa4b9be682a32805e84a935e9ebbbe2da3e8"
     },
     {
-      "bytes": 624338,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 625569,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "84e7e20de778b214d5d8ff645d7c6f7d9df8c09b9e1377308d21ee2949ab7df5"
+      "sha256": "3cd2ee205d744c8bbacb505b7da16d4195d16fcc64dca9336bab62066fda53bb"
     },
     {
       "bytes": 6705,
@@ -31862,6 +31862,22 @@
       "sha256": "b1d29d8a2c78518889706adbb8ab3293edda596725949347d2830c187f9ffde9"
     },
     {
+      "bytes": 16210,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
+      "path": "results/summaries/nsc-atlas-rolling-parent-v1.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "5ce3ab0ba87a0dbbe263dd1b82b6185ddba7ab837d1b17994db5921ffa4388a2"
+    },
+    {
+      "bytes": 16359,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
+      "path": "results/summaries/nsc-atlas-rolling-parent-v2.json",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "d7d7711afcc2191ad63cd908fe1eabef8d309dce527dba41369df8cca5e2ea0d"
+    },
+    {
       "bytes": 20605,
       "change": "Connect scalar self-gravity and local cooling to coherent source admission in the shared atlas.",
       "changed_from_commit": "13dd344f2448352117d7bdb6b410024565eb210d",
@@ -33119,12 +33135,12 @@
       "sha256": "a61d296c8171b29191be2e58911a931efb745719f7aa17d0503f3e4ae0ac2426"
     },
     {
-      "bytes": 7277,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 13375,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "path": "scripts/check_nsc_atlas_shape_transition.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "478811369be4e5a5cd3b732ba0f809acfba1cadd8bb3110c490909433bcf9fff"
+      "sha256": "a71b25f3860bf2af70b8fb32f29def5f8aee96d3704ddf828e96a77a2a8c690a"
     },
     {
       "bytes": 6371,
@@ -38352,12 +38368,12 @@
       "sha256": "8c9093e542ed3c7323dd6e612228c480d5655575832c46001df39486445ad395"
     },
     {
-      "bytes": 12200,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 13231,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "path": "src/recursive_horizons/nsc_atlas_shape_transition.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "3a4e11ff1d8cba7e5b9d3766a6325b951ddce8307bd133bcec49543294b4cc32"
+      "sha256": "fe5ddd1f776394e41d81b7283410aef7107f2d639ce8efc875b296d3d7ddedf5"
     },
     {
       "bytes": 9176,
@@ -38421,12 +38437,12 @@
       "sha256": "89aae310406ce97a88c3f4f7ef9a3cfa504450381891dc1b2399cf5ec0b65dbf"
     },
     {
-      "bytes": 17942,
-      "change": "Join the charged parent and derive the regular shape-transition profile, shared charts, exit energy and finite recollapse; preserve separate material-flow states.",
-      "changed_from_commit": "292c742a8947e6f3c7ccce114e58546dfbf7bc8e",
+      "bytes": 23005,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
       "path": "src/recursive_horizons/nsc_atlas_sphere_flux_completion.py",
       "retention_reason": "Connected atlas calculation and publication evidence.",
-      "sha256": "3367084466d789232eb5614af4cd43e471f1a24e2474197cf1f7e91c9d197b9a"
+      "sha256": "ed348c4a808051cb6bddc6886f4e0d543d989259679e365e20137607a04f9754"
     },
     {
       "bytes": 6081,
@@ -43500,6 +43516,14 @@
       "path": "tests/test_nsc_atlas_retained_onset.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "6a0e36bd6cd942834d0a222041d8d3c8db4d45c4a5e49264980cf1f048d4be3b"
+    },
+    {
+      "bytes": 8589,
+      "change": "Derive the regular rolling-parent continuation, finite full-source controls and exact material-wall energy constraint; retain state and receiver-flux gaps.",
+      "changed_from_commit": "cd7c56db793f5eec2420223f8f9e111fe7ae5e39",
+      "path": "tests/test_nsc_atlas_rolling_parent.py",
+      "retention_reason": "Connected atlas calculation and publication evidence.",
+      "sha256": "2fd8911997d507af79fb4b78d31f594bbd9493b142a78067205684e5e1ade753"
     },
     {
       "bytes": 5566,

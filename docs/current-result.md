@@ -1,5 +1,21 @@
 # What the calculations show
 
+## Regular rolling parent and wall energy constraint, 1 November 2026
+
+The [full-source continuation](nsc-atlas-valve-formation.md#the-rolling-parent-at-the-break)
+now derives the q=2 decompactifying parent's future attractor:
+H16²=11/160, Ricci33/2 and Kretschmann363/160. Its Einstein-frame density
+tends to0 with w=-3/7; the full geometry stays nonempty and regular.
+Two distinct finite histories approach that limit, with independent
+full-source evolution agreeing within1.91e-11 in expansion rate. This
+derives a parent background, not its finite state/epoch or a child.
+The membrane identity [T(n,U)]=dot(sigma)=-6sigma U(s) fixes only the
+difference between regional fluxes, so it cannot stand in for receiver
+influx. The [compact calculation](../results/summaries/nsc-atlas-rolling-parent-v2.json)
+preserves those limits. The earlier fixed-charge recollapsing branch and
+directional cap transfer remain separate, frozen states. Physical child
+formation and all downstream empirical closures remain open.
+
 ## Connected shape transition, 1 November 2026
 
 The [formation owner](nsc-atlas-valve-formation.md#regular-shape-transition-and-derived-exit)

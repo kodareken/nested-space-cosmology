@@ -1222,3 +1222,13 @@ material-flux result. This is a finite numerical construction, not yet an
 admitted decay rate or an energy-fed black-hole child. The quantum factor
 g, physical SI ruler, topology and source selection remain open; the
 exponent is not a derived length scale.
+
+The [rolling-parent continuation](nsc-atlas-valve-formation.md#the-rolling-parent-at-the-break)
+now supplies a second exact connection: the q=2 equal-radius runaway
+approaches H16²=11/160 and full-source Ricci33/2, although its Einstein
+energy density tends to0. Both external and internal source directions
+approach the same rate. Its Einstein equation of state is -3/7, not an
+observed dark-energy result. This conditional parent attractor does not
+select a finite transition event, quantum state or SI ruler. The exact
+material-wall energy jump fixes only a flux difference; individual child
+supply still needs the coupled transition geometry and inherited state.
