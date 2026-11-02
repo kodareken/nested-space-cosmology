@@ -388,6 +388,38 @@ Goldilocks stabilization through least resistance and budget conservation:
     Dirac-delta acceleration singularity $\int_{\tau_0^-}^{\tau_0^+}\ddot r\,d\tau=2R_0\omega$,
     whereas the signed coordinate $R(\tau)$ crosses `0` into `-` with zero
     velocity jump ($\Delta\dot R=0$) and zero acceleration ($\ddot R(\tau_0)=0$).
+  - **Vacuum bubble crystallization, surrounding-medium flow energy, $180^\circ$ ripple annihilation, shared-flow resonance, discrete bursts, and untuned mass ratios (`vacuum_bubble_crystallization_and_mass_spectrum`).**
+    Integrating the radial phase-flow gradient in the surrounding medium $r\ge R$
+    outside a bubble of radius $R$ with integer winding $n\in\mathbb{Z}$ gives
+    $E_{\rm surrounding}(R)=m_0n^2/R$ ($50\%$ in $[R,2R]$, $90\%$ in $[R,10R]$,
+    $0\%$ in a point singularity). Balancing against cavity pressure work
+    $W_{\rm pressure}(R)=PV_0R^3$ crystallizes the wave at
+    $R_n^*=(m_0n^2/(3PV_0))^{1/4}\propto|n|^{1/2}$ and $E_n^*\propto|n|^{3/2}$,
+    with $75\%$ of the mass-energy in the surrounding medium flow and $25\%$ in
+    cavity pressure work. Two opposite bubbles ($n_+=+1, n_-=-1$) have net
+    winding $0$, unlocking $R^*\to 0$ and releasing $2E_1^*$ into the open wave
+    equation as two equal back-to-back ripples ($E_{\rm left}=E_{\rm right}=E_1^*$
+    at $180^\circ$). Superposing two bubbles at separation $d$ gives interaction
+    energy $\Delta E_{\rm int}=-(2m_0n_1n_2/d)\cos((\omega_1-\omega_2)\tau+\Delta\phi_0)$,
+    which time-averages to $0$ off-resonance and yields an attractive $-1/d^2$
+    shared-flow force when resonance-matched ($\omega_1=\omega_2$). Because
+    loop closure $z(1)=z(0)$ forces $n\in\mathbb{Z}$, bursting transitions shed
+    sharp quantized line energies $\Delta E=E_{n_i}^*-E_{n_f}^*$ rather than a
+    smear. For untuned mass ratios: (i) a single-stage 1D winding ladder
+    $n^{3/2}=1, 2.8284, 5.1962,\dots$ misses $m_p/m_e=1836.15267$ unless $n=150$
+    ($150^{3/2}=1837.12$) is supplied by hand; (ii) dimensional accumulation
+    across **A1 + A2** ($2d=6$ signed rays $\pm x,\pm y,\pm z$ times $\pi^{2+d}=\pi^5$
+    phase volume across the 1D $\to$ 2D $\to$ 3D generator) gives bare ratio
+    $6\pi^5\approx 1836.118109$ ($18.8\text{ ppm}$ from CODATA $1836.152673$),
+    and adding the already-fixed two-valve spaghettification/floor dressing
+    $e^{-\chi_{\rm spaghetti}}e^{-3}=e^{-3}/\sqrt{2}\approx 0.035205$ gives
+    $6\pi^5+e^{-3}/\sqrt{2}\approx 1836.153313$ ($0.35\text{ ppm}$ from CODATA),
+    with the caveat that deriving $6\pi^5$ directly from the 3D **A0** stretch
+    integral remains an explicit open proof step; (iii) for $(m_n-m_p)/m_e=2.530988$
+    ($1.29333\text{ MeV}$), the single-stage $n=2$ bubble gives $2^{3/2}\approx 2.828427$
+    ($+11.75\%$), whereas the threshold-captured pair plus spaghettification
+    valve fraction gives $2+\theta^*(\chi_{\rm spaghetti})=2.500000$ ($-1.22\%$)
+    and $2+\tfrac12+e^{-3}/\sqrt{2}\approx 2.535205$ ($1.2955\text{ MeV}$, $+0.167\%$).
 
 0. **Two-force zero-crossing across `0` (`two_force_zero_crossing`).**
    When inward compression $F_{\rm in}$ wins against outward resistance

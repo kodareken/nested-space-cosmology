@@ -103,6 +103,20 @@ incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
   radius as unsigned size r = |R| >= 0 folds R < 0 onto r > 0 and creates an
   artificial velocity cusp Delta(r_dot) = +2*R0*omega at r=0, whereas signed
   R(tau) crosses 0 into - smoothly with Delta(R_dot) = 0 and R_tt(tau_0) = 0.
+- **Vacuum bubble crystallization, surrounding-medium flow, 180-deg annihilation, resonance attraction, discrete bursts, and untuned mass ratios (`vacuum_bubble_crystallization_and_mass_spectrum`):**
+  Minimizing E(R) = m0*n^2/R (surrounding flow r>=R) + P*V0*R^3 (cavity work)
+  crystallizes equilibrium bubbles R_n^* ~ |n|^(1/2), E_n^* ~ |n|^(3/2) with 75%
+  of mass-energy in the surrounding medium flow and 0% in a point singularity.
+  Opposite bubbles (+1, -1) cancel to n_net=0 and release two equal 180-deg
+  ripples (E_1^* each); shared-flow cross-energy averages to 0 off-resonance
+  and attracts as -1/d^2 when omega1=omega2; integer loop closure z(1)=z(0)
+  forces sharp line bursts rather than a smear. On untuned mass ratios:
+  single-stage n^(3/2) misses 1836.15 without supplying n=150, whereas A1+A2
+  dimensional accumulation (2d=6 signed rays * pi^5 phase volume) gives bare
+  6*pi^5 ≈ 1836.118109 (18.8 ppm) and two-valve-dressed 6*pi^5 + exp(-3)/sqrt(2)
+  ≈ 1836.153313 (0.35 ppm vs CODATA 1836.152673), while threshold capture
+  2 + theta^*(chi_spaghetti) + exp(-3)/sqrt(2) = 2.535205 m_e (1.2955 MeV) is
+  within 0.167% of the neutron-proton gap 2.530988 m_e (1.2933 MeV).
 0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
    resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
    smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against

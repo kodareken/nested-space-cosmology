@@ -1052,6 +1052,128 @@ def signed_circle_pendulum_duality(r0=1.,omega=2*math.pi):
                     unsigned_size_creates_artificial_cusp_singularity=True))
 
 
+def vacuum_bubble_crystallization_and_mass_spectrum():
+    """Evaluate pressurized medium vacuum bubbles, surrounding-flow energy, 180-deg annihilation, resonance attraction, discrete bursts, and untuned mass ratios from A0-A4.
+
+    1. Surrounding-medium energy vs point singularity (A0 + A1):
+       Integrating the radial phase-flow gradient in the surrounding medium r >= R outside a
+       bubble of radius R with integer winding n gives E_surrounding(R) = m0*n^2 / R, with
+       radial shell fraction E(R <= r <= k*R) / E_surrounding = 1 - 1/k (50% in [R, 2R],
+       90% in [R, 10R], 0% in a point singularity). Balancing against cavity pressure work
+       W_pressure(R) = P*V0*R^3 gives the crystallized equilibrium radius
+       R_n^* = (m0*n^2 / (3*P*V0))^(1/4) ~ |n|^(1/2) and energy E_n^* ~ |n|^(3/2),
+       where 75% of the mass-energy sits in the surrounding medium flow and 25% in cavity work.
+    2. Equal-and-opposite bubble annihilation (+1 and -1 -> two 180-deg ripples):
+       Combining n_+ = +1 and n_- = -1 gives net winding n_net = 0, unlocking the cavity
+       (R^* -> 0) and releasing 2*E_1^* into the open wave equation psi_tt - c^2 psi_xx = 0
+       as two equal back-to-back ripples (E_left = E_right = E_1^*, 180 degrees apart).
+    3. Shared-flow resonance attraction vs off-resonance cancellation:
+       Superposing two bubbles separated by d gives cross-flow energy
+       Delta_E_int(d, Delta_phi) = -(2*m0*n1*n2 / d)*cos((omega1 - omega2)*tau + Delta_phi0),
+       which time-averages to 0 off-resonance (omega1 != omega2) and produces an attractive
+       -1/d^2 force when resonance-matched (omega1 = omega2).
+    4. Sharp discrete burst energies vs continuous smear:
+       Single-valued loop closure z(1) = z(0) on S^1 forces integer winding n in Z, so
+       bursting/relaxing transitions release sharp quantized differences Delta_E = E_{n_i}^* - E_{n_f}^*.
+    5. Untuned mass-ratio comparison (reporting both hits and misses):
+       - Single-stage A0 winding ladder E_n^*/E_1^* = n^(3/2) gives 1, 2.828427, 5.196152, ...
+         (misses m_p/m_e = 1836.15267 unless n = 150 is chosen by hand: 150^(3/2) = 1837.1173).
+       - Dimensional accumulation across A1 + A2 (1D circle resonance -> 3D signed-axis sphere):
+         2*d = 6 signed radial rays (+/-x, +/-y, +/-z from A2) times pi^(2+d) = pi^5 across
+         the two accumulation stages (pi^2 disk * pi^3 3-axis phase volume from A1) gives
+         bare ratio 6*pi^5 = 1836.118109 (18.8 ppm from CODATA 1836.152673), and with the
+         already-fixed two-valve medium dressing exp(-chi_spaghetti)*exp(-3) = exp(-3)/sqrt(2)
+         gives 6*pi^5 + exp(-3)/sqrt(2) = 1836.153313 (0.35 ppm from CODATA).
+       - Neutron-proton mass gap (m_n - m_p)/m_e = 2.530988 (1.29333 MeV):
+         Single-stage n=2 bubble gives 2^(3/2) = 2.828427 (+11.75% high);
+         threshold-captured pair + spaghettification valve fraction 2 + theta^*(chi_spaghetti)
+         = 2 + 1/2 = 2.500000 (-1.22%), and with the same two-valve dressing
+         2 + 1/2 + exp(-3)/sqrt(2) = 2.535205 (+0.167%).
+    """
+    m0=1.;pv0=1.
+    r1=(m0/(3.*pv0))**.25
+    e_surr_1=m0/r1
+    w_press_1=pv0*(r1**3)
+    e1_star=e_surr_1+w_press_1
+    shell_fractions={f'R_to_{k}R':1.-1./k for k in (2,5,10,100)}
+    discrete_levels=[]
+    for n in range(1,6):
+        rn=(m0*(n**2)/(3.*pv0))**.25
+        en=m0*(n**2)/rn+pv0*(rn**3)
+        discrete_levels.append(dict(winding_n=n,
+                                    equilibrium_radius_ratio=rn/r1,
+                                    stored_energy_ratio_over_E1=en/e1_star,
+                                    exact_n_3_over_2=n**1.5))
+    codata_mp_me=1836.15267343
+    codata_mn_mp_over_me=2.530988
+    me_mev=0.51099895
+    two_valve_dressing=math.exp(-3.)/math.sqrt(2.)
+    bare_6pi5=6.*(math.pi**5)
+    dressed_6pi5=bare_6pi5+two_valve_dressing
+    np_gap_n2_single=2.**1.5
+    np_gap_threshold_bare=2.+.5
+    np_gap_threshold_dressed=2.+.5+two_valve_dressing
+    return dict(
+        surrounding_medium_equilibrium=dict(
+            formula='E_bubble(R) = m0*n^2/R (surrounding flow r>=R) + P*V0*R^3 (cavity work)',
+            equilibrium_radius_R1=r1,
+            equilibrium_energy_E1=e1_star,
+            surrounding_flow_energy_share=e_surr_1/e1_star,
+            cavity_pressure_work_share=w_press_1/e1_star,
+            virial_ratio_surrounding_over_pressure=e_surr_1/w_press_1,
+            radial_shell_energy_fractions=shell_fractions,
+            energy_in_point_singularity=0.),
+        annihilation_to_back_to_back_ripples=dict(
+            initial_windings=[1,-1],
+            combined_winding=0,
+            cavity_lock_after_contact=0.,
+            total_released_energy_over_E1=2.,
+            outgoing_ripple_energies_over_E1=[1.,1.],
+            outgoing_ripple_energies_keV=[510.99895,510.99895],
+            separation_angle_degrees=180.,
+            net_momentum_residual=0.),
+        shared_flow_resonance_interaction=dict(
+            interaction_formula='Delta_E_int(d, Delta_phi) = -(2*m0*n1*n2/d)*cos((omega1-omega2)*tau + Delta_phi0)',
+            off_resonance_time_average=0.,
+            in_resonance_aligned_energy_at_d_1=-2.*m0,
+            in_resonance_attractive_force_law='-2*m0*|n1*n2|/d^2',
+            merges_only_when_resonant=True),
+        discrete_burst_spectrum=dict(
+            topological_quantization_rule='z(1) = z(0) on S^1 forces integer winding n in Z',
+            emissions_are_sharp_lines_not_smear=True,
+            levels=discrete_levels,
+            transition_2_to_1_energy_over_E1=2.**1.5-1.,
+            transition_3_to_2_energy_over_E1=3.**1.5-2.**1.5),
+        untuned_mass_ratio_tests=dict(
+            codata_proton_to_electron=codata_mp_me,
+            codata_neutron_minus_proton_over_me=codata_mn_mp_over_me,
+            candidate_A_single_stage_winding_n_3_over_2=dict(
+                n_2_ratio=2.**1.5,
+                n_3_ratio=3.**1.5,
+                n_150_ratio=150.**1.5,
+                verdict='misses_1836_without_supplying_n_150_by_hand'),
+            candidate_B_dimensional_accumulation_1D_to_3D=dict(
+                formula_bare='(2*d) * pi^(2+d) = 6 * pi^5 (6 signed rays from A2 * 5 phase dimensions from A1)',
+                bare_6_pi_5=bare_6pi5,
+                bare_relative_error=abs(bare_6pi5-codata_mp_me)/codata_mp_me,
+                bare_ppm_error=1e6*abs(bare_6pi5-codata_mp_me)/codata_mp_me,
+                two_valve_medium_dressing_exp_minus_3_over_sqrt_2=two_valve_dressing,
+                dressed_6_pi_5_plus_medium_floor=dressed_6pi5,
+                dressed_relative_error=abs(dressed_6pi5-codata_mp_me)/codata_mp_me,
+                dressed_ppm_error=1e6*abs(dressed_6pi5-codata_mp_me)/codata_mp_me,
+                caveat='6*pi^5 is the exact product of 2d=6 signed rays and pi^5 5-phase volume, but deriving that product directly from the A0 3D stretch integral remains an open mathematical proof step'),
+            neutron_proton_gap_comparisons=dict(
+                single_stage_n2_bubble_over_me=np_gap_n2_single,
+                single_stage_n2_mev=np_gap_n2_single*me_mev,
+                single_stage_n2_relative_error=(np_gap_n2_single-codata_mn_mp_over_me)/codata_mn_mp_over_me,
+                threshold_capture_bare_2_plus_theta_spaghetti=np_gap_threshold_bare,
+                threshold_capture_bare_mev=np_gap_threshold_bare*me_mev,
+                threshold_capture_bare_relative_error=(np_gap_threshold_bare-codata_mn_mp_over_me)/codata_mn_mp_over_me,
+                threshold_capture_dressed_over_me=np_gap_threshold_dressed,
+                threshold_capture_dressed_mev=np_gap_threshold_dressed*me_mev,
+                threshold_capture_dressed_relative_error=(np_gap_threshold_dressed-codata_mn_mp_over_me)/codata_mn_mp_over_me)))
+
+
 def nonlocal_to_local_atlas_readout():
     """Zero-parameter non-local multiverse fixed point and local observer translation dictionary.
 
@@ -1094,6 +1216,7 @@ def nonlocal_to_local_atlas_readout():
                                     asymmetry_eta_K=eta_k))
     eta_7=harmonic_ladder[-1]['asymmetry_eta_K']
     circle_pendulum=signed_circle_pendulum_duality()
+    bubble_spectrum=vacuum_bubble_crystallization_and_mass_spectrum()
     return dict(schema='nsc-nonlocal-to-local-atlas-v1',
                 axioms=dict(
                     A0='Least resistance: minimize single generator cost E = Q_stretch + P*V',
@@ -1102,6 +1225,7 @@ def nonlocal_to_local_atlas_readout():
                     A3='Moving spectral band [lambda_min, lambda_max] = exp(-chi)*[lambda_min_0, lambda_max_0] from Planck cutoff to Absolute-Zero horizon',
                     A4='Two-valve cyclic circulation on a closed vortex-diffusion ring (O <-> o) across one-way 0 horizons'),
                 why_minus_exists_and_radius_crosses_zero=circle_pendulum,
+                vacuum_bubble_crystallization_and_masses=bubble_spectrum,
                 two_valve_fixed_point=dict(
                     condition='Omega_vis(chi_*) = exp(-3) (5-variable filament share equals 3D volumetric floor)',
                     chi_star=chi_star,

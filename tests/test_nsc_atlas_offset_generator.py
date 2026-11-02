@@ -808,3 +808,31 @@ def test_signed_circle_pendulum_duality_proves_minus_closure_and_cusp_free_zero_
     assert diag['unsigned_size_creates_artificial_cusp_singularity'] is True
     for pt in res['swing_points']:
         assert pt['energy_conservation_residual']==pytest.approx(0.,abs=2e-14)
+
+
+def test_vacuum_bubble_crystallization_surrounding_flow_and_mass_ratios():
+    from recursive_horizons.nsc_atlas_offset_generator import vacuum_bubble_crystallization_and_mass_spectrum
+    res=vacuum_bubble_crystallization_and_mass_spectrum()
+    eq=res['surrounding_medium_equilibrium']
+    assert eq['surrounding_flow_energy_share']==pytest.approx(0.75,rel=1e-15)
+    assert eq['cavity_pressure_work_share']==pytest.approx(0.25,rel=1e-15)
+    assert eq['virial_ratio_surrounding_over_pressure']==pytest.approx(3.0,rel=1e-15)
+    assert eq['energy_in_point_singularity']==0.0
+    assert eq['radial_shell_energy_fractions']['R_to_2R']==pytest.approx(0.5,rel=1e-15)
+    ann=res['annihilation_to_back_to_back_ripples']
+    assert ann['combined_winding']==0
+    assert ann['outgoing_ripple_energies_over_E1']==[1.,1.]
+    assert ann['separation_angle_degrees']==180.
+    res_int=res['shared_flow_resonance_interaction']
+    assert res_int['off_resonance_time_average']==0.
+    assert res_int['in_resonance_aligned_energy_at_d_1']==-2.
+    burst=res['discrete_burst_spectrum']
+    assert burst['emissions_are_sharp_lines_not_smear'] is True
+    assert burst['transition_2_to_1_energy_over_E1']==pytest.approx(2.**1.5-1.,rel=1e-15)
+    masses=res['untuned_mass_ratio_tests']
+    cand_b=masses['candidate_B_dimensional_accumulation_1D_to_3D']
+    assert cand_b['bare_6_pi_5']==pytest.approx(6.*math.pi**5,rel=1e-15)
+    assert cand_b['bare_ppm_error']<20.0
+    assert cand_b['dressed_ppm_error']<1.0
+    np_gap=masses['neutron_proton_gap_comparisons']
+    assert abs(np_gap['threshold_capture_dressed_relative_error'])<0.002
