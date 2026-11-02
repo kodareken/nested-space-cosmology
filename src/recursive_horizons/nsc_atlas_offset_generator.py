@@ -619,9 +619,9 @@ def two_force_zero_crossing(offset, inward_compression_force, outward_resistance
         region='-'
         physical_radius=-r_signed
         radial_expansion_rate=-r_dot
-    potential=-f_net*r_signed
+    potential=f_net*r_signed
     kinetic=.5*r_dot**2
-    initial_total=.5*initial_velocity**2-f_net*initial_radius
+    initial_total=.5*initial_velocity**2+f_net*initial_radius
     return dict(offset=offset,
                 net_compression_force=f_net,
                 signed_radius=r_signed,
