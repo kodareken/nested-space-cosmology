@@ -663,3 +663,22 @@ def test_two_force_zero_crossing_smoothly_converts_plus_implosion_into_minus_exp
     assert minus['orientation_sign']==-1
     assert minus['jacobian_determinant_ratio']==pytest.approx(-27.,rel=2e-15)
     assert minus['conservation_residual']==pytest.approx(0.,abs=2e-15)
+
+
+def test_spaghettification_reduces_infall_to_1d_and_isoperimetric_selects_3d_sphere():
+    from recursive_horizons.nsc_atlas_offset_generator import spaghettification_to_spherical_winner
+    at_zero=spaghettification_to_spherical_winner(0.)
+    assert at_zero['infall_spaghettification']['spaghettification_aspect_ratio']==1.
+    assert at_zero['isoperimetric_spherical_winner']['deformed_isoperimetric_quotient']==1.
+    assert at_zero['cooker_volume_takeover']['child_minus_drop_fraction']==0.
+    for chi in (.25,.5,1.,2.,4.):
+        row=spaghettification_to_spherical_winner(chi)
+        inf=row['infall_spaghettification']
+        assert inf['transverse_stretch']**2*inf['radial_stretch']==pytest.approx(1.,rel=2e-15)
+        assert inf['spaghettification_aspect_ratio']==pytest.approx(math.exp(3*chi),rel=2e-15)
+        iso=row['isoperimetric_spherical_winner']
+        assert iso['deformed_isoperimetric_quotient']>1.
+        assert iso['sphere_area_saving_fraction']>0.
+    deep=spaghettification_to_spherical_winner(4.)
+    assert deep['infall_spaghettification']['normalized_deformation_diagonal'][0]<1e-5
+    assert deep['cooker_volume_takeover']['child_minus_drop_fraction']>0.99999

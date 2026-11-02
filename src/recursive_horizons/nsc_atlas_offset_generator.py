@@ -642,10 +642,66 @@ def two_force_zero_crossing(offset, inward_compression_force, outward_resistance
                 conservation_residual=(kinetic+potential)-initial_total)
 
 
+def spaghettification_to_spherical_winner(compression_chi):
+    """Recurring cycle: 3D -> 1D spaghettification on infall, 1D -> 3D sphere inside the drop.
+
+    1. Infall spaghettification (+ -> 0): A 3D parcel converging radially to
+       radius ratio xi = r/r0 = exp(-chi) has transverse stretches lambda_1=lambda_2=xi
+       (circumference 2*pi*r shrinks) and volume-preserving radial stretch
+       lambda_3 = xi^(-2) = exp(2*chi). Normalized by lambda_3, the deformation is
+       diag(xi^3, xi^3, 1) -> diag(0, 0, 1) (rank 1): spherical convergence
+       geometrically forces a 3D parcel into a 1D radial filament (spaghettification).
+    2. Isoperimetric spherical winner inside - (olive oil drop in water):
+       For fixed enclosed volume V = (4/3)*pi*R0^3, any spheroid with axial log-stretch s
+       has surface area ratio A(s)/(4*pi*R0^2) >= 1 and isoperimetric quotient
+       I(s) = A(s)^3 / (36*pi*V^2) >= 1, with strict equality uniquely at s = 0
+       (the round 3D sphere, the recurring least-resistance winner).
+    3. Pressure-cooker takeover: As enclosing compression converts parent + volume
+       V_+(chi) = V0*exp(-3*chi) into the enclosed - drop V_-(chi) = V0*(1 - exp(-3*chi)),
+       the drop's share of the cooker 1 - exp(-3*chi) expands to fill the container.
+    """
+    if not math.isfinite(compression_chi) or compression_chi<0:
+        raise ValueError('nonnegative finite compression_chi required')
+    xi=math.exp(-compression_chi)
+    lam_perp=xi
+    lam_axial=math.exp(2*compression_chi)
+    aspect=math.exp(3*compression_chi)
+    normalized_transverse=math.exp(-3*compression_chi)
+    s=compression_chi
+    if s==0:
+        area_ratio=1.
+    else:
+        ecc_sq=1-math.exp(-3*s)
+        ecc=math.sqrt(ecc_sq)
+        area_ratio=.5*(math.exp(-s)+math.exp(.5*s)*math.asin(ecc)/ecc)
+    isoperimetric_quotient=area_ratio**3
+    plus_fraction=math.exp(-3*compression_chi)
+    minus_takeover_fraction=1-plus_fraction
+    return dict(compression_chi=compression_chi,
+                infall_spaghettification=dict(
+                    radial_ratio_xi=xi,
+                    transverse_stretch=lam_perp,
+                    radial_stretch=lam_axial,
+                    spaghettification_aspect_ratio=aspect,
+                    normalized_deformation_diagonal=[normalized_transverse,normalized_transverse,1.],
+                    asymptotic_rank_at_horizon=1),
+                isoperimetric_spherical_winner=dict(
+                    deformed_area_over_sphere_area=area_ratio,
+                    deformed_isoperimetric_quotient=isoperimetric_quotient,
+                    sphere_minimum_quotient=1.,
+                    sphere_area_saving_fraction=1-1/area_ratio,
+                    unique_minimum_shape='round_3d_sphere'),
+                cooker_volume_takeover=dict(
+                    parent_plus_volume_fraction=plus_fraction,
+                    child_minus_drop_fraction=minus_takeover_fraction,
+                    minus_to_plus_volume_ratio=(minus_takeover_fraction/plus_fraction) if plus_fraction>0 else None))
+
+
 def buckling_to_goldilocks_calculation():
-    """Connected pipeline: two-force 0-crossing -> helical buckling -> damped +/0/- wave -> Goldilocks zone."""
+    """Connected pipeline: two-force 0-crossing -> spaghettification/sphere winner -> buckling -> damped wave -> Goldilocks."""
     t_h=math.sqrt(2.)
     zero_crossing_scan=[two_force_zero_crossing(t,2.,1.) for t in (0.,1.,t_h,2.,3.)]
+    recurring_winner_scan=[spaghettification_to_spherical_winner(chi) for chi in (0.,.25,.5,1.,2.)]
     buckling_scan=[helical_buckling_under_compression(chi) for chi in (0.,.25,.5,1.,2.)]
     post_buckling=helical_buckling_under_compression(1.)
     omega=2*math.pi
@@ -656,6 +712,11 @@ def buckling_to_goldilocks_calculation():
                     rule='R_tt = -(F_in - F_out) < 0; R(tau) crosses + -> 0 -> - smoothly with det(F)=(R/R0)^3 flipping sign',
                     horizon_offset=t_h,
                     scan=zero_crossing_scan),
+                stage_0b_spaghettification_and_spherical_winner=dict(
+                    infall_rule='diag(xi, xi, xi^-2)/xi^-2 = diag(xi^3, xi^3, 1) -> diag(0, 0, 1) (3D -> 1D spaghettification)',
+                    interior_winner_rule='A(s)^3 / (36*pi*V^2) >= 1 with unique global minimum at s=0 (round 3D sphere)',
+                    cooker_takeover_rule='f_minus(chi) = 1 - exp(-3*chi) -> 1 as compression continues',
+                    scan=recurring_winner_scan),
                 stage_1_helical_buckling=dict(
                     rule='E(v_perp; lambda) = Q0/sqrt(lambda^2 + v_perp^2) + P_perp v_perp^2 / 2',
                     critical_condition='lambda_crit = (Q0/P_perp)^(1/3); omega^* = sqrt(lambda_crit^2 - lambda^2)/r_perp for lambda < lambda_crit',
