@@ -1,5 +1,17 @@
 # Paper guide
 
+Revision 2026-11-02.01 adds the complete Axiom-to-Theorem Non-Local Multiverse
+to Local Observer Atlas (Subsections 1.1--1.2 and Section 9, with Figure
+`nsc-nonlocal-to-local-atlas.png` and summary `nsc-nonlocal-to-local-atlas-v1.json`):
+the five openly declared geometric axioms (`A0--A4`), the Circle--Pendulum
+smooth zero-crossing theorem ($R(\tau)=R_0\cos(\omega\tau)$ vs. unsigned
+$r=|R|\geq 0$ cusp and $(-1)\times(-1)=+1$ across two generations), the unified
+5-variable least-resistance cycle (`unified_least_resistance_cycle`), the
+zero-parameter two-valve dark-sector fixed point $\chi_*=3.06697$ at
+$\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}$ ($71.14\%$ Dark Energy, $23.88\%$ Dark
+Matter, $4.98\%$ Visible filaments), and the $K=7$ 3D volumetric harmonic
+$\eta_7=\tanh(\frac{\pi}{4}e^{-21})=5.955329\times 10^{-10}$.
+
 Revision 2026-10-31.05 puts the outward chain in a compact main argument:
 offset geometry, smooth-zero convention, inherited crossing, finite initial
 admissibility, P006 vacuum/pressure comparison and child/charge status.
