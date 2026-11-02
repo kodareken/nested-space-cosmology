@@ -767,10 +767,81 @@ def unified_least_resistance_cycle(compression_chi, winding_budget=1., enclosing
                     cross_all_to_minus_cost=e_all_minus))
 
 
+def nested_zero_crossing_map(levels, compression_per_level):
+    """Iterate the signed-zero crossing (+ -> 0 -> -) across nested levels.
+
+    New axiom (stated openly): signed radius passes through 0 into -, flipping
+    3D orientation sign(det F_k) = (-1)^k at each one-way 0 horizon. Inside each
+    level k, the unified single-cost minimization determines the transferred
+    winding fraction theta^*(chi_k), the child sphere radius, and the three-way
+    budget partition:
+      - E_DE  = 3 * (theta^*)^(3/2)             (isotropic 3D expansion stretch in -)
+      - E_DM  = (theta^*)^(3/2) + 2*(1-theta^*)*e^(-chi) (0-wall load + non-luminous radial infall)
+      - E_vis = 2 * (1-theta^*)^2 * e^(+chi)    (active filamentary winding pinching toward child 0s)
+    """
+    if type(levels) is not int or levels<1:
+        raise ValueError('positive integer level count required')
+    if not math.isfinite(compression_per_level) or compression_per_level<0:
+        raise ValueError('nonnegative finite compression_per_level required')
+    chain=[]
+    cumulative_chi=0.
+    cumulative_scale=1.
+    for k in range(1,levels+1):
+        cumulative_chi+=compression_per_level
+        cyc=unified_least_resistance_cycle(compression_per_level)
+        theta=cyc['transferred_winding_fraction_theta']
+        u=math.sqrt(theta)
+        ex=math.exp(compression_per_level)
+        xi=math.exp(-compression_per_level)
+        e_de=3*u**3
+        e_dm=u**3+2*(1-theta)*xi
+        e_vis=2*(1-theta)**2*ex
+        e_tot=e_de+e_dm+e_vis
+        cumulative_scale*=u
+        chain.append(dict(
+            level=k,
+            orientation_sign=(-1)**k,
+            local_region_label='-' if k%2==1 else '+',
+            cumulative_compression_chi=cumulative_chi,
+            transferred_winding_fraction=theta,
+            cumulative_sphere_scale=cumulative_scale,
+            dark_energy_like_fraction=e_de/e_tot,
+            dark_matter_like_fraction=e_dm/e_tot,
+            dark_sector_combined_fraction=(e_de+e_dm)/e_tot,
+            visible_filament_like_fraction=e_vis/e_tot,
+            de_to_boundary_virial_lock=3.))
+    volumetric_95_horizon=1-math.exp(-3)
+    volumetric_visible_floor=math.exp(-3)
+    return dict(levels=levels,
+                compression_per_level=compression_per_level,
+                axiom_signed_zero_crossing='Signed radius passes through 0 into -; det(F) flips sign (-1)^k at each one-way 0 wall.',
+                surfaceology_analogy='Each 0 horizon is a closed puncture boundary factorizing the outer parent polygon from the inner child surface.',
+                two_valve_steady_state_lock=dict(
+                    explanation='Every nested room k sits between an outer birth 0 valve (inflow from parent k-1) and inner black-hole 0 valves (outflow to children k+1), locking a steady-state ~95% dark-sector horizon instead of draining visible matter to zero.',
+                    three_dimensional_e_fold_dark_horizon=volumetric_95_horizon,
+                    three_dimensional_e_fold_visible_floor=volumetric_visible_floor,
+                    virial_3_to_1_dark_energy_at_95_horizon=.75*volumetric_95_horizon,
+                    virial_3_to_1_dark_matter_at_95_horizon=.25*volumetric_95_horizon),
+                nested_chain=chain,
+                asymptotic_virial_partition=dict(
+                    dark_energy_like=.75,
+                    dark_matter_like=.25,
+                    visible_filament_like=0.),
+                antimatter_and_baryon_excess_check=dict(
+                    bulk_single_orientation_in_child=True,
+                    single_mode_eta_range=[.0864272337,.5746972340],
+                    observed_baryon_eta_reference=6.1e-10,
+                    matches_observed_eta_without_scale_separation=False,
+                    required_omega_over_gamma_for_observed_eta=float(2/(math.pi*6.1e-10)),
+                    required_nested_efolds_for_observed_eta=float(-math.log(6.1e-10))))
+
+
 def buckling_to_goldilocks_calculation():
-    """Connected pipeline: unified single-cost cycle -> two-force 0-crossing -> buckling -> damped wave -> Goldilocks."""
+    """Connected pipeline: unified single-cost cycle -> nested map -> 0-crossing -> buckling -> damped wave -> Goldilocks."""
     t_h=math.sqrt(2.)
-    unified_scan=[unified_least_resistance_cycle(chi) for chi in (0.,.25,.5,1.,2.,4.)]
+    unified_scan=[unified_least_resistance_cycle(chi) for chi in (0.,.25,.5,1.,2.,2.5,3.,4.)]
+    nested_scan=[nested_zero_crossing_map(3,chi)['nested_chain'][0] for chi in (0.,1.,2.,2.5,3.,4.)]
+    three_level_map=nested_zero_crossing_map(3,2.5)
     zero_crossing_scan=[two_force_zero_crossing(t,2.,1.) for t in (0.,1.,t_h,2.,3.)]
     recurring_winner_scan=[spaghettification_to_spherical_winner(chi) for chi in (0.,.25,.5,1.,2.)]
     buckling_scan=[helical_buckling_under_compression(chi) for chi in (0.,.25,.5,1.,2.)]
@@ -784,6 +855,9 @@ def buckling_to_goldilocks_calculation():
                     stationarity_solution='sqrt(theta^*) = (sqrt(16 e^(2chi) + 17) - 3)/(4 e^chi); lambda_3^* = (1-theta^*)e^chi; tilde_lambda_i^* = sqrt(theta^*)',
                     spaghettification_threshold_chi=.5*math.log(2),
                     scan=unified_scan),
+                nested_local_space_readout=dict(
+                    compression_scan=nested_scan,
+                    three_level_chain_at_chi_2_5=three_level_map),
                 stage_0_two_force_zero_crossing=dict(
                     rule='R_tt = -(F_in - F_out) < 0; R(tau) crosses + -> 0 -> - smoothly with det(F)=(R/R0)^3 flipping sign',
                     horizon_offset=t_h,

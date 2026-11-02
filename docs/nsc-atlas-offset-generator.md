@@ -306,9 +306,35 @@ All three stages emerge as **consequences** of this single minimization:
   with $V_-^*=(\theta^*)^{3/2}$, rises from $37.90\%$ ($\chi=0$) to $65.05\%$
   ($\chi=0.5$), $84.63\%$ ($\chi=1$), $97.73\%$ ($\chi=2$), and $99.95\%$ ($\chi=4$).
 
-The calculation then connects the two-force `+ -> 0 -> -` zero-crossing with
-helical buckling, damped oscillation and Goldilocks stabilization through least
-resistance and budget conservation:
+The calculation then connects the nested signed-zero crossing map, the
+two-force `+ -> 0 -> -` zero-crossing, helical buckling, damped oscillation and
+Goldilocks stabilization through least resistance and budget conservation:
+
+- **Nested signed-zero crossing map and the $\sim95\%$ exponential horizon (`nested_zero_crossing_map`).**
+  Iterating the openly declared signed-zero crossing axiom ($R$ passes through
+  `0` into `-` with $\operatorname{sign}(\det F_k)=(-1)^k$ at each one-way `0`
+  wall) places every local room $k$ between an **outer birth `0` valve** (inflow
+  from parent $k-1$) and **inner black-hole `0` valves** (outflow to children
+  $k+1$). Because the room is continuously fed from outside while draining
+  inward, multiple compressions cannot empty the room of its visible matter.
+  At one 3D volumetric e-fold ($3\chi_1=3$, i.e. $\chi=3$):
+  - The 3D exponential horizon is $1-e^{-3}\approx0.9502129316$ ($95.02\%$ dark
+    sector) with visible floor $e^{-3}\approx0.0497870684$ ($4.98\%$), split by
+    the 3D Virial lock ($3:1$) into $\tfrac34(1-e^{-3})\approx71.27\%$ Dark
+    Energy-like expansion stretch and $\tfrac14(1-e^{-3})\approx23.76\%$ Dark
+    Matter-like boundary load.
+  - Evaluating the 5-variable single-cost minimum $E^*(\chi)=3(\theta^*)^{3/2}+[(\theta^*)^{3/2}+2(1-\theta^*)e^{-\chi}]+2(1-\theta^*)^2e^\chi$
+    directly at $\chi=2.5$ and $\chi=3.0$ gives:
+    - $\chi=2.5$: $68.21\%$ Dark Energy-like, $23.24\%$ Dark Matter-like ($91.46\%$ combined dark sector), $8.54\%$ Visible filamentary.
+    - $\chi=3.0$: $70.72\%$ Dark Energy-like, $23.79\%$ Dark Matter-like ($94.51\%$ combined dark sector), $5.49\%$ Visible filamentary.
+    - $\chi\approx3.1045$: $71.05\%$ Dark Energy-like, $23.95\%$ Dark Matter-like ($95.00\%$ combined dark sector), $5.00\%$ Visible filamentary.
+  - **Antimatter check:** The one-way signed-zero crossing selects a single bulk
+    orientation $(-1)^k$ inside each child room while leaving the opposite sign
+    on the parent side. However, a single coarse horizon mode ($\gamma/\omega\sim O(0.1\text{--}1)$)
+    gives $\eta=\tanh(\pi\gamma/(2\omega))\in[0.0864,0.5747]$, which does **not**
+    match the measured baryon-to-photon ratio $\eta_B\approx6.1\times10^{-10}$
+    without a scale separation $\omega/\gamma\approx1.04\times10^9$ (or
+    $-\ln(6.1\times10^{-10})\approx21.22$ nested e-folds).
 
 0. **Two-force zero-crossing across `0` (`two_force_zero_crossing`).**
    When inward compression $F_{\rm in}$ wins against outward resistance

@@ -714,3 +714,26 @@ def test_unified_single_cost_minimizes_all_five_variables_without_fluid_assumpti
     deep=unified_least_resistance_cycle(4.)
     assert deep['plus_infall']['filament_aspect_ratio']>79.
     assert deep['derived_cooker_takeover']['minus_volume_fraction']>0.9994
+
+
+def test_nested_zero_crossing_map_flips_orientation_and_approaches_virial_partition():
+    from recursive_horizons.nsc_atlas_offset_generator import nested_zero_crossing_map
+    res=nested_zero_crossing_map(4,3.)
+    signs=[row['orientation_sign'] for row in res['nested_chain']]
+    assert signs==[-1,1,-1,1]
+    row=res['nested_chain'][0]
+    assert row['dark_energy_like_fraction']+row['dark_matter_like_fraction']+row['visible_filament_like_fraction']==pytest.approx(1.,rel=2e-15)
+    assert .70<row['dark_energy_like_fraction']<.72
+    assert .23<row['dark_matter_like_fraction']<.25
+    assert .945<row['dark_sector_combined_fraction']<.955
+    assert .045<row['visible_filament_like_fraction']<.055
+    lock=res['two_valve_steady_state_lock']
+    assert lock['three_dimensional_e_fold_dark_horizon']==pytest.approx(1-math.exp(-3),rel=2e-15)
+    assert lock['three_dimensional_e_fold_visible_floor']==pytest.approx(math.exp(-3),rel=2e-15)
+    assert lock['virial_3_to_1_dark_energy_at_95_horizon']==pytest.approx(.75*(1-math.exp(-3)),rel=2e-15)
+    assert lock['virial_3_to_1_dark_matter_at_95_horizon']==pytest.approx(.25*(1-math.exp(-3)),rel=2e-15)
+    asym=nested_zero_crossing_map(1,8.)['nested_chain'][0]
+    assert asym['dark_energy_like_fraction']==pytest.approx(.75,abs=5e-4)
+    assert asym['dark_matter_like_fraction']==pytest.approx(.25,abs=5e-4)
+    assert asym['visible_filament_like_fraction']==pytest.approx(0.,abs=5e-4)
+    assert res['antimatter_and_baryon_excess_check']['matches_observed_eta_without_scale_separation'] is False

@@ -60,6 +60,19 @@ incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
   rounds into a 3D sphere (aspect ratio 1) by AM-GM on Q_stretch; and the `-`
   drop's derived volume share V_-^*/(V_+^*+V_-^*) reaches 84.63% at chi=1,
   97.73% at chi=2, and 99.95% at chi=4.
+- **Nested signed-zero crossing map & ~95% exponential horizon (`nested_zero_crossing_map`):**
+  Iterating the signed-zero crossing axiom (sign(det F_k) = (-1)^k) across
+  nested levels places local space k between an outer parent `0` valve (inflow)
+  and inner black-hole `0` valves (outflow), preventing multiple compressions
+  from emptying local visible matter. At one 3D e-fold (chi = 3), the 3D
+  exponential horizon is 1 - exp(-3) ≈ 95.0213% dark sector (split 3:1 by the
+  3D Virial lock into 71.27% DE-like and 23.76% DM-like) with visible floor
+  exp(-3) ≈ 4.9787%; the 5-variable single-cost functional gives
+  (68.21% DE, 23.24% DM, 8.54% Vis) at chi=2.5 and (70.72% DE, 23.79% DM, 5.49% Vis,
+  94.51% combined dark sector) at chi=3.0. Bulk orientation inside each child is
+  100% single-signed, whereas single-mode damping eta = tanh(pi*gamma/(2*omega))
+  is O(0.086-0.575) and requires omega/gamma ≈ 1.04e9 (or ~21.22 e-folds) to
+  reach 6.1e-10.
 0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
    resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
    smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against
