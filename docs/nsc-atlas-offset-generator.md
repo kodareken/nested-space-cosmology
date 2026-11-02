@@ -434,6 +434,43 @@ Goldilocks stabilization through least resistance and budget conservation:
     while projecting $T_{\rm crit}$ by the 5-variable cycle's two-valve fixed
     point $\chi_*\approx 3.06697$ ($e^{-(4/5)\chi_*}$) gives
     $T_{\rm room}(\chi_*)\approx 2.7283\text{ K}$ ($0.105\%$ from $T_{\rm CMB}=2.72548\text{ K}$).
+  - **Derived 3-accumulator volumetric bubble ladder vs. quarantined post-hoc coincidences (`derived_three_accumulator_bubble_ladder`).**
+    Iterated **A1** offset accumulation yields binomial windings $W_k(n)=\binom{n}{k}$
+    and 3D equilibrium energy $E_{\rm 3D}^*(n)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{\binom{n}{1}\binom{n}{2}\binom{n}{3}}$.
+    This proves from **A0+A1** that $n=1$ ($W_2=W_3=0$) is a 1D loop, $n=2$ ($W_3=0$)
+    is a 2D sheet, and **$n=3$ ($W_1W_2W_3=9>0$) is the minimum integer supporting
+    a 3D volume**, with untuned ratio $E_{\rm 3D}^*(3)/E_{\rm 1D}^*(1)=6$ and
+    3D ladder $3,\sqrt{96}\approx 9.80,\sqrt{500}\approx 22.36,\dots$ (which misses
+    $1836.15$ without an unproved $\pi^5$ continuum factor). Post-hoc numerical
+    coincidences (Lenz 1951 $6\pi^5+e^{-3}/\sqrt{2}$, $n\text{--}p$ gap $2+\tfrac12+e^{-3}/\sqrt{2}$,
+    rung selection $K=7$ on $\eta_K$, CMB projections using measured $H_0/G$ and
+    $-4/5$, and the $71.14\%/23.88\%/4.98\%$ split vs. $\Lambda\text{CDM}$ $68.5\%$)
+    are strictly quarantined in `numerical_coincidences_not_derived`.
+  - **Universal Exponential-Wall Bypasses, the `(1, 1, 1)` Orthogonal Triad Winner, and Hard-Core Nuclear Repulsion (`exponential_wall_bypasses_and_triad_winner`).**
+    Whenever compression or winding hits an exponential or superlinear resistance
+    wall, **A0 (Path of Least Resistance)** bypasses the wall by opening a new
+    orthogonal degree of freedom or crossing `0` into `-`:
+    1. *1D Compression Wall $\to$ Helical Buckling Plateau:* Straight 1D compression
+       costs $E_{\rm 1D}(\chi)=e^{+\chi}\to\infty$; buckling sideways into a helix
+       bypasses the wall and caps the cost at the finite plateau
+       $E_{\rm helix}^*(\chi)=\tfrac32-\tfrac12e^{-2\chi}\to 1.5$.
+    2. *3D `+` Compression Wall $\to$ Signed `0`-Crossing Plateau:* Staying in `+`
+       ($\theta=0$) costs $E_{\rm stay,+}(\chi)=2e^{+\chi}+2e^{-\chi}\to\infty$;
+       opening the `0` valve into a `-` child sphere caps the 5-variable cost at
+       the finite plateau $E_{\rm 5\text{-var}}^*(\chi)\to 4-\tfrac32e^{-\chi}\to 4.0$.
+    3. *Single-Axis Winding Wall $N^{3/2}>N$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Nuclear Hard Core:*
+       Piling $N\ge 2$ windings onto a single axis costs $N^{3/2}>N$, so windings
+       split across the 3 orthogonal axes $(n_1,n_2,n_3)\in\mathbb{Z}_{\ge 0}^3$
+       with $E^*(n_1,n_2,n_3)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{n_1n_2n_3}$. States
+       `(1,0,0)` ($N=1$) and `(1,1,0)` ($N=2$) have zero 3D volume ($V^*=0$);
+       **`(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state** ($E^*=4.0$,
+       cost per winding $4/3\approx 1.3333$, round sphere $1:1:1$); adding a 4th
+       winding forces prolate **`(2,1,1)`** ($4:1:1$, $E^*=4\sqrt{2}\approx 5.6569$,
+       cost per winding $\sqrt{2}\approx 1.4142>4/3$). Two `(1,1,1)` triads attract
+       at medium range ($d>2R^*$) via shared surrounding flow ($-2m_0/d$), reaching
+       a bound minimum $E_{\rm contact}=7.0$ at $d=2R^*$, but **strongly repel at
+       short range** against merging into `(2,2,2)` because $E^*(2,2,2)=8\sqrt{2}\approx 11.3137>2E^*(1,1,1)=8.0$
+       (hard-core barrier $+3.3137$).
 
 0. **Two-force zero-crossing across `0` (`two_force_zero_crossing`).**
    When inward compression $F_{\rm in}$ wins against outward resistance

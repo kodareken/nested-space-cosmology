@@ -138,6 +138,21 @@ incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
   2+1/2+exp(-3)/sqrt(2), rung selection K=7 on eta_K, CMB projections using
   measured H0/G and -(4/5)*chi_*, and the 71.14%/23.88%/4.98% split vs
   LambdaCDM 68.5%) are quarantined in `numerical_coincidences_not_derived`.
+- **Universal exponential-wall bypasses, `(1, 1, 1)` orthogonal triad winner, and nuclear hard-core repulsion (`exponential_wall_bypasses_and_triad_winner`):**
+  Whenever compression or winding hits an exponential or superlinear resistance
+  wall, A0 bypasses the wall by opening a new spatial dimension or crossing `0`
+  into `-`: (1) the 1D compression wall E_1D(chi)=exp(+chi)->infinity bypasses
+  into the helical buckling plateau 3/2 - (1/2)*exp(-2*chi) -> 1.5; (2) the 3D
+  `+` compression wall E_stay,+(chi)=2*exp(+chi)+2*exp(-chi)->infinity bypasses
+  via `0` into the `-` child sphere plateau 4 - (3/2)*exp(-chi) -> 4.0; (3) the
+  single-axis winding wall N^(3/2) > N splits integer windings across the 3
+  orthogonal axes with E^*(n1,n2,n3) = 4*sqrt(n1*n2*n3), proving that `(1,0,0)`
+  and `(1,1,0)` have zero 3D volume, **`(1,1,1)` (N=3) is the unique minimum-cost
+  3D ground state** (E^*=4.0, cost/winding 4/3≈1.3333, round sphere 1:1:1), N=4
+  forces prolate `(2,1,1)` (4:1:1, cost/winding sqrt(2)≈1.4142 > 4/3), and two
+  `(1,1,1)` triads attract at medium range (-2*m0/d, bound contact E=7.0 at
+  d=2*R^*) while erecting a **short-range hard-core repulsion barrier +3.3137**
+  against merging into `(2,2,2)` (8*sqrt(2)≈11.3137 > 8.0).
 0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
    resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
    smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against

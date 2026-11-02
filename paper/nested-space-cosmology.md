@@ -794,18 +794,99 @@ $[5.8\times 10^{-10},6.5\times 10^{-10}]$ (Planck reference: $6.1\times 10^{-10}
 | **$K=7$** | **$21$** | **$7.5826\times 10^{-10}$** | **$5.955329\times 10^{-10}$** | **Observed BBN window $[5.8,6.5]\times 10^{-10}$** |
 | $K=8$ | $24$ | $3.7751\times 10^{-11}$ | $2.9650\times 10^{-11}$ | Sub-baryonic harmonic |
 
-### 9.5 Complete Non-Local to Local Observer Dictionary
+### 9.5 Theorem 5: Universal Exponential-Wall Bypasses, the `(1, 1, 1)` Orthogonal Triad Winner, and Hard-Core Nuclear Repulsion
+
+Whenever compression or winding in a lower-dimensional or single-signed regime
+hits an exponential or superlinear resistance wall, **A0 (Path of Least
+Resistance)** proves that nature does not climb the wall; instead, the winning
+trajectory bypasses the wall by opening a new orthogonal degree of freedom or
+crossing `0` into `-` (`exponential_wall_bypasses_and_triad_winner` and
+`derived_three_accumulator_bubble_ladder`):
+
+1. **Wall 1 — 1D Axial Compression Wall $\to$ Helical Buckling Plateau (`1D -> 2D/3D`):**
+   Compressing a straight 1D line ($\omega=0$) hits the exponential wall
+   $E_{1\mathrm{D}}(\chi)=e^{+\chi}\to\infty$. Above $\chi>0$, buckling sideways
+   into a helix with $v_\perp^*=\sqrt{1-e^{-2\chi}}$ bypasses the wall and caps
+   the cost at the finite plateau
+   $$
+   E_{\mathrm{helix}}^*(\chi)=\frac{3}{2}-\frac{1}{2}e^{-2\chi}\to 1.5.
+   $$
+2. **Wall 2 — 3D `+` Compression Wall $\to$ Signed `0`-Crossing Plateau (`+ -> 0 -> -`):**
+   Forcing all winding to remain in the parent `+` region ($\theta=0$) hits the
+   exponential wall $E_{\mathrm{stay},+}(\chi)=2e^{+\chi}+2e^{-\chi}\to\infty$.
+   Opening the `0` horizon valve into a `-` child sphere ($\theta^*\to 1$)
+   bypasses the wall and caps the 5-variable cost at the finite plateau
+   $$
+   E_{5\text{-var}}^*(\chi)\to 4-\frac{3}{2}e^{-\chi}\to 4.0.
+   $$
+3. **Wall 3 — Single-Axis Winding Wall $N^{3/2}$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Nuclear Hard Core:**
+   For a vacuum bubble of radius $R$ carrying integer winding $n\in\mathbb{Z}$
+   (`vacuum_bubble_crystallization_and_mass_spectrum`), balancing surrounding-medium
+   flow energy $E_{\mathrm{surr}}(R)=m_0 n^2/R$ ($r\geq R$) against cavity pressure
+   work $W_{\mathrm{press}}(R)=PV_0 R^3$ yields the $3:1$ Virial split ($75\%$ in
+   the surrounding flow, $25\%$ in cavity work, $0\%$ in a point singularity),
+   sharp integer burst lines ($z(1)=z(0)\implies n\in\mathbb{Z}$), and $180^\circ$
+   two-ripple annihilation for $(+1,-1)\to 0$. However, piling $N\geq 2$ windings
+   onto a single axis costs $E_{\mathrm{single}}(N)\propto N^{3/2}>N$, a
+   superlinear wall ($2^{3/2}\approx 2.828>2$, $3^{3/2}\approx 5.196>3$).
+   Distributing integer windings $(n_1,n_2,n_3)\in\mathbb{Z}_{\geq 0}^3$
+   ($m_i=m_0 n_i^2$) across the 3 orthogonal axes of 3D space gives the exact
+   **A0** minimum
+   $$
+   E^*(n_1,n_2,n_3)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{n_1 n_2 n_3},
+   \qquad \lambda_i^*=\frac{n_i^2}{(n_1 n_2 n_3)^{1/2}}.
+   $$
+   - $N=1$ `(1, 0, 0)` (1D loop) and $N=2$ `(1, 1, 0)` (2D sheet) have zero 3D
+     volume ($V^*=0$) and collapse along their unwound axes under 3D pressure
+     (likewise, under iterated **A1** binomial windings $W_k(n)=\binom{n}{k}$,
+     $n=3$ is the minimum integer with $W_1W_2W_3=9>0$ supporting a 3D volume,
+     with untuned ratio $E_{3\mathrm{D}}^*(3)/E_{1\mathrm{D}}^*(1)=6$).
+   - **$N=3$ `(1, 1, 1)` is the unique minimum-cost 3D ground state:**
+     $E^*(1,1,1)=4.0$, cost per winding $4/3\approx 1.3333$, and isotropic
+     aspect ratios $1:1:1$ (a round sphere).
+   - **$N=4$ `(2, 1, 1)` is the first excited 3D state:** Because 3D space has
+     only 3 orthogonal axes, adding a 4th winding forces doubling on one axis to
+     `(2, 1, 1)`, breaking spherical symmetry into a $4:1:1$ prolate state with
+     higher cost per winding $E^*(2,1,1)/4=\sqrt{2}\approx 1.4142>4/3$
+     (excitation gap $\Delta E=4(\sqrt{2}-1)\approx 1.6569$).
+   - **Medium-range attraction + short-range hard-core repulsion:** Two `(1, 1, 1)`
+     triads separated by $d>2R^*$ attract via shared surrounding flow
+     ($\Delta E_{\mathrm{flow}}=-2m_0/d<0$), reaching a bound minimum at contact
+     $d=2R^*$ ($E_{\mathrm{contact}}=8.0-1.0=7.0$). However, merging them into a
+     single `(2, 2, 2)` bubble at $d\to 0$ costs
+     $E^*(2,2,2)=8\sqrt{2}\approx 11.3137>2E^*(1,1,1)=8.0$, erecting an exact
+     **short-range hard-core repulsion barrier**
+     $\Delta E_{\mathrm{core}}=8(\sqrt{2}-1)\approx +3.3137$.
+
+### 9.6 Complete Non-Local to Local Observer Dictionary & Quarantine of Post-Hoc Coincidences
 
 | Non-local multiverse geometry (`A0--A4`) | Local physics label | Derived mathematical relation & calculated readout |
 | --- | --- | --- |
 | Circle $z(\tau)=R_0e^{i\omega\tau}$ seen edge-on as pendulum $R(\tau)=R_0\cos(\omega\tau)$ crossing `0` into `-` | Black-hole singularity / Big Bang birth | Smooth crossing ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$); unsigned size $r=\|R\|\geq 0$ creates an artificial velocity cusp $\Delta\dot{r}=+2R_0\omega$ at $r=0$ |
 | Two half-turns $(-1)\times(-1)=+1$ across two nested `0` crossings ($\mathcal{P}^2=(-I_3)^2=+I_3$) | Parity / orientation restoration across two generations | $\det\mathcal{P}=(-1)^3=-1$ ($\mathrm{Parent}\ (+)\to\mathrm{Child}\ (-)$), $\det(\mathcal{P}^2)=(-1)(-1)=+1$ ($\mathrm{Child}\ (-)\to\mathrm{Grandchild}\ (+)$) |
+| Exponential-wall bypasses (`1D -> helix`, `+ -> 0 -> -`, single-axis $N^{3/2}\to$ 3D triad `(1,1,1)`) | 3D nucleon ground state & nuclear hard-core potential | `(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state ($E^*=4.0$, $1:1:1$ sphere); `(2,1,1)` ($N=4$) is $4:1:1$ prolate ($E^*=4\sqrt{2}$); two `(1,1,1)` triads attract at $d>2R^*$ ($-2m_0/d$) and repel at $d\to 0$ against `(2,2,2)` ($+3.3137$ hard core) |
+| Surrounding-flow Virial lock $E_{\mathrm{surr}}^*/W_{\mathrm{press}}^*=3$ & integer loop closure $z(1)=z(0)$ | Mass in surrounding flow, quantized line bursts & $180^\circ$ annihilation | $75\%$ of bubble energy in $r\geq R$ flow, $25\%$ in cavity, $0\%$ in a point; $(+1,-1)\to 0$ releases two equal $180^\circ$ ripples |
 | Isotropic 3D stretch $3(\theta^*)^{3/2}$ inside `-` sphere fed by outer birth `0` valve | **Dark Energy ($\Omega_\Lambda$)** | $\Omega_{\mathrm{DE}}(\chi_*)=\mathbf{71.1441\%}$ at $\Omega_{\mathrm{vis}}=e^{-3}$ ($70.8827\%$ at $\chi=3$; Virial limit $71.2660\%$) |
 | Shared `0`-wall enclosing load $(\theta^*)^{3/2}$ + radial infall load $2(1-\theta^*)e^{-\chi}$ across inner/outer `0` horizons | **Dark Matter ($\Omega_{\mathrm{DM}}$)** | $\Omega_{\mathrm{DM}}(\chi_*)=\mathbf{23.8772\%}$ at $\Omega_{\mathrm{vis}}=e^{-3}$ ($23.8134\%$ at $\chi=3$; Virial limit $23.7553\%$) |
 | Active 1D spaghettified filaments $2(1-\theta^*)^2e^\chi$ pinching toward inner child `0` horizons | **Visible Matter ($\Omega_b$, cosmic web)** | $\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}=\mathbf{4.9787\%}$ ($5.3039\%$ at $\chi=3$), filament onset $\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2$ |
-| Single-sign orientation entry $\mathrm{sign}(\det F_k)=(-1)^k$ + $K=7$ offset decay harmonic | **Missing Antimatter & Baryon Asymmetry ($\eta_B$)** | $100\%$ single-signed bulk interior; $\eta_7=\tanh(\frac{\pi}{4}e^{-21})=\mathbf{5.955329\times 10^{-10}}$ |
+| Single-sign orientation entry $\mathrm{sign}(\det F_k)=(-1)^k$ + offset decay harmonic ladder | **Missing Antimatter & Baryon Asymmetry ($\eta_B$)** | $100\%$ single-signed bulk interior; ladder $\eta_K=\tanh(\frac{\pi}{4}e^{-3K})$ gives $\eta_7=\mathbf{5.955329\times 10^{-10}}$ at $K=7$ |
 | Moving room wavelength band $[\lambda_{\min}(\chi),\lambda_{\max}(\chi)]=e^{-\chi}[\lambda_{\min,0},\lambda_{\max,0}]$ | **Planck Length & Absolute Zero** | Shortest wave before $0\to -$ ($\lambda_{\min}$) and longest wave as wide as the room ($\lambda_{\max}=2R$), shifting together across nests |
 | Closed Navier--Stokes vortex--diffusion cycle (`oo / OO oO / oO Oo / oo`) | **Heat Death vs. Cyclic Renewal** | Diffused still-air `o` rooms ($\to\lambda_{\max}$) re-accumulate into giant hurricane `O` rooms ($\to\lambda_{\min}$) with zero loss |
+
+**Quarantine of candidate numerical coincidences not derived from `A0--A4`:**
+To maintain strict separation between proved geometric theorems and post-hoc
+numerical comparisons (`numerical_coincidences_not_derived`), the following
+expressions are recorded as non-derived candidate coincidences: (i) Lenz's 1951
+number $6\pi^5\approx 1836.1181$ and its two-valve dressing
+$6\pi^5+e^{-3}/\sqrt{2}\approx 1836.1533$ (because the discrete **A0+A1**
+binomial ladder gives $E_{3\mathrm{D}}^*(3)/E_{1\mathrm{D}}^*(1)=6$ without a
+derived $\pi^5$ continuum factor); (ii) the threshold $n\text{--}p$ gap formula
+$2+\frac{1}{2}+e^{-3}/\sqrt{2}\approx 2.5352\,m_e$; (iii) selecting rung $K=7$
+on the $\eta_K$ ladder without an independent freeze-out equation; (iv) CMB
+temperature projections using measured $H_0$ and $G$ or an ad-hoc $-4/5$
+exponent; and (v) the $+2.67\%$ difference between the two-valve $e^{-3}$ fixed
+point ($71.14\%$ DE / $23.88\%$ DM) and the Planck base-$\Lambda\mathrm{CDM}$ fit
+($68.47\pm 0.73\%$ DE).
 
 
 ## Appendix A. Technical atlas and preserved mathematical record

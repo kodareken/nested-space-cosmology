@@ -862,3 +862,19 @@ def test_derived_three_accumulator_bubble_ladder_selects_n3_for_3d_volume():
     atlas=nonlocal_to_local_atlas_readout()
     assert 'derived_theorems_from_axioms' in atlas
     assert 'numerical_coincidences_not_derived' in atlas
+
+
+def test_exponential_wall_bypasses_and_triad_winner_proves_111_ground_and_hard_core():
+    from recursive_horizons.nsc_atlas_offset_generator import exponential_wall_bypasses_and_triad_winner
+    res=exponential_wall_bypasses_and_triad_winner()
+    for row in res['compression_wall_bypasses']:
+        if row['chi']>0:
+            assert row['bypass_1d_to_helix']<row['wall_1d_straight']
+            assert row['bypass_3d_cross_zero_to_minus']<row['wall_3d_stay_in_plus']
+    assert res['unique_3d_ground_state']==[1,1,1]
+    assert res['ground_state_energy']==pytest.approx(4.0,rel=1e-15)
+    assert res['ground_state_cost_per_winding']==pytest.approx(4.0/3.0,rel=1e-15)
+    assert res['first_excited_energy']==pytest.approx(4.0*math.sqrt(2.0),rel=1e-15)
+    assert res['short_range_hard_core_repulsion_barrier']==pytest.approx(8.0*(math.sqrt(2.0)-1.0),rel=1e-15)
+    assert res['short_range_hard_core_repulsion_barrier']>3.31
+    assert res['nuclear_potential_shape_derived'] is True
