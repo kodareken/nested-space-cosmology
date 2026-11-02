@@ -846,3 +846,19 @@ def test_thermodynamic_gravity_and_cmb_temperature_bridges_planck_and_horizon():
     assert 31.0<res['critical_blackbody_temperature_K']<32.0
     assert res['horizon_2d_efold_relative_error']<0.04
     assert res['two_valve_fixed_point_relative_error']<0.002
+
+
+def test_derived_three_accumulator_bubble_ladder_selects_n3_for_3d_volume():
+    from recursive_horizons.nsc_atlas_offset_generator import derived_three_accumulator_bubble_ladder, nonlocal_to_local_atlas_readout
+    res=derived_three_accumulator_bubble_ladder(6)
+    assert res['n1_is_1d_loop'] is True
+    assert res['n2_is_2d_sheet'] is True
+    assert res['minimum_n_for_3d_volume']==3
+    assert res['untuned_n3_to_n1_energy_ratio']==pytest.approx(6.0,rel=1e-15)
+    assert res['hits_3d_threshold_at_n_equals_3'] is True
+    assert res['hits_1836_without_extra_factor'] is False
+    assert res['ladder'][2]['volumetric_factor_sqrt_W1_W2_W3']==pytest.approx(3.0,rel=1e-15)
+    assert res['ladder'][3]['volumetric_factor_sqrt_W1_W2_W3']==pytest.approx(math.sqrt(96.0),rel=1e-15)
+    atlas=nonlocal_to_local_atlas_readout()
+    assert 'derived_theorems_from_axioms' in atlas
+    assert 'numerical_coincidences_not_derived' in atlas

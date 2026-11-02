@@ -1052,6 +1052,61 @@ def signed_circle_pendulum_duality(r0=1.,omega=2*math.pi):
                     unsigned_size_creates_artificial_cusp_singularity=True))
 
 
+def derived_three_accumulator_bubble_ladder(max_n=6,m0=1.,pv0=1.):
+    """Derive the untuned A0+A1 iterated-accumulator bubble ladder before comparing to data.
+
+    In A1, applying the offset accumulation operation across 3 stages produces the
+    binomial winding numbers:
+      W_1(n) = C(n, 1) = n,
+      W_2(n) = C(n, 2) = n*(n-1)/2,
+      W_3(n) = C(n, 3) = n*(n-1)*(n-2)/6,
+    with directional stretch moments m_i(n) = m0 * W_i(n)^2.
+    Minimizing the A0 3D cost E(lambda_1, lambda_2, lambda_3) = sum_i m_i/lambda_i + P*V0*lambda_1*lambda_2*lambda_3
+    yields E_3D^*(n) = 4 * (P*V0)^(1/4) * (m0)^(3/4) * sqrt(W_1(n)*W_2(n)*W_3(n)):
+      - n = 1: (W_1, W_2, W_3) = (1, 0, 0) -> W_2 = W_3 = 0 (collapses transversely to a 1D loop;
+        1D equilibrium cost E_1D^*(1) = 2*sqrt(m0*pv0)).
+      - n = 2: (W_1, W_2, W_3) = (2, 1, 0) -> W_3 = 0 (collapses in the 3rd axis to a 2D sheet).
+      - n = 3: (W_1, W_2, W_3) = (3, 3, 1) -> first integer with W_1*W_2*W_3 = 9 > 0!
+        Minimum stable 3D volumetric bubble has sqrt(W_1*W_2*W_3) = 3 and E_3D^*(3) = 12,
+        so the untuned ratio E_3D^*(3) / E_1D^*(1) = 12 / 2 = 6 (missing 1836.15 by pi^5 ≈ 306.02).
+    """
+    if type(max_n) is not int or max_n<3:raise ValueError('integer max_n >= 3 required')
+    m0=float(m0);pv0=float(pv0)
+    e_1d_n1=2.*math.sqrt(m0*pv0)
+    scale_3d=4.*(pv0**.25)*(m0**.75)
+    ladder=[]
+    for n in range(1,max_n+1):
+        w1=n
+        w2=n*(n-1)//2
+        w3=n*(n-1)*(n-2)//6
+        prod=w1*w2*w3
+        dim_support=1 if w2==0 else (2 if w3==0 else 3)
+        e_3d=scale_3d*math.sqrt(prod)
+        ladder.append(dict(
+            n=n,
+            binomial_windings=[w1,w2,w3],
+            directional_moments=[m0*(w1**2),m0*(w2**2),m0*(w3**2)],
+            supported_spatial_dimension=dim_support,
+            supports_3d_volume=(prod>0),
+            volumetric_factor_sqrt_W1_W2_W3=math.sqrt(prod),
+            equilibrium_3d_energy=e_3d,
+            ratio_over_n3_baryon=(math.sqrt(prod)/3.) if prod>0 else 0.,
+            ratio_over_n1_1d_loop=e_3d/e_1d_n1))
+    codata_mp_me=1836.15267343
+    untuned_n3_over_n1=ladder[2]['ratio_over_n1_1d_loop']
+    return dict(
+        axiom_rule='W_k(n) = C(n, k) from iterated A1 offset accumulation; E_3D^*(n) = 4*(P*V0)^(1/4)*m0^(3/4)*sqrt(W_1*W_2*W_3)',
+        n1_is_1d_loop=(ladder[0]['supported_spatial_dimension']==1),
+        n2_is_2d_sheet=(ladder[1]['supported_spatial_dimension']==2),
+        minimum_n_for_3d_volume=3,
+        untuned_n3_to_n1_energy_ratio=untuned_n3_over_n1,
+        codata_proton_to_electron=codata_mp_me,
+        missing_continuum_phase_factor_for_1836=codata_mp_me/untuned_n3_over_n1,
+        hits_3d_threshold_at_n_equals_3=True,
+        hits_1836_without_extra_factor=False,
+        ladder=ladder)
+
+
 def vacuum_bubble_crystallization_and_mass_spectrum():
     """Evaluate pressurized medium vacuum bubbles, surrounding-flow energy, 180-deg annihilation, resonance attraction, discrete bursts, and untuned mass ratios from A0-A4.
 
@@ -1264,6 +1319,7 @@ def nonlocal_to_local_atlas_readout():
                                     asymmetry_eta_K=eta_k))
     eta_7=harmonic_ladder[-1]['asymmetry_eta_K']
     circle_pendulum=signed_circle_pendulum_duality()
+    three_acc_ladder=derived_three_accumulator_bubble_ladder()
     bubble_spectrum=vacuum_bubble_crystallization_and_mass_spectrum()
     thermo_cmb=thermodynamic_gravity_and_cmb_temperature()
     return dict(schema='nsc-nonlocal-to-local-atlas-v1',
@@ -1273,6 +1329,23 @@ def nonlocal_to_local_atlas_readout():
                     A2='Signed-zero crossing (+ -> 0 -> -): edge-on projection of the closed circle R(tau)=R0*cos(omega*tau) crosses 0 into -, flipping sign(det F) = (-1)^k and turning implosion into expansion',
                     A3='Moving spectral band [lambda_min, lambda_max] = exp(-chi)*[lambda_min_0, lambda_max_0] from Planck cutoff to Absolute-Zero horizon',
                     A4='Two-valve cyclic circulation on a closed vortex-diffusion ring (O <-> o) across one-way 0 horizons'),
+                derived_theorems_from_axioms=dict(
+                    why_minus_exists_and_radius_crosses_zero=circle_pendulum,
+                    surrounding_medium_3_to_1_virial_split=bubble_spectrum['surrounding_medium_equilibrium'],
+                    integer_winding_sharp_levels=bubble_spectrum['discrete_burst_spectrum'],
+                    opposite_winding_cancellation=bubble_spectrum['annihilation_to_back_to_back_ripples'],
+                    shared_flow_resonance_interaction=bubble_spectrum['shared_flow_resonance_interaction'],
+                    three_accumulator_bubble_ladder=three_acc_ladder),
+                numerical_coincidences_not_derived=dict(
+                    note='Formulas below involve post-hoc target selection, Lenz (1951) 6*pi^5, rung selection (K=7), or external measured inputs (H0, G); quarantined from derived theorems.',
+                    lenz_6_pi_5_and_medium_dressing=bubble_spectrum['untuned_mass_ratio_tests']['candidate_B_dimensional_accumulation_1D_to_3D'],
+                    neutron_proton_gap_comparisons=bubble_spectrum['untuned_mass_ratio_tests']['neutron_proton_gap_comparisons'],
+                    k7_baryon_harmonic_rung=eta_7,
+                    cmb_temperature_projections_using_measured_H0_G=thermo_cmb,
+                    two_valve_split_at_exp_minus_3_vs_lambda_cdm=dict(
+                        derived_at_exp_minus_3=[at_star['dark_energy_like_fraction'],at_star['dark_matter_like_fraction'],at_star['visible_filament_like_fraction']],
+                        planck_base_lambda_cdm_inference=[0.6847,0.265,0.0493],
+                        de_difference_from_lambda_cdm=at_star['dark_energy_like_fraction']-0.6847)),
                 why_minus_exists_and_radius_crosses_zero=circle_pendulum,
                 vacuum_bubble_crystallization_and_masses=bubble_spectrum,
                 thermodynamic_gravity_and_cmb_bridge=thermo_cmb,

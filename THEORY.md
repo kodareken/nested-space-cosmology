@@ -67,16 +67,25 @@ offset decay as dark energy, dark matter, and matter-antimatter asymmetry.
    $\ddot R(\tau_0)=0$): **A2 (crossing `0` into `-`) is simply the edge-on shadow
    of A1's closed circle.**
 
-## Non-local multiverse state vs. local observer inference
+## Derived geometric theorems vs. quarantined numerical coincidences
 
-| Non-local geometric mechanism | Derived mathematical formula | Local observer interpretation | Calculated value |
-| --- | --- | --- | --- |
-| Isotropic 3D stretch inside `-` sphere driven by outer `0` inflow | $E_{\rm DE}=3(\theta^*)^{3/2}$ ($3:1$ Virial lock with boundary work) | **Dark Energy ($\Omega_\Lambda$)** | $71.14\%$ at $\Omega_{\rm vis}=e^{-3}$ ($70.88\%$ at $\chi=3$; $68.21\%$ at $\chi=2.5$) |
-| Shared `0`-wall enclosing load + non-luminous radial infall across inner/outer `0` punctures | $E_{\rm DM}=(\theta^*)^{3/2}+2(1-\theta^*)e^{-\chi}$ | **Dark Matter ($\Omega_{\rm DM}$)** | $23.88\%$ at $\Omega_{\rm vis}=e^{-3}$ ($23.81\%$ at $\chi=3$; $23.24\%$ at $\chi=2.5$) |
-| Un-drained transverse filamentary winding pinching toward child `0` horizons | $E_{\rm vis}=2(1-\theta^*)^2e^\chi$, locked at 3D floor $e^{-3}$ | **Visible Matter ($\Omega_b$)** | $4.98\%$ ($e^{-3}$) at $\chi_*\approx3.0670$ ($5.30\%$ at $\chi=3$) |
-| Single-sign orientation entry $\operatorname{sign}(\det F_k)=(-1)^k$ + offset decay envelope $e^{-\gamma\tau}$ across `+`/`0`/`-` | $\eta(\lambda)=\tanh\!\left(\frac{\pi}{2}\frac{\lambda}{\lambda_{\max}}\right)$, $\eta_K=\tanh\!\left(\frac{\pi}{4}e^{-3K}\right)$ | **Missing Antimatter & Baryon Excess ($\eta_B$)** | $100\%$ single-orientation interior; $\eta_7=\tanh(\frac{\pi}{4}e^{-21})\approx5.955\times10^{-10}$ (observed BBN: $5.8\text{--}6.5\times10^{-10}$) |
-| Pressurized vacuum bubble crystallization ($E(R)=m_0n^2/R+PV_0R^3$), surrounding-medium flow ($r\ge R$), and 1D-to-3D phase accumulation | $R_n^*\propto\|n\|^{1/2}$, $E_n^*\propto\|n\|^{3/2}$ ($75\%$ in surrounding medium flow, $0\%$ in a point); $2d\cdot\pi^{2+d}=6\pi^5$ | **Particle Crystallization, $511\text{ keV}$ $180^\circ$ Annihilation, & $m_p/m_e$** | $+1/-1\to 2$ equal $180^\circ$ ripples; $6\pi^5\approx 1836.1181$ ($18.8\text{ ppm}$), $6\pi^5+e^{-3}/\sqrt{2}\approx 1836.1533$ ($0.35\text{ ppm}$ vs. $1836.1527$); $(m_n-m_p)/m_e$: $2+\frac12+e^{-3}/\sqrt{2}\approx 2.5352$ vs. $2.5310$ |
-| Thermodynamic stretch between Planck top ($\ell_P, T_P$) and Absolute-Zero horizon bottom ($R_H=c/H_0, T_H=T_P/(2\pi\mathcal{B})$) | $T_{\rm geom}=\sqrt{T_P T_H}\approx 19.40\text{ K}$, $T_{\rm 2D}=\sqrt{T_P T_H}e^{-2}$, $T_{\rm room}=T_{\rm crit}e^{-\frac{4}{5}\chi_*}$ | **Thermodynamic Gravity & CMB Temperature ($T_{\rm CMB}=2.7255\text{ K}$)** | $T_{\rm 2D}\approx 2.6250\text{ K}$ ($3.69\%$); $T_{\rm crit}e^{-\frac{4}{5}\chi_*}\approx \mathbf{2.7283\text{ K}}$ ($0.105\%$ from $2.7255\text{ K}$ across $62$ orders of magnitude) |
+### 1. Genuinely derived theorems from Axioms `A0–A4`
+
+| Theorem (`nsc_atlas_offset_generator.py`) | Exact mathematical derivation | Physical meaning |
+| --- | --- | --- |
+| **Circle–Pendulum Duality (`signed_circle_pendulum_duality`)** | $R(\tau)=\operatorname{Re}(R_0e^{i\omega\tau})=R_0\cos(\omega\tau)$ crosses `0` with $\Delta\dot R=0, \ddot R(\tau_0)=0$, $\mathcal{P}^2=(-I_3)^2=+I_3$; unsigned $r=\|R\|\ge 0$ creates cusp $\Delta\dot r=+2R_0\omega$ | `0` is a smooth sign-flipping horizon; standard physics' singularity at $r=0$ is an artifact of folding $R<0$ onto $r>0$ |
+| **5-Variable Single-Cost Cycle (`unified_least_resistance_cycle`)** | $\sqrt{\theta^*}=(\sqrt{16e^{2\chi}+17}-3)/(4e^\chi)$, $\lambda_3^*=(1-\theta^*)e^\chi$, $\tilde\lambda_i^*=\sqrt{\theta^*}$ | Infalling `+` parcel shrinks ($V_+^*\to 0$) and spaghettifies ($\chi>\tfrac12\ln 2$) while `-` rounds into a 3D sphere without fluid rules |
+| **Surrounding-Flow $3:1$ Virial Split (`vacuum_bubble_crystallization_and_mass_spectrum`)** | $E_{\rm bubble}(R)=m_0n^2/R+PV_0R^3 \implies E_{\rm surr}^*/W_{\rm press}^*=3$ ($75\%$ in $r\ge R$, $25\%$ in cavity, $0\%$ in a point) | Mass-energy sits in the surrounding medium flow and cavity pressure; loop closure $z(1)=z(0)$ forces integer $n\in\mathbb{Z}$ (sharp burst lines, never a smear), and $+1/-1\to 0$ releases two equal $180^\circ$ ripples |
+| **3-Accumulator Volumetric Threshold (`derived_three_accumulator_bubble_ladder`)** | Iterated **A1** offset gives $W_k(n)=\binom{n}{k}$ and $E_{\rm 3D}^*(n)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{\binom{n}{1}\binom{n}{2}\binom{n}{3}}$ | $n=1$ ($W_2=W_3=0$) is a 1D loop; $n=2$ ($W_3=0$) is a 2D sheet; **$n=3$ ($W_1W_2W_3=9>0$) is the minimum integer that supports a 3D volume**, with untuned ratio $E_{\rm 3D}^*(3)/E_{\rm 1D}^*(1)=6$ and 3D ladder $3,\sqrt{96}\approx 9.80,\sqrt{500}\approx 22.36,\dots$ (misses $1836.15$ without a continuum $\pi^5$ factor) |
+
+### 2. Quarantined numerical coincidences (not derived from `A0–A4`)
+
+The following matches involve post-hoc formula/rung selection or external measured inputs ($H_0, G$) and are quarantined from the derived theorems:
+- **Lenz (1951) $6\pi^5$ and medium dressing:** $6\pi^5\approx 1836.1181$ ($18.8\text{ ppm}$ from $m_p/m_e=1836.1527$) and $6\pi^5+e^{-3}/\sqrt{2}\approx 1836.1533$ ($0.35\text{ ppm}$). The factor $\pi^5$ is not derived from the discrete **A0** stretch functional.
+- **Neutron–proton mass difference:** $2+\tfrac12=2.5\,m_e$ ($-1.22\%$) and $2+\tfrac12+e^{-3}/\sqrt{2}\approx 2.5352\,m_e$ ($+0.167\%$ vs. $2.5310\,m_e$).
+- **Baryon harmonic rung $K=7$:** $\eta_K=\tanh(\frac{\pi}{4}e^{-3K})$ gives $\eta_7\approx 5.955\times 10^{-10}$ at $K=7$, but the freeze-out rung $K=7$ was selected from the ladder after comparing to BBN.
+- **CMB temperature projections:** $\sqrt{T_P T_H}e^{-2}\approx 2.625\text{ K}$ and $T_{\rm crit}e^{-(4/5)\chi_*}\approx 2.728\text{ K}$ use measured $H_0$ and $G$ as inputs and an ad-hoc $-4/5$ exponent.
+- **Two-valve $e^{-3}$ dark-sector split:** Setting $\Omega_{\rm vis}(\chi_*)=e^{-3}\approx 4.98\%$ gives $71.14\%$ DE / $23.88\%$ DM, which differs from the Planck base-$\Lambda\text{CDM}$ fit ($68.47\pm 0.73\%$ DE / $26.5\%$ DM) by $+2.67\%$.
 
 ## Implementation and verification
 
