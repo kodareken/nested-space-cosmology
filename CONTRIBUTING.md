@@ -8,17 +8,17 @@ construction more explicit, reproducible and physically informative.
 
 ## Before opening a change
 
-Use the [prior-art reuse map](docs/nsc-prior-art-reuse.md). State the published
-equation or existing implementation being reused, its assumptions, and the
-specific NSC connection left to calculate. A change that merely repeats known
-mathematics or adds another passing baseline does not establish new physics.
+Start with the [foundation](THEORY.md) and [active code map](docs/active-code-map.md).
+When reusing mathematics, state the equation, its assumptions and the
+specific connection left to calculate. A change that merely repeats known
+mathematics or adds another passing baseline does not establish a new connection.
 State the decision the result can change, the smallest useful check and its
 stopping condition. Use the existing work entry; no extra tracking system is
 needed. A rerun must identify a changed dependency, failure or concrete
 unresolved concern. Apply the same scope to delegated work.
 
-1. Use [AGENTS.md](AGENTS.md) as the maintained index and read [instructions](docs/instructions.md). Update the relevant docs and index together when ownership or behavior changes.
-2. Read [docs/prior-art-and-open-claim.md](docs/prior-art-and-open-claim.md) and [docs/current-result.md](docs/current-result.md).
+1. Read [AGENTS.md](AGENTS.md) and [current instructions](docs/instructions.md). Do not edit AGENTS.md without Douglas's explicit instruction.
+2. Use [the current result](docs/current-result.md). Consult retained owners only when they supply a needed input.
 3. State whether the change is a postulate, an imported result, a repository derivation, a numerical diagnostic, an open prediction, or an interpretive hypothesis.
 4. Cite primary literature for technical factual claims. Do not present imported black-universe, Skyrme, QFT, spectral-action, or shadow-matter results as novelty.
 5. For a numerical result, include inputs, units, uncertainty treatment, code path, package versions, and an explicit failure condition.
@@ -26,33 +26,28 @@ unresolved concern. Apply the same scope to delegated work.
 
 ## Current frontier
 
-The current objective is whether specified nested surroundings produce an
-effective local response under familiar local laws
-([scientific framing](docs/instructions.md#scientific-framing-and-authority)).
-The source-fixed local incoming gate on `I=S(1)+[0.12,0.18]` remains OPEN,
-and its campaign is paused. Use
-[the current result](docs/current-result.md) for evidence and missing bounds,
-and [the paper guide](docs/papers.md) for the preserved foundational manuscript
-and the focused companion. Finite operator, Schur and recursion results are
-reusable foundations, not a work queue after compaction.
-
-Do not restore a scale root by adding an independently weighted geometric action, retuning $\Phi$ after seeing the target, or inserting a dark-matter or dark-energy function. The recursive constraint, with explicit parent normalization, is
-
-$$
-\Gamma_p(x)=K_p(x)-\frac{1}{\Omega}\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
-$$
-
-Do not restore a determinant-only root by refining the finite additive-gap family. The unit-consistent argument is $q_j=\lambda_j/\zeta+\mu^2$. Do not promote the controlled periodic-throat gap to a derived $R$, a Lorentzian nested cosmology, or an electron.
+The current frontier is the geometric offset construction and the contact
+law for opposite windings. The contraction and conditional two-output
+result are derived in the [construction owner](docs/nsc-atlas-offset-generator.md).
+The contact dynamics and output selection are open. Old campaigns and
+their specific constraints remain in the [retained library](docs/research-index.md).
+They are not a work queue after compaction.
 
 ## Verification
 
-Match verification to the change. Execution-guidance or navigation edits need
-link/provenance checks (`make check`), not fresh numerical derivations. For
+Match verification to the change. Navigation edits need link checks, not
+fresh numerical derivations. For
 scientific changes, use focused checks while developing and one integrated
 verification pass at a coherent boundary. Repeat an expensive run only after
 a relevant change, failure or unresolved concern makes it informative.
 
-From the repository root:
+The active foundation check is:
+
+```text
+python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_offset_generator.py
+```
+
+The broader historical checks are available when that work is explicitly selected:
 
 ```bash
 make verify
