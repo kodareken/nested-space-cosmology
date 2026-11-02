@@ -73,6 +73,18 @@ incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
   100% single-signed, whereas single-mode damping eta = tanh(pi*gamma/(2*omega))
   is O(0.086-0.575) and requires omega/gamma ≈ 1.04e9 (or ~21.22 e-folds) to
   reach 6.1e-10.
+- **Moving spectral band [Planck cutoff, Absolute-Zero horizon] and cyclic vortex-diffusion ring (`spectral_band_and_baryon_harmonic`, `branching_cosmos_chain_evolution`, `cyclic_vortex_diffusion_ring`):**
+  Both the longest wavelength lambda_max(chi) = lambda_max_0 * exp(-chi)
+  (Absolute Zero, as wide as the room) and the shortest wavelength before `0`
+  crosses to `-` lambda_min(chi) = lambda_min_0 * exp(-chi) (Planck cutoff)
+  shift by exp(-chi) across nests, while the spectral asymmetry curve
+  eta(lambda) = tanh((pi/2)*(lambda/lambda_max)) spans from tanh(pi/2) ≈ 0.917152
+  at the horizon mode down to 6.1e-10 at lambda_B/lambda_max ≈ 3.88338e-10
+  (~31.26 octaves below the horizon). Across generations, child black-hole
+  expansion drains the parent ('O' -> 'o') while children balloon ('o' -> 'O',
+  'Oooo -> oOOOooooooooo'), and on a closed ring ('oo / OO oO / oO Oo / oo')
+  diffused still air ('o') re-accumulates and spins back up into a giant
+  vortex ('O') with zero conservation residual.
 0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
    resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
    smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against

@@ -836,6 +836,147 @@ def nested_zero_crossing_map(levels, compression_per_level):
                     required_nested_efolds_for_observed_eta=float(-math.log(6.1e-10))))
 
 
+def spectral_band_and_baryon_harmonic(compression_chi, reference_bandwidth=1e61, target_eta=6.1e-10):
+    """Moving wavelength band [Planck cutoff, Absolute-Zero horizon] and spectral asymmetry eta(lambda).
+
+    In a room at relative compression chi, both the longest wavelength
+    lambda_max(chi) = lambda_max_0 * exp(-chi) (Absolute Zero / horizon floor,
+    as wide as the space itself) and the shortest wavelength before 0 transitions
+    to - lambda_min(chi) = lambda_min_0 * exp(-chi) (local Planck cutoff) shift
+    together by exp(-chi), while frequencies omega shift up by exp(+chi).
+    Every mode of wavelength lambda in [lambda_min(chi), lambda_max(chi)] riding
+    the room's horizon decay envelope exp(-gamma*tau) experiences half-cycle
+    damping exp(-pi*gamma/omega) = exp(-(pi/2)*(lambda/lambda_max)), giving the
+    spectral asymmetry curve:
+      eta(lambda) = tanh((pi/2) * (lambda / lambda_max)).
+    At the horizon scale lambda = lambda_max, eta = tanh(pi/2) ≈ 0.917152 (order-1
+    dark/inflationary asymmetry); at the harmonic ratio
+    lambda_B / lambda_max = (2/pi)*atanh(target_eta) ≈ 3.88338e-10, the same curve
+    yields eta(lambda_B) = target_eta (6.1e-10) well above the Planck cutoff.
+    """
+    if (not math.isfinite(compression_chi)
+            or not math.isfinite(reference_bandwidth) or reference_bandwidth<=1
+            or not math.isfinite(target_eta) or not 0<target_eta<1):
+        raise ValueError('finite compression_chi, bandwidth > 1 and target_eta in (0,1) required')
+    scale_shift=math.exp(-compression_chi)
+    freq_shift=math.exp(compression_chi)
+    lam_max=scale_shift
+    lam_min=scale_shift/reference_bandwidth
+    baryon_wavelength_ratio=(2/math.pi)*math.atanh(target_eta)
+    lam_baryon=lam_max*baryon_wavelength_ratio
+    eta_horizon=math.tanh(.5*math.pi)
+    eta_baryon=math.tanh(.5*math.pi*(lam_baryon/lam_max))
+    eta_planck=math.tanh(.5*math.pi/reference_bandwidth)
+    return dict(compression_chi=compression_chi,
+                wavelength_scale_factor=scale_shift,
+                frequency_scale_factor=freq_shift,
+                absolute_zero_max_wavelength=lam_max,
+                planck_cutoff_min_wavelength=lam_min,
+                invariant_spectral_bandwidth=reference_bandwidth,
+                baryon_harmonic_wavelength=lam_baryon,
+                baryon_to_horizon_wavelength_ratio=baryon_wavelength_ratio,
+                baryon_octaves_below_horizon=-math.log2(baryon_wavelength_ratio),
+                within_room_spectrum=(lam_min<lam_baryon<lam_max),
+                eta_at_absolute_zero_horizon=eta_horizon,
+                eta_at_baryon_harmonic=eta_baryon,
+                eta_at_planck_cutoff=eta_planck)
+
+
+def branching_cosmos_chain_evolution(generations=3, branch_factor=2, compression_per_step=2.5):
+    """Bidirectional parent-child drain and expansion ('Oooo -> oOOOooooooOOOOOO').
+
+    Tracks a branching tree of nested spaces where an expanded parent ('O') births
+    `branch_factor` child black-hole seeds ('o'). As compression chi_step drives
+    winding fraction theta^*(chi_step) across each one-way 0 valve into the children,
+    the parent is drained from 'O' into a compressed remnant 'o' (retaining 1-theta^*),
+    while the children balloon into expanded rooms 'O' and nucleate the next
+    generation of seeds, conserving total budget across the entire web.
+    """
+    if (type(generations) is not int or generations<1
+            or type(branch_factor) is not int or branch_factor<1
+            or not math.isfinite(compression_per_step) or compression_per_step<=0):
+        raise ValueError('positive integer generations and branch_factor, and positive compression_per_step required')
+    theta=unified_least_resistance_cycle(compression_per_step)['transferred_winding_fraction_theta']
+    levels=[dict(depth=0,count=1,budget_total=1.,budget_per_node=1.,state='O')]
+    history=[]
+    for step in range(1,generations+1):
+        new_levels=[]
+        spawned_budget=0.
+        spawned_count=0
+        for lvl in levels:
+            if lvl['state']=='O':
+                retained=lvl['budget_total']*(1-theta)
+                drained=lvl['budget_total']*theta
+                new_levels.append(dict(depth=lvl['depth'],count=lvl['count'],
+                                       budget_total=retained,
+                                       budget_per_node=retained/lvl['count'],
+                                       state='o'))
+                spawned_count=lvl['count']*branch_factor
+                spawned_budget=drained
+            else:
+                new_levels.append(dict(lvl))
+        new_levels.append(dict(depth=step,count=spawned_count,
+                               budget_total=spawned_budget,
+                               budget_per_node=spawned_budget/spawned_count,
+                               state='O'))
+        seed_count=spawned_count*branch_factor
+        pattern=''.join(lvl['state']*min(lvl['count'],12) for lvl in new_levels)+('o'*min(seed_count,12))
+        levels=new_levels
+        total_budget=float(sum(lvl['budget_total'] for lvl in levels))
+        history.append(dict(step=step,
+                            transferred_fraction_theta=theta,
+                            active_levels=[dict(lvl) for lvl in levels],
+                            next_nucleated_seed_count=seed_count,
+                            pattern_signature=pattern,
+                            total_budget=total_budget,
+                            conservation_residual=total_budget-1.))
+    return dict(generations=generations,
+                branch_factor=branch_factor,
+                compression_per_step=compression_per_step,
+                transferred_fraction_per_step=theta,
+                history=history)
+
+
+def cyclic_vortex_diffusion_ring(offset, node_count=8, diffusion_rate=0.25, spinup_drive=0.25, wave_speed=1.):
+    """Closed ring of vortex spin-up ('O') and diffusion into still air ('o').
+
+    Models a cyclic ring of K coupled spaces (e.g. 'oo / OO oO / oO Oo / oo')
+    where each space alternates between a concentrated hurricane vortex ('O',
+    above mean budget) and diffused still air ('o', below mean budget):
+      - With diffusion alone (spinup_drive = 0, wave_speed = 0), any hurricane
+        diffuses exponentially as exp(-lambda_1 * D * tau) into uniform dead air.
+      - When enclosing offset drive balances diffusion on the closed ring, a
+        conserved vortex wave E_j(tau) = (1/K) * [1 + A * exp((spinup_drive - D)*tau) * cos(2*pi*(j/K - wave_speed*tau))]
+        (at equilibrium spinup_drive = D) circulates around the ring: each 'O'
+        diffuses into still air 'o' by shedding into nested mini-vortices while
+        downstream still air 'o' re-accumulates and spins back up into an
+        enormous hurricane 'O', returning to the original node every tau = 1/wave_speed.
+    """
+    if (type(node_count) is not int or node_count<4
+            or not math.isfinite(offset) or offset<0
+            or not math.isfinite(diffusion_rate) or diffusion_rate<0
+            or not math.isfinite(spinup_drive) or spinup_drive<0
+            or not math.isfinite(wave_speed) or wave_speed<0):
+        raise ValueError('node_count >= 4 and nonnegative finite offset, diffusion_rate, spinup_drive, wave_speed required')
+    mean_budget=1./node_count
+    net_growth=spinup_drive-diffusion_rate
+    amp=0.8*math.exp(net_growth*offset)
+    angles=2*math.pi*(np.arange(node_count)/node_count-wave_speed*offset)
+    budgets=mean_budget*(1+amp*np.cos(angles))
+    states=['O' if b>=mean_budget else 'o' for b in budgets]
+    pure_diffusion_envelope=0.8*math.exp(-diffusion_rate*offset)
+    return dict(offset=offset,
+                node_count=node_count,
+                node_budgets=budgets.tolist(),
+                node_states=''.join(states),
+                total_budget=float(np.sum(budgets)),
+                conservation_residual=float(np.sum(budgets))-1.,
+                max_to_min_vortex_contrast=float(np.max(budgets)/np.min(budgets)) if np.min(budgets)>0 else None,
+                pure_diffusion_without_offset_envelope=pure_diffusion_envelope,
+                active_envelope=amp,
+                node_0_is_giant_hurricane=(states[0]=='O'))
+
+
 def buckling_to_goldilocks_calculation():
     """Connected pipeline: unified single-cost cycle -> nested map -> 0-crossing -> buckling -> damped wave -> Goldilocks."""
     t_h=math.sqrt(2.)
@@ -857,7 +998,10 @@ def buckling_to_goldilocks_calculation():
                     scan=unified_scan),
                 nested_local_space_readout=dict(
                     compression_scan=nested_scan,
-                    three_level_chain_at_chi_2_5=three_level_map),
+                    three_level_chain_at_chi_2_5=three_level_map,
+                    spectral_band_shift=[spectral_band_and_baryon_harmonic(chi) for chi in (-1.,0.,1.,3.)],
+                    branching_chain_evolution=branching_cosmos_chain_evolution(generations=3,branch_factor=3,compression_per_step=2.5),
+                    cyclic_vortex_ring=[cyclic_vortex_diffusion_ring(t) for t in (0.,.25,.5,.75,1.)]),
                 stage_0_two_force_zero_crossing=dict(
                     rule='R_tt = -(F_in - F_out) < 0; R(tau) crosses + -> 0 -> - smoothly with det(F)=(R/R0)^3 flipping sign',
                     horizon_offset=t_h,

@@ -328,13 +328,36 @@ Goldilocks stabilization through least resistance and budget conservation:
     - $\chi=2.5$: $68.21\%$ Dark Energy-like, $23.24\%$ Dark Matter-like ($91.46\%$ combined dark sector), $8.54\%$ Visible filamentary.
     - $\chi=3.0$: $70.72\%$ Dark Energy-like, $23.79\%$ Dark Matter-like ($94.51\%$ combined dark sector), $5.49\%$ Visible filamentary.
     - $\chi\approx3.1045$: $71.05\%$ Dark Energy-like, $23.95\%$ Dark Matter-like ($95.00\%$ combined dark sector), $5.00\%$ Visible filamentary.
-  - **Antimatter check:** The one-way signed-zero crossing selects a single bulk
-    orientation $(-1)^k$ inside each child room while leaving the opposite sign
-    on the parent side. However, a single coarse horizon mode ($\gamma/\omega\sim O(0.1\text{--}1)$)
-    gives $\eta=\tanh(\pi\gamma/(2\omega))\in[0.0864,0.5747]$, which does **not**
-    match the measured baryon-to-photon ratio $\eta_B\approx6.1\times10^{-10}$
-    without a scale separation $\omega/\gamma\approx1.04\times10^9$ (or
-    $-\ln(6.1\times10^{-10})\approx21.22$ nested e-folds).
+  - **Antimatter check and spectral band shift (`spectral_band_and_baryon_harmonic`).**
+    The one-way signed-zero crossing selects a single bulk orientation $(-1)^k$
+    inside each child room. Furthermore, each room $k$ at relative compression
+    $\chi$ has a finite wavelength band $[\lambda_{\min}(\chi),\lambda_{\max}(\chi)]=e^{-\chi}[\lambda_{\min,0},\lambda_{\max,0}]$
+    stretching from its shortest wavelength before `0` transitions to `-`
+    (the room's Planck cutoff $\lambda_{\min}$) to its longest wavelength as
+    wide as the space itself (the room's Absolute-Zero horizon $\lambda_{\max}$).
+    Both endpoints shift down by $e^{-\chi}$ inside more compressed children
+    and up by $e^{+\chi}$ in the parent, while keeping the room's dynamic range
+    $\mathcal{B}=\lambda_{\max}/\lambda_{\min}$ invariant. Every mode of
+    wavelength $\lambda\in[\lambda_{\min},\lambda_{\max}]$ riding the room's
+    horizon decay envelope $e^{-\gamma\tau}$ has half-cycle damping
+    $e^{-(\pi/2)(\lambda/\lambda_{\max})}$, giving the spectral asymmetry curve
+    $$
+    \eta(\lambda)=\tanh\!\left(\frac{\pi}{2}\frac{\lambda}{\lambda_{\max}}\right).
+    $$
+    At $\lambda=\lambda_{\max}$ (Absolute-Zero horizon), $\eta=\tanh(\pi/2)\approx0.917152$;
+    at the harmonic ratio $\lambda_B/\lambda_{\max}=(2/\pi)\operatorname{artanh}(\eta_B)\approx3.88338\times10^{-10}$
+    ($\approx31.26$ octaves below the horizon, well above the Planck cutoff),
+    the same curve yields $\eta(\lambda_B)=6.1\times10^{-10}$.
+  - **Bidirectional branching chain and cyclic vortex-diffusion ring (`branching_cosmos_chain_evolution`, `cyclic_vortex_diffusion_ring`).**
+    When an expanded parent (`O`) births $b$ child black-hole seeds (`o`),
+    transferring fraction $\theta^*(\chi)$ across the `0` valves drains the
+    parent from `O` into a compressed remnant `o` while ballooning the children
+    into expanded `O` rooms (`Oooo -> oOOOooooooooo -> ...`) with zero budget
+    loss. On a closed ring of coupled rooms (`oo / OO oO / oO Oo / oo`),
+    vortex concentration (`O`, shedding into nested mini-hurricanes toward
+    $\lambda_{\min}$) and outward diffusion into still air (`o`, relaxing toward
+    $\lambda_{\max}$) circulate around the ring so diffused air re-accumulates
+    and spins back up into an enormous hurricane `O` every full cycle.
 
 0. **Two-force zero-crossing across `0` (`two_force_zero_crossing`).**
    When inward compression $F_{\rm in}$ wins against outward resistance

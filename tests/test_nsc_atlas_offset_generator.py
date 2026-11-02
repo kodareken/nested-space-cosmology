@@ -737,3 +737,36 @@ def test_nested_zero_crossing_map_flips_orientation_and_approaches_virial_partit
     assert asym['dark_matter_like_fraction']==pytest.approx(.25,abs=5e-4)
     assert asym['visible_filament_like_fraction']==pytest.approx(0.,abs=5e-4)
     assert res['antimatter_and_baryon_excess_check']['matches_observed_eta_without_scale_separation'] is False
+
+
+def test_spectral_band_shifts_with_compression_and_reproduces_baryon_eta_inside_band():
+    from recursive_horizons.nsc_atlas_offset_generator import (
+        spectral_band_and_baryon_harmonic,branching_cosmos_chain_evolution)
+    parent=spectral_band_and_baryon_harmonic(0.)
+    child=spectral_band_and_baryon_harmonic(2.)
+    assert child['absolute_zero_max_wavelength']==pytest.approx(parent['absolute_zero_max_wavelength']*math.exp(-2.),rel=2e-15)
+    assert child['planck_cutoff_min_wavelength']==pytest.approx(parent['planck_cutoff_min_wavelength']*math.exp(-2.),rel=2e-15)
+    assert child['frequency_scale_factor']==pytest.approx(math.exp(2.),rel=2e-15)
+    assert child['within_room_spectrum'] is True
+    assert child['eta_at_baryon_harmonic']==pytest.approx(6.1e-10,rel=1e-12)
+    assert child['eta_at_absolute_zero_horizon']==pytest.approx(math.tanh(math.pi/2),rel=2e-15)
+    chain=branching_cosmos_chain_evolution(generations=3,branch_factor=3,compression_per_step=2.5)
+    assert chain['history'][0]['pattern_signature']=='oOOOooooooooo'
+    for step_row in chain['history']:
+        assert step_row['conservation_residual']==pytest.approx(0.,abs=2e-15)
+        assert step_row['active_levels'][0]['state']=='o'
+        assert step_row['active_levels'][-1]['state']=='O'
+
+
+def test_cyclic_vortex_diffusion_ring_diffuses_and_respins_into_hurricane():
+    from recursive_horizons.nsc_atlas_offset_generator import cyclic_vortex_diffusion_ring
+    start=cyclic_vortex_diffusion_ring(0.)
+    half=cyclic_vortex_diffusion_ring(.5)
+    full=cyclic_vortex_diffusion_ring(1.)
+    assert start['node_0_is_giant_hurricane'] is True
+    assert half['node_0_is_giant_hurricane'] is False
+    assert full['node_0_is_giant_hurricane'] is True
+    assert start['node_states'].count('O')==start['node_states'].count('o')==4
+    for row in (start,half,full):
+        assert row['conservation_residual']==pytest.approx(0.,abs=2e-15)
+    assert full['pure_diffusion_without_offset_envelope']<full['active_envelope']
