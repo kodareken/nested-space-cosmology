@@ -1,10 +1,10 @@
 {
-  "bytes": 22602845,
+  "bytes": 22641737,
   "metadata": "paper/metadata.json",
   "metadata_sha256": "ef6e43b1d2ff2ae3ef71cd158aef02a8b03430430520503602087eb54132c1e0",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 259,
-  "pdf_sha256": "79173c0dd1a47151be267251aa250dba921f36b126f30e86889350a5f4464f42",
+  "pages": 261,
+  "pdf_sha256": "6ae7268c0204f6134d9f2b568f6ec22b4b15daf3276714f59af16184bf425794",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -1137,7 +1137,7 @@
     },
     {
       "path": "results/summaries/nsc-nonlocal-to-local-atlas-v1.json",
-      "sha256": "90b1b2e3cde1c69ad5518b7fa13dee4eee0e8a280a834b05b9acb9acc414acef"
+      "sha256": "d557df20e981588269a91a3687c827fccaf5857aeb4ceeac071b10c8b34a958b"
     },
     {
       "path": "results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json",
@@ -1161,6 +1161,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "ddbef7ac64bb218e4becf94b1c12a2f5f4f6b15b0a9c8b75e0b26cb4ffbc6c93",
+  "source_sha256": "19f218b28200e65b1b9a38746fcd278fbafb7d2f5662683e069b93197ce64e20",
   "version": "working-2026-11-02.01"
 }

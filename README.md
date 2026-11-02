@@ -20,10 +20,11 @@ assumptions. No new manuscript edition is being produced during this reset.
 - [Code and verification](docs/active-code-map.md).
 - [Working method](docs/instructions.md).
 
-Run the focused checks with the isolated project runtime:
+Run the focused checks and the complete non-local-to-local atlas readout with the isolated project runtime:
 
 ```text
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_offset_generator.py
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --atlas-only
 ```
 
 ## Retained work

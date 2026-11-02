@@ -388,7 +388,7 @@ Goldilocks stabilization through least resistance and budget conservation:
     Dirac-delta acceleration singularity $\int_{\tau_0^-}^{\tau_0^+}\ddot r\,d\tau=2R_0\omega$,
     whereas the signed coordinate $R(\tau)$ crosses `0` into `-` with zero
     velocity jump ($\Delta\dot R=0$) and zero acceleration ($\ddot R(\tau_0)=0$).
-  - **Vacuum bubble crystallization, surrounding-medium flow energy, $180^\circ$ ripple annihilation, shared-flow resonance, discrete bursts, and untuned mass ratios (`vacuum_bubble_crystallization_and_mass_spectrum`).**
+  - **Vacuum bubble crystallization, surrounding-medium flow energy, $180^\circ$ ripple annihilation, shared-flow resonance, and discrete bursts (`vacuum_bubble_crystallization_and_mass_spectrum`).**
     Integrating the radial phase-flow gradient in the surrounding medium $r\ge R$
     outside a bubble of radius $R$ with integer winding $n\in\mathbb{Z}$ gives
     $E_{\rm surrounding}(R)=m_0n^2/R$ ($50\%$ in $[R,2R]$, $90\%$ in $[R,10R]$,
@@ -405,46 +405,19 @@ Goldilocks stabilization through least resistance and budget conservation:
     shared-flow force when resonance-matched ($\omega_1=\omega_2$). Because
     loop closure $z(1)=z(0)$ forces $n\in\mathbb{Z}$, bursting transitions shed
     sharp quantized line energies $\Delta E=E_{n_i}^*-E_{n_f}^*$ rather than a
-    smear. For untuned mass ratios: (i) a single-stage 1D winding ladder
-    $n^{3/2}=1, 2.8284, 5.1962,\dots$ misses $m_p/m_e=1836.15267$ unless $n=150$
-    ($150^{3/2}=1837.12$) is supplied by hand; (ii) dimensional accumulation
-    across **A1 + A2** ($2d=6$ signed rays $\pm x,\pm y,\pm z$ times $\pi^{2+d}=\pi^5$
-    phase volume across the 1D $\to$ 2D $\to$ 3D generator) gives bare ratio
-    $6\pi^5\approx 1836.118109$ ($18.8\text{ ppm}$ from CODATA $1836.152673$),
-    and adding the already-fixed two-valve spaghettification/floor dressing
-    $e^{-\chi_{\rm spaghetti}}e^{-3}=e^{-3}/\sqrt{2}\approx 0.035205$ gives
-    $6\pi^5+e^{-3}/\sqrt{2}\approx 1836.153313$ ($0.35\text{ ppm}$ from CODATA),
-    with the caveat that deriving $6\pi^5$ directly from the 3D **A0** stretch
-    integral remains an explicit open proof step; (iii) for $(m_n-m_p)/m_e=2.530988$
-    ($1.29333\text{ MeV}$), the single-stage $n=2$ bubble gives $2^{3/2}\approx 2.828427$
-    ($+11.75\%$), whereas the threshold-captured pair plus spaghettification
-    valve fraction gives $2+\theta^*(\chi_{\rm spaghetti})=2.500000$ ($-1.22\%$)
-    and $2+\tfrac12+e^{-3}/\sqrt{2}\approx 2.535205$ ($1.2955\text{ MeV}$, $+0.167\%$).
-  - **Thermodynamic gravity and the Planck-to-Absolute-Zero CMB temperature bridge (`thermodynamic_gravity_and_cmb_temperature`).**
-    Stretching the room between its Planck cutoff ($\ell_P=1.616255\times 10^{-35}\text{ m}$,
-    $T_P=1.416784\times 10^{32}\text{ K}$) and its Hubble/Absolute-Zero horizon
-    ($R_H=c/H_0\approx 1.3725\times 10^{26}\text{ m}$, $\mathcal{B}=R_H/\ell_P\approx 8.4918\times 10^{60}$,
-    horizon temperature $T_H=T_P/(2\pi\mathcal{B})\approx 2.6554\times 10^{-30}\text{ K}$)
-    places 3D horizon curvature energy density $\rho\propto(\ell_P/R_H)^2$ in
-    balance with 3D thermal radiation $\rho\propto(T/T_P)^4$, so the room
-    temperature scales as the geometric mean $\sqrt{T_P T_H}=T_P/\sqrt{2\pi\mathcal{B}}\approx 19.3960\text{ K}$
-    (critical Friedmann--Stefan--Boltzmann temperature $T_{\rm crit}=T_P(45/(8\pi^3))^{1/4}/\sqrt{\mathcal{B}}\approx 31.7301\text{ K}$).
-    Projecting across the 2D horizon surface e-fold $e^{-2}$ gives
-    $T_{\rm geom}e^{-2}\approx 2.6250\text{ K}$ ($3.69\%$ from $2.72548\text{ K}$),
-    while projecting $T_{\rm crit}$ by the 5-variable cycle's two-valve fixed
-    point $\chi_*\approx 3.06697$ ($e^{-(4/5)\chi_*}$) gives
-    $T_{\rm room}(\chi_*)\approx 2.7283\text{ K}$ ($0.105\%$ from $T_{\rm CMB}=2.72548\text{ K}$).
+    smear.
   - **Derived 3-accumulator volumetric bubble ladder vs. quarantined post-hoc coincidences (`derived_three_accumulator_bubble_ladder`).**
     Iterated **A1** offset accumulation yields binomial windings $W_k(n)=\binom{n}{k}$
     and 3D equilibrium energy $E_{\rm 3D}^*(n)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{\binom{n}{1}\binom{n}{2}\binom{n}{3}}$.
     This proves from **A0+A1** that $n=1$ ($W_2=W_3=0$) is a 1D loop, $n=2$ ($W_3=0$)
     is a 2D sheet, and **$n=3$ ($W_1W_2W_3=9>0$) is the minimum integer supporting
     a 3D volume**, with untuned ratio $E_{\rm 3D}^*(3)/E_{\rm 1D}^*(1)=6$ and
-    3D ladder $3,\sqrt{96}\approx 9.80,\sqrt{500}\approx 22.36,\dots$ (which misses
-    $1836.15$ without an unproved $\pi^5$ continuum factor). Post-hoc numerical
-    coincidences (Lenz 1951 $6\pi^5+e^{-3}/\sqrt{2}$, $n\text{--}p$ gap $2+\tfrac12+e^{-3}/\sqrt{2}$,
-    rung selection $K=7$ on $\eta_K$, CMB projections using measured $H_0/G$ and
-    $-4/5$, and the $71.14\%/23.88\%/4.98\%$ split vs. $\Lambda\text{CDM}$ $68.5\%$)
+    3D ladder $1\text{ (1D)}:6:19.60:44.72:84.85$ (which misses $1836.15$ by
+    $\approx 306.03\times$ without a continuum/nesting scale factor). Post-hoc
+    numerical coincidences (Lenz 1951 $6\pi^5+e^{-3}/\sqrt{2}$, $n\text{--}p$ gap
+    $2+\tfrac12+e^{-3}/\sqrt{2}$, rung selection $K=7$ on $\eta_K$, CMB projections
+    using measured $H_0/G$ and $-4/5$ in `thermodynamic_gravity_and_cmb_temperature`,
+    and the $71.14\%/23.88\%/4.98\%$ split vs. $\Lambda\text{CDM}$ $68.5\%$)
     are strictly quarantined in `numerical_coincidences_not_derived`.
   - **Universal Exponential-Wall Bypasses, the `(1, 1, 1)` Orthogonal Triad Winner, and Hard-Core Nuclear Repulsion (`exponential_wall_bypasses_and_triad_winner`).**
     Whenever compression or winding hits an exponential or superlinear resistance

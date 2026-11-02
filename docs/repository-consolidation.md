@@ -12,9 +12,12 @@ paths and numerical evidence are unchanged. All of that evidence remains
 available through explicit paths and Git.
 
 399 ignored Grok job files and loose page previews were moved from the
-top of `.build` to `.research-reset-preservation/20261102-desk`. No scientific
-raw arrays, environment, source code or results were deleted. The previous
-PDF remains unchanged; its unfinished source revision is saved, not built.
+top of `.build` to `.research-reset-preservation/20261102-desk`, followed by
+1,126 remaining loose scratch files and 130 preview directories from `.build`
+and `paper/.build` archived into
+`.research-reset-preservation/20261102-desk/build-archive` (leaving `.build/data`
+intact and removing empty untracked `lit/` and `recon/` directories). No scientific
+raw arrays, environment, source code or results were deleted.
 
 The sole active root is `nested-space-cosmology`. Code, scripts, tests, notes
 and retained evidence live directly in `src`, `scripts`, `tests`, `docs` and

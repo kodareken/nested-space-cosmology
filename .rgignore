@@ -5,6 +5,8 @@
 /results/
 /paper/
 /THEORY-history-20261102.md
+/PUBLICATION-PROVENANCE.json
+/requirements-history.txt
 /docs/*
 !/docs/README.md
 !/docs/instructions.md
@@ -15,6 +17,7 @@
 /scripts/*
 !/scripts/run_python.py
 !/scripts/check_nsc_atlas_offset_generator.py
+!/scripts/plot_nsc_nonlocal_to_local_atlas.py
 /src/recursive_horizons/*
 !/src/recursive_horizons/__init__.py
 !/src/recursive_horizons/nsc_atlas_offset_generator.py

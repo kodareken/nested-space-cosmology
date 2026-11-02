@@ -103,41 +103,26 @@ incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
   radius as unsigned size r = |R| >= 0 folds R < 0 onto r > 0 and creates an
   artificial velocity cusp Delta(r_dot) = +2*R0*omega at r=0, whereas signed
   R(tau) crosses 0 into - smoothly with Delta(R_dot) = 0 and R_tt(tau_0) = 0.
-- **Vacuum bubble crystallization, surrounding-medium flow, 180-deg annihilation, resonance attraction, discrete bursts, and untuned mass ratios (`vacuum_bubble_crystallization_and_mass_spectrum`):**
+- **Vacuum bubble crystallization, surrounding-medium flow, 180-deg annihilation, resonance attraction, and discrete bursts (`vacuum_bubble_crystallization_and_mass_spectrum`):**
   Minimizing E(R) = m0*n^2/R (surrounding flow r>=R) + P*V0*R^3 (cavity work)
   crystallizes equilibrium bubbles R_n^* ~ |n|^(1/2), E_n^* ~ |n|^(3/2) with 75%
   of mass-energy in the surrounding medium flow and 0% in a point singularity.
   Opposite bubbles (+1, -1) cancel to n_net=0 and release two equal 180-deg
   ripples (E_1^* each); shared-flow cross-energy averages to 0 off-resonance
   and attracts as -1/d^2 when omega1=omega2; integer loop closure z(1)=z(0)
-  forces sharp line bursts rather than a smear. On untuned mass ratios:
-  single-stage n^(3/2) misses 1836.15 without supplying n=150, whereas A1+A2
-  dimensional accumulation (2d=6 signed rays * pi^5 phase volume) gives bare
-  6*pi^5 ≈ 1836.118109 (18.8 ppm) and two-valve-dressed 6*pi^5 + exp(-3)/sqrt(2)
-  ≈ 1836.153313 (0.35 ppm vs CODATA 1836.152673), while threshold capture
-  2 + theta^*(chi_spaghetti) + exp(-3)/sqrt(2) = 2.535205 m_e (1.2955 MeV) is
-  within 0.167% of the neutron-proton gap 2.530988 m_e (1.2933 MeV).
-- **Thermodynamic gravity and the Planck-to-Absolute-Zero CMB temperature bridge (`thermodynamic_gravity_and_cmb_temperature`):**
-  Between the Planck cutoff (l_P = 1.616255e-35 m, T_P = 1.416784e32 K) and the
-  Absolute-Zero horizon (R_H = c/H0 ≈ 1.3725e26 m, B = R_H/l_P ≈ 8.4918e60,
-  T_H = T_P/(2*pi*B) ≈ 2.6554e-30 K), balancing 3D horizon curvature density
-  ~(l_P/R_H)^2 with 3D thermal density ~(T/T_P)^4 gives geometric-mean
-  temperature sqrt(T_P * T_H) ≈ 19.3960 K and critical blackbody temperature
-  T_crit ≈ 31.7301 K. Applying the 2D surface e-fold exp(-2) gives
-  sqrt(T_P*T_H)*exp(-2) ≈ 2.6250 K (within 3.69% of 2.7255 K), while applying
-  the 5-variable cycle's two-valve fixed point exp(-(4/5)*chi_*) gives
-  T_crit*exp(-(4/5)*chi_*) ≈ 2.7283 K (within 0.105% of measured T_CMB = 2.72548 K).
+  forces sharp line bursts rather than a smear.
 - **Derived 3-accumulator volumetric bubble ladder vs. quarantined numerical coincidences (`derived_three_accumulator_bubble_ladder`):**
   Iterated A1 offset accumulation yields binomial windings W_k(n) = C(n, k) and
   3D equilibrium energy E_3D^*(n) = 4*(P*V0)^(1/4)*m0^(3/4)*sqrt(C(n,1)*C(n,2)*C(n,3)).
   This proves that n=1 (W_2=W_3=0) is a 1D loop, n=2 (W_3=0) is a 2D sheet, and
   n=3 (W_1*W_2*W_3=9>0) is the minimum integer supporting a 3D volume, with
-  untuned ratio E_3D^*(3)/E_1D^*(1) = 6 and 3D ladder 3, sqrt(96)≈9.80,
-  sqrt(500)≈22.36 (which misses 1836.15 without an unproved pi^5 continuum
-  factor). Post-hoc matches (Lenz 1951 6*pi^5 + exp(-3)/sqrt(2), n-p gap
+  untuned ratio E_3D^*(3)/E_1D^*(1) = 6 and 3D ladder 1 (1D) : 6 : 19.60 : 44.72 : 84.85
+  (missing 1836.15 by ~306.03x without a continuum/nesting scale factor).
+  Post-hoc numerical coincidences (Lenz 1951 6*pi^5 + exp(-3)/sqrt(2), n-p gap
   2+1/2+exp(-3)/sqrt(2), rung selection K=7 on eta_K, CMB projections using
-  measured H0/G and -(4/5)*chi_*, and the 71.14%/23.88%/4.98% split vs
-  LambdaCDM 68.5%) are quarantined in `numerical_coincidences_not_derived`.
+  measured H0/G and -(4/5)*chi_* in `thermodynamic_gravity_and_cmb_temperature`,
+  and the 71.14%/23.88%/4.98% split vs LambdaCDM 68.5%) are strictly quarantined
+  in `numerical_coincidences_not_derived`.
 - **Universal exponential-wall bypasses, `(1, 1, 1)` orthogonal triad winner, and nuclear hard-core repulsion (`exponential_wall_bypasses_and_triad_winner`):**
   Whenever compression or winding hits an exponential or superlinear resistance
   wall, A0 bypasses the wall by opening a new spatial dimension or crossing `0`

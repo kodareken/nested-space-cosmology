@@ -17,6 +17,8 @@ scale, shape, least-resistance and break-continuation comparisons.
 `unified_least_resistance_cycle`, `nested_zero_crossing_map`,
 `spectral_band_and_baryon_harmonic`, `branching_cosmos_chain_evolution`,
 `cyclic_vortex_diffusion_ring`, `signed_circle_pendulum_duality`,
+`derived_three_accumulator_bubble_ladder`,
+`exponential_wall_bypasses_and_triad_winner`,
 `vacuum_bubble_crystallization_and_mass_spectrum`,
 `thermodynamic_gravity_and_cmb_temperature`,
 `nonlocal_to_local_atlas_readout`, `two_force_zero_crossing`,
@@ -24,8 +26,10 @@ scale, shape, least-resistance and break-continuation comparisons.
 `damped_horizon_oscillation` and `buckling_to_goldilocks_calculation` connect
 the single-cost 5-variable cycle, nested `+ -> 0 -> -` local-space readout,
 moving Planck-to-Absolute-Zero spectral band, branching `Oooo -> oOOO...` chain
-and cyclic vortex-diffusion ring, circle-pendulum `+ -> 0 -> -` duality and
-non-local to local Atlas fixed-point and K=7 harmonic readout (`--atlas-only`),
+and cyclic vortex-diffusion ring, circle-pendulum `+ -> 0 -> -` duality,
+3-accumulator binomial volumetric threshold (`n=3`), universal exponential-wall
+bypasses and `(1,1,1)` triad ground-state/hard-core theorem, and
+non-local to local Atlas fixed-point readout (`--atlas-only`),
 two-force zero-crossing, axial compression buckling (omega^* > 0), conservative
 `+`/`0`/`-` damped wave transfer (eta = tanh(pi*gamma/(2*omega))), and
 Goldilocks child equilibration (`--buckling-only`).
@@ -34,7 +38,8 @@ Goldilocks child equilibration (`--buckling-only`).
 | --- | --- |
 | Offset history, distance kernel and winding geometry | `src/recursive_horizons/nsc_atlas_offset_generator.py` |
 | Independent geometric and symbolic controls | `tests/test_nsc_atlas_offset_generator.py` |
-| Existing finite-coverage calculation | `scripts/check_nsc_atlas_offset_generator.py` |
+| Existing finite-coverage calculation and `--atlas-only` CLI | `scripts/check_nsc_atlas_offset_generator.py` |
+| Non-local-to-local Atlas figure and JSON generator | `scripts/plot_nsc_nonlocal_to_local_atlas.py` |
 | Isolated scientific runtime | `scripts/run_python.py` |
 | Derivation and explicit assumptions | [Offset construction](nsc-atlas-offset-generator.md) |
 
