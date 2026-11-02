@@ -84,6 +84,112 @@ what can distinguish this construction from a change of names. No 511 keV
 scale, electron charge or matter excess has been derived here. Integer
 winding is conditional on the circle target; it is not a charge assignment.
 
+## Conservative contact evolution, 2 November 2026
+
+The preceding contraction supplies a path but not its motion or a receiver.
+Three distinct choices were considered: prescribing h directly, descending
+Q by a geometric gradient, and giving the same circle phase conservative
+inertial motion. The first prescribes the history; the second dissipates Q
+without specifying a receiver. The third permits a closed transfer ledger
+and an explicit open/closed comparison, so it is the worked candidate here.
+
+### The added rule and its exact solution
+
+Write Z=R exp(i psi). Its squared spatial variation is
+Q=(R^2/2) integral psi_x^2 dx. **Add** geometric inertia using the same
+circle metric: K=(R^2/2) integral psi_tau^2 dx. Stationarity of the
+integral of K-Q, with fixed variation at the endpoints, gives
+
+$$
+\psi_{\tau\tau}=\psi_{xx}.
+$$
+
+This equation is derived from that newly declared local quadratic
+inertial rule, not from the offset recurrence or from boundary minimization
+alone. A ratio of inertia and spatial coefficients can be absorbed into
+the dimensionless tau unit; no physical propagation speed or duration is
+thereby predicted. No new field species, potential or observed scale is used.
+
+Let g(x)=2 pi m f(x), with the triangular f above. Start with psi(x,0)=g(x)
+and psi_tau(x,0)=0. Compare two drawing-coordinate continuations: extend g
+by zero outside [0,2], or identify that interval periodically. These are
+different domain assumptions for the SAME circle-valued target.
+For either continuation the exact weak solution is
+
+$$
+\psi(x,\tau)=\tfrac12[g(x-\tau)+g(x+\tau)].
+$$
+
+The moving corners have finite energy and need no singularity cutoff.
+Derivatives exist almost everywhere; integrals are evaluated separately
+on their exact intervals. The two characteristics are derived from the
+second-order equation. Equal amounts follow from zero initial velocity;
+they are not selected by opposite winding alone.
+
+### Where the variation goes
+
+The local conserved density and flux are
+
+$$
+e=\frac{R^2}{2}(\psi_\tau^2+\psi_x^2),\qquad
+j=-R^2\psi_\tau\psi_x,\qquad
+\partial_\tau e+\partial_x j=0.
+$$
+
+Equivalently, e=e_right+e_left and j=e_right-e_left, with
+e_right=(R^2/4)g'(x-tau)^2 and e_left=(R^2/4)g'(x+tau)^2.
+Each integrates to 2 pi^2 R^2 m^2: exactly half the initial budget.
+These are geometric conserved amounts, not calibrated joules.
+
+For R=m=1, the initial total is 39.4784176044:
+
+| Domain | Offset | Spatial Q | Inertial K | Total |
+| --- | --- | --- | --- | --- |
+| Open | 0 | 39.4784176044 | 0 | 39.4784176044 |
+| Open | 1/2 | 9.8696044011 | 29.6088132033 | 39.4784176044 |
+| Open | 1 | 19.7392088022 | 19.7392088022 | 39.4784176044 |
+| Periodic | 1/2 | 0 | 39.4784176044 | 39.4784176044 |
+| Periodic | 2 | 39.4784176044 | 0 | 39.4784176044 |
+
+On the open line, the supports [tau,2+tau] and [-tau,2-tau] separate
+at tau=1. Each outgoing packet carries 19.7392088022, with j=+e or j=-e.
+Across each end of the original drawing interval [0,2], the outward
+flux is pi^2 R^2 m^2 for 0<tau<2 and zero afterward, apart from corner
+representatives that do not affect integrals. Thus the explicitly receiving
+left and right intervals each acquire
+
+$$
+B_{\rm left}=B_{\rm right}=\pi^2R^2m^2\min(\tau,2),\qquad
+B_{[0,2]}=4\pi^2R^2m^2-2B_{\rm left}.
+$$
+
+At tau=2 the original interval is empty of this geometric budget and each
+receiving side holds exactly half. Direct boundary-flux and spatial
+integration independently check these identities. These drawing-domain
+boundaries are not being identified with the black-hole horizon (0).
+Every fixed bounded interval eventually clears. The opposite propagation
+directions have angle 180 degrees if read along a straight spatial axis;
+the solution alone does not identify that axis or a three-dimensional
+detector embedding.
+
+On the periodic coordinate, psi is constant at tau=1/2 but its velocity
+is not. Zero spatial variation is not zero total budget. The full initial
+state recurs at tau=2: no irreversible drain or child has been produced.
+This applies the continuation question concretely: changing the domain
+changes where the conserved amount can go, rather than erasing it at a
+flat drawing. Neither continuation has been derived to be an event horizon.
+
+Reproduce without files or the conditional parent:
+
+```text
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --transport-only
+```
+
+**Next connection:** select the inertial contact rule, initial velocity and
+receiving geometry from the offset construction. The present result is an
+exact conditional transfer mechanism. Its 1:1 ratio and opposite directions
+do not establish electron/positron identification or the 511 keV scale.
+
 ## Retained offset-history construction
 
 Douglas's starting proposal is one spatial seed plus an offset operation,

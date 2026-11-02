@@ -49,6 +49,98 @@ def balanced_output_directions(count):
     return np.c_[np.cos(angles), np.sin(angles), np.zeros(count)]
 
 
+def winding_transport(position, offset, turns=1, radius=1., closed=False):
+    """Exact conservative phase motion, conditional on geometric inertia.
+
+    The new rule is phase_tt=phase_xx in normalized offset units, with
+    initial phase equal to the joined winding lift and zero initial velocity.
+    closed=True identifies x modulo 2; otherwise the lift is zero outside
+    [0,2]. The circle target remains the same in either case. Derivatives
+    at the finitely many moving corners are assigned representatives only.
+    """
+    opposite_winding_path(0., 0., turns, radius)
+    if not math.isfinite(offset) or offset < 0:
+        raise ValueError('finite nonnegative offset required')
+    if type(closed) is not bool:
+        raise ValueError('closed must explicitly be a boolean')
+    x = np.asarray(position, dtype=float)
+    if not np.all(np.isfinite(x)):
+        raise ValueError('finite drawing coordinates required')
+    t = offset % 2 if closed else offset
+
+    def lift_and_slope(y):
+        y = np.remainder(y, 2) if closed else y
+        lift = 2*np.pi*turns*np.maximum(0, np.minimum(y, 2-y))
+        slope = 2*np.pi*turns*np.where((y > 0) & (y < 1), 1.,
+                                     np.where((y > 1) & (y < 2), -1., 0.))
+        return lift, slope
+
+    right, right_slope = lift_and_slope(x-t)
+    left, left_slope = lift_and_slope(x+t)
+    phase = (right+left)/2
+    velocity = (left_slope-right_slope)/2
+    spatial = (left_slope+right_slope)/2
+    kinetic = radius**2*velocity**2/2
+    variation = radius**2*spatial**2/2
+    return dict(phase=phase, circle=radius*np.exp(1j*phase),
+                offset_derivative=velocity, drawing_derivative=spatial,
+                kinetic=kinetic, variation=variation, density=kinetic+variation,
+                flux=-radius**2*velocity*spatial,
+                right_density=radius**2*right_slope**2/4,
+                left_density=radius**2*left_slope**2/4)
+
+
+def winding_transport_ledger(offset, turns=1, radius=1., closed=False):
+    """Integrate the piecewise-constant densities at their exact breakpoints."""
+    winding_transport(0., offset, turns, radius, closed)
+    t = offset % 2 if closed else offset
+    if closed:
+        cuts = [0., 2.]
+        for k in range(-2, 5):
+            cuts.extend(x for x in (k-t, k+t) if 0 < x < 2)
+    else:
+        cuts = [k+sign*t for sign in (-1, 1) for k in (0., 1., 2.)]
+    cuts = np.unique(cuts)
+    widths = np.diff(cuts)
+    values = winding_transport((cuts[:-1]+cuts[1:])/2, offset, turns, radius, closed)
+    result = {name:float(np.dot(widths, values[name])) for name in
+              ('kinetic','variation','density','right_density','left_density')}
+    result['initial_budget'] = winding_variation(0, turns, radius)
+    result['conservation_residual'] = result['density']-result['initial_budget']
+    if not closed:
+        delivered_each = math.pi**2*radius**2*turns**2*min(offset,2.)
+        result['received_left_of_initial_interval'] = delivered_each
+        result['received_right_of_initial_interval'] = delivered_each
+        result['retained_in_initial_interval'] = result['initial_budget']-2*delivered_each
+    return result
+
+
+def winding_transport_calculation():
+    """Small reference ledger; channel speed and inertia are explicit premises."""
+    cases = []
+    for closed in (False, True):
+        cases.append(dict(boundary='periodic' if closed else 'open line',
+                          history=[dict(offset=t, **winding_transport_ledger(t,closed=closed))
+                                   for t in (0., .25, .5, 1., 2.)]))
+    return dict(schema='nsc-offset-winding-transport-v1',
+        added_premises=['L2 circle-phase inertia with the same metric as squared variation',
+                        'zero initial offset velocity',
+                        'normalized offset propagation speed one',
+                        'open or periodic drawing coordinate, compared separately'],
+        equation='phase_tt = phase_xx',
+        solution='phase(x,t) = (g(x-t)+g(x+t))/2',
+        local_ledger='partial_t[(R^2/2)(phase_t^2+phase_x^2)] + partial_x[-R^2 phase_t phase_x] = 0',
+        two_channels='right and left characteristic densities, each half the initial budget',
+        cases=cases,
+        open_packets_disjoint_after_offset=1.,
+        periodic_full_recurrence_offset=2.,
+        missing_connection='selection of the inertial rule, initial velocity and receiving/open geometry from the offset generator',
+        selected_by_offset_recurrence=False,
+        physical_energy_unit_selected=False,
+        horizon_or_child_derived=False,
+        no_observational_input=True)
+
+
 def winding_calculation():
     """Geometry-only reference calculation: no parent action or observed scale."""
     cases = []

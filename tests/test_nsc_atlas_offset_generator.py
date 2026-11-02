@@ -165,3 +165,98 @@ def test_sum_product_and_concatenation_are_distinct_contact_rules():
 def test_winding_domain_rejects_unstated_or_invalid_geometry(args):
     from recursive_horizons.nsc_atlas_offset_generator import opposite_winding_path
     with pytest.raises(ValueError):opposite_winding_path(*args)
+
+
+def test_conservative_winding_motion_solves_wave_equation_away_from_corners():
+    from recursive_horizons.nsc_atlas_offset_generator import winding_transport
+    # A smooth initial phase checks the derivation independently of the
+    # piecewise-linear reference solution (whose second derivatives vanish locally).
+    x,t,k=s.symbols('x t k',real=True)
+    phase=(s.cos(k*(x-t))+s.cos(k*(x+t)))/2
+    assert s.simplify(s.diff(phase,t,2)-s.diff(phase,x,2))==0
+    for closed in (False,True):
+        v=winding_transport(np.array([.13,.73,1.33]),.19,closed=closed)
+        dx=1e-6
+        numerical=(winding_transport(np.array([.13,.73,1.33])+dx,.19,closed=closed)['phase']-
+                   winding_transport(np.array([.13,.73,1.33])-dx,.19,closed=closed)['phase'])/(2*dx)
+        np.testing.assert_allclose(numerical,v['drawing_derivative'],atol=1e-8)
+
+
+def test_local_conservative_ledger_and_characteristic_densities_are_exact():
+    x,t,R=s.symbols('x t R',real=True)
+    f=s.Function('f')(x-t);g=s.Function('g')(x+t)
+    phase=(f+g)/2
+    velocity=s.diff(phase,t);spatial=s.diff(phase,x)
+    density=R**2*(velocity**2+spatial**2)/2
+    flux=-R**2*velocity*spatial
+    assert s.simplify(s.diff(density,t)+s.diff(flux,x))==0
+    assert s.simplify(density-R**2*(s.diff(f,x)**2+s.diff(g,x)**2)/4)==0
+
+
+def test_open_and_closed_ledger_conserve_the_same_initial_budget():
+    from recursive_horizons.nsc_atlas_offset_generator import winding_transport_ledger
+    for closed in (False,True):
+        for offset in (0,.13,.25,.5,.83,1,1.7,2,3.19):
+            row=winding_transport_ledger(offset,turns=2,radius=.7,closed=closed)
+            assert row['density']==pytest.approx(4*np.pi**2*4*.7**2,rel=3e-15)
+            assert row['right_density']==pytest.approx(row['initial_budget']/2,rel=3e-15)
+            assert row['left_density']==pytest.approx(row['initial_budget']/2,rel=3e-15)
+            assert row['kinetic']+row['variation']==pytest.approx(row['density'],rel=2e-15)
+
+
+def test_open_packets_separate_and_transport_the_budget_in_opposite_directions():
+    from recursive_horizons.nsc_atlas_offset_generator import winding_transport
+    t=1.3
+    x=np.linspace(.001,1.999,2000)
+    for sign in (-1,1):
+        packet=winding_transport(x+sign*t,t)
+        np.testing.assert_allclose(packet['flux'],sign*packet['density'],atol=1e-14)
+        assert np.all(packet['density']>0)
+    middle=winding_transport(1.,t)
+    assert middle['density']==0
+    assert middle['phase']==0
+
+
+def test_closed_contact_flattens_then_returns_instead_of_losing_the_budget():
+    from recursive_horizons.nsc_atlas_offset_generator import winding_transport,winding_transport_ledger
+    x=np.linspace(.001,1.999,137)
+    np.testing.assert_allclose(winding_transport(x,.5,closed=True)['phase'],np.pi,atol=2e-15)
+    mid=winding_transport_ledger(.5,closed=True)
+    assert mid['variation']==pytest.approx(0,abs=1e-28)
+    assert mid['kinetic']==pytest.approx(mid['initial_budget'])
+    np.testing.assert_allclose(winding_transport(x,2.,closed=True)['phase'],
+                               winding_transport(x,0.,closed=True)['phase'],atol=2e-15)
+    np.testing.assert_allclose(winding_transport(x,2.,closed=True)['offset_derivative'],0)
+
+
+def test_initial_velocity_and_both_winding_halves_are_retained():
+    from recursive_horizons.nsc_atlas_offset_generator import winding_transport,opposite_winding_path
+    x=np.linspace(0,2,101)
+    for closed in (False,True):
+        row=winding_transport(x,0.,turns=-3,closed=closed)
+        np.testing.assert_allclose(row['circle'],opposite_winding_path(x,0.,turns=-3),atol=1e-14)
+        np.testing.assert_allclose(row['offset_derivative'],0)
+
+
+def test_receiving_amounts_match_boundary_flux_and_the_remaining_initial_region():
+    from scipy.integrate import quad
+    from recursive_horizons.nsc_atlas_offset_generator import winding_transport,winding_transport_ledger
+    for offset in (.3,1.3,2.,3.):
+        row=winding_transport_ledger(offset)
+        cuts=[0.,*sorted({a for a in (1.,2.) if a<offset}),offset]
+        for x,orientation,key in ((0.,-1.,'received_left_of_initial_interval'),
+                                  (2.,1.,'received_right_of_initial_interval')):
+            delivered=sum(quad(lambda t:orientation*float(winding_transport(x,t)['flux']),a,b)[0]
+                          for a,b in zip(cuts[:-1],cuts[1:]))
+            assert delivered==pytest.approx(row[key],abs=2e-12)
+        spatial_cuts=sorted({0.,2.,*[a for a in
+                            [k+sign*offset for k in (0.,1.,2.) for sign in (-1,1)] if 0<a<2]})
+        retained=sum(quad(lambda x:float(winding_transport(x,offset)['density']),a,b)[0]
+                     for a,b in zip(spatial_cuts[:-1],spatial_cuts[1:]))
+        assert retained==pytest.approx(row['retained_in_initial_interval'],abs=2e-12)
+
+
+@pytest.mark.parametrize('offset,closed',[(-.1,False),(float('nan'),False),(.2,'open')])
+def test_transport_rejects_ambiguous_domain(offset,closed):
+    from recursive_horizons.nsc_atlas_offset_generator import winding_transport
+    with pytest.raises(ValueError):winding_transport(0.,offset,closed=closed)

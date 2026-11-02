@@ -12,6 +12,10 @@ Run `python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_offset_gener
 The geometry-only reference calculation is
 `python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --winding-only`;
 it prints a small result and writes no data files.
+Use `--transport-only` instead for the exact conservative evolution and its
+open/closed comparison. `winding_transport` evaluates the phase, its first
+derivatives, density and flux; `winding_transport_ledger` integrates them
+at their exact moving breakpoints. No spatial grid scan is needed.
 The old full-coverage calculation imports the conditional parent only when
 requested; that parent is not the foundation's input.
 
