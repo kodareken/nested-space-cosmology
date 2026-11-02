@@ -358,6 +358,20 @@ Goldilocks stabilization through least resistance and budget conservation:
     $\lambda_{\min}$) and outward diffusion into still air (`o`, relaxing toward
     $\lambda_{\max}$) circulate around the ring so diffused air re-accumulates
     and spins back up into an enormous hurricane `O` every full cycle.
+  - **Non-local to local Atlas readout, two-valve fixed point $\chi_*$, and $K=7$ baryon harmonic (`nonlocal_to_local_atlas_readout`).**
+    Solving the zero-parameter two-valve fixed point where the 5-variable
+    single-cost visible filament share $\Omega_{\rm vis}(\chi_*)$ equals the 3D
+    volumetric floor $e^{-3}\approx0.0497870684$ gives $\chi_*\approx3.0669683518$
+    ($\Omega_{\rm DE}(\chi_*)\approx71.1441\%$, $\Omega_{\rm DM}(\chi_*)\approx23.8772\%$,
+    combined dark sector $1-e^{-3}\approx95.0213\%$, visible filament share
+    $e^{-3}\approx4.9787\%$; at integer $\chi=3$, $\Omega_{\rm DE}(3)\approx70.8827\%$,
+    $\Omega_{\rm DM}(3)\approx23.8134\%$, $\Omega_{\rm vis}(3)\approx5.3039\%$).
+    Along the discrete 3D volumetric e-fold harmonic ladder
+    $\eta_K=\tanh\!\left(\frac{\pi}{2}e^{-2\chi_{\rm spaghetti}}e^{-3K}\right)=\tanh\!\left(\frac{\pi}{4}e^{-3K}\right)$
+    (where $e^{-2\chi_{\rm spaghetti}}=1/2$ is the exact spaghettification onset
+    from `unified_least_resistance_cycle`), the $K=7$ harmonic ($3K=21$ e-folds)
+    gives $\eta_7=\tanh\!\left(\frac{\pi}{4}e^{-21}\right)\approx5.955329\times10^{-10}$,
+    inside the observed BBN window $[5.8\times10^{-10},6.5\times10^{-10}]$.
 
 0. **Two-force zero-crossing across `0` (`two_force_zero_crossing`).**
    When inward compression $F_{\rm in}$ wins against outward resistance
@@ -427,6 +441,7 @@ Goldilocks stabilization through least resistance and budget conservation:
 
 ```text
 python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --buckling-only
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --atlas-only
 ```
 
 ## Retained foundation control: opposite windings, 2 November 2026

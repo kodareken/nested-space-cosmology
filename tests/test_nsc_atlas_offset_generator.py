@@ -770,3 +770,19 @@ def test_cyclic_vortex_diffusion_ring_diffuses_and_respins_into_hurricane():
     for row in (start,half,full):
         assert row['conservation_residual']==pytest.approx(0.,abs=2e-15)
     assert full['pure_diffusion_without_offset_envelope']<full['active_envelope']
+
+
+def test_nonlocal_to_local_atlas_readout_solves_fixed_point_and_k7_harmonic():
+    from recursive_horizons.nsc_atlas_offset_generator import nonlocal_to_local_atlas_readout
+    atlas=nonlocal_to_local_atlas_readout()
+    fp=atlas['two_valve_fixed_point']
+    assert fp['visible_filament_fraction']==pytest.approx(math.exp(-3),rel=1e-14)
+    assert fp['combined_dark_sector_fraction']==pytest.approx(1-math.exp(-3),rel=1e-14)
+    assert fp['dark_energy_fraction']+fp['dark_matter_fraction']+fp['visible_filament_fraction']==pytest.approx(1.,rel=2e-15)
+    assert 0.711<fp['dark_energy_fraction']<0.712
+    assert 0.238<fp['dark_matter_fraction']<0.239
+    ladder=atlas['discrete_3d_harmonic_asymmetry_ladder']
+    assert ladder['spaghettification_factor']==pytest.approx(0.5,rel=2e-15)
+    assert ladder['stage_K_7_eta']==pytest.approx(math.tanh(math.pi/4*math.exp(-21)),rel=2e-15)
+    assert ladder['within_bbn_window'] is True
+    assert len(atlas['translation_dictionary'])==4

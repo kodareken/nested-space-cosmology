@@ -85,6 +85,15 @@ incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
   'Oooo -> oOOOooooooooo'), and on a closed ring ('oo / OO oO / oO Oo / oo')
   diffused still air ('o') re-accumulates and spins back up into a giant
   vortex ('O') with zero conservation residual.
+- **Non-local to local Atlas readout (`nonlocal_to_local_atlas_readout`, `--atlas-only`):**
+  Solving the zero-parameter two-valve fixed point where the 5-variable
+  single-cost visible filament share equals the 3D volumetric floor exp(-3) ≈ 4.9787%
+  gives chi_* ≈ 3.06696835 (71.1441% Dark Energy-like, 23.8772% Dark Matter-like,
+  95.0213% combined dark sector, 4.9787% visible filament; at integer chi=3,
+  70.8827% DE, 23.8134% DM, 5.3039% Vis). Along the discrete 3D volumetric
+  e-fold ladder eta_K = tanh((pi/4)*exp(-3*K)) anchored at the derived
+  spaghettification onset exp(-2*chi_spaghetti)=1/2, K=7 (21 e-folds) yields
+  eta_7 ≈ 5.955329e-10 inside the observed BBN window [5.8e-10, 6.5e-10].
 0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
    resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
    smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against

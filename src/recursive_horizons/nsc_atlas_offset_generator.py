@@ -977,6 +977,92 @@ def cyclic_vortex_diffusion_ring(offset, node_count=8, diffusion_rate=0.25, spin
                 node_0_is_giant_hurricane=(states[0]=='O'))
 
 
+def nonlocal_to_local_atlas_readout():
+    """Zero-parameter non-local multiverse fixed point and local observer translation dictionary.
+
+    1. Solves the exact two-valve steady-state compression root chi_* where the
+       5-variable single-cost visible filament share Omega_vis(chi_*) equals the
+       3D volumetric floor exp(-3) (so the combined dark sector Omega_DE + Omega_DM
+       equals the 3D exponential horizon 1 - exp(-3) ≈ 95.021293%).
+    2. Evaluates the discrete 3D volumetric e-fold spectrum
+       eta_K = tanh((pi/2) * exp(-2*chi_spaghetti) * exp(-3*K)) = tanh((pi/4) * exp(-3*K))
+       for K = 1..7, where exp(-2*chi_spaghetti) = 1/2 is the derived spaghettification
+       threshold factor (chi_spaghetti = ln(2)/2) and 3*K counts 3D volumetric e-folds.
+       At K = 7 (21 e-folds), eta_7 = tanh((pi/4)*exp(-21)) ≈ 5.955329e-10.
+    3. Maps each non-local geometric mechanism to what a local observer inside one
+       room infers as Dark Energy, Dark Matter, and Missing Antimatter.
+    """
+    target_vis=math.exp(-3)
+
+    def vis_share(chi):
+        row=nested_zero_crossing_map(1,float(chi))['nested_chain'][0]
+        return row['visible_filament_like_fraction']
+
+    with mp.workdps(50):
+        def mp_vis_residual(c):
+            ex=mp.exp(c);xi=mp.exp(-c)
+            u=(mp.sqrt(16*ex*ex+17)-3)/(4*ex)
+            th=u*u
+            e_de=3*u**3
+            e_dm=u**3+2*(1-th)*xi
+            e_vis=2*(1-th)**2*ex
+            return e_vis/(e_de+e_dm+e_vis)-mp.exp(-3)
+        chi_star=float(mp.findroot(mp_vis_residual,(mp.mpf('3.0'),mp.mpf('3.2'))))
+
+    at_star=nested_zero_crossing_map(1,chi_star)['nested_chain'][0]
+    at_d3=nested_zero_crossing_map(1,3.)['nested_chain'][0]
+    harmonic_ladder=[]
+    for k in range(1,8):
+        eta_k=math.tanh(.25*math.pi*math.exp(-3*k))
+        harmonic_ladder.append(dict(three_d_efold_stage_K=k,
+                                    total_efolds_3K=3*k,
+                                    asymmetry_eta_K=eta_k))
+    eta_7=harmonic_ladder[-1]['asymmetry_eta_K']
+    return dict(schema='nsc-nonlocal-to-local-atlas-v1',
+                axioms=dict(
+                    A0='Least resistance: minimize single generator cost E = Q_stretch + P*V',
+                    A1='1D seed + inherited compression offset = time (1D -> 2D circle -> 3D sphere)',
+                    A2='Signed-zero crossing (+ -> 0 -> -): R crosses 0 into -, flipping sign(det F) = (-1)^k and turning implosion into expansion',
+                    A3='Moving spectral band [lambda_min, lambda_max] = exp(-chi)*[lambda_min_0, lambda_max_0] from Planck cutoff to Absolute-Zero horizon',
+                    A4='Two-valve cyclic circulation on a closed vortex-diffusion ring (O <-> o) across one-way 0 horizons'),
+                two_valve_fixed_point=dict(
+                    condition='Omega_vis(chi_*) = exp(-3) (5-variable filament share equals 3D volumetric floor)',
+                    chi_star=chi_star,
+                    dark_energy_fraction=at_star['dark_energy_like_fraction'],
+                    dark_matter_fraction=at_star['dark_matter_like_fraction'],
+                    combined_dark_sector_fraction=at_star['dark_sector_combined_fraction'],
+                    visible_filament_fraction=at_star['visible_filament_like_fraction'],
+                    residual_from_volumetric_horizon=at_star['dark_sector_combined_fraction']-(1-target_vis),
+                    at_integer_3d_efold_chi_3=dict(
+                        dark_energy_fraction=at_d3['dark_energy_like_fraction'],
+                        dark_matter_fraction=at_d3['dark_matter_like_fraction'],
+                        combined_dark_sector_fraction=at_d3['dark_sector_combined_fraction'],
+                        visible_filament_fraction=at_d3['visible_filament_like_fraction'])),
+                discrete_3d_harmonic_asymmetry_ladder=dict(
+                    formula='eta_K = tanh((pi/2) * exp(-2*chi_spaghetti) * exp(-3*K)) = tanh((pi/4) * exp(-3*K))',
+                    spaghettification_threshold_chi=.5*math.log(2),
+                    spaghettification_factor=math.exp(-2*.5*math.log(2)),
+                    stages=harmonic_ladder,
+                    stage_K_7_eta=eta_7,
+                    bbn_observed_window=[5.8e-10,6.5e-10],
+                    planck_observed_reference=6.1e-10,
+                    within_bbn_window=(5.8e-10<=eta_7<=6.5e-10)),
+                translation_dictionary=[
+                    dict(local_label='Dark Energy (Lambda)',
+                         nonlocal_mechanism='Isotropic 3D stretch 3*(theta^*)^(3/2) inside the - sphere driven by inflow across the outer birth 0 valve',
+                         derived_share_at_chi_star=at_star['dark_energy_like_fraction']),
+                    dict(local_label='Dark Matter',
+                         nonlocal_mechanism='Non-luminous 0-wall enclosing load (theta^*)^(3/2) + radial infall load 2*(1-theta^*)*exp(-chi) tugging across outer and inner 0 horizons',
+                         derived_share_at_chi_star=at_star['dark_matter_like_fraction']),
+                    dict(local_label='Visible Matter',
+                         nonlocal_mechanism='Active transverse filamentary winding 2*(1-theta^*)^2*exp(chi) spaghettifying toward inner child 0 horizons, locked at floor exp(-3)',
+                         derived_share_at_chi_star=at_star['visible_filament_like_fraction']),
+                    dict(local_label='Missing Antimatter (eta_B)',
+                         nonlocal_mechanism='Single-sign orientation entry sign(det F_k)=(-1)^k across 0 plus offset decay lag exp(-gamma*tau) between + and - half-cycles at the K=7 3D harmonic',
+                         derived_asymmetry_eta_7=eta_7)],
+                no_observational_fit=True)
+
+
 def buckling_to_goldilocks_calculation():
     """Connected pipeline: unified single-cost cycle -> nested map -> 0-crossing -> buckling -> damped wave -> Goldilocks."""
     t_h=math.sqrt(2.)
