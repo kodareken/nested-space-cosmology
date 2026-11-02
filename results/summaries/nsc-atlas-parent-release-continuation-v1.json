@@ -1,0 +1,1052 @@
+{
+  "schema": "nsc-atlas-parent-release-continuation-summary-v1",
+  "runs": [
+    {
+      "degree": 20,
+      "status": "numerical_stop",
+      "stop_reason": "sampled numerical admission guard ended; no physical endpoint inferred",
+      "producer_commit": "d37fb5abfc3ad29effd3f91bfd78d32297e7a249",
+      "source_sha256": {
+        "scripts/check_nsc_atlas_parent_valve.py": "92d8f277071b48260c0fdc781fccc9dd837c19e48ec82979fd2608a301c31dd1",
+        "scripts/continue_nsc_atlas_parent_release.py": "0b6ec4dba8aef6f09371c04c5e9d8007d72e088bc739b2207799bafb2ebd4133",
+        "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+        "src/recursive_horizons/nsc_atlas_cubic_operators.py": "be4e78e168381f5673e24c28dc4e567c98546c5b20d7391c516f60200e20c2db",
+        "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+        "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+        "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+        "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+        "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+        "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+        "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+        "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+        "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+        "src/recursive_horizons/nsc_atlas_horizon_response.py": "35ca8c2ae3040cac3404133cefad5c0a43a7e584b99d19db90717685337428f4",
+        "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
+        "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+        "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+        "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+        "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+        "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+        "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+        "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+        "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+        "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+        "src/recursive_horizons/nsc_atlas_s3_polynomials.py": "a290ac75a8726761195bfa3def4630892a08d57e7c6ee6272130155d880ae208",
+        "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf",
+        "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+        "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+        "src/recursive_horizons/nsc_atlas_volume_feedback.py": "a9eb86cc2e5fb994da36954c166ce7f2dd38cc4987d98ad7256953753b2830ea"
+      },
+      "start_coordinate_t": 0.9458893890928269,
+      "start_proper": 0.9,
+      "requested_proper_endpoint": 1.6,
+      "physical_stop_coordinate_t": 1.383897477645137,
+      "last_numerical_guard_passed_coordinate_t": 1.383897477645137,
+      "actual_last_accepted_coordinate_t": 1.4358893890928273,
+      "actual_last_accepted_proper": 1.3051137069994336,
+      "accepted_endpoint_covered_by_dense": true,
+      "budget_seconds": 1500.0,
+      "elapsed_seconds": 932.9557559000095,
+      "threads": {
+        "Numba": 4,
+        "FFT": 2,
+        "BLAS": 1
+      },
+      "temporal_tolerances": {
+        "rtol": 3e-09,
+        "atol": 3e-11,
+        "max_step": 0.01
+      },
+      "steps": 49,
+      "rhs_calls": 737,
+      "events": [
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.0620449848110771,
+          "proper": 0.9999999999999999,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.055889389092827,
+            1.065889389092827
+          ]
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.181281041797294,
+          "proper": 1.1,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.175889389092827,
+            1.185889389092827
+          ]
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.303656327882904,
+          "proper": 1.199999999999867,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.2958893890928271,
+            1.3058893890928271
+          ]
+        },
+        {
+          "event": "reference_fold_s",
+          "coordinate_t": 1.383897477645137,
+          "proper": 1.2640955638498497,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.3758893890928272,
+            1.3858893890928272
+          ]
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.4293822137039525,
+          "proper": 1.3000000000000003,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.4258893890928273,
+            1.4358893890928273
+          ]
+        }
+      ],
+      "auxiliary_phase": {
+        "ODE_dummy": 0.0,
+        "sparse_phase_carry": 21.3683692916596,
+        "feedback": false,
+        "sparse_states_keep_dummy": true
+      },
+      "history_scope": "Original prefix only through proper.9, new dense history thereafter through physical_stop; any later accepted tail is preserved but not promoted.",
+      "event_scope": "Finite event bracketing with five probes per accepted interval, not a theorem excluding missed substep double crossings. Bare-top crossing alone is not escape or a child.",
+      "physical_history_prefix": {
+        "path": ".build/valve-e1-L20-extended-v1-history.npz",
+        "until_coordinate_t": 0.9458893890928269
+      },
+      "original_parent": {
+        "record": ".build/valve-e1-L20-extended-v1.json",
+        "record_sha256": "f25e973f4916fd15aee640a945063613ba46a79b98bf1f4cb127190d114822ea",
+        "sparse_cache": ".build/valve-e1-L20-extended-v1.npz",
+        "sparse_sha256": "58af54103eb671ff7252e21dc817c28a7573420dc08280aa1839a6188e80cb48",
+        "dense_cache": ".build/valve-e1-L20-extended-v1-history.npz",
+        "dense_sha256": "24f5eaa7ed069cf2c333d80b1729df56583a5ace79d57d304f10ba78bfd62645",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "published_record_pin": true,
+        "published_summary_sha256": "2b7786cc4657106aff354653beb261a95dcc73d87d3452dece1b1810443fbd7e",
+        "dense_sparse_maximum_gap": 0.0,
+        "dense_sparse_compared_components": "All physical coefficients and reference-observer point, four-velocity and proper clock: state[:-1]",
+        "dense_sparse_physical_maximum_gap": 0.0,
+        "dense_sparse_observer_point_velocity_maximum_gap": 0.0,
+        "dense_sparse_reference_clock_maximum_gap": 0.0,
+        "auxiliary_phase": {
+          "index": 19919,
+          "role": "Producer-owned sampled unwrapped observer phase; NOT physical field, proper clock or work ledger",
+          "producer": "nsc_atlas_parent_gh.observer_rhs returns0; evolve_parent assigns state[-1]=before_phase+partial only to the sparse-copy state before state_sink",
+          "used_by_readout": false,
+          "values": [
+            {
+              "coordinate_t": 0.0,
+              "reference_observer_proper_duration": 0.0,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 0.0,
+              "dense_sparse_auxiliary_gap": 0.0,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.30176421282556815,
+              "reference_observer_proper_duration": 0.3,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 7.384881695708822,
+              "dense_sparse_auxiliary_gap": 7.384881695708822,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.614115201359084,
+              "reference_observer_proper_duration": 0.6000000000000003,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 14.572572043168062,
+              "dense_sparse_auxiliary_gap": 14.572572043168062,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.9458893890928269,
+              "reference_observer_proper_duration": 0.8999999999999999,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 21.3683692916596,
+              "dense_sparse_auxiliary_gap": 21.3683692916596,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 1.3036563278839346,
+              "reference_observer_proper_duration": 1.2,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 27.70287215349815,
+              "dense_sparse_auxiliary_gap": 27.70287215349815,
+              "sparse_phase_report_gap": 0.0
+            }
+          ]
+        },
+        "source_sha256": {
+          "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+          "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+          "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+          "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+          "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+          "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+          "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+          "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+          "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+          "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+          "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+          "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+        }
+      },
+      "raw_record": {
+        "path": ".build/parent-release-continuation-L20-v3/run.json",
+        "sha256": "6851e08e28b1e77f21b85b457238676706575f2a792a380df02fc614e6ba51bc"
+      },
+      "state_cache": {
+        "path": ".build/parent-release-continuation-L20-v3/states.npz",
+        "sha256": "e858c333f358181709ff0ee727f78170884b9aeeae836e6a164d2cb4fcf65660",
+        "first_state_sha256": "6b3f4dd203e2a9b043f8c1c1ae703b617e834d4ea8057cb5c531fbc5831318d8"
+      },
+      "dense_history": {
+        "path": ".build/parent-release-continuation-L20-v3/history.npz",
+        "sha256": "7e6f1a6395ec3cd0daf4298c3c9d1d52a7479b7addcb3e9e56cc27275634307d",
+        "coordinate_bounds": [
+          0.9458893890928269,
+          1.4358893890928273
+        ],
+        "unpromoted_tail_after": 1.383897477645137
+      },
+      "bare_top": {
+        "s": 0.0600005350418201,
+        "potential": 0.3545366774774573
+      },
+      "scalar_rows": [
+        {
+          "event": "same_Cauchy_restart",
+          "coordinate_t": 0.9458893890928269,
+          "observer_proper_duration": 0.8999999999999999,
+          "s": -0.014145003791702731,
+          "uS": 0.34968107522888375,
+          "nS": 0.3496785953822695,
+          "chi": -0.047886323925397586,
+          "nChi": -0.851922343010029,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.015231287134359449,
+              0.35079058415675834
+            ],
+            "chi": [
+              -0.8507423789154177,
+              0.8507423789154178
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.00168569488716945,
+          "ADM_M_RMS_over_H_squared": 0.001126445963884746,
+          "GH_C_RMS_over_H": 0.00010499906599937487,
+          "scalar_last_two_shell_power_fraction": 4.190539548079859e-08,
+          "volume_last_two_shell_power_fraction": 1.4435144157088764e-08,
+          "scalar_acceleration_unresolved_fraction": 5.227859854780235e-05,
+          "volume_acceleration_unresolved_fraction": 0.003718487965009573,
+          "observer_unit_norm_error": 3.7412295483818525e-12,
+          "minimum_lapse": 0.8720708636311861,
+          "maximum_lapse": 0.9974747318289491,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.24952944599650384,
+          "mechanical_radion_energy": 0.31066787318311795,
+          "bare_mechanical_headroom": 0.04386880429433937,
+          "internal_volume_over_vacuum": 1.2943664467557368
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.0620449848110771,
+          "observer_proper_duration": 0.9999999999999999,
+          "s": -0.010086253357233597,
+          "uS": 0.37494693522467554,
+          "nS": 0.37494078890704474,
+          "chi": -0.005908253143296658,
+          "nChi": 1.3375045270483266,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.02010899710819224,
+              0.37644966623400283
+            ],
+            "chi": [
+              -1.3370363004738584,
+              1.3370363004738581
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.005862400012788097,
+          "ADM_M_RMS_over_H_squared": 0.008066778027892612,
+          "GH_C_RMS_over_H": 0.0001587437200692723,
+          "scalar_last_two_shell_power_fraction": 7.787836208818918e-07,
+          "volume_last_two_shell_power_fraction": 6.041249797888076e-08,
+          "scalar_acceleration_unresolved_fraction": 0.00027388364190735495,
+          "volume_acceleration_unresolved_fraction": 0.0064705086718863354,
+          "observer_unit_norm_error": 3.741895682196628e-12,
+          "minimum_lapse": 0.8504553323305631,
+          "maximum_lapse": 0.9961164219849096,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.2583953228009076,
+          "mechanical_radion_energy": 0.3286879249180961,
+          "bare_mechanical_headroom": 0.0258487525593612,
+          "internal_volume_over_vacuum": 1.3589690357816744
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.181281041797294,
+          "observer_proper_duration": 1.1,
+          "s": -0.006059423135932475,
+          "uS": 0.38651870869963856,
+          "nS": 0.3865049038144538,
+          "chi": 0.05914483837072526,
+          "nChi": -0.5545167035385175,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.025458537683876806,
+              0.38849416217059474
+            ],
+            "chi": [
+              -1.1252386905819323,
+              1.1252386905819318
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.010639254625206393,
+          "ADM_M_RMS_over_H_squared": 0.015821242723419136,
+          "GH_C_RMS_over_H": 0.0006654680801562666,
+          "scalar_last_two_shell_power_fraction": 6.908344004919705e-06,
+          "volume_last_two_shell_power_fraction": 5.419019823415811e-07,
+          "scalar_acceleration_unresolved_fraction": 0.0010094556392643873,
+          "volume_acceleration_unresolved_fraction": 0.031427290236313424,
+          "observer_unit_norm_error": 3.742783860616328e-12,
+          "minimum_lapse": 0.8271380156130999,
+          "maximum_lapse": 0.9942639403862157,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.26748868049060615,
+          "mechanical_radion_energy": 0.3421870365780242,
+          "bare_mechanical_headroom": 0.012349640899433134,
+          "internal_volume_over_vacuum": 1.4262495590177648
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.303656327882904,
+          "observer_proper_duration": 1.199999999999867,
+          "s": -0.0019497503585128584,
+          "uS": 0.3567596485179735,
+          "nS": 0.35673086405403087,
+          "chi": -0.05345513426894961,
+          "nChi": -0.8515714231694866,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.030984680126864086,
+              0.36019265867862477
+            ],
+            "chi": [
+              -0.9552505603618097,
+              0.9552505603618097
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.036316526735528334,
+          "ADM_M_RMS_over_H_squared": 0.0519870389006466,
+          "GH_C_RMS_over_H": 0.0008741699083050181,
+          "scalar_last_two_shell_power_fraction": 3.0544507853941807e-05,
+          "volume_last_two_shell_power_fraction": 1.1680140322460895e-06,
+          "scalar_acceleration_unresolved_fraction": 0.0021336946395519875,
+          "volume_acceleration_unresolved_fraction": 0.044934172821038836,
+          "observer_unit_norm_error": 3.743894083640953e-12,
+          "minimum_lapse": 0.8057604872221924,
+          "maximum_lapse": 0.9918146056888186,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.2768431844976357,
+          "mechanical_radion_energy": 0.34048190790296967,
+          "bare_mechanical_headroom": 0.014054769574487647,
+          "internal_volume_over_vacuum": 1.4983498256954655
+        },
+        {
+          "event": "reference_fold_s",
+          "coordinate_t": 1.383897477645137,
+          "observer_proper_duration": 1.2640955638498497,
+          "s": 0.0006367709434210583,
+          "uS": 0.38677455002990613,
+          "nS": 0.3867309938965307,
+          "chi": -0.05604355854789726,
+          "nChi": 0.7795567855506587,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.03444479562362192,
+              0.388895394932029
+            ],
+            "chi": [
+              -1.2536499307373934,
+              1.2536499307373932
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.07456249184274208,
+          "ADM_M_RMS_over_H_squared": 0.08554579923804298,
+          "GH_C_RMS_over_H": 0.0020721405634128017,
+          "scalar_last_two_shell_power_fraction": 0.00014614941343323137,
+          "volume_last_two_shell_power_fraction": 2.999071024738892e-06,
+          "scalar_acceleration_unresolved_fraction": 0.004401546674405258,
+          "volume_acceleration_unresolved_fraction": 0.088158670307205,
+          "observer_unit_norm_error": 3.7416736375917026e-12,
+          "minimum_lapse": 0.792096339645143,
+          "maximum_lapse": 0.9898814545515592,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.28268020288841755,
+          "mechanical_radion_energy": 0.35747747916383577,
+          "bare_mechanical_headroom": -0.002940801686378447,
+          "internal_volume_over_vacuum": 1.5455852511518111
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.4293822137039525,
+          "observer_proper_duration": 1.3000000000000003,
+          "s": 0.002146136587865388,
+          "uS": 0.37686284157760597,
+          "nS": 0.3768082166573301,
+          "chi": -0.016601599435891935,
+          "nChi": 1.324931356957921,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.0362335830714524,
+              0.37954749325986553
+            ],
+            "chi": [
+              -1.3650873242863968,
+              1.3650873242863968
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.12211837954417656,
+          "ADM_M_RMS_over_H_squared": 0.09472735187032573,
+          "GH_C_RMS_over_H": 0.0026058323427659274,
+          "scalar_last_two_shell_power_fraction": 0.00016609096901726056,
+          "volume_last_two_shell_power_fraction": 3.912395956224213e-06,
+          "scalar_acceleration_unresolved_fraction": 0.003564564283165381,
+          "volume_acceleration_unresolved_fraction": 0.13711643511496197,
+          "observer_unit_norm_error": 3.741895682196628e-12,
+          "minimum_lapse": 0.7859545558557703,
+          "maximum_lapse": 0.9886636096872509,
+          "metric_valid": true,
+          "numerical_guard_passed": false,
+          "bare_potential": 0.28604745760523653,
+          "mechanical_radion_energy": 0.3570602582862104,
+          "bare_mechanical_headroom": -0.0025235808087530898,
+          "internal_volume_over_vacuum": 1.5738345493353525
+        }
+      ],
+      "accepted_endpoint_diagnostic": {
+        "coordinate_t": 1.4358893890928273,
+        "observer_proper_duration": 1.3051137069994336,
+        "s": 0.002355176018014861,
+        "uS": 0.37235659781654473,
+        "nS": 0.37230008358999717,
+        "chi": -0.009746858075570563,
+        "nChi": 1.3538262238903394,
+        "whole_grid_normal_momentum_ranges": {
+          "S": [
+            0.03648259261307181,
+            0.3752128027568591
+          ],
+          "chi": [
+            -1.3676909978760192,
+            1.367690997876019
+          ]
+        },
+        "ADM_H_RMS_over_H_squared": 0.12390910627774847,
+        "ADM_M_RMS_over_H_squared": 0.10480824822273692,
+        "GH_C_RMS_over_H": 0.00256847004921338,
+        "scalar_last_two_shell_power_fraction": 0.00017335087799798702,
+        "volume_last_two_shell_power_fraction": 4.306673448503793e-06,
+        "scalar_acceleration_unresolved_fraction": 0.003659323024671487,
+        "volume_acceleration_unresolved_fraction": 0.13482148472608232,
+        "observer_unit_norm_error": 3.7407854591720024e-12,
+        "minimum_lapse": 0.7850232719129605,
+        "maximum_lapse": 0.9884815797107319,
+        "metric_valid": true,
+        "numerical_guard_passed": false,
+        "bare_potential": 0.2865109689440758,
+        "mechanical_radion_energy": 0.35583568691283185,
+        "bare_mechanical_headroom": -0.0012990094353745318,
+        "internal_volume_over_vacuum": 1.5777874268342535
+      },
+      "accepted_endpoint_diagnostic_failure": null
+    },
+    {
+      "degree": 24,
+      "status": "budget_stop",
+      "stop_reason": "declared continuation wall-time budget exhausted",
+      "producer_commit": "d37fb5abfc3ad29effd3f91bfd78d32297e7a249",
+      "source_sha256": {
+        "scripts/check_nsc_atlas_parent_valve.py": "92d8f277071b48260c0fdc781fccc9dd837c19e48ec82979fd2608a301c31dd1",
+        "scripts/continue_nsc_atlas_parent_release.py": "0b6ec4dba8aef6f09371c04c5e9d8007d72e088bc739b2207799bafb2ebd4133",
+        "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+        "src/recursive_horizons/nsc_atlas_cubic_operators.py": "be4e78e168381f5673e24c28dc4e567c98546c5b20d7391c516f60200e20c2db",
+        "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+        "src/recursive_horizons/nsc_atlas_flux_conversion.py": "1a541d012bebc4ff0fdcf2a4609fdffb8336a041bc55eb9cfa0de02fab16118c",
+        "src/recursive_horizons/nsc_atlas_flux_transition.py": "1bbf4c0ab88b3174f0c5eec451b04a1a1365fb476c579335cc97ba4c812133d7",
+        "src/recursive_horizons/nsc_atlas_geometric_observer.py": "8197fb9be0af895781a9ad1021173034005cb12e1795d1edab41fd3ee8d8aacc",
+        "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+        "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+        "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+        "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+        "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+        "src/recursive_horizons/nsc_atlas_horizon_response.py": "35ca8c2ae3040cac3404133cefad5c0a43a7e584b99d19db90717685337428f4",
+        "src/recursive_horizons/nsc_atlas_inherited_charge.py": "2e67d345651bd4206ea7aa396a7fcd3226b283dd3f587beee999f1e96b8139e3",
+        "src/recursive_horizons/nsc_atlas_inherited_matter.py": "3e572fdaded0f6f8f4c5e9e21b5f9046158bc8cb6a2b6b72cbd65a8ad3a2a52c",
+        "src/recursive_horizons/nsc_atlas_offset_generator.py": "6f4aec6463e3995bd3d86822801c91b7caf232a51e583fa82d9e48b8fc1302d6",
+        "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+        "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+        "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+        "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+        "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+        "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+        "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+        "src/recursive_horizons/nsc_atlas_s3_polynomials.py": "a290ac75a8726761195bfa3def4630892a08d57e7c6ee6272130155d880ae208",
+        "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf",
+        "src/recursive_horizons/nsc_atlas_scalar_preparation.py": "d64f3ee69680ff71e8b7faec5b7e12390c0f2b5630d7891ad66f5a8cea2e52f5",
+        "src/recursive_horizons/nsc_atlas_shared_scalar_slice.py": "84626acea1c7f614d48de491adf4374c03066f6614b1f100c49c4f877acbed16",
+        "src/recursive_horizons/nsc_atlas_volume_feedback.py": "a9eb86cc2e5fb994da36954c166ce7f2dd38cc4987d98ad7256953753b2830ea"
+      },
+      "start_coordinate_t": 0.9458895428751409,
+      "start_proper": 0.9,
+      "requested_proper_endpoint": 1.6,
+      "physical_stop_coordinate_t": 1.4358895428751413,
+      "last_numerical_guard_passed_coordinate_t": 1.4358895428751413,
+      "actual_last_accepted_coordinate_t": 1.4358895428751413,
+      "actual_last_accepted_proper": 1.3051076910794055,
+      "accepted_endpoint_covered_by_dense": true,
+      "budget_seconds": 1500.0,
+      "elapsed_seconds": 1508.6390970000066,
+      "threads": {
+        "Numba": 4,
+        "FFT": 2,
+        "BLAS": 1
+      },
+      "temporal_tolerances": {
+        "rtol": 3e-09,
+        "atol": 3e-11,
+        "max_step": 0.01
+      },
+      "steps": 49,
+      "rhs_calls": 745,
+      "events": [
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.0620450296304127,
+          "proper": 1.0,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.055889542875141,
+            1.065889542875141
+          ]
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.1812824964420368,
+          "proper": 1.0999999999999999,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.175889542875141,
+            1.185889542875141
+          ]
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.303663098772524,
+          "proper": 1.1999999999998208,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.2958895428751411,
+            1.3058895428751411
+          ]
+        },
+        {
+          "event": "reference_fold_s",
+          "coordinate_t": 1.3837272211021112,
+          "proper": 1.263960666568866,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.3758895428751412,
+            1.3858895428751412
+          ]
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.4293876951591102,
+          "proper": 1.3000000000000003,
+          "terminal": false,
+          "accepted_coordinate_bracket": [
+            1.4258895428751412,
+            1.4358895428751413
+          ]
+        }
+      ],
+      "auxiliary_phase": {
+        "ODE_dummy": 0.0,
+        "sparse_phase_carry": 21.368302475996355,
+        "feedback": false,
+        "sparse_states_keep_dummy": true
+      },
+      "history_scope": "Original prefix only through proper.9, new dense history thereafter through physical_stop; any later accepted tail is preserved but not promoted.",
+      "event_scope": "Finite event bracketing with five probes per accepted interval, not a theorem excluding missed substep double crossings. Bare-top crossing alone is not escape or a child.",
+      "physical_history_prefix": {
+        "path": ".build/valve-e1-L24-extended-v1-history.npz",
+        "until_coordinate_t": 0.9458895428751409
+      },
+      "original_parent": {
+        "record": ".build/valve-e1-L24-extended-v1.json",
+        "record_sha256": "34422e6fefaf7bf284e3bd6b758671388cdf4ab3dad2a9b804e19108dfc3b05f",
+        "sparse_cache": ".build/valve-e1-L24-extended-v1.npz",
+        "sparse_sha256": "25f8219eef656d3f3c12b7623fe6f1fc6af93a5e17ed0a2f04b87541500fa45d",
+        "dense_cache": ".build/valve-e1-L24-extended-v1-history.npz",
+        "dense_sha256": "8f31ccf42ee0d1833e0ddeabcccc730dc99f3d94c88941b47f2de358a4bbcec3",
+        "producer_commit": "65ceed0b78f720049debe4a8781e64c1cb50e7e8",
+        "published_record_pin": true,
+        "published_summary_sha256": "2b7786cc4657106aff354653beb261a95dcc73d87d3452dece1b1810443fbd7e",
+        "dense_sparse_maximum_gap": 0.0,
+        "dense_sparse_compared_components": "All physical coefficients and reference-observer point, four-velocity and proper clock: state[:-1]",
+        "dense_sparse_physical_maximum_gap": 0.0,
+        "dense_sparse_observer_point_velocity_maximum_gap": 0.0,
+        "dense_sparse_reference_clock_maximum_gap": 0.0,
+        "auxiliary_phase": {
+          "index": 33211,
+          "role": "Producer-owned sampled unwrapped observer phase; NOT physical field, proper clock or work ledger",
+          "producer": "nsc_atlas_parent_gh.observer_rhs returns0; evolve_parent assigns state[-1]=before_phase+partial only to the sparse-copy state before state_sink",
+          "used_by_readout": false,
+          "values": [
+            {
+              "coordinate_t": 0.0,
+              "reference_observer_proper_duration": 0.0,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 0.0,
+              "dense_sparse_auxiliary_gap": 0.0,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.30176421196572517,
+              "reference_observer_proper_duration": 0.30000000000000004,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 7.3848816410171505,
+              "dense_sparse_auxiliary_gap": 7.3848816410171505,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.6141152002946904,
+              "reference_observer_proper_duration": 0.5999999999999999,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 14.572571402297843,
+              "dense_sparse_auxiliary_gap": 14.572571402297843,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 0.9458895428751409,
+              "reference_observer_proper_duration": 0.8999999999999999,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 21.368302475996355,
+              "dense_sparse_auxiliary_gap": 21.368302475996355,
+              "sparse_phase_report_gap": 0.0
+            },
+            {
+              "coordinate_t": 1.3036630987720565,
+              "reference_observer_proper_duration": 1.2,
+              "dense_dummy": 0.0,
+              "sparse_sampled_phase": 27.706214632159636,
+              "dense_sparse_auxiliary_gap": 27.706214632159636,
+              "sparse_phase_report_gap": 0.0
+            }
+          ]
+        },
+        "source_sha256": {
+          "scripts/evolve_nsc_atlas_parent_gh.py": "fcfc25bb0a7ae3d8c4567ac0c7553a99fb65659ad4924a269fc6447efd4e7a8a",
+          "src/recursive_horizons/nsc_atlas_finite_parent_data.py": "ebcf2c0dec16955330ad13d57d5b36a10ad74df5fb6815b338236d289a1e1d0d",
+          "src/recursive_horizons/nsc_atlas_gh_constraints.py": "1ece52fc8409f41e183608cceae0022b4fb63bf01409dc0d25ae13b99583bce7",
+          "src/recursive_horizons/nsc_atlas_gh_history.py": "fdaa1af5a4d4f8411a62fe723e05285191f8934bb0ce2f5a11a7793d44a53e64",
+          "src/recursive_horizons/nsc_atlas_gh_matter_work.py": "47f2fcefe569e353a33bc5d3a14e28aa6675f4bee50da4c37ec117147a35a893",
+          "src/recursive_horizons/nsc_atlas_gh_observer.py": "d98c73ff17089d7194883ba90a12ecdef62294af1ab3bd7e22922b85f1464587",
+          "src/recursive_horizons/nsc_atlas_gh_pointwise.py": "998d255e764fa119529e37ff81dbc5a7855a73bfb45d2e2d7efd973b14739071",
+          "src/recursive_horizons/nsc_atlas_gravitating_kick.py": "b3e0fa7337e1b78f90dcaa78de97f4d97fc10319c7a93fc24bb4a06f80333c12",
+          "src/recursive_horizons/nsc_atlas_kick_york.py": "3ecb721c2b18d06776299896d691ab3e9a78a2c7c1a18e631e845a6ccc5632d0",
+          "src/recursive_horizons/nsc_atlas_parent_backreaction.py": "dbe36abec77101d7dc6eac2df9c5a98219792d92dcbae24fa652d8b1afd9f523",
+          "src/recursive_horizons/nsc_atlas_parent_circulation.py": "2809b1433cf0409729b41ca017a970a5e758a27c06290f1417dcba1270730ff4",
+          "src/recursive_horizons/nsc_atlas_parent_gh.py": "1e0003a18f40ea9c2a7c86b6dbea2c0e4ba7c7ee957306715e64162902fc829a",
+          "src/recursive_horizons/nsc_atlas_parent_scale_selector.py": "4ed7491cdd4e791c4955967bed99041d88f735c8d8aa785b0cbe07cc457a7408",
+          "src/recursive_horizons/nsc_atlas_passive_dop853.py": "9ebf8b02f4f1a97841a1f11329e285691a33d96d4653fda3ab31e6d43b8e1591",
+          "src/recursive_horizons/nsc_atlas_s3_frame.py": "ec7e360d7905ae184fb52a78510561f7f7f59653f18c7899da3cec8f49466c51",
+          "src/recursive_horizons/nsc_atlas_s3_hopf.py": "f0de6dc8a1d4c56be7b934d8864526435cca69296ac3211089fbe54dba37b4aa",
+          "src/recursive_horizons/nsc_atlas_s3_spectral.py": "b58627ba7ed78aaa57aefd09a991fae1dac79cfe2a4f419306361954dbd736bf"
+        }
+      },
+      "raw_record": {
+        "path": ".build/parent-release-continuation-L24-v3/run.json",
+        "sha256": "1396b522330220fa520856591841591ab1310209388c41d99cae850c51f51f2b"
+      },
+      "state_cache": {
+        "path": ".build/parent-release-continuation-L24-v3/states.npz",
+        "sha256": "0e22bb4ad1af6f8d470c5a7e83c7050e9b17528627767db2412a9fb8d4b3f8ea",
+        "first_state_sha256": "11f16b58ddcb918d304a34c91fe341f2e6933af456ebaa5c9d794101cc7a43d8"
+      },
+      "dense_history": {
+        "path": ".build/parent-release-continuation-L24-v3/history.npz",
+        "sha256": "c28aee46e87b0ed354460ea89cb5381a24eb0a33219a5b9a1b52b006dff65704",
+        "coordinate_bounds": [
+          0.9458895428751409,
+          1.4358895428751413
+        ],
+        "unpromoted_tail_after": 1.4358895428751413
+      },
+      "bare_top": {
+        "s": 0.0600005350418201,
+        "potential": 0.3545366774774573
+      },
+      "scalar_rows": [
+        {
+          "event": "same_Cauchy_restart",
+          "coordinate_t": 0.9458895428751409,
+          "observer_proper_duration": 0.8999999999999999,
+          "s": -0.014145200524250785,
+          "uS": 0.3496326950635414,
+          "nS": 0.3496302148138586,
+          "chi": -0.04789622157024552,
+          "nChi": -0.852218604852127,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.015137042070695717,
+              0.35026567751041104
+            ],
+            "chi": [
+              -0.8477597052113544,
+              0.8477597052113544
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.0002212795035047868,
+          "ADM_M_RMS_over_H_squared": 0.00039883074501725956,
+          "GH_C_RMS_over_H": 6.985306513051408e-06,
+          "scalar_last_two_shell_power_fraction": 8.077697096263654e-10,
+          "volume_last_two_shell_power_fraction": 2.0004885548612755e-10,
+          "scalar_acceleration_unresolved_fraction": 1.1884380835495806e-05,
+          "volume_acceleration_unresolved_fraction": 0.00024979622240897805,
+          "observer_unit_norm_error": 1.726951914804431e-12,
+          "minimum_lapse": 0.8721158927141921,
+          "maximum_lapse": 0.997495452336819,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.24952902772517183,
+          "mechanical_radion_energy": 0.3106505384538695,
+          "bare_mechanical_headroom": 0.043886139023587845,
+          "internal_volume_over_vacuum": 1.2943633910312333
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.0620450296304127,
+          "observer_proper_duration": 1.0,
+          "s": -0.010086043572650295,
+          "uS": 0.3746507520428849,
+          "nS": 0.37464460350653117,
+          "chi": -0.005895732451139238,
+          "nChi": 1.3387420734146913,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.020001355915944152,
+              0.3755231326611045
+            ],
+            "chi": [
+              -1.3367779590969096,
+              1.3367779590969096
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.0005947693827352944,
+          "ADM_M_RMS_over_H_squared": 0.00176370459017543,
+          "GH_C_RMS_over_H": 6.65623320213436e-05,
+          "scalar_last_two_shell_power_fraction": 9.58758337457189e-09,
+          "volume_last_two_shell_power_fraction": 6.06751879229188e-09,
+          "scalar_acceleration_unresolved_fraction": 3.629317368620005e-05,
+          "volume_acceleration_unresolved_fraction": 0.0031261625462196433,
+          "observer_unit_norm_error": 1.7281731601315187e-12,
+          "minimum_lapse": 0.8505736476931107,
+          "maximum_lapse": 0.9961455941638948,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.2583957909467961,
+          "mechanical_radion_energy": 0.32857738394994573,
+          "bare_mechanical_headroom": 0.025959293527511584,
+          "internal_volume_over_vacuum": 1.3589724568750152
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.1812824964420368,
+          "observer_proper_duration": 1.0999999999999999,
+          "s": -0.006056935283317525,
+          "uS": 0.38697970860453584,
+          "nS": 0.3869659289624615,
+          "chi": 0.05922256890254248,
+          "nChi": -0.5571405075982426,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.025342624506508114,
+              0.39009053906791946
+            ],
+            "chi": [
+              -1.1274732898873898,
+              1.12747328988739
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.003319215220145649,
+          "ADM_M_RMS_over_H_squared": 0.005632443320071333,
+          "GH_C_RMS_over_H": 0.00012896597051310479,
+          "scalar_last_two_shell_power_fraction": 9.150097962182341e-08,
+          "volume_last_two_shell_power_fraction": 2.3519340912061767e-08,
+          "scalar_acceleration_unresolved_fraction": 9.349558038986423e-05,
+          "volume_acceleration_unresolved_fraction": 0.004662995141030281,
+          "observer_unit_norm_error": 1.7257306694773433e-12,
+          "minimum_lapse": 0.8273578150635993,
+          "maximum_lapse": 0.9943031615086456,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.26749434200239874,
+          "mechanical_radion_energy": 0.34237098943822447,
+          "bare_mechanical_headroom": 0.012165688039232847,
+          "internal_volume_over_vacuum": 1.426292139237701
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.303663098772524,
+          "observer_proper_duration": 1.1999999999998208,
+          "s": -0.001950591472338191,
+          "uS": 0.35911659119863215,
+          "nS": 0.3590879108884745,
+          "chi": -0.053947617871537755,
+          "nChi": -0.8531163370889917,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.03088101768278185,
+              0.364146809909403
+            ],
+            "chi": [
+              -0.9527898770963821,
+              0.9527898770963822
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.011801115081177177,
+          "ADM_M_RMS_over_H_squared": 0.020165658986520847,
+          "GH_C_RMS_over_H": 0.000510856462044329,
+          "scalar_last_two_shell_power_fraction": 1.2631737827673153e-06,
+          "volume_last_two_shell_power_fraction": 2.3870854054527486e-07,
+          "scalar_acceleration_unresolved_fraction": 0.000380842159966254,
+          "volume_acceleration_unresolved_fraction": 0.021866279724861645,
+          "observer_unit_norm_error": 1.7251755579650307e-12,
+          "minimum_lapse": 0.8059104400080572,
+          "maximum_lapse": 0.9918652290992089,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.27684127613492737,
+          "mechanical_radion_energy": 0.3413236391719901,
+          "bare_mechanical_headroom": 0.013213038305467217,
+          "internal_volume_over_vacuum": 1.4983347023787454
+        },
+        {
+          "event": "reference_fold_s",
+          "coordinate_t": 1.3837272211021112,
+          "observer_proper_duration": 1.263960666568866,
+          "s": 0.0006367709434273033,
+          "uS": 0.3833295011067978,
+          "nS": 0.38328573372503355,
+          "chi": -0.05588434963353172,
+          "nChi": 0.8019358173854304,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.03432772348873573,
+              0.3893826079609254
+            ],
+            "chi": [
+              -1.2522499504244635,
+              1.2522499504244635
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.014457340576371547,
+          "ADM_M_RMS_over_H_squared": 0.03656671161704793,
+          "GH_C_RMS_over_H": 0.0008909566771767408,
+          "scalar_last_two_shell_power_fraction": 6.51278538022637e-06,
+          "volume_last_two_shell_power_fraction": 6.512864271309782e-07,
+          "scalar_acceleration_unresolved_fraction": 0.0011185037758101647,
+          "volume_acceleration_unresolved_fraction": 0.04495303013312311,
+          "observer_unit_norm_error": 1.7280621378290562e-12,
+          "minimum_lapse": 0.7924583304786199,
+          "maximum_lapse": 0.9899425055196154,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.2826802028884302,
+          "mechanical_radion_energy": 0.35615095609782343,
+          "bare_mechanical_headroom": -0.0016142786203661164,
+          "internal_volume_over_vacuum": 1.545585251151927
+        },
+        {
+          "event": "proper_checkpoint",
+          "coordinate_t": 1.4293876951591102,
+          "observer_proper_duration": 1.3000000000000003,
+          "s": 0.002135494807987706,
+          "uS": 0.3741154870034017,
+          "nS": 0.37406054647293274,
+          "chi": -0.015323265286066841,
+          "nChi": 1.3521033851223894,
+          "whole_grid_normal_momentum_ranges": {
+            "S": [
+              0.036223673840305115,
+              0.37932513435275567
+            ],
+            "chi": [
+              -1.3726011673227967,
+              1.3726011673227967
+            ]
+          },
+          "ADM_H_RMS_over_H_squared": 0.038138876712164795,
+          "ADM_M_RMS_over_H_squared": 0.04565515427899887,
+          "GH_C_RMS_over_H": 0.001092193309739317,
+          "scalar_last_two_shell_power_fraction": 1.4757813888154701e-05,
+          "volume_last_two_shell_power_fraction": 6.568204636327628e-07,
+          "scalar_acceleration_unresolved_fraction": 0.0016628282989867306,
+          "volume_acceleration_unresolved_fraction": 0.04962517125330056,
+          "observer_unit_norm_error": 1.7283952047364437e-12,
+          "minimum_lapse": 0.7859766090608002,
+          "maximum_lapse": 0.9887246123096922,
+          "metric_valid": true,
+          "numerical_guard_passed": true,
+          "bare_potential": 0.28602384147742577,
+          "mechanical_radion_energy": 0.356005040285322,
+          "bare_mechanical_headroom": -0.0014683628078646649,
+          "internal_volume_over_vacuum": 1.5736335813575124
+        }
+      ],
+      "accepted_endpoint_diagnostic": {
+        "coordinate_t": 1.4358895428751413,
+        "observer_proper_duration": 1.3051076910794055,
+        "s": 0.0023430637042485616,
+        "uS": 0.3707436056231781,
+        "nS": 0.37068687965519737,
+        "chi": -0.008342382090659715,
+        "nChi": 1.3791059262832457,
+        "whole_grid_normal_momentum_ranges": {
+          "S": [
+            0.03648078710176368,
+            0.3759767910535255
+          ],
+          "chi": [
+            -1.3858665531593286,
+            1.3858665531593284
+          ]
+        },
+        "ADM_H_RMS_over_H_squared": 0.042143680798716686,
+        "ADM_M_RMS_over_H_squared": 0.043998780744092,
+        "GH_C_RMS_over_H": 0.001184777601502307,
+        "scalar_last_two_shell_power_fraction": 1.552395040358678e-05,
+        "volume_last_two_shell_power_fraction": 6.270849902399689e-07,
+        "scalar_acceleration_unresolved_fraction": 0.0016582962169251663,
+        "volume_acceleration_unresolved_fraction": 0.05601616691298129,
+        "observer_unit_norm_error": 1.7279511155265936e-12,
+        "minimum_lapse": 0.7850093843114659,
+        "maximum_lapse": 0.9885438351086394,
+        "metric_valid": true,
+        "numerical_guard_passed": true,
+        "bare_potential": 0.2864841320963425,
+        "mechanical_radion_energy": 0.3552095426515798,
+        "bare_mechanical_headroom": -0.0006728651741224612,
+        "internal_volume_over_vacuum": 1.577558115623149
+      },
+      "accepted_endpoint_diagnostic_failure": null
+    }
+  ],
+  "shared_proper_checkpoints": [
+    {
+      "proper": 0.8999999999999999,
+      "coordinate_times": [
+        0.9458893890928269,
+        0.9458895428751409
+      ],
+      "proper_mismatch": 0.0,
+      "absolute_differences": {
+        "s": 1.9673254805438467e-07,
+        "uS": 4.8380165342365444e-05,
+        "nS": 4.838056841088845e-05,
+        "nChi": 0.0002962618420979668,
+        "ADM_H_RMS_over_H_squared": 0.0014644153836646631,
+        "ADM_M_RMS_over_H_squared": 0.0007276152188674863,
+        "GH_C_RMS_over_H": 9.801375948632347e-05
+      }
+    },
+    {
+      "proper": 0.9999999999999999,
+      "coordinate_times": [
+        1.0620449848110771,
+        1.0620450296304127
+      ],
+      "proper_mismatch": 1.1102230246251565e-16,
+      "absolute_differences": {
+        "s": 2.0978458330211947e-07,
+        "uS": 0.0002961831817906435,
+        "nS": 0.0002961854005135711,
+        "nChi": 0.0012375463663647501,
+        "ADM_H_RMS_over_H_squared": 0.005267630630052803,
+        "ADM_M_RMS_over_H_squared": 0.006303073437717182,
+        "GH_C_RMS_over_H": 9.218138804792871e-05
+      }
+    },
+    {
+      "proper": 1.1,
+      "coordinate_times": [
+        1.181281041797294,
+        1.1812824964420368
+      ],
+      "proper_mismatch": 2.220446049250313e-16,
+      "absolute_differences": {
+        "s": 2.487852614949798e-06,
+        "uS": 0.0004609999048972857,
+        "nS": 0.000461025148007721,
+        "nChi": 0.0026238040597251766,
+        "ADM_H_RMS_over_H_squared": 0.007320039405060744,
+        "ADM_M_RMS_over_H_squared": 0.010188799403347803,
+        "GH_C_RMS_over_H": 0.0005365021096431619
+      }
+    },
+    {
+      "proper": 1.199999999999867,
+      "coordinate_times": [
+        1.303656327882904,
+        1.303663098772524
+      ],
+      "proper_mismatch": 4.618527782440651e-14,
+      "absolute_differences": {
+        "s": 8.41113825332529e-07,
+        "uS": 0.002356942680658669,
+        "nS": 0.0023570468344436546,
+        "nChi": 0.0015449139195050643,
+        "ADM_H_RMS_over_H_squared": 0.024515411654351157,
+        "ADM_M_RMS_over_H_squared": 0.03182137991412575,
+        "GH_C_RMS_over_H": 0.0003633134462606891
+      }
+    }
+  ],
+  "comparison_scope": "Empirical same-proper checkpoint differences only; no off-clock event comparison or error enclosure.",
+  "interpretation": "Reference fold is not a physical transition; mechanical barrier crossing is not escape. Accepted tails stay unpromoted.",
+  "physical_child": {
+    "formation_proved": false,
+    "volume": null,
+    "energy": null,
+    "w": null
+  },
+  "exporter": {
+    "path": "scripts/summarize_nsc_atlas_parent_release.py",
+    "sha256": "2ae5b155c3e992276f2ccbb8d03a26b7f9f679b45b9274ec455a3727c539474f"
+  },
+  "scope": "Terminal authenticated diagnostic export only; no new fields, states, PDE, causal handoff or child claimed."
+}

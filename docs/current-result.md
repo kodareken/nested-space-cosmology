@@ -13,9 +13,16 @@ force decomposition are retained in the
 The source-derived measurement ball's Einstein-frame mean density falls
 1.914%, while boundary observers measure net inward scalar flux. The
 Eulerian ledger and boundary-frame flux are explicitly distinguished.
-Twenty-five independent mathematical controls pass. A bounded, source-bound
-continuation now preserves the exact complete Cauchy state and absolute
-clock rather than choosing another preparation. The PDF remains unchanged.
+The [same-state continuation](../results/summaries/nsc-atlas-parent-release-continuation-v1.json)
+shows about49.8% internal-volume growth by common proper1.2. Its two size
+values differ8.41e-7. Both cross the reference-fold field coordinate, with
+time spread .00013490; neither observes a bare-top crossing or size-velocity
+reversal. Coarse evolution stops on its numerical guard and fine evolution
+on its compute allowance near1.305. Increasing unresolved internal-size
+forcing limits later geometric claims. The fixed diagnostic boundary is
+not sampled future-trapped. No regular child has been constructed.
+Thirty-one math/recovery tests pass. Section6.1 of the living manuscript
+now presents the worked result, its exact energy identity and limitations.
 
 ## Unchanged parent and conditional conformal endpoint, 1 November 2026
 

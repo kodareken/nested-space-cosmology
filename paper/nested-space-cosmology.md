@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 31 October 2026
+Working research manuscript, 1 November 2026
 
 ## Abstract
 
@@ -328,9 +328,67 @@ for claims**. The subsequent finite searches of the equal two-mode
 preparation find no admitted future trap. That finite search is not a
 prohibition for other states of the same action.
 
+### 6.1 The unchanged parent drives its internal geometry
+
+<!-- nsc-claim:parent-driven-mechanical-transfer -->
+<!-- Evidence binding: [actual force decomposition](../results/summaries/nsc-atlas-parent-release-v2.json) -->
+
+The original two-mode parent supplies a finite-amplitude geometric response
+without a new incoming pulse or another starting state. Varying its existing
+action gives, for K_s=84,
+
+$$
+K_s\Box s-V_s+6\mu^2\chi^2=0.
+$$
+
+Let u be the tracked unit geodesic, P_u^{ab}=g^{ab}+u^au^b and
+e_s=K_s[u(s)]^2/2+V(s). Direct differentiation and the field equation give
+
+$$
+\frac{de_s}{d\tau}
+=6\mu^2\chi^2u(s)+K_su(s)P_u^{ab}\nabla_a\nabla_bs.
+$$
+
+This identifies the wave's mechanical work and the observer-spatial
+remainder in one evolving geometry. The [derivation and controls](../docs/nsc-atlas-valve-formation.md)
+retain the distinction between geodesic time, normal acceleration and
+regional flux. It is a local energy identity, not a child-formation theorem.
+
+<!-- nsc-claim:parent-driven-finite-volume -->
+
+The [source-bound readout](../results/summaries/nsc-atlas-parent-release-v2.json)
+measures +.11015 wave work through proper duration .9, opposed by -.02810
+spatial-Laplacian work. Local mechanical energy rises .22098 to .31065;
+the bare barrier is .35454. The wave-work time-refinement indicator is
+.000089. Both resolutions then continue their complete original Cauchy
+state, with the fields, momenta, observer and absolute clocks preserved.
+At the same source-anchor proper duration1.2, the
+[continuation comparison](../results/summaries/nsc-atlas-parent-release-continuation-v1.json)
+gives:
+
+| Quantity | Degree20 | Degree24 |
+| --- | ---: | ---: |
+| Internal log size s | -.0019497504 | -.0019505915 |
+| Internal volume / initial volume | 1.498350 | 1.498335 |
+| Hamiltonian residual / H_ref squared | .03632 | .01180 |
+
+Thus the unchanged parent numerically drives about49.8% internal-volume
+growth in this finite window. This is conditional on the declared action
+and original preparation; it does not select their fundamental inputs.
+
+![Wave work, opposing spatial transport and actual internal mechanical energy](figures/nsc-atlas-parent-release.png)
+
+The [fixed-boundary check](../results/summaries/nsc-atlas-parent-release-surface-v1.json)
+has outgoing expansion .37548 to .65660 in model inverse-length units and negative incoming expansion
+on the fine angular samples at proper1.2. That measurement sphere is not
+a demonstrated future-trapped boundary. Neither run crosses the bare
+potential top or records a velocity reversal before numerical/budget
+stops near1.3. Growing unresolved internal-size forcing limits the later
+geometry. No regular child or cosmological vacuum fraction is inferred.
+
 <!-- nsc-claim:one-mode-trapped-neck -->
 
-The next preparation puts the same round-reference excitation into the
+For comparison, the earlier one-mode preparation puts the same round-reference excitation into the
 lowest odd mode: chi=epsilon A X1, with kappa A²=24/(z+3). Its occupation
 is explicitly changed; it has not been selected by inheritance. On its
 reflection-fixed sphere X1=0, both initial expansions vanish. Direct ADM

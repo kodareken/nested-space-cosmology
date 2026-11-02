@@ -14,6 +14,71 @@ Never select older code silently when a current-source check fails.
 
 ## Scientific framing and authority
 
+### Foundation reset: Douglas, 2 November 2026
+
+Build the offset construction from explicit geometric premises before importing
+an action, field content, potential or cosmological interpretation. Existing
+calculations using those ingredients remain conditional constructions, not
+derivations of the foundation. Preserve their source and evidence; do not
+silently promote them into axioms or discard them as disproved.
+
+The immediate foundation distinguishes premises, mathematical consequences,
+and measurement interpretations. Opposite winding is a proposed geometric
+description to derive, not yet an electron/positron identification. Equal
+opposite outputs require a specified evolution and conserved quantities;
+zero net winding alone does not establish their number, angle or energy.
+Similarly, boundary minimization needs a declared functional and constraints;
+it does not by itself select dimension, rotation, a spiral or a child space.
+
+Use focused searches in the owning source and document. Root `.rgignore`
+keeps retained results, historical editions and figure payloads out of default
+ripgrep searches. Read evidence explicitly when needed, for example
+`rg --no-ignore 'pattern' results/summaries`. This changes discovery only;
+all code, records and reproduction paths remain in place. Do not use a broad
+search hit or an old handoff as the current work instruction.
+
+### Standing measurement rule: Douglas, 1 November 2026
+
+Douglas's clarified working picture, 1 November 2026: **+ denotes the
+exterior and - the interior of the SAME black hole; 0 is their smooth
+event horizon, not a physical membrane. The offset called time continues
+on BOTH sides.** Geometry and gravitation continue across that horizon.
+Do not silently reinterpret minus as negative energy, literal nothing,
+a separate fluid, or a conventional antiparticle population. Preserve
+the proposed exterior-to-interior continuation and repeated nesting.
+
+In Douglas's proposal, an imbalance/offset, described in his language as
+the "missing antimatter", drives time and motion and prevents complete
+cancellation. Matter and wave behaviour are aspects of one underlying
+geometric process, not competing primitive substances. Preserve this as
+the hypothesis to construct mathematically. Its correspondence to measured
+charges, particle counts and detector signals remains to be derived;
+do not treat that correspondence as already proved or replace the proposal
+with it. Start with the proposed geometry and explicit dynamics.
+
+Start from uncertainty. Established interpretations, NSC's proposed
+interpretation, instrument response, calibration and data processing all
+contain assumptions to identify and test. Familiarity is not verification.
+This is a research method, not a declaration that NSC is already correct or
+that every existing result is wrong.
+
+Keep recorded detector outputs separate from their physical interpretation.
+Derive the chain explicitly: proposed geometry -> field at the detector ->
+instrument response -> predicted signal. Distinguish minimally processed
+signals from calibrated quantities and model-dependent inferred parameters.
+Test response assumptions through calibration controls and independent
+measurements; do not treat even "raw" data as assumption-free.
+
+Mathematics checks what follows from defined premises. Reproducible signals
+test the premises and measurement model. NSC need not reproduce LambdaCDM's
+assumptions or inferred components to qualify. Another theory may be an
+explicit comparison, but its interpretation is not an acceptance axiom.
+Challenge our own chosen action, source and state on the same basis.
+
+After compaction, read this rule before selecting a scientific test. Prior
+plans and progress counts do not override it. More scripts, reports or PDF
+pages do not substitute for resolving the scientific question.
+
 The question is the nested mechanism. Structure that one region does not
 resolve can still leave a local response, and the same relations can recur
 across regional gradients. Familiar local laws are the equations a local

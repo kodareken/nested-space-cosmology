@@ -1,0 +1,10 @@
+# Default research searches cover source, tests, scripts and current prose.
+# Retained evidence and historical editions remain accessible explicitly:
+#   rg --no-ignore 'pattern' results/summaries
+#   rg --no-ignore 'pattern' archive
+/archive/
+/results/
+/paper/archive/
+/paper/.build/
+/docs/figures/
+/paper/figures/

@@ -1,0 +1,211 @@
+{
+  "schema": "nsc-atlas-parent-release-surface-v1",
+  "runs": [
+    {
+      "degree": 20,
+      "proper": 1.199999999999867,
+      "coordinate_t": 1.303656327882904,
+      "state_cache": {
+        "path": ".build/parent-release-continuation-L20-v3/states.npz",
+        "sha256": "e858c333f358181709ff0ee727f78170884b9aeeae836e6a164d2cb4fcf65660",
+        "first_state_sha256": "6b3f4dd203e2a9b043f8c1c1ae703b617e834d4ea8057cb5c531fbc5831318d8"
+      },
+      "state_sha256": "6978319d8057515c2ef1c6406f39437c62348cc9aedf804d6377f3603bcf2fc1",
+      "region_definition": {
+        "sampler_arguments": {
+          "anchor": [
+            0.40837076508409503,
+            0.6454584875205496,
+            0.0,
+            0.6454584875205496
+          ],
+          "radius": 0.8522887164833749
+        },
+        "carrier_a": 0.03795019848848436,
+        "carrier_b": 0.0929307426810275,
+        "q": 0.40837076508409503,
+        "closest_node_points": [
+          [
+            0.16915270937450938,
+            0.9830819297902824,
+            0.0,
+            -0.07026578278989619
+          ],
+          [
+            0.16915270937450938,
+            -0.07026578278989619,
+            0.0,
+            0.9830819297902824
+          ]
+        ],
+        "maximum_anchor_dot_on_node": 0.6582619509705208,
+        "defining_source": "f=aX1+bX2X4 at the original prepared slice",
+        "derivation": "Global Cauchy--Schwarz upper bound with an explicitly feasible equality point; rho=acos(max anchor.X on f=0).",
+        "boundary_role": "Fixed INITIAL reference-coordinate ball; not a material surface, horizon or newly prepared receiver."
+      },
+      "nominal": {
+        "area": 44.265020296855134,
+        "theta_plus_rms": 0.5466086147454039,
+        "theta_minus_rms": 0.5138927758035493,
+        "theta_plus_max_abs": 0.6555170189447764,
+        "theta_plus_range": [
+          0.3755729291769386,
+          0.6555170189447764
+        ],
+        "theta_minus_range": [
+          -0.7181822155020814,
+          -0.3835177067099025
+        ],
+        "radius_range": [
+          0.8522887164833749,
+          0.8522887164833749
+        ],
+        "future_trapped_sampled": false,
+        "future_mots_sampled": false,
+        "expansion_tolerance": 1e-07,
+        "quadrature_order": [
+          32,
+          64
+        ],
+        "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem."
+      },
+      "higher_angular_order": {
+        "area": 44.26502029685514,
+        "theta_plus_rms": 0.5466086147454038,
+        "theta_minus_rms": 0.5138927758035492,
+        "theta_plus_max_abs": 0.6555809009005765,
+        "theta_plus_range": [
+          0.375538475602073,
+          0.6555809009005765
+        ],
+        "theta_minus_range": [
+          -0.7181630281158942,
+          -0.38343248568046095
+        ],
+        "radius_range": [
+          0.8522887164833749,
+          0.8522887164833749
+        ],
+        "future_trapped_sampled": false,
+        "future_mots_sampled": false,
+        "expansion_tolerance": 1e-07,
+        "quadrature_order": [
+          40,
+          80
+        ],
+        "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem."
+      },
+      "area_difference": 7.105427357601002e-15,
+      "scope": "One fixed source-derived boundary only; no optimization, alternative surface search or all-surface nonexistence theorem."
+    },
+    {
+      "degree": 24,
+      "proper": 1.1999999999998208,
+      "coordinate_t": 1.303663098772524,
+      "state_cache": {
+        "path": ".build/parent-release-continuation-L24-v3/states.npz",
+        "sha256": "0e22bb4ad1af6f8d470c5a7e83c7050e9b17528627767db2412a9fb8d4b3f8ea",
+        "first_state_sha256": "11f16b58ddcb918d304a34c91fe341f2e6933af456ebaa5c9d794101cc7a43d8"
+      },
+      "state_sha256": "8e09ddfb49e456ba26fdf4ed2f13bb927f1b9efa54bedc8c3ed6b9c5090755a2",
+      "region_definition": {
+        "sampler_arguments": {
+          "anchor": [
+            0.40837076508409503,
+            0.6454584875205496,
+            0.0,
+            0.6454584875205496
+          ],
+          "radius": 0.8522887164833749
+        },
+        "carrier_a": 0.03795019848848436,
+        "carrier_b": 0.0929307426810275,
+        "q": 0.40837076508409503,
+        "closest_node_points": [
+          [
+            0.16915270937450938,
+            0.9830819297902824,
+            0.0,
+            -0.07026578278989619
+          ],
+          [
+            0.16915270937450938,
+            -0.07026578278989619,
+            0.0,
+            0.9830819297902824
+          ]
+        ],
+        "maximum_anchor_dot_on_node": 0.6582619509705208,
+        "defining_source": "f=aX1+bX2X4 at the original prepared slice",
+        "derivation": "Global Cauchy--Schwarz upper bound with an explicitly feasible equality point; rho=acos(max anchor.X on f=0).",
+        "boundary_role": "Fixed INITIAL reference-coordinate ball; not a material surface, horizon or newly prepared receiver."
+      },
+      "nominal": {
+        "area": 44.264949913733524,
+        "theta_plus_rms": 0.5467237714152062,
+        "theta_minus_rms": 0.5138054022286638,
+        "theta_plus_max_abs": 0.6565070451069974,
+        "theta_plus_range": [
+          0.375518811953794,
+          0.6565070451069974
+        ],
+        "theta_minus_range": [
+          -0.7173922005431281,
+          -0.3834257399921612
+        ],
+        "radius_range": [
+          0.8522887164833749,
+          0.8522887164833749
+        ],
+        "future_trapped_sampled": false,
+        "future_mots_sampled": false,
+        "expansion_tolerance": 1e-07,
+        "quadrature_order": [
+          32,
+          64
+        ],
+        "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem."
+      },
+      "higher_angular_order": {
+        "area": 44.264949913733524,
+        "theta_plus_rms": 0.5467237714152061,
+        "theta_minus_rms": 0.5138054022286638,
+        "theta_plus_max_abs": 0.6566031075522083,
+        "theta_plus_range": [
+          0.3754834412485819,
+          0.6566031075522083
+        ],
+        "theta_minus_range": [
+          -0.7174501062579975,
+          -0.3833329889432844
+        ],
+        "radius_range": [
+          0.8522887164833749,
+          0.8522887164833749
+        ],
+        "future_trapped_sampled": false,
+        "future_mots_sampled": false,
+        "expansion_tolerance": 1e-07,
+        "quadrature_order": [
+          40,
+          80
+        ],
+        "scope": "Finite angular samples of a supplied slice; no continuum sign bound, outermost-horizon or formation theorem."
+      },
+      "area_difference": 0.0,
+      "scope": "One fixed source-derived boundary only; no optimization, alternative surface search or all-surface nonexistence theorem."
+    }
+  ],
+  "source_sha256": {
+    "scripts/summarize_nsc_atlas_parent_release.py": "229023842cdd51a2319f6adffcb6301e894a1797db6513719fefad61545da7b3",
+    "scripts/parent_release_region.py": "9292d8ac812bb245f557fccd1db3ede4a044a227d816a941a9514aef2c088cf5",
+    "src/recursive_horizons/nsc_atlas_trapped_surfaces.py": "175fd3b665d04180f04960c1e53018672652a27b2573812ddb2f3cac86d78841",
+    "src/recursive_horizons/nsc_atlas_trapped_parent.py": "b639f91222a25a5e2bbb192f386efad6dba0f6160557a9777ede64b520f1df13"
+  },
+  "physical_child": {
+    "formation_proved": false,
+    "volume": null,
+    "energy": null,
+    "w": null
+  }
+}

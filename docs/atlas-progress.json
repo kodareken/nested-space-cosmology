@@ -8,9 +8,9 @@
   "active_frontier": "valve_child",
   "current_owner": "docs/nsc-atlas-valve-formation.md",
   "current_calculation": "Parent-driven internal-volume release from unchanged Cauchy data",
-  "completed": "Two passive same-parent resolutions, actual covariant force/work identity, source-derived diagnostic ball and corrected tube-observer flux. Internal volume +29.436%; no barrier exit through anchor.9. Twenty-five portable math controls pass.",
-  "active": "Accepted bounded SAME-state continuation20/24 from exact admitted.9 endpoint toward first bare-top crossing, velocity reversal, proper1.6 or numerical/budget guard. No new fields or supplied states. No extra halo/eta/Lambda/old-neck campaign.",
-  "continuation": "Current source d37fb5ab; two same-Cauchy PDE jobs nowrunning in .build/parent-release-continuation-L{20,24}-v3/run.json,4Numba threads each,1500seconds allowance each. Physicalrestart is exactoriginalanchor.9 state; zero field/gauge/clock resets. Source40ca9bdc v2jobs terminated onNumPybooleanJSONencoding atfirstproper1.0 checkpoint, BEFORE rawflush; those computed tails are not retained and support no claim. Saver fixed raw-first and6synthetic interruption/export tests pass. Bothpassivereadouts total64.13s; currentrecord nsc-atlas-parent-release-v2.json source d03c5743. PDF252unchanged; noAGENTSchanges.",
+  "completed": "Actual original-parent wave drives internal-volume motion: +29.436% through.9, about+49.8% atcommonproper1.2, without newfields/states. Exact localmechanicalenergyidentity, correctedboundaryflux+.23533inward through.9. SamefullCauchy20/24 continuations authenticateandshow no bare-top crossing/velocityturn before numerical/budgetstops; referencefold times1.264095564/1.263960667. Thirty-one math/recoverytests pass.",
+  "active": "Latest steering: challenge premises and measurement interpretations before selecting more calculations. Do not resume the previous numerical/PDF campaign automatically.",
+  "continuation": "All PDE jobs are terminal. PDF build was explicitly stopped after user redirected effort; unfinished local manuscript edits are preserved, and the existing PDF remains the prior252-page version. No further PDF work, script generation or push was requested by this memory update. Read docs/instructions.md standing measurement rule before any next scientific test. Existing results remain conditional on their recorded action, state, instrument/observer model and finite domain.",
   "items": [
     {
       "id": "dimensions_inputs",
@@ -434,7 +434,9 @@
     "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json",
     "results/summaries/nsc-atlas-parent-valve-test-v1.json",
     "results/summaries/nsc-atlas-parent-release-v1.json",
-    "results/summaries/nsc-atlas-parent-release-v2.json"
+    "results/summaries/nsc-atlas-parent-release-v2.json",
+    "results/summaries/nsc-atlas-parent-release-continuation-v1.json",
+    "results/summaries/nsc-atlas-parent-release-surface-v1.json"
   ],
   "intermediate_results": {
     "internal_release_critical_loading": 0.3750793338270073,
@@ -480,10 +482,8 @@
       20,
       24
     ],
-    "pending_local_producers": [
-      "Same-Cauchy parent-release continuation20/24 v3, at most1500sec each,4Numba each"
-    ],
-    "next_step": "Inspect first stop and matched-clock resolution comparison; do not resume other prepared states or lengthen endpoints automatically.",
+    "pending_local_producers": [],
+    "next_step": "Read latest user steering and standing measurement rule; no automatically queued calculation or PDF build.",
     "completed_outputs": [
       "results/summaries/nsc-atlas-valve-formation-early-v1.json",
       "results/summaries/nsc-atlas-valve-formation-extended-v1.json",
@@ -507,7 +507,9 @@
       "results/summaries/nsc-atlas-valve-counterrotation-evolution-v1.json",
       "results/summaries/nsc-atlas-parent-valve-test-v1.json",
       "results/summaries/nsc-atlas-parent-release-v1.json",
-      "results/summaries/nsc-atlas-parent-release-v2.json"
+      "results/summaries/nsc-atlas-parent-release-v2.json",
+      "results/summaries/nsc-atlas-parent-release-continuation-v1.json",
+      "results/summaries/nsc-atlas-parent-release-surface-v1.json"
     ],
     "one_mode_spherical_degrees": [
       24,
@@ -531,7 +533,7 @@
       8001
     ],
     "publication_pages": 252,
-    "paper_revision": "working-2026-11-01.01",
+    "paper_revision": "working-2026-11-01.02",
     "source_stage_focused_checks": {
       "passed": 169,
       "test_files": 20
@@ -569,7 +571,7 @@
     "note": "The work-gate score alone does not complete the programme or authorize publication."
   },
   "proposed_next_calculation": {
-    "status": "accepted_readout_complete_same_state_continuation_running",
+    "status": "executed_bounded_result_saved_child_open",
     "owner": "docs/nsc-atlas-valve-formation.md#proposed-next-connection-parent-driven-release-before-collapse",
     "decision": "Use actual parent-driven concentration and internal-size release before another nonlinear formation attempt; static fold and one-mode epsilon threshold are not original-parent trigger criteria.",
     "reuse": [
@@ -585,5 +587,19 @@
     },
     "no_new_fields_or_supplied_states": true,
     "child_not_promised": true
+  },
+  "standing_research_method": {
+    "owner": "docs/instructions.md#standing-measurement-rule-douglas-1-november-2026",
+    "instruction": "Read after every compaction before selecting tests. Begin from uncertainty: separate signals, instrument/calibration assumptions and physical interpretation; derive geometry-to-detector predictions. Test NSC premises too. Existing theory is a comparison, not an acceptance axiom.",
+    "latest_user_clarification": "We do not know; this method is not certainty that NSC is correct or that all existing observations are false.",
+    "douglas_geometry_convention": {
+      "plus": "Exterior of the black hole",
+      "zero": "Smooth event horizon of the same black hole, no physical membrane",
+      "minus": "Interior of the same black hole",
+      "time_offset": "Continues on both sides; proposed imbalance driving motion, described by Douglas as missing antimatter",
+      "ontology": "Particle and wave behaviour belong to one underlying geometric process",
+      "status": "Working hypothesis to construct and calculate; measured charge/baryon identification not yet derived",
+      "memory_rule": "Preserve these meanings after compaction; do not silently substitute minus=negative energy, nothing, separate fluid or conventional antiparticle count."
+    }
   }
 }

@@ -12,6 +12,10 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def main():
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--paper',action='store_true',help='One readable book-width mechanical-work panel')
+    args=parser.parse_args()
     record=json.loads((ROOT/'results/summaries/nsc-atlas-parent-release-v2.json').read_bytes())
     row=next(r for r in record['runs'] if r['degree']==24)
     path=(ROOT/row['raw_path']).resolve()
@@ -22,6 +26,19 @@ def main():
     labels=z['force_labels']; work=np.asarray(z['cumulative_work'])
     mechanical=np.asarray(z['mechanical_radion_energy'])
     top=s[-1]+z['bare_top_distance'][-1]
+    if args.paper:
+        with plt.rc_context({'font.size':10,'axes.spines.top':False,'axes.spines.right':False}):
+            fig,ax=plt.subplots(figsize=(6.6,3.0),layout='constrained')
+            ax.plot(t,work[:,labels.index('carrier_force')],color='#006b75',lw=1.8,label='Wave work')
+            ax.plot(t,work[:,labels.index('spatial_laplacian')],color='#a54b20',lw=1.8,label='Spatial-gradient work')
+            ax.plot(t,mechanical-mechanical[0],color='#3f4c55',lw=1.8,label='Mechanical energy gain')
+            ax.axhline(z['bare_mechanical_margin'][0],color='#88949b',ls='--',label='Initial bare-barrier gap')
+            ax.set(xlabel='Source-anchor proper duration',ylabel='Local mechanical work (model units)',xlim=(0,.9))
+            ax.legend(frameon=True,facecolor='white',edgecolor='white',framealpha=.95,loc='upper left',fontsize=8)
+            ax.grid(alpha=.18)
+            output=ROOT/'paper/figures/nsc-atlas-parent-release.png'
+            fig.savefig(output,dpi=220); plt.close(fig); print(str(output))
+        return
     with plt.rc_context({'font.size':10,'axes.spines.top':False,'axes.spines.right':False}):
         fig,axes=plt.subplots(1,3,figsize=(12.8,4.0),layout='constrained')
         a,b,c=axes

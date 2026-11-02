@@ -9,8 +9,8 @@ occupation below remain explicitly distinct states.
 
 ## Parent-driven release: executed readout and same-state continuation
 
-Douglas accepted this calculation after `befb4300`. The passive readout is
-complete; a bounded continuation now tests the same complete Cauchy state.
+Douglas accepted this calculation after `befb4300`. The passive readout and
+bounded continuation of the same complete Cauchy state are now complete.
 The old supplied-state, Dirac and conformal-neck campaigns stay paused.
 This work uses the existing two fields and the fixed original preparation.
 
@@ -68,6 +68,12 @@ remains above its adiabatic fold throughout the observed interval. This
 does not determine how long it remains above the fold afterward. A release
 time and eventual escape are not inferred from the local Hessian or from
 the already matched static fold.
+
+![Source-bound internal-size, mechanical-work and regional-density histories](figures/nsc-atlas-parent-release.png)
+
+The figure uses the fine passive series only. Regional quantities are
+evaluated on GH leaves labelled by the source-anchor clock; the plot does
+not identify a global proper time or a receiving child.
 
 ### Local driving is distinct from regional accretion
 
@@ -131,7 +137,57 @@ The first CLI-only attempt stopped on sibling import resolution before any
 readout; the first continuation attempts stopped on default-quadrature
 metadata before any RHS evolution. Their fixes changed no physical data.
 The successful passive records bind their exact committed sources.
-No new PDF pages or cosmological/charge claims are added by this result.
+No cosmological or charge claim is added by this result. Main-text section6.1
+now contains only this worked parent-driven result and its numerical limits.
+
+### Completed continuation and the resolved result
+
+The [authenticated terminal comparison](../results/summaries/nsc-atlas-parent-release-continuation-v1.json)
+preserves both complete caches and their actual dense polynomials. Every
+first restart-state byte matches its pinned admitted .9 Cauchy data.
+Both producer records confirm unchanged source during the runs.
+
+| Quantity | Degree20 | Degree24 |
+| --- | ---: | ---: |
+| s at anchor proper1.2 | -.001949750359 | -.001950591472 |
+| Internal volume / initial volume at1.2 | 1.498349826 | 1.498334702 |
+| Hamiltonian RMS / reference H squared at1.2 | .03631653 | .01180112 |
+| Reference-fold field-coordinate time | 1.264095564 | 1.263960667 |
+| Bare potential-top crossing | Not observed | Not observed |
+| Geodesic size-velocity reversal | Not observed | Not observed |
+| Stop | Numerical guard at1.3 | 1500-second compute allowance |
+
+The reference-fold time spread is .0001348973. Equal internal size at
+that event is true by its definition and is not an independent convergence
+test. The common-clock1.2 field difference is8.41e-7. These are empirical
+two-resolution comparisons, not continuum error enclosures.
+The fine run retains a guard-passing accepted endpoint at proper1.30510769;
+its original absolute coordinate time is1.43588954. The failed coarse1.3
+guard and its later accepted tail are preserved without promotion.
+
+The numerical limitation is specific. At coarse proper1.3, the spatial
+projection omits13.71% RMS of the computed internal-size acceleration;
+at the fine endpoint it omits5.60%. The lapse remains positive and finite
+(minimum about.785), with metric validity retained. No actual singularity,
+barrier exit or new region is inferred from this loss of force resolution.
+The next required numerical input is a resolved continuation of that same
+force and Cauchy state; a different supplied preparation would not provide it.
+Neither a larger allowance nor another grid is launched automatically here.
+
+The local mechanical energy can momentarily exceed the bare potential top
+while s is still below it. This is a necessary comparison only: its excess
+is sensitive to momentum resolution and the gradients continue exchanging
+energy. It neither proves a robust surplus nor turns the reference-fold
+coordinate into an exit event.
+
+The [fixed measurement-boundary check](../results/summaries/nsc-atlas-parent-release-surface-v1.json)
+uses the original derived ball at common proper1.2, with32x64 and40x80
+angular samples, without optimizing a surface or choosing another region.
+Fine outgoing expansion ranges .37548344 to .65660311 and incoming
+expansion -.71745011 to -.38333299 in model inverse-length units. This
+fixed surface is not sampled future-trapped. No all-surface nonexistence
+theorem or regular receiving child is asserted. Child volume, energy and
+w therefore remain undefined. Thirty-one portable math/recovery tests pass.
 
 ## Accepted roadmap: parent-driven release before collapse
 

@@ -838,6 +838,16 @@
       "section": "A.200",
       "status": "measured",
       "owner": "docs/nsc-atlas-inherited-charge.md"
+    },
+    "parent-driven-mechanical-transfer": {
+      "section": "6.1",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-valve-formation.md"
+    },
+    "parent-driven-finite-volume": {
+      "section": "6.1",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-valve-formation.md"
     }
   },
   "findings": [
