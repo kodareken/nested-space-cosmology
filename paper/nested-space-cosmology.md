@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 2 November 2026
+Foundation Edition · Version 0.27.0 · 2 November 2026
 
 ## Abstract
 
