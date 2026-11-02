@@ -1,0 +1,690 @@
+{
+  "schema": "nsc-finite-parent-receiver-summary-v1",
+  "source_sha256": "a0e9c86ec4cb2e37c0f9ce028d321f968ac1ca1e91bd34cef6b6c61125224a39",
+  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --evolution-only",
+  "scope": "finite model evolution and empirical numerical controls, not a child-formation or observational proof",
+  "initial_phase_energy": 39.47841760435743,
+  "shape_spectrum": {
+    "breathing_to_shear_ratio": 2,
+    "equilibrium_radius": 1,
+    "frequency_squared": [
+      1,
+      1,
+      4
+    ],
+    "geometric_inertia": "K = sum_i (d log(lambda_i)/d offset)^2 / 2",
+    "inherited_winding_held_fixed": true,
+    "physical_frequency_unit_selected": false,
+    "stiffness_matrix": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ]
+  },
+  "exact_free_parent": {
+    "asymptotic_log_stretch_rate": 5.130199320647456,
+    "curvature_lambda_if_same_scale_is_extended_to_flat_3d": 78.95683520871486,
+    "geometric_kinetic_energy": 39.47799261872269,
+    "log_remaining_optical_distance": -13.074351144117848,
+    "log_stretch": 11.439209323026422,
+    "log_stretch_velocity": 5.130171707244809,
+    "observer_causal_horizon_proper_length": 0.19492472490157597,
+    "offset": 2.5,
+    "optical_offset": 0.38984630224985767,
+    "phase_energy": 0.00042498563474643636,
+    "scope": "exact limit of declared geometric inertia and phase action; no SI ruler or observed vacuum identified",
+    "stretch": 92893.53422007278,
+    "total_future_optical_reach": 0.38984840061683806
+  },
+  "branch_scattering": {
+    "reflected": 0.1111111111111111,
+    "each_receiver": 0.4444444444444444,
+    "combined_receivers": 0.8888888888888888,
+    "condition": "one incoming characteristic at a degree-three transparent contact; receivers already exist"
+  },
+  "cases": {
+    "chain_01": {
+      "method": "RK4 method of steps; linear accepted optical-history interpolation",
+      "offset": 2.5,
+      "optical_step": 0.01,
+      "cells_per_room": null,
+      "endpoint": {
+        "continuum_optical_distance": [
+          0.24885797140687216,
+          2.156229341342147,
+          24.15054293228297
+        ],
+        "enclosing_pressure": [
+          1.1011859617866058e-19,
+          0.007987898761789344,
+          805.7806453704105
+        ],
+        "field_geometry_work": [
+          -38.187284767506625,
+          -0.8821045532941045,
+          0.08371990207009984
+        ],
+        "geometric_kinetic_energy": 38.98566960106718,
+        "gross_received_through_contact": [
+          0,
+          1.5882036527681664,
+          0.252845242985183
+        ],
+        "gross_returned_through_contact": [
+          1.290773381339582,
+          0.2528452404074852,
+          0.2974302740062824
+        ],
+        "inherited_compression": [
+          0,
+          10.42648828542876,
+          4.42605098799247
+        ],
+        "interface_phase_continuity_gap": 0.00022846958579808563,
+        "net_received_through_contact": [
+          -1.290773381339582,
+          1.3353584123606805,
+          -0.04458503102109918
+        ],
+        "offset": 2.5,
+        "outer_log_radius_velocity": [
+          4.792842823512497,
+          0.6813460896359129,
+          -1.5983965640460014
+        ],
+        "outer_radius": [
+          102889.32856560117,
+          2.6638325341181055,
+          0.025290304955109467
+        ],
+        "regional_phase_energy": [
+          0.00035982631426065894,
+          0.4529749559229868,
+          0.039102118254676216
+        ],
+        "regional_volume": [
+          1089208443585262.9,
+          18.902549528620437,
+          0.000016175667029373444
+        ],
+        "total_energy": 39.478106501559104
+      },
+      "max_total_budget_residual": 0.000336172355488884,
+      "max_regional_ledger_residual": 0.00029234461893934416,
+      "interface_phase_gap": 0.00022852131676733,
+      "contact_cancellation": 3.4139358007223564e-15
+    },
+    "chain_02": {
+      "method": "RK4 method of steps; linear accepted optical-history interpolation",
+      "offset": 2.5,
+      "optical_step": 0.02,
+      "cells_per_room": null,
+      "endpoint": {
+        "continuum_optical_distance": [
+          0.24885797212138455,
+          2.1562485427738682,
+          24.1500844661809
+        ],
+        "enclosing_pressure": [
+          1.1011869740402092e-19,
+          0.007985724650750651,
+          805.7079855928433
+        ],
+        "field_geometry_work": [
+          -38.18729019254227,
+          -0.8820107043155627,
+          0.08371331448399034
+        ],
+        "geometric_kinetic_energy": 38.98559473701824,
+        "gross_received_through_contact": [
+          0,
+          1.5878399080531962,
+          0.25251827563498497
+        ],
+        "gross_returned_through_contact": [
+          1.29077337180911,
+          0.2525182730590035,
+          0.29706653882006634
+        ],
+        "inherited_compression": [
+          0,
+          10.426507253217663,
+          4.426007340614249
+        ],
+        "interface_phase_continuity_gap": 0.0004571310311996535,
+        "net_received_through_contact": [
+          -1.29077337180911,
+          1.3353216349941939,
+          -0.044548263185081635
+        ],
+        "offset": 2.5,
+        "outer_log_radius_velocity": [
+          4.792842731295168,
+          0.6813305937707538,
+          -1.5983878335399568
+        ],
+        "outer_radius": [
+          102889.30491573215,
+          2.663781395294231,
+          0.025290923303845404
+        ],
+        "regional_phase_energy": [
+          0.0003598263969008639,
+          0.4528255868401247,
+          0.03910146024905296
+        ],
+        "regional_volume": [
+          1089207692497716.9,
+          18.90146090447198,
+          0.00001617685354505617
+        ],
+        "total_energy": 39.47788161050432
+      },
+      "max_total_budget_residual": 0.000586536553321082,
+      "max_regional_ledger_residual": 0.0005298952830796733,
+      "interface_phase_gap": 0.00045731360668515436,
+      "contact_cancellation": 2.9004576518332215e-15
+    },
+    "chain_04": {
+      "method": "RK4 method of steps; linear accepted optical-history interpolation",
+      "offset": 2.5,
+      "optical_step": 0.04,
+      "cells_per_room": null,
+      "endpoint": {
+        "continuum_optical_distance": [
+          0.2488579733696248,
+          2.1566734367006952,
+          24.13917551929226
+        ],
+        "enclosing_pressure": [
+          1.1012052165884472e-19,
+          0.008008200719588422,
+          801.8018882473984
+        ],
+        "field_geometry_work": [
+          -38.18737296185256,
+          -0.8803898218698949,
+          0.08402258003864067
+        ],
+        "geometric_kinetic_energy": 38.98383817903475,
+        "gross_received_through_contact": [
+          0,
+          1.5882795015348576,
+          0.25255666285723233
+        ],
+        "gross_returned_through_contact": [
+          1.290773101494179,
+          0.2525566602615289,
+          0.2975064026363823
+        ],
+        "inherited_compression": [
+          0,
+          10.426951474761907,
+          4.424948017462438
+        ],
+        "interface_phase_continuity_gap": 0.0009176505393615475,
+        "net_received_through_contact": [
+          -1.290773101494179,
+          1.3357228412733304,
+          -0.044949739779149955
+        ],
+        "offset": 2.5,
+        "outer_log_radius_velocity": [
+          4.792841032591175,
+          0.6812130579021587,
+          -1.5980766748638129
+        ],
+        "outer_radius": [
+          102888.87878887527,
+          2.662587321565499,
+          0.025306379767355433
+        ],
+        "regional_phase_energy": [
+          0.00035982788704609354,
+          0.4534896825883371,
+          0.038983281389891794
+        ],
+        "regional_volume": [
+          1089194159349779,
+          18.876053788174115,
+          0.00001620653096535794
+        ],
+        "total_energy": 39.476670970900024
+      },
+      "max_total_budget_residual": 0.0020000703517268903,
+      "max_regional_ledger_residual": 0.0033094245402216504,
+      "interface_phase_gap": 0.0009179908027184547,
+      "contact_cancellation": 1.9984014443252818e-15
+    },
+    "chain_FE_128": {
+      "method": "DOP853",
+      "offset": 0.5,
+      "optical_step": null,
+      "cells_per_room": 128,
+      "endpoint": {
+        "enclosing_pressure": [
+          0.003705059691634383,
+          0.49666545534280426,
+          1.013013714623911e-160
+        ],
+        "field_geometry_work": [
+          -33.300653482776866,
+          -0.15419013003020043,
+          1.8167258770447362e-163
+        ],
+        "geometric_kinetic_energy": 33.45484361280734,
+        "inherited_compression": [
+          0,
+          1.8912494551882308,
+          0.2247772855481587
+        ],
+        "net_received_through_contact": [
+          -1.2777491608535632,
+          1.277749160853563,
+          7.815346734391362e-161
+        ],
+        "offset": 0.5,
+        "outer_log_radius_velocity": [
+          4.439965655646579,
+          0.19351656849915674,
+          -1.5976499584076773
+        ],
+        "outer_radius": [
+          7.616560023674628,
+          1.0039280306510083,
+          0.6364139836851684
+        ],
+        "regional_phase_energy": [
+          4.900014960353485,
+          1.1235590170995884,
+          7.833497709862127e-161
+        ],
+        "regional_volume": [
+          440.8399475467903,
+          0.7540682935317731,
+          0.2577621473028912
+        ],
+        "total_energy": 39.47841759026041
+      },
+      "max_total_budget_residual": 3.059942343952571e-8,
+      "max_regional_ledger_residual": 2.788929331920542e-8,
+      "interface_phase_gap": null,
+      "contact_cancellation": 2.220446049250313e-16
+    },
+    "chain_FE_64": {
+      "method": "DOP853",
+      "offset": 0.5,
+      "optical_step": null,
+      "cells_per_room": 64,
+      "endpoint": {
+        "enclosing_pressure": [
+          0.0037041244088040115,
+          0.4947358003037492,
+          7.942248754915441e-83
+        ],
+        "field_geometry_work": [
+          -33.29810386224792,
+          -0.15900907176876833,
+          2.8230011118155065e-85
+        ],
+        "geometric_kinetic_energy": 33.45711293387823,
+        "inherited_compression": [
+          0,
+          1.8906442909580052,
+          0.22617235155943285
+        ],
+        "net_received_through_contact": [
+          -1.2817848373546457,
+          1.2817848373546459,
+          6.0986001212741466e-83
+        ],
+        "offset": 0.5,
+        "outer_log_radius_velocity": [
+          4.439604948848683,
+          0.1943967630931647,
+          -1.599018371556749
+        ],
+        "outer_radius": [
+          7.616441498018206,
+          1.0045201236964019,
+          0.6359015818542957
+        ],
+        "regional_phase_energy": [
+          4.8985289050397345,
+          1.1227757567257248,
+          6.126810612472014e-83
+        ],
+        "regional_volume": [
+          440.81752882425207,
+          0.7564817127554968,
+          0.257140045241391
+        ],
+        "total_energy": 39.47841759564369
+      },
+      "max_total_budget_residual": 1.1346934059019986e-8,
+      "max_regional_ledger_residual": 1.1462143428841998e-8,
+      "interface_phase_gap": null,
+      "contact_cancellation": 2.220446049250313e-16
+    },
+    "fork_01": {
+      "method": "RK4 method of steps; linear accepted optical-history interpolation",
+      "offset": 0.9,
+      "optical_step": 0.01,
+      "cells_per_room": null,
+      "endpoint": {
+        "continuum_optical_distance": [
+          0.2409988582063258,
+          1.2804001047940226,
+          1.2804001047940226
+        ],
+        "enclosing_pressure": [
+          0.0000014192855609475387,
+          2.6439696985597334,
+          2.6439696985597334
+        ],
+        "field_geometry_work": [
+          -37.64329652192387,
+          0.48018990550935114,
+          0.48018990550935114
+        ],
+        "geometric_kinetic_energy": 36.68291649212525,
+        "gross_received_through_contact": [
+          0,
+          0.5743118879304315,
+          0.5743118879304315
+        ],
+        "gross_returned_through_contact": [
+          1.1486237758608633,
+          0,
+          0
+        ],
+        "inherited_compression": [
+          0,
+          4.3032689076356245,
+          4.3032689076356245
+        ],
+        "interface_phase_continuity_gap": 4.440892098500626e-16,
+        "net_received_through_contact": [
+          -1.1486237758608633,
+          0.5743118879304315,
+          0.5743118879304315
+        ],
+        "offset": 0.9,
+        "outer_log_radius_velocity": [
+          4.85254717628433,
+          -0.6738188047805632,
+          -0.6738188047805632
+        ],
+        "outer_radius": [
+          54.427228964357326,
+          0.5103755545505193,
+          0.5103755545505193
+        ],
+        "regional_phase_energy": [
+          0.6864975543359184,
+          1.05450179353449,
+          1.05450179353449
+        ],
+        "regional_volume": [
+          161230.7800547202,
+          0.13294426106180612,
+          0.13294426106180612
+        ],
+        "total_energy": 39.47841763353015
+      },
+      "max_total_budget_residual": 7.289528269893708e-8,
+      "max_regional_ledger_residual": 2.5273752335408517e-7,
+      "interface_phase_gap": 1.2212453270876722e-15,
+      "contact_cancellation": 2.220446049250313e-16
+    },
+    "fork_02": {
+      "method": "RK4 method of steps; linear accepted optical-history interpolation",
+      "offset": 0.9,
+      "optical_step": 0.02,
+      "cells_per_room": null,
+      "endpoint": {
+        "continuum_optical_distance": [
+          0.24099885902092313,
+          1.2804001024775926,
+          1.2804001024775926
+        ],
+        "enclosing_pressure": [
+          0.0000014192855648020911,
+          2.6439696992413544,
+          2.6439696992413544
+        ],
+        "field_geometry_work": [
+          -37.64330015685342,
+          0.4801899024464827,
+          0.4801899024464827
+        ],
+        "geometric_kinetic_energy": 36.68291686895974,
+        "gross_received_through_contact": [
+          0,
+          0.5743118873358873,
+          0.5743118873358873
+        ],
+        "gross_returned_through_contact": [
+          1.1486237746717745,
+          0,
+          0
+        ],
+        "inherited_compression": [
+          0,
+          4.303268907686121,
+          4.303268907686121
+        ],
+        "interface_phase_continuity_gap": 1.3322676295501878e-15,
+        "net_received_through_contact": [
+          -1.1486237746717745,
+          0.5743118873358873,
+          0.5743118873358873
+        ],
+        "offset": 0.9,
+        "outer_log_radius_velocity": [
+          4.852547199725574,
+          -0.6738188135824471,
+          -0.6738188135824471
+        ],
+        "outer_radius": [
+          54.427228924800914,
+          0.5103755541538183,
+          0.5103755541538183
+        ],
+        "regional_phase_energy": [
+          0.6864975547035458,
+          1.0545017913474364,
+          1.0545017913474364
+        ],
+        "regional_volume": [
+          161230.77970318415,
+          0.13294426075180427,
+          0.13294426075180427
+        ],
+        "total_energy": 39.478418006358154
+      },
+      "max_total_budget_residual": 0.0000010902965854597824,
+      "max_regional_ledger_residual": 0.000003955713964387542,
+      "interface_phase_gap": 1.3322676295501878e-15,
+      "contact_cancellation": 2.220446049250313e-16
+    },
+    "fork_04": {
+      "method": "RK4 method of steps; linear accepted optical-history interpolation",
+      "offset": 0.9,
+      "optical_step": 0.04,
+      "cells_per_room": null,
+      "endpoint": {
+        "continuum_optical_distance": [
+          0.2409988653813429,
+          1.2804000806476636,
+          1.2804000806476636
+        ],
+        "enclosing_pressure": [
+          0.0000014192859498992371,
+          2.6439696147881078,
+          2.6439696147881078
+        ],
+        "field_geometry_work": [
+          -37.64335598798847,
+          0.48018982030334645,
+          0.48018982030334645
+        ],
+        "geometric_kinetic_energy": 36.682921258253664,
+        "gross_received_through_contact": [
+          0,
+          0.5743118422587238,
+          0.5743118422587238
+        ],
+        "gross_returned_through_contact": [
+          1.1486236845174478,
+          0,
+          0
+        ],
+        "inherited_compression": [
+          0,
+          4.303268861141327,
+          4.303268861141327
+        ],
+        "interface_phase_continuity_gap": 2.220446049250313e-16,
+        "net_received_through_contact": [
+          -1.1486236845174478,
+          0.5743118422587238,
+          0.5743118422587238
+        ],
+        "offset": 0.9,
+        "outer_log_radius_velocity": [
+          4.852547462773434,
+          -0.673818952080929,
+          -0.673818952080929
+        ],
+        "outer_radius": [
+          54.42722521252727,
+          0.5103755430983725,
+          0.5103755430983725
+        ],
+        "regional_phase_energy": [
+          0.6864976005017608,
+          1.0545016891387813,
+          1.0545016891387813
+        ],
+        "regional_volume": [
+          161230.7467123401,
+          0.13294425211253053,
+          0.13294425211253053
+        ],
+        "total_energy": 39.47842223703299
+      },
+      "max_total_budget_residual": 0.000015257568179549708,
+      "max_regional_ledger_residual": 0.00006064906838254558,
+      "interface_phase_gap": 7.771561172376096e-16,
+      "contact_cancellation": 2.220446049250313e-16
+    }
+  },
+  "endpoint_adjacent_spreads": {
+    "chain": {
+      "net_received_through_contact": {
+        "coarse_to_middle": [
+          2.7031493088358616e-7,
+          0.0004012062791365345,
+          0.00040147659406832015
+        ],
+        "middle_to_fine": [
+          9.530472189211991e-9,
+          0.00003677736648666219,
+          0.000036767836017546907
+        ]
+      },
+      "regional_phase_energy": {
+        "coarse_to_middle": [
+          1.4901452296493117e-9,
+          0.0006640957482124121,
+          0.00011817885916116933
+        ],
+        "middle_to_fine": [
+          8.26402049547946e-11,
+          0.00014936908286211636,
+          6.580056232524667e-7
+        ]
+      },
+      "regional_volume": {
+        "coarse_to_middle": [
+          13533147937.875,
+          0.025407116297863297,
+          2.9677420301771313e-8
+        ],
+        "middle_to_fine": [
+          751087546,
+          0.0010886241484584502,
+          1.1865156827259033e-9
+        ]
+      }
+    },
+    "fork": {
+      "net_received_through_contact": {
+        "coarse_to_middle": [
+          9.015432667069945e-8,
+          4.507716355739433e-8,
+          4.507716355739433e-8
+        ],
+        "middle_to_fine": [
+          1.1890888274024292e-9,
+          5.945441916566097e-10,
+          5.945441916566097e-10
+        ]
+      },
+      "regional_phase_energy": {
+        "coarse_to_middle": [
+          4.5798214998171716e-8,
+          1.022086550950263e-7,
+          1.022086550950263e-7
+        ],
+        "middle_to_fine": [
+          3.6762737298801085e-10,
+          2.1870536492940573e-9,
+          2.1870536492940573e-9
+        ]
+      },
+      "regional_volume": {
+        "coarse_to_middle": [
+          0.03299084404716268,
+          8.639273740840281e-9,
+          8.639273740840281e-9
+        ],
+        "middle_to_fine": [
+          0.00035153605858795345,
+          3.1000185751750564e-10,
+          3.1000185751750564e-10
+        ]
+      }
+    }
+  },
+  "later_fork_not_admitted": {
+    "offset": 2.5,
+    "optical_steps": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "total_budget_defects": [
+      0.11302984087416945,
+      0.15514484868237588,
+      0.044939822968402154
+    ],
+    "reason": "reflected-front interpolation is not uniformly controlled; not a numerical claim of cyclic renewal"
+  },
+  "no_observational_input": true,
+  "new_child_formation_proved": false,
+  "one_way_horizon_established": false
+}

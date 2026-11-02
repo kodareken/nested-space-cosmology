@@ -5,7 +5,7 @@ from recursive_horizons.nsc_atlas_offset_generator import (
     calculation,winding_calculation,winding_transport_calculation,
     offset_connection_calculation,inherited_offset_calculation,
     intrinsic_compression_calculation,buckling_to_goldilocks_calculation,
-    nonlocal_to_local_atlas_readout)
+    nonlocal_to_local_atlas_readout,parent_receiver_calculation)
 ROOT=Path(__file__).resolve().parents[1]
 
 
@@ -19,6 +19,7 @@ def main():
     group.add_argument('--intrinsic-only',action='store_true',help='intrinsic deformation cost and constrained neck motion to stdout')
     group.add_argument('--buckling-only',action='store_true',help='helical buckling, damped +/0/- wave asymmetry and Goldilocks equilibrium to stdout')
     group.add_argument('--atlas-only',action='store_true',help='non-local to local multiverse atlas fixed point and translation dictionary to stdout')
+    group.add_argument('--evolution-only',action='store_true',help='finite parent/receiver phase and geometry, with eight parallel controls; stdout only')
     args=p.parse_args()
     for selected,run in ((args.winding_only,winding_calculation),
                          (args.transport_only,winding_transport_calculation),
@@ -26,7 +27,8 @@ def main():
                          (args.inheritance_only,inherited_offset_calculation),
                          (args.intrinsic_only,intrinsic_compression_calculation),
                          (args.buckling_only,buckling_to_goldilocks_calculation),
-                         (args.atlas_only,nonlocal_to_local_atlas_readout)):
+                         (args.atlas_only,nonlocal_to_local_atlas_readout),
+                         (args.evolution_only,parent_receiver_calculation)):
         if selected:
             if args.output is not None:p.error('geometry-only calculations write to stdout; omit --output')
             print(json.dumps(run(),indent=2,sort_keys=True));return

@@ -697,6 +697,500 @@ def spaghettification_to_spherical_winner(compression_chi):
                     minus_to_plus_volume_ratio=(minus_takeover_fraction/plus_fraction) if plus_fraction>0 else None))
 
 
+def receiving_shape_spectrum(winding=1., enclosing_load=1.):
+    """Small shape response of the A0 sphere with declared log-strain inertia.
+
+    E=sum_i n^2 exp(-y_i)+P exp(sum_i y_i), K=sum_i y_dot_i^2/2.
+    The inherited winding is fixed during the response measurement. This is
+    a conditional geometric spectrum, not an identification of matter modes.
+    """
+    if (not math.isfinite(winding) or winding == 0
+            or not math.isfinite(enclosing_load) or enclosing_load <= 0):
+        raise ValueError('finite nonzero winding and positive enclosing load required')
+    radius=(winding*winding/enclosing_load)**.25
+    work=enclosing_load*radius**3
+    stiffness=work*(np.eye(3)+np.ones((3,3)))
+    return dict(equilibrium_radius=radius, stiffness_matrix=stiffness.tolist(),
+                frequency_squared=[work,work,4*work],
+                breathing_to_shear_ratio=2.,
+                geometric_inertia='K = sum_i (d log(lambda_i)/d offset)^2 / 2',
+                inherited_winding_held_fixed=True,
+                physical_frequency_unit_selected=False)
+
+
+def _parent_receiver_system(parents, cells_per_room):
+    """One continuous phase on a finite tree of deforming generated curves.
+
+    Regional available volumes are V_i=R_i^3-sum_children R_j^3;
+    their curve stretches are lambda_i=V_i^(1/3). This volume-to-curve
+    identification and K_geometry=3*sum(log(R_i)_dot^2)/2 are explicit
+    reduction assumptions. The outer boundary is free. No PV reservoir,
+    imposed compression history, damping, or membrane is added.
+    """
+    parents=tuple(parents)
+    if (not parents or parents[0] != -1 or
+            any(type(p) is not int or not 0 <= p < i for i,p in enumerate(parents[1:],1))):
+        raise ValueError('one ordered rooted tree required, with parent[0]=-1')
+    if type(cells_per_room) is not int or cells_per_room < 4 or cells_per_room % 2:
+        raise ValueError('an even cell count of at least four per room is required')
+    count=len(parents); children=[[] for _ in parents]
+    for i,p in enumerate(parents[1:],1): children[p].append(i)
+    left=[];right=[];owner=[];starts=[];ends=[];next_node=1
+    for i,p in enumerate(parents):
+        start=0 if p == -1 else ends[p]
+        nodes=[start]+list(range(next_node,next_node+cells_per_room))
+        next_node+=cells_per_room
+        starts.append(start);ends.append(nodes[-1])
+        left.extend(nodes[:-1]);right.extend(nodes[1:]);owner.extend([i]*cells_per_room)
+    left=np.array(left);right=np.array(right);owner=np.array(owner)
+    fixed=np.array([0]+[ends[i] for i in range(count) if not children[i]])
+    free=np.setdiff1d(np.arange(next_node),fixed)
+    nf=len(free);h=2./cells_per_room;inertia=3.
+    subtree=np.ones(count)
+    for i in range(count-1,0,-1):subtree[parents[i]]+=subtree[i]
+    phase=np.zeros(next_node)
+    x=np.linspace(0.,2.,cells_per_room+1)
+    root_nodes=np.r_[starts[0],right[:cells_per_room]]
+    phase[root_nodes]=2*np.pi*np.minimum(x,2-x)
+    initial=np.r_[phase[free],np.zeros(nf),np.log(subtree)/3,np.zeros(3*count)]
+
+    def geometry(q):
+        enclosed=np.exp(3*q)
+        available=enclosed.copy()
+        for i,p in enumerate(parents[1:],1): available[p]-=enclosed[i]
+        return enclosed,available
+
+    def evaluate(state):
+        phase=np.zeros(next_node);phase[free]=state[:nf]
+        momentum=np.zeros(next_node);momentum[free]=state[nf:2*nf]
+        q=state[2*nf:2*nf+count];pg=state[2*nf+count:2*nf+2*count]
+        enclosed,volume=geometry(q)
+        if np.any(volume <= 0):
+            raise ValueError('available regional volume vanished; positive-volume reduction needs continuation')
+        lam=np.cbrt(volume);half_mass=lam[owner]*h/2
+        mass=np.bincount(left,weights=half_mass,minlength=next_node)+np.bincount(right,weights=half_mass,minlength=next_node)
+        velocity=momentum/mass
+        gradient=(phase[right]-phase[left])/(lam[owner]*h)
+        force=np.bincount(left,weights=gradient,minlength=next_node)-np.bincount(right,weights=gradient,minlength=next_node)
+        kinetic=half_mass*(velocity[left]**2+velocity[right]**2)/2
+        stretch=(phase[right]-phase[left])*gradient/2
+        energy=np.bincount(owner,weights=kinetic+stretch,minlength=count)
+        qdot=pg/inertia
+        volume_dot=3*enclosed*qdot
+        for i,p in enumerate(parents[1:],1):volume_dot[p]-=3*enclosed[i]*qdot[i]
+        log_stretch_dot=volume_dot/(3*volume)
+        density=energy/volume
+        geometry_force=enclosed*density
+        for i,p in enumerate(parents[1:],1):geometry_force[i]-=enclosed[i]*density[p]
+        half_mass_dot=half_mass*log_stretch_dot[owner]
+        mass_dot=np.bincount(left,weights=half_mass_dot,minlength=next_node)+np.bincount(right,weights=half_mass_dot,minlength=next_node)
+        acceleration=(force-mass_dot*velocity)/mass
+        acceleration[fixed]=0.
+        transfer=np.zeros(count)
+        for i in range(count):
+            lo=i*cells_per_room;hi=(i+1)*cells_per_room-1
+            for node,edge,traction in ((starts[i],lo,-gradient[lo]),(ends[i],hi,gradient[hi])):
+                transfer[i]+=velocity[node]*(half_mass[edge]*acceleration[node]+half_mass_dot[edge]*velocity[node]+traction)
+        work=-log_stretch_dot*energy
+        derivative=np.r_[velocity[free],force[free],qdot,geometry_force,transfer,work]
+        geometric_energy=float(np.dot(pg,pg)/(2*inertia))
+        return derivative,dict(phase=phase,momentum=momentum,mass=mass,
+            phase_energy=energy,phase_stretch=np.bincount(owner,weights=stretch,minlength=count),
+            volume=volume,enclosed=enclosed,stretch=lam,
+            pressure=density/3,geometry_energy=geometric_energy,
+            total_energy=float(np.sum(energy)+geometric_energy),
+            transfer=transfer,work=work,geometry_force=geometry_force,
+            log_stretch_dot=log_stretch_dot)
+
+    return dict(initial=initial,evaluate=evaluate,geometry=geometry,
+                free_phase_count=nf,room_count=count,parents=parents,
+                children=children,inertia=inertia)
+
+
+def parent_receiver_evolution(parents=(-1,0,1), cells_per_room=32,
+                              duration=2., method='DOP853', rtol=2e-9,
+                              sample_count=9):
+    """Finite conservative phase/geometry evolution, returning small readouts.
+
+    This starts from the retained triangular winding in the root curve,
+    zero receiving phase and zero momenta. Regional reference volumes are
+    one. Receiving domains and the tree are admitted initial geometry;
+    neither branch formation nor a one-way causal horizon is asserted.
+    """
+    from scipy.integrate import solve_ivp
+    if (not math.isfinite(duration) or duration <= 0 or
+            not math.isfinite(rtol) or not 0 < rtol <= 1e-3 or
+            type(sample_count) is not int or sample_count < 2):
+        raise ValueError('positive finite duration, tolerance and at least two samples required')
+    system=_parent_receiver_system(parents,cells_per_room)
+    initial=system['initial'];evaluate=system['evaluate'];nr=system['room_count']
+    nf=system['free_phase_count'];start=evaluate(initial)[1]
+
+    def positive_volume_guard(t,state):
+        return float(np.min(system['geometry'](state[2*nf:2*nf+nr])[1])-1e-6)
+    positive_volume_guard.terminal=True
+    positive_volume_guard.direction=-1
+    solution=solve_ivp(lambda t,z:evaluate(z)[0],(0.,duration),initial,
+                       method=method,rtol=rtol,atol=rtol*.01,
+                       dense_output=True,events=positive_volume_guard)
+    if not solution.success:raise RuntimeError(solution.message)
+    stop=float(solution.t[-1]);rows=[]
+    # The continuum leading front travels material distance integral dt/lambda.
+    # Integrate on the accepted dense polynomials, rather than interpreting
+    # small semidiscrete precursors as signals beyond that front.
+    nodes,weights=np.polynomial.legendre.leggauss(8)
+    widths=np.diff(solution.t)/2;mids=(solution.t[1:]+solution.t[:-1])/2
+    times=(mids[:,None]+widths[:,None]*nodes).ravel()
+    q_quad=solution.sol(times)[2*nf:2*nf+nr]
+    enclosed=np.exp(3*q_quad);volume=enclosed.copy()
+    for i,p in enumerate(parents[1:],1):volume[p]-=enclosed[i]
+    steps=(volume**(-1/3)).reshape(nr,-1,8)@weights
+    optical_steps=steps*widths
+    optical_cumulative=np.c_[np.zeros(nr),np.cumsum(optical_steps,axis=1)]
+    front_arrival=[0.]*nr
+    for i,p in enumerate(parents[1:],1):
+        if p == 0:continue
+        parent_arrival=front_arrival[p]
+        if parent_arrival is None:front_arrival[i]=None;continue
+        initial_distance=float(np.interp(parent_arrival,solution.t,optical_cumulative[p]))
+        target=initial_distance+2.
+        if optical_cumulative[p,-1] < target:front_arrival[i]=None
+        else:front_arrival[i]=float(np.interp(target,optical_cumulative[p],solution.t))
+    max_total=max_phase=max_geometry=max_flux_sum=0.
+    for t in np.linspace(0.,stop,max(129,sample_count)):
+        state=solution.sol(t);row=evaluate(state)[1]
+        transfer=state[2*nf+2*nr:2*nf+3*nr]
+        work=state[2*nf+3*nr:2*nf+4*nr]
+        phase_residual=row['phase_energy']-start['phase_energy']-transfer-work
+        max_total=max(max_total,abs(row['total_energy']-start['total_energy']))
+        max_phase=max(max_phase,float(np.max(np.abs(phase_residual))))
+        max_geometry=max(max_geometry,abs(row['geometry_energy']+float(np.sum(work))))
+        max_flux_sum=max(max_flux_sum,abs(float(np.sum(transfer))))
+    for t in np.linspace(0.,stop,sample_count):
+        state=solution.sol(t);row=evaluate(state)[1]
+        q=state[2*nf:2*nf+nr];q0=initial[2*nf:2*nf+nr]
+        inherited=[0.]+[float((q[p]-q0[p])-(q[i]-q0[i])) for i,p in enumerate(parents[1:],1)]
+        rows.append(dict(offset=float(t),regional_volume=row['volume'].tolist(),
+            regional_phase_energy=row['phase_energy'].tolist(),
+            outer_radius=np.cbrt(row['enclosed']).tolist(),
+            enclosing_pressure=row['pressure'].tolist(),
+            inherited_compression=inherited,
+            net_received_through_contact=state[2*nf+2*nr:2*nf+3*nr].tolist(),
+            outer_log_radius_velocity=(state[2*nf+nr:2*nf+2*nr]/system['inertia']).tolist(),
+            field_geometry_work=state[2*nf+3*nr:2*nf+4*nr].tolist(),
+            geometric_kinetic_energy=row['geometry_energy'],total_energy=row['total_energy']))
+    return dict(schema='nsc-finite-parent-receiver-v1',parents=list(parents),
+        cells_per_room=cells_per_room,method=method,rtol=rtol,
+        initial_phase_energy=start['phase_energy'].tolist(),
+        initial_total_budget=start['total_energy'],
+        requested_offset=duration,reached_offset=stop,
+        positive_volume_guard_reached=bool(solution.t_events[0].size),
+        rhs_evaluations=solution.nfev,
+        max_sampled_total_budget_residual=max_total,
+        max_sampled_regional_ledger_residual=max_phase,
+        max_sampled_geometry_work_residual=max_geometry,
+        max_sampled_contact_cancellation=max_flux_sum,
+        continuum_optical_distance=optical_cumulative[:,-1].tolist(),
+        estimated_leading_front_arrival_offset=front_arrival,
+        front_estimates_scope='Gauss integral of dense geometry; finite-element precursors ahead of this front are not received continuum signals',
+        regional_phase_pressure_over_density=1/3,
+        material_characteristics='dx/d offset = +/- 1/lambda_i; both directions exist',
+        one_way_horizon_established=False,new_child_formation_proved=False,
+        global_event_horizon_status='not determined by this finite history or the signs of local characteristic speeds',
+        receiving_domains_admitted_initially=True,
+        added_assumptions=['connected material-curve tree with transparent shared phase nodes',
+            'path stretch lambda_i = available regional volume^(1/3)',
+            'phase inertia integral lambda_i*phase_offset^2/2',
+            'geometric inertia 3*sum(log outer radius offset derivatives squared)/2',
+            'unit initial regional volumes and retained root winding; zero initial momenta'],
+        no_observational_input=True,rows=rows)
+
+
+def parent_receiver_calculation():
+    """Bounded independent mesh/time controls; no histories or data files saved."""
+    from concurrent.futures import ProcessPoolExecutor
+    cases=[]
+    for name,parents in (('chain',(-1,0,1)),('fork',(-1,0,0))):
+        for label,step in (('04',.04),('02',.02),('01',.01)):
+            cases.append((f'{name}_{label}',dict(parents=parents,optical_step=step,
+                                               duration=2.5 if name == 'chain' else .9)))
+    cases.extend([
+        ('chain_FE_64',dict(parents=(-1,0,1),cells_per_room=64,duration=.5)),
+        ('chain_FE_128',dict(parents=(-1,0,1),cells_per_room=128,duration=.5))])
+    with ProcessPoolExecutor(max_workers=8) as pool:
+        futures=[pool.submit(parent_receiver_evolution if '_FE_' in name else parent_receiver_characteristics,
+                             **settings) for name,settings in cases]
+        calculated={name:future.result() for (name,_),future in zip(cases,futures)}
+    comparison={}
+    for name in ('chain','fork'):
+        rows=[calculated[f'{name}_{label}']['rows'][-1] for label in ('04','02','01')]
+        comparison[name]={key:dict(
+            coarse_to_middle=np.abs(np.asarray(rows[1][key])-rows[0][key]).tolist(),
+            middle_to_fine=np.abs(np.asarray(rows[2][key])-rows[1][key]).tolist())
+            for key in ('regional_volume','regional_phase_energy','net_received_through_contact')}
+    return dict(schema='nsc-finite-parent-receiver-comparison-v1',
+        reference_geometric_spectrum=receiving_shape_spectrum(),
+        exact_one_room_continuation=one_room_geometric_continuation(2.5),
+        cases=calculated,endpoint_adjacent_spreads=comparison,
+        interpretation='finite model evolution and empirical numerical controls, not a child-formation or observational proof',
+        later_fork_scope='post-reflection fork histories are not admitted numerical claims; characteristic jump interpolation needs a separate continuation',
+        no_files_written=True)
+
+
+def one_room_geometric_continuation(offset):
+    """Exact free-parent limit, including its finite optical future.
+
+    With geometric inertia 3 and retained winding budget Q0=4*pi^2,
+    3*q_ddot=Q0*exp(-q). The causal length below uses the declared curve
+    metric -d(offset)^2+lambda^2 dx^2. It is not a child-formation claim.
+    """
+    if not math.isfinite(offset) or offset < 0:
+        raise ValueError('finite nonnegative offset required')
+    budget=4*math.pi**2;a=math.sqrt(budget/6);u=a*offset
+    q=float(2*np.logaddexp(u,-u)-2*math.log(2))
+    tail=math.exp(-2*u)
+    return dict(offset=offset,log_stretch=q,
+        stretch=math.exp(q) if q < 709 else None,
+        log_stretch_velocity=2*a*math.tanh(u),
+        phase_energy=budget*math.exp(-q),
+        geometric_kinetic_energy=budget*math.tanh(u)**2,
+        optical_offset=math.tanh(u)/a,
+        total_future_optical_reach=1/a,
+        log_remaining_optical_distance=math.log(2/a)-2*u-math.log1p(tail),
+        observer_causal_horizon_proper_length=(1+tail)/(2*a),
+        asymptotic_log_stretch_rate=2*a,
+        curvature_lambda_if_same_scale_is_extended_to_flat_3d=2*budget,
+        scope='exact limit of declared geometric inertia and phase action; no SI ruler or observed vacuum identified')
+
+
+def parent_receiver_characteristics(parents=(-1,0,1), duration=2.5,
+                                    optical_step=.02, sample_count=9):
+    """Characteristic continuation of the same finite parent/receiver model.
+
+    Each room has uniform curve stretch lambda=V**(1/3), with available
+    volume V_i=exp(3*q_i)-sum_children exp(3*q_j) and geometric inertia 3.
+    Its exact field is A_i(s_i-x)+B_i(s_i+x-2), ds_i=dt/lambda_i. Delayed
+    outgoing histories and their primitives replace a spatial field grid.
+    Shared nodes obey transparent Kirchhoff matching without a point mass;
+    the root's outer end and leaf ends are fixed Dirichlet endpoints.
+    RK4 and linear interpolation of accepted histories have empirical
+    errors, especially at characteristic slope jumps. Receiving rooms are
+    admitted initially; this is neither child formation nor a one-way
+    event-horizon construction.
+    """
+    parents=tuple(parents)
+    if (not parents or parents[0] != -1 or
+            any(type(p) is not int or not 0 <= p < i
+                for i,p in enumerate(parents[1:],1))):
+        raise ValueError('one ordered rooted tree required, with parent[0]=-1')
+    if (not math.isfinite(duration) or duration <= 0 or
+            not math.isfinite(optical_step) or not 0 < optical_step <= .25 or
+            type(sample_count) is not int or sample_count < 2):
+        raise ValueError('positive duration, optical_step in (0,.25], and at least two samples required')
+    nr=len(parents);children=[[] for _ in parents]
+    for i,p in enumerate(parents[1:],1):children[p].append(i)
+    subtree=np.ones(nr)
+    for i in range(nr-1,0,-1):subtree[parents[i]]+=subtree[i]
+    contacts=[[(0,0)]]+[[(i,1)]+[(j,0) for j in children[i]]
+                           for i in range(nr)]
+    fixed=np.array([True]+[not children[i] for i in range(nr)])
+    initial=np.zeros(11*nr);initial[:nr]=np.log(subtree)/3
+    initial_energy=np.zeros(nr);initial_energy[0]=4*math.pi**2
+    initial_budget=float(initial_energy.sum());guard=1e-6
+    # Every room/side history is contiguous in offset, so interpolation does
+    # not copy an ever-growing strided matrix column on each delayed query.
+    capacity=min(200000,max(2048,20000000//max(1,13*nr)))
+    time_history=np.empty(capacity)
+    state_history=np.empty((11*nr,capacity))
+    outgoing_history=np.empty((nr,2,capacity))
+    time_history[0]=0.;state_history[:,0]=initial;used=1
+
+    def geometry(state):
+        enclosed=np.exp(3*state[:nr]);volume=enclosed.copy()
+        for i,p in enumerate(parents[1:],1):volume[p]-=enclosed[i]
+        if not np.all(np.isfinite(volume)) or np.any(volume <= 0):
+            raise ValueError('available regional volume is nonpositive in this reduction')
+        return enclosed,volume,np.cbrt(volume)
+
+    def lookup(room,side,eta,kind):
+        if eta < 0:
+            if room != 0:return 0.
+            if kind == 'h':return math.pi if eta < -1 else -math.pi
+            if kind == 'C':return math.pi**2*eta
+            return math.pi*min(-eta,2+eta)
+        xp=state_history[2*nr+room,:used]
+        if eta > xp[-1]+1e-12*max(1.,abs(xp[-1])):
+            raise ValueError('characteristic step exceeded completed delayed history')
+        if kind == 'h':values=outgoing_history[room,side,:used]
+        else:values=state_history[(3*nr if kind == 'C' else 5*nr)+2*room+side,:used]
+        return float(np.interp(eta,xp,values))
+
+    def evaluate(state):
+        enclosed,volume,lam=geometry(state)
+        pg=state[nr:2*nr];s=state[2*nr:3*nr]
+        C=state[3*nr:5*nr].reshape(nr,2)
+        A=state[5*nr:7*nr].reshape(nr,2)
+        delayed_h=np.empty((nr,2));delayed_C=np.empty((nr,2))
+        delayed_A=np.empty((nr,2))
+        for i in range(nr):
+            for side in (0,1):
+                opposite=1-side
+                delayed_h[i,side]=lookup(i,opposite,s[i]-2,'h')
+                delayed_C[i,side]=lookup(i,side,s[i]-2,'C')
+                delayed_A[i,side]=lookup(i,side,s[i]-2,'A')
+        incoming=delayed_h/lam[:,None]
+        outgoing=np.empty((nr,2));node_gap=0.;contact_flux_gap=0.
+        # A(s)+B(s-2) at the left end, A(s-2)+B(s) at the right.
+        trace=np.c_[A[:,0]+delayed_A[:,1],delayed_A[:,0]+A[:,1]]
+        for node,edges in enumerate(contacts):
+            zeta=0. if fixed[node] else 2*sum(incoming[i,k] for i,k in edges)/len(edges)
+            phases=[trace[i,k] for i,k in edges]
+            node_gap=max(node_gap,max(phases)-min(phases),
+                         abs(phases[0]) if fixed[node] else 0.)
+            node_flux=0.
+            for i,k in edges:
+                outgoing[i,k]=lam[i]*(zeta-incoming[i,k])
+                node_flux+=(outgoing[i,k]**2-delayed_h[i,k]**2)/lam[i]**2
+            contact_flux_gap=max(contact_flux_gap,abs(node_flux))
+        energy=np.sum(C-delayed_C,axis=1)/lam
+        if np.any(energy < -1e-10*initial_budget):
+            raise ValueError('interpolated characteristic primitives gave negative regional energy')
+        qdot=pg/3
+        volume_dot=3*enclosed*qdot
+        for i,p in enumerate(parents[1:],1):volume_dot[p]-=3*enclosed[i]*qdot[i]
+        log_stretch_dot=volume_dot/(3*volume)
+        density=energy/volume
+        force=enclosed*density
+        for i,p in enumerate(parents[1:],1):force[i]-=enclosed[i]*density[p]
+        transfer=np.sum(outgoing**2-delayed_h**2,axis=1)/lam**2
+        work=-energy*log_stretch_dot
+        derivative=np.r_[qdot,force,1/lam,(outgoing**2/lam[:,None]).ravel(),
+                         (outgoing/lam[:,None]).ravel(),transfer,work,
+                         np.maximum(transfer,0.),np.maximum(-transfer,0.)]
+        geometry_energy=float(np.dot(pg,pg)/6)
+        return derivative,dict(enclosed=enclosed,volume=volume,stretch=lam,
+            phase_energy=energy,pressure=density/3,outgoing=outgoing,
+            incoming=incoming,transfer=transfer,work=work,
+            geometry_energy=geometry_energy,total_energy=float(energy.sum()+geometry_energy),
+            interface_phase_gap=node_gap,contact_flux_gap=contact_flux_gap)
+
+    first=evaluate(initial)[1];outgoing_history[:,:,0]=first['outgoing']
+    state=initial.copy();t=0.;rhs_evaluations=1;rejected_steps=0
+    status='requested offset reached';guard_reached=False
+    max_total=max_regional=max_geometry=max_contact=max_phase=max_flux=0.
+    first_return=[None]*nr;max_return=np.zeros(nr)
+    speed_bound=max(1.,math.sqrt(2*initial_budget/3))
+    sample_targets=np.linspace(0.,duration,sample_count);next_sample=1
+
+    def record_diagnostics(current_time,current_state,values):
+        nonlocal max_total,max_regional,max_geometry,max_contact,max_phase,max_flux
+        transfers=current_state[7*nr:8*nr];works=current_state[8*nr:9*nr]
+        residual=values['phase_energy']-initial_energy-transfers-works
+        max_total=max(max_total,abs(values['total_energy']-initial_budget))
+        max_regional=max(max_regional,float(np.max(np.abs(residual))))
+        max_geometry=max(max_geometry,abs(values['geometry_energy']+float(works.sum())))
+        max_contact=max(max_contact,abs(float(transfers.sum())))
+        max_phase=max(max_phase,values['interface_phase_gap'])
+        max_flux=max(max_flux,values['contact_flux_gap'])
+        for i in range(1,nr):
+            power=float(values['incoming'][i,0]**2)
+            max_return[i]=max(max_return[i],power)
+            if first_return[i] is None and power > 1e-12*initial_budget:
+                first_return[i]=float(current_time)
+
+    record_diagnostics(0.,state,first)
+    while t < duration:
+        if used >= capacity:
+            status='bounded characteristic-history capacity reached';break
+        current=evaluate(state)[1];rhs_evaluations+=1
+        if float(np.min(current['volume'])) <= guard:
+            status='positive-volume guard reached; this reduction needs continuation'
+            guard_reached=True;break
+        while next_sample < sample_count and sample_targets[next_sample] <= t+1e-13:
+            next_sample+=1
+        sample_limit=sample_targets[next_sample] if next_sample < sample_count else duration
+        dt=min(duration-t,sample_limit-t,optical_step*float(np.min(current['stretch'])),
+               optical_step/speed_bound)
+        accepted=False
+        for _ in range(60):
+            if dt <= 1e-14*max(1.,t):
+                status='step floor at a volume/history boundary; this reduction needs continuation'
+                break
+            try:
+                k1=evaluate(state)[0]
+                k2=evaluate(state+dt*k1/2)[0]
+                k3=evaluate(state+dt*k2/2)[0]
+                k4=evaluate(state+dt*k3)[0];rhs_evaluations+=4
+                candidate=state+dt*(k1+2*k2+2*k3+k4)/6
+                _,candidate_volume,_=geometry(candidate)
+                if np.max(candidate[2*nr:3*nr]-state[2*nr:3*nr]) >= 1:
+                    raise ValueError('optical increment reached the delayed-history safety bound')
+                candidate_values=evaluate(candidate)[1];rhs_evaluations+=1
+                if np.min(candidate_volume) <= guard:
+                    dt/=2;rejected_steps+=1
+                    if float(np.min(current['volume'])) <= 1.001*guard:
+                        status='positive-volume guard reached; this reduction needs continuation'
+                        guard_reached=True;break
+                    continue
+            except (ValueError,OverflowError,FloatingPointError):
+                dt/=2;rejected_steps+=1;continue
+            accepted=True;break
+        if not accepted:
+            if status == 'requested offset reached':
+                status='no admissible characteristic step; inspect volume and delayed history'
+            break
+        t+=dt;state=candidate
+        time_history[used]=t;state_history[:,used]=state
+        outgoing_history[:,:,used]=candidate_values['outgoing'];used+=1
+        record_diagnostics(t,state,candidate_values)
+    rows=[]
+    for at in np.linspace(0.,t,sample_count):
+        sample=np.array([np.interp(at,time_history[:used],row[:used])
+                         for row in state_history])
+        values=evaluate(sample)[1];record_diagnostics(float(at),sample,values)
+        q=sample[:nr];q0=initial[:nr]
+        inherited=[0.]+[float((q[p]-q0[p])-(q[i]-q0[i]))
+                          for i,p in enumerate(parents[1:],1)]
+        rows.append(dict(offset=float(at),regional_volume=values['volume'].tolist(),
+            regional_phase_energy=values['phase_energy'].tolist(),
+            outer_radius=np.cbrt(values['enclosed']).tolist(),
+            enclosing_pressure=values['pressure'].tolist(),
+            inherited_compression=inherited,
+            net_received_through_contact=sample[7*nr:8*nr].tolist(),
+            gross_received_through_contact=sample[9*nr:10*nr].tolist(),
+            gross_returned_through_contact=sample[10*nr:11*nr].tolist(),
+            field_geometry_work=sample[8*nr:9*nr].tolist(),
+            outer_log_radius_velocity=(sample[nr:2*nr]/3).tolist(),
+            continuum_optical_distance=sample[2*nr:3*nr].tolist(),
+            interface_phase_continuity_gap=values['interface_phase_gap'],
+            geometric_kinetic_energy=values['geometry_energy'],
+            total_energy=values['total_energy']))
+    return dict(schema='nsc-parent-receiver-characteristics-v1',parents=list(parents),
+        method='RK4 method of steps; linear accepted optical-history interpolation',
+        optical_step=optical_step,requested_offset=duration,reached_offset=float(t),
+        status=status,positive_volume_guard_reached=guard_reached,
+        accepted_steps=used-1,rejected_steps=rejected_steps,rhs_evaluations=rhs_evaluations,
+        history_capacity=capacity,initial_phase_energy=initial_energy.tolist(),
+        initial_total_budget=initial_budget,
+        max_accepted_and_sampled_total_budget_residual=max_total,
+        max_accepted_and_sampled_regional_ledger_residual=max_regional,
+        max_accepted_and_sampled_geometry_work_residual=max_geometry,
+        max_accepted_and_sampled_contact_cancellation=max_contact,
+        max_accepted_and_sampled_interface_phase_gap=max_phase,
+        max_accepted_and_sampled_instantaneous_contact_flux_gap=max_flux,
+        first_receiving_side_return_offset=first_return,
+        max_receiving_side_return_power=max_return.tolist(),
+        return_from_receiving_region_observed=any(x is not None for x in first_return),
+        roundtrip_diagnostic='nonzero left-going characteristic inside an admitted receiver; finite fixed outer/leaf endpoints reflect',
+        regional_phase_pressure_over_density=1/3,
+        material_characteristics='dx/d offset = +/- 1/lambda_i; both directions exist',
+        one_way_horizon_established=False,new_child_formation_proved=False,
+        global_event_horizon_status='not determined by this finite history or local characteristic signs',
+        receiving_domains_admitted_initially=True,
+        numerical_error_scope='empirical optical-step and history-interpolation controls; no continuum error enclosure',
+        no_observational_input=True,rows=rows)
+
+
 def unified_least_resistance_cycle(compression_chi, winding_budget=1., enclosing_load=1.):
     """Single-cost 5-variable minimization producing infall filament, 0-crossing, and - sphere.
 
@@ -709,11 +1203,14 @@ def unified_least_resistance_cycle(compression_chi, winding_budget=1., enclosing
         m_- = m0*theta^2 across 3 directions in - from conserved turns n_+ + n_- = N0.
       - A4 (One-way valve at 0): Transferred winding fraction theta in [0, 1].
 
-    Simultaneous stationarity dE/d(lambda_3)=0, dE/d(tilde_lambda_i)=0, dE/d(theta)=0
+    In normalized m0=P=1 units, simultaneous stationarity
+    dE/d(lambda_3)=0, dE/d(tilde_lambda_i)=0, dE/d(theta)=0
     yields a unique strict global minimum with positive-definite 5x5 Hessian:
       sqrt(theta^*) = (sqrt(16*exp(2*chi) + 17) - 3) / (4*exp(chi)),
       lambda_3^* = (1 - theta^*) * sqrt(m0/P) * exp(+chi),
       tilde_lambda_1^* = tilde_lambda_2^* = tilde_lambda_3^* = (m0/P)^(1/4) * sqrt(theta^*).
+    Away from normalized units the theta formula uses beta=exp(-chi)*(P/m0)^(1/4),
+    sqrt(theta)=(sqrt(16+17*beta^2)-3*beta)/4, with beta<3 for an interior minimum.
     """
     if (not math.isfinite(compression_chi) or compression_chi<0
             or not math.isfinite(winding_budget) or winding_budget<=0
@@ -722,19 +1219,22 @@ def unified_least_resistance_cycle(compression_chi, winding_budget=1., enclosing
     xi=math.exp(-compression_chi)
     ex=math.exp(compression_chi)
     scale_unit=(winding_budget/enclosing_load)**.25
-    u=(math.sqrt(16*ex*ex+17)-3)/(4*ex)
+    beta=xi/scale_unit
+    if beta >= 3:
+        raise ValueError('strict positive-scale interior minimum requires exp(-chi)*(P/m0)^(1/4) < 3')
+    u=(math.sqrt(16+17*beta*beta)-3*beta)/4
     theta=u*u
-    one_minus=1-theta
-    lam3=one_minus*math.sqrt(winding_budget/enclosing_load)*ex
+    one_minus=beta*(3*u-beta)/2
+    lam3=scale_unit*(3*u-beta)/2
     t_lam=scale_unit*u
     v_plus=xi*xi*lam3
     v_minus=t_lam**3
     infall_aspect=lam3/xi
-    cost_Scale=math.sqrt(winding_budget*enclosing_load)
-    e_plus=cost_Scale*(2*one_minus**2*ex+2*one_minus*xi)
-    e_minus=cost_Scale*(4*u**3)
-    e_all_plus=cost_Scale*(2*ex+2*xi)
-    e_all_minus=cost_Scale*4.
+    cost_scale=winding_budget**.75*enclosing_load**.25
+    e_plus=2*winding_budget*one_minus**2*ex+2*math.sqrt(winding_budget*enclosing_load)*one_minus*xi
+    e_minus=cost_scale*4*u**3
+    e_all_plus=2*winding_budget*ex+2*math.sqrt(winding_budget*enclosing_load)*xi
+    e_all_minus=cost_scale*4.
     return dict(compression_chi=compression_chi,
                 axioms_used=['A0: minimize single generator stretch + enclosing work cost E_+ + E_-',
                              'A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -',
@@ -1116,7 +1616,7 @@ def exponential_wall_bypasses_and_triad_winner():
        Buckling laterally into a helix caps the cost at E_helix(chi) = 3/2 - (1/2)*exp(-2*chi) -> 1.5.
     2. Bypass 2 (3D + compression wall -> signed 0-crossing into - child sphere):
        Staying in + costs E_stay(chi) = 2*exp(+chi) + 2*exp(-chi) -> infinity (exponential wall).
-       Opening the 0 valve into - caps the cost at E_5var^*(chi) -> 4 - (3/2)*exp(-chi) -> 4.0.
+       Opening the 0 valve into - caps the cost at E_5var^*(chi) = 4 - (9/2)*exp(-chi) + O(exp(-2*chi)) -> 4.0.
     3. Bypass 3 (Single-axis winding wall N^(3/2) -> 3D orthogonal triad (1,1,1) winner & nuclear hard core):
        For 3D integer windings (n1, n2, n3) with m_i = n_i^2, exact A0 minimization gives
        E^*(n1, n2, n3) = 4 * sqrt(n1 * n2 * n3):

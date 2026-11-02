@@ -817,7 +817,7 @@ crossing `0` into `-` (`exponential_wall_bypasses_and_triad_winner` and
    Opening the `0` horizon valve into a `-` child sphere ($\theta^*\to 1$)
    bypasses the wall and caps the 5-variable cost at the finite plateau
    $$
-   E_{\mathrm{5-var}}^*(\chi)\to 4-\frac{3}{2}e^{-\chi}\to 4.0.
+   E_{\mathrm{5-var}}^*(\chi)=4-\frac{9}{2}e^{-\chi}+O(e^{-2\chi})\to 4.0.
    $$
 3. **Wall 3 — Single-Axis Winding Wall $N^{3/2}$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Nuclear Hard Core:**
    For a vacuum bubble of radius $R$ carrying integer winding $n\in\mathbb{Z}$
@@ -888,6 +888,40 @@ exponent; and (v) the $+2.67\%$ difference between the two-valve $e^{-3}$ fixed
 point ($71.14\%$ DE / $23.88\%$ DM) and the Planck base-$\Lambda\mathrm{CDM}$ fit
 ($68.47\pm 0.73\%$ DE).
 
+
+### 9.7 One phase now drives a finite enclosing geometry and receiving regions
+
+The [coupled geometric continuation](../docs/nsc-atlas-offset-generator.md#coupled-finite-parent-receivers-and-characteristic-continuation)
+adds explicit phase and geometric inertia to A0. Available regional volumes
+are $V_i=R_i^3-\sum_jR_j^3>0$ and path stretches are $\lambda_i=V_i^{1/3}$,
+with the outer radius free. One continuous phase has kinetic weight
+$\lambda_i$ and stretch cost $\psi_x^2/(2\lambda_i)$; geometry has the
+declared logarithmic-boundary inertia $3\sum_i\dot{\ln R_i}^{\,2}/2$.
+These kinetic and volume-to-path rules are explicit candidate assumptions.
+The parent pressure is now derived, $P_i=E_i/(3V_i)$, rather than supplied as
+a driving history. Its work and the receiving field obey
+
+$$
+\dot E_i=F_i-E_i\dot{\ln\lambda_i},\qquad
+\dot K_g=\sum_iE_i\dot{\ln\lambda_i},\qquad\sum_iF_i=0.
+$$
+
+Characteristic coordinates carry the same field beyond the numerical break
+caused by exponentially stretched material cells. At a transparent
+three-curve junction, a single incoming parent wave reflects energy $1/9$
+and sends $4/9$ into each quiet receiver. This is a new exact graph-action
+relation, distinct from the earlier $88.4735\%$ scalar-horizon calculation.
+
+The free-parent limit has $Q_0=4\pi^2$, $a=\sqrt{Q_0/6}$,
+$\lambda=\cosh^2(a\tau)$, $E_\psi=Q_0/\lambda$ and
+$K_g=Q_0\tanh^2(a\tau)$. Its declared propagation metric has finite future
+optical reach $1/a=0.3898484006$, with proper causal-boundary length tending
+to $1/(2a)=0.1949242003$. No vacuum potential sets this expansion law.
+The [reference calculation](../results/summaries/nsc-finite-parent-receiver-v1.json)
+gives finite chain/branch transfer and numerical limits. The receiving tree
+is admitted initially; a dynamically formed child and identification of a
+contact with the proposed one-way horizon remain to be derived. The
+geometric budget parts are not yet cosmological density fractions.
 
 ## Appendix A. Technical atlas and preserved mathematical record
 

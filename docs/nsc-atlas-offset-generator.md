@@ -78,6 +78,163 @@ increment to the drawing operation. A pressure-to-deformation law, angular
 phase relation and receiving geometry have not been derived by this
 kinematic identity. No free increment is used to stand in for those links.
 
+## Coupled finite parent, receivers and characteristic continuation
+
+The active dynamical completion uses the same angular phase and A0 stretch
+cost, with explicit geometric inertia. It replaces prescribed enclosing
+pressure and prescribed compression by a finite surrounding region whose own
+energy does work. This is a candidate mathematical completion, not a proof
+that the recurrence uniquely selects the inertia or the regional topology.
+
+**Calculation map.** `parent_receiver_characteristics` evolves the connected
+phase and geometry. `_parent_receiver_system` and `parent_receiver_evolution`
+provide an independent finite-element Hamiltonian control. The existing CLI
+`--evolution-only` runs three optical-step comparisons for a chain and a fork,
+plus two short finite-element controls, in eight worker processes. It writes
+no files. The readout remains in dimensionless offset units.
+
+### One action, finite pressure and work counted once
+
+For an ordered regional tree let q_i=ln R_i, S_i=R_i^3 and
+
+\[
+ V_i=S_i-\sum_{j\in\mathrm{children}(i)}S_j>0,\qquad
+ \lambda_i=V_i^{1/3}.
+\]
+
+This is an available-volume reduction, not an embedded multi-hole metric.
+The path-length/volume identification and isotropic log-boundary inertia
+are declared premises. In particular the outer radius is free; no total
+volume conservation or inexhaustible pressure reservoir is imposed. On one
+generated material curve of length two per region, take
+
+\[
+ L={3\over2}\sum_i\dot q_i^2+
+ {1\over2}\sum_i\int_0^2
+ [\lambda_i\dot\psi_i^2-\lambda_i^{-1}\psi_{i,x}^2]dx.
+\]
+
+The kinetic term is the proposed dynamical addition to the static A0 cost.
+The circle phase is the existing field, not newly added particle content.
+At a contact its value is shared and outward phase tractions sum to zero;
+there is no material membrane or point mass. Fixed phase endpoints close
+the finite reference domain and can reflect waves. Initially each available
+volume is one, all momenta vanish, the root carries the retained triangular
+lift 2*pi*min(x,2-x), and receiving curves are quiet. The topology and
+receiving domains are admitted data, not dynamically created spaces.
+
+Canonical momentum pi_i=lambda_i*psi_dot gives regional phase energy
+
+\[
+ E_i={1\over2\lambda_i}\int_0^2(\pi_i^2+\psi_{i,x}^2)dx,
+ \quad P_i=-\partial_{V_i}E_i={E_i\over3V_i},
+ \quad\dot p_i=S_i(E_i/V_i-E_{p(i)}/V_{p(i)}).
+\]
+
+The outer enclosing pressure is zero. The initially excited parent drives
+inward acceleration of its quiet inner boundary. The received phase energy
+subsequently contributes an opposing pressure. No function P(t), compression
+history, damping coefficient, or target abundance is supplied.
+
+Writing F_i for net phase power into a region gives exact balances
+
+\[
+ \dot E_i=F_i-E_i\dot{\ln\lambda_i},\qquad
+ \dot K_{\rm geometry}=\sum_iE_i\dot{\ln\lambda_i},\qquad
+ \sum_iF_i=0.
+\]
+
+Thus sum(E_i)+K_geometry is conserved and parent work is counted once.
+The phase part's conjugate pressure/density ratio is 1/3; it has not been
+identified with the full cosmological stress. Also sum(p_i_dot)=sum(E_i):
+local compression can coexist with increasing overall expansion momentum.
+
+### The exponential grid break and the continuation
+
+The initial finite-element calculation conserves its own Hamiltonian, but
+the expanding parent stretches its last material cell enormously relative
+to a receiver. Three meshes do not resolve the late fork transfer uniformly.
+That endpoint is not a continuum claim. Instead change to each region's
+optical offset s_i, with ds_i/dtau=1/lambda_i. The exact regional solution is
+
+\[
+ \psi_i=A_i(s_i-x)+B_i(s_i+x-2).
+\]
+
+Delayed outgoing histories and their integral/squared-integral primitives
+carry the same phase into later regions without a spatial grid. They give
+E_i directly as the sum of squared characteristic histories over the last
+two optical units, divided by lambda_i. RK4 advances only the finite
+geometry and those histories; optical steps and interpolation retain an
+explicit numerical error. Before a front arrives, the next quiet region's
+field is exactly zero in this representation. Finite-element precursors
+are not interpreted as received energy.
+
+At a degree-m junction the physical incoming/outgoing amplitudes satisfy
+
+\[
+ b=\left({2\over m}{\bf1}{\bf1}^{T}-I\right)a,\qquad
+ S^TS=I.
+\]
+
+A two-curve junction transmits completely. One parent incident on two quiet
+receivers reflects energy 1/9 and transmits 4/9 into each, hence 8/9 in total.
+These are exact contact relations of the declared action. They are not the
+earlier 88.4735% scalar-horizon result. Returning waves subsequently change
+the instantaneous split. A continuous sign/orientation convention can be
+carried on the graph; neither that sign nor this transparent contact proves
+that the contact is the proposed one-way null horizon.
+
+### Exact free-parent expansion and an optical future
+
+For one room the full conformal phase budget Q0=4*pi^2 is constant. Let
+a=sqrt(Q0/6). The same equations, from rest and unit initial size, have
+
+\[
+ q=2\ln\cosh(a\tau),\quad\lambda=\cosh^2(a\tau),\quad
+ s={\tanh(a\tau)\over a},\quad
+ E_\psi={Q_0\over\lambda},\quad K_g=Q_0\tanh^2(a\tau).
+\]
+
+This supplies expansion and decreasing local phase energy without an added
+vacuum potential. In the declared curve metric -d(tau)^2+lambda^2 dx^2,
+the future optical reach is finite, sqrt(6)/[2*pi]=0.3898484006. The proper
+distance to the observer's causal-reach boundary is
+
+\[
+ \lambda(\tau)\int_\tau^\infty{dt\over\lambda(t)}
+ ={1+e^{-2a\tau}\over2a}\longrightarrow0.1949242003.
+\]
+
+This finite expression continues the apparently troublesome product of an
+unbounded scale and a vanishing optical tail. The late scale rate is
+2a=5.1301993206. If that same scale is used for the earlier flat 3D metric
+completion, its late geometric curvature has Lambda_curvature=3*(2a)^2
+=8*pi^2 in these units. This is a conditional metric-curvature result,
+not an SI vacuum prediction or a derived Einstein source equation.
+
+### Scope and the next connection
+
+The small [calculation record](../results/summaries/nsc-finite-parent-receiver-v1.json)
+records the finite chain, branch, independent controls and empirical spreads.
+The phase source is carried unchanged between regions. Child **formation**,
+selection of the initial tree and geometric inertia, and identification of
+the shared cut with a causal horizon remain distinct connections. A signed
+radius alone does not supply them. Offset parametrizes this motion; its
+ultimate origin and angular calibration are not established by the action.
+
+The failed long fork comparison is retained as a diagnosis of interpolated
+reflected fronts. The finite pre-reflection branch and exact scattering law
+are separate results; no reflected cyclic history is claimed. No cosmological
+target, eta rung or 95% floor enters these calculations.
+
+The next work is the causal/contact geometry and its dynamically admissible
+branch transition. Three foreseeable obstacles are an inertia not selected
+by generated paths, loss of positive available volume, and discontinuous
+reflected histories. They appear respectively as an assumption-dependent
+trajectory, a volume guard, or noncontracting contact/energy errors. None is
+a reason to launch additional shape or cosmic-number fits.
+
 ## Intrinsic deformation response and a conservative neck control
 
 The next candidate uses the existing angular phase with a unit target

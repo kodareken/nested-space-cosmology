@@ -77,7 +77,7 @@ offset decay as dark energy, dark matter, and matter-antimatter asymmetry.
 | **5-Variable Single-Cost Cycle (`unified_least_resistance_cycle`)** | $\sqrt{\theta^*}=(\sqrt{16e^{2\chi}+17}-3)/(4e^\chi)$, $\lambda_3^*=(1-\theta^*)e^\chi$, $\tilde\lambda_i^*=\sqrt{\theta^*}$ | Infalling `+` parcel shrinks ($V_+^*\to 0$) and spaghettifies ($\chi>\tfrac12\ln 2$) while `-` rounds into a 3D sphere without fluid rules |
 | **Surrounding-Flow $3:1$ Virial Split (`vacuum_bubble_crystallization_and_mass_spectrum`)** | $E_{\rm bubble}(R)=m_0n^2/R+PV_0R^3 \implies E_{\rm surr}^*/W_{\rm press}^*=3$ ($75\%$ in $r\ge R$, $25\%$ in cavity, $0\%$ in a point) | Mass-energy sits in the surrounding medium flow and cavity pressure; loop closure $z(1)=z(0)$ forces integer $n\in\mathbb{Z}$ (sharp burst lines, never a smear), and $+1/-1\to 0$ releases two equal $180^\circ$ ripples |
 | **3-Accumulator Volumetric Threshold (`derived_three_accumulator_bubble_ladder`)** | Iterated **A1** offset gives $W_k(n)=\binom{n}{k}$ and $E_{\rm 3D}^*(n)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{\binom{n}{1}\binom{n}{2}\binom{n}{3}}$ | $n=1$ ($W_2=W_3=0$) is a 1D loop; $n=2$ ($W_3=0$) is a 2D sheet; **$n=3$ ($W_1W_2W_3=9>0$) is the minimum integer that supports a 3D volume**, with untuned ratio $E_{\rm 3D}^*(3)/E_{\rm 1D}^*(1)=6$ and 3D ladder $3,\sqrt{96}\approx 9.80,\sqrt{500}\approx 22.36,\dots$ (misses $1836.15$ without a continuum $\pi^5$ factor) |
-| **Universal Exponential-Wall Bypasses & `(1,1,1)` Triad Winner (`exponential_wall_bypasses_and_triad_winner`)** | (1) 1D wall $e^{+\chi}\to\infty$ bypasses into helix plateau $\tfrac32-\tfrac12e^{-2\chi}\to 1.5$; (2) `+` wall $2e^\chi+2e^{-\chi}\to\infty$ bypasses via `0` into `-` sphere plateau $4-\tfrac32e^{-\chi}\to 4.0$; (3) single-axis wall $N^{3/2}>N$ splits across 3 axes $E^*(n_1,n_2,n_3)=4\sqrt{n_1n_2n_3}$ | Nature never climbs an exponential wall—it opens a new dimension or crosses `0` into `-`. In 3D, **`(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state** ($E^*=4$, cost/winding $4/3\approx 1.3333$, round sphere $1:1:1$); $N=4$ forces prolate `(2,1,1)` ($4:1:1$, cost/winding $\sqrt{2}\approx 1.4142>4/3$); two `(1,1,1)` triads attract at medium range ($-2m_0/d$) but have a **short-range hard-core repulsion barrier $+3.3137$** against merging into `(2,2,2)` ($8\sqrt{2}\approx 11.3137>8.0$) |
+| **Universal Exponential-Wall Bypasses & `(1,1,1)` Triad Winner (`exponential_wall_bypasses_and_triad_winner`)** | (1) 1D wall $e^{+\chi}\to\infty$ bypasses into helix plateau $\tfrac32-\tfrac12e^{-2\chi}\to 1.5$; (2) `+` wall $2e^\chi+2e^{-\chi}\to\infty$ bypasses via `0` into `-` sphere plateau $4-\tfrac92e^{-\chi}+O(e^{-2\chi})\to 4.0$; (3) single-axis wall $N^{3/2}>N$ splits across 3 axes $E^*(n_1,n_2,n_3)=4\sqrt{n_1n_2n_3}$ | Nature never climbs an exponential wall—it opens a new dimension or crosses `0` into `-`. In 3D, **`(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state** ($E^*=4$, cost/winding $4/3\approx 1.3333$, round sphere $1:1:1$); $N=4$ forces prolate `(2,1,1)` ($4:1:1$, cost/winding $\sqrt{2}\approx 1.4142>4/3$); two `(1,1,1)` triads attract at medium range ($-2m_0/d$) but have a **short-range hard-core repulsion barrier $+3.3137$** against merging into `(2,2,2)` ($8\sqrt{2}\approx 11.3137>8.0$) |
 
 ### 2. Universal Exponential-Wall Bypass Principle: how least resistance works around walls
 
@@ -88,7 +88,7 @@ Whenever compression or winding in a lower-dimensional or single-signed regime h
    $$E_{\rm helix}^*(\chi)=\frac{3}{2}-\frac{1}{2}e^{-2\chi}\to 1.5.$$
 2. **Wall 2 — 3D `+` Compression Wall $\to$ Signed `0`-Crossing Plateau (`+ -> 0 -> -`):**
    Forcing all winding to stay in the parent `+` region ($\theta=0$) hits the exponential wall $E_{\rm stay,+}(\chi)=2e^{+\chi}+2e^{-\chi}\to\infty$. Opening the `0` horizon valve into a `-` child sphere ($\theta^*\to 1$) bypasses the wall and caps the total 5-variable cost at the finite plateau
-   $$E_{\rm 5\text{-var}}^*(\chi)\to 4-\frac{3}{2}e^{-\chi}\to 4.0.$$
+   $$E_{\rm 5\text{-var}}^*(\chi)\to 4-\frac{9}{2}e^{-\chi}+O(e^{-2\chi})\to 4.0.$$
 3. **Wall 3 — Single-Axis Winding Wall $N^{3/2}$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Nuclear Hard-Core Potential:**
    Piling $N\ge 2$ windings onto a single channel costs $E_{\rm single}(N)\propto N^{3/2}>N$, a superlinear wall ($2^{3/2}\approx 2.828>2$, $3^{3/2}\approx 5.196>3$). Distributing integer windings $(n_1,n_2,n_3)\in\mathbb{Z}_{\ge 0}^3$ ($m_i=m_0 n_i^2$) across the 3 orthogonal axes of 3D space yields the exact **A0** minimum
    $$E^*(n_1,n_2,n_3)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{n_1 n_2 n_3},\qquad \lambda_i^*=\frac{n_i^2}{(n_1 n_2 n_3)^{1/2}}.$$
@@ -105,6 +105,18 @@ The following matches involve post-hoc formula/rung selection or external measur
 - **Baryon harmonic rung $K=7$:** $\eta_K=\tanh(\frac{\pi}{4}e^{-3K})$ gives $\eta_7\approx 5.955\times 10^{-10}$ at $K=7$, but the freeze-out rung $K=7$ was selected from the ladder after comparing to BBN.
 - **CMB temperature projections:** $\sqrt{T_P T_H}e^{-2}\approx 2.625\text{ K}$ and $T_{\rm crit}e^{-(4/5)\chi_*}\approx 2.728\text{ K}$ use measured $H_0$ and $G$ as inputs and an ad-hoc $-4/5$ exponent.
 - **Two-valve $e^{-3}$ dark-sector split:** Setting $\Omega_{\rm vis}(\chi_*)=e^{-3}\approx 4.98\%$ gives $71.14\%$ DE / $23.88\%$ DM, which differs from the Planck base-$\Lambda\text{CDM}$ fit ($68.47\pm 0.73\%$ DE / $26.5\%$ DM) by $+2.67\%$.
+
+## Dynamical continuation of the same geometric picture
+
+The [finite-parent construction](docs/nsc-atlas-offset-generator.md#coupled-finite-parent-receivers-and-characteristic-continuation)
+now derives pressure, transmitted phase energy and geometric work from one
+candidate action. Exact optical characteristics continue beyond the
+exponentially stretched grid. The free-parent limit expands as
+lambda=cosh^2(a*tau), transfers phase energy into geometry, and has a finite
+future causal reach. A symmetric branch transmits 4/9 of incident energy to
+each quiet receiver, with 1/9 reflected. These are consequences of the
+specified geometric inertia, path metric and admitted topology. Formation
+of that topology and the one-way null interface remain to be derived.
 
 ## Implementation and verification
 

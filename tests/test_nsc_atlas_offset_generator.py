@@ -878,3 +878,211 @@ def test_exponential_wall_bypasses_and_triad_winner_proves_111_ground_and_hard_c
     assert res['short_range_hard_core_repulsion_barrier']==pytest.approx(8.0*(math.sqrt(2.0)-1.0),rel=1e-15)
     assert res['short_range_hard_core_repulsion_barrier']>3.31
     assert res['nuclear_potential_shape_derived'] is True
+
+
+@pytest.mark.parametrize('winding,load',[(1.,1.),(-2.,3.),(.7,4.)])
+def test_receiving_shape_spectrum_matches_independent_cost_second_variation(winding,load):
+    from recursive_horizons.nsc_atlas_offset_generator import receiving_shape_spectrum
+    row=receiving_shape_spectrum(winding,enclosing_load=load)
+    y0=np.full(3,math.log(row['equilibrium_radius']))
+
+    def cost(y):
+        return winding**2*np.exp(-y).sum()+load*np.exp(y.sum())
+
+    # Differentiate the original cost, rather than rebuilding its reported Hessian.
+    h=2e-4
+    e0=cost(y0)
+    eye=np.eye(3)
+    hessian=np.empty((3,3))
+    for i in range(3):
+        assert (cost(y0+h*eye[i])-cost(y0-h*eye[i]))/(2*h)==pytest.approx(0.,abs=e0*1e-8)
+        hessian[i,i]=(cost(y0+h*eye[i])-2*e0+cost(y0-h*eye[i]))/h**2
+        for j in range(i):
+            hessian[i,j]=hessian[j,i]=(cost(y0+h*(eye[i]+eye[j]))
+                -cost(y0+h*(eye[i]-eye[j]))-cost(y0+h*(-eye[i]+eye[j]))
+                +cost(y0-h*(eye[i]+eye[j])))/(4*h*h)
+    np.testing.assert_allclose(row['stiffness_matrix'],hessian,rtol=8e-8,atol=e0*1e-8)
+    np.testing.assert_allclose(row['frequency_squared'],np.linalg.eigvalsh(hessian),rtol=1e-7)
+    # Two independent trace-free distortions are degenerate; uniform dilation is separate.
+    shear1=np.array([1.,-1.,0.])/math.sqrt(2)
+    shear2=np.array([1.,1.,-2.])/math.sqrt(6)
+    breathing=np.ones(3)/math.sqrt(3)
+    shear_rate=shear1@hessian@shear1
+    assert shear2@hessian@shear2==pytest.approx(shear_rate,rel=1e-7)
+    assert breathing@hessian@breathing==pytest.approx(4*shear_rate,rel=1e-7)
+    assert np.all(np.array(row['frequency_squared'])>0)
+
+
+def test_receiving_mode_ratio_survives_winding_reversal_and_scale_changes():
+    from recursive_horizons.nsc_atlas_offset_generator import receiving_shape_spectrum
+    base=receiving_shape_spectrum(1.,1.)
+    reversed_winding=receiving_shape_spectrum(-1.,1.)
+    np.testing.assert_allclose(reversed_winding['stiffness_matrix'],base['stiffness_matrix'],rtol=1e-14)
+    for winding,load,frequency_squared_factor in ((2.,1.,2**1.5),(1.,16.,2.)):
+        row=receiving_shape_spectrum(winding,load)
+        np.testing.assert_allclose(row['frequency_squared'],np.array(base['frequency_squared'])*frequency_squared_factor,rtol=2e-14)
+        assert row['breathing_to_shear_ratio']==pytest.approx(2.,rel=2e-14)
+
+
+def test_generalized_five_variable_minimum_is_stationary_in_original_cost():
+    from recursive_horizons.nsc_atlas_offset_generator import unified_least_resistance_cycle
+    for chi,moment,load in ((0.,4.,1.),(1.,4.,1.),(1.,1.,4.),(2.,1.,4.)):
+        row=unified_least_resistance_cycle(chi,winding_budget=moment,enclosing_load=load)
+        y=np.array([math.log(row['plus_infall']['optimal_radial_scale']),
+                    *np.log(row['minus_child_drop']['optimal_principal_scales']),
+                    row['transferred_winding_fraction_theta']])
+
+        def cost(z):
+            theta=z[-1]
+            return (moment*(1-theta)**2*(2*math.exp(chi)+math.exp(-z[0]))
+                    +load*math.exp(z[0]-2*chi)
+                    +moment*theta**2*np.exp(-z[1:4]).sum()+load*math.exp(z[1:4].sum()))
+
+        original_cost=cost(y)
+        assert row['cost_comparison']['unified_minimum_cost']==pytest.approx(original_cost,rel=2e-13)
+        for direction in np.eye(5):
+            derivative=(cost(y+1e-5*direction)-cost(y-1e-5*direction))/(2e-5)
+            assert derivative==pytest.approx(0.,abs=original_cost*2e-8)
+
+
+def test_free_compression_minimum_is_not_the_imposed_visible_fraction_root():
+    from recursive_horizons.nsc_atlas_offset_generator import unified_least_resistance_cycle
+    theta=s.symbols('theta',positive=True)
+    # Free scale minimization in BOTH regions leaves this one strictly convex function.
+    reduced=4*((1-theta)**s.Rational(3,2)+theta**s.Rational(3,2))
+    assert s.simplify(s.diff(reduced,theta).subs(theta,s.Rational(1,2)))==0
+    assert s.simplify(s.diff(reduced,theta,2))==3/s.sqrt(theta)+3/s.sqrt(1-theta)
+    chi=.5*math.log(2)
+    row=unified_least_resistance_cycle(chi)
+    assert row['transferred_winding_fraction_theta']==pytest.approx(.5,rel=2e-15)
+    assert row['cost_comparison']['unified_minimum_cost']==pytest.approx(2*math.sqrt(2),rel=2e-15)
+    # The envelope's outward derivative remains positive beyond this minimum.
+    for later_chi in (1.,2.,3.):
+        later=unified_least_resistance_cycle(later_chi)
+        retained=1-later['transferred_winding_fraction_theta']
+        derivative=2*retained**2*math.exp(later_chi)-2*retained*math.exp(-later_chi)
+        assert derivative>0
+        assert later['cost_comparison']['unified_minimum_cost']>row['cost_comparison']['unified_minimum_cost']
+
+
+def test_free_parent_causal_length_matches_independent_optical_integral():
+    from scipy.integrate import quad
+    from recursive_horizons.nsc_atlas_offset_generator import one_room_geometric_continuation
+    a=math.sqrt(4*math.pi**2/6)
+    for offset in (0.,.25,.5):
+        row=one_room_geometric_continuation(offset)
+        # Integrate the actual metric's null speed, without using its tail formula.
+        optical_tail=quad(lambda u:1/math.cosh(a*u)**2,offset,10.,epsabs=1e-13)[0]
+        assert row['observer_causal_horizon_proper_length']==pytest.approx(
+            row['stretch']*optical_tail,rel=2e-12)
+        assert row['phase_energy']+row['geometric_kinetic_energy']==pytest.approx(4*math.pi**2,rel=3e-15)
+    large=one_room_geometric_continuation(1000.)
+    assert large['stretch'] is None  # use the retained logarithm beyond float exponent range
+    assert math.isfinite(large['log_stretch'])
+    assert large['observer_causal_horizon_proper_length']==pytest.approx(1/(2*a),rel=2e-15)
+
+
+def test_characteristic_fork_initial_transmission_matches_contact_constraints():
+    from recursive_horizons.nsc_atlas_offset_generator import parent_receiver_characteristics
+    offset=1e-6
+    row=parent_receiver_characteristics(parents=(-1,0,0),duration=offset,optical_step=.01,sample_count=2)['rows'][-1]
+    # Initial root incoming power is pi^2. This probes the implemented junction,
+    # independently of a separately constructed scattering matrix.
+    received=np.array(row['gross_received_through_contact'][1:])/(math.pi**2*offset)
+    np.testing.assert_allclose(received,[4/9,4/9],rtol=2e-10)
+    assert 1-received.sum()==pytest.approx(1/9,abs=2e-10)
+
+
+@pytest.mark.parametrize('parents',[(-1,0,1),(-1,0,0)])
+def test_parent_receiver_forces_and_regional_power_follow_one_hamiltonian(parents):
+    from recursive_horizons.nsc_atlas_offset_generator import _parent_receiver_system
+    system=_parent_receiver_system(parents,6)
+    state=system['initial'].copy()
+    nf=system['free_phase_count'];nr=system['room_count']
+    # Exercise junction inertia and moving, unequal regions away from the supplied start.
+    state[:nf]+=.07*np.sin(np.arange(nf))
+    state[nf:2*nf]=np.linspace(-.12,.17,nf)
+    state[2*nf:2*nf+nr]+=[.01,-.005,.003]
+    state[2*nf+nr:2*nf+2*nr]=[.07,-.03,.02]
+    rhs,values=system['evaluate'](state)
+    h=1e-6
+    for indices,expected in ((range(nf),-rhs[nf:2*nf]),
+                             (range(nf,2*nf),rhs[:nf]),
+                             (range(2*nf,2*nf+nr),-values['geometry_force'])):
+        derivatives=[]
+        for index in indices:
+            delta=np.zeros_like(state);delta[index]=h
+            derivatives.append((system['evaluate'](state+delta)[1]['total_energy']
+                               -system['evaluate'](state-delta)[1]['total_energy'])/(2*h))
+        np.testing.assert_allclose(derivatives,expected,rtol=2e-7,atol=2e-8)
+    energy_rate=(system['evaluate'](state+h*rhs)[1]['phase_energy']
+                -system['evaluate'](state-h*rhs)[1]['phase_energy'])/(2*h)
+    np.testing.assert_allclose(energy_rate,values['transfer']+values['work'],rtol=2e-7,atol=2e-8)
+    assert values['transfer'].sum()==pytest.approx(0.,abs=2e-13)
+    geometric_power=np.dot(state[2*nf+nr:2*nf+2*nr]/system['inertia'],values['geometry_force'])
+    assert geometric_power+values['work'].sum()==pytest.approx(0.,abs=2e-13)
+
+
+def test_parent_receiver_zero_phase_has_no_hidden_pressure_or_motion():
+    from recursive_horizons.nsc_atlas_offset_generator import _parent_receiver_system
+    system=_parent_receiver_system((-1,0,1),6)
+    state=system['initial'].copy()
+    state[:system['free_phase_count']]=0
+    rhs,values=system['evaluate'](state)
+    np.testing.assert_array_equal(rhs,np.zeros_like(rhs))
+    assert values['total_energy']==0
+    np.testing.assert_array_equal(values['pressure'],np.zeros(3))
+    np.testing.assert_array_equal(values['transfer'],np.zeros(3))
+
+
+def test_parent_receiver_characteristics_recovers_exact_free_one_room_solution():
+    from recursive_horizons.nsc_atlas_offset_generator import parent_receiver_characteristics
+    q0=4*math.pi**2
+    a=math.sqrt(q0/6)
+    results=[parent_receiver_characteristics(parents=(-1,),duration=.5,optical_step=h,sample_count=3)
+             for h in (.02,.01)]
+    for result in results:
+        assert result['reached_offset']==pytest.approx(.5,abs=1e-15)
+        assert result['initial_total_budget']==pytest.approx(q0,rel=2e-15)
+        assert result['positive_volume_guard_reached'] is False
+    fine=results[1]
+    for row in fine['rows']:
+        t=row['offset'];lam=math.cosh(a*t)**2
+        # The returned intermediate rows use linear history interpolation.
+        assert row['outer_radius'][0]==pytest.approx(lam,rel=5e-6)
+        assert row['outer_log_radius_velocity'][0]==pytest.approx(2*a*math.tanh(a*t),rel=5e-6,abs=1e-14)
+        assert row['continuum_optical_distance'][0]==pytest.approx(math.tanh(a*t)/a,rel=5e-6,abs=1e-14)
+        assert row['regional_phase_energy'][0]==pytest.approx(q0/lam,rel=5e-6)
+    endpoint=fine['rows'][-1]
+    assert endpoint['outer_radius'][0]==pytest.approx(math.cosh(a*.5)**2,rel=1e-9)
+    assert endpoint['total_energy']==pytest.approx(q0,rel=1e-9)
+    assert fine['max_accepted_and_sampled_total_budget_residual']<results[0]['max_accepted_and_sampled_total_budget_residual']
+    assert fine['max_accepted_and_sampled_regional_ledger_residual']<results[0]['max_accepted_and_sampled_regional_ledger_residual']
+
+
+def test_characteristic_fork_preserves_equal_receivers_and_contact_balance():
+    from recursive_horizons.nsc_atlas_offset_generator import parent_receiver_characteristics
+    result=parent_receiver_characteristics(parents=(-1,0,0),duration=.3,optical_step=.02,sample_count=3)
+    assert result['reached_offset']==pytest.approx(.3,abs=1e-15)
+    assert result['max_accepted_and_sampled_contact_cancellation']<2e-12
+    assert result['max_accepted_and_sampled_interface_phase_gap']<2e-12
+    for row in result['rows']:
+        for key in ('regional_volume','regional_phase_energy','outer_radius',
+                    'net_received_through_contact','field_geometry_work'):
+            assert row[key][1]==pytest.approx(row[key][2],rel=2e-13,abs=2e-13)
+        assert row['net_received_through_contact'][0]+sum(row['net_received_through_contact'][1:])==pytest.approx(0.,abs=2e-12)
+    assert result['rows'][-1]['regional_phase_energy'][1]>0
+
+
+def test_characteristic_chain_has_exactly_zero_field_before_grandchild_front():
+    from recursive_horizons.nsc_atlas_offset_generator import parent_receiver_characteristics
+    result=parent_receiver_characteristics(parents=(-1,0,1),duration=.3,optical_step=.02,sample_count=3)
+    assert result['reached_offset']==pytest.approx(.3,abs=1e-15)
+    assert result['rows'][-1]['continuum_optical_distance'][1]<2
+    for row in result['rows']:
+        assert row['regional_phase_energy'][2]==0
+        assert row['net_received_through_contact'][2]==0
+        assert row['field_geometry_work'][2]==0
+    assert result['rows'][-1]['regional_phase_energy'][1]>0
+    assert result['new_child_formation_proved'] is False
+    assert result['one_way_horizon_established'] is False

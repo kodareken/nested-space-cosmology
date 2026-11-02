@@ -25,7 +25,15 @@ Run the focused checks and the complete non-local-to-local atlas readout with th
 ```text
 python scripts/run_python.py -m pytest -q tests/test_nsc_atlas_offset_generator.py
 python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --atlas-only
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --evolution-only
 ```
+
+The coupled reference evolves one inherited phase on deforming connected
+curves. Finite parent pressure, transmitted energy and geometry work come
+from one action; the characteristic route avoids an exponentially stretched
+spatial grid. Its exact one-room limit has finite future optical reach,
+and a symmetric two-receiver junction has the derived 1/9 : 4/9 : 4/9 energy
+split. The receiving topology and geometric inertia remain explicit premises.
 
 ## Retained work
 
