@@ -697,9 +697,80 @@ def spaghettification_to_spherical_winner(compression_chi):
                     minus_to_plus_volume_ratio=(minus_takeover_fraction/plus_fraction) if plus_fraction>0 else None))
 
 
+def unified_least_resistance_cycle(compression_chi, winding_budget=1., enclosing_load=1.):
+    """Single-cost 5-variable minimization producing infall filament, 0-crossing, and - sphere.
+
+    Axioms declared openly (no fluid incompressibility or surface tension):
+      - A0 (Least resistance): Minimize the single generator cost
+        E(lambda_3, tilde_lambda_1..3, theta; chi) = E_+ + E_-, where
+        E_+ = 2*m_+ / xi + m_+ / lambda_3 + P*xi^2*lambda_3 (infall region, xi=exp(-chi)),
+        E_- = sum_{i=1}^3 m_- / tilde_lambda_i + P*tilde_lambda_1*tilde_lambda_2*tilde_lambda_3.
+      - A1 (1D + offset): Quadratic winding moment m_+ = m0*(1-theta)^2 in +,
+        m_- = m0*theta^2 across 3 directions in - from conserved turns n_+ + n_- = N0.
+      - A4 (One-way valve at 0): Transferred winding fraction theta in [0, 1].
+
+    Simultaneous stationarity dE/d(lambda_3)=0, dE/d(tilde_lambda_i)=0, dE/d(theta)=0
+    yields a unique strict global minimum with positive-definite 5x5 Hessian:
+      sqrt(theta^*) = (sqrt(16*exp(2*chi) + 17) - 3) / (4*exp(chi)),
+      lambda_3^* = (1 - theta^*) * sqrt(m0/P) * exp(+chi),
+      tilde_lambda_1^* = tilde_lambda_2^* = tilde_lambda_3^* = (m0/P)^(1/4) * sqrt(theta^*).
+    """
+    if (not math.isfinite(compression_chi) or compression_chi<0
+            or not math.isfinite(winding_budget) or winding_budget<=0
+            or not math.isfinite(enclosing_load) or enclosing_load<=0):
+        raise ValueError('nonnegative finite compression_chi and positive winding_budget and enclosing_load required')
+    xi=math.exp(-compression_chi)
+    ex=math.exp(compression_chi)
+    scale_unit=(winding_budget/enclosing_load)**.25
+    u=(math.sqrt(16*ex*ex+17)-3)/(4*ex)
+    theta=u*u
+    one_minus=1-theta
+    lam3=one_minus*math.sqrt(winding_budget/enclosing_load)*ex
+    t_lam=scale_unit*u
+    v_plus=xi*xi*lam3
+    v_minus=t_lam**3
+    infall_aspect=lam3/xi
+    cost_Scale=math.sqrt(winding_budget*enclosing_load)
+    e_plus=cost_Scale*(2*one_minus**2*ex+2*one_minus*xi)
+    e_minus=cost_Scale*(4*u**3)
+    e_all_plus=cost_Scale*(2*ex+2*xi)
+    e_all_minus=cost_Scale*4.
+    return dict(compression_chi=compression_chi,
+                axioms_used=['A0: minimize single generator stretch + enclosing work cost E_+ + E_-',
+                             'A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -',
+                             'A4: conserved turn split n_+ + n_- = N0 across 0'],
+                fluid_incompressibility_assumed=False,
+                surface_tension_assumed=False,
+                volume_conservation_shortcut_assumed=False,
+                transferred_winding_fraction_theta=theta,
+                plus_infall=dict(
+                    transverse_scale=xi,
+                    optimal_radial_scale=lam3,
+                    parcel_volume=v_plus,
+                    parcel_volume_shrinks=v_plus<math.sqrt(winding_budget/enclosing_load),
+                    filament_aspect_ratio=infall_aspect,
+                    is_elongated_filament=infall_aspect>1.,
+                    normalized_deformation_diagonal=[1/infall_aspect,1/infall_aspect,1.] if infall_aspect>=1 else [1.,1.,infall_aspect]),
+                minus_child_drop=dict(
+                    optimal_principal_scales=[t_lam,t_lam,t_lam],
+                    aspect_ratio=1.,
+                    winner_shape='round_3d_sphere',
+                    drop_volume=v_minus),
+                derived_cooker_takeover=dict(
+                    plus_volume=v_plus,
+                    minus_volume=v_minus,
+                    total_two_region_volume=v_plus+v_minus,
+                    minus_volume_fraction=v_minus/(v_plus+v_minus)),
+                cost_comparison=dict(
+                    unified_minimum_cost=e_plus+e_minus,
+                    stay_all_in_plus_cost=e_all_plus,
+                    cross_all_to_minus_cost=e_all_minus))
+
+
 def buckling_to_goldilocks_calculation():
-    """Connected pipeline: two-force 0-crossing -> spaghettification/sphere winner -> buckling -> damped wave -> Goldilocks."""
+    """Connected pipeline: unified single-cost cycle -> two-force 0-crossing -> buckling -> damped wave -> Goldilocks."""
     t_h=math.sqrt(2.)
+    unified_scan=[unified_least_resistance_cycle(chi) for chi in (0.,.25,.5,1.,2.,4.)]
     zero_crossing_scan=[two_force_zero_crossing(t,2.,1.) for t in (0.,1.,t_h,2.,3.)]
     recurring_winner_scan=[spaghettification_to_spherical_winner(chi) for chi in (0.,.25,.5,1.,2.)]
     buckling_scan=[helical_buckling_under_compression(chi) for chi in (0.,.25,.5,1.,2.)]
@@ -708,6 +779,11 @@ def buckling_to_goldilocks_calculation():
     gamma=.5*math.log(2)
     wave_history=[damped_horizon_oscillation(t,gamma,omega) for t in (0.,.25,.75,1.,2.,4.)]
     return dict(schema='nsc-buckling-damping-goldilocks-v1',
+                unified_single_cost_cycle=dict(
+                    functional='E(lambda_3, tilde_lambda_1..3, theta; chi) = [2(1-theta)^2 e^chi + (1-theta)^2/lambda_3 + e^(-2chi) lambda_3] + [sum_i theta^2/tilde_lambda_i + tilde_lambda_1 tilde_lambda_2 tilde_lambda_3]',
+                    stationarity_solution='sqrt(theta^*) = (sqrt(16 e^(2chi) + 17) - 3)/(4 e^chi); lambda_3^* = (1-theta^*)e^chi; tilde_lambda_i^* = sqrt(theta^*)',
+                    spaghettification_threshold_chi=.5*math.log(2),
+                    scan=unified_scan),
                 stage_0_two_force_zero_crossing=dict(
                     rule='R_tt = -(F_in - F_out) < 0; R(tau) crosses + -> 0 -> - smoothly with det(F)=(R/R0)^3 flipping sign',
                     horizon_offset=t_h,

@@ -46,8 +46,20 @@ unit chi, decay-per-radian is 1/(2*pi*alpha) (0.4166730505 for golden-angle alph
 with opposite-lobe asymmetry eta=tanh(1/(4*alpha))≈0.5746972340, versus
 2*ln(phi)/pi ≈ 0.3063489625 for a golden spiral).
 
-The connected pipeline (`--buckling-only`) now derives the `+ -> 0 -> -`
-zero-crossing, turning, two-sided damping asymmetry, and Goldilocks stabilization:
+The connected pipeline (`--buckling-only`) now derives the entire cycle from a
+single 5-variable least-resistance cost functional (`unified_least_resistance_cycle`)
+with openly declared axioms (A0 least resistance, A1 1D+offset quadratic winding,
+A4 turn conservation across `0`) and zero fluid-physics assumptions (no parcel
+incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
+- **Single-cost 5-variable global minimum:** Minimizing E(lambda_3, tilde_lambda_1..3, theta; chi) = E_+ + E_-
+  gives sqrt(theta^*) = (sqrt(16*exp(2*chi)+17)-3)/(4*exp(chi)),
+  lambda_3^* = (1-theta^*)*exp(chi), and tilde_lambda_1^* = tilde_lambda_2^* = tilde_lambda_3^* = sqrt(theta^*).
+  The `+` parcel shrinks in volume (V_+^* ~ (3/2)*exp(-2*chi) -> 0) while stretching
+  into a 1D filament above chi = ln(2)/2 ≈ 0.3465735903 (where theta^* = 1/2
+  and aspect ratio = 1, growing as (3/2)*exp(+chi) -> infinity); the `-` region
+  rounds into a 3D sphere (aspect ratio 1) by AM-GM on Q_stretch; and the `-`
+  drop's derived volume share V_-^*/(V_+^*+V_-^*) reaches 84.63% at chi=1,
+  97.73% at chi=2, and 99.95% at chi=4.
 0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
    resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
    smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against

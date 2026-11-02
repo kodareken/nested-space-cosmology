@@ -682,3 +682,35 @@ def test_spaghettification_reduces_infall_to_1d_and_isoperimetric_selects_3d_sph
     deep=spaghettification_to_spherical_winner(4.)
     assert deep['infall_spaghettification']['normalized_deformation_diagonal'][0]<1e-5
     assert deep['cooker_volume_takeover']['child_minus_drop_fraction']>0.99999
+
+
+def test_unified_single_cost_minimizes_all_five_variables_without_fluid_assumptions():
+    from recursive_horizons.nsc_atlas_offset_generator import unified_least_resistance_cycle
+    l3,tl1,tl2,tl3,th,X=s.symbols('l3 tl1 tl2 tl3 th X',positive=True)
+    E=(2*(1-th)**2*X+(1-th)**2/l3+l3/X**2)+(th**2/tl1+th**2/tl2+th**2/tl3+tl1*tl2*tl3)
+    vars5=[l3,tl1,tl2,tl3,th]
+    grad=[s.diff(E,v) for v in vars5]
+    hess=s.Matrix([[s.diff(E,u,v) for v in vars5] for u in vars5])
+    # Exact algebraic check at chi = ln(2)/2 (X = sqrt(2)), where sqrt(16*X^2+17) = 7:
+    sol_half={X:s.sqrt(2),th:s.Rational(1,2),l3:s.sqrt(2)/2,
+              tl1:1/s.sqrt(2),tl2:1/s.sqrt(2),tl3:1/s.sqrt(2)}
+    for g in grad:
+        assert s.simplify(g.subs(sol_half))==0
+    hess_num=np.array(hess.subs(sol_half).evalf(),dtype=float)
+    assert np.all(np.linalg.eigvalsh(hess_num)>0)
+    at_thresh=unified_least_resistance_cycle(.5*math.log(2))
+    assert at_thresh['transferred_winding_fraction_theta']==pytest.approx(.5,rel=2e-15)
+    assert at_thresh['plus_infall']['filament_aspect_ratio']==pytest.approx(1.,rel=2e-15)
+    for chi in (.5,1.,2.,4.):
+        row=unified_least_resistance_cycle(chi)
+        assert row['fluid_incompressibility_assumed'] is False
+        assert row['surface_tension_assumed'] is False
+        assert row['volume_conservation_shortcut_assumed'] is False
+        assert row['plus_infall']['parcel_volume_shrinks'] is True
+        assert row['plus_infall']['is_elongated_filament'] is True
+        assert row['minus_child_drop']['aspect_ratio']==1.
+        assert row['cost_comparison']['unified_minimum_cost']<row['cost_comparison']['stay_all_in_plus_cost']
+        assert row['cost_comparison']['unified_minimum_cost']<row['cost_comparison']['cross_all_to_minus_cost']
+    deep=unified_least_resistance_cycle(4.)
+    assert deep['plus_infall']['filament_aspect_ratio']>79.
+    assert deep['derived_cooker_takeover']['minus_volume_fraction']>0.9994

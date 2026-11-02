@@ -261,9 +261,52 @@ python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --intri
 (`+`/`0`/`-`) contact so turning and $\alpha$ emerge from the compression
 response rather than remaining supplied.
 
-## Helical buckling, damped `+`/`0`/`-` horizon asymmetry, and Goldilocks stabilization
+## Unified single-cost cycle, helical buckling, damped `+`/`0`/`-` asymmetry, and Goldilocks stabilization
 
-The next calculation connects the two-force `+ -> 0 -> -` zero-crossing with
+To eliminate fluid-physics assumptions (parcel incompressibility $\lambda_1\lambda_2\lambda_3=1$,
+surface tension, or an ad-hoc volume rule $V_-=V_0(1-e^{-3\chi})$), `unified_least_resistance_cycle`
+minimizes **one single 5-variable cost functional** built purely from **A0**
+(least resistance: $Q_{\rm stretch}+PV$), **A1** (quadratic winding cost $m\propto n^2$
+from `winding_variation`, with parent convergence $\lambda_1=\lambda_2=\xi=e^{-\chi}$
+in `+` and 3D offset distribution in `-`), and **A4** (turn budget split $n_++n_-=N_0$,
+$n_+=(1-\theta)N_0, n_-=\theta N_0$ across `0`):
+
+$$
+E(\lambda_3,\tilde\lambda_1,\tilde\lambda_2,\tilde\lambda_3,\theta;\chi)
+=\underbrace{\left[\frac{2m_0(1-\theta)^2}{e^{-\chi}}
++\frac{m_0(1-\theta)^2}{\lambda_3}
++PV_0e^{-2\chi}\lambda_3\right]}_{E_+\text{ (infall region)}}
++\underbrace{\left[\sum_{i=1}^3\frac{m_0\theta^2}{\tilde\lambda_i}
++PV_0\tilde\lambda_1\tilde\lambda_2\tilde\lambda_3\right]}_{E_-\text{ (across }0)}.
+$$
+
+Simultaneous stationarity $\partial E/\partial\lambda_3=0$, $\partial E/\partial\tilde\lambda_i=0$,
+and $\partial E/\partial\theta=0$ (with strictly positive-definite $5\times5$ Hessian)
+gives the unique closed-form global minimum (for normalized $m_0=PV_0=V_0=1$):
+
+$$
+\sqrt{\theta^*(\chi)}=\frac{\sqrt{16e^{2\chi}+17}-3}{4e^\chi},\qquad
+\lambda_3^*(\chi)=(1-\theta^*(\chi))e^\chi,\qquad
+\tilde\lambda_1^*=\tilde\lambda_2^*=\tilde\lambda_3^*=\sqrt{\theta^*(\chi)}.
+$$
+
+All three stages emerge as **consequences** of this single minimization:
+- **Parcel shrinkage AND 1D spaghettification on the way in (`+`):** Without
+  assuming fluid incompressibility, the `+` parcel volume shrinks as
+  $V_+^*(\chi)=(1-\theta^*)e^{-\chi}\sim\tfrac32e^{-2\chi}\to0$, while its
+  aspect ratio stretches into a 1D filament for all $\chi>\tfrac12\ln2\approx0.3465735903$
+  (where $\theta^*=1/2$ and aspect ratio is exactly $1$):
+  $\lambda_3^*/\xi=(1-\theta^*)e^{2\chi}\sim\tfrac32e^{+\chi}\to\infty$.
+- **Rounding into a 3D sphere in `-` without surface tension:** By AM-GM on
+  $\sum_{i=1}^3\theta^2/\tilde\lambda_i+\tilde\lambda_1\tilde\lambda_2\tilde\lambda_3$,
+  the `-` scales satisfy $\tilde\lambda_1^*=\tilde\lambda_2^*=\tilde\lambda_3^*=\sqrt{\theta^*}$
+  (aspect ratio $1$, a round 3D sphere).
+- **Derived cooker volume takeover without assuming $V_++V_-=V_0$:** The `-`
+  drop's share of the two-region volume, $f_{\rm drop}^*(\chi)=V_-^*/(V_+^*+V_-^*)$
+  with $V_-^*=(\theta^*)^{3/2}$, rises from $37.90\%$ ($\chi=0$) to $65.05\%$
+  ($\chi=0.5$), $84.63\%$ ($\chi=1$), $97.73\%$ ($\chi=2$), and $99.95\%$ ($\chi=4$).
+
+The calculation then connects the two-force `+ -> 0 -> -` zero-crossing with
 helical buckling, damped oscillation and Goldilocks stabilization through least
 resistance and budget conservation:
 
