@@ -15,9 +15,21 @@ The increment is obtained from the deformation history rather than an
 independently supplied alpha. Analytic three-level controls give u,2u,3u
 with zero sampled composition residual; they are not formation histories.
 
-Next is actual parent-child deformation and its connection to the drawing,
-including turning/shear. Compression kinematics alone supplies neither a
-pressure law nor a formed child. The isolated-offset percentage-selection
+The next intrinsic-phase calculation now supplies a conditional deformation
+response: Q(A)=det(A) trace(A^-T M A^-1)/2. For the same carried phase
+pattern, Q_child/Q_parent=exp(-(d-2)chi). In d=3 its phase-gradient portion
+decreases as exp(-chi); total energy loss is not inferred.
+
+An isotropic phase pattern favours equal axes at fixed volume, while an axial
+pattern lowers its cost through axial stretch and transverse narrowing.
+The latter has an exact conservative motion under an explicitly declared
+log-strain inertia: s=log cosh(sqrt(2/3) tau), Q+3 s_dot^2/4=1/2.
+There is no finite-time pinch or rotation. The functional alone gives no
+finite isotropic holding radius under a constant positive enclosing load.
+
+Next is the parent's actual phase-gradient moment M, enclosing work and
+turning, connected to this response. The source and geometric inertia are
+not selected by these analytic controls. No child is formed. The isolated-offset percentage-selection
 direction is retired. Previously supplied fields, actions, potentials and
 cosmological parameters remain conditional constructions to revisit.
 

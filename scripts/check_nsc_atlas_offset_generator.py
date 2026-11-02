@@ -3,7 +3,7 @@ import argparse,hashlib,json,time
 from pathlib import Path
 from recursive_horizons.nsc_atlas_offset_generator import (
     calculation,winding_calculation,winding_transport_calculation,
-    offset_connection_calculation,inherited_offset_calculation)
+    offset_connection_calculation,inherited_offset_calculation,intrinsic_compression_calculation)
 ROOT=Path(__file__).resolve().parents[1]
 
 
@@ -14,11 +14,13 @@ def main():
     group.add_argument('--transport-only',action='store_true',help='conservative winding transport to stdout; no parent or files')
     group.add_argument('--connection-only',action='store_true',help='retained isolated-offset comparison to stdout')
     group.add_argument('--inheritance-only',action='store_true',help='parent-derived compression and nesting identity to stdout')
+    group.add_argument('--intrinsic-only',action='store_true',help='intrinsic deformation cost and constrained neck motion to stdout')
     args=p.parse_args()
     for selected,run in ((args.winding_only,winding_calculation),
                          (args.transport_only,winding_transport_calculation),
                          (args.connection_only,offset_connection_calculation),
-                         (args.inheritance_only,inherited_offset_calculation)):
+                         (args.inheritance_only,inherited_offset_calculation),
+                         (args.intrinsic_only,intrinsic_compression_calculation)):
         if selected:
             if args.output is not None:p.error('geometry-only calculations write to stdout; omit --output')
             print(json.dumps(run(),indent=2,sort_keys=True));return

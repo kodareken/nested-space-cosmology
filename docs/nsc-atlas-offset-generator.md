@@ -77,6 +77,121 @@ increment to the drawing operation. A pressure-to-deformation law, angular
 phase relation and receiving geometry have not been derived by this
 kinematic identity. No free increment is used to stand in for those links.
 
+## Intrinsic deformation response and a conservative neck control
+
+The next candidate uses the existing angular phase with a unit target
+metric and the actual spatial metric:
+
+$$
+Q_g=\frac12\int g^{ij}\partial_i\psi\partial_j\psi\,dV_g.
+$$
+
+Choosing this functional and target metric is explicit. It is not the old
+fixed-drawing-coordinate functional with a new name, and has no assigned
+joule conversion. On a circle of radius R with phase m theta it gives
+Q=pi m^2/R. Replacing theta by any smooth increasing periodic parameter
+leaves this value unchanged when both the metric and volume factor are
+transformed. The calculation checks this directly.
+
+### How inherited compression changes the cost
+
+For an affine deformation A of a reference patch, let
+M=integral grad(psi) grad(psi)^T dV_reference. Then
+
+$$
+Q(A)=\tfrac12\det(A)\operatorname{tr}(A^{-T}MA^{-1}).
+$$
+
+The code represents M=C^T C, keeping cost positivity explicit. It does not
+introduce another field. For uniform A=lambda I in dimension d,
+Q(lambda)=lambda^(d-2) Q(1). Thus half-size costs relative to the original
+are 2 in d=1, 1 in d=2, and 1/2 in d=3. These are scale controls, not
+a selection of spatial dimension.
+
+For the SAME carried reference phase pattern, this connects directly to
+the enclosing-deformation result above:
+
+$$
+\frac{Q_c}{Q_p}=e^{-(d-2)\chi_{p\to c}}.
+$$
+
+This is a derived response to inherited compression, with no isolated alpha
+or independently chosen damping rate. It is the phase-gradient portion of
+a geometric budget, not a claim that total energy disappears.
+
+### Work and directional response
+
+Let Q_i be the contributions of the squared current phase gradient in
+orthogonal directions. Changing a current principal length gives
+partial Q/partial ln(lambda_i)=Q-2Q_i. These derivatives define the
+generalized response; they are not inserted pressure labels. Under a
+constant isotropic enclosing compressive load P>0, the load potential is
+P V (equivalently, input work on compression is -P dV). In d=3,
+
+$$
+\frac{d}{d\lambda}[Q_0\lambda+P V_0\lambda^3]
+=Q_0+3P V_0\lambda^2>0.
+$$
+
+Consequently this candidate alone has no finite isotropic holding radius
+under that load. A one-dimensional circle's resistance cannot simply be
+carried over to a three-dimensional region. The constant load is a symbolic
+control; a physical enclosing load has not been obtained from this identity.
+
+At FIXED volume, an isotropic M instead favours equal principal lengths
+by the arithmetic/geometric-mean inequality. This is shape stability,
+not stability of overall size. For A(s)=diag(exp(-s/2),exp(-s/2),exp(s)):
+
+| Log axial stretch s | Q for normalized axial gradient | Q for M=I |
+| --- | --- | --- |
+| 0 | 0.5 | 1.5 |
+| 1/2 | 0.1839397206 | 1.8326609913 |
+| 1 | 0.0676676416 | 2.7859494701 |
+| 2 | 0.0091578194 | 7.3982139184 |
+
+An inherited directional phase pattern can therefore favour elongation and
+transverse narrowing. These two reference patterns are analytic controls,
+not selected preparations of a universe. A rigid rotation changes neither
+cost; this functional alone supplies no torque that creates a vortex.
+
+### Exact motion and its budget
+
+For the normalized axial pattern Q(s)=exp(-2s)/2. Declare the geometric
+inertial metric sum_i(d ln lambda_i)^2=(3/2)ds^2. From rest at s=0 its
+conservative motion obeys
+
+$$
+\ddot s=\frac23e^{-2s},\qquad
+s(\tau)=\log\cosh(\sqrt{2/3}\,\tau),\qquad
+Q+\frac34\dot s^2=\frac12.
+$$
+
+This adds an explicit candidate inertia for deformation; it is not silently
+deduced from the earlier phase kinetic rule. Offset tau is normalized and
+has no calibration to the generating offset or seconds. Fixed volume makes
+the isotropic load do zero work on this shape mode. The decreasing Q is
+accounted for by increasing geometric motion:
+
+| tau | Log axial stretch | Q | Geometric kinetic | Total |
+| --- | --- | --- | --- | --- |
+| 0 | 0 | 0.5 | 0 | 0.5 |
+| 1 | 0.3017834121 | 0.2734288042 | 0.2265711958 | 0.5 |
+| 2 | 0.9772952024 | 0.0708112364 | 0.4291887636 | 0.5 |
+| 4 | 2.5742942146 | 0.0029037984 | 0.4970962016 | 0.5 |
+
+Every finite tau has positive transverse scale. Its vanishing limit occurs
+only at infinite tau; log-scale variables keep the history evaluable. There
+is no finite-time opening, horizon or receiving child in this control.
+
+```text
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --intrinsic-only
+```
+
+**Next connection:** obtain M, enclosing work and any turning from the
+parent's actual geometric continuation, then couple them to deformation.
+The response now has an explicit mathematical meaning; the source is not
+replaced by a fitted shape, pressure or golden ratio.
+
 ## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:

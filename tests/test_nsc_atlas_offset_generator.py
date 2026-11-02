@@ -411,3 +411,96 @@ def test_relative_volume_rate_has_the_logarithmic_derivative():
 def test_inherited_offset_requires_admissible_corresponding_patches(child):
     from recursive_horizons.nsc_atlas_offset_generator import inherited_compression_offset
     with pytest.raises(ValueError):inherited_compression_offset(np.array([np.eye(3),np.eye(3)]),child)
+
+
+def test_intrinsic_circle_phase_cost_is_invariant_under_reparameterization():
+    from scipy.integrate import quad
+    # theta=u+e sin(u), metric R^2 theta'^2, phase=m theta.
+    for radius,turns,e in ((1.,1,.3),(.7,3,.6),(2.,-2,-.4)):
+        value=quad(lambda u:.5*(turns*(1+e*math.cos(u)))**2 /
+                   (radius**2*(1+e*math.cos(u))**2)*radius*(1+e*math.cos(u)),0,2*math.pi)[0]
+        assert value==pytest.approx(math.pi*turns**2/radius,rel=2e-14)
+
+
+def test_affine_intrinsic_cost_matches_direct_transformed_phase_gradient():
+    from recursive_horizons.nsc_atlas_offset_generator import intrinsic_phase_cost
+    A=np.array([[.7,.2,0.],[0.,1.3,.1],[.1,0.,.8]])
+    # psi=x^2+y^2+z^2 on the unit cube centred at zero has M=I/3.
+    value=intrinsic_phase_cost(A,np.eye(3)/math.sqrt(3))['cost']
+    from numpy.polynomial.legendre import leggauss
+    nodes,weights=leggauss(3);direct=0.
+    for i,x in enumerate(nodes/2):
+        for j,y in enumerate(nodes/2):
+            for k,z in enumerate(nodes/2):
+                gradient=np.linalg.solve(A.T,2*np.array([x,y,z]))
+                direct+=weights[i]*weights[j]*weights[k]/8*np.linalg.det(A)*np.dot(gradient,gradient)/2
+    assert value==pytest.approx(direct,rel=2e-15)
+
+
+def test_intrinsic_cost_uniform_scaling_and_rigid_rotation_controls():
+    from recursive_horizons.nsc_atlas_offset_generator import intrinsic_phase_cost
+    for dimension in (1,2,3):
+        for scale in (.25,.5,2.):
+            value=intrinsic_phase_cost(scale*np.eye(dimension),np.eye(dimension))['cost']
+            assert value==pytest.approx(dimension/2*scale**(dimension-2),rel=3e-15)
+    R=np.array([[0.,-1.,0.],[1.,0.,0.],[0.,0.,1.]])
+    A=np.diag([.7,1.3,2.]);C=np.diag([1.,2.,3.])
+    assert intrinsic_phase_cost(R@A,C)['cost']==pytest.approx(intrinsic_phase_cost(A,C)['cost'])
+
+
+def test_directional_response_matches_cost_derivatives_not_pressure_labels():
+    from recursive_horizons.nsc_atlas_offset_generator import intrinsic_phase_cost
+    A=np.diag([.7,1.3,2.]);C=np.diag([1.,2.,3.])
+    row=intrinsic_phase_cost(A,C);eps=1e-6
+    for i in range(3):
+        positive=np.eye(3);negative=np.eye(3)
+        positive[i,i]=math.exp(eps);negative[i,i]=math.exp(-eps)
+        derivative=(intrinsic_phase_cost(positive@A,C)['cost']-
+                    intrinsic_phase_cost(negative@A,C)['cost'])/(2*eps)
+        assert derivative==pytest.approx(-row['cost']*row['logarithmic_force_per_cost'][i],abs=2e-9)
+
+
+def test_isotropic_pattern_holds_equal_axes_at_fixed_volume_but_directional_pattern_does_not():
+    from recursive_horizons.nsc_atlas_offset_generator import intrinsic_phase_cost
+    for shape in (.1,.5,1.,2.):
+        A=np.diag([math.exp(-shape/2),math.exp(-shape/2),math.exp(shape)])
+        assert np.linalg.det(A)==pytest.approx(1)
+        assert intrinsic_phase_cost(A,np.eye(3))['cost']>1.5
+        assert intrinsic_phase_cost(A,[[0.,0.,1.]])['cost']==pytest.approx(.5*math.exp(-2*shape))
+    shape=s.symbols('shape',real=True)
+    isotropic=(2*s.exp(shape)+s.exp(-2*shape))/2
+    assert s.diff(isotropic,shape).subs(shape,0)==0
+    assert s.diff(isotropic,shape,2).subs(shape,0)==3
+
+
+def test_conservative_neck_motion_satisfies_shape_equation_and_energy_budget():
+    from recursive_horizons.nsc_atlas_offset_generator import conservative_neck_shape
+    t=s.symbols('t',real=True);a=s.sqrt(s.Rational(2,3))
+    shape=s.log(s.cosh(a*t))
+    assert s.simplify(s.diff(shape,t,2)-s.Rational(2,3)*s.exp(-2*shape))==0
+    for t0 in (0.,.3,1.,2.,4.,1000.):
+        row=conservative_neck_shape(t0)
+        assert row['total']==pytest.approx(.5,abs=3e-16)
+        assert row['log_volume']==0
+        assert row['log_axial_scale']>=0
+        assert row['log_transverse_scale']<=0
+    assert conservative_neck_shape(0)['shape_velocity']==0
+
+
+def test_intrinsic_phase_zero_source_and_large_compression_remain_explicit():
+    from recursive_horizons.nsc_atlas_offset_generator import intrinsic_phase_cost
+    assert intrinsic_phase_cost(np.eye(3),np.zeros((1,3)))['cost']==0
+    row=intrinsic_phase_cost(math.exp(-300)*np.eye(3),np.eye(3))
+    assert row['log_cost']==pytest.approx(math.log(1.5)-300)
+
+
+def test_inherited_compression_drives_intrinsic_cost_without_an_independent_alpha():
+    from recursive_horizons.nsc_atlas_offset_generator import intrinsic_phase_cost,inherited_compression_offset
+    for dimension in (1,2,3):
+        parent=np.array([np.eye(dimension),math.exp(-.2)*np.eye(dimension)])
+        child=np.array([np.eye(dimension),math.exp(-.7)*np.eye(dimension)])
+        chi=inherited_compression_offset(parent,child)['compression'][-1]
+        C=np.eye(dimension)
+        qp=intrinsic_phase_cost(parent[-1],C)['cost']
+        qc=intrinsic_phase_cost(child[-1],C)['cost']
+        assert qc/qp==pytest.approx(math.exp(-(dimension-2)*chi),rel=2e-15)

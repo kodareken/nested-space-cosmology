@@ -265,6 +265,96 @@ def inherited_offset_calculation():
         no_observational_input=True)
 
 
+def intrinsic_phase_cost(deformation, gradient_factor):
+    """Intrinsic phase Dirichlet cost under an affine change of actual distances.
+
+    Rows of gradient_factor factor the reference phase-gradient moment:
+    M=C.T@C=integral grad(psi) grad(psi).T dV_reference. The factor is
+    geometric input from the existing phase, not additional field species.
+    Positive determinant deformation A gives Q=det(A)*||C A^-1||^2/2.
+    It is a candidate geometric cost, not an assigned physical energy.
+    """
+    A=np.asarray(deformation,dtype=float);C=np.asarray(gradient_factor,dtype=float)
+    if (A.ndim!=2 or A.shape[0]!=A.shape[1] or A.shape[0]<1
+            or C.ndim!=2 or C.shape[0]<1 or C.shape[1]!=A.shape[0]):
+        raise ValueError('square deformation and matching gradient factor required')
+    if not np.all(np.isfinite(A)) or not np.all(np.isfinite(C)):
+        raise ValueError('finite geometric inputs required')
+    sign,log_volume=np.linalg.slogdet(A)
+    if sign<=0:raise ValueError('orientation-preserving nonsingular deformation required')
+    transformed=np.linalg.solve(A.T,C.T).T
+    if not np.all(np.isfinite(transformed)):
+        raise ValueError('gradient exceeds this matrix representation; continue in log-scale principal coordinates')
+    largest=float(np.max(np.abs(transformed)))
+    if largest==0:
+        return dict(cost=0.,log_cost=None,log_volume=float(log_volume),
+                    directional_fraction=[0.]*A.shape[0],
+                    logarithmic_force_per_cost=None)
+    scaled=transformed/largest
+    components=np.sum(scaled**2,axis=0);total=float(components.sum())
+    fractions=components/total
+    log_cost=float(log_volume+2*math.log(largest)+math.log(total/2))
+    cost=math.exp(log_cost) if -744<log_cost<709 else None
+    return dict(cost=cost,log_cost=log_cost,log_volume=float(log_volume),
+                directional_fraction=fractions.tolist(),
+                logarithmic_force_per_cost=(2*fractions-1).tolist())
+
+
+def conservative_neck_shape(offset):
+    """Exact constrained shape control; no formed child or parent history.
+
+    Fix volume and A=diag(exp(-s/2),exp(-s/2),exp(s)). For reference
+    gradient factor [0,0,1], Q=exp(-2s)/2. With logarithmic-strain metric
+    sum_i(d log lambda_i)^2=(3/2)ds^2, unit inertial motion from rest obeys
+    s_tt=(2/3)exp(-2s). This is an explicit candidate kinetic rule.
+    """
+    if not math.isfinite(offset) or offset<0:raise ValueError('finite nonnegative offset required')
+    a=math.sqrt(2/3);u=a*offset
+    s=float(np.logaddexp(u,-u)-math.log(2))
+    velocity=a*math.tanh(u)
+    potential=.5*math.exp(-2*s)
+    kinetic=.75*velocity**2
+    return dict(offset=offset,log_axial_scale=s,log_transverse_scale=-s/2,
+                shape_velocity=velocity,phase_cost=potential,
+                shape_kinetic=kinetic,total=potential+kinetic,
+                log_volume=0.,receiving_child_formed=False)
+
+
+def intrinsic_compression_calculation():
+    """Small exact geometry controls; no selected source, pressure or SI units."""
+    scales=(1.,.5,.25)
+    dimensional=[]
+    for dimension in (1,2,3):
+        costs=[intrinsic_phase_cost(scale*np.eye(dimension),np.eye(dimension))['cost']
+               for scale in scales]
+        dimensional.append(dict(dimension=dimension,scales=list(scales),costs=costs,
+                                scale_exponent=dimension-2,
+                                isotropic_logarithmic_force_per_cost=(2-dimension)/dimension))
+    shapes=[]
+    for s in (0.,.5,1.,2.):
+        A=np.diag([math.exp(-s/2),math.exp(-s/2),math.exp(s)])
+        shapes.append(dict(log_axial_scale=s,
+            directional_cost=intrinsic_phase_cost(A,[[0.,0.,1.]])['cost'],
+            isotropic_cost=intrinsic_phase_cost(A,np.eye(3))['cost']))
+    return dict(schema='nsc-intrinsic-compression-v1',
+        premises=['unit target metric for the existing angular phase',
+                  'intrinsic squared phase gradient integrated over actual volume',
+                  'given reference phase-gradient moment',
+                  'affine deformation controls; fixed-volume restriction for shape comparison'],
+        cost='Q_g=integral |grad_g psi|^2 dV_g / 2',
+        affine_cost='Q(A)=det(A) trace(A^-T M A^-1)/2',
+        inherited_isotropic_cost_ratio='Q_child/Q_parent=exp(-(dimension-2)*chi_parent_child), for the same carried reference phase pattern',
+        dimensional_controls=dimensional,
+        shape_controls=shapes,
+        positive_external_compression='For d=3 and uniform scale lambda: d[lambda Q0+P V0 lambda^3]/d lambda = Q0+3 P V0 lambda^2 > 0 for P>0,Q0>0; no finite isotropic minimum.',
+        conservative_directional_control=[conservative_neck_shape(t) for t in (0.,1.,2.,4.)],
+        no_rotation_torque_from_global_rotation=True,
+        actual_parent_gradient_moment_selected=False,
+        actual_parent_loading_selected=False,
+        formed_child=False,
+        no_observational_input=True)
+
+
 def winding_calculation():
     """Geometry-only reference calculation: no parent action or observed scale."""
     cases = []

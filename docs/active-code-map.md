@@ -6,6 +6,10 @@ local deformation histories and computes additive log-length contrast.
 Use `--inheritance-only` with the existing CLI for the three-level controls.
 The constant-alpha connection and winding transport remain comparison
 constructions; they do not select the enclosing region's history.
+`intrinsic_phase_cost` computes the actual-distance phase cost and directional
+response; `conservative_neck_shape` evaluates an exact constrained inertial
+shape control. Use `--intrinsic-only` for scale, shape and conserved-budget
+comparisons. The source moment and parent loading remain explicit inputs.
 
 | Current work | Implementation |
 | --- | --- |

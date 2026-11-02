@@ -18,6 +18,10 @@ generator, not an assertion that a star has already become a literal line.
 - `theta[n+1] = theta[n] + alpha`, `phi[n+1] = phi[n] + theta[n]`
   remains the retained constant-increment drawing example. An isolated
   alpha and an arbitrary update count do not determine the parent's drive.
+- The intrinsic phase-gradient functional is a candidate deformation cost.
+  Its response to inherited compression and directional shape changes is
+  calculated in the same construction owner; its source and inertia remain
+  explicit assumptions, not a claimed complete law of the universe.
 - Boundary minimization at fixed enclosed content as a candidate selection
   principle. The functional, admissible shapes and constraints are explicit.
 - Compression, turning and inward continuation as the proposed mechanism
