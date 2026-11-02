@@ -622,40 +622,66 @@ def build_pdf(
     def latex_to_plain(value: str) -> str:
         """Make short inline formulae legible in ReportLab paragraphs."""
 
-        value = value.replace(r"\!", "").replace(r"\,", " ")
+        value = value.replace(r"\%", "%").replace(r"\!", "").replace(r"\,", " ")
         value = value.replace(r"\;", " ").replace(r"\quad", " ")
-        value = value.replace(r"\qquad", "  ")
+        value = value.replace(r"\qquad", "  ").replace(r"\ ", " ")
         value = value.replace(r"\dagger", "†").replace(r"\star", "⋆")
+        value = value.replace(r"\longrightarrow", "→").replace(r"\leftarrow", "←").replace(r"\leftrightarrow", "↔")
         value = value.replace(r"\to", "→").replace(r"\mapsto", "↦")
+        value = value.replace(r"\implies", "⇒").replace(r"\Rightarrow", "⇒")
+        value = value.replace(r"\iff", "⇔").replace(r"\Leftrightarrow", "⇔")
         value = re.sub(r"\\(?:geq|ge)(?![A-Za-z])", "≥", value)
         value = re.sub(r"\\(?:leq|le)(?![A-Za-z])", "≤", value)
         value = re.sub(r"\\(?:neq|ne)(?![A-Za-z])", "≠", value)
-        value = value.replace(r"\approx", "≈")
+        value = value.replace(r"\approx", "≈").replace(r"\simeq", "≃").replace(r"\sim", "∼").replace(r"\equiv", "≡")
+        value = value.replace(r"\propto", "∝")
         value = re.sub(r"\\in(?![A-Za-z])", "∈", value).replace(r"\times", "×")
         value = re.sub(r"\\int(?![A-Za-z])", "∫", value)
         value = re.sub(r"\\oint(?![A-Za-z])", "∮", value)
+        value = re.sub(r"\\sum(?![A-Za-z])", "∑", value)
+        value = re.sub(r"\\prod(?![A-Za-z])", "∏", value)
         value = value.replace(r"\ell", "ℓ").replace(r"\odot", "⊙")
         value = value.replace(r"\ddots", "⋱").replace(r"\cdots", "⋯")
-        value = value.replace(r"\ldots", "…")
+        value = value.replace(r"\ldots", "…").replace(r"\dots", "…")
         value = value.replace(r"\otimes", "⊗").replace(r"\cdot", "·")
         value = value.replace(r"\partial", "∂").replace(r"\infty", "∞")
         value = value.replace(r"\nabla", "∇")
         value = value.replace(r"\hbar", "ℏ").replace(r"\pm", "±").replace(r"\mp", "∓")
         value = value.replace(r"\Box", "□")
         value = value.replace(r"\parallel", "∥").replace(r"\perp", "⊥")
-        value = value.replace(r"\bar\psi", "ψ̄")
-        value = re.sub(r"\\bar\s+([A-Za-z])", lambda match: match.group(1) + "̄", value)
-        value = value.replace(r"\sqrt", "√")
+        value = value.replace(r"\|", "‖").replace(r"\Vert", "‖")
+        value = value.replace(r"^{\circ}", "°").replace(r"^\circ", "°").replace(r"\circ", "∘")
         value = re.sub(
-            r"\\frac\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
+            r"\\(log|ln|exp|cosh|sinh|tanh|cos|sin|tan|sec|csc|cot|arcsin|arccos|arctan|atanh|artanh|min|max|sup|inf|lim|det|Tr|diag|sgn)(?![A-Za-z])",
+            r"\1",
+            value,
         )
-        value = re.sub(r"\\rm(?![A-Za-z])\s*", "", value)
-        for command in ("mathrm", "mathbf", "boldsymbol", "mathbb", "mathcal", "operatorname", "text"):
-            value = re.sub(rf"\\{command}\{{([^{{}}]+)\}}", r"\1", value)
-            value = re.sub(rf"\\{command}\s+([A-Za-z])", r"\1", value)
         for name, symbol in greek.items():
             value = value.replace(f"\\{name}", symbol)
-        value = re.sub(r"\\(log|ln|exp|cosh|sinh|tanh|cos|sin|tan|det|Tr)(?![A-Za-z])", r"\1", value)
+        value = value.replace(r"\bar\psi", "ψ̄")
+        value = re.sub(r"\\(?:overline|bar)\{([^{}]+)\}", lambda match: match.group(1) + "\u0304", value)
+        value = re.sub(r"\\bar\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0304", value)
+        value = re.sub(r"\\ddot\{([^{}]+)\}", lambda match: match.group(1) + "\u0308", value)
+        value = re.sub(r"\\ddot\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0308", value)
+        value = re.sub(r"\\dot\{([^{}]+)\}", lambda match: match.group(1) + "\u0307", value)
+        value = re.sub(r"\\dot\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0307", value)
+        value = re.sub(r"\\(?:widetilde|tilde)\{([^{}]+)\}", lambda match: match.group(1) + "\u0303", value)
+        value = re.sub(r"\\(?:widetilde|tilde)\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0303", value)
+        value = re.sub(r"\\(?:widehat|hat)\{([^{}]+)\}", lambda match: match.group(1) + "\u0302", value)
+        value = re.sub(r"\\(?:widehat|hat)\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0302", value)
+        value = value.replace(r"\sqrt", "√")
+        value = re.sub(
+            r"\\(?:frac|tfrac|dfrac)\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
+        )
+        value = re.sub(
+            r"\\binom\{([^{}]+)\}\{([^{}]+)\}", r"C(\1,\2)", value
+        )
+        value = re.sub(r"\\rm(?![A-Za-z])\s*", "", value)
+        for _ in range(2):
+            for command in ("mathrm", "mathbf", "boldsymbol", "mathbb", "mathcal", "operatorname", "text"):
+                value = re.sub(rf"\\{command}\{{([^{{}}]+)\}}", r"\1", value)
+                value = re.sub(rf"\\{command}\s+([A-Za-z])", r"\1", value)
+        value = re.sub(r"\\(?:mathrm|mathbf|boldsymbol|mathbb|mathcal|operatorname|text)(?![A-Za-z])\s*", "", value)
         value = re.sub(r"_\{([^{}]+)\}", r"_(\1)", value)
         value = re.sub(r"\^\{([^{}]+)\}", r"^(\1)", value)
         value = value.replace("{", "").replace("}", "")
@@ -669,7 +695,7 @@ def build_pdf(
             tag = "sub" if match.group(1) == "_" else "super"
             return f"<{tag}>{match.group(2)}</{tag}>"
         plain = re.sub(r"([_^])\(([^()]*)\)", script, plain)
-        return re.sub(r"([_^])([\w*⋆†±+∥⊥-])", script, plain)
+        return re.sub(r"([_^])([\w*⋆†±+∥⊥°∘-])", script, plain)
 
     def inline_markup(value: str) -> str:
         tokens: list[str] = []
@@ -1208,9 +1234,19 @@ def build_pdf(
                 flush_paragraph()
                 items: list[ListItem] = []
                 while index < len(lines) and re.match(r"^\s*[-*]\s+", lines[index]):
-                    item_text = re.sub(r"^\s*[-*]\s+", "", lines[index]).strip()
-                    items.append(ListItem(Paragraph(inline_markup(item_text), styles["Bullet"])))
+                    item_parts = [re.sub(r"^\s*[-*]\s+", "", lines[index]).strip()]
                     index += 1
+                    while (
+                        index < len(lines)
+                        and lines[index].strip()
+                        and re.match(r"^\s+\S", lines[index])
+                        and not re.match(r"^\s*(?:[-*]|\d+\.)\s+", lines[index])
+                        and lines[index].strip() != "$$"
+                        and not lines[index].strip().startswith(("```", "|", ">", "#", "<!--"))
+                    ):
+                        item_parts.append(lines[index].strip())
+                        index += 1
+                    items.append(ListItem(Paragraph(inline_markup(" ".join(item_parts)), styles["Bullet"])))
                 story.append(
                     ListFlowable(
                         items,
@@ -1231,14 +1267,25 @@ def build_pdf(
                     match = re.match(r"^\s*(\d+)\.\s+(.+)$", lines[index])
                     if not match:
                         break
+                    item_parts = [match.group(2).strip()]
+                    index += 1
+                    while (
+                        index < len(lines)
+                        and lines[index].strip()
+                        and re.match(r"^\s+\S", lines[index])
+                        and not re.match(r"^\s*(?:[-*]|\d+\.)\s+", lines[index])
+                        and lines[index].strip() != "$$"
+                        and not lines[index].strip().startswith(("```", "|", ">", "#", "<!--"))
+                    ):
+                        item_parts.append(lines[index].strip())
+                        index += 1
                     story.append(
                         Paragraph(
-                            inline_markup(match.group(2)),
+                            inline_markup(" ".join(item_parts)),
                             styles["Numbered"],
                             bulletText=f"{match.group(1)}.",
                         )
                     )
-                    index += 1
                 continue
 
             paragraph.append(line_value)

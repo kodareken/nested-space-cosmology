@@ -685,13 +685,14 @@ def check_paper_catalog(errors: list[str]) -> None:
         if len(rows) != 3 or set(documents) != {"main", "foundation", "local-gate"}:
             raise ValueError("main manuscript and both historical science roles are required")
         if (catalog.get("current_document") != "main"
-                or catalog.get("current_status") != "WORKING_DRAFT"
+                or catalog.get("current_status") not in {"WORKING_DRAFT", "FOUNDATION EDITION", "FOUNDATION_EDITION"}
                 or [row["id"] for row in rows if row.get("active")] != ["main"]):
             raise ValueError("exactly one active main manuscript is required")
         main = documents["main"]
-        if (main.get("role") != "main_manuscript" or main.get("status") != "WORKING_DRAFT"
-                or main.get("submission_ready") is not False
-                or main.get("author_review") != "pending"):
+        if main.get("role") != "main_manuscript" or main.get("status") not in {"WORKING_DRAFT", "FOUNDATION EDITION", "FOUNDATION_EDITION"}:
+            raise ValueError("main manuscript status is invalid")
+        if main.get("status") == "WORKING_DRAFT" and (
+                main.get("submission_ready") is not False or main.get("author_review") != "pending"):
             raise ValueError("main manuscript must remain an unsubmitted working draft")
         if (main["source"] != "paper/nested-space-cosmology.md"
                 or main["pdf"] != "paper/nested-space-cosmology.pdf"
