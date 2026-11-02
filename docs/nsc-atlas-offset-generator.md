@@ -261,6 +261,65 @@ python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --intri
 (`+`/`0`/`-`) contact so turning and $\alpha$ emerge from the compression
 response rather than remaining supplied.
 
+## Helical buckling, damped `+`/`0`/`-` horizon asymmetry, and Goldilocks stabilization
+
+The next calculation connects three stages through least resistance and budget
+conservation:
+
+1. **Helical buckling under axial compression (`helical_buckling_under_compression`).**
+   A 1D seed compressed axially to $\lambda=e^{-\chi}$ that turns laterally at
+   azimuthal speed $v_\perp=r_\perp\omega$ has Euclidean arc-length factor
+   $\ell=\sqrt{\lambda^2+v_\perp^2}$. Minimizing the Cauchy-Schwarz stretch
+   cost plus lateral enclosing confinement,
+   $$
+   E(v_\perp;\lambda)=\frac{Q_0}{\sqrt{\lambda^2+v_\perp^2}}+\frac12P_\perp v_\perp^2,
+   $$
+   shows that at $\lambda_{\rm crit}=(Q_0/P_\perp)^{1/3}$ ($\chi_{\rm crit}=-\tfrac13\log(Q_0/P_\perp)$),
+   the straight seed ($\omega=0$) loses transverse stability
+   ($\partial^2E/\partial v_\perp^2|_{v_\perp=0}=P_\perp-Q_0/\lambda^3<0$) and
+   buckles into a right- or left-handed helix with exact turning rate
+   $$
+   r_\perp\omega^*(\chi)=\sqrt{\lambda_{\rm crit}^2-e^{-2\chi}},
+   \qquad
+   \alpha^*(\chi)=\frac{\omega^*(\chi)}{2\pi},
+   $$
+   lowering total cost from $Q_0/\lambda$ to $\tfrac32P_\perp\lambda_{\rm crit}^2-\tfrac12P_\perp\lambda^2$.
+
+2. **Coupled `+`/`0`/`-` damped oscillation and asymmetric remainder (`damped_horizon_oscillation`).**
+   Coupling the two-sided horizon displacement $q(\tau)=A_0e^{-\gamma\tau}\sin(\omega\tau)$
+   to the receiving geometry budget via $\dot E_{\rm geom}=2\gamma\dot q^2$ gives
+   $$
+   \ddot q+2\gamma\dot q+(\gamma^2+\omega^2)q=0,
+   \qquad
+   E_{\rm wave}(\tau)+E_{\rm geom}(\tau)=\frac12A_0^2\omega^2=\text{const.}
+   $$
+   Because each `+` lobe ($q>0$) precedes its compensating `-` lobe ($q<0$) by
+   $\pi/\omega$, the peak-amplitude ratio, single-cycle area ratio, and infinite
+   cumulative area ratio all share the exact invariant asymmetry
+   $$
+   \eta=\frac{I_+-I_-}{I_++I_-}
+   =\frac{I_0^+-|I_1^-|}{I_0^++|I_1^-|}
+   =\tanh\!\left(\frac{\pi\gamma}{2\omega}\right)>0,
+   \qquad
+   \Delta I=I_+-I_-=\frac{A_0\omega}{\gamma^2+\omega^2}>0.
+   $$
+
+3. **Goldilocks stabilization (`buckling_to_goldilocks_calculation`).**
+   As $E_{\rm geom}(\tau)$ populates the child's isotropic 3D stretch budget
+   against enclosing load $PV_0$, its least-resistance holding scale expands as
+   $$
+   \lambda_{\rm child}(\tau)=\left(\frac{E_{\rm geom}(\tau)}{3PV_0}\right)^{1/4}
+   \xrightarrow{\tau\to\infty}
+   \lambda_{\rm Goldilocks}=\left(\frac{E_{\rm total}}{3PV_0}\right)^{1/4}.
+   $$
+   For $\omega=2\pi$, $\gamma=\tfrac12\ln2$ and $A_0=1$, the child reaches
+   $98.40\%$ of its Goldilocks equilibrium scale $\lambda_{\rm Goldilocks}\approx1.6015928510$
+   by offset $\tau=4$, with zero conservation residual throughout.
+
+```text
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --buckling-only
+```
+
 ## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:

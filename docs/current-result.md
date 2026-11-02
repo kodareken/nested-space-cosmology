@@ -44,8 +44,25 @@ Both Q_vol and Q_stretch are SO(3)-invariant and produce zero rotational torque
 from pure compression. When paired with an angular turn rate omega=2*pi*alpha per
 unit chi, decay-per-radian is 1/(2*pi*alpha) (0.4166730505 for golden-angle alpha
 with opposite-lobe asymmetry eta=tanh(1/(4*alpha))≈0.5746972340, versus
-2*ln(phi)/pi ≈ 0.3063489625 for a golden spiral). Coupling c along the 1D drawing
-coordinate and increment alpha remain supplied.
+2*ln(phi)/pi ≈ 0.3063489625 for a golden spiral).
+
+The connected three-stage pipeline (`--buckling-only`) now derives turning,
+two-sided (`+`/`0`/`-`) damping asymmetry, and Goldilocks stabilization:
+1. **Helical buckling:** A 1D seed compressed axially to lambda=exp(-chi) under
+   lateral confinement P_perp has arc-length factor sqrt(lambda^2+(r_perp*omega)^2).
+   Once lambda < lambda_crit=(Q0/P_perp)^(1/3), the straight seed (omega=0)
+   loses transverse stability (d^2E/dv_perp^2 < 0) and buckles into a helix with
+   derived turning speed r_perp*omega^* = sqrt(lambda_crit^2 - lambda^2) > 0.
+2. **Damped `+`/`0`/`-` horizon oscillation:** Coupling q(tau)=A0*exp(-gamma*tau)*sin(omega*tau)
+   to child geometry growth via E_geom_dot = 2*gamma*q_dot^2 conserves
+   E_wave(tau) + E_geom(tau) = A0^2*omega^2/2 identically and yields the exact
+   invariant `+`/`-` lobe asymmetry eta = (I_+ - I_-)/(I_+ + I_-) = tanh(pi*gamma/(2*omega)) > 0
+   with net remainder Delta_I = A0*omega/(gamma^2+omega^2) > 0.
+3. **Goldilocks equilibrium:** As E_geom(tau) populates the child's 3D stretch
+   budget against enclosing load P V0, the child holding scale
+   lambda_child(tau) = (E_geom(tau)/(3 P V0))^(1/4) expands from 0 and stabilizes
+   at lambda_Goldilocks = (E_total/(3 P V0))^(1/4) (98.40% complete by tau=4 for
+   omega=2*pi, gamma=ln(2)/2).
 
 ## Retained geometry and transport controls
 

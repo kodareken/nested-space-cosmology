@@ -483,6 +483,123 @@ def spiral_decay_to_turn_comparison(alpha=None):
                 retained_action_increment=metrics(alpha_action))
 
 
+def helical_buckling_under_compression(compression_chi, stretch_budget=1., lateral_confinement=1., radius=1.):
+    """Derive turning (omega* > 0) by least resistance when axial compression exceeds threshold.
+
+    A 1D seed compressed axially to scale lambda = exp(-chi) that turns laterally
+    at angular rate omega around radius r_perp has Euclidean arc-length factor
+    l = sqrt(lambda^2 + (r_perp*omega)^2). Its Cauchy-Schwarz least-stretch cost
+    plus lateral enclosing confinement is
+    E(v_perp; lambda) = Q0 / sqrt(lambda^2 + v_perp^2) + P_perp v_perp^2 / 2,
+    where v_perp = r_perp * omega.
+    At lambda_crit = (Q0 / P_perp)^(1/3) (chi_crit = -log(Q0/P_perp)/3), the straight
+    seed (omega=0) loses transverse stability (d^2E/dv_perp^2 = P_perp - Q0/lambda^3 < 0)
+    and buckles into a right- or left-handed helix with exact turning speed
+    v_perp^* = sqrt(lambda_crit^2 - lambda^2) and derived turn increment alpha^* = omega^*/(2*pi).
+    """
+    if (not math.isfinite(compression_chi) or not math.isfinite(stretch_budget) or stretch_budget<=0
+            or not math.isfinite(lateral_confinement) or lateral_confinement<=0
+            or not math.isfinite(radius) or radius<=0):
+        raise ValueError('finite compression and positive stretch_budget, lateral_confinement and radius required')
+    lam=math.exp(-compression_chi)
+    lam_crit=(stretch_budget/lateral_confinement)**(1/3)
+    chi_crit=-math.log(stretch_budget/lateral_confinement)/3
+    straight_cost=stretch_budget/lam
+    straight_hessian=lateral_confinement-stretch_budget/lam**3
+    if lam>=lam_crit:
+        return dict(compression_chi=compression_chi,axial_scale=lam,
+                    critical_compression_chi=chi_crit,critical_axial_scale=lam_crit,
+                    buckled=False,straight_transverse_hessian=straight_hessian,
+                    turning_speed=0.,angular_rate_omega=0.,derived_alpha=0.,
+                    helical_arc_length=lam,straight_cost=straight_cost,
+                    minimum_cost=straight_cost,cost_relief=0.)
+    v_perp=math.sqrt(lam_crit**2-lam**2)
+    omega=v_perp/radius
+    alpha_derived=omega/(2*math.pi)
+    min_cost=1.5*lateral_confinement*lam_crit**2-.5*lateral_confinement*lam**2
+    return dict(compression_chi=compression_chi,axial_scale=lam,
+                critical_compression_chi=chi_crit,critical_axial_scale=lam_crit,
+                buckled=True,straight_transverse_hessian=straight_hessian,
+                turning_speed=v_perp,angular_rate_omega=omega,derived_alpha=alpha_derived,
+                helical_arc_length=lam_crit,straight_cost=straight_cost,
+                minimum_cost=min_cost,cost_relief=straight_cost-min_cost)
+
+
+def damped_horizon_oscillation(offset, damping_rate, turn_frequency, amplitude=1., enclosing_load=1.):
+    """Exact two-sided (+/0/-) horizon wave coupled to child geometry expansion.
+
+    Solves q_tt + 2*gamma*q_t + (gamma^2 + omega^2)*q = 0 with q(0)=0, q_t(0)=A0*omega,
+    so q(tau) = A0 * exp(-gamma*tau) * sin(omega*tau), coupled to the receiving
+    geometry budget by E_geom_t = 2*gamma*q_t^2. Total budget E_wave(tau) + E_geom(tau)
+    is identically conserved at E_total = A0^2 * omega^2 / 2.
+    Because each + lobe precedes its compensating - lobe by pi/omega, the peak ratio,
+    single-cycle area ratio, and infinite cumulative area ratio all yield the same
+    invariant asymmetry eta = (I_+ - I_-)/(I_+ + I_-) = tanh(pi*gamma/(2*omega)) > 0,
+    while the child's least-resistance holding scale expands to the Goldilocks
+    equilibrium radius lambda_Goldilocks = (E_total / (3*P_ext))^(1/4).
+    """
+    if (not math.isfinite(offset) or offset<0 or not math.isfinite(damping_rate) or damping_rate<0
+            or not math.isfinite(turn_frequency) or turn_frequency<=0
+            or not math.isfinite(amplitude) or amplitude<=0
+            or not math.isfinite(enclosing_load) or enclosing_load<=0):
+        raise ValueError('nonnegative finite offset/damping and positive frequency, amplitude and load required')
+    g=damping_rate;w=turn_frequency;w0_sq=g*g+w*w
+    env=amplitude*math.exp(-g*offset)
+    q=env*math.sin(w*offset)
+    q_dot=env*(w*math.cos(w*offset)-g*math.sin(w*offset))
+    e_total=.5*amplitude**2*w**2
+    e_wave=.5*q_dot**2+.5*w0_sq*q**2
+    e_geom=max(0.,e_total-e_wave)
+    rho=g/w
+    exp_half=math.exp(-math.pi*rho)
+    first_plus=amplitude*w/w0_sq*(1+exp_half)
+    first_minus=first_plus*exp_half
+    eta=math.tanh(.5*math.pi*rho)
+    if g>0:
+        total_plus=first_plus/(1-exp_half**2)
+        total_minus=total_plus*exp_half
+        net_remainder=amplitude*w/w0_sq
+    else:
+        total_plus=None;total_minus=None;net_remainder=0.
+    child_scale=(e_geom/(3*enclosing_load))**.25 if e_geom>0 else 0.
+    goldilocks_scale=(e_total/(3*enclosing_load))**.25
+    return dict(offset=offset,displacement=q,velocity=q_dot,envelope=env,
+                wave_budget=e_wave,transferred_geometry_budget=e_geom,
+                total_budget=e_total,conservation_residual=(e_wave+e_geom)-e_total,
+                first_plus_lobe_area=first_plus,first_minus_lobe_area=first_minus,
+                cumulative_plus_area=total_plus,cumulative_minus_area=total_minus,
+                net_asymmetric_remainder=net_remainder,lobe_asymmetry_eta=eta,
+                child_holding_scale=child_scale,
+                goldilocks_equilibrium_scale=goldilocks_scale,
+                goldilocks_completion_fraction=child_scale/goldilocks_scale)
+
+
+def buckling_to_goldilocks_calculation():
+    """Connected 3-stage pipeline: compression -> helical buckling -> damped +/0/- wave -> Goldilocks zone."""
+    buckling_scan=[helical_buckling_under_compression(chi) for chi in (0.,.25,.5,1.,2.)]
+    post_buckling=helical_buckling_under_compression(1.)
+    omega=2*math.pi
+    gamma=.5*math.log(2)
+    wave_history=[damped_horizon_oscillation(t,gamma,omega) for t in (0.,.25,.75,1.,2.,4.)]
+    return dict(schema='nsc-buckling-damping-goldilocks-v1',
+                stage_1_helical_buckling=dict(
+                    rule='E(v_perp; lambda) = Q0/sqrt(lambda^2 + v_perp^2) + P_perp v_perp^2 / 2',
+                    critical_condition='lambda_crit = (Q0/P_perp)^(1/3); omega^* = sqrt(lambda_crit^2 - lambda^2)/r_perp for lambda < lambda_crit',
+                    scan=buckling_scan,
+                    derived_turning_at_chi_1=post_buckling['angular_rate_omega'],
+                    derived_alpha_at_chi_1=post_buckling['derived_alpha']),
+                stage_2_damped_horizon_asymmetry=dict(
+                    equation='q_tt + 2*gamma*q_t + (gamma^2+omega^2)*q = 0; E_geom_t = 2*gamma*q_t^2',
+                    invariant_asymmetry_formula='eta = (I_+ - I_-)/(I_+ + I_-) = (I_0^+ - |I_1^-|)/(I_0^+ + |I_1^-|) = tanh(pi*gamma/(2*omega))',
+                    net_remainder_formula='Delta_I = I_+ - I_- = A0 * omega / (gamma^2 + omega^2)',
+                    history=wave_history),
+                stage_3_goldilocks_equilibrium=dict(
+                    formula='lambda_child(tau) = (E_geom(tau)/(3 P V0))^(1/4) -> lambda_Goldilocks = (E_total/(3 P V0))^(1/4)',
+                    asymptotic_scale=wave_history[-1]['goldilocks_equilibrium_scale'],
+                    completion_at_offset_4=wave_history[-1]['goldilocks_completion_fraction']),
+                no_observational_input=True)
+
+
 def intrinsic_compression_calculation():
     """Small exact geometry controls; no selected source, pressure or SI units."""
     scales=(1.,.5,.25)

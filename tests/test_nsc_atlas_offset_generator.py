@@ -586,3 +586,53 @@ def test_spiral_decay_to_turn_comparison_does_not_impose_golden_ratio():
     intr=intrinsic_compression_calculation()
     assert 'supplied' in intr['coupling_c_status']
     assert 'supplied' in intr['increment_alpha_status']
+
+
+def test_helical_buckling_derives_nonzero_turning_above_critical_compression():
+    from recursive_horizons.nsc_atlas_offset_generator import helical_buckling_under_compression
+    v,lam,Q0,P=s.symbols('v lam Q0 P',positive=True)
+    E=Q0/s.sqrt(lam**2+v**2)+P*v**2/2
+    v_star=s.sqrt((Q0/P)**s.Rational(2,3)-lam**2)
+    assert s.simplify(s.diff(E,v).subs(v,v_star))==0
+    pre=helical_buckling_under_compression(-0.3,stretch_budget=1.,lateral_confinement=1.)
+    assert pre['buckled'] is False
+    assert pre['angular_rate_omega']==0.
+    assert pre['straight_transverse_hessian']>0
+    post=helical_buckling_under_compression(0.8,stretch_budget=1.,lateral_confinement=1.,radius=1.)
+    assert post['buckled'] is True
+    assert post['straight_transverse_hessian']<0
+    assert post['angular_rate_omega']==pytest.approx(math.sqrt(1-math.exp(-1.6)),rel=2e-15)
+    assert post['derived_alpha']==pytest.approx(post['angular_rate_omega']/(2*math.pi),rel=2e-15)
+    assert post['minimum_cost']<post['straight_cost']
+    assert post['cost_relief']>0
+
+
+def test_damped_horizon_oscillation_conserves_budget_and_matches_lobe_integrals():
+    from scipy.integrate import quad
+    from recursive_horizons.nsc_atlas_offset_generator import (
+        damped_horizon_oscillation,buckling_to_goldilocks_calculation)
+    t,g,w,A=s.symbols('t g w A',positive=True)
+    q=A*s.exp(-g*t)*s.sin(w*t)
+    qt=s.diff(q,t);qtt=s.diff(q,t,2)
+    w0_sq=g**2+w**2
+    assert s.simplify(qtt+2*g*qt+w0_sq*q)==0
+    ew=(qt**2+w0_sq*q**2)/2
+    assert s.simplify(s.diff(ew,t)+2*g*qt**2)==0
+    gamma=0.35;omega=2*math.pi;A0=1.3
+    for tau in (0.4,1.1,2.7,5.0):
+        row=damped_horizon_oscillation(tau,gamma,omega,amplitude=A0,enclosing_load=1.2)
+        assert row['conservation_residual']==pytest.approx(0.,abs=2e-15)
+        dissipated=quad(lambda u:2*gamma*damped_horizon_oscillation(u,gamma,omega,amplitude=A0)['velocity']**2,0,tau)[0]
+        assert dissipated==pytest.approx(row['transferred_geometry_budget'],rel=1e-10)
+    half_period=math.pi/omega
+    plus_0=quad(lambda u:A0*math.exp(-gamma*u)*math.sin(omega*u),0,half_period)[0]
+    minus_1=quad(lambda u:-A0*math.exp(-gamma*u)*math.sin(omega*u),half_period,2*half_period)[0]
+    ref=damped_horizon_oscillation(4.,gamma,omega,amplitude=A0)
+    assert plus_0==pytest.approx(ref['first_plus_lobe_area'],rel=1e-12)
+    assert minus_1==pytest.approx(ref['first_minus_lobe_area'],rel=1e-12)
+    assert (plus_0-minus_1)/(plus_0+minus_1)==pytest.approx(ref['lobe_asymmetry_eta'],rel=1e-12)
+    assert (ref['cumulative_plus_area']-ref['cumulative_minus_area'])==pytest.approx(
+        ref['net_asymmetric_remainder'],rel=2e-15)
+    assert damped_horizon_oscillation(0.,0.,omega)['lobe_asymmetry_eta']==0.
+    pipeline=buckling_to_goldilocks_calculation()
+    assert pipeline['stage_3_goldilocks_equilibrium']['completion_at_offset_4']>0.98
