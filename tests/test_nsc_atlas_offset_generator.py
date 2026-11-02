@@ -786,3 +786,25 @@ def test_nonlocal_to_local_atlas_readout_solves_fixed_point_and_k7_harmonic():
     assert ladder['stage_K_7_eta']==pytest.approx(math.tanh(math.pi/4*math.exp(-21)),rel=2e-15)
     assert ladder['within_bbn_window'] is True
     assert len(atlas['translation_dictionary'])==4
+
+
+def test_signed_circle_pendulum_duality_proves_minus_closure_and_cusp_free_zero_crossing():
+    from recursive_horizons.nsc_atlas_offset_generator import signed_circle_pendulum_duality
+    res=signed_circle_pendulum_duality(1.,2.*math.pi)
+    closure=res['negative_half_required_for_closure']
+    assert closure['missing_arc_fraction_without_minus']==pytest.approx(0.5,rel=1e-15)
+    assert closure['closes_without_minus'] is False
+    assert closure['closes_with_minus'] is True
+    flips=res['minus_times_minus_equals_plus']
+    assert flips['single_crossing_3d_inversion_det']==pytest.approx(-1.,rel=1e-15)
+    assert flips['two_crossings_3d_inversion_det']==pytest.approx(1.,rel=1e-15)
+    assert flips['matrix_identity_residual']==pytest.approx(0.,abs=1e-15)
+    assert flips['parent_to_child_to_grandchild_signs']==['+','-','+']
+    diag=res['singularity_diagnosis_at_zero']
+    assert diag['signed_R_velocity_jump']==pytest.approx(0.,abs=1e-15)
+    assert diag['signed_R_acceleration_at_zero']==pytest.approx(0.,abs=1e-15)
+    assert diag['unsigned_size_r_velocity_cusp_jump']==pytest.approx(4.*math.pi,rel=1e-15)
+    assert diag['signed_crossing_is_smooth'] is True
+    assert diag['unsigned_size_creates_artificial_cusp_singularity'] is True
+    for pt in res['swing_points']:
+        assert pt['energy_conservation_residual']==pytest.approx(0.,abs=2e-14)

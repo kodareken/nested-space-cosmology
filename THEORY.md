@@ -41,6 +41,32 @@ offset decay as dark energy, dark matter, and matter-antimatter asymmetry.
   vortices (`O`) shed into nested mini-vortices and diffuse toward $\lambda_{\max}$
   (`o`) before re-accumulating into new giant vortices (`O`).
 
+## Why `-` exists, why `(-) × (-) = (+)`, and why the radius of space must cross `0`
+
+1. **Negative is direction, and without `-` a circle cannot close:**
+   A number line through `0` has two opposite rays (`+` and `-`). In Layer 1 of
+   the offset generator, the pen draws a closed circle $z(\tau)=R_0e^{i\omega\tau}$.
+   Seen edge-on along a diameter, that circle is the harmonic pendulum
+   $$R(\tau)=\operatorname{Re}\!\left(R_0e^{i\omega\tau}\right)=R_0\cos(\omega\tau),$$
+   swinging $+R_0\to0\to-R_0\to0\to+R_0$ with constant energy
+   $\tfrac12\dot R^2+\tfrac12\omega^2R^2=\tfrac12R_0^2\omega^2$. If negative
+   coordinates were forbidden ($R\ge0$), $50\%$ of the circle ($\pi R_0$ out of
+   $2\pi R_0$) would be missing and no loop or bounded space could close.
+2. **`(-) × (-) = (+)` is pure geometry:**
+   Multiplying by $-1=e^{i\pi}$ is a geometric half-turn ($\pi$ rotation; in 3D,
+   spatial inversion $\mathcal{P}=-I_3$ with $\det\mathcal{P}=(-1)^3=-1$). Flipping
+   twice across two nested `0` crossings ($\text{Parent }(+)\to\text{Child }(-)\to\text{Grandchild }(+)$)
+   gives $\mathcal{P}^2=(-I_3)(-I_3)=+I_3$ and $\det(\mathcal{P}^2)=(-1)\cdot(-1)=+1$.
+3. **Why standard physics hits an artificial singularity at $r=0$ while signed $R$ crosses smoothly:**
+   Standard physics uses negatives everywhere except for the **radius of space
+   itself**, which it restricts to an unsigned size $r(\tau)=|R(\tau)|\ge0$. Folding
+   the negative half of the swing onto the positive half at $\tau_0=\frac{\pi}{2\omega}$
+   ($R=0$) forces a discontinuous velocity jump $\Delta\dot r=+2R_0\omega$ and a
+   Dirac-delta acceleration cusp $\ddot r=2R_0\omega\,\delta(\tau-\tau_0)-\omega^2r$.
+   Keeping the signed radius $R(\tau)$ removes the cusp completely ($\Delta\dot R=0$,
+   $\ddot R(\tau_0)=0$): **A2 (crossing `0` into `-`) is simply the edge-on shadow
+   of A1's closed circle.**
+
 ## Non-local multiverse state vs. local observer inference
 
 | Non-local geometric mechanism | Derived mathematical formula | Local observer interpretation | Calculated value |

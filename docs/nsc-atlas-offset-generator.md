@@ -372,6 +372,22 @@ Goldilocks stabilization through least resistance and budget conservation:
     from `unified_least_resistance_cycle`), the $K=7$ harmonic ($3K=21$ e-folds)
     gives $\eta_7=\tanh\!\left(\frac{\pi}{4}e^{-21}\right)\approx5.955329\times10^{-10}$,
     inside the observed BBN window $[5.8\times10^{-10},6.5\times10^{-10}]$.
+  - **Circle-pendulum duality, why `-` exists, why `(-) × (-) = (+)`, and why the radius of space must cross `0` (`signed_circle_pendulum_duality`).**
+    Seen edge-on, the Layer-1 closed circle $z(\tau)=R_0e^{i\omega\tau}$ is the
+    harmonic pendulum $R(\tau)=\operatorname{Re}z(\tau)=R_0\cos(\omega\tau)$,
+    which swings $+R_0\to0\to-R_0\to0\to+R_0$ with invariant energy
+    $\tfrac12\dot R^2+\tfrac12\omega^2R^2=\tfrac12R_0^2\omega^2$. Without
+    negative coordinates ($R<0$), $50\%$ of the circle ($\pi R_0$ out of
+    $2\pi R_0$) is missing and the loop cannot close. Multiplying by $-1=e^{i\pi}$
+    is a half-turn (in 3D, spatial inversion $\mathcal{P}=-I_3$ with
+    $\det\mathcal{P}=(-1)^3=-1$), so two nested crossings satisfy
+    $\mathcal{P}^2=(-I_3)(-I_3)=+I_3$ and $\det(\mathcal{P}^2)=(-1)(-1)=+1$.
+    When standard physics restricts the radius of space to an unsigned size
+    $r(\tau)=|R(\tau)|\ge0$, folding $R<0$ onto $r>0$ at $\tau_0=\frac{\pi}{2\omega}$
+    creates an artificial velocity cusp $\Delta\dot r=+2R_0\omega$ and a
+    Dirac-delta acceleration singularity $\int_{\tau_0^-}^{\tau_0^+}\ddot r\,d\tau=2R_0\omega$,
+    whereas the signed coordinate $R(\tau)$ crosses `0` into `-` with zero
+    velocity jump ($\Delta\dot R=0$) and zero acceleration ($\ddot R(\tau_0)=0$).
 
 0. **Two-force zero-crossing across `0` (`two_force_zero_crossing`).**
    When inward compression $F_{\rm in}$ wins against outward resistance

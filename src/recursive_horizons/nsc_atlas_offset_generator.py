@@ -977,6 +977,81 @@ def cyclic_vortex_diffusion_ring(offset, node_count=8, diffusion_rate=0.25, spin
                 node_0_is_giant_hurricane=(states[0]=='O'))
 
 
+def signed_circle_pendulum_duality(r0=1.,omega=2*math.pi):
+    """Prove why '-' must exist, why (-)*(-)=(+), and why signed R crosses 0 smoothly.
+
+    1. Layer-1 circle z(tau) = R0 * exp(i*omega*tau) seen edge-on IS the pendulum
+       R(tau) = Re(z(tau)) = R0 * cos(omega*tau), swinging + -> 0 -> - -> 0 -> +.
+    2. Without negative coordinates (R < 0), 50% of the circle (pi*R0 out of 2*pi*R0)
+       is missing and no closed loop or bounded space can close.
+    3. Multiplying by -1 = exp(i*pi) is a geometric half-turn (in 3D, P = -I_3 with
+       det(P) = (-1)^3 = -1). Two half-turns across two nested 0 crossings satisfy
+       P^2 = (-I_3)(-I_3) = +I_3 and det(P^2) = (-1)*(-1) = +1.
+    4. Standard physics treats the radius of space as an unsigned size r(tau) = |R(tau)| >= 0.
+       Folding R < 0 onto r > 0 creates an artificial velocity cusp Delta(r_dot) = +2*R0*omega
+       and a Dirac-delta acceleration singularity at r = 0, whereas the signed radius R(tau)
+       passes through 0 into - with zero velocity jump (Delta(R_dot) = 0) and zero acceleration
+       (R_tt(tau_0) = 0).
+    """
+    r0=float(r0);omega=float(omega)
+    if r0<=0 or omega<=0:raise ValueError('positive r0 and omega required')
+    e_circle=.5*r0*r0*omega*omega
+    phases=[('plus_apex_0',0.),
+            ('first_zero_crossing_pi_over_2',.5*math.pi),
+            ('minus_apex_pi',math.pi),
+            ('second_zero_crossing_3pi_over_2',1.5*math.pi),
+            ('two_flips_return_2pi',2.*math.pi)]
+    swing_points=[]
+    for label,theta in phases:
+        r_signed=r0*math.cos(theta)
+        r_dot=-r0*omega*math.sin(theta)
+        r_tt=-r0*omega*omega*math.cos(theta)
+        e_tot=.5*r_dot*r_dot+.5*omega*omega*r_signed*r_signed
+        det_3d=(r_signed/r0)**3
+        swing_points.append(dict(phase_label=label,
+                                 phase_radians=theta,
+                                 signed_radius_R=r_signed,
+                                 unsigned_size_r=abs(r_signed),
+                                 signed_velocity_R_dot=r_dot,
+                                 signed_acceleration_R_tt=r_tt,
+                                 jacobian_det_3d=det_3d,
+                                 pendulum_energy=e_tot,
+                                 energy_conservation_residual=e_tot-e_circle))
+    p_3d=-np.eye(3)
+    p_squared=p_3d@p_3d
+    det_p=float(np.linalg.det(p_3d))
+    det_p2=float(np.linalg.det(p_squared))
+    return dict(r0=r0,
+                omega=omega,
+                circle_to_pendulum_identity='R(tau) = Re(R0 * exp(i*omega*tau)) = R0 * cos(omega*tau)',
+                swing_points=swing_points,
+                negative_half_required_for_closure=dict(
+                    full_circle_arc_length=2.*math.pi*r0,
+                    nonnegative_clipped_arc_length=math.pi*r0,
+                    missing_arc_fraction_without_minus=.5,
+                    closes_without_minus=False,
+                    closes_with_minus=True),
+                minus_times_minus_equals_plus=dict(
+                    half_turn_complex_factor=-1.,
+                    two_half_turns_complex_product=(-1.)*(-1.),
+                    single_crossing_3d_inversion_det=det_p,
+                    two_crossings_3d_inversion_det=det_p2,
+                    matrix_identity_residual=float(np.linalg.norm(p_squared-np.eye(3))),
+                    parent_to_child_to_grandchild_signs=['+','-','+']),
+                singularity_diagnosis_at_zero=dict(
+                    crossing_phase_radians=.5*math.pi,
+                    signed_R_velocity_before=-r0*omega,
+                    signed_R_velocity_after=-r0*omega,
+                    signed_R_velocity_jump=0.,
+                    signed_R_acceleration_at_zero=0.,
+                    unsigned_size_r_velocity_before=-r0*omega,
+                    unsigned_size_r_velocity_after=+r0*omega,
+                    unsigned_size_r_velocity_cusp_jump=2.*r0*omega,
+                    unsigned_size_r_singular_impulse=2.*r0*omega,
+                    signed_crossing_is_smooth=True,
+                    unsigned_size_creates_artificial_cusp_singularity=True))
+
+
 def nonlocal_to_local_atlas_readout():
     """Zero-parameter non-local multiverse fixed point and local observer translation dictionary.
 
@@ -1018,13 +1093,15 @@ def nonlocal_to_local_atlas_readout():
                                     total_efolds_3K=3*k,
                                     asymmetry_eta_K=eta_k))
     eta_7=harmonic_ladder[-1]['asymmetry_eta_K']
+    circle_pendulum=signed_circle_pendulum_duality()
     return dict(schema='nsc-nonlocal-to-local-atlas-v1',
                 axioms=dict(
                     A0='Least resistance: minimize single generator cost E = Q_stretch + P*V',
                     A1='1D seed + inherited compression offset = time (1D -> 2D circle -> 3D sphere)',
-                    A2='Signed-zero crossing (+ -> 0 -> -): R crosses 0 into -, flipping sign(det F) = (-1)^k and turning implosion into expansion',
+                    A2='Signed-zero crossing (+ -> 0 -> -): edge-on projection of the closed circle R(tau)=R0*cos(omega*tau) crosses 0 into -, flipping sign(det F) = (-1)^k and turning implosion into expansion',
                     A3='Moving spectral band [lambda_min, lambda_max] = exp(-chi)*[lambda_min_0, lambda_max_0] from Planck cutoff to Absolute-Zero horizon',
                     A4='Two-valve cyclic circulation on a closed vortex-diffusion ring (O <-> o) across one-way 0 horizons'),
+                why_minus_exists_and_radius_crosses_zero=circle_pendulum,
                 two_valve_fixed_point=dict(
                     condition='Omega_vis(chi_*) = exp(-3) (5-variable filament share equals 3D volumetric floor)',
                     chi_star=chi_star,

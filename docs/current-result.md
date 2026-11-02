@@ -94,6 +94,15 @@ incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
   e-fold ladder eta_K = tanh((pi/4)*exp(-3*K)) anchored at the derived
   spaghettification onset exp(-2*chi_spaghetti)=1/2, K=7 (21 e-folds) yields
   eta_7 ≈ 5.955329e-10 inside the observed BBN window [5.8e-10, 6.5e-10].
+- **Circle-pendulum duality and why the radius of space must cross `0` (`signed_circle_pendulum_duality`):**
+  Seen edge-on, the Layer-1 closed circle z(tau)=R0*exp(i*omega*tau) is the
+  pendulum R(tau)=R0*cos(omega*tau), swinging +R0 -> 0 -> -R0 -> 0 -> +R0.
+  Forbidding R < 0 clips 50% of the circle (pi*R0 of 2*pi*R0) so no loop can
+  close; multiplying by -1 = exp(i*pi) is a half-turn (in 3D, P = -I_3 with
+  det(P) = -1), so two crossings give P^2 = +I_3 and (-1)*(-1) = +1. Treating
+  radius as unsigned size r = |R| >= 0 folds R < 0 onto r > 0 and creates an
+  artificial velocity cusp Delta(r_dot) = +2*R0*omega at r=0, whereas signed
+  R(tau) crosses 0 into - smoothly with Delta(R_dot) = 0 and R_tt(tau_0) = 0.
 0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
    resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
    smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against
