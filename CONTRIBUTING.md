@@ -26,10 +26,10 @@ unresolved concern. Apply the same scope to delegated work.
 
 ## Current frontier
 
-The current frontier is the geometric offset construction and the contact
-law for opposite windings. The contraction and conditional two-output
-result are derived in the [construction owner](docs/nsc-atlas-offset-generator.md).
-The contact dynamics and output selection are open. Old campaigns and
+The current frontier is enclosing deformation -> inherited offset -> child
+geometry and motion. The relative-compression composition identity and the
+retained winding controls are in the [construction owner](docs/nsc-atlas-offset-generator.md).
+Actual parent-child deformation and its connection to the drawing are open. Old campaigns and
 their specific constraints remain in the [retained library](docs/research-index.md).
 They are not a work queue after compaction.
 

@@ -1,15 +1,23 @@
 # Nested-Space Cosmology — geometric foundation
 
-Douglas's proposed generator starts with one spatial seed and a repeated
-offset. Offset is the primitive operation called time in this proposal.
-Retained drawing builds circular and spherical geometry, then continues
-inward through nested structure. The research task is to make that sequence
-calculable and determine its observable consequences.
+Douglas's proposed child starts through collapse INSIDE an already evolving
+parent region. Its one-dimensional generating seed and offset are not an
+isolated beginning. Enclosing compression and deformation drive the proposed
+offset called time; the parent inherits its own driving from its enclosing
+region. Retained drawing builds circular and spherical geometry, then
+continues inward through nesting. The one-dimensional seed is a proposed
+generator, not an assertion that a star has already become a literal line.
 
 ## Premises to formulate
 
-- Repeated offset: `theta[n+1] = theta[n] + alpha`,
-  `phi[n+1] = phi[n] + theta[n]`, modulo one.
+- Parent deformation -> inherited offset -> child geometry and motion.
+  The [relative-compression construction](docs/nsc-atlas-offset-generator.md#active-start-parent-compression-not-an-isolated-offset)
+  derives a dimensionless additive compression measure from deformation
+  histories. Its identification with the generating offset is the proposed
+  connection; no angular or physical-time conversion is assumed.
+- `theta[n+1] = theta[n] + alpha`, `phi[n+1] = phi[n] + theta[n]`
+  remains the retained constant-increment drawing example. An isolated
+  alpha and an arbitrary update count do not determine the parent's drive.
 - Boundary minimization at fixed enclosed content as a candidate selection
   principle. The functional, admissible shapes and constraints are explicit.
 - Compression, turning and inward continuation as the proposed mechanism
@@ -21,7 +29,9 @@ calculable and determine its observable consequences.
 
 The [existing metric-completion proof](docs/nsc-atlas-offset-generator.md)
 constructs a three-dimensional ball under its stated kernel and history
-rules. Selecting that kernel, dimension and offset is still open.
+rules. Connecting its kernel and drawing operation to parent-driven
+deformation is still open. Do not replace that question with selecting a
+preferred transfer percentage for an isolated loop.
 
 Opposite windings provide a precise candidate for the proposed two
 orientations of one object. Their integer degrees, geometric variation,

@@ -260,3 +260,154 @@ def test_receiving_amounts_match_boundary_flux_and_the_remaining_initial_region(
 def test_transport_rejects_ambiguous_domain(offset,closed):
     from recursive_horizons.nsc_atlas_offset_generator import winding_transport
     with pytest.raises(ValueError):winding_transport(0.,offset,closed=closed)
+
+
+def test_lifted_offset_flow_matches_every_discrete_update_and_composes():
+    from recursive_horizons.nsc_atlas_offset_generator import lifted_offset_flow
+    alpha=math.sqrt(2)/3
+    p,q=np.array([0.,.2,-.3]),np.array([.1,-.4,.7])
+    oldp,oldq=p.copy(),q.copy()
+    for n in range(21):
+        gotp,gotq=lifted_offset_flow(oldp,oldq,alpha,n)
+        np.testing.assert_allclose(gotp,p,atol=3e-14)
+        np.testing.assert_allclose(gotq,q,atol=3e-13)
+        p,q=p+alpha,q+p
+    once=lifted_offset_flow(oldp,oldq,alpha,.17+.63)
+    twice=lifted_offset_flow(*lifted_offset_flow(oldp,oldq,alpha,.17),alpha,.63)
+    np.testing.assert_allclose(once,twice,atol=3e-16)
+
+
+def test_exact_offset_generator_and_phase_area_preservation_symbolically():
+    p,q,a,t=s.symbols('p q a t',real=True)
+    P=p+a*t;Q=q+t*p+a*t*(t-1)/2
+    assert s.diff(P,t)==a
+    assert s.simplify(s.diff(Q,t)-(P-a/2))==0
+    assert s.Matrix([P,Q]).jacobian([p,q]).det()==1
+    generator=(P-a/2)**2/2-a*Q
+    assert s.simplify(s.diff(generator,t))==0
+
+
+def test_different_retained_lifts_agree_at_steps_but_not_between_them():
+    from recursive_horizons.nsc_atlas_offset_generator import lifted_offset_flow
+    # theta and theta+1 are the same torus label; fractional interpolation
+    # distinguishes their retained histories. At integer offsets it does not.
+    for t in (1.,2.,3.):
+        _,q=lifted_offset_flow(.2,.3,.17,t)
+        _,q2=lifted_offset_flow(1.2,.3,.17,t)
+        assert q2-q==pytest.approx(t)
+    _,q=lifted_offset_flow(.2,.3,.17,.5)
+    _,q2=lifted_offset_flow(1.2,.3,.17,.5)
+    assert q2-q==pytest.approx(.5)
+
+
+def test_uncoupled_update_changes_common_phase_not_the_winding_shape():
+    from recursive_horizons.nsc_atlas_offset_generator import offset_driven_winding,opposite_winding_path
+    x=np.linspace(0,2,500)
+    for n in (0.,1.,7.,100.):
+        row=offset_driven_winding(x,n,.17,0.)
+        background=.17*n*(n-1)/2
+        np.testing.assert_allclose(row['circle']*np.exp(-2j*np.pi*background),
+                                   opposite_winding_path(x,0.),atol=2e-12)
+        np.testing.assert_allclose(row['theta_lift'],.17*n)
+        np.testing.assert_allclose(row['relative_offset_derivative'],0)
+
+
+def test_coupled_extension_obeys_the_first_offset_equation():
+    from recursive_horizons.nsc_atlas_offset_generator import offset_driven_winding
+    x=np.array([.13,.73,1.33]);t=.19;dt=1e-6;alpha=.17
+    for speed in (0.,.5,1.,2.):
+        row=offset_driven_winding(x,t,alpha,speed)
+        numerical=(offset_driven_winding(x,t+dt,alpha,speed)['phi_lift']-
+                   offset_driven_winding(x,t-dt,alpha,speed)['phi_lift'])/(2*dt)
+        np.testing.assert_allclose(numerical,row['theta_lift']-alpha/2,atol=1e-9)
+
+
+def test_wave_solution_plus_background_gives_the_coupled_offset_equations():
+    x,t,a,c=s.symbols('x t a c',real=True)
+    relative=s.cos(x-c*t)/2+s.cos(x+c*t)/2
+    phi=relative+a*t*(t-1)/2
+    theta=s.diff(phi,t)+a/2
+    assert s.simplify(s.diff(theta,t)-a-c**2*s.diff(phi,x,2))==0
+
+
+def test_original_uniform_history_does_not_select_a_transfer_fraction():
+    from recursive_horizons.nsc_atlas_offset_generator import offset_connection_calculation
+    record=offset_connection_calculation();rows=record['same_history_different_transfer']
+    assert [r['fraction_received_outside_initial_interval'] for r in rows]==pytest.approx([0.,.25,.5,1.])
+    assert len({(r['uniform_theta'],r['uniform_phi']) for r in rows})==1
+    assert record['original_pointwise_stationary_winding']['transported_fraction']==0
+
+
+def test_parent_child_compression_composes_across_three_nested_regions():
+    from recursive_horizons.nsc_atlas_offset_generator import inherited_compression_offset
+    u=np.array([0.,.13,.5,1.])
+    maps=[np.exp(-k*u)[:,None,None]*np.eye(3) for k in (1.,2.,4.)]
+    a=inherited_compression_offset(maps[0],maps[1])['compression']
+    b=inherited_compression_offset(maps[1],maps[2])['compression']
+    c=inherited_compression_offset(maps[0],maps[2])['compression']
+    np.testing.assert_allclose(a,u,atol=4e-16)
+    np.testing.assert_allclose(b,2*u,atol=4e-16)
+    np.testing.assert_allclose(c,a+b,atol=5e-16)
+
+
+def test_common_frame_change_cancels_from_relative_compression():
+    from recursive_horizons.nsc_atlas_offset_generator import inherited_compression_offset
+    parent=np.array([np.eye(3),np.diag([.7,.9,.8])])
+    child=np.array([np.eye(3),np.diag([.4,.6,.9])])
+    frame=np.array([np.diag([2.,.3,1.7]),np.array([[1.,.4,0.],[0.,2.,.3],[0.,0.,.5]])])
+    before=inherited_compression_offset(parent,child)['compression']
+    after=inherited_compression_offset(frame@parent,frame@child)['compression']
+    np.testing.assert_allclose(before,after,atol=2e-16)
+
+
+def test_isotropic_compression_is_log_length_not_an_independent_phase_knob():
+    from recursive_horizons.nsc_atlas_offset_generator import inherited_compression_offset
+    parent=np.array([np.eye(3),np.eye(3)])
+    child=np.array([np.eye(3),np.eye(3)/2])
+    row=inherited_compression_offset(parent,child)
+    assert row['compression'][-1]==pytest.approx(math.log(2))
+    np.testing.assert_allclose(row['increments'],[math.log(2)])
+    reverse=inherited_compression_offset(child,parent)
+    np.testing.assert_allclose(reverse['compression'],-row['compression'])
+
+
+def test_common_compression_adds_no_relative_offset_but_ancestor_offset_survives():
+    from recursive_horizons.nsc_atlas_offset_generator import inherited_compression_offset
+    root=np.array([np.eye(3),np.eye(3)])
+    parent=np.array([np.eye(3),np.eye(3)/2])
+    same_child=parent.copy()
+    local=inherited_compression_offset(parent,same_child)['compression']
+    inherited=inherited_compression_offset(root,parent)['compression']
+    total=inherited_compression_offset(root,same_child)['compression']
+    np.testing.assert_allclose(local,0)
+    np.testing.assert_allclose(total,inherited)
+    assert total[-1]>0
+
+
+def test_log_jacobians_handle_strong_compression_without_determinant_underflow():
+    from recursive_horizons.nsc_atlas_offset_generator import inherited_compression_offset
+    parent=np.array([np.eye(3),np.eye(3)])
+    child=np.array([np.eye(3),np.eye(3)*math.exp(-400)])
+    assert inherited_compression_offset(parent,child)['compression'][-1]==pytest.approx(400)
+
+
+def test_pure_rotation_does_not_masquerade_as_volume_compression():
+    from recursive_horizons.nsc_atlas_offset_generator import inherited_compression_offset
+    a=.7
+    rotation=np.array([[math.cos(a),-math.sin(a),0],[math.sin(a),math.cos(a),0],[0,0,1]])
+    parent=np.array([np.eye(3),np.eye(3)])
+    child=np.array([np.eye(3),rotation])
+    np.testing.assert_allclose(inherited_compression_offset(parent,child)['compression'],0,atol=1e-16)
+
+
+def test_relative_volume_rate_has_the_logarithmic_derivative():
+    u,a,b=s.symbols('u a b',real=True)
+    p=s.exp(-3*a*u);c=s.exp(-3*b*u)
+    rate=(s.diff(p,u)/p-s.diff(c,u)/c)/3
+    assert s.simplify(rate-(b-a))==0
+
+
+@pytest.mark.parametrize('child',[np.zeros((2,3,3)),np.array([np.eye(3),np.diag([-1.,1.,1.])]),np.ones((2,3,2))])
+def test_inherited_offset_requires_admissible_corresponding_patches(child):
+    from recursive_horizons.nsc_atlas_offset_generator import inherited_compression_offset
+    with pytest.raises(ValueError):inherited_compression_offset(np.array([np.eye(3),np.eye(3)]),child)

@@ -141,6 +141,130 @@ def winding_transport_calculation():
         no_observational_input=True)
 
 
+def lifted_offset_flow(theta, phi, alpha, offset):
+    """An exact affine interpolation of the discrete map on retained lifts.
+
+    No modulo operation is applied: intermediate offsets require the actual
+    retained history, since different torus lifts need not agree between steps.
+    This interpolation is not uniquely selected by the integer-time map.
+    """
+    if not math.isfinite(alpha) or not math.isfinite(offset):
+        raise ValueError('finite offset and increment required')
+    theta, phi = np.broadcast_arrays(np.asarray(theta,dtype=float),np.asarray(phi,dtype=float))
+    if not np.all(np.isfinite(theta)) or not np.all(np.isfinite(phi)):
+        raise ValueError('finite retained phase lifts required')
+    return (theta+alpha*offset,
+            phi+offset*theta+alpha*offset*(offset-1)/2)
+
+
+def offset_driven_winding(position, offset, alpha, coupling_speed, turns=1, radius=1., closed=False):
+    """A local coupled extension with the original map as its uniform sector.
+
+    In phase turns: phi_t=theta-alpha/2, theta_t=alpha+c^2*phi_xx.
+    c is a declared coupling, not derived from alpha. The geometric circle
+    phase is 2*pi*phi; the existing transport solution evolves its relative
+    shape. The full background-forced kinetic budget is not called conserved.
+    """
+    if not math.isfinite(coupling_speed) or coupling_speed < 0:
+        raise ValueError('finite nonnegative coupling speed required')
+    _, background = lifted_offset_flow(0.,0.,alpha,offset)
+    relative = winding_transport(position,coupling_speed*offset,turns,radius,closed)
+    phi = relative['phase']/(2*np.pi)+background
+    theta = alpha*offset+coupling_speed*relative['offset_derivative']/(2*np.pi)
+    return dict(theta_lift=theta,phi_lift=phi,
+                circle=radius*np.exp(2j*np.pi*phi),
+                relative_phase=relative['phase'],
+                relative_offset_derivative=coupling_speed*relative['offset_derivative'],
+                drawing_derivative=relative['drawing_derivative'])
+
+
+def offset_connection_calculation():
+    """Compare couplings sharing exactly the same uniform offset history."""
+    alpha = float(offset_value('golden'))
+    rows = []
+    for speed in (0., .5, 1., 2.):
+        ledger = winding_transport_ledger(speed)
+        rows.append(dict(coupling_speed=speed,update_count=1,
+                         fraction_received_outside_initial_interval=
+                         (ledger['received_left_of_initial_interval']+
+                          ledger['received_right_of_initial_interval'])/ledger['initial_budget'],
+                         retained_fraction=ledger['retained_in_initial_interval']/ledger['initial_budget'],
+                         shape_variation=ledger['variation'],
+                         uniform_theta=alpha,uniform_phi=0.))
+    return dict(schema='nsc-offset-contact-connection-v1',
+        status='retained isolated-offset diagnostic; active source is enclosing deformation',
+        offset_increment=alpha,
+        increment_status='retained golden comparison; not newly selected; identities hold for every real alpha',
+        exact_integer_history='theta_n=theta_0+n alpha; phi_n=phi_0+n theta_0+alpha n(n-1)/2',
+        lifted_flow='theta_t=alpha; phi_t=theta-alpha/2',
+        original_pointwise_stationary_winding=dict(
+            initial_variation=winding_variation(0.),variation_after_100_updates=winding_variation(0.),
+            transported_fraction=0.),
+        coupled_extension='theta_t=alpha+c^2 phi_xx; phi_t=theta-alpha/2',
+        relative_equation='(phi-background)_tt=c^2 (phi-background)_xx',
+        same_history_different_transfer=rows,
+        periodic_received_outside_domain_fraction=0.,
+        coupling_selected_by_recurrence=False,
+        receiving_domain_selected_by_recurrence=False,
+        missing_connection='geometric rule fixing neighbouring-point coupling and the receiving domain',
+        no_observational_input=True)
+
+
+def inherited_compression_offset(parent_deformation, child_deformation):
+    """Relative logarithmic length compression of corresponding material patches.
+
+    Input histories share reference labels and a comparison frame. Positive
+    deformation determinants give their local volume factors. The returned
+    measure is derived from those factors; its identification with the
+    proposed time/offset is a premise, not an angular calibration or dynamics.
+    No isolated alpha, sampling duration or physical stress is supplied here.
+    """
+    parent = np.asarray(parent_deformation,dtype=float)
+    child = np.asarray(child_deformation,dtype=float)
+    if (parent.shape != child.shape or parent.ndim != 3 or parent.shape[0] < 1
+            or parent.shape[1] != parent.shape[2] or parent.shape[1] < 1):
+        raise ValueError('matching nonempty histories of square deformation maps required')
+    if not np.all(np.isfinite(parent)) or not np.all(np.isfinite(child)):
+        raise ValueError('finite deformation histories required')
+    ps,plog = np.linalg.slogdet(parent)
+    cs,clog = np.linalg.slogdet(child)
+    if np.any(ps <= 0) or np.any(cs <= 0):
+        raise ValueError('orientation-preserving nonsingular deformation maps required')
+    dimension = parent.shape[1]
+    contrast = (plog-plog[0]-clog+clog[0])/dimension
+    return dict(compression=contrast,increments=np.diff(contrast),
+                parent_log_volume_change=plog-plog[0],
+                child_log_volume_change=clog-clog[0],dimension=dimension)
+
+
+def inherited_offset_calculation():
+    """Analytic deformation controls, not a supplied formation history."""
+    samples = np.array([0.,.25,.5,1.])
+    maps = [np.exp(-rate*samples)[:,None,None]*np.eye(3) for rate in (1.,2.,4.)]
+    first = inherited_compression_offset(maps[0],maps[1])
+    second = inherited_compression_offset(maps[1],maps[2])
+    direct = inherited_compression_offset(maps[0],maps[2])
+    common = inherited_compression_offset(maps[1],maps[1])
+    return dict(schema='nsc-parent-compression-offset-v1',
+        formula='chi_pc = (log(Jp/Jp0)-log(Jc/Jc0))/dimension',
+        interpretation='candidate inherited compression coordinate; angular/time identification remains a premise',
+        composition='chi_grandparent_child = chi_grandparent_parent + chi_parent_child',
+        increment='delta_chi is computed from deformation history, not independently selected',
+        normalization='logarithmic length compression; no SI time or angle conversion',
+        analytic_controls=dict(sample_parameter=samples.tolist(),
+            deformation_rates=[1.,2.,4.],
+            grandparent_parent=first['compression'].tolist(),
+            parent_child=second['compression'].tolist(),
+            grandparent_child=direct['compression'].tolist(),
+            composition_residual=(direct['compression']-first['compression']-second['compression']).tolist(),
+            grandparent_child_increments=direct['increments'].tolist(),
+            common_deformation_relative_offset=common['compression'].tolist()),
+        actual_parent_formation_history_computed=False,
+        angular_phase_conversion_derived=False,
+        pressure_to_deformation_dynamics_derived=False,
+        no_observational_input=True)
+
+
 def winding_calculation():
     """Geometry-only reference calculation: no parent action or observed scale."""
     cases = []

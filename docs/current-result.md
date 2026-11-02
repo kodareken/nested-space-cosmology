@@ -1,9 +1,27 @@
 # Current result — foundation reset, 2 November 2026
 
-The active calculation is the [offset and winding construction](nsc-atlas-offset-generator.md).
-It starts from declared geometry. Previously supplied fields, actions,
-potentials and cosmological parameters are conditional models to revisit,
-not premises of this construction.
+## Active: enclosing deformation drives the proposed child offset
+
+The [source relation](nsc-atlas-offset-generator.md#active-start-parent-compression-not-an-isolated-offset)
+now starts inside an evolving parent, itself enclosed. For corresponding
+local deformation histories it computes
+chi_pc=(log(Jp/Jp0)-log(Jc/Jc0))/d. This is dimensionless relative
+log-length compression; its identification with the generating offset is
+the proposed physical connection, not an already derived clock or phase.
+
+Proved: chi_gc=chi_gp+chi_pc, common frame changes cancel, and common
+compression adds no relative offset while preserving ancestor inheritance.
+The increment is obtained from the deformation history rather than an
+independently supplied alpha. Analytic three-level controls give u,2u,3u
+with zero sampled composition residual; they are not formation histories.
+
+Next is actual parent-child deformation and its connection to the drawing,
+including turning/shear. Compression kinematics alone supplies neither a
+pressure law nor a formed child. The isolated-offset percentage-selection
+direction is retired. Previously supplied fields, actions, potentials and
+cosmological parameters remain conditional constructions to revisit.
+
+## Retained geometry and transport controls
 
 The retained offset history has an explicit three-dimensional metric
 completion, conditional on its distance kernel, retained history and
@@ -26,8 +44,8 @@ the full budget remains in motion; the initial state returns at offset 2.
 This distinguishes transfer into an open domain from transient flattening.
 
 The inertial rule, zero initial velocity and open receiving geometry are
-declared candidate assumptions, not selected by the recurrence. Deriving
-their connection to the generator is next. No physical energy scale,
+declared candidate assumptions, not selected by the recurrence. Their next
+connection must come from the enclosing deformation. No physical energy scale,
 electron, horizon or receiving child is identified. Both geometry-only
 CLI routes run without the conditional parent and write no result files.
 

@@ -5,8 +5,10 @@
 3. [Current result](current-result.md).
 4. [Active implementation](active-code-map.md).
 
-The present job is to derive the construction's dynamics and measured
-consequences. A label is assigned after the correspondence is calculated.
+The present job is parent deformation -> inherited offset -> child geometry
+and motion. The child starts within an already evolving enclosing region;
+it is not an isolated offset-selection problem. A label is assigned after
+the correspondence is calculated.
 The horizon convention remains exterior (+), smooth horizon (0), interior
 (-) of the same black hole, with offset on both sides.
 

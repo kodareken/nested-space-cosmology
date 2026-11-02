@@ -7,9 +7,16 @@ importing an existing physical interpretation. The active desk is
 
 ## The picture to construct
 
-One spatial seed plus repeated offset generates circular and spherical
-geometry, then inward continuation and nesting. Offset is the proposed
-primitive called time. Exterior (+), smooth event horizon (0), interior
+The start is collapse within an already evolving parent, itself nested
+within an enclosing region. Parent compression/deformation drives the
+proposed child's offset called time. One spatial seed plus that inherited
+offset generates circular and spherical geometry, then inward continuation
+and nesting. Do not restart from an independently supplied alpha and ask
+an isolated drawing to select its own history or preferred output split.
+The one-dimensional seed is a generating proposal, not an established
+literal dimensional reduction of a star.
+
+Exterior (+), smooth event horizon (0), interior
 (-) belong to the SAME black hole. Offset continues on BOTH sides.
 There is no material membrane in that convention. Do not replace those
 regional signs with negative energy or a conventional antiparticle count.
@@ -36,6 +43,12 @@ At a break, ask what else it can mean. Examine another chart, log variables,
 conformal or interior descriptions; calculate any continuation and its
 conditions. Distinguish a coordinate failure from an invariant obstruction.
 A new receiving region remains a construction to demonstrate.
+
+The active link is enclosing deformation -> inherited offset -> child
+geometry and motion. The compression relation is kinematics from deformation
+histories, not yet a pressure law, angular calibration or formed child.
+Keep those distinctions beside the result without replacing the task with
+another isolated-parameter selection campaign.
 
 ## Work and search
 

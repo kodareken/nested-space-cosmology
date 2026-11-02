@@ -1,5 +1,12 @@
 # Active code map
 
+The active source relation is parent deformation -> inherited compression
+offset -> child drawing. `inherited_compression_offset` reads corresponding
+local deformation histories and computes additive log-length contrast.
+Use `--inheritance-only` with the existing CLI for the three-level controls.
+The constant-alpha connection and winding transport remain comparison
+constructions; they do not select the enclosing region's history.
+
 | Current work | Implementation |
 | --- | --- |
 | Offset history, distance kernel and winding geometry | `src/recursive_horizons/nsc_atlas_offset_generator.py` |

@@ -1,6 +1,83 @@
 # One spatial seed and a repeated offset: a constructive geometric map
 
-## Active foundation: opposite windings, 2 November 2026
+## Active start: parent compression, not an isolated offset
+
+Douglas's correction, 2 November 2026: the child's proposed generating
+seed arises through collapse inside an evolving parent, itself inside an
+enclosing region. The offset must be connected to that inherited drive.
+The isolated-loop transfer and fixed-alpha calculations below are retained
+controls. Their open/closed comparisons are not a task to select a preferred
+percentage before constructing the parent-child relationship.
+
+### An additive measure from the enclosing geometry
+
+Let F_p(u), F_c(u) describe corresponding local material-patch deformations
+in a common comparison frame. Their orientation-preserving volume factors
+are J_p=det F_p and J_c=det F_c. The label u indexes the supplied history;
+it is not an independently postulated physical clock. For spatial dimension
+d define normalized volume factors j_a(u)=J_a(u)/J_a(u_0), and
+
+$$
+\chi_{p\to c}(u)=\frac{1}{d}\log\frac{j_p(u)}{j_c(u)}.
+$$
+
+For the constructed three-dimensional patches d=3. This is logarithmic
+relative LENGTH compression. If the child contracts in every direction
+by half while its parent patch is unchanged, chi=ln 2. Its normalization
+comes from taking the d-th root of a volume factor, not fitting a target.
+It requires nonzero-volume comparison patches; it is not itself a birth
+solution at a degenerate one-dimensional seed.
+
+The logarithm is forced if a continuous scalar measure of a positive
+relative scale must add under composition: C(ab)=C(a)+C(b) gives C(a)=k ln a.
+Taking the logarithm of the relative length ratio fixes its geometric unit.
+This does not establish a conversion to angular phase, seconds or energy.
+Identifying inherited compression with the proposed generating offset
+remains the explicit physical proposal being developed.
+
+The increment delta chi is calculated from the deformation history.
+It is not an independently chosen alpha. Where derivatives exist,
+
+$$
+\frac{d\chi}{du}=\frac{1}{d}
+\left[\operatorname{tr}(F_p^{-1}F'_p)
+-\operatorname{tr}(F_c^{-1}F'_c)\right].
+$$
+
+A common invertible frame change F_a -> B(u)F_a cancels in the relative
+ratio, including its initial normalization. For three nested regions,
+
+$$
+\chi_{g\to c}=\chi_{g\to p}+\chi_{p\to c}.
+$$
+
+Thus zero ADDITIONAL child compression does not erase the inherited parent
+contribution. This is an exact finite-chain identity; it assumes neither
+a first universe nor a common increment for every level. It is not a
+derivation of an infinite physical chain.
+
+### Executed controls and the next connection
+
+Analytic controls F_g=exp(-u)I, F_p=exp(-2u)I, F_c=exp(-4u)I give
+chi_gp=u, chi_pc=2u and chi_gc=3u, with zero sampled composition residual.
+These are test deformations, not selected collapse histories. Independent
+controls check common-frame cancellation, reverse sign under exchanging
+regions, ancestor inheritance under common compression, and log-Jacobian
+evaluation at compression 400 without determinant underflow. Pure rotation
+has unit volume factor: rotation and compression cannot be identified by
+volume data alone.
+
+```text
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --inheritance-only
+```
+
+**Next:** obtain the actual relative deformation, including turning/shear,
+from a shared parent-child compression construction and connect its inherited
+increment to the drawing operation. A pressure-to-deformation law, angular
+phase relation and receiving geometry have not been derived by this
+kinematic identity. No free increment is used to stand in for those links.
+
+## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:
 

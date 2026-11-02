@@ -2,9 +2,11 @@
 
 **Douglas Ek**
 
-Build a geometric account from one spatial seed and repeated offset:
-circle, sphere, inward continuation and nested regions. Derive the
-relationships before assigning familiar physical meanings to them.
+Build a geometric account of collapse inside an evolving enclosing region:
+parent deformation drives the child's proposed offset, drawing from one
+spatial seed into circle, sphere and nested continuation. Each parent is
+itself enclosed. Derive the relationships before assigning familiar physical
+meanings to them.
 
 The active work is the geometric foundation. The previous action-based
 atlas remains a library of conditional constructions, not the foundation's
