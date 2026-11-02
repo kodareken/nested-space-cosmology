@@ -95,3 +95,73 @@ def test_first_three_irrational_offset_directions_have_rank_three():
     v0=s.Matrix([0,0,1]);v1=s.Matrix([s.sin(a),0,s.cos(a)])
     v2=s.Matrix([s.sin(2*a)*s.cos(a),s.sin(2*a)*s.sin(a),s.cos(2*a)])
     assert s.simplify(s.Matrix.hstack(v0,v1,v2).det()-s.sin(a)**2*s.sin(2*a))==0
+
+
+def test_opposite_loops_have_integer_degrees_and_positive_equal_variation():
+    from recursive_horizons.nsc_atlas_offset_generator import opposite_winding_path
+    x = np.linspace(0, 2, 8001)
+    for turns in (1, 3, -2):
+        z = opposite_winding_path(x, 0, turns, 1.7)
+        phase = np.unwrap(np.angle(z))
+        assert (phase[4000]-phase[0])/(2*np.pi) == pytest.approx(turns)
+        assert (phase[-1]-phase[4000])/(2*np.pi) == pytest.approx(-turns)
+        dx = x[1]-x[0]
+        derivative = np.diff(z)/dx
+        halves = [.5*dx*np.sum(np.abs(d)**2) for d in np.split(derivative, 2)]
+        np.testing.assert_allclose(halves, [2*np.pi**2*1.7**2*turns**2]*2, rtol=2e-6)
+
+
+def test_unwinding_stays_closed_and_nonzero_including_the_join():
+    from recursive_horizons.nsc_atlas_offset_generator import opposite_winding_path
+    x = np.linspace(0, 2, 1001)
+    for h in (0, .17, .5, .93, 1):
+        z = opposite_winding_path(x, h)
+        np.testing.assert_allclose(np.abs(z), 1, atol=3e-16)
+        assert z[0] == pytest.approx(z[-1])
+        assert z[500] == pytest.approx(np.exp(2j*np.pi*(1-h)))
+    np.testing.assert_allclose(opposite_winding_path(x, 1), np.ones(x.size))
+
+
+def test_unwinding_variation_matches_independent_integration_and_sharp_bound():
+    from recursive_horizons.nsc_atlas_offset_generator import winding_variation
+    # Cauchy-Schwarz on each length-one half: integral f'^2 >= delta_f^2.
+    h,m,R,x = s.symbols('h m R x',real=True)
+    slope = 2*s.pi*m*(1-h)
+    direct = s.integrate(R**2*slope**2/2,(x,0,1))*2
+    assert s.simplify(direct-4*s.pi**2*R**2*m**2*(1-h)**2)==0
+    assert winding_variation(.5,3,2)==pytest.approx(float(direct.subs({h:.5,m:3,R:2})))
+    assert winding_variation(1)==0
+
+
+def test_two_balanced_positive_outputs_force_equal_antipodal_geometry():
+    p,q = s.symbols('p q',positive=True)
+    # If p*u+q*v=0 and both directions have unit norm, p^2=q^2.
+    assert s.factor(p**2-q**2)==(p-q)*(p+q)
+    assert s.solve([p+q-1,p-q],[p,q])=={p:s.Rational(1,2),q:s.Rational(1,2)}
+    from recursive_horizons.nsc_atlas_offset_generator import balanced_output_directions
+    rays = balanced_output_directions(2)
+    np.testing.assert_allclose(rays[0]+rays[1],0,atol=2e-16)
+    assert rays[0]@rays[1]==pytest.approx(-1)
+
+
+def test_balance_alone_also_allows_more_than_two_outputs():
+    from recursive_horizons.nsc_atlas_offset_generator import balanced_output_directions
+    for count in (3,4,5,17):
+        rays=balanced_output_directions(count)
+        np.testing.assert_allclose(np.linalg.norm(rays,axis=1),1,atol=2e-16)
+        np.testing.assert_allclose(rays.mean(axis=0),0,atol=2e-16)
+
+
+def test_sum_product_and_concatenation_are_distinct_contact_rules():
+    t=s.symbols('t',real=True)
+    forward=s.exp(s.I*t);reverse=s.exp(-s.I*t)
+    assert s.simplify(forward*reverse)==1
+    assert s.simplify(s.expand_complex(forward+reverse)-2*s.cos(t))==0
+    assert (forward+reverse).subs(t,0)==2
+    assert s.simplify((forward+reverse).subs(t,s.pi/2))==0
+
+
+@pytest.mark.parametrize('args',[(0,0,0,1),(0,0,1,-1),(0,1.1,1,1),(3,0,1,1),(0,0,1,float('nan'))])
+def test_winding_domain_rejects_unstated_or_invalid_geometry(args):
+    from recursive_horizons.nsc_atlas_offset_generator import opposite_winding_path
+    with pytest.raises(ValueError):opposite_winding_path(*args)

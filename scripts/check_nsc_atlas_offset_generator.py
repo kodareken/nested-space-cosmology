@@ -1,13 +1,19 @@
 """Retain the one-seed accumulated-offset construction and finite resolution."""
 import argparse,hashlib,json,time
 from pathlib import Path
-from recursive_horizons.nsc_atlas_offset_generator import calculation
+from recursive_horizons.nsc_atlas_offset_generator import calculation,winding_calculation
 ROOT=Path(__file__).resolve().parents[1]
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,required=True)
-    out=(ROOT/p.parse_args().output).resolve()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path)
+    p.add_argument('--winding-only',action='store_true',help='geometry-only calculation to stdout; no parent or files')
+    args=p.parse_args()
+    if args.winding_only:
+        if args.output is not None:p.error('--winding-only writes to stdout; omit --output')
+        print(json.dumps(winding_calculation(),indent=2,sort_keys=True));return
+    if args.output is None:p.error('--output is required for the historical coverage calculation')
+    out=(ROOT/args.output).resolve()
     if not out.is_relative_to(ROOT) or out.exists():raise ValueError('fresh repository output required')
     start=time.process_time();r=calculation();r['cpu_seconds']=time.process_time()-start
     if r['cpu_seconds']>120:raise RuntimeError('finite geometry budget exceeded')

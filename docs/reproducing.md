@@ -2022,7 +2022,7 @@ comparison is specified in the calculation owner. Its first attempt stopped
 before integration at a limiter-branch mismatch. A bounded diagnosis identified
 component-order cancellation; the corrected adapter now selects the native
 branch before contracting reconstruction derivatives. The exact guard remains.
-The [completed fixed comparison](current-result.md#terminal-cap-transport-attribution-16-october-2026)
+The [completed fixed comparison](current-result-history-20261102.md#terminal-cap-transport-attribution-16-october-2026)
 passes the declared accuracy gates in both cases.
 Creation plus reconstruction uses 23,516,078 points / 185.40625 CPU seconds;
 including the initial failure and branch diagnosis gives 25,382,986 /
@@ -2953,7 +2953,7 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_mass_derivatives
 
 The [mathematical owner](nsc-atlas-finite-amplitude.md#discrete-mass-derivative-and-departure-flux-balance)
 states the branch-specific derivative and telescoping identity. The controls
-have passed. The [completed four-case result](current-result.md#discrete-cap-mass-balance-16-october-2026)
+have passed. The [completed four-case result](current-result-history-20261102.md#discrete-cap-mass-balance-16-october-2026)
 accounts for the upwind contribution and retains the remaining discrepancy.
 The [calculation record](prior-art-and-open-claim.md#discrete-cap-mass-balance-16-october-2026)
 preserves the failed rounding check and its bounded diagnosis.
@@ -2980,7 +2980,7 @@ repeating a calculation:
 python scripts/run_python.py scripts/check_prediction_register.py
 ```
 
-The [terminal cap mass-functional derivative](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
+The [terminal cap mass-functional derivative](current-result-history-20261102.md#terminal-cap-mass-functional-derivative-16-october-2026)
 uses the [analyzer](../scripts/analyze_nsc_atlas_cap_mass_direction.py) and
 [recorder](../scripts/diagnose_nsc_atlas_cap_mass_direction.py) on the authenticated
 terminal cap states. Its 26 mathematical, orchestration and provenance controls
@@ -3033,7 +3033,7 @@ order-eight minus order-four change is `1.09497e-5`. These are qualified
 backward functional diagnostics, without a convergence-order claim. At zero
 amplitude the normalized residual is not a physical gravitational defect.
 
-The [selected cap mass and wall-curve audit](current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
+The [selected cap mass and wall-curve audit](current-result-history-20261102.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
 uses the [recorder](../scripts/diagnose_nsc_atlas_cap_consistency.py) and
 [analyzer](../scripts/analyze_nsc_atlas_cap_consistency.py) on the fixed
 operator-comparison histories. Its 34 manufactured and provenance controls
@@ -3075,7 +3075,7 @@ the hybrid prediction. The terminal mass-functional calculation above now
 tests the cap transport connection; neither audit supplies a new wall law or
 a new evolution.
 
-The [near-wall saved-row audit](current-result.md#saved-near-wall-row-audit-16-october-2026)
+The [near-wall saved-row audit](current-result-history-20261102.md#saved-near-wall-row-audit-16-october-2026)
 uses the [bounded diagnostic](../scripts/diagnose_nsc_atlas_boundary_rows.py)
 and [eight synthetic controls](../tests/test_diagnose_nsc_atlas_boundary_rows.py).
 Controls pass with 60,460 aggregate points/0.15625 CPU seconds. Creation
@@ -3110,7 +3110,7 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_departure_gradient.p
 
 All 89 controls pass before physical creation, reporting 2,047,112 points
 and 3.84375 process CPU seconds across their admitted shared allowances.
-The [completed comparison](current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+The [completed comparison](current-result-history-20261102.md#fixed-grid-exterior-operator-comparison-16-october-2026)
 uses 55,398,966 total points/256.25 process CPU seconds. Its one standalone
 check passes with 4,040,624 points; the [manifest](../results/development/nsc-atlas-operator-comparison-v1/manifest.json)
 binds 104 paths. To authenticate the retained result:
@@ -3127,7 +3127,7 @@ check has 60 CPU seconds/eight million points and no trajectory replay.
 Old baseline arrays are referenced rather than duplicated. Same-grid cap
 comparisons retain total physical cell integrals without adjacent summation.
 
-The [completed fixed-input spatial comparison](current-result.md#fixed-input-spatial-refinement-16-october-2026)
+The [completed fixed-input spatial comparison](current-result-history-20261102.md#fixed-input-spatial-refinement-16-october-2026)
 uses the [recorder](../scripts/record_nsc_atlas_spatial_refinement.py) and
 [saved-state analyzer](../scripts/analyze_nsc_atlas_spatial_refinement.py).
 It adds zero and finite-amplitude 64-cell windows to the retained 32-cell
@@ -3160,7 +3160,7 @@ quiet-profile support remain unresolved. A fresh numerical repeat uses the same 
 `--output` naming a fresh directory and without `--check`; the completed
 record is never overwritten.
 
-The [incoming wall-constraint audit](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+The [incoming wall-constraint audit](current-result-history-20261102.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
 uses pinned histories, four one-sided spatial stencils and causal birth
 interpolation. Authenticate the completed [record](../results/development/nsc-atlas-wall-constraint-audit-v1.json)
 without replaying its source or trajectory:
@@ -3181,7 +3181,7 @@ seconds. All four wall subtractions worsen the disjoint-subset RMS;
 spatial/transport accuracy remains unresolved, with no junction-failure
 or error-enclosure claim.
 
-The [constraint transport audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+The [constraint transport audit](current-result-history-20261102.md#saved-constraint-transport-and-sampling-16-october-2026)
 uses only pinned saved arrays, separating the inherited source residual,
 diagnostic time-stencil sensitivity and incoming-characteristic origin:
 
@@ -3227,7 +3227,7 @@ paired comparisons, shared accounting, immutable output and failed-attempt recei
 python scripts/run_python.py -m pytest tests/test_record_nsc_atlas_background_evolution.py -q
 ```
 
-The completed [first physical comparison](current-result.md#characteristic-background-coupled-evolution-16-october-2026) uses 228.9375 CPU seconds and 43,551,872 points. Its shared allowance is 600 CPU seconds and
+The completed [first physical comparison](current-result-history-20261102.md#characteristic-background-coupled-evolution-16-october-2026) uses 228.9375 CPU seconds and 43,551,872 points. Its shared allowance is 600 CPU seconds and
 100 million evaluated points, including authentication. It reuses the bound
 source cache and extracts the computational profile once. Its [calculation
 record](prior-art-and-open-claim.md#coupled-characteristic-background-comparison-16-october-2026)
@@ -3281,7 +3281,7 @@ diagnostic uses 138,891 points and 1.546875 CPU seconds, within its
 30-second/250,000-point allowance. It takes six local SSPRK2 steps with
 twelve coupled stages and saves an exact five-part scalar balance; it
 replays no complete trajectory. Creation is exclusive and `--check`
-repeats only those same local steps. The [outcome](current-result.md#actual-scalar-step-balance-16-october-2026)
+repeats only those same local steps. The [outcome](current-result-history-20261102.md#actual-scalar-step-balance-16-october-2026)
 retains the distinction between local increments and full-history error.
 
 The [SSPRK3 operator](../src/recursive_horizons/nsc_atlas_background_ssprk3.py)
@@ -3319,7 +3319,7 @@ stages and diagnostics without a trajectory or source replay. Creation
 requires a fresh directory; failures retain their first context under
 ignored `.build`. The fixed model and 80 bound paths remain unchanged.
 
-The [completed four-case comparison](current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)
+The [completed four-case comparison](current-result-history-20261102.md#fixed-input-ssprk3-coupled-window-16-october-2026)
 uses 130.734375 CPU seconds and 24,939,592 points, including validation.
 Standalone checking passes with 956,575 points. Its scalar time difference
 remains 21.54% of the fine response peak; closer cross-method agreement
@@ -3347,7 +3347,7 @@ gauge-order comparison, evolution and validation. A standalone check has
 final radial stages, with no trajectory or source-ODE replay. The 86
 input/source bindings remain frozen. Creation requires a new directory.
 
-The [completed 512-step pair](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+The [completed 512-step pair](current-result-history-20261102.md#midpoint-complete-ssprk3-comparison-16-october-2026)
 uses 174.90625 CPU seconds and 33,604,170 points, including validation.
 The standalone check uses 1,418,330 points. Its cache construction uses
 575,112 points, including both gauge orders; all original 513 rows are
@@ -3397,7 +3397,7 @@ it does not integrate a new trajectory. The
 [completed audit](../results/development/nsc-atlas-compatible-transport-audit-v1.json)
 uses 48,910 points and 0.859375 CPU seconds. Its input identity, audit
 source hashes, runtime and counts are saved in the JSON. The
-[outcome](current-result.md#compatible-transport-audit-16-october-2026)
+[outcome](current-result-history-20261102.md#compatible-transport-audit-16-october-2026)
 distinguishes cap-profile smearing and derivative sensitivity from
 quadrature sensitivity, without treating the postprocessed alternatives
 as evolved solutions or error bounds.
@@ -3451,7 +3451,7 @@ it reuses the inherited source/reference caches and evolves no trajectory.
 All five cases retain 129 slices. Exact vacuum and zero-outgoing recovery,
 paired spatial responses, raw finite-case time changes and remaining cap
 transport/constraint limits are reported in the
-[current result](current-result.md#compatible-coupled-evolution-16-october-2026).
+[current result](current-result-history-20261102.md#compatible-coupled-evolution-16-october-2026).
 
 The simultaneous exterior, wall and polar-cap stage uses a source snapshot,
 ordered exterior integrals, the constrained regular cap and the existing
@@ -3499,7 +3499,7 @@ the source interpolant and five final radial-cap/prefix states, and
 recomputes the saved-array diagnostics. The creation-only
 [result](../results/development/nsc-atlas-coupled-evolution-v1/coupled.json)
 retains unresolved spatial/interface and cap field-compatibility errors;
-see the [current outcome](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026).
+see the [current outcome](current-result-history-20261102.md#first-coupled-exterior-wall-and-cap-window-16-october-2026).
 
 The [nonlinear rectangle marcher](../src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py)
 assembles the exact source and quiet bottom in the original affine null
@@ -3598,7 +3598,7 @@ moment-order-8 boundary jets. Both retain the same 129-node field and
 257-knot geometry. Creation refuses an existing output directory. The
 local-lift `--check` authenticates its predecessor and reconstructs only
 the saved polynomials; it performs no physical solve. Numerical outcomes
-are in the [current result](current-result.md#profile-moment-and-local-lift-16-october-2026).
+are in the [current result](current-result-history-20261102.md#profile-moment-and-local-lift-16-october-2026).
 
 The [conservative evolution implementation](nsc-atlas-scalar-evolution.md)
 adds coefficient caching and the forced fixed-coordinate scalar equation.
@@ -3641,7 +3641,7 @@ python scripts/run_python.py scripts/record_nsc_atlas_lift_clock.py --check --ou
 One field preparation and two wall solves share 120 process-CPU seconds
 and 30 million kernels. The check restores saved first jets and clock
 polynomials without new physical solves. The 32-panel result meets the
-original sampled boundary target; the [current result](current-result.md#clock-resolved-scalar-boundary-16-october-2026)
+original sampled boundary target; the [current result](current-result-history-20261102.md#clock-resolved-scalar-boundary-16-october-2026)
 records the numerical comparison and subsequent propagation status.
 
 The first exterior scalar propagation restores these authenticated inputs
@@ -3657,7 +3657,7 @@ kernels, with at most 6,000 RHS calls per solve. It performs no new
 leading-field, wall, forcing-slice or boundary solve. Authentication restores
 the coefficient polynomials and reconstructs 68 discrete wall rates from
 retained interior arrays, without replaying propagation. The
-[result](current-result.md#exterior-scalar-correction-16-october-2026) records
+[result](current-result-history-20261102.md#exterior-scalar-correction-16-october-2026) records
 separate sensitivities and the limit of the formal coefficient.
 
 The central reconstruction reuses the earlier cap clock and current
@@ -3673,7 +3673,7 @@ The five common interior arrival cuts and one leading-field preparation
 share 120 process-CPU seconds and 30 million kernels. It performs no new
 wall, cap-clock or exterior evolution. The check authenticates saved inputs,
 quadrature inventory and reconstruction algebra without repeating incoming
-integration. The [central result](current-result.md#central-scalar-coefficient-16-october-2026)
+integration. The [central result](current-result-history-20261102.md#central-scalar-coefficient-16-october-2026)
 retains all terms, the quiet control and separate numerical sensitivities.
 Its independent incoming-ray successor retains that saved radial-32/ray-16
 case and computes only radial-32/ray-32 at the same five cuts:
@@ -3712,7 +3712,7 @@ solve. These inputs do not yet propagate the scalar correction.
 
 The saved pairs are under `results/development/nsc-atlas-scalar-inputs-v1`,
 in `lift` and `forcing`. Both use current source bindings. The
-[result entry](current-result.md#scalar-lift-and-exterior-forcing-16-october-2026)
+[result entry](current-result-history-20261102.md#scalar-lift-and-exterior-forcing-16-october-2026)
 reports the unresolved coarse interpolation and the separate exterior
 quadrature/transport discrepancies.
 
@@ -3753,7 +3753,7 @@ The producer preserves existing output directories and binds source bytes
 before and after the calculation. All five saved records use current
 sources; `--check` performs zero physical solves. Nine samples, signed
 contributions and domain margins document a boundary input, not a boundary
-interpolant or propagated waveform. The [current result](current-result.md#scalar-backscatter-boundary-16-october-2026)
+interpolant or propagated waveform. The [current result](current-result-history-20261102.md#scalar-backscatter-boundary-16-october-2026)
 states all measured numerical sensitivities.
 
 The [smooth cap calculation](nsc-atlas-cap-response.md) reconstructs the

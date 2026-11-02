@@ -799,7 +799,7 @@ states the regularity and finite-time limits. This proof does not establish
 that an arbitrary state transmitted through the entire material wall is
 Hadamard on the later Cauchy ball; that remains its explicit input.
 
-The question is a nested spherical geometry. Structure that one region does not resolve can still leave a local response, and the same relation can recur across scales. The candidate geometry that would enclose a region is a sphere. That is the picture under test. It is not an observation, and it is not a settled theory. The owning note keeps the method, the domain, and the evidence. [Scientific framing](instructions.md#scientific-framing-and-authority) remains the authority.
+The question is a nested spherical geometry. Structure that one region does not resolve can still leave a local response, and the same relation can recur across scales. The candidate geometry that would enclose a region is a sphere. That is the picture under test. It is not an observation, and it is not a settled theory. The owning note keeps the method, the domain, and the evidence. [Scientific framing](instructions-history-20261102.md#scientific-framing-and-authority) remains the authority.
 
 An enclosing region and its interior can be studied through their coupled
 geometry, fields and stress. Compression and resistance are useful candidate

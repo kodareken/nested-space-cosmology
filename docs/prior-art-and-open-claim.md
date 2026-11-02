@@ -3231,7 +3231,7 @@ on both cases at both tolerances. The largest balance discrepancy is
 `5.76473e-10`; the largest channel tolerance change is `3.56406e-10`. Radial
 map error is negligible at the declared diagnostic resolution, while the
 bulk field residuals and ordered interfaces recover the original imbalance.
-See the [full interpretation and compact evidence](current-result.md#terminal-cap-transport-attribution-16-october-2026).
+See the [full interpretation and compact evidence](current-result-history-20261102.md#terminal-cap-transport-attribution-16-october-2026).
 Creation plus reconstruction uses 23,516,078 points / 185.40625 CPU seconds.
 With the failed attempt and prefix diagnosis carried, the total is 25,382,986 /
 190.84375 within the original allowance. This diagnoses the fixed state; it
@@ -6645,7 +6645,7 @@ charge is present. No physical rerun or input change was needed.
 
 ## Discrete cap mass balance, 16 October 2026
 
-**Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
+**Outcome:** the [completed ledger](current-result-history-20261102.md#discrete-cap-mass-balance-16-october-2026)
 passes creation validation and one standalone check. The finite order-eight
 balance is `-2.12697432799`, including upwind work `-2.01783226502` and
 remaining balance `-0.10914206297`. The corrected source freeze is `8d575f1`.
@@ -6720,7 +6720,7 @@ recorded in the outcome above.
 
 ## Terminal cap mass-functional derivative, 16 October 2026
 
-**Outcome:** the [completed calculation](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
+**Outcome:** the [completed calculation](current-result-history-20261102.md#terminal-cap-mass-functional-derivative-16-october-2026)
 and creation validation pass with 1,711,610 points / 6.6875 process CPU seconds.
 One standalone check passes with 855,805 points / 4.078125 CPU seconds.
 The finite instantaneous defect remains `-0.6612504470` at the finest
@@ -6764,7 +6764,7 @@ part of the controls. Producers and controls were frozen at `fc71709` before cre
 
 ## Selected cap mass and wall-curve audit, 16 October 2026
 
-**Outcome:** the [completed audit](current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
+**Outcome:** the [completed audit](current-result-history-20261102.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
 and creation validation pass on the first attempt with 4,393,156 points /
 15.359375 process CPU seconds. One standalone check passes with 2,196,578
 points / 8.453125 CPU seconds. Pulse-time residuals are strongly sensitive
@@ -6804,7 +6804,7 @@ The new analyzer, recorder and controls are frozen before creation.
 
 ## Saved near-wall row audit, 16 October 2026
 
-**Outcome:** the [fixed saved-row result](current-result.md#saved-near-wall-row-audit-16-october-2026)
+**Outcome:** the [fixed saved-row result](current-result-history-20261102.md#saved-near-wall-row-audit-16-october-2026)
 and creation validation pass on the first attempt with 97,350 points and
 1.59375 process CPU seconds. One standalone check passes with 48,675 points
 and 1.5625 CPU seconds. Curvature/lapse mismatch is concentrated near the
@@ -6837,7 +6837,7 @@ controls; the new producer and controls are frozen before creation.
 
 ## Fixed-grid exterior-operator comparison, 16 October 2026
 
-**Outcome:** the [completed pair](current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+**Outcome:** the [completed pair](current-result-history-20261102.md#fixed-grid-exterior-operator-comparison-16-october-2026)
 and creation validation pass on the first attempt with 55,398,966 total
 points and 256.25 process CPU seconds. One standalone check passes with
 4,040,624 points and no trajectory. Final finite kinematic defects shrink
@@ -6928,7 +6928,7 @@ No coupled research window is part of these controls.
 
 ## Fixed-input spatial refinement, 16 October 2026
 
-**Outcome:** the [two new evolutions](current-result.md#fixed-input-spatial-refinement-16-october-2026)
+**Outcome:** the [two new evolutions](current-result-history-20261102.md#fixed-input-spatial-refinement-16-october-2026)
 complete on the first attempt with 60,087,926 total points and 256.8125
 CPU seconds, including 6,684,624 points for creation validation. One
 standalone check passes with 6,684,624 points and no trajectory replay.
@@ -6997,7 +6997,7 @@ curvature or assuming a zero constraint.
 | Checks and stop | Independent polynomial derivative oracles, nonzero transported boundary data, interpolation causality/coverage, disjoint-stencil masks and changed-input/budget controls. Stop on first inconsistent reconstruction, domain/nonfinite failure, invalid bracket or exhaustion; preserve an ignored `.build` receipt. Output is creation-only. |
 | Decision | Determine whether an independently measured wall datum accounts for the interior incoming constraint, and whether that conclusion survives derivative/interpolation changes away from overlapping stencils. If it does, evaluate its inherited outgoing-source contribution and the corresponding cap/junction residuals. Nonzero wall constraint alone is not a junction failure: with zero cap constraints the smooth identities give `J_+=(A_-/H^2)O_+`. If transport fails, diagnose spatial derivatives or mixed transport before changing the physical model. |
 
-**Outcome:** the [saved wall audit](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+**Outcome:** the [saved wall audit](current-result-history-20261102.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
 completes with 1,391,719 points and 1.046875 CPU seconds; its one
 independent standalone check passes with the same point count. Each uses
 129 analytic vacuum evaluations and no source, cache, profile, stage or
@@ -7040,7 +7040,7 @@ transport identity and only retained arrays.
 | Checks and stop | Independent nonzero-source transport examples, coordinate/index/sign checks, stencil partitions, source-jet identity, changed-input/output rejection and shared-budget controls. Stop on the first mismatch, nonfinite value, invalid radius/grid or exhaustion; preserve a diagnostic receipt under ignored `.build`. Creation requires a fresh path. |
 | Decision | Determine how much of the sampled constraint is inherited and how much changes with the diagnostic stencil. Then choose a source representation, spatial derivative or independent incoming-wall diagnostic according to the measured remainder. No automatic time doubling or altered physical assumptions. |
 
-**Outcome:** the [saved audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+**Outcome:** the [saved audit](current-result-history-20261102.md#saved-constraint-transport-and-sampling-16-october-2026)
 completes with 689,270 points and 0.921875 CPU seconds. All 21 controls
 pass with aggregate 72,316 points and 0.359375 CPU seconds, including
 four rerun mutation controls after an isolated fixture-alias correction.
@@ -7056,7 +7056,7 @@ no source/cache/profile/stage or trajectory replay.
 
 ## Midpoint-complete SSPRK3 comparison, 16 October 2026
 
-**Outcome:** the [512-step pair](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+**Outcome:** the [512-step pair](current-result-history-20261102.md#midpoint-complete-ssprk3-comparison-16-october-2026)
 completes with 174.90625 process CPU seconds and 33,604,170 points.
 Standalone authentication passes with 1,418,330 points. The paired scalar
 256/512 difference is `5.84100e-7`, or 1.67616% of the finer peak, versus
@@ -7103,7 +7103,7 @@ completed comparison. No new source integration was involved.
 
 ## Fixed-input SSPRK3 coupled window, 16 October 2026
 
-**Outcome:** the [four-case comparison](current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)
+**Outcome:** the [four-case comparison](current-result-history-20261102.md#fixed-input-ssprk3-coupled-window-16-october-2026)
 completes with 130.734375 process CPU seconds and 24,939,592 points.
 One standalone authentication passes with 956,575 points, four final
 radial stages and no trajectory replay. Geometry and clock differences
@@ -7203,7 +7203,7 @@ needs its own finite shared budget and controls before it runs.
 
 ## Actual scalar-step balance, 16 October 2026
 
-**Outcome:** the [six local steps](current-result.md#actual-scalar-step-balance-16-october-2026)
+**Outcome:** the [six local steps](current-result-history-20261102.md#actual-scalar-step-balance-16-october-2026)
 finish with twelve stages, 138,891 points and 1.546875 process CPU seconds.
 Standalone checking reproduces the result. The paired local scalar change
 is `8.03607e-8`, chiefly the difference of the background-chain contributions
@@ -7325,7 +7325,7 @@ the audit must preserve any unresolved cancellation or ambiguity.
 
 **Outcome:** all six fixed cases and creation authentication completed in
 228.9375 process CPU seconds with 43,551,872 charged points. The
-[saved result](current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+[saved result](current-result-history-20261102.md#characteristic-background-coupled-evolution-16-october-2026)
 removes the large incoming cap transport error and substantially improves
 paired wall geometry/clock agreement. Scalar time sensitivity and exterior
 pointwise constraints remain unresolved. No source integration or change
@@ -7452,7 +7452,7 @@ representation; they are not a new result for the original preparation.
 
 ## Compatible reduced cap and vacuum departures, 16 October 2026
 
-The [first coupled window](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
+The [first coupled window](current-result-history-20261102.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
 locates two numerical errors: a quiet vacuum layer beside the wall and a
 cap field/gradient mismatch that corrupts the leading outgoing-wave
 cancellation. The successor keeps the original action, source, amplitude,
@@ -7617,7 +7617,7 @@ independent rectangle comparison improve under spatial refinement; the
 separate time-step changes in geometric response are much smaller.
 The maximum `E_Ubar` persists in an early quiet wall layer, cap
 `Phi-f_r` compatibility is not resolved, and the scalar wall response
-changes sign between spatial grids. The [measured results](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
+changes sign between spatial grids. The [measured results](current-result-history-20261102.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
 retain these limitations. Diagnose the spatial/interface and cap
 compatibility errors from these saved data before designing a successor;
 this outcome does not admit an unbounded refinement campaign or a new
@@ -8164,7 +8164,7 @@ changes in $F,G$ are $7.20\times10^{-14}$ and $4.45\times10^{-10}$;
 the separate timelike mass discrepancy is $6.50\times10^{-7}$ at both
 orders. Further radial-order increases would not address that larger
 field/transport difference. The
-[saved inputs](current-result.md#scalar-lift-and-exterior-forcing-16-october-2026)
+[saved inputs](current-result-history-20261102.md#scalar-lift-and-exterior-forcing-16-october-2026)
 retain the source pullback after the leading pulse, quiet anchors and costs.
 The known forcing can next be cached in time with a measured interpolation
 error; it has not yet been used to evolve the correction.
@@ -8204,7 +8204,7 @@ and ray comparisons at 129 field nodes, without changing the shared budget.
 **Outcome:** all five pairs complete in 19.06--34.61 process-CPU seconds,
 with at most 8.45 million scalar kernels. The separate 16/32 radial and ray
 changes in the wall derivative fall below $1.17\times10^{-10}$ and
-$1.31\times10^{-10}$. The [result record](current-result.md#scalar-backscatter-boundary-16-october-2026)
+$1.31\times10^{-10}$. The [result record](current-result-history-20261102.md#scalar-backscatter-boundary-16-october-2026)
 retains the nonzero outgoing coefficient, signed contributions, coordinate
 comparison and remaining field sensitivity. This closes the sampled
 boundary-input calculation. A controlled interpolant and the forced scalar
@@ -8289,7 +8289,7 @@ $2\times10^{-9}$ each at fixed 129-node field resolution; field 129/257
 changes it by $6.42\times10^{-7}$, while cap time panels 8/16 change it
 by $1.92\times10^{-5}$. Each complete pair used 35.98--56.31 process-CPU
 seconds and fewer than 24.94 million scalar kernels. The
-[current result](current-result.md#smooth-cap-and-central-arrival-clock-15-october-2026)
+[current result](current-result-history-20261102.md#smooth-cap-and-central-arrival-clock-15-october-2026)
 retains the settings and all ten evidence bundles. The next connection is
 the higher-order scalar response on this changing geometry, followed by
 finite-amplitude control; the null-clock coefficients alone do not supply it.
@@ -8327,7 +8327,7 @@ reduces the maximum mass-path discrepancy from 6.49e-7 to 1.63e-7; the clock's
 Every comparison completed within 120 process-CPU seconds and 30 million
 scalar-kernel values. A separate radial-versus-mixed rectangle overlap checks
 both mass and lapse with a distinct quadrature. The
-[current result](current-result.md#moving-wall-and-exterior-clock-15-october-2026)
+[current result](current-result-history-20261102.md#moving-wall-and-exterior-clock-15-october-2026)
 records all eight evidence bundles. The smooth cap and central clock are the
 next physical connection; these coefficients do not establish a finite-amplitude
 remainder.
@@ -8363,7 +8363,7 @@ metric comparison reduces the largest sampled mass-flux defect from
 $1.65\times10^{-6}$ to $4.31\times10^{-7}$, with both integrated null
 constraints refining. Each comparison used 17.16--21.91 process-CPU
 seconds and fewer than 10.45 million scalar-kernel evaluations. The
-[current-result entry](current-result.md#smooth-exterior-metric-response-15-october-2026)
+[current-result entry](current-result-history-20261102.md#smooth-exterior-metric-response-15-october-2026)
 records the coefficients and all six evidence links. The next domain is
 the moving-wall strip, followed by the cap and observer correction; the
 formal rectangle result does not provide a finite-amplitude remainder.

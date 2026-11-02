@@ -165,7 +165,7 @@ scale remain open.
 Active target: evaluate the spectral band, conjugate-sector asymmetry and
 inside/outside component split from the existing atlas equations, with no
 SI anchor or target-selected parameters. Douglas's
-[organizing picture and exponential-boundary method](../THEORY.md#douglass-organizing-picture-30-october-2026)
+[organizing picture and exponential-boundary method](../THEORY-history-20261102.md#douglass-organizing-picture-30-october-2026)
 are saved as the research direction.
 
 The next [constructed pen geometry](nsc-atlas-pen-geometry.md) now supplies
@@ -1545,7 +1545,7 @@ prescribed input. The changed cap can scatter the correction back toward
 the wall before a centre-reflected return, so its interior and exterior
 transmission retains that returning contribution. On the original no-return
 interval, the outgoing trace is a known forcing integral, so the solution
-can proceed sequentially. Five [numerical comparisons](current-result.md#scalar-backscatter-boundary-16-october-2026)
+can proceed sequentially. Five [numerical comparisons](current-result-history-20261102.md#scalar-backscatter-boundary-16-october-2026)
 now evaluate that trace and the exterior boundary derivative. The
 [input successor](nsc-atlas-scalar-forcing.md) supplies analytic boundary
 slopes, a Hermite antiderivative and cumulative exterior forcing; its
@@ -1554,11 +1554,11 @@ with a refined wall clock supplying the accepted boundary lift.
 
 The [profile moment](nsc-atlas-profile-moment.md) now agrees with the
 independent radial cap-mass evaluation closely enough to refine the
-boundary economically. The [local-lift comparison](current-result.md#profile-moment-and-local-lift-16-october-2026)
+boundary economically. The [local-lift comparison](current-result-history-20261102.md#profile-moment-and-local-lift-16-october-2026)
 keeps the same physical inputs and adds withheld samples through the pulse.
 The [conservative evolution connection](nsc-atlas-scalar-evolution.md)
 then caches the known exterior forcing and evolves the correction on the
-original null coordinates. The [first propagated result](current-result.md#exterior-scalar-correction-16-october-2026)
+original null coordinates. The [first propagated result](current-result-history-20261102.md#exterior-scalar-correction-16-october-2026)
 now measures its formal wall value and material derivative with separate
 cache, grid and ODE comparisons. The [central reconstruction](nsc-atlas-central-scalar-response.md)
 now connects that trace to the observer by reflected incoming-ray integration
@@ -1579,7 +1579,7 @@ by the central clock. The wall construction has a noncircular constraint
 implication on its positive-radius, untrapped-cap branch. An exact-model
 source integrator and bounded characteristic-cell solver now implement the
 regional starting pieces, with source-only amplitude bounds and independent
-analytic controls. The [first nonlinear rectangle](current-result.md#first-nonlinear-exterior-rectangle-16-october-2026)
+analytic controls. The [first nonlinear rectangle](current-result-history-20261102.md#first-nonlinear-exterior-rectangle-16-october-2026)
 now evolves the original preparation at zero and nonzero amplitude on two
 grids, with refining metric and independently differenced constraints.
 The [simultaneous stage](nsc-atlas-finite-amplitude.md#a-simultaneous-exterior-wall-and-cap-stage)
@@ -1587,22 +1587,22 @@ now combines the original source, ordered exterior integrals, a moving
 wall and the regular polar cap. Source lifting retains the steep pulse
 analytically. The completed rectangle supplies an independent overlap
 control; the common evolution uses the full active exterior up to the
-actual wall. The [compatible five-case successor](current-result.md#compatible-coupled-evolution-16-october-2026)
+actual wall. The [compatible five-case successor](current-result-history-20261102.md#compatible-coupled-evolution-16-october-2026)
 completes that finite window with exact-vacuum departures and one cap scalar
 primitive. It removes the quiet geometric layer and zero-amplitude outgoing
-wave error. The [six-case characteristic-background successor](current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+wave error. The [six-case characteristic-background successor](current-result-history-20261102.md#characteristic-background-coupled-evolution-16-october-2026)
 now carries the incoming pulse analytically while evolving its correction.
 Its independent 32-cell incoming pullback discrepancy falls from `0.38`
 to below `0.0009`; paired wall geometry and clock responses change by less
-than `0.063%` under spatial refinement. The [higher-order time comparisons](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+than `0.063%` under spatial refinement. The [higher-order time comparisons](current-result-history-20261102.md#midpoint-complete-ssprk3-comparison-16-october-2026)
 retain close geometry and clock agreement and reduce the scalar time
 difference to `1.68%` of the fine response peak. The
-[saved constraint audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+[saved constraint audit](current-result-history-20261102.md#saved-constraint-transport-and-sampling-16-october-2026)
 separates source inheritance and diagnostic sampling; the incoming residual
-is largest in wall-origin stencils. The [independent wall-curvature audit](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+is largest in wall-origin stencils. The [independent wall-curvature audit](current-result-history-20261102.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
 finds strong spatial-stencil sensitivity and no reliable explanation of
 the disjoint interior subset by transported wall data. The [fixed-input
-32/64-cell comparison](current-result.md#fixed-input-spatial-refinement-16-october-2026)
+32/64-cell comparison](current-result-history-20261102.md#fixed-input-spatial-refinement-16-october-2026)
 now reduces constraints at equal diagnostic width and limits the paired
 wall-scalar change to `0.77%` of its fine response peak. Geometry and clock
 changes are below `0.072%`; wall curvature is still unresolved. Spatial

@@ -1,0 +1,405 @@
+# Instructions for the unified NSC repository
+
+The root owns the single `src/recursive_horizons` package, root scripts, tests,
+notes and evidence. Work on this checkout's local `main`
+branch; preserve remote branches and unrelated changes. GitHub is a backup
+mirror; commit and push work as it progresses, including unfinished work,
+unless Douglas says otherwise. The latest user
+instruction determines the task; old PLAN and handover files do not.
+
+The current manuscript is [the main paper](../paper/nested-space-cosmology.md).
+The [reproduction guide](reproducing.md) owns commands; [reassembly](repository-consolidation.md)
+owns recovery. Historical sources replay explicitly under `.build/replay`.
+Never select older code silently when a current-source check fails.
+
+## Scientific framing and authority
+
+### Foundation reset: Douglas, 2 November 2026
+
+Build the offset construction from explicit geometric premises before importing
+an action, field content, potential or cosmological interpretation. Existing
+calculations using those ingredients remain conditional constructions, not
+derivations of the foundation. Preserve their source and evidence; do not
+silently promote them into axioms or discard them as disproved.
+
+The immediate foundation distinguishes premises, mathematical consequences,
+and measurement interpretations. Opposite winding is a proposed geometric
+description to derive, not yet an electron/positron identification. Equal
+opposite outputs require a specified evolution and conserved quantities;
+zero net winding alone does not establish their number, angle or energy.
+Similarly, boundary minimization needs a declared functional and constraints;
+it does not by itself select dimension, rotation, a spiral or a child space.
+
+Use focused searches in the owning source and document. Root `.rgignore`
+keeps retained results, historical editions and figure payloads out of default
+ripgrep searches. Read evidence explicitly when needed, for example
+`rg --no-ignore 'pattern' results/summaries`. This changes discovery only;
+all code, records and reproduction paths remain in place. Do not use a broad
+search hit or an old handoff as the current work instruction.
+
+### Standing measurement rule: Douglas, 1 November 2026
+
+Douglas's clarified working picture, 1 November 2026: **+ denotes the
+exterior and - the interior of the SAME black hole; 0 is their smooth
+event horizon, not a physical membrane. The offset called time continues
+on BOTH sides.** Geometry and gravitation continue across that horizon.
+Do not silently reinterpret minus as negative energy, literal nothing,
+a separate fluid, or a conventional antiparticle population. Preserve
+the proposed exterior-to-interior continuation and repeated nesting.
+
+In Douglas's proposal, an imbalance/offset, described in his language as
+the "missing antimatter", drives time and motion and prevents complete
+cancellation. Matter and wave behaviour are aspects of one underlying
+geometric process, not competing primitive substances. Preserve this as
+the hypothesis to construct mathematically. Its correspondence to measured
+charges, particle counts and detector signals remains to be derived;
+do not treat that correspondence as already proved or replace the proposal
+with it. Start with the proposed geometry and explicit dynamics.
+
+Start from uncertainty. Established interpretations, NSC's proposed
+interpretation, instrument response, calibration and data processing all
+contain assumptions to identify and test. Familiarity is not verification.
+This is a research method, not a declaration that NSC is already correct or
+that every existing result is wrong.
+
+Keep recorded detector outputs separate from their physical interpretation.
+Derive the chain explicitly: proposed geometry -> field at the detector ->
+instrument response -> predicted signal. Distinguish minimally processed
+signals from calibrated quantities and model-dependent inferred parameters.
+Test response assumptions through calibration controls and independent
+measurements; do not treat even "raw" data as assumption-free.
+
+Mathematics checks what follows from defined premises. Reproducible signals
+test the premises and measurement model. NSC need not reproduce LambdaCDM's
+assumptions or inferred components to qualify. Another theory may be an
+explicit comparison, but its interpretation is not an acceptance axiom.
+Challenge our own chosen action, source and state on the same basis.
+
+After compaction, read this rule before selecting a scientific test. Prior
+plans and progress counts do not override it. More scripts, reports or PDF
+pages do not substitute for resolving the scientific question.
+
+The question is the nested mechanism. Structure that one region does not
+resolve can still leave a local response, and the same relations can recur
+across regional gradients. Familiar local laws are the equations a local
+observer already uses. Observational controls use the same data, covariance
+and nuisance treatment as the candidate being tested.
+
+The 28 October request adds an identical-data LambdaCDM control to the
+inherited-parent supernova comparison. Its fitted parameters belong to that
+explicit observational control, not to NSC's inherited source. See the
+[comparison owner](nsc-atlas-parent-supernova.md).
+
+The inheritance relation below is reused inside its stated domain. Further
+constructions stay finite. Readings in terms of time, antimatter, a dark
+sector, or a continuing gradient stay open research. Rooms, coins, fountains,
+and clocks are motivation for that research. A finite candidate can be chosen
+creatively. What gets reported is the computation and an error statement that
+another person can check, in a named domain.
+
+The source-fixed local incoming gate is one retained application. It remains
+OPEN, and its error-budget campaign is paused. Its interval, threshold, and
+source apply only there. The pause does not create a new compulsory gate, and
+the gate is not a prerequisite for the finite nested-quality theorem or for
+the spherical evolution below. The next release version follows a
+demonstrated result. This instruction does not reserve a version for
+closure of the paused gate. Frozen v0.26.0 remains the recorded
+foundation. Before treating two descriptions as the same
+claim, name the region, scale, observer, state, and compared quantity.
+
+<a id="rn-radial-programme"></a>
+
+## Exterior-first atlas
+
+The active objective, 10 October 2026, is a finite mathematical atlas of
+possible parent regions, transitions, children, siblings and descendants.
+Borrow established mathematics, connect compatible regions, investigate
+branching and inheritance, derive local consequences, then compare with
+observations. The [atlas owner](nsc-cosmological-atlas.md) and
+[two-worktree inventory](research-inventory.md) route the work.
+
+Geometric attachments, exterior response and communicating mouths are
+separate candidate approaches. A failed candidate does not remove the others.
+Descent, attachment, causal influence and correlation are distinct edges.
+Local spherical charts do not assert a globally spherical multi-hole geometry;
+a spherical boundary does not determine global spatial topology.
+
+Use the existing [compute admission rule](prior-art-and-open-claim.md) and
+[arXiv reuse library](arxiv-studies.md). Every new scientific calculation names
+borrowed mathematics, its missing connection, the decision and next question,
+a finite domain and budget, and an outcome that stops or redirects it. Hold
+the theory and state assumptions fixed within each comparison. Unit changes
+cannot select a physical coupling. Deriving every particle and nuclear mass
+is a longer-term candidate ambition, not an admission condition for the atlas.
+
+The imported finite reducers are reusable; a multi-region physical Hamiltonian
+must still be justified. Coordinate clocks, finite periodic collars and toy
+branch weights do not establish cross-universe ages, new universes or cosmic
+matter fractions. Local lensing/clustering, expansion, antimatter and time
+are separate later questions. No preset dark fraction selects an attachment.
+
+## Retained RN radial programme
+
+The scientific starting checkpoint is `5cb775a7`, the producer of the
+recorded NF256 confirmation. The external two-room import remains
+the historical commit `d95175c25a9989aea681967d6089aa7b2bf27706`.
+It is not an RN result and not the live branch identity. Live branch
+commands are at the top of this page. The periodic parent
+below is historical input. Further periodic autonomous exchange runs
+stay off this programme. This candidate's question is a nonperiodic
+horizon-regular Painlevé–Gullstrand parent exterior and a distinct
+near-throat child on its own areal radius. Exact magnetic
+Reissner–Nordström calibration comes before any sourced case. The
+working source-free jet comparison is measured and independently
+confirmed. The archived rank-$9$ frames do not store derived energies or
+curvature. `--assess-archive` reads them without a time step. The
+official writer refused the sealed directory, so the accepted
+assessment body is a creation-only record pinned to producer
+`64e2c36`. That commit is the saved-data context, not the identity
+of the current operator. The writer now allows a new development
+file and still protects existing and historical outputs. The current
+reproducible assessment is
+[nsc-rn-pilot-assessment-v2.json](../results/development/nsc-rn-pilot-assessment-v2.json).
+The manual v1 body remains the historical writer failure. A finite continuation reaches $T=20$ from
+the archived $t=10$ frame. Its scope and the open refinement are in
+[current result](current-result-history-20261102.md#rn-radial-parent-4-october-2026).
+That segment is not a completed neutral programme or a production seal.
+
+The first shell is neutral massless Dirac, $\kappa=1$, a spherical
+closed Gaussian, multiplicity 4 counted once, fixed flux integer
+$q=1$, sea-free, $V_4=0$, and a positive exterior static frequency.
+The parent outer boundary is absorbing at $R_{\mathrm{out}}=32 r_m$.
+Excision between the horizons is all outflow. $N$ and $\beta$ stay
+coupled from the action. The primary readout is neutral Dirac infall,
+the mass, horizon and RN deviation, and the held local response.
+Renewal lies outside the acceptance criterion. The charged
+lowest-Landau Gauss branch is a later experiment. The MMP
+negative-Casimir study runs in parallel and leaves the classical
+throat unblocked.
+
+The retained owners are `nsc_rn_reference`, `nsc_rn_pg`, `nsc_rn_source`,
+`nsc_rn_observables` and `derive_nsc_rn_parent`. The old worker allocation
+is retired. The six-case numerical family stopped without any case summary;
+its physical results are not claimed. A new run needs its own admission
+record, not the old six-worker execution instruction. The historical parent's
+bounded $n_f=256$ confirmation is recorded; its comparison, CPU and
+payload hash stay in
+[current result](current-result-history-20261102.md#rn-radial-parent-4-october-2026).
+That record stores no $R_4$. Source-free and matter-jet assessment is
+future Stage 0. Earlier metadata stays as written. The incoming gate
+stays paused. Keep the accepted plan in the task, not another
+repository plan or handover.
+
+<a id="present-regeneration-programme"></a>
+
+## Historical periodic parent
+
+The historical programme is the responsive parent, starting at `eb4798c`.
+Owners are the [preparation](https://doi.org/10.5281/zenodo.23090015),
+[episode adapter](https://doi.org/10.5281/zenodo.23090015),
+[observer](https://doi.org/10.5281/zenodo.23090015),
+[response adapter](https://doi.org/10.5281/zenodo.23090015),
+[step control](https://doi.org/10.5281/zenodo.23090015)
+and [Dirac contact](https://doi.org/10.5281/zenodo.23090015).
+The magnetic branch has its primary finite preparation, its $T=3$
+episode, and the completed frozen, empty-source and strong-offset
+controls. Renewal is not complete. The matched-offset controls and their
+array assessment are complete in their recorded domain. The NF128
+exterior-to-cut response is measured. A $+5\%$ parent occupation at the
+same $k$, with $c_0$ and the initial $Q$, $r$ and $\Phi$ fixed, changes
+the original child-column content by $1.114\%$ of its baseline. The held
+$\pm$ forecasts for that column match within $0.36$–$0.37\%$ of the
+predicted effect. No autonomous renewal is asserted. The bounded
+$n_f=256$ confirmation of that response is recorded in
+[current result](current-result-history-20261102.md#rn-radial-parent-4-october-2026).
+The same inheritance law covers states whose physical frequencies
+may differ. A thermal compression reading is conditional, and the recorded
+state is non-thermal. The ancestry share $\eta$ is not a new gate. The
+full state–geometry force stays the force in this comparison; a fixed-$J$
+Schur reduction is not a substitute for it. Earlier papers and the paused
+incoming gate stay preserved. The recorded outcome is in
+[current result](current-result-history-20261102.md#responsive-parent-3-october-2026).
+Regular black-hole interiors remain prior foundations; do not start a
+bounce-rediscovery campaign. The incoming gate stays paused. Keep the
+accepted plan in the task, not another repository plan or handover.
+
+The earlier six-CPU-hour RN batch allocation is historical, not an active
+authorization to restart it. Earlier manuscripts and releases stay preserved.
+
+The earlier **NSC Discovery Programme: Source-Selected Regions,
+Regeneration and Inherited Local Response** started at `ea6c699`.
+Its measured chain remains preserved input and is not the active cursor.
+
+The [finite parent–child construction](nsc-nested-parent-child.md),
+confirmed on 2 October 2026, completes its declared reciprocal state/geometry
+and local-response measurements under one metric/common action. Its
+[v2 record](../results/development/nsc-nested-parent-child-confirmation-v2.json)
+and portable replay retain their numerical domains; the incomplete v1 and
+the published papers remain preserved. This successor does not resume the
+incoming-gate campaign.
+
+The earlier finite-regeneration investigation started at `9a9090a` and
+established the short coupled loop. Its chain was a regional difference,
+exchange, state–geometry feedback, maintained structure, and a local
+measurement. Those results are inputs to the responsive parent and to the preserved
+discovery programme that started at `ea6c699`. The code owner is
+`src/recursive_horizons/nsc_spherical_galerkin_coupling.py`.
+The v5 replay,
+`scripts/derive_nsc_spherical_galerkin_refinement_v5.py`,
+remains the self-contained historical seed. The saved \(T=0.05\)
+measurement is `scripts/derive_nsc_spherical_feedback_episode.py`,
+which reuses that preparation. Its four runs are the recorded episode.
+
+`rk4_step` calls `rates` on each stage state. `rates` calls
+`compose_fine_hamiltonian`, which recomputes the column source and the
+geometric rates on that prolonged state. With the matter force included
+it feeds `force_Q` into the conjugate momentum,
+
+$$
+\dot p_Q \leftarrow \dot p_Q - F_Q/\Delta x_Q.
+$$
+
+\(Q\), \(r\), \(\chi\), the momenta and the spinor columns evolve. \(L\) and
+\(\beta\) stay gauge controls. `solve_initial_radius`, and the v5 replay's
+full-source Newton, set the initial radius from that source
+(\(\rho = F_L/\Delta x_Q\)).
+
+Those historical runs use the default `gauge="prescribed"`. The optional
+[conformal realization](https://doi.org/10.5281/zenodo.23090015) varies
+the same constraints before imposing $L=Q$, $\beta=0$, then retains the
+gauge chain rule and work $F_Q\dot Q+F_L\dot L$. Its saved four-run episode
+and normal-clock protocol have their own [status](current-result-history-20261102.md#same-action-conformal-episode-1-october-2026).
+
+The inheritance postulate used by this work is
+
+$$
+\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
+$$
+
+This retained realization's action is \(\Gamma_{\mathrm{one}}\): the canonical Gaussian plus
+the same-spectrum local induced term, counted once. The vacuum-matched CTP
+branch remains a separate historical choice.
+
+The saved prescribed-gauge continuation is
+[the regeneration episode](https://doi.org/10.5281/zenodo.23090015),
+$T=0.05$ to $T=0.085$, starting with the predecessor's exact Cauchy
+arrays. Its four space and time refinements meet one percent on the
+claimed physical movements. It stops when the bridge's both-positive arc
+enters the packet. Localization and throughflow are maintained; renewal
+is false. Frame momenta, $\dot Q$, and realized rate increments now
+support the [saved assessment](https://doi.org/10.5281/zenodo.23090015).
+The [local-response successor](nsc-coupled-local-response.md)
+uses the same continuation and original observer, carrying actual initial
+cross correlations. Memory, exterior drive, and cross omission each move
+the local occupation beyond the reduction error.
+
+The [weak helper](https://doi.org/10.5281/zenodo.23090015) keeps its sealed
+partial diagnostic and a separate initial-chart certificate. Under the
+sealed positivity hypotheses, the owning note proves a unique positive
+critical radius and a nearby exact initial state with the same source.
+That correction is not installed in the saved trajectory. An evolved error
+estimate at the scale of the claimed observables remains open;
+`evolution_error_bound` is null. Constraint residuals, physical source
+budgets, and refinement indicators remain reported in their own units.
+A Hamilton residual is not compared directly with a radius distance.
+
+The earlier $T=0.10$ controls, v1 local response, null-expansion review,
+and initial geometry-graded compression retain their recorded domains.
+The immutable local-boundary v2 review authenticates its owner bytes at
+commit `5f10ecd` for historical replay. New requests keep strict current
+source bindings. Numbers, verdicts, and the next physical gap stay in
+[current result](current-result-history-20261102.md#present-spherical-loop) and the owning
+notes. A cosmological fit or a proof of infinite physical time is outside
+this finite chain.
+
+This loop is a reusable finite realization because its geometry and its
+state forces already come from the same action. An extra invented rule for
+the radius as a function of energy is unnecessary. The historical hand-set
+\(H\) and \(B\) fractions, and the historical strong tolerance \(10^{-8}\),
+do not set the objective.
+
+The conformal successor now records the accepted finite chain through
+$T=0.3$: source-dependent regional transfer, generated metric response,
+maintained structure, and a local reduction on the same trajectory.
+The [owning note](https://doi.org/10.5281/zenodo.23090015) routes
+its actual metric jets, clock correction, source controls, surface ledger,
+and local omission errors. Numerical movements use one percent of their
+own effects. A total propagated or continuum certificate is a stronger
+claim, rather than an added prerequisite for this measured finite result.
+
+Construction stays flexible. Identify the shared structure, propose one
+finite realization, and check feasibility, CPU, and the scale of the effect
+before any larger run. The recorded outcome guides the next model step.
+Progress is an effect, a derived relation, a removed assumption, or a named
+blocker. A passing label, a test count, or a longer document is not that
+progress.
+
+Recorded numbers and owners:
+[current result](current-result-history-20261102.md#present-spherical-loop).
+
+## Papers
+
+The one living manuscript is
+[Nested-Space Cosmology: The Geometry of a Universe](../paper/nested-space-cosmology.md),
+with its [canonical PDF](../paper/nested-space-cosmology.pdf). Update these
+files for future manuscript work. The [paper guide](papers.md) and
+[catalog](../paper/catalog.json) distinguish this current manuscript from
+historical and supporting editions. Manuscript revision and software release
+version are separate. Human author review and the actual arXiv processor
+check remain pending.
+
+The exact previous v0.26.0 foundation edition is frozen in
+[its archive](../paper/archive/foundation-v0.26.0/paper/nested-space-cosmology.md),
+together with its PDF, metadata, claim bindings and renderer. Statements in
+that dated edition about the next step are history. Do not replace archived
+artifacts in place.
+
+The [1 October focused companion](../paper/finite-regeneration.pdf) preserves
+the measured finite spherical realization: regional source differences,
+surface transfer, generated geometry, maintained localization and local
+memory on the same trajectory. Its [source](../paper/finite-regeneration/main.tex)
+and [bound manifest](../paper/finite-regeneration-manifest.json) retain their
+declared finite domains. The [27 September companion](../paper/local-incoming-gate-draft.pdf)
+preserves its [finite nested-operator proof](nsc-nested-qualities.md) and OPEN
+incoming-gate appendix. These supporting editions and atlas v1–v6 remain
+evidence for the living paper; they are not parallel current manuscripts.
+The paused gate does not block the measured finite result.
+
+Assumptions, imported identities, repository calculations, numerical
+diagnostics and interpretations stay distinct. Spatial inheritance, charge
+conjugation and interference keep distinct operators. Global recurrence and
+cosmological matching are not established.
+
+## Reuse and verification
+
+Save new full numerical outputs under ignored `.build/results/`, and commit
+their compact summaries, hashes, input identities and regeneration commands.
+The [storage owner](nsc-storage.md#current-calculation-outputs-16-october-2026)
+and `scripts/check_result_storage.py` enforce the limit on new large JSON.
+Keep existing bound evidence intact. The
+[prediction register](prediction-register.md) records each result's fixed
+inputs, quantitative outputs, comparison status and remaining uncertainty.
+
+Consult the prior-art reuse map and existing evidence before compute. Name the
+missing connection and the smallest check that can resolve it. Stop repeated
+verification that leaves the physical gap unchanged. Historical derivations
+are reference material.
+
+Preserve scientific original bytes and their replay inputs. Routine edits run
+the relevant tests and publication checks. The paused incoming-gate campaign
+and any new expensive generator stay off that path. Changed PDF source
+requires an updated bound build, a deterministic-output check and visual
+review. An unchanged PDF does not need rebuilding because a task resumes.
+
+Present the living paper as the reader entrypoint, with supporting and
+historical editions linked by date, role and status. Ordinary documentation
+of OPEN work does not assign the next software release version or authorize
+arXiv submission. Frozen v0.26.0 stays the recorded foundation in its archive.
+Historical release plans remain dated history.
+
+Use relative repository links and GitHub-compatible dollar-delimited math.
+Credentials and private runtime state stay outside this repository. Historical
+lab records retain their original machine paths as provenance; those paths are
+not active routing instructions. New instructions use repository-relative
+links. Douglas Ek is the accountable author; significant AI assistance is
+disclosed without listing AI tools as authors.

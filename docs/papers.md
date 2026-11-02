@@ -588,7 +588,7 @@ The [exact nonlinear model](nsc-atlas-finite-amplitude.md) specifies the
 source, smooth equations and material interface. A full finite-amplitude
 solution and uniform remainder are not established by these coefficients.
 
-The [characteristic-background coupled window](current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+The [characteristic-background coupled window](current-result-history-20261102.md#characteristic-background-coupled-evolution-16-october-2026)
 now supplies six finite-amplitude numerical histories with a common moving
 wall and cap. Carrying the known incoming pulse analytically removes the
 dominant cap transport error. Paired wall geometry and clock responses
@@ -598,7 +598,7 @@ residuals remain explicit. The [comparison figure](figures/nsc-atlas-background-
 and saved fields connect this numerical advance to the manuscript without
 claiming a uniform error enclosure or central-arrival solution.
 
-Section 13.17 now adds the [fixed-input SSPRK3 comparison](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+Section 13.17 now adds the [fixed-input SSPRK3 comparison](current-result-history-20261102.md#midpoint-complete-ssprk3-comparison-16-october-2026)
 and its [saved-history figure](figures/nsc-atlas-ssprk3-refinement.png).
 The paired scalar's 256/512-step difference is 1.68% of its fine peak.
 An exact local profile-knot identity explains why crossing phase matters
@@ -607,7 +607,7 @@ difference ratio, small geometry changes and earlier extrapolant agreement
 do not establish convergence order or resolve the remaining spatial,
 constraint and computational-support defects.
 
-Section 13.18 adds the [same-grid exterior-operator comparison](current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026).
+Section 13.18 adds the [same-grid exterior-operator comparison](current-result-history-20261102.md#fixed-grid-exterior-operator-comparison-16-october-2026).
 One quadratic departure derivative drives both radial field reconstruction
 and moving-grid transport. Final kinematic defects decrease substantially
 and paired wall responses remain close, while the independent near-wall

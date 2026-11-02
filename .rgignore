@@ -1,10 +1,22 @@
-# Default research searches cover source, tests, scripts and current prose.
-# Retained evidence and historical editions remain accessible explicitly:
-#   rg --no-ignore 'pattern' results/summaries
-#   rg --no-ignore 'pattern' archive
+# Active foundation desk. Retained work is accessed deliberately, e.g.
+# rg --no-ignore 'pattern' src/recursive_horizons/nsc_atlas_parent_gh.py
+# This affects rg discovery only, not Python imports, pytest or Git.
 /archive/
 /results/
-/paper/archive/
-/paper/.build/
-/docs/figures/
-/paper/figures/
+/paper/
+/THEORY-history-20261102.md
+/docs/*
+!/docs/README.md
+!/docs/instructions.md
+!/docs/current-result.md
+!/docs/active-code-map.md
+!/docs/research-index.md
+!/docs/nsc-atlas-offset-generator.md
+/scripts/*
+!/scripts/run_python.py
+!/scripts/check_nsc_atlas_offset_generator.py
+/src/recursive_horizons/*
+!/src/recursive_horizons/__init__.py
+!/src/recursive_horizons/nsc_atlas_offset_generator.py
+/tests/*
+!/tests/test_nsc_atlas_offset_generator.py

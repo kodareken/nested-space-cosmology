@@ -1,5 +1,21 @@
 # Repository reassembly and audited cleanup
 
+## Active-desk reset, 2 November 2026
+
+Commit `643687af` preserves the unfinished local research and manuscript
+before this reset. Previous theory, instructions, result, code and research
+indexes are retained under `*-history-20261102.md` names in their original
+directories; old anchored links point to those histories. Short current
+entry points replace the accumulated campaign directions. Root `.rgignore`
+limits default discovery to the active foundation; Python, tests, source
+paths and numerical evidence are unchanged. All of that evidence remains
+available through explicit paths and Git.
+
+399 ignored Grok job files and loose page previews were moved from the
+top of `.build` to `.research-reset-preservation/20261102-desk`. No scientific
+raw arrays, environment, source code or results were deleted. The previous
+PDF remains unchanged; its unfinished source revision is saved, not built.
+
 The sole active root is `nested-space-cosmology`. Code, scripts, tests, notes
 and retained evidence live directly in `src`, `scripts`, `tests`, `docs` and
 `results`. Distribution identity remains `nested-space-cosmology` version 0.27.0.

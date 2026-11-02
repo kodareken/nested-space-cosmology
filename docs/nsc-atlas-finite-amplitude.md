@@ -507,7 +507,7 @@ solve. The [admission](prior-art-and-open-claim.md#nonlinear-exterior-rectangle-
 fixes the domain, four comparisons, tolerances and stopping budget.
 
 The [first record](../results/development/nsc-atlas-nonlinear-rectangle-v1/rectangle.json)
-completes all four grids. The [measured comparison](current-result.md#first-nonlinear-exterior-rectangle-16-october-2026)
+completes all four grids. The [measured comparison](current-result-history-20261102.md#first-nonlinear-exterior-rectangle-16-october-2026)
 shows refining metric and constraint diagnostics, with the largest raw
 $E_x$ error already present when differencing the known source. To extract
 jets for the next characteristic leg, write
@@ -2244,7 +2244,7 @@ continuum residual bound.
 
 The [first five-case calculation](../results/development/nsc-atlas-coupled-evolution-v1/coupled.json)
 completes this numerical window with the same source and action. Its
-[measured responses and unresolved constraints](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
+[measured responses and unresolved constraints](current-result-history-20261102.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
 separate spatial, temporal and source sensitivity. In particular, the
 early quiet wall layer retains a nondecreasing maximum `E_Ubar`, and
 the cap's discrete field compatibility and scalar wall response are
@@ -2505,7 +2505,7 @@ uses the same preparation, amplitude and interval as the first coupled
 window. Its 16/32-cell, 256-step cases and separate finite 32-cell,
 512-step case all finish. Creation and authentication together cost
 64.40625 process CPU seconds and 5,371,737 charged points. The
-[current result](current-result.md#compatible-coupled-evolution-16-october-2026)
+[current result](current-result-history-20261102.md#compatible-coupled-evolution-16-october-2026)
 contains the response comparisons.
 
 Vacuum geometry and wall clocks now agree with their exact trajectories
@@ -2669,7 +2669,7 @@ these four operators, including actual moving-vacuum steps, an active
 finite-amplitude background with nonzero incoming correction and the
 regular-axis and radial-integration checks above. Exact terminal-label
 evaluation passes, while a one-ulp excursion outside the profile is rejected.
-The [first physical comparison](current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+The [first physical comparison](current-result-history-20261102.md#characteristic-background-coupled-evolution-16-october-2026)
 now completes all six cases in the [calculation record](prior-art-and-open-claim.md#coupled-characteristic-background-comparison-16-october-2026).
 Creation and authentication use 228.9375 process CPU seconds and
 43,551,872 charged points. The independent zero-cap pullback reduces the
@@ -2718,7 +2718,7 @@ actual zero-case difference `2.87645e-6`. At cut 82 the paired rate change
 splits into exterior `4.64186e-6` and cap return `-6.65783e-9`, while
 the independent identities close within `2.84e-14`. This demonstrates
 cancellation but does not attribute the full-history error. The
-[result](current-result.md#scalar-time-contribution-audit-16-october-2026)
+[result](current-result-history-20261102.md#scalar-time-contribution-audit-16-october-2026)
 retains the distinction between rates, local path defects and accumulated
 field differences.
 
@@ -2756,7 +2756,7 @@ ledgers before subtraction makes the local comparison exact without
 asserting a propagated error estimate. The [admission](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
 fixes cut 82, both amplitudes, twelve stages and the existing input cache.
 
-The [completed local ledger](current-result.md#actual-scalar-step-balance-16-october-2026)
+The [completed local ledger](current-result-history-20261102.md#actual-scalar-step-balance-16-october-2026)
 uses 138,891 points and 1.546875 CPU seconds. The paired fine-minus-coarse
 increment is `8.03607226e-8`: background chain `8.32362063e-8`, exterior
 flux `-2.65646853e-9`, frame conversion `-2.21866157e-10`, cap return
@@ -2799,14 +2799,14 @@ and limiter changes can reduce the measured temporal order. Any measured
 improvement leaves the spatial constraint and cap-refinement questions
 separate; the Runge--Kutta coefficients do not resolve those questions.
 
-The [first local result](current-result.md#local-ssprk3-comparison-16-october-2026)
+The [first local result](current-result-history-20261102.md#local-ssprk3-comparison-16-october-2026)
 uses six stages and 70,118 points. Its paired increment differs from the
 SSPRK2 asymptotic extrapolant by `-2.71979e-9`, compared with
 `-2.67869e-8` for the two SSPRK2 half steps. The weighted canonical and
 invariant balances close at roundoff. This motivates the fixed-input
 128/256-step comparison; the extrapolant is not an exact solution.
 
-The [full comparison](current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)
+The [full comparison](current-result-history-20261102.md#fixed-input-ssprk3-coupled-window-16-october-2026)
 now completes at the same two amplitudes and fixed 32-cell spatial grid.
 Its paired radius and clock temporal differences are below `1.34e-9`,
 while the paired scalar difference is `7.57345e-6` (21.54% of the fine
@@ -2998,7 +2998,7 @@ retain the outgoing source residual rather than assume it vanishes.
 
 #### Independent incoming wall curvature
 
-The [saved audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+The [saved audit](current-result-history-20261102.md#saved-constraint-transport-and-sampling-16-october-2026)
 finds an incoming constraint maximum `5.54765e-4` on wholly wall-origin
 stencils, compared with `1.15980e-5` on wholly bottom-origin stencils.
 An independent wall datum can be reconstructed without the hybrid wall
@@ -3050,7 +3050,7 @@ Even disjoint stencils share one numerical evolution. The
 tests the missing boundary connection; it does not prove continuous
 constraint propagation or the complete junction system.
 
-The [completed calculation](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+The [completed calculation](current-result-history-20261102.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
 supports all 916 wall-origin points at both interpolation samplings, but
 does not resolve this connection. On the 162 disjoint-stencil points,
 every wall subtraction increases the raw weighted-constraint RMS
@@ -3091,7 +3091,7 @@ after assembling the physical radius and actual source jets. Neither
 difference supplies a continuum error bound, and neither assumes a zero
 incoming constraint at the wall.
 
-The [completed 32/64-cell comparison](current-result.md#fixed-input-spatial-refinement-16-october-2026)
+The [completed 32/64-cell comparison](current-result-history-20261102.md#fixed-input-spatial-refinement-16-october-2026)
 finds a paired wall-scalar difference of `2.69431e-7`, or `0.774698%`
 of the fine response peak. Geometry and clock differences are below
 `0.071471%` of their respective fine peaks. At equal diagnostic width,
@@ -3169,7 +3169,7 @@ The [operator controls](prior-art-and-open-claim.md#second-order-exterior-depart
 therefore test known inflow solutions, finite amplification and complete
 stage equivalence before a separately specified physical comparison.
 
-The [completed same-grid comparison](current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+The [completed same-grid comparison](current-result-history-20261102.md#fixed-grid-exterior-operator-comparison-16-october-2026)
 reduces the final radius, lapse and scalar kinematic defects by about
 21--33 times. The paired wall-scalar response changes by `0.524076%`
 of its new peak; paired wall geometry and clock changes are below
@@ -3216,7 +3216,7 @@ evolved arrays, retaining scalar stress and both background cross terms.
 A concentrated last-row contribution alone cannot identify its physical or
 numerical origin.
 
-The [completed three-cut audit](current-result.md#saved-near-wall-row-audit-16-october-2026)
+The [completed three-cut audit](current-result-history-20261102.md#saved-near-wall-row-audit-16-october-2026)
 finds that localization. At cut 63 the new finite incoming constraint
 changes from `9.28122e-5` at node 62 to `3.64417e-4` at node 63,
 while the same-cut interior control is below `2.895e-10`. The node-63
@@ -3294,7 +3294,7 @@ implied by the saved wall curve, and the one imposed by the hybrid map
 remain separate reported quantities. Their associated flux differences
 are measured explicitly, without replacing the primary left-trace residual.
 
-The [completed audit](current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
+The [completed audit](current-result-history-20261102.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
 uses matched integration orders on all neighboring slices, two time and
 radial widths, actual boundary-map reconstruction and the
 [fixed allowance](prior-art-and-open-claim.md#selected-cap-mass-and-wall-curve-audit-16-october-2026).
@@ -3453,7 +3453,7 @@ and radial derivative recover `D_x^hist n_W`; this bridge needs no new
 metric or evolution. Without it, a directional-versus-history comparison
 would also contain changed wall and clock rates.
 
-The [completed directional calculation](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
+The [completed directional calculation](current-result-history-20261102.md#terminal-cap-mass-functional-derivative-16-october-2026)
 finds finest finite `e_m^dir=-0.6612504470`, with order sensitivity
 `1.09497e-5`, compared with `e_hist,hyb=-0.6407403055`.
 The last two widths differ by `0.000515001`; the finest stencil has no
@@ -3471,7 +3471,7 @@ The [diagnostic companion](../src/recursive_horizons/nsc_atlas_cap_mass_tangent.
 differentiates the implemented mass-edge quadrature. It leaves the retained
 metric and transport producers unchanged. At this stage its manufactured
 controls and the four retained terminal cases pass, including creation
-validation and a standalone check. The [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
+validation and a standalone check. The [completed ledger](current-result-history-20261102.md#discrete-cap-mass-balance-16-october-2026)
 records the numerical contributions and the corrected accumulation bound.
 
 On panel j, with half-width h and Gauss weights omega, the edge recurrence is
@@ -4021,7 +4021,7 @@ This fixes branch-representative drift without changing the retained native
 tangent, imposing a residual or weakening the branch check. The first retained
 attempt stopped at that branch comparison. The corrected two-state terminal
 comparison now passes all declared accuracy gates; its
-[recorded channel attribution](current-result.md#terminal-cap-transport-attribution-16-october-2026)
+[recorded channel attribution](current-result-history-20261102.md#terminal-cap-transport-attribution-16-october-2026)
 locates the imbalance in reconstructed field transport and interfaces, with
 radial-map contributions below the stated diagnostic resolution. It supplies
 no corrected evolution or uniform finite-amplitude bound.

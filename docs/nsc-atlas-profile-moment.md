@@ -2,7 +2,7 @@
 
 The [scalar-input calculation](nsc-atlas-scalar-forcing.md) derived a simpler
 mass representation before central arrival. Its
-[first interpolation assessment](current-result.md#scalar-lift-and-exterior-forcing-16-october-2026)
+[first interpolation assessment](current-result-history-20261102.md#scalar-lift-and-exterior-forcing-16-october-2026)
 found that the active pulse needs additional boundary samples. This successor
 checks the mass representation numerically, then uses it for that refinement.
 The [admission](prior-art-and-open-claim.md#profile-moment-and-local-lift-admission-16-october-2026)

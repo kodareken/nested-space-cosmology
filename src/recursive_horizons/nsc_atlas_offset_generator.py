@@ -8,7 +8,77 @@ import math
 import mpmath as mp
 import numpy as np
 from scipy.spatial import SphericalVoronoi,cKDTree
-from .nsc_atlas_parent_scale_selector import VolumeParent
+
+
+def opposite_winding_path(position, contraction, turns=1, radius=1.):
+    """A closed forward/reverse loop and its null homotopy, not a time law.
+
+    position is the retained drawing coordinate in [0,2]. At contraction=0
+    the first half has degree turns and the second degree -turns. During
+    contraction only the combined loop stays closed. The two halves need
+    not remain individually closed: their contact is allowed to reconnect.
+    """
+    if type(turns) is not int or turns == 0:
+        raise ValueError('nonzero integer winding required')
+    if not math.isfinite(radius) or radius <= 0:
+        raise ValueError('positive finite radius required')
+    if not math.isfinite(contraction) or not 0 <= contraction <= 1:
+        raise ValueError('contraction must lie in [0,1]')
+    x = np.asarray(position, dtype=float)
+    if not np.all(np.isfinite(x)) or np.any((x < 0) | (x > 2)):
+        raise ValueError('drawing coordinate must lie in [0,2]')
+    lift = np.minimum(x, 2 - x)
+    return radius * np.exp(2j * np.pi * turns * (1 - contraction) * lift)
+
+
+def winding_variation(contraction, turns=1, radius=1.):
+    """Half the integral of |dz/dx|^2 over [0,2], in drawing units.
+
+    This geometric functional has no supplied conversion to physical energy.
+    It is the minimum for a fixed circle radius, endpoints and midpoint lift.
+    """
+    opposite_winding_path(0., contraction, turns, radius)
+    return 4 * math.pi**2 * radius**2 * turns**2 * (1 - contraction)**2
+
+
+def balanced_output_directions(count):
+    """Competing balanced channel geometries; count is supplied, not selected."""
+    if type(count) is not int or count < 2:
+        raise ValueError('at least two output channels required')
+    angles = 2 * np.pi * np.arange(count) / count
+    return np.c_[np.cos(angles), np.sin(angles), np.zeros(count)]
+
+
+def winding_calculation():
+    """Geometry-only reference calculation: no parent action or observed scale."""
+    cases = []
+    for count in (2, 3, 4):
+        directions = balanced_output_directions(count)
+        cases.append(dict(channels=count, fraction_each=1/count,
+                          normalized_vector_sum=(directions.sum(axis=0)/count).tolist(),
+                          adjacent_angle_degrees=360/count))
+    return dict(
+        schema='nsc-offset-winding-geometry-v1',
+        premises=['circle target with unit radius for this dimensionless example',
+                  'integer winding of a continuous closed loop',
+                  'concatenation joins opposite loops at one contact',
+                  'squared-derivative functional in the stated drawing coordinate'],
+        pair=dict(degrees=[1, -1], combined_degree=0,
+                  variation_each=2*math.pi**2, variation_pair=4*math.pi**2,
+                  conjugation_preserves_positive_variation=True),
+        contraction=[dict(parameter=h, variation=winding_variation(h))
+                     for h in (0., .25, .5, .75, 1.)],
+        two_channel_consequence=dict(
+            assumptions=['exactly two unit-direction outputs',
+                         'positive scalar budgets with total one',
+                         'zero weighted direction sum, with no other receiver'],
+            fractions=[.5, .5], ratio=1., separation_degrees=180.),
+        competing_balanced_channels=cases,
+        missing_connection='contact composition/evolution law selecting the channels and transfer',
+        physical_energy_unit_selected=False,
+        physical_duration_selected=False,
+        electron_or_positron_identification_derived=False,
+        no_observational_input=True)
 
 
 def offset_value(kind):
@@ -66,6 +136,8 @@ def finite_record(count,kind):
 
 
 def calculation():
+    # This is the retained action-based comparison, not a foundation input.
+    from .nsc_atlas_parent_scale_selector import VolumeParent
     cases=[]
     for kind in ('action','golden'):
         with mp.workdps(80):alpha=mp.nstr(offset_value(kind),50)

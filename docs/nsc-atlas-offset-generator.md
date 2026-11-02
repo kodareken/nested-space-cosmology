@@ -1,5 +1,91 @@
 # One spatial seed and a repeated offset: a constructive geometric map
 
+## Active foundation: opposite windings, 2 November 2026
+
+The geometry-only calculation is:
+
+```text
+python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --winding-only
+```
+
+It does not evaluate the supplied parent action, select an observational
+target or write another result file. The older parent comparison below is
+retained as a conditional construction, outside these premises.
+
+### Closed orientations and their contact
+
+Take a circle of radius R and a normalized drawing coordinate x in [0,1].
+The two orientations are z_+(x)=R exp(2 pi i m x) and
+z_-(x)=R exp(-2 pi i m x). Closure requires integer m. Their degrees are
++m and -m. Define the geometric squared variation, explicitly in this
+drawing coordinate, by Q[z]=(1/2) integral |dz/dx|^2 dx. Each loop has
+Q=2 pi^2 R^2 m^2: reversing orientation preserves its positive value.
+This functional has no supplied conversion to joules or particle mass.
+
+Join the loops at one contact and use a combined coordinate x in [0,2].
+Let f(x)=x for x<=1 and f(x)=2-x for x>=1. The joined path
+
+$$
+Z_h(x)=R\exp[2\pi i m(1-h)f(x)],\qquad 0\leq h\leq1,
+$$
+
+is closed, continuous and never passes through zero. It is piecewise
+smooth with finite squared variation at the join. At h=0 it follows the
+two loops; at h=1 it is constant. During contraction the two halves need
+not remain separately closed: allowing their common contact to reconnect
+is an explicit operation, not a consequence of the offset update alone.
+
+Its variation is exactly
+
+$$
+Q[Z_h]=4\pi^2R^2m^2(1-h)^2.
+$$
+
+Cauchy-Schwarz proves this is the least variation at each h for a fixed
+circle radius, fixed endpoint lift and midpoint lift: on each length-one
+half, integral (phase derivative)^2 >= (phase change)^2, with equality
+for the constant phase slopes used above. This is a sharp constrained
+minimum, not a claim that nature selects the constraints.
+
+For R=m=1:
+
+| Contraction h | Q |
+| --- | --- |
+| 0 | 39.4784176044 |
+| 1/4 | 22.2066099025 |
+| 1/2 | 9.8696044011 |
+| 3/4 | 2.4674011003 |
+| 1 | 0 |
+
+This supplies a regular geometric continuation from opposite winding to
+zero variation. The parameter h is not yet the offset's selected history.
+No received energy, new region or outgoing signal is inferred from the
+decrease without a transfer law.
+
+### What forces the 1:1 and 180-degree pair?
+
+Suppose exactly two outputs have positive scalar amounts a,b, unit
+directions u,v, total a+b=Q_out, and balanced weighted directions
+a u+b v=0, with no remaining receiver. Taking norms gives a=b, hence
+u=-v. Therefore each amount is Q_out/2: **ratio 1, angle 180 degrees**.
+This is an exact geometric consequence of those explicit output rules.
+
+Balance alone does not select two outputs. Three equal outputs separated
+by 120 degrees, or four separated by 90 degrees in a plane, also balance.
+The calculation constructs all three cases. Nor does opposite orientation
+select a contact rule: multiplying conjugate unit-circle maps gives a
+constant, adding them gives 2 cos(phase), and retaining both keeps two
+loops. The offset recurrence alone specifies none of these interactions.
+
+**Next missing connection:** the contact composition/evolution law that
+selects output channels and transfers the lost geometric variation.
+Deriving that law, its coupling to the offset and an instrument readout is
+what can distinguish this construction from a change of names. No 511 keV
+scale, electron charge or matter excess has been derived here. Integer
+winding is conditional on the circle target; it is not a charge assignment.
+
+## Retained offset-history construction
+
 Douglas's starting proposal is one spatial seed plus an offset operation,
 applied repeatedly to generate a circle, a sphere and continued structure.
 Here the offset is the primitive update; no independent proper-time
