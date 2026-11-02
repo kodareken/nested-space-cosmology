@@ -619,7 +619,9 @@ def build_pdf(
         "zeta": "ζ",
     }
 
-    def latex_to_plain(value: str) -> str:
+    def latex_to_plain(
+        value: str, script_open: str = "(", script_close: str = ")"
+    ) -> str:
         """Make short inline formulae legible in ReportLab paragraphs."""
 
         value = value.replace(r"\%", "%").replace(r"\!", "").replace(r"\,", " ")
@@ -650,7 +652,13 @@ def build_pdf(
         value = value.replace(r"\Box", "□")
         value = value.replace(r"\parallel", "∥").replace(r"\perp", "⊥")
         value = value.replace(r"\|", "‖").replace(r"\Vert", "‖")
+        value = value.replace(r"\lvert", "|").replace(r"\rvert", "|").replace(r"\vert", "|")
         value = value.replace(r"^{\circ}", "°").replace(r"^\circ", "°").replace(r"\circ", "∘")
+        value = re.sub(
+            r"\\(log|ln|exp|cosh|sinh|tanh|cos|sin|tan|sec|csc|cot|arcsin|arccos|arctan|atanh|artanh|min|max|sup|inf|lim|det|Tr|diag|sgn)(?=\\[A-Za-z])",
+            r"\1 ",
+            value,
+        )
         value = re.sub(
             r"\\(log|ln|exp|cosh|sinh|tanh|cos|sin|tan|sec|csc|cot|arcsin|arccos|arctan|atanh|artanh|min|max|sup|inf|lim|det|Tr|diag|sgn)(?![A-Za-z])",
             r"\1",
@@ -659,43 +667,62 @@ def build_pdf(
         for name, symbol in greek.items():
             value = value.replace(f"\\{name}", symbol)
         value = value.replace(r"\bar\psi", "ψ̄")
-        value = re.sub(r"\\(?:overline|bar)\{([^{}]+)\}", lambda match: match.group(1) + "\u0304", value)
-        value = re.sub(r"\\bar\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0304", value)
-        value = re.sub(r"\\ddot\{([^{}]+)\}", lambda match: match.group(1) + "\u0308", value)
-        value = re.sub(r"\\ddot\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0308", value)
-        value = re.sub(r"\\dot\{([^{}]+)\}", lambda match: match.group(1) + "\u0307", value)
-        value = re.sub(r"\\dot\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0307", value)
-        value = re.sub(r"\\(?:widetilde|tilde)\{([^{}]+)\}", lambda match: match.group(1) + "\u0303", value)
-        value = re.sub(r"\\(?:widetilde|tilde)\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0303", value)
-        value = re.sub(r"\\(?:widehat|hat)\{([^{}]+)\}", lambda match: match.group(1) + "\u0302", value)
-        value = re.sub(r"\\(?:widehat|hat)\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0302", value)
-        value = value.replace(r"\sqrt", "√")
-        value = re.sub(
-            r"\\(?:frac|tfrac|dfrac)\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
-        )
-        value = re.sub(
-            r"\\binom\{([^{}]+)\}\{([^{}]+)\}", r"C(\1,\2)", value
-        )
         value = re.sub(r"\\rm(?![A-Za-z])\s*", "", value)
-        for _ in range(2):
+        for _ in range(4):
             for command in ("mathrm", "mathbf", "boldsymbol", "mathbb", "mathcal", "operatorname", "text"):
                 value = re.sub(rf"\\{command}\{{([^{{}}]+)\}}", r"\1", value)
                 value = re.sub(rf"\\{command}\s+([A-Za-z])", r"\1", value)
+            value = re.sub(r"\\(?:overline|bar)\{([^{}]+)\}", lambda match: match.group(1) + "\u0304", value)
+            value = re.sub(r"\\bar\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0304", value)
+            value = re.sub(r"\\ddot\{([^{}]+)\}", lambda match: match.group(1) + "\u0308", value)
+            value = re.sub(r"\\ddot\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0308", value)
+            value = re.sub(r"\\dot\{([^{}]+)\}", lambda match: match.group(1) + "\u0307", value)
+            value = re.sub(r"\\dot\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0307", value)
+            value = re.sub(r"\\(?:widetilde|tilde)\{([^{}]+)\}", lambda match: match.group(1) + "\u0303", value)
+            value = re.sub(r"\\(?:widetilde|tilde)\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0303", value)
+            value = re.sub(r"\\(?:widehat|hat)\{([^{}]+)\}", lambda match: match.group(1) + "\u0302", value)
+            value = re.sub(r"\\(?:widehat|hat)\s*([A-Za-zΑ-Ωα-ω])", lambda match: match.group(1) + "\u0302", value)
+            value = re.sub(
+                r"\\sqrt\{([^{}]+)\}",
+                lambda match: f"√({match.group(1)})" if re.search(r"[+\-\s]", match.group(1)) else f"√{match.group(1)}",
+                value,
+            )
+            value = re.sub(
+                r"\\(?:frac|tfrac|dfrac)\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
+            )
+            value = re.sub(
+                r"\\binom\{([^{}]+)\}\{([^{}]+)\}", r"C(\1,\2)", value
+            )
+            value = re.sub(
+                r"_\{([^{}]+)\}",
+                lambda match: f"_{script_open}{match.group(1)}{script_close}",
+                value,
+            )
+            value = re.sub(
+                r"\^\{([^{}]+)\}",
+                lambda match: f"^{script_open}{match.group(1)}{script_close}",
+                value,
+            )
+        value = value.replace(r"\sqrt", "√")
         value = re.sub(r"\\(?:mathrm|mathbf|boldsymbol|mathbb|mathcal|operatorname|text)(?![A-Za-z])\s*", "", value)
-        value = re.sub(r"_\{([^{}]+)\}", r"_(\1)", value)
-        value = re.sub(r"\^\{([^{}]+)\}", r"^(\1)", value)
         value = value.replace("{", "").replace("}", "")
         value = value.replace(r"\left", "").replace(r"\right", "")
         value = value.replace(r"\langle", "⟨").replace(r"\rangle", "⟩")
+        value = value.replace("--", "–")
         return re.sub(r"\s+", " ", value).strip()
 
     def inline_math_markup(value: str) -> str:
-        plain = html.escape(latex_to_plain(value), quote=False)
+        plain = html.escape(
+            latex_to_plain(value, script_open="\ufff9", script_close="\ufffa"),
+            quote=False,
+        )
         def script(match: re.Match[str]) -> str:
             tag = "sub" if match.group(1) == "_" else "super"
             return f"<{tag}>{match.group(2)}</{tag}>"
-        plain = re.sub(r"([_^])\(([^()]*)\)", script, plain)
-        return re.sub(r"([_^])([\w*⋆†±+∥⊥°∘-])", script, plain)
+        plain = re.sub(r"([_^])([\w*⋆†±+∥⊥°∘∞×-])", script, plain)
+        while re.search(r"([_^])\ufff9([^\ufff9\ufffa]*)\ufffa", plain):
+            plain = re.sub(r"([_^])\ufff9([^\ufff9\ufffa]*)\ufffa", script, plain)
+        return plain
 
     def inline_markup(value: str) -> str:
         tokens: list[str] = []
@@ -748,7 +775,10 @@ def build_pdf(
         return token_pattern.sub(lambda match: tokens[int(match.group(1))], value)
 
     def table_flowable(lines: list[str]) -> Table:
-        raw_rows = [[cell.strip() for cell in row.strip().strip("|").split("|")] for row in lines]
+        raw_rows = [
+            [cell.strip() for cell in re.split(r"(?<!\\)\|", row.strip().strip("|"))]
+            for row in lines
+        ]
         if len(raw_rows) > 1 and all(
             re.fullmatch(r":?-{3,}:?", cell.replace(" ", ""))
             for cell in raw_rows[1]

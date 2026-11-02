@@ -817,7 +817,7 @@ crossing `0` into `-` (`exponential_wall_bypasses_and_triad_winner` and
    Opening the `0` horizon valve into a `-` child sphere ($\theta^*\to 1$)
    bypasses the wall and caps the 5-variable cost at the finite plateau
    $$
-   E_{5\text{-var}}^*(\chi)\to 4-\frac{3}{2}e^{-\chi}\to 4.0.
+   E_{\mathrm{5-var}}^*(\chi)\to 4-\frac{3}{2}e^{-\chi}\to 4.0.
    $$
 3. **Wall 3 — Single-Axis Winding Wall $N^{3/2}$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Nuclear Hard Core:**
    For a vacuum bubble of radius $R$ carrying integer winding $n\in\mathbb{Z}$
@@ -862,7 +862,7 @@ crossing `0` into `-` (`exponential_wall_bypasses_and_triad_winner` and
 
 | Non-local multiverse geometry (`A0--A4`) | Local physics label | Derived mathematical relation & calculated readout |
 | --- | --- | --- |
-| Circle $z(\tau)=R_0e^{i\omega\tau}$ seen edge-on as pendulum $R(\tau)=R_0\cos(\omega\tau)$ crossing `0` into `-` | Black-hole singularity / Big Bang birth | Smooth crossing ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$); unsigned size $r=\|R\|\geq 0$ creates an artificial velocity cusp $\Delta\dot{r}=+2R_0\omega$ at $r=0$ |
+| Circle $z(\tau)=R_0e^{i\omega\tau}$ seen edge-on as pendulum $R(\tau)=R_0\cos(\omega\tau)$ crossing `0` into `-` | Black-hole singularity / Big Bang birth | Smooth crossing ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$); unsigned size $r=\lvert R\rvert\geq 0$ creates an artificial velocity cusp $\Delta\dot{r}=+2R_0\omega$ at $r=0$ |
 | Two half-turns $(-1)\times(-1)=+1$ across two nested `0` crossings ($\mathcal{P}^2=(-I_3)^2=+I_3$) | Parity / orientation restoration across two generations | $\det\mathcal{P}=(-1)^3=-1$ ($\mathrm{Parent}\ (+)\to\mathrm{Child}\ (-)$), $\det(\mathcal{P}^2)=(-1)(-1)=+1$ ($\mathrm{Child}\ (-)\to\mathrm{Grandchild}\ (+)$) |
 | Exponential-wall bypasses (`1D -> helix`, `+ -> 0 -> -`, single-axis $N^{3/2}\to$ 3D triad `(1,1,1)`) | 3D nucleon ground state & nuclear hard-core potential | `(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state ($E^*=4.0$, $1:1:1$ sphere); `(2,1,1)` ($N=4$) is $4:1:1$ prolate ($E^*=4\sqrt{2}$); two `(1,1,1)` triads attract at $d>2R^*$ ($-2m_0/d$) and repel at $d\to 0$ against `(2,2,2)` ($+3.3137$ hard core) |
 | Surrounding-flow Virial lock $E_{\mathrm{surr}}^*/W_{\mathrm{press}}^*=3$ & integer loop closure $z(1)=z(0)$ | Mass in surrounding flow, quantized line bursts & $180^\circ$ annihilation | $75\%$ of bubble energy in $r\geq R$ flow, $25\%$ in cavity, $0\%$ in a point; $(+1,-1)\to 0$ releases two equal $180^\circ$ ripples |
