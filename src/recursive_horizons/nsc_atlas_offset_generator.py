@@ -249,6 +249,8 @@ def inherited_offset_calculation():
         formula='chi_pc = (log(Jp/Jp0)-log(Jc/Jc0))/dimension',
         interpretation='candidate inherited compression coordinate; angular/time identification remains a premise',
         composition='chi_grandparent_child = chi_grandparent_parent + chi_parent_child',
+        bookkeeping_note='chi additivity is an algebraic log-ratio telescoping identity (bookkeeping), not dynamical evidence for the mechanism',
+        mechanism_evidence=False,
         increment='delta_chi is computed from deformation history, not independently selected',
         normalization='logarithmic length compression; no SI time or angle conversion',
         analytic_controls=dict(sample_parameter=samples.tolist(),
@@ -320,6 +322,167 @@ def conservative_neck_shape(offset):
                 log_volume=0.,receiving_child_formed=False)
 
 
+def generator_least_stretch_cost(deformation, gradient_factor, enclosing_load=0., reference_volume=1.):
+    """A0 least-stretch cost of 1D generated phase paths under affine deformation.
+
+    Unlike the 3D volume-weighted Dirichlet integral det(A)*||C A^-1||^2/2
+    (which scales as lambda^(d-2) and decreases to 0 under d=3 compression),
+    a 1D generated curve of reference length L carrying phase change Delta_psi
+    has Cauchy-Schwarz minimum arc-length stretch (Delta_psi)^2/(2 L_physical).
+    For right-stretch (A^T A)^(1/2) and 1D moment M = C^T C / 2, this gives
+    Q_stretch(A) = trace[(A^T A)^(-1/2) C^T C] / 2. Under uniform scaling
+    A = lambda I = exp(-chi) I, Q_stretch scales as lambda^-1 = exp(chi) in
+    every dimension d >= 1, resisting compression rather than vanishing.
+    """
+    A=np.asarray(deformation,dtype=float);C=np.asarray(gradient_factor,dtype=float)
+    if (A.ndim!=2 or A.shape[0]!=A.shape[1] or A.shape[0]<1
+            or C.ndim!=2 or C.shape[0]<1 or C.shape[1]!=A.shape[0]):
+        raise ValueError('square deformation and matching gradient factor required')
+    if not np.all(np.isfinite(A)) or not np.all(np.isfinite(C)):
+        raise ValueError('finite geometric inputs required')
+    if not math.isfinite(enclosing_load) or enclosing_load<0 or not math.isfinite(reference_volume) or reference_volume<=0:
+        raise ValueError('nonnegative finite enclosing load and positive reference volume required')
+    sign,log_volume=np.linalg.slogdet(A)
+    if sign<=0:raise ValueError('orientation-preserving nonsingular deformation required')
+    vals,vecs=np.linalg.eigh(A.T@A)
+    if np.any(vals<=0):raise ValueError('positive definite metric required')
+    stretches=np.sqrt(vals)
+    projected=C@vecs
+    directional_moments=.5*np.sum(projected**2,axis=0)
+    stretch_cost=float(np.sum(directional_moments/stretches))
+    enclosing_work=float(enclosing_load*reference_volume*math.exp(log_volume))
+    return dict(stretch_cost=stretch_cost,enclosing_work=enclosing_work,
+                total_cost=stretch_cost+enclosing_work,log_volume=float(log_volume),
+                principal_stretches=stretches.tolist(),
+                principal_moments=directional_moments.tolist())
+
+
+def least_resistance_compression_minimum(principal_moments, enclosing_load, reference_volume=1.):
+    """Exact minimum of Q_stretch + P V under enclosing compression P > 0.
+
+    For 1D generator moments m_i > 0 along d=3 principal axes:
+    E(lambda_1,lambda_2,lambda_3) = sum_i m_i/lambda_i + P V0 lambda_1 lambda_2 lambda_3.
+    Stationarity dE/d(lambda_i)=0 gives lambda_i^* = m_i / [(m_1 m_2 m_3)^(1/4) (P V0)^(1/4)].
+    If any transverse moment vanishes (1D seed limit m_perp -> 0), the transverse
+    radius pinches to 0 (s -> +infinity), triggering the neck-break continuation.
+    """
+    m=np.asarray(principal_moments,dtype=float)
+    if m.shape!=(3,) or not np.all(np.isfinite(m)) or np.any(m<0) or np.all(m==0):
+        raise ValueError('three finite nonnegative principal moments with positive sum required')
+    if not math.isfinite(enclosing_load) or enclosing_load<=0 or not math.isfinite(reference_volume) or reference_volume<=0:
+        raise ValueError('positive finite enclosing load and reference volume required')
+    pv=enclosing_load*reference_volume
+    if np.any(m==0):
+        return dict(outcome='neck_pinch_opening_break',
+                    principal_moments=m.tolist(),enclosing_load_work_scale=pv,
+                    equilibrium_scales=None,
+                    break_reason='zero transverse generator moment cannot hold transverse radius against enclosing compression; continues across neck pinch')
+    geom=float(np.prod(m))**.25
+    load_factor=pv**.25
+    scales=m/(geom*load_factor)
+    volume_scale=float(np.prod(scales))
+    stretch_cost=float(np.sum(m/scales))
+    enclosing_work=float(pv*volume_scale)
+    s_neck=float(math.log(scales[2]/math.sqrt(scales[0]*scales[1]))/3)
+    outcome='uniform_contraction' if np.allclose(m,m[0]) else 'anisotropic_neck_equilibrium'
+    return dict(outcome=outcome,
+                principal_moments=m.tolist(),
+                enclosing_load_work_scale=pv,
+                equilibrium_scales=scales.tolist(),
+                equilibrium_volume_ratio=volume_scale,
+                inherited_compression_chi=-math.log(volume_scale)/3,
+                log_axial_neck_parameter=s_neck,
+                axial_to_transverse_aspect_ratio=float(scales[2]/math.sqrt(scales[0]*scales[1])),
+                stretch_cost=stretch_cost,
+                enclosing_work=enclosing_work,
+                total_cost=stretch_cost+enclosing_work,
+                virial_ratio_stretch_to_work=stretch_cost/enclosing_work)
+
+
+def continue_across_neck_break(offset):
+    """Apply the NSC break rule to the axial neck pinch a(tau)=exp(-s/2)->0.
+
+    In parent coordinates, conservative_neck_shape drives transverse radius
+    a(tau)=[cosh(sqrt(2/3)*tau)]^(-1/2) -> 0 and normalized velocity
+    s_dot/sqrt(2/3) = tanh(sqrt(2/3)*tau) -> 1 (hitting 0.999889... by tau=6).
+    Changing coordinates at the throat via R_child = a^(-2) = exp(s) = cosh(sqrt(2/3)*tau)
+    continues the same conserved trajectory into an expanding child frame obeying
+    (R_child_dot / R_child)^2 + 2/(3 R_child^2) = 2/3, with asymptotic expansion
+    rate H_child -> sqrt(2/3) and effective child cosmological constant Lambda_child = 2.
+    """
+    parent=conservative_neck_shape(offset)
+    a_rate=math.sqrt(2/3);u=a_rate*offset
+    s=parent['log_axial_scale']
+    parent_transverse=math.exp(-s/2)
+    wall_fraction=math.tanh(u)
+    child_scale=math.exp(s)
+    child_hubble=parent['shape_velocity']
+    child_velocity=child_scale*child_hubble
+    friedmann_lhs=child_hubble**2+2/(3*child_scale**2)
+    return dict(offset=offset,
+                break_type='transverse_throat_pinch_and_velocity_wall',
+                parent_frame=dict(
+                    log_axial_scale=s,
+                    transverse_radius=parent_transverse,
+                    phase_cost=parent['phase_cost'],
+                    shape_kinetic=parent['shape_kinetic'],
+                    velocity_fraction_of_asymptotic_wall=wall_fraction),
+                coordinate_change='R_child = a_parent^(-2) = exp(s); chi_child = log(R_child) = s',
+                child_frame=dict(
+                    scale_factor=child_scale,
+                    expansion_log_chi=s,
+                    scale_velocity=child_velocity,
+                    hubble_rate=child_hubble,
+                    asymptotic_hubble_rate=a_rate,
+                    effective_child_lambda=3*a_rate**2,
+                    friedmann_balance=friedmann_lhs,
+                    friedmann_target=2/3,
+                    friedmann_residual=friedmann_lhs-2/3,
+                    transferred_budget_fraction=parent['shape_kinetic']/parent['total']))
+
+
+def spiral_decay_to_turn_comparison(alpha=None):
+    """Evaluate turning vs compression and compare decay-to-turn ratios without imposing phi.
+
+    Both Q_vol(A) and Q_stretch(A) depend only on symmetric strain and are invariant
+    under rigid rotations A -> R A, so pure static compression produces zero torque.
+    When unit logarithmic compression lambda(chi)=exp(-chi) is paired with a supplied
+    or inherited angular rate omega = 2*pi*alpha per unit chi, z(chi)=exp((-1+2*pi*i*alpha)*chi)
+    has decay-per-radian gamma/omega = 1/(2*pi*alpha) and opposite-lobe asymmetry
+    eta = (A_+ - |A_-|)/(A_+ + |A_-|) = tanh(1/(4*alpha)).
+    """
+    phi=(1+math.sqrt(5))/2
+    golden_spiral_ratio=2*math.log(phi)/math.pi
+    alpha_for_golden_spiral=1/(4*math.log(phi))
+    alpha_golden_angle=float(offset_value('golden'))
+    alpha_action=float(offset_value('action'))
+    chosen=alpha_golden_angle if alpha is None else float(alpha)
+    if not math.isfinite(chosen) or chosen<=0:
+        raise ValueError('positive finite angular increment required for spiral comparison')
+
+    def metrics(a):
+        decay_per_radian=1/(2*math.pi*a)
+        lobe_ratio=math.exp(-1/(2*a))
+        eta=math.tanh(1/(4*a))
+        return dict(alpha=a,
+                    decay_per_radian=decay_per_radian,
+                    decay_per_full_turn=1/a,
+                    opposite_lobe_amplitude_ratio=lobe_ratio,
+                    lobe_asymmetry_eta=eta,
+                    difference_from_golden_spiral_ratio=decay_per_radian-golden_spiral_ratio)
+
+    quadrupole_omega=math.sqrt(2/3)
+    return dict(static_compression_produces_rotation=False,
+                reason_no_torque='Q_vol and Q_stretch are SO(3)-invariant functions of symmetric stretch; turning requires rotational/chiral offset input or angular momentum',
+                golden_spiral_decay_per_radian=golden_spiral_ratio,
+                alpha_required_for_golden_spiral=alpha_for_golden_spiral,
+                quadrupole_shape_frequency=quadrupole_omega,
+                compression_to_quadrupole_frequency_ratio=1/quadrupole_omega,
+                evaluated=metrics(chosen),
+                golden_angle_increment=metrics(alpha_golden_angle),
+                retained_action_increment=metrics(alpha_action))
+
+
 def intrinsic_compression_calculation():
     """Small exact geometry controls; no selected source, pressure or SI units."""
     scales=(1.,.5,.25)
@@ -327,27 +490,50 @@ def intrinsic_compression_calculation():
     for dimension in (1,2,3):
         costs=[intrinsic_phase_cost(scale*np.eye(dimension),np.eye(dimension))['cost']
                for scale in scales]
+        stretch_costs=[generator_least_stretch_cost(scale*np.eye(dimension),np.eye(dimension))['stretch_cost']
+                       for scale in scales]
         dimensional.append(dict(dimension=dimension,scales=list(scales),costs=costs,
+                                generator_least_stretch_costs=stretch_costs,
                                 scale_exponent=dimension-2,
+                                generator_least_stretch_exponent=-1,
                                 isotropic_logarithmic_force_per_cost=(2-dimension)/dimension))
     shapes=[]
     for s in (0.,.5,1.,2.):
         A=np.diag([math.exp(-s/2),math.exp(-s/2),math.exp(s)])
         shapes.append(dict(log_axial_scale=s,
             directional_cost=intrinsic_phase_cost(A,[[0.,0.,1.]])['cost'],
-            isotropic_cost=intrinsic_phase_cost(A,np.eye(3))['cost']))
+            isotropic_cost=intrinsic_phase_cost(A,np.eye(3))['cost'],
+            generator_directional_stretch_cost=generator_least_stretch_cost(A,[[0.,0.,1.]])['stretch_cost'],
+            generator_isotropic_stretch_cost=generator_least_stretch_cost(A,np.eye(3))['stretch_cost']))
+    outcomes=dict(
+        volume_weighted_isotropic_under_load=dict(
+            outcome='collapses_to_zero_scale_break',
+            equation='d[Q0 lambda + P V0 lambda^3]/d lambda = Q0 + 3 P V0 lambda^2 > 0',
+            break_continuation='invert scale lambda_child = lambda^(-1) = exp(chi); parent zero-volume limit becomes child expansion domain (1, infinity)'),
+        generator_least_stretch_isotropic_under_load=least_resistance_compression_minimum([.5,.5,.5],1.),
+        generator_least_stretch_raw_offset_moment_under_load=least_resistance_compression_minimum([.25,.25,.5],1.),
+        generator_least_stretch_1d_seed_under_load=least_resistance_compression_minimum([0.,0.,.5],1.),
+        neck_break_continuation=[continue_across_neck_break(t) for t in (0.,1.,2.,4.,6.)],
+        turning_and_spiral_check=spiral_decay_to_turn_comparison())
     return dict(schema='nsc-intrinsic-compression-v1',
         premises=['unit target metric for the existing angular phase',
-                  'intrinsic squared phase gradient integrated over actual volume',
+                  'comparison of 3D volume-weighted Dirichlet cost against A0 1D generator least-stretch cost',
                   'given reference phase-gradient moment',
-                  'affine deformation controls; fixed-volume restriction for shape comparison'],
+                  'affine deformation controls; enclosing compression load P > 0'],
         cost='Q_g=integral |grad_g psi|^2 dV_g / 2',
         affine_cost='Q(A)=det(A) trace(A^-T M A^-1)/2',
+        generator_least_stretch_cost='Q_stretch(A)=trace[(A^T A)^(-1/2) C^T C]/2, derived by Cauchy-Schwarz on 1D generated phase paths',
+        cost_justification='Q_g dilutes 1D phase stretch by 3D volume lambda^3 so cost falls as exp(-chi) in d=3; A0 least-stretch of the 1D generated curves scales as exp(+chi) and resists compression',
         inherited_isotropic_cost_ratio='Q_child/Q_parent=exp(-(dimension-2)*chi_parent_child), for the same carried reference phase pattern',
+        inherited_generator_stretch_ratio='Q_stretch_child/Q_stretch_parent=exp(+chi_parent_child) in every dimension d',
         dimensional_controls=dimensional,
         shape_controls=shapes,
-        positive_external_compression='For d=3 and uniform scale lambda: d[lambda Q0+P V0 lambda^3]/d lambda = Q0+3 P V0 lambda^2 > 0 for P>0,Q0>0; no finite isotropic minimum.',
+        positive_external_compression='For d=3 and uniform scale lambda: d[lambda Q0+P V0 lambda^3]/d lambda = Q0+3 P V0 lambda^2 > 0 for P>0,Q0>0; no finite isotropic minimum under volume-weighted Q_g, whereas Q_stretch=Q0/lambda gives unique minimum lambda_*=(Q0/(3 P V0))^(1/4).',
         conservative_directional_control=[conservative_neck_shape(t) for t in (0.,1.,2.,4.)],
+        least_resistance_outcomes=outcomes,
+        coupling_c_status='c along the 1D drawing coordinate remains supplied; 3D neck shape wave speed sqrt(2/3) follows only after declaring the log-strain kinetic metric.',
+        increment_alpha_status='alpha remains supplied (or inherited from external rotational/chiral parent history) because symmetric compression costs are SO(3)-invariant and produce zero torque.',
+        chi_bookkeeping_note='chi_gc = chi_gp + chi_pc is an algebraic log-ratio identity (bookkeeping), not dynamical evidence for the mechanism.',
         no_rotation_torque_from_global_rotation=True,
         actual_parent_gradient_moment_selected=False,
         actual_parent_loading_selected=False,

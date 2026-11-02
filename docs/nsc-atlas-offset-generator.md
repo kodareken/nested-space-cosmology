@@ -52,7 +52,8 @@ $$
 $$
 
 Thus zero ADDITIONAL child compression does not erase the inherited parent
-contribution. This is an exact finite-chain identity; it assumes neither
+contribution. This is an exact finite-chain log-ratio telescoping identity
+(bookkeeping, not dynamical evidence for the mechanism); it assumes neither
 a first universe nor a common increment for every level. It is not a
 derivation of an infinite physical chain.
 
@@ -179,18 +180,86 @@ accounted for by increasing geometric motion:
 | 2 | 0.9772952024 | 0.0708112364 | 0.4291887636 | 0.5 |
 | 4 | 2.5742942146 | 0.0029037984 | 0.4970962016 | 0.5 |
 
-Every finite tau has positive transverse scale. Its vanishing limit occurs
-only at infinite tau; log-scale variables keep the history evaluable. There
-is no finite-time opening, horizon or receiving child in this control.
+### A0 least-stretch justification, enclosing compression minimization, and break continuation
+
+Adopting the 3D volume-weighted functional $Q_g=\frac12\int|\nabla_g\psi|^2\,dV_g$
+without deriving it from the generated geometry dilutes the 1D phase gradient
+by the 3D volume factor $\det(A)\propto\lambda^3$, so $Q_g(\lambda)=\lambda Q_0=e^{-\chi}Q_0$
+decreases to zero under 3D compression and offers no holding resistance.
+
+In the offset generator, the geometry is drawn by 1D phase curves (spokes/windings).
+By Cauchy-Schwarz on a 1D curve of physical length $L_i=\lambda_i L_{i,0}$ carrying
+phase change $\Delta\psi_i$, the least-stretch cost with respect to induced arc
+length $ds_g$ is uniquely
+$$
+\frac12\int_0^{L_i}\left(\frac{d\psi}{ds_g}\right)^2 ds_g
+\ge \frac{(\Delta\psi_i)^2}{2\lambda_i L_{i,0}}=\frac{m_i}{\lambda_i},
+\qquad
+Q_{\rm stretch}(A)=\tfrac12\operatorname{tr}\!\left[(A^TA)^{-1/2}C^TC\right].
+$$
+Under uniform compression $A=\lambda I=e^{-\chi}I$, $Q_{\rm stretch}(\lambda I)=\lambda^{-1}Q_{\rm stretch}(I)=e^{+\chi}Q_{\rm stretch}(I)$
+in every dimension $d\ge1$, resisting compression rather than vanishing.
+
+Minimizing total cost $E(\lambda_1,\lambda_2,\lambda_3)=\sum_{i=1}^3\frac{m_i}{\lambda_i}+PV_0\lambda_1\lambda_2\lambda_3$
+under enclosing compression $P>0$ gives the exact unique equilibrium for $m_i>0$:
+$$
+\lambda_i^*=\frac{m_i}{(m_1m_2m_3)^{1/4}(PV_0)^{1/4}},
+\qquad
+Q_{\rm stretch}^*=3PV_0\lambda_1^*\lambda_2^*\lambda_3^*=3W_{\rm ext}^*.
+$$
+
+With $PV_0=1$, the three generator regimes give:
+
+1. **Isotropic 3D winding ($m=(1/2,1/2,1/2)$) $\to$ uniform contraction:**
+   $\lambda_1^*=\lambda_2^*=\lambda_3^*=2^{-1/4}\approx0.8408964153$,
+   $Q_{\rm stretch}^*\approx1.7838106765$, $W_{\rm ext}^*\approx0.5946035588$,
+   $E_{\rm total}^*\approx2.3784142353$.
+2. **Raw two-accumulator moment ($m=(1/4,1/4,1/2)$) $\to$ localized prolate neck equilibrium:**
+   $\lambda_\perp^*=2^{-5/12}\approx0.7491535384$, $\lambda_3^*=2^{7/12}\approx1.4983070769$,
+   aspect ratio $\lambda_3^*/\lambda_\perp^*=2$, $s_*=\tfrac13\log2\approx0.2310490602$.
+3. **1D axial seed ($m=(0,0,1/2)$) $\to$ transverse neck-pinch break:**
+   $\lambda_\perp^*\to0$ ($s\to+\infty$), because zero transverse winding cannot
+   hold the transverse radius against enclosing compression.
+
+**Break continuation into the child frame.** In parent coordinates, the axial
+neck motion $s(\tau)=\log\cosh(\sqrt{2/3}\,\tau)$ drives the transverse throat
+radius $a(\tau)=e^{-s(\tau)/2}\to0$ while the normalized velocity fraction
+$\dot s/\sqrt{2/3}=\tanh(\sqrt{2/3}\,\tau)$ hits the $0.999\dots$ wall
+($0.9998888764$ at $\tau=6$, where $a(6)\approx0.1220964547$). Applying the
+break rule via throat inversion $R_{\rm child}(\tau)=a(\tau)^{-2}=e^{s(\tau)}=\cosh(\sqrt{2/3}\,\tau)$
+continues the trajectory into an expanding child frame obeying the exact
+Friedmann-like balance
+$$
+\left(\frac{\dot R_{\rm child}}{R_{\rm child}}\right)^2+\frac{2}{3R_{\rm child}^2}=\frac23,
+\qquad
+H_{\rm child}(\tau)\to\sqrt{\frac23}\approx0.8164965809,
+\qquad
+\Lambda_{\rm child}=3H_\infty^2=2.
+$$
+At $\tau=6$, $R_{\rm child}(6)\approx67.0801295585$ and $99.9778\%$ of the initial
+parent phase cost has transferred into child expansion kinetic budget.
+
+**Turning and spiral comparison.** Both $Q_{\rm vol}(A)$ and $Q_{\rm stretch}(A)$
+are $SO(3)$-invariant functions of symmetric stretch and produce zero rotational
+torque on their own. When unit logarithmic compression $\lambda(\chi)=e^{-\chi}$
+is paired with a supplied or inherited angular turn rate $\omega=2\pi\alpha$,
+$z(\chi)=e^{(-1+2\pi i\alpha)\chi}$ has decay-per-radian $\gamma/\omega=1/(2\pi\alpha)$
+and opposite-lobe asymmetry $\eta=(A_+-|A_-|)/(A_++|A_-|)=\tanh(1/(4\alpha))$.
+For $\alpha_{\rm golden}=(3-\sqrt5)/2\approx0.3819660113$, $\gamma/\omega\approx0.4166730505$
+and $\eta\approx0.5746972340$ ($|A_-|/|A_+|\approx0.2700854214$), whereas a golden
+logarithmic spiral has $\gamma/\omega=2\ln\varphi/\pi\approx0.3063489625$ (which
+would require $\alpha=1/(4\ln\varphi)\approx0.5195217303$).
+
+- **Coupling $c$:** Still supplied along the 1D drawing coordinate; the 3D neck shape wave speed $\sqrt{2/3}$ follows only after declaring the log-strain kinetic metric.
+- **Increment $\alpha$:** Still supplied (or inherited from external rotational/chiral parent history) because symmetric compression costs are $SO(3)$-invariant and generate zero torque.
 
 ```text
 python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --intrinsic-only
 ```
 
-**Next connection:** obtain M, enclosing work and any turning from the
-parent's actual geometric continuation, then couple them to deformation.
-The response now has an explicit mathematical meaning; the source is not
-replaced by a fitted shape, pressure or golden ratio.
+**Next connection:** derive a chiral/rotational coupling from the two-sided
+(`+`/`0`/`-`) contact so turning and $\alpha$ emerge from the compression
+response rather than remaining supplied.
 
 ## Retained foundation control: opposite windings, 2 November 2026
 

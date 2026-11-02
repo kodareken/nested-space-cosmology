@@ -11,27 +11,41 @@ the proposed physical connection, not an already derived clock or phase.
 
 Proved: chi_gc=chi_gp+chi_pc, common frame changes cancel, and common
 compression adds no relative offset while preserving ancestor inheritance.
-The increment is obtained from the deformation history rather than an
-independently supplied alpha. Analytic three-level controls give u,2u,3u
-with zero sampled composition residual; they are not formation histories.
+This additivity is an algebraic log-ratio telescoping identity (bookkeeping,
+not dynamical evidence for the mechanism). The increment is obtained from the
+deformation history rather than an independently supplied alpha. Analytic
+three-level controls give u,2u,3u with zero sampled composition residual; they
+are not formation histories.
 
-The next intrinsic-phase calculation now supplies a conditional deformation
-response: Q(A)=det(A) trace(A^-T M A^-1)/2. For the same carried phase
-pattern, Q_child/Q_parent=exp(-(d-2)chi). In d=3 its phase-gradient portion
-decreases as exp(-chi); total energy loss is not inferred.
+The intrinsic-phase calculation compares the 3D volume-weighted functional
+Q_vol(A)=det(A) trace(A^-T M A^-1)/2 against the A0 1D generator least-stretch
+cost Q_stretch(A)=trace[(A^T A)^(-1/2) C^T C]/2 derived by Cauchy-Schwarz on
+the generated 1D phase paths. Because Q_vol dilutes 1D phase stretch by 3D
+volume lambda^3, Q_vol falls as exp(-chi) in d=3 and has no positive isotropic
+holding radius under enclosing compression P>0 (a lambda->0 break, continued by
+scale inversion lambda_child=lambda^-1=exp(chi)). By contrast, Q_stretch scales
+as exp(+chi) in every dimension d>=1 and resists compression.
 
-An isotropic phase pattern favours equal axes at fixed volume, while an axial
-pattern lowers its cost through axial stretch and transverse narrowing.
-The latter has an exact conservative motion under an explicitly declared
-log-strain inertia: s=log cosh(sqrt(2/3) tau), Q+3 s_dot^2/4=1/2.
-There is no finite-time pinch or rotation. The functional alone gives no
-finite isotropic holding radius under a constant positive enclosing load.
+Minimizing Q_stretch + P V under enclosing load P V0 = 1 yields exact outcomes:
+- Isotropic 3D winding m=(1/2,1/2,1/2): uniform contraction to
+  lambda_* = 2^(-1/4) ≈ 0.8408964153 with Virial ratio Q_stretch^* / W_ext^* = 3.
+- Raw two-accumulator moment m=(1/4,1/4,1/2): localized prolate neck equilibrium
+  with aspect ratio lambda_3^* / lambda_perp^* = 2 (s_* = (1/3) log 2 ≈ 0.2310490602).
+- 1D axial seed m=(0,0,1/2): transverse neck-pinch break (lambda_perp^* -> 0).
 
-Next is the parent's actual phase-gradient moment M, enclosing work and
-turning, connected to this response. The source and geometric inertia are
-not selected by these analytic controls. No child is formed. The isolated-offset percentage-selection
-direction is retired. Previously supplied fields, actions, potentials and
-cosmological parameters remain conditional constructions to revisit.
+Applying the break rule across the axial neck motion s(tau)=log cosh(sqrt(2/3) tau)
+(where parent transverse radius a=exp(-s/2)->0 and normalized velocity hits
+0.9998888764 at tau=6) via throat inversion R_child = a^(-2) = exp(s) = cosh(sqrt(2/3) tau)
+continues the trajectory into an expanding child frame obeying
+(R_child_dot/R_child)^2 + 2/(3 R_child^2) = 2/3, with H_child -> sqrt(2/3) ≈ 0.8164965809
+and effective Lambda_child = 2.
+
+Both Q_vol and Q_stretch are SO(3)-invariant and produce zero rotational torque
+from pure compression. When paired with an angular turn rate omega=2*pi*alpha per
+unit chi, decay-per-radian is 1/(2*pi*alpha) (0.4166730505 for golden-angle alpha
+with opposite-lobe asymmetry eta=tanh(1/(4*alpha))≈0.5746972340, versus
+2*ln(phi)/pi ≈ 0.3063489625 for a golden spiral). Coupling c along the 1D drawing
+coordinate and increment alpha remain supplied.
 
 ## Retained geometry and transport controls
 

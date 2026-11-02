@@ -6,10 +6,14 @@ local deformation histories and computes additive log-length contrast.
 Use `--inheritance-only` with the existing CLI for the three-level controls.
 The constant-alpha connection and winding transport remain comparison
 constructions; they do not select the enclosing region's history.
-`intrinsic_phase_cost` computes the actual-distance phase cost and directional
-response; `conservative_neck_shape` evaluates an exact constrained inertial
-shape control. Use `--intrinsic-only` for scale, shape and conserved-budget
-comparisons. The source moment and parent loading remain explicit inputs.
+`intrinsic_phase_cost` computes the volume-weighted phase cost and directional
+response; `generator_least_stretch_cost` and `least_resistance_compression_minimum`
+derive and minimize the A0 1D generator least-stretch cost under enclosing
+compression; `conservative_neck_shape` and `continue_across_neck_break`
+evaluate the constrained neck motion and its throat-inversion continuation into
+the child frame; `spiral_decay_to_turn_comparison` checks turning and opposite-lobe
+asymmetry without imposing the golden spiral. Use `--intrinsic-only` for all
+scale, shape, least-resistance and break-continuation comparisons.
 
 | Current work | Implementation |
 | --- | --- |

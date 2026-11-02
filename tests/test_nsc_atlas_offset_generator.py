@@ -504,3 +504,85 @@ def test_inherited_compression_drives_intrinsic_cost_without_an_independent_alph
         qp=intrinsic_phase_cost(parent[-1],C)['cost']
         qc=intrinsic_phase_cost(child[-1],C)['cost']
         assert qc/qp==pytest.approx(math.exp(-(dimension-2)*chi),rel=2e-15)
+
+
+def test_generator_least_stretch_cost_resists_compression_in_all_dimensions():
+    from recursive_horizons.nsc_atlas_offset_generator import (
+        generator_least_stretch_cost,inherited_compression_offset)
+    for dimension in (1,2,3):
+        parent=np.array([np.eye(dimension),math.exp(-.2)*np.eye(dimension)])
+        child=np.array([np.eye(dimension),math.exp(-.9)*np.eye(dimension)])
+        chi=inherited_compression_offset(parent,child)['compression'][-1]
+        C=np.eye(dimension)
+        qp=generator_least_stretch_cost(parent[-1],C)['stretch_cost']
+        qc=generator_least_stretch_cost(child[-1],C)['stretch_cost']
+        assert qc/qp==pytest.approx(math.exp(chi),rel=2e-15)
+    R=np.array([[0.,-1.,0.],[1.,0.,0.],[0.,0.,1.]])
+    A=np.diag([.6,1.1,1.9]);C=np.diag([1.,2.,3.])
+    assert generator_least_stretch_cost(R@A,C)['stretch_cost']==pytest.approx(
+        generator_least_stretch_cost(A,C)['stretch_cost'],rel=2e-15)
+
+
+def test_least_resistance_compression_minimum_matches_symbolic_stationarity_and_hessian():
+    from recursive_horizons.nsc_atlas_offset_generator import (
+        least_resistance_compression_minimum,generator_least_stretch_cost)
+    l1,l2,l3,m1,m2,m3,P=s.symbols('l1 l2 l3 m1 m2 m3 P',positive=True)
+    E=m1/l1+m2/l2+m3/l3+P*l1*l2*l3
+    g=(m1*m2*m3*P)**s.Rational(1,4)
+    sol={l1:m1/g,l2:m2/g,l3:m3/g}
+    for var in (l1,l2,l3):
+        assert s.simplify(s.diff(E,var).subs(sol))==0
+    iso=least_resistance_compression_minimum([.5,.5,.5],1.)
+    assert iso['outcome']=='uniform_contraction'
+    assert iso['equilibrium_scales']==pytest.approx([2**(-.25)]*3,rel=2e-15)
+    assert iso['virial_ratio_stretch_to_work']==pytest.approx(3.,rel=2e-15)
+    raw=least_resistance_compression_minimum([.25,.25,.5],1.)
+    assert raw['outcome']=='anisotropic_neck_equilibrium'
+    assert raw['axial_to_transverse_aspect_ratio']==pytest.approx(2.,rel=2e-15)
+    assert raw['log_axial_neck_parameter']==pytest.approx(math.log(2)/3,rel=2e-15)
+    # Perturbing any principal scale around the minimum strictly raises total cost.
+    opt=np.array(raw['equilibrium_scales'])
+    C=np.diag(np.sqrt(2*np.array([.25,.25,.5])))
+    base=generator_least_stretch_cost(np.diag(opt),C,enclosing_load=1.)['total_cost']
+    assert base==pytest.approx(raw['total_cost'],rel=2e-15)
+    for delta in (np.array([.05,-.03,.02]),np.array([-.04,-.04,-.04]),np.array([-.02,.02,.04])):
+        perturbed=generator_least_stretch_cost(np.diag(opt*(1+delta)),C,enclosing_load=1.)['total_cost']
+        assert perturbed>base
+    seed=least_resistance_compression_minimum([0.,0.,.5],1.)
+    assert seed['outcome']=='neck_pinch_opening_break'
+    assert seed['equilibrium_scales'] is None
+
+
+def test_neck_break_continuation_transforms_throat_pinch_into_child_friedmann_expansion():
+    from recursive_horizons.nsc_atlas_offset_generator import continue_across_neck_break
+    t=s.symbols('t',real=True);a=s.sqrt(s.Rational(2,3))
+    Rc=s.cosh(a*t)
+    Hc=s.diff(Rc,t)/Rc
+    assert s.simplify(Hc**2+s.Rational(2,3)/Rc**2-s.Rational(2,3))==0
+    at_six=continue_across_neck_break(6.)
+    assert at_six['parent_frame']['velocity_fraction_of_asymptotic_wall']>0.9998
+    assert at_six['parent_frame']['transverse_radius']<0.13
+    assert at_six['child_frame']['scale_factor']==pytest.approx(
+        1/at_six['parent_frame']['transverse_radius']**2,rel=2e-15)
+    assert at_six['child_frame']['friedmann_residual']==pytest.approx(0.,abs=2e-15)
+    assert at_six['child_frame']['effective_child_lambda']==pytest.approx(2.,rel=2e-15)
+    assert at_six['child_frame']['transferred_budget_fraction']>0.9997
+
+
+def test_spiral_decay_to_turn_comparison_does_not_impose_golden_ratio():
+    from recursive_horizons.nsc_atlas_offset_generator import (
+        spiral_decay_to_turn_comparison,inherited_offset_calculation,intrinsic_compression_calculation)
+    comp=spiral_decay_to_turn_comparison()
+    assert comp['static_compression_produces_rotation'] is False
+    phi=(1+math.sqrt(5))/2
+    assert comp['golden_spiral_decay_per_radian']==pytest.approx(2*math.log(phi)/math.pi,rel=2e-15)
+    ga=comp['golden_angle_increment']
+    assert abs(ga['difference_from_golden_spiral_ratio'])>0.1
+    assert ga['lobe_asymmetry_eta']==pytest.approx(
+        (1-ga['opposite_lobe_amplitude_ratio'])/(1+ga['opposite_lobe_amplitude_ratio']),rel=2e-15)
+    inh=inherited_offset_calculation()
+    assert inh['mechanism_evidence'] is False
+    assert 'bookkeeping' in inh['bookkeeping_note']
+    intr=intrinsic_compression_calculation()
+    assert 'supplied' in intr['coupling_c_status']
+    assert 'supplied' in intr['increment_alpha_status']
