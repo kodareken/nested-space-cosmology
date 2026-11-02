@@ -420,6 +420,20 @@ Goldilocks stabilization through least resistance and budget conservation:
     ($+11.75\%$), whereas the threshold-captured pair plus spaghettification
     valve fraction gives $2+\theta^*(\chi_{\rm spaghetti})=2.500000$ ($-1.22\%$)
     and $2+\tfrac12+e^{-3}/\sqrt{2}\approx 2.535205$ ($1.2955\text{ MeV}$, $+0.167\%$).
+  - **Thermodynamic gravity and the Planck-to-Absolute-Zero CMB temperature bridge (`thermodynamic_gravity_and_cmb_temperature`).**
+    Stretching the room between its Planck cutoff ($\ell_P=1.616255\times 10^{-35}\text{ m}$,
+    $T_P=1.416784\times 10^{32}\text{ K}$) and its Hubble/Absolute-Zero horizon
+    ($R_H=c/H_0\approx 1.3725\times 10^{26}\text{ m}$, $\mathcal{B}=R_H/\ell_P\approx 8.4918\times 10^{60}$,
+    horizon temperature $T_H=T_P/(2\pi\mathcal{B})\approx 2.6554\times 10^{-30}\text{ K}$)
+    places 3D horizon curvature energy density $\rho\propto(\ell_P/R_H)^2$ in
+    balance with 3D thermal radiation $\rho\propto(T/T_P)^4$, so the room
+    temperature scales as the geometric mean $\sqrt{T_P T_H}=T_P/\sqrt{2\pi\mathcal{B}}\approx 19.3960\text{ K}$
+    (critical Friedmann--Stefan--Boltzmann temperature $T_{\rm crit}=T_P(45/(8\pi^3))^{1/4}/\sqrt{\mathcal{B}}\approx 31.7301\text{ K}$).
+    Projecting across the 2D horizon surface e-fold $e^{-2}$ gives
+    $T_{\rm geom}e^{-2}\approx 2.6250\text{ K}$ ($3.69\%$ from $2.72548\text{ K}$),
+    while projecting $T_{\rm crit}$ by the 5-variable cycle's two-valve fixed
+    point $\chi_*\approx 3.06697$ ($e^{-(4/5)\chi_*}$) gives
+    $T_{\rm room}(\chi_*)\approx 2.7283\text{ K}$ ($0.105\%$ from $T_{\rm CMB}=2.72548\text{ K}$).
 
 0. **Two-force zero-crossing across `0` (`two_force_zero_crossing`).**
    When inward compression $F_{\rm in}$ wins against outward resistance

@@ -1174,6 +1174,54 @@ def vacuum_bubble_crystallization_and_mass_spectrum():
                 threshold_capture_dressed_relative_error=(np_gap_threshold_dressed-codata_mn_mp_over_me)/codata_mn_mp_over_me)))
 
 
+def thermodynamic_gravity_and_cmb_temperature(h0_km_s_mpc=67.4):
+    """Evaluate the Planck-to-Absolute-Zero thermodynamic temperature bridge across the room [l_P, R_H].
+
+    In A3, the room is stretched between two endpoints:
+      - Top (hottest/most compressed before 0 crosses to -): Planck length l_P = 1.616255e-35 m,
+        Planck temperature T_P = 1.416784e32 K.
+      - Bottom (coldest/most spread out, as wide as the room): Hubble/Absolute-Zero horizon
+        R_H = c / H0, with Gibbons-Hawking horizon temperature T_H = T_P / (2*pi*(R_H/l_P)) ~ 2.66e-30 K.
+    Because 3D horizon curvature energy density scales as (l_P / R_H)^2 while 3D radiation energy
+    density scales as (T / T_P)^4, the room's equilibrium temperature scales as the geometric mean
+    sqrt(T_P * T_H) ~ (l_P / R_H)^(1/2), spanning 62 orders of magnitude down to the ~K scale:
+      - Bare geometric mean: T_geom = sqrt(T_P * T_H) = T_P / sqrt(2*pi*(R_H/l_P)) ≈ 19.3960 K.
+      - Critical Friedmann-Stefan-Boltzmann temperature:
+        T_crit = T_P * (45 / (8*pi^3))^(1/4) * sqrt(l_P / R_H) ≈ 31.7301 K.
+      - 2D horizon surface e-fold projection: T_geom * exp(-2) ≈ 2.6250 K (within 3.69% of 2.7255 K).
+      - Two-valve 5-variable fixed-point projection (chi_* = 3.06696835, 4/5 per-variable weight):
+        T_crit * exp(-(4/5)*chi_*) ≈ 2.7283 K (within 0.105% of measured T_CMB = 2.72548 K).
+    """
+    l_p=1.616255e-35
+    t_p=1.416784e32
+    c_m_s=299792458.
+    mpc_m=3.0856775814913673e22
+    h0_s=float(h0_km_s_mpc)*1e3/mpc_m
+    r_h=c_m_s/h0_s
+    b_ratio=r_h/l_p
+    t_h=t_p/(2.*math.pi*b_ratio)
+    t_geom=math.sqrt(t_p*t_h)
+    t_crit=t_p*((45./(8.*(math.pi**3)))**.25)/math.sqrt(b_ratio)
+    chi_star=3.0669683518473474
+    t_2d_efold=t_geom*math.exp(-2.)
+    t_five_var=t_crit*math.exp(-.8*chi_star)
+    t_cmb_obs=2.72548
+    return dict(
+        h0_km_s_mpc=float(h0_km_s_mpc),
+        planck_length_m=l_p,
+        planck_temperature_K=t_p,
+        horizon_radius_m=r_h,
+        room_dynamic_range_R_H_over_l_P=b_ratio,
+        horizon_temperature_T_H_K=t_h,
+        bare_geometric_mean_sqrt_TP_TH_K=t_geom,
+        critical_blackbody_temperature_K=t_crit,
+        horizon_2d_efold_temperature_K=t_2d_efold,
+        horizon_2d_efold_relative_error=abs(t_2d_efold-t_cmb_obs)/t_cmb_obs,
+        two_valve_fixed_point_temperature_K=t_five_var,
+        two_valve_fixed_point_relative_error=abs(t_five_var-t_cmb_obs)/t_cmb_obs,
+        observed_cmb_temperature_K=t_cmb_obs)
+
+
 def nonlocal_to_local_atlas_readout():
     """Zero-parameter non-local multiverse fixed point and local observer translation dictionary.
 
@@ -1217,6 +1265,7 @@ def nonlocal_to_local_atlas_readout():
     eta_7=harmonic_ladder[-1]['asymmetry_eta_K']
     circle_pendulum=signed_circle_pendulum_duality()
     bubble_spectrum=vacuum_bubble_crystallization_and_mass_spectrum()
+    thermo_cmb=thermodynamic_gravity_and_cmb_temperature()
     return dict(schema='nsc-nonlocal-to-local-atlas-v1',
                 axioms=dict(
                     A0='Least resistance: minimize single generator cost E = Q_stretch + P*V',
@@ -1226,6 +1275,7 @@ def nonlocal_to_local_atlas_readout():
                     A4='Two-valve cyclic circulation on a closed vortex-diffusion ring (O <-> o) across one-way 0 horizons'),
                 why_minus_exists_and_radius_crosses_zero=circle_pendulum,
                 vacuum_bubble_crystallization_and_masses=bubble_spectrum,
+                thermodynamic_gravity_and_cmb_bridge=thermo_cmb,
                 two_valve_fixed_point=dict(
                     condition='Omega_vis(chi_*) = exp(-3) (5-variable filament share equals 3D volumetric floor)',
                     chi_star=chi_star,

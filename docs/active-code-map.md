@@ -18,6 +18,7 @@ scale, shape, least-resistance and break-continuation comparisons.
 `spectral_band_and_baryon_harmonic`, `branching_cosmos_chain_evolution`,
 `cyclic_vortex_diffusion_ring`, `signed_circle_pendulum_duality`,
 `vacuum_bubble_crystallization_and_mass_spectrum`,
+`thermodynamic_gravity_and_cmb_temperature`,
 `nonlocal_to_local_atlas_readout`, `two_force_zero_crossing`,
 `spaghettification_to_spherical_winner`, `helical_buckling_under_compression`,
 `damped_horizon_oscillation` and `buckling_to_goldilocks_calculation` connect

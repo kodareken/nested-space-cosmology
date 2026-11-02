@@ -117,6 +117,16 @@ incompressibility, no surface tension, no assumed V_minus = V0(1-exp(-3*chi))):
   ≈ 1836.153313 (0.35 ppm vs CODATA 1836.152673), while threshold capture
   2 + theta^*(chi_spaghetti) + exp(-3)/sqrt(2) = 2.535205 m_e (1.2955 MeV) is
   within 0.167% of the neutron-proton gap 2.530988 m_e (1.2933 MeV).
+- **Thermodynamic gravity and the Planck-to-Absolute-Zero CMB temperature bridge (`thermodynamic_gravity_and_cmb_temperature`):**
+  Between the Planck cutoff (l_P = 1.616255e-35 m, T_P = 1.416784e32 K) and the
+  Absolute-Zero horizon (R_H = c/H0 ≈ 1.3725e26 m, B = R_H/l_P ≈ 8.4918e60,
+  T_H = T_P/(2*pi*B) ≈ 2.6554e-30 K), balancing 3D horizon curvature density
+  ~(l_P/R_H)^2 with 3D thermal density ~(T/T_P)^4 gives geometric-mean
+  temperature sqrt(T_P * T_H) ≈ 19.3960 K and critical blackbody temperature
+  T_crit ≈ 31.7301 K. Applying the 2D surface e-fold exp(-2) gives
+  sqrt(T_P*T_H)*exp(-2) ≈ 2.6250 K (within 3.69% of 2.7255 K), while applying
+  the 5-variable cycle's two-valve fixed point exp(-(4/5)*chi_*) gives
+  T_crit*exp(-(4/5)*chi_*) ≈ 2.7283 K (within 0.105% of measured T_CMB = 2.72548 K).
 0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
    resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
    smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against

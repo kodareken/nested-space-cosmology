@@ -836,3 +836,13 @@ def test_vacuum_bubble_crystallization_surrounding_flow_and_mass_ratios():
     assert cand_b['dressed_ppm_error']<1.0
     np_gap=masses['neutron_proton_gap_comparisons']
     assert abs(np_gap['threshold_capture_dressed_relative_error'])<0.002
+
+
+def test_thermodynamic_gravity_and_cmb_temperature_bridges_planck_and_horizon():
+    from recursive_horizons.nsc_atlas_offset_generator import thermodynamic_gravity_and_cmb_temperature
+    res=thermodynamic_gravity_and_cmb_temperature(67.4)
+    assert res['room_dynamic_range_R_H_over_l_P']>8e60
+    assert 19.0<res['bare_geometric_mean_sqrt_TP_TH_K']<20.0
+    assert 31.0<res['critical_blackbody_temperature_K']<32.0
+    assert res['horizon_2d_efold_relative_error']<0.04
+    assert res['two_valve_fixed_point_relative_error']<0.002
