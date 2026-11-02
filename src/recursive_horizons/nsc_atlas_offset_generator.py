@@ -574,14 +574,88 @@ def damped_horizon_oscillation(offset, damping_rate, turn_frequency, amplitude=1
                 goldilocks_completion_fraction=child_scale/goldilocks_scale)
 
 
+def two_force_zero_crossing(offset, inward_compression_force, outward_resistance_force, initial_radius=1., initial_velocity=0.):
+    """Direct + -> 0 -> - spherical zero-crossing when inward compression wins.
+
+    When inward compression F_in exceeds outward resistance F_out on a sphere of
+    signed coordinate R(tau) with R(0)=R0 > 0, the net force F_net = F_in - F_out > 0
+    drives R_tt = -F_net < 0:
+      R(tau) = R0 + v0*tau - F_net*tau^2/2.
+    Comparing the three candidate paths at the horizon R = 0:
+      1. Busting back into the parent + sphere (dR > 0, R > 0) requires climbing
+         uphill against the winning force F_net > 0 (positive work barrier).
+      2. Stopping at R = 0 requires an infinite deceleration impulse to absorb
+         kinetic energy K(tau_0) > 0 in zero distance.
+      3. Crossing 0 into R < 0 (- region) is smooth (zero impulse, finite R_tt),
+         flips the 3D Jacobian determinant det(R/R0 * I_3) = (R/R0)^3 from + to -
+         through 0, and converts the inward implosion velocity R_dot < 0 directly
+         into the outward expansion velocity r_minus_dot = -R_dot > 0 of a new
+         sphere of physical radius r_minus = |R| = -R growing from scratch.
+    """
+    if (not math.isfinite(offset) or offset<0
+            or not math.isfinite(inward_compression_force)
+            or not math.isfinite(outward_resistance_force)
+            or not math.isfinite(initial_radius) or initial_radius<=0
+            or not math.isfinite(initial_velocity) or initial_velocity>0):
+        raise ValueError('nonnegative offset, finite forces, positive initial_radius and nonpositive initial_velocity required')
+    f_net=inward_compression_force-outward_resistance_force
+    if f_net<=0:
+        raise ValueError('inward_compression_force must exceed outward_resistance_force for collapse through zero')
+    r_signed=initial_radius+initial_velocity*offset-.5*f_net*offset**2
+    r_dot=initial_velocity-f_net*offset
+    horizon_offset=(initial_velocity+math.sqrt(initial_velocity**2+2*f_net*initial_radius))/f_net
+    horizon_speed=math.sqrt(initial_velocity**2+2*f_net*initial_radius)
+    horizon_kinetic=.5*horizon_speed**2
+    det_ratio=(r_signed/initial_radius)**3
+    if r_signed>0:
+        region='+'
+        physical_radius=r_signed
+        radial_expansion_rate=r_dot
+    elif r_signed==0:
+        region='0'
+        physical_radius=0.
+        radial_expansion_rate=0.
+    else:
+        region='-'
+        physical_radius=-r_signed
+        radial_expansion_rate=-r_dot
+    potential=-f_net*r_signed
+    kinetic=.5*r_dot**2
+    initial_total=.5*initial_velocity**2-f_net*initial_radius
+    return dict(offset=offset,
+                net_compression_force=f_net,
+                signed_radius=r_signed,
+                signed_velocity=r_dot,
+                region=region,
+                physical_radius=physical_radius,
+                physical_expansion_rate=radial_expansion_rate,
+                jacobian_determinant_ratio=det_ratio,
+                orientation_sign=1 if r_signed>0 else (0 if r_signed==0 else -1),
+                horizon_crossing_offset=horizon_offset,
+                horizon_crossing_speed=horizon_speed,
+                horizon_kinetic_budget=horizon_kinetic,
+                outward_parent_reversal_blocked=True,
+                stopping_at_zero_requires_infinite_deceleration=True,
+                zero_crossing_impulse_cost=0.,
+                unique_finite_cost_continuation='cross 0 into R < 0 (- region), where r_minus = -R expands from 0 with r_minus_dot = -R_dot > 0',
+                total_mechanical_budget=kinetic+potential,
+                conservation_residual=(kinetic+potential)-initial_total)
+
+
 def buckling_to_goldilocks_calculation():
-    """Connected 3-stage pipeline: compression -> helical buckling -> damped +/0/- wave -> Goldilocks zone."""
+    """Connected pipeline: two-force 0-crossing -> helical buckling -> damped +/0/- wave -> Goldilocks zone."""
+    t_h=math.sqrt(2.)
+    zero_crossing_scan=[two_force_zero_crossing(t,2.,1.) for t in (0.,1.,t_h,2.,3.)]
     buckling_scan=[helical_buckling_under_compression(chi) for chi in (0.,.25,.5,1.,2.)]
     post_buckling=helical_buckling_under_compression(1.)
     omega=2*math.pi
     gamma=.5*math.log(2)
     wave_history=[damped_horizon_oscillation(t,gamma,omega) for t in (0.,.25,.75,1.,2.,4.)]
     return dict(schema='nsc-buckling-damping-goldilocks-v1',
+                stage_0_two_force_zero_crossing=dict(
+                    rule='R_tt = -(F_in - F_out) < 0; R(tau) crosses + -> 0 -> - smoothly with det(F)=(R/R0)^3 flipping sign',
+                    horizon_offset=t_h,
+                    scan=zero_crossing_scan),
                 stage_1_helical_buckling=dict(
                     rule='E(v_perp; lambda) = Q0/sqrt(lambda^2 + v_perp^2) + P_perp v_perp^2 / 2',
                     critical_condition='lambda_crit = (Q0/P_perp)^(1/3); omega^* = sqrt(lambda_crit^2 - lambda^2)/r_perp for lambda < lambda_crit',

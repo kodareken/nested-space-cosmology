@@ -14,8 +14,9 @@ evaluate the constrained neck motion and its throat-inversion continuation into
 the child frame; `spiral_decay_to_turn_comparison` checks turning and opposite-lobe
 asymmetry without imposing the golden spiral. Use `--intrinsic-only` for all
 scale, shape, least-resistance and break-continuation comparisons.
-`helical_buckling_under_compression`, `damped_horizon_oscillation` and
-`buckling_to_goldilocks_calculation` connect axial compression buckling
+`two_force_zero_crossing`, `helical_buckling_under_compression`,
+`damped_horizon_oscillation` and `buckling_to_goldilocks_calculation` connect
+the two-force `+ -> 0 -> -` zero-crossing, axial compression buckling
 (omega^* > 0), conservative `+`/`0`/`-` damped wave transfer (eta = tanh(pi*gamma/(2*omega))),
 and Goldilocks child equilibration (`--buckling-only`).
 

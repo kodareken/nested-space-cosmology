@@ -46,8 +46,15 @@ unit chi, decay-per-radian is 1/(2*pi*alpha) (0.4166730505 for golden-angle alph
 with opposite-lobe asymmetry eta=tanh(1/(4*alpha))≈0.5746972340, versus
 2*ln(phi)/pi ≈ 0.3063489625 for a golden spiral).
 
-The connected three-stage pipeline (`--buckling-only`) now derives turning,
-two-sided (`+`/`0`/`-`) damping asymmetry, and Goldilocks stabilization:
+The connected pipeline (`--buckling-only`) now derives the `+ -> 0 -> -`
+zero-crossing, turning, two-sided damping asymmetry, and Goldilocks stabilization:
+0. **Two-force zero-crossing:** When inward compression F_in exceeds outward
+   resistance F_out (F_net = F_in - F_out > 0), R_tt = -F_net < 0 drives R(tau)
+   smoothly through R=0 into R<0. Busting back into `+` (R>0) is uphill against
+   F_net>0, and stopping at R=0 requires infinite deceleration; crossing `0`
+   into `-` (R<0) is the unique finite-cost path, flipping det(F)=(R/R0)^3 from
+   `+` to `-` and turning implosion R_dot < 0 directly into expansion
+   r_minus_dot = -R_dot > 0 of a new sphere r_minus = -R > 0 from scratch.
 1. **Helical buckling:** A 1D seed compressed axially to lambda=exp(-chi) under
    lateral confinement P_perp has arc-length factor sqrt(lambda^2+(r_perp*omega)^2).
    Once lambda < lambda_crit=(Q0/P_perp)^(1/3), the straight seed (omega=0)

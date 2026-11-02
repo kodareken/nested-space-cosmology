@@ -636,3 +636,30 @@ def test_damped_horizon_oscillation_conserves_budget_and_matches_lobe_integrals(
     assert damped_horizon_oscillation(0.,0.,omega)['lobe_asymmetry_eta']==0.
     pipeline=buckling_to_goldilocks_calculation()
     assert pipeline['stage_3_goldilocks_equilibrium']['completion_at_offset_4']>0.98
+
+
+def test_two_force_zero_crossing_smoothly_converts_plus_implosion_into_minus_expansion():
+    from recursive_horizons.nsc_atlas_offset_generator import two_force_zero_crossing
+    t,R0,Fin,Fout=s.symbols('t R0 Fin Fout',positive=True)
+    Fnet=Fin-Fout
+    R=R0-Fnet*t**2/2
+    assert s.simplify(s.diff(R,t,2)+Fnet)==0
+    plus=two_force_zero_crossing(0.5,3.,1.,initial_radius=1.)
+    assert plus['region']=='+'
+    assert plus['signed_radius']>0
+    assert plus['physical_expansion_rate']<0
+    assert plus['orientation_sign']==1
+    assert plus['conservation_residual']==pytest.approx(0.,abs=2e-15)
+    horizon=two_force_zero_crossing(1.,3.,1.,initial_radius=1.)
+    assert horizon['region']=='0'
+    assert horizon['signed_radius']==pytest.approx(0.,abs=2e-15)
+    assert horizon['jacobian_determinant_ratio']==pytest.approx(0.,abs=2e-15)
+    assert horizon['horizon_kinetic_budget']==pytest.approx(2.,rel=2e-15)
+    minus=two_force_zero_crossing(2.,3.,1.,initial_radius=1.)
+    assert minus['region']=='-'
+    assert minus['signed_radius']==pytest.approx(-3.,rel=2e-15)
+    assert minus['physical_radius']==pytest.approx(3.,rel=2e-15)
+    assert minus['physical_expansion_rate']==pytest.approx(4.,rel=2e-15)
+    assert minus['orientation_sign']==-1
+    assert minus['jacobian_determinant_ratio']==pytest.approx(-27.,rel=2e-15)
+    assert minus['conservation_residual']==pytest.approx(0.,abs=2e-15)

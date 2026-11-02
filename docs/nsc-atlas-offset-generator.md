@@ -263,8 +263,25 @@ response rather than remaining supplied.
 
 ## Helical buckling, damped `+`/`0`/`-` horizon asymmetry, and Goldilocks stabilization
 
-The next calculation connects three stages through least resistance and budget
-conservation:
+The next calculation connects the two-force `+ -> 0 -> -` zero-crossing with
+helical buckling, damped oscillation and Goldilocks stabilization through least
+resistance and budget conservation:
+
+0. **Two-force zero-crossing across `0` (`two_force_zero_crossing`).**
+   When inward compression $F_{\rm in}$ wins against outward resistance
+   $F_{\rm out}$ on a sphere of signed coordinate $R(\tau)$ with $R(0)=R_0>0$,
+   the net force $F_{\rm net}=F_{\rm in}-F_{\rm out}>0$ drives $\ddot R=-F_{\rm net}<0$,
+   so $R(\tau)=R_0+v_0\tau-\tfrac12F_{\rm net}\tau^2$. Comparing the three
+   candidate paths at the horizon $R=0$:
+   - Busting back into the parent `+` sphere ($\Delta R>0, R>0$) is blocked
+     uphill against the winning force $F_{\rm net}>0$.
+   - Stopping at $R=0$ requires an infinite deceleration impulse to destroy
+     the horizon kinetic budget $K(\tau_0)=\tfrac12\dot R(\tau_0)^2>0$ in zero distance.
+   - Crossing `0` into $R<0$ (`-` region) has zero impulse cost, flips the 3D
+     Jacobian determinant $\det[(R/R_0)I_3]=(R/R_0)^3$ from `+` to `-` through `0`,
+     and converts the inward implosion velocity $\dot R<0$ directly into the
+     outward expansion rate $\dot r_-=-\dot R>0$ of a new sphere $r_-=|R|=-R>0$
+     growing from scratch without reversing the driving force.
 
 1. **Helical buckling under axial compression (`helical_buckling_under_compression`).**
    A 1D seed compressed axially to $\lambda=e^{-\chi}$ that turns laterally at
