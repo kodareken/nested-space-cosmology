@@ -266,6 +266,68 @@ checks of the affine continuation. The causal and spatial completion remains
 open. If r is used as an isotropic volume radius, energy per volume grows
 as τ⁻⁴ at birth even though energy per arc length stays finite.
 
+### Continuum wave at the opening
+
+Keep the radial-displacement inertia and the triangular parent profile.
+Allow the phase to propagate on both material intervals. Write y for the
+parent scale and r for the receiving scale. The parent incoming amplitude
+at the contact is π/y until the first optical front arrives. A transparent
+two-curve junction passes that characteristic into the receiver. In its
+optical coordinate ds/dτ=1/r the outgoing derivative is A'(s)=πr/y. The
+unit receiving interval has phase A(s−x)−A(s+x−2), with zero phase at x=1.
+This branch uses zero incoming conformal wave energy in the optical past.
+
+For optical lag z solve ∂_z t_z=−r(t_z), t_0=τ. Define
+g_z=exp(−∫₀ᶻ r'(t_w)dw)=r(t_z)/r(τ). The exponential formula stays
+regular at zero radius. The exact receiving force and the contact power are
+
+$$
+r''=\pi^2\int_0^2 \frac{g_z^2}{y(t_z)^2}\,dz,\qquad
+J=\pi^2\left[\frac{1}{y(\tau)^2}-\frac{g_2^2}{y(t_2)^2}\right].
+$$
+
+The receiving phase energy is r r'' and its contact phase is
+π∫₀² r(t_z)/y(t_z) dz. The parent satisfies
+y² y''=4π²−∫₀ᵗ yJ du, from its characteristic flux ledger. These
+equations give a local fixed point for the continuous accelerations.
+To see this, reconstruct both radii by double integration on [0,T] in a
+bounded box around the initial accelerations (2π²,4π²). Differences in
+the radii and velocities are O(T²) and O(T) times the acceleration norm.
+The lag flow stays in [0,τ] and depends Lipschitz continuously on r.
+The exponential ratio then varies by O(T) times that same norm. The
+parent integral and denominator also have Lipschitz bounds tending to
+zero with T. Thus the update maps the box into itself and contracts for
+sufficiently small T. The phase and radius work terms cancel in the total
+budget by the same contact balance as for the positive-radius curves.
+
+At birth g_z tends to one and y tends to one. Consequently
+
+$$
+r(\tau)=\pi^2\tau^2-\frac43\pi^4\tau^3+O(\tau^4),\qquad
+\Theta/r\to2\pi,\qquad E_{\rm receiving}=4\pi^4\tau^2+O(\tau^3),
+$$
+
+where the last expression includes radial kinetic energy. The cubic
+term follows from g_z=1−2π²zτ+O(τ²). The coefficient π² replaces
+the affine phase approximation's 2.9718260669 in this continuum model.
+
+`python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --continuum-birth-only`
+evaluates the coupled equations through τ=.05 at 65, 129 and 257 samples.
+The fine radius is .016736471416 and the receiving energy .299289538820.
+The sampled budget discrepancy decreases from 2.33e-8 to 8.34e-10 to
+2.79e-11. The last two radii differ by 2.5e-13. These are numerical
+comparisons on the declared early interval.
+
+The curve metric −dτ²+r² dx² has scalar curvature 2r''/r∼4/τ².
+The flat isotropic three-dimensional extension would have Kretschmann
+scalar ∼240/τ⁴. A change of coordinates cannot produce a C² extension
+with these invariants. In the physical-distance chart X=rx the curve
+metric is −dτ²+(dX−v dτ)², with v=r'X/r. Within the shrinking wedge
+|v|≤|r'|→0. Extending v by clamping X/r to [0,1], and setting v=0
+before birth, gives one continuous Lorentzian extension of the metric.
+A physical phase and geometry matching law and selection of the opening
+event remain open. The transparent contact used here is bidirectional.
+
 ### Scope and the next connection
 
 The small [calculation record](../results/summaries/nsc-finite-parent-receiver-v1.json)

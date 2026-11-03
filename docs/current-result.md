@@ -1,5 +1,11 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The continuum opening with radial-displacement inertia gives
+r=π²τ²−(4/3)π⁴τ³+O(τ⁴). At τ=.05 the receiving arc holds .299289539
+energy and has radius .016736471416. Curvature diverges at birth while
+physical-distance coordinates admit a continuous curve metric extension.
+See the [continuum derivation](nsc-atlas-offset-generator.md#continuum-wave-at-the-opening).
+
 The zero-radius calculation finds infinite kinetic distance under logarithmic
 inertia. A separate radial-displacement inertia admits an affine continuation
 of the same triangular winding with r=2.9718260669 τ²+O(τ⁴). At τ=0.1 the

@@ -937,6 +937,62 @@ def parent_receiver_calculation():
         no_files_written=True)
 
 
+def continuum_receiving_birth(duration=.05, samples=129):
+    """Early coupled opening with exact curve characteristics and radial inertia."""
+    from scipy.integrate import solve_ivp
+    from scipy.interpolate import CubicSpline
+
+    if not 0 < duration <= .05 or type(samples) is not int or samples < 9:
+        raise ValueError('require 0 < duration <= .05 and at least nine samples')
+    offsets = np.linspace(0., duration, samples)
+    initial_energy = 4 * math.pi**2
+    acceleration = np.array([np.full(samples, initial_energy / 2),
+                             np.full(samples, initial_energy)])
+
+    def evaluate(values):
+        speed = CubicSpline(offsets, values, axis=1).antiderivative()
+        position = speed.antiderivative()
+        radius, parent_displacement = position(offsets)
+        radial_speed, parent_speed = speed(offsets)
+        parent_radius = 1 + parent_displacement
+
+        def optical_rhs(_, state):
+            lag, log_ratio, _, _ = state.reshape(4, samples)
+            lag_radius, parent_displacement_at_lag = position(lag)
+            lag_parent = 1 + parent_displacement_at_lag
+            lag_speed = speed(lag)[0]
+            ratio = np.exp(log_ratio)
+            return np.array([-lag_radius, -lag_speed, math.pi**2 * (ratio / lag_parent)**2,
+                             math.pi * lag_radius / lag_parent]).ravel()
+
+        history = solve_ivp(optical_rhs, (0., 2.), np.r_[offsets, np.zeros(3*samples)],
+                            method='DOP853', rtol=2e-12, atol=2e-14)
+        if not history.success:
+            raise RuntimeError(history.message)
+        lag, log_ratio, receiver_force, shared_phase = history.y[:, -1].reshape(4, samples)
+        contact_power = math.pi**2 * (parent_radius**-2 - (np.exp(log_ratio)/(1+position(lag)[1]))**2)
+        parent_budget = initial_energy - CubicSpline(offsets, parent_radius * contact_power).antiderivative()(offsets)
+        return np.array([receiver_force, parent_budget / parent_radius**2]), dict(
+            radius=radius, parent_radius=parent_radius, shared_phase=shared_phase,
+            child_phase_energy=radius * receiver_force, parent_phase_energy=parent_budget / parent_radius,
+            child_kinetic=radial_speed**2 / 2, parent_kinetic=parent_speed**2 / 2)
+
+    for iteration in range(1, 41):
+        updated, values = evaluate(acceleration)
+        defect = float(np.max(np.abs(updated - acceleration)))
+        if defect < 2e-10:
+            break
+        acceleration = updated
+    else:
+        raise RuntimeError('birth iteration did not converge')
+    energy = sum(values[key] for key in ('child_phase_energy','parent_phase_energy','child_kinetic','parent_kinetic'))
+    return dict(offset=duration, samples=samples, iterations=iteration,
+                **{key: float(value[-1]) for key, value in values.items()},
+                child_energy=float((values['child_phase_energy'] + values['child_kinetic'])[-1]),
+                max_budget_defect=float(np.max(np.abs(energy-initial_energy))),
+                acceleration_iteration_defect=defect, radius_coefficient=math.pi**2)
+
+
 def affine_receiving_birth(duration=.1, seed=1e-5):
     """Continue the triangular winding into a new affine arc at zero radius."""
     from scipy.integrate import solve_ivp
