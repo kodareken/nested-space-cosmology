@@ -13,10 +13,10 @@ quantities measured by an interior observer. The foundation rests on five openly
 declared geometric axioms (**A0--A4**): (**A0**) geometry follows the path of
 least resistance by minimizing the 1D Cauchy--Schwarz generator stretch cost plus
 enclosing compression work, $E = Q_{\mathrm{stretch}} + PV = \sum_{i=1}^3 m_i/\lambda_i + PV_0\lambda_1\lambda_2\lambda_3$,
-which arises directly as the 1D vortex-bundle ($A_{\perp,i}=\pi/\mu^2(s_*)=\mathrm{const}$)
+which arises directly as the 1D vortex-bundle ($A_{\perp,i}=\pi/\mu^2(s_\star)=\mathrm{const}$)
 and quantized cavity-mode reduction of the covariant 3+1D field Hamiltonian
-$\int_V (T^{00}_{\mathrm{phase}} + V(s_*))\,d^3x$ with background vacuum pressure
-$P = V(s_*)$ (Proposition 1.1), while natural boundary variation of the covariant
+$\int_V (T_{\mathrm{phase}}^{00} + V(s_\star)) d^3x$ with background vacuum pressure
+$P = V(s_\star)$ (Proposition 1.1), while natural boundary variation of the covariant
 action across the smooth `0` horizon interface $\Sigma_0$ enforces chemical-potential
 equilibrium $\mu_+ = \mu_- \iff \partial E/\partial\theta = 0$ (Proposition 1.1b);
 (**A1**) a 1D spatial seed plus an inherited compression offset (time) generates
@@ -24,7 +24,7 @@ a closed 2D circle and 3D sphere; (**A2**) seen edge-on, the closed circle
 $z(\tau)=R_0e^{i\omega\tau}$ is the harmonic pendulum $R(\tau)=R_0\cos(\omega\tau)$,
 which crosses `0` smoothly into the negative direction $R<0$ (`-`), flipping the
 3D orientation Jacobian $\det F=(R/R_0)^3$ from `+` to `-` and turning inward
-implosion ($\dot{R}<0$) into outward child expansion ($\dot{r}_-=-\dot{R}>0$)
+implosion ($\dot{R}<0$) into outward child expansion ($\dot r_-=-\dot{R}>0$)
 without the artificial velocity cusp $\Delta\dot{r}=+2R_0\omega$ created when
 radius is restricted to an unsigned size $r=|R|\geq 0$, while in 3+1D curved
 geometry the regular bounce areal radius $\mathcal{R}(R)=\sqrt{R^2+R_{\mathrm{core}}^2}$
@@ -44,21 +44,21 @@ yields a unique closed-form global minimum (Section 9) and seven parameter-free
 geometric, dynamical, and observational theorems:
 
 - **(1) Exact algebraic budget surface and open-valve Friedmann equations of state:**
-  Eliminating both internal variables $(\theta^*,\chi)$ from the five-variable
+  Eliminating both internal variables $(\theta^\star,\chi)$ from the five-variable
   budget shares $(D,M,V)$ with $B=M-D/3$ yields the exact zero-parameter algebraic
-  curve $9DVB=4(V+B/2)^3$, exact inverse recovery $\theta^*=D/(D+V+B/2)$ and
-  $e^{-\chi}=3\sqrt{\theta^*}B/(2V+B)$ (equivalently $e^{2\chi}=V(D+V+B/2)/[B(V+B/2)]$),
+  curve $9DVB=4(V+B/2)^3$, exact inverse recovery $\theta^\star=D/(D+V+B/2)$ and
+  $e^{-\chi}=3\sqrt{\theta^\star}B/(2V+B)$ (equivalently $e^{2\chi}=V(D+V+B/2)/[B(V+B/2)]$),
   and the deep-nest invariant $\lim_{\chi\to\infty}B/V^2=16/27$. Along the
-  open-valve Virial manifold $\theta^*(a_-)=(PV_0/m_0)^{1/2}a_-^2$ ($V_-=V_0 a_-^3$),
-  the total differential $dE_{\mathrm{DE}}^*=(-\frac{1}{3}\rho_{\mathrm{DE}}+\frac{4}{3}\rho_{\mathrm{DE}})dV_-=+\rho_{\mathrm{DE}}\,dV_-$
-  yields $w_{\mathrm{DE}}=-(dE_{\mathrm{DE}}^*/dV_-)/\rho_{\mathrm{DE}}=-1$
+  open-valve Virial manifold $\theta^\star(a_-)=(PV_0/m_0)^{1/2}a_-^2$ ($V_-=V_0 a_-^3$),
+  the total differential $dE_{\mathrm{DE}}^\star=(-\frac{1}{3}\rho_{\mathrm{DE}}+\frac{4}{3}\rho_{\mathrm{DE}})dV_-=+\rho_{\mathrm{DE}} dV_-$
+  yields $w_{\mathrm{DE}}=-(dE_{\mathrm{DE}}^\star/dV_-)/\rho_{\mathrm{DE}}=-1$
   ($\rho_{\mathrm{DE}}=3P=\mathrm{const}$), while the boundary-supported horizon
-  load $E_{\mathrm{DM}}^*$ does zero interior bulk work ($w_{\mathrm{DM}}=0$,
+  load $E_{\mathrm{DM}}^\star$ does zero interior bulk work ($w_{\mathrm{DM}}=0$,
   $c_{s,\mathrm{DM}}^2=0$), matching the covariant massive-scalar late tail
   $\langle p_\chi\rangle/\langle\rho_\chi\rangle\to 0$.
 - **(2) Universal exponential-wall bypasses, `(1,1,1)` 3D triad ground state, and $O(1)$ dilution survival:**
   Above $\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2$, the infalling `+` parcel
-  shrinks in volume while spaghettifying into a 1D filament ($\theta^*=1/2$), while
+  shrinks in volume while spaghettifying into a 1D filament ($\theta^\star=1/2$), while
   three scale-free geometric mechanisms ($d\lambda/\lambda$ logarithmic measure,
   active vortex-tube circulation $w_{\mathrm{tube}}=1$, and zero-mode topological
   phase $\Delta\theta/\pi=1/2$) bypass the $e^{-3K}$ volumetric dilution wall at
@@ -71,10 +71,10 @@ geometric, dynamical, and observational theorems:
   For any incompressible irrotational potential flow $\phi(r,\tau)=-R^2\dot{R}/r$
   around a spherical throat of radius $R(\tau)$, the Gauss divergence identity
   $\nabla\cdot(\mathbf{x}p_{\mathrm{dyn}})=3p_{\mathrm{dyn}}+\mathbf{x}\cdot\nabla p_{\mathrm{dyn}}$
-  decomposes the exterior pressure-gradient Virial $\int_{r\geq R}\mathbf{x}\cdot(-\nabla p_{\mathrm{dyn}})\,d^3x=-4T_{\mathrm{ext}}$
+  decomposes the exterior pressure-gradient Virial $\int_{r\geq R}\mathbf{x}\cdot(-\nabla p_{\mathrm{dyn}}) d^3x=-4T_{\mathrm{ext}}$
   into the exact $3:1$ bulk-to-throat partition $|W_{\mathrm{bulk}}|:|W_{\mathrm{throat}}|=3T_{\mathrm{ext}}:T_{\mathrm{ext}}=3:1$
   (matching the static $3:1$ surrounding-flow to cavity-work ratio
-  $E_{\mathrm{surr}}^*:W_{\mathrm{press}}^*=3:1$), while axial compression buckles
+  $E_{\mathrm{surr}}^\star:W_{\mathrm{press}}^\star=3:1$), while axial compression buckles
   laterally into a helix and drives a damped `+`/`0`/`-` horizon oscillation with
   exact asymmetries $\eta_{\mathrm{area}}=\tanh(\frac{\pi\gamma}{2\omega})$ and
   $\eta_{\mathrm{work}}=\tanh(\frac{\pi\gamma}{\omega})=2\eta_{\mathrm{area}}/(1+\eta_{\mathrm{area}}^2)$.
@@ -82,9 +82,9 @@ geometric, dynamical, and observational theorems:
   Coupling a finite parent reservoir $E_P(\tau)+E_-(\tau)=E_{\mathrm{tot}}$ with
   hybrid radial inertia $M(r)=1/(1+r^2/3)$ admits a continuum wave-driven opening
   from zero radius $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$, the
-  closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal{E}_0}\,\tilde{\tau})$,
+  closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal E_0} \tilde{\tau})$,
   and a sharp last-echo horizon cutoff ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$,
-  visible interior snapshot $25.63\%$, parent curvature backreaction shift $8.98\%$).
+  visible interior snapshot $25.63$%, parent curvature backreaction shift $8.98$%).
 - **(5) Spherical fragmentation, golden-ratio causal neck onset $p^3-3p-3=0$, and outgoing multipole waveform:**
   Integrating the outward causal stress balance over the entire exterior
   $r\in[1,\infty)$ of the harmonic two-center family gives the boundary release
@@ -96,26 +96,26 @@ geometric, dynamical, and observational theorems:
 - **(6) Three-axis orthogonal post-pinch cascade and $2\times 2$ kinetic handoff:**
   Harmonicity ($\Delta\Phi=0$) forces the directional enclosed-volume derivative
   trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ to vanish at
-  every stage, driving a 3-axis orthogonal cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$
+  every stage, driving a 3-axis orthogonal cascade $\mathbf e_z\to\mathbf e_x\to\mathbf e_y$
   ($1\to 2\to 4\to 8$ lobes with exact harmonic ratios $-1/2$ and $-2$), coupled by
-  the exact multipole identity $\partial_{q_2}g_{l,0}|_{q_2=0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$
+  the exact multipole identity $\partial_{q_2}g_{l,0}\vert_{q_2=0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$
   and a strictly positive-definite, $B$-independent $2\times 2$ quasistatic kinetic
   matrix ($\det M_{\mathrm{full}}>0$, initial transverse conjugate momentum $p_2(0)>0$).
-- **(7) Topological 3-axis cascade freeze-out ($\chi_{\mathrm{freeze}}=3$), WHIM split, $H_0=67.03\ \mathrm{km\,s^{-1}Mpc^{-1}}$, and $S_8\approx 0.776$:**
+- **(7) Topological 3-axis cascade freeze-out ($\chi_{\mathrm{freeze}}=3$), WHIM split, $H_0=67.03\ \mathrm{km s^{-1}Mpc^{-1}}$, and $S_8\approx 0.776$:**
   Quantizing the scale-invariant logarithmic action $\Delta\chi_k=\int_{e^{-\Delta\chi_k}}^1 d\lambda_k/\lambda_k=n_k=1$
   on the `(1,1,1)` triad ground state across all $d=3$ mutually orthogonal downhill
-  axes ($\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$, consistent with the two-center
+  axes ($\mathbf e_z\to\mathbf e_x\to\mathbf e_y$, consistent with the two-center
   handoff half-span $L_{\mathrm{handoff}}=1.2+2^{2/3}=2.7874\approx e^1$, Lemma 7.1)
   via **A1** telescoping fixes $\chi_{\mathrm{freeze}}=\sum_{k=1}^3\Delta\chi_k=3$,
-  selecting $(\Omega_{\mathrm{DE}},\Omega_{\mathrm{DM}},\Omega_{\mathrm{vis}})=(70.88\%,23.81\%,5.30\%)$
-  at $\chi=3$ and $(71.14\%,23.88\%,4.98\%)$ at $\Omega_{\mathrm{vis}}=e^{-3}$ on
+  selecting $(\Omega_{\mathrm{DE}},\Omega_{\mathrm{DM}},\Omega_{\mathrm{vis}})=(70.88,23.81,5.30)$%
+  at $\chi=3$ and $(71.14,23.88,4.98)$% at $\Omega_{\mathrm{vis}}=e^{-3}$ on
   $9DVB=4(V+B/2)^3$, predicting the tangent drift slope
   $d\Omega_{\mathrm{DE}}/d\Omega_{\mathrm{vis}}=-\frac{3}{4}-\frac{8}{9}\Omega_{\mathrm{vis}}+O(\Omega_{\mathrm{vis}}^2)\approx -0.806$,
-  separating condensed `(1,1,1)` baryon cores ($\Omega_b=e^{-3}=4.9787\%$, fixing
-  $H_0=100\sqrt{\Omega_b h^2 e^3}=67.03\pm 0.22\ \mathrm{km\,s^{-1}Mpc^{-1}}$) from
-  uncondensed 1D WHIM filaments ($\Delta\Omega_{\mathrm{WHIM}}=0.3252\%$), and
+  separating condensed `(1,1,1)` baryon cores ($\Omega_b=e^{-3}=4.9787$%, fixing
+  $H_0=100\sqrt{\Omega_b h^2 e^3}=67.03\pm 0.22\ \mathrm{km s^{-1}Mpc^{-1}}$) from
+  uncondensed 1D WHIM filaments ($\Delta\Omega_{\mathrm{WHIM}}=0.3252$%), and
   suppressing sub-horizon linear growth via the spatially uniform uncondensed
-  horizon-slip fraction ($1-f_{\mathrm{clust}}=3.114\%$) from $S_{8,\mathrm{CMB}}\approx 0.832$
+  horizon-slip fraction ($1-f_{\mathrm{clust}}=3.114$%) from $S_{8,\mathrm{CMB}}\approx 0.832$
   to $S_{8,\mathrm{NSC}}\approx 0.776$ (Proposition 9.7b).
 
 Part I (Sections 2--8) presents the covariant 3+1D two-scalar Einstein control
@@ -184,11 +184,11 @@ volume before completion.
 The inherited-law target across nested transitions is
 
 $$
-\mathcal{T}^*\mathbb{D}=\mathbb{D},
+\mathcal{T}^\star\mathbb{D}=\mathbb{D},
 $$
 
 stating that the normalized operator law is preserved under the parent-to-child
-pullback $\mathcal{T}^*$.
+pullback $\mathcal{T}^\star$.
 
 ### 1.1 Openly declared geometric axioms (A0--A4) and covariant field reduction
 
@@ -214,7 +214,7 @@ geometric axioms:
   $R(\tau)$ crosses smoothly through `0` into $R<0$ (`-`), flipping the 3D
   orientation Jacobian $\det[(R/R_0)I_3]=(R/R_0)^3$ from `+` to `-` and
   converting inward implosion ($\dot{R}<0$) into outward child expansion
-  ($\dot{r}_-=-\dot{R}>0$, $r_-=-R>0$).
+  ($\dot r_-=-\dot{R}>0$, $r_-=-R>0$).
 - **A3 (Moving Spectral Band $[\lambda_{\min},\lambda_{\max}]$):** Each room at
   relative compression $\chi$ supports a finite wavelength band
   $[\lambda_{\min}(\chi),\lambda_{\max}(\chi)]=e^{-\chi}[\lambda_{\min,0},\lambda_{\max,0}]$
@@ -232,22 +232,22 @@ Consider the covariant 3+1D scalar-gravity Lagrangian of Section 2,
 $\mathcal{L}=\frac{R}{2\kappa}-\frac{1}{2}(\nabla S)^2-\frac{1}{2}(\nabla\chi)^2-V(s)-\frac{1}{2}\mu^2(s)\chi^2$,
 evaluated on an orthorhombic principal domain $V=V_0\lambda_1\lambda_2\lambda_3$
 of physical lengths $L_i=\lambda_i L_{i,0}$ ($i=1,2,3$) immersed in the parent
-background vacuum energy density $P\equiv V(s_*)$. Along each generated 1D
+background vacuum energy density $P\equiv V(s_\star)$. Along each generated 1D
 phase-curve bundle $\gamma_i$ of physical length $L_i=\lambda_i L_{i,0}$ and
-transverse vortex core cross-section $A_{\perp,i}=\pi r_\perp^2=\pi/\mu^2(s_*)$
-fixed by the microscopic Compton healing radius $r_\perp=\mu(s_*)^{-1}$ of the
-stabilized parent scalar mass $\mu^2(s_*)=400e^{-12s_*}$ (which is an intrinsic
+transverse vortex core cross-section $A_{\perp,i}=\pi r_\perp^2=\pi/\mu^2(s_\star)$
+fixed by the microscopic Compton healing radius $r_\perp=\mu(s_\star)^{-1}$ of the
+stabilized parent scalar mass $\mu^2(s_\star)=400e^{-12s_\star}$ (which is an intrinsic
 microscopic property of the scalar potential and therefore strictly independent
 of the macroscopic domain stretches $\lambda_j$), carrying topological phase
-winding $\Delta\psi_i=\int_0^{L_i}\partial_s\psi_i\,ds=2\pi n_i$, the
+winding $\Delta\psi_i=\int_0^{L_i}\partial_s\psi_i ds=2\pi n_i$, the
 Cauchy--Schwarz inequality on the spatial gradient energy yields
 
 $$
-\int_{\mathrm{tube}\,i}\frac{1}{2}(\partial_s\psi_i)^2\,d^3x
-=\frac{A_{\perp,i}}{2}\int_0^{L_i}(\partial_s\psi_i)^2\,ds
+\int_{\mathrm{tube} i}\frac{1}{2}(\partial_s\psi_i)^2 d^3x
+=\frac{A_{\perp,i}}{2}\int_0^{L_i}(\partial_s\psi_i)^2 ds
 \geq\frac{A_{\perp,i}(\Delta\psi_i)^2}{2L_{i,0}\lambda_i}
 \equiv\frac{m_i}{\lambda_i},\qquad
-m_i=\frac{2\pi^2 A_{\perp,i}n_i^2}{L_{i,0}}=\frac{2\pi^3 n_i^2}{\mu^2(s_*)L_{i,0}},
+m_i=\frac{2\pi^2 A_{\perp,i}n_i^2}{L_{i,0}}=\frac{2\pi^3 n_i^2}{\mu^2(s_\star)L_{i,0}},
 $$
 
 with equality attained on the harmonic uniform-gradient phase
@@ -256,48 +256,48 @@ cavity limit at fixed mode occupation $N_i$, each standing-wave mode of
 wavenumber $k_i=\pi n_i/(\lambda_i L_{i,0})$ carries energy
 $E_i=N_i\hbar c k_i=(N_i\hbar c\pi n_i/L_{i,0})/\lambda_i\equiv m_i/\lambda_i$
 with $m_i$ strictly independent of $\lambda_1,\lambda_2,\lambda_3$). Adding the
-bulk background vacuum energy $\int_V V(s_*)\,d^3x=PV_0\lambda_1\lambda_2\lambda_3$
+bulk background vacuum energy $\int_V V(s_\star) d^3x=PV_0\lambda_1\lambda_2\lambda_3$
 gives the exact reduced Hamiltonian functional of **A0**:
 
 $$
 E(\lambda_1,\lambda_2,\lambda_3)
-=\int_V\left(T^{00}_{\mathrm{phase}}+V(s_*)\right)d^3x
+=\int_V\left(T_{\mathrm{phase}}^{00}+V(s_\star)\right)d^3x
 =\sum_{i=1}^3\frac{m_i}{\lambda_i}+PV_0\lambda_1\lambda_2\lambda_3.
 $$
 
 Whereas smearing a fixed classical amplitude homogeneously across empty 3D
 volume dilutes as $\lambda^{d-2}=\lambda^1=e^{-\chi}$, transverse core
-localization at the Compton healing radius $r_\perp=\mu(s_*)^{-1}$ (or fixed
+localization at the Compton healing radius $r_\perp=\mu(s_\star)^{-1}$ (or fixed
 quantum occupation $N_i$ along the generated 1D phase curves) preserves the
 exact $1/\lambda_i$ Cauchy--Schwarz stretch resistance in every dimension $d$.
 
 **Proposition 1.1b (Covariant 3+1D Junction Derivation of Open-Valve Stationarity $\partial E/\partial\theta = 0$):**
-Let the two-sheeted spacetime be separated into parent ($\mathcal{M}_+$) and
-child ($\mathcal{M}_-$) domains by the smooth `0` horizon interface $\Sigma_0$
+Let the two-sheeted spacetime be separated into parent ($\mathcal M_+$) and
+child ($\mathcal M_-$) domains by the smooth `0` horizon interface $\Sigma_0$
 ($R=0$, $v=\pi/2$), across which the total topological winding $2\pi N_0$ is
 partitioned via the horizon boundary phase $\psi_{\Sigma_0} = 2\pi N_0\theta(\tau)$,
-so that $\Delta\psi_+ = 2\pi N_0(1-\theta)$ on $\mathcal{M}_+$ and
-$\Delta\psi_- = 2\pi N_0\theta$ on $\mathcal{M}_-$ (**Axiom A4**). Evaluating
-the covariant 3+1D scalar action $\mathcal{S} = \int \mathcal{L}\sqrt{-g}\,d^4x$
+so that $\Delta\psi_+ = 2\pi N_0(1-\theta)$ on $\mathcal M_+$ and
+$\Delta\psi_- = 2\pi N_0\theta$ on $\mathcal M_-$ (**Axiom A4**). Evaluating
+the covariant 3+1D scalar action $\mathcal{S} = \int \mathcal{L}\sqrt{-g} d^4x$
 on the harmonic vortex-bundle fields of Proposition 1.1
 ($\partial_s\psi_{+,i} = \Delta\psi_+/(\lambda_i L_{i,0})$,
-$\partial_s\psi_{-,j} = \Delta\psi_-/(\tilde{\lambda}_j L_{j,0})$) and performing
+$\partial_s\psi_{-,j} = \Delta\psi_-/(\tilde \lambda_j L_{j,0})$) and performing
 the natural boundary variation with respect to the intermediate horizon phase
-$\delta\psi_{\Sigma_0} = 2\pi N_0\,\delta\theta(\tau)$ yields the canonical
+$\delta\psi_{\Sigma_0} = 2\pi N_0 \delta\theta(\tau)$ yields the canonical
 junction identity:
 
 $$
-\delta\mathcal{S}_{\Sigma_0}
-=\int_{\Sigma_0}d\tau\,(2\pi N_0)\,\delta\theta(\tau)
-\left[\sum_{i=1}^3 A_{\perp,i}\,\partial_s\psi_{+,i}-\sum_{j=1}^3 A_{\perp,j}\,\partial_s\psi_{-,j}\right]
-=-\int_{\Sigma_0}d\tau\,\frac{\partial E}{\partial\theta}\,\delta\theta(\tau),
+\delta\mathcal S_{\Sigma_0}
+=\int_{\Sigma_0}d\tau (2\pi N_0) \delta\theta(\tau)
+\left[\sum_{i=1}^3 A_{\perp,i} \partial_s\psi_{+,i}-\sum_{j=1}^3 A_{\perp,j} \partial_s\psi_{-,j}\right]
+=-\int_{\Sigma_0}d\tau \frac{\partial E}{\partial\theta} \delta\theta(\tau),
 $$
 
 where $m_0 = 2\pi^2 A_\perp N_0^2/L_0$ and
 
 $$
 -\frac{\partial E}{\partial\theta}
-=2m_0(1-\theta)\sum_{i=1}^3\frac{1}{\lambda_i}-2m_0\theta\sum_{j=1}^3\frac{1}{\tilde{\lambda}_j}
+=2m_0(1-\theta)\sum_{i=1}^3\frac{1}{\lambda_i}-2m_0\theta\sum_{j=1}^3\frac{1}{\tilde \lambda_j}
 =2\pi N_0\left(\mu_+-\mu_-\right),
 $$
 
@@ -309,11 +309,11 @@ winding chemical potential on each side of $\Sigma_0$. Consequently:
   $V_- = V_0 a_-^3$ obeys $E_{\mathrm{DE}} \propto a_-^{-1}$ ($w_{\mathrm{closed}} = +1/3$).
 - *Open-valve regime (unpinned smooth horizon, $\delta\theta$ free):* Because
   the smooth horizon at $v=\pi/2$ has no membrane barrier or singular
-  denominator (Section 2), $\delta\mathcal{S}_{\Sigma_0}/\delta\theta = 0$
+  denominator (Section 2), $\delta\mathcal S_{\Sigma_0}/\delta\theta = 0$
   enforces chemical-potential equilibrium
   $\mu_+(\chi,\theta) = \mu_-(\theta) \iff \partial E/\partial\theta = 0$
   across $\Sigma_0$, locking the system onto the open-valve manifold
-  $\mathcal{M}_{\mathrm{valve}}$ ($\theta^*(a_-) = (PV_0/m_0)^{1/2}a_-^2$) and
+  $\mathcal M_{\mathrm{valve}}$ ($\theta^\star(a_-) = (PV_0/m_0)^{1/2}a_-^2$) and
   generating $w_{\mathrm{DE}} = -1$ (Section 9.1).
 
 ### 1.2 Circle-pendulum duality: why `-` exists, `(-) x (-) = (+)`, and curvature regularization at $R=0$
@@ -333,7 +333,7 @@ exact geometric consequences follow immediately:
 
 - **(1) Why `-` must exist for space to close:** Negative is direction, not less
   than nothing. If negative coordinates are forbidden ($R\geq 0$ only), the
-  circle is clipped to $\omega\tau\in[-\pi/2,\pi/2]$: exactly $50\%$ of its
+  circle is clipped to $\omega\tau\in[-\pi/2,\pi/2]$: exactly $50$% of its
   arc length ($\pi R_0$ out of $2\pi R_0$) is lost and no loop or bounded
   space can close.
 - **(2) Why `(-) x (-) = (+)` is two-generation geometry:** Multiplying by
@@ -349,7 +349,7 @@ exact geometric consequences follow immediately:
   At the horizon crossing $\tau_0=\pi/(2\omega)$ ($R=0$), folding the negative
   half of the swing onto the positive half forces a discontinuous velocity jump
   $\Delta\dot{r}=\dot{r}(\tau_0^+)-\dot{r}(\tau_0^-)=+2R_0\omega$ and a
-  Dirac-delta acceleration cusp $\ddot{r}=2R_0\omega\,\delta(\tau-\tau_0)-\omega^2 r$.
+  Dirac-delta acceleration cusp $\ddot{r}=2R_0\omega \delta(\tau-\tau_0)-\omega^2 r$.
   Keeping the signed coordinate $R(\tau)$ removes this kinematic cusp completely
   ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$).
 
@@ -361,21 +361,21 @@ the hybrid radial inertia metric $M(R)=1/(1+R^2/3)$ (derived in Theorem 4,
 Section 9.4) yields the regular two-sheeted bounce line element
 
 $$
-ds^2=-d\tau^2+M(R)\,dR^2+\mathcal{R}^2(R)\,d\Omega_2^2,\qquad
+ds^2=-d\tau^2+M(R) dR^2+\mathcal{R}^2(R) d\Omega_2^2,\qquad
 \mathcal{R}(R)\equiv\sqrt{R^2+R_{\mathrm{core}}^2},\qquad
 M(R)=\frac{1}{1+R^2/3}.
 $$
 
 Because $M(0)=1$, $\mathcal{R}(0)=R_{\mathrm{core}}>0$, $\mathcal{R}'(0)=0$, and
 $\mathcal{R}''(0)=1/R_{\mathrm{core}}$ are analytic at the throat $R=0$, the
-proper birth distance $\int_0^\varepsilon\sqrt{M(R)}\,dR<\infty$ is finite and
+proper birth distance $\int_0^\varepsilon\sqrt{M(R)} dR<\infty$ is finite and
 every 3+1D curvature invariant is strictly bounded across the `+ -> 0 -> -`
 transition:
 
 $$
 R_4(0)=-\frac{2}{R_{\mathrm{core}}^2}=-\frac{\kappa}{\pi}<\infty,\qquad
-\mathcal{K}_{\mathrm{static}}(0)=\frac{12}{R_{\mathrm{core}}^4}=\frac{3\kappa^2}{\pi^2}<\infty,\qquad
-\mathcal{K}_{\mathrm{dyn}}(0)=\frac{3\kappa^2}{\pi^2}\left(1+R_0^2\omega^2\right)^2<\infty.
+\mathcal K_{\mathrm{static}}(0)=\frac{12}{R_{\mathrm{core}}^4}=\frac{3\kappa^2}{\pi^2}<\infty,\qquad
+\mathcal K_{\mathrm{dyn}}(0)=\frac{3\kappa^2}{\pi^2}\left(1+R_0^2\omega^2\right)^2<\infty.
 $$
 
 **Proposition 1.2b (Exact Orthonormal Einstein Tensor and Standing-Wave Stress Matching Across $R=0$):**
@@ -408,8 +408,8 @@ rooms $R\to\pm\infty$ establishes two exact physical limits:
 
 $$
 T_{\hat{a}\hat{b}}(0)=\frac{1}{\kappa}G_{\hat{a}\hat{b}}(0)
-=\frac{1}{\kappa R_{\mathrm{core}}^2}\,\mathrm{diag}\left(-1,\,-1,\,+1,\,+1\right)
-=\frac{1}{2\pi}\,\mathrm{diag}\left(-1,\,-1,\,+1,\,+1\right).
+=\frac{1}{\kappa R_{\mathrm{core}}^2} \mathrm{diag}\left(-1, -1, +1, +1\right)
+=\frac{1}{2\pi} \mathrm{diag}\left(-1, -1, +1, +1\right).
 $$
 
   The transverse angular pressure $p_\theta(0)+p_\phi(0)=2/(\kappa R_{\mathrm{core}}^2)$
@@ -460,7 +460,7 @@ $$
 \qquad W=V(s)+\frac{\mu^2(s)\chi^2}{2},
 $$
 
-with $S=\sqrt{84}(s-s_*)$ and
+with $S=\sqrt{84}(s-s_\star)$ and
 
 $$
 V(s)=7e^{-12s}-7.5e^{-14s}+\frac{25}{32}e^{-24s},
@@ -471,7 +471,7 @@ Its prepared real scalar contains two spatial harmonics with Laplacian
 eigenvalues $3$ and $8$, equal reference energy, and zero initial velocity.
 The reference frequency $\omega_0=20$, state amplitude $\epsilon$, and
 background curvature $H$ remain declared inputs; the minimum of $V(s)$
-supplies the background parent vacuum $P=V(s_*)$.
+supplies the background parent vacuum $P=V(s_\star)$.
 
 In conformal null coordinates $u=\eta-\chi$ and $v=\eta+\chi$, the smooth
 horizon lies at $v=\pi/2$, where the inherited radial fields satisfy
@@ -499,9 +499,9 @@ selected present age):
 
 | Existing result | Value | Meaning |
 | --- | --- | --- |
-| Crossed fraction | $88.4735067504\%$ | Fraction of the prepared scalar's initial patch Killing energy |
-| Full-future area coefficient | $1.085638919782\,\epsilon^2$ | Normalized ordinary horizon-area growth |
-| Short-leg transfer | $2.219782587242\,\epsilon^2$ | Killing energy over the handoff leg $t\in[4.364852,4.797158]$ |
+| Crossed fraction | $88.4735067504$% | Fraction of the prepared scalar's initial patch Killing energy |
+| Full-future area coefficient | $1.085638919782 \epsilon^2$ | Normalized ordinary horizon-area growth |
+| Short-leg transfer | $2.219782587242 \epsilon^2$ | Killing energy over the handoff leg $t\in[4.364852,4.797158]$ |
 
 Under the bounded-future condition, the null Einstein response obeys the
 physical-process law
@@ -510,7 +510,7 @@ $$
 H\Delta A_{\mathrm{dyn}}=\kappa E_{\mathrm{out}},
 $$
 
-so the $88.4735\%$ crossing fraction and the area coefficient encode the same
+so the $88.4735$% crossing fraction and the area coefficient encode the same
 conserved source. Gibbons--Hawking and [Zhao](https://arxiv.org/abs/2503.16138)
 supply the physical-process framework; the source normalization and
 finite-section correction are the atlas's calculation (Appendix A.10).
@@ -579,12 +579,12 @@ $$
 
 Thus the rescaled phase survives with a cold, pressureless dust equation of
 state ($w_\chi=\langle p_\chi\rangle/\langle\rho_\chi\rangle\to 0$) while the
-background-subtracted late-field vacuum shift vanishes ($\Delta\Lambda\,L_{\mathrm{ref}}^2=0$).
+background-subtracted late-field vacuum shift vanishes ($\Delta\Lambda L_{\mathrm{ref}}^2=0$).
 
 ## 6. Finite amplitude: admissibility and the child criterion
 
 The nonspherical initial state has spatial metric $h_{ij}=a_0^2\Psi^4\gamma_{ij}$,
-extrinsic curvature $K_{ij}=0$, $s=s_*$, and zero scalar normal momenta, with
+extrinsic curvature $K_{ij}=0$, $s=s_\star$, and zero scalar normal momenta, with
 Hamiltonian constraint
 
 $$
@@ -636,7 +636,7 @@ state to proper duration $1.2$ gives:
 | Internal volume / initial volume | $1.498350$ | $1.498335$ |
 | Hamiltonian residual / $H_{\mathrm{ref}}^2$ | $0.03632$ | $0.01180$ |
 
-Thus the unchanged parent drives $49.8\%$ internal-volume growth over this
+Thus the unchanged parent drives $49.8$% internal-volume growth over this
 finite window. The fixed-boundary check shows positive outgoing expansion
 ($0.37548$ to $0.65660$) at proper duration $1.2$, so no future-trapped
 boundary forms in the equal two-mode preparation.
@@ -655,7 +655,7 @@ $$
 The calculated trapping threshold is $\epsilon_{\mathrm{crit}}=0.8339066143$. At
 $\epsilon=1$, $\dot\theta_\pm/H^2=-1.30468$ and both expansions become strictly
 negative ($\theta_\pm/H=-0.00707954$ at proper time $0.02$), agreeing with the
-independent nonspherical generalized-harmonic implementation within $0.0043\%$
+independent nonspherical generalized-harmonic implementation within $0.0043$%
 and continuing to proper time $0.3$.
 
 Inside the strict trap at proper time $0.2$, the trapped band has volume
@@ -673,7 +673,7 @@ expansions $\theta_\pm/H\approx -11.8488$), and controlled local restart reaches
 radius $0.15$, where the source gate quantifies the required bounce pressure.
 Adding a Dirac candidate on that internal geometry gives $m_{F,0}^2=3\Delta M_{B,\mathrm{KK}}^2$,
 bare channel splitting $\Delta(EL)/g=0.01004157$, nonzero low-mode mixing in the
-onset response, and $71.58\%$ off-diagonal mixing weight in the complete radial
+onset response, and $71.58$% off-diagonal mixing weight in the complete radial
 source operator.
 
 ## 7. Selection and the charge-resolved question
@@ -686,7 +686,7 @@ properties are summarized below:
 | $\alpha=0.0573586470504441$ | Mode ratio within the supplied two-scalar action |
 | $n=100$ | Reporting sample count, not a selected cosmic epoch |
 | $\omega_0=20$ | Supplied reference frequency |
-| Real scalar U(1) current | $j_\mu=i(\chi^*\partial_\mu\chi-\chi\partial_\mu\chi^*)=0$ identically on the real sector |
+| Real scalar U(1) current | $j_\mu=i(\chi^\star\partial_\mu\chi-\chi\partial_\mu\chi^\star)=0$ identically on the real sector |
 
 Because $j_\mu=0$ on the real sector of a single horizon, an isolated real
 scalar flux has zero signed charge transfer; directional orientation parity and
@@ -725,59 +725,59 @@ quarantine of non-derived numerical coincidences.
 
 Under parent spherical convergence $\lambda_1=\lambda_2=\xi=e^{-\chi}$ in the
 infall region (`+`), radial scale $\lambda_3$, child principal scales
-$(\tilde{\lambda}_1,\tilde{\lambda}_2,\tilde{\lambda}_3)$ across `0` (`-`), and
+$(\tilde \lambda_1,\tilde \lambda_2,\tilde \lambda_3)$ across `0` (`-`), and
 transferred turn fraction $\theta\in(0,1)$ ($m_+=m_0(1-\theta)^2$, $m_-=m_0\theta^2$),
 the reduced **A0** Hamiltonian functional (Proposition 1.1) is
 
 $$
-E(\lambda_3,\tilde{\lambda}_1,\tilde{\lambda}_2,\tilde{\lambda}_3,\theta;\chi)
+E(\lambda_3,\tilde \lambda_1,\tilde \lambda_2,\tilde \lambda_3,\theta;\chi)
 =\left[\frac{2m_0(1-\theta)^2}{e^{-\chi}}+\frac{m_0(1-\theta)^2}{\lambda_3}+PV_0e^{-2\chi}\lambda_3\right]
-+\left[\sum_{i=1}^3\frac{m_0\theta^2}{\tilde{\lambda}_i}+PV_0\tilde{\lambda}_1\tilde{\lambda}_2\tilde{\lambda}_3\right].
++\left[\sum_{i=1}^3\frac{m_0\theta^2}{\tilde \lambda_i}+PV_0\tilde \lambda_1\tilde \lambda_2\tilde \lambda_3\right].
 $$
 
 Simultaneous stationarity $\partial E/\partial\lambda_3=0$,
-$\partial E/\partial\tilde{\lambda}_i=0$, and $\partial E/\partial\theta=0$
+$\partial E/\partial\tilde \lambda_i=0$, and $\partial E/\partial\theta=0$
 (with strictly positive-definite $5\times 5$ Hessian) gives the unique
 closed-form global minimum (in normalized units $m_0=PV_0=V_0=1$):
 
 $$
-\sqrt{\theta^*(\chi)}=\frac{\sqrt{16e^{2\chi}+17}-3}{4e^\chi},
-\qquad \lambda_3^*(\chi)=(1-\theta^*(\chi))e^\chi,
-\qquad \tilde{\lambda}_1^*=\tilde{\lambda}_2^*=\tilde{\lambda}_3^*=\sqrt{\theta^*(\chi)}.
+\sqrt{\theta^\star(\chi)}=\frac{\sqrt{16e^{2\chi}+17}-3}{4e^\chi},
+\qquad \lambda_3^\star(\chi)=(1-\theta^\star(\chi))e^\chi,
+\qquad \tilde \lambda_1^\star=\tilde \lambda_2^\star=\tilde \lambda_3^\star=\sqrt{\theta^\star(\chi)}.
 $$
 
 Five exact parameter-free consequences follow from this single variational
 minimum without fluid incompressibility or borrowed surface tension:
 
 - **(1) Infall parcel shrinkage and 1D spaghettification (`+`):** The infalling
-  parcel volume shrinks as $V_+^*(\chi)=(1-\theta^*)e^{-\chi}\sim\frac{3}{2}e^{-2\chi}\to 0$,
-  while its aspect ratio $\lambda_3^*/\xi=(1-\theta^*)e^{2\chi}\sim\frac{3}{2}e^{+\chi}\to\infty$
+  parcel volume shrinks as $V_+^\star(\chi)=(1-\theta^\star)e^{-\chi}\sim\frac{3}{2}e^{-2\chi}\to 0$,
+  while its aspect ratio $\lambda_3^\star/\xi=(1-\theta^\star)e^{2\chi}\sim\frac{3}{2}e^{+\chi}\to\infty$
   stretches into a 1D filament for all $\chi>\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2\approx 0.34657359$
-  (where $\theta^*=1/2$ and the aspect ratio equals $1$).
+  (where $\theta^\star=1/2$ and the aspect ratio equals $1$).
 - **(2) Rounding into a 3D sphere across `0` (`-`):** By the arithmetic--geometric
-  mean inequality on $\sum_{i=1}^3\theta^2/\tilde{\lambda}_i+\tilde{\lambda}_1\tilde{\lambda}_2\tilde{\lambda}_3$,
-  the child scales satisfy $\tilde{\lambda}_1^*=\tilde{\lambda}_2^*=\tilde{\lambda}_3^*=\sqrt{\theta^*}$
+  mean inequality on $\sum_{i=1}^3\theta^2/\tilde \lambda_i+\tilde \lambda_1\tilde \lambda_2\tilde \lambda_3$,
+  the child scales satisfy $\tilde \lambda_1^\star=\tilde \lambda_2^\star=\tilde \lambda_3^\star=\sqrt{\theta^\star}$
   (aspect ratio $1$, a round 3D sphere) and obey the exact $3:1$ Virial lock
-  $Q_{\mathrm{stretch},-}^*=3(\theta^*)^{3/2}=3W_{\mathrm{ext},-}^*$.
+  $Q_{\mathrm{stretch},-}^\star=3(\theta^\star)^{3/2}=3W_{\mathrm{ext},-}^\star$.
 - **(3) Derived volume takeover:** The `-` sphere's share of the two-region volume,
-  $f_{\mathrm{drop}}^*(\chi)=V_-^*/(V_+^*+V_-^*)$ with $V_-^*=(\theta^*)^{3/2}$,
-  grows monotonically from $37.90\%$ ($\chi=0$) to $84.63\%$ ($\chi=1$),
-  $97.73\%$ ($\chi=2$), and $99.95\%$ ($\chi=4$).
+  $f_{\mathrm{drop}}^\star(\chi)=V_-^\star/(V_+^\star+V_-^\star)$ with $V_-^\star=(\theta^\star)^{3/2}$,
+  grows monotonically from $37.90$% ($\chi=0$) to $84.63$% ($\chi=1$),
+  $97.73$% ($\chi=2$), and $99.95$% ($\chi=4$).
 - **(4) Exact zero-parameter algebraic budget surface:**
-  At any compression $\chi$, the minimum cost $E^*(\chi)=E_{\mathrm{DE}}^*+E_{\mathrm{DM}}^*+E_{\mathrm{vis}}^*$
-  partitions into isotropic child expansion stretch $E_{\mathrm{DE}}^*=3(\theta^*)^{3/2}$,
-  two-sided horizon/infall boundary load $E_{\mathrm{DM}}^*=(\theta^*)^{3/2}+2(1-\theta^*)e^{-\chi}$,
-  and active 1D filament stretch $E_{\mathrm{vis}}^*=2(1-\theta^*)^2e^\chi$.
+  At any compression $\chi$, the minimum cost $E^\star(\chi)=E_{\mathrm{DE}}^\star+E_{\mathrm{DM}}^\star+E_{\mathrm{vis}}^\star$
+  partitions into isotropic child expansion stretch $E_{\mathrm{DE}}^\star=3(\theta^\star)^{3/2}$,
+  two-sided horizon/infall boundary load $E_{\mathrm{DM}}^\star=(\theta^\star)^{3/2}+2(1-\theta^\star)e^{-\chi}$,
+  and active 1D filament stretch $E_{\mathrm{vis}}^\star=2(1-\theta^\star)^2e^\chi$.
   Writing $D=\Omega_{\mathrm{DE}}$, $M=\Omega_{\mathrm{DM}}$, $V=\Omega_{\mathrm{vis}}$
-  ($D+M+V=1$) and $B=M-D/3=2(1-\theta^*)e^{-\chi}/E^*$ for the radial infall
-  share, stationarity $2(1-\theta^*)e^\chi+e^{-\chi}=3\sqrt{\theta^*}$ implies
-  $2V+B=6(1-\theta^*)\sqrt{\theta^*}/E^*$. Eliminating both $(\theta^*,\chi)$
+  ($D+M+V=1$) and $B=M-D/3=2(1-\theta^\star)e^{-\chi}/E^\star$ for the radial infall
+  share, stationarity $2(1-\theta^\star)e^\chi+e^{-\chi}=3\sqrt{\theta^\star}$ implies
+  $2V+B=6(1-\theta^\star)\sqrt{\theta^\star}/E^\star$. Eliminating both $(\theta^\star,\chi)$
   yields the exact parameter-free algebraic curve and its exact inverse map:
 
 $$
 9DVB=4\left(V+\frac{B}{2}\right)^3,\qquad
-\theta^*=\frac{D}{D+V+B/2},\qquad
-e^{-\chi}=\frac{3\sqrt{\theta^*}\,B}{2V+B}\quad\left(e^{2\chi}=\frac{V(D+V+B/2)}{B(V+B/2)}\right),
+\theta^\star=\frac{D}{D+V+B/2},\qquad
+e^{-\chi}=\frac{3\sqrt{\theta^\star} B}{2V+B}\quad\left(e^{2\chi}=\frac{V(D+V+B/2)}{B(V+B/2)}\right),
 $$
 
   with deep-compression invariant $\lim_{\chi\to\infty}B/V^2=16/27$. Specifying
@@ -785,48 +785,48 @@ $$
   with zero free parameters.
 - **(5) Derived Friedmann equations of state ($w_{\mathrm{DE}}=-1$, $w_{\mathrm{DM}}=0$, $w_{\mathrm{baryon}}=0$) via the open-valve differential:**
   In the expanding child room of physical 3-volume
-  $V_-=V_0\tilde{\lambda}_1^*\tilde{\lambda}_2^*\tilde{\lambda}_3^*=V_0 a_-^3$
-  (with isotropic child scale factor $a_-=\tilde{\lambda}_i^*$), the off-shell
+  $V_-=V_0\tilde \lambda_1^\star\tilde \lambda_2^\star\tilde \lambda_3^\star=V_0 a_-^3$
+  (with isotropic child scale factor $a_-=\tilde \lambda_i^\star$), the off-shell
   child stretch energy is $E_{\mathrm{DE}}(a_-,\theta)=3m_0\theta^2/a_-$. Along
-  the adiabatic horizon-transfer manifold $\mathcal{M}_{\mathrm{valve}}$ defined by
-  $\theta^*(a_-)=(PV_0/m_0)^{1/2}a_-^2$ (fixed by $\partial E/\partial a_-=0$),
-  the total differential $dE_{\mathrm{DE}}^*$
+  the adiabatic horizon-transfer manifold $\mathcal M_{\mathrm{valve}}$ defined by
+  $\theta^\star(a_-)=(PV_0/m_0)^{1/2}a_-^2$ (fixed by $\partial E/\partial a_-=0$),
+  the total differential $dE_{\mathrm{DE}}^\star$
   decomposes into a closed-valve expansion term at fixed $\theta$ ($w_{\mathrm{closed}}=+1/3$)
-  plus an open-valve turn-injection term from $d\theta^*/dV_-$:
+  plus an open-valve turn-injection term from $d\theta^\star/dV_-$:
 
 $$
-dE_{\mathrm{DE}}^*
-=\left.\frac{\partial E_{\mathrm{DE}}}{\partial V_-}\right|_\theta dV_-
-+\left.\frac{\partial E_{\mathrm{DE}}}{\partial\theta}\right|_{V_-}d\theta^*
+dE_{\mathrm{DE}}^\star
+=\frac{\partial E_{\mathrm{DE}}(V_-,\theta)}{\partial V_-}dV_-
++\frac{\partial E_{\mathrm{DE}}(V_-,\theta)}{\partial\theta}d\theta^\star
 =\left(-\frac{1}{3}\rho_{\mathrm{DE}}+\frac{4}{3}\rho_{\mathrm{DE}}\right)dV_-
-=+\rho_{\mathrm{DE}}\,dV_-,
+=+\rho_{\mathrm{DE}} dV_-,
 $$
 
-  where $\rho_{\mathrm{DE}}=E_{\mathrm{DE}}^*/V_-=3P=\mathrm{const}$. Physically,
+  where $\rho_{\mathrm{DE}}=E_{\mathrm{DE}}^\star/V_-=3P=\mathrm{const}$. Physically,
   stretching the 1D phase curve at fixed winding ($\delta\theta=0$) has ordinary
   positive elastic resistance ($w_{\mathrm{closed}}=+1/3$); the energy density
   $\rho_{\mathrm{DE}}=3P$ remains constant only because the `0` horizon valve is
-  open and injects $+\frac{4}{3}\rho_{\mathrm{DE}}\,dV_-$ of new winding from `+`
+  open and injects $+\frac{4}{3}\rho_{\mathrm{DE}} dV_-$ of new winding from `+`
   into `-`. An interior observer who models the child room as a closed box and
   fits $\rho_{\mathrm{DE}}=\mathrm{const}$ into the closed-box Friedmann
-  continuity equation $\dot{\rho}_{\mathrm{DE}}+3H_-(\rho_{\mathrm{DE}}+p_{\mathrm{DE}})=0$
+  continuity equation $\dot \rho_{\mathrm{DE}}+3H_-(\rho_{\mathrm{DE}}+p_{\mathrm{DE}})=0$
   therefore infers an effective negative-pressure vacuum equation of state:
 
 $$
-p_{\mathrm{DE}}=-\left(\frac{dE_{\mathrm{DE}}^*}{dV_-}\right)_{\mathcal{M}_{\mathrm{valve}}}
+p_{\mathrm{DE}}=-\frac{dE_{\mathrm{DE}}^\star(V_-)}{dV_-}
 =-3P=-\rho_{\mathrm{DE}}
-\Longrightarrow w_{\mathrm{DE}}\equiv\frac{p_{\mathrm{DE}}}{\rho_{\mathrm{DE}}}=-1,
+\Rightarrow w_{\mathrm{DE}}\equiv\frac{p_{\mathrm{DE}}}{\rho_{\mathrm{DE}}}=-1,
 $$
 
   without requiring any mysterious repulsive substance in a closed container. By
   contrast, for an interior adiabatic bulk parcel $\delta V_{\mathrm{bulk}}$,
-  the two-sided `0`-horizon boundary load $E_{\mathrm{DM}}^*$ is supported at the
+  the two-sided `0`-horizon boundary load $E_{\mathrm{DM}}^\star$ is supported at the
   bounding horizon surfaces and has zero interior bulk support:
 
 $$
-p_{\mathrm{DM},\mathrm{bulk}}=-\left.\frac{\partial E_{\mathrm{DM}}^*}{\partial V_{\mathrm{bulk}}}\right|_{\theta^*,\chi}=0,\qquad
-\rho_{\mathrm{DM}}(a_-)=\frac{E_{\mathrm{DM}}^*}{V_0 a_-^3}\propto a_-^{-3}
-\Longrightarrow w_{\mathrm{DM}}\equiv\frac{p_{\mathrm{DM},\mathrm{bulk}}}{\rho_{\mathrm{DM}}}=0,\quad
+p_{\mathrm{DM},\mathrm{bulk}}=-\frac{\partial E_{\mathrm{DM}}^\star(\theta^\star,\chi)}{\partial V_{\mathrm{bulk}}}=0,\qquad
+\rho_{\mathrm{DM}}(a_-)=\frac{E_{\mathrm{DM}}^\star}{V_0 a_-^3}\propto a_-^{-3}
+\Rightarrow w_{\mathrm{DM}}\equiv\frac{p_{\mathrm{DM},\mathrm{bulk}}}{\rho_{\mathrm{DM}}}=0,\quad
 c_{s,\mathrm{DM}}^2=0.
 $$
 
@@ -837,8 +837,8 @@ $$
   and the transmitted massive scalar tail behave dynamically as cold,
   pressureless dust. Likewise, active 1D filaments crystallize into localized
   `(1,1,1)` 3D standing-wave triads (Theorem 2) whose rest energy
-  $E^*(1,1,1)=4(PV_0)^{1/4}m_0^{3/4}$ is independent of $V_{\mathrm{bulk}}$,
-  giving $p_{\mathrm{baryon}}=-\partial E^*(1,1,1)/\partial V_{\mathrm{bulk}}=0$
+  $E^\star(1,1,1)=4(PV_0)^{1/4}m_0^{3/4}$ is independent of $V_{\mathrm{bulk}}$,
+  giving $p_{\mathrm{baryon}}=-\partial E^\star(1,1,1)/\partial V_{\mathrm{bulk}}=0$
   and $w_{\mathrm{baryon}}=0$.
 
 ### 9.2 Theorem 2: Universal exponential-wall bypasses, the `(1, 1, 1)` orthogonal triad ground state, and hard-core repulsion
@@ -851,43 +851,43 @@ new orthogonal degree of freedom or crossing `0` into `-`:
 - **(1) Wall 1 — 1D Axial Compression Wall $\to$ Helical Buckling Plateau (`1D -> 2D/3D`):**
   Compressing a straight 1D line ($\omega=0$) hits the exponential wall
   $E_{1\mathrm{D}}(\chi)=e^{+\chi}\to\infty$. Above $\chi>0$, buckling sideways
-  into a helix with $v_\perp^*=\sqrt{1-e^{-2\chi}}$ bypasses the wall and caps
+  into a helix with $v_\perp^\star=\sqrt{1-e^{-2\chi}}$ bypasses the wall and caps
   the cost at the finite plateau
 
 $$
-E_{\mathrm{helix}}^*(\chi)=\frac{3}{2}-\frac{1}{2}e^{-2\chi}\to 1.5.
+E_{\mathrm{helix}}^\star(\chi)=\frac{3}{2}-\frac{1}{2}e^{-2\chi}\to 1.5.
 $$
 
 - **(2) Wall 2 — 3D `+` Compression Wall $\to$ Signed `0`-Crossing Plateau (`+ -> 0 -> -`):**
   Forcing all winding to remain in the parent `+` region ($\theta=0$) hits the
   exponential wall $E_{\mathrm{stay},+}(\chi)=2e^{+\chi}+2e^{-\chi}\to\infty$.
-  Opening the `0` horizon valve into a `-` child sphere ($\theta^*\to 1$)
+  Opening the `0` horizon valve into a `-` child sphere ($\theta^\star\to 1$)
   bypasses the wall and caps the 5-variable cost at the finite plateau
 
 $$
-E_{\mathrm{5-var}}^*(\chi)=4-\frac{9}{2}e^{-\chi}+O(e^{-2\chi})\to 4.0.
+E_{\mathrm{5-var}}^\star(\chi)=4-\frac{9}{2}e^{-\chi}+O(e^{-2\chi})\to 4.0.
 $$
 
 - **(3) Wall 3 — Single-Axis Winding Wall $N^{3/2}$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Hard Core:**
   Piling $N\geq 2$ integer windings onto a single axis costs
   $E_{\mathrm{single}}(N)\propto N^{3/2}>N$ ($2^{3/2}\approx 2.828>2$,
   $3^{3/2}\approx 5.196>3$). Distributing integer windings
-  $(n_1,n_2,n_3)\in\mathbb{Z}_{\geq 0}^3$ ($m_i=m_0 n_i^2$) across the three
+  $(n_1,n_2,n_3)\in\mathbb Z_{\geq 0}^3$ ($m_i=m_0 n_i^2$) across the three
   orthogonal axes of 3D space gives the exact **A0** minimum
 
 $$
-E^*(n_1,n_2,n_3)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{n_1 n_2 n_3},
-\qquad \lambda_i^*=\frac{n_i^2}{(n_1 n_2 n_3)^{1/2}}.
+E^\star(n_1,n_2,n_3)=4(PV_0)^{1/4}m_0^{3/4}\sqrt{n_1 n_2 n_3},
+\qquad \lambda_i^\star=\frac{n_i^2}{(n_1 n_2 n_3)^{1/2}}.
 $$
 
   - *Lower-dimensional collapse ($N=1,2$):* $N=1$ `(1, 0, 0)` (1D loop) and $N=2$
-    `(1, 1, 0)` (2D sheet) have zero 3D volume ($V^*=0$) and collapse along their
+    `(1, 1, 0)` (2D sheet) have zero 3D volume ($V^\star=0$) and collapse along their
     unwound axes under 3D pressure. Likewise, under iterated **A1** binomial
     windings $W_k(n)=\binom{n}{k}$, $n=3$ is the minimum integer with
     $W_1W_2W_3=9>0$ supporting a 3D volume, with untuned ratio
-    $E_{3\mathrm{D}}^*(3)/E_{1\mathrm{D}}^*(1)=6$.
+    $E_{3\mathrm{D}}^\star(3)/E_{1\mathrm{D}}^\star(1)=6$.
   - *Unique 3D ground state ($N=3$):* `(1, 1, 1)` is the unique minimum-cost 3D
-    ground state with $E^*(1,1,1)=4.0$, cost per winding $4/3\approx 1.3333$, and
+    ground state with $E^\star(1,1,1)=4.0$, cost per winding $4/3\approx 1.3333$, and
     isotropic aspect ratios $1:1:1$ (a round sphere). In the continuum spherical
     wave cavity $\psi_{n_1,n_2,n_3}(r,\theta,\phi)$, the lowest mode with
     non-trivial radial, polar, and azimuthal quantum numbers is likewise `(1, 1, 1)`
@@ -897,13 +897,13 @@ $$
     3+1D Kretschmann curvature scalar by $K\propto R_{\mathrm{core}}^{-6}=(\kappa/(2\pi))^3<\infty$.
   - *First excited 3D state ($N=4$):* Adding a fourth winding forces doubling on
     one axis to `(2, 1, 1)`, breaking spherical symmetry into a $4:1:1$ prolate
-    state with higher cost per winding $E^*(2,1,1)/4=\sqrt{2}\approx 1.4142>4/3$
+    state with higher cost per winding $E^\star(2,1,1)/4=\sqrt{2}\approx 1.4142>4/3$
     (excitation gap $\Delta E=4(\sqrt{2}-1)\approx 1.6569$).
   - *Medium-range attraction and short-range hard-core repulsion:* Two `(1, 1, 1)`
-    triads separated by $d>2R^*$ attract via shared surrounding flow
+    triads separated by $d>2R^\star$ attract via shared surrounding flow
     ($\Delta E_{\mathrm{flow}}=-2m_0/d<0$), reaching a bound minimum at contact
-    $d=2R^*$ ($E_{\mathrm{contact}}=8.0-1.0=7.0$). Merging them into a single
-    `(2, 2, 2)` bubble at $d\to 0$ costs $E^*(2,2,2)=8\sqrt{2}\approx 11.3137>8.0$,
+    $d=2R^\star$ ($E_{\mathrm{contact}}=8.0-1.0=7.0$). Merging them into a single
+    `(2, 2, 2)` bubble at $d\to 0$ costs $E^\star(2,2,2)=8\sqrt{2}\approx 11.3137>8.0$,
     erecting an exact **short-range hard-core repulsion barrier**
     $\Delta E_{\mathrm{core}}=8(\sqrt{2}-1)\approx +3.3137$.
 - **(4) Three geometric mechanisms bypassing $e^{-3K}$ volumetric dilution:**
@@ -925,20 +925,20 @@ $\mathbf{u}=\nabla\phi$, $\Delta\phi=0$ on $r\geq R(\tau)$) with radial velocity
 $u_r(R,\tau)=\dot{R}$ and volume flux $Q(\tau)=4\pi R^2\dot{R}$, the unique
 exterior velocity potential is $\phi(r,\tau)=-R(\tau)^2\dot{R}(\tau)/r$.
 Integrating the exterior kinetic energy gives
-$T_{\mathrm{ext}}=\frac{1}{2}\rho_0\int_{r\geq R}|\nabla\phi|^2\,d^3x=2\pi\rho_0 R^3\dot{R}^2=\frac{1}{2}M_{\mathrm{added}}(R)\dot{R}^2$
+$T_{\mathrm{ext}}=\frac{1}{2}\rho_0\int_{r\geq R}|\nabla\phi|^2 d^3x=2\pi\rho_0 R^3\dot{R}^2=\frac{1}{2}M_{\mathrm{added}}(R)\dot{R}^2$
 (where $M_{\mathrm{added}}=\frac{1}{2}\rho_0(\frac{4}{3}\pi R^3)$ is the dipole
 added mass). Applying the Gauss divergence identity
 $\nabla\cdot(\mathbf{x}p_{\mathrm{dyn}})=3p_{\mathrm{dyn}}+\mathbf{x}\cdot\nabla p_{\mathrm{dyn}}$
 on $r\in[R,\infty)$ to the dynamic Bernoulli pressure
 $p_{\mathrm{dyn}}(r)=-\frac{1}{2}\rho_0|\nabla\phi|^2=-\frac{1}{2}\rho_0 R^4\dot{R}^2/r^4$
 decomposes the total exterior Virial work into a bulk volume integral
-$W_{\mathrm{bulk}}=3\int_{r\geq R}p_{\mathrm{dyn}}\,d^3x=-3T_{\mathrm{ext}}$ and
+$W_{\mathrm{bulk}}=3\int_{r\geq R}p_{\mathrm{dyn}} d^3x=-3T_{\mathrm{ext}}$ and
 an inner throat boundary flux $W_{\mathrm{throat}}=4\pi R^3 p_{\mathrm{dyn}}(R)=-T_{\mathrm{ext}}$:
 
 $$
 W_{\mathrm{flow}}
-=\int_{r\geq R}\mathbf{x}\cdot(-\nabla p_{\mathrm{dyn}})\,d^3x
-=3\int_{r\geq R}p_{\mathrm{dyn}}\,d^3x+4\pi R^3 p_{\mathrm{dyn}}(R)
+=\int_{r\geq R}\mathbf{x}\cdot(-\nabla p_{\mathrm{dyn}}) d^3x
+=3\int_{r\geq R}p_{\mathrm{dyn}} d^3x+4\pi R^3 p_{\mathrm{dyn}}(R)
 =W_{\mathrm{bulk}}+W_{\mathrm{throat}}
 =-3T_{\mathrm{ext}}-T_{\mathrm{ext}}
 =-4T_{\mathrm{ext}},
@@ -949,16 +949,16 @@ parameter-free $3:1$ bulk-to-throat ratio:
 
 $$
 \frac{|W_{\mathrm{bulk}}|}{|W_{\mathrm{throat}}|}=\frac{3T_{\mathrm{ext}}}{T_{\mathrm{ext}}}=3,
-\qquad \frac{|W_{\mathrm{bulk}}|}{|W_{\mathrm{flow}}|}=\frac{3}{4}\ (75\%),
-\qquad \frac{|W_{\mathrm{throat}}|}{|W_{\mathrm{flow}}|}=\frac{1}{4}\ (25\%).
+\qquad \frac{|W_{\mathrm{bulk}}|}{|W_{\mathrm{flow}}|}=\frac{3}{4}=0.75,
+\qquad \frac{|W_{\mathrm{throat}}|}{|W_{\mathrm{flow}}|}=\frac{1}{4}=0.25.
 $$
 
 Similarly, for a static vacuum bubble carrying integer winding $n\in\mathbb{Z}$,
 balancing surrounding-flow energy $E_{\mathrm{surr}}(R)=m_0 n^2/R$ against
 cavity work $W_{\mathrm{press}}(R)=PV_0 R^3$ at $\partial_R(E_{\mathrm{surr}}+W_{\mathrm{press}})=0$
-yields the identical static $3:1$ Virial ratio $E_{\mathrm{surr}}^*/W_{\mathrm{press}}^*=3$
-($75\%$ in $r\geq R$ flow, $25\%$ in cavity work, $0\%$ in a point singularity),
-quantized integer loop closure $z(1)=z(0)\implies n\in\mathbb{Z}$, and $180^\circ$
+yields the identical static $3:1$ Virial ratio $E_{\mathrm{surr}}^\star/W_{\mathrm{press}}^\star=3$
+($75$% in $r\geq R$ flow, $25$% in cavity work, $0$% in a point singularity),
+quantized integer loop closure $z(1)=z(0)\Rightarrow n\in\mathbb{Z}$, and $180^\circ$
 two-ripple annihilation for $(+1,-1)\to 0$.
 
 When the 1D seed is compressed axially to $\lambda=e^{-\chi}$ under lateral
@@ -970,13 +970,13 @@ E(v_\perp;\lambda)=\frac{Q_0}{\sqrt{\lambda^2+v_\perp^2}}+\frac{1}{2}P_\perp v_\
 $$
 
 Once $\lambda<\lambda_{\mathrm{crit}}=(Q_0/P_\perp)^{1/3}$, the straight seed
-($\omega=0$) loses transverse stability ($\partial^2 E/\partial v_\perp^2|_{0}=P_\perp-Q_0/\lambda^3<0$)
+($\omega=0$) loses transverse stability ($\partial^2 E/\partial v_\perp^2\vert_{0}=P_\perp-Q_0/\lambda^3<0$)
 and buckles into a helix with derived turning speed
-$r_\perp\omega^*(\chi)=\sqrt{\lambda_{\mathrm{crit}}^2-e^{-2\chi}}>0$.
+$r_\perp\omega^\star(\chi)=\sqrt{\lambda_{\mathrm{crit}}^2-e^{-2\chi}}>0$.
 
 Coupling the resulting `+`/`0`/`-` horizon oscillation
 $q(\tau)=A_0e^{-\gamma\tau}\sin(\omega\tau)$ to child geometry growth via
-$\dot{E}_{\mathrm{geom}}=2\gamma\dot{q}^2$ conserves
+$\dot E_{\mathrm{geom}}=2\gamma\dot{q}^2$ conserves
 $E_{\mathrm{wave}}(\tau)+E_{\mathrm{geom}}(\tau)=\frac{1}{2}A_0^2\omega^2$
 identically. Because each `+` half-cycle precedes its compensating `-`
 half-cycle by $\pi/\omega$ under the offset decay envelope $e^{-\gamma\tau}$,
@@ -994,7 +994,7 @@ As $E_{\mathrm{geom}}(\tau)$ populates the child's isotropic 3D stretch budget
 against enclosing load $PV_0$, the child holding radius expands from $0$ and
 stabilizes at the Goldilocks equilibrium scale
 $\lambda_{\mathrm{child}}(\tau)=(E_{\mathrm{geom}}(\tau)/(3PV_0))^{1/4}\to\lambda_{\mathrm{Goldilocks}}=(E_{\mathrm{total}}/(3PV_0))^{1/4}$
-($98.40\%$ complete by $\tau=4$ for $\omega=2\pi$, $\gamma=\frac{1}{2}\ln 2$).
+($98.40$% complete by $\tau=4$ for $\omega=2\pi$, $\gamma=\frac{1}{2}\ln 2$).
 
 ### 9.4 Theorem 4: Coupled finite-parent / receiver continuation, zero-radius opening, and last-echo horizon cutoff
 
@@ -1002,7 +1002,7 @@ Coupled geometric continuation adds explicit phase and geometric inertia to **A0
 Available regional volumes are $V_i=R_i^3-\sum_jR_j^3>0$ and path stretches are
 $\lambda_i=V_i^{1/3}$, with the outer radius free. One continuous phase has
 kinetic weight $\lambda_i$ and stretch cost $\psi_x^2/(2\lambda_i)$; geometry
-has logarithmic-boundary inertia $\frac{3}{2}\sum_i(\dot{R}_i/R_i)^2$. The
+has logarithmic-boundary inertia $\frac{3}{2}\sum_i(\dot R_i/R_i)^2$. The
 parent pressure is derived from the wave energy, $P_i=E_i/(3V_i)$, rather than
 supplied externally, and its work and receiving field obey
 
@@ -1029,27 +1029,27 @@ r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4),
 E_{\mathrm{rec}}(\tau)=4\pi^4\tau^2+O(\tau^3)
 $$
 
-($2.9718260669\,\tau^2$ in the affine reduction). The hybrid radial inertia
+($2.9718260669 \tau^2$ in the affine reduction). The hybrid radial inertia
 $M(r)=1/(1+r^2/3)$ satisfies both the finite-distance birth criterion
-$\int_0^\varepsilon\sqrt{M(r)}\,dr<\infty$ and the finite-future optical-reach
-criterion $\int^\infty\sqrt{M(r)}\,dr/r<\infty$ (free-room optical reach
+$\int_0^\varepsilon\sqrt{M(r)} dr<\infty$ and the finite-future optical-reach
+criterion $\int^\infty\sqrt{M(r)} dr/r<\infty$ (free-room optical reach
 $0.2611589801$). In the coupled hybrid evolution, reflected echoes have a sharp
 launch cutoff at $0.2269423871$ at the mouth and $0.1165029354$ at a parent
 detector $0.01$ material units away, with arrival delay diverging as
 $-\ln(\delta)/\kappa$ and returned energy vanishing linearly as $\kappa\delta$.
 Coupling a finite parent reservoir $E_P(\tau)+E_-(\tau)=E_{\mathrm{tot}}$ yields
-the closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal{E}_0}\,\tilde{\tau})$
+the closed $3:1$ relaxation law $R(\tau)/R_\infty=\tanh(\sqrt{2\mathcal E_0} \tilde{\tau})$
 with hybrid last-echo horizon cutoff $\tau_{\mathrm{echo}}=0.87596883$
 ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$ to machine precision, visible
-interior snapshot $25.63\%$) and self-consistent parent curvature backreaction
-($8.98\%$ asymptotic shift).
+interior snapshot $25.63$%) and self-consistent parent curvature backreaction
+($8.98$% asymptotic shift).
 
 ### 9.5 Theorem 5: Spherical fragmentation, whole-exterior causal neck onset $p^3-3p-3=0$, and outgoing multipole waveform
 
 Splitting a bubble of winding $N$ into same-sign integer daughters
 $\sum_i n_i=N$ at fixed enclosing pressure preserves total equilibrium surface
-area $\sum_i 4\pi(R_{n_i}^*)^2=4\pi(R_N^*)^2$ while releasing energy fraction
-$1-\sum_i(n_i/N)^{3/2}>0$ ($1-1/\sqrt{2}\approx 29.2893\%$ for a binary split).
+area $\sum_i 4\pi(R_{n_i}^\star)^2=4\pi(R_N^\star)^2$ while releasing energy fraction
+$1-\sum_i(n_i/N)^{3/2}>0$ ($1-1/\sqrt{2}\approx 29.2893$% for a binary split).
 
 For the exact harmonic two-center family on $r\in[R,\infty)$, removing the
 matching-sphere approximation in the quadratic causal onset problem over the
@@ -1069,11 +1069,11 @@ p_+=\left(\frac{3+\sqrt{5}}{2}\right)^{1/3}+\left(\frac{3-\sqrt{5}}{2}\right)^{1
 $$
 
 with complex-conjugate decaying oscillatory roots
-$p_\pm=-\frac{1}{2}(\phi^{2/3}+\phi^{-2/3})\pm i\frac{\sqrt{3}}{2}(\phi^{2/3}-\phi^{-2/3})\approx -1.0519017014\pm 0.5652358517\,i$
-(and static two-center onset at $(c/R)_{\mathrm{onset}}=0.56786589<(c/R)_{\mathrm{pinch}}=2^{-1/3}\approx 0.79370053$).
+$p_\pm=-\frac{1}{2}(\phi^{2/3}+\phi^{-2/3})\pm i\frac{\sqrt{3}}{2}(\phi^{2/3}-\phi^{-2/3})\approx -1.0519017014\pm 0.5652358517 i$
+(and static two-center onset at $c/R_{\mathrm{onset}}=0.56786589<c/R_{\mathrm{pinch}}=2^{-1/3}\approx 0.79370053$).
 Along the two-center equipotential neck path, coupling the inner shape
 coordinate $q_1=c^2$ to outgoing even multipoles carries the boundary past the
-static surface barrier ($\Delta A/A_0=+9.4557\%$), pinches the neck at offset
+static surface barrier ($\Delta A/A_0=+9.4557$%), pinches the neck at offset
 $3.960294$ ($\Delta\tau_{\mathrm{pinch}}=0.506704$), reaches separated lobes
 $s=1.2$ at $4.264066$, and drives a positive central interior observer pulse
 $\max\phi_C=+0.163689$ with exact analytical pole-sum late-time tail
@@ -1082,7 +1082,7 @@ $$
 \phi_C(T)=-\frac{0.14192836}{T'}+\frac{0.01750496}{(T')^2}+O\left((T')^{-3}\right).
 $$
 
-### 9.6 Theorem 6: Inherited daughter preparation, three-axis orthogonal cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$, and $2\times 2$ kinetic handoff
+### 9.6 Theorem 6: Inherited daughter preparation, three-axis orthogonal cascade $\mathbf e_z\to\mathbf e_x\to\mathbf e_y$, and $2\times 2$ kinetic handoff
 
 At the first split's separated endpoint $s=1.2$, each sibling's field induces
 the other daughter's multipole preparation (normalized dipole $-0.07340185$,
@@ -1095,16 +1095,16 @@ $$
 \partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0.
 $$
 
-- **(1) First handoff ($\mathbf{e}_z\to\mathbf{e}_x$, $1\to 2\to 4$ lobes, exact ratio $-1/2$):**
-  After the primary split along $\mathbf{e}_z$, axial symmetry and $\Delta\Phi=0$
+- **(1) First handoff ($\mathbf e_z\to\mathbf e_x$, $1\to 2\to 4$ lobes, exact ratio $-1/2$):**
+  After the primary split along $\mathbf e_z$, axial symmetry and $\Delta\Phi=0$
   force $\partial_{\zeta_x}v=\partial_{\zeta_y}v=-\frac{1}{2}\partial_{\zeta_z}v<0$
   (normalized energy derivative $-0.03151123$ transverse vs. $+0.06302246$
-  axial, **exact ratio $-1/2$**), selecting the transverse axis $\mathbf{e}_x$
+  axial, **exact ratio $-1/2$**), selecting the transverse axis $\mathbf e_x$
   and pinching the second pair of necks at $b/R=0.62746042$.
-- **(2) Second handoff ($\mathbf{e}_x\to\mathbf{e}_y$, $4\to 8$ lobes, exact ratio $-2$):**
+- **(2) Second handoff ($\mathbf e_x\to\mathbf e_y$, $4\to 8$ lobes, exact ratio $-2$):**
   Once the four lobes separate in the $xz$-plane ($b\geq 1.0$), both
   $\partial_{\zeta_x}v>0$ and $\partial_{\zeta_z}v>0$ become uphill, leaving
-  the third orthogonal axis $\mathbf{e}_y$ as the **unique downhill direction
+  the third orthogonal axis $\mathbf e_y$ as the **unique downhill direction
   in 3D**; at the symmetric square $b=s=1.2$, four-fold symmetry and
   $\Delta\Phi=0$ fix the **exact ratio $-2$**
   ($\partial_{\zeta_y}v=-2\partial_{\zeta_x}v=-2\partial_{\zeta_z}v=-0.11574536<0$),
@@ -1115,7 +1115,7 @@ $$
   gives the exact multipole relation
 
 $$
-\left.\frac{\partial g_{l,0}}{\partial q_2}\right|_{q_2=0}
+\frac{\partial g_{l,0}(q_1,0)}{\partial q_2}
 =-\frac{l-1}{2}\frac{\partial g_{l,0}}{\partial q_1}\qquad (l\geq 2),
 $$
 
@@ -1141,7 +1141,7 @@ $9DVB=4(V+B/2)^3$ across all compression depths $\chi\geq 0$, Theorem 6 proves
 that the harmonic trace identity
 $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ drives a
 sequential cascade across the $d=3$ mutually orthogonal spatial axes
-($\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$). The following lemma proves that
+($\mathbf e_z\to\mathbf e_x\to\mathbf e_y$). The following lemma proves that
 the per-axis cascade step $\Delta\chi_k=1$ is fixed directly by topological
 winding quantization on the `(1,1,1)` triad ground state and matches the
 Theorem 6 two-center handoff geometry:
@@ -1173,7 +1173,7 @@ $$
 
 $$
 \chi_{\mathrm{freeze}}=\sum_{k=1}^{d=3}\Delta\chi_k=n_z+n_x+n_y=1+1+1=3,\qquad
-V_{3\mathrm{D}}(\chi_{\mathrm{freeze}})=\prod_{k=1}^3 e^{-\Delta\chi_k}=e^{-3}\approx 4.978707\%.
+V_{3\mathrm{D}}(\chi_{\mathrm{freeze}})=\prod_{k=1}^3 e^{-\Delta\chi_k}=e^{-3}\approx 0.04978707.
 $$
 
 - **(2) Dynamical consistency with the Theorem 6 two-center handoff ($s=b=1.2$):**
@@ -1184,14 +1184,14 @@ $$
   derivative flips sign and hands off to the next orthogonal axis. At $s=1.2$,
   the half-span of the separated two-center configuration is
   $L_{\mathrm{handoff}}=s+2R_{\mathrm{daughter}}=1.2+2^{2/3}=2.787401$, matching
-  the unit e-fold stretch factor $e^{\Delta\chi_k}=e^1=2.718282$ within $2.54\%$
-  (and crossing $L(s_*)=e^1$ at $s_*=e-2^{2/3}=1.130881$ inside the $[1.0,1.2]$
+  the unit e-fold stretch factor $e^{\Delta\chi_k}=e^1=2.718282$ within $2.54$%
+  (and crossing $L(s_\star)=e^1$ at $s_\star=e-2^{2/3}=1.130881$ inside the $[1.0,1.2]$
   planar handoff window of Theorem 6(2)). Across all three orthogonal splits,
   the purely geometric two-center handoff span yields the dynamical freeze-out
   depth $\chi_{\mathrm{freeze,dyn}}=3\ln(1.2+2^{2/3})=3.075371$ (where
-  $\Omega_{\mathrm{vis}}(\chi_{\mathrm{freeze,dyn}})=4.9182\%$), bracketing the
-  volumetric floor $\chi_*=3.066968$ ($\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}=4.9787\%$)
-  within $0.27\%$.
+  $\Omega_{\mathrm{vis}}(\chi_{\mathrm{freeze,dyn}})=4.9182$%), bracketing the
+  volumetric floor $\chi_\star=3.066968$ ($\Omega_{\mathrm{vis}}(\chi_\star)=e^{-3}=4.9787$%)
+  within $0.27$%.
 
 Once all three orthogonal axes of 3D space have buckled and fragmented into the
 8-octant `(1,1,1)` triad lattice ($1\to 2\to 4\to 8$), no fourth orthogonal
@@ -1199,12 +1199,12 @@ spatial direction exists in $d=3$ ($\partial_{\zeta_x}v,\partial_{\zeta_y}v,\par
 simultaneously), terminating the macroscopic cascade and freezing the cosmic
 budget on the cubic curve $9DVB=4(V+B/2)^3$:
 
-| Budget component | Non-local geometric mechanism & EoS | 3-axis cascade freeze-out ($\chi_{\mathrm{freeze}}=3$) | Volumetric floor ($\Omega_{\mathrm{vis}}=e^{-3}$, $\chi_*=3.0670$) | Virial $3:1$ horizon limit |
+| Budget component | Non-local geometric mechanism & EoS | 3-axis cascade freeze-out ($\chi_{\mathrm{freeze}}=3$) | Volumetric floor ($\Omega_{\mathrm{vis}}=e^{-3}$, $\chi_\star=3.0670$) | Virial $3:1$ horizon limit |
 | --- | --- | ---: | ---: | ---: |
-| **Dark Energy ($\Omega_{\mathrm{DE}}$)** | Isotropic 3D stretch $3(\theta^*)^{3/2}$ inside `-` sphere ($w_{\mathrm{DE}}=-1$) | **$70.8827\%$** | **$71.1441\%$** | $\frac{3}{4}(1-e^{-3})=71.2660\%$ |
-| **Dark Matter ($\Omega_{\mathrm{DM}}$)** | Two-sided `0`-wall enclosing + radial infall load ($w_{\mathrm{DM}}=0$) | **$23.8134\%$** | **$23.8772\%$** | $\frac{1}{4}(1-e^{-3})=23.7553\%$ |
-| **Combined Dark Sector** | $\Omega_{\mathrm{DE}}+\Omega_{\mathrm{DM}}$ | **$94.6961\%$** | **$95.0213\%$ ($1-e^{-3}$)** | $95.0213\%$ ($1-e^{-3}$) |
-| **Visible Filaments ($\Omega_{\mathrm{vis}}$)** | Active 1D spaghettifying filaments $2(1-\theta^*)^2e^\chi$ | **$5.3039\%$** | **$4.9787\%$ ($e^{-3}$)** | $4.9787\%$ ($e^{-3}$) |
+| **Dark Energy ($\Omega_{\mathrm{DE}}$)** | Isotropic 3D stretch $3(\theta^\star)^{3/2}$ inside `-` sphere ($w_{\mathrm{DE}}=-1$) | **$70.8827$%** | **$71.1441$%** | $\frac{3}{4}(1-e^{-3})=71.2660$% |
+| **Dark Matter ($\Omega_{\mathrm{DM}}$)** | Two-sided `0`-wall enclosing + radial infall load ($w_{\mathrm{DM}}=0$) | **$23.8134$%** | **$23.8772$%** | $\frac{1}{4}(1-e^{-3})=23.7553$% |
+| **Combined Dark Sector** | $\Omega_{\mathrm{DE}}+\Omega_{\mathrm{DM}}$ | **$94.6961$%** | **$95.0213$% ($1-e^{-3}$)** | $95.0213$% ($1-e^{-3}$) |
+| **Visible Filaments ($\Omega_{\mathrm{vis}}$)** | Active 1D spaghettifying filaments $2(1-\theta^\star)^2e^\chi$ | **$5.3039$%** | **$4.9787$% ($e^{-3}$)** | $4.9787$% ($e^{-3}$) |
 
 This closed-form geometry yields three **concrete, zero-parameter falsifiable
 observational predictions** that distinguish NSC from standard flat
@@ -1217,7 +1217,7 @@ fit parameters):
    $9DVB-4(V+B/2)^3=0$. In particular, at the 3-axis freeze-out window
    $\chi\in[3,3.0670]$, the dark-energy-to-dark-matter ratio is locked in the
    narrow band $\Omega_{\mathrm{DE}}/\Omega_{\mathrm{DM}}\in[2.9766,2.9796]$
-   (within $0.78\%$ of the $3:1$ Virial asymptote, vs. $2.58$ in Planck 2018
+   (within $0.78$% of the $3:1$ Virial asymptote, vs. $2.58$ in Planck 2018
    base-$\Lambda\mathrm{CDM}$).
 2. **Exact cosmic budget drift slope $d\Omega_{\mathrm{DE}}/d\Omega_{\mathrm{vis}}$:**
    Implicit differentiation of $9DV(1-V-\frac{4}{3}D)=\frac{1}{2}(1+V-\frac{4}{3}D)^3$
@@ -1238,27 +1238,27 @@ $$
    equation of state strictly $w_{\mathrm{DE}}=-1$ ($w_a=0$).
 3. **Orthogonal 3-axis low-$\ell$ multipole cascade signature ($\ell=2,4$):**
    Because the child birth cascade proceeds through the sequential orthogonal
-   handoffs $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$ with exact harmonic
+   handoffs $\mathbf e_z\to\mathbf e_x\to\mathbf e_y$ with exact harmonic
    ratios $-1/2$ and $-2$ and multipole coupling
-   $\partial_{q_2}g_{l,0}|_{q_2=0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$
+   $\partial_{q_2}g_{l,0}\vert_{q_2=0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$
    (giving $-\frac{1}{2}$ for the $\ell=2$ quadrupole and $-\frac{3}{2}$ for
    the $\ell=4$ hexadecapole), the surviving large-angle horizon imprint carries
    a deterministic planar quadrupole/octupole phase lock rather than statistically
    isotropic Gaussian random phases.
 
-**Proposition 9.7b (Condensed Baryon Core vs. WHIM Filament Split, $H_0=67.03\ \mathrm{km\,s^{-1}Mpc^{-1}}$, and Sub-Horizon $S_8$ Growth Suppression):**
+**Proposition 9.7b (Condensed Baryon Core vs. WHIM Filament Split, $H_0=67.03\ \mathrm{km s^{-1}Mpc^{-1}}$, and Sub-Horizon $S_8$ Growth Suppression):**
 Decomposing the visible and dark-matter budgets on $9DVB=4(V+B/2)^3$ at
 $\chi_{\mathrm{freeze}}=3$ into their localized vs. boundary/filament components
 yields three quantitative observational consequences:
 
-- **(1) Condensed `(1,1,1)` baryon cores vs. uncondensed 1D WHIM filaments ($H_0=67.03\ \mathrm{km\,s^{-1}Mpc^{-1}}$):**
+- **(1) Condensed `(1,1,1)` baryon cores vs. uncondensed 1D WHIM filaments ($H_0=67.03\ \mathrm{km s^{-1}Mpc^{-1}}$):**
   The total visible stretch share at $\chi_{\mathrm{freeze}}=3$ is
-  $\Omega_{\mathrm{vis}}(3)=5.3039\%$, whereas the 3D volumetric triad floor is
-  $\Omega_{\mathrm{core}}=V_{3\mathrm{D}}(3)=e^{-3}=4.9787\%$. Their difference,
+  $\Omega_{\mathrm{vis}}(3)=5.3039$%, whereas the 3D volumetric triad floor is
+  $\Omega_{\mathrm{core}}=V_{3\mathrm{D}}(3)=e^{-3}=4.9787$%. Their difference,
 
 $$
-\Delta\Omega_{\mathrm{WHIM}}=\Omega_{\mathrm{vis}}(3)-e^{-3}=5.3039\%-4.9787\%=0.3252\%
-\qquad\left(6.13\%\ \mathrm{of}\ \Omega_{\mathrm{vis}}\right),
+\Delta\Omega_{\mathrm{WHIM}}=\Omega_{\mathrm{vis}}(3)-e^{-3}=0.053039-0.049787=0.003252
+\qquad\left(6.13\ \mathrm{percent\ of}\ \Omega_{\mathrm{vis}}\right),
 $$
 
   identifies the uncondensed 1D filament stretch remaining in the warm-hot
@@ -1268,50 +1268,50 @@ $$
   determines the dimensionless Hubble parameter without free parameters:
 
 $$
-h=\sqrt{\Omega_b h^2\,e^3}=\sqrt{0.02237\times 20.085537}=0.67031\pm 0.0022
-\Longrightarrow H_0=67.03\pm 0.22\ \mathrm{km\,s^{-1}Mpc^{-1}}.
+h=\sqrt{\Omega_b h^2 e^3}=\sqrt{0.02237\times 20.085537}=0.67031\pm 0.0022
+\Rightarrow H_0=67.03\pm 0.22\ \mathrm{km s^{-1}Mpc^{-1}}.
 $$
 
 - **(2) Added-mass halo clustering vs. uncondensed horizon slip and $S_8$ suppression:**
   In Theorem 1 and Theorem 3, the dark-matter share $M=\Omega_{\mathrm{DM}}$
   decomposes into the `0`-horizon Virial throat/surrounding-flow load
-  $\Omega_{\mathrm{DM,throat}}=\frac{1}{3}D=(\theta^*)^{3/2}/E^*$ and the radial
-  infall load $B=M-\frac{1}{3}D=2(1-\theta^*)e^{-\chi}/E^*$ (supplemented on
+  $\Omega_{\mathrm{DM,throat}}=\frac{1}{3}D=(\theta^\star)^{3/2}/E^\star$ and the radial
+  infall load $B=M-\frac{1}{3}D=2(1-\theta^\star)e^{-\chi}/E^\star$ (supplemented on
   sub-horizon scales by the transmitted massive scalar dust tail
   $\langle\rho_\chi\rangle\propto a^{-3}$ of Section 5). By Theorem 3(1), the
-  $\Omega_{\mathrm{DM,throat}}=\frac{1}{3}D=23.63\%$ Virial load is locked in the
+  $\Omega_{\mathrm{DM,throat}}=\frac{1}{3}D=23.63$% Virial load is locked in the
   $3:1$ surrounding-flow embrace around the interior `(1,1,1)` vortex nodes, so it
-  moves with the condensed nodes as their added-mass halo ($E_{\mathrm{surr}}^*$)
+  moves with the condensed nodes as their added-mass halo ($E_{\mathrm{surr}}^\star$)
   alongside $B$. By contrast, the uncondensed filament/boundary slip between the
-  topological freeze-out $\chi_{\mathrm{freeze}}=3$ ($\Omega_{\mathrm{vis}}(3)=5.3039\%$)
-  and the volumetric floor $\chi_*=3.0670$ ($\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}=4.9787\%$),
+  topological freeze-out $\chi_{\mathrm{freeze}}=3$ ($\Omega_{\mathrm{vis}}(3)=5.3039$%)
+  and the volumetric floor $\chi_\star=3.0670$ ($\Omega_{\mathrm{vis}}(\chi_\star)=e^{-3}=4.9787$%),
 
 $$
 1-f_{\mathrm{clust}}
-=1-\sqrt{\frac{\Omega_{\mathrm{vis}}(\chi_*)}{\Omega_{\mathrm{vis}}(3)}}
+=1-\sqrt{\frac{\Omega_{\mathrm{vis}}(\chi_\star)}{\Omega_{\mathrm{vis}}(3)}}
 =1-\sqrt{\frac{0.049787}{0.053039}}
-=3.114\%,
+=0.03114,
 $$
 
   remains spatially smooth across the bounding `0`-surface on sub-horizon scales
   ($k/(aH)\to\infty$): it contributes to the background Friedmann expansion rate
   $H^2(a)=H_0^2[\Omega_{\mathrm{DE}}+(\Omega_{\mathrm{DM}}+\Omega_{\mathrm{vis}})a^{-3}]$,
-  while the clustering fraction $f_{\mathrm{clust}}=\Omega_{m,\mathrm{clust}}/\Omega_m=96.886\%$
+  while the clustering fraction $f_{\mathrm{clust}}=\Omega_{m,\mathrm{clust}}/\Omega_m=96.886$%
   sources the sub-horizon Poisson equation. Sub-horizon matter density
   perturbations $\delta_m(a)$ therefore obey the modified Meszaros growth equation
 
 $$
 \frac{d^2\delta_m}{d(\ln a)^2}+\left(2+\frac{d\ln H}{d\ln a}\right)\frac{d\delta_m}{d\ln a}
--\frac{3}{2}f_{\mathrm{clust}}\,\Omega_m(a)\,\delta_m=0,
+-\frac{3}{2}f_{\mathrm{clust}} \Omega_m(a) \delta_m=0,
 $$
 
   which shifts the logarithmic growth rate by
   $f_{\mathrm{growth}}(a)=d\ln\delta_m/d\ln a\approx\Omega_m(a)^{6/11}[1-\frac{3}{5}(1-f_{\mathrm{clust}})]$.
-  The $1-f_{\mathrm{clust}}=3.114\%$ uncondensed horizon slip suppresses late-time
+  The $1-f_{\mathrm{clust}}=3.114$% uncondensed horizon slip suppresses late-time
   linear clustering from the Planck CMB extrapolation $S_{8,\mathrm{CMB}}\approx 0.832$ to
 
 $$
-S_{8,\mathrm{NSC}}\approx S_{8,\mathrm{CMB}}\left(\frac{a_{\mathrm{eq}}}{a_0}\right)^{+\frac{3}{5}(1-f_{\mathrm{clust}})\bar{\Omega}_m}\approx 0.776,
+S_{8,\mathrm{NSC}}\approx S_{8,\mathrm{CMB}}\left(\frac{a_{\mathrm{eq}}}{a_0}\right)^{+\frac{3}{5}(1-f_{\mathrm{clust}})\bar \Omega_m}\approx 0.776,
 $$
 
   directly reconciling early-universe CMB acoustic peaks with late-universe
@@ -1325,8 +1325,8 @@ $\eta(\lambda)=\tanh(\frac{\pi}{2}\frac{\lambda}{\lambda_{\max}})$ along discret
 $e^{-2\chi_{\mathrm{spaghetti}}}=1/2$,
 
 $$
-\eta_K=\tanh\left(\frac{\pi}{2}\,e^{-2\chi_{\mathrm{spaghetti}}}\,e^{-3K}\right)
-=\tanh\left(\frac{\pi}{4}\,e^{-3K}\right),
+\eta_K=\tanh\left(\frac{\pi}{2} e^{-2\chi_{\mathrm{spaghetti}}} e^{-3K}\right)
+=\tanh\left(\frac{\pi}{4} e^{-3K}\right),
 $$
 
 gives $\eta_7=\tanh(\frac{\pi}{4}e^{-21})=5.9553290339\times 10^{-10}$ at stage
@@ -1346,24 +1346,24 @@ $7\times\chi_{\mathrm{freeze}}=21$):
 
 | Non-local multiverse geometry (`A0--A4`) | Local physics label | Derived mathematical relation & calculated readout |
 | --- | --- | --- |
-| Covariant 3+1D Hamiltonian $\int_V (T^{00}_{\mathrm{phase}}+V(s_*))\,d^3x$ & $\Sigma_0$ junction variation | **A0** functional & open-valve stationarity | Exact reduction $E=\sum_{i=1}^3 m_i/\lambda_i+PV_0\lambda_1\lambda_2\lambda_3$ ($A_{\perp,i}=\pi/\mu^2(s_*)$); $\delta\mathcal{S}_{\Sigma_0}/\delta\theta=0\iff\mu_+=\mu_-\iff\partial E/\partial\theta=0$ (Propositions 1.1--1.1b) |
+| Covariant 3+1D Hamiltonian $\int_V (T_{\mathrm{phase}}^{00}+V(s_\star)) d^3x$ & $\Sigma_0$ junction variation | **A0** functional & open-valve stationarity | Exact reduction $E=\sum_{i=1}^3 m_i/\lambda_i+PV_0\lambda_1\lambda_2\lambda_3$ ($A_{\perp,i}=\pi/\mu^2(s_\star)$); $\delta\mathcal S_{\Sigma_0}/\delta\theta=0\iff\mu_+=\mu_-\iff\partial E/\partial\theta=0$ (Propositions 1.1--1.1b) |
 | Circle $z(\tau)=R_0e^{i\omega\tau}$ seen edge-on as $R(\tau)=R_0\cos(\omega\tau)$ + hard core $R_{\mathrm{core}}$ | Black-hole singularity / Big Bang bounce stress | Smooth signed crossing ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$) removes cusp $\Delta\dot{r}=+2R_0\omega$; $\mathcal{R}=\sqrt{R^2+R_{\mathrm{core}}^2}$ gives $R_4(0)=-\kappa/\pi$, $T_{\hat{a}\hat{b}}(0)=\frac{1}{2\pi}\mathrm{diag}(-1,-1,+1,+1)$ (Propositions 1.2--1.2b) |
 | Two half-turns $(-1)\times(-1)=+1$ across two nested `0` crossings ($\mathcal{P}^2=(-I_3)^2=+I_3$) | Parity / orientation restoration across two generations | $\det\mathcal{P}=(-1)^3=-1$ ($\mathrm{Parent}\ (+)\to\mathrm{Child}\ (-)$), $\det(\mathcal{P}^2)=(-1)(-1)=+1$ ($\mathrm{Child}\ (-)\to\mathrm{Grandchild}\ (+)$) |
-| Eliminating $(\theta^*,\chi)$ from 5-variable budget shares $(D,M,V)$ with $B=M-D/3$ | Cosmological dark-sector / baryon partition curve & EoS | Exact cubic $9DVB=4(V+B/2)^3$, open-valve $dE_{\mathrm{DE}}^*=(-\frac{1}{3}+\frac{4}{3})\rho_{\mathrm{DE}}dV_-\implies w_{\mathrm{DE}}=-1$, $w_{\mathrm{DM}}=0$, $\lim_{\chi\to\infty}B/V^2=16/27$ |
-| Exponential-wall bypasses (`1D -> helix`, `+ -> 0 -> -`, single-axis $N^{3/2}\to$ 3D triad `(1,1,1)`) | 3D nucleon ground state & nuclear hard-core potential | `(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state ($E^*=4.0$, $1:1:1$ sphere); `(2,1,1)` ($N=4$) is $4:1:1$ prolate ($E^*=4\sqrt{2}$); two `(1,1,1)` triads attract at $d>2R^*$ ($-2m_0/d$) and repel at $d\to 0$ against `(2,2,2)` ($+3.3137$ hard core) |
-| Gauss-divergence exterior Virial $W_{\mathrm{bulk}}:W_{\mathrm{throat}}=3:1$ & loop closure $z(1)=z(0)$ | Added mass in surrounding flow, quantized line bursts & $180^\circ$ annihilation | $W_{\mathrm{flow}}=-3T_{\mathrm{ext}}-T_{\mathrm{ext}}=-4T_{\mathrm{ext}}$ ($75\%$ in $r>R$ bulk, $25\%$ at $r=R$ throat, $0\%$ in a point); $(+1,-1)\to 0$ releases two equal $180^\circ$ ripples |
-| Coupled finite-parent / receiver continuation & hybrid radial inertia $M(r)=1/(1+r^2/3)$ | Wave-driven child opening & last-echo horizon cutoff | Zero-radius opening $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$; last-echo cutoff $\tau_{\mathrm{echo}}=0.87596883$ ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$, visible interior snapshot $25.63\%$) |
-| Whole-exterior causal neck onset & harmonic trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ | Neck pinch waveform & 3-axis orthogonal cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$ | Characteristic cubic $p^3-3p-3=0$ ($p_+=\phi^{2/3}+\phi^{-2/3}\approx 2.1038034$); $1\to 2\to 4\to 8$ lobe cascade with exact ratios $-1/2$ and $-2$ and $B$-independent $\det M_{\mathrm{full}}=0.14003084>0$ |
-| Quantized cascade step $\Delta\chi_k=n_k=1$ ($\chi_{\mathrm{freeze}}=3$), WHIM split & sub-horizon growth | Cosmic freeze-out, $H_0=67.03\ \mathrm{km\,s^{-1}Mpc^{-1}}$ & $S_8\approx 0.776$ | $\chi_{\mathrm{freeze}}=\sum_{k=1}^3 n_k=3$, $(\Omega_{\mathrm{DE}},\Omega_{\mathrm{DM}},\Omega_{\mathrm{vis}})=(70.88\%,23.81\%,5.30\%)$, $\Omega_b=e^{-3}=4.98\%$, $\Delta\Omega_{\mathrm{WHIM}}=0.33\%$, $d\Omega_{\mathrm{DE}}/d\Omega_{\mathrm{vis}}\approx -0.806$ (Theorem 7, Lemma 7.1, Proposition 9.7b) |
+| Eliminating $(\theta^\star,\chi)$ from 5-variable budget shares $(D,M,V)$ with $B=M-D/3$ | Cosmological dark-sector / baryon partition curve & EoS | Exact cubic $9DVB=4(V+B/2)^3$, open-valve $dE_{\mathrm{DE}}^\star=(-\frac{1}{3}+\frac{4}{3})\rho_{\mathrm{DE}}dV_-\Rightarrow w_{\mathrm{DE}}=-1$, $w_{\mathrm{DM}}=0$, $\lim_{\chi\to\infty}B/V^2=16/27$ |
+| Exponential-wall bypasses (`1D -> helix`, `+ -> 0 -> -`, single-axis $N^{3/2}\to$ 3D triad `(1,1,1)`) | 3D nucleon ground state & nuclear hard-core potential | `(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state ($E^\star=4.0$, $1:1:1$ sphere); `(2,1,1)` ($N=4$) is $4:1:1$ prolate ($E^\star=4\sqrt{2}$); two `(1,1,1)` triads attract at $d>2R^\star$ ($-2m_0/d$) and repel at $d\to 0$ against `(2,2,2)` ($+3.3137$ hard core) |
+| Gauss-divergence exterior Virial $W_{\mathrm{bulk}}:W_{\mathrm{throat}}=3:1$ & loop closure $z(1)=z(0)$ | Added mass in surrounding flow, quantized line bursts & $180^\circ$ annihilation | $W_{\mathrm{flow}}=-3T_{\mathrm{ext}}-T_{\mathrm{ext}}=-4T_{\mathrm{ext}}$ ($75$% in $r>R$ bulk, $25$% at $r=R$ throat, $0$% in a point); $(+1,-1)\to 0$ releases two equal $180^\circ$ ripples |
+| Coupled finite-parent / receiver continuation & hybrid radial inertia $M(r)=1/(1+r^2/3)$ | Wave-driven child opening & last-echo horizon cutoff | Zero-radius opening $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$; last-echo cutoff $\tau_{\mathrm{echo}}=0.87596883$ ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$, visible interior snapshot $25.63$%) |
+| Whole-exterior causal neck onset & harmonic trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ | Neck pinch waveform & 3-axis orthogonal cascade $\mathbf e_z\to\mathbf e_x\to\mathbf e_y$ | Characteristic cubic $p^3-3p-3=0$ ($p_+=\phi^{2/3}+\phi^{-2/3}\approx 2.1038034$); $1\to 2\to 4\to 8$ lobe cascade with exact ratios $-1/2$ and $-2$ and $B$-independent $\det M_{\mathrm{full}}=0.14003084>0$ |
+| Quantized cascade step $\Delta\chi_k=n_k=1$ ($\chi_{\mathrm{freeze}}=3$), WHIM split & sub-horizon growth | Cosmic freeze-out, $H_0=67.03\ \mathrm{km s^{-1}Mpc^{-1}}$ & $S_8\approx 0.776$ | $\chi_{\mathrm{freeze}}=\sum_{k=1}^3 n_k=3$, $(\Omega_{\mathrm{DE}},\Omega_{\mathrm{DM}},\Omega_{\mathrm{vis}})=(70.88,23.81,5.30)$%, $\Omega_b=e^{-3}=4.98$%, $\Delta\Omega_{\mathrm{WHIM}}=0.33$%, $d\Omega_{\mathrm{DE}}/d\Omega_{\mathrm{vis}}\approx -0.806$ (Theorem 7, Lemma 7.1, Proposition 9.7b) |
 
 **Strict quarantine of candidate numerical coincidences not derived from `A0--A4`:**
 To maintain strict separation between proved geometric theorems and post-hoc
 numerical comparisons, the following expressions are explicitly quarantined from
 the deductive theorems: (i) Lenz's 1951 number $6\pi^5\approx 1836.1181$ and its
 dressing $6\pi^5+e^{-3}/\sqrt{2}\approx 1836.1533$ (the discrete **A0+A1**
-binomial ladder gives $E_{3\mathrm{D}}^*(3)/E_{1\mathrm{D}}^*(1)=6$ without a
+binomial ladder gives $E_{3\mathrm{D}}^\star(3)/E_{1\mathrm{D}}^\star(1)=6$ without a
 derived $\pi^5$ continuum factor); (ii) the threshold $n\text{--}p$ gap formula
-$2+\frac{1}{2}+e^{-3}/\sqrt{2}\approx 2.5352\,m_e$; (iii) selecting rung $K=7$
+$2+\frac{1}{2}+e^{-3}/\sqrt{2}\approx 2.5352 m_e$; (iii) selecting rung $K=7$
 on the $\eta_K$ ladder without an independent freeze-out equation beyond
 noting $3K=7\chi_{\mathrm{freeze}}=21$ (especially since Theorem 2 proves three
 $O(1)$ geometric bypasses of $e^{-3K}$ dilution); and (iv) CMB temperature
@@ -1463,4 +1463,4 @@ and authenticated against the repository records indexed below:
 | **Sections 9.1--9.3 & 9.7--9.8** (Theorems 1--3 & 7, budget cubic, open-valve EoS, triad hard core, $3:1$ Virial split, $\chi_{\mathrm{freeze}}=3$) | [Offset-generator owner](../docs/nsc-atlas-offset-generator.md) | [Non-local-to-local atlas summary](../results/summaries/nsc-nonlocal-to-local-atlas-v1.json) |
 | **Section 9.4** (Theorem 4, coupled parent/receiver, zero-radius opening, last-echo cutoff) | [Coupled continuation owner](../docs/nsc-atlas-offset-generator.md#coupled-finite-parent-receivers-and-characteristic-continuation) | [Finite parent/receiver summary](../results/summaries/nsc-finite-parent-receiver-v1.json) |
 | **Section 9.5** (Theorem 5, whole-exterior neck onset $p^3-3p-3=0$, multipole waveform) | [Offset-generator owner](../docs/nsc-atlas-offset-generator.md) | [Neck waveform summary](../results/summaries/nsc-neck-waveform-v1.json) |
-| **Section 9.6** (Theorem 6, 3-axis cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$, $2\times 2$ kinetic handoff) | [Offset-generator owner](../docs/nsc-atlas-offset-generator.md) | [Inherited daughter summary](../results/summaries/nsc-inherited-daughter-v1.json) |
+| **Section 9.6** (Theorem 6, 3-axis cascade $\mathbf e_z\to\mathbf e_x\to\mathbf e_y$, $2\times 2$ kinetic handoff) | [Offset-generator owner](../docs/nsc-atlas-offset-generator.md) | [Inherited daughter summary](../results/summaries/nsc-inherited-daughter-v1.json) |
