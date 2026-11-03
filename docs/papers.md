@@ -1,5 +1,13 @@
 # Paper guide
 
+**Foundation Edition `v0.27.0` (Published on Zenodo: [`10.5281/zenodo.23890258`](https://zenodo.org/records/23890258))** — [Markdown Source (`paper/nested-space-cosmology.md`)](../paper/nested-space-cosmology.md) · [Illustrated PDF (`paper/nested-space-cosmology.pdf`)](../paper/nested-space-cosmology.pdf):
+Establishes **Axioms A0–A4** as the fundamental generating geometric law of space, time, and boundary exchange, with 3+1D field equations and general relativity derived as coarse-grained local dictionary projections (Propositions 1.1–1.2b). Completes the parameter-free deductive chain across **Theorems 1–7** and **Propositions 9.2b & 9.7b**:
+- **Propositions 1.1–1.2b:** Curve-bundle reduction to $E = Q_{\mathrm{stretch}} + PV$, **A1** metric generation $g_{\mu\nu}$, and smooth orthonormal bounce invariants $R_{\mathrm{Ricci}}(0) = 6\omega^2$, $K(0) = 12\omega^4$, $\rho_{\mathrm{core}}(0) = 3\omega^2/(8\pi G)$.
+- **Theorem 1:** 5-variable least-resistance cycle $\sqrt{\theta^\star} = (\sqrt{16e^{2\chi}+17}-3)/(4e^\chi)$, exact cubic budget identity $9DVB = 4(V+B/2)^3$, and open-valve equation of state $w_{\mathrm{DE}} = -1$ ($dE_{\mathrm{DE}}^\star = (-\frac{1}{3} + \frac{4}{3})\rho_{\mathrm{DE}} dV_- = +\rho_{\mathrm{DE}} dV_-$) vs. closed-box illusion.
+- **Theorem 2 & Proposition 9.2b:** Universal exponential-wall bypasses (`1.5` helix plateau, `4.0` child-sphere plateau), `(1,1,1)` ($N=3$) 3D volumetric ground state with short-range nuclear hard-core barrier $\Delta E_{\mathrm{core}} = 8(\sqrt{2}-1) \approx +3.3137$, and finite-facet sphere resolution between the Absolute-Zero floor ($\lambda_{\max} = 2R$) and Planck ceiling ($\ell_P$), fixing $\sqrt{R_\star\ell_P} = \lambda_n$, $F_\star = (\lambda_n/\ell_P)^2 = 1.688\times 10^{38}$ facets, base mass $M_{\star,0} = M_P^3/m_n^2 = 1.8481\ M_\odot$, neutron-star radius $R_{\mathrm{NS}} = 4\lambda_n^2/\ell_P = 10.916\ \mathrm{km}$ ($R_S/R_{\mathrm{NS}} = 1/2 = \theta^\star(\chi_{\mathrm{spaghetti}})$), and TOV black-hole collapse threshold $M_{\mathrm{TOV}} \in [2.0414, 2.1454]\ M_\odot$.
+- **Theorems 3–6:** Gauss-divergence $3:1$ exterior-to-cavity Virial theorem ($75$% exterior flow, $25$% cavity, added mass $M_{\mathrm{eff}} = \frac{3}{2}M_{\mathrm{cav}}$), horizon-area conservation in same-sign bubble fission, Cardano quadrupole root $p_+ = \phi^{2/3} + \phi^{-2/3} = 2.1038034027$ ($\phi = \frac{3+\sqrt{5}}{2}$), and Laplace harmonicity $\partial_{\zeta_x}v + \partial_{\zeta_y}v + \partial_{\zeta_z}v = 0$ forcing the $1\to 2\to 4\to 8$ orthogonal cascade.
+- **Theorem 7, Lemma 7.1 & Proposition 9.7b:** Cascade freeze-out at $\chi_{\mathrm{freeze}} = 3\chi_1 = 3$ ($\chi_{\mathrm{freeze,dyn}} = 3\ln(1.2+2^{2/3}) = 3.075371$), yielding $\Omega_{\mathrm{DE}} = 70.88\text{--}71.14$%, $\Omega_{\mathrm{DM}} = 23.81\text{--}23.88$%, primordial baryon baseline $\Omega_b = e^{-3} = 4.9787$%, late WHIM excess $\Delta\Omega_{\mathrm{WHIM}} = 0.3252$%, $H_0 = 67.03 \pm 0.22\ \mathrm{km\ s^{-1}\ Mpc^{-1}}$, and $S_8 = 0.776 \pm 0.010$ via the $3.114$% uncondensed horizon-slip fraction, while quarantining post-hoc numerical coincidences ($6\pi^5$, $K=7$, ad-hoc CMB exponents) in Section 9.8.
+
 Revision 2026-11-02.01 adds the complete Axiom-to-Theorem Non-Local Multiverse
 to Local Observer Atlas (Subsections 1.1--1.2 and Section 9, with Figure
 `nsc-nonlocal-to-local-atlas.png` and summary `nsc-nonlocal-to-local-atlas-v1.json`):
@@ -7,9 +15,9 @@ the five openly declared geometric axioms (`A0--A4`), the Circle--Pendulum
 smooth zero-crossing theorem ($R(\tau)=R_0\cos(\omega\tau)$ vs. unsigned
 $r=|R|\geq 0$ cusp and $(-1)\times(-1)=+1$ across two generations), the unified
 5-variable least-resistance cycle (`unified_least_resistance_cycle`), the
-zero-parameter two-valve dark-sector fixed point $\chi_*=3.06697$ at
-$\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}$ ($71.14\%$ Dark Energy, $23.88\%$ Dark
-Matter, $4.98\%$ Visible filaments), and the $K=7$ 3D volumetric harmonic
+zero-parameter two-valve dark-sector fixed point $\chi_\star=3.06697$ at
+$\Omega_{\mathrm{vis}}(\chi_\star)=e^{-3}$ ($71.14$% Dark Energy, $23.88$% Dark
+Matter, $4.98$% Visible filaments), and the $K=7$ 3D volumetric harmonic
 $\eta_7=\tanh(\frac{\pi}{4}e^{-21})=5.955329\times 10^{-10}$.
 
 Revision 2026-10-31.05 puts the outward chain in a compact main argument:

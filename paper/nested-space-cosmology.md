@@ -545,7 +545,7 @@ $$
 $$
 
 The protocol tests whether the isolated single-horizon scalar flow above selects
-the [Planck base-$\Lambda\mathrm{CDM}$ inference](https://arxiv.org/abs/1807.06209)
+the [Planck 2018](https://arxiv.org/abs/1807.06209) base-$\Lambda\mathrm{CDM}$ inference
 without reusing the supplied parent vacuum or fitting an epoch. Because
 
 $$

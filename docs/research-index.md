@@ -1,9 +1,10 @@
 # Research route
 
-1. [Foundation and working interpretation](../THEORY.md).
-2. [Offset construction and winding calculation](nsc-atlas-offset-generator.md).
-3. [Current result](current-result.md).
-4. [Active implementation](active-code-map.md).
+1. [Foundation Edition (`v0.27.0`) Manuscript](../paper/nested-space-cosmology.md), [Illustrated PDF](../paper/nested-space-cosmology.pdf), and [Zenodo Record (`10.5281/zenodo.23890258`)](https://zenodo.org/records/23890258).
+2. [Foundation and working interpretation](../THEORY.md).
+3. [Offset construction and winding calculation](nsc-atlas-offset-generator.md).
+4. [Current result](current-result.md).
+5. [Active implementation](active-code-map.md).
 
 The present job is parent deformation -> inherited offset -> child geometry
 and motion. The child starts within an already evolving enclosing region;

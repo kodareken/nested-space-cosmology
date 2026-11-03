@@ -1,8 +1,10 @@
 # Active code map
 
+**Foundation Edition (`v0.27.0`)** · [Zenodo Record (`10.5281/zenodo.23890258`)](https://zenodo.org/records/23890258) · [Main Manuscript](../paper/nested-space-cosmology.md) · [Illustrated PDF](../paper/nested-space-cosmology.pdf)
+
 `inherited_daughter_calculation` carries the first split's coordinate
 velocity and outgoing memory, projects its daughter shape, proves the
-three-axis orthogonal cascade ($\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$,
+three-axis orthogonal cascade ($\mathbf e_z\to\mathbf e_x\to\mathbf e_y$,
 ratios $-1/2$ and $-2$, third neck pinch into 8 octant lobes), and evaluates
 the $B$-independent $2\times 2$ kinetic matrix and outgoing-memory reaction at
 handoff. `--cascade-inheritance-only` reproduces the full handoff and
@@ -56,6 +58,7 @@ scale, shape, least-resistance and break-continuation comparisons.
 `cyclic_vortex_diffusion_ring`, `signed_circle_pendulum_duality`,
 `derived_three_accumulator_bubble_ladder`,
 `exponential_wall_bypasses_and_triad_winner`,
+`stellar_resolution_and_neutron_star_collapse`,
 `vacuum_bubble_crystallization_and_mass_spectrum`,
 `thermodynamic_gravity_and_cmb_temperature`,
 `nonlocal_to_local_atlas_readout`, `two_force_zero_crossing`,
@@ -65,7 +68,9 @@ the single-cost 5-variable cycle, nested `+ -> 0 -> -` local-space readout,
 moving Planck-to-Absolute-Zero spectral band, branching `Oooo -> oOOO...` chain
 and cyclic vortex-diffusion ring, circle-pendulum `+ -> 0 -> -` duality,
 3-accumulator binomial volumetric threshold (`n=3`), universal exponential-wall
-bypasses and `(1,1,1)` triad ground-state/hard-core theorem, and
+bypasses and `(1,1,1)` triad ground-state/hard-core theorem, finite-facet sphere
+resolution ($\sqrt{R_\star\ell_P}=\lambda_n$, $R_{\mathrm{NS}}=4\lambda_n^2/\ell_P=10.916\ \mathrm{km}$,
+$M_{\mathrm{TOV}}\in[2.0414,2.1454]\ M_\odot$), and
 non-local to local Atlas fixed-point readout (`--atlas-only`),
 two-force zero-crossing, axial compression buckling (omega^* > 0), conservative
 `+`/`0`/`-` damped wave transfer (eta = tanh(pi*gamma/(2*omega))), and
