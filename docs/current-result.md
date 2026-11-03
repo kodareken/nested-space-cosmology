@@ -1,5 +1,11 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The five-variable geometry now gives an exact relation across its whole
+budget curve. With D the stretch share, M the load share, V the filament
+share and B=M−D/3, stationarity gives 9DVB=4(V+B/2)³. The shares recover
+the generating compression, and B/V² tends to 16/27 at deep compression.
+See the [budget proof](nsc-atlas-offset-generator.md#exact-relation-between-the-three-budget-shares).
+
 The coupled hybrid birth has a last-echo launch cutoff near .226942387
 at the mouth and .116502935 at a parent detector .01 material units away.
 Arrival delay diverges logarithmically and the returned energy ratio

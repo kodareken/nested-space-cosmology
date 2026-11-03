@@ -935,6 +935,53 @@ python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --buckl
 python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --atlas-only
 ```
 
+### Exact relation between the three budget shares
+
+The normalized five-variable minimum gives an exact relation among the
+stretch, load and filament shares across its entire compression family.
+Write these shares as $D,M,V$ respectively, and put $B=M-D/3$ for the
+radial infall share. Let $x=e^{-\chi}$, $u=\sqrt{\theta^*}$ and
+$a=1-u^2$. The minimum obeys $3u=x+2a/x$. With common total cost $E$,
+
+$$
+D=3u^3/E,\qquad B=2ax/E,\qquad V=2a^2/(xE).
+$$
+
+Multiplying the stationarity equation by $a/E$ gives
+$(V+B/2)/D=a/u^2$. Multiplying the radial and filament shares gives
+$BV/D^2=(4/9)(a/u^2)^3$. Eliminating the ratio proves
+
+$$
+\boxed{9DVB=4(V+B/2)^3,\qquad B=M-D/3.}
+$$
+
+The identity uses the same cost and stationarity equation as the existing
+split and holds at any compression in the declared family. It can also be
+read in reverse at any finite point with positive shares:
+
+$$
+u^2=\frac{D}{D+V+B/2},\qquad e^{-\chi}=\frac{3uB}{2V+B}.
+$$
+
+In deep compression, $a=3x/2+O(x^2)$ and $E=4+O(x)$. Consequently
+$V=9x/8+O(x^2)$ and $B=3x^2/4+O(x^3)$, giving the intrinsic scaling
+
+$$
+M-D/3=\frac{16}{27}V^2+O(V^3).
+$$
+
+Thus the excess above one third of the stretch share falls quadratically
+with the filament share. The exact identity applies before taking that
+limit. The three budget shares encode the compression that generated them.
+
+The existing `nested_zero_crossing_map(1, chi)` calculator gives a maximum
+absolute cubic residual below $7\times10^{-17}$ at the sampled compressions
+0, 1, 2, 3.0669683518, 4, 6, 8 and 10. At the existing $V=e^{-3}$ point,
+$B=.00162558745$ and the inverse recovers $\chi=3.06696835185$. At $\chi=10$,
+$B/V^2=.59264976$ approaches the exact limit $16/27=.59259259$. The
+equation concerns the atlas's geometric budget shares and applies equally
+to points chosen without the filament-floor condition.
+
 ## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:
