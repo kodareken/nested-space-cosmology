@@ -148,12 +148,3 @@ numerical correctness intact. Keep the project's Python environment isolated;
 do not alter Douglas's Python 3.12 installation.
 
 Do not ever change this AGENTS.md unless Douglas explicitly tells you to.
-
-DOUGLAS ADDED:
-STOP HYPERFOCUSING ON BULLSHIT AND START PRODUCING TANGIBLE PROGRESS!!!!
-
-Standing rule — the break question. Whenever a calculation diverges, hits a singularity, a wall, 0.999…, an infinity, or "no solution", do not stop and do not call it a failure. Ask: what else can this mean?
-
-STOP/REASSSES SO YOU DO NOT HYPERFOCUS AND ADVANCE PROGRESS!!! THAT MEANS ZOOM OUT AND LOOK WHAT ELSE IS THERE TO DO!!!
-STOP/REASSSES SO YOU DO NOT HYPERFOCUS AND ADVANCE PROGRESS!!! THAT MEANS ZOOM OUT AND LOOK WHAT ELSE IS THERE TO DO!!!
-STOP/REASSSES SO YOU DO NOT HYPERFOCUS AND ADVANCE PROGRESS!!! THAT MEANS ZOOM OUT AND LOOK WHAT ELSE IS THERE TO DO!!!
