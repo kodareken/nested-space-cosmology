@@ -114,8 +114,8 @@ geometric, dynamical, and observational theorems:
   separating condensed `(1,1,1)` baryon cores ($\Omega_b=e^{-3}=4.9787\%$, fixing
   $H_0=100\sqrt{\Omega_b h^2 e^3}=67.03\pm 0.22\ \mathrm{km\,s^{-1}Mpc^{-1}}$) from
   uncondensed 1D WHIM filaments ($\Delta\Omega_{\mathrm{WHIM}}=0.3252\%$), and
-  suppressing sub-horizon linear growth via the spatially uniform horizon-throat
-  fraction ($1-f_{\mathrm{clust}}=3.114\%$) from $S_{8,\mathrm{CMB}}\approx 0.832$
+  suppressing sub-horizon linear growth via the spatially uniform uncondensed
+  horizon-slip fraction ($1-f_{\mathrm{clust}}=3.114\%$) from $S_{8,\mathrm{CMB}}\approx 0.832$
   to $S_{8,\mathrm{NSC}}\approx 0.776$ (Proposition 9.7b).
 
 Part I (Sections 2--8) presents the covariant 3+1D two-scalar Einstein control
