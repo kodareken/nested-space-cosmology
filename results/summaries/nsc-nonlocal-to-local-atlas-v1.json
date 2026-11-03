@@ -15,6 +15,10 @@
         "curve_bundle_cauchy_schwarz": "integral_0^{L_i} (d_s psi_i)^2/2 ds >= (Delta_psi_i)^2 / (2*lambda_i*L_{i,0}) = m_i / lambda_i",
         "vacuum_work_reduction": "integral_V V(s_*) d^3x = P * V0 * lambda_1 * lambda_2 * lambda_3",
         "reduced_a0_functional": "E(lambda_1, lambda_2, lambda_3) = sum_{i=1}^3 m_i / lambda_i + P * V0 * lambda_1 * lambda_2 * lambda_3",
+        "horizon_boundary_variation_identity": "delta S_{Sigma_0} = - integral_{Sigma_0} (dE/dtheta) delta_theta d(tau) = 0 <=> mu_+ = mu_-",
+        "winding_chemical_potential_plus": 5.79737716358724,
+        "winding_chemical_potential_minus": 5.797377163587236,
+        "chemical_potential_equilibrium_residual": 3.552713678800501e-15,
         "reduction_is_exact_on_harmonic_curve_bundles": true
       },
       "friedmann_equations_of_state": {
@@ -40,6 +44,19 @@
         "ricci_scalar_at_R_zero": -0.31830988618379075,
         "kretschmann_static_at_R_zero_12_over_R_core_4": 0.30396355092701344,
         "kretschmann_dynamic_at_R_zero": 1.2158542037080537,
+        "orthonormal_throat_stress_tensor_T_ab_0": [
+          -0.15915494309189537,
+          -0.15915494309189537,
+          0.15915494309189537,
+          0.15915494309189537
+        ],
+        "contracted_bianchi_identity_max_residual": 1.3877787807814457e-17,
+        "asymptotic_einstein_tensor_limits": [
+          -1.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
         "hybrid_inertia_metric": "M(R) = 1 / (1 + R^2 / 3)",
         "proper_birth_distance_finite": true
       },
@@ -66,7 +83,18 @@
         ],
         "per_axis_buckling_saturation_delta_chi": 1.0,
         "cumulative_freezeout_chi": 3.0,
-        "volumetric_floor_exp_minus_3": 0.049787068367863944
+        "volumetric_floor_exp_minus_3": 0.049787068367863944,
+        "two_center_handoff_half_span_at_s_1_2": 2.7874010519681995,
+        "unit_efold_stretch_e": 2.718281828459045,
+        "handoff_vs_efold_relative_diff": 0.02542754131875176,
+        "exact_efold_crossing_s_star": 1.1308807764908455,
+        "condensed_baryon_core_share_Omega_b": 0.049787068367863944,
+        "uncondensed_whim_filament_share_Delta_Omega_WHIM": 0.0032522755539062947,
+        "whim_fraction_of_visible": 0.061318170879021444,
+        "derived_H0_km_s_Mpc": 67.03084819482058,
+        "clustering_fraction_f_clust": 0.9688559382699672,
+        "smooth_horizon_boundary_fraction": 0.031144061730032813,
+        "predicted_S8_nsc": 0.7759496975214518
       }
     },
     "why_minus_exists_and_radius_crosses_zero": {

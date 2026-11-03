@@ -2893,7 +2893,7 @@
     {
       "bytes": 5068,
       "path": "paper/build-manifest.json",
-      "sha256": "a69547c7933adf49e15d84529af5b3ea4e723e7e2cf0be3779e8ae34efa0c0ca"
+      "sha256": "dda3828966deb5523e62c75bce865a0c6eda4201b7b7f80eb06d7cbe2eea7b38"
     },
     {
       "bytes": 3215,
@@ -3226,14 +3226,14 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 74081,
+      "bytes": 85882,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "bd1f5753ad912cec86a26313cffc068be8b54761dab620d81da0e6ca4d1353f4"
+      "sha256": "4dc6d99809c6ad8839dd67307b8641323ebcb90c76285d4d5f3af052a37b58e1"
     },
     {
-      "bytes": 2052904,
+      "bytes": 2268624,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "59a42232cf26cd37a9157061ff3ff5d0d3b85671a2b99a79b42b66783238f6cb"
+      "sha256": "245cd3d774ba7176be0c03f55e30eddb28706eddec1757ce16357d48e5014259"
     },
     {
       "bytes": 706013,
@@ -16391,9 +16391,9 @@
       "sha256": "1ae497ece4da493054e136646bef4b8e3c7b6685669301f997127fe390b9ebd5"
     },
     {
-      "bytes": 41396,
+      "bytes": 42867,
       "path": "results/summaries/nsc-nonlocal-to-local-atlas-v1.json",
-      "sha256": "a8255e95113aa1bff463eb69be231b5a03158f90525eff96eb79b9094f75a7c0"
+      "sha256": "53891ac69d12365eea96d535a7af39fbd3de951eab5343dc3b5ab3d1e5ea5afd"
     },
     {
       "bytes": 66777,
@@ -20246,9 +20246,9 @@
       "sha256": "4742e25a3b0ae7a1a09e88b0e42f2ac964f5a36f0ce4f7bb976817079ecba05a"
     },
     {
-      "bytes": 191153,
+      "bytes": 193893,
       "path": "src/recursive_horizons/nsc_atlas_offset_generator.py",
-      "sha256": "745ffb308c4f162adb23100036c13f0951c4a9407724aaa07ca687fa3800e0a1"
+      "sha256": "05f4237e874fd2a61f959cd60a9d63f0c96015d6afd01c13a9004034874a53db"
     },
     {
       "bytes": 3168,
@@ -23381,9 +23381,9 @@
       "sha256": "d9f01d5a5d8ed4bb950440a712d46327ef04a6ce7113262fde03816a78d52bfb"
     },
     {
-      "bytes": 70321,
+      "bytes": 70952,
       "path": "tests/test_nsc_atlas_offset_generator.py",
-      "sha256": "393e279fa8ac0bf21b4b503afadf8329b498730795fa4e82a1321836a199b2bd"
+      "sha256": "7581d3e2681da28dd35b95a853e826412e97bc9a4d46c4eee5d95a048f995c6e"
     },
     {
       "bytes": 5018,

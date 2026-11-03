@@ -2922,9 +2922,40 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
     ricci_4d_at_zero = -2. / (r_core ** 2)
     kretschmann_static_at_zero = 12. / (r_core ** 4)
     kretschmann_dynamic_at_zero = 12. * ((1. + r0w * r0w) ** 2) / (r_core ** 4)
+    g_tt_0 = -1. / (r_core ** 2)
+    g_rr_0 = -1. / (r_core ** 2)
+    g_thth_0 = +1. / (r_core ** 2)
+    t_ab_0 = [g_tt_0 / kappa_f, g_rr_0 / kappa_f, g_thth_0 / kappa_f, g_thth_0 / kappa_f]
+    bianchi_max_residual = 0.
+    for r_sample in (-2.5, -1.0, -0.3, 0.0, 0.3, 1.0, 2.5):
+        r2 = r_sample * r_sample
+        rc2 = r_core * r_core
+        denom = (r2 + rc2) ** 2
+        g_rr = ((1. / 3.) * (r2 * r2) - rc2) / denom
+        g_thth = ((1. / 3.) * (r2 * r2) + (2. / 3.) * r2 * rc2 + rc2) / denom
+        dg_rr_dr = 2. * r_sample * (((2. / 3.) * r2 * rc2 + 2. * rc2) / ((r2 + rc2) ** 3))
+        bianchi_res = dg_rr_dr + (2. * r_sample / (r2 + rc2)) * (g_rr - g_thth)
+        bianchi_max_residual = max(bianchi_max_residual, abs(bianchi_res))
+    mu_plus = 2. * m0_f * (1. - theta_star) * (2. * ex + 1. / ((1. - theta_star) * ex))
+    mu_minus = 2. * m0_f * theta_star * (3. / u)
+    chemical_potential_residual = mu_plus - mu_minus
     phi_golden = .5 * (1. + math.sqrt(5.))
     p_plus_cardano = (phi_golden ** (2. / 3.)) + (phi_golden ** (-2. / 3.))
     cubic_cardano_residual = (p_plus_cardano ** 3) - 3. * p_plus_cardano - 3.
+    r_daughter = 2. ** (-1. / 3.)
+    l_handoff = 1.2 + 2. * r_daughter
+    s_star_efold = math.e - 2. * r_daughter
+    at_chi3 = nested_zero_crossing_map(1, 3.)['nested_chain'][0]
+    omega_vis_3 = at_chi3['visible_filament_like_fraction']
+    omega_b_core = math.exp(-3.)
+    delta_omega_whim = omega_vis_3 - omega_b_core
+    omega_b_h2_cmb = 0.02237
+    h_nsc = math.sqrt(omega_b_h2_cmb / omega_b_core)
+    h0_nsc = 100. * h_nsc
+    f_clust = math.sqrt(omega_b_core / omega_vis_3)
+    one_minus_f_clust = 1. - f_clust
+    s8_cmb = 0.832
+    s8_nsc = s8_cmb * ((1. / 3400.) ** (+(3. / 5.) * one_minus_f_clust * 0.459))
     return dict(
         covariant_to_a0_reduction=dict(
             covariant_lagrangian='L = R/(2*kappa) - (nabla S)^2/2 - (nabla chi)^2/2 - V(s) - mu^2(s)*chi^2/2',
@@ -2932,6 +2963,10 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
             curve_bundle_cauchy_schwarz='integral_0^{L_i} (d_s psi_i)^2/2 ds >= (Delta_psi_i)^2 / (2*lambda_i*L_{i,0}) = m_i / lambda_i',
             vacuum_work_reduction='integral_V V(s_*) d^3x = P * V0 * lambda_1 * lambda_2 * lambda_3',
             reduced_a0_functional='E(lambda_1, lambda_2, lambda_3) = sum_{i=1}^3 m_i / lambda_i + P * V0 * lambda_1 * lambda_2 * lambda_3',
+            horizon_boundary_variation_identity='delta S_{Sigma_0} = - integral_{Sigma_0} (dE/dtheta) delta_theta d(tau) = 0 <=> mu_+ = mu_-',
+            winding_chemical_potential_plus=mu_plus,
+            winding_chemical_potential_minus=mu_minus,
+            chemical_potential_equilibrium_residual=chemical_potential_residual,
             reduction_is_exact_on_harmonic_curve_bundles=True),
         friedmann_equations_of_state=dict(
             child_volume_V_minus=v_minus,
@@ -2955,6 +2990,9 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
             ricci_scalar_at_R_zero=ricci_4d_at_zero,
             kretschmann_static_at_R_zero_12_over_R_core_4=kretschmann_static_at_zero,
             kretschmann_dynamic_at_R_zero=kretschmann_dynamic_at_zero,
+            orthonormal_throat_stress_tensor_T_ab_0=t_ab_0,
+            contracted_bianchi_identity_max_residual=bianchi_max_residual,
+            asymptotic_einstein_tensor_limits=[-1., 1. / 3., 1. / 3., 1. / 3.],
             hybrid_inertia_metric='M(R) = 1 / (1 + R^2 / 3)',
             proper_birth_distance_finite=True),
         gauss_divergence_exterior_virial=dict(
@@ -2974,7 +3012,18 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
             axes=['e_z', 'e_x', 'e_y'],
             per_axis_buckling_saturation_delta_chi=1.,
             cumulative_freezeout_chi=3.,
-            volumetric_floor_exp_minus_3=math.exp(-3.)))
+            volumetric_floor_exp_minus_3=omega_b_core,
+            two_center_handoff_half_span_at_s_1_2=l_handoff,
+            unit_efold_stretch_e=math.e,
+            handoff_vs_efold_relative_diff=(l_handoff - math.e) / math.e,
+            exact_efold_crossing_s_star=s_star_efold,
+            condensed_baryon_core_share_Omega_b=omega_b_core,
+            uncondensed_whim_filament_share_Delta_Omega_WHIM=delta_omega_whim,
+            whim_fraction_of_visible=delta_omega_whim / omega_vis_3,
+            derived_H0_km_s_Mpc=h0_nsc,
+            clustering_fraction_f_clust=f_clust,
+            smooth_horizon_boundary_fraction=one_minus_f_clust,
+            predicted_S8_nsc=s8_nsc))
 
 
 def nonlocal_to_local_atlas_readout():

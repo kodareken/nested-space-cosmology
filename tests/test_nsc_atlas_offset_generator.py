@@ -1269,6 +1269,7 @@ def test_covariant_action_to_a0_and_friedmann_eos():
 
     res = covariant_action_to_a0_and_friedmann_eos()
     assert res['covariant_to_a0_reduction']['reduction_is_exact_on_harmonic_curve_bundles'] is True
+    assert abs(res['covariant_to_a0_reduction']['chemical_potential_equilibrium_residual']) < 1e-13
     eos = res['friedmann_equations_of_state']
     assert eos['closed_valve_partial_dE_dV'] == pytest.approx(-1., abs=1e-15)
     assert eos['open_valve_turn_injection_dE_dV'] == pytest.approx(4., abs=1e-15)
@@ -1284,6 +1285,9 @@ def test_covariant_action_to_a0_and_friedmann_eos():
     assert reg['standing_wave_hard_core_radius_R_core'] == pytest.approx(math.sqrt(2. * math.pi), rel=1e-15)
     assert reg['kretschmann_static_at_R_zero_12_over_R_core_4'] == pytest.approx(3. / (math.pi ** 2), rel=1e-15)
     assert reg['kretschmann_dynamic_at_R_zero'] == pytest.approx(12. / (math.pi ** 2), rel=1e-15)
+    assert reg['orthonormal_throat_stress_tensor_T_ab_0'] == pytest.approx(
+        [-1. / (2. * math.pi), -1. / (2. * math.pi), +1. / (2. * math.pi), +1. / (2. * math.pi)], rel=1e-15)
+    assert reg['contracted_bianchi_identity_max_residual'] < 1e-15
     assert reg['proper_birth_distance_finite'] is True
     vir = res['gauss_divergence_exterior_virial']
     assert vir['bulk_to_throat_virial_ratio'] == pytest.approx(3., abs=1e-15)
@@ -1294,6 +1298,10 @@ def test_covariant_action_to_a0_and_friedmann_eos():
     assert card['p_plus'] == pytest.approx(2.1038034027355366, rel=1e-14)
     freeze = res['three_axis_cascade_freezeout']
     assert freeze['cumulative_freezeout_chi'] == pytest.approx(3., abs=1e-15)
+    assert freeze['handoff_vs_efold_relative_diff'] == pytest.approx(0.0254275, rel=1e-4)
+    assert 1.0 < freeze['exact_efold_crossing_s_star'] < 1.2
+    assert freeze['derived_H0_km_s_Mpc'] == pytest.approx(67.031, rel=1e-4)
+    assert 0.76 < freeze['predicted_S8_nsc'] < 0.79
 
 
 
