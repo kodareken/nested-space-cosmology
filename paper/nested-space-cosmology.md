@@ -10,15 +10,17 @@ Foundation Edition · Version 0.27.0 · 2 November 2026
 Nested-Space Cosmology (NSC) investigates whether one inherited geometric law can
 connect nested regions, their exchange of energy across event horizons, and the
 quantities measured by an interior observer. The foundation rests on five openly
-declared geometric axioms (**A0--A4**): (**A0**) geometry follows the path of
+declared geometric axioms (**A0--A4**) as the fundamental generating law, with
+effective 3+1D field and curvature readouts emerging as local dictionary projections:
+(**A0**) geometry follows the path of
 least resistance by minimizing the 1D Cauchy--Schwarz generator stretch cost plus
 enclosing compression work, $E = Q_{\mathrm{stretch}} + PV = \sum_{i=1}^3 m_i/\lambda_i + PV_0\lambda_1\lambda_2\lambda_3$,
-which arises directly as the 1D vortex-bundle ($A_{\perp,i}=\pi/\mu^2(s_\star)=\mathrm{const}$)
-and quantized cavity-mode reduction of the covariant 3+1D field Hamiltonian
-$\int_V (T_{\mathrm{phase}}^{00} + V(s_\star)) d^3x$ with background vacuum pressure
-$P = V(s_\star)$ (Proposition 1.1), while natural boundary variation of the covariant
-action across the smooth `0` horizon interface $\Sigma_0$ enforces chemical-potential
-equilibrium $\mu_+ = \mu_- \iff \partial E/\partial\theta = 0$ (Proposition 1.1b);
+which projects onto the effective 3+1D field Hamiltonian
+$\int_V (T_{\mathrm{phase}}^{00} + V(s_\star)) d^3x$ via 1D vortex-bundle localization
+($A_{\perp,i}=\pi/\mu^2(s_\star)=\mathrm{const}$) and quantized cavity modes with
+background pressure $P = V(s_\star)$ (Proposition 1.1), while natural boundary
+variation across the smooth `0` horizon interface $\Sigma_0$ projects **A0**
+stationarity onto chemical-potential equilibrium $\mu_+ = \mu_- \iff \partial E/\partial\theta = 0$ (Proposition 1.1b);
 (**A1**) a 1D spatial seed plus an inherited compression offset (time) generates
 a closed 2D circle and 3D sphere; (**A2**) seen edge-on, the closed circle
 $z(\tau)=R_0e^{i\omega\tau}$ is the harmonic pendulum $R(\tau)=R_0\cos(\omega\tau)$,
@@ -227,7 +229,16 @@ geometric axioms:
   (inflow from parent) and inner black-hole `0` valves (outflow to children)
   on a closed vortex--diffusion ring (`O <-> o`).
 
-**Proposition 1.1 (Reduction of the Covariant 3+1D Field Hamiltonian to A0):**
+Axioms **A0--A4** constitute the fundamental generating geometric law of NSC; they
+do not depend on or seek validation from standard closed-box general relativity
+(which, as Part I proves via the pre-registered control NSC-P006, breaks down at
+an isolated single horizon without **A4**). Instead, Propositions 1.1--1.2b
+establish the exact dictionary projections showing how the generated **A0--A4**
+geometry maps onto the effective 3+1D field Hamiltonian, junction chemical
+potentials, and orthonormal Einstein curvature readouts measured by a local
+interior observer.
+
+**Proposition 1.1 (Dictionary Projection Between A0 and the Effective 3+1D Field Hamiltonian):**
 Consider the covariant 3+1D scalar-gravity Lagrangian of Section 2,
 $\mathcal{L}=\frac{R}{2\kappa}-\frac{1}{2}(\nabla S)^2-\frac{1}{2}(\nabla\chi)^2-V(s)-\frac{1}{2}\mu^2(s)\chi^2$,
 evaluated on an orthorhombic principal domain $V=V_0\lambda_1\lambda_2\lambda_3$
@@ -353,8 +364,9 @@ exact geometric consequences follow immediately:
   Keeping the signed coordinate $R(\tau)$ removes this kinematic cusp completely
   ($\Delta\dot{R}=0$, $\ddot{R}(\tau_0)=0$).
 
-**Proposition 1.2 (3+1D Curvature Finiteness Across the Signed-Zero Crossing):**
-In 3+1D curved geometry, combining the signed radial coordinate $R\in(-\infty,\infty)$
+**Proposition 1.2 (Dictionary Projection of the Signed-Zero Crossing onto a Regular 3+1D Bounce Metric):**
+Projecting the fundamental **A2** signed radial coordinate $R\in(-\infty,\infty)$
+onto an effective 3+1D spacetime line element by combining it
 with the `(1,1,1)` standing-wave compression hard core
 $R_{\mathrm{core}}=\sqrt{2\pi/\kappa}>0$ (derived in Theorem 2, Section 9.2) and
 the hybrid radial inertia metric $M(R)=1/(1+R^2/3)$ (derived in Theorem 4,
