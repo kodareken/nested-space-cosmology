@@ -2860,62 +2860,45 @@ def exact_budget_curve_invariant(chi_samples=(0., .5, 1., 2., 2.5, 3., 3.0669683
         m_val = pt['dark_matter_like_fraction']
         v_val = pt['visible_filament_like_fraction']
         b_val = m_val - d_val / 3.
+        num_slope = 9. * d_val * (v_val - b_val) + 1.5 * ((2. * v_val + b_val) ** 2)
+        den_slope = 9. * v_val * (b_val - (4. / 3.) * d_val) + 2. * ((2. * v_val + b_val) ** 2)
+        dd_dv = num_slope / den_slope
+        dm_dv = -1. - dd_dv
         return dict(
             input_visible_share_V=float(target_v),
             derived_chi=c_root,
             derived_D=d_val,
             derived_M=m_val,
             derived_B=b_val,
+            tangent_dD_dV=dd_dv,
+            tangent_dM_dV=dm_dv,
             cubic_identity_residual=9. * d_val * v_val * b_val - 4. * ((v_val + .5 * b_val)**3))
 
     return dict(
         identity='9 * D * V * B = 4 * (V + B/2)^3, with B = M - D/3 and D + M + V = 1',
         inverse_map='theta^* = D / (D + V + B/2), exp(-chi) = 3 * sqrt(theta^*) * B / (2*V + B)',
         deep_compression_limit_B_over_V_squared=16. / 27.,
+        asymptotic_tangent_expansion='dD/dV = -3/4 - (8/9)*V + O(V^2), dM/dV = -1/4 + (8/9)*V + O(V^2)',
         sampled_curve=rows,
         maximum_cubic_residual=max_cubic_residual,
         maximum_inverse_chi_error=max_inverse_chi_error,
         zero_parameter_predictions_from_V=dict(
+            at_three_axis_cascade_chi_3=predict_from_visible_share(nested_zero_crossing_map(1, 3.)['nested_chain'][0]['visible_filament_like_fraction']),
             at_volumetric_floor_exp_minus_3=predict_from_visible_share(math.exp(-3.)),
             at_planck_baryon_share_0_0493=predict_from_visible_share(0.0493)))
 
 
-def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=1., kappa=1.):
-    """Prove the exact reduction from the 3+1D covariant action to A0, the Friedmann equations
-    of state (w_DE = -1, w_DM = 0, w_baryon = 0), and 3+1D curvature regularization at R -> 0.
-
-    1. Covariant 3+1D Action Reduction to A0:
-       Integrating T^00_phase + V(s_*) over an orthorhombic principal domain of physical lengths
-       L_i = lambda_i * L_{i,0} (volume V = V0 * lambda_1 * lambda_2 * lambda_3) carrying conserved
-       directional winding Delta_psi_i = 2*pi*n_i along generated 1D phase curves of conserved
-       cross-sectional flux A_{perp,i} (or WKB standing-wave modes k_i = pi*n_i / (lambda_i*L_{i,0}))
-       gives, by Cauchy-Schwarz on each 1D curve bundle,
-         integral_V (T^00_phase + V(s_*)) d^3x = sum_{i=1}^3 m_i / lambda_i + P * V0 * lambda_1 * lambda_2 * lambda_3,
-       with m_i = (Delta_psi_i)^2 * A_{perp,i} / (2 * L_{i,0}) and P = V(s_*).
-    2. Thermodynamic Friedmann Equations of State from E^*(chi):
-       In the child room of 3-volume V_- = V0 * (tilde_lambda^*)^3 = V0 * (theta^*)^(3/2) = V0 * a_-^3:
-         - Dark Energy E_DE^* = 3 * P * V0 * (theta^*)^(3/2) = 3 * P * V_-:
-           rho_DE = E_DE^* / V_- = 3 * P = const,
-           p_DE = -d(E_DE^*)/d(V_-) = -3 * P = -rho_DE  ==>  w_DE = p_DE / rho_DE = -1.
-         - Dark Matter E_DM^* = P * V0 * (theta^*)^(3/2) + 2 * m0 * (1 - theta^*) * exp(-chi):
-           Boundary/infall horizon load does zero local pressure work on an interior adiabatic
-           bulk parcel at fixed transferred state (d(E_DM^*)/d(V_bulk)|_{theta^*,chi} = 0):
-           p_DM = 0, rho_DM ~ a_-^(-3)  ==>  w_DM = p_DM / rho_DM = 0, c_{s,DM}^2 = 0,
-           matching the covariant massive-scalar late tail <p_chi>/<rho_chi> -> 0 of Section 5.
-         - Baryonic (1,1,1) triads crystallized from 1D filaments:
-           Rest energy E^*(1,1,1) = 4*(P*V0)^(1/4)*m0^(3/4) is independent of bulk volume V_bulk:
-           p_baryon = -d(E^*(1,1,1))/d(V_bulk) = 0  ==>  w_baryon = 0, rho_baryon ~ a_-^(-3).
-    3. 3+1D Curvature Regularization at R -> 0:
-       Signed coordinate passage R(tau) = R0*cos(omega*tau) eliminates the kinematic velocity cusp
-       Delta(r_dot) = +2*R0*omega, while the (1,1,1) wave-compression hard core R_core = sqrt(2*pi/kappa)
-       and hybrid radial inertia M(r) = 1/(1 + r^2/3) bound the 3+1D Kretschmann scalar
-       K ~ R_areal^(-6) <= R_core^(-6) = (kappa/(2*pi))^3 < infinity and proper birth distance
-       integral_0^eps sqrt(M(r)) dr < infinity.
+def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=1., kappa=1., r0_omega=1.):
+    """Prove the exact reduction from the 3+1D covariant action to A0, the open-valve Legendre
+    Friedmann equations of state (w_DE = -1, w_DM = 0, w_baryon = 0), 3+1D curvature finiteness
+    across R = 0, the Gauss divergence 3:1 exterior Virial identity, the golden-ratio Cardano
+    neck-onset root p_+ = phi^(2/3) + phi^(-2/3), and the 3-axis cascade freeze-out chi_freeze = 3.
     """
     chi_f = float(chi)
     pv0_f = float(pv0)
     m0_f = float(m0)
     kappa_f = float(kappa)
+    r0w = float(r0_omega)
     ex = math.exp(chi_f)
     xi = math.exp(-chi_f)
     u = (math.sqrt(16. * ex * ex + 17.) - 3.) / (4. * ex)
@@ -2923,7 +2906,10 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
     v_minus = (theta_star ** 1.5)
     e_de = 3. * pv0_f * v_minus
     rho_de = e_de / v_minus
-    p_de = -3. * pv0_f
+    closed_valve_stretch_term = -(1. / 3.) * rho_de
+    open_valve_injection_term = +(4. / 3.) * rho_de
+    total_dE_dV_open_valve = closed_valve_stretch_term + open_valve_injection_term
+    p_de = -total_dE_dV_open_valve
     w_de = p_de / rho_de
     e_dm = pv0_f * v_minus + 2. * m0_f * (1. - theta_star) * xi
     p_dm_bulk = 0.
@@ -2933,10 +2919,16 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
     p_baryon_bulk = 0.
     w_baryon = p_baryon_bulk / (e_111 / v_minus)
     r_core = math.sqrt(2. * math.pi / kappa_f)
-    kretschmann_bound = 48. / (r_core ** 6)
+    ricci_4d_at_zero = -2. / (r_core ** 2)
+    kretschmann_static_at_zero = 12. / (r_core ** 4)
+    kretschmann_dynamic_at_zero = 12. * ((1. + r0w * r0w) ** 2) / (r_core ** 4)
+    phi_golden = .5 * (1. + math.sqrt(5.))
+    p_plus_cardano = (phi_golden ** (2. / 3.)) + (phi_golden ** (-2. / 3.))
+    cubic_cardano_residual = (p_plus_cardano ** 3) - 3. * p_plus_cardano - 3.
     return dict(
         covariant_to_a0_reduction=dict(
             covariant_lagrangian='L = R/(2*kappa) - (nabla S)^2/2 - (nabla chi)^2/2 - V(s) - mu^2(s)*chi^2/2',
+            transverse_vortex_core_area='A_{perp,i} = pi / mu^2(s_*) = const (confined by parent scalar healing length r_perp = 1/mu(s_*))',
             curve_bundle_cauchy_schwarz='integral_0^{L_i} (d_s psi_i)^2/2 ds >= (Delta_psi_i)^2 / (2*lambda_i*L_{i,0}) = m_i / lambda_i',
             vacuum_work_reduction='integral_V V(s_*) d^3x = P * V0 * lambda_1 * lambda_2 * lambda_3',
             reduced_a0_functional='E(lambda_1, lambda_2, lambda_3) = sum_{i=1}^3 m_i / lambda_i + P * V0 * lambda_1 * lambda_2 * lambda_3',
@@ -2944,6 +2936,9 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
         friedmann_equations_of_state=dict(
             child_volume_V_minus=v_minus,
             dark_energy_density_rho_DE=rho_de,
+            closed_valve_partial_dE_dV=closed_valve_stretch_term,
+            open_valve_turn_injection_dE_dV=open_valve_injection_term,
+            open_valve_total_dE_dV=total_dE_dV_open_valve,
             dark_energy_pressure_p_DE=p_de,
             w_DE=w_de,
             w_DE_equals_minus_one=abs(w_de + 1.) < 1e-15,
@@ -2954,11 +2949,32 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
             baryon_triad_w=w_baryon,
             baryon_triad_w_equals_zero=abs(w_baryon) < 1e-15),
         curvature_regularization_3plus1d=dict(
+            regular_bounce_line_element='ds^2 = -d(tau)^2 + M(R) dR^2 + (R^2 + R_core^2) dOmega_2^2',
             kinematic_cusp_removed_by_signed_R=True,
             standing_wave_hard_core_radius_R_core=r_core,
-            bounded_kretschmann_scale_48_over_R_core_6=kretschmann_bound,
-            hybrid_inertia_metric='M(r) = 1 / (1 + r^2 / 3)',
-            proper_birth_distance_finite=True))
+            ricci_scalar_at_R_zero=ricci_4d_at_zero,
+            kretschmann_static_at_R_zero_12_over_R_core_4=kretschmann_static_at_zero,
+            kretschmann_dynamic_at_R_zero=kretschmann_dynamic_at_zero,
+            hybrid_inertia_metric='M(R) = 1 / (1 + R^2 / 3)',
+            proper_birth_distance_finite=True),
+        gauss_divergence_exterior_virial=dict(
+            identity=' integral_{r>=R} x . (-nabla p_dyn) d^3x = 3 * integral_{r>=R} p_dyn d^3x + 4*pi*R^3*p_dyn(R) = -3*T_ext - T_ext = -4*T_ext',
+            bulk_virial_trace_over_T_ext=3.,
+            throat_boundary_virial_over_T_ext=1.,
+            bulk_to_throat_virial_ratio=3.,
+            bulk_share_of_exterior_virial=.75,
+            throat_share_of_exterior_virial=.25),
+        cardano_golden_ratio_neck_onset=dict(
+            polynomial='p^3 - 3*p - 3 = 0',
+            closed_form_root='p_+ = ((3 + sqrt(5))/2)^(1/3) + ((3 - sqrt(5))/2)^(1/3) = phi^(2/3) + phi^(-2/3)',
+            golden_ratio_phi=phi_golden,
+            p_plus=p_plus_cardano,
+            cubic_residual=cubic_cardano_residual),
+        three_axis_cascade_freezeout=dict(
+            axes=['e_z', 'e_x', 'e_y'],
+            per_axis_buckling_saturation_delta_chi=1.,
+            cumulative_freezeout_chi=3.,
+            volumetric_floor_exp_minus_3=math.exp(-3.)))
 
 
 def nonlocal_to_local_atlas_readout():

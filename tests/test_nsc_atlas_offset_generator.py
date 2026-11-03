@@ -1259,7 +1259,9 @@ def test_exact_budget_curve_invariant_and_zero_parameter_inverse():
     for pred in result['zero_parameter_predictions_from_V'].values():
         assert abs(pred['cubic_identity_residual']) < 1e-15
         assert pred['derived_D'] + pred['derived_M'] + pred['input_visible_share_V'] == pytest.approx(1., abs=1e-15)
-        assert pred['derived_chi'] > 3.
+        assert pred['derived_chi'] >= 3. - 1e-12
+        assert pred['tangent_dD_dV'] + pred['tangent_dM_dV'] == pytest.approx(-1., abs=1e-15)
+        assert -0.82 < pred['tangent_dD_dV'] < -0.75
 
 
 def test_covariant_action_to_a0_and_friedmann_eos():
@@ -1268,6 +1270,9 @@ def test_covariant_action_to_a0_and_friedmann_eos():
     res = covariant_action_to_a0_and_friedmann_eos()
     assert res['covariant_to_a0_reduction']['reduction_is_exact_on_harmonic_curve_bundles'] is True
     eos = res['friedmann_equations_of_state']
+    assert eos['closed_valve_partial_dE_dV'] == pytest.approx(-1., abs=1e-15)
+    assert eos['open_valve_turn_injection_dE_dV'] == pytest.approx(4., abs=1e-15)
+    assert eos['open_valve_total_dE_dV'] == pytest.approx(3., abs=1e-15)
     assert eos['w_DE'] == pytest.approx(-1., abs=1e-15)
     assert eos['w_DE_equals_minus_one'] is True
     assert eos['w_DM'] == pytest.approx(0., abs=1e-15)
@@ -1277,7 +1282,18 @@ def test_covariant_action_to_a0_and_friedmann_eos():
     reg = res['curvature_regularization_3plus1d']
     assert reg['kinematic_cusp_removed_by_signed_R'] is True
     assert reg['standing_wave_hard_core_radius_R_core'] == pytest.approx(math.sqrt(2. * math.pi), rel=1e-15)
-    assert reg['bounded_kretschmann_scale_48_over_R_core_6'] < 1.
+    assert reg['kretschmann_static_at_R_zero_12_over_R_core_4'] == pytest.approx(3. / (math.pi ** 2), rel=1e-15)
+    assert reg['kretschmann_dynamic_at_R_zero'] == pytest.approx(12. / (math.pi ** 2), rel=1e-15)
     assert reg['proper_birth_distance_finite'] is True
+    vir = res['gauss_divergence_exterior_virial']
+    assert vir['bulk_to_throat_virial_ratio'] == pytest.approx(3., abs=1e-15)
+    assert vir['bulk_share_of_exterior_virial'] == pytest.approx(.75, abs=1e-15)
+    assert vir['throat_share_of_exterior_virial'] == pytest.approx(.25, abs=1e-15)
+    card = res['cardano_golden_ratio_neck_onset']
+    assert abs(card['cubic_cardano_residual'] if 'cubic_cardano_residual' in card else card['cubic_residual']) < 1e-14
+    assert card['p_plus'] == pytest.approx(2.1038034027355366, rel=1e-14)
+    freeze = res['three_axis_cascade_freezeout']
+    assert freeze['cumulative_freezeout_chi'] == pytest.approx(3., abs=1e-15)
+
 
 

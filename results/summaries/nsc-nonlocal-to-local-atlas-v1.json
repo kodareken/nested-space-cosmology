@@ -11,6 +11,7 @@
     "covariant_action_to_a0_and_friedmann_eos": {
       "covariant_to_a0_reduction": {
         "covariant_lagrangian": "L = R/(2*kappa) - (nabla S)^2/2 - (nabla chi)^2/2 - V(s) - mu^2(s)*chi^2/2",
+        "transverse_vortex_core_area": "A_{perp,i} = pi / mu^2(s_*) = const (confined by parent scalar healing length r_perp = 1/mu(s_*))",
         "curve_bundle_cauchy_schwarz": "integral_0^{L_i} (d_s psi_i)^2/2 ds >= (Delta_psi_i)^2 / (2*lambda_i*L_{i,0}) = m_i / lambda_i",
         "vacuum_work_reduction": "integral_V V(s_*) d^3x = P * V0 * lambda_1 * lambda_2 * lambda_3",
         "reduced_a0_functional": "E(lambda_1, lambda_2, lambda_3) = sum_{i=1}^3 m_i / lambda_i + P * V0 * lambda_1 * lambda_2 * lambda_3",
@@ -19,6 +20,9 @@
       "friedmann_equations_of_state": {
         "child_volume_V_minus": 0.9020714029189512,
         "dark_energy_density_rho_DE": 3.0000000000000004,
+        "closed_valve_partial_dE_dV": -1.0,
+        "open_valve_turn_injection_dE_dV": 4.0,
+        "open_valve_total_dE_dV": 3.0,
         "dark_energy_pressure_p_DE": -3.0,
         "w_DE": -0.9999999999999999,
         "w_DE_equals_minus_one": true,
@@ -30,11 +34,39 @@
         "baryon_triad_w_equals_zero": true
       },
       "curvature_regularization_3plus1d": {
+        "regular_bounce_line_element": "ds^2 = -d(tau)^2 + M(R) dR^2 + (R^2 + R_core^2) dOmega_2^2",
         "kinematic_cusp_removed_by_signed_R": true,
         "standing_wave_hard_core_radius_R_core": 2.5066282746310002,
-        "bounded_kretschmann_scale_48_over_R_core_6": 0.19350920659919704,
-        "hybrid_inertia_metric": "M(r) = 1 / (1 + r^2 / 3)",
+        "ricci_scalar_at_R_zero": -0.31830988618379075,
+        "kretschmann_static_at_R_zero_12_over_R_core_4": 0.30396355092701344,
+        "kretschmann_dynamic_at_R_zero": 1.2158542037080537,
+        "hybrid_inertia_metric": "M(R) = 1 / (1 + R^2 / 3)",
         "proper_birth_distance_finite": true
+      },
+      "gauss_divergence_exterior_virial": {
+        "identity": " integral_{r>=R} x . (-nabla p_dyn) d^3x = 3 * integral_{r>=R} p_dyn d^3x + 4*pi*R^3*p_dyn(R) = -3*T_ext - T_ext = -4*T_ext",
+        "bulk_virial_trace_over_T_ext": 3.0,
+        "throat_boundary_virial_over_T_ext": 1.0,
+        "bulk_to_throat_virial_ratio": 3.0,
+        "bulk_share_of_exterior_virial": 0.75,
+        "throat_share_of_exterior_virial": 0.25
+      },
+      "cardano_golden_ratio_neck_onset": {
+        "polynomial": "p^3 - 3*p - 3 = 0",
+        "closed_form_root": "p_+ = ((3 + sqrt(5))/2)^(1/3) + ((3 - sqrt(5))/2)^(1/3) = phi^(2/3) + phi^(-2/3)",
+        "golden_ratio_phi": 1.618033988749895,
+        "p_plus": 2.1038034027355366,
+        "cubic_residual": 0.0
+      },
+      "three_axis_cascade_freezeout": {
+        "axes": [
+          "e_z",
+          "e_x",
+          "e_y"
+        ],
+        "per_axis_buckling_saturation_delta_chi": 1.0,
+        "cumulative_freezeout_chi": 3.0,
+        "volumetric_floor_exp_minus_3": 0.049787068367863944
       }
     },
     "why_minus_exists_and_radius_crosses_zero": {
@@ -302,6 +334,7 @@
       "identity": "9 * D * V * B = 4 * (V + B/2)^3, with B = M - D/3 and D + M + V = 1",
       "inverse_map": "theta^* = D / (D + V + B/2), exp(-chi) = 3 * sqrt(theta^*) * B / (2*V + B)",
       "deep_compression_limit_B_over_V_squared": 0.5925925925925926,
+      "asymptotic_tangent_expansion": "dD/dV = -3/4 - (8/9)*V + O(V^2), dM/dV = -1/4 + (8/9)*V + O(V^2)",
       "sampled_curve": [
         {
           "chi": 0.0,
@@ -439,12 +472,24 @@
       "maximum_cubic_residual": 2.220446049250313e-16,
       "maximum_inverse_chi_error": 6.4012706246785456e-09,
       "zero_parameter_predictions_from_V": {
+        "at_three_axis_cascade_chi_3": {
+          "input_visible_share_V": 0.05303934392177024,
+          "derived_chi": 2.9999999999999973,
+          "derived_D": 0.7088268203026443,
+          "derived_M": 0.23813383577558525,
+          "derived_B": 0.0018582290080371433,
+          "tangent_dD_dV": -0.8056537043514906,
+          "tangent_dM_dV": -0.19434629564850936,
+          "cubic_identity_residual": -9.107298248878237e-18
+        },
         "at_volumetric_floor_exp_minus_3": {
           "input_visible_share_V": 0.049787068367863944,
           "derived_chi": 3.0669683518473474,
           "derived_D": 0.7114405081367502,
           "derived_M": 0.2387724234953858,
           "derived_B": 0.0016255874498024014,
+          "tangent_dD_dV": -0.8016593623099475,
+          "tangent_dM_dV": -0.1983406376900525,
           "cubic_identity_residual": 4.9873299934333204e-18
         },
         "at_planck_baryon_share_0_0493": {
@@ -453,6 +498,8 @@
           "derived_D": 0.7118308271827501,
           "derived_M": 0.23886917281724954,
           "derived_B": 0.0015922304229994966,
+          "tangent_dD_dV": -0.8010689313723512,
+          "tangent_dM_dV": -0.19893106862764875,
           "cubic_identity_residual": 7.15573433840433e-18
         }
       }
