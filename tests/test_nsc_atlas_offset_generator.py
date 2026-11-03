@@ -631,6 +631,15 @@ def test_damped_horizon_oscillation_conserves_budget_and_matches_lobe_integrals(
     assert plus_0==pytest.approx(ref['first_plus_lobe_area'],rel=1e-12)
     assert minus_1==pytest.approx(ref['first_minus_lobe_area'],rel=1e-12)
     assert (plus_0-minus_1)/(plus_0+minus_1)==pytest.approx(ref['lobe_asymmetry_eta'],rel=1e-12)
+    def deposited_work(t):
+        velocity = damped_horizon_oscillation(t, gamma, omega, amplitude=A0)['velocity']
+        return 2 * gamma * velocity**2
+
+    plus_work = quad(deposited_work, 0, half_period)[0]
+    minus_work = quad(deposited_work, half_period, 2*half_period)[0]
+    assert ref['first_plus_lobe_work'] == pytest.approx(plus_work)
+    assert ref['first_minus_lobe_work'] == pytest.approx(minus_work)
+    assert ref['work_asymmetry_eta'] == pytest.approx((plus_work-minus_work)/(plus_work+minus_work))
     assert (ref['cumulative_plus_area']-ref['cumulative_minus_area'])==pytest.approx(
         ref['net_asymmetric_remainder'],rel=2e-15)
     assert damped_horizon_oscillation(0.,0.,omega)['lobe_asymmetry_eta']==0.

@@ -759,7 +759,8 @@ Goldilocks stabilization through least resistance and budget conservation:
     $\mathcal{B}=\lambda_{\max}/\lambda_{\min}$ invariant. Every mode of
     wavelength $\lambda\in[\lambda_{\min},\lambda_{\max}]$ riding the room's
     horizon decay envelope $e^{-\gamma\tau}$ has half-cycle damping
-    $e^{-(\pi/2)(\lambda/\lambda_{\max})}$, giving the spectral asymmetry curve
+    $e^{-\pi(\lambda/\lambda_{\max})}$ under the spectral identification
+    $\gamma/\omega=\lambda/\lambda_{\max}$, giving the amplitude-area asymmetry curve
     $$
     \eta(\lambda)=\tanh\!\left(\frac{\pi}{2}\frac{\lambda}{\lambda_{\max}}\right).
     $$
@@ -917,6 +918,37 @@ Goldilocks stabilization through least resistance and budget conservation:
    \qquad
    \Delta I=I_+-I_-=\frac{A_0\omega}{\gamma^2+\omega^2}>0.
    $$
+
+   The same oscillator fixes a second signed readout. Write
+   $\rho=\exp(-\pi\gamma/\omega)$ for the amplitude multiplier over a half
+   cycle. At every zero crossing the oscillator energy is purely kinetic
+   and multiplies by $\rho^2$. Consequently the first two lobes deposit
+   $W_+=E_0(1-\rho^2)$ and $W_-=\rho^2 W_+$ in the receiving geometry.
+   For positive damping, each adjacent pair has the same normalized work
+   imbalance, as does the cumulative sum starting with the positive lobe:
+
+   $$
+   \eta_{\rm work}=\frac{W_+-W_-}{W_++W_-}
+   =\tanh(\pi\gamma/\omega)
+   =\frac{2\eta_{\rm area}}{1+\eta_{\rm area}^2}.
+   $$
+
+   Thus the recorded $K=7$ amplitude-area residue $5.955329\times10^{-10}$
+   corresponds to a work residue $1.191066\times10^{-9}$ for the same
+   oscillator. A spectral half-cycle exponent $-(\pi/2)\lambda/\lambda_{\max}$
+   would instead give the smaller amplitude-area expression
+   $\tanh[(\pi/4)\lambda/\lambda_{\max}]$. The exponent used above preserves
+   the existing numerical amplitude-area curve. The oscillator supplies
+   a signed amplitude residue and a signed geometric work residue. The
+   missing-antimatter interpretation still requires a rule relating one
+   of these quantities to a matter count and its normalization.
+
+   If a two-daughter split deposits its entire available release into
+   this oscillator, and the oscillator fully relaxes, the signed difference
+   of the deposited work is $E_N^*(1-1/\sqrt{2})\eta_{\rm work}$.
+   This states the budget for that proposed coupling. The split calculation
+   leaves the excitation amplitude, damping ratio and phase at release to
+   the transition dynamics.
 
 3. **Goldilocks stabilization (`buckling_to_goldilocks_calculation`).**
    As $E_{\rm geom}(\tau)$ populates the child's isotropic 3D stretch budget

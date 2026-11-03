@@ -1,5 +1,13 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The existing damped oscillator already gives the signed lobe-area residue
+and the K=7 example. Its same energy ledger gives a separate work residue
+η_work=2η_area/(1+η_area²). At K=7 the area and work values are
+5.955329e-10 and 1.191066e-9 respectively. The next connection to the
+bubble split is a transition that produces the two lobe histories and
+specifies how the receiver records them. See the coupled oscillation
+section of the [offset owner](nsc-atlas-offset-generator.md).
+
 The five-variable geometry now gives an exact relation across its whole
 budget curve. With D the stretch share, M the load share, V the filament
 share and B=M−D/3, stationarity gives 9DVB=4(V+B/2)³. The shares recover

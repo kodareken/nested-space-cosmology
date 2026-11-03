@@ -763,7 +763,7 @@ opposite orientation on the parent side of the birth horizon.
 Second, inside room $k$, every wavelength $\lambda\in[\lambda_{\min}(\chi),\lambda_{\max}(\chi)]$
 between the Planck cutoff $\lambda_{\min}$ and the Absolute-Zero horizon
 $\lambda_{\max}$ riding the room's offset decay envelope $e^{-\gamma\tau}$
-experiences half-cycle damping $e^{-(\pi/2)(\lambda/\lambda_{\max})}$ and
+experiences half-cycle amplitude damping $e^{-\pi(\lambda/\lambda_{\max})}$ under $\gamma/\omega=\lambda/\lambda_{\max}$ and
 spectral asymmetry $\eta(\lambda)=\tanh(\frac{\pi}{2}\frac{\lambda}{\lambda_{\max}})$.
 Anchored at the derived spaghettification threshold factor
 $e^{-2\chi_{\mathrm{spaghetti}}}=1/2$ ($\chi_{\mathrm{spaghetti}}=\frac{1}{2}\ln 2$),

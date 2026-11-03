@@ -555,6 +555,8 @@ def damped_horizon_oscillation(offset, damping_rate, turn_frequency, amplitude=1
     first_plus=amplitude*w/w0_sq*(1+exp_half)
     first_minus=first_plus*exp_half
     eta=math.tanh(.5*math.pi*rho)
+    first_plus_work = -e_total * math.expm1(-2 * math.pi * rho)
+    first_minus_work = first_plus_work * exp_half**2
     if g>0:
         total_plus=first_plus/(1-exp_half**2)
         total_minus=total_plus*exp_half
@@ -569,6 +571,8 @@ def damped_horizon_oscillation(offset, damping_rate, turn_frequency, amplitude=1
                 first_plus_lobe_area=first_plus,first_minus_lobe_area=first_minus,
                 cumulative_plus_area=total_plus,cumulative_minus_area=total_minus,
                 net_asymmetric_remainder=net_remainder,lobe_asymmetry_eta=eta,
+                first_plus_lobe_work=first_plus_work, first_minus_lobe_work=first_minus_work,
+                work_asymmetry_eta=math.tanh(math.pi*rho) if g > 0 else None,
                 child_holding_scale=child_scale,
                 goldilocks_equilibrium_scale=goldilocks_scale,
                 goldilocks_completion_fraction=child_scale/goldilocks_scale)
@@ -1637,8 +1641,9 @@ def spectral_band_and_baryon_harmonic(compression_chi, reference_bandwidth=1e61,
     together by exp(-chi), while frequencies omega shift up by exp(+chi).
     Every mode of wavelength lambda in [lambda_min(chi), lambda_max(chi)] riding
     the room's horizon decay envelope exp(-gamma*tau) experiences half-cycle
-    damping exp(-pi*gamma/omega) = exp(-(pi/2)*(lambda/lambda_max)), giving the
-    spectral asymmetry curve:
+    amplitude damping exp(-pi*gamma/omega) = exp(-pi*(lambda/lambda_max))
+    under the stated spectral identification gamma/omega = lambda/lambda_max.
+    The resulting amplitude-area asymmetry curve is:
       eta(lambda) = tanh((pi/2) * (lambda / lambda_max)).
     At the horizon scale lambda = lambda_max, eta = tanh(pi/2) ≈ 0.917152 (order-1
     dark/inflationary asymmetry); at the harmonic ratio
