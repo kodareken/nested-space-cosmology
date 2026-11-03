@@ -2234,6 +2234,12 @@ def split_waveform_evolution(matching_radius=2.5, maximum_mode=6,
                     equatorial_phase_departure=detector_equatorial.tolist(),
                     integrated_outward_energy=detector_energy,
                     signed_full_sphere_phase_integral=0.),
+                continuation_state=dict(shape_coordinate=float(solution.y[0,-1].real),
+                    shape_velocity=float(solution.y[1,-1].real),
+                    outgoing_memory=[dict(degree=degree,
+                        real=solution.y[2+indices.start:2+indices.stop,-1].real.tolist(),
+                        imag=solution.y[2+indices.start:2+indices.stop,-1].imag.tolist())
+                        for degree,roots,residues,indices,polynomial in pole_data]),
                 initial_energy=potential0,modes=list(modes),
                 zero_shape_inertia=float(mass(0.)),linear_growth_rate=growth_rate)
 
@@ -2258,6 +2264,126 @@ def split_waveform_calculation():
                     'static initial deformation s=.05 and zero velocity',
                     'outgoing even multipoles beyond the matching sphere',
                     'normalized m0=1 and pressure-volume coefficient 4/3'])
+
+
+def _four_center_volume(parent_separation, daughter_separation, order):
+    """Volume of a four-centre equipotential, using its Voronoi cells.
+
+    Reflection makes four cells congruent. Within the selected cell the
+    exterior radius is found on each ray, capped by its two symmetry planes.
+    Independent quadrature and the coincident-pair limit check the reduction.
+    """
+    polar,weights=np.polynomial.legendre.leggauss(order)
+    azimuth=2*np.pi*(np.arange(2*order)+.5)/(2*order)
+    axial=np.broadcast_to(polar[:,None],(order,2*order))
+    transverse=np.sqrt(1-polar[:,None]**2)*np.cos(azimuth)[None,:]
+    limit=np.ones_like(transverse)
+    inward=transverse<0
+    limit[inward]=np.minimum(limit[inward],daughter_separation/(-transverse[inward]))
+    inward=axial<0
+    limit[inward]=np.minimum(limit[inward],parent_separation/(-axial[inward]))
+
+    def phase(radius):
+        radius=np.maximum(radius,1e-100)
+        value=1/radius
+        for dx,dz in ((2*daughter_separation,0.),(0.,2*parent_separation),
+                      (2*daughter_separation,2*parent_separation)):
+            distance_squared=radius**2+dx*dx+dz*dz+2*radius*(dx*transverse+dz*axial)
+            value+=1/np.sqrt(np.maximum(distance_squared,1e-200))
+        return value
+
+    inside=phase(limit)>=4
+    low=np.zeros_like(limit);high=limit.copy()
+    for _ in range(48):
+        middle=(low+high)/2
+        enclosed=phase(middle)>=4
+        low=np.where(enclosed,middle,low)
+        high=np.where(enclosed,high,middle)
+    radius=np.where(inside,limit,(low+high)/2)
+    for fraction in (.25,.5,.75):
+        if np.any((radius>1e-12)&(phase(fraction*radius)<4-1e-10)):
+            raise RuntimeError('selected Voronoi ray has a sampled interior gap')
+        outside=radius+fraction*(limit-radius)
+        if np.any((limit-radius>1e-10)&(phase(outside)>4+1e-10)):
+            raise RuntimeError('selected Voronoi ray has a sampled second component')
+    return float(2*np.dot(weights,np.mean(radius**3,axis=1)))
+
+
+def inherited_daughter_calculation():
+    """Read daughter shape and the next split direction from the existing field."""
+    from scipy.optimize import brentq
+
+    parent=split_waveform_evolution(maximum_mode=8,shape_samples=321,quadrature_order=64)
+    separation=parent['endpoint']['separation']
+    direction_rows=[]
+    for order in (64,128,256):
+        directions,weights=np.polynomial.legendre.leggauss(order)
+        radial=np.array([brentq(lambda r:1/r+1/math.sqrt(r*r+4*separation**2+4*separation*r*mu)-2,
+                               1e-10,separation,xtol=1e-14) for mu in directions])
+        distance=np.sqrt(radial**2+4*separation**2+4*separation*radial*directions)
+        normal=-1/radial**2-(radial+2*separation*directions)/distance**3
+        separation_derivative=-(4*separation+2*radial*directions)/distance**3
+        radial_derivative=-separation_derivative/normal
+        quadrupole=((3*directions**2-1)/(2*radial**3)
+                    +(3*((radial*directions+2*separation)/distance)**2-1)/(2*distance**3))
+        axial_volume_derivative=float(3*np.dot(weights,radial**2*(-quadrupole/normal)))
+        volume=float(np.dot(weights,radial**3))
+        coefficients=[];coefficient_derivatives=[]
+        for degree in range(5):
+            legendre=np.zeros(degree+1);legendre[-1]=1
+            coefficients.append(float((2*degree+1)/2*np.dot(weights,radial*np.polynomial.legendre.legval(directions,legendre))))
+            coefficient_derivatives.append(float((2*degree+1)/2*np.dot(weights,radial_derivative*np.polynomial.legendre.legval(directions,legendre))))
+        volume_derivative=float(3*np.dot(weights,radial**2*radial_derivative))
+        scale=volume**(-.25)
+        scale_derivative=-scale*volume_derivative/(4*volume)
+        separation_speed=parent['endpoint']['velocity']/(2*separation*scale*(scale+separation*scale_derivative))
+        radius_coefficients=scale*np.array(coefficients)
+        velocity_coefficients=separation_speed*(scale_derivative*np.array(coefficients)
+                                                +scale*np.array(coefficient_derivatives))
+        direction_rows.append(dict(order=order,volume=volume,
+            normalized_radial_harmonics=(np.array(coefficients)/coefficients[0]).tolist(),
+            radius_harmonics_in_parent_units=radius_coefficients.tolist(),
+            radius_velocity_harmonics=velocity_coefficients.tolist(),
+            inherited_separation_velocity=separation_speed,
+            axial_volume_derivative=axial_volume_derivative,
+            transverse_volume_derivative=-axial_volume_derivative/2,
+            transverse_energy_derivative=-axial_volume_derivative/(8*volume**.75)))
+
+    def saddle(daughter_separation):
+        def derivative(z):
+            return ((z-separation)/(daughter_separation**2+(z-separation)**2)**1.5
+                    +(z+separation)/(daughter_separation**2+(z+separation)**2)**1.5)
+        z=brentq(derivative,1e-7,separation)
+        potential=2/math.sqrt(daughter_separation**2+(z-separation)**2)+2/math.sqrt(daughter_separation**2+(z+separation)**2)
+        return potential-4,z
+    threshold=brentq(lambda b:saddle(b)[0],.3,.85)
+    rows=[]
+    for daughter in (0.,.2,.4,threshold,.8,1.):
+        volumes=[_four_center_volume(separation,daughter,order) for order in (64,128)]
+        rows.append(dict(daughter_half_separation=daughter,volume=volumes[-1],
+            quadrature_spread=abs(volumes[1]-volumes[0]),
+            relaxed_energy_over_original=volumes[-1]**.25,
+            available_energy_fraction=1-volumes[-1]**.25))
+    return dict(schema='nsc-inherited-daughter-v1',parent_half_separation=separation,
+        inherited_from_first_split=parent['continuation_state'],
+        first_split_handoff_offset=parent['endpoint']['time'],
+        winding_four_same_pressure_handoff=dict(
+            length_and_duration_factor=math.sqrt(2),phase_factor=math.sqrt(2),
+            budget=2*math.sqrt(2)*parent['initial_energy'],
+            offset=math.sqrt(2)*parent['endpoint']['time'],
+            shape_coordinate=2*parent['continuation_state']['shape_coordinate'],
+            shape_velocity=math.sqrt(2)*parent['continuation_state']['shape_velocity'],
+            matching_radius=math.sqrt(2)*parent['matching_radius'],
+            outgoing_memory=[dict(degree=mode['degree'],
+                real=[2*x for x in mode['real']],imag=[2*x for x in mode['imag']])
+                for mode in parent['continuation_state']['outgoing_memory']]),
+        inherited_shape=direction_rows,second_neck_half_separation=threshold,
+        second_neck_axial_position=saddle(threshold)[1],four_center_path=rows,
+        binary_similarity=dict(radius_ratio=1/math.sqrt(2),duration_ratio=1/math.sqrt(2),
+            phase_amplitude_ratio=1/math.sqrt(2),energy_per_child_ratio=1/(2*math.sqrt(2)),
+            gradient_and_pressure_ratio=1.,frequency_ratio=math.sqrt(2),
+            two_generation_total_energy_ratio=.5),
+        history_scope='same inherited phase on an enlarged geometric configuration space; second-stage time evolution remains open')
 
 
 def winding_two_neck_calculation():

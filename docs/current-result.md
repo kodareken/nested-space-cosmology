@@ -1,5 +1,15 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The first split now supplies its daughters' full phase preparation and
+geometric velocity. The same field selects a transverse plane for the
+next split, with normalized energy derivative −.03151123, while an
+axial continuation has +.06302246. The shared four-center geometry
+reaches its second neck pinch at daughter half-separation .62746042.
+Its first and second stages retain one pressure and the same source
+units. The four separated equilibrium units have half the winding-four
+budget. The second stage's joint time evolution is still required.
+See [inherited daughters](nsc-atlas-offset-generator.md#inherited-daughters-and-the-direction-of-the-next-split).
+
 The whole exterior now evolves causally in the quadratic split-onset model.
 Its shape condition gives p³−3p−3=0, with growth rate2.1038034027 and a
 decaying oscillatory transient with decay1.0519017014 and frequency.5652358517.

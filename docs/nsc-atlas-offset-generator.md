@@ -1281,6 +1281,110 @@ checks of the exact quadratic solution. Run the existing CLI with
 pinch still retains the preceding near-field approximation. This exact
 onset response supplies a reference for extending that calculation.
 
+### Inherited daughters and the direction of the next split
+
+The first split's endpoint s=1.2 now supplies the next geometry, its
+velocity and its outgoing memory. The identical phase can be written as
+two sources of winding two or as four coincident unit sources. Let the
+centers of the two groups lie at z=+s and z=−s in units of the current
+equipotential scale R. Splitting each group in the transverse x direction
+places unit sources at (x,z)=(+b,+s),(-b,+s),(+b,-s),(-b,-s). The
+boundary is the same level Phi=4/R. At b=0 this reproduces the first
+field exactly, including its derivatives with respect to the original
+shape coordinate. The new splitting velocity is initially zero, so its
+addition preserves the existing field's time derivative.
+
+The calculator retains the first split's shape velocity and every outgoing
+memory coefficient. The existing winding-two reference converts to winding
+four at the same pressure by multiplying lengths and offsets by sqrt(2),
+phase by sqrt(2), and total energy by 2sqrt(2). The squared separation and
+outgoing memory each multiply by two. The record includes that full scaled
+handoff explicitly. Shape values below use the parent's own reference units.
+In a moving local chart centered on one daughter,
+the shared potential has a self term and a sibling term. If their center
+distance is d, the latter has the exact local expansion
+
+$$
+\frac{n_s}{|d\mathbf e_z+\mathbf x|}
+=n_s\sum_{l=0}^{\infty}\frac{(-1)^l\rho^l}{d^{l+1}}P_l(\cos\theta),
+\qquad \rho<d.
+$$
+
+Its time derivative follows from the inherited d and d_dot. The same
+parent state therefore supplies the daughter's angular preparation. Direct
+projection of the complete boundary at s=1.2 gives a normalized dipole
+−.07340185 and quadrupole +.02750552, with higher modes retained. The
+quadrupole radius coefficient is .02060825 in parent reference units,
+and its inherited offset derivative is −.05818555. These are evaluated
+source data from the first split, with the previously declared near-field
+approximation carried along.
+
+The next least-resistance direction also follows from this field. Write
+zeta=b². The volume derivative for an axial second split is the surface
+integral of its phase perturbation divided by the gradient magnitude.
+The phase perturbation is one half of the axial second spatial derivative
+of the original two-center phase. Harmonicity makes the trace of this
+directional tensor zero. Axial symmetry therefore gives
+
+$$
+\partial_\zeta v(\beta)
+=A(s)\,\frac{3\cos^2\beta-1}{2},
+$$
+
+where beta is the angle to the first splitting axis. At the inherited
+endpoint A(1.2)=.152756298060, independently checked by a finite variation
+of the four-source volume. The fixed-pressure relaxed energy is proportional
+to v^(1/4), so its normalized directional derivatives are +.0630224551
+along the old axis and −.0315112276 in the transverse plane. That plane
+minimizes the directional cost. Its azimuth remains degenerate under the
+original rotational symmetry. The calculation fixes a plane, and an x-axis
+representative is used for the subsequent four-center path.
+
+The second pair of necks reaches the level-set critical points at
+b/R=.627460420792 and z/R=+/-1.15970809670. At these points Phi=4/R
+and the phase gradient vanishes. Finite source distances keep the phase
+regular. The resulting four lobes each enclose one unit source. The full
+shared phase includes the cross terms throughout the path.
+
+| Stage in the same four-source family | Available equilibrium energy / original winding-four budget |
+| --- | ---: |
+| First split's s=1.2 endpoint, b=0 | .1537839232 |
+| Second necks reach zero | .2554477258 |
+| Four separated lobes at b/R=1 | .3386902228 |
+| Fully separated four-unit reference | .5 |
+
+The finite volumes use two angular quadratures and the coincident-pair
+limit agrees with the earlier analytic two-center integral. The listed
+volume comparisons are numerical and the local direction identity is
+analytic. A monotonicity proof between all finite four-source cuts has
+not been supplied.
+
+At the same fixed pressure, the equilibrium scale map for a binary child
+has a=1/sqrt(2). It acts on the local phase and its coordinates as
+
+$$
+\mathbf x'=a\mathbf x,\qquad t'=at,\qquad
+\Phi'(\mathbf x',t')=a\Phi(\mathbf x,t).
+$$
+
+First spatial and temporal derivatives are invariant. The source flux
+scales as a², the energy as a³, and the pressure is invariant. The
+normalized wave operator R²(partial_t²−Delta) is inherited. Frequencies
+in a common unit increase by sqrt(2). Two binary generations give four
+units with total reference energy one half of the original. These are
+same-pressure similarity relations. The finite sibling fields and their
+time-dependent corrections remain in the inherited state above.
+
+`--cascade-inheritance-only` on the existing offset CLI reproduces the
+[handoff and direction calculation](../results/summaries/nsc-inherited-daughter-v1.json).
+It extends the first wave calculation
+to the second generation's initial field, shape and static continuation.
+The joint time evolution of both splitting coordinates remains open.
+Its kinetic matrix must be obtained from their shared phase derivatives.
+Zero new coordinate velocity generally gives nonzero conjugate momentum
+through the matrix's off-diagonal terms, so a later solver must carry that
+projection along with the retained exterior memory.
+
 ## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:

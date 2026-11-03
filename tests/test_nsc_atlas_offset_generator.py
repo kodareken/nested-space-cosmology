@@ -1083,6 +1083,58 @@ def test_characteristic_fork_preserves_equal_receivers_and_contact_balance():
     assert result['rows'][-1]['regional_phase_energy'][1]>0
 
 
+def test_inherited_four_center_geometry_preserves_first_split_and_opens_transversely():
+    from recursive_horizons.nsc_atlas_offset_generator import (
+        _four_center_volume,_neck_volume_factor,inherited_daughter_calculation)
+
+    result=inherited_daughter_calculation()
+    separation=result['parent_half_separation']
+    assert _four_center_volume(separation,0.,64)==pytest.approx(_neck_volume_factor(separation),abs=2e-12)
+    assert result['inherited_shape'][-1]['axial_volume_derivative']>0
+    # Differentiate the four-source volume using whole upper-lobe rays,
+    # independently of the coarea derivative and Voronoi quadrature.
+    mu,weight=np.polynomial.legendre.leggauss(48)
+    phi=2*np.pi*(np.arange(96)+.5)/96
+    nx=np.sqrt(1-mu[:,None]**2)*np.cos(phi)[None,:]
+    def whole_lobe_volume(half_split):
+        low=np.full_like(nx,.1);high=np.full_like(nx,separation)
+        for _ in range(48):
+            radius=(low+high)/2
+            value=np.zeros_like(radius)
+            for dx,dz in ((half_split,0.),(-half_split,0.),
+                          (half_split,2*separation),(-half_split,2*separation)):
+                value+=1/np.sqrt(radius**2+dx*dx+dz*dz-2*dx*radius*nx+2*dz*radius*mu[:,None])
+            low=np.where(value>4,radius,low)
+            high=np.where(value>4,high,radius)
+        return np.dot(weight,np.mean(((low+high)/2)**3,axis=1))
+    derivative=(whole_lobe_volume(.005)-whole_lobe_volume(0.))/.005**2
+    expected=result['inherited_shape'][-1]['transverse_volume_derivative']
+    assert derivative==pytest.approx(expected,rel=.002)
+    b=result['second_neck_half_separation'];z=result['second_neck_axial_position']
+    potential=sum(1/math.sqrt(b*b+(z-sign*separation)**2) for sign in (-1,1) for _ in range(2))
+    assert potential==pytest.approx(4.,abs=1e-11)
+    force=sum((z-sign*separation)/(b*b+(z-sign*separation)**2)**1.5 for sign in (-1,1))
+    assert force==pytest.approx(0.,abs=1e-11)
+    state=result['inherited_from_first_split']
+    assert state['shape_velocity']>0
+    assert any(any(abs(x)>0 for x in mode['real']) for mode in state['outgoing_memory'])
+    c=math.sqrt(state['shape_coordinate'])
+    speed=state['shape_velocity']/(2*c)
+    point=np.array([5.,1.,2.]);a=math.sqrt(2)
+    def field_jet(point, center, velocity, charge):
+        phase=0.;rate=0.
+        for sign in (-1,1):
+            delta=point-np.array([0.,0.,sign*center])
+            distance=np.linalg.norm(delta)
+            phase+=charge/distance
+            rate+=charge*sign*velocity*delta[2]/distance**3
+        return phase,rate
+    original=field_jet(point/a,c,speed,1.)
+    scaled=field_jet(point,a*c,speed,2.)
+    assert scaled[0]==pytest.approx(a*original[0],rel=2e-14)
+    assert scaled[1]==pytest.approx(original[1],rel=2e-14)
+
+
 def test_whole_exterior_neck_onset_obeys_wave_equation_and_shape_boundary():
     from recursive_horizons.nsc_atlas_offset_generator import split_onset_field,split_onset_calculation
 

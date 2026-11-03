@@ -1,5 +1,10 @@
 # Active code map
 
+`inherited_daughter_calculation` carries the first split's coordinate
+velocity and outgoing memory, projects its daughter shape and computes
+the next directional energy variation. `--cascade-inheritance-only`
+also evaluates the shared four-center level-set continuation.
+
 `split_onset_field` and `split_onset_calculation` give the exact quadratic
 neck response with the complete causal exterior and its natural shape
 condition. `--split-onset-only` prints the growth, transient and independent
