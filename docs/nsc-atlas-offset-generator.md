@@ -982,6 +982,46 @@ $B/V^2=.59264976$ approaches the exact limit $16/27=.59259259$. The
 equation concerns the atlas's geometric budget shares and applies equally
 to points chosen without the filament-floor condition.
 
+### Spherical fragmentation preserves area and releases budget
+
+Use the existing bubble cost $Q_n(R)=m_0n^2/R+PV_0R^3$. Compare relaxed,
+separated spheres at the same pressure and couplings so their costs add.
+The stationary radius gives $(R_n^*)^2=\sqrt{m_0/(3PV_0)}\,|n|$ and
+$E_n^*=4PV_0(R_n^*)^3$. For a positive winding $N$ split into positive
+integers $n_i$ with $\sum_i n_i=N$, these identities imply
+
+$$
+\sum_i4\pi (R_{n_i}^*)^2=4\pi (R_N^*)^2,\qquad
+\frac{E_{\rm daughters}}{E_N^*}
+=\frac{\sum_i (R_{n_i}^*)^3}{(R_N^*)^3}
+=\sum_i\left(\frac{n_i}{N}\right)^{3/2}<1
+$$
+
+for any nontrivial split. Thus the equilibrium surface area is additive
+in same-sign winding. Fragmentation reduces the total enclosed volume
+and minimized energy by the same fraction. The energy difference is
+available to other degrees of freedom in a conserving evolution.
+
+For a fixed number $k$ of integer daughters the least cost occurs when
+their windings differ by at most one. Indeed the forward differences of
+$n^{3/2}$ strictly increase, so moving a unit from a winding at least two
+larger than another lowers the sum. When $k$ divides $N$, each radius is
+$R_N^*/\sqrt{k}$ and the available release fraction is $1-1/\sqrt{k}$.
+For $N=8$, successive balanced divisions into 2, 4 and 8 daughters give
+cumulative releases of 29.2893%, 50%, and 64.6447%. The smallest positive
+winding in this sector is one. The fraction is independent of pressure
+in this comparison, while the absolute release scales as $P^{1/4}$ at
+fixed couplings and winding.
+
+This is an equilibrium budget law for admitted same-sign partitions.
+The onset, separation dynamics and spectrum of released waves require
+a transition calculation. The opposite-winding annihilation construction
+below addresses cancellation of signed winding. The Navier–Stokes
+[concentrating vortex example](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf)
+provides a separate mathematical example of increasing local intensity
+with bounded total kinetic energy. The fragmentation law above follows
+directly from the atlas bubble functional.
+
 ## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:
