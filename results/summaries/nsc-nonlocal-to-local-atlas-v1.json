@@ -97,6 +97,41 @@
         "clustering_fraction_f_clust": 0.9688559382699672,
         "smooth_horizon_boundary_fraction": 0.031144061730032813,
         "predicted_S8_nsc": 0.7759496975214518
+      },
+      "stellar_resolution_and_neutron_star_collapse": {
+        "polyhedral_isoperimetric_excess_law": "A_F^3 / (36 * pi * V_F^2) = 1 + pi*sqrt(3)/F + O(F^-2) > 1 for finite facet count F",
+        "planck_cutoff_l_P_m": 1.61625502392855e-35,
+        "baryon_compton_wavelength_lambda_n_m": 2.1001941539004775e-16,
+        "resolution_ratio_1d_lambda_n_over_l_P": 1.2994200313732921e+19,
+        "critical_surface_facet_count_F_star": 1.6884924179341675e+38,
+        "critical_baryon_count_N_star": 2.194060870685582e+57,
+        "geometric_mean_identity": "sqrt(R_* * l_P) = lambda_n <=> R_* / lambda_n = lambda_n / l_P = N_1D",
+        "geometric_mean_residual_m": 0.0,
+        "fundamental_radius_scale_R_star_km": 2.7290343533513632,
+        "schwarzschild_zero_valve_radius_R_S_km": 5.4580687067027265,
+        "triad_ground_state_energy_E_111": 4.0,
+        "neutron_star_equilibrium_radius_R_NS_km": 10.916137413405453,
+        "observed_nicer_gw170817_radius_window_km": [
+          10.8,
+          11.5
+        ],
+        "radius_within_observed_window": true,
+        "compactness_R_S_over_R_NS": 0.5,
+        "matches_spaghettification_threshold_one_half": true,
+        "base_resolution_mass_M_star_0_solar": 1.8481007431265575,
+        "hard_core_repulsion_barrier_Delta_E_core": 3.313708498984761,
+        "per_axis_hard_core_factor_gamma_core": 1.1045694996615871,
+        "volumetric_hard_core_factor_gamma_core_3_over_2": 1.1608859910705391,
+        "tov_collapse_mass_1d_barrier_solar": 2.041355713159509,
+        "tov_collapse_mass_3d_barrier_solar": 2.1454342627826737,
+        "observed_psr_j0740_mass_solar": 2.08,
+        "observed_gw170817_tov_bound_solar": 2.16,
+        "tov_window_brackets_observations": true,
+        "spectral_band_hz": {
+          "neutron_star_fundamental_pulsation_f_min_hz": 13731.618000330542,
+          "baryon_carrier_frequency_f_n_hz": 2.271859080445304e+23,
+          "planck_zero_crossing_cutoff_f_max_hz": 2.952099197587936e+42
+        }
       }
     },
     "why_minus_exists_and_radius_crosses_zero": {
@@ -739,6 +774,41 @@
           "ratio_over_n1_1d_loop": 84.8528137423857
         }
       ]
+    },
+    "stellar_resolution_and_neutron_star_collapse": {
+      "polyhedral_isoperimetric_excess_law": "A_F^3 / (36 * pi * V_F^2) = 1 + pi*sqrt(3)/F + O(F^-2) > 1 for finite facet count F",
+      "planck_cutoff_l_P_m": 1.61625502392855e-35,
+      "baryon_compton_wavelength_lambda_n_m": 2.1001941539004775e-16,
+      "resolution_ratio_1d_lambda_n_over_l_P": 1.2994200313732921e+19,
+      "critical_surface_facet_count_F_star": 1.6884924179341675e+38,
+      "critical_baryon_count_N_star": 2.194060870685582e+57,
+      "geometric_mean_identity": "sqrt(R_* * l_P) = lambda_n <=> R_* / lambda_n = lambda_n / l_P = N_1D",
+      "geometric_mean_residual_m": 0.0,
+      "fundamental_radius_scale_R_star_km": 2.7290343533513632,
+      "schwarzschild_zero_valve_radius_R_S_km": 5.4580687067027265,
+      "triad_ground_state_energy_E_111": 4.0,
+      "neutron_star_equilibrium_radius_R_NS_km": 10.916137413405453,
+      "observed_nicer_gw170817_radius_window_km": [
+        10.8,
+        11.5
+      ],
+      "radius_within_observed_window": true,
+      "compactness_R_S_over_R_NS": 0.5,
+      "matches_spaghettification_threshold_one_half": true,
+      "base_resolution_mass_M_star_0_solar": 1.8481007431265575,
+      "hard_core_repulsion_barrier_Delta_E_core": 3.313708498984761,
+      "per_axis_hard_core_factor_gamma_core": 1.1045694996615871,
+      "volumetric_hard_core_factor_gamma_core_3_over_2": 1.1608859910705391,
+      "tov_collapse_mass_1d_barrier_solar": 2.041355713159509,
+      "tov_collapse_mass_3d_barrier_solar": 2.1454342627826737,
+      "observed_psr_j0740_mass_solar": 2.08,
+      "observed_gw170817_tov_bound_solar": 2.16,
+      "tov_window_brackets_observations": true,
+      "spectral_band_hz": {
+        "neutron_star_fundamental_pulsation_f_min_hz": 13731.618000330542,
+        "baryon_carrier_frequency_f_n_hz": 2.271859080445304e+23,
+        "planck_zero_crossing_cutoff_f_max_hz": 2.952099197587936e+42
+      }
     }
   },
   "numerical_coincidences_not_derived": {

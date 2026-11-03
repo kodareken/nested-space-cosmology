@@ -3027,7 +3027,95 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
             derived_H0_km_s_Mpc=h0_nsc,
             clustering_fraction_f_clust=f_clust,
             smooth_horizon_boundary_fraction=one_minus_f_clust,
-            predicted_S8_nsc=s8_nsc))
+            predicted_S8_nsc=s8_nsc),
+        stellar_resolution_and_neutron_star_collapse=stellar_resolution_and_neutron_star_collapse())
+
+
+def stellar_resolution_and_neutron_star_collapse():
+    """Derive the finite-facet resolution limit, geometric mean sqrt(R_* * l_P) = lambda_n,
+    neutron-star equilibrium radius R_NS = 4 * lambda_n^2 / l_P = 10.916 km, compactness 1/2,
+    and TOV black-hole collapse threshold M_TOV in [2.041, 2.146] M_sun from A0-A3 and Theorem 2(3).
+
+    In an idealized continuum (l_P -> 0), a sphere has infinitely many surface facets (F -> infinity)
+    to disperse enclosing pressure P (isoperimetric quotient A^3 / (36*pi*V^2) = 1). Under Axiom A3,
+    however, a sphere composed of N condensed (1,1,1) baryon standing-wave triads (Theorem 2(3),
+    reduced Compton wavelength lambda_n = hbar / (m_n * c)) inside a room with Planck 0-crossing
+    cutoff l_P = sqrt(hbar * G / c^3) has 1D Planck-to-baryon resolution ratio:
+        N_1D = lambda_n / l_P = M_P / m_n = 1.29942003e19.
+    Equating the 1D wave-packing scale N^(1/3) * lambda_n to the gravitational curvature radius
+    G * (N * m_n) / c^2 = N * l_P^2 / lambda_n fixes:
+      - Critical 1D diameter count: N_*^(1/3) = N_1D = lambda_n / l_P
+      - Critical 2D surface facet count: F_* = N_*^(2/3) = (lambda_n / l_P)^2 = 1.688492e38 facets
+      - Critical 3D baryon count: N_* = (lambda_n / l_P)^3 = 2.194061e57 baryons
+      - Base resolution mass: M_{*,0} = N_* * m_n = M_P^3 / m_n^2 = 1.848101 M_sun
+      - Fundamental radius scale: R_* = N_*^(1/3) * lambda_n = lambda_n^2 / l_P = 2.729034 km
+        (satisfying the exact geometric mean identity sqrt(R_* * l_P) = lambda_n)
+      - Schwarzschild 0-horizon radius: R_S(M_{*,0}) = 2 * G * M_{*,0} / c^2 = 2 * R_* = 5.458069 km
+      - Neutron-star equilibrium radius at Theorem 2(3) triad ground state E^*(1,1,1) = 4:
+        R_NS = 4 * R_* = 4 * lambda_n^2 / l_P = 10.916137 km (compactness R_S / R_NS = 1/2 = theta^*(chi_spaghetti))
+      - TOV black-hole collapse threshold from Theorem 2(3) hard-core barrier Delta E_core = 8*(sqrt(2)-1):
+        per-axis barrier factor gamma_core = 8*(sqrt(2)-1)/3 = 1.1045695 gives
+        M_{TOV,1D} = gamma_core * M_{*,0} = 2.041356 M_sun and
+        M_{TOV,3D} = gamma_core^(3/2) * M_{*,0} = 2.145434 M_sun.
+    """
+    hbar = 1.054571817e-34
+    c = 299792458.
+    g_newton = 6.67430e-11
+    m_n = 1.67492749804e-27
+    m_sun = 1.98847e30
+    l_p = math.sqrt(hbar * g_newton / (c ** 3))
+    m_p = math.sqrt(hbar * c / g_newton)
+    lam_n = hbar / (m_n * c)
+    n_1d = lam_n / l_p
+    f_facets_2d = n_1d ** 2
+    n_baryons_3d = n_1d ** 3
+    m_star_0_kg = n_baryons_3d * m_n
+    m_star_0_sun = m_star_0_kg / m_sun
+    r_star_m = (lam_n ** 2) / l_p
+    r_star_km = r_star_m / 1000.
+    geom_mean_residual = math.sqrt(r_star_m * l_p) - lam_n
+    r_schwarzschild_km = 2. * r_star_km
+    e_triad_ground = 4.
+    r_ns_km = e_triad_ground * r_star_km
+    compactness_ns = r_schwarzschild_km / r_ns_km
+    delta_e_core = 8. * (math.sqrt(2.) - 1.)
+    gamma_core_1d = delta_e_core / 3.
+    gamma_core_3d = gamma_core_1d ** 1.5
+    m_tov_1d_sun = gamma_core_1d * m_star_0_sun
+    m_tov_3d_sun = gamma_core_3d * m_star_0_sun
+    f_min_hz = c / (2. * r_ns_km * 1000.)
+    f_baryon_hz = c / (2. * math.pi * lam_n)
+    f_planck_hz = c / (2. * math.pi * l_p)
+    return dict(
+        polyhedral_isoperimetric_excess_law='A_F^3 / (36 * pi * V_F^2) = 1 + pi*sqrt(3)/F + O(F^-2) > 1 for finite facet count F',
+        planck_cutoff_l_P_m=l_p,
+        baryon_compton_wavelength_lambda_n_m=lam_n,
+        resolution_ratio_1d_lambda_n_over_l_P=n_1d,
+        critical_surface_facet_count_F_star=f_facets_2d,
+        critical_baryon_count_N_star=n_baryons_3d,
+        geometric_mean_identity='sqrt(R_* * l_P) = lambda_n <=> R_* / lambda_n = lambda_n / l_P = N_1D',
+        geometric_mean_residual_m=geom_mean_residual,
+        fundamental_radius_scale_R_star_km=r_star_km,
+        schwarzschild_zero_valve_radius_R_S_km=r_schwarzschild_km,
+        triad_ground_state_energy_E_111=e_triad_ground,
+        neutron_star_equilibrium_radius_R_NS_km=r_ns_km,
+        observed_nicer_gw170817_radius_window_km=[10.8, 11.5],
+        radius_within_observed_window=(10.8 <= r_ns_km <= 11.5),
+        compactness_R_S_over_R_NS=compactness_ns,
+        matches_spaghettification_threshold_one_half=abs(compactness_ns - .5) < 1e-15,
+        base_resolution_mass_M_star_0_solar=m_star_0_sun,
+        hard_core_repulsion_barrier_Delta_E_core=delta_e_core,
+        per_axis_hard_core_factor_gamma_core=gamma_core_1d,
+        volumetric_hard_core_factor_gamma_core_3_over_2=gamma_core_3d,
+        tov_collapse_mass_1d_barrier_solar=m_tov_1d_sun,
+        tov_collapse_mass_3d_barrier_solar=m_tov_3d_sun,
+        observed_psr_j0740_mass_solar=2.08,
+        observed_gw170817_tov_bound_solar=2.16,
+        tov_window_brackets_observations=(m_tov_1d_sun <= 2.08 <= m_tov_3d_sun),
+        spectral_band_hz=dict(
+            neutron_star_fundamental_pulsation_f_min_hz=f_min_hz,
+            baryon_carrier_frequency_f_n_hz=f_baryon_hz,
+            planck_zero_crossing_cutoff_f_max_hz=f_planck_hz))
 
 
 def nonlocal_to_local_atlas_readout():
@@ -3094,7 +3182,8 @@ def nonlocal_to_local_atlas_readout():
                     integer_winding_sharp_levels=bubble_spectrum['discrete_burst_spectrum'],
                     opposite_winding_cancellation=bubble_spectrum['annihilation_to_back_to_back_ripples'],
                     shared_flow_resonance_interaction=bubble_spectrum['shared_flow_resonance_interaction'],
-                    three_accumulator_bubble_ladder=three_acc_ladder),
+                    three_accumulator_bubble_ladder=three_acc_ladder,
+                    stellar_resolution_and_neutron_star_collapse=action_and_eos['stellar_resolution_and_neutron_star_collapse']),
                 numerical_coincidences_not_derived=dict(
                     note='Formulas below involve post-hoc target selection, Lenz (1951) 6*pi^5, rung selection (K=7), or external measured inputs (H0, G); quarantined from derived theorems.',
                     lenz_6_pi_5_and_medium_dressing=bubble_spectrum['untuned_mass_ratio_tests']['candidate_B_dimensional_accumulation_1D_to_3D'],

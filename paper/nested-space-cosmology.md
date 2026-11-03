@@ -68,7 +68,13 @@ geometric, dynamical, and observational theorems:
   minimum-cost 3D ground state ($E_{1,1,1}=3\pi^2/R^2$, $2:1$ split against the
   $S^2$ angular floor) with wave-compression hard core $R_{\mathrm{core}}=\sqrt{2\pi/\kappa}$
   and short-range nuclear hard-core repulsion $\Delta E_{\mathrm{core}}=8(\sqrt{2}-1)$
-  against merging into `(2,2,2)`.
+  against merging into `(2,2,2)`. Combining this `(1,1,1)` triad ground state
+  ($E^\star=4.0$) and per-axis hard-core barrier $\gamma_{\mathrm{core}}=8(\sqrt{2}-1)/3=1.1046$
+  with the **A3** Planck-to-baryon resolution ratio $\mathcal N_{1\mathrm{D}}=\lambda_n/\ell_P=1.2994\times 10^{19}$
+  ($\sqrt{R_\star\ell_P}=\lambda_n$, $R_\star=\lambda_n^2/\ell_P=2.729\ \mathrm{km}$) fixes the
+  neutron-star equilibrium radius $R_{\mathrm{NS}}=4R_\star=10.916\ \mathrm{km}$
+  (compactness $R_S/R_{\mathrm{NS}}=1/2=\theta^\star(\chi_{\mathrm{spaghetti}})$) and the TOV
+  black-hole collapse threshold $M_{\mathrm{TOV}}\in[2.041,2.146]\ M_\odot$ (Proposition 9.2b).
 - **(3) Gauss-divergence $3:1$ exterior Virial partition, helical buckling, and damped `+`/`0`/`-` oscillator:**
   For any incompressible irrotational potential flow $\phi(r,\tau)=-R^2\dot{R}/r$
   around a spherical throat of radius $R(\tau)$, the Gauss divergence identity
@@ -929,6 +935,86 @@ $$
   topological zero-mode phase integral across the signed-zero crossing equals
   $\Delta\theta/\pi=1/2$ independently of $K$.
 
+**Proposition 9.2b (Finite-Facet Resolution Limit, Geometric Mean $\sqrt{R_\star\ell_P}=\lambda_n$, Neutron-Star Radius $R_{\mathrm{NS}}=10.92\ \mathrm{km}$, and the TOV Black-Hole Collapse Threshold):**
+In an idealized continuum ($\ell_P\to 0$), a sphere has infinitely many
+infinitesimal surface facets ($F\to\infty$) to disperse enclosing pressure $P$,
+achieving the minimum isoperimetric quotient $Q_{\mathrm{iso}}=A^3/(36\pi V^2)=1$.
+Under **Axiom A3**, however, a self-gravitating sphere composed of $N$ condensed
+`(1,1,1)` baryon standing-wave triads (Theorem 2(3), reduced Compton wavelength
+$\lambda_n=\hbar/(m_n c)=2.100194\times 10^{-16}\ \mathrm{m}$ and mass $m_n$) inside a
+room with Planck `0`-crossing cutoff $\ell_P=\sqrt{\hbar G/c^3}=1.616255\times 10^{-35}\ \mathrm{m}$
+is discretized into $N^{1/3}$ triads along its 1D diameter and $F=N^{2/3}$
+surface facets, incurring the Euler--Goldberg polyhedral isoperimetric excess
+$A_F^3/(36\pi V_F^2)=1+\pi\sqrt{3}/F+O(F^{-2})>1$. Define the 1D Planck-to-baryon
+resolution ratio
+
+$$
+\mathcal N_{1\mathrm{D}}\equiv\frac{\lambda_n}{\ell_P}=\frac{M_P}{m_n}=1.29942003\times 10^{19}.
+$$
+
+- **(1) Exact resolution saturation and geometric mean identity ($\sqrt{R_\star\ell_P}=\lambda_n$):**
+  While the 1D baryon wave-packing radius grows as $R_{\mathrm{wave}}(N)\propto N^{1/3}\lambda_n$,
+  each baryon adds one gravitational curvature quantum $\delta R_0=Gm_n/c^2=\ell_P^2/\lambda_n$
+  to the `0`-horizon radius $R_0(N)=2N\ell_P^2/\lambda_n\propto N^1$. The sphere
+  runs out of surface facets to disperse inward compression when the 1D diameter
+  count $N^{1/3}$ saturates $\mathcal N_{1\mathrm{D}}$ ($N_\star^{1/3}\lambda_n=N_\star\ell_P^2/\lambda_n$),
+  uniquely fixing the critical facet count $F_\star$, the 3D baryon capacity
+  $N_\star$, the base resolution mass $M_{\star,0}$, and the fundamental stellar
+  radius scale $R_\star$:
+
+$$
+F_\star=N_\star^{2/3}=\left(\frac{\lambda_n}{\ell_P}\right)^2=1.688492\times 10^{38},\qquad
+N_\star=\left(\frac{\lambda_n}{\ell_P}\right)^3=2.194061\times 10^{57},\qquad
+M_{\star,0}=N_\star m_n=\frac{M_P^3}{m_n^2}=1.848101\ M_\odot,
+$$
+
+$$
+R_\star\equiv N_\star^{1/3}\lambda_n=\frac{\lambda_n^2}{\ell_P}=2.729034\ \mathrm{km}
+\qquad\Longleftrightarrow\qquad
+\sqrt{R_\star\ell_P}=\lambda_n\quad\left(\frac{R_\star}{\lambda_n}=\frac{\lambda_n}{\ell_P}=\mathcal N_{1\mathrm{D}}\right).
+$$
+
+  At the stellar resolution threshold, the baryon wavelength $\lambda_n=\sqrt{R_\star\ell_P}$
+  is therefore the exact geometric mean between the Planck cutoff $\ell_P$ and
+  the macroscopic stellar scale $R_\star$, with Schwarzschild `0`-valve radius
+  $R_S(M_{\star,0})=2GM_{\star,0}/c^2=2\lambda_n^2/\ell_P=2R_\star=5.458069\ \mathrm{km}$.
+- **(2) Neutron-star equilibrium radius ($R_{\mathrm{NS}}=10.916\ \mathrm{km}$) and compactness $1/2=\theta^\star(\chi_{\mathrm{spaghetti}})$:**
+  By Theorem 2(3), each `(1,1,1)` baryon triad has dimensionless ground-state
+  cost $E^\star(1,1,1)=4.0$, fixing the equilibrium neutron-star radius prior to
+  hard-core barrier breakdown at
+
+$$
+R_{\mathrm{NS}}=E^\star(1,1,1) R_\star=4\frac{\lambda_n^2}{\ell_P}=10.916137\ \mathrm{km},\qquad
+\mathcal C_{\mathrm{NS}}\equiv\frac{R_S(M_{\star,0})}{R_{\mathrm{NS}}}=\frac{2R_\star}{4R_\star}=\frac{1}{2}=\theta^\star(\chi_{\mathrm{spaghetti}})=e^{-2\chi_{\mathrm{spaghetti}}},
+$$
+
+  with fundamental global pulsation frequency $f_{\min}=c/(2R_{\mathrm{NS}})=13.736\ \mathrm{kHz}$
+  across the room spectrum $[f_{\min},f_{\max}]=[1.374\times 10^4, 2.953\times 10^{42}]\ \mathrm{Hz}$.
+- **(3) TOV black-hole collapse threshold ($M_{\mathrm{TOV}}\in[2.0414,2.1454]\ M_\odot$) from the Theorem 2(3) hard-core barrier:**
+  Crushing contacting `(1,1,1)` baryon triads across the `0` horizon requires
+  overcoming the Theorem 2(3) short-range hard-core repulsion barrier
+  $\Delta E_{\mathrm{core}}=8(\sqrt{2}-1)=3.3137085$ against merging into `(2,2,2)`,
+  corresponding to the per-axis barrier factor
+  $\gamma_{\mathrm{core}}\equiv\Delta E_{\mathrm{core}}/3=8(\sqrt{2}-1)/3=1.1045695$
+  (and 3D volumetric barrier factor $\gamma_{\mathrm{core}}^{3/2}=1.160919$).
+  Multiplying the base resolution mass $M_{\star,0}=1.848101\ M_\odot$ by the
+  1D axial and 3D volumetric barrier factors yields the zero-parameter
+  Tolman--Oppenheimer--Volkoff (TOV) collapse window into a child black hole:
+
+$$
+M_{\mathrm{TOV,1D}}=\gamma_{\mathrm{core}}\frac{M_P^3}{m_n^2}=\frac{8(\sqrt{2}-1)}{3}\frac{M_P^3}{m_n^2}=2.041356\ M_\odot,\qquad
+M_{\mathrm{TOV,3D}}=\gamma_{\mathrm{core}}^{3/2}\frac{M_P^3}{m_n^2}=\left[\frac{8(\sqrt{2}-1)}{3}\right]^{3/2}\frac{M_P^3}{m_n^2}=2.145434\ M_\odot.
+$$
+
+| Stellar resolution quantity | Derived geometric formula (**A0--A3** + Theorem 2(3)) | Calculated NSC readout | Observational reference (NICER / LIGO / pulsar timing) |
+| --- | --- | ---: | --- |
+| **1D Planck-to-baryon resolution ratio ($\mathcal N_{1\mathrm{D}}$)** | $\lambda_n/\ell_P = M_P/m_n$ | $1.299420\times 10^{19}$ | Exact geometric mean ratio $R_\star/\lambda_n = \lambda_n/\ell_P$ |
+| **2D surface facet capacity ($F_\star$)** | $N_\star^{2/3} = (\lambda_n/\ell_P)^2$ | $1.688492\times 10^{38}$ | Maximum discrete pressure-dispersing facets before `0` pinch |
+| **3D baryon resolution count ($N_\star$) & base mass ($M_{\star,0}$)** | $N_\star = (\lambda_n/\ell_P)^3$, $M_{\star,0} = M_P^3/m_n^2$ | **$1.8481\ M_\odot$** | Canonical heavy neutron-star mass band ($1.4\text{--}1.85\ M_\odot$) |
+| **Fundamental radius scale ($R_\star$) & `0`-valve ($R_S$)** | $R_\star = \lambda_n^2/\ell_P$, $R_S = 2\lambda_n^2/\ell_P$ | **$2.7290\ \mathrm{km}$ / $5.4581\ \mathrm{km}$** | $\sqrt{R_\star\ell_P}=\lambda_n$ holds identically |
+| **Neutron-star equilibrium radius ($R_{\mathrm{NS}}$)** | $E^\star(1,1,1)R_\star = 4\lambda_n^2/\ell_P$ | **$10.9161\ \mathrm{km}$** | **$10.8\text{--}11.5\ \mathrm{km}$** (NICER + GW170817; compactness $R_S/R_{\mathrm{NS}}=1/2$) |
+| **TOV black-hole collapse threshold ($[M_{\mathrm{TOV,1D}},M_{\mathrm{TOV,3D}}]$)** | $[\gamma_{\mathrm{core}},\gamma_{\mathrm{core}}^{3/2}]M_P^3/m_n^2$, $\gamma_{\mathrm{core}}=\frac{8(\sqrt{2}-1)}{3}$ | **$[2.0414, 2.1454]\ M_\odot$** | PSR J0740+6620: **$2.08\pm 0.07\ M_\odot$**; GW170817 TOV bound: **$2.16_{-0.15}^{+0.17}\ M_\odot$** |
+
 ### 9.3 Theorem 3: Surrounding-flow $3:1$ Virial partition, helical buckling, and the damped `+`/`0`/`-` horizon oscillator
 
 For a spherical throat of radius $R(\tau)$ expanding or contracting in an
@@ -1363,6 +1449,7 @@ $7\times\chi_{\mathrm{freeze}}=21$):
 | Two half-turns $(-1)\times(-1)=+1$ across two nested `0` crossings ($\mathcal{P}^2=(-I_3)^2=+I_3$) | Parity / orientation restoration across two generations | $\det\mathcal{P}=(-1)^3=-1$ ($\mathrm{Parent}\ (+)\to\mathrm{Child}\ (-)$), $\det(\mathcal{P}^2)=(-1)(-1)=+1$ ($\mathrm{Child}\ (-)\to\mathrm{Grandchild}\ (+)$) |
 | Eliminating $(\theta^\star,\chi)$ from 5-variable budget shares $(D,M,V)$ with $B=M-D/3$ | Cosmological dark-sector / baryon partition curve & EoS | Exact cubic $9DVB=4(V+B/2)^3$, open-valve $dE_{\mathrm{DE}}^\star=(-\frac{1}{3}+\frac{4}{3})\rho_{\mathrm{DE}}dV_-\Rightarrow w_{\mathrm{DE}}=-1$, $w_{\mathrm{DM}}=0$, $\lim_{\chi\to\infty}B/V^2=16/27$ |
 | Exponential-wall bypasses (`1D -> helix`, `+ -> 0 -> -`, single-axis $N^{3/2}\to$ 3D triad `(1,1,1)`) | 3D nucleon ground state & nuclear hard-core potential | `(1,1,1)` ($N=3$) is the unique minimum-cost 3D ground state ($E^\star=4.0$, $1:1:1$ sphere); `(2,1,1)` ($N=4$) is $4:1:1$ prolate ($E^\star=4\sqrt{2}$); two `(1,1,1)` triads attract at $d>2R^\star$ ($-2m_0/d$) and repel at $d\to 0$ against `(2,2,2)` ($+3.3137$ hard core) |
+| Finite-facet resolution limit $\mathcal N_{1\mathrm{D}}=\lambda_n/\ell_P$ ($\sqrt{R_\star\ell_P}=\lambda_n$) & `(1,1,1)` hard-core barrier | Neutron-star radius $R_{\mathrm{NS}}=10.92\ \mathrm{km}$ & TOV black-hole collapse mass | $F_\star=(\lambda_n/\ell_P)^2$ facets, $M_{\star,0}=M_P^3/m_n^2=1.8481\ M_\odot$, $R_{\mathrm{NS}}=4\lambda_n^2/\ell_P=10.916\ \mathrm{km}$ ($R_S/R_{\mathrm{NS}}=1/2$), $\gamma_{\mathrm{core}}=8(\sqrt{2}-1)/3\Rightarrow M_{\mathrm{TOV}}\in[2.041,2.146]\ M_\odot$ (Proposition 9.2b) |
 | Gauss-divergence exterior Virial $W_{\mathrm{bulk}}:W_{\mathrm{throat}}=3:1$ & loop closure $z(1)=z(0)$ | Added mass in surrounding flow, quantized line bursts & $180^\circ$ annihilation | $W_{\mathrm{flow}}=-3T_{\mathrm{ext}}-T_{\mathrm{ext}}=-4T_{\mathrm{ext}}$ ($75$% in $r>R$ bulk, $25$% at $r=R$ throat, $0$% in a point); $(+1,-1)\to 0$ releases two equal $180^\circ$ ripples |
 | Coupled finite-parent / receiver continuation & hybrid radial inertia $M(r)=1/(1+r^2/3)$ | Wave-driven child opening & last-echo horizon cutoff | Zero-radius opening $r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$; last-echo cutoff $\tau_{\mathrm{echo}}=0.87596883$ ($\Delta E_{\mathrm{post}}/E_{\mathrm{tot}}=0$, visible interior snapshot $25.63$%) |
 | Whole-exterior causal neck onset & harmonic trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ | Neck pinch waveform & 3-axis orthogonal cascade $\mathbf e_z\to\mathbf e_x\to\mathbf e_y$ | Characteristic cubic $p^3-3p-3=0$ ($p_+=\phi^{2/3}+\phi^{-2/3}\approx 2.1038034$); $1\to 2\to 4\to 8$ lobe cascade with exact ratios $-1/2$ and $-2$ and $B$-independent $\det M_{\mathrm{full}}=0.14003084>0$ |

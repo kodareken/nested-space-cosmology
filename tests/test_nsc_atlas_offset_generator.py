@@ -1304,6 +1304,18 @@ def test_covariant_action_to_a0_and_friedmann_eos():
     assert 1.0 < freeze['exact_efold_crossing_s_star'] < 1.2
     assert freeze['derived_H0_km_s_Mpc'] == pytest.approx(67.031, rel=1e-4)
     assert 0.76 < freeze['predicted_S8_nsc'] < 0.79
+    ns = res['stellar_resolution_and_neutron_star_collapse']
+    assert abs(ns['geometric_mean_residual_m']) < 1e-30
+    assert ns['fundamental_radius_scale_R_star_km'] == pytest.approx(2.72903435, rel=1e-6)
+    assert ns['schwarzschild_zero_valve_radius_R_S_km'] == pytest.approx(5.45806871, rel=1e-6)
+    assert ns['neutron_star_equilibrium_radius_R_NS_km'] == pytest.approx(10.91613741, rel=1e-6)
+    assert ns['radius_within_observed_window'] is True
+    assert ns['compactness_R_S_over_R_NS'] == pytest.approx(0.5, abs=1e-15)
+    assert ns['matches_spaghettification_threshold_one_half'] is True
+    assert ns['base_resolution_mass_M_star_0_solar'] == pytest.approx(1.84810074, rel=1e-6)
+    assert ns['tov_collapse_mass_1d_barrier_solar'] == pytest.approx(2.04135578, rel=1e-6)
+    assert ns['tov_collapse_mass_3d_barrier_solar'] == pytest.approx(2.14543426, rel=1e-6)
+    assert ns['tov_window_brackets_observations'] is True
 
 
 
