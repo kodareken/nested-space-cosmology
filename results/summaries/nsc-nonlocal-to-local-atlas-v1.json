@@ -83,6 +83,8 @@
         ],
         "per_axis_buckling_saturation_delta_chi": 1.0,
         "cumulative_freezeout_chi": 3.0,
+        "dynamical_handoff_freezeout_chi": 3.075328917313305,
+        "visible_share_at_dynamical_handoff": 0.04939438535877228,
         "volumetric_floor_exp_minus_3": 0.049787068367863944,
         "two_center_handoff_half_span_at_s_1_2": 2.7874010519681995,
         "unit_efold_stretch_e": 2.718281828459045,

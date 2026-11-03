@@ -802,9 +802,15 @@ dE_{\mathrm{DE}}^*
 =+\rho_{\mathrm{DE}}\,dV_-,
 $$
 
-  where $\rho_{\mathrm{DE}}=E_{\mathrm{DE}}^*/V_-=3P=\mathrm{const}$. Thus open-valve
-  turn transfer across `0` converts $+1/3$ radiation-like stretch into an exact
-  negative-pressure vacuum equation of state:
+  where $\rho_{\mathrm{DE}}=E_{\mathrm{DE}}^*/V_-=3P=\mathrm{const}$. Physically,
+  stretching the 1D phase curve at fixed winding ($\delta\theta=0$) has ordinary
+  positive elastic resistance ($w_{\mathrm{closed}}=+1/3$); the energy density
+  $\rho_{\mathrm{DE}}=3P$ remains constant only because the `0` horizon valve is
+  open and injects $+\frac{4}{3}\rho_{\mathrm{DE}}\,dV_-$ of new winding from `+`
+  into `-`. An interior observer who models the child room as a closed box and
+  fits $\rho_{\mathrm{DE}}=\mathrm{const}$ into the closed-box Friedmann
+  continuity equation $\dot{\rho}_{\mathrm{DE}}+3H_-(\rho_{\mathrm{DE}}+p_{\mathrm{DE}})=0$
+  therefore infers an effective negative-pressure vacuum equation of state:
 
 $$
 p_{\mathrm{DE}}=-\left(\frac{dE_{\mathrm{DE}}^*}{dV_-}\right)_{\mathcal{M}_{\mathrm{valve}}}
@@ -812,8 +818,8 @@ p_{\mathrm{DE}}=-\left(\frac{dE_{\mathrm{DE}}^*}{dV_-}\right)_{\mathcal{M}_{\mat
 \Longrightarrow w_{\mathrm{DE}}\equiv\frac{p_{\mathrm{DE}}}{\rho_{\mathrm{DE}}}=-1,
 $$
 
-  satisfying the Friedmann continuity equation $\dot{\rho}_{\mathrm{DE}}+3H_-(\rho_{\mathrm{DE}}+p_{\mathrm{DE}})=0$
-  identically. By contrast, for an interior adiabatic bulk parcel $\delta V_{\mathrm{bulk}}$,
+  without requiring any mysterious repulsive substance in a closed container. By
+  contrast, for an interior adiabatic bulk parcel $\delta V_{\mathrm{bulk}}$,
   the two-sided `0`-horizon boundary load $E_{\mathrm{DM}}^*$ is supported at the
   bounding horizon surfaces and has zero interior bulk support:
 
@@ -1146,8 +1152,11 @@ ratio $\lambda_k=e^{-\Delta\chi_k}$ is governed by two coupled invariants from
 Theorem 2 and Theorem 6:
 
 - **(1) Logarithmic action quantization on the `(1,1,1)` triad lattice:**
-  By Theorem 2(4)(i), the unique scale-invariant measure along axis $k$ is the
-  logarithmic stretch integral $I_{\mathrm{log}}(\Delta\chi_k)=\int_{\lambda_k}^1 d\lambda/\lambda=\Delta\chi_k$.
+  Under **Axiom A1**, space is not a pre-existing passive container; offset
+  accumulation generates the metric completion, so one topological winding turn
+  along axis $k$ defines one unit of generated logarithmic scale. By Theorem 2(4)(i),
+  the unique scale-invariant measure along axis $k$ is the logarithmic stretch
+  integral $I_{\mathrm{log}}(\Delta\chi_k)=\int_{\lambda_k}^1 d\lambda/\lambda=\Delta\chi_k$.
   By Theorem 2(3), the minimum-cost 3D standing-wave ground state formed at
   cascade completion is the orthogonal `(1,1,1)` triad carrying unit integer
   winding numbers $(n_z,n_x,n_y)=(1,1,1)$. Normalizing the dimensionless
@@ -1177,7 +1186,12 @@ $$
   $L_{\mathrm{handoff}}=s+2R_{\mathrm{daughter}}=1.2+2^{2/3}=2.787401$, matching
   the unit e-fold stretch factor $e^{\Delta\chi_k}=e^1=2.718282$ within $2.54\%$
   (and crossing $L(s_*)=e^1$ at $s_*=e-2^{2/3}=1.130881$ inside the $[1.0,1.2]$
-  planar handoff window of Theorem 6(2)).
+  planar handoff window of Theorem 6(2)). Across all three orthogonal splits,
+  the purely geometric two-center handoff span yields the dynamical freeze-out
+  depth $\chi_{\mathrm{freeze,dyn}}=3\ln(1.2+2^{2/3})=3.075371$ (where
+  $\Omega_{\mathrm{vis}}(\chi_{\mathrm{freeze,dyn}})=4.9182\%$), bracketing the
+  volumetric floor $\chi_*=3.066968$ ($\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}=4.9787\%$)
+  within $0.27\%$.
 
 Once all three orthogonal axes of 3D space have buckled and fragmented into the
 8-octant `(1,1,1)` triad lattice ($1\to 2\to 4\to 8$), no fourth orthogonal
@@ -1258,19 +1272,32 @@ h=\sqrt{\Omega_b h^2\,e^3}=\sqrt{0.02237\times 20.085537}=0.67031\pm 0.0022
 \Longrightarrow H_0=67.03\pm 0.22\ \mathrm{km\,s^{-1}Mpc^{-1}}.
 $$
 
-- **(2) Background vs. clustering dark-matter split and $S_8$ suppression:**
-  In Theorem 1, the dark-matter share $M=\Omega_{\mathrm{DM}}$ decomposes into
-  the isotropic child `0`-horizon enclosing load
+- **(2) Added-mass halo clustering vs. uncondensed horizon slip and $S_8$ suppression:**
+  In Theorem 1 and Theorem 3, the dark-matter share $M=\Omega_{\mathrm{DM}}$
+  decomposes into the `0`-horizon Virial throat/surrounding-flow load
   $\Omega_{\mathrm{DM,throat}}=\frac{1}{3}D=(\theta^*)^{3/2}/E^*$ and the radial
   infall load $B=M-\frac{1}{3}D=2(1-\theta^*)e^{-\chi}/E^*$ (supplemented on
   sub-horizon scales by the transmitted massive scalar dust tail
-  $\langle\rho_\chi\rangle\propto a^{-3}$ of Section 5). Because the smooth
-  horizon boundary load is spatially uniform across the bounding `0`-surface
-  ($\nabla\rho_{\mathrm{DM,throat}}=0$), it contributes fully to the background
-  Friedmann expansion rate $H^2(a)=H_0^2[\Omega_{\mathrm{DE}}+(\Omega_{\mathrm{DM}}+\Omega_{\mathrm{vis}})a^{-3}]$,
-  whereas only the localized infall/scalar-dust fraction
-  $f_{\mathrm{clust}}=\Omega_{m,\mathrm{clust}}/\Omega_m<1$ sources the
-  sub-horizon Poisson equation on scales $k/(aH)\to\infty$. Sub-horizon matter density
+  $\langle\rho_\chi\rangle\propto a^{-3}$ of Section 5). By Theorem 3(1), the
+  $\Omega_{\mathrm{DM,throat}}=\frac{1}{3}D=23.63\%$ Virial load is locked in the
+  $3:1$ surrounding-flow embrace around the interior `(1,1,1)` vortex nodes, so it
+  moves with the condensed nodes as their added-mass halo ($E_{\mathrm{surr}}^*$)
+  alongside $B$. By contrast, the uncondensed filament/boundary slip between the
+  topological freeze-out $\chi_{\mathrm{freeze}}=3$ ($\Omega_{\mathrm{vis}}(3)=5.3039\%$)
+  and the volumetric floor $\chi_*=3.0670$ ($\Omega_{\mathrm{vis}}(\chi_*)=e^{-3}=4.9787\%$),
+
+$$
+1-f_{\mathrm{clust}}
+=1-\sqrt{\frac{\Omega_{\mathrm{vis}}(\chi_*)}{\Omega_{\mathrm{vis}}(3)}}
+=1-\sqrt{\frac{0.049787}{0.053039}}
+=3.114\%,
+$$
+
+  remains spatially smooth across the bounding `0`-surface on sub-horizon scales
+  ($k/(aH)\to\infty$): it contributes to the background Friedmann expansion rate
+  $H^2(a)=H_0^2[\Omega_{\mathrm{DE}}+(\Omega_{\mathrm{DM}}+\Omega_{\mathrm{vis}})a^{-3}]$,
+  while the clustering fraction $f_{\mathrm{clust}}=\Omega_{m,\mathrm{clust}}/\Omega_m=96.886\%$
+  sources the sub-horizon Poisson equation. Sub-horizon matter density
   perturbations $\delta_m(a)$ therefore obey the modified Meszaros growth equation
 
 $$
@@ -1280,10 +1307,8 @@ $$
 
   which shifts the logarithmic growth rate by
   $f_{\mathrm{growth}}(a)=d\ln\delta_m/d\ln a\approx\Omega_m(a)^{6/11}[1-\frac{3}{5}(1-f_{\mathrm{clust}})]$.
-  A smooth horizon boundary residual of
-  $1-f_{\mathrm{clust}}=1-\sqrt{\Omega_{\mathrm{vis}}(\chi_*)/\Omega_{\mathrm{vis}}(3)}=1-\sqrt{0.049787/0.053039}=3.114\%$
-  suppresses late-time linear clustering from the Planck CMB extrapolation
-  $S_{8,\mathrm{CMB}}\approx 0.832$ to
+  The $1-f_{\mathrm{clust}}=3.114\%$ uncondensed horizon slip suppresses late-time
+  linear clustering from the Planck CMB extrapolation $S_{8,\mathrm{CMB}}\approx 0.832$ to
 
 $$
 S_{8,\mathrm{NSC}}\approx S_{8,\mathrm{CMB}}\left(\frac{a_{\mathrm{eq}}}{a_0}\right)^{+\frac{3}{5}(1-f_{\mathrm{clust}})\bar{\Omega}_m}\approx 0.776,

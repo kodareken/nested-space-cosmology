@@ -2944,6 +2944,8 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
     cubic_cardano_residual = (p_plus_cardano ** 3) - 3. * p_plus_cardano - 3.
     r_daughter = 2. ** (-1. / 3.)
     l_handoff = 1.2 + 2. * r_daughter
+    chi_freeze_dyn = 3. * math.log(l_handoff)
+    at_chi_dyn = nested_zero_crossing_map(1, chi_freeze_dyn)['nested_chain'][0]
     s_star_efold = math.e - 2. * r_daughter
     at_chi3 = nested_zero_crossing_map(1, 3.)['nested_chain'][0]
     omega_vis_3 = at_chi3['visible_filament_like_fraction']
@@ -3012,6 +3014,8 @@ def covariant_action_to_a0_and_friedmann_eos(chi=3.0669683518473474, pv0=1., m0=
             axes=['e_z', 'e_x', 'e_y'],
             per_axis_buckling_saturation_delta_chi=1.,
             cumulative_freezeout_chi=3.,
+            dynamical_handoff_freezeout_chi=chi_freeze_dyn,
+            visible_share_at_dynamical_handoff=at_chi_dyn['visible_filament_like_fraction'],
             volumetric_floor_exp_minus_3=omega_b_core,
             two_center_handoff_half_span_at_s_1_2=l_handoff,
             unit_efold_stretch_e=math.e,

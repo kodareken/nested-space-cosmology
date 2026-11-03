@@ -1298,6 +1298,8 @@ def test_covariant_action_to_a0_and_friedmann_eos():
     assert card['p_plus'] == pytest.approx(2.1038034027355366, rel=1e-14)
     freeze = res['three_axis_cascade_freezeout']
     assert freeze['cumulative_freezeout_chi'] == pytest.approx(3., abs=1e-15)
+    assert freeze['dynamical_handoff_freezeout_chi'] == pytest.approx(3. * math.log(1.2 + 2. ** (2. / 3.)), rel=1e-15)
+    assert 0.049 < freeze['visible_share_at_dynamical_handoff'] < 0.050
     assert freeze['handoff_vs_efold_relative_diff'] == pytest.approx(0.0254275, rel=1e-4)
     assert 1.0 < freeze['exact_efold_crossing_s_star'] < 1.2
     assert freeze['derived_H0_km_s_Mpc'] == pytest.approx(67.031, rel=1e-4)
