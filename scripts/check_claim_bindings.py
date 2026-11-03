@@ -49,7 +49,11 @@ def repo_root() -> pathlib.Path:
 
 def read_paper(path: pathlib.Path):
     """Return {claim_id: {...}} with the links that follow each marker."""
-    lines = path.read_text(encoding="utf-8").splitlines()
+    text = path.read_text(encoding="utf-8")
+    companion = path.parent / "technical-atlas-record.md"
+    if path.name == "nested-space-cosmology.md" and companion.is_file():
+        text = text + "\n" + companion.read_text(encoding="utf-8")
+    lines = text.splitlines()
     marks: list[tuple[int, str, str]] = []
     heading = "(preamble)"
     for number, line in enumerate(lines):

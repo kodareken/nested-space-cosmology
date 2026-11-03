@@ -456,6 +456,9 @@ def check_manifest(errors: list[str]) -> None:
     if set(manifest.get("scoped_follow_up_outputs", [])) != expected_scoped:
         errors.append("scoped follow-up outputs differ from release specification")
     paper = (ROOT / "paper/nested-space-cosmology.md").read_text(encoding="utf-8")
+    companion = ROOT / "paper/technical-atlas-record.md"
+    if companion.is_file():
+        paper += "\n" + companion.read_text(encoding="utf-8")
     targets = release.get("current_targets", [])
     required_targets = {"target-constants", "target-continuation", "target-dark-sector",
                         "target-measurement", "target-antimatter", "target-recursion"}

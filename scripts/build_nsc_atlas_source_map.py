@@ -29,13 +29,26 @@ def extract(text,kind):
 
 
 def outputs():
-    paper=(ROOT/'paper/nested-space-cosmology.md').read_text(encoding='utf-8')
-    if START in paper:
-        if END not in paper:raise ValueError('incomplete generated catalog marker')
-        base=paper.split(START)[0].rstrip()+'\n'
-    else:base=paper.rstrip()+'\n'
+    main_paper=(ROOT/'paper/nested-space-cosmology.md').read_text(encoding='utf-8')
+    companion_path=ROOT/'paper/technical-atlas-record.md'
+    if companion_path.is_file():
+        paper=companion_path.read_text(encoding='utf-8')
+        target_name='paper/technical-atlas-record.md'
+        if START in paper:
+            if END not in paper:raise ValueError('incomplete generated catalog marker')
+            base=paper.split(START)[0].rstrip()+'\n'
+        else:base=paper.rstrip()+'\n'
+        scan_text=main_paper+'\n'+base
+    else:
+        paper=main_paper
+        target_name='paper/nested-space-cosmology.md'
+        if START in paper:
+            if END not in paper:raise ValueError('incomplete generated catalog marker')
+            base=paper.split(START)[0].rstrip()+'\n'
+        else:base=paper.rstrip()+'\n'
+        scan_text=base
     lib=extract((ROOT/'docs/arxiv-studies.md').read_text(encoding='utf-8'),'library')
-    main=extract(base,'paper');ids=sorted(set(lib)|set(main));groups=defaultdict(list)
+    main=extract(scan_text,'paper');ids=sorted(set(lib)|set(main));groups=defaultdict(list)
     doc=['# Atlas source connections','',
          f'This navigation index contains **{len(ids)} distinct arXiv works**: {len(main)} are cited in the main argument or technical appendices and {len(set(lib)-set(main))} are retained in the reading library only.',
          '', 'The entries locate existing readings and mathematical use. They do not claim that every paper has been read in full, independently verified, or joined into one compatible action. Versions and reading depth remain in [the library](arxiv-studies.md). The manuscript and scientific owners supply the actual connecting equations.',
@@ -62,7 +75,7 @@ def outputs():
     assert sorted(emitted)==ids and len(emitted)==len(set(emitted))
     appendix.extend(['',END,''])
     return {'docs/nsc-atlas-source-map.md':'\n'.join(doc)+'\n',
-            'paper/nested-space-cosmology.md':base+'\n'+'\n'.join(appendix)},dict(unique=len(ids),main_argument=len(main),library_only=len(set(lib)-set(main)),groups=len(groups))
+            target_name:base+'\n'+'\n'.join(appendix)},dict(unique=len(ids),main_argument=len(main),library_only=len(set(lib)-set(main)),groups=len(groups))
 
 
 def main():
