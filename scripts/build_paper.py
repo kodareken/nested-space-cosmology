@@ -653,6 +653,12 @@ def build_pdf(
         value = value.replace(r"\parallel", "∥").replace(r"\perp", "⊥")
         value = value.replace(r"\|", "‖").replace(r"\Vert", "‖")
         value = value.replace(r"\lvert", "|").replace(r"\rvert", "|").replace(r"\vert", "|")
+        value = (
+            value.replace(r"^{\prime\prime}", "″")
+            .replace(r"^{\prime}", "′")
+            .replace(r"^\prime", "′")
+            .replace(r"\prime", "′")
+        )
         value = value.replace(r"^{\circ}", "°").replace(r"^\circ", "°").replace(r"\circ", "∘")
         value = re.sub(
             r"\\(log|ln|exp|cosh|sinh|tanh|cos|sin|tan|sec|csc|cot|arcsin|arccos|arctan|atanh|artanh|min|max|sup|inf|lim|det|Tr|diag|sgn)(?=\\[A-Za-z])",
@@ -715,10 +721,12 @@ def build_pdf(
         return re.sub(r"\s+", " ", value).strip()
 
     def inline_math_markup(value: str) -> str:
-        plain = html.escape(
-            latex_to_plain(value, script_open="\ufff9", script_close="\ufffa"),
-            quote=False,
-        )
+        converted = latex_to_plain(value, script_open="\ufff9", script_close="\ufffa")
+        if "\\" in converted:
+            raise ValueError(
+                f"untranslated inline LaTeX in PDF build: {value!r} -> {converted!r}"
+            )
+        plain = html.escape(converted, quote=False)
         def script(match: re.Match[str]) -> str:
             tag = "sub" if match.group(1) == "_" else "super"
             return f"<{tag}>{match.group(2)}</{tag}>"
@@ -772,6 +780,8 @@ def build_pdf(
             value,
         )
         value = html.escape(value, quote=False)
+        if "\\" in value:
+            raise ValueError(f"untranslated backslash in PDF prose: {value!r}")
         value = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", value)
         value = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<i>\1</i>", value)
         value = value.replace("  ", " ")

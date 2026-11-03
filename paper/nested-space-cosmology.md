@@ -61,7 +61,7 @@ algebraic neck-splitting onset cubic $p^3-3p-3=0$ ($p_{\mathrm{crit}}=1+2^{1/3}+
 $(c/R)_{\mathrm{onset}}=0.56786589<(c/R)_{\mathrm{pinch}}=2^{-1/3}\approx 0.79370053$),
 finite-time pinch crossing $\Delta\tau_{\mathrm{pinch}}=0.506704$, positive
 central observer pulse $\max\phi_C=+0.163689$, and exact analytical pole-sum tail
-$\phi_C(T)=-0.14192836/T^{\prime}+0.01750496/(T^{\prime})^2+O((T^{\prime})^{-3})$; and
+$\phi_C(T)=-0.14192836/T'+0.01750496/(T')^2+O((T')^{-3})$; and
 (6) harmonicity ($\Delta\Phi=0$) forces the directional enclosed-volume derivative
 trace $\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$ to vanish at
 every stage, driving a 3-axis orthogonal post-pinch cascade
