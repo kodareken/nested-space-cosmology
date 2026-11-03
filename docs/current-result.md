@@ -1,5 +1,12 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The whole exterior now evolves causally in the quadratic split-onset model.
+Its shape condition gives p³−3p−3=0, with growth rate2.1038034027 and a
+decaying oscillatory transient with decay1.0519017014 and frequency.5652358517.
+This removes the matching-radius approximation at onset. The released
+boundary has q'(0+)=q0 for the same static initial bulk perturbation.
+See [the exact whole-exterior response](nsc-atlas-offset-generator.md#whole-exterior-causal-response-at-the-start-of-the-split).
+
 The neck split now evolves with inertia from the same exterior phase and
 an exact outgoing multipole response. The reference deformed seed s=.05
 reaches the pinch at offset3.960294 and two separated lobes at4.264066.

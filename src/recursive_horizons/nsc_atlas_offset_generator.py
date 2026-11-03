@@ -1983,6 +1983,66 @@ def _neck_volume_factor(separation, order=64):
     return float(3 * np.dot(weights, integral) * (1-lower)/2)
 
 
+def split_onset_field(offset, radius, amplitude=.0025):
+    """Exact quadratic neck response with the whole exterior wave retained.
+
+    The initial quadrupole is 2*amplitude/r**3 with zero bulk velocity.
+    Releasing the shape imposes f_r(1)+4*f(1)=0. The resulting finite-energy
+    solution has a characteristic corner at the initial release event.
+    Values at that front use the post-release representative.
+    """
+    times,radii=np.broadcast_arrays(np.asarray(offset,dtype=float),np.asarray(radius,dtype=float))
+    if (not np.all(np.isfinite(times)) or np.any(times<0)
+            or not np.all(np.isfinite(radii)) or np.any(radii<1)
+            or np.any(np.maximum(times-radii+1,0)>2) or not math.isfinite(amplitude)):
+        raise ValueError('require finite offset >= 0, radius >= 1, post-front offset <= 2, and amplitude')
+    roots=np.roots([1.,0.,-3.,-3.])
+    retarded=times-radii+1
+    exponential=np.exp(roots[:,None]*np.maximum(retarded,0).ravel()[None,:])
+    inverse_radius=1/radii.ravel()[None,:]
+    polynomial=(roots[:,None]**2*inverse_radius+3*roots[:,None]*inverse_radius**2+3*inverse_radius**3)
+    denominators=(roots*(3*roots**2-3))[:,None]
+    components=polynomial/denominators*exponential
+    scale=2*amplitude*radii**-3
+    field=2*amplitude*np.sum(components,axis=0).real.reshape(times.shape)
+    time_rate=2*amplitude*np.sum(roots[:,None]*components,axis=0).real.reshape(times.shape)
+    derivative=(-roots[:,None]**2*inverse_radius**2-6*roots[:,None]*inverse_radius**3-9*inverse_radius**4)
+    radial_rate=2*amplitude*np.sum(derivative/denominators*exponential,axis=0).real.reshape(times.shape)-time_rate
+    reached=retarded>=0
+    return dict(phase=np.where(reached,field,scale),
+                time_rate=np.where(reached,time_rate,0.),
+                radial_rate=np.where(reached,radial_rate,-3*scale/radii),
+                wavefront_reached=reached)
+
+
+def split_onset_calculation():
+    """Check the full exterior's growth, boundary force and conserved energy."""
+    nodes,weights=np.polynomial.legendre.leggauss(96)
+    amplitude=.0025*_neck_volume_factor(.05)**(-.5)
+    roots=np.roots([1.,0.,-3.,-3.])
+    growth=float(max(roots.real));rows=[]
+    decaying=roots[np.argmin(roots.real)]
+    for offset in (0.,.1,.25,.5,.75,1.):
+        boundary=split_onset_field(offset,1.,amplitude)
+        radii=1+(nodes+1)*offset/2
+        field=split_onset_field(offset,radii,amplitude)
+        density=(radii**2*(field['time_rate']**2+field['radial_rate']**2)
+                 +6*field['phase']**2)/5
+        exterior=float(np.dot(weights,density)*offset/2+12*amplitude**2/(5*(1+offset)**5))
+        shape=float(boundary['phase']/2)
+        energy=exterior-16*shape**2/5
+        rows.append(dict(offset=offset,shape_coordinate=shape,
+                         boundary_residual=float(boundary['radial_rate']+4*boundary['phase']),
+                         quadratic_energy=energy,
+                         energy_residual=energy+4*amplitude**2/5))
+    return dict(schema='nsc-neck-full-exterior-onset-v1',initial_shape=amplitude,
+                growth_rate=growth,growth_polynomial='rate**3 - 3*rate - 3 = 0',
+                released_boundary='f_r(1)+4*f(1)=0',initial_bulk_velocity=0.,
+                right_boundary_shape_velocity=amplitude,
+                transient_decay_rate=float(-decaying.real),
+                transient_angular_frequency=float(abs(decaying.imag)),rows=rows)
+
+
 def split_waveform_evolution(matching_radius=2.5, maximum_mode=6,
                              shape_samples=161, quadrature_order=48):
     """Collective neck coordinate coupled to the same field's outgoing exterior.

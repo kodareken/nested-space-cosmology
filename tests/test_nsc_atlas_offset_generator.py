@@ -1083,6 +1083,29 @@ def test_characteristic_fork_preserves_equal_receivers_and_contact_balance():
     assert result['rows'][-1]['regional_phase_energy'][1]>0
 
 
+def test_whole_exterior_neck_onset_obeys_wave_equation_and_shape_boundary():
+    from recursive_horizons.nsc_atlas_offset_generator import split_onset_field,split_onset_calculation
+
+    radius,rate=s.symbols('radius rate',positive=True)
+    radial=s.exp(-rate*(radius-1))*(rate**2*radius**2+3*rate*radius+3)/radius**3
+    assert s.simplify(rate**2*radial-s.diff(radial,radius,2)
+                      -2*s.diff(radial,radius)/radius+6*radial/radius**2)==0
+    at_boundary=s.simplify((s.diff(radial,radius)+4*radial).subs(radius,1))
+    assert s.expand(at_boundary)==-rate**3+3*rate+3
+    result=split_onset_calculation()
+    assert result['growth_rate']**3-3*result['growth_rate']-3==pytest.approx(0.,abs=5e-14)
+    assert max(abs(row['energy_residual']) for row in result['rows'])<1e-15
+    quiet=split_onset_field(.4,1.5)
+    assert quiet['time_rate']==0.
+    arrived=split_onset_field(.8,1.5)
+    assert arrived['wavefront_reached']
+    assert arrived['time_rate']>0
+    endpoint=split_onset_field(1.,1.)
+    assert endpoint['radial_rate']+4*endpoint['phase']==pytest.approx(0.,abs=1e-15)
+    far=split_onset_field(10.,10.)
+    assert np.isfinite(far['phase'])
+
+
 def test_neck_motion_generates_causal_wave_with_independent_energy_balance():
     from recursive_horizons.nsc_atlas_offset_generator import split_waveform_evolution
 

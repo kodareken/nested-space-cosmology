@@ -7,7 +7,7 @@ from recursive_horizons.nsc_atlas_offset_generator import (
     intrinsic_compression_calculation,buckling_to_goldilocks_calculation,
     nonlocal_to_local_atlas_readout,parent_receiver_calculation,affine_receiving_birth,
     continuum_receiving_birth,hybrid_receiving_echo,winding_two_neck_calculation,
-    split_waveform_calculation)
+    split_waveform_calculation,split_onset_calculation)
 ROOT=Path(__file__).resolve().parents[1]
 
 
@@ -27,6 +27,7 @@ def main():
     group.add_argument('--last-echo-only',action='store_true',help='hybrid birth, future optical bounds and echoes')
     group.add_argument('--neck-split-only',action='store_true',help='winding-two equipotential neck and split')
     group.add_argument('--split-waveform-only',action='store_true',help='coupled neck motion and outgoing phase with six parallel controls')
+    group.add_argument('--split-onset-only',action='store_true',help='exact whole-exterior response at neck onset')
     args=p.parse_args()
     if args.last_echo_only:
         if args.output is not None:p.error('echo calculations write to stdout; omit --output')
@@ -51,6 +52,7 @@ def main():
                          (args.atlas_only,nonlocal_to_local_atlas_readout),
                          (args.neck_split_only,winding_two_neck_calculation),
                          (args.split_waveform_only,split_waveform_calculation),
+                         (args.split_onset_only,split_onset_calculation),
                          (args.evolution_only,parent_receiver_calculation)):
         if selected:
             if args.output is not None:p.error('geometry-only calculations write to stdout; omit --output')

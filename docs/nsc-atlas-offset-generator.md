@@ -1211,6 +1211,76 @@ limit, an inherited seed mechanism and a signed matter-count readout
 remain open. In the calculated finite window the pole records a pulse,
 and its opposite angular signs cancel in the full-sphere phase integral.
 
+### Whole-exterior causal response at the start of the split
+
+The matching-radius sensitivity can be removed exactly in the quadratic
+small-deformation problem. Use the same phase kinetic term over the entire
+exterior r>=1. Let the quadrupole be f(r,t)P2(cos(theta)), with boundary
+shape coordinate q=f(1,t)/2. The previous static path gives potential
+16/3−4q²/5+O(q³). A static exterior quadrupole f=2q/r³ has gradient
+energy 12q²/5, fixing the remaining quadratic shape term to −16q²/5.
+The resulting quadratic action is
+
+$$
+L_2=\frac15\int_1^\infty
+[r^2(f_t^2-f_r^2)-6f^2]dr+\frac45 f(1,t)^2.
+$$
+
+Variation gives the exterior wave equation and the free shape condition
+
+$$
+f_{tt}-f_{rr}-2f_r/r+6f/r^2=0,\qquad f_r(1,t)+4f(1,t)=0.
+$$
+
+This is the B->1 limit of the preceding quadratic model. The matching
+sphere and projected near-field inertia have disappeared from this onset
+calculation. The same canonical phase inertia and static shape cost remain
+its premises. Nonlinear boundary motion requires its further variation.
+
+The outgoing radial solution at Laplace rate p is proportional to
+exp[-p(r−1)](p²r²+3pr+3)/r³. Substituting it into the shape condition
+gives p³−3p−3=0. Its positive root is 2.1038034027, compared with
+1.7630684000 in the B=2.5 near-field approximation. Its other roots are
+−1.0519017014 +/- .5652358517 i. The same causal boundary response
+therefore contains growing separation and a decaying oscillatory transient.
+Both rates follow from the field and geometric cost.
+
+Retain the initial static perturbation f(r,0)=2q0/r³ and zero initial
+bulk velocity. Releasing the shape produces a finite-energy characteristic
+corner. Its boundary velocity immediately after release is q'(0+)=q0,
+as fixed by the solution. This pointwise boundary value coexists with the
+zero-velocity initial data in the open bulk. The earlier finite near-field
+inertia had instead imposed zero initial shape velocity.
+
+The exact Laplace boundary response is
+
+$$
+\widehat q(p)=q_0\frac{p(p+1)}{p^3-3p-3}.
+$$
+
+If lambda_j are the three roots and D'(lambda)=3lambda²−3, the complete
+field after the front t=r−1 is
+
+$$
+f(r,t)=\frac{2q_0}{r^3}\sum_j
+\frac{\lambda_j^2r^2+3\lambda_jr+3}{\lambda_jD'(\lambda_j)}
+e^{\lambda_j(t-r+1)}.
+$$
+
+Ahead of that front the field retains its initial static value. The
+quadratic conserved energy is the spatial field energy minus 4f(1,t)²/5.
+Direct integration gives the constant −4q0²/5. Its negative sign is the
+second-order departure from the sphere's positive total budget. This
+balance checks the kinetic, wave and shape terms independently.
+
+For the existing s=.05 seed, q0=.0025000046764, the shape coordinate
+reaches .0133275776068 at offset1. The largest sampled energy discrepancy
+is 4.7e-18 and the boundary residual is below 1.4e-17. These are numerical
+checks of the exact quadratic solution. Run the existing CLI with
+`--split-onset-only` to reproduce them. The nonlinear waveform through
+pinch still retains the preceding near-field approximation. This exact
+onset response supplies a reference for extending that calculation.
+
 ## Retained foundation control: opposite windings, 2 November 2026
 
 The geometry-only calculation is:

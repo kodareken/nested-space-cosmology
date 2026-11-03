@@ -1,5 +1,11 @@
 # Active code map
 
+`split_onset_field` and `split_onset_calculation` give the exact quadratic
+neck response with the complete causal exterior and its natural shape
+condition. `--split-onset-only` prints the growth, transient and independent
+energy controls. This is the reference for improving the nonlinear
+collective-coordinate waveform.
+
 `split_waveform_evolution` couples the existing two-center neck family to
 its phase-field inertia and outgoing radial harmonics. The finite detector
 and independent spatial energy integral follow from the same solution.
