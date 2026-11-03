@@ -2309,8 +2309,172 @@ def _four_center_volume(parent_separation, daughter_separation, order):
     return float(2*np.dot(weights,np.mean(radius**3,axis=1)))
 
 
+def _four_center_lobe_directional_derivatives(parent_separation, daughter_separation, order=48):
+    """Evaluate 3D directional volume and energy derivatives on separated four-centre lobes.
+
+    On a separated lobe enclosing (b, 0, s) of the four-source level set Phi = 4,
+    splitting each unit source by +-sqrt(zeta) along axis i perturbs the phase by
+    delta_Phi = (1/2) * zeta * d^2(Phi)/dx_i^2 + O(zeta^2). Because Phi is harmonic
+    away from the sources (Delta Phi = 0), the directional volume-derivative trace
+    vanishes identically:
+        d(v)/d(zeta_x) + d(v)/d(zeta_y) + d(v)/d(zeta_z) = 0.
+    """
+    mu, w_mu = np.polynomial.legendre.leggauss(order)
+    n_phi = 2 * order
+    phi = 2 * np.pi * (np.arange(n_phi) + .5) / n_phi
+    sin_t = np.sqrt(1 - mu[:, None]**2)
+    nx = sin_t * np.cos(phi)[None, :]
+    ny = sin_t * np.sin(phi)[None, :]
+    nz = np.broadcast_to(mu[:, None], nx.shape)
+    centers = ((daughter_separation, 0., parent_separation),
+               (-daughter_separation, 0., parent_separation),
+               (daughter_separation, 0., -parent_separation),
+               (-daughter_separation, 0., -parent_separation))
+    low = np.full_like(nx, 1e-4)
+    high = np.full_like(nx, min(daughter_separation, parent_separation))
+    for _ in range(48):
+        r = .5 * (low + high)
+        x = daughter_separation + r * nx
+        y = r * ny
+        z = parent_separation + r * nz
+        val = np.zeros_like(r)
+        for cx, cy, cz in centers:
+            val += 1. / np.sqrt((x - cx)**2 + (y - cy)**2 + (z - cz)**2)
+        low = np.where(val >= 4., r, low)
+        high = np.where(val >= 4., high, r)
+    r = .5 * (low + high)
+    x = daughter_separation + r * nx
+    y = r * ny
+    z = parent_separation + r * nz
+    gx = gy = gz = hxx = hyy = hzz = 0.
+    for cx, cy, cz in centers:
+        dx = x - cx; dy = y - cy; dz = z - cz
+        d2 = dx * dx + dy * dy + dz * dz
+        d = np.sqrt(d2)
+        gx -= dx / d**3; gy -= dy / d**3; gz -= dz / d**3
+        hxx += (3 * dx * dx - d2) / d**5
+        hyy += (3 * dy * dy - d2) / d**5
+        hzz += (3 * dz * dz - d2) / d**5
+    n_dot_r = -(gx * nx + gy * ny + gz * nz)
+    volume = float(2. * np.dot(w_mu, np.mean(r**3, axis=1)))
+    surface_weight = 4. * (w_mu[:, None] / n_phi) * (2. * np.pi) * (r**2 / n_dot_r)
+    dv_xx = .5 * float(np.sum(surface_weight * hxx))
+    dv_yy = .5 * float(np.sum(surface_weight * hyy))
+    dv_zz = .5 * float(np.sum(surface_weight * hzz))
+    energy_factor = .25 * (volume**(-.75))
+    return dict(
+        daughter_half_separation=float(daughter_separation),
+        parent_half_separation=float(parent_separation),
+        volume=volume,
+        volume_derivatives=dict(x=dv_xx, y=dv_yy, z=dv_zz),
+        energy_derivatives=dict(
+            x=energy_factor * dv_xx,
+            y=energy_factor * dv_yy,
+            z=energy_factor * dv_zz),
+        harmonic_trace_residual=dv_xx + dv_yy + dv_zz,
+        y_is_unique_global_minimum=(dv_yy < dv_xx and dv_yy < dv_zz),
+        both_in_plane_axes_uphill=(dv_xx > 0. and dv_zz > 0.))
+
+
+def _eight_center_third_neck_pinch(parent_separation, daughter_separation):
+    """Critical third-split half-separation cy where 4 lobes pinch into 8 octant lobes on Phi = 8."""
+    from scipy.optimize import brentq, root
+
+    def saddle_residual(cy):
+        def grad_xz(coords):
+            x, z = coords
+            gx = gz = 0.
+            for sx in (-1., 1.):
+                for sy in (-1., 1.):
+                    for sz in (-1., 1.):
+                        dx = x - sx * daughter_separation
+                        dy = -sy * cy
+                        dz = z - sz * parent_separation
+                        d = math.sqrt(dx * dx + dy * dy + dz * dz)
+                        gx -= dx / d**3
+                        gz -= dz / d**3
+            return [gx, gz]
+        sol = root(grad_xz, [daughter_separation * .95, parent_separation * .95], tol=1e-14)
+        x, z = float(sol.x[0]), float(sol.x[1])
+        potential = sum(
+            1. / math.sqrt((x - sx * daughter_separation)**2 + (sy * cy)**2 + (z - sz * parent_separation)**2)
+            for sx in (-1., 1.) for sy in (-1., 1.) for sz in (-1., 1.)
+        )
+        return potential - 8., x, z
+
+    cy_pinch = float(brentq(lambda cy: saddle_residual(cy)[0], .2, .9, xtol=1e-14))
+    residual, x_sad, z_sad = saddle_residual(cy_pinch)
+    return dict(
+        parent_half_separation_z=float(parent_separation),
+        daughter_half_separation_x=float(daughter_separation),
+        third_neck_half_separation_y=cy_pinch,
+        saddle_point=[x_sad, 0., z_sad],
+        potential_residual=float(residual))
+
+
+def _two_stage_kinetic_matrix(separation, matching_radius=2.5, maximum_mode=None, order=64):
+    """Evaluate the 2x2 phase kinetic matrix M_ij(q1, q2=0) for axial q1=c^2 and transverse q2=tilde_b^2.
+
+    At q2 = 0, d(Phi)/d(q2)|_{q2=0} = (1/2) d^2(Phi_0)/dx^2 decomposes into an axisymmetric
+    m=0 component -(1/4) d^2(Phi_0)/dz^2 = -(1/4) d^2(Phi_0)/dc^2 (whose exterior multipoles obey
+    dg_{l,0}/dq2 = -((l-1)/2) dg_{l,0}/dq1) and an azimuthal m=2 component (1/4)(d_xx - d_yy)Phi_0
+    = sum_{even l>=2} (1/2) q1^{l/2-1} r^{-(l+1)} P_l^2(cos theta) cos(2 phi).
+    """
+    nodes, weights = np.polynomial.legendre.leggauss(order)
+    vol = _neck_volume_factor(float(separation), order)
+    scale = vol**(-.25)
+    center = float(separation) * scale
+    q1 = center * center
+    cut = math.sqrt(1. - 1. / separation) if separation > 1. else 0.
+    m11 = m12 = m22_m0 = m22_m2 = 0.
+    for low, high in ((0., cut), (cut, 1.)):
+        if high == low:
+            continue
+        eta = low + (nodes + 1.) * (high - low) / 2.
+        bottom = np.maximum(center, scale * (1. + np.sqrt(1. + 4. * separation**2 * eta**2)) / 2.)
+        top = np.sqrt(matching_radius**2 + center**2 * (1. - eta**2))
+        radial = bottom[:, None] + (nodes[None, :] + 1.) * (top - bottom)[:, None] / 2.
+        denom = radial**2 - center**2 * eta[:, None]**2
+        dp = radial - center * eta[:, None]
+        dm = radial + center * eta[:, None]
+        rho2 = (radial**2 - center**2) * (1. - eta[:, None]**2)
+        phi_q1 = radial * (radial**2 * (3. * eta[:, None]**2 - 1.)
+                           + center**2 * (eta[:, None]**4 - 3. * eta[:, None]**2)) / denom**3
+        part_a = -.5 * (1. / dp**3 + 1. / dm**3)
+        part_c = 1.5 * rho2 * (1. / dp**5 + 1. / dm**5)
+        phi_q2_m0 = part_a + .5 * part_c
+        phi_q2_m2 = .5 * part_c
+        jac = denom * (top - bottom)[:, None] / 2. * (high - low)
+        m11 += float(np.dot(weights, (jac * phi_q1**2) @ weights))
+        m12 += float(np.dot(weights, (jac * phi_q1 * phi_q2_m0) @ weights))
+        m22_m0 += float(np.dot(weights, (jac * phi_q2_m0**2) @ weights))
+        m22_m2 += float(np.dot(weights, (jac * .5 * phi_q2_m2**2) @ weights))
+    start_mode = 2 if maximum_mode is None else maximum_mode + 2
+    for l in range(start_mode, 62, 2):
+        g1 = l * (q1**(l // 2 - 1)) / (matching_radius**(l + 1))
+        g2 = -.5 * l * (l - 1) * (q1**(l // 2 - 1)) / (matching_radius**(l + 1))
+        fac = 2. * (matching_radius**3) / ((2 * l + 1) * (2 * l - 1))
+        m11 += fac * g1 * g1
+        m12 += fac * g1 * g2
+        m22_m0 += fac * g2 * g2
+    for l in range(2, 62, 2):
+        coeff = .5 * (q1**(l // 2 - 1)) / (matching_radius**(l + 1))
+        norm_p_l2 = 2. * (l + 2) * (l + 1) * l * (l - 1) / (2 * l + 1)
+        m22_m2 += .5 * norm_p_l2 * (matching_radius**3 / (2 * l - 1)) * (coeff**2)
+    m22 = m22_m0 + m22_m2
+    return dict(
+        q1=q1,
+        scale=scale,
+        matching_radius=float(matching_radius),
+        maximum_transported_mode=maximum_mode,
+        matrix=[[m11, m12], [m12, m22]],
+        m22_axisymmetric_m0=m22_m0,
+        m22_quadrupolar_m2=m22_m2,
+        determinant=m11 * m22 - m12 * m12)
+
+
 def inherited_daughter_calculation():
-    """Read daughter shape and the next split direction from the existing field."""
+    """Read daughter shape, 3-axis orthogonal cascade, and 2x2 kinetic handoff from the existing field."""
     from scipy.optimize import brentq
 
     parent=split_waveform_evolution(maximum_mode=8,shape_samples=321,quadrature_order=64)
@@ -2364,6 +2528,38 @@ def inherited_daughter_calculation():
             quadrature_spread=abs(volumes[1]-volumes[0]),
             relaxed_energy_over_original=volumes[-1]**.25,
             available_energy_fraction=1-volumes[-1]**.25))
+
+    cascade_rows=[_four_center_lobe_directional_derivatives(separation,b_val,48)
+                  for b_val in (.7,.8,1.,separation,1.5)]
+    symmetric_row=cascade_rows[3]
+    pinch_b1=_eight_center_third_neck_pinch(separation,1.)
+    pinch_sym=_eight_center_third_neck_pinch(separation,separation)
+
+    full_matrices=[_two_stage_kinetic_matrix(separation,B_val,None,64) for B_val in (2.5,3.,4.)]
+    projected_matrix=_two_stage_kinetic_matrix(separation,2.5,8,64)
+    q1=parent['continuation_state']['shape_coordinate']
+    v1=parent['continuation_state']['shape_velocity']
+    B=parent['matching_radius']
+    r1_reaction=r2_reaction=0.
+    multipole_ratios=[]
+    for mode in parent['continuation_state']['outgoing_memory']:
+        l=mode['degree']
+        poly=np.array([math.factorial(l+k)/(math.factorial(k)*math.factorial(l-k)*2**k) for k in range(l+1)])
+        roots=np.roots(poly)
+        h=np.array(mode['real'])+1j*np.array(mode['imag'])
+        val=2*(q1**(l//2))/(B**(l+1))
+        grad1=l*(q1**(l//2-1))/(B**(l+1))
+        grad2=-.5*(l-1)*grad1
+        rate=grad1*v1
+        outgoing=rate+val/B-float(np.sum(roots*h/(B**2)).real)
+        coeff=2*(B**2)/(2*l+1)
+        r1_reaction+=coeff*grad1*(outgoing-(l+1)*val/B)
+        r2_reaction+=coeff*grad2*(outgoing-(l+1)*val/B)
+        multipole_ratios.append(dict(degree=l,dg_dq1=grad1,dg_dq2=grad2,ratio=grad2/grad1))
+    m0=np.array(projected_matrix['matrix'])
+    scale0=projected_matrix['scale']
+    du_db2=(16./3.)*direction_rows[-1]['transverse_energy_derivative']
+    du_dq2=du_db2/(scale0**2)
     return dict(schema='nsc-inherited-daughter-v1',parent_half_separation=separation,
         inherited_from_first_split=parent['continuation_state'],
         first_split_handoff_offset=parent['endpoint']['time'],
@@ -2379,11 +2575,30 @@ def inherited_daughter_calculation():
                 for mode in parent['continuation_state']['outgoing_memory']]),
         inherited_shape=direction_rows,second_neck_half_separation=threshold,
         second_neck_axial_position=saddle(threshold)[1],four_center_path=rows,
+        three_axis_orthogonal_cascade=dict(
+            harmonic_trace_law='d(v)/d(zeta_x) + d(v)/d(zeta_y) + d(v)/d(zeta_z) = 0 from Delta(Phi) = 0',
+            first_to_second_split_ratio=-.5,
+            second_to_third_symmetric_ratio=symmetric_row['volume_derivatives']['y']/symmetric_row['volume_derivatives']['x'],
+            lobe_directional_scan=cascade_rows,
+            third_neck_pinch_at_b_1=pinch_b1,
+            third_neck_pinch_at_b_equal_s=pinch_sym),
+        joint_two_coordinate_kinetic_handoff=dict(
+            multipole_identity='dg_{l,0}/dq2|_{q2=0} = -((l-1)/2) * dg_{l,0}/dq1',
+            multipole_mode_ratios=multipole_ratios,
+            quasistatic_full_matrices_by_matching_radius=full_matrices,
+            projected_near_field_matrix=projected_matrix['matrix'],
+            projected_determinant=projected_matrix['determinant'],
+            initial_axial_momentum_p1=float(m0[0,0]*v1),
+            initial_transverse_conjugate_momentum_p2=float(m0[1,0]*v1),
+            axial_wave_memory_reaction_R1=r1_reaction,
+            transverse_wave_memory_reaction_R2=r2_reaction,
+            transverse_potential_slope_dU_dq2=du_dq2,
+            net_transverse_potential_plus_memory_drive=float(-du_dq2-r2_reaction)),
         binary_similarity=dict(radius_ratio=1/math.sqrt(2),duration_ratio=1/math.sqrt(2),
             phase_amplitude_ratio=1/math.sqrt(2),energy_per_child_ratio=1/(2*math.sqrt(2)),
             gradient_and_pressure_ratio=1.,frequency_ratio=math.sqrt(2),
             two_generation_total_energy_ratio=.5),
-        history_scope='same inherited phase on an enlarged geometric configuration space; second-stage time evolution remains open')
+        history_scope='same inherited phase on an enlarged geometric configuration space; 3-axis orthogonal cascade and 2x2 kinetic handoff evaluated')
 
 
 def winding_two_neck_calculation():
@@ -2584,6 +2799,87 @@ def thermodynamic_gravity_and_cmb_temperature(h0_km_s_mpc=67.4):
         observed_cmb_temperature_K=t_cmb_obs)
 
 
+def exact_budget_curve_invariant(chi_samples=(0., .5, 1., 2., 2.5, 3., 3.0669683518473474, 4., 6., 8., 10.)):
+    """Evaluate the exact parameter-free algebraic surface 9*D*V*B = 4*(V + B/2)^3 across the 5-variable cost curve.
+
+    Writing D = Omega_DE, M = Omega_DM, V = Omega_vis, and B = M - D/3 for the radial
+    infall share at the 5-variable minimum, eliminating chi gives the exact identity
+        9 * D * V * B = 4 * (V + B/2)^3
+    at every compression chi, with exact inverse
+        theta^* = D / (D + V + B/2),   exp(-chi) = 3 * sqrt(theta^*) * B / (2*V + B),
+    and deep-compression quadratic scaling B / V^2 -> 16 / 27.
+    Furthermore, because D + M + V = 1 and B = M - D/3, specifying any single share
+    V in (0, 1) uniquely determines D(V), M(V), B(V), theta^*(V), and chi(V) with
+    zero free parameters.
+    """
+    rows = []
+    max_cubic_residual = 0.
+    max_inverse_chi_error = 0.
+    for chi in chi_samples:
+        chi_f = float(chi)
+        entry = nested_zero_crossing_map(1, chi_f)['nested_chain'][0]
+        d_share = entry['dark_energy_like_fraction']
+        m_share = entry['dark_matter_like_fraction']
+        v_share = entry['visible_filament_like_fraction']
+        b_share = m_share - d_share / 3.
+        lhs = 9. * d_share * v_share * b_share
+        rhs = 4. * ((v_share + .5 * b_share)**3)
+        residual = lhs - rhs
+        max_cubic_residual = max(max_cubic_residual, abs(residual))
+        theta_recovered = d_share / (d_share + v_share + .5 * b_share)
+        u_rec = math.sqrt(theta_recovered)
+        exp_minus_chi_rec = 3. * u_rec * b_share / (2. * v_share + b_share)
+        chi_recovered = -math.log(exp_minus_chi_rec)
+        max_inverse_chi_error = max(max_inverse_chi_error, abs(chi_recovered - chi_f))
+        rows.append(dict(
+            chi=chi_f,
+            D=d_share,
+            M=m_share,
+            V=v_share,
+            B=b_share,
+            B_over_V_squared=b_share / (v_share * v_share),
+            cubic_identity_residual=residual,
+            recovered_theta_star=theta_recovered,
+            recovered_chi=chi_recovered,
+            chi_recovery_error=abs(chi_recovered - chi_f)))
+
+    def predict_from_visible_share(target_v):
+        with mp.workdps(50):
+            tv = mp.mpf(str(target_v))
+            def vis_res(c):
+                ex = mp.exp(c); xi = mp.exp(-c)
+                u = (mp.sqrt(16 * ex * ex + 17) - 3) / (4 * ex)
+                th = u * u
+                e_de = 3 * u**3
+                e_dm = u**3 + 2 * (1 - th) * xi
+                e_vis = 2 * (1 - th)**2 * ex
+                return e_vis / (e_de + e_dm + e_vis) - tv
+            c_root = float(mp.findroot(vis_res, (mp.mpf('2.0'), mp.mpf('4.0'))))
+        pt = nested_zero_crossing_map(1, c_root)['nested_chain'][0]
+        d_val = pt['dark_energy_like_fraction']
+        m_val = pt['dark_matter_like_fraction']
+        v_val = pt['visible_filament_like_fraction']
+        b_val = m_val - d_val / 3.
+        return dict(
+            input_visible_share_V=float(target_v),
+            derived_chi=c_root,
+            derived_D=d_val,
+            derived_M=m_val,
+            derived_B=b_val,
+            cubic_identity_residual=9. * d_val * v_val * b_val - 4. * ((v_val + .5 * b_val)**3))
+
+    return dict(
+        identity='9 * D * V * B = 4 * (V + B/2)^3, with B = M - D/3 and D + M + V = 1',
+        inverse_map='theta^* = D / (D + V + B/2), exp(-chi) = 3 * sqrt(theta^*) * B / (2*V + B)',
+        deep_compression_limit_B_over_V_squared=16. / 27.,
+        sampled_curve=rows,
+        maximum_cubic_residual=max_cubic_residual,
+        maximum_inverse_chi_error=max_inverse_chi_error,
+        zero_parameter_predictions_from_V=dict(
+            at_volumetric_floor_exp_minus_3=predict_from_visible_share(math.exp(-3.)),
+            at_planck_baryon_share_0_0493=predict_from_visible_share(0.0493)))
+
+
 def nonlocal_to_local_atlas_readout():
     """Zero-parameter non-local multiverse fixed point and local observer translation dictionary.
 
@@ -2629,6 +2925,7 @@ def nonlocal_to_local_atlas_readout():
     three_acc_ladder=derived_three_accumulator_bubble_ladder()
     wall_bypasses=exponential_wall_bypasses_and_triad_winner()
     bubble_spectrum=vacuum_bubble_crystallization_and_mass_spectrum()
+    budget_invariant=exact_budget_curve_invariant()
     thermo_cmb=thermodynamic_gravity_and_cmb_temperature()
     return dict(schema='nsc-nonlocal-to-local-atlas-v1',
                 axioms=dict(
@@ -2640,6 +2937,7 @@ def nonlocal_to_local_atlas_readout():
                 derived_theorems_from_axioms=dict(
                     why_minus_exists_and_radius_crosses_zero=circle_pendulum,
                     exponential_wall_bypasses_and_triad_winner=wall_bypasses,
+                    exact_budget_curve_invariant=budget_invariant,
                     surrounding_medium_3_to_1_virial_split=bubble_spectrum['surrounding_medium_equilibrium'],
                     integer_winding_sharp_levels=bubble_spectrum['discrete_burst_spectrum'],
                     opposite_winding_cancellation=bubble_spectrum['annihilation_to_back_to_back_ripples'],

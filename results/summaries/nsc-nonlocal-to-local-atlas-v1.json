@@ -1,750 +1,543 @@
 {
-  "atlas": {
-    "axioms": {
-      "A0": "Least resistance: minimize single generator cost E = Q_stretch + P*V",
-      "A1": "1D seed + inherited compression offset = time (1D -> 2D circle -> 3D sphere)",
-      "A2": "Signed-zero crossing (+ -> 0 -> -): edge-on projection of the closed circle R(tau)=R0*cos(omega*tau) crosses 0 into -, flipping sign(det F) = (-1)^k and turning implosion into expansion",
-      "A3": "Moving spectral band [lambda_min, lambda_max] = exp(-chi)*[lambda_min_0, lambda_max_0] from Planck cutoff to Absolute-Zero horizon",
-      "A4": "Two-valve cyclic circulation on a closed vortex-diffusion ring (O <-> o) across one-way 0 horizons"
-    },
-    "derived_theorems_from_axioms": {
-      "exponential_wall_bypasses_and_triad_winner": {
-        "compression_wall_bypasses": [
-          {
-            "bypass_1d_to_helix": 1.0,
-            "bypass_3d_cross_zero_to_minus": 2.910660458484684,
-            "chi": 0.0,
-            "wall_1d_straight": 1.0,
-            "wall_3d_stay_in_plus": 4.0
-          },
-          {
-            "bypass_1d_to_helix": 1.4323323583816936,
-            "bypass_3d_cross_zero_to_minus": 3.016683915528248,
-            "chi": 1.0,
-            "wall_1d_straight": 2.718281828459045,
-            "wall_3d_stay_in_plus": 6.172322539260975
-          },
-          {
-            "bypass_1d_to_helix": 1.490842180555633,
-            "bypass_3d_cross_zero_to_minus": 3.497320190230299,
-            "chi": 2.0,
-            "wall_1d_straight": 7.38905609893065,
-            "wall_3d_stay_in_plus": 15.048782764334526
-          },
-          {
-            "bypass_1d_to_helix": 1.4987606239116669,
-            "bypass_3d_cross_zero_to_minus": 3.7912230062623715,
-            "chi": 3.0,
-            "wall_1d_straight": 20.085536923187668,
-            "wall_3d_stay_in_plus": 40.27064798311106
-          },
-          {
-            "bypass_1d_to_helix": 1.4999773000351189,
-            "bypass_3d_cross_zero_to_minus": 3.9699673091050496,
-            "chi": 5.0,
-            "wall_1d_straight": 148.4131591025766,
-            "wall_3d_stay_in_plus": 296.8397940991514
-          }
-        ],
-        "first_excited_4_winding_state": [
-          2,
-          1,
-          1
-        ],
-        "first_excited_energy": 5.656854249492381,
-        "first_excited_gap_over_ground": 0.41421356237309515,
-        "ground_state_cost_per_winding": 1.3333333333333333,
-        "ground_state_energy": 4.0,
-        "medium_range_shared_flow_is_attractive": true,
-        "merged_222_energy": 11.313708498984761,
-        "nuclear_potential_shape_derived": true,
-        "one_d_helix_plateau_limit": 1.5,
-        "orthogonal_triad_lattice": [
-          {
-            "energy_per_winding": null,
-            "equilibrium_3d_energy": 0.0,
-            "principal_aspect_ratios": null,
-            "supports_3d_volume": false,
-            "total_winding_N": 1,
-            "windings": [
-              1,
-              0,
-              0
-            ]
-          },
-          {
-            "energy_per_winding": null,
-            "equilibrium_3d_energy": 0.0,
-            "principal_aspect_ratios": null,
-            "supports_3d_volume": false,
-            "total_winding_N": 2,
-            "windings": [
-              1,
-              1,
-              0
-            ]
-          },
-          {
-            "energy_per_winding": 1.3333333333333333,
-            "equilibrium_3d_energy": 4.0,
-            "principal_aspect_ratios": [
-              1,
-              1,
-              1
-            ],
-            "supports_3d_volume": true,
-            "total_winding_N": 3,
-            "windings": [
-              1,
-              1,
-              1
-            ]
-          },
-          {
-            "energy_per_winding": 1.4142135623730951,
-            "equilibrium_3d_energy": 5.656854249492381,
-            "principal_aspect_ratios": [
-              4,
-              1,
-              1
-            ],
-            "supports_3d_volume": true,
-            "total_winding_N": 4,
-            "windings": [
-              2,
-              1,
-              1
-            ]
-          },
-          {
-            "energy_per_winding": 1.6,
-            "equilibrium_3d_energy": 8.0,
-            "principal_aspect_ratios": [
-              4,
-              4,
-              1
-            ],
-            "supports_3d_volume": true,
-            "total_winding_N": 5,
-            "windings": [
-              2,
-              2,
-              1
-            ]
-          },
-          {
-            "energy_per_winding": 1.885618083164127,
-            "equilibrium_3d_energy": 11.313708498984761,
-            "principal_aspect_ratios": [
-              4,
-              4,
-              4
-            ],
-            "supports_3d_volume": true,
-            "total_winding_N": 6,
-            "windings": [
-              2,
-              2,
-              2
-            ]
-          },
-          {
-            "energy_per_winding": 1.3856406460551018,
-            "equilibrium_3d_energy": 6.928203230275509,
-            "principal_aspect_ratios": [
-              9,
-              1,
-              1
-            ],
-            "supports_3d_volume": true,
-            "total_winding_N": 5,
-            "windings": [
-              3,
-              1,
-              1
-            ]
-          }
-        ],
-        "short_range_hard_core_repulsion_barrier": 3.313708498984761,
-        "three_d_zero_valve_plateau_limit": 4.0,
-        "two_triads_separate_energy": 8.0,
-        "unique_3d_ground_state": [
-          1,
-          1,
-          1
-        ],
-        "universal_principle": "When a path hits an exponential or superlinear cost wall, least resistance bypasses the wall by opening a perpendicular axis, crossing 0, or splitting/saturating at the (1,1,1) triad."
-      },
-      "integer_winding_sharp_levels": {
-        "emissions_are_sharp_lines_not_smear": true,
-        "levels": [
-          {
-            "equilibrium_radius_ratio": 1.0,
-            "exact_n_3_over_2": 1.0,
-            "stored_energy_ratio_over_E1": 1.0,
-            "winding_n": 1
-          },
-          {
-            "equilibrium_radius_ratio": 1.4142135623730951,
-            "exact_n_3_over_2": 2.8284271247461903,
-            "stored_energy_ratio_over_E1": 2.8284271247461903,
-            "winding_n": 2
-          },
-          {
-            "equilibrium_radius_ratio": 1.7320508075688772,
-            "exact_n_3_over_2": 5.196152422706632,
-            "stored_energy_ratio_over_E1": 5.196152422706632,
-            "winding_n": 3
-          },
-          {
-            "equilibrium_radius_ratio": 2.0,
-            "exact_n_3_over_2": 8.0,
-            "stored_energy_ratio_over_E1": 8.0,
-            "winding_n": 4
-          },
-          {
-            "equilibrium_radius_ratio": 2.23606797749979,
-            "exact_n_3_over_2": 11.180339887498949,
-            "stored_energy_ratio_over_E1": 11.18033988749895,
-            "winding_n": 5
-          }
-        ],
-        "topological_quantization_rule": "z(1) = z(0) on S^1 forces integer winding n in Z",
-        "transition_2_to_1_energy_over_E1": 1.8284271247461903,
-        "transition_3_to_2_energy_over_E1": 2.3677252979604417
-      },
-      "opposite_winding_cancellation": {
-        "cavity_lock_after_contact": 0.0,
-        "combined_winding": 0,
-        "initial_windings": [
-          1,
-          -1
-        ],
-        "net_momentum_residual": 0.0,
-        "outgoing_ripple_energies_keV": [
-          510.99895,
-          510.99895
-        ],
-        "outgoing_ripple_energies_over_E1": [
-          1.0,
-          1.0
-        ],
-        "separation_angle_degrees": 180.0,
-        "total_released_energy_over_E1": 2.0
-      },
-      "shared_flow_resonance_interaction": {
-        "in_resonance_aligned_energy_at_d_1": -2.0,
-        "in_resonance_attractive_force_law": "-2*m0*|n1*n2|/d^2",
-        "interaction_formula": "Delta_E_int(d, Delta_phi) = -(2*m0*n1*n2/d)*cos((omega1-omega2)*tau + Delta_phi0)",
-        "merges_only_when_resonant": true,
-        "off_resonance_time_average": 0.0
-      },
-      "surrounding_medium_3_to_1_virial_split": {
-        "cavity_pressure_work_share": 0.25,
-        "energy_in_point_singularity": 0.0,
-        "equilibrium_energy_E1": 1.7547653506033232,
-        "equilibrium_radius_R1": 0.7598356856515925,
-        "formula": "E_bubble(R) = m0*n^2/R (surrounding flow r>=R) + P*V0*R^3 (cavity work)",
-        "radial_shell_energy_fractions": {
-          "R_to_100R": 0.99,
-          "R_to_10R": 0.9,
-          "R_to_2R": 0.5,
-          "R_to_5R": 0.8
+  "axioms": {
+    "A0": "Least resistance: minimize single generator cost E = Q_stretch + P*V",
+    "A1": "1D seed + inherited compression offset = time (1D -> 2D circle -> 3D sphere)",
+    "A2": "Signed-zero crossing (+ -> 0 -> -): edge-on projection of the closed circle R(tau)=R0*cos(omega*tau) crosses 0 into -, flipping sign(det F) = (-1)^k and turning implosion into expansion",
+    "A3": "Moving spectral band [lambda_min, lambda_max] = exp(-chi)*[lambda_min_0, lambda_max_0] from Planck cutoff to Absolute-Zero horizon",
+    "A4": "Two-valve cyclic circulation on a closed vortex-diffusion ring (O <-> o) across one-way 0 horizons"
+  },
+  "derived_theorems_from_axioms": {
+    "exact_budget_curve_invariant": {
+      "deep_compression_limit_B_over_V_squared": 0.5925925925925926,
+      "identity": "9 * D * V * B = 4 * (V + B/2)^3, with B = M - D/3 and D + M + V = 1",
+      "inverse_map": "theta^* = D / (D + V + B/2), exp(-chi) = 3 * sqrt(theta^*) * B / (2*V + B)",
+      "maximum_cubic_residual": 2.220446049250313e-16,
+      "maximum_inverse_chi_error": 6.4012706246785456e-09,
+      "sampled_curve": [
+        {
+          "B": 0.36363636363636365,
+          "B_over_V_squared": 9.819174561259402,
+          "D": 0.33294245660406524,
+          "M": 0.4746171825043854,
+          "V": 0.19244036089154937,
+          "chi": 0.0,
+          "chi_recovery_error": 0.0,
+          "cubic_identity_residual": 0.0,
+          "recovered_chi": -0.0,
+          "recovered_theta_star": 0.4707890075482392
         },
-        "surrounding_flow_energy_share": 0.75,
-        "virial_ratio_surrounding_over_pressure": 3.0
-      },
-      "three_accumulator_bubble_ladder": {
-        "axiom_rule": "W_k(n) = C(n, k) from iterated A1 offset accumulation; E_3D^*(n) = 4*(P*V0)^(1/4)*m0^(3/4)*sqrt(W_1*W_2*W_3)",
-        "codata_proton_to_electron": 1836.15267343,
-        "hits_1836_without_extra_factor": false,
-        "hits_3d_threshold_at_n_equals_3": true,
-        "ladder": [
-          {
-            "binomial_windings": [
-              1,
-              0,
-              0
-            ],
-            "directional_moments": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "equilibrium_3d_energy": 0.0,
-            "n": 1,
-            "ratio_over_n1_1d_loop": 0.0,
-            "ratio_over_n3_baryon": 0.0,
-            "supported_spatial_dimension": 1,
-            "supports_3d_volume": false,
-            "volumetric_factor_sqrt_W1_W2_W3": 0.0
-          },
-          {
-            "binomial_windings": [
-              2,
-              1,
-              0
-            ],
-            "directional_moments": [
-              4.0,
-              1.0,
-              0.0
-            ],
-            "equilibrium_3d_energy": 0.0,
-            "n": 2,
-            "ratio_over_n1_1d_loop": 0.0,
-            "ratio_over_n3_baryon": 0.0,
-            "supported_spatial_dimension": 2,
-            "supports_3d_volume": false,
-            "volumetric_factor_sqrt_W1_W2_W3": 0.0
-          },
-          {
-            "binomial_windings": [
-              3,
-              3,
-              1
-            ],
-            "directional_moments": [
-              9.0,
-              9.0,
-              1.0
-            ],
-            "equilibrium_3d_energy": 12.0,
-            "n": 3,
-            "ratio_over_n1_1d_loop": 6.0,
-            "ratio_over_n3_baryon": 1.0,
-            "supported_spatial_dimension": 3,
-            "supports_3d_volume": true,
-            "volumetric_factor_sqrt_W1_W2_W3": 3.0
-          },
-          {
-            "binomial_windings": [
-              4,
-              6,
-              4
-            ],
-            "directional_moments": [
-              16.0,
-              36.0,
-              16.0
-            ],
-            "equilibrium_3d_energy": 39.191835884530846,
-            "n": 4,
-            "ratio_over_n1_1d_loop": 19.595917942265423,
-            "ratio_over_n3_baryon": 3.2659863237109037,
-            "supported_spatial_dimension": 3,
-            "supports_3d_volume": true,
-            "volumetric_factor_sqrt_W1_W2_W3": 9.797958971132712
-          },
-          {
-            "binomial_windings": [
-              5,
-              10,
-              10
-            ],
-            "directional_moments": [
-              25.0,
-              100.0,
-              100.0
-            ],
-            "equilibrium_3d_energy": 89.44271909999159,
-            "n": 5,
-            "ratio_over_n1_1d_loop": 44.721359549995796,
-            "ratio_over_n3_baryon": 7.4535599249993,
-            "supported_spatial_dimension": 3,
-            "supports_3d_volume": true,
-            "volumetric_factor_sqrt_W1_W2_W3": 22.360679774997898
-          },
-          {
-            "binomial_windings": [
-              6,
-              15,
-              20
-            ],
-            "directional_moments": [
-              36.0,
-              225.0,
-              400.0
-            ],
-            "equilibrium_3d_energy": 169.7056274847714,
-            "n": 6,
-            "ratio_over_n1_1d_loop": 84.8528137423857,
-            "ratio_over_n3_baryon": 14.142135623730951,
-            "supported_spatial_dimension": 3,
-            "supports_3d_volume": true,
-            "volumetric_factor_sqrt_W1_W2_W3": 42.42640687119285
-          }
-        ],
-        "minimum_n_for_3d_volume": 3,
-        "missing_continuum_phase_factor_for_1836": 306.0254455716667,
-        "n1_is_1d_loop": true,
-        "n2_is_2d_sheet": true,
-        "untuned_n3_to_n1_energy_ratio": 6.0
-      },
-      "why_minus_exists_and_radius_crosses_zero": {
-        "circle_to_pendulum_identity": "R(tau) = Re(R0 * exp(i*omega*tau)) = R0 * cos(omega*tau)",
-        "minus_times_minus_equals_plus": {
-          "half_turn_complex_factor": -1.0,
-          "matrix_identity_residual": 0.0,
-          "parent_to_child_to_grandchild_signs": [
-            "+",
-            "-",
-            "+"
+        {
+          "B": 0.20283223497337732,
+          "B_over_V_squared": 2.9551769086113584,
+          "D": 0.40138692929203595,
+          "M": 0.33662787807072264,
+          "V": 0.26198519263724135,
+          "chi": 0.5,
+          "chi_recovery_error": 5.551115123125783e-16,
+          "cubic_identity_residual": -2.220446049250313e-16,
+          "recovered_chi": 0.5000000000000006,
+          "recovered_theta_star": 0.5248340764216731
+        },
+        {
+          "B": 0.09030059540332169,
+          "B_over_V_squared": 1.479659009520331,
+          "D": 0.4969957450657979,
+          "M": 0.25596584375858766,
+          "V": 0.2470384111756144,
+          "chi": 1.0,
+          "chi_recovery_error": 2.220446049250313e-16,
+          "cubic_identity_residual": -6.938893903907228e-17,
+          "recovered_chi": 1.0000000000000002,
+          "recovered_theta_star": 0.6297586610869149
+        },
+        {
+          "B": 0.01355982208984488,
+          "B_over_V_squared": 0.8059228028645139,
+          "D": 0.6425461069788587,
+          "M": 0.22774185774946445,
+          "V": 0.12971203527167682,
+          "chi": 2.0,
+          "chi_recovery_error": 2.220446049250313e-15,
+          "cubic_identity_residual": 0.0,
+          "recovered_chi": 2.000000000000002,
+          "recovered_theta_star": 0.8247942501149769
+        },
+        {
+          "B": 0.005036111388371484,
+          "B_over_V_squared": 0.7107911604767057,
+          "D": 0.6830926070427444,
+          "M": 0.2327336470692863,
+          "V": 0.08417374588796928,
+          "chi": 2.5,
+          "chi_recovery_error": 8.881784197001252e-16,
+          "cubic_identity_residual": 5.204170427930421e-18,
+          "recovered_chi": 2.499999999999999,
+          "recovered_theta_star": 0.8873817128395514
+        },
+        {
+          "B": 0.001858229008037171,
+          "B_over_V_squared": 0.6605458200298358,
+          "D": 0.7088268203026444,
+          "M": 0.2381338357755853,
+          "V": 0.05303934392177024,
+          "chi": 3.0,
+          "chi_recovery_error": 1.021405182655144e-14,
+          "cubic_identity_residual": 4.662069341687669e-18,
+          "recovered_chi": 2.99999999999999,
+          "recovered_theta_star": 0.92924909221285
+        },
+        {
+          "B": 0.0016255874498024014,
+          "B_over_V_squared": 0.6558087835907134,
+          "D": 0.7114405081367502,
+          "M": 0.2387724234953858,
+          "V": 0.049787068367864,
+          "chi": 3.0669683518473474,
+          "chi_recovery_error": 1.1102230246251565e-14,
+          "cubic_identity_residual": 4.9873299934333204e-18,
+          "recovered_chi": 3.0669683518473363,
+          "recovered_theta_star": 0.9335994993578552
+        },
+        {
+          "B": 0.00025170313146799517,
+          "B_over_V_squared": 0.6163435825676069,
+          "D": 0.734654889828414,
+          "M": 0.24513666640760598,
+          "V": 0.020208443763979986,
+          "chi": 4.0,
+          "chi_recovery_error": 4.440892098500626e-14,
+          "cubic_identity_residual": 1.0977546996415732e-18,
+          "recovered_chi": 3.9999999999999556,
+          "recovered_theta_star": 0.9730667727042275
+        },
+        {
+          "B": 4.608606439165941e-06,
+          "B_over_V_squared": 0.5957263444839964,
+          "D": 0.7479105033545456,
+          "M": 0.24930810972462103,
+          "V": 0.002781386920833444,
+          "chi": 6.0,
+          "chi_recovery_error": 6.203038083185675e-12,
+          "cubic_identity_residual": 5.2271197268450925e-19,
+          "recovered_chi": 5.999999999993797,
+          "recovered_theta_star": 0.9962918439437038
+        },
+        {
+          "B": 8.440255108710382e-08,
+          "B_over_V_squared": 0.5930152526148206,
+          "D": 0.7497169890305176,
+          "M": 0.24990574741272364,
+          "V": 0.00037726355675869586,
+          "chi": 8.0,
+          "chi_recovery_error": 4.157723054731832e-10,
+          "cubic_identity_residual": -8.946059137398149e-20,
+          "recovered_chi": 8.000000000415772,
+          "recovered_theta_star": 0.9994969888977216
+        },
+        {
+          "B": 1.5458681279501008e-09,
+          "B_over_V_squared": 0.5926497632176173,
+          "D": 0.7499616944614645,
+          "M": 0.24998723303302298,
+          "V": 5.10725055125147e-05,
+          "chi": 10.0,
+          "chi_recovery_error": 6.4012706246785456e-09,
+          "cubic_identity_residual": -3.409630608956302e-21,
+          "recovered_chi": 10.00000000640127,
+          "recovered_theta_star": 0.9999319034546565
+        }
+      ],
+      "zero_parameter_predictions_from_V": {
+        "at_planck_baryon_share_0_0493": {
+          "cubic_identity_residual": 7.15573433840433e-18,
+          "derived_B": 0.0015922304229994966,
+          "derived_D": 0.7118308271827501,
+          "derived_M": 0.23886917281724954,
+          "derived_chi": 3.077347738303232,
+          "input_visible_share_V": 0.0493
+        },
+        "at_volumetric_floor_exp_minus_3": {
+          "cubic_identity_residual": 4.9873299934333204e-18,
+          "derived_B": 0.0016255874498024014,
+          "derived_D": 0.7114405081367502,
+          "derived_M": 0.2387724234953858,
+          "derived_chi": 3.0669683518473474,
+          "input_visible_share_V": 0.049787068367863944
+        }
+      }
+    },
+    "exponential_wall_bypasses_and_triad_winner": {
+      "compression_wall_bypasses": [
+        {
+          "bypass_1d_to_helix": 1.0,
+          "bypass_3d_cross_zero_to_minus": 2.910660458484684,
+          "chi": 0.0,
+          "wall_1d_straight": 1.0,
+          "wall_3d_stay_in_plus": 4.0
+        },
+        {
+          "bypass_1d_to_helix": 1.4323323583816936,
+          "bypass_3d_cross_zero_to_minus": 3.0166839155282474,
+          "chi": 1.0,
+          "wall_1d_straight": 2.718281828459045,
+          "wall_3d_stay_in_plus": 6.172322539260975
+        },
+        {
+          "bypass_1d_to_helix": 1.490842180555633,
+          "bypass_3d_cross_zero_to_minus": 3.4973201902303,
+          "chi": 2.0,
+          "wall_1d_straight": 7.38905609893065,
+          "wall_3d_stay_in_plus": 15.048782764334526
+        },
+        {
+          "bypass_1d_to_helix": 1.4987606239116669,
+          "bypass_3d_cross_zero_to_minus": 3.791223006262371,
+          "chi": 3.0,
+          "wall_1d_straight": 20.085536923187668,
+          "wall_3d_stay_in_plus": 40.27064798311106
+        },
+        {
+          "bypass_1d_to_helix": 1.4999773000351189,
+          "bypass_3d_cross_zero_to_minus": 3.969967309105051,
+          "chi": 5.0,
+          "wall_1d_straight": 148.4131591025766,
+          "wall_3d_stay_in_plus": 296.8397940991514
+        }
+      ],
+      "first_excited_4_winding_state": [
+        2,
+        1,
+        1
+      ],
+      "first_excited_energy": 5.656854249492381,
+      "first_excited_gap_over_ground": 0.41421356237309515,
+      "ground_state_cost_per_winding": 1.3333333333333333,
+      "ground_state_energy": 4.0,
+      "medium_range_shared_flow_is_attractive": true,
+      "merged_222_energy": 11.313708498984761,
+      "nuclear_potential_shape_derived": true,
+      "one_d_helix_plateau_limit": 1.5,
+      "orthogonal_triad_lattice": [
+        {
+          "energy_per_winding": null,
+          "equilibrium_3d_energy": 0.0,
+          "principal_aspect_ratios": null,
+          "supports_3d_volume": false,
+          "total_winding_N": 1,
+          "windings": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "energy_per_winding": null,
+          "equilibrium_3d_energy": 0.0,
+          "principal_aspect_ratios": null,
+          "supports_3d_volume": false,
+          "total_winding_N": 2,
+          "windings": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "energy_per_winding": 1.3333333333333333,
+          "equilibrium_3d_energy": 4.0,
+          "principal_aspect_ratios": [
+            1,
+            1,
+            1
           ],
-          "single_crossing_3d_inversion_det": -1.0,
-          "two_crossings_3d_inversion_det": 1.0,
-          "two_half_turns_complex_product": 1.0
-        },
-        "negative_half_required_for_closure": {
-          "closes_with_minus": true,
-          "closes_without_minus": false,
-          "full_circle_arc_length": 6.283185307179586,
-          "missing_arc_fraction_without_minus": 0.5,
-          "nonnegative_clipped_arc_length": 3.141592653589793
-        },
-        "omega": 6.283185307179586,
-        "r0": 1.0,
-        "singularity_diagnosis_at_zero": {
-          "crossing_phase_radians": 1.5707963267948966,
-          "signed_R_acceleration_at_zero": 0.0,
-          "signed_R_velocity_after": -6.283185307179586,
-          "signed_R_velocity_before": -6.283185307179586,
-          "signed_R_velocity_jump": 0.0,
-          "signed_crossing_is_smooth": true,
-          "unsigned_size_creates_artificial_cusp_singularity": true,
-          "unsigned_size_r_singular_impulse": 12.566370614359172,
-          "unsigned_size_r_velocity_after": 6.283185307179586,
-          "unsigned_size_r_velocity_before": -6.283185307179586,
-          "unsigned_size_r_velocity_cusp_jump": 12.566370614359172
-        },
-        "swing_points": [
-          {
-            "energy_conservation_residual": 0.0,
-            "jacobian_det_3d": 1.0,
-            "pendulum_energy": 19.739208802178716,
-            "phase_label": "plus_apex_0",
-            "phase_radians": 0.0,
-            "signed_acceleration_R_tt": -39.47841760435743,
-            "signed_radius_R": 1.0,
-            "signed_velocity_R_dot": -0.0,
-            "unsigned_size_r": 1.0
-          },
-          {
-            "energy_conservation_residual": 0.0,
-            "jacobian_det_3d": 2.2958450216584675e-49,
-            "pendulum_energy": 19.739208802178716,
-            "phase_label": "first_zero_crossing_pi_over_2",
-            "phase_radians": 1.5707963267948966,
-            "signed_acceleration_R_tt": -2.4173558877289423e-15,
-            "signed_radius_R": 6.123233995736766e-17,
-            "signed_velocity_R_dot": -6.283185307179586,
-            "unsigned_size_r": 6.123233995736766e-17
-          },
-          {
-            "energy_conservation_residual": 0.0,
-            "jacobian_det_3d": -1.0,
-            "pendulum_energy": 19.739208802178716,
-            "phase_label": "minus_apex_pi",
-            "phase_radians": 3.141592653589793,
-            "signed_acceleration_R_tt": 39.47841760435743,
-            "signed_radius_R": -1.0,
-            "signed_velocity_R_dot": -7.694682774887159e-16,
-            "unsigned_size_r": 1.0
-          },
-          {
-            "energy_conservation_residual": 0.0,
-            "jacobian_det_3d": -6.198781558477861e-48,
-            "pendulum_energy": 19.739208802178716,
-            "phase_label": "second_zero_crossing_3pi_over_2",
-            "phase_radians": 4.71238898038469,
-            "signed_acceleration_R_tt": 7.252067663186827e-15,
-            "signed_radius_R": -1.8369701987210297e-16,
-            "signed_velocity_R_dot": 6.283185307179586,
-            "unsigned_size_r": 1.8369701987210297e-16
-          },
-          {
-            "energy_conservation_residual": 0.0,
-            "jacobian_det_3d": 1.0,
-            "pendulum_energy": 19.739208802178716,
-            "phase_label": "two_flips_return_2pi",
-            "phase_radians": 6.283185307179586,
-            "signed_acceleration_R_tt": -39.47841760435743,
-            "signed_radius_R": 1.0,
-            "signed_velocity_R_dot": 1.5389365549774318e-15,
-            "unsigned_size_r": 1.0
-          }
-        ]
-      }
-    },
-    "discrete_3d_harmonic_asymmetry_ladder": {
-      "bbn_observed_window": [
-        5.8e-10,
-        6.5e-10
-      ],
-      "formula": "eta_K = tanh((pi/2) * exp(-2*chi_spaghetti) * exp(-3*K)) = tanh((pi/4) * exp(-3*K))",
-      "planck_observed_reference": 6.1e-10,
-      "spaghettification_factor": 0.5,
-      "spaghettification_threshold_chi": 0.34657359027997264,
-      "stage_K_7_eta": 5.955329033932181e-10,
-      "stages": [
-        {
-          "asymmetry_eta_K": 0.0390827546629241,
-          "three_d_efold_stage_K": 1,
-          "total_efolds_3K": 3
+          "supports_3d_volume": true,
+          "total_winding_N": 3,
+          "windings": [
+            1,
+            1,
+            1
+          ]
         },
         {
-          "asymmetry_eta_K": 0.0019468049475698836,
-          "three_d_efold_stage_K": 2,
-          "total_efolds_3K": 6
+          "energy_per_winding": 1.4142135623730951,
+          "equilibrium_3d_energy": 5.656854249492381,
+          "principal_aspect_ratios": [
+            4,
+            1,
+            1
+          ],
+          "supports_3d_volume": true,
+          "total_winding_N": 4,
+          "windings": [
+            2,
+            1,
+            1
+          ]
         },
         {
-          "asymmetry_eta_K": 9.692583317139e-05,
-          "three_d_efold_stage_K": 3,
-          "total_efolds_3K": 9
+          "energy_per_winding": 1.6,
+          "equilibrium_3d_energy": 8.0,
+          "principal_aspect_ratios": [
+            4,
+            4,
+            1
+          ],
+          "supports_3d_volume": true,
+          "total_winding_N": 5,
+          "windings": [
+            2,
+            2,
+            1
+          ]
         },
         {
-          "asymmetry_eta_K": 4.8256530977904315e-06,
-          "three_d_efold_stage_K": 4,
-          "total_efolds_3K": 12
+          "energy_per_winding": 1.885618083164127,
+          "equilibrium_3d_energy": 11.313708498984761,
+          "principal_aspect_ratios": [
+            4,
+            4,
+            4
+          ],
+          "supports_3d_volume": true,
+          "total_winding_N": 6,
+          "windings": [
+            2,
+            2,
+            2
+          ]
         },
         {
-          "asymmetry_eta_K": 2.4025512070114697e-07,
-          "three_d_efold_stage_K": 5,
-          "total_efolds_3K": 15
-        },
-        {
-          "asymmetry_eta_K": 1.1961598120077638e-08,
-          "three_d_efold_stage_K": 6,
-          "total_efolds_3K": 18
-        },
-        {
-          "asymmetry_eta_K": 5.955329033932181e-10,
-          "three_d_efold_stage_K": 7,
-          "total_efolds_3K": 21
+          "energy_per_winding": 1.3856406460551018,
+          "equilibrium_3d_energy": 6.928203230275509,
+          "principal_aspect_ratios": [
+            9,
+            1,
+            1
+          ],
+          "supports_3d_volume": true,
+          "total_winding_N": 5,
+          "windings": [
+            3,
+            1,
+            1
+          ]
         }
       ],
-      "within_bbn_window": true
+      "short_range_hard_core_repulsion_barrier": 3.313708498984761,
+      "three_d_zero_valve_plateau_limit": 4.0,
+      "two_triads_separate_energy": 8.0,
+      "unique_3d_ground_state": [
+        1,
+        1,
+        1
+      ],
+      "universal_principle": "When a path hits an exponential or superlinear cost wall, least resistance bypasses the wall by opening a perpendicular axis, crossing 0, or splitting/saturating at the (1,1,1) triad."
     },
-    "no_observational_fit": true,
-    "numerical_coincidences_not_derived": {
-      "cmb_temperature_projections_using_measured_H0_G": {
-        "bare_geometric_mean_sqrt_TP_TH_K": 19.39603568049609,
-        "critical_blackbody_temperature_K": 31.73007770898084,
-        "h0_km_s_mpc": 67.4,
-        "horizon_2d_efold_relative_error": 0.03687864798590175,
-        "horizon_2d_efold_temperature_K": 2.6249679824873846,
-        "horizon_radius_m": 1.3724968349418282e+26,
-        "horizon_temperature_T_H_K": 2.6553532515830042e-30,
-        "observed_cmb_temperature_K": 2.72548,
-        "planck_length_m": 1.616255e-35,
-        "planck_temperature_K": 1.416784e+32,
-        "room_dynamic_range_R_H_over_l_P": 8.491833497448288e+60,
-        "two_valve_fixed_point_relative_error": 0.0010463608456618108,
-        "two_valve_fixed_point_temperature_K": 2.7283318355576345
-      },
-      "k7_baryon_harmonic_rung": 5.955329033932181e-10,
-      "lenz_6_pi_5_and_medium_dressing": {
-        "bare_6_pi_5": 1836.1181087116884,
-        "bare_ppm_error": 18.824533935469063,
-        "bare_relative_error": 1.8824533935469065e-05,
-        "caveat": "6*pi^5 is the exact product of 2d=6 signed rays and pi^5 5-phase volume, but deriving that product directly from the A0 3D stretch integral remains an open mathematical proof step",
-        "dressed_6_pi_5_plus_medium_floor": 1836.1533134853466,
-        "dressed_ppm_error": 0.3485850364491095,
-        "dressed_relative_error": 3.485850364491095e-07,
-        "formula_bare": "(2*d) * pi^(2+d) = 6 * pi^5 (6 signed rays from A2 * 5 phase dimensions from A1)",
-        "two_valve_medium_dressing_exp_minus_3_over_sqrt_2": 0.03520477365831485
-      },
-      "neutron_proton_gap_comparisons": {
-        "single_stage_n2_bubble_over_me": 2.8284271247461903,
-        "single_stage_n2_mev": 1.445323290896822,
-        "single_stage_n2_relative_error": 0.11751897865426092,
-        "threshold_capture_bare_2_plus_theta_spaghetti": 2.5,
-        "threshold_capture_bare_mev": 1.2774973749999998,
-        "threshold_capture_bare_relative_error": -0.012243440111134386,
-        "threshold_capture_dressed_mev": 1.2954869773743865,
-        "threshold_capture_dressed_over_me": 2.535204773658315,
-        "threshold_capture_dressed_relative_error": 0.0016660583370269584
-      },
-      "note": "Formulas below involve post-hoc target selection, Lenz (1951) 6*pi^5, rung selection (K=7), or external measured inputs (H0, G); quarantined from derived theorems.",
-      "two_valve_split_at_exp_minus_3_vs_lambda_cdm": {
-        "de_difference_from_lambda_cdm": 0.02674050813675022,
-        "derived_at_exp_minus_3": [
-          0.7114405081367502,
-          0.2387724234953858,
-          0.049787068367864
-        ],
-        "planck_base_lambda_cdm_inference": [
-          0.6847,
-          0.265,
-          0.0493
-        ]
-      }
-    },
-    "schema": "nsc-nonlocal-to-local-atlas-v1",
-    "thermodynamic_gravity_and_cmb_bridge": {
-      "bare_geometric_mean_sqrt_TP_TH_K": 19.39603568049609,
-      "critical_blackbody_temperature_K": 31.73007770898084,
-      "h0_km_s_mpc": 67.4,
-      "horizon_2d_efold_relative_error": 0.03687864798590175,
-      "horizon_2d_efold_temperature_K": 2.6249679824873846,
-      "horizon_radius_m": 1.3724968349418282e+26,
-      "horizon_temperature_T_H_K": 2.6553532515830042e-30,
-      "observed_cmb_temperature_K": 2.72548,
-      "planck_length_m": 1.616255e-35,
-      "planck_temperature_K": 1.416784e+32,
-      "room_dynamic_range_R_H_over_l_P": 8.491833497448288e+60,
-      "two_valve_fixed_point_relative_error": 0.0010463608456618108,
-      "two_valve_fixed_point_temperature_K": 2.7283318355576345
-    },
-    "translation_dictionary": [
-      {
-        "derived_share_at_chi_star": 0.7114405081367502,
-        "local_label": "Dark Energy (Lambda)",
-        "nonlocal_mechanism": "Isotropic 3D stretch 3*(theta^*)^(3/2) inside the - sphere driven by inflow across the outer birth 0 valve"
-      },
-      {
-        "derived_share_at_chi_star": 0.2387724234953858,
-        "local_label": "Dark Matter",
-        "nonlocal_mechanism": "Non-luminous 0-wall enclosing load (theta^*)^(3/2) + radial infall load 2*(1-theta^*)*exp(-chi) tugging across outer and inner 0 horizons"
-      },
-      {
-        "derived_share_at_chi_star": 0.049787068367864,
-        "local_label": "Visible Matter",
-        "nonlocal_mechanism": "Active transverse filamentary winding 2*(1-theta^*)^2*exp(chi) spaghettifying toward inner child 0 horizons, locked at floor exp(-3)"
-      },
-      {
-        "derived_asymmetry_eta_7": 5.955329033932181e-10,
-        "local_label": "Missing Antimatter (eta_B)",
-        "nonlocal_mechanism": "Single-sign orientation entry sign(det F_k)=(-1)^k across 0 plus offset decay lag exp(-gamma*tau) between + and - half-cycles at the K=7 3D harmonic"
-      }
-    ],
-    "two_valve_fixed_point": {
-      "at_integer_3d_efold_chi_3": {
-        "combined_dark_sector_fraction": 0.9469606560782298,
-        "dark_energy_fraction": 0.7088268203026444,
-        "dark_matter_fraction": 0.2381338357755853,
-        "visible_filament_fraction": 0.05303934392177024
-      },
-      "chi_star": 3.0669683518473474,
-      "combined_dark_sector_fraction": 0.9502129316321359,
-      "condition": "Omega_vis(chi_*) = exp(-3) (5-variable filament share equals 3D volumetric floor)",
-      "dark_energy_fraction": 0.7114405081367502,
-      "dark_matter_fraction": 0.2387724234953858,
-      "residual_from_volumetric_horizon": -1.1102230246251565e-16,
-      "visible_filament_fraction": 0.049787068367864
-    },
-    "vacuum_bubble_crystallization_and_masses": {
-      "annihilation_to_back_to_back_ripples": {
-        "cavity_lock_after_contact": 0.0,
-        "combined_winding": 0,
-        "initial_windings": [
-          1,
-          -1
-        ],
-        "net_momentum_residual": 0.0,
-        "outgoing_ripple_energies_keV": [
-          510.99895,
-          510.99895
-        ],
-        "outgoing_ripple_energies_over_E1": [
-          1.0,
-          1.0
-        ],
-        "separation_angle_degrees": 180.0,
-        "total_released_energy_over_E1": 2.0
-      },
-      "discrete_burst_spectrum": {
-        "emissions_are_sharp_lines_not_smear": true,
-        "levels": [
-          {
-            "equilibrium_radius_ratio": 1.0,
-            "exact_n_3_over_2": 1.0,
-            "stored_energy_ratio_over_E1": 1.0,
-            "winding_n": 1
-          },
-          {
-            "equilibrium_radius_ratio": 1.4142135623730951,
-            "exact_n_3_over_2": 2.8284271247461903,
-            "stored_energy_ratio_over_E1": 2.8284271247461903,
-            "winding_n": 2
-          },
-          {
-            "equilibrium_radius_ratio": 1.7320508075688772,
-            "exact_n_3_over_2": 5.196152422706632,
-            "stored_energy_ratio_over_E1": 5.196152422706632,
-            "winding_n": 3
-          },
-          {
-            "equilibrium_radius_ratio": 2.0,
-            "exact_n_3_over_2": 8.0,
-            "stored_energy_ratio_over_E1": 8.0,
-            "winding_n": 4
-          },
-          {
-            "equilibrium_radius_ratio": 2.23606797749979,
-            "exact_n_3_over_2": 11.180339887498949,
-            "stored_energy_ratio_over_E1": 11.18033988749895,
-            "winding_n": 5
-          }
-        ],
-        "topological_quantization_rule": "z(1) = z(0) on S^1 forces integer winding n in Z",
-        "transition_2_to_1_energy_over_E1": 1.8284271247461903,
-        "transition_3_to_2_energy_over_E1": 2.3677252979604417
-      },
-      "shared_flow_resonance_interaction": {
-        "in_resonance_aligned_energy_at_d_1": -2.0,
-        "in_resonance_attractive_force_law": "-2*m0*|n1*n2|/d^2",
-        "interaction_formula": "Delta_E_int(d, Delta_phi) = -(2*m0*n1*n2/d)*cos((omega1-omega2)*tau + Delta_phi0)",
-        "merges_only_when_resonant": true,
-        "off_resonance_time_average": 0.0
-      },
-      "surrounding_medium_equilibrium": {
-        "cavity_pressure_work_share": 0.25,
-        "energy_in_point_singularity": 0.0,
-        "equilibrium_energy_E1": 1.7547653506033232,
-        "equilibrium_radius_R1": 0.7598356856515925,
-        "formula": "E_bubble(R) = m0*n^2/R (surrounding flow r>=R) + P*V0*R^3 (cavity work)",
-        "radial_shell_energy_fractions": {
-          "R_to_100R": 0.99,
-          "R_to_10R": 0.9,
-          "R_to_2R": 0.5,
-          "R_to_5R": 0.8
+    "integer_winding_sharp_levels": {
+      "emissions_are_sharp_lines_not_smear": true,
+      "levels": [
+        {
+          "equilibrium_radius_ratio": 1.0,
+          "exact_n_3_over_2": 1.0,
+          "stored_energy_ratio_over_E1": 1.0,
+          "winding_n": 1
         },
-        "surrounding_flow_energy_share": 0.75,
-        "virial_ratio_surrounding_over_pressure": 3.0
-      },
-      "untuned_mass_ratio_tests": {
-        "candidate_A_single_stage_winding_n_3_over_2": {
-          "n_150_ratio": 1837.1173070873836,
-          "n_2_ratio": 2.8284271247461903,
-          "n_3_ratio": 5.196152422706632,
-          "verdict": "misses_1836_without_supplying_n_150_by_hand"
+        {
+          "equilibrium_radius_ratio": 1.4142135623730951,
+          "exact_n_3_over_2": 2.8284271247461903,
+          "stored_energy_ratio_over_E1": 2.8284271247461903,
+          "winding_n": 2
         },
-        "candidate_B_dimensional_accumulation_1D_to_3D": {
-          "bare_6_pi_5": 1836.1181087116884,
-          "bare_ppm_error": 18.824533935469063,
-          "bare_relative_error": 1.8824533935469065e-05,
-          "caveat": "6*pi^5 is the exact product of 2d=6 signed rays and pi^5 5-phase volume, but deriving that product directly from the A0 3D stretch integral remains an open mathematical proof step",
-          "dressed_6_pi_5_plus_medium_floor": 1836.1533134853466,
-          "dressed_ppm_error": 0.3485850364491095,
-          "dressed_relative_error": 3.485850364491095e-07,
-          "formula_bare": "(2*d) * pi^(2+d) = 6 * pi^5 (6 signed rays from A2 * 5 phase dimensions from A1)",
-          "two_valve_medium_dressing_exp_minus_3_over_sqrt_2": 0.03520477365831485
+        {
+          "equilibrium_radius_ratio": 1.7320508075688772,
+          "exact_n_3_over_2": 5.196152422706632,
+          "stored_energy_ratio_over_E1": 5.196152422706632,
+          "winding_n": 3
         },
-        "codata_neutron_minus_proton_over_me": 2.530988,
-        "codata_proton_to_electron": 1836.15267343,
-        "neutron_proton_gap_comparisons": {
-          "single_stage_n2_bubble_over_me": 2.8284271247461903,
-          "single_stage_n2_mev": 1.445323290896822,
-          "single_stage_n2_relative_error": 0.11751897865426092,
-          "threshold_capture_bare_2_plus_theta_spaghetti": 2.5,
-          "threshold_capture_bare_mev": 1.2774973749999998,
-          "threshold_capture_bare_relative_error": -0.012243440111134386,
-          "threshold_capture_dressed_mev": 1.2954869773743865,
-          "threshold_capture_dressed_over_me": 2.535204773658315,
-          "threshold_capture_dressed_relative_error": 0.0016660583370269584
+        {
+          "equilibrium_radius_ratio": 2.0,
+          "exact_n_3_over_2": 8.0,
+          "stored_energy_ratio_over_E1": 8.0,
+          "winding_n": 4
+        },
+        {
+          "equilibrium_radius_ratio": 2.23606797749979,
+          "exact_n_3_over_2": 11.180339887498949,
+          "stored_energy_ratio_over_E1": 11.18033988749895,
+          "winding_n": 5
         }
-      }
+      ],
+      "topological_quantization_rule": "z(1) = z(0) on S^1 forces integer winding n in Z",
+      "transition_2_to_1_energy_over_E1": 1.8284271247461903,
+      "transition_3_to_2_energy_over_E1": 2.3677252979604417
+    },
+    "opposite_winding_cancellation": {
+      "cavity_lock_after_contact": 0.0,
+      "combined_winding": 0,
+      "initial_windings": [
+        1,
+        -1
+      ],
+      "net_momentum_residual": 0.0,
+      "outgoing_ripple_energies_keV": [
+        510.99895,
+        510.99895
+      ],
+      "outgoing_ripple_energies_over_E1": [
+        1.0,
+        1.0
+      ],
+      "separation_angle_degrees": 180.0,
+      "total_released_energy_over_E1": 2.0
+    },
+    "shared_flow_resonance_interaction": {
+      "in_resonance_aligned_energy_at_d_1": -2.0,
+      "in_resonance_attractive_force_law": "-2*m0*|n1*n2|/d^2",
+      "interaction_formula": "Delta_E_int(d, Delta_phi) = -(2*m0*n1*n2/d)*cos((omega1-omega2)*tau + Delta_phi0)",
+      "merges_only_when_resonant": true,
+      "off_resonance_time_average": 0.0
+    },
+    "surrounding_medium_3_to_1_virial_split": {
+      "cavity_pressure_work_share": 0.25,
+      "energy_in_point_singularity": 0.0,
+      "equilibrium_energy_E1": 1.7547653506033232,
+      "equilibrium_radius_R1": 0.7598356856515925,
+      "formula": "E_bubble(R) = m0*n^2/R (surrounding flow r>=R) + P*V0*R^3 (cavity work)",
+      "radial_shell_energy_fractions": {
+        "R_to_100R": 0.99,
+        "R_to_10R": 0.9,
+        "R_to_2R": 0.5,
+        "R_to_5R": 0.8
+      },
+      "surrounding_flow_energy_share": 0.75,
+      "virial_ratio_surrounding_over_pressure": 3.0
+    },
+    "three_accumulator_bubble_ladder": {
+      "axiom_rule": "W_k(n) = C(n, k) from iterated A1 offset accumulation; E_3D^*(n) = 4*(P*V0)^(1/4)*m0^(3/4)*sqrt(W_1*W_2*W_3)",
+      "codata_proton_to_electron": 1836.15267343,
+      "hits_1836_without_extra_factor": false,
+      "hits_3d_threshold_at_n_equals_3": true,
+      "ladder": [
+        {
+          "binomial_windings": [
+            1,
+            0,
+            0
+          ],
+          "directional_moments": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "equilibrium_3d_energy": 0.0,
+          "n": 1,
+          "ratio_over_n1_1d_loop": 0.0,
+          "ratio_over_n3_baryon": 0.0,
+          "supported_spatial_dimension": 1,
+          "supports_3d_volume": false,
+          "volumetric_factor_sqrt_W1_W2_W3": 0.0
+        },
+        {
+          "binomial_windings": [
+            2,
+            1,
+            0
+          ],
+          "directional_moments": [
+            4.0,
+            1.0,
+            0.0
+          ],
+          "equilibrium_3d_energy": 0.0,
+          "n": 2,
+          "ratio_over_n1_1d_loop": 0.0,
+          "ratio_over_n3_baryon": 0.0,
+          "supported_spatial_dimension": 2,
+          "supports_3d_volume": false,
+          "volumetric_factor_sqrt_W1_W2_W3": 0.0
+        },
+        {
+          "binomial_windings": [
+            3,
+            3,
+            1
+          ],
+          "directional_moments": [
+            9.0,
+            9.0,
+            1.0
+          ],
+          "equilibrium_3d_energy": 12.0,
+          "n": 3,
+          "ratio_over_n1_1d_loop": 6.0,
+          "ratio_over_n3_baryon": 1.0,
+          "supported_spatial_dimension": 3,
+          "supports_3d_volume": true,
+          "volumetric_factor_sqrt_W1_W2_W3": 3.0
+        },
+        {
+          "binomial_windings": [
+            4,
+            6,
+            4
+          ],
+          "directional_moments": [
+            16.0,
+            36.0,
+            16.0
+          ],
+          "equilibrium_3d_energy": 39.191835884530846,
+          "n": 4,
+          "ratio_over_n1_1d_loop": 19.595917942265423,
+          "ratio_over_n3_baryon": 3.2659863237109037,
+          "supported_spatial_dimension": 3,
+          "supports_3d_volume": true,
+          "volumetric_factor_sqrt_W1_W2_W3": 9.797958971132712
+        },
+        {
+          "binomial_windings": [
+            5,
+            10,
+            10
+          ],
+          "directional_moments": [
+            25.0,
+            100.0,
+            100.0
+          ],
+          "equilibrium_3d_energy": 89.44271909999159,
+          "n": 5,
+          "ratio_over_n1_1d_loop": 44.721359549995796,
+          "ratio_over_n3_baryon": 7.4535599249993,
+          "supported_spatial_dimension": 3,
+          "supports_3d_volume": true,
+          "volumetric_factor_sqrt_W1_W2_W3": 22.360679774997898
+        },
+        {
+          "binomial_windings": [
+            6,
+            15,
+            20
+          ],
+          "directional_moments": [
+            36.0,
+            225.0,
+            400.0
+          ],
+          "equilibrium_3d_energy": 169.7056274847714,
+          "n": 6,
+          "ratio_over_n1_1d_loop": 84.8528137423857,
+          "ratio_over_n3_baryon": 14.142135623730951,
+          "supported_spatial_dimension": 3,
+          "supports_3d_volume": true,
+          "volumetric_factor_sqrt_W1_W2_W3": 42.42640687119285
+        }
+      ],
+      "minimum_n_for_3d_volume": 3,
+      "missing_continuum_phase_factor_for_1836": 306.0254455716667,
+      "n1_is_1d_loop": true,
+      "n2_is_2d_sheet": true,
+      "untuned_n3_to_n1_energy_ratio": 6.0
     },
     "why_minus_exists_and_radius_crosses_zero": {
       "circle_to_pendulum_identity": "R(tau) = Re(R0 * exp(i*omega*tau)) = R0 * cos(omega*tau)",
@@ -841,1262 +634,368 @@
       ]
     }
   },
-  "pipeline": {
-    "nested_local_space_readout": {
-      "branching_chain_evolution": {
-        "branch_factor": 3,
-        "compression_per_step": 2.5,
-        "generations": 3,
-        "history": [
-          {
-            "active_levels": [
-              {
-                "budget_per_node": 0.11261828716044864,
-                "budget_total": 0.11261828716044864,
-                "count": 1,
-                "depth": 0,
-                "state": "o"
-              },
-              {
-                "budget_per_node": 0.2957939042798505,
-                "budget_total": 0.8873817128395514,
-                "count": 3,
-                "depth": 1,
-                "state": "O"
-              }
-            ],
-            "conservation_residual": 0.0,
-            "next_nucleated_seed_count": 9,
-            "pattern_signature": "oOOOooooooooo",
-            "step": 1,
-            "total_budget": 1.0,
-            "transferred_fraction_theta": 0.8873817128395514
-          },
-          {
-            "active_levels": [
-              {
-                "budget_per_node": 0.11261828716044864,
-                "budget_total": 0.11261828716044864,
-                "count": 1,
-                "depth": 0,
-                "state": "o"
-              },
-              {
-                "budget_per_node": 0.033311802852498455,
-                "budget_total": 0.09993540855749537,
-                "count": 3,
-                "depth": 1,
-                "state": "o"
-              },
-              {
-                "budget_per_node": 0.08749403380911733,
-                "budget_total": 0.787446304282056,
-                "count": 9,
-                "depth": 2,
-                "state": "O"
-              }
-            ],
-            "conservation_residual": 0.0,
-            "next_nucleated_seed_count": 27,
-            "pattern_signature": "ooooOOOOOOOOOoooooooooooo",
-            "step": 2,
-            "total_budget": 1.0,
-            "transferred_fraction_theta": 0.8873817128395514
-          },
-          {
-            "active_levels": [
-              {
-                "budget_per_node": 0.11261828716044864,
-                "budget_total": 0.11261828716044864,
-                "count": 1,
-                "depth": 0,
-                "state": "o"
-              },
-              {
-                "budget_per_node": 0.033311802852498455,
-                "budget_total": 0.09993540855749537,
-                "count": 3,
-                "depth": 1,
-                "state": "o"
-              },
-              {
-                "budget_per_node": 0.009853428224341177,
-                "budget_total": 0.0886808540190706,
-                "count": 9,
-                "depth": 2,
-                "state": "o"
-              },
-              {
-                "budget_per_node": 0.025880201861592053,
-                "budget_total": 0.6987654502629854,
-                "count": 27,
-                "depth": 3,
-                "state": "O"
-              }
-            ],
-            "conservation_residual": 0.0,
-            "next_nucleated_seed_count": 81,
-            "pattern_signature": "oooooooooooooOOOOOOOOOOOOoooooooooooo",
-            "step": 3,
-            "total_budget": 1.0,
-            "transferred_fraction_theta": 0.8873817128395514
-          }
-        ],
-        "transferred_fraction_per_step": 0.8873817128395514
+  "discrete_3d_harmonic_asymmetry_ladder": {
+    "bbn_observed_window": [
+      5.8e-10,
+      6.5e-10
+    ],
+    "formula": "eta_K = tanh((pi/2) * exp(-2*chi_spaghetti) * exp(-3*K)) = tanh((pi/4) * exp(-3*K))",
+    "planck_observed_reference": 6.1e-10,
+    "spaghettification_factor": 0.5,
+    "spaghettification_threshold_chi": 0.34657359027997264,
+    "stage_K_7_eta": 5.955329033932181e-10,
+    "stages": [
+      {
+        "asymmetry_eta_K": 0.0390827546629241,
+        "three_d_efold_stage_K": 1,
+        "total_efolds_3K": 3
       },
-      "compression_scan": [
-        {
-          "cumulative_compression_chi": 0.0,
-          "cumulative_sphere_scale": 0.6861406616345072,
-          "dark_energy_like_fraction": 0.33294245660406524,
-          "dark_matter_like_fraction": 0.4746171825043854,
-          "dark_sector_combined_fraction": 0.8075596391084506,
-          "de_to_boundary_virial_lock": 3.0,
-          "level": 1,
-          "local_region_label": "-",
-          "orientation_sign": -1,
-          "transferred_winding_fraction": 0.4707890075482392,
-          "visible_filament_like_fraction": 0.19244036089154937
-        },
-        {
-          "cumulative_compression_chi": 1.0,
-          "cumulative_sphere_scale": 0.7935733495316706,
-          "dark_energy_like_fraction": 0.49699574506579786,
-          "dark_matter_like_fraction": 0.2559658437585876,
-          "dark_sector_combined_fraction": 0.7529615888243855,
-          "de_to_boundary_virial_lock": 3.0,
-          "level": 1,
-          "local_region_label": "-",
-          "orientation_sign": -1,
-          "transferred_winding_fraction": 0.629758661086915,
-          "visible_filament_like_fraction": 0.24703841117561456
-        },
-        {
-          "cumulative_compression_chi": 2.0,
-          "cumulative_sphere_scale": 0.9081818375826377,
-          "dark_energy_like_fraction": 0.6425461069788585,
-          "dark_matter_like_fraction": 0.22774185774946445,
-          "dark_sector_combined_fraction": 0.8702879647283228,
-          "de_to_boundary_virial_lock": 3.0,
-          "level": 1,
-          "local_region_label": "-",
-          "orientation_sign": -1,
-          "transferred_winding_fraction": 0.8247942501149765,
-          "visible_filament_like_fraction": 0.1297120352716772
-        },
-        {
-          "cumulative_compression_chi": 2.5,
-          "cumulative_sphere_scale": 0.9420094016725902,
-          "dark_energy_like_fraction": 0.6830926070427444,
-          "dark_matter_like_fraction": 0.2327336470692863,
-          "dark_sector_combined_fraction": 0.9158262541120307,
-          "de_to_boundary_virial_lock": 3.0,
-          "level": 1,
-          "local_region_label": "-",
-          "orientation_sign": -1,
-          "transferred_winding_fraction": 0.8873817128395514,
-          "visible_filament_like_fraction": 0.08417374588796928
-        },
-        {
-          "cumulative_compression_chi": 3.0,
-          "cumulative_sphere_scale": 0.9639756699278514,
-          "dark_energy_like_fraction": 0.7088268203026444,
-          "dark_matter_like_fraction": 0.2381338357755853,
-          "dark_sector_combined_fraction": 0.9469606560782298,
-          "de_to_boundary_virial_lock": 3.0,
-          "level": 1,
-          "local_region_label": "-",
-          "orientation_sign": -1,
-          "transferred_winding_fraction": 0.92924909221285,
-          "visible_filament_like_fraction": 0.05303934392177024
-        },
-        {
-          "cumulative_compression_chi": 4.0,
-          "cumulative_sphere_scale": 0.9864414694771443,
-          "dark_energy_like_fraction": 0.7346548898284142,
-          "dark_matter_like_fraction": 0.24513666640760606,
-          "dark_sector_combined_fraction": 0.9797915562360203,
-          "de_to_boundary_virial_lock": 3.0,
-          "level": 1,
-          "local_region_label": "-",
-          "orientation_sign": -1,
-          "transferred_winding_fraction": 0.9730667727042278,
-          "visible_filament_like_fraction": 0.020208443763979653
-        }
-      ],
-      "cyclic_vortex_ring": [
-        {
-          "active_envelope": 0.8,
-          "conservation_residual": 0.0,
-          "max_to_min_vortex_contrast": 9.000000000000002,
-          "node_0_is_giant_hurricane": true,
-          "node_budgets": [
-            0.225,
-            0.19571067811865478,
-            0.125,
-            0.05428932188134525,
-            0.024999999999999994,
-            0.054289321881345234,
-            0.12499999999999999,
-            0.19571067811865472
-          ],
-          "node_count": 8,
-          "node_states": "OOOooooO",
-          "offset": 0.0,
-          "pure_diffusion_without_offset_envelope": 0.8,
-          "total_budget": 1.0
-        },
-        {
-          "active_envelope": 0.8,
-          "conservation_residual": 0.0,
-          "max_to_min_vortex_contrast": 9.000000000000002,
-          "node_0_is_giant_hurricane": true,
-          "node_budgets": [
-            0.125,
-            0.19571067811865478,
-            0.225,
-            0.19571067811865478,
-            0.125,
-            0.05428932188134525,
-            0.024999999999999994,
-            0.054289321881345234
-          ],
-          "node_count": 8,
-          "node_states": "OOOOOooo",
-          "offset": 0.25,
-          "pure_diffusion_without_offset_envelope": 0.7515304502507807,
-          "total_budget": 1.0
-        },
-        {
-          "active_envelope": 0.8,
-          "conservation_residual": 0.0,
-          "max_to_min_vortex_contrast": 9.000000000000002,
-          "node_0_is_giant_hurricane": false,
-          "node_budgets": [
-            0.024999999999999994,
-            0.05428932188134525,
-            0.125,
-            0.19571067811865478,
-            0.225,
-            0.19571067811865478,
-            0.125,
-            0.05428932188134525
-          ],
-          "node_count": 8,
-          "node_states": "ooOOOOOo",
-          "offset": 0.5,
-          "pure_diffusion_without_offset_envelope": 0.7059975220676764,
-          "total_budget": 1.0
-        },
-        {
-          "active_envelope": 0.8,
-          "conservation_residual": 0.0,
-          "max_to_min_vortex_contrast": 9.000000000000002,
-          "node_0_is_giant_hurricane": false,
-          "node_budgets": [
-            0.12499999999999999,
-            0.054289321881345234,
-            0.024999999999999994,
-            0.05428932188134525,
-            0.125,
-            0.19571067811865478,
-            0.225,
-            0.19571067811865478
-          ],
-          "node_count": 8,
-          "node_states": "ooooOOOO",
-          "offset": 0.75,
-          "pure_diffusion_without_offset_envelope": 0.6632232945443204,
-          "total_budget": 1.0
-        },
-        {
-          "active_envelope": 0.8,
-          "conservation_residual": -1.1102230246251565e-16,
-          "max_to_min_vortex_contrast": 9.000000000000002,
-          "node_0_is_giant_hurricane": true,
-          "node_budgets": [
-            0.225,
-            0.19571067811865472,
-            0.12499999999999999,
-            0.054289321881345234,
-            0.024999999999999994,
-            0.05428932188134525,
-            0.125,
-            0.19571067811865478
-          ],
-          "node_count": 8,
-          "node_states": "OOooooOO",
-          "offset": 1.0,
-          "pure_diffusion_without_offset_envelope": 0.623040626457124,
-          "total_budget": 0.9999999999999999
-        }
-      ],
-      "spectral_band_shift": [
-        {
-          "absolute_zero_max_wavelength": 2.718281828459045,
-          "baryon_harmonic_wavelength": 1.0556122949073634e-09,
-          "baryon_octaves_below_horizon": 31.26196783567042,
-          "baryon_to_horizon_wavelength_ratio": 3.883380611442247e-10,
-          "compression_chi": -1.0,
-          "eta_at_absolute_zero_horizon": 0.9171523356672744,
-          "eta_at_baryon_harmonic": 6.1e-10,
-          "eta_at_planck_cutoff": 1.5707963267948966e-61,
-          "frequency_scale_factor": 0.36787944117144233,
-          "invariant_spectral_bandwidth": 1e+61,
-          "planck_cutoff_min_wavelength": 2.7182818284590452e-61,
-          "wavelength_scale_factor": 2.718281828459045,
-          "within_room_spectrum": true
-        },
-        {
-          "absolute_zero_max_wavelength": 1.0,
-          "baryon_harmonic_wavelength": 3.883380611442247e-10,
-          "baryon_octaves_below_horizon": 31.26196783567042,
-          "baryon_to_horizon_wavelength_ratio": 3.883380611442247e-10,
-          "compression_chi": 0.0,
-          "eta_at_absolute_zero_horizon": 0.9171523356672744,
-          "eta_at_baryon_harmonic": 6.100000000000001e-10,
-          "eta_at_planck_cutoff": 1.5707963267948966e-61,
-          "frequency_scale_factor": 1.0,
-          "invariant_spectral_bandwidth": 1e+61,
-          "planck_cutoff_min_wavelength": 1e-61,
-          "wavelength_scale_factor": 1.0,
-          "within_room_spectrum": true
-        },
-        {
-          "absolute_zero_max_wavelength": 0.36787944117144233,
-          "baryon_harmonic_wavelength": 1.428615889193388e-10,
-          "baryon_octaves_below_horizon": 31.26196783567042,
-          "baryon_to_horizon_wavelength_ratio": 3.883380611442247e-10,
-          "compression_chi": 1.0,
-          "eta_at_absolute_zero_horizon": 0.9171523356672744,
-          "eta_at_baryon_harmonic": 6.100000000000001e-10,
-          "eta_at_planck_cutoff": 1.5707963267948966e-61,
-          "frequency_scale_factor": 2.718281828459045,
-          "invariant_spectral_bandwidth": 1e+61,
-          "planck_cutoff_min_wavelength": 3.6787944117144234e-62,
-          "wavelength_scale_factor": 0.36787944117144233,
-          "within_room_spectrum": true
-        },
-        {
-          "absolute_zero_max_wavelength": 0.049787068367863944,
-          "baryon_harmonic_wavelength": 1.9334213600031244e-11,
-          "baryon_octaves_below_horizon": 31.26196783567042,
-          "baryon_to_horizon_wavelength_ratio": 3.883380611442247e-10,
-          "compression_chi": 3.0,
-          "eta_at_absolute_zero_horizon": 0.9171523356672744,
-          "eta_at_baryon_harmonic": 6.100000000000001e-10,
-          "eta_at_planck_cutoff": 1.5707963267948966e-61,
-          "frequency_scale_factor": 20.085536923187668,
-          "invariant_spectral_bandwidth": 1e+61,
-          "planck_cutoff_min_wavelength": 4.978706836786395e-63,
-          "wavelength_scale_factor": 0.049787068367863944,
-          "within_room_spectrum": true
-        }
-      ],
-      "three_level_chain_at_chi_2_5": {
-        "antimatter_and_baryon_excess_check": {
-          "bulk_single_orientation_in_child": true,
-          "matches_observed_eta_without_scale_separation": false,
-          "observed_baryon_eta_reference": 6.1e-10,
-          "required_nested_efolds_for_observed_eta": 21.21756215876119,
-          "required_omega_over_gamma_for_observed_eta": 1043638971.0943956,
-          "single_mode_eta_range": [
-            0.0864272337,
-            0.574697234
-          ]
-        },
-        "asymptotic_virial_partition": {
-          "dark_energy_like": 0.75,
-          "dark_matter_like": 0.25,
-          "visible_filament_like": 0.0
-        },
-        "axiom_signed_zero_crossing": "Signed radius passes through 0 into -; det(F) flips sign (-1)^k at each one-way 0 wall.",
-        "compression_per_level": 2.5,
-        "levels": 3,
-        "nested_chain": [
-          {
-            "cumulative_compression_chi": 2.5,
-            "cumulative_sphere_scale": 0.9420094016725902,
-            "dark_energy_like_fraction": 0.6830926070427444,
-            "dark_matter_like_fraction": 0.2327336470692863,
-            "dark_sector_combined_fraction": 0.9158262541120307,
-            "de_to_boundary_virial_lock": 3.0,
-            "level": 1,
-            "local_region_label": "-",
-            "orientation_sign": -1,
-            "transferred_winding_fraction": 0.8873817128395514,
-            "visible_filament_like_fraction": 0.08417374588796928
-          },
-          {
-            "cumulative_compression_chi": 5.0,
-            "cumulative_sphere_scale": 0.8873817128395514,
-            "dark_energy_like_fraction": 0.6830926070427444,
-            "dark_matter_like_fraction": 0.2327336470692863,
-            "dark_sector_combined_fraction": 0.9158262541120307,
-            "de_to_boundary_virial_lock": 3.0,
-            "level": 2,
-            "local_region_label": "+",
-            "orientation_sign": 1,
-            "transferred_winding_fraction": 0.8873817128395514,
-            "visible_filament_like_fraction": 0.08417374588796928
-          },
-          {
-            "cumulative_compression_chi": 7.5,
-            "cumulative_sphere_scale": 0.835921916367184,
-            "dark_energy_like_fraction": 0.6830926070427444,
-            "dark_matter_like_fraction": 0.2327336470692863,
-            "dark_sector_combined_fraction": 0.9158262541120307,
-            "de_to_boundary_virial_lock": 3.0,
-            "level": 3,
-            "local_region_label": "-",
-            "orientation_sign": -1,
-            "transferred_winding_fraction": 0.8873817128395514,
-            "visible_filament_like_fraction": 0.08417374588796928
-          }
-        ],
-        "surfaceology_analogy": "Each 0 horizon is a closed puncture boundary factorizing the outer parent polygon from the inner child surface.",
-        "two_valve_steady_state_lock": {
-          "explanation": "Every nested room k sits between an outer birth 0 valve (inflow from parent k-1) and inner black-hole 0 valves (outflow to children k+1), locking a steady-state ~95% dark-sector horizon instead of draining visible matter to zero.",
-          "three_dimensional_e_fold_dark_horizon": 0.950212931632136,
-          "three_dimensional_e_fold_visible_floor": 0.049787068367863944,
-          "virial_3_to_1_dark_energy_at_95_horizon": 0.7126596987241021,
-          "virial_3_to_1_dark_matter_at_95_horizon": 0.237553232908034
-        }
+      {
+        "asymmetry_eta_K": 0.0019468049475698836,
+        "three_d_efold_stage_K": 2,
+        "total_efolds_3K": 6
+      },
+      {
+        "asymmetry_eta_K": 9.692583317139e-05,
+        "three_d_efold_stage_K": 3,
+        "total_efolds_3K": 9
+      },
+      {
+        "asymmetry_eta_K": 4.8256530977904315e-06,
+        "three_d_efold_stage_K": 4,
+        "total_efolds_3K": 12
+      },
+      {
+        "asymmetry_eta_K": 2.4025512070114697e-07,
+        "three_d_efold_stage_K": 5,
+        "total_efolds_3K": 15
+      },
+      {
+        "asymmetry_eta_K": 1.1961598120077638e-08,
+        "three_d_efold_stage_K": 6,
+        "total_efolds_3K": 18
+      },
+      {
+        "asymmetry_eta_K": 5.955329033932181e-10,
+        "three_d_efold_stage_K": 7,
+        "total_efolds_3K": 21
       }
+    ],
+    "within_bbn_window": true
+  },
+  "no_observational_fit": true,
+  "numerical_coincidences_not_derived": {
+    "cmb_temperature_projections_using_measured_H0_G": {
+      "bare_geometric_mean_sqrt_TP_TH_K": 19.39603568049609,
+      "critical_blackbody_temperature_K": 31.73007770898084,
+      "h0_km_s_mpc": 67.4,
+      "horizon_2d_efold_relative_error": 0.03687864798590175,
+      "horizon_2d_efold_temperature_K": 2.6249679824873846,
+      "horizon_radius_m": 1.3724968349418282e+26,
+      "horizon_temperature_T_H_K": 2.6553532515830042e-30,
+      "observed_cmb_temperature_K": 2.72548,
+      "planck_length_m": 1.616255e-35,
+      "planck_temperature_K": 1.416784e+32,
+      "room_dynamic_range_R_H_over_l_P": 8.491833497448288e+60,
+      "two_valve_fixed_point_relative_error": 0.0010463608456618108,
+      "two_valve_fixed_point_temperature_K": 2.7283318355576345
     },
-    "no_observational_input": true,
-    "schema": "nsc-buckling-damping-goldilocks-v1",
-    "stage_0_two_force_zero_crossing": {
-      "horizon_offset": 1.4142135623730951,
-      "rule": "R_tt = -(F_in - F_out) < 0; R(tau) crosses + -> 0 -> - smoothly with det(F)=(R/R0)^3 flipping sign",
-      "scan": [
-        {
-          "conservation_residual": 0.0,
-          "horizon_crossing_offset": 1.4142135623730951,
-          "horizon_crossing_speed": 1.4142135623730951,
-          "horizon_kinetic_budget": 1.0000000000000002,
-          "jacobian_determinant_ratio": 1.0,
-          "net_compression_force": 1.0,
-          "offset": 0.0,
-          "orientation_sign": 1,
-          "outward_parent_reversal_blocked": true,
-          "physical_expansion_rate": 0.0,
-          "physical_radius": 1.0,
-          "region": "+",
-          "signed_radius": 1.0,
-          "signed_velocity": 0.0,
-          "stopping_at_zero_requires_infinite_deceleration": true,
-          "total_mechanical_budget": 1.0,
-          "unique_finite_cost_continuation": "cross 0 into R < 0 (- region), where r_minus = -R expands from 0 with r_minus_dot = -R_dot > 0",
-          "zero_crossing_impulse_cost": 0.0
-        },
-        {
-          "conservation_residual": 0.0,
-          "horizon_crossing_offset": 1.4142135623730951,
-          "horizon_crossing_speed": 1.4142135623730951,
-          "horizon_kinetic_budget": 1.0000000000000002,
-          "jacobian_determinant_ratio": 0.125,
-          "net_compression_force": 1.0,
-          "offset": 1.0,
-          "orientation_sign": 1,
-          "outward_parent_reversal_blocked": true,
-          "physical_expansion_rate": -1.0,
-          "physical_radius": 0.5,
-          "region": "+",
-          "signed_radius": 0.5,
-          "signed_velocity": -1.0,
-          "stopping_at_zero_requires_infinite_deceleration": true,
-          "total_mechanical_budget": 1.0,
-          "unique_finite_cost_continuation": "cross 0 into R < 0 (- region), where r_minus = -R expands from 0 with r_minus_dot = -R_dot > 0",
-          "zero_crossing_impulse_cost": 0.0
-        },
-        {
-          "conservation_residual": 0.0,
-          "horizon_crossing_offset": 1.4142135623730951,
-          "horizon_crossing_speed": 1.4142135623730951,
-          "horizon_kinetic_budget": 1.0000000000000002,
-          "jacobian_determinant_ratio": -1.0947644252537633e-47,
-          "net_compression_force": 1.0,
-          "offset": 1.4142135623730951,
-          "orientation_sign": -1,
-          "outward_parent_reversal_blocked": true,
-          "physical_expansion_rate": 1.4142135623730951,
-          "physical_radius": 2.220446049250313e-16,
-          "region": "-",
-          "signed_radius": -2.220446049250313e-16,
-          "signed_velocity": -1.4142135623730951,
-          "stopping_at_zero_requires_infinite_deceleration": true,
-          "total_mechanical_budget": 1.0,
-          "unique_finite_cost_continuation": "cross 0 into R < 0 (- region), where r_minus = -R expands from 0 with r_minus_dot = -R_dot > 0",
-          "zero_crossing_impulse_cost": 0.0
-        },
-        {
-          "conservation_residual": 0.0,
-          "horizon_crossing_offset": 1.4142135623730951,
-          "horizon_crossing_speed": 1.4142135623730951,
-          "horizon_kinetic_budget": 1.0000000000000002,
-          "jacobian_determinant_ratio": -1.0,
-          "net_compression_force": 1.0,
-          "offset": 2.0,
-          "orientation_sign": -1,
-          "outward_parent_reversal_blocked": true,
-          "physical_expansion_rate": 2.0,
-          "physical_radius": 1.0,
-          "region": "-",
-          "signed_radius": -1.0,
-          "signed_velocity": -2.0,
-          "stopping_at_zero_requires_infinite_deceleration": true,
-          "total_mechanical_budget": 1.0,
-          "unique_finite_cost_continuation": "cross 0 into R < 0 (- region), where r_minus = -R expands from 0 with r_minus_dot = -R_dot > 0",
-          "zero_crossing_impulse_cost": 0.0
-        },
-        {
-          "conservation_residual": 0.0,
-          "horizon_crossing_offset": 1.4142135623730951,
-          "horizon_crossing_speed": 1.4142135623730951,
-          "horizon_kinetic_budget": 1.0000000000000002,
-          "jacobian_determinant_ratio": -42.875,
-          "net_compression_force": 1.0,
-          "offset": 3.0,
-          "orientation_sign": -1,
-          "outward_parent_reversal_blocked": true,
-          "physical_expansion_rate": 3.0,
-          "physical_radius": 3.5,
-          "region": "-",
-          "signed_radius": -3.5,
-          "signed_velocity": -3.0,
-          "stopping_at_zero_requires_infinite_deceleration": true,
-          "total_mechanical_budget": 1.0,
-          "unique_finite_cost_continuation": "cross 0 into R < 0 (- region), where r_minus = -R expands from 0 with r_minus_dot = -R_dot > 0",
-          "zero_crossing_impulse_cost": 0.0
-        }
-      ]
+    "k7_baryon_harmonic_rung": 5.955329033932181e-10,
+    "lenz_6_pi_5_and_medium_dressing": {
+      "bare_6_pi_5": 1836.1181087116884,
+      "bare_ppm_error": 18.824533935469063,
+      "bare_relative_error": 1.8824533935469065e-05,
+      "caveat": "6*pi^5 is the exact product of 2d=6 signed rays and pi^5 5-phase volume, but deriving that product directly from the A0 3D stretch integral remains an open mathematical proof step",
+      "dressed_6_pi_5_plus_medium_floor": 1836.1533134853466,
+      "dressed_ppm_error": 0.3485850364491095,
+      "dressed_relative_error": 3.485850364491095e-07,
+      "formula_bare": "(2*d) * pi^(2+d) = 6 * pi^5 (6 signed rays from A2 * 5 phase dimensions from A1)",
+      "two_valve_medium_dressing_exp_minus_3_over_sqrt_2": 0.03520477365831485
     },
-    "stage_0b_spaghettification_and_spherical_winner": {
-      "cooker_takeover_rule": "f_minus(chi) = 1 - exp(-3*chi) -> 1 as compression continues",
-      "infall_rule": "diag(xi, xi, xi^-2)/xi^-2 = diag(xi^3, xi^3, 1) -> diag(0, 0, 1) (3D -> 1D spaghettification)",
-      "interior_winner_rule": "A(s)^3 / (36*pi*V^2) >= 1 with unique global minimum at s=0 (round 3D sphere)",
-      "scan": [
-        {
-          "compression_chi": 0.0,
-          "cooker_volume_takeover": {
-            "child_minus_drop_fraction": 0.0,
-            "minus_to_plus_volume_ratio": 0.0,
-            "parent_plus_volume_fraction": 1.0
-          },
-          "infall_spaghettification": {
-            "asymptotic_rank_at_horizon": 1,
-            "normalized_deformation_diagonal": [
-              1.0,
-              1.0,
-              1.0
-            ],
-            "radial_ratio_xi": 1.0,
-            "radial_stretch": 1.0,
-            "spaghettification_aspect_ratio": 1.0,
-            "transverse_stretch": 1.0
-          },
-          "isoperimetric_spherical_winner": {
-            "deformed_area_over_sphere_area": 1.0,
-            "deformed_isoperimetric_quotient": 1.0,
-            "sphere_area_saving_fraction": 0.0,
-            "sphere_minimum_quotient": 1.0,
-            "unique_minimum_shape": "round_3d_sphere"
-          }
-        },
-        {
-          "compression_chi": 0.25,
-          "cooker_volume_takeover": {
-            "child_minus_drop_fraction": 0.5276334472589853,
-            "minus_to_plus_volume_ratio": 1.1170000166126748,
-            "parent_plus_volume_fraction": 0.4723665527410147
-          },
-          "infall_spaghettification": {
-            "asymptotic_rank_at_horizon": 1,
-            "normalized_deformation_diagonal": [
-              0.4723665527410147,
-              0.4723665527410147,
-              1.0
-            ],
-            "radial_ratio_xi": 0.7788007830714049,
-            "radial_stretch": 1.6487212707001282,
-            "spaghettification_aspect_ratio": 2.117000016612675,
-            "transverse_stretch": 0.7788007830714049
-          },
-          "isoperimetric_spherical_winner": {
-            "deformed_area_over_sphere_area": 1.0235702716993846,
-            "deformed_isoperimetric_quotient": 1.072390582868224,
-            "sphere_area_saving_fraction": 0.02302750710046708,
-            "sphere_minimum_quotient": 1.0,
-            "unique_minimum_shape": "round_3d_sphere"
-          }
-        },
-        {
-          "compression_chi": 0.5,
-          "cooker_volume_takeover": {
-            "child_minus_drop_fraction": 0.7768698398515702,
-            "minus_to_plus_volume_ratio": 3.481689070338065,
-            "parent_plus_volume_fraction": 0.22313016014842982
-          },
-          "infall_spaghettification": {
-            "asymptotic_rank_at_horizon": 1,
-            "normalized_deformation_diagonal": [
-              0.22313016014842982,
-              0.22313016014842982,
-              1.0
-            ],
-            "radial_ratio_xi": 0.6065306597126334,
-            "radial_stretch": 2.718281828459045,
-            "spaghettification_aspect_ratio": 4.4816890703380645,
-            "transverse_stretch": 0.6065306597126334
-          },
-          "isoperimetric_spherical_winner": {
-            "deformed_area_over_sphere_area": 1.0890788288888569,
-            "deformed_isoperimetric_quotient": 1.2917484438057134,
-            "sphere_area_saving_fraction": 0.0817928202495134,
-            "sphere_minimum_quotient": 1.0,
-            "unique_minimum_shape": "round_3d_sphere"
-          }
-        },
-        {
-          "compression_chi": 1.0,
-          "cooker_volume_takeover": {
-            "child_minus_drop_fraction": 0.950212931632136,
-            "minus_to_plus_volume_ratio": 19.085536923187668,
-            "parent_plus_volume_fraction": 0.049787068367863944
-          },
-          "infall_spaghettification": {
-            "asymptotic_rank_at_horizon": 1,
-            "normalized_deformation_diagonal": [
-              0.049787068367863944,
-              0.049787068367863944,
-              1.0
-            ],
-            "radial_ratio_xi": 0.36787944117144233,
-            "radial_stretch": 7.38905609893065,
-            "spaghettification_aspect_ratio": 20.085536923187668,
-            "transverse_stretch": 0.36787944117144233
-          },
-          "isoperimetric_spherical_winner": {
-            "deformed_area_over_sphere_area": 1.3220339917517583,
-            "deformed_isoperimetric_quotient": 2.310616473104551,
-            "sphere_area_saving_fraction": 0.24358979705585926,
-            "sphere_minimum_quotient": 1.0,
-            "unique_minimum_shape": "round_3d_sphere"
-          }
-        },
-        {
-          "compression_chi": 2.0,
-          "cooker_volume_takeover": {
-            "child_minus_drop_fraction": 0.9975212478233336,
-            "minus_to_plus_volume_ratio": 402.4287934927351,
-            "parent_plus_volume_fraction": 0.0024787521766663585
-          },
-          "infall_spaghettification": {
-            "asymptotic_rank_at_horizon": 1,
-            "normalized_deformation_diagonal": [
-              0.0024787521766663585,
-              0.0024787521766663585,
-              1.0
-            ],
-            "radial_ratio_xi": 0.1353352832366127,
-            "radial_stretch": 54.598150033144236,
-            "spaghettification_aspect_ratio": 403.4287934927351,
-            "transverse_stretch": 0.1353352832366127
-          },
-          "isoperimetric_spherical_winner": {
-            "deformed_area_over_sphere_area": 2.1374724274182912,
-            "deformed_isoperimetric_quotient": 9.76565918462737,
-            "sphere_area_saving_fraction": 0.5321577077801969,
-            "sphere_minimum_quotient": 1.0,
-            "unique_minimum_shape": "round_3d_sphere"
-          }
-        }
-      ]
+    "neutron_proton_gap_comparisons": {
+      "single_stage_n2_bubble_over_me": 2.8284271247461903,
+      "single_stage_n2_mev": 1.445323290896822,
+      "single_stage_n2_relative_error": 0.11751897865426092,
+      "threshold_capture_bare_2_plus_theta_spaghetti": 2.5,
+      "threshold_capture_bare_mev": 1.2774973749999998,
+      "threshold_capture_bare_relative_error": -0.012243440111134386,
+      "threshold_capture_dressed_mev": 1.2954869773743865,
+      "threshold_capture_dressed_over_me": 2.535204773658315,
+      "threshold_capture_dressed_relative_error": 0.0016660583370269584
     },
-    "stage_1_helical_buckling": {
-      "critical_condition": "lambda_crit = (Q0/P_perp)^(1/3); omega^* = sqrt(lambda_crit^2 - lambda^2)/r_perp for lambda < lambda_crit",
-      "derived_alpha_at_chi_1": 0.1479939631845106,
-      "derived_turning_at_chi_1": 0.9298734950321937,
-      "rule": "E(v_perp; lambda) = Q0/sqrt(lambda^2 + v_perp^2) + P_perp v_perp^2 / 2",
-      "scan": [
-        {
-          "angular_rate_omega": 0.0,
-          "axial_scale": 1.0,
-          "buckled": false,
-          "compression_chi": 0.0,
-          "cost_relief": 0.0,
-          "critical_axial_scale": 1.0,
-          "critical_compression_chi": -0.0,
-          "derived_alpha": 0.0,
-          "helical_arc_length": 1.0,
-          "minimum_cost": 1.0,
-          "straight_cost": 1.0,
-          "straight_transverse_hessian": 0.0,
-          "turning_speed": 0.0
-        },
-        {
-          "angular_rate_omega": 0.6272713450233213,
-          "axial_scale": 0.7788007830714049,
-          "buckled": true,
-          "compression_chi": 0.25,
-          "cost_relief": 0.087290746544058,
-          "critical_axial_scale": 1.0,
-          "critical_compression_chi": -0.0,
-          "derived_alpha": 0.09983333522036335,
-          "helical_arc_length": 1.0,
-          "minimum_cost": 1.1967346701436834,
-          "straight_cost": 1.2840254166877414,
-          "straight_transverse_hessian": -1.1170000166126743,
-          "turning_speed": 0.6272713450233213
-        },
-        {
-          "angular_rate_omega": 0.7950600976206501,
-          "axial_scale": 0.6065306597126334,
-          "buckled": true,
-          "compression_chi": 0.5,
-          "cost_relief": 0.33266099128584936,
-          "critical_axial_scale": 1.0,
-          "critical_compression_chi": -0.0,
-          "derived_alpha": 0.1265377445914513,
-          "helical_arc_length": 1.0,
-          "minimum_cost": 1.3160602794142788,
-          "straight_cost": 1.6487212707001282,
-          "straight_transverse_hessian": -3.4816890703380654,
-          "turning_speed": 0.7950600976206501
-        },
-        {
-          "angular_rate_omega": 0.9298734950321937,
-          "axial_scale": 0.36787944117144233,
-          "buckled": true,
-          "compression_chi": 1.0,
-          "cost_relief": 1.2859494700773515,
-          "critical_axial_scale": 1.0,
-          "critical_compression_chi": -0.0,
-          "derived_alpha": 0.1479939631845106,
-          "helical_arc_length": 1.0,
-          "minimum_cost": 1.4323323583816936,
-          "straight_cost": 2.718281828459045,
-          "straight_transverse_hessian": -19.085536923187664,
-          "turning_speed": 0.9298734950321937
-        },
-        {
-          "angular_rate_omega": 0.9907998592608226,
-          "axial_scale": 0.1353352832366127,
-          "buckled": true,
-          "compression_chi": 2.0,
-          "cost_relief": 5.898213918375017,
-          "critical_axial_scale": 1.0,
-          "critical_compression_chi": -0.0,
-          "derived_alpha": 0.15769069521611415,
-          "helical_arc_length": 1.0,
-          "minimum_cost": 1.490842180555633,
-          "straight_cost": 7.3890560989306495,
-          "straight_transverse_hessian": -402.42879349273505,
-          "turning_speed": 0.9907998592608226
-        }
-      ]
-    },
-    "stage_2_damped_horizon_asymmetry": {
-      "equation": "q_tt + 2*gamma*q_t + (gamma^2+omega^2)*q = 0; E_geom_t = 2*gamma*q_t^2",
-      "history": [
-        {
-          "child_holding_scale": 0.0,
-          "conservation_residual": 0.0,
-          "cumulative_minus_area": 0.8386163612296451,
-          "cumulative_plus_area": 0.9972885435319861,
-          "displacement": 0.0,
-          "envelope": 1.0,
-          "first_minus_lobe_area": 0.24562504539017582,
-          "first_plus_lobe_area": 0.2920990516008634,
-          "goldilocks_completion_fraction": 0.0,
-          "goldilocks_equilibrium_scale": 1.6015928509842094,
-          "lobe_asymmetry_eta": 0.08642723372588978,
-          "net_asymmetric_remainder": 0.158672182302341,
-          "offset": 0.0,
-          "total_budget": 19.739208802178716,
-          "transferred_geometry_budget": 0.0,
-          "velocity": 6.283185307179586,
-          "wave_budget": 19.739208802178716
-        },
-        {
-          "child_holding_scale": 1.0032818155058523,
-          "conservation_residual": 0.0,
-          "cumulative_minus_area": 0.8386163612296451,
-          "cumulative_plus_area": 0.9972885435319861,
-          "displacement": 0.9170040432046712,
-          "envelope": 0.9170040432046712,
-          "first_minus_lobe_area": 0.24562504539017582,
-          "first_plus_lobe_area": 0.2920990516008634,
-          "goldilocks_completion_fraction": 0.6264275061475932,
-          "goldilocks_equilibrium_scale": 1.6015928509842094,
-          "lobe_asymmetry_eta": 0.08642723372588978,
-          "net_asymmetric_remainder": 0.158672182302341,
-          "offset": 0.25,
-          "total_budget": 19.739208802178716,
-          "transferred_geometry_budget": 3.03957607620665,
-          "velocity": -0.3178093835546937,
-          "wave_budget": 16.699632725972066
-        },
-        {
-          "child_holding_scale": 1.2751131776509992,
-          "conservation_residual": 0.0,
-          "cumulative_minus_area": 0.8386163612296451,
-          "cumulative_plus_area": 0.9972885435319861,
-          "displacement": -0.7711054127039705,
-          "envelope": 0.7711054127039705,
-          "first_minus_lobe_area": 0.24562504539017582,
-          "first_plus_lobe_area": 0.2920990516008634,
-          "goldilocks_completion_fraction": 0.7961531402112701,
-          "goldilocks_equilibrium_scale": 1.6015928509842094,
-          "lobe_asymmetry_eta": 0.08642723372588978,
-          "net_asymmetric_remainder": 0.158672182302341,
-          "offset": 0.75,
-          "total_budget": 19.739208802178716,
-          "transferred_geometry_budget": 7.9307852583190765,
-          "velocity": 0.2672447713651342,
-          "wave_budget": 11.80842354385964
-        },
-        {
-          "child_holding_scale": 1.3467736870885985,
-          "conservation_residual": 0.0,
-          "cumulative_minus_area": 0.8386163612296451,
-          "cumulative_plus_area": 0.9972885435319861,
-          "displacement": -1.7319121124709868e-16,
-          "envelope": 0.7071067811865476,
-          "first_minus_lobe_area": 0.24562504539017582,
-          "first_plus_lobe_area": 0.2920990516008634,
-          "goldilocks_completion_fraction": 0.8408964152537146,
-          "goldilocks_equilibrium_scale": 1.6015928509842094,
-          "lobe_asymmetry_eta": 0.08642723372588978,
-          "net_asymmetric_remainder": 0.158672182302341,
-          "offset": 1.0,
-          "total_budget": 19.739208802178716,
-          "transferred_geometry_budget": 9.869604401089358,
-          "velocity": 4.442882938158366,
-          "wave_budget": 9.869604401089358
-        },
-        {
-          "child_holding_scale": 1.4904500894290902,
-          "conservation_residual": 0.0,
-          "cumulative_minus_area": 0.8386163612296451,
-          "cumulative_plus_area": 0.9972885435319861,
-          "displacement": -2.4492935982947064e-16,
-          "envelope": 0.5,
-          "first_minus_lobe_area": 0.24562504539017582,
-          "first_plus_lobe_area": 0.2920990516008634,
-          "goldilocks_completion_fraction": 0.9306048591020996,
-          "goldilocks_equilibrium_scale": 1.6015928509842094,
-          "lobe_asymmetry_eta": 0.08642723372588978,
-          "net_asymmetric_remainder": 0.158672182302341,
-          "offset": 2.0,
-          "total_budget": 19.739208802178716,
-          "transferred_geometry_budget": 14.804406601634037,
-          "velocity": 3.141592653589793,
-          "wave_budget": 4.934802200544679
-        },
-        {
-          "child_holding_scale": 1.5759590941547388,
-          "conservation_residual": 0.0,
-          "cumulative_minus_area": 0.8386163612296451,
-          "cumulative_plus_area": 0.9972885435319861,
-          "displacement": -2.4492935982947064e-16,
-          "envelope": 0.25,
-          "first_minus_lobe_area": 0.24562504539017582,
-          "first_plus_lobe_area": 0.2920990516008634,
-          "goldilocks_completion_fraction": 0.9839948356327152,
-          "goldilocks_equilibrium_scale": 1.6015928509842094,
-          "lobe_asymmetry_eta": 0.08642723372588978,
-          "net_asymmetric_remainder": 0.158672182302341,
-          "offset": 4.0,
-          "total_budget": 19.739208802178716,
-          "transferred_geometry_budget": 18.505508252042546,
-          "velocity": 1.5707963267948966,
-          "wave_budget": 1.2337005501361697
-        }
+    "note": "Formulas below involve post-hoc target selection, Lenz (1951) 6*pi^5, rung selection (K=7), or external measured inputs (H0, G); quarantined from derived theorems.",
+    "two_valve_split_at_exp_minus_3_vs_lambda_cdm": {
+      "de_difference_from_lambda_cdm": 0.02674050813675022,
+      "derived_at_exp_minus_3": [
+        0.7114405081367502,
+        0.2387724234953858,
+        0.049787068367864
       ],
-      "invariant_asymmetry_formula": "eta = (I_+ - I_-)/(I_+ + I_-) = (I_0^+ - |I_1^-|)/(I_0^+ + |I_1^-|) = tanh(pi*gamma/(2*omega))",
-      "net_remainder_formula": "Delta_I = I_+ - I_- = A0 * omega / (gamma^2 + omega^2)"
-    },
-    "stage_3_goldilocks_equilibrium": {
-      "asymptotic_scale": 1.6015928509842094,
-      "completion_at_offset_4": 0.9839948356327152,
-      "formula": "lambda_child(tau) = (E_geom(tau)/(3 P V0))^(1/4) -> lambda_Goldilocks = (E_total/(3 P V0))^(1/4)"
-    },
-    "unified_single_cost_cycle": {
-      "functional": "E(lambda_3, tilde_lambda_1..3, theta; chi) = [2(1-theta)^2 e^chi + (1-theta)^2/lambda_3 + e^(-2chi) lambda_3] + [sum_i theta^2/tilde_lambda_i + tilde_lambda_1 tilde_lambda_2 tilde_lambda_3]",
-      "scan": [
-        {
-          "axioms_used": [
-            "A0: minimize single generator stretch + enclosing work cost E_+ + E_-",
-            "A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -",
-            "A4: conserved turn split n_+ + n_- = N0 across 0"
-          ],
-          "compression_chi": 0.0,
-          "cost_comparison": {
-            "cross_all_to_minus_cost": 4.0,
-            "stay_all_in_plus_cost": 4.0,
-            "unified_minimum_cost": 2.910660458484684
-          },
-          "derived_cooker_takeover": {
-            "minus_volume": 0.32302748112940183,
-            "minus_volume_fraction": 0.3790341449524321,
-            "plus_volume": 0.5292109924517607,
-            "total_two_region_volume": 0.8522384735811626
-          },
-          "fluid_incompressibility_assumed": false,
-          "minus_child_drop": {
-            "aspect_ratio": 1.0,
-            "drop_volume": 0.32302748112940183,
-            "optimal_principal_scales": [
-              0.6861406616345072,
-              0.6861406616345072,
-              0.6861406616345072
-            ],
-            "winner_shape": "round_3d_sphere"
-          },
-          "plus_infall": {
-            "filament_aspect_ratio": 0.5292109924517607,
-            "is_elongated_filament": false,
-            "normalized_deformation_diagonal": [
-              1.0,
-              1.0,
-              0.5292109924517607
-            ],
-            "optimal_radial_scale": 0.5292109924517607,
-            "parcel_volume": 0.5292109924517607,
-            "parcel_volume_shrinks": true,
-            "transverse_scale": 1.0
-          },
-          "surface_tension_assumed": false,
-          "transferred_winding_fraction_theta": 0.4707890075482392,
-          "volume_conservation_shortcut_assumed": false
-        },
-        {
-          "axioms_used": [
-            "A0: minimize single generator stretch + enclosing work cost E_+ + E_-",
-            "A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -",
-            "A4: conserved turn split n_+ + n_- = N0 across 0"
-          ],
-          "compression_chi": 0.25,
-          "cost_comparison": {
-            "cross_all_to_minus_cost": 4.0,
-            "stay_all_in_plus_cost": 4.125652399518293,
-            "unified_minimum_cost": 2.83429879068581
-          },
-          "derived_cooker_takeover": {
-            "minus_volume": 0.34044293514641005,
-            "minus_volume_fraction": 0.4603502107591627,
-            "plus_volume": 0.39908737718903164,
-            "total_two_region_volume": 0.7395303123354418
-          },
-          "fluid_incompressibility_assumed": false,
-          "minus_child_drop": {
-            "aspect_ratio": 1.0,
-            "drop_volume": 0.34044293514641005,
-            "optimal_principal_scales": [
-              0.6982561594501231,
-              0.6982561594501231,
-              0.6982561594501231
-            ],
-            "winner_shape": "round_3d_sphere"
-          },
-          "plus_infall": {
-            "filament_aspect_ratio": 0.8448679841390887,
-            "is_elongated_filament": false,
-            "normalized_deformation_diagonal": [
-              1.0,
-              1.0,
-              0.8448679841390887
-            ],
-            "optimal_radial_scale": 0.6579838476394816,
-            "parcel_volume": 0.39908737718903164,
-            "parcel_volume_shrinks": true,
-            "transverse_scale": 0.7788007830714049
-          },
-          "surface_tension_assumed": false,
-          "transferred_winding_fraction_theta": 0.4875616642100357,
-          "volume_conservation_shortcut_assumed": false
-        },
-        {
-          "axioms_used": [
-            "A0: minimize single generator stretch + enclosing work cost E_+ + E_-",
-            "A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -",
-            "A4: conserved turn split n_+ + n_- = N0 across 0"
-          ],
-          "compression_chi": 0.5,
-          "cost_comparison": {
-            "cross_all_to_minus_cost": 4.0,
-            "stay_all_in_plus_cost": 4.510503860825523,
-            "unified_minimum_cost": 2.8417840106998105
-          },
-          "derived_cooker_takeover": {
-            "minus_volume": 0.38021831925533456,
-            "minus_volume_fraction": 0.5688305838327512,
-            "plus_volume": 0.2882027011009253,
-            "total_two_region_volume": 0.6684210203562598
-          },
-          "fluid_incompressibility_assumed": false,
-          "minus_child_drop": {
-            "aspect_ratio": 1.0,
-            "drop_volume": 0.38021831925533456,
-            "optimal_principal_scales": [
-              0.7244543301145169,
-              0.7244543301145169,
-              0.7244543301145169
-            ],
-            "winner_shape": "round_3d_sphere"
-          },
-          "plus_infall": {
-            "filament_aspect_ratio": 1.291634895565925,
-            "is_elongated_filament": true,
-            "normalized_deformation_diagonal": [
-              0.7742125916796742,
-              0.7742125916796742,
-              1.0
-            ],
-            "optimal_radial_scale": 0.7834161653154588,
-            "parcel_volume": 0.2882027011009253,
-            "parcel_volume_shrinks": true,
-            "transverse_scale": 0.6065306597126334
-          },
-          "surface_tension_assumed": false,
-          "transferred_winding_fraction_theta": 0.5248340764216733,
-          "volume_conservation_shortcut_assumed": false
-        },
-        {
-          "axioms_used": [
-            "A0: minimize single generator stretch + enclosing work cost E_+ + E_-",
-            "A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -",
-            "A4: conserved turn split n_+ + n_- = N0 across 0"
-          ],
-          "compression_chi": 1.0,
-          "cost_comparison": {
-            "cross_all_to_minus_cost": 4.0,
-            "stay_all_in_plus_cost": 6.172322539260975,
-            "unified_minimum_cost": 3.016683915528248
-          },
-          "derived_cooker_takeover": {
-            "minus_volume": 0.4997596900753233,
-            "minus_volume_fraction": 0.7858303215955958,
-            "plus_volume": 0.13620417685791228,
-            "total_two_region_volume": 0.6359638669332356
-          },
-          "fluid_incompressibility_assumed": false,
-          "minus_child_drop": {
-            "aspect_ratio": 1.0,
-            "drop_volume": 0.4997596900753233,
-            "optimal_principal_scales": [
-              0.7935733495316706,
-              0.7935733495316706,
-              0.7935733495316706
-            ],
-            "winner_shape": "round_3d_sphere"
-          },
-          "plus_infall": {
-            "filament_aspect_ratio": 2.7357340233719802,
-            "is_elongated_filament": true,
-            "normalized_deformation_diagonal": [
-              0.36553261079358557,
-              0.36553261079358557,
-              1.0
-            ],
-            "optimal_radial_scale": 1.0064203037117856,
-            "parcel_volume": 0.13620417685791228,
-            "parcel_volume_shrinks": true,
-            "transverse_scale": 0.36787944117144233
-          },
-          "surface_tension_assumed": false,
-          "transferred_winding_fraction_theta": 0.629758661086915,
-          "volume_conservation_shortcut_assumed": false
-        },
-        {
-          "axioms_used": [
-            "A0: minimize single generator stretch + enclosing work cost E_+ + E_-",
-            "A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -",
-            "A4: conserved turn split n_+ + n_- = N0 across 0"
-          ],
-          "compression_chi": 2.0,
-          "cost_comparison": {
-            "cross_all_to_minus_cost": 4.0,
-            "stay_all_in_plus_cost": 15.048782764334526,
-            "unified_minimum_cost": 3.497320190230299
-          },
-          "derived_cooker_takeover": {
-            "minus_volume": 0.749063157697013,
-            "minus_volume_fraction": 0.9693163861649526,
-            "plus_volume": 0.023711519785372774,
-            "total_two_region_volume": 0.7727746774823858
-          },
-          "fluid_incompressibility_assumed": false,
-          "minus_child_drop": {
-            "aspect_ratio": 1.0,
-            "drop_volume": 0.749063157697013,
-            "optimal_principal_scales": [
-              0.9081818375826377,
-              0.9081818375826377,
-              0.9081818375826377
-            ],
-            "winner_shape": "round_3d_sphere"
-          },
-          "plus_infall": {
-            "filament_aspect_ratio": 9.565909818892054,
-            "is_elongated_filament": true,
-            "normalized_deformation_diagonal": [
-              0.1045378870314107,
-              0.1045378870314107,
-              1.0
-            ],
-            "optimal_radial_scale": 1.2946051147556508,
-            "parcel_volume": 0.023711519785372774,
-            "parcel_volume_shrinks": true,
-            "transverse_scale": 0.1353352832366127
-          },
-          "surface_tension_assumed": false,
-          "transferred_winding_fraction_theta": 0.8247942501149765,
-          "volume_conservation_shortcut_assumed": false
-        },
-        {
-          "axioms_used": [
-            "A0: minimize single generator stretch + enclosing work cost E_+ + E_-",
-            "A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -",
-            "A4: conserved turn split n_+ + n_- = N0 across 0"
-          ],
-          "compression_chi": 2.5,
-          "cost_comparison": {
-            "cross_all_to_minus_cost": 4.0,
-            "stay_all_in_plus_cost": 24.529157918654743,
-            "unified_minimum_cost": 3.6711943933315454
-          },
-          "derived_cooker_takeover": {
-            "minus_volume": 0.8359219163671839,
-            "minus_volume_fraction": 0.9890621843675089,
-            "plus_volume": 0.009244271946591267,
-            "total_two_region_volume": 0.8451661883137752
-          },
-          "fluid_incompressibility_assumed": false,
-          "minus_child_drop": {
-            "aspect_ratio": 1.0,
-            "drop_volume": 0.8359219163671839,
-            "optimal_principal_scales": [
-              0.9420094016725902,
-              0.9420094016725902,
-              0.9420094016725902
-            ],
-            "winner_shape": "round_3d_sphere"
-          },
-          "plus_infall": {
-            "filament_aspect_ratio": 16.714035770203324,
-            "is_elongated_filament": true,
-            "normalized_deformation_diagonal": [
-              0.05982995452138099,
-              0.05982995452138099,
-              1.0
-            ],
-            "optimal_radial_scale": 1.3719716031969351,
-            "parcel_volume": 0.009244271946591267,
-            "parcel_volume_shrinks": true,
-            "transverse_scale": 0.0820849986238988
-          },
-          "surface_tension_assumed": false,
-          "transferred_winding_fraction_theta": 0.8873817128395514,
-          "volume_conservation_shortcut_assumed": false
-        },
-        {
-          "axioms_used": [
-            "A0: minimize single generator stretch + enclosing work cost E_+ + E_-",
-            "A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -",
-            "A4: conserved turn split n_+ + n_- = N0 across 0"
-          ],
-          "compression_chi": 3.0,
-          "cost_comparison": {
-            "cross_all_to_minus_cost": 4.0,
-            "stay_all_in_plus_cost": 40.27064798311106,
-            "unified_minimum_cost": 3.7912230062623715
-          },
-          "derived_cooker_takeover": {
-            "minus_volume": 0.8957735161957299,
-            "minus_volume_fraction": 0.9960830690930689,
-            "plus_volume": 0.003522480283087274,
-            "total_two_region_volume": 0.8992959964788172
-          },
-          "fluid_incompressibility_assumed": false,
-          "minus_child_drop": {
-            "aspect_ratio": 1.0,
-            "drop_volume": 0.8957735161957299,
-            "optimal_principal_scales": [
-              0.9639756699278514,
-              0.9639756699278514,
-              0.9639756699278514
-            ],
-            "winner_shape": "round_3d_sphere"
-          },
-          "plus_infall": {
-            "filament_aspect_ratio": 28.542953367085676,
-            "is_elongated_filament": true,
-            "normalized_deformation_diagonal": [
-              0.0350349169246498,
-              0.0350349169246498,
-              1.0
-            ],
-            "optimal_radial_scale": 1.421069970707847,
-            "parcel_volume": 0.003522480283087274,
-            "parcel_volume_shrinks": true,
-            "transverse_scale": 0.049787068367863944
-          },
-          "surface_tension_assumed": false,
-          "transferred_winding_fraction_theta": 0.92924909221285,
-          "volume_conservation_shortcut_assumed": false
-        },
-        {
-          "axioms_used": [
-            "A0: minimize single generator stretch + enclosing work cost E_+ + E_-",
-            "A1: converging parent shell sets lambda_1=lambda_2=exp(-chi) in +; offset distributes m_-=(theta^2)*m0 across 3 axes in -",
-            "A4: conserved turn split n_+ + n_- = N0 across 0"
-          ],
-          "compression_chi": 4.0,
-          "cost_comparison": {
-            "cross_all_to_minus_cost": 4.0,
-            "stay_all_in_plus_cost": 109.23293134406595,
-            "unified_minimum_cost": 3.919691124862431
-          },
-          "derived_cooker_takeover": {
-            "minus_volume": 0.9598734171657408,
-            "minus_volume_fraction": 0.9994863428138255,
-            "plus_volume": 0.0004932992652575619,
-            "total_two_region_volume": 0.9603667164309984
-          },
-          "fluid_incompressibility_assumed": false,
-          "minus_child_drop": {
-            "aspect_ratio": 1.0,
-            "drop_volume": 0.9598734171657408,
-            "optimal_principal_scales": [
-              0.9864414694771443,
-              0.9864414694771443,
-              0.9864414694771443
-            ],
-            "winner_shape": "round_3d_sphere"
-          },
-          "plus_infall": {
-            "filament_aspect_ratio": 80.28681902414239,
-            "is_elongated_filament": true,
-            "normalized_deformation_diagonal": [
-              0.012455344627606908,
-              0.012455344627606908,
-              1.0
-            ],
-            "optimal_radial_scale": 1.4705043847713455,
-            "parcel_volume": 0.0004932992652575619,
-            "parcel_volume_shrinks": true,
-            "transverse_scale": 0.01831563888873418
-          },
-          "surface_tension_assumed": false,
-          "transferred_winding_fraction_theta": 0.9730667727042278,
-          "volume_conservation_shortcut_assumed": false
-        }
-      ],
-      "spaghettification_threshold_chi": 0.34657359027997264,
-      "stationarity_solution": "sqrt(theta^*) = (sqrt(16 e^(2chi) + 17) - 3)/(4 e^chi); lambda_3^* = (1-theta^*)e^chi; tilde_lambda_i^* = sqrt(theta^*)"
+      "planck_base_lambda_cdm_inference": [
+        0.6847,
+        0.265,
+        0.0493
+      ]
     }
+  },
+  "schema": "nsc-nonlocal-to-local-atlas-v1",
+  "thermodynamic_gravity_and_cmb_bridge": {
+    "bare_geometric_mean_sqrt_TP_TH_K": 19.39603568049609,
+    "critical_blackbody_temperature_K": 31.73007770898084,
+    "h0_km_s_mpc": 67.4,
+    "horizon_2d_efold_relative_error": 0.03687864798590175,
+    "horizon_2d_efold_temperature_K": 2.6249679824873846,
+    "horizon_radius_m": 1.3724968349418282e+26,
+    "horizon_temperature_T_H_K": 2.6553532515830042e-30,
+    "observed_cmb_temperature_K": 2.72548,
+    "planck_length_m": 1.616255e-35,
+    "planck_temperature_K": 1.416784e+32,
+    "room_dynamic_range_R_H_over_l_P": 8.491833497448288e+60,
+    "two_valve_fixed_point_relative_error": 0.0010463608456618108,
+    "two_valve_fixed_point_temperature_K": 2.7283318355576345
+  },
+  "translation_dictionary": [
+    {
+      "derived_share_at_chi_star": 0.7114405081367502,
+      "local_label": "Dark Energy (Lambda)",
+      "nonlocal_mechanism": "Isotropic 3D stretch 3*(theta^*)^(3/2) inside the - sphere driven by inflow across the outer birth 0 valve"
+    },
+    {
+      "derived_share_at_chi_star": 0.2387724234953858,
+      "local_label": "Dark Matter",
+      "nonlocal_mechanism": "Non-luminous 0-wall enclosing load (theta^*)^(3/2) + radial infall load 2*(1-theta^*)*exp(-chi) tugging across outer and inner 0 horizons"
+    },
+    {
+      "derived_share_at_chi_star": 0.049787068367864,
+      "local_label": "Visible Matter",
+      "nonlocal_mechanism": "Active transverse filamentary winding 2*(1-theta^*)^2*exp(chi) spaghettifying toward inner child 0 horizons, locked at floor exp(-3)"
+    },
+    {
+      "derived_asymmetry_eta_7": 5.955329033932181e-10,
+      "local_label": "Missing Antimatter (eta_B)",
+      "nonlocal_mechanism": "Single-sign orientation entry sign(det F_k)=(-1)^k across 0 plus offset decay lag exp(-gamma*tau) between + and - half-cycles at the K=7 3D harmonic"
+    }
+  ],
+  "two_valve_fixed_point": {
+    "at_integer_3d_efold_chi_3": {
+      "combined_dark_sector_fraction": 0.9469606560782298,
+      "dark_energy_fraction": 0.7088268203026444,
+      "dark_matter_fraction": 0.2381338357755853,
+      "visible_filament_fraction": 0.05303934392177024
+    },
+    "chi_star": 3.0669683518473474,
+    "combined_dark_sector_fraction": 0.9502129316321359,
+    "condition": "Omega_vis(chi_*) = exp(-3) (5-variable filament share equals 3D volumetric floor)",
+    "dark_energy_fraction": 0.7114405081367502,
+    "dark_matter_fraction": 0.2387724234953858,
+    "residual_from_volumetric_horizon": -1.1102230246251565e-16,
+    "visible_filament_fraction": 0.049787068367864
+  },
+  "vacuum_bubble_crystallization_and_masses": {
+    "annihilation_to_back_to_back_ripples": {
+      "cavity_lock_after_contact": 0.0,
+      "combined_winding": 0,
+      "initial_windings": [
+        1,
+        -1
+      ],
+      "net_momentum_residual": 0.0,
+      "outgoing_ripple_energies_keV": [
+        510.99895,
+        510.99895
+      ],
+      "outgoing_ripple_energies_over_E1": [
+        1.0,
+        1.0
+      ],
+      "separation_angle_degrees": 180.0,
+      "total_released_energy_over_E1": 2.0
+    },
+    "discrete_burst_spectrum": {
+      "emissions_are_sharp_lines_not_smear": true,
+      "levels": [
+        {
+          "equilibrium_radius_ratio": 1.0,
+          "exact_n_3_over_2": 1.0,
+          "stored_energy_ratio_over_E1": 1.0,
+          "winding_n": 1
+        },
+        {
+          "equilibrium_radius_ratio": 1.4142135623730951,
+          "exact_n_3_over_2": 2.8284271247461903,
+          "stored_energy_ratio_over_E1": 2.8284271247461903,
+          "winding_n": 2
+        },
+        {
+          "equilibrium_radius_ratio": 1.7320508075688772,
+          "exact_n_3_over_2": 5.196152422706632,
+          "stored_energy_ratio_over_E1": 5.196152422706632,
+          "winding_n": 3
+        },
+        {
+          "equilibrium_radius_ratio": 2.0,
+          "exact_n_3_over_2": 8.0,
+          "stored_energy_ratio_over_E1": 8.0,
+          "winding_n": 4
+        },
+        {
+          "equilibrium_radius_ratio": 2.23606797749979,
+          "exact_n_3_over_2": 11.180339887498949,
+          "stored_energy_ratio_over_E1": 11.18033988749895,
+          "winding_n": 5
+        }
+      ],
+      "topological_quantization_rule": "z(1) = z(0) on S^1 forces integer winding n in Z",
+      "transition_2_to_1_energy_over_E1": 1.8284271247461903,
+      "transition_3_to_2_energy_over_E1": 2.3677252979604417
+    },
+    "shared_flow_resonance_interaction": {
+      "in_resonance_aligned_energy_at_d_1": -2.0,
+      "in_resonance_attractive_force_law": "-2*m0*|n1*n2|/d^2",
+      "interaction_formula": "Delta_E_int(d, Delta_phi) = -(2*m0*n1*n2/d)*cos((omega1-omega2)*tau + Delta_phi0)",
+      "merges_only_when_resonant": true,
+      "off_resonance_time_average": 0.0
+    },
+    "surrounding_medium_equilibrium": {
+      "cavity_pressure_work_share": 0.25,
+      "energy_in_point_singularity": 0.0,
+      "equilibrium_energy_E1": 1.7547653506033232,
+      "equilibrium_radius_R1": 0.7598356856515925,
+      "formula": "E_bubble(R) = m0*n^2/R (surrounding flow r>=R) + P*V0*R^3 (cavity work)",
+      "radial_shell_energy_fractions": {
+        "R_to_100R": 0.99,
+        "R_to_10R": 0.9,
+        "R_to_2R": 0.5,
+        "R_to_5R": 0.8
+      },
+      "surrounding_flow_energy_share": 0.75,
+      "virial_ratio_surrounding_over_pressure": 3.0
+    },
+    "untuned_mass_ratio_tests": {
+      "candidate_A_single_stage_winding_n_3_over_2": {
+        "n_150_ratio": 1837.1173070873836,
+        "n_2_ratio": 2.8284271247461903,
+        "n_3_ratio": 5.196152422706632,
+        "verdict": "misses_1836_without_supplying_n_150_by_hand"
+      },
+      "candidate_B_dimensional_accumulation_1D_to_3D": {
+        "bare_6_pi_5": 1836.1181087116884,
+        "bare_ppm_error": 18.824533935469063,
+        "bare_relative_error": 1.8824533935469065e-05,
+        "caveat": "6*pi^5 is the exact product of 2d=6 signed rays and pi^5 5-phase volume, but deriving that product directly from the A0 3D stretch integral remains an open mathematical proof step",
+        "dressed_6_pi_5_plus_medium_floor": 1836.1533134853466,
+        "dressed_ppm_error": 0.3485850364491095,
+        "dressed_relative_error": 3.485850364491095e-07,
+        "formula_bare": "(2*d) * pi^(2+d) = 6 * pi^5 (6 signed rays from A2 * 5 phase dimensions from A1)",
+        "two_valve_medium_dressing_exp_minus_3_over_sqrt_2": 0.03520477365831485
+      },
+      "codata_neutron_minus_proton_over_me": 2.530988,
+      "codata_proton_to_electron": 1836.15267343,
+      "neutron_proton_gap_comparisons": {
+        "single_stage_n2_bubble_over_me": 2.8284271247461903,
+        "single_stage_n2_mev": 1.445323290896822,
+        "single_stage_n2_relative_error": 0.11751897865426092,
+        "threshold_capture_bare_2_plus_theta_spaghetti": 2.5,
+        "threshold_capture_bare_mev": 1.2774973749999998,
+        "threshold_capture_bare_relative_error": -0.012243440111134386,
+        "threshold_capture_dressed_mev": 1.2954869773743865,
+        "threshold_capture_dressed_over_me": 2.535204773658315,
+        "threshold_capture_dressed_relative_error": 0.0016660583370269584
+      }
+    }
+  },
+  "why_minus_exists_and_radius_crosses_zero": {
+    "circle_to_pendulum_identity": "R(tau) = Re(R0 * exp(i*omega*tau)) = R0 * cos(omega*tau)",
+    "minus_times_minus_equals_plus": {
+      "half_turn_complex_factor": -1.0,
+      "matrix_identity_residual": 0.0,
+      "parent_to_child_to_grandchild_signs": [
+        "+",
+        "-",
+        "+"
+      ],
+      "single_crossing_3d_inversion_det": -1.0,
+      "two_crossings_3d_inversion_det": 1.0,
+      "two_half_turns_complex_product": 1.0
+    },
+    "negative_half_required_for_closure": {
+      "closes_with_minus": true,
+      "closes_without_minus": false,
+      "full_circle_arc_length": 6.283185307179586,
+      "missing_arc_fraction_without_minus": 0.5,
+      "nonnegative_clipped_arc_length": 3.141592653589793
+    },
+    "omega": 6.283185307179586,
+    "r0": 1.0,
+    "singularity_diagnosis_at_zero": {
+      "crossing_phase_radians": 1.5707963267948966,
+      "signed_R_acceleration_at_zero": 0.0,
+      "signed_R_velocity_after": -6.283185307179586,
+      "signed_R_velocity_before": -6.283185307179586,
+      "signed_R_velocity_jump": 0.0,
+      "signed_crossing_is_smooth": true,
+      "unsigned_size_creates_artificial_cusp_singularity": true,
+      "unsigned_size_r_singular_impulse": 12.566370614359172,
+      "unsigned_size_r_velocity_after": 6.283185307179586,
+      "unsigned_size_r_velocity_before": -6.283185307179586,
+      "unsigned_size_r_velocity_cusp_jump": 12.566370614359172
+    },
+    "swing_points": [
+      {
+        "energy_conservation_residual": 0.0,
+        "jacobian_det_3d": 1.0,
+        "pendulum_energy": 19.739208802178716,
+        "phase_label": "plus_apex_0",
+        "phase_radians": 0.0,
+        "signed_acceleration_R_tt": -39.47841760435743,
+        "signed_radius_R": 1.0,
+        "signed_velocity_R_dot": -0.0,
+        "unsigned_size_r": 1.0
+      },
+      {
+        "energy_conservation_residual": 0.0,
+        "jacobian_det_3d": 2.2958450216584675e-49,
+        "pendulum_energy": 19.739208802178716,
+        "phase_label": "first_zero_crossing_pi_over_2",
+        "phase_radians": 1.5707963267948966,
+        "signed_acceleration_R_tt": -2.4173558877289423e-15,
+        "signed_radius_R": 6.123233995736766e-17,
+        "signed_velocity_R_dot": -6.283185307179586,
+        "unsigned_size_r": 6.123233995736766e-17
+      },
+      {
+        "energy_conservation_residual": 0.0,
+        "jacobian_det_3d": -1.0,
+        "pendulum_energy": 19.739208802178716,
+        "phase_label": "minus_apex_pi",
+        "phase_radians": 3.141592653589793,
+        "signed_acceleration_R_tt": 39.47841760435743,
+        "signed_radius_R": -1.0,
+        "signed_velocity_R_dot": -7.694682774887159e-16,
+        "unsigned_size_r": 1.0
+      },
+      {
+        "energy_conservation_residual": 0.0,
+        "jacobian_det_3d": -6.198781558477861e-48,
+        "pendulum_energy": 19.739208802178716,
+        "phase_label": "second_zero_crossing_3pi_over_2",
+        "phase_radians": 4.71238898038469,
+        "signed_acceleration_R_tt": 7.252067663186827e-15,
+        "signed_radius_R": -1.8369701987210297e-16,
+        "signed_velocity_R_dot": 6.283185307179586,
+        "unsigned_size_r": 1.8369701987210297e-16
+      },
+      {
+        "energy_conservation_residual": 0.0,
+        "jacobian_det_3d": 1.0,
+        "pendulum_energy": 19.739208802178716,
+        "phase_label": "two_flips_return_2pi",
+        "phase_radians": 6.283185307179586,
+        "signed_acceleration_R_tt": -39.47841760435743,
+        "signed_radius_R": 1.0,
+        "signed_velocity_R_dot": 1.5389365549774318e-15,
+        "unsigned_size_r": 1.0
+      }
+    ]
   }
 }

@@ -850,7 +850,7 @@ Goldilocks stabilization through least resistance and budget conservation:
     2. *3D `+` Compression Wall $\to$ Signed `0`-Crossing Plateau:* Staying in `+`
        ($\theta=0$) costs $E_{\rm stay,+}(\chi)=2e^{+\chi}+2e^{-\chi}\to\infty$;
        opening the `0` valve into a `-` child sphere caps the 5-variable cost at
-       the finite plateau $E_{\rm 5\text{-var}}^*(\chi)\to 4-\tfrac32e^{-\chi}\to 4.0$.
+       the finite plateau $E_{\rm 5\text{-var}}^*(\chi)=4-\tfrac92e^{-\chi}+O(e^{-2\chi})\to 4.0$.
     3. *Single-Axis Winding Wall $N^{3/2}>N$ $\to$ Orthogonal `(1, 1, 1)` Triad Ground State & Nuclear Hard Core:*
        Piling $N\ge 2$ windings onto a single axis costs $N^{3/2}>N$, so windings
        split across the 3 orthogonal axes $(n_1,n_2,n_3)\in\mathbb{Z}_{\ge 0}^3$
@@ -1377,13 +1377,70 @@ time-dependent corrections remain in the inherited state above.
 
 `--cascade-inheritance-only` on the existing offset CLI reproduces the
 [handoff and direction calculation](../results/summaries/nsc-inherited-daughter-v1.json).
-It extends the first wave calculation
-to the second generation's initial field, shape and static continuation.
-The joint time evolution of both splitting coordinates remains open.
-Its kinetic matrix must be obtained from their shared phase derivatives.
-Zero new coordinate velocity generally gives nonzero conjugate momentum
-through the matrix's off-diagonal terms, so a later solver must carry that
-projection along with the retained exterior memory.
+It extends the first wave calculation to the second generation's initial
+field, shape and static continuation, and evaluates both the **three-axis
+orthogonal cascade theorem ($\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$)**
+and the **joint $2\times 2$ kinetic handoff**:
+
+1. **Three-axis orthogonal cascade from $\Delta\Phi=0$ (`three_axis_orthogonal_cascade`).**
+   On any separated lobe of the four-source level set $\Phi=4/R$ at
+   $(\pm b,0,\pm s)$, splitting each unit source by $\pm\sqrt{\zeta_i}$
+   along axis $i\in\{x,y,z\}$ perturbs the phase by
+   $\delta\Phi=\frac12\zeta_i\partial_{ii}\Phi+O(\zeta_i^2)$. Because $\Phi$
+   is harmonic away from the sources ($\Delta\Phi=\partial_{xx}\Phi+\partial_{yy}\Phi+\partial_{zz}\Phi=0$),
+   the directional volume-derivative trace vanishes identically at every
+   separation:
+   $$
+   \partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0.
+   $$
+   At $s=1.2$, for all $b\ge 0.7$ after the second neck pinches ($b_{\rm pinch}=0.62746042$),
+   the third orthogonal axis $\mathbf{e}_y$ is the unique global minimum
+   of the directional volume and energy derivatives. By $b=1.0$, **both**
+   already-split axes in the $xz$-plane are uphill
+   ($\partial_{\zeta_x}v=+0.15537634>0$, $\partial_{\zeta_z}v=+0.03404474>0$),
+   leaving $\partial_{\zeta_y}v=-0.18942108<0$ as the **only downhill axis in 3D**.
+   At the symmetric four-lobe square $b=s=1.2$, four-fold in-plane symmetry
+   ($\partial_{\zeta_x}v=\partial_{\zeta_z}v=+0.05787268$) and $\Delta\Phi=0$
+   fix the exact harmonic ratio $-2$:
+   $$
+   \partial_{\zeta_y}v(s,s)=-2\,\partial_{\zeta_x}v(s,s)=-2\,\partial_{\zeta_z}v(s,s)=-0.11574536<0.
+   $$
+   Together with the first-to-second split ratio $-1/2$, harmonicity and
+   least resistance force the cascade through all three mutually orthogonal
+   axes $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$ ($1\to 2\to 4\to 8$).
+   Continuing along $\mathbf{e}_y$ on $\Phi=8/R$ pinches the four lobes into
+   eight separated 3D octant lobes at third-split half-separation
+   $c_y/R=0.360449324968$ (for $b=1.0, s=1.2$) and $c_y/R=0.347227979949$
+   (for $b=s=1.2$).
+2. **Joint $2\times 2$ kinetic matrix and outgoing-memory reaction at handoff (`joint_two_coordinate_kinetic_handoff`).**
+   With $q_1=c^2$ and $q_2=\tilde b^2$, the transverse phase derivative at
+   $q_2=0$ is $\partial_{q_2}\Phi|_{q_2=0}=\frac12\partial_{xx}\Phi_0=-\frac14\partial_{zz}\Phi_0+\frac14(\partial_{xx}-\partial_{yy})\Phi_0$.
+   Because $\partial_{zz}\Phi_0\equiv\partial_{cc}\Phi_0$ for the two-center
+   potential, the axisymmetric ($m=0$) exterior multipole coefficients
+   satisfy the exact identity
+   $$
+   \left.\frac{\partial g_{l,0}}{\partial q_2}\right|_{q_2=0}
+   =-\frac{l-1}{2}\frac{\partial g_{l,0}}{\partial q_1}
+   =-\frac12 l(l-1)q_1^{l/2-1}B^{-(l+1)},
+   $$
+   while the quadrupolar ($m=2$) component expands as
+   $\sum_{\text{even }l\ge 2}\frac12 q_1^{l/2-1}r^{-(l+1)}P_l^2(\cos\theta)\cos(2\varphi)$.
+   Summing the inner prolate quadrature and outer solid-harmonic series gives
+   the $B$-independent full quasistatic kinetic matrix at $s=1.2, b=0$
+   (matching to $10$ digits across $B\in\{2.5,3.0,4.0\}$):
+   $$
+   M_{\rm full}=\begin{pmatrix}0.2074628302 & -0.0054817211 \\ -0.0054817211 & 0.6751131619\end{pmatrix},
+   \qquad \det M_{\rm full}=0.1400308435>0,
+   $$
+   and at the $B=2.5, l_{\max}=8$ transported reduction gives
+   $M_0=\begin{pmatrix}0.1695831644 & 0.0176210767 \\ 0.0176210767 & 0.6564127651\end{pmatrix}$
+   ($\det M_0=0.1110060515>0$). Even with zero initial transverse velocity
+   $\dot q_2(0)=0$, the inherited axial velocity $\dot q_1=2.92661678$ gives
+   nonzero transverse conjugate momentum $p_2(0)=M_{0,21}\dot q_1=+0.05157014>0$,
+   and the first split's outgoing wave memory exerts a direct transverse
+   reaction $R_2=-0.06917181<0$ that reinforces the downhill potential
+   slope $-\partial_{q_2}U=+0.12034460>0$ for a combined positive transverse
+   drive $-\partial_{q_2}U-R_2=+0.18951641>0$.
 
 ## Retained foundation control: opposite windings, 2 November 2026
 

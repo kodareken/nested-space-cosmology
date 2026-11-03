@@ -889,7 +889,7 @@ point ($71.14\%$ DE / $23.88\%$ DM) and the Planck base-$\Lambda\mathrm{CDM}$ fi
 ($68.47\pm 0.73\%$ DE).
 
 
-### 9.7 One phase now drives a finite enclosing geometry and receiving regions
+### 9.7 One phase now drives a finite enclosing geometry, zero-radius opening, and last-echo cutoff
 
 The [coupled geometric continuation](../docs/nsc-atlas-offset-generator.md#coupled-finite-parent-receivers-and-characteristic-continuation)
 adds explicit phase and geometric inertia to A0. Available regional volumes
@@ -917,11 +917,91 @@ $\lambda=\cosh^2(a\tau)$, $E_\psi=Q_0/\lambda$ and
 $K_g=Q_0\tanh^2(a\tau)$. Its declared propagation metric has finite future
 optical reach $1/a=0.3898484006$, with proper causal-boundary length tending
 to $1/(2a)=0.1949242003$. No vacuum potential sets this expansion law.
+
+Replacing logarithmic inertia at small radius by radial-displacement inertia
+admits a continuum wave-driven opening from zero radius with
+$r(\tau)=\pi^2\tau^2-\frac{4}{3}\pi^4\tau^3+O(\tau^4)$ and receiving budget
+$4\pi^4\tau^2+O(\tau^3)$ ($2.9718260669\,\tau^2$ in the affine reduction).
+The hybrid radial inertia $M(r)=1/(1+r^2/3)$ satisfies both the
+finite-distance birth criterion $\int_0^\varepsilon\sqrt{M(r)}\,dr<\infty$
+and the finite-future optical-reach criterion
+$\int^\infty\sqrt{M(r)}\,dr/r<\infty$ (giving free-room optical reach
+$0.2611589801$). In the coupled hybrid evolution, reflected echoes have a
+sharp launch cutoff at $0.2269423871$ at the mouth and $0.1165029354$ at a
+parent detector $0.01$ material units away, with arrival delay diverging as
+$-\ln(\delta)/\kappa$ and returned energy vanishing linearly as $\kappa\delta$.
 The [reference calculation](../results/summaries/nsc-finite-parent-receiver-v1.json)
 gives finite chain/branch transfer and numerical limits. The receiving tree
 is admitted initially; a dynamically formed child and identification of a
-contact with the proposed one-way horizon remain to be derived. The
-geometric budget parts are not yet cosmological density fractions.
+contact with the proposed one-way horizon remain to be derived.
+
+
+### 9.8 Exact budget surface, causal neck onset, and the three-axis orthogonal cascade
+
+Three further exact mathematical laws follow directly from the declared cost
+and exterior phase equations:
+
+1. **Exact algebraic surface across the 5-variable budget curve (`exact_budget_curve_invariant`):**
+   Writing $D=\Omega_{\mathrm{DE}}$, $M=\Omega_{\mathrm{DM}}$, $V=\Omega_{\mathrm{vis}}$
+   and $B=M-D/3$ for the radial infall share, eliminating $\chi$ from the
+   5-variable stationarity equation yields the parameter-free identity
+   $$
+   9DVB=4\left(V+\frac{B}{2}\right)^3,\qquad
+   \theta^*=\frac{D}{D+V+B/2},\qquad
+   e^{-\chi}=\frac{3\sqrt{\theta^*}B}{2V+B},
+   $$
+   with deep-compression scaling $B/V^2\to 16/27$. Because $D+M+V=1$,
+   specifying any single share $V\in(0,1)$ uniquely determines
+   $(D(V),M(V),\chi(V))$ with zero free parameters. Alongside the
+   amplitude-area residue $\eta_{\mathrm{area}}=\tanh(\frac{\pi\gamma}{2\omega})$,
+   the damped horizon oscillator's quadratic energy ledger fixes the
+   geometric work residue
+   $\eta_{\mathrm{work}}=\tanh(\frac{\pi\gamma}{\omega})=\frac{2\eta_{\mathrm{area}}}{1+\eta_{\mathrm{area}}^2}$.
+2. **Spherical fragmentation, outgoing neck waveform, and whole-exterior causal onset (`split_waveform_evolution`, `split_onset_field`):**
+   Splitting a bubble of winding $N$ into same-sign integer daughters
+   $\sum_i n_i=N$ at fixed pressure preserves total equilibrium surface area
+   $\sum_i 4\pi(R_{n_i}^*)^2=4\pi(R_N^*)^2$ while releasing energy fraction
+   $1-\sum_i(n_i/N)^{3/2}>0$ ($1-1/\sqrt{2}\approx 29.2893\%$ for a binary
+   split). Along the two-center equipotential neck path, coupling the inner
+   shape coordinate $q_1=c^2$ to outgoing even multipoles ([waveform summary](../results/summaries/nsc-neck-waveform-v1.json))
+   pinches the neck at offset $3.960294$ and reaches separated lobes $s=1.2$
+   at $4.264066$. Removing the matching-sphere approximation in the quadratic
+   onset problem over the entire exterior $r\ge 1$ yields the boundary release
+   condition $f_r(1,t)+4f(1,t)=0$ and characteristic cubic
+   $$
+   p^3-3p-3=0,
+   $$
+   with unstable growth rate $p_+=2.1038034027$ and decaying oscillatory
+   transient $-1.0519017014\pm 0.5652358517\,i$.
+3. **Inherited daughter preparation, three-axis orthogonal cascade $\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$, and $2\times 2$ kinetic handoff (`inherited_daughter_calculation`):**
+   At the first split's separated endpoint $s=1.2$ ([inherited daughter summary](../results/summaries/nsc-inherited-daughter-v1.json)),
+   each sibling's field induces the other daughter's multipole preparation
+   (normalized dipole $-0.07340185$, quadrupole $+0.02750552$, velocity
+   $-0.05818555$) without a second supplied seed. Because the exterior phase
+   is harmonic ($\Delta\Phi=\partial_{xx}\Phi+\partial_{yy}\Phi+\partial_{zz}\Phi=0$),
+   the directional volume-derivative trace vanishes identically at every stage:
+   $$
+   \partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0.
+   $$
+   After the first split along $\mathbf{e}_z$, axial symmetry and
+   $\Delta\Phi=0$ give $\partial_{\zeta_x}v=\partial_{\zeta_y}v=-\frac{1}{2}\partial_{\zeta_z}v<0$
+   (normalized energy derivative $-0.03151123$ transverse vs. $+0.06302246$
+   axial, **exact ratio $-1/2$**), selecting the transverse axis $\mathbf{e}_x$
+   and pinching the second pair of necks at $b/R=0.62746042$. Once the four
+   lobes separate in the $xz$-plane ($b\ge 1.0$), both $\partial_{\zeta_x}v>0$
+   and $\partial_{\zeta_z}v>0$ become uphill, leaving the third orthogonal
+   axis $\mathbf{e}_y$ as the **unique downhill direction in 3D**; at the
+   symmetric square $b=s=1.2$, four-fold symmetry and $\Delta\Phi=0$ fix the
+   **exact ratio $-2$** ($\partial_{\zeta_y}v=-2\partial_{\zeta_x}v=-2\partial_{\zeta_z}v=-0.11574536<0$),
+   pinching the four planar lobes into eight 3D octant lobes at
+   $c_y/R=0.36044932$ ($b=1.0$) and $0.34722798$ ($b=s=1.2$). At the
+   $s=1.2, b=0$ handoff, $\partial_{zz}\Phi_0\equiv\partial_{cc}\Phi_0$ gives
+   the exact multipole identity
+   $\partial_{q_2}g_{l,0}|_{q_2=0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$ and
+   a $B$-independent $2\times 2$ quasistatic kinetic matrix $M_{\mathrm{full}}$
+   ($\det M_{\mathrm{full}}=0.14003084>0$), generating nonzero initial
+   transverse conjugate momentum $p_2(0)=+0.05157014>0$ and a positive
+   combined potential-plus-memory drive $-\partial_{q_2}U-R_2=+0.18951641>0$.
 
 ## Appendix A. Technical atlas and preserved mathematical record
 

@@ -1,9 +1,13 @@
 # Active code map
 
 `inherited_daughter_calculation` carries the first split's coordinate
-velocity and outgoing memory, projects its daughter shape and computes
-the next directional energy variation. `--cascade-inheritance-only`
-also evaluates the shared four-center level-set continuation.
+velocity and outgoing memory, projects its daughter shape, proves the
+three-axis orthogonal cascade ($\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$,
+ratios $-1/2$ and $-2$, third neck pinch into 8 octant lobes), and evaluates
+the $B$-independent $2\times 2$ kinetic matrix and outgoing-memory reaction at
+handoff. `--cascade-inheritance-only` reproduces the full handoff and
+four-to-eight-center continuation. `exact_budget_curve_invariant` evaluates
+the parameter-free algebraic surface $9DVB=4(V+B/2)^3$ and its exact inverse.
 
 `split_onset_field` and `split_onset_calculation` give the exact quadratic
 neck response with the complete causal exterior and its natural shape

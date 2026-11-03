@@ -114,9 +114,31 @@ candidate action. Exact optical characteristics continue beyond the
 exponentially stretched grid. The free-parent limit expands as
 lambda=cosh^2(a*tau), transfers phase energy into geometry, and has a finite
 future causal reach. A symmetric branch transmits 4/9 of incident energy to
-each quiet receiver, with 1/9 reflected. These are consequences of the
-specified geometric inertia, path metric and admitted topology. Formation
-of that topology and the one-way null interface remain to be derived.
+each quiet receiver, with 1/9 reflected. With radial-displacement inertia,
+continuum wave-driven opening from zero radius obeys
+$r(\tau)=\pi^2\tau^2-\frac43\pi^4\tau^3+O(\tau^4)$, and the hybrid radial
+inertia $M(r)=1/(1+r^2/3)$ satisfies both the finite-distance birth integral
+and the finite-future optical-reach integral, producing a sharp last-echo
+launch cutoff with logarithmic delay $-\ln(\delta)/\kappa$ and linear energy
+vanishing $\propto\kappa\delta$.
+
+Across the 5-variable cost family, eliminating $\chi$ yields the exact
+parameter-free algebraic budget identity $9DVB=4(V+B/2)^3$ ($B=M-D/3$,
+$B/V^2\to 16/27$ at deep compression), so any single share $V$ determines
+$(D,M,\chi)$ with zero free parameters. For bubble fragmentation, same-sign
+splits preserve equilibrium surface area $\sum_i 4\pi(R_{n_i}^*)^2=4\pi(R_N^*)^2$
+while releasing budget $1-\sum_i(n_i/N)^{3/2}>0$. Solving the whole exterior
+quadrupole wave at split onset gives the exact characteristic cubic
+$p^3-3p-3=0$ ($p_+\approx 2.1038034027$). At the first split's separated
+endpoint $s=1.2$, the sibling field induces the daughters' multipole
+preparation without a second supplied seed, and harmonicity ($\Delta\Phi=0$,
+$\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$) forces the
+cascade through all three mutually orthogonal axes
+$\mathbf{e}_z\to\mathbf{e}_x\to\mathbf{e}_y$ ($1\to 2\to 4\to 8$ lobes, with
+exact directional derivative ratios $-1/2$ for $1\text{D}\to 2\text{D}$ and
+$-2$ at $b=s$ for $2\text{D}\to 3\text{D}$), while the $B$-independent
+$2\times 2$ kinetic matrix and outgoing-memory reaction drive the transverse
+handoff dynamically.
 
 ## Implementation and verification
 

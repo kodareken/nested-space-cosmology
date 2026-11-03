@@ -3,11 +3,20 @@
 The first split now supplies its daughters' full phase preparation and
 geometric velocity. The same field selects a transverse plane for the
 next split, with normalized energy derivative −.03151123, while an
-axial continuation has +.06302246. The shared four-center geometry
+axial continuation has +.06302246 (exact ratio −1/2). The shared four-center geometry
 reaches its second neck pinch at daughter half-separation .62746042.
-Its first and second stages retain one pressure and the same source
-units. The four separated equilibrium units have half the winding-four
-budget. The second stage's joint time evolution is still required.
+On the separated four-center lobes, harmonicity ($\Delta\Phi=0$) forces the
+three-axis directional volume-derivative trace to vanish identically
+($\partial_{\zeta_x}v+\partial_{\zeta_y}v+\partial_{\zeta_z}v=0$): for $b\ge 1.0$
+both in-plane axes ($x$ and $z$) are uphill while the third orthogonal axis $y$
+is the unique downhill direction in 3D, with exact ratio $-2$
+($\partial_{\zeta_y}v=-2\partial_{\zeta_x}v=-0.11574536$) at $b=s=1.2$,
+pinching into eight 3D octant lobes at $c_y/R=0.36044932$ ($b=1.0$) and
+$0.34722798$ ($b=s=1.2$). At the $s=1.2, b=0$ handoff, the $B$-independent
+$2\times 2$ kinetic matrix $M_{\rm full}$ ($\det=0.14003084>0$) and the exact
+multipole identity $\partial_{q_2}g_{l,0}=-\frac{l-1}{2}\partial_{q_1}g_{l,0}$
+yield nonzero transverse conjugate momentum $p_2(0)=+0.05157014$ and a
+combined potential-plus-memory drive $-\partial_{q_2}U-R_2=+0.18951641>0$.
 See [inherited daughters](nsc-atlas-offset-generator.md#inherited-daughters-and-the-direction-of-the-next-split).
 
 The whole exterior now evolves causally in the quadratic split-onset model.

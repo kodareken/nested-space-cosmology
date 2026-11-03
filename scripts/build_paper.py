@@ -688,6 +688,9 @@ def build_pdf(
                 value,
             )
             value = re.sub(
+                r"\\(?:frac|tfrac|dfrac)([0-9])([0-9])", r"(\1)/(\2)", value
+            )
+            value = re.sub(
                 r"\\(?:frac|tfrac|dfrac)\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
             )
             value = re.sub(

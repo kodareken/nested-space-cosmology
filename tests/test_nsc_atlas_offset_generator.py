@@ -1204,3 +1204,60 @@ def test_characteristic_chain_has_exactly_zero_field_before_grandchild_front():
     assert result['rows'][-1]['regional_phase_energy'][1]>0
     assert result['new_child_formation_proved'] is False
     assert result['one_way_horizon_established'] is False
+
+
+def test_three_axis_orthogonal_cascade_and_joint_kinetic_handoff():
+    from recursive_horizons.nsc_atlas_offset_generator import inherited_daughter_calculation
+
+    result = inherited_daughter_calculation()
+    cascade = result['three_axis_orthogonal_cascade']
+    assert cascade['first_to_second_split_ratio'] == pytest.approx(-.5, abs=1e-15)
+    assert cascade['second_to_third_symmetric_ratio'] == pytest.approx(-2., rel=1e-12)
+    for row in cascade['lobe_directional_scan']:
+        assert abs(row['harmonic_trace_residual']) < 1e-14
+        assert row['y_is_unique_global_minimum']
+        assert row['volume_derivatives']['y'] < 0.
+        if row['daughter_half_separation'] >= 1.:
+            assert row['both_in_plane_axes_uphill']
+    sym = cascade['lobe_directional_scan'][3]
+    assert sym['daughter_half_separation'] == pytest.approx(sym['parent_half_separation'])
+    assert sym['volume_derivatives']['x'] == pytest.approx(sym['volume_derivatives']['z'], rel=1e-12)
+    assert sym['volume_derivatives']['y'] == pytest.approx(-2. * sym['volume_derivatives']['x'], rel=1e-12)
+
+    pinch1 = cascade['third_neck_pinch_at_b_1']
+    assert pinch1['third_neck_half_separation_y'] == pytest.approx(.360449324968, rel=1e-9)
+    assert abs(pinch1['potential_residual']) < 1e-11
+    pinch_sym = cascade['third_neck_pinch_at_b_equal_s']
+    assert pinch_sym['third_neck_half_separation_y'] == pytest.approx(.347227979949, rel=1e-9)
+    assert abs(pinch_sym['potential_residual']) < 1e-11
+
+    handoff = result['joint_two_coordinate_kinetic_handoff']
+    matrices = handoff['quasistatic_full_matrices_by_matching_radius']
+    ref_mat = np.array(matrices[0]['matrix'])
+    for entry in matrices[1:]:
+        assert np.allclose(entry['matrix'], ref_mat, rtol=1e-9, atol=1e-9)
+    for mode in handoff['multipole_mode_ratios']:
+        l = mode['degree']
+        assert mode['ratio'] == pytest.approx(-.5 * (l - 1), abs=1e-15)
+    assert handoff['projected_determinant'] > .1
+    assert handoff['initial_transverse_conjugate_momentum_p2'] > .05
+    assert handoff['transverse_potential_slope_dU_dq2'] < 0.
+    assert handoff['transverse_wave_memory_reaction_R2'] < 0.
+    assert handoff['net_transverse_potential_plus_memory_drive'] > .18
+
+
+def test_exact_budget_curve_invariant_and_zero_parameter_inverse():
+    from recursive_horizons.nsc_atlas_offset_generator import exact_budget_curve_invariant
+
+    result = exact_budget_curve_invariant()
+    assert result['maximum_cubic_residual'] < 1e-15
+    assert result['maximum_inverse_chi_error'] < 1e-8
+    for row in result['sampled_curve']:
+        if row['chi'] <= 4.:
+            assert row['chi_recovery_error'] < 1e-12
+    assert result['sampled_curve'][-1]['B_over_V_squared'] == pytest.approx(16. / 27., rel=1e-4)
+    for pred in result['zero_parameter_predictions_from_V'].values():
+        assert abs(pred['cubic_identity_residual']) < 1e-15
+        assert pred['derived_D'] + pred['derived_M'] + pred['input_visible_share_V'] == pytest.approx(1., abs=1e-15)
+        assert pred['derived_chi'] > 3.
+

@@ -3,7 +3,7 @@
     "duration_ratio": 0.7071067811865475,
     "energy_per_child_ratio": 0.35355339059327373,
     "frequency_ratio": 1.4142135623730951,
-    "gradient_and_pressure_ratio": 1,
+    "gradient_and_pressure_ratio": 1.0,
     "phase_amplitude_ratio": 0.7071067811865475,
     "radius_ratio": 0.7071067811865475,
     "two_generation_total_energy_ratio": 0.5
@@ -12,7 +12,7 @@
   "four_center_path": [
     {
       "available_energy_fraction": 0.15378392317044065,
-      "daughter_half_separation": 0,
+      "daughter_half_separation": 0.0,
       "quadrature_spread": 7.771561172376096e-16,
       "relaxed_energy_over_original": 0.8462160768295593,
       "volume": 0.5127729275831566
@@ -20,21 +20,21 @@
     {
       "available_energy_fraction": 0.15617106458224173,
       "daughter_half_separation": 0.2,
-      "quadrature_spread": 0.000014118588203326787,
+      "quadrature_spread": 1.4118588203326787e-05,
       "relaxed_energy_over_original": 0.8438289354177583,
       "volume": 0.5070113179161979
     },
     {
       "available_energy_fraction": 0.17447994287800495,
       "daughter_half_separation": 0.4,
-      "quadrature_spread": 0.00002677648487048323,
+      "quadrature_spread": 2.677648487048323e-05,
       "relaxed_energy_over_original": 0.825520057121995,
       "volume": 0.4644195763774196
     },
     {
       "available_energy_fraction": 0.2554477257883714,
       "daughter_half_separation": 0.6274604207914981,
-      "quadrature_spread": 7.001770626069437e-7,
+      "quadrature_spread": 7.001770626069437e-07,
       "relaxed_energy_over_original": 0.7445522742116286,
       "volume": 0.30731289087710484
     },
@@ -47,13 +47,13 @@
     },
     {
       "available_energy_fraction": 0.3386902227897124,
-      "daughter_half_separation": 1,
+      "daughter_half_separation": 1.0,
       "quadrature_spread": 2.7755575615628914e-17,
       "relaxed_energy_over_original": 0.6613097772102876,
       "volume": 0.19125807244377888
     }
   ],
-  "history_scope": "same inherited phase on an enlarged geometric configuration space; second-stage time evolution remains open",
+  "history_scope": "same inherited phase on an enlarged geometric configuration space; 3-axis orthogonal cascade and 2x2 kinetic handoff evaluated",
   "inherited_from_first_split": {
     "outgoing_memory": [
       {
@@ -110,8 +110,8 @@
           -0.00022868765887096827,
           0.0001289224606053924,
           -0.0001289224606053924,
-          0.0000418069781121427,
-          -0.0000418069781121427
+          4.18069781121427e-05,
+          -4.18069781121427e-05
         ],
         "real": [
           0.0010607890289860017,
@@ -133,7 +133,7 @@
       "axial_volume_derivative": 0.15275629805970334,
       "inherited_separation_velocity": 0.7138181004181514,
       "normalized_radial_harmonics": [
-        1,
+        1.0,
         -0.07340185261463157,
         0.027505519804480297,
         -0.010961080745037198,
@@ -162,7 +162,7 @@
       "axial_volume_derivative": 0.15275629805973712,
       "inherited_separation_velocity": 0.7138181004181511,
       "normalized_radial_harmonics": [
-        1,
+        1.0,
         -0.07340185261463295,
         0.02750551980452012,
         -0.010961080745041764,
@@ -191,7 +191,7 @@
       "axial_volume_derivative": 0.1527562980597113,
       "inherited_separation_velocity": 0.7138181004181514,
       "normalized_radial_harmonics": [
-        1,
+        1.0,
         -0.07340185261463186,
         0.02750551980448934,
         -0.010961080745038728,
@@ -217,10 +217,234 @@
       "volume": 0.5127729275831564
     }
   ],
+  "joint_two_coordinate_kinetic_handoff": {
+    "axial_wave_memory_reaction_R1": 0.09252699871110087,
+    "initial_axial_momentum_p1": 0.49630493388201063,
+    "initial_transverse_conjugate_momentum_p2": 0.05157013873378521,
+    "multipole_identity": "dg_{l,0}/dq2|_{q2=0} = -((l-1)/2) * dg_{l,0}/dq1",
+    "multipole_mode_ratios": [
+      {
+        "degree": 2,
+        "dg_dq1": 0.128,
+        "dg_dq2": -0.064,
+        "ratio": -0.5
+      },
+      {
+        "degree": 4,
+        "dg_dq1": 0.08236826080982193,
+        "dg_dq2": -0.1235523912147329,
+        "ratio": -1.5
+      },
+      {
+        "degree": 6,
+        "dg_dq1": 0.039753107747079186,
+        "dg_dq2": -0.09938276936769797,
+        "ratio": -2.5
+      },
+      {
+        "degree": 8,
+        "dg_dq1": 0.017054137223501933,
+        "dg_dq2": -0.05968948028225676,
+        "ratio": -3.5
+      }
+    ],
+    "net_transverse_potential_plus_memory_drive": 0.18951640602560466,
+    "projected_determinant": 0.11100605153940517,
+    "projected_near_field_matrix": [
+      [
+        0.16958316444146884,
+        0.017621076721433437
+      ],
+      [
+        0.017621076721433437,
+        0.6564127650928958
+      ]
+    ],
+    "quasistatic_full_matrices_by_matching_radius": [
+      {
+        "determinant": 0.14003083799489768,
+        "m22_axisymmetric_m0": 0.16655817665087674,
+        "m22_quadrupolar_m2": 0.508554985195991,
+        "matching_radius": 2.5,
+        "matrix": [
+          [
+            0.20746283019946532,
+            -0.005481721149713189
+          ],
+          [
+            -0.005481721149713189,
+            0.6751131618468678
+          ]
+        ],
+        "maximum_transported_mode": null,
+        "q1": 2.0109438674277174,
+        "scale": 1.1817312709853127
+      },
+      {
+        "determinant": 0.14003083799489718,
+        "m22_axisymmetric_m0": 0.16655817665087638,
+        "m22_quadrupolar_m2": 0.50855498519599,
+        "matching_radius": 3.0,
+        "matrix": [
+          [
+            0.20746283019946504,
+            -0.005481721149713183
+          ],
+          [
+            -0.005481721149713183,
+            0.6751131618468663
+          ]
+        ],
+        "maximum_transported_mode": null,
+        "q1": 2.0109438674277174,
+        "scale": 1.1817312709853127
+      },
+      {
+        "determinant": 0.14003083799489652,
+        "m22_axisymmetric_m0": 0.1665581766508758,
+        "m22_quadrupolar_m2": 0.5085549851959886,
+        "matching_radius": 4.0,
+        "matrix": [
+          [
+            0.20746283019946465,
+            -0.0054817211497133
+          ],
+          [
+            -0.0054817211497133,
+            0.6751131618468644
+          ]
+        ],
+        "maximum_transported_mode": null,
+        "q1": 2.0109438674277174,
+        "scale": 1.1817312709853127
+      }
+    ],
+    "transverse_potential_slope_dU_dq2": -0.12034459617140923,
+    "transverse_wave_memory_reaction_R2": -0.06917180985419542
+  },
   "parent_half_separation": 1.2000000000001037,
   "schema": "nsc-inherited-daughter-v1",
   "second_neck_axial_position": 1.1597080967037776,
   "second_neck_half_separation": 0.6274604207914981,
+  "three_axis_orthogonal_cascade": {
+    "first_to_second_split_ratio": -0.5,
+    "harmonic_trace_law": "d(v)/d(zeta_x) + d(v)/d(zeta_y) + d(v)/d(zeta_z) = 0 from Delta(Phi) = 0",
+    "lobe_directional_scan": [
+      {
+        "both_in_plane_axes_uphill": false,
+        "daughter_half_separation": 0.7,
+        "energy_derivatives": {
+          "x": 0.7503613246995018,
+          "y": -0.5195559333341594,
+          "z": -0.2308053913653421
+        },
+        "harmonic_trace_residual": 4.440892098500626e-16,
+        "parent_half_separation": 1.2000000000001037,
+        "volume": 0.2631846197085784,
+        "volume_derivatives": {
+          "x": 1.1028737808989753,
+          "y": -0.7636382602930825,
+          "z": -0.33923552060589235
+        },
+        "y_is_unique_global_minimum": true
+      },
+      {
+        "both_in_plane_axes_uphill": false,
+        "daughter_half_separation": 0.8,
+        "energy_derivatives": {
+          "x": 0.37326491692885616,
+          "y": -0.3086880363478932,
+          "z": -0.06457688058096273
+        },
+        "harmonic_trace_residual": 3.3306690738754696e-16,
+        "parent_half_separation": 1.2000000000001037,
+        "volume": 0.2291795375407109,
+        "volume_derivatives": {
+          "x": 0.4945486754141253,
+          "y": -0.40898903853087,
+          "z": -0.08555963688325496
+        },
+        "y_is_unique_global_minimum": true
+      },
+      {
+        "both_in_plane_axes_uphill": true,
+        "daughter_half_separation": 1.0,
+        "energy_derivatives": {
+          "x": 0.13431053327586853,
+          "y": -0.1637395138692351,
+          "z": 0.02942898059336687
+        },
+        "harmonic_trace_residual": 3.3306690738754696e-16,
+        "parent_half_separation": 1.2000000000001037,
+        "volume": 0.19125807244377888,
+        "volume_derivatives": {
+          "x": 0.15537634306029746,
+          "y": -0.18942108454902262,
+          "z": 0.034044741488725494
+        },
+        "y_is_unique_global_minimum": true
+      },
+      {
+        "both_in_plane_axes_uphill": true,
+        "daughter_half_separation": 1.2000000000001037,
+        "energy_derivatives": {
+          "x": 0.05472260649500994,
+          "y": -0.10944521299012527,
+          "z": 0.05472260649511534
+        },
+        "harmonic_trace_residual": 0.0,
+        "parent_half_separation": 1.2000000000001037,
+        "volume": 0.16969241681571096,
+        "volume_derivatives": {
+          "x": 0.05787267978193933,
+          "y": -0.11574535956399012,
+          "z": 0.057872679782050795
+        },
+        "y_is_unique_global_minimum": true
+      },
+      {
+        "both_in_plane_axes_uphill": true,
+        "daughter_half_separation": 1.5,
+        "energy_derivatives": {
+          "x": 0.00891852203718029,
+          "y": -0.07427335242665667,
+          "z": 0.06535483038947626
+        },
+        "harmonic_trace_residual": -1.1102230246251565e-16,
+        "parent_half_separation": 1.2000000000001037,
+        "volume": 0.15010515412349634,
+        "volume_derivatives": {
+          "x": 0.008602993299939743,
+          "y": -0.07164563260894408,
+          "z": 0.06304263930900422
+        },
+        "y_is_unique_global_minimum": true
+      }
+    ],
+    "second_to_third_symmetric_ratio": -2.000000000001926,
+    "third_neck_pinch_at_b_1": {
+      "daughter_half_separation_x": 1.0,
+      "parent_half_separation_z": 1.2000000000001037,
+      "potential_residual": 0.0,
+      "saddle_point": [
+        0.9856364999689546,
+        0.0,
+        1.1884257313208173
+      ],
+      "third_neck_half_separation_y": 0.36044932496837595
+    },
+    "third_neck_pinch_at_b_equal_s": {
+      "daughter_half_separation_x": 1.2000000000001037,
+      "parent_half_separation_z": 1.2000000000001037,
+      "potential_residual": 0.0,
+      "saddle_point": [
+        1.1903556167470122,
+        0.0,
+        1.1903556167470122
+      ],
+      "third_neck_half_separation_y": 0.34722797994875887
+    }
+  },
   "winding_four_same_pressure_handoff": {
     "budget": 15.084930556682833,
     "length_and_duration_factor": 1.4142135623730951,
@@ -281,8 +505,8 @@
           -0.00045737531774193654,
           0.0002578449212107848,
           -0.0002578449212107848,
-          0.0000836139562242854,
-          -0.0000836139562242854
+          8.36139562242854e-05,
+          -8.36139562242854e-05
         ],
         "real": [
           0.0021215780579720033,
@@ -299,7 +523,5 @@
     "phase_factor": 1.4142135623730951,
     "shape_coordinate": 4.0218877348545865,
     "shape_velocity": 4.138861135657567
-  },
-  "source_sha256": "8ce2f36ef57f88e5fba793fad988500b310cc46d29693961689fc85f0be8fef9",
-  "reproduce": "python scripts/run_python.py scripts/check_nsc_atlas_offset_generator.py --cascade-inheritance-only"
+  }
 }

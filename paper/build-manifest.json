@@ -1,10 +1,10 @@
 {
-  "bytes": 22641376,
+  "bytes": 22689862,
   "metadata": "paper/metadata.json",
   "metadata_sha256": "517bc8c06fcebe69f0e7c0c38a612a2052dc65685759de3baca6e1ce1431e862",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 260,
-  "pdf_sha256": "fa25a029406ec9dfb936f0482efda3a474479bb28b618a624cb280bd8b61c8e6",
+  "pages": 262,
+  "pdf_sha256": "30f93385b9370fe4ded6943564ec3076f27c3d53be8fd3676eea197ca89fdf96",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -1136,8 +1136,20 @@
       "sha256": "4dced4c42934711b458bb3cf3a08368179c45d416a2bf24091decb2cd497cbbc"
     },
     {
+      "path": "results/summaries/nsc-finite-parent-receiver-v1.json",
+      "sha256": "907cd522abafa41c02a5b9036a38939630142cb6832610c938d50ee977d05004"
+    },
+    {
+      "path": "results/summaries/nsc-inherited-daughter-v1.json",
+      "sha256": "46270b1058bf6239b846625a8fbba0abe0cfa3443fb38a28c132f1fadcbd7188"
+    },
+    {
+      "path": "results/summaries/nsc-neck-waveform-v1.json",
+      "sha256": "1ae497ece4da493054e136646bef4b8e3c7b6685669301f997127fe390b9ebd5"
+    },
+    {
       "path": "results/summaries/nsc-nonlocal-to-local-atlas-v1.json",
-      "sha256": "d557df20e981588269a91a3687c827fccaf5857aeb4ceeac071b10c8b34a958b"
+      "sha256": "d3c10a67b7a5350f446ac8b31c4e7d120696fe3de748e199542716226aa9d2be"
     },
     {
       "path": "results/summaries/nsc-p004-dynamics-lensing-forecast-v1.json",
@@ -1157,10 +1169,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "3b0f204f06fb6f8b6ece2d473e6c41b887a1b87f24833773261798a029e31364"
+      "sha256": "643ffb7ebd3ea1972a8541917f803aa8e2661f51bfa0d64ef2439555ea8cd988"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "08b3ed4b7129f7761cc3867892dd79977a03d2b68ace6b2a51ec510e2abcf6dd",
+  "source_sha256": "e0f914c17f9fa489b54a700571259fc8348a0670787da5a2dc8c8b0e81e3cbaf",
   "version": "0.27.0 (2026-11-02)"
 }
