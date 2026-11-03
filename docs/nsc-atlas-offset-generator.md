@@ -390,6 +390,91 @@ for a single inertia law spanning the two regimes. A coupled trajectory
 from birth to an isolated late region remains to be established, with the
 physical mouth and its transmission law part of that calculation.
 
+### Last echo from a coupled hybrid opening
+
+Apply M(a)=1/(1+a²/3) to both radii in the continuum opening, with the
+same triangular initial phase and transparent mouth. In the canonical
+radius u=√3 asinh(a/√3), kinetic energy is u'²/2 and
+u''=E_phase cosh(u/√3)/a. The finite-inertia birth proof carries over,
+with r/τ²→π² and parent y''(0)=16π²/3. Optical histories are carried
+from the early solution into the retarded evolution.
+
+The parent incoming amplitude π/y persists on this branch. Before its
+optical distance from birth reaches one, its conformal phase budget
+C=yE_parent obeys C'≥−π²/y, since the reflected power is nonnegative.
+Thus C≥3π² on that interval. Integrating dK_parent/dy=C/y² gives
+K_parent≥3π²(1−1/y). Substituting the hybrid inertia into the optical
+integral bounds total parent optical distance by √2/π<1. This excludes
+a first crossing of the triangular midpoint front. The receiver phase
+energy is a positive history integral and the parent budget has the
+lower bound just proved. Both canonical speeds increase from positive
+values after birth and stay bounded by the conserved energy. Positive
+radii and bounded canonical coordinates on finite intervals allow the
+retarded equations to continue by steps for every finite positive offset.
+
+At a checkpoint T let v_i=u_i'(T)>0, j be the other region and H=4π².
+All subsequent speeds of region i lie between v_i and √(2H−v_j²).
+Integrating the reciprocal radius along those two constant-speed curves
+bounds its remaining optical distance between
+
+$$
+\frac{\operatorname{arsinh}(\sqrt3/a_i(T))}{\sqrt{2H-v_j^2}}
+\quad\text{and}\quad
+\frac{\operatorname{arsinh}(\sqrt3/a_i(T))}{v_i}.
+$$
+
+The inequalities apply to exact checkpoint states. The executable uses
+floating-point states and an empirical energy allowance. Its refinement
+differences quantify numerical sensitivity rather than certify an interval
+for the exact checkpoint.
+
+The receiver optical future decreases continuously from infinity at birth
+to zero. The unique launch cutoff for a reflected echo is its crossing of
+two optical units. The cutoff is a supremum of returning launch offsets.
+At equality the return is at infinite offset. At the parent detector a
+material distance .01 from the mouth, the echo needs another .01 units of
+parent optical distance after it crosses the mouth. This gives an earlier
+launch cutoff. The command `python scripts/run_python.py
+scripts/check_nsc_atlas_offset_generator.py --last-echo-only` compares three
+birth resolutions, tolerances and late checkpoints. Their cutoffs are
+.22694238706 at the mouth and .11650293537 at the detector. The finest
+two differ by less than 2.1e-11 in either cutoff. The fine budget
+discrepancy is 3.94e-11 and the remaining receiver optical tail at T=24
+is about 5.92e-10.
+
+Both canonical velocities tend to positive limits. To obtain the asymptotic
+rate, note that both radii grow at least exponentially after a positive
+checkpoint. In the receiver phase energy integral, the factor r(u)/r(t)
+decays exponentially with t−u and the incoming power falls as y(u)^−2.
+The parent energy satisfies its work equation with source −J. Both terms
+in J decay exponentially because the reflected emission tends to the finite
+cutoff. This gives exponential phase energy decay, allowing polynomial
+prefactors when rates coincide. Since cosh(u/√3)/a is bounded on each late
+tail, the remaining acceleration and its first time moment are integrable.
+Thus each radius is asymptotic to a constant times exp(κ_i τ), with
+κ_i=v_i(∞)/√3. The computed rates are .90249212 and 5.05019337.
+
+Let δ be the gap between a launch and its cutoff, and κ the rate of the
+region in which the final leg ends. Its arrival offset is
+−log(δ)/κ+O(1). Its energy ratio is asymptotic to κδ and its power ratio
+to (κδ)². For the mouth this follows by substituting the optical tail
+1/(κr) into the radius ratio. For the detector the derivative of the
+mouth return time with respect to launch time is r_return/r_launch.
+That factor cancels the receiver energy redshift when converting the
+remaining parent optical distance into δ. Each decade closer to cutoff
+adds about 2.5514 offset units at the mouth or .4560 at the detector.
+
+There is also a null boundary inside the receiving region. In its material
+coordinate x the edge of the mouth observer's causal past is
+x_H(τ)=∫_τ^∞dt/r(t) wherever this lies in [0,1]. It enters at the far
+endpoint near .635108 and its physical distance tends to 1/κ_receiver,
+about 1.108043. The timelike mouth remains the phase contact. The atlas's
+exterior (+), horizon (0), interior (−) convention concerns a physical
+black-hole handoff. Identifying that handoff with this observer horizon
+requires an additional geometric construction. The present results use
+an admitted receiving branch, the chosen hybrid inertia and a fixed
+reflecting endpoint.
+
 ### Scope and the next connection
 
 The small [calculation record](../results/summaries/nsc-finite-parent-receiver-v1.json)

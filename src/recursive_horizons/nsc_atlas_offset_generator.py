@@ -939,6 +939,10 @@ def parent_receiver_calculation():
 
 def continuum_receiving_birth(duration=.05, samples=129, emission_offset=None):
     """Early coupled opening with exact curve characteristics and radial inertia."""
+    return _continuum_birth_solution(duration, samples, emission_offset)[0]
+
+
+def _continuum_birth_solution(duration, samples, emission_offset=None, hybrid=False):
     from scipy.integrate import solve_ivp
     from scipy.interpolate import CubicSpline
 
@@ -972,10 +976,17 @@ def continuum_receiving_birth(duration=.05, samples=129, emission_offset=None):
         lag, log_ratio, receiver_force, shared_phase = history.y[:, -1].reshape(4, samples)
         contact_power = math.pi**2 * (parent_radius**-2 - (np.exp(log_ratio)/(1+position(lag)[1]))**2)
         parent_budget = initial_energy - CubicSpline(offsets, parent_radius * contact_power).antiderivative()(offsets)
-        return np.array([receiver_force, parent_budget / parent_radius**2]), dict(
+        forces = np.array([receiver_force, parent_budget / parent_radius**2])
+        radii = np.array([radius, parent_radius])
+        speeds = np.array([radial_speed, parent_speed])
+        inverse_mass = 1 + radii**2 / 3 if hybrid else np.ones_like(radii)
+        if hybrid:
+            forces = inverse_mass * forces + radii * speeds**2 / (3 + radii**2)
+        return forces, dict(
             radius=radius, parent_radius=parent_radius, shared_phase=shared_phase,
             child_phase_energy=radius * receiver_force, parent_phase_energy=parent_budget / parent_radius,
-            child_kinetic=radial_speed**2 / 2, parent_kinetic=parent_speed**2 / 2)
+            child_kinetic=radial_speed**2 / (2 * inverse_mass[0]),
+            parent_kinetic=parent_speed**2 / (2 * inverse_mass[1]))
 
     for iteration in range(1, 41):
         updated, values = evaluate(acceleration)
@@ -1017,7 +1028,144 @@ def continuum_receiving_birth(duration=.05, samples=129, emission_offset=None):
                               parent_detector_material_distance=detector_distance,
                               parent_detection_offset=detection, mouth_power_ratio=ratio**2,
                               narrow_packet_mouth_energy_ratio=ratio)
-    return result
+    position = CubicSpline(offsets, acceleration, axis=1).antiderivative(2)
+    return result, position
+
+
+def hybrid_receiving_echo(samples=129, tolerance=2e-10, endpoint=20.):
+    """Evolve the hybrid-inertia birth and bound the uncomputed optical tail."""
+    from bisect import bisect_left
+    from scipy.integrate import solve_ivp
+    from scipy.optimize import brentq
+
+    if not 1 <= endpoint <= 30 or not 0 < tolerance < 1e-3:
+        raise ValueError('require endpoint in [1,30] and 0 < tolerance < .001')
+    birth_offset = .05
+    birth, position = _continuum_birth_solution(birth_offset, samples, hybrid=True)
+    root_three = math.sqrt(3.)
+    budget = 4 * math.pi**2
+    radii = position(birth_offset) + [0., 1.]
+    speeds = position.derivative()(birth_offset) / np.sqrt(1 + radii**2 / 3)
+    # State is canonical radii, canonical speeds, optical distances,
+    # the receiver's outgoing energy primitive, and the parent phase budget.
+    initial = np.r_[root_three * np.arcsinh(radii / root_three), speeds, 0., 0., 0.,
+                    radii[1] * birth['parent_phase_energy']]
+
+    def early_rhs(t, _):
+        receiver, parent = position(t) + [0., 1.]
+        return [1 / receiver, 1 / parent, math.pi**2 * receiver / parent**2]
+
+    early = solve_ivp(early_rhs, (birth_offset, .015), np.zeros(3), dense_output=True,
+                      rtol=tolerance, atol=tolerance / 20, method='DOP853')
+    if not early.success or early.y[0, -1] > -2:
+        raise RuntimeError('early history does not cover the initial echo delay')
+    slabs, ends, optical_ends = [], [], []
+
+    def history_at_optical(target, region):
+        if target <= 0:
+            t = brentq(lambda t: early.sol(t)[region] - target, .015, birth_offset, xtol=1e-14)
+            return t, position(t) + [0., 1.], early.sol(t)[2]
+        index = bisect_left(optical_ends[region], target)
+        if index >= len(slabs):
+            raise RuntimeError('delayed characteristic left completed history')
+        slab = slabs[index]
+        t = brentq(lambda t: slab.sol(t)[4+region] - target, slab.t[0], slab.t[-1], xtol=1e-14)
+        past = slab.sol(t)
+        return t, root_three * np.sinh(past[:2] / root_three), past[6]
+
+    def phase_energies(state, current_radii):
+        _, lag_radii, lag_primitive = history_at_optical(state[4] - 2, 0)
+        phase = np.array([(state[6] - lag_primitive) / current_radii[0],
+                          state[7] / current_radii[1]])
+        return phase, lag_radii
+
+    def rhs(_, state):
+        current_radii = root_three * np.sinh(state[:2] / root_three)
+        receiver, parent = current_radii
+        phase, (lag_receiver, lag_parent) = phase_energies(state, current_radii)
+        force = phase * np.cosh(state[:2] / root_three) / current_radii
+        returned = math.pi * lag_receiver / (receiver * lag_parent)
+        return np.r_[state[2:4], force, 1 / current_radii,
+                     math.pi**2 * receiver / parent**2,
+                     parent * returned**2 - math.pi**2 / parent]
+
+    optical_ends = [[], []]
+    offset, state = birth_offset, initial
+    budget_defect = birth['max_budget_defect']
+    while offset < endpoint:
+        receiver = root_three * math.sinh(state[0] / root_three)
+        end = min(endpoint, offset + min(receiver, .25))
+        slab = solve_ivp(rhs, (offset, end), state, method='DOP853', dense_output=True,
+                         rtol=tolerance, atol=tolerance / 20)
+        if not slab.success:
+            raise RuntimeError(slab.message)
+        state = slab.y[:, -1]
+        slabs.append(slab)
+        ends.append(end)
+        for region in range(2):
+            optical_ends[region].append(state[4+region])
+        for sample in slab.y.T:
+            phase, _ = phase_energies(sample, root_three * np.sinh(sample[:2] / root_three))
+            budget_defect = max(budget_defect, abs(float(phase.sum() + sample[2:4] @ sample[2:4] / 2) - budget))
+        offset = end
+
+    radii = root_three * np.sinh(state[:2] / root_three)
+    # Cushion the exact-state inequality by the observed numerical budget defect.
+    # This allowance is empirical and does not certify the checkpoint state.
+    budget_allowance = budget_defect + 32 * np.finfo(float).eps * budget
+    speed_upper = np.sqrt(2 * (budget + budget_allowance) - state[2:4][::-1]**2)
+    tail_factor = np.arcsinh(root_three / radii)
+    tail_lower, tail_upper = tail_factor / speed_upper, tail_factor / state[2:4]
+    reach_lower, reach_upper = state[4:6] + tail_lower, state[4:6] + tail_upper
+    reach = (reach_lower + reach_upper) / 2
+    mouth_bounds = [history_at_optical(s - 2, 0)[0] for s in (reach_lower[0], reach_upper[0])]
+    cutoff = history_at_optical(reach[0] - 2, 0)[0]
+    detector_distance = .01
+
+    def state_at(t):
+        return slabs[bisect_left(ends, t)].sol(t)
+
+    def detector_cutoff(parent_reach):
+        last_mouth_time = history_at_optical(parent_reach - detector_distance, 1)[0]
+        mouth_optical = (early.sol(last_mouth_time)[0] if last_mouth_time <= birth_offset
+                         else state_at(last_mouth_time)[4])
+        return history_at_optical(mouth_optical - 2, 0)[0]
+
+    detector_limit = detector_cutoff(reach[1])
+    echoes, detector_echoes = [], []
+    for distance in (.01, .001, .0001, .00001):
+        emission = cutoff - distance
+        emitted = state_at(emission)
+        if emitted[4] + 2 >= state[4]:
+            continue
+        arrival, arrival_radii, _ = history_at_optical(emitted[4] + 2, 0)
+        energy_ratio = root_three * math.sinh(emitted[0] / root_three) / arrival_radii[0]
+        echoes.append(dict(emission_offset=emission, distance_to_cutoff=distance,
+                           mouth_return_offset=arrival, energy_ratio=float(energy_ratio),
+                           power_ratio=float(energy_ratio**2)))
+    for distance in (.01, .001, .0001, .00001):
+        emission = detector_limit - distance
+        emitted = state_at(emission)
+        mouth, mouth_radii, _ = history_at_optical(emitted[4] + 2, 0)
+        detector_optical = state_at(mouth)[5] + detector_distance
+        if detector_optical >= state[5]:
+            continue
+        arrival, arrival_radii, _ = history_at_optical(detector_optical, 1)
+        ratio = (root_three * math.sinh(emitted[0] / root_three) / mouth_radii[0]
+                 * mouth_radii[1] / arrival_radii[1])
+        detector_echoes.append(dict(emission_offset=emission, distance_to_cutoff=distance,
+                                    mouth_return_offset=mouth, detection_offset=arrival,
+                                    energy_ratio=float(ratio), power_ratio=float(ratio**2)))
+    return dict(endpoint=endpoint, birth_samples=samples, tolerance=tolerance,
+                max_budget_defect=float(budget_defect), canonical_speed_lower=state[2:4].tolist(),
+                canonical_speed_upper=speed_upper.tolist(), tail_lower=tail_lower.tolist(),
+                tail_upper=tail_upper.tolist(), mouth_cutoff=cutoff, mouth_tail_bracket=mouth_bounds,
+                horizon_enters_receiver_at=history_at_optical(reach[0] - 1, 0)[0],
+                late_horizon_proper_distance_bracket=(root_three / np.array([speed_upper[0], state[2]])).tolist(),
+                asymptotic_rate_bracket=(np.c_[state[2:4], speed_upper] / root_three).tolist(),
+                detector_distance=detector_distance, detector_cutoff=detector_limit,
+                detector_tail_bracket=[detector_cutoff(reach_lower[1]), detector_cutoff(reach_upper[1])],
+                mouth_echoes=echoes, detector_echoes=detector_echoes)
 
 
 def affine_receiving_birth(duration=.1, seed=1e-5):

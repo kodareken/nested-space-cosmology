@@ -1,5 +1,12 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The coupled hybrid birth has a last-echo launch cutoff near .226942387
+at the mouth and .116502935 at a parent detector .01 material units away.
+Arrival delay diverges logarithmically and the returned energy ratio
+vanishes linearly. A null boundary enters the receiving arc near .635108
+and tends to proper distance 1.108043 from the mouth. See the
+[proof and reproduction](nsc-atlas-offset-generator.md#last-echo-from-a-coupled-hybrid-opening).
+
 The continuum mouth is timelike at positive offset. An incident packet
 at .02 returns to the parent detector at .039385342912 and retains
 .502902410597 of its energy at the mouth. The conserved budget gives

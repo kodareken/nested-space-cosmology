@@ -1074,6 +1074,22 @@ def test_characteristic_fork_preserves_equal_receivers_and_contact_balance():
     assert result['rows'][-1]['regional_phase_energy'][1]>0
 
 
+def test_hybrid_echo_cutoffs_and_late_redshift():
+    from recursive_horizons.nsc_atlas_offset_generator import hybrid_receiving_echo
+
+    result = hybrid_receiving_echo(samples=65, tolerance=2e-9, endpoint=16.)
+    assert result['max_budget_defect'] < 1e-7
+    assert .11 < result['detector_cutoff'] < .12
+    assert .22 < result['mouth_cutoff'] < .23
+    assert result['mouth_cutoff'] < result['horizon_enters_receiver_at']
+    for region, key, arrival in ((0, 'mouth_echoes', 'mouth_return_offset'),
+                                 (1, 'detector_echoes', 'detection_offset')):
+        before, after = result[key][-2:]
+        rate = result['asymptotic_rate_bracket'][region][0]
+        assert after[arrival] - before[arrival] == pytest.approx(math.log(10)/rate, rel=.002)
+        assert after['energy_ratio']/after['distance_to_cutoff'] == pytest.approx(rate, rel=.001)
+
+
 def test_characteristic_chain_has_exactly_zero_field_before_grandchild_front():
     from recursive_horizons.nsc_atlas_offset_generator import parent_receiver_characteristics
     result=parent_receiver_characteristics(parents=(-1,0,1),duration=.3,optical_step=.02,sample_count=3)

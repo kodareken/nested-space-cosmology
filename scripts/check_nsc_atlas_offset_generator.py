@@ -6,7 +6,7 @@ from recursive_horizons.nsc_atlas_offset_generator import (
     offset_connection_calculation,inherited_offset_calculation,
     intrinsic_compression_calculation,buckling_to_goldilocks_calculation,
     nonlocal_to_local_atlas_readout,parent_receiver_calculation,affine_receiving_birth,
-    continuum_receiving_birth)
+    continuum_receiving_birth,hybrid_receiving_echo)
 ROOT=Path(__file__).resolve().parents[1]
 
 
@@ -23,7 +23,13 @@ def main():
     group.add_argument('--evolution-only',action='store_true',help='finite parent/receiver phase and geometry, with eight parallel controls; stdout only')
     group.add_argument('--birth-only',action='store_true',help='zero-radius affine continuation and seed comparison')
     group.add_argument('--continuum-birth-only',action='store_true',help='zero-radius characteristic continuation')
+    group.add_argument('--last-echo-only',action='store_true',help='hybrid birth, future optical bounds and echoes')
     args=p.parse_args()
+    if args.last_echo_only:
+        if args.output is not None:p.error('echo calculations write to stdout; omit --output')
+        print(json.dumps([hybrid_receiving_echo(samples=n, tolerance=tol, endpoint=end)
+                          for n,tol,end in ((65,2e-9,16.),(129,2e-10,20.),(257,2e-11,24.))],indent=2))
+        return
     if args.continuum_birth_only:
         if args.output is not None:p.error('birth calculations write to stdout; omit --output')
         print(json.dumps([continuum_receiving_birth(samples=n, emission_offset=.02)
