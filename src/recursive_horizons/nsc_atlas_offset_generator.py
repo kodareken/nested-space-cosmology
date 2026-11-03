@@ -937,7 +937,7 @@ def parent_receiver_calculation():
         no_files_written=True)
 
 
-def continuum_receiving_birth(duration=.05, samples=129):
+def continuum_receiving_birth(duration=.05, samples=129, emission_offset=None):
     """Early coupled opening with exact curve characteristics and radial inertia."""
     from scipy.integrate import solve_ivp
     from scipy.interpolate import CubicSpline
@@ -986,11 +986,38 @@ def continuum_receiving_birth(duration=.05, samples=129):
     else:
         raise RuntimeError('birth iteration did not converge')
     energy = sum(values[key] for key in ('child_phase_energy','parent_phase_energy','child_kinetic','parent_kinetic'))
-    return dict(offset=duration, samples=samples, iterations=iteration,
+    result = dict(offset=duration, samples=samples, iterations=iteration,
                 **{key: float(value[-1]) for key, value in values.items()},
                 child_energy=float((values['child_phase_energy'] + values['child_kinetic'])[-1]),
                 max_budget_defect=float(np.max(np.abs(energy-initial_energy))),
                 acceleration_iteration_defect=defect, radius_coefficient=math.pi**2)
+    if emission_offset is not None:
+        from scipy.integrate import quad
+        from scipy.optimize import brentq
+
+        if not 0 < emission_offset < duration:
+            raise ValueError('emission must be inside the computed history')
+        position = CubicSpline(offsets, acceleration, axis=1).antiderivative(2)
+
+        def optical_distance(start, end, region):
+            return quad(lambda t: 1 / (position(t)[region] + region), start, end,
+                        epsabs=1e-11, epsrel=1e-11)[0]
+
+        if optical_distance(emission_offset, duration, 0) < 2:
+            raise ValueError('computed history ends before the echo returns')
+        echo = brentq(lambda t: optical_distance(emission_offset, t, 0) - 2,
+                      emission_offset, duration, xtol=1e-14)
+        ratio = float(position(emission_offset)[0] / position(echo)[0])
+        detector_distance = .01
+        if optical_distance(echo, duration, 1) < detector_distance:
+            raise ValueError('computed history ends before the parent detector receives the echo')
+        detection = brentq(lambda t: optical_distance(echo, t, 1) - detector_distance,
+                           echo, duration, xtol=1e-14)
+        result['echo'] = dict(emission_offset=emission_offset, mouth_return_offset=echo,
+                              parent_detector_material_distance=detector_distance,
+                              parent_detection_offset=detection, mouth_power_ratio=ratio**2,
+                              narrow_packet_mouth_energy_ratio=ratio)
+    return result
 
 
 def affine_receiving_birth(duration=.1, seed=1e-5):

@@ -328,6 +328,68 @@ before birth, gives one continuous Lorentzian extension of the metric.
 A physical phase and geometry matching law and selection of the opening
 event remain open. The transparent contact used here is bidirectional.
 
+### Shared mouth geometry and the returned signal
+
+At positive offset, measure physical distance X from the mouth using
+X=y(x−2) on the parent and X=rx on the receiver. Both propagation metrics
+then have the form
+
+$$
+ds^2=-d\tau^2+(dX-H_i X\,d\tau)^2,\qquad H_i=\dot a_i/a_i,
+\quad a_i=y\ \text{or}\ r.
+$$
+
+They agree at X=0, where the induced metric is −dτ² and the two null
+slopes are ±1. The interface is a geodesic on each side. Its extrinsic
+curvature vanishes on both sides. Sidewise coordinates
+T=τ+H_i(τ)X²/2 cancel the linear cross term and yield matching first
+metric derivatives there. Curvature can still jump. These statements
+concern the positive-offset mouth, with the opening tip treated above.
+
+With the fixed receiving endpoint, a phase packet emitted at τ_e returns
+at τ_b satisfying ∫[τ_e,τ_b] dτ/r=2. Its amplitude reverses sign and
+is multiplied by r(τ_e)/r(τ_b). Differentiation gives
+dτ_b/dτ_e=r(τ_b)/r(τ_e), so the narrow-packet power and energy ratios are
+respectively the square and first power of r(τ_e)/r(τ_b). Transparent
+matching transmits the return into the parent. The existing continuum CLI
+now includes a packet emitted at .02, returning to the mouth at
+.029154034883 and reaching a parent detector at material distance .01
+at .039385342912. Its mouth energy ratio is .502902410597. The final two
+sample counts differ in detector offset by 2.5e-12. The detector and the
+narrow probe on the calculated geometry are declared readout choices.
+
+### Inertia criterion for birth and finite future optical reach
+
+For a radial kinetic term M(r) rdot²/2 and a finite positive conserved
+budget E with nonnegative remaining energy, |rdot|≤sqrt(2E/M). A monotone
+opening therefore requires ∫₀^ε sqrt(M(r)) dr finite. An unbounded growing
+branch with finite optical future requires ∫^∞ sqrt(M(r)) dr/r finite.
+The latter criterion is also sufficient on a monotone expanding tail if
+radial kinetic energy is bounded away from zero there. For unit radial
+inertia, r(τ) grows at most linearly under the conserved budget, so its
+optical future diverges on any forever-regular continuation. For
+logarithmic inertia the birth integral diverges. The two tests concern
+opposite ends of the scale range.
+
+A candidate that passes both integral tests is M(r)=1/(1+r²/3). This is
+the radial metric coefficient of a hyperbolic spatial geometry in its
+areal-radius coordinate. Its small-radius normalization and large-radius
+coefficient reproduce the two previous inertia limits. The choice of
+this interpolation remains a modeling assumption. For the separate
+free one-room solution starting from rest at r=1 with phase budget
+Q₀=4π², energy conservation gives kinetic energy Q₀(1−1/r). Its entire
+future optical reach, using u=1/r, is
+
+$$
+\frac1{\sqrt{2Q_0}}\int_0^1\frac{du}{\sqrt{(u^2+1/3)(1-u)}}
+=0.2611589800633733.
+$$
+
+The integral is evaluated with u=1−z². This gives a concrete candidate
+for a single inertia law spanning the two regimes. A coupled trajectory
+from birth to an isolated late region remains to be established, with the
+physical mouth and its transmission law part of that calculation.
+
 ### Scope and the next connection
 
 The small [calculation record](../results/summaries/nsc-finite-parent-receiver-v1.json)

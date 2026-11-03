@@ -1,5 +1,13 @@
 # Current result — coupled geometric evolution, 2 November 2026
 
+The continuum mouth is timelike at positive offset. An incident packet
+at .02 returns to the parent detector at .039385342912 and retains
+.502902410597 of its energy at the mouth. The conserved budget gives
+separate integral criteria for finite-offset birth and finite future
+optical reach. A hyperbolic radial inertia satisfies both and gives a
+free-room optical reach .261158980063, conditional on that inertia.
+See [mouth geometry and inertia criteria](nsc-atlas-offset-generator.md#shared-mouth-geometry-and-the-returned-signal).
+
 The continuum opening with radial-displacement inertia gives
 r=π²τ²−(4/3)π⁴τ³+O(τ⁴). At τ=.05 the receiving arc holds .299289539
 energy and has radius .016736471416. Curvature diverges at birth while

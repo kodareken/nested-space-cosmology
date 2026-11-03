@@ -26,7 +26,8 @@ def main():
     args=p.parse_args()
     if args.continuum_birth_only:
         if args.output is not None:p.error('birth calculations write to stdout; omit --output')
-        print(json.dumps([continuum_receiving_birth(samples=n) for n in (65,129,257)],indent=2))
+        print(json.dumps([continuum_receiving_birth(samples=n, emission_offset=.02)
+                          for n in (65,129,257)],indent=2))
         return
     if args.birth_only:
         if args.output is not None:p.error('birth calculations write to stdout; omit --output')
